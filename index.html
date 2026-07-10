@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --ink: #1c1a16;
+    --ink-soft: #55524a;
+    --line-grey: #b7b1a2;
+    --line-grey-soft: #e2ddd0;
+    --rubric: #8a2e26;
+    --gold-glow: rgba(154,124,58,0.20);
+  }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; margin:0; }
+  body{
+    background:#ffffff;
+    color:var(--ink);
+    font-family:'Times New Roman', Times, serif;
+    overflow:hidden;
+  }
+  a{ color:inherit; }
+
+  /* ---------------- Header ---------------- */
+  header{
+    height:30px;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid var(--line-grey-soft);
+    padding:0 20px;
+  }
+  header .col{ flex:1; display:flex; align-items:center; }
+  header .title{
+    font-size:16px;
+    letter-spacing:0.08em;
+  }
+  header nav{
+    justify-content:center;
+    gap:28px;
+    font-size:10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  header nav a{
+    cursor:pointer;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, color .3s ease;
+  }
+  header nav a:hover,
+  header nav a.active{
+    color:var(--rubric);
+    border-color:var(--rubric);
+  }
+  header .col:last-child{ justify-content:flex-end; }
+
+  main{ height:calc(100vh - 30px); position:relative; }
+
+  .view{
+    position:absolute; inset:0;
+    display:none;
+  }
+  .view.active{ display:block; }
+
+  /* ---------------- Hall of Saints ---------------- */
+  #hall-track{
+    height:100%;
+    display:flex;
+    align-items:flex-start;
+    gap:0;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+  }
+  #hall-track::-webkit-scrollbar{ display:none; }
+
+  .saint-card{
+    flex:0 0 auto;
+    height:calc(100vh - 80px); /* 30 header + 10 top + 40 bottom */
+    aspect-ratio:2/3;
+    margin-top:10px;
+    margin-bottom:40px;
+    position:relative;
+    border:1px solid var(--line-grey);
+    background:#fdfdfc;
+    overflow:hidden;
+    cursor:pointer;
+    transition:box-shadow .4s ease, border-color .4s ease, opacity 1s ease, filter .4s ease;
+  }
+  .saint-card:hover{
+    border-color:var(--rubric);
+    box-shadow:0 20px 44px -20px var(--gold-glow);
+  }
+  .saint-card img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:grayscale(1) contrast(1.05) sepia(0.08);
+    transition:transform .6s ease;
+  }
+  .saint-card:hover img{ transform:scale(1.035); }
+  .saint-caption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:8px 10px;
+    background:linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0));
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-align:center;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .saint-card.dim{ opacity:0; pointer-events:none; }
+  .saint-card.selected{
+    position:fixed;
+    z-index:40;
+    margin:0;
+    transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
+               width 1.5s cubic-bezier(.2,.8,.2,1), height 1.5s cubic-bezier(.2,.8,.2,1),
+               box-shadow .6s ease;
+    box-shadow:0 30px 70px -25px rgba(0,0,0,0.25);
+  }
+
+  /* ---------------- Hall Modal side panels ---------------- */
+  #hall-modal-quotes, #hall-modal-text{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:min(26vw, 340px);
+    opacity:0;
+    transition:opacity 1s ease, transform 1s ease;
+    z-index:41;
+    pointer-events:none;
+  }
+  #hall-modal-quotes.reveal, #hall-modal-text.reveal{
+    opacity:1;
+    pointer-events:auto;
+  }
+  #hall-modal-quotes{ text-align:right; }
+  #hall-modal-quotes .label, #hall-modal-text .label{
+    font-size:10px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--rubric);
+    margin-bottom:12px;
+  }
+  #hall-modal-quotes .q{
+    display:block;
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-soft);
+    padding:8px 0;
+    border-bottom:1px solid var(--line-grey-soft);
+  }
+  #hall-modal-text p{
+    font-size:15px;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
+
+  #hall-close{
+    position:fixed;
+    top:44px; right:6vw;
+    z-index:42;
+    width:34px; height:34px;
+    border:1px solid var(--line-grey);
+    background:#fff;
+    display:none;
+    align-items:center; justify-content:center;
+    cursor:pointer;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  #hall-close.show{ display:flex; }
+  #hall-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
+
+  /* ---------------- Armory ---------------- */
+  #armory-track{
+    height:100%;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:0 40px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+  }
+  #armory-track::-webkit-scrollbar{ display:none; }
+
+  .spear{
+    flex:0 0 auto;
+    width:54px;
+    height:calc(100vh - 100px);
+    margin-top:10px; margin-bottom:40px;
+    border-left:1px solid var(--line-grey-soft);
+    border-right:1px solid var(--line-grey-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    position:relative;
+    transition:opacity 1s ease, border-color .4s ease;
+  }
+  .spear:hover{ border-color:var(--rubric); }
+  .spear .tip{
+    position:absolute; top:6px; left:50%; transform:translateX(-50%);
+    width:0; height:0;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:16px solid var(--line-grey);
+    transition:border-color .4s ease;
+  }
+  .spear:hover .tip{ border-bottom-color:var(--rubric); }
+  .spear .shaft-text{
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    font-style:italic;
+    font-size:13px;
+    color:var(--ink-soft);
+    max-height:calc(100% - 60px);
+    overflow:hidden;
+    letter-spacing:0.02em;
+  }
+  .spear.dim{ opacity:0; pointer-events:none; }
+  .spear.selected{
+    position:fixed;
+    z-index:40;
+    margin:0;
+    transform:rotate(0deg);
+    transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
+               width 1.5s cubic-bezier(.2,.8,.2,1), height 1.5s cubic-bezier(.2,.8,.2,1),
+               transform 1.5s cubic-bezier(.2,.8,.2,1);
+    border-color:var(--rubric);
+    background:#fff;
+  }
+  .spear.selected .shaft-text{
+    writing-mode:horizontal-tb;
+    font-size:22px;
+    line-height:1.5;
+    padding:0 24px;
+    max-height:none;
+    text-align:center;
+    transition:font-size .4s ease .8s;
+  }
+  .spear.selected .tip{ display:none; }
+
+  #armory-attribution{
+    position:fixed;
+    left:50%; transform:translateX(-50%);
+    top:calc(50% + 190px);
+    z-index:41;
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-soft);
+    text-align:center;
+    opacity:0;
+    transition:opacity 1s ease;
+    white-space:nowrap;
+  }
+  #armory-attribution.reveal{ opacity:1; }
+  #armory-attribution a{
+    border-bottom:1px solid var(--rubric);
+    color:var(--rubric);
+    text-decoration:none;
+  }
+
+  #armory-close{
+    position:fixed;
+    top:44px; right:6vw;
+    z-index:42;
+    width:34px; height:34px;
+    border:1px solid var(--line-grey);
+    background:#fff;
+    display:none;
+    align-items:center; justify-content:center;
+    cursor:pointer;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  #armory-close.show{ display:flex; }
+  #armory-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
+
+  @media (max-width:700px){
+    #hall-modal-quotes, #hall-modal-text{ display:none; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{ transition-duration:0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="col title">Test</div>
+  <div class="col">
+    <nav>
+      <a data-view="hall" class="active">Hall of Saints</a>
+      <a data-view="armory">Armory</a>
+    </nav>
+  </div>
+  <div class="col"></div>
+</header>
+
+<main>
+
+  <!-- ===================== HALL OF SAINTS ===================== -->
+  <section id="hall-view" class="view active">
+    <div id="hall-track"></div>
+
+    <div id="hall-modal-quotes">
+      <div class="label">Key Sayings</div>
+      <div id="hall-quotes-list"></div>
+    </div>
+    <div id="hall-modal-text">
+      <div class="label">Vita</div>
+      <p id="hall-lorem"></p>
+    </div>
+    <div id="hall-close">
+      <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
+        <line x1="1" y1="1" x2="15" y2="15"/><line x1="15" y1="1" x2="1" y2="15"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== ARMORY ===================== -->
+  <section id="armory-view" class="view">
+    <div id="armory-track"></div>
+    <div id="armory-attribution"></div>
+    <div id="armory-close">
+      <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
+        <line x1="1" y1="1" x2="15" y2="15"/><line x1="15" y1="1" x2="1" y2="15"/>
+      </svg>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* =====================================================================
+   DATA — SAINTS
+   Add / remove cards here. `image` points at assets/images/icons/...
+   in the repo. Update the filename to match whatever is actually
+   committed there — "st-antony.png" is a placeholder guess.
+===================================================================== */
+const SAINTS = Array.from({ length: 10 }, (_, i) => ({
+  id: i + 1,
+  name: 'St Antony the Great',
+  image: 'assets/images/icons/st-antony.png',
+  quotes: [
+    'I no longer fear God, but I love Him.',
+    'Whoever sits in solitude is delivered from three wars.',
+    'My life is with my neighbour.'
+  ],
+  vita: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+}));
+
+/* Fallback quotes, used only if assets/text/quotes.txt can't be fetched
+   (e.g. this preview, or opening the file directly without a server).
+   Format mirrors the .txt spec: source line, quote line, blank line. */
+const QUOTES_FALLBACK = `
+St Antony the Great
+He who sits in solitude and is quiet hath escaped from three wars.
+
+St Antony the Great
+Life and death depend on our neighbour.
+
+John 15:12
+Love one another, as I have loved you.
+
+Psalm 46:10
+Be still, and know that I am God.
+
+St Antony the Great
+I no longer fear God, but I love Him, for love casteth out fear.
+
+Matthew 5:8
+Blessed are the pure in heart, for they shall see God.
+`.trim();
+
+function parseQuotes(raw) {
+  const lines = raw.split('\n');
+  const out = [];
+  for (let i = 0; i < lines.length; i += 3) {
+    const source = (lines[i] || '').trim();
+    const quote = (lines[i + 1] || '').trim();
+    if (source && quote) out.push({ source, quote });
+  }
+  return out;
+}
+
+let QUOTES = [];
+
+/* =====================================================================
+   NAV
+===================================================================== */
+document.querySelectorAll('header nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelectorAll('header nav a').forEach(x => x.classList.remove('active'));
+    a.classList.add('active');
+    const target = a.dataset.view;
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById(`${target}-view`).classList.add('active');
+  });
+});
+
+/* =====================================================================
+   HALL OF SAINTS — carousel, wheel-scroll, loop, modal
+===================================================================== */
+const hallTrack = document.getElementById('hall-track');
+const LOOP_BUFFER = 4;
+
+function renderHall() {
+  hallTrack.innerHTML = '';
+  const head = SAINTS.slice(-LOOP_BUFFER);
+  const tail = SAINTS.slice(0, LOOP_BUFFER);
+  const full = [...head, ...SAINTS, ...tail];
+
+  full.forEach((s, idx) => {
+    const el = document.createElement('div');
+    el.className = 'saint-card';
+    el.dataset.id = s.id;
+    el.innerHTML = `
+      <img src="${s.image}" alt="${s.name}"
+           onerror="this.onerror=null; this.src=this.dataset.fallback;"
+           data-fallback="${fallbackFigureDataURI()}">
+      <div class="saint-caption">${s.name}</div>`;
+    el.addEventListener('click', () => openHallModal(s.id));
+    hallTrack.appendChild(el);
+  });
+
+  requestAnimationFrame(() => {
+    const first = hallTrack.children[LOOP_BUFFER];
+    if (first) hallTrack.scrollLeft = first.offsetLeft;
+  });
+}
+
+/* simple inline linework placeholder so the preview still looks right
+   if assets/images/icons/... isn't reachable (e.g. this artifact preview) */
+function fallbackFigureDataURI() {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+    <rect width="200" height="300" fill="#fdfdfc"/>
+    <circle cx="100" cy="70" r="34" fill="none" stroke="#8a2e26" stroke-width="1" opacity="0.7"/>
+    <circle cx="100" cy="95" r="26" fill="none" stroke="#55524a" stroke-width="1"/>
+    <path d="M100 121 C60 128 48 190 48 280 L152 280 C152 190 140 128 100 121 Z" fill="none" stroke="#55524a" stroke-width="1"/>
+    <line x1="100" y1="121" x2="100" y2="280" stroke="#55524a" stroke-width="0.6" opacity="0.5"/>
+  </svg>`;
+  return 'data:image/svg+xml;base64,' + btoa(svg);
+}
+
+/* wheel -> horizontal scroll */
+function wheelToHorizontal(trackEl) {
+  trackEl.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      trackEl.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+}
+wheelToHorizontal(hallTrack);
+
+/* infinite loop jump */
+let hallScrollTimeout;
+hallTrack.addEventListener('scroll', () => {
+  clearTimeout(hallScrollTimeout);
+  hallScrollTimeout = setTimeout(() => {
+    const card = hallTrack.children[LOOP_BUFFER];
+    if (!card) return;
+    const cardW = card.getBoundingClientRect().width;
+    const headWidth = LOOP_BUFFER * cardW;
+    const bodyWidth = SAINTS.length * cardW;
+    if (hallTrack.scrollLeft < headWidth - cardW * (LOOP_BUFFER - 1)) {
+      hallTrack.scrollLeft += bodyWidth;
+    } else if (hallTrack.scrollLeft > headWidth + bodyWidth) {
+      hallTrack.scrollLeft -= bodyWidth;
+    }
+  }, 120);
+});
+
+/* ---- Hall modal ---- */
+const hallQuotesSide = document.getElementById('hall-modal-quotes');
+const hallTextSide = document.getElementById('hall-modal-text');
+const hallQuotesList = document.getElementById('hall-quotes-list');
+const hallLorem = document.getElementById('hall-lorem');
+const hallClose = document.getElementById('hall-close');
+
+function openHallModal(id) {
+  const data = SAINTS.find(s => s.id === id);
+  if (!data) return;
+  const cardEl = [...hallTrack.querySelectorAll('.saint-card')]
+    .find(el => Number(el.dataset.id) === id && el.getBoundingClientRect().left >= 0);
+  if (!cardEl) return;
+
+  const rect = cardEl.getBoundingClientRect();
+
+  // fade out the rest (1s)
+  hallTrack.querySelectorAll('.saint-card').forEach(el => {
+    if (el !== cardEl) el.classList.add('dim');
+  });
+
+  // lock the selected card's current position, then move to centre (1.5s)
+  cardEl.style.top = rect.top + 'px';
+  cardEl.style.left = rect.left + 'px';
+  cardEl.style.width = rect.width + 'px';
+  cardEl.style.height = rect.height + 'px';
+  cardEl.classList.add('selected');
+
+  requestAnimationFrame(() => {
+    const targetH = window.innerHeight * 0.62;
+    const targetW = targetH * (2 / 3);
+    cardEl.style.top = (window.innerHeight - targetH) / 2 + 'px';
+    cardEl.style.left = (window.innerWidth - targetW) / 2 + 'px';
+    cardEl.style.width = targetW + 'px';
+    cardEl.style.height = targetH + 'px';
+  });
+
+  hallQuotesList.innerHTML = data.quotes.map(q => `<span class="q">&ldquo;${q}&rdquo;</span>`).join('');
+  hallLorem.textContent = data.vita;
+
+  setTimeout(() => {
+    hallQuotesSide.classList.add('reveal');
+    hallTextSide.classList.add('reveal');
+    hallClose.classList.add('show');
+  }, 1500);
+
+  hallClose.onclick = () => closeHallModal(cardEl, rect);
+}
+
+function closeHallModal(cardEl, originalRect) {
+  hallQuotesSide.classList.remove('reveal');
+  hallTextSide.classList.remove('reveal');
+  hallClose.classList.remove('show');
+
+  cardEl.style.top = originalRect.top + 'px';
+  cardEl.style.left = originalRect.left + 'px';
+  cardEl.style.width = originalRect.width + 'px';
+  cardEl.style.height = originalRect.height + 'px';
+
+  setTimeout(() => {
+    cardEl.classList.remove('selected');
+    cardEl.removeAttribute('style');
+    hallTrack.querySelectorAll('.saint-card').forEach(el => el.classList.remove('dim'));
+  }, 1500);
+}
+
+/* =====================================================================
+   ARMORY — vertical "spear" quotes, wheel-scroll, loop, rotate-to-read
+===================================================================== */
+const armoryTrack = document.getElementById('armory-track');
+const armoryAttribution = document.getElementById('armory-attribution');
+const armoryClose = document.getElementById('armory-close');
+const ARMORY_BUFFER = 3;
+
+function renderArmory() {
+  armoryTrack.innerHTML = '';
+  const head = QUOTES.slice(-ARMORY_BUFFER);
+  const tail = QUOTES.slice(0, ARMORY_BUFFER);
+  const full = [...head, ...QUOTES, ...tail];
+
+  full.forEach((q, idx) => {
+    const el = document.createElement('div');
+    el.className = 'spear';
+    el.dataset.index = ((idx - ARMORY_BUFFER) % QUOTES.length + QUOTES.length) % QUOTES.length;
+    el.innerHTML = `<div class="tip"></div><div class="shaft-text">${q.quote}</div>`;
+    el.addEventListener('click', () => openArmoryModal(el, q));
+    armoryTrack.appendChild(el);
+  });
+
+  requestAnimationFrame(() => {
+    const first = armoryTrack.children[ARMORY_BUFFER];
+    if (first) armoryTrack.scrollLeft = first.offsetLeft - 40;
+  });
+}
+wheelToHorizontal(armoryTrack);
+
+let armoryScrollTimeout;
+armoryTrack.addEventListener('scroll', () => {
+  clearTimeout(armoryScrollTimeout);
+  armoryScrollTimeout = setTimeout(() => {
+    const spear = armoryTrack.children[ARMORY_BUFFER];
+    if (!spear || !QUOTES.length) return;
+    const spearW = spear.getBoundingClientRect().width + 14;
+    const headWidth = ARMORY_BUFFER * spearW;
+    const bodyWidth = QUOTES.length * spearW;
+    if (armoryTrack.scrollLeft < headWidth - spearW * (ARMORY_BUFFER - 1)) {
+      armoryTrack.scrollLeft += bodyWidth;
+    } else if (armoryTrack.scrollLeft > headWidth + bodyWidth) {
+      armoryTrack.scrollLeft -= bodyWidth;
+    }
+  }, 120);
+});
+
+function openArmoryModal(spearEl, q) {
+  const rect = spearEl.getBoundingClientRect();
+
+  armoryTrack.querySelectorAll('.spear').forEach(el => {
+    if (el !== spearEl) el.classList.add('dim');
+  });
+
+  spearEl.style.top = rect.top + 'px';
+  spearEl.style.left = rect.left + 'px';
+  spearEl.style.width = rect.width + 'px';
+  spearEl.style.height = rect.height + 'px';
+  spearEl.classList.add('selected');
+
+  requestAnimationFrame(() => {
+    const targetW = Math.min(window.innerWidth * 0.6, 640);
+    const targetH = 140;
+    spearEl.style.top = (window.innerHeight - targetH) / 2 - 40 + 'px';
+    spearEl.style.left = (window.innerWidth - targetW) / 2 + 'px';
+    spearEl.style.width = targetW + 'px';
+    spearEl.style.height = targetH + 'px';
+  });
+
+  // build attribution: link to a saint's card, or to Bible Gateway
+  const isSaint = SAINTS.some(s => s.name.toLowerCase() === q.source.toLowerCase());
+  let html;
+  if (isSaint) {
+    html = `&mdash; <a href="#" data-jump-saint="${q.source}">${q.source}</a>`;
+  } else {
+    const url = `https://www.biblegateway.com/passage/?search=${encodeURIComponent(q.source)}`;
+    html = `&mdash; <a href="${url}" target="_blank" rel="noopener">${q.source}</a>`;
+  }
+  armoryAttribution.innerHTML = html;
+
+  setTimeout(() => {
+    armoryAttribution.classList.add('reveal');
+    armoryClose.classList.add('show');
+  }, 1500);
+
+  const jumpLink = armoryAttribution.querySelector('[data-jump-saint]');
+  if (jumpLink) {
+    jumpLink.onclick = (e) => {
+      e.preventDefault();
+      closeArmoryModal(spearEl, rect);
+      document.querySelector('header nav a[data-view="hall"]').click();
+      const target = SAINTS.find(s => s.name.toLowerCase() === q.source.toLowerCase());
+      if (target) setTimeout(() => openHallModal(target.id), 200);
+    };
+  }
+
+  armoryClose.onclick = () => closeArmoryModal(spearEl, rect);
+}
+
+function closeArmoryModal(spearEl, originalRect) {
+  armoryAttribution.classList.remove('reveal');
+  armoryClose.classList.remove('show');
+
+  spearEl.style.top = originalRect.top + 'px';
+  spearEl.style.left = originalRect.left + 'px';
+  spearEl.style.width = originalRect.width + 'px';
+  spearEl.style.height = originalRect.height + 'px';
+
+  setTimeout(() => {
+    spearEl.classList.remove('selected');
+    spearEl.removeAttribute('style');
+    armoryTrack.querySelectorAll('.spear').forEach(el => el.classList.remove('dim'));
+  }, 1500);
+}
+
+/* =====================================================================
+   INIT — load quotes.txt, fall back to embedded placeholder text
+===================================================================== */
+fetch('assets/text/quotes.txt')
+  .then(r => { if (!r.ok) throw new Error('no file'); return r.text(); })
+  .then(text => { QUOTES = parseQuotes(text); })
+  .catch(() => { QUOTES = parseQuotes(QUOTES_FALLBACK); })
+  .finally(() => {
+    renderHall();
+    renderArmory();
+  });
+</script>
+
+</body>
+</html>
