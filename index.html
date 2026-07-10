@@ -14,7 +14,7 @@
     --line-grey: #b7b1a2;
     --line-grey-soft: #e2ddd0;
     --rubric: #8a2e26;
-    --gold-glow: rgba(154,124,58,0.20);
+    --gold-glow: rgba(154,124,58,0.18);
   }
   *{ box-sizing:border-box; }
   html,body{ height:100%; margin:0; }
@@ -84,51 +84,57 @@
   }
   #hall-track::-webkit-scrollbar{ display:none; }
 
-  .saint-card{
+  .saint-item{
     flex:0 0 auto;
-    height:calc(100vh - 80px); /* 30 header + 10 top + 40 bottom */
-    aspect-ratio:1/2; /* 2:1 height to width */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     margin-top:10px;
     margin-bottom:40px;
-    position:relative;
-    border:1px solid var(--line-grey);
-    background:#fdfdfc;
-    overflow:hidden;
     cursor:pointer;
-    transition:box-shadow .4s ease, border-color .4s ease, opacity 1s ease;
+    transition:opacity 1s ease;
   }
-  .saint-card:hover{
-    border-color:var(--rubric);
+  .saint-item.dim{ opacity:0; pointer-events:none; }
+
+  .saint-card{
+    flex:0 0 auto;
+    height:calc(100vh - 104px); /* 30 header + 10 top + 40 bottom + ~24 caption row */
+    aspect-ratio:1/2; /* 2:1 height to width */
+    overflow:hidden;
+    background:#fdfdfc;
+    transition:box-shadow .4s ease;
+  }
+  .saint-item:hover .saint-card{
     box-shadow:0 20px 44px -20px var(--gold-glow);
   }
   .saint-card img{
     width:100%; height:100%;
     object-fit:cover;
-    transition:transform .6s ease;
+    display:block;
   }
-  .saint-card:hover img{ transform:scale(1.035); }
+
   .saint-caption{
-    position:absolute;
-    left:0; right:0; bottom:0;
-    padding:8px 10px;
-    background:linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0));
+    margin-top:10px;
     font-size:11px;
+    line-height:14px;
     letter-spacing:0.08em;
     text-align:center;
     text-transform:uppercase;
     color:var(--ink-soft);
+    transition:color .3s ease;
   }
-  .saint-card.dim{ opacity:0; pointer-events:none; }
-  .saint-card.selected{
+  .saint-item:hover .saint-caption{ color:var(--rubric); }
+
+  .saint-item.selected{
     position:fixed;
     z-index:40;
     margin:0;
-    transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
-               width 1.5s cubic-bezier(.2,.8,.2,1), height 1.5s cubic-bezier(.2,.8,.2,1),
-               box-shadow .6s ease;
-    box-shadow:0 30px 70px -25px rgba(0,0,0,0.25);
+    transform-origin:top left;
   }
-  .card-placeholder{ flex:0 0 auto; visibility:hidden; }
+  .saint-item.selected.animate-pos{
+    transition:transform 1.5s cubic-bezier(.2,.8,.2,1);
+  }
+  .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   /* ---------------- Hall Modal side panels ---------------- */
   #hall-modal-quotes, #hall-modal-text{
@@ -204,17 +210,23 @@
     justify-content:center;
     cursor:pointer;
     position:relative;
-    transition:opacity .6s ease;
+    transition:opacity 1s ease;
   }
   .spear .tip{
-    position:absolute; top:6px; left:50%; transform:translateX(-50%);
-    width:0; height:0;
-    border-left:8px solid transparent;
-    border-right:8px solid transparent;
-    border-bottom:16px solid var(--line-grey);
-    transition:border-color .4s ease;
+    position:absolute;
+    top:10px; left:50%;
+    transform:translateX(-50%);
+    width:14px; height:14px;
   }
-  .spear:hover .tip{ border-bottom-color:var(--rubric); }
+  .spear .tip::before, .spear .tip::after{
+    content:'';
+    position:absolute;
+    background:var(--line-grey);
+    transition:background-color .4s ease;
+  }
+  .spear .tip::before{ left:50%; top:0; width:1.5px; height:100%; transform:translateX(-50%); }
+  .spear .tip::after{ top:50%; left:0; height:1.5px; width:100%; transform:translateY(-50%); }
+  .spear:hover .tip::before, .spear:hover .tip::after{ background:var(--rubric); }
   .spear .shaft-text{
     writing-mode:vertical-rl;
     text-orientation:mixed;
@@ -239,13 +251,16 @@
     transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
                transform 1.5s cubic-bezier(.2,.8,.2,1);
   }
+  .spear.selected.animate-pos.settle{
+    transition:top .5s cubic-bezier(.25,.8,.4,1);
+  }
   .spear.selected .tip{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   #armory-attribution{
     position:fixed;
     left:50%; transform:translateX(-50%);
-    top:calc(50% + 190px);
+    top:calc(50% + 60px);
     z-index:41;
     font-style:italic;
     font-size:14px;
@@ -334,7 +349,8 @@
 /* =====================================================================
    DATA — SAINTS
    Add / remove cards here. `image` points at assets/images/icons/...
-   in the repo — update the filename to match exactly what's committed.
+   in the repo — update to match exactly what's committed there
+   (GitHub Pages is case-sensitive).
 ===================================================================== */
 const SAINTS = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
@@ -491,14 +507,14 @@ function renderHall() {
   const full = [...head, ...SAINTS, ...tail];
 
   full.forEach((s) => {
-    const el = document.createElement('div');
-    el.className = 'saint-card';
-    el.dataset.id = s.id;
-    el.innerHTML = `
-      <img src="${s.image}" alt="${s.name}">
+    const item = document.createElement('div');
+    item.className = 'saint-item';
+    item.dataset.id = s.id;
+    item.innerHTML = `
+      <div class="saint-card"><img src="${encodeURI(s.image)}" alt="${s.name}"></div>
       <div class="saint-caption">${s.name}</div>`;
-    el.addEventListener('click', () => openHallModal(el, s));
-    hallTrack.appendChild(el);
+    item.addEventListener('click', () => openHallModal(item, s));
+    hallTrack.appendChild(item);
   });
 
   requestAnimationFrame(() => {
@@ -516,35 +532,38 @@ const hallQuotesList = document.getElementById('hall-quotes-list');
 const hallLorem = document.getElementById('hall-lorem');
 const hallClose = document.getElementById('hall-close');
 
-function openHallModal(cardEl, data) {
-  const rect = cardEl.getBoundingClientRect();
+function openHallModal(itemEl, data) {
+  const rect = itemEl.getBoundingClientRect();
 
-  // reserve the card's slot so the row never reflows while it's "lifted out"
+  // reserve the item's slot so the row never reflows while it's "lifted out"
   const placeholder = document.createElement('div');
-  placeholder.className = 'card-placeholder';
+  placeholder.className = 'item-placeholder';
   placeholder.style.width = rect.width + 'px';
   placeholder.style.height = rect.height + 'px';
-  placeholder.style.marginTop = getComputedStyle(cardEl).marginTop;
-  placeholder.style.marginBottom = getComputedStyle(cardEl).marginBottom;
-  cardEl.after(placeholder);
+  placeholder.style.marginTop = getComputedStyle(itemEl).marginTop;
+  placeholder.style.marginBottom = getComputedStyle(itemEl).marginBottom;
+  itemEl.after(placeholder);
 
-  hallTrack.querySelectorAll('.saint-card').forEach(el => {
-    if (el !== cardEl) el.classList.add('dim');
+  hallTrack.querySelectorAll('.saint-item').forEach(el => {
+    if (el !== itemEl) el.classList.add('dim');
   });
 
-  cardEl.style.top = rect.top + 'px';
-  cardEl.style.left = rect.left + 'px';
-  cardEl.style.width = rect.width + 'px';
-  cardEl.style.height = rect.height + 'px';
-  cardEl.classList.add('selected');
+  itemEl.style.top = rect.top + 'px';
+  itemEl.style.left = rect.left + 'px';
+  itemEl.style.width = rect.width + 'px';
+  itemEl.style.height = rect.height + 'px';
+  itemEl.style.transform = 'translate(0px, 0px) scale(1)';
+  itemEl.classList.add('selected', 'animate-pos');
 
   requestAnimationFrame(() => {
     const targetH = window.innerHeight * 0.62;
-    const targetW = targetH * 0.5; /* 2:1 height:width */
-    cardEl.style.top = (window.innerHeight - targetH) / 2 + 'px';
-    cardEl.style.left = (window.innerWidth - targetW) / 2 + 'px';
-    cardEl.style.width = targetW + 'px';
-    cardEl.style.height = targetH + 'px';
+    const scale = targetH / rect.height;
+    const targetW = rect.width * scale;
+    const targetTop = (window.innerHeight - targetH) / 2;
+    const targetLeft = (window.innerWidth - targetW) / 2;
+    const dx = targetLeft - rect.left;
+    const dy = targetTop - rect.top;
+    itemEl.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
   });
 
   hallQuotesList.innerHTML = data.quotes.map(q => `<span class="q">&ldquo;${q}&rdquo;</span>`).join('');
@@ -556,25 +575,21 @@ function openHallModal(cardEl, data) {
     hallClose.classList.add('show');
   }, 1500);
 
-  hallClose.onclick = () => closeHallModal(cardEl, placeholder);
+  hallClose.onclick = () => closeHallModal(itemEl, placeholder);
 }
 
-function closeHallModal(cardEl, placeholder) {
+function closeHallModal(itemEl, placeholder) {
   hallQuotesSide.classList.remove('reveal');
   hallTextSide.classList.remove('reveal');
   hallClose.classList.remove('show');
 
-  const target = placeholder.getBoundingClientRect();
-  cardEl.style.top = target.top + 'px';
-  cardEl.style.left = target.left + 'px';
-  cardEl.style.width = target.width + 'px';
-  cardEl.style.height = target.height + 'px';
+  itemEl.style.transform = 'translate(0px, 0px) scale(1)';
 
   setTimeout(() => {
-    cardEl.classList.remove('selected');
-    cardEl.removeAttribute('style');
+    itemEl.classList.remove('selected', 'animate-pos');
+    itemEl.removeAttribute('style');
     placeholder.remove();
-    hallTrack.querySelectorAll('.saint-card').forEach(el => el.classList.remove('dim'));
+    hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
   }, 1500);
 }
 
@@ -585,8 +600,7 @@ const armoryTrack = document.getElementById('armory-track');
 const armoryAttribution = document.getElementById('armory-attribution');
 const armoryClose = document.getElementById('armory-close');
 /* Spears are narrow (54px), so a short quotes.txt can end up with barely
-   any scrollable width — not enough to loop, which is what made the
-   scroll feel "locked". Cycle through the list enough times on each
+   any scrollable width. Cycle through the list enough times on each
    side to comfortably outspan any screen width. */
 const ARMORY_BUFFER = 24;
 
@@ -670,9 +684,9 @@ function openArmoryModal(spearEl, q) {
       const target = SAINTS.find(s => s.name.toLowerCase() === q.source.toLowerCase());
       if (target) {
         setTimeout(() => {
-          const cardEl = [...hallTrack.querySelectorAll('.saint-card')]
+          const itemEl = [...hallTrack.querySelectorAll('.saint-item')]
             .find(el => Number(el.dataset.id) === target.id);
-          if (cardEl) openHallModal(cardEl, target);
+          if (itemEl) openHallModal(itemEl, target);
         }, 200);
       }
     };
@@ -681,23 +695,39 @@ function openArmoryModal(spearEl, q) {
   armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
 }
 
-/* Armory close: simple fade-out, then fade-in — no slide/rotate-back motion */
+/* Armory close: an exact reverse of the open animation (rotate + slide
+   back), but it overshoots to a spot 20px above the true resting place.
+   Once the rest of the rack has faded back in, a short second animation
+   slots the spear the last 20px down into its exact original position. */
 function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
-  spearEl.classList.remove('animate-pos');
-  spearEl.classList.add('dim'); // fades opacity to 0 (.6s, see .spear transition)
+  const rect = placeholder.getBoundingClientRect();
+
+  // Step 1 — reverse of the open animation, overshooting 20px high.
+  spearEl.style.top = (rect.top - 20) + 'px';
+  spearEl.style.left = rect.left + 'px';
+  spearEl.style.transform = 'rotate(0deg)';
 
   setTimeout(() => {
-    spearEl.classList.remove('selected');
-    spearEl.removeAttribute('style');
-    placeholder.remove();
-    // next frame: fade everything back in together
-    requestAnimationFrame(() => {
-      armoryTrack.querySelectorAll('.spear').forEach(el => el.classList.remove('dim'));
+    // Step 2 — the rest of the rack fades back in.
+    armoryTrack.querySelectorAll('.spear').forEach(el => {
+      if (el !== spearEl) el.classList.remove('dim');
     });
-  }, 600);
+
+    setTimeout(() => {
+      // Step 3 — the spear slots smoothly down the last 20px.
+      spearEl.classList.add('settle');
+      spearEl.style.top = rect.top + 'px';
+
+      setTimeout(() => {
+        spearEl.classList.remove('selected', 'animate-pos', 'settle');
+        spearEl.removeAttribute('style');
+        placeholder.remove();
+      }, 550);
+    }, 1000);
+  }, 1500);
 }
 
 /* =====================================================================
