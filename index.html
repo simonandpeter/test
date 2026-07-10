@@ -233,18 +233,11 @@
     z-index:40;
     margin:0;
     background:#fff;
+    transform-origin:center center;
   }
   .spear.selected.animate-pos{
     transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
-               width 1.5s cubic-bezier(.2,.8,.2,1), height 1.5s cubic-bezier(.2,.8,.2,1);
-  }
-  .spear.selected .shaft-text{
-    writing-mode:horizontal-tb;
-    font-size:22px;
-    line-height:1.5;
-    padding:0 24px;
-    max-height:none;
-    text-align:center;
+               transform 1.5s cubic-bezier(.2,.8,.2,1);
   }
   .spear.selected .tip{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
@@ -346,7 +339,7 @@
 const SAINTS = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
   name: 'St Antony the Great',
-  image: 'assets/images/icons/st-antony.png',
+  image: 'assets/images/icons/St Antony the Great.jpg',
   quotes: [
     'I no longer fear God, but I love Him.',
     'Whoever sits in solitude is delivered from three wars.',
@@ -472,6 +465,19 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
   };
 }
 
+/* Builds `count` items cycling through `list` starting at `start`
+   (wrapping around as many times as needed) — used so a short list of
+   narrow items (e.g. Armory quotes) still gets a wide enough clone
+   buffer to scroll freely in both directions before looping. */
+function cyclicSlice(list, start, count) {
+  const out = [];
+  const n = list.length;
+  for (let i = 0; i < count; i++) {
+    out.push(list[((start + i) % n + n) % n]);
+  }
+  return out;
+}
+
 /* =====================================================================
    HALL OF SAINTS — carousel, modal
 ===================================================================== */
@@ -480,8 +486,8 @@ const LOOP_BUFFER = 4;
 
 function renderHall() {
   hallTrack.innerHTML = '';
-  const head = SAINTS.slice(-LOOP_BUFFER);
-  const tail = SAINTS.slice(0, LOOP_BUFFER);
+  const head = cyclicSlice(SAINTS, SAINTS.length - LOOP_BUFFER, LOOP_BUFFER);
+  const tail = cyclicSlice(SAINTS, 0, LOOP_BUFFER);
   const full = [...head, ...SAINTS, ...tail];
 
   full.forEach((s) => {
@@ -578,12 +584,16 @@ function closeHallModal(cardEl, placeholder) {
 const armoryTrack = document.getElementById('armory-track');
 const armoryAttribution = document.getElementById('armory-attribution');
 const armoryClose = document.getElementById('armory-close');
-const ARMORY_BUFFER = 3;
+/* Spears are narrow (54px), so a short quotes.txt can end up with barely
+   any scrollable width — not enough to loop, which is what made the
+   scroll feel "locked". Cycle through the list enough times on each
+   side to comfortably outspan any screen width. */
+const ARMORY_BUFFER = 24;
 
 function renderArmory() {
   armoryTrack.innerHTML = '';
-  const head = QUOTES.slice(-ARMORY_BUFFER);
-  const tail = QUOTES.slice(0, ARMORY_BUFFER);
+  const head = cyclicSlice(QUOTES, QUOTES.length - ARMORY_BUFFER, ARMORY_BUFFER);
+  const tail = cyclicSlice(QUOTES, 0, ARMORY_BUFFER);
   const full = [...head, ...QUOTES, ...tail];
 
   full.forEach((q) => {
@@ -621,15 +631,19 @@ function openArmoryModal(spearEl, q) {
   spearEl.style.left = rect.left + 'px';
   spearEl.style.width = rect.width + 'px';
   spearEl.style.height = rect.height + 'px';
+  spearEl.style.transform = 'rotate(0deg)';
   spearEl.classList.add('selected', 'animate-pos');
 
   requestAnimationFrame(() => {
-    const targetW = Math.min(window.innerWidth * 0.6, 640);
-    const targetH = 140;
-    spearEl.style.top = (window.innerHeight - targetH) / 2 - 40 + 'px';
-    spearEl.style.left = (window.innerWidth - targetW) / 2 + 'px';
-    spearEl.style.width = targetW + 'px';
-    spearEl.style.height = targetH + 'px';
+    // width/height never change — the spear keeps its own proportions
+    // and is simply carried to centre and laid flat by rotating it.
+    const cx = window.innerWidth / 2;
+    const cy = window.innerHeight / 2 - 30;
+    spearEl.style.top = (cy - rect.height / 2) + 'px';
+    spearEl.style.left = (cx - rect.width / 2) + 'px';
+    spearEl.style.transform = 'rotate(-90deg)';
+    armoryAttribution.style.top = (cy + rect.width / 2 + 26) + 'px';
+    armoryAttribution.style.left = '50%';
   });
 
   const isSaint = SAINTS.some(s => s.name.toLowerCase() === q.source.toLowerCase());
