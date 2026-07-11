@@ -376,6 +376,7 @@
   <section id="hall-view" class="view active">
     <div id="hall-track"></div>
     <div id="hall-status" style="display:none"></div>
+    <div id="data-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
 
     <div id="hall-modal-quotes">
       <div>
@@ -426,7 +427,7 @@
    the site can't ask GitHub what folders exist under assets/saints/,
    and falls back to a small built-in demo so the page still works.
 ===================================================================== */
-const GITHUB_OWNER  = 'sminandpeter';
+const GITHUB_OWNER  = 'simonandpeter';
 const GITHUB_REPO   = 'test';
 const GITHUB_BRANCH = 'main';
 
@@ -669,12 +670,12 @@ async function fetchText(url) {
 async function loadSaints() {
   if (GITHUB_OWNER === 'YOUR_GITHUB_USERNAME' || GITHUB_REPO === 'YOUR_REPO_NAME') {
     console.warn('GITHUB_OWNER/GITHUB_REPO are not configured — showing the built-in demo. Fill them in at the top of the script.');
-    return fallbackSaints();
+    return { saints: fallbackSaints(), source: 'unconfigured' };
   }
   try {
     const treeUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`;
     const treeRes = await fetch(treeUrl);
-    if (!treeRes.ok) throw new Error('Could not list assets/saints via the GitHub API');
+    if (!treeRes.ok) throw new Error(`GitHub API returned ${treeRes.status} for ${treeUrl}`);
     const tree = await treeRes.json();
 
     const folders = {};
@@ -690,13 +691,19 @@ async function loadSaints() {
         (folders[folder] = folders[folder] || []).push(file);
       });
 
+    if (!Object.keys(folders).length) {
+      console.warn(`No files found under assets/saints/ in ${GITHUB_OWNER}/${GITHUB_REPO}@${GITHUB_BRANCH}. Check the path and branch name.`);
+      return { saints: fallbackSaints(), source: 'empty' };
+    }
+
     const saints = [];
+    const skipped = [];
     for (const folder of Object.keys(folders).sort()) {
       const files = folders[folder];
       const image = files.find(f => /\.(jpe?g|png|webp)$/i.test(f));
       const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
       const chapterFiles = files.filter(f => /\.txt$/i.test(f) && f.toLowerCase() !== 'quotes.txt').sort(naturalCompare);
-      if (!image) continue;
+      if (!image) { skipped.push(folder); continue; }
 
       const base = `assets/saints/${encodeURIComponent(folder)}/`;
       const quotesRaw = quotesFile ? await fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : '';
@@ -704,7 +711,7 @@ async function loadSaints() {
 
       const chapters = [];
       for (const cf of chapterFiles) {
-        const body = await fetchText(base + encodeURIComponent(cf)).catch(() => '');
+        const body = await fetchText(base + encodeURIComponent(cf)).catch((e) => { console.warn(`Could not fetch ${base}${cf}:`, e); return ''; });
         chapters.push({ title: cf.replace(/\.txt$/i, ''), body: body.trim() });
       }
 
@@ -716,10 +723,12 @@ async function loadSaints() {
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
       });
     }
-    return saints.length ? saints : fallbackSaints();
+    if (skipped.length) console.warn('Skipped folders with no image file:', skipped);
+    if (!saints.length) return { saints: fallbackSaints(), source: 'empty' };
+    return { saints, source: 'live' };
   } catch (err) {
-    console.warn('Falling back to the built-in demo saints:', err);
-    return fallbackSaints();
+    console.warn('Falling back to the built-in demo saints — GitHub fetch failed:', err);
+    return { saints: fallbackSaints(), source: 'error' };
   }
 }
 
@@ -741,9 +750,8 @@ function renderHall() {
   }
   hallStatus.style.display = 'none';
 
-  const buffer = Math.min(LOOP_BUFFER, Math.max(SAINTS.length, 3));
-  const head = cyclicSlice(SAINTS, SAINTS.length - buffer, buffer);
-  const tail = cyclicSlice(SAINTS, 0, buffer);
+  const head = cyclicSlice(SAINTS, SAINTS.length - LOOP_BUFFER, LOOP_BUFFER);
+  const tail = cyclicSlice(SAINTS, 0, LOOP_BUFFER);
   const full = [...head, ...SAINTS, ...tail];
 
   full.forEach((s) => {
@@ -759,7 +767,7 @@ function renderHall() {
 
   requestAnimationFrame(() => {
     hallInertia.measure();
-    const first = hallTrack.children[buffer];
+    const first = hallTrack.children[LOOP_BUFFER];
     if (first) hallInertia.resetTo(first.offsetLeft);
   });
 }
@@ -1074,11 +1082,30 @@ function openArmoryModal(spearEl, q) {
   armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
 }
 
+/* The placeholder's captured box was a close but not pixel-perfect stand-in
+   for the spear's true flex-computed resting slot (the hilt's padding/gap
+   made the two diverge slightly) — enough to be visible as a small jump
+   right at the end of the sheathing animation. Measuring the spear directly
+   in a momentary, unpainted flow state removes that guesswork entirely. */
+function measureTrueRestingRect(spearEl, placeholder) {
+  const savedStyle = spearEl.getAttribute('style');
+  const savedClass = spearEl.className;
+  const savedPlaceholderDisplay = placeholder.style.display;
+  placeholder.style.display = 'none';
+  spearEl.className = 'spear';
+  spearEl.removeAttribute('style');
+  const rect = spearEl.getBoundingClientRect();
+  spearEl.setAttribute('style', savedStyle);
+  spearEl.className = savedClass;
+  placeholder.style.display = savedPlaceholderDisplay;
+  return rect;
+}
+
 function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
-  const rect = placeholder.getBoundingClientRect();
+  const rect = measureTrueRestingRect(spearEl, placeholder);
   const scale = armoryScaleFor(rect);
   const cx = window.innerWidth / 2;
   const cy = window.innerHeight / 2 - 30;
@@ -1108,7 +1135,19 @@ function closeArmoryModal(spearEl, placeholder) {
 /* =====================================================================
    INIT
 ===================================================================== */
-loadSaints().then(saints => { SAINTS = saints; renderHall(); });
+loadSaints().then(({ saints, source }) => {
+  SAINTS = saints;
+  renderHall();
+  const badge = document.getElementById('data-source-badge');
+  const messages = {
+    unconfigured: 'Demo data — set GITHUB_OWNER/REPO at the top of the script',
+    error: 'Demo data — GitHub fetch failed, see console',
+    empty: 'Demo data — no folders found under assets/saints/, see console',
+    live: `Loaded ${saints.length} saint(s) from GitHub`
+  };
+  badge.textContent = messages[source] || '';
+  badge.style.display = 'block';
+});
 
 fetch('assets/text/quotes.txt')
   .then(r => { if (!r.ok) throw new Error('no file'); return r.text(); })
