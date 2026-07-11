@@ -927,6 +927,14 @@ function createChapterController(container, getScrollRoot) {
     nextObserver.observe(sentinel);
   }
 
+  // Position of `el`'s top edge within `root`'s scrollable content,
+  // independent of `el`'s offsetParent chain (which is often some other
+  // positioned ancestor, not the scroll container itself — offsetTop
+  // alone gave the wrong coordinate space here).
+  function scrollOffsetWithin(el, root) {
+    return el.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop;
+  }
+
   function watchPrev() {
     disconnectPrev();
     if (firstOpen === null || firstOpen <= 0) return;
@@ -936,8 +944,17 @@ function createChapterController(container, getScrollRoot) {
     prevObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          const root = getScrollRoot();
+          const beforeHeight = root.scrollHeight;
+          const beforeScroll = root.scrollTop;
           firstOpen = Math.max(0, firstOpen - 1);
           applyVisibility();
+          // revealing the previous chapter inserts its height above the
+          // current view — compensate scrollTop by the same amount so the
+          // content on screen doesn't jump, and the reveal feels like a
+          // continuous scroll rather than a snap to the new chapter's top
+          const grew = root.scrollHeight - beforeHeight;
+          root.scrollTop = beforeScroll + grew;
           watchPrev();
         }
       });
@@ -953,7 +970,7 @@ function createChapterController(container, getScrollRoot) {
     watchPrev();
     const chapterEl = container.querySelector(`.chapter[data-i="${index}"]`);
     const root = getScrollRoot();
-    if (chapterEl && root) root.scrollTop = chapterEl.offsetTop;
+    if (chapterEl && root) root.scrollTop = scrollOffsetWithin(chapterEl, root);
   }
 
   function close() {
@@ -997,7 +1014,8 @@ function jumpToQuote(linkedQuote) {
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
     const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
-    const targetTop = anchor.offsetTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
+    const anchorTop = anchor.getBoundingClientRect().top - scrollBox.getBoundingClientRect().top + scrollBox.scrollTop;
+    const targetTop = anchorTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
       anchor.classList.add('hl');
