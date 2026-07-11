@@ -405,6 +405,7 @@
   <section id="armory-view" class="view">
     <div id="armory-track"></div>
     <div id="armory-attribution"></div>
+    <div id="armory-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
     <div id="armory-close">
       <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
         <line x1="1" y1="1" x2="15" y2="15"/><line x1="15" y1="1" x2="1" y2="15"/>
@@ -663,6 +664,7 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
 function cyclicSlice(list, start, count) {
   const out = [];
   const n = list.length;
+  if (n === 0) return out;
   for (let i = 0; i < count; i++) out.push(list[((start + i) % n + n) % n]);
   return out;
 }
@@ -1492,9 +1494,21 @@ loadSaints().then(({ saints, source }) => {
 
 fetch('assets/text/quotes.txt')
   .then(r => { if (!r.ok) throw new Error('no file'); return r.text(); })
-  .then(text => { ARMORY_QUOTES = parseArmoryQuotes(text); })
-  .catch(() => { ARMORY_QUOTES = parseArmoryQuotes(QUOTES_FALLBACK); })
-  .finally(() => { renderArmory(); });
+  .then(text => {
+    const parsed = parseArmoryQuotes(text);
+    if (!parsed.length) throw new Error('quotes.txt fetched OK but parsed to zero entries — check the source/quote/blank-line format');
+    ARMORY_QUOTES = parsed;
+    document.getElementById('armory-source-badge').textContent = `Loaded ${parsed.length} quote(s) from assets/text/quotes.txt`;
+  })
+  .catch((err) => {
+    console.warn('Armory: falling back to built-in demo quotes —', err.message);
+    ARMORY_QUOTES = parseArmoryQuotes(QUOTES_FALLBACK);
+    document.getElementById('armory-source-badge').textContent = 'Demo quotes — see console for why assets/text/quotes.txt wasn\'t used';
+  })
+  .finally(() => {
+    document.getElementById('armory-source-badge').style.display = 'block';
+    renderArmory();
+  });
 
 /* Repositions the open Hall modal on resize. If the resize also crossed
    the split-panel/compact threshold, crossfades between the two layouts
