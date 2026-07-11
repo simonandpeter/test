@@ -215,7 +215,7 @@
   .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
   .chapter-body p{ margin-bottom:1em; }
   .chapter.revealed .chapter-body{ display:block; }
-  .chapter-sentinel{ height:1px; }
+  .chapter-start-sentinel, .chapter-end-sentinel{ height:1px; }
   .chapters-panel.has-open .chapter:not(.revealed){ display:none; }
   .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
   .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; }
@@ -488,7 +488,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
   const drift = !!opts.drift;
   const idleMs = opts.idleMs ?? 5000;
-  const driftSpeedTarget = opts.driftSpeed ?? 2; // px/s
+  const driftSpeedTarget = opts.driftSpeed ?? 45; // px/s — fast enough to clear a whole pixel most frames, or it reads as stalled rather than smooth
 
   let targetScroll = 0;
   let isEasing = false;
@@ -552,6 +552,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     lastInteraction = performance.now();
     driftSpeed = 0;
     driftPos = null;
+    isDrifting = false;
     targetScroll += e.deltaY;
     isEasing = true;
     if (!raf) raf = requestAnimationFrame(tick);
@@ -617,7 +618,7 @@ function cyclicSlice(list, start, count) {
    wheel/scroll listeners to the same persistent DOM node, and several of
    them competing for the same scrollTop is what eventually broke this. */
 function createQuoteCarousel(containerEl, rows) {
-  const buffer = Math.max(rows, 6);
+  const buffer = Math.max(rows, 24); // generous, so fast wheel-flicks never outrun the clone buffer (same fix as the Armory rack)
   let items = [];
   const loop = attachLoopScroll(containerEl, buffer, () => items.length, { axis: 'y' });
 
@@ -869,11 +870,14 @@ const hallChaptersMobile = createChapterController(
    rather than being an exclusive one-at-a-time accordion. Each revealed
    chapter's header is sticky, so as the reader scrolls into the next
    chapter, its header naturally covers the previous one — no extra JS
-   needed for that part, it's just how stacked position:sticky works. */
+   needed for that part, it's just how stacked position:sticky works.
+   Scrolling back up to the start of the first-revealed chapter reveals
+   the one before it, mirroring the forward behaviour. */
 function createChapterController(container, getScrollRoot) {
   let firstOpen = null;
   let revealedUpTo = -1;
-  let observer = null;
+  let nextObserver = null;
+  let prevObserver = null;
 
   function applyVisibility() {
     container.querySelectorAll('.chapter').forEach(ch => {
@@ -883,18 +887,18 @@ function createChapterController(container, getScrollRoot) {
     container.classList.toggle('has-open', firstOpen !== null);
   }
 
-  function disconnect() {
-    if (observer) { observer.disconnect(); observer = null; }
-  }
+  function disconnectNext() { if (nextObserver) { nextObserver.disconnect(); nextObserver = null; } }
+  function disconnectPrev() { if (prevObserver) { prevObserver.disconnect(); prevObserver = null; } }
+  function disconnectAll() { disconnectNext(); disconnectPrev(); }
 
   function watchNext() {
-    disconnect();
+    disconnectNext();
     const chapters = container.querySelectorAll('.chapter');
     if (revealedUpTo < 0 || revealedUpTo >= chapters.length - 1) return;
     const current = container.querySelector(`.chapter[data-i="${revealedUpTo}"]`);
-    const sentinel = current && current.querySelector('.chapter-sentinel');
+    const sentinel = current && current.querySelector('.chapter-end-sentinel');
     if (!sentinel) return;
-    observer = new IntersectionObserver((entries) => {
+    nextObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           revealedUpTo = Math.min(revealedUpTo + 1, chapters.length - 1);
@@ -903,7 +907,25 @@ function createChapterController(container, getScrollRoot) {
         }
       });
     }, { root: getScrollRoot(), threshold: 0.01 });
-    observer.observe(sentinel);
+    nextObserver.observe(sentinel);
+  }
+
+  function watchPrev() {
+    disconnectPrev();
+    if (firstOpen === null || firstOpen <= 0) return;
+    const current = container.querySelector(`.chapter[data-i="${firstOpen}"]`);
+    const sentinel = current && current.querySelector('.chapter-start-sentinel');
+    if (!sentinel) return;
+    prevObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          firstOpen = Math.max(0, firstOpen - 1);
+          applyVisibility();
+          watchPrev();
+        }
+      });
+    }, { root: getScrollRoot(), threshold: 0.01 });
+    prevObserver.observe(sentinel);
   }
 
   function openFrom(index) {
@@ -911,12 +933,13 @@ function createChapterController(container, getScrollRoot) {
     revealedUpTo = index;
     applyVisibility();
     watchNext();
+    watchPrev();
   }
 
   function close() {
     firstOpen = null;
     revealedUpTo = -1;
-    disconnect();
+    disconnectAll();
     applyVisibility();
   }
 
@@ -927,7 +950,7 @@ function createChapterController(container, getScrollRoot) {
       const el = document.createElement('div');
       el.className = 'chapter';
       el.dataset.i = i;
-      el.innerHTML = `<button class="chapter-header" type="button">${ch.title}</button><div class="chapter-body">${ch.html}<div class="chapter-sentinel"></div></div>`;
+      el.innerHTML = `<div class="chapter-start-sentinel"></div><button class="chapter-header" type="button">${ch.title}</button><div class="chapter-body">${ch.html}<div class="chapter-end-sentinel"></div></div>`;
       el.querySelector('.chapter-header').addEventListener('click', () => {
         if (el.classList.contains('revealed')) close();
         else openFrom(i);
