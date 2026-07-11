@@ -848,6 +848,7 @@ function renderHall() {
       <div class="saint-card"><img src="${s.image}" alt="${s.name}"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => {
+      if (hallBusy) return;
       if (item.classList.contains('selected')) { if (hallClose.onclick) hallClose.onclick(); return; }
       openHallModal(item, s);
     });
@@ -1084,8 +1085,11 @@ function computeHallTarget(origRect, mobile) {
   return { targetH, targetW, targetTop, targetLeft, scale };
 }
 
+let hallBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
+
 function openHallModal(itemEl, data) {
-  if (itemEl.classList.contains('selected')) return; // already open — ignore repeat clicks
+  if (hallBusy || itemEl.classList.contains('selected')) return;
+  hallBusy = true;
   hallDrift.pause();
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
@@ -1138,12 +1142,14 @@ function openHallModal(itemEl, data) {
     hallModalText.classList.add('reveal');
     hallMobilePanel.classList.add('reveal');
     hallClose.classList.add('show');
+    hallBusy = false;
   }, 1500);
 
-  hallClose.onclick = () => closeHallModal(itemEl, placeholder);
+  hallClose.onclick = () => { if (!hallBusy) closeHallModal(itemEl, placeholder); };
 }
 
 function closeHallModal(itemEl, placeholder) {
+  hallBusy = true;
   hallDrift.resume(); // 5s idle countdown restarts fresh from now
   currentHallOpen = null;
   modalCompactMode = null;
@@ -1169,6 +1175,7 @@ function closeHallModal(itemEl, placeholder) {
     placeholder.remove();
     document.body.classList.remove('modal-compact');
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
+    hallBusy = false;
   });
 }
 
@@ -1220,6 +1227,7 @@ function renderArmory() {
       <div class="hilt"><div class="pommel"></div><div class="grip"></div><div class="guard"></div></div>
       <div class="shaft-text">${q.quote}</div>`;
     el.addEventListener('click', () => {
+      if (armoryBusy) return;
       if (el.classList.contains('selected')) { if (armoryClose.onclick) armoryClose.onclick(); return; }
       openArmoryModal(el, q);
     });
@@ -1256,8 +1264,11 @@ function armorySpearTarget(origRect) {
   };
 }
 
+let armoryBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
+
 function openArmoryModal(spearEl, q) {
-  if (spearEl.classList.contains('selected')) return; // already open — its own click listener stays attached while open, ignore repeat clicks
+  if (armoryBusy || spearEl.classList.contains('selected')) return;
+  armoryBusy = true;
   armoryDrift.pause();
   const rect = spearEl.getBoundingClientRect();
 
@@ -1305,12 +1316,14 @@ function openArmoryModal(spearEl, q) {
   setTimeout(() => {
     armoryAttribution.classList.add('reveal');
     armoryClose.classList.add('show');
+    armoryBusy = false;
   }, 1500);
 
   const jumpLink = armoryAttribution.querySelector('[data-jump-saint]');
   if (jumpLink) {
     jumpLink.onclick = (e) => {
       e.preventDefault();
+      if (armoryBusy) return;
       closeArmoryModal(spearEl, placeholder);
       document.querySelector('header nav a[data-view="hall"]').click();
       const target = SAINTS.find(s => s.name.toLowerCase() === q.source.toLowerCase());
@@ -1323,7 +1336,7 @@ function openArmoryModal(spearEl, q) {
     };
   }
 
-  armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
+  armoryClose.onclick = () => { if (!armoryBusy) closeArmoryModal(spearEl, placeholder); };
 }
 
 /* The placeholder's captured box was a close but not pixel-perfect stand-in
@@ -1346,6 +1359,7 @@ function measureTrueRestingRect(spearEl, placeholder) {
 }
 
 function closeArmoryModal(spearEl, placeholder) {
+  armoryBusy = true;
   armoryDrift.resume(); // 5s idle countdown restarts fresh from now
   currentArmoryOpen = null;
   armoryAttribution.classList.remove('reveal');
@@ -1396,6 +1410,7 @@ function closeArmoryModal(spearEl, placeholder) {
       spearEl.style.transform = `translate(${lerp(dLeft, 0, t2)}px, ${lerp(dTop, 0, t2)}px)`;
     }, () => {
       spearEl.style.transform = '';
+      armoryBusy = false;
     });
   });
 }
