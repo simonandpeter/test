@@ -256,18 +256,12 @@
     background:#fff;
     border-bottom:1px solid var(--line-grey-soft);
     display:flex; align-items:center;
-    padding:8px 44px 8px 12px;
+    padding:8px 92px 8px 12px; /* right space reserves room for the docked image + arrow */
     min-height:56px;
     transition:min-height .3s ease;
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
-  .mobile-dock-thumb{
-    width:34px; height:50px; flex:0 0 auto; margin-right:10px;
-    overflow:hidden; background:#fdfdfc; opacity:0; transition:opacity .3s ease;
-  }
-  .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; pointer-events:none; }
-  .mobile-hero-bar.docked .mobile-dock-thumb{ opacity:1; }
   .mobile-arrow{
     position:absolute; right:8px; top:50%; transform:translateY(-50%);
     width:26px; height:26px; border:1px solid var(--line-grey);
@@ -382,7 +376,6 @@
 
     <div id="hall-mobile-panel">
       <div class="mobile-hero-bar" id="mobile-hero-bar">
-        <div class="mobile-dock-thumb" id="mobile-dock-thumb"><img id="mobile-dock-img" alt=""></div>
         <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
         <div class="mobile-arrow" id="mobile-hero-arrow">
           <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
@@ -1046,16 +1039,34 @@ function jumpToQuote(linkedQuote) {
   });
 }
 
-/* ---- mobile hero dock (image + quotes bar dock together on scroll) ---- */
+/* ---- mobile hero dock (the actual image shrinks and docks top-right,
+   not a separate faked-up thumbnail) ---- */
 const mobileHeroBar = document.getElementById('mobile-hero-bar');
-const mobileDockThumb = document.getElementById('mobile-dock-thumb');
-const mobileDockImg = document.getElementById('mobile-dock-img');
 const mobileArrow = document.getElementById('mobile-hero-arrow');
 let mobileMinimized = false;
 mobileArrow.addEventListener('click', () => {
   mobileMinimized = !mobileMinimized;
   mobileHeroBar.classList.toggle('minimized', mobileMinimized);
 });
+
+const HEADER_H = 30;
+
+function mobileDockTarget(origRect) {
+  const dockH = 50;
+  const scale = dockH / origRect.height;
+  const dockW = origRect.width * scale;
+  return { top: HEADER_H + 6, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
+}
+
+function tweenItemBox(itemEl, target, duration) {
+  const start = itemEl.getBoundingClientRect();
+  tween(duration, (t) => {
+    itemEl.style.top = lerp(start.top, target.top, t) + 'px';
+    itemEl.style.left = lerp(start.left, target.left, t) + 'px';
+    itemEl.style.width = lerp(start.width, target.width, t) + 'px';
+    itemEl.style.height = lerp(start.height, target.height, t) + 'px';
+  });
+}
 
 /* ---- Hall modal ---- */
 const hallModalQuotes = document.getElementById('hall-modal-quotes');
@@ -1064,7 +1075,6 @@ const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
 let hallMobileScrollHandler = null;
 
-const HEADER_H = 30;
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
 let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
@@ -1124,12 +1134,16 @@ function openHallModal(itemEl, data) {
   hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
   hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
 
-  mobileDockImg.src = data.image;
-  mobileHeroBar.classList.remove('docked', 'minimized');
+  mobileHeroBar.classList.remove('minimized');
   mobileMinimized = false;
+  let mobileDocked = false;
+  const heroTarget = { top: targetTop, left: targetLeft, width: targetW, height: targetH };
+  const dockTarget = mobileDockTarget(rect);
   hallMobileScrollHandler = () => {
     const past = hallMobilePanel.scrollTop > 40;
-    mobileHeroBar.classList.toggle('docked', past);
+    if (past === mobileDocked) return;
+    mobileDocked = past;
+    tweenItemBox(itemEl, past ? dockTarget : heroTarget, 350);
   };
   hallMobilePanel.addEventListener('scroll', hallMobileScrollHandler);
 
