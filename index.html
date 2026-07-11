@@ -218,7 +218,7 @@
   .chapter-start-sentinel, .chapter-end-sentinel{ height:1px; }
   .chapters-panel.has-open .chapter:not(.revealed){ display:none; }
   .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
-  .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; }
+  .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; cursor:pointer; }
 
   #hall-close{
     position:fixed; top:44px; right:6vw; z-index:42;
@@ -886,6 +886,16 @@ function createChapterController(container, getScrollRoot) {
   let nextObserver = null;
   let prevObserver = null;
 
+  // Clicking the highlighted quote itself clears it. Attached once here
+  // (not inside render()) so repeated renders don't accumulate listeners.
+  container.addEventListener('click', (e) => {
+    const anchor = e.target.closest('.quote-anchor');
+    if (anchor && anchor.classList.contains('hl')) {
+      anchor.classList.remove('hl');
+      if (currentHighlightEl === anchor) currentHighlightEl = null;
+    }
+  });
+
   function applyVisibility() {
     container.querySelectorAll('.chapter').forEach(ch => {
       const i = Number(ch.dataset.i);
@@ -984,12 +994,11 @@ function jumpToQuote(linkedQuote) {
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
     const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
-    const targetTop = anchor.offsetTop - 60;
+    const targetTop = anchor.offsetTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
       anchor.classList.add('hl');
       currentHighlightEl = anchor;
-      setTimeout(() => { if (currentHighlightEl === anchor) anchor.classList.remove('hl'); }, 1000);
     });
   });
 }
