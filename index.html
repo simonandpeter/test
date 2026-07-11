@@ -209,13 +209,14 @@
     transition:color .3s ease;
   }
   .chapter-header:hover{ color:var(--rubric); }
-  .chapter.open .chapter-header{
-    position:sticky; top:0; z-index:2; color:var(--rubric);
+  .chapter.revealed .chapter-header{
+    position:sticky; top:0; z-index:2;
   }
   .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
   .chapter-body p{ margin-bottom:1em; }
-  .chapter.open .chapter-body{ display:block; }
-  .chapters-panel.has-open .chapter:not(.open){ display:none; }
+  .chapter.revealed .chapter-body{ display:block; }
+  .chapter-sentinel{ height:1px; }
+  .chapters-panel.has-open .chapter:not(.revealed){ display:none; }
   .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
   .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; }
 
@@ -278,7 +279,7 @@
 
   .mobile-chapters{ padding:18px 18px 70px 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.open .chapter-header{ top:56px; }
+  .mobile-chapters .chapter.revealed .chapter-header{ top:56px; }
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -313,7 +314,7 @@
 
   .spear .shaft-text{
     writing-mode:vertical-rl;
-    text-orientation:mixed;
+    text-orientation:sideways; /* 'mixed' keeps quote marks upright per the Unicode table — force everything to rotate together */
     font-style:italic;
     font-size:13px;
     color:var(--ink-soft);
@@ -485,11 +486,19 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const easeFactor = opts.easeFactor ?? 0.16;
   const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
+  const drift = !!opts.drift;
+  const idleMs = opts.idleMs ?? 5000;
+  const driftSpeedTarget = opts.driftSpeed ?? 2; // px/s
 
   let targetScroll = 0;
   let isEasing = false;
+  let isDrifting = false;
+  let paused = false;
   let raf = null;
   let stride = 0;
+  let lastInteraction = performance.now();
+  let driftSpeed = 0;
+  let driftPos = null; // float accumulator — scrollLeft/Top round to whole px
 
   function measure() {
     const a = trackEl.children[bufferCount];
@@ -540,20 +549,57 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
     e.preventDefault();
     if (axis === 'y') e.stopPropagation();
+    lastInteraction = performance.now();
+    driftSpeed = 0;
+    driftPos = null;
     targetScroll += e.deltaY;
     isEasing = true;
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
 
   trackEl.addEventListener('scroll', () => {
-    if (isEasing) return;
+    if (isEasing || isDrifting) return;
     targetScroll = trackEl[scrollProp];
     checkLoop();
   });
 
+  if (drift) {
+    let lastFrameTime = performance.now();
+    (function ambient(now) {
+      const dt = Math.min(now - lastFrameTime, 50); // clamp so a dropped/backgrounded frame can't cause a jump
+      lastFrameTime = now;
+
+      if (!paused && !isEasing) {
+        const idleFor = now - lastInteraction;
+        const targetSpeed = idleFor > idleMs ? driftSpeedTarget : 0;
+        driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500); // ease into motion, not a brisk start
+        if (Math.abs(driftSpeed) > 0.01) {
+          isDrifting = true;
+          if (driftPos === null) driftPos = trackEl[scrollProp];
+          driftPos += driftSpeed * (dt / 1000);
+          trackEl[scrollProp] = driftPos;
+          targetScroll = driftPos;
+          const before = trackEl[scrollProp];
+          checkLoop();
+          const after = trackEl[scrollProp];
+          if (after !== before) driftPos += (after - before); // preserve the fraction, only apply the jump delta
+        } else {
+          isDrifting = false;
+          driftPos = null;
+        }
+      } else {
+        isDrifting = false;
+        driftPos = null;
+      }
+      requestAnimationFrame(ambient);
+    })(performance.now());
+  }
+
   return {
     measure,
-    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; }
+    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; },
+    pause() { paused = true; driftSpeed = 0; driftPos = null; isDrifting = false; },
+    resume() { paused = false; lastInteraction = performance.now(); }
   };
 }
 
@@ -565,27 +611,38 @@ function cyclicSlice(list, start, count) {
 }
 
 /* items: [{text, ...}]; onItemClick receives the item */
-function renderQuoteLoop(containerEl, items, rows, onItemClick) {
-  containerEl.innerHTML = '';
-  if (!items.length) return null;
+/* Attaches the scroll loop exactly ONCE per container. Re-rendering the
+   same carousel repeatedly (e.g. opening a new saint's modal) must reuse
+   this, not call attachLoopScroll again — every call adds its own
+   wheel/scroll listeners to the same persistent DOM node, and several of
+   them competing for the same scrollTop is what eventually broke this. */
+function createQuoteCarousel(containerEl, rows) {
   const buffer = Math.max(rows, 6);
-  const head = cyclicSlice(items, items.length - buffer, buffer);
-  const tail = cyclicSlice(items, 0, buffer);
-  const full = [...head, ...items, ...tail];
-  full.forEach(item => {
-    const el = document.createElement('div');
-    el.className = 'q';
-    el.textContent = `\u201C${item.text}\u201D`;
-    if (onItemClick) el.addEventListener('click', (e) => { e.stopPropagation(); onItemClick(item); });
-    containerEl.appendChild(el);
-  });
+  let items = [];
   const loop = attachLoopScroll(containerEl, buffer, () => items.length, { axis: 'y' });
-  requestAnimationFrame(() => {
-    loop.measure();
-    const first = containerEl.children[buffer];
-    if (first) loop.resetTo(first.offsetTop);
-  });
-  return loop;
+
+  function render(newItems, onItemClick) {
+    items = newItems;
+    containerEl.innerHTML = '';
+    if (!items.length) return;
+    const head = cyclicSlice(items, items.length - buffer, buffer);
+    const tail = cyclicSlice(items, 0, buffer);
+    const full = [...head, ...items, ...tail];
+    full.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'q';
+      el.textContent = `\u201C${item.text}\u201D`;
+      if (onItemClick) el.addEventListener('click', (e) => { e.stopPropagation(); onItemClick(item); });
+      containerEl.appendChild(el);
+    });
+    requestAnimationFrame(() => {
+      loop.measure();
+      const first = containerEl.children[buffer];
+      if (first) loop.resetTo(first.offsetTop);
+    });
+  }
+
+  return { render };
 }
 
 /* =====================================================================
@@ -792,33 +849,94 @@ function renderHall() {
   });
 }
 
-const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x' });
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x', drift: true });
+
+const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7);
+const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3);
+
+const hallChaptersDesktop = createChapterController(
+  document.getElementById('hall-chapters-desktop'),
+  () => document.getElementById('hall-chapters-desktop')
+);
+const hallChaptersMobile = createChapterController(
+  document.getElementById('hall-chapters-mobile'),
+  () => document.getElementById('hall-mobile-panel')
+);
 
 /* ---- chapter accordion (shared by desktop + mobile panels) ---- */
-function renderChapters(container, chapters) {
-  container.innerHTML = '';
-  container.classList.remove('has-open');
-  chapters.forEach((ch, i) => {
-    const el = document.createElement('div');
-    el.className = 'chapter';
-    el.dataset.i = i;
-    el.innerHTML = `<button class="chapter-header" type="button">${ch.title}</button><div class="chapter-body">${ch.html}</div>`;
-    el.querySelector('.chapter-header').addEventListener('click', () => {
-      if (el.classList.contains('open')) closeChapters(container);
-      else openChapterIndex(container, i);
+/* Chapters progressively reveal as the reader scrolls near the end of the
+   current one (watched via a sentinel at the bottom of each chapter body),
+   rather than being an exclusive one-at-a-time accordion. Each revealed
+   chapter's header is sticky, so as the reader scrolls into the next
+   chapter, its header naturally covers the previous one — no extra JS
+   needed for that part, it's just how stacked position:sticky works. */
+function createChapterController(container, getScrollRoot) {
+  let firstOpen = null;
+  let revealedUpTo = -1;
+  let observer = null;
+
+  function applyVisibility() {
+    container.querySelectorAll('.chapter').forEach(ch => {
+      const i = Number(ch.dataset.i);
+      ch.classList.toggle('revealed', firstOpen !== null && i >= firstOpen && i <= revealedUpTo);
     });
-    container.appendChild(el);
-  });
-}
-function openChapterIndex(container, index) {
-  container.querySelectorAll('.chapter').forEach(ch => ch.classList.remove('open'));
-  const target = container.querySelector(`.chapter[data-i="${index}"]`);
-  if (target) target.classList.add('open');
-  container.classList.add('has-open');
-}
-function closeChapters(container) {
-  container.querySelectorAll('.chapter').forEach(ch => ch.classList.remove('open'));
-  container.classList.remove('has-open');
+    container.classList.toggle('has-open', firstOpen !== null);
+  }
+
+  function disconnect() {
+    if (observer) { observer.disconnect(); observer = null; }
+  }
+
+  function watchNext() {
+    disconnect();
+    const chapters = container.querySelectorAll('.chapter');
+    if (revealedUpTo < 0 || revealedUpTo >= chapters.length - 1) return;
+    const current = container.querySelector(`.chapter[data-i="${revealedUpTo}"]`);
+    const sentinel = current && current.querySelector('.chapter-sentinel');
+    if (!sentinel) return;
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          revealedUpTo = Math.min(revealedUpTo + 1, chapters.length - 1);
+          applyVisibility();
+          watchNext();
+        }
+      });
+    }, { root: getScrollRoot(), threshold: 0.01 });
+    observer.observe(sentinel);
+  }
+
+  function openFrom(index) {
+    firstOpen = index;
+    revealedUpTo = index;
+    applyVisibility();
+    watchNext();
+  }
+
+  function close() {
+    firstOpen = null;
+    revealedUpTo = -1;
+    disconnect();
+    applyVisibility();
+  }
+
+  function render(chapters) {
+    close();
+    container.innerHTML = '';
+    chapters.forEach((ch, i) => {
+      const el = document.createElement('div');
+      el.className = 'chapter';
+      el.dataset.i = i;
+      el.innerHTML = `<button class="chapter-header" type="button">${ch.title}</button><div class="chapter-body">${ch.html}<div class="chapter-sentinel"></div></div>`;
+      el.querySelector('.chapter-header').addEventListener('click', () => {
+        if (el.classList.contains('revealed')) close();
+        else openFrom(i);
+      });
+      container.appendChild(el);
+    });
+  }
+
+  return { render, openFrom, close };
 }
 
 let currentHighlightEl = null;
@@ -827,7 +945,8 @@ function jumpToQuote(linkedQuote) {
   const container = compact
     ? document.getElementById('hall-chapters-mobile')
     : document.getElementById('hall-chapters-desktop');
-  openChapterIndex(container, linkedQuote.chapterIndex);
+  const controller = compact ? hallChaptersMobile : hallChaptersDesktop;
+  controller.openFrom(linkedQuote.chapterIndex);
 
   requestAnimationFrame(() => {
     const anchor = container.querySelector(`.quote-anchor[data-idx="${linkedQuote.quoteIndex}"]`);
@@ -879,6 +998,7 @@ function computeHallTarget(origRect, mobile) {
 }
 
 function openHallModal(itemEl, data) {
+  hallInertia.pause();
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
   modalCompactMode = compact;
@@ -916,11 +1036,11 @@ function openHallModal(itemEl, data) {
     html: buildChapterHtml(ch.body, data.linkedQuotes.filter(lq => lq.chapterIndex === ci)
       .map(lq => ({ offset: lq.offset, length: lq.text.length, quoteIndex: lq.quoteIndex })))
   }));
-  renderChapters(document.getElementById('hall-chapters-desktop'), chaptersHtml);
-  renderChapters(document.getElementById('hall-chapters-mobile'), chaptersHtml);
+  hallChaptersDesktop.render(chaptersHtml);
+  hallChaptersMobile.render(chaptersHtml);
 
-  renderQuoteLoop(document.getElementById('hall-quotes-track-desktop'), data.linkedQuotes, 7, jumpToQuote);
-  renderQuoteLoop(document.getElementById('hall-quotes-track-mobile'), data.linkedQuotes, 3, jumpToQuote);
+  hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
+  hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
 
   mobileDockImg.src = data.image;
   mobileHeroBar.classList.remove('docked', 'minimized');
@@ -942,6 +1062,7 @@ function openHallModal(itemEl, data) {
 }
 
 function closeHallModal(itemEl, placeholder) {
+  hallInertia.resume(); // 5s idle countdown restarts fresh from now
   currentHallOpen = null;
   modalCompactMode = null;
   hallModalQuotes.classList.remove('reveal');
@@ -949,8 +1070,8 @@ function closeHallModal(itemEl, placeholder) {
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
   if (hallMobileScrollHandler) hallMobilePanel.removeEventListener('scroll', hallMobileScrollHandler);
-  closeChapters(document.getElementById('hall-chapters-desktop'));
-  closeChapters(document.getElementById('hall-chapters-mobile'));
+  hallChaptersDesktop.close();
+  hallChaptersMobile.close();
   currentHighlightEl = null;
 
   const rect = placeholder.getBoundingClientRect();
@@ -1028,7 +1149,7 @@ function renderArmory() {
   });
 }
 
-const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => ARMORY_QUOTES.length, { axis: 'x' });
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => ARMORY_QUOTES.length, { axis: 'x', drift: true });
 
 function armoryScaleFor(rect) {
   const desired = 1.5;
@@ -1051,6 +1172,7 @@ function armorySpearTarget(origRect) {
 }
 
 function openArmoryModal(spearEl, q) {
+  armoryInertia.pause();
   const rect = spearEl.getBoundingClientRect();
 
   const placeholder = document.createElement('div');
@@ -1138,6 +1260,7 @@ function measureTrueRestingRect(spearEl, placeholder) {
 }
 
 function closeArmoryModal(spearEl, placeholder) {
+  armoryInertia.resume(); // 5s idle countdown restarts fresh from now
   currentArmoryOpen = null;
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
