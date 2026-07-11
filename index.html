@@ -915,8 +915,13 @@ function createChapterController(container, getScrollRoot) {
     const current = container.querySelector(`.chapter[data-i="${revealedUpTo}"]`);
     const sentinel = current && current.querySelector('.chapter-end-sentinel');
     if (!sentinel) return;
+    let skippedInitial = false;
     nextObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
+        // IntersectionObserver always fires once immediately on observe()
+        // reporting the current state, even with nothing having changed —
+        // ignore that first report so this only reacts to real scrolling.
+        if (!skippedInitial) { skippedInitial = true; return; }
         if (entry.isIntersecting) {
           revealedUpTo = Math.min(revealedUpTo + 1, chapters.length - 1);
           applyVisibility();
@@ -941,8 +946,15 @@ function createChapterController(container, getScrollRoot) {
     const current = container.querySelector(`.chapter[data-i="${firstOpen}"]`);
     const sentinel = current && current.querySelector('.chapter-start-sentinel');
     if (!sentinel) return;
+    let skippedInitial = false;
     prevObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
+        // Same reasoning as watchNext — and this one matters even more,
+        // since openFrom() scrolls the start-sentinel right into view,
+        // so it's *always* already-intersecting the moment this observer
+        // is created. Without skipping that report, opening any chapter
+        // would immediately reveal the one before it too.
+        if (!skippedInitial) { skippedInitial = true; return; }
         if (entry.isIntersecting) {
           const root = getScrollRoot();
           const beforeHeight = root.scrollHeight;
