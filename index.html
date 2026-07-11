@@ -566,13 +566,11 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
    the two, so there's nothing for this to get stuck fighting over. */
 function attachIdleDrift(trackEl, opts = {}) {
   const idleMs = opts.idleMs ?? 5000;
-  const speed = opts.speed ?? 22; // px/s once fully ramped in
-  const rampMs = opts.rampMs ?? 1500;
+  const speed = opts.speed ?? 22; // px/s, constant from the first frame — no ramp-in
 
   let lastInteraction = performance.now();
   let paused = false;
   let active = false;
-  let rampStart = 0;
   let pos = null;
   let lastFrame = performance.now();
 
@@ -582,6 +580,11 @@ function attachIdleDrift(trackEl, opts = {}) {
     pos = null;
   }
   trackEl.addEventListener('wheel', markInteraction, { passive: true });
+  // touch gestures never fire 'wheel' — without these, drift had no way to
+  // know mobile scrolling was happening at all, and kept nudging scrollLeft
+  // on top of it, fighting the user's own touch-scroll.
+  trackEl.addEventListener('touchstart', markInteraction, { passive: true });
+  trackEl.addEventListener('touchmove', markInteraction, { passive: true });
 
   function frame(now) {
     const dt = Math.min(now - lastFrame, 50);
@@ -589,9 +592,8 @@ function attachIdleDrift(trackEl, opts = {}) {
     if (!paused) {
       const idleFor = now - lastInteraction;
       if (idleFor > idleMs) {
-        if (!active) { active = true; rampStart = now; pos = trackEl.scrollLeft; }
-        const rampT = Math.min(1, (now - rampStart) / rampMs);
-        pos += speed * rampT * (dt / 1000);
+        if (!active) { active = true; pos = trackEl.scrollLeft; }
+        pos += speed * (dt / 1000);
         trackEl.scrollLeft = pos;
       } else if (active) {
         active = false;
