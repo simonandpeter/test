@@ -518,170 +518,138 @@ document.querySelectorAll('header nav a').forEach(a => {
 });
 
 /* =====================================================================
-   SHARED — inertial wheel-to-horizontal scroll with seamless looping,
-   residual drift after a fast flick, and idle auto-drift after 7s.
+   SHARED — inertial wheel-scroll with seamless looping. Handles both
+   axes (used by the horizontal Hall/Armory tracks and the vertical
+   quote carousels) and, optionally, residual/idle drift.
+
+   drift: true adds a slow (px/s) creep that kicks in either right after
+   a fast flick settles, or after `idleMs` of no interaction — but only
+   while nothing is paused (e.g. a modal is open) and the user isn't
+   actively scrolling.
 ===================================================================== */
-function attachInertialLoop(trackEl, bufferCount, getItemCount) {
+function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
+  const axis = opts.axis || 'x';
+  const drift = !!opts.drift;
+  const driftSpeedTarget = opts.driftSpeed ?? 4; // px/s
+  const idleMs = opts.idleMs ?? 7000;
+  const fastThreshold = opts.fastThreshold ?? 45;
+  const easeFactor = opts.easeFactor ?? 0.16;
+
+  const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
+  const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
+  const deltaProp = axis === 'x' ? 'deltaY' : 'deltaY';
+  const crossDeltaProp = axis === 'x' ? 'deltaX' : 'deltaX';
+
   let targetScroll = 0;
   let isEasing = false;
   let isDrifting = false;
+  let paused = false;
   let raf = null;
   let lastInteraction = performance.now();
   let driftArmed = false;
-  let driftSpeed = 0; // px/s
-  let driftPos = null; // float accumulator — trackEl.scrollLeft rounds to whole px, so we can't read it back for sub-pixel drift
+  let driftSpeed = 0;
+  let driftPos = null; // float accumulator — scrollLeft/Top round to whole px
+  let stride = 0;      // cached item width/height + gap; recompute via measure()
 
-  function itemStride() {
+  function measure() {
     const a = trackEl.children[bufferCount];
     const b = trackEl.children[bufferCount + 1];
-    if (!a || !b) return 0;
-    return b.offsetLeft - a.offsetLeft;
+    stride = (a && b) ? (b[offsetProp] - a[offsetProp]) : 0;
   }
 
   function checkLoop() {
-    const stride = itemStride();
     const count = getItemCount();
     if (!stride || !count) return;
-    const headWidth = bufferCount * stride;
-    const bodyWidth = count * stride;
-    if (trackEl.scrollLeft < headWidth - stride * (bufferCount - 1)) {
-      trackEl.scrollLeft += bodyWidth;
-      targetScroll += bodyWidth;
-    } else if (trackEl.scrollLeft > headWidth + bodyWidth) {
-      trackEl.scrollLeft -= bodyWidth;
-      targetScroll -= bodyWidth;
+    const headSpan = bufferCount * stride;
+    const bodySpan = count * stride;
+    const pos = trackEl[scrollProp];
+    if (pos < headSpan - stride * (bufferCount - 1)) {
+      trackEl[scrollProp] += bodySpan;
+      targetScroll += bodySpan;
+    } else if (pos > headSpan + bodySpan) {
+      trackEl[scrollProp] -= bodySpan;
+      targetScroll -= bodySpan;
     }
   }
 
   function tick() {
-    const current = trackEl.scrollLeft;
+    const current = trackEl[scrollProp];
     const diff = targetScroll - current;
     if (Math.abs(diff) < 0.5) {
-      trackEl.scrollLeft = targetScroll;
+      trackEl[scrollProp] = targetScroll;
       isEasing = false;
       raf = null;
       checkLoop();
       return;
     }
-    trackEl.scrollLeft = current + diff * 0.16;
+    trackEl[scrollProp] = current + diff * easeFactor;
     checkLoop();
     raf = requestAnimationFrame(tick);
   }
 
   trackEl.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      lastInteraction = performance.now();
-      const fast = Math.abs(e.deltaY) > 45;
+    if (Math.abs(e[deltaProp]) <= Math.abs(e[crossDeltaProp])) return;
+    e.preventDefault();
+    if (axis === 'y') e.stopPropagation();
+    lastInteraction = performance.now();
+    if (drift) {
+      const fast = Math.abs(e[deltaProp]) > fastThreshold;
       driftArmed = fast; // a gentle input clears drift; a fast one re-arms it once it settles
       if (!fast) driftSpeed = 0;
-      targetScroll += e.deltaY;
-      isEasing = true;
-      if (!raf) raf = requestAnimationFrame(tick);
     }
+    targetScroll += e[deltaProp];
+    isEasing = true;
+    if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
 
   trackEl.addEventListener('scroll', () => {
     if (isEasing || isDrifting) return;
-    targetScroll = trackEl.scrollLeft;
+    targetScroll = trackEl[scrollProp];
     checkLoop();
   });
 
-  let lastFrameTime = performance.now();
-  function ambient(now) {
-    const dt = now - lastFrameTime;
-    lastFrameTime = now;
-    const idleFor = now - lastInteraction;
+  if (drift) {
+    let lastFrameTime = performance.now();
+    (function ambient(now) {
+      const dt = Math.min(now - lastFrameTime, 50); // clamp so a dropped/backgrounded frame can't cause a jump
+      lastFrameTime = now;
+      const idleFor = now - lastInteraction;
 
-    if (!isEasing) {
-      const shouldDrift = driftArmed || idleFor > 7000;
-      const targetSpeed = shouldDrift ? 2 : 0; // px/s, eased into
-      driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500);
-      if (Math.abs(driftSpeed) > 0.01) {
-        isDrifting = true;
-        if (driftPos === null) driftPos = trackEl.scrollLeft;
-        driftPos += driftSpeed * (dt / 1000);
-        trackEl.scrollLeft = driftPos;
-        targetScroll = driftPos;
-        const beforeJump = trackEl.scrollLeft;
-        checkLoop();
-        const afterJump = trackEl.scrollLeft;
-        if (afterJump !== beforeJump) driftPos += (afterJump - beforeJump); // preserve fraction, only apply the jump delta
+      if (!isEasing && !paused) {
+        const shouldDrift = driftArmed || idleFor > idleMs;
+        const targetSpeed = shouldDrift ? driftSpeedTarget : 0;
+        driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500);
+        if (Math.abs(driftSpeed) > 0.01) {
+          isDrifting = true;
+          if (driftPos === null) driftPos = trackEl[scrollProp];
+          driftPos += driftSpeed * (dt / 1000);
+          trackEl[scrollProp] = driftPos;
+          targetScroll = driftPos;
+          const before = trackEl[scrollProp];
+          checkLoop();
+          const after = trackEl[scrollProp];
+          if (after !== before) driftPos += (after - before); // preserve the fraction, only apply the jump delta
+        } else {
+          isDrifting = false;
+          driftPos = null;
+        }
       } else {
         isDrifting = false;
         driftPos = null;
       }
-    } else {
-      isDrifting = false;
-      driftPos = null;
-    }
-    requestAnimationFrame(ambient);
+      requestAnimationFrame(ambient);
+    })(performance.now());
   }
-  requestAnimationFrame(ambient);
 
   return {
-    resetTo(scrollLeftValue) {
-      trackEl.scrollLeft = scrollLeftValue;
-      targetScroll = scrollLeftValue;
+    measure,
+    resetTo(value) {
+      trackEl[scrollProp] = value;
+      targetScroll = value;
       lastInteraction = performance.now();
-    }
-  };
-}
-
-/* Same idea, vertical axis — used for the looping quote carousels. */
-function attachVerticalInertialLoop(trackEl, bufferCount, getItemCount) {
-  let targetScroll = 0;
-  let isEasing = false;
-  let raf = null;
-
-  function itemStride() {
-    const a = trackEl.children[bufferCount];
-    const b = trackEl.children[bufferCount + 1];
-    if (!a || !b) return 0;
-    return b.offsetTop - a.offsetTop;
-  }
-  function checkLoop() {
-    const stride = itemStride();
-    const count = getItemCount();
-    if (!stride || !count) return;
-    const headH = bufferCount * stride;
-    const bodyH = count * stride;
-    if (trackEl.scrollTop < headH - stride * (bufferCount - 1)) {
-      trackEl.scrollTop += bodyH;
-      targetScroll += bodyH;
-    } else if (trackEl.scrollTop > headH + bodyH) {
-      trackEl.scrollTop -= bodyH;
-      targetScroll -= bodyH;
-    }
-  }
-  function tick() {
-    const current = trackEl.scrollTop;
-    const diff = targetScroll - current;
-    if (Math.abs(diff) < 0.5) {
-      trackEl.scrollTop = targetScroll;
-      isEasing = false;
-      raf = null;
-      checkLoop();
-      return;
-    }
-    trackEl.scrollTop = current + diff * 0.2;
-    checkLoop();
-    raf = requestAnimationFrame(tick);
-  }
-  trackEl.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    targetScroll += e.deltaY;
-    isEasing = true;
-    if (!raf) raf = requestAnimationFrame(tick);
-  }, { passive: false });
-  trackEl.addEventListener('scroll', () => {
-    if (isEasing) return;
-    targetScroll = trackEl.scrollTop;
-    checkLoop();
-  });
-  return {
-    resetTo(v) { trackEl.scrollTop = v; targetScroll = v; }
+    },
+    pause() { paused = true; driftSpeed = 0; driftArmed = false; driftPos = null; isDrifting = false; },
+    resume() { paused = false; lastInteraction = performance.now(); }
   };
 }
 
@@ -710,8 +678,9 @@ function renderQuoteLoop(containerEl, quotes, rows) {
     el.textContent = `\u201C${q}\u201D`;
     containerEl.appendChild(el);
   });
-  const loop = attachVerticalInertialLoop(containerEl, buffer, () => quotes.length);
+  const loop = attachLoopScroll(containerEl, buffer, () => quotes.length, { axis: 'y' });
   requestAnimationFrame(() => {
+    loop.measure();
     const first = containerEl.children[buffer];
     if (first) loop.resetTo(first.offsetTop);
   });
@@ -741,12 +710,13 @@ function renderHall() {
   });
 
   requestAnimationFrame(() => {
+    hallInertia.measure();
     const first = hallTrack.children[LOOP_BUFFER];
     if (first) hallInertia.resetTo(first.offsetLeft);
   });
 }
 
-const hallInertia = attachInertialLoop(hallTrack, LOOP_BUFFER, () => SAINTS.length);
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x', drift: true });
 
 /* ---- Hall modal ---- */
 const hallModalQuotes = document.getElementById('hall-modal-quotes');
@@ -755,6 +725,7 @@ const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
 
 function openHallModal(itemEl, data) {
+  hallInertia.pause();
   const rect = itemEl.getBoundingClientRect();
   const mobile = isMobileViewport();
 
@@ -815,6 +786,7 @@ function openHallModal(itemEl, data) {
 }
 
 function closeHallModal(itemEl, placeholder) {
+  hallInertia.resume(); // 7s idle countdown restarts fresh from now
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
@@ -874,14 +846,16 @@ function renderArmory() {
   });
 
   requestAnimationFrame(() => {
+    armoryInertia.measure();
     const first = armoryTrack.children[ARMORY_BUFFER];
     if (first) armoryInertia.resetTo(first.offsetLeft);
   });
 }
 
-const armoryInertia = attachInertialLoop(armoryTrack, ARMORY_BUFFER, () => QUOTES.length);
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => QUOTES.length, { axis: 'x', drift: true });
 
 function openArmoryModal(spearEl, q) {
+  armoryInertia.pause();
   const rect = spearEl.getBoundingClientRect();
 
   const placeholder = document.createElement('div');
@@ -963,6 +937,7 @@ function openArmoryModal(spearEl, q) {
    underway, a second, 1.2x-quicker animation slots the spear the final
    30px down into its exact original position. */
 function closeArmoryModal(spearEl, placeholder) {
+  armoryInertia.resume(); // 7s idle countdown restarts fresh from now
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
@@ -1008,6 +983,11 @@ fetch('assets/text/quotes.txt')
     renderHall();
     renderArmory();
   });
+
+window.addEventListener('resize', () => {
+  hallInertia.measure();
+  armoryInertia.measure();
+});
 </script>
 
 </body>
