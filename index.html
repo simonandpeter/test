@@ -534,11 +534,27 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     raf = requestAnimationFrame(tick);
   }
 
+  function wrapTarget() {
+    const count = getItemCount();
+    if (!stride || !count) return;
+    const headSpan = bufferCount * stride;
+    const bodySpan = count * stride;
+    if (bodySpan <= 0) return;
+    const lowerBound = headSpan - stride * (bufferCount - 1);
+    const upperBound = headSpan + bodySpan;
+    if (targetScroll < lowerBound) {
+      targetScroll += Math.ceil((lowerBound - targetScroll) / bodySpan) * bodySpan;
+    } else if (targetScroll > upperBound) {
+      targetScroll -= Math.ceil((targetScroll - upperBound) / bodySpan) * bodySpan;
+    }
+  }
+
   trackEl.addEventListener('wheel', (e) => {
     if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
     e.preventDefault();
     if (axis === 'y') e.stopPropagation();
     targetScroll += e.deltaY;
+    wrapTarget();
     isEasing = true;
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
