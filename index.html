@@ -270,9 +270,17 @@
   .mobile-hero-bar.minimized .mobile-arrow{ transform:translateY(-50%) rotate(180deg); }
   .mobile-arrow:hover{ border-color:var(--rubric); }
 
+  .mobile-saint-name{
+    height:80px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; letter-spacing:0.1em;
+    text-transform:uppercase; text-align:center;
+    color:var(--ink);
+  }
+
   .mobile-chapters{ padding:18px 18px 70px 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.revealed .chapter-header{ top:156px; } /* below the page header (30) + the sticky quotes bar (126) */
+  .mobile-chapters .chapter.revealed .chapter-header{ top:236px; } /* page header (30) + sticky quotes bar (126) + buffer (80) */
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -380,6 +388,7 @@
           <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
         </div>
       </div>
+      <div class="mobile-saint-name" id="mobile-saint-name"></div>
       <div class="mobile-chapters">
         <div class="chapters-panel" id="hall-chapters-mobile"></div>
       </div>
@@ -911,7 +920,7 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
-const MOBILE_STICKY_CLEARANCE = 30 + 126 + 10; // page header + sticky quotes bar + requested buffer
+const MOBILE_STICKY_CLEARANCE = 30 + 126 + 80; // page header + sticky quotes bar + buffer
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
   () => document.getElementById('hall-mobile-panel'),
@@ -962,13 +971,15 @@ function createChapterController(container, getScrollRoot, stickyOffset = 0) {
     const current = container.querySelector(`.chapter[data-i="${revealedUpTo}"]`);
     const sentinel = current && current.querySelector('.chapter-end-sentinel');
     if (!sentinel) return;
-    let skippedInitial = false;
+    const setupTime = performance.now();
     nextObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // IntersectionObserver always fires once immediately on observe()
-        // reporting the current state, even with nothing having changed —
-        // ignore that first report so this only reacts to real scrolling.
-        if (!skippedInitial) { skippedInitial = true; return; }
+        // IntersectionObserver always fires once immediately on observe(),
+        // reporting the current state even with nothing having changed.
+        // Ignore only that — a callback arriving within a few ms of setup
+        // is that mandatory report, not a real scroll. Anything after is
+        // genuine, however fast the user scrolled.
+        if (performance.now() - setupTime < 50) return;
         if (entry.isIntersecting) {
           revealedUpTo = Math.min(revealedUpTo + 1, chapters.length - 1);
           applyVisibility();
@@ -993,15 +1004,18 @@ function createChapterController(container, getScrollRoot, stickyOffset = 0) {
     const current = container.querySelector(`.chapter[data-i="${firstOpen}"]`);
     const sentinel = current && current.querySelector('.chapter-start-sentinel');
     if (!sentinel) return;
-    let skippedInitial = false;
+    const setupTime = performance.now();
     prevObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         // Same reasoning as watchNext — and this one matters even more,
-        // since openFrom() scrolls the start-sentinel right into view,
-        // so it's *always* already-intersecting the moment this observer
-        // is created. Without skipping that report, opening any chapter
-        // would immediately reveal the one before it too.
-        if (!skippedInitial) { skippedInitial = true; return; }
+        // since openFrom() scrolls the start-sentinel right into view, so
+        // it's always already-intersecting the instant this observer is
+        // created. Unconditionally skipping that first report (the old
+        // approach) meant the observer needed the sentinel to leave and
+        // re-enter view before it could fire again — which is why you
+        // had to scroll down and back up before scrolling up actually
+        // worked. A short time-based grace window fixes both bugs at once.
+        if (performance.now() - setupTime < 50) return;
         if (entry.isIntersecting) {
           const root = getScrollRoot();
           const beforeHeight = root.scrollHeight;
@@ -1179,6 +1193,7 @@ function openHallModal(itemEl, data) {
 
   mobileHeroBar.classList.remove('minimized');
   mobileMinimized = false;
+  document.getElementById('mobile-saint-name').textContent = data.name;
 
   setTimeout(() => {
     hallModalQuotes.classList.add('reveal');
