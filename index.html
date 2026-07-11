@@ -131,12 +131,8 @@
     position:fixed;
     z-index:40;
     margin:0;
-    transform-origin:top left;
   }
   .saint-item.selected .saint-card{ box-shadow:none !important; }
-  .saint-item.selected.animate-pos{
-    transition:transform 1.5s cubic-bezier(.2,.8,.2,1);
-  }
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   /* ---------------- Hall Modal — desktop split panel ---------------- */
@@ -321,14 +317,6 @@
     background:#fff;
     transform-origin:center center;
   }
-  .spear.selected.animate-pos{
-    transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
-               transform 1.5s cubic-bezier(.2,.8,.2,1);
-  }
-  .spear.selected.animate-pos.closing{
-    transition:top 1s cubic-bezier(.2,.8,.2,1), left 1s cubic-bezier(.2,.8,.2,1),
-               transform 1s cubic-bezier(.2,.8,.2,1);
-  }
   .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
@@ -437,10 +425,7 @@
 
 <script>
 /* =====================================================================
-   DATA — SAINTS
-   Add / remove cards here. `image` points at assets/images/icons/...
-   in the repo — update to match exactly what's committed there
-   (GitHub Pages is case-sensitive).
+   DATA
 ===================================================================== */
 const VITA_PARAGRAPHS = [
   `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -464,9 +449,6 @@ const SAINTS = Array.from({ length: 10 }, (_, i) => ({
   vitaParagraphs: VITA_PARAGRAPHS
 }));
 
-/* Fallback quotes, used only if assets/text/quotes.txt can't be fetched
-   (e.g. this preview, or opening the file directly without a server).
-   Format mirrors the .txt spec: source line, quote line, blank line. */
 const QUOTES_FALLBACK = `
 St Antony the Great
 He who sits in solitude and is quiet hath escaped from three wars.
@@ -518,38 +500,42 @@ document.querySelectorAll('header nav a').forEach(a => {
 });
 
 /* =====================================================================
-   SHARED — inertial wheel-scroll with seamless looping. Handles both
-   axes (used by the horizontal Hall/Armory tracks and the vertical
-   quote carousels) and, optionally, residual/idle drift.
+   TWEEN — the one and only animation primitive in this file. Every
+   modal open/close move is driven by this, frame by frame, in plain
+   JS — no CSS transitions on position/rotation/scale anywhere, so
+   there's nothing for a class swap or stale transition state to get
+   out of sync with.
+===================================================================== */
+function tween(duration, onFrame, onComplete) {
+  const ease = t => 1 - Math.pow(1 - t, 3); // ease-out cubic
+  const start = performance.now();
+  function step(now) {
+    const raw = Math.min(1, (now - start) / duration);
+    onFrame(ease(raw), raw);
+    if (raw < 1) requestAnimationFrame(step);
+    else if (onComplete) onComplete();
+  }
+  requestAnimationFrame(step);
+}
+function lerp(a, b, t) { return a + (b - a) * t; }
 
-   drift: true adds a slow (px/s) creep that kicks in either right after
-   a fast flick settles, or after `idleMs` of no interaction — but only
-   while nothing is paused (e.g. a modal is open) and the user isn't
-   actively scrolling.
+/* =====================================================================
+   SHARED — smooth wheel-to-scroll with seamless infinite looping.
+   Used identically by the Hall track, the Armory track, and the
+   vertical quote carousels (via axis:'y').
 ===================================================================== */
 function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const axis = opts.axis || 'x';
-  const drift = !!opts.drift;
-  const driftSpeedTarget = opts.driftSpeed ?? 4; // px/s
-  const idleMs = opts.idleMs ?? 7000;
-  const fastThreshold = opts.fastThreshold ?? 45;
   const easeFactor = opts.easeFactor ?? 0.16;
-
   const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
-  const deltaProp = axis === 'x' ? 'deltaY' : 'deltaY';
-  const crossDeltaProp = axis === 'x' ? 'deltaX' : 'deltaX';
+  const deltaProp = 'deltaY';
+  const crossDeltaProp = 'deltaX';
 
   let targetScroll = 0;
   let isEasing = false;
-  let isDrifting = false;
-  let paused = false;
   let raf = null;
-  let lastInteraction = performance.now();
-  let driftArmed = false;
-  let driftSpeed = 0;
-  let driftPos = null; // float accumulator — scrollLeft/Top round to whole px
-  let stride = 0;      // cached item width/height + gap; recompute via measure()
+  let stride = 0; // cached item size + gap; recompute via measure()
 
   function measure() {
     const a = trackEl.children[bufferCount];
@@ -591,65 +577,23 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (Math.abs(e[deltaProp]) <= Math.abs(e[crossDeltaProp])) return;
     e.preventDefault();
     if (axis === 'y') e.stopPropagation();
-    lastInteraction = performance.now();
-    if (drift) {
-      const fast = Math.abs(e[deltaProp]) > fastThreshold;
-      driftArmed = fast; // a gentle input clears drift; a fast one re-arms it once it settles
-      if (!fast) driftSpeed = 0;
-    }
     targetScroll += e[deltaProp];
     isEasing = true;
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
 
   trackEl.addEventListener('scroll', () => {
-    if (isEasing || isDrifting) return;
+    if (isEasing) return;
     targetScroll = trackEl[scrollProp];
     checkLoop();
   });
-
-  if (drift) {
-    let lastFrameTime = performance.now();
-    (function ambient(now) {
-      const dt = Math.min(now - lastFrameTime, 50); // clamp so a dropped/backgrounded frame can't cause a jump
-      lastFrameTime = now;
-      const idleFor = now - lastInteraction;
-
-      if (!isEasing && !paused) {
-        const shouldDrift = driftArmed || idleFor > idleMs;
-        const targetSpeed = shouldDrift ? driftSpeedTarget : 0;
-        driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500);
-        if (Math.abs(driftSpeed) > 0.01) {
-          isDrifting = true;
-          if (driftPos === null) driftPos = trackEl[scrollProp];
-          driftPos += driftSpeed * (dt / 1000);
-          trackEl[scrollProp] = driftPos;
-          targetScroll = driftPos;
-          const before = trackEl[scrollProp];
-          checkLoop();
-          const after = trackEl[scrollProp];
-          if (after !== before) driftPos += (after - before); // preserve the fraction, only apply the jump delta
-        } else {
-          isDrifting = false;
-          driftPos = null;
-        }
-      } else {
-        isDrifting = false;
-        driftPos = null;
-      }
-      requestAnimationFrame(ambient);
-    })(performance.now());
-  }
 
   return {
     measure,
     resetTo(value) {
       trackEl[scrollProp] = value;
       targetScroll = value;
-      lastInteraction = performance.now();
-    },
-    pause() { paused = true; driftSpeed = 0; driftArmed = false; driftPos = null; isDrifting = false; },
-    resume() { paused = false; lastInteraction = performance.now(); }
+    }
   };
 }
 
@@ -716,7 +660,7 @@ function renderHall() {
   });
 }
 
-const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x', drift: true });
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x' });
 
 /* ---- Hall modal ---- */
 const hallModalQuotes = document.getElementById('hall-modal-quotes');
@@ -725,7 +669,6 @@ const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
 
 function openHallModal(itemEl, data) {
-  hallInertia.pause();
   const rect = itemEl.getBoundingClientRect();
   const mobile = isMobileViewport();
 
@@ -745,28 +688,27 @@ function openHallModal(itemEl, data) {
   itemEl.style.left = rect.left + 'px';
   itemEl.style.width = rect.width + 'px';
   itemEl.style.height = rect.height + 'px';
-  itemEl.style.transform = 'translate(0px, 0px) scale(1)';
-  itemEl.classList.add('selected', 'animate-pos');
+  itemEl.classList.add('selected');
 
-  requestAnimationFrame(() => {
-    let targetH, targetTop, targetLeft;
-    if (mobile) {
-      targetH = window.innerHeight * 0.36;
-      targetTop = 46;
-      const scale0 = targetH / rect.height;
-      const targetW0 = rect.width * scale0;
-      targetLeft = window.innerWidth * 0.66 - targetW0 / 2; /* rule-of-thirds, right gridline */
-    } else {
-      targetH = window.innerHeight * 0.62;
-      targetTop = (window.innerHeight - targetH) / 2;
-      const scale0 = targetH / rect.height;
-      const targetW0 = rect.width * scale0;
-      targetLeft = (window.innerWidth - targetW0) / 2;
-    }
-    const scale = targetH / rect.height;
-    const dx = targetLeft - rect.left;
-    const dy = targetTop - rect.top;
-    itemEl.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+  let targetH, targetTop, targetLeft;
+  if (mobile) {
+    targetH = window.innerHeight * 0.36;
+    targetTop = 46;
+  } else {
+    targetH = window.innerHeight * 0.62;
+    targetTop = (window.innerHeight - targetH) / 2;
+  }
+  const scale = targetH / rect.height;
+  const targetW = rect.width * scale;
+  targetLeft = mobile
+    ? window.innerWidth * 0.66 - targetW / 2   /* rule-of-thirds, right gridline */
+    : (window.innerWidth - targetW) / 2;
+
+  tween(1500, (t) => {
+    itemEl.style.top = lerp(rect.top, targetTop, t) + 'px';
+    itemEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
+    itemEl.style.width = lerp(rect.width, targetW, t) + 'px';
+    itemEl.style.height = lerp(rect.height, targetH, t) + 'px';
   });
 
   // populate both desktop and mobile panels — only one is visible per breakpoint
@@ -786,39 +728,25 @@ function openHallModal(itemEl, data) {
 }
 
 function closeHallModal(itemEl, placeholder) {
-  hallInertia.resume(); // 7s idle countdown restarts fresh from now
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
 
-  itemEl.style.transform = 'translate(0px, 0px) scale(1)';
+  const rect = placeholder.getBoundingClientRect();
+  const from = itemEl.getBoundingClientRect();
 
-  setTimeout(() => {
-    itemEl.classList.remove('selected', 'animate-pos');
+  tween(1500, (t) => {
+    itemEl.style.top = lerp(from.top, rect.top, t) + 'px';
+    itemEl.style.left = lerp(from.left, rect.left, t) + 'px';
+    itemEl.style.width = lerp(from.width, rect.width, t) + 'px';
+    itemEl.style.height = lerp(from.height, rect.height, t) + 'px';
+  }, () => {
+    itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
     placeholder.remove();
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
-  }, 1500);
-}
-
-/* Deterministic JS-driven tween for a single px style property — used
-   where CSS class-swap transitions proved unreliable (a transition can
-   silently inherit a stale duration/starting-point when its class and
-   its target value change in the same tick). */
-function animatePx(el, prop, from, to, duration, onComplete) {
-  const start = performance.now();
-  function step(now) {
-    const t = Math.min(1, (now - start) / duration);
-    const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
-    el.style[prop] = (from + (to - from) * eased) + 'px';
-    if (t < 1) {
-      requestAnimationFrame(step);
-    } else if (onComplete) {
-      onComplete();
-    }
-  }
-  requestAnimationFrame(step);
+  });
 }
 
 /* =====================================================================
@@ -852,10 +780,15 @@ function renderArmory() {
   });
 }
 
-const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => QUOTES.length, { axis: 'x', drift: true });
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => QUOTES.length, { axis: 'x' });
+
+function armoryScaleFor(rect) {
+  const desired = 1.5;
+  const maxAllowed = (window.innerWidth - 24) / rect.height; // 12px buffer each side once laid flat
+  return Math.min(desired, maxAllowed);
+}
 
 function openArmoryModal(spearEl, q) {
-  armoryInertia.pause();
   const rect = spearEl.getBoundingClientRect();
 
   const placeholder = document.createElement('div');
@@ -875,25 +808,24 @@ function openArmoryModal(spearEl, q) {
   spearEl.style.width = rect.width + 'px';
   spearEl.style.height = rect.height + 'px';
   spearEl.style.transform = 'rotate(0deg) scale(1)';
-  spearEl.classList.add('selected', 'animate-pos');
+  spearEl.classList.add('selected');
 
-  requestAnimationFrame(() => {
-    // width/height never change — the spear keeps its own proportions
-    // and is carried to centre, enlarged 1.5x, and laid flat by rotating.
-    // On narrow (mobile) screens the scale is capped with a 12px buffer
-    // on each side so the laid-flat blade never runs off screen.
-    const desiredScale = 1.5;
-    const maxAllowed = (window.innerWidth - 24) / rect.height;
-    const scale = Math.min(desiredScale, maxAllowed);
+  const scale = armoryScaleFor(rect);
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight / 2 - 30;
+  const targetTop = cy - rect.height / 2;
+  const targetLeft = cx - rect.width / 2;
 
-    const cx = window.innerWidth / 2;
-    const cy = window.innerHeight / 2 - 30;
-    spearEl.style.top = (cy - rect.height / 2) + 'px';
-    spearEl.style.left = (cx - rect.width / 2) + 'px';
-    spearEl.style.transform = `rotate(-90deg) scale(${scale})`;
-    armoryAttribution.style.top = (cy + (rect.width * scale) / 2 + 26) + 'px';
-    armoryAttribution.style.left = '50%';
+  tween(1500, (t) => {
+    spearEl.style.top = lerp(rect.top, targetTop, t) + 'px';
+    spearEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
+    const r = lerp(0, -90, t);
+    const s = lerp(1, scale, t);
+    spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
   });
+
+  armoryAttribution.style.top = (cy + (rect.width * scale) / 2 + 26) + 'px';
+  armoryAttribution.style.left = '50%';
 
   const isSaint = SAINTS.some(s => s.name.toLowerCase() === q.source.toLowerCase());
   let html;
@@ -930,50 +862,49 @@ function openArmoryModal(spearEl, q) {
   armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
 }
 
-/* Close: an exact reverse of the open animation (rotate + scale + slide
-   back), overshooting to a spot 30px above the true resting place — but
-   1.5x quicker than the open animation. The fade-in of the rest of the
-   rack overlaps the rotation instead of waiting for it. Once that's
-   underway, a second, 1.2x-quicker animation slots the spear the final
-   30px down into its exact original position. */
+/* Close: an exact reverse of the open animation — rotate, scale and
+   slide back — but 1.5x quicker, overshooting to a spot 30px above the
+   true resting place. The rest of the rack fades back in immediately
+   (overlapping the rotation). Once the rotation finishes, a second,
+   1.2x-quicker tween slots the spear the final 30px down into place.
+   Both steps are plain JS tweens chained via onComplete — no CSS
+   transitions on position at all, so there's nothing to fall out of
+   sync. */
 function closeArmoryModal(spearEl, placeholder) {
-  armoryInertia.resume(); // 7s idle countdown restarts fresh from now
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
   const rect = placeholder.getBoundingClientRect();
+  const scale = armoryScaleFor(rect);
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight / 2 - 30;
+  const fromTop = cy - rect.height / 2;
+  const fromLeft = cx - rect.width / 2;
+  const overshootTop = rect.top - 30;
 
-  // Step 1 — reverse of the open animation (faster: 'closing' overrides
-  // the 1.5s open transition with a 1s one), overshooting 30px high.
-  // Force a reflow between the class swap and the value change so the
-  // browser can't carry over a stale transition state into this step.
-  spearEl.classList.add('closing');
-  void spearEl.offsetHeight;
-  spearEl.style.top = (rect.top - 30) + 'px';
-  spearEl.style.left = rect.left + 'px';
-  spearEl.style.transform = 'rotate(0deg) scale(1)';
-
-  // Step 2 — the rest of the rack fades back in, overlapping step 1.
   armoryTrack.querySelectorAll('.spear').forEach(el => {
     if (el !== spearEl) el.classList.remove('dim');
   });
 
-  setTimeout(() => {
-    // Step 3 — the spear slots smoothly down the final 30px. Driven
-    // directly in JS (not a CSS transition) so it can't inherit any
-    // stale state from step 1 — that mismatch was the mid-animation stall.
-    spearEl.classList.remove('closing', 'animate-pos');
-    const fromTop = rect.top - 30;
-    animatePx(spearEl, 'top', fromTop, rect.top, 417, () => {
+  tween(1000, (t) => {
+    spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
+    spearEl.style.left = lerp(fromLeft, rect.left, t) + 'px';
+    const r = lerp(-90, 0, t);
+    const s = lerp(scale, 1, t);
+    spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
+  }, () => {
+    tween(417, (t2) => {
+      spearEl.style.top = lerp(overshootTop, rect.top, t2) + 'px';
+    }, () => {
       spearEl.classList.remove('selected');
       spearEl.removeAttribute('style');
       placeholder.remove();
     });
-  }, 1500);
+  });
 }
 
 /* =====================================================================
-   INIT — load quotes.txt, fall back to embedded placeholder text
+   INIT
 ===================================================================== */
 fetch('assets/text/quotes.txt')
   .then(r => { if (!r.ok) throw new Error('no file'); return r.text(); })
