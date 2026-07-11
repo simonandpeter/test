@@ -255,9 +255,12 @@
     position:sticky; top:30px; z-index:2; /* top:30px, not 0 — sticking at the viewport edge would tuck it behind the real page header */
     background:#fff;
     border-bottom:1px solid var(--line-grey-soft);
-    display:flex; align-items:center;
-    padding:8px 92px 8px 12px; /* right space reserves room for the docked image + arrow */
-    min-height:126px; /* 110px quotes viewport + 8px top/bottom padding */
+  }
+  .mobile-hero-row{
+    position:relative;
+    display:flex; align-items:flex-start; /* top-align, not center — matches the docked image's own top edge exactly, no extra space to redistribute */
+    padding:8px 92px 0 12px; /* right space reserves room for the docked image + arrow; no bottom padding — the name row follows directly below */
+    min-height:110px; /* matches .quotes-viewport.small exactly, and the docked image's height */
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
@@ -271,16 +274,16 @@
   .mobile-arrow:hover{ border-color:var(--rubric); }
 
   .mobile-saint-name{
-    height:80px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:14px; letter-spacing:0.1em;
-    text-transform:uppercase; text-align:center;
-    color:var(--ink);
+    padding:6px 12px 10px 12px;
+    text-align:center; font-size:14px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--ink);
   }
 
-  .mobile-chapters{ padding:18px 18px 70px 18px; }
+  .mobile-chapters{ padding:20px 18px 70px 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.revealed .chapter-header{ top:236px; } /* page header (30) + sticky quotes bar (126) + buffer (80) */
+  .mobile-chapters .chapter.revealed .chapter-header{ top:202px; } /* page header (30) + sticky bar incl. name row (152) + comfortable gap (20) */
+
+  body.modal-compact .saint-item.selected .saint-caption{ display:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -383,12 +386,14 @@
 
     <div id="hall-mobile-panel">
       <div class="mobile-hero-bar" id="mobile-hero-bar">
-        <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
-        <div class="mobile-arrow" id="mobile-hero-arrow">
-          <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
+        <div class="mobile-hero-row">
+          <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
+          <div class="mobile-arrow" id="mobile-hero-arrow">
+            <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
+          </div>
         </div>
+        <div class="mobile-saint-name" id="mobile-saint-name"></div>
       </div>
-      <div class="mobile-saint-name" id="mobile-saint-name"></div>
       <div class="mobile-chapters">
         <div class="chapters-panel" id="hall-chapters-mobile"></div>
       </div>
@@ -922,7 +927,7 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
-const MOBILE_STICKY_CLEARANCE = 30 + 126 + 80; // page header + sticky quotes bar + buffer
+const MOBILE_STICKY_CLEARANCE = 30 + 152 + 20; // page header + sticky bar incl. name row + comfortable gap
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
   () => document.getElementById('hall-mobile-panel'),
