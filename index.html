@@ -329,9 +329,6 @@
     transition:top 1s cubic-bezier(.2,.8,.2,1), left 1s cubic-bezier(.2,.8,.2,1),
                transform 1s cubic-bezier(.2,.8,.2,1);
   }
-  .spear.selected.animate-pos.settle{
-    transition:top .417s cubic-bezier(.25,.8,.4,1);
-  }
   .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
@@ -606,8 +603,10 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
         driftPos += driftSpeed * (dt / 1000);
         trackEl.scrollLeft = driftPos;
         targetScroll = driftPos;
+        const beforeJump = trackEl.scrollLeft;
         checkLoop();
-        driftPos = trackEl.scrollLeft; // resync in case checkLoop jumped it
+        const afterJump = trackEl.scrollLeft;
+        if (afterJump !== beforeJump) driftPos += (afterJump - beforeJump); // preserve fraction, only apply the jump delta
       } else {
         isDrifting = false;
         driftPos = null;
@@ -831,6 +830,25 @@ function closeHallModal(itemEl, placeholder) {
   }, 1500);
 }
 
+/* Deterministic JS-driven tween for a single px style property — used
+   where CSS class-swap transitions proved unreliable (a transition can
+   silently inherit a stale duration/starting-point when its class and
+   its target value change in the same tick). */
+function animatePx(el, prop, from, to, duration, onComplete) {
+  const start = performance.now();
+  function step(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+    el.style[prop] = (from + (to - from) * eased) + 'px';
+    if (t < 1) {
+      requestAnimationFrame(step);
+    } else if (onComplete) {
+      onComplete();
+    }
+  }
+  requestAnimationFrame(step);
+}
+
 /* =====================================================================
    ARMORY — vertical "spear" quotes, modal
 ===================================================================== */
@@ -952,7 +970,10 @@ function closeArmoryModal(spearEl, placeholder) {
 
   // Step 1 — reverse of the open animation (faster: 'closing' overrides
   // the 1.5s open transition with a 1s one), overshooting 30px high.
+  // Force a reflow between the class swap and the value change so the
+  // browser can't carry over a stale transition state into this step.
   spearEl.classList.add('closing');
+  void spearEl.offsetHeight;
   spearEl.style.top = (rect.top - 30) + 'px';
   spearEl.style.left = rect.left + 'px';
   spearEl.style.transform = 'rotate(0deg) scale(1)';
@@ -963,20 +984,16 @@ function closeArmoryModal(spearEl, placeholder) {
   });
 
   setTimeout(() => {
-    // Step 3 — the spear slots smoothly down the final 30px. Swap classes
-    // and force a reflow before changing `top`, so the browser picks up
-    // the new (shorter) transition instead of finishing out the old one
-    // partway through — that mismatch was the end-of-animation jerk.
-    spearEl.classList.remove('closing');
-    spearEl.classList.add('settle');
-    void spearEl.offsetHeight; // force style flush
-    spearEl.style.top = rect.top + 'px';
-
-    setTimeout(() => {
-      spearEl.classList.remove('selected', 'animate-pos', 'settle');
+    // Step 3 — the spear slots smoothly down the final 30px. Driven
+    // directly in JS (not a CSS transition) so it can't inherit any
+    // stale state from step 1 — that mismatch was the mid-animation stall.
+    spearEl.classList.remove('closing', 'animate-pos');
+    const fromTop = rect.top - 30;
+    animatePx(spearEl, 'top', fromTop, rect.top, 417, () => {
+      spearEl.classList.remove('selected');
       spearEl.removeAttribute('style');
       placeholder.remove();
-    }, 470);
+    });
   }, 1500);
 }
 
