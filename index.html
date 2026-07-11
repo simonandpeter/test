@@ -244,53 +244,54 @@
   #hall-close.show{ display:flex; }
   #hall-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
 
-  /* ---------------- Hall Modal — mobile ---------------- */
+  /* ---------------- Hall Modal — compact (mobile-style) layout ----------------
+     Driven by body.modal-compact, toggled in JS based on available width
+     rather than a fixed viewport breakpoint — see isModalCompact(). This is
+     deliberately separate from the header's own @media(max-width:700px). */
   #hall-mobile-panel{ display:none; }
-  @media (max-width:700px){
-    #hall-modal-quotes, #hall-modal-text{ display:none; }
-    #hall-mobile-panel{
-      display:block;
-      position:fixed; inset:0;
-      padding-top:40vh;
-      overflow-y:auto;
-      -webkit-overflow-scrolling:touch;
-      opacity:0; pointer-events:none;
-      transition:opacity 1s ease;
-      z-index:35;
-      background:#fff;
-    }
-    #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
-
-    .mobile-hero-bar{
-      position:sticky; top:0; z-index:2;
-      background:#fff;
-      border-bottom:1px solid var(--line-grey-soft);
-      display:flex; align-items:center;
-      padding:8px 44px 8px 12px;
-      min-height:56px;
-      transition:min-height .3s ease;
-    }
-    .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
-    .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
-    .mobile-dock-thumb{
-      width:34px; height:50px; flex:0 0 auto; margin-right:10px;
-      overflow:hidden; background:#fdfdfc; opacity:0; transition:opacity .3s ease;
-    }
-    .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; pointer-events:none; }
-    .mobile-hero-bar.docked .mobile-dock-thumb{ opacity:1; }
-    .mobile-arrow{
-      position:absolute; right:8px; top:50%; transform:translateY(-50%);
-      width:26px; height:26px; border:1px solid var(--line-grey);
-      background:#fff; display:flex; align-items:center; justify-content:center;
-      cursor:pointer; transition:transform .3s ease, border-color .3s ease;
-    }
-    .mobile-hero-bar.minimized .mobile-arrow{ transform:translateY(-50%) rotate(180deg); }
-    .mobile-arrow:hover{ border-color:var(--rubric); }
-
-    .mobile-chapters{ padding:18px 18px 70px 18px; }
-    .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-    .mobile-chapters .chapter.open .chapter-header{ top:56px; }
+  body.modal-compact #hall-modal-quotes, body.modal-compact #hall-modal-text{ display:none; }
+  body.modal-compact #hall-mobile-panel{
+    display:block;
+    position:fixed; inset:0;
+    padding-top:40vh;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    opacity:0; pointer-events:none;
+    transition:opacity .5s ease;
+    z-index:35;
+    background:#fff;
   }
+  body.modal-compact #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
+
+  .mobile-hero-bar{
+    position:sticky; top:0; z-index:2;
+    background:#fff;
+    border-bottom:1px solid var(--line-grey-soft);
+    display:flex; align-items:center;
+    padding:8px 44px 8px 12px;
+    min-height:56px;
+    transition:min-height .3s ease;
+  }
+  .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
+  .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
+  .mobile-dock-thumb{
+    width:34px; height:50px; flex:0 0 auto; margin-right:10px;
+    overflow:hidden; background:#fdfdfc; opacity:0; transition:opacity .3s ease;
+  }
+  .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; pointer-events:none; }
+  .mobile-hero-bar.docked .mobile-dock-thumb{ opacity:1; }
+  .mobile-arrow{
+    position:absolute; right:8px; top:50%; transform:translateY(-50%);
+    width:26px; height:26px; border:1px solid var(--line-grey);
+    background:#fff; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; transition:transform .3s ease, border-color .3s ease;
+  }
+  .mobile-hero-bar.minimized .mobile-arrow{ transform:translateY(-50%) rotate(180deg); }
+  .mobile-arrow:hover{ border-color:var(--rubric); }
+
+  .mobile-chapters{ padding:18px 18px 70px 18px; }
+  .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
+  .mobile-chapters .chapter.open .chapter-header{ top:56px; }
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -434,7 +435,13 @@ const GITHUB_OWNER  = 'simonandpeter';
 const GITHUB_REPO   = 'test';
 const GITHUB_BRANCH = 'main';
 
-function isMobileViewport() { return window.matchMedia('(max-width:700px)').matches; }
+/* The desktop split-panel modal layout (two 420px/320px-ish fixed panels
+   either side of the enlarged card) needs real room to breathe. Below this
+   width the panels start to crowd the centred card, so we switch to the
+   compact single-column layout — independent of the header's own 700px
+   breakpoint, since this is about panel geometry, not device type. */
+const MODAL_COMPACT_BREAKPOINT = 1000;
+function isModalCompact() { return window.innerWidth < MODAL_COMPACT_BREAKPOINT; }
 
 /* =====================================================================
    NAV
@@ -815,7 +822,7 @@ function closeChapters(container) {
 
 let currentHighlightEl = null;
 function jumpToQuote(linkedQuote) {
-  const container = isMobileViewport()
+  const container = isModalCompact()
     ? document.getElementById('hall-chapters-mobile')
     : document.getElementById('hall-chapters-desktop');
   openChapterIndex(container, linkedQuote.chapterIndex);
@@ -825,7 +832,7 @@ function jumpToQuote(linkedQuote) {
     if (!anchor) return;
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
-    const scrollBox = isMobileViewport() ? document.getElementById('hall-mobile-panel') : container;
+    const scrollBox = isModalCompact() ? document.getElementById('hall-mobile-panel') : container;
     const targetTop = anchor.offsetTop - 60;
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
@@ -856,19 +863,13 @@ let hallMobileScrollHandler = null;
 
 const HEADER_H = 30;
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
+let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
 function computeHallTarget(origRect, mobile) {
-  const availH = window.innerHeight - HEADER_H;
-  let targetH, targetTop;
-  if (mobile) {
-    targetH = window.innerHeight * 0.36;
-    targetTop = HEADER_H + 16;
-  } else {
-    targetH = availH * 0.62;
-    targetTop = HEADER_H + (availH - targetH) / 2;
-  }
+  const targetH = mobile ? window.innerHeight * 0.36 : (window.innerHeight - HEADER_H) * 0.62;
   const scale = targetH / origRect.height;
   const targetW = origRect.width * scale;
+  const targetTop = origRect.top; // stay exactly where it was in the deck — only move horizontally
   const targetLeft = mobile
     ? window.innerWidth * 0.66 - targetW / 2
     : (window.innerWidth - targetW) / 2;
@@ -877,7 +878,9 @@ function computeHallTarget(origRect, mobile) {
 
 function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
-  const mobile = isMobileViewport();
+  const compact = isModalCompact();
+  modalCompactMode = compact;
+  document.body.classList.toggle('modal-compact', compact);
 
   const placeholder = document.createElement('div');
   placeholder.className = 'item-placeholder';
@@ -900,7 +903,7 @@ function openHallModal(itemEl, data) {
   nameLabel.textContent = data.name;
   itemEl.appendChild(nameLabel);
 
-  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(rect, mobile);
+  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(rect, compact);
   currentHallOpen = { itemEl, origRect: rect };
 
   tween(1500, (t) => {
@@ -943,6 +946,7 @@ function openHallModal(itemEl, data) {
 
 function closeHallModal(itemEl, placeholder, nameLabel) {
   currentHallOpen = null;
+  modalCompactMode = null;
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
@@ -966,6 +970,7 @@ function closeHallModal(itemEl, placeholder, nameLabel) {
     itemEl.removeAttribute('style');
     nameLabel.remove();
     placeholder.remove();
+    document.body.classList.remove('modal-compact');
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
   });
 }
@@ -1142,12 +1147,17 @@ function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
+  // Read where the spear ACTUALLY is right now, directly, rather than
+  // recomputing it via the same centering formula used at open time —
+  // recomputing assumed cx/cy/rect would always exactly reproduce the
+  // real value, and apparently didn't quite, which is what caused the
+  // final mismatch/teleport.
+  const fromTop = parseFloat(spearEl.style.top) || 0;
+  const fromLeft = parseFloat(spearEl.style.left) || 0;
+  const scaleMatch = /scale\(([\d.]+)\)/.exec(spearEl.style.transform || '');
+  const fromScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+
   const rect = measureTrueRestingRect(spearEl, placeholder);
-  const scale = armoryScaleFor(rect);
-  const cx = window.innerWidth / 2;
-  const cy = window.innerHeight / 2 - 30;
-  const fromTop = cy - rect.height / 2;
-  const fromLeft = cx - rect.width / 2;
   const overshootTop = rect.top - 30;
 
   armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.remove('dim'); });
@@ -1156,7 +1166,7 @@ function closeArmoryModal(spearEl, placeholder) {
     spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
     spearEl.style.left = lerp(fromLeft, rect.left, t) + 'px';
     const r = lerp(-90, 0, t);
-    const s = lerp(scale, 1, t);
+    const s = lerp(fromScale, 1, t);
     spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
   }, () => {
     tween(417, (t2) => {
@@ -1192,18 +1202,49 @@ fetch('assets/text/quotes.txt')
   .catch(() => { ARMORY_QUOTES = parseArmoryQuotes(QUOTES_FALLBACK); })
   .finally(() => { renderArmory(); });
 
-window.addEventListener('resize', () => {
-  hallInertia.measure();
-  armoryInertia.measure();
+/* Repositions the open Hall modal on resize. If the resize also crossed
+   the split-panel/compact threshold, crossfades between the two layouts
+   instead of snapping — fade the current panel set out, swap layout +
+   reposition the card while invisible, fade the new panel set in. */
+function refreshHallModalLayout() {
+  if (!currentHallOpen) return;
+  const compact = isModalCompact();
+  const { itemEl, origRect } = currentHallOpen;
 
-  if (currentHallOpen) {
-    const { itemEl, origRect } = currentHallOpen;
-    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, isMobileViewport());
+  if (compact === modalCompactMode) {
+    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, compact);
     itemEl.style.top = targetTop + 'px';
     itemEl.style.left = targetLeft + 'px';
     itemEl.style.width = targetW + 'px';
     itemEl.style.height = targetH + 'px';
+    return;
   }
+
+  modalCompactMode = compact;
+  hallModalQuotes.classList.remove('reveal');
+  hallModalText.classList.remove('reveal');
+  hallMobilePanel.classList.remove('reveal');
+
+  setTimeout(() => {
+    document.body.classList.toggle('modal-compact', compact);
+    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, compact);
+    itemEl.style.top = targetTop + 'px';
+    itemEl.style.left = targetLeft + 'px';
+    itemEl.style.width = targetW + 'px';
+    itemEl.style.height = targetH + 'px';
+    requestAnimationFrame(() => {
+      hallModalQuotes.classList.add('reveal');
+      hallModalText.classList.add('reveal');
+      hallMobilePanel.classList.add('reveal');
+    });
+  }, 500);
+}
+
+window.addEventListener('resize', () => {
+  hallInertia.measure();
+  armoryInertia.measure();
+
+  refreshHallModalLayout();
 
   if (currentArmoryOpen) {
     const { spearEl, origRect } = currentArmoryOpen;
