@@ -257,7 +257,7 @@
     border-bottom:1px solid var(--line-grey-soft);
     display:flex; align-items:center;
     padding:8px 92px 8px 12px; /* right space reserves room for the docked image + arrow */
-    min-height:74px;
+    min-height:126px; /* 110px quotes viewport + 8px top/bottom padding */
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
@@ -272,7 +272,7 @@
 
   .mobile-chapters{ padding:18px 18px 70px 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.revealed .chapter-header{ top:104px; } /* below the page header (30) + the sticky quotes bar (74) */
+  .mobile-chapters .chapter.revealed .chapter-header{ top:156px; } /* below the page header (30) + the sticky quotes bar (126) */
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -565,6 +565,20 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     checkLoop();
   });
 
+  // Native touch/momentum scrolling on mobile can keep driving scrollLeft
+  // for a while after the finger lifts, and a correction written mid-
+  // momentum doesn't always reliably stick against the browser's own
+  // physics. Re-check once momentum has had time to settle.
+  trackEl.addEventListener('touchend', () => {
+    [200, 600].forEach(delay => {
+      setTimeout(() => {
+        if (isEasing) return;
+        targetScroll = trackEl[scrollProp];
+        checkLoop();
+      }, delay);
+    });
+  }, { passive: true });
+
   return {
     measure,
     resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; }
@@ -846,7 +860,7 @@ let SAINTS = [];
 ===================================================================== */
 const hallTrack = document.getElementById('hall-track');
 const hallStatus = document.getElementById('hall-status');
-const LOOP_BUFFER = 12;
+const LOOP_BUFFER = 24; // widened — mobile momentum scrolling can cover a lot of ground in one flick
 
 function renderHall() {
   hallTrack.innerHTML = '';
@@ -1076,7 +1090,7 @@ mobileArrow.addEventListener('click', () => {
 const HEADER_H = 30;
 
 function mobileDockTarget(origRect) {
-  const dockH = 58;
+  const dockH = 110; // matches .quotes-viewport.small's height exactly, so the two align as one clean row
   const scale = dockH / origRect.height;
   const dockW = origRect.width * scale;
   return { top: HEADER_H + 8, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
