@@ -14,7 +14,6 @@
     --line-grey: #b7b1a2;
     --line-grey-soft: #e2ddd0;
     --rubric: #8a2e26;
-    --gold-glow: rgba(154,124,58,0.18);
   }
   *{ box-sizing:border-box; }
   html,body{ height:100%; margin:0; }
@@ -40,6 +39,7 @@
     align-items:center;
     font-size:16px;
     letter-spacing:0.08em;
+    white-space:nowrap;
   }
   header nav{
     flex:1 1 0%;
@@ -55,6 +55,7 @@
     cursor:pointer;
     padding-bottom:3px;
     border-bottom:1px solid transparent;
+    white-space:nowrap;
     transition:border-color .3s ease, color .3s ease;
   }
   header nav a:hover,
@@ -63,6 +64,11 @@
     border-color:var(--rubric);
   }
   header .spacer{ flex:1 1 0%; }
+
+  @media (max-width:700px){
+    header .brand{ font-size:14px; }
+    header nav{ gap:34px; justify-content:flex-end; padding-right:4px; }
+  }
 
   main{ height:calc(100vh - 30px); position:relative; }
 
@@ -77,7 +83,7 @@
     height:100%;
     display:flex;
     align-items:flex-start;
-    gap:0;
+    gap:10px;
     overflow-x:auto;
     overflow-y:hidden;
     scrollbar-width:none;
@@ -99,17 +105,13 @@
   .saint-card{
     flex:0 0 auto;
     height:calc(100vh - 104px); /* 30 header + 10 top + 40 bottom + ~24 caption row */
-    aspect-ratio:1/2; /* 2:1 height to width */
+    aspect-ratio:1/2.4; /* thinner: width to height */
     overflow:hidden;
     background:#fdfdfc;
-    transition:box-shadow .4s ease;
-  }
-  .saint-item:hover .saint-card{
-    box-shadow:0 20px 44px -20px var(--gold-glow);
   }
   .saint-card img{
     width:100%; height:100%;
-    object-fit:cover;
+    object-fit:contain; /* do not scale/crop — the source image is pre-sized */
     display:block;
   }
 
@@ -131,46 +133,79 @@
     margin:0;
     transform-origin:top left;
   }
+  .saint-item.selected .saint-card{ box-shadow:none !important; }
   .saint-item.selected.animate-pos{
     transition:transform 1.5s cubic-bezier(.2,.8,.2,1);
   }
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
-  /* ---------------- Hall Modal side panels ---------------- */
+  /* ---------------- Hall Modal — desktop split panel ---------------- */
   #hall-modal-quotes, #hall-modal-text{
     position:fixed;
-    top:50%;
-    transform:translateY(-50%);
-    width:min(26vw, 340px);
+    top:0; height:100%; width:50%;
+    display:flex; align-items:center; justify-content:center;
     opacity:0;
-    transition:opacity 1s ease, transform 1s ease;
+    transition:opacity 1s ease;
     z-index:41;
     pointer-events:none;
   }
+  #hall-modal-quotes{ left:0; }
+  #hall-modal-text{ right:0; }
   #hall-modal-quotes.reveal, #hall-modal-text.reveal{
     opacity:1;
     pointer-events:auto;
   }
-  #hall-modal-quotes{ text-align:right; }
-  #hall-modal-quotes .label, #hall-modal-text .label{
+  .label{
     font-size:10px;
     letter-spacing:0.16em;
     text-transform:uppercase;
     color:var(--rubric);
     margin-bottom:12px;
+    text-align:center;
   }
-  #hall-modal-quotes .q{
-    display:block;
+
+  .quotes-viewport{
+    position:relative;
+    width:min(320px, 80vw);
+    height:308px; /* 7 rows x 44px */
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+    mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  }
+  .quotes-viewport.small{ height:120px; }
+  .quotes-track{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    overflow-y:auto;
+    scrollbar-width:none;
+  }
+  .quotes-track::-webkit-scrollbar{ display:none; }
+  .quotes-track .q{
+    flex:0 0 auto;
+    height:44px;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
     font-style:italic;
     font-size:14px;
     color:var(--ink-soft);
-    padding:8px 0;
+    padding:0 14px;
     border-bottom:1px solid var(--line-grey-soft);
   }
-  #hall-modal-text p{
+  .quotes-viewport.small .q{ height:34px; font-size:12px; }
+
+  .text-scroll{
+    width:min(400px, 80vw);
+    max-height:70vh;
+    overflow-y:auto;
+    scrollbar-width:none;
+  }
+  .text-scroll::-webkit-scrollbar{ display:none; }
+  .text-scroll p{
     font-size:15px;
     line-height:1.7;
     color:var(--ink-soft);
+    margin-bottom:1.1em;
   }
 
   #hall-close{
@@ -187,6 +222,34 @@
   }
   #hall-close.show{ display:flex; }
   #hall-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
+
+  /* ---------------- Hall Modal — mobile single-column ---------------- */
+  #hall-mobile-panel{ display:none; }
+  @media (max-width:700px){
+    #hall-modal-quotes, #hall-modal-text{ display:none; }
+    #hall-mobile-panel{
+      display:block;
+      position:fixed; inset:0;
+      padding-top:40vh;
+      overflow-y:auto;
+      -webkit-overflow-scrolling:touch;
+      opacity:0; pointer-events:none;
+      transition:opacity 1s ease;
+      z-index:35;
+      background:#fff;
+    }
+    #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
+    .mobile-quotes-sticky{
+      position:sticky; top:0;
+      background:#fff;
+      padding:10px 16px 12px 16px;
+      border-bottom:1px solid var(--line-grey-soft);
+      z-index:2;
+    }
+    .mobile-quotes-sticky .label{ margin-bottom:6px; }
+    .mobile-lorem{ padding:20px 22px 70px 22px; }
+    .mobile-lorem p{ font-size:15px; line-height:1.7; color:var(--ink-soft); margin-bottom:1.1em; }
+  }
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -206,36 +269,46 @@
     height:calc(100vh - 100px);
     margin-top:10px; margin-bottom:40px;
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
+    padding-top:14px;
     cursor:pointer;
     position:relative;
     transition:opacity 1s ease;
   }
-  .spear .tip{
-    position:absolute;
-    top:10px; left:50%;
-    transform:translateX(-50%);
-    width:14px; height:14px;
+  .spear .hilt{
+    display:flex; flex-direction:column; align-items:center; gap:3px;
+    flex:0 0 auto;
   }
-  .spear .tip::before, .spear .tip::after{
-    content:'';
-    position:absolute;
+  .spear .hilt .pommel{
+    width:6px; height:6px; border-radius:50%;
     background:var(--line-grey);
     transition:background-color .4s ease;
   }
-  .spear .tip::before{ left:50%; top:0; width:1.5px; height:100%; transform:translateX(-50%); }
-  .spear .tip::after{ top:50%; left:0; height:1.5px; width:100%; transform:translateY(-50%); }
-  .spear:hover .tip::before, .spear:hover .tip::after{ background:var(--rubric); }
+  .spear .hilt .grip{
+    width:1.5px; height:9px;
+    background:var(--line-grey);
+    transition:background-color .4s ease;
+  }
+  .spear .hilt .guard{
+    width:24px; height:1.5px;
+    background:var(--line-grey);
+    transition:background-color .4s ease;
+  }
+  .spear:hover .hilt .pommel,
+  .spear:hover .hilt .grip,
+  .spear:hover .hilt .guard{ background:var(--rubric); }
+
   .spear .shaft-text{
     writing-mode:vertical-rl;
     text-orientation:mixed;
     font-style:italic;
     font-size:13px;
     color:var(--ink-soft);
-    max-height:calc(100% - 60px);
+    flex:1;
     overflow:hidden;
     letter-spacing:0.02em;
+    margin-top:10px;
     transition:color .3s ease;
   }
   .spear:hover .shaft-text{ color:var(--ink); }
@@ -244,6 +317,7 @@
     position:fixed;
     z-index:40;
     margin:0;
+    padding-top:0;
     background:#fff;
     transform-origin:center center;
   }
@@ -254,7 +328,7 @@
   .spear.selected.animate-pos.settle{
     transition:top .5s cubic-bezier(.25,.8,.4,1);
   }
-  .spear.selected .tip{ display:none; }
+  .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   #armory-attribution{
@@ -292,9 +366,6 @@
   #armory-close.show{ display:flex; }
   #armory-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
 
-  @media (max-width:700px){
-    #hall-modal-quotes, #hall-modal-text{ display:none; }
-  }
   @media (prefers-reduced-motion:reduce){
     *{ transition-duration:0.01ms !important; }
   }
@@ -317,14 +388,32 @@
   <section id="hall-view" class="view active">
     <div id="hall-track"></div>
 
+    <!-- desktop: fixed split panels -->
     <div id="hall-modal-quotes">
-      <div class="label">Key Sayings</div>
-      <div id="hall-quotes-list"></div>
+      <div>
+        <div class="label">Key Sayings</div>
+        <div class="quotes-viewport"><div class="quotes-track" id="hall-quotes-track-desktop"></div></div>
+      </div>
     </div>
     <div id="hall-modal-text">
-      <div class="label">Vita</div>
-      <p id="hall-lorem"></p>
+      <div class="text-scroll" id="hall-text-scroll-desktop">
+        <div class="label">Vita</div>
+        <div id="hall-lorem-desktop"></div>
+      </div>
     </div>
+
+    <!-- mobile: single scrollable column, sticky quotes subheader -->
+    <div id="hall-mobile-panel">
+      <div class="mobile-quotes-sticky">
+        <div class="label">Key Sayings</div>
+        <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
+      </div>
+      <div class="mobile-lorem">
+        <div class="label">Vita</div>
+        <div id="hall-lorem-mobile"></div>
+      </div>
+    </div>
+
     <div id="hall-close">
       <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
         <line x1="1" y1="1" x2="15" y2="15"/><line x1="15" y1="1" x2="1" y2="15"/>
@@ -352,6 +441,16 @@
    in the repo — update to match exactly what's committed there
    (GitHub Pages is case-sensitive).
 ===================================================================== */
+const VITA_PARAGRAPHS = [
+  `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+  `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+  `Curabitur pretium tincidunt lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+  `Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.`,
+  `Aliquam erat volutpat. Nunc eleifend leo vitae magna faucibus, id lacinia leo dignissim. Nam sit amet dolor porttitor, blandit augue vel, tristique nunc. Vestibulum ante ipsum primis in faucibus orci luctus.`,
+  `Et ultrices posuere cubilia curae; Cras id dui lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vehicula porttitor sem, ac fringilla lorem gravida id.`,
+  `Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.`
+];
+
 const SAINTS = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
   name: 'St Antony the Great',
@@ -361,7 +460,7 @@ const SAINTS = Array.from({ length: 10 }, (_, i) => ({
     'Whoever sits in solitude is delivered from three wars.',
     'My life is with my neighbour.'
   ],
-  vita: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  vitaParagraphs: VITA_PARAGRAPHS
 }));
 
 /* Fallback quotes, used only if assets/text/quotes.txt can't be fetched
@@ -400,6 +499,10 @@ function parseQuotes(raw) {
 
 let QUOTES = [];
 
+function isMobileViewport() {
+  return window.matchMedia('(max-width:700px)').matches;
+}
+
 /* =====================================================================
    NAV
 ===================================================================== */
@@ -414,12 +517,16 @@ document.querySelectorAll('header nav a').forEach(a => {
 });
 
 /* =====================================================================
-   SHARED — inertial wheel-to-horizontal scroll with seamless looping
+   SHARED — inertial wheel-to-horizontal scroll with seamless looping,
+   residual drift after a fast flick, and idle auto-drift after 7s.
 ===================================================================== */
 function attachInertialLoop(trackEl, bufferCount, getItemCount) {
   let targetScroll = 0;
   let isEasing = false;
   let raf = null;
+  let lastInteraction = performance.now();
+  let driftArmed = false;
+  let driftSpeed = 0; // px/s
 
   function itemStride() {
     const a = trackEl.children[bufferCount];
@@ -461,6 +568,10 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
   trackEl.addEventListener('wheel', (e) => {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
+      lastInteraction = performance.now();
+      const fast = Math.abs(e.deltaY) > 45;
+      driftArmed = fast; // a gentle input clears drift; a fast one re-arms it once it settles
+      if (!fast) driftSpeed = 0;
       targetScroll += e.deltaY;
       isEasing = true;
       if (!raf) raf = requestAnimationFrame(tick);
@@ -473,18 +584,96 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
     checkLoop();
   });
 
+  let lastFrameTime = performance.now();
+  function ambient(now) {
+    const dt = now - lastFrameTime;
+    lastFrameTime = now;
+    const idleFor = now - lastInteraction;
+
+    if (!isEasing) {
+      const shouldDrift = driftArmed || idleFor > 7000;
+      const targetSpeed = shouldDrift ? 2 : 0; // px/s, eased into
+      driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500);
+      if (Math.abs(driftSpeed) > 0.01) {
+        trackEl.scrollLeft += driftSpeed * (dt / 1000);
+        targetScroll = trackEl.scrollLeft;
+        checkLoop();
+      }
+    }
+    requestAnimationFrame(ambient);
+  }
+  requestAnimationFrame(ambient);
+
   return {
     resetTo(scrollLeftValue) {
       trackEl.scrollLeft = scrollLeftValue;
       targetScroll = scrollLeftValue;
+      lastInteraction = performance.now();
     }
+  };
+}
+
+/* Same idea, vertical axis — used for the looping quote carousels. */
+function attachVerticalInertialLoop(trackEl, bufferCount, getItemCount) {
+  let targetScroll = 0;
+  let isEasing = false;
+  let raf = null;
+
+  function itemStride() {
+    const a = trackEl.children[bufferCount];
+    const b = trackEl.children[bufferCount + 1];
+    if (!a || !b) return 0;
+    return b.offsetTop - a.offsetTop;
+  }
+  function checkLoop() {
+    const stride = itemStride();
+    const count = getItemCount();
+    if (!stride || !count) return;
+    const headH = bufferCount * stride;
+    const bodyH = count * stride;
+    if (trackEl.scrollTop < headH - stride * (bufferCount - 1)) {
+      trackEl.scrollTop += bodyH;
+      targetScroll += bodyH;
+    } else if (trackEl.scrollTop > headH + bodyH) {
+      trackEl.scrollTop -= bodyH;
+      targetScroll -= bodyH;
+    }
+  }
+  function tick() {
+    const current = trackEl.scrollTop;
+    const diff = targetScroll - current;
+    if (Math.abs(diff) < 0.5) {
+      trackEl.scrollTop = targetScroll;
+      isEasing = false;
+      raf = null;
+      checkLoop();
+      return;
+    }
+    trackEl.scrollTop = current + diff * 0.2;
+    checkLoop();
+    raf = requestAnimationFrame(tick);
+  }
+  trackEl.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    targetScroll += e.deltaY;
+    isEasing = true;
+    if (!raf) raf = requestAnimationFrame(tick);
+  }, { passive: false });
+  trackEl.addEventListener('scroll', () => {
+    if (isEasing) return;
+    targetScroll = trackEl.scrollTop;
+    checkLoop();
+  });
+  return {
+    resetTo(v) { trackEl.scrollTop = v; targetScroll = v; }
   };
 }
 
 /* Builds `count` items cycling through `list` starting at `start`
    (wrapping around as many times as needed) — used so a short list of
-   narrow items (e.g. Armory quotes) still gets a wide enough clone
-   buffer to scroll freely in both directions before looping. */
+   narrow/small items still gets a wide enough clone buffer to scroll
+   freely in both directions before looping. */
 function cyclicSlice(list, start, count) {
   const out = [];
   const n = list.length;
@@ -494,11 +683,30 @@ function cyclicSlice(list, start, count) {
   return out;
 }
 
+function renderQuoteLoop(containerEl, quotes, rows) {
+  containerEl.innerHTML = '';
+  const buffer = Math.max(rows, 6);
+  const head = cyclicSlice(quotes, quotes.length - buffer, buffer);
+  const tail = cyclicSlice(quotes, 0, buffer);
+  const full = [...head, ...quotes, ...tail];
+  full.forEach(q => {
+    const el = document.createElement('div');
+    el.className = 'q';
+    el.textContent = `\u201C${q}\u201D`;
+    containerEl.appendChild(el);
+  });
+  const loop = attachVerticalInertialLoop(containerEl, buffer, () => quotes.length);
+  requestAnimationFrame(() => {
+    const first = containerEl.children[buffer];
+    if (first) loop.resetTo(first.offsetTop);
+  });
+}
+
 /* =====================================================================
    HALL OF SAINTS — carousel, modal
 ===================================================================== */
 const hallTrack = document.getElementById('hall-track');
-const LOOP_BUFFER = 4;
+const LOOP_BUFFER = 12; /* generous, so fast wheel-flicks never outrun the clone buffer */
 
 function renderHall() {
   hallTrack.innerHTML = '';
@@ -526,16 +734,15 @@ function renderHall() {
 const hallInertia = attachInertialLoop(hallTrack, LOOP_BUFFER, () => SAINTS.length);
 
 /* ---- Hall modal ---- */
-const hallQuotesSide = document.getElementById('hall-modal-quotes');
-const hallTextSide = document.getElementById('hall-modal-text');
-const hallQuotesList = document.getElementById('hall-quotes-list');
-const hallLorem = document.getElementById('hall-lorem');
+const hallModalQuotes = document.getElementById('hall-modal-quotes');
+const hallModalText = document.getElementById('hall-modal-text');
+const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
 
 function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
+  const mobile = isMobileViewport();
 
-  // reserve the item's slot so the row never reflows while it's "lifted out"
   const placeholder = document.createElement('div');
   placeholder.className = 'item-placeholder';
   placeholder.style.width = rect.width + 'px';
@@ -556,22 +763,36 @@ function openHallModal(itemEl, data) {
   itemEl.classList.add('selected', 'animate-pos');
 
   requestAnimationFrame(() => {
-    const targetH = window.innerHeight * 0.62;
+    let targetH, targetTop, targetLeft;
+    if (mobile) {
+      targetH = window.innerHeight * 0.36;
+      targetTop = 46;
+      const scale0 = targetH / rect.height;
+      const targetW0 = rect.width * scale0;
+      targetLeft = window.innerWidth * 0.66 - targetW0 / 2; /* rule-of-thirds, right gridline */
+    } else {
+      targetH = window.innerHeight * 0.62;
+      targetTop = (window.innerHeight - targetH) / 2;
+      const scale0 = targetH / rect.height;
+      const targetW0 = rect.width * scale0;
+      targetLeft = (window.innerWidth - targetW0) / 2;
+    }
     const scale = targetH / rect.height;
-    const targetW = rect.width * scale;
-    const targetTop = (window.innerHeight - targetH) / 2;
-    const targetLeft = (window.innerWidth - targetW) / 2;
     const dx = targetLeft - rect.left;
     const dy = targetTop - rect.top;
     itemEl.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
   });
 
-  hallQuotesList.innerHTML = data.quotes.map(q => `<span class="q">&ldquo;${q}&rdquo;</span>`).join('');
-  hallLorem.textContent = data.vita;
+  // populate both desktop and mobile panels — only one is visible per breakpoint
+  renderQuoteLoop(document.getElementById('hall-quotes-track-desktop'), data.quotes, 7);
+  renderQuoteLoop(document.getElementById('hall-quotes-track-mobile'), data.quotes, 3);
+  document.getElementById('hall-lorem-desktop').innerHTML = data.vitaParagraphs.map(p => `<p>${p}</p>`).join('');
+  document.getElementById('hall-lorem-mobile').innerHTML = data.vitaParagraphs.map(p => `<p>${p}</p>`).join('');
 
   setTimeout(() => {
-    hallQuotesSide.classList.add('reveal');
-    hallTextSide.classList.add('reveal');
+    hallModalQuotes.classList.add('reveal');
+    hallModalText.classList.add('reveal');
+    hallMobilePanel.classList.add('reveal');
     hallClose.classList.add('show');
   }, 1500);
 
@@ -579,8 +800,9 @@ function openHallModal(itemEl, data) {
 }
 
 function closeHallModal(itemEl, placeholder) {
-  hallQuotesSide.classList.remove('reveal');
-  hallTextSide.classList.remove('reveal');
+  hallModalQuotes.classList.remove('reveal');
+  hallModalText.classList.remove('reveal');
+  hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
 
   itemEl.style.transform = 'translate(0px, 0px) scale(1)';
@@ -599,9 +821,6 @@ function closeHallModal(itemEl, placeholder) {
 const armoryTrack = document.getElementById('armory-track');
 const armoryAttribution = document.getElementById('armory-attribution');
 const armoryClose = document.getElementById('armory-close');
-/* Spears are narrow (54px), so a short quotes.txt can end up with barely
-   any scrollable width. Cycle through the list enough times on each
-   side to comfortably outspan any screen width. */
 const ARMORY_BUFFER = 24;
 
 function renderArmory() {
@@ -613,7 +832,9 @@ function renderArmory() {
   full.forEach((q) => {
     const el = document.createElement('div');
     el.className = 'spear';
-    el.innerHTML = `<div class="tip"></div><div class="shaft-text">${q.quote}</div>`;
+    el.innerHTML = `
+      <div class="hilt"><div class="pommel"></div><div class="grip"></div><div class="guard"></div></div>
+      <div class="shaft-text">${q.quote}</div>`;
     el.addEventListener('click', () => openArmoryModal(el, q));
     armoryTrack.appendChild(el);
   });
@@ -645,18 +866,24 @@ function openArmoryModal(spearEl, q) {
   spearEl.style.left = rect.left + 'px';
   spearEl.style.width = rect.width + 'px';
   spearEl.style.height = rect.height + 'px';
-  spearEl.style.transform = 'rotate(0deg)';
+  spearEl.style.transform = 'rotate(0deg) scale(1)';
   spearEl.classList.add('selected', 'animate-pos');
 
   requestAnimationFrame(() => {
     // width/height never change — the spear keeps its own proportions
-    // and is simply carried to centre and laid flat by rotating it.
+    // and is carried to centre, enlarged 1.5x, and laid flat by rotating.
+    // On narrow (mobile) screens the scale is capped with a 12px buffer
+    // on each side so the laid-flat blade never runs off screen.
+    const desiredScale = 1.5;
+    const maxAllowed = (window.innerWidth - 24) / rect.height;
+    const scale = Math.min(desiredScale, maxAllowed);
+
     const cx = window.innerWidth / 2;
     const cy = window.innerHeight / 2 - 30;
     spearEl.style.top = (cy - rect.height / 2) + 'px';
     spearEl.style.left = (cx - rect.width / 2) + 'px';
-    spearEl.style.transform = 'rotate(-90deg)';
-    armoryAttribution.style.top = (cy + rect.width / 2 + 26) + 'px';
+    spearEl.style.transform = `rotate(-90deg) scale(${scale})`;
+    armoryAttribution.style.top = (cy + (rect.width * scale) / 2 + 26) + 'px';
     armoryAttribution.style.left = '50%';
   });
 
@@ -695,39 +922,38 @@ function openArmoryModal(spearEl, q) {
   armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
 }
 
-/* Armory close: an exact reverse of the open animation (rotate + slide
-   back), but it overshoots to a spot 20px above the true resting place.
-   Once the rest of the rack has faded back in, a short second animation
-   slots the spear the last 20px down into its exact original position. */
+/* Close: an exact reverse of the open animation (rotate + scale + slide
+   back), overshooting to a spot 30px above the true resting place. The
+   fade-in of the rest of the rack overlaps the rotation instead of
+   waiting for it. Once that's underway, a short second animation slots
+   the spear the final 30px down into its exact original position. */
 function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
   const rect = placeholder.getBoundingClientRect();
 
-  // Step 1 — reverse of the open animation, overshooting 20px high.
-  spearEl.style.top = (rect.top - 20) + 'px';
+  // Step 1 — reverse of the open animation, overshooting 30px high.
+  spearEl.style.top = (rect.top - 30) + 'px';
   spearEl.style.left = rect.left + 'px';
-  spearEl.style.transform = 'rotate(0deg)';
+  spearEl.style.transform = 'rotate(0deg) scale(1)';
+
+  // Step 2 — the rest of the rack fades back in, overlapping step 1.
+  armoryTrack.querySelectorAll('.spear').forEach(el => {
+    if (el !== spearEl) el.classList.remove('dim');
+  });
 
   setTimeout(() => {
-    // Step 2 — the rest of the rack fades back in.
-    armoryTrack.querySelectorAll('.spear').forEach(el => {
-      if (el !== spearEl) el.classList.remove('dim');
-    });
+    // Step 3 — the spear slots smoothly down the final 30px.
+    spearEl.classList.add('settle');
+    spearEl.style.top = rect.top + 'px';
 
     setTimeout(() => {
-      // Step 3 — the spear slots smoothly down the last 20px.
-      spearEl.classList.add('settle');
-      spearEl.style.top = rect.top + 'px';
-
-      setTimeout(() => {
-        spearEl.classList.remove('selected', 'animate-pos', 'settle');
-        spearEl.removeAttribute('style');
-        placeholder.remove();
-      }, 550);
-    }, 1000);
-  }, 1500);
+      spearEl.classList.remove('selected', 'animate-pos', 'settle');
+      spearEl.removeAttribute('style');
+      placeholder.remove();
+    }, 550);
+  }, 2000);
 }
 
 /* =====================================================================
