@@ -14,6 +14,7 @@
     --line-grey: #b7b1a2;
     --line-grey-soft: #e2ddd0;
     --rubric: #8a2e26;
+    --hl: #f5e05a;
   }
   *{ box-sizing:border-box; }
   html,body{ height:100%; margin:0; }
@@ -72,13 +73,19 @@
 
   main{ height:calc(100vh - 30px); position:relative; }
 
-  .view{
-    position:absolute; inset:0;
-    display:none;
-  }
+  .view{ position:absolute; inset:0; display:none; }
   .view.active{ display:block; }
 
-  /* ---------------- Hall of Saints ---------------- */
+  .label{
+    font-size:10px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--rubric);
+    margin-bottom:12px;
+    text-align:center;
+  }
+
+  /* ---------------- Hall of Saints — carousel ---------------- */
   #hall-track{
     height:100%;
     display:flex;
@@ -89,6 +96,11 @@
     scrollbar-width:none;
   }
   #hall-track::-webkit-scrollbar{ display:none; }
+  #hall-status{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    font-style:italic; color:var(--ink-soft); font-size:14px;
+  }
 
   .saint-item{
     flex:0 0 auto;
@@ -104,14 +116,14 @@
 
   .saint-card{
     flex:0 0 auto;
-    height:calc(100vh - 104px); /* 30 header + 10 top + 40 bottom + ~24 caption row */
-    aspect-ratio:1/2.4; /* thinner: width to height */
+    height:calc(100vh - 104px);
+    aspect-ratio:1/2.4;
     overflow:hidden;
     background:#fdfdfc;
   }
   .saint-card img{
     width:100%; height:100%;
-    object-fit:contain; /* do not scale/crop — the source image is pre-sized */
+    object-fit:contain;
     display:block;
   }
 
@@ -127,13 +139,22 @@
   }
   .saint-item:hover .saint-caption{ color:var(--rubric); }
 
-  .saint-item.selected{
-    position:fixed;
-    z-index:40;
-    margin:0;
-  }
+  .saint-item.selected{ position:fixed; z-index:40; margin:0; }
   .saint-item.selected .saint-card{ box-shadow:none !important; }
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
+
+  .modal-saint-name{
+    position:absolute;
+    left:0; right:0; bottom:-2.4em;
+    text-align:center;
+    font-size:clamp(13px, 2.4vh, 20px);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0;
+    transition:opacity 1s ease;
+  }
+  .modal-saint-name.reveal{ opacity:1; }
 
   /* ---------------- Hall Modal — desktop split panel ---------------- */
   #hall-modal-quotes, #hall-modal-text{
@@ -147,28 +168,17 @@
   }
   #hall-modal-quotes{ left:0; }
   #hall-modal-text{ right:0; }
-  #hall-modal-quotes.reveal, #hall-modal-text.reveal{
-    opacity:1;
-    pointer-events:auto;
-  }
-  .label{
-    font-size:10px;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    color:var(--rubric);
-    margin-bottom:12px;
-    text-align:center;
-  }
+  #hall-modal-quotes.reveal, #hall-modal-text.reveal{ opacity:1; pointer-events:auto; }
 
   .quotes-viewport{
     position:relative;
     width:min(320px, 80vw);
-    height:308px; /* 7 rows x 44px */
+    height:308px;
     overflow:hidden;
     -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
     mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
   }
-  .quotes-viewport.small{ height:120px; }
+  .quotes-viewport.small{ height:110px; }
   .quotes-track{
     display:flex;
     flex-direction:column;
@@ -187,39 +197,51 @@
     color:var(--ink-soft);
     padding:0 14px;
     border-bottom:1px solid var(--line-grey-soft);
+    cursor:pointer;
+    transition:color .3s ease;
   }
-  .quotes-viewport.small .q{ height:34px; font-size:12px; }
+  .quotes-track .q:hover{ color:var(--rubric); }
+  .quotes-viewport.small .q{ height:32px; font-size:11.5px; }
 
-  .text-scroll{
-    width:min(400px, 80vw);
+  .chapters-panel{
+    width:min(420px, 80vw);
     max-height:70vh;
     overflow-y:auto;
     scrollbar-width:none;
   }
-  .text-scroll::-webkit-scrollbar{ display:none; }
-  .text-scroll p{
-    font-size:15px;
-    line-height:1.7;
-    color:var(--ink-soft);
-    margin-bottom:1.1em;
+  .chapters-panel::-webkit-scrollbar{ display:none; }
+  .chapter-header{
+    display:block; width:100%; text-align:left;
+    background:#fff; border:none; font-family:inherit;
+    font-size:14px; letter-spacing:0.03em;
+    color:var(--ink); cursor:pointer;
+    padding:10px 4px; border-bottom:1px solid var(--line-grey-soft);
+    transition:color .3s ease;
   }
+  .chapter-header:hover{ color:var(--rubric); }
+  .chapter.open .chapter-header{
+    position:sticky; top:0; z-index:2; color:var(--rubric);
+  }
+  .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
+  .chapter-body p{ margin-bottom:1em; }
+  .chapter.open .chapter-body{ display:block; }
+  .chapters-panel.has-open .chapter:not(.open){ display:none; }
+  .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
+  .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; }
 
   #hall-close{
-    position:fixed;
-    top:44px; right:6vw;
-    z-index:42;
+    position:fixed; top:44px; right:6vw; z-index:42;
     width:34px; height:34px;
     border:1px solid var(--line-grey);
     background:#fff;
-    display:none;
-    align-items:center; justify-content:center;
+    display:none; align-items:center; justify-content:center;
     cursor:pointer;
     transition:border-color .3s ease, transform .3s ease;
   }
   #hall-close.show{ display:flex; }
   #hall-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
 
-  /* ---------------- Hall Modal — mobile single-column ---------------- */
+  /* ---------------- Hall Modal — mobile ---------------- */
   #hall-mobile-panel{ display:none; }
   @media (max-width:700px){
     #hall-modal-quotes, #hall-modal-text{ display:none; }
@@ -235,16 +257,36 @@
       background:#fff;
     }
     #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
-    .mobile-quotes-sticky{
-      position:sticky; top:0;
+
+    .mobile-hero-bar{
+      position:sticky; top:0; z-index:2;
       background:#fff;
-      padding:10px 16px 12px 16px;
       border-bottom:1px solid var(--line-grey-soft);
-      z-index:2;
+      display:flex; align-items:center;
+      padding:8px 44px 8px 12px;
+      min-height:56px;
+      transition:min-height .3s ease;
     }
-    .mobile-quotes-sticky .label{ margin-bottom:6px; }
-    .mobile-lorem{ padding:20px 22px 70px 22px; }
-    .mobile-lorem p{ font-size:15px; line-height:1.7; color:var(--ink-soft); margin-bottom:1.1em; }
+    .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
+    .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
+    .mobile-dock-thumb{
+      width:34px; height:50px; flex:0 0 auto; margin-right:10px;
+      overflow:hidden; background:#fdfdfc; opacity:0; transition:opacity .3s ease;
+    }
+    .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; }
+    .mobile-hero-bar.docked .mobile-dock-thumb{ opacity:1; }
+    .mobile-arrow{
+      position:absolute; right:8px; top:50%; transform:translateY(-50%);
+      width:26px; height:26px; border:1px solid var(--line-grey);
+      background:#fff; display:flex; align-items:center; justify-content:center;
+      cursor:pointer; transition:transform .3s ease, border-color .3s ease;
+    }
+    .mobile-hero-bar.minimized .mobile-arrow{ transform:translateY(-50%) rotate(180deg); }
+    .mobile-arrow:hover{ border-color:var(--rubric); }
+
+    .mobile-chapters{ padding:18px 18px 70px 18px; }
+    .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
+    .mobile-chapters .chapter.open .chapter-header{ top:56px; }
   }
 
   /* ---------------- Armory ---------------- */
@@ -272,28 +314,11 @@
     position:relative;
     transition:opacity 1s ease;
   }
-  .spear .hilt{
-    display:flex; flex-direction:column; align-items:center; gap:3px;
-    flex:0 0 auto;
-  }
-  .spear .hilt .pommel{
-    width:6px; height:6px; border-radius:50%;
-    background:var(--line-grey);
-    transition:background-color .4s ease;
-  }
-  .spear .hilt .grip{
-    width:1.5px; height:9px;
-    background:var(--line-grey);
-    transition:background-color .4s ease;
-  }
-  .spear .hilt .guard{
-    width:24px; height:1.5px;
-    background:var(--line-grey);
-    transition:background-color .4s ease;
-  }
-  .spear:hover .hilt .pommel,
-  .spear:hover .hilt .grip,
-  .spear:hover .hilt .guard{ background:var(--rubric); }
+  .spear .hilt{ display:flex; flex-direction:column; align-items:center; gap:3px; flex:0 0 auto; }
+  .spear .hilt .pommel{ width:6px; height:6px; border-radius:50%; background:var(--line-grey); transition:background-color .4s ease; }
+  .spear .hilt .grip{ width:1.5px; height:9px; background:var(--line-grey); transition:background-color .4s ease; }
+  .spear .hilt .guard{ width:24px; height:1.5px; background:var(--line-grey); transition:background-color .4s ease; }
+  .spear:hover .hilt .pommel, .spear:hover .hilt .grip, .spear:hover .hilt .guard{ background:var(--rubric); }
 
   .spear .shaft-text{
     writing-mode:vertical-rl;
@@ -309,55 +334,29 @@
   }
   .spear:hover .shaft-text{ color:var(--ink); }
   .spear.dim{ opacity:0; pointer-events:none; }
-  .spear.selected{
-    position:fixed;
-    z-index:40;
-    margin:0;
-    padding-top:0;
-    background:#fff;
-    transform-origin:center center;
-  }
+  .spear.selected{ position:fixed; z-index:40; margin:0; padding-top:0; background:#fff; transform-origin:center center; }
   .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   #armory-attribution{
-    position:fixed;
-    left:50%; transform:translateX(-50%);
-    top:calc(50% + 60px);
-    z-index:41;
-    font-style:italic;
-    font-size:14px;
-    color:var(--ink-soft);
-    text-align:center;
-    opacity:0;
-    transition:opacity 1s ease;
-    white-space:nowrap;
+    position:fixed; left:50%; transform:translateX(-50%);
+    top:calc(50% + 60px); z-index:41;
+    font-style:italic; font-size:14px; color:var(--ink-soft);
+    text-align:center; opacity:0; transition:opacity 1s ease; white-space:nowrap;
   }
   #armory-attribution.reveal{ opacity:1; }
-  #armory-attribution a{
-    border-bottom:1px solid var(--rubric);
-    color:var(--rubric);
-    text-decoration:none;
-  }
+  #armory-attribution a{ border-bottom:1px solid var(--rubric); color:var(--rubric); text-decoration:none; }
 
   #armory-close{
-    position:fixed;
-    top:44px; right:6vw;
-    z-index:42;
-    width:34px; height:34px;
-    border:1px solid var(--line-grey);
-    background:#fff;
-    display:none;
-    align-items:center; justify-content:center;
-    cursor:pointer;
-    transition:border-color .3s ease, transform .3s ease;
+    position:fixed; top:44px; right:6vw; z-index:42;
+    width:34px; height:34px; border:1px solid var(--line-grey);
+    background:#fff; display:none; align-items:center; justify-content:center;
+    cursor:pointer; transition:border-color .3s ease, transform .3s ease;
   }
   #armory-close.show{ display:flex; }
   #armory-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
 
-  @media (prefers-reduced-motion:reduce){
-    *{ transition-duration:0.01ms !important; }
-  }
+  @media (prefers-reduced-motion:reduce){ *{ transition-duration:0.01ms !important; } }
 </style>
 </head>
 <body>
@@ -376,8 +375,8 @@
   <!-- ===================== HALL OF SAINTS ===================== -->
   <section id="hall-view" class="view active">
     <div id="hall-track"></div>
+    <div id="hall-status" style="display:none"></div>
 
-    <!-- desktop: fixed split panels -->
     <div id="hall-modal-quotes">
       <div>
         <div class="label">Key Sayings</div>
@@ -385,21 +384,19 @@
       </div>
     </div>
     <div id="hall-modal-text">
-      <div class="text-scroll" id="hall-text-scroll-desktop">
-        <div class="label">Vita</div>
-        <div id="hall-lorem-desktop"></div>
-      </div>
+      <div class="chapters-panel" id="hall-chapters-desktop"></div>
     </div>
 
-    <!-- mobile: single scrollable column, sticky quotes subheader -->
     <div id="hall-mobile-panel">
-      <div class="mobile-quotes-sticky">
-        <div class="label">Key Sayings</div>
+      <div class="mobile-hero-bar" id="mobile-hero-bar">
+        <div class="mobile-dock-thumb" id="mobile-dock-thumb"><img id="mobile-dock-img" alt=""></div>
         <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
+        <div class="mobile-arrow" id="mobile-hero-arrow">
+          <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
+        </div>
       </div>
-      <div class="mobile-lorem">
-        <div class="label">Vita</div>
-        <div id="hall-lorem-mobile"></div>
+      <div class="mobile-chapters">
+        <div class="chapters-panel" id="hall-chapters-mobile"></div>
       </div>
     </div>
 
@@ -425,66 +422,15 @@
 
 <script>
 /* =====================================================================
-   DATA
+   CONFIG — fill these in with your actual repo details. Without them,
+   the site can't ask GitHub what folders exist under assets/saints/,
+   and falls back to a small built-in demo so the page still works.
 ===================================================================== */
-const VITA_PARAGRAPHS = [
-  `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-  `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-  `Curabitur pretium tincidunt lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
-  `Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.`,
-  `Aliquam erat volutpat. Nunc eleifend leo vitae magna faucibus, id lacinia leo dignissim. Nam sit amet dolor porttitor, blandit augue vel, tristique nunc. Vestibulum ante ipsum primis in faucibus orci luctus.`,
-  `Et ultrices posuere cubilia curae; Cras id dui lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vehicula porttitor sem, ac fringilla lorem gravida id.`,
-  `Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.`
-];
+const GITHUB_OWNER  = 'sminandpeter';
+const GITHUB_REPO   = 'test';
+const GITHUB_BRANCH = 'main';
 
-const SAINTS = Array.from({ length: 10 }, (_, i) => ({
-  id: i + 1,
-  name: 'St Antony the Great',
-  image: 'assets/images/icons/St Antony the Great.jpg',
-  quotes: [
-    'I no longer fear God, but I love Him.',
-    'Whoever sits in solitude is delivered from three wars.',
-    'My life is with my neighbour.'
-  ],
-  vitaParagraphs: VITA_PARAGRAPHS
-}));
-
-const QUOTES_FALLBACK = `
-St Antony the Great
-He who sits in solitude and is quiet hath escaped from three wars.
-
-St Antony the Great
-Life and death depend on our neighbour.
-
-John 15:12
-Love one another, as I have loved you.
-
-Psalm 46:10
-Be still, and know that I am God.
-
-St Antony the Great
-I no longer fear God, but I love Him, for love casteth out fear.
-
-Matthew 5:8
-Blessed are the pure in heart, for they shall see God.
-`.trim();
-
-function parseQuotes(raw) {
-  const lines = raw.split('\n');
-  const out = [];
-  for (let i = 0; i < lines.length; i += 3) {
-    const source = (lines[i] || '').trim();
-    const quote = (lines[i + 1] || '').trim();
-    if (source && quote) out.push({ source, quote });
-  }
-  return out;
-}
-
-let QUOTES = [];
-
-function isMobileViewport() {
-  return window.matchMedia('(max-width:700px)').matches;
-}
+function isMobileViewport() { return window.matchMedia('(max-width:700px)').matches; }
 
 /* =====================================================================
    NAV
@@ -500,14 +446,12 @@ document.querySelectorAll('header nav a').forEach(a => {
 });
 
 /* =====================================================================
-   TWEEN — the one and only animation primitive in this file. Every
-   modal open/close move is driven by this, frame by frame, in plain
-   JS — no CSS transitions on position/rotation/scale anywhere, so
-   there's nothing for a class swap or stale transition state to get
-   out of sync with.
+   TWEEN — every position/rotation/scale animation in this file runs
+   through this. No CSS transitions on those properties anywhere —
+   see the note at the bottom of the file for why.
 ===================================================================== */
 function tween(duration, onFrame, onComplete) {
-  const ease = t => 1 - Math.pow(1 - t, 3); // ease-out cubic
+  const ease = t => 1 - Math.pow(1 - t, 3);
   const start = performance.now();
   function step(now) {
     const raw = Math.min(1, (now - start) / duration);
@@ -521,21 +465,19 @@ function lerp(a, b, t) { return a + (b - a) * t; }
 
 /* =====================================================================
    SHARED — smooth wheel-to-scroll with seamless infinite looping.
-   Used identically by the Hall track, the Armory track, and the
-   vertical quote carousels (via axis:'y').
+   One implementation, used by the Hall track, the Armory track, and
+   the vertical quote carousels (axis:'y').
 ===================================================================== */
 function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const axis = opts.axis || 'x';
   const easeFactor = opts.easeFactor ?? 0.16;
   const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
-  const deltaProp = 'deltaY';
-  const crossDeltaProp = 'deltaX';
 
   let targetScroll = 0;
   let isEasing = false;
   let raf = null;
-  let stride = 0; // cached item size + gap; recompute via measure()
+  let stride = 0;
 
   function measure() {
     const a = trackEl.children[bufferCount];
@@ -574,10 +516,10 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   }
 
   trackEl.addEventListener('wheel', (e) => {
-    if (Math.abs(e[deltaProp]) <= Math.abs(e[crossDeltaProp])) return;
+    if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
     e.preventDefault();
     if (axis === 'y') e.stopPropagation();
-    targetScroll += e[deltaProp];
+    targetScroll += e.deltaY;
     isEasing = true;
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
@@ -590,56 +532,218 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 
   return {
     measure,
-    resetTo(value) {
-      trackEl[scrollProp] = value;
-      targetScroll = value;
-    }
+    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; }
   };
 }
 
-/* Builds `count` items cycling through `list` starting at `start`
-   (wrapping around as many times as needed) — used so a short list of
-   narrow/small items still gets a wide enough clone buffer to scroll
-   freely in both directions before looping. */
 function cyclicSlice(list, start, count) {
   const out = [];
   const n = list.length;
-  for (let i = 0; i < count; i++) {
-    out.push(list[((start + i) % n + n) % n]);
-  }
+  for (let i = 0; i < count; i++) out.push(list[((start + i) % n + n) % n]);
   return out;
 }
 
-function renderQuoteLoop(containerEl, quotes, rows) {
+/* items: [{text, ...}]; onItemClick receives the item */
+function renderQuoteLoop(containerEl, items, rows, onItemClick) {
   containerEl.innerHTML = '';
+  if (!items.length) return null;
   const buffer = Math.max(rows, 6);
-  const head = cyclicSlice(quotes, quotes.length - buffer, buffer);
-  const tail = cyclicSlice(quotes, 0, buffer);
-  const full = [...head, ...quotes, ...tail];
-  full.forEach(q => {
+  const head = cyclicSlice(items, items.length - buffer, buffer);
+  const tail = cyclicSlice(items, 0, buffer);
+  const full = [...head, ...items, ...tail];
+  full.forEach(item => {
     const el = document.createElement('div');
     el.className = 'q';
-    el.textContent = `\u201C${q}\u201D`;
+    el.textContent = `\u201C${item.text}\u201D`;
+    if (onItemClick) el.addEventListener('click', (e) => { e.stopPropagation(); onItemClick(item); });
     containerEl.appendChild(el);
   });
-  const loop = attachLoopScroll(containerEl, buffer, () => quotes.length, { axis: 'y' });
+  const loop = attachLoopScroll(containerEl, buffer, () => items.length, { axis: 'y' });
   requestAnimationFrame(() => {
     loop.measure();
     const first = containerEl.children[buffer];
     if (first) loop.resetTo(first.offsetTop);
   });
+  return loop;
 }
 
 /* =====================================================================
-   HALL OF SAINTS — carousel, modal
+   DATA — one folder per saint under assets/saints/, auto-discovered
+   via the GitHub API (one call lists the whole repo tree). For each
+   folder: the first image file becomes the card art, quotes.txt (one
+   quote per line) becomes the key sayings, and every other .txt file
+   becomes a chapter — ordered numerically by the number at the start
+   of its filename (so "11." sorts after "9.", not between "1." and
+   "2."). Add a folder, the carousel picks it up automatically.
+===================================================================== */
+function naturalCompare(a, b) {
+  const na = parseInt((a.match(/^\d+/) || ['999999'])[0], 10);
+  const nb = parseInt((b.match(/^\d+/) || ['999999'])[0], 10);
+  if (na !== nb) return na - nb;
+  return a.localeCompare(b);
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/* Wraps exact substring matches in <span class="quote-anchor" data-idx="n">
+   so a click on the matching carousel quote can scrollIntoView + highlight
+   it directly, with no runtime text-searching at click time. */
+function buildChapterHtml(rawBody, anchors) {
+  let html = '';
+  let cursor = 0;
+  [...anchors].sort((a, b) => a.offset - b.offset).forEach(a => {
+    html += escapeHtml(rawBody.slice(cursor, a.offset));
+    const chunk = rawBody.slice(a.offset, a.offset + a.length);
+    html += `<span class="quote-anchor" data-idx="${a.quoteIndex}">${escapeHtml(chunk)}</span>`;
+    cursor = a.offset + a.length;
+  });
+  html += escapeHtml(rawBody.slice(cursor));
+  return html.split(/\n{2,}/).map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`).join('');
+}
+
+/* For each quote, find the first chapter containing it verbatim. Quotes
+   with no exact match anywhere are dropped from the carousel entirely
+   (per spec — no link, no display). */
+function linkQuotesToChapters(quoteLines, chapters) {
+  const linked = [];
+  quoteLines.forEach((text) => {
+    for (let ci = 0; ci < chapters.length; ci++) {
+      const offset = chapters[ci].body.indexOf(text);
+      if (offset !== -1) {
+        linked.push({ text, chapterIndex: ci, offset });
+        break;
+      }
+    }
+  });
+  return linked.map((lq, i) => ({ ...lq, quoteIndex: i }));
+}
+
+function placeholderIconDataUri() {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+    <rect width="200" height="300" fill="#fdfdfc"/>
+    <circle cx="100" cy="70" r="34" fill="none" stroke="#8a2e26" stroke-width="1" opacity="0.7"/>
+    <circle cx="100" cy="95" r="26" fill="none" stroke="#55524a" stroke-width="1"/>
+    <path d="M100 121 C60 128 48 190 48 280 L152 280 C152 190 140 128 100 121 Z" fill="none" stroke="#55524a" stroke-width="1"/>
+  </svg>`;
+  return 'data:image/svg+xml;base64,' + btoa(svg);
+}
+
+/* Small built-in demo, used only if GITHUB_OWNER/REPO above are left
+   unconfigured or the API call fails — so the page still demonstrates
+   its own features (including a quote that's deliberately excluded
+   because it has no exact match, to show that behaviour working). */
+function fallbackSaints() {
+  const chaptersA = [
+    { title: '1. Early Life', body: `He was born in Egypt of good and prosperous parents. In his eighteenth year he heard the Gospel read in church.\n\nHearing it, he gave away all he owned and began to live a life of discipline near his village.` },
+    { title: '2. Into the Desert', body: `He withdrew further into the desert, shutting himself in an old fort for nearly twenty years.\n\nHe who sits in solitude and is quiet hath escaped from three wars: hearing, speech, and sight.` }
+  ];
+  const chaptersB = [
+    { title: '1. On Silence', body: `Keep your mind in hell, and despair not.\n\nSilence is not always the mark of wisdom, but it is nearly always its safest form.` }
+  ];
+  return [
+    {
+      id: 'demo-antony', name: 'Demo Saint (unconfigured)', image: placeholderIconDataUri(),
+      chapters: chaptersA,
+      linkedQuotes: linkQuotesToChapters([
+        'He who sits in solitude and is quiet hath escaped from three wars.',
+        'This exact line does not appear in the text, so it is excluded.'
+      ], chaptersA)
+    },
+    {
+      id: 'demo-silouan', name: 'Demo Saint Two', image: placeholderIconDataUri(),
+      chapters: chaptersB,
+      linkedQuotes: linkQuotesToChapters(['Keep your mind in hell, and despair not.'], chaptersB)
+    }
+  ];
+}
+
+async function fetchText(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`fetch failed: ${url}`);
+  return res.text();
+}
+
+async function loadSaints() {
+  if (GITHUB_OWNER === 'YOUR_GITHUB_USERNAME' || GITHUB_REPO === 'YOUR_REPO_NAME') {
+    console.warn('GITHUB_OWNER/GITHUB_REPO are not configured — showing the built-in demo. Fill them in at the top of the script.');
+    return fallbackSaints();
+  }
+  try {
+    const treeUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`;
+    const treeRes = await fetch(treeUrl);
+    if (!treeRes.ok) throw new Error('Could not list assets/saints via the GitHub API');
+    const tree = await treeRes.json();
+
+    const folders = {};
+    tree.tree
+      .filter(item => item.type === 'blob' && item.path.startsWith('assets/saints/'))
+      .forEach(item => {
+        const rel = item.path.slice('assets/saints/'.length);
+        const slash = rel.indexOf('/');
+        if (slash === -1) return;
+        const folder = rel.slice(0, slash);
+        const file = rel.slice(slash + 1);
+        if (file.includes('/')) return; // ignore nested subfolders
+        (folders[folder] = folders[folder] || []).push(file);
+      });
+
+    const saints = [];
+    for (const folder of Object.keys(folders).sort()) {
+      const files = folders[folder];
+      const image = files.find(f => /\.(jpe?g|png|webp)$/i.test(f));
+      const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
+      const chapterFiles = files.filter(f => /\.txt$/i.test(f) && f.toLowerCase() !== 'quotes.txt').sort(naturalCompare);
+      if (!image) continue;
+
+      const base = `assets/saints/${encodeURIComponent(folder)}/`;
+      const quotesRaw = quotesFile ? await fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : '';
+      const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
+
+      const chapters = [];
+      for (const cf of chapterFiles) {
+        const body = await fetchText(base + encodeURIComponent(cf)).catch(() => '');
+        chapters.push({ title: cf.replace(/\.txt$/i, ''), body: body.trim() });
+      }
+
+      saints.push({
+        id: folder,
+        name: folder,
+        image: base + encodeURIComponent(image),
+        chapters,
+        linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
+      });
+    }
+    return saints.length ? saints : fallbackSaints();
+  } catch (err) {
+    console.warn('Falling back to the built-in demo saints:', err);
+    return fallbackSaints();
+  }
+}
+
+let SAINTS = [];
+
+/* =====================================================================
+   HALL OF SAINTS — carousel
 ===================================================================== */
 const hallTrack = document.getElementById('hall-track');
-const LOOP_BUFFER = 12; /* generous, so fast wheel-flicks never outrun the clone buffer */
+const hallStatus = document.getElementById('hall-status');
+const LOOP_BUFFER = 12;
 
 function renderHall() {
   hallTrack.innerHTML = '';
-  const head = cyclicSlice(SAINTS, SAINTS.length - LOOP_BUFFER, LOOP_BUFFER);
-  const tail = cyclicSlice(SAINTS, 0, LOOP_BUFFER);
+  if (!SAINTS.length) {
+    hallStatus.textContent = 'No saints found in assets/saints.';
+    hallStatus.style.display = 'flex';
+    return;
+  }
+  hallStatus.style.display = 'none';
+
+  const buffer = Math.min(LOOP_BUFFER, Math.max(SAINTS.length, 3));
+  const head = cyclicSlice(SAINTS, SAINTS.length - buffer, buffer);
+  const tail = cyclicSlice(SAINTS, 0, buffer);
   const full = [...head, ...SAINTS, ...tail];
 
   full.forEach((s) => {
@@ -647,7 +751,7 @@ function renderHall() {
     item.className = 'saint-item';
     item.dataset.id = s.id;
     item.innerHTML = `
-      <div class="saint-card"><img src="${encodeURI(s.image)}" alt="${s.name}"></div>
+      <div class="saint-card"><img src="${s.image}" alt="${s.name}"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => openHallModal(item, s));
     hallTrack.appendChild(item);
@@ -655,18 +759,80 @@ function renderHall() {
 
   requestAnimationFrame(() => {
     hallInertia.measure();
-    const first = hallTrack.children[LOOP_BUFFER];
+    const first = hallTrack.children[buffer];
     if (first) hallInertia.resetTo(first.offsetLeft);
   });
 }
 
 const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x' });
 
+/* ---- chapter accordion (shared by desktop + mobile panels) ---- */
+function renderChapters(container, chapters) {
+  container.innerHTML = '';
+  container.classList.remove('has-open');
+  chapters.forEach((ch, i) => {
+    const el = document.createElement('div');
+    el.className = 'chapter';
+    el.dataset.i = i;
+    el.innerHTML = `<button class="chapter-header" type="button">${ch.title}</button><div class="chapter-body">${ch.html}</div>`;
+    el.querySelector('.chapter-header').addEventListener('click', () => {
+      if (el.classList.contains('open')) closeChapters(container);
+      else openChapterIndex(container, i);
+    });
+    container.appendChild(el);
+  });
+}
+function openChapterIndex(container, index) {
+  container.querySelectorAll('.chapter').forEach(ch => ch.classList.remove('open'));
+  const target = container.querySelector(`.chapter[data-i="${index}"]`);
+  if (target) target.classList.add('open');
+  container.classList.add('has-open');
+}
+function closeChapters(container) {
+  container.querySelectorAll('.chapter').forEach(ch => ch.classList.remove('open'));
+  container.classList.remove('has-open');
+}
+
+let currentHighlightEl = null;
+function jumpToQuote(linkedQuote) {
+  const container = isMobileViewport()
+    ? document.getElementById('hall-chapters-mobile')
+    : document.getElementById('hall-chapters-desktop');
+  openChapterIndex(container, linkedQuote.chapterIndex);
+
+  requestAnimationFrame(() => {
+    const anchor = container.querySelector(`.quote-anchor[data-idx="${linkedQuote.quoteIndex}"]`);
+    if (!anchor) return;
+    if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
+
+    const scrollBox = isMobileViewport() ? document.getElementById('hall-mobile-panel') : container;
+    const targetTop = anchor.offsetTop - 60;
+    const startTop = scrollBox.scrollTop;
+    tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
+      anchor.classList.add('hl');
+      currentHighlightEl = anchor;
+      setTimeout(() => { if (currentHighlightEl === anchor) anchor.classList.remove('hl'); }, 1000);
+    });
+  });
+}
+
+/* ---- mobile hero dock (image + quotes bar dock together on scroll) ---- */
+const mobileHeroBar = document.getElementById('mobile-hero-bar');
+const mobileDockThumb = document.getElementById('mobile-dock-thumb');
+const mobileDockImg = document.getElementById('mobile-dock-img');
+const mobileArrow = document.getElementById('mobile-hero-arrow');
+let mobileMinimized = false;
+mobileArrow.addEventListener('click', () => {
+  mobileMinimized = !mobileMinimized;
+  mobileHeroBar.classList.toggle('minimized', mobileMinimized);
+});
+
 /* ---- Hall modal ---- */
 const hallModalQuotes = document.getElementById('hall-modal-quotes');
 const hallModalText = document.getElementById('hall-modal-text');
 const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
+let hallMobileScrollHandler = null;
 
 function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
@@ -680,15 +846,18 @@ function openHallModal(itemEl, data) {
   placeholder.style.marginBottom = getComputedStyle(itemEl).marginBottom;
   itemEl.after(placeholder);
 
-  hallTrack.querySelectorAll('.saint-item').forEach(el => {
-    if (el !== itemEl) el.classList.add('dim');
-  });
+  hallTrack.querySelectorAll('.saint-item').forEach(el => { if (el !== itemEl) el.classList.add('dim'); });
 
   itemEl.style.top = rect.top + 'px';
   itemEl.style.left = rect.left + 'px';
   itemEl.style.width = rect.width + 'px';
   itemEl.style.height = rect.height + 'px';
   itemEl.classList.add('selected');
+
+  const nameLabel = document.createElement('div');
+  nameLabel.className = 'modal-saint-name';
+  nameLabel.textContent = data.name;
+  itemEl.appendChild(nameLabel);
 
   let targetH, targetTop, targetLeft;
   if (mobile) {
@@ -700,22 +869,35 @@ function openHallModal(itemEl, data) {
   }
   const scale = targetH / rect.height;
   const targetW = rect.width * scale;
-  targetLeft = mobile
-    ? window.innerWidth * 0.66 - targetW / 2   /* rule-of-thirds, right gridline */
-    : (window.innerWidth - targetW) / 2;
+  targetLeft = mobile ? window.innerWidth * 0.66 - targetW / 2 : (window.innerWidth - targetW) / 2;
 
   tween(1500, (t) => {
     itemEl.style.top = lerp(rect.top, targetTop, t) + 'px';
     itemEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
     itemEl.style.width = lerp(rect.width, targetW, t) + 'px';
     itemEl.style.height = lerp(rect.height, targetH, t) + 'px';
-  });
+  }, () => { nameLabel.classList.add('reveal'); });
 
-  // populate both desktop and mobile panels — only one is visible per breakpoint
-  renderQuoteLoop(document.getElementById('hall-quotes-track-desktop'), data.quotes, 7);
-  renderQuoteLoop(document.getElementById('hall-quotes-track-mobile'), data.quotes, 3);
-  document.getElementById('hall-lorem-desktop').innerHTML = data.vitaParagraphs.map(p => `<p>${p}</p>`).join('');
-  document.getElementById('hall-lorem-mobile').innerHTML = data.vitaParagraphs.map(p => `<p>${p}</p>`).join('');
+  // build chapter HTML once (with quote anchors embedded) and populate both panels
+  const chaptersHtml = data.chapters.map((ch, ci) => ({
+    title: ch.title,
+    html: buildChapterHtml(ch.body, data.linkedQuotes.filter(lq => lq.chapterIndex === ci)
+      .map(lq => ({ offset: lq.offset, length: lq.text.length, quoteIndex: lq.quoteIndex })))
+  }));
+  renderChapters(document.getElementById('hall-chapters-desktop'), chaptersHtml);
+  renderChapters(document.getElementById('hall-chapters-mobile'), chaptersHtml);
+
+  renderQuoteLoop(document.getElementById('hall-quotes-track-desktop'), data.linkedQuotes, 7, jumpToQuote);
+  renderQuoteLoop(document.getElementById('hall-quotes-track-mobile'), data.linkedQuotes, 3, jumpToQuote);
+
+  mobileDockImg.src = data.image;
+  mobileHeroBar.classList.remove('docked', 'minimized');
+  mobileMinimized = false;
+  hallMobileScrollHandler = () => {
+    const past = hallMobilePanel.scrollTop > 40;
+    mobileHeroBar.classList.toggle('docked', past);
+  };
+  hallMobilePanel.addEventListener('scroll', hallMobileScrollHandler);
 
   setTimeout(() => {
     hallModalQuotes.classList.add('reveal');
@@ -724,14 +906,19 @@ function openHallModal(itemEl, data) {
     hallClose.classList.add('show');
   }, 1500);
 
-  hallClose.onclick = () => closeHallModal(itemEl, placeholder);
+  hallClose.onclick = () => closeHallModal(itemEl, placeholder, nameLabel);
 }
 
-function closeHallModal(itemEl, placeholder) {
+function closeHallModal(itemEl, placeholder, nameLabel) {
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
+  nameLabel.classList.remove('reveal');
+  if (hallMobileScrollHandler) hallMobilePanel.removeEventListener('scroll', hallMobileScrollHandler);
+  closeChapters(document.getElementById('hall-chapters-desktop'));
+  closeChapters(document.getElementById('hall-chapters-mobile'));
+  currentHighlightEl = null;
 
   const rect = placeholder.getBoundingClientRect();
   const from = itemEl.getBoundingClientRect();
@@ -744,6 +931,7 @@ function closeHallModal(itemEl, placeholder) {
   }, () => {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
+    nameLabel.remove();
     placeholder.remove();
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
   });
@@ -757,11 +945,38 @@ const armoryAttribution = document.getElementById('armory-attribution');
 const armoryClose = document.getElementById('armory-close');
 const ARMORY_BUFFER = 24;
 
+const QUOTES_FALLBACK = `
+St Antony the Great
+He who sits in solitude and is quiet hath escaped from three wars.
+
+St Antony the Great
+Life and death depend on our neighbour.
+
+John 15:12
+Love one another, as I have loved you.
+
+Psalm 46:10
+Be still, and know that I am God.
+`.trim();
+
+function parseArmoryQuotes(raw) {
+  const lines = raw.split('\n');
+  const out = [];
+  for (let i = 0; i < lines.length; i += 3) {
+    const source = (lines[i] || '').trim();
+    const quote = (lines[i + 1] || '').trim();
+    if (source && quote) out.push({ source, quote });
+  }
+  return out;
+}
+
+let ARMORY_QUOTES = [];
+
 function renderArmory() {
   armoryTrack.innerHTML = '';
-  const head = cyclicSlice(QUOTES, QUOTES.length - ARMORY_BUFFER, ARMORY_BUFFER);
-  const tail = cyclicSlice(QUOTES, 0, ARMORY_BUFFER);
-  const full = [...head, ...QUOTES, ...tail];
+  const head = cyclicSlice(ARMORY_QUOTES, ARMORY_QUOTES.length - ARMORY_BUFFER, ARMORY_BUFFER);
+  const tail = cyclicSlice(ARMORY_QUOTES, 0, ARMORY_BUFFER);
+  const full = [...head, ...ARMORY_QUOTES, ...tail];
 
   full.forEach((q) => {
     const el = document.createElement('div');
@@ -780,11 +995,11 @@ function renderArmory() {
   });
 }
 
-const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => QUOTES.length, { axis: 'x' });
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => ARMORY_QUOTES.length, { axis: 'x' });
 
 function armoryScaleFor(rect) {
   const desired = 1.5;
-  const maxAllowed = (window.innerWidth - 24) / rect.height; // 12px buffer each side once laid flat
+  const maxAllowed = (window.innerWidth - 24) / rect.height;
   return Math.min(desired, maxAllowed);
 }
 
@@ -799,9 +1014,7 @@ function openArmoryModal(spearEl, q) {
   placeholder.style.marginBottom = getComputedStyle(spearEl).marginBottom;
   spearEl.after(placeholder);
 
-  armoryTrack.querySelectorAll('.spear').forEach(el => {
-    if (el !== spearEl) el.classList.add('dim');
-  });
+  armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.add('dim'); });
 
   spearEl.style.top = rect.top + 'px';
   spearEl.style.left = rect.left + 'px';
@@ -851,8 +1064,7 @@ function openArmoryModal(spearEl, q) {
       const target = SAINTS.find(s => s.name.toLowerCase() === q.source.toLowerCase());
       if (target) {
         setTimeout(() => {
-          const itemEl = [...hallTrack.querySelectorAll('.saint-item')]
-            .find(el => Number(el.dataset.id) === target.id);
+          const itemEl = [...hallTrack.querySelectorAll('.saint-item')].find(el => el.dataset.id === target.id);
           if (itemEl) openHallModal(itemEl, target);
         }, 200);
       }
@@ -862,14 +1074,6 @@ function openArmoryModal(spearEl, q) {
   armoryClose.onclick = () => closeArmoryModal(spearEl, placeholder);
 }
 
-/* Close: an exact reverse of the open animation — rotate, scale and
-   slide back — but 1.5x quicker, overshooting to a spot 30px above the
-   true resting place. The rest of the rack fades back in immediately
-   (overlapping the rotation). Once the rotation finishes, a second,
-   1.2x-quicker tween slots the spear the final 30px down into place.
-   Both steps are plain JS tweens chained via onComplete — no CSS
-   transitions on position at all, so there's nothing to fall out of
-   sync. */
 function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
@@ -882,9 +1086,7 @@ function closeArmoryModal(spearEl, placeholder) {
   const fromLeft = cx - rect.width / 2;
   const overshootTop = rect.top - 30;
 
-  armoryTrack.querySelectorAll('.spear').forEach(el => {
-    if (el !== spearEl) el.classList.remove('dim');
-  });
+  armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.remove('dim'); });
 
   tween(1000, (t) => {
     spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
@@ -906,14 +1108,13 @@ function closeArmoryModal(spearEl, placeholder) {
 /* =====================================================================
    INIT
 ===================================================================== */
+loadSaints().then(saints => { SAINTS = saints; renderHall(); });
+
 fetch('assets/text/quotes.txt')
   .then(r => { if (!r.ok) throw new Error('no file'); return r.text(); })
-  .then(text => { QUOTES = parseQuotes(text); })
-  .catch(() => { QUOTES = parseQuotes(QUOTES_FALLBACK); })
-  .finally(() => {
-    renderHall();
-    renderArmory();
-  });
+  .then(text => { ARMORY_QUOTES = parseArmoryQuotes(text); })
+  .catch(() => { ARMORY_QUOTES = parseArmoryQuotes(QUOTES_FALLBACK); })
+  .finally(() => { renderArmory(); });
 
 window.addEventListener('resize', () => {
   hallInertia.measure();
