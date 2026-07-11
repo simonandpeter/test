@@ -241,7 +241,7 @@
   body.modal-compact #hall-mobile-panel{
     display:block;
     position:fixed; inset:0;
-    padding-top:40vh;
+    padding-top:30px; /* clears the real page header — matches the sticky bar's own top offset below, so it never jumps between "unstuck" and "stuck" */
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     opacity:0; pointer-events:none;
@@ -252,13 +252,12 @@
   body.modal-compact #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
 
   .mobile-hero-bar{
-    position:sticky; top:0; z-index:2;
+    position:sticky; top:30px; z-index:2; /* top:30px, not 0 — sticking at the viewport edge would tuck it behind the real page header */
     background:#fff;
     border-bottom:1px solid var(--line-grey-soft);
     display:flex; align-items:center;
     padding:8px 92px 8px 12px; /* right space reserves room for the docked image + arrow */
-    min-height:56px;
-    transition:min-height .3s ease;
+    min-height:74px;
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
@@ -273,7 +272,7 @@
 
   .mobile-chapters{ padding:18px 18px 70px 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.revealed .chapter-header{ top:56px; }
+  .mobile-chapters .chapter.revealed .chapter-header{ top:104px; } /* below the page header (30) + the sticky quotes bar (74) */
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -1052,20 +1051,10 @@ mobileArrow.addEventListener('click', () => {
 const HEADER_H = 30;
 
 function mobileDockTarget(origRect) {
-  const dockH = 50;
+  const dockH = 58;
   const scale = dockH / origRect.height;
   const dockW = origRect.width * scale;
-  return { top: HEADER_H + 6, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
-}
-
-function tweenItemBox(itemEl, target, duration) {
-  const start = itemEl.getBoundingClientRect();
-  tween(duration, (t) => {
-    itemEl.style.top = lerp(start.top, target.top, t) + 'px';
-    itemEl.style.left = lerp(start.left, target.left, t) + 'px';
-    itemEl.style.width = lerp(start.width, target.width, t) + 'px';
-    itemEl.style.height = lerp(start.height, target.height, t) + 'px';
-  });
+  return { top: HEADER_H + 8, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
 }
 
 /* ---- Hall modal ---- */
@@ -1073,19 +1062,22 @@ const hallModalQuotes = document.getElementById('hall-modal-quotes');
 const hallModalText = document.getElementById('hall-modal-text');
 const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
-let hallMobileScrollHandler = null;
 
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
 let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
 function computeHallTarget(origRect, mobile) {
-  const targetH = mobile ? window.innerHeight * 0.36 : (window.innerHeight - HEADER_H) * 0.62;
+  if (mobile) {
+    // On mobile the image docks straight to its final small top-right spot —
+    // no separate large "hero" stage, and it never moves again on scroll.
+    const d = mobileDockTarget(origRect);
+    return { targetH: d.height, targetW: d.width, targetTop: d.top, targetLeft: d.left, scale: d.height / origRect.height };
+  }
+  const targetH = (window.innerHeight - HEADER_H) * 0.62;
   const scale = targetH / origRect.height;
   const targetW = origRect.width * scale;
   const targetTop = origRect.top; // stay exactly where it was in the deck — only move horizontally
-  const targetLeft = mobile
-    ? window.innerWidth * 0.66 - targetW / 2
-    : (window.innerWidth - targetW) / 2;
+  const targetLeft = (window.innerWidth - targetW) / 2;
   return { targetH, targetW, targetTop, targetLeft, scale };
 }
 
@@ -1136,16 +1128,6 @@ function openHallModal(itemEl, data) {
 
   mobileHeroBar.classList.remove('minimized');
   mobileMinimized = false;
-  let mobileDocked = false;
-  const heroTarget = { top: targetTop, left: targetLeft, width: targetW, height: targetH };
-  const dockTarget = mobileDockTarget(rect);
-  hallMobileScrollHandler = () => {
-    const past = hallMobilePanel.scrollTop > 40;
-    if (past === mobileDocked) return;
-    mobileDocked = past;
-    tweenItemBox(itemEl, past ? dockTarget : heroTarget, 350);
-  };
-  hallMobilePanel.addEventListener('scroll', hallMobileScrollHandler);
 
   setTimeout(() => {
     hallModalQuotes.classList.add('reveal');
@@ -1165,7 +1147,6 @@ function closeHallModal(itemEl, placeholder) {
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
-  if (hallMobileScrollHandler) hallMobilePanel.removeEventListener('scroll', hallMobileScrollHandler);
   hallChaptersDesktop.close();
   hallChaptersMobile.close();
   currentHighlightEl = null;
