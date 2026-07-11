@@ -28,6 +28,8 @@
 
   /* ---------------- Header ---------------- */
   header{
+    position:relative;
+    z-index:50;
     height:30px;
     display:flex;
     align-items:center;
@@ -125,6 +127,7 @@
     width:100%; height:100%;
     object-fit:contain;
     display:block;
+    pointer-events:none; /* suppress the browser's built-in image-hover search icon */
   }
 
   .saint-caption{
@@ -273,7 +276,7 @@
       width:34px; height:50px; flex:0 0 auto; margin-right:10px;
       overflow:hidden; background:#fdfdfc; opacity:0; transition:opacity .3s ease;
     }
-    .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; }
+    .mobile-dock-thumb img{ width:100%; height:100%; object-fit:contain; pointer-events:none; }
     .mobile-hero-bar.docked .mobile-dock-thumb{ opacity:1; }
     .mobile-arrow{
       position:absolute; right:8px; top:50%; transform:translateY(-50%);
@@ -483,7 +486,16 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   function measure() {
     const a = trackEl.children[bufferCount];
     const b = trackEl.children[bufferCount + 1];
-    stride = (a && b) ? (b[offsetProp] - a[offsetProp]) : 0;
+    const newStride = (a && b) ? (b[offsetProp] - a[offsetProp]) : 0;
+    if (stride && newStride && stride !== newStride) {
+      // item size changed (e.g. window resized) — rescale the current
+      // position by the same ratio so it stays valid instead of drifting
+      // further from reality with every resize until scrolling wedges
+      const ratio = newStride / stride;
+      trackEl[scrollProp] = trackEl[scrollProp] * ratio;
+      targetScroll = targetScroll * ratio;
+    }
+    stride = newStride;
   }
 
   function checkLoop() {
@@ -842,6 +854,27 @@ const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
 let hallMobileScrollHandler = null;
 
+const HEADER_H = 30;
+let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
+
+function computeHallTarget(origRect, mobile) {
+  const availH = window.innerHeight - HEADER_H;
+  let targetH, targetTop;
+  if (mobile) {
+    targetH = window.innerHeight * 0.36;
+    targetTop = HEADER_H + 16;
+  } else {
+    targetH = availH * 0.62;
+    targetTop = HEADER_H + (availH - targetH) / 2;
+  }
+  const scale = targetH / origRect.height;
+  const targetW = origRect.width * scale;
+  const targetLeft = mobile
+    ? window.innerWidth * 0.66 - targetW / 2
+    : (window.innerWidth - targetW) / 2;
+  return { targetH, targetW, targetTop, targetLeft, scale };
+}
+
 function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
   const mobile = isMobileViewport();
@@ -867,17 +900,8 @@ function openHallModal(itemEl, data) {
   nameLabel.textContent = data.name;
   itemEl.appendChild(nameLabel);
 
-  let targetH, targetTop, targetLeft;
-  if (mobile) {
-    targetH = window.innerHeight * 0.36;
-    targetTop = 46;
-  } else {
-    targetH = window.innerHeight * 0.62;
-    targetTop = (window.innerHeight - targetH) / 2;
-  }
-  const scale = targetH / rect.height;
-  const targetW = rect.width * scale;
-  targetLeft = mobile ? window.innerWidth * 0.66 - targetW / 2 : (window.innerWidth - targetW) / 2;
+  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(rect, mobile);
+  currentHallOpen = { itemEl, origRect: rect };
 
   tween(1500, (t) => {
     itemEl.style.top = lerp(rect.top, targetTop, t) + 'px';
@@ -918,6 +942,7 @@ function openHallModal(itemEl, data) {
 }
 
 function closeHallModal(itemEl, placeholder, nameLabel) {
+  currentHallOpen = null;
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
@@ -1011,6 +1036,20 @@ function armoryScaleFor(rect) {
   return Math.min(desired, maxAllowed);
 }
 
+let currentArmoryOpen = null; // { spearEl, origRect } while an Armory modal is open
+
+function armorySpearTarget(origRect) {
+  const scale = armoryScaleFor(origRect);
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight / 2 - 30;
+  return {
+    scale,
+    targetTop: cy - origRect.height / 2,
+    targetLeft: cx - origRect.width / 2,
+    attributionTop: cy + (origRect.width * scale) / 2 + 26
+  };
+}
+
 function openArmoryModal(spearEl, q) {
   const rect = spearEl.getBoundingClientRect();
 
@@ -1031,11 +1070,8 @@ function openArmoryModal(spearEl, q) {
   spearEl.style.transform = 'rotate(0deg) scale(1)';
   spearEl.classList.add('selected');
 
-  const scale = armoryScaleFor(rect);
-  const cx = window.innerWidth / 2;
-  const cy = window.innerHeight / 2 - 30;
-  const targetTop = cy - rect.height / 2;
-  const targetLeft = cx - rect.width / 2;
+  currentArmoryOpen = { spearEl, origRect: rect };
+  const { scale, targetTop, targetLeft, attributionTop } = armorySpearTarget(rect);
 
   tween(1500, (t) => {
     spearEl.style.top = lerp(rect.top, targetTop, t) + 'px';
@@ -1045,7 +1081,7 @@ function openArmoryModal(spearEl, q) {
     spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
   });
 
-  armoryAttribution.style.top = (cy + (rect.width * scale) / 2 + 26) + 'px';
+  armoryAttribution.style.top = attributionTop + 'px';
   armoryAttribution.style.left = '50%';
 
   const isSaint = SAINTS.some(s => s.name.toLowerCase() === q.source.toLowerCase());
@@ -1102,6 +1138,7 @@ function measureTrueRestingRect(spearEl, placeholder) {
 }
 
 function closeArmoryModal(spearEl, placeholder) {
+  currentArmoryOpen = null;
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
@@ -1158,6 +1195,24 @@ fetch('assets/text/quotes.txt')
 window.addEventListener('resize', () => {
   hallInertia.measure();
   armoryInertia.measure();
+
+  if (currentHallOpen) {
+    const { itemEl, origRect } = currentHallOpen;
+    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, isMobileViewport());
+    itemEl.style.top = targetTop + 'px';
+    itemEl.style.left = targetLeft + 'px';
+    itemEl.style.width = targetW + 'px';
+    itemEl.style.height = targetH + 'px';
+  }
+
+  if (currentArmoryOpen) {
+    const { spearEl, origRect } = currentArmoryOpen;
+    const { scale, targetTop, targetLeft, attributionTop } = armorySpearTarget(origRect);
+    spearEl.style.top = targetTop + 'px';
+    spearEl.style.left = targetLeft + 'px';
+    spearEl.style.transform = `rotate(-90deg) scale(${scale})`;
+    armoryAttribution.style.top = attributionTop + 'px';
+  }
 });
 </script>
 
