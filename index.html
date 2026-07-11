@@ -593,6 +593,16 @@ function attachIdleDrift(trackEl, opts = {}) {
       const idleFor = now - lastInteraction;
       if (idleFor > idleMs) {
         if (!active) { active = true; pos = trackEl.scrollLeft; }
+        // The carousel's own infinite-loop listener (in attachLoopScroll)
+        // reacts to our scroll changes and wraps scrollLeft when we drift
+        // near the buffer edge. Our `pos` doesn't know that happened, so
+        // without this it would overwrite the wrap with its stale
+        // pre-jump value next frame — undoing it and eventually running
+        // past the browser's real scroll limit, where it just stalls.
+        // A big jump between what we last set and what's actually there
+        // means a wrap happened; adopt it. Small drift is just normal
+        // sub-pixel rounding and should be ignored.
+        if (Math.abs(trackEl.scrollLeft - pos) > 2) pos = trackEl.scrollLeft;
         pos += speed * (dt / 1000);
         trackEl.scrollLeft = pos;
       } else if (active) {
