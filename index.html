@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Test</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -110,7 +110,7 @@
     flex-direction:column;
     align-items:center;
     margin-top:10px;
-    margin-bottom:40px;
+    margin-bottom:calc(40px + env(safe-area-inset-bottom));
     cursor:pointer;
     transition:opacity 1s ease;
   }
@@ -118,7 +118,7 @@
 
   .saint-card{
     flex:0 0 auto;
-    height:calc(100vh - 104px);
+    height:calc(100vh - 104px - env(safe-area-inset-bottom));
     aspect-ratio:1/2.4;
     overflow:hidden;
     background:#fdfdfc;
@@ -279,7 +279,7 @@
     text-transform:uppercase; color:var(--ink);
   }
 
-  .mobile-chapters{ padding:20px 18px 70px 18px; }
+  .mobile-chapters{ padding:20px 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
   .mobile-chapters .chapter.revealed .chapter-header{ top:202px; } /* page header (30) + sticky bar incl. name row (152) + comfortable gap (20) */
 
@@ -300,8 +300,8 @@
   .spear{
     flex:0 0 auto;
     width:54px;
-    height:calc(100vh - 100px);
-    margin-top:10px; margin-bottom:40px;
+    height:calc(100vh - 100px - env(safe-area-inset-bottom));
+    margin-top:10px; margin-bottom:calc(40px + env(safe-area-inset-bottom));
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -604,10 +604,11 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     // also listens to — which fires async and isn't guaranteed to land
     // before the caller's next update, risking the two racing each other.
     syncAndWrap() {
-      if (isEasing) return trackEl[scrollProp];
-      targetScroll = trackEl[scrollProp];
+      if (isEasing) return 0;
+      const before = trackEl[scrollProp];
+      targetScroll = before;
       checkLoop();
-      return trackEl[scrollProp];
+      return trackEl[scrollProp] - before; // 0 on ordinary frames; the exact jump size only when a loop-wrap correction actually fired
     }
   };
 }
@@ -649,8 +650,9 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
         if (!active) { active = true; pos = trackEl.scrollLeft; }
         pos += speed * (dt / 1000);
         trackEl.scrollLeft = pos;
-        // synchronous correction, right here, no waiting on an async event
-        pos = loopApi.syncAndWrap();
+        // synchronous correction, right here, no waiting on an async event —
+        // add the delta, don't replace pos with the (rounded) DOM readback
+        pos += loopApi.syncAndWrap();
       } else if (active) {
         active = false;
         pos = null;
