@@ -847,7 +847,10 @@ function renderHall() {
     item.innerHTML = `
       <div class="saint-card"><img src="${s.image}" alt="${s.name}"></div>
       <div class="saint-caption">${s.name}</div>`;
-    item.addEventListener('click', () => openHallModal(item, s));
+    item.addEventListener('click', () => {
+      if (item.classList.contains('selected')) { if (hallClose.onclick) hallClose.onclick(); return; }
+      openHallModal(item, s);
+    });
     hallTrack.appendChild(item);
   });
 
@@ -1082,6 +1085,7 @@ function computeHallTarget(origRect, mobile) {
 }
 
 function openHallModal(itemEl, data) {
+  if (itemEl.classList.contains('selected')) return; // already open — ignore repeat clicks
   hallDrift.pause();
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
@@ -1215,7 +1219,10 @@ function renderArmory() {
     el.innerHTML = `
       <div class="hilt"><div class="pommel"></div><div class="grip"></div><div class="guard"></div></div>
       <div class="shaft-text">${q.quote}</div>`;
-    el.addEventListener('click', () => openArmoryModal(el, q));
+    el.addEventListener('click', () => {
+      if (el.classList.contains('selected')) { if (armoryClose.onclick) armoryClose.onclick(); return; }
+      openArmoryModal(el, q);
+    });
     armoryTrack.appendChild(el);
   });
 
@@ -1250,6 +1257,7 @@ function armorySpearTarget(origRect) {
 }
 
 function openArmoryModal(spearEl, q) {
+  if (spearEl.classList.contains('selected')) return; // already open — its own click listener stays attached while open, ignore repeat clicks
   armoryDrift.pause();
   const rect = spearEl.getBoundingClientRect();
 
