@@ -325,8 +325,12 @@
     transition:top 1.5s cubic-bezier(.2,.8,.2,1), left 1.5s cubic-bezier(.2,.8,.2,1),
                transform 1.5s cubic-bezier(.2,.8,.2,1);
   }
+  .spear.selected.animate-pos.closing{
+    transition:top 1s cubic-bezier(.2,.8,.2,1), left 1s cubic-bezier(.2,.8,.2,1),
+               transform 1s cubic-bezier(.2,.8,.2,1);
+  }
   .spear.selected.animate-pos.settle{
-    transition:top .5s cubic-bezier(.25,.8,.4,1);
+    transition:top .417s cubic-bezier(.25,.8,.4,1);
   }
   .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
@@ -523,10 +527,12 @@ document.querySelectorAll('header nav a').forEach(a => {
 function attachInertialLoop(trackEl, bufferCount, getItemCount) {
   let targetScroll = 0;
   let isEasing = false;
+  let isDrifting = false;
   let raf = null;
   let lastInteraction = performance.now();
   let driftArmed = false;
   let driftSpeed = 0; // px/s
+  let driftPos = null; // float accumulator — trackEl.scrollLeft rounds to whole px, so we can't read it back for sub-pixel drift
 
   function itemStride() {
     const a = trackEl.children[bufferCount];
@@ -579,7 +585,7 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
   }, { passive: false });
 
   trackEl.addEventListener('scroll', () => {
-    if (isEasing) return;
+    if (isEasing || isDrifting) return;
     targetScroll = trackEl.scrollLeft;
     checkLoop();
   });
@@ -595,10 +601,20 @@ function attachInertialLoop(trackEl, bufferCount, getItemCount) {
       const targetSpeed = shouldDrift ? 2 : 0; // px/s, eased into
       driftSpeed += (targetSpeed - driftSpeed) * Math.min(1, dt / 1500);
       if (Math.abs(driftSpeed) > 0.01) {
-        trackEl.scrollLeft += driftSpeed * (dt / 1000);
-        targetScroll = trackEl.scrollLeft;
+        isDrifting = true;
+        if (driftPos === null) driftPos = trackEl.scrollLeft;
+        driftPos += driftSpeed * (dt / 1000);
+        trackEl.scrollLeft = driftPos;
+        targetScroll = driftPos;
         checkLoop();
+        driftPos = trackEl.scrollLeft; // resync in case checkLoop jumped it
+      } else {
+        isDrifting = false;
+        driftPos = null;
       }
+    } else {
+      isDrifting = false;
+      driftPos = null;
     }
     requestAnimationFrame(ambient);
   }
@@ -923,17 +939,20 @@ function openArmoryModal(spearEl, q) {
 }
 
 /* Close: an exact reverse of the open animation (rotate + scale + slide
-   back), overshooting to a spot 30px above the true resting place. The
-   fade-in of the rest of the rack overlaps the rotation instead of
-   waiting for it. Once that's underway, a short second animation slots
-   the spear the final 30px down into its exact original position. */
+   back), overshooting to a spot 30px above the true resting place — but
+   1.5x quicker than the open animation. The fade-in of the rest of the
+   rack overlaps the rotation instead of waiting for it. Once that's
+   underway, a second, 1.2x-quicker animation slots the spear the final
+   30px down into its exact original position. */
 function closeArmoryModal(spearEl, placeholder) {
   armoryAttribution.classList.remove('reveal');
   armoryClose.classList.remove('show');
 
   const rect = placeholder.getBoundingClientRect();
 
-  // Step 1 — reverse of the open animation, overshooting 30px high.
+  // Step 1 — reverse of the open animation (faster: 'closing' overrides
+  // the 1.5s open transition with a 1s one), overshooting 30px high.
+  spearEl.classList.add('closing');
   spearEl.style.top = (rect.top - 30) + 'px';
   spearEl.style.left = rect.left + 'px';
   spearEl.style.transform = 'rotate(0deg) scale(1)';
@@ -944,16 +963,21 @@ function closeArmoryModal(spearEl, placeholder) {
   });
 
   setTimeout(() => {
-    // Step 3 — the spear slots smoothly down the final 30px.
+    // Step 3 — the spear slots smoothly down the final 30px. Swap classes
+    // and force a reflow before changing `top`, so the browser picks up
+    // the new (shorter) transition instead of finishing out the old one
+    // partway through — that mismatch was the end-of-animation jerk.
+    spearEl.classList.remove('closing');
     spearEl.classList.add('settle');
+    void spearEl.offsetHeight; // force style flush
     spearEl.style.top = rect.top + 'px';
 
     setTimeout(() => {
       spearEl.classList.remove('selected', 'animate-pos', 'settle');
       spearEl.removeAttribute('style');
       placeholder.remove();
-    }, 550);
-  }, 2000);
+    }, 470);
+  }, 1500);
 }
 
 /* =====================================================================
