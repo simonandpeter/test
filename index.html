@@ -581,17 +581,29 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 
   return {
     measure,
-    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; }
+    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; },
+    // For external drivers (idle drift) that move scrollLeft themselves
+    // outside of this module's own wheel/tick logic. Runs the loop-wrap
+    // check synchronously, in the caller's own frame, rather than the
+    // caller having to wait for the native 'scroll' event this module
+    // also listens to — which fires async and isn't guaranteed to land
+    // before the caller's next update, risking the two racing each other.
+    syncAndWrap() {
+      if (isEasing) return trackEl[scrollProp];
+      targetScroll = trackEl[scrollProp];
+      checkLoop();
+      return trackEl[scrollProp];
+    }
   };
 }
 
-/* Idle auto-scroll, deliberately kept separate from attachLoopScroll above.
-   It only ever does one thing — nudge scrollLeft forward — and relies on
-   attachLoopScroll's own 'scroll' listener (already attached to the same
-   element) to pick up the change and handle the infinite-loop wrap, the
-   same way it already reacts to any other scroll. No shared flags between
-   the two, so there's nothing for this to get stuck fighting over. */
-function attachIdleDrift(trackEl, opts = {}) {
+/* Idle auto-scroll, deliberately kept separate from attachLoopScroll's own
+   wheel/tick logic. It only ever does one thing — nudge scrollLeft forward
+   — but calls back into the loop API's own syncAndWrap() synchronously
+   after each nudge, so the infinite-loop wrap is checked in the same
+   frame rather than via an async 'scroll' event racing against drift's
+   own next update. */
+function attachIdleDrift(trackEl, loopApi, opts = {}) {
   const idleMs = opts.idleMs ?? 5000;
   const speed = opts.speed ?? 22; // px/s, constant from the first frame — no ramp-in
 
@@ -620,18 +632,10 @@ function attachIdleDrift(trackEl, opts = {}) {
       const idleFor = now - lastInteraction;
       if (idleFor > idleMs) {
         if (!active) { active = true; pos = trackEl.scrollLeft; }
-        // The carousel's own infinite-loop listener (in attachLoopScroll)
-        // reacts to our scroll changes and wraps scrollLeft when we drift
-        // near the buffer edge. Our `pos` doesn't know that happened, so
-        // without this it would overwrite the wrap with its stale
-        // pre-jump value next frame — undoing it and eventually running
-        // past the browser's real scroll limit, where it just stalls.
-        // A big jump between what we last set and what's actually there
-        // means a wrap happened; adopt it. Small drift is just normal
-        // sub-pixel rounding and should be ignored.
-        if (Math.abs(trackEl.scrollLeft - pos) > 2) pos = trackEl.scrollLeft;
         pos += speed * (dt / 1000);
         trackEl.scrollLeft = pos;
+        // synchronous correction, right here, no waiting on an async event
+        pos = loopApi.syncAndWrap();
       } else if (active) {
         active = false;
         pos = null;
@@ -898,7 +902,7 @@ function renderHall() {
 }
 
 const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x' });
-const hallDrift = attachIdleDrift(hallTrack);
+const hallDrift = attachIdleDrift(hallTrack, hallInertia);
 
 const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7);
 const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3);
@@ -1281,7 +1285,7 @@ function renderArmory() {
 }
 
 const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => ARMORY_QUOTES.length, { axis: 'x' });
-const armoryDrift = attachIdleDrift(armoryTrack);
+const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia);
 
 function armoryScaleFor(rect) {
   const desired = 1.5;
