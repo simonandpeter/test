@@ -504,13 +504,18 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (!stride || !count) return;
     const headSpan = bufferCount * stride;
     const bodySpan = count * stride;
+    if (bodySpan <= 0) return;
+    const lowerBound = headSpan - stride * (bufferCount - 1);
+    const upperBound = headSpan + bodySpan;
     const pos = trackEl[scrollProp];
-    if (pos < headSpan - stride * (bufferCount - 1)) {
-      trackEl[scrollProp] += bodySpan;
-      targetScroll += bodySpan;
-    } else if (pos > headSpan + bodySpan) {
-      trackEl[scrollProp] -= bodySpan;
-      targetScroll -= bodySpan;
+    if (pos < lowerBound) {
+      const n = Math.ceil((lowerBound - pos) / bodySpan);
+      trackEl[scrollProp] += n * bodySpan;
+      targetScroll += n * bodySpan;
+    } else if (pos > upperBound) {
+      const n = Math.ceil((pos - upperBound) / bodySpan);
+      trackEl[scrollProp] -= n * bodySpan;
+      targetScroll -= n * bodySpan;
     }
   }
 
