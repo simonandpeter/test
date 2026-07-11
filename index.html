@@ -951,6 +951,9 @@ function createChapterController(container, getScrollRoot) {
     applyVisibility();
     watchNext();
     watchPrev();
+    const chapterEl = container.querySelector(`.chapter[data-i="${index}"]`);
+    const root = getScrollRoot();
+    if (chapterEl && root) root.scrollTop = chapterEl.offsetTop;
   }
 
   function close() {
