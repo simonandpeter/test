@@ -143,7 +143,7 @@
   .saint-item:hover .saint-caption{ color:var(--rubric); }
 
   .saint-item.selected{ position:fixed; z-index:40; margin:0; }
-  .saint-item.selected .saint-card{ box-shadow:none !important; }
+  .saint-item.selected .saint-card{ box-shadow:none !important; height:100%; width:100%; aspect-ratio:auto; }
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   /* ---------------- Hall Modal — desktop split panel ---------------- */
@@ -907,9 +907,11 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
+const MOBILE_STICKY_CLEARANCE = 30 + 126 + 10; // page header + sticky quotes bar + requested buffer
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
-  () => document.getElementById('hall-mobile-panel')
+  () => document.getElementById('hall-mobile-panel'),
+  MOBILE_STICKY_CLEARANCE
 );
 
 /* ---- chapter accordion (shared by desktop + mobile panels) ---- */
@@ -921,7 +923,7 @@ const hallChaptersMobile = createChapterController(
    needed for that part, it's just how stacked position:sticky works.
    Scrolling back up to the start of the first-revealed chapter reveals
    the one before it, mirroring the forward behaviour. */
-function createChapterController(container, getScrollRoot) {
+function createChapterController(container, getScrollRoot, stickyOffset = 0) {
   let firstOpen = null;
   let revealedUpTo = -1;
   let nextObserver = null;
@@ -1023,7 +1025,7 @@ function createChapterController(container, getScrollRoot) {
     watchPrev();
     const chapterEl = container.querySelector(`.chapter[data-i="${index}"]`);
     const root = getScrollRoot();
-    if (chapterEl && root) root.scrollTop = scrollOffsetWithin(chapterEl, root);
+    if (chapterEl && root) root.scrollTop = scrollOffsetWithin(chapterEl, root) - stickyOffset;
   }
 
   function close() {
@@ -1067,8 +1069,10 @@ function jumpToQuote(linkedQuote) {
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
     const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
+    const clearance = compact ? MOBILE_STICKY_CLEARANCE : 0;
     const anchorTop = anchor.getBoundingClientRect().top - scrollBox.getBoundingClientRect().top + scrollBox.scrollTop;
-    const targetTop = anchorTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
+    const visibleHeight = scrollBox.clientHeight - clearance;
+    const targetTop = anchorTop - clearance - (visibleHeight / 2) + (anchor.offsetHeight / 2);
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
       anchor.classList.add('hl');
