@@ -146,19 +146,6 @@
   .saint-item.selected .saint-card{ box-shadow:none !important; }
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
-  .modal-saint-name{
-    position:absolute;
-    left:0; right:0; bottom:-2.4em;
-    text-align:center;
-    font-size:clamp(13px, 2.4vh, 20px);
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--ink);
-    opacity:0;
-    transition:opacity 1s ease;
-  }
-  .modal-saint-name.reveal{ opacity:1; }
-
   /* ---------------- Hall Modal — desktop split panel ---------------- */
   #hall-modal-quotes, #hall-modal-text{
     position:fixed;
@@ -440,8 +427,22 @@ const GITHUB_BRANCH = 'main';
    width the panels start to crowd the centred card, so we switch to the
    compact single-column layout — independent of the header's own 700px
    breakpoint, since this is about panel geometry, not device type. */
-const MODAL_COMPACT_BREAKPOINT = 1000;
-function isModalCompact() { return window.innerWidth < MODAL_COMPACT_BREAKPOINT; }
+/* The desktop split-panel modal layout needs real room: the chapters
+   panel maxes out at 420px, centred in the right half, and must clear
+   the centred card. Rather than guess a fixed pixel breakpoint (which
+   was wrong — overlap actually starts much wider than expected once the
+   card's own width is accounted for), compute directly whether they'd
+   collide at the current window size. */
+function isModalCompact(origRect) {
+  const availH = window.innerHeight - HEADER_H;
+  const targetH = availH * 0.62;
+  const scale = targetH / origRect.height;
+  const targetW = origRect.width * scale;
+  const chaptersPanelHalf = 210; // half of the 420px chapters panel
+  const buffer = 60;
+  const neededWidth = 4 * chaptersPanelHalf + 2 * targetW + buffer;
+  return window.innerWidth < neededWidth;
+}
 
 /* =====================================================================
    NAV
@@ -822,7 +823,8 @@ function closeChapters(container) {
 
 let currentHighlightEl = null;
 function jumpToQuote(linkedQuote) {
-  const container = isModalCompact()
+  const compact = currentHallOpen ? isModalCompact(currentHallOpen.origRect) : true;
+  const container = compact
     ? document.getElementById('hall-chapters-mobile')
     : document.getElementById('hall-chapters-desktop');
   openChapterIndex(container, linkedQuote.chapterIndex);
@@ -832,7 +834,7 @@ function jumpToQuote(linkedQuote) {
     if (!anchor) return;
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
-    const scrollBox = isModalCompact() ? document.getElementById('hall-mobile-panel') : container;
+    const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
     const targetTop = anchor.offsetTop - 60;
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
@@ -878,7 +880,7 @@ function computeHallTarget(origRect, mobile) {
 
 function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
-  const compact = isModalCompact();
+  const compact = isModalCompact(rect);
   modalCompactMode = compact;
   document.body.classList.toggle('modal-compact', compact);
 
@@ -898,20 +900,15 @@ function openHallModal(itemEl, data) {
   itemEl.style.height = rect.height + 'px';
   itemEl.classList.add('selected');
 
-  const nameLabel = document.createElement('div');
-  nameLabel.className = 'modal-saint-name';
-  nameLabel.textContent = data.name;
-  itemEl.appendChild(nameLabel);
-
   const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(rect, compact);
-  currentHallOpen = { itemEl, origRect: rect };
+  currentHallOpen = { itemEl, origRect: rect, placeholder };
 
   tween(1500, (t) => {
     itemEl.style.top = lerp(rect.top, targetTop, t) + 'px';
     itemEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
     itemEl.style.width = lerp(rect.width, targetW, t) + 'px';
     itemEl.style.height = lerp(rect.height, targetH, t) + 'px';
-  }, () => { nameLabel.classList.add('reveal'); });
+  });
 
   // build chapter HTML once (with quote anchors embedded) and populate both panels
   const chaptersHtml = data.chapters.map((ch, ci) => ({
@@ -941,17 +938,16 @@ function openHallModal(itemEl, data) {
     hallClose.classList.add('show');
   }, 1500);
 
-  hallClose.onclick = () => closeHallModal(itemEl, placeholder, nameLabel);
+  hallClose.onclick = () => closeHallModal(itemEl, placeholder);
 }
 
-function closeHallModal(itemEl, placeholder, nameLabel) {
+function closeHallModal(itemEl, placeholder) {
   currentHallOpen = null;
   modalCompactMode = null;
   hallModalQuotes.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
-  nameLabel.classList.remove('reveal');
   if (hallMobileScrollHandler) hallMobilePanel.removeEventListener('scroll', hallMobileScrollHandler);
   closeChapters(document.getElementById('hall-chapters-desktop'));
   closeChapters(document.getElementById('hall-chapters-mobile'));
@@ -968,7 +964,6 @@ function closeHallModal(itemEl, placeholder, nameLabel) {
   }, () => {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
-    nameLabel.remove();
     placeholder.remove();
     document.body.classList.remove('modal-compact');
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
@@ -1148,33 +1143,50 @@ function closeArmoryModal(spearEl, placeholder) {
   armoryClose.classList.remove('show');
 
   // Read where the spear ACTUALLY is right now, directly, rather than
-  // recomputing it via the same centering formula used at open time —
-  // recomputing assumed cx/cy/rect would always exactly reproduce the
-  // real value, and apparently didn't quite, which is what caused the
-  // final mismatch/teleport.
+  // recomputing it via a formula that has to exactly reproduce reality.
   const fromTop = parseFloat(spearEl.style.top) || 0;
   const fromLeft = parseFloat(spearEl.style.left) || 0;
   const scaleMatch = /scale\(([\d.]+)\)/.exec(spearEl.style.transform || '');
   const fromScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
 
-  const rect = measureTrueRestingRect(spearEl, placeholder);
-  const overshootTop = rect.top - 30;
+  // Rough resting rect, good enough for picking the overshoot point —
+  // the exact final landing spot is handled separately below, with zero
+  // prediction involved.
+  const roughRect = measureTrueRestingRect(spearEl, placeholder);
+  const overshootTop = roughRect.top - 30;
 
   armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.remove('dim'); });
 
   tween(1000, (t) => {
     spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
-    spearEl.style.left = lerp(fromLeft, rect.left, t) + 'px';
+    spearEl.style.left = lerp(fromLeft, roughRect.left, t) + 'px';
     const r = lerp(-90, 0, t);
     const s = lerp(fromScale, 1, t);
     spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
   }, () => {
+    // FLIP: snapshot the overshoot spot, THEN actually put the spear in
+    // its real flow position (ground truth — not a prediction), measure
+    // where that truly landed, invert back to the overshoot spot with a
+    // transform, then animate that transform away to zero. Since the
+    // "final" position is measured after really being there, it cannot
+    // be wrong.
+    const overshootTopNow = parseFloat(spearEl.style.top) || 0;
+    const overshootLeftNow = parseFloat(spearEl.style.left) || 0;
+
+    spearEl.classList.remove('selected');
+    spearEl.removeAttribute('style');
+    placeholder.remove();
+    const finalRect = spearEl.getBoundingClientRect();
+
+    const dTop = overshootTopNow - finalRect.top;
+    const dLeft = overshootLeftNow - finalRect.left;
+    spearEl.style.transform = `translate(${dLeft}px, ${dTop}px)`;
+    void spearEl.offsetHeight; // force reflow so this inverted state is registered before animating away from it
+
     tween(417, (t2) => {
-      spearEl.style.top = lerp(overshootTop, rect.top, t2) + 'px';
+      spearEl.style.transform = `translate(${lerp(dLeft, 0, t2)}px, ${lerp(dTop, 0, t2)}px)`;
     }, () => {
-      spearEl.classList.remove('selected');
-      spearEl.removeAttribute('style');
-      placeholder.remove();
+      spearEl.style.transform = '';
     });
   });
 }
@@ -1208,8 +1220,21 @@ fetch('assets/text/quotes.txt')
    reposition the card while invisible, fade the new panel set in. */
 function refreshHallModalLayout() {
   if (!currentHallOpen) return;
-  const compact = isModalCompact();
+
+  // Sibling cards resize live (their height is vh-based via aspect-ratio),
+  // but the placeholder reserving this card's slot in the row was frozen
+  // at open time — if it drifts out of sync with its resizing neighbours,
+  // a gap or overlap appears once the card returns to the row on close.
+  const sibling = hallTrack.querySelector('.saint-item.dim');
+  if (sibling && currentHallOpen.placeholder) {
+    const sibRect = sibling.getBoundingClientRect();
+    currentHallOpen.placeholder.style.width = sibRect.width + 'px';
+    currentHallOpen.placeholder.style.height = sibRect.height + 'px';
+    currentHallOpen.origRect = sibRect;
+  }
+
   const { itemEl, origRect } = currentHallOpen;
+  const compact = isModalCompact(origRect);
 
   if (compact === modalCompactMode) {
     const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, compact);
