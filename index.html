@@ -264,7 +264,7 @@
     min-height:90px; /* matches .quotes-viewport.small exactly, and the docked image's height */
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
-  .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
+  .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:12px 0 0 0; width:auto; }
   .mobile-arrow{
     position:absolute; right:8px; top:50%; transform:translateY(-50%);
     width:26px; height:26px; border:1px solid var(--line-grey);
@@ -283,7 +283,8 @@
   .mobile-chapters{ padding:20px 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
 
-  body.modal-compact .saint-item.selected .saint-caption{ display:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
+  body.modal-compact .saint-item .saint-caption{ transition:opacity .3s ease; }
+  body.modal-compact .saint-item.selected .saint-caption{ opacity:0; pointer-events:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
 
   /* ---------------- Armory ---------------- */
   #armory-track{
@@ -596,18 +597,26 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: false });
 
+  let touchActive = false;
+
   trackEl.addEventListener('scroll', () => {
     if (isEasing) return;
     targetScroll = trackEl[scrollProp];
+    if (touchActive) return; // don't write to scrollLeft mid-gesture — see touchstart/touchend below
     checkLoop();
   });
 
   // Native touch/momentum scrolling on mobile can keep driving scrollLeft
-  // for a while after the finger lifts, and a correction written mid-
-  // momentum doesn't always reliably stick against the browser's own
-  // physics. Re-check once momentum has had time to settle.
+  // for a while after the finger lifts, and correcting it (writing to
+  // scrollLeft) while a gesture or its momentum is still active doesn't
+  // just fail to stick — it can desync the browser's own touch-scroll
+  // tracking for the element, so it stops responding to further touches
+  // altogether. Suppress corrections for the whole gesture, plus a
+  // generous settle window afterwards, then correct once it's safe.
+  trackEl.addEventListener('touchstart', () => { touchActive = true; }, { passive: true });
   trackEl.addEventListener('touchend', () => {
-    [200, 600].forEach(delay => {
+    setTimeout(() => { touchActive = false; }, 700);
+    [750, 1200].forEach(delay => {
       setTimeout(() => {
         if (isEasing) return;
         targetScroll = trackEl[scrollProp];
