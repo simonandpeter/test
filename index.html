@@ -241,7 +241,7 @@
   body.modal-compact #hall-mobile-panel{
     display:block;
     position:fixed; inset:0;
-    padding-top:30px; /* clears the real page header — matches the sticky bar's own top offset below, so it never jumps between "unstuck" and "stuck" */
+    padding-top:30px; /* clears the real page header — combined with the bar's own top:0 below, this keeps its natural and stuck positions identical, so there's no mismatch between the space it reserves in flow and where it actually paints */
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     opacity:0; pointer-events:none;
@@ -252,7 +252,7 @@
   body.modal-compact #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
 
   .mobile-hero-bar{
-    position:sticky; top:30px; z-index:2; /* top:30px, not 0 — sticking at the viewport edge would tuck it behind the real page header */
+    position:sticky; top:0; z-index:2; /* the panel's padding-top provides the clearance from the page header — an extra top offset here would double it and also create a natural/stuck position mismatch */
     background:#fff;
     border-bottom:1px solid var(--line-grey-soft);
   }
@@ -281,7 +281,6 @@
 
   .mobile-chapters{ padding:20px 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
-  .mobile-chapters .chapter.revealed .chapter-header{ top:202px; } /* page header (30) + sticky bar incl. name row (152) + comfortable gap (20) */
 
   body.modal-compact .saint-item.selected .saint-caption{ display:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
 
@@ -455,6 +454,7 @@ function isModalCompact(origRect) {
 /* =====================================================================
    NAV
 ===================================================================== */
+let armoryEverVisible = false;
 document.querySelectorAll('header nav a').forEach(a => {
   a.addEventListener('click', () => {
     document.querySelectorAll('header nav a').forEach(x => x.classList.remove('active'));
@@ -462,6 +462,27 @@ document.querySelectorAll('header nav a').forEach(a => {
     const target = a.dataset.view;
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById(`${target}-view`).classList.add('active');
+    // Elements inside a display:none view are never laid out by the
+    // browser, so any offsetLeft-based measurement taken while hidden
+    // reads as 0 and stays wrong forever, even long after the tab
+    // becomes visible. Re-measure once it's actually on screen.
+    requestAnimationFrame(() => {
+      if (target === 'armory') {
+        armoryInertia.measure();
+        if (!armoryEverVisible) {
+          // Armory starts hidden (Hall is the default tab), so its very
+          // first resetTo() — inside renderArmory() — also ran while
+          // hidden and landed on a wrong position. Correct it just this
+          // once; don't repeat this on later visits or it'd yank the
+          // user's own scroll position back to the start every time.
+          armoryEverVisible = true;
+          const first = armoryTrack.children[ARMORY_BUFFER];
+          if (first) armoryInertia.resetTo(first.offsetLeft);
+        }
+      } else {
+        hallInertia.measure();
+      }
+    });
   });
 });
 
