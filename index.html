@@ -143,7 +143,8 @@
   .saint-item:hover .saint-caption{ color:var(--rubric); }
 
   .saint-item.selected{ position:fixed; z-index:40; margin:0; }
-  .saint-item.selected .saint-card{ box-shadow:none !important; height:100%; width:100%; aspect-ratio:auto; }
+  .saint-item.selected .saint-card{ box-shadow:none !important; }
+  body.modal-compact .saint-item.selected .saint-card{ height:100%; width:100%; aspect-ratio:auto; } /* mobile only — the caption is hidden there so the card can fill the whole wrapper; on desktop the caption stays visible and needs its own space within the same wrapper */
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   /* ---------------- Hall Modal — desktop split panel ---------------- */
@@ -168,7 +169,7 @@
     -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
     mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
   }
-  .quotes-viewport.small{ height:110px; }
+  .quotes-viewport.small{ height:90px; }
   .quotes-track{
     display:flex;
     flex-direction:column;
@@ -260,7 +261,7 @@
     position:relative;
     display:flex; align-items:flex-start; /* top-align, not center — matches the docked image's own top edge exactly, no extra space to redistribute */
     padding:8px 92px 0 12px; /* right space reserves room for the docked image + arrow; no bottom padding — the name row follows directly below */
-    min-height:110px; /* matches .quotes-viewport.small exactly, and the docked image's height */
+    min-height:90px; /* matches .quotes-viewport.small exactly, and the docked image's height */
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:0; width:auto; }
@@ -274,7 +275,7 @@
   .mobile-arrow:hover{ border-color:var(--rubric); }
 
   .mobile-saint-name{
-    padding:6px 12px 10px 12px;
+    padding:4px 12px 8px 12px;
     text-align:center; font-size:14px; letter-spacing:0.1em;
     text-transform:uppercase; color:var(--ink);
   }
@@ -950,7 +951,7 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
-const MOBILE_STICKY_CLEARANCE = 30 + 152 + 20; // page header + sticky bar incl. name row + comfortable gap
+const MOBILE_STICKY_CLEARANCE = 30 + 128 + 20; // page header + sticky bar incl. name row + comfortable gap
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
   () => document.getElementById('hall-mobile-panel'),
@@ -1028,6 +1029,22 @@ function createChapterController(container, getScrollRoot, stickyOffset = 0) {
     return el.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop;
   }
 
+  function revealPrevious() {
+    if (firstOpen === null || firstOpen <= 0) return;
+    const root = getScrollRoot();
+    const beforeHeight = root.scrollHeight;
+    const beforeScroll = root.scrollTop;
+    firstOpen = Math.max(0, firstOpen - 1);
+    applyVisibility();
+    // revealing the previous chapter inserts its height above the current
+    // view — compensate scrollTop by the same amount so the content on
+    // screen doesn't jump, and the reveal feels like a continuous scroll
+    // rather than a snap to the new chapter's top
+    const grew = root.scrollHeight - beforeHeight;
+    root.scrollTop = beforeScroll + grew;
+    watchPrev();
+  }
+
   function watchPrev() {
     disconnectPrev();
     if (firstOpen === null || firstOpen <= 0) return;
@@ -1037,32 +1054,38 @@ function createChapterController(container, getScrollRoot, stickyOffset = 0) {
     const setupTime = performance.now();
     prevObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // Same reasoning as watchNext — and this one matters even more,
-        // since openFrom() scrolls the start-sentinel right into view, so
-        // it's always already-intersecting the instant this observer is
-        // created. Unconditionally skipping that first report (the old
-        // approach) meant the observer needed the sentinel to leave and
-        // re-enter view before it could fire again — which is why you
-        // had to scroll down and back up before scrolling up actually
-        // worked. A short time-based grace window fixes both bugs at once.
+        // This handles the "continuous reading, scrolled down then back up"
+        // case. It can't handle "chapter 2 opened directly, try to scroll
+        // up immediately" — IntersectionObserver's root has no concept of
+        // the sticky bar visually covering part of the viewport, so the
+        // sentinel reads as "intersecting" the instant it's anywhere
+        // within the scrollable area, sticky overlay or not. That case is
+        // handled separately below, by reacting to the raw input directly.
         if (performance.now() - setupTime < 50) return;
-        if (entry.isIntersecting) {
-          const root = getScrollRoot();
-          const beforeHeight = root.scrollHeight;
-          const beforeScroll = root.scrollTop;
-          firstOpen = Math.max(0, firstOpen - 1);
-          applyVisibility();
-          // revealing the previous chapter inserts its height above the
-          // current view — compensate scrollTop by the same amount so the
-          // content on screen doesn't jump, and the reveal feels like a
-          // continuous scroll rather than a snap to the new chapter's top
-          const grew = root.scrollHeight - beforeHeight;
-          root.scrollTop = beforeScroll + grew;
-          watchPrev();
-        }
+        if (entry.isIntersecting) revealPrevious();
       });
     }, { root: getScrollRoot(), threshold: 0.01 });
     prevObserver.observe(sentinel);
+  }
+
+  // Direct fallback for "opened a later chapter, try to scroll up with no
+  // real scroll room yet" — reacts to the raw gesture instead of relying
+  // on a visibility transition that can't exist in this situation.
+  const scrollRootEl = getScrollRoot();
+  if (scrollRootEl) {
+    scrollRootEl.addEventListener('wheel', (e) => {
+      if (e.deltaY < 0 && scrollRootEl.scrollTop <= 5) revealPrevious();
+    }, { passive: true });
+    let touchStartY = null;
+    scrollRootEl.addEventListener('touchstart', (e) => { touchStartY = e.touches[0].clientY; }, { passive: true });
+    scrollRootEl.addEventListener('touchmove', (e) => {
+      if (touchStartY === null) return;
+      const dy = e.touches[0].clientY - touchStartY;
+      if (dy > 5 && scrollRootEl.scrollTop <= 5) {
+        revealPrevious();
+        touchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
   }
 
   function openFrom(index) {
@@ -1142,7 +1165,7 @@ mobileArrow.addEventListener('click', () => {
 const HEADER_H = 30;
 
 function mobileDockTarget(origRect) {
-  const dockH = 110; // matches .quotes-viewport.small's height exactly, so the two align as one clean row
+  const dockH = 90; // matches .quotes-viewport.small's height exactly, so the two align as one clean row
   const scale = dockH / origRect.height;
   const dockW = origRect.width * scale;
   return { top: HEADER_H + 8, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
@@ -1164,12 +1187,13 @@ function computeHallTarget(origRect, mobile) {
     const d = mobileDockTarget(origRect);
     return { targetH: d.height, targetW: d.width, targetTop: d.top, targetLeft: d.left, scale: d.height / origRect.height };
   }
-  const targetH = (window.innerHeight - HEADER_H) * 0.62;
-  const scale = targetH / origRect.height;
-  const targetW = origRect.width * scale;
-  const targetTop = origRect.top; // stay exactly where it was in the deck — only move horizontally
+  // Desktop: no resizing at all, exactly matching the deck card's size —
+  // only move it horizontally to the centre.
+  const targetH = origRect.height;
+  const targetW = origRect.width;
+  const targetTop = origRect.top;
   const targetLeft = (window.innerWidth - targetW) / 2;
-  return { targetH, targetW, targetTop, targetLeft, scale };
+  return { targetH, targetW, targetTop, targetLeft, scale: 1 };
 }
 
 let hallBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
