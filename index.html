@@ -31,6 +31,7 @@
     position:relative;
     z-index:50;
     height:30px;
+    background:#fff;
     display:flex;
     align-items:center;
     border-bottom:1px solid var(--line-grey-soft);
@@ -283,22 +284,13 @@
   .mobile-hero-row{
     position:relative;
     display:flex; align-items:flex-start; /* top-align, not center — matches the docked image's own top edge exactly, no extra space to redistribute */
-    padding:26px 92px 0 12px; /* right space reserves room for the docked image + arrow; no bottom padding — the name row follows directly below */
+    padding:26px 92px 0 12px; /* right space reserves room for the docked image */
     min-height:clamp(90px, 15vh, 160px); /* matches .quotes-viewport.small exactly, and the docked image's height */
   }
-  .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:4px 0 0 0; width:auto; }
-  .mobile-arrow{
-    position:absolute; right:8px; top:50%; transform:translateY(-50%);
-    width:26px; height:26px; border:1px solid var(--line-grey);
-    background:#fff; display:flex; align-items:center; justify-content:center;
-    cursor:pointer; transition:transform .3s ease, border-color .3s ease;
-  }
-  .mobile-hero-bar.minimized .mobile-arrow{ transform:translateY(-50%) rotate(180deg); }
-  .mobile-arrow:hover{ border-color:var(--rubric); }
 
   .mobile-saint-name{
-    padding:4px 12px 8px 12px;
+    padding:11px 12px 8px 12px;
     text-align:center; font-size:14px; letter-spacing:0.1em;
     text-transform:uppercase; color:var(--ink);
   }
@@ -413,9 +405,6 @@
       <div class="mobile-hero-bar" id="mobile-hero-bar">
         <div class="mobile-hero-row">
           <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
-          <div class="mobile-arrow" id="mobile-hero-arrow">
-            <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3 L5 7 L9 3" stroke="var(--ink)" stroke-width="1.3" fill="none"/></svg>
-          </div>
         </div>
         <div class="mobile-saint-name" id="mobile-saint-name"></div>
       </div>
@@ -1231,12 +1220,6 @@ function jumpToQuote(linkedQuote) {
 /* ---- mobile hero dock (the actual image shrinks and docks top-right,
    not a separate faked-up thumbnail) ---- */
 const mobileHeroBar = document.getElementById('mobile-hero-bar');
-const mobileArrow = document.getElementById('mobile-hero-arrow');
-let mobileMinimized = false;
-mobileArrow.addEventListener('click', () => {
-  mobileMinimized = !mobileMinimized;
-  mobileHeroBar.classList.toggle('minimized', mobileMinimized);
-});
 
 const HEADER_H = 30;
 
@@ -1321,8 +1304,6 @@ function openHallModal(itemEl, data) {
   hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
   hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
 
-  mobileHeroBar.classList.remove('minimized');
-  mobileMinimized = false;
   document.getElementById('mobile-saint-name').textContent = data.name;
   syncMobileChapterStickyTop();
   requestAnimationFrame(syncMobileChapterStickyTop); // re-check once the name's actual layout (e.g. if it wraps) has settled
@@ -1694,7 +1675,20 @@ function refreshHallModalLayout() {
   }, 500);
 }
 
+let lastResizeWidth = window.innerWidth;
+let lastResizeHeight = window.innerHeight;
 window.addEventListener('resize', () => {
+  const w = window.innerWidth, h = window.innerHeight;
+  // Mobile browsers fire 'resize' when the address bar hides/shows during
+  // ordinary scrolling — that's a real innerHeight change but not a real
+  // resize the layout should react to. A genuine resize either changes
+  // the width, or changes the height by much more than address-bar chrome
+  // ever does (a rotation, or an actual desktop window resize).
+  const significant = w !== lastResizeWidth || Math.abs(h - lastResizeHeight) > 150;
+  lastResizeWidth = w;
+  lastResizeHeight = h;
+  if (!significant) return;
+
   hallInertia.measure();
   armoryInertia.measure();
   syncMobileChapterStickyTop();
