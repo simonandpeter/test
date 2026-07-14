@@ -727,6 +727,23 @@ function cyclicSlice(list, start, count) {
   return out;
 }
 
+// With very few unique items, the infinite-loop's body span is so small
+// relative to normal scroll speed that it wraps almost continuously —
+// which looks and feels like it's stuck bouncing in place rather than
+// scrolling smoothly, even though the position math is correct. Virtually
+// repeating the real items (looping over them with modulo) up to a
+// minimum count fixes this without duplicating any real data or state.
+const MIN_LOOP_COUNT = 10;
+function loopSafeList(list) {
+  const n = list.length;
+  if (n === 0) return [];
+  if (n >= MIN_LOOP_COUNT) return list;
+  const reps = Math.ceil(MIN_LOOP_COUNT / n);
+  const out = [];
+  for (let r = 0; r < reps; r++) out.push(...list);
+  return out;
+}
+
 /* items: [{text, ...}]; onItemClick receives the item */
 /* Attaches the scroll loop exactly ONCE per container. Re-rendering the
    same carousel repeatedly (e.g. opening a new saint's modal) must reuse
@@ -890,36 +907,37 @@ async function loadSaints() {
       return { saints: fallbackSaints(), source: 'empty' };
     }
 
-    const saints = [];
     const skipped = [];
-    for (const folder of Object.keys(folders).sort()) {
+    const folderNames = Object.keys(folders).sort();
+    const results = await Promise.all(folderNames.map(async (folder) => {
       const files = folders[folder];
-      const image = files.find(f => /\.(jpe?g|png|webp)$/i.test(f));
+      const image = files.find(f => /\.(jpe?g|png|webp|gif|avif|heic|heif|bmp|svg)$/i.test(f));
       const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
       const chapterFiles = files.filter(f => /\.txt$/i.test(f) && f.toLowerCase() !== 'quotes.txt').sort(naturalCompare);
-      if (!image) { skipped.push(folder); continue; }
+      if (!image) { skipped.push(folder); return null; }
 
       const base = `assets/saints/${encodeURIComponent(folder)}/`;
-      const quotesRaw = quotesFile ? await fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : '';
+      const [quotesRaw, chapters] = await Promise.all([
+        quotesFile ? fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : Promise.resolve(''),
+        Promise.all(chapterFiles.map(async (cf) => {
+          const body = await fetchText(base + encodeURIComponent(cf)).catch((e) => { console.warn(`Could not fetch ${base}${cf}:`, e); return ''; });
+          return { title: cf.replace(/\.txt$/i, ''), body: body.trim() };
+        }))
+      ]);
       const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
 
-      const chapters = [];
-      for (const cf of chapterFiles) {
-        const body = await fetchText(base + encodeURIComponent(cf)).catch((e) => { console.warn(`Could not fetch ${base}${cf}:`, e); return ''; });
-        chapters.push({ title: cf.replace(/\.txt$/i, ''), body: body.trim() });
-      }
-
-      saints.push({
+      return {
         id: folder,
         name: folder,
         image: base + encodeURIComponent(image),
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
-      });
-    }
+      };
+    }));
+    const saints = results.filter(Boolean);
     if (skipped.length) console.warn('Skipped folders with no image file:', skipped);
     if (!saints.length) return { saints: fallbackSaints(), source: 'empty' };
-    return { saints, source: 'live' };
+    return { saints, source: 'live', skipped };
   } catch (err) {
     console.warn('Falling back to the built-in demo saints — GitHub fetch failed:', err);
     return { saints: fallbackSaints(), source: 'error' };
@@ -944,16 +962,17 @@ function renderHall() {
   }
   hallStatus.style.display = 'none';
 
-  const head = cyclicSlice(SAINTS, SAINTS.length - LOOP_BUFFER, LOOP_BUFFER);
-  const tail = cyclicSlice(SAINTS, 0, LOOP_BUFFER);
-  const full = [...head, ...SAINTS, ...tail];
+  const loopSaints = loopSafeList(SAINTS);
+  const head = cyclicSlice(loopSaints, loopSaints.length - LOOP_BUFFER, LOOP_BUFFER);
+  const tail = cyclicSlice(loopSaints, 0, LOOP_BUFFER);
+  const full = [...head, ...loopSaints, ...tail];
 
   full.forEach((s) => {
     const item = document.createElement('div');
     item.className = 'saint-item';
     item.dataset.id = s.id;
     item.innerHTML = `
-      <div class="saint-card"><img src="${s.image}" alt="${s.name}"></div>
+      <div class="saint-card"><img src="${s.image}" alt="${s.name}" onerror="this.style.display='none'"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
@@ -970,7 +989,7 @@ function renderHall() {
   });
 }
 
-const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => SAINTS.length, { axis: 'x' });
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(SAINTS).length, { axis: 'x' });
 const hallDrift = attachIdleDrift(hallTrack, hallInertia);
 
 const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7);
@@ -1365,9 +1384,10 @@ let ARMORY_QUOTES = [];
 
 function renderArmory() {
   armoryTrack.innerHTML = '';
-  const head = cyclicSlice(ARMORY_QUOTES, ARMORY_QUOTES.length - ARMORY_BUFFER, ARMORY_BUFFER);
-  const tail = cyclicSlice(ARMORY_QUOTES, 0, ARMORY_BUFFER);
-  const full = [...head, ...ARMORY_QUOTES, ...tail];
+  const loopQuotes = loopSafeList(ARMORY_QUOTES);
+  const head = cyclicSlice(loopQuotes, loopQuotes.length - ARMORY_BUFFER, ARMORY_BUFFER);
+  const tail = cyclicSlice(loopQuotes, 0, ARMORY_BUFFER);
+  const full = [...head, ...loopQuotes, ...tail];
 
   full.forEach((q) => {
     const el = document.createElement('div');
@@ -1390,7 +1410,7 @@ function renderArmory() {
   });
 }
 
-const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => ARMORY_QUOTES.length, { axis: 'x' });
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => loopSafeList(ARMORY_QUOTES).length, { axis: 'x' });
 const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia);
 
 function armoryScaleFor(rect) {
@@ -1567,7 +1587,7 @@ function closeArmoryModal(spearEl, placeholder) {
 /* =====================================================================
    INIT
 ===================================================================== */
-loadSaints().then(({ saints, source }) => {
+loadSaints().then(({ saints, source, skipped }) => {
   SAINTS = saints;
   renderHall();
   const badge = document.getElementById('data-source-badge');
@@ -1577,7 +1597,9 @@ loadSaints().then(({ saints, source }) => {
     empty: 'Demo data — no folders found under assets/saints/, see console',
     live: `Loaded ${saints.length} saint(s) from GitHub`
   };
-  badge.textContent = messages[source] || '';
+  let text = messages[source] || '';
+  if (skipped && skipped.length) text += ` — skipped (no recognised image file): ${skipped.join(', ')}`;
+  badge.textContent = text;
   badge.style.display = 'block';
 });
 
