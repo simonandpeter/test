@@ -111,16 +111,15 @@
     align-items:center;
     margin-top:10px;
     margin-bottom:calc(40px + env(safe-area-inset-bottom));
-    height:calc(100vh - 80px - env(safe-area-inset-bottom));
-    height:calc(100dvh - 80px - env(safe-area-inset-bottom)); /* 80 = page header (30) + margin-top (10) + margin-bottom base (40) */
     cursor:pointer;
     transition:opacity 1s ease;
   }
   .saint-item.dim{ opacity:0; pointer-events:none; }
 
   .saint-card{
-    flex:1 1 auto; /* fills whatever height the caption doesn't need — correct regardless of how many lines the name wraps to */
-    min-height:0; /* allow the flex item to shrink below its aspect-ratio-driven content size if the caption needs the room */
+    flex:0 0 auto;
+    height:calc(100vh - 104px);
+    height:calc(100dvh - 104px);
     aspect-ratio:1/2.4;
     overflow:hidden;
     background:#fdfdfc;
@@ -133,10 +132,7 @@
   }
 
   .saint-caption{
-    flex:0 0 auto; /* always takes its own natural height, however many lines that is — the card above shrinks to make room */
     margin-top:10px;
-    max-width:220px;
-    display:flex; align-items:center; justify-content:center;
     font-size:11px;
     line-height:14px;
     letter-spacing:0.08em;
@@ -146,6 +142,24 @@
     transition:color .3s ease;
   }
   .saint-item:hover .saint-caption{ color:var(--rubric); }
+
+  /* Mobile only: real names can wrap to 2 lines, and the deck sits close
+     to the home-indicator safe area — give the caption guaranteed room
+     for 2 lines and shrink the card by the same amount, so nothing can
+     ever overflow into the safe-area buffer below. Desktop has neither
+     constraint, so it keeps the plain single-line budget above. */
+  @media (max-width: 768px){
+    .saint-card{
+      height:calc(100vh - 118px - env(safe-area-inset-bottom));
+      height:calc(100dvh - 118px - env(safe-area-inset-bottom));
+    }
+    .saint-caption{
+      min-height:28px;
+      max-width:220px;
+      margin-left:auto; margin-right:auto;
+      display:flex; align-items:center; justify-content:center;
+    }
+  }
 
   .saint-item.selected{ position:fixed; z-index:40; margin:0; }
   .saint-item.selected .saint-card{ box-shadow:none !important; }
@@ -174,7 +188,7 @@
     -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
     mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
   }
-  .quotes-viewport.small{ height:90px; }
+  .quotes-viewport.small{ height:clamp(90px, 15vh, 160px); }
   .quotes-track{
     display:flex;
     flex-direction:column;
@@ -266,7 +280,7 @@
     position:relative;
     display:flex; align-items:flex-start; /* top-align, not center — matches the docked image's own top edge exactly, no extra space to redistribute */
     padding:26px 92px 0 12px; /* right space reserves room for the docked image + arrow; no bottom padding — the name row follows directly below */
-    min-height:90px; /* matches .quotes-viewport.small exactly, and the docked image's height */
+    min-height:clamp(90px, 15vh, 160px); /* matches .quotes-viewport.small exactly, and the docked image's height */
   }
   .mobile-hero-bar.minimized .quotes-viewport.small{ display:none; }
   .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:4px 0 0 0; width:auto; }
@@ -966,11 +980,19 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
-const MOBILE_STICKY_CLEARANCE = 30 + 149 + 20; // page header + sticky bar incl. name row + comfortable gap
+function getMobileStickyClearance() {
+  // page header + the sticky bar's actual current height (now responsive
+  // to viewport height, not a fixed value) + a comfortable gap. Measuring
+  // this directly means it can never drift out of sync with the bar's
+  // real layout, unlike a hardcoded constant that has to be manually
+  // recomputed by hand every time the bar's own height changes.
+  const bar = document.getElementById('mobile-hero-bar');
+  return 30 + (bar ? bar.offsetHeight : 149) + 20;
+}
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
   () => document.getElementById('hall-mobile-panel'),
-  MOBILE_STICKY_CLEARANCE
+  getMobileStickyClearance
 );
 
 /* ---- chapter accordion (shared by desktop + mobile panels) ---- */
@@ -982,7 +1004,7 @@ const hallChaptersMobile = createChapterController(
    needed for that part, it's just how stacked position:sticky works.
    Scrolling back up to the start of the first-revealed chapter reveals
    the one before it, mirroring the forward behaviour. */
-function createChapterController(container, getScrollRoot, stickyOffset = 0) {
+function createChapterController(container, getScrollRoot, getStickyOffset = () => 0) {
   let firstOpen = null;
   let revealedUpTo = -1;
   let nextObserver = null;
@@ -1111,7 +1133,7 @@ function createChapterController(container, getScrollRoot, stickyOffset = 0) {
     watchPrev();
     const chapterEl = container.querySelector(`.chapter[data-i="${index}"]`);
     const root = getScrollRoot();
-    if (chapterEl && root) root.scrollTop = scrollOffsetWithin(chapterEl, root) - stickyOffset;
+    if (chapterEl && root) root.scrollTop = scrollOffsetWithin(chapterEl, root) - getStickyOffset();
   }
 
   function close() {
@@ -1155,7 +1177,7 @@ function jumpToQuote(linkedQuote) {
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
     const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
-    const clearance = compact ? MOBILE_STICKY_CLEARANCE : 0;
+    const clearance = compact ? getMobileStickyClearance() : 0;
     const anchorTop = anchor.getBoundingClientRect().top - scrollBox.getBoundingClientRect().top + scrollBox.scrollTop;
     const visibleHeight = scrollBox.clientHeight - clearance;
     const targetTop = anchorTop - clearance - (visibleHeight / 2) + (anchor.offsetHeight / 2);
@@ -1180,7 +1202,7 @@ mobileArrow.addEventListener('click', () => {
 const HEADER_H = 30;
 
 function mobileDockTarget(origRect) {
-  const dockH = 90; // matches .quotes-viewport.small's height exactly, so the two align as one clean row
+  const dockH = Math.max(90, Math.min(160, window.innerHeight * 0.15)); // matches .quotes-viewport.small's clamp() exactly, so the two align as one clean row
   const scale = dockH / origRect.height;
   const dockW = origRect.width * scale;
   return { top: HEADER_H + 26, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
