@@ -232,6 +232,9 @@
   .chapter.revealed .chapter-header{
     position:sticky; top:0; z-index:2;
   }
+  body.modal-compact .mobile-chapters .chapter.revealed .chapter-header{
+    top: var(--mobile-chapter-sticky-top, 178px); /* set by syncMobileChapterStickyTop() — keeps every revealed chapter's header pinned below the bar, not just the first one */
+  }
   .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
   .chapter-body p{ margin-bottom:1em; }
   .chapter.revealed .chapter-body{ display:block; }
@@ -275,6 +278,7 @@
     position:sticky; top:0; z-index:2; /* the panel's padding-top provides the clearance from the page header — an extra top offset here would double it and also create a natural/stuck position mismatch */
     background:#fff;
     border-bottom:1px solid var(--line-grey-soft);
+    padding-bottom:20px; /* extends the bar's own opaque coverage down to where the chapter header takes over sticking — without this, that gap was uncovered by any background, letting scrolled-past body text show through it */
   }
   .mobile-hero-row{
     position:relative;
@@ -299,7 +303,7 @@
     text-transform:uppercase; color:var(--ink);
   }
 
-  .mobile-chapters{ padding:20px 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
+  .mobile-chapters{ padding:0 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
 
   body.modal-compact .saint-item .saint-caption{ transition:opacity .3s ease; }
@@ -1001,12 +1005,28 @@ const hallChaptersDesktop = createChapterController(
 );
 function getMobileStickyClearance() {
   // page header + the sticky bar's actual current height (now responsive
-  // to viewport height, not a fixed value) + a comfortable gap. Measuring
-  // this directly means it can never drift out of sync with the bar's
-  // real layout, unlike a hardcoded constant that has to be manually
-  // recomputed by hand every time the bar's own height changes.
+  // to viewport height, not a fixed value, and its own padding already
+  // includes the comfortable gap below it). Measuring this directly means
+  // it can never drift out of sync with the bar's real layout, unlike a
+  // hardcoded constant that has to be manually recomputed by hand every
+  // time the bar's own height changes.
   const bar = document.getElementById('mobile-hero-bar');
-  return 30 + (bar ? bar.offsetHeight : 149) + 20;
+  return 30 + (bar ? bar.offsetHeight : 169);
+}
+function syncMobileChapterStickyTop() {
+  // The chapter headers' sticky position is additive with their scrolling
+  // container's own padding-top (30px, for the page header) — so top:0
+  // resolves to y=30, not to "right below the bar" as it might seem. This
+  // only ever looked correct for a single always-first chapter, whose
+  // natural (pre-scroll) position already sat further down than that
+  // threshold. Once a second chapter is revealed and the first one's
+  // natural position scrolls back past y=30, it snaps to the panel's top
+  // edge instead of staying below the bar. Setting an explicit value
+  // (bar height + gap) fixes this for every revealed chapter, not just
+  // the first.
+  const bar = document.getElementById('mobile-hero-bar');
+  const barHeight = bar ? bar.offsetHeight : 169;
+  document.documentElement.style.setProperty('--mobile-chapter-sticky-top', barHeight + 'px');
 }
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
@@ -1304,6 +1324,8 @@ function openHallModal(itemEl, data) {
   mobileHeroBar.classList.remove('minimized');
   mobileMinimized = false;
   document.getElementById('mobile-saint-name').textContent = data.name;
+  syncMobileChapterStickyTop();
+  requestAnimationFrame(syncMobileChapterStickyTop); // re-check once the name's actual layout (e.g. if it wraps) has settled
 
   setTimeout(() => {
     hallModalQuotes.classList.add('reveal');
@@ -1675,6 +1697,7 @@ function refreshHallModalLayout() {
 window.addEventListener('resize', () => {
   hallInertia.measure();
   armoryInertia.measure();
+  syncMobileChapterStickyTop();
 
   refreshHallModalLayout();
 
