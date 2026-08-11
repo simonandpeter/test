@@ -89,13 +89,20 @@
   }
 
   /* ---------------- Hall of Saints — carousel ---------------- */
+  /* overflow:hidden (not clip) still leaves the element programmatically
+     scrollable via scrollLeft, which is what attachLoopScroll writes to —
+     it just removes the browser's own scrolling, and with it the native
+     edge, the bounce, and the momentum that used to fight our corrections.
+     touch-action:none hands the raw touch stream to us instead. */
   #hall-track{
     height:100%;
     display:flex;
     align-items:flex-start;
     gap:10px;
-    overflow-x:auto;
-    overflow-y:hidden;
+    overflow:hidden;
+    touch-action:none;
+    -webkit-user-select:none;
+    user-select:none;
     scrollbar-width:none;
   }
   #hall-track::-webkit-scrollbar{ display:none; }
@@ -194,7 +201,10 @@
     display:flex;
     flex-direction:column;
     height:100%;
-    overflow-y:auto;
+    overflow:hidden;
+    touch-action:none;
+    -webkit-user-select:none;
+    user-select:none;
     scrollbar-width:none;
   }
   .quotes-track::-webkit-scrollbar{ display:none; }
@@ -307,8 +317,10 @@
     display:flex;
     align-items:center;
     gap:14px;
-    overflow-x:auto;
-    overflow-y:hidden;
+    overflow:hidden;
+    touch-action:none;
+    -webkit-user-select:none;
+    user-select:none;
     scrollbar-width:none;
   }
   #armory-track::-webkit-scrollbar{ display:none; }
@@ -520,18 +532,41 @@ function tween(duration, onFrame, onComplete) {
 function lerp(a, b, t) { return a + (b - a) * t; }
 
 /* =====================================================================
-   SHARED — smooth wheel-to-scroll with seamless infinite looping.
+   SHARED — infinite-loop carousel with its OWN scroll physics.
    One implementation, used by the Hall track, the Armory track, and
    the vertical quote carousels (axis:'y').
+
+   The tracks no longer scroll natively. They are overflow:hidden with
+   touch-action:none, and this module owns the position outright:
+   `pos` is the single source of truth, and scrollLeft/scrollTop is
+   only ever WRITTEN to, never read back.
+
+   Why: a native scroller has a real edge, and a clone buffer only
+   hides it if the recentre happens before the fling reaches it. Under
+   a fast flick the momentum outruns the buffer, hits the true edge and
+   bounces — and on Android, writing to scrollLeft mid-momentum to
+   correct it doesn't merely fail to stick, it cancels the fling and
+   desyncs the browser's own touch tracking (the "stops moving briskly"
+   symptom). With the fling model implemented here instead, there is no
+   native momentum to fight and no edge to hit: every frame we recentre
+   BEFORE painting, so the position handed to the DOM is always deep
+   inside the clone buffer no matter how hard the user throws it.
 ===================================================================== */
 function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const axis = opts.axis || 'x';
-  const easeFactor = opts.easeFactor ?? 0.16;
+  const easeFactor = opts.easeFactor ?? 0.16;   // wheel: fraction of the remaining distance closed per frame
+  const flingMs = opts.flingMs ?? 32;           // fling duration per px/frame of release velocity
+  const flingMinMs = opts.flingMinMs ?? 300;
+  const flingMaxMs = opts.flingMaxMs ?? 1500;
+  const maxFling = opts.maxFling ?? 90;         // px/frame ceiling on release velocity
   const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
+  const touchProp = axis === 'x' ? 'clientX' : 'clientY';
 
-  let targetScroll = 0;
-  let isEasing = false;
+  let pos = 0;         // virtual position — authoritative, always finite, never read back from the DOM
+  let target = null;   // wheel only: ease toward this, then release back to null
+  let fling = null;    // touch only: {from, distance, start, duration} — see endDrag()
+  let dragging = false;
   let raf = null;
   let stride = 0;
 
@@ -544,170 +579,211 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
       // position by the same ratio so it stays valid instead of drifting
       // further from reality with every resize until scrolling wedges
       const ratio = newStride / stride;
-      trackEl[scrollProp] = trackEl[scrollProp] * ratio;
-      targetScroll = targetScroll * ratio;
+      pos *= ratio;
+      if (target !== null) target *= ratio;
     }
     stride = newStride;
   }
 
-  function checkLoop() {
+  /* Brings `pos` back inside the clone buffer by whole multiples of the
+     body span. Because the rendered strip is exactly periodic (head is
+     the last `bufferCount` items, tail the first `bufferCount`), a shift
+     of one body span is pixel-identical on screen — the recentre is
+     invisible however large the jump. Runs every frame BEFORE paint, so
+     the DOM never sees an out-of-range value and never clamps. */
+  function wrap() {
     const count = getItemCount();
-    if (!stride || !count) return;
-    const headSpan = bufferCount * stride;
-    const bodySpan = count * stride;
-    if (bodySpan <= 0) return;
-    const lowerBound = headSpan - stride * (bufferCount - 1);
-    const upperBound = headSpan + bodySpan;
-    const pos = trackEl[scrollProp];
-    if (pos < lowerBound) {
-      const n = Math.ceil((lowerBound - pos) / bodySpan);
-      trackEl[scrollProp] += n * bodySpan;
-      targetScroll += n * bodySpan;
-    } else if (pos > upperBound) {
-      const n = Math.ceil((pos - upperBound) / bodySpan);
-      trackEl[scrollProp] -= n * bodySpan;
-      targetScroll -= n * bodySpan;
-    }
-  }
-
-  function tick() {
-    const current = trackEl[scrollProp];
-    const diff = targetScroll - current;
-    if (Math.abs(diff) < 0.5) {
-      trackEl[scrollProp] = targetScroll;
-      isEasing = false;
-      raf = null;
-      checkLoop();
+    if (!stride || !count) {
+      // Not measured yet (e.g. the Armory laid out while its view was
+      // display:none). Keep pos inside the real scrollable range so a
+      // stray wheel can't push it somewhere the DOM would silently
+      // clamp, which would desync pos from what's on screen.
+      const max = Math.max(0, axis === 'x'
+        ? trackEl.scrollWidth - trackEl.clientWidth
+        : trackEl.scrollHeight - trackEl.clientHeight);
+      pos = Math.min(Math.max(pos, 0), max);
+      if (target !== null) target = Math.min(Math.max(target, 0), max);
       return;
     }
-    trackEl[scrollProp] = current + diff * easeFactor;
-    checkLoop();
-    raf = requestAnimationFrame(tick);
-  }
-
-  function wrapTarget() {
-    const count = getItemCount();
-    if (!stride || !count) return;
     const headSpan = bufferCount * stride;
     const bodySpan = count * stride;
     if (bodySpan <= 0) return;
     const lowerBound = headSpan - stride * (bufferCount - 1);
     const upperBound = headSpan + bodySpan;
-    if (targetScroll < lowerBound) {
-      targetScroll += Math.ceil((lowerBound - targetScroll) / bodySpan) * bodySpan;
-    } else if (targetScroll > upperBound) {
-      targetScroll -= Math.ceil((targetScroll - upperBound) / bodySpan) * bodySpan;
+    let shift = 0;
+    if (pos < lowerBound) shift = Math.ceil((lowerBound - pos) / bodySpan) * bodySpan;
+    else if (pos > upperBound) shift = -Math.ceil((pos - upperBound) / bodySpan) * bodySpan;
+    if (shift) {
+      pos += shift;
+      if (target !== null) target += shift;
     }
   }
 
+  function paint() { trackEl[scrollProp] = pos; }
+
+  function ensureFrame() { if (raf === null) raf = requestAnimationFrame(frame); }
+
+  function frame() {
+    raf = null;
+    if (dragging) return; // the move handler drives pos directly while a finger is down
+    if (target !== null) {
+      const diff = target - pos;
+      if (Math.abs(diff) < 0.5) { pos = target; target = null; }
+      else pos += diff * easeFactor;
+    } else if (fling) {
+      const t = Math.min(1, (performance.now() - fling.start) / fling.duration);
+      // same cubic ease-out as tween(), so the glide decelerates on the
+      // curve everything else in this file uses — and, unlike a per-frame
+      // friction decay, reaches a true stop at a known time instead of
+      // creeping for another second below the eye's threshold
+      pos = fling.from + fling.distance * (1 - Math.pow(1 - t, 3));
+      if (t >= 1) fling = null;
+    }
+    wrap();
+    paint();
+    if (target !== null || fling) ensureFrame();
+  }
+
+  function stopMotion() {
+    target = null;
+    fling = null;
+    if (raf !== null) { cancelAnimationFrame(raf); raf = null; }
+  }
+
+  /* ---- wheel / trackpad ---- */
   trackEl.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+    let delta;
+    if (axis === 'x') {
+      // A trackpad's horizontal two-finger swipe arrives as deltaX. It
+      // used to be handed straight back to the native scroller, which is
+      // where the desktop edge-bounce came from — consume it here too.
+      delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    } else {
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+      delta = e.deltaY;
+      e.stopPropagation();
+    }
+    if (!delta) return;
     e.preventDefault();
-    if (axis === 'y') e.stopPropagation();
-    targetScroll += e.deltaY;
-    wrapTarget();
-    isEasing = true;
-    if (!raf) raf = requestAnimationFrame(tick);
+    fling = null;
+    target = (target === null ? pos : target) + delta;
+    ensureFrame();
   }, { passive: false });
 
-  let touchActive = false;
+  /* ---- touch drag + fling ---- */
+  let dragOrigin = 0;      // finger position where this drag started
+  let dragOriginPos = 0;   // pos where this drag started
+  let dragMoved = false;
+  let samples = [];        // recent {t, v} finger positions, for release velocity
+  let suppressClickUntil = 0;
 
-  trackEl.addEventListener('scroll', () => {
-    if (isEasing) return;
-    targetScroll = trackEl[scrollProp];
-    if (touchActive) return; // don't write to scrollLeft mid-gesture — see touchstart/touchend below
-    checkLoop();
-  });
-
-  // Native touch/momentum scrolling on mobile can keep driving scrollLeft
-  // for a while after the finger lifts, and correcting it (writing to
-  // scrollLeft) while a gesture or its momentum is still active doesn't
-  // just fail to stick — it can desync the browser's own touch-scroll
-  // tracking for the element, so it stops responding to further touches
-  // altogether. Suppress corrections for the whole gesture, plus a
-  // generous settle window afterwards, then correct once it's safe.
-  trackEl.addEventListener('touchstart', () => { touchActive = true; }, { passive: true });
-  trackEl.addEventListener('touchend', () => {
-    setTimeout(() => { touchActive = false; }, 700);
-    [750, 1200].forEach(delay => {
-      setTimeout(() => {
-        if (isEasing) return;
-        targetScroll = trackEl[scrollProp];
-        checkLoop();
-      }, delay);
-    });
+  trackEl.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    stopMotion();
+    dragging = true;
+    dragMoved = false;
+    dragOrigin = e.touches[0][touchProp];
+    dragOriginPos = pos;
+    samples = [{ t: performance.now(), v: dragOrigin }];
   }, { passive: true });
+
+  trackEl.addEventListener('touchmove', (e) => {
+    if (!dragging || e.touches.length !== 1) return;
+    const v = e.touches[0][touchProp];
+    if (Math.abs(v - dragOrigin) > 6) dragMoved = true;
+    pos = dragOriginPos + (dragOrigin - v); // finger left/up → pos increases
+    wrap();
+    paint();
+    samples.push({ t: performance.now(), v });
+    if (samples.length > 6) samples.shift();
+    if (e.cancelable) e.preventDefault();
+  }, { passive: false });
+
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    const now = performance.now();
+    // Only the tail of the gesture counts: if the finger came to rest
+    // before lifting, that's a deliberate stop, not a throw.
+    const recent = samples.filter(s => now - s.t < 120);
+    if (recent.length >= 2) {
+      const first = recent[0];
+      const last = recent[recent.length - 1];
+      const dt = last.t - first.t;
+      if (dt > 0) {
+        const v0 = Math.max(-maxFling, Math.min(maxFling, ((first.v - last.v) / dt) * 16.67));
+        const duration = Math.max(flingMinMs, Math.min(flingMaxMs, Math.abs(v0) * flingMs));
+        // A cubic ease-out starts at 3*distance/duration. Solving that
+        // for the finger's actual release speed makes the glide begin at
+        // exactly the speed the finger left at — no jolt at the handover.
+        const distance = duration * v0 / 50;
+        if (Math.abs(distance) > 1) fling = { from: pos, distance, start: now, duration };
+      }
+    }
+    if (dragMoved) suppressClickUntil = now + 400;
+    samples = [];
+    ensureFrame();
+  }
+  trackEl.addEventListener('touchend', endDrag, { passive: true });
+  trackEl.addEventListener('touchcancel', endDrag, { passive: true });
+
+  // A native scroll gesture never produced a click; ours would, so a
+  // flick that happens to end over a card must not open its modal.
+  trackEl.addEventListener('click', (e) => {
+    if (performance.now() < suppressClickUntil) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }, true);
 
   return {
     measure,
-    resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; },
-    // For external drivers (idle drift) that move scrollLeft themselves
-    // outside of this module's own wheel/tick logic. Runs the loop-wrap
-    // check synchronously, in the caller's own frame, rather than the
-    // caller having to wait for the native 'scroll' event this module
-    // also listens to — which fires async and isn't guaranteed to land
-    // before the caller's next update, risking the two racing each other.
-    syncAndWrap() {
-      if (isEasing) return 0;
-      const before = trackEl[scrollProp];
-      targetScroll = before;
-      checkLoop();
-      return trackEl[scrollProp] - before; // 0 on ordinary frames; the exact jump size only when a loop-wrap correction actually fired
+    resetTo(value) { stopMotion(); pos = value; paint(); },
+    /* For external drivers (idle drift) that want to move the track
+       themselves. Refuses while the user's own motion is still playing
+       out, so drift can never fight a drag or a decaying fling. */
+    nudge(delta) {
+      if (dragging || target !== null || fling) return false;
+      pos += delta;
+      wrap();
+      paint();
+      return true;
     }
   };
 }
 
-/* Idle auto-scroll, deliberately kept separate from attachLoopScroll's own
-   wheel/tick logic. It only ever does one thing — nudge scrollLeft forward
-   — but calls back into the loop API's own syncAndWrap() synchronously
-   after each nudge, so the infinite-loop wrap is checked in the same
-   frame rather than via an async 'scroll' event racing against drift's
-   own next update. */
+/* Idle auto-scroll, deliberately kept separate from attachLoopScroll's
+   own wheel/touch logic. It only ever does one thing — ask the loop to
+   advance by a few px — and the loop refuses while the user's own drag
+   or fling is still running, so the two can never fight over position. */
 function attachIdleDrift(trackEl, loopApi, opts = {}) {
   const idleMs = opts.idleMs ?? 5000;
   const speed = opts.speed ?? 22; // px/s, constant from the first frame — no ramp-in
 
   let lastInteraction = performance.now();
   let paused = false;
-  let active = false;
-  let pos = null;
   let lastFrame = performance.now();
 
-  function markInteraction() {
-    lastInteraction = performance.now();
-    active = false;
-    pos = null;
-  }
+  function markInteraction() { lastInteraction = performance.now(); }
   trackEl.addEventListener('wheel', markInteraction, { passive: true });
   // touch gestures never fire 'wheel' — without these, drift had no way to
-  // know mobile scrolling was happening at all, and kept nudging scrollLeft
-  // on top of it, fighting the user's own touch-scroll.
+  // know mobile scrolling was happening at all, and kept nudging the track
+  // on top of it, fighting the user's own drag.
   trackEl.addEventListener('touchstart', markInteraction, { passive: true });
   trackEl.addEventListener('touchmove', markInteraction, { passive: true });
 
   function frame(now) {
     const dt = Math.min(now - lastFrame, 50);
     lastFrame = now;
-    if (!paused) {
-      const idleFor = now - lastInteraction;
-      if (idleFor > idleMs) {
-        if (!active) { active = true; pos = trackEl.scrollLeft; }
-        pos += speed * (dt / 1000);
-        trackEl.scrollLeft = pos;
-        // synchronous correction, right here, no waiting on an async event —
-        // add the delta, don't replace pos with the (rounded) DOM readback
-        pos += loopApi.syncAndWrap();
-      } else if (active) {
-        active = false;
-        pos = null;
-      }
+    if (!paused && (now - lastInteraction) > idleMs) {
+      loopApi.nudge(speed * (dt / 1000));
     }
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 
   return {
-    pause() { paused = true; active = false; pos = null; },
+    pause() { paused = true; },
     resume() { paused = false; lastInteraction = performance.now(); }
   };
 }
