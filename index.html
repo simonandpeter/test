@@ -17,6 +17,71 @@
     --hl: #f5e05a;
   }
   *{ box-sizing:border-box; }
+
+  /* ---- loading screen ---------------------------------------------
+     Opacity and colour only. The site's rule that position/rotation/scale
+     are tweened in JS rather than CSS is about animations that have to
+     stay in sync with measured layout; nothing here moves, so a keyframe
+     is the simpler tool and it runs off the main thread. */
+  #loading-screen{
+    position:fixed; inset:0; z-index:200;
+    background:#fff;
+    display:flex; align-items:center; justify-content:center;
+    /* Fades itself out, then is removed from the DOM entirely so it can
+       never intercept a tap once the site is live. */
+    transition:opacity .55s ease;
+  }
+  #loading-screen.done{ opacity:0; pointer-events:none; }
+  .loading-stack{
+    text-align:center;
+    padding:24px;
+    max-width:min(560px, 88vw);
+    animation:loading-breathe 3.4s ease-in-out infinite;
+  }
+  .loading-stack p{
+    margin:0 0 9px 0;
+    font-size:15px;
+    line-height:1.55;
+    color:var(--ink);
+    font-style:italic;
+    /* Greek, Cyrillic, Arabic, Chinese and Devanagari all need to fall
+       through to whatever the platform ships (Noto on Android) — Times
+       has no glyphs for most of these, and without a fallback the lines
+       would render as tofu boxes. */
+    font-family:'Times New Roman', Times, 'Noto Serif', 'Noto Naskh Arabic',
+                'Noto Serif Devanagari', 'Noto Serif CJK SC', serif;
+  }
+  .loading-stack p[lang="ar"]{ font-size:17px; }
+  .loading-stack p[lang="zh"], .loading-stack p[lang="hi"]{ font-style:normal; }
+  .loading-ref{
+    margin-top:16px !important;
+    font-style:normal !important;
+    font-size:11px !important;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .loading-bar{
+    margin:26px auto 0 auto;
+    width:min(240px, 60vw);
+    height:1px;
+    background:var(--line-grey);
+    animation:loading-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes loading-breathe{
+    0%, 100% { opacity:0.25; }
+    50%      { opacity:1; }
+  }
+  @keyframes loading-pulse{
+    0%, 100% { background:var(--line-grey); }
+    50%      { background:var(--ink); }
+  }
+  /* Respect a stated preference for less motion: the screen still appears
+     and still tells the reader what is happening, it just holds steady. */
+  @media (prefers-reduced-motion: reduce){
+    .loading-stack{ animation:none; opacity:1; }
+    .loading-bar{ animation:none; background:var(--ink-soft); }
+  }
   html,body{ height:100%; margin:0; }
   body{
     background:#ffffff;
@@ -386,6 +451,26 @@
 </head>
 <body>
 
+<!-- Sits in the HTML rather than being built by script, so it is painted
+     on the very first frame instead of after the JS parses. It is an
+     overlay, never display:none on the content behind it — the carousels
+     measure item widths from real layout, and hiding them would give a
+     stride of zero. -->
+<div id="loading-screen" role="status" aria-label="Loading">
+  <div class="loading-stack">
+    <p lang="en">the prayers of the saints</p>
+    <p lang="la">orationes sanctorum</p>
+    <p lang="grc">αἱ προσευχαὶ τῶν ἁγίων</p>
+    <p lang="ru">молитвы святых</p>
+    <p lang="ar" dir="rtl">صلوات القديسين</p>
+    <p lang="zh">众圣徒的祈祷</p>
+    <p lang="hi">संतों की प्रार्थनाएँ</p>
+    <p lang="fr">les prières des saints</p>
+    <p class="loading-ref">Revelation 5:8</p>
+    <div class="loading-bar"></div>
+  </div>
+</div>
+
 <header>
   <div class="brand">Test</div>
   <nav>
@@ -555,10 +640,26 @@ function lerp(a, b, t) { return a + (b - a) * t; }
 function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const axis = opts.axis || 'x';
   const easeFactor = opts.easeFactor ?? 0.16;   // wheel: fraction of the remaining distance closed per frame
-  const flingMs = opts.flingMs ?? 32;           // fling duration per px/frame of release velocity
+  const flingMs = opts.flingMs ?? 21;           // fling duration per px/frame of release velocity
   const flingMinMs = opts.flingMinMs ?? 300;
   const flingMaxMs = opts.flingMaxMs ?? 1500;
   const maxFling = opts.maxFling ?? 90;         // px/frame ceiling on release velocity
+  /* scrollLeft/scrollTop snap to whole CSS pixels — writing 1000.5 renders
+     at 1001, at any device pixel ratio. Native scrolling doesn't have this
+     problem because the compositor holds a sub-pixel scroll offset, which
+     is why the original felt smoother at the end of a glide.
+
+     We can't get sub-pixel out of a scroll offset. But the stutter isn't
+     caused by the steps being SMALL, it's caused by them being UNEVEN:
+     rounding a smooth fractional curve turns a clean deceleration into
+     4,5,3,4,3 — the ±0.5px rounding error alternating, which is a large
+     fraction of each step once the steps are small. So instead of
+     computing a fractional position and letting the DOM round it, we keep
+     `pos` on whole pixels and take an integer step each frame, sized from
+     the curve's velocity. Because that velocity only ever decreases, the
+     rounded steps come out monotonically non-increasing — 4,3,3,2,2,1,1 —
+     which is what a smooth stop looks like. The last pixels are walked off
+     one per frame rather than snapped, so there's no pop at the end. */
   /* While a modal open/close sequence is animating, the card being
      animated has been lifted out of the row and replaced by a
      placeholder. Letting the row move underneath it during that window
@@ -622,6 +723,8 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (shift) {
       pos += shift;
       if (target !== null) target += shift;
+      // The fling needs no adjustment here: it is driven by velocity, not
+      // by an absolute endpoint, so a recentre doesn't invalidate it.
     }
   }
 
@@ -634,16 +737,35 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (dragging) return; // the move handler drives pos directly while a finger is down
     if (target !== null) {
       const diff = target - pos;
-      if (Math.abs(diff) < 0.5) { pos = target; target = null; }
-      else pos += diff * easeFactor;
+      if (Math.abs(diff) < 1) { pos = Math.round(target); target = null; }
+      else {
+        // At least one whole pixel per frame, so the approach never stalls
+        // into the 0,1,0,1 pattern that an exponential tail would produce.
+        const step = Math.max(1, Math.round(Math.abs(diff) * easeFactor));
+        pos += Math.sign(diff) * Math.min(step, Math.abs(diff));
+      }
     } else if (fling) {
-      const t = Math.min(1, (performance.now() - fling.start) / fling.duration);
-      // same cubic ease-out as tween(), so the glide decelerates on the
-      // curve everything else in this file uses — and, unlike a per-frame
-      // friction decay, reaches a true stop at a known time instead of
-      // creeping for another second below the eye's threshold
-      pos = fling.from + fling.distance * (1 - Math.pow(1 - t, 3));
-      if (t >= 1) fling = null;
+      const now = performance.now();
+      const t = Math.min(1, (now - fling.start) / fling.duration);
+      const dt = Math.min(now - fling.last, 50); // a backgrounded tab can hand us a huge gap
+      fling.last = now;
+      /* Velocity decays linearly to zero (a quadratic ease-out), rather
+         than on tween()'s cubic curve. The difference is all in the tail:
+         cubic's velocity approaches zero so gradually that it spends
+         twenty-odd frames moving a single pixel per frame, which reads as
+         a slow creep before the stop. Linear decay reaches the same total
+         travel and arrives with one or two 1px frames instead.
+         Driving from velocity rather than position also keeps this
+         frame-rate independent — a 120Hz screen takes twice as many
+         half-sized steps, not double the speed. */
+      const v = Math.abs(fling.v0) * (1 - t);
+      const step = Math.round(v * dt);
+      // Once a frame's worth of travel rounds to nothing, the glide is
+      // visually over; continuing would only produce the 0,1,0,1 crawl.
+      // Stopping here is invisible because it happens below one pixel per
+      // frame — unlike snapping a fixed remainder, which pops.
+      if (step < 1) fling = null;
+      else pos += fling.dir * step;
     }
     wrap();
     paint();
@@ -720,11 +842,17 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
       if (dt > 0) {
         const v0 = Math.max(-maxFling, Math.min(maxFling, ((first.v - last.v) / dt) * 16.67));
         const duration = Math.max(flingMinMs, Math.min(flingMaxMs, Math.abs(v0) * flingMs));
-        // A cubic ease-out starts at 3*distance/duration. Solving that
-        // for the finger's actual release speed makes the glide begin at
-        // exactly the speed the finger left at — no jolt at the handover.
-        const distance = duration * v0 / 50;
-        if (Math.abs(distance) > 1) fling = { from: pos, distance, start: now, duration };
+        // Linear velocity decay covers v0*duration/2 in total, and starts
+        // at exactly the speed the finger left at — no jolt at handover.
+        const distance = duration * v0 / 33.3;
+        if (Math.abs(distance) > 1) {
+          pos = Math.round(pos); // integral start, so every later step lands on a whole pixel
+          fling = {
+            dir: Math.sign(v0),
+            v0: v0 / 16.67,       // px per ms
+            start: now, last: now, duration
+          };
+        }
       }
     }
     if (dragMoved) suppressClickUntil = now + 400;
@@ -926,12 +1054,19 @@ function linkQuotesToChapters(quoteLines, chapters) {
    would break every attribution link the moment a folder was renamed. */
 function parseSaintFolder(folder) {
   const m = /^(\d{1,4})\s*([BbCc])[\s._\-—]*(.+)$/.exec(folder.trim());
-  if (!m) return { display: folder, base: folder };
-  const year = String(parseInt(m[1], 10));
-  const era = m[2].toUpperCase() === 'B' ? 'BC' : 'AD';
+  if (!m) return { display: folder, base: folder, sortKey: null };
+  const year = parseInt(m[1], 10);
+  const isBC = m[2].toUpperCase() === 'B';
+  const era = isBC ? 'BC' : 'AD';
   const base = m[3].trim();
-  if (!base) return { display: folder, base: folder };
-  return { display: `${year}${era} ${base}`, base };
+  if (!base) return { display: folder, base: folder, sortKey: null };
+  /* Alphabetical folder order sorts correctly within AD but not across
+     the era boundary: "1450B Moses" falls between "0353C" and "1859C",
+     and BC years run backwards against each other (1450BC precedes
+     500BC in time but follows it alphabetically). Signing the year
+     fixes both at once — BC becomes negative, so a single numeric sort
+     is chronological across the whole range. */
+  return { display: `${year}${era} ${base}`, base, sortKey: isBC ? -year : year };
 }
 
 function saintMatchesSource(saint, source) {
@@ -1084,12 +1219,22 @@ async function loadSaints() {
         id: folder,
         name: parsed.display,
         base: parsed.base,
+        sortKey: parsed.sortKey,
         image: base + encodeURIComponent(image),
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
       };
     }));
-    const saints = results.filter(Boolean);
+    /* Chronological, not alphabetical. Folders with no parseable year
+       keep their alphabetical order and sit after the dated ones rather
+       than being dropped into the middle of the timeline at year zero. */
+    const saints = results.filter(Boolean).sort((a, b) => {
+      if (a.sortKey === null && b.sortKey === null) return naturalCompare(a.name, b.name);
+      if (a.sortKey === null) return 1;
+      if (b.sortKey === null) return -1;
+      if (a.sortKey !== b.sortKey) return a.sortKey - b.sortKey;
+      return naturalCompare(a.base, b.base);
+    });
     if (skipped.length) console.warn('Skipped folders with no image file:', skipped);
     if (!saints.length) return { saints: fallbackSaints(), source: 'empty' };
     return { saints, source: 'live', skipped, cache };
@@ -1756,6 +1901,31 @@ function closeArmoryModal(spearEl, placeholder) {
 /* =====================================================================
    INIT
 ===================================================================== */
+/* The loading screen is dismissed on three independent triggers, because
+   any one of them alone has a failure mode: the data resolving (normal
+   case), a minimum on-screen time (so a warm cache doesn't produce a
+   single-frame flash of text), and a hard ceiling (so a hung request can
+   never leave a visitor staring at a permanently blank overlay). */
+const LOADER_MIN_MS = 1400;
+const LOADER_MAX_MS = 9000;
+const loaderShownAt = performance.now();
+let loaderDismissed = false;
+
+function dismissLoader() {
+  if (loaderDismissed) return;
+  loaderDismissed = true;
+  const el = document.getElementById('loading-screen');
+  if (!el) return;
+  const wait = Math.max(0, LOADER_MIN_MS - (performance.now() - loaderShownAt));
+  setTimeout(() => {
+    el.classList.add('done');
+    // Remove rather than just hide: a full-viewport fixed overlay left in
+    // place would swallow the first tap on the carousel.
+    setTimeout(() => el.remove(), 700);
+  }, wait);
+}
+setTimeout(dismissLoader, LOADER_MAX_MS);
+
 loadSaints().then(({ saints, source, skipped, cache }) => {
   SAINTS = saints;
   renderHall();
@@ -1775,6 +1945,12 @@ loadSaints().then(({ saints, source, skipped, cache }) => {
   if (skipped && skipped.length) text += ` — skipped (no recognised image file): ${skipped.join(', ')}`;
   badge.textContent = text;
   badge.style.display = 'block';
+}).catch((err) => {
+  console.warn('Saint loading failed unexpectedly:', err);
+}).finally(() => {
+  // Measure once the cards are really in the DOM, then hand over.
+  hallInertia.measure();
+  dismissLoader();
 });
 
 fetch('assets/text/quotes.txt')
