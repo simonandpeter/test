@@ -559,6 +559,12 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const flingMinMs = opts.flingMinMs ?? 300;
   const flingMaxMs = opts.flingMaxMs ?? 1500;
   const maxFling = opts.maxFling ?? 90;         // px/frame ceiling on release velocity
+  /* While a modal open/close sequence is animating, the card being
+     animated has been lifted out of the row and replaced by a
+     placeholder. Letting the row move underneath it during that window
+     means the tween's captured start/end rects no longer describe where
+     anything actually is, and the card lands in the wrong place. */
+  const blocked = opts.blocked || (() => false);
   const scrollProp = axis === 'x' ? 'scrollLeft' : 'scrollTop';
   const offsetProp = axis === 'x' ? 'offsetLeft' : 'offsetTop';
   const touchProp = axis === 'x' ? 'clientX' : 'clientY';
@@ -652,6 +658,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 
   /* ---- wheel / trackpad ---- */
   trackEl.addEventListener('wheel', (e) => {
+    if (blocked()) { e.preventDefault(); return; }
     let delta;
     if (axis === 'x') {
       // A trackpad's horizontal two-finger swipe arrives as deltaX. It
@@ -678,7 +685,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   let suppressClickUntil = 0;
 
   trackEl.addEventListener('touchstart', (e) => {
-    if (e.touches.length !== 1) return;
+    if (blocked() || e.touches.length !== 1) return;
     stopMotion();
     dragging = true;
     dragMoved = false;
@@ -739,11 +746,16 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   return {
     measure,
     resetTo(value) { stopMotion(); pos = value; paint(); },
+    /* Halts any glide already in flight. Called the moment a modal
+       starts opening: the lock below stops NEW input, but a fling
+       launched a frame earlier would otherwise keep the row sliding
+       under the card for another second. */
+    stop() { stopMotion(); },
     /* For external drivers (idle drift) that want to move the track
        themselves. Refuses while the user's own motion is still playing
        out, so drift can never fight a drag or a decaying fling. */
     nudge(delta) {
-      if (dragging || target !== null || fling) return false;
+      if (blocked() || dragging || target !== null || fling) return false;
       pos += delta;
       wrap();
       paint();
@@ -819,10 +831,10 @@ function loopSafeList(list) {
    this, not call attachLoopScroll again — every call adds its own
    wheel/scroll listeners to the same persistent DOM node, and several of
    them competing for the same scrollTop is what eventually broke this. */
-function createQuoteCarousel(containerEl, rows) {
+function createQuoteCarousel(containerEl, rows, blocked) {
   const buffer = Math.max(rows, 24); // generous, so fast wheel-flicks never outrun the clone buffer (same fix as the Armory rack)
   let items = [];
-  const loop = attachLoopScroll(containerEl, buffer, () => items.length, { axis: 'y' });
+  const loop = attachLoopScroll(containerEl, buffer, () => items.length, { axis: 'y', blocked });
 
   function render(newItems, onItemClick) {
     items = newItems;
@@ -901,6 +913,33 @@ function linkQuotesToChapters(quoteLines, chapters) {
   return linked.map((lq, i) => ({ ...lq, quoteIndex: i }));
 }
 
+/* Saint folders carry a sortable year-of-death prefix: four digits then
+   B for BC or C for AD — "0353C St Antony the Great", "1450B Moses".
+   Zero-padding and the B/C suffix exist so the folder listing sorts
+   chronologically; neither belongs on screen, so this turns the prefix
+   back into its readable form and hands back both spellings.
+
+   `display` is what the reader sees. `base` is the bare name with no
+   year at all, and it matters: the Armory decides whether a quote's
+   source is one of these saints by comparing it against the name from
+   quotes.txt, which has no year prefix. Matching on the displayed name
+   would break every attribution link the moment a folder was renamed. */
+function parseSaintFolder(folder) {
+  const m = /^(\d{1,4})\s*([BbCc])[\s._\-—]*(.+)$/.exec(folder.trim());
+  if (!m) return { display: folder, base: folder };
+  const year = String(parseInt(m[1], 10));
+  const era = m[2].toUpperCase() === 'B' ? 'BC' : 'AD';
+  const base = m[3].trim();
+  if (!base) return { display: folder, base: folder };
+  return { display: `${year}${era} ${base}`, base };
+}
+
+function saintMatchesSource(saint, source) {
+  const src = source.trim().toLowerCase();
+  return (saint.base || saint.name).toLowerCase() === src
+      || saint.name.toLowerCase() === src;
+}
+
 function placeholderIconDataUri() {
   const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
@@ -947,6 +986,52 @@ async function fetchText(url) {
   return res.text();
 }
 
+/* The GitHub API allows 60 unauthenticated requests per hour PER IP, and
+   this page spends one on every single load. That is plenty for visitors
+   and nowhere near enough for a device-testing session, where forty
+   reloads in an hour is normal — after which the API starts returning
+   403, loadSaints() falls through to the built-in demo, and the real
+   saint images silently vanish. Caching the folder listing means a
+   reload costs nothing, and a listing that's already been seen keeps
+   working even once the limit IS hit. */
+const TREE_CACHE_KEY = 'saints-tree-cache-v1';
+const TREE_CACHE_MS = 10 * 60 * 1000;
+
+function readTreeCache(url) {
+  try {
+    const raw = localStorage.getItem(TREE_CACHE_KEY);
+    if (!raw) return null;
+    const c = JSON.parse(raw);
+    return (c && c.url === url && Array.isArray(c.tree)) ? c : null;
+  } catch (e) { return null; }
+}
+
+async function fetchTree(treeUrl) {
+  const cached = readTreeCache(treeUrl);
+  if (cached && (Date.now() - cached.at) < TREE_CACHE_MS) {
+    return { tree: cached.tree, cache: 'fresh' };
+  }
+  try {
+    const res = await fetch(treeUrl);
+    if (!res.ok) throw new Error(`GitHub API returned ${res.status} for ${treeUrl}`);
+    const json = await res.json();
+    if (!json.tree) throw new Error('GitHub API response had no tree');
+    try {
+      localStorage.setItem(TREE_CACHE_KEY, JSON.stringify({ url: treeUrl, at: Date.now(), tree: json.tree }));
+    } catch (e) { /* private mode / quota — caching is an optimisation, not a requirement */ }
+    return { tree: json.tree, cache: 'live' };
+  } catch (err) {
+    // Rather than drop straight to demo data, reuse the last known good
+    // listing. The folder names change far less often than the rate
+    // limit resets, so a stale listing is nearly always still correct.
+    if (cached) {
+      console.warn('GitHub API unavailable, reusing the cached folder listing —', err.message);
+      return { tree: cached.tree, cache: 'stale' };
+    }
+    throw err;
+  }
+}
+
 async function loadSaints() {
   if (GITHUB_OWNER === 'YOUR_GITHUB_USERNAME' || GITHUB_REPO === 'YOUR_REPO_NAME') {
     console.warn('GITHUB_OWNER/GITHUB_REPO are not configured — showing the built-in demo. Fill them in at the top of the script.');
@@ -954,9 +1039,8 @@ async function loadSaints() {
   }
   try {
     const treeUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`;
-    const treeRes = await fetch(treeUrl);
-    if (!treeRes.ok) throw new Error(`GitHub API returned ${treeRes.status} for ${treeUrl}`);
-    const tree = await treeRes.json();
+    const { tree: treeEntries, cache } = await fetchTree(treeUrl);
+    const tree = { tree: treeEntries };
 
     const folders = {};
     tree.tree
@@ -994,10 +1078,12 @@ async function loadSaints() {
         }))
       ]);
       const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
+      const parsed = parseSaintFolder(folder);
 
       return {
         id: folder,
-        name: folder,
+        name: parsed.display,
+        base: parsed.base,
         image: base + encodeURIComponent(image),
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
@@ -1006,7 +1092,7 @@ async function loadSaints() {
     const saints = results.filter(Boolean);
     if (skipped.length) console.warn('Skipped folders with no image file:', skipped);
     if (!saints.length) return { saints: fallbackSaints(), source: 'empty' };
-    return { saints, source: 'live', skipped };
+    return { saints, source: 'live', skipped, cache };
   } catch (err) {
     console.warn('Falling back to the built-in demo saints — GitHub fetch failed:', err);
     return { saints: fallbackSaints(), source: 'error' };
@@ -1041,7 +1127,7 @@ function renderHall() {
     item.className = 'saint-item';
     item.dataset.id = s.id;
     item.innerHTML = `
-      <div class="saint-card"><img src="${s.image}" alt="${s.name}" onerror="this.style.display='none'"></div>
+      <div class="saint-card"><img src="${s.image}" alt="${s.name}" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
@@ -1058,11 +1144,12 @@ function renderHall() {
   });
 }
 
-const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(SAINTS).length, { axis: 'x' });
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(SAINTS).length,
+  { axis: 'x', blocked: () => hallBusy || !!currentHallOpen });
 const hallDrift = attachIdleDrift(hallTrack, hallInertia);
 
-const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7);
-const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3);
+const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7, () => hallBusy);
+const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3, () => hallBusy);
 
 const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
@@ -1337,6 +1424,7 @@ function openHallModal(itemEl, data) {
   if (hallBusy || itemEl.classList.contains('selected')) return;
   hallBusy = true;
   hallDrift.pause();
+  hallInertia.stop(); // a fling launched a frame ago would slide the row out from under the rect we're about to capture
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
   modalCompactMode = compact;
@@ -1489,7 +1577,8 @@ function renderArmory() {
   });
 }
 
-const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => loopSafeList(ARMORY_QUOTES).length, { axis: 'x' });
+const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => loopSafeList(ARMORY_QUOTES).length,
+  { axis: 'x', blocked: () => armoryBusy || !!currentArmoryOpen });
 const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia);
 
 function armoryScaleFor(rect) {
@@ -1518,6 +1607,7 @@ function openArmoryModal(spearEl, q) {
   if (armoryBusy || spearEl.classList.contains('selected')) return;
   armoryBusy = true;
   armoryDrift.pause();
+  armoryInertia.stop();
   const rect = spearEl.getBoundingClientRect();
 
   const placeholder = document.createElement('div');
@@ -1551,7 +1641,7 @@ function openArmoryModal(spearEl, q) {
   armoryAttribution.style.top = attributionTop + 'px';
   armoryAttribution.style.left = '50%';
 
-  const isSaint = SAINTS.some(s => s.name.toLowerCase() === q.source.toLowerCase());
+  const isSaint = SAINTS.some(s => saintMatchesSource(s, q.source));
   let html;
   if (isSaint) {
     html = `&mdash; <a href="#" data-jump-saint="${q.source}">${q.source}</a>`;
@@ -1574,7 +1664,7 @@ function openArmoryModal(spearEl, q) {
       if (armoryBusy) return;
       closeArmoryModal(spearEl, placeholder);
       document.querySelector('header nav a[data-view="hall"]').click();
-      const target = SAINTS.find(s => s.name.toLowerCase() === q.source.toLowerCase());
+      const target = SAINTS.find(s => saintMatchesSource(s, q.source));
       if (target) {
         setTimeout(() => {
           const itemEl = [...hallTrack.querySelectorAll('.saint-item')].find(el => el.dataset.id === target.id);
@@ -1666,7 +1756,7 @@ function closeArmoryModal(spearEl, placeholder) {
 /* =====================================================================
    INIT
 ===================================================================== */
-loadSaints().then(({ saints, source, skipped }) => {
+loadSaints().then(({ saints, source, skipped, cache }) => {
   SAINTS = saints;
   renderHall();
   const badge = document.getElementById('data-source-badge');
@@ -1677,6 +1767,11 @@ loadSaints().then(({ saints, source, skipped }) => {
     live: `Loaded ${saints.length} saint(s) from GitHub`
   };
   let text = messages[source] || '';
+  // Which of the three listing paths ran matters when debugging missing
+  // images: 'cached' is normal on a reload, 'cached (API unavailable)'
+  // means the rate limit has been hit and this is the last known listing.
+  if (source === 'live' && cache === 'fresh') text += ' (cached listing)';
+  if (source === 'live' && cache === 'stale') text += ' (cached listing — API unavailable)';
   if (skipped && skipped.length) text += ` — skipped (no recognised image file): ${skipped.join(', ')}`;
   badge.textContent = text;
   badge.style.display = 'block';
