@@ -903,6 +903,16 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
   let lastInteraction = performance.now();
   let paused = false;
   let lastFrame = performance.now();
+  /* speed(px/s) * one frame's dt(~16.7ms) is well under a pixel, so handing
+     that fractional value straight to nudge() hits exactly the same
+     whole-pixel-snap problem the fling/wheel paths had: most frames round
+     to a 0px change and then one frame jumps 1px, which reads as an
+     irregular stutter rather than a slow, steady creep. Accumulating the
+     fractional remainder here and only spending it once a whole pixel has
+     built up (Bresenham-style) turns that into an evenly spaced 1px step
+     every few frames — the smoothest this can look while scrollLeft only
+     accepts integers. */
+  let carry = 0;
 
   function markInteraction() { lastInteraction = performance.now(); }
   trackEl.addEventListener('wheel', markInteraction, { passive: true });
@@ -916,7 +926,14 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
     const dt = Math.min(now - lastFrame, 50);
     lastFrame = now;
     if (!paused && (now - lastInteraction) > idleMs) {
-      loopApi.nudge(speed * (dt / 1000));
+      carry += speed * (dt / 1000);
+      const step = Math.floor(carry);
+      // nudge() can refuse (a drag/fling/wheel-ease is in progress) — in
+      // that case leave the carry banked rather than discarding it, so
+      // drift picks back up smoothly instead of losing ground.
+      if (step >= 1 && loopApi.nudge(step)) carry -= step;
+    } else {
+      carry = 0; // don't bank distance accrued before the idle threshold
     }
     requestAnimationFrame(frame);
   }
@@ -924,7 +941,7 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
 
   return {
     pause() { paused = true; },
-    resume() { paused = false; lastInteraction = performance.now(); }
+    resume() { paused = false; lastInteraction = performance.now(); carry = 0; }
   };
 }
 
@@ -1906,7 +1923,7 @@ function closeArmoryModal(spearEl, placeholder) {
    case), a minimum on-screen time (so a warm cache doesn't produce a
    single-frame flash of text), and a hard ceiling (so a hung request can
    never leave a visitor staring at a permanently blank overlay). */
-const LOADER_MIN_MS = 1400;
+const LOADER_MIN_MS = 1500;
 const LOADER_MAX_MS = 9000;
 const loaderShownAt = performance.now();
 let loaderDismissed = false;
