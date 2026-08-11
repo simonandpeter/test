@@ -154,17 +154,32 @@
   }
 
   /* ---------------- Hall of Saints — carousel ---------------- */
-  /* overflow:hidden (not clip) still leaves the element programmatically
-     scrollable via scrollLeft, which is what attachLoopScroll writes to —
-     it just removes the browser's own scrolling, and with it the native
-     edge, the bounce, and the momentum that used to fight our corrections.
-     touch-action:none hands the raw touch stream to us instead. */
+  /* overflow-x:auto (not hidden) so this stays a genuine native scroll
+     container: Chromium promotes that to its own composited scrolling
+     layer and moves it on the compositor thread, which is what made the
+     original file's slow idle-scroll read as smooth pixel-perfect motion.
+     An overflow:hidden div scrolled purely via JS scrollLeft writes isn't
+     treated as a scroller by the compositor, so every frame goes through
+     the slower main-thread paint path instead — that mismatch, not the
+     position math, was the real source of the jitter.
+
+     touch-action:none is what keeps this safe: it stops the BROWSER from
+     ever taking over a touch gesture as native momentum scrolling, so our
+     own touchstart/touchmove/touchend handlers remain the only thing
+     driving the position on touch, exactly as before. That native
+     momentum — not native scrolling itself — was what caused the original
+     bounce-and-stall bug (reassigning scrollLeft while Android's own fling
+     was in flight cancelled the fling outright). With touch-action:none
+     there is no native fling to cancel, so restoring overflow-x:auto here
+     does not reopen that bug: our JS still owns every value it writes,
+     the DOM just paints it on a faster path. */
   #hall-track{
     height:100%;
     display:flex;
     align-items:flex-start;
     gap:10px;
-    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:hidden;
     touch-action:none;
     -webkit-user-select:none;
     user-select:none;
@@ -266,7 +281,8 @@
     display:flex;
     flex-direction:column;
     height:100%;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
     touch-action:none;
     -webkit-user-select:none;
     user-select:none;
@@ -382,7 +398,8 @@
     display:flex;
     align-items:center;
     gap:14px;
-    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:hidden;
     touch-action:none;
     -webkit-user-select:none;
     user-select:none;
@@ -621,10 +638,14 @@ function lerp(a, b, t) { return a + (b - a) * t; }
    One implementation, used by the Hall track, the Armory track, and
    the vertical quote carousels (axis:'y').
 
-   The tracks no longer scroll natively. They are overflow:hidden with
-   touch-action:none, and this module owns the position outright:
-   `pos` is the single source of truth, and scrollLeft/scrollTop is
-   only ever WRITTEN to, never read back.
+   The tracks ARE genuine native scroll containers (overflow-x/y:auto),
+   for the compositor smoothness that gives — see the CSS comment above
+   #hall-track for why that's safe. What they don't have is native GESTURE
+   handling: touch-action:none stops the browser from ever turning a touch
+   into its own momentum scroll, so this module is still the only thing
+   that decides where `pos` goes. scrollLeft/scrollTop is only ever
+   WRITTEN by this module, never read back to steer `pos` — the DOM value
+   is a rendering of our position, not the source of it.
 
    Why: a native scroller has a real edge, and a clone buffer only
    hides it if the recentre happens before the fling reaches it. Under
@@ -737,13 +758,8 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     if (dragging) return; // the move handler drives pos directly while a finger is down
     if (target !== null) {
       const diff = target - pos;
-      if (Math.abs(diff) < 1) { pos = Math.round(target); target = null; }
-      else {
-        // At least one whole pixel per frame, so the approach never stalls
-        // into the 0,1,0,1 pattern that an exponential tail would produce.
-        const step = Math.max(1, Math.round(Math.abs(diff) * easeFactor));
-        pos += Math.sign(diff) * Math.min(step, Math.abs(diff));
-      }
+      if (Math.abs(diff) < 0.5) { pos = target; target = null; }
+      else pos += diff * easeFactor;
     } else if (fling) {
       const now = performance.now();
       const t = Math.min(1, (now - fling.start) / fling.duration);
@@ -752,20 +768,18 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
       /* Velocity decays linearly to zero (a quadratic ease-out), rather
          than on tween()'s cubic curve. The difference is all in the tail:
          cubic's velocity approaches zero so gradually that it spends
-         twenty-odd frames moving a single pixel per frame, which reads as
-         a slow creep before the stop. Linear decay reaches the same total
-         travel and arrives with one or two 1px frames instead.
+         twenty-odd frames barely moving, which reads as a slow creep
+         before the actual stop. Linear decay covers the same total
+         distance and comes to rest noticeably sooner.
          Driving from velocity rather than position also keeps this
          frame-rate independent — a 120Hz screen takes twice as many
-         half-sized steps, not double the speed. */
-      const v = Math.abs(fling.v0) * (1 - t);
-      const step = Math.round(v * dt);
-      // Once a frame's worth of travel rounds to nothing, the glide is
-      // visually over; continuing would only produce the 0,1,0,1 crawl.
-      // Stopping here is invisible because it happens below one pixel per
-      // frame — unlike snapping a fixed remainder, which pops.
-      if (step < 1) fling = null;
-      else pos += fling.dir * step;
+         half-sized steps, not double the speed.
+         pos is written as a plain float every frame, exactly like the
+         drift below — see the CSS comment above #hall-track for why
+         that's now the right call rather than something to round away. */
+      const v = fling.v0 * (1 - t);
+      if (Math.abs(v) < 0.02 || t >= 1) fling = null;
+      else pos += v * dt;
     }
     wrap();
     paint();
@@ -846,10 +860,8 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
         // at exactly the speed the finger left at — no jolt at handover.
         const distance = duration * v0 / 33.3;
         if (Math.abs(distance) > 1) {
-          pos = Math.round(pos); // integral start, so every later step lands on a whole pixel
           fling = {
-            dir: Math.sign(v0),
-            v0: v0 / 16.67,       // px per ms
+            v0: v0 / 16.67,        // px per ms, signed
             start: now, last: now, duration
           };
         }
@@ -903,16 +915,6 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
   let lastInteraction = performance.now();
   let paused = false;
   let lastFrame = performance.now();
-  /* speed(px/s) * one frame's dt(~16.7ms) is well under a pixel, so handing
-     that fractional value straight to nudge() hits exactly the same
-     whole-pixel-snap problem the fling/wheel paths had: most frames round
-     to a 0px change and then one frame jumps 1px, which reads as an
-     irregular stutter rather than a slow, steady creep. Accumulating the
-     fractional remainder here and only spending it once a whole pixel has
-     built up (Bresenham-style) turns that into an evenly spaced 1px step
-     every few frames — the smoothest this can look while scrollLeft only
-     accepts integers. */
-  let carry = 0;
 
   function markInteraction() { lastInteraction = performance.now(); }
   trackEl.addEventListener('wheel', markInteraction, { passive: true });
@@ -926,14 +928,15 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
     const dt = Math.min(now - lastFrame, 50);
     lastFrame = now;
     if (!paused && (now - lastInteraction) > idleMs) {
-      carry += speed * (dt / 1000);
-      const step = Math.floor(carry);
-      // nudge() can refuse (a drag/fling/wheel-ease is in progress) — in
-      // that case leave the carry banked rather than discarding it, so
-      // drift picks back up smoothly instead of losing ground.
-      if (step >= 1 && loopApi.nudge(step)) carry -= step;
-    } else {
-      carry = 0; // don't bank distance accrued before the idle threshold
+      // A plain fractional nudge every frame. This looked wrong in
+      // isolation (most frames move a fraction of a pixel) but the earlier
+      // "fix" — rounding to whole-pixel steps — was solving the wrong
+      // layer: the container is a genuine native scroller now (see the
+      // CSS comment on #hall-track), so the compositor does its own
+      // sub-pixel interpolation on whatever we write here, the same way
+      // it did in the original file. Rounding in JS was fighting that,
+      // not helping it.
+      loopApi.nudge(speed * (dt / 1000));
     }
     requestAnimationFrame(frame);
   }
@@ -941,7 +944,7 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
 
   return {
     pause() { paused = true; },
-    resume() { paused = false; lastInteraction = performance.now(); carry = 0; }
+    resume() { paused = false; lastInteraction = performance.now(); }
   };
 }
 
