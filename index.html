@@ -1667,6 +1667,10 @@ function openHallModal(itemEl, data) {
      independently. Desktop keeps the caption visible and normally
      flowing next to the modal, so this only applies when compact. */
   const capRect = (compact && captionEl) ? captionEl.getBoundingClientRect() : null;
+  // Must be read BEFORE .detach is applied below — that class sets
+  // margin:0 on the caption, so reading this after would silently lose
+  // the true margin and under-correct captionSpace by exactly that much.
+  const capMarginTop = capRect ? parseFloat(getComputedStyle(captionEl).marginTop || '0') : 0;
   if (capRect) {
     captionEl.classList.add('detach');
     captionEl.style.top = capRect.top + 'px';
@@ -1689,9 +1693,7 @@ function openHallModal(itemEl, data) {
      correct proportions the instant the animation ends and inline
      styles are cleared. largeRect corrects the height only — top and
      left are already exactly right. */
-  const captionSpace = capRect
-    ? capRect.height + parseFloat(getComputedStyle(captionEl).marginTop || '0')
-    : 0;
+  const captionSpace = capRect ? capRect.height + capMarginTop : 0;
   const largeRect = captionSpace
     ? { top: rect.top, left: rect.left, width: rect.width, height: rect.height - captionSpace }
     : rect;
