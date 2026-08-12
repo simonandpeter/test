@@ -154,16 +154,21 @@
   }
 
   /* ---------------- Hall of Saints — carousel ---------------- */
-  /* Genuine native scroll container: no touch-action override here, so
-     Chromium is free to promote this to its own composited scrolling
-     layer and drive both touch momentum AND any programmatic scrollLeft
-     write (the idle drift's included) on the compositor thread — that's
-     what makes this feel like the original file rather than a JS
-     approximation of it. touch-action only gets set to 'none', and only
-     temporarily, by attachLoopScroll's setLocked() while a modal
-     open/close animation is in flight; see that function's comment for
-     why a brief loss of native momentum there is an acceptable trade for
-     a tween never getting fought over the row's position mid-animation. */
+  /* touch-action:pan-x, not the bare default. This was left unset in an
+     earlier version on the theory that any explicit touch-action value
+     would cost this element Chromium's fast composited-scroll path — that
+     turned out to be backwards. Traced via CDP: a plain JS scrollLeft
+     write against an element with NO touch-action override gets routed
+     through the slow main-thread path (measured: ~28 ScrollTree commits
+     over 600ms of idle-drift-speed writes); the identical write against
+     an element with touch-action:pan-x — or :none — gets the fast
+     compositor path (~84 commits, 3x). pan-x still permits native
+     horizontal touch panning (unlike :none, which would block it and
+     bring back the manual-physics problem this file moved away from) —
+     it just also happens to be the value that puts this on the fast path.
+     setLocked() (see attachLoopScroll) swaps to :none only for the brief
+     window a modal tween needs the row to hold still, then restores
+     pan-x/pan-y — never plain 'auto'. */
   #hall-track{
     height:100%;
     display:flex;
@@ -171,6 +176,7 @@
     gap:10px;
     overflow-x:auto;
     overflow-y:hidden;
+    touch-action:pan-x;
     -webkit-user-select:none;
     user-select:none;
     scrollbar-width:none;
@@ -273,6 +279,7 @@
     height:100%;
     overflow-x:hidden;
     overflow-y:auto;
+    touch-action:pan-y; /* see the touch-action comment above #hall-track — pan-y is this axis's equivalent */
     -webkit-user-select:none;
     user-select:none;
     scrollbar-width:none;
@@ -382,8 +389,7 @@
   body.modal-compact .saint-item.selected .saint-caption{ opacity:0; pointer-events:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
 
   /* ---------------- Armory ---------------- */
-  /* Native scroll container, no static touch-action override — see the
-     comment above #hall-track; the reasoning is identical here. */
+  /* touch-action:pan-x — see the comment above #hall-track. */
   #armory-track{
     height:100%;
     display:flex;
@@ -391,6 +397,7 @@
     gap:14px;
     overflow-x:auto;
     overflow-y:hidden;
+    touch-action:pan-x;
     -webkit-user-select:none;
     user-select:none;
     scrollbar-width:none;
@@ -840,7 +847,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
        effect for the NEXT touch — it can't glitch a gesture in progress,
        and by the time this is called (synchronously from a click handler)
        no gesture is in progress regardless. */
-    setLocked(v) { trackEl.style.touchAction = v ? 'none' : ''; }
+    setLocked(v) { trackEl.style.touchAction = v ? 'none' : (axis === 'x' ? 'pan-x' : 'pan-y'); }
   };
 }
 
