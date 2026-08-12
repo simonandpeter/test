@@ -486,7 +486,7 @@
 </div>
 
 <header>
-  <div class="brand">Test</div>
+  <div class="brand"></div>
   <nav>
     <a data-view="hall" class="active">Hall of Saints</a>
     <a data-view="armory">Armory</a>
@@ -859,19 +859,30 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
    drift's own next update. */
 function attachIdleDrift(trackEl, loopApi, opts = {}) {
   const idleMs = opts.idleMs ?? 5000;
-  const speed = opts.speed ?? 22; // px/s, constant from the first frame — no ramp-in
+  const speed = opts.speed ?? 22; // px/s — the speed drift cruises at once it's ramped up
+  /* Manual scrolling always settles into rest the same way: tick()'s wheel
+     ease closes the remaining distance by this same fraction every frame,
+     so velocity decays exponentially toward zero. Drift now starts up on
+     the exact mirror of that curve — velocity rises from zero toward
+     `speed` by closing the REMAINING gap to full speed by this fraction
+     every frame, the same formula run in the opposite direction. Reusing
+     tick()'s own constant (rather than a separate tuned value) is what
+     makes it a true inverse rather than just "some ramp". */
+  const rampFactor = opts.rampFactor ?? 0.16;
   const scrollProp = (opts.axis || 'x') === 'x' ? 'scrollLeft' : 'scrollTop';
 
   let lastInteraction = performance.now();
   let paused = false;
   let active = false;
   let pos = null;
+  let currentSpeed = 0;
   let lastFrame = performance.now();
 
   function markInteraction() {
     lastInteraction = performance.now();
     active = false;
     pos = null;
+    currentSpeed = 0;
   }
   trackEl.addEventListener('wheel', markInteraction, { passive: true });
   // touch gestures never fire 'wheel' — without these, drift had no way to
@@ -886,8 +897,12 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
     if (!paused) {
       const idleFor = now - lastInteraction;
       if (idleFor > idleMs) {
-        if (!active) { active = true; pos = trackEl[scrollProp]; }
-        pos += speed * (dt / 1000);
+        if (!active) { active = true; pos = trackEl[scrollProp]; currentSpeed = 0; }
+        // Same shape as tick()'s deceleration, run toward `speed` instead
+        // of toward zero — accelerates quickly at first, then eases into
+        // cruising speed rather than snapping straight to it.
+        currentSpeed += (speed - currentSpeed) * rampFactor;
+        pos += currentSpeed * (dt / 1000);
         trackEl[scrollProp] = pos;
         // synchronous correction, right here, no waiting on an async event —
         // add the delta, don't replace pos with the (rounded) DOM readback
@@ -895,6 +910,7 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
       } else if (active) {
         active = false;
         pos = null;
+        currentSpeed = 0;
       }
     }
     requestAnimationFrame(frame);
@@ -902,7 +918,7 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
   requestAnimationFrame(frame);
 
   return {
-    pause() { paused = true; active = false; pos = null; },
+    pause() { paused = true; active = false; pos = null; currentSpeed = 0; },
     resume() { paused = false; lastInteraction = performance.now(); }
   };
 }
@@ -1917,7 +1933,7 @@ function closeArmoryModal(spearEl, placeholder) {
    case), a minimum on-screen time (so a warm cache doesn't produce a
    single-frame flash of text), and a hard ceiling (so a hung request can
    never leave a visitor staring at a permanently blank overlay). */
-const LOADER_MIN_MS = 1500;
+const LOADER_MIN_MS = 2000;
 const LOADER_MAX_MS = 9000;
 const loaderShownAt = performance.now();
 let loaderDismissed = false;
