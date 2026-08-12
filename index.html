@@ -196,7 +196,19 @@
     margin-top:10px;
     margin-bottom:calc(40px + env(safe-area-inset-bottom));
     cursor:pointer;
-    transition:opacity 1s ease;
+    /* Was 1s. With a small saint count, loopSafeList's virtual repetition
+       plus the clone buffer means a dozen-plus DOM copies of the very
+       same saint exist across the row — when a modal closes, every one
+       of them (every card in the row, not just the one that was open)
+       has .dim removed in the same synchronous tick. At 1s, that's a
+       full second where a dozen simultaneously-fading copies of the same
+       image, and however many other saints', are all visible at
+       different mid-fade opacities at once — reading as duplicate images
+       flashing in, worst on desktop where more of the row is in view at
+       once. Shortening it doesn't change what has to happen (every card
+       still needs to become visible again), just how long that messy
+       in-between state is visible for. */
+    transition:opacity 0.2s ease;
   }
   .saint-item.dim{ opacity:0; pointer-events:none; }
 
@@ -427,7 +439,7 @@
     padding-top:14px;
     cursor:pointer;
     position:relative;
-    transition:opacity 1s ease;
+    transition:opacity 0.2s ease; /* was 1s — see .saint-item's comment, same clone-fade issue */
   }
   .spear .hilt{ display:flex; flex-direction:column; align-items:center; gap:3px; flex:0 0 auto; }
   .spear .hilt .pommel{ width:6px; height:6px; border-radius:50%; background:var(--line-grey); transition:background-color .4s ease; }
