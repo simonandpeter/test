@@ -1580,6 +1580,29 @@ function openHallModal(itemEl, data) {
   hallQuotesCarouselMobile.setLocked(true);
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
+  /* itemEl is a flex column with .saint-card (the image) FIRST and
+     .saint-caption (the name text) after it — so the card's own top edge
+     exactly equals itemEl's top (verified directly: both 40 in testing),
+     and the caption only extends itemEl's BOTTOM edge, adding to its
+     height, never its top. That extra height is correct to include on
+     desktop, where the caption stays visible next to the modal (the CSS
+     rule that hides it is scoped to body.modal-compact). On mobile it's
+     wrong: the caption fades out and the small dock only ever shows the
+     image, so using the caption-inflated height there stretches the
+     image taller than its true aspect ratio for the whole animation
+     (.saint-card fills 100% of whatever height is being animated) and
+     feeds a too-tall height into computeHallTarget's own aspect-ratio
+     math, throwing off the docked size too — then snaps back to the
+     correct proportions the instant the animation ends and inline
+     styles are cleared. largeRect corrects the height only — top and
+     left are already exactly right. */
+  const captionEl = itemEl.querySelector('.saint-caption');
+  const captionSpace = (compact && captionEl)
+    ? captionEl.getBoundingClientRect().height + parseFloat(getComputedStyle(captionEl).marginTop || '0')
+    : 0;
+  const largeRect = captionSpace
+    ? { top: rect.top, left: rect.left, width: rect.width, height: rect.height - captionSpace }
+    : rect;
   modalCompactMode = compact;
   document.body.classList.toggle('modal-compact', compact);
 
@@ -1593,20 +1616,20 @@ function openHallModal(itemEl, data) {
 
   hallTrack.querySelectorAll('.saint-item').forEach(el => { if (el !== itemEl) el.classList.add('dim'); });
 
-  itemEl.style.top = rect.top + 'px';
-  itemEl.style.left = rect.left + 'px';
-  itemEl.style.width = rect.width + 'px';
-  itemEl.style.height = rect.height + 'px';
+  itemEl.style.top = largeRect.top + 'px';
+  itemEl.style.left = largeRect.left + 'px';
+  itemEl.style.width = largeRect.width + 'px';
+  itemEl.style.height = largeRect.height + 'px';
   itemEl.classList.add('selected');
 
-  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(rect, compact);
-  currentHallOpen = { itemEl, origRect: rect, placeholder };
+  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
+  currentHallOpen = { itemEl, origRect: rect, placeholder, captionSpace };
 
   tween(1500, (t) => {
-    itemEl.style.top = lerp(rect.top, targetTop, t) + 'px';
-    itemEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
-    itemEl.style.width = lerp(rect.width, targetW, t) + 'px';
-    itemEl.style.height = lerp(rect.height, targetH, t) + 'px';
+    itemEl.style.top = lerp(largeRect.top, targetTop, t) + 'px';
+    itemEl.style.left = lerp(largeRect.left, targetLeft, t) + 'px';
+    itemEl.style.width = lerp(largeRect.width, targetW, t) + 'px';
+    itemEl.style.height = lerp(largeRect.height, targetH, t) + 'px';
   });
 
   // build chapter HTML once (with quote anchors embedded) and populate both panels
@@ -1646,6 +1669,14 @@ function openHallModal(itemEl, data) {
 function closeHallModal(itemEl, placeholder) {
   hallBusy = true;
   hallDrift.resume(); // 5s idle countdown restarts fresh from now
+  // Read before clearing — see openHallModal's comment on why the deck-
+  // sized endpoint of this tween needs the same height correction the
+  // open tween used (top and left are already exactly right — see
+  // openHallModal's comment), and why itemEl's own rect isn't a
+  // caption-inflated measurement the way the deck placeholder's is:
+  // itemEl's current size is whatever the open tween last set it to
+  // (the small docked size), not this saint-item's full deck size.
+  const captionSpace = currentHallOpen ? currentHallOpen.captionSpace : 0;
   currentHallOpen = null;
   modalCompactMode = null;
   hallModalQuotes.classList.remove('reveal');
@@ -1658,12 +1689,13 @@ function closeHallModal(itemEl, placeholder) {
 
   const rect = placeholder.getBoundingClientRect();
   const from = itemEl.getBoundingClientRect();
+  const largeHeight = rect.height - captionSpace;
 
   tween(1500, (t) => {
     itemEl.style.top = lerp(from.top, rect.top, t) + 'px';
     itemEl.style.left = lerp(from.left, rect.left, t) + 'px';
     itemEl.style.width = lerp(from.width, rect.width, t) + 'px';
-    itemEl.style.height = lerp(from.height, rect.height, t) + 'px';
+    itemEl.style.height = lerp(from.height, largeHeight, t) + 'px';
   }, () => {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
@@ -2017,11 +2049,17 @@ function refreshHallModalLayout() {
     currentHallOpen.origRect = sibRect;
   }
 
-  const { itemEl, origRect } = currentHallOpen;
+  const { itemEl, origRect, captionSpace } = currentHallOpen;
   const compact = isModalCompact(origRect);
+  // Same correction as openHallModal/closeHallModal — see openHallModal's
+  // comment. captionSpace is 0 whenever this modal opened on desktop, so
+  // this is a no-op there.
+  const largeRect = (compact && captionSpace)
+    ? { top: origRect.top, left: origRect.left, width: origRect.width, height: origRect.height - captionSpace }
+    : origRect;
 
   if (compact === modalCompactMode) {
-    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, compact);
+    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
     itemEl.style.top = targetTop + 'px';
     itemEl.style.left = targetLeft + 'px';
     itemEl.style.width = targetW + 'px';
@@ -2036,7 +2074,7 @@ function refreshHallModalLayout() {
 
   setTimeout(() => {
     document.body.classList.toggle('modal-compact', compact);
-    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(origRect, compact);
+    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
     itemEl.style.top = targetTop + 'px';
     itemEl.style.left = targetLeft + 'px';
     itemEl.style.width = targetW + 'px';
