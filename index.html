@@ -5,10 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Test</title>
 
+<script>
+  // Applied before <style> even parses, so the very first paint already
+  // has the right theme — doing this later (e.g. in the main script at
+  // the bottom of <body>) would show a flash of the wrong theme first,
+  // and would also visibly trigger the 2s fade on every page load.
+  (function () {
+    try {
+      if (localStorage.getItem('dark-mode') === '1') document.documentElement.classList.add('dark');
+    } catch (e) { /* private-mode / storage disabled — default to light, harmless */ }
+  })();
+</script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
   :root{
+    --bg: #ffffff;
     --ink: #1c1a16;
     --ink-soft: #55524a;
     --line-grey: #b7b1a2;
@@ -16,7 +29,30 @@
     --rubric: #8a2e26;
     --hl: #f5e05a;
   }
-  *{ box-sizing:border-box; }
+  /* Dark mode — toggled via .dark on <html> (not <body>) so the very
+     first paint already has the right background, no flash. Only --bg
+     and --ink are exact values from the brief (rgb(15,13,15) /
+     rgb(245,245,245)); the rest are this file's existing accent colours
+     re-tuned to the same relative roles (soft text, dividers, the red
+     accent, the quote highlight) so they read correctly against a
+     near-black background instead of disappearing or glaring. */
+  html.dark{
+    --bg: rgb(15,13,15);
+    --ink: rgb(245,245,245);
+    --ink-soft: rgb(170,166,158);
+    --line-grey: rgb(90,86,79);
+    --line-grey-soft: rgb(38,35,32);
+    --rubric: rgb(214,109,97);
+    --hl: rgb(199,169,58);
+  }
+  /* Applies to every element with its own background/text/border colour
+     — deliberately broad rather than an enumerated list, since that list
+     would need updating every time a new coloured element is added.
+     Elements with their own more specific transition (hover states, the
+     loading bar's pulse) keep that faster one; CSS resolves per-property
+     by specificity, so this only fills in the elements that don't
+     already declare their own. */
+  *{ box-sizing:border-box; transition: background-color 2s ease, color 2s ease, border-color 2s ease, fill 2s ease, stroke 2s ease; }
 
   /* ---- loading screen ---------------------------------------------
      Opacity and colour only. The site's rule that position/rotation/scale
@@ -25,11 +61,11 @@
      is the simpler tool and it runs off the main thread. */
   #loading-screen{
     position:fixed; inset:0; z-index:200;
-    background:#fff;
+    background:var(--bg);
     display:flex; align-items:center; justify-content:center;
     /* Fades itself out, then is removed from the DOM entirely so it can
        never intercept a tap once the site is live. */
-    transition:opacity .55s ease;
+    transition:opacity .55s ease, background-color 2s ease;
   }
   #loading-screen.done{ opacity:0; pointer-events:none; }
   .loading-stack{
@@ -84,7 +120,7 @@
   }
   html,body{ height:100%; margin:0; }
   body{
-    background:#ffffff;
+    background:var(--bg);
     color:var(--ink);
     font-family:'Times New Roman', Times, serif;
     overflow:hidden;
@@ -96,7 +132,7 @@
     position:relative;
     z-index:50;
     height:30px;
-    background:#fff;
+    background:var(--bg);
     display:flex;
     align-items:center;
     border-bottom:1px solid var(--line-grey-soft);
@@ -132,7 +168,28 @@
     color:var(--rubric);
     border-color:var(--rubric);
   }
-  header .spacer{ flex:1 1 0%; }
+  header .spacer{
+    flex:1 1 0%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+  }
+  #dark-toggle{
+    cursor:pointer;
+    background:none;
+    border:none;
+    padding:0;
+    font:inherit;
+    color:inherit;
+    font-size:10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    white-space:nowrap;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, color .3s ease;
+  }
+  #dark-toggle:hover{ color:var(--rubric); border-color:var(--rubric); }
 
   @media (max-width:700px){
     header .brand{ font-size:14px; }
@@ -154,21 +211,14 @@
   }
 
   /* ---------------- Hall of Saints — carousel ---------------- */
-  /* touch-action:pan-x, not the bare default. This was left unset in an
-     earlier version on the theory that any explicit touch-action value
-     would cost this element Chromium's fast composited-scroll path — that
-     turned out to be backwards. Traced via CDP: a plain JS scrollLeft
-     write against an element with NO touch-action override gets routed
-     through the slow main-thread path (measured: ~28 ScrollTree commits
-     over 600ms of idle-drift-speed writes); the identical write against
-     an element with touch-action:pan-x — or :none — gets the fast
-     compositor path (~84 commits, 3x). pan-x still permits native
-     horizontal touch panning (unlike :none, which would block it and
-     bring back the manual-physics problem this file moved away from) —
-     it just also happens to be the value that puts this on the fast path.
-     setLocked() (see attachLoopScroll) swaps to :none only for the brief
-     window a modal tween needs the row to hold still, then restores
-     pan-x/pan-y — never plain 'auto'. */
+  /* touch-action:pan-x, not the bare default — verified via CDP tracing:
+     an element with no touch-action override routes scrollLeft writes
+     through Chromium's slow main-thread path; pan-x (like :none) gets
+     the fast composited-scroll path, but still permits native touch
+     panning unlike :none. setLocked() (attachLoopScroll) only swaps to
+     :none for the brief window a modal tween needs the row still, then
+     restores pan-x/pan-y — never plain 'auto', which would lose the
+     fast path again. */
   #hall-track{
     height:100%;
     display:flex;
@@ -196,18 +246,12 @@
     margin-top:10px;
     margin-bottom:calc(40px + env(safe-area-inset-bottom));
     cursor:pointer;
-    /* Was 1s. With a small saint count, loopSafeList's virtual repetition
-       plus the clone buffer means a dozen-plus DOM copies of the very
-       same saint exist across the row — when a modal closes, every one
-       of them (every card in the row, not just the one that was open)
-       has .dim removed in the same synchronous tick. At 1s, that's a
-       full second where a dozen simultaneously-fading copies of the same
-       image, and however many other saints', are all visible at
-       different mid-fade opacities at once — reading as duplicate images
-       flashing in, worst on desktop where more of the row is in view at
-       once. Shortening it doesn't change what has to happen (every card
-       still needs to become visible again), just how long that messy
-       in-between state is visible for. */
+    /* Keep this short — was 1s, but every DOM clone in the row (a small
+       saint count means loopSafeList + the clone buffer produce a
+       dozen-plus copies of the same saint) has .dim removed at once when
+       a modal closes. At 1s that's a full second of many clones visible
+       at different mid-fade opacities — reads as duplicate images
+       flashing in, worst on desktop where more of the row is in view. */
     transition:opacity 0.2s ease;
   }
   .saint-item.dim{ opacity:0; pointer-events:none; }
@@ -218,7 +262,7 @@
     height:calc(100dvh - 104px);
     aspect-ratio:1/2.4;
     overflow:hidden;
-    background:#fdfdfc;
+    background:var(--bg);
   }
   .saint-card img{
     width:100%; height:100%;
@@ -326,11 +370,11 @@
   .chapters-panel::-webkit-scrollbar{ display:none; }
   .chapter-header{
     display:block; width:100%; text-align:left;
-    background:#fff; border:none; font-family:inherit;
+    background:var(--bg); border:none; font-family:inherit;
     font-size:14px; letter-spacing:0.03em;
     color:var(--ink); cursor:pointer;
     padding:10px 4px; border-bottom:1px solid var(--line-grey-soft);
-    transition:color .3s ease;
+    transition:color .3s ease, background-color 2s ease;
   }
   .chapter-header:hover{ color:var(--rubric); }
   .chapter.revealed .chapter-header{
@@ -358,10 +402,10 @@
     position:fixed; top:44px; right:6vw; z-index:42;
     width:34px; height:34px;
     border:1px solid var(--line-grey);
-    background:#fff;
+    background:var(--bg);
     display:none; align-items:center; justify-content:center;
     cursor:pointer;
-    transition:border-color .3s ease, transform .3s ease;
+    transition:border-color .3s ease, transform .3s ease, background-color 2s ease;
   }
   #hall-close.show{ display:flex; }
   #hall-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
@@ -379,15 +423,15 @@
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     opacity:0; pointer-events:none;
-    transition:opacity .5s ease;
+    transition:opacity .5s ease, background-color 2s ease;
     z-index:35;
-    background:#fff;
+    background:var(--bg);
   }
   body.modal-compact #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
 
   .mobile-hero-bar{
     position:sticky; top:0; z-index:2; /* the panel's padding-top provides the clearance from the page header — an extra top offset here would double it and also create a natural/stuck position mismatch */
-    background:#fff;
+    background:var(--bg);
     border-bottom:1px solid var(--line-grey-soft);
     padding-bottom:20px; /* extends the bar's own opaque coverage down to where the chapter header takes over sticking — without this, that gap was uncovered by any background, letting scrolled-past body text show through it */
   }
@@ -461,7 +505,7 @@
   }
   .spear:hover .shaft-text{ color:var(--ink); }
   .spear.dim{ opacity:0; pointer-events:none; }
-  .spear.selected{ position:fixed; z-index:40; margin:0; padding-top:0; background:#fff; transform-origin:center center; }
+  .spear.selected{ position:fixed; z-index:40; margin:0; padding-top:0; background:var(--bg); transform-origin:center center; }
   .spear.selected .hilt{ display:none; }
   .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
 
@@ -469,7 +513,7 @@
     position:fixed; left:50%; transform:translateX(-50%);
     top:calc(50% + 60px); z-index:41;
     font-style:italic; font-size:14px; color:var(--ink-soft);
-    text-align:center; opacity:0; transition:opacity 1s ease; white-space:nowrap;
+    text-align:center; opacity:0; transition:opacity 1s ease, color 2s ease; white-space:nowrap;
   }
   #armory-attribution.reveal{ opacity:1; }
   #armory-attribution a{ border-bottom:1px solid var(--rubric); color:var(--rubric); text-decoration:none; }
@@ -477,8 +521,8 @@
   #armory-close{
     position:fixed; top:44px; right:6vw; z-index:42;
     width:34px; height:34px; border:1px solid var(--line-grey);
-    background:#fff; display:none; align-items:center; justify-content:center;
-    cursor:pointer; transition:border-color .3s ease, transform .3s ease;
+    background:var(--bg); display:none; align-items:center; justify-content:center;
+    cursor:pointer; transition:border-color .3s ease, transform .3s ease, background-color 2s ease;
   }
   #armory-close.show{ display:flex; }
   #armory-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
@@ -514,7 +558,9 @@
     <a data-view="hall" class="active">Hall of Saints</a>
     <a data-view="armory">Armory</a>
   </nav>
-  <div class="spacer"></div>
+  <div class="spacer">
+    <button id="dark-toggle" type="button">Toggle Dark Mode</button>
+  </div>
 </header>
 
 <main>
@@ -578,17 +624,11 @@ const GITHUB_OWNER  = 'simonandpeter';
 const GITHUB_REPO   = 'test';
 const GITHUB_BRANCH = 'main';
 
-/* The desktop split-panel modal layout (two 420px/320px-ish fixed panels
-   either side of the enlarged card) needs real room to breathe. Below this
-   width the panels start to crowd the centred card, so we switch to the
-   compact single-column layout — independent of the header's own 700px
-   breakpoint, since this is about panel geometry, not device type. */
-/* The desktop split-panel modal layout needs real room: the chapters
-   panel maxes out at 420px, centred in the right half, and must clear
-   the centred card. Rather than guess a fixed pixel breakpoint (which
-   was wrong — overlap actually starts much wider than expected once the
-   card's own width is accounted for), compute directly whether they'd
-   collide at the current window size. */
+/* The desktop split-panel layout needs real room: the chapters panel
+   maxes out at 420px, centred in the right half, and must clear the
+   centred card. Computed directly (collision check) rather than a fixed
+   pixel breakpoint — independent of the header's own 700px breakpoint,
+   since this is about panel geometry, not device type. */
 function isModalCompact(origRect) {
   const availH = window.innerHeight - HEADER_H;
   const targetH = availH * 0.62;
@@ -635,6 +675,11 @@ document.querySelectorAll('header nav a').forEach(a => {
   });
 });
 
+document.getElementById('dark-toggle').addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark');
+  try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
+});
+
 /* =====================================================================
    TWEEN — every position/rotation/scale animation in this file runs
    through this. No CSS transitions on those properties anywhere —
@@ -653,36 +698,44 @@ function tween(duration, onFrame, onComplete) {
 }
 function lerp(a, b, t) { return a + (b - a) * t; }
 
+/* Shared by the Hall and Armory open/close flows: reserves an item's row
+   slot with a same-sized placeholder while the real element goes
+   position:fixed, and dims/undims the rest of the row around it. Takes
+   an already-measured rect rather than measuring itemEl itself — by the
+   time this runs, callers may have already mutated the element (Hall's
+   caption gets detached from flow first, which changes itemEl's OWN
+   measured height if this re-measured fresh). */
+function createPlaceholder(el, rect, className) {
+  const placeholder = document.createElement('div');
+  placeholder.className = className;
+  placeholder.style.width = rect.width + 'px';
+  placeholder.style.height = rect.height + 'px';
+  placeholder.style.marginTop = getComputedStyle(el).marginTop;
+  placeholder.style.marginBottom = getComputedStyle(el).marginBottom;
+  el.after(placeholder);
+  return placeholder;
+}
+function setSiblingsDim(track, itemSelector, exceptEl, dim) {
+  track.querySelectorAll(itemSelector).forEach(el => {
+    if (dim && el === exceptEl) return;
+    el.classList.toggle('dim', dim);
+  });
+}
+
 /* =====================================================================
-   SHARED — infinite-loop carousel, built on GENUINE native touch/wheel
-   scrolling rather than JS-computed physics.
+   SHARED — infinite-loop carousel, driven by native touch/wheel scrolling
+   (not custom JS physics). Native scrolling is what lets Chromium put
+   this on its own composited scroll layer — touch-action:none would
+   disqualify it and force scrollLeft writes onto the slower main-thread
+   path, which is where visible jitter comes from.
 
-   Why the U-turn: the manual-physics version (own fling model, own
-   touchmove tracking, touch-action:none) never bounced, but it also never
-   felt as smooth as the original file — because touch-action:none
-   disqualifies an element from Chromium's fast, independently-composited
-   scroll layer, regardless of overflow:auto. That optimization exists
-   specifically for elements the browser is allowed to pan directly; once
-   touch-action says "never", every scrollLeft write — including the idle
-   drift's, which has nothing to do with touch — falls back to the slower
-   main-thread path. That was the real source of the residual jitter.
-
-   So this version hands touch scrolling back to the browser entirely: no
-   touchmove tracking, no custom fling curve, real native momentum. The
-   trade-off is real and worth stating plainly: a native scroller has a
-   true edge, and recentring can only happen when it's SAFE to write to
-   scrollLeft (mid-momentum, a correction on Android cancels the fling
-   outright rather than just failing to stick). So instead of the earlier
-   version's guarantee, this uses the same strategy the original file
-   used — defer any correction until a gesture and its momentum have
-   plausibly finished — backed by a much larger clone buffer (see
-   BUFFER below) than the original had, so a fling has far more room to
-   run its course before a correction is ever needed. With today's real
-   dataset sizes this comfortably covers even a maximally hard fling (see
-   the stress test in the project notes); an extremely small dataset
-   (a handful of items) narrows that margin, the same way it did
-   originally — if that ever becomes a live case, the JS-physics version
-   is the safe fallback.
+   Trade-off: a native scroller has a true edge, and a correction can
+   only be applied when it's safe to write scrollLeft (mid-momentum, a
+   write on Android cancels the fling outright). So corrections are
+   deferred until a gesture and its momentum have plausibly finished,
+   backed by a generous clone buffer so a fling has room to run its
+   course first. Comfortable for today's dataset sizes; an extremely
+   small dataset narrows that margin.
 ===================================================================== */
 function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   const axis = opts.axis || 'x';
@@ -763,22 +816,15 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
     } else if (targetScroll > upperBound) {
       targetScroll -= Math.ceil((targetScroll - upperBound) / bodySpan) * bodySpan;
     }
-    /* Bring the currently-painted position into the SAME wrap-generation
-       as the target we just settled on. This used to be "shift current by
-       whatever we just shifted target by" — simple, but it compounds: a
-       burst of wheel events arriving faster than a single paint (a real
-       trackpad can do this) fires wrapTarget() several times in a row
-       before current ever gets a chance to actually move, and each call
-       re-applied its own shift on top of the last one, walking current
-       straight to the true DOM edge (verified — happened in as few as
-       5-7 rapid events).
-       Recomputing fresh from the actual gap each time is idempotent
-       instead: however many times this runs before a paint, it keeps
-       converging current toward the SAME small residual distance from
-       target rather than accumulating shift after shift. Skipping it
-       when the gap is already sub-bodySpan also leaves normal easing
-       untouched for the overwhelmingly common case (no wrap in flight),
-       which is what actually keeps ordinary scrolling smooth. */
+    /* Bring current into the SAME wrap-generation as the target, computed
+       fresh from the actual gap each call — NOT by re-applying "shift
+       current by whatever we just shifted target by". That simpler
+       version compounds: a burst of wheel events faster than one paint
+       (a real trackpad can do this) fires wrapTarget() several times
+       before current ever moves, and each shift stacks on the last,
+       walking current straight to the true DOM edge (verified: as few
+       as 5-7 rapid events). Recomputing fresh instead converges toward
+       the same small residual gap no matter how many times it runs. */
     if (bodySpan > 0) {
       const gap = trackEl[scrollProp] - targetScroll;
       const n = Math.round(gap / bodySpan);
@@ -823,15 +869,11 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   // it's safe.
   trackEl.addEventListener('touchstart', () => {
     touchActive = true;
-    /* A wheel-driven ease can still be converging toward targetScroll for
-       several frames after the last wheel tick (easeFactor is a gentle
-       0.16/frame, so a big glide takes a while to settle). If a touch
-       gesture starts before that finishes, tick() keeps overwriting
-       scrollLeft every frame right underneath the native touch-scroll —
-       the two fight and the touch barely moves anything. A touch always
-       wins: stop the ease outright and let native panning take over
-       completely, the way a real scroller would behave regardless of
-       what it was doing a moment ago. */
+    /* A touch always wins over a still-converging wheel ease (easeFactor
+       is gentle, so a big glide takes several frames to settle) —
+       otherwise tick() keeps overwriting scrollLeft under the touch and
+       the two fight, barely moving anything. Stop the ease outright and
+       hand off to native panning. */
     isEasing = false;
     if (raf !== null) { cancelAnimationFrame(raf); raf = null; }
   }, { passive: true });
@@ -862,14 +904,11 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
       checkLoop();
       return trackEl[scrollProp] - before; // 0 on ordinary frames; the exact jump size only when a loop-wrap correction actually fired
     },
-    /* Dynamically switches the element between native-pannable (default,
-       for compositor smoothness) and programmatically-only (during a
-       modal open/close animation, so a stray swipe can't move the row
-       out from under a tween that just captured its position). Touch-
-       action is read once at gesture start, so this only ever takes
-       effect for the NEXT touch — it can't glitch a gesture in progress,
-       and by the time this is called (synchronously from a click handler)
-       no gesture is in progress regardless. */
+    /* Toggles the element between native-pannable (default, for
+       compositor smoothness) and programmatic-only (during a modal
+       tween, so a stray swipe can't move the row mid-animation).
+       touch-action is read at gesture start, so this only ever takes
+       effect for the NEXT touch — safe to call mid-tween. */
     setLocked(v) { trackEl.style.touchAction = v ? 'none' : (axis === 'x' ? 'pan-x' : 'pan-y'); }
   };
 }
@@ -883,14 +922,10 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 function attachIdleDrift(trackEl, loopApi, opts = {}) {
   const idleMs = opts.idleMs ?? 5000;
   const speed = opts.speed ?? 22; // px/s — the speed drift cruises at once it's ramped up
-  /* Manual scrolling always settles into rest the same way: tick()'s wheel
-     ease closes the remaining distance by this same fraction every frame,
-     so velocity decays exponentially toward zero. Drift now starts up on
-     the exact mirror of that curve — velocity rises from zero toward
-     `speed` by closing the REMAINING gap to full speed by this fraction
-     every frame, the same formula run in the opposite direction. Reusing
-     tick()'s own constant (rather than a separate tuned value) is what
-     makes it a true inverse rather than just "some ramp". */
+  /* Drift ramps up on the exact mirror of tick()'s wheel-ease decay:
+     velocity rises toward `speed` by closing the remaining gap by this
+     same fraction each frame. Reusing tick()'s own constant (not a
+     separate tuned value) is what makes it a true inverse. */
   const rampFactor = opts.rampFactor ?? 0.16;
   const scrollProp = (opts.axis || 'x') === 'x' ? 'scrollLeft' : 'scrollTop';
 
@@ -1060,16 +1095,12 @@ function linkQuotesToChapters(quoteLines, chapters) {
 }
 
 /* Saint folders carry a sortable year-of-death prefix: four digits then
-   B for BC or C for AD — "0353C St Antony the Great", "1450B Moses".
-   Zero-padding and the B/C suffix exist so the folder listing sorts
-   chronologically; neither belongs on screen, so this turns the prefix
-   back into its readable form and hands back both spellings.
-
-   `display` is what the reader sees. `base` is the bare name with no
-   year at all, and it matters: the Armory decides whether a quote's
-   source is one of these saints by comparing it against the name from
-   quotes.txt, which has no year prefix. Matching on the displayed name
-   would break every attribution link the moment a folder was renamed. */
+   B/C for BC/AD — "0353C St Antony the Great", "1450B Moses". Neither
+   belongs on screen, so this turns it back into readable form.
+   `display` is what the reader sees; `base` is the bare name, used for
+   matching Armory quote sources (which have no year prefix) — matching
+   on `display` instead would break attribution the moment a folder was
+   renamed. */
 function parseSaintFolder(folder) {
   const m = /^(\d{1,4})\s*([BbCc])[\s._\-—]*(.+)$/.exec(folder.trim());
   if (!m) return { display: folder, base: folder, sortKey: null };
@@ -1078,12 +1109,10 @@ function parseSaintFolder(folder) {
   const era = isBC ? 'BC' : 'AD';
   const base = m[3].trim();
   if (!base) return { display: folder, base: folder, sortKey: null };
-  /* Alphabetical folder order sorts correctly within AD but not across
-     the era boundary: "1450B Moses" falls between "0353C" and "1859C",
-     and BC years run backwards against each other (1450BC precedes
-     500BC in time but follows it alphabetically). Signing the year
-     fixes both at once — BC becomes negative, so a single numeric sort
-     is chronological across the whole range. */
+  /* Alphabetical folder order breaks across the era boundary ("1450B
+     Moses" falls between "0353C" and "1859C") and runs BC years
+     backwards. Signing the year (BC negative) fixes both with one
+     numeric sort. */
   return { display: `${year}${era} ${base}`, base, sortKey: isBC ? -year : year };
 }
 
@@ -1139,14 +1168,12 @@ async function fetchText(url) {
   return res.text();
 }
 
-/* The GitHub API allows 60 unauthenticated requests per hour PER IP, and
-   this page spends one on every single load. That is plenty for visitors
-   and nowhere near enough for a device-testing session, where forty
-   reloads in an hour is normal — after which the API starts returning
-   403, loadSaints() falls through to the built-in demo, and the real
-   saint images silently vanish. Caching the folder listing means a
-   reload costs nothing, and a listing that's already been seen keeps
-   working even once the limit IS hit. */
+/* GitHub's unauthenticated API allows 60 requests/hour per IP, spent one
+   per page load — fine for visitors, not for a device-testing session
+   (40+ reloads/hour is normal), after which loadSaints() falls through
+   to the demo and real images vanish. Caching the folder listing means
+   a reload costs nothing, and a listing already seen keeps working even
+   once the limit is hit. */
 const TREE_CACHE_KEY = 'saints-tree-cache-v1';
 const TREE_CACHE_MS = 10 * 60 * 1000;
 
@@ -1355,36 +1382,26 @@ const hallChaptersMobile = createChapterController(
 );
 
 /* ---- chapter accordion (shared by desktop + mobile panels) ---- */
-/* Chapters progressively reveal as the reader scrolls near the end of the
-   current one (watched via a sentinel at the bottom of each chapter body),
-   rather than being an exclusive one-at-a-time accordion. Each revealed
-   chapter's header is sticky, so as the reader scrolls into the next
-   chapter, its header naturally covers the previous one — no extra JS
-   needed for that part, it's just how stacked position:sticky works.
-   Scrolling back up to the start of the first-revealed chapter reveals
-   the one before it, mirroring the forward behaviour. */
+/* Chapters progressively reveal as the reader nears the end of the
+   current one (a sentinel at each chapter's bottom), not as an exclusive
+   one-at-a-time accordion. Scrolling back up past the first-revealed
+   chapter's start reveals the one before it, mirroring the forward
+   behaviour. See stickyObserver below for how headers hand off. */
 function createChapterController(container, getScrollRoot, getStickyOffset = () => 0) {
   let firstOpen = null;
   let revealedUpTo = -1;
   let nextObserver = null;
   let prevObserver = null;
-  /* Every revealed chapter's header sticks at the SAME top offset (the
-     clearance below whatever sits above the panel — the sticky bar on
-     mobile, nothing on desktop), so in principle a later header simply
-     paints over an earlier one once both are pinned there — no extra
-     JS needed, which is how this worked originally. In practice a
-     chapter's header only becomes position:sticky once THAT chapter is
-     revealed, and reveal is itself scroll-triggered — so there's a
-     window where an earlier header is already stuck but the one that's
-     supposed to cover it hasn't engaged yet, and the stuck header keeps
-     riding up over whatever sits above the panel instead of stopping.
-     stickyObserver watches every revealed chapter's own start-sentinel
-     with a top-shifted root margin matching the sticky offset, so it
-     fires exactly when that chapter's start crosses the sticky line —
-     in either scroll direction. Only the highest-index chapter past
-     that line is ever shown as the active header; every earlier one
-     that's also past it gets hidden outright, and un-hides itself the
-     moment scrolling back up carries it below the line again. */
+  /* Only the highest-index revealed chapter past the sticky line ever
+     shows its header — earlier ones that are also past it get hidden,
+     un-hiding the moment scrolling carries them below the line again.
+     Needed because a header only becomes position:sticky once ITS OWN
+     chapter is revealed, and reveal is itself scroll-triggered — so
+     there's a window where an earlier header is already stuck but the
+     one meant to cover it hasn't engaged yet. stickyObserver watches
+     each revealed chapter's start-sentinel with a top-shifted root
+     margin matching the sticky offset, firing when that chapter's start
+     crosses the line in either direction. */
   let stickyObserver = null;
   const stuckSet = new Set();
   const observedSentinels = new Set();
@@ -1669,15 +1686,10 @@ function openHallModal(itemEl, data) {
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
   const captionEl = itemEl.querySelector('.saint-caption');
-  /* On mobile, .saint-caption fades out via the body.modal-compact CSS
-     rule below — but it's still a normal flex child of itemEl while that
-     300ms fade plays, so it was riding along with the image as it
-     shrinks and moves, fading and sliding at once. Freezing it to its
-     current on-screen position (position:fixed, matching where it
-     already visually sits) before the fade starts decouples the two: the
-     text just fades out where it is, and the image animates
-     independently. Desktop keeps the caption visible and normally
-     flowing next to the modal, so this only applies when compact. */
+  /* Mobile only: freeze the caption to its current on-screen position
+     (position:fixed) before its opacity fade starts, so it fades out in
+     place instead of riding along with the shrinking image. Desktop
+     keeps the caption visible and normally flowing, so skip this there. */
   const capRect = (compact && captionEl) ? captionEl.getBoundingClientRect() : null;
   // Must be read BEFORE .detach is applied below — that class sets
   // margin:0 on the caption, so reading this after would silently lose
@@ -1689,22 +1701,17 @@ function openHallModal(itemEl, data) {
     captionEl.style.left = capRect.left + 'px';
     captionEl.style.width = capRect.width + 'px';
   }
-  /* itemEl is a flex column with .saint-card (the image) FIRST and
-     .saint-caption (the name text) after it — so the card's own top edge
-     exactly equals itemEl's top (verified directly: both 40 in testing),
-     and the caption only extends itemEl's BOTTOM edge, adding to its
-     height, never its top. That extra height is correct to include on
-     desktop, where the caption stays visible next to the modal (the CSS
-     rule that hides it is scoped to body.modal-compact). On mobile it's
-     wrong: the caption fades out and the small dock only ever shows the
-     image, so using the caption-inflated height there stretches the
-     image taller than its true aspect ratio for the whole animation
-     (.saint-card fills 100% of whatever height is being animated) and
-     feeds a too-tall height into computeHallTarget's own aspect-ratio
-     math, throwing off the docked size too — then snaps back to the
-     correct proportions the instant the animation ends and inline
-     styles are cleared. largeRect corrects the height only — top and
-     left are already exactly right. */
+  /* itemEl is a flex column: .saint-card (image) first, .saint-caption
+     after — so the card's top exactly equals itemEl's top, and the
+     caption only extends itemEl's BOTTOM edge (verified directly). That
+     extra height belongs in the animation on desktop, where the caption
+     stays visible next to the modal. On mobile it doesn't: the caption
+     fades out and the dock only ever shows the image, so including it
+     stretches the image past its true aspect ratio for the whole
+     animation (.saint-card fills 100% of whatever height is animating)
+     and skews computeHallTarget's own aspect-ratio math — then snaps
+     back the instant the animation ends and inline styles clear.
+     largeRect corrects the height only; top/left are already right. */
   const captionSpace = capRect ? capRect.height + capMarginTop : 0;
   const largeRect = captionSpace
     ? { top: rect.top, left: rect.left, width: rect.width, height: rect.height - captionSpace }
@@ -1712,15 +1719,9 @@ function openHallModal(itemEl, data) {
   modalCompactMode = compact;
   document.body.classList.toggle('modal-compact', compact);
 
-  const placeholder = document.createElement('div');
-  placeholder.className = 'item-placeholder';
-  placeholder.style.width = rect.width + 'px';
-  placeholder.style.height = rect.height + 'px';
-  placeholder.style.marginTop = getComputedStyle(itemEl).marginTop;
-  placeholder.style.marginBottom = getComputedStyle(itemEl).marginBottom;
-  itemEl.after(placeholder);
+  const placeholder = createPlaceholder(itemEl, rect, 'item-placeholder');
 
-  hallTrack.querySelectorAll('.saint-item').forEach(el => { if (el !== itemEl) el.classList.add('dim'); });
+  setSiblingsDim(hallTrack, '.saint-item', itemEl, true);
 
   itemEl.style.top = largeRect.top + 'px';
   itemEl.style.left = largeRect.left + 'px';
@@ -1813,7 +1814,7 @@ function closeHallModal(itemEl, placeholder) {
     if (captionEl) { captionEl.classList.remove('detach'); captionEl.removeAttribute('style'); }
     placeholder.remove();
     document.body.classList.remove('modal-compact');
-    hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
+    setSiblingsDim(hallTrack, '.saint-item', null, false);
     hallBusy = false;
     // Only now — matching wheel scrolling, which stays blocked for the
     // whole time the modal is open (hallBusy || currentHallOpen), not
@@ -1925,15 +1926,9 @@ function openArmoryModal(spearEl, q) {
   armoryInertia.setLocked(true); // released once the modal is fully closed — see openHallModal's comment
   const rect = spearEl.getBoundingClientRect();
 
-  const placeholder = document.createElement('div');
-  placeholder.className = 'spear-placeholder';
-  placeholder.style.width = rect.width + 'px';
-  placeholder.style.height = rect.height + 'px';
-  placeholder.style.marginTop = getComputedStyle(spearEl).marginTop;
-  placeholder.style.marginBottom = getComputedStyle(spearEl).marginBottom;
-  spearEl.after(placeholder);
+  const placeholder = createPlaceholder(spearEl, rect, 'spear-placeholder');
 
-  armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.add('dim'); });
+  setSiblingsDim(armoryTrack, '.spear', spearEl, true);
 
   spearEl.style.top = rect.top + 'px';
   spearEl.style.left = rect.left + 'px';
@@ -2031,7 +2026,7 @@ function closeArmoryModal(spearEl, placeholder) {
   const roughRect = measureTrueRestingRect(spearEl, placeholder);
   const overshootTop = roughRect.top - 30;
 
-  armoryTrack.querySelectorAll('.spear').forEach(el => { if (el !== spearEl) el.classList.remove('dim'); });
+  setSiblingsDim(armoryTrack, '.spear', null, false);
 
   tween(1000, (t) => {
     spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
