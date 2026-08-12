@@ -226,6 +226,10 @@
     transition:color .3s ease;
   }
   .saint-item:hover .saint-caption{ color:var(--rubric); }
+  /* Set only while the Hall modal is opening/open on mobile — see
+     openHallModal's comment. top/left/width are set inline per-instance,
+     capturing wherever the caption already was on screen. */
+  .saint-caption.detach{ position:fixed; margin:0; z-index:39; }
 
   /* Mobile only: real names can wrap to 2 lines, and the deck sits close
      to the home-indicator safe area — give the caption guaranteed room
@@ -323,6 +327,13 @@
   body.modal-compact .mobile-chapters .chapter.revealed .chapter-header{
     top: var(--mobile-chapter-sticky-top, 178px); /* set by syncMobileChapterStickyTop() — keeps every revealed chapter's header pinned below the bar, not just the first one */
   }
+  /* An earlier chapter's header that's been scrolled past and superseded
+     by a later one — see stickyObserver's comment in
+     createChapterController. opacity, not display:none, so it still
+     participates in position:sticky's own layout math and comes back
+     instantly (no re-render) the moment scrolling carries it below the
+     sticky line again. */
+  .chapter.header-passed .chapter-header{ opacity:0; pointer-events:none; }
   .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
   .chapter-body p{ margin-bottom:1em; }
   .chapter.revealed .chapter-body{ display:block; }
@@ -1345,6 +1356,26 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
   let revealedUpTo = -1;
   let nextObserver = null;
   let prevObserver = null;
+  /* Every revealed chapter's header sticks at the SAME top offset (the
+     clearance below whatever sits above the panel — the sticky bar on
+     mobile, nothing on desktop), so in principle a later header simply
+     paints over an earlier one once both are pinned there — no extra
+     JS needed, which is how this worked originally. In practice a
+     chapter's header only becomes position:sticky once THAT chapter is
+     revealed, and reveal is itself scroll-triggered — so there's a
+     window where an earlier header is already stuck but the one that's
+     supposed to cover it hasn't engaged yet, and the stuck header keeps
+     riding up over whatever sits above the panel instead of stopping.
+     stickyObserver watches every revealed chapter's own start-sentinel
+     with a top-shifted root margin matching the sticky offset, so it
+     fires exactly when that chapter's start crosses the sticky line —
+     in either scroll direction. Only the highest-index chapter past
+     that line is ever shown as the active header; every earlier one
+     that's also past it gets hidden outright, and un-hides itself the
+     moment scrolling back up carries it below the line again. */
+  let stickyObserver = null;
+  const stuckSet = new Set();
+  const observedSentinels = new Set();
 
   // Clicking the highlighted quote itself clears it. Attached once here
   // (not inside render()) so repeated renders don't accumulate listeners.
@@ -1356,17 +1387,62 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
     }
   });
 
-  function applyVisibility() {
+  function ensureStickyObserver() {
+    if (stickyObserver) return;
+    stickyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const chapterEl = entry.target.closest('.chapter');
+        if (!chapterEl) return;
+        const i = Number(chapterEl.dataset.i);
+        if (entry.isIntersecting) {
+          stuckSet.delete(i);
+        } else if (entry.rootBounds && entry.boundingClientRect.top < entry.rootBounds.top) {
+          // Not intersecting because the sentinel has scrolled ABOVE the
+          // sticky line — this chapter is genuinely behind us.
+          stuckSet.add(i);
+        } else {
+          // Not intersecting for the OTHER reason: it simply hasn't been
+          // scrolled into view yet (still below the sticky line, or below
+          // the panel entirely). Not passed — make sure it's cleared even
+          // if it was never added, since a chapter can be revealed (and
+          // start being observed) already below the fold.
+          stuckSet.delete(i);
+        }
+      });
+      updateActiveHeader();
+    }, { root: getScrollRoot(), rootMargin: `-${getStickyOffset()}px 0px 0px 0px`, threshold: 0 });
+  }
+
+  function updateActiveHeader() {
+    const activeIndex = stuckSet.size ? Math.max(...stuckSet) : -1;
     container.querySelectorAll('.chapter').forEach(ch => {
       const i = Number(ch.dataset.i);
-      ch.classList.toggle('revealed', firstOpen !== null && i >= firstOpen && i <= revealedUpTo);
+      ch.classList.toggle('header-passed', stuckSet.has(i) && i !== activeIndex);
+    });
+  }
+
+  function applyVisibility() {
+    ensureStickyObserver();
+    container.querySelectorAll('.chapter').forEach(ch => {
+      const i = Number(ch.dataset.i);
+      const revealed = firstOpen !== null && i >= firstOpen && i <= revealedUpTo;
+      ch.classList.toggle('revealed', revealed);
+      if (revealed && !observedSentinels.has(i)) {
+        const sentinel = ch.querySelector('.chapter-start-sentinel');
+        if (sentinel) { stickyObserver.observe(sentinel); observedSentinels.add(i); }
+      }
     });
     container.classList.toggle('has-open', firstOpen !== null);
   }
 
   function disconnectNext() { if (nextObserver) { nextObserver.disconnect(); nextObserver = null; } }
   function disconnectPrev() { if (prevObserver) { prevObserver.disconnect(); prevObserver = null; } }
-  function disconnectAll() { disconnectNext(); disconnectPrev(); }
+  function disconnectSticky() {
+    if (stickyObserver) { stickyObserver.disconnect(); stickyObserver = null; }
+    stuckSet.clear();
+    observedSentinels.clear();
+  }
+  function disconnectAll() { disconnectNext(); disconnectPrev(); disconnectSticky(); }
 
   function watchNext() {
     disconnectNext();
@@ -1580,6 +1656,23 @@ function openHallModal(itemEl, data) {
   hallQuotesCarouselMobile.setLocked(true);
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
+  const captionEl = itemEl.querySelector('.saint-caption');
+  /* On mobile, .saint-caption fades out via the body.modal-compact CSS
+     rule below — but it's still a normal flex child of itemEl while that
+     300ms fade plays, so it was riding along with the image as it
+     shrinks and moves, fading and sliding at once. Freezing it to its
+     current on-screen position (position:fixed, matching where it
+     already visually sits) before the fade starts decouples the two: the
+     text just fades out where it is, and the image animates
+     independently. Desktop keeps the caption visible and normally
+     flowing next to the modal, so this only applies when compact. */
+  const capRect = (compact && captionEl) ? captionEl.getBoundingClientRect() : null;
+  if (capRect) {
+    captionEl.classList.add('detach');
+    captionEl.style.top = capRect.top + 'px';
+    captionEl.style.left = capRect.left + 'px';
+    captionEl.style.width = capRect.width + 'px';
+  }
   /* itemEl is a flex column with .saint-card (the image) FIRST and
      .saint-caption (the name text) after it — so the card's own top edge
      exactly equals itemEl's top (verified directly: both 40 in testing),
@@ -1596,9 +1689,8 @@ function openHallModal(itemEl, data) {
      correct proportions the instant the animation ends and inline
      styles are cleared. largeRect corrects the height only — top and
      left are already exactly right. */
-  const captionEl = itemEl.querySelector('.saint-caption');
-  const captionSpace = (compact && captionEl)
-    ? captionEl.getBoundingClientRect().height + parseFloat(getComputedStyle(captionEl).marginTop || '0')
+  const captionSpace = capRect
+    ? capRect.height + parseFloat(getComputedStyle(captionEl).marginTop || '0')
     : 0;
   const largeRect = captionSpace
     ? { top: rect.top, left: rect.left, width: rect.width, height: rect.height - captionSpace }
@@ -1699,6 +1791,12 @@ function closeHallModal(itemEl, placeholder) {
   }, () => {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
+    // Un-freeze the caption at the same instant it starts fading back in
+    // (body.modal-compact's removal above triggers that fade) — it needs
+    // to be back in normal flow, matching wherever the deck card actually
+    // resettled, not still pinned to the position captured at open time.
+    const captionEl = itemEl.querySelector('.saint-caption');
+    if (captionEl) { captionEl.classList.remove('detach'); captionEl.removeAttribute('style'); }
     placeholder.remove();
     document.body.classList.remove('modal-compact');
     hallTrack.querySelectorAll('.saint-item').forEach(el => el.classList.remove('dim'));
