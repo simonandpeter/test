@@ -708,6 +708,11 @@ document.querySelectorAll('header nav a').forEach(a => {
    reset scroll position and retrigger the loop-scroll clone buffer. */
 function applyImageMode(isDark) {
   document.querySelectorAll('.saint-card img.thumb, .saint-card img.full').forEach(img => {
+    // full images start with no src (see the Hall promotion block below) —
+    // leave them unset so toggling theme doesn't force-decode every
+    // not-yet-promoted image; promoteHallImage() reads the theme fresh
+    // whenever it does fire.
+    if (img.classList.contains('full') && !img.getAttribute('src')) return;
     const target = isDark ? img.dataset.dark : img.dataset.light;
     if (target && img.getAttribute('src') !== target) img.setAttribute('src', target);
   });
@@ -942,6 +947,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 
   return {
     measure,
+    getStride: () => stride,
     resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; },
     // For external drivers (idle drift) that move scrollLeft themselves
     // outside of this module's own wheel/tick logic. Runs the loop-wrap
@@ -1407,13 +1413,14 @@ function renderHall() {
     item.className = 'saint-item';
     item.dataset.id = s.id;
     const thumbSrc = isDark ? s.thumbDark : s.thumb;
-    const imageSrc = isDark ? s.imageDark : s.image;
     item.innerHTML = `
-      <div class="saint-card"><img class="thumb" src="${thumbSrc}" data-light="${s.thumb}" data-dark="${s.thumbDark}" alt="" aria-hidden="true"><img class="full" src="${imageSrc}" data-light="${s.image}" data-dark="${s.imageDark}" alt="${s.name}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
+      <div class="saint-card"><img class="thumb" src="${thumbSrc}" data-light="${s.thumb}" data-dark="${s.thumbDark}" alt="" aria-hidden="true"><img class="full" data-light="${s.image}" data-dark="${s.imageDark}" alt="${s.name}" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
       if (item.classList.contains('selected')) { if (hallClose.onclick) hallClose.onclick(); return; }
+      // a deliberate tap can't wait out the dwell timer for the real image
+      promoteHallImage(item.querySelector('.saint-card img.full'));
       openHallModal(item, s);
     });
     hallTrack.appendChild(item);
@@ -1423,12 +1430,68 @@ function renderHall() {
     hallInertia.measure();
     const first = hallTrack.children[LOOP_BUFFER];
     if (first) hallInertia.resetTo(first.offsetLeft);
+    createHallPromoteObserver();
   });
 }
 
 const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(SAINTS).length,
   { axis: 'x', blocked: () => hallBusy || !!currentHallOpen });
 const hallDrift = attachIdleDrift(hallTrack, hallInertia);
+
+/* =====================================================================
+   HALL FULL-IMAGE PROMOTION — render() leaves every .saint-card img.full
+   without a src (only data-light/data-dark), so a fast fling across the
+   loop buffer doesn't force every passing card to decode a full-res
+   image at once. A shared IntersectionObserver watches every .full img;
+   entering the margin starts a dwell timer before the real src gets set,
+   so a card only pays the decode cost once the user has actually
+   lingered near it — leaving before the timer fires cancels it.
+   Applied uniformly to every item (real + loop clones); clones just
+   happen to sit off-screen so their dwell timers rarely fire.
+===================================================================== */
+const HALL_PROMOTE_DWELL = 600;
+const hallPendingPromotes = new Map(); // img.full -> pending setTimeout id
+let hallPromoteObserver = null;
+let hallPromoteObserverPrimed = false; // first callback batch = items already in range at observe() time — those skip the dwell
+
+function promoteHallImage(img) {
+  if (!img || img.getAttribute('src')) return;
+  const pending = hallPendingPromotes.get(img);
+  if (pending) { clearTimeout(pending); hallPendingPromotes.delete(img); }
+  const isDark = document.documentElement.classList.contains('dark');
+  const src = isDark ? img.dataset.dark : img.dataset.light;
+  if (src) img.setAttribute('src', src);
+}
+
+function createHallPromoteObserver() {
+  if (hallPromoteObserver) hallPromoteObserver.disconnect();
+  hallPendingPromotes.forEach(id => clearTimeout(id));
+  hallPendingPromotes.clear();
+  hallPromoteObserverPrimed = false;
+  // rootMargin can't be mutated after creation, so this is a fixed
+  // approximation (one card stride, measured for the screen this loaded
+  // on) rather than something recalculated on every scroll. It's only
+  // rebuilt — same approach, remeasured — on a genuine resize, see below.
+  const stride = hallInertia.getStride() || Math.max(window.innerWidth, window.innerHeight);
+  const margin = Math.ceil(stride);
+  hallPromoteObserver = new IntersectionObserver((entries) => {
+    const primingBatch = !hallPromoteObserverPrimed;
+    hallPromoteObserverPrimed = true;
+    entries.forEach((entry) => {
+      const img = entry.target;
+      if (!entry.isIntersecting) {
+        const pending = hallPendingPromotes.get(img);
+        if (pending) { clearTimeout(pending); hallPendingPromotes.delete(img); }
+        return;
+      }
+      if (primingBatch) { promoteHallImage(img); return; }
+      if (img.getAttribute('src') || hallPendingPromotes.has(img)) return;
+      const id = setTimeout(() => { hallPendingPromotes.delete(img); promoteHallImage(img); }, HALL_PROMOTE_DWELL);
+      hallPendingPromotes.set(img, id);
+    });
+  }, { root: hallTrack, rootMargin: `0px ${margin}px 0px ${margin}px`, threshold: 0 });
+  hallTrack.querySelectorAll('.saint-card img.full').forEach(img => hallPromoteObserver.observe(img));
+}
 
 const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7, () => hallBusy);
 const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3, () => hallBusy);
@@ -2314,6 +2377,7 @@ window.addEventListener('resize', () => {
 
   hallInertia.measure();
   armoryInertia.measure();
+  createHallPromoteObserver();
   syncMobileChapterStickyTop();
 
   refreshHallModalLayout();
