@@ -279,6 +279,7 @@
     position:absolute; inset:0;
     filter:blur(8px);
     transform:scale(1.08); /* hides the blur's soft edge fringe */
+    transition:opacity .25s ease;
   }
   .saint-card img.full{
     position:relative;
@@ -706,6 +707,9 @@ document.querySelectorAll('header nav a').forEach(a => {
 /* Swaps every rendered saint-card image to its light/dark variant in
    place, rather than re-rendering the carousel — a full re-render would
    reset scroll position and retrigger the loop-scroll clone buffer. */
+const IMAGE_MODE_FADE_MS = 250; // must match .saint-card img's opacity transition duration
+const pendingModeSwaps = new Map(); // img -> pending setTimeout id, so a fast double-toggle swaps once to the latest target instead of stacking
+
 function applyImageMode(isDark) {
   document.querySelectorAll('.saint-card img.thumb, .saint-card img.full').forEach(img => {
     // full images start with no src (see the Hall promotion block below) —
@@ -714,7 +718,19 @@ function applyImageMode(isDark) {
     // whenever it does fire.
     if (img.classList.contains('full') && !img.getAttribute('src')) return;
     const target = isDark ? img.dataset.dark : img.dataset.light;
-    if (target && img.getAttribute('src') !== target) img.setAttribute('src', target);
+    if (!target || img.getAttribute('src') === target) return;
+    const pending = pendingModeSwaps.get(img);
+    if (pending) clearTimeout(pending);
+    // the light/dark variant's fetch/decode time varies — fade the current
+    // image out, swap src while it's invisible, and fade the new one in
+    // once it's actually loaded, so that variance never shows as a pop.
+    img.style.opacity = '0';
+    const id = setTimeout(() => {
+      pendingModeSwaps.delete(img);
+      img.addEventListener('load', () => { img.style.opacity = ''; }, { once: true });
+      img.setAttribute('src', target);
+    }, IMAGE_MODE_FADE_MS);
+    pendingModeSwaps.set(img, id);
   });
 }
 
@@ -1449,7 +1465,7 @@ const hallDrift = attachIdleDrift(hallTrack, hallInertia);
    Applied uniformly to every item (real + loop clones); clones just
    happen to sit off-screen so their dwell timers rarely fire.
 ===================================================================== */
-const HALL_PROMOTE_DWELL = 600;
+const HALL_PROMOTE_DWELL = 0;
 const hallPendingPromotes = new Map(); // img.full -> pending setTimeout id
 let hallPromoteObserver = null;
 let hallPromoteObserverPrimed = false; // first callback batch = items already in range at observe() time — those skip the dwell
