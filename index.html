@@ -264,6 +264,11 @@
     overflow:hidden;
     background:var(--bg);
     contain:layout paint;
+    /* Overrides the sitewide 2s background fade (see the `*` rule's own
+       comment) — at 2s, this card's own background lagged behind the
+       .25s image crossfade, showing as a mismatched-colour sliver at the
+       image's letterboxed edges for up to 2s after every theme toggle. */
+    transition:background-color .25s ease;
   }
   .saint-card{ position:relative; }
   .saint-card img{
