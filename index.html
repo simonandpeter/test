@@ -719,38 +719,59 @@ document.querySelectorAll('header nav a').forEach(a => {
 
 /* Swaps every rendered saint-card image to its light/dark variant in
    place, rather than re-rendering the carousel — a full re-render would
-   reset scroll position and retrigger the loop-scroll clone buffer. */
-const IMAGE_MODE_FADE_MS = 250; // must match .saint-card img's opacity transition duration
-const pendingModeSwaps = new Map(); // img -> pending setTimeout id, so a fast double-toggle swaps once to the latest target instead of stacking
+   reset scroll position and retrigger the loop-scroll clone buffer.
 
-function applyImageMode(isDark) {
-  document.querySelectorAll('.saint-card img.thumb, .saint-card img.full').forEach(img => {
+   Runs as three explicit phases rather than one simultaneous crossfade:
+   images fade fully to opacity 0, only then does the theme class flip (so
+   the page/card background starts its own fade), and only once that
+   background fade has finished (and the new image variant has actually
+   loaded) do the images fade back in. A simultaneous fade let the two
+   motions visually race each other; staggering them reads as one
+   deliberate transition instead. */
+const IMAGE_FADE_MS = 250; // must match .saint-card img's opacity transition duration
+const BG_FADE_MS = 250;    // must match body/.saint-card background-color transition duration
+let modeToggleId = 0; // bumped on every toggle; lets a superseded in-flight sequence (fast double-toggle) bail out instead of clobbering the newer one
+
+function runModeTransition(isDark) {
+  const sequence = ++modeToggleId;
+  const changing = Array.from(document.querySelectorAll('.saint-card img.thumb, .saint-card img.full'))
     // full images start with no src (see the Hall promotion block below) —
     // leave them unset so toggling theme doesn't force-decode every
     // not-yet-promoted image; promoteHallImage() reads the theme fresh
     // whenever it does fire.
-    if (img.classList.contains('full') && !img.getAttribute('src')) return;
-    const target = isDark ? img.dataset.dark : img.dataset.light;
-    if (!target || img.getAttribute('src') === target) return;
-    const pending = pendingModeSwaps.get(img);
-    if (pending) clearTimeout(pending);
-    // the light/dark variant's fetch/decode time varies — fade the current
-    // image out, swap src while it's invisible, and fade the new one in
-    // once it's actually loaded, so that variance never shows as a pop.
-    img.style.opacity = '0';
-    const id = setTimeout(() => {
-      pendingModeSwaps.delete(img);
-      img.addEventListener('load', () => { img.style.opacity = ''; }, { once: true });
-      img.setAttribute('src', target);
-    }, IMAGE_MODE_FADE_MS);
-    pendingModeSwaps.set(img, id);
-  });
+    .filter(img => !(img.classList.contains('full') && !img.getAttribute('src')))
+    .filter(img => {
+      const target = isDark ? img.dataset.dark : img.dataset.light;
+      return target && img.getAttribute('src') !== target;
+    });
+
+  changing.forEach(img => { img.style.opacity = '0'; });
+
+  setTimeout(() => {
+    if (sequence !== modeToggleId) return; // a newer toggle already took over
+
+    document.documentElement.classList.toggle('dark', isDark);
+    try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
+
+    // swap src now, while every changing image is still invisible — its
+    // fetch/decode time varies, so this hides that variance behind the
+    // background fade instead of exposing it as a pop.
+    const imagesLoaded = changing.map(img => new Promise(resolve => {
+      img.addEventListener('load', resolve, { once: true });
+      img.addEventListener('error', resolve, { once: true });
+      img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light);
+    }));
+    const bgSettled = new Promise(resolve => setTimeout(resolve, BG_FADE_MS));
+
+    Promise.all([...imagesLoaded, bgSettled]).then(() => {
+      if (sequence !== modeToggleId) return;
+      changing.forEach(img => { img.style.opacity = ''; });
+    });
+  }, changing.length ? IMAGE_FADE_MS : 0);
 }
 
 document.getElementById('dark-toggle').addEventListener('click', () => {
-  const isDark = document.documentElement.classList.toggle('dark');
-  try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
-  applyImageMode(isDark);
+  runModeTransition(!document.documentElement.classList.contains('dark'));
 });
 
 /* =====================================================================
