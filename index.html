@@ -264,12 +264,27 @@
     overflow:hidden;
     background:var(--bg);
   }
+  .saint-card{ position:relative; }
   .saint-card img{
     width:100%; height:100%;
     object-fit:contain;
     display:block;
     pointer-events:none; /* suppress the browser's built-in image-hover search icon */
   }
+  /* Thumb paints first (tiny, always cached fast) and sits underneath;
+     the full-res image fades in over it once decoded, so a fast scroll
+     shows a blurred likeness instead of a blank card. */
+  .saint-card img.thumb{
+    position:absolute; inset:0;
+    filter:blur(8px);
+    transform:scale(1.08); /* hides the blur's soft edge fringe */
+  }
+  .saint-card img.full{
+    position:relative;
+    opacity:0;
+    transition:opacity .25s ease;
+  }
+  .saint-card img.full.loaded{ opacity:1; }
 
   .saint-caption{
     margin-top:10px;
@@ -675,9 +690,20 @@ document.querySelectorAll('header nav a').forEach(a => {
   });
 });
 
+/* Swaps every rendered saint-card image to its light/dark variant in
+   place, rather than re-rendering the carousel — a full re-render would
+   reset scroll position and retrigger the loop-scroll clone buffer. */
+function applyImageMode(isDark) {
+  document.querySelectorAll('.saint-card img.thumb, .saint-card img.full').forEach(img => {
+    const target = isDark ? img.dataset.dark : img.dataset.light;
+    if (target && img.getAttribute('src') !== target) img.setAttribute('src', target);
+  });
+}
+
 document.getElementById('dark-toggle').addEventListener('click', () => {
   const isDark = document.documentElement.classList.toggle('dark');
   try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
+  applyImageMode(isDark);
 });
 
 /* =====================================================================
@@ -1147,7 +1173,7 @@ function fallbackSaints() {
   ];
   return [
     {
-      id: 'demo-antony', name: 'Demo Saint (unconfigured)', image: placeholderIconDataUri(),
+      id: 'demo-antony', name: 'Demo Saint (unconfigured)', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(), imageDark: placeholderIconDataUri(), thumbDark: placeholderIconDataUri(),
       chapters: chaptersA,
       linkedQuotes: linkQuotesToChapters([
         'He who sits in solitude and is quiet hath escaped from three wars.',
@@ -1155,7 +1181,7 @@ function fallbackSaints() {
       ], chaptersA)
     },
     {
-      id: 'demo-silouan', name: 'Demo Saint Two', image: placeholderIconDataUri(),
+      id: 'demo-silouan', name: 'Demo Saint Two', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(), imageDark: placeholderIconDataUri(), thumbDark: placeholderIconDataUri(),
       chapters: chaptersB,
       linkedQuotes: linkQuotesToChapters(['Keep your mind in hell, and despair not.'], chaptersB)
     }
@@ -1244,7 +1270,8 @@ async function loadSaints() {
     const folderNames = Object.keys(folders).sort();
     const results = await Promise.all(folderNames.map(async (folder) => {
       const files = folders[folder];
-      const image = files.find(f => /\.(jpe?g|png|webp|gif|avif|heic|heif|bmp|svg)$/i.test(f));
+      const isImageExt = f => /\.(jpe?g|png|webp|gif|avif|heic|heif|bmp|svg)$/i.test(f);
+      const image = files.find(f => isImageExt(f) && !/-thumb\.[^.]+$/i.test(f) && !/-dark\.[^.]+$/i.test(f));
       const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
       const chapterFiles = files.filter(f => /\.txt$/i.test(f) && f.toLowerCase() !== 'quotes.txt').sort(naturalCompare);
       if (!image) { skipped.push(folder); return null; }
@@ -1260,12 +1287,20 @@ async function loadSaints() {
       const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
       const parsed = parseSaintFolder(folder);
 
+      const darkFile = image.replace(/(\.[^.]+)$/, '-dark$1');
+      const hasDark = files.some(f => f.toLowerCase() === darkFile.toLowerCase());
+      const imageForMode = f => base + encodeURIComponent(f);
+      const thumbOf = f => f.replace(/\.[^.]+$/, '-thumb.jpg');
+
       return {
         id: folder,
         name: parsed.display,
         base: parsed.base,
         sortKey: parsed.sortKey,
-        image: base + encodeURIComponent(image),
+        image: imageForMode(image),
+        thumb: imageForMode(thumbOf(image)),
+        imageDark: hasDark ? imageForMode(darkFile) : imageForMode(image),
+        thumbDark: hasDark ? imageForMode(thumbOf(darkFile)) : imageForMode(thumbOf(image)),
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
       };
@@ -1317,12 +1352,15 @@ function renderHall() {
   const tail = cyclicSlice(loopSaints, 0, LOOP_BUFFER);
   const full = [...head, ...loopSaints, ...tail];
 
+  const isDark = document.documentElement.classList.contains('dark');
   full.forEach((s) => {
     const item = document.createElement('div');
     item.className = 'saint-item';
     item.dataset.id = s.id;
+    const thumbSrc = isDark ? s.thumbDark : s.thumb;
+    const imageSrc = isDark ? s.imageDark : s.image;
     item.innerHTML = `
-      <div class="saint-card"><img src="${s.image}" alt="${s.name}" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
+      <div class="saint-card"><img class="thumb" src="${thumbSrc}" data-light="${s.thumb}" data-dark="${s.thumbDark}" alt="" aria-hidden="true"><img class="full" src="${imageSrc}" data-light="${s.image}" data-dark="${s.imageDark}" alt="${s.name}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
       <div class="saint-caption">${s.name}</div>`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
