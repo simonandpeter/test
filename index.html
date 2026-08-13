@@ -124,6 +124,14 @@
     color:var(--ink);
     font-family:'Times New Roman', Times, serif;
     overflow:hidden;
+    /* background matches the Hall images' .25s crossfade (see
+       .saint-card's own override below) — otherwise the page behind and
+       around the cards kept fading over the sitewide 2s while the image
+       itself had already switched, so the "page background" and "image
+       background" visibly drifted apart mid-toggle even though they're
+       meant to read as the same surface. Text colour keeps the slower
+       ambient fade. */
+    transition:background-color .25s ease, color 2s ease;
   }
   a{ color:inherit; }
 
