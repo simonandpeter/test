@@ -263,6 +263,7 @@
     aspect-ratio:1/2.4;
     overflow:hidden;
     background:var(--bg);
+    contain:layout paint;
   }
   .saint-card{ position:relative; }
   .saint-card img{
@@ -285,6 +286,18 @@
     transition:opacity .25s ease;
   }
   .saint-card img.full.loaded{ opacity:1; }
+  /* The open/close tween sets width/height directly (JS, not CSS
+     transitions — see TWEEN's own comment), which forces a real layout
+     + repaint + re-rasterize of the image bitmap on every single frame.
+     On a real device with a real (non-trivial) image and a weaker GPU,
+     that re-rasterization can visibly lag a frame or more behind the
+     container it's supposed to fill — seen as a stale, differently-sized
+     "ghost" of the same image bleeding through underneath the current
+     frame. will-change promotes the element to its own compositing layer
+     ahead of time rather than only once the animation is already
+     under way, which is what actually reduces that catch-up lag. */
+  .saint-item.selected{ will-change:top, left, width, height; }
+  .saint-item.selected .saint-card img{ will-change:width, height; }
 
   .saint-caption{
     margin-top:10px;
@@ -879,7 +892,20 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   let touchActive = false;
 
   trackEl.addEventListener('scroll', () => {
-    if (isEasing) return;
+    /* This was the one input path into checkLoop() that never checked
+       blocked() — every other one (wheel, touch) does. A resize event
+       (the address bar hiding while scrolling inside an open modal's
+       panel is a very common way to trigger one on mobile) calls
+       measure(), which rescales scrollLeft to stay proportionally valid
+       — necessary, not something to skip — and that write fires this
+       listener. Without the guard, checkLoop() could then silently wrap
+       the row by a whole body-span while the modal is open and the row
+       is hidden behind it. Since the small dataset means several DOM
+       clones of the same saint exist across the buffer, the visible
+       effect on close was a "ghost" of the same image fading in at the
+       old position while the real one returned somewhere else — a
+       different, still-visible clone catching the same undim step. */
+    if (isEasing || blocked()) return;
     targetScroll = trackEl[scrollProp];
     if (touchActive) return; // don't write to scrollLeft mid-gesture — see touchstart/touchend below
     checkLoop();
@@ -1203,6 +1229,29 @@ async function fetchText(url) {
 const TREE_CACHE_KEY = 'saints-tree-cache-v1';
 const TREE_CACHE_MS = 10 * 60 * 1000;
 
+/* Mobile browsers routinely suspend a backgrounded tab rather than
+   killing it — switching back after minutes or hours often restores the
+   exact DOM/JS state from whenever the page last actually ran, with no
+   script re-execution at all. Without this, "reopening" the site can
+   silently show whatever was current at first load indefinitely: the
+   saint count frozen, images that failed once staying failed, no retry
+   ever happening, even though the code itself is completely fine and
+   would show fresh data on an actual reload.
+   Two signals catch this: 'pageshow' with event.persisted is the
+   unambiguous case (the page came from the back-forward cache, so
+   nothing here has run since); a long-hidden tab becoming visible again
+   is the more common one on mobile, treated as stale once it's been
+   hidden longer than the tree cache's own validity window — no point
+   reloading for a quick app-switch-and-back, since the data wouldn't
+   have changed regardless. */
+window.addEventListener('pageshow', (e) => { if (e.persisted) location.reload(); });
+let hiddenAt = null;
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { hiddenAt = Date.now(); return; }
+  if (hiddenAt && (Date.now() - hiddenAt) > TREE_CACHE_MS) location.reload();
+  hiddenAt = null;
+});
+
 function readTreeCache(url) {
   try {
     const raw = localStorage.getItem(TREE_CACHE_KEY);
@@ -1215,7 +1264,7 @@ function readTreeCache(url) {
 async function fetchTree(treeUrl) {
   const cached = readTreeCache(treeUrl);
   if (cached && (Date.now() - cached.at) < TREE_CACHE_MS) {
-    return { tree: cached.tree, cache: 'fresh' };
+    return { tree: cached.tree, cache: 'fresh', at: cached.at };
   }
   try {
     const res = await fetch(treeUrl);
@@ -1232,7 +1281,7 @@ async function fetchTree(treeUrl) {
     // limit resets, so a stale listing is nearly always still correct.
     if (cached) {
       console.warn('GitHub API unavailable, reusing the cached folder listing —', err.message);
-      return { tree: cached.tree, cache: 'stale' };
+      return { tree: cached.tree, cache: 'stale', at: cached.at };
     }
     throw err;
   }
@@ -1245,7 +1294,7 @@ async function loadSaints() {
   }
   try {
     const treeUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`;
-    const { tree: treeEntries, cache } = await fetchTree(treeUrl);
+    const { tree: treeEntries, cache, at: cacheAt } = await fetchTree(treeUrl);
     const tree = { tree: treeEntries };
 
     const folders = {};
@@ -1317,7 +1366,7 @@ async function loadSaints() {
     });
     if (skipped.length) console.warn('Skipped folders with no image file:', skipped);
     if (!saints.length) return { saints: fallbackSaints(), source: 'empty' };
-    return { saints, source: 'live', skipped, cache };
+    return { saints, source: 'live', skipped, cache, cacheAt };
   } catch (err) {
     console.warn('Falling back to the built-in demo saints — GitHub fetch failed:', err);
     return { saints: fallbackSaints(), source: 'error' };
@@ -2130,7 +2179,7 @@ function dismissLoader() {
 }
 setTimeout(dismissLoader, LOADER_MAX_MS);
 
-loadSaints().then(({ saints, source, skipped, cache }) => {
+loadSaints().then(({ saints, source, skipped, cache, cacheAt }) => {
   SAINTS = saints;
   renderHall();
   const badge = document.getElementById('data-source-badge');
@@ -2142,13 +2191,30 @@ loadSaints().then(({ saints, source, skipped, cache }) => {
   };
   let text = messages[source] || '';
   // Which of the three listing paths ran matters when debugging missing
-  // images: 'cached' is normal on a reload, 'cached (API unavailable)'
-  // means the rate limit has been hit and this is the last known listing.
-  if (source === 'live' && cache === 'fresh') text += ' (cached listing)';
-  if (source === 'live' && cache === 'stale') text += ' (cached listing — API unavailable)';
+  // images: 'fresh' is normal on a quick reload; 'stale' means the API
+  // was unreachable just now (usually the rate limit) and this is the
+  // last known-good listing. Showing the actual age, not just the label,
+  // is what actually lets a stuck cache be diagnosed from the outside —
+  // "(cached listing)" alone looks identical whether it's 30 seconds or
+  // 12 hours old, and those mean very different things.
+  if (source === 'live' && (cache === 'fresh' || cache === 'stale') && cacheAt) {
+    const ageMin = Math.round((Date.now() - cacheAt) / 60000);
+    const ageStr = ageMin < 60 ? `${ageMin}m` : `${Math.floor(ageMin / 60)}h ${ageMin % 60}m`;
+    text += cache === 'fresh' ? ` (cached ${ageStr} ago)` : ` (cached ${ageStr} ago — API unavailable)`;
+  }
   if (skipped && skipped.length) text += ` — skipped (no recognised image file): ${skipped.join(', ')}`;
+  if (source === 'live') text += ' — tap to refresh';
   badge.textContent = text;
   badge.style.display = 'block';
+  // A direct, guaranteed way to force fresh data regardless of *why* the
+  // cache looks stuck — clears the cached listing and does a real reload,
+  // not just a re-render, so there's no dependency on diagnosing the
+  // cause first.
+  badge.style.cursor = 'pointer';
+  badge.onclick = () => {
+    try { localStorage.removeItem(TREE_CACHE_KEY); } catch (e) { /* ignore */ }
+    location.reload();
+  };
 }).catch((err) => {
   console.warn('Saint loading failed unexpectedly:', err);
 }).finally(() => {
