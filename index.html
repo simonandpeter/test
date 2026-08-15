@@ -174,7 +174,14 @@
     padding-bottom:3px;
     border-bottom:1px solid transparent;
     white-space:nowrap;
-    transition:border-color .3s ease, color .3s ease;
+    /* color kept at the sitewide 2s ambient text pace (see body's own
+       comment on why text stays slow while backgrounds fade fast) — it
+       used to run at .3s like the hover border-color, which meant an
+       inactive link (e.g. "Armory") settled into its new theme colour
+       well before the header around it finished fading, reading as a
+       flicker/pop against the still-mid-fade backdrop. border-color stays
+       fast — that one's just hover feedback, not part of the theme fade. */
+    transition:border-color .3s ease, color 2s ease;
   }
   header nav a:hover,
   header nav a.active{
@@ -772,9 +779,20 @@ const IMAGE_FADE_MS = 250; // must match .saint-card img's opacity transition du
 const BG_FADE_MS = 250;    // must match body/.saint-card background-color transition duration
 let modeToggleId = 0; // bumped on every toggle; lets a superseded in-flight sequence (fast double-toggle) bail out instead of clobbering the newer one
 
+// The loop-scroll clone buffer (see LOOP_BUFFER/ARMORY_BUFFER) means most
+// of the images this touches are sitting dozens of card-widths off to
+// either side, never painted. A generous margin, not a tight one — this
+// only needs to catch "nowhere near the screen", not draw an exact line.
+const OFFSCREEN_MARGIN = 600;
+function isRoughlyOnscreen(el) {
+  const r = el.getBoundingClientRect();
+  return r.right > -OFFSCREEN_MARGIN && r.left < window.innerWidth + OFFSCREEN_MARGIN
+      && r.bottom > -OFFSCREEN_MARGIN && r.top < window.innerHeight + OFFSCREEN_MARGIN;
+}
+
 function runModeTransition(isDark) {
   const sequence = ++modeToggleId;
-  const changing = Array.from(document.querySelectorAll('.saint-card img.thumb, .saint-card img.full'))
+  const allChanging = Array.from(document.querySelectorAll('.saint-card img.thumb, .saint-card img.full'))
     // full images start with no src (see the Hall promotion block below) —
     // leave them unset so toggling theme doesn't force-decode every
     // not-yet-promoted image; promoteHallImage() reads the theme fresh
@@ -785,6 +803,17 @@ function runModeTransition(isDark) {
       return target && img.getAttribute('src') !== target;
     });
 
+  // Nobody can see a clone sitting off in the buffer mid-toggle, so there's
+  // nothing to hide behind a fade for — swap it outright. The point of the
+  // whole opacity dance below is purely to hide the swap from the viewer;
+  // gating it on dozens of invisible clones (one stalled transitionend or
+  // one slow, low-priority background fetch, and the WHOLE toggle — visible
+  // cards included — used to wait on it) was the actual cause of "sometimes
+  // it takes a long time and it's inconsistent".
+  const offscreen = allChanging.filter(img => !isRoughlyOnscreen(img));
+  offscreen.forEach(img => { img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light); });
+
+  const changing = allChanging.filter(img => isRoughlyOnscreen(img));
   changing.forEach(img => { img.style.opacity = '0'; });
 
   // Wait for the fade-out to actually finish rendering, not just for a
@@ -818,12 +847,19 @@ function runModeTransition(isDark) {
 
     // swap src now, while every changing image is still invisible — its
     // fetch/decode time varies, so this hides that variance behind the
-    // background fade instead of exposing it as a pop.
-    const imagesLoaded = changing.map(img => new Promise(resolve => {
-      img.addEventListener('load', resolve, { once: true });
-      img.addEventListener('error', resolve, { once: true });
+    // background fade instead of exposing it as a pop. `load` only means
+    // the bytes arrived, not that a bitmap is ready to paint — decode()
+    // waits for the actual decode to finish, closing the gap that could
+    // otherwise show as a blank flash right as the image fades back in.
+    const imagesLoaded = changing.map(img => {
       img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light);
-    }));
+      return img.decode
+        ? img.decode().catch(() => {})
+        : new Promise(resolve => {
+            img.addEventListener('load', resolve, { once: true });
+            img.addEventListener('error', resolve, { once: true });
+          });
+    });
     const bgSettled = new Promise(resolve => setTimeout(resolve, BG_FADE_MS));
 
     Promise.all([...imagesLoaded, bgSettled]).then(() => {
