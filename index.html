@@ -294,14 +294,10 @@
     object-fit:contain;
     display:block;
     pointer-events:none; /* suppress the browser's built-in image-hover search icon */
-    /* While src is unset/decoding (e.g. mid theme-toggle swap), the browser
-       paints the img box with its own default fill — white or black
-       depending on platform — instead of leaving it transparent. On a slow
-       mobile decode that shows as a stark flashing rectangle where the
-       photo should be. Giving it the same themed background as the card
-       means that empty-state paint matches the page instead of standing
-       out, and fades with everything else via the sitewide `*` rule. */
-    background-color:var(--bg);
+    /* Deliberately no background-color here: .saint-card behind it is
+       already var(--bg), so an undecoded img box paints the same colour
+       either way, and giving .thumb its own opaque background just makes
+       its blur() filter composite an opaque full-card rect every frame. */
   }
   /* Thumb paints first (tiny, always cached fast) and sits underneath;
      the full-res image fades in over it once decoded, so a fast scroll
@@ -310,12 +306,12 @@
     position:absolute; inset:0;
     filter:blur(8px);
     transform:scale(1.08); /* hides the blur's soft edge fringe */
-    transition:opacity .25s ease, background-color .25s ease;
+    transition:opacity .25s ease;
   }
   .saint-card img.full{
     position:relative;
     opacity:0;
-    transition:opacity .25s ease, background-color .25s ease;
+    transition:opacity .25s ease;
   }
   .saint-card img.full.loaded{ opacity:1; }
   /* The open/close tween sets width/height directly (JS, not CSS
@@ -860,7 +856,38 @@ function runModeTransition(isDark) {
             img.addEventListener('error', resolve, { once: true });
           });
     });
-    const bgSettled = new Promise(resolve => setTimeout(resolve, BG_FADE_MS));
+    /* Each saint image has the theme background BAKED INTO ITS PIXELS —
+       the light variant's corners are ~#fefefe, the dark variant's are
+       ~#0d0d0d, and the crop matches .saint-card's aspect ratio exactly,
+       so the image fills the card edge to edge. That means a revealed
+       image is, visually, a hard-edged white or black rectangle. It only
+       reads as "the page" while the page background actually matches it.
+
+       So this must wait for the background to REALLY finish fading, not
+       for a wall-clock timer that merely matches the CSS duration. The
+       page fades white->black through grey; setTimeout(BG_FADE_MS) fires
+       on schedule even when the compositor is behind (dropped frames,
+       low-power mode — i.e. a phone), so the images used to fade back in
+       while the page was still mid-grey, showing their baked-in black or
+       white as a rectangle against it. Same race the image fade-out above
+       already fixed, just on the background side. */
+    const bgSettled = new Promise(resolve => {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        document.body.removeEventListener('transitionend', onEnd);
+        resolve();
+      };
+      const onEnd = (e) => {
+        // transitionend bubbles from descendants; only body's own
+        // background-color marks the page fade as finished (its `color`
+        // runs on the slower ambient 2s and must not count).
+        if (e.target === document.body && e.propertyName === 'background-color') finish();
+      };
+      document.body.addEventListener('transitionend', onEnd);
+      setTimeout(finish, BG_FADE_MS * 6); // last-resort only, same as the fade-out's
+    });
 
     Promise.all([...imagesLoaded, bgSettled]).then(() => {
       if (sequence !== modeToggleId) return;
