@@ -398,8 +398,9 @@
      whatever distance drops this name onto the fixed name line — a set
      fraction of the viewport height, shared by every saint — from the
      bottom of this saint's own image, however short that image is.
-     Clamped to 2 lines so a long name can't push the intro below it out
-     of the space left underneath. */
+     The year sits inside this block rather than beside it, so one margin
+     still places the whole name group and syncMobilePanelTop() still finds
+     the group's real bottom in one measurement. */
   .saint-caption{
     font-size:11px;
     line-height:14px;
@@ -407,9 +408,22 @@
     text-align:center;
     text-transform:uppercase;
     color:var(--ink-soft);
+    transition:color .3s ease;
+  }
+  /* Clamped to 2 lines so a long name can't push the year and the intro
+     under it out of the space left below the name line. */
+  .saint-name{
     display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
     overflow:hidden;
-    transition:color .3s ease;
+  }
+  /* No colour of its own: inheriting the caption's means the year rides the
+     hover and modal-open lifts with the name instead of sitting flat while
+     the name above it changes. Opacity is what keeps it subordinate. */
+  .saint-year{
+    margin-top:3px;
+    font-size:9px;
+    letter-spacing:0.16em;
+    opacity:0.62;
   }
   /* Clamped for the same reason as the caption: the space below the name
      line is finite, and an unbounded intro would run into the deck's
@@ -1413,23 +1427,26 @@ function linkQuotesToChapters(quoteLines, chapters) {
 /* Saint folders carry a sortable year-of-death prefix: four digits then
    B/C for BC/AD — "0353C St Antony the Great", "1450B Moses". Neither
    belongs on screen, so this turns it back into readable form.
-   `display` is what the reader sees; `base` is the bare name, used for
-   matching Armory quote sources (which have no year prefix) — matching
-   on `display` instead would break attribution the moment a folder was
-   renamed. */
+   `base` is the bare name and `year` the bare date, which is how the deck
+   renders them — on two lines. `display` joins them back up for the places
+   that still want one string (image alt text, the undated sort tiebreak).
+   `base` is also what matches Armory quote sources, which carry no year
+   prefix — matching on `display` instead would break attribution the moment
+   a folder was renamed. A folder with no parseable prefix has a null year
+   and no second line. */
 function parseSaintFolder(folder) {
   const m = /^(\d{1,4})\s*([BbCc])[\s._\-—]*(.+)$/.exec(folder.trim());
-  if (!m) return { display: folder, base: folder, sortKey: null };
+  if (!m) return { display: folder, base: folder, year: null, sortKey: null };
   const year = parseInt(m[1], 10);
   const isBC = m[2].toUpperCase() === 'B';
   const era = isBC ? 'BC' : 'AD';
   const base = m[3].trim();
-  if (!base) return { display: folder, base: folder, sortKey: null };
+  if (!base) return { display: folder, base: folder, year: null, sortKey: null };
   /* Alphabetical folder order breaks across the era boundary ("1450B
      Moses" falls between "0353C" and "1859C") and runs BC years
      backwards. Signing the year (BC negative) fixes both with one
      numeric sort. */
-  return { display: `${year}${era} ${base}`, base, sortKey: isBC ? -year : year };
+  return { display: `${year}${era} ${base}`, base, year: `${year}${era}`, sortKey: isBC ? -year : year };
 }
 
 /* intro.txt: an optional feast-day line, then the prose shown under the
@@ -1694,6 +1711,7 @@ async function loadSaints() {
         id: folder,
         name: parsed.display,
         base: parsed.base,
+        year: parsed.year,
         sortKey: parsed.sortKey,
         image: imageForMode(image),
         thumb: imageForMode(thumbOf(image)),
@@ -1864,7 +1882,10 @@ function renderHall() {
     item._saint = s; // layoutHallCards() needs this item's own pixel dimensions; every loop clone points at the same saint object
     item.innerHTML = `
       <div class="saint-card"><img class="thumb" src="${s.thumb}" alt="" aria-hidden="true"><img class="full" data-src="${s.image}" alt="${s.name}" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
-      <div class="saint-caption">${s.name}</div>
+      <div class="saint-caption">
+        <div class="saint-name">${s.base || s.name}</div>
+        ${s.year ? `<div class="saint-year">${s.year}</div>` : ''}
+      </div>
       ${s.intro ? `<div class="saint-intro">${escapeHtml(s.intro)}</div>` : ''}`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
