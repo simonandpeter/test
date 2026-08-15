@@ -76,7 +76,13 @@
     transition:opacity .55s ease, background-color 2s ease;
   }
   @keyframes loading-screen-in{ to{ opacity:1; } }
-  #loading-screen.done{ opacity:0; pointer-events:none; }
+  /* animation:none is required here, not optional polish: CSS animations
+     outrank transitions on the same property, so as long as
+     loading-screen-in's forwards-fill is still "running" opacity:0 from a
+     plain rule is silently ignored and the element just vanishes on
+     remove() instead of fading. Clearing the animation in this same rule
+     hands opacity back to the transition. */
+  #loading-screen.done{ animation:none; opacity:0; pointer-events:none; }
   .loading-stack{
     text-align:center;
     padding:24px;
@@ -560,6 +566,12 @@
      instantly (no re-render) the moment scrolling carries it below the
      sticky line again. */
   .chapter.header-passed .chapter-header{ opacity:0; pointer-events:none; }
+  /* Desktop's flat pane (createFlatChaptersController) never toggles
+     .header-passed and every chapter is always .revealed, so the sticky/
+     hover-hand affordances that make sense for mobile's accordion would
+     just be noise here — plain non-interactive section headers instead. */
+  #hall-chapters-desktop .chapter-header{ position:static; cursor:default; }
+  #hall-chapters-desktop .chapter-header:hover{ color:var(--ink); }
   .chapter-body{ display:none; font-size:15px; line-height:1.7; color:var(--ink-soft); padding:12px 4px 26px 4px; }
   .chapter-body p{ margin-bottom:1em; }
   .chapter.revealed .chapter-body{ display:block; }
@@ -1740,7 +1752,14 @@ const LOOP_BUFFER = 24; // Reverted from 40. That widening was meant to give nat
    density. One exported at 2x renders twice the size of its neighbours,
    and the page has no way to tell that apart from a genuinely larger icon. */
 const CARD_CAPTION_GAP = 12;
-const NAME_LINE_FRACTION = 5 / 9; // of viewport height, measured to the top of the name
+const NAME_LINE_FRACTION_DESKTOP = 5 / 9; // of viewport height, measured to the top of the name
+// Compact/mobile sits the name higher (3/7 vs 5/9) so the image renders
+// smaller and the source-text panel below it gets more room.
+const NAME_LINE_FRACTION_COMPACT = 3 / 7;
+const MOBILE_BREAKPOINT = 700; // matches the header's own @media(max-width:700px)
+function nameLineFraction() {
+  return window.innerWidth <= MOBILE_BREAKPOINT ? NAME_LINE_FRACTION_COMPACT : NAME_LINE_FRACTION_DESKTOP;
+}
 const DECK_SIDE_MARGIN = 20;      // keeps the widest card clear of both screen edges
 
 function layoutHallCards() {
@@ -1753,7 +1772,7 @@ function layoutHallCards() {
   // Absolute y of every card's top edge — all items top-align in the track,
   // so one measurement covers them all.
   const cardTopAbs = hallTrack.getBoundingClientRect().top + parseFloat(getComputedStyle(items[0]).marginTop);
-  const nameLineY = window.innerHeight * NAME_LINE_FRACTION;
+  const nameLineY = window.innerHeight * nameLineFraction();
   const availH = Math.max(80, nameLineY - CARD_CAPTION_GAP - cardTopAbs);
   const maxImgH = Math.max(...SAINTS.map(s => s.imgH || FALLBACK_IMAGE_H));
   /* Height alone can't set the scale: on a narrow screen a tall-enough
@@ -1929,7 +1948,7 @@ const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('ha
 
 // The panel itself no longer scrolls — its pane does, so that is the root
 // the reveal sentinels and sticky headers have to be measured against.
-const hallChaptersDesktop = createChapterController(
+const hallChaptersDesktop = createFlatChaptersController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('desktop-chapters-pane')
 );
@@ -2189,6 +2208,54 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
   return { render, openFrom, close, syncTail };
 }
 
+/* Desktop's right-hand pane, simplified: no accordion, no sticky headers —
+   every chapter prints in full as one long scroll, and the contents list on
+   the left is the only thing that moves you around it (openFrom just
+   scrolls the pane to that chapter's top). Mobile keeps the progressive
+   accordion above (createChapterController) since it has no separate
+   contents column to navigate by. */
+function createFlatChaptersController(container, getScrollRoot) {
+  // Same purpose as the equivalent listener in createChapterController:
+  // clicking an already-highlighted quote clears it.
+  container.addEventListener('click', (e) => {
+    const anchor = e.target.closest('.quote-anchor');
+    if (anchor && anchor.classList.contains('hl')) {
+      anchor.classList.remove('hl');
+      if (currentHighlightEl === anchor) currentHighlightEl = null;
+    }
+  });
+
+  function render(chapters) {
+    container.innerHTML = '';
+    chapters.forEach((ch, i) => {
+      const el = document.createElement('div');
+      el.className = 'chapter revealed';
+      el.dataset.i = i;
+      el.innerHTML = `<div class="chapter-header">${ch.title}</div><div class="chapter-body">${ch.html}</div>`;
+      container.appendChild(el);
+    });
+    const root = getScrollRoot();
+    if (root) root.scrollTop = 0;
+  }
+
+  function openFrom(index) {
+    const root = getScrollRoot();
+    const el = container.querySelector(`.chapter[data-i="${index}"]`);
+    if (!el || !root) return;
+    // Bounding-rect diff rather than offsetTop — el's offsetParent chain
+    // doesn't necessarily run through root, same reasoning as
+    // scrollOffsetWithin above.
+    root.scrollTop = el.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop;
+  }
+
+  function close() {
+    const root = getScrollRoot();
+    if (root) root.scrollTop = 0;
+  }
+
+  return { render, openFrom, close, syncTail(){} };
+}
+
 let currentHighlightEl = null;
 function jumpToQuote(linkedQuote) {
   const compact = currentHallOpen ? isModalCompact(currentHallOpen.origRect) : true;
@@ -2266,9 +2333,10 @@ function setDesktopContent(kind, chapterIndex) {
       ? b.dataset.content === 'quotes'
       : b.dataset.content === 'chapter' && Number(b.dataset.i) === chapterIndex);
   });
-  if (kind === 'chapter') hallChaptersDesktop.openFrom(chapterIndex);
-  // Offsets read while a pane is display:none are all zero, so the loop
-  // geometry captured then is meaningless — retake it once it is real.
+  // Offsets read while a pane is display:none are all zero (the pane has
+  // just been switched to .active this same tick) — defer to the next
+  // frame once it's really laid out, same reasoning for both branches.
+  if (kind === 'chapter') requestAnimationFrame(() => hallChaptersDesktop.openFrom(chapterIndex));
   else requestAnimationFrame(hallQuotesCarouselDesktop.remeasure);
 }
 
