@@ -275,6 +275,11 @@
   }
   #hall-order-nav a:hover,
   #hall-order-nav a.active{ color:var(--rubric); border-color:var(--rubric); }
+  /* Ordering only means anything while the row is on screen, so the nav
+     leaves with it — same .2s as .saint-item's own dim, so the row and its
+     control read as one thing going and coming back together. */
+  #hall-order-nav{ transition:opacity 0.2s ease; }
+  #hall-order-nav.dim{ opacity:0; pointer-events:none; }
 
   #hall-track{
     flex:1;
@@ -559,6 +564,9 @@
   .chapter-body p{ margin-bottom:1em; }
   .chapter.revealed .chapter-body{ display:block; }
   .chapter-start-sentinel, .chapter-end-sentinel{ height:1px; }
+  /* Height set by createChapterController's syncTail() — see its comment. */
+  .chapters-tail{ flex:0 0 auto; }
+  .chapters-panel:not(.has-open) .chapters-tail{ height:0 !important; }
   .chapters-panel.has-open .chapter:not(.revealed){ display:none; }
   .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
   .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; cursor:pointer; }
@@ -886,6 +894,15 @@ document.querySelectorAll('header nav a').forEach(a => {
     const target = a.dataset.view;
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById(`${target}-view`).classList.add('active');
+    /* Freeze whichever view just left. Its idle drift would otherwise keep
+       running against a display:none track, and that is what made the row
+       jump on the way back: a hidden element reports scrollLeft 0 and
+       refuses writes, so drift re-seeded its position from 0 and then wrote
+       that near-zero value back the instant the view was displayed again,
+       throwing away wherever the reader actually was. */
+    if (target === 'armory') { hallDrift.pause(); armoryDrift.resume(); }
+    else { armoryDrift.pause(); hallDrift.resume(); }
+
     // Elements inside a display:none view are never laid out by the
     // browser, so any offsetLeft-based measurement taken while hidden
     // reads as 0 and stays wrong forever, even long after the tab
@@ -904,6 +921,10 @@ document.querySelectorAll('header nav a').forEach(a => {
           if (first) armoryInertia.resetTo(first.offsetTop);
         }
       } else {
+        // Card sizes may have been invalidated by a resize that happened
+        // while this view was hidden (layoutHallCards bails on a
+        // zero-height track), so re-lay-out before measuring off it.
+        layoutHallCards();
         hallInertia.measure();
       }
     });
@@ -1222,7 +1243,12 @@ function attachIdleDrift(trackEl, loopApi, opts = {}) {
   function frame(now) {
     const dt = Math.min(now - lastFrame, 50);
     lastFrame = now;
-    if (!paused) {
+    // An unrendered track can't scroll: it reads back 0 and ignores writes,
+    // so drifting against one silently resets the position it will restore
+    // the moment the view is shown again. Callers also pause on view
+    // switch; this is the backstop for any path that doesn't.
+    if (!paused && !trackEl.clientWidth && !trackEl.clientHeight) { active = false; pos = null; currentSpeed = 0; }
+    else if (!paused) {
       const idleFor = now - lastInteraction;
       if (idleFor > idleMs) {
         if (!active) { active = true; pos = trackEl[scrollProp]; currentSpeed = 0; }
@@ -1720,6 +1746,10 @@ const DECK_SIDE_MARGIN = 20;      // keeps the widest card clear of both screen 
 function layoutHallCards() {
   const items = [...hallTrack.querySelectorAll('.saint-item')];
   if (!items.length) return;
+  // A hidden view has no layout: the track measures 0x0 and every card
+  // would be sized against that, silently wrecking the deck for when it
+  // comes back. The nav handler re-runs this on the way in.
+  if (!hallTrack.clientHeight || !hallTrack.clientWidth) return;
   // Absolute y of every card's top edge — all items top-align in the track,
   // so one measurement covers them all.
   const cardTopAbs = hallTrack.getBoundingClientRect().top + parseFloat(getComputedStyle(items[0]).marginTop);
@@ -1982,6 +2012,26 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
     });
   }
 
+  /* Blank space below the last revealed chapter, sized so that chapter can
+     always be scrolled right up to the top of the pane.
+
+     Without it, a chapter shorter than the pane leaves no scroll room at
+     all, and revealPrevious()'s scroll compensation — set scrollTop forward
+     by exactly the height just inserted above — asks for a position the
+     scroller cannot reach. The browser clamps it, and the content lurches
+     by precisely (paneHeight - lastChapterHeight). That is the "scroll up a
+     hair, jump a whole screen" behaviour. With the tail present the
+     compensated target is always valid, so the visible text does not move
+     at all when an earlier chapter is revealed above it. */
+  function syncTail() {
+    const tail = container.querySelector('.chapters-tail');
+    const root = getScrollRoot();
+    if (!tail || !root) return;
+    const revealed = [...container.querySelectorAll('.chapter.revealed')];
+    const last = revealed[revealed.length - 1];
+    tail.style.height = last ? Math.max(0, root.clientHeight - last.offsetHeight) + 'px' : '0px';
+  }
+
   function applyVisibility() {
     ensureStickyObserver();
     container.querySelectorAll('.chapter').forEach(ch => {
@@ -1994,6 +2044,7 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
       }
     });
     container.classList.toggle('has-open', firstOpen !== null);
+    syncTail();
   }
 
   function disconnectNext() { if (nextObserver) { nextObserver.disconnect(); nextObserver = null; } }
@@ -2130,9 +2181,12 @@ function createChapterController(container, getScrollRoot, getStickyOffset = () 
       });
       container.appendChild(el);
     });
+    const tail = document.createElement('div');
+    tail.className = 'chapters-tail';
+    container.appendChild(tail); // height managed by syncTail()
   }
 
-  return { render, openFrom, close };
+  return { render, openFrom, close, syncTail };
 }
 
 let currentHighlightEl = null;
@@ -2300,6 +2354,7 @@ function openHallModal(itemEl, data) {
   const placeholder = createPlaceholder(itemEl, rect, 'item-placeholder');
 
   setSiblingsDim(hallTrack, '.saint-item', itemEl, true);
+  document.getElementById('hall-order-nav').classList.add('dim');
 
   itemEl.style.top = rect.top + 'px';
   itemEl.style.left = rect.left + 'px';
@@ -2391,6 +2446,7 @@ function closeHallModal(itemEl, placeholder) {
     placeholder.remove();
     document.body.classList.remove('modal-compact');
     setSiblingsDim(hallTrack, '.saint-item', null, false);
+    document.getElementById('hall-order-nav').classList.remove('dim');
     hallBusy = false;
     // Only now — matching wheel scrolling, which stays blocked for the
     // whole time the modal is open (hallBusy || currentHallOpen), not
@@ -2497,6 +2553,9 @@ const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => loopSaf
 // continuously drifting, so it resumes soon after a scroll rather than
 // waiting out a long pause.
 const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia, { axis: 'y', idleMs: 1200 });
+// Saints is the tab on screen at load, so Text starts frozen. The nav
+// handler swaps which of the two is running from here on.
+armoryDrift.pause();
 
 
 /* =====================================================================
@@ -2677,6 +2736,9 @@ window.addEventListener('resize', () => {
   createHallPromoteObserver();
 
   refreshHallModalLayout(); // re-centres the open card and re-syncs the compact panel's top edge
+  // The tail is sized off the pane's height, which the resize just changed.
+  hallChaptersDesktop.syncTail();
+  hallChaptersMobile.syncTail();
   // The Text view needs nothing here: its entries are plain flow content
   // that reflows on its own, and there is no longer a positioned element
   // whose coordinates would have to be recomputed.
