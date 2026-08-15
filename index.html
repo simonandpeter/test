@@ -381,12 +381,11 @@
   .saint-item.selected .saint-card img{ will-change:width, height, opacity; }
 
   /* margin-top is set per item by layoutHallCards(), not here: it is
-     whatever distance puts this name on the SAME y as every other one —
-     the bottom of the tallest image in the set, plus a fixed gap —
-     however short this saint's own image happens to be.
-     Clamped to 2 lines so a long name can never exceed the vertical
-     budget layoutHallCards() reserved for it, which would push the intro
-     down and break that shared baseline. */
+     whatever distance drops this name onto the fixed name line — a set
+     fraction of the viewport height, shared by every saint — from the
+     bottom of this saint's own image, however short that image is.
+     Clamped to 2 lines so a long name can't push the intro below it out
+     of the space left underneath. */
   .saint-caption{
     font-size:11px;
     line-height:14px;
@@ -398,8 +397,9 @@
     overflow:hidden;
     transition:color .3s ease;
   }
-  /* Clamped for the same reason as the caption — INTRO_BLOCK_H reserves
-     exactly three lines plus its gap. */
+  /* Clamped for the same reason as the caption: the space below the name
+     line is finite, and an unbounded intro would run into the deck's
+     bottom edge. */
   .saint-intro{
     margin-top:6px;
     font-size:11px;
@@ -427,28 +427,57 @@
      layouts, so there is nothing left to stretch. */
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
-  /* ---------------- Hall Modal — desktop split panel ---------------- */
-  #hall-modal-quotes, #hall-modal-text{
+  /* ---------------- Hall Modal — desktop three-column layout ----------------
+     Contents list | saint card | selected content. The card is the
+     position:fixed .saint-item itself, tweened into the middle column by
+     computeHallTarget(); the two panels here sit either side of the gap it
+     lands in. Column widths come from layoutModalColumns(), which is the
+     only place that knows the card's measured width. */
+  #hall-contents, #hall-modal-text{
     position:fixed;
-    top:0; height:100%; width:50%;
-    display:flex; align-items:center; justify-content:center;
+    top:var(--modal-top); height:calc(100% - var(--modal-top) - var(--modal-pad));
     opacity:0;
     transition:opacity 1s ease;
     z-index:41;
     pointer-events:none;
   }
-  #hall-modal-quotes{ left:0; }
-  #hall-modal-text{ right:0; }
-  #hall-modal-quotes.reveal, #hall-modal-text.reveal{ opacity:1; pointer-events:auto; }
-
-  .quotes-viewport{
-    position:relative;
-    width:min(320px, 80vw);
-    height:308px;
-    overflow:hidden;
-    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
-    mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  #hall-contents{
+    left:var(--modal-pad);
+    width:var(--modal-contents-w);
+    overflow-y:auto;
+    scrollbar-width:none;
   }
+  #hall-contents::-webkit-scrollbar{ display:none; }
+  #hall-modal-text{
+    left:calc(var(--modal-pad) + var(--modal-contents-w) + var(--modal-gap) + var(--modal-card-w) + var(--modal-gap));
+    right:var(--modal-pad);
+  }
+  #hall-contents.reveal, #hall-modal-text.reveal{ opacity:1; pointer-events:auto; }
+
+  /* Same visual language as .chapter-header — these are the same chapters,
+     listed rather than stacked. */
+  .contents-item{
+    display:block; width:100%; text-align:left;
+    background:none; border:none; font-family:inherit;
+    font-size:13px; letter-spacing:0.03em; line-height:1.45;
+    color:var(--ink-soft); cursor:pointer;
+    padding:9px 4px;
+    border-bottom:1px solid var(--line-grey-soft);
+    transition:color .3s ease;
+  }
+  .contents-item:hover{ color:var(--rubric); }
+  .contents-item.active{ color:var(--rubric); }
+  .contents-item[disabled]{ opacity:0.3; pointer-events:none; }
+
+  .desktop-content-pane{ display:none; height:100%; }
+  .desktop-content-pane.active{ display:block; }
+  #desktop-quotes-pane{ overflow:hidden; }
+  #desktop-chapters-pane{
+    overflow-y:auto;
+    scrollbar-width:none;
+  }
+  #desktop-chapters-pane::-webkit-scrollbar{ display:none; }
+
   .quotes-track{
     display:flex;
     flex-direction:column;
@@ -475,12 +504,13 @@
     transition:color .3s ease;
   }
   .quotes-track .q:hover{ color:var(--rubric); }
-  /* Compact layout: quotes read as prose, not as a ticker — left aligned,
-     set at the chapter body's own 15px, and free to be however tall the
-     wrapped text needs. Variable row heights are only safe because
-     attachLoopScroll measures real offsets rather than assuming every row
-     is one fixed stride. */
-  #mobile-quotes-pane .q{
+  /* Both layouts: quotes read as prose, not as a ticker — left aligned, set
+     at the chapter body's own 15px, and free to be however tall the wrapped
+     text needs. Variable row heights are only safe because attachLoopScroll
+     measures real offsets rather than assuming every row is one fixed
+     stride. */
+  #mobile-quotes-pane .q,
+  #desktop-quotes-pane .q{
     height:auto;
     display:block;
     text-align:left;
@@ -488,14 +518,16 @@
     line-height:1.7;
     padding:16px 18px;
   }
+  #desktop-quotes-pane .q{ padding:16px 4px; }
 
+  /* Fills whichever pane holds it — #desktop-chapters-pane and
+     #mobile-texts-pane are the scroll roots now, so this must not introduce
+     a second one inside them. */
   .chapters-panel{
-    width:min(420px, 80vw);
-    max-height:70vh;
-    overflow-y:auto;
-    scrollbar-width:none;
+    width:100%;
+    max-height:none;
+    overflow:visible;
   }
-  .chapters-panel::-webkit-scrollbar{ display:none; }
   .chapter-header{
     display:block; width:100%; text-align:left;
     background:var(--bg); border:none; font-family:inherit;
@@ -555,7 +587,7 @@
      syncMobilePanelTop(); the 50% fallback only ever applies for the frame
      before that first measurement lands. */
   #hall-mobile-panel{ display:none; }
-  body.modal-compact #hall-modal-quotes, body.modal-compact #hall-modal-text{ display:none; }
+  body.modal-compact #hall-contents, body.modal-compact #hall-modal-text{ display:none; }
   body.modal-compact #hall-mobile-panel{
     display:flex;
     flex-direction:column;
@@ -621,7 +653,6 @@
   #mobile-texts-pane::-webkit-scrollbar{ display:none; }
 
   .mobile-chapters{ padding:0 18px calc(40px + env(safe-area-inset-bottom)) 18px; }
-  .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
 
   /* The deck caption IS the saint's name now — there is no separate
      centred name element, because the image it sits under has not moved or
@@ -742,14 +773,17 @@
     <div id="hall-status" style="display:none"></div>
     <div id="data-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
 
-    <div id="hall-modal-quotes">
-      <div>
-        <div class="label">Key Sayings</div>
-        <div class="quotes-viewport"><div class="quotes-track" id="hall-quotes-track-desktop"></div></div>
-      </div>
+    <div id="hall-contents">
+      <div class="label">Contents</div>
+      <div id="hall-contents-list"></div>
     </div>
     <div id="hall-modal-text">
-      <div class="chapters-panel" id="hall-chapters-desktop"></div>
+      <div class="desktop-content-pane active" id="desktop-quotes-pane">
+        <div class="quotes-track" id="hall-quotes-track-desktop"></div>
+      </div>
+      <div class="desktop-content-pane" id="desktop-chapters-pane">
+        <div class="chapters-panel" id="hall-chapters-desktop"></div>
+      </div>
     </div>
 
     <div id="hall-mobile-panel">
@@ -806,17 +840,39 @@ const GITHUB_BRANCH = 'main';
    given screen produces should not depend on which picture you opened. */
 let deckMaxCardW = 0;
 
+/* Desktop modal columns: contents list | saint card | selected content.
+   The first two are fixed widths so the layout does not shift as you move
+   between saints of different proportions; the content column takes
+   whatever is left. */
+const MODAL_CONTENTS_W = 240;
+const MODAL_GAP = 40;
+const MODAL_PAD = 28;
+
+function modalTextWidth(cardW) {
+  return window.innerWidth - 2 * MODAL_PAD - MODAL_CONTENTS_W - 2 * MODAL_GAP - cardW;
+}
+
 function isModalCompact(origRect) {
-  /* The card is its full deck size in both layouts now — the old "scale it
-     to 62% of the available height first" step described the docking
-     animation that no longer happens, and badly understated the room
-     needed. The honest consequence is that the split panel wants roughly
-     1900px and so appears only on very wide displays; that is accepted, not
-     overlooked. Compact is the ordinary layout. */
+  /* Compact once the content column would be narrower than the card beside
+     it — at that point the reading column has become the cramped part of a
+     layout built around it, and the stacked layout serves it better.
+     Measured against the widest card in the deck rather than the tapped
+     saint's, so the same screen always resolves the same way whichever
+     picture you opened. */
   const cardW = deckMaxCardW || origRect.width;
-  const chaptersPanelHalf = 210; // half of the 420px chapters panel
-  const buffer = 60;
-  return window.innerWidth < 4 * chaptersPanelHalf + 2 * cardW + buffer;
+  return modalTextWidth(cardW) < cardW;
+}
+
+/* Publishes the column geometry the CSS reads. Kept here rather than in the
+   stylesheet because the middle column's width is the card's measured
+   width, which only layoutHallCards() knows. */
+function layoutModalColumns() {
+  const root = document.documentElement.style;
+  root.setProperty('--modal-pad', MODAL_PAD + 'px');
+  root.setProperty('--modal-gap', MODAL_GAP + 'px');
+  root.setProperty('--modal-top', (HEADER_H + MODAL_PAD) + 'px');
+  root.setProperty('--modal-contents-w', MODAL_CONTENTS_W + 'px');
+  root.setProperty('--modal-card-w', Math.round(deckMaxCardW) + 'px');
 }
 
 /* =====================================================================
@@ -1640,39 +1696,35 @@ const LOOP_BUFFER = 24; // Reverted from 40. That widening was meant to give nat
                          // real per-frame layout/paint work on actual mobile hardware, invisible
                          // in this sandbox's testing. 24 is what the original file used.
 
-/* Deck geometry. Every image is drawn at ONE shared scale factor, chosen so
-   the tallest image in the set exactly fills the available height — so
-   widths and heights are both ragged, reflecting the real proportions of
-   each picture rather than a common crop.
+/* Deck geometry. Every image is drawn at ONE shared scale factor, and every
+   saint's name sits on the same horizontal line — so widths and heights are
+   both ragged, reflecting the real proportions of each picture rather than a
+   common crop, while the typography stays regular.
 
-   The names still line up: because the tallest image is what defines
-   availH, "the bottom of the tallest image" is always availH, and each
-   caption's margin-top is whatever closes the gap from its own shorter
-   image down to that line. Shorter images simply carry more empty space
-   above their name.
+   That name line is a fixed fraction of the viewport, NOT wherever the
+   tallest image happens to end. Deriving it from the image meant the
+   tallest saint set the line, which on most screens drove it almost to the
+   bottom edge — and since the compact modal's panel begins below the name,
+   that left the chapters and quotes with no room to appear in at all. The
+   images are now fitted to the space above the line instead of the line
+   being pushed down to clear the images.
 
    Consequence worth knowing: since the scale factor is applied to source
    pixel dimensions, every saint image must be exported at the same pixel
    density. One exported at 2x renders twice the size of its neighbours,
    and the page has no way to tell that apart from a genuinely larger icon. */
 const CARD_CAPTION_GAP = 12;
-const CAPTION_LINES_H = 28;  // 2 lines at .saint-caption's 14px line-height
-const INTRO_BLOCK_H = 48;    // .saint-intro's 6px margin + 3 lines at 14px
-const DECK_SIDE_MARGIN = 20; // keeps the widest card clear of both screen edges
+const NAME_LINE_FRACTION = 5 / 9; // of viewport height, measured to the top of the name
+const DECK_SIDE_MARGIN = 20;      // keeps the widest card clear of both screen edges
 
 function layoutHallCards() {
   const items = [...hallTrack.querySelectorAll('.saint-item')];
   if (!items.length) return;
-  // Read the margins rather than restating them: .saint-item's bottom
-  // margin carries env(safe-area-inset-bottom), whose value is only known
-  // to the browser.
-  const cs = getComputedStyle(items[0]);
-  const vMargin = parseFloat(cs.marginTop) + parseFloat(cs.marginBottom);
-  // Reserve intro space only if some saint actually has an intro.txt —
-  // otherwise every card would give up 48px of height for an empty box.
-  const hasIntro = SAINTS.some(s => s.intro);
-  const captionBlock = CARD_CAPTION_GAP + CAPTION_LINES_H + (hasIntro ? INTRO_BLOCK_H : 0);
-  const availH = Math.max(80, hallTrack.clientHeight - vMargin - captionBlock);
+  // Absolute y of every card's top edge — all items top-align in the track,
+  // so one measurement covers them all.
+  const cardTopAbs = hallTrack.getBoundingClientRect().top + parseFloat(getComputedStyle(items[0]).marginTop);
+  const nameLineY = window.innerHeight * NAME_LINE_FRACTION;
+  const availH = Math.max(80, nameLineY - CARD_CAPTION_GAP - cardTopAbs);
   const maxImgH = Math.max(...SAINTS.map(s => s.imgH || FALLBACK_IMAGE_H));
   /* Height alone can't set the scale: on a narrow screen a tall-enough
      card comes out wider than the viewport (measured on a 375px phone,
@@ -1681,12 +1733,8 @@ function layoutHallCards() {
   const maxImgW = Math.max(...SAINTS.map(s => s.imgW || FALLBACK_IMAGE_W));
   const availW = Math.max(80, hallTrack.clientWidth - DECK_SIDE_MARGIN);
   const scale = Math.min(availH / maxImgH, availW / maxImgW);
-  /* The caption line follows the tallest image as ACTUALLY RENDERED, not
-     the height budget. The two are equal only while height is the binding
-     constraint; once width binds, availH is taller than any real card and
-     every name would float below its picture. */
-  const maxH = maxImgH * scale;
   deckMaxCardW = maxImgW * scale; // read by isModalCompact() — see its comment
+  layoutModalColumns();           // the modal's middle column IS this width
 
   items.forEach(item => {
     const s = item._saint;
@@ -1697,7 +1745,12 @@ function layoutHallCards() {
     card.style.setProperty('--card-w', w + 'px');
     card.style.setProperty('--card-h', h + 'px');
     const caption = item.querySelector('.saint-caption');
-    caption.style.marginTop = (maxH - h + CARD_CAPTION_GAP) + 'px';
+    /* Closes the gap from this image's own bottom down to the fixed name
+       line — availH, not the tallest rendered card. Those are equal only
+       while height is the binding axis; when width binds, every card is
+       shorter than the budget and keying off the tallest one would lift the
+       whole row of names off the line they are supposed to share. */
+    caption.style.marginTop = (availH - h + CARD_CAPTION_GAP) + 'px';
     // Pin the text blocks to the image's width so the item's own width is
     // exactly the card's. Left free, a long name would make the item wider
     // than its picture, which changes the row's spacing and the box the
@@ -1844,9 +1897,11 @@ function createHallPromoteObserver() {
 const hallQuotesCarouselDesktop = createQuoteCarousel(document.getElementById('hall-quotes-track-desktop'), 7, () => hallBusy);
 const hallQuotesCarouselMobile = createQuoteCarousel(document.getElementById('hall-quotes-track-mobile'), 3, () => hallBusy);
 
+// The panel itself no longer scrolls — its pane does, so that is the root
+// the reveal sentinels and sticky headers have to be measured against.
 const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
-  () => document.getElementById('hall-chapters-desktop')
+  () => document.getElementById('desktop-chapters-pane')
 );
 /* Both controllers now take the default zero sticky offset. The compact
    one used to need getMobileStickyClearance() — the page header plus the
@@ -2086,21 +2141,26 @@ function jumpToQuote(linkedQuote) {
   const container = compact
     ? document.getElementById('hall-chapters-mobile')
     : document.getElementById('hall-chapters-desktop');
-  const controller = compact ? hallChaptersMobile : hallChaptersDesktop;
-  // Compact shows one mode at a time, and the chapter this quote lives in
-  // is in the other one — switch across before trying to scroll to it, or
-  // the target is inside a display:none pane and every offset reads zero.
-  if (compact) setHallMobileMode('texts');
-  controller.openFrom(linkedQuote.chapterIndex);
+  // Either layout shows one thing at a time, and the chapter this quote
+  // lives in is not the thing currently showing — switch across before
+  // trying to scroll to it, or the target sits inside a display:none pane
+  // where every offset reads zero. Each path also moves its own selection
+  // indicator, so the reader can see where the quote took them.
+  if (compact) {
+    setHallMobileMode('texts');
+    hallChaptersMobile.openFrom(linkedQuote.chapterIndex);
+  } else {
+    setDesktopContent('chapter', linkedQuote.chapterIndex); // itself calls openFrom
+  }
 
   requestAnimationFrame(() => {
     const anchor = container.querySelector(`.quote-anchor[data-idx="${linkedQuote.quoteIndex}"]`);
     if (!anchor) return;
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
-    // No sticky clearance in either layout now — each panel's own top edge
+    // No sticky clearance in either layout now — each pane's own top edge
     // is the sticky line, with nothing overlaying it.
-    const scrollBox = compact ? document.getElementById('mobile-texts-pane') : container;
+    const scrollBox = document.getElementById(compact ? 'mobile-texts-pane' : 'desktop-chapters-pane');
     const anchorTop = anchor.getBoundingClientRect().top - scrollBox.getBoundingClientRect().top + scrollBox.scrollTop;
     const targetTop = anchorTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
     const startTop = scrollBox.scrollTop;
@@ -2114,7 +2174,7 @@ function jumpToQuote(linkedQuote) {
 const HEADER_H = 30;
 
 /* ---- Hall modal ---- */
-const hallModalQuotes = document.getElementById('hall-modal-quotes');
+const hallContents = document.getElementById('hall-contents');
 const hallModalText = document.getElementById('hall-modal-text');
 const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
@@ -2122,17 +2182,62 @@ const hallClose = document.getElementById('hall-close');
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
 let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
-/* One path for both layouts. No resizing at all, exactly matching the deck
-   card's size — only a horizontal move to the centre. Compact used to take
-   a second branch that shrank the card into a small top-right dock; that
-   is gone, which is also why nothing here needs a scale factor any more. */
-function computeHallTarget(origRect) {
+/* No resizing in either layout — the card keeps its deck size and only
+   moves horizontally. Compact centres it on screen; desktop lands it in the
+   middle column, centred within the fixed card-column width so saints of
+   different widths all sit on the same axis between the contents list and
+   the text. */
+function computeHallTarget(origRect, compact) {
+  const targetLeft = compact
+    ? (window.innerWidth - origRect.width) / 2
+    : MODAL_PAD + MODAL_CONTENTS_W + MODAL_GAP + (deckMaxCardW - origRect.width) / 2;
   return {
     targetH: origRect.height,
     targetW: origRect.width,
     targetTop: origRect.top,
-    targetLeft: (window.innerWidth - origRect.width) / 2
+    targetLeft
   };
+}
+
+/* Desktop content selection. The contents list is the only control — there
+   is no mode toggle here, unlike compact: "Key Quotes" is simply the first
+   entry, and every chapter follows it. */
+let desktopContent = null;
+function setDesktopContent(kind, chapterIndex) {
+  desktopContent = kind;
+  document.getElementById('desktop-quotes-pane').classList.toggle('active', kind === 'quotes');
+  document.getElementById('desktop-chapters-pane').classList.toggle('active', kind === 'chapter');
+  document.querySelectorAll('#hall-contents-list .contents-item').forEach(b => {
+    b.classList.toggle('active', kind === 'quotes'
+      ? b.dataset.content === 'quotes'
+      : b.dataset.content === 'chapter' && Number(b.dataset.i) === chapterIndex);
+  });
+  if (kind === 'chapter') hallChaptersDesktop.openFrom(chapterIndex);
+  // Offsets read while a pane is display:none are all zero, so the loop
+  // geometry captured then is meaningless — retake it once it is real.
+  else requestAnimationFrame(hallQuotesCarouselDesktop.remeasure);
+}
+
+function renderContentsList(data) {
+  const list = document.getElementById('hall-contents-list');
+  list.innerHTML = '';
+  const add = (label, kind, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'contents-item';
+    b.dataset.content = kind;
+    if (i !== undefined) b.dataset.i = i;
+    b.textContent = label;
+    // A saint whose quotes.txt lines don't appear verbatim in a chapter
+    // ends up with none — offer the entry as unavailable rather than as a
+    // link to an empty pane.
+    if (kind === 'quotes' && !data.linkedQuotes.length) b.disabled = true;
+    else b.addEventListener('click', () => setDesktopContent(kind, i));
+    list.appendChild(b);
+  };
+  add('Key Quotes', 'quotes');
+  data.chapters.forEach((ch, i) => add(ch.title, 'chapter', i));
+  setDesktopContent(data.linkedQuotes.length ? 'quotes' : 'chapter', data.linkedQuotes.length ? undefined : 0);
 }
 
 /* Where the compact panel's top edge sits: directly under the saint's name,
@@ -2202,7 +2307,7 @@ function openHallModal(itemEl, data) {
   itemEl.style.height = rect.height + 'px';
   itemEl.classList.add('selected');
 
-  const { targetTop, targetLeft } = computeHallTarget(rect);
+  const { targetTop, targetLeft } = computeHallTarget(rect, compact);
   currentHallOpen = { itemEl, origRect: rect, placeholder };
 
   // Width and height are held at the deck's values for the whole tween —
@@ -2222,6 +2327,7 @@ function openHallModal(itemEl, data) {
   hallChaptersDesktop.render(chaptersHtml);
   hallChaptersMobile.render(chaptersHtml);
 
+  renderContentsList(data);
   hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
   hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
 
@@ -2236,7 +2342,7 @@ function openHallModal(itemEl, data) {
   requestAnimationFrame(syncMobilePanelTop); // re-check once the name's actual layout (e.g. if it wrapped to two lines) has settled
 
   setTimeout(() => {
-    hallModalQuotes.classList.add('reveal');
+    hallContents.classList.add('reveal');
     hallModalText.classList.add('reveal');
     hallMobilePanel.classList.add('reveal');
     hallClose.classList.add('show');
@@ -2262,7 +2368,7 @@ function closeHallModal(itemEl, placeholder) {
   hallDrift.resume(); // 5s idle countdown restarts fresh from now
   currentHallOpen = null;
   modalCompactMode = null;
-  hallModalQuotes.classList.remove('reveal');
+  hallContents.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
   hallClose.classList.remove('show');
@@ -2521,7 +2627,7 @@ function refreshHallModalLayout() {
   // The card is its deck size in both layouts, so a layout switch changes
   // only which panels are shown — the card itself just re-centres.
   const applyGeometry = () => {
-    const { targetTop, targetLeft } = computeHallTarget(origRect);
+    const { targetTop, targetLeft } = computeHallTarget(origRect, compact);
     itemEl.style.top = targetTop + 'px';
     itemEl.style.left = targetLeft + 'px';
     itemEl.style.width = origRect.width + 'px';
@@ -2532,7 +2638,7 @@ function refreshHallModalLayout() {
   if (compact === modalCompactMode) { applyGeometry(); return; }
 
   modalCompactMode = compact;
-  hallModalQuotes.classList.remove('reveal');
+  hallContents.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
 
@@ -2540,7 +2646,7 @@ function refreshHallModalLayout() {
     document.body.classList.toggle('modal-compact', compact);
     applyGeometry();
     requestAnimationFrame(() => {
-      hallModalQuotes.classList.add('reveal');
+      hallContents.classList.add('reveal');
       hallModalText.classList.add('reveal');
       hallMobilePanel.classList.add('reveal');
       // Whichever carousel was hidden before the switch measured itself as
