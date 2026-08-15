@@ -253,18 +253,21 @@
      :none for the brief window a modal tween needs the row still, then
      restores pan-x/pan-y — never plain 'auto', which would lose the
      fast path again. */
-  /* Column flex so the order nav takes its own height off the top and the
-     track gets whatever is left — layoutHallCards() sizes every card from
-     hallTrack.clientHeight, so the deck absorbs the nav automatically
-     rather than needing its height restated anywhere. min-height:0 because
-     a flex item's default min-height:auto would refuse to shrink below its
-     content and let the row overflow the view instead. */
+  /* Column flex so the track takes the view's whole height — the order nav
+     is out of flow (below), so nothing sits above the deck and
+     layoutHallCards() starts the cards at the very top of the view.
+     min-height:0 because a flex item's default min-height:auto would refuse
+     to shrink below its content and let the row overflow the view instead. */
   #hall-view.active{ display:flex; flex-direction:column; }
+  /* Out of flow, sitting in the dead band beneath the cards: .saint-item's
+     margin-bottom already reserves 40px + safe area under the deck, so the
+     nav costs the images no height at either end. */
   #hall-order-nav{
-    flex:0 0 auto;
-    display:flex; align-items:center; justify-content:center;
+    position:absolute; z-index:5;
+    right:20px;
+    bottom:calc(11px + env(safe-area-inset-bottom));
+    display:flex; align-items:center;
     gap:28px;
-    padding:9px 0 7px 0;
     font-size:10px;
     letter-spacing:0.14em;
     text-transform:uppercase;
@@ -1753,9 +1756,9 @@ const LOOP_BUFFER = 24; // Reverted from 40. That widening was meant to give nat
    and the page has no way to tell that apart from a genuinely larger icon. */
 const CARD_CAPTION_GAP = 12;
 const NAME_LINE_FRACTION_DESKTOP = 5 / 9; // of viewport height, measured to the top of the name
-// Compact/mobile sits the name higher (3/7 vs 5/9) so the image renders
+// Compact/mobile sits the name higher (3/8 vs 5/9) so the image renders
 // smaller and the source-text panel below it gets more room.
-const NAME_LINE_FRACTION_COMPACT = 3 / 7;
+const NAME_LINE_FRACTION_COMPACT = 3 / 8;
 const MOBILE_BREAKPOINT = 700; // matches the header's own @media(max-width:700px)
 function nameLineFraction() {
   return window.innerWidth <= MOBILE_BREAKPOINT ? NAME_LINE_FRACTION_COMPACT : NAME_LINE_FRACTION_DESKTOP;
