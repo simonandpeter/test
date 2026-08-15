@@ -758,19 +758,25 @@ function runModeTransition(isDark) {
   changing.forEach(img => { img.style.opacity = '0'; });
 
   // Wait for the fade-out to actually finish rendering, not just for a
-  // wall-clock timer matching the CSS duration — on a slower phone the GPU
-  // can still be a frame or more behind a setTimeout(IMAGE_FADE_MS), so the
-  // class flip below fired while the old image was still faintly visible,
-  // showing briefly as a rectangle against the new background. transitionend
-  // tracks the real frame; the timeout is only a fallback for images with
-  // nothing to transition (opacity already 0) or reduced-motion, where it
-  // may never fire.
+  // wall-clock timer matching the CSS duration. transitionend tracks the
+  // real frame; a setTimeout(IMAGE_FADE_MS) fallback used to race it, but
+  // under phone-only load (throttled background tab, low-power mode,
+  // weaker GPU) the transition can lag past that window, so the timeout
+  // won often enough to flip the theme class and clear img.src while the
+  // old image was still fully opaque — clearing src on a visible <img>
+  // shows a blank white/black rectangle until the new image decodes. The
+  // timeout is now a true last-resort (reduced-motion, or nothing to
+  // transition because opacity was already 0), not a race: it only fires
+  // if no transition is actually running.
   const fadeOutDone = changing.length
     ? Promise.all(changing.map(img => new Promise(resolve => {
         let done = false;
         const finish = () => { if (done) return; done = true; resolve(); };
         img.addEventListener('transitionend', (e) => { if (e.propertyName === 'opacity') finish(); }, { once: true });
-        setTimeout(finish, IMAGE_FADE_MS + 100);
+        const hasOpacityTransition = getComputedStyle(img).transitionDuration
+          .split(',').some((d, i) => parseFloat(d) > 0 && getComputedStyle(img).transitionProperty.split(',')[i]?.trim() === 'opacity');
+        if (!hasOpacityTransition) finish();
+        else setTimeout(finish, IMAGE_FADE_MS * 6);
       })))
     : Promise.resolve();
 
