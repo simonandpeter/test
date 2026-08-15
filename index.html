@@ -280,13 +280,21 @@
     height:calc(100dvh - 104px);
     aspect-ratio:1/2.4;
     overflow:hidden;
-    background:var(--bg);
     contain:layout paint;
-    /* Overrides the sitewide 2s background fade (see the `*` rule's own
-       comment) — at 2s, this card's own background lagged behind the
-       .25s image crossfade, showing as a mismatched-colour sliver at the
-       image's letterboxed edges for up to 2s after every theme toggle. */
-    transition:background-color .25s ease;
+    /* Deliberately NO background-color, and nothing to transition.
+       It used to paint var(--bg) and fade it over .25s alongside the page,
+       which looks equivalent but is not: that made the card a SECOND
+       surface animating the same colour as the canvas, on its own paint
+       layer (contain:paint). Measured off a phone capture, the card's fade
+       ran ~15ms — one frame — ahead of the canvas, and because .25s covers
+       241 luminance levels, one frame of skew is a ~21-level step with a
+       hard card-shaped edge: the "rectangles" during a toggle. Worst on
+       the first toggle, when fetching the not-yet-cached variant janks a
+       frame; a second toggle off a warm cache measured perfectly uniform.
+       Transparent means the canvas is the only surface painting the theme,
+       so there is nothing left to fall out of step. The thumb covers this
+       box edge to edge anyway (its crop matches this aspect ratio), so the
+       card background was only ever visible mid-toggle in the first place. */
   }
   .saint-card{ position:relative; }
   .saint-card img{
@@ -806,8 +814,18 @@ function runModeTransition(isDark) {
   // one slow, low-priority background fetch, and the WHOLE toggle — visible
   // cards included — used to wait on it) was the actual cause of "sometimes
   // it takes a long time and it's inconsistent".
+  //
+  // Deferred until the visible transition has finished, though: there are
+  // dozens of these, and kicking off every fetch+decode at the instant of
+  // the toggle is exactly the burst of work that janks the fade on a phone
+  // with a cold cache (measurably the first toggle, not later warm ones).
+  // They're off-screen, so nothing is waiting on them — let the visible
+  // part finish first, then catch them up when the main thread is free.
   const offscreen = allChanging.filter(img => !isRoughlyOnscreen(img));
-  offscreen.forEach(img => { img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light); });
+  const swapOffscreen = () => {
+    if (sequence !== modeToggleId) return; // newer toggle owns them now
+    offscreen.forEach(img => { img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light); });
+  };
 
   const changing = allChanging.filter(img => isRoughlyOnscreen(img));
   changing.forEach(img => { img.style.opacity = '0'; });
@@ -892,6 +910,11 @@ function runModeTransition(isDark) {
     Promise.all([...imagesLoaded, bgSettled]).then(() => {
       if (sequence !== modeToggleId) return;
       changing.forEach(img => { img.style.opacity = ''; });
+      // Visible work is done — now catch up the off-screen clone buffer,
+      // preferably in genuine idle time so it can't steal frames from the
+      // fade-in that's still running.
+      if (window.requestIdleCallback) requestIdleCallback(swapOffscreen, { timeout: 2000 });
+      else setTimeout(swapOffscreen, IMAGE_FADE_MS);
     });
   });
 }
