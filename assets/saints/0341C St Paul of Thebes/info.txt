@@ -1,0 +1,8 @@
+# placeholder data — tradition/gender/region/patronage are provisional
+feast: 15 January
+born: 227, Thebes, Egypt
+died: 341, Eastern Desert, Egypt
+tradition: orthodox, coptic, catholic
+gender: male
+region: africa
+patronage: hermits, weavers

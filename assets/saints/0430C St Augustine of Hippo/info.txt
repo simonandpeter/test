@@ -1,0 +1,8 @@
+# placeholder data — tradition/gender/region/patronage are provisional
+feast: 28 August
+born: 354, Thagaste, Numidia
+died: 430, Hippo Regius, Numidia
+tradition: catholic, orthodox
+gender: male
+region: africa
+patronage: theologians, printers, doctor of the church

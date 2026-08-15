@@ -253,42 +253,106 @@
      :none for the brief window a modal tween needs the row still, then
      restores pan-x/pan-y — never plain 'auto', which would lose the
      fast path again. */
-  /* Column flex so the track takes the view's whole height — the order nav
-     is out of flow (below), so nothing sits above the deck and
+  /* Column flex so the track takes the view's whole height — the filter
+     control is out of flow (below), so nothing sits above the deck and
      layoutHallCards() starts the cards at the very top of the view.
      min-height:0 because a flex item's default min-height:auto would refuse
      to shrink below its content and let the row overflow the view instead. */
   #hall-view.active{ display:flex; flex-direction:column; }
-  /* Out of flow, sitting in the dead band beneath the cards: .saint-item's
-     margin-bottom already reserves 40px + safe area under the deck, so the
-     nav costs the images no height at either end. */
-  #hall-order-nav{
-    position:absolute; z-index:5;
-    right:20px;
-    bottom:calc(11px + env(safe-area-inset-bottom));
-    display:flex; align-items:center;
-    gap:28px;
-    font-size:10px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
+
+  /* ---------------- Hall filters — burger + slide-in panel ----------------
+     Ordering and every facet live here. Out of flow in the dead band under
+     the cards (.saint-item reserves 40px + safe area there), so the control
+     costs the images no height. */
+  #hall-filter-toggle{
+    position:absolute; z-index:6;
+    left:16px;
+    bottom:calc(10px + env(safe-area-inset-bottom));
+    width:30px; height:24px;
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    padding:0; background:none; border:none; cursor:pointer;
+    transition:opacity 0.2s ease;
   }
-  #hall-order-nav a{
-    cursor:pointer;
-    padding-bottom:3px;
-    border-bottom:1px solid transparent;
-    white-space:nowrap;
-    color:var(--ink-soft);
-    /* Same split as the page header's nav: border-color is hover feedback
-       and stays fast, colour rides the slow ambient text fade. */
-    transition:border-color .3s ease, color 2s ease;
+  #hall-filter-toggle span{
+    display:block; height:1px; width:100%;
+    background:var(--ink-soft);
+    transition:background-color 2s ease;
   }
-  #hall-order-nav a:hover,
-  #hall-order-nav a.active{ color:var(--rubric); border-color:var(--rubric); }
-  /* Ordering only means anything while the row is on screen, so the nav
+  #hall-filter-toggle:hover span{ background:var(--rubric); }
+  /* Filtering only means anything while the row is on screen, so the control
      leaves with it — same .2s as .saint-item's own dim, so the row and its
      control read as one thing going and coming back together. */
-  #hall-order-nav{ transition:opacity 0.2s ease; }
-  #hall-order-nav.dim{ opacity:0; pointer-events:none; }
+  #hall-filter-toggle.dim{ opacity:0; pointer-events:none; }
+
+  #hall-filter-scrim{
+    position:fixed; inset:0; z-index:37;
+    background:var(--bg);
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease;
+  }
+  #hall-filter-scrim.show{ opacity:0.55; pointer-events:auto; }
+
+  #hall-filter-menu{
+    position:fixed; z-index:38;
+    top:0; bottom:0; left:0;
+    width:246px; max-width:78vw;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:calc(22px + env(safe-area-inset-top)) 22px calc(28px + env(safe-area-inset-bottom)) 22px;
+    background:var(--bg);
+    border-right:1px solid var(--line-grey-soft);
+    /* translate, not left/width — a transform animates on the compositor,
+       and this panel slides across the deck while the deck is still live. */
+    transform:translateX(-100%);
+    transition:transform .3s ease, background-color 2s ease;
+  }
+  #hall-filter-menu::-webkit-scrollbar{ display:none; }
+  #hall-filter-menu.open{ transform:translateX(0); }
+
+  .filter-group{ margin-bottom:24px; }
+  .filter-group .label{ text-align:left; margin-bottom:9px; }
+  .filter-opt{
+    display:flex; align-items:center; gap:9px;
+    padding:5px 0;
+    cursor:pointer;
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    transition:color .3s ease;
+  }
+  .filter-opt:hover{ color:var(--rubric); }
+  /* accent-color rather than a custom-drawn box: it recolours the native
+     control in both themes and keeps the input a real focusable checkbox. */
+  .filter-opt input{
+    width:13px; height:13px;
+    margin:0;
+    accent-color:var(--rubric);
+    cursor:pointer;
+  }
+  .filter-range{ display:flex; align-items:center; gap:8px; }
+  .filter-range input{
+    width:100%; min-width:0;
+    padding:5px 6px;
+    font:inherit; font-size:12px;
+    color:var(--ink);
+    background:none;
+    border:1px solid var(--line-grey);
+    transition:border-color .3s ease, color 2s ease;
+  }
+  .filter-range input:focus{ outline:none; border-color:var(--rubric); }
+  .filter-hint{ margin-top:7px; font-size:10px; letter-spacing:0.04em; color:var(--ink-soft); opacity:0.7; }
+  #hall-filter-reset{
+    padding:7px 12px;
+    font:inherit; font-size:10px;
+    letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink-soft);
+    background:none;
+    border:1px solid var(--line-grey);
+    cursor:pointer;
+    transition:border-color .3s ease, color .3s ease;
+  }
+  #hall-filter-reset:hover{ color:var(--rubric); border-color:var(--rubric); }
 
   #hall-track{
     flex:1;
@@ -399,8 +463,8 @@
      fraction of the viewport height, shared by every saint — from the
      bottom of this saint's own image, however short that image is.
      The year sits inside this block rather than beside it, so one margin
-     still places the whole name group and syncMobilePanelTop() still finds
-     the group's real bottom in one measurement. */
+     places the whole name group. In the compact modal this group is faded
+     out — the name is printed by #hall-meta beside the image instead. */
   .saint-caption{
     font-size:11px;
     line-height:14px;
@@ -408,7 +472,7 @@
     text-align:center;
     text-transform:uppercase;
     color:var(--ink-soft);
-    transition:color .3s ease;
+    transition:color .3s ease, opacity .5s ease;
   }
   /* Clamped to 2 lines so a long name can't push the year and the intro
      under it out of the space left below the name line. */
@@ -600,6 +664,61 @@
   .quote-anchor{ transition:background-color 1s ease; border-radius:2px; }
   .quote-anchor.hl{ background-color:var(--hl); transition:background-color .2s ease; cursor:pointer; }
 
+  /* ---------------- Hall Modal — saint record ----------------
+     One element for both layouts, boxed by syncHallMeta() rather than by two
+     sets of rules: compact puts it to the RIGHT of the card (which sits in the
+     left half), desktop puts it BELOW the card in the middle column. Position
+     and width are inline, so everything here is type only. */
+  #hall-meta{
+    position:fixed;
+    z-index:36;
+    display:none;
+    text-align:left;
+    opacity:0;
+    transition:opacity .5s ease;
+    pointer-events:none;
+  }
+  #hall-meta.show{ display:block; }
+  #hall-meta.reveal{ opacity:1; }
+  .meta-name{
+    font-size:15px;
+    line-height:1.25;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    transition:color 2s ease;
+  }
+  .meta-year{
+    margin-top:2px;
+    font-size:10px;
+    letter-spacing:0.16em;
+    color:var(--ink-soft);
+    transition:color 2s ease;
+  }
+  /* Wrapper rather than a :first-of-type rule on .meta-line — every child
+     here is a div, so :first-of-type would match .meta-name instead. It is
+     also what lets buildMetaHtml omit the rule entirely for a saint with no
+     info.txt, leaving the name with nothing dangling under it. */
+  .meta-record{
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid var(--line-grey-soft);
+  }
+  .meta-line{
+    margin-top:9px;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    transition:color 2s ease;
+  }
+  .meta-line:first-child{ margin-top:0; }
+  .meta-key{ color:var(--rubric); }
+
+  /* The name has moved into #hall-meta beside the image, so the deck's own
+     caption would be a second copy of it under the picture. It fades rather
+     than being display:none'd so the swap reads as the one name moving. */
+  body.modal-compact .saint-item.selected .saint-caption{ opacity:0; }
+
   #hall-close{
     position:fixed; top:44px; right:6vw; z-index:42;
     width:34px; height:34px;
@@ -618,9 +737,8 @@
      deliberately separate from the header's own @media(max-width:700px). */
   /* The image no longer docks to a small corner while the text takes over
      the screen. It stays exactly the size it is in the deck and only slides
-     to the centre, the same move desktop makes — so this panel is whatever
-     is left BELOW it, starting at the bottom of the saint's name.
-     --mobile-panel-top is measured from the open card by
+     to the left edge, with #hall-meta beside it — so this panel is whatever
+     is left BELOW that pair. --mobile-panel-top is measured from them by
      syncMobilePanelTop(); the 50% fallback only ever applies for the frame
      before that first measurement lands. */
   #hall-mobile-panel{ display:none; }
@@ -691,11 +809,6 @@
 
   .mobile-chapters{ padding:0 18px calc(40px + env(safe-area-inset-bottom)) 18px; }
 
-  /* The deck caption IS the saint's name now — there is no separate
-     centred name element, because the image it sits under has not moved or
-     changed size. Only the colour lifts; size and spacing stay identical
-     to the deck so nothing reflows as the modal opens. */
-  body.modal-compact .saint-item.selected .saint-caption{ color:var(--ink); }
   /* Hidden while open purely for room: the compact layout has very little
      height left below the image, and the chapters below say more than the
      three-line summary does. */
@@ -802,13 +915,45 @@
 
   <!-- ===================== HALL OF SAINTS ===================== -->
   <section id="hall-view" class="view active">
-    <nav id="hall-order-nav">
-      <a data-order="calendar" class="active">Calendar</a>
-      <a data-order="chronological">Chronological</a>
-    </nav>
+    <button id="hall-filter-toggle" type="button" aria-label="Filters" aria-expanded="false" title="Filters">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="hall-filter-scrim"></div>
+    <aside id="hall-filter-menu" aria-hidden="true">
+      <div class="filter-group">
+        <div class="label">Display order</div>
+        <label class="filter-opt"><input type="radio" name="hall-order" value="calendar" checked><span>Calendar</span></label>
+        <label class="filter-opt"><input type="radio" name="hall-order" value="chronological"><span>Chronological</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="label">Tradition</div>
+        <label class="filter-opt"><input type="checkbox" data-facet="tradition" value="catholic"><span>Catholic</span></label>
+        <label class="filter-opt"><input type="checkbox" data-facet="tradition" value="orthodox"><span>Orthodox</span></label>
+        <label class="filter-opt"><input type="checkbox" data-facet="tradition" value="coptic"><span>Coptic</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="label">Gender</div>
+        <label class="filter-opt"><input type="checkbox" data-facet="gender" value="male"><span>Male</span></label>
+        <label class="filter-opt"><input type="checkbox" data-facet="gender" value="female"><span>Female</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="label">Region</div>
+        <label class="filter-opt"><input type="checkbox" data-facet="region" value="subcontinent"><span>Subcontinent</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="label">Timeframe</div>
+        <div class="filter-range">
+          <input type="number" id="filter-year-from" placeholder="From" inputmode="numeric">
+          <span>&ndash;</span>
+          <input type="number" id="filter-year-to" placeholder="To" inputmode="numeric">
+        </div>
+        <div class="filter-hint">Year of death. Negative for BC.</div>
+      </div>
+      <button id="hall-filter-reset" type="button">Reset filters</button>
+    </aside>
     <div id="hall-track"></div>
     <div id="hall-status" style="display:none"></div>
-    <div id="data-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
+    <div id="data-source-badge" style="display:none;position:absolute;bottom:8px;left:58px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
 
     <div id="hall-contents">
       <div class="label">Contents</div>
@@ -837,6 +982,8 @@
         </div>
       </div>
     </div>
+
+    <div id="hall-meta"></div>
 
     <div id="hall-close">
       <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
@@ -1224,6 +1371,13 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
       checkLoop();
       return trackEl[scrollProp] - before; // 0 on ordinary frames; the exact jump size only when a loop-wrap correction actually fired
     },
+    /* syncAndWrap() deliberately does nothing while blocked() — and blocked()
+       is true for the WHOLE time a Hall modal is open. stepHallModal writes
+       scrollLeft in exactly that window (to slide the deck under the modal to
+       the next saint's slot), so it needs the wrap check to run anyway.
+       Without it, stepping repeatedly in one direction walks off the clone
+       buffer and the card eventually returns to a slot outside the row. */
+    forceWrap() { targetScroll = trackEl[scrollProp]; checkLoop(); },
     /* Toggles the element between native-pannable (default, for
        compositor smoothness) and programmatic-only (during a modal
        tween, so a stray swipe can't move the row mid-animation).
@@ -1493,6 +1647,50 @@ function parseIntro(raw) {
   };
 }
 
+/* info.txt: the saint's structured record — `key: value` per line, `#` for
+   comments. Everything the modal's meta block prints and everything the
+   filter menu matches on comes from here, so a saint with no info.txt shows
+   no meta lines and is unconstrained by every facet rather than being
+   filtered out. Same self-converting behaviour as the feast line above:
+   folders gain the file one at a time and nothing has to flip.
+
+   `feast` here outranks intro.txt's own feast line, which stays as the
+   fallback so orderedSaints() keeps working for folders that only have the
+   older file. */
+const INFO_LIST_KEYS = new Set(['tradition', 'region', 'patronage']);
+
+function parseInfo(raw) {
+  const out = { feast: null, feastKey: null, born: null, died: null,
+                tradition: [], region: [], patronage: [] };
+  (raw || '').replace(/\r/g, '').split('\n').forEach(line => {
+    const t = line.trim();
+    if (!t || t.startsWith('#')) return;
+    const c = t.indexOf(':');
+    if (c === -1) return;
+    const key = t.slice(0, c).trim().toLowerCase();
+    const value = t.slice(c + 1).trim();
+    if (!value) return;
+    if (key === 'feast' || key === 'feast day') {
+      out.feast = parseFeastDate(value);
+      out.feastKey = out.feast ? out.feast.month * 100 + out.feast.day : null;
+    } else if (key === 'born' || key === 'died') {
+      // First comma splits year from place; the place keeps any commas of
+      // its own ("Comana, Pontus"), which is why this isn't a plain split.
+      const c2 = value.indexOf(',');
+      out[key] = c2 === -1
+        ? { year: value, place: '' }
+        : { year: value.slice(0, c2).trim(), place: value.slice(c2 + 1).trim() };
+    } else if (INFO_LIST_KEYS.has(key)) {
+      // Lowercased because these are matched against the filter menu's own
+      // values, never printed back verbatim except patronage (see buildMetaHtml).
+      out[key] = value.split(',').map(v => v.trim().toLowerCase()).filter(Boolean);
+    } else if (key === 'gender') {
+      out.gender = value.toLowerCase();
+    }
+  });
+  return out;
+}
+
 const FALLBACK_IMAGE_W = 521;
 const FALLBACK_IMAGE_H = 1250;
 const IMAGE_PROBE_TIMEOUT_MS = 2500;
@@ -1688,13 +1886,15 @@ async function loadSaints() {
       const image = files.find(f => isImageExt(f) && !/-thumb\.[^.]+$/i.test(f) && !/-dark\.[^.]+$/i.test(f));
       const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
       const introFile = files.find(f => f.toLowerCase() === 'intro.txt');
-      const chapterFiles = files.filter(f => /\.txt$/i.test(f) && !/^(quotes|intro)\.txt$/i.test(f)).sort(naturalCompare);
+      const infoFile = files.find(f => f.toLowerCase() === 'info.txt');
+      const chapterFiles = files.filter(f => /\.txt$/i.test(f) && !/^(quotes|intro|info)\.txt$/i.test(f)).sort(naturalCompare);
       if (!image) { skipped.push(folder); return null; }
 
       const base = `assets/saints/${encodeURIComponent(folder)}/`;
-      const [quotesRaw, introRaw, chapters] = await Promise.all([
+      const [quotesRaw, introRaw, infoRaw, chapters] = await Promise.all([
         quotesFile ? fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : Promise.resolve(''),
         introFile ? fetchText(base + encodeURIComponent(introFile)).catch(() => '') : Promise.resolve(''),
+        infoFile ? fetchText(base + encodeURIComponent(infoFile)).catch(() => '') : Promise.resolve(''),
         Promise.all(chapterFiles.map(async (cf) => {
           const body = await fetchText(base + encodeURIComponent(cf)).catch((e) => { console.warn(`Could not fetch ${base}${cf}:`, e); return ''; });
           return { title: cf.replace(/\.txt$/i, ''), body: body.trim() };
@@ -1703,6 +1903,7 @@ async function loadSaints() {
       const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
       const parsed = parseSaintFolder(folder);
       const intro = parseIntro(introRaw);
+      const info = parseInfo(infoRaw);
 
       const imageForMode = f => base + encodeURIComponent(f);
       const thumbOf = f => f.replace(/\.[^.]+$/, '-thumb.jpg');
@@ -1716,8 +1917,9 @@ async function loadSaints() {
         image: imageForMode(image),
         thumb: imageForMode(thumbOf(image)),
         intro: intro.text,
-        feast: intro.feast,
-        feastKey: intro.feastKey,
+        feast: info.feast || intro.feast,
+        feastKey: info.feastKey !== null ? info.feastKey : intro.feastKey,
+        info,
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
       };
@@ -1842,23 +2044,106 @@ function layoutHallCards() {
    flag to flip once enough of them exist. */
 let hallOrder = 'calendar';
 
+/* Facet filters, read from info.txt (see parseInfo). Semantics: OR inside a
+   group, AND across groups, and an EMPTY group is no constraint at all —
+   ticking nothing must show everything, which is why each group short-circuits
+   on size 0 rather than being folded into one predicate.
+
+   A saint with no info.txt has empty lists and no gender, so it passes every
+   group that is unconstrained and fails any group that is constrained. That is
+   the intended reading: an unlabelled saint is not claimed by any facet. */
+const hallFilters = { tradition: new Set(), gender: new Set(), region: new Set(), yearFrom: null, yearTo: null };
+
+function saintPassesFilters(s) {
+  const info = s.info || {};
+  const anyOf = (picked, values) => !picked.size || (values || []).some(v => picked.has(v));
+  if (!anyOf(hallFilters.tradition, info.tradition)) return false;
+  if (!anyOf(hallFilters.region, info.region)) return false;
+  if (hallFilters.gender.size && !hallFilters.gender.has(info.gender)) return false;
+  /* sortKey is the signed year of death (BC negative — see parseSaintFolder),
+     so one numeric comparison spans the era boundary. A saint with no
+     parseable year has a null key and drops out the moment either bound is
+     set, rather than being silently treated as year zero. */
+  if (hallFilters.yearFrom !== null || hallFilters.yearTo !== null) {
+    if (s.sortKey === null || s.sortKey === undefined) return false;
+    if (hallFilters.yearFrom !== null && s.sortKey < hallFilters.yearFrom) return false;
+    if (hallFilters.yearTo !== null && s.sortKey > hallFilters.yearTo) return false;
+  }
+  return true;
+}
+
+function filteredSaints() {
+  return SAINTS.filter(saintPassesFilters);
+}
+
 function orderedSaints() {
-  if (hallOrder !== 'calendar') return SAINTS;
-  const dated = SAINTS.filter(s => s.feastKey !== null).sort((a, b) => a.feastKey - b.feastKey);
-  const undated = SAINTS.filter(s => s.feastKey === null);
+  const pool = filteredSaints();
+  if (hallOrder !== 'calendar') return pool;
+  const dated = pool.filter(s => s.feastKey !== null).sort((a, b) => a.feastKey - b.feastKey);
+  const undated = pool.filter(s => s.feastKey === null);
   return [...dated, ...undated];
 }
 
-document.querySelectorAll('#hall-order-nav a').forEach(a => {
-  a.addEventListener('click', () => {
-    // Re-rendering replaces every node in the row, which would strand an
-    // open modal's fixed-position card and its placeholder.
-    if (hallBusy || currentHallOpen || a.dataset.order === hallOrder) return;
-    document.querySelectorAll('#hall-order-nav a').forEach(x => x.classList.remove('active'));
-    a.classList.add('active');
-    hallOrder = a.dataset.order;
-    renderHall();
+/* =====================================================================
+   HALL FILTER MENU
+===================================================================== */
+const hallFilterToggle = document.getElementById('hall-filter-toggle');
+const hallFilterMenu = document.getElementById('hall-filter-menu');
+const hallFilterScrim = document.getElementById('hall-filter-scrim');
+
+function setHallFilterMenu(open) {
+  hallFilterMenu.classList.toggle('open', open);
+  hallFilterMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+  hallFilterScrim.classList.toggle('show', open);
+  hallFilterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+/* Re-rendering replaces every node in the row, which would strand an open
+   modal's fixed-position card and its placeholder — the same guard the old
+   order nav carried. The menu is hidden with the deck while a modal is open,
+   so this is a backstop rather than the primary defence. */
+function applyHallFilters() {
+  if (hallBusy || currentHallOpen) return;
+  renderHall();
+}
+
+hallFilterToggle.addEventListener('click', () => setHallFilterMenu(!hallFilterMenu.classList.contains('open')));
+hallFilterScrim.addEventListener('click', () => setHallFilterMenu(false));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setHallFilterMenu(false); });
+
+hallFilterMenu.querySelectorAll('input[name="hall-order"]').forEach(r => {
+  r.addEventListener('change', () => { hallOrder = r.value; applyHallFilters(); });
+});
+
+hallFilterMenu.querySelectorAll('input[data-facet]').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const set = hallFilters[cb.dataset.facet];
+    if (cb.checked) set.add(cb.value); else set.delete(cb.value);
+    applyHallFilters();
   });
+});
+
+const filterYearFrom = document.getElementById('filter-year-from');
+const filterYearTo = document.getElementById('filter-year-to');
+[filterYearFrom, filterYearTo].forEach(input => {
+  input.addEventListener('input', () => {
+    // Blank means "no bound", which is not the same as 0 — an empty field
+    // must not be read as year zero and cut every BC saint.
+    const v = input.value.trim();
+    const key = input === filterYearFrom ? 'yearFrom' : 'yearTo';
+    hallFilters[key] = v === '' || isNaN(Number(v)) ? null : Number(v);
+    applyHallFilters();
+  });
+});
+
+document.getElementById('hall-filter-reset').addEventListener('click', () => {
+  hallOrder = 'calendar';
+  ['tradition', 'gender', 'region'].forEach(k => hallFilters[k].clear());
+  hallFilters.yearFrom = hallFilters.yearTo = null;
+  hallFilterMenu.querySelectorAll('input[data-facet]').forEach(cb => { cb.checked = false; });
+  hallFilterMenu.querySelector('input[name="hall-order"][value="calendar"]').checked = true;
+  filterYearFrom.value = filterYearTo.value = '';
+  applyHallFilters();
 });
 
 function renderHall() {
@@ -1868,9 +2153,18 @@ function renderHall() {
     hallStatus.style.display = 'flex';
     return;
   }
+  const ordered = orderedSaints();
+  // Distinct from the case above: there ARE saints, the filters just exclude
+  // all of them. Saying so is the only way out of the state — an empty row
+  // reads as a load failure and offers no hint that a tick box caused it.
+  if (!ordered.length) {
+    hallStatus.textContent = 'No saints match these filters.';
+    hallStatus.style.display = 'flex';
+    return;
+  }
   hallStatus.style.display = 'none';
 
-  const loopSaints = loopSafeList(orderedSaints());
+  const loopSaints = loopSafeList(ordered);
   const head = cyclicSlice(loopSaints, loopSaints.length - LOOP_BUFFER, LOOP_BUFFER);
   const tail = cyclicSlice(loopSaints, 0, LOOP_BUFFER);
   const full = [...head, ...loopSaints, ...tail];
@@ -1889,6 +2183,7 @@ function renderHall() {
       ${s.intro ? `<div class="saint-intro">${escapeHtml(s.intro)}</div>` : ''}`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
+      if (stepDragMoved) { stepDragMoved = false; return; } // this click is the tail of a swipe — see STEP_CLICK_SLOP
       if (item.classList.contains('selected')) { if (hallClose.onclick) hallClose.onclick(); return; }
       // a deliberate tap can't wait out the dwell timer for the real image
       promoteHallImage(item.querySelector('.saint-card img.full'));
@@ -2323,18 +2618,32 @@ const hallContents = document.getElementById('hall-contents');
 const hallModalText = document.getElementById('hall-modal-text');
 const hallMobilePanel = document.getElementById('hall-mobile-panel');
 const hallClose = document.getElementById('hall-close');
+const hallMeta = document.getElementById('hall-meta');
 
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
 let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
+/* Compact geometry: the card no longer centres, it takes the left of the
+   screen and #hall-meta takes what's right of it. That fits at the card's
+   DECK size — no resize is reintroduced — because layoutHallCards() is
+   height-bound on a phone: the tallest source image is 565px against ~210px
+   of budget, so the widest card lands near 154px, about 41% of a 375px
+   viewport. A future source image with a much wider aspect ratio would make
+   width the binding axis instead and squeeze this block; the clamp in
+   syncHallMeta() is what keeps that legible rather than negative. */
+const COMPACT_CARD_LEFT = 18;
+const COMPACT_META_GAP = 16;
+const COMPACT_PAD = 16;
+const DESKTOP_META_GAP = 18;
+
 /* No resizing in either layout — the card keeps its deck size and only
-   moves horizontally. Compact centres it on screen; desktop lands it in the
-   middle column, centred within the fixed card-column width so saints of
-   different widths all sit on the same axis between the contents list and
-   the text. */
+   moves horizontally. Compact pins it to the left edge with the record
+   beside it; desktop lands it in the middle column, centred within the fixed
+   card-column width so saints of different widths all sit on the same axis
+   between the contents list and the text. */
 function computeHallTarget(origRect, compact) {
   const targetLeft = compact
-    ? (window.innerWidth - origRect.width) / 2
+    ? COMPACT_CARD_LEFT
     : MODAL_PAD + MODAL_CONTENTS_W + MODAL_GAP + (deckMaxCardW - origRect.width) / 2;
   return {
     targetH: origRect.height,
@@ -2342,6 +2651,55 @@ function computeHallTarget(origRect, compact) {
     targetTop: origRect.top,
     targetLeft
   };
+}
+
+function formatFeast(feast) {
+  if (!feast) return '';
+  const m = MONTH_NAMES[feast.month - 1] || '';
+  return `${feast.day} ${m.charAt(0).toUpperCase() + m.slice(1)}`;
+}
+
+/* The saint's record. Every line is dropped rather than printed empty when
+   its info.txt key is absent, so a folder with no info.txt renders the name
+   alone and nothing looks broken. */
+function buildMetaHtml(s) {
+  const info = s.info || {};
+  const place = p => !p ? '' : (p.place ? `${p.year}, ${p.place}` : p.year);
+  const line = (key, value) => value
+    ? `<div class="meta-line"><span class="meta-key">${key}:</span> ${escapeHtml(value)}</div>`
+    : '';
+  const patronage = (info.patronage || []).join(', ');
+  const record = [
+    line('Feast day', formatFeast(s.feast)),
+    line('Born', place(info.born)),
+    line('Died', place(info.died)),
+    patronage ? `<div class="meta-line"><span class="meta-key">Patron saint of</span> ${escapeHtml(patronage)}</div>` : ''
+  ].filter(Boolean).join('');
+  return `
+    <div class="meta-name">${escapeHtml(s.base || s.name)}</div>
+    ${s.year ? `<div class="meta-year">${escapeHtml(s.year)}</div>` : ''}
+    ${record ? `<div class="meta-record">${record}</div>` : ''}`;
+}
+
+/* Boxes #hall-meta for whichever layout is live. Compact reads the card's
+   TARGET position rather than its measured one — the open tween animates
+   `left` for 1.5s, and measuring mid-tween would place the block against a
+   card position that is about to be wrong. Desktop only needs a vertical
+   measurement, which the tween never touches. */
+function syncHallMeta() {
+  if (!currentHallOpen) return;
+  const { origRect, itemEl } = currentHallOpen;
+  const st = hallMeta.style;
+  if (modalCompactMode) {
+    const left = COMPACT_CARD_LEFT + origRect.width + COMPACT_META_GAP;
+    st.left = Math.round(left) + 'px';
+    st.width = Math.round(Math.max(120, window.innerWidth - left - COMPACT_PAD)) + 'px';
+    st.top = Math.round(origRect.top) + 'px';
+  } else {
+    st.left = (MODAL_PAD + MODAL_CONTENTS_W + MODAL_GAP) + 'px';
+    st.width = Math.round(deckMaxCardW) + 'px';
+    st.top = Math.round(itemEl.getBoundingClientRect().bottom + DESKTOP_META_GAP) + 'px';
+  }
 }
 
 /* Desktop content selection. The contents list is the only control — there
@@ -2386,16 +2744,23 @@ function renderContentsList(data) {
   setDesktopContent(data.linkedQuotes.length ? 'quotes' : 'chapter', data.linkedQuotes.length ? undefined : 0);
 }
 
-/* Where the compact panel's top edge sits: directly under the saint's name,
-   measured rather than derived, since the name's own height depends on
-   whether it wrapped. Nothing moves vertically during the open tween, so
-   this is stable from the moment .selected is applied. */
+/* Where the compact panel's top edge sits: under the image-and-record row,
+   measured rather than derived, since the record's height depends on how many
+   info.txt lines the saint has and whether any wrapped. Nothing moves
+   vertically during the open tween, so this is stable from the moment
+   .selected is applied. */
 const MOBILE_PANEL_GAP = 14;
 function syncMobilePanelTop() {
   if (!currentHallOpen || !modalCompactMode) return;
-  const cap = currentHallOpen.itemEl.querySelector('.saint-caption');
-  if (!cap) return;
-  const top = Math.round(cap.getBoundingClientRect().bottom + MOBILE_PANEL_GAP);
+  const card = currentHallOpen.itemEl.querySelector('.saint-card');
+  if (!card) return;
+  /* The image and the record sit side by side now, so the panel clears
+     whichever runs lower — not the caption, which is faded out in this
+     layout. Keying off the image instead of the name under it is what
+     raises this header and hands the height to the text below. */
+  const bottoms = [card.getBoundingClientRect().bottom];
+  if (hallMeta.classList.contains('show')) bottoms.push(hallMeta.getBoundingClientRect().bottom);
+  const top = Math.round(Math.max(...bottoms) + MOBILE_PANEL_GAP);
   document.documentElement.style.setProperty('--mobile-panel-top', top + 'px');
 }
 
@@ -2418,6 +2783,38 @@ document.querySelectorAll('#hall-mode-nav a').forEach(a => {
 });
 
 let hallBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
+
+/* Everything that depends on WHICH saint is open, and nothing that depends on
+   where its card is. Split out of openHallModal so stepHallModal can swap
+   saints without re-running the open tween or duplicating this. */
+function populateHallModal(data) {
+  // build chapter HTML once (with quote anchors embedded) and populate both panels
+  const chaptersHtml = data.chapters.map((ch, ci) => ({
+    title: ch.title,
+    html: buildChapterHtml(ch.body, data.linkedQuotes.filter(lq => lq.chapterIndex === ci)
+      .map(lq => ({ offset: lq.offset, length: lq.text.length, quoteIndex: lq.quoteIndex })))
+  }));
+  hallChaptersDesktop.render(chaptersHtml);
+  hallChaptersMobile.render(chaptersHtml);
+
+  renderContentsList(data);
+  hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
+  hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
+
+  hallMeta.innerHTML = buildMetaHtml(data);
+  hallMeta.classList.add('show');
+  syncHallMeta();
+
+  // Key Quotes by default, whatever mode the last saint was left in — but
+  // only when there are any. A saint whose quotes.txt lines don't appear
+  // verbatim in its chapters ends up with none, and opening onto an empty
+  // pane would read as the modal having failed to load.
+  const hasQuotes = data.linkedQuotes.length > 0;
+  document.getElementById('hall-mode-nav').classList.toggle('no-quotes', !hasQuotes);
+  setHallMobileMode(hasQuotes ? 'quotes' : 'texts');
+  syncMobilePanelTop();
+  requestAnimationFrame(syncMobilePanelTop); // re-check once the record's actual layout (e.g. a patronage line that wrapped) has settled
+}
 
 function openHallModal(itemEl, data) {
   if (hallBusy || itemEl.classList.contains('selected')) return;
@@ -2446,7 +2843,8 @@ function openHallModal(itemEl, data) {
   const placeholder = createPlaceholder(itemEl, rect, 'item-placeholder');
 
   setSiblingsDim(hallTrack, '.saint-item', itemEl, true);
-  document.getElementById('hall-order-nav').classList.add('dim');
+  hallFilterToggle.classList.add('dim');
+  setHallFilterMenu(false);
 
   itemEl.style.top = rect.top + 'px';
   itemEl.style.left = rect.left + 'px';
@@ -2465,33 +2863,13 @@ function openHallModal(itemEl, data) {
   });
   itemEl.style.top = targetTop + 'px';
 
-  // build chapter HTML once (with quote anchors embedded) and populate both panels
-  const chaptersHtml = data.chapters.map((ch, ci) => ({
-    title: ch.title,
-    html: buildChapterHtml(ch.body, data.linkedQuotes.filter(lq => lq.chapterIndex === ci)
-      .map(lq => ({ offset: lq.offset, length: lq.text.length, quoteIndex: lq.quoteIndex })))
-  }));
-  hallChaptersDesktop.render(chaptersHtml);
-  hallChaptersMobile.render(chaptersHtml);
-
-  renderContentsList(data);
-  hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
-  hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
-
-  // Key Quotes by default, whatever mode the last saint was left in — but
-  // only when there are any. A saint whose quotes.txt lines don't appear
-  // verbatim in its chapters ends up with none, and opening onto an empty
-  // pane would read as the modal having failed to load.
-  const hasQuotes = data.linkedQuotes.length > 0;
-  document.getElementById('hall-mode-nav').classList.toggle('no-quotes', !hasQuotes);
-  setHallMobileMode(hasQuotes ? 'quotes' : 'texts');
-  syncMobilePanelTop();
-  requestAnimationFrame(syncMobilePanelTop); // re-check once the name's actual layout (e.g. if it wrapped to two lines) has settled
+  populateHallModal(data);
 
   setTimeout(() => {
     hallContents.classList.add('reveal');
     hallModalText.classList.add('reveal');
     hallMobilePanel.classList.add('reveal');
+    hallMeta.classList.add('reveal');
     hallClose.classList.add('show');
     hallBusy = false;
     // The mobile carousel rendered while its panel was still display:none
@@ -2518,6 +2896,7 @@ function closeHallModal(itemEl, placeholder) {
   hallContents.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
+  hallMeta.classList.remove('reveal');
   hallClose.classList.remove('show');
   hallChaptersDesktop.close();
   hallChaptersMobile.close();
@@ -2536,9 +2915,10 @@ function closeHallModal(itemEl, placeholder) {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
     placeholder.remove();
+    hallMeta.classList.remove('show'); // only after the fade has run — .show is display, which can't be transitioned
     document.body.classList.remove('modal-compact');
     setSiblingsDim(hallTrack, '.saint-item', null, false);
-    document.getElementById('hall-order-nav').classList.remove('dim');
+    hallFilterToggle.classList.remove('dim');
     hallBusy = false;
     // Only now — matching wheel scrolling, which stays blocked for the
     // whole time the modal is open (hallBusy || currentHallOpen), not
@@ -2553,6 +2933,164 @@ function closeHallModal(itemEl, placeholder) {
     hallQuotesCarouselMobile.setLocked(false);
   });
 }
+
+/* =====================================================================
+   HALL MODAL — stepping to the adjacent saint
+
+   Swipe (touch or mouse drag) on the open card, or the arrow keys, moves to
+   the neighbouring saint without closing. The deck row itself is the source
+   of order: the next saint is literally the next .saint-item in the DOM, so
+   this follows whatever filter and ordering produced the row with nothing to
+   keep in sync. The head/tail clone buffers mean a neighbour always exists,
+   including at the ends.
+===================================================================== */
+const STEP_MS = 380;
+const STEP_SLIDE = 0.42; // fraction of the viewport a card travels on its way out
+
+function adjacentSaintItem(itemEl, dir) {
+  const prop = dir > 0 ? 'nextElementSibling' : 'previousElementSibling';
+  // Skips the .item-placeholder createPlaceholder() parked next to the open item.
+  for (let el = itemEl[prop]; el; el = el[prop]) {
+    if (el.classList.contains('saint-item')) return el;
+  }
+  return null;
+}
+
+function stepHallModal(dir) {
+  if (hallBusy || !currentHallOpen) return;
+  const { itemEl: oldEl, placeholder: oldPlaceholder } = currentHallOpen;
+  const target = adjacentSaintItem(oldEl, dir);
+  if (!target || !target._saint) return;
+
+  hallBusy = true;
+  const compact = modalCompactMode;
+
+  const oldRect = oldEl.getBoundingClientRect(); // read while the card is still in its open position — the ghost starts here
+  const travel = window.innerWidth * STEP_SLIDE;
+
+  oldEl.classList.remove('selected');
+  oldEl.removeAttribute('style');
+  oldPlaceholder.remove();
+  oldEl.classList.add('dim');
+
+  /* Slide the deck so the new card's resting slot lands where the old one's
+     was. Without this the eventual close tween would fly the card one stride
+     further along for every step taken — off screen after a few. The row is
+     hidden (every sibling is .dim) so the jump itself is invisible.
+
+     Measured only now: the placeholder above occupied a slot in the row, and
+     removing it moves every offset after it. Reading offsets before that
+     would shift the deck by a stale distance. */
+  hallTrack.scrollLeft += target.offsetLeft - oldEl.offsetLeft;
+  hallInertia.forceWrap();
+
+  const rect = target.getBoundingClientRect();
+  const placeholder = createPlaceholder(target, rect, 'item-placeholder');
+  target.classList.remove('dim');
+  target.style.width = rect.width + 'px';
+  target.style.height = rect.height + 'px';
+  target.classList.add('selected');
+
+  const { targetTop, targetLeft } = computeHallTarget(rect, compact);
+  target.style.top = targetTop + 'px';
+  currentHallOpen = { itemEl: target, origRect: rect, placeholder };
+
+  // A ghost of the outgoing card, so the old saint is seen to leave rather
+  // than blinking out. It is a clone, not the real item — the real one is
+  // already back in the row where the close tween needs to find it.
+  const ghost = oldEl.cloneNode(true);
+  ghost.classList.remove('dim');
+  ghost.classList.add('selected');
+  ghost.style.top = oldRect.top + 'px';
+  ghost.style.width = oldRect.width + 'px';
+  ghost.style.height = oldRect.height + 'px';
+  ghost.style.pointerEvents = 'none';
+  /* .saint-item carries a 0.2s opacity transition for the deck's dim. Both
+     cards have their opacity driven per-frame by the tween below, and leaving
+     that transition on would have the two fight — the element easing toward
+     each frame's value while the next one is already being written. */
+  ghost.style.transition = 'none';
+  target.style.transition = 'none';
+  document.body.appendChild(ghost);
+
+  /* Content travels with the gesture: stepping forward (dir = 1, a leftward
+     swipe) sends the old card out to the LEFT and brings the new one in from
+     the right, so both offsets are -dir and +dir respectively. */
+  const ghostFrom = oldRect.left;
+  const ghostTo = ghostFrom - dir * travel;
+  const enterFrom = targetLeft + dir * travel;
+  target.style.left = enterFrom + 'px';
+  target.style.opacity = '0';
+
+  hallContents.classList.remove('reveal');
+  hallModalText.classList.remove('reveal');
+  hallMobilePanel.classList.remove('reveal');
+  // show, not just reveal: the record's fade is .5s against this 380ms step,
+  // so leaving it visible would show the old saint's details at part opacity
+  // while the new card is already arriving. populateHallModal re-shows it.
+  hallMeta.classList.remove('reveal', 'show');
+  hallChaptersDesktop.close();
+  hallChaptersMobile.close();
+  currentHighlightEl = null;
+
+  tween(STEP_MS, (t) => {
+    ghost.style.left = lerp(ghostFrom, ghostTo, t) + 'px';
+    ghost.style.opacity = String(1 - t);
+    target.style.left = lerp(enterFrom, targetLeft, t) + 'px';
+    target.style.opacity = String(t);
+  }, () => {
+    ghost.remove();
+    target.style.opacity = '';
+    target.style.transition = '';
+    populateHallModal(target._saint);
+    hallContents.classList.add('reveal');
+    hallModalText.classList.add('reveal');
+    hallMobilePanel.classList.add('reveal');
+    hallMeta.classList.add('reveal');
+    if (compact) hallQuotesCarouselMobile.remeasure();
+    hallClose.onclick = () => { if (!hallBusy) closeHallModal(target, placeholder); };
+    hallBusy = false;
+  });
+}
+
+/* One pointer path for both platforms: pointer events give touch and mouse
+   drag the same handler, which is why this isn't a touchstart/touchmove pair
+   plus a separate mousedown one. */
+const STEP_SWIPE_PX = 45;
+const STEP_CLICK_SLOP = 8;
+let stepDrag = null;
+/* Tapping the open card closes the modal (see renderHall's click handler), and
+   a drag ends by firing a click on that same card. Above the swipe threshold
+   hallBusy already swallows it, but a drag that fell short would otherwise
+   close the modal the user was only trying to swipe. */
+let stepDragMoved = false;
+
+hallTrack.addEventListener('pointerdown', (e) => {
+  if (!currentHallOpen || hallBusy) return;
+  if (!e.target.closest('.saint-item.selected')) return;
+  stepDrag = { x: e.clientX, y: e.clientY };
+  stepDragMoved = false;
+});
+hallTrack.addEventListener('pointerup', (e) => {
+  if (!stepDrag) return;
+  const dx = e.clientX - stepDrag.x;
+  const dy = e.clientY - stepDrag.y;
+  stepDrag = null;
+  stepDragMoved = Math.abs(dx) > STEP_CLICK_SLOP || Math.abs(dy) > STEP_CLICK_SLOP;
+  // Horizontal-dominant only: a mostly-vertical drag on the card is someone
+  // trying to scroll the panel underneath, not asking for the next saint.
+  if (Math.abs(dx) < STEP_SWIPE_PX || Math.abs(dx) <= Math.abs(dy)) return;
+  // Drag left => next saint (the row moves left under the finger), matching
+  // the direction the deck itself scrolls for the same gesture.
+  stepHallModal(dx < 0 ? 1 : -1);
+});
+hallTrack.addEventListener('pointercancel', () => { stepDrag = null; stepDragMoved = false; });
+
+document.addEventListener('keydown', (e) => {
+  if (!currentHallOpen || hallBusy) return;
+  if (e.key === 'ArrowRight') { e.preventDefault(); stepHallModal(1); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); stepHallModal(-1); }
+});
 
 /* =====================================================================
    TEXT — a single vertical column of quotes, each linked to its source.
@@ -2783,6 +3321,7 @@ function refreshHallModalLayout() {
     itemEl.style.left = targetLeft + 'px';
     itemEl.style.width = origRect.width + 'px';
     itemEl.style.height = origRect.height + 'px';
+    syncHallMeta();        // before the panel: on compact the panel clears whichever of the two runs lower
     syncMobilePanelTop();
   };
 
@@ -2792,6 +3331,7 @@ function refreshHallModalLayout() {
   hallContents.classList.remove('reveal');
   hallModalText.classList.remove('reveal');
   hallMobilePanel.classList.remove('reveal');
+  hallMeta.classList.remove('reveal');
 
   setTimeout(() => {
     document.body.classList.toggle('modal-compact', compact);
@@ -2800,6 +3340,7 @@ function refreshHallModalLayout() {
       hallContents.classList.add('reveal');
       hallModalText.classList.add('reveal');
       hallMobilePanel.classList.add('reveal');
+      hallMeta.classList.add('reveal');
       // Whichever carousel was hidden before the switch measured itself as
       // zero-sized; the one now on screen needs its geometry retaken.
       if (compact) hallQuotesCarouselMobile.remeasure();
