@@ -133,13 +133,14 @@
     color:var(--ink);
     font-family:'Times New Roman', Times, serif;
     overflow:hidden;
-    /* background matches the Hall images' .25s crossfade (see
-       .saint-card's own override below) — otherwise the page behind and
-       around the cards kept fading over the sitewide 2s while the image
-       itself had already switched, so the "page background" and "image
-       background" visibly drifted apart mid-toggle even though they're
-       meant to read as the same surface. Text colour keeps the slower
-       ambient fade. */
+    /* .25s is inherited from when each saint image shipped in two
+       background-baked variants and the page had to finish fading in step
+       with the image swap, or the two surfaces visibly drifted apart
+       mid-toggle. The images are cropped to the icon now and no longer
+       swap, so nothing is being matched — but the whole site's surfaces
+       (header, mobile panel, chapter headers) were tuned to this same .25s
+       against the slow 2s ambient text fade, and that contrast is the look.
+       Changing it is a design decision, not a cleanup. */
     transition:background-color .25s ease, color 2s ease;
   }
   a{ color:inherit; }
@@ -246,8 +247,38 @@
      :none for the brief window a modal tween needs the row still, then
      restores pan-x/pan-y — never plain 'auto', which would lose the
      fast path again. */
+  /* Column flex so the order nav takes its own height off the top and the
+     track gets whatever is left — layoutHallCards() sizes every card from
+     hallTrack.clientHeight, so the deck absorbs the nav automatically
+     rather than needing its height restated anywhere. min-height:0 because
+     a flex item's default min-height:auto would refuse to shrink below its
+     content and let the row overflow the view instead. */
+  #hall-view.active{ display:flex; flex-direction:column; }
+  #hall-order-nav{
+    flex:0 0 auto;
+    display:flex; align-items:center; justify-content:center;
+    gap:28px;
+    padding:9px 0 7px 0;
+    font-size:10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  #hall-order-nav a{
+    cursor:pointer;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    white-space:nowrap;
+    color:var(--ink-soft);
+    /* Same split as the page header's nav: border-color is hover feedback
+       and stays fast, colour rides the slow ambient text fade. */
+    transition:border-color .3s ease, color 2s ease;
+  }
+  #hall-order-nav a:hover,
+  #hall-order-nav a.active{ color:var(--rubric); border-color:var(--rubric); }
+
   #hall-track{
-    height:100%;
+    flex:1;
+    min-height:0;
     display:flex;
     align-items:flex-start;
     gap:10px;
@@ -283,27 +314,26 @@
   }
   .saint-item.dim{ opacity:0; pointer-events:none; }
 
+  /* Size comes from the image's own pixel dimensions, applied as custom
+     properties by layoutHallCards() rather than as inline width/height —
+     an inline value would outrank the .selected override below, which the
+     modal tween needs to be able to win. */
   .saint-card{
     flex:0 0 auto;
-    height:calc(100vh - 104px);
-    height:calc(100dvh - 104px);
-    aspect-ratio:1/2.4;
+    width:var(--card-w);
+    height:var(--card-h);
     overflow:hidden;
     contain:layout paint;
-    /* Deliberately NO background-color, and nothing to transition.
-       It used to paint var(--bg) and fade it over .25s alongside the page,
-       which looks equivalent but is not: that made the card a SECOND
-       surface animating the same colour as the canvas, on its own paint
-       layer (contain:paint). Measured off a phone capture, the card's fade
-       ran ~15ms — one frame — ahead of the canvas, and because .25s covers
-       241 luminance levels, one frame of skew is a ~21-level step with a
-       hard card-shaped edge: the "rectangles" during a toggle. Worst on
-       the first toggle, when fetching the not-yet-cached variant janks a
-       frame; a second toggle off a warm cache measured perfectly uniform.
-       Transparent means the canvas is the only surface painting the theme,
-       so there is nothing left to fall out of step. The thumb covers this
-       box edge to edge anyway (its crop matches this aspect ratio), so the
-       card background was only ever visible mid-toggle in the first place. */
+    /* Deliberately NO background-color, and nothing to transition. Painting
+       var(--bg) here and fading it alongside the page looks equivalent but
+       is not: it makes the card a SECOND surface animating the same colour
+       as the canvas, on its own paint layer (contain:paint). Measured off a
+       phone capture, the card's fade ran ~15ms — one frame — ahead of the
+       canvas, and since .25s covers 241 luminance levels, one frame of skew
+       is a ~21-level step with a hard card-shaped edge: visible rectangles
+       during a theme toggle. Transparent means the canvas is the only
+       surface painting the theme, so there is nothing left to fall out of
+       step. */
   }
   .saint-card{ position:relative; }
   .saint-card img{
@@ -311,10 +341,10 @@
     object-fit:contain;
     display:block;
     pointer-events:none; /* suppress the browser's built-in image-hover search icon */
-    /* Deliberately no background-color here: .saint-card behind it is
-       already var(--bg), so an undecoded img box paints the same colour
-       either way, and giving .thumb its own opaque background just makes
-       its blur() filter composite an opaque full-card rect every frame. */
+    /* Deliberately no background-color here either — same reason as the
+       card: an undecoded img box shows the page through it regardless, and
+       giving .thumb an opaque background just makes its blur() filter
+       composite an opaque full-card rect every frame for nothing. */
   }
   /* Thumb paints first (tiny, always cached fast) and sits underneath;
      the full-res image fades in over it once decoded, so a fast scroll
@@ -344,50 +374,57 @@
   .saint-item.selected{ will-change:top, left, width, height; }
   /* opacity included alongside width/height: without it, a phone GPU
      already busy re-rasterizing this image every frame for the width/
-     height tween (see the comment above) can skip promoting a
-     compositing layer for the opacity transition until the fade is
-     already underway, which shows as an instant light/dark switch
-     instead of the same crossfade the (unselected, not being resized)
-     carousel gets. */
+     height tween (see the comment above) can skip promoting a compositing
+     layer for the .full image's load-in fade until that fade is already
+     underway, which shows as a hard pop instead of the smooth reveal an
+     unselected card gets. */
   .saint-item.selected .saint-card img{ will-change:width, height, opacity; }
 
+  /* margin-top is set per item by layoutHallCards(), not here: it is
+     whatever distance puts this name on the SAME y as every other one —
+     the bottom of the tallest image in the set, plus a fixed gap —
+     however short this saint's own image happens to be.
+     Clamped to 2 lines so a long name can never exceed the vertical
+     budget layoutHallCards() reserved for it, which would push the intro
+     down and break that shared baseline. */
   .saint-caption{
-    margin-top:10px;
     font-size:11px;
     line-height:14px;
     letter-spacing:0.08em;
     text-align:center;
     text-transform:uppercase;
     color:var(--ink-soft);
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
+    overflow:hidden;
+    transition:color .3s ease;
+  }
+  /* Clamped for the same reason as the caption — INTRO_BLOCK_H reserves
+     exactly three lines plus its gap. */
+  .saint-intro{
+    margin-top:6px;
+    font-size:11px;
+    line-height:14px;
+    text-align:center;
+    color:var(--ink-soft);
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3;
+    overflow:hidden;
     transition:color .3s ease;
   }
   .saint-item:hover .saint-caption{ color:var(--rubric); }
-  /* Set only while the Hall modal is opening/open on mobile — see
-     openHallModal's comment. top/left/width are set inline per-instance,
-     capturing wherever the caption already was on screen. */
-  .saint-caption.detach{ position:fixed; margin:0; z-index:39; }
 
-  /* Mobile only: real names can wrap to 2 lines, and the deck sits close
-     to the home-indicator safe area — give the caption guaranteed room
-     for 2 lines and shrink the card by the same amount, so nothing can
-     ever overflow into the safe-area buffer below. Desktop has neither
-     constraint, so it keeps the plain single-line budget above. */
-  @media (max-width: 768px){
-    .saint-card{
-      height:calc(100vh - 118px - env(safe-area-inset-bottom));
-      height:calc(100dvh - 118px - env(safe-area-inset-bottom));
-    }
-    .saint-caption{
-      min-height:28px;
-      max-width:220px;
-      margin-left:auto; margin-right:auto;
-      display:flex; align-items:center; justify-content:center;
-    }
-  }
+  /* The old @media(max-width:768px) card/caption overrides are gone: card
+     height and the caption's 2-line budget are now computed by
+     layoutHallCards() from the real track height and safe-area margin, so
+     one code path covers both, and the safe-area buffer can't be
+     overflowed on either. */
 
   .saint-item.selected{ position:fixed; z-index:40; margin:0; }
   .saint-item.selected .saint-card{ box-shadow:none !important; }
-  body.modal-compact .saint-item.selected .saint-card{ height:100%; width:100%; aspect-ratio:auto; } /* mobile only — the caption is hidden there so the card can fill the whole wrapper; on desktop the caption stays visible and needs its own space within the same wrapper */
+  /* The card keeps its own --card-h in both layouts now. It used to be
+     forced to fill the whole wrapper in compact mode, because the image
+     shrank to a small dock there and the caption was hidden; neither is
+     true any more — the image is the same size open as closed, in both
+     layouts, so there is nothing left to stretch. */
   .item-placeholder{ flex:0 0 auto; visibility:hidden; }
 
   /* ---------------- Hall Modal — desktop split panel ---------------- */
@@ -412,7 +449,6 @@
     -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
     mask-image:linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
   }
-  .quotes-viewport.small{ height:clamp(90px, 15vh, 160px); }
   .quotes-track{
     display:flex;
     flex-direction:column;
@@ -439,7 +475,19 @@
     transition:color .3s ease;
   }
   .quotes-track .q:hover{ color:var(--rubric); }
-  .quotes-viewport.small .q{ height:32px; font-size:11.5px; }
+  /* Compact layout: quotes read as prose, not as a ticker — left aligned,
+     set at the chapter body's own 15px, and free to be however tall the
+     wrapped text needs. Variable row heights are only safe because
+     attachLoopScroll measures real offsets rather than assuming every row
+     is one fixed stride. */
+  #mobile-quotes-pane .q{
+    height:auto;
+    display:block;
+    text-align:left;
+    font-size:15px;
+    line-height:1.7;
+    padding:16px 18px;
+  }
 
   .chapters-panel{
     width:min(420px, 80vw);
@@ -460,11 +508,13 @@
     transition:color .3s ease, background-color .25s ease;
   }
   .chapter-header:hover{ color:var(--rubric); }
+  /* top:0 in both layouts now. In compact this used to need an explicit
+     offset matching the sticky hero bar's measured height, because the
+     scroll root was the whole panel and the bar overlaid its top. The bar
+     is gone and #mobile-texts-pane is its own scroll root starting below
+     the mode nav, so zero is genuinely the top of the scrolling area. */
   .chapter.revealed .chapter-header{
     position:sticky; top:0; z-index:2;
-  }
-  body.modal-compact .mobile-chapters .chapter.revealed .chapter-header{
-    top: var(--mobile-chapter-sticky-top, 178px); /* set by syncMobileChapterStickyTop() — keeps every revealed chapter's header pinned below the bar, not just the first one */
   }
   /* An earlier chapter's header that's been scrolled past and superseded
      by a later one — see stickyObserver's comment in
@@ -497,14 +547,20 @@
      Driven by body.modal-compact, toggled in JS based on available width
      rather than a fixed viewport breakpoint — see isModalCompact(). This is
      deliberately separate from the header's own @media(max-width:700px). */
+  /* The image no longer docks to a small corner while the text takes over
+     the screen. It stays exactly the size it is in the deck and only slides
+     to the centre, the same move desktop makes — so this panel is whatever
+     is left BELOW it, starting at the bottom of the saint's name.
+     --mobile-panel-top is measured from the open card by
+     syncMobilePanelTop(); the 50% fallback only ever applies for the frame
+     before that first measurement lands. */
   #hall-mobile-panel{ display:none; }
   body.modal-compact #hall-modal-quotes, body.modal-compact #hall-modal-text{ display:none; }
   body.modal-compact #hall-mobile-panel{
-    display:block;
-    position:fixed; inset:0;
-    padding-top:30px; /* clears the real page header — combined with the bar's own top:0 below, this keeps its natural and stuck positions identical, so there's no mismatch between the space it reserves in flow and where it actually paints */
-    overflow-y:auto;
-    -webkit-overflow-scrolling:touch;
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top:var(--mobile-panel-top, 50%); left:0; right:0; bottom:0;
     opacity:0; pointer-events:none;
     /* background-color matches the body/.saint-card .25s fade, not the
        sitewide 2s default — this panel IS "the rest of the background"
@@ -513,109 +569,118 @@
     transition:opacity .5s ease, background-color .25s ease;
     z-index:35;
     background:var(--bg);
+    border-top:1px solid var(--line-grey-soft);
   }
   body.modal-compact #hall-mobile-panel.reveal{ opacity:1; pointer-events:auto; }
 
-  .mobile-hero-bar{
-    position:sticky; top:0; z-index:2; /* the panel's padding-top provides the clearance from the page header — an extra top offset here would double it and also create a natural/stuck position mismatch */
-    background:var(--bg);
+  /* Same shape and rhythm as the page header's nav and the deck's order
+     nav — this is the third instance of the same control. */
+  #hall-mode-nav{
+    flex:0 0 auto;
+    display:flex; align-items:center; justify-content:center;
+    gap:28px;
+    padding:10px 0 8px 0;
+    font-size:10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
     border-bottom:1px solid var(--line-grey-soft);
-    padding-bottom:20px; /* extends the bar's own opaque coverage down to where the chapter header takes over sticking — without this, that gap was uncovered by any background, letting scrolled-past body text show through it */
-    /* Same .25s background match as #hall-mobile-panel — this bar sits on
-       top of it, so a mismatched duration here would show as a seam. */
-    transition:background-color .25s ease, color 2s ease, border-color 2s ease;
   }
-  .mobile-hero-row{
-    position:relative;
-    display:flex; align-items:flex-start; /* top-align, not center — matches the docked image's own top edge exactly, no extra space to redistribute */
-    padding:26px 92px 0 12px; /* right space reserves room for the docked image */
-    min-height:clamp(90px, 15vh, 160px); /* matches .quotes-viewport.small exactly, and the docked image's height */
+  #hall-mode-nav a{
+    cursor:pointer;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    white-space:nowrap;
+    color:var(--ink-soft);
+    transition:border-color .3s ease, color 2s ease;
   }
-  .mobile-hero-bar .quotes-viewport.small{ flex:1; margin:4px 0 0 0; width:auto; }
+  #hall-mode-nav a:hover,
+  #hall-mode-nav a.active{ color:var(--rubric); border-color:var(--rubric); }
+  /* A saint can have no key quotes at all — quotes.txt lines that don't
+     appear verbatim in a chapter are dropped by linkQuotesToChapters, and
+     for most saints that currently leaves none. Show the mode as
+     unavailable rather than offering a tab that opens on nothing. */
+  #hall-mode-nav.no-quotes a[data-mode="quotes"]{
+    opacity:0.3;
+    pointer-events:none;
+    border-color:transparent;
+  }
 
-  .mobile-saint-name{
-    padding:11px 12px 8px 12px;
-    text-align:center; font-size:14px; letter-spacing:0.1em;
-    text-transform:uppercase; color:var(--ink);
+  /* Each pane is its own scroll root, rather than one scrolling panel
+     containing both: the quotes list runs its own loop-scroll, and nesting
+     that inside a second scroller would leave the two competing for the
+     same gesture. */
+  .mobile-mode-pane{ display:none; flex:1; min-height:0; }
+  .mobile-mode-pane.active{ display:block; }
+  #mobile-quotes-pane{ overflow:hidden; }
+  #mobile-quotes-pane .quotes-track{ height:100%; }
+  #mobile-texts-pane{
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
   }
+  #mobile-texts-pane::-webkit-scrollbar{ display:none; }
 
-  .mobile-chapters{ padding:0 18px calc(70px + env(safe-area-inset-bottom)) 18px; }
+  .mobile-chapters{ padding:0 18px calc(40px + env(safe-area-inset-bottom)) 18px; }
   .mobile-chapters .chapters-panel{ width:100%; max-height:none; overflow:visible; }
 
-  body.modal-compact .saint-item .saint-caption{ transition:opacity .3s ease; }
-  body.modal-compact .saint-item.selected .saint-caption{ opacity:0; pointer-events:none; } /* the deck caption is replaced by the dedicated centred name in the sticky header */
+  /* The deck caption IS the saint's name now — there is no separate
+     centred name element, because the image it sits under has not moved or
+     changed size. Only the colour lifts; size and spacing stay identical
+     to the deck so nothing reflows as the modal opens. */
+  body.modal-compact .saint-item.selected .saint-caption{ color:var(--ink); }
+  /* Hidden while open purely for room: the compact layout has very little
+     height left below the image, and the chapters below say more than the
+     three-line summary does. */
+  body.modal-compact .saint-item.selected .saint-intro{ display:none; }
 
-  /* ---------------- Armory ---------------- */
-  /* touch-action:pan-x — see the comment above #hall-track. */
+  /* ---------------- Text ---------------- */
+  /* A plain vertical reading column. It was previously a horizontal rack of
+     rotating "spear" elements that flew to the centre when tapped; that is
+     gone entirely, along with its modal, attribution overlay and close
+     button. What remains is the same loop-scroll and idle-drift machinery
+     the Hall uses, turned on its side.
+     touch-action:pan-y — see the comment above #hall-track; this is that
+     rule's vertical equivalent. */
   #armory-track{
     height:100%;
     display:flex;
+    flex-direction:column;
     align-items:center;
-    gap:14px;
-    overflow-x:auto;
-    overflow-y:hidden;
-    touch-action:pan-x;
-    -webkit-user-select:none;
-    user-select:none;
+    overflow-y:auto;
+    overflow-x:hidden;
+    touch-action:pan-y;
     scrollbar-width:none;
+    padding:0 clamp(18px, 6vw, 80px);
   }
   #armory-track::-webkit-scrollbar{ display:none; }
 
-  .spear{
+  .quote-entry{
     flex:0 0 auto;
-    width:54px;
-    height:calc(100vh - 100px - env(safe-area-inset-bottom));
-    height:calc(100dvh - 100px - env(safe-area-inset-bottom));
-    margin-top:10px; margin-bottom:calc(40px + env(safe-area-inset-bottom));
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding-top:14px;
-    cursor:pointer;
-    position:relative;
-    transition:opacity 0.2s ease; /* was 1s — see .saint-item's comment, same clone-fade issue */
+    width:100%;
+    max-width:640px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line-grey-soft);
   }
-  .spear .hilt{ display:flex; flex-direction:column; align-items:center; gap:3px; flex:0 0 auto; }
-  .spear .hilt .pommel{ width:6px; height:6px; border-radius:50%; background:var(--line-grey); transition:background-color .4s ease; }
-  .spear .hilt .grip{ width:1.5px; height:9px; background:var(--line-grey); transition:background-color .4s ease; }
-  .spear .hilt .guard{ width:24px; height:1.5px; background:var(--line-grey); transition:background-color .4s ease; }
-  .spear:hover .hilt .pommel, .spear:hover .hilt .grip, .spear:hover .hilt .guard{ background:var(--rubric); }
-
-  .spear .shaft-text{
-    writing-mode:vertical-rl;
-    text-orientation:sideways; /* 'mixed' keeps quote marks upright per the Unicode table — force everything to rotate together */
+  .quote-entry .quote-body{
     font-style:italic;
-    font-size:13px;
+    font-size:15px;
+    line-height:1.7;
+    text-align:left;
     color:var(--ink-soft);
-    flex:1;
-    overflow:hidden;
-    letter-spacing:0.02em;
-    margin-top:10px;
-    transition:color .3s ease;
   }
-  .spear:hover .shaft-text{ color:var(--ink); }
-  .spear.dim{ opacity:0; pointer-events:none; }
-  .spear.selected{ position:fixed; z-index:40; margin:0; padding-top:0; background:var(--bg); transform-origin:center center; }
-  .spear.selected .hilt{ display:none; }
-  .spear-placeholder{ flex:0 0 auto; visibility:hidden; }
-
-  #armory-attribution{
-    position:fixed; left:50%; transform:translateX(-50%);
-    top:calc(50% + 60px); z-index:41;
-    font-style:italic; font-size:14px; color:var(--ink-soft);
-    text-align:center; opacity:0; transition:opacity 1s ease, color 2s ease; white-space:nowrap;
+  .quote-entry .quote-source{
+    margin-top:9px;
+    font-size:10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    text-align:left;
   }
-  #armory-attribution.reveal{ opacity:1; }
-  #armory-attribution a{ border-bottom:1px solid var(--rubric); color:var(--rubric); text-decoration:none; }
-
-  #armory-close{
-    position:fixed; top:44px; right:6vw; z-index:42;
-    width:34px; height:34px; border:1px solid var(--line-grey);
-    background:var(--bg); display:none; align-items:center; justify-content:center;
-    cursor:pointer; transition:border-color .3s ease, transform .3s ease, background-color 2s ease;
+  .quote-entry .quote-source a{
+    color:var(--rubric);
+    text-decoration:none;
+    border-bottom:1px solid var(--rubric);
+    cursor:pointer;
   }
-  #armory-close.show{ display:flex; }
-  #armory-close:hover{ border-color:var(--rubric); transform:rotate(90deg); }
 
   @media (prefers-reduced-motion:reduce){ *{ transition-duration:0.01ms !important; } }
 </style>
@@ -669,6 +734,10 @@
 
   <!-- ===================== HALL OF SAINTS ===================== -->
   <section id="hall-view" class="view active">
+    <nav id="hall-order-nav">
+      <a data-order="calendar" class="active">Calendar</a>
+      <a data-order="chronological">Chronological</a>
+    </nav>
     <div id="hall-track"></div>
     <div id="hall-status" style="display:none"></div>
     <div id="data-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
@@ -684,14 +753,17 @@
     </div>
 
     <div id="hall-mobile-panel">
-      <div class="mobile-hero-bar" id="mobile-hero-bar">
-        <div class="mobile-hero-row">
-          <div class="quotes-viewport small"><div class="quotes-track" id="hall-quotes-track-mobile"></div></div>
-        </div>
-        <div class="mobile-saint-name" id="mobile-saint-name"></div>
+      <nav id="hall-mode-nav">
+        <a data-mode="quotes" class="active">Key Quotes</a>
+        <a data-mode="texts">Source Texts</a>
+      </nav>
+      <div class="mobile-mode-pane active" id="mobile-quotes-pane">
+        <div class="quotes-track" id="hall-quotes-track-mobile"></div>
       </div>
-      <div class="mobile-chapters">
-        <div class="chapters-panel" id="hall-chapters-mobile"></div>
+      <div class="mobile-mode-pane" id="mobile-texts-pane">
+        <div class="mobile-chapters">
+          <div class="chapters-panel" id="hall-chapters-mobile"></div>
+        </div>
       </div>
     </div>
 
@@ -702,16 +774,10 @@
     </div>
   </section>
 
-  <!-- ===================== ARMORY ===================== -->
+  <!-- ===================== TEXT ===================== -->
   <section id="armory-view" class="view">
     <div id="armory-track"></div>
-    <div id="armory-attribution"></div>
     <div id="armory-source-badge" style="display:none;position:absolute;bottom:8px;left:12px;font-size:10px;color:var(--ink-soft);letter-spacing:0.05em;z-index:5;"></div>
-    <div id="armory-close">
-      <svg width="14" height="14" viewBox="0 0 16 16" stroke="var(--ink)" stroke-width="1.2">
-        <line x1="1" y1="1" x2="15" y2="15"/><line x1="15" y1="1" x2="1" y2="15"/>
-      </svg>
-    </div>
   </section>
 
 </main>
@@ -731,15 +797,26 @@ const GITHUB_BRANCH = 'main';
    centred card. Computed directly (collision check) rather than a fixed
    pixel breakpoint — independent of the header's own 700px breakpoint,
    since this is about panel geometry, not device type. */
+/* Widest card currently rendered in the deck, published by
+   layoutHallCards(). isModalCompact() measures against this rather than
+   against whichever saint was tapped: cards are sized from their own
+   images now, so per-saint widths differ by 50px or more, and using the
+   tapped one would hand a narrow saint the split-panel layout at a
+   viewport width where a wide saint gets the compact one. The layout a
+   given screen produces should not depend on which picture you opened. */
+let deckMaxCardW = 0;
+
 function isModalCompact(origRect) {
-  const availH = window.innerHeight - HEADER_H;
-  const targetH = availH * 0.62;
-  const scale = targetH / origRect.height;
-  const targetW = origRect.width * scale;
+  /* The card is its full deck size in both layouts now — the old "scale it
+     to 62% of the available height first" step described the docking
+     animation that no longer happens, and badly understated the room
+     needed. The honest consequence is that the split panel wants roughly
+     1900px and so appears only on very wide displays; that is accepted, not
+     overlooked. Compact is the ordinary layout. */
+  const cardW = deckMaxCardW || origRect.width;
   const chaptersPanelHalf = 210; // half of the 420px chapters panel
   const buffer = 60;
-  const neededWidth = 4 * chaptersPanelHalf + 2 * targetW + buffer;
-  return window.innerWidth < neededWidth;
+  return window.innerWidth < 4 * chaptersPanelHalf + 2 * cardW + buffer;
 }
 
 /* =====================================================================
@@ -768,7 +845,7 @@ document.querySelectorAll('header nav a').forEach(a => {
           // user's own scroll position back to the start every time.
           armoryEverVisible = true;
           const first = armoryTrack.children[ARMORY_BUFFER];
-          if (first) armoryInertia.resetTo(first.offsetLeft);
+          if (first) armoryInertia.resetTo(first.offsetTop);
         }
       } else {
         hallInertia.measure();
@@ -777,169 +854,27 @@ document.querySelectorAll('header nav a').forEach(a => {
   });
 });
 
-/* Swaps every rendered saint-card image to its light/dark variant in
-   place, rather than re-rendering the carousel — a full re-render would
-   reset scroll position and retrigger the loop-scroll clone buffer.
+/* Theme is now nothing but a class on <html>.
 
-   Runs as three explicit phases rather than one simultaneous crossfade:
-   images fade fully to opacity 0, only then does the theme class flip (so
-   the page/card background starts its own fade), and only once that
-   background fade has finished (and the new image variant has actually
-   loaded) do the images fade back in. A simultaneous fade let the two
-   motions visually race each other; staggering them reads as one
-   deliberate transition instead. */
-const IMAGE_FADE_MS = 250; // must match .saint-card img's opacity transition duration
-const BG_FADE_MS = 250;    // must match body/.saint-card background-color transition duration
-let modeToggleId = 0; // bumped on every toggle; lets a superseded in-flight sequence (fast double-toggle) bail out instead of clobbering the newer one
+   It used to be an orchestrated three-phase sequence: fade every visible
+   saint image out, flip the class, wait for the page background to really
+   finish fading, then fade the images back in once the new variant had
+   decoded. All of that existed for one reason — each image had the theme's
+   background colour baked into its own pixels, so a light-padded image
+   revealed over a dark page read as a hard-edged white rectangle, and the
+   two had to be choreographed to hide the swap.
 
-// The loop-scroll clone buffer (see LOOP_BUFFER/ARMORY_BUFFER) means most
-// of the images this touches are sitting dozens of card-widths off to
-// either side, never painted. A generous margin, not a tight one — this
-// only needs to catch "nowhere near the screen", not draw an exact line.
-const OFFSCREEN_MARGIN = 600;
-function isRoughlyOnscreen(el) {
-  const r = el.getBoundingClientRect();
-  /* The inactive tab is display:none (.view), which gives every descendant
-     a 0x0 rect at the origin — and 0x0 at the origin satisfies all four
-     bounds tests below, so the whole hidden view would count as "on
-     screen". That was costing more than a wasted fade: a display:none
-     element never runs a CSS transition, so its transitionend can never
-     fire, and the toggle fell back to the 1.5s last-resort for every image
-     in the hidden view. Measured on the Armory tab, where all 124 Hall
-     images are hidden: 1786ms per toggle versus 552ms on the Hall tab.
-     Unrendered means unseeable, which is exactly the offscreen path. */
-  if (r.width === 0 && r.height === 0) return false;
-  return r.right > -OFFSCREEN_MARGIN && r.left < window.innerWidth + OFFSCREEN_MARGIN
-      && r.bottom > -OFFSCREEN_MARGIN && r.top < window.innerHeight + OFFSCREEN_MARGIN;
-}
-
-function runModeTransition(isDark) {
-  const sequence = ++modeToggleId;
-  const allChanging = Array.from(document.querySelectorAll('.saint-card img.thumb, .saint-card img.full'))
-    // full images start with no src (see the Hall promotion block below) —
-    // leave them unset so toggling theme doesn't force-decode every
-    // not-yet-promoted image; promoteHallImage() reads the theme fresh
-    // whenever it does fire.
-    .filter(img => !(img.classList.contains('full') && !img.getAttribute('src')))
-    .filter(img => {
-      const target = isDark ? img.dataset.dark : img.dataset.light;
-      return target && img.getAttribute('src') !== target;
-    });
-
-  // Nobody can see a clone sitting off in the buffer mid-toggle, so there's
-  // nothing to hide behind a fade for — swap it outright. The point of the
-  // whole opacity dance below is purely to hide the swap from the viewer;
-  // gating it on dozens of invisible clones (one stalled transitionend or
-  // one slow, low-priority background fetch, and the WHOLE toggle — visible
-  // cards included — used to wait on it) was the actual cause of "sometimes
-  // it takes a long time and it's inconsistent".
-  //
-  // Deferred until the visible transition has finished, though: there are
-  // dozens of these, and kicking off every fetch+decode at the instant of
-  // the toggle is exactly the burst of work that janks the fade on a phone
-  // with a cold cache (measurably the first toggle, not later warm ones).
-  // They're off-screen, so nothing is waiting on them — let the visible
-  // part finish first, then catch them up when the main thread is free.
-  const offscreen = allChanging.filter(img => !isRoughlyOnscreen(img));
-  const swapOffscreen = () => {
-    if (sequence !== modeToggleId) return; // newer toggle owns them now
-    offscreen.forEach(img => { img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light); });
-  };
-
-  const changing = allChanging.filter(img => isRoughlyOnscreen(img));
-  changing.forEach(img => { img.style.opacity = '0'; });
-
-  // Wait for the fade-out to actually finish rendering, not just for a
-  // wall-clock timer matching the CSS duration. transitionend tracks the
-  // real frame; a setTimeout(IMAGE_FADE_MS) fallback used to race it, but
-  // under phone-only load (throttled background tab, low-power mode,
-  // weaker GPU) the transition can lag past that window, so the timeout
-  // won often enough to flip the theme class and clear img.src while the
-  // old image was still fully opaque — clearing src on a visible <img>
-  // shows a blank white/black rectangle until the new image decodes. The
-  // timeout is now a true last-resort (reduced-motion, or nothing to
-  // transition because opacity was already 0), not a race: it only fires
-  // if no transition is actually running.
-  const fadeOutDone = changing.length
-    ? Promise.all(changing.map(img => new Promise(resolve => {
-        let done = false;
-        const finish = () => { if (done) return; done = true; resolve(); };
-        img.addEventListener('transitionend', (e) => { if (e.propertyName === 'opacity') finish(); }, { once: true });
-        const hasOpacityTransition = getComputedStyle(img).transitionDuration
-          .split(',').some((d, i) => parseFloat(d) > 0 && getComputedStyle(img).transitionProperty.split(',')[i]?.trim() === 'opacity');
-        if (!hasOpacityTransition) finish();
-        else setTimeout(finish, IMAGE_FADE_MS * 6);
-      })))
-    : Promise.resolve();
-
-  fadeOutDone.then(() => {
-    if (sequence !== modeToggleId) return; // a newer toggle already took over
-
-    document.documentElement.classList.toggle('dark', isDark);
-    try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
-
-    // swap src now, while every changing image is still invisible — its
-    // fetch/decode time varies, so this hides that variance behind the
-    // background fade instead of exposing it as a pop. `load` only means
-    // the bytes arrived, not that a bitmap is ready to paint — decode()
-    // waits for the actual decode to finish, closing the gap that could
-    // otherwise show as a blank flash right as the image fades back in.
-    const imagesLoaded = changing.map(img => {
-      img.setAttribute('src', isDark ? img.dataset.dark : img.dataset.light);
-      return img.decode
-        ? img.decode().catch(() => {})
-        : new Promise(resolve => {
-            img.addEventListener('load', resolve, { once: true });
-            img.addEventListener('error', resolve, { once: true });
-          });
-    });
-    /* Each saint image has the theme background BAKED INTO ITS PIXELS —
-       the light variant's corners are ~#fefefe, the dark variant's are
-       ~#0d0d0d, and the crop matches .saint-card's aspect ratio exactly,
-       so the image fills the card edge to edge. That means a revealed
-       image is, visually, a hard-edged white or black rectangle. It only
-       reads as "the page" while the page background actually matches it.
-
-       So this must wait for the background to REALLY finish fading, not
-       for a wall-clock timer that merely matches the CSS duration. The
-       page fades white->black through grey; setTimeout(BG_FADE_MS) fires
-       on schedule even when the compositor is behind (dropped frames,
-       low-power mode — i.e. a phone), so the images used to fade back in
-       while the page was still mid-grey, showing their baked-in black or
-       white as a rectangle against it. Same race the image fade-out above
-       already fixed, just on the background side. */
-    const bgSettled = new Promise(resolve => {
-      let done = false;
-      const finish = () => {
-        if (done) return;
-        done = true;
-        document.body.removeEventListener('transitionend', onEnd);
-        resolve();
-      };
-      const onEnd = (e) => {
-        // transitionend bubbles from descendants; only body's own
-        // background-color marks the page fade as finished (its `color`
-        // runs on the slower ambient 2s and must not count).
-        if (e.target === document.body && e.propertyName === 'background-color') finish();
-      };
-      document.body.addEventListener('transitionend', onEnd);
-      setTimeout(finish, BG_FADE_MS * 6); // last-resort only, same as the fade-out's
-    });
-
-    Promise.all([...imagesLoaded, bgSettled]).then(() => {
-      if (sequence !== modeToggleId) return;
-      changing.forEach(img => { img.style.opacity = ''; });
-      // Visible work is done — now catch up the off-screen clone buffer,
-      // preferably in genuine idle time so it can't steal frames from the
-      // fade-in that's still running.
-      if (window.requestIdleCallback) requestIdleCallback(swapOffscreen, { timeout: 2000 });
-      else setTimeout(swapOffscreen, IMAGE_FADE_MS);
-    });
-  });
+   The images are now cropped to the painted icon itself, with no padding
+   of either colour, so there is no second variant to swap to and nothing
+   to hide. See crop_saints.py for the measurement that established the
+   light and dark files were otherwise the same artwork. */
+function applyTheme(isDark) {
+  document.documentElement.classList.toggle('dark', isDark);
+  try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) { /* private-mode / storage disabled — toggle still works, just won't persist across reloads */ }
 }
 
 document.getElementById('dark-toggle').addEventListener('click', () => {
-  runModeTransition(!document.documentElement.classList.contains('dark'));
+  applyTheme(!document.documentElement.classList.contains('dark'));
 });
 
 /* =====================================================================
@@ -960,13 +895,10 @@ function tween(duration, onFrame, onComplete) {
 }
 function lerp(a, b, t) { return a + (b - a) * t; }
 
-/* Shared by the Hall and Armory open/close flows: reserves an item's row
-   slot with a same-sized placeholder while the real element goes
-   position:fixed, and dims/undims the rest of the row around it. Takes
-   an already-measured rect rather than measuring itemEl itself — by the
-   time this runs, callers may have already mutated the element (Hall's
-   caption gets detached from flow first, which changes itemEl's OWN
-   measured height if this re-measured fresh). */
+/* Reserves an item's row slot with a same-sized placeholder while the real
+   element goes position:fixed, and dims/undims the rest of the row around
+   it. Takes an already-measured rect rather than measuring itemEl itself,
+   so the caller controls exactly which box is being reserved. */
 function createPlaceholder(el, rect, className) {
   const placeholder = document.createElement('div');
   placeholder.className = className;
@@ -1013,30 +945,38 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   let targetScroll = 0;
   let isEasing = false;
   let raf = null;
-  let stride = 0;
+  /* The row's geometry, read from real offsets rather than multiplied out
+     from one item's size. Deck cards are sized from their own image's
+     pixel dimensions, so there is no single stride that describes the row.
+     Measured offsets stay exact regardless: cyclicSlice fills head and
+     tail with literal copies of body items, so the rendered row really is
+     periodic with period bodySpan whatever the individual widths are, and
+     a ±bodySpan correction always lands on identical content. */
+  let headSpan = 0;   // where the first real (non-clone) item starts
+  let bodySpan = 0;   // one full period — first real item to first tail item
+  let lowerBound = 0; // one item in from the DOM's true leading edge
 
   function measure() {
-    const a = trackEl.children[bufferCount];
-    const b = trackEl.children[bufferCount + 1];
-    const newStride = (a && b) ? (b[offsetProp] - a[offsetProp]) : 0;
-    if (stride && newStride && stride !== newStride) {
-      // item size changed (e.g. window resized) — rescale the current
+    const count = getItemCount();
+    const first = trackEl.children[bufferCount];
+    const afterBody = trackEl.children[bufferCount + count];
+    const edge = trackEl.children[1];
+    const newBody = (first && afterBody) ? (afterBody[offsetProp] - first[offsetProp]) : 0;
+    if (bodySpan && newBody && bodySpan !== newBody) {
+      // item sizes changed (e.g. window resized) — rescale the current
       // position by the same ratio so it stays valid instead of drifting
       // further from reality with every resize until scrolling wedges
-      const ratio = newStride / stride;
+      const ratio = newBody / bodySpan;
       trackEl[scrollProp] = trackEl[scrollProp] * ratio;
       targetScroll = targetScroll * ratio;
     }
-    stride = newStride;
+    bodySpan = newBody;
+    headSpan = first ? first[offsetProp] : 0;
+    lowerBound = edge ? edge[offsetProp] : 0;
   }
 
   function checkLoop() {
-    const count = getItemCount();
-    if (!stride || !count) return;
-    const headSpan = bufferCount * stride;
-    const bodySpan = count * stride;
     if (bodySpan <= 0) return;
-    const lowerBound = headSpan - stride * (bufferCount - 1);
     const upperBound = headSpan + bodySpan;
     const pos = trackEl[scrollProp];
     if (pos < lowerBound) {
@@ -1066,12 +1006,7 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
   }
 
   function wrapTarget() {
-    const count = getItemCount();
-    if (!stride || !count) return;
-    const headSpan = bufferCount * stride;
-    const bodySpan = count * stride;
     if (bodySpan <= 0) return;
-    const lowerBound = headSpan - stride * (bufferCount - 1);
     const upperBound = headSpan + bodySpan;
     if (targetScroll < lowerBound) {
       targetScroll += Math.ceil((lowerBound - targetScroll) / bodySpan) * bodySpan;
@@ -1165,7 +1100,10 @@ function attachLoopScroll(trackEl, bufferCount, getItemCount, opts = {}) {
 
   return {
     measure,
-    getStride: () => stride,
+    // Average, not exact — items no longer share one width. Its only
+    // consumer is createHallPromoteObserver's rootMargin, which is already
+    // a deliberate approximation.
+    getStride: () => { const n = getItemCount(); return n ? bodySpan / n : 0; },
     resetTo(value) { trackEl[scrollProp] = value; targetScroll = value; },
     // For external drivers (idle drift) that move scrollLeft themselves
     // outside of this module's own wheel/tick logic. Runs the loop-wrap
@@ -1307,14 +1245,19 @@ function createQuoteCarousel(containerEl, rows, blocked) {
       if (onItemClick) el.addEventListener('click', (e) => { e.stopPropagation(); onItemClick(item); });
       containerEl.appendChild(el);
     });
-    requestAnimationFrame(() => {
-      loop.measure();
-      const first = containerEl.children[buffer];
-      if (first) loop.resetTo(first.offsetTop);
-    });
+    requestAnimationFrame(remeasure);
   }
 
-  return { render, setLocked: loop.setLocked };
+  // Also called from outside whenever this carousel goes from hidden to
+  // visible: offsets read while display:none are all zero, so the geometry
+  // captured then has to be retaken before the loop can wrap correctly.
+  function remeasure() {
+    loop.measure();
+    const first = containerEl.children[buffer];
+    if (first) loop.resetTo(first.offsetTop);
+  }
+
+  return { render, remeasure, setLocked: loop.setLocked };
 }
 
 /* =====================================================================
@@ -1392,6 +1335,88 @@ function parseSaintFolder(folder) {
   return { display: `${year}${era} ${base}`, base, sortKey: isBC ? -year : year };
 }
 
+/* intro.txt: an optional feast-day line, then the prose shown under the
+   name in the deck. The feast line is what Calendar ordering sorts on;
+   a saint without one keeps its chronological position, so the ordering
+   converts itself over as intro.txt files are added rather than needing
+   every saint to have one at once. */
+const MONTH_NAMES = ['january','february','march','april','may','june',
+                     'july','august','september','october','november','december'];
+
+function parseFeastDate(raw) {
+  const s = raw.trim().toLowerCase();
+  let month = 0;
+  for (let i = 0; i < MONTH_NAMES.length; i++) {
+    if (new RegExp(`\\b${MONTH_NAMES[i].slice(0, 3)}`).test(s)) { month = i + 1; break; }
+  }
+  if (month) {
+    const day = s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\b/);
+    return day ? { month, day: +day[1] } : null;
+  }
+  // Purely numeric ("17/01", "01-17"). Whichever number can't be a month
+  // is the day; when both could be, read it day-first to match the
+  // written form ("17 January") the rest of this parser expects.
+  const nums = s.match(/\b\d{1,2}\b/g);
+  if (!nums || nums.length < 2) return null;
+  const a = +nums[0], b = +nums[1];
+  if (a > 12 && b >= 1 && b <= 12) return { month: b, day: a };
+  if (b > 12 && a >= 1 && a <= 12) return { month: a, day: b };
+  if (a >= 1 && a <= 31 && b >= 1 && b <= 12) return { month: b, day: a };
+  return null;
+}
+
+function parseIntro(raw) {
+  const lines = (raw || '').replace(/\r/g, '').split('\n');
+  let i = 0;
+  while (i < lines.length && !lines[i].trim()) i++;
+  let feast = null;
+  const m = i < lines.length && /^\s*feast(?:\s*day)?\s*[:–—-]\s*(.+)$/i.exec(lines[i]);
+  if (m) { feast = parseFeastDate(m[1]); i++; }
+  return {
+    feast,
+    feastKey: feast ? feast.month * 100 + feast.day : null,
+    text: lines.slice(i).join('\n').trim()
+  };
+}
+
+const FALLBACK_IMAGE_W = 521;
+const FALLBACK_IMAGE_H = 1250;
+const IMAGE_PROBE_TIMEOUT_MS = 2500;
+
+/* Card geometry comes from each image's real pixel dimensions rather than
+   a shared aspect ratio, so they have to be known before the first layout:
+   a card that resized after its own image decoded would shift every
+   caption baseline and invalidate the offsets the carousel's loop-wrap
+   already measured.
+
+   Deliberately the FULL image, not the far cheaper -thumb: two thumb
+   generators are in use (make_thumbs.py emits a fixed 24px width,
+   render_v3_saints.py divides by 4), so thumb pixel dimensions are not on
+   a common scale across saints — and a common scale is the whole basis of
+   the deck's sizing. Reading them would render a make_thumbs saint about
+   five times the size of a render_v3 one. The full images are ~100KB and
+   are fetched on sight anyway (HALL_PROMOTE_DWELL is 0), so this only
+   moves that fetch behind the loading screen, warming the cache for it.
+
+   A saint whose probe fails or hangs falls back to the deck's historical
+   1:2.4 proportions instead of blocking the whole render. */
+function probeImageSizes(saints) {
+  return Promise.all(saints.map(s => new Promise(resolve => {
+    let settled = false;
+    const done = (w, h) => {
+      if (settled) return;
+      settled = true;
+      s.imgW = w; s.imgH = h;
+      resolve();
+    };
+    const timer = setTimeout(() => done(FALLBACK_IMAGE_W, FALLBACK_IMAGE_H), IMAGE_PROBE_TIMEOUT_MS);
+    const probe = new Image();
+    probe.onload = () => { clearTimeout(timer); done(probe.naturalWidth, probe.naturalHeight); };
+    probe.onerror = () => { clearTimeout(timer); done(FALLBACK_IMAGE_W, FALLBACK_IMAGE_H); };
+    probe.src = s.image;
+  })));
+}
+
 function saintMatchesSource(saint, source) {
   const src = source.trim().toLowerCase();
   return (saint.base || saint.name).toLowerCase() === src
@@ -1423,7 +1448,8 @@ function fallbackSaints() {
   ];
   return [
     {
-      id: 'demo-antony', name: 'Demo Saint (unconfigured)', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(), imageDark: placeholderIconDataUri(), thumbDark: placeholderIconDataUri(),
+      id: 'demo-antony', name: 'Demo Saint (unconfigured)', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(),
+      intro: '', feast: null, feastKey: null,
       chapters: chaptersA,
       linkedQuotes: linkQuotesToChapters([
         'He who sits in solitude and is quiet hath escaped from three wars.',
@@ -1431,7 +1457,8 @@ function fallbackSaints() {
       ], chaptersA)
     },
     {
-      id: 'demo-silouan', name: 'Demo Saint Two', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(), imageDark: placeholderIconDataUri(), thumbDark: placeholderIconDataUri(),
+      id: 'demo-silouan', name: 'Demo Saint Two', image: placeholderIconDataUri(), thumb: placeholderIconDataUri(),
+      intro: '', feast: null, feastKey: null,
       chapters: chaptersB,
       linkedQuotes: linkQuotesToChapters(['Keep your mind in hell, and despair not.'], chaptersB)
     }
@@ -1546,12 +1573,14 @@ async function loadSaints() {
       const isImageExt = f => /\.(jpe?g|png|webp|gif|avif|heic|heif|bmp|svg)$/i.test(f);
       const image = files.find(f => isImageExt(f) && !/-thumb\.[^.]+$/i.test(f) && !/-dark\.[^.]+$/i.test(f));
       const quotesFile = files.find(f => f.toLowerCase() === 'quotes.txt');
-      const chapterFiles = files.filter(f => /\.txt$/i.test(f) && f.toLowerCase() !== 'quotes.txt').sort(naturalCompare);
+      const introFile = files.find(f => f.toLowerCase() === 'intro.txt');
+      const chapterFiles = files.filter(f => /\.txt$/i.test(f) && !/^(quotes|intro)\.txt$/i.test(f)).sort(naturalCompare);
       if (!image) { skipped.push(folder); return null; }
 
       const base = `assets/saints/${encodeURIComponent(folder)}/`;
-      const [quotesRaw, chapters] = await Promise.all([
+      const [quotesRaw, introRaw, chapters] = await Promise.all([
         quotesFile ? fetchText(base + encodeURIComponent(quotesFile)).catch(() => '') : Promise.resolve(''),
+        introFile ? fetchText(base + encodeURIComponent(introFile)).catch(() => '') : Promise.resolve(''),
         Promise.all(chapterFiles.map(async (cf) => {
           const body = await fetchText(base + encodeURIComponent(cf)).catch((e) => { console.warn(`Could not fetch ${base}${cf}:`, e); return ''; });
           return { title: cf.replace(/\.txt$/i, ''), body: body.trim() };
@@ -1559,9 +1588,8 @@ async function loadSaints() {
       ]);
       const quoteLines = quotesRaw.split('\n').map(l => l.trim()).filter(Boolean);
       const parsed = parseSaintFolder(folder);
+      const intro = parseIntro(introRaw);
 
-      const darkFile = image.replace(/(\.[^.]+)$/, '-dark$1');
-      const hasDark = files.some(f => f.toLowerCase() === darkFile.toLowerCase());
       const imageForMode = f => base + encodeURIComponent(f);
       const thumbOf = f => f.replace(/\.[^.]+$/, '-thumb.jpg');
 
@@ -1572,8 +1600,9 @@ async function loadSaints() {
         sortKey: parsed.sortKey,
         image: imageForMode(image),
         thumb: imageForMode(thumbOf(image)),
-        imageDark: hasDark ? imageForMode(darkFile) : imageForMode(image),
-        thumbDark: hasDark ? imageForMode(thumbOf(darkFile)) : imageForMode(thumbOf(image)),
+        intro: intro.text,
+        feast: intro.feast,
+        feastKey: intro.feastKey,
         chapters,
         linkedQuotes: linkQuotesToChapters(quoteLines, chapters)
       };
@@ -1611,6 +1640,104 @@ const LOOP_BUFFER = 24; // Reverted from 40. That widening was meant to give nat
                          // real per-frame layout/paint work on actual mobile hardware, invisible
                          // in this sandbox's testing. 24 is what the original file used.
 
+/* Deck geometry. Every image is drawn at ONE shared scale factor, chosen so
+   the tallest image in the set exactly fills the available height — so
+   widths and heights are both ragged, reflecting the real proportions of
+   each picture rather than a common crop.
+
+   The names still line up: because the tallest image is what defines
+   availH, "the bottom of the tallest image" is always availH, and each
+   caption's margin-top is whatever closes the gap from its own shorter
+   image down to that line. Shorter images simply carry more empty space
+   above their name.
+
+   Consequence worth knowing: since the scale factor is applied to source
+   pixel dimensions, every saint image must be exported at the same pixel
+   density. One exported at 2x renders twice the size of its neighbours,
+   and the page has no way to tell that apart from a genuinely larger icon. */
+const CARD_CAPTION_GAP = 12;
+const CAPTION_LINES_H = 28;  // 2 lines at .saint-caption's 14px line-height
+const INTRO_BLOCK_H = 48;    // .saint-intro's 6px margin + 3 lines at 14px
+const DECK_SIDE_MARGIN = 20; // keeps the widest card clear of both screen edges
+
+function layoutHallCards() {
+  const items = [...hallTrack.querySelectorAll('.saint-item')];
+  if (!items.length) return;
+  // Read the margins rather than restating them: .saint-item's bottom
+  // margin carries env(safe-area-inset-bottom), whose value is only known
+  // to the browser.
+  const cs = getComputedStyle(items[0]);
+  const vMargin = parseFloat(cs.marginTop) + parseFloat(cs.marginBottom);
+  // Reserve intro space only if some saint actually has an intro.txt —
+  // otherwise every card would give up 48px of height for an empty box.
+  const hasIntro = SAINTS.some(s => s.intro);
+  const captionBlock = CARD_CAPTION_GAP + CAPTION_LINES_H + (hasIntro ? INTRO_BLOCK_H : 0);
+  const availH = Math.max(80, hallTrack.clientHeight - vMargin - captionBlock);
+  const maxImgH = Math.max(...SAINTS.map(s => s.imgH || FALLBACK_IMAGE_H));
+  /* Height alone can't set the scale: on a narrow screen a tall-enough
+     card comes out wider than the viewport (measured on a 375px phone,
+     the widest saint rendered 429px across and hung off both edges).
+     Whichever axis runs out first wins. */
+  const maxImgW = Math.max(...SAINTS.map(s => s.imgW || FALLBACK_IMAGE_W));
+  const availW = Math.max(80, hallTrack.clientWidth - DECK_SIDE_MARGIN);
+  const scale = Math.min(availH / maxImgH, availW / maxImgW);
+  /* The caption line follows the tallest image as ACTUALLY RENDERED, not
+     the height budget. The two are equal only while height is the binding
+     constraint; once width binds, availH is taller than any real card and
+     every name would float below its picture. */
+  const maxH = maxImgH * scale;
+  deckMaxCardW = maxImgW * scale; // read by isModalCompact() — see its comment
+
+  items.forEach(item => {
+    const s = item._saint;
+    if (!s) return;
+    const w = (s.imgW || FALLBACK_IMAGE_W) * scale;
+    const h = (s.imgH || FALLBACK_IMAGE_H) * scale;
+    const card = item.querySelector('.saint-card');
+    card.style.setProperty('--card-w', w + 'px');
+    card.style.setProperty('--card-h', h + 'px');
+    const caption = item.querySelector('.saint-caption');
+    caption.style.marginTop = (maxH - h + CARD_CAPTION_GAP) + 'px';
+    // Pin the text blocks to the image's width so the item's own width is
+    // exactly the card's. Left free, a long name would make the item wider
+    // than its picture, which changes the row's spacing and the box the
+    // modal animates.
+    caption.style.width = w + 'px';
+    const intro = item.querySelector('.saint-intro');
+    if (intro) intro.style.width = w + 'px';
+  });
+}
+
+/* Calendar order runs the church year rather than the timeline. A saint
+   whose intro.txt carries no feast line keeps its chronological position
+   and sits after the dated ones — the same convention parseSaintFolder's
+   null sortKey already uses for undated folders.
+
+   That fallback is what makes this self-converting: with no intro.txt
+   anywhere, this returns exactly the chronological order, and each saint
+   moves into its calendar position as its own intro.txt lands. There is no
+   flag to flip once enough of them exist. */
+let hallOrder = 'calendar';
+
+function orderedSaints() {
+  if (hallOrder !== 'calendar') return SAINTS;
+  const dated = SAINTS.filter(s => s.feastKey !== null).sort((a, b) => a.feastKey - b.feastKey);
+  const undated = SAINTS.filter(s => s.feastKey === null);
+  return [...dated, ...undated];
+}
+
+document.querySelectorAll('#hall-order-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    // Re-rendering replaces every node in the row, which would strand an
+    // open modal's fixed-position card and its placeholder.
+    if (hallBusy || currentHallOpen || a.dataset.order === hallOrder) return;
+    document.querySelectorAll('#hall-order-nav a').forEach(x => x.classList.remove('active'));
+    a.classList.add('active');
+    hallOrder = a.dataset.order;
+    renderHall();
+  });
+});
+
 function renderHall() {
   hallTrack.innerHTML = '';
   if (!SAINTS.length) {
@@ -1620,20 +1747,20 @@ function renderHall() {
   }
   hallStatus.style.display = 'none';
 
-  const loopSaints = loopSafeList(SAINTS);
+  const loopSaints = loopSafeList(orderedSaints());
   const head = cyclicSlice(loopSaints, loopSaints.length - LOOP_BUFFER, LOOP_BUFFER);
   const tail = cyclicSlice(loopSaints, 0, LOOP_BUFFER);
   const full = [...head, ...loopSaints, ...tail];
 
-  const isDark = document.documentElement.classList.contains('dark');
   full.forEach((s) => {
     const item = document.createElement('div');
     item.className = 'saint-item';
     item.dataset.id = s.id;
-    const thumbSrc = isDark ? s.thumbDark : s.thumb;
+    item._saint = s; // layoutHallCards() needs this item's own pixel dimensions; every loop clone points at the same saint object
     item.innerHTML = `
-      <div class="saint-card"><img class="thumb" src="${thumbSrc}" data-light="${s.thumb}" data-dark="${s.thumbDark}" alt="" aria-hidden="true"><img class="full" data-light="${s.image}" data-dark="${s.imageDark}" alt="${s.name}" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
-      <div class="saint-caption">${s.name}</div>`;
+      <div class="saint-card"><img class="thumb" src="${s.thumb}" alt="" aria-hidden="true"><img class="full" data-src="${s.image}" alt="${s.name}" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.display='none';console.warn('Saint image failed to load:', this.getAttribute('src'))"></div>
+      <div class="saint-caption">${s.name}</div>
+      ${s.intro ? `<div class="saint-intro">${escapeHtml(s.intro)}</div>` : ''}`;
     item.addEventListener('click', () => {
       if (hallBusy) return;
       if (item.classList.contains('selected')) { if (hallClose.onclick) hallClose.onclick(); return; }
@@ -1644,6 +1771,11 @@ function renderHall() {
     hallTrack.appendChild(item);
   });
 
+  // Before the measure() below, not after — the loop-wrap geometry is read
+  // from real offsets now, so the cards have to be at their final sizes
+  // first or every bound would be measured against a collapsed row.
+  layoutHallCards();
+
   requestAnimationFrame(() => {
     hallInertia.measure();
     const first = hallTrack.children[LOOP_BUFFER];
@@ -1652,13 +1784,13 @@ function renderHall() {
   });
 }
 
-const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(SAINTS).length,
+const hallInertia = attachLoopScroll(hallTrack, LOOP_BUFFER, () => loopSafeList(orderedSaints()).length,
   { axis: 'x', blocked: () => hallBusy || !!currentHallOpen });
 const hallDrift = attachIdleDrift(hallTrack, hallInertia);
 
 /* =====================================================================
    HALL FULL-IMAGE PROMOTION — render() leaves every .saint-card img.full
-   without a src (only data-light/data-dark), so a fast fling across the
+   without a src (only data-src), so a fast fling across the
    loop buffer doesn't force every passing card to decode a full-res
    image at once. A shared IntersectionObserver watches every .full img;
    entering the margin starts a dwell timer before the real src gets set,
@@ -1676,9 +1808,7 @@ function promoteHallImage(img) {
   if (!img || img.getAttribute('src')) return;
   const pending = hallPendingPromotes.get(img);
   if (pending) { clearTimeout(pending); hallPendingPromotes.delete(img); }
-  const isDark = document.documentElement.classList.contains('dark');
-  const src = isDark ? img.dataset.dark : img.dataset.light;
-  if (src) img.setAttribute('src', src);
+  if (img.dataset.src) img.setAttribute('src', img.dataset.src);
 }
 
 function createHallPromoteObserver() {
@@ -1718,35 +1848,14 @@ const hallChaptersDesktop = createChapterController(
   document.getElementById('hall-chapters-desktop'),
   () => document.getElementById('hall-chapters-desktop')
 );
-function getMobileStickyClearance() {
-  // page header + the sticky bar's actual current height (now responsive
-  // to viewport height, not a fixed value, and its own padding already
-  // includes the comfortable gap below it). Measuring this directly means
-  // it can never drift out of sync with the bar's real layout, unlike a
-  // hardcoded constant that has to be manually recomputed by hand every
-  // time the bar's own height changes.
-  const bar = document.getElementById('mobile-hero-bar');
-  return 30 + (bar ? bar.offsetHeight : 169);
-}
-function syncMobileChapterStickyTop() {
-  // The chapter headers' sticky position is additive with their scrolling
-  // container's own padding-top (30px, for the page header) — so top:0
-  // resolves to y=30, not to "right below the bar" as it might seem. This
-  // only ever looked correct for a single always-first chapter, whose
-  // natural (pre-scroll) position already sat further down than that
-  // threshold. Once a second chapter is revealed and the first one's
-  // natural position scrolls back past y=30, it snaps to the panel's top
-  // edge instead of staying below the bar. Setting an explicit value
-  // (bar height + gap) fixes this for every revealed chapter, not just
-  // the first.
-  const bar = document.getElementById('mobile-hero-bar');
-  const barHeight = bar ? bar.offsetHeight : 169;
-  document.documentElement.style.setProperty('--mobile-chapter-sticky-top', barHeight + 'px');
-}
+/* Both controllers now take the default zero sticky offset. The compact
+   one used to need getMobileStickyClearance() — the page header plus the
+   measured height of a sticky hero bar that overlaid the top of its scroll
+   root. Neither exists now: #mobile-texts-pane is its own scroll root and
+   starts below the mode nav, so its top edge is the sticky line. */
 const hallChaptersMobile = createChapterController(
   document.getElementById('hall-chapters-mobile'),
-  () => document.getElementById('hall-mobile-panel'),
-  getMobileStickyClearance
+  () => document.getElementById('mobile-texts-pane')
 );
 
 /* ---- chapter accordion (shared by desktop + mobile panels) ---- */
@@ -1978,6 +2087,10 @@ function jumpToQuote(linkedQuote) {
     ? document.getElementById('hall-chapters-mobile')
     : document.getElementById('hall-chapters-desktop');
   const controller = compact ? hallChaptersMobile : hallChaptersDesktop;
+  // Compact shows one mode at a time, and the chapter this quote lives in
+  // is in the other one — switch across before trying to scroll to it, or
+  // the target is inside a display:none pane and every offset reads zero.
+  if (compact) setHallMobileMode('texts');
   controller.openFrom(linkedQuote.chapterIndex);
 
   requestAnimationFrame(() => {
@@ -1985,11 +2098,11 @@ function jumpToQuote(linkedQuote) {
     if (!anchor) return;
     if (currentHighlightEl && currentHighlightEl !== anchor) currentHighlightEl.classList.remove('hl');
 
-    const scrollBox = compact ? document.getElementById('hall-mobile-panel') : container;
-    const clearance = compact ? getMobileStickyClearance() : 0;
+    // No sticky clearance in either layout now — each panel's own top edge
+    // is the sticky line, with nothing overlaying it.
+    const scrollBox = compact ? document.getElementById('mobile-texts-pane') : container;
     const anchorTop = anchor.getBoundingClientRect().top - scrollBox.getBoundingClientRect().top + scrollBox.scrollTop;
-    const visibleHeight = scrollBox.clientHeight - clearance;
-    const targetTop = anchorTop - clearance - (visibleHeight / 2) + (anchor.offsetHeight / 2);
+    const targetTop = anchorTop - (scrollBox.clientHeight / 2) + (anchor.offsetHeight / 2);
     const startTop = scrollBox.scrollTop;
     tween(1000, t => { scrollBox.scrollTop = lerp(startTop, targetTop, t); }, () => {
       anchor.classList.add('hl');
@@ -2000,13 +2113,6 @@ function jumpToQuote(linkedQuote) {
 
 const HEADER_H = 30;
 
-function mobileDockTarget(origRect) {
-  const dockH = Math.max(90, Math.min(160, window.innerHeight * 0.15)); // matches .quotes-viewport.small's clamp() exactly, so the two align as one clean row
-  const scale = dockH / origRect.height;
-  const dockW = origRect.width * scale;
-  return { top: HEADER_H + 26, left: window.innerWidth - dockW - 46, width: dockW, height: dockH };
-}
-
 /* ---- Hall modal ---- */
 const hallModalQuotes = document.getElementById('hall-modal-quotes');
 const hallModalText = document.getElementById('hall-modal-text');
@@ -2016,21 +2122,49 @@ const hallClose = document.getElementById('hall-close');
 let currentHallOpen = null; // { itemEl, origRect } while a Hall modal is open
 let modalCompactMode = null; // tracks compact vs split-panel while a Hall modal is open
 
-function computeHallTarget(origRect, mobile) {
-  if (mobile) {
-    // On mobile the image docks straight to its final small top-right spot —
-    // no separate large "hero" stage, and it never moves again on scroll.
-    const d = mobileDockTarget(origRect);
-    return { targetH: d.height, targetW: d.width, targetTop: d.top, targetLeft: d.left, scale: d.height / origRect.height };
-  }
-  // Desktop: no resizing at all, exactly matching the deck card's size —
-  // only move it horizontally to the centre.
-  const targetH = origRect.height;
-  const targetW = origRect.width;
-  const targetTop = origRect.top;
-  const targetLeft = (window.innerWidth - targetW) / 2;
-  return { targetH, targetW, targetTop, targetLeft, scale: 1 };
+/* One path for both layouts. No resizing at all, exactly matching the deck
+   card's size — only a horizontal move to the centre. Compact used to take
+   a second branch that shrank the card into a small top-right dock; that
+   is gone, which is also why nothing here needs a scale factor any more. */
+function computeHallTarget(origRect) {
+  return {
+    targetH: origRect.height,
+    targetW: origRect.width,
+    targetTop: origRect.top,
+    targetLeft: (window.innerWidth - origRect.width) / 2
+  };
 }
+
+/* Where the compact panel's top edge sits: directly under the saint's name,
+   measured rather than derived, since the name's own height depends on
+   whether it wrapped. Nothing moves vertically during the open tween, so
+   this is stable from the moment .selected is applied. */
+const MOBILE_PANEL_GAP = 14;
+function syncMobilePanelTop() {
+  if (!currentHallOpen || !modalCompactMode) return;
+  const cap = currentHallOpen.itemEl.querySelector('.saint-caption');
+  if (!cap) return;
+  const top = Math.round(cap.getBoundingClientRect().bottom + MOBILE_PANEL_GAP);
+  document.documentElement.style.setProperty('--mobile-panel-top', top + 'px');
+}
+
+/* Key Quotes / Source Texts. Compact only — the desktop split panel shows
+   both at once and has no need to choose. */
+let hallMobileMode = 'quotes';
+function setHallMobileMode(mode) {
+  hallMobileMode = mode;
+  document.querySelectorAll('#hall-mode-nav a').forEach(a => a.classList.toggle('active', a.dataset.mode === mode));
+  document.getElementById('mobile-quotes-pane').classList.toggle('active', mode === 'quotes');
+  document.getElementById('mobile-texts-pane').classList.toggle('active', mode === 'texts');
+  // The quotes pane is display:none while Source Texts is showing, and a
+  // display:none element measures every offset as 0 — so the loop-scroll
+  // geometry captured while hidden is meaningless and has to be retaken
+  // the moment the pane is real again.
+  if (mode === 'quotes') requestAnimationFrame(hallQuotesCarouselMobile.remeasure);
+}
+document.querySelectorAll('#hall-mode-nav a').forEach(a => {
+  a.addEventListener('click', () => setHallMobileMode(a.dataset.mode));
+});
 
 let hallBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
 
@@ -2047,39 +2181,14 @@ function openHallModal(itemEl, data) {
   hallInertia.setLocked(true);
   hallQuotesCarouselDesktop.setLocked(true);
   hallQuotesCarouselMobile.setLocked(true);
+  /* No caption bookkeeping any more. The caption used to be frozen to a
+     fixed position and faded out on mobile, and its height subtracted from
+     the animated box, because the image shrank into a dock there and the
+     caption was not part of that. Now the whole item — image and name
+     together — simply slides sideways at its deck size, so rect is the
+     animation box in both layouts, unmodified. */
   const rect = itemEl.getBoundingClientRect();
   const compact = isModalCompact(rect);
-  const captionEl = itemEl.querySelector('.saint-caption');
-  /* Mobile only: freeze the caption to its current on-screen position
-     (position:fixed) before its opacity fade starts, so it fades out in
-     place instead of riding along with the shrinking image. Desktop
-     keeps the caption visible and normally flowing, so skip this there. */
-  const capRect = (compact && captionEl) ? captionEl.getBoundingClientRect() : null;
-  // Must be read BEFORE .detach is applied below — that class sets
-  // margin:0 on the caption, so reading this after would silently lose
-  // the true margin and under-correct captionSpace by exactly that much.
-  const capMarginTop = capRect ? parseFloat(getComputedStyle(captionEl).marginTop || '0') : 0;
-  if (capRect) {
-    captionEl.classList.add('detach');
-    captionEl.style.top = capRect.top + 'px';
-    captionEl.style.left = capRect.left + 'px';
-    captionEl.style.width = capRect.width + 'px';
-  }
-  /* itemEl is a flex column: .saint-card (image) first, .saint-caption
-     after — so the card's top exactly equals itemEl's top, and the
-     caption only extends itemEl's BOTTOM edge (verified directly). That
-     extra height belongs in the animation on desktop, where the caption
-     stays visible next to the modal. On mobile it doesn't: the caption
-     fades out and the dock only ever shows the image, so including it
-     stretches the image past its true aspect ratio for the whole
-     animation (.saint-card fills 100% of whatever height is animating)
-     and skews computeHallTarget's own aspect-ratio math — then snaps
-     back the instant the animation ends and inline styles clear.
-     largeRect corrects the height only; top/left are already right. */
-  const captionSpace = capRect ? capRect.height + capMarginTop : 0;
-  const largeRect = captionSpace
-    ? { top: rect.top, left: rect.left, width: rect.width, height: rect.height - captionSpace }
-    : rect;
   modalCompactMode = compact;
   document.body.classList.toggle('modal-compact', compact);
 
@@ -2087,21 +2196,22 @@ function openHallModal(itemEl, data) {
 
   setSiblingsDim(hallTrack, '.saint-item', itemEl, true);
 
-  itemEl.style.top = largeRect.top + 'px';
-  itemEl.style.left = largeRect.left + 'px';
-  itemEl.style.width = largeRect.width + 'px';
-  itemEl.style.height = largeRect.height + 'px';
+  itemEl.style.top = rect.top + 'px';
+  itemEl.style.left = rect.left + 'px';
+  itemEl.style.width = rect.width + 'px';
+  itemEl.style.height = rect.height + 'px';
   itemEl.classList.add('selected');
 
-  const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
-  currentHallOpen = { itemEl, origRect: rect, placeholder, captionSpace };
+  const { targetTop, targetLeft } = computeHallTarget(rect);
+  currentHallOpen = { itemEl, origRect: rect, placeholder };
 
+  // Width and height are held at the deck's values for the whole tween —
+  // only the horizontal position changes. They stay set inline because the
+  // item is position:fixed and would otherwise shrink-wrap its content.
   tween(1500, (t) => {
-    itemEl.style.top = lerp(largeRect.top, targetTop, t) + 'px';
-    itemEl.style.left = lerp(largeRect.left, targetLeft, t) + 'px';
-    itemEl.style.width = lerp(largeRect.width, targetW, t) + 'px';
-    itemEl.style.height = lerp(largeRect.height, targetH, t) + 'px';
+    itemEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
   });
+  itemEl.style.top = targetTop + 'px';
 
   // build chapter HTML once (with quote anchors embedded) and populate both panels
   const chaptersHtml = data.chapters.map((ch, ci) => ({
@@ -2115,9 +2225,15 @@ function openHallModal(itemEl, data) {
   hallQuotesCarouselDesktop.render(data.linkedQuotes, jumpToQuote);
   hallQuotesCarouselMobile.render(data.linkedQuotes, jumpToQuote);
 
-  document.getElementById('mobile-saint-name').textContent = data.name;
-  syncMobileChapterStickyTop();
-  requestAnimationFrame(syncMobileChapterStickyTop); // re-check once the name's actual layout (e.g. if it wraps) has settled
+  // Key Quotes by default, whatever mode the last saint was left in — but
+  // only when there are any. A saint whose quotes.txt lines don't appear
+  // verbatim in its chapters ends up with none, and opening onto an empty
+  // pane would read as the modal having failed to load.
+  const hasQuotes = data.linkedQuotes.length > 0;
+  document.getElementById('hall-mode-nav').classList.toggle('no-quotes', !hasQuotes);
+  setHallMobileMode(hasQuotes ? 'quotes' : 'texts');
+  syncMobilePanelTop();
+  requestAnimationFrame(syncMobilePanelTop); // re-check once the name's actual layout (e.g. if it wrapped to two lines) has settled
 
   setTimeout(() => {
     hallModalQuotes.classList.add('reveal');
@@ -2125,6 +2241,10 @@ function openHallModal(itemEl, data) {
     hallMobilePanel.classList.add('reveal');
     hallClose.classList.add('show');
     hallBusy = false;
+    // The mobile carousel rendered while its panel was still display:none
+    // (the panel only becomes visible with body.modal-compact), so its
+    // offsets were all zero at render time — retake them now it is real.
+    if (compact) hallQuotesCarouselMobile.remeasure();
     // The row itself stays locked (hallInertia.setLocked stays true) for
     // as long as the modal is open — matching wheel's blocked(), which
     // checks currentHallOpen too. The quote carousels are different: the
@@ -2140,14 +2260,6 @@ function openHallModal(itemEl, data) {
 function closeHallModal(itemEl, placeholder) {
   hallBusy = true;
   hallDrift.resume(); // 5s idle countdown restarts fresh from now
-  // Read before clearing — see openHallModal's comment on why the deck-
-  // sized endpoint of this tween needs the same height correction the
-  // open tween used (top and left are already exactly right — see
-  // openHallModal's comment), and why itemEl's own rect isn't a
-  // caption-inflated measurement the way the deck placeholder's is:
-  // itemEl's current size is whatever the open tween last set it to
-  // (the small docked size), not this saint-item's full deck size.
-  const captionSpace = currentHallOpen ? currentHallOpen.captionSpace : 0;
   currentHallOpen = null;
   modalCompactMode = null;
   hallModalQuotes.classList.remove('reveal');
@@ -2158,24 +2270,18 @@ function closeHallModal(itemEl, placeholder) {
   hallChaptersMobile.close();
   currentHighlightEl = null;
 
+  // The placeholder's box IS the deck slot, with no correction needed: the
+  // item never changed size, so its open dimensions and its resting ones
+  // are the same numbers.
   const rect = placeholder.getBoundingClientRect();
   const from = itemEl.getBoundingClientRect();
-  const largeHeight = rect.height - captionSpace;
 
   tween(1500, (t) => {
     itemEl.style.top = lerp(from.top, rect.top, t) + 'px';
     itemEl.style.left = lerp(from.left, rect.left, t) + 'px';
-    itemEl.style.width = lerp(from.width, rect.width, t) + 'px';
-    itemEl.style.height = lerp(from.height, largeHeight, t) + 'px';
   }, () => {
     itemEl.classList.remove('selected');
     itemEl.removeAttribute('style');
-    // Un-freeze the caption at the same instant it starts fading back in
-    // (body.modal-compact's removal above triggers that fade) — it needs
-    // to be back in normal flow, matching wherever the deck card actually
-    // resettled, not still pinned to the position captured at open time.
-    const captionEl = itemEl.querySelector('.saint-caption');
-    if (captionEl) { captionEl.classList.remove('detach'); captionEl.removeAttribute('style'); }
     placeholder.remove();
     document.body.classList.remove('modal-compact');
     setSiblingsDim(hallTrack, '.saint-item', null, false);
@@ -2195,11 +2301,15 @@ function closeHallModal(itemEl, placeholder) {
 }
 
 /* =====================================================================
-   ARMORY — vertical "spear" quotes, modal
+   TEXT — a single vertical column of quotes, each linked to its source.
+
+   Formerly the "Armory": a horizontal rack of rotating spear elements,
+   each of which flew to the centre of the screen and expanded when
+   tapped. That whole interaction is gone — there is no modal, no
+   selection, no tween. The list simply scrolls, and drifts upward on its
+   own when left alone.
 ===================================================================== */
 const armoryTrack = document.getElementById('armory-track');
-const armoryAttribution = document.getElementById('armory-attribution');
-const armoryClose = document.getElementById('armory-close');
 const ARMORY_BUFFER = 24; // see LOOP_BUFFER's comment — reverted for the same reason
 
 const QUOTES_FALLBACK = `
@@ -2234,199 +2344,54 @@ function renderArmory() {
   const loopQuotes = loopSafeList(ARMORY_QUOTES);
   const head = cyclicSlice(loopQuotes, loopQuotes.length - ARMORY_BUFFER, ARMORY_BUFFER);
   const tail = cyclicSlice(loopQuotes, 0, ARMORY_BUFFER);
-  const full = [...head, ...loopQuotes, ...tail];
 
-  full.forEach((q) => {
+  [...head, ...loopQuotes, ...tail].forEach((q) => {
     const el = document.createElement('div');
-    el.className = 'spear';
-    el.innerHTML = `
-      <div class="hilt"><div class="pommel"></div><div class="grip"></div><div class="guard"></div></div>
-      <div class="shaft-text">${q.quote}</div>`;
-    el.addEventListener('click', () => {
-      if (armoryBusy) return;
-      if (el.classList.contains('selected')) { if (armoryClose.onclick) armoryClose.onclick(); return; }
-      openArmoryModal(el, q);
-    });
+    el.className = 'quote-entry';
+    // A source naming one of the saints links across to that saint rather
+    // than out to Bible Gateway, which has nothing to return for it.
+    const isSaint = SAINTS.some(s => saintMatchesSource(s, q.source));
+    const label = escapeHtml(q.source);
+    const link = isSaint
+      ? `<a href="#" data-jump-saint="${label}">${label}</a>`
+      : `<a href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(q.source)}" target="_blank" rel="noopener">${label}</a>`;
+    // quotes.txt already carries its own quotation marks — see the file.
+    el.innerHTML = `<div class="quote-body">${escapeHtml(q.quote)}</div><div class="quote-source">&mdash; ${link}</div>`;
     armoryTrack.appendChild(el);
   });
 
   requestAnimationFrame(() => {
     armoryInertia.measure();
     const first = armoryTrack.children[ARMORY_BUFFER];
-    if (first) armoryInertia.resetTo(first.offsetLeft);
+    if (first) armoryInertia.resetTo(first.offsetTop);
   });
 }
+
+// Delegated, not per-entry: the clone buffer means this list holds dozens
+// of copies of every quote, and one listener on the container outlives
+// each re-render instead of being reattached to all of them.
+armoryTrack.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-jump-saint]');
+  if (!link) return;
+  e.preventDefault();
+  const target = SAINTS.find(s => saintMatchesSource(s, link.dataset.jumpSaint));
+  if (!target) return;
+  document.querySelector('header nav a[data-view="hall"]').click();
+  // The Hall row has to be laid out and on screen before openHallModal can
+  // measure the card it is animating from.
+  setTimeout(() => {
+    const itemEl = [...hallTrack.querySelectorAll('.saint-item')].find(el => el.dataset.id === target.id);
+    if (itemEl) openHallModal(itemEl, target);
+  }, 200);
+});
 
 const armoryInertia = attachLoopScroll(armoryTrack, ARMORY_BUFFER, () => loopSafeList(ARMORY_QUOTES).length,
-  { axis: 'x', blocked: () => armoryBusy || !!currentArmoryOpen });
-const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia);
+  { axis: 'y' });
+// Shorter idle than the Hall's 5s default: this list is meant to read as
+// continuously drifting, so it resumes soon after a scroll rather than
+// waiting out a long pause.
+const armoryDrift = attachIdleDrift(armoryTrack, armoryInertia, { axis: 'y', idleMs: 1200 });
 
-function armoryScaleFor(rect) {
-  const desired = 1.5;
-  const maxAllowed = (window.innerWidth - 24) / rect.height;
-  return Math.min(desired, maxAllowed);
-}
-
-let currentArmoryOpen = null; // { spearEl, origRect } while an Armory modal is open
-
-function armorySpearTarget(origRect) {
-  const scale = armoryScaleFor(origRect);
-  const cx = window.innerWidth / 2;
-  const cy = window.innerHeight / 2 - 30;
-  return {
-    scale,
-    targetTop: cy - origRect.height / 2,
-    targetLeft: cx - origRect.width / 2,
-    attributionTop: cy + (origRect.width * scale) / 2 + 26
-  };
-}
-
-let armoryBusy = false; // true while an open/close animation sequence is in flight — blocks overlapping clicks that would race two tweens against the same element
-
-function openArmoryModal(spearEl, q) {
-  if (armoryBusy || spearEl.classList.contains('selected')) return;
-  armoryBusy = true;
-  armoryDrift.pause();
-  armoryInertia.setLocked(true); // released once the modal is fully closed — see openHallModal's comment
-  const rect = spearEl.getBoundingClientRect();
-
-  const placeholder = createPlaceholder(spearEl, rect, 'spear-placeholder');
-
-  setSiblingsDim(armoryTrack, '.spear', spearEl, true);
-
-  spearEl.style.top = rect.top + 'px';
-  spearEl.style.left = rect.left + 'px';
-  spearEl.style.width = rect.width + 'px';
-  spearEl.style.height = rect.height + 'px';
-  spearEl.style.transform = 'rotate(0deg) scale(1)';
-  spearEl.classList.add('selected');
-
-  currentArmoryOpen = { spearEl, origRect: rect };
-  const { scale, targetTop, targetLeft, attributionTop } = armorySpearTarget(rect);
-
-  tween(1500, (t) => {
-    spearEl.style.top = lerp(rect.top, targetTop, t) + 'px';
-    spearEl.style.left = lerp(rect.left, targetLeft, t) + 'px';
-    const r = lerp(0, -90, t);
-    const s = lerp(1, scale, t);
-    spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
-  });
-
-  armoryAttribution.style.top = attributionTop + 'px';
-  armoryAttribution.style.left = '50%';
-
-  const isSaint = SAINTS.some(s => saintMatchesSource(s, q.source));
-  let html;
-  if (isSaint) {
-    html = `&mdash; <a href="#" data-jump-saint="${q.source}">${q.source}</a>`;
-  } else {
-    const url = `https://www.biblegateway.com/passage/?search=${encodeURIComponent(q.source)}`;
-    html = `&mdash; <a href="${url}" target="_blank" rel="noopener">${q.source}</a>`;
-  }
-  armoryAttribution.innerHTML = html;
-
-  setTimeout(() => {
-    armoryAttribution.classList.add('reveal');
-    armoryClose.classList.add('show');
-    armoryBusy = false;
-  }, 1500);
-
-  const jumpLink = armoryAttribution.querySelector('[data-jump-saint]');
-  if (jumpLink) {
-    jumpLink.onclick = (e) => {
-      e.preventDefault();
-      if (armoryBusy) return;
-      closeArmoryModal(spearEl, placeholder);
-      document.querySelector('header nav a[data-view="hall"]').click();
-      const target = SAINTS.find(s => saintMatchesSource(s, q.source));
-      if (target) {
-        setTimeout(() => {
-          const itemEl = [...hallTrack.querySelectorAll('.saint-item')].find(el => el.dataset.id === target.id);
-          if (itemEl) openHallModal(itemEl, target);
-        }, 200);
-      }
-    };
-  }
-
-  armoryClose.onclick = () => { if (!armoryBusy) closeArmoryModal(spearEl, placeholder); };
-}
-
-/* The placeholder's captured box was a close but not pixel-perfect stand-in
-   for the spear's true flex-computed resting slot (the hilt's padding/gap
-   made the two diverge slightly) — enough to be visible as a small jump
-   right at the end of the sheathing animation. Measuring the spear directly
-   in a momentary, unpainted flow state removes that guesswork entirely. */
-function measureTrueRestingRect(spearEl, placeholder) {
-  const savedStyle = spearEl.getAttribute('style');
-  const savedClass = spearEl.className;
-  const savedPlaceholderDisplay = placeholder.style.display;
-  placeholder.style.display = 'none';
-  spearEl.className = 'spear';
-  spearEl.removeAttribute('style');
-  const rect = spearEl.getBoundingClientRect();
-  spearEl.setAttribute('style', savedStyle);
-  spearEl.className = savedClass;
-  placeholder.style.display = savedPlaceholderDisplay;
-  return rect;
-}
-
-function closeArmoryModal(spearEl, placeholder) {
-  armoryBusy = true;
-  armoryDrift.resume(); // 5s idle countdown restarts fresh from now
-  currentArmoryOpen = null;
-  armoryAttribution.classList.remove('reveal');
-  armoryClose.classList.remove('show');
-
-  // Read where the spear ACTUALLY is right now, directly, rather than
-  // recomputing it via a formula that has to exactly reproduce reality.
-  const fromTop = parseFloat(spearEl.style.top) || 0;
-  const fromLeft = parseFloat(spearEl.style.left) || 0;
-  const scaleMatch = /scale\(([\d.]+)\)/.exec(spearEl.style.transform || '');
-  const fromScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
-
-  // Rough resting rect, good enough for picking the overshoot point —
-  // the exact final landing spot is handled separately below, with zero
-  // prediction involved.
-  const roughRect = measureTrueRestingRect(spearEl, placeholder);
-  const overshootTop = roughRect.top - 30;
-
-  setSiblingsDim(armoryTrack, '.spear', null, false);
-
-  tween(1000, (t) => {
-    spearEl.style.top = lerp(fromTop, overshootTop, t) + 'px';
-    spearEl.style.left = lerp(fromLeft, roughRect.left, t) + 'px';
-    const r = lerp(-90, 0, t);
-    const s = lerp(fromScale, 1, t);
-    spearEl.style.transform = `rotate(${r}deg) scale(${s})`;
-  }, () => {
-    // FLIP: snapshot the overshoot spot, THEN actually put the spear in
-    // its real flow position (ground truth — not a prediction), measure
-    // where that truly landed, invert back to the overshoot spot with a
-    // transform, then animate that transform away to zero. Since the
-    // "final" position is measured after really being there, it cannot
-    // be wrong.
-    const overshootTopNow = parseFloat(spearEl.style.top) || 0;
-    const overshootLeftNow = parseFloat(spearEl.style.left) || 0;
-
-    spearEl.classList.remove('selected');
-    spearEl.removeAttribute('style');
-    placeholder.remove();
-    const finalRect = spearEl.getBoundingClientRect();
-
-    const dTop = overshootTopNow - finalRect.top;
-    const dLeft = overshootLeftNow - finalRect.left;
-    spearEl.style.transform = `translate(${dLeft}px, ${dTop}px)`;
-    void spearEl.offsetHeight; // force reflow so this inverted state is registered before animating away from it
-
-    tween(417, (t2) => {
-      spearEl.style.transform = `translate(${lerp(dLeft, 0, t2)}px, ${lerp(dTop, 0, t2)}px)`;
-    }, () => {
-      spearEl.style.transform = '';
-      armoryBusy = false;
-      armoryInertia.setLocked(false);
-    });
-  });
-}
 
 /* =====================================================================
    INIT
@@ -2456,8 +2421,12 @@ function dismissLoader() {
 }
 setTimeout(dismissLoader, LOADER_MAX_MS);
 
-loadSaints().then(({ saints, source, skipped, cache, cacheAt }) => {
+loadSaints().then(async ({ saints, source, skipped, cache, cacheAt }) => {
   SAINTS = saints;
+  // Awaited before the first renderHall(), not after — see probeImageSizes.
+  // The loader is still up while this runs, and its own 9s ceiling caps
+  // the wait regardless.
+  await probeImageSizes(SAINTS);
   renderHall();
   const badge = document.getElementById('data-source-badge');
   const messages = {
@@ -2525,35 +2494,42 @@ fetch('assets/text/quotes.txt')
 function refreshHallModalLayout() {
   if (!currentHallOpen) return;
 
-  // Sibling cards resize live (their height is vh-based via aspect-ratio),
-  // but the placeholder reserving this card's slot in the row was frozen
-  // at open time — if it drifts out of sync with its resizing neighbours,
-  // a gap or overlap appears once the card returns to the row on close.
-  const sibling = hallTrack.querySelector('.saint-item.dim');
-  if (sibling && currentHallOpen.placeholder) {
-    const sibRect = sibling.getBoundingClientRect();
-    currentHallOpen.placeholder.style.width = sibRect.width + 'px';
-    currentHallOpen.placeholder.style.height = sibRect.height + 'px';
-    currentHallOpen.origRect = sibRect;
+  const { itemEl, placeholder } = currentHallOpen;
+
+  /* Cards resize live with the viewport, but the placeholder holding this
+     one's slot in the row was frozen at open time — left to drift, it
+     leaves a gap or an overlap when the card returns on close.
+
+     It has to be re-measured from a DOM clone of the SAME saint, not from
+     any convenient dimmed neighbour. That shortcut was correct only while
+     every card was an identical 1:2.4 box; cards are now sized from each
+     image's own pixel dimensions, so a neighbour's rect is simply a
+     different saint's size. The loop buffer guarantees a twin exists —
+     every saint is rendered many times over. */
+  const twin = [...hallTrack.querySelectorAll('.saint-item')]
+    .find(el => el !== itemEl && el._saint === itemEl._saint);
+  if (twin && placeholder) {
+    const twinRect = twin.getBoundingClientRect();
+    placeholder.style.width = twinRect.width + 'px';
+    placeholder.style.height = twinRect.height + 'px';
+    currentHallOpen.origRect = twinRect;
   }
 
-  const { itemEl, origRect, captionSpace } = currentHallOpen;
+  const origRect = currentHallOpen.origRect;
   const compact = isModalCompact(origRect);
-  // Same correction as openHallModal/closeHallModal — see openHallModal's
-  // comment. captionSpace is 0 whenever this modal opened on desktop, so
-  // this is a no-op there.
-  const largeRect = (compact && captionSpace)
-    ? { top: origRect.top, left: origRect.left, width: origRect.width, height: origRect.height - captionSpace }
-    : origRect;
 
-  if (compact === modalCompactMode) {
-    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
+  // The card is its deck size in both layouts, so a layout switch changes
+  // only which panels are shown — the card itself just re-centres.
+  const applyGeometry = () => {
+    const { targetTop, targetLeft } = computeHallTarget(origRect);
     itemEl.style.top = targetTop + 'px';
     itemEl.style.left = targetLeft + 'px';
-    itemEl.style.width = targetW + 'px';
-    itemEl.style.height = targetH + 'px';
-    return;
-  }
+    itemEl.style.width = origRect.width + 'px';
+    itemEl.style.height = origRect.height + 'px';
+    syncMobilePanelTop();
+  };
+
+  if (compact === modalCompactMode) { applyGeometry(); return; }
 
   modalCompactMode = compact;
   hallModalQuotes.classList.remove('reveal');
@@ -2562,15 +2538,15 @@ function refreshHallModalLayout() {
 
   setTimeout(() => {
     document.body.classList.toggle('modal-compact', compact);
-    const { targetH, targetW, targetTop, targetLeft } = computeHallTarget(largeRect, compact);
-    itemEl.style.top = targetTop + 'px';
-    itemEl.style.left = targetLeft + 'px';
-    itemEl.style.width = targetW + 'px';
-    itemEl.style.height = targetH + 'px';
+    applyGeometry();
     requestAnimationFrame(() => {
       hallModalQuotes.classList.add('reveal');
       hallModalText.classList.add('reveal');
       hallMobilePanel.classList.add('reveal');
+      // Whichever carousel was hidden before the switch measured itself as
+      // zero-sized; the one now on screen needs its geometry retaken.
+      if (compact) hallQuotesCarouselMobile.remeasure();
+      else hallQuotesCarouselDesktop.remeasure();
     });
   }, 500);
 }
@@ -2589,21 +2565,15 @@ window.addEventListener('resize', () => {
   lastResizeHeight = h;
   if (!significant) return;
 
+  layoutHallCards(); // must precede measure() — see renderHall's own call
   hallInertia.measure();
   armoryInertia.measure();
   createHallPromoteObserver();
-  syncMobileChapterStickyTop();
 
-  refreshHallModalLayout();
-
-  if (currentArmoryOpen) {
-    const { spearEl, origRect } = currentArmoryOpen;
-    const { scale, targetTop, targetLeft, attributionTop } = armorySpearTarget(origRect);
-    spearEl.style.top = targetTop + 'px';
-    spearEl.style.left = targetLeft + 'px';
-    spearEl.style.transform = `rotate(-90deg) scale(${scale})`;
-    armoryAttribution.style.top = attributionTop + 'px';
-  }
+  refreshHallModalLayout(); // re-centres the open card and re-syncs the compact panel's top edge
+  // The Text view needs nothing here: its entries are plain flow content
+  // that reflows on its own, and there is no longer a positioned element
+  // whose coordinates would have to be recomputed.
 });
 </script>
 
