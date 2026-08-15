@@ -145,6 +145,11 @@
     align-items:center;
     border-bottom:1px solid var(--line-grey-soft);
     padding:0 20px;
+    /* Matches the body/.saint-card .25s background fade (see body's own
+       comment) — without this it inherits the sitewide `*` rule's 2s
+       background-color duration and visibly lags the rest of the page
+       during a theme toggle. */
+    transition:background-color .25s ease, color 2s ease, border-color 2s ease;
   }
   header .brand{
     flex:1 1 0%;
@@ -282,6 +287,14 @@
     object-fit:contain;
     display:block;
     pointer-events:none; /* suppress the browser's built-in image-hover search icon */
+    /* While src is unset/decoding (e.g. mid theme-toggle swap), the browser
+       paints the img box with its own default fill — white or black
+       depending on platform — instead of leaving it transparent. On a slow
+       mobile decode that shows as a stark flashing rectangle where the
+       photo should be. Giving it the same themed background as the card
+       means that empty-state paint matches the page instead of standing
+       out, and fades with everything else via the sitewide `*` rule. */
+    background-color:var(--bg);
   }
   /* Thumb paints first (tiny, always cached fast) and sits underneath;
      the full-res image fades in over it once decoded, so a fast scroll
@@ -290,12 +303,12 @@
     position:absolute; inset:0;
     filter:blur(8px);
     transform:scale(1.08); /* hides the blur's soft edge fringe */
-    transition:opacity .25s ease;
+    transition:opacity .25s ease, background-color .25s ease;
   }
   .saint-card img.full{
     position:relative;
     opacity:0;
-    transition:opacity .25s ease;
+    transition:opacity .25s ease, background-color .25s ease;
   }
   .saint-card img.full.loaded{ opacity:1; }
   /* The open/close tween sets width/height directly (JS, not CSS
@@ -309,7 +322,14 @@
      ahead of time rather than only once the animation is already
      under way, which is what actually reduces that catch-up lag. */
   .saint-item.selected{ will-change:top, left, width, height; }
-  .saint-item.selected .saint-card img{ will-change:width, height; }
+  /* opacity included alongside width/height: without it, a phone GPU
+     already busy re-rasterizing this image every frame for the width/
+     height tween (see the comment above) can skip promoting a
+     compositing layer for the opacity transition until the fade is
+     already underway, which shows as an instant light/dark switch
+     instead of the same crossfade the (unselected, not being resized)
+     carousel gets. */
+  .saint-item.selected .saint-card img{ will-change:width, height, opacity; }
 
   .saint-caption{
     margin-top:10px;
@@ -414,7 +434,10 @@
     font-size:14px; letter-spacing:0.03em;
     color:var(--ink); cursor:pointer;
     padding:10px 4px; border-bottom:1px solid var(--line-grey-soft);
-    transition:color .3s ease, background-color 2s ease;
+    /* background-color matches the body/.saint-card .25s fade, not the
+       sitewide 2s default — otherwise this lags visibly behind the rest
+       of the page during a theme toggle. */
+    transition:color .3s ease, background-color .25s ease;
   }
   .chapter-header:hover{ color:var(--rubric); }
   .chapter.revealed .chapter-header{
@@ -463,7 +486,11 @@
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     opacity:0; pointer-events:none;
-    transition:opacity .5s ease, background-color 2s ease;
+    /* background-color matches the body/.saint-card .25s fade, not the
+       sitewide 2s default — this panel IS "the rest of the background"
+       once a saint card is open on mobile, so it must fade in step with
+       it rather than lagging behind. */
+    transition:opacity .5s ease, background-color .25s ease;
     z-index:35;
     background:var(--bg);
   }
@@ -474,6 +501,9 @@
     background:var(--bg);
     border-bottom:1px solid var(--line-grey-soft);
     padding-bottom:20px; /* extends the bar's own opaque coverage down to where the chapter header takes over sticking — without this, that gap was uncovered by any background, letting scrolled-past body text show through it */
+    /* Same .25s background match as #hall-mobile-panel — this bar sits on
+       top of it, so a mismatched duration here would show as a seam. */
+    transition:background-color .25s ease, color 2s ease, border-color 2s ease;
   }
   .mobile-hero-row{
     position:relative;
