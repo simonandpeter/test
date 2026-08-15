@@ -63,10 +63,19 @@
     position:fixed; inset:0; z-index:200;
     background:var(--bg);
     display:flex; align-items:center; justify-content:center;
+    opacity:0;
+    /* Runs once on paint, whether that's the first page load or the
+       fresh navigation "tap to refresh" performs (location.reload() —
+       see its own comment) — a real reload re-runs this animation from
+       frame 0 with no extra code needed. animation-fill-mode:forwards
+       holds it at opacity:1 once done, so the .done class below (a plain
+       property change, not a keyframe) can still transition it back out. */
+    animation:loading-screen-in .5s ease forwards;
     /* Fades itself out, then is removed from the DOM entirely so it can
        never intercept a tap once the site is live. */
     transition:opacity .55s ease, background-color 2s ease;
   }
+  @keyframes loading-screen-in{ to{ opacity:1; } }
   #loading-screen.done{ opacity:0; pointer-events:none; }
   .loading-stack{
     text-align:center;
@@ -636,8 +645,8 @@
 <header>
   <div class="brand"></div>
   <nav>
-    <a data-view="hall" class="active">Hall of Saints</a>
-    <a data-view="armory">Armory</a>
+    <a data-view="hall" class="active">Saints</a>
+    <a data-view="armory">Text</a>
   </nav>
   <div class="spacer">
     <button id="dark-toggle" type="button" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
