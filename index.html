@@ -790,6 +790,16 @@ let modeToggleId = 0; // bumped on every toggle; lets a superseded in-flight seq
 const OFFSCREEN_MARGIN = 600;
 function isRoughlyOnscreen(el) {
   const r = el.getBoundingClientRect();
+  /* The inactive tab is display:none (.view), which gives every descendant
+     a 0x0 rect at the origin — and 0x0 at the origin satisfies all four
+     bounds tests below, so the whole hidden view would count as "on
+     screen". That was costing more than a wasted fade: a display:none
+     element never runs a CSS transition, so its transitionend can never
+     fire, and the toggle fell back to the 1.5s last-resort for every image
+     in the hidden view. Measured on the Armory tab, where all 124 Hall
+     images are hidden: 1786ms per toggle versus 552ms on the Hall tab.
+     Unrendered means unseeable, which is exactly the offscreen path. */
+  if (r.width === 0 && r.height === 0) return false;
   return r.right > -OFFSCREEN_MARGIN && r.left < window.innerWidth + OFFSCREEN_MARGIN
       && r.bottom > -OFFSCREEN_MARGIN && r.top < window.innerHeight + OFFSCREEN_MARGIN;
 }
