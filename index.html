@@ -757,7 +757,24 @@ function runModeTransition(isDark) {
 
   changing.forEach(img => { img.style.opacity = '0'; });
 
-  setTimeout(() => {
+  // Wait for the fade-out to actually finish rendering, not just for a
+  // wall-clock timer matching the CSS duration — on a slower phone the GPU
+  // can still be a frame or more behind a setTimeout(IMAGE_FADE_MS), so the
+  // class flip below fired while the old image was still faintly visible,
+  // showing briefly as a rectangle against the new background. transitionend
+  // tracks the real frame; the timeout is only a fallback for images with
+  // nothing to transition (opacity already 0) or reduced-motion, where it
+  // may never fire.
+  const fadeOutDone = changing.length
+    ? Promise.all(changing.map(img => new Promise(resolve => {
+        let done = false;
+        const finish = () => { if (done) return; done = true; resolve(); };
+        img.addEventListener('transitionend', (e) => { if (e.propertyName === 'opacity') finish(); }, { once: true });
+        setTimeout(finish, IMAGE_FADE_MS + 100);
+      })))
+    : Promise.resolve();
+
+  fadeOutDone.then(() => {
     if (sequence !== modeToggleId) return; // a newer toggle already took over
 
     document.documentElement.classList.toggle('dark', isDark);
@@ -777,7 +794,7 @@ function runModeTransition(isDark) {
       if (sequence !== modeToggleId) return;
       changing.forEach(img => { img.style.opacity = ''; });
     });
-  }, changing.length ? IMAGE_FADE_MS : 0);
+  });
 }
 
 document.getElementById('dark-toggle').addEventListener('click', () => {
