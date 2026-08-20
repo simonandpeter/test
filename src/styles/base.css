@@ -175,6 +175,36 @@ main.chrome {
   color: var(--rubric);
 }
 
+/* A saint's name and their veneration glyph are one line: the mark sits to the
+   right of the name wherever a name appears, at the size of the type it
+   accompanies.
+
+   The line never wraps — the name shrinks and wraps within itself instead.
+   Letting the glyph fall to its own line is not a graceful degradation, it is
+   the mark losing the name it belongs to, and it happens on exactly the visit
+   that matters most: a cold load, where font-display: optional keeps the
+   fallback face, which measures a narrower 72ch column than Literata does. */
+.name-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+}
+
+.name-line > h1,
+.name-line > h2,
+.name-line > h3,
+.name-line > a {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.name-line .badge,
+.register .badge {
+  flex: none;
+  align-self: center;
+}
+
 /* Multi-script name forms (Ἁγνή, Ⲁⲛⲧⲱⲛⲓⲟⲥ, ܢܣܛܘܪܝܘܣ). The line-height is a
    fixed bound below Literata's natural 1.485 line box so a fallback face with
    taller metrics changes nothing the layout measured — glyphs may paint into

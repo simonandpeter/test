@@ -24,7 +24,7 @@ import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/m
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
-import { renderBadge, renderVessels } from '../ui/badge.js';
+import { renderBadge } from '../ui/badge.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { renderDateBars } from '../ui/datebar.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -111,7 +111,10 @@ function shell(card) {
 
   return `<article class="saint">
     <header class="saint-head">
-      <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
+      <div class="name-line">
+        <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
+        ${renderBadge(card.attestations, { cell: 15 })}
+      </div>
       <p class="names" data-names hidden></p>
       <p class="saint-facts utility">${esc(formatLifespan(card.dates))}${facts ? ` · ${esc(facts)}` : ''}</p>
       <div class="saint-actions">${renderSaveButton(card.slug)}</div>
@@ -127,7 +130,6 @@ function shell(card) {
 
       <div class="saint-main" data-detail>
         <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
-        <div class="veneration-badge">${renderBadge(card.attestations, { cell: 18 })}</div>
         <div data-veneration>${skeletonLines(4)}</div>
         <h2 class="register-heading">${STRINGS.saint.life}</h2>
         <div class="life" data-life>${skeletonLines(6)}</div>
@@ -341,8 +343,8 @@ function related(saint, data, router) {
     .filter(Boolean)
     .map(
       (card) => `<li>
-        ${renderVessels(card.attestations, { height: 12 })}
         <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(card.display_name)}</a>
+        ${renderBadge(card.attestations, { cell: 11 })}
         <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
       </li>`,
     );

@@ -435,7 +435,7 @@ test('a card opens its saint, carrying the shared element with it', async ({ pag
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const first = page.locator('.index-card').first();
   const name = await first.locator('.index-name').textContent();
-  await first.locator('.index-link').click();
+  await first.locator('.index-name').click();
   await expect(page.locator('h1.saint-name')).toHaveText(name ?? '');
 });
 
@@ -484,5 +484,62 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // both arrived at by different arithmetic.
   await expect(page.locator('[data-count]')).toHaveText('3');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
+});
+
+/* ---- the veneration glyph's place on the page --------------------------- */
+
+/**
+ * The glyph follows the name it belongs to, everywhere a name appears. DOM
+ * order is the contract and is checked at both widths; the geometry only holds
+ * where the line does not wrap, so it is checked on the wide viewport.
+ *
+ * One context is missing here and cannot be added honestly: the calendar's
+ * "also commemorated" register never renders, because no day in a corpus of
+ * ten has two saints on it.
+ */
+const glyphFollowsName = async (page, container, nameSelector) => {
+  const line = page.locator(container).first();
+  await expect(line.locator(`${nameSelector} + svg.badge`)).toHaveCount(1);
+
+  const viewport = page.viewportSize();
+  if (!viewport || viewport.width < 700) return;
+
+  // Literata is font-display: optional, so on a cold load the fallback face
+  // renders and the name is a different width until font loading settles.
+  // Measuring before that is a coin toss about which face was on screen.
+  await page.evaluate(() => document.fonts.ready);
+  const name = await line.locator(nameSelector).first().boundingBox();
+  const badge = await line.locator('svg.badge').first().boundingBox();
+  expect(badge.x, `name box ${JSON.stringify(name)}, glyph box ${JSON.stringify(badge)}`)
+    .toBeGreaterThan(name.x + name.width - 1);
+  // On the same line, not stacked under it.
+  expect(badge.y).toBeLessThan(name.y + name.height);
+};
+
+test('the glyph follows the saint own name on their page', async ({ page }) => {
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await glyphFollowsName(page, '.saint-head .name-line', 'h1.saint-name');
+  // The name carries the only glyph in the header, and the veneration section
+  // below is now the church-by-church register alone — the standalone badge
+  // that used to head it would have been the same mark printed twice.
+  await expect(page.locator('.saint-head svg.badge')).toHaveCount(1);
+  await expect(page.locator('[data-veneration] svg.badge')).toHaveCount(0);
+});
+
+test('the glyph follows the name in the calendar hero', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await glyphFollowsName(page, '.hero .name-line', 'h2.hero-name');
+});
+
+test('the glyph follows the name on an index card', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await glyphFollowsName(page, '.index-card .name-line', 'a.index-name');
+});
+
+test('the glyph follows the name on a shelf row', async ({ page }) => {
+  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await expect(page.locator('.shelves')).toContainText('Continue reading');
+  await glyphFollowsName(page, '.shelf li', 'a.reg-name');
 });
 

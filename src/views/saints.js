@@ -43,7 +43,7 @@ const GAP = 16;
  * two-line box so that these stay true. Changing either without the other
  * crops cards.
  */
-const CARD_TEXT_HEIGHT = 110;
+const CARD_TEXT_HEIGHT = 92;
 const CARD_INSET = 18;
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', timeZone: 'UTC' });
@@ -464,12 +464,16 @@ function card(item, router) {
           loading="lazy" decoding="async" />
       </span>`
     : '';
-  return `<a class="index-link" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
-      ${media}
-      <span class="index-name">${esc(item.display_name)}</span>
-    </a>
-    <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
-    ${renderBadge(item.attestations, { cell: 11 })}`;
+  // The link wraps the name only, and its ::after covers the whole card, so
+  // the image is clickable without a second link that has no accessible name
+  // of its own — and so the glyph can sit beside the name rather than inside
+  // the link, where its label would become part of the link's.
+  return `${media}
+    <span class="name-line">
+      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
+      ${renderBadge(item.attestations, { cell: 11 })}
+    </span>
+    <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>`;
 }
 
 /* ---- count and tray ------------------------------------------------------ */

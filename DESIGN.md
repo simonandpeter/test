@@ -167,8 +167,8 @@ date is set in `--rubric` — the red-letter day, literally.
 The habit page, so its shape is specified here rather than improvised.
 
 **The hero.** The day opens on one saint, large: image at manifest aspect,
-name in display voice at h1 scale, the badge beneath the name at full grid
-size, then that day's other commemorations as a register below. The pick is
+name in display voice at h1 scale, the badge immediately to the right of the
+name (§7), then that day's other commemorations as a register below. The pick is
 deterministic from the date and the day's slugs — the same day shows every
 visitor the same saint, so a shared link means a shared page — preferring
 saints that carry an image, never advertising the preference. **As the day
@@ -295,6 +295,15 @@ refusal fill is superseded.)
 - The artwork is one inline-SVG component; the cell→communion mapping lives in
   `churches.js`, not in the drawing, so squares could become tesserae without
   a byte of data moving.
+
+**Where it sits** (author's instruction, 2026-08-21): to the right of the
+saint's name, wherever a name appears — the calendar hero, the saint's own
+page, an index card, a register or shelf row — at a cell size scaled to the
+type it accompanies. The name and its mark are one line and that line never
+wraps: the name shrinks and wraps within itself instead, because a glyph on a
+line of its own has lost the name it belongs to. On the saint's own page this
+replaces the standalone badge that used to head the veneration register; the
+same mark printed twice on one page is not emphasis.
 
 ## 8. What we are deliberately not doing
 

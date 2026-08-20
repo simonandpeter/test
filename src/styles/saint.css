@@ -6,7 +6,7 @@
   margin-bottom: var(--space-6);
 }
 
-.saint-name {
+.saint-head .name-line {
   margin-bottom: var(--space-2);
 }
 
@@ -152,10 +152,6 @@
 }
 
 /* ---- veneration, church by church -------------------------------------- */
-
-.veneration-badge {
-  margin-bottom: var(--space-4);
-}
 
 .attestations {
   list-style: none;

@@ -153,8 +153,9 @@ select:hover {
 
    Every dimension below is part of that arithmetic. saints.js adds the
    padding and border (18 px across) before sizing the image, and reserves
-   110 px for the block beneath it: the two-line name, the dates, the badge and
-   the three gaps between them. Change one of these and change the other. */
+   92 px for the block beneath it: the two-line name line (which carries the
+   glyph beside the name), the dates, and the gaps between them. Change one of
+   these and change the other. */
 .index-card {
   position: absolute;
   top: 0;
@@ -176,17 +177,6 @@ select:hover {
   pointer-events: none;
 }
 
-.index-link {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-decoration: none;
-}
-
-.index-link > * {
-  flex: none;
-}
-
 .index-media {
   display: block;
   width: 100%;
@@ -203,13 +193,18 @@ select:hover {
   object-fit: cover;
 }
 
-/* Two lines, always: the card's height was computed on that promise, and a
+/* The link is the name, and its ::after is the whole card: that makes the
+   image clickable without a second link a screen reader could not name, and it
+   leaves the glyph outside the link so its own label stays its own.
+
+   Two lines, always: the card's height was computed on that promise, and a
    third line would push the card past the box the grid reserved for it. */
 .index-name {
   font-weight: 500;
   font-size: 17px;
   line-height: 1.25;
-  height: 42px;
+  max-height: 42px;
+  text-decoration: none;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -217,9 +212,28 @@ select:hover {
   overflow: hidden;
 }
 
-.index-link:hover .index-name {
+.index-name::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.index-name:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.index-card .name-line {
+  height: 42px;
+  align-items: flex-start;
+  gap: var(--space-2);
+  overflow: hidden;
+}
+
+.index-card .name-line .badge {
+  /* Optically on the first line of the name, not centred on a two-line box. */
+  align-self: flex-start;
+  margin-top: 5px;
 }
 
 .index-dates {

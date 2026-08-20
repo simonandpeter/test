@@ -24,7 +24,7 @@ import {
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import { renderBadge, renderVessels } from '../ui/badge.js';
+import { renderBadge } from '../ui/badge.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -317,9 +317,9 @@ function paintDay(panel) {
           const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
           named.add(saint.slug);
           return `<li>
-            ${renderVessels(saint.attestations, { height: 12 })}
             <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
               data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
+            ${renderBadge(saint.attestations, { cell: 11 })}
             ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
             <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
           </li>`;
@@ -333,10 +333,12 @@ function paintDay(panel) {
     <article class="hero panel ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">
-        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
-        </h2>
-        ${renderBadge(hero.attestations, { cell: 15 })}
+        <div class="name-line">
+          <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
+          </h2>
+          ${renderBadge(hero.attestations, { cell: 15 })}
+        </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>
         <div class="hero-actions">${renderSaveButton(hero.slug)}</div>

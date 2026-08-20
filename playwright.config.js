@@ -28,7 +28,12 @@ export default defineConfig({
   webServer: {
     command: 'npm run build && npm run preview',
     url: 'http://localhost:4173',
-    reuseExistingServer: !process.env.CI,
+    // Never reuse a server this config did not start. Reuse looks like a
+    // saving and is a trap: a `vite preview` left running from some earlier
+    // task serves whatever dist happened to be on disk then, and the suite
+    // passes against code that is no longer the code. That has now produced a
+    // false green twice, including once in a clean-checkout verification.
+    reuseExistingServer: false,
     timeout: 120_000,
   },
 });

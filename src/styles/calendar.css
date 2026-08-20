@@ -211,14 +211,11 @@
   object-fit: cover;
 }
 
-.hero-name {
+.hero .name-line {
   margin-bottom: var(--space-2);
 }
 
-.hero .badge {
-  display: block;
-  margin-bottom: var(--space-3);
-}
+
 
 .hero-dates {
   color: var(--ink-soft);
@@ -251,10 +248,7 @@
   border-bottom: 1px solid var(--rule);
 }
 
-.register .badge-vessels {
-  flex: none;
-  align-self: center;
-}
+
 
 .register .reg-name {
   font-weight: 500;
