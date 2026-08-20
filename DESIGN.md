@@ -245,6 +245,15 @@ never reshape it.
 
 These three constants are the art direction — parametric substrate, hand-tuned
 curve — and live here, alongside the palette, as the only sanctioned nudge.
+
+**An open bound dissolves over extent, not radius** (settled in Session 4a,
+the curve's first consumer). `softness(null)` is the 24 px clamp, and 24 px of
+blur applied to an 8 px date bar erases it — including the bound at the other
+end, which is often a real and citable finding ("no later than 1000"). So a
+bar with one open end keeps the curve's sharp value and fades to nothing over
+the last 45% of its length toward the unknown side. Same reading, same "we do
+not know where this ends", expressed the only way that leaves the end we *do*
+know legible. Bounded intervals are unchanged: the curve alone.
 Worked values: 1 year → 0.75 px (sharp); 30 years → 4.9 px; 100 years →
 9.4 px; 200 years → 13.7 px; 500 years and above → 24 px. A precise date draws
 crisp; two centuries of doubt draw as a visible dissolve; nothing ever snaps.

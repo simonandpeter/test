@@ -22,7 +22,11 @@ import {
   todayIso,
   weekOf,
 } from '../lib/calendar-page.js';
+import { observePrefetch } from '../lib/detail.js';
+import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge, renderVessels } from '../ui/badge.js';
+import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
+import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = STRINGS.calendar.title;
@@ -40,10 +44,18 @@ const utc = (iso) => {
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
 
-const esc = (s) =>
-  String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-
 let state = null;
+
+/**
+ * Listeners that outlive a single paint — the shelves' store subscription and
+ * whatever the current day panel wired up. The router calls destroy() before
+ * the next view renders.
+ */
+export function destroy() {
+  state?.cleanups.forEach((fn) => fn?.());
+  if (state) state.cleanups = [];
+  state = null;
+}
 
 const indexCache = new Map();
 function indexFor(year, data) {
@@ -57,8 +69,9 @@ const entriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ??
 const countFor = (iso, data) => entriesFor(iso, data).length;
 
 export function render(el, { data, params, router }) {
+  destroy();
   const selected = params.date && parseIso(params.date) ? params.date : todayIso();
-  state = { el, data, router, selected, monthCursor: null, monthOpen: false };
+  state = { el, data, router, selected, monthCursor: null, monthOpen: false, cleanups: [], dayCleanups: [] };
 
   el.innerHTML = `
     <div class="cal">
@@ -73,6 +86,7 @@ export function render(el, { data, params, router }) {
       <h1 class="cal-date"></h1>
       <p class="cal-reckonings utility"></p>
       <div class="slot-viewport"><div class="day-panel"></div></div>
+      <div class="shelves" data-shelves></div>
     </div>`;
 
   el.querySelector('[data-step="-1"]').addEventListener('click', () => step(-1));
@@ -86,6 +100,18 @@ export function render(el, { data, params, router }) {
 
   paintChrome();
   paintDay(el.querySelector('.day-panel'));
+  wireDay(el.querySelector('.day-panel'));
+  state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
+}
+
+/**
+ * Per-paint wiring for the day panel. The panel is replaced wholesale on every
+ * day change, so its listeners are torn down and remade rather than delegated:
+ * the Save button has to re-read the store for the new day's hero anyway.
+ */
+function wireDay(panel) {
+  state.dayCleanups.forEach((fn) => fn?.());
+  state.dayCleanups = [wireSaveButtons(panel), observePrefetch(panel)];
 }
 
 const step = (n) => select(addDaysIso(state.selected, n));
@@ -108,14 +134,23 @@ function slotSwap(forward) {
   next.className = 'day-panel';
   paintDay(next);
 
+  // Both panels are in the document at once during the roll, and a
+  // view-transition-name may appear only once: a reader clicking through to a
+  // saint mid-roll would otherwise hit a duplicate and lose the transition.
+  for (const named of old.querySelectorAll('[style*="view-transition-name"]')) {
+    named.style.viewTransitionName = 'none';
+  }
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     old.replaceWith(next);
+    wireDay(next);
     return;
   }
   viewport.classList.toggle('backward', !forward);
   old.classList.add('slot-leaving');
   next.classList.add('slot-entering');
   viewport.appendChild(next);
+  wireDay(next);
   setTimeout(() => {
     old.remove();
     next.classList.remove('slot-entering');
@@ -268,6 +303,10 @@ function paintDay(panel) {
     byChurch.get(e.church).push(e);
   }
 
+  // A saint venerated by two churches on the same day appears in both their
+  // groups, and a view-transition-name may appear only once in a document, so
+  // the shared element is the first row that names them.
+  const named = new Set([heroSlug]);
   const register = CHURCHES.filter((c) => byChurch.has(c.id))
     .map((church) => {
       const rows = byChurch
@@ -275,9 +314,12 @@ function paintDay(panel) {
         .map((e) => {
           const saint = data.bySlug.get(e.slug);
           const title = titleFor(saint, church.id);
+          const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
+          named.add(saint.slug);
           return `<li>
             ${renderVessels(saint.attestations, { height: 12 })}
-            <span class="reg-name" style="view-transition-name:s-${saint.slug}-name">${esc(saint.display_name)}</span>
+            <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
+              data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
             ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
             <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
           </li>`;
@@ -291,10 +333,13 @@ function paintDay(panel) {
     <article class="hero panel ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">
-        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">${esc(hero.display_name)}</h2>
+        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
+        </h2>
         ${renderBadge(hero.attestations, { cell: 15 })}
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>
+        <div class="hero-actions">${renderSaveButton(hero.slug)}</div>
       </div>
     </article>
     ${registerEntries.length ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>` : ''}

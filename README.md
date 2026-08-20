@@ -6,8 +6,9 @@ Orthodox, Oriental Orthodox and Church of the East traditions.
 The brief is `saintsbuildplan.md` and its Addendum A (both in the parent
 folder; the addendum wins where they disagree); the delivery plan is
 `SESSIONS.md`; the design system is `DESIGN.md` and it is binding. **Phase 0,
-the design pass and app shell, and the calendar page with the veneration badge
-are complete.** `npm run dev` serves the site.
+the design pass and app shell, the calendar page with the veneration badge, and
+the saint detail page with the local store are complete.** `npm run dev` serves
+the site.
 
 Schema note: locations carry a numeric `uncertainty_km` (1 pinpoint / 15 city /
 150 region / 500 province are the authoring defaults), not a precision enum.
@@ -46,6 +47,8 @@ worst failure this project has.
 | `npm run build:manifest` | Validate and regenerate `data/` |
 | `npm run thumbs` | Regenerate blurred image placeholders (needs Python + Pillow) |
 | `npm test` | Unit tests |
+| `npm run test:e2e` | Browser tests: the §13 quality floor, at desktop and 360 px |
+| `npm run test:all` | Both |
 
 ## Three principles the code enforces
 

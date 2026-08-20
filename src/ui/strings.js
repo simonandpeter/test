@@ -55,6 +55,12 @@ export const STRINGS = {
     undated: 'undated',
     before: 'before {y}',
     after: 'after {y}',
+    kinds: { birth: 'Born', floruit: 'Active', death: 'Died' },
+    undatedNote: 'No date is recorded at either end of this life. Undated is a finding rather than a blank: it means nothing we have found fixes a bound.',
+    barLabel: '{kind} {value} — {span}.',
+    spanYears: 'an interval of {n} years',
+    spanExact: 'a single year',
+    spanOpen: 'an interval open at one end',
   },
 
   badge: {
@@ -72,6 +78,47 @@ export const STRINGS = {
   saints: {
     title: 'All Saints',
     placeholder: 'The river and the index arrive in Sessions 5 and 6. The corpus currently holds {count} saints.',
+  },
+
+  saint: {
+    nameForms: 'Also called',
+    save: 'Save',
+    saved: 'Saved',
+    veneration: 'Veneration',
+    life: 'Life',
+    noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',
+    sources: 'Sources',
+    related: 'Related',
+    sourceFailed: 'This source text could not be loaded. It is a file in this saint’s folder, so a reload usually fixes it.',
+    creditUnrecorded: 'The credit and licence for this image are not yet recorded. Until they are, it is shown here on the understanding that it must not be reused on this page’s authority.',
+    credit: '{credit} · {licence}',
+    statusVenerated: 'Venerated',
+    statusRefused: 'Not venerated',
+    statusUndocumented: 'Undocumented',
+    undocumentedNote: 'Not sourced either way. Absence of data is not absence of veneration.',
+    refusedNote: 'A positive finding: this church has established that it does not venerate this figure.',
+    feastThisYear: '{feast}, which falls on {gregorian} in {year}',
+    feastNoOccurrence: '{feast}, which has no occurrence in {year}',
+    noFeast: 'No feast day recorded.',
+    citation: 'Source: {text}',
+    notFoundTitle: 'No such saint',
+    notFound: 'There is no saint at this address. The corpus is small and grows folder by folder, so a link that worked yesterday can only be a typo today.',
+    failed: 'This saint’s entry could not be loaded. The text lives in a file alongside the rest of the site, so this is usually a network hiccup rather than a missing saint.',
+    retry: 'Try again',
+    historicity: {
+      attested: 'Attested — documented by sources close to the events.',
+      traditional: 'Traditional — transmitted by the tradition, without independent documentation.',
+      disputed: 'Disputed — the sources conflict, or scholarship divides.',
+      legendary: 'Legendary — the account is a legend; the person may not have existed.',
+    },
+    sexLabel: { male: 'Male', female: 'Female', unknown: 'Sex unrecorded' },
+  },
+
+  shelf: {
+    continueReading: 'Continue reading',
+    saved: 'Saved',
+    resume: 'Resume',
+    remove: 'Remove from this shelf',
   },
 
   map: {

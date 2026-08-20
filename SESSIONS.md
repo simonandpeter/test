@@ -239,12 +239,51 @@ Deferred knowingly: the calendar-preference *setting UI* (the default
 Gregorian-with-reckonings-alongside rendering is in); hover-legend beyond
 native SVG titles; date-bar rendering (4a, where the detail page needs it).
 
-## Session 4a — Phase 1b: detail page, store, habit features
+## Session 4a — Phase 1b: detail page, store, habit features — DONE (2026-08-21)
 
-Detail page with `life.md` and linked sources; `store.js` over IndexedDB with
-the §11 stores, every record carrying `updatedAt` and a stable id behind one
-documented interface; Save and Continue reading; View Transitions with fallback;
-prefetch capped at four.
+96 unit tests, 62 browser tests. What shipped, and what it settled:
+
+- **`src/lib/store.js`** over IndexedDB (`idb`), the four §11 stores behind one
+  interface. Every record carries a stable `id` and an `updatedAt`; an unsave
+  writes a **tombstone** rather than deleting, because without one a stale save
+  arriving from another device would resurrect it — the merge rule a sync
+  adapter will need (`merge`, last-write-wins) is implemented and tested now,
+  even though nothing syncs. Storage-blocked contexts fall back to an in-memory
+  table silently, so a private window gets a working Save button rather than a
+  dead one. Settings stay mirrored in localStorage: the theme must be readable
+  before first paint, which IndexedDB cannot do.
+- **Detail page** at `/saints/:slug`. The manifest already holds the name, the
+  image box, the dates and the badge, so the page paints from data the reader
+  has had since load and the fetch fills in only the per-saint parts. Veneration
+  is listed church by church — including the churches we have not sourced, which
+  say so in words. The rite × communion matrix (§9.2) is still Phase 3.
+- **Date bars** are the uncertainty curve's first consumer. Positioned in
+  percentages, softened in pixels, so the drawing is right at any width without
+  rescaling the curve. One decision recorded in DESIGN.md §6b: an interval with
+  one open bound dissolves over *extent* rather than blur radius, because the
+  curve's 24 px clamp would erase the bound at the other end.
+- **A small Markdown renderer** (`lib/markdown.js`) rather than a dependency:
+  the corpus uses headings, paragraphs, emphasis, links, lists, rules and
+  blockquotes, and nothing else. Block structure is decided on the raw line and
+  escaping happens after — escaping first turns every `>` into `&gt;` and
+  blockquotes quietly stop existing, which is how the first version shipped and
+  what its test caught.
+- **Save and Continue reading**, both shelves on the calendar, hidden when
+  empty. Reading position is recorded on arrival and every 1.5 s while
+  scrolling, and *offered* rather than restored: a reader following a link from
+  another life expects the top of the page.
+- **Prefetch** capped at four in flight, hover on desktop, viewport entry on
+  mobile, cancelled on navigation. Both branches are covered by browser specs;
+  the mobile one needed a touch context to reach at all.
+- **Shared-element transitions** are CSS, as planned — but a saint venerated by
+  two churches on one day appeared in both register groups with the same
+  `view-transition-name`, and a duplicate makes the browser skip the transition
+  entirely. The register now names the first row only, and the leaving day panel
+  drops its names during the slot roll.
+
+Deferred knowingly: place names on the detail page (the map is where locations
+belong, Phase 3); export/import (Phase 3, per the brief); the calendar-preference
+setting UI, still.
 
 ## Session 4b — Ship gate
 

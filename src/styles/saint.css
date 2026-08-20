@@ -1,0 +1,288 @@
+/* The saint's page, the date bars, and the two shelves (DESIGN.md §5, §6b).
+   Panels stay recessed and unshadowed; rules appear only where a register
+   rules a line; nothing here is gold and nothing here is red. */
+
+.saint-head {
+  margin-bottom: var(--space-6);
+}
+
+.saint-name {
+  margin-bottom: var(--space-2);
+}
+
+.saint-name a {
+  text-decoration: none;
+}
+
+.names {
+  margin-bottom: var(--space-2);
+}
+
+.names-label {
+  color: var(--ink-soft);
+}
+
+.names-sep {
+  color: var(--rule);
+}
+
+.saint-facts {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+}
+
+.saint-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* Save is chrome: a quiet toggle whose state is carried by its own label and
+   aria-pressed, so nothing here needs a colour to mean anything. */
+.save-button.is-saved {
+  background: var(--field);
+  border-color: var(--ink-soft);
+}
+
+.resume-note {
+  margin: var(--space-3) 0 0;
+}
+
+.saint-columns {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (min-width: 760px) {
+  .saint-columns {
+    grid-template-columns: minmax(200px, 260px) 1fr;
+  }
+}
+
+.saint-media {
+  margin: 0 0 var(--space-2);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-cell);
+  overflow: hidden;
+}
+
+.saint-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-credit {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-6);
+}
+
+/* An unrecorded licence is a gap we state, not one we style as an alarm. */
+.image-credit .unrecorded {
+  font-style: italic;
+}
+
+.historicity {
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-2);
+}
+
+/* ---- date bars --------------------------------------------------------- */
+
+.date-bars {
+  margin: 0 0 var(--space-4);
+}
+
+.date-row {
+  display: grid;
+  grid-template-columns: 4em 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.date-kind,
+.date-value {
+  color: var(--ink-soft);
+}
+
+.date-track {
+  position: relative;
+  height: 12px;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.date-bar {
+  position: absolute;
+  top: 2px;
+  height: 8px;
+  min-width: 3px;
+  background: var(--ink-soft);
+  border-radius: 1px;
+}
+
+/* An open bound has no coordinate to draw, so the bar dissolves toward the end
+   we do not know rather than stopping at a number we do not have. */
+.date-bar.open-start {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%);
+  mask-image: linear-gradient(to right, transparent, #000 45%);
+}
+
+.date-bar.open-end {
+  -webkit-mask-image: linear-gradient(to left, transparent, #000 45%);
+  mask-image: linear-gradient(to left, transparent, #000 45%);
+}
+
+.date-scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 calc(4em + var(--space-2));
+  color: var(--ink-soft);
+}
+
+.date-bars-undated {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-4);
+}
+
+/* ---- veneration, church by church -------------------------------------- */
+
+.veneration-badge {
+  margin-bottom: var(--space-4);
+}
+
+.attestations {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.att {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-1) var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.att-church {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+}
+
+.att-status {
+  color: var(--ink-soft);
+  text-align: end;
+}
+
+.att-body {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.att-titles {
+  font-style: italic;
+}
+
+.att-feast,
+.att-note,
+.att-source {
+  color: var(--ink-soft);
+}
+
+/* Undocumented is the quietest row on the page, but it is still a row: the
+   whole point is that an unchecked tradition is visible rather than absent. */
+.att-undocumented .att-church,
+.att-undocumented .att-status {
+  color: var(--ink-soft);
+}
+
+/* ---- life and sources --------------------------------------------------- */
+
+.life {
+  max-width: 65ch;
+}
+
+.life h2,
+.life h3 {
+  margin-top: var(--space-6);
+}
+
+.source {
+  border-bottom: 1px solid var(--rule);
+  padding: var(--space-2) 0;
+}
+
+.source summary {
+  cursor: pointer;
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.source summary:hover {
+  color: var(--ink);
+}
+
+.source-body {
+  max-width: 65ch;
+  padding-top: var(--space-2);
+}
+
+.source-body p {
+  font-size: 16px;
+}
+
+/* ---- skeletons ---------------------------------------------------------- */
+
+/* Sized to the body line box so the arriving paragraph lands in the space its
+   skeleton was holding (brief §13: no layout shift when data arrives). */
+.skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: var(--space-4);
+  max-width: 65ch;
+}
+
+.skeleton-text .skeleton {
+  display: block;
+  height: 17px;
+}
+
+/* ---- shelves ------------------------------------------------------------ */
+
+.shelves {
+  margin-top: var(--space-8);
+}
+
+.shelf .shelf-remove {
+  border: none;
+  padding: 0 var(--space-2);
+  color: var(--ink-soft);
+  line-height: 1;
+}
+
+.shelf .shelf-remove:hover {
+  color: var(--ink);
+}
+
+/* ---- shared-element transitions ----------------------------------------- */
+
+/* Card→detail: the image and the name are the same objects either side of the
+   navigation, so they travel rather than cross-fade. Everything else is the
+   root cross-fade from base.css. Reduced motion disables the whole mechanism
+   in main.js — the transition is never run, not run faster. */
+::view-transition-group(*) {
+  animation-duration: var(--dur);
+  animation-timing-function: var(--ease);
+}

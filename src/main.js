@@ -3,13 +3,16 @@ import './styles/metrics.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/calendar.css';
+import './styles/saint.css';
 
 import { STRINGS } from './ui/strings.js';
 import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
+import { cancelPrefetches } from './lib/detail.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
+import * as saint from './views/saint.js';
 import * as map from './views/map.js';
 import * as about from './views/about.js';
 
@@ -17,6 +20,7 @@ const routes = [
   { path: '/', view: calendar, nav: 'calendar' },
   { path: '/calendar/:date?', view: calendar, nav: 'calendar' },
   { path: '/saints', view: saints, nav: 'saints' },
+  { path: '/saints/:slug', view: saint, nav: 'saints' },
   { path: '/map', view: map, nav: 'map' },
   { path: '/about', view: about, nav: 'about' },
 ];
@@ -25,6 +29,7 @@ const viewEl = document.getElementById('view');
 const navEl = document.getElementById('site-nav');
 let data = null;
 let router;
+let currentView = null;
 
 function renderNav(current) {
   navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
@@ -38,14 +43,26 @@ function renderNav(current) {
 
 function show({ route, params }) {
   const view = route?.view;
+  // Every prefetch in flight was a guess about where this reader was going,
+  // and the navigation has just answered it (brief §7).
+  cancelPrefetches();
+
   const swap = () => {
+    // Views that hold listeners or timers get told they are leaving; the rest
+    // are pure renderers and do not implement it.
+    currentView?.destroy?.();
+    currentView = view ?? null;
     renderNav(route?.nav);
     if (!view) {
       document.title = `${STRINGS.notFound.title} — ${STRINGS.site.name}`;
       viewEl.innerHTML = `<h1>${STRINGS.notFound.title}</h1><p>${STRINGS.notFound.body}</p>`;
       return;
     }
-    document.title = `${view.title} — ${STRINGS.site.name}`;
+    // A view whose title depends on what it is showing supplies titleFor; the
+    // manifest is already loaded, so it never has to wait for a fetch to name
+    // the page.
+    const heading = view.titleFor ? view.titleFor(params, data) : view.title;
+    document.title = `${heading} — ${STRINGS.site.name}`;
     view.render(viewEl, { data, params, router });
     // Keyboard and screen-reader focus follows the page change.
     viewEl.querySelector('h1')?.setAttribute('tabindex', '-1');
