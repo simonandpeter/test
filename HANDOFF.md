@@ -99,9 +99,12 @@ already exists in the store.
 - **Seven image source links.** The licence is settled: Public Domain Mark 1.0,
   per the author (2026-08-21), which obliges no attribution — so the build no
   longer asks for a credit. It still asks for `source_url` in each
-  `icon.meta.json`, because provenance is how a reader checks that claim.
-  Currently 7 live build warnings. Blocks publication; does not block your
-  sessions.
+  `icon.meta.json`, because provenance is how a reader checks that claim. Those
+  fields hold a deliberate placeholder on `example.invalid` (see
+  `src/lib/licence.js`) so the field could be exercised before the real links
+  were found — the build names it as a placeholder and the detail page prints
+  the licence without linking it. Currently 7 live build warnings. Blocks
+  publication; does not block your sessions.
 - **Assyrian Church of the East `paschal_computus`** is unverified and flagged
   `needs_sourcing` in `src/data/churches.js`. Nothing renders a movable feast
   yet, so this is not urgent.
