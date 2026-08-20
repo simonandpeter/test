@@ -28,7 +28,7 @@ import {
   facetsOf,
   hasActiveFilters,
 } from '../lib/index-filters.js';
-import { columnsFor, layout, windowOf } from '../lib/virtual-grid.js';
+import { layout, windowOf } from '../lib/virtual-grid.js';
 import { renderBadge } from '../ui/badge.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -264,10 +264,9 @@ function wireControls() {
   };
 
   // One listener for the whole panel: every control here is a plain form
-  // element, and input/change between them covers typing, checking and
-  // selecting without a handler per control.
+  // element, and `input` fires for all of them — typing, checking, selecting —
+  // so listening for `change` as well would only run every filter pass twice.
   controlsEl.addEventListener('input', readFilters);
-  controlsEl.addEventListener('change', readFilters);
 
   const random = controlsEl.querySelector('[data-random]');
   const onRandom = () => {
@@ -294,7 +293,6 @@ function wireControls() {
 
   state.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
-    controlsEl.removeEventListener('change', readFilters);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);
   });
@@ -314,9 +312,16 @@ function wireGrid() {
       paintWindow();
     });
   };
+  // Column width changes with the window even when the column *count* does
+  // not, and every card's box is computed from that width — so a resize is a
+  // relayout, not a repaint. Coalesced to one per frame.
+  let resizeFrame = null;
   const onResize = () => {
-    if (columnsFor(grid.clientWidth, { gap: GAP }) !== state.columns) update({ animate: false });
-    else paintWindow();
+    if (resizeFrame) return;
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = null;
+      update({ animate: false });
+    });
   };
 
   // The page scrolls, not a box inside it: an inner scroller would trap the
@@ -353,6 +358,7 @@ function wireGrid() {
 
   state.cleanups.push(() => {
     if (frame) cancelAnimationFrame(frame);
+    if (resizeFrame) cancelAnimationFrame(resizeFrame);
     window.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onResize);
     grid.removeEventListener('click', onClick);
@@ -387,7 +393,6 @@ function update({ animate }) {
     // may have no image at all.
     aspectOf: (card) => card.image?.aspect ?? null,
   });
-  state.columns = result.columns;
   state.positions = result.positions;
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -401,10 +406,14 @@ function update({ animate }) {
     for (const slug of leaving) state.rendered.get(slug).classList.add('leaving');
     setTimeout(() => {
       for (const slug of leaving) {
-        state.rendered.get(slug)?.remove();
+        // Still fading, and not a card that a second filter change brought
+        // back in the meantime — paintWindow clears the class when it does.
+        const node = state?.rendered.get(slug);
+        if (!node?.classList.contains('leaving')) continue;
+        node.remove();
         state.rendered.delete(slug);
       }
-      paintWindow();
+      if (state) paintWindow();
     }, 200);
   } else {
     for (const slug of leaving) {
