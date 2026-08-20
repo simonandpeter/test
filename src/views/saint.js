@@ -22,6 +22,7 @@ import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
+import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBadge, renderVessels } from '../ui/badge.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
@@ -188,12 +189,28 @@ function fillIn(el, payload, { data, router }) {
   live?.cleanups.push(observePrefetch(el));
 }
 
+/**
+ * What we can say about this image, and no more. A licence that obliges
+ * attribution and has none is an unresolved question and says so; a
+ * public-domain work owes nobody a credit and simply names its licence.
+ *
+ * The source link is printed only when it is a real one. A placeholder is in
+ * these files on purpose (lib/licence.js) and must not be handed to a reader
+ * as though it led somewhere.
+ */
 function creditLine(meta) {
-  if (!meta) return `<span class="unrecorded">${STRINGS.saint.creditUnrecorded}</span>`;
-  const settled = meta.credit && meta.source_url;
-  if (!settled) return `<span class="unrecorded">${STRINGS.saint.creditUnrecorded}</span>`;
-  const text = fill(STRINGS.saint.credit, { credit: esc(meta.credit), licence: esc(meta.licence ?? '') });
-  return `<a href="${esc(meta.source_url)}" rel="noopener noreferrer">${text}</a>`;
+  if (!meta || !licenceIsSettled(meta.licence)) {
+    return `<span class="unrecorded">${STRINGS.saint.creditUnrecorded}</span>`;
+  }
+  if (requiresAttribution(meta.licence) && !meta.credit) {
+    return `<span class="unrecorded">${STRINGS.saint.creditUnrecorded}</span>`;
+  }
+
+  const text = meta.credit
+    ? fill(STRINGS.saint.credit, { credit: esc(meta.credit), licence: esc(meta.licence) })
+    : esc(meta.licence);
+  const linkable = meta.source_url && !isPlaceholderSource(meta.source_url);
+  return linkable ? `<a href="${esc(meta.source_url)}" rel="noopener noreferrer">${text}</a>` : text;
 }
 
 /* ---- veneration, church by church -------------------------------------- */

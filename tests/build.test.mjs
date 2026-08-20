@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { build } from '../scripts/build-manifest.mjs';
+import { PLACEHOLDER_SOURCE } from '../src/lib/licence.js';
 
 /**
  * These are the acceptance criteria for Phase 0, not incidental coverage. The
@@ -250,6 +251,14 @@ test('a licence that obliges attribution warns until it has some; one that does 
   // The source link is provenance rather than attribution, so it is wanted
   // whatever the licence says.
   assert.match(await withLicence({ licence: 'CC0 1.0', credit: null, source_url: null }), /needs source_url/);
+
+  // And a placeholder is not an answer. It is in the corpus on purpose while
+  // the real links are found, and the warning is the only thing stopping it
+  // from becoming the record.
+  assert.match(
+    await withLicence({ licence: 'CC0 1.0', credit: null, source_url: PLACEHOLDER_SOURCE }),
+    /in place of the placeholder/,
+  );
 });
 
 test('an attestation naming an unregistered church fails', async () => {

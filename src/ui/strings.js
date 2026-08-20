@@ -125,7 +125,7 @@ export const STRINGS = {
     sources: 'Sources',
     related: 'Related',
     sourceFailed: 'This source text could not be loaded. It is a file in this saint’s folder, so a reload usually fixes it.',
-    creditUnrecorded: 'The credit and licence for this image are not yet recorded. Until they are, it is shown here on the understanding that it must not be reused on this page’s authority.',
+    creditUnrecorded: 'The licence for this image is not yet recorded, or requires a credit we do not have. Until that is settled, it is shown here on the understanding that it must not be reused on this page’s authority.',
     credit: '{credit} · {licence}',
     statusVenerated: 'Venerated',
     statusRefused: 'Not venerated',

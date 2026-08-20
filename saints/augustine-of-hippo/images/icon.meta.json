@@ -1,6 +1,6 @@
 {
   "credit": null,
   "licence": "Public Domain Mark 1.0",
-  "source_url": null,
-  "note": "Author reports these are public-domain works under the Creative Commons Public Domain Mark (2026-08-21): copyright has expired, and no attribution is required. The source page each file came from is still unrecorded, and the build warns until it is — that link is provenance rather than attribution, and it is how a reader checks this claim rather than taking it on trust."
+  "source_url": "https://example.invalid/source-to-be-recorded",
+  "note": "Author reports these are public-domain works under the Creative Commons Public Domain Mark (2026-08-21): copyright has expired, and no attribution is required. The source_url is a deliberate placeholder on an unresolvable reserved domain, entered on the author's instruction so the field can be exercised before the real links are in hand — the build warns while it stands, and the page prints the licence without linking it."
 }

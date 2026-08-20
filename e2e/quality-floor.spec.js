@@ -162,6 +162,18 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   await expect(page.locator('.register a[data-prefetch="paul-of-thebes"]')).toHaveCount(1);
 });
 
+test('an image says what its licence is, and never links a placeholder source', async ({ page }) => {
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  const credit = page.locator('.image-credit');
+
+  // Public domain: no credit is owed, so the line names the licence rather
+  // than apologising for a missing author.
+  await expect(credit).toHaveText('Public Domain Mark 1.0');
+  // The source_url in the corpus is a stand-in until the real ones are
+  // recorded, and a reader must not be handed it as if it led somewhere.
+  await expect(credit.locator('a')).toHaveCount(0);
+});
+
 test('date bars take their softness from the interval and nothing else', async ({ page }) => {
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   const blur = (i) =>
