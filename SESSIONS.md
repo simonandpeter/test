@@ -1,5 +1,68 @@
 # Build sessions
 
+## Amendments — read before starting Session 4a (recorded 2026-08-20)
+
+**1. The quality floor is currently unenforceable, and it gates the ship.**
+Brief §13 requires Lighthouse accessibility ≥ 95, zero axe-core violations,
+FCP under 1.5 s on throttled 4G, responsiveness to 360 px and visible keyboard
+focus — "verified before each phase is considered done". None of that can be
+verified today: there is no Playwright, no axe-core, no Lighthouse in the
+project, and an agent session has no browser at all. Every visual and
+interactive claim made so far rests on inference from the data plumbing, not
+observation.
+
+*Therefore:* installing and wiring that tooling is the **first task of Session
+4a**, not part of 4b. Playwright plus `@axe-core/playwright` plus Lighthouse CI
+all run headless in GitHub Actions; once they do, the quality floor becomes a
+CI gate that fails loudly like the manifest build does, rather than an
+aspiration nobody can check. Until it exists, treat "Session 4b passed" as
+unprovable, and do not let 4b claim the ship gate on inspection alone.
+
+**2. Data acquisition is now the critical path, and must not be bulk-generated
+unsupervised.** It was scheduled to open in Session 2 and has not started. The
+corpus is 10 saints, so the calendar is empty on ~355 days a year, and Session
+4b would otherwise "ship" a daily habit page that has nothing to show on almost
+every day.
+
+The temptation is to have an agent draft several hundred saints overnight.
+**Do not.** This project's entire value is that each attestation is real and
+cited; a few hundred plausible-looking but unverified feast days would do
+damage that is invisible at review time and very expensive later — and the
+model cannot tell its own confident guesses from its sourced facts. Note how
+the existing ten handle this: where the Coptic Synaxarium date was not
+verified, the entry says `undocumented` with a note rather than guessing.
+
+*Therefore:* overnight data work should build the **pipeline and the review
+workflow**, not the corpus. Ingest from a structured public-domain source with
+citations attached, write every unverified field as `undocumented`, and flag
+anything inferred for human review before it counts as sourced.
+
+**3. CI is the source of truth, not the local test run.** The `.gitignore` bug
+(commit 7512a5b) had `src/data/` untracked while every local test passed,
+because the files sat on disk. Only a fresh CI checkout revealed it. After any
+session that adds files, confirm CI is green before calling the session done —
+a local pass proves nothing about what was actually committed.
+
+**4. Live and deployed.** GitHub Pages now serves the Actions build at
+https://simonandpeter.github.io/test/. Verified live: correct `/test/` base
+path, all bundles and 12 font subsets resolving, manifest and saint files
+serving, and the 404-fallback deep-link route returning the app shell so
+client-side routing works. Cache-Control is a flat `max-age=600` on everything
+including content-hashed assets; that is a Pages platform default, not worth
+chasing before a custom domain.
+
+**5. Watch the manifest budget.** Adding per-attestation `titles` moved the
+5,000-saint projection from 717 KB to 864 KB against a 400 KB ceiling. Still
+meaningless below ~200 saints (gzip has nothing to work with), but re-check it
+once the corpus passes that mark, before considering the sharding the brief
+defers.
+
+**Still outstanding from earlier sessions:** the seven image licences need per-
+image credit and source_url (live in production as 7 build warnings); the
+Assyrian Church of the East's `paschal_computus` is unverified and flagged
+`needs_sourcing` in the registry.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 
