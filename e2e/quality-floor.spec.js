@@ -293,3 +293,184 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
   await ctx.close();
 });
 
+/* ---- Session 5: All Saints, Index mode --------------------------------- */
+
+const INDEX = '/saints';
+
+/** Facet groups are disclosures; a reader opens one before using it. */
+const facet = async (page, name) => {
+  const group = page.locator(`[data-facet="${name}"]`);
+  if (!(await group.evaluate((el) => el.open))) await group.locator('summary').click();
+  return group;
+};
+
+test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  await expect(page.locator('[data-count]')).toHaveText('10');
+  await expect(page.locator('.index-card').first()).toBeVisible();
+  // Breadth of veneration is offered but is never the order the reader arrives
+  // in: a corpus sorted by it would read as a ranking of importance.
+  await expect(page.locator('[data-sort]')).toHaveValue('name');
+  await expect(page.locator('input[name="rangeMode"][value="overlaps"]')).toBeChecked();
+  await expect(page.locator('[data-clear]')).toBeHidden();
+});
+
+test('card boxes come from the manifest, not from measuring the image', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const card = page.locator('.index-card').first();
+  const media = card.locator('.index-media');
+  const [cardBox, mediaBox] = [await card.boundingBox(), await media.boundingBox()];
+  // Card height is the image box plus a fixed text block, and the image box is
+  // the manifest's aspect ratio applied to the column width.
+  expect(cardBox.height).toBeGreaterThan(mediaBox.height);
+  expect(mediaBox.width / mediaBox.height).toBeGreaterThan(0.5);
+});
+
+test('filtering by church narrows the corpus and the count follows', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
+
+  await expect(page.locator('[data-count]')).toHaveText('3');
+  // The count is the corpus's answer; the DOM holds only the cards near the
+  // viewport, which at 360 px is fewer than three.
+  await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
+  await expect(page.locator('[data-clear]')).toBeVisible();
+
+  await page.locator('[data-clear]').click();
+  await expect(page.locator('[data-count]')).toHaveText('10');
+});
+
+test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await facet(page, 'dates');
+  await page.locator('[data-from]').fill('240');
+  await page.locator('[data-to]').fill('460');
+
+  // Nine lives touch 240–460; seven of them sit inside it. Paul of Thebes was
+  // born in 220 and Moses the Hungarian has an open birth bound, so neither is
+  // contained by a range both of them overlap.
+  await expect(page.locator('[data-count]')).toHaveText('9');
+  await page.locator('input[name="rangeMode"][value="within"]').check();
+  await expect(page.locator('[data-count]')).toHaveText('7');
+});
+
+test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await facet(page, 'dates');
+  await page.locator('[data-from]').fill('1500');
+  await page.locator('[data-to]').fill('1600');
+
+  // Nobody in the corpus lived in the 16th century.
+  await expect(page.locator('[data-count]')).toHaveText('0');
+  await expect(page.locator('[data-empty]')).toBeVisible();
+  await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
+  // The undated tray has nothing to hold either: every saint in this corpus of
+  // ten carries at least a death interval. Its behaviour is covered by the
+  // unit tests, which can pose an undated saint without inventing a folder.
+  await expect(page.locator('.tray')).toHaveCount(0);
+});
+
+test('search reaches names, types, churches and regions', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const query = page.locator('[data-query]');
+
+  await query.fill('hermit');
+  await expect(page.locator('.index-card')).toHaveCount(2);
+
+  await query.fill('Alexandria');
+  await expect(page.locator('.index-card').first()).toBeVisible();
+
+  await query.fill('zzzznotasaint');
+  await expect(page.locator('[data-empty]')).toBeVisible();
+  await expect(page.locator('[data-count]')).toHaveText('0');
+});
+
+test('a filtered-out saint fades rather than vanishing', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'historicities')).getByLabel('legendary').check();
+  // Caught mid-fade: the cards on their way out are still in the document with
+  // the transition running, which is the difference between a register and a
+  // search engine.
+  await expect(page.locator('.index-card.leaving').first()).toBeVisible();
+  await expect(page.locator('.index-card')).toHaveCount(1);
+});
+
+test('under reduced motion the filtered-out are gone, not gone slower', async ({ browser }) => {
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'historicities')).getByLabel('legendary').check();
+  await expect(page.locator('.index-card')).toHaveCount(1);
+  await expect(page.locator('.index-card.leaving')).toHaveCount(0);
+  await ctx.close();
+});
+
+test('Random saint stays inside the reader own filters', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
+  await expect(page.locator('[data-count]')).toHaveText('3');
+
+  await page.locator('[data-random]').click();
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+  // Whoever it landed on, the Coptic row says Venerated: a random saint the
+  // reader's own filters exclude would look like the filters had failed.
+  const coptic = page.locator('.att', { hasText: 'Coptic Orthodox' });
+  await expect(coptic).toContainText('Venerated');
+});
+
+test('a card opens its saint, carrying the shared element with it', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const first = page.locator('.index-card').first();
+  const name = await first.locator('.index-name').textContent();
+  await first.locator('.index-link').click();
+  await expect(page.locator('h1.saint-name')).toHaveText(name ?? '');
+});
+
+test('every control on the index takes visible keyboard focus', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  for (let i = 0; i < 14; i++) {
+    await page.keyboard.press('Tab');
+    const focused = await page.evaluate(() => {
+      const el = document.activeElement;
+      if (!el || el === document.body) return null;
+      const s = getComputedStyle(el);
+      return { tag: el.tagName, outline: s.outlineStyle };
+    });
+    if (!focused) continue;
+    expect(focused.outline, `${focused.tag} has no focus outline`).not.toBe('none');
+  }
+});
+
+test('the grid keeps a window of the corpus in the document, not the corpus', async ({ browser }) => {
+  // Ten saints fit on a desktop screen, so virtualisation can only be observed
+  // where the grid is taller than the viewport. This is that: one column, a
+  // short window, and the last saint in the order well below the fold.
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 480 } });
+  const page = await ctx.newPage();
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const last = page.locator('.index-name', { hasText: 'Paul of Thebes' });
+  expect(await page.locator('.index-card').count()).toBeLessThan(10);
+  await expect(last).toHaveCount(0);
+
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await expect(last).toHaveCount(1);
+  // And the window still is one: what came into the document pushed something
+  // else out of it.
+  expect(await page.locator('.index-card').count()).toBeLessThan(10);
+  await ctx.close();
+});
+
+test('the feast-month filter reckons each tradition in its own calendar', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'months')).getByLabel('January').check();
+
+  // Anthony (17 January, Roman Catholic), Athanasius (18 January, Coptic
+  // 22 Tobi) and Paul of Thebes (15 January). Anthony's Julian feast lands on
+  // 30 January and Athanasius's Coptic one on 26 January, both still January,
+  // both arrived at by different arithmetic.
+  await expect(page.locator('[data-count]')).toHaveText('3');
+  await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
+});
+

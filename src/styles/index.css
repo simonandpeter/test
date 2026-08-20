@@ -1,0 +1,258 @@
+/* All Saints, Index mode. The controls are utility voice and stay quiet; the
+   grid is panels on a field, as everywhere else. Nothing here is gold or red. */
+
+.index-lede {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-6);
+}
+
+.index-controls {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.index-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.search-field span {
+  color: var(--ink-soft);
+}
+
+input[type='search'],
+input[type='number'],
+select {
+  font: inherit;
+  font-family: var(--font-utility);
+  font-size: 14px;
+  color: inherit;
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-1) var(--space-2);
+  min-width: 0;
+}
+
+input[type='search']:hover,
+input[type='number']:hover,
+select:hover {
+  border-color: var(--ink-soft);
+}
+
+.facets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.facet {
+  flex: none;
+}
+
+.facet > summary {
+  cursor: pointer;
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.facet > summary:hover {
+  color: var(--ink);
+}
+
+.facet fieldset {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  margin: var(--space-2) 0 0;
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.facet-option,
+.range label,
+.range-mode label {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.range {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 320px;
+}
+
+.range-mode {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.range-mode legend {
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+.range-note {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 40ch;
+}
+
+.sort-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.result-count {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-4);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- the virtualised grid ---------------------------------------------- */
+
+.grid-inner {
+  position: relative;
+}
+
+/* Absolutely positioned from measurement-free geometry: the card's box is
+   known from the manifest's aspect ratio before it exists (Addendum C1/C2).
+
+   Every dimension below is part of that arithmetic. saints.js adds the
+   padding and border (18 px across) before sizing the image, and reserves
+   110 px for the block beneath it: the two-line name, the dates, the badge and
+   the three gaps between them. Change one of these and change the other. */
+.index-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-2);
+  overflow: hidden;
+}
+
+.index-card > * {
+  flex: none;
+}
+
+.index-card.leaving {
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+  pointer-events: none;
+}
+
+.index-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.index-link > * {
+  flex: none;
+}
+
+.index-media {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-cell);
+  overflow: hidden;
+}
+
+.index-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Two lines, always: the card's height was computed on that promise, and a
+   third line would push the card past the box the grid reserved for it. */
+.index-name {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.25;
+  height: 42px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.index-link:hover .index-name {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.index-dates {
+  color: var(--ink-soft);
+}
+
+.index-empty {
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+/* ---- the undated tray --------------------------------------------------- */
+
+/* A designed state, not a fallback (Addendum F): counted, labelled, and open
+   to look at. */
+.tray {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.tray > summary {
+  cursor: pointer;
+  font-family: var(--font-utility);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.tray p {
+  margin-top: var(--space-2);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}

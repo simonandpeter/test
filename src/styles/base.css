@@ -266,6 +266,19 @@ main.chrome {
   }
 }
 
+/* For text that exists only for a screen reader: a live region's announcement,
+   a fieldset legend whose visible label is the disclosure above it. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Errors are prose in ink, never a red banner — red belongs to the liturgy. */
 .error-note {
   max-width: 65ch;

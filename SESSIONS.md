@@ -290,7 +290,43 @@ setting UI, still.
 Full §13 audit: 360px, keyboard focus, reduced-motion, Lighthouse ≥ 95, axe
 clean, FCP < 1.5s throttled, no layout shift. Fix what it finds. Deploy.
 
-## Session 5 — Phase 2a: Index mode
+## Session 5 — Phase 2a: Index mode — DONE (2026-08-21)
+
+112 unit tests, 88 browser tests. The Index is live at `/saints`; River mode
+stays absent rather than stubbed, and the mode toggle arrives with it.
+
+- **Filters** are all of brief §8.2 — church, feast month, date range, type,
+  sex, region, historicity, breadth of veneration — OR within a facet, AND
+  between facets, and the facet lists offer only values the corpus contains, so
+  no filter is a dead end. Feast months come from the same `buildFeastIndex`
+  the calendar uses: a Julian or Coptic feast reaching a Gregorian month is
+  calendar work, and there is one place in this codebase that does it.
+- **The range toggle** defaults to Overlaps and uses `dates.js`'s existing
+  `overlaps` / `within`. One consequence is worth knowing before it looks like
+  a bug: Moses the Hungarian, born before 1000 and dead in 1043, *overlaps* the
+  4th century, because his birth bound is open below and nothing we have found
+  rules it out. Narrowing that would mean inventing a lower bound.
+- **The undated tray** exists and is unit-tested, but no saint in the corpus of
+  ten is undated at both ends, so it never appears yet. That is the honest
+  state; posing an undated saint in a browser test would have meant a folder
+  that is not a saint.
+- **Virtualisation** takes exact heights from the manifest's aspect ratios and
+  never measures (Addendum C2). Two numbers — an 18 px inset for the card's
+  padding and border, and a 110 px text block — are shared between
+  `views/saints.js` and `styles/index.css`, and are commented as such in both;
+  the first version omitted the inset and cropped every image.
+- **MiniSearch loads on demand.** It is a third of the bundle and the calendar
+  never searches. A query typed before it arrives applies a moment later.
+- **The first render is no longer a view transition** (DESIGN.md §6). Gating
+  the app's first paint on `startViewTransition`'s callback left a blank page
+  for a second in a headless browser, and a background tab could hold it there
+  much longer. Session 4a's shared-element transitions are unaffected: those are
+  page *changes*.
+
+The Index grid sits in the standard 72ch content column, which is two cards
+wide on a desktop. That is DESIGN.md §5 built exactly; widening the column for
+this page is a design decision, not a code one, and is left to the author.
+
 ## Session 6 — Phase 2b: River mode
 ## Session 7 — Phase 3a: globe
 ## Session 8 — Phase 3b: timeline, export/import, rite × communion table (§9.2)

@@ -4,6 +4,7 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/calendar.css';
 import './styles/saint.css';
+import './styles/index.css';
 
 import { STRINGS } from './ui/strings.js';
 import { initTheme } from './lib/theme.js';
@@ -30,6 +31,7 @@ const navEl = document.getElementById('site-nav');
 let data = null;
 let router;
 let currentView = null;
+let first = true;
 
 function renderNav(current) {
   navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
@@ -71,9 +73,17 @@ function show({ route, params }) {
 
   // Cross-fade where the platform provides it; instant elsewhere. Reduced
   // motion gets no transition at all, not a shorter one.
+  //
+  // The first render is never a transition: there is no previous page to
+  // cross-fade from, and startViewTransition defers its callback to the next
+  // rendering opportunity — which a browser is free not to offer for a long
+  // time to a page it is not painting, a background tab most of all. Gating
+  // the app's first paint on that is a blank page waiting to happen; it was
+  // reproducibly a second long in a headless browser.
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (document.startViewTransition && !reduced) document.startViewTransition(swap);
+  if (document.startViewTransition && !reduced && !first) document.startViewTransition(swap);
   else swap();
+  first = false;
 }
 
 async function boot() {

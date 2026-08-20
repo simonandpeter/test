@@ -13,6 +13,13 @@
 const BASE = import.meta.env.BASE_URL;
 
 const MAX_IN_FLIGHT = 4;
+/**
+ * The brief caps requests in flight; the queue behind them needs a bound too.
+ * A virtualised grid can offer sixty cards to the budget in one scroll frame,
+ * and a guess made sixty cards ago is not a guess worth spending a request on
+ * by the time it reaches the front.
+ */
+const MAX_QUEUED = 12;
 
 /** slug -> Promise of the payload. A rejection is evicted, never cached. */
 const cache = new Map();
@@ -87,6 +94,7 @@ function pump() {
 export function prefetch(slug) {
   if (!slug || cache.has(slug) || speculative.has(slug) || waiting.includes(slug)) return;
   waiting.push(slug);
+  if (waiting.length > MAX_QUEUED) waiting.shift();
   pump();
 }
 

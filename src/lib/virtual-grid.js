@@ -1,0 +1,84 @@
+/**
+ * Layout maths for the Index grid. Pure functions over item sizes, so the
+ * awkward part — where every card is, and which ones are worth having in the
+ * DOM — can be tested without a browser.
+ *
+ * **No measurement pass.** The manifest carries every image's aspect ratio
+ * (Addendum C1), so an exact height is known for every card before any of them
+ * exists, and the virtualiser is fed those heights directly (Addendum C2).
+ * Measuring instead would mean rendering everything once to find out how tall
+ * it is, which is the thing virtualisation exists to avoid.
+ *
+ * Cards therefore vary in height, and the columns are packed shortest-first.
+ * That is fine here and not in the River, which normalises to one card box
+ * because equal size is doing that mode's equality-of-standing work (§8.2).
+ */
+
+export const MIN_COLUMN = 190;
+
+export function columnsFor(width, { min = MIN_COLUMN, gap = 16, max = 4 } = {}) {
+  if (!(width > 0)) return 1;
+  return Math.max(1, Math.min(max, Math.floor((width + gap) / (min + gap))));
+}
+
+/**
+ * Absolute positions for every card, shortest-column-first.
+ *
+ * `textHeight` is the fixed part of a card below the image — name, badge,
+ * dates, and the card's own padding and border — and it is fixed on purpose:
+ * the stylesheet clamps the name to a known number of line boxes (metrics.css
+ * derives those from the font's own tables), so this number stays true when a
+ * Coptic or Syriac fallback face substitutes in. A card with no image is that
+ * block and nothing else.
+ *
+ * `mediaInset` is what the card's padding and border take off the column
+ * before the image gets its width. Without it the image is sized to a box
+ * wider than the one it is in, and every card overflows by a few pixels —
+ * which, with the card's height fixed by this same function, crops the image
+ * instead of growing the card.
+ */
+export function layout(
+  items,
+  { width, gap = 16, columns, textHeight = 96, mediaInset = 0, aspectOf = (item) => item.aspect } = {},
+) {
+  const cols = columns ?? columnsFor(width, { gap });
+  const columnWidth = Math.max(1, (width - gap * (cols - 1)) / cols);
+  const bottoms = new Array(cols).fill(0);
+  const positions = [];
+
+  for (const item of items) {
+    let target = 0;
+    for (let c = 1; c < cols; c++) if (bottoms[c] < bottoms[target] - 0.5) target = c;
+
+    const aspect = aspectOf(item);
+    const media = aspect ? (columnWidth - mediaInset) / aspect : 0;
+    const height = Math.round(media + textHeight);
+    positions.push({
+      ...item,
+      x: target * (columnWidth + gap),
+      y: bottoms[target],
+      w: columnWidth,
+      h: height,
+    });
+    bottoms[target] += height + gap;
+  }
+
+  return {
+    columns: cols,
+    columnWidth,
+    positions,
+    // Trailing gap trimmed: the last row should not push the page down by one.
+    height: Math.max(0, Math.max(...bottoms, 0) - gap),
+  };
+}
+
+/**
+ * The cards worth having in the DOM: those intersecting the viewport, plus an
+ * overscan band so a fast scroll meets cards that are already there rather
+ * than blank space that fills in behind it.
+ */
+export function windowOf(positions, top, viewportHeight, overscan = 400) {
+  const from = top - overscan;
+  const to = top + viewportHeight + overscan;
+  return positions.filter((p) => p.y < to && p.y + p.h > from);
+}

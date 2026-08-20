@@ -159,8 +159,14 @@
 
 .attestations {
   list-style: none;
-  margin: 0 0 var(--space-6);
+  margin: 0 0 var(--space-2);
   padding: 0;
+}
+
+.att-legend {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-6);
+  max-width: 60ch;
 }
 
 .att {

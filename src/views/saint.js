@@ -218,9 +218,10 @@ function veneration(saint) {
     if (status === 'venerated') {
       lines.push(`<span class="att-feast utility">${esc(feastLine(att.feast, church, year))}</span>`);
     } else if (status === 'not-venerated') {
+      // A refusal is a finding about that church and is stated on its row.
+      // Undocumented is a fact about our sourcing and is the same fact every
+      // time, so it is said once below the list rather than seven times down it.
       lines.push(`<span class="att-note utility">${STRINGS.saint.refusedNote}</span>`);
-    } else {
-      lines.push(`<span class="att-note utility">${STRINGS.saint.undocumentedNote}</span>`);
     }
 
     if (att?.note) lines.push(`<span class="att-note utility">${esc(att.note)}</span>`);
@@ -233,7 +234,13 @@ function veneration(saint) {
     </li>`;
   });
 
-  return `<ul class="attestations">${rows.join('')}</ul>`;
+  const anyUndocumented = CHURCHES.filter((c) => c.enabled !== false).some(
+    (c) => (byChurch.get(c.id)?.status ?? 'undocumented') === 'undocumented',
+  );
+  const note = anyUndocumented
+    ? `<p class="att-legend utility">${STRINGS.saint.undocumentedNote}</p>`
+    : '';
+  return `<ul class="attestations">${rows.join('')}</ul>${note}`;
 }
 
 function feastLine(feast, church, year) {

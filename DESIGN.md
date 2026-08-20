@@ -208,6 +208,12 @@ wrapping row at 360 px; no hamburger — four links fit.
   opacity fallback where not. Card→detail shared-element transitions arrive in
   Session 4a; the `view-transition-name` markup on card image and name is
   present from Phase 1.
+- **The first render is never a transition** (Session 5). There is no previous
+  page to cross-fade from, and `startViewTransition` defers its callback to the
+  next rendering opportunity — which a browser need not offer promptly to a page
+  it is not painting, a background tab most of all. Gating the first paint on it
+  was reproducibly a second of blank page in a headless browser, and would be
+  worse in a tab opened in the background.
 - `prefers-reduced-motion: reduce` **disables all of it** — transitions,
   skeleton shimmer, the later timeline and shuffle animations. Disabled means
   removed, not shortened.
