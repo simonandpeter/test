@@ -1,0 +1,34 @@
+import { defineConfig, devices } from '@playwright/test';
+
+/**
+ * Browser-level verification, which is what makes the brief's quality floor
+ * (§13) an actual gate rather than an aspiration: accessibility violations,
+ * keyboard focus, reduced-motion behaviour and 360 px responsiveness cannot be
+ * checked by unit tests or by reading the code.
+ *
+ * Runs against a real production build via `vite preview`, not the dev server,
+ * so what is tested is what deploys.
+ */
+export default defineConfig({
+  testDir: './e2e',
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 1 : 0,
+  reporter: process.env.CI ? [['github'], ['list']] : [['list']],
+  use: {
+    baseURL: 'http://localhost:4173',
+    trace: 'on-first-retry',
+  },
+  projects: [
+    { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
+    // 360 px is the brief's floor; keeping it as its own project means every
+    // spec runs at both widths rather than needing per-test viewport juggling.
+    { name: 'mobile-360', use: { ...devices['Desktop Chrome'], viewport: { width: 360, height: 780 } } },
+  ],
+  webServer: {
+    command: 'npm run build && npm run preview',
+    url: 'http://localhost:4173',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+  },
+});
