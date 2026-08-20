@@ -91,9 +91,12 @@ field in the registry and both algorithms ship.
 These are tracked in `data/manifest.meta.json` and belong on the About page
 rather than hidden:
 
-- **Image licences are unrecorded.** All seven migrated images carry
-  `"licence": "unknown"`. The build warns on every one. This must be resolved
-  before publication.
+- **Image source links are unrecorded.** The seven images are public-domain
+  works under the Creative Commons Public Domain Mark, per the author
+  (2026-08-21), so no attribution is owed and no credit line is required. What
+  is still missing is the page each file came from: that link is provenance, not
+  attribution — it is how a reader checks the claim rather than taking it on
+  trust — so the build warns on every one until it is recorded.
 - **`eastern-catholic` is one entry** covering roughly two dozen sui iuris
   churches across six rite families. The coarsest cell in the registry.
 - **The Assyrian Church of the East's paschal computus is unverified.** Flagged

@@ -39,6 +39,13 @@ const DATA_DIR = path.join(ROOT, 'data');
 
 export const SCHEMA_VERSION = 1;
 
+/**
+ * The Creative Commons tools that dedicate a work to the public domain rather
+ * than licensing it: CC0 waives the author's rights, the Public Domain Mark
+ * labels a work whose copyright has expired. Neither obliges attribution.
+ */
+const NO_ATTRIBUTION = /^(cc0|public domain mark)/i;
+
 /** Card thumbnails are the blurred placeholders make_thumbs.py writes. */
 const thumbFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-thumb.jpg';
 
@@ -195,14 +202,24 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
         for (const field of ['credit', 'licence', 'source_url']) {
           if (!(field in meta)) fail(folder, `image meta "${img.meta}" is missing "${field}"`);
         }
-        // "Resolved" means publishable: a specific licence plus whatever it
-        // obliges. Every CC variant except CC0 requires attribution, so a
-        // licence string alone — even a correct one — is not enough to clear
-        // this warning; credit and source_url have to be recorded too.
+        // "Resolved" means publishable: a specific licence, plus whatever that
+        // licence obliges. A family name is not a licence — "Creative Commons"
+        // spans CC0, which asks nothing, and CC BY-SA, which asks a good deal —
+        // so the variant has to be named before anything else can be checked.
         const licenceSettled =
           meta.licence && meta.licence !== 'unknown' && !/not recorded|unspecified/i.test(meta.licence);
-        if (!licenceSettled || !meta.credit || !meta.source_url) {
-          warn(folder, `image "${img.file}" attribution incomplete (licence variant, credit and source_url all required) — must be resolved before publication`);
+        const missing = [];
+        if (!licenceSettled) missing.push('licence variant');
+        // CC0 and the Public Domain Mark require no attribution, so demanding a
+        // credit for them would be inventing an obligation. Every other CC
+        // variant requires naming the author.
+        if (licenceSettled && !NO_ATTRIBUTION.test(meta.licence) && !meta.credit) missing.push('credit');
+        // The source link is provenance rather than attribution: it is how a
+        // reader checks a licence claim instead of taking it on trust, so it is
+        // wanted whatever the licence says.
+        if (!meta.source_url) missing.push('source_url');
+        if (missing.length) {
+          warn(folder, `image "${img.file}" needs ${missing.join(' and ')} — must be resolved before publication`);
         }
       } catch (e) {
         fail(folder, `image meta "${img.meta}" is not valid JSON: ${e.message}`);

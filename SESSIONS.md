@@ -57,10 +57,11 @@ meaningless below ~200 saints (gzip has nothing to work with), but re-check it
 once the corpus passes that mark, before considering the sharding the brief
 defers.
 
-**Still outstanding from earlier sessions:** the seven image licences need per-
-image credit and source_url (live in production as 7 build warnings); the
-Assyrian Church of the East's `paschal_computus` is unverified and flagged
-`needs_sourcing` in the registry.
+**Still outstanding from earlier sessions:** the seven images need a per-image
+`source_url` (live in production as 7 build warnings — the licence itself was
+settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,
+so credit is no longer asked for); the Assyrian Church of the East's
+`paschal_computus` is unverified and flagged `needs_sourcing` in the registry.
 
 
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
@@ -187,8 +188,11 @@ decisions that will govern every later session:
 - Bundle: 6.2 KB JS + 2.2 KB CSS gzipped before fonts. The FCP budget has
   plenty of headroom for Sessions 3–4.
 - Image meta updated: licence family recorded as Creative Commons per the
-  author (2026-08-20); build now warns until variant + credit + source_url are
-  recorded per image, since every CC variant except CC0 requires attribution.
+  author (2026-08-20), narrowed to Public Domain Mark 1.0 on 2026-08-21. The
+  build's attribution check now branches on the licence rather than demanding
+  the same fields of all of them: CC0 and the Public Domain Mark oblige no
+  credit, every other CC variant does, and all of them want a `source_url`
+  because provenance is not attribution.
 
 **Data workstream opens here** and runs continuously from now on.
 

@@ -203,6 +203,55 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
   }
 });
 
+test('a licence that obliges attribution warns until it has some; one that does not, does not', async () => {
+  // A hand-crafted 8x10 PNG, as above — image-size reads only the header.
+  const png = Buffer.concat([
+    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+    Buffer.from([0, 0, 0, 13]),
+    Buffer.from('IHDR'),
+    Buffer.from([0, 0, 0, 8, 0, 0, 0, 10, 8, 2, 0, 0, 0]),
+    Buffer.from([0, 0, 0, 0]),
+  ]);
+
+  const withLicence = async (meta) => {
+    const dir = await mkdtemp(path.join(os.tmpdir(), 'saints-test-'));
+    try {
+      await mkdir(path.join(dir, 'test-saint', 'images'), { recursive: true });
+      await writeFile(path.join(dir, 'test-saint', 'images', 'icon.png'), png);
+      await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
+      await writeFile(path.join(dir, 'test-saint', 'images', 'icon.meta.json'), JSON.stringify(meta));
+      await writeFile(
+        path.join(dir, 'test-saint', 'saint.json'),
+        JSON.stringify(saint({ images: [{ file: 'images/icon.png', meta: 'images/icon.meta.json' }] })),
+      );
+      const r = await build({ saintsDir: dir, write: false });
+      assert.deepEqual(r.errors, []);
+      return r.warnings.map((w) => w.msg).join(' | ');
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
+  };
+
+  const url = 'https://example.org/file';
+
+  // The public-domain tools oblige nothing, so asking for a credit would be
+  // inventing an obligation.
+  assert.equal(await withLicence({ licence: 'Public Domain Mark 1.0', credit: null, source_url: url }), '');
+  assert.equal(await withLicence({ licence: 'CC0 1.0', credit: null, source_url: url }), '');
+
+  // Every other Creative Commons variant requires naming the author.
+  assert.match(await withLicence({ licence: 'CC BY 4.0', credit: null, source_url: url }), /needs credit/);
+  assert.equal(await withLicence({ licence: 'CC BY 4.0', credit: 'A. Painter', source_url: url }), '');
+
+  // A family name is not a licence: it spans tools that ask nothing and
+  // licences that ask a good deal, so it cannot be checked at all.
+  assert.match(await withLicence({ licence: 'Creative Commons — variant not recorded', credit: null, source_url: url }), /needs licence variant/);
+
+  // The source link is provenance rather than attribution, so it is wanted
+  // whatever the licence says.
+  assert.match(await withLicence({ licence: 'CC0 1.0', credit: null, source_url: null }), /needs source_url/);
+});
+
 test('an attestation naming an unregistered church fails', async () => {
   const r = await buildWith({
     'test-saint': saint({

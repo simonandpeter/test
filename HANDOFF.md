@@ -96,10 +96,12 @@ already exists in the store.
 
 - **Three unpushed commits, and no CI run behind them.** See the state note
   above. This is the first thing to resolve.
-- **Seven image licences.** Recorded as "Creative Commons" but every CC variant
-  except CC0 requires attribution, so each needs a per-image `credit` and
-  `source_url` in its `icon.meta.json`. Currently 7 live build warnings. Blocks
-  publication; does not block your sessions.
+- **Seven image source links.** The licence is settled: Public Domain Mark 1.0,
+  per the author (2026-08-21), which obliges no attribution — so the build no
+  longer asks for a credit. It still asks for `source_url` in each
+  `icon.meta.json`, because provenance is how a reader checks that claim.
+  Currently 7 live build warnings. Blocks publication; does not block your
+  sessions.
 - **Assyrian Church of the East `paschal_computus`** is unverified and flagged
   `needs_sourcing` in `src/data/churches.js`. Nothing renders a movable feast
   yet, so this is not urgent.
