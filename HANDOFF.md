@@ -1,7 +1,7 @@
 # Handoff — start here
 
-You are picking up the Gallery of Saints build at **Session 4a**. Nothing of
-the previous conversations survives except the files in this repo, so this
+You are picking up the Gallery of Saints build at **Session 4b or 6**. Nothing
+of the previous conversations survives except the files in this repo, so this
 document is the briefing.
 
 ## Read first, in this order
@@ -16,68 +16,48 @@ document is the briefing.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these four documents before changing it.
 
-## State as of 2026-08-20, 23:5x
+## State as of 2026-08-21, after Sessions 4a and 5
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions
 from `dist/`, **not** from the branch.
 
-Complete: Phase 0 data foundations, the design pass, the app shell, the
-veneration badge, and the calendar page. Verified in a real browser: the
-calendar renders, both traditions show their own titles and reckonings
-(Anthony the Great appears on 30 January 2026 via Julian 17 January *and*
-Coptic 22 Tobi), the badge paints three gold cells and one undocumented dot,
-and there are zero axe violations at WCAG 2.1 AA.
+**Two commits are sitting unpushed on `main`** (`8c84545` Session 4a, `5fb36e5`
+Session 5, plus `99754d4` a follow-up fix). The agent session that wrote them
+had no git credentials — `git push` fails with "could not read Username" — so
+GitHub Actions has never run on them. They were verified instead by cloning the
+repo to a clean directory and running the workflow's own steps there (`npm ci`,
+`npm test`, `npm run build:manifest`, `npx playwright test`, a production
+build), which is what catches the class of bug Amendment 3 records. **Push them
+and confirm the run is green before building on top.**
 
-- 75 unit tests (`npm test`) — pure logic, no DOM.
-- 34 browser tests (`npm run test:e2e`) — 17 specs across desktop and 360 px.
+Complete: Phase 0 data foundations, the design pass, the app shell, the
+veneration badge, the calendar page, the saint detail page with the local
+store, and All Saints in Index mode.
+
+- 112 unit tests (`npm test`) — pure logic, no DOM.
+- 88 browser tests (`npm run test:e2e`) — 44 specs across desktop and 360 px.
 - `npm run test:all` runs both. CI runs both on every push.
 
 ## Your sessions
 
-### Session 4a — detail page, store, habit features
+### Session 4b — the ship gate, still outstanding
 
-The tooling that Amendment 1 called for **is already installed and passing** —
-that was done ahead of you specifically so this session does not start with a
-risky dependency install. Playwright, `@axe-core/playwright`,
-`playwright.config.js` and `e2e/quality-floor.spec.js` all exist and are wired
-into CI. **Extend that spec as you build; do not rebuild it.**
+Skipped by instruction, not by accident: Sessions 4a and 5 were run back to
+back. What the executable quality floor already covers — axe at WCAG 2.1 AA,
+keyboard focus, reduced motion, 360 px, no layout shift from manifest-derived
+boxes — is green on every route. What it does not cover, and 4b still owes:
+**Lighthouse accessibility ≥ 95** and **first contentful paint under 1.5 s on a
+throttled 4G profile**. Neither has any tooling in the project yet.
 
-Then, per the brief and DESIGN.md:
+### Session 6 — River mode
 
-- **Saint detail page** at `/saints/:slug`: `life.md` rendered, sources linked,
-  `related` saints hyperlinked, images with credits, the full badge, and date
-  bars whose softness comes from `lib/uncertainty.js` (§6b) — the first
-  consumer of that curve. Multi-script name forms go in `.names` (bounded
-  line-height; see DESIGN.md §4 for why).
-- **`src/lib/store.js` over IndexedDB** (`idb`): the four stores in brief §11
-  (`saved`, `reading`, `history`, `settings`). Every record carries `updatedAt`
-  and a stable id, all writes go through one documented interface, and the
-  shape is sync-ready **without building sync**. Do not build authentication,
-  an account UI, or a "Sign in" placeholder — brief §11 is explicit.
-- **Save** and **Continue reading** on the calendar. Brief §8.1 calls these the
-  two things that turn a thirty-second visit into a habit, and says build them
-  on day one.
-- **Shared-element transition** card→detail. The `view-transition-name` markup
-  is already on hero image and names, so this should be mostly CSS.
-- **Prefetch** detail payloads on hover (desktop) / viewport entry (mobile),
-  capped at four in flight, cancelled on navigation.
-
-*Done when:* a saint opens, saving persists across reload, Continue reading
-reappears, and `npm run test:all` is green with new specs covering the store
-and the detail page.
-
-### Session 5 — All Saints, Index mode
-
-Vertical virtualised grid, MiniSearch full-text search, and every filter in
-brief §8.2: church, feast month, date range, type, sex, region, historicity,
-breadth of veneration. The **Overlaps / Entirely within** toggle defaults to
-*Overlaps* and both semantics already exist and are unit-tested in
-`src/lib/dates.js` — use them, do not reimplement. Filtered-out saints fade
-over ~200 ms; the result count animates; **never sort by breadth of veneration
-by default**, it would read as a ranking of importance.
-
-Virtualisation: feed exact per-item heights from each card's manifest
-`aspect`; do not add a measurement pass (Addendum C2).
+The horizontal, unsorted, shuffled stream (brief §8.2). Index mode is built and
+the mode toggle belongs above its controls; `views/saints.js` needs no changes
+to accommodate it. Note the one exception in Addendum C2: **the River
+normalises to a single card box** — equal size is doing that mode's
+equality-of-standing work — where the Index varies card heights from the
+manifest's aspect ratios. Deep-link the shuffle seed; `settings.riverSeed`
+already exists in the store.
 
 ## House rules learned the hard way
 
@@ -114,6 +94,8 @@ Virtualisation: feed exact per-item heights from each card's manifest
 
 ## Outstanding, needs the user — not you
 
+- **Three unpushed commits, and no CI run behind them.** See the state note
+  above. This is the first thing to resolve.
 - **Seven image licences.** Recorded as "Creative Commons" but every CC variant
   except CC0 requires attribution, so each needs a per-image `credit` and
   `source_url` in its `icon.meta.json`. Currently 7 live build warnings. Blocks
@@ -124,3 +106,11 @@ Virtualisation: feed exact per-item heights from each card's manifest
 - **Manifest budget:** projects to 864 KB gzipped at 5,000 saints against a
   400 KB ceiling. Meaningless below ~200 saints — gzip has nothing to work
   with. Re-check past that mark; do not build sharding before then.
+- **Search reaches display names only.** The Index's MiniSearch index is built
+  from the manifest, which carries `display_name` but not the `names` array, so
+  Ἀντώνιος and Ⲁⲛⲧⲱⲛⲓⲟⲥ find nothing. Putting the name forms in the manifest
+  would fix it and would cost bytes against the budget above — an author's
+  call, not a code one.
+- **The Index grid is two cards wide on a desktop**, because it sits in the
+  standard 72ch content column (DESIGN.md §5). Widening the column for that one
+  page is a design decision.
