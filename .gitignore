@@ -5,4 +5,10 @@ dist/
 # Committing it would mean the repo carries a second copy of every saint that
 # has to be kept in step by hand — exactly the failure the one-folder contract
 # exists to prevent.
-data/
+#
+# Anchored to the repo root (leading slash): an unanchored "data/" matches any
+# directory named data anywhere in the tree, which silently swallowed
+# src/data/ — churches.js and calendars.js were never committed, and every
+# test importing them failed on a fresh CI checkout while passing locally
+# where the untracked files still sat on disk.
+/data/
