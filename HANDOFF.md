@@ -59,6 +59,11 @@ equality-of-standing work — where the Index varies card heights from the
 manifest's aspect ratios. Deep-link the shuffle seed; `settings.riverSeed`
 already exists in the store.
 
+The Index's own View control (cards / rows, `settings.indexLayout`) is a
+different axis from the mode toggle and belongs beside Sort, where it is. The
+River takes neither: it has no sort control by design, and its single card box
+is the point of the mode.
+
 ## House rules learned the hard way
 
 - **CI is the source of truth, not your local run.** A `.gitignore` bug once
