@@ -147,10 +147,25 @@ nav.site-nav a[aria-current='page'] {
   text-underline-offset: 3px;
 }
 
+/* The three labels occupy one cell, so the button is always as wide as the
+   longest of them and cycling the theme moves nothing else on the page. */
 #theme-toggle {
   font-family: var(--font-utility);
   font-size: 13.5px;
   color: var(--ink-soft);
+  display: inline-grid;
+  flex: none;
+}
+
+#theme-toggle .theme-option {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#theme-toggle .theme-option[data-current] {
+  visibility: visible;
 }
 
 main.chrome {

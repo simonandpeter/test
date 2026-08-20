@@ -22,6 +22,7 @@ import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { prefetch } from '../lib/detail.js';
+import * as store from '../lib/store.js';
 import {
   EMPTY_FILTERS,
   applyFilters,
@@ -45,6 +46,14 @@ const GAP = 16;
  */
 const CARD_TEXT_HEIGHT = 92;
 const CARD_INSET = 18;
+/**
+ * Rows are a fixed box: a 48 px thumbnail, the name and its glyph beside it,
+ * the dates beneath. Nothing in a row varies with the image, so its height is
+ * a constant rather than a calculation — index.css holds the other half of it.
+ */
+const ROW_HEIGHT = 66;
+const ROW_GAP = 8;
+const LAYOUTS = ['cards', 'rows'];
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', timeZone: 'UTC' });
 const monthLabel = (m) => monthFmt.format(new Date(Date.UTC(2001, m - 1, 1)));
@@ -73,6 +82,11 @@ export function render(el, { data, router }) {
     positions: [],
     shownCards: [],
     shown: 0,
+    // Which layout the reader last chose, remembered across visits: a view
+    // control that forgets is one the reader has to set every time.
+    layout: LAYOUTS.includes(store.getSettings().indexLayout)
+      ? store.getSettings().indexLayout
+      : 'cards',
     finePointer: window.matchMedia('(pointer: fine)').matches,
     named: null,
     cleanups: [],
@@ -170,7 +184,8 @@ const facetGroup = (legend, name, options) =>
         </fieldset></details>`
     : '';
 
-function controls({ facets }) {
+function controls(state) {
+  const { facets } = state;
   const churchOptions = enabledChurches()
     .filter((c) => facets.churches.includes(c.id))
     .map((c) => ({ value: c.id, label: c.display_name }));
@@ -224,14 +239,24 @@ function controls({ facets }) {
       </details>
     </div>
 
-    <label class="sort-field utility">${STRINGS.saints.sort.label}
-      <select data-sort>
-        <option value="name">${STRINGS.saints.sort.name}</option>
-        <option value="earliest">${STRINGS.saints.sort.earliest}</option>
-        <option value="latest">${STRINGS.saints.sort.latest}</option>
-        <option value="breadth">${STRINGS.saints.sort.breadth}</option>
-      </select>
-    </label>
+    <div class="index-foot">
+      <label class="sort-field utility">${STRINGS.saints.sort.label}
+        <select data-sort>
+          <option value="name">${STRINGS.saints.sort.name}</option>
+          <option value="earliest">${STRINGS.saints.sort.earliest}</option>
+          <option value="latest">${STRINGS.saints.sort.latest}</option>
+          <option value="breadth">${STRINGS.saints.sort.breadth}</option>
+        </select>
+      </label>
+
+      <div class="layout-toggle utility" role="group" aria-label="${STRINGS.saints.layout.description}">
+        <span aria-hidden="true">${STRINGS.saints.layout.label}</span>
+        ${LAYOUTS.map(
+          (id) => `<button type="button" data-layout="${id}"
+            aria-pressed="${String(id === state.layout)}">${STRINGS.saints.layout[id]}</button>`,
+        ).join('')}
+      </div>
+    </div>
   </div>`;
 }
 
@@ -279,6 +304,24 @@ function wireControls() {
   };
   random.addEventListener('click', onRandom);
 
+  const onLayout = (e) => {
+    const button = e.target.closest('[data-layout]');
+    if (!button || button.dataset.layout === state.layout) return;
+    state.layout = button.dataset.layout;
+    store.setSetting('indexLayout', state.layout);
+    for (const b of controlsEl.querySelectorAll('[data-layout]')) {
+      b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
+    }
+    // Every card's markup and box change, so none of the rendered ones can be
+    // kept: this is a re-render, not a reflow.
+    for (const [slug, node] of state.rendered) {
+      node.remove();
+      state.rendered.delete(slug);
+    }
+    update({ animate: false });
+  };
+  controlsEl.addEventListener('click', onLayout);
+
   const clear = controlsEl.querySelector('[data-clear]');
   const onClear = () => {
     for (const input of controlsEl.querySelectorAll('input[type="checkbox"]')) input.checked = false;
@@ -293,6 +336,7 @@ function wireControls() {
 
   state.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
+    controlsEl.removeEventListener('click', onLayout);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);
   });
@@ -384,15 +428,27 @@ function update({ animate }) {
 
   const grid = el.querySelector('[data-grid]');
   const inner = el.querySelector('[data-grid-inner]');
-  const result = layout(matched, {
-    width: grid.clientWidth,
-    gap: GAP,
-    textHeight: CARD_TEXT_HEIGHT,
-    mediaInset: CARD_INSET,
-    // The manifest keeps a card's pixel dimensions on its image, and a saint
-    // may have no image at all.
-    aspectOf: (card) => card.image?.aspect ?? null,
-  });
+  const rows = state.layout === 'rows';
+  const result = rows
+    ? layout(matched, {
+        width: grid.clientWidth,
+        gap: ROW_GAP,
+        columns: 1,
+        textHeight: ROW_HEIGHT,
+        // A row's thumbnail is a fixed box, so no row's height depends on its
+        // image and every row is the same height. Still exact, still no
+        // measurement — the constant is simply the whole answer here.
+        aspectOf: () => null,
+      })
+    : layout(matched, {
+        width: grid.clientWidth,
+        gap: GAP,
+        textHeight: CARD_TEXT_HEIGHT,
+        mediaInset: CARD_INSET,
+        // The manifest keeps a card's pixel dimensions on its image, and a
+        // saint may have no image at all.
+        aspectOf: (card) => card.image?.aspect ?? null,
+      });
   state.positions = result.positions;
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -444,8 +500,8 @@ function paintWindow() {
     let node = state.rendered.get(position.slug);
     if (!node) {
       node = document.createElement('div');
-      node.className = 'index-card panel';
-      node.innerHTML = card(position, state.router);
+      node.className = `index-card panel${state.layout === 'rows' ? ' is-row' : ''}`;
+      node.innerHTML = card(position, state.router, state.layout === 'rows');
       inner.appendChild(node);
       state.rendered.set(position.slug, node);
       if (!state.finePointer) prefetch(position.slug);
@@ -457,23 +513,36 @@ function paintWindow() {
   }
 }
 
-function card(item, router) {
-  const media = item.image
-    ? `<span class="index-media" style="aspect-ratio:${item.image.aspect};background-image:url('${BASE + item.image.lqip}')">
+/**
+ * A card and a row are the same three things — image, name with its glyph,
+ * dates — in two arrangements. In cards the box comes from the image's aspect
+ * ratio; in rows the thumbnail is square and the box is a constant, so an
+ * imageless saint still gets an empty one and the column of names stays a
+ * column.
+ */
+function card(item, router, rows = false) {
+  const image = item.image
+    ? `<span class="index-media" style="background-image:url('${BASE + item.image.lqip}')${
+        rows ? '' : `;aspect-ratio:${item.image.aspect}`
+      }">
         <img src="${BASE + item.image.src}" alt="" width="${item.image.w}" height="${item.image.h}"
           loading="lazy" decoding="async" />
       </span>`
-    : '';
+    : rows
+      ? '<span class="index-media is-empty" aria-hidden="true"></span>'
+      : '';
+
   // The link wraps the name only, and its ::after covers the whole card, so
   // the image is clickable without a second link that has no accessible name
   // of its own — and so the glyph can sit beside the name rather than inside
   // the link, where its label would become part of the link's.
-  return `${media}
-    <span class="name-line">
+  const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
       ${renderBadge(item.attestations, { cell: 11 })}
     </span>
     <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>`;
+
+  return rows ? `${image}<span class="row-body">${body}</span>` : `${image}${body}`;
 }
 
 /* ---- count and tray ------------------------------------------------------ */

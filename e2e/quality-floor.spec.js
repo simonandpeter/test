@@ -388,7 +388,9 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
   const query = page.locator('[data-query]');
 
   await query.fill('hermit');
-  await expect(page.locator('.index-card')).toHaveCount(2);
+  // The count is the corpus's answer; the DOM holds only what is near the
+  // viewport, which at 360 px is one card of the two.
+  await expect(page.locator('[data-count]')).toHaveText('2');
 
   await query.fill('Alexandria');
   await expect(page.locator('.index-card').first()).toBeVisible();
@@ -541,5 +543,54 @@ test('the glyph follows the name on a shelf row', async ({ page }) => {
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.shelves')).toContainText('Continue reading');
   await glyphFollowsName(page, '.shelf li', 'a.reg-name');
+});
+
+test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const cards = page.locator('.index-card');
+  const rows = page.locator('[data-layout="rows"]');
+
+  await expect(page.locator('[data-layout="cards"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(cards.first()).not.toHaveClass(/is-row/);
+  const cardHeight = (await cards.first().boundingBox()).height;
+
+  await rows.click();
+  await expect(rows).toHaveAttribute('aria-pressed', 'true');
+  await expect(cards.first()).toHaveClass(/is-row/);
+  const rowHeight = (await cards.first().boundingBox()).height;
+  // Tighter: that is the whole point of the second layout.
+  expect(rowHeight).toBeLessThan(cardHeight);
+  // Every row is the same height, whatever its image — or absence of one.
+  const heights = await cards.evaluateAll((els) => els.map((el) => Math.round(el.getBoundingClientRect().height)));
+  expect(new Set(heights).size).toBe(1);
+  // And the glyph still follows the name.
+  await glyphFollowsName(page, '.index-card .name-line', 'a.index-name');
+
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('[data-layout="rows"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
+});
+
+test('cycling the theme does not move the header', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const header = page.locator('header.chrome');
+  const toggle = page.locator('#theme-toggle');
+
+  const measured = [];
+  for (let i = 0; i < 3; i++) {
+    measured.push({
+      header: Math.round((await header.boundingBox()).height),
+      button: Math.round((await toggle.boundingBox()).width),
+      label: await toggle.getAttribute('aria-label'),
+    });
+    await toggle.click();
+  }
+
+  // Three different themes, one geometry: the longest label reserves the width
+  // for all of them, so "System" cannot wrap the header onto a second line.
+  expect(new Set(measured.map((m) => m.label)).size).toBe(3);
+  expect(new Set(measured.map((m) => m.header)).size, JSON.stringify(measured)).toBe(1);
+  expect(new Set(measured.map((m) => m.button)).size, JSON.stringify(measured)).toBe(1);
 });
 

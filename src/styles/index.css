@@ -129,11 +129,40 @@ select:hover {
   max-width: 40ch;
 }
 
+.index-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-6);
+}
+
 .sort-field {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   color: var(--ink-soft);
+}
+
+/* A segmented control: which view is on is carried by aria-pressed and by the
+   recessed field behind it, never by colour alone. */
+.layout-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.layout-toggle button {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  padding: 2px var(--space-2);
+}
+
+.layout-toggle button[aria-pressed='true'] {
+  background: var(--field);
+  border-color: var(--ink-soft);
+  color: var(--ink);
 }
 
 .result-count {
@@ -238,6 +267,54 @@ select:hover {
 
 .index-dates {
   color: var(--ink-soft);
+}
+
+/* ---- rows -------------------------------------------------------------- */
+
+/* The other half of ROW_HEIGHT in views/saints.js: a 48 px thumbnail plus the
+   card's own padding and border is 66 px, and nothing inside a row is allowed
+   to exceed it. Change either number and change the other. */
+.index-card.is-row {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.index-card.is-row .index-media {
+  width: 48px;
+  height: 48px;
+  flex: none;
+}
+
+.index-card.is-row .index-media.is-empty {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-cell);
+}
+
+.index-card.is-row .row-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.index-card.is-row .name-line {
+  height: auto;
+  align-items: baseline;
+}
+
+.index-card.is-row .name-line .badge {
+  align-self: center;
+  margin-top: 0;
+}
+
+/* One line in a row, where a second would overflow a fixed box. */
+.index-card.is-row .index-name {
+  max-height: none;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  word-break: break-word;
 }
 
 .index-empty {

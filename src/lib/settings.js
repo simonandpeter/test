@@ -12,6 +12,9 @@ const DEFAULTS = {
   calendarPreference: 'gregorian',
   defaultLocationKind: 'death',
   riverSeed: null,
+  // 'cards' — image above the name, box from the manifest's aspect ratio.
+  // 'rows'  — thumbnail left, name and glyph right, packed tight.
+  indexLayout: 'cards',
 };
 
 export function readSettings() {

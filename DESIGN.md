@@ -148,6 +148,15 @@ register genuinely rules a line: under a day heading, between traditions.)
 the page, as a kovcheg is. Padding 16. Image, then name in display voice, then
 the badge. Hover: border darkens toward `--ink-soft`; nothing moves or lifts.
 
+**The Index has two layouts**, chosen by the reader and remembered (added
+2026-08-21). *Cards* is the panel described above: image at the manifest's
+aspect ratio, name and glyph beneath. *Rows* is the register at card weight —
+a square 48 px thumbnail at the left, the name and its glyph to the right of
+it, dates below, on a fixed 66 px pitch. Rows exist because a corpus is
+something you scan as well as something you look at, and because a fixed pitch
+is the tightest a virtualised list can honestly be. Both are exact heights
+known before render; neither measures.
+
 **The card box is derived, not fixed.** The manifest carries each image's
 pixel dimensions; the card sets `aspect-ratio` from that data, so the box is
 reserved before a byte of image arrives and the no-layout-shift rule is
@@ -196,7 +205,11 @@ as breakage.
 
 **Chrome:** one quiet header — site name in display voice at utility size, the
 four pages as utility links (current page in `--rubric`, plus an underline so
-colour never carries it alone), theme control as a labelled text button. No
+colour never carries it alone), theme control as a labelled text button. That
+button reserves the width of its longest label ("Theme: System") by rendering
+all three stacked in one grid cell with only the current one visible, so
+cycling the theme cannot change the header's width, wrap it, or change its
+height. A width guessed in `ch` would be a guess about a font we do not choose. No
 footer ceremony; About holds the editorial matter. Header collapses to a
 wrapping row at 360 px; no hamburger — four links fit.
 

@@ -106,6 +106,12 @@ export const STRINGS = {
       breadthNote: 'How many communions venerate this figure. It is a measure of how widely a cult travelled, not of importance, and nothing is sorted by it unless you ask.',
       any: 'Any',
     },
+    layout: {
+      label: 'View',
+      cards: 'Cards',
+      rows: 'Rows',
+      description: 'How the saints are laid out',
+    },
     sort: {
       label: 'Sort',
       name: 'Name',
