@@ -1,8 +1,0 @@
-# placeholder data — tradition/gender/region/patronage are provisional
-feast: 17 January
-born: 251, Coma, Egypt
-died: 356, Mount Colzim, Egypt
-tradition: orthodox, coptic, catholic
-gender: male
-region: africa
-patronage: monastics, basket weavers, gravediggers

@@ -1,0 +1,120 @@
+{
+  "slug": "paul-of-thebes",
+  "display_name": "Paul of Thebes",
+  "names": [
+    {
+      "form": "Παῦλος ὁ Θηβαῖος",
+      "lang": "grc",
+      "note": "Greek"
+    },
+    {
+      "form": "Paulus Thebaeus",
+      "lang": "la"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hermit"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 220,
+      "latest": 235,
+      "display": "c. 227",
+      "basis": "traditional"
+    },
+    "death": {
+      "earliest": 340,
+      "latest": 342,
+      "display": "c. 341",
+      "basis": "traditional"
+    }
+  },
+  "attestations": [
+    {
+      "church": "roman-catholic",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "gregorian"
+      },
+      "titles": [
+        "Hermit",
+        "First Hermit"
+      ],
+      "source": {
+        "text": "Roman Martyrology",
+        "year": 2004
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Paul of Thebes",
+        "the Anchorite"
+      ],
+      "source": {
+        "text": "The Prologue of Ohrid, Nikolai Velimirović"
+      }
+    },
+    {
+      "church": "coptic",
+      "status": "undocumented",
+      "note": "Commemorated in the Coptic tradition, but the Synaxarium date has not been verified for this build and is deliberately not guessed at."
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "The Thebaid",
+      "modern_name": "Eastern Desert, Egypt",
+      "lat": 25.72,
+      "lon": 32.61,
+      "note": "Jerome places his cave in the desert of the Thebaid without locating it further.",
+      "uncertainty_km": 150
+    }
+  ],
+  "historicity": "traditional",
+  "related": [
+    "anthony-the-great"
+  ],
+  "text": {
+    "life": "life.md",
+    "sources": [
+      "sources/jerome-life-of-paul.md"
+    ]
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

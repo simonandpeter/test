@@ -1,8 +1,0 @@
-# placeholder data — tradition/gender/region/patronage are provisional
-feast: 18 July
-born: 1100, Kiev, Rus
-died: 1160, Kiev, Rus
-tradition: orthodox
-gender: male
-region: subcontinent
-patronage: endurance, those in temptation

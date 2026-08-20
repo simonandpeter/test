@@ -1,0 +1,119 @@
+{
+  "slug": "dioscorus-of-alexandria",
+  "display_name": "Dioscorus of Alexandria",
+  "names": [
+    {
+      "form": "Διόσκορος",
+      "lang": "grc",
+      "note": "Greek"
+    },
+    {
+      "form": "Ⲇⲓⲟⲥⲕⲟⲣⲟⲥ",
+      "lang": "cop",
+      "note": "Coptic"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "patriarch",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 454,
+      "latest": 454,
+      "display": "454",
+      "basis": "attested"
+    }
+  },
+  "attestations": [
+    {
+      "church": "coptic",
+      "status": "venerated",
+      "titles": [
+        "Pope of Alexandria",
+        "the Confessor"
+      ],
+      "source": {
+        "text": "Coptic Synaxarium",
+        "note": "Counted among the patriarchs of Alexandria and venerated as a confessor for his exile. The Synaxarium date has not been verified for this build and is deliberately left unrecorded."
+      }
+    },
+    {
+      "church": "roman-catholic",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Chalcedon",
+        "year": 451,
+        "note": "Deposed at the council's third session."
+      }
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Chalcedon",
+        "year": 451
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Chalcedon",
+        "year": 451
+      }
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2001,
+      "lon": 29.9187,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Gangra",
+      "modern_name": "Çankırı, Türkiye",
+      "lat": 40.6013,
+      "lon": 33.6134,
+      "note": "Died in exile in Paphlagonia three years after his deposition.",
+      "uncertainty_km": 15
+    }
+  ],
+  "historicity": "attested",
+  "related": [
+    "nestorius",
+    "athanasius-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": []
+}

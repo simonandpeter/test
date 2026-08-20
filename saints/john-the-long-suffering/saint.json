@@ -1,0 +1,111 @@
+{
+  "slug": "john-the-long-suffering",
+  "display_name": "John the Long-Suffering",
+  "names": [
+    {
+      "form": "Іоанн Багатостраждальний",
+      "lang": "uk"
+    },
+    {
+      "form": "Иоанн Многострадальный",
+      "lang": "cu",
+      "note": "Church Slavonic"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 1155,
+      "latest": 1165,
+      "display": "c. 1160",
+      "basis": "traditional"
+    }
+  },
+  "attestations": [
+    {
+      "church": "eastern-orthodox",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "titles": [
+        "the Long-Suffering",
+        "Monk of the Kyiv Caves"
+      ],
+      "source": {
+        "text": "The Paterikon of the Kyiv Caves Monastery"
+      }
+    },
+    {
+      "church": "roman-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "coptic",
+      "status": "undocumented"
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Monastery of the Caves, Kyiv",
+      "modern_name": "Kyiv Pechersk Lavra, Ukraine",
+      "lat": 50.4344,
+      "lon": 30.5578,
+      "uncertainty_km": 1
+    },
+    {
+      "kind": "relics",
+      "historical_name": "Monastery of the Caves, Kyiv",
+      "modern_name": "Kyiv Pechersk Lavra, Ukraine",
+      "lat": 50.4344,
+      "lon": 30.5578,
+      "uncertainty_km": 1
+    }
+  ],
+  "historicity": "traditional",
+  "related": [
+    "moses-the-hungarian"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

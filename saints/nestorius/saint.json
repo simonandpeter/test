@@ -1,0 +1,143 @@
+{
+  "slug": "nestorius",
+  "display_name": "Nestorius",
+  "names": [
+    {
+      "form": "Νεστόριος",
+      "lang": "grc",
+      "note": "Greek"
+    },
+    {
+      "form": "ܢܣܛܘܪܝܘܣ",
+      "lang": "syc",
+      "note": "Syriac"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 381,
+      "latest": 386,
+      "display": "c. 383",
+      "basis": "inferred"
+    },
+    "death": {
+      "earliest": 450,
+      "latest": 452,
+      "display": "c. 451",
+      "basis": "inferred"
+    }
+  },
+  "attestations": [
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "venerated",
+      "titles": [
+        "one of the Greek Doctors"
+      ],
+      "source": {
+        "text": "Ḥudra, the East Syriac liturgical cycle",
+        "note": "Commemorated among the Greek Doctors together with Diodore of Tarsus and Theodore of Mopsuestia, on a movable Friday in the Epiphany cycle. That cycle is reckoned from Epiphany rather than from Pascha, which this build cannot yet express, so no feast day is recorded rather than an approximate one being invented."
+      }
+    },
+    {
+      "church": "roman-catholic",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431,
+        "note": "Condemned and deposed."
+      }
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431
+      }
+    },
+    {
+      "church": "coptic",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431,
+        "note": "The condemnation was led by Cyril of Alexandria."
+      }
+    },
+    {
+      "church": "armenian",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431
+      }
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431
+      }
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "not-venerated",
+      "source": {
+        "text": "Council of Ephesus",
+        "year": 431
+      }
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Germanicia",
+      "modern_name": "Kahramanmaraş, Türkiye",
+      "lat": 37.5858,
+      "lon": 36.9371,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "see",
+      "historical_name": "Constantinopolis",
+      "modern_name": "Istanbul, Türkiye",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "The Great Oasis",
+      "modern_name": "Kharga Oasis, Egypt",
+      "lat": 25.4405,
+      "lon": 30.5487,
+      "note": "Exiled to the Great Oasis in 435 and died there; the place of his death is not more closely fixed.",
+      "uncertainty_km": 150
+    }
+  ],
+  "historicity": "attested",
+  "related": [
+    "athanasius-of-alexandria",
+    "john-chrysostom",
+    "dioscorus-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": []
+}

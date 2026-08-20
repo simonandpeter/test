@@ -1,0 +1,130 @@
+{
+  "slug": "augustine-of-hippo",
+  "display_name": "Augustine of Hippo",
+  "names": [
+    {
+      "form": "Aurelius Augustinus",
+      "lang": "la"
+    },
+    {
+      "form": "Αὐγουστῖνος",
+      "lang": "grc",
+      "note": "Greek"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 354,
+      "latest": 354,
+      "display": "13 November 354",
+      "basis": "attested"
+    },
+    "death": {
+      "earliest": 430,
+      "latest": 430,
+      "display": "28 August 430",
+      "basis": "attested"
+    }
+  },
+  "attestations": [
+    {
+      "church": "roman-catholic",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "gregorian"
+      },
+      "titles": [
+        "Bishop and Doctor of the Church"
+      ],
+      "source": {
+        "text": "Roman Martyrology",
+        "year": 2004
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Blessed Augustine, Bishop of Hippo"
+      ],
+      "source": {
+        "text": "The Prologue of Ohrid, Nikolai Velimirović",
+        "note": "Usually styled 'Blessed' rather than 'Saint' in Orthodox usage, and his teaching on grace and the procession of the Spirit is widely criticised in the same tradition that keeps his feast. Both facts are recorded here rather than reconciled."
+      }
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "coptic",
+      "status": "undocumented"
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Thagaste",
+      "modern_name": "Souk Ahras, Algeria",
+      "lat": 36.2864,
+      "lon": 7.9514,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "see",
+      "historical_name": "Hippo Regius",
+      "modern_name": "Annaba, Algeria",
+      "lat": 36.8833,
+      "lon": 7.75,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Hippo Regius",
+      "modern_name": "Annaba, Algeria",
+      "lat": 36.8833,
+      "lon": 7.75,
+      "note": "Died during the Vandal siege of the city.",
+      "uncertainty_km": 15
+    }
+  ],
+  "historicity": "attested",
+  "related": [],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

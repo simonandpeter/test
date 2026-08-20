@@ -1,8 +1,0 @@
-# placeholder data — tradition/gender/region/patronage are provisional
-feast: 26 July
-born: 990, Hungary
-died: 1043, Kiev, Rus
-tradition: orthodox
-gender: male
-region: europe
-patronage: chastity, the tempted

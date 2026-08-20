@@ -1,0 +1,68 @@
+/* Design tokens — the six named colours of DESIGN.md §3 and the derived
+   surfaces. Every colour in the app goes through these custom properties; a
+   hard-coded colour anywhere else in the CSS is a defect.
+
+   Light is "day" (gesso ground), dark is "vigil" (bole clay — the red-brown
+   under gold leaf, so warm imagery sits in the surface instead of glowing out
+   of a black void). Dark is not an inversion and contains no pure black. */
+
+:root {
+  --gesso: #fbfaf7;
+  --ink: #221d19;
+  --ink-soft: #6b6259;
+  --rubric: #8a2e26;
+  --gold: #a98237;
+  --rule: #dcd5c9;
+
+  --field: #f4f1ea; /* recessed panel interior only — never a page background */
+  --veil: rgba(251, 250, 247, 0.8);
+
+  /* Badge-only value (DESIGN.md §7). Refusal is a hollow cell stroked in
+     --ink-soft; undocumented is this low-alpha mark. */
+  --badge-undocumented: rgba(34, 29, 25, 0.25);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-panel: 4px;
+  --radius-cell: 1px;
+
+  --font-serif: 'Literata', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-utility: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur: 200ms;
+  --dur-slot: 260ms;
+  --dur-theme: 300ms;
+
+  /* The uncertainty curve (DESIGN.md §6b): softness(p) = clamp(min·p^gamma,
+     min, max), px at base scale. One curve for date bars, map halos and
+     timeline dissolves; these three constants are the only sanctioned nudge. */
+  --uncertainty-min: 0.75;
+  --uncertainty-max: 24;
+  --uncertainty-gamma: 0.55;
+
+  color-scheme: light;
+}
+
+html.dark {
+  --gesso: #1a1412;
+  --ink: #ede6dc;
+  --ink-soft: #a89c8f;
+  --rubric: #c05b4b;
+  --gold: #c79a4b;
+  --rule: #3a2f29;
+
+  --field: #231a17;
+  --veil: rgba(26, 20, 18, 0.8);
+
+  --badge-undocumented: rgba(237, 230, 220, 0.25);
+
+  color-scheme: dark;
+}

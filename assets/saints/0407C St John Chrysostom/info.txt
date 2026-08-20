@@ -1,8 +1,0 @@
-# placeholder data — tradition/gender/region/patronage are provisional
-feast: 13 November
-born: 347, Antioch, Syria
-died: 407, Comana, Pontus
-tradition: orthodox, catholic
-gender: male
-region: asia minor
-patronage: preachers, orators, doctor of the church

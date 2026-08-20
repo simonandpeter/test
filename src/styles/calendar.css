@@ -1,0 +1,291 @@
+/* Calendar page (DESIGN.md §5b). The hero holds one scale whatever the day's
+   density; the register carries the rest; the week strip is the red-letter
+   idiom doing literal work. */
+
+.cal-controls {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.cal-controls > button {
+  flex: none;
+}
+
+.week-strip {
+  display: flex;
+  gap: var(--space-1);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.week-strip button {
+  flex: 1 1 0;
+  min-width: 34px;
+  padding: var(--space-1) 0;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-utility);
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.week-strip button:hover {
+  border-color: var(--rule);
+}
+
+.week-strip .day-num {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+/* The selected day is a red letter; underline so colour never stands alone. */
+.week-strip button[aria-current='date'] {
+  border-color: var(--rule);
+  background: var(--field);
+}
+
+.week-strip button[aria-current='date'] .day-num {
+  color: var(--rubric);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.week-strip .is-today .day-name {
+  color: var(--rubric);
+}
+
+/* Density: one dot per commemoration, capped at five, legible before arrival. */
+.density {
+  display: flex;
+  gap: 2px;
+  height: 4px;
+}
+
+.density i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ink-soft);
+}
+
+/* ---- month view ------------------------------------------------------- */
+
+.month-view {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.month-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.month-head .month-name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  margin-inline-end: auto;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.month-grid .month-day-name {
+  text-align: center;
+  padding-bottom: var(--space-1);
+}
+
+.month-grid button {
+  border: 1px solid transparent;
+  padding: var(--space-1) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-utility);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.month-grid button:hover {
+  border-color: var(--rule);
+}
+
+.month-grid button[aria-current='date'] {
+  background: var(--field);
+  border-color: var(--rule);
+  color: var(--rubric);
+}
+
+/* ---- the day ---------------------------------------------------------- */
+
+.cal-date {
+  margin-bottom: var(--space-1);
+}
+
+.cal-reckonings {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-6);
+}
+
+/* Slot viewport: the day rolls; the chrome around it does not. */
+.slot-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.slot-leaving {
+  position: absolute;
+  inset: 0 0 auto 0;
+  animation: slot-out var(--dur-slot) var(--ease) forwards;
+}
+
+.slot-entering {
+  animation: slot-in var(--dur-slot) var(--ease);
+}
+
+.slot-viewport.backward .slot-leaving {
+  animation-name: slot-out-back;
+}
+
+.slot-viewport.backward .slot-entering {
+  animation-name: slot-in-back;
+}
+
+@keyframes slot-out {
+  to { transform: translateY(-14px); opacity: 0; }
+}
+@keyframes slot-in {
+  from { transform: translateY(14px); opacity: 0; }
+}
+@keyframes slot-out-back {
+  to { transform: translateY(14px); opacity: 0; }
+}
+@keyframes slot-in-back {
+  from { transform: translateY(-14px); opacity: 0; }
+}
+
+/* ---- hero ------------------------------------------------------------- */
+
+.hero {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 620px) {
+  .hero.has-media {
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    align-items: start;
+  }
+}
+
+/* The box is reserved from manifest data; the blurred placeholder paints it
+   until the image decodes. No reflow on arrival, by construction. */
+.hero-media {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-cell);
+  overflow: hidden;
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-name {
+  margin-bottom: var(--space-2);
+}
+
+.hero .badge {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.hero-dates {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+}
+
+.hero-feasts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-feasts li {
+  margin-bottom: var(--space-1);
+}
+
+/* ---- register --------------------------------------------------------- */
+
+.register {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+.register li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.register .badge-vessels {
+  flex: none;
+  align-self: center;
+}
+
+.register .reg-name {
+  font-weight: 500;
+}
+
+.register .reg-title {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-size: 15px;
+}
+
+.register .reg-feast {
+  margin-inline-start: auto;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .register li {
+    flex-wrap: wrap;
+  }
+  .register .reg-feast {
+    margin-inline-start: calc(var(--space-3) + 20px);
+    width: 100%;
+  }
+}
+
+/* The empty day is a designed state, not a fallback (DESIGN.md §5b). */
+.empty-day {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-6);
+}

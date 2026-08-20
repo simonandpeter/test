@@ -1,0 +1,136 @@
+{
+  "slug": "john-chrysostom",
+  "display_name": "John Chrysostom",
+  "names": [
+    {
+      "form": "Ἰωάννης ὁ Χρυσόστομος",
+      "lang": "grc",
+      "note": "Greek"
+    },
+    {
+      "form": "Iohannes Chrysostomus",
+      "lang": "la"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher",
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 344,
+      "latest": 349,
+      "display": "c. 347",
+      "basis": "inferred"
+    },
+    "death": {
+      "earliest": 407,
+      "latest": 407,
+      "display": "14 September 407",
+      "basis": "attested"
+    }
+  },
+  "attestations": [
+    {
+      "church": "roman-catholic",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "gregorian"
+      },
+      "titles": [
+        "Bishop and Doctor of the Church"
+      ],
+      "source": {
+        "text": "Roman Martyrology",
+        "year": 2004,
+        "note": "Moved to 13 September in the 1969 revision of the General Roman Calendar, from 27 January."
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Archbishop of Constantinople",
+        "Golden-mouthed"
+      ],
+      "source": {
+        "text": "The Prologue of Ohrid, Nikolai Velimirović",
+        "note": "Also commemorated on 30 January among the Three Holy Hierarchs, and on 27 January for the translation of his relics."
+      }
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "coptic",
+      "status": "undocumented"
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Antiochia",
+      "modern_name": "Antakya, Türkiye",
+      "lat": 36.2021,
+      "lon": 36.1608,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "see",
+      "historical_name": "Constantinopolis",
+      "modern_name": "Istanbul, Türkiye",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Comana Pontica",
+      "modern_name": "near Tokat, Türkiye",
+      "lat": 40.36,
+      "lon": 36.65,
+      "note": "Died on the road while being moved to a more remote place of exile.",
+      "uncertainty_km": 150
+    }
+  ],
+  "historicity": "attested",
+  "related": [
+    "athanasius-of-alexandria",
+    "nestorius"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

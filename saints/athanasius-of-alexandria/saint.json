@@ -1,0 +1,147 @@
+{
+  "slug": "athanasius-of-alexandria",
+  "display_name": "Athanasius of Alexandria",
+  "names": [
+    {
+      "form": "Ἀθανάσιος",
+      "lang": "grc",
+      "note": "Greek"
+    },
+    {
+      "form": "Ⲁⲑⲁⲛⲁⲥⲓⲟⲥ",
+      "lang": "cop",
+      "note": "Coptic"
+    },
+    {
+      "form": "Athanasius",
+      "lang": "la"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "theologian",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 296,
+      "latest": 298,
+      "display": "c. 297",
+      "basis": "inferred"
+    },
+    "death": {
+      "earliest": 373,
+      "latest": 373,
+      "display": "2 May 373",
+      "basis": "attested"
+    }
+  },
+  "attestations": [
+    {
+      "church": "roman-catholic",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "gregorian"
+      },
+      "titles": [
+        "Bishop and Doctor of the Church"
+      ],
+      "source": {
+        "text": "Roman Martyrology",
+        "year": 2004
+      }
+    },
+    {
+      "church": "eastern-orthodox",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "titles": [
+        "the Great",
+        "Archbishop of Alexandria"
+      ],
+      "source": {
+        "text": "The Prologue of Ohrid, Nikolai Velimirović",
+        "note": "Commemorated with Cyril of Alexandria on 18 January."
+      }
+    },
+    {
+      "church": "coptic",
+      "status": "venerated",
+      "titles": [
+        "the Apostolic"
+      ],
+      "source": {
+        "text": "Coptic Synaxarium",
+        "note": "Counted among the Coptic patriarchs of Alexandria. The Synaxarium date is not recorded here because it has not been verified for this build."
+      }
+    },
+    {
+      "church": "eastern-catholic",
+      "status": "undocumented"
+    },
+    {
+      "church": "armenian",
+      "status": "undocumented"
+    },
+    {
+      "church": "ethiopian-eritrean",
+      "status": "undocumented"
+    },
+    {
+      "church": "syriac-malankara",
+      "status": "undocumented"
+    },
+    {
+      "church": "assyrian-church-of-the-east",
+      "status": "undocumented"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2001,
+      "lon": 29.9187,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "see",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2001,
+      "lon": 29.9187,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2001,
+      "lon": 29.9187,
+      "uncertainty_km": 15
+    }
+  ],
+  "historicity": "attested",
+  "related": [
+    "anthony-the-great",
+    "john-chrysostom",
+    "nestorius"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

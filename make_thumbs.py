@@ -1,24 +1,24 @@
-"""Generates a blurred low-quality JPEG placeholder next to each saint image
-in assets/saints/, so the carousel can paint something instantly before the
-full-res image decodes.
+"""Generates a blurred low-quality JPEG placeholder next to each image in
+saints/*/images/, so cards can paint something instantly before the full-res
+image decodes. Run as `npm run thumbs`; the manifest build fails loudly on any
+image whose placeholder is missing.
 
-Standalone counterpart to render_v3_saints.py, for images that did not come
-through the v3 PSD pipeline. It deliberately uses that script's exact
-quarter-size + blur recipe rather than its own: the site derives each card's
-size from its image's pixel dimensions, so thumbnails produced at two
-different scales would make one saint render several times the size of its
-neighbour. Keep these constants in step with render_v3_saints.py.
+It deliberately uses the v3 PSD pipeline's exact quarter-size + blur recipe
+rather than its own: the site derives each card's box from its image's pixel
+dimensions, so placeholders produced at two different scales would make one
+saint render several times the size of its neighbour. Keep these constants in
+step with render_v3_saints.py (in the parent folder).
 """
 import os
 from PIL import Image, ImageFilter
 
-ROOT = os.path.join(os.path.dirname(__file__), "assets", "saints")
+ROOT = os.path.join(os.path.dirname(__file__), "saints")
 THUMB_SCALE = 4
 THUMB_BLUR_RADIUS = 4.0
 JPEG_QUALITY = 45
 
 for folder in sorted(os.listdir(ROOT)):
-    folder_path = os.path.join(ROOT, folder)
+    folder_path = os.path.join(ROOT, folder, "images")
     if not os.path.isdir(folder_path):
         continue
     for fname in os.listdir(folder_path):

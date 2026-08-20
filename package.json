@@ -1,0 +1,23 @@
+{
+  "name": "gallery-of-saints",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:manifest": "node scripts/build-manifest.mjs",
+    "validate": "node scripts/validate.mjs",
+    "new-saint": "node scripts/new-saint.mjs",
+    "thumbs": "python make_thumbs.py",
+    "fonts": "node scripts/fetch-fonts.mjs && node scripts/font-metrics.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "dev": "npm run build:manifest && vite",
+    "build": "npm run build:manifest && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "image-size": "^2.0.2",
+    "vite": "^7.1.3"
+  }
+}

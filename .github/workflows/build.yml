@@ -1,0 +1,62 @@
+name: Build
+
+# The point of running this on push is that the author only ever commits a
+# folder: if a saint.json is malformed, CI says so here rather than the saint
+# quietly missing from the site.
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Unit tests
+        run: npm test
+      - name: Validate every saint folder and build the manifest
+        run: npm run build:manifest
+      - name: Publish coverage statistics to the run summary
+        if: always()
+        run: |
+          if [ -f data/manifest.meta.json ]; then
+            echo '### Coverage' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat data/manifest.meta.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Build site
+        # BASE_PATH serves the app under /<repo>/ on project Pages. When the
+        # site moves to a custom domain, delete this env line — nothing else.
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        with:
+          path: dist
+
+  deploy:
+    # Requires Pages to be set to "GitHub Actions" as the source in the repo's
+    # settings once, by hand. Until then this job fails and everything before
+    # it still runs.
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

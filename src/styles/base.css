@@ -1,0 +1,290 @@
+/* Base styles — chrome, typography, loading states. Component CSS builds on
+   this and on tokens.css; both follow DESIGN.md, which wins any argument. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--gesso);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Theme changes fade background and text only, and only while html carries
+   .theme-anim — theme.js adds it around a change and removes it after. A
+   standing transition on these properties would also fire on page load and on
+   every skeleton swap, which is exactly the flash the pre-paint script exists
+   to prevent. */
+html.theme-anim body,
+html.theme-anim header,
+html.theme-anim main {
+  transition:
+    background-color var(--dur-theme) var(--ease),
+    color var(--dur-theme) var(--ease);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-4);
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 40px);
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 21px;
+}
+
+p {
+  margin: 0 0 var(--space-4);
+  max-width: 65ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--ink-soft);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--ink-soft);
+}
+
+/* ---- chrome ---------------------------------------------------------- */
+
+.chrome {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+header.chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-6);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 17px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+nav.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-inline-end: auto;
+}
+
+nav.site-nav a,
+.utility {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+nav.site-nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+
+nav.site-nav a:hover {
+  color: var(--ink);
+}
+
+/* The current page is a red letter — rubric marks the reader's place
+   (DESIGN.md §2) — and is underlined so colour never carries it alone. */
+nav.site-nav a[aria-current='page'] {
+  color: var(--rubric);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#theme-toggle {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+main.chrome {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+/* Small caps for register headings — a month over a day column, a church over
+   its entries. */
+.register-heading {
+  font-family: var(--font-utility);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-1);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.rubric {
+  color: var(--rubric);
+}
+
+/* Multi-script name forms (Ἁγνή, Ⲁⲛⲧⲱⲛⲓⲟⲥ, ܢܣܛܘܪܝܘܣ). The line-height is a
+   fixed bound below Literata's natural 1.485 line box so a fallback face with
+   taller metrics changes nothing the layout measured — glyphs may paint into
+   the leading, the box may not grow (Addendum C3). */
+.names {
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+
+/* ---- panels ---------------------------------------------------------- */
+
+/* A card is a kovcheg: a recessed field with an integral border. Depth comes
+   from the field sitting slightly below the page tone — no drop shadows. */
+.panel {
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-4);
+}
+
+.panel:hover {
+  border-color: var(--ink-soft);
+}
+
+/* ---- loading --------------------------------------------------------- */
+
+/* Full-page veil for the initial manifest fetch only; everything after is
+   inline and non-blocking. No spinners anywhere (DESIGN.md §6). */
+#veil {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--gesso);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  transition: opacity var(--dur) var(--ease);
+}
+
+#veil.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#veil .veil-name {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+#veil .veil-line {
+  width: 120px;
+  height: 1px;
+  background: var(--rule);
+  overflow: hidden;
+}
+
+#veil .veil-line::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: var(--ink-soft);
+  animation: veil-sweep 1.2s var(--ease) infinite;
+}
+
+@keyframes veil-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+/* Skeletons are sized by their consumers to the final layout's dimensions so
+   nothing reflows on arrival; this class only paints them. */
+.skeleton {
+  background: var(--rule);
+  opacity: 0.5;
+  border-radius: var(--radius-panel);
+  animation: skeleton-breathe 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-breathe {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Errors are prose in ink, never a red banner — red belongs to the liturgy. */
+.error-note {
+  max-width: 65ch;
+}
+
+/* ---- view transitions ------------------------------------------------- */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--dur);
+  animation-timing-function: var(--ease);
+}
+
+/* Reduced motion disables motion entirely — removed, not shortened. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

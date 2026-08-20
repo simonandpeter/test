@@ -1,0 +1,305 @@
+/**
+ * The calendar — the habit page (brief §8.1, DESIGN.md §5b). Opens on today
+ * in the reader's local date; week strip and month view to move; deep links
+ * at /calendar/YYYY-MM-DD; every tradition's commemorations grouped by
+ * church, in each tradition's own reckoning and style.
+ *
+ * Day-to-day movement inside the view updates the URL with replaceState
+ * rather than router.navigate: stepping through days must not pile history
+ * entries, and it lets the slot transition run instead of a full re-render.
+ * Cold loads and back/forward still arrive through the router.
+ */
+
+import { buildFeastIndex, toIsoDate } from '../lib/feasts.js';
+import { fromJdn, gregorianToJdn } from '../lib/jdn.js';
+import { CHURCHES, CHURCHES_BY_ID } from '../data/churches.js';
+import { formatFeast, monthName, CALENDAR_LABELS } from '../data/calendars.js';
+import {
+  addDaysIso,
+  formatLifespan,
+  parseIso,
+  pickHero,
+  todayIso,
+  weekOf,
+} from '../lib/calendar-page.js';
+import { renderBadge, renderVessels } from '../ui/badge.js';
+import { STRINGS, fill } from '../ui/strings.js';
+
+export const title = STRINGS.calendar.title;
+
+const BASE = import.meta.env.BASE_URL;
+
+const dayFmt = new Intl.DateTimeFormat('en-GB', {
+  weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+});
+const weekdayFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'UTC' });
+const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+const utc = (iso) => {
+  const d = parseIso(iso);
+  return new Date(Date.UTC(d.year, d.month - 1, d.day));
+};
+
+const esc = (s) =>
+  String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+let state = null;
+
+const indexCache = new Map();
+function indexFor(year, data) {
+  if (!indexCache.has(year)) {
+    indexCache.set(year, buildFeastIndex(data.saints, year, CHURCHES_BY_ID));
+  }
+  return indexCache.get(year);
+}
+
+const entriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
+const countFor = (iso, data) => entriesFor(iso, data).length;
+
+export function render(el, { data, params, router }) {
+  const selected = params.date && parseIso(params.date) ? params.date : todayIso();
+  state = { el, data, router, selected, monthCursor: null, monthOpen: false };
+
+  el.innerHTML = `
+    <div class="cal">
+      <div class="cal-controls">
+        <button type="button" data-step="-1" aria-label="${STRINGS.calendar.prevDay}">‹</button>
+        <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+        <button type="button" data-step="1" aria-label="${STRINGS.calendar.nextDay}">›</button>
+        <button type="button" data-today>${STRINGS.calendar.today}</button>
+        <button type="button" data-month aria-expanded="false">${STRINGS.calendar.monthView}</button>
+      </div>
+      <div class="month-view" hidden></div>
+      <h1 class="cal-date"></h1>
+      <p class="cal-reckonings utility"></p>
+      <div class="slot-viewport"><div class="day-panel"></div></div>
+    </div>`;
+
+  el.querySelector('[data-step="-1"]').addEventListener('click', () => step(-1));
+  el.querySelector('[data-step="1"]').addEventListener('click', () => step(1));
+  el.querySelector('[data-today]').addEventListener('click', () => select(todayIso()));
+  el.querySelector('[data-month]').addEventListener('click', toggleMonth);
+  el.querySelector('.week-strip').addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+  });
+
+  paintChrome();
+  paintDay(el.querySelector('.day-panel'));
+}
+
+const step = (n) => select(addDaysIso(state.selected, n));
+
+function select(iso) {
+  if (iso === state.selected) return;
+  const forward = iso > state.selected;
+  state.selected = iso;
+  state.monthCursor = null;
+  history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
+  paintChrome();
+  slotSwap(forward);
+}
+
+/** The day panel rolls in the direction of travel; chrome stays put. */
+function slotSwap(forward) {
+  const viewport = state.el.querySelector('.slot-viewport');
+  const old = viewport.querySelector('.day-panel');
+  const next = document.createElement('div');
+  next.className = 'day-panel';
+  paintDay(next);
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    old.replaceWith(next);
+    return;
+  }
+  viewport.classList.toggle('backward', !forward);
+  old.classList.add('slot-leaving');
+  next.classList.add('slot-entering');
+  viewport.appendChild(next);
+  setTimeout(() => {
+    old.remove();
+    next.classList.remove('slot-entering');
+  }, 300);
+}
+
+function paintChrome() {
+  const { el, selected, data } = state;
+  const today = todayIso();
+
+  el.querySelector('.week-strip').innerHTML = weekOf(selected)
+    .map((iso) => {
+      const n = countFor(iso, data);
+      const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
+      const current = iso === selected ? ' aria-current="date"' : '';
+      const cls = iso === today ? ' class="is-today"' : '';
+      const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
+      return `<button type="button" data-iso="${iso}"${current}${cls}
+        aria-label="${dayFmt.format(utc(iso))}${density}">
+        <span class="day-name">${weekdayFmt.format(utc(iso))}</span>
+        <span class="day-num">${parseIso(iso).day}</span>
+        <span class="density" aria-hidden="true">${dots}</span>
+      </button>`;
+    })
+    .join('');
+  for (const b of el.querySelectorAll('.week-strip [data-iso]')) {
+    b.addEventListener('click', () => select(b.dataset.iso));
+  }
+
+  el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
+
+  const d = parseIso(selected);
+  const jdn = gregorianToJdn(d.year, d.month, d.day);
+  el.querySelector('.cal-reckonings').textContent = ['julian', 'coptic', 'ethiopian']
+    .map((cal) => {
+      const c = fromJdn(cal, jdn);
+      const year = cal === 'julian' ? '' : ` ${c.year}`;
+      return `${CALENDAR_LABELS[cal]} ${c.day} ${monthName(cal, c.month)}${year}`;
+    })
+    .join(' · ');
+
+  if (state.monthOpen) paintMonth();
+}
+
+/* ---- month view ------------------------------------------------------- */
+
+function toggleMonth() {
+  state.monthOpen = !state.monthOpen;
+  const panel = state.el.querySelector('.month-view');
+  state.el.querySelector('[data-month]').setAttribute('aria-expanded', String(state.monthOpen));
+  panel.hidden = !state.monthOpen;
+  if (state.monthOpen) paintMonth();
+}
+
+function paintMonth() {
+  const { el, data, selected } = state;
+  const cursor = state.monthCursor ?? (() => {
+    const d = parseIso(selected);
+    return { year: d.year, month: d.month };
+  })();
+  state.monthCursor = cursor;
+
+  const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
+  const firstJdn = gregorianToJdn(cursor.year, cursor.month, 1);
+  const lead = firstJdn % 7; // JDN 0 was a Monday
+  const daysInMonth = (() => {
+    let n = 28;
+    while (parseIso(toIsoDate({ year: cursor.year, month: cursor.month, day: n + 1 }))) n++;
+    return n;
+  })();
+
+  const dayNames = weekOf(first).map((iso) => weekdayFmt.format(utc(iso)));
+  const cells = [];
+  for (let i = 0; i < lead; i++) cells.push('<span></span>');
+  for (let day = 1; day <= daysInMonth; day++) {
+    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+    const n = countFor(iso, data);
+    const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
+    const current = iso === selected ? ' aria-current="date"' : '';
+    cells.push(`<button type="button" data-iso="${iso}"${current}
+      aria-label="${dayFmt.format(utc(iso))}">${day}<span class="density" aria-hidden="true">${dots}</span></button>`);
+  }
+
+  el.querySelector('.month-view').innerHTML = `
+    <div class="month-head">
+      <span class="month-name">${monthFmt.format(utc(first))}</span>
+      <button type="button" data-mstep="-1" aria-label="${STRINGS.calendar.prevMonth}">‹</button>
+      <button type="button" data-mstep="1" aria-label="${STRINGS.calendar.nextMonth}">›</button>
+    </div>
+    <div class="month-grid">
+      ${dayNames.map((n) => `<span class="month-day-name utility">${n}</span>`).join('')}
+      ${cells.join('')}
+    </div>`;
+
+  el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
+  el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+  for (const b of el.querySelectorAll('.month-grid [data-iso]')) {
+    b.addEventListener('click', () => {
+      toggleMonth();
+      select(b.dataset.iso);
+    });
+  }
+}
+
+function stepMonth(n) {
+  const c = state.monthCursor;
+  const month = c.month + n;
+  state.monthCursor = {
+    year: c.year + Math.floor((month - 1) / 12),
+    month: ((month - 1 + 12) % 12) + 1,
+  };
+  paintMonth();
+}
+
+/* ---- the day panel: hero + register ----------------------------------- */
+
+function paintDay(panel) {
+  const { data, selected } = state;
+  const entries = entriesFor(selected, data);
+
+  if (entries.length === 0) {
+    panel.innerHTML = `<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
+    return;
+  }
+
+  const heroSlug = pickHero(selected, entries, data.bySlug);
+  const hero = data.bySlug.get(heroSlug);
+  const heroChurches = entries.filter((e) => e.slug === heroSlug);
+
+  const media = hero.image
+    ? `<div class="hero-media" style="aspect-ratio:${hero.image.aspect};background-image:url('${BASE + hero.image.lqip}')">
+        <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
+          style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
+      </div>`
+    : '';
+
+  const feastLines = heroChurches
+    .map((e) =>
+      `<li>${fill(STRINGS.calendar.heroFeast, {
+        church: esc(CHURCHES_BY_ID[e.church].display_name),
+        feast: esc(formatFeast(e.feast)),
+      })}${titleFor(hero, e.church) ? ` — <em>${esc(titleFor(hero, e.church))}</em>` : ''}</li>`,
+    )
+    .join('');
+
+  const registerEntries = entries.filter((e) => e.slug !== heroSlug);
+  const byChurch = new Map();
+  for (const e of registerEntries) {
+    if (!byChurch.has(e.church)) byChurch.set(e.church, []);
+    byChurch.get(e.church).push(e);
+  }
+
+  const register = CHURCHES.filter((c) => byChurch.has(c.id))
+    .map((church) => {
+      const rows = byChurch
+        .get(church.id)
+        .map((e) => {
+          const saint = data.bySlug.get(e.slug);
+          const title = titleFor(saint, church.id);
+          return `<li>
+            ${renderVessels(saint.attestations, { height: 12 })}
+            <span class="reg-name" style="view-transition-name:s-${saint.slug}-name">${esc(saint.display_name)}</span>
+            ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
+            <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
+          </li>`;
+        })
+        .join('');
+      return `<h3 class="register-heading">${esc(church.display_name)}</h3><ul class="register">${rows}</ul>`;
+    })
+    .join('');
+
+  panel.innerHTML = `
+    <article class="hero panel ${hero.image ? 'has-media' : ''}">
+      ${media}
+      <div class="hero-body">
+        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">${esc(hero.display_name)}</h2>
+        ${renderBadge(hero.attestations, { cell: 15 })}
+        <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
+        <ul class="hero-feasts utility">${feastLines}</ul>
+      </div>
+    </article>
+    ${registerEntries.length ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>` : ''}
+    ${register}`;
+}
+
+const titleFor = (saint, churchId) =>
+  saint.attestations.find((a) => a.church === churchId)?.titles?.join(', ') ?? '';

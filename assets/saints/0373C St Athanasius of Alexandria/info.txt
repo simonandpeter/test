@@ -1,8 +1,0 @@
-# placeholder data — tradition/gender/region/patronage are provisional
-feast: 18 January
-born: 296, Alexandria, Egypt
-died: 373, Alexandria, Egypt
-tradition: orthodox, coptic, catholic
-gender: male
-region: africa
-patronage: theologians, doctor of the church

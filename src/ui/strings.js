@@ -1,0 +1,95 @@
+/**
+ * Every user-facing string in the app, in one module, so that additional UI
+ * languages later are a translation job rather than an excavation (brief §16).
+ * No other file may contain literal UI text.
+ */
+
+export const STRINGS = {
+  site: {
+    name: 'Gallery of Saints',
+    tagline: 'The saints of the Catholic, Eastern Orthodox, Oriental Orthodox and Church of the East traditions, attested church by church.',
+  },
+
+  nav: {
+    calendar: 'Calendar',
+    saints: 'All Saints',
+    map: 'Map',
+    about: 'About',
+  },
+
+  theme: {
+    label: 'Theme',
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System',
+    // aria-label template for the cycle button; {next} is the mode a press
+    // switches to.
+    switchTo: 'Theme: {current}. Activate to switch to {next}.',
+  },
+
+  loading: {
+    manifestFailed: 'The list of saints could not be loaded. This site needs that one file to work at all, so nothing can be shown yet.',
+    retry: 'Try again',
+  },
+
+  calendar: {
+    title: 'Calendar',
+    today: 'Today',
+    goToday: 'Go to today',
+    prevDay: 'Previous day',
+    nextDay: 'Next day',
+    prevMonth: 'Previous month',
+    nextMonth: 'Next month',
+    monthView: 'Month',
+    closeMonth: 'Close month view',
+    weekLabel: 'Choose a day',
+    commemorationsFor: 'Commemorations for {date}',
+    alsoToday: 'Also commemorated',
+    emptyDay: 'No commemorations are recorded for this day — yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
+    heroIn: 'In the {church}',
+    heroFeast: '{church}: {feast}',
+    densityLabel: '{count} commemorations',
+  },
+
+  dates: {
+    undated: 'undated',
+    before: 'before {y}',
+    after: 'after {y}',
+  },
+
+  badge: {
+    venerated: 'Venerated in {n} of {total} communions: {names}.',
+    veneratedNone: 'Venerated in none of the {total} communions documented here.',
+    refused: 'Positively not venerated by: {names}.',
+    undocumented: '{n} undocumented.',
+    state: {
+      attested: 'venerated, with a citation',
+      refused: 'positively not venerated',
+      undocumented: 'undocumented — not sourced either way',
+    },
+  },
+
+  saints: {
+    title: 'All Saints',
+    placeholder: 'The river and the index arrive in Sessions 5 and 6. The corpus currently holds {count} saints.',
+  },
+
+  map: {
+    title: 'Map',
+    placeholder: 'The globe arrives in Session 7. {located} of {count} saints currently carry usable coordinates; the rest will wait in the unlocated tray, never silently dropped.',
+  },
+
+  about: {
+    title: 'About',
+    placeholder: 'This page will state the editorial policy plainly: the inclusion criterion, the attestation model, the calendar conversion rules, the coverage statistics, the sourcing, the licence, and how to submit a correction. It is written as substance in Session 9, not boilerplate now.',
+  },
+
+  notFound: {
+    title: 'Not found',
+    body: 'There is no page at this address.',
+  },
+};
+
+/** Tiny template: fill('{count} saints', { count: 10 }) → '10 saints'. */
+export const fill = (template, values) =>
+  template.replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? `{${key}}`));
