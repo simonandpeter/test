@@ -145,13 +145,13 @@ export function render(el, { data, params, router }) {
         </div>
         <div class="cal-span">
           <div class="cal-week">
-            <button type="button" class="peek peek-prev" data-step="-7"
-              aria-label="${STRINGS.calendar.prevWeek}"></button>
-            <div class="strip-viewport">
+            <div class="week-row">
+              <button type="button" class="peek peek-prev" data-step="-7"
+                aria-label="${STRINGS.calendar.prevWeek}"></button>
               <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+              <button type="button" class="peek peek-next" data-step="7"
+                aria-label="${STRINGS.calendar.nextWeek}"></button>
             </div>
-            <button type="button" class="peek peek-next" data-step="7"
-              aria-label="${STRINGS.calendar.nextWeek}"></button>
           </div>
           <div class="cal-month" hidden>
             <span class="month-name"></span>
@@ -168,11 +168,12 @@ export function render(el, { data, params, router }) {
       </div>
       <div class="cal-reckoning utility" role="group"
         aria-label="${STRINGS.calendar.reckoningDescription}">
-        <span aria-hidden="true">${STRINGS.calendar.reckoningLabel}</span>
+        <span class="reckoning-label" aria-hidden="true">${STRINGS.calendar.reckoningLabel}</span>
         ${RECKONINGS.map(
           (id) => `<button type="button" data-reckoning="${id}"
             aria-pressed="${String(id === state.reckoning)}">${CALENDAR_LABELS[id]}</button>`,
         ).join('')}
+        <p class="day-date" data-day-date></p>
       </div>
       <h1 class="cal-date"></h1>
       <div class="slot-viewport"><div class="day-panel"></div></div>
@@ -332,18 +333,28 @@ function slotSwap(forward) {
 }
 
 function paintChrome({ slideWeek = null } = {}) {
-  const { el, selected, data } = state;
-  const today = todayIso();
+  const { el, selected } = state;
 
-  const strip = el.querySelector('.week-strip');
-  if (slideWeek) {
-    slideStrip(el.querySelector('.strip-viewport'), strip, slideWeek === 'forward', paintWeek);
-  } else {
+  // What steps sideways is the whole row, edges included (author, 2026-08-21):
+  // the peeked days are the week continuing, so they travel with it rather than
+  // switching in place while the seven days between them slide.
+  const paintRow = () => {
     paintWeek();
+    paintWeekPeeks();
+  };
+  if (slideWeek) {
+    slideStrip(
+      el.querySelector('.cal-week'),
+      el.querySelector('.week-row'),
+      slideWeek === 'forward',
+      paintRow,
+    );
+  } else {
+    paintRow();
   }
 
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-  paintWeekPeeks();
+  paintReckoningDate();
   if (state.monthOpen) paintMonth();
 }
 
@@ -434,12 +445,17 @@ function chooseReckoning(id) {
   for (const b of state.el.querySelectorAll('[data-reckoning]')) {
     b.setAttribute('aria-pressed', String(b.dataset.reckoning === id));
   }
-  paintHeroDate(state.el.querySelector('.day-panel'));
+  paintReckoningDate();
 }
 
-/** The chosen reckoning's date, at the head of the day — above the image. */
-function paintHeroDate(panel) {
-  const line = panel?.querySelector('[data-day-date]');
+/**
+ * The chosen reckoning's date, beside the buttons that choose it (author,
+ * 2026-08-21). It used to stand inside the day panel above the hero image and
+ * roll with the day; it now sits in the chrome and is repainted when either the
+ * day or the reckoning changes.
+ */
+function paintReckoningDate() {
+  const line = state.el.querySelector('.cal-reckoning [data-day-date]');
   if (line) line.textContent = dayIn(state.reckoning, state.selected);
 }
 
@@ -648,13 +664,8 @@ function paintDay(panel) {
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
 
-  // The day in the reckoning the reader chose, at the head of the panel and so
-  // directly above the image (author, 2026-08-21). It rolls with the day
-  // because it is the day's, not the chrome's.
-  const dateLine = `<p class="day-date utility" data-day-date>${esc(dayIn(state.reckoning, selected))}</p>`;
-
   if (entries.length === 0) {
-    panel.innerHTML = `${dateLine}<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
+    panel.innerHTML = `<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
     return;
   }
 
@@ -669,7 +680,7 @@ function paintDay(panel) {
   const media = hero.image
     ? `<a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
-          style="aspect-ratio:${hero.image.aspect};background-image:url('${BASE + hero.image.lqip}')">
+          style="background-image:url('${BASE + hero.image.lqip}')">
         <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
           style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
       </a>`
@@ -718,7 +729,6 @@ function paintDay(panel) {
     .join('');
 
   panel.innerHTML = `
-    ${dateLine}
     <article class="hero panel ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">

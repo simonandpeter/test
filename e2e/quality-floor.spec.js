@@ -151,10 +151,11 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
   expect(feasts.join(' | ')).toContain('22 Tobi');
   // The line of equivalencies that used to print all three reckonings between
-  // the title and the image was withdrawn when the toggle arrived; what stands
-  // there now is the one reckoning the reader chose (author, 2026-08-21).
+  // the title and the image was withdrawn when the toggle arrived; the one
+  // reckoning the reader chose stands beside the buttons that choose it
+  // (author, 2026-08-21).
   await expect(page.locator('.cal-reckonings')).toHaveCount(0);
-  await expect(page.locator('.day-date')).toHaveText('Gregorian · 30 January 2026');
+  await expect(page.locator('.cal-reckoning .day-date')).toHaveText('Gregorian · 30 January 2026');
 });
 
 test('an empty day is a designed state, not a hole', async ({ page }) => {
@@ -165,15 +166,33 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   await expect(page.locator('.week-strip button')).toHaveCount(7);
 });
 
-test('the card image box is reserved from manifest data before it loads', async ({ page }) => {
+test('the hero image box is a square, cropped from the centre and the top', async ({ page }) => {
+  // The box is reserved before the image decodes either way — a square is as
+  // structural a guarantee against layout shift as a measured ratio was — but
+  // on the habit page every day's saint now sits in the same box (author,
+  // 2026-08-21). Anthony's icon is 369x501, so this is a real crop and not a
+  // ratio that happened to be square already.
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const img = page.locator('.hero-media img');
   await expect(img).toBeVisible();
   const box = await img.boundingBox();
-  const ratio = box.width / box.height;
-  // Anthony's icon is 369x501; the rendered box must match its aspect, which
-  // is what makes the no-layout-shift guarantee structural rather than lucky.
-  expect(Math.abs(ratio - 369 / 501)).toBeLessThan(0.02);
+  expect(Math.abs(box.width / box.height - 1)).toBeLessThan(0.02);
+
+  // What a tall icon loses is its lower half, not the face: cover, anchored to
+  // the top and centred across. The blurred placeholder underneath is anchored
+  // the same way, or it would paint a differently-framed image under the one
+  // arriving.
+  const crop = await page.evaluate(() => {
+    const s = getComputedStyle(document.querySelector('.hero-media img'));
+    const media = getComputedStyle(document.querySelector('.hero-media'));
+    return { fit: s.objectFit, position: s.objectPosition, background: media.backgroundPosition };
+  });
+  // Zero resolves to `0px` in one property and `0%` in the other; what is being
+  // asserted is centred across and hard against the top, not which unit the
+  // engine chose to print it in.
+  expect(crop.fit).toBe('cover');
+  expect(crop.position).toMatch(/^50% 0(px|%)$/);
+  expect(crop.background).toMatch(/^50% 0(px|%)$/);
 });
 
 /* ---- Session 4a: the detail page, the store, prefetch ------------------- */
@@ -713,9 +732,13 @@ test('the month replaces the week rather than opening beneath it', async ({ page
 
 test('the chevrons move a week, and a day is chosen by clicking it', async ({ page }) => {
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('[data-step="7"]').click();
+  // Scoped to the row that is current. The edges travel inside it now, so for
+  // the length of a slide the document holds two of every step button and only
+  // one of them is the reader's (Amendment 9's lesson, applied again).
+  const step = (n) => page.locator(`.week-row:not(.strip-leaving) [data-step="${n}"]`);
+  await step(7).click();
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await page.locator('[data-step="-7"]').click();
+  await step(-7).click();
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 
   // Days are still one click each.
@@ -805,13 +828,13 @@ test('picking a date leaves the month open; only the button closes it', async ({
 test('the month keeps the week edges where they were, and names itself in the gutter', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
-  const weekPrev = await box('.cal-week > .peek');
-  const weekNext = await box('.cal-week > .peek-next');
+  const weekPrev = await box('.cal-week .peek');
+  const weekNext = await box('.cal-week .peek-next');
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
-  const monthPrev = await box('.cal-month > .peek');
-  const monthNext = await box('.cal-month > .peek-next');
+  const monthPrev = await box('.cal-month .peek');
+  const monthNext = await box('.cal-month .peek-next');
 
   // Same column and same top at either grain. Not the same height: the week's
   // edge is one day and the month's is a column of them, which is the one
@@ -938,17 +961,21 @@ test('a week steps sideways rather than swapping in place', async ({ page }) => 
   const during = await page.evaluate(
     () =>
       new Promise((resolve) => {
-        const vp = document.querySelector('.strip-viewport');
+        const vp = document.querySelector('.cal-week');
         const observer = new MutationObserver(() => {
-          const leaving = vp.querySelector('.week-strip.strip-leaving');
+          const leaving = vp.querySelector('.week-row.strip-leaving');
           if (!leaving) return;
           observer.disconnect();
+          const entering = vp.querySelector('.week-row.strip-entering');
+          const nums = (row) => [...row.querySelectorAll('.peek .day-num')].map((e) => e.textContent);
           resolve({
             strips: vp.querySelectorAll('.week-strip').length,
             hidden: leaving.getAttribute('aria-hidden'),
             reachable: [...leaving.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
-            entering: vp.querySelectorAll('.week-strip.strip-entering').length,
+            entering: vp.querySelectorAll('.week-row.strip-entering').length,
             clipped: vp.classList.contains('is-sliding'),
+            leavingPeeks: nums(leaving),
+            enteringPeeks: entering ? nums(entering) : null,
           });
         });
         observer.observe(vp, { childList: true, subtree: true, attributes: true });
@@ -965,11 +992,20 @@ test('a week steps sideways rather than swapping in place', async ({ page }) => 
   expect(during.reachable).toBe(0);
   expect(during.clipped).toBe(true);
 
+  // The edges travel with the week (author, 2026-08-21). What slides is the
+  // whole row, so each copy carries its own peeked days out and in — 23 and 31
+  // leaving with the week they belong to, 30 and 7 arriving with the week that
+  // does. They used to be siblings of the viewport and repainted in place while
+  // the seven days between them slid, which read as the edges switching rather
+  // than as the grain continuing.
+  expect(during.leavingPeeks).toEqual(['23', '31']);
+  expect(during.enteringPeeks).toEqual(['30', '7']);
+
   // And it lands — one strip, nothing clipped, nothing left animating.
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
   await expect(page.locator('.week-strip')).toHaveCount(1);
   await expect(page.locator('.strip-leaving')).toHaveCount(0);
-  await expect(page.locator('.strip-viewport.is-sliding')).toHaveCount(0);
+  await expect(page.locator('.cal-week.is-sliding')).toHaveCount(0);
 });
 
 test('picking a day inside the week showing does not slide it', async ({ page }) => {
@@ -977,7 +1013,7 @@ test('picking a day inside the week showing does not slide it', async ({ page })
   // the week under the strip is the same week.
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   const slid = await page.evaluate(() => {
-    const vp = document.querySelector('.strip-viewport');
+    const vp = document.querySelector('.cal-week');
     let seen = false;
     const observer = new MutationObserver(() => {
       if (vp.querySelector('.strip-leaving')) seen = true;
@@ -1000,7 +1036,7 @@ test('under reduced motion a week step leaves no second copy behind', async ({ b
   // Removed, not shortened: no slide to sit through, and so no clone to clean
   // up after one.
   await expect(page.locator('.strip-leaving')).toHaveCount(0);
-  await expect(page.locator('.strip-viewport.is-sliding')).toHaveCount(0);
+  await expect(page.locator('.cal-week.is-sliding')).toHaveCount(0);
   await ctx.close();
 });
 
@@ -1269,9 +1305,10 @@ test('the arrows are gone and the grain itself stands at each edge', async ({ pa
 
   // The swipe is touch and pen only, so the edge has to stay clickable or a
   // reader with a mouse has no way through the weeks at all.
-  await page.locator('.cal-week .peek-next').click();
+  const current = '.week-row:not(.strip-leaving)';
+  await page.locator(`${current} .peek-next`).click();
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await page.locator('.cal-week .peek-prev').click();
+  await page.locator(`${current} .peek-prev`).click();
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 });
 
@@ -1338,21 +1375,69 @@ test('the reckoning is the reader choice, and it is remembered', async ({ page }
   await expect(page.locator('.day-date')).toHaveText('Coptic · 22 Tobi 1742');
 });
 
-test('the chosen reckoning stands directly above the image, and rolls with the day', async ({ page }) => {
+test('the chosen reckoning stands beside the buttons that choose it', async ({ page }) => {
+  // Reversed on 2026-08-21: it used to stand inside the day panel above the
+  // hero image and roll with the day. It now sits in the chrome, on the
+  // reckoning row's own line, pinned to that row's trailing margin so it holds
+  // one column whichever of the four is lit.
+  await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  const order = await page.evaluate(() => {
+  const where = await page.evaluate(() => {
     const date = document.querySelector('.day-date').getBoundingClientRect();
-    const media = document.querySelector('.hero-media').getBoundingClientRect();
-    return { above: date.bottom <= media.top, inPanel: !!document.querySelector('.day-panel .day-date') };
+    const row = document.querySelector('.cal-reckoning').getBoundingClientRect();
+    const last = document.querySelector('[data-reckoning="ethiopian"]').getBoundingClientRect();
+    const h1 = document.querySelector('h1.cal-date').getBoundingClientRect();
+    return {
+      inRow: !!document.querySelector('.cal-reckoning .day-date'),
+      inPanel: !!document.querySelector('.day-panel .day-date'),
+      sameLine: Math.abs(date.top + date.height / 2 - (last.top + last.height / 2)) < 4,
+      afterButtons: date.left > last.right,
+      pinned: Math.abs(date.right - row.right) < 1,
+      aboveTheTitle: date.bottom <= h1.top,
+    };
   });
-  expect(order.above).toBe(true);
-  // In the day panel and not in the chrome: it is the day's own date, so it
-  // rolls when the day does.
-  expect(order.inPanel).toBe(true);
+  expect(where).toEqual({
+    inRow: true,
+    inPanel: false,
+    sameLine: true,
+    afterButtons: true,
+    pinned: true,
+    aboveTheTitle: true,
+  });
 
+  // It is the chrome's now, so it repaints with the day rather than rolling
+  // with it — and it still names the day the strip is on.
   await page.locator('.week-strip button').first().click();
-  await expect(page.locator('.day-panel:not(.slot-leaving) .day-date')).toHaveText(/26 January 2026/);
+  await expect(page.locator('.cal-reckoning .day-date')).toHaveText(/26 January 2026/);
+  await expect(page.locator('.day-panel .day-date')).toHaveCount(0);
+});
+
+test('the peeked day sits on the same line as the days beside it', async ({ page }) => {
+  // The peek is not inside a day button, so it inherits neither that button's
+  // one transparent border nor its --space-1 of padding, and both its name and
+  // its numeral printed 5 px high (author, 2026-08-21). Measured on the text
+  // rather than on the boxes, which legitimately differ: the day name is a flex
+  // item in a bordered button on one side and a span in the peek on the other.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const lines = await page.evaluate(() => {
+    const top = (sel) => Math.round(document.querySelector(sel).getBoundingClientRect().top);
+    return {
+      prevName: top('.cal-week .peek-prev .day-name'),
+      nextName: top('.cal-week .peek-next .day-name'),
+      dayName: top('.week-strip .day-name'),
+      prevNum: top('.cal-week .peek-prev .day-num'),
+      nextNum: top('.cal-week .peek-next .day-num'),
+      dayNum: top('.week-strip .day-num'),
+    };
+  });
+  // Both edges. A backout that fixed only the leading one would otherwise walk
+  // straight past this, which is how the contrast check on these was written.
+  expect(lines.prevName).toBe(lines.dayName);
+  expect(lines.nextName).toBe(lines.dayName);
+  expect(lines.prevNum).toBe(lines.dayNum);
+  expect(lines.nextNum).toBe(lines.dayNum);
 });
 
 test('the hero image is 85% of the width it took, and opens the saint', async ({ page }) => {

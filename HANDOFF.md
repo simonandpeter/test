@@ -17,7 +17,7 @@ briefing.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; sixteen entries now, each recording
+   the most important page in the repo**; seventeen entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -80,12 +80,24 @@ DESIGN.md §5b in full before touching it. In short:
   has nowhere to travel to and simply repaints.
 - **The reckoning is the reader's.** Four buttons under the strip, remembered
   in `settings.calendarPreference`, and the chosen calendar's date stands
-  directly above the hero image inside the day panel, so it rolls with the day.
-  The old line printing all three non-civil reckonings at once is gone.
+  **beside them** on the same line, pinned to the row's trailing margin
+  (author, 2026-08-21, reversing the same day's decision that put it above the
+  hero image). It is the chrome's, so it repaints with the day rather than
+  rolling with it. The old line printing all three non-civil reckonings at once
+  is gone.
 - **The hero image takes 85%** of the width it took, applied **once** — in the
   column where the panel gives it a column, in the image where it does not. It
   opens the saint, hidden from the accessibility tree because the name beside
   it already links there.
+- **The hero image is a square**, cropped from the centre across and hard
+  against the top (author, 2026-08-21). It took the manifest's aspect until
+  then; the Index still does, deliberately. The `<img>` and the blurred
+  placeholder under it are anchored together or the crop is wrong twice.
+- **The week's edges travel with the week.** What slides on a step is the whole
+  row, so the leaving copy holds a second set of step buttons for 260 ms — out
+  of the accessibility tree, out of the tab order and out of reach of the
+  pointer, because it is laid over the arriving one. The month's edges still
+  switch in place; Amendment 17 says what finishing that would cost.
 
 ## The glyph, because it has moved twice
 

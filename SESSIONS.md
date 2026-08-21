@@ -282,6 +282,57 @@ growing: 61.3 px before, 60.5 after. And a backout check found a hole in a test
 of my own — the contrast assertion read only the trailing peek, so washing out
 the leading one walked straight past it. It reads both now.
 
+**17. Four calendar refinements, and two of them reverse the same day's
+decisions** (author, 2026-08-21).
+
+**The chosen reckoning's date moved out of the day panel and up beside the
+buttons that choose it.** Amendment 16 and DESIGN.md §5b both had it standing
+directly above the hero image, inside the panel, so it rolled with the day;
+both are rewritten. It sits on the reckoning row's own line now, pinned to that
+row's trailing margin so it holds one column whichever button is lit, and it is
+the chrome's rather than the day's — it repaints when the day changes instead
+of rolling. Worth knowing before it moves again: the "Gregorian reads twice"
+problem got *worse* with the move, because the lit button and the line beside
+it now sit on the same line naming the same reckoning. Dropping Gregorian from
+the four remains the fix and remains the author's call.
+
+**The hero image is a square, cropped from the top.** It took the manifest's
+aspect until now, which is what DESIGN.md §5b said; on the habit page every
+day's saint is asked to sit in the same box instead, and what a tall icon loses
+is its lower half rather than the face. The index still varies its card heights
+from the manifest — there the varying box is the corpus showing its own shape,
+which is the opposite argument, and both are recorded rather than reconciled.
+The no-layout-shift guarantee is untouched: a square is reserved before the
+image decodes exactly as a measured ratio was. Two things had to move together
+or the crop is wrong twice — the `<img>`'s `object-position` and the blurred
+placeholder's `background-position`, which otherwise paints a differently
+framed image under the one arriving.
+
+**The peeked day was printing 5 px high.** It is not inside a day button, so it
+inherited neither that button's one transparent border nor its `--space-1` of
+padding. Nothing measured it: the row was pinned by `--cal-row-h` at both
+edges, and the alignment inside that row had never been asserted. The month's
+column never had the fault, because its cells take the grid's own classes —
+which is the argument for that habit, stated again.
+
+**The week's edges now travel with the week.** They were siblings of the slide
+viewport and repainted in place while the seven days between them slid, which
+reads as the edges switching rather than as the grain moving. What slides is
+the whole row now — `.cal-week` is the viewport, `.week-row` is what moves.
+That puts a second copy of every step button in the document for 260 ms, so
+Amendment 9's rule applied again and cost one thing more than expected: the
+leaving copy is laid *over* the arriving one, so `aria-hidden` and
+`tabIndex = -1` were not enough and it needed `pointer-events: none` as well,
+or it swallows the click that steps the week a second time. Two browser tests
+had to say which copy they meant, for the same reason.
+
+**The month's edges still switch in place**, and this is the one thing here
+that was scoped out rather than finished. Sliding the month's peeked column
+means sliding what is above it too, and the day names must not move between
+grains (Amendment 15) — so it needs the day-name line lifted out of both the
+peek buttons and `.month-view` into a row of its own, which moves geometry
+three tests pin. Worth doing; not worth doing quietly inside a refinement.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

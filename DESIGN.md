@@ -175,7 +175,9 @@ date is set in `--rubric` — the red-letter day, literally.
 
 The habit page, so its shape is specified here rather than improvised.
 
-**The hero.** The day opens on one saint, large: image at manifest aspect,
+**The hero.** The day opens on one saint, large: image in a square box
+(author, 2026-08-21 — it took the manifest's aspect until then; see "the hero
+image is a square" below),
 name in display voice at h1 scale, the badge immediately to the right of the
 name (§7), then that day's other commemorations as a register below. The pick is
 deterministic from the date and the day's slugs — the same day shows every
@@ -210,6 +212,12 @@ edges hold the same column and the same top at either grain, both derived from
 one `--cal-peek`, so nothing moves sideways as the two swap; the month's edge
 is taller because it is a column where the week's is a day, which is the one
 thing that legitimately differs.
+
+**The peeked day sits on the line the days beside it sit on.** It is not
+inside a day button, so it inherits neither that button's one transparent
+border nor its `--space-1` of padding, and without them it printed 5 px high —
+which read as the edges belonging to a different row (author, 2026-08-21). The
+month's column never had the fault: its cells take the grid's own classes.
 
 **The fade is a mask, never an opacity.** A flat wash over `--ink-soft` is
 2.1:1 against gesso and the quality floor fails it on sight, which is the right
@@ -259,10 +267,21 @@ the global rule in base.css, and the JS skips the matching wait rather than
 holding a blank row for 420 ms with no animation behind it: removed, not
 shortened.
 
-**A grain steps sideways.** Moving a week or a month — by chevron, by swipe, by
-an arrow key off the end of the strip, by the jump to today — slides the grain
-being left out in the direction of travel and brings the repainted one in
-behind it, over `--dur-slot`. What decides it is the movement and not the
+**A grain steps sideways, edges included.** Moving a week or a month — by
+chevron, by swipe, by an arrow key off the end of the strip, by the jump to
+today — slides the grain being left out in the direction of travel and brings
+the repainted one in behind it, over `--dur-slot`. **The week's edges travel
+with the week** (author, 2026-08-21): what slides is the whole row — leading
+peek, seven days, trailing peek — because the peek is the week continuing, and
+a peek that repaints in place while the seven days between the two of them
+slide reads as the edges switching rather than as the grain moving. That makes
+`.cal-week` the viewport and `.week-row` the thing inside it that moves, and it
+puts a second copy of every step button in the document for 260 ms, so the
+leaving copy is `aria-hidden`, out of the tab order and out of reach of the
+pointer — it is laid over the arriving one and would otherwise swallow the
+click that steps the week again. **The month's edges still switch in place**,
+because sliding its column would mean sliding the day names above it too, and
+those must not move between grains. What decides it is the movement and not the
 gesture: picking a day inside the week already showing has nowhere to travel to
 and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
@@ -273,20 +292,43 @@ strip — Gregorian, Julian, Coptic, Ethiopian — chooses which calendar the da
 is shown in, and the choice is remembered in `settings.calendarPreference`
 alongside the theme. It replaces the line of equivalencies that used to print
 all three non-civil reckonings at once between the title and the image: three a
-reader did not ask for, where one they did is enough. The chosen date stands
-**directly above the image**, inside the day panel, so it rolls with the day;
-it names its calendar, because a bare "22 Tobi" is legible only to a reader who
-already knows which calendar counts in Tobi.
+reader did not ask for, where one they did is enough. It names its calendar,
+because a bare "22 Tobi" is legible only to a reader who already knows which
+calendar counts in Tobi.
+
+**The chosen date stands beside the buttons that choose it** (author,
+2026-08-21, reversing the same day's decision that put it directly above the
+hero image inside the day panel). It sits on the reckoning row's own line,
+pinned to that row's trailing margin so it holds one column whichever of the
+four is lit, and at 360 px it takes the line under them rather than squeezing
+four buttons into three. It is the chrome's now rather than the day's, so it
+repaints when the day changes instead of rolling with it. The cost, recorded
+because it got worse rather than better with the move: with Gregorian chosen
+the row reads "Gregorian" twice, once as the lit button and once in the line
+beside it. Dropping Gregorian from the four is the standing fix and it is the
+author's call.
 
 The strip and the grid stay in the civil calendar the URL is in. Choosing a
 reckoning relabels the day; it does not move the reader to a different one.
+
+**The hero image is a square** (author, 2026-08-21), cropped from the centre
+across and hard against the top, so what a tall icon loses is its lower half
+rather than the face. On the habit page every day's saint is asked to sit in
+the same box: an icon three times as tall as it is wide spends the fold on a
+frame, and the day after it does not. The index still varies its card heights
+from the manifest's aspect ratios, because there the varying box is the corpus
+showing its own shape. The box is still reserved before the image decodes — a
+square is as structural a guarantee against layout shift as a measured ratio
+was — and the blurred placeholder is anchored the same way, or it paints a
+differently-framed image under the one arriving.
 
 **The hero image takes 85% of the width it took** (author, 2026-08-21) — the
 column narrows from 260 to 221 where the panel gives the image a column, and
 the image narrows within the panel where it does not. A tall icon at full width
 was pushing the saint's own name below the fold at 360 px, which is the one
 thing a hero cannot do. The reduction is applied **once**, in whichever place
-actually holds the box: applying it in both took 15% twice.
+actually holds the box: applying it in both took 15% twice. Where the image
+does not fill its container it is centred in it.
 
 **The image opens the saint**, like the name beside it. It is hidden from the
 accessibility tree and out of the tab order on purpose — the name already links

@@ -70,18 +70,31 @@
 .cal-week,
 .cal-month {
   grid-area: 1 / 1;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
   /* The browser keeps sending pointer events for a sideways drag, and still
      scrolls the page on a vertical one. Without this a swipe is a scroll. */
   touch-action: pan-y;
 }
 
+/* The week's edges travel with the week (author, 2026-08-21), so what slides is
+   the whole row — leading peek, seven days, trailing peek — rather than the
+   strip alone with the edges repainting in place beside it. That makes
+   `.cal-week` the viewport and `.week-row` the thing inside it that moves; the
+   month keeps its own flex row, because its day names must not travel. */
+.cal-month,
+.week-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.week-row {
+  width: 100%;
+}
+
 /* One width for every edge in the row — the week's two peeks, the month's two,
    and the gutter derived from them — so the month's edges land in exactly the
    place the week's did and nothing shifts as the two swap. */
-.cal-week > .peek,
+.week-row > .peek,
 .cal-month > .peek {
   flex: none;
   width: var(--cal-peek);
@@ -94,8 +107,13 @@
   color: var(--ink-soft);
 }
 
-.cal-week > .peek {
+/* The peeked day sits on the same line as the days beside it. It is not inside
+   a day button, so it does not inherit that button's one transparent border and
+   one --space-1 of padding, and without them its name and its numeral printed
+   5 px above every real day in the row (author, 2026-08-21). */
+.week-row > .peek {
   height: var(--cal-row-h);
+  padding-top: calc(var(--space-1) + 1px);
 }
 
 /* The month's peek is a column, and it is as tall as the grid is at this
@@ -106,7 +124,11 @@
   overflow: hidden;
 }
 
+/* Also the week's slide viewport, which is why it is the positioned ancestor.
+   Clipping is switched on only for the length of a slide: at rest a day's focus
+   ring reaches 4 px outside its button and must not be cropped. */
 .cal-week {
+  position: relative;
   min-height: var(--cal-row-h);
 }
 
@@ -151,26 +173,18 @@
   display: none;
 }
 
-/* The strip slides rather than swapping in place, so a viewport to clip it
-   against. Clipping is switched on only for the length of a slide: at rest a
-   day's focus ring reaches 4 px outside its button and must not be cropped. */
-.strip-viewport {
-  position: relative;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-/* Both grains slide inside their own viewport — the week inside this one, the
-   month inside `.month-body` — so the clip is keyed to the class, not to the
-   element that happens to carry it. */
+/* Both grains slide inside their own viewport — the week inside `.cal-week`,
+   the month inside `.month-body` — so the clip is keyed to the class, not to
+   the element that happens to carry it. */
 .is-sliding {
   overflow: hidden;
 }
 
 .week-strip {
   display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
   gap: var(--space-1);
-  width: 100%;
 }
 
 .week-strip button {
@@ -205,8 +219,8 @@
     --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
     gap: var(--space-2);
   }
-  .cal-week,
-  .cal-month {
+  .cal-month,
+  .week-row {
     gap: var(--space-1);
   }
   .week-strip button {
@@ -430,9 +444,14 @@
    the viewport for the length of it, so which is current is stated rather than
    looked up — the leaving copy carries a class and is aria-hidden, and any
    slide still running is landed before another starts (Amendment 9). */
+/* Out of reach as well as out of the accessibility tree. The week's edges now
+   travel inside the row, so for the length of a slide the document holds two
+   buttons carrying `data-step="-7"` — and the leaving one is laid over the
+   arriving one, where it would swallow the click that steps the week again. */
 .strip-leaving {
   position: absolute;
   inset: 0 0 auto 0;
+  pointer-events: none;
   animation: strip-out var(--dur-slot) var(--ease) forwards;
 }
 
@@ -495,16 +514,33 @@
   border-color: var(--rule);
 }
 
+/* The day in the chosen reckoning stands beside the buttons that choose it
+   (author, 2026-08-21), pinned to the row's trailing margin rather than trailing
+   Ethiopian, so it holds one column whichever button is lit. It used to print
+   inside the day panel above the hero image; DESIGN.md §5b and Amendment 16 are
+   rewritten. */
+.cal-reckoning .day-date {
+  margin: 0;
+  margin-inline-start: auto;
+  color: var(--ink-soft);
+}
+
 /* At 360 px the label is what pushes Ethiopian onto a second row, and a second
    row here is 28 px of the fold that the saint's own name needs. The group
    keeps its accessible name either way — the visible word was only ever a
    repeat of it. */
 @media (max-width: 560px) {
-  .cal-reckoning > span {
+  .cal-reckoning > .reckoning-label {
     display: none;
   }
   .cal-reckoning button {
     padding-inline: var(--space-1);
+  }
+  /* The date has nowhere to pin to at this width — four buttons already fill
+     the row — so it takes the line under them rather than squeezing them. */
+  .cal-reckoning .day-date {
+    margin-inline-start: 0;
+    width: 100%;
   }
 }
 
@@ -512,12 +548,6 @@
 
 .cal-date {
   margin-bottom: var(--space-4);
-}
-
-/* The day in the reckoning the reader chose, directly above the image. */
-.day-date {
-  color: var(--ink-soft);
-  margin-bottom: var(--space-3);
 }
 
 /* Slot viewport: the day rolls; the chrome around it does not. */
@@ -565,13 +595,23 @@
   margin-bottom: var(--space-6);
 }
 
-/* The box is reserved from manifest data; the blurred placeholder paints it
-   until the image decodes. No reflow on arrival, by construction. */
+/* The hero box is a square (author, 2026-08-21), where the index card still
+   takes the manifest's aspect: on the habit page every day's saint is asked to
+   sit in the same box, and an icon three times as tall as it is wide was
+   spending the fold on a frame. Still no reflow on arrival — a square is
+   reserved before the image decodes exactly as a measured ratio was.
+
+   The crop is centred across and justified to the top, so what a tall icon
+   loses is its lower half rather than the face. The blurred placeholder is
+   anchored the same way, or it would paint a differently-framed image under the
+   one arriving. */
 .hero-media {
   display: block;
   width: 100%;
+  aspect-ratio: 1;
+  margin-inline: auto;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 0;
   border-radius: var(--radius-cell);
   overflow: hidden;
 }
@@ -603,6 +643,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 0;
 }
 
 .hero .name-line {
