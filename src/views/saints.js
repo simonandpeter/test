@@ -16,7 +16,7 @@
  *   would read as a ranking of importance.
  */
 
-import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
+import { CHURCHES_BY_ID, enabledChurches, enabledCommunions } from '../data/churches.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
@@ -31,6 +31,7 @@ import {
 } from '../lib/index-filters.js';
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { renderBadge } from '../ui/badge.js';
+import { matrixRows } from '../ui/matrix.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -184,6 +185,31 @@ const facetGroup = (legend, name, options) =>
         </fieldset></details>`
     : '';
 
+/**
+ * What "breadth" is counting, spelled out. The measure is communions — four of
+ * them — and that is not self-evident from a number in a select, least of all
+ * for the Catholic cell, which is one communion holding seven rites.
+ *
+ * Built from `matrixRows`, so the roster is the glyph's own axes rather than a
+ * second list that can drift from them. Rites are named only for a church that
+ * spans more than one: for the rest the church name already says which column
+ * it occupies, and repeating it would be noise.
+ */
+function breadthRoster() {
+  const rows = matrixRows().map(({ communion, cells }) => {
+    const byChurch = new Map();
+    for (const cell of cells) {
+      if (!byChurch.has(cell.label)) byChurch.set(cell.label, []);
+      byChurch.get(cell.label).push(cell.rite.display_name);
+    }
+    const churches = [...byChurch]
+      .map(([name, rites]) => (rites.length > 1 ? `${name} (${rites.join(', ')})` : name))
+      .join('; ');
+    return `<li><b>${esc(communion.display_name)}</b> — ${esc(churches)}</li>`;
+  });
+  return `<ul class="breadth-roster utility">${rows.join('')}</ul>`;
+}
+
 function controls(state) {
   const { facets } = state;
   const churchOptions = enabledChurches()
@@ -227,13 +253,12 @@ function controls(state) {
         <label class="utility">${STRINGS.saints.filters.breadthLabel}
           <select data-breadth>
             <option value="0">${STRINGS.saints.filters.any}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            ${enabledCommunions().map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
           </select>
         </label>
         <p class="range-note utility">${STRINGS.saints.filters.breadthNote}</p>
+        <p class="range-note utility">${STRINGS.saints.filters.breadthRosterNote}</p>
+        ${breadthRoster()}
       </details>
     </div>
 

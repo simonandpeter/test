@@ -867,6 +867,58 @@ test('the index spends as little height as it can before the first card', async 
   expect(gridTop, 'the controls have crept back down the page').toBeLessThan(400);
 });
 
+test('Clear filters appears beside the search bar, never below it', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const clear = page.locator('[data-clear]');
+  await expect(clear).toBeHidden();
+
+  const facetsBefore = (await page.locator('.facets').boundingBox()).y;
+  await page.fill('[data-query]', 'john');
+  await expect(clear).toBeVisible();
+
+  const search = await page.locator('.search-field').boundingBox();
+  const box = await clear.boundingBox();
+  expect(Math.round(box.y)).toBeCloseTo(Math.round(search.y), -1);
+  expect(box.x).toBeGreaterThanOrEqual(search.x + search.width - 1);
+  // The button appears and disappears as filters come and go; if it took a row
+  // of its own it would shunt every filter below it down as the reader typed.
+  expect((await page.locator('.facets').boundingBox()).y).toBe(facetsBefore);
+});
+
+test('Breadth of veneration names the churches it counts, Eastern Catholic expanded', async ({ page }) => {
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.locator('[data-facet="breadth"] summary').click();
+  const roster = page.locator('.breadth-roster');
+  await expect(roster).toBeVisible();
+  await expect(roster.locator('li')).toHaveCount(4);
+
+  const catholic = roster.locator('li', { hasText: 'Catholic' }).first();
+  await expect(catholic).toContainText('Roman Catholic');
+  // The six rites the one Eastern Catholic entry stands for, named.
+  for (const rite of ['Byzantine', 'Alexandrian', "Ge'ez", 'Armenian', 'West Syriac', 'East Syriac']) {
+    await expect(catholic).toContainText(rite);
+  }
+  await expect(roster).toContainText('Assyrian Church of the East');
+});
+
+test('About explains the mark, with circles drawn by the component itself', async ({ page }) => {
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await expect(page.locator('h2', { hasText: 'Reading the mark' })).toBeVisible();
+
+  // One swatch per state, and each is a real circle from cellMark rather than
+  // a picture of one that could drift from what the site draws.
+  const states = await page
+    .locator('.glyph-legend .badge circle')
+    .evaluateAll((els) => els.map((e) => e.dataset.state));
+  expect(states).toEqual(['attested', 'refused', 'undocumented']);
+
+  // Both views of a real saint, side by side: four cells and thirteen.
+  await expect(page.locator('.glyph-example .badge:not(.glyph-matrix) circle')).toHaveCount(4);
+  await expect(page.locator('.glyph-example .glyph-matrix circle')).toHaveCount(13);
+  await expect(page.locator('.glyph-example figcaption')).toContainText('Nestorius');
+});
+
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');

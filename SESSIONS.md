@@ -164,6 +164,26 @@ and cost 31 px. The test pins the two rows that actually collapsed, which
 measure the same in either face, and keeps only a loose backstop on the grid
 position.
 
+**14. Three index and About refinements** (author, 2026-08-21). Clear filters
+never wraps: the row is `nowrap` and the field gives up width instead. Its
+button is also matched to the field's font and padding, because it was 5 px
+taller and every facet below it dropped a row the moment a reader typed.
+
+Breadth of veneration now names the communions it counts and the churches in
+each, Eastern Catholic expanded into its six rites. The roster is built from
+`matrixRows()`, so it is the glyph's own axes rather than a second list that
+can drift. **The measure still counts communions, not the thirteen expanded
+cells** — six of those thirteen come from one registry entry, and counting them
+separately would inflate breadth for anything Eastern Catholic venerates. If
+the count itself should be out of thirteen that is a data decision, not a
+display one.
+
+About gained "Reading the mark": the three states, the two views, and Nestorius
+as the worked example. Every circle on that page comes from `cellMark` and the
+two real renderers, so the legend cannot describe a glyph the site no longer
+draws — and the worked example uses a real saint, dropping itself if he ever
+leaves the corpus rather than being propped up with invented attestations.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

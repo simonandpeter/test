@@ -397,3 +397,55 @@ main.chrome:has(.cal-controls) {
     transition: none !important;
   }
 }
+
+/* ---- the glyph legend, on About ---------------------------------------- */
+
+/* The one page that explains the mark rather than using it. Sizes are its own
+   — a legend is read, not glanced at — but every circle in it comes from the
+   component, so it cannot describe a glyph the site no longer draws. */
+.glyph-legend {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  max-width: 65ch;
+}
+
+.glyph-legend li {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+/* Centred on the first line, not on the paragraph: a two-line entry was
+   floating its circle halfway down the text it labels. */
+.glyph-legend .badge {
+  flex: none;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.glyph-example {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  max-width: 65ch;
+}
+
+/* The row of four and the grid side by side, so the decomposition is a thing
+   you can see rather than a claim in the paragraph above it. */
+.glyph-example-marks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.glyph-example figcaption {
+  color: var(--ink-soft);
+}
+
+.glyph-hover-note {
+  color: var(--ink-soft);
+}

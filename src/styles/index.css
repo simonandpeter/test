@@ -16,12 +16,28 @@
   margin-bottom: var(--space-2);
 }
 
+/* Never wraps. Clear filters appears and disappears as filters come and go,
+   and letting it drop to a line of its own put a button between the search
+   bar and the facets — and moved everything below it down a row the moment a
+   reader typed. The field gives up the width instead. */
 .index-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-2);
   margin-bottom: var(--space-2);
+}
+
+/* Matched to the search field exactly — same font, same padding, same border
+   — so the row is the same height whether the button is there or not. It was
+   5 px taller, which shunted every facet below it down the moment a reader
+   typed their first character. */
+.index-row [data-clear] {
+  flex: none;
+  white-space: nowrap;
+  font-family: var(--font-utility);
+  font-size: 14px;
+  padding: var(--space-1) var(--space-2);
 }
 
 /* The label lives in the placeholder now, so the field is one line rather than
@@ -181,6 +197,23 @@ select:hover {
 .layout-toggle button[aria-pressed='true'] {
   background: var(--field);
   border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.breadth-roster {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.breadth-roster li + li {
+  margin-top: var(--space-1);
+}
+
+.breadth-roster b {
+  font-weight: 500;
   color: var(--ink);
 }
 

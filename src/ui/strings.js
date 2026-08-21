@@ -119,6 +119,7 @@ export const STRINGS = {
       breadth: 'Breadth of veneration',
       breadthLabel: 'Venerated in at least',
       breadthNote: 'How many communions venerate this figure. It is a measure of how widely a cult travelled, not of importance, and nothing is sorted by it unless you ask.',
+      breadthRosterNote: 'The communions it counts, and the churches inside each — the same axes the veneration mark is drawn from. Eastern Catholic is one registry entry spanning six rites, so it counts once, for the Catholic communion.',
       any: 'Any',
     },
     layout: {
@@ -185,6 +186,51 @@ export const STRINGS = {
   about: {
     title: 'About',
     placeholder: 'This page will state the editorial policy plainly: the inclusion criterion, the attestation model, the calendar conversion rules, the coverage statistics, the sourcing, the licence, and how to submit a correction. It is written as substance in Session 9, not boilerplate now.',
+
+    glyph: {
+      heading: 'Reading the mark',
+      lede:
+        'Every name on this site carries a small field of circles. It is the ' +
+        'one thing here you cannot guess at, so it is explained rather than ' +
+        'left to be discovered.',
+      states: 'Each circle is one church, and says one of three things.',
+      attested:
+        'Venerated, with a citation. This is the only place gold appears on ' +
+        'the site.',
+      refused:
+        'Positively not venerated: a church has been checked and does not ' +
+        'keep this figure. Same size as an attestation, because a refusal is ' +
+        'a finding and not an absence.',
+      undocumented:
+        'Undocumented — not sourced either way. Smaller, so that silence and ' +
+        'refusal stay apart even in greyscale or at a glance.',
+      twoViews: 'Two views, one set of findings',
+      badge:
+        'In lists and on cards the mark is one row of four: the Catholic, ' +
+        'Eastern Orthodox, Oriental Orthodox and Church of the East ' +
+        'communions. A communion is filled if any church within it is ' +
+        'attested.',
+      matrix:
+        'Beside a saint’s own name it opens into a grid — communions down, ' +
+        'liturgical rites across, thirteen positions where a church actually ' +
+        'exists. The empty positions are not churches; nothing is drawn there.',
+      decomposition:
+        'The grid is the row taken apart, never a second set of findings. Roll ' +
+        'a row of the grid up and you get that communion’s cell in the row of ' +
+        'four, always.',
+      worked:
+        'Nestorius is why the grid exists. In the East Syriac column the ' +
+        'Assyrian Church of the East venerates him, and directly above it the ' +
+        'Catholic communion refuses him — the same rite, either side of a ' +
+        'split that has held since 431. The row of four cannot show that; one ' +
+        'column of the grid does.',
+      coarse:
+        'One caveat the marks carry themselves: Eastern Catholic is a single ' +
+        'entry in our registry standing for roughly two dozen churches across ' +
+        'six rites, so its six cells all report that one entry. Hovering a ' +
+        'cell says so. Splitting the entry waits on sourcing.',
+      hover: 'Hover or tap any circle to read what it stands for.',
+    },
   },
 
   notFound: {
