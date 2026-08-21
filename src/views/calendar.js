@@ -53,16 +53,16 @@ const utc = (iso) => {
 };
 
 /**
- * The day in one calendar's own reckoning: "Coptic · 22 Tobi 1742". It names
- * the calendar because a bare "22 Tobi" is only legible to a reader who
- * already knows which calendar counts in Tobi — and naming it is the whole
- * point of letting them choose one.
+ * The day in one calendar's own reckoning: "22 Tobi 1742". It no longer names
+ * the calendar (author, 2026-08-21) — the line stands beside the four buttons
+ * and the lit one is already the answer. The year stays: Coptic 1742 and
+ * Gregorian 2026 are the same day, and dropping it would be dropping the half
+ * of the reckoning a reader is least likely to be able to supply.
  */
 function dayIn(calendarId, iso) {
   const d = parseIso(iso);
   const c = fromJdn(calendarId, gregorianToJdn(d.year, d.month, d.day));
   return fill(STRINGS.calendar.dateIn, {
-    calendar: CALENDAR_LABELS[calendarId],
     date: `${c.day} ${monthName(calendarId, c.month)} ${c.year}`,
   });
 }

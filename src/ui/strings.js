@@ -53,10 +53,11 @@ export const STRINGS = {
     densityLabel: '{count} commemorations',
     reckoningLabel: 'Reckoning',
     reckoningDescription: 'Which calendar this day is shown in',
-    // The day in the reckoning the reader chose, above the hero's image. It
-    // names its calendar, because a bare "22 Tobi 1742" is only useful to a
-    // reader who already knows which calendar counts in Tobi.
-    dateIn: '{calendar} · {date}',
+    // The day in the reckoning the reader chose. It does not name its calendar
+    // (author, 2026-08-21): the line now sits beside the four buttons, and the
+    // lit one says which reckoning this is. It named itself while it stood in
+    // the day panel with nothing else on the page to say so.
+    dateIn: '{date}',
     openSaint: 'Read about {name}',
   },
 

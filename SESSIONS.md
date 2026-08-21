@@ -291,10 +291,19 @@ directly above the hero image, inside the panel, so it rolled with the day;
 both are rewritten. It sits on the reckoning row's own line now, pinned to that
 row's trailing margin so it holds one column whichever button is lit, and it is
 the chrome's rather than the day's — it repaints when the day changes instead
-of rolling. Worth knowing before it moves again: the "Gregorian reads twice"
-problem got *worse* with the move, because the lit button and the line beside
-it now sit on the same line naming the same reckoning. Dropping Gregorian from
-the four remains the fix and remains the author's call.
+of rolling.
+
+**And it stopped naming its calendar** (same day, second pass): "22 Tobi 1742",
+not "Coptic · 22 Tobi 1742". Naming it was load-bearing while the line stood in
+the day panel — nothing else on the page said which reckoning was being printed
+— and stopped being load-bearing the moment the line moved next to the lit
+button that answers the same question. That is the shape this kind of reversal
+usually has: the reason for a decision is a fact about where the thing sits,
+and moving it invalidates the reason silently. The year stays; Coptic 1742 and
+Gregorian 2026 are the same day. What remains of "Gregorian reads twice" is
+between the line and the `h1` — "30 January 2026" under "Friday, 30 January
+2026" — and dropping Gregorian from the four is still the fix and still the
+author's call.
 
 **The hero image is a square, cropped from the top.** It took the manifest's
 aspect until now, which is what DESIGN.md §5b said; on the habit page every

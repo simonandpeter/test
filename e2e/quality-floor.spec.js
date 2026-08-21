@@ -155,7 +155,7 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   // reckoning the reader chose stands beside the buttons that choose it
   // (author, 2026-08-21).
   await expect(page.locator('.cal-reckonings')).toHaveCount(0);
-  await expect(page.locator('.cal-reckoning .day-date')).toHaveText('Gregorian · 30 January 2026');
+  await expect(page.locator('.cal-reckoning .day-date')).toHaveText('30 January 2026');
 });
 
 test('an empty day is a designed state, not a hole', async ({ page }) => {
@@ -1359,10 +1359,15 @@ test('the month peeks a column of the neighbouring month, on the grid own rows',
 test('the reckoning is the reader choice, and it is remembered', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const line = page.locator('.day-date');
-  await expect(line).toHaveText('Gregorian · 30 January 2026');
+  // The line does not name its calendar (author, 2026-08-21). It stands beside
+  // the four buttons and the lit one is already the answer; it named itself
+  // while it stood in the day panel with nothing else on the page to say so.
+  await expect(line).toHaveText('30 January 2026');
 
   await page.locator('[data-reckoning="coptic"]').click();
-  await expect(line).toHaveText('Coptic · 22 Tobi 1742');
+  // The year stays. Coptic 1742 and Gregorian 2026 are the same day, and it is
+  // the half of the reckoning a reader is least able to supply for themselves.
+  await expect(line).toHaveText('22 Tobi 1742');
   await expect(page.locator('[data-reckoning="coptic"]')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('[data-reckoning="gregorian"]')).toHaveAttribute('aria-pressed', 'false');
 
@@ -1372,7 +1377,7 @@ test('the reckoning is the reader choice, and it is remembered', async ({ page }
 
   // Remembered across a visit, like the theme and the index layout.
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.day-date')).toHaveText('Coptic · 22 Tobi 1742');
+  await expect(page.locator('.day-date')).toHaveText('22 Tobi 1742');
 });
 
 test('the chosen reckoning stands beside the buttons that choose it', async ({ page }) => {

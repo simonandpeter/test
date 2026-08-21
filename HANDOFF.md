@@ -82,9 +82,11 @@ DESIGN.md §5b in full before touching it. In short:
   in `settings.calendarPreference`, and the chosen calendar's date stands
   **beside them** on the same line, pinned to the row's trailing margin
   (author, 2026-08-21, reversing the same day's decision that put it above the
-  hero image). It is the chrome's, so it repaints with the day rather than
-  rolling with it. The old line printing all three non-civil reckonings at once
-  is gone.
+  hero image). It **does not name its calendar** — "22 Tobi 1742", not
+  "Coptic · 22 Tobi 1742" — because the lit button beside it already says which
+  reckoning this is; the year stays. It is the chrome's, so it repaints with
+  the day rather than rolling with it. The old line printing all three
+  non-civil reckonings at once is gone.
 - **The hero image takes 85%** of the width it took, applied **once** — in the
   column where the panel gives it a column, in the image where it does not. It
   opens the saint, hidden from the accessibility tree because the name beside
@@ -260,11 +262,12 @@ session). SESSIONS.md has each in full.
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
   anything is built on top.
-- **The Gregorian reckoning reads twice.** With Gregorian chosen, the line
-  above the hero image says "Gregorian · 28 August 2026" under an `h1` reading
-  "Friday, 28 August 2026". It is inherent to offering Gregorian in a toggle
-  whose job is to name the reckoning. The cleanest fix is dropping Gregorian
-  from the four; that is the author's call.
+- **The Gregorian reckoning still reads twice, more quietly.** The line no
+  longer names its calendar (author, 2026-08-21), so what is left is the date
+  itself: with Gregorian chosen the row reads "28 August 2026" under an `h1`
+  reading "Friday, 28 August 2026". It is inherent to offering the civil
+  calendar in a toggle at all. The cleanest fix is dropping Gregorian from the
+  four; that is the author's call.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because
