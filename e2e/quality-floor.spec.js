@@ -673,6 +673,57 @@ test('the glyph is pinned to the right margin, not trailing the name', async ({ 
   expect(edges.every((e) => e.clearsName)).toBe(true);
 });
 
+test('the month replaces the week rather than opening beneath it', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const week = page.locator('.week-strip');
+  const month = page.locator('.month-view');
+  const toggle = page.locator('[data-month]');
+
+  await expect(week).toBeVisible();
+  await expect(month).toBeHidden();
+
+  await toggle.click();
+  await expect(month).toBeVisible();
+  // The whole point: two date pickers on screen at once were competing for the
+  // same click, and a class selector quietly outranks the [hidden] attribute.
+  await expect(week).toBeHidden();
+  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+
+  await toggle.click();
+  await expect(week).toBeVisible();
+  await expect(month).toBeHidden();
+});
+
+test('the chevrons move a week, and a day is chosen by clicking it', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-step="7"]').click();
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  await page.locator('[data-step="-7"]').click();
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+
+  // Days are still one click each.
+  await page.locator('.week-strip button').first().click();
+  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+});
+
+test('the two jump controls hold the left edge and carry names, not glyphs alone', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const jump = page.locator('.cal-jump button');
+  await expect(jump).toHaveCount(2);
+  // Icon-only buttons, so the name has to come from somewhere.
+  for (const name of await jump.evaluateAll((els) => els.map((e) => e.getAttribute('aria-label')))) {
+    expect(name?.length).toBeGreaterThan(3);
+  }
+  const [stack, strip] = [
+    await page.locator('.cal-jump').boundingBox(),
+    await page.locator('.cal-span').boundingBox(),
+  ];
+  expect(stack.x + stack.width).toBeLessThanOrEqual(strip.x);
+  // Stacked, not side by side.
+  const boxes = await jump.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().y));
+  expect(new Set(boxes.map(Math.round)).size).toBe(2);
+});
+
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');

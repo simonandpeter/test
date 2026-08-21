@@ -2,15 +2,68 @@
    density; the register carries the rest; the week strip is the red-letter
    idiom doing literal work. */
 
+/* Two stacked icon buttons hold the left edge — recentre on today, and open
+   the month — and the week or the month fills the rest of the row. They are
+   the two things that are true of any day; the week is the thing you are
+   looking at. Keeping them out of the strip means the strip's own chevrons are
+   unambiguously about the week. */
 .cal-controls {
   display: flex;
-  align-items: stretch;
-  gap: var(--space-2);
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3);
   margin-bottom: var(--space-6);
 }
 
-.cal-controls > button {
+.cal-jump {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: none;
+}
+
+.cal-jump button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sized so the pair stands exactly as tall as a week-strip button, which is
+     what makes the left edge read as one block rather than two stray controls. */
+  width: 34px;
+  height: 23px;
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+.cal-jump button:hover {
+  color: var(--ink);
+}
+
+/* The month toggle stays lit while the month is showing: with the week gone
+   there is nothing else on screen saying which grain you are in. */
+.cal-jump button.is-on {
+  color: var(--ink);
+  background: var(--field);
+  border-color: var(--ink-soft);
+}
+
+.cal-span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cal-week {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+/* A class selector outranks the user agent's [hidden] rule, so display: flex
+   would keep the week on screen underneath the month. The month replaces the
+   week; it does not open below it. */
+.cal-week[hidden] {
+  display: none;
+}
+
+.cal-week > button {
   flex: none;
 }
 
@@ -39,6 +92,28 @@
 
 .week-strip button:hover {
   border-color: var(--rule);
+}
+
+/* The row no longer wraps — wrapping would drop the jump buttons off their
+   left edge, which is the whole arrangement. So at narrow widths everything in
+   it gives up a little instead: the chevrons lose their side padding and the
+   day buttons their comfortable minimum. Seven days, two chevrons and the
+   stack still fit 360 px, and the quality floor's overflow check holds the
+   line if any of these grow again. */
+@media (max-width: 560px) {
+  .cal-controls {
+    gap: var(--space-2);
+  }
+  .cal-week {
+    gap: var(--space-1);
+  }
+  .cal-week > button {
+    width: 22px;
+    padding-inline: 0;
+  }
+  .week-strip button {
+    min-width: 26px;
+  }
 }
 
 .week-strip .day-num {
@@ -82,7 +157,6 @@
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
   padding: var(--space-3);
-  margin-bottom: var(--space-6);
 }
 
 .month-head {

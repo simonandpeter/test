@@ -203,6 +203,14 @@ main.chrome {
   padding-bottom: var(--space-16);
 }
 
+/* The calendar opens on a row of controls rather than a heading, and a
+   heading's worth of air above a row of buttons reads as a gap rather than as
+   breathing room. Scoped to the page that starts that way; every other view
+   still opens on type and still wants the full measure. */
+main.chrome:has(.cal-controls) {
+  padding-top: var(--space-3);
+}
+
 /* Small caps for register headings — a month over a day column, a church over
    its entries. */
 .register-heading {

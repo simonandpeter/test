@@ -45,6 +45,23 @@ const utc = (iso) => {
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
 
+/* Two icon buttons stand in for the old text ones. Both are stroked in
+   currentColor and carry their name on the button's aria-label, so neither
+   introduces a colour and neither depends on the icon being understood. */
+const ICON_TODAY = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+  stroke-width="1.6" aria-hidden="true" focusable="false">
+  <circle cx="12" cy="12" r="5.5"/>
+  <circle cx="12" cy="12" r="1.75" fill="currentColor" stroke="none"/>
+  <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke-linecap="round"/>
+</svg>`;
+
+const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+  stroke-width="1.6" aria-hidden="true" focusable="false">
+  <rect x="3.25" y="5" width="17.5" height="15.75" rx="2.5"/>
+  <path d="M3.25 9.75h17.5"/>
+  <path d="M8 2.75v4M16 2.75v4" stroke-linecap="round"/>
+</svg>`;
+
 let state = null;
 
 /**
@@ -82,21 +99,31 @@ export function render(el, { data, params, router }) {
   el.innerHTML = `
     <div class="cal">
       <div class="cal-controls">
-        <button type="button" data-step="-1" aria-label="${STRINGS.calendar.prevDay}">‹</button>
-        <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
-        <button type="button" data-step="1" aria-label="${STRINGS.calendar.nextDay}">›</button>
-        <button type="button" data-today>${STRINGS.calendar.today}</button>
-        <button type="button" data-month aria-expanded="false">${STRINGS.calendar.monthView}</button>
+        <div class="cal-jump">
+          <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
+          <button type="button" data-month aria-expanded="false"
+            aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
+        </div>
+        <div class="cal-span">
+          <div class="cal-week">
+            <button type="button" data-step="-7" aria-label="${STRINGS.calendar.prevWeek}">‹</button>
+            <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+            <button type="button" data-step="7" aria-label="${STRINGS.calendar.nextWeek}">›</button>
+          </div>
+          <div class="month-view" hidden></div>
+        </div>
       </div>
-      <div class="month-view" hidden></div>
       <h1 class="cal-date"></h1>
       <p class="cal-reckonings utility"></p>
       <div class="slot-viewport"><div class="day-panel"></div></div>
       <div class="shelves" data-shelves></div>
     </div>`;
 
-  el.querySelector('[data-step="-1"]').addEventListener('click', () => step(-1));
-  el.querySelector('[data-step="1"]').addEventListener('click', () => step(1));
+  // The chevrons move a week; a day is chosen by clicking it in the strip.
+  // Arrow keys inside the strip stay on a day, because that is the only way a
+  // keyboard reaches one without tabbing across the whole week.
+  el.querySelector('[data-step="-7"]').addEventListener('click', () => step(-7));
+  el.querySelector('[data-step="7"]').addEventListener('click', () => step(7));
   el.querySelector('[data-today]').addEventListener('click', () => select(todayIso()));
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   el.querySelector('.week-strip').addEventListener('keydown', (e) => {
@@ -223,11 +250,18 @@ function paintChrome() {
 
 /* ---- month view ------------------------------------------------------- */
 
+/**
+ * The month replaces the week rather than opening beneath it: they answer the
+ * same question at two grains, and showing both at once was two date pickers
+ * competing for the same click.
+ */
 function toggleMonth() {
   state.monthOpen = !state.monthOpen;
-  const panel = state.el.querySelector('.month-view');
-  state.el.querySelector('[data-month]').setAttribute('aria-expanded', String(state.monthOpen));
-  panel.hidden = !state.monthOpen;
+  const { el } = state;
+  el.querySelector('[data-month]').setAttribute('aria-expanded', String(state.monthOpen));
+  el.querySelector('[data-month]').classList.toggle('is-on', state.monthOpen);
+  el.querySelector('.month-view').hidden = !state.monthOpen;
+  el.querySelector('.cal-week').hidden = state.monthOpen;
   if (state.monthOpen) paintMonth();
 }
 

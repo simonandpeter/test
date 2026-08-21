@@ -188,6 +188,24 @@ ramping with the movement. Under reduced motion the swap is instant. The image
 and name carry `view-transition-name` from day one so the card→detail
 shared-element transition in Phase 1's close is markup already in place.
 
+**The chrome** (author, revised 2026-08-21). Two icon buttons stand at the left
+edge, stacked: a recentre mark for today, a calendar mark for the month. The
+week or the month fills the rest of the row, and **the month replaces the week
+rather than opening beneath it** — they answer the same question at two grains,
+and both on screen at once was two date pickers competing for the same click.
+The month toggle stays lit while the month shows, because with the week gone
+nothing else says which grain you are in.
+
+The chevrons flanking the week move a **week**; a day is chosen by clicking it.
+Arrow keys inside the strip still move a day, which is how a keyboard reaches
+one without tabbing across all seven. The row does not wrap — wrapping would
+drop the jump buttons off the left edge, which is the arrangement — so at
+narrow widths the chevrons and day cells give up width instead; seven days plus
+both controls fit 360 px and the quality floor's overflow check holds it.
+
+The page opens on this row rather than on a heading, so it takes a heading's
+worth less air beneath the site header than every other view.
+
 **Dense against sparse.** A day with twelve commemorations across four
 traditions and a day with one must both read as composed. Density lives in the
 register, never the hero: one saint's day is a hero and nothing else — the
