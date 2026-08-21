@@ -196,9 +196,26 @@ and both on screen at once was two date pickers competing for the same click.
 The month toggle stays lit while the month shows, because with the week gone
 nothing else says which grain you are in.
 
-The month's chevrons sit in exactly the places the week's occupy — same x,
-same y, same height, all four derived from one `--cal-row-h` — so nothing moves
-as the two swap. **Picking a date does not close the month**;
+**There are no chevrons** (author, revised 2026-08-21). What stands at each
+edge is the grain itself, continuing: the day before the week and the day after
+it, the column of dates that runs off each side of the month, set on the same
+lines as the days between them and dissolving toward the margin through a mask.
+The hint that there is more either way is the more, showing — and the peek is
+the swipe's affordance for anyone who cannot swipe.
+
+They are still buttons, and that is not a compromise: the swipe is touch and
+pen only by design (§5b, below), so an edge with nothing to click would strand
+every reader with a mouse. What went is the glyph, not the affordance. The two
+edges hold the same column and the same top at either grain, both derived from
+one `--cal-peek`, so nothing moves sideways as the two swap; the month's edge
+is taller because it is a column where the week's is a day, which is the one
+thing that legitimately differs.
+
+**The fade is a mask, never an opacity.** A flat wash over `--ink-soft` is
+2.1:1 against gesso and the quality floor fails it on sight, which is the right
+answer: text a sighted reader might try to read has to clear 4.5:1 wherever it
+is legible at all. The ink stays at full strength and the dissolve happens over
+the outer half of the peek, where there is no longer a glyph to read. **Picking a date does not close the month**;
 only the toggle does, so a reader comparing days is not reopening it between
 each one.
 
@@ -208,9 +225,11 @@ seven columns, its gap and its left and right edges, so the day names sit in
 exactly the same place at either grain — same column centres, same top, to the
 pixel — and what the reader sees toggle is rows arriving, which is the only
 thing that actually differs between the two. **The month prints its name in
-the gutter**, under the jump stack and the back chevron, where it costs the row
-no height; it used to sit centred above the grid, which spent a line of every
-date's height on a label the week manages without. A date row is one numeral
+the gutter**, under the jump stack, where it costs the row no height; it used
+to sit centred above the grid, which spent a line of every date's height on a
+label the week manages without. **Abbreviated** — "Aug 2026" — because the
+gutter stops where the peeked column starts and a full month name reached
+across into it. A date row is one numeral
 and is set to match: the body's reading leading around it was most of why the
 month stood 278 px tall against 171 now.
 
@@ -249,6 +268,31 @@ and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
 between two frames.
 
+**The reckoning is the reader's** (author, 2026-08-21). A row of four under the
+strip — Gregorian, Julian, Coptic, Ethiopian — chooses which calendar the day
+is shown in, and the choice is remembered in `settings.calendarPreference`
+alongside the theme. It replaces the line of equivalencies that used to print
+all three non-civil reckonings at once between the title and the image: three a
+reader did not ask for, where one they did is enough. The chosen date stands
+**directly above the image**, inside the day panel, so it rolls with the day;
+it names its calendar, because a bare "22 Tobi" is legible only to a reader who
+already knows which calendar counts in Tobi.
+
+The strip and the grid stay in the civil calendar the URL is in. Choosing a
+reckoning relabels the day; it does not move the reader to a different one.
+
+**The hero image takes 85% of the width it took** (author, 2026-08-21) — the
+column narrows from 260 to 221 where the panel gives the image a column, and
+the image narrows within the panel where it does not. A tall icon at full width
+was pushing the saint's own name below the fold at 360 px, which is the one
+thing a hero cannot do. The reduction is applied **once**, in whichever place
+actually holds the box: applying it in both took 15% twice.
+
+**The image opens the saint**, like the name beside it. It is hidden from the
+accessibility tree and out of the tab order on purpose — the name already links
+to the same page, and a second link with no text of its own would be either an
+unnamed link or the same one announced twice.
+
 **Dense against sparse.** A day with twelve commemorations across four
 traditions and a day with one must both read as composed. Density lives in the
 register, never the hero: one saint's day is a hero and nothing else — the
@@ -266,7 +310,13 @@ as breakage.
 
 **Chrome:** one quiet header — site name in display voice at utility size, the
 four pages as utility links (current page in `--rubric`, plus an underline so
-colour never carries it alone), theme control as a labelled text button. That
+colour never carries it alone), theme control as a labelled text button, and
+**today's date abbreviated beneath it** (author, 2026-08-21): "Fri 21 Aug",
+right-aligned to the control's own edge, never wrapped, with the machine form
+on `datetime`. It is stamped once at load — a page left open across midnight
+shows yesterday, which is cheaper than a timer something would have to own. The
+corner became a two-line stack for it and the bar's own vertical padding paid
+for the line, so the header is no taller with the date than it was without it. That
 button reserves the width of its longest label ("Theme: System") by rendering
 all three stacked in one grid cell with only the current one visible, so
 cycling the theme cannot change the header's width, wrap it, or change its
@@ -326,6 +376,14 @@ never reshape it.
 These three constants are the art direction — parametric substrate, hand-tuned
 curve — and live here, alongside the palette, as the only sanctioned nudge.
 
+**The date bars are withdrawn** (author, 2026-08-21). They were the curve's
+first and only shipping consumer; the saint page now prints the dates and the
+places instead, as one register keyed by the `kind` a date and a location
+share. The curve is unchanged and stays here: the map halo and the timeline
+dissolve are its remaining consumers, and `tests/uncertainty.test.mjs` pins its
+three constants directly now rather than through a component. The paragraph
+below is kept because it is the reasoning the timeline will need again.
+
 **An open bound dissolves over extent, not radius** (settled in Session 4a,
 the curve's first consumer). `softness(null)` is the 24 px clamp, and 24 px of
 blur applied to an 8 px date bar erases it — including the bound at the other
@@ -334,9 +392,14 @@ bar with one open end keeps the curve's sharp value and fades to nothing over
 the last 45% of its length toward the unknown side. Same reading, same "we do
 not know where this ends", expressed the only way that leaves the end we *do*
 know legible. Bounded intervals are unchanged: the curve alone.
-Worked values: 1 year → 0.75 px (sharp); 30 years → 4.9 px; 100 years →
-9.4 px; 200 years → 13.7 px; 500 years and above → 24 px. A precise date draws
-crisp; two centuries of doubt draw as a visible dissolve; nothing ever snaps.
+Worked values, corrected against the running curve on 2026-08-21 and pinned by
+a test: 1 year → 0.75 px (sharp); 30 years → 4.87 px; 100 years → 9.44 px; 200
+years → 13.82 px; 500 years → 22.88 px; **the 24 px clamp does not bind until
+about 757 years**, and `softness(null)` — an unknown parameter — is the clamp
+itself. This section read "200 years → 13.7 px" and "500 years and above →
+24 px" until then; both were wrong, and nothing executed them. A precise date
+draws crisp; two centuries of doubt draw as a visible dissolve; nothing ever
+snaps.
 
 ## 7. The signature element: the veneration glyph (spec for Session 3)
 

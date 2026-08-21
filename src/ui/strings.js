@@ -51,18 +51,20 @@ export const STRINGS = {
     heroIn: 'In the {church}',
     heroFeast: '{church}: {feast}',
     densityLabel: '{count} commemorations',
+    reckoningLabel: 'Reckoning',
+    reckoningDescription: 'Which calendar this day is shown in',
+    // The day in the reckoning the reader chose, above the hero's image. It
+    // names its calendar, because a bare "22 Tobi 1742" is only useful to a
+    // reader who already knows which calendar counts in Tobi.
+    dateIn: '{calendar} · {date}',
+    openSaint: 'Read about {name}',
   },
 
   dates: {
     undated: 'undated',
     before: 'before {y}',
     after: 'after {y}',
-    kinds: { birth: 'Born', floruit: 'Active', death: 'Died' },
     undatedNote: 'No date is recorded at either end of this life. Undated is a finding rather than a blank: it means nothing we have found fixes a bound.',
-    barLabel: '{kind} {value} — {span}.',
-    spanYears: 'an interval of {n} years',
-    spanExact: 'a single year',
-    spanOpen: 'an interval open at one end',
   },
 
   badge: {
@@ -169,6 +171,19 @@ export const STRINGS = {
       legendary: 'Legendary — the account is a legend; the person may not have existed.',
     },
     sexLabel: { male: 'Male', female: 'Female', unknown: 'Sex unrecorded' },
+    // One register of what is known about when and where, keyed by the kind
+    // a date and a location share. The date bar that used to stand here was
+    // withdrawn by the author on 2026-08-21.
+    factsLabel: 'Dates and places',
+    kinds: {
+      birth: 'Born',
+      floruit: 'Flourished',
+      death: 'Died',
+      ministry: 'Ministry',
+      see: 'See',
+      relics: 'Relics',
+    },
+    placeUnnamed: 'Place recorded only as coordinates.',
   },
 
   shelf: {

@@ -23,6 +23,7 @@ import {
   weekOf,
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
+import { readSettings, writeSetting } from '../lib/settings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
@@ -39,12 +40,32 @@ const dayFmt = new Intl.DateTimeFormat('en-GB', {
   weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
 });
 const weekdayFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'UTC' });
-const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+// Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
+// grid, and a full "September" reached across into the dates.
+const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/** The reckonings a reader can choose between, in the order they are offered. */
+const RECKONINGS = ['gregorian', 'julian', 'coptic', 'ethiopian'];
 
 const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
+
+/**
+ * The day in one calendar's own reckoning: "Coptic · 22 Tobi 1742". It names
+ * the calendar because a bare "22 Tobi" is only legible to a reader who
+ * already knows which calendar counts in Tobi — and naming it is the whole
+ * point of letting them choose one.
+ */
+function dayIn(calendarId, iso) {
+  const d = parseIso(iso);
+  const c = fromJdn(calendarId, gregorianToJdn(d.year, d.month, d.day));
+  return fill(STRINGS.calendar.dateIn, {
+    calendar: CALENDAR_LABELS[calendarId],
+    date: `${c.day} ${monthName(calendarId, c.month)} ${c.year}`,
+  });
+}
 
 /* Two icon buttons stand in for the old text ones. Both are stroked in
    currentColor and carry their name on the button's aria-label, so neither
@@ -104,6 +125,12 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     monthCursor: null, monthOpen: false,
+    // Which calendar the day is shown in, under the reader's own control and
+    // remembered — the equivalencies line that used to print all three at once
+    // was withdrawn when the toggle arrived (author, 2026-08-21).
+    reckoning: RECKONINGS.includes(readSettings().calendarPreference)
+      ? readSettings().calendarPreference
+      : 'gregorian',
     cleanups: [], dayCleanups: [],
     rollTimer: null, monthTimer: null, sizeTimer: null, slide: null,
   };
@@ -118,25 +145,36 @@ export function render(el, { data, params, router }) {
         </div>
         <div class="cal-span">
           <div class="cal-week">
-            <button type="button" data-step="-7" aria-label="${STRINGS.calendar.prevWeek}">‹</button>
+            <button type="button" class="peek peek-prev" data-step="-7"
+              aria-label="${STRINGS.calendar.prevWeek}"></button>
             <div class="strip-viewport">
               <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
             </div>
-            <button type="button" data-step="7" aria-label="${STRINGS.calendar.nextWeek}">›</button>
+            <button type="button" class="peek peek-next" data-step="7"
+              aria-label="${STRINGS.calendar.nextWeek}"></button>
           </div>
           <div class="cal-month" hidden>
             <span class="month-name"></span>
-            <button type="button" data-mstep="-1" aria-label="${STRINGS.calendar.prevMonth}">‹</button>
+            <button type="button" class="peek peek-prev" data-mstep="-1"
+              aria-label="${STRINGS.calendar.prevMonth}"></button>
             <div class="month-view">
               <div class="month-days" aria-hidden="true"></div>
               <div class="month-body"><div class="month-grid"></div></div>
             </div>
-            <button type="button" data-mstep="1" aria-label="${STRINGS.calendar.nextMonth}">›</button>
+            <button type="button" class="peek peek-next" data-mstep="1"
+              aria-label="${STRINGS.calendar.nextMonth}"></button>
           </div>
         </div>
       </div>
+      <div class="cal-reckoning utility" role="group"
+        aria-label="${STRINGS.calendar.reckoningDescription}">
+        <span aria-hidden="true">${STRINGS.calendar.reckoningLabel}</span>
+        ${RECKONINGS.map(
+          (id) => `<button type="button" data-reckoning="${id}"
+            aria-pressed="${String(id === state.reckoning)}">${CALENDAR_LABELS[id]}</button>`,
+        ).join('')}
+      </div>
       <h1 class="cal-date"></h1>
-      <p class="cal-reckonings utility"></p>
       <div class="slot-viewport"><div class="day-panel"></div></div>
       <div class="shelves" data-shelves></div>
     </div>`;
@@ -150,6 +188,11 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+
+  el.querySelector('.cal-reckoning').addEventListener('click', (e) => {
+    const button = e.target.closest('[data-reckoning]');
+    if (button) chooseReckoning(button.dataset.reckoning);
+  });
 
   // Same gesture, same direction, whichever grain is showing: a flick left is
   // forward in time. Bound to the containers, which survive every repaint.
@@ -300,18 +343,104 @@ function paintChrome({ slideWeek = null } = {}) {
   }
 
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-
-  const d = parseIso(selected);
-  const jdn = gregorianToJdn(d.year, d.month, d.day);
-  el.querySelector('.cal-reckonings').textContent = ['julian', 'coptic', 'ethiopian']
-    .map((cal) => {
-      const c = fromJdn(cal, jdn);
-      const year = cal === 'julian' ? '' : ` ${c.year}`;
-      return `${CALENDAR_LABELS[cal]} ${c.day} ${monthName(cal, c.month)}${year}`;
-    })
-    .join(' · ');
-
+  paintWeekPeeks();
   if (state.monthOpen) paintMonth();
+}
+
+/**
+ * The week's two edges: the Sunday behind it and the Monday ahead of it, set
+ * on the same lines as the days between them and faded out toward the margin.
+ * They replace the chevrons (author, 2026-08-21) — the hint that there is more
+ * week either way is the week itself, showing.
+ *
+ * They are still buttons. A swipe is touch and pen only by design, so removing
+ * the arrows without leaving something to click would strand every reader with
+ * a mouse; what went is the glyph, not the affordance.
+ */
+function paintWeekPeeks() {
+  const { el, selected } = state;
+  const week = weekOf(selected);
+  const edges = [
+    ['.peek-prev', addDaysIso(week[0], -1)],
+    ['.peek-next', addDaysIso(week[6], 1)],
+  ];
+  for (const [sel, iso] of edges) {
+    el.querySelector(`.cal-week ${sel}`).innerHTML = `
+      <span class="day-name" aria-hidden="true">${weekdayFmt.format(utc(iso))}</span>
+      <span class="day-num" aria-hidden="true">${parseIso(iso).day}</span>`;
+  }
+}
+
+/**
+ * The month's two edges: the column of days that runs off each side of it —
+ * the previous month's Sundays behind, the next month's Mondays ahead — on the
+ * grid's own rows, so they read as the grid continuing rather than as
+ * decoration beside it.
+ */
+function paintMonthPeeks() {
+  const { el, data } = state;
+  const c = state.monthCursor;
+  const columns = [
+    ['.peek-prev', stepCursor(c, -1), 6],
+    ['.peek-next', stepCursor(c, 1), 0],
+  ];
+  for (const [sel, cursor, weekday] of columns) {
+    const cells = monthColumn(cursor, weekday)
+      .map((day) => {
+        const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+        const n = countFor(iso, data);
+        const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
+        return `<span class="peek-cell">${day}<span class="density">${dots}</span></span>`;
+      })
+      .join('');
+    el.querySelector(`.cal-month ${sel}`).innerHTML = `
+      <span class="peek-days" aria-hidden="true">
+        <span class="month-day-name peek-day-name">&nbsp;</span>
+        <span class="peek-col">${cells}</span>
+      </span>`;
+  }
+}
+
+/** The days of one month that fall on one weekday, 0 = Monday. JDN 0 was a Monday. */
+function monthColumn(cursor, weekday) {
+  const days = [];
+  for (let day = 1; day <= daysInMonth(cursor); day++) {
+    if (gregorianToJdn(cursor.year, cursor.month, day) % 7 === weekday) days.push(day);
+  }
+  return days;
+}
+
+const daysInMonth = (cursor) => {
+  let n = 28;
+  while (parseIso(toIsoDate({ year: cursor.year, month: cursor.month, day: n + 1 }))) n++;
+  return n;
+};
+
+const stepCursor = (c, n) => ({
+  year: c.year + Math.floor((c.month + n - 1) / 12),
+  month: ((c.month + n - 1 + 12) % 12) + 1,
+});
+
+/**
+ * The reckoning is the reader's, and it is remembered. Only the day's own date
+ * line changes: the strip and the grid are the civil calendar the URL is in,
+ * and re-reckoning those would be a different page rather than a different
+ * label on this one.
+ */
+function chooseReckoning(id) {
+  if (!RECKONINGS.includes(id) || id === state.reckoning) return;
+  state.reckoning = id;
+  writeSetting('calendarPreference', id);
+  for (const b of state.el.querySelectorAll('[data-reckoning]')) {
+    b.setAttribute('aria-pressed', String(b.dataset.reckoning === id));
+  }
+  paintHeroDate(state.el.querySelector('.day-panel'));
+}
+
+/** The chosen reckoning's date, at the head of the day — above the image. */
+function paintHeroDate(panel) {
+  const line = panel?.querySelector('[data-day-date]');
+  if (line) line.textContent = dayIn(state.reckoning, state.selected);
 }
 
 function paintWeek() {
@@ -457,16 +586,11 @@ function paintMonth() {
   const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
   const firstJdn = gregorianToJdn(cursor.year, cursor.month, 1);
   const lead = firstJdn % 7; // JDN 0 was a Monday
-  const daysInMonth = (() => {
-    let n = 28;
-    while (parseIso(toIsoDate({ year: cursor.year, month: cursor.month, day: n + 1 }))) n++;
-    return n;
-  })();
 
   const dayNames = weekOf(first).map((iso) => weekdayFmt.format(utc(iso)));
   const cells = [];
   for (let i = 0; i < lead; i++) cells.push('<span></span>');
-  for (let day = 1; day <= daysInMonth; day++) {
+  for (let day = 1; day <= daysInMonth(cursor); day++) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const n = countFor(iso, data);
     const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
@@ -486,6 +610,7 @@ function paintMonth() {
     .map((n) => `<span class="month-day-name">${n}</span>`)
     .join('');
   el.querySelector('.month-grid').innerHTML = cells.join('');
+  paintMonthPeeks();
 
   // Picking a date does not close the month: only the toggle does.
   for (const b of el.querySelectorAll('.month-grid [data-iso]')) {
@@ -501,11 +626,7 @@ function paintMonth() {
 function stepMonth(n) {
   const c = state.monthCursor;
   if (!c) return;
-  const month = c.month + n;
-  state.monthCursor = {
-    year: c.year + Math.floor((month - 1) / 12),
-    month: ((month - 1 + 12) % 12) + 1,
-  };
+  state.monthCursor = stepCursor(c, n);
 
   const body = state.el.querySelector('.month-body');
   const before = measure(body);
@@ -527,8 +648,13 @@ function paintDay(panel) {
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
 
+  // The day in the reckoning the reader chose, at the head of the panel and so
+  // directly above the image (author, 2026-08-21). It rolls with the day
+  // because it is the day's, not the chrome's.
+  const dateLine = `<p class="day-date utility" data-day-date>${esc(dayIn(state.reckoning, selected))}</p>`;
+
   if (entries.length === 0) {
-    panel.innerHTML = `<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
+    panel.innerHTML = `${dateLine}<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
     return;
   }
 
@@ -536,11 +662,17 @@ function paintDay(panel) {
   const hero = data.bySlug.get(heroSlug);
   const heroChurches = entries.filter((e) => e.slug === heroSlug);
 
+  // The image opens the saint too (author, 2026-08-21). Hidden from the
+  // accessibility tree and out of the tab order on purpose: the name beside it
+  // already links to the same page, and a second link with no text of its own
+  // would be either an unnamed link or the same one announced twice.
   const media = hero.image
-    ? `<div class="hero-media" style="aspect-ratio:${hero.image.aspect};background-image:url('${BASE + hero.image.lqip}')">
+    ? `<a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
+          data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
+          style="aspect-ratio:${hero.image.aspect};background-image:url('${BASE + hero.image.lqip}')">
         <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
           style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
-      </div>`
+      </a>`
     : '';
 
   const feastLines = heroChurches
@@ -586,6 +718,7 @@ function paintDay(panel) {
     .join('');
 
   panel.innerHTML = `
+    ${dateLine}
     <article class="hero panel ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">

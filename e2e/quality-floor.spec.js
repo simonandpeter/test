@@ -150,7 +150,11 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   const feasts = await page.locator('.hero-feasts li').allTextContents();
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
   expect(feasts.join(' | ')).toContain('22 Tobi');
-  await expect(page.locator('.cal-reckonings')).toContainText('Coptic 22 Tobi');
+  // The line of equivalencies that used to print all three reckonings between
+  // the title and the image was withdrawn when the toggle arrived; what stands
+  // there now is the one reckoning the reader chose (author, 2026-08-21).
+  await expect(page.locator('.cal-reckonings')).toHaveCount(0);
+  await expect(page.locator('.day-date')).toHaveText('Gregorian · 30 January 2026');
 });
 
 test('an empty day is a designed state, not a hole', async ({ page }) => {
@@ -207,23 +211,33 @@ test('an image says what its licence is, and never links a placeholder source', 
   await expect(credit.locator('a')).toHaveCount(0);
 });
 
-test('date bars take their softness from the interval and nothing else', async ({ page }) => {
+test('dates and places read as one register, keyed by kind', async ({ page }) => {
+  // The date-interval bars stood here until 2026-08-21. What a reader needed
+  // from them was the years, and the years were already printed beside them;
+  // what they could not get was where. DESIGN.md §6b keeps the curve for the
+  // map and the timeline and records that the bars, not it, were withdrawn.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  const blur = (i) =>
-    page.locator('.date-bar').nth(i).evaluate((el) => getComputedStyle(el).filter);
+  await expect(page.locator('.date-bar')).toHaveCount(0);
+  await expect(page.locator('.date-facts')).toHaveCount(1);
 
-  // Born c. 251 (a 2-year interval) draws softer than died 356 (exact).
-  const [birth, death] = [await blur(0), await blur(1)];
-  const px = (s) => parseFloat(/blur\(([\d.]+)px\)/.exec(s)[1]);
-  expect(px(birth)).toBeGreaterThan(px(death));
-  await expect(page.locator('.date-bars')).toHaveAttribute('aria-label', /Born c\. 251/);
+  const rows = page.locator('.fact-row');
+  await expect(rows).toHaveCount(2);
+  await expect(rows.nth(0)).toContainText('Born');
+  await expect(rows.nth(0)).toContainText('c. 251');
+  // The place names are not in the manifest, so this text only exists once the
+  // saint's own file has landed on top of the reserved box.
+  await expect(rows.nth(0)).toContainText('Coma — Qiman al-Arus, Egypt');
+  await expect(rows.nth(1)).toContainText('Died');
+  await expect(rows.nth(1)).toContainText('356');
+  await expect(rows.nth(1)).toContainText('Mount Colzim');
 });
 
-test('an open bound runs off the window rather than taking a number', async ({ page }) => {
-  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
-  const bar = page.locator('.date-bar.open-start');
-  await expect(bar).toHaveCount(1);
-  await expect(page.locator('.date-bars')).toHaveAttribute('aria-label', /before 1000/);
+test('a place keeps the note that says how far it is really fixed', async ({ page }) => {
+  // "the place of his death is not more closely fixed" is the finding. A
+  // coordinate without it looks certain, which is the one thing this corpus
+  // must never do.
+  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
+  await expect(page.locator('.fact-note')).toContainText('not more closely fixed');
 });
 
 test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
@@ -233,7 +247,10 @@ test('a saint with no life, no image and no birth date is still a whole page', a
   // Removed from the General Roman Calendar in 1969 and still venerated: the
   // page must not turn that into a refusal.
   await expect(page.locator('.att').first()).toContainText('Venerated');
-  await expect(page.locator('.date-bar')).toHaveCount(1);
+  // Undated at birth and dated at death: the register prints the row it has
+  // and does not invent the one it does not.
+  await expect(page.locator('.fact-row')).toHaveCount(1);
+  await expect(page.locator('.fact-row')).toContainText('Died');
 });
 
 test('an address with no saint behind it is prose, not a red banner', async ({ page }) => {
@@ -758,14 +775,14 @@ test('the week and the month both take a swipe, in the same direction', async ({
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await swipe(page, '.cal-month', -120);
-  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
   await swipe(page, '.cal-month', 120);
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 
   // A short drag is a mistap, and a mostly-vertical one belongs to the scroll.
   await swipe(page, '.cal-month', -20);
   await swipe(page, '.cal-month', -120, 200);
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 });
 
 test('picking a date leaves the month open; only the button closes it', async ({ page }) => {
@@ -785,21 +802,24 @@ test('picking a date leaves the month open; only the button closes it', async ({
   await expect(page.locator('.cal-week')).toBeVisible();
 });
 
-test('the month keeps the week chevrons where they were, and names itself in the gutter', async ({ page }) => {
+test('the month keeps the week edges where they were, and names itself in the gutter', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
-  const weekPrev = await box('.cal-week > button');
-  const weekNext = await box('.cal-week > button:last-child');
+  const weekPrev = await box('.cal-week > .peek');
+  const weekNext = await box('.cal-week > .peek-next');
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
-  const monthPrev = await box('.cal-month > button');
-  const monthNext = await box('.cal-month > button:last-child');
+  const monthPrev = await box('.cal-month > .peek');
+  const monthNext = await box('.cal-month > .peek-next');
 
+  // Same column and same top at either grain. Not the same height: the week's
+  // edge is one day and the month's is a column of them, which is the one
+  // thing that legitimately differs between the two.
   for (const [w, m] of [[weekPrev, monthPrev], [weekNext, monthNext]]) {
     expect(Math.round(m.x)).toBe(Math.round(w.x));
     expect(Math.round(m.y)).toBe(Math.round(w.y));
-    expect(Math.round(m.height)).toBe(Math.round(w.height));
+    expect(Math.round(m.width)).toBe(Math.round(w.width));
   }
 
   // The name prints in the gutter under the jump stack and the back chevron
@@ -807,8 +827,11 @@ test('the month keeps the week chevrons where they were, and names itself in the
   // every date down a line for a label the week manages without. It ends where
   // the chevron ends and starts below it, so it costs the row no height at all.
   const name = await box('.month-name');
-  expect(Math.round(name.x + name.width)).toBe(Math.round(monthPrev.x + monthPrev.width));
-  expect(name.y).toBeGreaterThanOrEqual(monthPrev.y + monthPrev.height);
+  // It stops where the peeked column starts. The peek runs the full height of
+  // the grid now, so a name spanning the whole gutter would print over it.
+  expect(Math.round(name.x + name.width)).toBe(Math.round(monthPrev.x));
+  const jump = await box('.cal-jump');
+  expect(name.y).toBeGreaterThanOrEqual(jump.y + jump.height);
   expect(name.x).toBeLessThan((await box('.month-view')).x);
 });
 
@@ -838,7 +861,9 @@ test('the month is the week grown taller: the day names do not move', async ({ p
   await page.waitForTimeout(600);
 
   expect(week).toHaveLength(7);
-  expect(await text('.month-day-name')).toEqual(week);
+  // Scoped to the day-name row: the peeked column beside the grid carries a
+  // spacer in the same class, because it takes the same metrics from it.
+  expect(await text('.month-days .month-day-name')).toEqual(week);
 });
 
 test('the month spends its height on dates rather than on leading', async ({ page }) => {
@@ -988,7 +1013,7 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
   const six = await page.locator('.month-body').boundingBox();
 
   await page.locator('[data-mstep="1"]').click();
-  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
   const held = await page.locator('.month-body').evaluate((el) => el.style.height);
   expect(parseFloat(held)).toBeGreaterThan(0);
 
@@ -1183,3 +1208,201 @@ test('the glyph holds no colour of its own, and the states survive greyscale', a
   expect(undocumented.r).toBeLessThan(attested.r / 2);
 });
 
+/* ---- the 2026-08-21 refinements ---------------------------------------- */
+
+test('the header carries today without taking a line for it', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const today = page.locator('.chrome-today');
+  // Abbreviated, machine-readable underneath, and never wrapped.
+  await expect(today).toHaveText(/^\w{3} \d{1,2} \w{3}$/);
+  await expect(today).toHaveAttribute('datetime', /^\d{4}-\d{2}-\d{2}$/);
+
+  const m = await page.evaluate(() => {
+    const header = document.querySelector('header.chrome');
+    const stampEl = document.querySelector('.chrome-today');
+    const name = document.querySelector('.site-name').getBoundingClientRect();
+    const stamp = stampEl.getBoundingClientRect();
+    const theme = document.querySelector('#theme-toggle').getBoundingClientRect();
+    const s = getComputedStyle(header);
+    return {
+      header: header.getBoundingClientRect().height,
+      name: name.height,
+      padding: parseFloat(s.paddingTop) + parseFloat(s.paddingBottom),
+      lines: Math.round(stamp.height / parseFloat(getComputedStyle(stampEl).lineHeight)),
+      under: stamp.y >= theme.y + theme.height,
+      aligned: Math.round(stamp.x + stamp.width) === Math.round(theme.x + theme.width),
+      // Below 560 px the nav takes a row of its own, so the bar is two rows
+      // tall before the corner is counted at all.
+      stacked: document.querySelector('.site-nav').getBoundingClientRect().y >= name.bottom,
+    };
+  });
+
+  expect(m.lines).toBe(1);
+  expect(m.under, 'the date sits under the theme control').toBe(true);
+  expect(m.aligned, 'both hold the same right edge').toBe(true);
+  // The bar measured 61.3 px on one row and 88.8 px on two before the date
+  // existed; it measures 60.5 and 88.0 with it. The corner grew by a line and
+  // the bar's own padding paid for it. This is the assertion that fails if
+  // anyone takes the padding back without taking the line back too. Safe as an
+  // absolute: the height is driven by the corner, which is set in the system
+  // stack, not by the serif site name whose face is not ours to choose.
+  expect(m.header).toBeLessThan(m.stacked ? 90 : 62);
+});
+
+test('the arrows are gone and the grain itself stands at each edge', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  // Nothing in the row draws a chevron any more (author, 2026-08-21).
+  const glyphs = await page.locator('.cal-controls button').allTextContents();
+  expect(glyphs.join('')).not.toMatch(/[‹›]/);
+
+  // What stands there is the week continuing: the day behind it and the day
+  // ahead of it, on the same lines as the days between.
+  await expect(page.locator('.cal-week .peek-prev .day-num')).toHaveText('23');
+  await expect(page.locator('.cal-week .peek-next .day-num')).toHaveText('31');
+  const fades = await page.locator('.cal-week .peek').evaluateAll((els) =>
+    els.map((el) => getComputedStyle(el).maskImage),
+  );
+  expect(fades.every((f) => f.includes('gradient'))).toBe(true);
+
+  // The swipe is touch and pen only, so the edge has to stay clickable or a
+  // reader with a mouse has no way through the weeks at all.
+  await page.locator('.cal-week .peek-next').click();
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  await page.locator('.cal-week .peek-prev').click();
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+});
+
+test('the peeked numbers clear the contrast floor rather than being a faded wash', async ({ page }) => {
+  // A flat 50% opacity over --ink-soft is 2.1:1 and axe failed it on sight.
+  // The fade is a mask instead, so the ink stays at full strength wherever
+  // there is still a glyph to read.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  // Both edges. A first draft of this checked only the trailing one, and a
+  // backout that washed out just the leading one walked straight past it.
+  const peeks = await page.locator('.cal-week .peek').evaluateAll((els) =>
+    els.map((el) => {
+      const s = getComputedStyle(el);
+      return { color: s.color, opacity: s.opacity };
+    }),
+  );
+  const soft = await page.evaluate(() =>
+    getComputedStyle(document.querySelector('.week-strip button')).color,
+  );
+  expect(peeks).toHaveLength(2);
+  for (const peek of peeks) {
+    expect(peek.opacity).toBe('1');
+    expect(peek.color).toBe(soft);
+  }
+});
+
+test('the month peeks a column of the neighbouring month, on the grid own rows', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+
+  // September starts on a Tuesday, so its Mondays are 7, 14, 21 and 28.
+  await expect(page.locator('.cal-month .peek-next .peek-cell')).toHaveText(['7', '14', '21', '28']);
+
+  // On the grid's rows, not merely beside it: the first peeked cell shares a
+  // top with the grid's first row.
+  const tops = await page.evaluate(() => {
+    const first = document.querySelector('.month-grid button').getBoundingClientRect();
+    const peek = document.querySelector('.cal-month .peek-next .peek-cell').getBoundingClientRect();
+    return [Math.round(first.top), Math.round(peek.top)];
+  });
+  expect(tops[0]).toBe(tops[1]);
+
+  // And the name in the gutter is abbreviated, so it stops clear of the column.
+  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
+});
+
+test('the reckoning is the reader choice, and it is remembered', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const line = page.locator('.day-date');
+  await expect(line).toHaveText('Gregorian · 30 January 2026');
+
+  await page.locator('[data-reckoning="coptic"]').click();
+  await expect(line).toHaveText('Coptic · 22 Tobi 1742');
+  await expect(page.locator('[data-reckoning="coptic"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('[data-reckoning="gregorian"]')).toHaveAttribute('aria-pressed', 'false');
+
+  // The strip and the grid stay in the civil calendar the URL is in: choosing
+  // a reckoning relabels the day, it does not move the reader to another one.
+  await expect(page.locator('h1')).toHaveText(/30 January 2026/);
+
+  // Remembered across a visit, like the theme and the index layout.
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.day-date')).toHaveText('Coptic · 22 Tobi 1742');
+});
+
+test('the chosen reckoning stands directly above the image, and rolls with the day', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const order = await page.evaluate(() => {
+    const date = document.querySelector('.day-date').getBoundingClientRect();
+    const media = document.querySelector('.hero-media').getBoundingClientRect();
+    return { above: date.bottom <= media.top, inPanel: !!document.querySelector('.day-panel .day-date') };
+  });
+  expect(order.above).toBe(true);
+  // In the day panel and not in the chrome: it is the day's own date, so it
+  // rolls when the day does.
+  expect(order.inPanel).toBe(true);
+
+  await page.locator('.week-strip button').first().click();
+  await expect(page.locator('.day-panel:not(.slot-leaving) .day-date')).toHaveText(/26 January 2026/);
+});
+
+test('the hero image is 85% of the width it took, and opens the saint', async ({ page }) => {
+  // A tall icon at full width put the saint's own name below the fold at
+  // 360 px, which is the one thing a hero cannot do (author, 2026-08-21).
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  // 85% of the width it took, which is a different measurement in each of the
+  // panel's two layouts: the column narrowed from 260 to 221 where the panel
+  // gives the image a column, and the image narrowed within the panel where it
+  // does not.
+  const m = await page.evaluate(() => {
+    const hero = document.querySelector('.hero');
+    const s = getComputedStyle(hero);
+    // The used track sizes, which is the image's actual containing block. The
+    // panel has a border as well as padding, and subtracting only the padding
+    // from a bounding box is off by exactly the border.
+    const tracks = s.gridTemplateColumns.split(' ').map(parseFloat).filter((n) => !Number.isNaN(n));
+    return {
+      tracks,
+      column: hero.clientWidth - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight),
+      width: document.querySelector('.hero-media').getBoundingClientRect().width,
+    };
+  });
+  // Where the panel gives the image a column, the column itself narrowed from
+  // 260 to 221 and the image fills it. Where it does not, the image narrowed
+  // inside the panel.
+  const expected = m.tracks.length === 2 ? m.tracks[0] : 0.85 * m.column;
+  if (m.tracks.length === 2) expect(Math.round(m.tracks[0])).toBe(221);
+  expect(Math.abs(m.width - expected)).toBeLessThan(1);
+
+  // Clicking the image goes where clicking the name goes. It is hidden from
+  // the accessibility tree and out of the tab order on purpose: the name links
+  // to the same page, and a second link with no text of its own would be
+  // either an unnamed link or the same one announced twice.
+  const media = page.locator('.hero-media');
+  await expect(media).toHaveAttribute('aria-hidden', 'true');
+  await expect(media).toHaveAttribute('tabindex', '-1');
+  await media.click();
+  await expect(page.locator('h1.saint-name')).toHaveText('Augustine of Hippo');
+});
+
+test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
+  // The reason the image came down to 85%. Augustine is the tallest icon in
+  // the corpus and 28 August is his day, so this is the worst case the corpus
+  // actually holds rather than one constructed for the test.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const name = await page.locator('.hero-name').boundingBox();
+  expect(name.y).toBeLessThan(780);
+});

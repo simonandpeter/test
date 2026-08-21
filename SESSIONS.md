@@ -142,9 +142,11 @@ Picking a date no longer closes the month. The month's chevrons moved out of
 chevron positions — all four heights come from one `--cal-row-h`, which is what
 keeps them from shifting as the two swap. The month cross-fades over 420 ms.
 
-*Superseded in part by Amendment 15:* the month no longer names itself centred
-above its grid, and the cross-fade is now an unfurl out of the day-name line.
-The chevron arrangement and the swipe helper are unchanged.
+*Superseded in part by Amendments 15 and 16:* the month no longer names itself
+centred above its grid, the cross-fade is now an unfurl out of the day-name
+line, and the chevrons have been replaced by a peek of the neighbouring grain.
+The swipe helper is unchanged, and the peeks are still buttons precisely
+because the swipe is touch and pen only.
 
 **12. The glyph is 15% smaller everywhere** (author, 2026-08-21): badge pitch
 12 → 10.2, matrix pitch 9 → 7.65. Worth knowing before it shrinks again: the
@@ -226,6 +228,59 @@ carrying the padding itself, so the two boxes differ by 5 px vertically and by
 half a column horizontally while the glyphs land identically. A first draft of
 that assertion compared `getBoundingClientRect()` and read as a failure when
 the thing under test was already correct.
+
+**16. Seven refinements, and two of them cost more than they looked**
+(author, 2026-08-21). Today's date under the theme control; the month named in
+abbreviation; the chevrons replaced by a peek of the neighbouring grain; a
+reckoning toggle under the strip; that reckoning's date above the hero image;
+the image at 85% and clickable; and the saint page's date bars replaced by
+dates and places.
+
+**The chevrons are gone and the affordance is not.** What stands at each edge
+is the grain continuing — the day either side of the week, the column of dates
+either side of the month, on the grid's own rows — dissolving toward the margin
+through a mask. They are still buttons, deliberately: the swipe is touch and
+pen only by design (Amendment 11), so an edge with nothing to click would have
+stranded every reader with a mouse. Removing the glyph was the instruction;
+removing the way through the weeks would have been a different change.
+
+**The fade had to be a mask rather than an opacity, and axe is what said so.**
+A flat 50% wash over `--ink-soft` computes to `#b3aea8` on gesso — 2.1:1, a
+serious violation on two routes, caught the first time the suite ran. The ink
+now stays at full strength and the dissolve happens over the outer half of the
+peek, where there is no longer a glyph to read. The floor has still not been
+wrong.
+
+**The hero image shrank twice.** `85%` on the image *and* a column narrowed
+from 260 to 221 took 15% off 15%: 188 px where 221 was asked for. Both rules
+were correct in isolation and the media query lost to source order besides. The
+test that caught it measures the rendered width against the used grid track;
+nothing that reads the CSS would have seen it, and neither did a screenshot,
+because 188 px of Augustine looks perfectly reasonable.
+
+**The date bars are withdrawn, and the curve is not.** They were the
+uncertainty curve's only shipping consumer, so `tests/uncertainty.test.mjs` now
+pins its three constants directly rather than through a component that no
+longer exists — the map halo and the timeline still need them. Writing it
+turned up that DESIGN.md §6b's worked values were wrong in two places: 200
+years is 13.82 px and not 13.7, and "500 years and above → 24 px" is false, the
+clamp not binding until about 757 years. Both corrected. **A worked value
+nobody executes is a comment**, and it had been wrong since the day it was
+written.
+
+The saint page prints dates and places as one register keyed by the `kind` a
+date and a location share. The place *names* are not in the manifest — only
+coordinates are — so the rows are drawn at their final size from the card,
+which knows how many there will be, and the names are filled in when the
+saint's own file lands. The `note` on a location is kept: "the place of his
+death is not more closely fixed" is the finding, and a coordinate without it
+looks certain.
+
+Two smaller things. The header's corner is a two-line stack now and the bar's
+own vertical padding paid for the line, so the date arrived without the header
+growing: 61.3 px before, 60.5 after. And a backout check found a hole in a test
+of my own — the contrast assertion read only the trailing peek, so washing out
+the leading one walked straight past it. It reads both now.
 
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was

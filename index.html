@@ -38,7 +38,13 @@
   <header class="chrome">
     <a class="site-name" href="/">Gallery of Saints</a>
     <nav class="site-nav" id="site-nav" aria-label="Site"></nav>
-    <button id="theme-toggle" type="button"></button>
+    <div class="chrome-corner">
+      <button id="theme-toggle" type="button"></button>
+      <!-- Today, abbreviated, under the theme control. It rides inside the
+           line box the site name already occupies, so the header is exactly as
+           tall with it as without. -->
+      <time class="chrome-today" id="chrome-today"></time>
+    </div>
   </header>
 
   <main class="chrome">

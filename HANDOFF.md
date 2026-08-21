@@ -16,7 +16,7 @@ briefing.
    this one.
 4. `DESIGN.md` — binding. §7 is the glyph, §5b the calendar page.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; fifteen entries now, each recording
+   the most important page in the repo**; sixteen entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -32,8 +32,8 @@ veneration glyph in both its views, the calendar page, the saint detail page
 with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
-- 123 unit tests (`npm test`) — pure logic, no DOM.
-- 152 browser tests (`npm run test:e2e`) — across desktop and 360 px.
+- 126 unit tests (`npm test`) — pure logic, no DOM.
+- 168 browser tests (`npm run test:e2e`) — across desktop and 360 px.
 - `npm run test:all` runs both. CI runs both on every push.
 
 **Pushing happens outside this session.** Agent sessions have no git

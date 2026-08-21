@@ -112,8 +112,12 @@ header.chrome {
   align-items: baseline;
   column-gap: var(--space-6);
   row-gap: var(--space-2);
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-3);
+  /* Trimmed from 16/12 when today's date joined the corner (author,
+     2026-08-21). The corner is a two-line stack now and the padding is what
+     pays for it: the bar is the same height it was, and the date arrives
+     without the header taking a line off the page. */
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
   border-bottom: 1px solid var(--rule);
 }
 
@@ -132,9 +136,28 @@ header.chrome .site-nav {
   grid-area: nav;
 }
 
-header.chrome #theme-toggle {
+/* The corner holds the theme control with today's date beneath it. Stacked
+   rather than beside, because the control already reserves the width of its
+   longest label and anything sharing its line would move when that label
+   changed — the one thing the stacked-labels trick exists to prevent. */
+header.chrome .chrome-corner {
   grid-area: theme;
   justify-self: end;
+  display: grid;
+  justify-items: end;
+  row-gap: 1px;
+}
+
+/* Today, abbreviated: "Fri 30 Jan". Set tight and never wrapped — the corner
+   is the narrowest column in the header and a date that wrapped there would
+   push the bar taller, which is the one thing this line must not do. */
+.chrome-today {
+  font-family: var(--font-utility);
+  font-size: 11.5px;
+  line-height: 1.15;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .site-name {
@@ -185,6 +208,9 @@ nav.site-nav a[aria-current='page'] {
   color: var(--ink-soft);
   display: inline-grid;
   flex: none;
+  /* Half the standard vertical padding: the corner is two lines now and this
+     is the other half of what pays for the second one. */
+  padding-block: 2px;
 }
 
 #theme-toggle .theme-option {

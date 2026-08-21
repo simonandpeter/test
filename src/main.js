@@ -11,6 +11,7 @@ import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
 import { cancelPrefetches } from './lib/detail.js';
+import { todayIso } from './lib/calendar-page.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -95,8 +96,26 @@ function show({ route, params }) {
   first = false;
 }
 
+/**
+ * Today, abbreviated, in the header's corner. Stamped once at boot: a page
+ * left open across midnight shows yesterday for as long as it stays open, and
+ * a timer to fix that would have to be owned and torn down by something, for a
+ * line nobody navigates by. The `datetime` attribute carries the machine form
+ * so the abbreviation is never the only reading of it.
+ */
+function stampToday(el) {
+  const now = new Date();
+  el.dateTime = todayIso(now);
+  el.textContent = new Intl.DateTimeFormat('en-GB', {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+  }).format(now);
+}
+
 async function boot() {
   initTheme(document.getElementById('theme-toggle'));
+  stampToday(document.getElementById('chrome-today'));
   router = createRouter(routes, show);
 
   const veil = document.getElementById('veil');

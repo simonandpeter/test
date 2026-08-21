@@ -27,7 +27,7 @@ import * as store from '../lib/store.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
-import { renderDateBars } from '../ui/datebar.js';
+import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -125,7 +125,7 @@ function shell(card) {
     <div class="saint-columns">
       <div class="saint-aside">
         ${media}
-        ${renderDateBars(card.dates)}
+        ${renderDateFacts(card.dates, card.locations)}
         ${card.historicity ? `<p class="historicity utility">${esc(STRINGS.saint.historicity[card.historicity] ?? card.historicity)}</p>` : ''}
       </div>
 
@@ -169,6 +169,11 @@ function fillIn(el, payload, { data, router }) {
 
   const credit = el.querySelector('[data-credit]');
   if (credit) credit.innerHTML = creditLine(images?.[0]?.credit);
+
+  // The manifest carries each location's kind and coordinates but not its
+  // name, so the rows were drawn at their final size from the card and the
+  // names arrive here. Nothing moves; the skeletons are simply replaced.
+  fillPlaces(el, saint.dates, saint.locations);
 
   el.querySelector('[data-veneration]').innerHTML = veneration(saint);
 

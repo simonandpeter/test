@@ -92,61 +92,55 @@
   padding-top: var(--space-2);
 }
 
-/* ---- date bars --------------------------------------------------------- */
+/* ---- dates and places -------------------------------------------------- */
 
-.date-bars {
+/* The date-interval bars stood here until 2026-08-21, when the author asked
+   for the dates and the places instead. Dates and locations share one axis —
+   `kind` — so they read as one register: born when and where, died when and
+   where. A row with only one of the two is a finding, not a hole. */
+.date-facts {
   margin: 0 0 var(--space-4);
+  border-top: 1px solid var(--rule);
 }
 
-.date-row {
+.fact-row {
   display: grid;
-  grid-template-columns: 4em 1fr auto;
-  align-items: center;
+  grid-template-columns: 4.5em 1fr;
   gap: var(--space-2);
-  margin-bottom: var(--space-2);
-}
-
-.date-kind,
-.date-value {
-  color: var(--ink-soft);
-}
-
-.date-track {
-  position: relative;
-  height: 12px;
+  padding: var(--space-2) 0;
   border-bottom: 1px solid var(--rule);
-  overflow: hidden;
 }
 
-.date-bar {
-  position: absolute;
-  top: 2px;
-  height: 8px;
-  min-width: 3px;
-  background: var(--ink-soft);
-  border-radius: 1px;
-}
-
-/* An open bound has no coordinate to draw, so the bar dissolves toward the end
-   we do not know rather than stopping at a number we do not have. */
-.date-bar.open-start {
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%);
-  mask-image: linear-gradient(to right, transparent, #000 45%);
-}
-
-.date-bar.open-end {
-  -webkit-mask-image: linear-gradient(to left, transparent, #000 45%);
-  mask-image: linear-gradient(to left, transparent, #000 45%);
-}
-
-.date-scale {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 0 calc(4em + var(--space-2));
+.fact-kind {
   color: var(--ink-soft);
 }
 
-.date-bars-undated {
+.fact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fact-place {
+  color: var(--ink-soft);
+}
+
+/* What the sources will and will not fix about a place. Kept because it is
+   usually the honest part: "the place of his death is not more closely fixed"
+   is the finding, and dropping it would leave a coordinate looking certain. */
+.fact-note {
+  display: block;
+  font-style: italic;
+}
+
+.fact-place .skeleton {
+  display: block;
+  width: 70%;
+  height: 1em;
+}
+
+.date-facts-undated {
   color: var(--ink-soft);
   margin-bottom: var(--space-4);
 }
