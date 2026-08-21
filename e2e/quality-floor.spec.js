@@ -724,6 +724,106 @@ test('the two jump controls hold the left edge and carry names, not glyphs alone
   expect(new Set(boxes.map(Math.round)).size).toBe(2);
 });
 
+/**
+ * A touch swipe, as the listener sees it. Synthetic pointer events rather than
+ * a real gesture: what is under test is the threshold and the direction, not
+ * the browser's promise to deliver pointerdown before pointerup.
+ */
+const swipe = (page, selector, dx, dy = 0) =>
+  page.evaluate(
+    ([selector, dx, dy]) => {
+      const el = document.querySelector(selector);
+      const box = el.getBoundingClientRect();
+      const x = box.x + box.width / 2;
+      const y = box.y + box.height / 2;
+      const at = (px, py, pointerType) => ({
+        pointerId: 1, pointerType, clientX: px, clientY: py, bubbles: true, cancelable: true,
+      });
+      const kind = dx === 0 ? 'mouse' : 'touch';
+      el.dispatchEvent(new PointerEvent('pointerdown', at(x, y, kind)));
+      el.dispatchEvent(new PointerEvent('pointerup', at(x + dx, y + dy, kind)));
+    },
+    [selector, dx, dy],
+  );
+
+test('the week and the month both take a swipe, in the same direction', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  // A flick left is forward in time, at either grain.
+  await swipe(page, '.cal-week', -120);
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  await swipe(page, '.cal-week', 120);
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  await swipe(page, '.cal-month', -120);
+  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  await swipe(page, '.cal-month', 120);
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
+
+  // A short drag is a mistap, and a mostly-vertical one belongs to the scroll.
+  await swipe(page, '.cal-month', -20);
+  await swipe(page, '.cal-month', -120, 200);
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
+});
+
+test('picking a date leaves the month open; only the button closes it', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const month = page.locator('.cal-month');
+  const toggle = page.locator('[data-month]');
+
+  await toggle.click();
+  await expect(month).toBeVisible();
+  await page.locator('.month-grid [data-iso="2026-08-08"]').click();
+  await expect(page.locator('h1')).toHaveText(/8 August 2026/);
+  // A reader comparing days should not have to reopen the month between them.
+  await expect(month).toBeVisible();
+
+  await toggle.click();
+  await expect(month).toBeHidden();
+  await expect(page.locator('.cal-week')).toBeVisible();
+});
+
+test('the month keeps the week chevrons where they were, and names itself between them', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const box = async (sel) => (await page.locator(sel).first().boundingBox());
+  const weekPrev = await box('.cal-week > button');
+  const weekNext = await box('.cal-week > button:last-child');
+
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  const monthPrev = await box('.cal-month > button');
+  const monthNext = await box('.cal-month > button:last-child');
+
+  for (const [w, m] of [[weekPrev, monthPrev], [weekNext, monthNext]]) {
+    expect(Math.round(m.x)).toBe(Math.round(w.x));
+    expect(Math.round(m.y)).toBe(Math.round(w.y));
+    expect(Math.round(m.height)).toBe(Math.round(w.height));
+  }
+
+  // The name is centred in the grid between them, not shoved against one side.
+  const grid = await box('.month-view');
+  const name = await box('.month-name');
+  const slack = grid.x + grid.width / 2 - (name.x + name.width / 2);
+  expect(Math.abs(slack)).toBeLessThan(2);
+});
+
+test('the month fades rather than appearing between two frames', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const month = page.locator('.cal-month');
+  await page.locator('[data-month]').click();
+
+  // Caught mid-fade: present and laid out, not yet at full strength.
+  const during = await month.evaluate((el) => ({
+    duration: getComputedStyle(el).transitionDuration,
+    property: getComputedStyle(el).transitionProperty,
+  }));
+  expect(parseFloat(during.duration)).toBeGreaterThanOrEqual(0.4);
+  expect(during.property).toContain('opacity');
+  await expect(month).toHaveCSS('opacity', '1');
+});
+
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');

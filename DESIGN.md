@@ -196,15 +196,33 @@ and both on screen at once was two date pickers competing for the same click.
 The month toggle stays lit while the month shows, because with the week gone
 nothing else says which grain you are in.
 
+The month's chevrons sit in exactly the places the week's occupy — same x,
+same y, same height, all four derived from one `--cal-row-h` — so nothing moves
+as the two swap. The month names itself centred above its grid, between them,
+where the week has nothing to name. **Picking a date does not close the month**;
+only the toggle does, so a reader comparing days is not reopening it between
+each one.
+
 The chevrons flanking the week move a **week**; a day is chosen by clicking it.
 Arrow keys inside the strip still move a day, which is how a keyboard reaches
-one without tabbing across all seven. The row does not wrap — wrapping would
+one without tabbing across all seven. **Both grains also take a horizontal
+swipe**, in the same direction at either grain: a flick left is forward in
+time. Touch and pen only — a mouse drag across a date grid is a selection, not
+a gesture — and the click that would otherwise land at the end of the flick is
+swallowed once. The row does not wrap — wrapping would
 drop the jump buttons off the left edge, which is the arrangement — so at
 narrow widths the chevrons and day cells give up width instead; seven days plus
 both controls fit 360 px and the quality floor's overflow check holds it.
 
 The page opens on this row rather than on a heading, so it takes a heading's
 worth less air beneath the site header than every other view.
+
+**The month cross-fades**, over `--dur-month` (420 ms) — deliberately slower
+than the day roll, because five rows arriving between two frames is a jolt and
+there is far more of it arriving. Reduced motion drops the transition through
+the global rule in base.css, and the JS skips the matching wait rather than
+holding a blank row for 420 ms with no animation behind it: removed, not
+shortened.
 
 **Dense against sparse.** A day with twelve commemorations across four
 traditions and a day with one must both read as composed. Density lives in the
@@ -423,26 +441,32 @@ the registry already flags it `coarse: true` for exactly this.
 ### 7c. Sizes, and which view each context takes
 
 The matrix is four rows tall where the badge is one, so it cannot sit beside a
-name at the scale a one-row strip did. **The matrix ships at pitch 9** — 63 x
-36 px, an attested disc 5.6 px across and an undocumented dot 2.0 px. That dot
-is the floor: below pitch 9 it stops being a mark and becomes a smudge, and the
-size distinction that carries the third state through greyscale goes with it.
-**The badge ships at pitch 12** — 48 x 12 px for four communions.
+name at the scale a one-row strip did. **The matrix ships at pitch 7.65** —
+53.55 x 30.6 px. **The badge ships at pitch 10.2** — 40.8 x 10.2 px for four
+communions. Both are 15% down on the sizes first shipped (author, 2026-08-21).
 
 Measured in the shipping build, both viewports:
 
-| Context | Type | Line box | Glyph | Verdict |
-|---|---|---|---|---|
-| Saint page `h1` | 40 px desktop, 28 px at 360 | 50 px / 36 px | 63 x 36 | **Matrix.** Room to spare on desktop; sets the line at 360. |
-| Calendar hero `h2` | 26 px | 36 px | 63 x 36 | **Matrix.** Grows the natural 32.5 px line by 3.5 px. Nothing else moves. |
-| Index card / row name | 17 px | 42 px | 48 x 12 | **Badge.** A matrix here needs pitch 6 and a 1.3 px dot. |
-| Register and shelf rows | 17 px | 73–77 px | 48 x 12 | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
+| Context | Type | Line box | Glyph | Disc / dot | Verdict |
+|---|---|---|---|---|---|
+| Saint page `h1` | 40 px desktop, 28 px at 360 | 50 px / 35 px | 53.55 x 30.6 | 4.74 / 1.68 | **Matrix.** Sits inside the line box at both widths. |
+| Calendar hero `h2` | 26 px | 33 px | 53.55 x 30.6 | 4.74 / 1.68 | **Matrix.** Inside the natural line; nothing moves. |
+| Index card / row name | 17 px | 42 px | 40.8 x 10.2 | 6.32 / 2.24 | **Badge.** A matrix here needs a sub-1.5 px dot. |
+| Register and shelf rows | 17 px | 73–77 px | 40.8 x 10.2 | 6.32 / 2.24 | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
 
-Two things worth knowing. The matrix at pitch 9 is 63 px wide against the
-badge's 65 px at the size it replaced, so it takes **no more** horizontal room
-than what it replaced — the cost is vertical only. And at 360 px the glyph sits
-flush to the content edge with the name wrapped within itself; there is no
-horizontal page overflow at 360 or at 320, and a browser test pins that.
+**The undocumented dot on the matrix is now 1.68 px**, below the 2 px floor
+recorded here before the 15% reduction. That floor was about legibility at 1x,
+where a sub-2 px circle is a smudge rather than a mark; at 2x and above — which
+is most readers — it is 3.4 device pixels and reads cleanly. It is recorded
+rather than quietly rewritten, because it is the size distinction that carries
+the third state through greyscale, and it is the first thing to give if the
+glyph is asked to shrink again.
+
+One thing worth knowing: the matrix takes **less** horizontal room than the
+badge it replaced on those two contexts, so the cost of the extra rows is
+vertical only. At 360 px the glyph sits flush to the content edge with the name
+wrapped within itself; there is no horizontal page overflow at 360 or at 320,
+and a browser test pins that.
 
 This split is the brief's own: §9.1 is "cards, map, dense lists", §9.2 is "one
 saint's own page", and §9.2 says in terms not to merge the two into one

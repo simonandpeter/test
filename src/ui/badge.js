@@ -153,7 +153,7 @@ const cellTitle = (c) => `${c.label}: ${STRINGS.badge.state[c.state]}`;
  * lattice owns the whole square each mark is centred in, so a badge and a
  * matrix at the same pitch align cell for cell.
  */
-export function renderBadge(attestations, { pitch = 16, cols = Infinity } = {}) {
+export function renderBadge(attestations, { pitch = 10.2, cols = Infinity } = {}) {
   const cells = rollup(attestations);
   const perRow = Math.min(cells.length, cols === Infinity ? cells.length : cols);
   const rows = Math.ceil(cells.length / perRow);

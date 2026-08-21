@@ -112,7 +112,7 @@ const cellTitle = (c) =>
  * columns x pitch and height the communion rows x pitch, per spec §4. Four
  * rows is what rules the matrix out of a register row: see DESIGN.md §7c.
  */
-export function renderMatrix(attestations, { pitch = 9 } = {}) {
+export function renderMatrix(attestations, { pitch = 7.65 } = {}) {
   const rows = matrixRows(attestations);
   const cols = riteColumns().length;
   const round = (n) => Math.round(n * 1000) / 1000;

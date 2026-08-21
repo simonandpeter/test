@@ -49,6 +49,9 @@
   --dur: 200ms;
   --dur-slot: 260ms;
   --dur-theme: 300ms;
+  /* The month is five rows arriving at once, so it takes longer than anything
+     else on the page. Appearing between two frames read as a jolt. */
+  --dur-month: 420ms;
 
   /* The uncertainty curve (DESIGN.md §6b): softness(p) = clamp(min·p^gamma,
      min, max), px at base scale. One curve for date bars, map halos and

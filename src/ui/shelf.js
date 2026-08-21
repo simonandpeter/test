@@ -27,7 +27,7 @@ function row(card, router, { removable = false } = {}) {
     : '';
   return `<li>
     <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(card.display_name)}</a>
-    ${renderBadge(card.attestations, { pitch: 12 })}
+    ${renderBadge(card.attestations, { pitch: 10.2 })}
     <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
     ${remove}
   </li>`;

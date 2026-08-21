@@ -538,7 +538,7 @@ function card(item, router, rows = false) {
   // the link, where its label would become part of the link's.
   const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
-      ${renderBadge(item.attestations, { pitch: 12 })}
+      ${renderBadge(item.attestations, { pitch: 10.2 })}
     </span>
     <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>`;
 

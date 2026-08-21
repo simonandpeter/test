@@ -129,6 +129,26 @@ column. Register rows pin after the feast date, since the date holds that row's
 margin; below 480 px the date wraps to its own line and the glyph pins to the
 name's line instead. DESIGN.md §7d.
 
+**11. The calendar takes swipes, and the month behaves like a place rather
+than a menu** (author, 2026-08-21). `src/ui/swipe.js` is a small pointer-event
+helper: touch and pen only, 45 px threshold, more across than down, and it
+swallows the one click that would otherwise land where the finger lifted — a
+flick across the week ending on Thursday was changing the week and then
+selecting a day in it. The elements need `touch-action: pan-y` or the browser
+takes the drag as a scroll and the events never arrive.
+
+Picking a date no longer closes the month. The month's chevrons moved out of
+`.month-view` into a `.cal-month` wrapper so they occupy exactly the week's
+chevron positions — all four heights come from one `--cal-row-h`, which is what
+keeps them from shifting as the two swap. The month cross-fades over 420 ms.
+
+**12. The glyph is 15% smaller everywhere** (author, 2026-08-21): badge pitch
+12 → 10.2, matrix pitch 9 → 7.65. Worth knowing before it shrinks again: the
+matrix's undocumented dot is now 1.68 px, under the 2 px legibility floor
+DESIGN.md §7c recorded, and that dot is what carries the third state through
+greyscale. Fine at 2x and above; it is the first thing that gives if the glyph
+is asked to shrink a third time.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

@@ -26,6 +26,7 @@ import { observePrefetch } from '../lib/detail.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
+import { onSwipe } from '../ui/swipe.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -62,6 +63,9 @@ const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
   <path d="M8 2.75v4M16 2.75v4" stroke-linecap="round"/>
 </svg>`;
 
+/** Matches --dur-month in tokens.css; the fade is long on purpose. */
+const MONTH_FADE = 420;
+
 let state = null;
 
 /**
@@ -72,6 +76,7 @@ let state = null;
 export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
   clearTimeout(state?.rollTimer);
+  clearTimeout(state?.monthTimer);
   if (state) state.cleanups = [];
   state = null;
 }
@@ -93,7 +98,7 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     monthCursor: null, monthOpen: false,
-    cleanups: [], dayCleanups: [], rollTimer: null,
+    cleanups: [], dayCleanups: [], rollTimer: null, monthTimer: null,
   };
 
   el.innerHTML = `
@@ -110,7 +115,11 @@ export function render(el, { data, params, router }) {
             <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
             <button type="button" data-step="7" aria-label="${STRINGS.calendar.nextWeek}">›</button>
           </div>
-          <div class="month-view" hidden></div>
+          <div class="cal-month" hidden>
+            <button type="button" data-mstep="-1" aria-label="${STRINGS.calendar.prevMonth}">‹</button>
+            <div class="month-view"></div>
+            <button type="button" data-mstep="1" aria-label="${STRINGS.calendar.nextMonth}">›</button>
+          </div>
         </div>
       </div>
       <h1 class="cal-date"></h1>
@@ -126,6 +135,15 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-step="7"]').addEventListener('click', () => step(7));
   el.querySelector('[data-today]').addEventListener('click', () => select(todayIso()));
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
+  el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
+  el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+
+  // Same gesture, same direction, whichever grain is showing: a flick left is
+  // forward in time. Bound to the containers, which survive every repaint.
+  state.cleanups.push(
+    onSwipe(el.querySelector('.cal-week'), { left: () => step(7), right: () => step(-7) }),
+    onSwipe(el.querySelector('.cal-month'), { left: () => stepMonth(1), right: () => stepMonth(-1) }),
+  );
   el.querySelector('.week-strip').addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
@@ -254,15 +272,49 @@ function paintChrome() {
  * The month replaces the week rather than opening beneath it: they answer the
  * same question at two grains, and showing both at once was two date pickers
  * competing for the same click.
+ *
+ * The month cross-fades in and out. A grid five rows tall appearing between
+ * two frames is a jolt; the fade is deliberately slower than the day roll
+ * because there is far more of it arriving. It only ever closes from this
+ * button — picking a date leaves it open, so a reader comparing days does not
+ * have to reopen the month between each one.
  */
 function toggleMonth() {
   state.monthOpen = !state.monthOpen;
-  const { el } = state;
-  el.querySelector('[data-month]').setAttribute('aria-expanded', String(state.monthOpen));
-  el.querySelector('[data-month]').classList.toggle('is-on', state.monthOpen);
-  el.querySelector('.month-view').hidden = !state.monthOpen;
-  el.querySelector('.cal-week').hidden = state.monthOpen;
-  if (state.monthOpen) paintMonth();
+  const { el, monthOpen } = state;
+  const month = el.querySelector('.cal-month');
+  const week = el.querySelector('.cal-week');
+  const button = el.querySelector('[data-month]');
+
+  button.setAttribute('aria-expanded', String(monthOpen));
+  button.classList.toggle('is-on', monthOpen);
+  clearTimeout(state.monthTimer);
+
+  // Reduced motion removes the fade, so there is nothing to wait for: waiting
+  // anyway would be a delay with no animation behind it.
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (monthOpen) {
+    paintMonth();
+    week.hidden = true;
+    month.hidden = false;
+    if (reduced) return month.classList.add('is-open');
+    // One frame at opacity 0 in the layout, so the transition has a start.
+    requestAnimationFrame(() => month.classList.add('is-open'));
+    return;
+  }
+
+  month.classList.remove('is-open');
+  if (reduced) {
+    month.hidden = true;
+    week.hidden = false;
+    return;
+  }
+  state.monthTimer = setTimeout(() => {
+    month.hidden = true;
+    week.hidden = false;
+    state.monthTimer = null;
+  }, MONTH_FADE);
 }
 
 function paintMonth() {
@@ -297,26 +349,21 @@ function paintMonth() {
   el.querySelector('.month-view').innerHTML = `
     <div class="month-head">
       <span class="month-name">${monthFmt.format(utc(first))}</span>
-      <button type="button" data-mstep="-1" aria-label="${STRINGS.calendar.prevMonth}">‹</button>
-      <button type="button" data-mstep="1" aria-label="${STRINGS.calendar.nextMonth}">›</button>
     </div>
     <div class="month-grid">
       ${dayNames.map((n) => `<span class="month-day-name utility">${n}</span>`).join('')}
       ${cells.join('')}
     </div>`;
 
-  el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
-  el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+  // Picking a date does not close the month: only the toggle does.
   for (const b of el.querySelectorAll('.month-grid [data-iso]')) {
-    b.addEventListener('click', () => {
-      toggleMonth();
-      select(b.dataset.iso);
-    });
+    b.addEventListener('click', () => select(b.dataset.iso));
   }
 }
 
 function stepMonth(n) {
   const c = state.monthCursor;
+  if (!c) return;
   const month = c.month + n;
   state.monthCursor = {
     year: c.year + Math.floor((month - 1) / 12),
@@ -379,7 +426,7 @@ function paintDay(panel) {
           return `<li>
             <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
               data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
-            ${renderBadge(saint.attestations, { pitch: 12 })}
+            ${renderBadge(saint.attestations, { pitch: 10.2 })}
             ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
             <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
           </li>`;
@@ -397,7 +444,7 @@ function paintDay(panel) {
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
             <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
           </h2>
-          ${renderMatrix(hero.attestations, { pitch: 9 })}
+          ${renderMatrix(hero.attestations, { pitch: 7.65 })}
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>

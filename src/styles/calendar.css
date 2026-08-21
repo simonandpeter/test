@@ -8,6 +8,8 @@
    looking at. Keeping them out of the strip means the strip's own chevrons are
    unambiguously about the week. */
 .cal-controls {
+  /* Every control in the row is this tall, or half of it stacked. */
+  --cal-row-h: 53px;
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
@@ -25,10 +27,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Sized so the pair stands exactly as tall as a week-strip button, which is
-     what makes the left edge read as one block rather than two stray controls. */
+  /* Derived from the row height, so the pair stands exactly as tall as the
+     strip beside it and the left edge reads as one block rather than two
+     stray controls. */
   width: 34px;
-  height: 23px;
+  height: calc((var(--cal-row-h) - var(--space-1)) / 2);
   padding: 0;
   color: var(--ink-soft);
 }
@@ -50,21 +53,53 @@
   min-width: 0;
 }
 
-.cal-week {
+.cal-week,
+.cal-month {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: var(--space-2);
+  /* The browser keeps sending pointer events for a sideways drag, and still
+     scrolls the page on a vertical one. Without this a swipe is a scroll. */
+  touch-action: pan-y;
+}
+
+/* One height for every control in the row — the two chevrons of the week, the
+   two of the month, and the jump stack — so the month's arrows land in exactly
+   the place the week's were and nothing shifts as they swap. */
+.cal-week > button,
+.cal-month > button {
+  flex: none;
+  height: var(--cal-row-h);
+}
+
+.cal-week {
+  min-height: var(--cal-row-h);
+}
+
+.month-view {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* A grid five rows tall appearing between two frames is a jolt. It fades, and
+   the fade is slower than the day roll because there is more of it arriving.
+   Reduced motion drops the transition through the global rule in base.css and
+   the JS skips the matching wait, so the swap is instant rather than blank. */
+.cal-month {
+  opacity: 0;
+  transition: opacity var(--dur-month) var(--ease);
+}
+
+.cal-month.is-open {
+  opacity: 1;
 }
 
 /* A class selector outranks the user agent's [hidden] rule, so display: flex
    would keep the week on screen underneath the month. The month replaces the
    week; it does not open below it. */
-.cal-week[hidden] {
+.cal-week[hidden],
+.cal-month[hidden] {
   display: none;
-}
-
-.cal-week > button {
-  flex: none;
 }
 
 .week-strip {
@@ -104,10 +139,12 @@
   .cal-controls {
     gap: var(--space-2);
   }
-  .cal-week {
+  .cal-week,
+  .cal-month {
     gap: var(--space-1);
   }
-  .cal-week > button {
+  .cal-week > button,
+  .cal-month > button {
     width: 22px;
     padding-inline: 0;
   }
@@ -159,17 +196,17 @@
   padding: var(--space-3);
 }
 
+/* The month's name sits centred above its grid, between the two chevrons,
+   where the week has nothing to name. */
 .month-head {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-3);
+  justify-content: center;
   margin-bottom: var(--space-2);
 }
 
 .month-head .month-name {
   font-family: var(--font-serif);
   font-weight: 500;
-  margin-inline-end: auto;
 }
 
 .month-grid {
