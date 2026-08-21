@@ -14,7 +14,8 @@ briefing.
    mid-build; if it disagrees with anything below, it wins and the docs get
    rewritten. Check the file rather than trusting a summary of it, including
    this one.
-4. `DESIGN.md` — binding. §7 is the glyph, §5b the calendar page.
+4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
+   §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
    the most important page in the repo**; sixteen entries now, each recording
    something that cost real time to learn.
@@ -45,7 +46,46 @@ to push, and do not treat a local pass as evidence about what was committed.
 
 **Check `git log origin/main..HEAD` before anything else**, all the same: it
 tells you which commits have not yet been through GitHub Actions, whoever is
-doing the pushing.
+doing the pushing. It was empty at the close of the last session.
+
+## The calendar chrome, because it moved three times on 2026-08-21
+
+The habit page is the screen the author has been reviewing hardest, and it now
+looks nothing like the code an older document would lead you to expect. Read
+DESIGN.md §5b in full before touching it. In short:
+
+- **There are no chevrons.** What stands at each edge of the week and of the
+  month is the grain continuing — the day either side of the week, the
+  neighbouring month's column of dates on the grid's own rows — dissolving
+  toward the margin through a **mask**, not an opacity. They are still buttons
+  on purpose: the swipe is touch and pen only by design, so an edge with
+  nothing to click strands every reader with a mouse. Removing the glyph was
+  the instruction; removing the way through the weeks would be a different
+  change.
+- **The month is the week grown taller**, not a panel that replaces it. It
+  carries no frame, takes the strip's seven columns and gap, and the day names
+  sit in the same place at either grain — same column centres, same top, to the
+  pixel at 1280 and at 360. A browser test measures the *text*, not its box:
+  the two boxes legitimately differ where the glyphs do not.
+- **The month names itself in the gutter**, abbreviated — "Aug 2026" — under
+  the jump stack, stopping where the peeked column starts.
+- **Toggling the month unfurls it** out of the day-name line over
+  `--dur-month`, and the row is as tall as whichever grain is taller, so the
+  page below follows the growth instead of jumping. Height is set in pixels by
+  the JS for the length of the change, because there is no transitioning to
+  `auto` — and a forced layout sits between the two values, or the browser
+  coalesces them and there is no transition to run.
+- **A grain steps sideways.** Week or month, by any means — the movement
+  decides it, not the gesture. Picking a day inside the week already showing
+  has nowhere to travel to and simply repaints.
+- **The reckoning is the reader's.** Four buttons under the strip, remembered
+  in `settings.calendarPreference`, and the chosen calendar's date stands
+  directly above the hero image inside the day panel, so it rolls with the day.
+  The old line printing all three non-civil reckonings at once is gone.
+- **The hero image takes 85%** of the width it took, applied **once** — in the
+  column where the panel gives it a column, in the image where it does not. It
+  opens the saint, hidden from the accessibility tree because the name beside
+  it already links there.
 
 ## The glyph, because it has moved twice
 
@@ -75,18 +115,27 @@ Read DESIGN.md §7 in full before touching it. In short:
 
 ### First: refinements
 
-The author has been reviewing screen by screen and will keep going. Expect
-short, specific requests. What that has looked like so far, so you can match
+The author reviews screen by screen and will keep going. Expect short, specific
+requests, several at a time. What that has looked like so far, so you can match
 the standard:
 
-- **Render it and look at it.** Several of these were things no test would
-  catch and no amount of reading the code would reveal. Screenshot the change.
+- **Render it and look at it.** `scripts/shot.mjs` exists for exactly this.
+  Several fixes were things no test would catch and no amount of reading the
+  code would reveal — and one recent one *looked* right in a screenshot while
+  being 15% wrong, so measure as well as look.
 - **Every fix gets a browser test, and the test gets checked.** Back the fix
-  out, confirm the test fails, put it back. Two of the last four fixes were
-  one-line CSS changes whose tests would have passed without them.
-- **The quality floor is a real gate and it has caught real regressions** —
-  a 360 px overflow, a 5 px row shift. When it fails, fix the cause. It has not
-  yet been wrong.
+  out, confirm the test fails, put it back, and say that you did. This is not
+  ceremony: the last round's eight backouts found one test of mine that read
+  only half of what it claimed to check.
+- **The quality floor is a real gate and it has caught real regressions** — a
+  360 px overflow, a 5 px row shift, and a 2.1:1 contrast failure on a fade
+  that was meant to be decorative. When it fails, fix the cause. It has not yet
+  been wrong.
+- **Say when a request contradicts DESIGN.md or SESSIONS.md**, and record the
+  reversal rather than absorbing it quietly. Four settled decisions went that
+  way on 2026-08-21 alone — where the month prints its name, how it arrives,
+  the chevrons, and the date bars. Each is written up with the reasoning, and
+  the superseded entry is marked as such where it sits.
 
 ### Then: Session 4b, the ship gate — still outstanding
 
@@ -147,6 +196,18 @@ session). SESSIONS.md has each in full.
   animation must say which copy is current.** A bare `querySelector` cannot.
   That was Amendment 9, and it was invisible until someone clicked faster than
   the designer did.
+- **A decorative fade is still text.** `opacity` on a colour is a new colour,
+  and axe reads it: a 50% wash over `--ink-soft` is 2.1:1 on gesso and a
+  serious violation. Fade with a `mask-image` instead, so the ink keeps its
+  value wherever there is still a glyph to read (Amendment 16).
+- **A proportion applied in two places multiplies.** "85% of the width" put on
+  both the image and its column took 15% off 15%. Both rules read correctly in
+  isolation; the only thing that caught it was a test measuring the rendered
+  width against the used grid track (Amendment 16).
+- **A worked value nobody executes is a comment.** Two of the five worked
+  values for the uncertainty curve in DESIGN.md §6b had been wrong since the
+  day they were written, and were only found when the curve got a test file of
+  its own. If a document pins a number, pin it in a test too.
 - Adding a saint means adding one folder. Never hand-edit `data/`.
 
 ## Environment notes (Windows)
@@ -156,14 +217,15 @@ session). SESSIONS.md has each in full.
 - **PowerShell 5.1 writes a BOM** with `Set-Content -Encoding utf8`, which
   breaks `JSON.parse`. Prefer the Write tool, or patch files with short Python
   scripts — that is what recent sessions have used and it has been reliable.
-- Git Bash mangles leading-slash paths in arguments. Verify against live URLs.
-- `npm run dev` must be backgrounded; it does not exit.
 - **Git Bash rewrites a leading-slash argument into a Windows path**, so
   `node scripts/shot.mjs x /calendar/2026-01-30` navigates to
-  `C:/Program Files/Git/calendar/...`. `export MSYS_NO_PATHCONV=1` first.
-- `scripts/shot.mjs <name> <url> [width] [click:sel|wait:ms ...]` screenshots a
+  `C:/Program Files/Git/calendar/…`. `export MSYS_NO_PATHCONV=1` first, and
+  verify anything path-shaped against a live URL.
+- `scripts/shot.mjs <name> <url> [width] [click:sel|wait:ms …]` screenshots a
   running preview into `shots/`, which is how the house rule about rendering a
-  change and looking at it gets honoured. Not part of the suite.
+  change and looking at it gets honoured. Not part of the suite; `shots/` and
+  `.tmp/` are gitignored.
+- `npm run dev` must be backgrounded; it does not exit.
 - **Never leave a `vite preview` running.** Playwright's config does not reuse
   a server it did not start, so a stray one on :4173 fails the run loudly. Note
   that killing the npx wrapper does not always kill the vite child — check
@@ -171,9 +233,11 @@ session). SESSIONS.md has each in full.
 - **`font-display: optional` makes absolute layout assertions flaky.** A cold
   load keeps the fallback face, whose wider metrics wrap rows differently — 31
   px of difference on the index. Assert things that measure the same in either
-  face.
-- Large heredocs through the Bash tool truncate unpredictably; write source
-  files with the Write tool and patch them with short scripts.
+  face; the utility stack is safer to measure than the serif.
+- Large heredocs through the Bash tool truncate or fail to parse
+  unpredictably; write source files with the Write tool and patch them with
+  short Python scripts. Verify a scripted string replacement actually matched —
+  one silently did not, and the CSS it was meant to write went missing.
 - CRLF warnings from git are noise on this repo.
 - **The author's PAT lacks the `workflow` scope.** If a commit touches
   `.github/workflows/`, their push will be rejected — tell them rather than
@@ -181,9 +245,14 @@ session). SESSIONS.md has each in full.
 
 ## Outstanding, needs the author — not you
 
-- **Unpushed commits, if `git log origin/main..HEAD` shows any.** Pushing is
-  handled in a separate session of the author's, not here; what is owed is
-  confirmation that the Actions run went green before anything is built on top.
+- **Confirmation that CI is green** for whatever was pushed last. Pushing
+  happens in a separate session; what is owed here is the green run before
+  anything is built on top.
+- **The Gregorian reckoning reads twice.** With Gregorian chosen, the line
+  above the hero image says "Gregorian · 28 August 2026" under an `h1` reading
+  "Friday, 28 August 2026". It is inherent to offering Gregorian in a toggle
+  whose job is to name the reckoning. The cleanest fix is dropping Gregorian
+  from the four; that is the author's call.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because
@@ -204,6 +273,10 @@ session). SESSIONS.md has each in full.
 - **The Index sits in the standard 72ch content column** (DESIGN.md §5), which
   is two cards wide on a desktop. Widening it for that one page is a design
   decision.
+- **The uncertainty curve has no shipping consumer.** The date bars were its
+  first and were withdrawn on 2026-08-21; the map halo and the timeline
+  dissolve are still to come. `tests/uncertainty.test.mjs` pins its three
+  constants directly in the meantime, so they cannot drift unnoticed.
 - **Data acquisition has not started.** Amendment 2 says the overnight work is
   the pipeline and the review workflow, not the corpus. It is the critical path
   to anything shipping.
