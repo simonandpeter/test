@@ -220,9 +220,14 @@ main.chrome {
   color: var(--rubric);
 }
 
-/* A saint's name and their veneration glyph are one line: the mark sits to the
-   right of the name wherever a name appears, at the size of the type it
-   accompanies.
+/* A saint's name and their veneration glyph are one line: the mark is pinned
+   to the right margin of that line wherever a name appears, at the size of the
+   type it accompanies.
+
+   Pinned to the margin rather than trailing the name (author, 2026-08-21), so
+   the glyph holds one column down a register or a page instead of ranging in
+   and out with the length of each name. A ragged right edge on a mark whose
+   whole job is that position encodes identity was reading as noise.
 
    The line never wraps — the name shrinks and wraps within itself instead.
    Letting the glyph fall to its own line is not a graceful degradation, it is
@@ -248,6 +253,14 @@ main.chrome {
 .register .badge {
   flex: none;
   align-self: center;
+}
+
+/* The pin. The gap above is the minimum clearance a long name leaves; this is
+   what puts a short name's glyph in the same column as a long one's. Register
+   rows pin differently — they have a feast date holding the margin — see
+   calendar.css. */
+.name-line .badge {
+  margin-left: auto;
 }
 
 /* Multi-script name forms (Ἁγνή, Ⲁⲛⲧⲱⲛⲓⲟⲥ, ܢܣܛܘܪܝܘܣ). The line-height is a

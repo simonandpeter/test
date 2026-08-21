@@ -108,6 +108,27 @@ repo had vestigial traces of a still older circle draft — a stale `dot diamete
 like it had already considered and rejected circles. Neither is a substitute
 for rendering the thing and looking at it.
 
+**9. The day panel could be duplicated by clicking faster than the roll.**
+`slotSwap` took `viewport.querySelector('.day-panel')` as the panel to replace,
+but during the 300 ms roll that selector finds the *leaving* panel — so a
+second click inside the window appended a third panel and orphaned the second,
+which then outlived every navigation after it. The visible symptom was a day
+showing an empty-day notice and a hero at once. Fixed by landing any roll still
+in flight before starting a new one (`landRoll`), and the timer now lives on
+`state` so `destroy()` can clear it. A browser test clicks two days 60 ms apart
+and asserts one panel; it fails without the fix.
+
+Worth generalising: anything that keeps two copies of a thing in the DOM for
+the length of an animation needs to say which copy is current. A bare
+`querySelector` cannot, and the failure is invisible until someone clicks
+faster than the designer did.
+
+**10. The glyph is pinned to the right margin of its line**, not trailing the
+name (author, 2026-08-21). Down a register or an index the marks now hold one
+column. Register rows pin after the feast date, since the date holds that row's
+margin; below 480 px the date wraps to its own line and the glyph pins to the
+name's line instead. DESIGN.md §7d.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

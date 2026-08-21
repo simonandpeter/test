@@ -434,10 +434,20 @@ invariant above has to hold.
 
 ### 7d. Where the glyph sits
 
-**Where it sits** (author's instruction, 2026-08-21): to the right of the
+**Where it sits** (author's instruction, 2026-08-21): on the line of the
 saint's name, wherever a name appears — the calendar hero, the saint's own
-page, an index card, a register or shelf row — at a cell size scaled to the
-type it accompanies, and in whichever of the two forms §7c gives that context.
+page, an index card, a register or shelf row — at a pitch scaled to the type it
+accompanies, and in whichever of the two forms §7c gives that context.
+
+**Pinned to the right margin of that line, not trailing the name** (author,
+revised 2026-08-21). Position encodes identity, and a mark that ranges in and
+out with the length of each name spends that meaning on nothing: down a
+register or an index the glyphs now hold one column. A register row pins it
+*after* the feast date rather than before, because the date is what holds that
+row's margin — visual order only, the DOM keeps the name and its mark adjacent.
+Below 480 px the date takes a line of its own, so there the glyph pins to the
+right of the name's line instead of following the date down.
+
 The name and its mark are one line and that line never
 wraps: the name shrinks and wraps within itself instead, because a glyph on a
 line of its own has lost the name it belongs to. On the saint's own page this

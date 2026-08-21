@@ -627,6 +627,52 @@ test('the East Syriac column puts a refusal directly above an attestation', asyn
   expect(catholic.title).toContain('coarser than it looks');
 });
 
+test('clicking through days faster than the roll leaves one panel, not two', async ({ page }) => {
+  // The day panel rolls for 300 ms. A second click inside that window used to
+  // find the *leaving* panel and append beside the entering one, so the day
+  // showed an empty-day notice and a hero at once and the orphan outlived
+  // every navigation after it. 28 August is Augustine; 26 and 27 are empty.
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  const days = page.locator('.week-strip button');
+
+  await days.nth(3).click();
+  await page.waitForTimeout(60);
+  await days.nth(4).click();
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('.day-panel')).toHaveCount(1);
+  await expect(page.locator('.hero-name')).toHaveText('Augustine of Hippo');
+  await expect(page.locator('.empty-day')).toHaveCount(0);
+
+  // And the day after the fast pair is clean too: the orphan used to persist.
+  await days.nth(2).click();
+  await expect(page.locator('h1')).toHaveText(/26 August 2026/);
+  await expect(page.locator('.day-panel')).toHaveCount(1);
+  await expect(page.locator('.empty-day')).toHaveCount(1);
+  await expect(page.locator('.hero')).toHaveCount(0);
+});
+
+test('the glyph is pinned to the right margin, not trailing the name', async ({ page }) => {
+  // Position encodes identity, so the mark holds one column down a page rather
+  // than ranging in and out with the length of each name (author, 2026-08-21).
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const edges = await page.locator('.index-card .name-line').evaluateAll((lines) =>
+    lines.map((line) => {
+      const glyph = line.querySelector('svg.badge').getBoundingClientRect();
+      const name = line.querySelector('.index-name').getBoundingClientRect();
+      return {
+        gap: Math.round(line.getBoundingClientRect().right - glyph.right),
+        clearsName: glyph.left >= name.right - 1,
+      };
+    }),
+  );
+  expect(edges.length).toBeGreaterThan(1);
+  // Every card's glyph ends the same distance from its line's right edge, and
+  // names of different lengths do not move it.
+  expect(new Set(edges.map((e) => e.gap)).size).toBe(1);
+  expect(edges.every((e) => e.clearsName)).toBe(true);
+});
+
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');

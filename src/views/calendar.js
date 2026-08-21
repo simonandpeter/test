@@ -54,6 +54,7 @@ let state = null;
  */
 export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
+  clearTimeout(state?.rollTimer);
   if (state) state.cleanups = [];
   state = null;
 }
@@ -72,7 +73,11 @@ const countFor = (iso, data) => entriesFor(iso, data).length;
 export function render(el, { data, params, router }) {
   destroy();
   const selected = params.date && parseIso(params.date) ? params.date : todayIso();
-  state = { el, data, router, selected, monthCursor: null, monthOpen: false, cleanups: [], dayCleanups: [] };
+  state = {
+    el, data, router, selected,
+    monthCursor: null, monthOpen: false,
+    cleanups: [], dayCleanups: [], rollTimer: null,
+  };
 
   el.innerHTML = `
     <div class="cal">
@@ -127,9 +132,28 @@ function select(iso) {
   slotSwap(forward);
 }
 
+/**
+ * Lands any roll still in flight, so a swap always starts from exactly one
+ * panel. Without this a reader clicking two days inside the 300 ms roll got a
+ * second panel appended beside the first: `querySelector('.day-panel')` finds
+ * the *leaving* panel while a roll is on, so the entering one was never picked
+ * up as the thing to replace and was never removed. The day then showed an
+ * empty-day notice and a hero at once, and the orphan outlived every
+ * subsequent navigation.
+ */
+function landRoll(viewport) {
+  clearTimeout(state.rollTimer);
+  state.rollTimer = null;
+  for (const panel of viewport.querySelectorAll('.day-panel.slot-leaving')) panel.remove();
+  for (const panel of viewport.querySelectorAll('.day-panel.slot-entering')) {
+    panel.classList.remove('slot-entering');
+  }
+}
+
 /** The day panel rolls in the direction of travel; chrome stays put. */
 function slotSwap(forward) {
   const viewport = state.el.querySelector('.slot-viewport');
+  landRoll(viewport);
   const old = viewport.querySelector('.day-panel');
   const next = document.createElement('div');
   next.className = 'day-panel';
@@ -152,9 +176,10 @@ function slotSwap(forward) {
   next.classList.add('slot-entering');
   viewport.appendChild(next);
   wireDay(next);
-  setTimeout(() => {
+  state.rollTimer = setTimeout(() => {
     old.remove();
     next.classList.remove('slot-entering');
+    state.rollTimer = null;
   }, 300);
 }
 
