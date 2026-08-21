@@ -316,39 +316,58 @@ and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
 between two frames.
 
-**The reckoning is the reader's** (author, 2026-08-21). A row of four under the
-strip — Gregorian, Julian, Coptic, Ethiopian — chooses which calendar the day
-is shown in, and the choice is remembered in `settings.calendarPreference`
-alongside the theme. It replaces the line of equivalencies that used to print
-all three non-civil reckonings at once between the title and the image: three a
-reader did not ask for, where one they did is enough.
+**The reader's traditions, not the reader's reckoning** (author, 2026-08-21,
+reversing the same day's decision twice over). A row of four calendars —
+Gregorian, Julian, Coptic, Ethiopian — used to stand under the strip and print
+the day in whichever the reader chose. It is withdrawn, and so is the line
+beside it. What stands there now is one button, *Filter by
+Catholic/Orthodox/Oriental/Assyrian*, opening the **plate**: the rite ×
+communion lattice at full size, every position a switch, every position named.
 
-**The chosen date stands beside the buttons that choose it** (author,
-2026-08-21, reversing the same day's decision that put it directly above the
-hero image inside the day panel). It sits on the reckoning row's own line,
-pinned to that row's trailing margin so it holds one column whichever of the
-four is lit, and at 360 px it takes the line under them rather than squeezing
-four buttons into three. It is the chrome's now rather than the day's, so it
-repaints when the day changes instead of rolling with it.
+Deselect a church and this calendar stops showing what it commemorates —
+everywhere, at once: the hero, the register beneath it, and the density dots
+under every date at both grains, because all three count the same filtered
+entries. A communion's name turns its whole row and a rite's turns its whole
+column, which is how a reader reaches "everything Byzantine" without hunting
+cells. **A church is one switch however many cells it holds**: Eastern
+Catholic's six dots answer together, are railed together and are named once,
+because they are one registry entry and six switches would be six findings
+where the registry has one (§7b).
 
-**And it no longer names its calendar** (author, 2026-08-21): "22 Tobi 1742",
-not "Coptic · 22 Tobi 1742". It named itself while it stood in the day
-panel, where nothing else on the page said which reckoning was being printed
-and a bare "22 Tobi" was legible only to a reader who already knew which
-calendar counts in Tobi. Beside the four buttons the lit one is that answer,
-and printing it twice on one line was the reckoning saying its own name back to
-the reader who had just chosen it. The **year stays**: Coptic 1742 and
-Gregorian 2026 are the same day, and the year is the half of a reckoning a
-reader is least able to supply for themselves.
+**The plate's cells are deliberately not the veneration mark.** Gold appears in
+exactly one place on this site and that place is a finding about a saint (§2),
+so a control shaped like the lattice is drawn in the register's own two values
+— ink for on, rule for off — and `aria-pressed` carries the state for anyone
+not reading them. About draws the same layout with the *real* marks in it, so
+the page cannot teach a shape the filter does not have and the filter cannot
+drift from the mark.
 
-What is left of the double reading is smaller, and it is between the line and
-the `h1` rather than inside the row: with Gregorian chosen the line reads
-"30 January 2026" under an `h1` reading "Friday, 30 January 2026". Dropping
-Gregorian from the four remains the standing fix, and it remains the author's
-call.
+**The shape holds at every width.** Below the width the lattice needs, the
+plate scrolls sideways inside its own region rather than rearranging into a
+list: a grid that becomes a register at 360 px is a second diagram to learn,
+and the shape — rite across, communion down, empty positions empty — is the
+thing being taught. The communion's name stays stuck to the edge as the lattice
+moves under it. About's region takes a tab stop and a name of its own because it
+holds nothing focusable; the filter's does not, because it holds thirteen
+buttons.
 
-The strip and the grid stay in the civil calendar the URL is in. Choosing a
-reckoning relabels the day; it does not move the reader to a different one.
+**An empty selection is a designed state**, like an empty day, and it says
+which silence it is: a day the corpus has nothing for and a day the reader has
+filtered away are different facts. Prose in ink, never a banner.
+
+**A first visit is asked which calendar it keeps** (author, 2026-08-21). Four
+communions, or all of them, in a panel that stands in the page's flow above the
+strip — a question, not an obstacle, and a reader who scrolls past it gets
+every tradition, which is what *show all* would have given them. It is asked
+once: "everything, because I chose everything" and "everything, because nobody
+has asked yet" are different states in `settings.traditions` (`null` until
+answered), so *show all* is an answer and stops the asking. **It is the one
+deliberate exception to the fold rule below**: on that one visit at 360 px the
+question, its five answers, the strip and the day's own heading clear the fold
+and the hero does not. Every visit after it is the ordinary page, and a browser
+test pins both halves.
+
+The strip and the grid stay in the civil calendar the URL is in.
 
 **The hero image is a square** (author, 2026-08-21), cropped from the centre
 across and hard against the top, so what a tall icon loses is its lower half

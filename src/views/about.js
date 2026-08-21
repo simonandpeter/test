@@ -1,6 +1,6 @@
 import { STRINGS } from '../ui/strings.js';
 import { cellMark, renderBadge } from '../ui/badge.js';
-import { renderMatrix } from '../ui/matrix.js';
+import { renderShapePlate } from '../ui/plate.js';
 
 export const title = STRINGS.about.title;
 
@@ -24,20 +24,23 @@ const legendRow = (state, text) =>
   `<li>${swatch(state)}<span>${text}</span></li>`;
 
 /**
- * The worked example is a real saint, not a fabricated one — the split it
- * shows is the reason the grid exists. If the corpus ever loses him the
- * paragraph goes rather than being propped up with invented attestations.
+ * The grid at the size it can be read at, with every position named (the
+ * author's diagram, 2026-08-21) — the same component the calendar's tradition
+ * filter is built from, so the page cannot teach a shape the filter does not
+ * have.
+ *
+ * The worked example is a real saint, not a fabricated one: the split it shows
+ * is the reason the grid exists. If the corpus ever loses him the plate still
+ * stands and teaches the shape, with every cell undocumented and the caption
+ * saying only that. Nothing here is propped up with invented attestations.
  */
 function worked(data) {
   const nestorius = data?.bySlug?.get('nestorius');
-  if (!nestorius) return '';
   return `
     <figure class="glyph-example">
-      <div class="glyph-example-marks">
-        ${renderBadge(nestorius.attestations, { pitch: 22 })}
-        ${renderMatrix(nestorius.attestations, { pitch: 22 })}
-      </div>
-      <figcaption>${G.worked}</figcaption>
+      ${nestorius ? `<div class="glyph-example-marks">${renderBadge(nestorius.attestations, { pitch: 22 })}</div>` : ''}
+      ${renderShapePlate(nestorius?.attestations ?? [])}
+      <figcaption>${G.shape}${nestorius ? ` ${G.worked}` : ''}</figcaption>
     </figure>`;
 }
 

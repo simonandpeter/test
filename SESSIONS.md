@@ -383,6 +383,71 @@ writing it:
   caller travels the ordinary way, which is also what keeps the older swipe
   tests meaningful rather than quietly re-pointed at the new code path.
 
+**19. The reckoning toggle is withdrawn, and a tradition filter stands where it
+did** (author, 2026-08-21). The largest reversal of the day, and it undoes two
+of the same day's own decisions: the four-calendar toggle (Amendment 16) and
+the date line beside it (Amendments 17 and 18's second pass). Both are gone.
+Nothing on the site now prints a day in Julian, Coptic or Ethiopian reckoning;
+whether that should come back somewhere is a live question and the author's,
+not the build's.
+
+**What replaced it is the plate** — `src/ui/plate.js`, the rite × communion
+lattice at full size with every position named, from the author's diagram. One
+component, two readers: About draws it with the real marks in it, the calendar
+draws it as a filter. That is the same discipline Amendment 14 used for About's
+legend, applied one level up — the page cannot teach a shape the filter does
+not have, and the filter cannot drift from the mark.
+
+**The filter's cells are not the veneration mark, and that is the load-bearing
+decision here.** Gold appears in exactly one place and that place is a finding
+about a saint (DESIGN.md §2). A control shaped like the lattice would have been
+the easy thing to draw in the glyph's own three states; it is drawn in ink and
+rule instead, with `aria-pressed` carrying the state. A browser test asserts the
+selected disc is `--ink` and specifically *not* `--gold`, because this is
+exactly the sort of thing that gets "simplified" back later by someone who sees
+two components drawing circles.
+
+**A church is one switch however many cells it holds.** The selection is a set
+of *churches*, never of cells, so Eastern Catholic's six positions answer
+together by construction rather than by six lines of special-casing. The plate
+rails them and names them once. This is DESIGN.md §7b's cost paid a third time,
+and the set's shape is what pays it.
+
+**Four things learned building it:**
+
+- **Rebuilding the plate on every press takes the focus off what was pressed.**
+  A filter a keyboard reader can only press once is not a filter. The focus is
+  put back by dataset key after the repaint, and there is a test that presses
+  Enter and reads `document.activeElement`.
+- **A scrollable region has to be reachable by keyboard**, and axe knows the
+  difference between one that holds buttons and one that does not. The
+  calendar's plate passed at 360 px and About's failed on
+  `scrollable-region-focusable`, because About's holds only marks. About's takes
+  a tab stop and a name; the calendar's does not need one.
+- **The first-visit question costs the fold at 360 px**, and no amount of
+  trimming recovers it: it was 541 px, it is 433 px, and the hero's name is at
+  1005 px on a 780 px screen. Recorded as a deliberate exception rather than
+  quietly weakened — what has to clear the fold on that one visit is the
+  question, its answers, the strip and the day's heading, and there is a test
+  for each half.
+- **`addInitScript` runs on every load, including a reload.** The helper that
+  pre-answers the question for the tests was overwriting the answer on the way
+  back in, so "the filter is remembered" passed against a filter that had just
+  been reset. It seeds only when nothing is stored now.
+
+**Three silences, not two, and rendering the page is what found the third.**
+A day emptied by the filter was printing the sourcing notice over it — "an
+empty day is a gap in our sourcing, not a claim about the calendar" — which is
+a claim about our sourcing that is not true when the reader is the one who set
+those traditions aside. The panel now counts what the day holds unfiltered and
+says which silence this is. Nothing in the code was wrong; the words were, and
+only looking at the screen was going to catch that.
+
+**The lattice does not rearrange at 360 px** (author, same day, one round
+later). It scrolls sideways inside its own region and keeps its shape, with the
+communion's name stuck to the edge: a grid that becomes a register on a phone is
+a second diagram to learn, and the shape is the thing being taught.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

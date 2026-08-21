@@ -17,7 +17,7 @@ briefing.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; eighteen entries now, each recording
+   the most important page in the repo**; nineteen entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -79,15 +79,17 @@ DESIGN.md §5b in full before touching it. In short:
 - **A grain steps sideways.** Week or month, by any means — the movement
   decides it, not the gesture. Picking a day inside the week already showing
   has nowhere to travel to and simply repaints.
-- **The reckoning is the reader's.** Four buttons under the strip, remembered
-  in `settings.calendarPreference`, and the chosen calendar's date stands
-  **beside them** on the same line, pinned to the row's trailing margin
-  (author, 2026-08-21, reversing the same day's decision that put it above the
-  hero image). It **does not name its calendar** — "22 Tobi 1742", not
-  "Coptic · 22 Tobi 1742" — because the lit button beside it already says which
-  reckoning this is; the year stays. It is the chrome's, so it repaints with
-  the day rather than rolling with it. The old line printing all three
-  non-civil reckonings at once is gone.
+- **The reckoning toggle is gone entirely** (author, 2026-08-21) and so is the
+  date line that went with it. Nothing on the site prints a day in Julian,
+  Coptic or Ethiopian reckoning any more. What stands under the strip is one
+  button — *Filter by Catholic/Orthodox/Oriental/Assyrian* — opening **the
+  plate**: the rite × communion lattice at full size, every position a switch,
+  every position named. Deselecting a church empties what it commemorates from
+  the hero, the register and the density dots at both grains. A communion turns
+  its row, a rite turns its column, and Eastern Catholic's six dots are one
+  switch. **Its cells are drawn in ink and rule, never in the glyph's three
+  states** — gold is a finding about a saint, not a control. A **first visit is
+  asked** which calendar it keeps, once. Amendment 19.
 - **The hero image takes 85%** of the width it took, applied **once** — in the
   column where the panel gives it a column, in the image where it does not. It
   opens the saint, hidden from the accessibility tree because the name beside
@@ -269,12 +271,12 @@ session). SESSIONS.md has each in full.
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
   anything is built on top.
-- **The Gregorian reckoning still reads twice, more quietly.** The line no
-  longer names its calendar (author, 2026-08-21), so what is left is the date
-  itself: with Gregorian chosen the row reads "28 August 2026" under an `h1`
-  reading "Friday, 28 August 2026". It is inherent to offering the civil
-  calendar in a toggle at all. The cleanest fix is dropping Gregorian from the
-  four; that is the author's call.
+- **Nothing shows a day in a non-civil reckoning any more.** The toggle that
+  did was withdrawn on 2026-08-21 when the tradition filter took its place.
+  `lib/jdn.js` and `data/calendars.js` still convert, the saint page still
+  prints each attestation's own feast in its own calendar, but the habit page
+  no longer offers "this day, in Coptic". Whether that belongs somewhere — the
+  saint page, About, a line under the hero — is the author's call.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because

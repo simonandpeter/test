@@ -150,12 +150,12 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   const feasts = await page.locator('.hero-feasts li').allTextContents();
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
   expect(feasts.join(' | ')).toContain('22 Tobi');
-  // The line of equivalencies that used to print all three reckonings between
-  // the title and the image was withdrawn when the toggle arrived; the one
-  // reckoning the reader chose stands beside the buttons that choose it
-  // (author, 2026-08-21).
+  // Nothing under the strip prints the day in another reckoning any more. The
+  // line of equivalencies went when the toggle arrived, and the toggle went
+  // when the tradition filter took its place (author, 2026-08-21).
   await expect(page.locator('.cal-reckonings')).toHaveCount(0);
-  await expect(page.locator('.cal-reckoning .day-date')).toHaveText('30 January 2026');
+  await expect(page.locator('.cal-reckoning')).toHaveCount(0);
+  await expect(page.locator('.day-date')).toHaveCount(0);
 });
 
 test('an empty day is a designed state, not a hole', async ({ page }) => {
@@ -1350,10 +1350,25 @@ test('About explains the mark, with circles drawn by the component itself', asyn
     .evaluateAll((els) => els.map((e) => e.dataset.state));
   expect(states).toEqual(['attested', 'refused', 'undocumented']);
 
-  // Both views of a real saint, side by side: four cells and thirteen.
-  await expect(page.locator('.glyph-example .badge:not(.glyph-matrix) circle')).toHaveCount(4);
-  await expect(page.locator('.glyph-example .glyph-matrix circle')).toHaveCount(13);
+  // Both views of a real saint: the row of four, and the same findings opened
+  // out into the plate — thirteen positions, each with the church that holds it
+  // named beneath (author's diagram, 2026-08-21). The plate is the calendar
+  // filter's own component, so About cannot teach a shape the filter lacks.
+  await expect(page.locator('.glyph-example .glyph-example-marks .badge circle')).toHaveCount(4);
+  await expect(page.locator('.glyph-example .plate .plate-mark circle')).toHaveCount(13);
+  await expect(page.locator('.glyph-example .plate .plate-label')).toHaveCount(8);
   await expect(page.locator('.glyph-example figcaption')).toContainText('Nestorius');
+  await expect(page.locator('.glyph-example figcaption')).toContainText('the actual shape');
+
+  // Nestorius is the worked example because of one column: the Assyrian Church
+  // of the East venerates him and the Catholic communion directly above refuses
+  // him, in the same rite. The plate is where a reader can see that it is one
+  // column, because the column is named.
+  const east = await page
+    .locator('.glyph-example .plate .plate-mark circle')
+    .evaluateAll((els) => els.map((e) => e.dataset.state));
+  expect(east).toContain('attested');
+  expect(east).toContain('refused');
 });
 
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
@@ -1543,66 +1558,266 @@ test('the month peeks a column of the neighbouring month, on the grid own rows',
   await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 });
 
-test('the reckoning is the reader choice, and it is remembered', async ({ page }) => {
-  await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  const line = page.locator('.day-date');
-  // The line does not name its calendar (author, 2026-08-21). It stands beside
-  // the four buttons and the lit one is already the answer; it named itself
-  // while it stood in the day panel with nothing else on the page to say so.
-  await expect(line).toHaveText('30 January 2026');
+/* ---- the tradition filter (author, 2026-08-21) -------------------------- */
 
-  await page.locator('[data-reckoning="coptic"]').click();
-  // The year stays. Coptic 1742 and Gregorian 2026 are the same day, and it is
-  // the half of the reckoning a reader is least able to supply for themselves.
-  await expect(line).toHaveText('22 Tobi 1742');
-  await expect(page.locator('[data-reckoning="coptic"]')).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('[data-reckoning="gregorian"]')).toHaveAttribute('aria-pressed', 'false');
+const openFilter = async (page) => {
+  await page.locator('[data-filter-open]').click();
+  await expect(page.locator('.filter-panel')).toBeVisible();
+};
 
-  // The strip and the grid stay in the civil calendar the URL is in: choosing
-  // a reckoning relabels the day, it does not move the reader to another one.
-  await expect(page.locator('h1')).toHaveText(/30 January 2026/);
+test('turning a tradition off empties the days it was the only one keeping', async ({ page }) => {
+  // 28 August 2026 is Augustine, and in this corpus he is Roman Catholic and
+  // nothing else. So the one church answers for the whole day, which is what
+  // makes this a test of the filter rather than of a coincidence.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await openFilter(page);
 
-  // Remembered across a visit, like the theme and the index layout.
-  await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.day-date')).toHaveText('22 Tobi 1742');
+  await page.locator('[data-plate] [data-church="roman-catholic"]').click();
+
+  // The day, the hero, and the density dots under that date in the strip: one
+  // filter, read everywhere, rather than in the one place someone remembered.
+  await expect(page.locator('.hero')).toHaveCount(0);
+  await expect(page.locator('.empty-day')).toHaveCount(1);
+  await expect(
+    page.locator('.week-row:not(.grain-side) [data-iso="2026-08-28"] .density i'),
+  ).toHaveCount(0);
+
+  // And in the month, which counts the same filtered entries.
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+  await expect(page.locator('.month-row:not(.grain-side) [data-iso="2026-08-28"] .density i'))
+    .toHaveCount(0);
+
+  // The button names what is left rather than the invitation it started as.
+  await expect(page.locator('[data-filter-open]')).toContainText('Showing:');
+  await expect(page.locator('[data-filter-open]')).not.toContainText('Roman Catholic');
 });
 
-test('the chosen reckoning stands beside the buttons that choose it', async ({ page }) => {
-  // Reversed on 2026-08-21: it used to stand inside the day panel above the
-  // hero image and roll with the day. It now sits in the chrome, on the
-  // reckoning row's own line, pinned to that row's trailing margin so it holds
-  // one column whichever of the four is lit.
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  const where = await page.evaluate(() => {
-    const date = document.querySelector('.day-date').getBoundingClientRect();
-    const row = document.querySelector('.cal-reckoning').getBoundingClientRect();
-    const last = document.querySelector('[data-reckoning="ethiopian"]').getBoundingClientRect();
-    const h1 = document.querySelector('h1.cal-date').getBoundingClientRect();
+test('a communion turns its whole row and a rite its whole column', async ({ page }) => {
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+
+  const pressed = (sel) => page.locator(`[data-plate] ${sel}`).getAttribute('aria-pressed');
+  const headState = (sel) => page.locator(`[data-plate] ${sel}`).getAttribute('data-state');
+
+  // A row, off and on again. Oriental Orthodox holds four churches.
+  await page.locator('[data-plate] [data-communion="oriental-orthodox"]').click();
+  for (const id of ['coptic', 'armenian', 'ethiopian-eritrean', 'syriac-malankara']) {
+    expect(await pressed(`[data-church="${id}"]`)).toBe('false');
+  }
+  expect(await headState('[data-communion="oriental-orthodox"]')).toBe('off');
+  // Nothing else moved: a row toggle is a row toggle.
+  expect(await pressed('[data-church="eastern-orthodox"]')).toBe('true');
+
+  // A column, across communions. Byzantine is Eastern Catholic and Eastern
+  // Orthodox — one rite either side of a communion boundary, which is the
+  // adjacency the grid exists to show.
+  await page.locator('[data-plate] [data-rite="byzantine"]').click();
+  expect(await pressed('[data-church="eastern-orthodox"]')).toBe('false');
+  expect(
+    await page.locator('[data-plate] [data-church="eastern-catholic"]').first().getAttribute('aria-pressed'),
+  ).toBe('false');
+  expect(await pressed('[data-church="roman-catholic"]')).toBe('true');
+
+  // A row that is half on says so, and not in a third colour: Catholic still
+  // holds Roman Catholic and has lost Eastern Catholic.
+  expect(await headState('[data-communion="catholic"]')).toBe('some');
+});
+
+test('Eastern Catholic six cells are one switch', async ({ page }) => {
+  // Six positions from one registry entry (DESIGN.md §7b). Six independent
+  // switches would be six findings where the registry has one.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+
+  const cells = page.locator('[data-plate] [data-church="eastern-catholic"]');
+  await expect(cells).toHaveCount(6);
+  await cells.first().click();
+  for (let i = 0; i < 6; i++) {
+    await expect(cells.nth(i)).toHaveAttribute('aria-pressed', 'false');
+  }
+  // And it is named once, under the run, rather than six times.
+  await expect(
+    page.locator('[data-plate] .plate-label', { hasText: 'Eastern Catholic' }),
+  ).toHaveCount(1);
+});
+
+test('the filter cells are a control, not the veneration mark', async ({ page }) => {
+  // Gold appears in exactly one place on this site and that place is a finding
+  // about a saint (DESIGN.md §2). A control shaped like the lattice is drawn in
+  // the register's own two values, and aria-pressed carries the state for
+  // anyone not reading them.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+
+  await expect(page.locator('[data-plate] circle')).toHaveCount(0);
+  const tokens = await page.evaluate(() => {
+    const root = getComputedStyle(document.documentElement);
+    const on = document.querySelector('[data-plate] [aria-pressed="true"] .plate-disc');
     return {
-      inRow: !!document.querySelector('.cal-reckoning .day-date'),
-      inPanel: !!document.querySelector('.day-panel .day-date'),
-      sameLine: Math.abs(date.top + date.height / 2 - (last.top + last.height / 2)) < 4,
-      afterButtons: date.left > last.right,
-      pinned: Math.abs(date.right - row.right) < 1,
-      aboveTheTitle: date.bottom <= h1.top,
+      ink: root.getPropertyValue('--ink').trim(),
+      rule: root.getPropertyValue('--rule').trim(),
+      gold: root.getPropertyValue('--gold').trim(),
+      onColour: getComputedStyle(on).backgroundColor,
     };
   });
-  expect(where).toEqual({
-    inRow: true,
-    inPanel: false,
-    sameLine: true,
-    afterButtons: true,
-    pinned: true,
-    aboveTheTitle: true,
-  });
+  const rgb = (hex) => {
+    const n = parseInt(hex.slice(1), 16);
+    return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+  };
+  expect(tokens.onColour).toBe(rgb(tokens.ink));
+  expect(tokens.onColour).not.toBe(rgb(tokens.gold));
 
-  // It is the chrome's now, so it repaints with the day rather than rolling
-  // with it — and it still names the day the strip is on.
-  await page.locator('.week-strip button').first().click();
-  await expect(page.locator('.cal-reckoning .day-date')).toHaveText(/26 January 2026/);
-  await expect(page.locator('.day-panel .day-date')).toHaveCount(0);
+  await page.locator('[data-plate] [data-church="roman-catholic"]').click();
+  const off = await page
+    .locator('[data-plate] [data-church="roman-catholic"] .plate-disc')
+    .evaluate((el) => getComputedStyle(el).backgroundColor);
+  expect(off).toBe(rgb(tokens.rule));
+});
+
+test('a filter press leaves the focus on the cell that was pressed', async ({ page }) => {
+  // The plate is rebuilt on every press, which takes the focus off whatever was
+  // just pressed. A filter a keyboard reader can only press once is not a
+  // filter.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+
+  await page.locator('[data-plate] [data-church="coptic"]').focus();
+  await page.keyboard.press('Enter');
+  const focused = await page.evaluate(() => document.activeElement?.dataset?.church);
+  expect(focused).toBe('coptic');
+  await expect(page.locator('[data-plate] [data-church="coptic"]')).toHaveAttribute(
+    'aria-pressed',
+    'false',
+  );
+});
+
+test('the filter is remembered, and Show all puts it back', async ({ page }) => {
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+  await page.locator('[data-plate] [data-communion="catholic"]').click();
+  await expect(page.locator('[data-filter-open]')).not.toContainText('Catholic');
+
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('[data-filter-open]')).toContainText('Showing:');
+  await expect(page.locator('.empty-day')).toHaveCount(1);
+
+  await openFilter(page);
+  await page.locator('[data-filter-reset]').click();
+  await expect(page.locator('[data-filter-open]')).toHaveText(
+    'Filter by Catholic/Orthodox/Oriental/Assyrian',
+  );
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+});
+
+test('an empty day says which of the three silences it is', async ({ page }) => {
+  // Three different facts, and a reader is owed the difference between them.
+  // The corpus having nothing for a day is a statement about our sourcing; a
+  // day the reader has filtered away is not, and printing the sourcing notice
+  // over it would be a claim about our sourcing that is untrue. Prose in ink in
+  // every case — an empty is never a banner here.
+  await answered(page);
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
+
+  // Filtered away: 28 August has Augustine, and he is Roman Catholic here.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+  await page.locator('[data-plate] [data-communion="catholic"]').click();
+  await expect(page.locator('.empty-day')).toContainText('traditions you are showing');
+  await expect(page.locator('.empty-day')).toContainText('One commemoration here');
+  await expect(page.locator('.empty-day')).not.toContainText('The corpus grows folder by folder');
+
+  // A day with nothing on it is still about the sourcing, even while filtered.
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
+});
+
+test('nothing selected is its own silence', async ({ page }) => {
+  await answered(page, []);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('Nothing is selected');
+  await expect(page.locator('[data-filter-open]')).toHaveText('No tradition selected');
+
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('Nothing is selected');
+});
+
+test('the question is asked once, and answering it is choosing', async ({ page }) => {
+  // "Everything, because I chose everything" and "everything, because nobody
+  // has asked yet" look identical on the calendar and only one of them should
+  // raise the question — so Show all is an answer, not a dismissal.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.tradition-ask')).toBeVisible();
+  await expect(page.locator('[data-ask-choice]')).toHaveCount(5);
+
+  await page.locator('[data-ask-choice="all"]').click();
+  await expect(page.locator('.tradition-ask')).toHaveCount(0);
+  // Focus goes somewhere that still exists, and it is where the answer now lives.
+  expect(await page.evaluate(() => document.activeElement?.dataset?.filterOpen)).toBe('');
+  await expect(page.locator('[data-filter-open]')).toHaveText(
+    'Filter by Catholic/Orthodox/Oriental/Assyrian',
+  );
+
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.tradition-ask')).toHaveCount(0);
+});
+
+test('choosing one communion at the question filters the calendar to it', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-ask-choice="eastern-orthodox"]').click();
+  await expect(page.locator('.tradition-ask')).toHaveCount(0);
+  // Augustine is Roman Catholic in this corpus, so an Eastern Orthodox reader's
+  // 28 August is empty — which is a fact about the corpus, stated plainly.
+  await expect(page.locator('.empty-day')).toHaveCount(1);
+  await expect(page.locator('[data-filter-open]')).toHaveText('Showing: Eastern Orthodox');
+});
+
+test('the plate keeps its shape at 360 px and scrolls instead', async ({ page }) => {
+  // A grid that becomes a list on a phone is a second diagram to learn, and the
+  // shape is the thing being taught (author, 2026-08-21). So the lattice holds
+  // at every width and the reader moves along it — with the communion's name
+  // held at the edge, because a row whose head you have scrolled past is a row
+  // you cannot identify.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await openFilter(page);
+
+  const shape = await page.evaluate(() => {
+    const plate = document.querySelector('.plate');
+    const scroll = document.querySelector('.plate-scroll');
+    const side = document.querySelector('.plate-side');
+    return {
+      display: getComputedStyle(plate).display,
+      columns: getComputedStyle(plate).gridTemplateColumns.split(' ').length,
+      wider: plate.scrollWidth > scroll.clientWidth,
+      scrollable: getComputedStyle(scroll).overflowX,
+      sticky: getComputedStyle(side).position,
+      labels: document.querySelectorAll('.plate-label').length,
+    };
+  });
+  // Seven rite columns and the communion's own, still a grid, still labelled.
+  expect(shape.display).toBe('grid');
+  expect(shape.columns).toBe(8);
+  expect(shape.labels).toBe(8);
+  expect(shape.wider).toBe(true);
+  expect(shape.scrollable).toBe('auto');
+  expect(shape.sticky).toBe('sticky');
+
+  // And the page itself does not overflow because of it: the scrolling is the
+  // region's, not the document's.
+  const overflow = await page.evaluate(
+    () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
+  );
+  expect(overflow).toBe(true);
 });
 
 test('the peeked day sits on the same line as the days beside it', async ({ page }) => {
@@ -1673,13 +1888,57 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
   await expect(page.locator('h1.saint-name')).toHaveText('Augustine of Hippo');
 });
 
+/**
+ * A reader who has already answered the first-visit question — which is every
+ * visit after the first. Written before the page loads, because the calendar
+ * decides whether to ask while it is rendering.
+ */
+const answered = (page, traditions = null) =>
+  page.addInitScript((value) => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    // Seeded only if the reader has not answered, because this runs on every
+    // load including a reload — and a test that reloads to check the answer
+    // was remembered would otherwise be overwriting it on the way back in.
+    if (Array.isArray(now.traditions)) return;
+    localStorage.setItem(key, JSON.stringify({ ...now, traditions: value ?? [
+      'roman-catholic', 'eastern-catholic', 'eastern-orthodox', 'coptic',
+      'armenian', 'ethiopian-eritrean', 'syriac-malankara',
+      'assyrian-church-of-the-east',
+    ] }));
+  }, traditions);
+
 test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
   // The reason the image came down to 85%. Augustine is the tallest icon in
   // the corpus and 28 August is his day, so this is the worst case the corpus
   // actually holds rather than one constructed for the test.
   await page.setViewportSize({ width: 360, height: 780 });
+  await answered(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const name = await page.locator('.hero-name').boundingBox();
   expect(name.y).toBeLessThan(780);
+});
+
+test('on a first visit the question clears the fold, and the day does not', async ({ page }) => {
+  // The one deliberate exception to the rule above (author, 2026-08-21). A
+  // first visit is asked which calendar the reader keeps, and the question is
+  // 433 px of a 780 px phone: what has to be above the fold on that visit is
+  // the question and the way past it, not the hero. Every visit after it is
+  // the test above. Asserted rather than left to be noticed, because the fold
+  // is exactly where this would go wrong quietly.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const ask = await page.locator('.tradition-ask').boundingBox();
+  const choices = await page.locator('[data-ask-choice]').last().boundingBox();
+  const strip = await page.locator('.week-row').boundingBox();
+  const heading = await page.locator('h1.cal-date').boundingBox();
+
+  // The question, all of its answers, the strip and the day's own heading.
+  expect(ask.y + ask.height).toBeLessThan(780);
+  expect(choices.y + choices.height).toBeLessThan(780);
+  expect(strip.y + strip.height).toBeLessThan(780);
+  expect(heading.y).toBeLessThan(780);
 });

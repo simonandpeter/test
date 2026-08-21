@@ -51,14 +51,63 @@ export const STRINGS = {
     heroIn: 'In the {church}',
     heroFeast: '{church}: {feast}',
     densityLabel: '{count} commemorations',
-    reckoningLabel: 'Reckoning',
-    reckoningDescription: 'Which calendar this day is shown in',
-    // The day in the reckoning the reader chose. It does not name its calendar
-    // (author, 2026-08-21): the line now sits beside the four buttons, and the
-    // lit one says which reckoning this is. It named itself while it stood in
-    // the day panel with nothing else on the page to say so.
-    dateIn: '{date}',
     openSaint: 'Read about {name}',
+  },
+
+  /*
+   * The tradition filter (author, 2026-08-21). It replaced the reckoning
+   * toggle and the day's date beside it: the question a reader is asked on the
+   * habit page is now which communion they keep, not which calendar they would
+   * like the date printed in.
+   */
+  filter: {
+    all: 'Filter by Catholic/Orthodox/Oriental/Assyrian',
+    none: 'No tradition selected',
+    showing: 'Showing: {names}',
+    open: 'Choose which traditions this calendar shows',
+    close: 'Done',
+    reset: 'Show all',
+    heading: 'Which traditions is this calendar keeping?',
+    lede:
+      'Every dot is a church, in the rite it keeps its calendar by. Turn one ' +
+      'off and this calendar stops showing what it commemorates. A communion ' +
+      'or a rite turns its whole row or column at once.',
+    cellLabel: '{church}, {rite} rite',
+    riteLabel: 'Everything in the {rite} rite',
+    coarse:
+      'Eastern Catholic is one entry in this registry standing for roughly ' +
+      'two dozen churches across six rites, so its six dots are one switch.',
+    empty:
+      'Nothing is selected, so no day has anything to show. Turn a tradition ' +
+      'back on, or show all of them.',
+    // A day the corpus has nothing for and a day the reader has filtered away
+    // are different facts, and printing the sourcing notice over the second is
+    // a claim about our sourcing that is not true.
+    filteredAwayOne:
+      'Nothing on this day is commemorated by the traditions you are showing. ' +
+      'One commemoration here belongs to a tradition you have set aside — the ' +
+      'filter above is where to widen it.',
+    filteredAwayMany:
+      'Nothing on this day is commemorated by the traditions you are showing. ' +
+      '{count} commemorations here belong to traditions you have set aside — ' +
+      'the filter above is where to widen it.',
+
+    /*
+     * The question a first visit is asked (author, 2026-08-21). It is asked on
+     * the calendar because the calendar is what the answer changes, and it is
+     * asked once: the answer is remembered, and the same panel below changes it
+     * afterwards. Phrased as a choice about the reader, not about the data —
+     * "which do you keep", not "filter the corpus".
+     */
+    ask: {
+      heading: 'Which calendar do you keep?',
+      lede:
+        'Four communions keep four calendars here, and on most days they ' +
+        'commemorate different people. Choose the one you keep, or show all ' +
+        'of them. Nothing is hidden either way, and you can change it whenever ' +
+        'you like.',
+      all: 'Show all of them',
+    },
   },
 
   dates: {
@@ -234,6 +283,12 @@ export const STRINGS = {
         'The grid is the row taken apart, never a second set of findings. Roll ' +
         'a row of the grid up and you get that communion’s cell in the row of ' +
         'four, always.',
+      // The scrollable region's own name: at narrow widths the lattice is wider
+      // than the screen and takes a tab stop, so it has to say what it is.
+      plate: 'The lattice: liturgical rite across, communion down',
+      shape:
+        'This is the actual shape — rite across the top, communion down the ' +
+        'side. Empty positions have no cell; there is nothing to fill.',
       worked:
         'Nestorius is why the grid exists. In the East Syriac column the ' +
         'Assyrian Church of the East venerates him, and directly above it the ' +

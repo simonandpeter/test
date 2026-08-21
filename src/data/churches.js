@@ -16,14 +16,19 @@
  * does span six of them. See its note.
  */
 
+/**
+ * `abbr` is the head of a rite's column where the full name would not fit — the
+ * author's own abbreviations, from the diagram that specified the expanded
+ * plate. Display only; nothing keys off it.
+ */
 export const RITES = [
-  { id: 'latin', display_name: 'Latin' },
-  { id: 'byzantine', display_name: 'Byzantine' },
-  { id: 'alexandrian', display_name: 'Alexandrian' },
-  { id: 'geez', display_name: "Ge'ez" },
-  { id: 'armenian', display_name: 'Armenian' },
-  { id: 'west-syriac', display_name: 'West Syriac' },
-  { id: 'east-syriac', display_name: 'East Syriac' },
+  { id: 'latin', display_name: 'Latin', abbr: 'Latin' },
+  { id: 'byzantine', display_name: 'Byzantine', abbr: 'Byz.' },
+  { id: 'alexandrian', display_name: 'Alexandrian', abbr: 'Alex.' },
+  { id: 'geez', display_name: "Ge'ez", abbr: "Ge'ez" },
+  { id: 'armenian', display_name: 'Armenian', abbr: 'Arm.' },
+  { id: 'west-syriac', display_name: 'West Syriac', abbr: 'W.Syr.' },
+  { id: 'east-syriac', display_name: 'East Syriac', abbr: 'E.Syr.' },
 ];
 
 /**

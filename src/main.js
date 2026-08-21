@@ -3,6 +3,7 @@ import './styles/metrics.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/calendar.css';
+import './styles/plate.css';
 import './styles/saint.css';
 import './styles/index.css';
 

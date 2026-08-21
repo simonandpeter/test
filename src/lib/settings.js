@@ -9,7 +9,12 @@ const KEY = 'gos-settings';
 
 const DEFAULTS = {
   theme: 'system', // 'light' | 'dark' | 'system'
-  calendarPreference: 'gregorian',
+  // Which traditions the calendar shows. `null` means the reader has not been
+  // asked yet, which is a different state from having answered "all of them" —
+  // see lib/tradition.js. `calendarPreference` stood here until 2026-08-21 and
+  // went with the reckoning toggle; a value left in a reader's storage from
+  // before then is simply ignored.
+  traditions: null,
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.

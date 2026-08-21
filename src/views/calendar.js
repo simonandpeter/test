@@ -11,9 +11,9 @@
  */
 
 import { buildFeastIndex, toIsoDate } from '../lib/feasts.js';
-import { fromJdn, gregorianToJdn } from '../lib/jdn.js';
+import { gregorianToJdn } from '../lib/jdn.js';
 import { CHURCHES, CHURCHES_BY_ID } from '../data/churches.js';
-import { formatFeast, monthName, CALENDAR_LABELS } from '../data/calendars.js';
+import { formatFeast } from '../data/calendars.js';
 import {
   addDaysIso,
   formatLifespan,
@@ -23,8 +23,22 @@ import {
   weekOf,
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
-import { readSettings, writeSetting } from '../lib/settings.js';
+import {
+  filterEntries,
+  hasChosen,
+  isAll,
+  readSelection,
+  selectAll,
+  selectCommunion,
+  selectionLabel,
+  toggleChurch,
+  toggleCommunion,
+  toggleRite,
+  writeSelection,
+} from '../lib/tradition.js';
+import { enabledCommunions } from '../data/churches.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { renderFilterPlate } from '../ui/plate.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
 import { onGrainDrag, SETTLE } from '../ui/grain-drag.js';
@@ -44,28 +58,10 @@ const weekdayFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone
 // grid, and a full "September" reached across into the dates.
 const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
-/** The reckonings a reader can choose between, in the order they are offered. */
-const RECKONINGS = ['gregorian', 'julian', 'coptic', 'ethiopian'];
-
 const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
-
-/**
- * The day in one calendar's own reckoning: "22 Tobi 1742". It no longer names
- * the calendar (author, 2026-08-21) — the line stands beside the four buttons
- * and the lit one is already the answer. The year stays: Coptic 1742 and
- * Gregorian 2026 are the same day, and dropping it would be dropping the half
- * of the reckoning a reader is least likely to be able to supply.
- */
-function dayIn(calendarId, iso) {
-  const d = parseIso(iso);
-  const c = fromJdn(calendarId, gregorianToJdn(d.year, d.month, d.day));
-  return fill(STRINGS.calendar.dateIn, {
-    date: `${c.day} ${monthName(calendarId, c.month)} ${c.year}`,
-  });
-}
 
 /* Two icon buttons stand in for the old text ones. Both are stroked in
    currentColor and carry their name on the button's aria-label, so neither
@@ -115,7 +111,15 @@ function indexFor(year, data) {
   return indexCache.get(year);
 }
 
-const entriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
+/**
+ * The day's commemorations, narrowed to the traditions the reader keeps
+ * (author, 2026-08-21). Everything downstream reads through here — the hero,
+ * the register, the density dots under every date at both grains — so a
+ * tradition turned off is off everywhere on the page rather than in the one
+ * place someone remembered to filter.
+ */
+const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
+const entriesFor = (iso, data) => filterEntries(allEntriesFor(iso, data), state.selection);
 const countFor = (iso, data) => entriesFor(iso, data).length;
 
 export function render(el, { data, params, router }) {
@@ -124,12 +128,10 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     monthCursor: null, monthOpen: false,
-    // Which calendar the day is shown in, under the reader's own control and
-    // remembered — the equivalencies line that used to print all three at once
-    // was withdrawn when the toggle arrived (author, 2026-08-21).
-    reckoning: RECKONINGS.includes(readSettings().calendarPreference)
-      ? readSettings().calendarPreference
-      : 'gregorian',
+    // The traditions this calendar is keeping, remembered across visits. The
+    // reckoning toggle that used to stand here is withdrawn (author,
+    // 2026-08-21) — see DESIGN.md §5b.
+    selection: readSelection(), filterOpen: false,
     cleanups: [], dayCleanups: [],
     rollTimer: null, monthTimer: null, sizeTimer: null,
     weekGrain: null, monthGrain: null,
@@ -137,6 +139,7 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = `
     <div class="cal">
+      ${askMarkup()}
       <div class="cal-controls">
         <div class="cal-jump">
           <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
@@ -176,14 +179,19 @@ export function render(el, { data, params, router }) {
           </div>
         </div>
       </div>
-      <div class="cal-reckoning utility" role="group"
-        aria-label="${STRINGS.calendar.reckoningDescription}">
-        <span class="reckoning-label" aria-hidden="true">${STRINGS.calendar.reckoningLabel}</span>
-        ${RECKONINGS.map(
-          (id) => `<button type="button" data-reckoning="${id}"
-            aria-pressed="${String(id === state.reckoning)}">${CALENDAR_LABELS[id]}</button>`,
-        ).join('')}
-        <p class="day-date" data-day-date></p>
+      <div class="cal-filter utility">
+        <button type="button" class="filter-open" data-filter-open aria-expanded="false"
+          aria-controls="cal-filter-panel"></button>
+        <div class="filter-panel panel" id="cal-filter-panel" hidden>
+          <h2 class="filter-heading">${STRINGS.filter.heading}</h2>
+          <p class="filter-lede">${STRINGS.filter.lede}</p>
+          <div data-plate></div>
+          <p class="filter-note">${STRINGS.filter.coarse}</p>
+          <div class="filter-actions">
+            <button type="button" data-filter-reset>${STRINGS.filter.reset}</button>
+            <button type="button" data-filter-close>${STRINGS.filter.close}</button>
+          </div>
+        </div>
       </div>
       <h1 class="cal-date"></h1>
       <div class="slot-viewport"><div class="day-panel"></div></div>
@@ -200,9 +208,23 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
 
-  el.querySelector('.cal-reckoning').addEventListener('click', (e) => {
-    const button = e.target.closest('[data-reckoning]');
-    if (button) chooseReckoning(button.dataset.reckoning);
+  el.querySelector('[data-ask]')?.addEventListener('click', (e) => {
+    const button = e.target.closest('button[data-ask-choice]');
+    if (!button) return;
+    const choice = button.dataset.askChoice;
+    answerAsk(choice === 'all' ? selectAll() : selectCommunion(choice));
+  });
+
+  el.querySelector('[data-filter-open]').addEventListener('click', toggleFilter);
+  el.querySelector('[data-filter-close]').addEventListener('click', toggleFilter);
+  el.querySelector('[data-filter-reset]').addEventListener('click', () => choose(selectAll()));
+  el.querySelector('[data-plate]').addEventListener('click', (e) => {
+    const button = e.target.closest('button[data-church], button[data-communion], button[data-rite]');
+    if (!button) return;
+    const { church, communion, rite } = button.dataset;
+    if (church) choose(toggleChurch(state.selection, church));
+    else if (communion) choose(toggleCommunion(state.selection, communion));
+    else choose(toggleRite(state.selection, rite));
   });
 
   // Both grains sit on a track and both take a hold-and-slide, in the same
@@ -476,7 +498,7 @@ function paintChrome() {
   const { el, selected } = state;
   paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-  paintReckoningDate();
+  paintFilterLabel();
   if (state.monthOpen) paintMonth();
 }
 
@@ -506,31 +528,101 @@ const stepCursor = (c, n) => ({
   month: ((c.month + n - 1 + 12) % 12) + 1,
 });
 
+/* ---- the question a first visit is asked -------------------------------- */
+
 /**
- * The reckoning is the reader's, and it is remembered. Only the day's own date
- * line changes: the strip and the grid are the civil calendar the URL is in,
- * and re-reckoning those would be a different page rather than a different
- * label on this one.
+ * Asked once, on the calendar, because the calendar is what the answer changes
+ * (author, 2026-08-21). It stands in the page's flow above the strip rather
+ * than over it: this is a question, not an obstacle, and a reader who ignores
+ * it gets every tradition, which is the same thing "show all" would have given
+ * them. It disappears the moment it is answered and the filter panel below is
+ * where the answer is changed afterwards.
+ *
+ * `hasChosen` and "chose everything" are deliberately different states — see
+ * lib/tradition.js — so answering "show all" is an answer and stops the asking.
  */
-function chooseReckoning(id) {
-  if (!RECKONINGS.includes(id) || id === state.reckoning) return;
-  state.reckoning = id;
-  writeSetting('calendarPreference', id);
-  for (const b of state.el.querySelectorAll('[data-reckoning]')) {
-    b.setAttribute('aria-pressed', String(b.dataset.reckoning === id));
-  }
-  paintReckoningDate();
+function askMarkup() {
+  if (hasChosen()) return '';
+  const A = STRINGS.filter.ask;
+  const choices = enabledCommunions()
+    .map((c) => `<button type="button" data-ask-choice="${c.id}">${esc(c.display_name)}</button>`)
+    .join('');
+  return `
+    <div class="tradition-ask panel" data-ask>
+      <h2 class="ask-heading">${A.heading}</h2>
+      <p>${A.lede}</p>
+      <div class="ask-choices">
+        ${choices}
+        <button type="button" data-ask-choice="all">${A.all}</button>
+      </div>
+    </div>`;
 }
 
 /**
- * The chosen reckoning's date, beside the buttons that choose it (author,
- * 2026-08-21). It used to stand inside the day panel above the hero image and
- * roll with the day; it now sits in the chrome and is repainted when either the
- * day or the reckoning changes.
+ * The answer takes the question off the page, so focus has to go somewhere it
+ * still exists: the filter button, which is both the nearest control and the
+ * one that now holds what was just chosen.
  */
-function paintReckoningDate() {
-  const line = state.el.querySelector('.cal-reckoning [data-day-date]');
-  if (line) line.textContent = dayIn(state.reckoning, state.selected);
+function answerAsk(selection) {
+  state.el.querySelector('[data-ask]')?.remove();
+  choose(selection);
+  state.el.querySelector('[data-filter-open]').focus();
+}
+
+/* ---- the tradition filter ----------------------------------------------- */
+
+/**
+ * The panel is a disclosure and not a dialogue: it opens under its own button,
+ * inside the page's flow, and the calendar stays visible and usable behind it
+ * so a reader can watch the days thin out as they turn traditions off. Nothing
+ * animates — there is no motion here to remove under reduced motion because
+ * there was none to add.
+ */
+function toggleFilter() {
+  state.filterOpen = !state.filterOpen;
+  const button = state.el.querySelector('[data-filter-open]');
+  button.setAttribute('aria-expanded', String(state.filterOpen));
+  state.el.querySelector('.filter-panel').hidden = !state.filterOpen;
+  if (state.filterOpen) paintPlate();
+  else button.focus();
+}
+
+/**
+ * A new selection: remembered, then repainted everywhere it shows — the plate
+ * itself, the button that names it, and the whole calendar under it, because
+ * the density dots at both grains count the same filtered entries the day panel
+ * lists.
+ *
+ * The plate is rebuilt wholesale, which takes the focus off whatever was just
+ * pressed, so it is put back on the button holding the same dataset. A filter
+ * a keyboard reader can only press once is not a filter.
+ */
+function choose(selection) {
+  state.selection = selection;
+  writeSelection(selection);
+  const active = document.activeElement;
+  const key = active?.dataset?.church
+    ? `[data-church="${active.dataset.church}"]`
+    : active?.dataset?.communion
+      ? `[data-communion="${active.dataset.communion}"]`
+      : active?.dataset?.rite
+        ? `[data-rite="${active.dataset.rite}"]`
+        : null;
+  paintPlate();
+  if (key) state.el.querySelector(`[data-plate] ${key}`)?.focus();
+  paintChrome();
+  slotSwap(true);
+}
+
+function paintPlate() {
+  state.el.querySelector('[data-plate]').innerHTML = renderFilterPlate(state.selection);
+  paintFilterLabel();
+}
+
+function paintFilterLabel() {
+  const button = state.el.querySelector('[data-filter-open]');
+  button.textContent = selectionLabel(state.selection);
+  button.classList.toggle('is-narrowed', !isAll(state.selection));
 }
 
 /**
@@ -801,12 +893,28 @@ const stepMonth = (n) => moveMonth(n);
 
 /* ---- the day panel: hero + register ----------------------------------- */
 
+/**
+ * Three different silences, and a reader is owed the difference between them.
+ * The corpus having nothing for a day is a statement about our sourcing; a day
+ * whose commemorations the reader has filtered away is not, and printing the
+ * sourcing notice over it would be a claim about our sourcing that is untrue.
+ * Prose in ink in every case, never a banner.
+ */
+function emptyDayNote(iso) {
+  if (state.selection.size === 0) return STRINGS.filter.empty;
+  const hidden = allEntriesFor(iso, state.data).length;
+  if (hidden === 0) return STRINGS.calendar.emptyDay;
+  return hidden === 1
+    ? STRINGS.filter.filteredAwayOne
+    : fill(STRINGS.filter.filteredAwayMany, { count: hidden });
+}
+
 function paintDay(panel) {
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
 
   if (entries.length === 0) {
-    panel.innerHTML = `<div class="empty-day"><p>${STRINGS.calendar.emptyDay}</p></div>`;
+    panel.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
     return;
   }
 
