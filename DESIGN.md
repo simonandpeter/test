@@ -286,40 +286,49 @@ contexts take which and why.
 
 ### 7a. The badge
 
-A square-cell lattice, one cell per **communion**, generated from the registry
-— exactly as many cells as communions enabled; reserved or disabled cells are
-hidden, never drawn empty. Position encodes identity; a communion's cell never
-moves between saints; colour never carries information alone.
+A lattice of **circles** on a fixed pitch, one cell per **communion**,
+generated from the registry — exactly as many cells as communions enabled;
+reserved or disabled cells are hidden, never drawn empty. Position encodes
+identity; a communion's cell never moves between saints; colour never carries
+information alone.
 
-**Geometry settled 2026-08-21** by the author's `veneration-glyph` spec, which
-supersedes Addendum A1's hollow refusal cell. The two rejected proposals are
-worth recording so neither is reintroduced by accident: the brief's original
-pale-grey *fill*, which A1 replaced with a hollow outline, is now the shipping
-form after all — but distinguished from an attestation by value with the
-undocumented mark separated by **size**, which is the part A1's hollow outline
-was protecting and which survives here by a different route.
+**Cells are circles, not squares.** Spec §4 states it twice and the reference
+draws nothing but `<circle>`. Any other shape is a spec violation rather than
+an interpretation.
 
-- Cells on a fixed pitch, inset from neighbours by a gap of 0.9/8 of the *cell*
-  — the "fine" setting from the design mockups, which the reference states as
-  0.9/8 of the pitch and invites retuning; the difference is 0.10 of the pitch
-  against 0.1125 and it is settled at the shipped value — so adjacent cells never fuse
-  into a shape that depends on registry adjacency rather than on meaning. The
-  lattice flows row-major; a partial row keeps its cells on lattice positions,
-  left-aligned — a lone cell sits on its row, never floated to visual centre.
-- **Attested:** a full cell in `--glyph-attested`, which is the gold, and gold
-  is spent nowhere else in the product (§2).
-- **Refused:** a full cell in `--glyph-ink` at `--glyph-refused-opacity`. Same
-  cell, same footprint as an attestation: a refusal is a finding, not an
+**Geometry settled 2026-08-21** by the author's `veneration-glyph` spec. Three
+drafts are now superseded and are recorded so none is reintroduced by someone
+reading an older document: the brief's pale-grey square *fill*; Addendum A1's
+hollow square outline; and the square lattice this repo shipped between
+2026-08-21 morning and evening, built from an earlier revision of the spec
+whose §4 read "cells are squares on a fixed pitch". All three were protecting
+the same thing — three states that survive greyscale — and the shipping form
+does it with **value** for refusal and **radius** for silence.
+
+If a future revision of the reference disagrees with this section, the
+reference wins and this section gets rewritten — that has now happened twice.
+
+- Circles centred on a fixed pitch, `cx`/`cy` at each cell's midpoint, never
+  corner-anchored. The gap is not a separate constant: it is what the pitch
+  leaves over once a circle of 0.62 pitch diameter is centred in it, which is
+  enough that adjacent marks never fuse into a shape depending on registry
+  adjacency rather than on meaning. The lattice flows row-major; a partial row
+  keeps its cells on lattice positions, left-aligned — a lone cell sits in
+  column 0 of its row, never floated to visual centre.
+- **Attested:** radius **0.31 x pitch** in `--glyph-attested`, which is the
+  gold, and gold is spent nowhere else in the product (§2).
+- **Refused:** the *same radius* in `--glyph-ink` at `--glyph-refused-opacity`.
+  Same circle, same footprint as an attestation: a refusal is a finding, not an
   absence, and it is told apart by **value**. Do not let that opacity drift up
   toward an attested cell's, whatever `--glyph-attested` resolves to on a given
   theme.
-- **Undocumented:** a centred square at 0.275 of the cell, `--glyph-ink` at
-  `--glyph-undoc-opacity`. Told apart by **size** as well as value. This is the
-  one thing in the component that must never be simplified: refusal and silence
-  are different findings, and a reader has to see which is which without
-  trusting a hue.
-- Greyscale check: a full-value block, a pale block of the same footprint, and
-  a small faint mark — three states still distinct with colour removed, two by
+- **Undocumented:** radius **0.11 x pitch** — a visibly smaller circle, not the
+  same one at a lower opacity — in `--glyph-ink` at `--glyph-undoc-opacity`.
+  Told apart by **size** as well as value. This is the one thing in the
+  component that must never be simplified: refusal and silence are different
+  findings, and a reader has to see which is which without trusting a hue.
+- Greyscale check: a full-value disc, a pale disc of the same radius, and a
+  small faint dot — three states still distinct with colour removed, two by
   value and the third by size.
 - **No colour literal appears in the component.** Every fill reads one of four
   custom properties — `--glyph-attested`, `--glyph-ink`,
@@ -331,8 +340,8 @@ was protecting and which survives here by a different route.
 - Every badge carries a text equivalent ("Venerated in 2 of 4 communions:
   …; refused by …; 5 undocumented") and a hover/tap legend naming each cell.
 - The artwork is one inline-SVG component; the cell→communion mapping lives in
-  `churches.js`, not in the drawing, so squares could become tesserae without
-  a byte of data moving.
+  `churches.js`, not in the drawing, so the mark could change again without a
+  byte of data moving. It has.
 
 ### 7b. The rite x communion matrix
 
@@ -347,10 +356,11 @@ The 13 is derived, never a constant: Catholic holds all seven rites, Eastern
 Orthodox one, Oriental Orthodox four, the Church of the East one. Disable a
 communion and the row goes; the columns recompute.
 
-- **Same cells, same lattice, same three states as the badge.** Both renderers
-  call one `cellMark()` and one `rollupStates()` in `badge.js`, so a change to
-  what a refusal looks like, or to what counts as one, cannot land on one view
-  and miss the other. No colour literal here either.
+- **Same circles, same lattice, same three states as the badge.** Both
+  renderers call one `cellMark()` and one `rollupStates()` in `badge.js`, so a
+  change to what a refusal looks like, or to what counts as one, cannot land on
+  one view and miss the other. At the same pitch the two views draw the same
+  mark. No colour literal here either.
 - **The matrix is a decomposition of the badge, never a second dataset.** Roll
   a row up by the badge's rule and you get that communion's badge cell, for
   every possible input. `decomposesToBadge()` in `matrix.js` states it and two
@@ -395,25 +405,26 @@ the registry already flags it `coarse: true` for exactly this.
 ### 7c. Sizes, and which view each context takes
 
 The matrix is four rows tall where the badge is one, so it cannot sit beside a
-name at the scale a one-row strip did. Measured at cell 8 it is **61.4 x 34.7
-px**, and the undocumented mark — 0.275 of a cell — is 2.2 px. That mark is the
-floor: below about cell 8 it stops being a mark and becomes a smudge, and the
+name at the scale a one-row strip did. **The matrix ships at pitch 9** — 63 x
+36 px, an attested disc 5.6 px across and an undocumented dot 2.0 px. That dot
+is the floor: below pitch 9 it stops being a mark and becomes a smudge, and the
 size distinction that carries the third state through greyscale goes with it.
+**The badge ships at pitch 12** — 48 x 12 px for four communions.
 
-Measured in the shipping build:
+Measured in the shipping build, both viewports:
 
-| Context | Type | Line box | Verdict |
-|---|---|---|---|
-| Saint page `h1` | 40 px desktop, 28 px at 360 | 50 px / 35 px | **Matrix.** Fits desktop with room; exactly fills the 360 px box. |
-| Calendar hero `h2` | 26 px | 32.5 px natural | **Matrix.** Grows the line 2.5 px. Nothing else moves. |
-| Index card / row name | 17 px | ~24 px | **Badge.** A matrix would need cell 5.5 and a 1.5 px mark. |
-| Register and shelf rows | 17 px | ~24 px | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
+| Context | Type | Line box | Glyph | Verdict |
+|---|---|---|---|---|
+| Saint page `h1` | 40 px desktop, 28 px at 360 | 50 px / 36 px | 63 x 36 | **Matrix.** Room to spare on desktop; sets the line at 360. |
+| Calendar hero `h2` | 26 px | 36 px | 63 x 36 | **Matrix.** Grows the natural 32.5 px line by 3.5 px. Nothing else moves. |
+| Index card / row name | 17 px | 42 px | 48 x 12 | **Badge.** A matrix here needs pitch 6 and a 1.3 px dot. |
+| Register and shelf rows | 17 px | 73–77 px | 48 x 12 | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
 
-Two things worth knowing. The matrix at cell 8 is 61.4 px wide against the
-badge's 65 px at cell 15, so it takes **less** horizontal room than what it
-replaced — the cost is vertical only. And at 360 px the glyph sits flush to the
-content edge with the name wrapped within itself; there is no horizontal page
-overflow at 360 or at 320, and a browser test pins that.
+Two things worth knowing. The matrix at pitch 9 is 63 px wide against the
+badge's 65 px at the size it replaced, so it takes **no more** horizontal room
+than what it replaced — the cost is vertical only. And at 360 px the glyph sits
+flush to the content edge with the name wrapped within itself; there is no
+horizontal page overflow at 360 or at 320, and a browser test pins that.
 
 This split is the brief's own: §9.1 is "cards, map, dense lists", §9.2 is "one
 saint's own page", and §9.2 says in terms not to merge the two into one

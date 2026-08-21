@@ -86,6 +86,28 @@ decomposition and would erase the Nestorius East Syriac adjacency that brief
 DESIGN.md §7b. The trigger to split the registry entry is the first
 `eastern-catholic: venerated` attestation; there is none in the corpus today.
 
+**8. The cells are circles. The square lattice was wrong all along.** The
+reference bundle in the parent folder was revised on 2026-08-21 to state it
+twice — a banner above §1 and a rewritten §4 — and `veneration-glyph.js` now
+draws nothing but `<circle>`. Attested and refused share radius 0.31 x pitch;
+undocumented is 0.11 x pitch, a visibly smaller circle rather than the same one
+at a lower opacity. Marks are centred on their cell (`cx`/`cy` at the midpoint),
+not corner-anchored, and there is no gap constant any more — the gap is what
+the pitch leaves over around a 0.62-pitch disc.
+
+The component's parameter changed with it: `renderBadge`/`renderMatrix` take
+`pitch`, not `cell`. Badge ships at pitch 12 (48 x 12 px), matrix at pitch 9
+(63 x 36 px). The rendered sizes are within about a pixel of what the squares
+occupied, so nothing else in the layout moved.
+
+Two things this cost, worth remembering. The earlier revision of the spec said
+"squares" in its §4 and the implementation followed it faithfully; the only way
+that was going to be caught was the author looking at a screenshot. And the
+repo had vestigial traces of a still older circle draft — a stale `dot diameter
+22%` comment and a `/<rect|<circle/` test regex — which made the codebase look
+like it had already considered and rejected circles. Neither is a substitute
+for rendering the thing and looking at it.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

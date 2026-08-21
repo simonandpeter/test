@@ -11,7 +11,7 @@
  * the corpus, because the two views sitting side by side and disagreeing about
  * one saint would discredit both.
  *
- * Nothing here draws. Cells come from `cellMark` in badge.js and the state rule
+ * Nothing here draws. Marks come from `cellMark` in badge.js and the state rule
  * from `rollupStates`, so a change to what a refusal looks like, or to what
  * counts as one, cannot land on one renderer and miss the other. No colour
  * literal appears in this file for the same reason it does not appear in that
@@ -24,7 +24,7 @@
  */
 
 import { RITES, enabledChurches, enabledCommunions, churchesInCommunion } from '../data/churches.js';
-import { GAP_RATIO, cellMark, rollupStates, badgeLabel, rollup } from './badge.js';
+import { cellMark, rollupStates, badgeLabel, rollup } from './badge.js';
 import { STRINGS, fill } from './strings.js';
 
 /**
@@ -107,27 +107,26 @@ const cellTitle = (c) =>
   }) + (c.coarse ? STRINGS.matrix.coarse : '');
 
 /**
- * `cell` is the cell size in px, matching the badge's parameter, so the two
- * views draw the same square for the same number. Height is four rows of it:
- * see DESIGN.md §7 for why that rules the matrix out of a register row.
+ * `pitch` is the lattice step in px, the same parameter the badge takes, so
+ * the two views draw the same circle for the same number. Width is the rite
+ * columns x pitch and height the communion rows x pitch, per spec §4. Four
+ * rows is what rules the matrix out of a register row: see DESIGN.md §7c.
  */
-export function renderMatrix(attestations, { cell = 8 } = {}) {
+export function renderMatrix(attestations, { pitch = 9 } = {}) {
   const rows = matrixRows(attestations);
   const cols = riteColumns().length;
-  const gap = cell * GAP_RATIO;
-  const pitch = cell + gap;
   const round = (n) => Math.round(n * 1000) / 1000;
-  const width = cols * pitch - gap;
-  const height = rows.length * pitch - gap;
+  const width = cols * pitch;
+  const height = rows.length * pitch;
 
   const shapes = rows
     .flatMap((row, r) =>
       row.cells.map((c) =>
         cellMark({
           state: c.state,
-          x: c.col * pitch,
-          y: r * pitch,
-          cell,
+          cx: c.col * pitch + pitch / 2,
+          cy: r * pitch + pitch / 2,
+          pitch,
           title: cellTitle(c),
         }),
       ),

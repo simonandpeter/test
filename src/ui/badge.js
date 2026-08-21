@@ -2,19 +2,18 @@
  * The veneration badge (DESIGN.md §7) — the signature element, and the only
  * place gold appears in the product.
  *
- * A square-cell lattice, one cell per enabled communion, generated from the
- * registry: exactly as many cells as communions currently enabled, reserved
- * cells hidden rather than drawn empty, and a partial row keeps its cells on
- * lattice positions, left-aligned. Position encodes identity — a communion's
- * cell never moves between saints — and colour never carries information
- * alone.
+ * A lattice of circles on a fixed pitch, one cell per enabled communion,
+ * generated from the registry: exactly as many cells as communions currently
+ * enabled, reserved cells hidden rather than drawn empty, and a partial row
+ * keeps its cells on lattice positions, left-aligned. Position encodes
+ * identity — a communion's cell never moves between saints — and colour never
+ * carries information alone.
  *
- * The three states, per the author's veneration-glyph spec (2026-08-21, which
- * supersedes Addendum A1's hollow refusal cell — see DESIGN.md §7):
+ * The three states, per the author's veneration-glyph spec §4 (2026-08-21):
  *
- *   attested      full cell, --glyph-attested
- *   refused       full cell, --glyph-ink at --glyph-refused-opacity
- *   undocumented  a centred square at UNDOC_FRACTION of the cell,
+ *   attested      circle of RADIUS_RATIO x pitch, --glyph-attested
+ *   refused       same radius, --glyph-ink at --glyph-refused-opacity
+ *   undocumented  a visibly smaller circle, UNDOC_RADIUS_RATIO x pitch,
  *                 --glyph-ink at --glyph-undoc-opacity
  *
  * Refusal and attestation are distinguished by *value*, undocumented by
@@ -28,8 +27,7 @@
  * code change.
  *
  * The artwork lives here and only here; the cell→communion mapping comes from
- * churches.js. Swapping squares for tesserae later is a change to this file
- * and no data moves.
+ * churches.js. Changing the mark is a change to this file and no data moves.
  *
  * Pure string-returning functions, so the whole component is unit-testable in
  * Node and renderable anywhere innerHTML works.
@@ -39,37 +37,44 @@ import { enabledCommunions, churchesInCommunion } from '../data/churches.js';
 import { STRINGS, fill } from './strings.js';
 
 /* Geometry — layout, not theme, so these are constants rather than tokens.
-   The gap is the "fine" setting settled during design: a shade over an eighth
-   of the pitch, enough that adjacent cells never fuse into a shape that
-   depends on registry adjacency rather than on meaning. */
-export const GAP_RATIO = 0.9 / 8;
-/** The undocumented mark, as a fraction of a full cell. */
-export const UNDOC_FRACTION = 0.275;
+   Both are fractions of the pitch, per spec §4. The gap between marks is not a
+   constant here: it is what the pitch leaves over once a circle of 0.62 pitch
+   diameter is centred in it, which is why adjacent cells never fuse into a
+   shape that depends on registry adjacency rather than on meaning. */
+export const RADIUS_RATIO = 0.31;
+/** The undocumented mark: visibly smaller, not merely fainter. */
+export const UNDOC_RADIUS_RATIO = 0.11;
 
 /**
  * One cell of the lattice, drawn. The rite x communion matrix (matrix.js) is a
  * second reader of this: two renderers, one set of marks, so a change to what
  * a refusal looks like cannot land on one of them and not the other.
  *
+ * `cx`/`cy` are the cell's centre, not a corner — every mark is a circle
+ * concentric with its lattice position, so the three states differ in radius
+ * and never in where they sit.
+ *
  * `title` is the cell's own text equivalent and is inserted unescaped — every
  * caller builds it from the registry, not from saint data.
  */
-export function cellMark({ state, x, y, cell, title }) {
+export function cellMark({ state, cx, cy, pitch, title }) {
   const round = (n) => Math.round(n * 1000) / 1000;
   const t = title ? `<title>${title}</title>` : '';
-  const rect = (px, py, size, fillAttrs) =>
-    `<rect data-state="${state}" x="${round(px)}" y="${round(py)}" ` +
-    `width="${round(size)}" height="${round(size)}" ${fillAttrs}>${t}</rect>`;
+  const circle = (r, fillAttrs) =>
+    `<circle data-state="${state}" cx="${round(cx)}" cy="${round(cy)}" ` +
+    `r="${round(r)}" ${fillAttrs}>${t}</circle>`;
 
-  if (state === 'attested') return rect(x, y, cell, 'fill="var(--glyph-attested)"');
+  const r = pitch * RADIUS_RATIO;
+  if (state === 'attested') return circle(r, 'fill="var(--glyph-attested)"');
   if (state === 'refused') {
-    // Same footprint as an attestation: a refusal is a finding, not an
-    // absence, and it is told apart by value rather than by shape.
-    return rect(x, y, cell, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-refused-opacity, 0.11)"');
+    // Same radius as an attestation: a refusal is a finding, not an absence,
+    // and it is told apart by value rather than by size.
+    return circle(r, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-refused-opacity, 0.11)"');
   }
-  const d = cell * UNDOC_FRACTION;
-  const inset = (cell - d) / 2;
-  return rect(x + inset, y + inset, d, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-undoc-opacity, 0.18)"');
+  return circle(
+    pitch * UNDOC_RADIUS_RATIO,
+    'fill="var(--glyph-ink)" fill-opacity="var(--glyph-undoc-opacity, 0.18)"',
+  );
 }
 
 /**
@@ -142,28 +147,27 @@ export function badgeLabel(cells, unit = STRINGS.badge.unit.communions) {
 const cellTitle = (c) => `${c.label}: ${STRINGS.badge.state[c.state]}`;
 
 /**
- * The full lattice, for cards, the hero and detail pages. `cell` is the cell
- * size in px; `cols` caps the row length (default: one row). Geometry per
- * DESIGN.md §7: 10% inter-cell inset, hollow stroke 12% of cell, dot diameter
- * 22% of cell.
+ * The full lattice, for cards and dense rows. `pitch` is the lattice step in
+ * px and the marks are sized from it (spec §4, reference pitch 16); `cols`
+ * caps the row length (default: one row). Width is columns x pitch — the
+ * lattice owns the whole square each mark is centred in, so a badge and a
+ * matrix at the same pitch align cell for cell.
  */
-export function renderBadge(attestations, { cell = 14, cols = Infinity } = {}) {
+export function renderBadge(attestations, { pitch = 16, cols = Infinity } = {}) {
   const cells = rollup(attestations);
-  const gap = cell * GAP_RATIO;
-  const pitch = cell + gap;
   const perRow = Math.min(cells.length, cols === Infinity ? cells.length : cols);
   const rows = Math.ceil(cells.length / perRow);
-  const width = perRow * pitch - gap;
-  const height = rows * pitch - gap;
+  const width = perRow * pitch;
+  const height = rows * pitch;
   const round = (n) => Math.round(n * 1000) / 1000;
 
   const shapes = cells
     .map((c, i) =>
       cellMark({
         state: c.state,
-        x: (i % perRow) * pitch,
-        y: Math.floor(i / perRow) * pitch,
-        cell,
+        cx: (i % perRow) * pitch + pitch / 2,
+        cy: Math.floor(i / perRow) * pitch + pitch / 2,
+        pitch,
         title: cellTitle(c),
       }),
     )

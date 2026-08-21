@@ -50,7 +50,7 @@ test('a position with no church in it is not drawn at all', () => {
   // One cell, not seven with six blanks: there is no Ge'ez-rite Eastern
   // Orthodox church, and a mark there would invent one.
   assert.deepEqual(eo.cells.map((c) => c.rite.id), ['byzantine']);
-  assert.equal((renderMatrix([]).match(/<rect/g) ?? []).length, 13);
+  assert.equal((renderMatrix([]).match(/<circle/g) ?? []).length, 13);
 });
 
 test('disabling a communion drops its row but keeps a column another church holds', () => {
@@ -127,20 +127,21 @@ test('badge and matrix share one text equivalent, counted over their own cells',
 });
 
 test('the matrix holds no colour literal either', () => {
-  const svg = renderMatrix(nestorius, { cell: 100 });
+  const svg = renderMatrix(nestorius, { pitch: 100 });
   assert.ok(!/#[0-9a-f]{3,8}|rgba?\(|(gold|black|white|grey|gray)/i.test(svg.replace(/<title>.*?<\/title>/g, '')));
   assert.match(svg, /fill="var\(--glyph-attested\)"/);
   assert.match(svg, /--glyph-refused-opacity/);
 });
 
 test('cells sit on the same lattice as the badge, at the same size', () => {
-  const svg = renderMatrix(nestorius, { cell: 16 });
-  // Pitch = cell + gap = 16 + 1.8, exactly as the badge's lattice test pins it.
+  const svg = renderMatrix(nestorius, { pitch: 16 });
+  // Seven columns and four rows of the same pitch the badge's lattice test
+  // pins, and the field is the whole lattice — spec §4's detail width.
   const [, w, h] = svg.match(/width="([\d.]+)" height="([\d.]+)"/);
-  // Seven columns and four rows of that pitch, less the trailing gap.
-  assert.equal(parseFloat(w), 122.8);
-  assert.equal(parseFloat(h), 69.4);
-  // The Church of the East's one cell sits in the East Syriac column, row 3,
-  // on the lattice — not floated to the centre of an otherwise empty row.
-  assert.match(svg, /x="106.8" y="53.4" width="16" height="16"/);
+  assert.equal(parseFloat(w), 112);
+  assert.equal(parseFloat(h), 64);
+  // The Church of the East's one circle is centred in the East Syriac column,
+  // row 3 — on the lattice, not floated to the centre of an otherwise empty
+  // row — and carries the same radius a badge cell would at this pitch.
+  assert.match(svg, /cx="104" cy="56" r="4.96"/);
 });

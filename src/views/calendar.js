@@ -320,7 +320,7 @@ function paintDay(panel) {
           return `<li>
             <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
               data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
-            ${renderBadge(saint.attestations, { cell: 11 })}
+            ${renderBadge(saint.attestations, { pitch: 12 })}
             ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
             <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
           </li>`;
@@ -338,7 +338,7 @@ function paintDay(panel) {
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
             <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
           </h2>
-          ${renderMatrix(hero.attestations, { cell: 8 })}
+          ${renderMatrix(hero.attestations, { pitch: 9 })}
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>

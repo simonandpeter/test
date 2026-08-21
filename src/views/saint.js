@@ -114,7 +114,7 @@ function shell(card) {
     <header class="saint-head">
       <div class="name-line">
         <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
-        ${renderMatrix(card.attestations, { cell: 8 })}
+        ${renderMatrix(card.attestations, { pitch: 9 })}
       </div>
       <p class="names" data-names hidden></p>
       <p class="saint-facts utility">${esc(formatLifespan(card.dates))}${facts ? ` · ${esc(facts)}` : ''}</p>
@@ -345,7 +345,7 @@ function related(saint, data, router) {
     .map(
       (card) => `<li>
         <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(card.display_name)}</a>
-        ${renderBadge(card.attestations, { cell: 11 })}
+        ${renderBadge(card.attestations, { pitch: 12 })}
         <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
       </li>`,
     );

@@ -129,17 +129,23 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   const badge = page.locator('.hero svg.badge');
   await expect(badge).toHaveClass(/glyph-matrix/);
   await expect(badge).toHaveAttribute('aria-label', /Venerated in 3 of 13: /);
-  await expect(badge.locator('rect')).toHaveCount(13);
+  await expect(badge.locator('circle')).toHaveCount(13);
   // Attested cells at full size and undocumented marks at a fraction of one:
   // the states have to stay apart by size and value, not by colour.
-  await expect(badge.locator('rect[data-state="attested"]')).toHaveCount(3);
-  const undocumented = badge.locator('rect[data-state="undocumented"]');
+  await expect(badge.locator('circle[data-state="attested"]')).toHaveCount(3);
+  const undocumented = badge.locator('circle[data-state="undocumented"]');
   await expect(undocumented).toHaveCount(10);
   const [attestedBox, undocumentedBox] = [
-    await badge.locator('rect[data-state="attested"]').first().boundingBox(),
+    await badge.locator('circle[data-state="attested"]').first().boundingBox(),
     await undocumented.first().boundingBox(),
   ];
   expect(undocumentedBox.width).toBeLessThan(attestedBox.width / 2);
+  // Every mark is centred in its own cell rather than corner-anchored, so two
+  // states in the same row share a vertical centre and the row reads as one
+  // line instead of a stagger. Both of these are in Catholic's row.
+  expect(Math.round(undocumentedBox.y + undocumentedBox.height / 2)).toBe(
+    Math.round(attestedBox.y + attestedBox.height / 2),
+  );
 
   const feasts = await page.locator('.hero-feasts li').allTextContents();
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
@@ -578,19 +584,19 @@ test('the name carries the rite x communion matrix, and a dense row does not', a
   // and the calendar hero take it, and every dense context keeps the badge.
   // DESIGN.md §7 records the measurements.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('.saint-head svg.glyph-matrix rect')).toHaveCount(13);
+  await expect(page.locator('.saint-head svg.glyph-matrix circle')).toHaveCount(13);
   // Seven columns beside a name is the width that could push a 360 px page
   // sideways. It does not: the name shrinks and wraps within itself, which is
   // what the nowrap line is for.
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth),
   ).toBe(0);
-  await expect(page.locator('.register svg.badge:not(.glyph-matrix) rect').first()).toBeVisible();
+  await expect(page.locator('.register svg.badge:not(.glyph-matrix) circle').first()).toBeVisible();
   await expect(page.locator('.register svg.glyph-matrix')).toHaveCount(0);
 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.index-card svg.glyph-matrix')).toHaveCount(0);
-  await expect(page.locator('.index-card svg.badge').first().locator('rect')).toHaveCount(4);
+  await expect(page.locator('.index-card svg.badge').first().locator('circle')).toHaveCount(4);
 });
 
 test('the East Syriac column puts a refusal directly above an attestation', async ({ page }) => {
@@ -600,7 +606,7 @@ test('the East Syriac column puts a refusal directly above an attestation', asyn
   // matrix does, and only because the six Eastern Catholic cells are filled
   // rather than left blank.
   await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
-  const marks = await page.locator('.saint-head svg.glyph-matrix rect').evaluateAll((els) =>
+  const marks = await page.locator('.saint-head svg.glyph-matrix circle').evaluateAll((els) =>
     els.map((el) => ({
       state: el.dataset.state,
       x: Math.round(el.getBoundingClientRect().x),
@@ -672,14 +678,14 @@ test('cycling the theme does not move the header', async ({ page }) => {
 
 test('the glyph holds no colour of its own, and the states survive greyscale', async ({ page }) => {
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  const marks = await page.locator('.saint-head svg.badge rect').evaluateAll((els) =>
+  const marks = await page.locator('.saint-head svg.badge circle').evaluateAll((els) =>
     els.map((el) => {
       const style = getComputedStyle(el);
       return {
         state: el.dataset.state,
         fill: style.fill,
         opacity: parseFloat(style.fillOpacity),
-        width: el.getBoundingClientRect().width,
+        r: parseFloat(el.getAttribute('r')),
       };
     }),
   );
@@ -693,6 +699,6 @@ test('the glyph holds no colour of its own, and the states survive greyscale', a
   // Value and size both separate them; either alone would be a single point of
   // failure in greyscale or at a small size.
   expect(undocumented.opacity).toBeLessThan(attested.opacity);
-  expect(undocumented.width).toBeLessThan(attested.width / 2);
+  expect(undocumented.r).toBeLessThan(attested.r / 2);
 });
 
