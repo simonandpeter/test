@@ -45,6 +45,7 @@ function renderNav(current) {
 
 function show({ route, params }) {
   const view = route?.view;
+  const firstRender = first;
   // Every prefetch in flight was a guess about where this reader was going,
   // and the navigation has just answered it (brief §7).
   cancelPrefetches();
@@ -66,9 +67,17 @@ function show({ route, params }) {
     const heading = view.titleFor ? view.titleFor(params, data) : view.title;
     document.title = `${heading} — ${STRINGS.site.name}`;
     view.render(viewEl, { data, params, router });
-    // Keyboard and screen-reader focus follows the page change.
-    viewEl.querySelector('h1')?.setAttribute('tabindex', '-1');
-    viewEl.querySelector('h1')?.focus({ preventScroll: true });
+    // Keyboard and screen-reader focus follows the page change — but not
+    // into the first page of the visit. There is no page change to announce
+    // yet, focus is already at the top of the document, and Chrome treats a
+    // programmatic focus with no interaction behind it as keyboard-driven, so
+    // the reader would meet the heading wearing a focus ring they did not ask
+    // for and cannot dismiss without clicking away.
+    if (firstRender) return;
+    const h1 = viewEl.querySelector('h1');
+    if (!h1) return;
+    h1.setAttribute('tabindex', '-1');
+    h1.focus({ preventScroll: true });
   };
 
   // Cross-fade where the platform provides it; instant elsewhere. Reduced

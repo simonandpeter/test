@@ -79,6 +79,22 @@ test('every interactive element takes visible keyboard focus', async ({ page }) 
   }
 });
 
+test('the heading takes focus on navigation but not on arrival', async ({ page }) => {
+  // Moving focus to the new h1 is how a single-page app tells a screen reader
+  // the page changed. On the first page of a visit there is no change to
+  // announce, and Chrome scores a programmatic focus with no interaction
+  // behind it as keyboard-driven — which put a focus ring around the heading
+  // of every freshly loaded page until the reader clicked it away.
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('H1');
+
+  await page.locator('.site-nav a[href$="/saints"]').click();
+  await expect(page.locator('h1')).toHaveText('All Saints');
+  await expect
+    .poll(() => page.evaluate(() => document.activeElement?.tagName))
+    .toBe('H1');
+});
+
 test('the day is reachable by keyboard through the week strip', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const before = await page.locator('h1').first().textContent();
