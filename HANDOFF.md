@@ -16,7 +16,7 @@ briefing.
    this one.
 4. `DESIGN.md` — binding. §7 is the glyph, §5b the calendar page.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; fourteen entries now, each recording
+   the most important page in the repo**; fifteen entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -33,14 +33,19 @@ with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
 - 123 unit tests (`npm test`) — pure logic, no DOM.
-- 136 browser tests (`npm run test:e2e`) — across desktop and 360 px.
+- 152 browser tests (`npm run test:e2e`) — across desktop and 360 px.
 - `npm run test:all` runs both. CI runs both on every push.
 
-**Check `git log origin/main..HEAD` before anything else.** Agent sessions have
-no git credentials — `git push` fails with "could not read Username" from both
-shells — so commits accumulate locally and the author pushes them by hand. If
-any are outstanding, they have never been through GitHub Actions. Ask the
-author to push and confirm the run is green before building on top.
+**Pushing happens outside this session.** Agent sessions have no git
+credentials — `git push` fails with "could not read Username" from both shells.
+Your half of the arrangement is to stage and commit; a separate session of the
+author's pushes. So: commit, say the commit is ready, and ask for confirmation
+that the GitHub Actions run is green before building on top of it. Do not try
+to push, and do not treat a local pass as evidence about what was committed.
+
+**Check `git log origin/main..HEAD` before anything else**, all the same: it
+tells you which commits have not yet been through GitHub Actions, whoever is
+doing the pushing.
 
 ## The glyph, because it has moved twice
 
@@ -153,6 +158,12 @@ session). SESSIONS.md has each in full.
   scripts — that is what recent sessions have used and it has been reliable.
 - Git Bash mangles leading-slash paths in arguments. Verify against live URLs.
 - `npm run dev` must be backgrounded; it does not exit.
+- **Git Bash rewrites a leading-slash argument into a Windows path**, so
+  `node scripts/shot.mjs x /calendar/2026-01-30` navigates to
+  `C:/Program Files/Git/calendar/...`. `export MSYS_NO_PATHCONV=1` first.
+- `scripts/shot.mjs <name> <url> [width] [click:sel|wait:ms ...]` screenshots a
+  running preview into `shots/`, which is how the house rule about rendering a
+  change and looking at it gets honoured. Not part of the suite.
 - **Never leave a `vite preview` running.** Playwright's config does not reuse
   a server it did not start, so a stray one on :4173 fails the run loudly. Note
   that killing the npx wrapper does not always kill the vite child — check
@@ -170,8 +181,9 @@ session). SESSIONS.md has each in full.
 
 ## Outstanding, needs the author — not you
 
-- **Unpushed commits, if `git log origin/main..HEAD` shows any.** First thing
-  to resolve.
+- **Unpushed commits, if `git log origin/main..HEAD` shows any.** Pushing is
+  handled in a separate session of the author's, not here; what is owed is
+  confirmation that the Actions run went green before anything is built on top.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because

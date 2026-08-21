@@ -65,6 +65,10 @@ const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
 
 /** Matches --dur-month in tokens.css; the fade is long on purpose. */
 const MONTH_FADE = 420;
+/** Matches --dur-slot: the sideways step of a grain, and the day's own roll. */
+const STRIP_SLIDE = 260;
+
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 let state = null;
 
@@ -77,6 +81,8 @@ export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
   clearTimeout(state?.rollTimer);
   clearTimeout(state?.monthTimer);
+  clearTimeout(state?.slide?.timer);
+  clearTimeout(state?.sizeTimer);
   if (state) state.cleanups = [];
   state = null;
 }
@@ -98,7 +104,8 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     monthCursor: null, monthOpen: false,
-    cleanups: [], dayCleanups: [], rollTimer: null, monthTimer: null,
+    cleanups: [], dayCleanups: [],
+    rollTimer: null, monthTimer: null, sizeTimer: null, slide: null,
   };
 
   el.innerHTML = `
@@ -112,12 +119,18 @@ export function render(el, { data, params, router }) {
         <div class="cal-span">
           <div class="cal-week">
             <button type="button" data-step="-7" aria-label="${STRINGS.calendar.prevWeek}">‹</button>
-            <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+            <div class="strip-viewport">
+              <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+            </div>
             <button type="button" data-step="7" aria-label="${STRINGS.calendar.nextWeek}">›</button>
           </div>
           <div class="cal-month" hidden>
+            <span class="month-name"></span>
             <button type="button" data-mstep="-1" aria-label="${STRINGS.calendar.prevMonth}">‹</button>
-            <div class="month-view"></div>
+            <div class="month-view">
+              <div class="month-days" aria-hidden="true"></div>
+              <div class="month-body"><div class="month-grid"></div></div>
+            </div>
             <button type="button" data-mstep="1" aria-label="${STRINGS.calendar.nextMonth}">›</button>
           </div>
         </div>
@@ -170,11 +183,58 @@ const step = (n) => select(addDaysIso(state.selected, n));
 function select(iso) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;
+  // The strip scrolls when the week under it actually changes — a chevron, a
+  // swipe, an arrow key off the end, a jump to today — and not when a day is
+  // picked inside the week already showing, where there is nothing to travel
+  // to. The gesture is not what decides it; the movement is.
+  const moved = weekOf(iso)[0] !== weekOf(state.selected)[0];
   state.selected = iso;
   state.monthCursor = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
-  paintChrome();
+  paintChrome({ slideWeek: moved && forward ? 'forward' : moved ? 'backward' : null });
   slotSwap(forward);
+}
+
+/**
+ * Lands any grain-step still running, so a slide always starts from exactly
+ * one copy. Two copies of a strip live in its viewport for 260 ms and a bare
+ * `querySelector` cannot say which of them is current — the same shape of bug
+ * as the duplicated day panel (Amendment 9), and invisible until someone steps
+ * faster than the designer did.
+ */
+function landSlide() {
+  const slide = state.slide;
+  if (!slide) return;
+  clearTimeout(slide.timer);
+  state.slide = null;
+  for (const el of slide.viewport.querySelectorAll('.strip-leaving')) el.remove();
+  for (const el of slide.viewport.querySelectorAll('.strip-entering')) {
+    el.classList.remove('strip-entering');
+  }
+  slide.viewport.classList.remove('is-sliding', 'backward');
+}
+
+/**
+ * Steps a grain sideways: the copy being left slides out in the direction of
+ * travel and the repainted one follows it in. The leaving copy is scenery —
+ * aria-hidden, and its buttons out of the tab order — because for the length
+ * of the slide the document holds two of every date.
+ */
+function slideStrip(viewport, current, forward, repaint) {
+  landSlide();
+  if (reducedMotion()) return repaint();
+
+  const leaving = current.cloneNode(true);
+  leaving.classList.add('strip-leaving');
+  leaving.setAttribute('aria-hidden', 'true');
+  for (const b of leaving.querySelectorAll('button')) b.tabIndex = -1;
+  repaint();
+
+  viewport.classList.toggle('backward', !forward);
+  viewport.classList.add('is-sliding');
+  viewport.appendChild(leaving);
+  current.classList.add('strip-entering');
+  state.slide = { viewport, timer: setTimeout(landSlide, STRIP_SLIDE) };
 }
 
 /**
@@ -228,7 +288,33 @@ function slotSwap(forward) {
   }, 300);
 }
 
-function paintChrome() {
+function paintChrome({ slideWeek = null } = {}) {
+  const { el, selected, data } = state;
+  const today = todayIso();
+
+  const strip = el.querySelector('.week-strip');
+  if (slideWeek) {
+    slideStrip(el.querySelector('.strip-viewport'), strip, slideWeek === 'forward', paintWeek);
+  } else {
+    paintWeek();
+  }
+
+  el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
+
+  const d = parseIso(selected);
+  const jdn = gregorianToJdn(d.year, d.month, d.day);
+  el.querySelector('.cal-reckonings').textContent = ['julian', 'coptic', 'ethiopian']
+    .map((cal) => {
+      const c = fromJdn(cal, jdn);
+      const year = cal === 'julian' ? '' : ` ${c.year}`;
+      return `${CALENDAR_LABELS[cal]} ${c.day} ${monthName(cal, c.month)}${year}`;
+    })
+    .join(' · ');
+
+  if (state.monthOpen) paintMonth();
+}
+
+function paintWeek() {
   const { el, selected, data } = state;
   const today = todayIso();
 
@@ -250,20 +336,6 @@ function paintChrome() {
   for (const b of el.querySelectorAll('.week-strip [data-iso]')) {
     b.addEventListener('click', () => select(b.dataset.iso));
   }
-
-  el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-
-  const d = parseIso(selected);
-  const jdn = gregorianToJdn(d.year, d.month, d.day);
-  el.querySelector('.cal-reckonings').textContent = ['julian', 'coptic', 'ethiopian']
-    .map((cal) => {
-      const c = fromJdn(cal, jdn);
-      const year = cal === 'julian' ? '' : ` ${c.year}`;
-      return `${CALENDAR_LABELS[cal]} ${c.day} ${monthName(cal, c.month)}${year}`;
-    })
-    .join(' · ');
-
-  if (state.monthOpen) paintMonth();
 }
 
 /* ---- month view ------------------------------------------------------- */
@@ -273,34 +345,54 @@ function paintChrome() {
  * same question at two grains, and showing both at once was two date pickers
  * competing for the same click.
  *
- * The month cross-fades in and out. A grid five rows tall appearing between
- * two frames is a jolt; the fade is deliberately slower than the day roll
- * because there is far more of it arriving. It only ever closes from this
- * button — picking a date leaves it open, so a reader comparing days does not
- * have to reopen the month between each one.
+ * The two grains share one cell, so the swap is a cross-fade in place with the
+ * month's rows unfurling out of the day-name line the week already holds — the
+ * day names themselves never move (author, 2026-08-21). The row is as tall as
+ * whichever grain is taller, so the page below follows the growth down instead
+ * of jumping the moment the button is pressed. It is deliberately slower than
+ * the day roll: there is far more of it arriving.
+ *
+ * It only ever closes from this button — picking a date leaves it open, so a
+ * reader comparing days does not have to reopen the month between each one.
  */
 function toggleMonth() {
   state.monthOpen = !state.monthOpen;
   const { el, monthOpen } = state;
   const month = el.querySelector('.cal-month');
   const week = el.querySelector('.cal-week');
+  const body = el.querySelector('.month-body');
   const button = el.querySelector('[data-month]');
 
   button.setAttribute('aria-expanded', String(monthOpen));
   button.classList.toggle('is-on', monthOpen);
   clearTimeout(state.monthTimer);
+  landSlide();
 
   // Reduced motion removes the fade, so there is nothing to wait for: waiting
   // anyway would be a delay with no animation behind it.
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduced = reducedMotion();
 
   if (monthOpen) {
     paintMonth();
-    week.hidden = true;
     month.hidden = false;
-    if (reduced) return month.classList.add('is-open');
+    if (reduced) {
+      week.hidden = true;
+      month.classList.add('is-open');
+      return;
+    }
+    // The week stays in the layout, fading, until the month has finished
+    // arriving: hiding it first would drop the row to nothing for a frame.
+    growMonthBody(body, 0, measure(body));
     // One frame at opacity 0 in the layout, so the transition has a start.
-    requestAnimationFrame(() => month.classList.add('is-open'));
+    requestAnimationFrame(() => {
+      month.classList.add('is-open');
+      week.classList.add('is-out');
+    });
+    state.monthTimer = setTimeout(() => {
+      week.hidden = true;
+      week.classList.remove('is-out');
+      state.monthTimer = null;
+    }, MONTH_FADE);
     return;
   }
 
@@ -310,10 +402,47 @@ function toggleMonth() {
     week.hidden = false;
     return;
   }
+  week.hidden = false;
+  week.classList.add('is-out');
+  growMonthBody(body, measure(body), 0);
+  requestAnimationFrame(() => week.classList.remove('is-out'));
   state.monthTimer = setTimeout(() => {
     month.hidden = true;
-    week.hidden = false;
+    body.style.height = '';
     state.monthTimer = null;
+  }, MONTH_FADE);
+}
+
+const measure = (el) => el.getBoundingClientRect().height;
+
+/**
+ * The dates' own height, in pixels, for the length of a change to it — the
+ * rows unfurling from the day-name line, folding back into it, or a five-row
+ * month stepping to a six-row one. There is no transition from a number to
+ * `auto`, so the end value is set explicitly and released once it has arrived;
+ * the clip that makes the growth read as unfurling goes on and comes off with
+ * it, so a date's focus ring is never cropped at rest.
+ */
+function growMonthBody(body, from, to) {
+  clearTimeout(state.sizeTimer);
+  state.sizeTimer = null;
+  if (reducedMotion()) {
+    body.style.height = '';
+    body.classList.remove('is-growing');
+    return;
+  }
+  body.classList.add('is-growing');
+  body.style.height = `${from}px`;
+  // Flushed deliberately: without a layout between the two values the browser
+  // coalesces them into one style recalculation and there is no transition to
+  // run — the rows would appear at their final height in a single frame.
+  void body.offsetHeight;
+  body.style.height = `${to}px`;
+  state.sizeTimer = setTimeout(() => {
+    // Left at 0 when the month is closing; the toggle hides it on the same tick.
+    if (to > 0) body.style.height = '';
+    body.classList.remove('is-growing');
+    state.sizeTimer = null;
   }, MONTH_FADE);
 }
 
@@ -346,14 +475,17 @@ function paintMonth() {
       aria-label="${dayFmt.format(utc(iso))}">${day}<span class="density" aria-hidden="true">${dots}</span></button>`);
   }
 
-  el.querySelector('.month-view').innerHTML = `
-    <div class="month-head">
-      <span class="month-name">${monthFmt.format(utc(first))}</span>
-    </div>
-    <div class="month-grid">
-      ${dayNames.map((n) => `<span class="month-day-name utility">${n}</span>`).join('')}
-      ${cells.join('')}
-    </div>`;
+  // The name prints in the gutter beside the grid rather than above it, so it
+  // costs the row no height (author, 2026-08-21).
+  el.querySelector('.month-name').textContent = monthFmt.format(utc(first));
+
+  // The day names are the week strip's, in the same columns and the same
+  // place, and they say nothing a date's own label does not — the button below
+  // each of them reads "Friday, 30 January 2026" in full.
+  el.querySelector('.month-days').innerHTML = dayNames
+    .map((n) => `<span class="month-day-name">${n}</span>`)
+    .join('');
+  el.querySelector('.month-grid').innerHTML = cells.join('');
 
   // Picking a date does not close the month: only the toggle does.
   for (const b of el.querySelectorAll('.month-grid [data-iso]')) {
@@ -361,6 +493,11 @@ function paintMonth() {
   }
 }
 
+/**
+ * A month steps sideways like the week does, and takes its height with it: a
+ * five-row month arriving where a six-row one was would otherwise shunt the
+ * whole page up between two frames.
+ */
 function stepMonth(n) {
   const c = state.monthCursor;
   if (!c) return;
@@ -369,7 +506,19 @@ function stepMonth(n) {
     year: c.year + Math.floor((month - 1) / 12),
     month: ((month - 1 + 12) % 12) + 1,
   };
-  paintMonth();
+
+  const body = state.el.querySelector('.month-body');
+  const before = measure(body);
+  slideStrip(body, state.el.querySelector('.month-grid'), n > 0, paintMonth);
+
+  // Whatever a grow still in flight had pinned, so the new month is measured at
+  // its own height rather than at the height it was on its way to.
+  clearTimeout(state.sizeTimer);
+  state.sizeTimer = null;
+  body.classList.remove('is-growing');
+  body.style.height = '';
+  const after = measure(body);
+  if (after !== before) growMonthBody(body, before, after);
 }
 
 /* ---- the day panel: hero + register ----------------------------------- */

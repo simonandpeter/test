@@ -785,7 +785,7 @@ test('picking a date leaves the month open; only the button closes it', async ({
   await expect(page.locator('.cal-week')).toBeVisible();
 });
 
-test('the month keeps the week chevrons where they were, and names itself between them', async ({ page }) => {
+test('the month keeps the week chevrons where they were, and names itself in the gutter', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
   const weekPrev = await box('.cal-week > button');
@@ -802,11 +802,200 @@ test('the month keeps the week chevrons where they were, and names itself betwee
     expect(Math.round(m.height)).toBe(Math.round(w.height));
   }
 
-  // The name is centred in the grid between them, not shoved against one side.
-  const grid = await box('.month-view');
+  // The name prints in the gutter under the jump stack and the back chevron
+  // (author, 2026-08-21) rather than centred over the grid, where it pushed
+  // every date down a line for a label the week manages without. It ends where
+  // the chevron ends and starts below it, so it costs the row no height at all.
   const name = await box('.month-name');
-  const slack = grid.x + grid.width / 2 - (name.x + name.width / 2);
-  expect(Math.abs(slack)).toBeLessThan(2);
+  expect(Math.round(name.x + name.width)).toBe(Math.round(monthPrev.x + monthPrev.width));
+  expect(name.y).toBeGreaterThanOrEqual(monthPrev.y + monthPrev.height);
+  expect(name.x).toBeLessThan((await box('.month-view')).x);
+});
+
+test('the month is the week grown taller: the day names do not move', async ({ page }) => {
+  // Toggling grain changes how many rows there are, not where the week's own
+  // headings sit (author, 2026-08-21) — which is what makes the dates read as
+  // unfurling from under them rather than as a second control arriving.
+  //
+  // Measured on the text rather than on its box: in the week a day name is a
+  // flex item centred in its button, in the month a grid cell carrying the
+  // padding itself, so the two boxes differ exactly where the glyphs do not.
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const text = (sel) =>
+    page.evaluate((s) => {
+      const range = document.createRange();
+      return [...document.querySelectorAll(s)].map((el) => {
+        range.selectNodeContents(el);
+        const r = range.getBoundingClientRect();
+        return [Math.round(r.x + r.width / 2), Math.round(r.top), Math.round(r.height)];
+      });
+    }, sel);
+
+  const week = await text('.week-strip .day-name');
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  await page.waitForTimeout(600);
+
+  expect(week).toHaveLength(7);
+  expect(await text('.month-day-name')).toEqual(week);
+});
+
+test('the month spends its height on dates rather than on leading', async ({ page }) => {
+  // January 2026 is five rows. Nothing in the grid is set in the serif — the
+  // dates and the day names are both the utility face — so these measure the
+  // same in either face, and an absolute assertion is safe here where one on
+  // the index would be flaky.
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+
+  const rows = await page.locator('.month-grid button').evaluateAll((els) =>
+    [...new Set(els.map((el) => Math.round(el.getBoundingClientRect().top)))].sort((a, b) => a - b),
+  );
+  expect(rows).toHaveLength(5);
+  // A date is one numeral; the body's reading leading around it was most of
+  // why the month stood 278 px tall (author, 2026-08-21).
+  expect(rows[1] - rows[0]).toBeLessThanOrEqual(32);
+
+  const controls = await page.locator('.cal-controls').boundingBox();
+  expect(controls.height).toBeLessThan(200);
+});
+
+test('the month unfurls out of the week and the page follows it down', async ({ page }) => {
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const heading = page.locator('h1');
+  const closed = (await heading.boundingBox()).y;
+
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(80);
+  const mid = (await heading.boundingBox()).y;
+  await page.waitForTimeout(600);
+  const open = (await heading.boundingBox()).y;
+
+  // The day is a good way further down the page with five rows above it, and
+  // it travelled there — five rows arriving between two frames is the jolt the
+  // growth exists to remove.
+  expect(open).toBeGreaterThan(closed + 60);
+  expect(mid).toBeGreaterThan(closed);
+  expect(mid).toBeLessThan(open - 20);
+
+  // And the height is released once it has arrived, so a month with a sixth
+  // row is not held to the height of one with five.
+  const body = page.locator('.month-body');
+  expect(await body.evaluate((el) => el.style.height)).toBe('');
+  expect(await body.evaluate((el) => el.classList.contains('is-growing'))).toBe(false);
+});
+
+test('under reduced motion the month arrives whole, with no held height', async ({ browser }) => {
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const closed = (await page.locator('h1').boundingBox()).y;
+
+  await page.locator('[data-month]').click();
+  // Removed, not shortened: every row is there on the next frame, and the JS
+  // holds no pixel height and no clip it would then have to wait out.
+  const body = page.locator('.month-body');
+  expect(await body.evaluate((el) => el.style.height)).toBe('');
+  expect(await body.evaluate((el) => el.classList.contains('is-growing'))).toBe(false);
+  await expect(page.locator('.cal-week')).toBeHidden();
+  expect((await page.locator('h1').boundingBox()).y).toBeGreaterThan(closed + 60);
+  await ctx.close();
+});
+
+test('a week steps sideways rather than swapping in place', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  // Sampled the moment the second copy appears rather than polled afterwards:
+  // the slide is 260 ms and a poll racing it would be a flake waiting to be
+  // blamed on the machine.
+  const during = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const vp = document.querySelector('.strip-viewport');
+        const observer = new MutationObserver(() => {
+          const leaving = vp.querySelector('.week-strip.strip-leaving');
+          if (!leaving) return;
+          observer.disconnect();
+          resolve({
+            strips: vp.querySelectorAll('.week-strip').length,
+            hidden: leaving.getAttribute('aria-hidden'),
+            reachable: [...leaving.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
+            entering: vp.querySelectorAll('.week-strip.strip-entering').length,
+            clipped: vp.classList.contains('is-sliding'),
+          });
+        });
+        observer.observe(vp, { childList: true, subtree: true, attributes: true });
+        document.querySelector('[data-step="7"]').click();
+      }),
+  );
+
+  // Both weeks are in the viewport for the length of it, and the one being left
+  // is scenery: the document briefly holds two of every date, and only one set
+  // of them is the reader's.
+  expect(during.strips).toBe(2);
+  expect(during.entering).toBe(1);
+  expect(during.hidden).toBe('true');
+  expect(during.reachable).toBe(0);
+  expect(during.clipped).toBe(true);
+
+  // And it lands — one strip, nothing clipped, nothing left animating.
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  await expect(page.locator('.week-strip')).toHaveCount(1);
+  await expect(page.locator('.strip-leaving')).toHaveCount(0);
+  await expect(page.locator('.strip-viewport.is-sliding')).toHaveCount(0);
+});
+
+test('picking a day inside the week showing does not slide it', async ({ page }) => {
+  // The movement decides, not the gesture: there is nothing to travel to when
+  // the week under the strip is the same week.
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  const slid = await page.evaluate(() => {
+    const vp = document.querySelector('.strip-viewport');
+    let seen = false;
+    const observer = new MutationObserver(() => {
+      if (vp.querySelector('.strip-leaving')) seen = true;
+    });
+    observer.observe(vp, { childList: true, subtree: true, attributes: true });
+    vp.querySelectorAll('[data-iso]')[3].click();
+    observer.disconnect();
+    return seen;
+  });
+  expect(slid).toBe(false);
+  await expect(page.locator('h1')).toHaveText(/27 August 2026/);
+});
+
+test('under reduced motion a week step leaves no second copy behind', async ({ browser }) => {
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-step="7"]').click();
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  // Removed, not shortened: no slide to sit through, and so no clone to clean
+  // up after one.
+  await expect(page.locator('.strip-leaving')).toHaveCount(0);
+  await expect(page.locator('.strip-viewport.is-sliding')).toHaveCount(0);
+  await ctx.close();
+});
+
+test('a month steps sideways and carries its height with it', async ({ page }) => {
+  // August 2026 is six rows and September is five, so stepping between them is
+  // the case where the page below would otherwise jump between two frames.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+  const six = await page.locator('.month-body').boundingBox();
+
+  await page.locator('[data-mstep="1"]').click();
+  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  const held = await page.locator('.month-body').evaluate((el) => el.style.height);
+  expect(parseFloat(held)).toBeGreaterThan(0);
+
+  await page.waitForTimeout(600);
+  const five = await page.locator('.month-body').boundingBox();
+  expect(five.height).toBeLessThan(six.height);
+  expect(await page.locator('.month-body').evaluate((el) => el.style.height)).toBe('');
 });
 
 test('the month fades rather than appearing between two frames', async ({ page }) => {

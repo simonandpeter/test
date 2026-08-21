@@ -142,6 +142,10 @@ Picking a date no longer closes the month. The month's chevrons moved out of
 chevron positions — all four heights come from one `--cal-row-h`, which is what
 keeps them from shifting as the two swap. The month cross-fades over 420 ms.
 
+*Superseded in part by Amendment 15:* the month no longer names itself centred
+above its grid, and the cross-fade is now an unfurl out of the day-name line.
+The chevron arrangement and the swipe helper are unchanged.
+
 **12. The glyph is 15% smaller everywhere** (author, 2026-08-21): badge pitch
 12 → 10.2, matrix pitch 9 → 7.65. Worth knowing before it shrinks again: the
 matrix's undocumented dot is now 1.68 px, under the 2 px legibility floor
@@ -183,6 +187,45 @@ as the worked example. Every circle on that page comes from `cellMark` and the
 two real renderers, so the legend cannot describe a glyph the site no longer
 draws — and the worked example uses a real saint, dropping itself if he ever
 leaves the corpus rather than being propped up with invented attestations.
+
+**15. The month is the week grown taller, and a grain steps sideways**
+(author, 2026-08-21). Four refinements to the calendar chrome, and one of them
+reverses a decision recorded here five entries ago.
+
+The month lost its frame and its centred heading and took the week strip's own
+column geometry, so **the day names sit in exactly the same place at either
+grain** — same column centres, same top, to the pixel at 1280 and at 360. That
+is what makes toggling read as rows arriving rather than as a second control.
+**The name moved into the gutter** under the jump stack and the back chevron,
+which costs the row no height at all; Amendment 11 and DESIGN.md §5b both said
+it sat centred above the grid, and both are rewritten. With the leading around
+each date cut to a numeral's worth, the row is 171 px where it was 278.
+
+The two grains now share one grid cell, so the week fades out where the month
+fades in and the dates unfurl downward out of the day-name line, with the row
+as tall as whichever grain is taller — which is what carries the page below
+down instead of jumping it. There is no transitioning from a pixel height to
+`auto`, so the JS sets the end value and releases it once it has arrived, and
+forces a layout between the two values: without that flush the browser
+coalesces them into one recalculation and the rows appear at full height in a
+single frame with no transition to run.
+
+Stepping a week or a month slides rather than swapping in place. **What decides
+it is the movement, not the gesture** — a chevron, a swipe, an arrow key off
+the end and the jump to today all travel, and picking a day inside the week
+already showing does not. Two copies of a strip live in its viewport for
+260 ms, so the leaving one says what it is: a class, `aria-hidden`, and its
+buttons out of the tab order, with any slide still running landed before
+another starts. That is Amendment 9's lesson applied before it could bite a
+second time. The viewport is only clipped for the length of a slide, because at
+rest a day's focus ring reaches 4 px outside its button and must not be cropped.
+
+The test for the day names measures the **text**, not its box: in the week a
+day name is a flex item centred in its button and in the month a grid cell
+carrying the padding itself, so the two boxes differ by 5 px vertically and by
+half a column horizontally while the glyphs land identically. A first draft of
+that assertion compared `getBoundingClientRect()` and read as a failure when
+the thing under test was already correct.
 
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was

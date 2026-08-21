@@ -10,6 +10,14 @@
 .cal-controls {
   /* Every control in the row is this tall, or half of it stacked. */
   --cal-row-h: 53px;
+  /* Pinned rather than intrinsic, because the gutter below is derived from it
+     and a chevron that sized itself to its padding would move the month's
+     name whenever that padding changed. */
+  --cal-chevron-w: 31px;
+  /* The empty column to the left of the strip — the jump stack, the row gap
+     and the back chevron. The month prints its name into it. */
+  --cal-gutter: calc(34px + var(--space-3) + var(--cal-chevron-w));
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
@@ -48,13 +56,20 @@
   border-color: var(--ink-soft);
 }
 
+/* The two grains share one cell rather than following one another down the
+   page. Stacked, the week can fade out exactly where the month fades in, the
+   day names never move between them, and the row's height is whichever grain
+   is currently taller — so the page below follows the month's growth instead
+   of jumping the moment it is toggled. */
 .cal-span {
   flex: 1 1 auto;
   min-width: 0;
+  display: grid;
 }
 
 .cal-week,
 .cal-month {
+  grid-area: 1 / 1;
   display: flex;
   align-items: flex-start;
   gap: var(--space-2);
@@ -69,6 +84,8 @@
 .cal-week > button,
 .cal-month > button {
   flex: none;
+  width: var(--cal-chevron-w);
+  padding-inline: 0;
   height: var(--cal-row-h);
 }
 
@@ -81,10 +98,12 @@
   min-width: 0;
 }
 
-/* A grid five rows tall appearing between two frames is a jolt. It fades, and
-   the fade is slower than the day roll because there is more of it arriving.
-   Reduced motion drops the transition through the global rule in base.css and
-   the JS skips the matching wait, so the swap is instant rather than blank. */
+/* The two grains cross-fade in place over --dur-month. Whichever is on its way
+   out is also out of reach for the length of it: they occupy one cell, so a
+   click landing on the leaving grain would be a click on a date the reader can
+   no longer see. Reduced motion drops both transitions through the global rule
+   in base.css, and the JS skips the matching wait rather than holding the row
+   blank for 420 ms with no animation behind it: removed, not shortened. */
 .cal-month {
   opacity: 0;
   transition: opacity var(--dur-month) var(--ease);
@@ -92,6 +111,19 @@
 
 .cal-month.is-open {
   opacity: 1;
+}
+
+.cal-month:not(.is-open),
+.cal-week.is-out {
+  pointer-events: none;
+}
+
+.cal-week {
+  transition: opacity var(--dur-month) var(--ease);
+}
+
+.cal-week.is-out {
+  opacity: 0;
 }
 
 /* A class selector outranks the user agent's [hidden] rule, so display: flex
@@ -102,11 +134,26 @@
   display: none;
 }
 
+/* The strip slides rather than swapping in place, so a viewport to clip it
+   against. Clipping is switched on only for the length of a slide: at rest a
+   day's focus ring reaches 4 px outside its button and must not be cropped. */
+.strip-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Both grains slide inside their own viewport — the week inside this one, the
+   month inside `.month-body` — so the clip is keyed to the class, not to the
+   element that happens to carry it. */
+.is-sliding {
+  overflow: hidden;
+}
+
 .week-strip {
   display: flex;
   gap: var(--space-1);
-  flex: 1 1 auto;
-  min-width: 0;
+  width: 100%;
 }
 
 .week-strip button {
@@ -137,16 +184,13 @@
    line if any of these grow again. */
 @media (max-width: 560px) {
   .cal-controls {
+    --cal-chevron-w: 22px;
+    --cal-gutter: calc(34px + var(--space-2) + var(--cal-chevron-w));
     gap: var(--space-2);
   }
   .cal-week,
   .cal-month {
     gap: var(--space-1);
-  }
-  .cal-week > button,
-  .cal-month > button {
-    width: 22px;
-    padding-inline: 0;
   }
   .week-strip button {
     min-width: 26px;
@@ -190,45 +234,79 @@
 
 /* ---- month view ------------------------------------------------------- */
 
-.month-view {
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-panel);
-  padding: var(--space-3);
-}
+/* The month is the week grown taller, not a panel that replaces it, so it
+   carries no frame of its own: same seven columns, same gap, same left and
+   right edges. What the reader sees toggle is rows arriving, which is the only
+   thing that actually differs between the two grains. */
 
-/* The month's name sits centred above its grid, between the two chevrons,
-   where the week has nothing to name. */
-.month-head {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--space-2);
-}
-
-.month-head .month-name {
+/* The month's name sits in the gutter under the jump stack and the back
+   chevron (author, 2026-08-21), where it costs the row no height at all. It
+   used to sit centred above the grid, which pushed every date down a line for
+   a label the week manages without. */
+.cal-month .month-name {
+  position: absolute;
+  left: 0;
+  top: calc(var(--cal-row-h) + var(--space-2));
+  width: var(--cal-gutter);
+  padding-inline-end: var(--space-2);
   font-family: var(--font-serif);
   font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.month-days,
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  column-gap: var(--space-1);
+}
+
+/* The day names land exactly on the week strip's — same columns, and the same
+   one transparent border plus one --space-1 of padding below the row's top
+   edge. Toggling the month leaves them untouched and the dates unfurl from
+   under them (author, 2026-08-21). */
+.month-day-name {
+  text-align: center;
+  padding-top: calc(var(--space-1) + 1px);
+  font-family: var(--font-utility);
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--ink-soft);
+}
+
+/* The rows grow out of the day-name line and shrink back into it. Height is
+   set in pixels by the JS for the length of the change, because there is no
+   transition from a number to `auto`; the clip that makes the growth read as
+   unfurling goes on with it and comes off after, so a date's focus ring is
+   never cropped at rest. */
+.month-body {
+  position: relative;
+  transition: height var(--dur-month) var(--ease);
+}
+
+.month-body.is-growing {
+  overflow: hidden;
 }
 
 .month-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
-}
-
-.month-grid .month-day-name {
-  text-align: center;
-  padding-bottom: var(--space-1);
+  row-gap: 2px;
+  padding-top: var(--space-1);
 }
 
 .month-grid button {
   border: 1px solid transparent;
-  padding: var(--space-1) 0;
+  padding: 2px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
   font-family: var(--font-utility);
   font-size: 13px;
+  /* A date is one numeral. The body's reading leading is height spent on
+     nothing here, and five rows of it is most of why the month was too tall. */
+  line-height: 1.2;
   font-variant-numeric: tabular-nums;
 }
 
@@ -240,6 +318,44 @@
   background: var(--field);
   border-color: var(--rule);
   color: var(--rubric);
+}
+
+/* ---- stepping a grain sideways ---------------------------------------- */
+
+/* A week or a month steps by scrolling: the grain being left slides out in the
+   direction of travel and the one arriving follows it in. Both copies are in
+   the viewport for the length of it, so which is current is stated rather than
+   looked up — the leaving copy carries a class and is aria-hidden, and any
+   slide still running is landed before another starts (Amendment 9). */
+.strip-leaving {
+  position: absolute;
+  inset: 0 0 auto 0;
+  animation: strip-out var(--dur-slot) var(--ease) forwards;
+}
+
+.strip-entering {
+  animation: strip-in var(--dur-slot) var(--ease);
+}
+
+.backward .strip-leaving {
+  animation-name: strip-out-back;
+}
+
+.backward .strip-entering {
+  animation-name: strip-in-back;
+}
+
+@keyframes strip-out {
+  to { transform: translateX(-100%); opacity: 0; }
+}
+@keyframes strip-in {
+  from { transform: translateX(100%); opacity: 0; }
+}
+@keyframes strip-out-back {
+  to { transform: translateX(100%); opacity: 0; }
+}
+@keyframes strip-in-back {
+  from { transform: translateX(-100%); opacity: 0; }
 }
 
 /* ---- the day ---------------------------------------------------------- */

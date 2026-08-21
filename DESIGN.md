@@ -198,10 +198,21 @@ nothing else says which grain you are in.
 
 The month's chevrons sit in exactly the places the week's occupy — same x,
 same y, same height, all four derived from one `--cal-row-h` — so nothing moves
-as the two swap. The month names itself centred above its grid, between them,
-where the week has nothing to name. **Picking a date does not close the month**;
+as the two swap. **Picking a date does not close the month**;
 only the toggle does, so a reader comparing days is not reopening it between
 each one.
+
+**The month is the week grown taller** (author, revised 2026-08-21), not a
+panel that replaces it. It carries no frame of its own and takes the strip's
+seven columns, its gap and its left and right edges, so the day names sit in
+exactly the same place at either grain — same column centres, same top, to the
+pixel — and what the reader sees toggle is rows arriving, which is the only
+thing that actually differs between the two. **The month prints its name in
+the gutter**, under the jump stack and the back chevron, where it costs the row
+no height; it used to sit centred above the grid, which spent a line of every
+date's height on a label the week manages without. A date row is one numeral
+and is set to match: the body's reading leading around it was most of why the
+month stood 278 px tall against 171 now.
 
 The chevrons flanking the week move a **week**; a day is chosen by clicking it.
 Arrow keys inside the strip still move a day, which is how a keyboard reaches
@@ -217,12 +228,26 @@ both controls fit 360 px and the quality floor's overflow check holds it.
 The page opens on this row rather than on a heading, so it takes a heading's
 worth less air beneath the site header than every other view.
 
-**The month cross-fades**, over `--dur-month` (420 ms) — deliberately slower
-than the day roll, because five rows arriving between two frames is a jolt and
-there is far more of it arriving. Reduced motion drops the transition through
+**The month unfurls**, over `--dur-month` (420 ms) — deliberately slower than
+the day roll, because five rows arriving between two frames is a jolt and there
+is far more of it arriving. The two grains share one cell, so the week fades
+out exactly where the month fades in and the dates grow downward out of the
+day-name line the week already holds; folding back into it is the same
+movement reversed. The row is as tall as whichever grain is currently taller,
+which is what carries the page below down with the growth instead of jumping it
+the moment the button is pressed. Reduced motion drops both transitions through
 the global rule in base.css, and the JS skips the matching wait rather than
 holding a blank row for 420 ms with no animation behind it: removed, not
 shortened.
+
+**A grain steps sideways.** Moving a week or a month — by chevron, by swipe, by
+an arrow key off the end of the strip, by the jump to today — slides the grain
+being left out in the direction of travel and brings the repainted one in
+behind it, over `--dur-slot`. What decides it is the movement and not the
+gesture: picking a day inside the week already showing has nowhere to travel to
+and simply repaints. A month takes its height with it as it goes, because a
+five-row month arriving where a six-row one was would shunt the whole page up
+between two frames.
 
 **Dense against sparse.** A day with twelve commemorations across four
 traditions and a day with one must both read as composed. Density lives in the
