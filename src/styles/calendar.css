@@ -75,27 +75,34 @@
   touch-action: pan-y;
 }
 
-/* The week's edges travel with the week (author, 2026-08-21), so what slides is
-   the whole row — leading peek, seven days, trailing peek — rather than the
-   strip alone with the edges repainting in place beside it. That makes
-   `.cal-week` the viewport and `.week-row` the thing inside it that moves; the
-   month keeps its own flex row, because its day names must not travel. */
-.cal-month,
-.week-row {
+/* Both grains travel as a whole row — leading peek, dates, trailing peek —
+   because the peek is the grain continuing and an edge that repainted in place
+   while the dates between them slid read as the edges switching rather than as
+   the grain moving (author, 2026-08-21). The month's day names are the one
+   thing that does not travel: they are the same seven whichever month is under
+   them, and they are what the week strip holds in exactly the same place. So
+   they stand on their own line above the body, with a gap at each end standing
+   in for the peeked column. */
+.week-row,
+.month-row,
+.month-days-line {
   display: flex;
   align-items: flex-start;
   gap: var(--space-2);
-}
-
-.week-row {
   width: 100%;
 }
 
+.peek-gap {
+  flex: none;
+  width: var(--cal-peek);
+}
+
 /* One width for every edge in the row — the week's two peeks, the month's two,
-   and the gutter derived from them — so the month's edges land in exactly the
-   place the week's did and nothing shifts as the two swap. */
+   the gaps in the day-name line and the gutter derived from them — so the
+   month's column lands in exactly the place the week's edge did and nothing
+   moves sideways as the two grains swap. */
 .week-row > .peek,
-.cal-month > .peek {
+.month-row > .peek {
   flex: none;
   width: var(--cal-peek);
   padding: 0;
@@ -119,22 +126,14 @@
 /* The month's peek is a column, and it is as tall as the grid is at this
    moment — which is how it follows the unfurl down instead of standing at full
    height beside rows that have not arrived yet. */
-.cal-month > .peek {
+.month-row > .peek {
   align-self: stretch;
-  overflow: hidden;
 }
 
-/* Also the week's slide viewport, which is why it is the positioned ancestor.
-   Clipping is switched on only for the length of a slide: at rest a day's focus
-   ring reaches 4 px outside its button and must not be cropped. */
+/* Also the week's own viewport, which is why it is the positioned ancestor. */
 .cal-week {
   position: relative;
   min-height: var(--cal-row-h);
-}
-
-.month-view {
-  flex: 1 1 auto;
-  min-width: 0;
 }
 
 /* The two grains cross-fade in place over --dur-month. Whichever is on its way
@@ -173,11 +172,34 @@
   display: none;
 }
 
-/* Both grains slide inside their own viewport — the week inside `.cal-week`,
-   the month inside `.month-body` — so the clip is keyed to the class, not to
-   the element that happens to carry it. */
-.is-sliding {
+/* ---- the grain track --------------------------------------------------- */
+
+/* Each grain sits on a track inside a viewport — the week inside `.cal-week`,
+   the month inside `.month-body` — and the track is what moves, whether the
+   reader is dragging it or a peek is carrying it. Clipping is switched on only
+   while it moves: at rest a day's focus ring reaches 4 px outside its button
+   and must not be cropped. */
+.is-moving {
   overflow: hidden;
+}
+
+.grain-track {
+  position: relative;
+}
+
+.grain-track.is-settling {
+  transition: transform var(--dur-slot) var(--ease);
+}
+
+/* The grain either side, parked a viewport width away. For the length of a
+   move the document holds two or three of every date, so the copies say what
+   they are — and being out of reach is not belt and braces: a copy laid over
+   the live row swallows the click that would move the grain again. */
+.grain-side {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
 }
 
 .week-strip {
@@ -219,8 +241,9 @@
     --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
     gap: var(--space-2);
   }
-  .cal-month,
-  .week-row {
+  .week-row,
+  .month-row,
+  .month-days-line {
     gap: var(--space-1);
   }
   .week-strip button {
@@ -305,20 +328,16 @@
   font-size: 15px;
 }
 
-/* The month's peeked column, on the grid's own rows: an empty cell standing in
-   for the day name, then the dates at the grid's pitch. Both reuse the grid's
-   own classes, so a change to the month's metrics cannot land on the dates and
-   miss the column beside them. */
-.peek-days {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
+/* The month's peeked column, on the grid's own rows. It reuses the grid's own
+   metrics — the same row gap and the same padding under the day-name line — so
+   a change to the month cannot land on the dates and miss the column beside
+   them. The day-name line is a sibling above the body now, not a spacer inside
+   this button, because the column travels with the grid and the names do not. */
 .peek-col {
   display: grid;
   row-gap: 2px;
   padding-top: var(--space-1);
+  width: 100%;
 }
 
 .peek-cell {
@@ -376,6 +395,8 @@
 .month-days,
 .month-grid {
   display: grid;
+  flex: 1 1 auto;
+  min-width: 0;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   column-gap: var(--space-1);
 }
@@ -403,7 +424,10 @@
   transition: height var(--dur-month) var(--ease);
 }
 
-.month-body.is-growing {
+/* The month's own viewport. It clips for a grow and for a move, and for
+   neither at rest. */
+.month-body.is-growing,
+.month-body.is-moving {
   overflow: hidden;
 }
 
@@ -435,49 +459,6 @@
   background: var(--field);
   border-color: var(--rule);
   color: var(--rubric);
-}
-
-/* ---- stepping a grain sideways ---------------------------------------- */
-
-/* A week or a month steps by scrolling: the grain being left slides out in the
-   direction of travel and the one arriving follows it in. Both copies are in
-   the viewport for the length of it, so which is current is stated rather than
-   looked up — the leaving copy carries a class and is aria-hidden, and any
-   slide still running is landed before another starts (Amendment 9). */
-/* Out of reach as well as out of the accessibility tree. The week's edges now
-   travel inside the row, so for the length of a slide the document holds two
-   buttons carrying `data-step="-7"` — and the leaving one is laid over the
-   arriving one, where it would swallow the click that steps the week again. */
-.strip-leaving {
-  position: absolute;
-  inset: 0 0 auto 0;
-  pointer-events: none;
-  animation: strip-out var(--dur-slot) var(--ease) forwards;
-}
-
-.strip-entering {
-  animation: strip-in var(--dur-slot) var(--ease);
-}
-
-.backward .strip-leaving {
-  animation-name: strip-out-back;
-}
-
-.backward .strip-entering {
-  animation-name: strip-in-back;
-}
-
-@keyframes strip-out {
-  to { transform: translateX(-100%); opacity: 0; }
-}
-@keyframes strip-in {
-  from { transform: translateX(100%); opacity: 0; }
-}
-@keyframes strip-out-back {
-  to { transform: translateX(100%); opacity: 0; }
-}
-@keyframes strip-in-back {
-  from { transform: translateX(-100%); opacity: 0; }
 }
 
 /* ---- the reckoning toggle ---------------------------------------------- */

@@ -142,11 +142,12 @@ Picking a date no longer closes the month. The month's chevrons moved out of
 chevron positions — all four heights come from one `--cal-row-h`, which is what
 keeps them from shifting as the two swap. The month cross-fades over 420 ms.
 
-*Superseded in part by Amendments 15 and 16:* the month no longer names itself
-centred above its grid, the cross-fade is now an unfurl out of the day-name
-line, and the chevrons have been replaced by a peek of the neighbouring grain.
-The swipe helper is unchanged, and the peeks are still buttons precisely
-because the swipe is touch and pen only.
+*Superseded in part by Amendments 15, 16 and 18:* the month no longer names
+itself centred above its grid, the cross-fade is now an unfurl out of the
+day-name line, the chevrons have been replaced by a peek of the neighbouring
+grain, and `swipe.js` has become `grain-drag.js` — the gesture follows the
+finger now rather than firing at a threshold. The peeks are still buttons
+precisely because it is still touch and pen only.
 
 **12. The glyph is 15% smaller everywhere** (author, 2026-08-21): badge pitch
 12 → 10.2, matrix pitch 9 → 7.65. Worth knowing before it shrinks again: the
@@ -341,6 +342,46 @@ means sliding what is above it too, and the day names must not move between
 grains (Amendment 15) — so it needs the day-name line lifted out of both the
 peek buttons and `.month-view` into a row of its own, which moves geometry
 three tests pin. Worth doing; not worth doing quietly inside a refinement.
+
+*Done in Amendment 18, which is what it cost.*
+
+**18. One track under each grain, and the reader can drag it** (author,
+2026-08-21).
+
+**Both grains now sit on a track inside a viewport**, and the track is what
+moves. The per-element slide that Amendment 15 introduced is gone: there are no
+`.strip-leaving` / `.strip-entering` classes and no four keyframes, because a
+travel and a drag are the same movement and it was cheaper to have one
+mechanism than to grow a second one beside it. What replaced them is
+`.grain-track`, `.grain-side` and one `is-moving` clip.
+
+**The month's edges travel now, and the day names are what it cost.** They had
+to come out of both the peek buttons — where each held an invisible spacer for
+the day-name row — and out of `.month-view`, into a `.month-days-line` of their
+own: a row of seven with a peek-wide gap at each end. `.month-view` is gone;
+`.month-body` is the month's viewport. The invariant Amendment 15 and DESIGN.md
+§5b both stated — that the two grains' edges hold "the same column and the same
+top" — is now half true on purpose. Same column, and the peeked cell still
+shares the grid's first row; not the same top, because the month's button
+starts where its first cell does. The test that pinned the box's `y` now pins
+the column and asserts the button starts lower, with a comment saying why.
+
+**Hold-and-slide is `src/ui/grain-drag.js`**, which replaces `src/ui/swipe.js`.
+Still touch and pen only — DESIGN.md §5b's reasoning is unchanged, and it is
+still why the peeked edges are buttons. Three things worth remembering from
+writing it:
+
+- A drag needs both neighbours painted *before* the first frame moves, or the
+  grain arriving is blank until a repaint catches up mid-gesture.
+- The month's viewport has to take the tallest of the three for as long as the
+  reader holds it. Dragging six-row August in beside five-row September cut
+  August's last row off otherwise. `growMonthBody` gained a `release` flag for
+  it: pin, hold, and let go to the new month's own height on settle.
+- A flick can arrive with **no `pointermove` at all** — the browser coalesces
+  them, and a synthetic `pointerdown`/`pointerup` pair in a test has none by
+  construction. So the helper reports `dragged: false` for that case and the
+  caller travels the ordinary way, which is also what keeps the older swipe
+  tests meaningful rather than quietly re-pointed at the new code path.
 
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was

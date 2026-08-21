@@ -712,7 +712,7 @@ test('the glyph is pinned to the right margin, not trailing the name', async ({ 
 test('the month replaces the week rather than opening beneath it', async ({ page }) => {
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const week = page.locator('.week-strip');
-  const month = page.locator('.month-view');
+  const month = page.locator('.month-body');
   const toggle = page.locator('[data-month]');
 
   await expect(week).toBeVisible();
@@ -735,7 +735,7 @@ test('the chevrons move a week, and a day is chosen by clicking it', async ({ pa
   // Scoped to the row that is current. The edges travel inside it now, so for
   // the length of a slide the document holds two of every step button and only
   // one of them is the reader's (Amendment 9's lesson, applied again).
-  const step = (n) => page.locator(`.week-row:not(.strip-leaving) [data-step="${n}"]`);
+  const step = (n) => page.locator(`.week-row:not(.grain-side) [data-step="${n}"]`);
   await step(7).click();
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
   await step(-7).click();
@@ -836,13 +836,17 @@ test('the month keeps the week edges where they were, and names itself in the gu
   const monthPrev = await box('.cal-month .peek');
   const monthNext = await box('.cal-month .peek-next');
 
-  // Same column and same top at either grain. Not the same height: the week's
-  // edge is one day and the month's is a column of them, which is the one
-  // thing that legitimately differs between the two.
+  // Same column at either grain, which is what keeps anything from moving
+  // sideways as the two swap. Not the same height, and — since the month's
+  // edges came inside the track so that they travel with the grid (author,
+  // 2026-08-21) — no longer the same top either: the month's button now starts
+  // under the day-name line, where its first cell is. What has to line up is
+  // the ink, and the peeked cell sharing the grid's first row is asserted
+  // directly in the test below.
   for (const [w, m] of [[weekPrev, monthPrev], [weekNext, monthNext]]) {
     expect(Math.round(m.x)).toBe(Math.round(w.x));
-    expect(Math.round(m.y)).toBe(Math.round(w.y));
     expect(Math.round(m.width)).toBe(Math.round(w.width));
+    expect(m.y).toBeGreaterThan(w.y);
   }
 
   // The name prints in the gutter under the jump stack and the back chevron
@@ -855,7 +859,7 @@ test('the month keeps the week edges where they were, and names itself in the gu
   expect(Math.round(name.x + name.width)).toBe(Math.round(monthPrev.x));
   const jump = await box('.cal-jump');
   expect(name.y).toBeGreaterThanOrEqual(jump.y + jump.height);
-  expect(name.x).toBeLessThan((await box('.month-view')).x);
+  expect(name.x).toBeLessThan((await box('.month-days')).x);
 });
 
 test('the month is the week grown taller: the day names do not move', async ({ page }) => {
@@ -952,78 +956,121 @@ test('under reduced motion the month arrives whole, with no held height', async 
   await ctx.close();
 });
 
-test('a week steps sideways rather than swapping in place', async ({ page }) => {
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-
-  // Sampled the moment the second copy appears rather than polled afterwards:
-  // the slide is 260 ms and a poll racing it would be a flake waiting to be
-  // blamed on the machine.
-  const during = await page.evaluate(
-    () =>
+/**
+ * The state of a grain the moment its neighbour appears beside it. Sampled from
+ * a MutationObserver rather than polled afterwards: a move is 260 ms and a poll
+ * racing it would be a flake waiting to be blamed on the machine.
+ */
+const duringMove = (page, viewport, rowClass, act) =>
+  page.evaluate(
+    ([viewport, rowClass, act]) =>
       new Promise((resolve) => {
-        const vp = document.querySelector('.cal-week');
+        const vp = document.querySelector(viewport);
         const observer = new MutationObserver(() => {
-          const leaving = vp.querySelector('.week-row.strip-leaving');
-          if (!leaving) return;
+          const side = vp.querySelector(`.${rowClass}.grain-side`);
+          if (!side) return;
           observer.disconnect();
-          const entering = vp.querySelector('.week-row.strip-entering');
-          const nums = (row) => [...row.querySelectorAll('.peek .day-num')].map((e) => e.textContent);
+          const live = vp.querySelector(`.${rowClass}:not(.grain-side)`);
+          const peeks = (row) =>
+            [...row.querySelectorAll('.peek .day-num, .peek-cell')].map((e) =>
+              e.firstChild.textContent.trim(),
+            );
           resolve({
-            strips: vp.querySelectorAll('.week-strip').length,
-            hidden: leaving.getAttribute('aria-hidden'),
-            reachable: [...leaving.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
-            entering: vp.querySelectorAll('.week-row.strip-entering').length,
-            clipped: vp.classList.contains('is-sliding'),
-            leavingPeeks: nums(leaving),
-            enteringPeeks: entering ? nums(entering) : null,
+            rows: vp.querySelectorAll(`.${rowClass}`).length,
+            sides: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.left),
+            hidden: side.getAttribute('aria-hidden'),
+            reachable: [...side.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
+            reach: getComputedStyle(side).pointerEvents,
+            clipped: vp.classList.contains('is-moving'),
+            sidePeeks: peeks(side),
+            livePeeks: peeks(live),
           });
         });
         observer.observe(vp, { childList: true, subtree: true, attributes: true });
-        document.querySelector('[data-step="7"]').click();
+        document.querySelector(act).click();
       }),
+    [viewport, rowClass, act],
   );
 
-  // Both weeks are in the viewport for the length of it, and the one being left
-  // is scenery: the document briefly holds two of every date, and only one set
-  // of them is the reader's.
-  expect(during.strips).toBe(2);
-  expect(during.entering).toBe(1);
+test('a week travels sideways rather than swapping in place, edges and all', async ({ page }) => {
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const during = await duringMove(page, '.cal-week', 'week-row', '.week-row [data-step="7"]');
+
+  // Both weeks are on the track for the length of it, and the one being left is
+  // scenery: the document briefly holds two of every date, and only one set of
+  // them is the reader's. Out of reach as well as out of the accessibility
+  // tree — a copy laid over the live row swallows the next click otherwise.
+  expect(during.rows).toBe(2);
+  expect(during.sides).toEqual(['-100%']);
   expect(during.hidden).toBe('true');
   expect(during.reachable).toBe(0);
+  expect(during.reach).toBe('none');
   expect(during.clipped).toBe(true);
 
-  // The edges travel with the week (author, 2026-08-21). What slides is the
-  // whole row, so each copy carries its own peeked days out and in — 23 and 31
-  // leaving with the week they belong to, 30 and 7 arriving with the week that
-  // does. They used to be siblings of the viewport and repainted in place while
-  // the seven days between them slid, which read as the edges switching rather
-  // than as the grain continuing.
-  expect(during.leavingPeeks).toEqual(['23', '31']);
-  expect(during.enteringPeeks).toEqual(['30', '7']);
+  // The edges travel with the week (author, 2026-08-21). Each copy carries its
+  // own peeked days out and in — 23 and 31 leaving with the week they belong
+  // to, 30 and 7 arriving with the week that does. They used to be siblings of
+  // the viewport, repainting in place while the seven days between them slid,
+  // which read as the edges switching rather than as the grain continuing.
+  expect(during.sidePeeks).toEqual(['23', '31']);
+  expect(during.livePeeks).toEqual(['30', '7']);
 
-  // And it lands — one strip, nothing clipped, nothing left animating.
+  // And it lands — one row, nothing clipped, no transform left on the track.
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await expect(page.locator('.week-strip')).toHaveCount(1);
-  await expect(page.locator('.strip-leaving')).toHaveCount(0);
-  await expect(page.locator('.cal-week.is-sliding')).toHaveCount(0);
+  await expect(page.locator('.week-row')).toHaveCount(1);
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await expect(page.locator('.cal-week.is-moving')).toHaveCount(0);
+  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
 });
 
-test('picking a day inside the week showing does not slide it', async ({ page }) => {
+test('a month travels sideways with its own edges, and its day names do not', async ({ page }) => {
+  // The week got this on 2026-08-21 and the month did not, because the month's
+  // column could not travel while the day names above it sat inside the same
+  // button. The names moved to a line of their own so that it could.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+
+  const names = () =>
+    page.locator('.month-days .month-day-name').evaluateAll((els) =>
+      els.map((el) => Math.round(el.getBoundingClientRect().x)),
+    );
+  const before = await names();
+
+  const during = await duringMove(page, '.month-body', 'month-row', '.month-row [data-mstep="1"]');
+  expect(during.rows).toBe(2);
+  expect(during.sides).toEqual(['-100%']);
+  expect(during.hidden).toBe('true');
+  expect(during.reach).toBe('none');
+  expect(during.clipped).toBe(true);
+
+  // August's peeked columns leave with August — July's Sundays behind it,
+  // September's Mondays ahead of it — and September's arrive with September.
+  expect(during.sidePeeks).toEqual(['5', '12', '19', '26', '7', '14', '21', '28']);
+  expect(during.livePeeks).toEqual(['2', '9', '16', '23', '30', '5', '12', '19', '26']);
+
+  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  // The names stayed exactly where they were while the grid moved under them.
+  expect(await names()).toEqual(before);
+});
+
+test('picking a day inside the week showing does not move it', async ({ page }) => {
   // The movement decides, not the gesture: there is nothing to travel to when
   // the week under the strip is the same week.
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  const slid = await page.evaluate(() => {
+  const moved = await page.evaluate(() => {
     const vp = document.querySelector('.cal-week');
     let seen = false;
     const observer = new MutationObserver(() => {
-      if (vp.querySelector('.strip-leaving')) seen = true;
+      if (vp.querySelector('.grain-side')) seen = true;
     });
     observer.observe(vp, { childList: true, subtree: true, attributes: true });
     vp.querySelectorAll('[data-iso]')[3].click();
     observer.disconnect();
     return seen;
   });
-  expect(slid).toBe(false);
+  expect(moved).toBe(false);
   await expect(page.locator('h1')).toHaveText(/27 August 2026/);
 });
 
@@ -1031,12 +1078,150 @@ test('under reduced motion a week step leaves no second copy behind', async ({ b
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('[data-step="7"]').click();
+  await page.locator('.week-row [data-step="7"]').click();
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  // Removed, not shortened: no slide to sit through, and so no clone to clean
-  // up after one.
-  await expect(page.locator('.strip-leaving')).toHaveCount(0);
-  await expect(page.locator('.cal-week.is-sliding')).toHaveCount(0);
+  // Removed, not shortened: no trip to sit through, and so no copy to clean up
+  // after one.
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await expect(page.locator('.cal-week.is-moving')).toHaveCount(0);
+  await ctx.close();
+});
+
+/**
+ * A hold-and-slide, as the listener sees it: pointerdown, a handful of moves,
+ * and a release. Synthetic pointer events rather than a real gesture — what is
+ * under test is where the grain goes, not the browser's promise to deliver them
+ * in order. `fraction` is of the viewport's own width, because the settle
+ * threshold is a third of a grain and not a pixel count.
+ */
+const dragGrain = (page, selector, fraction, { release = true } = {}) =>
+  page.evaluate(
+    ([selector, fraction, release]) => {
+      const el = document.querySelector(selector);
+      const box = el.getBoundingClientRect();
+      const x = box.x + box.width / 2;
+      const y = box.y + box.height / 2;
+      const dx = fraction * box.width;
+      const at = (px) => ({
+        pointerId: 7, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true,
+      });
+      el.dispatchEvent(new PointerEvent('pointerdown', at(x)));
+      for (const step of [dx / 4, dx / 2, (dx * 3) / 4, dx]) {
+        el.dispatchEvent(new PointerEvent('pointermove', at(x + step)));
+      }
+      if (release) el.dispatchEvent(new PointerEvent('pointerup', at(x + dx)));
+    },
+    [selector, fraction, release],
+  );
+
+const releaseGrain = (page, selector, fraction) =>
+  page.evaluate(
+    ([selector, fraction]) => {
+      const el = document.querySelector(selector);
+      const box = el.getBoundingClientRect();
+      el.dispatchEvent(
+        new PointerEvent('pointerup', {
+          pointerId: 7,
+          pointerType: 'touch',
+          clientX: box.x + box.width / 2 + fraction * box.width,
+          clientY: box.y + box.height / 2,
+          bubbles: true,
+        }),
+      );
+    },
+    [selector, fraction],
+  );
+
+test('the week follows the finger, and lets go into the grain it is nearest', async ({ page }) => {
+  // Hold-and-slide (author, 2026-08-21). The state does not move while the
+  // reader is still holding it: what is under the finger is the chrome, and the
+  // day only changes once they have let go somewhere.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await dragGrain(page, '.cal-week', -0.24, { release: false });
+
+  const held = await page.evaluate(() => {
+    const vp = document.querySelector('.cal-week');
+    return {
+      rows: vp.querySelectorAll('.week-row').length,
+      sides: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.left).sort(),
+      transform: vp.querySelector('.grain-track').style.transform,
+      clipped: vp.classList.contains('is-moving'),
+      heading: document.querySelector('h1').textContent,
+    };
+  });
+  // Both neighbours are parked either side, so there is something to drag into
+  // view in either direction without waiting for a repaint mid-gesture.
+  expect(held.rows).toBe(3);
+  expect(held.sides).toEqual(['-100%', '100%']);
+  expect(held.transform).toMatch(/^translateX\(-\d/);
+  expect(held.clipped).toBe(true);
+  expect(held.heading).toContain('28 August 2026');
+
+  // Let go short of a third of a grain: the week the reader started in is still
+  // the nearest one, so it settles back and nothing has happened.
+  await releaseGrain(page, '.cal-week', -0.24);
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
+
+  // Past a third, and it lets go into the next week — the same movement a
+  // peeked edge makes, so the two read as one gesture with two entrances.
+  await dragGrain(page, '.cal-week', -0.5);
+  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await expect(page.locator('.cal-week .peek-prev .day-num')).toHaveText('30');
+  await expect(page.locator('.cal-week .peek-next .day-num')).toHaveText('7');
+});
+
+test('the month follows the finger too, and takes its height with it', async ({ page }) => {
+  // September 2026 is five rows and August is six, so dragging back from one to
+  // the other is the case where the month arriving is taller than the viewport
+  // holding it and would be cut off at the bottom for the length of the drag.
+  await page.goto('/calendar/2026-09-04', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+  const fiveRows = (await page.locator('.month-body').boundingBox()).height;
+
+  await dragGrain(page, '.cal-month', 0.3, { release: false });
+  const held = await page.evaluate(() => {
+    const body = document.querySelector('.month-body');
+    return {
+      rows: body.querySelectorAll('.month-row').length,
+      pinned: body.style.height,
+      transform: body.querySelector('.grain-track').style.transform,
+    };
+  });
+  expect(held.rows).toBe(3);
+  expect(held.transform).toMatch(/^translateX\(\d/);
+  // The body takes the tallest of the three and holds it for as long as the
+  // reader does, so August's sixth row is there to be dragged into view.
+  expect(parseFloat(held.pinned)).toBeGreaterThan(fiveRows);
+
+  await releaseGrain(page, '.cal-month', 0.5);
+  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
+  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await page.waitForTimeout(600);
+  // Six rows now, and the height was released rather than left pinned.
+  expect(await page.locator('.month-body').evaluate((el) => el.style.height)).toBe('');
+  expect((await page.locator('.month-body').boundingBox()).height).toBeGreaterThan(fiveRows);
+});
+
+test('under reduced motion a drag lets go into place with nothing to sit through', async ({ browser }) => {
+  // Removed, not shortened. Following the finger is direct manipulation and
+  // stays; the settle is an animation and goes, so the grain is simply there
+  // the moment the reader lets go.
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  await dragGrain(page, '.cal-week', -0.4, { release: false });
+  expect(await page.locator('.grain-side').count()).toBe(2);
+  await releaseGrain(page, '.cal-week', -0.5);
+
+  // Read on the very next turn, with nothing awaited that could hide a wait.
+  expect(await page.locator('h1').textContent()).toContain('4 September 2026');
+  expect(await page.locator('.grain-side').count()).toBe(0);
+  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
   await ctx.close();
 });
 
@@ -1305,7 +1490,7 @@ test('the arrows are gone and the grain itself stands at each edge', async ({ pa
 
   // The swipe is touch and pen only, so the edge has to stay clickable or a
   // reader with a mouse has no way through the weeks at all.
-  const current = '.week-row:not(.strip-leaving)';
+  const current = '.week-row:not(.grain-side)';
   await page.locator(`${current} .peek-next`).click();
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
   await page.locator(`${current} .peek-prev`).click();

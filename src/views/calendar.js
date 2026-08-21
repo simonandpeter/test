@@ -27,7 +27,7 @@ import { readSettings, writeSetting } from '../lib/settings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
-import { onSwipe } from '../ui/swipe.js';
+import { onGrainDrag } from '../ui/grain-drag.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -102,7 +102,6 @@ export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
   clearTimeout(state?.rollTimer);
   clearTimeout(state?.monthTimer);
-  clearTimeout(state?.slide?.timer);
   clearTimeout(state?.sizeTimer);
   if (state) state.cleanups = [];
   state = null;
@@ -132,7 +131,8 @@ export function render(el, { data, params, router }) {
       ? readSettings().calendarPreference
       : 'gregorian',
     cleanups: [], dayCleanups: [],
-    rollTimer: null, monthTimer: null, sizeTimer: null, slide: null,
+    rollTimer: null, monthTimer: null, sizeTimer: null,
+    weekGrain: null, monthGrain: null,
   };
 
   el.innerHTML = `
@@ -145,24 +145,34 @@ export function render(el, { data, params, router }) {
         </div>
         <div class="cal-span">
           <div class="cal-week">
-            <div class="week-row">
-              <button type="button" class="peek peek-prev" data-step="-7"
-                aria-label="${STRINGS.calendar.prevWeek}"></button>
-              <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
-              <button type="button" class="peek peek-next" data-step="7"
-                aria-label="${STRINGS.calendar.nextWeek}"></button>
+            <div class="grain-track">
+              <div class="week-row">
+                <button type="button" class="peek peek-prev" data-step="-7"
+                  aria-label="${STRINGS.calendar.prevWeek}"></button>
+                <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+                <button type="button" class="peek peek-next" data-step="7"
+                  aria-label="${STRINGS.calendar.nextWeek}"></button>
+              </div>
             </div>
           </div>
           <div class="cal-month" hidden>
             <span class="month-name"></span>
-            <button type="button" class="peek peek-prev" data-mstep="-1"
-              aria-label="${STRINGS.calendar.prevMonth}"></button>
-            <div class="month-view">
-              <div class="month-days" aria-hidden="true"></div>
-              <div class="month-body"><div class="month-grid"></div></div>
+            <div class="month-days-line" aria-hidden="true">
+              <span class="peek-gap"></span>
+              <div class="month-days"></div>
+              <span class="peek-gap"></span>
             </div>
-            <button type="button" class="peek peek-next" data-mstep="1"
-              aria-label="${STRINGS.calendar.nextMonth}"></button>
+            <div class="month-body">
+              <div class="grain-track">
+                <div class="month-row">
+                  <button type="button" class="peek peek-prev" data-mstep="-1"
+                    aria-label="${STRINGS.calendar.prevMonth}"></button>
+                  <div class="month-grid"></div>
+                  <button type="button" class="peek peek-next" data-mstep="1"
+                    aria-label="${STRINGS.calendar.nextMonth}"></button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -195,11 +205,38 @@ export function render(el, { data, params, router }) {
     if (button) chooseReckoning(button.dataset.reckoning);
   });
 
-  // Same gesture, same direction, whichever grain is showing: a flick left is
-  // forward in time. Bound to the containers, which survive every repaint.
+  // Both grains sit on a track and both take a hold-and-slide, in the same
+  // direction: dragging left is forward in time. The week's viewport is the
+  // whole row; the month's is the body under the day-name line, because those
+  // names are the one thing that must not travel.
+  state.weekGrain = makeGrain({
+    viewport: el.querySelector('.cal-week'),
+    row: el.querySelector('.week-row'),
+    paint: (row, offset, opts) => paintWeekInto(row, addDaysIso(state.selected, 7 * offset), opts),
+    settle: (offset) => select(addDaysIso(state.selected, 7 * offset), { travelled: true }),
+    flick: (dir) => step(7 * dir),
+  });
+  state.monthGrain = makeGrain({
+    viewport: el.querySelector('.month-body'),
+    row: el.querySelector('.month-row'),
+    paint: (row, offset, opts) => paintMonthInto(row, stepCursor(monthCursor(), offset), opts),
+    settle: (offset) => moveMonth(offset, { travelled: true }),
+    flick: (dir) => stepMonth(dir),
+    // A six-row month dragged in beside a five-row one would be cut off at the
+    // bottom for the length of the drag, so the body takes the tallest of the
+    // three and holds it until the reader lets go.
+    onSides: (rows) => {
+      const body = el.querySelector('.month-body');
+      const tallest = Math.max(...rows.map((r) => r.getBoundingClientRect().height));
+      const now = measure(body);
+      if (tallest > now) growMonthBody(body, now, tallest, { release: false });
+    },
+  });
   state.cleanups.push(
-    onSwipe(el.querySelector('.cal-week'), { left: () => step(7), right: () => step(-7) }),
-    onSwipe(el.querySelector('.cal-month'), { left: () => stepMonth(1), right: () => stepMonth(-1) }),
+    () => state.weekGrain?.land(),
+    () => state.monthGrain?.land(),
+    onGrainDrag(el.querySelector('.cal-week'), state.weekGrain.handlers),
+    onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
   );
   el.querySelector('.week-strip').addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
@@ -224,61 +261,162 @@ function wireDay(panel) {
 
 const step = (n) => select(addDaysIso(state.selected, n));
 
-function select(iso) {
+function select(iso, { travelled = false } = {}) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;
-  // The strip scrolls when the week under it actually changes — a chevron, a
-  // swipe, an arrow key off the end, a jump to today — and not when a day is
-  // picked inside the week already showing, where there is nothing to travel
-  // to. The gesture is not what decides it; the movement is.
+  // The strip travels when the week under it actually changes — a peeked edge,
+  // a flick, an arrow key off the end, the jump to today — and not when a day
+  // is picked inside the week already showing, where there is nowhere to
+  // travel to. The gesture is not what decides it; the movement is. A drag has
+  // already made the trip by hand, and does not make it twice.
   const moved = weekOf(iso)[0] !== weekOf(state.selected)[0];
   state.selected = iso;
   state.monthCursor = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
-  paintChrome({ slideWeek: moved && forward ? 'forward' : moved ? 'backward' : null });
+  paintChrome();
+  if (moved && !travelled) state.weekGrain.travel(forward ? 1 : -1);
   slotSwap(forward);
 }
 
+/* ---- the grain track ---------------------------------------------------- */
+
 /**
- * Lands any grain-step still running, so a slide always starts from exactly
- * one copy. Two copies of a strip live in its viewport for 260 ms and a bare
- * `querySelector` cannot say which of them is current — the same shape of bug
- * as the duplicated day panel (Amendment 9), and invisible until someone steps
- * faster than the designer did.
+ * A grain — the week, or the month — sits on a track inside a viewport, and
+ * the track is what moves. It moves two ways, and they are deliberately the
+ * same movement:
+ *
+ * **Travel**, from a peeked edge, an arrow key off the end of the strip, or
+ * the jump to today. The state changes first and the live row is repainted to
+ * where it has arrived, so the heading and the day panel never lag the chrome;
+ * then the track is thrown back to where the reader last saw it and glides
+ * home, with the grain being left standing beside it for the length of the
+ * trip.
+ *
+ * **A drag** (author, 2026-08-21): the reader holds the grain and slides it.
+ * Both neighbours are painted and parked a viewport width either side, the
+ * track follows the finger, and on release it settles into whichever grain it
+ * is nearest — over `--dur-slot`, so letting go reads as the movement a peek
+ * makes rather than as a snap.
+ *
+ * Either way the document holds two or three of every date for a moment, so
+ * the copies say what they are: `.grain-side`, `aria-hidden`, out of the tab
+ * order and out of reach of the pointer. That last one is not belt and braces
+ * — a copy laid over the live row swallows the click that would move the grain
+ * again (Amendment 17).
+ *
+ * Reduced motion removes the animation and never shortens it: a travel is a
+ * repaint, and a drag still follows the finger — direct manipulation is not an
+ * animation — but lets go into place with nothing to sit through.
  */
-function landSlide() {
-  const slide = state.slide;
-  if (!slide) return;
-  clearTimeout(slide.timer);
-  state.slide = null;
-  for (const el of slide.viewport.querySelectorAll('.strip-leaving')) el.remove();
-  for (const el of slide.viewport.querySelectorAll('.strip-entering')) {
-    el.classList.remove('strip-entering');
+function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
+  const track = viewport.querySelector('.grain-track');
+  let sides = [];
+  let timer = null;
+  let holding = false;
+
+  const width = () => viewport.getBoundingClientRect().width;
+  const shift = (dx) => {
+    track.style.transform = dx ? `translateX(${dx}px)` : '';
+  };
+
+  /** A neighbouring grain, parked one viewport width away on its own side. */
+  function addSide(offset) {
+    const side = document.createElement(row.tagName);
+    side.className = `${row.className} grain-side`;
+    side.style.left = `${offset * 100}%`;
+    side.setAttribute('aria-hidden', 'true');
+    // The live row's own skeleton, then repainted for the grain beside it —
+    // so a change to what a row is made of cannot reach the copies and miss.
+    side.innerHTML = row.innerHTML;
+    paint(side, offset, { live: false });
+    for (const button of side.querySelectorAll('button')) button.tabIndex = -1;
+    track.appendChild(side);
+    sides.push(side);
+    return side;
   }
-  slide.viewport.classList.remove('is-sliding', 'backward');
-}
 
-/**
- * Steps a grain sideways: the copy being left slides out in the direction of
- * travel and the repainted one follows it in. The leaving copy is scenery —
- * aria-hidden, and its buttons out of the tab order — because for the length
- * of the slide the document holds two of every date.
- */
-function slideStrip(viewport, current, forward, repaint) {
-  landSlide();
-  if (reducedMotion()) return repaint();
+  /** Everything back where it belongs, with nothing animating the return. */
+  function land() {
+    clearTimeout(timer);
+    timer = null;
+    holding = false;
+    track.classList.remove('is-settling');
+    track.style.transition = 'none';
+    shift(0);
+    // Flushed deliberately, so the copies leave and the transform lifts in the
+    // same frame the repainted row appears in.
+    void track.offsetHeight;
+    track.style.transition = '';
+    for (const side of sides) side.remove();
+    sides = [];
+    viewport.classList.remove('is-moving');
+  }
 
-  const leaving = current.cloneNode(true);
-  leaving.classList.add('strip-leaving');
-  leaving.setAttribute('aria-hidden', 'true');
-  for (const b of leaving.querySelectorAll('button')) b.tabIndex = -1;
-  repaint();
+  /** Animates the track to `dx`, then does `done` and lands. */
+  function glide(dx, done) {
+    track.style.transition = '';
+    track.classList.add('is-settling');
+    void track.offsetHeight;
+    shift(dx);
+    timer = setTimeout(() => {
+      done();
+      land();
+    }, STRIP_SLIDE);
+  }
 
-  viewport.classList.toggle('backward', !forward);
-  viewport.classList.add('is-sliding');
-  viewport.appendChild(leaving);
-  current.classList.add('strip-entering');
-  state.slide = { viewport, timer: setTimeout(landSlide, STRIP_SLIDE) };
+  return {
+    land,
+
+    /** The state has already arrived; this shows the trip it made. */
+    travel(dir) {
+      land();
+      if (reducedMotion()) return;
+      addSide(-dir);
+      viewport.classList.add('is-moving');
+      track.style.transition = 'none';
+      shift(dir * width());
+      void track.offsetHeight;
+      glide(0, () => {});
+    },
+
+    handlers: {
+      begin() {
+        land();
+        holding = true;
+        viewport.classList.add('is-moving');
+        track.style.transition = 'none';
+        addSide(-1);
+        addSide(1);
+        onSides?.([row, ...sides]);
+      },
+
+      move(dx) {
+        if (holding) shift(dx);
+      },
+
+      end(dx, dragged) {
+        if (!dragged) {
+          // A flick the browser never reported a move for. Nothing is parked
+          // beside the row, so it goes the ordinary way and travels.
+          flick(dx < 0 ? 1 : -1);
+          return;
+        }
+        holding = false;
+        const w = width();
+        // A third of the way across is far enough to have meant it; short of
+        // that, the grain the reader started in is still the nearest one.
+        const offset = Math.abs(dx) < w / 3 ? 0 : dx < 0 ? 1 : -1;
+        if (reducedMotion()) {
+          if (offset) settle(offset);
+          land();
+          return;
+        }
+        glide(-offset * w, () => {
+          if (offset) settle(offset);
+        });
+      },
+    },
+  };
 }
 
 /**
@@ -332,84 +470,18 @@ function slotSwap(forward) {
   }, 300);
 }
 
-function paintChrome({ slideWeek = null } = {}) {
+function paintChrome() {
   const { el, selected } = state;
-
-  // What steps sideways is the whole row, edges included (author, 2026-08-21):
-  // the peeked days are the week continuing, so they travel with it rather than
-  // switching in place while the seven days between them slide.
-  const paintRow = () => {
-    paintWeek();
-    paintWeekPeeks();
-  };
-  if (slideWeek) {
-    slideStrip(
-      el.querySelector('.cal-week'),
-      el.querySelector('.week-row'),
-      slideWeek === 'forward',
-      paintRow,
-    );
-  } else {
-    paintRow();
-  }
-
+  paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
   paintReckoningDate();
   if (state.monthOpen) paintMonth();
 }
 
-/**
- * The week's two edges: the Sunday behind it and the Monday ahead of it, set
- * on the same lines as the days between them and faded out toward the margin.
- * They replace the chevrons (author, 2026-08-21) — the hint that there is more
- * week either way is the week itself, showing.
- *
- * They are still buttons. A swipe is touch and pen only by design, so removing
- * the arrows without leaving something to click would strand every reader with
- * a mouse; what went is the glyph, not the affordance.
- */
-function paintWeekPeeks() {
-  const { el, selected } = state;
-  const week = weekOf(selected);
-  const edges = [
-    ['.peek-prev', addDaysIso(week[0], -1)],
-    ['.peek-next', addDaysIso(week[6], 1)],
-  ];
-  for (const [sel, iso] of edges) {
-    el.querySelector(`.cal-week ${sel}`).innerHTML = `
-      <span class="day-name" aria-hidden="true">${weekdayFmt.format(utc(iso))}</span>
-      <span class="day-num" aria-hidden="true">${parseIso(iso).day}</span>`;
-  }
-}
-
-/**
- * The month's two edges: the column of days that runs off each side of it —
- * the previous month's Sundays behind, the next month's Mondays ahead — on the
- * grid's own rows, so they read as the grid continuing rather than as
- * decoration beside it.
- */
-function paintMonthPeeks() {
-  const { el, data } = state;
-  const c = state.monthCursor;
-  const columns = [
-    ['.peek-prev', stepCursor(c, -1), 6],
-    ['.peek-next', stepCursor(c, 1), 0],
-  ];
-  for (const [sel, cursor, weekday] of columns) {
-    const cells = monthColumn(cursor, weekday)
-      .map((day) => {
-        const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
-        const n = countFor(iso, data);
-        const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
-        return `<span class="peek-cell">${day}<span class="density">${dots}</span></span>`;
-      })
-      .join('');
-    el.querySelector(`.cal-month ${sel}`).innerHTML = `
-      <span class="peek-days" aria-hidden="true">
-        <span class="month-day-name peek-day-name">&nbsp;</span>
-        <span class="peek-col">${cells}</span>
-      </span>`;
-  }
+/** Density: one dot per commemoration, capped at five, legible before arrival. */
+function densityDots(iso) {
+  const n = countFor(iso, state.data);
+  return Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
 }
 
 /** The days of one month that fall on one weekday, 0 = Monday. JDN 0 was a Monday. */
@@ -459,26 +531,54 @@ function paintReckoningDate() {
   if (line) line.textContent = dayIn(state.reckoning, state.selected);
 }
 
-function paintWeek() {
-  const { el, selected, data } = state;
+/**
+ * One week into one row: the seven days, and the two edges either side of them
+ * — the Sunday behind the week and the Monday ahead of it, set on the same
+ * lines as the days between and dissolving toward the margin.
+ *
+ * The edges replaced the chevrons (author, 2026-08-21) and they travel with
+ * the week, which is why they are painted here rather than beside it: the peek
+ * is the week continuing, and a row is the whole of one.
+ *
+ * They are still buttons. A drag is touch and pen only by design, so an edge
+ * with nothing to click would strand every reader with a mouse; what went is
+ * the glyph, not the affordance.
+ *
+ * `live` is false for the copies parked either side during a move. They are
+ * `aria-hidden` and out of reach, so a listener on them would be a listener
+ * nothing can reach — and the day it selected would be the wrong one anyway.
+ */
+function paintWeekInto(row, iso, { live }) {
+  const { selected } = state;
   const today = todayIso();
+  const week = weekOf(iso);
 
-  el.querySelector('.week-strip').innerHTML = weekOf(selected)
-    .map((iso) => {
-      const n = countFor(iso, data);
-      const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
-      const current = iso === selected ? ' aria-current="date"' : '';
-      const cls = iso === today ? ' class="is-today"' : '';
+  row.querySelector('.week-strip').innerHTML = week
+    .map((day) => {
+      const n = countFor(day, state.data);
+      const current = day === selected ? ' aria-current="date"' : '';
+      const cls = day === today ? ' class="is-today"' : '';
       const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
-      return `<button type="button" data-iso="${iso}"${current}${cls}
-        aria-label="${dayFmt.format(utc(iso))}${density}">
-        <span class="day-name">${weekdayFmt.format(utc(iso))}</span>
-        <span class="day-num">${parseIso(iso).day}</span>
-        <span class="density" aria-hidden="true">${dots}</span>
+      return `<button type="button" data-iso="${day}"${current}${cls}
+        aria-label="${dayFmt.format(utc(day))}${density}">
+        <span class="day-name">${weekdayFmt.format(utc(day))}</span>
+        <span class="day-num">${parseIso(day).day}</span>
+        <span class="density" aria-hidden="true">${densityDots(day)}</span>
       </button>`;
     })
     .join('');
-  for (const b of el.querySelectorAll('.week-strip [data-iso]')) {
+
+  for (const [sel, edge] of [
+    ['.peek-prev', addDaysIso(week[0], -1)],
+    ['.peek-next', addDaysIso(week[6], 1)],
+  ]) {
+    row.querySelector(sel).innerHTML = `
+      <span class="day-name" aria-hidden="true">${weekdayFmt.format(utc(edge))}</span>
+      <span class="day-num" aria-hidden="true">${parseIso(edge).day}</span>`;
+  }
+
+  if (!live) return;
+  for (const b of row.querySelectorAll('.week-strip [data-iso]')) {
     b.addEventListener('click', () => select(b.dataset.iso));
   }
 }
@@ -511,7 +611,8 @@ function toggleMonth() {
   button.setAttribute('aria-expanded', String(monthOpen));
   button.classList.toggle('is-on', monthOpen);
   clearTimeout(state.monthTimer);
-  landSlide();
+  state.weekGrain.land();
+  state.monthGrain.land();
 
   // Reduced motion removes the fade, so there is nothing to wait for: waiting
   // anyway would be a delay with no animation behind it.
@@ -568,11 +669,11 @@ const measure = (el) => el.getBoundingClientRect().height;
  * the clip that makes the growth read as unfurling goes on and comes off with
  * it, so a date's focus ring is never cropped at rest.
  */
-function growMonthBody(body, from, to) {
+function growMonthBody(body, from, to, { release = true } = {}) {
   clearTimeout(state.sizeTimer);
   state.sizeTimer = null;
   if (reducedMotion()) {
-    body.style.height = '';
+    body.style.height = release ? '' : `${to}px`;
     body.classList.remove('is-growing');
     return;
   }
@@ -584,69 +685,104 @@ function growMonthBody(body, from, to) {
   void body.offsetHeight;
   body.style.height = `${to}px`;
   state.sizeTimer = setTimeout(() => {
-    // Left at 0 when the month is closing; the toggle hides it on the same tick.
-    if (to > 0) body.style.height = '';
+    // Left at 0 when the month is closing; the toggle hides it on the same
+    // tick. Held, rather than released, while a drag is still in the reader's
+    // hand: letting it fall back to the month underneath mid-drag would clip
+    // the taller one being dragged in.
+    if (to > 0 && release) body.style.height = '';
     body.classList.remove('is-growing');
     state.sizeTimer = null;
   }, MONTH_FADE);
 }
 
-function paintMonth() {
-  const { el, data, selected } = state;
-  const cursor = state.monthCursor ?? (() => {
-    const d = parseIso(selected);
-    return { year: d.year, month: d.month };
-  })();
-  state.monthCursor = cursor;
-
-  const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
-  const firstJdn = gregorianToJdn(cursor.year, cursor.month, 1);
-  const lead = firstJdn % 7; // JDN 0 was a Monday
-
-  const dayNames = weekOf(first).map((iso) => weekdayFmt.format(utc(iso)));
-  const cells = [];
-  for (let i = 0; i < lead; i++) cells.push('<span></span>');
-  for (let day = 1; day <= daysInMonth(cursor); day++) {
-    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
-    const n = countFor(iso, data);
-    const dots = Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
-    const current = iso === selected ? ' aria-current="date"' : '';
-    cells.push(`<button type="button" data-iso="${iso}"${current}
-      aria-label="${dayFmt.format(utc(iso))}">${day}<span class="density" aria-hidden="true">${dots}</span></button>`);
+/** The month the grid is showing, defaulting to the selected day's own. */
+function monthCursor() {
+  if (!state.monthCursor) {
+    const d = parseIso(state.selected);
+    state.monthCursor = { year: d.year, month: d.month };
   }
+  return state.monthCursor;
+}
+
+/**
+ * The month's chrome — the name in the gutter and the row of day names — and
+ * then the grid itself. The day names sit outside the track and never travel:
+ * they are the same seven whichever month is under them, and they are what the
+ * week strip holds in exactly the same place, which is what makes toggling
+ * grain read as rows arriving (Amendment 15).
+ */
+function paintMonth() {
+  const { el } = state;
+  const cursor = monthCursor();
+  const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
 
   // The name prints in the gutter beside the grid rather than above it, so it
   // costs the row no height (author, 2026-08-21).
   el.querySelector('.month-name').textContent = monthFmt.format(utc(first));
 
-  // The day names are the week strip's, in the same columns and the same
-  // place, and they say nothing a date's own label does not — the button below
-  // each of them reads "Friday, 30 January 2026" in full.
-  el.querySelector('.month-days').innerHTML = dayNames
-    .map((n) => `<span class="month-day-name">${n}</span>`)
+  // They say nothing a date's own label does not — the button below each of
+  // them reads "Friday, 30 January 2026" in full.
+  el.querySelector('.month-days').innerHTML = weekOf(first)
+    .map((iso) => `<span class="month-day-name">${weekdayFmt.format(utc(iso))}</span>`)
     .join('');
-  el.querySelector('.month-grid').innerHTML = cells.join('');
-  paintMonthPeeks();
 
+  paintMonthInto(el.querySelector('.month-row'), cursor, { live: true });
+}
+
+/**
+ * One month into one row: the grid, and the column of days that runs off each
+ * side of it — the previous month's Sundays behind, the next month's Mondays
+ * ahead, on the grid's own rows, so they read as the grid continuing rather
+ * than as decoration beside it. Like the week's edges they travel with their
+ * grain (author, 2026-08-21), which is why the row holds all three.
+ */
+function paintMonthInto(row, cursor, { live }) {
+  const { selected } = state;
+  const lead = gregorianToJdn(cursor.year, cursor.month, 1) % 7; // JDN 0 was a Monday
+
+  const cells = [];
+  for (let i = 0; i < lead; i++) cells.push('<span></span>');
+  for (let day = 1; day <= daysInMonth(cursor); day++) {
+    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+    const current = iso === selected ? ' aria-current="date"' : '';
+    cells.push(`<button type="button" data-iso="${iso}"${current}
+      aria-label="${dayFmt.format(utc(iso))}">${day}<span class="density"
+      aria-hidden="true">${densityDots(iso)}</span></button>`);
+  }
+  row.querySelector('.month-grid').innerHTML = cells.join('');
+
+  for (const [sel, c, weekday] of [
+    ['.peek-prev', stepCursor(cursor, -1), 6],
+    ['.peek-next', stepCursor(cursor, 1), 0],
+  ]) {
+    const column = monthColumn(c, weekday)
+      .map((day) => {
+        const iso = toIsoDate({ year: c.year, month: c.month, day });
+        return `<span class="peek-cell">${day}<span class="density">${densityDots(iso)}</span></span>`;
+      })
+      .join('');
+    row.querySelector(sel).innerHTML = `<span class="peek-col" aria-hidden="true">${column}</span>`;
+  }
+
+  if (!live) return;
   // Picking a date does not close the month: only the toggle does.
-  for (const b of el.querySelectorAll('.month-grid [data-iso]')) {
+  for (const b of row.querySelectorAll('.month-grid [data-iso]')) {
     b.addEventListener('click', () => select(b.dataset.iso));
   }
 }
 
 /**
- * A month steps sideways like the week does, and takes its height with it: a
+ * A month moves sideways like the week does, and takes its height with it: a
  * five-row month arriving where a six-row one was would otherwise shunt the
- * whole page up between two frames.
+ * whole page up between two frames. `travelled` is a drag, which has already
+ * made the trip by hand.
  */
-function stepMonth(n) {
-  const c = state.monthCursor;
-  if (!c) return;
-  state.monthCursor = stepCursor(c, n);
-
+function moveMonth(n, { travelled = false } = {}) {
+  if (!state.monthCursor) return;
   const body = state.el.querySelector('.month-body');
   const before = measure(body);
-  slideStrip(body, state.el.querySelector('.month-grid'), n > 0, paintMonth);
+  state.monthCursor = stepCursor(state.monthCursor, n);
+  paintMonth();
 
   // Whatever a grow still in flight had pinned, so the new month is measured at
   // its own height rather than at the height it was on its way to.
@@ -655,8 +791,11 @@ function stepMonth(n) {
   body.classList.remove('is-growing');
   body.style.height = '';
   const after = measure(body);
+  if (!travelled) state.monthGrain.travel(n > 0 ? 1 : -1);
   if (after !== before) growMonthBody(body, before, after);
 }
+
+const stepMonth = (n) => moveMonth(n);
 
 /* ---- the day panel: hero + register ----------------------------------- */
 

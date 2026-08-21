@@ -17,7 +17,7 @@ briefing.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; seventeen entries now, each recording
+   the most important page in the repo**; eighteen entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -57,7 +57,8 @@ DESIGN.md §5b in full before touching it. In short:
 - **There are no chevrons.** What stands at each edge of the week and of the
   month is the grain continuing — the day either side of the week, the
   neighbouring month's column of dates on the grid's own rows — dissolving
-  toward the margin through a **mask**, not an opacity. They are still buttons
+  toward the margin through a **mask**, not an opacity. Both travel with the
+  grain they belong to. They are still buttons
   on purpose: the swipe is touch and pen only by design, so an edge with
   nothing to click strands every reader with a mouse. Removing the glyph was
   the instruction; removing the way through the weeks would be a different
@@ -95,11 +96,17 @@ DESIGN.md §5b in full before touching it. In short:
   against the top (author, 2026-08-21). It took the manifest's aspect until
   then; the Index still does, deliberately. The `<img>` and the blurred
   placeholder under it are anchored together or the crop is wrong twice.
-- **The week's edges travel with the week.** What slides on a step is the whole
-  row, so the leaving copy holds a second set of step buttons for 260 ms — out
-  of the accessibility tree, out of the tab order and out of reach of the
-  pointer, because it is laid over the arriving one. The month's edges still
-  switch in place; Amendment 17 says what finishing that would cost.
+- **Each grain sits on a track, and the track is what moves.** A peeked edge
+  travels it; the reader can also **hold and slide** it, and it lets go into
+  whichever grain it is nearest past a third of a width (touch and pen only —
+  DESIGN.md §5b's reasoning is unchanged, and it is still why the edges are
+  buttons). **Both grains' edges travel with them** now, which is why the
+  month's day names moved to a line of their own above the body: they must not
+  travel, and the peeked column must. `.month-view` is gone, `.month-body` is
+  the month's viewport, and `src/ui/swipe.js` is now `src/ui/grain-drag.js`.
+  For the length of any move the document holds a second copy of every step
+  button, laid over the live one — `aria-hidden`, out of the tab order and
+  `pointer-events: none`. Amendment 18.
 
 ## The glyph, because it has moved twice
 

@@ -267,21 +267,49 @@ the global rule in base.css, and the JS skips the matching wait rather than
 holding a blank row for 420 ms with no animation behind it: removed, not
 shortened.
 
-**A grain steps sideways, edges included.** Moving a week or a month — by
-chevron, by swipe, by an arrow key off the end of the strip, by the jump to
-today — slides the grain being left out in the direction of travel and brings
-the repainted one in behind it, over `--dur-slot`. **The week's edges travel
-with the week** (author, 2026-08-21): what slides is the whole row — leading
-peek, seven days, trailing peek — because the peek is the week continuing, and
-a peek that repaints in place while the seven days between the two of them
-slide reads as the edges switching rather than as the grain moving. That makes
-`.cal-week` the viewport and `.week-row` the thing inside it that moves, and it
-puts a second copy of every step button in the document for 260 ms, so the
-leaving copy is `aria-hidden`, out of the tab order and out of reach of the
-pointer — it is laid over the arriving one and would otherwise swallow the
-click that steps the week again. **The month's edges still switch in place**,
-because sliding its column would mean sliding the day names above it too, and
-those must not move between grains. What decides it is the movement and not the
+**A grain travels sideways, edges included, and it can be dragged.** Each
+grain sits on a **track** inside a viewport, and the track is what moves. It
+moves two ways, and they are deliberately the same movement.
+
+*Travel* — a peeked edge, an arrow key off the end of the strip, the jump to
+today. The state changes first and the live row is repainted to where it has
+arrived, so the heading and the day panel never lag the chrome; then the track
+is thrown back to where the reader last saw it and glides home over
+`--dur-slot`, with the grain being left standing beside it for the trip.
+
+*A drag* (author, 2026-08-21). The reader holds the grain and slides it, and it
+lets go into whichever grain it is nearest — a third of a viewport width is far
+enough to have meant it, and short of that the grain they started in is still
+the nearest one. Both neighbours are painted and parked a width either side
+before the first frame moves, so there is something to drag into view in either
+direction without a repaint mid-gesture. The state does not move while the
+reader is still holding it: what is under the finger is the chrome, and the day
+changes when they let go somewhere. **Touch and pen only, still** — a mouse
+drag across a date grid is a selection, not a gesture — which is the same
+reason the peeked edges have to stay buttons.
+
+**Both grains' edges travel with them** (author, 2026-08-21): what moves is the
+whole row — leading peek, dates, trailing peek — because the peek is the grain
+continuing, and an edge that repaints in place while the dates between the two
+of them slide reads as the edges switching rather than as the grain moving. The
+week got this first and the month could not have it, because the month's peeked
+column could not travel while the day names above it sat inside the same
+button. **The day names moved to a line of their own** above the body so that
+it could — a row of seven with a peek-wide gap at each end, holding the same
+column centres and the same top the week strip holds them at. What that cost:
+the month's peek *button* now starts under the day-name line rather than at the
+row's top, so the two grains' edges no longer share a top. They still share the
+column, and the peeked cell still shares the grid's first row, which is where
+the ink actually has to line up.
+
+For the length of any move the document holds two or three of every date, so
+the copies say what they are: `.grain-side`, `aria-hidden`, out of the tab
+order, and out of reach of the pointer — a copy is laid over the live row and
+would otherwise swallow the click that moves the grain again.
+
+Reduced motion removes the animation and never shortens it: a travel is a
+repaint, and a drag still follows the finger — direct manipulation is not an
+animation — but lets go into place with nothing to sit through. What decides it is the movement and not the
 gesture: picking a day inside the week already showing has nowhere to travel to
 and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
