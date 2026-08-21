@@ -7,8 +7,25 @@
  * cells hidden rather than drawn empty, and a partial row keeps its cells on
  * lattice positions, left-aligned. Position encodes identity — a communion's
  * cell never moves between saints — and colour never carries information
- * alone: the three states differ by shape (filled block / hollow outline /
- * faint centred dot), which survives greyscale and worse.
+ * alone.
+ *
+ * The three states, per the author's veneration-glyph spec (2026-08-21, which
+ * supersedes Addendum A1's hollow refusal cell — see DESIGN.md §7):
+ *
+ *   attested      full cell, --glyph-attested
+ *   refused       full cell, --glyph-ink at --glyph-refused-opacity
+ *   undocumented  a centred square at UNDOC_FRACTION of the cell,
+ *                 --glyph-ink at --glyph-undoc-opacity
+ *
+ * Refusal and attestation are distinguished by *value*, undocumented by
+ * *size* as well as value. That is what makes the three survive a greyscale
+ * render, and it is the one thing here that must never be simplified: a
+ * refusal is a finding, an absence is not, and a reader has to be able to see
+ * which is which without trusting a hue.
+ *
+ * No colour literal appears in this file. Every fill is a custom property read
+ * at render time, so a repalette or a dark theme is a token change and never a
+ * code change.
  *
  * The artwork lives here and only here; the cell→communion mapping comes from
  * churches.js. Swapping squares for tesserae later is a change to this file
@@ -20,6 +37,14 @@
 
 import { enabledCommunions, churchesInCommunion } from '../data/churches.js';
 import { STRINGS, fill } from './strings.js';
+
+/* Geometry — layout, not theme, so these are constants rather than tokens.
+   The gap is the "fine" setting settled during design: a shade over an eighth
+   of the pitch, enough that adjacent cells never fuse into a shape that
+   depends on registry adjacency rather than on meaning. */
+const GAP_RATIO = 0.9 / 8;
+/** The undocumented mark, as a fraction of a full cell. */
+const UNDOC_FRACTION = 0.275;
 
 /**
  * Rolls per-church attestations up to communion level. A communion is
@@ -76,30 +101,38 @@ const cellTitle = (c) =>
  */
 export function renderBadge(attestations, { cell = 14, cols = Infinity } = {}) {
   const cells = rollup(attestations);
-  const gap = cell * 0.1;
+  const gap = cell * GAP_RATIO;
   const pitch = cell + gap;
   const perRow = Math.min(cells.length, cols === Infinity ? cells.length : cols);
   const rows = Math.ceil(cells.length / perRow);
   const width = perRow * pitch - gap;
   const height = rows * pitch - gap;
-  const sw = cell * 0.12;
+  const round = (n) => Math.round(n * 1000) / 1000;
+
   const shapes = cells
     .map((c, i) => {
       const x = (i % perRow) * pitch;
       const y = Math.floor(i / perRow) * pitch;
       const title = `<title>${cellTitle(c)}</title>`;
+      const mark = (px, py, size, fillAttrs) =>
+        `<rect data-state="${c.state}" x="${round(px)}" y="${round(py)}" ` +
+        `width="${round(size)}" height="${round(size)}" ${fillAttrs}>${title}</rect>`;
+
       if (c.state === 'attested') {
-        return `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" fill="var(--gold)">${title}</rect>`;
+        return mark(x, y, cell, 'fill="var(--glyph-attested)"');
       }
       if (c.state === 'refused') {
-        const o = sw / 2;
-        return `<rect x="${x + o}" y="${y + o}" width="${cell - sw}" height="${cell - sw}" fill="none" stroke="var(--ink-soft)" stroke-width="${sw}">${title}</rect>`;
+        // Same footprint as an attestation: a refusal is a finding, not an
+        // absence, and it is told apart by value rather than by shape.
+        return mark(x, y, cell, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-refused-opacity, 0.11)"');
       }
-      return `<circle cx="${x + cell / 2}" cy="${y + cell / 2}" r="${cell * 0.11}" fill="var(--badge-undocumented)">${title}</circle>`;
+      const d = cell * UNDOC_FRACTION;
+      const inset = (cell - d) / 2;
+      return mark(x + inset, y + inset, d, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-undoc-opacity, 0.18)"');
     })
     .join('');
 
-  return `<svg class="badge" role="img" aria-label="${badgeLabel(cells)}" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" focusable="false">${shapes}</svg>`;
+  return `<svg class="badge" role="img" aria-label="${badgeLabel(cells)}" viewBox="0 0 ${round(width)} ${round(height)}" width="${round(width)}" height="${round(height)}" focusable="false">${shapes}</svg>`;
 }
 
 /**
@@ -122,7 +155,7 @@ export function renderVessels(attestations, { height = 12 } = {}) {
         `<g>${title}` +
         `<rect x="${x + 0.5}" y="0.5" width="${w - 1}" height="${height - 1}" fill="none" stroke="var(--rule)" stroke-width="1"/>` +
         (level > 0
-          ? `<rect x="${x}" y="${height - fillH}" width="${w}" height="${fillH}" fill="var(--gold)"/>`
+          ? `<rect x="${x}" y="${height - fillH}" width="${w}" height="${fillH}" fill="var(--glyph-attested)"/>`
           : '') +
         `</g>`
       );

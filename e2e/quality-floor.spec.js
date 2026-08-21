@@ -109,10 +109,16 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
 
   const badge = page.locator('.hero svg.badge');
   await expect(badge).toHaveAttribute('aria-label', /Venerated in 3 of 4 communions/);
-  // Three attested cells as filled squares, one undocumented as a dot: the
-  // three states must stay distinguishable by shape, not colour alone.
-  await expect(badge.locator('rect')).toHaveCount(3);
-  await expect(badge.locator('circle')).toHaveCount(1);
+  // Three attested cells at full size and one undocumented mark at a fraction
+  // of one: the states have to stay apart by size and value, not by colour.
+  await expect(badge.locator('rect[data-state="attested"]')).toHaveCount(3);
+  const undocumented = badge.locator('rect[data-state="undocumented"]');
+  await expect(undocumented).toHaveCount(1);
+  const [attestedBox, undocumentedBox] = [
+    await badge.locator('rect[data-state="attested"]').first().boundingBox(),
+    await undocumented.boundingBox(),
+  ];
+  expect(undocumentedBox.width).toBeLessThan(attestedBox.width / 2);
 
   const feasts = await page.locator('.hero-feasts li').allTextContents();
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
@@ -592,5 +598,31 @@ test('cycling the theme does not move the header', async ({ page }) => {
   expect(new Set(measured.map((m) => m.label)).size).toBe(3);
   expect(new Set(measured.map((m) => m.header)).size, JSON.stringify(measured)).toBe(1);
   expect(new Set(measured.map((m) => m.button)).size, JSON.stringify(measured)).toBe(1);
+});
+
+test('the glyph holds no colour of its own, and the states survive greyscale', async ({ page }) => {
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  const marks = await page.locator('.saint-head svg.badge rect').evaluateAll((els) =>
+    els.map((el) => {
+      const style = getComputedStyle(el);
+      return {
+        state: el.dataset.state,
+        fill: style.fill,
+        opacity: parseFloat(style.fillOpacity),
+        width: el.getBoundingClientRect().width,
+      };
+    }),
+  );
+
+  const attested = marks.find((m) => m.state === 'attested');
+  const undocumented = marks.find((m) => m.state === 'undocumented');
+
+  // Every fill resolves through a custom property, so the two states resolve
+  // to two different colours without either being written into the component.
+  expect(attested.fill).not.toBe(undocumented.fill);
+  // Value and size both separate them; either alone would be a single point of
+  // failure in greyscale or at a small size.
+  expect(undocumented.opacity).toBeLessThan(attested.opacity);
+  expect(undocumented.width).toBeLessThan(attested.width / 2);
 });
 

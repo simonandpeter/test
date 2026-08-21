@@ -67,13 +67,29 @@ test('a disabled communion vanishes from the lattice entirely', () => {
   }
 });
 
-test('the three states are three different shapes', () => {
-  const svg = renderBadge(nestorius.slice(0, 2).concat([{ church: 'eastern-orthodox', status: 'not-venerated' }]));
-  // assyrian venerated → filled rect with gold; catholic refused → hollow
-  // stroked rect; oriental undocumented → circle.
-  assert.match(svg, /fill="var\(--gold\)"/);
-  assert.match(svg, /fill="none" stroke="var\(--ink-soft\)"/);
-  assert.match(svg, /<circle[^>]+fill="var\(--badge-undocumented\)"/);
+test('the three states differ by value and by size, and hold no colour literal', () => {
+  const svg = renderBadge(nestorius.slice(0, 2).concat([{ church: 'eastern-orthodox', status: 'not-venerated' }]), {
+    cell: 100,
+  });
+  const cells = [...svg.matchAll(/<rect data-state="(\w+)"[^>]*width="([\d.]+)"[^>]*?(?:fill-opacity="([^"]+)")?>/g)]
+    .map((m) => ({ state: m[1], size: parseFloat(m[2]), opacity: m[3] }));
+  const byState = Object.fromEntries(cells.map((c) => [c.state, c]));
+
+  // Attested and refused share a footprint: a refusal is a finding, not an
+  // absence, and it is told apart by value alone.
+  assert.equal(byState.attested.size, 100);
+  assert.equal(byState.refused.size, 100);
+  assert.match(svg, /fill="var\(--glyph-attested\)"/);
+  assert.match(byState.refused.opacity, /--glyph-refused-opacity/);
+
+  // Undocumented is told apart by size as well, which is what carries the
+  // three-state distinction through a greyscale render.
+  assert.ok(byState.undocumented.size < 40);
+  assert.match(byState.undocumented.opacity, /--glyph-undoc-opacity/);
+
+  // Every fill is a custom property; a hex or a named colour here would make
+  // repaletting a code change.
+  assert.ok(!/#[0-9a-f]{3,8}|rgba?\(|(gold|black|white|grey|gray)/i.test(svg.replace(/<title>.*?<\/title>/g, '')));
 });
 
 test('cells sit on the lattice: fixed pitch, partial rows left-aligned', () => {
@@ -85,19 +101,19 @@ test('cells sit on the lattice: fixed pitch, partial rows left-aligned', () => {
     { church: 'coptic', status: 'venerated' },
     { church: 'assyrian-church-of-the-east', status: 'venerated' },
   ];
-  const svg = renderBadge(allFour, { cell: 10, cols: 3 });
-  const cells = [...svg.matchAll(/<rect x="([\d.]+)" y="([\d.]+)"/g)].map((m) => [
+  const svg = renderBadge(allFour, { cell: 16, cols: 3 });
+  const cells = [...svg.matchAll(/x="([\d.]+)" y="([\d.]+)"/g)].map((m) => [
     parseFloat(m[1]),
     parseFloat(m[2]),
   ]);
   assert.equal(cells.length, 4);
-  // Pitch = cell + 10% gap = 11; three columns then the lone fourth cell on
+  // Pitch = cell + gap = 16 + 1.8; three columns, then the lone fourth cell on
   // the next lattice row at x=0 — on the lattice, never centred.
   assert.deepEqual(cells, [
     [0, 0],
-    [11, 0],
-    [22, 0],
-    [0, 11],
+    [17.8, 0],
+    [35.6, 0],
+    [0, 17.8],
   ]);
 });
 
@@ -112,7 +128,7 @@ test('vessels fill by proportion of churches attested', () => {
   const oneOfTwo = [{ church: 'roman-catholic', status: 'venerated' }];
   const svg = renderVessels(oneOfTwo, { height: 12 });
   // Catholic holds two churches; one attested → fill height 6 of 12.
-  assert.match(svg, /height="6" fill="var\(--gold\)"/);
+  assert.match(svg, /height="6" fill="var\(--glyph-attested\)"/);
 });
 
 test('every badge and vessel row carries an aria-label', () => {

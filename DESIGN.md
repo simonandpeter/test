@@ -282,25 +282,41 @@ crisp; two centuries of doubt draw as a visible dissolve; nothing ever snaps.
 A square-cell lattice, one cell per **communion**, generated from the registry
 — exactly as many cells as communions enabled; reserved or disabled cells are
 hidden, never drawn empty. Position encodes identity; a communion's cell never
-moves between saints; colour never carries information alone. (Addendum A
-settled the geometry: filled / hollow squares. The brief's earlier pale-grey
-refusal fill is superseded.)
+moves between saints; colour never carries information alone.
 
-- Cells on a fixed pitch, inset from neighbours by ~10% of cell width (tune
-  against real data before freezing). The lattice flows row-major; a partial
-  row keeps its cells on lattice positions, left-aligned — a lone cell sits on
-  its row, never floated to visual centre.
-- **Attested:** filled `--gold` — the only gold in the product (§2).
-- **Refused:** a hollow square at **full cell size** — stroked in `--ink-soft`,
-  no fill, the stroke ~12% of cell width so it holds weight at card size. Same
+**Geometry settled 2026-08-21** by the author's `veneration-glyph` spec, which
+supersedes Addendum A1's hollow refusal cell. The two rejected proposals are
+worth recording so neither is reintroduced by accident: the brief's original
+pale-grey *fill*, which A1 replaced with a hollow outline, is now the shipping
+form after all — but distinguished from an attestation by value with the
+undocumented mark separated by **size**, which is the part A1's hollow outline
+was protecting and which survives here by a different route.
+
+- Cells on a fixed pitch, inset from neighbours by a gap of 0.9/8 of the pitch
+  — the "fine" setting from the design mockups — so adjacent cells never fuse
+  into a shape that depends on registry adjacency rather than on meaning. The
+  lattice flows row-major; a partial row keeps its cells on lattice positions,
+  left-aligned — a lone cell sits on its row, never floated to visual centre.
+- **Attested:** a full cell in `--glyph-attested`, which is the gold, and gold
+  is spent nowhere else in the product (§2).
+- **Refused:** a full cell in `--glyph-ink` at `--glyph-refused-opacity`. Same
   cell, same footprint as an attestation: a refusal is a finding, not an
-  absence, and hollowness reads as "examined and found empty."
-- **Undocumented:** a small centred dot, `--ink` at 25%, diameter ~22% of cell
-  width. Must never be confusable with refused; this three-state distinction is
-  the component's entire reason to exist.
-- Greyscale check: filled block ≈ mid-value mass, hollow ≈ an outline with a
-  void, undocumented ≈ a faint point — three states distinct with colour
-  removed, and distinct by *shape*, which survives worse than value does.
+  absence, and it is told apart by **value**. Do not let that opacity drift up
+  toward an attested cell's, whatever `--glyph-attested` resolves to on a given
+  theme.
+- **Undocumented:** a centred square at 0.275 of the cell, `--glyph-ink` at
+  `--glyph-undoc-opacity`. Told apart by **size** as well as value. This is the
+  one thing in the component that must never be simplified: refusal and silence
+  are different findings, and a reader has to see which is which without
+  trusting a hue.
+- Greyscale check: a full-value block, a pale block of the same footprint, and
+  a small faint mark — three states still distinct with colour removed, two by
+  value and the third by size.
+- **No colour literal appears in the component.** Every fill reads one of four
+  custom properties — `--glyph-attested`, `--glyph-ink`,
+  `--glyph-refused-opacity`, `--glyph-undoc-opacity` — defined in tokens.css
+  for both themes. A repalette or a third theme is a token change, never a code
+  change.
 - Below ~20 px: family-level fallback, one small vessel per communion filled
   from the bottom by proportion attested.
 - Every badge carries a text equivalent ("Venerated in 2 of 4 communions:

@@ -57,6 +57,17 @@ meaningless below ~200 saints (gzip has nothing to work with), but re-check it
 once the corpus passes that mark, before considering the sharding the brief
 defers.
 
+**6. The glyph geometry changed once more, and this is the settled form.** The
+brief drew refusal as a pale-grey fill; Addendum A1 replaced that with a hollow
+outline at full cell size; the author's `veneration-glyph` spec (2026-08-21)
+returns to the pale fill, with the undocumented mark separated by **size**
+rather than by shape. All three drafts were protecting the same thing — three
+states that survive greyscale — and the shipping form does it with value for
+refusal and size for silence. Recorded in DESIGN.md §7 with the two superseded
+forms named, so neither is reintroduced by someone reading an older document.
+The component now holds no colour literal at all: four custom properties,
+defined in tokens.css for both themes.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,
