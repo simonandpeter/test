@@ -192,11 +192,9 @@ function controls(state) {
 
   return `<div class="index-controls">
     <div class="index-row">
-      <label class="search-field">
-        <span class="utility">${STRINGS.saints.search}</span>
-        <input type="search" data-query placeholder="${STRINGS.saints.searchHint}" />
-      </label>
-      <button type="button" data-random>${STRINGS.saints.random}</button>
+      <input class="search-field" type="search" data-query
+        aria-label="${STRINGS.saints.search}"
+        placeholder="${STRINGS.saints.search}: ${STRINGS.saints.searchHint}" />
       <button type="button" data-clear hidden>${STRINGS.saints.clear}</button>
     </div>
 
@@ -240,14 +238,17 @@ function controls(state) {
     </div>
 
     <div class="index-foot">
-      <label class="sort-field utility">${STRINGS.saints.sort.label}
-        <select data-sort>
-          <option value="name">${STRINGS.saints.sort.name}</option>
-          <option value="earliest">${STRINGS.saints.sort.earliest}</option>
-          <option value="latest">${STRINGS.saints.sort.latest}</option>
-          <option value="breadth">${STRINGS.saints.sort.breadth}</option>
-        </select>
-      </label>
+      <div class="sort-group">
+        <label class="sort-field utility">${STRINGS.saints.sort.label}
+          <select data-sort>
+            <option value="name">${STRINGS.saints.sort.name}</option>
+            <option value="earliest">${STRINGS.saints.sort.earliest}</option>
+            <option value="latest">${STRINGS.saints.sort.latest}</option>
+            <option value="breadth">${STRINGS.saints.sort.breadth}</option>
+          </select>
+        </label>
+        <button type="button" data-random>${STRINGS.saints.random}</button>
+      </div>
 
       <div class="layout-toggle utility" role="group" aria-label="${STRINGS.saints.layout.description}">
         <span aria-hidden="true">${STRINGS.saints.layout.label}</span>

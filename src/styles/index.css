@@ -1,35 +1,35 @@
 /* All Saints, Index mode. The controls are utility voice and stay quiet; the
    grid is panels on a field, as everywhere else. Nothing here is gold or red. */
 
+/* This page is a list, and the list is the point: everything above it is
+   tuned to spend as few vertical pixels as it can and still read. The lede is
+   one line, the search field carries its own label in the placeholder, and
+   Random sits beside Sort rather than taking a row of its own. */
 .index-lede {
   color: var(--ink-soft);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
 }
 
 .index-controls {
   border-bottom: 1px solid var(--rule);
-  padding-bottom: var(--space-4);
-  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .index-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
+/* The label lives in the placeholder now, so the field is one line rather than
+   two. The accessible name is on aria-label — a placeholder disappears the
+   moment anyone types, which is exactly when a name is still needed. */
 .search-field {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   flex: 1 1 220px;
   min-width: 0;
-}
-
-.search-field span {
-  color: var(--ink-soft);
 }
 
 input[type='search'],
@@ -57,7 +57,7 @@ select:hover {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--space-2) var(--space-4);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .facet {
@@ -136,6 +136,25 @@ select:hover {
   gap: var(--space-2) var(--space-6);
 }
 
+/* Sort and Random travel together and sit tight against each other: they are
+   both "which saint next", where the layout toggle is a different question. */
+.sort-group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sort-group button {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  padding: 2px var(--space-2);
+}
+
+.sort-group button:hover {
+  color: var(--ink);
+}
+
 .sort-field {
   display: inline-flex;
   align-items: center;
@@ -167,7 +186,7 @@ select:hover {
 
 .result-count {
   color: var(--ink-soft);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
   font-variant-numeric: tabular-nums;
 }
 

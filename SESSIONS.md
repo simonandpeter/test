@@ -149,6 +149,21 @@ DESIGN.md §7c recorded, and that dot is what carries the third state through
 greyscale. Fine at 2x and above; it is the first thing that gives if the glyph
 is asked to shrink a third time.
 
+**13. The index earns its vertical space before the first card** (author,
+2026-08-21). One-line lede, the search label moved into the placeholder as
+"Search: name, type, church, region", Random moved up beside Sort, and the
+margins around the control block tightened. The grid starts at 350 px instead
+of 436 on a 1280 x 900 laptop and four cards clear the fold where three did.
+
+Two things learned writing the test for it. A placeholder is not an accessible
+name — it disappears the moment anyone types — so the field carries an explicit
+`aria-label`. And an absolute assertion on where the grid starts is flaky by
+construction on this project: `font-display: optional` means a cold load keeps
+the fallback face, whose wider metrics wrap the facet row onto a second line
+and cost 31 px. The test pins the two rows that actually collapsed, which
+measure the same in either face, and keeps only a loose backstop on the grid
+position.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

@@ -824,6 +824,49 @@ test('the month fades rather than appearing between two frames', async ({ page }
   await expect(month).toHaveCSS('opacity', '1');
 });
 
+test('the index spends as little height as it can before the first card', async ({ page }) => {
+  // This page is a list and the list is the point. Everything above it earns
+  // its pixels or goes (author, 2026-08-21): one-line lede, the search label
+  // inside the field, Random beside Sort instead of on a row of its own.
+  // One fixed viewport, set before the load: this test is about how far down
+  // the page the grid starts, and measuring that after a resize measures a
+  // reflow instead.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const query = page.locator('[data-query]');
+  await expect(query).toHaveAttribute('placeholder', 'Search: name, type, church, region');
+  // A placeholder is not a name — it vanishes the moment anyone types, which
+  // is exactly when a screen reader still needs one.
+  await expect(query).toHaveAttribute('aria-label', 'Search');
+  await expect(page.locator('.index-controls label:has-text("Search")')).toHaveCount(0);
+
+  // Random sits with Sort, tight, and both are above the layout toggle's row.
+  const [sort, random] = [
+    await page.locator('.sort-group .sort-field').boundingBox(),
+    await page.locator('.sort-group [data-random]').boundingBox(),
+  ];
+  expect(random.x).toBeGreaterThan(sort.x + sort.width - 1);
+  expect(random.x - (sort.x + sort.width)).toBeLessThan(16);
+
+  await expect(page.locator('.index-lede')).toHaveText('The whole corpus, filterable.');
+
+  // The two rows this pass collapsed, measured directly. Both are one line
+  // high and stay one line high in either face — unlike the grid's position,
+  // which moves 31 px between them, because font-display: optional means the
+  // facet summaries wrap differently in the fallback and a cold load really
+  // does get the fallback.
+  const heightOf = async (sel) => Math.round((await page.locator(sel).boundingBox()).height);
+  expect(await heightOf('.index-lede'), 'the lede is back to two lines').toBeLessThan(34);
+  expect(await heightOf('.index-row'), 'the search field has a label above it again').toBeLessThan(40);
+
+  // And the coarse backstop, which has to clear the fallback face's 381: the
+  // grid started at 436 before this pass.
+  const gridTop = (await page.locator('.grid').boundingBox()).y;
+  expect(gridTop, 'the controls have crept back down the page').toBeLessThan(400);
+});
+
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');

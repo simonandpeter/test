@@ -92,7 +92,7 @@ export const STRINGS = {
 
   saints: {
     title: 'All Saints',
-    lede: 'The whole corpus, filterable. River mode — the unsorted, unranked stream — arrives in a later session; this is the index.',
+    lede: 'The whole corpus, filterable.',
     search: 'Search',
     searchHint: 'name, type, church, region',
     random: 'Random saint',
