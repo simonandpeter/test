@@ -277,7 +277,14 @@ Worked values: 1 year → 0.75 px (sharp); 30 years → 4.9 px; 100 years →
 9.4 px; 200 years → 13.7 px; 500 years and above → 24 px. A precise date draws
 crisp; two centuries of doubt draw as a visible dissolve; nothing ever snaps.
 
-## 7. The signature element: the veneration badge (spec for Session 3)
+## 7. The signature element: the veneration glyph (spec for Session 3)
+
+Two views over one dataset, per the author's `veneration-glyph` spec §1 and
+brief §9.1/§9.2: the **badge**, one row of communion cells, and the **matrix**,
+the rite x communion lattice. §7a is the badge, §7b the matrix, §7c which
+contexts take which and why.
+
+### 7a. The badge
 
 A square-cell lattice, one cell per **communion**, generated from the registry
 — exactly as many cells as communions enabled; reserved or disabled cells are
@@ -292,8 +299,10 @@ form after all — but distinguished from an attestation by value with the
 undocumented mark separated by **size**, which is the part A1's hollow outline
 was protecting and which survives here by a different route.
 
-- Cells on a fixed pitch, inset from neighbours by a gap of 0.9/8 of the pitch
-  — the "fine" setting from the design mockups — so adjacent cells never fuse
+- Cells on a fixed pitch, inset from neighbours by a gap of 0.9/8 of the *cell*
+  — the "fine" setting from the design mockups, which the reference states as
+  0.9/8 of the pitch and invites retuning; the difference is 0.10 of the pitch
+  against 0.1125 and it is settled at the shipped value — so adjacent cells never fuse
   into a shape that depends on registry adjacency rather than on meaning. The
   lattice flows row-major; a partial row keeps its cells on lattice positions,
   left-aligned — a lone cell sits on its row, never floated to visual centre.
@@ -325,10 +334,100 @@ was protecting and which survives here by a different route.
   `churches.js`, not in the drawing, so squares could become tesserae without
   a byte of data moving.
 
+### 7b. The rite x communion matrix
+
+**Adopted 2026-08-21 at the author's direction**, from `renderDetail` in the
+`veneration-glyph` reference. Rows are communions, columns are the rites some
+enabled church actually holds: a 7 x 4 lattice with **13 occupied positions**
+and 15 empty ones. An empty position is not drawn — not faintly, not at all.
+There is no Ge'ez-rite Church of the East, and a mark there would invent a body
+that does not exist.
+
+The 13 is derived, never a constant: Catholic holds all seven rites, Eastern
+Orthodox one, Oriental Orthodox four, the Church of the East one. Disable a
+communion and the row goes; the columns recompute.
+
+- **Same cells, same lattice, same three states as the badge.** Both renderers
+  call one `cellMark()` and one `rollupStates()` in `badge.js`, so a change to
+  what a refusal looks like, or to what counts as one, cannot land on one view
+  and miss the other. No colour literal here either.
+- **The matrix is a decomposition of the badge, never a second dataset.** Roll
+  a row up by the badge's rule and you get that communion's badge cell, for
+  every possible input. `decomposesToBadge()` in `matrix.js` states it and two
+  unit tests assert it — exhaustively over the registry, and over every saint
+  in the corpus. The two views appear on different pages for the same saint; if
+  they ever disagreed a reader would have no way to tell which was lying.
+- **One text equivalent, not two.** Spec §5. `badgeLabel()` serves both, over
+  whichever cells it is given: four communions counted by name for the badge,
+  thirteen cells counted bare for the matrix. A church holding six cells is
+  named once, not six times.
+- Each cell's own legend names its church and rite.
+
+**The open question, and the decision (2026-08-21).** The reference assumes one
+`rite` per church and splits Eastern Catholic into six — Byzantine Catholic,
+Coptic Catholic, and so on. This registry deliberately does not: brief §5 says
+keep `eastern-catholic` as one entry *and* do not flatten it to one rite, which
+is only possible if `rites` is a list (SESSIONS.md, Session 1). So the six
+non-Latin Catholic cells all read from one entry. Two options were open: fill
+all six from it, or leave them undocumented until the entry is split.
+
+**Fill all six**, and mark them coarse in the cell legend. Three reasons:
+
+1. Leaving them blank breaks the decomposition. A saint attested or refused
+   *only* in Eastern Catholic would give a badge cell that no cell of its
+   matrix row agrees with.
+2. It erases the one adjacency the brief says this view exists for. §9.2's
+   worked example is Nestorius: the East Syriac column holds Eastern Catholic,
+   which refuses him, directly above the Assyrian Church of the East, which
+   venerates him. That is real corpus data today, and blank cells lose it.
+3. The reference's own count of 13 only reconciles with this registry under
+   this option. Under the other, six of the thirteen would be permanently dark.
+
+The cost is real and is recorded here rather than hidden: the cell claims for
+every Eastern Catholic church of that rite what one entry says about all of
+them. It over-claims the day a saint is attested in only some of them — the
+spec's own Josaphat Kuntsevych case. **No saint in this corpus does that**;
+every `eastern-catholic` finding here is `not-venerated` or `undocumented`, and
+a communion-wide refusal is the case where one entry is least wrong. The first
+`eastern-catholic: venerated` attestation is the signal to split the entry, and
+the registry already flags it `coarse: true` for exactly this.
+
+### 7c. Sizes, and which view each context takes
+
+The matrix is four rows tall where the badge is one, so it cannot sit beside a
+name at the scale a one-row strip did. Measured at cell 8 it is **61.4 x 34.7
+px**, and the undocumented mark — 0.275 of a cell — is 2.2 px. That mark is the
+floor: below about cell 8 it stops being a mark and becomes a smudge, and the
+size distinction that carries the third state through greyscale goes with it.
+
+Measured in the shipping build:
+
+| Context | Type | Line box | Verdict |
+|---|---|---|---|
+| Saint page `h1` | 40 px desktop, 28 px at 360 | 50 px / 35 px | **Matrix.** Fits desktop with room; exactly fills the 360 px box. |
+| Calendar hero `h2` | 26 px | 32.5 px natural | **Matrix.** Grows the line 2.5 px. Nothing else moves. |
+| Index card / row name | 17 px | ~24 px | **Badge.** A matrix would need cell 5.5 and a 1.5 px mark. |
+| Register and shelf rows | 17 px | ~24 px | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
+
+Two things worth knowing. The matrix at cell 8 is 61.4 px wide against the
+badge's 65 px at cell 15, so it takes **less** horizontal room than what it
+replaced — the cost is vertical only. And at 360 px the glyph sits flush to the
+content edge with the name wrapped within itself; there is no horizontal page
+overflow at 360 or at 320, and a browser test pins that.
+
+This split is the brief's own: §9.1 is "cards, map, dense lists", §9.2 is "one
+saint's own page", and §9.2 says in terms not to merge the two into one
+component at two sizes. The two views showing different grain for the same
+saint is the design, not an inconsistency — which is why the decomposition
+invariant above has to hold.
+
+### 7d. Where the glyph sits
+
 **Where it sits** (author's instruction, 2026-08-21): to the right of the
 saint's name, wherever a name appears — the calendar hero, the saint's own
 page, an index card, a register or shelf row — at a cell size scaled to the
-type it accompanies. The name and its mark are one line and that line never
+type it accompanies, and in whichever of the two forms §7c gives that context.
+The name and its mark are one line and that line never
 wraps: the name shrinks and wraps within itself instead, because a glyph on a
 line of its own has lost the name it belongs to. On the saint's own page this
 replaces the standalone badge that used to head the veneration register; the

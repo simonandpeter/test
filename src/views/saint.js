@@ -25,6 +25,7 @@ import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBadge } from '../ui/badge.js';
+import { renderMatrix } from '../ui/matrix.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { renderDateBars } from '../ui/datebar.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -113,7 +114,7 @@ function shell(card) {
     <header class="saint-head">
       <div class="name-line">
         <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
-        ${renderBadge(card.attestations, { cell: 15 })}
+        ${renderMatrix(card.attestations, { cell: 8 })}
       </div>
       <p class="names" data-names hidden></p>
       <p class="saint-facts utility">${esc(formatLifespan(card.dates))}${facts ? ` · ${esc(facts)}` : ''}</p>

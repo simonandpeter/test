@@ -25,6 +25,7 @@ import {
 import { observePrefetch } from '../lib/detail.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge } from '../ui/badge.js';
+import { renderMatrix } from '../ui/matrix.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -337,7 +338,7 @@ function paintDay(panel) {
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
             <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
           </h2>
-          ${renderBadge(hero.attestations, { cell: 15 })}
+          ${renderMatrix(hero.attestations, { cell: 8 })}
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>

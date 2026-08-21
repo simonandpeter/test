@@ -64,15 +64,28 @@ export const STRINGS = {
   },
 
   badge: {
-    venerated: 'Venerated in {n} of {total} communions: {names}.',
-    veneratedNone: 'Venerated in none of the {total} communions documented here.',
+    venerated: 'Venerated in {n} of {total}{unit}: {names}.',
+    veneratedNone: 'Venerated in none of the {total}{unit} documented here.',
     refused: 'Positively not venerated by: {names}.',
     undocumented: '{n} undocumented.',
+    // What the total counts. The matrix's total is 13 cells across two axes
+    // and has no one-word noun, so it is counted bare — the spec's own
+    // example reads "Venerated in 2 of 13:".
+    unit: { communions: ' communions', cells: '' },
     state: {
       attested: 'venerated, with a citation',
       refused: 'positively not venerated',
       undocumented: 'undocumented — not sourced either way',
     },
+  },
+
+  matrix: {
+    cell: '{church}, {rite} rite: {state}',
+    // Six of the thirteen cells are filled from one registry entry. Saying so
+    // in the cell's own legend is the only place a reader can find it out.
+    coarse:
+      ' (one registry entry covering every Eastern Catholic church of this rite, ' +
+      'so this cell is coarser than it looks)',
   },
 
   saints: {

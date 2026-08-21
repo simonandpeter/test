@@ -123,16 +123,21 @@ test('a populated day renders hero, badge and each tradition in its own reckonin
   await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
+  // The hero carries the rite x communion matrix, not the communion badge:
+  // thirteen cells, three of them attested in Anthony's case, and the count
+  // in the label is the matrix's thirteen rather than the badge's four.
   const badge = page.locator('.hero svg.badge');
-  await expect(badge).toHaveAttribute('aria-label', /Venerated in 3 of 4 communions/);
-  // Three attested cells at full size and one undocumented mark at a fraction
-  // of one: the states have to stay apart by size and value, not by colour.
+  await expect(badge).toHaveClass(/glyph-matrix/);
+  await expect(badge).toHaveAttribute('aria-label', /Venerated in 3 of 13: /);
+  await expect(badge.locator('rect')).toHaveCount(13);
+  // Attested cells at full size and undocumented marks at a fraction of one:
+  // the states have to stay apart by size and value, not by colour.
   await expect(badge.locator('rect[data-state="attested"]')).toHaveCount(3);
   const undocumented = badge.locator('rect[data-state="undocumented"]');
-  await expect(undocumented).toHaveCount(1);
+  await expect(undocumented).toHaveCount(10);
   const [attestedBox, undocumentedBox] = [
     await badge.locator('rect[data-state="attested"]').first().boundingBox(),
-    await undocumented.boundingBox(),
+    await undocumented.first().boundingBox(),
   ];
   expect(undocumentedBox.width).toBeLessThan(attestedBox.width / 2);
 
@@ -565,6 +570,55 @@ test('the glyph follows the name on a shelf row', async ({ page }) => {
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.shelves')).toContainText('Continue reading');
   await glyphFollowsName(page, '.shelf li', 'a.reg-name');
+});
+
+test('the name carries the rite x communion matrix, and a dense row does not', async ({ page }) => {
+  // Two views, one dataset (brief §9.2). The matrix is four rows tall, so it
+  // can only sit beside a name that has the height for it: the saint's own h1
+  // and the calendar hero take it, and every dense context keeps the badge.
+  // DESIGN.md §7 records the measurements.
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await expect(page.locator('.saint-head svg.glyph-matrix rect')).toHaveCount(13);
+  // Seven columns beside a name is the width that could push a 360 px page
+  // sideways. It does not: the name shrinks and wraps within itself, which is
+  // what the nowrap line is for.
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth),
+  ).toBe(0);
+  await expect(page.locator('.register svg.badge:not(.glyph-matrix) rect').first()).toBeVisible();
+  await expect(page.locator('.register svg.glyph-matrix')).toHaveCount(0);
+
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.index-card svg.glyph-matrix')).toHaveCount(0);
+  await expect(page.locator('.index-card svg.badge').first().locator('rect')).toHaveCount(4);
+});
+
+test('the East Syriac column puts a refusal directly above an attestation', async ({ page }) => {
+  // The brief's worked reason for building this view at all: Eastern Catholic
+  // refuses Nestorius and the Assyrian Church of the East venerates him, and
+  // both keep the same rite. The badge cannot show that; one column of the
+  // matrix does, and only because the six Eastern Catholic cells are filled
+  // rather than left blank.
+  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
+  const marks = await page.locator('.saint-head svg.glyph-matrix rect').evaluateAll((els) =>
+    els.map((el) => ({
+      state: el.dataset.state,
+      x: Math.round(el.getBoundingClientRect().x),
+      y: Math.round(el.getBoundingClientRect().y),
+      title: el.querySelector('title')?.textContent ?? '',
+    })),
+  );
+
+  const eastSyriac = marks.filter((m) => m.title.includes('East Syriac rite'));
+  expect(eastSyriac.map((m) => m.state).sort()).toEqual(['attested', 'refused']);
+  // One column: same x, different y.
+  expect(new Set(eastSyriac.map((m) => m.x)).size).toBe(1);
+  expect(new Set(eastSyriac.map((m) => m.y)).size).toBe(2);
+
+  // And the coarse cell admits what it is standing in for.
+  const catholic = eastSyriac.find((m) => m.state === 'refused');
+  expect(catholic.title).toContain('Eastern Catholic');
+  expect(catholic.title).toContain('coarser than it looks');
 });
 
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {

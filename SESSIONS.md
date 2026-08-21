@@ -68,6 +68,24 @@ forms named, so neither is reintroduced by someone reading an older document.
 The component now holds no colour literal at all: four custom properties,
 defined in tokens.css for both themes.
 
+**7. The glyph beside a name is now the rite x communion matrix, not the
+badge — on the two contexts with the height for it.** The author's bundle
+(`../veneration-glyph-spec.md`, `../veneration-glyph.js`,
+`../veneration-glyph-proof.html`) carries two renderers; `renderDetail` is the
+one they want. It ships on the saint's `h1` and the calendar hero at cell 8;
+index cards, register rows and shelf rows keep the badge, because a matrix
+there needs a 1.5 px undocumented mark and the size distinction is the one
+thing DESIGN.md §7 says must never be simplified. Measurements in §7c.
+
+The decision the reference did not answer: it assumes one rite per church and
+splits Eastern Catholic into six, which this registry deliberately does not do.
+The six non-Latin Catholic cells are **filled from the one entry and marked
+coarse**, not left blank. Leaving them blank would break the badge/matrix
+decomposition and would erase the Nestorius East Syriac adjacency that brief
+§9.2 gives as the reason the view exists. Full reasoning and the cost in
+DESIGN.md §7b. The trigger to split the registry entry is the first
+`eastern-catholic: venerated` attestation; there is none in the corpus today.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

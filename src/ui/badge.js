@@ -42,9 +42,35 @@ import { STRINGS, fill } from './strings.js';
    The gap is the "fine" setting settled during design: a shade over an eighth
    of the pitch, enough that adjacent cells never fuse into a shape that
    depends on registry adjacency rather than on meaning. */
-const GAP_RATIO = 0.9 / 8;
+export const GAP_RATIO = 0.9 / 8;
 /** The undocumented mark, as a fraction of a full cell. */
-const UNDOC_FRACTION = 0.275;
+export const UNDOC_FRACTION = 0.275;
+
+/**
+ * One cell of the lattice, drawn. The rite x communion matrix (matrix.js) is a
+ * second reader of this: two renderers, one set of marks, so a change to what
+ * a refusal looks like cannot land on one of them and not the other.
+ *
+ * `title` is the cell's own text equivalent and is inserted unescaped — every
+ * caller builds it from the registry, not from saint data.
+ */
+export function cellMark({ state, x, y, cell, title }) {
+  const round = (n) => Math.round(n * 1000) / 1000;
+  const t = title ? `<title>${title}</title>` : '';
+  const rect = (px, py, size, fillAttrs) =>
+    `<rect data-state="${state}" x="${round(px)}" y="${round(py)}" ` +
+    `width="${round(size)}" height="${round(size)}" ${fillAttrs}>${t}</rect>`;
+
+  if (state === 'attested') return rect(x, y, cell, 'fill="var(--glyph-attested)"');
+  if (state === 'refused') {
+    // Same footprint as an attestation: a refusal is a finding, not an
+    // absence, and it is told apart by value rather than by shape.
+    return rect(x, y, cell, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-refused-opacity, 0.11)"');
+  }
+  const d = cell * UNDOC_FRACTION;
+  const inset = (cell - d) / 2;
+  return rect(x + inset, y + inset, d, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-undoc-opacity, 0.18)"');
+}
 
 /**
  * Rolls per-church attestations up to communion level. A communion is
@@ -52,21 +78,43 @@ const UNDOC_FRACTION = 0.275;
  * at least one is positively refused; undocumented otherwise. (Churches the
  * manifest omits are undocumented by construction — only findings travel.)
  */
+export function rollupStates(statuses) {
+  if (statuses.includes('venerated')) return 'attested';
+  if (statuses.includes('not-venerated')) return 'refused';
+  return 'undocumented';
+}
+
 export function rollup(attestations = []) {
   const byChurch = new Map(attestations.map((a) => [a.church, a.status]));
   return enabledCommunions().map((communion) => {
     const churches = churchesInCommunion(communion.id);
     const statuses = churches.map((c) => byChurch.get(c.id));
-    const attested = statuses.filter((s) => s === 'venerated').length;
-    const refused = statuses.filter((s) => s === 'not-venerated').length;
-    const state = attested > 0 ? 'attested' : refused > 0 ? 'refused' : 'undocumented';
-    return { communion, state, attested, refused, total: churches.length };
+    return {
+      communion,
+      label: communion.display_name,
+      state: rollupStates(statuses),
+      attested: statuses.filter((s) => s === 'venerated').length,
+      refused: statuses.filter((s) => s === 'not-venerated').length,
+      total: churches.length,
+    };
   });
 }
 
-/** The text equivalent every badge carries. */
-export function badgeLabel(cells) {
-  const name = (c) => c.communion.display_name;
+/**
+ * The text equivalent every glyph carries — badge and matrix both, per the
+ * author's spec §5: one generator, one phrasing, or a reader using the two
+ * views gets told the same finding in two voices.
+ *
+ * Cells carry their own `label`, so the badge names communions and the matrix
+ * names churches without this function knowing which axis it is describing.
+ * `unit` is the only thing that varies: four communions can be counted by
+ * name, thirteen rite cells are counted bare, exactly as the spec's example
+ * does. Names are deduplicated because one church can hold several cells of
+ * the matrix — Eastern Catholic holds six — and saying it six times in a row
+ * is noise, not detail.
+ */
+export function badgeLabel(cells, unit = STRINGS.badge.unit.communions) {
+  const names = (list) => [...new Set(list.map((c) => c.label))].join(', ');
   const attested = cells.filter((c) => c.state === 'attested');
   const refused = cells.filter((c) => c.state === 'refused');
   const undocumented = cells.filter((c) => c.state === 'undocumented');
@@ -77,12 +125,13 @@ export function badgeLabel(cells) {
       ? fill(STRINGS.badge.venerated, {
           n: attested.length,
           total: cells.length,
-          names: attested.map(name).join(', '),
+          unit,
+          names: names(attested),
         })
-      : fill(STRINGS.badge.veneratedNone, { total: cells.length }),
+      : fill(STRINGS.badge.veneratedNone, { total: cells.length, unit }),
   );
   if (refused.length) {
-    parts.push(fill(STRINGS.badge.refused, { names: refused.map(name).join(', ') }));
+    parts.push(fill(STRINGS.badge.refused, { names: names(refused) }));
   }
   if (undocumented.length) {
     parts.push(fill(STRINGS.badge.undocumented, { n: undocumented.length }));
@@ -90,8 +139,7 @@ export function badgeLabel(cells) {
   return parts.join(' ');
 }
 
-const cellTitle = (c) =>
-  `${c.communion.display_name}: ${STRINGS.badge.state[c.state]}`;
+const cellTitle = (c) => `${c.label}: ${STRINGS.badge.state[c.state]}`;
 
 /**
  * The full lattice, for cards, the hero and detail pages. `cell` is the cell
@@ -110,26 +158,15 @@ export function renderBadge(attestations, { cell = 14, cols = Infinity } = {}) {
   const round = (n) => Math.round(n * 1000) / 1000;
 
   const shapes = cells
-    .map((c, i) => {
-      const x = (i % perRow) * pitch;
-      const y = Math.floor(i / perRow) * pitch;
-      const title = `<title>${cellTitle(c)}</title>`;
-      const mark = (px, py, size, fillAttrs) =>
-        `<rect data-state="${c.state}" x="${round(px)}" y="${round(py)}" ` +
-        `width="${round(size)}" height="${round(size)}" ${fillAttrs}>${title}</rect>`;
-
-      if (c.state === 'attested') {
-        return mark(x, y, cell, 'fill="var(--glyph-attested)"');
-      }
-      if (c.state === 'refused') {
-        // Same footprint as an attestation: a refusal is a finding, not an
-        // absence, and it is told apart by value rather than by shape.
-        return mark(x, y, cell, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-refused-opacity, 0.11)"');
-      }
-      const d = cell * UNDOC_FRACTION;
-      const inset = (cell - d) / 2;
-      return mark(x + inset, y + inset, d, 'fill="var(--glyph-ink)" fill-opacity="var(--glyph-undoc-opacity, 0.18)"');
-    })
+    .map((c, i) =>
+      cellMark({
+        state: c.state,
+        x: (i % perRow) * pitch,
+        y: Math.floor(i / perRow) * pitch,
+        cell,
+        title: cellTitle(c),
+      }),
+    )
     .join('');
 
   return `<svg class="badge" role="img" aria-label="${badgeLabel(cells)}" viewBox="0 0 ${round(width)} ${round(height)}" width="${round(width)}" height="${round(height)}" focusable="false">${shapes}</svg>`;
