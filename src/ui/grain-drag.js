@@ -24,8 +24,14 @@
 
 /** Where a hold stops being a tap and starts being a drag. */
 const SLOP = 8;
-/** Where a flick that never reported a move still counts as one. */
-const FLICK = 45;
+/**
+ * Where a gesture has gone far enough to mean the next grain (author,
+ * 2026-08-21). A flat distance rather than a fraction of the grain, because a
+ * finger is the same size on a phone as on a tablet and the grain is not: a
+ * third of the width, which is what this was, meant a 210 px haul on a wide
+ * screen and snapped back from anything a reader would call a swipe.
+ */
+export const SETTLE = 36;
 
 export function onGrainDrag(el, { begin, move, end }) {
   let start = null;
@@ -70,7 +76,7 @@ export function onGrainDrag(el, { begin, move, end }) {
     start = null;
     dragging = false;
 
-    const flicked = !wasDragging && Math.abs(dx) >= FLICK && Math.abs(dx) > Math.abs(dy);
+    const flicked = !wasDragging && Math.abs(dx) >= SETTLE && Math.abs(dx) > Math.abs(dy);
     // A gesture that ends over a date would otherwise also select it — a flick
     // across the week landing on Thursday changed the week and then picked a
     // day in it. The next click is swallowed at the capture phase, once.

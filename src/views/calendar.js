@@ -27,7 +27,7 @@ import { readSettings, writeSetting } from '../lib/settings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
-import { onGrainDrag } from '../ui/grain-drag.js';
+import { onGrainDrag, SETTLE } from '../ui/grain-drag.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -403,9 +403,11 @@ function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
         }
         holding = false;
         const w = width();
-        // A third of the way across is far enough to have meant it; short of
-        // that, the grain the reader started in is still the nearest one.
-        const offset = Math.abs(dx) < w / 3 ? 0 : dx < 0 ? 1 : -1;
+        // Far enough to have meant it is a finger's worth of travel, not a
+        // fraction of the grain (author, 2026-08-21): a third of the width read
+        // as a haul on a wide screen and snapped back from any real swipe.
+        // Short of it, the grain the reader started in is still the nearest.
+        const offset = Math.abs(dx) < SETTLE ? 0 : dx < 0 ? 1 : -1;
         if (reducedMotion()) {
           if (offset) settle(offset);
           land();

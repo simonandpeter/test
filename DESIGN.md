@@ -278,9 +278,10 @@ is thrown back to where the reader last saw it and glides home over
 `--dur-slot`, with the grain being left standing beside it for the trip.
 
 *A drag* (author, 2026-08-21). The reader holds the grain and slides it, and it
-lets go into whichever grain it is nearest — a third of a viewport width is far
-enough to have meant it, and short of that the grain they started in is still
-the nearest one. Both neighbours are painted and parked a width either side
+lets go into whichever grain it is nearest. Far enough to have meant it is **a
+finger's worth of travel, 36 px** — a flat distance and not a fraction of the
+grain, because a finger is the same size on a phone as on a tablet and the
+grain is not; short of it, the grain they started in is still the nearest one. Both neighbours are painted and parked a width either side
 before the first frame moves, so there is something to drag into view in either
 direction without a repaint mid-gesture. The state does not move while the
 reader is still holding it: what is under the finger is the chrome, and the day

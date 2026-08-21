@@ -1094,14 +1094,13 @@ test('under reduced motion a week step leaves no second copy behind', async ({ b
  * in order. `fraction` is of the viewport's own width, because the settle
  * threshold is a third of a grain and not a pixel count.
  */
-const dragGrain = (page, selector, fraction, { release = true } = {}) =>
+const dragGrain = (page, selector, dx, { release = true } = {}) =>
   page.evaluate(
-    ([selector, fraction, release]) => {
+    ([selector, dx, release]) => {
       const el = document.querySelector(selector);
       const box = el.getBoundingClientRect();
       const x = box.x + box.width / 2;
       const y = box.y + box.height / 2;
-      const dx = fraction * box.width;
       const at = (px) => ({
         pointerId: 7, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true,
       });
@@ -1111,25 +1110,25 @@ const dragGrain = (page, selector, fraction, { release = true } = {}) =>
       }
       if (release) el.dispatchEvent(new PointerEvent('pointerup', at(x + dx)));
     },
-    [selector, fraction, release],
+    [selector, dx, release],
   );
 
-const releaseGrain = (page, selector, fraction) =>
+const releaseGrain = (page, selector, dx) =>
   page.evaluate(
-    ([selector, fraction]) => {
+    ([selector, dx]) => {
       const el = document.querySelector(selector);
       const box = el.getBoundingClientRect();
       el.dispatchEvent(
         new PointerEvent('pointerup', {
           pointerId: 7,
           pointerType: 'touch',
-          clientX: box.x + box.width / 2 + fraction * box.width,
+          clientX: box.x + box.width / 2 + dx,
           clientY: box.y + box.height / 2,
           bubbles: true,
         }),
       );
     },
-    [selector, fraction],
+    [selector, dx],
   );
 
 test('the week follows the finger, and lets go into the grain it is nearest', async ({ page }) => {
@@ -1137,7 +1136,7 @@ test('the week follows the finger, and lets go into the grain it is nearest', as
   // reader is still holding it: what is under the finger is the chrome, and the
   // day only changes once they have let go somewhere.
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await dragGrain(page, '.cal-week', -0.24, { release: false });
+  await dragGrain(page, '.cal-week', -24, { release: false });
 
   const held = await page.evaluate(() => {
     const vp = document.querySelector('.cal-week');
@@ -1157,16 +1156,19 @@ test('the week follows the finger, and lets go into the grain it is nearest', as
   expect(held.clipped).toBe(true);
   expect(held.heading).toContain('28 August 2026');
 
-  // Let go short of a third of a grain: the week the reader started in is still
-  // the nearest one, so it settles back and nothing has happened.
-  await releaseGrain(page, '.cal-week', -0.24);
+  // Let go short of a finger's travel — under SETTLE — and the week the reader
+  // started in is still the nearest one, so it settles back and nothing has
+  // happened.
+  await releaseGrain(page, '.cal-week', -24);
   await expect(page.locator('.grain-side')).toHaveCount(0);
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
   expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
 
-  // Past a third, and it lets go into the next week — the same movement a
-  // peeked edge makes, so the two read as one gesture with two entrances.
-  await dragGrain(page, '.cal-week', -0.5);
+  // Past it — and 48 px is a small swipe, not a haul — and it lets go into the
+  // next week. Measured in pixels rather than as a fraction of the grain, which
+  // is what the threshold is: the same swipe has to work at 1280 and at 360,
+  // and it used to need a third of the width, which was 210 px on a laptop.
+  await dragGrain(page, '.cal-week', -48);
   await expect(page.locator('h1')).toHaveText(/4 September 2026/);
   await expect(page.locator('.grain-side')).toHaveCount(0);
   await expect(page.locator('.cal-week .peek-prev .day-num')).toHaveText('30');
@@ -1182,7 +1184,7 @@ test('the month follows the finger too, and takes its height with it', async ({ 
   await page.waitForTimeout(600);
   const fiveRows = (await page.locator('.month-body').boundingBox()).height;
 
-  await dragGrain(page, '.cal-month', 0.3, { release: false });
+  await dragGrain(page, '.cal-month', 60, { release: false });
   const held = await page.evaluate(() => {
     const body = document.querySelector('.month-body');
     return {
@@ -1197,7 +1199,7 @@ test('the month follows the finger too, and takes its height with it', async ({ 
   // reader does, so August's sixth row is there to be dragged into view.
   expect(parseFloat(held.pinned)).toBeGreaterThan(fiveRows);
 
-  await releaseGrain(page, '.cal-month', 0.5);
+  await releaseGrain(page, '.cal-month', 60);
   await expect(page.locator('.month-name')).toHaveText('Aug 2026');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   await page.waitForTimeout(600);
@@ -1214,9 +1216,9 @@ test('under reduced motion a drag lets go into place with nothing to sit through
   const page = await ctx.newPage();
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  await dragGrain(page, '.cal-week', -0.4, { release: false });
+  await dragGrain(page, '.cal-week', -48, { release: false });
   expect(await page.locator('.grain-side').count()).toBe(2);
-  await releaseGrain(page, '.cal-week', -0.5);
+  await releaseGrain(page, '.cal-week', -48);
 
   // Read on the very next turn, with nothing awaited that could hide a wait.
   expect(await page.locator('h1').textContent()).toContain('4 September 2026');
