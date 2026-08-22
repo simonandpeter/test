@@ -16,9 +16,10 @@ derived from font metrics at build time so script fallback cannot move layout
 Revised 2026-08-22 for the Eastern Orthodox project, on the author's three
 decisions, recorded where each sits with the superseded text marked rather than
 removed: **the veneration glyph is removed** (§2, §5, §5b, §5c, §7, §8); **the
-registry is three local churches — Russian, Romanian, Greek — each on its own
-calendar, Julian or Revised Julian, with Pascha by the Julian computus in all
-three** (§5b); and **the site-wide selection is one of those churches** in
+registry is local churches — Russian, Romanian, Greek, and the Serbian from
+2026-08-23 — each on its own calendar, Julian or Revised Julian, with Pascha by
+the Julian computus in all of them** (§5b); and **the site-wide selection is
+one of those churches** in
 place of the traditions and the plate (§5, §5b, §5c). What a calendar entry is
 when it is not a saint is proposed to the author and not yet decided.
 
@@ -417,7 +418,16 @@ and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
 between two frames.
 
-**Russian, Romanian or Greek** (author, 2026-08-22, Eastern Orthodox project).
+**Serbian added** (author, 2026-08-23, Amendment 29). The registry is four
+local churches: the Serbian Orthodox Church joins the three below, on the
+Julian calendar like the Russian, Pascha by the Julian computus like all of
+them. The paragraph that follows stood as written until then; its "for now"
+was its own caveat, and nothing else in it changes — one church chosen, the
+calendar following the church. The Serbian is sourced from the Православни
+подсетник (pravoslavno.rs), not the Patriarchate's own site.
+
+**Russian, Romanian or Greek** (author, 2026-08-22, Eastern Orthodox project;
+three until 2026-08-23, see above).
 The registry is three local churches and the reader chooses one: the Russian
 Orthodox Church, which keeps the Julian calendar; the Romanian Orthodox Church
 and the Church of Greece, which keep the Revised Julian — fixed feasts on

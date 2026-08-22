@@ -1,0 +1,68 @@
+{
+  "slug": "tikhon-of-zadonsk",
+  "display_name": "Tikhon of Zadonsk, Bishop of Voronezh",
+  "names": [
+    {
+      "form": "Тихон Задонский",
+      "lang": "ru"
+    },
+    {
+      "form": "Тихон Задонски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1783,
+      "latest": 1783,
+      "display": "1783",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Преставление (1783), второе обретение мощей (1991) свт. Тихона, еп. Воронежского, Задонского чудотворца”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 августа ст. ст. — «Преставление (1783), второе обретение мощей (1991) свт. Тихона, еп. Воронежского, Задонского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260813.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.08.2026 (13. август ст. ст.) — „Св. Тихон Задонски, или Воронежски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-26&prolog=1",
+        "year": 2026
+      }
+    }
+  ]
+}

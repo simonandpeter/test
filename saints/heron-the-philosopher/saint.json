@@ -1,0 +1,45 @@
+{
+  "slug": "heron-the-philosopher",
+  "display_name": "Heron the Philosopher",
+  "names": [
+    {
+      "form": "Св. Ирон, хришћански философ",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.08.2026 (10. август ст. ст.) — „Св. Ирон. Хришћански философ.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-23&prolog=1",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not found among the names read off days.pravoslavie.ru for 10 августа ст. ст. (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not found among the names read off doxologia.ro for 23 august 2026 (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not found among the names read off saint.gr for 23 Αυγούστου 2026 (2026-08-23)."
+    }
+  ]
+}

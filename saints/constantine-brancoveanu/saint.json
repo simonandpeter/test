@@ -1,0 +1,56 @@
+{
+  "slug": "constantine-brancoveanu",
+  "display_name": "Constantine Brâncoveanu, Great Martyr and Prince",
+  "names": [
+    {
+      "form": "Константин",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1714,
+      "latest": 1714,
+      "display": "1714",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. вел. кн. Константина (1714) (Рум.)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 августа ст. ст. — «Мч. вел. кн. Константина (1714) (Рум.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260816.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Рум.)”: a saint of the Romanian church, whose calendar keeps him on 16 August — a day before the week that was read there."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ]
+}

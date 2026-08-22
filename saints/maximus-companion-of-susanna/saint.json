@@ -1,0 +1,45 @@
+{
+  "slug": "maximus-companion-of-susanna",
+  "display_name": "Maximus, companion of Susanna",
+  "names": [
+    {
+      "form": "Максим",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Мц. Сосанны девы и с нею Гаия, папы Римского, Гавиния пресвитера, Клавдия, Максима, Препедигны, Александра и Куфия»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "The Ohrid Prologue on pravoslavno.rs for 24.08.2026 names Susanna “и други с њом”; this companion is not named, so the row stands undocumented (2026-08-23)."
+    }
+  ]
+}

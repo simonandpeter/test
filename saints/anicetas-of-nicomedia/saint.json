@@ -1,0 +1,105 @@
+{
+  "slug": "anicetas-of-nicomedia",
+  "display_name": "Anicetas of Nicomedia",
+  "names": [
+    {
+      "form": "Аникита",
+      "lang": "ru"
+    },
+    {
+      "form": "Аникита",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 306,
+      "display": "305–306",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Фотия и Аникиты и многих с ними (305-306)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 августа ст. ст. — «Мчч. Фотия и Аникиты и многих с ними (305-306)»",
+        "url": "https://days.pravoslavie.ru/Days/20260812.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 25.08.2026 (12. август ст. ст.) — „Свети мученици Фотије, Аникита и други с њима“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, 12 августа ст. ст. — Тропарь мучеников Фотия и Аникиты",
+        "url": "https://days.pravoslavie.ru/Days/20260812.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественныя, вернии, и храбрыя/ ублажим супруги Христовы славныя,/ и похвалим, яко твердыя проповедники благочестию/ и суща рачители, Фотия и Аникиту,/ и песньми и хвалами венчаем.",
+      "source": {
+        "text": "days.pravoslavie.ru, 12 августа ст. ст. — Кондак мучеников Фотия и Аникиты",
+        "url": "https://days.pravoslavie.ru/Days/20260812.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученици Твоји Господе, у страдању своме су примили непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победише, а разорише и немоћну дрскост демона: Њиховим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), тропар за 12. август ст. ст. — „Свети мученици Фотије, Аникита и други с њима“",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0825",
+        "year": 2026
+      }
+    }
+  ]
+}

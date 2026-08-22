@@ -13,10 +13,11 @@ import { fromJdn, gregorianToJdn, isValidDate, toJdn } from '../src/lib/jdn.js';
  */
 
 test('the registry is three churches, each on one of two calendars, Pascha Julian in all', () => {
-  assert.deepEqual(CHURCHES.map((c) => c.id), ['russian', 'romanian', 'greek']);
+  assert.deepEqual(CHURCHES.map((c) => c.id), ['russian', 'romanian', 'greek', 'serbian']);
   assert.equal(CHURCHES_BY_ID.russian.default_calendar, 'julian');
   assert.equal(CHURCHES_BY_ID.romanian.default_calendar, 'revised-julian');
   assert.equal(CHURCHES_BY_ID.greek.default_calendar, 'revised-julian');
+  assert.equal(CHURCHES_BY_ID.serbian.default_calendar, 'julian');
   for (const c of CHURCHES) assert.equal(c.paschal_computus, 'julian', `${c.id} reckons Pascha by the Julian computus`);
   assert.deepEqual(churchIds(), enabledChurches().map((c) => c.id));
 });

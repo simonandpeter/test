@@ -1,0 +1,80 @@
+{
+  "slug": "lawrence-of-kaluga",
+  "display_name": "Lawrence of Kaluga, Fool for Christ",
+  "names": [
+    {
+      "form": "Лаврентий Калужский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1515,
+      "latest": 1515,
+      "display": "1515",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Блж. Лаврентия, Христа ради юродивого, Калужского (1515)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 августа ст. ст. — «Блж. Лаврентия, Христа ради юродивого, Калужского (1515)»",
+        "url": "https://days.pravoslavie.ru/Days/20260810.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветився божественною благодатию, Богомудре,/ и весь разум и сердце от суетнаго мира сего/ к Зиждителю неуклонно возложив,/ целомудрием и многим терпением во временней жизни течение добре скончал еси/ и веру соблюл еси непорочну./ Темже и по смерти явися светлость жития твоего,/ источавши бо чудесем источник неисчерпаемый/ верою притекающим ко святому твоему гробу, Лаврентие всеблаженне,/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, 10 августа ст. ст. — Тропарь блаженного Лаврентия",
+        "url": "https://days.pravoslavie.ru/Days/20260810.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Избранному и дивному в праведницех,/ инее убо от Христа дар чудес приимшему,/ похвальный ныне принесем глаголы,/ но яко имея дерзновение ко Святей Троице,/ Юже моли избавитися от бед рабом твоим, да зовем ти:/ радуйся, Богомудре Лаврентие.",
+      "source": {
+        "text": "days.pravoslavie.ru, 10 августа ст. ст. — Кондак блаженного Лаврентия",
+        "url": "https://days.pravoslavie.ru/Days/20260810.html",
+        "year": 2026
+      }
+    }
+  ]
+}

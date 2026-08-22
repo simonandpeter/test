@@ -1,0 +1,72 @@
+{
+  "slug": "theodore-of-ostrog",
+  "display_name": "Theodore, Prince of Ostrog, of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Феодор Острожский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Прп. Феодора, кн. Острожского, Печерского»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Преобразил еси земнаго княжения славу / во иночества образ смиренный, / и вместо врагов видимых / на невидимыя ополчился еси, / и, обою победитель красен являяся, / един от чудотворец Печерских показался еси; / темже и нам ревности Божия дар испроси, / братолюбием сердца наша просвети / и ко спасению вечному стези наша, Феодоре блаженне, направи.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Тропарь преподобного Феодора, князя Острожского",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Красоты ризныя возгнушавшагося/ и богатства тленнаго со благодарением отвершагося,/ в ризу же безстрастия облекшагося/ и богатому в щедротах Христу возследовавшагося,/ приидите, вернии, восхвалим Феодора достославна,/ яко молящася непрестанно/ о душах наших.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Кондак преподобного Феодора, князя Острожского",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    }
+  ]
+}

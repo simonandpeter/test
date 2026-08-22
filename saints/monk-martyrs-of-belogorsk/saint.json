@@ -1,0 +1,55 @@
+{
+  "slug": "monk-martyrs-of-belogorsk",
+  "display_name": "The Monk-martyrs of Belogorsk (1918)",
+  "names": [
+    {
+      "form": "Преподобномученики Белогорские",
+      "lang": "ru"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмчч. Белогорских: Варлаама, Сергия, Илии, Вячеслава, Иоасафа, Иоанна, Антония, Михея, Виссариона, Матфея, Евфимия, Варнавы, Димитрия, Саввы, Гермогена, Аркадия, Евфимия, Маркелла, Иоанна, Иакова, Петра, Иакова, Александра, Феодора, Петра, Сергия и Алексия (1918)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 августа ст. ст. — «Прмчч. Белогорских: Варлаама, Сергия, Илии, Вячеслава, Иоасафа, Иоанна, Антония, Михея, Виссариона, Матфея, Евфимия, Варнавы, Димитрия, Саввы, Гермогена, Аркадия, Евфимия, Маркелла, Иоанна, Иакова, Петра, Иакова, Александра, Феодора, Петра, Сергия и Алексия (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260812.html",
+        "year": 2026
+      },
+      "note": "Twenty-seven, named on the page; one folder for the one entry."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ]
+}

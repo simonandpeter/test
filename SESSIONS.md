@@ -1099,6 +1099,74 @@ so credit is no longer asked for); the Assyrian Church of the East's
 `paschal_computus` is unverified and flagged `needs_sourcing` in the registry.
 
 
+**29. The Russian week, then the Serbian church: a fourth choice, its calendar,
+its week of saints, readings, fast and tropars** (author's instruction,
+2026-08-23). Two halves, one commit.
+
+**The Russian week.** Seventy folders read off days.pravoslavie.ru for 10–16
+August ст. ст. (civil 23–29 August), the same way as Amendment 28's sixty-two
+and under the same reconciliation with Amendment 2: each folder is one page's
+name, kept as the page prints it, with the Julian feast, the page as source,
+dates only where printed, and the Romanian and Greek rows `undocumented` with
+the reason. Church Slavonic tropars and kontakia (`lang: 'cu'`) for the saints
+the Patriarchate's page prints them for — Lawrence, Lawrence of Kaluga, Euplus,
+Theodore and Basil of the Caves, Theodore of Ostrog, Juliana, Photius and
+Anicetas, Maximus the Confessor, Arkadios, Diomedes — and the feast's hymns
+for the forefeast, the Dormition and the Image recorded with the day. The
+Index then held 140 and every count in the suite moved: 78 Russian; the range
+that matched nobody (1500–1600) now matched Lawrence of Kaluga and Maximus of
+Moscow, so it is 1600–1700; Augustine and Anthony sit below the mounted rows
+of a 140-card grid, so the tests that measure their cards bring them in by the
+Index's own search rather than by scrolling (Amendment 26's lesson again).
+
+**The Serbian church.** One registry entry (`serbian`, Julian, Pascha by the
+Julian computus) and the suites said what it touched: the chooser's count, the
+saint page's four rows and "See the other churches (3)", the lede, the Index's
+set-aside lines, the liturgical-days test's source pattern, and nothing else
+— the design was built so that adding a church is adding an entry, and that
+held. Sourced from the Православни подсетник (pravoslavno.rs, Микро књига):
+the month calendar's day lines for the principal commemorations and the
+fasting mark, the day pages for the Apostle and Gospel and the Ohrid Prologue's
+entries, the tropar pages for the tropars. Not the Patriarchate's own site,
+which was not read; the registry note says so. Fourteen existing folders got
+a Serbian `venerated` row (Lawrence, Sixtus, Euplus, Susanna, Theodore and
+Basil of the Caves, Photius, Anicetas, Alexander of Comana, Hippolytus, Tikhon
+of Zadonsk, Micah, Marcellus, Diomedes) and a Serbian name form; the companions
+the Prologue names only as "и други с њима / с њом" got `undocumented` with
+that reason, not `venerated` by inference; the other 126 `undocumented` with
+"not checked". Nine new folders for the names the Serbian calendar prints and
+the others do not: Heron the philosopher, Niphon of Constantinople, Irene the
+Empress (the nun Xenia), Seridos of Gaza, Joachim of Osogovo (dated "late
+11th century" as the Prologue prints it), Stamatios of Volos, Eustathius II
+of Serbia, Roman the Venerable, Raphael of Banat — 149 saints. The week's
+readings for every day (the 29th prints two Apostles, so the unit test now
+asks for "two at least"), the fasting mark as printed ("пост" Monday to
+Friday, none on the 23rd and 29th — the engine agrees: Dormition Fast, fish on
+the feast, free on the Saturday), and five tropars in Serbian (`lang: 'sr'`):
+Lawrence, Euplus, Photius and Anicetas, Hippolytus, Micah.
+
+**What is not recorded, and why.** The Serbian tropar and kondak of the
+Dormition: the tropar page came back through the fetch with words garbled
+("срмти", "заджати", a Latin-script "smrti") and no second read agreed with
+the first, so the pair is left out and the day's comment says so — the Russian
+pair stands for that day. The tropar page for the 29th rendered empty. The
+Serbian rows for the original eight saints and the sixty-two of Amendment 28
+are "not checked", not absent: pravoslavno.rs was read for this week only.
+
+**What the tests say.** One new browser test: the Serbian is the fourth choice
+with "Julian calendar" under it; chosen, the strip names it, the 23rd is "10
+August (Julian)", "12th Sunday after Pentecost · Tone 3 · Fast — the
+Dormition Fast", Lawrence the hero because the Serbian sings for him, two
+readings sourced to pravoslavno.rs, one tropar in `sr` with "глас 4"; the 29th
+three readings and no fast; and the Russian 24th with its Church Slavonic
+hymns and no Serbian text on it. Backed out by removing Lawrence's Serbian
+tropar: the hero and the hymn assertions fail, and pass again with it back.
+`tests/liturgy.test.mjs` now runs the Dormition-Fast week for both Julian
+churches. 120 unit, 214 browser, green; `npm run build:manifest` 149 saints,
+the seven image warnings as before. Shots looked at: the Serbian 23rd and
+29th, the Russian 24th, Lawrence's page with its Serbian row and the reveal of
+three.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

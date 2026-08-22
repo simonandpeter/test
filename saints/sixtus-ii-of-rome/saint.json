@@ -1,0 +1,68 @@
+{
+  "slug": "sixtus-ii-of-rome",
+  "display_name": "Sixtus II, Pope of Rome",
+  "names": [
+    {
+      "form": "Сикст",
+      "lang": "ru"
+    },
+    {
+      "form": "Сикст",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 258,
+      "latest": 258,
+      "display": "258",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. архидиакона Лаврентия, Сикста папы, Феликиссима и Агапита диаконов, Романа, Римских (258)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 августа ст. ст. — «Мч. архидиакона Лаврентия, Сикста папы, Феликиссима и Агапита диаконов, Романа, Римских (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260810.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.08.2026 (10. август ст. ст.) — „Св. муч. Лаврентије архиђакон, и Сикст папа, и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-23&prolog=1",
+        "year": 2026
+      }
+    }
+  ]
+}

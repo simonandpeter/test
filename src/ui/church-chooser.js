@@ -1,5 +1,5 @@
 /**
- * The church chooser (author, 2026-08-22): the three churches as one-shot
+ * The church chooser (author, 2026-08-22): the registry's churches as one-shot
  * choices, each with the calendar it keeps under its name, because choosing
  * the church is choosing the calendar. One component, three hosts — the
  * calendar's first-visit question, where a press is the answer; the header's

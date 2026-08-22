@@ -1,0 +1,97 @@
+{
+  "slug": "euplus-the-archdeacon",
+  "display_name": "Euplus the Archdeacon",
+  "names": [
+    {
+      "form": "Евпл",
+      "lang": "ru"
+    },
+    {
+      "form": "Евпло",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Мч. архидиакона Евпла»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 24.08.2026 (11. август ст. ст.) — „Свети мученик и архиђакон Евпло“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Евпл/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Тропарь мученика архидиакона Евпла",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Законы Христовы в руку обнося,/ предстал еси, вопия врагом, в подвизе:/ самозван есмь страдальчествовати твердейши./ Темже, приклонив радостно выю твою,/ подъял еси усечение мечем,// скончавый течение твое.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Кондак мученика архидиакона Евпла",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученик Твој Господе, Евпло, у страдању своме је примио непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победи, а разори и немоћну дрскост демона: Његовим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), тропар за 11. август ст. ст. — „Свети мученик и архиђакон Евпло“",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0824",
+        "year": 2026
+      }
+    }
+  ]
+}

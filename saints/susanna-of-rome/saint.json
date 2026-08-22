@@ -1,0 +1,59 @@
+{
+  "slug": "susanna-of-rome",
+  "display_name": "Susanna of Rome, Virgin Martyr",
+  "names": [
+    {
+      "form": "Сосанна",
+      "lang": "ru"
+    },
+    {
+      "form": "Сузана",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Мц. Сосанны девы и с нею Гаия, папы Римского, Гавиния пресвитера, Клавдия, Максима, Препедигны, Александра и Куфия»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.08.2026 (11. август ст. ст.) — „Св. муч. Сузана девица, и други с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1",
+        "year": 2026
+      }
+    }
+  ]
+}

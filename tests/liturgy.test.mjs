@@ -71,14 +71,18 @@ test('the named Sundays of the Pentecostarion and the Triodion', () => {
   assert.equal(cycleTitle('2027-04-30'), 'Great and Holy Friday');
 });
 
-test('the week of 23 August 2026: the Russian calendar is still in the Dormition Fast, the New Calendar churches are not', () => {
+test('the week of 23 August 2026: the Julian-calendar churches are still in the Dormition Fast, the New Calendar churches are not', () => {
   // days.pravoslavie.ru: Успенский пост Sunday to Thursday; Friday is the
   // Dormition, "разрешается рыба"; Saturday "поста нет".
-  for (const day of [23, 24, 25, 26, 27]) {
-    assert.deepEqual(fasting(`2026-08-${day}`, 'russian'), { kind: 'fast', reason: 'the Dormition Fast' }, `russian ${day}`);
+  // pravoslavno.rs marks the Serbian week the same way: "пост" Monday to
+  // Friday, nothing on Sunday 23 or Saturday 29 — the same Julian calendar.
+  for (const church of ['russian', 'serbian']) {
+    for (const day of [23, 24, 25, 26, 27]) {
+      assert.deepEqual(fasting(`2026-08-${day}`, church), { kind: 'fast', reason: 'the Dormition Fast' }, `${church} ${day}`);
+    }
+    assert.equal(fasting('2026-08-28', church).kind, 'fish', `${church} Dormition`);
+    assert.equal(fasting('2026-08-29', church).kind, 'fast-free', `${church} Saturday`);
   }
-  assert.equal(fasting('2026-08-28', 'russian').kind, 'fish');
-  assert.equal(fasting('2026-08-29', 'russian').kind, 'fast-free');
   // doxologia.ro and saint.gr: nothing Sunday to Tuesday, fast on Wednesday
   // and Friday, and the Beheading on Saturday — "(Post)", "Νηστεία".
   for (const church of ['romanian', 'greek']) {

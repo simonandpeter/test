@@ -7,7 +7,7 @@
 export const STRINGS = {
   site: {
     name: 'The Orthodox Saint',
-    tagline: 'The saints of the Orthodox Church, church by church — Russian, Romanian and Greek, each in its own calendar.',
+    tagline: 'The saints of the Orthodox Church, church by church — Russian, Romanian, Greek and Serbian, each in its own calendar.',
   },
 
   nav: {
@@ -107,7 +107,7 @@ export const STRINGS = {
   },
 
   /*
-   * The church the reader keeps (author, 2026-08-22): one of three, and with
+   * The church the reader keeps (author, 2026-08-22): one of four, and with
    * it the calendar, because the calendar follows the church. Asked once on a
    * first visit, changed from the header; read by the calendar, the Index and
    * the saint's page.
@@ -118,8 +118,9 @@ export const STRINGS = {
     showing: '{church} calendar',
     heading: 'Which calendar do you keep?',
     lede:
-      'Three churches keep their calendars here: the Russian on the Julian ' +
-      'calendar, the Romanian and the Greek on the Revised Julian. Choose the ' +
+      'Four churches keep their calendars here: the Russian and the Serbian ' +
+      'on the Julian calendar, the Romanian and the Greek on the Revised ' +
+      'Julian. Choose the ' +
       'one you keep — the calendar, the saints and each saint’s page read it — ' +
       'and change it whenever you like.',
     groupLabel: 'Churches',

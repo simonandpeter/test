@@ -1,0 +1,55 @@
+{
+  "slug": "felicissimus-the-deacon",
+  "display_name": "Felicissimus the Deacon",
+  "names": [
+    {
+      "form": "Феликиссим",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 258,
+      "latest": 258,
+      "display": "258",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. архидиакона Лаврентия, Сикста папы, Феликиссима и Агапита диаконов, Романа, Римских (258)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 августа ст. ст. — «Мч. архидиакона Лаврентия, Сикста папы, Феликиссима и Агапита диаконов, Романа, Римских (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260810.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "The Ohrid Prologue on pravoslavno.rs for 23.08.2026 names Lawrence, Sixtus “и други с њима”; this companion is not named, so the row stands undocumented (2026-08-23)."
+    }
+  ]
+}

@@ -4,7 +4,7 @@
  * church, because each follows that church's reckoning. Everything here is
  * derived from two things the registry already holds: the church's computus,
  * which fixes Pascha, and its calendar, which fixes the dated fasts and
- * feasts. Pure functions, no DOM, checked against the three churches' own
+ * feasts. Pure functions, no DOM, checked against the four churches' own
  * calendars for the week of 23 August 2026 in tests/liturgy.test.mjs.
  *
  * What it does not do, on purpose: it states whether a day is a fast and which

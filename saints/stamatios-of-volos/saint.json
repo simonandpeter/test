@@ -1,0 +1,45 @@
+{
+  "slug": "stamatios-of-volos",
+  "display_name": "Stamatios of Volos",
+  "names": [
+    {
+      "form": "Св. муч. Стамат",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.08.2026 (16. август ст. ст.) — „Св. муч. Стамат.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-29&prolog=1",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not found among the names read off days.pravoslavie.ru for 16 августа ст. ст. (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not found among the names read off doxologia.ro for 29 august 2026 (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not found among the names read off saint.gr for 29 Αυγούστου 2026 (2026-08-23)."
+    }
+  ]
+}

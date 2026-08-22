@@ -1,0 +1,72 @@
+{
+  "slug": "juliana-of-lazarevo",
+  "display_name": "Juliana of Lazarevo, of Murom",
+  "names": [
+    {
+      "form": "Иулиания Лазаревская",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The finding of her relics as the Patriarchate keeps it; her principal feast is 2 January (Julian)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Обретение мощей прав. Иулиании Лазаревской, Муромской»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветившися Божественною благодатию,/ и по смерти светлость жития твоего явила еси:/ источаеши бо миро благовонное всем болящим на исцеление,/ с верою приходящим к мощем твоим,/ праведная мати Иулиание,/ Христа Бога моли/ спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Тропарь праведной Иулиании Лазаревской",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Скоропослушливую помощницу вси, сущии в бедах и болезнех, воспоем Иулианию святую, та бо в мире богоугодно поживе и милостыню к нищим безмерну показа, сего ради обрете благодать чудес Божиим ведением.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Кондак праведной Иулиании Лазаревской",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    }
+  ]
+}

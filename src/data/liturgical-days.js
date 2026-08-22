@@ -58,6 +58,13 @@ export const LITURGICAL_DAYS = {
         },
       ],
     },
+    serbian: {
+      readings: [r('Апостол', '1 Corinthians 15:1-11'), r('Јеванђеље', 'Matthew 19:16-30')],
+      title: 'Недеља 12. по Духовима',
+      // The month calendar prints no fasting mark on this day.
+      fastingNote: null,
+      source: { text: 'Православни подсетник (pravoslavno.rs), 23.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-23' },
+    },
   },
   '2026-08-24': {
     russian: {
@@ -74,6 +81,12 @@ export const LITURGICAL_DAYS = {
       readings: [r('Απόστολος', '2 Corinthians 8:7-15'), r('Ευαγγέλιο', 'Mark 3:6-12')],
       fastingNote: null,
       source: { text: 'saint.gr, 24 Αυγούστου', url: GR('24') },
+    },
+    serbian: {
+      readings: [r('Апостол', '2 Corinthians 8:7-15'), r('Јеванђеље', 'Mark 3:6-12')],
+      title: 'Понедељак 13. по Духовима',
+      fastingNote: 'пост (as marked on the month calendar)',
+      source: { text: 'Православни подсетник (pravoslavno.rs), 24.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24' },
     },
   },
   '2026-08-25': {
@@ -93,6 +106,12 @@ export const LITURGICAL_DAYS = {
       fastingNote: null,
       source: { text: 'saint.gr, 25 Αυγούστου', url: GR('25') },
     },
+    serbian: {
+      readings: [r('Апостол', '2 Corinthians 8:16-24; 9:1-5'), r('Јеванђеље', 'Mark 3:13-19')],
+      title: 'Уторак 13. по Духовима',
+      fastingNote: 'пост (as marked on the month calendar)',
+      source: { text: 'Православни подсетник (pravoslavno.rs), 25.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-25' },
+    },
   },
   '2026-08-26': {
     russian: {
@@ -110,12 +129,31 @@ export const LITURGICAL_DAYS = {
       fastingNote: 'Νηστεία',
       source: { text: 'saint.gr, 26 Αυγούστου', url: GR('26') },
     },
+    serbian: {
+      readings: [r('Апостол', '2 Corinthians 9:12-15; 10:1-7'), r('Јеванђеље', 'Mark 3:20-27')],
+      title: 'Среда 13. по Духовима — Оданије Преображења',
+      fastingNote: 'пост (as marked on the month calendar)',
+      source: { text: 'Православни подсетник (pravoslavno.rs), 26.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-26' },
+    },
   },
   '2026-08-27': {
     russian: {
       readings: [r('Epistle', '2 Corinthians 10:7-18'), r('Gospel', 'Mark 3:28-35')],
       fastingNote: 'Успенский пост',
       source: { text: 'days.pravoslavie.ru, 14 августа ст. ст.', url: RU('0814') },
+      // The forefeast of the Dormition: the day's own hymns.
+      hymns: [
+        {
+          church: 'russian', kind: 'troparion', lang: 'cu', tone: 'глас 4',
+          text: 'Людие, предыграйте,/ руками плещуще верно,/ и любовию соберитеся,/ днесь радующеся/ и светло восклицающе вси веселием:/ Божия бо Мати имать от земных к Вышним прейти славно,// Юже песньми присно яко Богородицу славим.',
+          source: { text: 'days.pravoslavie.ru, 14 августа ст. ст. — Тропарь предпразднства', url: RU('0814'), year: 2026 },
+        },
+        {
+          church: 'russian', kind: 'kontakion', lang: 'cu', tone: 'глас 4',
+          text: 'В славней памяти Твоей/ вселенная, невещественным Духом испещрена,/ умно с веселием зовет Тебе:/ радуйся, Дево,// христиан похвало.',
+          source: { text: 'days.pravoslavie.ru, 14 августа ст. ст. — Кондак предпразднства', url: RU('0814'), year: 2026 },
+        },
+      ],
     },
     romanian: {
       readings: [r('Apostol', '2 Corinthians 10:7-18'), r('Evanghelie', 'Mark 3:28-35')],
@@ -127,6 +165,12 @@ export const LITURGICAL_DAYS = {
       fastingNote: null,
       source: { text: 'saint.gr, 27 Αυγούστου', url: GR('27') },
     },
+    serbian: {
+      readings: [r('Апостол', '2 Corinthians 10:7-18'), r('Јеванђеље', 'Mark 3:28-35')],
+      title: 'Четвртак 13. по Духовима — Претпразништво Успенија',
+      fastingNote: 'пост (as marked on the month calendar)',
+      source: { text: 'Православни подсетник (pravoslavno.rs), 27.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-27' },
+    },
   },
   '2026-08-28': {
     russian: {
@@ -134,6 +178,18 @@ export const LITURGICAL_DAYS = {
       readings: [r('Epistle', 'Philippians 2:5-11'), r('Gospel', 'Luke 10:38-42; 11:27-28')],
       fastingNote: 'Успение Пресвятой Богородицы; на трапезе разрешается рыба',
       source: { text: 'days.pravoslavie.ru, 15 августа ст. ст.', url: RU('0815') },
+      hymns: [
+        {
+          church: 'russian', kind: 'troparion', lang: 'cu', tone: 'глас 1',
+          text: 'В рождестве девство сохранила еси,/ во успении мира не оставила еси, Богородице,/ преставилася еси к животу,/ Мати сущи Живота,// и молитвами Твоими избавляеши от смерти души наша.',
+          source: { text: 'days.pravoslavie.ru, 15 августа ст. ст. — Тропарь праздника Успения', url: RU('0815'), year: 2026 },
+        },
+        {
+          church: 'russian', kind: 'kontakion', lang: 'cu', tone: 'глас 2',
+          text: 'В молитвах Неусыпающую Богородицу/ и в предстательствах непреложное упование/ гроб и умерщвление не удержаста:/ якоже бо Живота Матерь/ к животу престави// во утробу Вселивыйся приснодевственную.',
+          source: { text: 'days.pravoslavie.ru, 15 августа ст. ст. — Кондак праздника Успения', url: RU('0815'), year: 2026 },
+        },
+      ],
     },
     romanian: {
       readings: [r('Apostol', '2 Corinthians 11:5-21'), r('Evanghelie', 'Mark 4:1-9')],
@@ -145,6 +201,16 @@ export const LITURGICAL_DAYS = {
       fastingNote: 'Νηστεία',
       source: { text: 'saint.gr, 28 Αυγούστου', url: GR('28') },
     },
+    serbian: {
+      // The feast's pericopes at the Liturgy; the page prints the Vespers and
+      // Matins readings too. The Serbian tropar and kondak of the feast could
+      // not be read cleanly off the tropar page (2026-08-23) and are not
+      // recorded rather than recorded wrong; the Russian pair stands above.
+      readings: [r('Апостол', 'Philippians 2:5-11'), r('Јеванђеље', 'Luke 10:38-42; 11:27-28')],
+      title: 'Петак 13. по Духовима — Успеније Пресвете Богородице (Велика Госпојина)',
+      fastingNote: 'пост (as marked on the month calendar)',
+      source: { text: 'Православни подсетник (pravoslavno.rs), 28.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-28' },
+    },
   },
   '2026-08-29': {
     russian: {
@@ -152,6 +218,18 @@ export const LITURGICAL_DAYS = {
       readings: [r('Epistle', 'Colossians 1:12-18'), r('Gospel', 'Luke 9:51-56; 10:22-24')],
       fastingNote: 'Поста нет',
       source: { text: 'days.pravoslavie.ru, 16 августа ст. ст.', url: RU('0816') },
+      hymns: [
+        {
+          church: 'russian', kind: 'troparion', lang: 'cu', tone: 'глас 2',
+          text: 'Пречистому Твоему образу покланяемся, Благий,/ просяще прощения прегрешений наших, Христе Боже:/ волею бо благоволил еси плотию взыти на Крест,/ да избавиши яже создал еси от работы вражия./ Тем благодарственно вопием Ти:/ радости исполнил еси вся, Спасе наш,// пришедый спасти мир.',
+          source: { text: 'days.pravoslavie.ru, 16 августа ст. ст. — Тропарь Нерукотворенного Образа', url: RU('0816'), year: 2026 },
+        },
+        {
+          church: 'russian', kind: 'kontakion', lang: 'cu', tone: 'глас 2',
+          text: 'Неизреченнаго и Божественнаго Твоего к человеком смотрения,/ неописанное Слово Отчее,/ и образ неписанный,/ и богописанный победителен,/ ведуще неложнаго Твоего воплощения,// почитаем, того лобызающе.',
+          source: { text: 'days.pravoslavie.ru, 16 августа ст. ст. — Кондак Нерукотворенного Образа', url: RU('0816'), year: 2026 },
+        },
+      ],
     },
     romanian: {
       readings: [r('Apostol', 'Acts 13:25-33'), r('Evanghelie', 'Mark 6:14-30')],
@@ -162,6 +240,13 @@ export const LITURGICAL_DAYS = {
       readings: [r('Απόστολος', 'Acts 13:25-32'), r('Ευαγγέλιο', 'Mark 6:14-30')],
       fastingNote: 'Νηστεία — επιτρέπεται το λάδι και ο οίνος',
       source: { text: 'saint.gr, 29 Αυγούστου', url: GR('29') },
+    },
+    serbian: {
+      readings: [r('Апостол', '1 Corinthians 2:6-9'), r('Апостол', '1 Thessalonians 4:13-17'), r('Јеванђеље', 'Matthew 22:15-22')],
+      title: 'Субота 13. по Духовима — Нерукотворена икона Господа Исуса Христа',
+      // The month calendar prints no fasting mark on this day.
+      fastingNote: null,
+      source: { text: 'Православни подсетник (pravoslavno.rs), 29.08.2026', url: 'https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-29' },
     },
   },
 };

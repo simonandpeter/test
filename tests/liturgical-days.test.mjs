@@ -16,9 +16,10 @@ test('the recorded week is 23–29 August 2026, every church, every day', () => 
     for (const { id } of CHURCHES) {
       const rec = recordedDay(iso, id);
       assert.ok(rec, `${iso} ${id} is recorded`);
-      assert.equal(rec.readings.length, 2, `${iso} ${id} has an Apostle and a Gospel`);
+      // Two at least — an Apostle and a Gospel; the Serbian 29 August prints two Apostle pericopes.
+      assert.ok(rec.readings.length >= 2, `${iso} ${id} has an Apostle and a Gospel`);
       for (const r of rec.readings) assert.match(r.ref, /^[1-3]?\s?[A-Z][a-z]+ \d/, `${iso} ${id} reference "${r.ref}" is a normalised English reference`);
-      assert.match(rec.source.url, /^https:\/\/(days\.pravoslavie\.ru|doxologia\.ro|www\.saint\.gr)\//, `${iso} ${id} names the page it was read from`);
+      assert.match(rec.source.url, /^https:\/\/(days\.pravoslavie\.ru|doxologia\.ro|www\.saint\.gr|www\.pravoslavno\.rs)\//, `${iso} ${id} names the page it was read from`);
     }
   }
   assert.equal(recordedDay('2026-08-30', 'greek'), null, 'an unrecorded day is null, never invented');

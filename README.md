@@ -1,7 +1,8 @@
 # The Orthodox Saint
 
 A static site for engaging daily with the saints of the Orthodox Church, church
-by church — Russian, Romanian and Greek for now, each in its own calendar. It
+by church — Russian, Romanian, Greek and Serbian for now, each in its own
+calendar. It
 is the Eastern Orthodox proof of a larger, cross-church design: the same
 structure, the same quality floor, one tradition, to be proven before the
 four-communion corpus comes back onto it. That corpus and its build are
@@ -78,7 +79,7 @@ keep — fixed feasts on Gregorian dates). Both convert through the Julian Day
 Number, so the Julian/Gregorian offset falls out of the general rule — 13 days
 now, 14 from 2100 — and the Revised Julian converts as the Gregorian does until
 the two first disagree in 2800. Pascha is reckoned by the Julian computus in all
-three churches; `paschal_computus` is a per-church field all the same, and an
+four churches; `paschal_computus` is a per-church field all the same, and an
 attestation may state its own.
 
 `feastOccurrences()` returns an **array** of dates, because a 29 February feast

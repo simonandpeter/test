@@ -1,0 +1,93 @@
+{
+  "slug": "theodore-of-the-kyiv-caves",
+  "display_name": "Theodore of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Феодор Печерский",
+      "lang": "ru"
+    },
+    {
+      "form": "Теодор Печерски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1098,
+      "latest": 1098,
+      "display": "1098",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмчч. Феодора и Василия Печерских”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 августа ст. ст. — «Прмчч. Феодора и Василия Печерских»",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.08.2026 (11. август ст. ст.) — „Преп. Василије и Теодор Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Союзом любве связавшеся, преподобнии,/ всяк союз козней вражиих попрасте,/ страдание же и смерть неповинне/ от сребролюбиваго князя претерпесте добле,/ тем молим вас, вкупе поживших/ и венцы мучения приемших,/ молитеся Господеви о нас,/ яко да во мнозей любви, вере и надежди добре поживше,/ всегда ублажаем вас,/ Феодоре и Василие добропобеднии.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Тропарь преподобномучеников Феодора и Василия",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Добр советник явлься блаженному Феодору,/ Богомудре Василие,/ избавил еси того советом своим от прелести диаволи/ и ко свету богоразумия наставль./ С темже послежде блаженную приял еси кончину,/ устрелен неправедно быв во утробу от сребролюбиваго князя./ И ныне, предстоя Господеви,/ молися непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, 11 августа ст. ст. — Кондак преподобномучеников Феодора и Василия",
+        "url": "https://days.pravoslavie.ru/Days/20260811.html",
+        "year": 2026
+      }
+    }
+  ]
+}

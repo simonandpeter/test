@@ -1,7 +1,8 @@
 /**
- * The church registry — three local churches of the Orthodox Church, the
+ * The church registry — four local churches of the Orthodox Church, the
  * author's decision for this project (DESIGN.md §5b, 2026-08-22): Russian,
- * Romanian and Greek, "for now". One entry per church the site offers; the
+ * Romanian and Greek, "for now", and the Serbian from 2026-08-23 (Amendment
+ * 29). One entry per church the site offers; the
  * reader chooses one and the whole site reads it. Everything downstream is
  * generated from this file — what an attestation may name, the chooser's
  * buttons, the Index's church facet, the build's validation — so adding a
@@ -10,7 +11,7 @@
  * Each church keeps one of two calendars for its fixed feasts (the author's
  * second decision): `julian`, the Old Calendar, or `revised-julian`, the New
  * — fixed feasts on Gregorian dates. Pascha is reckoned by the Julian computus
- * in all three; the two fields are independent on purpose (lib/feasts.js).
+ * in all four; the two fields are independent on purpose (lib/feasts.js).
  *
  * `default_calendar` and `paschal_computus` are fallbacks — what new-saint
  * scaffolds, and the computus a paschal feast takes when it does not name its
@@ -60,6 +61,21 @@ export const CHURCHES = [
       'Julian computus. “Greek” is the Church of Greece (author, 2026-08-22), ' +
       'not the Old Calendarists. Sourced from the Orthodox Synaxaristis ' +
       '(saint.gr), a Greek-language synaxarion on that calendar.',
+  },
+  {
+    id: 'serbian',
+    display_name: 'Serbian',
+    jurisdiction: 'Serbian Orthodox Church (Patriarchate of Serbia)',
+    default_calendar: 'julian',
+    paschal_computus: 'julian',
+    enabled: true,
+    note:
+      'Old Calendar: fixed feasts by the Julian reckoning, thirteen days behind ' +
+      'the civil date until 2100. Added 2026-08-23 (Amendment 29). Sourced from ' +
+      'the Православни подсетник (pravoslavno.rs, Микро књига), a Serbian-' +
+      'language church calendar that prints the day’s saints, readings, fasting ' +
+      'mark, tropars and the Ohrid Prologue; the Patriarchate’s own site was ' +
+      'not used.',
   },
 ];
 

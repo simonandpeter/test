@@ -1,6 +1,6 @@
 /**
  * Which church the reader keeps (author, 2026-08-22): one of the registry's
- * three — Russian, Romanian or Greek — and with it which calendar, because
+ * four — Russian, Romanian, Greek or Serbian — and with it which calendar, because
  * the calendar follows the church (DESIGN.md §5b). One choice for the whole
  * site: the calendar page shows that church's calendar, the Index keeps that
  * church's saints and names what it sets aside, the saint's page reads that

@@ -1,0 +1,45 @@
+{
+  "slug": "eustathius-ii-archbishop-of-serbia",
+  "display_name": "Eustathius II, Archbishop of Serbia",
+  "names": [
+    {
+      "form": "Свети Јевстатије, Други Архиепископ српски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 29.08.2026 (16. август ст. ст.) — „Свети Јевстатије, Други Архиепископ српски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not found among the names read off days.pravoslavie.ru for 16 августа ст. ст. (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not found among the names read off doxologia.ro for 29 august 2026 (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not found among the names read off saint.gr for 29 Αυγούστου 2026 (2026-08-23)."
+    }
+  ]
+}

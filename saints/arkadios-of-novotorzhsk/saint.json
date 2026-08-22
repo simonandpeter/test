@@ -1,0 +1,80 @@
+{
+  "slug": "arkadios-of-novotorzhsk",
+  "display_name": "Arkadios of Vyazma and Novotorzhsk",
+  "names": [
+    {
+      "form": "Аркадий Новоторжский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Аркадия Новоторжского (XI)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 августа ст. ст. — «Прп. Аркадия Новоторжского (XI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260814.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От духовнаго наставника, отца преподобнаго Ефрема, наставляемь,/ послушания добрый рачителю, отче Аркадие,/ от мирскаго мятежа удалился еси/ и, инок быв изрядный,/ добрым подвигом ревнуяй,/ от Христа Бога приял еси венец славы Небесныя;/ и ныне вкупе с преподобным отцем Ефремом у Престола Вьшшяго предстоя,/ о нас молися, избавитися нам от всех бед и скорбей/ и спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, 14 августа ст. ст. — Тропарь преподобного Аркадия Вяземского и Новоторжского",
+        "url": "https://days.pravoslavie.ru/Days/20260814.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "К глубинам Божественнаго разума вперив ум свой,/ в Небесныя обители востекл еси,/ и равноангельно житие, отче Аркадие, на земли пожил еси,/ и во всем повинулся еси духовному своему настоятелю и наставнику, преподобному отцу Ефрему,/ и ныне, вкупе предстояще у Престола Владыки Христа,/ молися непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, 14 августа ст. ст. — Кондак преподобного Аркадия Вяземского и Новоторжского",
+        "url": "https://days.pravoslavie.ru/Days/20260814.html",
+        "year": 2026
+      }
+    }
+  ]
+}

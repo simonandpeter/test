@@ -208,8 +208,8 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
 
   // Every church in the registry appears, each with its own source and its
   // own reckoning of the one menologion date.
-  await expect(page.locator('.attestations .att')).toHaveCount(3);
-  for (const church of ['Russian', 'Romanian', 'Greek']) {
+  await expect(page.locator('.attestations .att')).toHaveCount(4);
+  for (const church of ['Russian', 'Romanian', 'Greek', 'Serbian']) {
     await expect(page.locator('.attestations .att-church', { hasText: church })).toHaveCount(1);
   }
   await expect(page.locator('.attestations')).toContainText('Basilica');
@@ -407,7 +407,7 @@ const facet = async (page, name) => {
 test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('[data-count]')).toHaveText('70');
+  await expect(page.locator('[data-count]')).toHaveText('149');
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Breadth of veneration is offered but is never the order the reader arrives
   // in: a corpus sorted by it would read as a ranking of importance.
@@ -417,12 +417,12 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
 });
 
 test('card boxes come from the manifest, not from measuring the image', async ({ page }) => {
-  // Filtered to the Russian calendar, whose eight all come before the week's
-  // sixty-two in the grid's order of mounting at either width; the first card
-  // with a picture is measured, because a box without one has no image box.
+  // A card with a picture, brought into the document by the Index's own
+  // search (a hundred and forty cards, virtualised; a box without a picture
+  // has no image box to measure).
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Russian').check();
-  await expect(page.locator('[data-count]')).toHaveText('8');
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await expect(page.locator('.index-card', { hasText: 'Anthony the Great' })).toHaveCount(1);
   const card = page.locator('.index-card:has(.index-media)').first();
   const media = card.locator('.index-media');
   const [cardBox, mediaBox] = [await card.boundingBox(), await media.boundingBox()];
@@ -443,7 +443,7 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('70');
+  await expect(page.locator('[data-count]')).toHaveText('149');
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -452,28 +452,30 @@ test('Overlaps and Entirely within are different questions, and both are offered
   await page.locator('[data-from]').fill('240');
   await page.locator('[data-to]').fill('460');
 
-  // Seven lives touch 240–460; five of them sit inside it. Paul of Thebes was
-  // born in 220 and Moses the Hungarian has an open birth bound, so neither is
-  // contained by a range both of them overlap.
-  await expect(page.locator('[data-count]')).toHaveText('7');
+  // Twenty-four lives touch 240–460 and nineteen sit inside it: the Roman
+  // martyrs of 258 and the Nicomedian of 305 are inside; Paul of Thebes (born
+  // 220), the third-century bishops dated only to their century and Moses the
+  // Hungarian with his open birth bound overlap it without being contained.
+  await expect(page.locator('[data-count]')).toHaveText('24');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('5');
+  await expect(page.locator('[data-count]')).toHaveText('19');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
-  await page.locator('[data-from]').fill('1500');
-  await page.locator('[data-to]').fill('1600');
+  await page.locator('[data-from]').fill('1600');
+  await page.locator('[data-to]').fill('1700');
 
-  // Nobody in the corpus lived in the 16th century.
+  // Nobody in the corpus lived in the 17th century (the 16th has Lawrence of
+  // Kaluga and Maximus of Moscow now).
   await expect(page.locator('[data-count]')).toHaveText('0');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
   // The week's saints carry no dates — their calendar pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  await expect(page.locator('.tray')).toContainText('60 undated');
+  await expect(page.locator('.tray')).toContainText('85 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -1502,7 +1504,7 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await expect(open).toHaveText('Russian calendar');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('#church-panel [data-church]')).toHaveCount(3);
+  await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
   await expect(page.locator('#church-panel [data-church="russian"]')).toHaveAttribute('aria-pressed', 'true');
   expect(await page.evaluate(() => document.activeElement?.dataset?.church)).toBe('russian');
 
@@ -1552,7 +1554,7 @@ test('the question is asked once, and answering it is choosing', async ({ page }
   // question goes, the strip shows, and the choice is the site's.
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-ask]')).toBeVisible();
-  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(3);
+  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(4);
   await expect(page.locator('[data-advanced]')).toHaveCount(0);
   await expect(page.locator('[data-ask-choice]')).toHaveCount(0);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
@@ -1887,7 +1889,9 @@ test('Detailed adds the opening of the life, and every box still holds', async (
 
   await box.check();
   await expect(page.locator('.index-card').first()).toHaveClass(/is-detailed/);
+  await page.locator('[data-query]').fill('Anthony the Great');
   const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
+  await expect(first).toHaveCount(1);
   await expect(first.locator('.index-desc')).toContainText('Born to a prosperous Coptic family');
   // Still the manifest's numbers: three lines of description, and a taller
   // card by exactly what was added.
@@ -1931,6 +1935,10 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
   await page.goto('/about', { waitUntil: 'networkidle' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  // The column stays the warm 678 and the grid three across; the search only
+  // brings his card into the virtualised document.
+  await page.locator('[data-query]').fill('Augustine');
+  await expect(page.locator('.index-card', { hasText: 'Augustine of Hippo' })).toHaveCount(1);
   const seen = await page.locator('.index-card', { hasText: 'Augustine of Hippo' }).evaluate((card) => {
     const d = card.querySelector('.index-dates');
     return {
@@ -2108,7 +2116,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
 
   // The nav link is a fresh Index.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('70');
+  await expect(page.locator('[data-count]')).toHaveText('149');
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -2176,7 +2184,7 @@ test('the first visit is asked which calendar, and sees no strip until it answer
   // the day stay hidden until it is answered. The answer is the site's.
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-gate] [data-ask]')).toBeVisible();
-  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(3);
+  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(4);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
   await expect(page.locator('.week-strip')).toBeHidden();
   await expect(page.locator('#church-open')).toHaveText('Choose a calendar');
@@ -2200,16 +2208,18 @@ test('the header control names the calendar, offers the three, and the Index fol
   // sets aside, never silently dropping anyone.
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  // Russian keeps eight of seventy: the week's sixty-two were read off the
-  // Romanian and Greek calendars and stand undocumented for the Russian.
-  await expect(page.locator('[data-count]')).toHaveText('8');
-  await expect(page.locator('[data-set-aside]')).toContainText('62 saints are not in the Russian calendar');
+  // Russian keeps seventy-eight of a hundred and forty-nine: its own week,
+  // read off the Patriarchate's pages, and the original eight; the sixty-two
+  // read off the Romanian and Greek calendars and the Serbian week's nine
+  // stand undocumented for it.
+  await expect(page.locator('[data-count]')).toHaveText('78');
+  await expect(page.locator('[data-set-aside]')).toContainText('71 saints are not in the Russian calendar');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian calendar');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('#church-panel [data-church]')).toHaveCount(3);
+  await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
   await expect(page.locator('#church-panel [data-advanced]')).toHaveCount(0);
 
   // Romanian keeps thirty-two — six of the original eight and twenty-six of
@@ -2219,17 +2229,17 @@ test('the header control names the calendar, offers the three, and the Index fol
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian calendar');
   await expect(page.locator('[data-count]')).toHaveText('32');
-  await expect(page.locator('[data-set-aside]')).toContainText('38 saints are not in the Romanian calendar');
+  await expect(page.locator('[data-set-aside]')).toContainText('117 saints are not in the Romanian calendar');
 
   // Greek keeps sixty-five: the Synaxaristis lists most of the week.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('65');
-  await expect(page.locator('[data-set-aside]')).toContainText('5 saints are not in the Greek calendar');
+  await expect(page.locator('[data-set-aside]')).toContainText('84 saints are not in the Greek calendar');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
-test('the saint page reads the reader church first and reveals the other two for that page only', async ({ page }) => {
+test('the saint page reads the reader church first and reveals the others for that page only', async ({ page }) => {
   // Addendum H9 redrawn. Only the register filters; the reveal resets on the
   // next saint opened.
   await ready(page, { church: 'romanian' });
@@ -2237,11 +2247,11 @@ test('the saint page reads the reader church first and reveals the other two for
   await expect(page.locator('[data-veneration] > .attestations .att')).toHaveCount(1);
   await expect(page.locator('[data-veneration] > .attestations .att-church')).toHaveText('Romanian');
   const reveal = page.locator('[data-reveal]');
-  await expect(reveal).toHaveText('See the other churches (2)');
+  await expect(reveal).toHaveText('See the other churches (3)');
   await expect(page.locator('.attestations-other .att')).toHaveCount(0);
 
   await reveal.click();
-  await expect(page.locator('.attestations-other .att')).toHaveCount(2);
+  await expect(page.locator('.attestations-other .att')).toHaveCount(3);
   await expect(page.locator('[data-reveal]')).toHaveText('Hide the other churches');
   expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-reveal'))).toBe(true);
 
@@ -2250,15 +2260,15 @@ test('the saint page reads the reader church first and reveals the other two for
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-veneration] > .attestations .att')).toHaveClass(/att-undocumented/);
   await expect(page.locator('[data-veneration] > .attestations .att-note')).toContainText('checked 2026-08-22');
-  await expect(page.locator('[data-reveal]')).toHaveText('See the other churches (2)');
+  await expect(page.locator('[data-reveal]')).toHaveText('See the other churches (3)');
   await expect(page.locator('.attestations-other .att')).toHaveCount(0);
 });
 
-test('before a church is chosen the saint page shows all three, and holds nothing back', async ({ page }) => {
+test('before a church is chosen the saint page shows all four, and holds nothing back', async ({ page }) => {
   // No church chosen keeps everything: a filter that hid anyone before the
   // question was answered would be adjudicating by accident.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-veneration] .att')).toHaveCount(3);
+  await expect(page.locator('[data-veneration] .att')).toHaveCount(4);
   await expect(page.locator('[data-reveal]')).toHaveCount(0);
   await expect(page.locator('[data-veneration] .att-church').first()).toHaveText('Russian');
 });
@@ -2370,6 +2380,50 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await expect(page.locator('[data-hymns] .hymn-text[lang="el"]')).toHaveCount(0);
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns]:not([hidden])')).toHaveCount(0);
+});
+
+test('the Serbian calendar is the fourth choice, on the Julian calendar, with its own week of saints, readings, fast and tropars', async ({ page }) => {
+  // Author, 2026-08-23 (Amendment 29). The chooser offers four; the Serbian
+  // keeps the Julian calendar, so the civil 23 August is its 10 August, the
+  // same Sunday and tone as the Russian, and the same Dormition Fast. Its
+  // week is read off the Православни подсетник (pravoslavno.rs): Lawrence on
+  // the 23rd with his tropar in Serbian — the hero, because the Serbian sings
+  // for him — the day's Apostle and Gospel, and on the 29th two Apostles.
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+  await openChooser(page);
+  const serbian = page.locator('#church-panel [data-church="serbian"]');
+  await expect(serbian).toContainText('Serbian');
+  await expect(serbian.locator('.choice-calendar')).toHaveText('Julian calendar');
+  await serbian.click();
+  await expect(page.locator('[data-which-name]')).toContainText('Serbian calendar');
+  await expect(page.locator('[data-own-date]')).toHaveText('10 August (Julian)');
+  await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
+  const links = page.locator('[data-readings] .readings a');
+  await expect(links).toHaveCount(2);
+  await expect(links.first()).toHaveText('1 Corinthians 15:1-11');
+  await expect(links.last()).toHaveText('Matthew 19:16-30');
+  await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /pravoslavno\.rs/);
+  await expect(page.locator('[data-hymns] .hymn')).toHaveCount(1);
+  await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'sr');
+  await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Мученик Твој Господе, Лаврентије');
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
+  await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
+  await expect(page.locator('[data-liturgy]')).toHaveText('Saturday of the 13th week after Pentecost · Tone 3 · No fast');
+
+  // The Russian week (Amendment 29 too): the 24th is its 11 August, Euplus
+  // and the Caves fathers with Church Slavonic tropars from the Patriarchate's
+  // calendar, and the hero one of the saints it sings for.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-own-date]')).toHaveText('11 August (Julian)');
+  await expect(page.locator('.hero-name')).toHaveText(/Euplus|Theodore|Basil/);
+  await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'cu');
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('глас');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]')).toHaveCount(0);
 });
 
 test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async ({ page }) => {

@@ -1,0 +1,81 @@
+{
+  "slug": "maximus-the-confessor",
+  "display_name": "Maximus the Confessor",
+  "names": [
+    {
+      "form": "Максим Исповедник",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 662,
+      "latest": 662,
+      "display": "662",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Преставление (662), перенесение мощей прп. Максима Исповедника”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 августа ст. ст. — «Преставление (662), перенесение мощей прп. Максима Исповедника»",
+        "url": "https://days.pravoslavie.ru/Days/20260813.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ монашествующих Богодухновенное удобрение,/ Максиме премудре,/ ученьми твоими вся просветил еси,/ цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, 13 августа ст. ст. — Тропарь преподобного Максима исповедника",
+        "url": "https://days.pravoslavie.ru/Days/20260813.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Свет Трисиянный, всельшийся в душу твою,/ сосуд избран показа тя, всеблаженне,/ являюща Божественная концем,/ неудобопостижных разумений ты сказуяй, блаженне,/ и Троицу всем, Максиме, возпроповедуяй ясно,// Пресущную, Безначальную.",
+      "source": {
+        "text": "days.pravoslavie.ru, 13 августа ст. ст. — Кондак преподобного Максима исповедника",
+        "url": "https://days.pravoslavie.ru/Days/20260813.html",
+        "year": 2026
+      }
+    }
+  ]
+}

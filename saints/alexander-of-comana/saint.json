@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-of-comana",
+  "display_name": "Alexander, Bishop of Comana",
+  "names": [
+    {
+      "form": "Александр Команский",
+      "lang": "ru"
+    },
+    {
+      "form": "Александар Комански",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Александра, еп. Команского (III)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 августа ст. ст. — «Сщмч. Александра, еп. Команского (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260812.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.08.2026 (12. август ст. ст.) — „Свешт. муч. Александар еп. Комански“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-25&prolog=1",
+        "year": 2026
+      }
+    }
+  ]
+}

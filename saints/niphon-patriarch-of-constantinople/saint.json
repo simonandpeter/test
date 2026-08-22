@@ -1,0 +1,45 @@
+{
+  "slug": "niphon-patriarch-of-constantinople",
+  "display_name": "Niphon, Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Св. Нифонт патријарх Цариградски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.08.2026 (11. август ст. ст.) — „Св. Нифонт патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not found among the names read off days.pravoslavie.ru for 11 августа ст. ст. (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not found among the names read off doxologia.ro for 24 august 2026 (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not found among the names read off saint.gr for 24 Αυγούστου 2026 (2026-08-23)."
+    }
+  ]
+}
