@@ -1,5 +1,15 @@
 # Handoff — start here
 
+> **This repository is archived.** It was frozen on 2026-08-22 at the commit
+> tagged `archive/cross-church-2026-08`, with the live site left serving it at
+> https://simonandpeter.github.io/test/. **Do not build here.** The work
+> continued in a successor project — Eastern Orthodox saints and calendars
+> only, on this design and this structure — seeded by copying this tree; it
+> sits at `../orthodox/` beside this folder, and `../HANDOFF-ORTHODOX.md`
+> records why, what carried over and what did not. This repo is the backup and
+> the reference: read it, clone it, copy from it, but change it only to
+> correct the record. A backup that has been improved is not a backup.
+
 You are picking up the Gallery of Saints build. Nothing of the previous
 conversations survives except the files in this repo, so this document is the
 briefing.
