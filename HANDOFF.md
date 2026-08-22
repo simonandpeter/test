@@ -26,6 +26,12 @@ This file remains the accurate briefing for the code you will be copying.
    the most important page in the repo**; twenty entries now, each recording
    something that cost real time to learn.
 
+The first three now also live in `docs/`, copied there when this repo was
+archived (2026-08-22), so the reasoning travels with the code: an archive that
+loses the folder above it would otherwise lose the brief, the addendum and the
+glyph reference together. The `../` paths still resolve in the author's own
+working folder; `docs/` is the copy that survives a clone.
+
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 

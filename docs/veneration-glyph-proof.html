@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glyph — parametric colour proof</title>
+<style>
+  body{font-family:ui-monospace,Menlo,monospace;background:#fff;padding:32px;font-size:13px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:32px 0 12px}
+  .panel{display:flex;gap:28px;align-items:center;padding:20px;border:1px solid #ddd}
+  code{opacity:.6}
+
+  /* ── Theme A: the mockup palette used throughout this thread ──── */
+  .theme-a{
+    --glyph-attested: #26407E;
+    --glyph-ink: #161A24;
+    background:#E5E4DD; color:#161A24;
+  }
+
+  /* ── Theme B: an arbitrary, deliberately different palette, to
+     prove the component has zero hardcoded colour anywhere ──────── */
+  .theme-b{
+    --glyph-attested: #8A3B12;
+    --glyph-ink: #F4EEE2;
+    --glyph-refused-opacity: 0.22;
+    --glyph-undoc-opacity: 0.3;
+    background:#1B1712; color:#F4EEE2;
+  }
+</style>
+</head>
+<body>
+  <p>Same module (<code>veneration-glyph.js</code>), same data, zero code changes between panels — only the CSS custom properties differ.</p>
+
+  <h2>Theme A — mockup palette</h2>
+  <div class="panel theme-a" id="a"></div>
+
+  <h2>Theme B — arbitrary palette, includes overriding the default opacities</h2>
+  <div class="panel theme-b" id="b"></div>
+
+<script type="module">
+import { renderBadge, renderDetail } from './veneration-glyph.js';
+
+const churches = [
+  { id:'roman-catholic', display_name:'Roman Catholic', communion:'catholic', rite:'latin' },
+  { id:'byzantine-catholic', display_name:'Byzantine Catholic', communion:'catholic', rite:'byzantine' },
+  { id:'coptic-catholic', display_name:'Coptic Catholic', communion:'catholic', rite:'alexandrian' },
+  { id:'ethiopian-catholic', display_name:'Ethiopian Catholic', communion:'catholic', rite:'geez' },
+  { id:'armenian-catholic', display_name:'Armenian Catholic', communion:'catholic', rite:'armenian' },
+  { id:'syriac-catholic', display_name:'Syriac Catholic', communion:'catholic', rite:'west-syriac' },
+  { id:'chaldean-catholic', display_name:'Chaldean Catholic', communion:'catholic', rite:'east-syriac' },
+  { id:'eastern-orthodox', display_name:'Eastern Orthodox', communion:'eastern-orthodox', rite:'byzantine' },
+  { id:'coptic', display_name:'Coptic Orthodox', communion:'oriental-orthodox', rite:'alexandrian' },
+  { id:'ethiopian-eritrean', display_name:'Ethiopian & Eritrean', communion:'oriental-orthodox', rite:'geez' },
+  { id:'armenian', display_name:'Armenian Apostolic', communion:'oriental-orthodox', rite:'armenian' },
+  { id:'syriac-malankara', display_name:'Syriac & Malankara', communion:'oriental-orthodox', rite:'west-syriac' },
+  { id:'assyrian-church-of-the-east', display_name:'Assyrian Church of the East', communion:'church-of-the-east', rite:'east-syriac' },
+];
+
+const attestation = {
+  'roman-catholic':'venerated', 'byzantine-catholic':'venerated',
+  'coptic-catholic':'undocumented','ethiopian-catholic':'undocumented',
+  'armenian-catholic':'undocumented','syriac-catholic':'undocumented','chaldean-catholic':'undocumented',
+  'eastern-orthodox':'not-venerated',
+};
+
+for (const id of ['a', 'b']) {
+  const el = document.getElementById(id);
+  el.innerHTML =
+    renderBadge(churches, attestation, 48).markup +
+    renderDetail(churches, attestation, 96).markup;
+}
+</script>
+</body>
+</html>
