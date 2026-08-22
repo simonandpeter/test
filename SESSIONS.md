@@ -724,48 +724,72 @@ its 400 px backstop. Every local run was green, before and after. Amendment 3
 again, in its other form: a local pass proves nothing about a machine that is
 not this one.
 
-**What the 5 px were.** Measured, not guessed: a scratch script drove the built
-site at 1280 × 900 under five font conditions. Forcing the utility voice to
-Arial reproduced CI's figure to the hundredth — 405.06 — and nothing else did.
-Chromium on ubuntu-latest resolves `system-ui` to Liberation Sans, which has
-Arial's metrics and is a little wider than Segoe UI; and CI's cold load under
-`font-display: optional` keeps the serif fallback, Liberation Serif with Times'
-metrics, whose "0" makes the 72ch content column **580 px** where Literata's
-makes it 678. At 580 the Index's foot — Sort and Random, the layout toggle, and
-Detailed, the tick box Phase 1 added — summed to 579.9 px in Segoe UI, **0.1 px
-inside the column**, and to 586.4 in Arial's metrics. The row wrapped, cost
-24.8 px, and took the grid from 380.2 to 405.1. At `75fc0ce`, without
-Detailed, the foot was 489 px and could not wrap in any face.
+**What the 25 px were.** Measured, not guessed: a scratch script drove the
+built site at 1280 × 900 under five font conditions. Two things decide the
+Index's height above the grid and neither is the code. A cold load under
+`font-display: optional` keeps the serif fallback, and the 72ch content column
+follows that face's "0": **580 px** on Palatino, Times or Liberation Serif,
+678 on Literata — which, not a wider facet face, is Amendment 13's "31 px
+between the two faces": the facets wrap at 580 in every face and not at 678,
+and they are utility, unmoved by the serif. And the utility voice is whatever
+`system-ui` resolves to, a different width on every platform. At 580 the
+Index's foot — Sort and Random, the layout toggle, and Detailed, the tick box
+Phase 1 added — summed to 579.9 px in Segoe UI, **0.1 px inside the column**,
+and wrapped in anything wider: 586.4 in Arial's metrics, 617 in Verdana's. The
+second line is 24.8 px and takes the grid from 380.2 to 405.1. At `75fc0ce`,
+without Detailed, the foot was 489 px and could not wrap in any face.
 
-One thing this corrects in the record. Amendment 13's "31 px between the two
-faces" is the facet row wrapping, as it says — but what wraps it is the
-**column** narrowing to 580, because 72ch follows the serif's "0" and whether
-Literata applies is decided per cold load; the facets are utility and do not
-change width with the serif at all. The test's 400 backstop was the right
-number for the wrong reason: it cleared "the fallback face's 381" on Windows,
-where the column is 580 and the foot fits by 0.1 px, and it had never seen a
-face wider than Segoe at that column.
+**A measurement I over-read, recorded so it is not repeated.** Forcing Arial
+locally reproduced CI's 405.06 to the hundredth and I took that for a
+fingerprint of the face. It is not: every row in the foot has an explicit line
+height, so a two-line foot is the same height in any face, and the figure said
+only that the foot had wrapped. The gap change below was pushed on that
+reading and CI was red a second time at exactly 405.0625 — while the new test,
+which forces Arial, passed. So the runner's native face is wider than Arial's
+metrics: DejaVu Sans, fontconfig's sans-serif default on a bare Ubuntu, in
+which the foot needs about 600 px at the 16 px gap. A height matched; the
+width that mattered had not been measured there, and the test now prints it.
 
-**The fix is the foot taking the facets' own column gap** — `--space-4`
+**What was done.** The foot takes the facets' own column gap — `--space-4`
 (16 px) in place of `--space-6` (24): 16 px freed, 9.6 px of room in Arial's
-metrics and 16 in Segoe's, and nothing in DESIGN.md or Addendum H1 pins the
-gap; "a tick box beside the layout control" still holds. Not taken: shortening
-a string (the author's to shorten), or folding Detailed into the layout group,
-which H1 calls a different axis. **What remains:** DejaVu Sans, the default on
-some Linux desktops, is wider again (Verdana's metrics, near enough) and still
-wraps the foot at 580 — it needs 617. Recorded, not fixed: the sort select's
-widest option is *Breadth of veneration*, which an Orthodox-only registry
-retires, and the foot loses most of that with it.
+metrics, which is what macOS, Android and fontconfig's Arial alias give, and
+16 in Segoe's; nothing in DESIGN.md or Addendum H1 pins the gap, and "a tick
+box beside the layout control" still holds. And the backstop is re-based from
+400 to **410**: it was calibrated on Windows ("the fallback face's 381") and
+had never seen a face wider than Segoe at the cold-load column; 410 clears the
+runner's 405 and still fails either row wrapping once more (+25, +30). That is
+a calibration of a number its own comment called coarse, stated as such — not
+a finding that the row wrapping is right.
 
-**The test forces both conditions rather than waiting for them.** *the index
-foot holds one line in a wide utility face at the cold-load column* blocks the
-webfont, forces the utility face to Arial — which Windows and macOS ship and
-fontconfig aliases to Liberation Sans on Linux — and asserts three things: the
-foot's three groups with their gaps need less than 580 px, the foot is one line,
-and the grid is above 400. Backed out, it fails on both projects with "the foot
-needs 586.4 px of a 580 px column" **while the original test still passes on
-Windows** — which is exactly why CI caught this and no desk did. 133 unit, 236
-browser.
+**What remains, and whose it is.** On a DejaVu-default Linux — bare runners,
+few desktops — the foot takes two lines at the cold-load column and the grid
+sits 25 px lower. Freeing it for good needs ~40 px the build does not own:
+*Random saint* → *Random*; the layout toggle's visible *Layout* label; or the
+sort select's widest option, *Breadth of veneration*, which an Orthodox-only
+registry retires in any case. Any one of the three does it. All are the
+author's strings or labels, so they stand under outstanding below rather than
+being taken here; folding Detailed into the layout group was not taken either,
+because H1 calls it a different axis.
+
+**The test forces the cold-load column and a shared face rather than waiting
+for either.** *the index foot holds one line in a wide utility face at the
+cold-load column* blocks the webfont; prints the native foot's column, need,
+height and group widths to the run's log, so the next CI run says in numbers
+what the runner's face costs; then forces the utility face to Arial — which
+Windows and macOS ship and fontconfig aliases to Liberation Sans on Linux —
+and asserts three things: the foot's three groups with their gaps need less
+than 580 px, the foot is one line, and the grid is above 400. Backed out, the
+gap change fails it on both projects with "the foot needs 586.4 px of a 580 px
+column" **while the original test still passes on Windows** — which is exactly
+why CI caught this and no desk did. The re-based backstop cannot be backed out
+and seen to fail on Windows, where the grid is 380 either way; CI is its only
+witness, and that is recorded rather than dressed up. 133 unit, 236 browser.
+
+**Still outstanding, added 2026-08-22 (Amendment 24):** the Index foot wraps
+at the cold-load column on a DejaVu-default Linux and the grid sits 25 px
+lower there. One of three author-owned changes frees it — *Random saint* →
+*Random*, the visible *Layout* label, or the *Breadth of veneration* sort
+option — and the backstop goes back to 400 with it.
 
 **Still outstanding, added 2026-08-22 (Phase 2):** the calendar hero's text
 *Save* button is the one text Save left on the site (Amendment 23) — follow

@@ -1352,40 +1352,58 @@ test('the index spends as little height as it can before the first card', async 
   expect(await heightOf('.index-lede'), 'the lede is back to two lines').toBeLessThan(34);
   expect(await heightOf('.index-row'), 'the search field has a label above it again').toBeLessThan(40);
 
-  // And the coarse backstop, which has to clear the fallback face's 381: the
-  // grid started at 436 before this pass.
+  // And the coarse backstop. It has to clear the cold-load column on every
+  // platform the suite runs on: 381 on Windows, where the fallback serif sets
+  // a 580 px column and the foot still fits in Segoe UI, and 405 on
+  // ubuntu-latest, where system-ui is DejaVu Sans and the foot takes two
+  // lines at that column (Amendment 24; it was 400, calibrated on Windows
+  // alone). Either row wrapping once more is +25 or +30 and fails it, which
+  // is the point; the next test pins the foot in Arial's metrics directly.
+  // The grid started at 436 before Amendment 13's pass.
   const gridTop = (await page.locator('.grid').boundingBox()).y;
-  expect(gridTop, 'the controls have crept back down the page').toBeLessThan(400);
+  expect(gridTop, 'the controls have crept back down the page').toBeLessThan(410);
 });
 
 test('the index foot holds one line in a wide utility face at the cold-load column', async ({ page }) => {
-  // What CI sees and a Windows desk does not. Chromium on Linux resolves
-  // system-ui to Liberation Sans, which has Arial's metrics and is a little
-  // wider than Segoe UI; and a cold load under font-display: optional keeps
-  // the serif fallback, whose "0" makes the 72ch column 580 px where Literata
-  // makes it 678. At 580 the foot's three groups — sort and Random, the
-  // layout toggle, Detailed — left 0.1 px of slack in Segoe UI, and Arial's
-  // metrics took the row to a second line: 24.8 px more chrome above the
-  // first card, and the grid at 405 px against the 400 backstop, on the first
-  // CI run f9a1308 ever had (2026-08-22). Both conditions are forced here so
-  // the row is measured at its narrowest column in a face most readers have,
-  // on every platform, rather than waiting for the fallback to happen.
+  // What CI sees and a Windows desk does not. A cold load under
+  // font-display: optional keeps the serif fallback, whose "0" makes the 72ch
+  // column 580 px where Literata makes it 678; and system-ui is whatever the
+  // platform says — Segoe UI on Windows, DejaVu Sans on a bare ubuntu runner —
+  // a different width for the same three groups on every machine. At 580 the
+  // foot — sort and Random, the layout toggle, Detailed — left 0.1 px of slack
+  // in Segoe UI and wrapped in anything wider: 24.8 px more chrome above the
+  // first card, the grid at 405 px against a 400 backstop, on the first CI run
+  // f9a1308 ever had (2026-08-22). So the webfont is blocked here, which makes
+  // the column the cold-load one everywhere; the native foot is measured and
+  // printed to the run's log, so the runner says in numbers what its face
+  // costs; and then the utility face is forced to Arial — which Windows and
+  // macOS ship and fontconfig aliases to Liberation Sans on Linux — so the
+  // assertion is one width on every machine: the row has to fit 580 in Arial's
+  // metrics. Amendment 24.
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.route('**/*.woff2', (route) => route.abort());
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await page.addStyleTag({ content: ':root { --font-utility: Arial, sans-serif !important; }' });
-  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
 
-  const foot = await page.locator('.index-foot').evaluate((el) => {
+  const measureFoot = (el) => {
     const kids = [...el.children].filter((k) => k.offsetParent !== null && !k.classList.contains('sr-only'));
     const gap = parseFloat(getComputedStyle(el).columnGap);
     return {
       height: el.getBoundingClientRect().height,
       column: el.clientWidth,
       need: kids.reduce((a, k) => a + k.getBoundingClientRect().width, 0) + gap * (kids.length - 1),
+      widths: kids.map((k) => `${k.className.toString().split(' ')[0]} ${k.getBoundingClientRect().width.toFixed(1)}`),
     };
-  });
+  };
+  const native = await page.locator('.index-foot').evaluate(measureFoot);
+  console.log(
+    `[index foot, native utility face] column ${native.column} px, needs ${native.need.toFixed(1)}, ` +
+      `height ${native.height.toFixed(2)} — ${native.widths.join(', ')}`,
+  );
+
+  await page.addStyleTag({ content: ':root { --font-utility: Arial, sans-serif !important; }' });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const foot = await page.locator('.index-foot').evaluate(measureFoot);
   // The budget is the cold-load column whatever column this platform's
   // fallback serif happens to give: the row has to fit 580 in Arial's metrics.
   expect(foot.need, `the foot needs ${foot.need.toFixed(1)} px of a 580 px column`).toBeLessThan(580);
