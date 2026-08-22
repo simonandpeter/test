@@ -3,7 +3,6 @@ import './styles/metrics.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/calendar.css';
-import './styles/plate.css';
 import './styles/saint.css';
 import './styles/index.css';
 
@@ -12,7 +11,7 @@ import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
 import { cancelPrefetches } from './lib/detail.js';
-import { mountTraditionControl } from './ui/traditions.js';
+import { mountChurchControl } from './ui/church-chooser.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -104,12 +103,9 @@ function show({ route, params }, nav = {}) {
 
 async function boot() {
   initTheme(document.getElementById('theme-toggle'));
-  // The site-wide tradition control (author, 2026-08-22): one selection, read
-  // by every view that respects it through lib/tradition.js.
-  const open = document.getElementById('tradition-open');
-  open.textContent = STRINGS.traditions.open;
-  open.setAttribute('aria-label', STRINGS.traditions.openLabel);
-  mountTraditionControl(open, document.getElementById('tradition-panel'));
+  // The site-wide church control (author, 2026-08-22): one choice, read by
+  // every view through lib/church.js. It names itself.
+  mountChurchControl(document.getElementById('church-open'), document.getElementById('church-panel'));
   router = createRouter(routes, show);
 
   const veil = document.getElementById('veil');

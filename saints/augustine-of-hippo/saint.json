@@ -33,23 +33,7 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
-      "status": "venerated",
-      "feast": {
-        "day": 28,
-        "month": 8,
-        "calendar": "gregorian"
-      },
-      "titles": [
-        "Bishop and Doctor of the Church"
-      ],
-      "source": {
-        "text": "Roman Martyrology",
-        "year": 2004
-      }
-    },
-    {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 15,
@@ -57,36 +41,48 @@
         "calendar": "julian"
       },
       "titles": [
-        "Blessed Augustine, Bishop of Hippo"
+        "Blessed",
+        "Bishop of Hippo"
       ],
       "source": {
-        "text": "The Prologue of Ohrid, Nikolai Velimirović",
-        "note": "Usually styled 'Blessed' rather than 'Saint' in Orthodox usage, and his teaching on grace and the procession of the Spirit is widely criticised in the same tradition that keeps his feast. Both facts are recorded here rather than reconciled."
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июня ст. ст.; «Блаженный Августин, епископ Иппонийский (430)»",
+        "url": "https://days.pravoslavie.ru/Days/20260615.html",
+        "year": 2026
       }
     },
     {
-      "church": "eastern-catholic",
-      "status": "undocumented"
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Blessed"
+      ],
+      "source": {
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 15 June; “Blessed Augustine and Hieronymus”",
+        "url": "https://basilica.ro/en/orthodox-calendar-june-15/",
+        "year": 2026
+      }
     },
     {
-      "church": "coptic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Bishop of Hippo"
+      ],
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Ιουνίου; «Άγιος Αυγουστίνος Επίσκοπος Ιππώνος»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      }
     }
   ],
   "locations": [

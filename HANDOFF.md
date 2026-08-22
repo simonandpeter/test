@@ -1,7 +1,9 @@
 # Handoff — start here
 
 > **This is the Eastern Orthodox project, seeded from the cross-church build
-> and not yet stripped.** The tree at this repo's first commit is byte for byte
+> and being stripped to it** (Amendments 25–27: the glyph is gone, the registry
+> is three churches — Russian, Romanian, Greek — and the reader chooses one in
+> place of the traditions and the plate). The tree at this repo's first commit is byte for byte
 > the tree of the archived cross-church repo at its tag
 > `archive/cross-church-2026-08` — 133 unit tests and 234 browser tests green
 > here before anything changed. That archive was moved out of this working
@@ -12,14 +14,14 @@
 > while the two stood side by side, which is the name `docs/HANDOFF-ORTHODOX.md`
 > still uses for it.
 >
-> **So everything below still describes the cross-church build**, because
-> nothing has been removed yet. `docs/HANDOFF-ORTHODOX.md` is the briefing for
+> **Much of what is below still describes the cross-church build's controls**
+> — the Amendments in SESSIONS.md say what has changed since. `docs/HANDOFF-ORTHODOX.md` is the briefing for
 > what this project is, what carries over from that one and which design
 > decisions are open again — read it first. Three of those decisions are the
-> author's and are not yet taken: what the veneration glyph means in a
-> one-communion corpus, how Old and New Calendar are offered, and what a
-> calendar entry is when a Great Feast is not a saint. DESIGN.md is inherited
-> whole and will be amended, not replaced, as each is settled.
+> author's and are taken (2026-08-22): the glyph is removed; Old and New
+> Calendar are the Julian and Revised Julian, one per church; the calendar-entry
+> shape for feasts that are not saints is agreed and is the next work. DESIGN.md
+> is inherited whole and amended in place, not replaced.
 
 You are picking up the Gallery of Saints build. Nothing of the previous
 conversations survives except the files in this repo, so this document is the
@@ -44,7 +46,7 @@ This file remains the accurate briefing for the code you will be copying.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; twenty-six entries now, each recording
+   the most important page in the repo**; twenty-seven entries now, each recording
    something that cost real time to learn.
 
 The first three now also live in `docs/`, copied there when this repo was
@@ -66,8 +68,8 @@ veneration glyph in both its views, the calendar page, the saint detail page
 with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
-- 132 unit tests (`npm test`) — pure logic, no DOM.
-- 222 browser tests (`npm run test:e2e`) — 111 across desktop and 360 px.
+- 109 unit tests (`npm test`) — pure logic, no DOM.
+- 204 browser tests (`npm run test:e2e`) — 102 across desktop and 360 px.
   (Counts as of the close of Phase 2 on 2026-08-22; read the suite's own
   summary rather than trusting this line.)
 - `npm run test:all` runs both. CI runs both on every push.

@@ -9,7 +9,7 @@
  * at the real dimensions, and the parts that arrive later arrive into boxes
  * already the right size.
  *
- * Veneration is shown church by church, with each tradition's own titles, its
+ * Veneration is shown church by church, with each church's own titles, its
  * feast in its own reckoning, and the source it rests on — including the
  * churches we have not sourced, which say so. The rite × communion matrix
  * (§9.2) is a Phase 3 view and is deliberately not this: this page lists
@@ -17,7 +17,7 @@
  */
 
 import { CHURCHES } from '../data/churches.js';
-import { currentSelection, isAll, subscribeSelection } from '../lib/tradition.js';
+import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
@@ -78,11 +78,11 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = shell(card);
   const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router)];
-  // Whether the traditions the reader has set aside are shown on this page.
+  // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
   live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
   cleanups.push(
-    subscribeSelection(() => {
+    subscribeChurch(() => {
       if (mine === generation && live?.payload) paintVeneration(el, live.payload.saint);
     }),
   );
@@ -259,23 +259,23 @@ const STATUS_TEXT = {
 };
 
 /**
- * The reader's traditions first, the rest behind a button, for this page only
- * (author, 2026-08-22, Addendum H9). The glyph beside the name is untouched —
- * it is a finding about the saint and shows every church; only what is read
- * here filters. With every tradition selected there is nothing to hold back.
+ * The reader's church first, the other two behind a button, for this page only
+ * (author, 2026-08-22, Addendum H9 redrawn for one church). Nothing is
+ * asserted by it — the reader is choosing what to read, which is the opposite
+ * of adjudicating. No church chosen yet shows all three.
  */
 function paintVeneration(el, saint) {
   const box = el.querySelector('[data-veneration]');
   if (!box) return;
-  const selection = currentSelection();
+  const church = currentChurch();
   const churches = CHURCHES.filter((c) => c.enabled !== false);
-  const mine = isAll(selection) ? churches : churches.filter((c) => selection.has(c.id));
+  const mine = church ? churches.filter((c) => c.id === church) : churches;
   const others = churches.filter((c) => !mine.includes(c));
   const revealed = live?.revealed ?? false;
 
   const reveal = others.length
     ? `<button type="button" class="reveal-traditions" data-reveal aria-expanded="${String(revealed)}">` +
-      `${revealed ? STRINGS.saint.hideOtherTraditions : fill(STRINGS.saint.otherTraditions, { count: others.length })}</button>`
+      `${revealed ? STRINGS.saint.hideOtherChurches : fill(STRINGS.saint.otherChurches, { count: others.length })}</button>`
     : '';
   box.innerHTML =
     veneration(saint, mine) +

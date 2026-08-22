@@ -891,6 +891,94 @@ change and be seen by the suite happens in the observer, and its test polls.
 The window path keeps its rAF — a resize damages the page, so its frame comes.
 132 unit, 222 browser.
 
+**27. The registry is three churches, the selection is one of them, and the
+eight saints are re-attested church by church** (the author's second and third
+decisions, 2026-08-22; DESIGN.md §5b). The second and largest removal of the
+strip, and the first authoring.
+
+**The registry.** `russian` on the Julian calendar, `romanian` and `greek` on
+the Revised Julian, Pascha by the Julian computus in all three; no communions,
+no rites. "Greek" is the Church of Greece (author). `revised-julian` is one new
+value in the feast calendar enum, converting as the Gregorian does until the
+two first disagree in 2800 — one line in each JDN table, one label, one branch
+in the formatter. Coptic and Ethiopian went with the cross-church corpus: the
+converters, the month tables, the epagomenal tests. An optional `rank` joins
+the attestation schema — vigil, polyeleos, great doxology, six stichera, simple
+— the typikon's datum, stored only where a source states it.
+
+**The selection.** `lib/church.js` replaces `lib/tradition.js`: one church id
+in `settings.church`, null until asked; `currentChurch`, `chooseChurch`,
+`subscribeChurch`, `entriesInChurch`, `keptBy`. What Amendment 23 built as
+"one calendar at a time" is what this is, with the communion layer above it
+removed — the choice is the calendar. `ui/church-chooser.js` replaces
+`traditions.js` and `plate.js`: three buttons, each with its calendar under its
+name, in three hosts — the first-visit question, which is now the gate itself
+(one question, not two); the header's panel, whose button names the chosen
+calendar; and *Change calendar* under the strip. Two silences, not three:
+nothing selected cannot arise. The Index keeps the chosen church's saints and
+names what it sets aside; the saint's page reads the chosen church first and
+the other two behind *See the other churches*; an unanswered reader keeps
+everything everywhere. `badge.js`, `matrix.js`, `plate.js`, `plate.css`, the
+`--glyph-*` tokens and the badge, matrix and glyph strings went with it — what
+Amendment 25 had left standing as the plate's dependency.
+
+**The data — checked, not inferred.** The author's answer to the sourcing
+question was to check the dates now, so each of the eight saints' single
+Eastern Orthodox row became three rows read that day off each church's own
+calendar: the Moscow Patriarchate's daily calendar (days.pravoslavie.ru, whose
+path takes the *Julian* date and whose page prints the Julian and civil dates
+together and the service's rank); Basilica, the Romanian Patriarchate's news
+agency, per day in English; and the Orthodox Synaxaristis (saint.gr) per day.
+Twenty-two rows venerated with the source URL; two `undocumented` with the
+check recorded — John the Long-suffering not in the Romanian calendar on 18
+July, Moses the Hungarian in neither the Romanian nor the Greek on 26 July —
+so the three calendars differ on the Kyiv Caves pair from day one, which is
+the finding the three-calendar proof wanted. Where pravoslavie.ru states a rank
+it is stored (Anthony and Chrysostom at vigil, Athanasius and Paul "на шесть");
+the Romanian calendar's crosses are kept in notes rather than mapped to a rank
+that the page does not name. Dioscorus and Nestorius left the working corpus;
+the archive keeps them, and two browser tests that visited Nestorius now visit
+Moses and Augustine. Augustine's day moved — 28 June in the Russian calendar,
+15 June in the other two — and the five browser tests that wanted his hero on
+28 August followed him; the rest of the August tests only ever wanted a day.
+
+**Tests.** Unit 109: badge, matrix and tradition tests retired with their
+modules; `church.test.mjs` added; jdn, feasts, build, calendar-page and
+index-filters rewritten to the new registry. Browser 204: nine retired by name
+— *a communion turns its whole row and a rite its whole column*, *Eastern
+Catholic six cells are one switch*, *the filter cells are a control, not the
+veneration mark*, *a filter press leaves the focus on the cell that was
+pressed*, *the plate keeps its shape at 360 px and scrolls instead*, *nothing
+selected is its own silence*, *choosing one communion at the question filters
+the calendar to it*, *a selection that allows one calendar is not asked, and
+the change control hides*, *the prompt offers only the calendars the
+traditions allow…*; nine rewritten to the chooser (the populated day, the
+header, changing the calendar changes the day everywhere, the calendar is
+remembered, the two silences, the question asked once, the first visit, the
+header control and the Index, the saint page reads the church first); one
+added (*before a church is chosen the saint page shows all three, and holds
+nothing back*). `ready(page, { church })` seeds the reader in one line where
+the old helper carried an eight-id list. **Three backouts**, each restored
+byte-identical: the choice written but not announced fails two tests; `keptBy`
+ignoring the church leaves the Index at 8 where 6 is expected; and the doubled
+year in a saint's feast line ("30 January 2026 in 2026", older than this
+round, found by looking) fails its new assertion. Rendered and looked at: the
+question, the header panel with Russian pressed, the Russian calendar on
+Anthony's day with the dots on Paul's and Athanasius's, the saint's page with
+the Russian row, its rank note and its source first.
+
+**What the suite caught that no eye had.** The first pass rendered the
+question twice — once in the old template slot above the strip and once in
+the gate — and four tests failed on a strict-mode `[data-ask]` before any
+screenshot was taken. The slot went; the gate is the question's one place.
+
+**Outstanding, the author's:** the chooser's wording — *Which calendar do you
+keep?* is the author's own phrase from Addendum H; the lede, and the header
+button's *Choose a calendar* / *Russian calendar*, are the build's; `rank` is
+stored and not yet rendered (the feasts work renders it); the seven
+placeholder image source URLs still warn; the old HANDOFF sections below the
+banner still describe the cross-church build's controls.
+
 **Still outstanding, added 2026-08-22 (Amendment 24):** the Index foot wraps
 at the cold-load column on a DejaVu-default Linux and the grid sits 25 px
 lower there. One of three author-owned changes frees it — *Random saint* →

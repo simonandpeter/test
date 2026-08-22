@@ -33,7 +33,7 @@
   },
   "attestations": [
     {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 18,
@@ -41,40 +41,37 @@
         "calendar": "julian"
       },
       "titles": [
-        "the Long-Suffering",
-        "Monk of the Kyiv Caves"
+        "Venerable",
+        "of the Kyiv Caves"
       ],
       "source": {
-        "text": "The Paterikon of the Kyiv Caves Monastery"
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июля ст. ст.; «Прп. Иоанна Многострадального, Печерского (1160)»",
+        "url": "https://days.pravoslavie.ru/Days/20260718.html",
+        "year": 2026
       }
     },
     {
-      "church": "roman-catholic",
-      "status": "undocumented"
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not in the Patriarchate’s calendar for 18 July (basilica.ro, checked 2026-08-22); no other day checked."
     },
     {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "coptic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "the Much-suffering",
+        "recluse of the Kyiv Caves"
+      ],
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 18 Ιουλίου; «Όσιος Ιωάννης του Πολύτλα και εγκλείστου του εν Κιέβω σπηλαίου»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      }
     }
   ],
   "locations": [

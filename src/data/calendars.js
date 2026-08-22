@@ -1,49 +1,38 @@
 /**
- * Display names for the non-Gregorian calendars' months, and the formatter
+ * Display names for the calendars a feast may be stated in, and the formatter
  * that renders a stored feast in its own reckoning. Gregorian month and
  * weekday names come from Intl rather than a table — the standard library is
- * not a vendor.
+ * not a vendor — and the Julian and Revised Julian share the Gregorian month
+ * names, so one table serves the fixed calendars.
  *
  * A feast is always *stored* as (day, month, calendar) and converted at render
- * time; these names exist because the honest display of a Coptic feast is
- * "22 Tobi", not only the Gregorian date it happens to land on this year.
+ * time. Two calendars here (author, 2026-08-22): `julian`, the Old Calendar,
+ * and `revised-julian`, the New — fixed feasts on Gregorian dates, which is
+ * why the Revised Julian converts exactly as the Gregorian does (lib/jdn.js).
+ * The Coptic and Ethiopian month tables that stood here went with the
+ * cross-church corpus (archive/cross-church-2026-08).
  */
 
-const JULIAN_MONTHS = [
+const MONTHS = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
-];
-
-const COPTIC_MONTHS = [
-  'Thout', 'Paopi', 'Hathor', 'Koiak', 'Tobi', 'Meshir',
-  'Paremhat', 'Parmouti', 'Pashons', 'Paoni', 'Epip', 'Mesori', 'Nasie',
-];
-
-const ETHIOPIAN_MONTHS = [
-  'Mäskäräm', 'Ṭəqəmt', 'Ḫədar', 'Taḫśaś', 'Ṭərr', 'Yäkatit',
-  'Mägabit', 'Miyazya', 'Gənbot', 'Säne', 'Ḥamle', 'Nähase', 'Ṗagumen',
 ];
 
 export const CALENDAR_LABELS = {
   gregorian: 'Gregorian',
   julian: 'Julian',
-  coptic: 'Coptic',
-  ethiopian: 'Ethiopian',
+  'revised-julian': 'Revised Julian',
   paschal: 'Paschal',
 };
 
 export function monthName(calendar, month) {
-  const table =
-    calendar === 'coptic' ? COPTIC_MONTHS
-    : calendar === 'ethiopian' ? ETHIOPIAN_MONTHS
-    : JULIAN_MONTHS;
-  return table[month - 1] ?? String(month);
+  return MONTHS[month - 1] ?? String(month);
 }
 
 /**
- * A feast in its own reckoning: "17 January (Julian)", "22 Tobi", "Pascha",
- * "49 days after Pascha". The Gregorian date it falls on in a given year is
- * the caller's business, via feastOccurrences.
+ * A feast in its own reckoning: "17 January (Julian)", "17 January (Revised
+ * Julian)", "Pascha", "49 days after Pascha". The Gregorian date it falls on
+ * in a given year is the caller's business, via feastOccurrences.
  */
 export function formatFeast(feast) {
   if (!feast) return '';
@@ -53,9 +42,9 @@ export function formatFeast(feast) {
     return n > 0 ? `${n} days after Pascha` : `${-n} days before Pascha`;
   }
   const name = `${feast.day} ${monthName(feast.calendar, feast.month)}`;
-  // Coptic and Ethiopian month names identify their calendar by themselves;
-  // Julian and Gregorian share month names, so those two must say which.
+  // The fixed calendars share month names, so a feast says which it is in —
+  // except the civil Gregorian, which is the page's own reckoning.
   if (feast.calendar === 'julian') return `${name} (Julian)`;
-  if (feast.calendar === 'gregorian') return name;
+  if (feast.calendar === 'revised-julian') return `${name} (Revised Julian)`;
   return name;
 }

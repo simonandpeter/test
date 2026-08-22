@@ -33,7 +33,7 @@ import {
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
-import { currentSelection, subscribeSelection, venerates } from '../lib/tradition.js';
+import { churchName, currentChurch, keptBy, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -137,8 +137,8 @@ export function render(el, { data, router, nav }) {
 
   wireControls();
   wireGrid();
-  // The header's control can change the selection while the grid is open.
-  state.cleanups.push(subscribeSelection(() => state && update({ animate: true })));
+  // The header's control can change the church while the grid is open.
+  state.cleanups.push(subscribeChurch(() => state && update({ animate: true })));
 
   // Back where the reader was, if that is what this navigation is — the saint
   // page's × says so, and so does a history traversal. The grid's height has
@@ -544,17 +544,19 @@ function update({ animate }) {
   const query = filters.query.trim();
   const hits = query && search ? new Set(search.search(query).map((r) => r.id)) : null;
 
-  // The reader's traditions come first (author, 2026-08-22): a saint venerated
-  // in none of the selected churches is not on the grid, and what that sets
-  // aside is counted and named under the count rather than silently dropped.
-  // The search and the facets apply within what remains.
-  const selection = currentSelection();
-  const mine = cards.filter((card) => venerates(card, selection));
+  // The reader's church comes first (author, 2026-08-22): a saint not in that
+  // church's calendar is not on the grid, and what that sets aside is counted
+  // and named under the count rather than silently dropped. The search and
+  // the facets apply within what remains. No church chosen yet keeps all.
+  const church = currentChurch();
+  const mine = cards.filter((card) => keptBy(card, church));
   const asideNote = el.querySelector('[data-set-aside]');
   const aside = cards.length - mine.length;
   asideNote.hidden = aside === 0;
   asideNote.textContent =
-    aside === 1 ? STRINGS.saints.setAsideOne : fill(STRINGS.saints.setAsideMany, { count: aside });
+    aside === 1
+      ? fill(STRINGS.saints.setAsideOne, { church: churchName(church) })
+      : fill(STRINGS.saints.setAsideMany, { count: aside, church: churchName(church) });
 
   const { matched, undated } = applyFilters(mine, filters, {
     monthsBySlug: state.monthsBySlug,

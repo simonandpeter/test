@@ -34,7 +34,7 @@
   },
   "attestations": [
     {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 26,
@@ -42,40 +42,24 @@
         "calendar": "julian"
       },
       "titles": [
-        "the Hungarian",
-        "Monk of the Kyiv Caves"
+        "Venerable",
+        "of the Kyiv Caves"
       ],
       "source": {
-        "text": "The Paterikon of the Kyiv Caves Monastery"
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июля ст. ст.; «Преподобный Моисей Угрин, Печерский»",
+        "url": "https://days.pravoslavie.ru/Days/20260726.html",
+        "year": 2026
       }
     },
     {
-      "church": "roman-catholic",
-      "status": "undocumented"
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not in the Patriarchate’s calendar for 26 July (basilica.ro, checked 2026-08-22); no other day checked."
     },
     {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "coptic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 July (saint.gr, checked 2026-08-22); no other day checked."
     }
   ],
   "locations": [

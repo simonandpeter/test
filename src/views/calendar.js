@@ -2,7 +2,7 @@
  * The calendar — the habit page (brief §8.1, DESIGN.md §5b). Opens on today
  * in the reader's local date; week strip and month view to move; deep links
  * at /calendar/YYYY-MM-DD; one church's calendar at a time (author,
- * 2026-08-22), chosen from those the reader's traditions allow.
+ * 2026-08-22): the church the reader keeps, chosen once and changed from the header.
  *
  * Day-to-day movement inside the view updates the URL with replaceState
  * rather than router.navigate: stepping through days must not pile history
@@ -23,23 +23,14 @@ import {
   weekOf,
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
-import {
-  allowedCalendars,
-  chooseCalendar,
-  chosenCalendar,
-  currentSelection,
-  entriesInCalendar,
-  filterEntries,
-  hasChosen,
-  subscribeSelection,
-} from '../lib/tradition.js';
+import { churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
-import { renderChooser, wireChooser } from '../ui/traditions.js';
+import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = STRINGS.calendar.title;
@@ -108,11 +99,11 @@ function indexFor(year, data) {
  * 2026-08-22). Everything downstream reads through here — the hero, the
  * register, the density dots under every date at both grains — so the page
  * counts one church everywhere rather than in the one place someone
- * remembered. The calendar itself is re-derived from lib/tradition.js
- * whenever the selection moves, never cached beyond `state.calendar`.
+ * remembered. The church itself is re-read from lib/church.js whenever it
+ * changes, never cached beyond `state.calendar`.
  */
 const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
-const entriesFor = (iso, data) => entriesInCalendar(allEntriesFor(iso, data), state?.calendar);
+const entriesFor = (iso, data) => entriesInChurch(allEntriesFor(iso, data), state?.calendar);
 const countFor = (iso, data) => entriesFor(iso, data).length;
 
 export function render(el, { data, params, router }) {
@@ -120,7 +111,7 @@ export function render(el, { data, params, router }) {
   const selected = params.date && parseIso(params.date) ? params.date : todayIso();
   state = {
     el, data, router, selected,
-    calendar: chosenCalendar(),
+    calendar: currentChurch(),
     whichOpen: false,
     monthCursor: null, monthOpen: false,
     cleanups: [], dayCleanups: [],
@@ -130,7 +121,6 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = `
     <div class="cal">
-      ${askMarkup()}
       <div class="cal-gate" data-gate></div>
       <div class="cal-body" data-cal-body>
         <div class="cal-controls">
@@ -197,13 +187,12 @@ export function render(el, { data, params, router }) {
   wireAsk();
   wireWhich();
 
-  // The header's control can change the selection while this page is open:
-  // the question goes if it has been answered, the calendar may need choosing
-  // again, and everything that counts entries repaints.
+  // The header's control can change the church while this page is open: the
+  // question goes once it has been answered, and everything that counts
+  // entries repaints in the new calendar.
   state.cleanups.push(
-    subscribeSelection(() => {
+    subscribeChurch(() => {
       if (!state) return;
-      if (hasChosen()) state.el.querySelector('[data-ask]')?.remove();
       paintGate();
       paintChrome();
       repaintDay();
@@ -374,95 +363,56 @@ const stepCursor = (c, n) => ({
   month: ((c.month + n - 1 + 12) % 12) + 1,
 });
 
-/* ---- the question a first visit is asked -------------------------------- */
+/* ---- the question a first visit is asked, and the way to change it ------- */
 
 /**
  * Asked once, on the calendar, because the calendar is what the answer changes
- * first (author, 2026-08-21; revised 2026-08-22). It stands in the page's flow
- * above the strip rather than over it: this is a question, not an obstacle,
- * and a reader who ignores it keeps every tradition and is asked again next
- * visit. Four communions as one-shot choices, and under (advanced) the plate,
- * which answers church by church and closes on Done. The header's Select
- * Tradition is where the answer is changed afterwards.
+ * first (author, 2026-08-21; redrawn 2026-08-22 for one church of three). It
+ * stands where the strip will stand: this is a question, not an obstacle, and
+ * a reader who ignores it has chosen nothing and is asked again next visit.
+ * One question — which calendar, by church — because the calendar follows the
+ * church; the header's control is where the answer is changed afterwards, and
+ * so is "change calendar" under the strip, which shows the same choices.
  */
-function askMarkup() {
-  if (hasChosen()) return '';
-  const A = STRINGS.traditions.ask;
-  return `
-    <div class="tradition-ask panel" data-ask>
-      <h2 class="ask-heading">${A.heading}</h2>
-      <p>${A.lede}</p>
-      <div data-chooser>${renderChooser({ selection: currentSelection(), mode: 'question' })}</div>
-    </div>`;
-}
-
-function wireAsk() {
-  const ask = state.el.querySelector('[data-ask]');
-  if (!ask) return;
-  const unwire = wireChooser(ask.querySelector('[data-chooser]'), {
-    onChange: ({ answered }) => {
-      if (answered) finishAsk();
-    },
-    onDone: finishAsk,
-  });
-  state.cleanups.push(unwire);
-}
+const askMarkup = () => (hasChosen() ? '' : `<div class="church-ask panel" data-ask>${renderChooser()}</div>`);
 
 /**
- * The answer takes the question off the page, so focus has to go somewhere it
- * still exists: the calendar prompt if that is what comes next, else the
- * nearest control in the strip's chrome. The selection subscription has
- * already repainted everything else by the time this runs.
+ * One wiring for both places the choices can stand — the gate above the strip
+ * and the change panel under it — because it is the same chooser. Choosing
+ * closes the change panel; the subscription above repaints everything else;
+ * focus goes to the nearest control in the strip's chrome, since the question
+ * has gone.
  */
-function finishAsk() {
-  state.el.querySelector('[data-ask]')?.remove();
-  (state.el.querySelector('[data-calendar-choice]') ?? state.el.querySelector('[data-today]'))?.focus();
+function wireAsk() {
+  const { el } = state;
+  state.cleanups.push(
+    wireChooser(el.querySelector('.cal'), {
+      onChange: () => {
+        closeWhich();
+        el.querySelector('[data-today]')?.focus();
+      },
+    }),
+  );
 }
 
 /* ---- which calendar (author, 2026-08-22) -------------------------------- */
 
-/**
- * The prompt: one button per calendar the selection allows, in registry
- * order, the current one pressed. With nothing selected there is nothing to
- * offer, and the prompt says where to select something instead.
- */
-function whichMarkup(allowed, current) {
-  const W = STRINGS.calendar.which;
-  if (!allowed.length) {
-    return `<div class="calendar-ask panel" data-calendar-ask><p>${STRINGS.calendar.silence.none}</p></div>`;
-  }
-  const choices = allowed
-    .map(
-      (c) =>
-        `<button type="button" class="ask-choice" data-calendar-choice="${c.id}" ` +
-        `aria-pressed="${String(c.id === current)}">${esc(c.display_name)}</button>`,
-    )
-    .join('');
-  return `
-    <div class="calendar-ask panel" data-calendar-ask>
-      <h2 class="ask-heading">${W.heading}</h2>
-      <p>${fill(W.lede, { count: allowed.length })}</p>
-      <div class="ask-choices">${choices}</div>
-    </div>`;
-}
+const whichMarkup = (current) => `<div class="church-ask panel" data-calendar-ask>${renderChooser({ current })}</div>`;
 
 /**
- * Before the week or the month can be seen the reader is asked which calendar
- * (author, 2026-08-22): the prompt stands where the strip would, and the
- * strip, the date and the day are hidden until there is an answer. A
- * selection that allows exactly one calendar is not asked. Once chosen, the
- * calendar names itself under the strip, with the way to change it when there
- * is something to change it to.
+ * Before the week or the month can be seen the reader has to have chosen
+ * (author, 2026-08-22): the question stands where the strip would, and the
+ * strip, the date and the day are hidden until there is an answer. Once
+ * chosen, the calendar names itself under the strip with the way to change it.
  */
 function paintGate() {
   const { el } = state;
-  const allowed = allowedCalendars();
-  state.calendar = chosenCalendar();
+  state.calendar = currentChurch();
   const gate = el.querySelector('[data-gate]');
   const body = el.querySelector('[data-cal-body]');
 
   if (!state.calendar) {
-    gate.innerHTML = whichMarkup(allowed, null);
+    gate.innerHTML = askMarkup();
     body.hidden = true;
     closeWhich();
     return;
@@ -470,11 +420,8 @@ function paintGate() {
   gate.innerHTML = '';
   body.hidden = false;
   const W = STRINGS.calendar.which;
-  el.querySelector('[data-which-name]').textContent = fill(W.showing, {
-    church: CHURCHES_BY_ID[state.calendar]?.display_name ?? '',
-  });
-  el.querySelector('[data-which-change]').hidden = allowed.length < 2;
-  if (state.whichOpen) el.querySelector('[data-which-panel]').innerHTML = whichMarkup(allowed, state.calendar);
+  el.querySelector('[data-which-name]').textContent = fill(W.showing, { church: churchName(state.calendar) });
+  if (state.whichOpen) el.querySelector('[data-which-panel]').innerHTML = whichMarkup(state.calendar);
 }
 
 function wireWhich() {
@@ -486,21 +433,9 @@ function wireWhich() {
     button.setAttribute('aria-expanded', String(state.whichOpen));
     panel.hidden = !state.whichOpen;
     if (state.whichOpen) {
-      panel.innerHTML = whichMarkup(allowedCalendars(), state.calendar);
-      panel.querySelector('[data-calendar-choice]')?.focus();
+      panel.innerHTML = whichMarkup(state.calendar);
+      (panel.querySelector('[data-church][aria-pressed="true"]') ?? panel.querySelector('[data-church]'))?.focus();
     }
-  });
-  // One listener for both places the prompt can stand — the gate and the
-  // change panel — because it is the same prompt.
-  el.querySelector('.cal').addEventListener('click', (e) => {
-    const choice = e.target.closest('[data-calendar-choice]');
-    if (!choice) return;
-    chooseCalendar(choice.dataset.calendarChoice);
-    closeWhich();
-    paintGate();
-    paintChrome();
-    repaintDay();
-    el.querySelector('[data-today]')?.focus();
   });
 }
 
@@ -791,31 +726,20 @@ const stepMonth = (n) => moveMonth(n);
 /* ---- the day panel: hero + register ----------------------------------- */
 
 /**
- * Three different silences, and a reader is owed the difference between them
- * (redrawn 2026-08-22 for one calendar at a time). The corpus having nothing
- * for a day is a statement about our sourcing; this calendar having nothing
- * while other calendars the reader keeps do is a fact about the choice made
- * above, and says where the others are; commemorations held only by
- * traditions the reader has set aside point at the header instead. Prose in
- * ink in every case, never a banner.
+ * Two silences, and a reader is owed the difference between them (redrawn
+ * 2026-08-22 for one church at a time). The corpus having nothing for a day is
+ * a statement about our sourcing; this church's calendar having nothing while
+ * another of the three does is a fact about the choice made above, and says
+ * where the others are. Prose in ink in either case, never a banner.
  */
 function emptyDayNote(iso) {
   const S = STRINGS.calendar.silence;
-  const selection = currentSelection();
-  if (selection.size === 0) return S.none;
   const all = allEntriesFor(iso, state.data);
-  const church = CHURCHES_BY_ID[state.calendar]?.display_name ?? '';
-  const kept = filterEntries(all, selection).length;
-  if (kept > 0) {
-    return kept === 1
-      ? fill(S.otherCalendarsOne, { church })
-      : fill(S.otherCalendarsMany, { church, count: kept });
-  }
-  const setAside = all.length - kept;
-  if (setAside > 0) {
-    return setAside === 1
-      ? fill(S.setAsideOne, { church })
-      : fill(S.setAsideMany, { church, count: setAside });
+  const here = new Set(entriesInChurch(all, state.calendar).map((e) => e.slug));
+  const elsewhere = new Set(all.map((e) => e.slug).filter((slug) => !here.has(slug))).size;
+  const church = churchName(state.calendar);
+  if (elsewhere > 0) {
+    return elsewhere === 1 ? fill(S.otherChurchOne, { church }) : fill(S.otherChurchMany, { church, count: elsewhere });
   }
   return STRINGS.calendar.emptyDay;
 }

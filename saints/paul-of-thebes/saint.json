@@ -32,24 +32,7 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
-      "status": "venerated",
-      "feast": {
-        "day": 15,
-        "month": 1,
-        "calendar": "gregorian"
-      },
-      "titles": [
-        "Hermit",
-        "First Hermit"
-      ],
-      "source": {
-        "text": "Roman Martyrology",
-        "year": 2004
-      }
-    },
-    {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 15,
@@ -57,37 +40,46 @@
         "calendar": "julian"
       },
       "titles": [
-        "Paul of Thebes",
-        "the Anchorite"
+        "Venerable"
+      ],
+      "rank": "six-stichera",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 января ст. ст.; «Прп. Павла Фивейского (341)»",
+        "url": "https://days.pravoslavie.ru/Days/20260115.html",
+        "year": 2026
+      },
+      "note": "«Совершается служба на шесть»."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "the first hermit"
       ],
       "source": {
-        "text": "The Prologue of Ohrid, Nikolai Velimirović"
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 15 January; “Saints Paul of Thebes and John Calabytes”",
+        "url": "https://basilica.ro/en/orthodox-calendar-january-15/",
+        "year": 2026
       }
     },
     {
-      "church": "coptic",
-      "status": "undocumented",
-      "note": "Commemorated in the Coptic tradition, but the Synaxarium date has not been verified for this build and is deliberately not guessed at."
-    },
-    {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Ιανουαρίου; «Όσιος Παύλος ο Θηβαίος»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
     }
   ],
   "locations": [

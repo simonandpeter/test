@@ -699,3 +699,97 @@
   border-radius: var(--radius-panel);
   padding: var(--space-6);
 }
+
+/* ---- the church chooser, where it stands on this page (2026-08-22) ------- */
+
+/* The first-visit question, in the page's flow above the strip, not over it:
+   a question, not an obstacle. The same inside stands under the strip when
+   the reader asks to change calendar. One church per button, its calendar
+   under its name — choosing the church is choosing the calendar. */
+.church-ask {
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.ask-heading {
+  font-size: 21px;
+  margin-bottom: var(--space-2);
+}
+
+.ask-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.church-choice {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+/* Pressed is the recessed field in ink — aria-pressed carries it, never a
+   colour alone; nothing here is gold or red (DESIGN.md §2). */
+.church-choice[aria-pressed='true'] {
+  background: var(--field);
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.choice-calendar {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* The question is the tallest thing a first visit meets, and at 360 px it was
+   putting the day's own heading below the fold as well as the hero's name
+   (author, 2026-08-21). The prose gives up its margin and the panel its
+   padding; the fold test holds the line. */
+@media (max-width: 560px) {
+  .church-ask {
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .church-ask p {
+    margin-bottom: var(--space-3);
+  }
+
+  .ask-choices {
+    gap: var(--space-1);
+  }
+}
+
+/* ---- which calendar, under the strip (author, 2026-08-22) --------------- */
+
+.cal-which {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  color: var(--ink-soft);
+  margin-bottom: var(--space-4);
+}
+
+.cal-which-change {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  padding: 2px var(--space-2);
+}
+
+.cal-which-change:hover,
+.cal-which-change[aria-expanded='true'] {
+  color: var(--ink);
+}
+
+.which-panel {
+  flex-basis: 100%;
+}
+
+.which-panel .church-ask {
+  margin-bottom: 0;
+  margin-top: var(--space-2);
+}

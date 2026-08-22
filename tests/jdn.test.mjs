@@ -1,15 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  copticToJdn,
-  ethiopianToJdn,
+  FIXED_CALENDARS,
+  fromJdn,
   gregorianToJdn,
   isValidDate,
-  jdnToCoptic,
-  jdnToEthiopian,
   jdnToGregorian,
   jdnToJulian,
   julianToJdn,
+  toJdn,
 } from '../src/lib/jdn.js';
 
 const iso = ({ year, month, day }) =>
@@ -56,30 +55,20 @@ test('Julian feast days land on the expected Gregorian dates', () => {
   assert.equal(iso(jdnToGregorian(julianToJdn(1900, 1, 1))), '1900-01-13');
 });
 
-test('Alexandrian epochs sit where the Julian calendar says they do', () => {
-  // 1 Thout 1 AM = 29 August 284 Julian; 1 Mäskäräm 1 EC = 29 August 8 Julian.
-  assert.equal(copticToJdn(1, 1, 1), julianToJdn(284, 8, 29));
-  assert.equal(ethiopianToJdn(1, 1, 1), julianToJdn(8, 8, 29));
-  // Ethiopic years run 276 ahead of Coptic ones.
-  assert.equal(copticToJdn(1742, 1, 1), ethiopianToJdn(2018, 1, 1));
-});
-
-test('Coptic and Ethiopic new year 2025', () => {
-  assert.equal(iso(jdnToGregorian(copticToJdn(1742, 1, 1))), '2025-09-11');
-  assert.equal(iso(jdnToGregorian(ethiopianToJdn(2018, 1, 1))), '2025-09-11');
-});
-
-test('Coptic Tobi 22 is St Anthony, independently of the Julian path', () => {
-  // Reaching 30 January 2026 from the Coptic calendar as well as the Julian one
-  // is the cross-check: two unrelated conversions agreeing on a known feast.
-  assert.equal(iso(jdnToGregorian(copticToJdn(1742, 5, 22))), '2026-01-30');
-});
-
-test('Alexandrian calendars round-trip across a leap boundary', () => {
-  for (let jdn = copticToJdn(1739, 13, 1); jdn <= copticToJdn(1740, 1, 5); jdn++) {
-    assert.equal(copticToJdn(...Object.values(jdnToCoptic(jdn))), jdn);
-    assert.equal(ethiopianToJdn(...Object.values(jdnToEthiopian(jdn))), jdn);
+test('the Revised Julian is the Gregorian for every date this site will show', () => {
+  // The New Calendar of the Romanian and Greek churches (author, 2026-08-22):
+  // fixed feasts on Gregorian dates. Its leap rule differs from the Gregorian
+  // only in which century years are leap, and the two first disagree in 2800,
+  // so until then it converts as the Gregorian does — and that is what is
+  // implemented. The same menologion date, thirteen days apart in 2026.
+  assert.deepEqual(FIXED_CALENDARS.sort(), ['gregorian', 'julian', 'revised-julian']);
+  for (const [y, m, d] of [[2026, 1, 17], [2026, 8, 6], [2100, 3, 1], [2400, 2, 29]]) {
+    assert.equal(toJdn('revised-julian', y, m, d), gregorianToJdn(y, m, d));
+    assert.deepEqual(fromJdn('revised-julian', gregorianToJdn(y, m, d)), { year: y, month: m, day: d });
   }
+  assert.equal(iso(fromJdn('revised-julian', julianToJdn(2026, 1, 17))), '2026-01-30');
+  assert.equal(iso(fromJdn('gregorian', toJdn('revised-julian', 2026, 1, 17))), '2026-01-17');
+  assert.throws(() => toJdn('coptic', 1742, 5, 22), /Unknown calendar/);
 });
 
 test('validity is decided by round-trip, so impossible dates are rejected', () => {
@@ -88,8 +77,8 @@ test('validity is decided by round-trip, so impossible dates are rejected', () =
   assert.ok(isValidDate('julian', 1900, 2, 29));
   assert.ok(!isValidDate('gregorian', 2026, 2, 30));
   assert.ok(!isValidDate('gregorian', 2026, 13, 1));
-  // The sixth epagomenal day exists only when the Coptic year is 3 mod 4.
-  assert.ok(isValidDate('coptic', 1739, 13, 6));
-  assert.ok(!isValidDate('coptic', 1740, 13, 6));
-  assert.ok(isValidDate('coptic', 1740, 13, 5));
+  assert.ok(isValidDate('revised-julian', 2024, 2, 29));
+  assert.ok(!isValidDate('revised-julian', 2026, 2, 29));
+  // 1900 is leap in the Julian calendar and not in the Revised Julian.
+  assert.ok(!isValidDate('revised-julian', 1900, 2, 29));
 });

@@ -39,23 +39,7 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
-      "status": "venerated",
-      "feast": {
-        "day": 17,
-        "month": 1,
-        "calendar": "gregorian"
-      },
-      "titles": [
-        "Abbot"
-      ],
-      "source": {
-        "text": "Roman Martyrology",
-        "year": 2004
-      }
-    },
-    {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 17,
@@ -63,48 +47,52 @@
         "calendar": "julian"
       },
       "titles": [
-        "The Great",
-        "Father of Monasticism"
+        "Venerable",
+        "the Great"
       ],
+      "rank": "vigil",
       "source": {
-        "text": "The Prologue of Ohrid, Nikolai Velimirović"
-      }
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 января ст. ст.; «Прп. Антония Великого (356)»",
+        "url": "https://days.pravoslavie.ru/Days/20260117.html",
+        "year": 2026
+      },
+      "note": "All-night vigil: «Совершается всенощное бдение»."
     },
     {
-      "church": "coptic",
+      "church": "romanian",
       "status": "venerated",
       "feast": {
-        "day": 22,
-        "month": 5,
-        "calendar": "coptic"
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
       },
       "titles": [
-        "Father of All Monks"
+        "the Great",
+        "Father of monasticism"
       ],
       "source": {
-        "text": "Coptic Synaxarium",
-        "note": "22 Tobi."
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 17 January; “†) St. Anthony the Great”",
+        "url": "https://basilica.ro/en/orthodox-calendar-january-17/",
+        "year": 2026
+      },
+      "note": "Marked †) in the Patriarchate’s calendar."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "the Great"
+      ],
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Ιανουαρίου; «Ἀντωνίου ὁσίου τοῦ μεγάλου (†356)»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
       }
-    },
-    {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
     }
   ],
   "locations": [

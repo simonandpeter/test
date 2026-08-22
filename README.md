@@ -1,19 +1,17 @@
 # Gallery of Saints
 
-A static site for engaging daily with the saints of the Catholic, Eastern
-Orthodox, Oriental Orthodox and Church of the East traditions.
+A static site for engaging daily with the saints of the Orthodox Church, church
+by church — Russian, Romanian and Greek for now, each in its own calendar. It
+is the Eastern Orthodox proof of a larger, cross-church design: the same
+structure, the same quality floor, one tradition, to be proven before the
+four-communion corpus comes back onto it. That corpus and its build are
+archived at the tag `archive/cross-church-2026-08`.
 
-The brief is `saintsbuildplan.md` and its Addendum A (both in the parent
-folder; the addendum wins where they disagree); the delivery plan is
-`SESSIONS.md`; the design system is `DESIGN.md` and it is binding. **Phase 0,
-the design pass and app shell, the calendar page with the veneration badge, the
-saint detail page with the local store, and All Saints in Index mode are
-complete.** `npm run dev` serves the site.
-
-Schema note: locations carry a numeric `uncertainty_km` (1 pinpoint / 15 city /
-150 region / 500 province are the authoring defaults), not a precision enum.
-The manifest's `image` field carries pixel dimensions and the blur-placeholder
-path so cards reserve their box before the image loads.
+The brief is `docs/saintsbuildplan.md` and its addendum (the addendum wins
+where they disagree); `docs/HANDOFF-ORTHODOX.md` is why this project exists and
+what carried over; the delivery plan and its **Amendments** are `SESSIONS.md`;
+the design system is `DESIGN.md` and it is binding. `npm run dev` serves the
+site.
 
 ## The contract
 
@@ -21,7 +19,7 @@ path so cards reserve their box before the image loads.
 
 ```
 saints/
-  agnes-of-rome/
+  anthony-the-great/
     saint.json          <- the only required file; folder name IS the slug
     life.md
     sources/
@@ -53,16 +51,17 @@ worst failure this project has.
 ## Three principles the code enforces
 
 **Attest, never adjudicate.** The site never says "X is a saint". A saint is one
-entity with N per-church attestations. [Nestorius](saints/nestorius/) is
-venerated by the Church of the East and refused by seven other churches, and
-both appear side by side with citations. `Dioscorus` is the mirror image. Neither
-is resolved.
+entity with one attestation per church in the registry, each with its own
+source. The Kyiv Caves saints are the worked case: John the Long-suffering is in
+the Russian and Greek calendars and not, as checked, in the Romanian; Moses the
+Hungarian is in the Russian alone. Each row says what was found and where.
 
 **Absence of data is not absence of veneration.** Three states, everywhere:
 `venerated`, `not-venerated` (positively established — a refusal is as much a
 finding as a veneration, and needs a citation just the same) and `undocumented`
-(we have not sourced this tradition either way). Collapsing the last two would
-systematically flatter the better-digitised Western sources.
+(we have not sourced this church either way, or looked and not found, and the
+note says which). Collapsing the last two would flatter whichever calendar is
+better digitised.
 
 **No fake precision.** Every date is an interval; a precise date is an interval
 with equal bounds. A one-sided bound (`{ earliest: null, latest: 1000 }` —
@@ -73,18 +72,17 @@ converted at render time; nothing pre-converted is ever stored.
 
 ## Calendars
 
-Gregorian, Julian, Coptic and Ethiopic all convert through the Julian Day
-Number, so there is one conversion path rather than one per pair. The
-Julian/Gregorian offset falls out of the general rule — it is 13 days now and 14
-from 2100, and no constant is hard-coded anywhere.
-
-There are two Paschas: Rome and the Armenian Apostolic Church reckon Easter by
-the Gregorian computus, the rest by the Julian one. They coincided in 2025 and
-otherwise diverge by up to five weeks, so `paschal_computus` is a per-church
-field in the registry and both algorithms ship.
+Two for fixed feasts: `julian` (the Old Calendar, which the Russian church
+keeps) and `revised-julian` (the New, which the Romanian and Greek churches
+keep — fixed feasts on Gregorian dates). Both convert through the Julian Day
+Number, so the Julian/Gregorian offset falls out of the general rule — 13 days
+now, 14 from 2100 — and the Revised Julian converts as the Gregorian does until
+the two first disagree in 2800. Pascha is reckoned by the Julian computus in all
+three churches; `paschal_computus` is a per-church field all the same, and an
+attestation may state its own.
 
 `feastOccurrences()` returns an **array** of dates, because a 29 February feast
-— or the sixth epagomenal day of the Coptic year — does not occur in most years.
+does not occur in most years.
 
 ## Known gaps
 
@@ -97,12 +95,10 @@ rather than hidden:
   is still missing is the page each file came from: that link is provenance, not
   attribution — it is how a reader checks the claim rather than taking it on
   trust — so the build warns on every one until it is recorded. They currently
-  hold a placeholder on `example.invalid`, entered on the author's instruction
-  so the field can be exercised; the build names it as a placeholder and the
-  detail page prints the licence without linking it.
-- **`eastern-catholic` is one entry** covering roughly two dozen sui iuris
-  churches across six rite families. The coarsest cell in the registry.
-- **The Assyrian Church of the East's paschal computus is unverified.** Flagged
-  in the registry with `needs_sourcing`.
+  hold a placeholder on `example.invalid`; the build names it as a placeholder
+  and the detail page prints the licence without linking it.
 - **Region derivation is bounding boxes, not polygons.** Good enough to separate
   the Maghreb from Sicily and Iberia; not good enough to be authoritative.
+- **Movable feasts and the Great Feasts are not yet entries.** The data path
+  and the computus exist and are tested; what a calendar entry is when it is
+  not a saint is the next piece of genuinely new work (SESSIONS.md).

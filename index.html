@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Gallery of Saints</title>
-<meta name="description" content="The saints of the Catholic, Eastern Orthodox, Oriental Orthodox and Church of the East traditions, attested church by church." />
+<meta name="description" content="The saints of the Orthodox Church, church by church — Russian, Romanian and Greek, each in its own calendar." />
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#e5e4dd" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1412" />
 <!-- One gold cell — the attested mark from the veneration badge, the only
@@ -40,15 +40,16 @@
     <a class="site-name" href="/">Gallery of Saints</a>
     <nav class="site-nav" id="site-nav" aria-label="Site"></nav>
     <div class="chrome-corner">
-      <!-- Select Tradition opens the chooser in the panel below the header;
-           the theme toggle is a sun/moon icon (author, 2026-08-22). Today's
-           date stood here from 2026-08-21 to 2026-08-22. -->
-      <button id="tradition-open" type="button" class="tradition-open utility"
-        aria-controls="tradition-panel" aria-expanded="false"></button>
+      <!-- The calendar control names the church the site reads and opens the
+           chooser in the panel below the header (author, 2026-08-22; it was
+           Select Tradition until then); the theme toggle is a sun/moon icon.
+           Today's date stood here from 2026-08-21 to 2026-08-22. -->
+      <button id="church-open" type="button" class="church-open utility"
+        aria-controls="church-panel" aria-expanded="false"></button>
       <button id="theme-toggle" type="button" class="icon-button"></button>
     </div>
   </header>
-  <div class="tradition-panel" id="tradition-panel" hidden></div>
+  <div class="church-panel" id="church-panel" hidden></div>
 
   <main class="chrome">
     <div id="view"></div>

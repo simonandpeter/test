@@ -95,9 +95,7 @@ test('a lifespan with no bounds at all says undated once, not twice', () => {
 test('feasts display in their own reckoning', () => {
   assert.equal(formatFeast({ calendar: 'gregorian', day: 17, month: 1 }), '17 January');
   assert.equal(formatFeast({ calendar: 'julian', day: 17, month: 1 }), '17 January (Julian)');
-  assert.equal(formatFeast({ calendar: 'coptic', day: 22, month: 5 }), '22 Tobi');
-  assert.equal(formatFeast({ calendar: 'ethiopian', day: 1, month: 1 }), '1 Mäskäräm');
-  assert.equal(formatFeast({ calendar: 'coptic', day: 6, month: 13 }), '6 Nasie');
+  assert.equal(formatFeast({ calendar: 'revised-julian', day: 17, month: 1 }), '17 January (Revised Julian)');
   assert.equal(formatFeast({ calendar: 'paschal', offset: 0 }), 'Pascha');
   assert.equal(formatFeast({ calendar: 'paschal', offset: 49 }), '49 days after Pascha');
   assert.equal(formatFeast({ calendar: 'paschal', offset: -46 }), '46 days before Pascha');

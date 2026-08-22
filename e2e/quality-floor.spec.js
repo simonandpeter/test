@@ -10,14 +10,14 @@ import { AxeBuilder } from '@axe-core/playwright';
  * the kind of thing that rots unnoticed while the populated path stays fine.
  */
 
-// 30 January 2026: Anthony the Great, Eastern Orthodox (17 Jan Julian) and
-// Coptic (22 Tobi) — two traditions reaching one Gregorian day by different
-// calendar arithmetic, which makes it the most load-bearing date in the corpus.
+// 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
+// the Julian reckoning, which the New Calendar churches keep on the civil 17th:
+// one menologion date, two civil days, the most load-bearing date in the corpus.
 const POPULATED = '/calendar/2026-01-30';
 const EMPTY = '/calendar/2026-08-20';
 
-// Anthony carries an image, three attested communions, name forms in Greek
-// and Coptic, related saints and a life; Christopher is the awkward one —
+// Anthony carries an image, all three churches' attestations, name forms in
+// Greek and Coptic, related saints and a life; Christopher is the awkward one —
 // legendary, undated at birth, no image, no coordinates — so between them the
 // detail page's states are covered rather than sampled.
 const DETAIL = '/saints/anthony-the-great';
@@ -35,7 +35,7 @@ const ROUTES = [
 
 for (const [label, path] of ROUTES) {
   test(`no axe violations: ${label}`, async ({ page }) => {
-    await ready(page, { calendar: path === POPULATED ? 'eastern-orthodox' : 'roman-catholic' });
+    await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
@@ -44,7 +44,7 @@ for (const [label, path] of ROUTES) {
   });
 
   test(`no horizontal overflow: ${label}`, async ({ page }) => {
-    await ready(page, { calendar: path === POPULATED ? 'eastern-orthodox' : 'roman-catholic' });
+    await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
     const overflows = await page.evaluate(
       () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
@@ -62,13 +62,13 @@ test('no console errors on load', async ({ page }) => {
     // technique and is not a fault.
     if (m.type() === 'error' && !m.text().includes('404')) errors.push(m.text());
   });
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   expect(errors).toEqual([]);
 });
 
 test('every interactive element takes visible keyboard focus', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   for (let i = 0; i < 12; i++) {
     await page.keyboard.press('Tab');
@@ -89,7 +89,7 @@ test('the heading takes focus on navigation but not on arrival', async ({ page }
   // announce, and Chrome scores a programmatic focus with no interaction
   // behind it as keyboard-driven — which put a focus ring around the heading
   // of every freshly loaded page until the reader clicked it away.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('H1');
 
@@ -101,7 +101,7 @@ test('the heading takes focus on navigation but not on arrival', async ({ page }
 });
 
 test('the day is reachable by keyboard through the week strip', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const before = await page.locator('h1').first().textContent();
   await page.locator('.week-strip button').first().focus();
@@ -112,7 +112,7 @@ test('the day is reachable by keyboard through the week strip', async ({ page })
 test('reduced motion removes animation rather than shortening it', async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const animated = await page.evaluate(() =>
     [...document.querySelectorAll('*')].some((el) => {
@@ -126,28 +126,31 @@ test('reduced motion removes animation rather than shortening it', async ({ brow
 });
 
 test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
-  // One calendar at a time (author, 2026-08-22): in the Eastern Orthodox
-  // calendar the day names Anthony once, by that church's feast alone; the
-  // Coptic reckoning of the same day belongs to the Coptic calendar, and
-  // changing to it finds the same saint by 22 Tobi — never both at once, and
-  // never the same saint listed twice.
+  // One calendar at a time (author, 2026-08-22; one church of three): the
+  // Russian calendar names Anthony once, by the Julian feast that falls on 30
+  // January; change to the Greek and the same civil day holds nothing of his,
+  // because the New Calendar keeps 17 January on the 17th — the same menologion
+  // date, two civil days, and never the same saint listed twice.
   const feasts = await page.locator('.hero-feasts li').allTextContents();
   expect(feasts.join(' | ')).toContain('17 January (Julian)');
-  expect(feasts.join(' | ')).not.toContain('22 Tobi');
   await expect(page.locator('.day-panel .register li')).toHaveCount(0);
+  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
   await page.locator('[data-which-change]').click();
-  await page.locator('[data-which-panel] [data-calendar-choice="coptic"]').click();
+  await page.locator('[data-which-panel] [data-church="greek"]').click();
+  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
+  await expect(page.locator('.hero')).toHaveCount(0);
+  await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
+  await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
-  expect((await page.locator('.hero-feasts li').allTextContents()).join(' | ')).toContain('22 Tobi');
-  await expect(page.locator('[data-which-name]')).toHaveText('The Coptic Orthodox calendar');
-  // Nothing under the strip prints the day in another reckoning any more. The
-  // line of equivalencies went when the toggle arrived, and the toggle went
-  // when the tradition filter took its place (author, 2026-08-21).
+  expect((await page.locator('.hero-feasts li').allTextContents()).join(' | ')).toContain('17 January (Revised Julian)');
+  // Nothing under the strip prints the day in another reckoning. The line of
+  // equivalencies went when the toggle arrived, and the toggle went when the
+  // tradition filter took its place (author, 2026-08-21).
   await expect(page.locator('.cal-reckonings')).toHaveCount(0);
   await expect(page.locator('.cal-reckoning')).toHaveCount(0);
   await expect(page.locator('.day-date')).toHaveCount(0);
@@ -168,7 +171,7 @@ test('the hero image box is a square, cropped from the centre and the top', asyn
   // on the habit page every day's saint now sits in the same box (author,
   // 2026-08-21). Anthony's icon is 369x501, so this is a real crop and not a
   // ratio that happened to be square already.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const img = page.locator('.hero-media img');
   await expect(img).toBeVisible();
@@ -203,12 +206,19 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   await expect(page.locator('.names span[lang="grc"]')).toHaveText('Ἀντώνιος');
   await expect(page.locator('.names span[lang="cop"]')).toHaveText('Ⲁⲛⲧⲱⲛⲓⲟⲥ');
 
-  // Every church in the registry appears, including the ones we have not
-  // sourced: an unchecked tradition is visible rather than absent.
-  await expect(page.locator('.attestations .att')).toHaveCount(8);
-  await expect(page.locator('.att-undocumented')).not.toHaveCount(0);
-  await expect(page.locator('.attestations')).toContainText('Coptic Synaxarium');
-  await expect(page.locator('.attestations')).toContainText('22 Tobi');
+  // Every church in the registry appears, each with its own source and its
+  // own reckoning of the one menologion date.
+  await expect(page.locator('.attestations .att')).toHaveCount(3);
+  for (const church of ['Russian', 'Romanian', 'Greek']) {
+    await expect(page.locator('.attestations .att-church', { hasText: church })).toHaveCount(1);
+  }
+  await expect(page.locator('.attestations')).toContainText('Basilica');
+  await expect(page.locator('.attestations')).toContainText('17 January (Julian)');
+  // The civil date it falls on, once: the year is in the date and was being said
+  // twice ("30 January 2026 in 2026") until 2026-08-22.
+  await expect(page.locator('.attestations')).toContainText('which falls on 30 January 2026');
+  await expect(page.locator('.attestations')).not.toContainText('2026 in 2026');
+  await expect(page.locator('.attestations')).toContainText('17 January (Revised Julian)');
 
   await expect(page.locator('.life p').first()).toContainText('Born to a prosperous Coptic family');
   await expect(page.locator('.life a[data-prefetch="athanasius-of-alexandria"]')).toHaveCount(1);
@@ -249,11 +259,12 @@ test('dates and places read as one register, keyed by kind', async ({ page }) =>
 });
 
 test('a place keeps the note that says how far it is really fixed', async ({ page }) => {
-  // "the place of his death is not more closely fixed" is the finding. A
-  // coordinate without it looks certain, which is the one thing this corpus
-  // must never do.
-  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
-  await expect(page.locator('.fact-note')).toContainText('not more closely fixed');
+  // "Died during the Vandal siege of the city" is the finding that goes with
+  // the coordinate. A coordinate without it looks certain, which is the one
+  // thing this corpus must never do. (Nestorius carried the first such note;
+  // he is in the archive now.)
+  await page.goto('/saints/augustine-of-hippo', { waitUntil: 'networkidle' });
+  await expect(page.locator('.fact-note')).toContainText('Vandal siege');
 });
 
 test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
@@ -282,7 +293,7 @@ test('an address with no saint behind it is prose, not a red banner', async ({ p
 test('saving persists across a reload, and both Save buttons agree', async ({ page }) => {
   // The saint's page carries the bookmark (author, 2026-08-22); the calendar
   // hero still carries the text button. Same store, one state.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   const save = page.locator('.saint-head .bookmark');
   await expect(save).toHaveAttribute('aria-pressed', 'false');
@@ -303,12 +314,12 @@ test('saving persists across a reload, and both Save buttons agree', async ({ pa
 
 test('Continue reading reappears after a saint has been opened', async ({ page }) => {
   await ready(page);
-  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
 
   const shelf = page.locator('.shelves');
   await expect(shelf).toContainText('Continue reading');
-  await expect(shelf.locator('a[data-prefetch="nestorius"]')).toHaveCount(1);
+  await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
   // And it can be dismissed: a shelf the reader cannot clear is a nag.
   await shelf.locator('.shelf-remove').first().click();
@@ -322,7 +333,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
     return route.continue();
   });
 
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const link = page.locator('.hero-name a');
@@ -338,7 +349,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
 });
 
 test('the shared element is named once, on both sides of the navigation', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
   const names = () =>
@@ -373,7 +384,7 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
     return route.continue();
   });
 
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name a')).toBeVisible();
@@ -396,7 +407,7 @@ const facet = async (page, name) => {
 test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('[data-count]')).toHaveText('10');
+  await expect(page.locator('[data-count]')).toHaveText('8');
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Breadth of veneration is offered but is never the order the reader arrives
   // in: a corpus sorted by it would read as a ranking of importance.
@@ -418,16 +429,16 @@ test('card boxes come from the manifest, not from measuring the image', async ({
 
 test('filtering by church narrows the corpus and the count follows', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
+  await (await facet(page, 'churches')).getByLabel('Romanian').check();
 
-  await expect(page.locator('[data-count]')).toHaveText('3');
+  await expect(page.locator('[data-count]')).toHaveText('6');
   // The count is the corpus's answer; the DOM holds only the cards near the
-  // viewport, which at 360 px is fewer than three.
+  // viewport, which at 360 px is fewer than six.
   await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('10');
+  await expect(page.locator('[data-count]')).toHaveText('8');
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -436,12 +447,12 @@ test('Overlaps and Entirely within are different questions, and both are offered
   await page.locator('[data-from]').fill('240');
   await page.locator('[data-to]').fill('460');
 
-  // Nine lives touch 240–460; seven of them sit inside it. Paul of Thebes was
+  // Seven lives touch 240–460; five of them sit inside it. Paul of Thebes was
   // born in 220 and Moses the Hungarian has an open birth bound, so neither is
   // contained by a range both of them overlap.
-  await expect(page.locator('[data-count]')).toHaveText('9');
-  await page.locator('input[name="rangeMode"][value="within"]').check();
   await expect(page.locator('[data-count]')).toHaveText('7');
+  await page.locator('input[name="rangeMode"][value="within"]').check();
+  await expect(page.locator('[data-count]')).toHaveText('5');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
@@ -499,15 +510,15 @@ test('under reduced motion the filtered-out are gone, not gone slower', async ({
 
 test('Random saint stays inside the reader own filters', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
-  await expect(page.locator('[data-count]')).toHaveText('3');
+  await (await facet(page, 'churches')).getByLabel('Romanian').check();
+  await expect(page.locator('[data-count]')).toHaveText('6');
 
   await page.locator('[data-random]').click();
   await expect(page.locator('h1.saint-name')).toBeVisible();
-  // Whoever it landed on, the Coptic row says Venerated: a random saint the
+  // Whoever it landed on, the Romanian row says Venerated: a random saint the
   // reader's own filters exclude would look like the filters had failed.
-  const coptic = page.locator('.att', { hasText: 'Coptic Orthodox' });
-  await expect(coptic).toContainText('Venerated');
+  const romanian = page.locator('.att', { hasText: 'Romanian' });
+  await expect(romanian).toContainText('Venerated');
 });
 
 test('a card opens its saint, carrying the shared element with it', async ({ page }) => {
@@ -557,10 +568,10 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'months')).getByLabel('January').check();
 
-  // Anthony (17 January, Roman Catholic), Athanasius (18 January, Coptic
-  // 22 Tobi) and Paul of Thebes (15 January). Anthony's Julian feast lands on
-  // 30 January and Athanasius's Coptic one on 26 January, both still January,
-  // both arrived at by different arithmetic.
+  // Anthony (17 January), Athanasius (18 January) and Paul of Thebes (15
+  // January): in the Russian calendar the Julian dates land on the civil 30th,
+  // 31st and 28th, in the Romanian and Greek on the days of those names —
+  // all still January, arrived at by different arithmetic.
   await expect(page.locator('[data-count]')).toHaveText('3');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
@@ -569,29 +580,30 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   // The day panel rolls for 300 ms. A second click inside that window used to
   // find the *leaving* panel and append beside the entering one, so the day
   // showed an empty-day notice and a hero at once and the orphan outlived
-  // every navigation after it. 28 August is Augustine; 26 and 27 are empty.
+  // every navigation after it. 28 June is Augustine in the Russian calendar;
+  // 24 and 27 are empty.
   await ready(page);
-  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-22', { waitUntil: 'networkidle' });
   const days = page.locator('.week-strip button');
 
-  await days.nth(3).click();
+  await days.nth(5).click();
   await page.waitForTimeout(60);
-  await days.nth(4).click();
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await days.nth(6).click();
+  await expect(page.locator('h1')).toHaveText(/28 June 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.hero-name')).toHaveText('Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
   await days.nth(2).click();
-  await expect(page.locator('h1')).toHaveText(/26 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 June 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
 });
 
 test('the month replaces the week rather than opening beneath it', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const week = page.locator('.week-strip');
   const month = page.locator('.month-body');
@@ -630,7 +642,7 @@ test('the chevrons move a week, and a day is chosen by clicking it', async ({ pa
 });
 
 test('the two jump controls hold the left edge and carry names, not glyphs alone', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const jump = page.locator('.cal-jump button');
   await expect(jump).toHaveCount(2);
@@ -712,7 +724,7 @@ test('picking a date leaves the month open; only the button closes it', async ({
 });
 
 test('the month keeps the week edges where they were, and names itself in the gutter', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
   const weekPrev = await box('.cal-week .peek');
@@ -757,7 +769,7 @@ test('the month is the week grown taller: the day names do not move', async ({ p
   // Measured on the text rather than on its box: in the week a day name is a
   // flex item centred in its button, in the month a grid cell carrying the
   // padding itself, so the two boxes differ exactly where the glyphs do not.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const text = (sel) =>
@@ -786,7 +798,7 @@ test('the month spends its height on dates rather than on leading', async ({ pag
   // dates and the day names are both the utility face — so these measure the
   // same in either face, and an absolute assertion is safe here where one on
   // the index would be flaky.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -804,7 +816,7 @@ test('the month spends its height on dates rather than on leading', async ({ pag
 });
 
 test('the month unfurls out of the week and the page follows it down', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const heading = page.locator('h1');
   const closed = (await heading.boundingBox()).y;
@@ -832,7 +844,7 @@ test('the month unfurls out of the week and the page follows it down', async ({ 
 test('under reduced motion the month arrives whole, with no held height', async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const closed = (await page.locator('h1').boundingBox()).y;
 
@@ -1146,7 +1158,7 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
 });
 
 test('the month fades rather than appearing between two frames', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const month = page.locator('.cal-month');
   await page.locator('[data-month]').click();
@@ -1305,7 +1317,7 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
   // Two states, one geometry (author, 2026-08-22): the icon is the same box
   // either way, so pressing it moves nothing else on the page, and there is no
   // third, System, state to cycle through.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const header = page.locator('header.chrome');
@@ -1331,17 +1343,18 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
 
 test('the header carries no date, and the corner holds two controls', async ({ page }) => {
   // Today's date stood under the theme control from 2026-08-21 to 2026-08-22
-  // and is withdrawn; the corner is Select Tradition and the icon toggle, one
-  // line, and the bar is no taller than it was with the date (61 px desktop).
-  await ready(page, { calendar: 'eastern-orthodox' });
+  // and is withdrawn; the corner is the calendar control — which names the
+  // church the site reads — and the icon toggle, one line, and the bar is no
+  // taller than it was with the date (61 px desktop).
+  await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.chrome-today')).toHaveCount(0);
-  await expect(page.locator('#tradition-open')).toHaveText('Select Tradition');
+  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
   await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', /Switch to the (dark|light) theme/);
   const m = await page.evaluate(() => {
     const header = document.querySelector('header.chrome').getBoundingClientRect();
-    const open = document.querySelector('#tradition-open').getBoundingClientRect();
+    const open = document.querySelector('#church-open').getBoundingClientRect();
     const theme = document.querySelector('#theme-toggle').getBoundingClientRect();
     return {
       header: header.height,
@@ -1427,294 +1440,127 @@ test('the month peeks a column of the neighbouring month, on the grid own rows',
   await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 });
 
-/* ---- the tradition filter (author, 2026-08-21) -------------------------- */
+/* ---- the church chooser (author, 2026-08-22) ----------------------------- */
 
-/** The site-wide control (author, 2026-08-22): the panel under the header, with the plate unfolded. */
-const openFilter = async (page) => {
-  await page.locator('#tradition-open').click();
-  await expect(page.locator('#tradition-panel')).toBeVisible();
-  const advanced = page.locator('#tradition-panel [data-advanced]');
-  if ((await advanced.getAttribute('aria-expanded')) !== 'true') await advanced.click();
-  await expect(page.locator('#tradition-panel [data-plate] .plate-dot').first()).toBeVisible();
+/** The header's control, open. */
+const openChooser = async (page) => {
+  await page.locator('#church-open').click();
+  await expect(page.locator('#church-panel')).toBeVisible();
 };
 
-test('turning a tradition off empties the days it was the only one keeping', async ({ page }) => {
-  // 28 August 2026 is Augustine, and in this corpus he is Roman Catholic and
-  // nothing else. So the one church answers for the whole day, which is what
-  // makes this a test of the filter rather than of a coincidence.
+test('changing the calendar changes the day everywhere it is counted', async ({ page }) => {
+  // 28 June 2026 is Augustine in the Russian calendar — 15 June Julian — and
+  // in no other: the New Calendar churches keep him on the civil 15th. So the
+  // one church answers for the whole day, which is what makes this a test of
+  // the choice rather than of a coincidence.
   await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  await openFilter(page);
+  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
 
-  // Turning off the church whose calendar is showing takes the calendar with
-  // it: the page asks which of the remaining calendars to show (author,
-  // 2026-08-22), and nothing weekly or monthly shows until it is answered.
-  await page.locator('#tradition-panel [data-plate] [data-church="roman-catholic"]').click();
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toBeVisible();
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
-  await expect(page.locator('[data-gate] [data-calendar-choice="roman-catholic"]')).toHaveCount(0);
-  await page.locator('[data-gate] [data-calendar-choice="eastern-orthodox"]').click();
-
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
   // The day, the hero, and the density dots under that date in the strip: one
-  // selection, read everywhere, rather than in the one place someone remembered.
+  // choice, read everywhere, rather than in the one place someone remembered.
+  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(1);
-  await expect(page.locator('.empty-day')).toContainText('set aside');
+  await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
+  await expect(page.locator('.empty-day')).toContainText('another church');
   await expect(
-    page.locator('.week-row:not(.grain-side) [data-iso="2026-08-28"] .density i'),
+    page.locator('.week-row:not(.grain-side) [data-iso="2026-06-28"] .density i'),
   ).toHaveCount(0);
 
   // And in the month, which counts the same entries.
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
-  await expect(page.locator('.month-row:not(.grain-side) [data-iso="2026-08-28"] .density i'))
+  await expect(page.locator('.month-row:not(.grain-side) [data-iso="2026-06-28"] .density i'))
     .toHaveCount(0);
+
+  // Where the Greek calendar does keep him: the same menologion date, on the
+  // civil day of that name.
+  await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  expect((await page.locator('.hero-feasts li').allTextContents()).join(' | ')).toContain('15 June (Revised Julian)');
 });
 
-test('a communion turns its whole row and a rite its whole column', async ({ page }) => {
+test('the calendar is remembered, and the header changes it', async ({ page }) => {
+  // One choice, written once and read everywhere (author, 2026-08-22). The
+  // header's button names it, opens the three, and a press closes the panel
+  // and hands the focus back.
   await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await openFilter(page);
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  const open = page.locator('#church-open');
+  await expect(open).toHaveText('Russian calendar');
+  await open.click();
+  await expect(open).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.locator('#church-panel [data-church]')).toHaveCount(3);
+  await expect(page.locator('#church-panel [data-church="russian"]')).toHaveAttribute('aria-pressed', 'true');
+  expect(await page.evaluate(() => document.activeElement?.dataset?.church)).toBe('russian');
 
-  const pressed = (sel) => page.locator(`#tradition-panel [data-plate] ${sel}`).getAttribute('aria-pressed');
-  const headState = (sel) => page.locator(`#tradition-panel [data-plate] ${sel}`).getAttribute('data-state');
-
-  // A row, off and on again. Oriental Orthodox holds four churches.
-  await page.locator('#tradition-panel [data-plate] [data-communion="oriental-orthodox"]').click();
-  for (const id of ['coptic', 'armenian', 'ethiopian-eritrean', 'syriac-malankara']) {
-    expect(await pressed(`[data-church="${id}"]`)).toBe('false');
-  }
-  expect(await headState('[data-communion="oriental-orthodox"]')).toBe('off');
-  // Nothing else moved: a row toggle is a row toggle.
-  expect(await pressed('[data-church="eastern-orthodox"]')).toBe('true');
-
-  // A column, across communions. Byzantine is Eastern Catholic and Eastern
-  // Orthodox — one rite either side of a communion boundary, which is the
-  // adjacency the grid exists to show.
-  await page.locator('#tradition-panel [data-plate] [data-rite="byzantine"]').click();
-  expect(await pressed('[data-church="eastern-orthodox"]')).toBe('false');
-  expect(
-    await page.locator('#tradition-panel [data-plate] [data-church="eastern-catholic"]').first().getAttribute('aria-pressed'),
-  ).toBe('false');
-  expect(await pressed('[data-church="roman-catholic"]')).toBe('true');
-
-  // A row that is half on says so, and not in a third colour: Catholic still
-  // holds Roman Catholic and has lost Eastern Catholic.
-  expect(await headState('[data-communion="catholic"]')).toBe('some');
-});
-
-test('Eastern Catholic six cells are one switch', async ({ page }) => {
-  // Six positions from one registry entry (DESIGN.md §7b). Six independent
-  // switches would be six findings where the registry has one.
-  await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await openFilter(page);
-
-  const cells = page.locator('#tradition-panel [data-plate] [data-church="eastern-catholic"]');
-  await expect(cells).toHaveCount(6);
-  await cells.first().click();
-  for (let i = 0; i < 6; i++) {
-    await expect(cells.nth(i)).toHaveAttribute('aria-pressed', 'false');
-  }
-  // And it is named once, under the run, rather than six times.
-  await expect(
-    page.locator('#tradition-panel [data-plate] .plate-label', { hasText: 'Eastern Catholic' }),
-  ).toHaveCount(1);
-});
-
-test('the filter cells are a control, not the veneration mark', async ({ page }) => {
-  // Gold appears in exactly one place on this site and that place is a finding
-  // about a saint (DESIGN.md §2). A control shaped like the lattice is drawn in
-  // the register's own two values, and aria-pressed carries the state for
-  // anyone not reading them.
-  await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await openFilter(page);
-
-  await expect(page.locator('#tradition-panel [data-plate] circle')).toHaveCount(0);
-  const tokens = await page.evaluate(() => {
-    const root = getComputedStyle(document.documentElement);
-    const on = document.querySelector('#tradition-panel [data-plate] [aria-pressed="true"] .plate-disc');
-    return {
-      ink: root.getPropertyValue('--ink').trim(),
-      rule: root.getPropertyValue('--rule').trim(),
-      gold: root.getPropertyValue('--gold').trim(),
-      onColour: getComputedStyle(on).backgroundColor,
-    };
-  });
-  const rgb = (hex) => {
-    const n = parseInt(hex.slice(1), 16);
-    return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
-  };
-  expect(tokens.onColour).toBe(rgb(tokens.ink));
-  expect(tokens.onColour).not.toBe(rgb(tokens.gold));
-
-  await page.locator('#tradition-panel [data-plate] [data-church="roman-catholic"]').click();
-  const off = await page
-    .locator('#tradition-panel [data-plate] [data-church="roman-catholic"] .plate-disc')
-    .evaluate((el) => getComputedStyle(el).backgroundColor);
-  expect(off).toBe(rgb(tokens.rule));
-});
-
-test('a filter press leaves the focus on the cell that was pressed', async ({ page }) => {
-  // The plate is rebuilt on every press, which takes the focus off whatever was
-  // just pressed. A filter a keyboard reader can only press once is not a
-  // filter.
-  await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await openFilter(page);
-
-  await page.locator('#tradition-panel [data-plate] [data-church="coptic"]').focus();
-  await page.keyboard.press('Enter');
-  const focused = await page.evaluate(() => document.activeElement?.dataset?.church);
-  expect(focused).toBe('coptic');
-  await expect(page.locator('#tradition-panel [data-plate] [data-church="coptic"]')).toHaveAttribute(
-    'aria-pressed',
-    'false',
-  );
-});
-
-test('the selection is remembered, and the switch puts it back', async ({ page }) => {
-  // Show all went with the calendar's own filter (author, 2026-08-22); what
-  // puts a communion back is its switch in the header's control.
-  await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="catholic"]').click();
-  await expect(page.locator('#tradition-panel .communion-switch[data-communion="catholic"]')).toHaveAttribute('aria-pressed', 'false');
-  // The Roman Catholic calendar is no longer allowed, so the page asks again.
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toBeVisible();
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await expect(page.locator('#church-panel')).toBeHidden();
+  expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
+  await expect(open).toHaveText('Greek calendar');
+  await expect(page.locator('.empty-day')).toBeVisible();
 
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toBeVisible();
-  await expect(page.locator('#tradition-panel')).toBeHidden();
-
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="catholic"]').click();
-  await expect(page.locator('#tradition-panel .communion-switch[data-communion="catholic"]')).toHaveAttribute('aria-pressed', 'true');
-  // The calendar that was chosen before is still the one stored, so it comes
-  // straight back rather than asking a second time.
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toHaveCount(0);
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
+  await expect(page.locator('#church-open')).toHaveText('Greek calendar');
+  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
+  await expect(page.locator('[data-ask]')).toHaveCount(0);
 });
 
-test('an empty day says which of the three silences it is', async ({ page }) => {
-  // Three different facts, redrawn for one calendar at a time (author,
-  // 2026-08-22), and a reader is owed the difference between them. The corpus
-  // having nothing for a day is a statement about our sourcing; this calendar
-  // having nothing while another the reader keeps does is a fact about the
-  // choice above, and names the way to the others; commemorations held only
-  // by traditions set aside point at the header. Prose in ink in every case.
-  await ready(page, { calendar: 'eastern-orthodox' });
+test('an empty day says which of the two silences it is', async ({ page }) => {
+  // Two different facts (redrawn 2026-08-22 for one church of three), and a
+  // reader is owed the difference between them. The corpus having nothing for
+  // a day is a statement about our sourcing; this church's calendar having
+  // nothing while another of the three does is a fact about the choice above,
+  // and names the way to the others. Prose in ink in either case.
+  await ready(page);
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
 
-  // 28 August has Augustine, who is Roman Catholic here: nothing in the
-  // Eastern Orthodox calendar, one commemoration in another the reader keeps.
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('Nothing in the Eastern Orthodox calendar today');
-  await expect(page.locator('.empty-day')).toContainText('another calendar you keep');
+  // 15 June has Augustine in the Romanian and Greek calendars, by the New
+  // Calendar, and nothing in the Russian, which keeps him on the 28th.
+  await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('Nothing in the Russian calendar today');
+  await expect(page.locator('.empty-day')).toContainText('another church’s calendar');
   await expect(page.locator('.empty-day')).not.toContainText('The corpus grows folder by folder');
 
-  // Set the Catholic communion aside and the same day says so instead.
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="catholic"]').click();
-  await expect(page.locator('.empty-day')).toContainText('a tradition you have set aside');
-  await expect(page.locator('.empty-day')).toContainText('Select Tradition');
+  // Change to one that keeps him and the day fills.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="romanian"]').click();
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
 
-  // A day with nothing on it is still about the sourcing, whatever is kept.
+  // A day with nothing on it is still about the sourcing, whichever is kept.
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
-});
-
-test('nothing selected is its own silence', async ({ page }) => {
-  // No tradition means no calendar to offer: the prompt says so where the
-  // strip would be, and says where to select one.
-  await answered(page, []);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toContainText('No tradition is selected');
-  await expect(page.locator('[data-gate] [data-calendar-choice]')).toHaveCount(0);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
 });
 
 test('the question is asked once, and answering it is choosing', async ({ page }) => {
-  // Four communions and (advanced); Show all is withdrawn (author, 2026-08-22)
-  // — what stops the asking is any answer. Pressing a communion is one, and
-  // the calendar prompt that follows offers only that communion's calendars.
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.tradition-ask')).toBeVisible();
-  await expect(page.locator('[data-ask-choice]')).toHaveCount(4);
-  await expect(page.locator('[data-ask-choice="all"]')).toHaveCount(0);
-  await expect(page.locator('[data-ask] [data-advanced]')).toHaveText('(advanced)');
-  // Done belongs to the plate, which is several presses; a communion is one
-  // press and its own answer, so Done waits until advanced is opened.
-  await expect(page.locator('[data-ask] [data-done]')).toBeHidden();
+  // One question, not two (author, 2026-08-22): which calendar, by church —
+  // three choices and nothing under them. Pressing one is the answer: the
+  // question goes, the strip shows, and the choice is the site's.
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-ask]')).toBeVisible();
+  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(3);
+  await expect(page.locator('[data-advanced]')).toHaveCount(0);
+  await expect(page.locator('[data-ask-choice]')).toHaveCount(0);
+  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
 
-  await page.locator('[data-ask-choice="catholic"]').click();
-  await expect(page.locator('.tradition-ask')).toHaveCount(0);
-  const offered = await page.locator('[data-gate] [data-calendar-choice]').evaluateAll((els) =>
-    els.map((el) => el.dataset.calendarChoice),
-  );
-  expect(offered).toEqual(['roman-catholic', 'eastern-catholic']);
-  // Focus goes somewhere that still exists: the question the answer raised.
-  expect(await page.evaluate(() => document.activeElement?.dataset?.calendarChoice)).toBe('roman-catholic');
+  await page.locator('[data-ask] [data-church="romanian"]').click();
+  await expect(page.locator('[data-ask]')).toHaveCount(0);
+  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
+  await expect(page.locator('[data-which-name]')).toHaveText('The Romanian calendar');
+  // Focus goes somewhere that still exists: the strip's own chrome.
+  expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-today'))).toBe(true);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('romanian');
 
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.tradition-ask')).toHaveCount(0);
-});
-
-test('choosing one communion at the question filters the calendar to it', async ({ page }) => {
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('[data-ask-choice="eastern-orthodox"]').click();
-  await expect(page.locator('.tradition-ask')).toHaveCount(0);
-  // One communion, one church, one calendar: nothing to ask, so the strip
-  // shows at once, and Augustine — Roman Catholic in this corpus — is a
-  // commemoration in a tradition set aside, stated plainly.
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toHaveCount(0);
-  await expect(page.locator('[data-which-name]')).toHaveText('The Eastern Orthodox calendar');
-  await expect(page.locator('[data-which-change]')).toBeHidden();
-  await expect(page.locator('.empty-day')).toContainText('set aside');
-});
-
-test('the plate keeps its shape at 360 px and scrolls instead', async ({ page }) => {
-  // A grid that becomes a list on a phone is a second diagram to learn, and the
-  // shape is the thing being taught (author, 2026-08-21). So the lattice holds
-  // at every width and the reader moves along it — with the communion's name
-  // held at the edge, because a row whose head you have scrolled past is a row
-  // you cannot identify.
-  await page.setViewportSize({ width: 360, height: 780 });
-  await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await openFilter(page);
-
-  const shape = await page.evaluate(() => {
-    const plate = document.querySelector('.plate');
-    const scroll = document.querySelector('.plate-scroll');
-    const side = document.querySelector('.plate-side');
-    return {
-      display: getComputedStyle(plate).display,
-      columns: getComputedStyle(plate).gridTemplateColumns.split(' ').length,
-      wider: plate.scrollWidth > scroll.clientWidth,
-      scrollable: getComputedStyle(scroll).overflowX,
-      sticky: getComputedStyle(side).position,
-      labels: document.querySelectorAll('.plate-label').length,
-    };
-  });
-  // Seven rite columns and the communion's own, still a grid, still labelled.
-  expect(shape.display).toBe('grid');
-  expect(shape.columns).toBe(8);
-  expect(shape.labels).toBe(8);
-  expect(shape.wider).toBe(true);
-  expect(shape.scrollable).toBe('auto');
-  expect(shape.sticky).toBe('sticky');
-
-  // And the page itself does not overflow because of it: the scrolling is the
-  // region's, not the document's.
-  const overflow = await page.evaluate(
-    () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
-  );
-  expect(overflow).toBe(true);
+  await expect(page.locator('[data-ask]')).toHaveCount(0);
+  await expect(page.locator('#church-open')).toHaveText('Romanian calendar');
 });
 
 test('the peeked day sits on the same line as the days beside it', async ({ page }) => {
@@ -1749,7 +1595,7 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
   // A tall icon at full width put the saint's own name below the fold at
   // 360 px, which is the one thing a hero cannot do (author, 2026-08-21).
   await ready(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   // 85% of the width it took, which is a different measurement in each of the
@@ -1787,34 +1633,26 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
   await expect(page.locator('h1.saint-name')).toHaveText('Augustine of Hippo');
 });
 
-const ALL_CHURCHES = [
-  'roman-catholic', 'eastern-catholic', 'eastern-orthodox', 'coptic',
-  'armenian', 'ethiopian-eritrean', 'syriac-malankara',
-  'assyrian-church-of-the-east',
-];
-
 /**
- * A reader who has answered the first-visit question and chosen a calendar —
- * which is every visit after the first (author, 2026-08-22: one calendar at a
- * time, so a calendar test has to say which). Written before the page loads,
- * because the calendar decides whether to ask while it is rendering, and
- * seeded only where nothing is stored: this runs on every load including a
+ * A reader who has answered the first-visit question — which is every visit
+ * after the first (author, 2026-08-22: one church of three, and the calendar
+ * follows it, so a calendar test has to say which). Written before the page
+ * loads, because the calendar decides whether to ask while it is rendering,
+ * and seeded only where nothing is stored: this runs on every load including a
  * reload, and a test that reloads to check something was remembered would
- * otherwise be overwriting it on the way back in.
+ * otherwise be overwriting it on the way back in. Russian by default — the Old
+ * Calendar, so POPULATED (30 January) is Anthony's day.
  */
-const ready = (page, { traditions = ALL_CHURCHES, calendar = 'roman-catholic' } = {}) =>
+const ready = (page, { church = 'russian' } = {}) =>
   page.addInitScript(
-    ({ traditions, calendar }) => {
+    ({ church }) => {
       const key = 'gos-settings';
       const now = JSON.parse(localStorage.getItem(key) ?? '{}');
-      const next = { ...now };
-      if (!Array.isArray(now.traditions)) next.traditions = traditions;
-      if (typeof now.calendar !== 'string') next.calendar = calendar;
-      localStorage.setItem(key, JSON.stringify(next));
+      if (typeof now.church !== 'string') localStorage.setItem(key, JSON.stringify({ ...now, church }));
     },
-    { traditions, calendar },
+    { church },
   );
-const answered = (page, traditions = null) => ready(page, { traditions: traditions ?? ALL_CHURCHES });
+const answered = (page) => ready(page);
 
 test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
   // The reason the image came down to 85%. Augustine is the tallest icon in
@@ -1822,7 +1660,7 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
   // actually holds rather than one constructed for the test.
   await page.setViewportSize({ width: 360, height: 780 });
   await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const name = await page.locator('.hero-name').boundingBox();
   expect(name.y).toBeLessThan(780);
@@ -1830,44 +1668,44 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
 
 test('on a first visit the question clears the fold, and the day does not', async ({ page }) => {
   // The one deliberate exception to the rule above (author, 2026-08-21;
-  // revised 2026-08-22). A first visit is asked which traditions it keeps and
-  // then which calendar to see, and nothing weekly or daily shows until the
-  // second is answered: what has to be above the fold on that visit is the
-  // first question, all of its answers, and the start of the second. Every
+  // revised 2026-08-22). A first visit is asked which calendar it keeps, and
+  // nothing weekly or daily shows until it answers: what has to be above the
+  // fold on that visit is the question and all three of its answers. Every
   // visit after it is the test above.
   await page.setViewportSize({ width: 360, height: 780 });
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  const ask = await page.locator('.tradition-ask').boundingBox();
-  const choices = await page.locator('[data-ask-choice]').last().boundingBox();
-  const prompt = await page.locator('[data-gate] .ask-heading').boundingBox();
+  const ask = await page.locator('[data-ask]').boundingBox();
+  const choices = await page.locator('[data-ask] [data-church]').last().boundingBox();
 
   expect(ask.y + ask.height).toBeLessThan(780);
   expect(choices.y + choices.height).toBeLessThan(780);
-  expect(prompt.y + prompt.height).toBeLessThan(780);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
 });
 
 /* ---- one swap primitive (src/ui/swap.js) -------------------------------- */
 
-test('a filter press repaints the day in place rather than rolling it', async ({ page }) => {
-  // The movement decides, not the gesture (DESIGN.md §5b). A filter change has
-  // not travelled anywhere in time, so the panel repaints where it stands —
-  // it used to roll upward as if the reader had stepped forward a day.
-  // The Eastern Orthodox calendar, so that setting Roman Catholic aside empties
-  // the day rather than taking the calendar with it.
-  await ready(page, { calendar: 'eastern-orthodox' });
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="catholic"]').click();
-  await expect(page.locator('.empty-day')).toContainText('set aside');
-  await page.locator('#tradition-panel .communion-switch[data-communion="catholic"]').click();
-  await expect(page.locator('.empty-day')).toContainText('another calendar you keep');
+test('a calendar change repaints the day in place rather than rolling it', async ({ page }) => {
+  // The movement decides, not the gesture (DESIGN.md §5b). A change of
+  // calendar has not travelled anywhere in time, so the panel repaints where
+  // it stands — it used to roll upward as if the reader had stepped forward a
+  // day. 28 June is Augustine's in the Russian calendar and nobody's in the
+  // other two, so the change empties the day rather than taking it elsewhere.
+  await ready(page);
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await expect(page.locator('.empty-day')).toContainText('another church');
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
 
   // Read synchronously after the click, inside the window a roll would occupy.
+  await openChooser(page);
   const after = await page.evaluate(() => {
-    document.querySelector('#tradition-panel .communion-switch[data-communion="catholic"]').click();
+    document.querySelector('#church-panel [data-church="romanian"]').click();
     return {
       leaving: document.querySelectorAll('.day-panel.slot-leaving').length,
       entering: document.querySelectorAll('.day-panel.slot-entering').length,
@@ -1875,7 +1713,8 @@ test('a filter press repaints the day in place rather than rolling it', async ({
     };
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
-  // The repaint itself still happened: Augustine is filtered away.
+  // The repaint itself still happened: Augustine is not in the Romanian
+  // calendar on this civil day.
   await expect(page.locator('.empty-day')).toHaveCount(1);
 });
 
@@ -1885,11 +1724,11 @@ test('the rolling day leaves an inert copy behind it', async ({ page }) => {
   // the same spot — aria-hidden, out of the tab order, out of the pointer's
   // reach, or its links swallow the click meant for the arriving day.
   await answered(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
 
   const marked = await page.evaluate(() => {
-    document.querySelector('.week-strip [data-iso="2026-08-26"]').click();
+    document.querySelector('.week-strip [data-iso="2026-06-26"]').click();
     const leaving = document.querySelector('.day-panel.slot-leaving');
     if (!leaving) return null;
     return {
@@ -2224,8 +2063,8 @@ test('the × returns the reader to the Index as they left it, and so does the br
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const page = await ctx.newPage();
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
-  await expect(page.locator('[data-count]')).toHaveText('3');
+  await (await facet(page, 'churches')).getByLabel('Romanian').check();
+  await expect(page.locator('[data-count]')).toHaveText('6');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
 
@@ -2244,8 +2083,8 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('h1.saint-name')).toHaveText(opened);
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
-  await expect(page.locator('[data-count]')).toHaveText('3');
-  await expect(page.locator('input[name="churches"][value="coptic"]')).toBeChecked();
+  await expect(page.locator('[data-count]')).toHaveText('6');
+  await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
@@ -2253,12 +2092,12 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
-  await expect(page.locator('[data-count]')).toHaveText('3');
+  await expect(page.locator('[data-count]')).toHaveText('6');
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
   // The nav link is a fresh Index.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('10');
+  await expect(page.locator('[data-count]')).toHaveText('8');
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -2320,153 +2159,96 @@ test('the saint page puts the register beside the image on desktop, the body ben
 
 /* ---- the 2026-08-22 round, Phase 2: the header, the selection, one calendar -- */
 
-test('the first visit is asked its traditions, then which calendar, and sees no strip until it answers', async ({ page }) => {
-  // Addendum H7–H8. Two questions in the page's flow, in that order, and the
-  // week, the date and the day stay hidden until the second is answered. An
-  // unanswered reader keeps every tradition, so the second offers every
-  // calendar; answering Catholic narrows it to the Catholic communion's two.
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-ask]')).toBeVisible();
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toBeVisible();
-  await expect(page.locator('[data-gate] [data-calendar-choice]')).toHaveCount(8);
+test('the first visit is asked which calendar, and sees no strip until it answers', async ({ page }) => {
+  // Addendum H7–H8, redrawn for one church of three (author, 2026-08-22): one
+  // question, standing where the strip will stand, and the week, the date and
+  // the day stay hidden until it is answered. The answer is the site's.
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-gate] [data-ask]')).toBeVisible();
+  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(3);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
   await expect(page.locator('.week-strip')).toBeHidden();
-  const order = await page.evaluate(() => {
-    const a = document.querySelector('[data-ask]').getBoundingClientRect();
-    const g = document.querySelector('[data-gate] [data-calendar-ask]').getBoundingClientRect();
-    return g.top >= a.bottom;
-  });
-  expect(order).toBe(true);
+  await expect(page.locator('#church-open')).toHaveText('Choose a calendar');
 
-  await page.locator('[data-ask-choice="catholic"]').click();
+  await page.locator('[data-ask] [data-church="russian"]').click();
   await expect(page.locator('[data-ask]')).toHaveCount(0);
-  await expect(page.locator('[data-gate] [data-calendar-choice]')).toHaveCount(2);
-  await page.locator('[data-gate] [data-calendar-choice="roman-catholic"]').click();
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
   await expect(page.locator('.week-strip')).toBeVisible();
-  await expect(page.locator('[data-which-name]')).toHaveText('The Roman Catholic calendar');
+  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
   await expect(page.locator('[data-which-change]')).toBeVisible();
   await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
-  expect(stored.traditions).toEqual(['roman-catholic', 'eastern-catholic']);
-  expect(stored.calendar).toBe('roman-catholic');
+  expect(stored.church).toBe('russian');
+  expect(stored.traditions).toBeUndefined();
 });
 
-test('a selection that allows one calendar is not asked, and the change control hides', async ({ page }) => {
-  // A question with one answer is not a question (DESIGN.md §5b).
-  await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ traditions: ['eastern-orthodox'] })),
-  );
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toHaveCount(0);
-  await expect(page.locator('[data-which-name]')).toHaveText('The Eastern Orthodox calendar');
-  await expect(page.locator('[data-which-change]')).toBeHidden();
-  await expect(page.locator('.week-strip')).toBeVisible();
-});
-
-test('the prompt offers only the calendars the traditions allow, and a stored one outside them is asked again', async ({ page }) => {
-  // A calendar chosen earlier is kept while the selection does not allow it,
-  // and comes back when the selection does (lib/tradition.js); in between the
-  // page asks, from what is allowed.
-  await ready(page, { traditions: ['roman-catholic', 'eastern-catholic'], calendar: 'eastern-orthodox' });
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  const offered = await page.locator('[data-gate] [data-calendar-choice]').evaluateAll((els) =>
-    els.map((el) => el.dataset.calendarChoice),
-  );
-  expect(offered).toEqual(['roman-catholic', 'eastern-catholic']);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
-
-  // Widen the selection from the header: Eastern Orthodox back on, and the
-  // calendar chosen earlier is the one that shows, without asking.
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="eastern-orthodox"]').click();
-  await expect(page.locator('[data-gate] [data-calendar-ask]')).toHaveCount(0);
-  await expect(page.locator('[data-which-name]')).toHaveText('The Eastern Orthodox calendar');
-});
-
-test('the control turns communions by switch, unfolds the plate under advanced, and says when a row is half on', async ({ page }) => {
-  // Addendum H7, answer 2: four communion switches as well as the plate. A
-  // switch is on, off, or mixed — aria-pressed carries all three — and the
-  // Index under it follows every press.
+test('the header control names the calendar, offers the three, and the Index follows every press', async ({ page }) => {
+  // Addendum H7 redrawn: one choice in place of four switches and the plate.
+  // The Index under it keeps the chosen church's saints and names what that
+  // sets aside, never silently dropping anyone.
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-count]')).toHaveText('10');
+  await expect(page.locator('[data-count]')).toHaveText('8');
   await expect(page.locator('[data-set-aside]')).toBeHidden();
 
-  const open = page.locator('#tradition-open');
+  const open = page.locator('#church-open');
+  await expect(open).toHaveText('Russian calendar');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('#tradition-panel')).toBeVisible();
-  await expect(page.locator('#tradition-panel .communion-switch')).toHaveCount(4);
-  await expect(page.locator('#tradition-panel [data-plate-box]')).toBeHidden();
-  expect(await page.evaluate(() => document.activeElement?.dataset?.communion)).toBe('catholic');
+  await expect(page.locator('#church-panel [data-church]')).toHaveCount(3);
+  await expect(page.locator('#church-panel [data-advanced]')).toHaveCount(0);
 
-  for (const id of ['eastern-orthodox', 'oriental-orthodox', 'church-of-the-east']) {
-    await page.locator(`#tradition-panel .communion-switch[data-communion="${id}"]`).click();
-    await expect(page.locator(`#tradition-panel .communion-switch[data-communion="${id}"]`)).toHaveAttribute('aria-pressed', 'false');
-  }
-  // Catholic venerates six of the ten; the other four are counted and named.
+  // Romanian keeps six of the eight — the two Kyiv Caves saints are not in
+  // the Patriarchate's calendar — and the two are counted and named.
+  await page.locator('#church-panel [data-church="romanian"]').click();
+  await expect(page.locator('#church-panel')).toBeHidden();
+  expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
+  await expect(open).toHaveText('Romanian calendar');
   await expect(page.locator('[data-count]')).toHaveText('6');
-  await expect(page.locator('[data-set-aside]')).toContainText('4 saints are venerated only in traditions you have set aside');
+  await expect(page.locator('[data-set-aside]')).toContainText('2 saints are not in the Romanian calendar');
 
-  await page.locator('#tradition-panel [data-advanced]').click();
-  await expect(page.locator('#tradition-panel [data-plate] .plate-dot')).toHaveCount(13);
-  await page.locator('#tradition-panel [data-plate] [data-church="eastern-catholic"]').first().click();
-  await expect(page.locator('#tradition-panel .communion-switch[data-communion="catholic"]')).toHaveAttribute('aria-pressed', 'mixed');
-  await expect(page.locator('#tradition-panel .communion-switch[data-communion="catholic"]')).toHaveAttribute('data-state', 'mixed');
-
-  await page.locator('#tradition-panel [data-done]').click();
-  await expect(page.locator('#tradition-panel')).toBeHidden();
-  expect(await page.evaluate(() => document.activeElement?.id)).toBe('tradition-open');
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).traditions)).toEqual(['roman-catholic']);
-});
-
-test('the Index keeps the reader traditions and names what it sets aside', async ({ page }) => {
-  // Addendum H7. Venerated in none of the selected churches means not on the
-  // grid; with everything selected nothing is filtered, because a figure every
-  // church refuses is still a figure in the corpus.
-  await ready(page, { traditions: ['roman-catholic', 'eastern-catholic'] });
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-count]')).toHaveText('6');
-  await expect(page.locator('[data-set-aside]')).toContainText('4 saints');
-  await expect(page.locator('.index-name', { hasText: 'Nestorius' })).toHaveCount(0);
-
-  // The Church of the East venerates Nestorius: one switch, one more saint.
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel .communion-switch[data-communion="church-of-the-east"]').click();
+  // Greek keeps seven: John the Long-suffering is in the Synaxaristis, Moses
+  // the Hungarian is not.
+  await open.click();
+  await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('7');
-  await expect(page.locator('[data-set-aside]')).toContainText('3 saints');
+  await expect(page.locator('[data-set-aside]')).toContainText('One saint is not in the Greek calendar');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
-test('the saint page reads the reader traditions first and reveals the rest for that page only', async ({ page }) => {
-  // Addendum H9. Only the register filters; the reveal resets on the next
-  // saint opened.
-  await ready(page, { traditions: ['roman-catholic'] });
+test('the saint page reads the reader church first and reveals the other two for that page only', async ({ page }) => {
+  // Addendum H9 redrawn. Only the register filters; the reveal resets on the
+  // next saint opened.
+  await ready(page, { church: 'romanian' });
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-veneration] > .attestations .att')).toHaveCount(1);
-  await expect(page.locator('[data-veneration] > .attestations .att-church')).toHaveText('Roman Catholic');
+  await expect(page.locator('[data-veneration] > .attestations .att-church')).toHaveText('Romanian');
   const reveal = page.locator('[data-reveal]');
-  await expect(reveal).toHaveText('See other traditions (7)');
+  await expect(reveal).toHaveText('See the other churches (2)');
   await expect(page.locator('.attestations-other .att')).toHaveCount(0);
 
   await reveal.click();
-  await expect(page.locator('.attestations-other .att')).toHaveCount(7);
-  await expect(page.locator('[data-reveal]')).toHaveText('Hide other traditions');
+  await expect(page.locator('.attestations-other .att')).toHaveCount(2);
+  await expect(page.locator('[data-reveal]')).toHaveText('Hide the other churches');
   expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-reveal'))).toBe(true);
 
-  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-reveal]')).toHaveText('See other traditions (7)');
+  // A saint the Romanian calendar does not keep: the row says undocumented,
+  // with the check that was made, and the reveal has reset.
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-veneration] > .attestations .att')).toHaveClass(/att-undocumented/);
+  await expect(page.locator('[data-veneration] > .attestations .att-note')).toContainText('checked 2026-08-22');
+  await expect(page.locator('[data-reveal]')).toHaveText('See the other churches (2)');
   await expect(page.locator('.attestations-other .att')).toHaveCount(0);
+});
 
-  // Everything selected: nothing to hold back, and no button.
-  await page.locator('#tradition-open').click();
-  for (const id of ['eastern-orthodox', 'oriental-orthodox', 'church-of-the-east']) {
-    await page.locator(`#tradition-panel .communion-switch[data-communion="${id}"]`).click();
-  }
-  await page.locator('#tradition-panel [data-advanced]').click();
-  await page.locator('#tradition-panel [data-plate] [data-church="eastern-catholic"]').first().click();
+test('before a church is chosen the saint page shows all three, and holds nothing back', async ({ page }) => {
+  // No church chosen keeps everything: a filter that hid anyone before the
+  // question was answered would be adjudicating by accident.
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-veneration] .att')).toHaveCount(3);
   await expect(page.locator('[data-reveal]')).toHaveCount(0);
-  await expect(page.locator('[data-veneration] .att')).toHaveCount(8);
+  await expect(page.locator('[data-veneration] .att-church').first()).toHaveText('Russian');
 });
 
 test('the theme follows the system until it is touched, and holds once it is', async ({ browser }) => {
@@ -2502,7 +2284,7 @@ test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async (
   // mark said nothing and is removed, and gold — spent only on it — is spent
   // nowhere until a new signature element is chosen. Four routes; every
   // element's computed colours. A reintroduction anywhere fails here by name.
-  await ready(page, { calendar: 'eastern-orthodox' });
+  await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const gold = await page.evaluate(() => {
     const hex = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();
@@ -2527,7 +2309,7 @@ test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async (
   }
 });
 
-test('no axe violations on the first visit, with both questions standing', async ({ page }) => {
+test('no axe violations on the first visit, with the question standing', async ({ page }) => {
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-ask]')).toBeVisible();
   const results = await new AxeBuilder({ page })
@@ -2537,8 +2319,7 @@ test('no axe violations on the first visit, with both questions standing', async
   // And with the header's control open over the Index.
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await page.locator('#tradition-open').click();
-  await page.locator('#tradition-panel [data-advanced]').click();
+  await page.locator('#church-open').click();
   const open = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
     .analyze();

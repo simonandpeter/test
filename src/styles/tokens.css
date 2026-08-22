@@ -17,18 +17,6 @@
   --field: #dfdcd1; /* recessed panel interior only — never a page background */
   --veil: rgba(229, 228, 221, 0.8);
 
-  /* The veneration glyph's colour contract (DESIGN.md §7). The component
-     itself holds no colour value at all: it reads these four, so a repalette
-     or a second theme is a token change and never a code change.
-
-     --glyph-attested is the gold, and gold is spent nowhere else (§2).
-     Refusal and attestation are told apart by value, undocumented by size as
-     well as value, so all three survive greyscale. Do not let the refused
-     opacity drift up toward an attested cell's. */
-  --glyph-attested: var(--gold);
-  --glyph-ink: var(--ink);
-  --glyph-refused-opacity: 0.14;
-  --glyph-undoc-opacity: 0.3;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -76,8 +64,6 @@ html.dark {
 
   /* Ink is lighter in vigil mode and the ground is warm rather than white, so
      both marks need a little more weight to hold the same reading. */
-  --glyph-refused-opacity: 0.18;
-  --glyph-undoc-opacity: 0.36;
 
   color-scheme: dark;
 }

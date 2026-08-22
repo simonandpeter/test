@@ -34,24 +34,7 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
-      "status": "venerated",
-      "feast": {
-        "day": 13,
-        "month": 9,
-        "calendar": "gregorian"
-      },
-      "titles": [
-        "Bishop and Doctor of the Church"
-      ],
-      "source": {
-        "text": "Roman Martyrology",
-        "year": 2004,
-        "note": "Moved to 13 September in the 1969 revision of the General Roman Calendar, from 27 January."
-      }
-    },
-    {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 13,
@@ -59,37 +42,51 @@
         "calendar": "julian"
       },
       "titles": [
-        "Archbishop of Constantinople",
-        "Golden-mouthed"
+        "Hierarch",
+        "Archbishop of Constantinople"
+      ],
+      "rank": "vigil",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 ноября ст. ст.; «Свт. Иоанна Златоустого, архиепископа Константинопольского (407)»",
+        "url": "https://days.pravoslavie.ru/Days/20261113.html",
+        "year": 2026
+      },
+      "note": "All-night vigil: «Совершается всенощное бдение»."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Archbishop of Constantinople"
       ],
       "source": {
-        "text": "The Prologue of Ohrid, Nikolai Velimirović",
-        "note": "Also commemorated on 30 January among the Three Holy Hierarchs, and on 27 January for the translation of his relics."
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 13 November; “†) St. John Chrysostom, archbishop of Constantinople, and his mother, St. Anthusa”",
+        "url": "https://basilica.ro/en/orthodox-calendar-november-13/",
+        "year": 2026
+      },
+      "note": "Marked †) in the Patriarchate’s calendar. Also 27 and 30 January."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Archbishop of Constantinople"
+      ],
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Νοεμβρίου; «Άγιος Ιωάννης ο Χρυσόστομος Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/13/index.aspx",
+        "year": 2026
       }
-    },
-    {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "coptic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
     }
   ],
   "locations": [
@@ -121,8 +118,7 @@
   ],
   "historicity": "attested",
   "related": [
-    "athanasius-of-alexandria",
-    "nestorius"
+    "athanasius-of-alexandria"
   ],
   "text": {
     "life": "life.md"

@@ -191,37 +191,31 @@ header.chrome .chrome-corner {
   gap: var(--space-2);
 }
 
-.tradition-open {
+/* The calendar control (author, 2026-08-22): names the church the site reads
+   and opens the chooser beneath the header. It was Select Tradition, opening
+   four communion switches and the plate, until the traditions went. */
+.church-open {
   white-space: nowrap;
   color: var(--ink-soft);
   padding: var(--space-1) var(--space-2);
 }
 
-.tradition-open[aria-expanded='true'] {
+.church-open[aria-expanded='true'] {
   color: var(--ink);
   background: var(--field);
 }
 
 /* The chooser's panel, under the header and across the page, in the flow — a
    disclosure, not a dialogue: whatever page is open stays under it. */
-.tradition-panel {
+.church-panel {
   border-bottom: 1px solid var(--rule);
   background: var(--field);
 }
 
-.tradition-panel-inner {
+.church-panel-inner {
   max-width: 72ch;
   margin: 0 auto;
   padding: var(--space-4) var(--space-4) var(--space-6);
-}
-
-.tradition-heading {
-  font-size: 21px;
-  margin-bottom: var(--space-2);
-}
-
-.tradition-lede {
-  margin-bottom: var(--space-3);
 }
 
 .site-name {

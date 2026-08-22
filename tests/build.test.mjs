@@ -19,10 +19,10 @@ const saint = (over = {}) => ({
   display_name: 'Test Saint',
   attestations: [
     {
-      church: 'roman-catholic',
+      church: 'russian',
       status: 'venerated',
       feast: { day: 21, month: 1, calendar: 'gregorian' },
-      source: { text: 'Roman Martyrology', year: 2004 },
+      source: { text: 'A test calendar', year: 2026 },
     },
   ],
   ...over,
@@ -277,10 +277,10 @@ test('a feast day that cannot exist in its calendar fails', async () => {
     'test-saint': saint({
       attestations: [
         {
-          church: 'roman-catholic',
+          church: 'russian',
           status: 'venerated',
           feast: { day: 30, month: 2, calendar: 'gregorian' },
-          source: { text: 'Roman Martyrology' },
+          source: { text: 'A test calendar' },
         },
       ],
     }),
@@ -288,15 +288,15 @@ test('a feast day that cannot exist in its calendar fails', async () => {
   assert.match(messages(r), /30\/2 does not exist in the gregorian calendar/);
 });
 
-test('the sixth epagomenal day is accepted, because it does exist', async () => {
+test('a Revised Julian leap day is accepted, because it does exist', async () => {
   const r = await buildWith({
     'test-saint': saint({
       attestations: [
         {
-          church: 'coptic',
+          church: 'romanian',
           status: 'venerated',
-          feast: { day: 6, month: 13, calendar: 'coptic' },
-          source: { text: 'Coptic Synaxarium' },
+          feast: { day: 29, month: 2, calendar: 'revised-julian' },
+          source: { text: 'A test calendar' },
         },
       ],
     }),
@@ -307,7 +307,7 @@ test('the sixth epagomenal day is accepted, because it does exist', async () => 
 test('a veneration or a refusal without a source fails', async () => {
   for (const status of ['venerated', 'not-venerated']) {
     const r = await buildWith({
-      'test-saint': saint({ attestations: [{ church: 'roman-catholic', status }] }),
+      'test-saint': saint({ attestations: [{ church: 'russian', status }] }),
     });
     assert.match(messages(r), /missing required field "source"/, status);
   }
@@ -316,7 +316,7 @@ test('a veneration or a refusal without a source fails', async () => {
 test('undocumented may stand without a source, which is the point of it', async () => {
   const r = await buildWith({
     'test-saint': saint({
-      attestations: [{ church: 'roman-catholic', status: 'undocumented' }],
+      attestations: [{ church: 'russian', status: 'undocumented' }],
     }),
   });
   assert.deepEqual(r.errors, []);
@@ -328,7 +328,7 @@ test('a feast cannot be attached to a refusal or a gap', async () => {
       'test-saint': saint({
         attestations: [
           {
-            church: 'roman-catholic',
+            church: 'russian',
             status,
             feast: { day: 21, month: 1, calendar: 'gregorian' },
             source: { text: 'somewhere' },
@@ -341,14 +341,14 @@ test('a feast cannot be attached to a refusal or a gap', async () => {
 });
 
 test('a paschal feast with no computus anywhere fails', async () => {
-  // eastern-catholic has a default, so this uses a church without one by
-  // blanking it would not work — instead check the message appears when the
-  // feast omits its computus and the registry default is absent.
+  // Every church in the registry carries a default computus, so a paschal
+  // feast that omits its own still resolves; the failure for a church without
+  // one is exercised by lib/feasts.js's own test.
   const r = await buildWith({
     'test-saint': saint({
       attestations: [
         {
-          church: 'roman-catholic',
+          church: 'russian',
           status: 'venerated',
           feast: { calendar: 'paschal', offset: 0 },
           source: { text: 'somewhere' },
@@ -356,7 +356,7 @@ test('a paschal feast with no computus anywhere fails', async () => {
       ],
     }),
   });
-  // roman-catholic does carry a default computus, so this one must succeed.
+  // russian carries a default computus, so this one must succeed.
   assert.deepEqual(r.errors, []);
   assert.equal(r.manifest[0].attestations[0].feast.calendar, 'paschal');
 });

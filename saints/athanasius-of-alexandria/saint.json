@@ -39,23 +39,7 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
-      "status": "venerated",
-      "feast": {
-        "day": 2,
-        "month": 5,
-        "calendar": "gregorian"
-      },
-      "titles": [
-        "Bishop and Doctor of the Church"
-      ],
-      "source": {
-        "text": "Roman Martyrology",
-        "year": 2004
-      }
-    },
-    {
-      "church": "eastern-orthodox",
+      "church": "russian",
       "status": "venerated",
       "feast": {
         "day": 18,
@@ -63,44 +47,54 @@
         "calendar": "julian"
       },
       "titles": [
+        "Hierarch",
+        "the Great"
+      ],
+      "rank": "six-stichera",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 января ст. ст.; «Святители Афанасия и Кирилла Александрийские»",
+        "url": "https://days.pravoslavie.ru/Days/20260118.html",
+        "year": 2026
+      },
+      "note": "Commemorated with St Cyril of Alexandria; «Совершается служба на шесть»."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "titles": [
         "the Great",
         "Archbishop of Alexandria"
       ],
       "source": {
-        "text": "The Prologue of Ohrid, Nikolai Velimirović",
-        "note": "Commemorated with Cyril of Alexandria on 18 January."
-      }
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 18 January; “† St. Athanasius the Great and St. Cyril, archbishops of Alexandria”",
+        "url": "https://basilica.ro/en/orthodox-calendar-january-18/",
+        "year": 2026
+      },
+      "note": "Commemorated with St Cyril of Alexandria; marked † in the Patriarchate’s calendar. Also 2 May."
     },
     {
-      "church": "coptic",
+      "church": "greek",
       "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
       "titles": [
-        "the Apostolic"
+        "the Great",
+        "Patriarch of Alexandria"
       ],
       "source": {
-        "text": "Coptic Synaxarium",
-        "note": "Counted among the Coptic patriarchs of Alexandria. The Synaxarium date is not recorded here because it has not been verified for this build."
-      }
-    },
-    {
-      "church": "eastern-catholic",
-      "status": "undocumented"
-    },
-    {
-      "church": "armenian",
-      "status": "undocumented"
-    },
-    {
-      "church": "ethiopian-eritrean",
-      "status": "undocumented"
-    },
-    {
-      "church": "syriac-malankara",
-      "status": "undocumented"
-    },
-    {
-      "church": "assyrian-church-of-the-east",
-      "status": "undocumented"
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 18 Ιανουαρίου; «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with St Cyril of Alexandria."
     }
   ],
   "locations": [
@@ -132,8 +126,7 @@
   "historicity": "attested",
   "related": [
     "anthony-the-great",
-    "john-chrysostom",
-    "nestorius"
+    "john-chrysostom"
   ],
   "text": {
     "life": "life.md"

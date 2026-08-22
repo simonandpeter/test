@@ -95,8 +95,8 @@
           "additionalProperties": false,
           "properties": {
             "day": { "type": "integer", "minimum": 1, "maximum": 31 },
-            "month": { "type": "integer", "minimum": 1, "maximum": 13 },
-            "calendar": { "enum": ["gregorian", "julian", "coptic", "ethiopian"] },
+            "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+            "calendar": { "enum": ["gregorian", "julian", "revised-julian"] },
             "note": { "type": "string" }
           }
         },
@@ -124,6 +124,10 @@
         "status": { "enum": ["venerated", "not-venerated", "undocumented"] },
         "feast": { "$ref": "#/$defs/feast" },
         "titles": { "type": "array", "items": { "type": "string" } },
+        "rank": {
+          "$comment": "The typikon's rank of the service this church keeps for the figure, where the source states it — vigil, polyeleos, great doxology, six stichera, or a simple service. It is what the red-letter idiom is for in this tradition, and it is a sourced editorial datum, not an inference from a date.",
+          "enum": ["vigil", "polyeleos", "great-doxology", "six-stichera", "simple"]
+        },
         "source": { "$ref": "#/$defs/source" },
         "note": { "type": "string" }
       },

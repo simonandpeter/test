@@ -2,14 +2,32 @@
   "slug": "christopher",
   "display_name": "Christopher",
   "names": [
-    { "form": "Χριστόφορος", "lang": "grc", "note": "Greek, 'Christ-bearer'" },
-    { "form": "Christophorus", "lang": "la" },
-    { "form": "Reprobus", "lang": "la", "note": "The name given in some Latin recensions before his baptism." }
+    {
+      "form": "Χριστόφορος",
+      "lang": "grc",
+      "note": "Greek, 'Christ-bearer'"
+    },
+    {
+      "form": "Christophorus",
+      "lang": "la"
+    },
+    {
+      "form": "Reprobus",
+      "lang": "la",
+      "note": "The name given in some Latin recensions before his baptism."
+    }
   ],
   "sex": "male",
-  "types": ["martyr"],
+  "types": [
+    "martyr"
+  ],
   "dates": {
-    "birth": { "earliest": null, "latest": null, "display": null, "basis": "unknown" },
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
     "death": {
       "earliest": 249,
       "latest": 251,
@@ -20,33 +38,63 @@
   },
   "attestations": [
     {
-      "church": "roman-catholic",
+      "church": "russian",
       "status": "venerated",
-      "feast": { "day": 25, "month": 7, "calendar": "gregorian" },
-      "titles": ["Martyr"],
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Martyr"
+      ],
       "source": {
-        "text": "Roman Martyrology",
-        "year": 2004,
-        "note": "His feast was removed from the General Roman Calendar in the 1969 revision, on the grounds that little is historically established about him beyond the fact of an early cult. He remains in the Martyrology and his veneration was never withdrawn, so this is recorded as 'venerated'. Removal from a calendar and a finding of non-veneration are different things, and collapsing them here would misrepresent both."
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст.; «Мч. Христофора»",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
       }
     },
     {
-      "church": "eastern-orthodox",
+      "church": "romanian",
       "status": "venerated",
-      "feast": { "day": 9, "month": 5, "calendar": "julian" },
-      "titles": ["Martyr"],
-      "source": { "text": "The Prologue of Ohrid, Nikolai Velimirović" }
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Martyr",
+        "of Lycia"
+      ],
+      "source": {
+        "text": "Basilica, the Romanian Patriarchate’s news agency — Orthodox calendar, 9 May; “Martyr Christopher of Lycia”",
+        "url": "https://basilica.ro/en/orthodox-calendar-may-9/",
+        "year": 2026
+      }
     },
-    { "church": "eastern-catholic", "status": "undocumented" },
-    { "church": "coptic", "status": "undocumented" },
-    { "church": "armenian", "status": "undocumented" },
-    { "church": "ethiopian-eritrean", "status": "undocumented" },
-    { "church": "syriac-malankara", "status": "undocumented" },
-    { "church": "assyrian-church-of-the-east", "status": "undocumented" }
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "titles": [
+        "Great Martyr"
+      ],
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 9 Μαΐου; «Άγιος Χριστόφορος ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      }
+    }
   ],
   "locations": [],
   "historicity": "legendary",
   "related": [],
-  "text": { "life": "life.md" },
+  "text": {
+    "life": "life.md"
+  },
   "images": []
 }
