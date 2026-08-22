@@ -766,10 +766,47 @@ The Index grid sits in the standard 72ch content column, which is two cards
 wide on a desktop. That is DESIGN.md §5 built exactly; widening the column for
 this page is a design decision, not a code one, and is left to the author.
 
+## Session 5b — Structural efficiency pass — SCHEDULED (2026-08-22)
+
+Addendum G, applied to the code as it stands. Scheduled before Session 6
+because the River reuses the Index's filter pipeline and the grain track, and
+it is cheaper to give it derived keys and a shared feast index than to retrofit
+both into two views. One sitting; every item is a pure-function change with a
+unit test, and the browser suite is the regression gate. Nothing here changes
+what the reader sees.
+
+1. **`manifest.meta.json` off the boot path** (G1). `lib/manifest.js` fetches
+   the manifest alone; the meta loads from About when Session 9 gives About a
+   reason to read it. Until then nothing reads it — verify with a grep before
+   and after.
+2. **Per-card derived keys** (G2). One module derives `{ breadth, lifeInterval,
+   venerated }` per card once at manifest load; `index-filters.js`'s
+   `matchesFacets`, `inRange` and `sortCards` read the keys instead of calling
+   `breadthOf` / `lifeInterval` / `veneratedChurches` per comparison. The unit
+   tests for `index-filters.js` already pin the semantics; they must pass
+   unchanged — this is a cost change, not a meaning change.
+3. **One memoised feast index** (G3). `lib/feasts.js` exports a
+   `feastIndexFor(year, data)` cached by year; the calendar's module-level
+   `indexCache` and the Index's `monthsBySlugFor` both read it. `facetsOf` is
+   cached on the manifest the same way.
+4. **Bounded detail cache** (G4). `lib/detail.js`'s `cache` takes a small LRU
+   — payloads only, not the queue or the in-flight set. A unit test evicts
+   the oldest under pressure and keeps a hit warm.
+5. **Hygiene, while there.** `daysInMonth(cursor)` sits in two loop conditions
+   in `views/calendar.js` and round-trips four JDN conversions per evaluation;
+   hoist it, or compute it as the JDN difference between two first-of-months.
+
+Out of scope, by decision: code-splitting views, splitting CSS, tuning the
+calendar's per-day paints (Addendum G's closing paragraph). The font preload
+question (G6) is the author's and sits with Session 4b's ship gate.
+
 ## Session 6 — Phase 2b: River mode
 ## Session 7 — Phase 3a: globe
 ## Session 8 — Phase 3b: timeline, export/import, rite × communion table (§9.2)
 ## Session 9 — Phase 4: PWA, offline, About page statistics
+
+About's statistics are where `manifest.meta.json` is first read; it is fetched
+there, lazily, and never at boot (Addendum G1).
 
 ## Deploy change, from Session 1 onward
 

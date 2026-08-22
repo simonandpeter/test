@@ -34,7 +34,7 @@ with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
 - 126 unit tests (`npm test`) — pure logic, no DOM.
-- 168 browser tests (`npm run test:e2e`) — across desktop and 360 px.
+- 206 browser tests (`npm run test:e2e`) — 103 across desktop and 360 px.
 - `npm run test:all` runs both. CI runs both on every push.
 
 **Pushing happens outside this session.** Agent sessions have no git
@@ -175,6 +175,19 @@ site on its own", and the corpus is ten saints, so the calendar is empty on
 ~355 days a year. That is a data question, not an engineering one, and whether
 to ship against it is the author's call rather than yours.
 
+### Then: Session 5b — the structural efficiency pass
+
+Addendum G (in `../saintsplanaddendum.md`, added 2026-08-22) and the Session 5b
+entry in SESSIONS.md, which lists the five items. In short: `manifest.meta.json`
+off the boot path; per-card filter and sort keys derived once at manifest load
+rather than inside comparators; one memoised feast index in `lib/feasts.js`
+shared by every view; an LRU on the detail cache; and the `daysInMonth` loop
+condition hoisted. Pure-function changes, each with a unit test; the browser
+suite must pass unchanged because nothing the reader sees moves. Do this
+*before* the River — it reuses the Index's filter pipeline and the grain track,
+and giving it derived keys and a shared index once is cheaper than retrofitting
+two views.
+
 ### Then: Session 6 — River mode
 
 The horizontal, unsorted, shuffled stream (brief §8.2). The mode toggle belongs
@@ -294,7 +307,14 @@ session). SESSIONS.md has each in full.
   `needs_sourcing`. Nothing renders a movable feast yet.
 - **Manifest budget:** projects to 864 KB gzipped at 5,000 saints against a
   400 KB ceiling. Meaningless below ~200 saints. Re-check past that mark; do
-  not build sharding before then.
+  not build sharding before then. When the trigger fires the shape is settled
+  (Addendum G5): calendar-first — a per-year feast slice the calendar paints
+  from, card data behind it — not by century.
+- **Font preload** (Addendum G6): `font-display: optional` stands; preloading
+  the two Latin subsets would make Literata actually show on most cold loads
+  without reintroducing layout shift, at the cost of a small build step for
+  the hashed filenames. Perceived quality, not correctness — your call, at the
+  ship gate.
 - **Search reaches display names only.** The MiniSearch index is built from the
   manifest, which carries `display_name` but not the `names` array, so Ἀντώνιος
   and Ⲁⲛⲧⲱⲛⲓⲟⲥ find nothing. Fixing it costs manifest bytes — author's call.
