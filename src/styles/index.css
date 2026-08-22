@@ -320,8 +320,18 @@ select:hover {
   overflow: hidden;
 }
 
+/* One line, ending in an ellipsis where it must. With Literata applied the
+   column is 678 px and the grid lays three cards across at 213 px, where
+   "13 November 354 – 28 August 430" wrapped and the reserved block cut the
+   second line off; in a row the bookmark's column narrowed the body to ~206 px
+   at 360 and did the same. Rows had this rule from Amendment 22 and cards did
+   not (Amendment 26). As the register's feast dates are (calendar.css); the
+   saint's page prints the whole of it. */
 .index-dates {
   color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ---- Detailed ---------------------------------------------------------- */
@@ -426,16 +436,6 @@ select:hover {
   -webkit-line-clamp: 1;
   line-clamp: 1;
   word-break: break-word;
-}
-
-/* The dates too: the bookmark's column narrows a row's body to ~206 px at
-   360, and "13 November 354 – 28 August 430" wrapped there and was cropped by
-   the fixed box. One line with an ellipsis, as the register's feast dates are
-   (calendar.css); the saint's page prints the whole of it. */
-.index-card.is-row .index-dates {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* A 48 px thumbnail has no corner to spare, so in a row the bookmark stands at

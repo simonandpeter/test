@@ -476,6 +476,25 @@ function wireGrid() {
   // wheel and give the reader two scrollbars to think about.
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onResize);
+  // The column can move without the window moving: Literata arriving inside
+  // font-display: optional's window widens the 72ch column from 580 to 678 px
+  // after the grid has counted its columns, and a cold load at 1280 was laying
+  // two columns into a three-column width (Amendment 26). An observer on the
+  // grid's own box catches that; its first callback reports the size already
+  // laid out and is ignored by the comparison. The relayout runs *inside* the
+  // callback, not behind a frame like the window path: resize observers are
+  // delivered at the rendering update the change itself caused, which is the
+  // moment meant for layout work — and a headless browser produces no further
+  // frame on an idle page, so a relayout queued behind requestAnimationFrame
+  // there waits for damage that may never come (the suite saw it six runs in
+  // eight). Synchronous is deterministic in both.
+  const observer =
+    typeof ResizeObserver === 'function'
+      ? new ResizeObserver(() => {
+          if (state && grid.clientWidth !== state.laidOutWidth) update({ animate: false });
+        })
+      : null;
+  observer?.observe(grid);
 
   // A card's shared-element name is set at the moment of the click and not
   // before: naming sixty visible cards would make the browser capture sixty
@@ -513,6 +532,7 @@ function wireGrid() {
     if (resizeFrame) cancelAnimationFrame(resizeFrame);
     window.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onResize);
+    observer?.disconnect();
     grid.removeEventListener('click', onClick);
     el.removeEventListener('pointerover', onHover);
     unwireSave();
@@ -550,6 +570,9 @@ function update({ animate }) {
   const grid = el.querySelector('[data-grid]');
   const inner = el.querySelector('[data-grid-inner]');
   const rows = state.layout === 'rows';
+  // What this layout was computed from, so the container observer below can
+  // tell a real move from its own first, informational, callback.
+  state.laidOutWidth = grid.clientWidth;
   const result = rows
     ? layout(matched, {
         width: grid.clientWidth,

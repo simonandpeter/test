@@ -2072,6 +2072,71 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   await page.locator('[data-layout="cards"]').click();
 });
 
+test('a card lifespan is one line, ending in an ellipsis where three across would wrap it', async ({ page }) => {
+  // Found by looking, not by the suite (Amendment 26): with Literata applied
+  // the 72ch column is 678 px and the grid lays three cards across at 213 px,
+  // where "13 November 354 – 28 August 430" wrapped and the reserved block cut
+  // the second line off. The Detailed test's crop check never saw it because a
+  // fresh context is a cold load — 580 px, two columns, nothing wraps. So this
+  // one warms the font cache on another route first, which is every visit
+  // after the first. Rows had the one-line rule from Amendment 22; cards did
+  // not.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const seen = await page.locator('.index-card', { hasText: 'Augustine of Hippo' }).evaluate((card) => {
+    const d = card.querySelector('.index-dates');
+    return {
+      cardW: card.clientWidth,
+      lines: Math.round(d.getBoundingClientRect().height / 19.575),
+      ellipsis: getComputedStyle(d).textOverflow,
+      over: card.scrollHeight - card.clientHeight,
+    };
+  });
+  // The premise first: if the column is still the cold 580 here, the grid is
+  // two across and this proves nothing — say so rather than pass by accident.
+  expect(seen.cardW, 'the warm column lays three cards across').toBeLessThan(240);
+  expect(seen.lines, 'the lifespan wrapped').toBe(1);
+  expect(seen.ellipsis).toBe('ellipsis');
+  expect(seen.over, 'the card crops its block').toBeLessThanOrEqual(0);
+  expect(await nothingCropped(page)).toEqual([]);
+});
+
+test('the grid follows its column, not only the window', async ({ page }) => {
+  // Literata arriving inside font-display: optional's window widens the 72ch
+  // column from 580 to 678 px after the grid has counted its columns, and a
+  // cold load at 1280 laid two columns into a three-column width (Amendment
+  // 26). That race cannot be staged on demand, so the column is widened by
+  // hand after load — the same event: a container that moves while the window
+  // does not — and the grid has to re-count without a resize event.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const before = await page.locator('.index-card').first().evaluate((c) => c.clientWidth);
+  await page.addStyleTag({ content: 'main.chrome { max-width: 900px !important; }' });
+  // Polled, not slept: the observer is delivered at the rendering update the
+  // style change causes, and a headless page produces no further frames on
+  // its own — a fixed wait and then a read was racing that (Amendment 26).
+  await expect
+    .poll(() => page.locator('.index-card').first().evaluate((c) => c.clientWidth), {
+      message: `cards are still ${before} px wide after the column grew`,
+      timeout: 3000,
+    })
+    .toBeLessThan(before);
+  const after = await page.evaluate(() => {
+    const grid = document.querySelector('[data-grid]');
+    const cards = [...grid.querySelectorAll('.index-card')];
+    const right = Math.max(...cards.map((c) => c.getBoundingClientRect().right));
+    return { col: grid.clientWidth, w: cards[0].clientWidth, rightGap: Math.round(grid.getBoundingClientRect().right - right) };
+  });
+  expect(after.col).toBeGreaterThan(800);
+  // More columns in more room: narrower cards, and the last column ending at
+  // the column's own edge rather than leaving the new width empty.
+  expect(after.w, `cards still ${after.w} px wide in a ${after.col} px column`).toBeLessThan(before);
+  expect(after.rightGap, `the grid leaves ${after.rightGap} px of its column unused`).toBeLessThan(2);
+});
+
 test('the bookmark stands in the image corner, takes the press, and is the Save', async ({ page }) => {
   // Addendum H2. A frameless silhouette over the picture's top-right corner,
   // above the link's ::after, so pressing it saves rather than opens; on a

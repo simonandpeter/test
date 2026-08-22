@@ -843,6 +843,54 @@ at that backout silently did nothing — its import anchor missed and the test
 applied before its result means anything; it was, and it caught it. 132 unit,
 218 browser.
 
+**26. Two Index defects found by looking at the strip's screenshots, and a
+third thing about the harness** (2026-08-22). Neither defect was the strip's
+and both were older than it; the suite had seen neither.
+
+**A card's lifespan was being cropped at three across.** With Literata applied
+the 72ch column is 678 px and the grid lays three cards across at 213;
+"13 November 354 – 28 August 430" wraps there and the reserved 92 px block cut
+the second line off — 19 px over, on Augustine, at every desktop width. Rows
+got the one-line rule with an ellipsis in Amendment 22 and cards did not, and
+the Detailed test's crop check never saw it because a fresh context is a cold
+load: 580 px, two columns, nothing wraps. The rule now covers every card
+(`.index-dates`), the saint's page printing the whole of it as before. Its test
+warms the font cache on another route first — every visit after the first —
+and asserts its premise (three across) before the finding, so it cannot pass
+by accident on a cold column. Backed out: "the lifespan wrapped — expected 1,
+received 2"; restored byte-identical.
+
+**The grid counted its columns once and did not follow its column.** On a cold
+load at 1280 the font arrived inside `font-display: optional`'s window, the
+column widened from 580 to 678 after the grid had counted two columns, and
+nothing re-counted: two 280 px cards in a three-column width and 118 px of the
+column empty on the right. The only relayout trigger was the window's
+`resize`. A `ResizeObserver` on the grid's own box now catches a container
+that moves while the window does not — the font race, and anything else —
+comparing against the width the last layout used, so its first, informational,
+callback is a no-op.
+
+**The harness taught the third thing.** The observer's first version queued
+the relayout behind `requestAnimationFrame`, as the window path does, and its
+test failed six runs in eight *with the fix in* — and passed in the full suite
+on the same tree. Probed directly: **rAF is not delivered on an idle headless
+page** (a one-second wait timed out); old-headless Chromium produces a frame
+only on damage, while `ResizeObserver` callbacks are delivered at the
+rendering update the change itself caused. So the observer fired, the relayout
+waited for a frame, and the frame came only when something else disturbed the
+page — which, in the full suite, something did. Real browsers fire rAF at
+60 Hz and readers would have been fine; but a fix the suite cannot see is not
+a fix by this project's rule, and the synchronous version is also the right
+one: resize observers exist to do layout work at exactly that moment. The
+relayout now runs inside the callback, and the test polls for the outcome
+rather than sleeping 200 ms and reading. Eight runs in eight with it, two in
+two failing without — "cards are still 280 px wide after the column grew" —
+restored byte-identical. Worth generalising: **a relayout queued behind a frame
+is a promise the harness may not keep.** Anything that must follow a container
+change and be seen by the suite happens in the observer, and its test polls.
+The window path keeps its rAF — a resize damages the page, so its frame comes.
+132 unit, 222 browser.
+
 **Still outstanding, added 2026-08-22 (Amendment 24):** the Index foot wraps
 at the cold-load column on a DejaVu-default Linux and the grid sits 25 px
 lower there. One of three author-owned changes frees it — *Random saint* →
