@@ -683,14 +683,6 @@
   white-space: nowrap;
 }
 
-/* The glyph is pinned to the right margin, which in a register row means after
-   the feast date rather than before it: the date is what holds the margin, and
-   a glyph sitting in front of a variable-width date would range in and out
-   again. Visual order only — the DOM keeps the name and its mark adjacent. */
-.register .badge {
-  order: 1;
-}
-
 @media (max-width: 480px) {
   .register li {
     flex-wrap: wrap;
@@ -698,13 +690,6 @@
   .register .reg-feast {
     margin-inline-start: calc(var(--space-3) + 20px);
     width: 100%;
-  }
-  /* The date has taken a line of its own here, so pinning the glyph after it
-     would give the glyph one too. It pins to the right of the name's line
-     instead — still the margin, still one column. */
-  .register .badge {
-    order: 0;
-    margin-left: auto;
   }
 }
 

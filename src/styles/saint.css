@@ -33,19 +33,15 @@
 
 /* The two controls beside the name (author, 2026-08-22): the bookmark, and the
    × that closes the page back into the Index where the reader left it. They
-   stand visually between the name and the mark, and in the DOM after the mark,
-   so the name and its glyph stay adjacent (DESIGN.md §7d) — the same order
-   trick the register rows use. */
+   stood between the name and the mark until the glyph was removed
+   (2026-08-22, DESIGN.md §2); they follow the name now and the margin is
+   empty. */
 .saint-head .saint-tools {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
   align-self: center;
   flex: none;
-}
-
-.saint-head .name-line .badge {
-  order: 1;
 }
 
 /* Save is chrome: a quiet toggle whose state is carried by its own label and

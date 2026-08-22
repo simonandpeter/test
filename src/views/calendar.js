@@ -34,8 +34,6 @@ import {
   subscribeSelection,
 } from '../lib/tradition.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import { renderBadge } from '../ui/badge.js';
-import { renderMatrix } from '../ui/matrix.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
@@ -871,7 +869,6 @@ function paintDay(panel) {
       return `<li>
         <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
           data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
-        ${renderBadge(saint.attestations, { pitch: 10.2 })}
         ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
         <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
       </li>`;
@@ -889,7 +886,6 @@ function paintDay(panel) {
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
             <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
           </h2>
-          ${renderMatrix(hero.attestations, { pitch: 7.65 })}
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <ul class="hero-feasts utility">${feastLines}</ul>

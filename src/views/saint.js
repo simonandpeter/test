@@ -25,8 +25,6 @@ import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/m
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
-import { renderBadge } from '../ui/badge.js';
-import { renderMatrix } from '../ui/matrix.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -123,14 +121,12 @@ function shell(card) {
     .filter(Boolean)
     .join(' · ');
 
-  // The name, its two controls, and the mark (DESIGN.md §5c). The controls
-  // follow the mark in the DOM so the name and its glyph stay adjacent (§7d);
-  // saint.css puts them between the two visually.
+  // The name and its two controls (DESIGN.md §5c). The mark that stood at the
+  // line's margin went with the glyph (2026-08-22, §2).
   return `<article class="saint">
     <header class="saint-head">
       <div class="name-line">
         <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
-        ${renderMatrix(card.attestations, { pitch: 7.65 })}
         <span class="saint-tools">
           ${renderBookmark(card.slug, card.display_name)}
           <button type="button" class="close-button icon-button" data-back aria-label="${STRINGS.saint.back}">${CLOSE}</button>
@@ -413,7 +409,6 @@ function related(saint, data, router) {
     .map(
       (card) => `<li>
         <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(card.display_name)}</a>
-        ${renderBadge(card.attestations, { pitch: 10.2 })}
         <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
       </li>`,
     );

@@ -125,35 +125,11 @@ test('reduced motion removes animation rather than shortening it', async ({ brow
   await ctx.close();
 });
 
-test('a populated day renders hero, badge and each tradition in its own reckoning', async ({ page }) => {
+test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
   await ready(page, { calendar: 'eastern-orthodox' });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
-
-  // The hero carries the rite x communion matrix, not the communion badge:
-  // thirteen cells, three of them attested in Anthony's case, and the count
-  // in the label is the matrix's thirteen rather than the badge's four.
-  const badge = page.locator('.hero svg.badge');
-  await expect(badge).toHaveClass(/glyph-matrix/);
-  await expect(badge).toHaveAttribute('aria-label', /Venerated in 3 of 13: /);
-  await expect(badge.locator('circle')).toHaveCount(13);
-  // Attested cells at full size and undocumented marks at a fraction of one:
-  // the states have to stay apart by size and value, not by colour.
-  await expect(badge.locator('circle[data-state="attested"]')).toHaveCount(3);
-  const undocumented = badge.locator('circle[data-state="undocumented"]');
-  await expect(undocumented).toHaveCount(10);
-  const [attestedBox, undocumentedBox] = [
-    await badge.locator('circle[data-state="attested"]').first().boundingBox(),
-    await undocumented.first().boundingBox(),
-  ];
-  expect(undocumentedBox.width).toBeLessThan(attestedBox.width / 2);
-  // Every mark is centred in its own cell rather than corner-anchored, so two
-  // states in the same row share a vertical centre and the row reads as one
-  // line instead of a stagger. Both of these are in Catholic's row.
-  expect(Math.round(undocumentedBox.y + undocumentedBox.height / 2)).toBe(
-    Math.round(attestedBox.y + attestedBox.height / 2),
-  );
 
   // One calendar at a time (author, 2026-08-22): in the Eastern Orthodox
   // calendar the day names Anthony once, by that church's feast alone; the
@@ -589,114 +565,6 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 
-/* ---- the veneration glyph's place on the page --------------------------- */
-
-/**
- * The glyph follows the name it belongs to, everywhere a name appears. DOM
- * order is the contract and is checked at both widths; the geometry only holds
- * where the line does not wrap, so it is checked on the wide viewport.
- *
- * One context is missing here and cannot be added honestly: the calendar's
- * "also commemorated" register never renders, because no day in a corpus of
- * ten has two saints on it.
- */
-const glyphFollowsName = async (page, container, nameSelector) => {
-  const line = page.locator(container).first();
-  await expect(line.locator(`${nameSelector} + svg.badge`)).toHaveCount(1);
-
-  const viewport = page.viewportSize();
-  if (!viewport || viewport.width < 700) return;
-
-  // Literata is font-display: optional, so on a cold load the fallback face
-  // renders and the name is a different width until font loading settles.
-  // Measuring before that is a coin toss about which face was on screen.
-  await page.evaluate(() => document.fonts.ready);
-  const name = await line.locator(nameSelector).first().boundingBox();
-  const badge = await line.locator('svg.badge').first().boundingBox();
-  expect(badge.x, `name box ${JSON.stringify(name)}, glyph box ${JSON.stringify(badge)}`)
-    .toBeGreaterThan(name.x + name.width - 1);
-  // On the same line, not stacked under it.
-  expect(badge.y).toBeLessThan(name.y + name.height);
-};
-
-test('the glyph follows the saint own name on their page', async ({ page }) => {
-  await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await glyphFollowsName(page, '.saint-head .name-line', 'h1.saint-name');
-  // The name carries the only glyph in the header, and the veneration section
-  // below is now the church-by-church register alone — the standalone badge
-  // that used to head it would have been the same mark printed twice.
-  await expect(page.locator('.saint-head svg.badge')).toHaveCount(1);
-  await expect(page.locator('[data-veneration] svg.badge')).toHaveCount(0);
-});
-
-test('the glyph follows the name in the calendar hero', async ({ page }) => {
-  await ready(page, { calendar: 'eastern-orthodox' });
-  await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await glyphFollowsName(page, '.hero .name-line', 'h2.hero-name');
-});
-
-test('the glyph follows the name on an index card', async ({ page }) => {
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await glyphFollowsName(page, '.index-card .name-line', 'a.index-name');
-});
-
-test('the glyph follows the name on a shelf row', async ({ page }) => {
-  await ready(page);
-  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
-  await expect(page.locator('.shelves')).toContainText('Continue reading');
-  await glyphFollowsName(page, '.shelf li', 'a.reg-name');
-});
-
-test('the name carries the rite x communion matrix, and a dense row does not', async ({ page }) => {
-  // Two views, one dataset (brief §9.2). The matrix is four rows tall, so it
-  // can only sit beside a name that has the height for it: the saint's own h1
-  // and the calendar hero take it, and every dense context keeps the badge.
-  // DESIGN.md §7 records the measurements.
-  await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('.saint-head svg.glyph-matrix circle')).toHaveCount(13);
-  // Seven columns beside a name is the width that could push a 360 px page
-  // sideways. It does not: the name shrinks and wraps within itself, which is
-  // what the nowrap line is for.
-  expect(
-    await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth),
-  ).toBe(0);
-  await expect(page.locator('.register svg.badge:not(.glyph-matrix) circle').first()).toBeVisible();
-  await expect(page.locator('.register svg.glyph-matrix')).toHaveCount(0);
-
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await expect(page.locator('.index-card svg.glyph-matrix')).toHaveCount(0);
-  await expect(page.locator('.index-card svg.badge').first().locator('circle')).toHaveCount(4);
-});
-
-test('the East Syriac column puts a refusal directly above an attestation', async ({ page }) => {
-  // The brief's worked reason for building this view at all: Eastern Catholic
-  // refuses Nestorius and the Assyrian Church of the East venerates him, and
-  // both keep the same rite. The badge cannot show that; one column of the
-  // matrix does, and only because the six Eastern Catholic cells are filled
-  // rather than left blank.
-  await page.goto('/saints/nestorius', { waitUntil: 'networkidle' });
-  const marks = await page.locator('.saint-head svg.glyph-matrix circle').evaluateAll((els) =>
-    els.map((el) => ({
-      state: el.dataset.state,
-      x: Math.round(el.getBoundingClientRect().x),
-      y: Math.round(el.getBoundingClientRect().y),
-      title: el.querySelector('title')?.textContent ?? '',
-    })),
-  );
-
-  const eastSyriac = marks.filter((m) => m.title.includes('East Syriac rite'));
-  expect(eastSyriac.map((m) => m.state).sort()).toEqual(['attested', 'refused']);
-  // One column: same x, different y.
-  expect(new Set(eastSyriac.map((m) => m.x)).size).toBe(1);
-  expect(new Set(eastSyriac.map((m) => m.y)).size).toBe(2);
-
-  // And the coarse cell admits what it is standing in for.
-  const catholic = eastSyriac.find((m) => m.state === 'refused');
-  expect(catholic.title).toContain('Eastern Catholic');
-  expect(catholic.title).toContain('coarser than it looks');
-});
-
 test('clicking through days faster than the roll leaves one panel, not two', async ({ page }) => {
   // The day panel rolls for 300 ms. A second click inside that window used to
   // find the *leaving* panel and append beside the entering one, so the day
@@ -720,28 +588,6 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
-});
-
-test('the glyph is pinned to the right margin, not trailing the name', async ({ page }) => {
-  // Position encodes identity, so the mark holds one column down a page rather
-  // than ranging in and out with the length of each name (author, 2026-08-21).
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  const edges = await page.locator('.index-card .name-line').evaluateAll((lines) =>
-    lines.map((line) => {
-      const glyph = line.querySelector('svg.badge').getBoundingClientRect();
-      const name = line.querySelector('.index-name').getBoundingClientRect();
-      return {
-        gap: Math.round(line.getBoundingClientRect().right - glyph.right),
-        clearsName: glyph.left >= name.right - 1,
-      };
-    }),
-  );
-  expect(edges.length).toBeGreaterThan(1);
-  // Every card's glyph ends the same distance from its line's right edge, and
-  // names of different lengths do not move it.
-  expect(new Set(edges.map((e) => e.gap)).size).toBe(1);
-  expect(edges.every((e) => e.clearsName)).toBe(true);
 });
 
 test('the month replaces the week rather than opening beneath it', async ({ page }) => {
@@ -1431,54 +1277,6 @@ test('Clear filters appears beside the search bar, never below it', async ({ pag
   expect((await page.locator('.facets').boundingBox()).y).toBe(facetsBefore);
 });
 
-test('Breadth of veneration names the churches it counts, Eastern Catholic expanded', async ({ page }) => {
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await page.locator('[data-facet="breadth"] summary').click();
-  const roster = page.locator('.breadth-roster');
-  await expect(roster).toBeVisible();
-  await expect(roster.locator('li')).toHaveCount(4);
-
-  const catholic = roster.locator('li', { hasText: 'Catholic' }).first();
-  await expect(catholic).toContainText('Roman Catholic');
-  // The six rites the one Eastern Catholic entry stands for, named.
-  for (const rite of ['Byzantine', 'Alexandrian', "Ge'ez", 'Armenian', 'West Syriac', 'East Syriac']) {
-    await expect(catholic).toContainText(rite);
-  }
-  await expect(roster).toContainText('Assyrian Church of the East');
-});
-
-test('About explains the mark, with circles drawn by the component itself', async ({ page }) => {
-  await page.goto('/about', { waitUntil: 'networkidle' });
-  await expect(page.locator('h2', { hasText: 'Reading the mark' })).toBeVisible();
-
-  // One swatch per state, and each is a real circle from cellMark rather than
-  // a picture of one that could drift from what the site draws.
-  const states = await page
-    .locator('.glyph-legend .badge circle')
-    .evaluateAll((els) => els.map((e) => e.dataset.state));
-  expect(states).toEqual(['attested', 'refused', 'undocumented']);
-
-  // Both views of a real saint: the row of four, and the same findings opened
-  // out into the plate — thirteen positions, each with the church that holds it
-  // named beneath (author's diagram, 2026-08-21). The plate is the calendar
-  // filter's own component, so About cannot teach a shape the filter lacks.
-  await expect(page.locator('.glyph-example .glyph-example-marks .badge circle')).toHaveCount(4);
-  await expect(page.locator('.glyph-example .plate .plate-mark circle')).toHaveCount(13);
-  await expect(page.locator('.glyph-example .plate .plate-label')).toHaveCount(8);
-  await expect(page.locator('.glyph-example figcaption')).toContainText('Nestorius');
-  await expect(page.locator('.glyph-example figcaption')).toContainText('the actual shape');
-
-  // Nestorius is the worked example because of one column: the Assyrian Church
-  // of the East venerates him and the Catholic communion directly above refuses
-  // him, in the same rite. The plate is where a reader can see that it is one
-  // column, because the column is named.
-  const east = await page
-    .locator('.glyph-example .plate .plate-mark circle')
-    .evaluateAll((els) => els.map((e) => e.dataset.state));
-  expect(east).toContain('attested');
-  expect(east).toContain('refused');
-});
-
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');
@@ -1497,8 +1295,6 @@ test('the index offers two layouts, and remembers which one the reader chose', a
   // Every row is the same height, whatever its image — or absence of one.
   const heights = await cards.evaluateAll((els) => els.map((el) => Math.round(el.getBoundingClientRect().height)));
   expect(new Set(heights).size).toBe(1);
-  // And the glyph still follows the name.
-  await glyphFollowsName(page, '.index-card .name-line', 'a.index-name');
 
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('[data-layout="rows"]')).toHaveAttribute('aria-pressed', 'true');
@@ -1532,34 +1328,6 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
   expect(new Set(measured.map((m) => m.header)).size, JSON.stringify(measured)).toBe(1);
   expect(new Set(measured.map((m) => m.button)).size, JSON.stringify(measured)).toBe(1);
 });
-
-test('the glyph holds no colour of its own, and the states survive greyscale', async ({ page }) => {
-  await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  const marks = await page.locator('.saint-head svg.badge circle').evaluateAll((els) =>
-    els.map((el) => {
-      const style = getComputedStyle(el);
-      return {
-        state: el.dataset.state,
-        fill: style.fill,
-        opacity: parseFloat(style.fillOpacity),
-        r: parseFloat(el.getAttribute('r')),
-      };
-    }),
-  );
-
-  const attested = marks.find((m) => m.state === 'attested');
-  const undocumented = marks.find((m) => m.state === 'undocumented');
-
-  // Every fill resolves through a custom property, so the two states resolve
-  // to two different colours without either being written into the component.
-  expect(attested.fill).not.toBe(undocumented.fill);
-  // Value and size both separate them; either alone would be a single point of
-  // failure in greyscale or at a small size.
-  expect(undocumented.opacity).toBeLessThan(attested.opacity);
-  expect(undocumented.r).toBeLessThan(attested.r / 2);
-});
-
-/* ---- the 2026-08-21 refinements ---------------------------------------- */
 
 test('the header carries no date, and the corner holds two controls', async ({ page }) => {
   // Today's date stood under the theme control from 2026-08-21 to 2026-08-22
@@ -2260,34 +2028,28 @@ const nothingCropped = async (page) =>
       .map((c) => c.querySelector('.index-name')?.textContent),
   );
 
-test('Detailed swaps the badge for the matrix, adds the opening of the life, and every box still holds', async ({ page }) => {
-  // Addendum H1. The matrix on a card is by the reader's choice and unscaled
-  // — the same 30.6 px mark as beside the h1 — and the description is the
-  // life's own first paragraph in a box reserved before it arrives: the card's
-  // height is still known before render, so nothing may be cropped.
+test('Detailed adds the opening of the life, and every box still holds', async ({ page }) => {
+  // Addendum H1. The description is the life's own first paragraph in a box
+  // reserved before it arrives: the card's height is still known before
+  // render, so nothing may be cropped. (Until 2026-08-22 Detailed also swapped
+  // the badge for the matrix; the glyph is removed — DESIGN.md §2.)
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const box = page.locator('[data-detailed]');
   await expect(box).not.toBeChecked();
-  await expect(page.locator('.index-card svg.glyph-matrix')).toHaveCount(0);
   await expect(page.locator('.index-desc')).toHaveCount(0);
   const plain = (await page.locator('.index-card').first().boundingBox()).height;
 
   await box.check();
-  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix circle')).toHaveCount(13);
   await expect(page.locator('.index-card').first()).toHaveClass(/is-detailed/);
   const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
   await expect(first.locator('.index-desc')).toContainText('Born to a prosperous Coptic family');
-  // Still the manifest's numbers: matrix inside the name line, three lines of
-  // description, and a taller card by exactly what was added.
+  // Still the manifest's numbers: three lines of description, and a taller
+  // card by exactly what was added.
   const geometry = await first.evaluate((card) => {
     const r = (el) => el.getBoundingClientRect();
     const desc = card.querySelector('.index-desc');
-    return {
-      matrixInsideLine: r(card.querySelector('svg.badge')).bottom <= r(card.querySelector('.name-line')).bottom + 0.5,
-      descLines: Math.round((r(desc).height / 19.575) * 10) / 10,
-    };
+    return { descLines: Math.round((r(desc).height / 19.575) * 10) / 10 };
   });
-  expect(geometry.matrixInsideLine).toBe(true);
   expect(geometry.descLines).toBe(3);
   expect((await page.locator('.index-card').first().boundingBox()).height).toBeGreaterThan(plain + 60);
   expect(await nothingCropped(page)).toEqual([]);
@@ -2295,7 +2057,6 @@ test('Detailed swaps the badge for the matrix, adds the opening of the life, and
   // Rows take it too, at two lines, and nothing in a row is cropped either.
   await page.locator('[data-layout="rows"]').click();
   await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
-  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix')).toHaveCount(1);
   await expect(page.locator('.index-card').first().locator('.index-desc')).toBeVisible();
   expect(await nothingCropped(page)).toEqual([]);
   const rowHeights = await page.locator('.index-card').evaluateAll((els) =>
@@ -2306,7 +2067,7 @@ test('Detailed swaps the badge for the matrix, adds the opening of the life, and
   // Remembered, like the layout.
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('[data-detailed]')).toBeChecked();
-  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix')).toHaveCount(1);
+  await expect(page.locator('.index-card').first().locator('.index-desc')).toBeVisible();
   await page.locator('[data-detailed]').uncheck();
   await page.locator('[data-layout="cards"]').click();
 });
@@ -2314,7 +2075,8 @@ test('Detailed swaps the badge for the matrix, adds the opening of the life, and
 test('the bookmark stands in the image corner, takes the press, and is the Save', async ({ page }) => {
   // Addendum H2. A frameless silhouette over the picture's top-right corner,
   // above the link's ::after, so pressing it saves rather than opens; on a
-  // card with no picture it stands beside the dates, clear of the glyph.
+  // card with no picture it stands beside the dates, where a long name cannot
+  // run under it.
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
@@ -2354,9 +2116,9 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   expect(seen.stroke).toBe(tokens.ink);
   expect(seen.fill).toBe('none');
 
-  // A card with no picture: beside the dates, and never over the glyph. The
-  // grid is virtualised, so at 360 px he has to be scrolled into the window
-  // before he exists to be measured.
+  // A card with no picture: beside the dates. The grid is virtualised, so at
+  // 360 px he has to be scrolled into the window before he exists to be
+  // measured.
   const imageless = page.locator('.index-card', { hasText: 'Christopher' });
   for (let y = 0; y < 4000 && (await imageless.count()) === 0; y += 300) {
     await page.evaluate((to) => window.scrollTo(0, to), y);
@@ -2364,15 +2126,12 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   }
   const corner = await imageless.evaluate((card) => {
     const r = (el) => el.getBoundingClientRect();
-    const g = r(card.querySelector('svg.badge'));
     const b = r(card.querySelector('.bookmark'));
     const d = r(card.querySelector('.index-dates'));
     return {
-      overlapsGlyph: !(b.right < g.left || b.left > g.right || b.bottom < g.top || b.top > g.bottom),
       centredOnDates: Math.abs((b.top + b.bottom) / 2 - (d.top + d.bottom) / 2) < 2,
     };
   });
-  expect(corner.overlapsGlyph).toBe(false);
   expect(corner.centredOnDates).toBe(true);
 
   // It is the Save: pressing it writes the store, the shape fills, the name
@@ -2474,14 +2233,12 @@ test('the saint page puts the register beside the image on desktop, the body ben
 
   const seen = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();
-    const h1 = r('h1.saint-name'), tools = r('.saint-tools'), glyph = r('.saint-head svg.badge'), line = r('.saint-head .name-line');
+    const h1 = r('h1.saint-name'), tools = r('.saint-tools');
     const media = r('.saint-media-col'), facts = r('.saint-intro-facts'), main = r('.saint-main'), article = r('article.saint');
     return {
       wide: innerWidth >= 760,
       toolsAfterName: tools.left >= h1.left + 10,
       toolsOnNameLine: tools.top < h1.bottom && tools.bottom > h1.top,
-      toolsBeforeGlyph: tools.right <= glyph.left,
-      glyphAtMargin: Math.round(line.right - glyph.right),
       factsBesideImage: facts.left >= media.right && Math.abs(facts.top - media.top) < 4,
       factsBelowImage: facts.top >= media.bottom,
       mainFullWidth: Math.round(main.width) === Math.round(article.width),
@@ -2490,8 +2247,6 @@ test('the saint page puts the register beside the image on desktop, the body ben
   });
   expect(seen.toolsAfterName).toBe(true);
   expect(seen.toolsOnNameLine).toBe(true);
-  expect(seen.toolsBeforeGlyph).toBe(true);
-  expect(seen.glyphAtMargin).toBe(0);
   expect(seen.mainFullWidth).toBe(true);
   expect(seen.mainBelowBoth).toBe(true);
   if (seen.wide) expect(seen.factsBesideImage).toBe(true);
@@ -2619,12 +2374,10 @@ test('the Index keeps the reader traditions and names what it sets aside', async
 });
 
 test('the saint page reads the reader traditions first and reveals the rest for that page only', async ({ page }) => {
-  // Addendum H9. The glyph beside the name stays whole — a finding about the
-  // saint — and only the register below it filters; the reveal resets on the
-  // next saint opened.
+  // Addendum H9. Only the register filters; the reveal resets on the next
+  // saint opened.
   await ready(page, { traditions: ['roman-catholic'] });
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('.saint-head svg.glyph-matrix circle')).toHaveCount(13);
   await expect(page.locator('[data-veneration] > .attestations .att')).toHaveCount(1);
   await expect(page.locator('[data-veneration] > .attestations .att-church')).toHaveText('Roman Catholic');
   const reveal = page.locator('[data-reveal]');
@@ -2676,6 +2429,37 @@ test('the theme follows the system until it is touched, and holds once it is', a
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.documentElement.classList.contains('dark'))).toBe(true);
   await ctx.close();
+});
+
+test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async ({ page }) => {
+  // The author's decision for the Eastern Orthodox project (2026-08-22;
+  // DESIGN.md §2, and §7 superseded in full): in a one-communion corpus the
+  // mark said nothing and is removed, and gold — spent only on it — is spent
+  // nowhere until a new signature element is chosen. Four routes; every
+  // element's computed colours. A reintroduction anywhere fails here by name.
+  await ready(page, { calendar: 'eastern-orthodox' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const gold = await page.evaluate(() => {
+    const hex = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();
+    const n = parseInt(hex.slice(1), 16);
+    return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+  });
+  for (const path of [POPULATED, INDEX, DETAIL, '/about']) {
+    await page.goto(path, { waitUntil: 'networkidle' });
+    await expect(page.locator('svg.badge'), `${path} draws the mark`).toHaveCount(0);
+    await expect(page.locator('.glyph-matrix'), `${path} draws the matrix`).toHaveCount(0);
+    const golden = await page.evaluate((goldRgb) => {
+      const props = ['color', 'backgroundColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'fill', 'stroke', 'outlineColor'];
+      const hits = [];
+      for (const el of document.querySelectorAll('body *')) {
+        const cs = getComputedStyle(el);
+        const hit = props.find((p) => cs[p] === goldRgb);
+        if (hit) hits.push(`${el.tagName.toLowerCase()}.${el.getAttribute('class') || ''} ${hit}`);
+      }
+      return hits.slice(0, 5);
+    }, gold);
+    expect(golden, `${path} spends gold on ${golden.join(', ')}`).toEqual([]);
+  }
 });
 
 test('no axe violations on the first visit, with both questions standing', async ({ page }) => {

@@ -18,7 +18,6 @@
  */
 
 import { isUndated, makeInterval, overlaps, within } from './dates.js';
-import { rollup } from '../ui/badge.js';
 
 export const RANGE_MODES = ['overlaps', 'within'];
 
@@ -33,7 +32,6 @@ export const EMPTY_FILTERS = {
   from: null,
   to: null,
   rangeMode: 'overlaps',
-  breadth: 0,
   sort: 'name',
 };
 
@@ -46,8 +44,7 @@ export const hasActiveFilters = (f) =>
   f.regions.length > 0 ||
   f.historicities.length > 0 ||
   f.from !== null ||
-  f.to !== null ||
-  f.breadth > 0;
+  f.to !== null;
 
 /**
  * The span of a life, for range filtering: from the earliest bound of the
@@ -72,10 +69,6 @@ export function lifeInterval(dates) {
   return { earliest: start?.earliest ?? null, latest: end?.latest ?? null };
 }
 
-/** How many communions venerate this saint — the breadth-of-veneration axis. */
-export const breadthOf = (card) =>
-  rollup(card.attestations).filter((cell) => cell.state === 'attested').length;
-
 const veneratedChurches = (card) =>
   card.attestations.filter((a) => a.status === 'venerated').map((a) => a.church);
 
@@ -94,7 +87,6 @@ function matchesFacets(card, f) {
     const regions = (card.locations ?? []).map((l) => l.region).filter(Boolean);
     if (!regions.some((r) => f.regions.includes(r))) return false;
   }
-  if (f.breadth > 0 && breadthOf(card) < f.breadth) return false;
   return true;
 }
 
@@ -140,20 +132,17 @@ export function applyFilters(cards, filters, { monthsBySlug, matchesQuery } = {}
 }
 
 /**
- * Name is the default, and breadth of veneration is offered but never
- * defaulted to: a corpus ordered by how many communions venerate someone reads
- * as a ranking of importance, which is the one claim this project refuses to
- * make (brief §8.2).
+ * Name is the default. Breadth of veneration was a fourth order until
+ * 2026-08-22 — offered, never defaulted to, because a corpus ranked by how
+ * many communions venerate someone reads as a ranking of importance (brief
+ * §8.2) — and went with the glyph: in a one-communion corpus it counts nothing.
  */
-export const SORTS = ['name', 'earliest', 'latest', 'breadth'];
+export const SORTS = ['name', 'earliest', 'latest'];
 
 export function sortCards(cards, sort = 'name') {
   const byName = (a, b) => a.display_name.localeCompare(b.display_name);
   const copy = cards.slice();
   if (sort === 'name') return copy.sort(byName);
-  if (sort === 'breadth') {
-    return copy.sort((a, b) => breadthOf(b) - breadthOf(a) || byName(a, b));
-  }
   // Undated saints have no position on a timeline, so they sort last rather
   // than to year zero.
   const key = (card) => {

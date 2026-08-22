@@ -785,6 +785,64 @@ why CI caught this and no desk did. The re-based backstop cannot be backed out
 and seen to fail on Windows, where the grid is 380 either way; CI is its only
 witness, and that is recorded rather than dressed up. 133 unit, 236 browser.
 
+**25. The glyph is removed from every screen, and what it held up went with
+it** (author's decision, 2026-08-22; Eastern Orthodox project, DESIGN.md §2,
+§7 superseded in full). The first of the three decisions and the first removal
+of the strip: **strip, don't rebuild**, and every removal leaves the suite
+green or retires its test by name.
+
+**What went.** The badge on Index cards and rows, shelf rows, the calendar
+register and a saint's related list; the matrix beside the calendar hero's
+name, the saint's h1 and — under Detailed — on every card; About's *Reading
+the mark*, its legend and the Nestorius worked example, and the 51 lines of
+CSS that dressed them; the pin that held the mark at the right margin of every
+name line (base.css, calendar.css's register rule and its 480 px variant,
+saint.css's order trick); breadth of veneration — the facet, its roster, the
+sort option, `breadthOf` and the filter — because it counts communions and a
+one-communion corpus has one; and the strings for all of it. 526 lines out, 65
+in, across thirteen files.
+
+**What stays, and why.** `ui/badge.js` and `ui/matrix.js` are still in the
+tree with their unit tests: the plate imports `cellMark`, `rollupStates` and
+`riteColumns`, and the plate is the traditions control, which goes with the
+registry and the church chooser in the next pass — taking the two modules, the
+`--glyph-*` tokens and `STRINGS.badge`, `STRINGS.matrix` and
+`STRINGS.about.glyph` (whose `plate` entry names the plate's region) with it.
+Deleting them now would have meant deleting the plate now, out of order. The
+imageless card's bookmark **stays beside the dates at 50 px**: the CSS comment
+gave "the glyph in that corner" as its reason, but the reason that survives is
+as good — the name line is the first thing in such a card and a long name
+would run under a corner mark — and Amendment 22 records the shipped position.
+Detailed rows keep the 112 px constant saints.js reserves, sized when the name
+line held the matrix; the line is its natural height now and the row carries
+~9 px of slack rather than a retuned number — retune with the River, which
+reuses these heights.
+
+**Tests.** Ten browser tests retired by name, each pinning what was removed:
+*the glyph follows the saint own name on their page*, *… in the calendar
+hero*, *… on an index card*, *… on a shelf row*, *the name carries the rite x
+communion matrix, and a dense row does not*, *the East Syriac column puts a
+refusal directly above an attestation*, *the glyph is pinned to the right
+margin, not trailing the name*, *Breadth of veneration names the churches it
+counts, Eastern Catholic expanded*, *About explains the mark, with circles
+drawn by the component itself*, *the glyph holds no colour of its own, and the
+states survive greyscale* — with the `glyphFollowsName` helper. Six adjusted
+to lose their glyph assertions and keep the rest: the populated day
+(retitled), the two layouts, Detailed (retitled *Detailed adds the opening of
+the life, and every box still holds*), the bookmark, the saint page's head and
+the traditions-first register. One unit test retired (*breadth counts
+communions, not churches*) and two trimmed. One browser test added: *the
+veneration glyph is drawn nowhere, and gold is spent nowhere* — four routes,
+`svg.badge` and `.glyph-matrix` at zero, and every element's computed colour,
+background, borders, fill, stroke and outline compared against `--gold`, so a
+reintroduction anywhere fails by name. **Backed out by putting the badge back
+in the calendar hero: fails on both projects with "/calendar/2026-01-30 draws
+the mark"; restored byte-identical (checksummed) and green.** The first attempt
+at that backout silently did nothing — its import anchor missed and the test
+"passed" against an unchanged tree — which is why a backout has to be asserted
+applied before its result means anything; it was, and it caught it. 132 unit,
+218 browser.
+
 **Still outstanding, added 2026-08-22 (Amendment 24):** the Index foot wraps
 at the cold-load column on a DejaVu-default Linux and the grid sits 25 px
 lower there. One of three author-owned changes frees it — *Random saint* →

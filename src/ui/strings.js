@@ -203,10 +203,6 @@ export const STRINGS = {
       overlaps: 'Overlaps',
       within: 'Entirely within',
       rangeNote: 'Overlaps takes any life that touched the range; entirely within takes only lives that sit inside it. Negative years are BC.',
-      breadth: 'Breadth of veneration',
-      breadthLabel: 'Venerated in at least',
-      breadthNote: 'How many communions venerate this figure. It is a measure of how widely a cult travelled, not of importance, and nothing is sorted by it unless you ask.',
-      breadthRosterNote: 'The communions it counts, and the churches inside each — the same axes the veneration mark is drawn from. Eastern Catholic is one registry entry spanning six rites, so it counts once, for the Catholic communion.',
       any: 'Any',
     },
     layout: {
@@ -214,17 +210,17 @@ export const STRINGS = {
       cards: 'Cards',
       rows: 'Rows',
       description: 'How the saints are laid out',
-      // The tick box beside them (author, 2026-08-22): the full mark for the
-      // badge, and the opening of the life under the name.
+      // The tick box beside them (author, 2026-08-22): the opening of the life
+      // under the name. It swapped the mark for the full matrix too, until the
+      // glyph was removed (2026-08-22, DESIGN.md §2).
       detailed: 'Detailed',
-      detailedDescription: 'Show the full veneration mark and a short description on every saint',
+      detailedDescription: 'Show a short description on every saint',
     },
     sort: {
       label: 'Sort',
       name: 'Name',
       earliest: 'Earliest date',
       latest: 'Latest date',
-      breadth: 'Breadth of veneration',
     },
   },
 

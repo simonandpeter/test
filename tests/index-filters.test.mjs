@@ -4,7 +4,6 @@ import assert from 'node:assert/strict';
 import {
   EMPTY_FILTERS,
   applyFilters,
-  breadthOf,
   facetsOf,
   hasActiveFilters,
   lifeInterval,
@@ -127,19 +126,9 @@ test('feast months come from the caller, who owns the calendar arithmetic', () =
   assert.equal(applyFilters(all, { ...EMPTY_FILTERS, months: [2] }, { monthsBySlug }).matched.length, 0);
 });
 
-test('breadth counts communions, not churches', () => {
-  // Three churches, but Roman Catholic and Eastern Orthodox and Coptic sit in
-  // three different communions, so the breadth is three.
-  assert.equal(breadthOf(anthony), 3);
-  assert.equal(breadthOf(moses), 1);
-  assert.deepEqual(run({ breadth: 2 }).matched.map((c) => c.slug), ['anthony']);
-  assert.equal(run({ breadth: 4 }).matched.length, 0);
-});
-
-test('name is the default order, and breadth is never it', () => {
+test('name is the default order', () => {
   assert.equal(EMPTY_FILTERS.sort, 'name');
   assert.deepEqual(sortCards(all).map((c) => c.slug), ['undated-one', 'anthony', 'christopher', 'moses']);
-  assert.deepEqual(sortCards(all, 'breadth')[0].slug, 'anthony');
   // Undated saints have no place on a timeline, so they sort last rather than
   // to year zero.
   assert.deepEqual(sortCards(all, 'earliest').map((c) => c.slug), [
@@ -161,10 +150,9 @@ test('the facet lists offer only what the corpus contains', () => {
 test('an untouched filter set is inactive, and any one of them activates it', () => {
   assert.equal(hasActiveFilters(EMPTY_FILTERS), false);
   assert.equal(hasActiveFilters({ ...EMPTY_FILTERS, query: '  ' }), false);
-  assert.equal(hasActiveFilters({ ...EMPTY_FILTERS, breadth: 1 }), true);
   assert.equal(hasActiveFilters({ ...EMPTY_FILTERS, from: 300 }), true);
   // Sorting is not filtering: changing the order hides nothing.
-  assert.equal(hasActiveFilters({ ...EMPTY_FILTERS, sort: 'breadth' }), false);
+  assert.equal(hasActiveFilters({ ...EMPTY_FILTERS, sort: 'earliest' }), false);
 });
 
 test('sorting by earliest orders open-ended lives by the bound they do have', () => {

@@ -218,23 +218,6 @@ select:hover {
   cursor: pointer;
 }
 
-.breadth-roster {
-  list-style: none;
-  margin: var(--space-2) 0 0;
-  padding: 0;
-  color: var(--ink-soft);
-  max-width: 46ch;
-}
-
-.breadth-roster li + li {
-  margin-top: var(--space-1);
-}
-
-.breadth-roster b {
-  font-weight: 500;
-  color: var(--ink);
-}
-
 .result-count {
   color: var(--ink-soft);
   margin-bottom: var(--space-2);
@@ -337,24 +320,18 @@ select:hover {
   overflow: hidden;
 }
 
-.index-card .name-line .badge {
-  /* Optically on the first line of the name, not centred on a two-line box. */
-  align-self: flex-start;
-  margin-top: 5px;
-}
-
 .index-dates {
   color: var(--ink-soft);
 }
 
 /* ---- Detailed ---------------------------------------------------------- */
 
-/* The matrix takes the badge's place on the name line and fits the line's 42
-   px box unscaled — the .badge rule above already sets it 5 px down, and it is
-   30.6 tall. The description is a fixed box of utility lines, three on a card
-   and two on a row, clamped: so the height the virtualiser was given stays
-   true whatever the life says and whichever face renders it. saints.js holds
-   the other half of these numbers (DETAILED_CARD_TEXT_HEIGHT, DETAILED_ROW_HEIGHT). */
+/* The description is a fixed box of utility lines, three on a card and two on
+   a row, clamped: so the height the virtualiser was given stays true whatever
+   the life says and whichever face renders it. saints.js holds the other half
+   of these numbers (DETAILED_CARD_TEXT_HEIGHT, DETAILED_ROW_HEIGHT). Until
+   2026-08-22 Detailed also put the matrix in the badge's place on the name
+   line; the glyph is removed (DESIGN.md §2). */
 .index-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -397,11 +374,13 @@ select:hover {
   z-index: 1;
 }
 
-/* A card with no picture has the glyph in that corner — the name line is the
-   first thing in it — so the bookmark stands beside the dates instead: the
-   one line of the block that is short. 8 px padding + the 42 px name line +
-   6 px gap puts the dates at 56; a 32 px button centred on a 19.575 px line
-   starts 6 px above it. The same spot with or without a description beneath. */
+/* A card with no picture has the name line first, and a long name would run
+   under a mark in that corner — so the bookmark stands beside the dates
+   instead: the one line of the block that is short. (It was the glyph that
+   held the corner until 2026-08-22; the reason survives the glyph.) 8 px
+   padding + the 42 px name line + 6 px gap puts the dates at 56; a 32 px
+   button centred on a 19.575 px line starts 6 px above it. The same spot with
+   or without a description beneath. */
 .index-card:not(.is-row):not(:has(.index-media)) > .bookmark {
   top: 50px;
 }
@@ -441,11 +420,6 @@ select:hover {
   align-items: baseline;
 }
 
-.index-card.is-row .name-line .badge {
-  align-self: center;
-  margin-top: 0;
-}
-
 /* One line in a row, where a second would overflow a fixed box. */
 .index-card.is-row .index-name {
   max-height: none;
@@ -472,14 +446,11 @@ select:hover {
   align-self: center;
 }
 
-/* Detailed rows: the name line is the matrix's height and the name sits
-   centred on it; the description takes two lines. 31 + 2 + 19.575 + 2 + 39.15
-   inside an 18 px inset is the 112 px row saints.js reserves. */
-.index-card.is-row.is-detailed .name-line {
-  height: 31px;
-  align-items: center;
-}
-
+/* Detailed rows: the description takes two lines. The 112 px row saints.js
+   reserves was sized when the name line held the matrix (31 px): 31 + 2 +
+   19.575 + 2 + 39.15 inside an 18 px inset. The line is its natural height
+   now, so the row carries a few px of slack rather than a retuned constant —
+   strip, don't rebuild; retune with the River, which reuses these heights. */
 .index-card.is-row .index-desc {
   -webkit-line-clamp: 2;
   line-clamp: 2;

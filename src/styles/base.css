@@ -304,20 +304,10 @@ main.chrome:has(.cal-controls) {
   color: var(--rubric);
 }
 
-/* A saint's name and their veneration glyph are one line: the mark is pinned
-   to the right margin of that line wherever a name appears, at the size of the
-   type it accompanies.
-
-   Pinned to the margin rather than trailing the name (author, 2026-08-21), so
-   the glyph holds one column down a register or a page instead of ranging in
-   and out with the length of each name. A ragged right edge on a mark whose
-   whole job is that position encodes identity was reading as noise.
-
-   The line never wraps — the name shrinks and wraps within itself instead.
-   Letting the glyph fall to its own line is not a graceful degradation, it is
-   the mark losing the name it belongs to, and it happens on exactly the visit
-   that matters most: a cold load, where font-display: optional keeps the
-   fallback face, which measures a narrower 72ch column than Literata does. */
+/* A name and what stands beside it — on the saint's page, its two controls —
+   are one line that never wraps: the name shrinks and wraps within itself.
+   The veneration glyph stood pinned at this line's right margin wherever a
+   name appeared, until 2026-08-22 (DESIGN.md §2, §7 — superseded). */
 .name-line {
   display: flex;
   align-items: baseline;
@@ -331,20 +321,6 @@ main.chrome:has(.cal-controls) {
 .name-line > a {
   min-width: 0;
   margin-bottom: 0;
-}
-
-.name-line .badge,
-.register .badge {
-  flex: none;
-  align-self: center;
-}
-
-/* The pin. The gap above is the minimum clearance a long name leaves; this is
-   what puts a short name's glyph in the same column as a long one's. Register
-   rows pin differently — they have a feast date holding the margin — see
-   calendar.css. */
-.name-line .badge {
-  margin-left: auto;
 }
 
 /* Multi-script name forms (Ἁγνή, Ⲁⲛⲧⲱⲛⲓⲟⲥ, ܢܣܛܘܪܝܘܣ). The line-height is a
@@ -472,56 +448,4 @@ main.chrome:has(.cal-controls) {
     animation: none !important;
     transition: none !important;
   }
-}
-
-/* ---- the glyph legend, on About ---------------------------------------- */
-
-/* The one page that explains the mark rather than using it. Sizes are its own
-   — a legend is read, not glanced at — but every circle in it comes from the
-   component, so it cannot describe a glyph the site no longer draws. */
-.glyph-legend {
-  list-style: none;
-  margin: 0 0 var(--space-4);
-  padding: 0;
-  max-width: 65ch;
-}
-
-.glyph-legend li {
-  display: flex;
-  gap: var(--space-3);
-  margin-bottom: var(--space-2);
-}
-
-/* Centred on the first line, not on the paragraph: a two-line entry was
-   floating its circle halfway down the text it labels. */
-.glyph-legend .badge {
-  flex: none;
-  align-self: flex-start;
-  margin-top: 2px;
-}
-
-.glyph-example {
-  margin: 0 0 var(--space-4);
-  padding: var(--space-4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-panel);
-  max-width: 65ch;
-}
-
-/* The row of four and the grid side by side, so the decomposition is a thing
-   you can see rather than a claim in the paragraph above it. */
-.glyph-example-marks {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-  flex-wrap: wrap;
-  margin-bottom: var(--space-3);
-}
-
-.glyph-example figcaption {
-  color: var(--ink-soft);
-}
-
-.glyph-hover-note {
-  color: var(--ink-soft);
 }

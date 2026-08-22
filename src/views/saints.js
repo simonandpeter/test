@@ -11,9 +11,6 @@
  * - **Filtered-out saints fade rather than vanish**, over the standard 200 ms,
  *   because a corpus that flickers reads as a search engine and this is a
  *   register. Under reduced motion they are simply gone — removed, not faster.
- * - **Breadth of veneration sorts only when asked.** It is offered, never
- *   defaulted to: ordering the corpus by how many communions venerate someone
- *   would read as a ranking of importance.
  *
  * And one thing added on 2026-08-22 (Addendum H1–H3): the grid remembers where
  * the reader left it, shows more of each saint when asked (*Detailed*), and
@@ -35,8 +32,6 @@ import {
 } from '../lib/index-filters.js';
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
-import { renderBadge } from '../ui/badge.js';
-import { matrixRows, renderMatrix } from '../ui/matrix.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { currentSelection, subscribeSelection, venerates } from '../lib/tradition.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -196,7 +191,6 @@ function applySnapshot(snap) {
   controlsEl.querySelector('[data-to]').value = f.to ?? '';
   const mode = controlsEl.querySelector(`input[name="rangeMode"][value="${f.rangeMode}"]`);
   if (mode) mode.checked = true;
-  controlsEl.querySelector('[data-breadth]').value = String(f.breadth ?? 0);
   controlsEl.querySelector('[data-sort]').value = f.sort ?? 'name';
   for (const name of snap.openFacets ?? []) {
     const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
@@ -282,31 +276,6 @@ const facetGroup = (legend, name, options) =>
         </fieldset></details>`
     : '';
 
-/**
- * What "breadth" is counting, spelled out. The measure is communions — four of
- * them — and that is not self-evident from a number in a select, least of all
- * for the Catholic cell, which is one communion holding seven rites.
- *
- * Built from `matrixRows`, so the roster is the glyph's own axes rather than a
- * second list that can drift from them. Rites are named only for a church that
- * spans more than one: for the rest the church name already says which column
- * it occupies, and repeating it would be noise.
- */
-function breadthRoster() {
-  const rows = matrixRows().map(({ communion, cells }) => {
-    const byChurch = new Map();
-    for (const cell of cells) {
-      if (!byChurch.has(cell.label)) byChurch.set(cell.label, []);
-      byChurch.get(cell.label).push(cell.rite.display_name);
-    }
-    const churches = [...byChurch]
-      .map(([name, rites]) => (rites.length > 1 ? `${name} (${rites.join(', ')})` : name))
-      .join('; ');
-    return `<li><b>${esc(communion.display_name)}</b> — ${esc(churches)}</li>`;
-  });
-  return `<ul class="breadth-roster utility">${rows.join('')}</ul>`;
-}
-
 function controls(state) {
   const { facets } = state;
   const churchOptions = enabledChurches()
@@ -346,17 +315,6 @@ function controls(state) {
         </div>
       </details>
 
-      <details class="facet" data-facet="breadth"><summary>${STRINGS.saints.filters.breadth}</summary>
-        <label class="utility">${STRINGS.saints.filters.breadthLabel}
-          <select data-breadth>
-            <option value="0">${STRINGS.saints.filters.any}</option>
-            ${enabledCommunions().map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
-          </select>
-        </label>
-        <p class="range-note utility">${STRINGS.saints.filters.breadthNote}</p>
-        <p class="range-note utility">${STRINGS.saints.filters.breadthRosterNote}</p>
-        ${breadthRoster()}
-      </details>
     </div>
 
     <div class="index-foot">
@@ -366,7 +324,6 @@ function controls(state) {
             <option value="name">${STRINGS.saints.sort.name}</option>
             <option value="earliest">${STRINGS.saints.sort.earliest}</option>
             <option value="latest">${STRINGS.saints.sort.latest}</option>
-            <option value="breadth">${STRINGS.saints.sort.breadth}</option>
           </select>
         </label>
         <button type="button" data-random>${STRINGS.saints.random}</button>
@@ -415,7 +372,6 @@ function wireControls() {
       from: from === '' ? null : Number(from),
       to: to === '' ? null : Number(to),
       rangeMode: controlsEl.querySelector('input[name="rangeMode"]:checked').value,
-      breadth: Number(controlsEl.querySelector('[data-breadth]').value),
       sort: controlsEl.querySelector('[data-sort]').value,
     };
     update({ animate: true });
@@ -476,7 +432,6 @@ function wireControls() {
     controlsEl.querySelector('[data-query]').value = '';
     controlsEl.querySelector('[data-from]').value = '';
     controlsEl.querySelector('[data-to]').value = '';
-    controlsEl.querySelector('[data-breadth]').value = '0';
     controlsEl.querySelector('input[name="rangeMode"][value="overlaps"]').checked = true;
     readFilters();
   };
@@ -718,10 +673,6 @@ function card(item, router, { rows = false, detailed = false } = {}) {
       ? '<span class="index-media is-empty" aria-hidden="true"></span>'
       : '';
 
-  const glyph = detailed
-    ? renderMatrix(item.attestations, { pitch: 7.65 })
-    : renderBadge(item.attestations, { pitch: 10.2 });
-
   const description = detailed
     ? `<span class="index-desc utility" data-desc>
         <span class="desc-skel" aria-hidden="true"><span class="skeleton"></span><span class="skeleton"></span></span>
@@ -730,12 +681,11 @@ function card(item, router, { rows = false, detailed = false } = {}) {
 
   // The link wraps the name only, and its ::after covers the whole card, so
   // the image is clickable without a second link that has no accessible name
-  // of its own — and so the glyph can sit beside the name rather than inside
-  // the link, where its label would become part of the link's. The bookmark
-  // sits above that ::after, so pressing it saves rather than opens.
+  // of its own. The bookmark sits above that ::after, so pressing it saves
+  // rather than opens. (The veneration glyph stood beside the name in this
+  // line until 2026-08-22 — DESIGN.md §2.)
   const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
-      ${glyph}
     </span>
     <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
     ${description}`;
