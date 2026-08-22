@@ -1,0 +1,93 @@
+{
+  "slug": "phanourios",
+  "display_name": "Phanourios the Great Martyr",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Fanurie",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Φανούριος ο Νεοφανής, ο Μεγαλομάρτυρας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 august — „Sfântul Mucenic Fanurie”",
+        "url": "https://doxologia.ro/27-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Αυγούστου — «Άγιος Φανούριος ο Νεοφανής, ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/08/27/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Οὐράνιον ἐφύμνιον, ἐν γῇ τελεῖται λαμπρῶς, ἐπίγειον πανήγυριν νῦν ἑορτάζει φαιδρῶς, ἀγγέλων πολίτευμα· ἄνωθεν ὑμνῳδίαις εὐφημοῦσι τοὺς ἄθλους, κάτωθεν Ἐκκλησίᾳ τὴν οὐράνιον δόξαν· ἣν εὗρες πόνοις καὶ ἄθλοις τοῖς σοῖς Φανούριε ἔνδοξε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 908",
+        "url": "https://www.saint.gr/908/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄",
+      "model": "Ἡ Παρθένος σήμερον",
+      "text": "῾Ιερεῖς διέσωσας, αἰχμαλωσίας ἀθέου, καὶ δεσμὰ συνέθλασας, δυνάμει θείᾳ θεόφρον· ᾔσχυνας, τυράννων θράση γενναιοφρόνως· εὔφρανας, Ἀγγέλων τάξεις Μεγαλομάρτυς· διὰ τοῦτό σε τιμῶμεν, θεῖε ὁπλῖτα, Φανούριε ἔνδοξε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 908",
+        "url": "https://www.saint.gr/908/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Către dreptul ostaș al lui Hristos, biruitor în lupte, vrednicule mucenice Fanurie, laude aducem noi credincioșii și-i strigăm: preamărite, nu înceta a te milostivi către Preaînduratul Hristos, pentru noi cei ce nădajduim în harul tău, Mare Mucenice, nou luminător al credinței.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Fanurie",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-fanurie",
+        "year": 2026
+      }
+    }
+  ]
+}

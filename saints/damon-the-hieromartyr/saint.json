@@ -1,0 +1,40 @@
+{
+  "slug": "damon-the-hieromartyr",
+  "display_name": "Damon",
+  "names": [
+    {
+      "form": "Άγιος Δάμων ο Ιερομάρτυρας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Αυγούστου — «Άγιος Δάμων ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/08/28/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

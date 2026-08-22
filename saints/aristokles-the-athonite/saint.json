@@ -1,0 +1,40 @@
+{
+  "slug": "aristokles-the-athonite",
+  "display_name": "Aristokles the Athonite",
+  "names": [
+    {
+      "form": "Όσιος Αριστοκλής ο Αθωνίτης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Αυγούστου — «Όσιος Αριστοκλής ο Αθωνίτης»",
+        "url": "https://www.saint.gr/08/24/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

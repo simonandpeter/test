@@ -1,0 +1,40 @@
+{
+  "slug": "ibistion-the-venerable",
+  "display_name": "Ibistion",
+  "names": [
+    {
+      "form": "Όσιος Ιβιστίων",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Αυγούστου — «Όσιος Ιβιστίων»",
+        "url": "https://www.saint.gr/08/26/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

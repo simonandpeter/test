@@ -65,6 +65,25 @@ test('hero pick falls back to imageless saints and to null', () => {
   assert.equal(pickHero('2026-08-20', [], bySlug), null);
 });
 
+test('the saint the chosen church sings for that day is the hero before any image is', () => {
+  // Author, 2026-08-22: a church's hymns recorded for a saint mark the day's
+  // principal commemoration in that church. Kosmas has Greek hymns and no
+  // image; Anthony has an image and no hymns for anyone.
+  const bySlug = new Map([
+    ['kosmas', { image: null, hymned: ['greek', 'romanian'] }],
+    ['anthony', { image: { src: 'x' }, hymned: [] }],
+    ['tation', { image: null, hymned: [] }],
+  ]);
+  const entries = [{ slug: 'tation' }, { slug: 'kosmas' }, { slug: 'anthony' }];
+  for (const d of ['2026-08-24', '2026-08-25', '2026-08-26']) {
+    assert.equal(pickHero(d, entries, bySlug, 'greek'), 'kosmas', `greek ${d}`);
+    assert.equal(pickHero(d, entries, bySlug, 'romanian'), 'kosmas', `romanian ${d}`);
+    // No hymns for the Russian church on this day: the image decides, as before.
+    assert.equal(pickHero(d, entries, bySlug, 'russian'), 'anthony', `russian ${d}`);
+    assert.equal(pickHero(d, entries, bySlug), 'anthony', `no church ${d}`);
+  }
+});
+
 test('intervals display honestly: display string, derivation, open bounds', () => {
   assert.equal(formatInterval({ earliest: 285, latest: 295, display: 'c. 291' }), 'c. 291');
   assert.equal(formatInterval({ earliest: 356, latest: 356, display: null }), '356');

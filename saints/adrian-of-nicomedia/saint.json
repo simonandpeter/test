@@ -1,0 +1,105 @@
+{
+  "slug": "adrian-of-nicomedia",
+  "display_name": "Adrian of Nicomedia",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Adrian",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Αδριανός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 26 august — „Sfântul Mucenic Adrian”",
+        "url": "https://doxologia.ro/26-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Αυγούστου — «Άγιοι Αδριανός και Ναταλία»",
+        "url": "https://www.saint.gr/08/26/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄",
+      "model": "Θείας πίστεως",
+      "text": "Ἀναφαίρετον ὄλβον ἠγήσω, τὴν σωτήριον, πίστιν τρισμάκαρ, καταλιπῶν τὴν πατρῴαν ἀσέβειαν καὶ τῷ Δεσπότῃ κατ' ἴχνος ἑπόμενος, κατεπλουτίσθης ἐνθέοις χαρίσμασιν Ἀδριανὲ ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, ὁμοὺ σὺν Ναταλία τὴ θεόφρονι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 905",
+        "url": "https://www.saint.gr/905/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Γυναικὸς θεόφρονος τοὺς θείους λόγους, ἐν Καρδίᾳ θέμενος, Ἀδριανέ μάρτυς Χριστοῦ, ἐν τοῖς βασάνοις προσέδραμες, σὺν τῇ συζύγῳ τὸ στέφος δεξάμενος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 905",
+        "url": "https://www.saint.gr/905/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Credinţa cea mântuitoare comoară nerăpită ai socotit-o, de trei ori fericite, păgânătatea cea părintească părăsind-o şi urmând Stăpânului, te-ai îmbogăţit cu darurile cele Dumnezeieşti Sfinte Adrian Mărite, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Adrian şi Natalia, soţia sa",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-adrian-natalia-sotia-sa",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeieştile cuvinte ale femeii tale celei cugetătoare de Dumnezeu, în inimă punându-le, Sfinte Adrian, mucenice al lui Hristos, la chinuri ai alergat, împreună cu soţia ta cunună luând.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Mucenici Adrian şi Natalia, soţia sa",
+        "url": "https://doxologia.ro/condacul-sfintilor-mucenici-adrian-natalia-sotia-sa",
+        "year": 2026
+      }
+    }
+  ]
+}

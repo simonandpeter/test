@@ -1,0 +1,40 @@
+{
+  "slug": "euthalia-the-martyr",
+  "display_name": "Euthalia",
+  "names": [
+    {
+      "form": "Sfânta Muceniță Eutalia",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 august — „Sfânta Muceniță Eutalia”",
+        "url": "https://doxologia.ro/27-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-22); no other day checked."
+    }
+  ]
+}

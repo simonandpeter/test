@@ -979,6 +979,96 @@ stored and not yet rendered (the feasts work renders it); the seven
 placeholder image source URLs still warn; the old HANDOFF sections below the
 banner still describe the cross-church build's controls.
 
+**28. The Orthodox Saint, Daily, and the week of 23 August on the Romanian and
+Greek calendars: sixty-two saints, the liturgical day, the readings, the
+hymns** (author's list, 2026-08-22/23). Eight items, one commit; what each
+cost and what it did not do.
+
+**The names.** The site is *The Orthodox Saint* and the habit page is *Daily*
+— strings, `index.html`, README, `package.json`. The route stays `/calendar`
+so no link breaks, and the settings key stays `gos-settings` so no reader's
+choices are lost; both are recorded here rather than renamed for tidiness.
+
+**The week's saints, and Amendment 2.** The instruction was every saint of
+23–29 August on the Romanian and Greek calendars; Amendment 2 says never
+bulk-generate. The two are reconciled the only way they can be: every folder
+is read off the day page of the calendar that names it — doxologia.ro per day,
+saint.gr per day — with that page as the row's source, the name as the page
+prints it kept as a name form, the type the page's epithet states, the feast
+in that church's own calendar, and nothing the page does not say: no life, no
+places, dates only where printed (Kosmas † 1779; Eutyches, 2nd century). The
+Russian row on each is `undocumented` with the reason — the Patriarchate's
+pages for this civil week list the Julian 10–16 August and were not searched
+for these figures. Sixty-two folders; seventy saints; leavetakings, icons,
+synaxes and one translation whose saint was unclear are not folders, because
+they are not saints — they are feast entries, which is the next work. The
+manifest's 5,000-saint projection fell from 928 to 255 KB gzipped on the way,
+inside the budget for the first time: three attestations a saint are lighter
+than eight.
+
+**The liturgical day** (`lib/liturgy.js`). Where the day stands in the paschal
+cycle, the tone, and whether it is a fast — each for one church, from the two
+things the registry already held: the computus fixes Pascha, the calendar
+fixes the dated fasts and feasts. The title follows the lectionary's count
+(a weekday belongs to the week that ends with the coming Sunday — the
+Slavic *седмица* and the Greek usage agree, and days.pravoslavie.ru printed
+"седмица 13-я" for Monday 24 August, which settled my one wrong expectation);
+the tone turns weekly from Thomas Sunday, Bright Week turns daily and skips
+the seventh, Pentecost and Holy Week have none. Fasting states *fast*, *fish*
+or *fast-free* and the reason, reckoned in the church's calendar — which is
+why the Russian calendar was still in the Dormition Fast on the civil 23rd,
+had fish on the Friday Dormition and no fast on the Saturday, while the
+Romanian and Greek fasted Wednesday, Friday and the Beheading. It does **not**
+state oil, wine or the grades between them: those differ between typika and
+want sourcing per church. Seven unit tests check the week against all three
+calendars' own pages and the cycle against its fixed anchors.
+
+**The readings and the hymns are recorded, not computed.** `data/
+liturgical-days.js` holds, per civil day per church, the Apostle and Gospel
+each calendar printed for 23–29 August, normalised to English references so
+they link (Bible Gateway, NKJV, per the author), with the page named — and a
+day nobody has recorded prints nothing. The Greek reads the Leavetaking's
+pericopes on the 23rd where the others read the Sunday; the Russian reads the
+Dormition on the 28th. The hymns live in the saint's folder under a new
+optional `hymns` array — church, kind, language, tone, model, text, source —
+copied whole from saint.gr's saint pages (the day pages quote only a first
+line; a strict "verbatim, every word" prompt was needed before the fetch
+stopped paraphrasing) and from Doxologia's `troparul-…`/`condacul-…` pages,
+whose slugs had to be searched for where a guess returned 404. Greek
+apolytikia and kontakia for seven days' principal commemorations and the
+Leavetaking; Romanian tropare and condace for eight saints. A feast's hymns
+travel with the day; a saint's arrive with the detail payload, and the panel
+fills when it lands for the day still showing.
+
+**The Daily page** gained, in order: the day in the church's own reckoning
+after *Change calendar* ("10 August (Julian)" under a civil 23 August); the
+liturgical line under the date; the readings under the day's saint or the
+empty note; the hymns under those. And the hero now prefers the saint the
+chosen church has hymns for — the manifest carries `hymned: [church…]` per
+card — before the saints with images, because a church's hymn for a saint is
+that church's principal commemoration of the day: the Greek 24th is Kosmas,
+not the Eutyches the date's hash picked.
+
+**Tests.** Unit 120 (liturgy, liturgical-days, the hero's new preference).
+Browser 212: nine Index tests re-counted for seventy saints (32 Romanian, 65
+Greek, 8 Russian; sixty undated in the tray; the first card imageless; a
+window under twenty, not ten), and the bookmark test brings its cards into
+the document by the Index's own search rather than by scrolling — a headless
+scroll's repaint waits for a frame the harness may not produce (Amendment 26,
+met again). Four added: the names; the own-date, cycle, tone and fast across
+two churches and the Dormition Friday; the readings' links and source; the
+hymns in Greek and Romanian with the hero they choose. Three backouts, each
+restored byte-identical: the own-date and liturgy line unpainted; the hero
+ignoring the hymns ("Kosmas of Aetolia" expected, the hash's pick received);
+nothing recorded. Rendered and looked at on five Daily screens across the
+three churches.
+
+**Outstanding, the author's:** the Russian week and the Serbian church, asked
+for in the same breath and next; the fasting allowances; whether the saint's
+own page should print its hymns too (the Daily page does); the hero-hymn rule
+when two saints of one church both carry hymns on a day (the date's hash
+decides between them, as before).
+
 **Still outstanding, added 2026-08-22 (Amendment 24):** the Index foot wraps
 at the cold-load column on a DejaVu-default Linux and the grid sits 25 px
 lower there. One of three author-owned changes frees it — *Random saint* →

@@ -1,0 +1,103 @@
+{
+  "slug": "kosmas-of-aetolia",
+  "display_name": "Kosmas of Aetolia",
+  "names": [
+    {
+      "form": "Sfântul Sfințit Mucenic Cosma Etolul",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Κοσμάς ο Αιτωλός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "equal-to-the-apostles"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1779,
+      "latest": 1779,
+      "display": "1779",
+      "basis": "attested",
+      "note": "saint.gr: † 1779."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 24 august — „Sfântul Sfințit Mucenic Cosma Etolul”",
+        "url": "https://doxologia.ro/24-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Αυγούστου — «Άγιος Κοσμάς ο Αιτωλός»",
+        "url": "https://www.saint.gr/08/24/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄",
+      "model": "Τὸν τάφον σου Σωτήρ",
+      "text": "Τὸν μέγαν ἀθλητήν, ὀρθοδόξων τὸ κλέος, Χριστοῦ τὸν μιμητὴν καὶ διδάσκαλον θεῖον, Κοσμᾶν τὸν ἰσαπόστολον, Αἰτωλίας ἀγλάϊσμα, τὸν παιδεύσαντα τὸ δοῦλον Γένος ἐνθέως καὶ συντρέξαντα εἰς τὴν ἀνάστασιν τούτου ἐν ὕμνοις τιμήσωμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 835",
+        "url": "https://www.saint.gr/835/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Ὡς φωστὴρ νεόφωτος τὴν Ἐκκλησίαν, καταυγάζεις ἅπασαν, Εὐαγγελίου διδαχαῖς, Κοσμᾶ Χριστοῦ Ἰσαπόστολε· διὸ ἀξίως γεραίρει τὴν μνήμην σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 835",
+        "url": "https://www.saint.gr/835/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Ca un râvnitor al Sfinţilor Apostoli ai primit lumânarea Duhului şi propovăduitor dumnezeiesc al dreptei-credinţe te-ai arătat; de aceea întăreşte-ne şi pe noi pe temelia dumnezeiască a credinţei ortodoxe şi a sfintelor dogme, Cosma sfinţite mucenicule slăvite, cerând pentru noi iertare greşelilor.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Cosma Etolul",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-cosma-etolul",
+        "year": 2026
+      }
+    }
+  ]
+}

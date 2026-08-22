@@ -1,4 +1,4 @@
-# Gallery of Saints
+# The Orthodox Saint
 
 A static site for engaging daily with the saints of the Orthodox Church, church
 by church — Russian, Romanian and Greek for now, each in its own calendar. It

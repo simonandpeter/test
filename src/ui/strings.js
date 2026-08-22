@@ -6,12 +6,12 @@
 
 export const STRINGS = {
   site: {
-    name: 'Gallery of Saints',
+    name: 'The Orthodox Saint',
     tagline: 'The saints of the Orthodox Church, church by church — Russian, Romanian and Greek, each in its own calendar.',
   },
 
   nav: {
-    calendar: 'Calendar',
+    calendar: 'Daily',
     saints: 'All Saints',
     map: 'Map',
     about: 'About',
@@ -31,7 +31,7 @@ export const STRINGS = {
   },
 
   calendar: {
-    title: 'Calendar',
+    title: 'Daily',
     today: 'Today',
     goToday: 'Go to today',
     prevDay: 'Previous day',
@@ -50,6 +50,33 @@ export const STRINGS = {
     heroFeast: '{church}: {feast}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
+    // The day in the chosen church's own reckoning, after the calendar's name
+    // (author, 2026-08-22): "10 August (Julian)" under a civil 23 August.
+    ownDate: '{date} ({calendar})',
+    // Under the date (author, 2026-08-22): where the day stands in the
+    // paschal cycle, the tone, and whether it is a fast — lib/liturgy.js.
+    liturgy: {
+      tone: 'Tone {tone}',
+      fast: 'Fast — {reason}',
+      fish: 'Fast, fish permitted — {reason}',
+      free: 'No fast',
+      freeBecause: 'No fast — {reason}',
+    },
+    // The day's readings, where a church's calendar has been read and recorded
+    // (author, 2026-08-22; src/data/liturgical-days.js). Links open the NKJV
+    // at Bible Gateway for now.
+    readings: {
+      heading: 'Readings',
+      source: 'As printed by {source}. Links open the New King James Version at Bible Gateway.',
+    },
+    // The hymns of the day's saint or feast, in the chosen church's language,
+    // copied whole from the cited source (author, 2026-08-22).
+    hymns: {
+      heading: 'Hymns',
+      troparion: 'Troparion',
+      kontakion: 'Kontakion',
+      source: 'Text from {source}',
+    },
 
     /*
      * One calendar at a time (author, 2026-08-22, Addendum H8; redrawn the

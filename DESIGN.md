@@ -1,4 +1,4 @@
-# DESIGN.md — Gallery of Saints
+# DESIGN.md — The Orthodox Saint (Gallery of Saints until 2026-08-23)
 
 The binding design document, written before any component CSS, per the brief
 (§14). Where this document pins a value, build to it exactly. Where it is
@@ -438,6 +438,27 @@ change its rows, not the code. `settings.church` holds the choice, in place of
 *The four paragraphs below — the traditions, the plate, its cells and its
 shape — are superseded by this one (2026-08-22) and kept as the record of the
 cross-church control.*
+
+**The page is *Daily*, and under its date stands the liturgical day** (author,
+2026-08-23; the site itself is *The Orthodox Saint* from the same day — the
+route `/calendar` and the settings key are unchanged so nothing breaks). After
+*Change calendar* the civil day is printed as the chosen church reckons it —
+"10 August (Julian)" under a civil 23 August — because the Old and New
+Calendar readers are looking at the same day under different names. Under the
+h1, one utility line: where the day stands in the paschal cycle, the tone of
+the week, and whether it is a fast for this church and why — computed from
+Pascha and the church's calendar (`lib/liturgy.js`), which is why two churches
+disagree about the same civil day. Fasting is stated as fast, fish permitted
+or no fast with its reason, never the finer allowances, which differ between
+typika. Under the day's saint — or the empty note — the readings the church's
+own calendar printed for the day, each a link (Bible Gateway, NKJV for now)
+with the page named, printed only where a day has been recorded; and the
+hymns of the day, a feast's recorded with the day and a saint's from the
+saint's folder, in the chosen church's own language and only that church's.
+The hero prefers the saint the chosen church has hymns for, then the saints
+with images, then the date's hash: a church's hymn is its principal
+commemoration of the day. Rubric is still spent nowhere here; the feasts that
+will earn it are the next work.
 
 **The reader's traditions, not the reader's reckoning** (author, 2026-08-21,
 reversing the same day's decision twice over). A row of four calendars —

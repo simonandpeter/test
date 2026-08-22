@@ -22,7 +22,7 @@ import {
   todayIso,
   weekOf,
 } from '../lib/calendar-page.js';
-import { observePrefetch } from '../lib/detail.js';
+import { loadDetail, observePrefetch } from '../lib/detail.js';
 import { churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -31,6 +31,10 @@ import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
+import { liturgicalDay } from '../lib/liturgy.js';
+import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
+import { CALENDAR_LABELS, monthName } from '../data/calendars.js';
+import { fromJdn } from '../lib/jdn.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = STRINGS.calendar.title;
@@ -166,9 +170,11 @@ export function render(el, { data, params, router }) {
           <span class="cal-which-name" data-which-name></span>
           <button type="button" class="cal-which-change" data-which-change aria-expanded="false"
             aria-controls="cal-which-panel" aria-label="${STRINGS.calendar.which.changeLabel}">${STRINGS.calendar.which.change}</button>
+          <span class="cal-own-date" data-own-date></span>
           <div class="which-panel" id="cal-which-panel" data-which-panel hidden></div>
         </div>
         <h1 class="cal-date"></h1>
+        <p class="cal-liturgy utility" data-liturgy></p>
         <div class="slot-viewport"><div class="day-panel"></div></div>
       </div>
       <div class="shelves" data-shelves></div>
@@ -334,7 +340,112 @@ function paintChrome() {
   const { el, selected } = state;
   paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
+  paintOwnDate();
+  paintLiturgy();
   if (state.monthOpen) paintMonth();
+}
+
+/**
+ * The day in the chosen church's own reckoning, after the calendar's name
+ * (author, 2026-08-22): a civil 23 August is 10 August on the Julian calendar
+ * and 23 August on the Revised Julian, and the line says which.
+ */
+function paintOwnDate() {
+  const { el, selected, calendar } = state;
+  const box = el.querySelector('[data-own-date]');
+  if (!box) return;
+  const cal = CHURCHES_BY_ID[calendar]?.default_calendar;
+  if (!cal) { box.textContent = ''; return; }
+  const d = parseIso(selected);
+  const own = fromJdn(cal, gregorianToJdn(d.year, d.month, d.day));
+  box.textContent = fill(STRINGS.calendar.ownDate, { date: `${own.day} ${monthName(cal, own.month)}`, calendar: CALENDAR_LABELS[cal] ?? cal });
+}
+
+/**
+ * Under the date (author, 2026-08-22): where the day stands in the paschal
+ * cycle, the tone of the week, and whether it is a fast for this church — all
+ * three from lib/liturgy.js, which reckons each in the church's own calendar.
+ * Joined with middle dots; a fast-free day with no reason says only "No fast".
+ */
+function paintLiturgy() {
+  const { el, selected, calendar } = state;
+  const box = el.querySelector('[data-liturgy]');
+  if (!box) return;
+  if (!calendar) { box.textContent = ''; return; }
+  const L = STRINGS.calendar.liturgy;
+  const day = liturgicalDay(selected, calendar);
+  const f = day.fasting;
+  const fastText =
+    f.kind === 'fast' ? fill(L.fast, { reason: f.reason })
+    : f.kind === 'fish' ? fill(L.fish, { reason: f.reason })
+    : f.reason ? fill(L.freeBecause, { reason: f.reason })
+    : L.free;
+  box.textContent = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null, fastText].filter(Boolean).join(' · ');
+}
+
+/**
+ * The day's readings, where the chosen church's calendar has been read and
+ * recorded (author, 2026-08-22): each reference a link to Bible Gateway, and
+ * the page it was read from named. Nothing is printed for a day nobody has
+ * recorded — an absence is not a claim.
+ */
+function readingsMarkup(iso, churchId) {
+  const rec = recordedDay(iso, churchId);
+  if (!rec?.readings?.length) return '';
+  const R = STRINGS.calendar.readings;
+  const items = rec.readings
+    .map((x) => `<li><span class="reading-label">${esc(x.label)}</span> <a href="${bibleGatewayUrl(x.ref)}" rel="noopener noreferrer">${esc(x.ref)}</a></li>`)
+    .join('');
+  const src = rec.source?.url ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>` : esc(rec.source?.text ?? '');
+  return `<section class="day-readings" data-readings>
+    <h2 class="register-heading">${R.heading}</h2>
+    <ul class="readings utility">${items}</ul>
+    <p class="readings-source utility">${fill(R.source, { source: src })}</p>
+  </section>`;
+}
+
+/** One hymn, in its own language, with its tone, its model and its source. */
+function hymnMarkup(h) {
+  const H = STRINGS.calendar.hymns;
+  const head = [H[h.kind] ?? h.kind, h.tone, h.model].filter(Boolean).map(esc).join(' · ');
+  const src = h.source?.url ? `<a href="${esc(h.source.url)}" rel="noopener noreferrer">${esc(h.source.text)}</a>` : esc(h.source?.text ?? '');
+  return `<div class="hymn">
+    <h3 class="hymn-kind utility">${head}</h3>
+    <p class="hymn-text" lang="${esc(h.lang)}">${esc(h.text)}</p>
+    <p class="hymn-source utility">${fill(H.source, { source: src })}</p>
+  </div>`;
+}
+
+/**
+ * The hymns of the day: a feast's, recorded with the day (the Leavetaking of
+ * the Dormition on the Greek 23 August), and the hero saint's, which live in
+ * the saint's own folder and arrive with its detail payload — so the section
+ * is painted empty and filled when the payload lands, for the day still
+ * showing. Only the chosen church's hymns, in that church's language.
+ */
+function hymnsMarkup(iso, churchId) {
+  const rec = recordedDay(iso, churchId);
+  const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
+  return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
+    <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
+    <div data-feast-hymns>${feastHymns.map(hymnMarkup).join('')}</div>
+    <div data-saint-hymns></div>
+  </section>`;
+}
+
+function fillSaintHymns(panel, slug, iso) {
+  loadDetail(slug).then(
+    (payload) => {
+      if (!state || state.selected !== iso) return;
+      const box = panel.querySelector('[data-saint-hymns]');
+      if (!box) return;
+      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
+      if (!hymns.length) return;
+      box.innerHTML = hymns.map(hymnMarkup).join('');
+      panel.querySelector('[data-hymns]').hidden = false;
+    },
+    () => {},
+  );
 }
 
 /** Density: one dot per commemoration, capped at five, legible before arrival. */
@@ -749,11 +860,11 @@ function paintDay(panel) {
   const entries = entriesFor(selected, data);
 
   if (entries.length === 0) {
-    panel.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
+    panel.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
     return;
   }
 
-  const heroSlug = pickHero(selected, entries, data.bySlug);
+  const heroSlug = pickHero(selected, entries, data.bySlug, state.calendar);
   const hero = data.bySlug.get(heroSlug);
   const heroChurches = entries.filter((e) => e.slug === heroSlug);
 
@@ -816,7 +927,10 @@ function paintDay(panel) {
         <div class="hero-actions">${renderSaveButton(hero.slug)}</div>
       </div>
     </article>
-    ${register}`;
+    ${register}
+    ${readingsMarkup(selected, state.calendar)}
+    ${hymnsMarkup(selected, state.calendar)}`;
+  fillSaintHymns(panel, hero.slug, selected);
 }
 
 const titleFor = (saint, churchId) =>

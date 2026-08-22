@@ -36,7 +36,25 @@
         "sources": { "type": "array", "items": { "type": "string" } }
       }
     },
-    "images": { "type": "array", "items": { "$ref": "#/$defs/image" } }
+    "images": { "type": "array", "items": { "$ref": "#/$defs/image" } },
+    "hymns": {
+      "$comment": "The troparion and kontakion a church sings for the figure, in that church's own language, copied whole from the cited source with the tone it prints (author, 2026-08-22). A hymn belongs to a church, as an attestation does: the Greek apolytikion and the Romanian tropar are different texts, not translations of one.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["church", "kind", "lang", "text", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "church": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["troparion", "kontakion"] },
+          "lang": { "type": "string", "minLength": 2 },
+          "tone": { "type": "string" },
+          "model": { "$comment": "The automelon the hymn is sung to, where the source names it.", "type": "string" },
+          "text": { "type": "string", "minLength": 1 },
+          "source": { "$ref": "#/$defs/source" }
+        }
+      }
+    }
   },
 
   "$defs": {

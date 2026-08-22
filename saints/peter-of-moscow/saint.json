@@ -1,0 +1,41 @@
+{
+  "slug": "peter-of-moscow",
+  "display_name": "Peter, Metropolitan of Moscow",
+  "names": [
+    {
+      "form": "Άγιος Πέτρος Μητροπολίτης Μόσχας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics as saint.gr keeps it."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Αυγούστου — «Ανακομιδή Ιερών Λειψάνων του Αγίου Πέτρου Μητροπολίτη Μόσχας»",
+        "url": "https://www.saint.gr/08/24/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

@@ -36,11 +36,16 @@ export function weekOf(iso) {
  * entries — the same day shows every visitor the same hero, so a shared link
  * is a shared page. Prefers saints that carry an image, silently.
  */
-export function pickHero(iso, entries, bySlug) {
+export function pickHero(iso, entries, bySlug, churchId = null) {
   const slugs = [...new Set(entries.map((e) => e.slug))].sort();
   if (slugs.length === 0) return null;
+  // The saint the chosen church sings for that day — one with that church's
+  // hymns recorded — is the day's principal commemoration in that church, and
+  // stands as the hero before any image does (author, 2026-08-22); then the
+  // saints with images; then anyone.
+  const sung = churchId ? slugs.filter((slug) => bySlug.get(slug)?.hymned?.includes(churchId)) : [];
   const withImage = slugs.filter((slug) => bySlug.get(slug)?.image);
-  const pool = withImage.length ? withImage : slugs;
+  const pool = sung.length ? sung : withImage.length ? withImage : slugs;
   // FNV-1a over the ISO date: stable across sessions and visitors.
   let h = 0x811c9dc5;
   for (const ch of iso) {

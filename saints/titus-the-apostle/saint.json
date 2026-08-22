@@ -1,0 +1,106 @@
+{
+  "slug": "titus-the-apostle",
+  "display_name": "Titus the Apostle",
+  "names": [
+    {
+      "form": "Sfântul Apostol Tit",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Τίτος ο Απόστολος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 25 august — „Sfântul Apostol Tit”",
+        "url": "https://doxologia.ro/25-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Αυγούστου — «Άγιος Τίτος ο Απόστολος»",
+        "url": "https://www.saint.gr/08/25/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Προκληθείς ουρανόθεν προς γνώσιν ένθεον, την εν σαρκί του Δεσπότου επιδημίαν εν γη, αυτοψεί εωρακώς φωτός πεπλήρωσαι, όθεν του Παύλου κοινωνός, θεηγόρος γεγονώς, την Κρήτην πάσαν πυρσεύεις, της ευσεβείας τω λόγο, Τίτε απόστολε μακάριε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 2644",
+        "url": "https://www.saint.gr/2644/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β΄",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "Τοῦ Παύλου δειχθείς, συνόμιλος Ἀπόστολε, σὺν τούτω ἡμῖν, τὸν λόγον προκατήγγειλας, τῆς ἐνθέου χάριτος, μυστολέκτα Τίτε μακάριε, διὰ τοῦτο βοῶμέν σοι, Μὴ παύσῃ Πρεσβεύων ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 2644",
+        "url": "https://www.saint.gr/2644/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Tit",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-tit",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Arătându-te împreună vorbitor cu Apostolul Pavel, împreună cu dânsul nouă mai înainte ai vestit Cuvântul, Apostole, grăitorule de Tainele Dumnezeiescului dar, Fericite Apostole Tit. Pentru aceasta, strigăm către tine: nu înceta a te ruga pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Apostol Tit",
+        "url": "https://doxologia.ro/condacul-sfantului-apostol-tit",
+        "year": 2026
+      }
+    }
+  ]
+}

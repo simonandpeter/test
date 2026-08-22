@@ -1,0 +1,54 @@
+{
+  "slug": "hosius-of-cordoba",
+  "display_name": "Hosius of Córdoba",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Osie, Episcopul Cordobei",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Όσιος επίσκοπος Κορδούης της Ισπανίας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 august — „Sfântul Ierarh Osie, Episcopul Cordobei”",
+        "url": "https://doxologia.ro/27-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Αυγούστου — «Άγιος Όσιος επίσκοπος Κορδούης της Ισπανίας»",
+        "url": "https://www.saint.gr/08/27/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

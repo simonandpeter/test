@@ -1,0 +1,53 @@
+{
+  "slug": "laurence-the-martyr",
+  "display_name": "Laurence",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Lavrentie",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Λαυρέντιος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 august — „Sfântul Mucenic Lavrentie”",
+        "url": "https://doxologia.ro/28-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Αυγούστου — «Άγιοι Διομήδης και Λαυρέντιος»",
+        "url": "https://www.saint.gr/08/28/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

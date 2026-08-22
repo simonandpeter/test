@@ -793,3 +793,77 @@
   margin-bottom: 0;
   margin-top: var(--space-2);
 }
+
+/* ---- the day in the church's own reckoning, and the liturgical line ------- */
+
+/* After the calendar's name and the way to change it (author, 2026-08-22):
+   the civil day as this church reckons it — "10 August (Julian)". */
+.cal-own-date {
+  color: var(--ink-soft);
+}
+
+.cal-own-date:not(:empty)::before {
+  content: '·';
+  margin-inline-end: var(--space-3);
+}
+
+/* Under the date: the paschal cycle, the tone, the fast — one quiet line in
+   the utility voice, the h1 giving up a little of its margin to it. */
+.cal-date:has(+ .cal-liturgy:not(:empty)) {
+  margin-bottom: var(--space-1);
+}
+
+.cal-liturgy {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-4);
+  max-width: 65ch;
+}
+
+.cal-liturgy:empty {
+  display: none;
+}
+
+/* ---- readings and hymns, under the day's saint (author, 2026-08-22) ------- */
+
+.day-readings .readings {
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+}
+
+.day-readings .readings li + li {
+  margin-top: var(--space-1);
+}
+
+.reading-label {
+  color: var(--ink-soft);
+  margin-inline-end: var(--space-2);
+}
+
+.readings-source,
+.hymn-source {
+  color: var(--ink-soft);
+  max-width: 65ch;
+}
+
+.day-hymns .hymn + .hymn {
+  margin-top: var(--space-4);
+}
+
+.hymn-kind {
+  font-size: 13.5px;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+/* The hymn is text, in the reading face and the church's own language; its
+   line is bounded so a fallback face with taller metrics cannot move what is
+   below it (Addendum C3, as for the name forms). */
+.hymn-text {
+  font-family: var(--font-serif);
+  max-width: 65ch;
+  line-height: 1.55;
+  margin-bottom: var(--space-1);
+}

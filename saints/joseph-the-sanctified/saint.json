@@ -1,0 +1,41 @@
+{
+  "slug": "joseph-the-sanctified",
+  "display_name": "Joseph the Sanctified of Samakos",
+  "names": [
+    {
+      "form": "Όσιος Ιωσήφ ο ηγιασμένος, ο Σαμάκος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The deposition of his relics, as saint.gr keeps it."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Αυγούστου — «Κατάθεση Ιερού Λειψάνου του Οσίου Ιωσήφ του ηγιασμένου, του Σαμάκου»",
+        "url": "https://www.saint.gr/08/29/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

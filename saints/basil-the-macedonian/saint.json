@@ -1,0 +1,37 @@
+{
+  "slug": "basil-the-macedonian",
+  "display_name": "Basil the Macedonian, Emperor",
+  "names": [
+    {
+      "form": "Άγιος Βασίλειος ο Μακεδών ο αυτοκράτορας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Αυγούστου — «Άγιος Βασίλειος ο Μακεδών ο αυτοκράτορας»",
+        "url": "https://www.saint.gr/08/29/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

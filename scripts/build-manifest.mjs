@@ -352,6 +352,11 @@ function toCard(saint, dir) {
       death: makeInterval(saint.dates?.death),
       floruit: makeInterval(saint.dates?.floruit),
     },
+    // Which churches have hymns recorded for the figure (author, 2026-08-22):
+    // the texts stay in the folder and arrive with the detail payload; the
+    // calendar needs only to know they exist, to prefer as the day's hero the
+    // saint the chosen church sings for that day.
+    hymned: [...new Set((saint.hymns ?? []).map((h) => h.church))],
     // Only positive findings travel in the manifest. A church absent from this
     // list is undocumented, which is exactly what an explicit "undocumented"
     // entry means, so dropping them loses nothing a reader could see — the

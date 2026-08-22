@@ -1,0 +1,79 @@
+{
+  "slug": "poemen-the-great",
+  "display_name": "Poemen the Great",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Pimen cel Mare",
+      "lang": "ro"
+    },
+    {
+      "form": "Όσιος Ποιμήν",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 august — „Sfântul Cuvios Pimen cel Mare”",
+        "url": "https://doxologia.ro/27-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Αυγούστου — «Όσιος Ποιμήν»",
+        "url": "https://www.saint.gr/08/27/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Pimen, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Pimen cel Mare",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pimen-cel-mare",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Sosit-a astăzi sfântă pomenirea strălucitelor tale lupte, cuvioase părinte, veselind sufletele binecredincioşilor, Sfinte Cuvioase Părinte Pimen, de Dumnezeu Cugetătorule, părintele nostru.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Pimen cel Mare",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-pimen-cel-mare",
+        "year": 2026
+      }
+    }
+  ]
+}

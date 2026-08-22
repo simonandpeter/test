@@ -1,0 +1,40 @@
+{
+  "slug": "ebba-the-elder",
+  "display_name": "Ebba the Elder",
+  "names": [
+    {
+      "form": "Οσία Ebba η Πρεσβυτέρα",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Αυγούστου — «Οσία Ebba η Πρεσβυτέρα»",
+        "url": "https://www.saint.gr/08/25/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

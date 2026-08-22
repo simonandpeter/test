@@ -1,0 +1,54 @@
+{
+  "slug": "hezekiah-the-king",
+  "display_name": "Hezekiah the Righteous, King of Judah",
+  "names": [
+    {
+      "form": "Dreptul Iezechia",
+      "lang": "ro"
+    },
+    {
+      "form": "Δίκαιος Εζεκίας ο Βασιλιάς",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 august — „Dreptul Iezechia”",
+        "url": "https://doxologia.ro/28-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Αυγούστου — «Δίκαιος Εζεκίας ο Βασιλιάς»",
+        "url": "https://www.saint.gr/08/28/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

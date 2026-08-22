@@ -1,0 +1,68 @@
+{
+  "slug": "lupus-the-martyr",
+  "display_name": "Lupus",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Lup",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Λούππος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 august — „✝ Sfântul Mucenic Lup”",
+        "url": "https://doxologia.ro/23-august",
+        "year": 2026
+      },
+      "note": "Marked ✝ on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Αυγούστου — «Άγιος Λούππος»",
+        "url": "https://www.saint.gr/08/23/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Lup, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Lup",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-lup",
+        "year": 2026
+      }
+    }
+  ]
+}

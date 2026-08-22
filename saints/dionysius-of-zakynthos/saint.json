@@ -1,0 +1,56 @@
+{
+  "slug": "dionysius-of-zakynthos",
+  "display_name": "Dionysius of Zakynthos",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Dionisie din Zakynthos",
+      "lang": "ro"
+    },
+    {
+      "form": "Άγιος Διονύσιος ο Ζακυνθινός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics; his principal feast is 17 December."
+      },
+      "source": {
+        "text": "doxologia.ro, 24 august — „Mutarea moaștelor Sfântului Ierarh Dionisie din Zakynthos”",
+        "url": "https://doxologia.ro/24-august",
+        "year": 2026
+      },
+      "note": "The translation of his relics; his principal feast is 17 December."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics; his principal feast is 17 December."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Αυγούστου — «Ανακομιδή Ιερών Λειψάνων του Αγίου Διονυσίου του Ζακυνθινού»",
+        "url": "https://www.saint.gr/08/24/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

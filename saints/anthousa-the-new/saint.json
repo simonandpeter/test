@@ -1,0 +1,37 @@
+{
+  "slug": "anthousa-the-new",
+  "display_name": "Anthousa the New",
+  "names": [
+    {
+      "form": "Αγία Ανθούσα η νέα",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 August (checked 2026-08-22); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Αυγούστου — «Αγία Ανθούσα η νέα»",
+        "url": "https://www.saint.gr/08/27/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

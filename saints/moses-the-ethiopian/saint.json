@@ -1,0 +1,105 @@
+{
+  "slug": "moses-the-ethiopian",
+  "display_name": "Moses the Ethiopian",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Moise Etiopianul",
+      "lang": "ro"
+    },
+    {
+      "form": "Όσιος Μωυσής ο Αιθίοπας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 august — „Sfântul Cuvios Moise Etiopianul”",
+        "url": "https://doxologia.ro/28-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Αυγούστου — «Όσιος Μωυσής ο Αιθίοπας»",
+        "url": "https://www.saint.gr/08/28/index.aspx",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Τῶν παθῶν καταλείψας Πάτερ τὴν Αἴγυπτον, τῶν ἀρετῶν ἐν τῷ ὄρει ἀνῆλθες πίστει θερμή, τὸν Σταυρὸν τὸν τοῦ Χριστοῦ ἄρας ἐπ' ὤμων σου, καὶ δοξασθεῖς περιφανῶς τύπος ὤφθης Μοναστῶν, Μωσῆ Πατέρων ἀκρότης, μεθ' ὧν ἀπαύστως δυσώπει ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 2208",
+        "url": "https://www.saint.gr/2208/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Αἰθιόπων πρόσωπα, ἀπορραπίσας, νοητῶν ἀνέλαμψας, καθάπερ ἥλιος φαιδρός, φωταγωγῶν τᾶς ψυχᾶς ἠμῶν, τῶν σὲ τιμώντων, Μωσῆ παμμακάριστε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 2208",
+        "url": "https://www.saint.gr/2208/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului şi înger în trup şi de minuni făcător te-ai arătat de Dumnezeu Purtătorule, Părintele nostru Moise; cu postul, cu privegherea, cu rugăciunea, cereştile daruri luând, vindeci pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Moise Etiopianul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-moise-etiopianul",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pălmuind fețele etiopienilor celor înțelegători, ca un soare luminos ai strălucit, luminând sufletele noastre, ale celor ce te cinstim pe tine, Moise preafericite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Moise Etiopianul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-moise-etiopianul",
+        "year": 2026
+      }
+    }
+  ]
+}

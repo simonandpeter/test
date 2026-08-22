@@ -1,0 +1,54 @@
+{
+  "slug": "callinicus-of-constantinople",
+  "display_name": "Callinicus, Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Calinic, Patriarhul Constantinopolului",
+      "lang": "ro"
+    },
+    {
+      "form": "Όσιος Καλλίνικος Πατριάρχης Κωνσταντινούπολης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 august — „Sfântul Ierarh Calinic, Patriarhul Constantinopolului”",
+        "url": "https://doxologia.ro/23-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Αυγούστου — «Όσιος Καλλίνικος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/08/23/index.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}
