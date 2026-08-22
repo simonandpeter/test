@@ -59,18 +59,36 @@ in the CSS goes through these custom properties; hard-coded values are a defect.
 
 | Token | Light ("day") | Dark ("vigil") | Material | Role |
 |---|---|---|---|---|
-| `--gesso` | `#FBFAF7` | `#1A1412` | gesso ground / bole clay | page and surface background |
+| `--gesso` | `#E5E4DD` | `#1A1412` | gesso ground / bole clay | page and surface background |
 | `--ink` | `#221D19` | `#EDE6DC` | walnut ink | text, icons |
-| `--ink-soft` | `#6B6259` | `#A89C8F` | diluted ink | secondary text, captions |
+| `--ink-soft` | `#5C544D` | `#A89C8F` | diluted ink | secondary text, captions |
 | `--rubric` | `#8A2E26` | `#C05B4B` | cinnabar rubric | liturgical time, current place (§2) |
 | `--gold` | `#A98237` | `#C79A4B` | burnished leaf | veneration badge only (§2) |
-| `--rule` | `#DCD5C9` | `#3A2F29` | ruled line | separators, borders, skeletons |
+| `--rule` | `#C8C2B7` | `#3A2F29` | ruled line | separators, borders, skeletons |
+
+**The light ground is gesso, not paper** (author, 2026-08-22). It was
+`#FBFAF7` — a near-white — until then, and is `#E5E4DD`: the tone of an actual
+chalk ground, which is what the icon photography is sitting on. The gold in the
+imagery now sits *in* the surface rather than glowing off a white page, which
+is the argument vigil mode has always made for bole (below), applied to day as
+well.
+
+Three derived values moved with it, and each is written down because each was a
+relationship the near-white ground had been holding up by accident rather than
+by design. `--ink-soft` and `--rule` darkened by the amount that restores their
+standing against the new ground; the recipe for `--field` did not change at all,
+only the ground it derives from. None is a taste change and none is optional —
+DESIGN.md §1's recessed field and integral border, and the AA floor, are what
+each one is holding.
 
 Derived surfaces (not new hues, just mixes of the six):
 `--field` — the recessed card interior: in light, gesso darkened ~3%
-(`#F4F1EA` is *banned* as a page colour by the brief; as a barely-different
-inset on gesso it reads as depth, not as the cream-site cliché — the page
-itself is never this colour); in dark, bole lifted ~4% (`#231A17`).
+(`#DFDCD1`); in dark, bole lifted ~4% (`#231A17`). The field is always *below*
+the page tone, because a card is a kovcheg — it recesses, it does not stand
+proud. Re-deriving it is not optional when the ground moves: the old `#F4F1EA`
+is lighter than the present ground and would have inverted the panel silently.
+(`#F4F1EA` is separately *banned* as a page colour by the brief, and the page
+has never been it.)
 `--veil` — `--gesso` at 80% alpha, for the loading veil.
 
 **Dark is not an inversion.** Vigil mode's ground is bole — the warm red-brown
@@ -78,8 +96,26 @@ under gold leaf — because the icon photography is gold-heavy and warm, and it
 must sit *in* the surface, not glow out of a black void. No pure black
 anywhere; the darkest value in the system is `#1A1412`.
 
-Contrast (checked): ink/gesso 15.6:1 light, 13.1:1 dark. ink-soft ≥ 5.4:1 both
-modes. rubric on gesso 8.8:1 light, 5.1:1 dark — safe for text at any size.
+Contrast, computed against the shipping tokens on 2026-08-22 rather than
+recalled — every figure in the previous version of this paragraph was wrong,
+which is §6b's lesson about worked values arriving in the palette. Light:
+ink/gesso 13.10:1, ink/field 12.16:1; ink-soft 5.82:1 on gesso and **5.40:1 on
+the field**, which is the binding one, because secondary text sits inside cards;
+rubric 6.59:1 on gesso, 6.12:1 on field. Dark, unchanged by this pass:
+ink/gesso 14.71:1, ink-soft 6.78:1, rubric 4.20:1.
+
+Two things that paragraph used to say and should not have. It claimed
+ink-soft "≥ 5.4:1 both modes" while the value on the light *field* was 5.29:1 —
+the ground moving is what surfaced it, and it is 5.40:1 now, so the claim is
+true for the first time. And it called dark-mode rubric 5.1:1 and "safe for text
+at any size": it is **4.20:1**, below the AA floor for normal text, and rubric
+carries the current nav item and today's date. That is a live defect in vigil
+mode, untouched by this pass and recorded in SESSIONS.md as outstanding — the
+browser suite runs in light mode only, so nothing has been checking it.
+
+`--rule` is not text and takes no AA floor, but it has to stay visible against
+both surfaces it divides: 1.39:1 on gesso and 1.29:1 on the field, which is the
+standing it held on the old ground (1.40 and 1.29) rather than a new target.
 gold is **never used for text** and never carries information alone (§7).
 
 Theme is three-way — light / dark / system, defaulting to system — set by an
@@ -689,8 +725,15 @@ same mark printed twice on one page is not emphasis.
 The brief names the AI-default looks; this section is the standing check
 against drift back toward them.
 
-- No cream-page-and-terracotta heritage kit. The page is gesso white / bole
+- No cream-page-and-terracotta heritage kit. The page is chalk gesso / bole
   brown; the accents are liturgical red and reserved gold, each with a job.
+  The ground darkened to `#E5E4DD` on 2026-08-22 and that moves it *toward*
+  this line rather than away from it, so the test is worth stating precisely:
+  what is banned is cream — a yellowed page — beside terracotta. `#E5E4DD`
+  carries eight points of warmth across its channels and is a chalk grey, and
+  the accents it sits under are cinnabar and leaf gold, neither of which is
+  terracotta. If a future nudge adds warmth to the ground, this is the check
+  it has to pass.
 - No near-black-with-acid-accent. Vigil mode is warm bole, and the brightest
   thing in it is a saint's gold, not a neon.
 - No hairline-broadsheet costume. Rules appear only where a register rules.

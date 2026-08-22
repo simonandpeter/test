@@ -2053,3 +2053,56 @@ test('the fading week is aside while the month arrives, and current again after'
   });
   expect(after).toEqual({ hidden: null, anyAside: false });
 });
+
+/* ---- the 2026-08-22 ground ---------------------------------------------- */
+
+test('the day ground is gesso, and the field is recessed into it', async ({ page }) => {
+  // The author pinned the light ground at rgb(229, 228, 221) on 2026-08-22,
+  // replacing the near-white #fbfaf7 DESIGN.md §3 had carried until then.
+  // Three derived values moved with it and each is asserted here, because each
+  // was a relationship the old near-white ground was holding up by accident.
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+
+  const lum = (rgb) => {
+    const [r, g, b] = rgb.match(/\d+/g).map(Number).map((c) => {
+      const s = c / 255;
+      return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const ratio = (a, b) => {
+    const [hi, lo] = lum(a) > lum(b) ? [lum(a), lum(b)] : [lum(b), lum(a)];
+    return (hi + 0.05) / (lo + 0.05);
+  };
+
+  const seen = await page.evaluate(() => {
+    const panel = document.querySelector('.index-card.panel');
+    const ps = getComputedStyle(panel);
+    const dates = getComputedStyle(panel.querySelector('.index-dates'));
+    return {
+      page: getComputedStyle(document.body).backgroundColor,
+      field: ps.backgroundColor,
+      border: ps.borderTopColor,
+      soft: dates.color,
+    };
+  });
+
+  // The ground itself, exactly as asked.
+  expect(seen.page).toBe('rgb(229, 228, 221)');
+
+  // A card is a kovcheg: the field sits *below* the page tone (DESIGN.md §1,
+  // §3). Darkening the page without re-deriving the field would have inverted
+  // that silently — the old #f4f1ea is lighter than this ground, so the panel
+  // would have stood proud of the page instead of recessing into it.
+  expect(lum(seen.field)).toBeLessThan(lum(seen.page));
+
+  // The integral border has to stay visible against both the page it sits on
+  // and the field it encloses. Against the new ground the old --rule was
+  // 1.14:1 and 1.06:1 — a border indistinguishable from its own interior.
+  expect(ratio(seen.border, seen.page)).toBeGreaterThan(1.3);
+  expect(ratio(seen.border, seen.field)).toBeGreaterThan(1.2);
+
+  // Secondary text on the *field* is the worst case, not on the page, and it
+  // is what axe failed at 4.34:1 when only the ground had moved.
+  expect(ratio(seen.soft, seen.field)).toBeGreaterThan(4.5);
+});

@@ -492,6 +492,69 @@ The one review item deliberately not taken: wrapping quality-floor.spec.js in
 `test.describe` blocks by route. Extend, don't rebuild, until the flat list
 actually costs time reading a failure.
 
+**21. The light ground is gesso rather than paper, and three tokens moved with
+it** (author, 2026-08-22). `--gesso` light was `#FBFAF7`, a near-white pinned by
+DESIGN.md §3 since the design pass; it is `rgb(229, 228, 221)` / `#E5E4DD`. The
+gold in the icon photography now sits in the surface instead of glowing off a
+white page — which is the argument vigil mode has always made for bole, applied
+to day as well.
+
+**One instruction, four token changes, and the three extra ones are not scope
+creep.** Each was a relationship the near-white ground was holding up by
+accident, and each fails visibly or fails the floor the moment the ground moves:
+
+- **`--field` `#F4F1EA` → `#DFDCD1`.** The old field is *lighter* than the new
+  ground, so the panel would have stood proud of the page instead of recessing
+  into it — the kovcheg inverted, DESIGN.md §1's central metaphor running
+  backwards. The recipe never changed: the field is still "gesso darkened ~3%",
+  re-derived from the ground it actually sits on.
+- **`--ink-soft` `#6B6259` → `#5C544D`.** Forced by the quality floor, which
+  failed on sight exactly as it did for the peek fade in Amendment 16: axe found
+  `#6b6259` on `#dfdcd1` at **4.34:1** — serious, on three routes, six tests.
+  Worth noticing *where*: on the page ink-soft was 4.68:1 and passing. It is the
+  **field** that fails, and the field is where secondary text actually lives, so
+  a check against the page alone would have shipped it.
+- **`--rule` `#DCD5C9` → `#C8C2B7`.** Not forced by any gate — a rule is not
+  text and takes no AA floor — and the reason it still had to move is that it
+  had dropped to **1.06:1 against the field it encloses**. The integral border
+  of every panel was indistinguishable from the panel's own interior. Nothing
+  would have caught this but rendering the page and looking at it, and the first
+  screenshot is what showed it.
+
+**The fix for `--ink-soft` was chosen against the wrong-looking option.** The
+smaller change was to lighten the field until secondary text cleared 4.5:1 on
+it. Measured, that needs the kovcheg step cut to less than half its old depth
+(ΔL 0.031 against 0.075) and still only reaches 4.51:1 with no margin — paying
+for a contrast fix with the recessed field itself. Darkening ink-soft instead
+restores the palette's own historical standing almost exactly: 5.82:1 on the
+page where it was 5.72, and 5.40:1 on the field where it was 5.29.
+
+**Every contrast figure in DESIGN.md §3 was wrong, and computing them is what
+found a live defect in vigil mode.** The paragraph claimed ink/gesso 15.6:1 (it
+was 16.00), rubric 8.8:1 (8.05), and ink-soft "≥ 5.4:1 both modes" while the
+light field sat at 5.29:1. All recomputed against the shipping tokens. The one
+that matters: **dark-mode rubric on bole is 4.20:1, not the 5.1:1 recorded, and
+that is below the AA floor for normal text** — and rubric carries the current
+nav item and today's date. Untouched by this pass and listed as outstanding
+below, because **the browser suite runs in light mode only**, so no gate has
+ever looked at vigil mode's contrast. This is Amendment 16's lesson arriving in
+the palette: a worked value nobody executes is a comment.
+
+One browser test, `the day ground is gesso, and the field is recessed into it`,
+pins the ground exactly and the other three as *relationships* — field darker
+than page, border visible against both, secondary text clearing AA on the field
+— so a future repalette stays a token change rather than a fight with a test
+full of hexes. Each of its four assertions was backed out separately and seen to
+fail on its own: 208 browser tests now, 131 unit.
+
+**Still outstanding, added 2026-08-22:** **vigil mode has never been checked by
+any gate.** Playwright's default colour scheme is light, so all 208 browser
+tests — axe included — run in day mode; dark-mode rubric at 4.20:1 on bole was
+found by arithmetic, not by the floor. Adding a `colorScheme: 'dark'` project,
+or at least running the axe route sweep in both, would close it. Whether the
+rubric token or the bole ground is what moves to fix it is the author's call,
+being a palette decision rather than a bug fix.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

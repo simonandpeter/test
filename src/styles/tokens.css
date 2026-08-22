@@ -7,15 +7,15 @@
    of a black void). Dark is not an inversion and contains no pure black. */
 
 :root {
-  --gesso: #fbfaf7;
+  --gesso: #e5e4dd;
   --ink: #221d19;
-  --ink-soft: #6b6259;
+  --ink-soft: #5c544d;
   --rubric: #8a2e26;
   --gold: #a98237;
-  --rule: #dcd5c9;
+  --rule: #c8c2b7;
 
-  --field: #f4f1ea; /* recessed panel interior only — never a page background */
-  --veil: rgba(251, 250, 247, 0.8);
+  --field: #dfdcd1; /* recessed panel interior only — never a page background */
+  --veil: rgba(229, 228, 221, 0.8);
 
   /* The veneration glyph's colour contract (DESIGN.md §7). The component
      itself holds no colour value at all: it reads these four, so a repalette
