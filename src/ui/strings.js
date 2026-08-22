@@ -179,6 +179,10 @@ export const STRINGS = {
       cards: 'Cards',
       rows: 'Rows',
       description: 'How the saints are laid out',
+      // The tick box beside them (author, 2026-08-22): the full mark for the
+      // badge, and the opening of the life under the name.
+      detailed: 'Detailed',
+      detailedDescription: 'Show the full veneration mark and a short description on every saint',
     },
     sort: {
       label: 'Sort',
@@ -193,6 +197,12 @@ export const STRINGS = {
     nameForms: 'Also called',
     save: 'Save',
     saved: 'Saved',
+    // The bookmark's accessible names carry the saint's name: on the Index
+    // there are many on one page, and a column of identical "Save" buttons is
+    // what a screen reader would otherwise be given.
+    saveNamed: 'Save {name}',
+    savedNamed: '{name} is saved. Activate to remove it.',
+    back: 'Back to All Saints',
     veneration: 'Veneration',
     life: 'Life',
     noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',

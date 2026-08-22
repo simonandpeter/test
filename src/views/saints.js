@@ -14,14 +14,18 @@
  * - **Breadth of veneration sorts only when asked.** It is offered, never
  *   defaulted to: ordering the corpus by how many communions venerate someone
  *   would read as a ranking of importance.
+ *
+ * And one thing added on 2026-08-22 (Addendum H1–H3): the grid remembers where
+ * the reader left it, shows more of each saint when asked (*Detailed*), and
+ * carries the Save bookmark on every card.
  */
 
 import { CHURCHES_BY_ID, enabledChurches, enabledCommunions } from '../data/churches.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
-import { escapeHtml as esc } from '../lib/markdown.js';
-import { prefetch } from '../lib/detail.js';
+import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
+import { loadDetail, prefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
 import {
   EMPTY_FILTERS,
@@ -32,7 +36,8 @@ import {
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { renderBadge } from '../ui/badge.js';
-import { matrixRows } from '../ui/matrix.js';
+import { matrixRows, renderMatrix } from '../ui/matrix.js';
+import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -55,6 +60,17 @@ const CARD_INSET = 18;
  */
 const ROW_HEIGHT = 66;
 const ROW_GAP = 8;
+/**
+ * Detailed (author, 2026-08-22) adds the rite × communion matrix in place of
+ * the badge and a short description under the dates, and both are sized so
+ * the box is still known before render: the matrix fits the 42 px name line a
+ * card already reserves, and the description is a fixed count of utility lines
+ * (13.5 px at 1.45 = 19.575 each), clamped — three on a card, two on a row.
+ * Card: 92 + 6 gap + 58.725 = 156.7. Row: 18 inset + 31 name line + 2 + 19.575
+ * dates + 2 + 39.15 = 111.7. index.css fixes the other half of each number.
+ */
+const DETAILED_CARD_TEXT_HEIGHT = 157;
+const DETAILED_ROW_HEIGHT = 112;
 const LAYOUTS = ['cards', 'rows'];
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', timeZone: 'UTC' });
@@ -62,15 +78,34 @@ const monthLabel = (m) => monthFmt.format(new Date(Date.UTC(2001, m - 1, 1)));
 
 let state = null;
 
+/**
+ * Where the reader was, kept across a trip into a saint's page (author,
+ * 2026-08-22): the × on that page and the browser's own back both return here
+ * and find the grid as it was left — filters, search, sort, which facets were
+ * open, and the scroll position. Layout and Detailed are settings and come
+ * back by themselves. Module-level, so it lives as long as the page does; the
+ * nav link still opens the Index fresh, because it does not ask.
+ */
+let remembered = null;
+
+/**
+ * The opening of each life, derived once from the fetched text and kept across
+ * re-renders — the same card is mounted and unmounted on every scroll frame
+ * and must not refetch to say the same sentence again.
+ */
+const ledes = new Map();
+
 export function destroy() {
+  if (state) remembered = snapshot(state);
   state?.cleanups.forEach((fn) => fn?.());
   state = null;
 }
 
-export function render(el, { data, router }) {
+export function render(el, { data, router, nav }) {
   destroy();
 
   const cards = data.saints;
+  const settings = store.getSettings();
   state = {
     el,
     data,
@@ -85,10 +120,10 @@ export function render(el, { data, router }) {
     shownCards: [],
     shown: 0,
     // Which layout the reader last chose, remembered across visits: a view
-    // control that forgets is one the reader has to set every time.
-    layout: LAYOUTS.includes(store.getSettings().indexLayout)
-      ? store.getSettings().indexLayout
-      : 'cards',
+    // control that forgets is one the reader has to set every time. Detailed
+    // is remembered the same way.
+    layout: LAYOUTS.includes(settings.indexLayout) ? settings.indexLayout : 'cards',
+    detailed: settings.indexDetailed === true,
     finePointer: window.matchMedia('(pointer: fine)').matches,
     named: null,
     cleanups: [],
@@ -105,8 +140,65 @@ export function render(el, { data, router }) {
 
   wireControls();
   wireGrid();
+
+  // Back where the reader was, if that is what this navigation is — the saint
+  // page's × says so, and so does a history traversal. The grid's height has
+  // to exist before the scroll can, which is why the restore straddles update.
+  const restoring = (nav?.restore || nav?.pop) && remembered ? remembered : null;
+  if (restoring) applySnapshot(restoring);
   update({ animate: false });
+  if (restoring) {
+    window.scrollTo(0, restoring.scrollY);
+    paintWindow();
+  }
   loadSearch(cards);
+}
+
+/* ---- remembering the place --------------------------------------------- */
+
+function snapshot(state) {
+  return {
+    filters: { ...state.filters },
+    openFacets: [...state.el.querySelectorAll('details.facet[open]')].map((d) => d.dataset.facet),
+    scrollY: window.scrollY,
+  };
+}
+
+/**
+ * Puts a snapshot back into both the state and the controls, because
+ * readFilters reads the controls: the next keystroke must start from what the
+ * reader sees, not from an empty form.
+ */
+function applySnapshot(snap) {
+  const { el } = state;
+  const controlsEl = el.querySelector('.index-controls');
+  const f = { ...EMPTY_FILTERS, ...snap.filters };
+  state.filters = f;
+
+  controlsEl.querySelector('[data-query]').value = f.query ?? '';
+  const check = (name, values) => {
+    const wanted = new Set((values ?? []).map(String));
+    for (const input of controlsEl.querySelectorAll(`input[name="${name}"]`)) {
+      input.checked = wanted.has(input.value);
+    }
+  };
+  check('churches', f.churches);
+  check('months', f.months);
+  check('types', f.types);
+  check('sexes', f.sexes);
+  check('regions', f.regions);
+  check('historicities', f.historicities);
+  controlsEl.querySelector('[data-from]').value = f.from ?? '';
+  controlsEl.querySelector('[data-to]').value = f.to ?? '';
+  const mode = controlsEl.querySelector(`input[name="rangeMode"][value="${f.rangeMode}"]`);
+  if (mode) mode.checked = true;
+  controlsEl.querySelector('[data-breadth]').value = String(f.breadth ?? 0);
+  controlsEl.querySelector('[data-sort]').value = f.sort ?? 'name';
+  for (const name of snap.openFacets ?? []) {
+    const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
+    if (group) group.open = true;
+  }
+  el.querySelector('[data-clear]').hidden = !hasActiveFilters(f);
 }
 
 /* ---- search -------------------------------------------------------------- */
@@ -283,6 +375,13 @@ function controls(state) {
             aria-pressed="${String(id === state.layout)}">${STRINGS.saints.layout[id]}</button>`,
         ).join('')}
       </div>
+
+      <label class="detail-toggle utility">
+        <input type="checkbox" data-detailed${state.detailed ? ' checked' : ''}
+          aria-describedby="detailed-description" />
+        ${STRINGS.saints.layout.detailed}
+      </label>
+      <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>
     </div>
   </div>`;
 }
@@ -294,7 +393,10 @@ function wireControls() {
   const checked = (name) =>
     [...controlsEl.querySelectorAll(`input[name="${name}"]:checked`)].map((i) => i.value);
 
-  const readFilters = () => {
+  const readFilters = (e) => {
+    // Detailed is a view control, not a filter; it has its own listener below
+    // and must not run a filter pass.
+    if (e?.target?.matches?.('[data-detailed]')) return;
     const from = controlsEl.querySelector('[data-from]').value;
     const to = controlsEl.querySelector('[data-to]').value;
     state.filters = {
@@ -331,6 +433,17 @@ function wireControls() {
   };
   random.addEventListener('click', onRandom);
 
+  // Every card's markup and box change, so none of the rendered ones can be
+  // kept: this is a re-render, not a reflow. Shared by the layout buttons and
+  // the Detailed box, which change the same things.
+  const rerenderAll = () => {
+    for (const [slug, node] of state.rendered) {
+      node.remove();
+      state.rendered.delete(slug);
+    }
+    update({ animate: false });
+  };
+
   const onLayout = (e) => {
     const button = e.target.closest('[data-layout]');
     if (!button || button.dataset.layout === state.layout) return;
@@ -339,19 +452,23 @@ function wireControls() {
     for (const b of controlsEl.querySelectorAll('[data-layout]')) {
       b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
     }
-    // Every card's markup and box change, so none of the rendered ones can be
-    // kept: this is a re-render, not a reflow.
-    for (const [slug, node] of state.rendered) {
-      node.remove();
-      state.rendered.delete(slug);
-    }
-    update({ animate: false });
+    rerenderAll();
   };
   controlsEl.addEventListener('click', onLayout);
 
+  const detailedBox = controlsEl.querySelector('[data-detailed]');
+  const onDetailed = () => {
+    state.detailed = detailedBox.checked;
+    store.setSetting('indexDetailed', state.detailed);
+    rerenderAll();
+  };
+  detailedBox.addEventListener('change', onDetailed);
+
   const clear = controlsEl.querySelector('[data-clear]');
   const onClear = () => {
-    for (const input of controlsEl.querySelectorAll('input[type="checkbox"]')) input.checked = false;
+    for (const input of controlsEl.querySelectorAll('input[type="checkbox"]:not([data-detailed])')) {
+      input.checked = false;
+    }
     controlsEl.querySelector('[data-query]').value = '';
     controlsEl.querySelector('[data-from]').value = '';
     controlsEl.querySelector('[data-to]').value = '';
@@ -364,6 +481,7 @@ function wireControls() {
   state.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
     controlsEl.removeEventListener('click', onLayout);
+    detailedBox.removeEventListener('change', onDetailed);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);
   });
@@ -427,6 +545,10 @@ function wireGrid() {
   };
   if (state.finePointer) el.addEventListener('pointerover', onHover);
 
+  // The bookmarks: one delegated listener for every card that will ever mount
+  // here, and one subscription that repaints them all when the store changes.
+  const unwireSave = wireSaveButtons(grid);
+
   state.cleanups.push(() => {
     if (frame) cancelAnimationFrame(frame);
     if (resizeFrame) cancelAnimationFrame(resizeFrame);
@@ -434,6 +556,7 @@ function wireGrid() {
     window.removeEventListener('resize', onResize);
     grid.removeEventListener('click', onClick);
     el.removeEventListener('pointerover', onHover);
+    unwireSave();
   });
 }
 
@@ -461,7 +584,7 @@ function update({ animate }) {
         width: grid.clientWidth,
         gap: ROW_GAP,
         columns: 1,
-        textHeight: ROW_HEIGHT,
+        textHeight: state.detailed ? DETAILED_ROW_HEIGHT : ROW_HEIGHT,
         // A row's thumbnail is a fixed box, so no row's height depends on its
         // image and every row is the same height. Still exact, still no
         // measurement — the constant is simply the whole answer here.
@@ -470,7 +593,7 @@ function update({ animate }) {
     : layout(matched, {
         width: grid.clientWidth,
         gap: GAP,
-        textHeight: CARD_TEXT_HEIGHT,
+        textHeight: state.detailed ? DETAILED_CARD_TEXT_HEIGHT : CARD_TEXT_HEIGHT,
         mediaInset: CARD_INSET,
         // The manifest keeps a card's pixel dimensions on its image, and a
         // saint may have no image at all.
@@ -530,15 +653,19 @@ function paintWindow() {
     }
   }
 
+  let mounted = false;
   for (const position of visible) {
     let node = state.rendered.get(position.slug);
     if (!node) {
+      const rows = state.layout === 'rows';
       node = document.createElement('div');
-      node.className = `index-card panel${state.layout === 'rows' ? ' is-row' : ''}`;
-      node.innerHTML = card(position, state.router, state.layout === 'rows');
+      node.className = `index-card panel${rows ? ' is-row' : ''}${state.detailed ? ' is-detailed' : ''}`;
+      node.innerHTML = card(position, state.router, { rows, detailed: state.detailed });
       inner.appendChild(node);
       state.rendered.set(position.slug, node);
+      mounted = true;
       if (!state.finePointer) prefetch(position.slug);
+      if (state.detailed) fillDescription(node, position);
     }
     if (node.classList.contains('leaving')) {
       // Brought back mid-fade by a second filter change: current again, so the
@@ -550,16 +677,20 @@ function paintWindow() {
     node.style.height = `${position.h}px`;
     node.style.transform = `translate(${position.x}px, ${position.y}px)`;
   }
+  // New cards arrive with their bookmark unpainted; one read of the store
+  // paints every card in the window, not one per card.
+  if (mounted) paintSaved(inner);
 }
 
 /**
  * A card and a row are the same three things — image, name with its glyph,
- * dates — in two arrangements. In cards the box comes from the image's aspect
- * ratio; in rows the thumbnail is square and the box is a constant, so an
- * imageless saint still gets an empty one and the column of names stays a
- * column.
+ * dates — in two arrangements, plus the bookmark. In cards the box comes from
+ * the image's aspect ratio; in rows the thumbnail is square and the box is a
+ * constant, so an imageless saint still gets an empty one and the column of
+ * names stays a column. Detailed swaps the badge for the matrix and adds the
+ * description box, held by skeleton bars until the life arrives.
  */
-function card(item, router, rows = false) {
+function card(item, router, { rows = false, detailed = false } = {}) {
   const image = item.image
     ? `<span class="index-media" style="background-image:url('${BASE + item.image.lqip}')${
         rows ? '' : `;aspect-ratio:${item.image.aspect}`
@@ -571,17 +702,58 @@ function card(item, router, rows = false) {
       ? '<span class="index-media is-empty" aria-hidden="true"></span>'
       : '';
 
+  const glyph = detailed
+    ? renderMatrix(item.attestations, { pitch: 7.65 })
+    : renderBadge(item.attestations, { pitch: 10.2 });
+
+  const description = detailed
+    ? `<span class="index-desc utility" data-desc>
+        <span class="desc-skel" aria-hidden="true"><span class="skeleton"></span><span class="skeleton"></span></span>
+      </span>`
+    : '';
+
   // The link wraps the name only, and its ::after covers the whole card, so
   // the image is clickable without a second link that has no accessible name
   // of its own — and so the glyph can sit beside the name rather than inside
-  // the link, where its label would become part of the link's.
+  // the link, where its label would become part of the link's. The bookmark
+  // sits above that ::after, so pressing it saves rather than opens.
   const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
-      ${renderBadge(item.attestations, { pitch: 10.2 })}
+      ${glyph}
     </span>
-    <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>`;
+    <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
+    ${description}`;
+  const bookmark = renderBookmark(item.slug, item.display_name);
 
-  return rows ? `${image}<span class="row-body">${body}</span>` : `${image}${body}`;
+  return rows ? `${image}<span class="row-body">${body}</span>${bookmark}` : `${image}${body}${bookmark}`;
+}
+
+/**
+ * The description is the opening paragraph of the saint's own life, fetched
+ * through the same second layer the detail page uses (brief §7) and derived
+ * once per saint. It is not in the manifest on purpose — Addendum H1 has the
+ * budget arithmetic. A saint with no life, or a fetch that fails, shows what
+ * the manifest does say: the types.
+ */
+async function fillDescription(node, item) {
+  const box = node.querySelector('[data-desc]');
+  if (!box) return;
+  const fallback = () => {
+    const types = (item.types ?? []).join(', ');
+    return types ? types.charAt(0).toUpperCase() + types.slice(1) : '';
+  };
+  let text = ledes.get(item.slug);
+  if (text === undefined) {
+    try {
+      const payload = await loadDetail(item.slug);
+      text = firstParagraphText(payload.life) || fallback();
+      ledes.set(item.slug, text);
+    } catch {
+      text = fallback();
+    }
+  }
+  if (!box.isConnected) return;
+  box.textContent = text;
 }
 
 /* ---- count and tray ------------------------------------------------------ */

@@ -26,7 +26,7 @@ import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../l
 import * as store from '../lib/store.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
-import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
+import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -58,6 +58,11 @@ export function destroy() {
   live = null;
 }
 
+/* The × that closes the page. Ink on nothing, like the bookmark beside it. */
+const CLOSE =
+  '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">' +
+  '<path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" fill="none"/></svg>';
+
 export function render(el, { data, params, router }) {
   destroy();
   const mine = ++generation;
@@ -73,7 +78,7 @@ export function render(el, { data, params, router }) {
   }
 
   el.innerHTML = shell(card);
-  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el)];
+  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router)];
   live = { cleanups, teardown: () => cleanups.forEach((fn) => fn?.()) };
 
   store.visit(slug);
@@ -110,35 +115,54 @@ function shell(card) {
     .filter(Boolean)
     .join(' · ');
 
+  // The name, its two controls, and the mark (DESIGN.md §5c). The controls
+  // follow the mark in the DOM so the name and its glyph stay adjacent (§7d);
+  // saint.css puts them between the two visually.
   return `<article class="saint">
     <header class="saint-head">
       <div class="name-line">
         <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
         ${renderMatrix(card.attestations, { pitch: 7.65 })}
+        <span class="saint-tools">
+          ${renderBookmark(card.slug, card.display_name)}
+          <button type="button" class="close-button icon-button" data-back aria-label="${STRINGS.saint.back}">${CLOSE}</button>
+        </span>
       </div>
       <p class="names" data-names hidden></p>
       <p class="saint-facts utility">${esc(formatLifespan(card.dates))}${facts ? ` · ${esc(facts)}` : ''}</p>
-      <div class="saint-actions">${renderSaveButton(card.slug)}</div>
       <p class="resume-note utility" data-resume hidden></p>
     </header>
 
-    <div class="saint-columns">
-      <div class="saint-aside">
-        ${media}
+    <div class="saint-intro${media ? ' has-media' : ''}">
+      ${media ? `<div class="saint-media-col">${media}</div>` : ''}
+      <div class="saint-intro-facts">
         ${renderDateFacts(card.dates, card.locations)}
         ${card.historicity ? `<p class="historicity utility">${esc(STRINGS.saint.historicity[card.historicity] ?? card.historicity)}</p>` : ''}
       </div>
+    </div>
 
-      <div class="saint-main" data-detail>
-        <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
-        <div data-veneration>${skeletonLines(4)}</div>
-        <h2 class="register-heading">${STRINGS.saint.life}</h2>
-        <div class="life" data-life>${skeletonLines(6)}</div>
-        <div data-sources></div>
-        <div data-related></div>
-      </div>
+    <div class="saint-main" data-detail>
+      <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
+      <div data-veneration>${skeletonLines(4)}</div>
+      <h2 class="register-heading">${STRINGS.saint.life}</h2>
+      <div class="life" data-life>${skeletonLines(6)}</div>
+      <div data-sources></div>
+      <div data-related></div>
     </div>
   </article>`;
+}
+
+/**
+ * The × closes the page back into All Saints as the reader left it — the
+ * Index keeps its own record of where that was and restores itself when asked
+ * to (views/saints.js). Whichever way the reader arrived: a deep link simply
+ * finds nothing to restore and opens the Index at the top.
+ */
+function wireBack(el, router) {
+  const button = el.querySelector('[data-back]');
+  const onClick = () => router.navigate('/saints', { state: { restore: true } });
+  button.addEventListener('click', onClick);
+  return () => button.removeEventListener('click', onClick);
 }
 
 /**

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { escapeHtml, renderMarkdown, stripLeadingHeading } from '../src/lib/markdown.js';
+import { escapeHtml, firstParagraphText, renderMarkdown, stripLeadingHeading } from '../src/lib/markdown.js';
 
 test('markup in the source text is escaped before anything is rendered', () => {
   const html = renderMarkdown('A <script>alert(1)</script> in a life.');
@@ -50,4 +50,25 @@ test('the life own title is dropped, because the page already sets it', () => {
   assert.equal(stripLeadingHeading('# Anthony the Great\n\nBorn to a family.'), 'Born to a family.');
   // Only the leading one: a heading further down is structure, not a repeat.
   assert.equal(stripLeadingHeading('Text\n\n# Later'), 'Text\n\n# Later');
+});
+
+test('the first paragraph of a life reads as plain text, links and emphasis flattened', () => {
+  // The Index's Detailed card shows this, so it is derived from the life the
+  // author wrote rather than authored a second time (Addendum H1).
+  const md =
+    '# Paul of Thebes\n\nAlmost everything told of Paul comes from a single text: the *Life of Paul*,\n' +
+    'written by [Jerome](/saints/jerome) around **375**.\n\nThe narrative turns on a meeting.';
+  assert.equal(
+    firstParagraphText(md),
+    'Almost everything told of Paul comes from a single text: the Life of Paul, written by Jerome around 375.',
+  );
+});
+
+test('the first paragraph skips headings, quotes, lists and rules, and an empty life is an empty string', () => {
+  assert.equal(
+    firstParagraphText('# Name\n\n## Early life\n\n> a quote\n\n- a list\n\n---\n\nThe paragraph.'),
+    'The paragraph.',
+  );
+  assert.equal(firstParagraphText(''), '');
+  assert.equal(firstParagraphText(null), '');
 });

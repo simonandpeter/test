@@ -140,3 +140,28 @@ export function renderMarkdown(md, { link, headingOffset = 1 } = {}) {
   flushAll();
   return out.join('\n');
 }
+
+/**
+ * The opening paragraph of a life as plain text, for the Index's Detailed
+ * cards (author, 2026-08-22): the first block after the leading heading that
+ * is a paragraph rather than a heading, list, rule or blockquote, with links
+ * reduced to their labels and emphasis marks removed. Derived from the life
+ * the author wrote, so a card's description can never drift from the page it
+ * opens. Markdown-aware only as far as renderMarkdown is; the corpus uses
+ * nothing more.
+ */
+export function firstParagraphText(md) {
+  for (const raw of stripLeadingHeading(md ?? '').split(/\n\s*\n/)) {
+    const block = raw.trim();
+    if (!block || /^(#{1,6}\s|[-*+]\s|\d+[.)]\s|>|(?:-{3,}|\*{3,})\s*$)/.test(block)) continue;
+    return block
+      .replace(/\s*\n\s*/g, ' ')
+      .replace(/\[([^\]]+)\]\([^)\s]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1$2')
+      .replace(/(^|[\s(])_([^_\n]+)_/g, '$1$2')
+      .trim();
+  }
+  return '';
+}

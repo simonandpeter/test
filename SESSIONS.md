@@ -547,6 +547,80 @@ than page, border visible against both, secondary text clearing AA on the field
 full of hexes. Each of its four assertions was backed out separately and seen to
 fail on its own: 208 browser tests now, 131 unit.
 
+**22. The Index shows more when asked, Save is a bookmark, and the saint's
+page closes back into the Index where the reader left it** (author,
+2026-08-22; Addendum H, Phase 1). Four instructions, each written up in
+Addendum H1–H4 and DESIGN.md §5, §5c, §7c, §7d; this entry is what they cost.
+
+**Detailed is the reader asking a card for the §9.2 view, and the matrix ships
+unscaled.** DESIGN.md §7c had ruled the matrix out of cards because a matrix
+*scaled to 17 px type* needs a sub-1.5 px undocumented dot; at the h1's own
+pitch it is the same 30.6 px mark and it fits the 42 px name line a card
+already reserves, so the dot stays 1.68 px. The description is the life's
+opening paragraph — `firstParagraphText` in lib/markdown.js, two unit tests —
+fetched through the second layer as the card mounts and held in a box of a
+fixed count of lines, clamped, so every height the virtualiser is fed stays a
+constant: 157 px of text under a card, 112 px for a row. It is deliberately
+not in the manifest; H1 has the arithmetic. A saint with no life shows its
+types. Both grains were measured for cropping in both layouts at both widths.
+
+**The bookmark is a two-path shape.** An ink outline over a wide gesso halo,
+filled when saved: one stroke alone vanished on the dark half of an icon and
+on the gold half in turn, and the halo is what gives it an edge on both. It is
+ink on purpose — over a picture, gold would claim a finding and red would
+claim liturgical time (§2) — and a browser test asserts the stroke is `--ink`
+and the fill is never `--gold`. **Three things it cost:**
+
+- A card with no picture has the glyph in the corner the bookmark wanted — the
+  name line is the first thing in the card — and the first screenshot showed
+  the two on top of each other on Christopher. The bookmark stands beside the
+  dates there, 50 px down, with the arithmetic in index.css.
+- In a row the bookmark's column narrowed the body to ~206 px at 360, and
+  "13 November 354 – 28 August 430" wrapped and was cropped by the fixed box.
+  Nothing caught it until the Detailed test measured every mounted card for
+  `scrollHeight > clientHeight`. Row dates are one line with an ellipsis now,
+  as the register's feast dates already are.
+- `wireSaveButtons` kept a list of buttons taken at wiring time, which the
+  Index — mounting and unmounting cards on every scroll frame — makes stale
+  within a second. It re-queries on every paint now and the click is
+  delegated; one read of the store paints the whole window.
+
+**The × found two defects older than itself.** No scroll reset existed
+anywhere in the router, so at 360 px a reader arriving from a scrolled Index
+landed **696 px down** the saint's page (desktop happened to land at 0 because
+the old document's height collapsed first); and browser-back to the Index lost
+the position at every width, because the browser's own `auto` restoration
+fires before a virtualised grid has been re-rendered and restores into
+nothing. The app owns scroll now: `history.scrollRestoration = 'manual'`,
+every navigation lands at the top, and the Index restores itself from a
+module-level snapshot — filters, search, sort, open facets, scroll — when the
+navigation says so: the × passes `{ restore: true }` through the router and a
+history traversal arrives as `{ pop: true }`. The nav link still opens it
+fresh, because it does not ask. Layout and Detailed come back by themselves,
+being settings.
+
+**The saint's page head.** The name, then the bookmark and the ×, then the
+matrix at the margin — visually; in the DOM the controls follow the mark, so
+the name and its glyph stay adjacent (§7d) and `glyphFollowsName`'s `+`
+assertion still reads the truth. The register stands beside the image from
+760 px and the body runs full width beneath both; the `.historicity` line got
+`max-width: none` so its rule spans the column it now closes rather than a
+paragraph's measure.
+
+**Two test-design faults of my own, caught by the first run:** a Playwright
+`.click()` scrolls its target into view first, which moved the very scroll
+position the × test was about — the test opens cards from the page as it
+stands now, by evaluate; and Christopher is not mounted at 360 px until he is
+scrolled to, so the imageless-corner check scrolls for him first. Five browser
+tests and two unit tests: 133 unit, 218 browser. **Eight backouts, each seen
+to fail its test**: the matrix for the badge, the bookmark's position, its
+wiring, the Index restore, the scroll reset, the head's grid, the controls'
+order, and the row dates' nowrap; the tree was compared byte for byte against
+the pristine copies after the last restore.
+
+**Phase 2 is scoped in Addendum H5–H9 and not started**; five questions there
+want the author's answers first.
+
 **Still outstanding, added 2026-08-22:** **vigil mode has never been checked by
 any gate.** Playwright's default colour scheme is light, so all 208 browser
 tests — axe included — run in day mode; dark-mode rubric at 4.20:1 on bole was

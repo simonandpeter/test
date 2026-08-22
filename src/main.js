@@ -45,7 +45,7 @@ function renderNav(current) {
     .join('');
 }
 
-function show({ route, params }) {
+function show({ route, params }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
   // Every prefetch in flight was a guess about where this reader was going,
@@ -58,6 +58,11 @@ function show({ route, params }) {
     currentView?.destroy?.();
     currentView = view ?? null;
     renderNav(route?.nav);
+    // Every navigation lands at the top of the page it opens. A view that puts
+    // the reader back where they were — the Index, on its × or on the
+    // browser's back — does so after this, from its own record (DESIGN.md
+    // §5c). The first render keeps whatever position the browser gave it.
+    if (!firstRender) window.scrollTo(0, 0);
     if (!view) {
       document.title = `${STRINGS.notFound.title} — ${STRINGS.site.name}`;
       viewEl.innerHTML = `<h1>${STRINGS.notFound.title}</h1><p>${STRINGS.notFound.body}</p>`;
@@ -68,7 +73,7 @@ function show({ route, params }) {
     // the page.
     const heading = view.titleFor ? view.titleFor(params, data) : view.title;
     document.title = `${heading} — ${STRINGS.site.name}`;
-    view.render(viewEl, { data, params, router });
+    view.render(viewEl, { data, params, router, nav });
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
     // yet, focus is already at the top of the document, and Chrome treats a

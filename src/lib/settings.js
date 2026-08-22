@@ -20,6 +20,9 @@ const DEFAULTS = {
   // 'cards' — image above the name, box from the manifest's aspect ratio.
   // 'rows'  — thumbnail left, name and glyph right, packed tight.
   indexLayout: 'cards',
+  // Detailed (author, 2026-08-22): the matrix for the badge and a line of the
+  // life on every card. Off until asked for, and remembered once it is.
+  indexDetailed: false,
 };
 
 export function readSettings() {

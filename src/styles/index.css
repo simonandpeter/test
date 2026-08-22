@@ -200,6 +200,17 @@ select:hover {
   color: var(--ink);
 }
 
+/* Detailed (author, 2026-08-22): a tick box beside the layout control, and a
+   different axis from it — the layout says how the saints are arranged, this
+   says how much of each is shown. */
+.detail-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
 .breadth-roster {
   list-style: none;
   margin: var(--space-2) 0 0;
@@ -321,6 +332,65 @@ select:hover {
   color: var(--ink-soft);
 }
 
+/* ---- Detailed ---------------------------------------------------------- */
+
+/* The matrix takes the badge's place on the name line and fits the line's 42
+   px box unscaled — the .badge rule above already sets it 5 px down, and it is
+   30.6 tall. The description is a fixed box of utility lines, three on a card
+   and two on a row, clamped: so the height the virtualiser was given stays
+   true whatever the life says and whichever face renders it. saints.js holds
+   the other half of these numbers (DETAILED_CARD_TEXT_HEIGHT, DETAILED_ROW_HEIGHT). */
+.index-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  height: 58.725px; /* 3 x 19.575, the utility line */
+  color: var(--ink-soft);
+}
+
+/* Two faint bars hold the box until the life arrives; the text lands in the
+   same box. Static under reduced motion, like every skeleton. */
+.desc-skel {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 4px;
+}
+
+.desc-skel .skeleton {
+  display: block;
+  height: 11px;
+  width: 92%;
+}
+
+.desc-skel .skeleton:last-child {
+  width: 68%;
+}
+
+/* ---- the bookmark ------------------------------------------------------ */
+
+/* Over the image's top-right corner (author, 2026-08-22), above the link's
+   ::after that covers the card, so a press saves rather than opens. The card's
+   padding edge is the image's edge, so a card with no picture puts it in the
+   same corner — the card's own. */
+.index-card > .bookmark {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 1;
+}
+
+/* A card with no picture has the glyph in that corner — the name line is the
+   first thing in it — so the bookmark stands beside the dates instead: the
+   one line of the block that is short. 8 px padding + the 42 px name line +
+   6 px gap puts the dates at 56; a 32 px button centred on a 19.575 px line
+   starts 6 px above it. The same spot with or without a description beneath. */
+.index-card:not(.is-row):not(:has(.index-media)) > .bookmark {
+  top: 50px;
+}
+
 /* ---- rows -------------------------------------------------------------- */
 
 /* The other half of ROW_HEIGHT in views/saints.js: a 48 px thumbnail plus the
@@ -367,6 +437,38 @@ select:hover {
   -webkit-line-clamp: 1;
   line-clamp: 1;
   word-break: break-word;
+}
+
+/* The dates too: the bookmark's column narrows a row's body to ~206 px at
+   360, and "13 November 354 – 28 August 430" wrapped there and was cropped by
+   the fixed box. One line with an ellipsis, as the register's feast dates are
+   (calendar.css); the saint's page prints the whole of it. */
+.index-card.is-row .index-dates {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* A 48 px thumbnail has no corner to spare, so in a row the bookmark stands at
+   the trailing edge: a column of marks down the register, beyond the glyphs'
+   own column. */
+.index-card.is-row > .bookmark {
+  position: static;
+  align-self: center;
+}
+
+/* Detailed rows: the name line is the matrix's height and the name sits
+   centred on it; the description takes two lines. 31 + 2 + 19.575 + 2 + 39.15
+   inside an 18 px inset is the 112 px row saints.js reserves. */
+.index-card.is-row.is-detailed .name-line {
+  height: 31px;
+  align-items: center;
+}
+
+.index-card.is-row .index-desc {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  height: 39.15px;
 }
 
 .index-empty {

@@ -29,6 +29,13 @@ const compile = (pattern) => {
 export function createRouter(routes, onNavigate) {
   const table = routes.map((r) => ({ ...r, ...compile(r.path) }));
 
+  // The app owns scroll (DESIGN.md §5c): every navigation lands at the top of
+  // the page it opens, except the Index returning to where the reader left it,
+  // which it does itself. The browser's own restoration cannot do that job —
+  // it fires before a virtualised grid has been re-rendered and so restores
+  // into nothing — and left on, it fights the one that can.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
   const resolve = (pathname) => {
     let path = decodeURIComponent(pathname);
     if (BASE && path.startsWith(BASE)) path = path.slice(BASE.length);
@@ -45,11 +52,14 @@ export function createRouter(routes, onNavigate) {
     return { route: null, params: {}, path };
   };
 
-  const navigate = (to, { replace = false } = {}) => {
+  // `state` rides along to the view as a hint about the navigation — the
+  // saint page's × asks the Index to restore itself with { restore: true } —
+  // and a history traversal arrives marked { pop: true } for the same reason.
+  const navigate = (to, { replace = false, state = null } = {}) => {
     const url = BASE + to;
     if (replace) history.replaceState(null, '', url);
     else history.pushState(null, '', url);
-    onNavigate(resolve(to));
+    onNavigate(resolve(to), { pop: false, ...state });
   };
 
   // Same-origin link clicks become navigations; everything else — new tabs,
@@ -62,11 +72,11 @@ export function createRouter(routes, onNavigate) {
     navigate(a.pathname.startsWith(BASE) ? a.pathname.slice(BASE.length) || '/' : a.pathname);
   });
 
-  window.addEventListener('popstate', () => onNavigate(resolve(location.pathname)));
+  window.addEventListener('popstate', () => onNavigate(resolve(location.pathname), { pop: true }));
 
   return {
     navigate,
-    start: () => onNavigate(resolve(location.pathname)),
+    start: () => onNavigate(resolve(location.pathname), { pop: false, first: true }),
     href: (to) => BASE + to,
   };
 }

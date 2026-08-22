@@ -89,6 +89,45 @@ button:hover {
   border-color: var(--ink-soft);
 }
 
+/* A frameless icon button — the bookmark, and the × that closes a saint's page
+   (DESIGN.md §5, §5c). No border and no field: the shape is the control. The
+   box stays 32 px square so there is a finger's worth to press and the focus
+   ring has something to draw on. The shelf's × predates this class and keeps
+   its own rule. */
+.icon-button {
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: var(--ink);
+  line-height: 1;
+}
+
+/* The bookmark's two states: an ink outline when not saved, the shape filled
+   when it is, each over a gesso halo so the mark keeps an edge on gold ground
+   and dark ground alike. Never gold, never red — Save is chrome. */
+.bookmark-mark .bm-halo {
+  fill: none;
+  stroke: var(--gesso);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+
+.bookmark-mark .bm-shape {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.bookmark.is-saved .bookmark-mark .bm-shape {
+  fill: var(--ink);
+}
+
 /* ---- chrome ---------------------------------------------------------- */
 
 .chrome {

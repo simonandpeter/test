@@ -283,18 +283,22 @@ test('an address with no saint behind it is prose, not a red banner', async ({ p
 });
 
 test('saving persists across a reload, and both Save buttons agree', async ({ page }) => {
+  // The saint's page carries the bookmark (author, 2026-08-22); the calendar
+  // hero still carries the text button. Same store, one state.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  const save = page.locator('.save-button');
+  const save = page.locator('.saint-head .bookmark');
   await expect(save).toHaveAttribute('aria-pressed', 'false');
   await save.click();
   await expect(save).toHaveAttribute('aria-pressed', 'true');
-  await expect(save).toHaveText('Saved');
+  await expect(save).toHaveAttribute('aria-label', /is saved/);
 
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.save-button')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 
-  // And the saved shelf on the habit page knows about it.
+  // And the saved shelf on the habit page knows about it, as does the hero's
+  // own Save button — Anthony is that day's hero.
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero .save-button')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('.shelves')).toContainText('Saved');
   await expect(page.locator('.shelves a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
 });
@@ -2105,4 +2109,252 @@ test('the day ground is gesso, and the field is recessed into it', async ({ page
   // Secondary text on the *field* is the worst case, not on the page, and it
   // is what axe failed at 4.34:1 when only the ground had moved.
   expect(ratio(seen.soft, seen.field)).toBeGreaterThan(4.5);
+});
+
+/* ---- the 2026-08-22 round, Phase 1: Index detail, the bookmark, the × ---- */
+
+/** Every mounted card, in whichever layout, fits the box the grid gave it. */
+const nothingCropped = async (page) =>
+  page.locator('.index-card').evaluateAll((cards) =>
+    cards
+      .filter((c) => c.scrollHeight > c.clientHeight + 1 || c.scrollWidth > c.clientWidth + 1)
+      .map((c) => c.querySelector('.index-name')?.textContent),
+  );
+
+test('Detailed swaps the badge for the matrix, adds the opening of the life, and every box still holds', async ({ page }) => {
+  // Addendum H1. The matrix on a card is by the reader's choice and unscaled
+  // — the same 30.6 px mark as beside the h1 — and the description is the
+  // life's own first paragraph in a box reserved before it arrives: the card's
+  // height is still known before render, so nothing may be cropped.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const box = page.locator('[data-detailed]');
+  await expect(box).not.toBeChecked();
+  await expect(page.locator('.index-card svg.glyph-matrix')).toHaveCount(0);
+  await expect(page.locator('.index-desc')).toHaveCount(0);
+  const plain = (await page.locator('.index-card').first().boundingBox()).height;
+
+  await box.check();
+  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix circle')).toHaveCount(13);
+  await expect(page.locator('.index-card').first()).toHaveClass(/is-detailed/);
+  const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
+  await expect(first.locator('.index-desc')).toContainText('Born to a prosperous Coptic family');
+  // Still the manifest's numbers: matrix inside the name line, three lines of
+  // description, and a taller card by exactly what was added.
+  const geometry = await first.evaluate((card) => {
+    const r = (el) => el.getBoundingClientRect();
+    const desc = card.querySelector('.index-desc');
+    return {
+      matrixInsideLine: r(card.querySelector('svg.badge')).bottom <= r(card.querySelector('.name-line')).bottom + 0.5,
+      descLines: Math.round((r(desc).height / 19.575) * 10) / 10,
+    };
+  });
+  expect(geometry.matrixInsideLine).toBe(true);
+  expect(geometry.descLines).toBe(3);
+  expect((await page.locator('.index-card').first().boundingBox()).height).toBeGreaterThan(plain + 60);
+  expect(await nothingCropped(page)).toEqual([]);
+
+  // Rows take it too, at two lines, and nothing in a row is cropped either.
+  await page.locator('[data-layout="rows"]').click();
+  await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
+  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix')).toHaveCount(1);
+  await expect(page.locator('.index-card').first().locator('.index-desc')).toBeVisible();
+  expect(await nothingCropped(page)).toEqual([]);
+  const rowHeights = await page.locator('.index-card').evaluateAll((els) =>
+    els.map((el) => Math.round(el.getBoundingClientRect().height)),
+  );
+  expect(new Set(rowHeights).size).toBe(1);
+
+  // Remembered, like the layout.
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('[data-detailed]')).toBeChecked();
+  await expect(page.locator('.index-card').first().locator('svg.glyph-matrix')).toHaveCount(1);
+  await page.locator('[data-detailed]').uncheck();
+  await page.locator('[data-layout="cards"]').click();
+});
+
+test('the bookmark stands in the image corner, takes the press, and is the Save', async ({ page }) => {
+  // Addendum H2. A frameless silhouette over the picture's top-right corner,
+  // above the link's ::after, so pressing it saves rather than opens; on a
+  // card with no picture it stands beside the dates, clear of the glyph.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
+  const seen = await first.evaluate((card) => {
+    const r = (el) => el.getBoundingClientRect();
+    const image = r(card.querySelector('.index-media'));
+    const button = card.querySelector('.bookmark');
+    const b = r(button);
+    const style = getComputedStyle(button);
+    const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2);
+    const shape = getComputedStyle(card.querySelector('.bookmark .bm-shape'));
+    return {
+      flushRight: Math.round(image.right - b.right),
+      flushTop: Math.round(b.top - image.top),
+      hitIsBookmark: !!hit?.closest('.bookmark'),
+      border: style.borderStyle,
+      background: style.backgroundColor,
+      stroke: shape.stroke,
+      fill: shape.fill,
+    };
+  });
+  expect(seen.flushRight).toBe(0);
+  expect(seen.flushTop).toBe(0);
+  expect(seen.hitIsBookmark).toBe(true);
+  // No frame: no border and no field behind the shape.
+  expect(seen.border).toBe('none');
+  expect(seen.background).toBe('rgba(0, 0, 0, 0)');
+  // Ink, never gold: Save is chrome (DESIGN.md §2).
+  const tokens = await page.evaluate(() => {
+    const root = getComputedStyle(document.documentElement);
+    const rgb = (hex) => {
+      const n = parseInt(hex.trim().slice(1), 16);
+      return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+    };
+    return { ink: rgb(root.getPropertyValue('--ink')), gold: rgb(root.getPropertyValue('--gold')) };
+  });
+  expect(seen.stroke).toBe(tokens.ink);
+  expect(seen.fill).toBe('none');
+
+  // A card with no picture: beside the dates, and never over the glyph. The
+  // grid is virtualised, so at 360 px he has to be scrolled into the window
+  // before he exists to be measured.
+  const imageless = page.locator('.index-card', { hasText: 'Christopher' });
+  for (let y = 0; y < 4000 && (await imageless.count()) === 0; y += 300) {
+    await page.evaluate((to) => window.scrollTo(0, to), y);
+    await page.waitForTimeout(50);
+  }
+  const corner = await imageless.evaluate((card) => {
+    const r = (el) => el.getBoundingClientRect();
+    const g = r(card.querySelector('svg.badge'));
+    const b = r(card.querySelector('.bookmark'));
+    const d = r(card.querySelector('.index-dates'));
+    return {
+      overlapsGlyph: !(b.right < g.left || b.left > g.right || b.bottom < g.top || b.top > g.bottom),
+      centredOnDates: Math.abs((b.top + b.bottom) / 2 - (d.top + d.bottom) / 2) < 2,
+    };
+  });
+  expect(corner.overlapsGlyph).toBe(false);
+  expect(corner.centredOnDates).toBe(true);
+
+  // It is the Save: pressing it writes the store, the shape fills, the name
+  // says so, the page stays where it was, and a reload finds it saved.
+  const button = first.locator('.bookmark');
+  await expect(button).toHaveAttribute('aria-pressed', 'false');
+  await expect(button).toHaveAttribute('aria-label', 'Save Anthony the Great');
+  await button.click();
+  await expect(button).toHaveAttribute('aria-pressed', 'true');
+  await expect(button).toHaveAttribute('aria-label', /Anthony the Great is saved/);
+  await expect(page).toHaveURL(/\/saints$/);
+  const filled = await button.locator('.bm-shape').evaluate((el) => getComputedStyle(el).fill);
+  expect(filled).toBe(tokens.ink);
+  expect(filled).not.toBe(tokens.gold);
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.index-card', { hasText: 'Anthony the Great' }).locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
+  await page.locator('.index-card', { hasText: 'Anthony the Great' }).locator('.bookmark').click();
+  await expect(page.locator('.index-card', { hasText: 'Anthony the Great' }).locator('.bookmark')).toHaveAttribute('aria-pressed', 'false');
+});
+
+test('the × returns the reader to the Index as they left it, and so does the browser back', async ({ browser }) => {
+  // Addendum H3. Filters, open facets and scroll position all come back; the
+  // nav link still opens the Index fresh, because it does not ask. A short
+  // viewport so there is a scroll position to lose.
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+  const page = await ctx.newPage();
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await (await facet(page, 'churches')).getByLabel('Coptic Orthodox').check();
+  await expect(page.locator('[data-count]')).toHaveText('3');
+  await page.evaluate(() => window.scrollTo(0, 500));
+  await page.waitForTimeout(200);
+
+  // Opened from the page as it stands — a Playwright click would scroll the
+  // card into view first and move the very position this test is about.
+  const openVisible = () =>
+    page.evaluate(() => {
+      const a = [...document.querySelectorAll('.index-card .index-name')].find((el) => {
+        const r = el.getBoundingClientRect();
+        return r.top > 60 && r.bottom < innerHeight;
+      });
+      a.click();
+      return a.textContent;
+    });
+  const opened = await openVisible();
+  await expect(page.locator('h1.saint-name')).toHaveText(opened);
+  await page.locator('[data-back]').click();
+  await expect(page).toHaveURL(/\/saints$/);
+  await expect(page.locator('[data-count]')).toHaveText('3');
+  await expect(page.locator('input[name="churches"][value="coptic"]')).toBeChecked();
+  expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
+  expect(await page.evaluate(() => window.scrollY)).toBe(500);
+
+  // The browser's own back finds the same place.
+  await openVisible();
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+  await page.goBack();
+  await expect(page.locator('[data-count]')).toHaveText('3');
+  expect(await page.evaluate(() => window.scrollY)).toBe(500);
+
+  // The nav link is a fresh Index.
+  await page.locator('nav a[href$="/saints"]').click();
+  await expect(page.locator('[data-count]')).toHaveText('10');
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  await ctx.close();
+});
+
+test('a navigation lands at the top of the page it opens', async ({ browser }) => {
+  // Found measuring the ×: with no scroll reset anywhere, a reader arriving
+  // from a scrolled Index landed 696 px down the saint's page at 360 px. The
+  // app owns scroll now (DESIGN.md §5c).
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+  const page = await ctx.newPage();
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight - innerHeight - 100));
+  await page.waitForTimeout(200);
+  expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(1000);
+  await page.evaluate(() => {
+    const a = [...document.querySelectorAll('.index-card .index-name')].find((el) => {
+      const r = el.getBoundingClientRect();
+      return r.top > 60 && r.bottom < innerHeight;
+    });
+    a.click();
+  });
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+  await page.waitForTimeout(300);
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  await ctx.close();
+});
+
+test('the saint page puts the register beside the image on desktop, the body beneath both, and the controls on the name line', async ({ page }) => {
+  // Addendum H4, and the head of DESIGN.md §5c: name, bookmark, ×, then the
+  // mark at the margin; at 760 px and above the image and the dates-and-places
+  // register share a row and the body runs the full width under them.
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.save-button')).toHaveCount(0);
+  await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
+  await expect(page.locator('.saint-head [data-back]')).toHaveAttribute('aria-label', 'Back to All Saints');
+
+  const seen = await page.evaluate(() => {
+    const r = (s) => document.querySelector(s).getBoundingClientRect();
+    const h1 = r('h1.saint-name'), tools = r('.saint-tools'), glyph = r('.saint-head svg.badge'), line = r('.saint-head .name-line');
+    const media = r('.saint-media-col'), facts = r('.saint-intro-facts'), main = r('.saint-main'), article = r('article.saint');
+    return {
+      wide: innerWidth >= 760,
+      toolsAfterName: tools.left >= h1.left + 10,
+      toolsOnNameLine: tools.top < h1.bottom && tools.bottom > h1.top,
+      toolsBeforeGlyph: tools.right <= glyph.left,
+      glyphAtMargin: Math.round(line.right - glyph.right),
+      factsBesideImage: facts.left >= media.right && Math.abs(facts.top - media.top) < 4,
+      factsBelowImage: facts.top >= media.bottom,
+      mainFullWidth: Math.round(main.width) === Math.round(article.width),
+      mainBelowBoth: main.top >= Math.max(media.bottom, facts.bottom),
+    };
+  });
+  expect(seen.toolsAfterName).toBe(true);
+  expect(seen.toolsOnNameLine).toBe(true);
+  expect(seen.toolsBeforeGlyph).toBe(true);
+  expect(seen.glyphAtMargin).toBe(0);
+  expect(seen.mainFullWidth).toBe(true);
+  expect(seen.mainBelowBoth).toBe(true);
+  if (seen.wide) expect(seen.factsBesideImage).toBe(true);
+  else expect(seen.factsBelowImage).toBe(true);
 });

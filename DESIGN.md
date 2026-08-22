@@ -123,6 +123,11 @@ inline script before first paint. Theme changes transition background and text
 colour over 300 ms; nothing else transitions on theme change, and `transition:
 all` is banned everywhere.
 
+*(Scoped 2026-08-22, Addendum H5, not yet built: the control becomes a
+two-way sun/moon toggle; the system preference is read once, at first load,
+and is the theme the site opens in, and there is no System option afterwards.
+This paragraph describes what ships until that lands.)*
+
 ## 4. Type: three voices, two families
 
 | Voice | Face | Use |
@@ -184,6 +189,16 @@ register genuinely rules a line: under a day heading, between traditions.)
 the page, as a kovcheg is. Padding 16. Image, then name in display voice, then
 the badge. Hover: border darkens toward `--ink-soft`; nothing moves or lifts.
 
+**A bookmark stands at the image's top-right corner** (author, 2026-08-22):
+the Save of brief §11 as a frameless silhouette over the picture — no frame,
+no field, the shape alone — filled when saved and outlined when not, with
+`aria-pressed` carrying the state. It is drawn in ink with a hairline of gesso
+under it, so it reads on gold ground and dark ground alike, and it is ink
+precisely because of where it sits: over a picture, gold would claim a finding
+and red would claim liturgical time (§2). A row puts it at the trailing edge,
+because a 48 px thumbnail has no corner to spare; a card without an image puts
+it in the card's own corner.
+
 **The Index has two layouts**, chosen by the reader and remembered (added
 2026-08-21). *Cards* is the panel described above: image at the manifest's
 aspect ratio, name and glyph beneath. *Rows* is the register at card weight —
@@ -192,6 +207,17 @@ it, dates below, on a fixed 66 px pitch. Rows exist because a corpus is
 something you scan as well as something you look at, and because a fixed pitch
 is the tightest a virtualised list can honestly be. Both are exact heights
 known before render; neither measures.
+
+**And one grain, Detailed** (author, 2026-08-22): a tick box beside the layout
+control, remembered with it. Ticked, each card or row carries the rite ×
+communion matrix in place of the badge — at the matrix's own pitch, see §7c —
+and a short description under the name with the dates it already had: the
+opening paragraph of the saint's own life, clamped to three lines on a card
+and two on a row, in a box reserved before the text arrives so every height
+the virtualiser is fed stays exact. It is derived from the author's text, not
+authored a second time, and fetched per card as the card comes into view
+rather than carried by the manifest (Addendum H1 records the budget reasoning).
+A saint with no life shows its types in the box instead.
 
 **The card box is derived, not fixed.** The manifest carries each image's
 pixel dimensions; the card sets `aspect-ratio` from that data, so the box is
@@ -403,6 +429,11 @@ question, its five answers, the strip and the day's own heading clear the fold
 and the hero does not. Every visit after it is the ordinary page, and a browser
 test pins both halves.
 
+*(Scoped 2026-08-22, Addendum H7–H8, not yet built: *Show all of them* gives
+way to a small, unframed *(advanced)* that opens the plate; the selection
+becomes site-wide; and this page shows one tradition's calendar at a time. The
+paragraph above stands until that lands.)*
+
 The strip and the grid stay in the civil calendar the URL is in.
 
 **The hero image is a square** (author, 2026-08-21), cropped from the centre
@@ -459,6 +490,41 @@ cycling the theme cannot change the header's width, wrap it, or change its
 height. A width guessed in `ch` would be a guess about a font we do not choose. No
 footer ceremony; About holds the editorial matter. Header collapses to a
 wrapping row at 360 px; no hamburger — four links fit.
+
+*(Scoped 2026-08-22, Addendum H5–H7, not yet built: the date leaves the
+header, the theme control becomes a sun/moon icon, and the corner takes a
+site-wide Select Tradition control. The paragraph above describes the shipping
+header until then.)*
+
+### 5c. The saint's page
+
+Revised 2026-08-22 at the author's direction; until then the page had no
+section of its own here and its shape lived in `saint.css` alone.
+
+**The head is one line: the name, its two controls, and the mark.** Beside the
+name stand a **bookmark** — the same Save the Index cards carry — and an
+**×** that closes the page back into All Saints *as the reader left it*:
+filters, search, sort, layout, Detailed, open facets and scroll position. Then
+the rite × communion matrix, pinned to the margin as §7d says. Both controls
+are frameless icon buttons in ink with accessible names; the Save text button
+this page carried until now is gone. The × goes to the Index's remembered
+position however the reader arrived; a reader who came by a deep link gets the
+top of the Index.
+
+**Every ordinary navigation lands at the top of the page it opens, and the
+Index is the one view that puts the reader back.** The app owns scroll
+restoration for that reason: the browser's own `auto` mode restores before a
+virtualised grid has been re-rendered and so restores into nothing, and
+without a reset anywhere a reader who had scrolled the Index was landing 696 px
+down the saint's page at 360 px. Found measuring the ×, fixed with it.
+
+**On desktop the image and the register stand side by side.** At 760 px and
+above the image takes a 200–260 px column, the dates-and-places register fills
+the rest of the line beside it, and the body — veneration church by church,
+the life, the sources, related saints — runs the full content width beneath
+both. Until 2026-08-22 the whole body sat in the register's column beside the
+image and spent the width of the page on one column of text. Below 760 px the
+order is image, register, body, as before.
 
 ## 6. Motion and states
 
@@ -677,6 +743,7 @@ Measured in the shipping build, both viewports:
 | Calendar hero `h2` | 26 px | 33 px | 53.55 x 30.6 | 4.74 / 1.68 | **Matrix.** Inside the natural line; nothing moves. |
 | Index card / row name | 17 px | 42 px | 40.8 x 10.2 | 6.32 / 2.24 | **Badge.** A matrix here needs a sub-1.5 px dot. |
 | Register and shelf rows | 17 px | 73–77 px | 40.8 x 10.2 | 6.32 / 2.24 | **Badge.** Same arithmetic, and these are the dense lists §9.1 is for. |
+| Index card / row, **Detailed** ticked | 17 px | 42 px | 53.55 x 30.6 | 4.74 / 1.68 | **Matrix, by the reader's choice** (author, 2026-08-22). Unscaled — the h1's pitch, fitting the 42 px line box — so the dot is the 1.68 px it is beside the h1. What this table feared for a card was a matrix *scaled* to 17 px type. |
 
 **The undocumented dot on the matrix is now 1.68 px**, below the 2 px floor
 recorded here before the 15% reduction. That floor was about legibility at 1x,
@@ -697,6 +764,12 @@ saint's own page", and §9.2 says in terms not to merge the two into one
 component at two sizes. The two views showing different grain for the same
 saint is the design, not an inconsistency — which is why the decomposition
 invariant above has to hold.
+
+**Detailed** (author, 2026-08-22; Addendum H1) lets a reader ask a card for
+the §9.2 view. It does not change what a card shows unasked, it is still two
+renderers over one dataset, and the decomposition invariant is what makes it
+safe to offer: a card showing the matrix and a card showing the badge agree by
+construction.
 
 ### 7d. Where the glyph sits
 
@@ -719,6 +792,13 @@ wraps: the name shrinks and wraps within itself instead, because a glyph on a
 line of its own has lost the name it belongs to. On the saint's own page this
 replaces the standalone badge that used to head the veneration register; the
 same mark printed twice on one page is not emphasis.
+
+On the saint's own page two controls stand between the name and the mark —
+the bookmark and the × (§5c) — as items of that same line: the name still
+shrinks and wraps within itself, the glyph still holds the margin, and the
+controls travel with the name rather than with the mark. Visual order only:
+the DOM keeps the name and its mark adjacent, as the register rows do, and the
+controls follow the mark there.
 
 ## 8. What we are deliberately not doing
 

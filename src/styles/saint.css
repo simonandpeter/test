@@ -31,14 +31,26 @@
   margin-bottom: var(--space-3);
 }
 
-.saint-actions {
-  display: flex;
-  gap: var(--space-2);
+/* The two controls beside the name (author, 2026-08-22): the bookmark, and the
+   × that closes the page back into the Index where the reader left it. They
+   stand visually between the name and the mark, and in the DOM after the mark,
+   so the name and its glyph stay adjacent (DESIGN.md §7d) — the same order
+   trick the register rows use. */
+.saint-head .saint-tools {
+  display: inline-flex;
   align-items: center;
+  gap: var(--space-1);
+  align-self: center;
+  flex: none;
+}
+
+.saint-head .name-line .badge {
+  order: 1;
 }
 
 /* Save is chrome: a quiet toggle whose state is carried by its own label and
-   aria-pressed, so nothing here needs a colour to mean anything. */
+   aria-pressed, so nothing here needs a colour to mean anything. The text
+   button survives on the calendar hero; the saint's page takes the bookmark. */
 .save-button.is-saved {
   background: var(--field);
   border-color: var(--ink-soft);
@@ -48,14 +60,23 @@
   margin: var(--space-3) 0 0;
 }
 
-.saint-columns {
+/* ---- the head's two columns (author, 2026-08-22) ----------------------- */
+
+/* At 760 px and above the image and the dates-and-places register stand side
+   by side, and the body runs the full width beneath both (DESIGN.md §5c).
+   Until then the whole body sat in the register's column beside the image,
+   which spent the page's width on one column of text. Below 760 px the order
+   is image, register, body, as it was. A page with no image has one column at
+   every width. */
+.saint-intro {
   display: grid;
   gap: var(--space-6);
   align-items: start;
+  margin-bottom: var(--space-6);
 }
 
 @media (min-width: 760px) {
-  .saint-columns {
+  .saint-intro.has-media {
     grid-template-columns: minmax(200px, 260px) 1fr;
   }
 }
@@ -90,6 +111,9 @@
   color: var(--ink-soft);
   border-top: 1px solid var(--rule);
   padding-top: var(--space-2);
+  /* Rules the whole register column it closes, not a paragraph's measure:
+     the column is wide now that it stands beside the image (§5c). */
+  max-width: none;
 }
 
 /* ---- dates and places -------------------------------------------------- */

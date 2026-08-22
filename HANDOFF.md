@@ -23,7 +23,7 @@ briefing.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-21
+## State as of 2026-08-22
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -33,8 +33,10 @@ veneration glyph in both its views, the calendar page, the saint detail page
 with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
-- 126 unit tests (`npm test`) — pure logic, no DOM.
-- 206 browser tests (`npm run test:e2e`) — 103 across desktop and 360 px.
+- 133 unit tests (`npm test`) — pure logic, no DOM.
+- 218 browser tests (`npm run test:e2e`) — 109 across desktop and 360 px.
+  (Counts as of the close of Phase 1 on 2026-08-22; read the suite's own
+  summary rather than trusting this line.)
 - `npm run test:all` runs both. CI runs both on every push.
 
 **Pushing happens outside this session.** Agent sessions have no git
@@ -46,7 +48,9 @@ to push, and do not treat a local pass as evidence about what was committed.
 
 **Check `git log origin/main..HEAD` before anything else**, all the same: it
 tells you which commits have not yet been through GitHub Actions, whoever is
-doing the pushing. It was empty at the close of the last session.
+doing the pushing. Three commits stood unpushed at the start of the 2026-08-22
+round — Amendment 20's pair and the ground change (Amendment 21) — and the
+round's own commits stack on them.
 
 ## The calendar chrome, because it moved three times on 2026-08-21
 
@@ -161,6 +165,18 @@ the standard:
   way on 2026-08-21 alone — where the month prints its name, how it arrives,
   the chevrons, and the date bars. Each is written up with the reasoning, and
   the superseded entry is marked as such where it sits.
+
+**The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
+phases. Phase 1 — the Index's *Detailed* option, the bookmark that is Save, the
+saint page's × back into the Index as the reader left it, and the desktop head
+with the register beside the image — is what this branch carries (SESSIONS.md
+Amendment 22 records what it cost). **Phase 2 — the sun/moon theme toggle with
+no System option, the date out of the header, a site-wide Select Tradition
+control, the Calendar showing one tradition at a time, and the saint page
+respecting the selection — is scoped under H5–H9 and is NOT started.** It waits
+on the author's review of Phase 1 and on the five questions at the end of
+Addendum H; DESIGN.md carries a bracketed forward note at each paragraph it
+will change. Do not start it unprompted, and do not quietly build toward it.
 
 ### Then: Session 4b, the ship gate — still outstanding
 
