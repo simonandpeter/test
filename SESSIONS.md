@@ -714,6 +714,59 @@ single-calendar shortcut, the Index filter, the saint page's split, the mixed
 switch state, the calendar's subscription — and the tree compared byte for
 byte against pristine copies afterwards. 133 unit, 234 browser.
 
+**24. The first CI run the Phase 1 and Phase 2 commits ever had was red, and
+the cause was a font the suite had never seen** (2026-08-22). `f9a1308` and
+`031add2` were built, tested and committed on 2026-08-22 and pushed only on
+the day the repo was archived and reseeded; the run on `75fc0ce` had been
+green. The gate failed one test at both widths — *the index spends as little
+height as it can before the first card* — with the grid at 405.06 px against
+its 400 px backstop. Every local run was green, before and after. Amendment 3
+again, in its other form: a local pass proves nothing about a machine that is
+not this one.
+
+**What the 5 px were.** Measured, not guessed: a scratch script drove the built
+site at 1280 × 900 under five font conditions. Forcing the utility voice to
+Arial reproduced CI's figure to the hundredth — 405.06 — and nothing else did.
+Chromium on ubuntu-latest resolves `system-ui` to Liberation Sans, which has
+Arial's metrics and is a little wider than Segoe UI; and CI's cold load under
+`font-display: optional` keeps the serif fallback, Liberation Serif with Times'
+metrics, whose "0" makes the 72ch content column **580 px** where Literata's
+makes it 678. At 580 the Index's foot — Sort and Random, the layout toggle, and
+Detailed, the tick box Phase 1 added — summed to 579.9 px in Segoe UI, **0.1 px
+inside the column**, and to 586.4 in Arial's metrics. The row wrapped, cost
+24.8 px, and took the grid from 380.2 to 405.1. At `75fc0ce`, without
+Detailed, the foot was 489 px and could not wrap in any face.
+
+One thing this corrects in the record. Amendment 13's "31 px between the two
+faces" is the facet row wrapping, as it says — but what wraps it is the
+**column** narrowing to 580, because 72ch follows the serif's "0" and whether
+Literata applies is decided per cold load; the facets are utility and do not
+change width with the serif at all. The test's 400 backstop was the right
+number for the wrong reason: it cleared "the fallback face's 381" on Windows,
+where the column is 580 and the foot fits by 0.1 px, and it had never seen a
+face wider than Segoe at that column.
+
+**The fix is the foot taking the facets' own column gap** — `--space-4`
+(16 px) in place of `--space-6` (24): 16 px freed, 9.6 px of room in Arial's
+metrics and 16 in Segoe's, and nothing in DESIGN.md or Addendum H1 pins the
+gap; "a tick box beside the layout control" still holds. Not taken: shortening
+a string (the author's to shorten), or folding Detailed into the layout group,
+which H1 calls a different axis. **What remains:** DejaVu Sans, the default on
+some Linux desktops, is wider again (Verdana's metrics, near enough) and still
+wraps the foot at 580 — it needs 617. Recorded, not fixed: the sort select's
+widest option is *Breadth of veneration*, which an Orthodox-only registry
+retires, and the foot loses most of that with it.
+
+**The test forces both conditions rather than waiting for them.** *the index
+foot holds one line in a wide utility face at the cold-load column* blocks the
+webfont, forces the utility face to Arial — which Windows and macOS ship and
+fontconfig aliases to Liberation Sans on Linux — and asserts three things: the
+foot's three groups with their gaps need less than 580 px, the foot is one line,
+and the grid is above 400. Backed out, it fails on both projects with "the foot
+needs 586.4 px of a 580 px column" **while the original test still passes on
+Windows** — which is exactly why CI caught this and no desk did. 133 unit, 236
+browser.
+
 **Still outstanding, added 2026-08-22 (Phase 2):** the calendar hero's text
 *Save* button is the one text Save left on the site (Amendment 23) — follow
 the bookmark or keep it, the author's call; the first-visit question's

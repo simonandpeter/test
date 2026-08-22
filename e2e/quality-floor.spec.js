@@ -1358,6 +1358,42 @@ test('the index spends as little height as it can before the first card', async 
   expect(gridTop, 'the controls have crept back down the page').toBeLessThan(400);
 });
 
+test('the index foot holds one line in a wide utility face at the cold-load column', async ({ page }) => {
+  // What CI sees and a Windows desk does not. Chromium on Linux resolves
+  // system-ui to Liberation Sans, which has Arial's metrics and is a little
+  // wider than Segoe UI; and a cold load under font-display: optional keeps
+  // the serif fallback, whose "0" makes the 72ch column 580 px where Literata
+  // makes it 678. At 580 the foot's three groups — sort and Random, the
+  // layout toggle, Detailed — left 0.1 px of slack in Segoe UI, and Arial's
+  // metrics took the row to a second line: 24.8 px more chrome above the
+  // first card, and the grid at 405 px against the 400 backstop, on the first
+  // CI run f9a1308 ever had (2026-08-22). Both conditions are forced here so
+  // the row is measured at its narrowest column in a face most readers have,
+  // on every platform, rather than waiting for the fallback to happen.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.route('**/*.woff2', (route) => route.abort());
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.addStyleTag({ content: ':root { --font-utility: Arial, sans-serif !important; }' });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+
+  const foot = await page.locator('.index-foot').evaluate((el) => {
+    const kids = [...el.children].filter((k) => k.offsetParent !== null && !k.classList.contains('sr-only'));
+    const gap = parseFloat(getComputedStyle(el).columnGap);
+    return {
+      height: el.getBoundingClientRect().height,
+      column: el.clientWidth,
+      need: kids.reduce((a, k) => a + k.getBoundingClientRect().width, 0) + gap * (kids.length - 1),
+    };
+  });
+  // The budget is the cold-load column whatever column this platform's
+  // fallback serif happens to give: the row has to fit 580 in Arial's metrics.
+  expect(foot.need, `the foot needs ${foot.need.toFixed(1)} px of a 580 px column`).toBeLessThan(580);
+  expect(foot.height, `the foot wrapped at a ${foot.column} px column`).toBeLessThan(40);
+  const gridTop = (await page.locator('.grid').boundingBox()).y;
+  expect(gridTop, 'the grid moved down the page at the cold-load column').toBeLessThan(400);
+});
+
 test('Clear filters appears beside the search bar, never below it', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);

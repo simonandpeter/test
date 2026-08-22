@@ -149,7 +149,13 @@ select:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-2) var(--space-6);
+  /* The facets' own column gap, not 24: at the cold-load column (580 px —
+     the serif fallback's "0" sets 72ch) the three groups left 0.1 px of room
+     in Segoe UI and none in Arial's metrics, which is what Linux, macOS and
+     Android resolve the utility face to, so the row wrapped on CI and nowhere
+     a developer was looking. 16 leaves 9.6 px in Arial; DejaVu Sans, wider
+     again, still wraps — SESSIONS.md, Amendment 24. */
+  gap: var(--space-2) var(--space-4);
 }
 
 /* Sort and Random travel together and sit tight against each other: they are
