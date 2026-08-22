@@ -157,12 +157,79 @@
   text-underline-offset: 3px;
 }
 
+/* ---- the chooser (author, 2026-08-22) ----------------------------------- */
+
+/* Four communions in a row and, small and unframed at the end of it,
+   (advanced), which unfolds the plate beneath. The same inside in the
+   header's panel and the first-visit question. */
+.chooser-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.chooser-four {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* A communion switch: on is the recessed field in ink, off is the quiet
+   button, half on says so in a dotted underline rather than a third colour —
+   the plate's own vocabulary (plate-head). aria-pressed carries all three. */
+.communion-switch[aria-pressed='true'] {
+  background: var(--field);
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.communion-switch[aria-pressed='mixed'] {
+  color: var(--ink);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.chooser-advanced {
+  border: none;
+  padding: 0 var(--space-1);
+  font-family: var(--font-utility);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.chooser-advanced:hover,
+.chooser-advanced[aria-expanded='true'] {
+  color: var(--ink);
+}
+
+.chooser-plate {
+  margin-top: var(--space-3);
+}
+
+.chooser-lede,
+.chooser-note {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-bottom: var(--space-2);
+}
+
+.chooser-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
 /* ---- the question a first visit is asked -------------------------------- */
 
 /* In the page's flow above the strip, not over it: a question, not an
-   obstacle. A reader who scrolls past it gets every tradition, which is what
-   "show all" would have given them anyway. */
-.tradition-ask {
+   obstacle. A reader who scrolls past it keeps every tradition and is asked
+   again next visit. The calendar's own prompt — which calendar — takes the
+   same shape below it. */
+.tradition-ask,
+.calendar-ask {
   padding: var(--space-4);
   margin-bottom: var(--space-6);
 }
@@ -183,58 +250,60 @@
    (author, 2026-08-21). The prose gives up its margin and the panel its
    padding; the fold test holds the line. */
 @media (max-width: 560px) {
-  .tradition-ask {
+  .tradition-ask,
+  .calendar-ask {
     padding: var(--space-3);
     margin-bottom: var(--space-4);
   }
 
-  .tradition-ask p {
+  .tradition-ask p,
+  .calendar-ask p {
     margin-bottom: var(--space-3);
   }
 
-  .ask-choices {
+  .ask-choices,
+  .chooser-four {
     gap: var(--space-1);
   }
 }
 
-/* ---- the filter's own chrome -------------------------------------------- */
-
-.cal-filter {
-  margin-bottom: var(--space-4);
-}
-
-.filter-open[aria-expanded='true'],
-.filter-open.is-narrowed {
-  color: var(--ink);
+/* The calendar prompt's choices, pressed for the current one. */
+.calendar-ask .ask-choice[aria-pressed='true'] {
   background: var(--field);
-  border-color: var(--rule);
+  border-color: var(--ink-soft);
+  color: var(--ink);
 }
 
-.filter-panel {
-  margin-top: var(--space-2);
-  padding: var(--space-4);
-}
+/* ---- which calendar, under the strip (author, 2026-08-22) --------------- */
 
-.filter-heading {
-  font-size: 21px;
-  margin-bottom: var(--space-2);
-}
-
-.filter-lede {
-  margin-bottom: 0;
-}
-
-.filter-note {
-  font-family: var(--font-utility);
-  font-size: 13.5px;
-  line-height: 1.45;
+.cal-which {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
   color: var(--ink-soft);
   margin-bottom: var(--space-4);
 }
 
-.filter-actions {
-  display: flex;
-  gap: var(--space-2);
+.cal-which-change {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  padding: 2px var(--space-2);
+}
+
+.cal-which-change:hover,
+.cal-which-change[aria-expanded='true'] {
+  color: var(--ink);
+}
+
+.which-panel {
+  flex-basis: 100%;
+}
+
+.which-panel .calendar-ask {
+  margin-bottom: 0;
+  margin-top: var(--space-2);
 }
 
 /* Below the width the lattice needs, the wrapper scrolls rather than the

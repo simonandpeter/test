@@ -8,13 +8,21 @@
 const KEY = 'gos-settings';
 
 const DEFAULTS = {
-  theme: 'system', // 'light' | 'dark' | 'system'
-  // Which traditions the calendar shows. `null` means the reader has not been
-  // asked yet, which is a different state from having answered "all of them" —
-  // see lib/tradition.js. `calendarPreference` stood here until 2026-08-21 and
-  // went with the reckoning toggle; a value left in a reader's storage from
-  // before then is simply ignored.
+  // 'light' | 'dark' once the reader has pressed the toggle; null until then,
+  // which means "follow the system" (author, 2026-08-22 — it was three-way
+  // with a 'system' value until then, and a stored 'system' reads as null).
+  theme: null,
+  // Which traditions the reader keeps — site-wide since 2026-08-22. `null`
+  // means the reader has not been asked yet, which is a different state from
+  // having answered — see lib/tradition.js. `calendarPreference` stood here
+  // until 2026-08-21 and went with the reckoning toggle; a value left in a
+  // reader's storage from before then is simply ignored.
   traditions: null,
+  // Which one church's calendar the calendar page shows (author, 2026-08-22,
+  // Addendum H8): a church id, or null until the reader has been asked. Kept
+  // even while the selection does not allow it, so widening the selection
+  // again finds it still chosen.
+  calendar: null,
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.

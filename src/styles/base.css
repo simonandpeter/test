@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+/* `hidden` means hidden, whatever display a class gave the element: a
+   display: flex on a class outranks the user agent's [hidden] rule, and the
+   chooser's Done row was showing through it. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   height: 100%;
 }
@@ -148,15 +155,13 @@ header.chrome {
   grid-template-areas:
     'name theme'
     'nav nav';
-  align-items: baseline;
+  align-items: center;
   column-gap: var(--space-6);
   row-gap: var(--space-2);
-  /* Trimmed from 16/12 when today's date joined the corner (author,
-     2026-08-21). The corner is a two-line stack now and the padding is what
-     pays for it: the bar is the same height it was, and the date arrives
-     without the header taking a line off the page. */
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
+  /* 16/12 again: it was trimmed to 8/8 while today's date stood in the corner
+     (2026-08-21 to 2026-08-22) and the corner is one line once more. */
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--rule);
 }
 
@@ -175,28 +180,48 @@ header.chrome .site-nav {
   grid-area: nav;
 }
 
-/* The corner holds the theme control with today's date beneath it. Stacked
-   rather than beside, because the control already reserves the width of its
-   longest label and anything sharing its line would move when that label
-   changed — the one thing the stacked-labels trick exists to prevent. */
+/* The corner holds two controls side by side (author, 2026-08-22): Select
+   Tradition, a text button, and the theme toggle, an icon. Today's date and
+   the three-label theme button stood here until then. */
 header.chrome .chrome-corner {
   grid-area: theme;
   justify-self: end;
-  display: grid;
-  justify-items: end;
-  row-gap: 1px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-/* Today, abbreviated: "Fri 30 Jan". Set tight and never wrapped — the corner
-   is the narrowest column in the header and a date that wrapped there would
-   push the bar taller, which is the one thing this line must not do. */
-.chrome-today {
-  font-family: var(--font-utility);
-  font-size: 11.5px;
-  line-height: 1.15;
-  color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
+.tradition-open {
   white-space: nowrap;
+  color: var(--ink-soft);
+  padding: var(--space-1) var(--space-2);
+}
+
+.tradition-open[aria-expanded='true'] {
+  color: var(--ink);
+  background: var(--field);
+}
+
+/* The chooser's panel, under the header and across the page, in the flow — a
+   disclosure, not a dialogue: whatever page is open stays under it. */
+.tradition-panel {
+  border-bottom: 1px solid var(--rule);
+  background: var(--field);
+}
+
+.tradition-panel-inner {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4) var(--space-6);
+}
+
+.tradition-heading {
+  font-size: 21px;
+  margin-bottom: var(--space-2);
+}
+
+.tradition-lede {
+  margin-bottom: var(--space-3);
 }
 
 .site-name {
@@ -239,28 +264,14 @@ nav.site-nav a[aria-current='page'] {
   text-underline-offset: 3px;
 }
 
-/* The three labels occupy one cell, so the button is always as wide as the
-   longest of them and cycling the theme moves nothing else on the page. */
+/* A sun or a moon, stroked in currentColor: what a press does, not what is
+   on. The name on the button says the same in words. */
 #theme-toggle {
-  font-family: var(--font-utility);
-  font-size: 13.5px;
   color: var(--ink-soft);
-  display: inline-grid;
-  flex: none;
-  /* Half the standard vertical padding: the corner is two lines now and this
-     is the other half of what pays for the second one. */
-  padding-block: 2px;
 }
 
-#theme-toggle .theme-option {
-  grid-area: 1 / 1;
-  visibility: hidden;
-  white-space: nowrap;
-  text-align: center;
-}
-
-#theme-toggle .theme-option[data-current] {
-  visibility: visible;
+#theme-toggle:hover {
+  color: var(--ink);
 }
 
 main.chrome {

@@ -92,6 +92,8 @@ test('the label names a communion when the whole of it is on, and churches other
 
   // Everything is the invitation, not a report — there is nothing to report.
   assert.equal(isAll(selectAll()), true);
-  assert.match(selectionLabel(selectAll()), /^Filter by /);
+  // Everything selected is a status now, not the calendar button's invitation
+  // (author, 2026-08-22): the control lives in the header and names itself.
+  assert.equal(selectionLabel(selectAll()), 'Every tradition');
   assert.equal(selectionLabel(new Set()), 'No tradition selected');
 });

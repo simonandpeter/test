@@ -38,6 +38,7 @@ import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { renderBadge } from '../ui/badge.js';
 import { matrixRows, renderMatrix } from '../ui/matrix.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
+import { currentSelection, subscribeSelection, venerates } from '../lib/tradition.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -134,12 +135,15 @@ export function render(el, { data, router, nav }) {
     <p class="index-lede">${STRINGS.saints.lede}</p>
     ${controls(state)}
     <p class="result-count utility" data-count-row></p>
+    <p class="set-aside utility" data-set-aside hidden></p>
     <div class="grid" data-grid><div class="grid-inner" data-grid-inner></div></div>
     <div data-tray></div>
     <p class="index-empty" data-empty hidden>${STRINGS.saints.noneMatch}</p>`;
 
   wireControls();
   wireGrid();
+  // The header's control can change the selection while the grid is open.
+  state.cleanups.push(subscribeSelection(() => state && update({ animate: true })));
 
   // Back where the reader was, if that is what this navigation is — the saint
   // page's × says so, and so does a history traversal. The grid's height has
@@ -565,7 +569,19 @@ function update({ animate }) {
   const query = filters.query.trim();
   const hits = query && search ? new Set(search.search(query).map((r) => r.id)) : null;
 
-  const { matched, undated } = applyFilters(cards, filters, {
+  // The reader's traditions come first (author, 2026-08-22): a saint venerated
+  // in none of the selected churches is not on the grid, and what that sets
+  // aside is counted and named under the count rather than silently dropped.
+  // The search and the facets apply within what remains.
+  const selection = currentSelection();
+  const mine = cards.filter((card) => venerates(card, selection));
+  const asideNote = el.querySelector('[data-set-aside]');
+  const aside = cards.length - mine.length;
+  asideNote.hidden = aside === 0;
+  asideNote.textContent =
+    aside === 1 ? STRINGS.saints.setAsideOne : fill(STRINGS.saints.setAsideMany, { count: aside });
+
+  const { matched, undated } = applyFilters(mine, filters, {
     monthsBySlug: state.monthsBySlug,
     matchesQuery: hits ? (slug) => hits.has(slug) : null,
   });

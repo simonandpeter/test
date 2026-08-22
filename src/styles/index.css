@@ -234,6 +234,14 @@ select:hover {
   font-variant-numeric: tabular-nums;
 }
 
+/* What the reader's traditions set aside, counted under the count (author,
+   2026-08-22): an honest gap, named, never a silent drop. */
+.set-aside {
+  color: var(--ink-soft);
+  margin: calc(-1 * var(--space-1)) 0 var(--space-2);
+  max-width: 60ch;
+}
+
 /* ---- the virtualised grid ---------------------------------------------- */
 
 .grid-inner {

@@ -118,15 +118,16 @@ both surfaces it divides: 1.39:1 on gesso and 1.29:1 on the field, which is the
 standing it held on the old ground (1.40 and 1.29) rather than a new target.
 gold is **never used for text** and never carries information alone (§7).
 
-Theme is three-way — light / dark / system, defaulting to system — set by an
-inline script before first paint. Theme changes transition background and text
-colour over 300 ms; nothing else transitions on theme change, and `transition:
-all` is banned everywhere.
-
-*(Scoped 2026-08-22, Addendum H5, not yet built: the control becomes a
-two-way sun/moon toggle; the system preference is read once, at first load,
-and is the theme the site opens in, and there is no System option afterwards.
-This paragraph describes what ships until that lands.)*
+**Theme is two-way — light or dark — and the system is read, not offered**
+(author, 2026-08-22, Addendum H5; it was three-way with a *System* option
+until then). A reader who has never touched the control follows their system
+preference, live, including a change of it later; the first press fixes a
+choice, which is kept from then on whatever the system does. The inline script
+before first paint reads the stored choice or, absent one, the system, so the
+first frame is already right; a stored `system` from before this change reads
+as no choice. Theme changes transition background and text colour over 300 ms;
+nothing else transitions on theme change, and `transition: all` is banned
+everywhere.
 
 ## 4. Type: three voices, two families
 
@@ -218,6 +219,12 @@ the virtualiser is fed stays exact. It is derived from the author's text, not
 authored a second time, and fetched per card as the card comes into view
 rather than carried by the manifest (Addendum H1 records the budget reasoning).
 A saint with no life shows its types in the box instead.
+
+**The Index keeps the reader's traditions** (author, 2026-08-22, Addendum H7):
+a saint venerated in none of the selected churches is not on the grid, a line
+under the count says how many are set aside and where to widen it, and the
+search and the facets apply within what remains. The Map will read the same
+set.
 
 **The card box is derived, not fixed.** The manifest carries each image's
 pixel dimensions; the card sets `aspect-ratio` from that data, so the box is
@@ -382,14 +389,19 @@ between two frames.
 reversing the same day's decision twice over). A row of four calendars —
 Gregorian, Julian, Coptic, Ethiopian — used to stand under the strip and print
 the day in whichever the reader chose. It is withdrawn, and so is the line
-beside it. What stands there now is one button, *Filter by
-Catholic/Orthodox/Oriental/Assyrian*, opening the **plate**: the rite ×
-communion lattice at full size, every position a switch, every position named.
+beside it. What stood there from 2026-08-21 to 2026-08-22 was one button,
+*Filter by Catholic/Orthodox/Oriental/Assyrian*, opening the **plate** — the
+rite × communion lattice at full size, every position a switch, every position
+named — on the calendar page itself. **The plate is the site's control now**
+(author, 2026-08-22, Addendum H7): it opens from *Select Tradition* in the
+header, under *(advanced)*, beneath four communion switches, and what the
+calendar page asks instead is which one calendar to show (below).
 
-Deselect a church and this calendar stops showing what it commemorates —
-everywhere, at once: the hero, the register beneath it, and the density dots
-under every date at both grains, because all three count the same filtered
-entries. A communion's name turns its whole row and a rite's turns its whole
+Deselect a church and the site stops showing what it keeps — everywhere, at
+once: this calendar's days, the Index, the saint page's register — and on this
+page the hero, the register beneath it and the density dots under every date
+at both grains, because all three count the same entries. A communion's name
+turns its whole row and a rite's turns its whole
 column, which is how a reader reaches "everything Byzantine" without hunting
 cells. **A church is one switch however many cells it holds**: Eastern
 Catholic's six dots answer together, are railed together and are named once,
@@ -413,26 +425,42 @@ moves under it. About's region takes a tab stop and a name of its own because it
 holds nothing focusable; the filter's does not, because it holds thirteen
 buttons.
 
-**An empty selection is a designed state**, like an empty day, and it says
-which silence it is: a day the corpus has nothing for and a day the reader has
-filtered away are different facts. Prose in ink, never a banner.
+**An empty day says which silence it is** — three of them, redrawn on
+2026-08-22 for one calendar at a time: the corpus has nothing for the day;
+this calendar has nothing but commemorations fall today in other calendars the
+reader's traditions keep (and the way to them is named); or the reader's
+traditions hold nothing at all, because nothing is selected. Different facts,
+each stated as the fact it is. Prose in ink, never a banner.
 
-**A first visit is asked which calendar it keeps** (author, 2026-08-21). Four
-communions, or all of them, in a panel that stands in the page's flow above the
-strip — a question, not an obstacle, and a reader who scrolls past it gets
-every tradition, which is what *show all* would have given them. It is asked
-once: "everything, because I chose everything" and "everything, because nobody
-has asked yet" are different states in `settings.traditions` (`null` until
-answered), so *show all* is an answer and stops the asking. **It is the one
-deliberate exception to the fold rule below**: on that one visit at 360 px the
-question, its five answers, the strip and the day's own heading clear the fold
-and the hero does not. Every visit after it is the ordinary page, and a browser
-test pins both halves.
+**A first visit is asked which traditions it keeps** (author, 2026-08-21;
+revised 2026-08-22). Four communions as four buttons, and *(advanced)* —
+small, unframed — unfolding the plate for a church-by-church answer, in a
+panel that stands in the page's flow above the strip: a question, not an
+obstacle. Asked once: pressing a communion is the answer and takes the
+question off the page; pressing cells in the plate answers too, and *Done*
+closes it. A reader who scrolls past has answered nothing, keeps every
+tradition, and is asked again next visit. *Show all of them* is withdrawn
+(the 2026-08-21 text made it the answer that stopped the asking; what stops
+the asking now is any answer, and everything is what an unanswered reader
+already has). The set it writes is the site's, not the calendar's — the
+header's *Select Tradition* changes it afterwards (§5), and the Index and the
+saint's page read the same set. It is still the one deliberate exception to
+the fold rule: on that visit at 360 px the question and its answers clear the
+fold and the hero does not.
 
-*(Scoped 2026-08-22, Addendum H7–H8, not yet built: *Show all of them* gives
-way to a small, unframed *(advanced)* that opens the plate; the selection
-becomes site-wide; and this page shows one tradition's calendar at a time. The
-paragraph above stands until that lands.)*
+**One calendar at a time** (author, 2026-08-22, Addendum H8). The calendar
+page shows a single church's calendar — never two traditions interleaved,
+never one saint listed twice because two churches keep him on the same day
+(30 January used to list Anthony under Eastern Orthodox and again under
+Coptic). Which one is a separate choice from the traditions: **before the week
+or the month can be seen the reader is asked which calendar**, from those the
+selected traditions allow, and the answer is remembered (`settings.calendar`).
+Exactly one allowed calendar is chosen without asking — a question with one
+answer is not a question. The chosen calendar names itself under the strip
+with the way to change it, which opens the same prompt in place; a selection
+that no longer allows it asks again. The density dots, the hero and the
+register all count that one calendar, and the register needs no church
+heading because there is only one church in it.
 
 The strip and the grid stay in the civil calendar the URL is in.
 
@@ -475,26 +503,18 @@ uncached page offline). Labelled in the register voice, counted honestly,
 phrased as an invitation to look elsewhere — never an unstyled hole that reads
 as breakage.
 
-**Chrome:** one quiet header — site name in display voice at utility size, the
-four pages as utility links (current page in `--rubric`, plus an underline so
-colour never carries it alone), theme control as a labelled text button, and
-**today's date abbreviated beneath it** (author, 2026-08-21): "Fri 21 Aug",
-right-aligned to the control's own edge, never wrapped, with the machine form
-on `datetime`. It is stamped once at load — a page left open across midnight
-shows yesterday, which is cheaper than a timer something would have to own. The
-corner became a two-line stack for it and the bar's own vertical padding paid
-for the line, so the header is no taller with the date than it was without it. That
-button reserves the width of its longest label ("Theme: System") by rendering
-all three stacked in one grid cell with only the current one visible, so
-cycling the theme cannot change the header's width, wrap it, or change its
-height. A width guessed in `ch` would be a guess about a font we do not choose. No
-footer ceremony; About holds the editorial matter. Header collapses to a
-wrapping row at 360 px; no hamburger — four links fit.
-
-*(Scoped 2026-08-22, Addendum H5–H7, not yet built: the date leaves the
-header, the theme control becomes a sun/moon icon, and the corner takes a
-site-wide Select Tradition control. The paragraph above describes the shipping
-header until then.)*
+**Chrome** (author, revised 2026-08-22): one quiet header — site name in
+display voice at utility size, the four pages as utility links (current page
+in `--rubric`, plus an underline so colour never carries it alone), and in the
+corner two controls. **Select Tradition**, a text button, opens the tradition
+chooser beneath the header (§5b): four communion switches and *(advanced)*,
+which unfolds the plate for a church-by-church answer. Beside it the **theme
+toggle**, a frameless sun/moon icon whose accessible name says what a press
+does. Today's date stood under the theme control from 2026-08-21 until
+2026-08-22 and is withdrawn; the text theme button with its three stacked
+labels went with it, and the bar's vertical padding returns to what it was
+before the date arrived. No footer ceremony; About holds the editorial matter.
+Header collapses to a wrapping row at 360 px; no hamburger — four links fit.
 
 ### 5c. The saint's page
 
@@ -517,6 +537,15 @@ restoration for that reason: the browser's own `auto` mode restores before a
 virtualised grid has been re-rendered and so restores into nothing, and
 without a reset anywhere a reader who had scrolled the Index was landing 696 px
 down the saint's page at 360 px. Found measuring the ×, fixed with it.
+
+**The veneration register reads the reader's traditions first** (author,
+2026-08-22, Addendum H9): the churches in the site-wide selection stand at the
+top and the rest wait behind *See other traditions*, which reveals them for
+that page only — the next saint opened hides them again. The glyph beside the
+name is untouched: it is a finding about the saint and shows every church
+whatever the reader keeps; only what is read below it filters. Nothing is
+asserted by any of this — the reader is choosing what to read, which is the
+opposite of adjudicating.
 
 **On desktop the image and the register stand side by side.** At 760 px and
 above the image takes a 200–260 px column, the dates-and-places register fills

@@ -17,6 +17,7 @@
  */
 
 import { CHURCHES } from '../data/churches.js';
+import { currentSelection, isAll, subscribeSelection } from '../lib/tradition.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
@@ -79,7 +80,14 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = shell(card);
   const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router)];
-  live = { cleanups, teardown: () => cleanups.forEach((fn) => fn?.()) };
+  // Whether the traditions the reader has set aside are shown on this page.
+  // Per render, so it resets on the next saint opened (author, 2026-08-22).
+  live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
+  cleanups.push(
+    subscribeSelection(() => {
+      if (mine === generation && live?.payload) paintVeneration(el, live.payload.saint);
+    }),
+  );
 
   store.visit(slug);
 
@@ -199,7 +207,8 @@ function fillIn(el, payload, { data, router }) {
   // names arrive here. Nothing moves; the skeletons are simply replaced.
   fillPlaces(el, saint.dates, saint.locations);
 
-  el.querySelector('[data-veneration]').innerHTML = veneration(saint);
+  if (live) live.payload = payload;
+  paintVeneration(el, saint);
 
   const lifeEl = el.querySelector('[data-life]');
   lifeEl.innerHTML = life
@@ -253,11 +262,41 @@ const STATUS_TEXT = {
   undocumented: STRINGS.saint.statusUndocumented,
 };
 
-function veneration(saint) {
+/**
+ * The reader's traditions first, the rest behind a button, for this page only
+ * (author, 2026-08-22, Addendum H9). The glyph beside the name is untouched —
+ * it is a finding about the saint and shows every church; only what is read
+ * here filters. With every tradition selected there is nothing to hold back.
+ */
+function paintVeneration(el, saint) {
+  const box = el.querySelector('[data-veneration]');
+  if (!box) return;
+  const selection = currentSelection();
+  const churches = CHURCHES.filter((c) => c.enabled !== false);
+  const mine = isAll(selection) ? churches : churches.filter((c) => selection.has(c.id));
+  const others = churches.filter((c) => !mine.includes(c));
+  const revealed = live?.revealed ?? false;
+
+  const reveal = others.length
+    ? `<button type="button" class="reveal-traditions" data-reveal aria-expanded="${String(revealed)}">` +
+      `${revealed ? STRINGS.saint.hideOtherTraditions : fill(STRINGS.saint.otherTraditions, { count: others.length })}</button>`
+    : '';
+  box.innerHTML =
+    veneration(saint, mine) +
+    reveal +
+    (others.length && revealed ? `<div class="attestations-other">${veneration(saint, others)}</div>` : '');
+  box.querySelector('[data-reveal]')?.addEventListener('click', () => {
+    if (live) live.revealed = !live.revealed;
+    paintVeneration(el, saint);
+    box.querySelector('[data-reveal]')?.focus();
+  });
+}
+
+function veneration(saint, churches) {
   const year = new Date().getFullYear();
   const byChurch = new Map((saint.attestations ?? []).map((a) => [a.church, a]));
 
-  const rows = CHURCHES.filter((c) => c.enabled !== false).map((church) => {
+  const rows = churches.map((church) => {
     const att = byChurch.get(church.id);
     const status = att?.status ?? 'undocumented';
     const lines = [];
@@ -283,7 +322,7 @@ function veneration(saint) {
     </li>`;
   });
 
-  const anyUndocumented = CHURCHES.filter((c) => c.enabled !== false).some(
+  const anyUndocumented = churches.some(
     (c) => (byChurch.get(c.id)?.status ?? 'undocumented') === 'undocumented',
   );
   const note = anyUndocumented

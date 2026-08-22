@@ -1,11 +1,12 @@
 /**
- * Which traditions the reader is reading in (author, 2026-08-21).
+ * Which traditions the reader is reading in (author, 2026-08-21), and since
+ * 2026-08-22 which one calendar the calendar page shows.
  *
  * The calendar used to offer four reckonings and print the day in the chosen
  * one. That is withdrawn; what a reader is asked instead is which communion
- * they keep — or that they want all of them — and the day's commemorations are
- * shown accordingly. It is the same question the site is organised around,
- * asked of the reader rather than of the corpus.
+ * they keep, and the site — the calendar, the Index, the saint's page — shows
+ * accordingly. It is the same question the site is organised around, asked of
+ * the reader rather than of the corpus.
  *
  * The selection is **a set of churches**, not of communions, because that is
  * what an attestation names. A communion toggle and a rite toggle are both
@@ -20,7 +21,13 @@
  *
  * An empty selection is allowed. It shows the empty-day state on every day,
  * which is a designed state (DESIGN.md §5b) and is one click from being undone
- * in the same panel that caused it.
+ * in the same control that caused it.
+ *
+ * **The calendar the page shows is a second, separate choice** (author,
+ * 2026-08-22, Addendum H8): one church, from those the selection allows, asked
+ * for before the week or month can be seen. `settings.calendar` holds it and
+ * is kept even while the selection does not allow it, so widening the
+ * selection again finds it still chosen.
  */
 
 import { CHURCHES_BY_ID, enabledChurches, enabledCommunions, churchesInCommunion } from '../data/churches.js';
@@ -50,9 +57,9 @@ export function readSelection() {
 }
 
 /**
- * The one live copy of the reader's selection. Every consumer — the calendar
- * today, the Index or the map if they come to respect it — reads through here,
- * so there is no view-local cache to drift from another's. Lazy, so importing
+ * The one live copy of the reader's selection. Every consumer — the calendar,
+ * the Index, the saint's page, the map when it comes — reads through here, so
+ * there is no view-local cache to drift from another's. Lazy, so importing
  * the module does not read storage as a side effect.
  */
 let current = null;
@@ -61,9 +68,25 @@ export function currentSelection() {
   return (current ??= readSelection());
 }
 
+/* ---- change notification ------------------------------------------------ */
+
+/**
+ * The header's control can change the selection while any view is on screen,
+ * so a view that respects it subscribes on render and unsubscribes on
+ * destroy, and repaints from `currentSelection()` when told. Returns the
+ * unsubscribe.
+ */
+const listeners = new Set();
+
+export function subscribeSelection(fn) {
+  listeners.add(fn);
+  return () => listeners.delete(fn);
+}
+
 export function writeSelection(selection) {
   current = selection;
   writeSetting('traditions', [...selection]);
+  for (const fn of listeners) fn(selection);
   return selection;
 }
 
@@ -105,6 +128,17 @@ export const selectAll = () => new Set(allChurchIds());
 export const selectCommunion = (communionId) =>
   new Set(churchesInCommunion(communionId).map((c) => c.id));
 
+/**
+ * What a communion's switch shows: on when every church in it is selected,
+ * off when none is, and mixed in between — a fact about the row, carried by
+ * `aria-pressed="mixed"` and said in the underline rather than a third colour.
+ */
+export function communionState(selection, communionId) {
+  const ids = churchesInCommunion(communionId).map((c) => c.id);
+  const on = ids.filter((id) => selection.has(id)).length;
+  return on === 0 ? 'off' : on === ids.length ? 'on' : 'mixed';
+}
+
 /* ---- what it does, and what it is called -------------------------------- */
 
 /** The day's commemorations, narrowed to the reader's traditions. */
@@ -112,14 +146,24 @@ export const filterEntries = (entries, selection) =>
   entries.filter((e) => selection.has(e.church));
 
 /**
- * What the button says. Everything selected is the invitation rather than a
- * report — there is nothing to report — and a narrowed selection names itself
- * as briefly as it honestly can: a communion by its own name when the whole of
- * it is on and nothing else is, and the churches themselves otherwise.
+ * Whether a saint is one of the reader's traditions': venerated by a church in
+ * the selection. With everything selected nothing is filtered at all — a
+ * figure every church refuses is still a figure in the corpus, and a filter
+ * that hid him under "all" would be adjudicating by accident.
+ */
+export const venerates = (card, selection) =>
+  isAll(selection) ||
+  (card.attestations ?? []).some((a) => a.status === 'venerated' && selection.has(a.church));
+
+/**
+ * What a status line says. Everything selected names itself as such; a
+ * narrowed selection names itself as briefly as it honestly can — a communion
+ * by its own name when the whole of it is on and nothing else is, and the
+ * churches themselves otherwise.
  */
 export function selectionLabel(selection) {
-  if (isAll(selection)) return STRINGS.filter.all;
-  if (selection.size === 0) return STRINGS.filter.none;
+  if (isAll(selection)) return STRINGS.traditions.all;
+  if (selection.size === 0) return STRINGS.traditions.none;
 
   const whole = enabledCommunions().filter((communion) =>
     churchesInCommunion(communion.id).every((c) => selection.has(c.id)),
@@ -131,5 +175,38 @@ export function selectionLabel(selection) {
     ...whole.map((c) => c.display_name),
     ...loose.map((id) => CHURCHES_BY_ID[id]?.display_name).filter(Boolean),
   ];
-  return fill(STRINGS.filter.showing, { names: names.join(', ') });
+  return fill(STRINGS.traditions.showing, { names: names.join(', ') });
 }
+
+/* ---- the calendar the page shows (author, 2026-08-22) ------------------- */
+
+/** The churches whose calendars the selection allows, in registry order. */
+export const allowedCalendars = (selection = currentSelection()) =>
+  enabledChurches().filter((c) => selection.has(c.id));
+
+export const storedCalendar = () => {
+  const id = readSettings().calendar;
+  return typeof id === 'string' && CHURCHES_BY_ID[id] ? id : null;
+};
+
+/**
+ * The calendar to show, or null if the reader has to be asked: the stored one
+ * if the selection still allows it; the only allowed one if there is exactly
+ * one — a question with one answer is not a question; otherwise nothing.
+ */
+export function chosenCalendar(selection = currentSelection()) {
+  const allowed = allowedCalendars(selection);
+  const stored = storedCalendar();
+  if (stored && allowed.some((c) => c.id === stored)) return stored;
+  if (allowed.length === 1) return allowed[0].id;
+  return null;
+}
+
+export function chooseCalendar(id) {
+  writeSetting('calendar', id);
+  return id;
+}
+
+/** One calendar's share of a day: the entries the chosen church keeps. */
+export const entriesInCalendar = (entries, churchId) =>
+  churchId ? entries.filter((e) => e.church === churchId) : [];

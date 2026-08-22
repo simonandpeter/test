@@ -14,14 +14,15 @@
 <script>
   // Theme before first paint. Runs ahead of any stylesheet so the first
   // painted frame is already the right colour — later would flash, and would
-  // also fire the theme fade on load. Reads the same key settings.js owns;
-  // 'system' (the default) follows the OS preference.
+  // also fire the theme fade on load. Reads the same key settings.js owns: a
+  // stored 'light' or 'dark' is the reader's choice; anything else (nothing,
+  // or the old 'system') means follow the OS (author, 2026-08-22).
   (function () {
     try {
-      var theme = (JSON.parse(localStorage.getItem('gos-settings') || '{}').theme) || 'system';
+      var theme = JSON.parse(localStorage.getItem('gos-settings') || '{}').theme;
       var dark =
         theme === 'dark' ||
-        (theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        (theme !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
       if (dark) document.documentElement.classList.add('dark');
     } catch (e) {
       /* storage disabled — system-light default, harmless */
@@ -39,13 +40,15 @@
     <a class="site-name" href="/">Gallery of Saints</a>
     <nav class="site-nav" id="site-nav" aria-label="Site"></nav>
     <div class="chrome-corner">
-      <button id="theme-toggle" type="button"></button>
-      <!-- Today, abbreviated, under the theme control. It rides inside the
-           line box the site name already occupies, so the header is exactly as
-           tall with it as without. -->
-      <time class="chrome-today" id="chrome-today"></time>
+      <!-- Select Tradition opens the chooser in the panel below the header;
+           the theme toggle is a sun/moon icon (author, 2026-08-22). Today's
+           date stood here from 2026-08-21 to 2026-08-22. -->
+      <button id="tradition-open" type="button" class="tradition-open utility"
+        aria-controls="tradition-panel" aria-expanded="false"></button>
+      <button id="theme-toggle" type="button" class="icon-button"></button>
     </div>
   </header>
+  <div class="tradition-panel" id="tradition-panel" hidden></div>
 
   <main class="chrome">
     <div id="view"></div>

@@ -183,6 +183,20 @@
   max-width: 60ch;
 }
 
+/* The reader's traditions first, the rest behind this, for this page only
+   (author, 2026-08-22). A quiet text button in the register's own voice. */
+.reveal-traditions {
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: var(--space-2) 0 var(--space-4);
+}
+
+.reveal-traditions:hover,
+.reveal-traditions[aria-expanded='true'] {
+  color: var(--ink);
+}
+
 .att {
   display: grid;
   grid-template-columns: 1fr auto;

@@ -621,6 +621,108 @@ the pristine copies after the last restore.
 **Phase 2 is scoped in Addendum H5–H9 and not started**; five questions there
 want the author's answers first.
 
+**23. The header's two controls, one selection for the site, and one calendar
+at a time** (author, 2026-08-22; Addendum H, Phase 2, built on the five
+answers recorded there). Five instructions, each written up in Addendum H5–H9
+and DESIGN.md §3, §5, §5b, §5c; this entry is what they cost and what they
+reversed.
+
+**What they reversed, by name.** The three-way theme with a System option
+(brief §10, DESIGN.md §3, Session 2) is a two-way sun/moon toggle that reads
+the system and never offers it; today's date under the theme control
+(Amendment 16, one day old) is withdrawn, and the header's padding goes back
+to what it was before the date arrived, 61 px at 1280; the calendar page's
+own filter and plate (Amendment 19, also one day old) move to the header as
+*Select Tradition* — four communion switches, the plate under *(advanced)* —
+and the selection they write is the site's, read by the Index, the saint's
+page and the Map's placeholder; the first-visit question loses *Show all of
+them* and asks *Which traditions do you keep?*, because a second question now
+asks which calendar to *see*; and brief §8.1's "every saint with a feast
+today across all traditions" becomes **one church's calendar at a time**,
+asked for before the week or month is shown, from those the traditions allow.
+
+**The calendar choice is a second, separate thing, and it is remembered even
+when it is not allowed.** `settings.calendar` holds one church; lib/tradition
+derives the calendar to show — the stored one if the selection allows it, the
+only allowed one if there is exactly one (a question with one answer is not a
+question), otherwise nothing and the page asks. Keeping a disallowed choice
+rather than clearing it is what lets a reader turn a communion off and on
+again in the header and find their calendar still standing rather than being
+asked twice; a browser test pins exactly that round trip.
+
+**One calendar at a time is what "no double listing" actually means.**
+30 January used to list Anthony under Eastern Orthodox and again under Coptic
+— "the most load-bearing date in the corpus", two calendars reaching one
+Gregorian day. In the Eastern Orthodox calendar he stands once, by the Julian
+feast; change to Coptic and he stands once by 22 Tobi; the register below the
+hero has no church heading because it has one church in it. The silences were
+redrawn for it — three still, different facts: the corpus has nothing; this
+calendar has nothing but others the reader keeps do, and the way to them is
+named; the commemorations belong to traditions set aside, and the header is
+named instead.
+
+**The chooser is one component with two grains.** `src/ui/traditions.js`
+renders four communions either as switches (the header's standing control,
+answer 2) or as one-shot choices (the question, which is answered once), with
+*(advanced)* unfolding the plate in both, and writes through lib/tradition,
+which now announces changes — every view that respects the selection
+subscribes on render and unsubscribes on destroy, which is what the Index,
+the calendar and the saint's page all do. A switch is on, off or **mixed**,
+carried by `aria-pressed` and a dotted underline; the mixed state is the
+plate's own "some" seen from the row.
+
+**Five things it cost, worth remembering:**
+
+- **Forty-six calendar tests were resting on "unanswered shows everything".**
+  With the strip hidden until a calendar is chosen, every one of them had to
+  say which reader it is — a `ready(page, { traditions, calendar })` helper,
+  seeding only where nothing is stored, with Eastern Orthodox for 30 January
+  and Roman Catholic for everything else. A scripted insertion did it; the
+  first-visit tests stayed unseeded by detecting the question's own selectors.
+- **A local named `setAside` shadowed the imported `setAside`.** The Index's
+  set-aside line was held in a variable of that name, and every filter pass
+  that tried to mark a leaving card called a `<p>` — "d is not a function",
+  minified — so nothing faded and nothing left. Three Phase 1 tests caught it
+  within the hour; the fix is a rename and the lesson is the old one about
+  names that are also verbs.
+- **`hidden` lost to `display: flex`.** The question's Done row was meant to
+  wait until the plate was opened and showed from the start, because a class
+  with `display: flex` outranks the user agent's `[hidden]` rule. base.css
+  carries `[hidden] { display: none !important }` now, which is the standard
+  reset and should have been there from the start; a test pins the Done row's
+  absence.
+- **Seeding storage on every load overwrote the very change under test.** The
+  probe that drove the header control and then navigated found the selection
+  reset, because its init script re-seeded on each document — the same trap
+  Amendment 19 recorded for the tests, met again in a measuring script. Seed
+  only where nothing is stored, every time.
+- **A selector that names a communion names two things once the plate is
+  open** — the switch and the plate's row head both carry `data-communion` —
+  and Playwright's strict mode said so. The tests reach the switch by its
+  class now.
+
+**The author's fifth answer — "not sure what you mean" — stands as is.** The
+calendar hero's text *Save* button (the one under the saint of the day on the
+calendar page) is the last text Save on the site; every other Save is the
+bookmark. It was not in any instruction and it is unchanged; it is listed
+below as outstanding for a decision, not a defect.
+
+Eight browser tests added and nine rewritten to the new design; one unit
+test reworded. **Nine backouts, each seen to fail its test** — the theme
+choice's storage, the `[hidden]` reset, one calendar at a time, the gate, the
+single-calendar shortcut, the Index filter, the saint page's split, the mixed
+switch state, the calendar's subscription — and the tree compared byte for
+byte against pristine copies afterwards. 133 unit, 234 browser.
+
+**Still outstanding, added 2026-08-22 (Phase 2):** the calendar hero's text
+*Save* button is the one text Save left on the site (Amendment 23) — follow
+the bookmark or keep it, the author's call; the first-visit question's
+heading *Which traditions do you keep?* and its lede are the build's wording
+for a question the author wrote as *Which calendar do you keep?* before a
+second question asked which calendar to see — one line each in
+`src/ui/strings.js`; and the Map is still a placeholder that only counts
+within the selection (Session 7 plots it).
+
 **Still outstanding, added 2026-08-22:** **vigil mode has never been checked by
 any gate.** Playwright's default colour scheme is light, so all 208 browser
 tests — axe included — run in day mode; dark-mode rubric at 4.20:1 on bole was

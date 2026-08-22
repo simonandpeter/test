@@ -18,13 +18,11 @@ export const STRINGS = {
   },
 
   theme: {
-    label: 'Theme',
-    light: 'Light',
-    dark: 'Dark',
-    system: 'System',
-    // aria-label template for the cycle button; {next} is the mode a press
-    // switches to.
-    switchTo: 'Theme: {current}. Activate to switch to {next}.',
+    light: 'light',
+    dark: 'dark',
+    // The toggle's accessible name: what a press does (author, 2026-08-22 —
+    // the control is two-way now and the icon shows the same thing).
+    switchTo: 'Switch to the {next} theme',
   },
 
   loading: {
@@ -52,61 +50,94 @@ export const STRINGS = {
     heroFeast: '{church}: {feast}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
+
+    /*
+     * One calendar at a time (author, 2026-08-22, Addendum H8). Which one is
+     * a separate choice from the traditions, asked before the week or the
+     * month is shown, from the calendars the traditions allow.
+     */
+    which: {
+      heading: 'Which calendar would you like to see?',
+      lede:
+        'Your traditions keep {count} calendars here, and this page shows one ' +
+        'at a time, so no day lists a saint twice. Choose the one to open; ' +
+        'you can change it whenever you like.',
+      showing: 'The {church} calendar',
+      change: 'Change calendar',
+      changeLabel: 'Change which calendar is shown',
+    },
+
+    /*
+     * Three silences, redrawn for one calendar at a time: a day the corpus has
+     * nothing for, a day this calendar has nothing for while others the reader
+     * keeps do, and a reader who has no tradition selected at all. Different
+     * facts, each stated as the fact it is.
+     */
+    silence: {
+      none:
+        'No tradition is selected, so there is no calendar to show. Select ' +
+        'Tradition, in the header, is where to choose one.',
+      otherCalendarsOne:
+        'Nothing in the {church} calendar today. One commemoration falls today ' +
+        'in another calendar you keep — change calendar to see it.',
+      otherCalendarsMany:
+        'Nothing in the {church} calendar today. {count} commemorations fall ' +
+        'today in other calendars you keep — change calendar to see them.',
+      setAsideOne:
+        'Nothing in the {church} calendar today. One commemoration here belongs ' +
+        'to a tradition you have set aside — Select Tradition, in the header, ' +
+        'is where to widen it.',
+      setAsideMany:
+        'Nothing in the {church} calendar today. {count} commemorations here ' +
+        'belong to traditions you have set aside — Select Tradition, in the ' +
+        'header, is where to widen it.',
+    },
   },
 
   /*
-   * The tradition filter (author, 2026-08-21). It replaced the reckoning
-   * toggle and the day's date beside it: the question a reader is asked on the
-   * habit page is now which communion they keep, not which calendar they would
-   * like the date printed in.
+   * The reader's traditions (author, 2026-08-21; site-wide since 2026-08-22).
+   * One selection, read by the calendar, the Index and the saint's page, set
+   * from the header's control or answered once on a first visit.
    */
-  filter: {
-    all: 'Filter by Catholic/Orthodox/Oriental/Assyrian',
+  traditions: {
+    open: 'Select Tradition',
+    openLabel: 'Select Tradition: choose which traditions this site shows',
+    heading: 'Which traditions do you keep?',
+    lede:
+      'Four communions keep their own calendars here, and on most days they ' +
+      'commemorate different people. Choose the ones you keep — or, under ' +
+      'advanced, the churches themselves. Nothing is hidden for good, and you ' +
+      'can change it whenever you like.',
+    advanced: '(advanced)',
+    advancedLabel: 'Choose church by church',
+    plateLede:
+      'Every dot is a church, in the rite it keeps its calendar by. Turn one ' +
+      'off and the site stops showing what it commemorates. A communion or a ' +
+      'rite turns its whole row or column at once.',
+    done: 'Done',
+    all: 'Every tradition',
     none: 'No tradition selected',
     showing: 'Showing: {names}',
-    open: 'Choose which traditions this calendar shows',
-    close: 'Done',
-    reset: 'Show all',
-    heading: 'Which traditions is this calendar keeping?',
-    lede:
-      'Every dot is a church, in the rite it keeps its calendar by. Turn one ' +
-      'off and this calendar stops showing what it commemorates. A communion ' +
-      'or a rite turns its whole row or column at once.',
+    // The plate's own legends (src/ui/plate.js).
     cellLabel: '{church}, {rite} rite',
     riteLabel: 'Everything in the {rite} rite',
     coarse:
       'Eastern Catholic is one entry in this registry standing for roughly ' +
       'two dozen churches across six rites, so its six dots are one switch.',
-    empty:
-      'Nothing is selected, so no day has anything to show. Turn a tradition ' +
-      'back on, or show all of them.',
-    // A day the corpus has nothing for and a day the reader has filtered away
-    // are different facts, and printing the sourcing notice over the second is
-    // a claim about our sourcing that is not true.
-    filteredAwayOne:
-      'Nothing on this day is commemorated by the traditions you are showing. ' +
-      'One commemoration here belongs to a tradition you have set aside — the ' +
-      'filter above is where to widen it.',
-    filteredAwayMany:
-      'Nothing on this day is commemorated by the traditions you are showing. ' +
-      '{count} commemorations here belong to traditions you have set aside — ' +
-      'the filter above is where to widen it.',
 
     /*
-     * The question a first visit is asked (author, 2026-08-21). It is asked on
-     * the calendar because the calendar is what the answer changes, and it is
-     * asked once: the answer is remembered, and the same panel below changes it
-     * afterwards. Phrased as a choice about the reader, not about the data —
-     * "which do you keep", not "filter the corpus".
+     * The question a first visit is asked (author, 2026-08-21; revised
+     * 2026-08-22). Asked on the calendar because the calendar is what the
+     * answer changes first, and asked once: pressing a communion is the
+     * answer. Phrased as a choice about the reader, not about the data.
      */
     ask: {
-      heading: 'Which calendar do you keep?',
+      heading: 'Which traditions do you keep?',
       lede:
-        'Four communions keep four calendars here, and on most days they ' +
-        'commemorate different people. Choose the one you keep, or show all ' +
-        'of them. Nothing is hidden either way, and you can change it whenever ' +
-        'you like.',
-      all: 'Show all of them',
+        'Four communions keep their own calendars here, and on most days they ' +
+        'commemorate different people. Choose the one you keep — or, under ' +
+        'advanced, the churches themselves. Nothing is hidden for good: Select ' +
+        'Tradition, in the header, changes it whenever you like.',
     },
   },
 
@@ -154,6 +185,10 @@ export const STRINGS = {
     noneMatch: 'No saint in the corpus matches all of these filters. That is a fact about a corpus of ten, not about the calendar — widen a filter, or clear them and look around.',
     undatedTray: '{count} undated, set aside',
     undatedNote: 'A date range can neither include nor exclude a saint with no bound at either end, so these are set aside rather than dropped. They match everything else you have chosen.',
+    // The Index keeps the reader's traditions (author, 2026-08-22): what is
+    // set aside by them is counted and named, never silently dropped.
+    setAsideOne: 'One saint is venerated only in traditions you have set aside — Select Tradition, in the header, widens it.',
+    setAsideMany: '{count} saints are venerated only in traditions you have set aside — Select Tradition, in the header, widens it.',
     filters: {
       church: 'Church',
       month: 'Feast month',
@@ -204,6 +239,10 @@ export const STRINGS = {
     savedNamed: '{name} is saved. Activate to remove it.',
     back: 'Back to All Saints',
     veneration: 'Veneration',
+    // The register reads the reader's traditions first (author, 2026-08-22);
+    // the rest wait behind this, for this page only.
+    otherTraditions: 'See other traditions ({count})',
+    hideOtherTraditions: 'Hide other traditions',
     life: 'Life',
     noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',
     sources: 'Sources',
@@ -256,6 +295,8 @@ export const STRINGS = {
   map: {
     title: 'Map',
     placeholder: 'The globe arrives in Session 7. {located} of {count} saints currently carry usable coordinates; the rest will wait in the unlocated tray, never silently dropped.',
+    // The map reads the reader's traditions too (author, 2026-08-22).
+    setAside: '{count} more are venerated only in traditions you have set aside.',
   },
 
   about: {

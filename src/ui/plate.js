@@ -233,7 +233,7 @@ const riteState = (rows, riteId, selected) => {
  */
 export function renderFilterPlate(selected) {
   const { rites, rows } = platePositions();
-  const F = STRINGS.filter;
+  const F = STRINGS.traditions;
 
   const cellFor = (church, rite) => {
     const on = selected.has(church.id);

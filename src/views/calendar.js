@@ -1,8 +1,8 @@
 /**
  * The calendar — the habit page (brief §8.1, DESIGN.md §5b). Opens on today
  * in the reader's local date; week strip and month view to move; deep links
- * at /calendar/YYYY-MM-DD; every tradition's commemorations grouped by
- * church, in each tradition's own reckoning and style.
+ * at /calendar/YYYY-MM-DD; one church's calendar at a time (author,
+ * 2026-08-22), chosen from those the reader's traditions allow.
  *
  * Day-to-day movement inside the view updates the URL with replaceState
  * rather than router.navigate: stepping through days must not pile history
@@ -12,7 +12,7 @@
 
 import { buildFeastIndex, toIsoDate } from '../lib/feasts.js';
 import { gregorianToJdn } from '../lib/jdn.js';
-import { CHURCHES, CHURCHES_BY_ID } from '../data/churches.js';
+import { CHURCHES_BY_ID } from '../data/churches.js';
 import { formatFeast } from '../data/calendars.js';
 import {
   addDaysIso,
@@ -24,21 +24,16 @@ import {
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import {
+  allowedCalendars,
+  chooseCalendar,
+  chosenCalendar,
   currentSelection,
+  entriesInCalendar,
   filterEntries,
   hasChosen,
-  isAll,
-  selectAll,
-  selectCommunion,
-  selectionLabel,
-  toggleChurch,
-  toggleCommunion,
-  toggleRite,
-  writeSelection,
+  subscribeSelection,
 } from '../lib/tradition.js';
-import { enabledCommunions } from '../data/churches.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import { renderFilterPlate } from '../ui/plate.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -46,6 +41,7 @@ import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
+import { renderChooser, wireChooser } from '../ui/traditions.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = STRINGS.calendar.title;
@@ -90,9 +86,9 @@ const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)'
 let state = null;
 
 /**
- * Listeners that outlive a single paint — the shelves' store subscription and
- * whatever the current day panel wired up. The router calls destroy() before
- * the next view renders.
+ * Listeners that outlive a single paint — the shelves' store subscription, the
+ * selection subscription, and whatever the current day panel wired up. The
+ * router calls destroy() before the next view renders.
  */
 export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
@@ -110,16 +106,15 @@ function indexFor(year, data) {
 }
 
 /**
- * The day's commemorations, narrowed to the traditions the reader keeps
- * (author, 2026-08-21). Everything downstream reads through here — the hero,
- * the register, the density dots under every date at both grains — so a
- * tradition turned off is off everywhere on the page rather than in the one
- * place someone remembered to filter. The selection itself is read from
- * lib/tradition.js each time, never cached here: the moment a second view
- * respects it, a copy held in this view's state would be the one that drifts.
+ * The day's commemorations in the one calendar the page shows (author,
+ * 2026-08-22). Everything downstream reads through here — the hero, the
+ * register, the density dots under every date at both grains — so the page
+ * counts one church everywhere rather than in the one place someone
+ * remembered. The calendar itself is re-derived from lib/tradition.js
+ * whenever the selection moves, never cached beyond `state.calendar`.
  */
 const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
-const entriesFor = (iso, data) => filterEntries(allEntriesFor(iso, data), currentSelection());
+const entriesFor = (iso, data) => entriesInCalendar(allEntriesFor(iso, data), state?.calendar);
 const countFor = (iso, data) => entriesFor(iso, data).length;
 
 export function render(el, { data, params, router }) {
@@ -127,8 +122,9 @@ export function render(el, { data, params, router }) {
   const selected = params.date && parseIso(params.date) ? params.date : todayIso();
   state = {
     el, data, router, selected,
+    calendar: chosenCalendar(),
+    whichOpen: false,
     monthCursor: null, monthOpen: false,
-    filterOpen: false,
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     weekGrain: null, monthGrain: null,
@@ -137,61 +133,56 @@ export function render(el, { data, params, router }) {
   el.innerHTML = `
     <div class="cal">
       ${askMarkup()}
-      <div class="cal-controls">
-        <div class="cal-jump">
-          <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
-          <button type="button" data-month aria-expanded="false"
-            aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
-        </div>
-        <div class="cal-span">
-          <div class="cal-week">
-            <div class="grain-track">
-              <div class="week-row">
-                <button type="button" class="peek peek-prev" data-step="-7"
-                  aria-label="${STRINGS.calendar.prevWeek}"></button>
-                <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
-                <button type="button" class="peek peek-next" data-step="7"
-                  aria-label="${STRINGS.calendar.nextWeek}"></button>
+      <div class="cal-gate" data-gate></div>
+      <div class="cal-body" data-cal-body>
+        <div class="cal-controls">
+          <div class="cal-jump">
+            <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
+            <button type="button" data-month aria-expanded="false"
+              aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
+          </div>
+          <div class="cal-span">
+            <div class="cal-week">
+              <div class="grain-track">
+                <div class="week-row">
+                  <button type="button" class="peek peek-prev" data-step="-7"
+                    aria-label="${STRINGS.calendar.prevWeek}"></button>
+                  <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
+                  <button type="button" class="peek peek-next" data-step="7"
+                    aria-label="${STRINGS.calendar.nextWeek}"></button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="cal-month" hidden>
-            <span class="month-name"></span>
-            <div class="month-days-line" aria-hidden="true">
-              <span class="peek-gap"></span>
-              <div class="month-days"></div>
-              <span class="peek-gap"></span>
-            </div>
-            <div class="month-body">
-              <div class="grain-track">
-                <div class="month-row">
-                  <button type="button" class="peek peek-prev" data-mstep="-1"
-                    aria-label="${STRINGS.calendar.prevMonth}"></button>
-                  <div class="month-grid"></div>
-                  <button type="button" class="peek peek-next" data-mstep="1"
-                    aria-label="${STRINGS.calendar.nextMonth}"></button>
+            <div class="cal-month" hidden>
+              <span class="month-name"></span>
+              <div class="month-days-line" aria-hidden="true">
+                <span class="peek-gap"></span>
+                <div class="month-days"></div>
+                <span class="peek-gap"></span>
+              </div>
+              <div class="month-body">
+                <div class="grain-track">
+                  <div class="month-row">
+                    <button type="button" class="peek peek-prev" data-mstep="-1"
+                      aria-label="${STRINGS.calendar.prevMonth}"></button>
+                    <div class="month-grid"></div>
+                    <button type="button" class="peek peek-next" data-mstep="1"
+                      aria-label="${STRINGS.calendar.nextMonth}"></button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="cal-filter utility">
-        <button type="button" class="filter-open" data-filter-open aria-expanded="false"
-          aria-controls="cal-filter-panel"></button>
-        <div class="filter-panel panel" id="cal-filter-panel" hidden>
-          <h2 class="filter-heading">${STRINGS.filter.heading}</h2>
-          <p class="filter-lede">${STRINGS.filter.lede}</p>
-          <div data-plate></div>
-          <p class="filter-note">${STRINGS.filter.coarse}</p>
-          <div class="filter-actions">
-            <button type="button" data-filter-reset>${STRINGS.filter.reset}</button>
-            <button type="button" data-filter-close>${STRINGS.filter.close}</button>
-          </div>
+        <div class="cal-which utility" data-which>
+          <span class="cal-which-name" data-which-name></span>
+          <button type="button" class="cal-which-change" data-which-change aria-expanded="false"
+            aria-controls="cal-which-panel" aria-label="${STRINGS.calendar.which.changeLabel}">${STRINGS.calendar.which.change}</button>
+          <div class="which-panel" id="cal-which-panel" data-which-panel hidden></div>
         </div>
+        <h1 class="cal-date"></h1>
+        <div class="slot-viewport"><div class="day-panel"></div></div>
       </div>
-      <h1 class="cal-date"></h1>
-      <div class="slot-viewport"><div class="day-panel"></div></div>
       <div class="shelves" data-shelves></div>
     </div>`;
 
@@ -205,24 +196,21 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
 
-  el.querySelector('[data-ask]')?.addEventListener('click', (e) => {
-    const button = e.target.closest('button[data-ask-choice]');
-    if (!button) return;
-    const choice = button.dataset.askChoice;
-    answerAsk(choice === 'all' ? selectAll() : selectCommunion(choice));
-  });
+  wireAsk();
+  wireWhich();
 
-  el.querySelector('[data-filter-open]').addEventListener('click', toggleFilter);
-  el.querySelector('[data-filter-close]').addEventListener('click', toggleFilter);
-  el.querySelector('[data-filter-reset]').addEventListener('click', () => choose(selectAll()));
-  el.querySelector('[data-plate]').addEventListener('click', (e) => {
-    const button = e.target.closest('button[data-church], button[data-communion], button[data-rite]');
-    if (!button) return;
-    const { church, communion, rite } = button.dataset;
-    if (church) choose(toggleChurch(currentSelection(), church));
-    else if (communion) choose(toggleCommunion(currentSelection(), communion));
-    else choose(toggleRite(currentSelection(), rite));
-  });
+  // The header's control can change the selection while this page is open:
+  // the question goes if it has been answered, the calendar may need choosing
+  // again, and everything that counts entries repaints.
+  state.cleanups.push(
+    subscribeSelection(() => {
+      if (!state) return;
+      if (hasChosen()) state.el.querySelector('[data-ask]')?.remove();
+      paintGate();
+      paintChrome();
+      repaintDay();
+    }),
+  );
 
   // Both grains sit on a track and both take a hold-and-slide, in the same
   // direction: dragging left is forward in time. The week's viewport is the
@@ -264,6 +252,7 @@ export function render(el, { data, params, router }) {
     if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
   });
 
+  paintGate();
   paintChrome();
   paintDay(el.querySelector('.day-panel'));
   wireDay(el.querySelector('.day-panel'));
@@ -341,10 +330,10 @@ function slotSwap(forward) {
 }
 
 /**
- * The day's content changed under it — the filter, not the date — so the
- * panel repaints in place. The movement decides, not the gesture (DESIGN.md
- * §5b): a filter press has not travelled anywhere, and rolling it read as a
- * step forward in time that never happened.
+ * The day's content changed under it — the calendar or the selection, not the
+ * date — so the panel repaints in place. The movement decides, not the gesture
+ * (DESIGN.md §5b): a filter press has not travelled anywhere, and rolling it
+ * read as a step forward in time that never happened.
  */
 function repaintDay() {
   const viewport = state.el.querySelector('.slot-viewport');
@@ -358,7 +347,6 @@ function paintChrome() {
   const { el, selected } = state;
   paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-  paintFilterLabel();
   if (state.monthOpen) paintMonth();
 }
 
@@ -392,96 +380,139 @@ const stepCursor = (c, n) => ({
 
 /**
  * Asked once, on the calendar, because the calendar is what the answer changes
- * (author, 2026-08-21). It stands in the page's flow above the strip rather
- * than over it: this is a question, not an obstacle, and a reader who ignores
- * it gets every tradition, which is the same thing "show all" would have given
- * them. It disappears the moment it is answered and the filter panel below is
- * where the answer is changed afterwards.
- *
- * `hasChosen` and "chose everything" are deliberately different states — see
- * lib/tradition.js — so answering "show all" is an answer and stops the asking.
+ * first (author, 2026-08-21; revised 2026-08-22). It stands in the page's flow
+ * above the strip rather than over it: this is a question, not an obstacle,
+ * and a reader who ignores it keeps every tradition and is asked again next
+ * visit. Four communions as one-shot choices, and under (advanced) the plate,
+ * which answers church by church and closes on Done. The header's Select
+ * Tradition is where the answer is changed afterwards.
  */
 function askMarkup() {
   if (hasChosen()) return '';
-  const A = STRINGS.filter.ask;
-  const choices = enabledCommunions()
-    .map((c) => `<button type="button" data-ask-choice="${c.id}">${esc(c.display_name)}</button>`)
-    .join('');
+  const A = STRINGS.traditions.ask;
   return `
     <div class="tradition-ask panel" data-ask>
       <h2 class="ask-heading">${A.heading}</h2>
       <p>${A.lede}</p>
-      <div class="ask-choices">
-        ${choices}
-        <button type="button" data-ask-choice="all">${A.all}</button>
-      </div>
+      <div data-chooser>${renderChooser({ selection: currentSelection(), mode: 'question' })}</div>
     </div>`;
+}
+
+function wireAsk() {
+  const ask = state.el.querySelector('[data-ask]');
+  if (!ask) return;
+  const unwire = wireChooser(ask.querySelector('[data-chooser]'), {
+    onChange: ({ answered }) => {
+      if (answered) finishAsk();
+    },
+    onDone: finishAsk,
+  });
+  state.cleanups.push(unwire);
 }
 
 /**
  * The answer takes the question off the page, so focus has to go somewhere it
- * still exists: the filter button, which is both the nearest control and the
- * one that now holds what was just chosen.
+ * still exists: the calendar prompt if that is what comes next, else the
+ * nearest control in the strip's chrome. The selection subscription has
+ * already repainted everything else by the time this runs.
  */
-function answerAsk(selection) {
+function finishAsk() {
   state.el.querySelector('[data-ask]')?.remove();
-  choose(selection);
-  state.el.querySelector('[data-filter-open]').focus();
+  (state.el.querySelector('[data-calendar-choice]') ?? state.el.querySelector('[data-today]'))?.focus();
 }
 
-/* ---- the tradition filter ----------------------------------------------- */
+/* ---- which calendar (author, 2026-08-22) -------------------------------- */
 
 /**
- * The panel is a disclosure and not a dialogue: it opens under its own button,
- * inside the page's flow, and the calendar stays visible and usable behind it
- * so a reader can watch the days thin out as they turn traditions off. Nothing
- * animates — there is no motion here to remove under reduced motion because
- * there was none to add.
+ * The prompt: one button per calendar the selection allows, in registry
+ * order, the current one pressed. With nothing selected there is nothing to
+ * offer, and the prompt says where to select something instead.
  */
-function toggleFilter() {
-  state.filterOpen = !state.filterOpen;
-  const button = state.el.querySelector('[data-filter-open]');
-  button.setAttribute('aria-expanded', String(state.filterOpen));
-  state.el.querySelector('.filter-panel').hidden = !state.filterOpen;
-  if (state.filterOpen) paintPlate();
-  else button.focus();
+function whichMarkup(allowed, current) {
+  const W = STRINGS.calendar.which;
+  if (!allowed.length) {
+    return `<div class="calendar-ask panel" data-calendar-ask><p>${STRINGS.calendar.silence.none}</p></div>`;
+  }
+  const choices = allowed
+    .map(
+      (c) =>
+        `<button type="button" class="ask-choice" data-calendar-choice="${c.id}" ` +
+        `aria-pressed="${String(c.id === current)}">${esc(c.display_name)}</button>`,
+    )
+    .join('');
+  return `
+    <div class="calendar-ask panel" data-calendar-ask>
+      <h2 class="ask-heading">${W.heading}</h2>
+      <p>${fill(W.lede, { count: allowed.length })}</p>
+      <div class="ask-choices">${choices}</div>
+    </div>`;
 }
 
 /**
- * A new selection: remembered, then repainted everywhere it shows — the plate
- * itself, the button that names it, and the whole calendar under it, because
- * the density dots at both grains count the same filtered entries the day panel
- * lists.
- *
- * The plate is rebuilt wholesale, which takes the focus off whatever was just
- * pressed, so it is put back on the button holding the same dataset. A filter
- * a keyboard reader can only press once is not a filter.
+ * Before the week or the month can be seen the reader is asked which calendar
+ * (author, 2026-08-22): the prompt stands where the strip would, and the
+ * strip, the date and the day are hidden until there is an answer. A
+ * selection that allows exactly one calendar is not asked. Once chosen, the
+ * calendar names itself under the strip, with the way to change it when there
+ * is something to change it to.
  */
-function choose(selection) {
-  writeSelection(selection);
-  const active = document.activeElement;
-  const key = active?.dataset?.church
-    ? `[data-church="${active.dataset.church}"]`
-    : active?.dataset?.communion
-      ? `[data-communion="${active.dataset.communion}"]`
-      : active?.dataset?.rite
-        ? `[data-rite="${active.dataset.rite}"]`
-        : null;
-  paintPlate();
-  if (key) state.el.querySelector(`[data-plate] ${key}`)?.focus();
-  paintChrome();
-  repaintDay();
+function paintGate() {
+  const { el } = state;
+  const allowed = allowedCalendars();
+  state.calendar = chosenCalendar();
+  const gate = el.querySelector('[data-gate]');
+  const body = el.querySelector('[data-cal-body]');
+
+  if (!state.calendar) {
+    gate.innerHTML = whichMarkup(allowed, null);
+    body.hidden = true;
+    closeWhich();
+    return;
+  }
+  gate.innerHTML = '';
+  body.hidden = false;
+  const W = STRINGS.calendar.which;
+  el.querySelector('[data-which-name]').textContent = fill(W.showing, {
+    church: CHURCHES_BY_ID[state.calendar]?.display_name ?? '',
+  });
+  el.querySelector('[data-which-change]').hidden = allowed.length < 2;
+  if (state.whichOpen) el.querySelector('[data-which-panel]').innerHTML = whichMarkup(allowed, state.calendar);
 }
 
-function paintPlate() {
-  state.el.querySelector('[data-plate]').innerHTML = renderFilterPlate(currentSelection());
-  paintFilterLabel();
+function wireWhich() {
+  const { el } = state;
+  el.querySelector('[data-which-change]').addEventListener('click', () => {
+    state.whichOpen = !state.whichOpen;
+    const panel = el.querySelector('[data-which-panel]');
+    const button = el.querySelector('[data-which-change]');
+    button.setAttribute('aria-expanded', String(state.whichOpen));
+    panel.hidden = !state.whichOpen;
+    if (state.whichOpen) {
+      panel.innerHTML = whichMarkup(allowedCalendars(), state.calendar);
+      panel.querySelector('[data-calendar-choice]')?.focus();
+    }
+  });
+  // One listener for both places the prompt can stand — the gate and the
+  // change panel — because it is the same prompt.
+  el.querySelector('.cal').addEventListener('click', (e) => {
+    const choice = e.target.closest('[data-calendar-choice]');
+    if (!choice) return;
+    chooseCalendar(choice.dataset.calendarChoice);
+    closeWhich();
+    paintGate();
+    paintChrome();
+    repaintDay();
+    el.querySelector('[data-today]')?.focus();
+  });
 }
 
-function paintFilterLabel() {
-  const button = state.el.querySelector('[data-filter-open]');
-  button.textContent = selectionLabel(currentSelection());
-  button.classList.toggle('is-narrowed', !isAll(currentSelection()));
+function closeWhich() {
+  const { el } = state;
+  state.whichOpen = false;
+  const panel = el.querySelector('[data-which-panel]');
+  const button = el.querySelector('[data-which-change]');
+  if (panel) panel.hidden = true;
+  if (button) button.setAttribute('aria-expanded', 'false');
 }
 
 /**
@@ -762,19 +793,33 @@ const stepMonth = (n) => moveMonth(n);
 /* ---- the day panel: hero + register ----------------------------------- */
 
 /**
- * Three different silences, and a reader is owed the difference between them.
- * The corpus having nothing for a day is a statement about our sourcing; a day
- * whose commemorations the reader has filtered away is not, and printing the
- * sourcing notice over it would be a claim about our sourcing that is untrue.
- * Prose in ink in every case, never a banner.
+ * Three different silences, and a reader is owed the difference between them
+ * (redrawn 2026-08-22 for one calendar at a time). The corpus having nothing
+ * for a day is a statement about our sourcing; this calendar having nothing
+ * while other calendars the reader keeps do is a fact about the choice made
+ * above, and says where the others are; commemorations held only by
+ * traditions the reader has set aside point at the header instead. Prose in
+ * ink in every case, never a banner.
  */
 function emptyDayNote(iso) {
-  if (currentSelection().size === 0) return STRINGS.filter.empty;
-  const hidden = allEntriesFor(iso, state.data).length;
-  if (hidden === 0) return STRINGS.calendar.emptyDay;
-  return hidden === 1
-    ? STRINGS.filter.filteredAwayOne
-    : fill(STRINGS.filter.filteredAwayMany, { count: hidden });
+  const S = STRINGS.calendar.silence;
+  const selection = currentSelection();
+  if (selection.size === 0) return S.none;
+  const all = allEntriesFor(iso, state.data);
+  const church = CHURCHES_BY_ID[state.calendar]?.display_name ?? '';
+  const kept = filterEntries(all, selection).length;
+  if (kept > 0) {
+    return kept === 1
+      ? fill(S.otherCalendarsOne, { church })
+      : fill(S.otherCalendarsMany, { church, count: kept });
+  }
+  const setAside = all.length - kept;
+  if (setAside > 0) {
+    return setAside === 1
+      ? fill(S.setAsideOne, { church })
+      : fill(S.setAsideMany, { church, count: setAside });
+  }
+  return STRINGS.calendar.emptyDay;
 }
 
 function paintDay(panel) {
@@ -812,38 +857,29 @@ function paintDay(panel) {
     )
     .join('');
 
+  // One calendar, one church: the register needs no church heading, and a
+  // saint can appear in it only once. The shared element is the first row
+  // that names them all the same, because the hero already carries its own.
   const registerEntries = entries.filter((e) => e.slug !== heroSlug);
-  const byChurch = new Map();
-  for (const e of registerEntries) {
-    if (!byChurch.has(e.church)) byChurch.set(e.church, []);
-    byChurch.get(e.church).push(e);
-  }
-
-  // A saint venerated by two churches on the same day appears in both their
-  // groups, and a view-transition-name may appear only once in a document, so
-  // the shared element is the first row that names them.
   const named = new Set([heroSlug]);
-  const register = CHURCHES.filter((c) => byChurch.has(c.id))
-    .map((church) => {
-      const rows = byChurch
-        .get(church.id)
-        .map((e) => {
-          const saint = data.bySlug.get(e.slug);
-          const title = titleFor(saint, church.id);
-          const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
-          named.add(saint.slug);
-          return `<li>
-            <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-              data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
-            ${renderBadge(saint.attestations, { pitch: 10.2 })}
-            ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-            <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
-          </li>`;
-        })
-        .join('');
-      return `<h3 class="register-heading">${esc(church.display_name)}</h3><ul class="register">${rows}</ul>`;
+  const rows = registerEntries
+    .map((e) => {
+      const saint = data.bySlug.get(e.slug);
+      const title = titleFor(saint, e.church);
+      const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
+      named.add(saint.slug);
+      return `<li>
+        <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
+          data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
+        ${renderBadge(saint.attestations, { pitch: 10.2 })}
+        ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
+        <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
+      </li>`;
     })
     .join('');
+  const register = registerEntries.length
+    ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2><ul class="register">${rows}</ul>`
+    : '';
 
   panel.innerHTML = `
     <article class="hero panel ${hero.image ? 'has-media' : ''}">
@@ -860,7 +896,6 @@ function paintDay(panel) {
         <div class="hero-actions">${renderSaveButton(hero.slug)}</div>
       </div>
     </article>
-    ${registerEntries.length ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>` : ''}
     ${register}`;
 }
 

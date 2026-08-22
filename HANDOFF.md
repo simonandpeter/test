@@ -34,8 +34,8 @@ with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
 - 133 unit tests (`npm test`) — pure logic, no DOM.
-- 218 browser tests (`npm run test:e2e`) — 109 across desktop and 360 px.
-  (Counts as of the close of Phase 1 on 2026-08-22; read the suite's own
+- 234 browser tests (`npm run test:e2e`) — 117 across desktop and 360 px.
+  (Counts as of the close of Phase 2 on 2026-08-22; read the suite's own
   summary rather than trusting this line.)
 - `npm run test:all` runs both. CI runs both on every push.
 
@@ -85,15 +85,19 @@ DESIGN.md §5b in full before touching it. In short:
   has nowhere to travel to and simply repaints.
 - **The reckoning toggle is gone entirely** (author, 2026-08-21) and so is the
   date line that went with it. Nothing on the site prints a day in Julian,
-  Coptic or Ethiopian reckoning any more. What stands under the strip is one
-  button — *Filter by Catholic/Orthodox/Oriental/Assyrian* — opening **the
-  plate**: the rite × communion lattice at full size, every position a switch,
-  every position named. Deselecting a church empties what it commemorates from
-  the hero, the register and the density dots at both grains. A communion turns
-  its row, a rite turns its column, and Eastern Catholic's six dots are one
-  switch. **Its cells are drawn in ink and rule, never in the glyph's three
-  states** — gold is a finding about a saint, not a control. A **first visit is
-  asked** which calendar it keeps, once. Amendment 19.
+  Coptic or Ethiopian reckoning any more. **The plate is the site's control now**
+  (author, 2026-08-22, Amendment 23): it opens from *Select Tradition* in the
+  header, under *(advanced)*, beneath four communion switches, and the
+  selection it writes is read by the calendar, the Index, the saint's page and
+  the Map's placeholder through `lib/tradition.js`, which announces changes.
+  **Its cells are drawn in ink and rule, never in the glyph's three states** —
+  gold is a finding about a saint, not a control. A **first visit is asked**
+  which traditions it keeps, once — four communions and *(advanced)*, no *Show
+  all* — and then **which calendar to see**: the calendar page shows **one
+  church's calendar at a time**, asked for before the week or month is shown
+  from those the traditions allow, remembered in `settings.calendar`, and
+  chosen without asking when only one is allowed. It names itself under the
+  strip with *Change calendar*. Amendments 19 and 23.
 - **The hero image takes 85%** of the width it took, applied **once** — in the
   column where the panel gives it a column, in the image where it does not. It
   opens the saint, hidden from the accessibility tree because the name beside
@@ -167,16 +171,15 @@ the standard:
   the superseded entry is marked as such where it sits.
 
 **The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
-phases. Phase 1 — the Index's *Detailed* option, the bookmark that is Save, the
-saint page's × back into the Index as the reader left it, and the desktop head
-with the register beside the image — is what this branch carries (SESSIONS.md
-Amendment 22 records what it cost). **Phase 2 — the sun/moon theme toggle with
-no System option, the date out of the header, a site-wide Select Tradition
-control, the Calendar showing one tradition at a time, and the saint page
-respecting the selection — is scoped under H5–H9 and is NOT started.** It waits
-on the author's review of Phase 1 and on the five questions at the end of
-Addendum H; DESIGN.md carries a bracketed forward note at each paragraph it
-will change. Do not start it unprompted, and do not quietly build toward it.
+phases, both built. Phase 1 — the Index's *Detailed* option, the bookmark that
+is Save, the saint page's × back into the Index as the reader left it, and the
+desktop head with the register beside the image — is Amendment 22. Phase 2 —
+the two-way sun/moon theme toggle, the date out of the header, a site-wide
+*Select Tradition* control with four communion switches and the plate under
+*(advanced)*, the Calendar showing one church's calendar at a time behind a
+prompt, the Index and the saint's page respecting the selection — is Amendment
+23, built on the author's five answers recorded at the end of Addendum H.
+What it leaves for the author is listed under "Outstanding" below.
 
 ### Then: Session 4b, the ship gate — still outstanding
 
@@ -300,6 +303,16 @@ session). SESSIONS.md has each in full.
   working around it.
 
 ## Outstanding, needs the author — not you
+
+- **The calendar hero's text *Save* button** is the one text Save left on the
+  site; every other Save is the bookmark (Amendment 22). It was in no
+  instruction and is unchanged; the author's answer to the question was "not
+  sure what you mean" — it is the button under the saint of the day on the
+  calendar page. Follow the bookmark or keep it: a one-line change either way.
+- **Two lines of the build's wording** (Amendment 23): the first-visit
+  question's heading *Which traditions do you keep?* and its lede, chosen
+  because a second question now asks which calendar to *see*. Both are in
+  `src/ui/strings.js` under `traditions.ask`.
 
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
