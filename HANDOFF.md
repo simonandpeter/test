@@ -331,9 +331,9 @@ session). SESSIONS.md has each in full.
   short Python scripts. Verify a scripted string replacement actually matched —
   one silently did not, and the CSS it was meant to write went missing.
 - CRLF warnings from git are noise on this repo.
-- **The author's PAT lacks the `workflow` scope.** If a commit touches
-  `.github/workflows/`, their push will be rejected — tell them rather than
-  working around it.
+- **The author's PAT has the `workflow` scope** (author, 2026-08-22; it lacked
+  it until then, and older notes here and in SESSIONS.md say so). A commit that
+  touches `.github/workflows/` can be pushed.
 
 ## Outstanding, needs the author — not you
 

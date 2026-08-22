@@ -13,6 +13,15 @@ gains a saint-of-the-day hero with a slot transition (§5b); and line boxes are
 derived from font metrics at build time so script fallback cannot move layout
 (§4).
 
+Revised 2026-08-22 for the Eastern Orthodox project, on the author's three
+decisions, recorded where each sits with the superseded text marked rather than
+removed: **the veneration glyph is removed** (§2, §5, §5b, §5c, §7, §8); **the
+registry is three local churches — Russian, Romanian, Greek — each on its own
+calendar, Julian or Revised Julian, with Pascha by the Julian computus in all
+three** (§5b); and **the site-wide selection is one of those churches** in
+place of the traditions and the plate (§5, §5b, §5c). What a calendar entry is
+when it is not a saint is proposed to the author and not yet decided.
+
 ---
 
 ## 1. The concept: panel and register
@@ -46,11 +55,25 @@ use it. The badge is the signature element precisely because it is the only
 place the palette's most precious material is spent. Everything around it stays
 quiet on purpose; that quiet is the badge's frame.
 
+*Superseded (author, 2026-08-22, Eastern Orthodox project): **the veneration
+glyph is removed.** In a one-communion corpus a mark that encodes which
+communions venerate has one cell and says nothing, and the author chose to drop
+it rather than re-aim it at the local churches. Gold is therefore spent nowhere
+on the site for now: the `--gold` token stays in tokens.css, unused, against
+the day a new signature element is chosen — the author's choice, not the
+build's — and until then the page's restraint is the whole of its statement.
+The discipline that gold carries a finding and nothing else is not repealed; it
+has nothing to carry.*
+
 A parallel discipline for red: **rubric marks liturgical time and the reader's
 place, nothing else.** Today in the week strip, a feast marker, the current
 page in the nav — the "red-letter day" idiom doing literal work. Red is never a
 generic accent, an error colour (errors are ink, stated plainly in words), or a
 decoration.
+
+*Stands, and gains weight (2026-08-22): in the Orthodox calendar the red-letter
+day is the typikon's own idiom — a Great Feast, a Sunday of the Triodion — and
+rubric is where those entries will live once the entry shape is settled.*
 
 ## 3. Colour tokens
 
@@ -220,11 +243,19 @@ authored a second time, and fetched per card as the card comes into view
 rather than carried by the manifest (Addendum H1 records the budget reasoning).
 A saint with no life shows its types in the box instead.
 
+*Revised (2026-08-22): with the glyph gone, Detailed is the description alone —
+the matrix it swapped in for the badge no longer exists, and the name line
+carries the name.*
+
 **The Index keeps the reader's traditions** (author, 2026-08-22, Addendum H7):
 a saint venerated in none of the selected churches is not on the grid, a line
 under the count says how many are set aside and where to widen it, and the
 search and the facets apply within what remains. The Map will read the same
 set.
+
+*Revised (author, 2026-08-22, Eastern Orthodox project): the set is one church
+— Russian, Romanian or Greek (§5b) — and the line under the count names what
+that church's calendar does not keep. The mechanism is unchanged.*
 
 **The card box is derived, not fixed.** The manifest carries each image's
 pixel dimensions; the card sets `aspect-ratio` from that data, so the box is
@@ -258,6 +289,7 @@ in, direction following the direction of travel through time, 260 ms, opacity
 ramping with the movement. Under reduced motion the swap is instant. The image
 and name carry `view-transition-name` from day one so the card→detail
 shared-element transition in Phase 1's close is markup already in place.
+*Revised (2026-08-22): no badge beside the name — the glyph is removed (§2).*
 
 **The chrome** (author, revised 2026-08-21). Two icon buttons stand at the left
 edge, stacked: a recentre mark for today, a calendar mark for the month. The
@@ -385,6 +417,28 @@ and simply repaints. A month takes its height with it as it goes, because a
 five-row month arriving where a six-row one was would shunt the whole page up
 between two frames.
 
+**Russian, Romanian or Greek** (author, 2026-08-22, Eastern Orthodox project).
+The registry is three local churches and the reader chooses one: the Russian
+Orthodox Church, which keeps the Julian calendar; the Romanian Orthodox Church
+and the Church of Greece, which keep the Revised Julian — fixed feasts on
+Gregorian dates, Pascha by the Julian computus, which all three share. *Julian
+and Revised Julian* are the two calendars the site reckons in (the author's
+second decision), and which one a reader sees is not asked separately: it
+follows the church. The choice is the site's, as the traditions were — the
+calendar page shows that church's calendar, the Index keeps that church's
+saints, the saint's page reads that church's register first — made once on a
+first visit and changed from the header, where the chooser offers the three by
+name and nothing else: no communions, no rites, no plate. "For now": the
+registry grows by one entry per church added, and everything downstream is
+generated from it. An attestation names its church and states its own calendar
+— `julian` or `revised-julian` — so a church that changed its reckoning would
+change its rows, not the code. `settings.church` holds the choice, in place of
+`traditions` and `calendar`.
+
+*The four paragraphs below — the traditions, the plate, its cells and its
+shape — are superseded by this one (2026-08-22) and kept as the record of the
+cross-church control.*
+
 **The reader's traditions, not the reader's reckoning** (author, 2026-08-21,
 reversing the same day's decision twice over). A row of four calendars —
 Gregorian, Julian, Coptic, Ethiopian — used to stand under the strip and print
@@ -432,6 +486,11 @@ reader's traditions keep (and the way to them is named); or the reader's
 traditions hold nothing at all, because nothing is selected. Different facts,
 each stated as the fact it is. Prose in ink, never a banner.
 
+*Revised (2026-08-22): two silences — the corpus has nothing for the day, or
+this church's calendar has nothing where another of the three does, and the way
+to it is named. The third, nothing selected, cannot arise: a church is always
+chosen.*
+
 **A first visit is asked which traditions it keeps** (author, 2026-08-21;
 revised 2026-08-22). Four communions as four buttons, and *(advanced)* —
 small, unframed — unfolding the plate for a church-by-church answer, in a
@@ -448,6 +507,13 @@ saint's page read the same set. It is still the one deliberate exception to
 the fold rule: on that visit at 360 px the question and its answers clear the
 fold and the hero does not.
 
+*Revised (author, 2026-08-22, Eastern Orthodox project): one question, not two
+— which church, Russian, Romanian or Greek — and it is the calendar's question
+and the site's at once, because the calendar follows the church. Three buttons,
+no (advanced), no plate. Asked once; a reader who scrolls past has chosen
+nothing and is asked again; the header changes it afterwards. The fold
+exception stands.*
+
 **One calendar at a time** (author, 2026-08-22, Addendum H8). The calendar
 page shows a single church's calendar — never two traditions interleaved,
 never one saint listed twice because two churches keep him on the same day
@@ -461,6 +527,9 @@ with the way to change it, which opens the same prompt in place; a selection
 that no longer allows it asks again. The density dots, the hero and the
 register all count that one calendar, and the register needs no church
 heading because there is only one church in it.
+
+*Stands, simplified (2026-08-22): the one calendar is the chosen church's, so
+there is no second choice to remember and nothing can fail to allow it.*
 
 The strip and the grid stay in the civil calendar the URL is in.
 
@@ -516,6 +585,10 @@ labels went with it, and the bar's vertical padding returns to what it was
 before the date arrived. No footer ceremony; About holds the editorial matter.
 Header collapses to a wrapping row at 360 px; no hamburger — four links fit.
 
+*Revised (2026-08-22): the text button names the church — Russian, Romanian or
+Greek — and opens a chooser of the three; the switches and the plate are gone
+with the traditions.*
+
 ### 5c. The saint's page
 
 Revised 2026-08-22 at the author's direction; until then the page had no
@@ -530,6 +603,9 @@ are frameless icon buttons in ink with accessible names; the Save text button
 this page carried until now is gone. The × goes to the Index's remembered
 position however the reader arrived; a reader who came by a deep link gets the
 top of the Index.
+
+*Revised (2026-08-22): the name and its two controls; the mark is gone (§2),
+and the line no longer reserves the margin for it.*
 
 **Every ordinary navigation lands at the top of the page it opens, and the
 Index is the one view that puts the reader back.** The app owns scroll
@@ -546,6 +622,10 @@ name is untouched: it is a finding about the saint and shows every church
 whatever the reader keeps; only what is read below it filters. Nothing is
 asserted by any of this — the reader is choosing what to read, which is the
 opposite of adjudicating.
+
+*Revised (2026-08-22): the chosen church stands at the top and the other two
+wait behind See other churches; the glyph this paragraph calls untouched no
+longer exists.*
 
 **On desktop the image and the register stand side by side.** At 760 px and
 above the image takes a 200–260 px column, the dates-and-places register fills
@@ -633,6 +713,11 @@ draws crisp; two centuries of doubt draw as a visible dissolve; nothing ever
 snaps.
 
 ## 7. The signature element: the veneration glyph (spec for Session 3)
+
+*Superseded in full (author, 2026-08-22, Eastern Orthodox project): the glyph
+is removed — §2. This section is kept whole as the record of the cross-church
+mark, which returns with the corpus it was built for; nothing in it is built
+here. `badge.js`, `matrix.js`, the plate and About's legend go with it.*
 
 Two views over one dataset, per the author's `veneration-glyph` spec §1 and
 brief §9.1/§9.2: the **badge**, one row of communion cells, and the **matrix**,
@@ -848,5 +933,6 @@ against drift back toward them.
 - No hairline-broadsheet costume. Rules appear only where a register rules.
 - No decorative crosses, halos, illuminated capitals, blackletter, or other
   costume ornament. The subject's gravity comes from restraint.
-- No gold anywhere but the badge. No red anywhere but liturgical time and
-  place. These two sentences are the design.
+- No gold anywhere but the badge — and, since 2026-08-22, no badge, so no gold
+  anywhere until a new signature element is chosen. No red anywhere but
+  liturgical time and place. These two sentences are the design.
