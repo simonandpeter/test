@@ -4,6 +4,12 @@ You are picking up the Gallery of Saints build. Nothing of the previous
 conversations survives except the files in this repo, so this document is the
 briefing.
 
+**If your session is the one archiving this project and starting the Eastern
+Orthodox one, read `../HANDOFF-ORTHODOX.md` first** (written 2026-08-22 at the
+author's request): it says how to put this repo away as a backup, what of it
+carries into the smaller project, and which design decisions are open again.
+This file remains the accurate briefing for the code you will be copying.
+
 ## Read first, in this order
 
 1. `../saintsbuildplan.md` — the brief.
