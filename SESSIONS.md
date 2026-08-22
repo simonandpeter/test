@@ -448,6 +448,50 @@ later). It scrolls sideways inside its own region and keeps its shape, with the
 communion's name stuck to the edge: a grid that becomes a register on a phone is
 a second diagram to learn, and the shape is the thing being taught.
 
+**20. One swap primitive, and the grain extracted for Session 6** (2026-08-22).
+A structural pass, not a screen: four implementations of "two copies in the DOM
+for the length of a transition" — the day roll, the grain tracks, the Index's
+leaving cards, the month cross-fade — had each learned Amendment 9 and
+Amendment 17's corollary separately, and the fourth learning had already cost a
+real defect once (the leaving grain copy swallowing clicks). `src/ui/swap.js`
+now owns both rules in one place: `setAside`/`restore` mark which copy is not
+the reader's — `aria-hidden`, out of the tab order, inline
+`pointer-events: none` — and a per-container flight registry (`beginSwap`/
+`landSwap`) lands whatever is still in the air before the next swap starts,
+idempotently, which is also what destroy() calls.
+
+Converting the call sites found that three of the four had been marking
+incompletely all along: the rolling day panel's leaving copy, the Index's
+fading cards and the fading week under the arriving month all kept their
+buttons and links in the tab order for the length of their animations. All
+three are marked aside now, and restored where the copy persists and becomes
+current again — the week when the month closes, a card a second filter change
+brings back mid-fade.
+
+With it, two of the smaller structural items from the same review:
+
+- **`makeGrain` moved to `src/ui/grain.js`**, behaviour unchanged — it was
+  already free-standing behind its parameter object, and River mode and the
+  timeline are horizontal tracks that follow a finger and settle. Extracting it
+  before Session 6 is the difference between reusing it and writing it twice.
+  `STRIP_SLIDE` lives there now; `grain-drag.js` is unchanged.
+- **The tradition selection lives wholly in lib/tradition.js**
+  (`currentSelection`), not cached in the calendar view's state: the moment the
+  Index or the map respects the filter, a view-local copy would be the one that
+  drifts. Whether the filter *should* become site-wide is still open and the
+  author's; the shape no longer prejudges it.
+
+And one defect of the filter session's own fixed: `choose()` called
+`slotSwap(true)`, so the day panel rolled upward on every filter press as if
+the reader had stepped forward in time. By the design's own rule the movement
+decides, not the gesture — a filter change has not travelled anywhere, and the
+panel now repaints in place (`repaintDay`). Four browser tests cover the fix
+and the new marking; each was backed out, seen to fail, and restored.
+
+The one review item deliberately not taken: wrapping quality-floor.spec.js in
+`test.describe` blocks by route. Extend, don't rebuild, until the flat list
+actually costs time reading a failure.
+
 **Still outstanding from earlier sessions:** the seven images need a per-image
 `source_url` (live in production as 7 build warnings — the licence itself was
 settled on 2026-08-21 as Public Domain Mark 1.0, which obliges no attribution,

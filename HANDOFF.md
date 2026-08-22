@@ -17,7 +17,7 @@ briefing.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; nineteen entries now, each recording
+   the most important page in the repo**; twenty entries now, each recording
    something that cost real time to learn.
 
 Do not re-litigate settled decisions. If something looks odd, assume there is a
@@ -108,7 +108,9 @@ DESIGN.md §5b in full before touching it. In short:
   the month's viewport, and `src/ui/swipe.js` is now `src/ui/grain-drag.js`.
   For the length of any move the document holds a second copy of every step
   button, laid over the live one — `aria-hidden`, out of the tab order and
-  `pointer-events: none`. Amendment 18.
+  `pointer-events: none`. Amendment 18. The track mechanism itself is
+  `src/ui/grain.js` now (Amendment 20), and the copy-marking comes from
+  `src/ui/swap.js`; River mode and the timeline should reuse both.
 
 ## The glyph, because it has moved twice
 
@@ -218,7 +220,9 @@ session). SESSIONS.md has each in full.
 - **Anything that holds two copies of a thing in the DOM for the length of an
   animation must say which copy is current.** A bare `querySelector` cannot.
   That was Amendment 9, and it was invisible until someone clicked faster than
-  the designer did.
+  the designer did. Since Amendment 20 the rule has one home — `src/ui/swap.js`
+  (`setAside`/`restore`, `beginSwap`/`landSwap`) — and every animated swap goes
+  through it. Do not grow a fifth implementation beside it.
 - **A decorative fade is still text.** `opacity` on a colour is a new colour,
   and axe reads it: a 50% wash over `--ink-soft` is 2.1:1 on gesso and a
   serious violation. Fade with a `mask-image` instead, so the ink keeps its

@@ -30,6 +30,7 @@ import {
   hasActiveFilters,
 } from '../lib/index-filters.js';
 import { layout, windowOf } from '../lib/virtual-grid.js';
+import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { renderBadge } from '../ui/badge.js';
 import { matrixRows } from '../ui/matrix.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -483,20 +484,27 @@ function update({ animate }) {
 
   // Fading is the reason the removal is deferred: a filtered-out saint should
   // leave visibly. Reduced motion removes them now — disabled means removed,
-  // never shortened.
+  // never shortened. The fade is one flight in swap.js's registry, so a second
+  // filter change lands the first batch rather than leaving two removals
+  // racing, and each fading card is marked aside — a card on its way out must
+  // not hold the tab order or a click (Amendment 17's corollary).
   if (animate && !reduced && leaving.length) {
-    for (const slug of leaving) state.rendered.get(slug).classList.add('leaving');
-    setTimeout(() => {
+    for (const slug of leaving) {
+      const node = state.rendered.get(slug);
+      node.classList.add('leaving');
+      setAside(node);
+    }
+    beginSwap(inner, () => {
       for (const slug of leaving) {
         // Still fading, and not a card that a second filter change brought
-        // back in the meantime — paintWindow clears the class when it does.
+        // back in the meantime — paintWindow restores those when it does.
         const node = state?.rendered.get(slug);
         if (!node?.classList.contains('leaving')) continue;
         node.remove();
         state.rendered.delete(slug);
       }
       if (state) paintWindow();
-    }, 200);
+    }).settle(200);
   } else {
     for (const slug of leaving) {
       state.rendered.get(slug).remove();
@@ -532,7 +540,12 @@ function paintWindow() {
       state.rendered.set(position.slug, node);
       if (!state.finePointer) prefetch(position.slug);
     }
-    node.classList.remove('leaving');
+    if (node.classList.contains('leaving')) {
+      // Brought back mid-fade by a second filter change: current again, so the
+      // aside marks come off with the class.
+      node.classList.remove('leaving');
+      restore(node);
+    }
     node.style.width = `${position.w}px`;
     node.style.height = `${position.h}px`;
     node.style.transform = `translate(${position.x}px, ${position.y}px)`;

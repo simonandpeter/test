@@ -1942,3 +1942,114 @@ test('on a first visit the question clears the fold, and the day does not', asyn
   expect(strip.y + strip.height).toBeLessThan(780);
   expect(heading.y).toBeLessThan(780);
 });
+
+/* ---- one swap primitive (src/ui/swap.js) -------------------------------- */
+
+test('a filter press repaints the day in place rather than rolling it', async ({ page }) => {
+  // The movement decides, not the gesture (DESIGN.md §5b). A filter change has
+  // not travelled anywhere in time, so the panel repaints where it stands —
+  // it used to roll upward as if the reader had stepped forward a day.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await openFilter(page);
+
+  // Read synchronously after the click, inside the window a roll would occupy.
+  const after = await page.evaluate(() => {
+    document.querySelector('[data-plate] [data-church="roman-catholic"]').click();
+    return {
+      leaving: document.querySelectorAll('.day-panel.slot-leaving').length,
+      entering: document.querySelectorAll('.day-panel.slot-entering').length,
+      panels: document.querySelectorAll('.day-panel').length,
+    };
+  });
+  expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
+  // The repaint itself still happened: Augustine is filtered away.
+  await expect(page.locator('.empty-day')).toHaveCount(1);
+});
+
+test('the rolling day leaves an inert copy behind it', async ({ page }) => {
+  // Amendment 17's corollary, applied to the roll it had never reached: for
+  // 300 ms the document holds two day panels, and the leaving one is laid over
+  // the same spot — aria-hidden, out of the tab order, out of the pointer's
+  // reach, or its links swallow the click meant for the arriving day.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
+
+  const marked = await page.evaluate(() => {
+    document.querySelector('.week-strip [data-iso="2026-08-26"]').click();
+    const leaving = document.querySelector('.day-panel.slot-leaving');
+    if (!leaving) return null;
+    return {
+      hidden: leaving.getAttribute('aria-hidden'),
+      pointer: leaving.style.pointerEvents,
+      reachable: [...leaving.querySelectorAll('a, button')].filter((n) => n.tabIndex !== -1)
+        .length,
+    };
+  });
+  expect(marked).toEqual({ hidden: 'true', pointer: 'none', reachable: 0 });
+  await expect(page.locator('.day-panel')).toHaveCount(1);
+});
+
+test('a fading card is set aside, and one brought back mid-fade is whole again', async ({ page }) => {
+  // The Index's leaving cards learned Amendment 17's lesson too: a card on its
+  // way out keeps its link for 200 ms, and that link must not hold the tab
+  // order. Undone the moment a second filter change brings the card back.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await facet(page, 'historicities');
+
+  const states = await page.evaluate(() => {
+    const box = document.querySelector('input[name="historicities"][value="legendary"]');
+    const fire = () => box.dispatchEvent(new Event('input', { bubbles: true }));
+    box.checked = true;
+    fire();
+    const leaving = document.querySelector('.index-card.leaving');
+    const during = leaving && {
+      hidden: leaving.getAttribute('aria-hidden'),
+      tab: leaving.querySelector('.index-name').tabIndex,
+    };
+    box.checked = false;
+    fire();
+    // The same node, asked again: a different card passing would prove nothing.
+    return {
+      during,
+      after: leaving && {
+        back: leaving.isConnected && !leaving.classList.contains('leaving'),
+        hidden: leaving.getAttribute('aria-hidden'),
+        tab: leaving.querySelector('.index-name').tabIndex,
+      },
+    };
+  });
+  expect(states.during).toEqual({ hidden: 'true', tab: -1 });
+  expect(states.after).toEqual({ back: true, hidden: null, tab: 0 });
+});
+
+test('the fading week is aside while the month arrives, and current again after', async ({ page }) => {
+  // For the length of the cross-fade both grains are painted over one cell.
+  // The one the reader is leaving must say so completely; `hidden` only takes
+  // over once the fade lands, and closing the month hands everything back.
+  await answered(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  const during = await page.evaluate(() => {
+    document.querySelector('[data-month]').click();
+    const week = document.querySelector('.cal-week');
+    return {
+      hidden: week.getAttribute('aria-hidden'),
+      allAside: [...week.querySelectorAll('button')].every((b) => b.tabIndex === -1),
+    };
+  });
+  expect(during).toEqual({ hidden: 'true', allAside: true });
+  await expect(page.locator('.cal-week')).toBeHidden();
+
+  const after = await page.evaluate(() => {
+    document.querySelector('[data-month]').click();
+    const week = document.querySelector('.cal-week');
+    return {
+      hidden: week.getAttribute('aria-hidden'),
+      anyAside: [...week.querySelectorAll('button')].some((b) => b.tabIndex === -1),
+    };
+  });
+  expect(after).toEqual({ hidden: null, anyAside: false });
+});

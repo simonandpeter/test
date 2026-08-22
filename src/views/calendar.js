@@ -24,10 +24,10 @@ import {
 } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import {
+  currentSelection,
   filterEntries,
   hasChosen,
   isAll,
-  readSelection,
   selectAll,
   selectCommunion,
   selectionLabel,
@@ -41,7 +41,9 @@ import { escapeHtml as esc } from '../lib/markdown.js';
 import { renderFilterPlate } from '../ui/plate.js';
 import { renderBadge } from '../ui/badge.js';
 import { renderMatrix } from '../ui/matrix.js';
-import { onGrainDrag, SETTLE } from '../ui/grain-drag.js';
+import { onGrainDrag } from '../ui/grain-drag.js';
+import { makeGrain } from '../ui/grain.js';
+import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -82,8 +84,6 @@ const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
 
 /** Matches --dur-month in tokens.css; the fade is long on purpose. */
 const MONTH_FADE = 420;
-/** Matches --dur-slot: the sideways step of a grain, and the day's own roll. */
-const STRIP_SLIDE = 260;
 
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -96,8 +96,6 @@ let state = null;
  */
 export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
-  clearTimeout(state?.rollTimer);
-  clearTimeout(state?.monthTimer);
   clearTimeout(state?.sizeTimer);
   if (state) state.cleanups = [];
   state = null;
@@ -116,10 +114,12 @@ function indexFor(year, data) {
  * (author, 2026-08-21). Everything downstream reads through here — the hero,
  * the register, the density dots under every date at both grains — so a
  * tradition turned off is off everywhere on the page rather than in the one
- * place someone remembered to filter.
+ * place someone remembered to filter. The selection itself is read from
+ * lib/tradition.js each time, never cached here: the moment a second view
+ * respects it, a copy held in this view's state would be the one that drifts.
  */
 const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
-const entriesFor = (iso, data) => filterEntries(allEntriesFor(iso, data), state.selection);
+const entriesFor = (iso, data) => filterEntries(allEntriesFor(iso, data), currentSelection());
 const countFor = (iso, data) => entriesFor(iso, data).length;
 
 export function render(el, { data, params, router }) {
@@ -128,12 +128,9 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     monthCursor: null, monthOpen: false,
-    // The traditions this calendar is keeping, remembered across visits. The
-    // reckoning toggle that used to stand here is withdrawn (author,
-    // 2026-08-21) — see DESIGN.md §5b.
-    selection: readSelection(), filterOpen: false,
+    filterOpen: false,
     cleanups: [], dayCleanups: [],
-    rollTimer: null, monthTimer: null, sizeTimer: null,
+    sizeTimer: null,
     weekGrain: null, monthGrain: null,
   };
 
@@ -222,9 +219,9 @@ export function render(el, { data, params, router }) {
     const button = e.target.closest('button[data-church], button[data-communion], button[data-rite]');
     if (!button) return;
     const { church, communion, rite } = button.dataset;
-    if (church) choose(toggleChurch(state.selection, church));
-    else if (communion) choose(toggleCommunion(state.selection, communion));
-    else choose(toggleRite(state.selection, rite));
+    if (church) choose(toggleChurch(currentSelection(), church));
+    else if (communion) choose(toggleCommunion(currentSelection(), communion));
+    else choose(toggleRite(currentSelection(), rite));
   });
 
   // Both grains sit on a track and both take a hold-and-slide, in the same
@@ -257,6 +254,8 @@ export function render(el, { data, params, router }) {
   state.cleanups.push(
     () => state.weekGrain?.land(),
     () => state.monthGrain?.land(),
+    () => landSwap(el.querySelector('.slot-viewport')),
+    () => landSwap(el.querySelector('.cal-span')),
     onGrainDrag(el.querySelector('.cal-week'), state.weekGrain.handlers),
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
   );
@@ -300,171 +299,18 @@ function select(iso, { travelled = false } = {}) {
   slotSwap(forward);
 }
 
-/* ---- the grain track ---------------------------------------------------- */
+/* ---- the day roll ------------------------------------------------------- */
 
 /**
- * A grain — the week, or the month — sits on a track inside a viewport, and
- * the track is what moves. It moves two ways, and they are deliberately the
- * same movement:
- *
- * **Travel**, from a peeked edge, an arrow key off the end of the strip, or
- * the jump to today. The state changes first and the live row is repainted to
- * where it has arrived, so the heading and the day panel never lag the chrome;
- * then the track is thrown back to where the reader last saw it and glides
- * home, with the grain being left standing beside it for the length of the
- * trip.
- *
- * **A drag** (author, 2026-08-21): the reader holds the grain and slides it.
- * Both neighbours are painted and parked a viewport width either side, the
- * track follows the finger, and on release it settles into whichever grain it
- * is nearest — over `--dur-slot`, so letting go reads as the movement a peek
- * makes rather than as a snap.
- *
- * Either way the document holds two or three of every date for a moment, so
- * the copies say what they are: `.grain-side`, `aria-hidden`, out of the tab
- * order and out of reach of the pointer. That last one is not belt and braces
- * — a copy laid over the live row swallows the click that would move the grain
- * again (Amendment 17).
- *
- * Reduced motion removes the animation and never shortens it: a travel is a
- * repaint, and a drag still follows the finger — direct manipulation is not an
- * animation — but lets go into place with nothing to sit through.
+ * The day panel rolls in the direction of travel; chrome stays put. Landing
+ * whatever roll is still in flight comes first (Amendment 9, via swap.js):
+ * without it a second click inside the roll found the *leaving* panel and
+ * appended beside the entering one, and the orphan outlived every navigation
+ * after it.
  */
-function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
-  const track = viewport.querySelector('.grain-track');
-  let sides = [];
-  let timer = null;
-  let holding = false;
-
-  const width = () => viewport.getBoundingClientRect().width;
-  const shift = (dx) => {
-    track.style.transform = dx ? `translateX(${dx}px)` : '';
-  };
-
-  /** A neighbouring grain, parked one viewport width away on its own side. */
-  function addSide(offset) {
-    const side = document.createElement(row.tagName);
-    side.className = `${row.className} grain-side`;
-    side.style.left = `${offset * 100}%`;
-    side.setAttribute('aria-hidden', 'true');
-    // The live row's own skeleton, then repainted for the grain beside it —
-    // so a change to what a row is made of cannot reach the copies and miss.
-    side.innerHTML = row.innerHTML;
-    paint(side, offset, { live: false });
-    for (const button of side.querySelectorAll('button')) button.tabIndex = -1;
-    track.appendChild(side);
-    sides.push(side);
-    return side;
-  }
-
-  /** Everything back where it belongs, with nothing animating the return. */
-  function land() {
-    clearTimeout(timer);
-    timer = null;
-    holding = false;
-    track.classList.remove('is-settling');
-    track.style.transition = 'none';
-    shift(0);
-    // Flushed deliberately, so the copies leave and the transform lifts in the
-    // same frame the repainted row appears in.
-    void track.offsetHeight;
-    track.style.transition = '';
-    for (const side of sides) side.remove();
-    sides = [];
-    viewport.classList.remove('is-moving');
-  }
-
-  /** Animates the track to `dx`, then does `done` and lands. */
-  function glide(dx, done) {
-    track.style.transition = '';
-    track.classList.add('is-settling');
-    void track.offsetHeight;
-    shift(dx);
-    timer = setTimeout(() => {
-      done();
-      land();
-    }, STRIP_SLIDE);
-  }
-
-  return {
-    land,
-
-    /** The state has already arrived; this shows the trip it made. */
-    travel(dir) {
-      land();
-      if (reducedMotion()) return;
-      addSide(-dir);
-      viewport.classList.add('is-moving');
-      track.style.transition = 'none';
-      shift(dir * width());
-      void track.offsetHeight;
-      glide(0, () => {});
-    },
-
-    handlers: {
-      begin() {
-        land();
-        holding = true;
-        viewport.classList.add('is-moving');
-        track.style.transition = 'none';
-        addSide(-1);
-        addSide(1);
-        onSides?.([row, ...sides]);
-      },
-
-      move(dx) {
-        if (holding) shift(dx);
-      },
-
-      end(dx, dragged) {
-        if (!dragged) {
-          // A flick the browser never reported a move for. Nothing is parked
-          // beside the row, so it goes the ordinary way and travels.
-          flick(dx < 0 ? 1 : -1);
-          return;
-        }
-        holding = false;
-        const w = width();
-        // Far enough to have meant it is a finger's worth of travel, not a
-        // fraction of the grain (author, 2026-08-21): a third of the width read
-        // as a haul on a wide screen and snapped back from any real swipe.
-        // Short of it, the grain the reader started in is still the nearest.
-        const offset = Math.abs(dx) < SETTLE ? 0 : dx < 0 ? 1 : -1;
-        if (reducedMotion()) {
-          if (offset) settle(offset);
-          land();
-          return;
-        }
-        glide(-offset * w, () => {
-          if (offset) settle(offset);
-        });
-      },
-    },
-  };
-}
-
-/**
- * Lands any roll still in flight, so a swap always starts from exactly one
- * panel. Without this a reader clicking two days inside the 300 ms roll got a
- * second panel appended beside the first: `querySelector('.day-panel')` finds
- * the *leaving* panel while a roll is on, so the entering one was never picked
- * up as the thing to replace and was never removed. The day then showed an
- * empty-day notice and a hero at once, and the orphan outlived every
- * subsequent navigation.
- */
-function landRoll(viewport) {
-  clearTimeout(state.rollTimer);
-  state.rollTimer = null;
-  for (const panel of viewport.querySelectorAll('.day-panel.slot-leaving')) panel.remove();
-  for (const panel of viewport.querySelectorAll('.day-panel.slot-entering')) {
-    panel.classList.remove('slot-entering');
-  }
-}
-
-/** The day panel rolls in the direction of travel; chrome stays put. */
 function slotSwap(forward) {
   const viewport = state.el.querySelector('.slot-viewport');
-  landRoll(viewport);
+  landSwap(viewport);
   const old = viewport.querySelector('.day-panel');
   const next = document.createElement('div');
   next.className = 'day-panel';
@@ -477,21 +323,35 @@ function slotSwap(forward) {
     named.style.viewTransitionName = 'none';
   }
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (reducedMotion()) {
     old.replaceWith(next);
     wireDay(next);
     return;
   }
   viewport.classList.toggle('backward', !forward);
   old.classList.add('slot-leaving');
+  setAside(old);
   next.classList.add('slot-entering');
   viewport.appendChild(next);
   wireDay(next);
-  state.rollTimer = setTimeout(() => {
+  beginSwap(viewport, () => {
     old.remove();
     next.classList.remove('slot-entering');
-    state.rollTimer = null;
-  }, 300);
+  }).settle(300);
+}
+
+/**
+ * The day's content changed under it — the filter, not the date — so the
+ * panel repaints in place. The movement decides, not the gesture (DESIGN.md
+ * §5b): a filter press has not travelled anywhere, and rolling it read as a
+ * step forward in time that never happened.
+ */
+function repaintDay() {
+  const viewport = state.el.querySelector('.slot-viewport');
+  landSwap(viewport);
+  const panel = viewport.querySelector('.day-panel');
+  paintDay(panel);
+  wireDay(panel);
 }
 
 function paintChrome() {
@@ -598,7 +458,6 @@ function toggleFilter() {
  * a keyboard reader can only press once is not a filter.
  */
 function choose(selection) {
-  state.selection = selection;
   writeSelection(selection);
   const active = document.activeElement;
   const key = active?.dataset?.church
@@ -611,18 +470,18 @@ function choose(selection) {
   paintPlate();
   if (key) state.el.querySelector(`[data-plate] ${key}`)?.focus();
   paintChrome();
-  slotSwap(true);
+  repaintDay();
 }
 
 function paintPlate() {
-  state.el.querySelector('[data-plate]').innerHTML = renderFilterPlate(state.selection);
+  state.el.querySelector('[data-plate]').innerHTML = renderFilterPlate(currentSelection());
   paintFilterLabel();
 }
 
 function paintFilterLabel() {
   const button = state.el.querySelector('[data-filter-open]');
-  button.textContent = selectionLabel(state.selection);
-  button.classList.toggle('is-narrowed', !isAll(state.selection));
+  button.textContent = selectionLabel(currentSelection());
+  button.classList.toggle('is-narrowed', !isAll(currentSelection()));
 }
 
 /**
@@ -701,12 +560,23 @@ function toggleMonth() {
   const week = el.querySelector('.cal-week');
   const body = el.querySelector('.month-body');
   const button = el.querySelector('[data-month]');
+  const span = el.querySelector('.cal-span');
 
   button.setAttribute('aria-expanded', String(monthOpen));
   button.classList.toggle('is-on', monthOpen);
-  clearTimeout(state.monthTimer);
   state.weekGrain.land();
   state.monthGrain.land();
+  // A fade still in flight lands rather than being abandoned mid-air, so this
+  // toggle always starts from one grain showing and one at rest.
+  landSwap(span);
+
+  // The grain the reader is leaving is marked aside for the length of the
+  // fade — it is painted over the same cell, and its buttons must not hold
+  // the tab order or the click. `hidden` takes over once the fade lands.
+  const entering = monthOpen ? month : week;
+  const leaving = monthOpen ? week : month;
+  setAside(leaving);
+  restore(entering);
 
   // Reduced motion removes the fade, so there is nothing to wait for: waiting
   // anyway would be a delay with no animation behind it.
@@ -728,11 +598,10 @@ function toggleMonth() {
       month.classList.add('is-open');
       week.classList.add('is-out');
     });
-    state.monthTimer = setTimeout(() => {
+    beginSwap(span, () => {
       week.hidden = true;
       week.classList.remove('is-out');
-      state.monthTimer = null;
-    }, MONTH_FADE);
+    }).settle(MONTH_FADE);
     return;
   }
 
@@ -746,11 +615,10 @@ function toggleMonth() {
   week.classList.add('is-out');
   growMonthBody(body, measure(body), 0);
   requestAnimationFrame(() => week.classList.remove('is-out'));
-  state.monthTimer = setTimeout(() => {
+  beginSwap(span, () => {
     month.hidden = true;
     body.style.height = '';
-    state.monthTimer = null;
-  }, MONTH_FADE);
+  }).settle(MONTH_FADE);
 }
 
 const measure = (el) => el.getBoundingClientRect().height;
@@ -901,7 +769,7 @@ const stepMonth = (n) => moveMonth(n);
  * Prose in ink in every case, never a banner.
  */
 function emptyDayNote(iso) {
-  if (state.selection.size === 0) return STRINGS.filter.empty;
+  if (currentSelection().size === 0) return STRINGS.filter.empty;
   const hidden = allEntriesFor(iso, state.data).length;
   if (hidden === 0) return STRINGS.calendar.emptyDay;
   return hidden === 1

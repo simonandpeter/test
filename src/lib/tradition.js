@@ -49,7 +49,20 @@ export function readSelection() {
   return new Set(stored.filter((id) => live.has(id)));
 }
 
+/**
+ * The one live copy of the reader's selection. Every consumer — the calendar
+ * today, the Index or the map if they come to respect it — reads through here,
+ * so there is no view-local cache to drift from another's. Lazy, so importing
+ * the module does not read storage as a side effect.
+ */
+let current = null;
+
+export function currentSelection() {
+  return (current ??= readSelection());
+}
+
 export function writeSelection(selection) {
+  current = selection;
   writeSetting('traditions', [...selection]);
   return selection;
 }
