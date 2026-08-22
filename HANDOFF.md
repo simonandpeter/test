@@ -4,10 +4,13 @@
 > and not yet stripped.** The tree at this repo's first commit is byte for byte
 > the tree of the archived cross-church repo at its tag
 > `archive/cross-church-2026-08` — 133 unit tests and 234 browser tests green
-> here before anything changed. That archive sits at `../main/` and stays
-> untouched; it is the backup and the reference, and the ambition the
-> four-communion corpus comes back to once this one tradition has proven the
-> shape.
+> here before anything changed. That archive was moved out of this working
+> folder on 2026-08-22 and sits at `..\..\Agios Website Ex\main`, beside a
+> bundle and a zip of the same thing; it stays untouched, and it is the backup,
+> the reference, and the ambition the four-communion corpus comes back to once
+> this one tradition has proven the shape. This folder was called `orthodox/`
+> while the two stood side by side, which is the name `docs/HANDOFF-ORTHODOX.md`
+> still uses for it.
 >
 > **So everything below still describes the cross-church build**, because
 > nothing has been removed yet. `docs/HANDOFF-ORTHODOX.md` is the briefing for
