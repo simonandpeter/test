@@ -1,14 +1,22 @@
 # Handoff — start here
 
-> **This repository is archived.** It was frozen on 2026-08-22 at the commit
-> tagged `archive/cross-church-2026-08`, with the live site left serving it at
-> https://simonandpeter.github.io/test/. **Do not build here.** The work
-> continued in a successor project — Eastern Orthodox saints and calendars
-> only, on this design and this structure — seeded by copying this tree; it
-> sits at `../orthodox/` beside this folder, and `../HANDOFF-ORTHODOX.md`
-> records why, what carried over and what did not. This repo is the backup and
-> the reference: read it, clone it, copy from it, but change it only to
-> correct the record. A backup that has been improved is not a backup.
+> **This is the Eastern Orthodox project, seeded from the cross-church build
+> and not yet stripped.** The tree at this repo's first commit is byte for byte
+> the tree of the archived cross-church repo at its tag
+> `archive/cross-church-2026-08` — 133 unit tests and 234 browser tests green
+> here before anything changed. That archive sits at `../main/` and stays
+> untouched; it is the backup and the reference, and the ambition the
+> four-communion corpus comes back to once this one tradition has proven the
+> shape.
+>
+> **So everything below still describes the cross-church build**, because
+> nothing has been removed yet. `docs/HANDOFF-ORTHODOX.md` is the briefing for
+> what this project is, what carries over from that one and which design
+> decisions are open again — read it first. Three of those decisions are the
+> author's and are not yet taken: what the veneration glyph means in a
+> one-communion corpus, how Old and New Calendar are offered, and what a
+> calendar entry is when a Great Feast is not a saint. DESIGN.md is inherited
+> whole and will be amended, not replaced, as each is settled.
 
 You are picking up the Gallery of Saints build. Nothing of the previous
 conversations survives except the files in this repo, so this document is the
