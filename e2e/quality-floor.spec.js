@@ -563,9 +563,9 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   const page = await ctx.newPage();
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
-  // Seventy saints now; Tithoes is near the end of the alphabet and far below
+  // 708 saints now; Zoticus of Tomis is last alphabetically and far below
   // a 480 px viewport. A window is far fewer than the corpus at either end.
-  const last = page.locator('.index-name', { hasText: 'Tithoes' });
+  const last = page.locator('.index-name', { hasText: 'Zoticus of Tomis' });
   expect(await page.locator('.index-card').count()).toBeLessThan(20);
   await expect(last).toHaveCount(0);
 
@@ -2048,8 +2048,10 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   expect(seen.stroke).toBe(tokens.ink);
   expect(seen.fill).toBe('none');
 
-  // A card with no picture: beside the dates.
-  const imageless = await showOnly('Christopher');
+  // A card with no picture: beside the dates. ('Christopher' alone now
+  // matches two saints in the 708-saint corpus — Christopher and
+  // Christopher the Roman, both imageless — so the search is narrowed.)
+  const imageless = await showOnly('Christopher the Roman');
   const corner = await imageless.evaluate((card) => {
     const r = (el) => el.getBoundingClientRect();
     const b = r(card.querySelector('.bookmark'));
@@ -2212,12 +2214,11 @@ test('the header control names the calendar, offers the three, and the Index fol
   // sets aside, never silently dropping anyone.
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  // Russian keeps seventy-eight of a hundred and forty-nine: its own week,
-  // read off the Patriarchate's pages, and the original eight; the sixty-two
-  // read off the Romanian and Greek calendars and the Serbian week's nine
-  // stand undocumented for it.
-  await expect(page.locator('[data-count]')).toHaveText('78');
-  await expect(page.locator('[data-set-aside]')).toContainText('71 saints are not in the Russian calendar');
+  // Russian keeps four hundred and five of the 708-saint corpus (Amendment
+  // 31): its own week, the Russian new martyrs read off azbyka.ru, and the
+  // original eight; the rest stand undocumented for it.
+  await expect(page.locator('[data-count]')).toHaveText('405');
+  await expect(page.locator('[data-set-aside]')).toContainText('303 saints are not in the Russian calendar');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian calendar');
@@ -2562,6 +2563,8 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
   await expect(page.locator('.saint-media img')).toBeVisible();
   const credit = page.locator('.image-credit a');
-  await expect(credit).toHaveAttribute('href', /commons\.wikimedia\.org\/wiki\/File:/);
+  // The harvest pipeline stores the colon percent-encoded (File%3A); both
+  // forms resolve to the same Commons file page.
+  await expect(credit).toHaveAttribute('href', /commons\.wikimedia\.org\/wiki\/File(:|%3A)/);
   await expect(credit).toHaveText('Public domain');
 });

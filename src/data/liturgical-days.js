@@ -673,19 +673,14 @@ export const LITURGICAL_DAYS = {
       source: { text: 'doxologia.ro, 8 septembrie', url: 'https://doxologia.ro/8-septembrie' },
       hymns: [
         {
-          church: 'romanian', kind: 'kontakion', lang: 'ro', tone: 'Glasul 4',
-          text: 'Sfinţii Ioachim şi Ana din defăimarea nenaşterii de fii, iar Adam şi Eva din stricăciunea morţii au scăpat, Preacurată, prin Sfântă naşterea ta. Aceasta o prăznuieşte şi poporul tău, de vina greşelilor mântuindu-se, când striga către tine: cea stearpă naşte pe Născătoarea de Dumnezeu şi Hrănitoarea vieţii noastre.',
-          source: { text: 'Doxologia — Condac la Praznicul Naşterii Maicii Domnului', url: 'https://doxologia.ro/condac-la-praznicul-nasterii-maicii-domnului', year: 2026 },
-        },
-        {
-          church: 'romanian', kind: 'kontakion', lang: 'ro', tone: 'Glasul 4',
-          text: 'Ioachim și Ana din defăimarea nenașterii de fii, iar Adam și Eva din stricăciunea morții au scăpat, Preacurată, prin nașterea ta. Aceasta o prăznuiește și poporul tău, de vina greșelilor mântuindu-se, când strigă către tine: Cea stearpă naște pe Născătoarea de Dumnezeu și hrănitoarea vieții noastre.',
-          source: { text: 'Doxologia — Condacul Nașterii Maicii Domnului', url: 'https://doxologia.ro/condacul-nasterii-maicii-domnului', year: 2026 },
-        },
-        {
           church: 'romanian', kind: 'troparion', lang: 'ro', tone: 'Glasul 4',
           text: 'Naşterea ta, de Dumnezeu Născătoare Fecioară, bucurie a vestit la toată lumea; că din tine a Răsărit Soarele dreptăţii, Hristos Dumnezeul nostru. Şi dezlegând blestemul, a dat binecuvântare; şi stricând moartea, ne-a dăruit nouă viaţă veşnică.',
           source: { text: 'Doxologia — Tropar la Praznicul Naşterii Maicii Domnului', url: 'https://doxologia.ro/tropar-la-praznicul-nasterii-maicii-domnului', year: 2026 },
+        },
+        {
+          church: 'romanian', kind: 'kontakion', lang: 'ro', tone: 'Glasul 4',
+          text: 'Sfinţii Ioachim şi Ana din defăimarea nenaşterii de fii, iar Adam şi Eva din stricăciunea morţii au scăpat, Preacurată, prin Sfântă naşterea ta. Aceasta o prăznuieşte şi poporul tău, de vina greşelilor mântuindu-se, când striga către tine: cea stearpă naşte pe Născătoarea de Dumnezeu şi Hrănitoarea vieţii noastre.',
+          source: { text: 'Doxologia — Condac la Praznicul Naşterii Maicii Domnului', url: 'https://doxologia.ro/condac-la-praznicul-nasterii-maicii-domnului', year: 2026 },
         },
       ],
     },

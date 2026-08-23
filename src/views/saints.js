@@ -17,7 +17,7 @@
  * carries the Save bookmark on every card.
  */
 
-import { CHURCHES_BY_ID, enabledChurches, enabledCommunions } from '../data/churches.js';
+import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
