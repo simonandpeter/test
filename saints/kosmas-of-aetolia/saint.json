@@ -9,6 +9,10 @@
     {
       "form": "Άγιος Κοσμάς ο Αιτωλός",
       "lang": "el"
+    },
+    {
+      "form": "Косма Этолийский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -28,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Равноап. Космы Этолийского (1779)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -106,6 +119,12 @@
         "url": "https://doxologia.ro/troparul-sfantului-sfintit-cosma-etolul",
         "year": 2026
       }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

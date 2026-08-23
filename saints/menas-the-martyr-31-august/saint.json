@@ -1,0 +1,61 @@
+{
+  "slug": "menas-the-martyr-31-august",
+  "display_name": "Menas (31 August)",
+  "names": [
+    {
+      "form": "Άγιοι Ανδρέας ο Στρατηλάτης, Ηράκλειος, Φαύστος, Μηνάς και η συνοδεία τους",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Mina",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 31 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 31 august — „Sfântul Mucenic Mina”",
+        "url": "https://doxologia.ro/31-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 31 Αυγούστου — «Άγιοι Ανδρέας ο Στρατηλάτης, Ηράκλειος, Φαύστος, Μηνάς και η συνοδεία τους»",
+        "url": "https://www.saint.gr/08/31/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 13.09.2026 (31. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

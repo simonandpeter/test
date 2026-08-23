@@ -1,0 +1,72 @@
+{
+  "slug": "barses-of-edessa",
+  "display_name": "Barses, Bishop of Edessa, Confessor",
+  "names": [
+    {
+      "form": "Варсис",
+      "lang": "ru"
+    },
+    {
+      "form": "Св. исповедници Едески",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "confessor",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 378,
+      "latest": 378,
+      "display": "378",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: died in exile at Phaeno in 378."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Свтт. Варсиса и Евлогия, епископов Едесских, и Протогена, еп. Каррийского, исп (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 25 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.09.2026 (25. август ст. ст.) — „Св. исповедници Едески.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-07&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

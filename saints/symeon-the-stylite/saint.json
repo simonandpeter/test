@@ -1,0 +1,211 @@
+{
+  "slug": "symeon-the-stylite",
+  "display_name": "Symeon the Stylite",
+  "names": [
+    {
+      "form": "Симеон Столпник",
+      "lang": "ru"
+    },
+    {
+      "form": "Όσιος Συμεών ο Στυλίτης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Simeon Stâlpnicul",
+      "lang": "ro"
+    },
+    {
+      "form": "Преподобни Симеон Столпник",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 389,
+      "latest": 389,
+      "display": "389",
+      "basis": "traditional",
+      "note": "saint.gr: born at Sisan in Cilicia in 389."
+    },
+    "death": {
+      "earliest": 459,
+      "latest": 459,
+      "display": "459",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Симеона Столпника (459)”; the Prologue: 1 September 459, aged 103."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Прп. Симеона Столпника (459) и матери его Марфы (ок. 428)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 septembrie — „Sfântul Cuvios Simeon Stâlpnicul”",
+        "url": "https://doxologia.ro/1-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Όσιος Συμεών ο Στυλίτης»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 14.09.2026 (1. септембар ст. ст.) — „Преподобни Симеон Столпник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Терпения столп был еси,/ ревновавый праотцем, преподобне,/ Иову во страстех, Иосифу во искушениих,/ и безплотных жительству, сый в телеси,/ Симеоне отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Тропарь преподобного Симеона Столпника»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышних ищай, нижним совокупляяйся,/ и колесницу огненную столп соделавый:/ тем собеседник ангелом был еси преподобне,/ с ними Христу Богу моляся/ непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Кондак преподобного Симеона Столпника»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς στήλην θεόγραφον τῶν ἱερῶν ἀρετῶν, τοῦ βίου σου ἔλειπες τὰς ἀναβάσεις ἡμῖν, Συμεὼν παμμακάριστε· σὺ γὰρ ἐπὶ τοῦ στύλου ὡς πυρσὸς διαλάμπων, ἕλκεις ἡμᾶς χαμόθεν πρὸς ζωὴν οὐρανίαν, τὸν τρόπον τῆς εὐδρομίας φαίνων τοῖς ἔργοις σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Συμεών ο Στυλίτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/895/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ὑπομονῆς στύλος γέγονας, ζηλώσας τοὺς προπάτορας Ὅσιε, τὸν Ἰὼβ ἐν τοῖς πάθεσι, τὸν Ἰωσὴφ ἐν τοῖς πειρασμοῖς, καὶ τὴν τῶν Ἀσωμάτων πολιτείαν, ὑπάρχων ἐν σώματι, Συμεὼν Πατὴρ ἡμῶν Ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Συμεών ο Στυλίτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/895/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τὰ ἄνω ζητῶν, τοῖς κάτω συναπτόμενος, καὶ ἅρμα πυρός, τὸν στύλον ἐργασάμενος, δι᾽ αὐτοῦ συνόμιλος, τῶν Ἀγγέλων γέγονας Ὅσιε, σὺν αὐτοῖς Χριστῷ τῷ Θεῷ, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Συμεών ο Στυλίτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/895/saint.aspx",
+        "year": 2026
+      },
+      "model": "Αὐτόμελον."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Cele de sus căutând şi cu cei de jos împreunându-te şi căruţă de foc stâlpul tău făcându-ţi, printr-însul împreună vorbitor cu îngerii ai ajuns, cuvioase. Cu aceia împreună roagă-te neîncetat lui Hristos Dumnezeu pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Simeon Stâlpnicul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-simeon-stalpnicul",
+        "year": 2026
+      },
+      "model": "Cele de sus căutând..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Al răbdării stâlp ai fost, râvnind părinţilor celor mai dinainte, cuvioase; lui Iov întru patimi, lui Iosif întru ispite şi vieţii celor fără de trup, tu fiind în trup, Sfinte Simeon, părintele nostru; roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Simeon Stâlpnicul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-simeon-stalpnicul",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 1",
+      "text": "Терпјенија столп бил јеси, ревновавиј праоцем преподобне Јову во страстех, Јосифу во искушенијих, и бесплотних житељству сиј в тјелеси, Симеоне оче наш, моли Христа Бога спастисја душам нашим.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Преподобни Симеон Столпник",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0914",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

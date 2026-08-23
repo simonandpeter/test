@@ -1,0 +1,55 @@
+{
+  "slug": "theodore-prince-of-yaroslavl",
+  "display_name": "Theodore, Prince of Yaroslavl",
+  "names": [
+    {
+      "form": "Άγιοι Θεόδωρος ο πρίγκιπας και Δαβίδ και Κωνσταντίνος οι υιοί του",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 19 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 19 Σεπτεμβρίου — «Άγιοι Θεόδωρος ο πρίγκιπας και Δαβίδ και Κωνσταντίνος οι υιοί του»",
+        "url": "https://www.saint.gr/09/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

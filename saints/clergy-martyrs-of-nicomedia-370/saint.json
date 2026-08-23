@@ -1,0 +1,80 @@
+{
+  "slug": "clergy-martyrs-of-nicomedia-370",
+  "display_name": "The Clergy Martyred at Sea off Nicomedia (370)",
+  "names": [
+    {
+      "form": "Άγιοι Μέδιμνος, Ουρβανός, Θεόδωρος και Ογδόντα Ιερείς και Διάκονοι",
+      "lang": "el",
+      "note": "The Russian calendar counts seventy-seven men of the clergy with Urban, Theodore and Medimnus; the Greek synaxarion eighty priests and deacons; the Prologue seventy martyrs in all."
+    },
+    {
+      "form": "Св. 70 мученика",
+      "lang": "sr"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 370,
+      "latest": 370,
+      "display": "370",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Урвана, Феодора и Медимна и с ними 77-ми мужей от церковного чина, в Никомидии пострадавших (370)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мчч. Урвана, Феодора и Медимна и с ними 77-ми мужей от церковного чина, в Никомидии пострадавших (370)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Σεπτεμβρίου — «Άγιοι Μέδιμνος, Ουρβανός, Θεόδωρος και Ογδόντα Ιερείς και Διάκονοι»",
+        "url": "https://www.saint.gr/09/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.09.2026 (5. септембар ст. ст.) — „Св. 70 мученика.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-18&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

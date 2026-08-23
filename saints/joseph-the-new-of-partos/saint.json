@@ -1,0 +1,99 @@
+{
+  "slug": "joseph-the-new-of-partos",
+  "display_name": "Joseph the New of Partoș, Metropolitan of Timișoara",
+  "names": [
+    {
+      "form": "Άγιος Ιωσήφ ο Νέος, Μητροπολίτης Τιμισοάρας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Iosif cel Nou de la Partoș, Mitropolitul Banatului",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1568,
+      "latest": 1568,
+      "display": "1568",
+      "basis": "attested",
+      "note": "saint.gr: born 1568 at Ragusa (Dubrovnik)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 septembrie — „Sfântul Ierarh Iosif cel Nou de la Partoș, Mitropolitul Banatului”",
+        "url": "https://doxologia.ro/15-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — «Άγιος Ιωσήφ ο Νέος, Μητροπολίτης Τιμισοάρας»",
+        "url": "https://www.saint.gr/09/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Apărător nebiruit, ca unul care prin tine din nevoi s-a mântuit, te are pământul Banatului, Sfinte Iosif. Ci, ca cel ce ai îndrăzneală către Dumnezeu apără-l pe el de toată nevoia, ca să cântăm ţie: bucură-te, Sfinte Ierarhe Iosif, făcătorule de minuni.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Iosif cel Nou de la Partoş, Mitropolitul Banatului",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-iosif-cel-nou-de-la-partos-mitropolitul-banatului",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Din tinereţe cu totul te-ai supus Domnului, cu rugăciunile şi cu ostenelile şi cu postul. Pentru aceasta, văzând Dumnezeu nevoinţele tale, arhiereu şi păstor Bisericii Sale te-a rânduit; şi după moarte, în cetele sfinţilor te-a sălăşluit, Sfinte Părinte Iosif. Roagă-te lui Hristos Dumnezeu să ne dăruiască iertare de greşeli nouă, celor ce cu credinţă şi cu dragoste săvârşim sfântă pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Iosif cel Nou de la Partoş, Mitropolitul Banatului",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-iosif-cel-nou-de-la-partos-mitropolitul-banatului",
+        "year": 2026
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "babylas-of-nicomedia",
+  "display_name": "Babylas of Nicomedia, teacher, with 84 children",
+  "names": [
+    {
+      "form": "Вавила Никомидийский",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Βάβυλας διδάσκαλος στη Νικομήδεια",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Вавилы Никомидийского и с ним 84-х отроков (IV)”; saint.gr: under Maximian (286–305)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Мч. Вавилы Никомидийского и с ним 84-х отроков (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Άγιος Βάβυλας διδάσκαλος στη Νικομήδεια και οι ογδόντα τέσσερις Μαθητές του»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

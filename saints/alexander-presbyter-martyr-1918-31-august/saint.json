@@ -1,0 +1,69 @@
+{
+  "slug": "alexander-presbyter-martyr-1918-31-august",
+  "display_name": "Alexander (Lyubimov), Presbyter, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Александр",
+      "lang": "ru"
+    },
+    {
+      "form": "Александр Любимов",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 августа ст. ст. — «Сщмчч. Александра пресвитера и Владимира диакона (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260831.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 13.09.2026 (31. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

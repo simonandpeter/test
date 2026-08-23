@@ -1,0 +1,193 @@
+{
+  "slug": "babylas-of-antioch",
+  "display_name": "Babylas, Bishop of Antioch",
+  "names": [
+    {
+      "form": "Вавила Антиохийский",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Βαβύλας ο Ιερομάρτυρας επίσκοπος Αντιοχείας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Sfințit Mucenic Vavila, Episcopul Antiohiei",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети свештеномученик Вавила",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “… (251)”; the Greek synaxarion line: †251; the Prologue: about 250."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Сщмч. Вавилы, еп. Великой Антиохии, и с ним трех отроков: Урвана, Прилидиана, Епполония и матери их Христодулы (251)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 septembrie — „Sfântul Sfințit Mucenic Vavila, Episcopul Antiohiei”",
+        "url": "https://doxologia.ro/4-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Άγιος Βαβύλας ο Ιερομάρτυρας επίσκοπος Αντιοχείας και τα Τρία Παιδιά που μαρτύρησαν μαζί του»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 17.09.2026 (4. септембар ст. ст.) — „Свети свештеномученик Вавила“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодухновенне,/ в видения восход:/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Вавило,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Тропарь священномученика Вавилы»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко благочестия проповедника и страдальцев утверждение,/ Церковь славит тя, Вавило славне, освещаема днесь;/ но, яко имея дерзновение ко Господу,/ в мире совершеннем величающия и восхваляющия тя сохранити// Христу молися, о многострадальне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Кондак священномученика Вавилы»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἱεραρχίας τῷ φωτὶ ἀπαστράπτων, δικαιοσύνης φυτοκόμος ἐδείχθης, ἀποτεμῶν τὴν ἄκανθαν τῆς πλάνης ἀληθῶς, ὅθεν τῶν αἱμάτων σου, φοινιχθεῖς ταὶς ρανίσι, τῷ Χριστῷ παρέστηκας, ἀνακράζων Βαβύλα, ἰδοὺ ἐγὼ καὶ τὰ παιδὶα Ἰησοῦ ὅθεν προσδέχου, ἠμᾶς ὡς ηὐδόκησας.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Βαβύλας ο Ιερομάρτυρας επίσκοπος Αντιοχείας και τα Τρία Παιδιά π...., Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2338/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὡς εὐσεβείας κήρυκα, καὶ ἀθλητῶν ἑδραίωμα, ἡ Ἐκκλησία δοξάζει σε ἔνδοξε, λαμπρυνομένη σήμερον, ἀλλ᾽ ὡς ἔχων παῤῥησίαν, ἐν εἰρήνῃ τελεία, τοὺς ἀνυμνούντάς σε, τὸν Χριστὸν φυλαχθῆναι δυσώπησον, ὦ Πολύαθλε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Βαβύλας ο Ιερομάρτυρας επίσκοπος Αντιοχείας και τα Τρία Παιδιά π...., Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2338/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Măririle credinţei în inima ta punându-le, l-ai păzit, Sfinţite Mucenice Vavila, netemându-te de chinuitori, sluga lui Hristos. Pentru aceasta, păzeşte-ne pe noi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Vavila, Episcopul Antiohiei",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-vavila-episcopul-antiohiei",
+        "year": 2026
+      },
+      "model": "Arătatu-Te-ai astăzi..."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Ca pe un propovăduitor al dreptei credinţe şi întărire nevoitorilor, Biserica te măreşte pe tine, prealăudate, luminându-se astăzi. Ci, ca unul care ai îndrăznire către Domnul, roagă-te, Sfinte Vavila, ca în pace desăvârşită să păzească pe cei ce te măresc şi te laudă pe tine, o, mult pătimitorule.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Vavila, Episcopul Antiohiei",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-vavila-episcopul-antiohiei-0",
+        "year": 2026
+      },
+      "model": "Ca o pârgă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Vavila, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Vavila, Episcopul Antiohiei",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-vavila-episcopul-antiohiei",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

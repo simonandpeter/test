@@ -1,0 +1,68 @@
+{
+  "slug": "elizabeth-nun-martyr-1937",
+  "display_name": "Elizabeth (Yarygina), Nun, Monastic Martyr (1937)",
+  "names": [
+    {
+      "form": "Елисавета",
+      "lang": "ru"
+    },
+    {
+      "form": "Елисавета Ярыгина",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Сщмч. Павла пресвитера и прмц. Елисаветы и мч. Феодора (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

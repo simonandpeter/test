@@ -1,0 +1,62 @@
+{
+  "slug": "peter-presbyter-martyr-1918-26-august",
+  "display_name": "Peter (Iovlev), Presbyter, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Петр",
+      "lang": "ru"
+    },
+    {
+      "form": "Петр Иовлев",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Сщмч. Петра пресвитера (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 08.09.2026 (26. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

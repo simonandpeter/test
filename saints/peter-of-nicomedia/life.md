@@ -1,0 +1,5 @@
+# Peter of Nicomedia
+
+Peter was one of the martyrs of Nicomedia whom the Russian calendar keeps on 3 September (Julian) with their bishop [Anthimus](/saints/anthimus-of-nicomedia): the deacon Theophilus, Dorotheus, Mardonius, Migdonius, Peter, Indes, Gorgonius, Zeno, the virgin Domna and Euthymius, who suffered in the persecution of Diocletian and Maximian, after the fire in the imperial palace at Nicomedia for which the pagans blamed the Christians and took an unheard-of vengeance — in Nicomedia alone up to twenty thousand worshippers were burned in a church on the day of the Nativity. The Sretensky calendar’s life of the twenty thousand names them among the company; it was read only as far as the palace fire.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life3189.htm); The Sretensky calendar’s life is at days.pravoslavie.ru — [the entry](https://days.pravoslavie.ru/Life/life1439.htm); read 23 August 2026.*

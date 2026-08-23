@@ -407,7 +407,7 @@ const facet = async (page, name) => {
 test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('[data-count]')).toHaveText('149');
+  await expect(page.locator('[data-count]')).toHaveText('708');
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Breadth of veneration is offered but is never the order the reader arrives
   // in: a corpus sorted by it would read as a ranking of importance.
@@ -436,14 +436,14 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
 
-  await expect(page.locator('[data-count]')).toHaveText('32');
+  await expect(page.locator('[data-count]')).toHaveText('122');
   // The count is the corpus's answer; the DOM holds only the cards near the
-  // viewport, which at 360 px is far fewer than thirty-two.
+  // viewport, which at 360 px is far fewer than a hundred and twenty-two.
   await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('149');
+  await expect(page.locator('[data-count]')).toHaveText('708');
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -452,30 +452,34 @@ test('Overlaps and Entirely within are different questions, and both are offered
   await page.locator('[data-from]').fill('240');
   await page.locator('[data-to]').fill('460');
 
-  // Twenty-four lives touch 240–460 and nineteen sit inside it: the Roman
-  // martyrs of 258 and the Nicomedian of 305 are inside; Paul of Thebes (born
-  // 220), the third-century bishops dated only to their century and Moses the
-  // Hungarian with his open birth bound overlap it without being contained.
-  await expect(page.locator('[data-count]')).toHaveText('24');
+  // A hundred and fifty-eight lives touch 240–460 and a hundred and forty-six
+  // sit inside it (the counts of the 708-saint corpus of Amendment 31,
+  // recomputed with .tmp/counts2.mjs): the Roman martyrs of 258, the
+  // Nicomedians of 305 and the martyrs of the Great Persecution are inside;
+  // Paul of Thebes (born 220), the third- and fourth-century bishops dated
+  // only to their century and Moses the Hungarian with his open birth bound
+  // overlap it without being contained.
+  await expect(page.locator('[data-count]')).toHaveText('158');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('19');
+  await expect(page.locator('[data-count]')).toHaveText('146');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
-  await page.locator('[data-from]').fill('1600');
-  await page.locator('[data-to]').fill('1700');
+  await page.locator('[data-from]').fill('1320');
+  await page.locator('[data-to]').fill('1330');
 
-  // Nobody in the corpus lived in the 17th century (the 16th has Lawrence of
-  // Kaluga and Maximus of Moscow now).
+  // Nobody in the corpus has a dated life touching 1320–1330 (the 17th century
+  // that served here until Amendment 31 now has Athanasius of Brest, Cyriacus
+  // of Tazlău and the rest).
   await expect(page.locator('[data-count]')).toHaveText('0');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
-  // The week's saints carry no dates — their calendar pages printed none — so
+  // The calendars' saints often carry no dates — their pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  await expect(page.locator('.tray')).toContainText('85 undated');
+  await expect(page.locator('.tray')).toContainText('239 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -484,8 +488,8 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
 
   await query.fill('hermit');
   // The count is the corpus's answer; the DOM holds only what is near the
-  // viewport, which at 360 px is one card of the two.
-  await expect(page.locator('[data-count]')).toHaveText('2');
+  // viewport, which at 360 px is a card or two of the eight.
+  await expect(page.locator('[data-count]')).toHaveText('8');
 
   await query.fill('Alexandria');
   await expect(page.locator('.index-card').first()).toBeVisible();
@@ -518,7 +522,7 @@ test('under reduced motion the filtered-out are gone, not gone slower', async ({
 test('Random saint stays inside the reader own filters', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
-  await expect(page.locator('[data-count]')).toHaveText('32');
+  await expect(page.locator('[data-count]')).toHaveText('122');
 
   await page.locator('[data-random]').click();
   await expect(page.locator('h1.saint-name')).toBeVisible();
@@ -2083,7 +2087,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   const page = await ctx.newPage();
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
-  await expect(page.locator('[data-count]')).toHaveText('32');
+  await expect(page.locator('[data-count]')).toHaveText('122');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
 
@@ -2102,7 +2106,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('h1.saint-name')).toHaveText(opened);
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
-  await expect(page.locator('[data-count]')).toHaveText('32');
+  await expect(page.locator('[data-count]')).toHaveText('122');
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
@@ -2111,12 +2115,12 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
-  await expect(page.locator('[data-count]')).toHaveText('32');
+  await expect(page.locator('[data-count]')).toHaveText('122');
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
   // The nav link is a fresh Index.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('149');
+  await expect(page.locator('[data-count]')).toHaveText('708');
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -2222,20 +2226,22 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
   await expect(page.locator('#church-panel [data-advanced]')).toHaveCount(0);
 
-  // Romanian keeps thirty-two — six of the original eight and twenty-six of
-  // the week's — and the rest are counted and named.
+  // Romanian keeps a hundred and twenty-two — six of the original eight and
+  // the calendars' saints of 23 August to 19 September — and the rest are
+  // counted and named.
   await page.locator('#church-panel [data-church="romanian"]').click();
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian calendar');
-  await expect(page.locator('[data-count]')).toHaveText('32');
-  await expect(page.locator('[data-set-aside]')).toContainText('117 saints are not in the Romanian calendar');
+  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-set-aside]')).toContainText('586 saints are not in the Romanian calendar');
 
-  // Greek keeps sixty-five: the Synaxaristis lists most of the week.
+  // Greek keeps three hundred and forty-four: the Synaxaristis lists most of
+  // the four weeks, one entry per name.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('65');
-  await expect(page.locator('[data-set-aside]')).toContainText('84 saints are not in the Greek calendar');
+  await expect(page.locator('[data-count]')).toHaveText('344');
+  await expect(page.locator('[data-set-aside]')).toContainText('364 saints are not in the Greek calendar');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
@@ -2348,7 +2354,8 @@ test('the readings of the day link to Bible Gateway and name the page they were 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('2 Corinthians 11:5-21');
-  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  // (1 September became a recorded day with Amendment 31; the 20th is not.)
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]')).toHaveCount(0);
 });
 
@@ -2378,7 +2385,7 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Glas');
   // Nothing Greek on the Romanian page, and nothing at all where nothing is recorded.
   await expect(page.locator('[data-hymns] .hymn-text[lang="el"]')).toHaveCount(0);
-  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns]:not([hidden])')).toHaveCount(0);
 });
 
@@ -2507,4 +2514,54 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await expect(card).toHaveCount(1);
   await expect(card.locator('.index-desc')).toContainText('The blessed Lawrence, fool for Christ and wonderworker of Kaluga');
   await page.locator('[data-detailed]').uncheck();
+});
+
+test('the three weeks after the first are in the calendars: readings, feast hymns, the saints they sing for, and icons with their Commons source', async ({ page }) => {
+  // Amendment 31 (author, 2026-08-23): 30 August to 19 September for all four
+  // churches. The Romanian 8 September is the Nativity of the Theotokos — the
+  // feast's pericopes from doxologia.ro and its troparion, recorded with the
+  // day; the Greek 14 September the Exaltation, whose apolytikion saint.gr
+  // prints though its readings for that day were not yet published when read
+  // (so no readings block, and nothing invented); the Russian 11 September
+  // the Beheading, a strict fast, the Forerunner the hero because the
+  // Patriarchate's calendar sings for him; the Serbian 18 September Zacharias
+  // with his tropar from the Православни подсетник. A new saint opens on a
+  // life from the calendars and an icon from Wikimedia Commons, its licence
+  // and file page on the credit line.
+  await ready(page, { church: 'romanian' });
+  await page.goto('/calendar/2026-09-08', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Philippians 2:5-11');
+  await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /doxologia\.ro\/8-septembrie/);
+  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn-text[lang="ro"]').first()).toContainText('Naşterea ta, de Dumnezeu Născătoare Fecioară');
+
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
+  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn-text[lang="el"]').first()).toContainText('Σῶσον Κύριε τὸν λαόν σου');
+
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-own-date]')).toHaveText('29 August (Julian)');
+  await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Acts 13:25-32');
+  await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /days\.pravoslavie\.ru\/Days\/20260829\.html/);
+  await expect(page.locator('.hero-name')).toHaveText('John the Baptist and Forerunner');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго с похвалами');
+
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="serbian"]').click();
+  await page.goto('/calendar/2026-09-18', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Zacharias the Prophet');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]').first()).toContainText('Обучен у свештеничке одежде');
+  await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Ephesians 1:7-17');
+
+  await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toHaveText('Babylas, Bishop of Antioch');
+  await expect(page.locator('.life p').first()).toContainText('this great and wonderful man');
+  await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
+  await expect(page.locator('.saint-media img')).toBeVisible();
+  const credit = page.locator('.image-credit a');
+  await expect(credit).toHaveAttribute('href', /commons\.wikimedia\.org\/wiki\/File:/);
+  await expect(credit).toHaveText('Public domain');
 });

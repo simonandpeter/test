@@ -9,6 +9,10 @@
     {
       "form": "Προφήτιδα Άννα θυγατέρα του Φανουήλ",
       "lang": "el"
+    },
+    {
+      "form": "Анна пророчица",
+      "lang": "ru"
     }
   ],
   "sex": "female",
@@ -18,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Прав. Анны пророчицы, дщери Фануилевой, встретившей Господа Иисуса Христа в храме Иерусалимском (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,5 +70,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

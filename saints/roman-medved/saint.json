@@ -1,0 +1,65 @@
+{
+  "slug": "roman-medved",
+  "display_name": "Roman Medved, Archpriest, Confessor (1937)",
+  "names": [
+    {
+      "form": "Роман Медведь",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 1 October 1874 in Kholm province."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Виктора пресвитера, мчч. Димитрия, Петра и св. Романа исп., пресвитера (1937)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Сщмч. Виктора пресвитера, мчч. Димитрия, Петра и св. Романа исп., пресвитера (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 08.09.2026 (26. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

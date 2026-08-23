@@ -1,0 +1,5 @@
+# Theodore (Kallistov), Archpriest, Hieromartyr (1937)
+
+Theodore Kallistov was born on 17 April 1865 in Penza province in the village of Ust-Kera (Arshinovka), the son of the deacon Stephen Kallistov. In 1880 he finished the church school and in 1886 the Penza seminary, and was made psalmist at Ust-Kera in the Nizhny Lomov district; in 1887, after marrying, he was ordained deacon and then priest, and from 1887 to 1916 served in various villages of Penza province, teaching the Law of God in the parish and zemstvo schools and colleges, and fourteen children were born to the Kallistovs; in 1916 he was moved — the calendar’s life runs on past the point read here. He was repressed three times: in 1930 exiled three years to Siberia, and in 1935 and 1937 arrested for resisting the closing of the church; in 1937 he was sentenced to be shot for anti-Soviet agitation and died a martyr on 3 September 1937. The Russian calendar keeps him on 21 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-feodor-kallistov); read 23 August 2026.*

@@ -1,0 +1,70 @@
+{
+  "slug": "juventinus-the-soldier",
+  "display_name": "Juventinus the Soldier",
+  "names": [
+    {
+      "form": "Иувентин",
+      "lang": "ru"
+    },
+    {
+      "form": "Св. муч. Јувентин и Максимин",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361–363",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Иувентина и Максима воинов (361-363)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мчч. Иувентина и Максима воинов (361-363)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.09.2026 (5. септембар ст. ст.) — „Св. муч. Јувентин и Максимин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-18&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

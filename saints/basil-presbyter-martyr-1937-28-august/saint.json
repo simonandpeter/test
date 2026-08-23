@@ -1,0 +1,69 @@
+{
+  "slug": "basil-presbyter-martyr-1937-28-august",
+  "display_name": "Basil (Sokolsky), Presbyter, Hieromartyr (1937)",
+  "names": [
+    {
+      "form": "Василий",
+      "lang": "ru"
+    },
+    {
+      "form": "Василий Сокольский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Сщмч. Василия пресвитера (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 10.09.2026 (28. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

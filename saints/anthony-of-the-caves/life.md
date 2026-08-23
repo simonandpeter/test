@@ -1,0 +1,5 @@
+# Anthony of the Kyiv Caves
+
+Anthony of the Kyiv Caves was born in 983 at Lyubech near Chernihiv. Having the fear of God from his youth he wished to put on the monastic habit, and when he came of age he went wandering, and reaching Athos burned with the desire to imitate the labours of its holy dwellers; tonsured there, the young monk pleased God in everything, and growing on the way of virtue excelled above all in submission and obedience, so that all the monks rejoiced to see his holy life. Foreseeing in him a great ascetic to come, the igumen, at God’s prompting, sent him home: Anthony, it is time for you to guide others too in the holy life — return to your own country. The Sretensky calendar’s life runs on past the point read here, to the caves above the Dnieper and the monastery that grew from them; the Russian calendar keeps him on 2 September (Julian) with [Theodosius](/saints/theodosius-of-the-kyiv-caves), the two founders of monasticism in the Russian land, and he died in 1073.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4208.htm); read 23 August 2026.*

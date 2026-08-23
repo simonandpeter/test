@@ -1,0 +1,71 @@
+{
+  "slug": "anastasius-the-wonderworker-in-cyprus",
+  "display_name": "Anastasius the Wonderworker in Cyprus",
+  "names": [
+    {
+      "form": "Όσιος Αναστάσιος ο θαυματουργός «ὁ ἐν Κύπρῳ»",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "saint.gr: under Alexius and John Comnenus."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 17 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — «Όσιος Αναστάσιος ο θαυματουργός «ὁ ἐν Κύπρῳ»»",
+        "url": "https://www.saint.gr/09/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς ἐρήμου πολίτης καὶ ἐν σώματι ἄγγελος καὶ θαυματουργὸς ἀνεδείχθης, Θεοφόρε πατὴρ ἠμῶν Ἀναστάσιε. νηστεία, ἀγρυπνία, προσευχή, οὐράνια χαρίσματα λαβῶν, θεραπεύεις τοὺς νοσοῦντας, καὶ τᾶς ψυχᾶς τῶν πίστει προστρεχόντων σοί. Δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Αναστάσιος ο θαυματουργός «ὁ ἐν Κύπρῳ», Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2464/saint.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

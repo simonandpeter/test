@@ -1,0 +1,5 @@
+# Nicholas the Confessor, Presbyter (1933)
+
+Nicholas Lebedev was born in 1869 in the village of Berezhai in the Bezhetsk district of Tver province, the son of a sacristan, Vasily Lebedev; the family was poor, and he went through the whole course of the Tver seminary at the state’s expense. He finished with distinction in 1893, and the authorities, taking him for one of their best, offered him the Academy at the state’s expense too; he declined, and went as psalmist to the church of the village where he was born and where his father had once served. After half a year there he was ordained, in 1894, to the church of the Kazan icon of the Mother of God in the village of Vlasyevo, a few versts from Tver. The Sretensky calendar’s life, read only as far as that, goes on to the confession that earned him his title; the calendar keeps him on 19 August (Julian) as a confessor who died in 1933.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4864.htm); read 23 August 2026.*

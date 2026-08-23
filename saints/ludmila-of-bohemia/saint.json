@@ -1,0 +1,84 @@
+{
+  "slug": "ludmila-of-bohemia",
+  "display_name": "Ludmila of Bohemia",
+  "names": [
+    {
+      "form": "Αγία Λουντμίλα",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Muceniță Ludmila",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "princess"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 856,
+      "latest": 856,
+      "display": "c. 856",
+      "basis": "traditional",
+      "note": "saint.gr: born probably in 856."
+    },
+    "death": {
+      "earliest": 917,
+      "latest": 921,
+      "display": "917 (921)",
+      "basis": "traditional",
+      "note": "saint.gr: strangled in 917, aged sixty-two."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 16 septembrie — „Sfânta Muceniță Ludmila”",
+        "url": "https://doxologia.ro/16-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου — «Αγία Λουντμίλα»",
+        "url": "https://www.saint.gr/09/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

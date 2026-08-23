@@ -1,0 +1,95 @@
+{
+  "slug": "cornelius-the-centurion",
+  "display_name": "Cornelius the Centurion",
+  "names": [
+    {
+      "form": "Άγιος Κορνήλιος ο Εκατόνταρχος",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Sfințit Mucenic Corneliu Sutașul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 septembrie — „Sfântul Sfințit Mucenic Corneliu Sutașul”",
+        "url": "https://doxologia.ro/13-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιος Κορνήλιος ο Εκατόνταρχος»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Δικαιοσύνης διαπρέπων τοῖς ἔργοις, τὸν φωτισμὸν τῆς εὐσεβείας ἐδέξω καὶ ἀποστόλων σύμπονος ἐδείχθης ἀληθῶς· τούτοις κοινωνήσας γάρ, δι' ἐνθέων καμάτων τοῦ Χριστοῦ τὴν σάρκωσιν ἀνέκραξας πᾶσι· μεθ' ὧν δυσώπει σῴζεσθαι ἡμᾶς τοὺς σὲ τιμῶντας, παμμάκαρ Κορνήλιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κορνήλιος ο Εκατόνταρχος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2420/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Corneliu, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Corneliu Sutaşul",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-corneliu-sutasul",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

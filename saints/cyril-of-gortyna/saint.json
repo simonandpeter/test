@@ -1,0 +1,90 @@
+{
+  "slug": "cyril-of-gortyna",
+  "display_name": "Cyril, Bishop of Gortyna",
+  "names": [
+    {
+      "form": "Кирилл Гортинский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 310,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Кирилла, еп. Гортинского (III-IV)”; its life: beheaded at the beginning of the fourth century, aged ninety-five."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Сщмч. Кирилла, еп. Гортинского (III-IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 6 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Гласом божественным от темницы изведен,/ в Риме братию в божественней вере утвердил еси,/ и, от Ангела глаголы приим о святительстей пастве,/ во страдании своем паки гласу с Небесе сподобися,/ богоповеленный святителю и страдальче Кирилле,/ моли за души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Тропарь священномученика Кирилла, епископа Гортинского»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Видев себе ради темничныя двери отверсты в полунощи/ и идолы сокрушены,/ и Гортинскую паству святительскую,/ от Бога повеленную, добре упас,/ и по Христе надеждно пострадав,/ священномучениче Кирилле,/ молися за чтущия тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Кондак священномученика Кирилла, епископа Гортинского»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

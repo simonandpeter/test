@@ -1,0 +1,125 @@
+{
+  "slug": "kassiani-the-hymnographer",
+  "display_name": "Kassiani the Hymnographer",
+  "names": [
+    {
+      "form": "Οσία Κασσιανή η Υμνογράφος",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Cuvioasă Casiana Imnografa",
+      "lang": "ro"
+    },
+    {
+      "form": "Κασσία",
+      "lang": "el"
+    },
+    {
+      "form": "Εικασία",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "hymnographer"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 805,
+      "latest": 810,
+      "display": "c. 805–810",
+      "basis": "traditional",
+      "note": "saint.gr: born between 805 and 810 at Constantinople."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 7 septembrie — „Sfânta Cuvioasă Casiana Imnografa”",
+        "url": "https://doxologia.ro/7-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — «Οσία Κασσιανή η Υμνογράφος»",
+        "url": "https://www.saint.gr/09/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Prin glăsuirea cântărilor tale celor plăcute Domnului, îndreptezi duhovnicește simțirea noastră, Cuvioasă Casiana, imnografă de Dumnezeu învățată; pentru care îndreptează spre cele bune pașii noștri pe calea mântuirii și învață-ne să aducem Domnului, cu smerenie, cântarea de mulțumire a dumnezeieștii dragoste.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Cuvioase Casiana Imnografa",
+        "url": "https://doxologia.ro/condacul-sfintei-cuvioase-casiana-imnografa",
+        "year": 2026
+      },
+      "model": "Ceea ce ești ocrotitoare..."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Pe cea împodobită cu toată bunătatea şi virtutea, pe Cuvioasa Casiana, alcătuitoarea de cântări, cea slăvită de Dumnezeu, ceea ce a bineplăcut Împăratului Hristos prin nevoinţele cele din noapte şi din zi, ca pe o făclie a pocăinţei să o cinstim, cu dragoste strigând: Bucură-te, Maică preastrălucită!",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Cuvioase Casiana Imnografa",
+        "url": "https://doxologia.ro/condacul-sfintei-cuvioase-casiana-imnografa-0",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Pe ceea ce a trecut cu vederea înțelepțește dorul iubirii împăratului pământesc, pentru dragostea Împăratului a toate, pe vestita Casiana să o lăudăm, ca pe o pildă a virtuții și cinstită alcătuitoare de cântări, strigând: Fă-ne și pe noi părtași Împărăției lui Dumnezeu, prin rugăciunile tale.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Casiana Imnografa",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-casiana-imnografa",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

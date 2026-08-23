@@ -1,0 +1,69 @@
+{
+  "slug": "vsevolod-presbyter-martyr-1937",
+  "display_name": "Vsevolod (Potyominsky), Presbyter, Hieromartyr (1937)",
+  "names": [
+    {
+      "form": "Всеволод",
+      "lang": "ru"
+    },
+    {
+      "form": "Всеволод Потёминский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Сщмчч. Иоанна и Всеволода пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 6 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

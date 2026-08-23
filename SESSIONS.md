@@ -1241,6 +1241,90 @@ browser test fails in both projects), restored, green. 123 unit, 216 browser;
 `npm run build` 149 saints, the seven image warnings as before. Shots looked
 at: Stamatios, Lawrence, Eleutherius, Kosmas.
 
+**31. Three weeks for four churches: 30 August – 19 September 2026** (author's
+instruction, 2026-08-23: "Add all content including icons (source them
+yourself and cite them) for the next 3 weeks for all 4 churches. Troparia,
+synaxarion, readings, fasting rules etc.").
+
+**What was added.** The corpus grew from 149 to 708 folders: every name the
+four calendars print for the three weeks — the Russian and Serbian on their
+Julian days 17 August – 6 September, the Greek and Romanian on their Revised
+Julian days 30 August – 19 September — each with four attestation rows (the
+printed line quoted, or "not on the list"/"not checked" with the page), name
+forms, dates with their basis, and a `life.md`. Sources, read 23 August: the
+Sretensky calendar's day pages and lives (days.pravoslavie.ru), the Ορθόδοξος
+Συναξαριστής (saint.gr) — 285 entries, their Βιογραφία and Λειτουργικά κείμενα
+— the Viețile Sfinților and hymn pages as doxologia.ro prints them, the
+Православни подсетник (pravoslavno.rs) with the Ohrid Prologue for each day.
+The Russian new martyrs the Sretensky calendar prints no life for (105) were
+read off the Russian church calendar at azbyka.ru — which answers a plain
+fetch now, so no browser pane — through their Sretensky name pages (which give
+the surname) and renamed with it ("Paul (Gaidai), Presbyter, Hieromartyr
+(1937)"); two with no page anywhere carry a thin life saying so. Week-1
+folders kept by the Russian or Serbian calendar on these days (Lupus,
+Irenaeus, Pothinus, Callinicus, Eutyches, Peter of Moscow, Tation, George
+Limniotes, Kosmas, Bartholomew, Titus, Menas, Adrian and Natalia, Poemen,
+Hosius, Liberius, Moses the Ethiopian, Anna, Shushanik, the Forerunner, the
+three patriarchs, Cyprian of Carthage for the Romanian) got their rows and a
+paragraph appended to the life, the new source folded into the source line.
+Feasts (the Belt, the Indiction, the Nativity, the Exaltation, the Beheading,
+the Miracle at Chonae, the forefeasts and leave-takings, the icons of the
+Theotokos, the synaxes of Greek Panagias and of Moscow's and the Caves' saints)
+are not folders; their hymns travel with the day. Hymns: 430 troparia and
+kontakia on the saints (143 Russian in Church Slavonic, 152 Greek, 117
+Romanian, 18 Serbian), each with tone and source — the Greek apolytikia from
+each saint.gr page's Λειτουργικά κείμενα, re-read for the purpose because the
+harvest had only the Έτερον ones; the site-wide doxologia widget that printed
+the Lupus troparion on every page was stripped from 87 saints (and from the
+week-1 folders it had reached). Readings and fasting: `src/data/liturgical-days.js`
+now runs 23 August – 19 September for all four churches, the Russian days
+carrying every set of pericopes the calendar prints with the set's own label
+("Epistle (Ряд)", "Gospel (Богородицы)"), the feasts' hymns with the day; and
+the Greek 7–19 September carrying `readings: []` with a note, because saint.gr
+publishes a day's readings about two weeks ahead and had not reached those
+days — nothing invented, the fast mark and the feast hymns still there.
+Icons: 84 from Wikimedia Commons (82 public domain, two CC BY-SA with the
+credit recorded), each with `icon.meta.json` naming the Commons file page,
+the artist as Commons records it and the description, and a blurred placeholder
+— the principal saints of each day (Nevsky, Svirsky, Daniel, Florus and
+Laurus, John of Rila, Symeon the Stylite, Mamas, Samuel, Anthony and
+Theodosius, Anthimus, Babylas, Moses, Joasaph, Mitrophan, Zacharias and
+Elizabeth, Gleb, Archippus with the Archangel, Kosmas, Kassiani, Adrian and
+Natalia, Joachim and Anna, Poemen, the three sisters, Job, Anna, Shushanik, the
+Beheading, Cornelius, Ketevan, Nicetas, Euphemia, Ludmila, Sophia and her
+daughters, Trophimus and his, Theodore of Yaroslavl and his sons, and the
+rest). Pipeline under `.tmp/w3/` (not committed): harvesters per church,
+`writer.py` (folders, rows, lives, `add_para`, `rename`), one spec per
+day-number under `days/`, `az.py`/`az1–6.py` for azbyka, `grhymns.py`,
+`hymns.py`, `litdays.py`, `icons_search.py`/`icons_fetch.py`.
+
+**What was corrected on the way.** The Lup widget above; azbyka's group
+pages (the Gagino company of 17 September 1937, Adrian and Natalia's
+twenty-three) read once and cited for each; the Kandavla martyrs' Greek names
+(Centurion, Ammianus, Oceanus) attested as saint.gr's with a note that the
+pairing with the Russian Mianus and Kion is this project's; the Prologue's
+"Свети мученик Мирон презвитер" tropar under the 17 August day recorded, the
+Archangel's tropar printed under Nevsky's name on 12 September not; GR 882
+(Antony "in Agia") skipped as a festival; the 09-05 "Πέτρος ὁ ἐν τῷ Ἀθήρᾳ" as a
+church consecration.
+
+**What is not done, and why — for next time.** (1) The browser suite was not
+run this sitting: the counts in `e2e/quality-floor.spec.js` were recomputed
+for 708 (`.tmp/counts2.mjs`: 708 total, Romanian 122, Greek 344, Serbian 129,
+Russian 405; 240–460 overlaps 158 / within 146; the empty range moved to
+1320–1330; 239 undated; "hermit" 8) and a new test for these weeks appended,
+but `npm run test:e2e` must be run and watched, the new test backed out and
+seen to fail, before Amendment 31 is called green in the browser. Unit: 123
+green; build: 708 saints, the seven placeholder warnings as before. (2) Greek
+readings for 7–19 September: re-read saint.gr's day pages from about 24
+August (two weeks ahead) and fill the empty entries; no other Greek-church
+source of the whole year's lectionary was found that could be read. (3) Icons
+for the rest — the Menologion of Basil and the 1903–1911 Жития Святых
+engravings on Commons cover many more of these saints; `icons_search.py` is
+the way. (4) RU 0902's second pair of pericopes ("за понедельник и за вторник")
+carries no set label. (5) The new-martyr lives are first paragraphs plus the
+summary — the full azbyka lives are long and were read to the point noted.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

@@ -1,0 +1,57 @@
+{
+  "slug": "centurion-the-martyr",
+  "display_name": "Centurion of Kandavla",
+  "names": [
+    {
+      "form": "Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 288,
+      "display": "288",
+      "basis": "traditional",
+      "note": "saint.gr: seized under Maximian in 288."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 4 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

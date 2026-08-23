@@ -1,0 +1,65 @@
+{
+  "slug": "maria-korepova-confessor",
+  "display_name": "Maria (Korepova), Nun, Confessor",
+  "names": [
+    {
+      "form": "Мария Корепова",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "confessor",
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1950,
+      "display": "after 1942",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Марии Кореповой, исп. (после 1942)”."
+    },
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Прп. Марии Кореповой, исп. (после 1942)»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 01.09.2026 (19. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

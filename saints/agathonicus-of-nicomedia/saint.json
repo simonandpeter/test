@@ -1,0 +1,102 @@
+{
+  "slug": "agathonicus-of-nicomedia",
+  "display_name": "Agathonicus of Nicomedia",
+  "names": [
+    {
+      "form": "Агафоник",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученик Агатоник",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Агафоника, Зотика, Феопрепия (Боголепа), Акиндина, Севериана и прочих (305-311)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Мчч. Агафоника, Зотика, Феопрепия (Боголепа), Акиндина, Севериана и прочих (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 04.09.2026 (22. август ст. ст.) — „Свети мученик Агатоник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Звание благое стяжав, богомудре,/ мужей лукавых отвратился еси веры,/ не убоявся мук, Агафониче славне,/ темже благим был еси наследник/ и приял еси со страждущими с тобою// достойныя венцы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Кондак мученика Агафоника и иже с ним»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученици Твоји Господе, у страдању своме су примили непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победише, а разорише и немоћну дрскост демона: Њиховим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети Агатоник",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0904",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

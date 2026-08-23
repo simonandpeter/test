@@ -1,0 +1,5 @@
+# Daniel of Thasos
+
+Daniel of Thasos was devout from childhood and from his youth a ready preacher of the Gospel, a champion and advocate of Orthodoxy; the venerable and God-bearing Daniel lived in the ninth century, when the iconoclast Leo the Armenian was emperor. Grown to manhood he founded a monastery on the islet of Krambousa beside the island of Thasos, and the fame of the founder’s great virtue brought many monks there from Thasos and elsewhere. He so loved the spiritual life and was so humble that when the great Ioannikios came to Thasos he left his abbot’s place and ran to that famous holy man to take lessons from his watchful and virtuous life; Ioannikios tried to stop him, saying he could perfect himself alone by prayer, study and the grace of the Holy Spirit, but Daniel insisted — the synaxarion’s life runs on past the point read here. The Greek calendar keeps him on 12 September with a service; its verse says the new Daniel checked the onrush of the passions as the old Daniel the jaws of the lions.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — [the entry](https://www.saint.gr/2414/saint.aspx); read 23 August 2026.*

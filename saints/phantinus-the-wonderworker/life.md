@@ -1,0 +1,5 @@
+# Phantinus the Wonderworker
+
+Phantinus was born in Calabria to George and Bryaine. Given to a monastery at eight, he was used to ascetic labour from childhood, and from his youth wandered the deserts, often twenty days without food and without clothing; in such labours, the Sretensky calendar says, he lived sixty years. Towards the end of his life, fleeing the Saracen raids, he went with his disciples Vitalius and Nicephorus to the Peloponnese, preaching the way of salvation at Corinth and then at Athens, where he venerated the church of the Theotokos, at Larissa, and at Thessalonica, where he venerated the relics of the great martyr Demetrius and stayed eight years serving the Gospel; he died in peace in great old age, at the end of the ninth century or the beginning of the tenth — in 974, the Greek synaxarion says.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4551.htm); The Greek entry is the Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — [the entry](https://www.saint.gr/847/saint.aspx); read 23 August 2026.*

@@ -1,0 +1,152 @@
+{
+  "slug": "john-of-rila",
+  "display_name": "John of Rila",
+  "names": [
+    {
+      "form": "Иоанн Рыльский",
+      "lang": "ru"
+    },
+    {
+      "form": "Преподобни Јован Рилски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 946,
+      "latest": 946,
+      "display": "946",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Иоанна Рыльского (946)”; the Prologue: reposed 18 August 946, in his seventieth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Прп. Иоанна Рыльского (946)»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      },
+      "note": "The Sretensky calendar’s life for the day is of the translation of his relics from Sredets (Sofia) to Tarnovo in 1238; the line prints the year of his death."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 18 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 31.08.2026 (18. август ст. ст.) — „Преподобни Јован Рилски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Покаяния основание, прописание умиления,/ образ утешения, духовнаго совершения/ равноангельное житие твое бысть, преподобне./ В молитвах убо и в пощениих и в слезах пребывавый,/ отче Иоанне,/ моли Христа Бога о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Тропарь преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Тело смирив лощением,/ душу же возвысив пением,/ сосуд явися избран Святому Духу,/ Иоанне, отче наш,/ в чистоте сердца твоего, преподобне, пожив./ Тем, дерзновение имея ко Господу,/ моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Ин тропарь преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердым умом и непрестанными молитвами/ борителя врага силу всегубительную до конца поборив,/ достойно от Христа прославился еси,/ Иоанне всеблаженне./ Тем твоих днесь мощей возвращения/ светлый совершающе праздник в веселии,/ согласно вопием ти:/ стаду и людем твоим ты еси с Богом, отче преподобне,/ похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Кондак преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В молитвах бодренно не усыпая/ и в пениих непрестанных Ангелом подобяся,/ в гроб вшел еси, тленную жизнь оставив,/ и к Небеси прешел еси/ на нетление, Иоанне отче,/ от смерти бо к животу вечному/ тя пресели Христос Бог, яко Своего угодника.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Кондак преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Благодатию Божиею нас обогатил еси/ и делы благими известил еси,/ званием явися, Иоанне, угодник Христа Бога./ В молитвах и постех дарований Божия Духа исполнися/ и бысть недугом прогонитель/ и заступник душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Ин кондак преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Молящим тя теплейший заступниче/ и просящим скорейший послушателю,/ преподобне отче Иоанне,/ приими моление наше/ и Христа умоли помиловати нас,/ Единаго Преблагаго и Многомилостиваго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Ин кондак преподобного Иоанна Рыльского»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "sozon-of-pompeiopolis",
+  "display_name": "Sozon of Pompeiopolis",
+  "names": [
+    {
+      "form": "Άγιος Σώζων",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Sozont",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 280,
+      "latest": 305,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: lived at the end of the third century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 7 septembrie — „Sfântul Mucenic Sozont”",
+        "url": "https://doxologia.ro/7-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — «Άγιος Σώζων»",
+        "url": "https://www.saint.gr/09/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Δι' ὄμφης οὐρανίου πιστωθεῖς πρὸς τὰ κρείττονα, τοὺς τῆς εὐσέβειας ἀγῶνας, ἄπτοητως διέδραμες· καὶ ὤφθης τοῦ Σωτῆρος κοινωνός, ἀθλήσας Μάρτυς Σῴζων ἄνδρικως· διὰ τοῦτο διασῴζεις ἐκ πειρασμῶν, τοὺς πίστει προσιόντας σοί. Δόξα τῷ παρασχόντι σοὶ ἴσχυν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἔνεργουντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σώζων, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/947/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σώζων, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/947/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τὸν ἀληθῆ, καὶ θεοφόρον Μάρτυρα, καὶ ἀθλητὴν τῆς εὐσεβείας δόκιμον, συνελθόντες ἀνυμνήσωμεν, μεγαλοφώνως πάντες σήμερον, Σῴζοντα τὸν θεῖον μύστην τῆς χάριτος, ἰάσεων δοτῆρα πλουσιώτατον· πρεσβεύει γὰρ τῷ θεῷ, ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σώζων, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/947/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pe adevăratul şi de Dumnezeu purtătorul mucenic şi nevoitorul cel iscusit al dreptei credinţe, adunându-ne astăzi, cu mare glas să-l lăudăm, pe Sfântul Sozont tăinuitorul darului, pe dătătorul de tămăduiri cel bogat. Că se roagă lui Dumnezeu pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Mucenic Sozont",
+        "url": "https://doxologia.ro/condacul-sfantului-mucenic-sozont",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Sozont, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Sozont",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-sozont",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

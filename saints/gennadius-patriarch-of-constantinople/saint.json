@@ -1,0 +1,71 @@
+{
+  "slug": "gennadius-patriarch-of-constantinople",
+  "display_name": "Gennadius, Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Геннадий",
+      "lang": "ru"
+    },
+    {
+      "form": "Св. Генадије патријарх Цариградски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 471,
+      "latest": 471,
+      "display": "471",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Свт. Геннадия, Патриарха Константинопольского (471)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 августа ст. ст. — «Свт. Геннадия, Патриарха Константинопольского (471)»",
+        "url": "https://days.pravoslavie.ru/Days/20260831.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.09.2026 (31. август ст. ст.) — „Св. Генадије патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-13&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

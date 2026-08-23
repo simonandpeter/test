@@ -1,0 +1,5 @@
+# Porphyrius the Mime (15 September)
+
+Porphyrius was born to a father who was a mime, and practised the mime’s — the actor’s — profession himself, in the years of Julian the Apostate. When Julian was once celebrating his birthday the saint was ordered to mimic and mock the Mysteries of the Christians; then he went into the font and cried, Porphyrius is baptised in the name of the Father and of the Son and of the Holy Spirit, and coming out of the water put on white garments and confessed before all the public watching that he was a Christian and ready to die for the love of Christ; the emperor, enraged, ordered him beheaded. He is not to be confused with the Porphyrius the mime kept on 4 November — different men, with different verses, who lived in different times; bidden to play at baptism, this one’s verse says, you play at error, but are washed, Porphyrius, and cut by the sword.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — [the entry](https://www.saint.gr/2433/saint.aspx); read 23 August 2026.*

@@ -1,0 +1,89 @@
+{
+  "slug": "hermione-daughter-of-philip",
+  "display_name": "Hermione, daughter of the Apostle Philip",
+  "names": [
+    {
+      "form": "Ермиония",
+      "lang": "ru"
+    },
+    {
+      "form": "Αγία Ερμιόνη κόρη του αποστόλου Φιλίππου",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Ermioni, una dintre fiicele Sfântului Apostol Filip",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 112,
+      "latest": 122,
+      "display": "c. 117",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Ермионии, дщери ап. Филиппа диакона (ок. 117)”; the Greek line: †117."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Мц. Ермионии, дщери ап. Филиппа диакона (ок. 117)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 septembrie — „Sfânta Ermioni, una dintre fiicele Sfântului Apostol Filip”",
+        "url": "https://doxologia.ro/4-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Αγία Ερμιόνη κόρη του αποστόλου Φιλίππου»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

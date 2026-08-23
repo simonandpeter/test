@@ -1,0 +1,59 @@
+{
+  "slug": "macarius-of-pelecete",
+  "display_name": "Macarius, Abbot of Pelecete",
+  "names": [
+    {
+      "form": "Макарий Пеликитский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 825,
+      "latest": 835,
+      "display": "c. 830",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Макария, игумена Пеликитского (ок. 830)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Прп. Макария, игумена Пеликитского (ок. 830)»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 18 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 31.08.2026 (18. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

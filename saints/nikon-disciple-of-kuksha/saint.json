@@ -1,0 +1,71 @@
+{
+  "slug": "nikon-disciple-of-kuksha",
+  "display_name": "Nikon, disciple of Kuksha, Martyr",
+  "names": [
+    {
+      "form": "Никон",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1113,
+      "latest": 1120,
+      "display": "after 1114",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (после 1114)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Прпп. сщмч. Кукши и ученика его мч. Никона и прп. Пимена постника, Печерских (после 1114)»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 09.09.2026 (27. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Светила разумная, сошедшеся, хвалами воспоем, людие,/ просияли бо суть в мире сем:/ Пимен многими подвиги,/ Кукша же со учеником Никоном проповедию Слова,/ и сии трие, единоумно предстояще Святей Троице,/ яко солнце сияют и просвещают/ любовию память их восхваляющих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Кондак преподобных священномученика Кукши, ученика его Никона и Пимена постника, Печерских, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    }
+  ]
+}

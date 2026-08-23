@@ -1,0 +1,75 @@
+{
+  "slug": "john-of-prislop",
+  "display_name": "John of Prislop",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Ioan de la Prislop",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 septembrie — „Sfântul Cuvios Ioan de la Prislop”",
+        "url": "https://doxologia.ro/13-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 13 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Jugul nevoinţelor pe umeri luându-l, lui Hristos ai urmat, Cuvioase Ioan. În peşteră nevoindu-te, cu răceala pietrei te-ai împrietenit şi podoaba pustniciei ai dobândit. Pentru aceasta cu cântări te lăudăm zicând: Bucură-te, Preacuvioase Părinte Ioan, lauda Prislopului.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Ioan de la Prislop",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-ioan-de-la-prislop",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Iubitorule de nevoinţă şi râvnitorule întru cele sfinte, Cuvioase Părinte Ioan, părăsit-ai cele trecătoare şi ai ales pe cele veşnice; luat-ai jugul lui Hristos în Mănăstirea Prislop şi în peşteră pustnicească, împreună cu îngerii, L-ai slăvit pe Dumnezeu. Pentru aceasta, nu înceta a te ruga pentru sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ioan de la Prislop",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioan-de-la-prislop",
+        "year": 2026
+      }
+    }
+  ]
+}

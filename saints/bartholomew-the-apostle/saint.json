@@ -9,6 +9,14 @@
     {
       "form": "Άγιος Βαρθολομαίος ο Απόστολος",
       "lang": "el"
+    },
+    {
+      "form": "Варфоломей",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети апостол Вартоломеј",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -18,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Перенесение мощей ап. Варфоломея (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      },
+      "note": "The translation of his relics; his principal feast is 11 June."
     },
     {
       "church": "romanian",
@@ -54,11 +72,53 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 07.09.2026 (25. август ст. ст.) — „Пренос моштију светог апостола Вартоломеја“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      },
+      "note": "The translation of his relics; his principal feast is 11 June."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Тропарь апостолов Варфоломея и Тита»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси велие солнце Церкви,/ учений сиянием/ и чудесы страшными/ просвещая поющия тя, Варфоломее,// Господень апостоле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Кондак апостола Варфоломея»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

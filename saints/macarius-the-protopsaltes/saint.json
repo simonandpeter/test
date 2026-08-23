@@ -1,0 +1,87 @@
+{
+  "slug": "macarius-the-protopsaltes",
+  "display_name": "Macarius the Protopsaltes",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Macarie Protopsaltul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1763,
+      "latest": 1763,
+      "display": "1763",
+      "basis": "attested",
+      "note": "doxologia.ro: born in 1763."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 31 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 31 august — „Sfântul Cuvios Macarie Protopsaltul”",
+        "url": "https://doxologia.ro/31-august",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 13.09.2026 (31. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Din pruncie ai deprins cântarea sfintelor slujbe, ca să-L lauzi pe Hristos cu îngereştile cete. Domnului bineplăcut-ai, şi Maicii Sale, sfinţite te-ai arătat următor, Părinte; deci, Macarie sfinţite, tot în cântare cinstim pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Macarie Protopsaltul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-macarie-protopsaltul",
+        "year": 2026
+      },
+      "model": "Fecioara astăzi..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Rugăciune în inimă neîncetată având, ai înțeles, Cuvioase, tainele cele cerești, de aceea ai jertfit întreaga viața ta dumnezeieștilor cântări, tălmăciundu-le cu sârg în graiul dulce al țării, din multă dragoste de oameni, de Dumnezeu insuflate Macarie!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Macarie Protopsaltul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-macarie-protopsaltul",
+        "year": 2026
+      },
+      "model": "Pe Cuvântul cel împreună..."
+    }
+  ]
+}

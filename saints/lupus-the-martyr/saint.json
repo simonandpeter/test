@@ -9,6 +9,14 @@
     {
       "form": "Άγιος Λούππος",
       "lang": "el"
+    },
+    {
+      "form": "Лупп",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученик Луп",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -18,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 августа ст. ст. — «Мч. Луппа (ок. 306)»",
+        "url": "https://days.pravoslavie.ru/Days/20260823.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -52,8 +69,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 05.09.2026 (23. август ст. ст.) — „Свети мученик Луп“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -71,6 +97,12 @@
         "url": "https://doxologia.ro/troparul-sfantului-mucenic-lup",
         "year": 2026
       }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "slug": "alexander-the-confessor-relics-2001",
+  "display_name": "Alexander the Confessor (relics found 2001)",
+  "names": [
+    {
+      "form": "Александр исп.",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The finding of his relics in 2001, as the Russian calendar keeps it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Обретение мощей прп. Александра исп (2001)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

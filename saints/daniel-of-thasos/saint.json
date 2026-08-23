@@ -1,0 +1,86 @@
+{
+  "slug": "daniel-of-thasos",
+  "display_name": "Daniel of Thasos",
+  "names": [
+    {
+      "form": "Όσιος Δανιήλ ο Θάσιος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: lived in the ninth century under Leo the Armenian."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 12 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 12 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — «Όσιος Δανιήλ ο Θάσιος»",
+        "url": "https://www.saint.gr/09/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 12. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "text": "Ποιμὴν ἀληθέστατος, καὶ μοναστῶν ἀρχηγός, ἐδείχθης πανόσιε, τῆς ἐν τῇ Θάσῳ μονῆς, Δανιὴλ ἀξιΰμνητε· ὅθεν καὶ ἰαμάτων, ἐκομίσω τὴ χάριν, νέμων τοῖς προσιοῦσι, τὰς ἰάσεις ἀφθόνως, τοῖς πόθῳ σου τὴν μνήμην τελοῦσι πανόλβιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Δανιήλ ο Θάσιος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2414/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "text": "Ὡς μοναζόντων ποδηγέτην καὶ διδάσκαλον, καὶ νήσου Θάσου πολιοῦχον εὐφημοῦμέν σε, Δανιήλ, ἐπιτελοῦντες σεπτήν σου μνήμην, ὡς οὖν ἔχων παῤῥησίαν πρὸς τὸν Κύριον, ἐκδυσώπει ἡμᾶς, ῥύσασθαι κακώσεως, ἵνα κράζωμεν· Χαίροις Πάτερ πανόσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Δανιήλ ο Θάσιος, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2414/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ]
+}

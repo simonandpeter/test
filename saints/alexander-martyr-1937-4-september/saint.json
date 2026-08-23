@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-martyr-1937-4-september",
+  "display_name": "Alexander (Blokhin), Martyr (1937)",
+  "names": [
+    {
+      "form": "Александр",
+      "lang": "ru"
+    },
+    {
+      "form": "Александр Блохин",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Сщмчч. Григория, еп. Шлиссельбургского, Сергия, еп. Нарвского, Павла, Иоанна, Николая, Николая, Иоанна, Николая, Петра, Илии, Михаила пресвитеров, прмч. Стефана, мчч. Василия, Петра, Стефана и Александра (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "slug": "symeon-of-thessalonica",
+  "display_name": "Symeon, Archbishop of Thessalonica",
+  "names": [
+    {
+      "form": "Άγιος Συμεών Αρχιεπίσκοπος Θεσσαλονίκης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Simeon al Tesalonicului",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1429,
+      "latest": 1429,
+      "display": "1429",
+      "basis": "attested",
+      "note": "saint.gr: died September 1429; canonised 14 April 1981."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 septembrie — „Sfântul Simeon al Tesalonicului”",
+        "url": "https://doxologia.ro/15-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — «Άγιος Συμεών Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/09/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ποιμὴν Θεσσαλονίκης ἀνεδείχθης ἐν Πνεύματι, καὶ θεῖος ὑποφήτης μυστηρίων τῆς χάριτος, σοφία καὶ φωτὶ τῶν ἀρετῶν, ἐκλάμπων Ἱεράρχα Συμεὼν διὰ τοῦτο ὥσπερ θεῖον μυσταγωγόν, τιμῶμεν σὲ κραυγάζοντες• δόξα τῷ σὲ δοξάσαντι Χριστῷ δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ χορηγούντι διὰ σοῦ χάριν ἠμὶν καὶ ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Συμεών Αρχιεπίσκοπος Θεσσαλονίκης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2440/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

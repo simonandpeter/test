@@ -1,0 +1,71 @@
+{
+  "slug": "faustus-presbyter-of-alexandria",
+  "display_name": "Faustus, Presbyter of Alexandria",
+  "names": [
+    {
+      "form": "Фавст",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Φαύστος ο Πρεσβύτερος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (ок. 250)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Мчч. Кириака, Фавста пресвитера, Авива диакона и с ним 11-ти мучеников (ок. 250)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — «Άγιος Φαύστος ο Πρεσβύτερος»",
+        "url": "https://www.saint.gr/09/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

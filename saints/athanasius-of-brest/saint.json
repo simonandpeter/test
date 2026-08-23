@@ -1,0 +1,135 @@
+{
+  "slug": "athanasius-of-brest",
+  "display_name": "Athanasius of Brest, Monk-martyr",
+  "names": [
+    {
+      "form": "Афанасий Брестский",
+      "lang": "ru"
+    },
+    {
+      "form": "Όσιος Αθανάσιος ηγούμενος Μονής Μπρέστ",
+      "lang": "el"
+    },
+    {
+      "form": "Преп. Атанасије",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1597,
+      "latest": 1597,
+      "display": "c. 1597",
+      "basis": "traditional",
+      "note": "The Sretensky calendar’s life: born about 1597; saint.gr: 1597 at Brest."
+    },
+    "death": {
+      "earliest": 1648,
+      "latest": 1648,
+      "display": "1648",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмч. Афанасия Брестского (1648)”; the Prologue: beheaded 5 September 1648."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Прмч. Афанасия Брестского (1648)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Σεπτεμβρίου — «Όσιος Αθανάσιος ηγούμενος Μονής Μπρέστ»",
+        "url": "https://www.saint.gr/09/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.09.2026 (5. септембар ст. ст.) — „Преп. Атанасије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-18&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Блажен еси, отче наш Афанасие,/ яко верно пожил еси, стоя бодренно за святую Православную веру,/ со умилением присно поя неседальное Пречистей,/ заповедуя никомуже нарушати Православныя веры святыя,/ пострадав за свидетельство истины даже до смерти./ Мы же, чтуще святыню твою,/ со дерзновением взываем ти:/ отче наш, преподобномучениче Афанасие,/ похвало и украшение наше.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Тропарь преподобномученика Афанасия Брестского»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Монашескаго жития украшение и мучеников красоту явил себе житием твоим, Афанасие, и яко солнце пресветлое людям православным возсиял еси. Темже и Христос даром чудес обогати тя; да чтуще пресветлую память твою, зовем ти: поминай стадо твое молитвами твоими, преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Кондак преподобномученика Афанасия Брестского»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко постника благочестна и искусна,/ и страдальца произволением честна,/ и пустыни жителя сообразна,/ в песнех достойно хвалим Афанасия приснохвальнаго,/ той бо змия попрал есть.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Ин кондак преподобномученика Афанасия Брестского»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

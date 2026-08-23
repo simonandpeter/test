@@ -1,0 +1,91 @@
+{
+  "slug": "mitrophan-of-voronezh",
+  "display_name": "Mitrophan, Bishop of Voronezh",
+  "names": [
+    {
+      "form": "Митрофан Воронежский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1623,
+      "latest": 1623,
+      "display": "1623",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 8 November 1623."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The second finding (1964) and translation (1989) of his relics, as the Russian calendar keeps it; his repose is kept on 23 November (Julian)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Второе обретение (1964) и перенесение мощей (1989) святителя Митрофана, епископа Воронежского»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости / словом и житием пастве твоей, отче смиренномудре Митрофане, был еси. / Темже и во светлостех святых / солнца светлейше возсиял еси, / венцем нетления и славы украшаемь, / моли Христа Бога / стране нашей и граду твоему в мире спастися. Показать ещё молитвы",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Тропарь святителя Митрофана, епископа Воронежского. Тропарь»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Воздержанием тело духу поработив,/ душу же равноангельну сотворив,/ святительскою одеялся еси одеждею, яко венец священства,/ и ныне, всех Владыце предстоя,/ моли, всеблаженне Митрофане, умирити и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Кондак святителя Митрофана, епископа Воронежского. Кондак»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

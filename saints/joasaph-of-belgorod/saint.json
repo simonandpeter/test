@@ -1,0 +1,103 @@
+{
+  "slug": "joasaph-of-belgorod",
+  "display_name": "Joasaph, Bishop of Belgorod",
+  "names": [
+    {
+      "form": "Иоасаф Белгородский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1705,
+      "latest": 1705,
+      "display": "1705",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 8 September 1705 at Priluki."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The finding of his relics (1911) as the Russian calendar keeps it; his repose is kept on 10 December (Julian)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Обретение мощей свт. Иоасафа, еп. Белгородского (1911)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Святителю, Христу Богу возлюбленне,/ правило веры и образ милосердия людем был еси,/ бдением же, постом и молитвою,/ яко светильник пресветлый, просиял еси/ и прославлен от Бога явился еси:/ телом убо в нетлении почивая,/ духом же Престолу Божию предстоя,/ чудеса преславная источаеши./ Моли Христа Бога,/ да утвердит нас в Православии и благочестии// и спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Тропарь святителя Иоасафа»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Молитвенниче издетства преизрядный,/ Богоизбранный святителю Христов Иоасафе,/ правило веры и образ милосердия благочестным житием всем являвши/ и с верою к тебе притекающим обильно исцеления источаеши./ Моли Христа Бога, да утвердит правоверие, мир и благочестие и спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Ин тропарь святителя Иоасафа Белгородского»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Многоразличныя подвиги жития твоего кто исповесть?/ Многообразныя милости Божия, тобою явленныя, кто исчислит?/ Дерзновение же твое у Пречистыя Богородицы и Всещедраго Бога добре ведуще,/ во умилении сердечнем зовем ти:/ не лиши и нас твоея помощи и заступления,// святителю Христов и чудотворче Иоасафе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Кондак святителя Иоасафа»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

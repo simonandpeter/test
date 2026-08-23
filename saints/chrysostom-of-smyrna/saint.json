@@ -1,0 +1,102 @@
+{
+  "slug": "chrysostom-of-smyrna",
+  "display_name": "Chrysostom of Smyrna, Hieromartyr (1922)",
+  "names": [
+    {
+      "form": "Άγιος Χρυσόστομος Σμύρνης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "saint.gr: born 1867 at Triglia on the Propontis."
+    },
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "saint.gr: martyred at Smyrna in 1922."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "By the Holy Synod’s encyclical 2556 of 5 July 1993 this feast is kept on the Sunday before the Exaltation of the Cross — 13 September in 2026, where saint.gr lists it."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιος Χρυσόστομος Σμύρνης και οι συν αυτώ Άγιοι Αρχιερείς Γρηγόριος Κυδωνιών, Αμβρόσιος Μοσχονησίων, Προκόπιος Ικονίου, Ευθύμιος Ζήλων»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      },
+      "note": "By the Holy Synod’s encyclical 2556 of 5 July 1993 this feast is kept on the Sunday before the Exaltation of the Cross — 13 September in 2026, where saint.gr lists it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ´.",
+      "text": "Μέγαν μάρτυρα ἡ Ἐκκλησία, μέγαν ἥρωα τὸ ἔθνος σύμπαν, τὸν τῆς Σμύρνης ὑμνοῦμεν Χρυσόστομον. Καὶ γὰρ γενναίως ἀθλήσας ὑπέμεινεν ὑπὲρ πατρίδος καὶ πίστεως θάνατον. Ἱεράρχου τε ὑπόδειγμα ἑαυτὸν ἀνέδειξε, τὸν στέφανον λαβὼν τὸν ἀμαράντινον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Χρυσόστομος Σμύρνης και οι συν αυτώ Άγιοι Αρχιερείς Γρηγόριος Κυ...., Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2408/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ηχος δ΄.",
+      "text": "Η πενταυγής Αρχιερέων χορεία, τη των αγώνων νοητή δαδουχία, την Μικρασίαν άπασαν αυγάζει νοητώς, ο σοφός Χρυσόστομος, Γρηγορίω τω θείω, Αμβρόσιος, Προκόπιος και Ευθύμιος άμα, ούς ευφημούμεν είπωμεν πιστοί, χαίροις Μαρτύρων, πεντάριθμε σύλλογε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Χρυσόστομος Σμύρνης και οι συν αυτώ Άγιοι Αρχιερείς Γρηγόριος Κυ...., Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2408/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ο υψωθείς εν τω Σταυρώ."
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

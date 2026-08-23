@@ -1,0 +1,5 @@
+# Agathocleia of Nicomedia
+
+Agathocleia was one of the martyrs of Nicomedia kept together on 1 September — Callista and her brothers Evodus and Hermogenes, Christians of Nicomedia who stood before the pagan governor for confessing their faith in Christ and, refusing to sacrifice to the idols, were beheaded in 309. The Greek synaxarion names a sister, Agathocleia, with them, and says the finding of the truth was their great desire: God let them hear the preaching of the apostles and drew them into the light and life of Christ, and from then on their life was one of faith and good works — generous help to widows and orphans, and a holy rivalry among themselves as to who would bring more souls into the harbour of the Church — sealed by martyrdom when they were arrested and confessed that they belonged to the Christian Church. The Russian calendar’s line for the day names Callista, Evodus and Hermogenes and not her.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — [the entry](https://www.saint.gr/889/saint.aspx); read 23 August 2026.*

@@ -5,6 +5,10 @@
     {
       "form": "Όσιος Αδριανός εκ Ρωσίας",
       "lang": "el"
+    },
+    {
+      "form": "Адриан Ондрусовский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Прп. Адриана Ондрусовского (1549)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar’s Adrian of Ondrusov, kept the same day; saint.gr’s “Adrian of Russia” is taken as the same man, as his Greek life says."
     },
     {
       "church": "romanian",

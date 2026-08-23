@@ -1,0 +1,60 @@
+{
+  "slug": "euthymius-of-zela",
+  "display_name": "Euthymius, Bishop of Zela, Hieromartyr (1921)",
+  "names": [
+    {
+      "form": "Άγιος Ευθύμιος Μητροπολίτης Ζήλων",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "saint.gr: died of tortures in prison 29 May 1921."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιος Χρυσόστομος Σμύρνης και οι συν αυτώ Άγιοι Αρχιερείς Γρηγόριος Κυδωνιών, Αμβρόσιος Μοσχονησίων, Προκόπιος Ικονίου, Ευθύμιος Ζήλων»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      },
+      "note": "By the Holy Synod’s encyclical 2556 of 5 July 1993 this feast is kept on the Sunday before the Exaltation of the Cross — 13 September in 2026, where saint.gr lists it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

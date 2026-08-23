@@ -1,0 +1,103 @@
+{
+  "slug": "phoebe-the-deaconess",
+  "display_name": "Phoebe the Deaconess",
+  "names": [
+    {
+      "form": "Фива",
+      "lang": "ru"
+    },
+    {
+      "form": "Οσία Φοίβη η διακόνισσα",
+      "lang": "el"
+    },
+    {
+      "form": "Φοίβη",
+      "lang": "grc"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "deaconess",
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Св. Фивы диаконисы (I)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Св. Фивы диаконисы (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Οσία Φοίβη η διακόνισσα»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α'.",
+      "text": "Συνόμιλος του Παύλου και διάκονος ένθεος, της εν Κεγχρεαίς Εκκλησίας του Θεού έχρημάτισας, ώ Φοίβη ως θεράπαινα Χριστού, και πλήρης ουρανίων αρετών διά τούτο σε ενδιαφέροντα ύμνοις πνευματικοίς, τιμώμεν άνακράζοντες δόξα τω σε δοξάσαντι Χριστώ, δόξα τω σε στεφανώσαντι, δόξα τω χορηγούντι διά σου, ήμίν τα κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Φοίβη η διακόνισσα, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/932/saint.aspx",
+        "year": 2026
+      },
+      "model": "Της έρήμον πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "text": "Αποστόλων σύσκηνος, Φοίβη θεόφρον, και Χριστού διάκονος, γεγενημένη έπί γης, ενδιαφέροντα ούρανοίς καθικέτευε, ύπέρ των πίστει τιμώντων την μνήμην σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Φοίβη η διακόνισσα, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/932/saint.aspx",
+        "year": 2026
+      },
+      "model": "Έπεφάνης σήμερον."
+    }
+  ]
+}

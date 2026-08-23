@@ -1,0 +1,64 @@
+{
+  "slug": "cyprian-of-kyiv",
+  "display_name": "Cyprian, Metropolitan of Kyiv",
+  "names": [
+    {
+      "form": "Όσιος Κυπριανός Μητροπολίτης Κιέβου",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "attested",
+      "note": "saint.gr: reposed in 1406."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 16 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου — «Όσιος Κυπριανός Μητροπολίτης Κιέβου»",
+        "url": "https://www.saint.gr/09/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

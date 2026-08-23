@@ -1,0 +1,80 @@
+{
+  "slug": "meletius-pegas",
+  "display_name": "Meletius Pegas, Patriarch of Alexandria",
+  "names": [
+    {
+      "form": "Άγιος Μελέτιος Πηγάς",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1549,
+      "latest": 1549,
+      "display": "1549",
+      "basis": "attested",
+      "note": "saint.gr: born 1549 at Chandax in Crete."
+    },
+    "death": {
+      "earliest": 1601,
+      "latest": 1601,
+      "display": "1601",
+      "basis": "attested",
+      "note": "saint.gr: patriarch of Alexandria 1590–1601."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιος Μελέτιος Πηγάς»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ἀλεξανδρείας φωστῆρα καί πατριάρχην σοφώτατον, γέννημα Ἁγίου Θωμᾶ τε τῆς κώμης ὄντως περίβλεπτον∙ τῆς Ἀγκαράθου τῆς Μονῆς τόν ἀστέρα καί Σιναίου Ὄρους Ἀπεζανῶν τε ἔνθεον ἀντιλήπτορα∙ Μελέτιον τόν θεῖον καί Ὀρθοδοξίας παμμέγιστον ἐν ἐνιαυτοῖς δυσχερέσι θεολόγον καί ὑπέρμαχον∙ πάντες οἱ ἐν Κρήτῃ αὐτοῦ μαθηταί συνελθόντες πόθῳ ὑμνήσωμεν∙ αὐτός γάρ τήν Τριάδα ἡμῖν ἵλεων ἀπεργάζεται.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μελέτιος Πηγάς, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2429/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τούς τρεῖς μεγίστους"
+    }
+  ]
+}

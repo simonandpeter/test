@@ -1,0 +1,65 @@
+{
+  "slug": "parthenius-of-kiziltash",
+  "display_name": "Parthenius, Abbot of Kiziltash, Monk-martyr",
+  "names": [
+    {
+      "form": "Парфений Кизилташский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1815,
+      "latest": 1815,
+      "display": "1815",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 1815 at Elisavetgrad."
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмч. Парфения, игумена Кизилташского (1867)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Прмч. Парфения, игумена Кизилташского (1867)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

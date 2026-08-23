@@ -1,0 +1,5 @@
+# John, Bishop of Velikiye Luki, Hieromartyr (1937)
+
+John — Ivan Efimovich Troyansky in the world — was born on 10 November 1862 in the village of Novo-Klinskoye in Voronezh province, a priest’s son. He finished the Tambov seminary and was ordained on 10 September 1884. After his wife’s death he was consecrated bishop in 1922 by Renovationist bishops; in November 1924 he broke with the Renovationists, who suspended him, and early in 1925 he made his repentance and, as one consecrated by bishops of the old ordination, was received in his rank and made bishop of Akmolinsk and Petropavlovsk, vicar of Omsk. On 9 March 1932 — the Sretensky calendar’s life runs on past the point read here. The Russian calendar keeps him on 22 August (Julian) with Alexius, archbishop of Omsk, the presbyters Alexander, Michael and Theodore and the monk-martyrs Hilarion, John and Hierotheus, all of 1937.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4829.htm); read 23 August 2026.*

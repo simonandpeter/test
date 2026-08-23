@@ -1,0 +1,72 @@
+{
+  "slug": "anthimos-the-new-of-cephalonia",
+  "display_name": "Anthimos the New, the blind ascetic of Cephalonia",
+  "names": [
+    {
+      "form": "Όσιος Άνθιμος ο νέος ασκητής από την Κεφαλονιά",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1727,
+      "latest": 1727,
+      "display": "1727",
+      "basis": "attested",
+      "note": "saint.gr: born at Lixouri in Cephalonia in 1727."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 4 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Όσιος Άνθιμος ο νέος ασκητής από την Κεφαλονιά»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τῆς Πάλλῃς τὸ βλάστημα, Κεφαλληνίας πυρσόν, τὸν θεῖον δομήτορα τῆς τῶν Λεπέδων Μονῆς, φαιδρῶς εὐφημήσωμεν, Ἄνθιμον τὸν ἀσκήσει τὸν ἐχθρὸν καθελόντα, χάριν δὲ ἰαμάτων ἐκ Κυρίου λαβόντα, πρεσβεύοντα ἐκτενῶς ἠμᾶς διασώζεσθαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Άνθιμος ο νέος ασκητής από την Κεφαλονιά, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2349/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "slug": "trophimus-of-antioch",
+  "display_name": "Trophimus of Antioch",
+  "names": [
+    {
+      "form": "Άγιοι Τρόφιμος, Σαββάτιος και Δορυμέδων",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Trofim",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 278,
+      "latest": 278,
+      "display": "278",
+      "basis": "traditional",
+      "note": "saint.gr: under Probus and the governor Heliodorus, 278."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 19 septembrie — „Sfântul Mucenic Trofim”",
+        "url": "https://doxologia.ro/19-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 19 Σεπτεμβρίου — «Άγιοι Τρόφιμος, Σαββάτιος και Δορυμέδων»",
+        "url": "https://www.saint.gr/09/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τὴν ἀκαθαίρετον, Τριάδος δύναμιν, ἀνθηφορήσαντες, Μάρτυρες ἔνδοξοι, ἐναπετέματε στερρῶς, τὴν ἄκανθαν τῆς ἀπάτης, Τρόφιμε μακάριε, Ἐκκλησίας ἐντρύφημα, Σαββάτιε πάνσοφε, Ἀθλητῶν ἐγκαλλώπισμα, καὶ δόξα εὐσεβῶν Δορυμέδων ὅθεν ὑμᾶς ἀνευφημοῦμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Τρόφιμος, Σαββάτιος και Δορυμέδων, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/987/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς ἀθλητῶν ἑδραίωμα, καὶ εὐσεβείας ἔρεισμα, ἡ Ἐκκλησία τιμᾷ καὶ γεραίρει σου, τὴν φωτοφόρον ἄθλησιν· παναοίδιμε μάκαρ, ἀθλητὰ γενναιόφρον, ἔνδοξε Τρόφιμε, σὺν τοῖς συνάθλοις σου, ἱλασμὸν τοῖς ὑμνοῦσί σε αἴτησαι, ὡς ἀήττητος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Τρόφιμος, Σαββάτιος και Δορυμέδων, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/987/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὡς ἀπαρχὰς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Ca unul ce eşti întărire nevoitorilor şi reazem al dreptei credinţe, Biserica cinsteşte şi laudă nevoinţa ta cea luminată, pururea pomenite, pătimitorule, viteazule Mărite Mucenice Trofim. Împreună cu cei ce s-au nevoit cu tine, fericite, cere milostivire pentru cei ce te laudă pe tine, ca unul ce eşti nebiruit.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Mucenici Trofim, Savatie şi Dorimedont",
+        "url": "https://doxologia.ro/condacul-sfintilor-mucenici-trofim-savatie-dorimedont",
+        "year": 2026
+      },
+      "model": "Ca o pârgă a firii..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Dumnezeu Cel Lăudat în Treime a preamărit treimea mucenicilor; pe Sfântul Trofim, pe Sfântul Savatie şi pe Sfântul Dorimedont; căci, întru Dânsul crezând, au surpat pe vrăjmaşul. Prin rugăciunile lor, Hristoase Dumnezeule, miluieşte-ne pe noi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Trofim, Savatie şi Dorimedont",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-trofim-savatie-dorimedont",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Maria (Korepova), Nun, Confessor
+
+Maria Andreevna Korepova was born to a peasant family on 9 August 1877 in the village of Maurino in Vologda province; until 1919 she lived unmarried in her native village with her parents. From 1919 to 1927 she was a nun of the Sevastyanov Sokhot convent of the Transfiguration in the Poshekhonye district of Yaroslavl province, labouring there until it was closed — Maria was probably her monastic name — and after the closure was forced to move to Poshekhonye-Volodarsk, where she settled with other expelled nuns, worked at first as a hired labourer and shortly before her arrest found a place as a hospital orderly. Arrested in 1936 on a charge of counter-revolutionary activity she held firm under interrogation and incriminated no one; in 1937 she was sentenced to five years in the camps, which she served in the Sevvostlag, and after her release in 1942 her further fate is unknown. She was canonised in 2000, and the Russian calendar keeps her on 19 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-marija-korepova); read 23 August 2026.*

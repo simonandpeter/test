@@ -1,0 +1,144 @@
+{
+  "slug": "joachim-the-righteous",
+  "display_name": "Joachim the Righteous, father of the Theotokos",
+  "names": [
+    {
+      "form": "Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfinții și Drepții Părinți Ioachim și Ana",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 9 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 septembrie — „Sfinții și Drepții Părinți Ioachim și Ana”",
+        "url": "https://doxologia.ro/9-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου — «Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης»",
+        "url": "https://www.saint.gr/09/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἡ Δυὰς ἡ ἁγία καὶ Θεοτίμητος, Ἰωακεὶμ καὶ ἡ Ἄννα ὡς τοῦ Θεοῦ ἀνχιστεῖς, ἀνυμνείσθωσαν φαιδρῶς ᾀσμάτων κάλλεσιν οὗτοι γὰρ ἔτεκον ἠμιν, τὴν τεκοῦσαν ὑπὲρ νοῦν, τὸν ἄσαρκον βροτωθέντα, εἰς σωτηρίαν τοῦ κόσμου, μεθ' ἧς πρεσβεύουσι σωθήναι ἠμᾶς.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/994/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τῶν δικαίων Θεοπατόρων σου Κύριε, τὴν μνήμην ἑορτάζοντες, δι᾽ αὐτῶν σε δυσωποῦμεν, Σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/994/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἡ γέννησίς σου Θεοτόκε, χαρὰν ἐμήνυσε πάσῃ τῇ οικουμένῃ, ἐκ σοῦ γὰρ ἀνέτειλεν ὁ Ἥλιος τῆς δικαιοσύνης, Χριστὸς ὁ Θεὸς ἡμῶν, καὶ λύσας τὴν κατάραν, ἔδωκε τὴν εὐλογίαν, καὶ καταργήσας τὸν θάνατον, ἐδωρήσατο ἡμῖν ζωὴν τὴν αἰώνιον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/994/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Εὐφραίνεται νῦν, ἡ Ἄννα τῆς στειρώσεως, λυθεῖσα δεσμῶν, καὶ τρέφει τὴν πανάχραντον, συγκαλοῦσα ἅπαντας ἀνυμνῆσαι τὸν δωρησάμενον, ἐκ νηδύος αὐτῆς τοῖς βροτοῖς, τὴν μόνην Μητέρα καὶ ἀπείρανδρον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/994/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Veseleşte-te acum, Sfântă Ana, dezlegându-te din legăturile nerodirii şi hrăneşte pe cea Preacurată, chemând pe toţi să laude pe Acela Ce a dăruit din pântecele ei oamenilor, pe Singura Maică ce nu ştie de bărbat.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor şi Drepţilor Dumnezeieştilor Părinţi Ioachim şi Ana",
+        "url": "https://doxologia.ro/condacul-sfintilor-dreptilor-dumnezeiestilor-parinti-ioachim-ana",
+        "year": 2026
+      },
+      "model": "Căutând cele de sus..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pomenirea drepţilor Tăi, Doamne, prăznuind, printr-înşii ne rugăm Ţie, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor şi Drepţilor Dumnezeieştilor Părinţi Ioachim şi Ana",
+        "url": "https://doxologia.ro/troparul-sfintilor-dreptilor-dumnezeiestilor-parinti-ioachim-ana",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

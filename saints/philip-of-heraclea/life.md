@@ -1,0 +1,5 @@
+# Philip, Bishop of Heraclea
+
+Philip, bishop of Heraclea, with the priest Severus and the deacon Hermes — Slavs, by all appearances, the Prologue says — served God in Thrace, and there were first given over to torture for Christ. When the pagans rushed to burn the Christian church, the brave Philip said to their chief: do you think God is shut up in stone walls? He lives in hearts. The church was destroyed and all its books burned, and the clergy were taken to Adrianople, where after prison and torture they were thrown half-burned into the river Maritsa; thirty-eight more Christians died as martyrs with them. They are thought to have suffered in the time of Diocletian. The Serbian calendar keeps him on 20 August (Julian); the Russian calendar’s line for the day does not name him.
+
+*After the Охридски пролог for 2 September 2026 (20. август ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-02&prolog=1); read 23 August 2026.*

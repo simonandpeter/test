@@ -1,0 +1,61 @@
+{
+  "slug": "eleazar-the-priest",
+  "display_name": "Eleazar the Priest",
+  "names": [
+    {
+      "form": "Δίκαιοι Ελεάζαρ και Φινεές",
+      "lang": "el"
+    },
+    {
+      "form": "Св. Елеазар",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 2 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Σεπτεμβρίου — «Δίκαιοι Ελεάζαρ και Φινεές»",
+        "url": "https://www.saint.gr/09/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.09.2026 (2. септембар ст. ст.) — „Св. Елеазар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-15&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

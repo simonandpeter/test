@@ -1,0 +1,86 @@
+{
+  "slug": "aristion-of-alexandria",
+  "display_name": "Aristion, Bishop of Alexandria Minor",
+  "names": [
+    {
+      "form": "Аристион",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Αριστίων Ιερομάρτυρας επίσκοπος Αλεξανδρείας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 162,
+      "latest": 172,
+      "display": "c. 167",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Аристиона, еп. Александрии Сирийской (ок. 167)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Сщмч. Аристиона, еп. Александрии Сирийской (ок. 167)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Άγιος Αριστίων Ιερομάρτυρας επίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χριστῷ ἱεράτευσας ὢ Ἀριστίων καλῶς, ὢ ὕστερον ἔθυσας σαυτὸν ὡς θῦμα σεπτόν, ἀθλήσας δι' αἵματος, ὅθεν μὴ διαλίπης ἰκετεύειν ἀπαύστως, ὑπὲρ τῶν σὲ τιμώντων, καὶ θερμῶς ἐκζητούντων, εὐχᾶς τᾶς ἁγίας σου, μαρτύρων ἄριστε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Αριστίων Ιερομάρτυρας επίσκοπος Αλεξανδρείας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/933/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "slug": "moses-the-prophet",
+  "display_name": "Moses the Prophet and God-seer",
+  "names": [
+    {
+      "form": "Моисей",
+      "lang": "ru"
+    },
+    {
+      "form": "Προφήτης Μωυσής ο Θεόπτης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Proroc Moise",
+      "lang": "ro"
+    },
+    {
+      "form": "Пророк Мојсеј Боговидац",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "death": {
+      "earliest": -1600,
+      "latest": -1401,
+      "display": "16th–15th century BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прор. Боговидца Моисея (1531 до Р.Х.)”; the Greek synaxarion line: 1460 BC; the Prologue: born about 1550 BC, died at 120."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Прор. Боговидца Моисея (1531 до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 septembrie — „Sfântul Proroc Moise”",
+        "url": "https://doxologia.ro/4-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Προφήτης Μωυσής ο Θεόπτης»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 17.09.2026 (4. септембар ст. ст.) — „Пророк Мојсеј Боговидац“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророка Твоего Моисея память, Господи, празднующе,/ тем Тя молим:// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Тропарь пророка Моисея»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "На высоту добродетелей возшел еси пророче Моисее:/ и сего ради сподобился еси видети славу Божию,/ скрижали благодатныя закона прият/ и начертаний благодать в себе нося,/ и пророков был еси честная похвала,/ и благочестия великое таинство.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Ин тропарь пророка Боговидца Моисея»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Лик пророческий с Моисеем и Аароном/ веселием днесь веселится,/ яко конец пророчествия их на нас исполнися:/ днесь сияет Крест, имже нас спасл еси;// тех молитвами, Христе Боже, помилуй нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Кондак пророка Моисея»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Γνόφον ἄυλον, τεθεαμένος, νόμον ἔνθεον, πλαξὶν ἐδέξω, ὡς θεάμων μυστηρίων τοῦ Πνεύματος καὶ καταπλήξας τὴν Αἴγυπτον θαύμασι, δημαγωγὸς Ἰσραὴλ ἐχρημάτισας. Μωυσῆ ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Μωυσής ο Θεόπτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2341/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τοῦ Προφήτου σου Μωϋσέως τὴν μνήμην, Κύριε, ἑορτάζοντες, δι᾽αὐτοῦ σε δυσωποῦμεν· Σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Μωυσής ο Θεόπτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2341/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Ceata prorocilor împreună cu Moise şi cu Aaron, cu veselie se veseleşte astăzi, căci s-a împlinit sfârşitul prorociei lor asupra noastră. Astăzi străluceşte Crucea, prin care ne-ai mântuit pe noi, Hristoase Dumnezeule. Cu ale căror rugăciuni miluieşte-ne pe noi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Proroc Moise",
+        "url": "https://doxologia.ro/condacul-sfantului-proroc-moise",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Moise, pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Moise",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-moise",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Suindu-te către înălţimea bunătăţilor, Sfinte Prorocule Moise, te-ai învrednicit a vedea Strălucirea lui Dumnezeu, primind tablele cele date de Dumnezeu; şi purtând întru tine darul însemnărilor, te-ai făcut cinstită laudă prorocilor şi mare taină a dreptei credinţe.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Moise",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-moise-0",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

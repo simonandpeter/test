@@ -1,0 +1,67 @@
+{
+  "slug": "martyrs-23-with-adrian-of-nicomedia",
+  "display_name": "The Twenty-three Martyrs with Adrian of Nicomedia",
+  "names": [
+    {
+      "form": "Св. муч. Адријан и Наталија",
+      "lang": "sr",
+      "note": "the twenty-three are named in the Prologue’s entry"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Адриана и Наталии и прочих 23, с ними пострадавших (305-311)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Мчч. Адриана и Наталии и прочих 23, с ними пострадавших (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.09.2026 (26. август ст. ст.) — „Св. муч. Адријан и Наталија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-08&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

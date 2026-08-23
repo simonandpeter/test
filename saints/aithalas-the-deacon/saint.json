@@ -1,0 +1,68 @@
+{
+  "slug": "aithalas-the-deacon",
+  "display_name": "Aithalas the Deacon, Martyr",
+  "names": [
+    {
+      "form": "Аифал",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 380,
+      "latest": 380,
+      "display": "380",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Аифала диакона, Персидского (380)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Мч. Аифала диакона, Персидского (380)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Σεπτεμβρίου — «Άγιοι Αειθαλάς και Αμών»",
+        "url": "https://www.saint.gr/09/02/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr has Aithalas and Amon of Adrianople killed with ox-hide whips under the prefect Babdos; the Russian calendar’s Aithalas is a deacon stoned in Persia in 380."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

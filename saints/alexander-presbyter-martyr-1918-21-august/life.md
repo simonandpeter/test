@@ -1,0 +1,5 @@
+# Alexander (Elokhovsky), Presbyter, Hieromartyr (1918)
+
+Alexander Petrovich Elokhovsky was born on 22 October 1858 to the priest of the village of Ryazanino in the Spas-Yaryzhets district of Yaroslavl province. After the Yaroslavl church school he entered the Novinskoye teachers’ seminary, meaning to teach Russian, arithmetic and penmanship, but did not manage to finish it — a revolutionary group was discovered there at the time. He served in the villages of the Yaroslavl diocese and taught the Law of God, and is known to have been priest of the church of his native village. On 25 August 1918 he was arrested and charged with anti-Soviet agitation — possibly in connection with the Yaroslavl rising of July 1918; in the list of prisoners of the Yaroslavl prison for 1918 he stands at number 60. On 3 September 1918 he was shot; his probable burial place is the common grave at the Leontievskoye cemetery. He was glorified in 2000, and the Russian calendar keeps him on 21 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandr-elohovskij); read 23 August 2026.*

@@ -1,0 +1,49 @@
+{
+  "slug": "anthimos-of-chios",
+  "display_name": "Anthimos Vagianos of Chios",
+  "names": [
+    {
+      "form": "Όσιος Άνθιμος ο Βαγιάνος ο εν Χίω",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics, as saint.gr keeps it on 3 September; his feast is 15 February."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Ανακομιδή Ιερών λειψάνων του Οσίου Άνθιμου του Βαγιάνου του εν Χίω»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

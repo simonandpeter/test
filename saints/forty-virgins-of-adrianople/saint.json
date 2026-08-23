@@ -1,0 +1,110 @@
+{
+  "slug": "forty-virgins-of-adrianople",
+  "display_name": "The Forty Virgin Martyrs of Adrianople",
+  "names": [
+    {
+      "form": "Сорок дев постниц",
+      "lang": "ru"
+    },
+    {
+      "form": "Αγίες Τεσσαράκοντα Παρθένες και Ασκήτριες και Αμμούν ο διδάσκαλος αυτών",
+      "lang": "el"
+    },
+    {
+      "form": "Sfintele 40 de Muceniţe din Adrianopol",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (IV)”; the life: under Licinius, early fourth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Мцц. 40 дев постниц и мч. Аммуна диакона, учителя их (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 septembrie — „Sfintele 40 de Muceniţe din Adrianopol”",
+        "url": "https://doxologia.ro/1-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Αγίες Τεσσαράκοντα Παρθένες και Ασκήτριες και Αμμούν ο διδάσκαλος αυτών»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "",
+      "text": "Ἀθλητῶν αἱ χορείαι, δεῦτε συνδράμετε καὶ τεσσαράκοντα κόρας μετὰ Ἀμμοὺν εὐσεβοῦς μεγαλύνατε, λαμπρῶς πανηγυρίζουσι ὅτι ἐνήθλησαν στερρῶς τῇ ἀσκήσει ἐν Χριστῷ, ῥωσθεῖσαι καὶ λαμπρυνθῆσαι πρεσβεύουσαι τῷ Κυρίῳ, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγίες Τεσσαράκοντα Παρθένες και Ασκήτριες και Αμμούν ο διδάσκαλος αυτώ...., Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/897/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Muceniţele Tale, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintelor 40 de Muceniţe din Adrianopol",
+        "url": "https://doxologia.ro/troparul-sfintelor-40-de-mucenite-din-adrianopol",
+        "year": 2026
+      }
+    }
+  ]
+}

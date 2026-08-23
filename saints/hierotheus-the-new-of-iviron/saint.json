@@ -1,0 +1,92 @@
+{
+  "slug": "hierotheus-the-new-of-iviron",
+  "display_name": "Hierotheus the New of Iviron",
+  "names": [
+    {
+      "form": "Όσιος Ιερόθεος ο Νέος ο Ιβηρίτης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Ierotei cel Tânăr de la Iviron",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1686,
+      "latest": 1686,
+      "display": "1686",
+      "basis": "traditional",
+      "note": "saint.gr, after Nikodemos: born 1686 at Kalamata."
+    },
+    "death": {
+      "earliest": 1745,
+      "latest": 1745,
+      "display": "1745",
+      "basis": "traditional",
+      "note": "saint.gr, after Nikodemos: died in peace in 1745."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 septembrie — „Sfântul Cuvios Ierotei cel Tânăr de la Iviron”",
+        "url": "https://doxologia.ro/13-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Όσιος Ιερόθεος ο Νέος ο Ιβηρίτης»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "text": "Τὸν ἐν Ὁσίοις θεοφόρον Ἱερόθεον, καὶ ἐν Ἁγίοις νέον κήρυκα τῆς χάριτος, ὑμνωδείαις εὐφημήσωμεν ἐπαξίως, Μεσσηνίας γὰρ αὐτὸς ὑπάρχει καύχημα, καὶ Μονῆς τῆς τῶν Ἰβήρων θεῖον σέμνωμα, ὅθεν κράζομεν· Χαίροις Πάτερ θεόσοφε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιερόθεος ο Νέος ο Ιβηρίτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2428/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ Ὑπερμάχῳ."
+    }
+  ]
+}

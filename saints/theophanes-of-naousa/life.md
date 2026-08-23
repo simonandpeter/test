@@ -1,0 +1,5 @@
+# Theophanes of Naousa
+
+Theophanes was born at Ioannina and as a young man left everything for the Holy Mountain, where he was tonsured at the monastery of Docheiariou; in fasting, prayer, vigil and the denial of every needless thing he was a pattern to all the monks, and in time was chosen abbot. Later, over some disagreement with the monks, he left the Mountain and came with his sister’s son to Veria in Macedonia, where he founded a monastery in honour of the Mother of God; when it flourished in the spiritual life he left his nephew to govern it and went to Naousa, where he founded another, to the holy Archangels. He died in peace in the fifteenth century, and his wonderworking relics lie at Naousa to this day, the Prologue says, and show forth the great power of God.
+
+*After the Охридски пролог for 1 September 2026 (19. август ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-01&prolog=1); read 23 August 2026.*

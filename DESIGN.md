@@ -676,6 +676,15 @@ author's paraphrase, never the source's text. The "no life has been written"
 line stays in the strings for a saint added without one; no saint in the corpus
 shows it.*
 
+*Amended (author, 2026-08-23, Amendment 31): **the calendars' days are the
+corpus.** Every name the four calendars print for a day is a folder — 708 for
+23 August to 19 September 2026 — with the day's hymns, readings and fast
+recorded from the calendar that prints them, and icons from Wikimedia Commons
+with the file page cited on the credit line. Feasts and synaxes are not
+folders; their hymns travel with the day. Where a calendar has not yet
+published a day's readings the record says so (`readings: []` and a note)
+rather than borrowing another church's.*
+
 ## 6. Motion and states
 
 - Durations: 200 ms standard, 260 ms the hero slot roll, 300 ms theme change,

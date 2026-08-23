@@ -1,0 +1,5 @@
+# Cassian of Glyphia in Cyprus
+
+Of this saint the Cypriot historian of the fifteenth century Leontios Machairas says in his Chronicle: near Alektora, in a place called Glyphia, is the tomb of Saint Cassian and his relic, and he is kept on the sixteenth of September. Some three kilometres north-east of the village of Alektora, which lies between the districts of Limassol and Paphos, on the border of the villages Archimandrita, Plataniskia and Alektora, is a quiet place called Glyphia; on a hill there stand the ruins of the church of Cassian and the cave in which he lived as an ascetic, in the church’s north wall, enclosed within it with a little gate leading to it, and in the cave, blackened by the many candles the faithful once lit in the saint’s honour, a hollow low on the left walled with plaster by Christians of old, believed to have been the reliquary of his bones — the synaxarion’s notice runs on past the point read here.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου — [the entry](https://www.saint.gr/4162/saint.aspx); read 23 August 2026.*

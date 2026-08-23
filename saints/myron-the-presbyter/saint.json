@@ -1,0 +1,103 @@
+{
+  "slug": "myron-the-presbyter",
+  "display_name": "Myron of Cyzicus, Presbyter and Martyr",
+  "names": [
+    {
+      "form": "Мирон",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученик Мирон",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Мирона пресвитера (250)”; the Prologue has him beheaded at Cyzicus in 250."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Мч. Мирона пресвитера (250)»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 30.08.2026 (17. август ст. ст.) — „Свети мученик Мирон“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Измлада Христа возлюбив, преславне,/ и Того соблюдая Божественныя заповеди,/ к Тому притекл еси весь цел,/ Мироне всечестне,/ и со Ангелы молишися прилежно./ Проси всем почитающим память твою// оставления грехов.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Кондак мученика Мирона»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученик Твој Господе, Мирон, у страдању своме је примио непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победи, а разори и немоћну дрскост демона: Његовим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети мученик Мирон презвитер",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0830",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Athanasius Koulakiotis, New Martyr of Thessalonica
+
+Athanasius came from a small town of Thessalonica, Kouliakia — today Chalastra — once the seat of the bishopric of Kampania; his father Polychrous was headman of that country and his mother was called Loulouda, both devout Christians. He first followed lessons at the Greek school of Thessalonica and later studied under Athanasius of Paros, then at the school of Vatopedi on Athos under Panagiotis Palamas; he went to Constantinople, returned to the Holy Mountain, and came back at last to Kouliakia. There he was falsely accused of having professed the Muslim religion and so was pressed daily to deny Christianity; he stayed unshaken in the Christian faith and was imprisoned, and after the Turks’ various efforts during his long imprisonment to Islamise him he confessed Christ as true God, and they hanged him outside Thessalonica on 8 September 1774 — the noose, the verse says, was seen as a ladder for Athanasius, by which he went up to the breadth of heaven.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 8 Σεπτεμβρίου — [the entry](https://www.saint.gr/950/saint.aspx); read 23 August 2026.*

@@ -1,0 +1,95 @@
+{
+  "slug": "gleb-prince-and-passion-bearer",
+  "display_name": "Gleb, Prince and Passion-bearer",
+  "names": [
+    {
+      "form": "Глеб",
+      "lang": "ru"
+    },
+    {
+      "form": "Давид",
+      "lang": "ru",
+      "note": "his baptismal name"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "passion-bearer",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1015,
+      "latest": 1015,
+      "display": "1015",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Блгв. кн. Глеба, во св. Крещении Давида (1015)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Блгв. кн. Глеба, во св. Крещении Давида (1015)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи,/ спасшеся веры ради,/ княже Глебе,/ труждающимся быстрый помощник/ и ненадежным надежа./ Ты бо болезни врачуеши притекающим к тебе с верою./ Темже и мы верою молимся/ от бед избави нас,/ чтущим любовию память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Тропарь благоверного князя Глеба»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Днесь земля ублажается, напившися крови твоея,/ и храм освящается, приимши тело твое,/ великомучениче княже Глебе./ Желанием болезни твоея за грези предлагаема/ и удесы благоухания освящающи,/ подающи всему миру велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Кондак благоверного князя Глеба»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

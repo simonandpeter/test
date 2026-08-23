@@ -1,0 +1,68 @@
+{
+  "slug": "martha-of-diveyevo",
+  "display_name": "Martha (Milyukova) of Diveyevo",
+  "names": [
+    {
+      "form": "Марфа Дивеевская",
+      "lang": "ru"
+    },
+    {
+      "form": "Марфа Милюкова",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1829,
+      "latest": 1829,
+      "display": "1829",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1810,
+      "latest": 1810,
+      "display": "1810",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Прп. Марфы Дивеевской (1829)»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 03.09.2026 (21. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

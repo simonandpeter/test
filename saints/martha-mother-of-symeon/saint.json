@@ -1,0 +1,83 @@
+{
+  "slug": "martha-mother-of-symeon",
+  "display_name": "Martha, mother of Symeon the Stylite",
+  "names": [
+    {
+      "form": "Марфа",
+      "lang": "ru"
+    },
+    {
+      "form": "Οσία Μάρθα μητέρα του οσίου Συμεών",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Cuvioasă Marta, mama Sfântului Cuvios Simeon Stâlpnicul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 423,
+      "latest": 433,
+      "display": "c. 428",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… и матери его Марфы (ок. 428)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Прп. Симеона Столпника (459) и матери его Марфы (ок. 428)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 septembrie — „Sfânta Cuvioasă Marta, mama Sfântului Cuvios Simeon Stâlpnicul”",
+        "url": "https://doxologia.ro/1-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Οσία Μάρθα μητέρα του οσίου Συμεών, που ασκήτευσε στο όρος Θαυμαστόν»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

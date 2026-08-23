@@ -1,0 +1,68 @@
+{
+  "slug": "moses-monk-martyr-1931",
+  "display_name": "Moses (Kozhin), Hieromonk of Solovki, Monk-martyr (1931)",
+  "names": [
+    {
+      "form": "Моисей",
+      "lang": "ru"
+    },
+    {
+      "form": "Моисей Кожин",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Прмч. Моисея (1931)»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 25 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 07.09.2026 (25. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

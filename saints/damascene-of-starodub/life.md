@@ -1,0 +1,5 @@
+# Damascene, Bishop of Starodub, Hieromartyr (1937)
+
+Damascene — Dmitry Dmitrievich Tsedrik in the world — bishop of Starodub, vicar of the Chernihiv diocese, was born in 1877 in the town of Mayaki in the Odessa district of Kherson province, the son of a postal official. He finished the seminary, then the agricultural institute at Vladivostok as an agronomist and the Kazan institute of oriental languages; soon he was tonsured with the name Damascene and went as a missionary to the Peking ecclesiastical mission. In 1914 he went to the front and served in a Red Cross detachment in the Caucasus; in 1918 he was arrested in Orel province and sentenced to death, and escaped the shooting. The Sretensky calendar’s life runs on past the point read here. The Russian calendar keeps him on 2 September (Julian) with eight presbyters — Euthymius, John, John, Vladimir, Victor, Theodotus, Peter and Stephen — shot in 1937.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4797.htm); read 23 August 2026.*

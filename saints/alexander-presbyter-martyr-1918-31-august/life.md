@@ -1,0 +1,5 @@
+# Alexander (Lyubimov), Presbyter, Hieromartyr (1918)
+
+Alexander Lyubimov was born in 1884 in the village of Polonsk in Pskov province, a priest’s son. Finishing the Pskov seminary in 1905 he went to teach in a parish school, a year later was ordained deacon and then priest for the Holy Trinity cathedral at Pskov, and in 1907 was appointed to the church of the Prophet Elijah at Polonsk — a large parish with an almshouse — where he taught religion in four schools at once. The deacon of the church was [Vladimir Dvinsky](/saints/vladimir-deacon-martyr-1918), and their long service together bound them in spiritual kinship. After the revolution both went on serving, preaching and calling the flock to defend the church’s property; on 10 September 1918 both were arrested on a denunciation, briefly questioned by the Petrograd Cheka and shot the same day in a grove behind the Polonsk churchyard. The Russian calendar keeps them on 31 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandr-ljubimov); read 23 August 2026.*

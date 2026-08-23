@@ -1,0 +1,58 @@
+{
+  "slug": "theophanes-the-confessor-9-september",
+  "display_name": "Theophanes the Confessor (9 September)",
+  "names": [
+    {
+      "form": "Όσιος Θεοφάνης ο Ομολογητής",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 283,
+      "latest": 283,
+      "display": "283",
+      "basis": "traditional",
+      "note": "saint.gr: born 283 under Carus and Carinus."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 9 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 9 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου — «Όσιος Θεοφάνης ο Ομολογητής»",
+        "url": "https://www.saint.gr/09/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "romulus-the-martyr-under-trajan",
+  "display_name": "Romulus, martyred under Trajan, with many soldiers",
+  "names": [
+    {
+      "form": "Ромил",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιοι Ευδόξιος, Ρωμύλος, Ζήνων, Μακάριος, Έντεκα Χιλιάδες Μάρτυρες και Χίλιοι Εκατόν Τέσσερις Μάρτυρες",
+      "lang": "el"
+    },
+    {
+      "form": "Св. муч. Ромил",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 107,
+      "latest": 115,
+      "display": "c. 107–115",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Ромила и с ним многих (ок. 107-115)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Мчч. Ромила и с ним многих (ок. 107-115)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — «Άγιοι Ευδόξιος, Ρωμύλος, Ζήνων, Μακάριος, Έντεκα Χιλιάδες Μάρτυρες και Χίλιοι Εκατόν Τέσσερις Μάρτυρες»",
+        "url": "https://www.saint.gr/09/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.09.2026 (6. септембар ст. ст.) — „Св. муч. Ромил и 11000 војника.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-19&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

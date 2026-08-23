@@ -9,6 +9,10 @@
     {
       "form": "Pothinus",
       "lang": "la"
+    },
+    {
+      "form": "Свешт. муч. Потин еп. Лионски",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -43,8 +47,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.09.2026 (23. август ст. ст.) — „Свешт. муч. Потин еп. Лионски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

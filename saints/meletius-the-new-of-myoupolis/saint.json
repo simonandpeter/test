@@ -1,0 +1,84 @@
+{
+  "slug": "meletius-the-new-of-myoupolis",
+  "display_name": "Meletius the New of Myoupolis",
+  "names": [
+    {
+      "form": "Όσιος Μελέτιος ο νέος που ασκήτευσε στο όρος της Μυουπόλεως",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1035,
+      "latest": 1035,
+      "display": "1035",
+      "basis": "traditional",
+      "note": "saint.gr: born in 1035 at Moutalaske in Cappadocia."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 1 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Όσιος Μελέτιος ο νέος που ασκήτευσε στο όρος της Μυουπόλεως»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "text": "Ὡς ἔνσαρκος Ἄγγελος, καὶ ὑπηρέτης Χριστοῦ, ὡς ἔνθεος ἄνθρωπος καὶ ἀσκητῶν καλλονή, Μελέτιε Ὅσιε, χάριτας θεοδότους, ἐκομίσω διώκειν, πνεύματα πονηρίας, καὶ νοσοῦντας ἰᾶσθαι, δι’ ὅ καὶ ἡ σεπτή σου σορὸς βρύει ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Μελέτιος ο νέος που ασκήτευσε στο όρος της Μυουπόλεως, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/887/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "text": "Ἐξ ἐῴας ἔνδοξε, πρὸς τὴν ἑσπέραν φοιτήσας, ὥσπερ ἄλλος ἥλιος, τῶν ἀρετῶν τὰς ἀκτῖνας, ἥπλωσας, καὶ συνηγάγω πρὸς τὴν σὴν θάλψιν, ἅπαντας, τοὺς ἐν ψύχει παθῶν χειμαζομένους, ὅθεν νῦν σε συνελθόντες, ἀνευφημοῦμεν, Μελέτιε Ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Μελέτιος ο νέος που ασκήτευσε στο όρος της Μυουπόλεως, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/887/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἠ Παρθένος σήμερον."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "serapion-disciple-of-cronides",
+  "display_name": "Serapion, disciple of Cronides",
+  "names": [
+    {
+      "form": "Άγιοι Κρονίδης, Λεόντιος και Σεραπίων",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 324,
+      "display": "under Licinius",
+      "basis": "traditional",
+      "note": "saint.gr: in the fourth century under Licinius."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιοι Κρονίδης, Λεόντιος και Σεραπίων»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

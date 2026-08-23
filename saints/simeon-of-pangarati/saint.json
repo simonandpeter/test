@@ -1,0 +1,73 @@
+{
+  "slug": "simeon-of-pangarati",
+  "display_name": "Simeon of Pângărați",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Simeon de la Pângărați",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1401,
+      "latest": 1420,
+      "display": "early 15th century",
+      "basis": "traditional",
+      "note": "The Romanian life: born at the beginning of the fifteenth century near Piatra Neamț."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 7 septembrie — „Sfântul Cuvios Simeon de la Pângărați”",
+        "url": "https://doxologia.ro/7-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 7 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Cuvioşilor Părinţi Simeon şi Amfilohie, cei ce aţi luminat pădurile Carpaţilor cu rugăciunile voastre şi aţi umplut de mireasmă duhovnicească toată valea Bistriţei, sfetnici de taină ai voievozilor şi făclii luminoase ale călugărilor şi credincioşilor evlavioşi, rugaţi-vă lui Dumnezeu pentru noi, cei ce săvârşim cu dragoste sfântă pomenirea voastră!",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Cuvioşi Părinţi Simeon şi Amfilohie de la Pângăraţi",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-parinti-simeon-amfilohie-de-la-pangarati",
+        "year": 2026
+      }
+    }
+  ]
+}

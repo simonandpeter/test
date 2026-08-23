@@ -1,0 +1,65 @@
+{
+  "slug": "nicholas-confessor-presbyter-1933",
+  "display_name": "Nicholas the Confessor, Presbyter (1933)",
+  "names": [
+    {
+      "form": "Николай",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 1869 at Berezhai, Bezhetsk district."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Св. Николая исп., пресвитера (1933)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Св. Николая исп., пресвитера (1933)»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 01.09.2026 (19. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

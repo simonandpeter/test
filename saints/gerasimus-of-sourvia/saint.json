@@ -1,0 +1,72 @@
+{
+  "slug": "gerasimus-of-sourvia",
+  "display_name": "Gerasimus the New of Sourvia",
+  "names": [
+    {
+      "form": "Όσιος Γεράσιμος κτήτορας της Ιεράς Μονής Αγίας Τριάδος Σουρβίας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1640,
+      "latest": 1660,
+      "display": "mid-17th century",
+      "basis": "traditional",
+      "note": "saint.gr: born in the middle of the seventeenth century at Leontari."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 14 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 14 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου — «Όσιος Γεράσιμος κτήτορας της Ιεράς Μονής Αγίας Τριάδος Σουρβίας»",
+        "url": "https://www.saint.gr/09/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 14. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ο ἔνσαρκος Ἄγγελος, τῶν ἀσκητῶν ἡ κρηπίς, ὁ Νέος Γεράσιμος τῆς Ἐκκλησίας Χριστοῦ, φωστήρ ὁ ἀνέσπερος, ἄνωθεν συγκαλείται, τήν πληθύν τῶν Ἀγγέλων, κάτωθεν συναθροίζει, τῶν ἀνθρώπων τό γένος, τήν θείαν αὐτοῦ μνήμην, ψάλλειν ἐν ἄσμασιν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Γεράσιμος κτήτορας της Ιεράς Μονής Αγίας Τριάδος Σουρβίας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2442/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
+}

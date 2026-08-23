@@ -1,0 +1,66 @@
+{
+  "slug": "neophytus-servant-of-anthousa",
+  "display_name": "Neophytus, servant of Anthousa",
+  "names": [
+    {
+      "form": "Неофит",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 275,
+      "display": "270–275",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “… мчч. Харисима и Неофита (270-275)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «прп. Анфусы (ок. 298) и слуг ее, мчч. Харисима и Неофита (270-275)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.09.2026 (22. август ст. ст.) — „Св. муч. Антуса, и прочи с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-04&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

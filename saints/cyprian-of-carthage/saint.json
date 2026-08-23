@@ -1,0 +1,95 @@
+{
+  "slug": "cyprian-of-carthage",
+  "display_name": "Cyprian of Carthage",
+  "names": [
+    {
+      "form": "Киприан Карфагенский",
+      "lang": "ru"
+    },
+    {
+      "form": "Свешт. муч. Кипријан",
+      "lang": "sr"
+    },
+    {
+      "form": "Cyprianus",
+      "lang": "la"
+    },
+    {
+      "form": "Sfântul Sfințit Mucenic Ciprian, Episcopul Cartaginei",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 195,
+      "latest": 205,
+      "display": "c. 200",
+      "basis": "traditional",
+      "note": "The Sretensky calendar’s life: born around 200 at Carthage."
+    },
+    "death": {
+      "earliest": 258,
+      "latest": 258,
+      "display": "258",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Киприана, еп. Карфагенского (258)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 августа ст. ст. — «Сщмч. Киприана, еп. Карфагенского (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260831.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 septembrie — „Sfântul Sfințit Mucenic Ciprian, Episcopul Cartaginei”",
+        "url": "https://doxologia.ro/13-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.09.2026 (31. август ст. ст.) — „Свешт. муч. Кипријан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-13&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

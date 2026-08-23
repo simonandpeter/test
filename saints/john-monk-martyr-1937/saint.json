@@ -1,0 +1,68 @@
+{
+  "slug": "john-monk-martyr-1937",
+  "display_name": "John (Laba), Hieromonk of Athos, Monk-martyr (1937)",
+  "names": [
+    {
+      "form": "Иоанн",
+      "lang": "ru"
+    },
+    {
+      "form": "Иоанн Лаба",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "1863",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Сщмчч. Иоанна, еп. Великолукского, Алексия, архиеп. Омского, Александра, Михаила и Феодора пресвитеров, прмчч. Илариона, Иоанна и Иерофея (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 04.09.2026 (22. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

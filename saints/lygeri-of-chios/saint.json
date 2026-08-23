@@ -1,0 +1,73 @@
+{
+  "slug": "lygeri-of-chios",
+  "display_name": "Lygeri of Chios, New Martyr",
+  "names": [
+    {
+      "form": "Αγία Λυγερή η Νεομάρτυς η Χιοπολίτις",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "attested",
+      "note": "saint.gr: beheaded 6 September 1822."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 6 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — «Αγία Λυγερή η Νεομάρτυς η Χιοπολίτις»",
+        "url": "https://www.saint.gr/09/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "text": "Ἐνθέως ἐνήθλησας, Παρθενομάρτυς κλεινή, αἱμάτων σου ῥεύμασι, τῆς ἀθανάτου Ζωῆς, το Δένδρον ποτίσασα. Πίστει γάρ παριδοῦσα, ἡδονάς ψυχοφθόρους, ἒῤῥηξας τοῦ βελίαρ, τάς ἐπάλξεις θεόφρον, ἡμῖν παρεχομένη σεπτῶς, χαρίσματα ἒνθεα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Λυγερή η Νεομάρτυς η Χιοπολίτις, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/4453/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
+}

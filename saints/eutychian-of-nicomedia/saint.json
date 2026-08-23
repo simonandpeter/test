@@ -1,0 +1,57 @@
+{
+  "slug": "eutychian-of-nicomedia",
+  "display_name": "Eutychian of Nicomedia",
+  "names": [
+    {
+      "form": "Евтихиан",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 308,
+      "display": "c. 303",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Стратона, Филиппа, Евтихиана и Киприана (ок. 303)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Мчч. Стратона, Филиппа, Евтихиана и Киприана (ок. 303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 30.08.2026 (17. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

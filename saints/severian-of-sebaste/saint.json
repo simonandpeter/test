@@ -1,0 +1,103 @@
+{
+  "slug": "severian-of-sebaste",
+  "display_name": "Severian of Sebaste, Great Martyr",
+  "names": [
+    {
+      "form": "Άγιος Σεβηριανός ο Μεγαλομάρτυρας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Severian",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 324,
+      "display": "under Licinius",
+      "basis": "traditional",
+      "note": "saint.gr: martyred in the years of Licinius."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 9 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 septembrie — „Sfântul Mucenic Severian”",
+        "url": "https://doxologia.ro/9-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου — «Άγιος Σεβηριανός ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/09/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Σοφία τῶν λόγων σου, παρεμβολὴν ἱερόν, ἐνθέως ἐπήλειψας, πανευκλεῶν Ἀθλητῶν, πρὸς ἄθλησιν ἔνθεον ὅθεν τᾶς φθειρομένας, παριδῶν ὑπολήψεις, ἄφθαρτον ἐκομίσω, δι' ἀθλήσεως δόξαν διὸ Σεβηριανὲ σέ, ὕμνοις γεραίρομεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σεβηριανός ο Μεγαλομάρτυρας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/993/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Severian, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Severian",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-severian",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

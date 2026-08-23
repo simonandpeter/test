@@ -1,0 +1,234 @@
+{
+  "slug": "mamas-of-caesarea",
+  "display_name": "Mamas of Caesarea",
+  "names": [
+    {
+      "form": "Мамант",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Μάμας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Mamant",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети мученик Мамант",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 260,
+      "latest": 260,
+      "display": "260",
+      "basis": "traditional",
+      "note": "saint.gr: born at Gangra in Paphlagonia in 260."
+    },
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Маманта, отца его Феодота и матери Руфины (III)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Мч. Маманта, отца его Феодота и матери Руфины (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 septembrie — „Sfântul Mucenic Mamant”",
+        "url": "https://doxologia.ro/2-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Σεπτεμβρίου — «Άγιος Μάμας»",
+        "url": "https://www.saint.gr/09/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 15.09.2026 (2. септембар ст. ст.) — „Свети мученик Мамант“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой Господи, Мамант,/ во страдании своем венец прият нетленный, от Тебе, Бога нашего: имели бо крепость Твою, мучителей низложи,/ сокруши и демонов немощныя дерзости,/ того молитвами спаси душы наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Тропарь мученика Маманта»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Жезлом, святе, от Бога тебе данным,/ люди твоя упаси, на пажитех живоносных:/ звери же невидимый и неукротимыя/ сокруши под ноги тя поющих:/ яко вси иже в бедах предстателя тя тепла, Маманте, имут.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Кондак мученика Маманта»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "text": "Θείον βλάστημα, Μαρτύρων πέλων, ηκολούθησας, ασχέτω πόθω, τοις ενθέοις αληθώς τούτων ίχνεσι και του Σωτήρος κηρύξας το όνομα, εθαυμαστώθης σοφέ δι' αθλήσεως. Μάμα ένδοξε, Χριστόν τον Θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/927/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς Παφλαγόνου τὸ κλέος, καὶ Γαγγραίων τὸ στήριγμα, φύλαξ καὶ φρουρὸς τῶν Κυπρίων, ἀνεδείχθης, Μαμὰ ἔνδοξε. Τὴν Θάλασσαν διῆλθες ὥσπερ ζῶν, καὶ ταύτης τρικυμίας χαλινῶν, θαυμασίως λάρνακά σου, Μόρφου τὴ πάλει, Μάρτυς κατεστήριξας- διὸ ἐν τὴ μνήμη σου, σοφέ, εὐῶδες μύρον βρύει ἐξ αὐτῆς. Δόξα Θεῶ τῷ ἐνεργούντι, διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/927/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/927/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "",
+      "text": "Παφλαγονίας ὁ κλάδος καὶ μαρτύρων ἀγλάϊσμα, πόλεως Μόρφου τὸ κλέος καὶ Κυπρίων τὸ καύχημα, Λεόντων χάσματα ἔφραξας, Μάμα σοφέ, καὶ μαρτυρίου τὸν στέφανον κομισάμενος. Δόξα τῷ σὲ δοξάσαντι καὶ θαυμαστῶς ἐνισχύσαντι, δόξα τῷ χορηγοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/927/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἐν τῇ ράβδῳ Ἅγιε, τῇ ἐκ Θεοῦ σοι δοθείσῃ, τὸν λαόν σου ποίμανον, ἐπὶ νομὰς ζωηφόρους· θήρας δέ, τοὺς ἀοράτους καὶ ἀνημέρους, σύντριψον, ὑπὸ τοὺς πόδας τῶν σὲ ὑμνούντων, ὅτι πάντες οἱ ἐν κινδύνοις, προστάτην Μάμα, θερμόν σε κεκτήμεθα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/927/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Cu toiagul care ţi s-a dat de la Dumnezeu, sfinte, păstoreşte poporul tău la păşune aducătoare de viaţă. Iar fiarele cele nevăzute şi sălbatice sfărâmă-le sub picioarele celor ce te laudă pe tine. Că toţi, cei ce suntem în primejdii, te avem pe tine, Sfinte Mamant, părtinitor fierbinte.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Mucenic Mamant",
+        "url": "https://doxologia.ro/condacul-sfantului-mucenic-mamant",
+        "year": 2026
+      },
+      "model": "Fecioara astăzi..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Mamant, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Mamant",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-mamant",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученик Твој Господе, Мамант, у страдању своме је примио непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победи, а разори и немоћну дрскост демона: Његовим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети мученик Мамант",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0915",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

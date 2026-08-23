@@ -1,0 +1,167 @@
+{
+  "slug": "faith-daughter-of-sophia",
+  "display_name": "Faith (Pistis), daughter of Sophia",
+  "names": [
+    {
+      "form": "Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Muceniță Sofia și fiicele sale: Pistis, Elpis și Agapis",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "under Hadrian",
+      "basis": "traditional",
+      "note": "saint.gr: martyred in the years of Hadrian (117–138)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 17 septembrie — „Sfânta Muceniță Sofia și fiicele sale: Pistis, Elpis și Agapis”",
+        "url": "https://doxologia.ro/17-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — «Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη»",
+        "url": "https://www.saint.gr/09/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Σοφία ἐκθρέψασα, κατὰ τὴν κλῆσιν σεμνή, τᾶς τρεῖς θυγατέρας σου, ταύτας προσάγεις Χριστῷ, ἀθλήσεως σκάμασιν ὅθεν τῆς ἄνω δόξης, σὺν αὐταὶς κοινωνοῦσα, πρέσβευε τῷ Σωτήρι, καλλιμάρτυς Σοφία, δοῦναι τοὶς σὲ τιμώσι, χάριν καὶ ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2452/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "",
+      "text": "Χαίρει ἔχουσα ἡ Ἐκκλησία, σὲ καὶ τέκνα σου καύχημα θεῖον, καὶ γηθοσύνως εὐφημεῖ σε κραυγάζουσα. Σύ μου ὑπάρχεις τὸ καύχημα, καὶ τῶν σῶν τέκνων τὰ πάντιμα λείψανα, μάρτυρες ἔνδοξοι, Σοφία, Πίστις, Ἐλπὶς καὶ Ἀγάπη, Χριστῷ τῷ Θεῷ πρεσβεύσατε σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2452/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "",
+      "text": "Ὡς ἐλαία κατάκαρπος ἀνεβλάστησας ἐν ταῖς αὐλαῖς τοῦ Κυρίου, Σοφία μάρτυς σεμνὴ καὶ προσήγαγες Χριστῷ καρπὸν ἡδύτατον τοὺς τῆς νηδύος σου βλαστούς, δι' ἀγώνων εὐαγῶν, Ἀγάπην τε καὶ Ἐλπίδα σὺν τῇ θεόφρονι Πίστει· μεθ' ὧν δυσώπει ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2452/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "᾿Εν ταῖς μάρτυσι λάμπεις Σοφία ἔνδοξε, καὶ στεφάνοις τῆς νίκης περι­κοσμεῖσαι λαμπροῖς· δι᾿ ὃ ἐν ὕμνοις καὶ ᾠδαῖς εὐφημοῦμέν σε, ὅτι θυγάτρια σεμνὰ τῷ μαρτυρίῳ ὁδηγεῖς, ᾿Αγάπην Πίστιν ᾿Ελπίδα· μεθ᾿ ὧν μὴ παύσῃ πρεσβεύειν, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2452/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Σοφίας τῆς σεμνῆς, ἱερώτατοι κλάδοι, ἡ Πίστις καὶ Ἐλπίς, καὶ Ἀγάπη δειχθεῖσαι, σοφίαν ἀπεμώραναν, τῶν Ἑλλήνων ἐν χάριτι, καὶ ἀθλήσασαι, καὶ νικηφόροι φανεῖσαι, στέφος ἄφθαρτον, παρὰ τοῦ πάντων Δεσπότου, Χριστοῦ ἀνεδήσαντο.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2452/saint.aspx",
+        "year": 2026
+      },
+      "model": "Χορὸς ἀγγελικὸς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Sfinţitele ramuri ale Cinstitei Sofia: Sfintele Pistis, Elpis şi Agapis, cu darul au arătat că înţelepciunea elinilor este nebunie. Şi prin nevoinţe arătându-se biruitoare, s-au încununat cu cunună nepieritoare, de la Stăpânul tuturor, Hristos.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Muceniţe Sofia şi al fiicelor sale: Pistis, Elpis şi Agapis",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-sofia-al-fiicelor-sale-pistis-elpis-agapis",
+        "year": 2026
+      },
+      "model": "Ceata îngerească..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşele cuvântătoare, prin mucenicie v-aţi adus Mielului şi Păstorului, săvârşind călătoria cea către Hristos şi credinţa păzind-o. Pentru aceea, cu suflet vesel astăzi săvârşind pomenirea voastră cea sfântă, minunatelor, pe Hristos Îl slăvim.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Muceniţe Sofia şi al fiicelor sale: Pistis, Elpis şi Agapis",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-sofia-al-fiicelor-sale-pistis-elpis-agapis",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

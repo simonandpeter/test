@@ -1,0 +1,5 @@
+# Paul of Ptolemais
+
+Paul and his sister [Juliana](/saints/juliana-of-ptolemais) were put to death under the emperor Aurelian (270–275) in the Phoenician city of Ptolemais. When the emperor came to the city, Paul, standing among those who met him, made the sign of the cross, and was noticed; he was seized and thrown into prison, and when he was brought to trial the next day he confessed his faith in Christ openly and boldly, and was cruelly tortured. Juliana, seeing her brother suffer, began to accuse the emperor before everyone of injustice and cruelty, and was tortured too. They were beaten, torn with iron hooks and burned on red-hot grills, and their wonderful endurance could not be broken; three of the soldiers who tortured them, struck by the greatness of their spirit, believed in Christ — Quadratus, Acacius and Stratonicus — and died with them.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life564.htm); read 23 August 2026.*

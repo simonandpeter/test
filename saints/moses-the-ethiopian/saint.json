@@ -9,6 +9,14 @@
     {
       "form": "Όσιος Μωυσής ο Αιθίοπας",
       "lang": "el"
+    },
+    {
+      "form": "Моисей Мурин",
+      "lang": "ru"
+    },
+    {
+      "form": "Преподобни Мојсеј Мурин",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -18,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Прп. Моисея Мурина (ок. 400)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -51,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 10.09.2026 (28. август ст. ст.) — „Преподобни Мојсеј Мурин“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -108,6 +134,48 @@
         "url": "https://doxologia.ro/condacul-sfantului-cuvios-moise-etiopianul",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, богоносе отче наш Моисее:/ постом, бдением, молитвою Небесная дарования приим,/ исцеляеши недужныя и души верою приходящих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Тропарь преподобного Моисея Мурина»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мурины заушив и лица демонов поплевав,/ мысленно просиял еси,/ якоже солнце светлое,/ светом жития твоего// и учением наставляя души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Кондак преподобного Моисея Мурина»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 1",
+      "text": "Као пустињски житељ и у телу Анђео и чудотворац, показао си се богоносни оче наш Мојсеје. Постом, бдењем и молитвама, небеске дарове си примио, исцељујући болести оних који ти са вером долазе. Слава Ономе који ти је дао снагу, који те је прославио и који кроз тебе дарује свима исцељење.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Преподобни Мојсеј Мурин",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0910",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

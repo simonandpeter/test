@@ -1,0 +1,89 @@
+{
+  "slug": "euphrosynus-the-cook",
+  "display_name": "Euphrosynus the Cook",
+  "names": [
+    {
+      "form": "Άγιος Ευφρόσυνος ο μάγειρας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Eufrosin Bucătarul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 11 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 11 septembrie — „Sfântul Cuvios Eufrosin Bucătarul”",
+        "url": "https://doxologia.ro/11-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 11 Σεπτεμβρίου — «Άγιος Ευφρόσυνος ο μάγειρας»",
+        "url": "https://www.saint.gr/09/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 11. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ταπεινώσει καρδίας Πάτερ Εὐφρόσυνε, τῷ μαγειρείῳ προσφέρων διακονίαν τὴν σήν, ἐπληρώθης ἀληθῶς Ἁγίου Πνεύματος· ὅθεν ἐγνώρισεν ἡμῖν, τὴν σὴν δόξαν ὁ Θεός, δι’ ἱερέως ὁσίου· ἧς καὶ ἡμᾶς θεοφόρε, μετόχους δεῖξον ταῖς πρεσβείαις σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ευφρόσυνος ο μάγειρας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1000/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Εὐφροσύνης μέτοχος τῆς οὐρανίου, γεγονὼς Εὐφρόσυνε, τῇ ἰσαγγέλῳ σου ζωῇ, ὤφθης Ἀγγέλων ἰσότιμος, μεθ’ ὧν δυσώπει, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ευφρόσυνος ο μάγειρας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1000/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ]
+}

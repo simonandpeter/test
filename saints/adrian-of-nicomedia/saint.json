@@ -9,6 +9,14 @@
     {
       "form": "Άγιος Αδριανός",
       "lang": "el"
+    },
+    {
+      "form": "Адриан",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученици Адријан и Наталија",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -18,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Мчч. Адриана и Наталии и прочих 23, с ними пострадавших (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -51,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 08.09.2026 (26. август ст. ст.) — „Свети мученици Адријан и Наталија“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -108,6 +134,72 @@
         "url": "https://doxologia.ro/condacul-sfintilor-mucenici-adrian-natalia-sotia-sa",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Тропарь мучеников Адриана и Наталии»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Богатство неиждивущее вменил еси/ веру спасенную, треблаженне,/ оставль отеческое нечестие/ и Владыки стопами шествуя,/ Божественными даровании обогатился еси,/ Адриане славне;/ Христа Бога моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Ин тропарь мученика Адриана»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик возсия/ Божественная память/ и земныя озари вся концы светло,/ с веселием зовущих:// Ты еси мучеников, Христе, радование.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Кондак мучеников Адриана и Наталии»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Жены Богомудрыя Божественная словеса в сердце положив,/ Адриане, мучениче Христов, к мучением усердно устремился еси,/ с супругою венец приемь.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Кондак мучеников Адриана и Наталии»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Мученици Твоји Господе, у страдању своме су примили непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победише, а разорише и немоћну дрскост демона: Њиховим молитвама спаси душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети мученици Адријан и Наталија",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0908",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

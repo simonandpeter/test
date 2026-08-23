@@ -1,0 +1,58 @@
+{
+  "slug": "seraphima-abbess-martyr-1918",
+  "display_name": "Seraphima the Abbess, Nun-martyr (1918)",
+  "names": [
+    {
+      "form": "Серафима",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "abbess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмчч. Варсонофия, еп. Кирилловского, и с ним Иоанна пресвитера, прмц. Серафимы игумении и мчч. Анатолия, Николая, Михаила и Филиппа (1918)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Сщмчч. Варсонофия, еп. Кирилловского, и с ним Иоанна пресвитера, прмц. Серафимы игумении и мчч. Анатолия, Николая, Михаила и Филиппа (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 2 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 15.09.2026 (2. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

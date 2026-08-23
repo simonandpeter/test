@@ -1,0 +1,58 @@
+{
+  "slug": "theodore-of-tarsus-archbishop-of-canterbury",
+  "display_name": "Theodore of Tarsus, Archbishop of Canterbury",
+  "names": [
+    {
+      "form": "Άγιος Θεόδωρος εκ Ταρσού Αρχιεπίσκοπος Καντουαρίας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 690,
+      "latest": 690,
+      "display": "690",
+      "basis": "attested",
+      "note": "saint.gr: reposed in 690."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 19 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 19 Σεπτεμβρίου — «Άγιος Θεόδωρος εκ Ταρσού Αρχιεπίσκοπος Καντουαρίας»",
+        "url": "https://www.saint.gr/09/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

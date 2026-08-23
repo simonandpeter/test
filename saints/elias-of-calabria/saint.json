@@ -1,0 +1,58 @@
+{
+  "slug": "elias-of-calabria",
+  "display_name": "Elias of Calabria",
+  "names": [
+    {
+      "form": "Преп. Илија Калабријски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 903,
+      "latest": 903,
+      "display": "903",
+      "basis": "attested",
+      "note": "The Ohrid Prologue: reposed in Thessalonica in 903."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 17 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.08.2026 (17. август ст. ст.) — „Преп. Илија Калабријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-30&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

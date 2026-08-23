@@ -1,0 +1,117 @@
+{
+  "slug": "autonomus-the-hieromartyr",
+  "display_name": "Autonomus, Bishop and Hieromartyr",
+  "names": [
+    {
+      "form": "Άγιος Αυτόνομος",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Avtonom",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 313,
+      "latest": 313,
+      "display": "313",
+      "basis": "traditional",
+      "note": "saint.gr: stoned while celebrating the liturgy, in 313."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 12 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 12 septembrie — „Sfântul Mucenic Avtonom”",
+        "url": "https://doxologia.ro/12-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — «Άγιος Αυτόνομος»",
+        "url": "https://www.saint.gr/09/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 12. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "text": "Ἐκ Δυσμῶν ἀνατείλας ὡς ἀστὴρ οὐρανόφωτος, καὶ πρὸς τὴν Ἐώαν ἐκλάμψας, ταὶς ἀκτίσι τῶν τρόπων σου, τὸν Ἥλιον τῆς δόξης Ἰησοῦν, ἐδόξασας ἀθλήσει σου στερρῆ· διὰ τοῦτο ἐδοξάσθης θεουργικῶς, Αὐτόνομε Πατὴρ ἠμῶν. Δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν Ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Αυτόνομος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2409/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Trupul tău cu posturi topindu-ţi, cu neadormite rugăciuni pe Făcătorul ai rugat pentru păcatul tău, ca să iei iertare desăvârşită; şi ai luat iertare, calea pocăinţei arătând.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Mucenic Avtonom",
+        "url": "https://doxologia.ro/condacul-sfantului-mucenic-avtonom",
+        "year": 2026
+      },
+      "model": "Pe cea neadormită..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Avtonom, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Avtonom",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-avtonom",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Meletius Pegas, Patriarch of Alexandria
+
+Meletius Pegas was patriarch of Alexandria from 1590 to 1601, a great church figure of the sixteenth century who was also locum tenens of the Ecumenical Patriarchate in hard times, 1597–1598. He was born in 1549 at Chandax in Crete to a well-off and devout family, had a notable general education and continued his higher studies at the University of Padua; on his return he embraced the monastic life at the monastery of Angarathos in Crete, whose abbot was Silvester, later patriarch of Alexandria, and as abbot of Angarathos after Silvester’s departure fought zealously against the Latin propaganda. Soon he is mentioned as cleric and protosyncellus of the patriarchate of Alexandria, and after Silvester’s death was consecrated patriarch of Alexandria by the patriarch Joachim of Antioch on 5 August 1590. He worked with great interest for Orthodox relations and inter-church — the synaxarion’s life runs on past the point read here. The Greek calendar keeps him on 13 September.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — [the entry](https://www.saint.gr/2429/saint.aspx); read 23 August 2026.*

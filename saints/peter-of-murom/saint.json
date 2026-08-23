@@ -1,0 +1,50 @@
+{
+  "slug": "peter-of-murom",
+  "display_name": "Peter of Murom, Prince",
+  "names": [
+    {
+      "form": "Петр Муромский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince",
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The translation of their relics (1992) as the Russian calendar keeps it; the principal feast of Peter and Fevronia is 25 June (Julian)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 августа ст. ст. — «Перенесение мощей блгвв. кн. Петра, в иночестве Давида, и кн. Февронии, в иночестве Евфросинии, Муромских чудотворцев (1992)»",
+        "url": "https://days.pravoslavie.ru/Days/20260831.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 13.09.2026 (31. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

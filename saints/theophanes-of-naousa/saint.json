@@ -1,0 +1,58 @@
+{
+  "slug": "theophanes-of-naousa",
+  "display_name": "Theophanes of Naousa",
+  "names": [
+    {
+      "form": "Преп. Теофан",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue: reposed in peace in the fifteenth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 19 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.09.2026 (19. август ст. ст.) — „Преп. Теофан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-01&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

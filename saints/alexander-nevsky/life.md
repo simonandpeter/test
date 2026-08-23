@@ -1,0 +1,7 @@
+# Alexander Nevsky, Grand Prince
+
+Alexander was born on 30 May 1220 at Pereslavl-Zalessky, the second son of Prince Yaroslav — Theodore in baptism, a prince meek, merciful and humane — and of Theodosia, a princess of Ryazan; his elder brother Theodore died at fifteen. He grew up at Pereslavl, where his father ruled, and received the princely tonsure, the rite that makes a boy a warrior, in the cathedral of the Transfiguration there from Simon, bishop of Suzdal. The Romanian life remembers him tall, handsome, brave and full of faith, trained from childhood in the Scriptures, in Latin and Greek and then in the art of war; he began to reign in 1236 and in 1239 married.
+
+The Greek synaxarion keeps him as the venerable Alexander, ruler of Vladimir and Novgorod, who became a monk with the name Alexis and reposed in peace in 1263 — and keeps the translation of his relics as well; the Romanian calendar has his life and hymns; the Russian and Serbian calendars keep on this day the translation of his relics to St Petersburg in 1724, his repose being kept on 23 November. The Sretensky calendar’s long life was read only for his birth and youth.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life3212.htm); The Greek entry is the Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — [the entry](https://www.saint.gr/839/saint.aspx); The Romanian life is at doxologia.ro — [the page](https://doxologia.ro/viata-sfantului-alexandru-nevski); read 23 August 2026.*

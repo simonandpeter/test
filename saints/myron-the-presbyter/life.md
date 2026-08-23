@@ -1,0 +1,7 @@
+# Myron of Cyzicus, Presbyter and Martyr
+
+Myron was a presbyter in Achaia in the third century, of a rich and distinguished family — meek and merciful to people, the life says, but brave in defending his flock. At the feast of the Nativity, as he was celebrating the service, the local governor Antipater came into the church with soldiers to seize the worshippers and lead them to torture; Myron stood up for his people and rebuked the governor for his cruelty, and was given over to torment: hanged and raked with iron combs, then thrown into a red-hot furnace, where the Lord kept him whole while a hundred and fifty of the bystanders were scorched by the fire that burst out of it.
+
+Pressed to worship the idols he refused, and the governor ordered strips cut from his skin from head to foot; the martyr seized one such strip and struck the judge in the face with it, and Antipater, beside himself, took his sword and killed himself. Myron was taken to Cyzicus and beheaded there, in 250, under Decius. The Prologue tells it the same way for the Serbian calendar, adding the angel who strengthened him in the fire.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4455.htm); The Ohrid Prologue for 30 August 2026 (17. август ст. ст.), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-30&prolog=1); read 23 August 2026.*

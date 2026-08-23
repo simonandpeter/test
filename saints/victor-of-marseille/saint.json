@@ -1,0 +1,57 @@
+{
+  "slug": "victor-of-marseille",
+  "display_name": "Victor of Marseille",
+  "names": [
+    {
+      "form": "Св. Виктор",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "The Prologue: suffered at Marseille in the third century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 23 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 23 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.09.2026 (23. август ст. ст.) — „Св. Виктор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-05&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

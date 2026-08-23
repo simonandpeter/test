@@ -1,0 +1,57 @@
+{
+  "slug": "eutychius-of-nursia",
+  "display_name": "Eutychius of Nursia",
+  "names": [
+    {
+      "form": "Евтихий",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 540,
+      "latest": 540,
+      "display": "540",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прпп. Евтихия (ок. 540) и Флорентия (547)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 августа ст. ст. — «Прпп. Евтихия (ок. 540) и Флорентия (547)»",
+        "url": "https://days.pravoslavie.ru/Days/20260823.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 23 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 05.09.2026 (23. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,5 @@
+# Alexius (Naumov), Presbyter, Hieromartyr (1918)
+
+Alexius Nikolaevich Naumov was born on 6 February 1876 and baptised the next day in the church of Peter and Paul at Sludka. Leaving the first class of the Perm seminary in 1894 he was made teacher of the Dobryanka parish school, passed the examination at the Perm church school in 1895 for the title of parish-school teacher, and taught at Ilyinskoye; in 1896 he was made supernumerary psalmist — the calendar’s life runs on past the point read here. He became priest of the works church of the village of Ochyor in the Okhansk district of Perm province; in 1918 he was arrested on a denunciation for anti-Soviet activity, and on 4 September 1918, after cruel tortures and mockery, was shot by Red Army men in the village of Sepych. He was numbered among the martyrs at the jubilee council of 2000, and the Russian calendar keeps him on 22 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksij-naumov); read 23 August 2026.*

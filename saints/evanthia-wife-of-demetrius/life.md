@@ -1,0 +1,5 @@
+# Evanthia, wife of Demetrius of Skepsis
+
+Evanthia — Demetrius, his wife Evanthia and their son Demetrianus — all three were put to death during an earthquake. In the synaxarion of the centurion Cornelius, though, this is found of them: Demetrius was a philosopher and ruler of the city of Skepsis in Asia Minor and a persecutor of Christians; his wife Evanthia and his son Demetrianus were in the temple praying with Cornelius when at that moment an earthquake came and Evanthia and Demetrianus were buried in the ruins of the temple, crying the name of Cornelius. Demetrius learned it, found Cornelius and begged him to save his family, and Cornelius brought the two members of Demetrius’s family alive out of the ruins, which led to the conversion to Christ of Demetrius and of all the inhabitants of that city. The Greek calendar keeps the three on 11 September.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 11 Σεπτεμβρίου — [the entry](https://www.saint.gr/997/saint.aspx); read 23 August 2026.*

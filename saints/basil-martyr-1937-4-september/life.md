@@ -1,0 +1,5 @@
+# Basil (Yezhov), Martyr (1937)
+
+Basil Kireevich Yezhov was born in 1867 in the village of Pokrov in Nizhny Novgorod province, to a peasant family. In 1930 he was arrested for non-payment of taxes and sentenced to five years in the corrective labour camps; in the autumn of 1937 he was arrested a second time, with the priests of the neighbouring parishes of the Gagino district, and they were charged with having carried on, on a religious basis, anti-Soviet agitation by spreading rumours about the unprofitability — of the collective farms, and with helping those who had left them. He did not admit guilt; he was sentenced to be shot and shot on 17 September 1937, with [Alexander Blokhin](/saints/alexander-martyr-1937-4-september), Peter Lonskov, Stephen Mityushkin and the priests of the district. He was numbered among the saints at the council of 2000, and the Russian calendar keeps him on 4 September (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-vasilij-ezhov); read 23 August 2026.*

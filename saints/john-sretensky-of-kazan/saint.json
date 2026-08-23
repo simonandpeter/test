@@ -1,0 +1,57 @@
+{
+  "slug": "john-sretensky-of-kazan",
+  "display_name": "John (Sretensky), Novice of Zilantov, Monk-martyr (1918)",
+  "names": [
+    {
+      "form": "Иоанн",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмчч. Казанских Сергия, Лаврентия, Серафима, Феодосия, Леонтия, Стефана, Георгия, Илариона, Иоанна и Сергия (1918)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Прмчч. Казанских Сергия, Лаврентия, Серафима, Феодосия, Леонтия, Стефана, Георгия, Илариона, Иоанна и Сергия (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 10.09.2026 (28. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "george-confessor-presbyter-1928",
+  "display_name": "George (Kossov), Archpriest, Confessor (1928)",
+  "names": [
+    {
+      "form": "Георгий",
+      "lang": "ru"
+    },
+    {
+      "form": "Георгий Коссов",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1855,
+      "latest": 1855,
+      "display": "1855",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Св. Георгия исп., пресвитера (1928)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 08.09.2026 (26. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

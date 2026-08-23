@@ -1,0 +1,72 @@
+{
+  "slug": "peter-of-dabar-bosnia",
+  "display_name": "Peter, Metropolitan of Dabar-Bosnia, Hieromartyr (1941)",
+  "names": [
+    {
+      "form": "Петр Дабро-Боснийский",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети Петар Дабробосански",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Петра, митр. Дабро-Боснийского (1941)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Сщмч. Петра, митр. Дабро-Боснийского (1941) (Серб.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Серб.)”, a saint of the Serbian church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 17.09.2026 (4. септембар ст. ст.) — „Свети Петар Дабробосански“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

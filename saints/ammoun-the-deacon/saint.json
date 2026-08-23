@@ -1,0 +1,71 @@
+{
+  "slug": "ammoun-the-deacon",
+  "display_name": "Ammoun the Deacon",
+  "names": [
+    {
+      "form": "Аммун",
+      "lang": "ru"
+    },
+    {
+      "form": "Αμμούν ο διδάσκαλος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (IV)”; the life: under Licinius, early fourth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Мцц. 40 дев постниц и мч. Аммуна диакона, учителя их (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Αγίες Τεσσαράκοντα Παρθένες και Ασκήτριες και Αμμούν ο διδάσκαλος αυτών»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

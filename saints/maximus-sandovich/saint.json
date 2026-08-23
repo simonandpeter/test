@@ -1,0 +1,62 @@
+{
+  "slug": "maximus-sandovich",
+  "display_name": "Maximus Sandovich of Gorlice, Hieromartyr (1914)",
+  "names": [
+    {
+      "form": "Максим Горлицкий",
+      "lang": "ru"
+    },
+    {
+      "form": "Максим Сандович",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1914,
+      "latest": 1914,
+      "display": "1914",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Максима Горлицкого пресвитера (1914)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Сщмч. Максима Горлицкого пресвитера (1914)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 24 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 06.09.2026 (24. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "florus-of-illyricum",
+  "display_name": "Florus of Illyricum",
+  "names": [
+    {
+      "form": "Флор",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученик Флор",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Флора и Лавра (II)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Мчч. Флора и Лавра (II)»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 18 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 31.08.2026 (18. август ст. ст.) — „Свети мученик Флор“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=08",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преудобренную и богомудрую двоицу пресветлую/ восхвалим, вернии, по достоянию,/ Флора преблаженнаго и Лавра всечестнаго./ Иже усердно Троицу несозданную ясно проповедасте всем,/ темже пострадавше до крове,/ и венцы пресветлыми увязостеся,// молитеся Христу Богу, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Тропарь мучеников Флора и Лавра»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко благочестия мученики и страдальцы Христовы богомудрены,/ вселенная преславно почитает Флора и Лавра днесь,/ яко да улучим благодать и милость молитвами их// и избавимся бед и напастей, гнева же и скорби в День Судный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 августа ст. ст. — «Кондак мучеников Флора и Лавра»",
+        "url": "https://days.pravoslavie.ru/Days/20260818.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

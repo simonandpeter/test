@@ -1,0 +1,161 @@
+{
+  "slug": "alexander-patriarch-of-constantinople",
+  "display_name": "Alexander, Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Александр",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Αλέξανδρος Πατριάρχης Κωνσταντινούπολης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Alexandru, Patriarhul Constantinopolului",
+      "lang": "ro"
+    },
+    {
+      "form": "Св. Александар, патријарх Цариградски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "340",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Свтт. Александра (340) …”; the Prologue has him die in his 98th year, in 340."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Свтт. Александра (340), Иоанна (595) и Павла Нового (784), патриархов Константинопольских»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Ierarh Alexandru, Patriarhul Constantinopolului”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — «Άγιοι Αλέξανδρος, Ιωάννης και Παύλος ο νέος, Πατριάρχες Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/08/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.09.2026 (30. август ст. ст.) — „Св. Александар, Јован и Павле патријарси Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-12&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христовою любовию распалаеми, славнии,/ и ярем Его приемшии — Крест Честный,/ подражатели Того жития явистеся/ и Божественный славы Его причастницы бысте,/ Александре Богомудре со Иоанном чудным и Павлом славным./ Темже, Престолу Его предстояще,/ прилежно молитеся за души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Кондак святителей Александра, Иоанна и Павла»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ´.",
+      "text": "Μύσται οὐράνιοι ἀποδεικνύμενοι, θεῖοι ἐκφάντορες τῷ κόσμῳ ὤφθητε, τὴν Ἐκκλησίαν τοῦ Χριστοῦ, ποιμάναντες θεαρέστως, ἱερὲ Ἀλέξανδρε, τῆς Τριάδος ὁ πρόμαχος, Ἰωάννη ἔνδοξε, ὁ τῆς χάριτος τρόφιμος, καὶ Παῦλε Ἱερέων ἀκρότης, ὅθεν ὑμᾶς ἀνευφημοῦμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Αλέξανδρος, Ιωάννης και Παύλος ο νέος, Πατριάρχες Κωνσταντινούπο...., Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/848/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Mărită tăierea Înaintemergătorului, rânduială Dumnezeiască a fost, ca şi celor din iad să propovăduiască venirea Mântuitorului. Să se tânguiască Irodiada care a cerut ucidere fărădelege. Că nu Legea lui Dumnezeu nici Viaţa Cea Vie a iubit, ci pe cea amăgitoare şi vremelnică.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ioan, Înaintemergătorul şi Botezătorul Domnului, la Sărbătoarea Sfinţilor Ierarhi Alexandru, Ioan şi Pavel cel Nou, Patriarhii Constantinopolului",
+        "url": "https://doxologia.ro/condacul-sfantului-ioan-inaintemergatorul-botezatorul-domnului-la-sarbatoarea-sfintilor-ierarhi",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu turma ta, ca unul care m-am izbăvit de cei râu credincioşi, aduc semne de biruinţă şi mulţumire, ţie nebiruitului viteaz, ierarhe. Pentru că ai omorât pe Arie cel nebun şi ai amuţit pe filosoful cel semeţ. Pentru aceea, grăiesc către tine: Bucură-te, părinte, de trei ori fericite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Ierarhi Alexandru, Ioan şi Pavel cel Nou, Patriarhii Constantinopolului",
+        "url": "https://doxologia.ro/condacul-sfintilor-ierarhi-alexandru-ioan-pavel-cel-nou-patriarhii-constantinopolului",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pomenirea dreptului cu laude, iar ţie destul îţi este mărturia Domnului, Înaintemergătorule. Că te-ai arătat cu adevărat mai cinstit şi decât proorocii. Că te-ai învrednicit a boteza în repejunile Iordanului pe Cel Propovăduit. Drept aceea, pentru adevăr nevoindu-te, bucurându-te, ai binevestit şi celor din iad pe Dumnezeu, Cel Ce S-a arătat în trup: pe Cel Ce a ridicat păcatul lumii şi ne-a dăruit nouă mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ioan, Înaintemergătorul şi Botezătorul Domnului, la Sărbătoarea Sfinţilor Ierarhi Alexandru, Ioan şi Pavel cel Nou, Patriarhii Constantinopolului",
+        "url": "https://doxologia.ro/troparul-sfantului-ioan-inaintemergatorul-botezatorul-domnului-la-sarbatoarea-sfintilor-ierarhi",
+        "year": 2026
+      }
+    }
+  ]
+}

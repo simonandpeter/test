@@ -1,0 +1,132 @@
+{
+  "slug": "bessarion-of-larissa",
+  "display_name": "Bessarion, Archbishop of Larissa",
+  "names": [
+    {
+      "form": "Άγιος Βησσαρίων Αρχιεπίσκοπος Λαρίσης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Visarion, Arhiepiscopul Larisei",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1490,
+      "latest": 1490,
+      "display": "1490",
+      "basis": "attested",
+      "note": "saint.gr: born 1490 at Porta Panagia near Trikala."
+    },
+    "death": {
+      "earliest": 1541,
+      "latest": 1541,
+      "display": "1541",
+      "basis": "attested",
+      "note": "doxologia.ro: reposed 13 September 1541, aged nearly fifty-one."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 septembrie — „Sfântul Ierarh Visarion, Arhiepiscopul Larisei”",
+        "url": "https://doxologia.ro/15-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝ on doxologia.ro’s list."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — «Άγιος Βησσαρίων Αρχιεπίσκοπος Λαρίσης»",
+        "url": "https://www.saint.gr/09/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "text": "Τῆς Πύλης τό βλάστημα, τῆς Θεσσαλίας φωστήρ, τῆς Τρίκκης τό σέμνωμα καί τῶν θαυμάτων πηγή, ἐδείχθης τρισόλβιε. Πᾶσαν δοκιμασίαν ἐν Χριστῷ ὑπομείνας, δόξῃ ἠγλαϊσμένος σύν ἀγγέλοις ἀγάλλῃ. Ἅγιε Βησσαρίων πανάριστε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Βησσαρίων Αρχιεπίσκοπος Λαρίσης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2441/saint.aspx",
+        "year": 2026
+      },
+      "model": "Κανόνα πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "text": "Τόν ποιμένα Λαρίσης καί Τρικκαίων τόν ἔφορον, τόν θαυματουργόν Ἱεράρχην, τοῦ Χριστοῦ Βησσαρίωνα, τιμήσωμεν ἐν ὕμνοις οἱ πιστοί· ἰάσεις γάρ πηγάζει δαψιλεῖς, καί λυτροῦται νοσημάτων φθοροποιῶν τούς εὐσεβῶς κραυγάζοντας. Δόξα τῷ σέ δοξάσαντι λαμπρῶς, δόξα τῷ σέ θαυμαστώσαντι, δόξα τῷ ἐνεργοῦντι διά σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Βησσαρίων Αρχιεπίσκοπος Λαρίσης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2441/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Din pruncie, primind de la Dumnezeu biruinţă asupra demonilor, preasfinţite părinte şi făcându-te întocmai ca un în ger între oameni, te-ai mutat acum la locaşurile cele cereşti. Pentru aceasta şi nouă, celor ce ne aflăm jos, ni se cade a striga ţie: bucură-te, Părinte Visarion.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Visarion, Arhiepiscopul Larisei",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-visarion-arhiepiscopul-larisei",
+        "year": 2026
+      },
+      "model": "Porunca cea cu Taină..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru răbdarea ta, ţi-ai agonisit plata ta, părinte cuvioase; în rugăciuni neîncetat răbdând, pe săraci iubind şi pe aceia îndestulându-i. Ci, te roagă lui Hristos Dumnezeu, Sfinte Visarion Milostive, Fericite, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Visarion, Arhiepiscopul Larisei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-visarion-arhiepiscopul-larisei",
+        "year": 2026
+      }
+    }
+  ]
+}

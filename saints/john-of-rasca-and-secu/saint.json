@@ -1,0 +1,73 @@
+{
+  "slug": "john-of-rasca-and-secu",
+  "display_name": "John of Râșca and Secu, Bishop of Roman",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Ioan de la Râșca și Secu, Episcopul Romanului",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1685,
+      "latest": 1685,
+      "display": "1685",
+      "basis": "attested",
+      "note": "doxologia.ro: went to the Lord in 1685."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 30 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Ierarh Ioan de la Râșca și Secu, Episcopul Romanului”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Ucenic preaales al Sfinţilor Mitropoliţi Varlaam şi Dosoftei ai Moldovei, prin rânduiala lui Dumnezeu ai fost, Ierarh Sfânt şi minunat, Episcop al Huşilor şi Arhiepiscop al Romanului. Păzind dreapta credinţă, ai păstorit turma lui Hristos şi, în sfinţenie vieţuind, ai binecuvântat sfintele mănăstiri Râşca şi Secu. Sfinte Ierarhe Ioane, roagă-te lui Dumnezeu să mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Ioan de la Râşca şi Secu, Arhiepiscopul Romanului",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ioan-de-la-rasca-secu-arhiepiscopul-romanului",
+        "year": 2026
+      }
+    }
+  ]
+}

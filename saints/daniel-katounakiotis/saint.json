@@ -1,0 +1,98 @@
+{
+  "slug": "daniel-katounakiotis",
+  "display_name": "Daniel Katounakiotis",
+  "names": [
+    {
+      "form": "Όσιος Δανιήλ ο Κατουνακιώτης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Daniil Katunakiotul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1844,
+      "latest": 1846,
+      "display": "1844 or 1846",
+      "basis": "attested",
+      "note": "saint.gr: born at Smyrna in 1844; doxologia.ro: 1846."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 7 septembrie — „Sfântul Cuvios Daniil Katunakiotul”",
+        "url": "https://doxologia.ro/7-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — «Όσιος Δανιήλ ο Κατουνακιώτης»",
+        "url": "https://www.saint.gr/09/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α'.",
+      "text": "Μετελθὼν πολιτείαν σεμνὴν ἐν Ἄθωνι, Κατουνακίων κοσμῆτορ, θεοειδὲς Δανιήλ, τὸ ἐκ πέτρας μέλι ἥδιστον παρήγαγες τῆς ψυχοτρόφου ἀρετῆς ὥσπερ μέλισσα, σοφέ, ἀκάματος· ὅθεν πάντες τῶν σῶν χαρίτων τρυγῶντες ἀπεκδεχόμεθα σὴν εὔνοιαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Δανιήλ ο Κατουνακιώτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/4461/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "text": "Ἀθωνιτῶν ὁσίων πάντων τὸν ἑπόμενον τῇ ἀρετῇ καὶ διακρίσει ἐπαινέσωμεν τὸν ἐκλάμψαντα συνέσει καὶ ἐγκρατείᾳ, ὁδηγὸν εὐσεβοφρόνων ἀπλανέστατον τὸν γενόμενον τὰ πάντα πᾶσι κράζοντες· χριστοφίλητε Δανιήλ, χαῖρε, ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Δανιήλ ο Κατουνακιώτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/4461/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ Ὑπερμάχῳ."
+    }
+  ]
+}

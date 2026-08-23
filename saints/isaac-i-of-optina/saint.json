@@ -1,0 +1,65 @@
+{
+  "slug": "isaac-i-of-optina",
+  "display_name": "Isaac I of Optina",
+  "names": [
+    {
+      "form": "Исаакий Оптинский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1810,
+      "latest": 1810,
+      "display": "1810",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 31 May 1810 at Kursk."
+    },
+    "death": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Исаакия I Оптинского (1894)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Прп. Исаакия I Оптинского (1894)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 04.09.2026 (22. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

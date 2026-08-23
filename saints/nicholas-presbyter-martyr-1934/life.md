@@ -1,0 +1,5 @@
+# Nicholas (Okolovich), Presbyter, Hieromartyr (1934)
+
+Nicholas was born on 4 May 1863 in the village of Uzhlyatino in the Vitebsk district, a psalmist’s son, marked from childhood by deep faith in the Lord and love of God’s house, bred in him by devout parents. After the Vitebsk church school he entered the Vitebsk seminary in 1877 and finished it in the first class; from 1883 to 1887 he studied at the Moscow Academy, finishing as a master, and, of a peaceful disposition and an inborn tact with those around him, the future hieromartyr while still — the calendar’s life runs on past the point read here. He taught religion and headed church societies, was rector of the Voronezh seminary in 1907–1913, then taught again at Vitebsk and in 1922 became rector of the cathedral; in the years of persecution he kept faith with the Church, rejected Renovationism and revived parishes. Arrested in 1931 on a charge of anti-Soviet agitation, he died in custody in 1934; the Russian calendar keeps him on 17 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-nikolaj-okolovich); read 23 August 2026.*

@@ -1,0 +1,70 @@
+{
+  "slug": "agapius-of-gaza",
+  "display_name": "Agapius of Gaza",
+  "names": [
+    {
+      "form": "Агапий",
+      "lang": "ru"
+    },
+    {
+      "form": "Св. муч. Агапије",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 306,
+      "display": "304–306",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Тимофея, Агапия и Феклы (304-306)”; the life gives 304."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Мчч. Тимофея, Агапия и Феклы (304-306)»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.09.2026 (19. август ст. ст.) — „Св. муч. Тимотеј, Агапије и Текла.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-01&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

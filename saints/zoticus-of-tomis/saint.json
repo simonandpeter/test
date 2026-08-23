@@ -1,0 +1,84 @@
+{
+  "slug": "zoticus-of-tomis",
+  "display_name": "Zoticus of Tomis",
+  "names": [
+    {
+      "form": "Άγιοι Λουκιανός, Ζωτικός και Ηλεί",
+      "lang": "el"
+    },
+    {
+      "form": "Sfinții Mucenici din Dobrogea: Macrobie, Gordian, Ilie, Zotic, Lucian și Valerian",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 323,
+      "latest": 324,
+      "display": "c. 323–324",
+      "basis": "traditional",
+      "note": "saint.gr: in the fourth century under Licinius; the Romanian Lives: about 323–324."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 septembrie — „Sfinții Mucenici din Dobrogea: Macrobie, Gordian, Ilie, Zotic, Lucian și Valerian”",
+        "url": "https://doxologia.ro/13-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιοι Λουκιανός, Ζωτικός και Ηλεί»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Să cinstim cu credință pe Mucenicii Sfinți cei ce în Tomis, prin chinuri, prin sabie și prin foc sfârșit bun au dobândit, mărturisind pe Domnul, primind de la El cununi nepieritoare și fiind cinstiți acum în ceruri cu multă slavă, mijlocesc lumii pace și mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici din Dobrogea: Macrobie, Gordian, Ilie, Zotic, Lucian și Valerian",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-din-dobrogea-macrobie-gordian-ilie-zotic-lucian-valerian",
+        "year": 2026
+      }
+    }
+  ]
+}

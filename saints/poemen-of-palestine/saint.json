@@ -1,0 +1,70 @@
+{
+  "slug": "poemen-of-palestine",
+  "display_name": "Poemen of Palestine",
+  "names": [
+    {
+      "form": "Пимен Палестинский",
+      "lang": "ru"
+    },
+    {
+      "form": "Преп. Пимен Палестински",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 582,
+      "latest": 602,
+      "display": "late 6th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Пимена Палестинского (ок. 602)”; the Prologue: under Maurice (582–602)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Прп. Пимена Палестинского (ок. 602)»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.09.2026 (27. август ст. ст.) — „Преп. Пимен Палестински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-09&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

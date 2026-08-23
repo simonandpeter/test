@@ -1,0 +1,5 @@
+# Babylas of Nicomedia, teacher, with 84 children
+
+Babylas and his eighty-four pupils suffered at Nicomedia for confessing Christianity in the reign of Maximian — later, the Greek synaxarion notes, than the bishop of Antioch of the same name kept the same day. The emperor, staying at Nicomedia, raised a persecution, and the old man Babylas, who taught children Christian piety, was denounced to him like many other believers; brought before the emperor he was given to many torments for confessing the true God, and through his sufferings kept crying to God: I thank you, Lord, that you have made me, old and weak, young and strong. After a stoning — the Sretensky calendar’s life runs on past the point read here — he was beheaded with his eighty-four young pupils.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life1450.htm); The Greek entry is the Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — [the entry](https://www.saint.gr/2340/saint.aspx); read 23 August 2026.*

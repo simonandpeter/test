@@ -1,0 +1,71 @@
+{
+  "slug": "macarius-disciple-of-niphon",
+  "display_name": "Macarius the New, disciple of Patriarch Niphon, Monk-martyr (1527)",
+  "names": [
+    {
+      "form": "Άγιος Μακάριος ο Νέος ο οσιομάρτυρας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Nou-Mucenic Macarie, ucenicul Patriarhului Nifon",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1527,
+      "latest": 1527,
+      "display": "1527",
+      "basis": "attested",
+      "note": "doxologia.ro: † 14 September 1527."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 14 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 14 septembrie — „Sfântul Nou-Mucenic Macarie, ucenicul Patriarhului Nifon”",
+        "url": "https://doxologia.ro/14-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου — «Άγιος Μακάριος ο Νέος ο οσιομάρτυρας»",
+        "url": "https://www.saint.gr/09/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 14. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

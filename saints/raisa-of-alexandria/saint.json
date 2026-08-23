@@ -1,0 +1,61 @@
+{
+  "slug": "raisa-of-alexandria",
+  "display_name": "Raisa (Irais) of Alexandria",
+  "names": [
+    {
+      "form": "Раиса",
+      "lang": "ru"
+    },
+    {
+      "form": "Ираида",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 313,
+      "display": "c. 308",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Раисы (Ираиды) (ок. 308)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мц. Раисы (Ираиды) (ок. 308)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

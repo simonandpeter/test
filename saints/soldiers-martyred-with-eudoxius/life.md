@@ -1,0 +1,5 @@
+# The Soldiers Martyred with Eudoxius at Melitene
+
+These were the soldiers — 1,104, the Greek synaxarion and the Prologue count, 1,134 by others — whom [Eudoxius](/saints/eudoxius-of-melitene), the Christian count who had fled Diocletian’s edict to Melitene in Armenia, had brought to Christianity, and who were beheaded with him, Zeno and Macarius when the governor of Melitene tried and tortured them. The Greek verse counts them: a tenfold ten and a thousand martyrs and a simple four end together by the sword. The Russian calendar names only the three and speaks of their company.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — [the entry](https://www.saint.gr/2358/saint.aspx); The Ohrid Prologue for 19 September 2026 (6. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-19&prolog=1); The Sretensky calendar’s life is at days.pravoslavie.ru — [the entry](https://days.pravoslavie.ru/Life/life1462.htm); read 23 August 2026.*

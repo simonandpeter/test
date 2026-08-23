@@ -1,0 +1,50 @@
+{
+  "slug": "amphilochius-makris-of-patmos",
+  "display_name": "Amphilochius (Makris) of Patmos",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Amfilohie Makris din Patmos",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics, as the Romanian calendar keeps it on 19 September."
+      },
+      "source": {
+        "text": "doxologia.ro, 19 septembrie — „Mutarea moaștelor Sfântului Amfilohie Makris din Patmos”",
+        "url": "https://doxologia.ro/19-septembrie",
+        "year": 2026
+      },
+      "note": "The translation of his relics, as doxologia.ro lists it for 19 September."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 19 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

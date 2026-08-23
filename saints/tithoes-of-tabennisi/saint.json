@@ -1,0 +1,58 @@
+{
+  "slug": "tithoes-of-tabennisi",
+  "display_name": "Tithoes of Tabennisi",
+  "names": [
+    {
+      "form": "Преп. Титој",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 500,
+      "display": "4th or 5th century",
+      "basis": "traditional",
+      "note": "The Prologue: reposed in the fourth or fifth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 26 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.09.2026 (26. август ст. ст.) — „Преп. Титој.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-08&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

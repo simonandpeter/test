@@ -1,0 +1,71 @@
+{
+  "slug": "raphael-of-shishatovac",
+  "display_name": "Raphael of Šišatovac, Hieromartyr (1941)",
+  "names": [
+    {
+      "form": "Рафаил",
+      "lang": "ru"
+    },
+    {
+      "form": "Свештеномученик Рафаило Шишатовачки",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмч. Рафаила (1941)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Прмч. Рафаила (1941) (Серб.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Серб.)”, a saint of the Serbian church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 03.09.2026 (21. август ст. ст.) — „Свештеномученик Рафаило Шишатовачки“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

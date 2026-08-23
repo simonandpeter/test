@@ -1,0 +1,87 @@
+{
+  "slug": "ilarion-felea",
+  "display_name": "Ilarion Felea, Priest and Martyr",
+  "names": [
+    {
+      "form": "Sfântul Preot Mucenic Ilarion Felea",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "The Romanian life: born 21 March 1903 at Valea Bradului, Hunedoara county."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 18 septembrie — „Sfântul Preot Mucenic Ilarion Felea”",
+        "url": "https://doxologia.ro/18-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 18 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pe grăitorul de Dumnezeu și mărturisitorul lui Hristos, pe Sfântul Preot Ilarion, care a odrăslit din pământul Crișanei și s-a arătat ca o făclie aprinsă a dreptei credințe, învățând și povățuind pe cei credincioși pe calea mântuirii, să-l lăudăm cu evlavie, că a primit cununa muceniciei și luminii celei neînserate s-a făcut părtaș.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Preot Mucenic Ilarion Felea",
+        "url": "https://doxologia.ro/condacul-sfantului-preot-mucenic-ilarion-felea",
+        "year": 2026
+      },
+      "model": "Pe Născătoarea de Dumnezeu..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "",
+      "text": "Cuvântul Evangheliei ai mărturisit, vrednic slujitor al turmei tale și spre Taborul cel ceresc ai alergat, Pătimirii Domnului urmând. Pentru aceasta, te și veselești de slava Dumnezeirii, Părintele nostru Ilarion. Roagă-te lui Hristos Dumnezeu să miluiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Preot Mucenic Ilarion Felea",
+        "url": "https://doxologia.ro/troparul-sfantului-preot-mucenic-ilarion-felea",
+        "year": 2026
+      }
+    }
+  ]
+}

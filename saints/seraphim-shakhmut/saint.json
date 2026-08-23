@@ -1,0 +1,64 @@
+{
+  "slug": "seraphim-shakhmut",
+  "display_name": "Seraphim (Shakhmut), Archimandrite, Monk-martyr (1946)",
+  "names": [
+    {
+      "form": "Серафим (Шахмуть)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1901,
+      "latest": 1901,
+      "display": "1901",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 1901 at Podlesye."
+    },
+    "death": {
+      "earliest": 1945,
+      "latest": 1946,
+      "display": "1945/1946",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмч. Серафима (1946)”; its life: † 1945."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Прмч. Серафима (1946)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 24 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 06.09.2026 (24. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

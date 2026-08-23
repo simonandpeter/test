@@ -1,0 +1,65 @@
+{
+  "slug": "pimen-of-verny",
+  "display_name": "Pimen, Bishop of Verny, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Пимен Верненский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 5 November 1879 at Vasilyevskoye, Cherepovets district."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Пимена, еп. Верненского, Сергия, Василия, Филиппа, Владимира пресвитеров, прмч. Мелетия (1918)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Сщмч. Пимена, еп. Верненского, Сергия, Василия, Филиппа, Владимира пресвитеров, прмч. Мелетия (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 3 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

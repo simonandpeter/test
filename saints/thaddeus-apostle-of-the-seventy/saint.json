@@ -1,0 +1,114 @@
+{
+  "slug": "thaddeus-apostle-of-the-seventy",
+  "display_name": "Thaddeus, Apostle of the Seventy",
+  "names": [
+    {
+      "form": "Фаддей",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети апостол Тадеј",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 39,
+      "latest": 49,
+      "display": "c. 44",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Ап. от 70-ти Фаддея (ок. 44)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Ап. от 70-ти Фаддея (ок. 44)»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 03.09.2026 (21. август ст. ст.) — „Свети апостол Тадеј“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Днесь Едес град веселится,/ прием тобою Крещения баню,/ и Авгарь, страстей пременен, твою память славит./ С нимиже поем и мы:/ веселия духовнаго исполни живот наш/ и страсти исцели,/ Фаддее апостоле, молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Тропарь апостола Фаддея»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоле святый Фаддее,/ моли Милостиваго Бога,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Ин тропарь апостола Фаддея, общий»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко звезду пресветлую/ Церковь тя стяжа,/ апостоле Фаддее,/ чудесы твоими всегда просвещаема,// спаси верою чтущия память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Кондак апостола Фаддея»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

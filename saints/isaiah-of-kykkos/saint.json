@@ -1,0 +1,85 @@
+{
+  "slug": "isaiah-of-kykkos",
+  "display_name": "Isaiah, founder of Kykkos",
+  "names": [
+    {
+      "form": "Όσιος Ησαΐας κτίτωρ της Ιεράς Βασιλικής και Σταυροπηγιακής Μονής Κύκκου",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "saint.gr: lived as a hermit about the eleventh century where the monastery of Kykkos now stands."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 10 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 10 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου — «Όσιος Ησαΐας κτίτωρ της Ιεράς Βασιλικής και Σταυροπηγιακής Μονής Κύκκου»",
+        "url": "https://www.saint.gr/09/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 10. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Της κλεινής Μάνδρας Κύκκου πρώτος κτίτωρ γεγένησαι, πάτερ Ησαΐα παμμάκαρ, ην μεγάλως επλούτησας, κομίσας Ελεούσης την μορφήν, Λουκά του ιερού έργον σεπτόν, εκ της Πόλεως βουλήσει τη θεϊκή, και άνακτος επινεύσει δόξα τω σε δοξάσαντι Χριστώ, δόξα τω θαυμαστώσαντι, όν υπέρ τέκνων σου αεί, ικέτευε τρισόλβιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ησαΐας κτίτωρ της Ιεράς Βασιλικής και Σταυροπηγιακής Μονής Κύκκο...., Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/4163/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Όρος του Κύκκου καθηγίασας πάτερ, ασκητική σου πολιτεία και πόνοις, εν ω θρόνον ητοίμασος Μητρί τη του Θεού, το σεπτόν εικόνισμα, ενεγκών Ελεούσης, ο ιερογράφησεν, ο Λουκάς θαυμασίως, και νυν πρεσβεύεις προς τον Αγαθόν, ώ Ησαΐα,υπέρ των τιμώντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ησαΐας κτίτωρ της Ιεράς Βασιλικής και Σταυροπηγιακής Μονής Κύκκο...., Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/4163/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
+    }
+  ]
+}

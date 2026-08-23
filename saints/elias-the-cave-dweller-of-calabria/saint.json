@@ -1,0 +1,57 @@
+{
+  "slug": "elias-the-cave-dweller-of-calabria",
+  "display_name": "Elias the Cave-dweller (Speleotes)",
+  "names": [
+    {
+      "form": "Όσιοι Ηλίας ο Σπηλαιώτης και Αρσένιος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: lived about the ninth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 11 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 11 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 11 Σεπτεμβρίου — «Όσιοι Ηλίας ο Σπηλαιώτης και Αρσένιος»",
+        "url": "https://www.saint.gr/09/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 11. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

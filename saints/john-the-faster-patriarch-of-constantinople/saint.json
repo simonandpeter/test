@@ -1,0 +1,148 @@
+{
+  "slug": "john-the-faster-patriarch-of-constantinople",
+  "display_name": "John IV the Faster, Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Иоанн Постник",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Ιωάννης ο Νηστευτής, Πατριάρχης Κωνσταντινούπολης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Ioan Postitorul, Patriarhul Constantinopolului",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети Јован Посник",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 595,
+      "latest": 595,
+      "display": "595",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Иоанна постника, патриарха Константинопольского (595)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His own day; all four calendars also keep him on 30 August with Alexander and Paul the New, patriarchs of Constantinople."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Прп. Иоанна постника, патриарха Константинопольского (595)»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "His own day; all four calendars also keep him on 30 August with Alexander and Paul the New, patriarchs of Constantinople."
+      },
+      "source": {
+        "text": "doxologia.ro, 2 septembrie — „Sfântul Ierarh Ioan Postitorul, Patriarhul Constantinopolului”",
+        "url": "https://doxologia.ro/2-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "His own day; all four calendars also keep him on 30 August with Alexander and Paul the New, patriarchs of Constantinople."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Σεπτεμβρίου — «Άγιος Ιωάννης ο Νηστευτής, Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/09/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His own day; all four calendars also keep him on 30 August with Alexander and Paul the New, patriarchs of Constantinople."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 15.09.2026 (2. септембар ст. ст.) — „Свети Јован Посник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἰωάννη Ὅσιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Νηστευτής, Πατριάρχης Κωνσταντινούπολης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/926/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "text": "Χρισθείς θείω Πνεύματι, της Εκκλησίας ποιμήν, Θεώ Ίεράτευσας, άγγελικώς επί γης, Ιωάννη Πατήρ ημών, συ γαρ δια νηστείας, σεαυτόν έκκαθάρας, κάθαρσιν των πταισμάτων, τώ σω λόγω παρέχεις, τοίς πόθω Ίεράρχα θερμώς προστρέχουσι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Νηστευτής, Πατριάρχης Κωνσταντινούπολης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/926/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţilor, învăţător înfrânării te-a arătat pe tine turmei tale adevărul lucrurilor. Pentru aceasta ai câştigat cu smerenia cele înalte, cu sărăcia cele bogate. Părinte Ierarhe Ioan, roagă pe Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Ioan Postitorul, Patriarhul Constantinopolului",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ioan-postitorul-patriarhul-constantinopolului",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

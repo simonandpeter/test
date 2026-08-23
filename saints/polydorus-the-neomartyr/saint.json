@@ -1,0 +1,97 @@
+{
+  "slug": "polydorus-the-neomartyr",
+  "display_name": "Polydorus the New Martyr of Nicosia",
+  "names": [
+    {
+      "form": "Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1794,
+      "latest": 1794,
+      "display": "1794",
+      "basis": "attested",
+      "note": "The Greek synaxarion line: †1794."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Μέγα καύχημα τῆς Λευκωσίας, μέγα στήριγμα πέλεις Ἐφέσου, μέγα κλέος τε τῶν δύο πόλεων· τῆς μὲν γὰρ γόνος σεπτὸς ἐχρημάτισας, τὴν δὲ τὰ σὰ ἐπορφύρωσαν αἵματα. Ἀλλὰ πρέσβευε Χριστῷ τῷ Θεῷ, Πολύδωρε, ἵνα ῥυσθῶμεν κινδύνων καὶ θλίψεων.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/931/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α´.",
+      "text": "Μετανοίας τοις δάκρυσι προεκάθηρας είτα στίγμασι μάκαρ του Μαρτυρίου σαυτόν, ως εν ακτίσι φαειναίς κατελάμπρυνας. Όθεν ως Μάρτυρα στερρόν, και παθημάτων κοινωνόν, Χριστού του Θεού εν ύμνοις, Πολύδωρε αθλοφόρε, σε ευφημούντες μεγαλύνομεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/931/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ´.",
+      "text": "Της ημετέρας γενεάς το ακροθίνιον, δεύτε συμφώνως οι πιστοί ανευφημήσωμεν, τον πανένδοξον Πολύδωρον τον εκ Κύπρου, εν Εφέσω δε τη Νέα εναθλήσαντα, και τους Άγαρ απογόνους καταισχύναντα, και δοξάσαντα, το Χριστού θείον όνομα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/931/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ]
+}

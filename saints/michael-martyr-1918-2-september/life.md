@@ -1,0 +1,5 @@
+# Michael, Martyr (1918, 2 September)
+
+[Barsanuphius](/saints/barsanuphius-of-kirillov) (Lebedev), bishop of Kirillov, vicar of the Novgorod diocese, was born in 1873. He finished the Novgorod seminary in 1894 and in 1895 was tonsured and ordained hierodeacon; from 1896 he was the Novgorod diocese’s missionary-preacher, in 1909 archimandrite, and from 1911 superior of the Kazan monastery of the Transfiguration. On 8 January 1917 he was consecrated bishop of Kirillov, vicar of Novgorod. Together with the priest John Ivanov, the abbess of the Ferapontov monastery Seraphima (Sulimova) and four laymen — Nicholas Burlakov and the others the calendar names, Anatoly, Michael and Philip — he was shot in 1918; the Sretensky calendar’s life, read only so far, carries the rest. The Russian calendar keeps the seven together on 2 September (Julian).
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4771.htm); read 23 August 2026.*

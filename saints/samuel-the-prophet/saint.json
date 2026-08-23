@@ -1,0 +1,138 @@
+{
+  "slug": "samuel-the-prophet",
+  "display_name": "Samuel the Prophet",
+  "names": [
+    {
+      "form": "Самуил",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети пророк Самуило",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "death": {
+      "earliest": -1100,
+      "latest": -1001,
+      "display": "11th century BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прор. Самуила (XI до Р.Х.)”; the life: 1146 years before Christ."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Прор. Самуила (XI до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 20 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 20 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 02.09.2026 (20. август ст. ст.) — „Свети пророк Самуило“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Дар многочестен дан бысть неплодней утробе/ и принесен в жертву, яко всесожжение благоприятно, Господеви своему,/ послужив Тому в преподобии и правде,/ тем тя почитаем, пророче Божий Самуиле,// яко молитвенника о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Тропарь пророка Самуила»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "От матере умоленный, тезоимените дания Божия,/ от Бога звания во младенчестве сподобися,/ честный пророче Самуиле,/ добре пасый непокоривыя люди/ и царем явивыйся устроитель,/ и о нас, верно чтущих тя, моли Истиннаго Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Ин тропарь пророка Самуила»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророка Твоего Самуила память, Господи, празднующе,/ тем Тя молим:/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Ин тропарь пророка Самуила, общий»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко многочестный дар, прежде зачатия вдан Богу,/ и из млада Тому, яко Ангел, послужил еси, всеблаженне,/ и сподобился еси предбудущая вещати./ Темже вопием ти:// радуйся, пророче Божий Самуиле, архиерею великий.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Кондак пророка Самуила»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Помазателю царский,/ паче же святаго боговидца Давида,/ великий Самуиле,/ потщися умолити о нас,/ да помажемся Святаго Духа мастию/ и будем странни неприязни,/ якоже Давид нечистому духу Саулову.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Ин кондак пророка Самуила»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

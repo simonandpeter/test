@@ -1,0 +1,70 @@
+{
+  "slug": "christopher-the-roman",
+  "display_name": "Christopher the Roman",
+  "names": [
+    {
+      "form": "Христофор Римлянин",
+      "lang": "ru"
+    },
+    {
+      "form": "Преп. Христофор",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Христофора Римлянина (VI)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Прп. Христофора Римлянина (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.09.2026 (30. август ст. ст.) — „Преп. Христофор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-12&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

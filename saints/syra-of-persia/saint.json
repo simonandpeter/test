@@ -1,0 +1,71 @@
+{
+  "slug": "syra-of-persia",
+  "display_name": "Syra of Persia",
+  "names": [
+    {
+      "form": "Сира",
+      "lang": "ru"
+    },
+    {
+      "form": "Света мученица Сира",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 558,
+      "latest": 558,
+      "display": "558",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Сиры, девы Персидской (558)”; the Prologue: strangled and drowned in 558, in her eighteenth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Мц. Сиры, девы Персидской (558)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 24 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 06.09.2026 (24. август ст. ст.) — „Света мученица Сира“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

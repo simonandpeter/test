@@ -1,0 +1,69 @@
+{
+  "slug": "peter-confessor-presbyter-1972",
+  "display_name": "Peter (Cheltsov), Archpriest, Confessor (1972)",
+  "names": [
+    {
+      "form": "Петр",
+      "lang": "ru"
+    },
+    {
+      "form": "Петр Чельцов",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1972,
+      "latest": 1972,
+      "display": "1972",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Св. Петра исп., пресвитера (1972)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

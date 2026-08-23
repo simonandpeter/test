@@ -1,0 +1,71 @@
+{
+  "slug": "joannicius-ii-of-serbia",
+  "display_name": "Joannicius II, Patriarch of Serbia",
+  "names": [
+    {
+      "form": "Иоанникий II",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети Јоаникије, први патријарх српски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1349,
+      "latest": 1349,
+      "display": "1349",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Свт. Иоанникия II, патриарха Сербского (1349)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Свт. Иоанникия II, патриарха Сербского (1349)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 3 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 16.09.2026 (3. септембар ст. ст.) — „Свети Јоаникије, први патријарх српски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

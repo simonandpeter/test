@@ -1,0 +1,83 @@
+{
+  "slug": "hilarion-of-optina",
+  "display_name": "Hilarion of Optina",
+  "names": [
+    {
+      "form": "Άγιος Ιλαρίων της Όπτινα",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ilarion de la Optina",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1805,
+      "latest": 1805,
+      "display": "1805",
+      "basis": "attested",
+      "note": "saint.gr: born 8 September 1805."
+    },
+    "death": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "saint.gr: reposed 18 September 1873."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 18 septembrie — „Sfântul Ilarion de la Optina”",
+        "url": "https://doxologia.ro/18-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου — «Άγιος Ιλαρίων της Όπτινα»",
+        "url": "https://www.saint.gr/09/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Alexander (Tsitserov), Archpriest, Hieromartyr (1939)
+
+Alexander Tsitserov was born on 25 August 1884 in the village of Povodimovo in the Alatyr district of Simbirsk province, the son of the peasant Michael Tsitserov. In 1903 he finished the Apsharovka church-teachers’ seminary and until 1908 taught in the parish school at Olkhovka; like many teachers of those years he took part in the then fashionable revolutionary activity and even joined the social-democratic party in 1904, distributing leaflets among the soldiers of the local unit, and when the party was broken up in 1906 his house was searched, but as no active member he was not arrested. He was ordained priest in 1914 and served in Moscow province; arrested in 1937 on a charge of counter-revolutionary activity, he was sentenced to ten years in the camps and died on 9 September 1939 in the Bureya camp of the NKVD. The Russian calendar keeps him on 27 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandr-cicerov); read 23 August 2026.*

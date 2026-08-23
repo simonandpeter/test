@@ -1,0 +1,97 @@
+{
+  "slug": "arsenius-of-komel",
+  "display_name": "Arsenius of Komel",
+  "names": [
+    {
+      "form": "Арсений Комельский",
+      "lang": "ru"
+    },
+    {
+      "form": "Преп. Арсеније Комељски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1550,
+      "latest": 1550,
+      "display": "1550",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Арсения Комельского (1550)”; the Sretensky life: died 24 August 1550."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Прп. Арсения Комельского (1550)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 24 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.09.2026 (24. август ст. ст.) — „Преп. Арсеније Комељски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-06&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Удалився мира, и водворився в пустыню,/ и ту подвизався добрым подвигом,/ постом, и молитвами, и многим терпением,/ и жив показал еси многая чудеса,/ и по преставлении своем источаеши различная исцеления/ с верою приходящим к честному гробу твоему,/ Арсение, отче наш,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Тропарь преподобного Арсения Комельского»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Житейския молвы отбег,/ и в пустыню вселился еси,/ и тамо житием жестоким пожил еси,/ и зверя свирепаго аркуда молитвами укротил еси,/ и многим был еси наставник ко спасению,/ и того ради получил еси жизнь вечную на Небесех./ Всегда зря Святую Троицу,/ моли избавитися нам от бед, да зовем ти:/ радуйся, отче наш Арсение, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Кондак преподобного Арсения Комельского»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    }
+  ]
+}

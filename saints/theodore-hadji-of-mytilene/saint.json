@@ -1,0 +1,58 @@
+{
+  "slug": "theodore-hadji-of-mytilene",
+  "display_name": "Theodore the Hadji of Mytilene, New Martyr",
+  "names": [
+    {
+      "form": "Άγιος Θεόδωρος ο Χατζής ο Μυτιληναίος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1785,
+      "latest": 1785,
+      "display": "1785",
+      "basis": "attested",
+      "note": "saint.gr: hanged by the Turks at Mytilene in 1785."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 4 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The finding of his relics (4 September 1967), as saint.gr keeps it; his martyrdom is kept on 30 January."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Εύρεσις των Τιμίων Λειψάνων του νεομάρτυρος Θεοδώρου του Χατζή του Μυτιληναίου»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

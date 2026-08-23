@@ -1,0 +1,77 @@
+{
+  "slug": "neophytos-of-stanisoara",
+  "display_name": "Neophytos of Stânișoara",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Neofit de la Mănăstirea Stânișoara",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 septembrie — „Sfântul Cuvios Neofit de la Mănăstirea Stânișoara”",
+        "url": "https://doxologia.ro/3-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 3 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Lumina cea negrăită în inimi primindu-o, în munte v-aţi nevoit pentru dragostea Domnului și cununa răsplătirilor în ceruri ați primit. Iar noi laudă vă aducem, Sfinților Cuvioși Părinţi Neofit şi Meletie, strigând: Bucuraţi-vă, întărirea sihaştrilor şi slava creştinilor!",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Cuvioşi Neofit şi Meletie de la Mănăstirea Stânișoara",
+        "url": "https://doxologia.ro/condacul-sfintilor-cuviosi-neofit-meletie-de-la-manastirea-stanisoara",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "De Dumnezeu iubitorilor Părinţi, suindu-vă în munţii faptelor bune, locașuri Preasfântului Duh v-aţi arătat, iar acum ca făclia în sfeşnic luminaţi în lume, Cuvioşilor Neofit şi Meletie; rugaţi-vă lui Hristos-Dumnezeu să mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Cuvioşi Neofit şi Meletie de la Mănăstirea Stânișoara",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-neofit-meletie-de-la-manastirea-stanisoara",
+        "year": 2026
+      }
+    }
+  ]
+}

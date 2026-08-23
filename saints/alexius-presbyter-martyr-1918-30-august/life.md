@@ -1,0 +1,5 @@
+# Alexius (Velikoselsky), Presbyter, Hieromartyr (1918)
+
+Alexius Alexandrovich Velikoselsky was born in 1865 to a family of clergy. After the Yaroslavl seminary in 1888 he served as psalmist, teacher and catechist of the parish school at the church of the Procession of the Precious Wood of the Cross in the village of Krasnoye on the Sheksna in the Mologa district of Yaroslavl province — since drowned by the Rybinsk reservoir; he married Zinaida Arsenyevna, born 1870, and on 9 June 1891 was ordained priest — the calendar’s life runs on past the point read here. He served in various churches of Yaroslavl province and taught the Law of God; in 1918, during the rising, he was groundlessly charged with collaborating with the Whites and on 30 August (17 August old style) was shot at Kostroma. He was glorified by the council of 2000 and added to the synaxis of the new martyrs by the Holy Synod on 26 December 2001; the Russian calendar keeps him on 30 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksij-velikoselskij); read 23 August 2026.*

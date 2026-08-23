@@ -1,0 +1,89 @@
+{
+  "slug": "heraclides-of-tamasos",
+  "display_name": "Heraclides, Bishop of Tamasos",
+  "names": [
+    {
+      "form": "Άγιοι Ηρακλείδης και Μύρων επίσκοποι Ταμάσου της Κύπρου",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Iraclidie, Episcop de Tamasos",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 17 septembrie — „Sfântul Ierarh Iraclidie, Episcop de Tamasos”",
+        "url": "https://doxologia.ro/17-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — «Άγιοι Ηρακλείδης και Μύρων επίσκοποι Ταμάσου της Κύπρου»",
+        "url": "https://www.saint.gr/09/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τὴν ποίμνην ἐποίμανας, τὴν τοῦ Σωτῆρος Χριστοῦ, καὶ θείων, μακάριε, ναμάτων πάντων ψυχᾶς πλουσίως κατήρδευσος, ὅθεν τῶν Σὲ τιμώντων ὁ χορὸς ἀναμέλπει, ὕμνους Σοὶ καὶ γεραίρει, τὴν ἁγίαν Σου μνήμην ἱκέτευε οὒν ἀεὶ ὑπὲρ ἠμῶν, ἱεράρχα Ἠρακλείδιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Ηρακλείδης και Μύρων επίσκοποι Ταμάσου της Κύπρου, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2463/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Μέγαν εὔρατο τῶν Ταμασέων, πόλις κήρυκα καὶ ποιμενάρχην, τῆς ἐκκλησίας Χριστοῦ καὶ διδάσκαλον. Τῶν γὰρ εἰδώλων τὴν πλάνην κατήργησας, φῶς ἀληθείας κηρύξας τοὶς ἔθνεσιν. Ὅθεν, ἅγιε ἱεράρχα Ἠρακλείδιε, Χριστὸν τὸν Θεὸν Ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Ηρακλείδης και Μύρων επίσκοποι Ταμάσου της Κύπρου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2463/saint.aspx",
+        "year": 2026
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "eumenius-of-gortyna",
+  "display_name": "Eumenius, Bishop of Gortyna",
+  "names": [
+    {
+      "form": "Όσιος Ευμένιος ο θαυματουργός, επίσκοπος Γορτύνης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Eumenie, Episcopul Gortinei",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 18 septembrie — „Sfântul Ierarh Eumenie, Episcopul Gortinei”",
+        "url": "https://doxologia.ro/18-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου — «Όσιος Ευμένιος ο θαυματουργός, επίσκοπος Γορτύνης»",
+        "url": "https://www.saint.gr/09/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "text": "Ταχὺν προμηθέα σέ, καὶ ἀρωγὸν εὐμενῆ, κεκτήμεθα Ὅσιε ὡς τοῦ Χριστοῦ μιμητήν, Εὐμένιε ἔνδοξε, σὺ γὰρ ἀναβλυστάνων, συμπαθείας τὰ ρεῖθρα, βρύεις τὴ Ἐκκλησία, Ἰαμάτων πελάγη. Ἀλλὰ καὶ τοὶς τιμώσι σέ, σκέπη γενήθητι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ευμένιος ο θαυματουργός, επίσκοπος Γορτύνης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2473/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β'.",
+      "text": "Φωτὶ θεϊκῶ, ἑλλαμφθεῖς παμμακάριστε, φωτίζεις ἠμᾶς, τοὺς πόθω ἀνυμνοῦντάς σου, τὴν σεπτὴν καὶ ἔνδοξον, καὶ ἁγίαν Πάτερ μετάστασιν, Ἱεράρχα Εὐμένιε, πρεσβεύεις γὰρ ἀπαύστως ὑπὲρ ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ευμένιος ο θαυματουργός, επίσκοπος Γορτύνης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2473/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Luminându-te cu Dumnezeiască Lumină, preafericite, ne luminezi pe noi cei ce cu dragoste lăudăm cinstită şi sfântă mutarea ta, Părinte Ierarhe Eumenie; căci neîncetat te rogi pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Eumenie, Episcopul Gortinei",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-eumenie-episcopul-gortinei",
+        "year": 2026
+      },
+      "model": "Căutând cele de sus..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Eumenie, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Eumenie, Episcopul Gortinei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-eumenie-episcopul-gortinei",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Euthymius, Bishop of Zela, Hieromartyr (1921)
+
+Euthymius Agritelis was bishop of Zela from 1912 to 1921. A monk of the monastery of Leimon, he studied at the theological school of Halki and then was teacher and preacher on Lesbos and protosyncellus of the metropolis of Methymna; on 12 June 1912 he was consecrated bishop of Zela, and as bishop developed great religious and national activity. When this became known to the Kemalist Turks he was arrested and imprisoned with other notables of the province of Amasya on 21 January 1921; by a petition he asked the Kemalist government of Ankara to count him alone guilty and free the others arrested, and before the court defended himself in a wonderful speech. In prison he suffered many tortures, of which he died on 29 May 1921 — and after his death came the Turkish court’s sentence of condemnation. The Greek calendar keeps him with [Chrysostom of Smyrna](/saints/chrysostom-of-smyrna) on the Sunday before the Exaltation.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — [the entry](https://www.saint.gr/2408/saint.aspx); read 23 August 2026.*

@@ -9,6 +9,14 @@
     {
       "form": "Άγιος Ευτυχής Ιερομάρτυρας μαθητής του Αγίου Ιωάννη Θεολόγου",
       "lang": "el"
+    },
+    {
+      "form": "Евтихий",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети свештеномученик Евтихије",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -27,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Сщмч. Евтихия, ученика ап. Иоанна Богослова (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,11 +77,46 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 06.09.2026 (24. август ст. ст.) — „Свети свештеномученик Евтихије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодохновенне,/ в видения восход,/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Евтихе,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Тропарь священномученика Евтиха (Евтихия)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостолов сопрестольник/ и святителей красота быв, Евтихе,/ мученически прославился еси,/ просиял еси, яко солнце, всех просвещая,/ и разорил еси безбожия нощь глубокую,/ сего ради тя почитаем,// яко Божественнаго воистинну священнотаинника Христова.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Кондак священномученика Евтиха (Евтихия)»",
+        "url": "https://days.pravoslavie.ru/Days/20260824.html",
+        "year": 2026
+      }
+    }
+  ]
 }

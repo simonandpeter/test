@@ -1,0 +1,96 @@
+{
+  "slug": "onuphrius-of-vorona",
+  "display_name": "Onuphrius of Vorona",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Onufrie de la Vorona",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1700,
+      "latest": 1700,
+      "display": "c. 1700",
+      "basis": "traditional",
+      "note": "The Romanian life: born about 1700 in Russia."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 9 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 septembrie — „Sfântul Cuvios Onufrie de la Vorona”",
+        "url": "https://doxologia.ro/9-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 9 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "De tulburările lumești depărtându-te, casa și patria ai părăsit și pe pământul Moldovei ai trăit viață sihăstrească. Asemenea marilor cuvioși, ai ajutat pe mulți cu rugăciunile și povețele tale, Cuvioase Părinte Onufrie.",
+      "source": {
+        "text": "Doxologia — Condacul Cuviosului Onufrie de la Sihăstria Voronei",
+        "url": "https://doxologia.ro/condacul-cuviosului-onufrie-de-la-sihastria-voronei",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Cu ostenelile sihăstriei, la viața cea fără de prihană ai ajuns, fericite, și ca un luceafăr din pământul Rusiei răsărind, întru singurătatea codrilor Moldovei te-ai sălășluit. Monahilor ai fost învățător, făcându-te pildă, prin aspra ta viețuire, Cuvioase Părinte Onufrie. Roagă-te lui Hristos Dumnezeu să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Cuviosului Onufrie de la Sihăstria Voronei",
+        "url": "https://doxologia.ro/troparul-cuviosului-onufrie-de-la-sihastria-voronei",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Viețuind în rugăciune și tăcere, te-ai suit pe treptele sfințeniei, Cuvioase Părinte Onufrie, chip al blândeții te-ai arătat și tuturor bun sfătuitor te-ai făcut prin pilda vieții tale, căci iubind mai mult pe Dumnezeu, te-ai depărtat de cele lumești și în pustietăți te-ai sălășluit. Roagă-te Domnului pentru sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Onufrie de la Sihăstria Voronei",
+        "url": "https://doxologia.ro/troparul-sfantului-onufrie-de-la-sihastria-voronei",
+        "year": 2026
+      }
+    }
+  ]
+}

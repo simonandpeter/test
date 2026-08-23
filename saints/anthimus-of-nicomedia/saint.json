@@ -1,0 +1,218 @@
+{
+  "slug": "anthimus-of-nicomedia",
+  "display_name": "Anthimus, Bishop of Nicomedia",
+  "names": [
+    {
+      "form": "Анфим Никомидийский",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Sfințit Mucenic Antim, Episcopul Nicomidiei",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети свештеномученик Антим",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “… и Евфимия (302)”; the Greek synaxarion line gives †302."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Сщмч. Анфима, еп. Никомидийского, и с ним мчч. Феофила диакона, Дорофея, Мардония, Мигдония, Петра, Индиса, Горгония, Зинона, Домны девы и Евфимия (302)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 septembrie — „Sfântul Sfințit Mucenic Antim, Episcopul Nicomidiei”",
+        "url": "https://doxologia.ro/3-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 16.09.2026 (3. септембар ст. ст.) — „Свети свештеномученик Антим“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодухновенне,/ в видения восход:/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Анфиме,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Тропарь священномученика Анфима»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Во священницех благочестно пожив/ и мучения путь скончав,/ идольская угасил еси служения,/ поборник быв твоему стаду, богомудре./ Темже тя и почитает ныне, тайно вопиюще:/ от бед избави нас// твоими молитвами, приснопамятне Анфиме.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Кондак священномученика Анфима»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς φοῖνιξ ἐξήνθισας, τὴ Ἐκκλησία Χριστοῦ, καρποὶς τοὶς τῶν λόγων σου, τῶν εὐσεβῶν τᾶς ψυχᾶς, ἐκτρέφων ἐν χάριτι ὅθεν καὶ ἐναθλήσας, Πάτερ Ἄνθιμε χαίρων, ὤφθης Ἱερομάρτυς, εὐκλεὴς τοῦ Σωτῆρος, ὦ πρέσβευε δεόμεθα, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/940/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τὴν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διὰ τοῦτο τὸν λόγον τῆς ἀληθείας ὀρθοτομῶν, καὶ τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Ἄνθιμε· Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/940/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς ποίμνης σου θεόφρον, στερρὸς προστάτης γενόμενος, ὑπὲρ αὐτῆς ἑτοίμως τὸ σὸν αἷμα ἐξέχεας, καὶ ἀπειλὰς τῶν δυσμενῶν μὴ πτοηθείς, ἐν οὐρανοῖς νῦν ἀγάλλῃ, τῷ θρόνῳ τῆς τρισηλίου Θεότητος παριστάμενος. Δόξα τῷ ἐνισχύσαντί σε Χριστῷ· δόξα τῇ εὐψυχίᾳ σου, δόξα τῇ μαρτυρικῇ σου Ἄνθιμε καρτερότητι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/940/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Φωστὴρ Νικομηδείας ἀνεδείχθης πολύφωτος, καὶ πάσης Ἐκκλησίας Πάτερ Ἄνθιμε πρόβολος· ἀθλήσας γὰρ στεῤῥῶς ὑπὲρ Χριστοῦ, πλουσίων ἠξιώθης δωρεῶν· διὰ τοῦτό σε τιμῶμεν ἀσματικῶς, Ἱερομάρτυς κράζοντες: Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/940/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "text": "Ἐν ἱερεῦσιν εὐσεβῶς διαπρέψας, καὶ μαρτυρίου τὴν ὁδὸν διανύσας, τὰ τῶν εἰδώλων ἔσβεσας σεβάσματα, πρόμαχος γενόμενος, τῆς σῆς ποίμνης θεόφρον, διό σε καὶ γεραίρει νῦν, μυστικῶς ἐκβοῶσα· Ἐκ τῶν κινδύνων λύτρωσαι ἡμᾶς, ταῖς σαῖς πρεσβείαις, Πατὴρ ἡμῶν Ἄνθιμε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/940/saint.aspx",
+        "year": 2026
+      },
+      "model": ". Ὁ ὑψωθεὶς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Între preoţi strălucind cu evlavia şi călătoria muceniciei săvârşind, slujbele idoleşti le-ai stins, ajutor făcându-te turmei tale, de Dumnezeu Înţelepţite. Pentru aceasta, pe tine şi cinstindu-te, cu taină strigăm ţie: din nevoi miluieşte-ne pe noi cu rugăciunile tale, Sfinte Antim, părintele nostru.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Antim, Episcopul Nicomidiei",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-antim-episcopul-nicomidiei",
+        "year": 2026
+      },
+      "model": "Cel Ce Te-ai înălţat..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Antim, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Antim, Episcopul Nicomidiei",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-antim-episcopul-nicomidiei",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

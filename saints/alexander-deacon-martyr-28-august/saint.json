@@ -1,0 +1,69 @@
+{
+  "slug": "alexander-deacon-martyr-28-august",
+  "display_name": "Alexander (Medvedev), Deacon, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Александр",
+      "lang": "ru"
+    },
+    {
+      "form": "Александр Медведев",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Сщмч. Александра диакона»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 10.09.2026 (28. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The calendar at azbyka.ru."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

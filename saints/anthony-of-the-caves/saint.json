@@ -1,0 +1,120 @@
+{
+  "slug": "anthony-of-the-caves",
+  "display_name": "Anthony of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Антоний Печерский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 983,
+      "latest": 983,
+      "display": "983",
+      "basis": "traditional",
+      "note": "The Sretensky calendar’s life: born in 983 at Lyubech near Chernihiv."
+    },
+    "death": {
+      "earliest": 1073,
+      "latest": 1073,
+      "display": "1073",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прпп. Антония (1073) и Феодосия (1074) Печерских”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Прпп. Антония (1073) и Феодосия (1074) Печерских»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 2 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 15.09.2026 (2. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Звезды мысленныя,/ просиявшия на тверди Церковней,/ иноков Российских основание,/ песньми, людие, почтим,/ радостныя похвалы сим воздающе,/ радуйтеся, преблаженнии отцы, Антоние со Феодосием богомудрым,// присно молящиися о возследствующих и чтущих память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Тропарь преподобных Антония и Феодосия»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Двоицу начальных российских светил почтим,/ Антония, Богом посланнаго, и Феодосия, Богом дарованнаго:/ тии бо первии, равноангельным в России житием просиявше от гор Киевских,/ осветиша отечествия нашего вся концы,/ и путь к Небеси правый многим показаша,/ и, первоотцы иноком бывше, лики спасаемых Богови приведоша,/ и ныне, предстояще в вышних немерцаемому Божества Свету, молятся о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Ин тропарь преподобных Антония и Феодосия Печерских»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Двоицу великих отец и правило иноков светлое,/ умныя зари, онебесившия Российскую Церковь,/ кто по достоянию хвалами воспоет?/ Тии бо Престолу Божию предстоят./ Но яко имущии дерзновение к Святей Троице,/ Антоние преблаженне и Феодосие приснопамятне,/ молитеся о молебная вам приносящих// и любовию песньми вас ублажающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Кондак преподобных Антония и Феодосия»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердыя столпы благочестия,/ недвижимая иноческих законоположений основания, и необоримыя стены Российския восхвалим:/ Антониа, возлюблыпаго Бога, и Феодосиа, возлюбленнаго Богом:/ труды бо онех и постническия подвиги прият паче всякаго всеплодия,/ Един во святых прославляемый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Ин кондак преподобных Антония и Феодосия Печерских»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

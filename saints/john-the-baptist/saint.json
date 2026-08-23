@@ -13,6 +13,14 @@
     {
       "form": "Ἰωάννης ὁ Βαπτιστής",
       "lang": "grc"
+    },
+    {
+      "form": "Иоанн Предтеча",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети Јован Крститељ",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -24,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 августа ст. ст. — «Усекновение главы Пророка, Предтечи и Крестителя Господня Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260829.html",
+        "year": 2026
+      },
+      "note": "The Beheading. His other feasts — the Nativity (24 June), the Synaxis (7 January), the findings of his head — are not yet recorded here: an attestation holds one feast."
     },
     {
       "church": "romanian",
@@ -60,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 11.09.2026 (29. август ст. ст.) — „Усековање главе Светог Јована Крститеља“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      },
+      "note": "The Beheading. His other feasts — the Nativity (24 June), the Synaxis (7 January), the findings of his head — are not yet recorded here: an attestation holds one feast."
     }
   ],
   "text": {
@@ -115,6 +143,36 @@
         "url": "https://doxologia.ro/tropar/condac-la-praznicul-taierii-cinstitului-cap-al-sfantului-ioan-botezatorul",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Память праведнаго с похвалами,/ тебе же довлеет свидетельство Господне, Предтече:/ показал бо ся еси воистинну и пророков честнейший,/ яко и в струях крестити сподобился еси Проповеданнаго./ Темже за истину пострадав, радуяся,/ благовестил еси и сущим во аде Бога, явльшагося плотию,/ вземлющаго грех мира// и подающаго нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 августа ст. ст. — «Тропарь Предтечи»",
+        "url": "https://days.pravoslavie.ru/Days/20260829.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Предтечево славное усекновение/ смотрение бысть некое Божественное,/ да и сущим во аде Спасово проповесть пришествие./ Да рыдает убо Иродия,/ беззаконное убийство испросивши:/ не закон бо Божий, ни живый век возлюби,// но притворный, привременный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 августа ст. ст. — «Кондак Предтечи»",
+        "url": "https://days.pravoslavie.ru/Days/20260829.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

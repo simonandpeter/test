@@ -1,0 +1,91 @@
+{
+  "slug": "job-of-pochaev",
+  "display_name": "Job of Pochaev",
+  "names": [
+    {
+      "form": "Иов Почаевский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1651,
+      "latest": 1651,
+      "display": "1651",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: died 28 October 1651."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The finding of his relics, as the Russian calendar keeps it on 28 August (Julian); his repose is kept on 28 October and 6 May."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Обретение мощей прп. Иова Почаевского (1659)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 10.09.2026 (28. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Возложь на ся иго Христово от юности,/ преподобне отче Иове,/ многолетне свято подвизался еси/ на поприще благочестия во обители Угорницстей и на острове Дубенстем,/ и, пришед к горе Почаевстей,/ знаменанней цельбоносною стопою Пресвятыя Богородицы,/ в тесней пещере каменней/ богомыслия ради и молитвы многократно заключался еси,/ и, благодатию Божиею укреплялся,/ мужественно потрудился еси/ на пользу Церкве Христовы и обители твоей,/ купно же и противу врагов Православия и благочестия христианскаго,/ и, наставив сицевому ополчению иночествующих,/ победители тех представил еси Владыце и Богу./ Того моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Тропарь на обретение мощей преподобного Иова Почаевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Возсия от спуда земнаго сокровище нетленное мощей твоих,/ угодниче Божий,/ яко, благочестно пожив в вере Христа Бога нашего,/ достигл еси добродетелей совершенства,/ и, оставль сладость жития преходящаго,/ в пещере горы Почаевския в пощениих, молитвах и трудех свято подвизался еси,/ и теми тело твое увядил еси./ Ныне же, прешед к Богу в безмятежный и вечный покой,/ молишися о всех с верою к тебе прибегающих./ Радуйся, Иове, преславный угодниче Божий/ и обители Почаевския украшение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Кондак на обретение мощей преподобного Иова Почаевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

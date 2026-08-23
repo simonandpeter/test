@@ -1,0 +1,115 @@
+{
+  "slug": "andrew-stratelates",
+  "display_name": "Andrew the Stratelates",
+  "names": [
+    {
+      "form": "Андрей Стратилат",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученик Андреј Стратилат",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Андрея Стратилата и с ним 2593 мучеников (284-305)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Мч. Андрея Стратилата и с ним 2593 мучеников (284-305)»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 01.09.2026 (19. август ст. ст.) — „Свети мученик Андреј Стратилат“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Земнаго сана славу оставив,/ Небесное Царство наследовал еси,/ кровными каплями, яко пречудным камением,/ нетленныя венцы украсил еси/ и ко Христу привел еси собор страстотерпец./ С лики ангельскими в невечернем свете/ незаходимаго Солнца Христа обрел еси,/ святе Андрее Стратилате,/ Егоже моли с пострадавшими с тобою присно,// да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Тропарь мученика Андрея Стратилата»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В молитвах Господеви предстоя,/ якоже звезда солнцу предтекий,/ и желаемое сокровище Царствия узрел еси,/ радости неизреченныя исполняяся./ Безсмертному Царю в безконечныя веки,/ от Ангел безпрестани хвалимому, поеши, Андрее Стратилате,// с нимиже молися непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Кондак мученика Андрея Стратилата»",
+        "url": "https://days.pravoslavie.ru/Days/20260819.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 5",
+      "text": "Оставивши славу земаљског достојанства, небеско Царство си наследио: Капљама крви, као величанственим драгим камењем, неувенљиве венце си украсио, и ка Христу си привео сабор мученика. Са збором анђелским у безвечерњој светлости, незалазно Сунце, Господа Христа, си пронашао, Свети Андреје Стратилате: Њега стално моли, са онима који пострадаше са тобом, да спасе душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети мученик Андреј Стратилат",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0901",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

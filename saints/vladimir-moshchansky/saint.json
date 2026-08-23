@@ -1,0 +1,65 @@
+{
+  "slug": "vladimir-moshchansky",
+  "display_name": "Vladimir Moshchansky, Presbyter, Hieromartyr (1938)",
+  "names": [
+    {
+      "form": "Владимир Мощанский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 15 June 1866 at Zaborovye."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Владимира пресвитера (1938)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 августа ст. ст. — «Сщмч. Владимира пресвитера (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260825.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 25 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 07.09.2026 (25. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

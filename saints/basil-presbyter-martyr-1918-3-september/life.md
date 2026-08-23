@@ -1,0 +1,5 @@
+# Basil (Kolmykov), Presbyter, Hieromartyr (1918)
+
+Basil Dmitrievich Kolmykov — Kalmykov — was born in 1866 to a merchant family. On 2 January 1913 he entered the service of the Omsk diocese as psalmist at the church of the village of Yuzhno-Podolskoye in the Tyukalinsk district, and on 20 January was ordained deacon; from 5 February 1914 he held the psalmist’s vacancy at the church of the settlement of Chernovinskoye in the Zmeinogorsk district — the calendar’s life runs on past the point read here. Until 1916 he was rector of the church of the village of Meshchanskoye in the Dzharkent district of the Semirechye region, then moved to the church of the stanitsa of Podgornenskaya in the same district, and died in 1918 in the repressions against the clergy of Semirechye, of whose widows and orphans Bishop Pimen of Verny wrote to the Turkestan clergy. He was glorified by the jubilee council of 2000, and the Russian calendar keeps him on 3 September (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-vasilij-kolmykov); read 23 August 2026.*

@@ -1,0 +1,184 @@
+{
+  "slug": "theoctistus-of-palestine",
+  "display_name": "Theoctistus of Palestine",
+  "names": [
+    {
+      "form": "Феоктист",
+      "lang": "ru"
+    },
+    {
+      "form": "Όσιος Θεόκτιστος συνασκητής του Μεγάλου Ευθυμίου",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Teoctist din Palestina",
+      "lang": "ro"
+    },
+    {
+      "form": "Преп. Теоктист",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 467,
+      "latest": 467,
+      "display": "467",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Феоктиста, спостника Евфимия Великого (467)”; the Greek synaxarion line: †467."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Прп. Феоктиста, спостника Евфимия Великого (467)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 septembrie — „Sfântul Cuvios Teoctist din Palestina”",
+        "url": "https://doxologia.ro/3-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Όσιος Θεόκτιστος συνασκητής του Μεγάλου Ευθυμίου»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.09.2026 (3. септембар ст. ст.) — „Преп. Теоктист.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-16&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси/ и иже из глубины воздыханьми во сто трудов уплодоносил еси/ и был еси светильник вселенней,/ сияя чудесы, Феоктисте, отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Тропарь преподобного Феоктиста»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В постницех присовокупився великому Евфимию,/ в подвизех яко Ангел на земли явися,/ очищая, преподобне, сердца верных/ Божественными знаменьми повсегда,// сего ради любовию, Феоктисте, тя почитаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Кондак преподобного Феоктиста»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Θεῶ ἐκ νεότατος, ἀνατεθεῖς ἱερῶς, κτιστῶν τὴν προσπάθειαν, ἀπεβδελύξω στερρῶς, Θεόκτιστε Ὅσιε, ὅθεν τῆς ἡσυχίας, διαλάμψας τοὶς τρόποις, ὤφθης τῶν Μοναζόντων, ἀκριβὴς παιδοτρίβης. Καὶ νῦν τοὺς προσιόντας σοί, Πάτερ κυβέρνησαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Θεόκτιστος συνασκητής του Μεγάλου Ευθυμίου, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/939/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τὸ ἄγονον ἐγεώργησας· καὶ τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατὸν τοὺς πόνους ἐκαρποφόρησας· καὶ γέγονας φωστὴρ τῇ οἰκουμένῃ, λάμπων τοῖς θαύμασιν, Θεόκτιστε Πατὴρ ἡμῶν ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Θεόκτιστος συνασκητής του Μεγάλου Ευθυμίου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/939/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 2",
+      "text": "Cu curăție sufletească dumnezeiască întrarmându-te și cu neîncetata rugăciune și, ca o suliță tare în mâini ținând-o, ai junghiat taberele drăcești. Sfinte Cuvioase Teoctist, Părintele nostru, neîncetat roagă-te pentru noi toți!",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Teoctist din Palestina",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-teoctist-din-palestina",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Teoctist, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Teoctist",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teoctist",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Din tinerețe te-ai închinat pe tine însuți lui Dumnezeu întru sfințenie și ai lepădat cu stăruință toată grija celor zidite, Cuvioase Teoctist; pentru aceasta, strălucind cu nevoințele sihăstriei, te-ai arătat adevărat povățuitor al monahilor, deci, și acum călăuzește-i pe cei ce aleargă la tine.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Teoctist din Palestina",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teoctist-din-palestina",
+        "year": 2026
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "nektarios-of-aegina",
+  "display_name": "Nektarios of Aegina",
+  "names": [
+    {
+      "form": "Άγιος Νεκτάριος Αιγίνης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Nectarie",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November."
+      },
+      "source": {
+        "text": "doxologia.ro, 3 septembrie — „Mutarea moaștelor Sfântului Ierarh Nectarie”",
+        "url": "https://doxologia.ro/3-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Ανακομιδή Ιερών λειψάνων του Αγίου Νεκταρίου Αιγίνης»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

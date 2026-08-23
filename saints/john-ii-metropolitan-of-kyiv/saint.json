@@ -1,0 +1,57 @@
+{
+  "slug": "john-ii-metropolitan-of-kyiv",
+  "display_name": "John II, Metropolitan of Kyiv",
+  "names": [
+    {
+      "form": "Св. Јован митрополит Кијевски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1089,
+      "latest": 1089,
+      "display": "1089",
+      "basis": "attested",
+      "note": "The Ohrid Prologue: reposed in peace in 1089."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 31 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.09.2026 (31. август ст. ст.) — „Св. Јован митрополит Кијевски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-13&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

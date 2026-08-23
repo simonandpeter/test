@@ -1,0 +1,5 @@
+# Mianus of Kandavla
+
+Mianus was one of the martyrs Theodore, Mianus, Julian and Kion, who lived under Maximian (305–311) and came from the village of Kandavla near Nicomedia. Seized for confessing the faith of Christ, they were tortured — their bodies raked with sharp iron claws, then shut in a hot-heated bath-house, its doors locked and sealed with the emperor’s ring so that they should not escape; but an angel of God freed them. The soldiers seized them again and led them outside the city to execution; at their request they were given time to pray, and then with joy gave their souls to the Lord, and their bodies were cut in pieces and thrown into the fire. The Greek synaxarion keeps the same day the martyrs Centurion, Theodore, Ammianus, Julian and Oceanus of the village of Kandavli, seized under Maximian in 288, who confessed their Christian faith bravely and were burned alive.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life1451.htm); The Greek entry is the Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — [the entry](https://www.saint.gr/2347/saint.aspx); read 23 August 2026.*

@@ -1,0 +1,105 @@
+{
+  "slug": "varlaam-of-moldavia",
+  "display_name": "Varlaam, Metropolitan of Moldavia",
+  "names": [
+    {
+      "form": "Варлаам Молдавский",
+      "lang": "ru"
+    },
+    {
+      "form": "Sfântul Ierarh Varlaam, Mitropolitul Moldovei",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1585,
+      "latest": 1595,
+      "display": "c. 1590",
+      "basis": "traditional",
+      "note": "doxologia.ro: born around 1590 at Borcești near Târgu-Neamț."
+    },
+    "death": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Свт. Варлаама, митр. Молдавского (1657)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Свт. Варлаама, митр. Молдавского (1657) (Рум.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Рум.)”, a saint of the Romanian church."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Ierarh Varlaam, Mitropolitul Moldovei”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu dumnezeieștile învățături strălucind, Părinte Sfinte, ai păstorit Biserica neamului tău și ai tâlcuit Evanghelia lui Hristos. Pentru aceasta, te-ai arătat, Sfinte Ierarhe Varlaam, ca un mare apărător al dreptei credințe.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Varlaam, Mitropolitul Moldovei",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-varlaam-mitropolitul-moldovei",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Vrednic slujitor al lui Hristos și înțelept apărător al dreptei credințe, mare cinstitor al Sfintei Cuvioase Parascheva și credincios luminător al neamului românesc, Sfinte Ierarhe Varlaam, roagă pe Hristos-Dumnezeu să ocrotească și să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Varlaam, Mitropolitul Moldovei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-varlaam-mitropolitul-moldovei",
+        "year": 2026
+      }
+    }
+  ]
+}

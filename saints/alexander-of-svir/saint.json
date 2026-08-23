@@ -1,0 +1,123 @@
+{
+  "slug": "alexander-of-svir",
+  "display_name": "Alexander of Svir",
+  "names": [
+    {
+      "form": "Александр Свирский",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Αλέξανδρος του Σβερ",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Alexandru din Svir",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1448,
+      "latest": 1448,
+      "display": "1448",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 15 June 1448."
+    },
+    "death": {
+      "earliest": 1533,
+      "latest": 1533,
+      "display": "1533",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Александра Свирского (1533)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Прп. Александра Свирского (1533)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Alexandru din Svir”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — «Άγιος Αλέξανδρος του Σβερ»",
+        "url": "https://www.saint.gr/08/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности, Богомудре, желанием духовным в пустыню вселився,/ единаго Христа возжелал еси усердно стопам в след ходити,/ темже и ангельстии чини зряще тя, удивишася,/ како с плотию к невидимым кознем подвизався, премудре,/ победил еси полки страстей воздержанием/ и явился еси равноангелен на земли,/ Александре преподобне,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Тропарь преподобного Александра Свирского»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко многосветлая звезда днесь в странах российских возсиял еси, отче,/ вселився в пустыню, Христовым стопам последовати усердно возжелел еси/ и, Того святое иго на рамо твое взем — честный крест,/ умертвил еси труды подвиг твоих телесныя взыграния,/ темже вопием ти:/ спаси стадо твое, еже собрал еси, мудре, да зовем ти:/ радуйся, преподобне Александре, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Кондак преподобного Александра Свирского»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "slug": "sofian-of-antim",
+  "display_name": "Sofian of Antim, Confessor",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Mărturisitor Sofian de la Antim",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "1912",
+      "basis": "attested",
+      "note": "doxologia.ro: born 7 October 1912 at Cuconeștii Vechi, Bălți county."
+    },
+    "death": {
+      "earliest": 2002,
+      "latest": 2002,
+      "display": "2002",
+      "basis": "attested",
+      "note": "doxologia.ro: reposed 14 September 2002."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 16 septembrie — „Sfântul Cuvios Mărturisitor Sofian de la Antim”",
+        "url": "https://doxologia.ro/16-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service; canonised 2024."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 16 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Veniți, toți credincioșii, să lăudăm pe luminatul de Dumnezeu duhovnic al Bucureștilor, cel ce, în vremuri de prigoană, pe Hristos L-a mărturisit, cu înțelepciunea harului pe ucenici i-a îndrumat și sfintele biserici cu minunate icoane le-a înfrumusețat; și din inimi să-i strigăm: Bucură-te, Cuvioase Părinte Sofian, iscusit iconar de suflete!",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Mărturisitor Sofian de la Antim",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-marturisitor-sofian-de-la-antim",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "",
+      "text": "Lucrătorule al rugăciunii, Cuvioase Părinte Sofian, iconar iscusit al bisericii, cel ce în suflete, prin harul duhului, ai zugrăvit chipul Mântuitorului, și-n temniță, pentru credință, ai pătimit cu sfinții toți fiind în ceruri acum, roagă-te neîncetat lui Dumnezeu pentru noi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Mărturisitor Sofian de la Antim",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-marturisitor-sofian-de-la-antim",
+        "year": 2026
+      }
+    }
+  ]
+}

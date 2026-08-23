@@ -1,0 +1,68 @@
+{
+  "slug": "pulcheria-the-empress",
+  "display_name": "Pulcheria the Empress",
+  "names": [
+    {
+      "form": "Αγία Πουλχερία η βασίλισσα",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Împărăteasă Pulheria",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous",
+    "empress"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 10 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 septembrie — „Sfânta Împărăteasă Pulheria”",
+        "url": "https://doxologia.ro/10-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου — «Αγία Πουλχερία η βασίλισσα»",
+        "url": "https://www.saint.gr/09/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 10. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

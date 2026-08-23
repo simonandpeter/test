@@ -1,0 +1,5 @@
+# Philotheus the Presbyter, Wonderworker
+
+Philotheus was a tireless fighter for virtue all his life, which made him at last a saint. He was from the village of Myrmex in the province of Opsikion, and married a woman whose dowry was a great and immortal piety; they had children, raised under their parents’ watchful care in the instruction and admonition of the Lord, and so, a model by his whole conduct and the most Christian upbringing of his children, he was ordained priest at the insistent plea of his fellow-villagers. Towards his flock he behaved as towards his family — with piety, love, watchfulness and teaching; many times, in rain and cold, he left his own house to go to his parishioners’ houses to help them with material aid or moral strength and comfort. God, who saw his spiritual progress, made him worthy to work wonders too, and so he helped his flock still more, and so went on until he gave his righteous soul to God — having lived as God’s friend, the verse says, he found unending life with God’s friends.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — [the entry](https://www.saint.gr/2434/saint.aspx); read 23 August 2026.*

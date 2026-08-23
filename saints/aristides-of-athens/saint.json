@@ -1,0 +1,64 @@
+{
+  "slug": "aristides-of-athens",
+  "display_name": "Aristides of Athens, Apologist",
+  "names": [
+    {
+      "form": "Άγιος Αριστείδης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "apologist"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 120,
+      "latest": 120,
+      "display": "120",
+      "basis": "traditional",
+      "note": "saint.gr: hanged in the agora of Athens on 13 September 120."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — «Άγιος Αριστείδης»",
+        "url": "https://www.saint.gr/09/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

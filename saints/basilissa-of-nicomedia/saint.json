@@ -1,0 +1,84 @@
+{
+  "slug": "basilissa-of-nicomedia",
+  "display_name": "Basilissa of Nicomedia",
+  "names": [
+    {
+      "form": "Василисса Никомидийская",
+      "lang": "ru"
+    },
+    {
+      "form": "Αγία Βασίλισσα",
+      "lang": "el"
+    },
+    {
+      "form": "Св. муч. Василиса",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 309,
+      "latest": 309,
+      "display": "309",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Василиссы Никомидийской (309)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Мц. Василиссы Никомидийской (309)»",
+        "url": "https://days.pravoslavie.ru/Days/20260903.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Αγία Βασίλισσα»",
+        "url": "https://www.saint.gr/09/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.09.2026 (3. септембар ст. ст.) — „Св. муч. Василиса.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-16&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

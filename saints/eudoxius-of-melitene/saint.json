@@ -1,0 +1,96 @@
+{
+  "slug": "eudoxius-of-melitene",
+  "display_name": "Eudoxius of Melitene",
+  "names": [
+    {
+      "form": "Евдоксий",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιοι Ευδόξιος, Ρωμύλος, Ζήνων, Μακάριος, Έντεκα Χιλιάδες Μάρτυρες και Χίλιοι Εκατόν Τέσσερις Μάρτυρες",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mucenic Eudoxie",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети мученик Евдоксије",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 312,
+      "display": "303–312",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Евдоксия, Зинона и Макария (311-312)”; saint.gr and the Prologue: under Diocletian."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Мчч. Евдоксия, Зинона и Макария (311-312)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 6 septembrie — „Sfântul Mucenic Eudoxie”",
+        "url": "https://doxologia.ro/6-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — «Άγιοι Ευδόξιος, Ρωμύλος, Ζήνων, Μακάριος, Έντεκα Χιλιάδες Μάρτυρες και Χίλιοι Εκατόν Τέσσερις Μάρτυρες»",
+        "url": "https://www.saint.gr/09/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 19.09.2026 (6. септембар ст. ст.) — „Свети мученик Евдоксије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

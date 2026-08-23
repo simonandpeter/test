@@ -71,10 +71,21 @@ with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
 - 123 unit tests (`npm test`) — pure logic, no DOM.
-- 216 browser tests (`npm run test:e2e`) — 108 across desktop and 360 px.
-  (Counts as of 2026-08-23, Amendment 30; read the suite's own
-  summary rather than trusting this line.)
+- 218 browser tests (`npm run test:e2e`) — 109 across desktop and 360 px.
+  (Counts as of 2026-08-23, Amendment 31 — **the browser suite was not run
+  after Amendment 31**; its counts were recomputed for the 708-saint corpus
+  and a test added, and the first thing to do is run it, watch it, and back the
+  new test out to see it fail. Read the suite's own summary rather than
+  trusting this line.)
 - `npm run test:all` runs both. CI runs both on every push.
+
+**Corpus as of 2026-08-23 (Amendment 31): 708 saints**, every one with a life
+and four attestation rows; 430 hymns; readings/fasting for 23 August –
+19 September in `src/data/liturgical-days.js` (the Greek 7–19 September empty
+with a note — saint.gr had not published them); 91 icons (84 from Wikimedia
+Commons with their file pages cited). The generating pipeline is under
+`.tmp/w3/` (untracked) and SESSIONS.md Amendment 31 lists what is left:
+the browser run, the Greek readings once saint.gr publishes them, more icons.
 
 **Pushing happens outside this session.** Agent sessions have no git
 credentials — `git push` fails with "could not read Username" from both shells.

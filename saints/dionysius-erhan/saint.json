@@ -1,0 +1,73 @@
+{
+  "slug": "dionysius-erhan",
+  "display_name": "Dionysius (Erhan), Bishop of Cetatea Albă-Ismail",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Dionisie, Episcopul Cetății Albe-Ismail",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "The Romanian life: born 1868 at Bardar near Chișinău."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 17 septembrie — „Sfântul Ierarh Dionisie, Episcopul Cetății Albe-Ismail”",
+        "url": "https://doxologia.ro/17-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 17 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Din tinerețe ai slujit lui Dumnezeu cu smerenie, sufletul ți l-ai hrănit cu Sfintele Scripturi, iar prin rugăciune stăruitoare și viață virtuoasă, te-ai făcut lăcaș al darurilor Duhului Sfânt și ai fost vrednic păstor al românilor basarabeni. Pentru aceasta, Sfinte Ierarhe Dionisie, îndrăznire câștigând către Hristos Dumnezeu, roagă-te pentru sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Dionisie, Episcopul Cetății Albe-Ismail",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-dionisie-episcopul-cetatii-albe-ismail",
+        "year": 2026
+      }
+    }
+  ]
+}

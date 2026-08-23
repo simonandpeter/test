@@ -1,0 +1,57 @@
+{
+  "slug": "andropelagia-of-alexandria",
+  "display_name": "Andropelagia of Alexandria",
+  "names": [
+    {
+      "form": "Αγίες Ανδροπελαγία και Θέκλα",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "saint.gr: in the persecution of Decius."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 6 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Σεπτεμβρίου — «Αγίες Ανδροπελαγία και Θέκλα»",
+        "url": "https://www.saint.gr/09/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

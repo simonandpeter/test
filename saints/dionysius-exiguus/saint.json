@@ -1,0 +1,77 @@
+{
+  "slug": "dionysius-exiguus",
+  "display_name": "Dionysius Exiguus",
+  "names": [
+    {
+      "form": "Дионисий Малый",
+      "lang": "ru"
+    },
+    {
+      "form": "Sfântul Cuvios Dionisie Exiguul (cel Smerit)",
+      "lang": "ro"
+    },
+    {
+      "form": "Dionysius Exiguus",
+      "lang": "la"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 556,
+      "display": "before 556",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Дионисия Малого (до 556)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Прп. Дионисия Малого (до 556) (Рум.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Рум.)”, a saint of the Romanian church."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 septembrie — „✝ Sfântul Cuvios Dionisie Exiguul (cel Smerit)”",
+        "url": "https://doxologia.ro/1-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝ on doxologia.ro."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 1 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 14.09.2026 (1. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

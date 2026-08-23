@@ -1,0 +1,177 @@
+{
+  "slug": "alexander-nevsky",
+  "display_name": "Alexander Nevsky, Grand Prince",
+  "names": [
+    {
+      "form": "Александр Невский",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Αλέξανδρος «Νιέφσκι»",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Alexandru Nevski",
+      "lang": "ro"
+    },
+    {
+      "form": "Свети Александар Невски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince",
+    "righteous"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1220,
+      "latest": 1220,
+      "display": "1220",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 30 May 1220 at Pereslavl-Zalessky."
+    },
+    "death": {
+      "earliest": 1263,
+      "latest": 1263,
+      "display": "1263",
+      "basis": "attested",
+      "note": "saint.gr: reposed in peace in 1263, a monk with the name Alexis."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The translation of his relics to St Petersburg (1724), kept on 30 August; his repose is kept on 23 November (Julian)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Перенесение мощей блгв. кн. Александра Невского (1724)»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics to St Petersburg (1724), kept on 30 August; his repose is kept on 23 November (Julian)."
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Alexandru Nevski”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The translation of his relics to St Petersburg (1724), kept on 30 August; his repose is kept on 23 November (Julian)."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — «Όσιος Αλέξανδρος ηγεμόνας της Ρωσίας»",
+        "url": "https://www.saint.gr/08/30/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr keeps him twice on the day: as “Όσιος Αλέξανδρος ηγεμόνας της Ρωσίας” (839) and as the translation of his relics, “Ανακομιδή Ιερών Λειψάνων του Αγίου Αλεξάνδρου «Νιέφσκι»” (3085)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The translation of his relics to St Petersburg (1724), kept on 30 August; his repose is kept on 23 November (Julian)."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 12.09.2026 (30. август ст. ст.) — „Пренос моштију светог Александра Невског“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Познай свою братию, российский Иосифе,/ не в Египте, но на Небеси царствующий,/ благоверный княже Александре,/ и приими моления их,/ умножая жита людем плодоносием земли твоея,/ грады владычествия твоего ограждая молением// и православным христианом на сопротивныя споборствуя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Тропарь благоверного князя Александра Невского»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Якоже сродницы твои Борис и Глеб/ явишася тебе с Небесе в помощь,/ подвизающемуся на Велгера Свейскаго и воев его,/ тако и ты ныне,/ блаженне Александре,/ прииди в помощь твоим сродником// и побори борющия ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Кондак благоверного князя Александра Невского»",
+        "url": "https://days.pravoslavie.ru/Days/20260830.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Te cinstim ca pe o stea a călăuzirii noastre duhovniceşti mult strălucitoare, ce de la răsărit se ridică; şi spre apus se îndreaptă, ca cel ce ai îmbogăţit poporul rus cu lucrări şi cu minuni, aşa ne luminează şi pe noi cei ce te pomenim cu credinţă, o, binecuvântate Alexandru. Astăzi când pomenim adormirea ta, te rugăm către Domnul cu osârdie să mijloceşti ca pe slujitorii săi cei aflați întru nevoi să-i întărească şi să mântuiască pe toţi creştinii ortodocşi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Alexandru Nevski",
+        "url": "https://doxologia.ro/condacul-sfantului-alexandru-nevski",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Hristos te-a arătat pe tine, o binecuvântate Alexandru, ca pe un nou şi slăvit făcător de minuni; bărbat neînfricat şi conducător ce bine ai plăcut lui Dumnezeu, comoara dumnezeiască a pământului Rusiei. Astăzi cu credinţă şi cu dragoste ne-am adunat ca prin pomenirea ta cea întru bucurie să slăvim pe Dumnezeu. Darul tămăduirii primit-ai de la El, deci cu stăruinţă către Dânsul roagă-te pentru fii tăi duhovniceşti cei aflaţi întru nevoi şi să mântuiască pe toţi creştinii ortodocşi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Alexandru Nevski",
+        "url": "https://doxologia.ro/troparul-sfantului-alexandru-nevski",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 2",
+      "text": "Небесних војинстав архистратиже, молим тја присно ми недостојнији, да твојими молитвами оградиши нас кровом крилу невешчественија твојеја слави; сохрањујушче ни, припадајушчија приљежно и вопијушчија: от бјед избави ни, јако чиноначалник вишњих сил.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Пренос моштију светог Александра Невског",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0912",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

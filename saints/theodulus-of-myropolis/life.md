@@ -1,0 +1,5 @@
+# Theodulus of Myropolis
+
+Theodulus was one of the three martyrs Macedonius, Theodulus and Tatian, who lived in the years of Julian the Apostate (360–363) and were martyred at Myropolis in Phrygia. When the ruler of Phrygia, Amachius, ordered the pagan temple of Myropolis cleaned and the statues in it seen to, these three soldiers of Christ went secretly into the temple by night and smashed the statues; and so that other innocent Christians should not be ill-treated they revealed themselves to the ruler and said that they had broken them. The cruel Amachius, failing to persuade them to sacrifice to the idols, roasted them alive on a red-hot gridiron. The Greek calendar keeps the three on 12 September; the Romanian calendar keeps Theodulus and Macedonius by name the same day.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — [the entry](https://www.saint.gr/2413/saint.aspx); The Romanian life is at doxologia.ro — [the page](https://doxologia.ro/sfantul-mucenic-teodul); read 23 August 2026.*

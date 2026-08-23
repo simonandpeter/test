@@ -1,0 +1,66 @@
+{
+  "slug": "hermogenes-of-tobolsk",
+  "display_name": "Hermogenes, Bishop of Tobolsk, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Гермоген Тобольский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1858,
+      "latest": 1858,
+      "display": "1858",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born 25 April 1858."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: killed in 1918."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The finding of his relics (2005) as the Russian calendar keeps it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 августа ст. ст. — «Обретение мощей сщмч. Гермогена, еп. Тобольского (2005)»",
+        "url": "https://days.pravoslavie.ru/Days/20260820.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 20 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 20 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 02.09.2026 (20. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

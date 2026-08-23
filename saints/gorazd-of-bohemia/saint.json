@@ -1,0 +1,90 @@
+{
+  "slug": "gorazd-of-bohemia",
+  "display_name": "Gorazd, Bishop of Bohemia and Moravia-Silesia, Hieromartyr (1942)",
+  "names": [
+    {
+      "form": "Горазд Богемский",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети свештеномученик Горазд Чешки",
+      "lang": "sr"
+    },
+    {
+      "form": "Gorazd",
+      "lang": "cs"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Горазда, еп. Богемского и Мораво-Силезского (1942)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Сщмч. Горазда, еп. Богемского и Мораво-Силезского (1942) (Серб.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      },
+      "note": "The page marks him “(Серб.)”, a saint of the Serbian church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 04.09.2026 (22. август ст. ст.) — „Свети свештеномученик Горазд Чешки“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Достойнейший преемник учителя своего Мефодия,/ Моравския Церкве первопрестольника,/ был еси, святителю отче наш Горазде,/ столп Православия предивен,/ мученик без крове,/ и изгнание от своего стада коварными мужи претерпев./ Далече от своего отечества, Моравския земли,/ утвердив проповедию догматы божественныя Истины,/ Духом соединился еси со святыми учители своими Кириллом и Мефодием в Царстве Небеснем./ Моли о нас, блаженне,/ верою почитающих память твою,/ умирити мир и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Тропарь святого Горазда, архиепископа Моравского»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    }
+  ]
+}

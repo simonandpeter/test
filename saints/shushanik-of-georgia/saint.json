@@ -5,6 +5,15 @@
     {
       "form": "Sfânta Muceniță Suzana, regina Georgiei",
       "lang": "ro"
+    },
+    {
+      "form": "Шушаника",
+      "lang": "ru"
+    },
+    {
+      "form": "Вардандухт",
+      "lang": "hy",
+      "note": "her given name, after her father"
     }
   ],
   "sex": "female",
@@ -14,8 +23,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 августа ст. ст. — «Мц. Шушаники, кн. Ранской (V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260828.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -44,5 +62,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

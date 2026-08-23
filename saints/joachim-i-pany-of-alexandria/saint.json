@@ -1,0 +1,58 @@
+{
+  "slug": "joachim-i-pany-of-alexandria",
+  "display_name": "Joachim I Pany, Patriarch of Alexandria",
+  "names": [
+    {
+      "form": "Άγιος Ιωακείμ Α' ο Πάνυ Πατριάρχης Αλεξανδρείας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1448,
+      "latest": 1448,
+      "display": "1448",
+      "basis": "attested",
+      "note": "saint.gr: born at Athens in 1448."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 17 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — «Άγιος Ιωακείμ Α' ο Πάνυ Πατριάρχης Αλεξανδρείας»",
+        "url": "https://www.saint.gr/09/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

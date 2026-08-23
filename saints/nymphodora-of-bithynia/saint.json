@@ -1,0 +1,133 @@
+{
+  "slug": "nymphodora-of-bithynia",
+  "display_name": "Nymphodora of Bithynia",
+  "names": [
+    {
+      "form": "Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα",
+      "lang": "el"
+    },
+    {
+      "form": "Sfintele Mucenițe Minodora, Mitrodora și Nimfodora",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 10 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 septembrie — „Sfintele Mucenițe Minodora, Mitrodora și Nimfodora”",
+        "url": "https://doxologia.ro/10-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου — «Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα»",
+        "url": "https://www.saint.gr/09/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 10. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τᾶς τρεῖς ἔνδοξους Παρθένους καὶ Ἀθληφόρους θεόφρονας, τᾶς συνδεδεμένος ἐνθέως, ἀδελφικὴ οἰκειότητι, τᾶς καλλιρόους πηγᾶς τῆς εὐσέβειας, τᾶς ἀναβλύζουσας, μαρτυρικῶν ἀγώνων χάριν ἀέναον, τὴν θείαν Μηνοδώραν, καὶ τὴν Μητροδώραν τὴν ἔνδοξον, σὺν τὴ κλυτὴ Νυμφοδώρα, τὴ ἐν πάσι καρτερόφρονι, πάντες οἱ τρυφῶντες τῶν ἄθλων αὐτῶν, συνδραμόντες ὕμνοις τιμήσωμεν αὑταὶ γὰρ τὴ Τριάδι, ὑπὲρ ἠμῶν ἀεὶ πρεσβεύουσι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2369/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοὺς τρεῖς μεγίστους φωστῆρας."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τὸν τρισάριθμον σύλλογον καὶ θεόπλοκον τῶν αὐτάδελφων παρθένων στέψωμεν θείαις ᾠδαῖς· ἀνδρικῶς γὰρ τὸν ἐχθρὸν κατετροπώσαντο· ὅθεν προϊστάντι ἡμῶν τῶν βοώντων ἐκτενῶς· χαῖρε, σεμνὴ Μηνοδώρα, σὺν Μητροδώρα τῇ θείᾳ καὶ Νυμφοδώρα τῇ θεόφρονι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2369/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὑπὲρ Τριάδος καρτερῶς ἐναθλούσαι, τὸν πολυμήχανον ἐχθρὸν ἐτροπώσασθε, ἀδελφικῶς τῷ πνεύματι συνδούμεναι, ὅθεν εἰσωκίσθητε, σὺν ταὶς πέντε Παρθένοις, πρὸς τὸν ἐπουράνιον, Ἀθληφόροι νυμφῶνα, καὶ σὺν Ἀγγέλοις τῷ παμβασιλεῖ, ἐν εὐφροσύνῃ ἀπαύστως παρίστασθε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2369/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεῖς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Chinuite fiind cu cruzime pentru Sfânta Treime, aţi biruit pe vrăjmaşul cel mult meşteşugăreţ, fiind alcătuite cu Duhul ca nişte surori. Pentru aceea, v-aţi sălăşluit împreună cu cele cinci fecioare în Cămara cea Cerească, biruitoarelor; şi împreună cu îngerii staţi înaintea Împăratului tuturor, bucurându-vă neîncetat.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintelor Muceniţe Minodora, Mitrodora şi Nimfodora",
+        "url": "https://doxologia.ro/condacul-sfintelor-mucenite-minodora-mitrodora-nimfodora",
+        "year": 2026
+      },
+      "model": "Cel Ce Te-ai Înălţat..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Valurile cele întreite ale chinurilor şi moarte amară, pentru viaţa cea veşnică aţi schimbat, sfintelor muceniţe trei fecioare, mărturisind înaintea divanurilor celor fărădelege pe Treimea Cea Nezidită. Pentru aceea, cu sabia fiind tăiate, urmaţi acum Mielului Celui înjunghiat şi vă rugaţi pentru cei ce cinstesc sfinţită pomenirea voastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintelor Muceniţe Minodora, Mitrodora şi Nimfodora",
+        "url": "https://doxologia.ro/troparul-sfintelor-mucenite-minodora-mitrodora-nimfodora",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

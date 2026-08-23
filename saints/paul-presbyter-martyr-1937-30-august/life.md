@@ -1,0 +1,5 @@
+# Paul (Malinovsky), Presbyter, Hieromartyr (1937)
+
+Paul Vasilievich Malinovsky was born on 15 October 1874 to the deacon of the Trinity church at Shelota. He finished the Vologda seminary in 1894, on 13 December 1894 was made supervisor of the Ust-Sysolsk church school, a post he held to the end of 1897, and on 14 November 1897 was appointed by Alexis, bishop of Vologda, to a clerical post and on 28 January 1898 ordained priest by Gabriel, bishop of Veliky Ustyug, to the Annunciation church of Ust-Vym; from 1898 he was head and catechist of the Ust-Vym boys’ two-class parish school, and for diligent — the calendar’s life runs on past the point read here. He was dean and catechist; after the revolution he was persecuted — in 1918 assessed for a contribution, in 1921 prosecuted for keeping church valuables — and in 1937 arrested on a charge of counter-revolutionary activity and shot at Syktyvkar on 25 August 1937. He was numbered among the saints in 2001, and the Russian calendar keeps him on 30 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-pavel-malinovskij); read 23 August 2026.*

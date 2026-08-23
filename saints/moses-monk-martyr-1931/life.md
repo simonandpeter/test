@@ -1,0 +1,5 @@
+# Moses (Kozhin), Hieromonk of Solovki, Monk-martyr (1931)
+
+Moses Nikitich Kozhin was born in the village of Olenitsa in 1868. In his young years he resolved to give his life wholly to God and went to the Solovki monastery, where he was tonsured, and in 1896 was ordained priest; he laboured at Solovki until the Bolsheviks closed it in 1924, and from 1926, back in his native village, served as priest of the church of the Nativity of John the Forerunner, holding firmly to the Orthodox ways — for which, in effect, he was persecuted. He was arrested on 16 April 1931 on the charge that he systematically carried on anti-collective-farm propaganda under the flag of religion, and sentenced to three years’ exile — the calendar’s life runs on past the point read here. He died the same year in a hospital in Leningrad of scurvy and enterocolitis; the Russian calendar keeps him on 25 August (Julian), among the new martyrs of Solovki.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-moisej-kozhin); read 23 August 2026.*

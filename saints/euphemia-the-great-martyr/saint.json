@@ -1,0 +1,143 @@
+{
+  "slug": "euphemia-the-great-martyr",
+  "display_name": "Euphemia the Great Martyr",
+  "names": [
+    {
+      "form": "Αγία Ευφημία",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Mare Muceniță Eufimia",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "saint.gr: lived and was martyred in the years of Diocletian."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 16 septembrie — „Sfânta Mare Muceniță Eufimia”",
+        "url": "https://doxologia.ro/16-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου — «Αγία Ευφημία»",
+        "url": "https://www.saint.gr/09/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τῷ θείῳ ἔρωτι, Λαμπρῶς ἀθλήσασα, εἰς oσμὴν ἔδραμες, Χριστοῦ πανεύφημε, οἴα νεᾶνις παγκαλῆς, καὶ Μάρτυς πεποικιλμένη, ὅθεν εἰσελήλυθας, ἐiς παστάδα οὐράνιον, κόσμω διανέμουσα, ἰαμάτων χαρίσματα, καὶ σῴζουσα τοὺς σοὶ ἐκβοώντας, χαίροις θεόφρον Εὐφημία.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Ευφημία, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2445/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἐν τῇ ἀθλήσει σου καλῶς ἠγωνίσω, καὶ μετὰ θάνατον ἡμᾶς ἁγιάζεις, ταῖς τῶν θαυμάτων βλύσεσι Πανεύφημε, ὅθεν σου τὴν κοίμησιν, τὴν ἁγίαν τιμῶμεν, πίστει παριστάμενοι, τῷ σεπτῷ σου λειψάνῳ, ἵνα ῥυσθῶμεν νόσων ψυχικῶν, καὶ τῶν θαυμάτων τὴν χάριν ἀντλήσωμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Ευφημία, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2445/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Întru chinuirea ta bine te-ai nevoit şi după moarte pe noi ne sfinţeşte cu izvoarele minunilor, prealăudată. Pentru aceasta, cinstim cu credinţă sfântă adormirea ta, stând înaintea cinstitelor tale moaşte, ca să ne mântuim de neputinţe sufleteşti şi să luăm dar din minune.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Mari Muceniţe Eufimia",
+        "url": "https://doxologia.ro/condacul-sfintei-mari-mucenite-eufimia-0",
+        "year": 2026
+      },
+      "model": "Cel Ce Te-ai Înălţat..."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 6",
+      "text": "Nevoinţe în chinuri, nevoinţe pentru credinţă cu avânt ai suferit pentru Hristos, Mirele tău. Acestuia şi acum roagă-te, să se surpe trufia vrăjmaşilor sub picioarele binecredincioşilor, ca şi atunci eresurile prin rugăciunile Născătoarei de Dumnezeu, ceea ce ai primit hotărârea credinţei, de la cei şase sute şi treizeci de Dumnezeu purtători Părinţi şi o păstrezi, prealăudată.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Mari Muceniţe Eufimia",
+        "url": "https://doxologia.ro/condacul-sfintei-mari-mucenite-eufimia-1",
+        "year": 2026
+      },
+      "model": "Chipul Cel Scris..."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Lupte în chinuri, lupte în credinţă ai purtat cu căldură pentru Hristos, Mirele tău. Şi aşa precum ai zdrobit eresurile, aşa şi acum întărâtările vrăjmaşilor supune-le sub picioarele poporului nostru, rugând pe Născătoarea de Dumnezeu. Căci tu ai luat de la cei şase sute şi treizeci purtători de Dumnezeu părinţi hotarul credinţei şi l-ai păzit pe el, ceea ce eşti prealăudată.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Mucenițe Eufimia",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-eufimia",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

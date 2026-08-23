@@ -1,0 +1,5 @@
+# Miron (Rzhepik), Archpriest, Hieromartyr (1937)
+
+Miron was born into a devout Czech Catholic family, to John and Mary Rzhepik, on 21 April 1885 in the village of Kuchkarovka in the Lutsk district of Volhynia province, and baptised on 2 May 1885 in the Roman Catholic cathedral of Lutsk with the name Miroslav, his godparents Joseph and Mary. In 1887 the whole family joined Orthodoxy in the same city of Lutsk, and Miroslav was named Miron for the hieromartyr Miron of Cyzicus, kept on 17/30 August; in 1900 Miron finished — the calendar’s life runs on past the point read here. He finished the Moscow Academy and after the revolution served as priest near Moscow; in 1930 he was arrested and sentenced to ten years in the camps on a charge of counter-revolutionary activity, and in custody in Siberia went on secretly celebrating the services. In 1937, on a new false charge, he was sentenced to be shot and executed on 13 September; he was glorified in 2006, and the Russian calendar keeps him on 31 August (Julian).
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-miron-rzhepik); read 23 August 2026.*

@@ -1,0 +1,103 @@
+{
+  "slug": "abraham-of-smolensk",
+  "display_name": "Abraham of Smolensk",
+  "names": [
+    {
+      "form": "Авраамий Смоленский",
+      "lang": "ru"
+    },
+    {
+      "form": "Преп. Аврамије Смоленски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Аврамия Смоленского (XIII)”; the Prologue: around 1220."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Прп. Аврамия Смоленского (XIII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.09.2026 (21. август ст. ст.) — „Преп. Аврамије Смоленски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-03&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Днесь возсия нам память твоя, славне, яко солнце,/ светозарно лучами озаряющая мир/ и тьму нощи злых духов от нас отгоняющая./ Днесь Небесныя силы святых Ангел/ и души праведных мысленно торжествуют, радующеся./ Днесь и мы, грешнии, припадающе, молимся:/ отче преподобне Авраамие,/ Христа Бога моли непрестанно/ спасти град и люди, любезно тебе почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Тропарь преподобного Авраамия, чудотворца Смоленского»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Возсия, Господи, граду Твоему/ память Твоего угодника,/ яко светлое солнце,/ радостно всех, яко лучами, озаряющи,/ паче же молитвы Пречистыя Твоей Матере/ от всех бед избавляют нас/ и упраждняют варварская шатания./ Тем мы, людие Твои и град наш, вельми хвалимся/ и спасаемся молитвами/ Твоего угодника Авраамия, преподобнаго отца.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Кондак преподобного Авраамия, чудотворца Смоленского»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

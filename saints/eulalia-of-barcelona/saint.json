@@ -1,0 +1,75 @@
+{
+  "slug": "eulalia-of-barcelona",
+  "display_name": "Eulalia of Barcelona",
+  "names": [
+    {
+      "form": "Евлалия",
+      "lang": "ru"
+    },
+    {
+      "form": "Св. муч. Евлалија",
+      "lang": "sr"
+    },
+    {
+      "form": "Eulalia",
+      "lang": "la"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 308,
+      "display": "c. 303",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Евлалии девы (ок. 303)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Мц. Евлалии девы (ок. 303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.09.2026 (22. август ст. ст.) — „Св. муч. Евлалија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-04&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "slug": "elizabeth-mother-of-the-forerunner",
+  "display_name": "Elizabeth the Righteous, mother of the Forerunner",
+  "names": [
+    {
+      "form": "Елисавета",
+      "lang": "ru"
+    },
+    {
+      "form": "Προφήτης Ζαχαρίας και η σύζυγος του Ελισάβετ",
+      "lang": "el"
+    },
+    {
+      "form": "Dreapta Elisabeta, mama Sfântului Ioan Botezătorul",
+      "lang": "ro"
+    },
+    {
+      "form": "праведна Јелисавета",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (I)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Прор. Захарии и прав. Елисаветы, родителей св. Иоанна Предтечи (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 septembrie — „Dreapta Elisabeta, mama Sfântului Ioan Botezătorul”",
+        "url": "https://doxologia.ro/5-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Σεπτεμβρίου — «Προφήτης Ζαχαρίας και η σύζυγος του Ελισάβετ»",
+        "url": "https://www.saint.gr/09/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 18.09.2026 (5. септембар ст. ст.) — „Свети пророк Захарија и праведна Јелисавета“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко луна полна,/ Свет Правды от Мысленнаго Солнца Мессии прияла еси,/ и во всех заповедех Господних с Захарием ходила еси, Боговозлюбленная Елисавето./ Достойными убо Тя песньми ублажающе,/ Всещедраго Света, просвещающаго всех, Господа величаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Кондак праведной Елисаветы»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἱερωσύνης στολισμόν, περιβαλλόμενος σοφέ, κατὰ τὸν νόμον τοῦ Θεού, ὁλοκαυτώματα δεκτά, ἱεροπρεπῶς προσενήνοχας Ζαχαρία· καὶ γέγονας φωστήρ, καὶ θεατὴς μυστικῶν, τὰ σύμβολα ἐν σοί, τὰ τῆς χάριτος, φέρων ἐκδήλως πάνσοφε, καὶ ξίφει ἀναιρεθεὶς ἐν τῷ ναῷ τοῦ Θεοῦ, Χριστοῦ Προφῆτα, σὺν τῷ Προδρόμῳ, πρέσβευε σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ζαχαρίας και η σύζυγος του Ελισάβετ, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2352/saint.aspx",
+        "year": 2026
+      },
+      "model": "Κατεπλάγη Ἰωσήφ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ὁ Προφήτης σήμερον, καὶ ἱερεὺς τοῦ Ὑψίστου, Ζαχαρίας προύθηκεν, ὁ τοῦ Προδρόμου γενέτης, τράπεζαν τῆς αὐτοῦ μνήμης Πιστοὺς ἐκτρέφων, πόμα τε δικαιοσύνης τούτοις κεράσας. Διὸ τοῦτον εὐφημοῦμεν, ὡς θεῖον μύστην Θεοῦ τῆς χάριτος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ζαχαρίας και η σύζυγος του Ελισάβετ, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2352/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 4",
+      "text": "Обучен у свештеничке одежде, премудри, по закону Божијем жртве паљенице си благоугодно приносио, пророче Захарије, и био си свећњак и сведок тајни. Знамења благодати у теби си носио, свемудри, и мачем си био убијен у храму Божијем, Христов пророче, са Претечом моли да се спасу душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети пророк Захарије и праведна Јелисавета",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0918",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

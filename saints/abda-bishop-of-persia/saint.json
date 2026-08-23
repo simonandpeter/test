@@ -1,0 +1,75 @@
+{
+  "slug": "abda-bishop-of-persia",
+  "display_name": "Abda (Abdias), Bishop in Persia",
+  "names": [
+    {
+      "form": "Авдий",
+      "lang": "ru"
+    },
+    {
+      "form": "Авид",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιος Αβδαίος επίσκοπος Περσίας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мч. Авдия (Авида) в Персии (V)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мч. Авдия (Авида) в Персии (V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Σεπτεμβρίου — «Άγιος Αβδαίος επίσκοπος Περσίας»",
+        "url": "https://www.saint.gr/09/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "bassa-of-edessa",
+  "display_name": "Bassa of Edessa",
+  "names": [
+    {
+      "form": "Васса",
+      "lang": "ru"
+    },
+    {
+      "form": "Света мученица Васа",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Мц. Вассы и чад ее, мчч. Феогния, Агапия и Писта (305-311)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 августа ст. ст. — «Мц. Вассы и чад ее, мчч. Феогния, Агапия и Писта (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260821.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 03.09.2026 (21. август ст. ст.) — „Света мученица Васа и њена деца Теогније, Агапије и Пист“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

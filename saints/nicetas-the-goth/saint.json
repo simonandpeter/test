@@ -1,0 +1,130 @@
+{
+  "slug": "nicetas-the-goth",
+  "display_name": "Nicetas the Goth, Great Martyr",
+  "names": [
+    {
+      "form": "Άγιος Νικήτας ο Γότθος ο μεγαλομάρτυρας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Mare Mucenic Nichita Romanul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 337,
+      "display": "under Constantine the Great",
+      "basis": "traditional",
+      "note": "saint.gr: in the years of Constantine the Great; thrown into a furnace."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 septembrie — „Sfântul Mare Mucenic Nichita Romanul”",
+        "url": "https://doxologia.ro/15-septembrie",
+        "year": 2026
+      },
+      "note": "Marked ✝ on doxologia.ro’s list."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου — «Άγιος Νικήτας ο Γότθος ο μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/09/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Νίκην ἔστησας, κατὰ τῆς πλάνης, νίκης εἴληφας, ἄφθαρτον γέρας, ἐπαξίως Νικήτα φερώνυμε, σὺ γὰρ νικήσας ἐχθρῶν τὴν παράταξιν, διὰ πυρὸς τὸν ἀγῶνα ἐτέλεσας. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Νικήτας ο Γότθος ο μεγαλομάρτυρας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2431/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τῆς πλάνης τεμών, τὸ κράτος τῇ ἐνστάσει σου, καὶ νίκης λαβών, τὸ στέφος τῇ ἀθλήσει σου, τοῖς Ἀγγέλοις ἔνδοξε, συναγάλλῃ Νικήτα φερώνυμε, σὺν αὐτοῖς Χριστῷ τῷ Θεῷ, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Νικήτας ο Γότθος ο μεγαλομάρτυρας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2431/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Tăind tăria înşelăciunii cu împotrivirea ta şi luând cununa biruinţei prin nevoinţa ta, te veseleşti împreună cu îngerii, Mărite Mucenice Nichita, cel cu nume de biruinţă, împreună cu dânşii neîncetat rugându-te lui Hristos Dumnezeu pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Mare Mucenic Nichita Romanul",
+        "url": "https://doxologia.ro/condacul-sfantului-mare-mucenic-nichita-romanul",
+        "year": 2026
+      },
+      "model": "Căutând cele de sus..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Purtătorule de chinuri, biruind mai întâi năvălirile barbarilor cu Puterea Crucii cea nebiruită, pe urmă ai surpat mândria demonilor, împotrivindu-te cu vitejia ta, înţelepte; şi biruind-o, Sfinte Mucenice Nichita, ai luat daruri vrednice de biruinţă. Slavă lui Hristos, Cel Ce te-a întărit; Slavă Celui Ce te-a încununat; Slavă Celui Ce a mărit pururea cinstită pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Nichita Romanul",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-nichita-romanul",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

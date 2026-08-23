@@ -5,6 +5,10 @@
     {
       "form": "Οσία Θεοδώρα η εν Θεσσαλονίκη",
       "lang": "el"
+    },
+    {
+      "form": "Преп. Теодора Солунска",
+      "lang": "sr"
     }
   ],
   "sex": "female",
@@ -38,11 +42,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.09.2026 (29. август ст. ст.) — „Преп. Теодора Солунска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 879,
+      "latest": 879,
+      "display": "879",
+      "basis": "attested",
+      "note": "The Prologue: reposed in her seventy-fifth year, in 879."
+    }
   }
 }

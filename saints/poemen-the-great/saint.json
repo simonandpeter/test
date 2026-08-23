@@ -9,6 +9,14 @@
     {
       "form": "Όσιος Ποιμήν",
       "lang": "el"
+    },
+    {
+      "form": "Пимен Великий",
+      "lang": "ru"
+    },
+    {
+      "form": "Преподобни Пимен Велики",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -18,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Прп. Пимена Великого (ок. 450)»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -51,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 09.09.2026 (27. август ст. ст.) — „Преподобни Пимен Велики“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -82,6 +108,48 @@
         "url": "https://doxologia.ro/condacul-sfantului-cuvios-pimen-cel-mare",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Пимене, отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Тропарь преподобного Пимена Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Светлых подвиг твоих, преподобне отче,/ наста днесь святая память твоя,/ души благочестивых веселящи,/ Пимене богомудре,// отче наш преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Кондак преподобного Пимена Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "kind": "troparion",
+      "lang": "sr",
+      "tone": "глас 8",
+      "text": "Потоцима твојих суза бесплодну пустињу си обрађивао и уздасима из дубине душе, умножио си великим трудом своје таланте. Био си свећњак свету, сијајући својим чудесима, Пимене оче наш: Моли Христа Бога, да спасе душе наше.",
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs) — Тропар: Преподобни Пимен Велики",
+        "url": "https://www.pravoslavno.rs/index.php?tropar=0909",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

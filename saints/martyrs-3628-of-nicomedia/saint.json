@@ -1,0 +1,67 @@
+{
+  "slug": "martyrs-3628-of-nicomedia",
+  "display_name": "The 3,628 Martyrs of Nicomedia",
+  "names": [
+    {
+      "form": "Мученики 3628 в Никомидии",
+      "lang": "ru"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. 3628 в Никомидии (III-IV)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Мчч. 3628 в Никомидии (III-IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260902.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Άγιοι Τρείς χιλιάδες εξακοσίοι εικοσιοκτώ Μάρτυρες που μαρτύρησαν στη Νικομήδεια»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr: under Maximian, about 290 — a church burned, the faithful fled to the mountains, were caught and killed; the Russian calendar keeps them on 2 September."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 15.09.2026 (2. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

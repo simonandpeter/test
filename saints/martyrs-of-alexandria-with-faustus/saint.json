@@ -1,0 +1,58 @@
+{
+  "slug": "martyrs-of-alexandria-with-faustus",
+  "display_name": "The Martyrs of Alexandria with Faustus and Abibus (c. 250)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (ок. 250)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 сентября ст. ст. — «Мчч. Кириака, Фавста пресвитера, Авива диакона и с ним 11-ти мучеников (ок. 250)»",
+        "url": "https://days.pravoslavie.ru/Days/20260906.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 6 September (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "names": [
+    {
+      "form": "The Martyrs of Alexandria with Faustus and Abibus (c. 250)",
+      "lang": "en",
+      "note": "Eleven in number, as the Russian calendar counts them; the Greek synaxarion names them one by one."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

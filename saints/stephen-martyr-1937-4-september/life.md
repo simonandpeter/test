@@ -1,0 +1,5 @@
+# Stephen (Mityushkin), Martyr (1937)
+
+Stephen Mityushkin — Mityushin, in some files — was one of the Orthodox laymen of the Gagino district of the Nizhny Novgorod region arrested on 8 September 1937 with the priests John Romashkin, Nicholas Khvoshchev, Alexander Nikolsky and Peter Lebedinsky and the laymen Basil Yezhov, Peter Lonskov and Alexander Blokhin, ten people in all, none of whom admitted guilt. They were charged with having organised on 6 July a solemn service in which four priests and a crowd of believers took part, and though no political sermon was preached the service itself was given the meaning of an anti-state act, because it took the peasants from work on the collective farm; on 17 September 1937 eight of them were sentenced to be shot and shot. The Russian calendar keeps Stephen on 4 September (Julian) with the martyrs of the Gagino district.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-stefan-mitjushkin); read 23 August 2026.*

@@ -1,0 +1,103 @@
+{
+  "slug": "alypius-of-the-caves",
+  "display_name": "Alypius of the Kyiv Caves, Iconographer",
+  "names": [
+    {
+      "form": "Алипий Печерский",
+      "lang": "ru"
+    },
+    {
+      "form": "Преп. Алимпије, иконописац Печерски",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "iconographer"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1109,
+      "latest": 1119,
+      "display": "c. 1114",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Алипия, иконописца Печерского (ок. 1114)”; the Prologue gives 1114."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Прп. Алипия, иконописца Печерского (ок. 1114)»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.08.2026 (17. август ст. ст.) — „Преп. Алимпије, иконописац Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-30&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Зраки изобразуя святых на дщицах,/ сих благодеяния спешно,/ яко искусен художник, всехвальне Алипие,/ нарисовал еси на скрижалех твоего сердца/ и сего ради, аки образ, благолепне украшен,/ священства благодатию, аки златом, обложился еси/ от Христа Бога и Спаса душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Тропарь преподобного Алипия, иконописца Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "От юности Божественное в себе имея начертание,/ вдан был еси в научение иконнаго писания;/ и внегда небеси подобная Богородицы писашеся церковь,/ ты таможде пособствовал/ и видел еси Духа Святаго осияние,/ от Негоже приял еси чудес действо,/ яко иконы твоя чудотворяху,/ тем тя чтим и ублажаем, чудне Алипие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Кондак преподобного Алипия, иконописца Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
+        "year": 2026
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

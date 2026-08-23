@@ -1,0 +1,49 @@
+{
+  "slug": "theodore-of-alexandria-hieromartyr",
+  "display_name": "Theodore of Alexandria, martyr",
+  "names": [
+    {
+      "form": "Άγιος Θεόδωρος ο Ιερομάρτυρας, επίσκοπος Αλεξανδρείας",
+      "lang": "el",
+      "note": "saint.gr calls him hieromartyr and bishop of Alexandria, but notes with Eustratiades that this is a mistake and he was a simple devout Christian — no Theodore appears in the list of patriarchs before Theodore I the Scribe (608–610)."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 12 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 12 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — «Άγιος Θεόδωρος ο Ιερομάρτυρας, επίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/09/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 12. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

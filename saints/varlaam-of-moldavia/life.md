@@ -1,0 +1,7 @@
+# Varlaam, Metropolitan of Moldavia
+
+Varlaam — Vasile at baptism — was born around 1590 of a family of free peasants called Moțoc at Borcești, a vanished village near Târgu-Neamț, and went as a youth to the hermitage of Zosim on the Secu valley, where he learned letters, Slavonic and Greek; the monastery of Secu was founded on that ground in 1602 with a school, and there he translated John Climacus’s Ladder (1618). Trusted counsellor of the prince Miron Barnovschi, he was sent in 1628 to Kyiv and Moscow to buy icons for the monasteries of Dragomirna and Bârnova, and on his return, the metropolitan Anastasie Crimca having died and his prince been deposed, withdrew to Secu; in 1632 he was called to the throne of Moldavia, which he held until 1653 under four princes.
+
+With the help of Peter Mohyla of Kyiv he founded the first Romanian printing press in Moldavia (1640) at the Three Hierarchs in Iași; he organised the Synod of Iași of 1642, which corrected and approved Mohyla’s Confession of Faith; in 1639 he was one of three candidates for the ecumenical throne; and his Cazania, or Romanian Book of Teaching for the Sundays, feasts and great saints of the year (1643), was the first Romanian book printed in Moldavia and remains among the chief writings of the old Romanian culture. He died in 1657. The Russian calendar keeps him on the same day, marked as a saint of the Romanian church.
+
+*After the Viețile Sfinților as printed by doxologia.ro — [the life](https://doxologia.ro/viata-sfantului-ierarh-varlaam-mitropolitul-moldovei-0); read 23 August 2026.*

@@ -1,0 +1,148 @@
+{
+  "slug": "theodora-of-alexandria",
+  "display_name": "Theodora of Alexandria",
+  "names": [
+    {
+      "form": "Οσία Θεοδώρα από την Αλεξάνδρεια",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Cuvioasă Teodora din Alexandria",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 474,
+      "latest": 491,
+      "display": "under Zeno (474–491)",
+      "basis": "traditional",
+      "note": "saint.gr: lived in the years of the emperor Zeno."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 11 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 11 septembrie — „Sfânta Cuvioasă Teodora din Alexandria”",
+        "url": "https://doxologia.ro/11-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 11 Σεπτεμβρίου — «Οσία Θεοδώρα από την Αλεξάνδρεια»",
+        "url": "https://www.saint.gr/09/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 11. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Δῶρον ἔνθεον, ἠγιασμένον, Θεῶ ἤνεγκας, τὴν βιοτήν σου, Θεοδώρα Ὁσία πανεύφημε, τῆς μετανοίας τὸ πῦρ γὰρ ἐμφαίνουσα, μέσον ἀνδρῶν φιλοσόφως διέλαμψας, ὅθεν πρέσβευε, ἀπαύστως τῷ σὲ δοξάσαντι, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Θεοδώρα από την Αλεξάνδρεια, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1001/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοὶ Μῆτερ ἀκριβῶς διεσώθη τὸ κατ᾽ εἰκόνα· λαβοῦσα γὰρ τὸν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καὶ πράττουσα ἐδίδασκες, ὑπερορᾷν μὲν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δὲ ψυχῆς, πράγματος ἀθανάτoυ· διὸ καὶ μετὰ Ἀγγέλων συναγάλλεται, Ὁσία Θεοδώρα τὸ πνεῦμά σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Θεοδώρα από την Αλεξάνδρεια, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1001/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τὸ σῶμα τὸ σόν, νηστείας κατατήξασα, ἀγρύπνοις εὐχαῖς, τὸν Κτίστην καθικέτευσας, τοῦ λαβεῖν συγχώρησιν, τὴν τελείαν τῆς ἁμαρτίας σου· ἣν καὶ ἔλαβες ἀληθῶς, ὁδὸν μετανοίας ὑποδείξασα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Θεοδώρα από την Αλεξάνδρεια, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1001/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τὴν νύκτα τῶν παθῶν, ἐκφυγοῦσα θεόφρον, προσῆλθες νοητῶς, τῷ Ἡλίῳ τῆς δόξης, ἀσκήσει νεκρώσασα, τῆς σαρκὸς τὰ σκιρτήματα· ὅθεν γέγονας, ὑπογραμμὸς μοναζόντων, καὶ ἀνόρθωσις, τῶν πεπτωκότων ἐν βίῳ\" διὸ σε γεραίρομεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Θεοδώρα από την Αλεξάνδρεια, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/1001/saint.aspx",
+        "year": 2026
+      },
+      "model": "Χορός, Ἀγγελικὸς."
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Scăpând de noaptea patimilor, de Dumnezeu cugetătoare Cuvioasă Teodora, ai năzuit cu gândul către Soarele Cel Strălucit, omorându-ţi săltările trupului cu nevoinţă. Pentru aceea, te-ai făcut pildă sihaştilor cu viaţa şi îndreptare celor căzuţi; pentru aceea, te cinstim.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Cuvioase Teodora din Alexandria",
+        "url": "https://doxologia.ro/condacul-sfintei-cuvioase-teodora-din-alexandria",
+        "year": 2026
+      },
+      "model": "Ceata îngerească..."
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Cuvioasă Maică Teodora, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Teodora din Alexandria",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-teodora-din-alexandria",
+        "year": 2026
+      }
+    }
+  ]
+}

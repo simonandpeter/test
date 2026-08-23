@@ -1,0 +1,96 @@
+{
+  "slug": "pimen-the-faster-of-the-caves",
+  "display_name": "Pimen the Faster of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Пимен постник",
+      "lang": "ru"
+    },
+    {
+      "form": "Пимен посник",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1113,
+      "latest": 1120,
+      "display": "after 1114",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “… (после 1114)”; the Prologue: 1113."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Прпп. сщмч. Кукши и ученика его мч. Никона и прп. Пимена постника, Печерских (после 1114)»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.09.2026 (27. август ст. ст.) — „Свешт. муч. Кукша и Пимен посник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-09&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Мученическою кровию, священне Кукше,/ в проповеди Евангелия со учеником ти, блаженным Никоном, честне украсивыйся,/ и Пимене, в постничестве светозарно просиявый,/ в един день и час внидосте в свет незаходимый,/ идеже молитеся Господеви,/ да подаст нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Тропарь преподобных священномученика Кукши и Пимена постника, Печерских, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Светила разумная, сошедшеся, хвалами воспоем, людие,/ просияли бо суть в мире сем:/ Пимен многими подвиги,/ Кукша же со учеником Никоном проповедию Слова,/ и сии трие, единоумно предстояще Святей Троице,/ яко солнце сияют и просвещают/ любовию память их восхваляющих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 августа ст. ст. — «Кондак преподобных священномученика Кукши, ученика его Никона и Пимена постника, Печерских, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260827.html",
+        "year": 2026
+      }
+    }
+  ]
+}

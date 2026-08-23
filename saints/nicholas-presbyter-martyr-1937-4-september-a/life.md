@@ -1,0 +1,5 @@
+# Nicholas the Presbyter, Hieromartyr (1937, 4 September, the first)
+
+Nicholas Lebedev was born in 1867 in the village of Loshchemli in the Vyshny Volochyok district of Tver province, the son of the priest Andrew Lebedev, and after the Tver seminary was ordained. In the thirties he served at the church of Russkaya Kosheva in the Krasny Kholm district; he had a family — his wife Praskovya, two sons and two daughters — but by the early thirties the children were grown and had gone to other towns, and so as not to harm them he hardly wrote to them and hid their addresses, saying he had no contact with them; even his wife lived apart from him — the Sretensky calendar’s life runs on past the point read here. He was shot in 1937, and the Russian calendar keeps him on 4 September (Julian) with the bishops Gregory and Sergius and their company.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4865.htm); read 23 August 2026.*

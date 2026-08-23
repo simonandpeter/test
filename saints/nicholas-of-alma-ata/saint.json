@@ -1,0 +1,51 @@
+{
+  "slug": "nicholas-of-alma-ata",
+  "display_name": "Nicholas, Metropolitan of Alma-Ata, Confessor",
+  "names": [
+    {
+      "form": "Николай Алма-Атинский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "confessor",
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The finding of his relics in 2000, as the Russian calendar keeps it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Обретение мощей свт. Николая исп., митр. Алма- Атинского (2000)»",
+        "url": "https://days.pravoslavie.ru/Days/20260826.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 26 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 08.09.2026 (26. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

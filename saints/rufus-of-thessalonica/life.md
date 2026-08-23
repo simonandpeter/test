@@ -1,0 +1,5 @@
+# Rufus, Archbishop of Thessalonica
+
+Rufus succeeded Anysius, kept on 30 December, on the archiepiscopal throne of Thessalonica. Papal letters are addressed to him whose contents weigh heavily in the church history of the city: by the letter of Pope Innocent (402–417) of 17 June 412 the vicariate of Thessalonica was formally founded and the duties of the papal vicar, the bishop of Thessalonica of the day, defined; two letters of Pope Boniface (418–422) are addressed to him, in 419 on the election of Perigenes as bishop of Corinth and in 422 on news of a coming council to re-examine that election; and Boniface’s successor Celestine I sent letters in 424 to the bishops of Illyricum commending submission to the papal vicar, the bishop Rufus of Thessalonica, which is thought to reveal a crisis between the vicar and the bishops under him — the synaxarion’s notice runs on past the point read here.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου — [the entry](https://www.saint.gr/4133/saint.aspx); read 23 August 2026.*

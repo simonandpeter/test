@@ -1,0 +1,71 @@
+{
+  "slug": "new-martyrs-of-jasenovac",
+  "display_name": "The New Martyrs of Jasenovac (1941–1944)",
+  "names": [
+    {
+      "form": "Новомученики Ясеновацкие",
+      "lang": "ru"
+    },
+    {
+      "form": "Свети мученици Јасеновачки",
+      "lang": "sr"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1944,
+      "display": "1941–1944",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Собор новомучеников Ясеновацких (1941-1944)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 августа ст. ст. — «Собор новомучеников Ясеновацких (1941-1944) (Серб.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260831.html",
+        "year": 2026
+      },
+      "note": "The page marks the synaxis “(Серб.)”, a commemoration of the Serbian church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), календар за 13.09.2026 (31. август ст. ст.) — „Свети мученици Јасеновачки“",
+        "url": "https://www.pravoslavno.rs/index.php?q=kalendar&godina=2026&mesec=09",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

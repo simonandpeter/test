@@ -1,0 +1,71 @@
+{
+  "slug": "mianus-of-kandavla",
+  "display_name": "Mianus of Kandavla",
+  "names": [
+    {
+      "form": "Миан",
+      "lang": "ru"
+    },
+    {
+      "form": "Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 311,
+      "display": "288–311",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Мчч. Феодора, Миана, Иулиана и Киона (305-311)”; saint.gr: 288."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Мчч. Феодора, Миана, Иулиана и Киона (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260904.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 septembrie (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr’s entry names Centurion, Theodore, Ammianus, Julian and Oceanus; the Russian calendar’s Mianus and Kion are taken as its Ammianus and Oceanus, which neither source asserts."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

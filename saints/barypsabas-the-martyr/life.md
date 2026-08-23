@@ -1,0 +1,5 @@
+# Barypsabas
+
+Of Barypsabas it is said that he received from a hermit the precious Blood that ran from the Lord’s side, and healed many sicknesses with it; for this the unbelievers killed him with clubs in the night, and the precious treasure of the Master’s Blood remained again whole and entire, kept by the saint’s disciple. Nikodemos of the Holy Mountain notes that some say the blood Barypsabas had was not directly that shed from the Saviour’s side — which, in some theologians’ opinion, rose with the Lord’s risen body — but of the blood that ran from the side of the icon of the Master Christ which the Jews pierced in the side, the icon that was at Beirut, as the divine Athanasius tells the wonder — the synaxarion’s note runs on past the point read here. The verse says that for the divine blood of the Master, Barypsabas, crushed with clubs, pours out his own.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου — [the entry](https://www.saint.gr/2370/saint.aspx); read 23 August 2026.*

@@ -1,0 +1,5 @@
+# John the Hairy of Rostov, Fool for Christ
+
+John of Rostov, the Merciful, called the Hairy, lived the feat of folly for Christ at Rostov, bearing want and sorrow; he had no fixed dwelling and rested only now and then in the house of his confessor, the priest of the church of All Saints, or with an aged widow. Living in humility, patience and unceasing prayer he guided many spiritually, among them Irinarch the recluse of Rostov. After long labours he died on 3 September 1580 and was buried, by his will, beside the church of St Blaise, behind the altar; he had great hair on his head, whence his name, and was called the Merciful for the many healings — the Sretensky calendar’s life runs on past the point read here. The Greek synaxarion keeps him on the same day, a Russian, a fool for Christ.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life1441.htm); The Greek entry is the Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — [the entry](https://www.saint.gr/929/saint.aspx); read 23 August 2026.*

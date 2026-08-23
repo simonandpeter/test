@@ -1,0 +1,102 @@
+{
+  "slug": "joshua-son-of-nun",
+  "display_name": "Joshua the Son of Nun",
+  "names": [
+    {
+      "form": "Иисус Навин",
+      "lang": "ru"
+    },
+    {
+      "form": "Δίκαιος Ιησούς γιος του Ναυή",
+      "lang": "el"
+    },
+    {
+      "form": "Dreptul Iosua",
+      "lang": "ro"
+    },
+    {
+      "form": "Св. Исус Навин",
+      "lang": "sr"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": -1500,
+      "latest": -1301,
+      "display": "14th century BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прав. Иисуса Навина (XIV до Р.Х.)”; saint.gr and the Prologue: about 1440 BC."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Прав. Иисуса Навина (XIV до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260901.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 septembrie — „Dreptul Iosua”",
+        "url": "https://doxologia.ro/1-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου — «Δίκαιος Ιησούς γιος του Ναυή»",
+        "url": "https://www.saint.gr/09/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.09.2026 (1. септембар ст. ст.) — „Св. Исус Навин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-14&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
+}

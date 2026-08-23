@@ -1,0 +1,70 @@
+{
+  "slug": "romylos-of-ravanica",
+  "display_name": "Romylos of Ravanica",
+  "names": [
+    {
+      "form": "Όσιος Ρωμύλος της Ραβάνιτσας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Romil de Ravanița",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1300,
+      "latest": 1300,
+      "display": "c. 1300",
+      "basis": "traditional",
+      "note": "saint.gr: born about 1300 at Vidin."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 18 septembrie — „Sfântul Cuvios Romil de Ravanița”",
+        "url": "https://doxologia.ro/18-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου — «Όσιος Ρωμύλος της Ραβάνιτσας»",
+        "url": "https://www.saint.gr/09/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "macarius-of-vyazma",
+  "display_name": "Macarius, Bishop of Vyazma, Hieromartyr (1918)",
+  "names": [
+    {
+      "form": "Макарий Вяземский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1858,
+      "latest": 1858,
+      "display": "1858",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s life: born in 1858."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмчч. Макария, еп. Вяземского, Иоанна и Алексия пресвитеров (1918)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 августа ст. ст. — «Сщмчч. Макария, еп. Вяземского, Иоанна и Алексия пресвитеров (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260822.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 04.09.2026 (22. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

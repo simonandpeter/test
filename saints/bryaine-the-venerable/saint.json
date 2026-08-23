@@ -1,0 +1,76 @@
+{
+  "slug": "bryaine-the-venerable",
+  "display_name": "Bryaine",
+  "names": [
+    {
+      "form": "Οσία Βρυαίνη",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not on the Moscow Patriarchate’s list for 30 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 august (checked 2026-08-23); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — «Οσία Βρυαίνη»",
+        "url": "https://www.saint.gr/08/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "text": "Ἐν τῇ ἀσκήσει σου, πάσας ἐξέπληξας, τῇ ταπεινώσει δέ, καὶ τῇ πρᾳότητα, καὶ τῇ ἀγάπῃ πρὸς Θεόν, ἀνῆλθες τῶν ἐπιγείων· ὅθεν σε ὁ Κύριος, ἡγουμένην κατέστησε, βόσκων τὰ ἀρνία του, τοῖς λογίοις τοῦ Πνεύματος· διὸ Ὁσία Μῆτερ Βρυαίνη, πρέσβευε ὑπὲρ τῶν εὐφημούντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Βρυαίνη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/844/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "text": "Χριστὸν τὸν δι’ ἡμᾶς, ἐκ Παρθένου Μαρίας, τεχθέντα ὑπὲρ νοῦν, ἀγαπήσασα Μῆτερ, τὰ πάντα ἐγκατέλιπες, καὶ Αὐτῷ ἠκολούθησας, καὶ ἐξήσκησας, τῶν ἀρετῶν τὴν χορείαν, ἐκ τῆς πράξεως, πρὸς θεωρίαν ἀχθεῖσα, Βρυαίνη ἀοίδιμε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Βρυαίνη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/844/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν τάφον Σου Σωτήρ."
+    }
+  ]
+}
