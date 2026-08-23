@@ -62,7 +62,7 @@ const CLOSE =
   '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">' +
   '<path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" fill="none"/></svg>';
 
-export function render(el, { data, params, router }) {
+export function render(el, { data, params, router, cameFrom }) {
   destroy();
   const mine = ++generation;
 
@@ -76,8 +76,13 @@ export function render(el, { data, params, router }) {
     return;
   }
 
-  el.innerHTML = shell(card);
-  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router)];
+  // Opened from the calendar: the × goes back to that same day rather than
+  // to All Saints (author, 2026-08-23).
+  const fromCalendar = cameFrom?.nav === 'calendar' ? cameFrom.path : null;
+  const backLabel = fromCalendar ? STRINGS.saint.backDaily : STRINGS.saint.back;
+
+  el.innerHTML = shell(card, backLabel);
+  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router, fromCalendar)];
   // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
   live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
@@ -98,14 +103,14 @@ export function render(el, { data, params, router }) {
       const body = el.querySelector('[data-detail]');
       body.innerHTML = `<div class="error-note"><p>${STRINGS.saint.failed}</p>
         <button type="button" data-retry>${STRINGS.saint.retry}</button></div>`;
-      body.querySelector('[data-retry]').addEventListener('click', () => render(el, { data, params, router }));
+      body.querySelector('[data-retry]').addEventListener('click', () => render(el, { data, params, router, cameFrom }));
     },
   );
 }
 
 /* ---- the manifest-only shell ------------------------------------------- */
 
-function shell(card) {
+function shell(card, backLabel) {
   const media = card.image
     ? `<figure class="saint-media" style="aspect-ratio:${card.image.aspect};background-image:url('${BASE + card.image.lqip}')">
         <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
@@ -129,7 +134,7 @@ function shell(card) {
         <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(card.display_name)}</h1>
         <span class="saint-tools">
           ${renderBookmark(card.slug, card.display_name)}
-          <button type="button" class="close-button icon-button" data-back aria-label="${STRINGS.saint.back}">${CLOSE}</button>
+          <button type="button" class="close-button icon-button" data-back aria-label="${esc(backLabel)}">${CLOSE}</button>
         </span>
       </div>
       <p class="names" data-names hidden></p>
@@ -157,14 +162,17 @@ function shell(card) {
 }
 
 /**
- * The × closes the page back into All Saints as the reader left it — the
- * Index keeps its own record of where that was and restores itself when asked
- * to (views/saints.js). Whichever way the reader arrived: a deep link simply
- * finds nothing to restore and opens the Index at the top.
+ * The × closes the page back to wherever the reader opened it from. Opened
+ * from the calendar, it returns to that same day — the Index keeps its own
+ * record of where it was and restores itself when asked to (views/saints.js),
+ * but the calendar has no analogous state to restore, so its own path is
+ * enough. Anywhere else, including a deep link with nothing to go back to,
+ * falls back to All Saints.
  */
-function wireBack(el, router) {
+function wireBack(el, router, backTo) {
   const button = el.querySelector('[data-back]');
-  const onClick = () => router.navigate('/saints', { state: { restore: true } });
+  const onClick = () =>
+    backTo ? router.navigate(backTo) : router.navigate('/saints', { state: { restore: true } });
   button.addEventListener('click', onClick);
   return () => button.removeEventListener('click', onClick);
 }

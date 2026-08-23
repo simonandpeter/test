@@ -135,9 +135,10 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   // Russian calendar names Anthony once, by the Julian feast that falls on 30
   // January; change to the Greek and the same civil day holds nothing of his,
   // because the New Calendar keeps 17 January on the 17th — the same menologion
-  // date, two civil days, and never the same saint listed twice.
-  const feasts = await page.locator('.hero-feasts li').allTextContents();
-  expect(feasts.join(' | ')).toContain('17 January (Julian)');
+  // date, two civil days, and never the same saint listed twice. The hero card
+  // no longer repeats this date (author, 2026-08-23; it doubled the own-date
+  // line under the strip), so it is read from there instead.
+  await expect(page.locator('[data-own-date]')).toHaveText('17 January (Julian)');
   await expect(page.locator('.day-panel .register li')).toHaveCount(0);
   await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
   await page.locator('[data-which-change]').click();
@@ -147,7 +148,7 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
   await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
-  expect((await page.locator('.hero-feasts li').allTextContents()).join(' | ')).toContain('17 January (Revised Julian)');
+  await expect(page.locator('[data-own-date]')).toHaveText('17 January (Revised Julian)');
   // Nothing under the strip prints the day in another reckoning. The line of
   // equivalencies went when the toggle arrived, and the toggle went when the
   // tradition filter took its place (author, 2026-08-21).
@@ -290,9 +291,9 @@ test('an address with no saint behind it is prose, not a red banner', async ({ p
   expect(colours.replace(/\s/g, '')).not.toBe(rubric);
 });
 
-test('saving persists across a reload, and both Save buttons agree', async ({ page }) => {
-  // The saint's page carries the bookmark (author, 2026-08-22); the calendar
-  // hero still carries the text button. Same store, one state.
+test('saving persists across a reload, and both bookmarks agree', async ({ page }) => {
+  // The saint's page and the calendar hero both carry the bookmark (author,
+  // 2026-08-23; the hero's text Save button is gone). Same store, one state.
   await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   const save = page.locator('.saint-head .bookmark');
@@ -305,9 +306,9 @@ test('saving persists across a reload, and both Save buttons agree', async ({ pa
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 
   // And the saved shelf on the habit page knows about it, as does the hero's
-  // own Save button — Anthony is that day's hero.
+  // own bookmark — Anthony is that day's hero.
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero .save-button')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.hero .bookmark')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('.shelves')).toContainText('Saved');
   await expect(page.locator('.shelves a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
 });
@@ -1494,7 +1495,7 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   // civil day of that name.
   await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  expect((await page.locator('.hero-feasts li').allTextContents()).join(' | ')).toContain('15 June (Revised Julian)');
+  await expect(page.locator('[data-own-date]')).toHaveText('15 June (Revised Julian)');
 });
 
 test('the calendar is remembered, and the header changes it', async ({ page }) => {
@@ -2028,6 +2029,7 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
       background: style.backgroundColor,
       stroke: shape.stroke,
       fill: shape.fill,
+      opacity: shape.opacity,
     };
   });
   expect(seen.flushRight).toBe(0);
@@ -2036,7 +2038,8 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   // No frame: no border and no field behind the shape.
   expect(seen.border).toBe('none');
   expect(seen.background).toBe('rgba(0, 0, 0, 0)');
-  // Ink, never gold: Save is chrome (DESIGN.md §2).
+  // Ink, never gold: Save is chrome (DESIGN.md §2). Filled at both states
+  // (author, 2026-08-23) — half strength when not saved, full when it is.
   const tokens = await page.evaluate(() => {
     const root = getComputedStyle(document.documentElement);
     const rgb = (hex) => {
@@ -2046,7 +2049,8 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
     return { ink: rgb(root.getPropertyValue('--ink')), gold: rgb(root.getPropertyValue('--gold')) };
   });
   expect(seen.stroke).toBe(tokens.ink);
-  expect(seen.fill).toBe('none');
+  expect(seen.fill).toBe(tokens.ink);
+  expect(seen.opacity).toBe('0.5');
 
   // A card with no picture: beside the dates. ('Christopher' alone now
   // matches two saints in the 708-saint corpus — Christopher and
@@ -2071,9 +2075,13 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   await expect(button).toHaveAttribute('aria-pressed', 'true');
   await expect(button).toHaveAttribute('aria-label', /Anthony the Great is saved/);
   await expect(page).toHaveURL(/\/saints$/);
-  const filled = await button.locator('.bm-shape').evaluate((el) => getComputedStyle(el).fill);
-  expect(filled).toBe(tokens.ink);
-  expect(filled).not.toBe(tokens.gold);
+  const saved = await button.locator('.bm-shape').evaluate((el) => {
+    const style = getComputedStyle(el);
+    return { fill: style.fill, opacity: style.opacity };
+  });
+  expect(saved.fill).toBe(tokens.ink);
+  expect(saved.fill).not.toBe(tokens.gold);
+  expect(saved.opacity).toBe('1');
   await page.reload({ waitUntil: 'networkidle' });
   const again = await showOnly('Anthony the Great');
   await expect(again.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
@@ -2125,6 +2133,29 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('[data-count]')).toHaveText('708');
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
+});
+
+test('the × returns to the Daily page when the saint was opened from it, not to All Saints', async ({ page }) => {
+  // Author, 2026-08-23. The hero, the register and both shelves all open a
+  // saint from the calendar, and closing it should land the reader back on
+  // that day rather than in All Saints, a page they never asked to visit.
+  await ready(page);
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.locator('.hero-name a').click();
+  await expect(page).toHaveURL(/\/saints\/anthony-the-great$/);
+  await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Daily');
+  await page.locator('[data-back]').click();
+  await expect(page).toHaveURL(new RegExp(`${POPULATED}$`));
+  await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
+
+  // Opened from All Saints instead, the × still returns there.
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await page.locator('.index-card .index-name', { hasText: 'Anthony the Great' }).first().click();
+  await expect(page).toHaveURL(/\/saints\/anthony-the-great$/);
+  await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to All Saints');
+  await page.locator('[data-back]').click();
+  await expect(page).toHaveURL(/\/saints$/);
 });
 
 test('a navigation lands at the top of the page it opens', async ({ browser }) => {
@@ -2308,12 +2339,14 @@ test('the theme follows the system until it is touched, and holds once it is', a
 });
 
 test('the site is The Orthodox Saint, and the habit page is Daily', async ({ page }) => {
-  // Author, 2026-08-23. The name in the head, the header and the veil; the
-  // page's nav label. The route stays /calendar so no link breaks.
+  // Author, 2026-08-23. The name in the head and the veil; the page's nav
+  // label. The header's own corner reads "Orthodoxy Daily" since (author,
+  // 2026-08-23, later the same day) — a second, deliberately different name
+  // from the head's. The route stays /calendar so no link breaks.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
-  await expect(page.locator('.site-name')).toHaveText('The Orthodox Saint');
+  await expect(page.locator('.site-name')).toHaveText('Orthodoxy Daily');
   await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Daily');
   await expect(page.locator('.site-nav')).not.toContainText('Calendar');
 });

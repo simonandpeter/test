@@ -1,16 +1,14 @@
 /**
- * The Save control, in one place because it appears in three — the calendar's
- * hero, the saint's own page and every Index card — and the three must never
- * disagree: saving from the hero and then opening the saint has to show a
+ * The Save control, in one place because it appears everywhere a saint does —
+ * the calendar's hero, the saint's own page and every Index card — and they
+ * must never disagree: saving from one and opening another has to show a
  * saved mark, without a reload. That is what subscribing to the store buys,
- * and it is the reason this is a component rather than three handlers.
+ * and it is the reason this is a component rather than separate handlers.
  *
- * Two renderings of one toggle. The hero keeps the text button; an Index card
- * and the saint's name line take the **bookmark** (author, 2026-08-22): a
- * frameless silhouette, outlined when not saved and filled when saved. Either
- * way `aria-pressed` carries the state, the accessible name says which state
- * it is in, and nothing about it is red or gold — Save is chrome, and chrome
- * stays quiet (DESIGN.md §2, §5).
+ * One rendering: the **bookmark**, a frameless silhouette, outlined when not
+ * saved and filled when saved. `aria-pressed` carries the state, the
+ * accessible name says which state it is in, and nothing about it is red or
+ * gold — Save is chrome, and chrome stays quiet (DESIGN.md §2, §5).
  *
  * Painting re-queries the root each time rather than keeping a list, because
  * the Index mounts and unmounts cards on every scroll frame: a list taken at
@@ -20,9 +18,6 @@
 import * as store from '../lib/store.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { STRINGS, fill } from './strings.js';
-
-export const renderSaveButton = (slug) =>
-  `<button type="button" class="save-button" data-save="${esc(slug)}" aria-pressed="false">${STRINGS.saint.save}</button>`;
 
 /* One shape, drawn twice: a wide gesso halo under an ink outline, so the mark
    keeps an edge on gold ground and dark ground alike (an icon is both). The
@@ -51,15 +46,8 @@ export async function paintSaved(root) {
     const on = saved.has(button.dataset.save);
     button.setAttribute('aria-pressed', String(on));
     button.classList.toggle('is-saved', on);
-    if (button.classList.contains('bookmark')) {
-      const name = button.dataset.name ?? '';
-      button.setAttribute(
-        'aria-label',
-        fill(on ? STRINGS.saint.savedNamed : STRINGS.saint.saveNamed, { name }),
-      );
-    } else {
-      button.textContent = on ? STRINGS.saint.saved : STRINGS.saint.save;
-    }
+    const name = button.dataset.name ?? '';
+    button.setAttribute('aria-label', fill(on ? STRINGS.saint.savedNamed : STRINGS.saint.saveNamed, { name }));
   }
 }
 

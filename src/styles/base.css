@@ -114,9 +114,9 @@ button:hover {
   line-height: 1;
 }
 
-/* The bookmark's two states: an ink outline when not saved, the shape filled
-   when it is, each over a gesso halo so the mark keeps an edge on gold ground
-   and dark ground alike. Never gold, never red — Save is chrome. */
+/* The bookmark's two states: filled at half strength when not saved, full
+   strength when it is, each over a gesso halo so the mark keeps an edge on
+   gold ground and dark ground alike. Never gold, never red — Save is chrome. */
 .bookmark-mark .bm-halo {
   fill: none;
   stroke: var(--gesso);
@@ -125,14 +125,15 @@ button:hover {
 }
 
 .bookmark-mark .bm-shape {
-  fill: none;
+  fill: var(--ink);
   stroke: var(--ink);
   stroke-width: 1.5;
   stroke-linejoin: round;
+  opacity: 0.5;
 }
 
 .bookmark.is-saved .bookmark-mark .bm-shape {
-  fill: var(--ink);
+  opacity: 1;
 }
 
 /* ---- chrome ---------------------------------------------------------- */

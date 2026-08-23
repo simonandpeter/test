@@ -216,8 +216,10 @@ the badge. Hover: border darkens toward `--ink-soft`; nothing moves or lifts.
 
 **A bookmark stands at the image's top-right corner** (author, 2026-08-22):
 the Save of brief §11 as a frameless silhouette over the picture — no frame,
-no field, the shape alone — filled when saved and outlined when not, with
-`aria-pressed` carrying the state. It is drawn in ink with a hairline of gesso
+no field, the shape alone. "Filled when saved and outlined when not" is
+superseded (author, 2026-08-23): the shape is filled at both states now,
+half-opacity when not saved and full when it is, with `aria-pressed` carrying
+the state regardless. It is drawn in ink with a hairline of gesso
 under it, so it reads on gold ground and dark ground alike, and it is ink
 precisely because of where it sits: over a picture, gold would claim a finding
 and red would claim liturgical time (§2). A row puts it at the trailing edge,

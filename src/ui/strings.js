@@ -47,7 +47,6 @@ export const STRINGS = {
     alsoToday: 'Also commemorated',
     emptyDay: 'No commemorations are recorded for this day — yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     heroIn: 'In the {church}',
-    heroFeast: '{church}: {feast}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
     // The day in the chosen church's own reckoning, after the calendar's name
@@ -187,14 +186,13 @@ export const STRINGS = {
 
   saint: {
     nameForms: 'Also called',
-    save: 'Save',
-    saved: 'Saved',
     // The bookmark's accessible names carry the saint's name: on the Index
     // there are many on one page, and a column of identical "Save" buttons is
     // what a screen reader would otherwise be given.
     saveNamed: 'Save {name}',
     savedNamed: '{name} is saved. Activate to remove it.',
     back: 'Back to All Saints',
+    backDaily: 'Back to Daily',
     veneration: 'Veneration',
     // The register reads the reader's church first (author, 2026-08-22); the
     // other two wait behind this, for this page only.

@@ -13,7 +13,6 @@
 import { buildFeastIndex, toIsoDate } from '../lib/feasts.js';
 import { gregorianToJdn } from '../lib/jdn.js';
 import { CHURCHES_BY_ID } from '../data/churches.js';
-import { formatFeast } from '../data/calendars.js';
 import {
   addDaysIso,
   formatLifespan,
@@ -28,7 +27,7 @@ import { escapeHtml as esc } from '../lib/markdown.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
-import { renderSaveButton, wireSaveButtons } from '../ui/save.js';
+import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
@@ -866,7 +865,6 @@ function paintDay(panel) {
 
   const heroSlug = pickHero(selected, entries, data.bySlug, state.calendar);
   const hero = data.bySlug.get(heroSlug);
-  const heroChurches = entries.filter((e) => e.slug === heroSlug);
 
   // The image opens the saint too (author, 2026-08-21). Hidden from the
   // accessibility tree and out of the tab order on purpose: the name beside it
@@ -880,15 +878,6 @@ function paintDay(panel) {
           style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
       </a>`
     : '';
-
-  const feastLines = heroChurches
-    .map((e) =>
-      `<li>${fill(STRINGS.calendar.heroFeast, {
-        church: esc(CHURCHES_BY_ID[e.church].display_name),
-        feast: esc(formatFeast(e.feast)),
-      })}${titleFor(hero, e.church) ? ` — <em>${esc(titleFor(hero, e.church))}</em>` : ''}</li>`,
-    )
-    .join('');
 
   // One calendar, one church: the register needs no church heading, and a
   // saint can appear in it only once. The shared element is the first row
@@ -905,7 +894,6 @@ function paintDay(panel) {
         <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
           data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
         ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-        <span class="reg-feast utility">${esc(formatFeast(e.feast))}</span>
       </li>`;
     })
     .join('');
@@ -923,8 +911,7 @@ function paintDay(panel) {
           </h2>
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
-        <ul class="hero-feasts utility">${feastLines}</ul>
-        <div class="hero-actions">${renderSaveButton(hero.slug)}</div>
+        <div class="hero-actions">${renderBookmark(hero.slug, hero.display_name)}</div>
       </div>
     </article>
     ${register}

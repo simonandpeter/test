@@ -33,6 +33,11 @@ let data = null;
 let router;
 let currentView = null;
 let first = true;
+// The saint page's × returns to wherever the reader opened it from, when that
+// was the calendar; anywhere else it falls back to All Saints. One slot is
+// enough — a saint opened from another saint's page still closes to All
+// Saints, which was already the fallback.
+let lastRoute = null;
 
 function renderNav(current) {
   navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
@@ -44,9 +49,11 @@ function renderNav(current) {
     .join('');
 }
 
-function show({ route, params }, nav = {}) {
+function show({ route, params, path }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
+  const cameFrom = lastRoute;
+  lastRoute = { path, nav: route?.nav };
   // Every prefetch in flight was a guess about where this reader was going,
   // and the navigation has just answered it (brief §7).
   cancelPrefetches();
@@ -72,7 +79,7 @@ function show({ route, params }, nav = {}) {
     // the page.
     const heading = view.titleFor ? view.titleFor(params, data) : view.title;
     document.title = `${heading} — ${STRINGS.site.name}`;
-    view.render(viewEl, { data, params, router, nav });
+    view.render(viewEl, { data, params, router, nav, cameFrom });
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
     // yet, focus is already at the top of the document, and Chrome treats a

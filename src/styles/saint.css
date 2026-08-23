@@ -44,14 +44,6 @@
   flex: none;
 }
 
-/* Save is chrome: a quiet toggle whose state is carried by its own label and
-   aria-pressed, so nothing here needs a colour to mean anything. The text
-   button survives on the calendar hero; the saint's page takes the bookmark. */
-.save-button.is-saved {
-  background: var(--field);
-  border-color: var(--ink-soft);
-}
-
 .resume-note {
   margin: var(--space-3) 0 0;
 }
@@ -306,6 +298,15 @@
 
 .shelf .shelf-remove:hover {
   color: var(--ink);
+}
+
+/* Below 480 px .reg-feast wraps onto its own full-width line (calendar.css);
+   ordered after it, the × would wrap with it onto a third line, under the
+   name, so it moves ahead of the date here and stays on the name's line. */
+@media (max-width: 480px) {
+  .shelf .reg-feast {
+    order: 3;
+  }
 }
 
 /* ---- shared-element transitions ----------------------------------------- */
