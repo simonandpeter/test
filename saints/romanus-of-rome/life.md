@@ -1,0 +1,5 @@
+# Romanus of Rome
+
+Romanus was a soldier present at the torture of the archdeacon [Lawrence](/saints/lawrence-of-rome). While the martyr was beaten with scorpions and burned he cried out: holy Lawrence, I see a shining youth standing beside you and wiping your wounds — I adjure you by the Lord Christ, do not leave me. When Lawrence was taken down from the rack and given back to the prison of [Hippolytus](/saints/hippolytus-of-rome), Romanus brought a jar of water and begged to be baptised; as soon as he was, the soldiers cut off his head, on 9 August 258. The Prologue has it more briefly: a soldier Roman, present at the torture, believed in Christ and was beheaded at once.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4414.htm). The Ohrid Prologue for 23 August 2026 (10 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-23&prolog=1); read 23 August 2026.*

@@ -1,0 +1,9 @@
+# Maximus of Moscow, Fool for Christ
+
+The Russian calendar keeps 13 August (Julian) for the finding of his relics, around 1547; his chief memory is 11 November.
+
+The blessed Maximus lived in Moscow; nothing is known of his parents or the time and place of his birth. He chose one of the hardest and thorniest roads to salvation, taking on himself, freely and for Christ’s sake, the mask of a fool. Summer and winter he went almost naked, bearing heat and cold with prayer — though the winter is fierce, he said, paradise is sweet. Rus loved its fools for Christ, valued their deep humility and listened to their wisdom, spoken plainly in the proverbial language of the people, and everyone listened, from the grand princes to the poorest. He lived in hard times, of Tatar raids, droughts and plagues, and told the destitute: not everything goes with the grain, some goes against it; if they beat you for cause, own it and bow lower; endure, and we too shall be people; even wet wood catches slowly; for patience God gives salvation. But the powerful feared his anger: a chapel at home and a conscience for sale, he told the rich and well-born; everyone crosses himself but not everyone prays; God will find out every wrong — you will not deceive him, nor he you.
+
+He died on 11 November 1434 and was buried by the church of the princes Boris and Gleb, where miraculous healings began; in 1547 Metropolitan Macarius’s circular ordered that Moscow sing and keep the feast of the new wonderworker Maximus, and on 13 August that year his relics were found incorrupt. The church of Boris and Gleb, in whose enclosure he lay, burned in 1568, and a new one was built on the spot and dedicated to him, where his relics were laid.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life2524.htm); read 23 August 2026.*

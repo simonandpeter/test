@@ -1,0 +1,5 @@
+# Gabinius the Presbyter
+
+Gabinius was a presbyter of Rome, brother of Pope [Gaius](/saints/gaius-pope-of-rome) and father of the virgin martyr [Susanna](/saints/susanna-of-rome), whom he raised in strict Christian piety; the family was related to the emperor Diocletian. It was to Gabinius that the emperor sent his kinsmen [Claudius](/saints/claudius-companion-of-susanna) and [Maximus](/saints/maximus-companion-of-susanna) to arrange Susanna’s marriage, and in his house they were baptised; Susanna herself, the Prologue says, was beheaded in Gabinius’s house. Soon after her death, the life says, he too died a martyr.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4420.htm). The Ohrid Prologue for 24 August 2026 (11 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1); read 23 August 2026.*

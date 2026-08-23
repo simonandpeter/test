@@ -1,0 +1,7 @@
+# Nicholas the Presbyter, Hieromartyr (1937)
+
+Nicholas Dobroumov was born on 24 December 1876 — or 1875 — in the village of Nebdino in the Ust-Sysolsk district of Vologda province, the fifth and youngest child of the priest Nicholas Dobroumov, and grew up at Ust-Kulom, where his father was rector of the church of Peter and Paul. He finished the Ust-Sysolsk church school and, in 1899, the Vologda seminary, and soon married Antonina, the youngest daughter of the priest of Mezhador — and kept, the life says, a vow of chastity within the marriage, living with his wife as brother and sister, a monk in the world to the end of his days. Ordained on 29 September 1899 to the Dormition church at Pomozdino, he served then at Ust-Kulom and from 1906 as rector at Anyb, teaching the faith in the schools wherever he went, and preaching in Zyrian; he was decorated in 1909 and 1913.
+
+After the revolution he went on serving despite the persecutions. He was arrested in 1937 for counter-revolutionary agitation during secret services and shot on 25 August 1937 at Syktyvkar. The Sretensky calendar prints no life for him; this one follows azbyka.ru. The Russian calendar keeps him on 12 August (Julian) with [Leonid](/saints/leonid-presbyter-martyr-1937) and [John](/saints/john-presbyter-martyr-1937-12-august), presbyters.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-nikolaj-dobroumov); read 23 August 2026.*

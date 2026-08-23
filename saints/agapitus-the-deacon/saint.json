@@ -51,5 +51,8 @@
       "status": "undocumented",
       "note": "The Ohrid Prologue on pravoslavno.rs for 23.08.2026 names Lawrence, Sixtus “и други с њима”; this companion is not named, so the row stands undocumented (2026-08-23)."
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

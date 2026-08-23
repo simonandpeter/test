@@ -1,0 +1,5 @@
+# Praepedigna
+
+Praepedigna was the wife of [Claudius](/saints/claudius-companion-of-susanna), the emperor Diocletian’s kinsman sent to arrange the marriage of the virgin [Susanna](/saints/susanna-of-rome). She was baptised with her husband, his brother [Maximus](/saints/maximus-companion-of-susanna) and her sons [Alexander](/saints/alexander-companion-of-susanna) and [Cuphius](/saints/cuphius-of-rome), exiled with them when the emperor learned of it, and burned with them at Ostia, their ashes thrown into the sea. The life names her and says no more; the Prologue names only the men, “with their households”.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4420.htm). The Ohrid Prologue for 24 August 2026 (11 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1); read 23 August 2026.*

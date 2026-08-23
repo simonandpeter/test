@@ -1,0 +1,5 @@
+# Maximus, companion of Susanna
+
+Maximus was the brother of [Claudius](/saints/claudius-companion-of-susanna), a kinsman of the emperor Diocletian, and was sent after him to the presbyter [Gabinius](/saints/gabinius-the-presbyter) to arrange the marriage of his daughter [Susanna](/saints/susanna-of-rome) to the co-ruler Maximian; like his brother, after talking with the family, he received baptism. When Diocletian learned that a whole family of his relatives had turned Christian he exiled them, and soon they were burned at Ostia near Rome and their ashes thrown into the sea. The Prologue tells the same.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4420.htm). The Ohrid Prologue for 24 August 2026 (11 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1); read 23 August 2026.*

@@ -1,6 +1,6 @@
 {
   "slug": "vladimir-presbyter-martyr-1920",
-  "display_name": "Vladimir the Presbyter, Hieromartyr (1920)",
+  "display_name": "Vladimir the Presbyter, Hieromartyr (1918 or 1920)",
   "names": [
     {
       "form": "Владимир",
@@ -14,11 +14,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1920,
+      "earliest": 1918,
       "latest": 1920,
-      "display": "1920",
+      "display": "1918 or 1920",
       "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: “Сщмч. Владимира пресвитера (1920)”."
+      "note": "days.pravoslavie.ru prints “Сщмч. Владимира пресвитера (1920)”; the Russian church calendar at azbyka.ru, citing the Orthodox Encyclopaedia, gives 27 August 1918 for Vladimir Tsedrinsky of Lepsinsk. Both are recorded (2026-08-23). As printed by days.pravoslavie.ru: “Сщмч. Владимира пресвитера (1920)”."
     }
   },
   "attestations": [
@@ -51,5 +51,8 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

@@ -1,0 +1,7 @@
+# Basil of the Kyiv Caves
+
+Basil and [Theodore](/saints/theodore-of-the-kyiv-caves), monk-martyrs of the Kyiv Caves, lived in the eleventh century in the Near Caves. It was Basil who comforted Theodore when the enemy filled him with regret for the riches he had given away — do not lose your reward, brother; if you want possessions, take all that I have — and who, coming back from three months’ obedience outside the monastery, unmasked the demon that in his own likeness had shown Theodore a robbers’ hoard in the cave and all but drawn him back into the world.
+
+When Prince Mstislav Svyatopolkovich, hearing of the treasure, had Theodore tortured to death for refusing to say where it was, he ordered Basil tortured too, in his drunkenness, and killed him himself with an arrow. Dying, Basil threw the arrow at the prince’s feet and foretold that he would soon be mortally wounded by it; on 15 July 1099, on the wall of the fortress of Volodymyr, Mstislav was struck in the chest through a gap in the planking, and recognising his own arrow said: I die for the monk-martyrs Basil and Theodore. The Prologue dates their death to 1098.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4418.htm). The Ohrid Prologue for 24 August 2026 (11 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1); read 23 August 2026.*

@@ -64,6 +64,9 @@
       }
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "serbian",

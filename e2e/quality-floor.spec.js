@@ -2473,3 +2473,38 @@ test('no axe violations on the first visit, with the question standing', async (
     .analyze();
   expect(open.violations, JSON.stringify(open.violations.map((v) => v.id))).toEqual([]);
 });
+
+test('every saint opens on a life from the synaxarion, with its source linked', async ({ page }) => {
+  // Amendment 30. The corpus went from eight lives to a hundred and forty-nine
+  // in one sitting, each written after the synaxarion of a church that keeps
+  // the saint, each closing with the source it was read from. Lawrence carries
+  // the Russian life and the Serbian Prologue; a link to a companion prefetches
+  // like any other route into a page; the source line links out. The renamed
+  // new martyr (the calendar's 1927 was a slip for 1937) opens under his
+  // corrected name and year, and the Index's Detailed grain reads the same
+  // opening paragraph the page does.
+  await ready(page);
+  await page.goto('/saints/lawrence-of-rome', { waitUntil: 'networkidle' });
+  await expect(page.locator('.life p').first()).toContainText('Lawrence, archdeacon of Rome, suffered in 258');
+  await expect(page.locator('.life')).not.toContainText('No life has been written');
+  await expect(page.locator('.life a[data-prefetch="sixtus-ii-of-rome"]')).toHaveCount(1);
+  await expect(page.locator('.life em a[href*="days.pravoslavie.ru"]')).toHaveCount(1);
+  await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
+  await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(2);
+
+  await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toHaveText('Eleutherius, Monk-martyr (1937)');
+  await expect(page.locator('.life p').first()).toContainText('Eleutherius Pechennikov was born in 1870');
+  await expect(page.locator('.fact-row', { hasText: 'Died' })).toContainText('1937');
+  await expect(page.locator('.life em a[href*="azbyka.ru"]')).toHaveCount(1);
+
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.locator('[data-detailed]').check();
+  // (The Index is the Russian calendar's here, so a Russian saint: Stamatios
+  // would be set aside as Serbian-only.)
+  await page.locator('[data-query]').fill('Kaluga');
+  const card = page.locator('.index-card', { hasText: 'Lawrence of Kaluga' });
+  await expect(card).toHaveCount(1);
+  await expect(card.locator('.index-desc')).toContainText('The blessed Lawrence, fool for Christ and wonderworker of Kaluga');
+  await page.locator('[data-detailed]').uncheck();
+});

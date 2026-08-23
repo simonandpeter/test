@@ -1,0 +1,57 @@
+{
+  "slug": "eudocia-nun-martyr-1937",
+  "display_name": "Eudocia, Nun-martyr (1937)",
+  "names": [
+    {
+      "form": "Евдокия",
+      "lang": "ru"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints “(1927)” for this group; the Russian church calendar at azbyka.ru, and the lives it cites, give 27 August 1937 for each of them, and 1937 is recorded here (2026-08-23). As printed by days.pravoslavie.ru: “Сщмч. Владимира и Николая пресвитеров, прмч. Елевферия, прмцц. Евы игумении, Евдокии и мч. Феодора (1927)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 августа ст. ст. — «Сщмч. Владимира и Николая пресвитеров, прмч. Елевферия, прмцц. Евы игумении, Евдокии и мч. Феодора (1927)»",
+        "url": "https://days.pravoslavie.ru/Days/20260814.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

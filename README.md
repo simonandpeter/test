@@ -22,7 +22,7 @@ site.
 saints/
   anthony-the-great/
     saint.json          <- the only required file; folder name IS the slug
-    life.md
+    life.md             <- the life, after a synaxarion, closing with its source
     sources/
     images/
       icon.jpg

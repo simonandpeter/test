@@ -1,0 +1,7 @@
+# Peter, Metropolitan of Moscow
+
+The Greek calendar keeps 24 August for the translation of his relics and refers his life to 21 December, where its own entry has no details; what follows is the Orthodox Church in America’s note for the day.
+
+Peter, metropolitan of Moscow and all Russia, died on 21 December 1326. His relics were first translated on 1 July 1472, and a feast established; the second translation followed the consecration of the rebuilt Dormition cathedral on 24 August 1479, and this date replaced the earlier one. A feast of the appearance of his relics (4 August) recalls his appearance to the Tsaritsa Anastasia, wife of Ivan the Terrible, when he would let no one open his grave and commanded that it be sealed. Three of his epistles survive, all to priests: to pursue their service worthily and tend their spiritual children with zeal, to be true pastors and not hirelings, and — with the laity — to keep the commandments of Christ. His contemporaries compared him with Basil the Great, Gregory the Theologian and John Chrysostom; his principal labour was for a united Russian state with Moscow at its head.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 24 August — [the entry](https://www.saint.gr/2676/saint.aspx). The Orthodox Church in America’s life for 24 August is at oca.org — [the entry](https://www.oca.org/saints/lives/2026/08/24/102384-translation-of-the-relics-of-saint-peter-metropolitan-of-moscow); read 23 August 2026.*

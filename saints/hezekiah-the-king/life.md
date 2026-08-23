@@ -1,0 +1,7 @@
+# Hezekiah the Righteous, King of Judah
+
+Hezekiah was the son of Ahaz, the apostate king of Judah and a zealous supporter of the idols, and he took an entirely different road from his father. He fought idolatry, gave the feast of Passover greater splendour, and upheld the true God by his own example and his royal authority — and God upheld him: he defeated the Philistines and threw off the Assyrian yoke, routing their king Sennacherib, and his counsellors were the prophets Isaiah and [Micah](/saints/micah-the-prophet). He favoured agriculture and trade, fortified Jerusalem and adorned the Temple.
+
+The Orthodox Church in America’s life follows the Bible (2 Kings 18–20): he reopened the Temple of Solomon, had the idols destroyed throughout the kingdom at the Passover to which he summoned all Israel, and when Sennacherib’s army stood before Jerusalem turned to God in prayer, and an angel of the Lord struck down 185,000 in the Assyrian camp; falling ill soon after, and told by Isaiah to set his house in order, he prayed, and fifteen years were added to his life. He died, the synaxarion says, in 696 BC, and was buried with great pomp in the highest tomb of the sons of David — one of the best kings of Judah. He is also kept on Cheesefare Saturday.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 August — [the entry](https://www.saint.gr/2210/saint.aspx). The Orthodox Church in America’s life for 28 August is at oca.org — [the entry](https://www.oca.org/saints/lives/2026/08/28/108967-righteous-hezekiah); read 23 August 2026.*

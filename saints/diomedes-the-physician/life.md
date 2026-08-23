@@ -1,0 +1,7 @@
+# Diomedes the Physician
+
+The martyr Diomedes was born at Tarsus in Cilicia, a physician by profession and a Christian by faith, who healed not only the diseases of the body but those of the soul, enlightened many pagans with faith in Christ and baptised them; the Church honours him as a healer and calls on his name in the mystery of holy unction. He travelled much, turning people to the true faith, and when he came to the city of Nicaea the emperor Diocletian sent soldiers to take him. On the road from Nicaea to Nicomedia he got down from the cart to pray, and died. As proof that their errand was done the soldiers cut off his head, and were struck blind; Diocletian ordered the head taken back to the body, and when they had done so they saw again and believed in Christ.
+
+The Prologue tells it for the Serbian calendar with the beheading at Nicaea in 298: those who cut off his head and brought it to the emperor were blinded, and when they returned it to the body and prayed, were healed.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4448.htm). The Ohrid Prologue for 29 August 2026 (16 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-29&prolog=1); read 23 August 2026.*

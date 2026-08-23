@@ -50,5 +50,8 @@
       "status": "undocumented",
       "note": "Not found among the names read off saint.gr for 29 Αυγούστου 2026 (2026-08-23)."
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

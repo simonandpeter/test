@@ -1,0 +1,7 @@
+# Eudocia, Nun-martyr (1937)
+
+Evdokia Alexandrovna Perevoznikova was born on 7 February 1880 in the village of Cherevkovo in the Solvychegodsk district of Vologda province, to a peasant family. When she was tonsured is not known; before the revolution she lived in a monastery, and afterwards worked in a tailoring shop. She followed Metropolitan Kirill (Smirnov) of Kazan and Sviyazhsk into exile at Yany-Kurgan in South Kazakhstan and was his cell-attendant there.
+
+On 13 July 1937 she was arrested in Chimkent for belonging to a counter-revolutionary organisation, and admitted nothing. On 23 August the special troika of the South Kazakhstan NKVD sentenced her to death, and on 27 August 1937 she was shot at Chimkent. She was glorified at the Jubilee Council of 2000. The Russian calendar keeps this company on 14 August (Julian): the presbyters [Vladimir](/saints/vladimir-presbyter-martyr-1937) and [Nicholas](/saints/nicholas-presbyter-martyr-1937-14-august), the monk-martyr [Eleutherius](/saints/eleutherius-monk-martyr-1937), the abbess [Eve](/saints/eve-the-abbess-1937), the nun [Eudocia](/saints/eudocia-nun-martyr-1937) and the martyr [Theodore](/saints/theodore-martyr-1937), all shot at Chimkent on 27 August 1937. The Sretensky calendar prints no life for any of them, and the year beside their names there, 1927, is a slip; these lives follow azbyka.ru.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-evdokija-perevoznikova); read 23 August 2026.*

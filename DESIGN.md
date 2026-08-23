@@ -666,6 +666,16 @@ both. Until 2026-08-22 the whole body sat in the register's column beside the
 image and spent the width of the page on one column of text. Below 760 px the
 order is image, register, body, as before.
 
+*Amended (author, 2026-08-23, Amendment 30): **every saint has a life.** Each
+is written after the synaxarion of a church that keeps the saint — the Sretensky
+calendar's lives for the Russian, the Ορθόδοξος Συναξαριστής for the Greek, the
+Viețile Sfinților for the Romanian, the Ohrid Prologue for the Serbian — or the
+nearest equivalent that could be read, and each closes with one italic line
+that names and links the source and says when it was read. The life is the
+author's paraphrase, never the source's text. The "no life has been written"
+line stays in the strings for a saint added without one; no saint in the corpus
+shows it.*
+
 ## 6. Motion and states
 
 - Durations: 200 ms standard, 260 ms the hero slot roll, 300 ms theme change,

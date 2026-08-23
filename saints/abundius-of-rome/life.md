@@ -1,0 +1,5 @@
+# Abundius of Rome
+
+Abundius and [Irenaeus](/saints/irenaeus-of-rome) were two Christians of Rome who, some time after the martyrdom of [Hippolytus](/saints/hippolytus-of-rome) and his household, learned from a soldier where the body of his nurse [Concordia](/saints/concordia-of-rome) had been thrown — into a sewer — and buried it beside Hippolytus. For this, on 26 August, they were drowned as she had been; the Christians took their bodies by night and buried them by the relics of the archdeacon [Lawrence](/saints/lawrence-of-rome). The life says nothing more of him, and the Prologue only names the company.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4432.htm). The Ohrid Prologue for 26 August 2026 (13 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-26&prolog=1); read 23 August 2026.*

@@ -1,0 +1,5 @@
+# Gaius, Pope of Rome
+
+Gaius was bishop of Rome from 283 to 296 and the uncle of the virgin martyr [Susanna](/saints/susanna-of-rome), whose father was his brother, the presbyter [Gabinius](/saints/gabinius-the-presbyter); the family was related to the emperor Diocletian. When Susanna refused the emperor’s co-ruler and was beheaded, the empress buried her in secret and Gaius consecrated the room where she was killed as a church and celebrated there. Her father soon died a martyr, and in 296, the life says, Gaius himself. The Prologue has him and Gabinius of imperial stock and kinsmen of Diocletian.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4420.htm). The Ohrid Prologue for 24 August 2026 (11 August, Julian), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-24&prolog=1); read 23 August 2026.*

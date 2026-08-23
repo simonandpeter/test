@@ -1,10 +1,11 @@
 # Handoff — start here
 
 > **This is the Eastern Orthodox project, seeded from the cross-church build
-> and being stripped to it** (Amendments 25–29: the glyph is gone, the registry
+> and being stripped to it** (Amendments 25–30: the glyph is gone, the registry
 > is four churches — Russian, Romanian, Greek, and the Serbian from Amendment
-> 29 — and the reader chooses one in
-> place of the traditions and the plate). The tree at this repo's first commit is byte for byte
+> 29 — the reader chooses one in
+> place of the traditions and the plate, and since Amendment 30 every saint
+> has a life written after a synaxarion, with its source linked). The tree at this repo's first commit is byte for byte
 > the tree of the archived cross-church repo at its tag
 > `archive/cross-church-2026-08` — 133 unit tests and 234 browser tests green
 > here before anything changed. That archive was moved out of this working
@@ -47,7 +48,7 @@ This file remains the accurate briefing for the code you will be copying.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; twenty-nine entries now, each recording
+   the most important page in the repo**; thirty entries now, each recording
    something that cost real time to learn.
 
 The first three now also live in `docs/`, copied there when this repo was
@@ -69,9 +70,9 @@ veneration glyph in both its views, the calendar page, the saint detail page
 with the local store, All Saints in Index mode, and an About page that explains
 the mark.
 
-- 120 unit tests (`npm test`) — pure logic, no DOM.
-- 214 browser tests (`npm run test:e2e`) — 107 across desktop and 360 px.
-  (Counts as of 2026-08-23, Amendment 29; read the suite's own
+- 123 unit tests (`npm test`) — pure logic, no DOM.
+- 216 browser tests (`npm run test:e2e`) — 108 across desktop and 360 px.
+  (Counts as of 2026-08-23, Amendment 30; read the suite's own
   summary rather than trusting this line.)
 - `npm run test:all` runs both. CI runs both on every push.
 
