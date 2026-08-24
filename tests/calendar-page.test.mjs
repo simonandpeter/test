@@ -102,12 +102,24 @@ test('a lifespan with no bounds at all says undated once, not twice', () => {
     }),
     'undated',
   );
+});
+
+test('a life with no recorded beginning is read from its end', () => {
+  // "undated – 1779" told the reader what we do not know before what we do
+  // (author, 2026-08-24). The preposition follows the death display's shape.
+  const noBirth = (death) => formatLifespan({ birth: { earliest: null, latest: null, display: null }, death });
+  assert.equal(noBirth({ earliest: 1779, latest: 1779, display: null }), 'Entered eternal glory in 1779');
+  assert.equal(noBirth({ earliest: 1155, latest: 1165, display: 'c. 1160' }), 'Entered eternal glory in c. 1160');
+  assert.equal(noBirth({ earliest: 305, latest: 311, display: null }), 'Entered eternal glory in 305–311');
+  assert.equal(noBirth({ earliest: 401, latest: 500, display: '5th century' }), 'Entered eternal glory in the 5th century');
+  assert.equal(noBirth({ earliest: 730, latest: 770, display: 'mid-8th century' }), 'Entered eternal glory in the mid-8th century');
+  assert.equal(noBirth({ earliest: null, latest: 556, display: null }), 'Entered eternal glory before 556');
+  assert.equal(noBirth({ earliest: 117, latest: 161, display: 'under Hadrian or Antoninus' }), 'Entered eternal glory under Hadrian or Antoninus');
+  // A known birth with an unrecorded end keeps the honest dash: nothing about
+  // the death is being asserted, so nothing is dressed up.
   assert.equal(
-    formatLifespan({
-      birth: { earliest: null, latest: null, display: null },
-      death: { earliest: 1155, latest: 1165, display: 'c. 1160' },
-    }),
-    'undated – c. 1160',
+    formatLifespan({ birth: { earliest: 1779, latest: 1779, display: null }, death: null }),
+    '1779 – undated',
   );
 });
 

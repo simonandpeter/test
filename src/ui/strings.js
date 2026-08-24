@@ -117,6 +117,14 @@ export const STRINGS = {
     undated: 'undated',
     before: 'before {y}',
     after: 'after {y}',
+    // A life with no recorded beginning is read from its end (author,
+    // 2026-08-24): "undated – 1779" became "Entered eternal glory in 1779".
+    // Three forms because the corpus's death displays are not all years:
+    // "in 1779", "in the 5th century", and bare for "before 556" or
+    // "under Licinius", which carry their own preposition.
+    reposeIn: 'Entered eternal glory in {when}',
+    reposeInThe: 'Entered eternal glory in the {when}',
+    repose: 'Entered eternal glory {when}',
     undatedNote: 'No date is recorded at either end of this life. Undated is a finding rather than a blank: it means nothing we have found fixes a bound.',
   },
 

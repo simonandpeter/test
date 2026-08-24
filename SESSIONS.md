@@ -1391,6 +1391,40 @@ both to "St Alexander" would lose the distinction the corpus exists to keep.
 ("2 September"), so no mechanical split is safe. This is the author's call and
 is left open.
 
+**33. The register unruled, the repose line, and the shelf in the Index's
+dress** (author's instruction, 2026-08-24, the same sitting as Amendment 32).
+
+**(1) Also commemorated lost the line between saints.** One scoped rule —
+`.day-panel .register li { border-bottom: 0 }` — because the instruction named
+that section: the saint page's related list and the Saved shelf keep their
+rules, and dropping the border from the shared `.register li` would have
+unruled all three.
+
+**(2) "undated – 1779" became "Entered eternal glory in 1779."** The old form
+told the reader what we do not know before what we do, and 304 of 708 lives
+open that way. The change is in `formatLifespan` alone, so it reaches the
+Daily hero, the Index cards, the saint page's facts line and the shelves from
+one place. The death display is not always a year, so the preposition follows
+its shape — "in 1779", "in c. 1160", "in the 5th century", and none for
+"before 556" or "under Licinius", which carry their own; the three forms are
+strings in strings.js and a unit test walks every shape. The mirror case — 22
+saints with a known birth and an unrecorded end — keeps "1779 – undated": the
+instruction was about lives read from their end, and dressing up an absence
+would claim something.
+
+**(3) Continue reading wears the Index's row card.** The same classes
+(`index-card panel is-row`), the same markup shape as views/saints.js's row
+branch, statically placed because a shelf is a list where the grid absolutely
+positions its cards — and the × stacked over the bookmark at the trailing
+edge, both above the name link's card-covering ::after so a press removes or
+saves rather than opens. The shelf container now wires `wireSaveButtons`
+itself; the day panel's wiring stops at the panel, and the two subtrees are
+disjoint so no click toggles twice. One trap found on the way: the existing
+`.shelf .shelf-remove { order: 2 }` (which keeps the × on the name's line in
+the register rows below 480 px) would have put the × *under* the bookmark in
+the new tools column — overridden with `order: 0` where the column is. The
+Saved shelf keeps the register dress: the instruction named Continue reading.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

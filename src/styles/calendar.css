@@ -680,6 +680,14 @@
   border-bottom: 1px solid var(--rule);
 }
 
+/* Also commemorated reads as one company, not a ruled ledger (author,
+   2026-08-24): the day panel's register drops the line between saints. The
+   saint page's related list and the shelves keep theirs — the instruction
+   named this section. */
+.day-panel .register li {
+  border-bottom: 0;
+}
+
 
 
 .register .reg-name {

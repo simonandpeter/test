@@ -73,5 +73,16 @@ export function formatLifespan(dates) {
   if (birth === STRINGS.dates.undated && death === STRINGS.dates.undated) {
     return STRINGS.dates.undated;
   }
+  // A life with no recorded beginning is read from its end (author,
+  // 2026-08-24): "undated – 1779" told the reader what we do not know before
+  // what we do. 304 of the corpus's lives open this way. The death display is
+  // not always a year, so the preposition follows its shape: "in 1779",
+  // "in the 5th century", and none for "before 556" or "under Licinius",
+  // which carry their own.
+  if (birth === STRINGS.dates.undated) {
+    if (/^(before|after|under)\s/.test(death)) return fill(STRINGS.dates.repose, { when: death });
+    if (/century/.test(death)) return fill(STRINGS.dates.reposeInThe, { when: death });
+    return fill(STRINGS.dates.reposeIn, { when: death });
+  }
   return `${birth} – ${death}`;
 }

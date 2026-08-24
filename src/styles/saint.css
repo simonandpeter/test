@@ -300,6 +300,43 @@
   color: var(--ink);
 }
 
+/* Continue reading wears the Index's own row dress (author, 2026-08-24):
+   index.css styles the card, these rules only place it — a shelf is a list,
+   where the grid absolutely positions its cards — and stack the × over the
+   bookmark at the trailing edge. The card is the positioned ancestor because
+   the name link's ::after covers it (index.css), exactly as on the Index. */
+.shelf-cards {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.shelf-cards .index-card.is-row {
+  position: relative;
+}
+
+.shelf-tools {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  flex: none;
+}
+
+/* The base .shelf .shelf-remove rule orders the × after the date line for the
+   register rows; in the tools column it stands first — the top right, above
+   the bookmark. */
+.shelf-tools .shelf-remove {
+  order: 0;
+  padding: 0 var(--space-1);
+  font-size: 17px;
+}
+
 /* Below 480 px .reg-feast wraps onto its own full-width line (calendar.css);
    ordered after it, the × would wrap with it onto a third line, under the
    name, so it moves ahead of the date here and stays on the name's line. */

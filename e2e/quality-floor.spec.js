@@ -321,6 +321,24 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   await expect(shelf).toContainText('Continue reading');
   await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
+  // The shelf wears the Index's own row dress (author, 2026-08-24): the same
+  // card classes, so the two read as one register — with the × stacked over
+  // the bookmark at the trailing edge, and both above the link's ::after so
+  // a press removes or saves rather than opens.
+  const shelfRow = shelf.locator('.index-card.is-row.shelf-row').first();
+  await expect(shelfRow).toBeVisible();
+  await expect(shelfRow.locator('.index-name')).toContainText('Moses the Hungarian');
+  await expect(shelfRow.locator('.bookmark')).toHaveCount(1);
+  const stack = await shelfRow.evaluate((row) => {
+    const x = row.querySelector('.shelf-tools .shelf-remove').getBoundingClientRect();
+    const mark = row.querySelector('.shelf-tools .bookmark').getBoundingClientRect();
+    const card = row.getBoundingClientRect();
+    return { x, mark, card };
+  });
+  expect(stack.x.bottom).toBeLessThanOrEqual(stack.mark.top + 1); // × above the bookmark
+  expect(stack.card.right - stack.x.right).toBeLessThan(20); // in the top right
+  expect(stack.x.top - stack.card.top).toBeLessThan(20);
+
   // And it can be dismissed: a shelf the reader cannot clear is a nag.
   await shelf.locator('.shelf-remove').first().click();
   await expect(shelf).not.toContainText('Continue reading');
@@ -2384,6 +2402,15 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // The fast carries its kind, so the three states are told apart by colour
   // as well as by their wording (author, 2026-08-24).
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast');
+  // A life with no recorded beginning is read from its end (author,
+  // 2026-08-24): the hero of this day, Lawrence of Kaluga, said
+  // "undated – 1515" until then.
+  await expect(page.locator('.hero-dates')).toHaveText('Entered eternal glory in 1515');
+  // And Also commemorated reads as one company, not a ruled ledger: no line
+  // between the saints (author, 2026-08-24; the shelves keep theirs).
+  expect(
+    await page.locator('.day-panel .register li').first().evaluate((li) => getComputedStyle(li).borderBottomWidth),
+  ).toBe('0px');
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy]')).toContainText('Fast, fish permitted — a Great Feast on a Friday');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fish');

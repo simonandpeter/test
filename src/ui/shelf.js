@@ -16,8 +16,10 @@ import * as store from '../lib/store.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { withHonorific } from '../lib/honorific.js';
+import { paintSaved, renderBookmark, wireSaveButtons } from './save.js';
 import { STRINGS } from './strings.js';
 
+const BASE = import.meta.env.BASE_URL;
 const SHELF_LIMIT = 5;
 
 function row(card, router, { removable = false } = {}) {
@@ -29,6 +31,37 @@ function row(card, router, { removable = false } = {}) {
     <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
     <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
     ${remove}
+  </li>`;
+}
+
+/**
+ * Continue reading wears the Index's own row dress (author, 2026-08-24): the
+ * same card, the same classes, so the two read as one register — with the ×
+ * stacked over the bookmark at the trailing edge, because a shelf the reader
+ * cannot clear is a nag and a row without Save would disagree with the card
+ * it copies. The markup mirrors views/saints.js's row branch; index.css
+ * styles it, saint.css only places it.
+ */
+function readingRow(card, router) {
+  const image = card.image
+    ? `<span class="index-media" style="background-image:url('${BASE + card.image.lqip}')">
+        <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
+          loading="lazy" decoding="async" />
+      </span>`
+    : '<span class="index-media is-empty" aria-hidden="true"></span>';
+  return `<li class="index-card panel is-row shelf-row">
+    ${image}
+    <span class="row-body">
+      <span class="name-line">
+        <a class="index-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
+      </span>
+      <span class="index-dates utility">${esc(formatLifespan(card.dates))}</span>
+    </span>
+    <span class="shelf-tools">
+      <button type="button" class="shelf-remove" data-forget="${esc(card.slug)}"
+        aria-label="${STRINGS.shelf.remove}: ${esc(card.display_name)}">×</button>
+      ${renderBookmark(card.slug, card.display_name)}
+    </span>
   </li>`;
 }
 
@@ -55,7 +88,7 @@ export function mountShelves(el, { data, router }) {
     if (readingCards.length) {
       sections.push(
         `<h2 class="register-heading">${STRINGS.shelf.continueReading}</h2>
-         <ul class="register shelf">${readingCards.map((c) => row(c, router, { removable: true })).join('')}</ul>`,
+         <ul class="shelf shelf-cards">${readingCards.map((c) => readingRow(c, router)).join('')}</ul>`,
       );
     }
     if (savedCards.length) {
@@ -65,6 +98,7 @@ export function mountShelves(el, { data, router }) {
       );
     }
     el.innerHTML = sections.join('');
+    paintSaved(el);
   };
 
   const onClick = (e) => {
@@ -74,6 +108,9 @@ export function mountShelves(el, { data, router }) {
   };
 
   el.addEventListener('click', onClick);
+  // The reading rows carry the Save bookmark now, and nothing else wires this
+  // container — the day panel's wiring stops at the panel.
+  const unwireSave = wireSaveButtons(el);
   const unsubscribe = store.subscribe((what) => {
     if (what === 'saved' || what === 'reading') paint();
   });
@@ -82,6 +119,7 @@ export function mountShelves(el, { data, router }) {
   return () => {
     alive = false;
     el.removeEventListener('click', onClick);
+    unwireSave();
     unsubscribe();
   };
 }
