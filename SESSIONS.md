@@ -1781,6 +1781,85 @@ matched-tongue silence). Five backouts run and watched fail: the coast, its
 reduced-motion gate, the sample freshness, the note, the note's condition.
 Both suites green at the close.
 
+**38. Nine refinements, and one bookmark instead of two** (author's
+instruction, 2026-08-24 evening — nine items in one list, delivered in two
+commits).
+
+**The small five.** "A" steps a day back beside S and the arrows (a hand
+resting on WASD expects A to be "left"). The Daily heading wears the
+abbreviated month — "Friday, 28 Aug 2026" — through a second formatter, not a
+change to `dayFmt`, because the day buttons' `aria-label`s keep the full month:
+a label is spoken, not glanced at. Centuries print as **"3rd C."**, abbreviated
+at render in `formatInterval`, the data's `display` strings left whole because
+they are quoted source-shaped corpus material and are not edited for
+typography. **"Also called" is removed** from the saint page, with its label
+from all five packs. And the Index **opens in Random order**, the seed minted
+per visit by the view so every open deals a new hand, while a snapshot carries
+its seed so returning from a saint finds the grid as it was left.
+
+*Two reversals, both marked in place.* Random reverses the **same morning's**
+Earliest default (Amendment 34) at the author's explicit instruction, with its
+own reason recorded: "so each time you open the site you get exposed to more
+saints". Removing "Also called" reverses DESIGN.md's "script coverage is a
+hard requirement, not a nicety", which named that exact block as how "attest,
+never adjudicate" appears on screen — the multi-script name forms (Ἀντώνιος,
+Ⲁⲛⲧⲱⲛⲓⲟⲥ) are now shown nowhere. Flagged in the same sitting; the corpus is
+untouched and the line costs nothing to restore. The requirement stands
+unreversed for a saint's *display* name, which still sets in its own script
+wherever the corpus writes it that way.
+
+**The four visual ones.** *Continue reading* loses its × and centres the
+bookmark on the row's height; a row is cleared by **swiping it across** —
+pointer events, so the mouse does it too, the same reversal the rail made when
+it took the desktop drag — past 40% of its own width, springing home under
+that, with vertical movement winning outright so the shelf never steals a
+scroll. *Also commemorated* is a column of the Index's own rows rather than
+text links: thumbnail, name, lifespan, and the same Save every other card
+carries. The **mobile header** is three rows — the name centred across the
+top, the toggles under it at the right, the calendar control on the nav's own
+line at its right end — which took the calendar control out of the corner's
+flex box into one of its own; the wide header is untouched. And the **bookmark
+is one drawing at last**: what the author saw as two visuals was one mark with
+a gesso halo under it, and over a dark icon the halo was the only part that
+read. The halo is gone; legibility over a picture is a drop shadow, which is
+the ground's own darkness pushed away from the shape rather than a second
+shape drawn around it.
+
+*Said plainly rather than left looking covered:* the register row's
+church-title branch has **no reachable trigger in today's corpus** — all 20
+titled attestations belong to saints who are their own day's hero, verified
+across all four calendars — so it carries no browser test and says so where it
+lives. It is kept because titles are data and the corpus grows.
+
+**What the suite caught, which is again most of the story.** Four order
+assertions were reading `.index-name` .first() — but `paintWindow` appends
+newly-mounted cards and leaves mounted ones where they sit, so DOM order stops
+being screen order after a re-sort; they passed only because Earliest was the
+default and a fresh load happens to agree. A `leaders()` helper now reads the
+leading names off the geometry, which is what those tests always meant. A
+fifth measured "the first card with a picture" and would have measured
+whichever card the opening deal put there. The Random-saint test matched
+`.att` rows by full text, so a source note naming another church could match
+two rows; scoped to `.att-church`. All four were pre-existing and none was
+mine — but a suite the house rules call a real gate does not get to keep known
+flakes.
+
+Two of this amendment's own tests were caught being weaker than the code they
+pinned, both by backouts. The swipe test pushed from the row's *thumbnail*,
+where the native link-drag that broke the gesture in the first place does not
+fire — it pushes from the **name** now, which is where a reader's hand lands
+and the one place the gesture can be stolen. And the spring-back assertion
+counted rows immediately after the push, which passes while a dismissed row is
+still mid-flight; it waits past the 200 ms flight now, and says why.
+
+**Verification.** 139 unit (two heirs rewritten: the default order, and the
+century abbreviation), 264 browser (256 + 8). Twelve backouts run and watched
+fail: the A key, the abbreviated heading, the century abbreviation, the
+removed name forms, the Random default, the per-visit seed, the dragstart
+guard, the swipe threshold, the halo's return, the text-link register, the
+narrow header grid, and the shelf's keyboard route. Both suites green at the
+close.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

@@ -204,6 +204,7 @@ export const sr = {
     saved: 'Сачувано',
     resume: 'Настави',
     remove: 'Уклони са ове полице',
+    removeNamed: 'Уклони {name} из „Настави читање”',
   },
 
   map: {

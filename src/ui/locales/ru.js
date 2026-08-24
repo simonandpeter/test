@@ -209,6 +209,7 @@ export const ru = {
     saved: 'Сохранённые',
     resume: 'Продолжить',
     remove: 'Убрать с полки',
+    removeNamed: 'Убрать «{name}» из «Продолжить чтение»',
   },
 
   map: {

@@ -44,15 +44,20 @@
   <header class="chrome">
     <a class="site-name" href="/">Orthodoxy Daily</a>
     <nav class="site-nav" id="site-nav" aria-label="Site"></nav>
-    <div class="chrome-corner">
-      <!-- The calendar control names the church the site reads and opens the
-           chooser in the panel below the header (author, 2026-08-22; it was
-           Select Tradition until then); the theme toggle is a sun/moon icon.
-           Today's date stood here from 2026-08-21 to 2026-08-22. -->
+    <!-- The calendar control names the church the site reads and opens the
+         chooser in the panel below the header (author, 2026-08-22; it was
+         Select Tradition until then). It sits in its own box rather than in
+         the corner because the two part company on a narrow screen (author,
+         2026-08-24): there it drops to the nav's line, under the toggles. -->
+    <div class="chrome-calendar">
       <button id="church-open" type="button" class="church-open utility"
         aria-controls="church-panel" aria-expanded="false"></button>
+    </div>
+    <div class="chrome-corner">
       <!-- The language control (author, 2026-08-24): a globe mark and the
-           current language's code, five languages in the panel below. -->
+           current language's code, five languages in the panel below. Beside
+           it the theme toggle, a sun/moon icon. Today's date stood here from
+           2026-08-21 to 2026-08-22. -->
       <button id="lang-open" type="button" class="church-open utility"
         aria-controls="lang-panel" aria-expanded="false"></button>
       <button id="theme-toggle" type="button" class="icon-button"></button>

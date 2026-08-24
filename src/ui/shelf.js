@@ -13,6 +13,7 @@
  */
 
 import * as store from '../lib/store.js';
+import { fill } from './strings.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { withHonorific } from '../lib/honorific.js';
@@ -36,11 +37,17 @@ function row(card, router, { removable = false } = {}) {
 
 /**
  * Continue reading wears the Index's own row dress (author, 2026-08-24): the
- * same card, the same classes, so the two read as one register — with the ×
- * stacked over the bookmark at the trailing edge, because a shelf the reader
- * cannot clear is a nag and a row without Save would disagree with the card
- * it copies. The markup mirrors views/saints.js's row branch; index.css
- * styles it, saint.css only places it.
+ * same card, the same classes, so the two read as one register — the bookmark
+ * centred on the row's height at the trailing edge, because a row without
+ * Save would disagree with the card it copies.
+ *
+ * The × that stood above that bookmark went the same evening, at the author's
+ * instruction: a row is cleared by **swiping it across** instead. The button
+ * survives as a screen-reader-and-keyboard route, hidden until focused —
+ * DESIGN.md §5b's rule is that a gesture is never the only way to a thing,
+ * and a shelf whose only clearing gesture is a swipe would strand every
+ * reader who cannot make one. Tabbing to a row surfaces it; a mouse or a
+ * finger never sees it.
  */
 function readingRow(card, router) {
   const image = card.image
@@ -58,10 +65,10 @@ function readingRow(card, router) {
       <span class="index-dates utility">${esc(formatLifespan(card.dates))}</span>
     </span>
     <span class="shelf-tools">
-      <button type="button" class="shelf-remove" data-forget="${esc(card.slug)}"
-        aria-label="${STRINGS.shelf.remove}: ${esc(card.display_name)}">×</button>
       ${renderBookmark(card.slug, card.display_name)}
     </span>
+    <button type="button" class="shelf-remove shelf-remove-quiet utility" data-forget="${esc(card.slug)}"
+      >${esc(fill(STRINGS.shelf.removeNamed, { name: card.display_name }))}</button>
   </li>`;
 }
 
@@ -108,6 +115,7 @@ export function mountShelves(el, { data, router }) {
   };
 
   el.addEventListener('click', onClick);
+  const unwireSwipe = wireSwipe(el);
   // The reading rows carry the Save bookmark now, and nothing else wires this
   // container — the day panel's wiring stops at the panel.
   const unwireSave = wireSaveButtons(el);
@@ -119,7 +127,137 @@ export function mountShelves(el, { data, router }) {
   return () => {
     alive = false;
     el.removeEventListener('click', onClick);
+    unwireSwipe();
     unwireSave();
     unsubscribe();
+  };
+}
+
+/** Past this much of the row's width, the hand meant it. */
+const SWIPE_OUT = 0.4;
+/** Where a hold stops being a press and starts being a swipe. */
+const SWIPE_SLOP = 8;
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/**
+ * A Continue-reading row is cleared by swiping it across (author,
+ * 2026-08-24). Pointer events, so a mouse drag does it as readily as a
+ * finger — the same reversal the week rail made when it took the desktop
+ * drag; a shelf whose gesture worked on a phone and nowhere else would be
+ * the "no gesture at all on the mouse" problem again.
+ *
+ * The row follows the hand, and past SWIPE_OUT of its own width it leaves in
+ * the direction it was pushed. Under that it springs back, which is what
+ * tells the reader the gesture exists and did not take: a row that snapped
+ * home with no travel would read as a dead press. Vertical movement wins
+ * outright — the shelf sits in a scrolling page and stealing the scroll to
+ * dismiss something the reader was only scrolling past is the one failure
+ * this gesture can commit. Reduced motion keeps the dismissal and removes
+ * the travel: the row goes, it does not fly.
+ */
+function wireSwipe(el) {
+  let hold = null;
+
+  const rowOf = (node) => node?.closest?.('.shelf-row') ?? null;
+
+  const release = (row, animate) => {
+    row.classList.remove('is-swiping');
+    row.style.transform = '';
+    row.style.opacity = '';
+    if (!animate) row.style.transition = 'none';
+  };
+
+  const down = (e) => {
+    if (e.button > 0) return;
+    const row = rowOf(e.target);
+    // The bookmark and the hidden remove button are controls: a press that
+    // starts on one is that control's, not a swipe's.
+    if (!row || e.target.closest('button')) return;
+    hold = { row, x: e.clientX, y: e.clientY, id: e.pointerId, swiping: false, dx: 0 };
+  };
+
+  const move = (e) => {
+    if (!hold || e.pointerId !== hold.id) return;
+    const dx = e.clientX - hold.x;
+    const dy = e.clientY - hold.y;
+    if (!hold.swiping) {
+      if (Math.abs(dy) > Math.abs(dx)) {
+        // The page is scrolling under the hand; this was never a swipe.
+        hold = null;
+        return;
+      }
+      if (Math.abs(dx) < SWIPE_SLOP) return;
+      hold.swiping = true;
+      hold.row.classList.add('is-swiping');
+      hold.row.setPointerCapture?.(e.pointerId);
+    }
+    hold.dx = dx;
+    const width = hold.row.getBoundingClientRect().width || 1;
+    hold.row.style.transform = `translateX(${dx}px)`;
+    // The row thins as it goes, so how far is left to push is visible.
+    hold.row.style.opacity = String(Math.max(0, 1 - Math.abs(dx) / width / (SWIPE_OUT * 2)));
+  };
+
+  const up = (e) => {
+    if (!hold || e.pointerId !== hold.id) return;
+    const { row, dx, swiping } = hold;
+    hold = null;
+    if (!swiping) return;
+    row.releasePointerCapture?.(e.pointerId);
+    // A swipe is not a click: the row is a link to the saint, and letting go
+    // of a dragged row must not open them.
+    const swallow = (click) => click.stopPropagation();
+    row.addEventListener('click', swallow, { capture: true, once: true });
+    setTimeout(() => row.removeEventListener('click', swallow, { capture: true }), 0);
+
+    const width = row.getBoundingClientRect().width || 1;
+    const slug = row.querySelector('[data-forget]')?.dataset.forget;
+    if (Math.abs(dx) < width * SWIPE_OUT || !slug) {
+      release(row, !reducedMotion());
+      return;
+    }
+    if (reducedMotion()) {
+      store.clearReading(slug);
+      return;
+    }
+    // Out the way it was pushed, then the store repaints the shelf without it.
+    row.classList.add('is-leaving');
+    row.style.transform = `translateX(${dx > 0 ? width : -width}px)`;
+    row.style.opacity = '0';
+    row.addEventListener('transitionend', () => store.clearReading(slug), { once: true });
+  };
+
+  const cancel = (e) => {
+    if (!hold || e.pointerId !== hold.id) return;
+    const { row, swiping } = hold;
+    hold = null;
+    if (swiping) release(row, !reducedMotion());
+  };
+
+  /*
+   * A row is a link with a picture in it, and dragging either is a *native*
+   * drag in every desktop browser — which fires pointercancel and takes the
+   * gesture away mid-swipe. (Found the first time the swipe was rendered and
+   * looked at: the row never moved, and the pointer log showed the cancel.)
+   * Refusing the dragstart is enough; it leaves clicks, focus and the
+   * keyboard alone, where preventing the pointerdown would have cost the
+   * focus a press should give.
+   */
+  const nodrag = (e) => {
+    if (e.target?.closest?.('.shelf-row')) e.preventDefault();
+  };
+
+  el.addEventListener('pointerdown', down);
+  el.addEventListener('pointermove', move);
+  el.addEventListener('pointerup', up);
+  el.addEventListener('pointercancel', cancel);
+  el.addEventListener('dragstart', nodrag);
+
+  return () => {
+    el.removeEventListener('pointerdown', down);
+    el.removeEventListener('pointermove', move);
+    el.removeEventListener('pointerup', up);
+    el.removeEventListener('pointercancel', cancel);
+    el.removeEventListener('dragstart', nodrag);
   };
 }

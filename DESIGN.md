@@ -267,12 +267,22 @@ the Save of brief §11 as a frameless silhouette over the picture — no frame,
 no field, the shape alone. "Filled when saved and outlined when not" is
 superseded (author, 2026-08-23): the shape is filled at both states now,
 half-opacity when not saved and full when it is, with `aria-pressed` carrying
-the state regardless. It is drawn in ink with a hairline of gesso
-under it, so it reads on gold ground and dark ground alike, and it is ink
-precisely because of where it sits: over a picture, gold would claim a finding
-and red would claim liturgical time (§2). A row puts it at the trailing edge,
-because a 48 px thumbnail has no corner to spare; a card without an image puts
-it in the card's own corner.
+the state regardless. It is ink precisely because of where it sits: over a
+picture, gold would claim a finding and red would claim liturgical time (§2).
+A row puts it at the trailing edge, because a 48 px thumbnail has no corner to
+spare; a card without an image puts it in the card's own corner.
+
+*The hairline of gesso under the shape is removed (author, 2026-08-24):
+"there are two bookmark visuals… remove the outline version completely."* The
+halo was there so the mark would read on gold ground and dark ground alike,
+and it did — but over a dark icon it was the **only** part that read, so the
+site had an outlined bookmark on cards with a picture and a filled one
+everywhere else, which is two renderings of a control this section opens by
+calling one. There is now one path, at half opacity until saved. What the halo
+was defending is defended instead by a drop shadow, applied only where a
+picture is actually underneath: a shadow is the ground's own darkness pushed
+away from the shape, not a second shape drawn around it, so the mark stays one
+drawing in every place it appears.
 
 **The Index has two layouts**, chosen by the reader and remembered (added
 2026-08-21). *Cards* is the panel described above: image at the manifest's
@@ -330,7 +340,35 @@ The habit page, so its shape is specified here rather than improvised.
 (author, 2026-08-21 — it took the manifest's aspect until then; see "the hero
 image is a square" below),
 name in display voice at h1 scale, the badge immediately to the right of the
-name (§7), then that day's other commemorations as a register below. The pick is
+name (§7), then that day's other commemorations as a register below.
+*Superseded for the register (author, 2026-08-24): "display the saint card row
+layout instead of the text only." Also commemorated is now a column of the
+**Index's own rows** — square thumbnail, name, the church's title for the day
+where there is one, lifespan, and the same bookmark every other card carries —
+so the Daily page and All Saints read as one register rather than two ideas of
+one. The register's line between entries went with it: a card has its own
+panel edge, and the rule that removed that line the same morning is moot here.
+The register voice survives where a register still is one — the saint page's
+related list and the Saved shelf.*
+
+**The shelves, and the swipe that clears one** (author, 2026-08-24). Continue
+reading wears the same row dress as the register above it, with the bookmark
+centred on the row's height at the trailing edge and **no × over it**: a row
+is cleared by swiping it across, mouse or finger alike, past 40% of its own
+width — under that it springs home, which is what tells a reader the gesture
+exists and did not take. Vertical movement wins outright, because the shelf
+sits in a scrolling page and stealing a scroll to dismiss something the reader
+was only scrolling past is the one failure this gesture can commit; reduced
+motion keeps the dismissal and removes the travel.
+
+**A gesture is never the only way to a thing**, which is this section's own
+rule about the peeks ("the peek is the swipe's affordance for anyone who
+cannot swipe") applied where the affordance had been removed by instruction.
+The removal survives as a button that is clipped to a pixel until it takes
+focus, then stands at the row's trailing edge naming the whole action —
+"Remove Moses the Hungarian from Continue reading". A keyboard and a screen
+reader reach it; a mouse and a finger never see it. That is the shape to reuse
+wherever a visible control is traded for a gesture. The pick is
 deterministic from the date and the day's slugs — the same day shows every
 visitor the same saint, so a shared link means a shared page — preferring
 saints that carry an image, never advertising the preference. **As the day
@@ -426,9 +464,10 @@ day**, not a week at a time — a Wednesday can lead the strip. The mouse: **a
 mouse drag on the rail is a gesture now**, by instruction; the old text's
 reason ("a drag across a date grid is a selection") loses nothing here because
 the rail holds numerals in buttons, no selectable prose, and clicking is
-untouched. The keyboard: the arrow keys — with **S and D** as their
-off-hand twins — step the day **from anywhere on the page**, not from inside
-the strip, guarded so they never fire while the reader is typing and never
+untouched. The keyboard: the arrow keys — with **A/S and D** as their
+off-hand twins (A joined S the same evening, at the author's instruction: a
+hand resting on WASD expects A to be "left") — step the day **from anywhere on
+the page**, not from inside the strip, guarded so they never fire while the reader is typing and never
 override a modifier chord. Touch is unchanged in behaviour and simpler in
 mechanism: the browser's own scroll, snapped by CSS. What still stands: a day
 is chosen by clicking it, scrolling is never selecting, and the swallowed
@@ -713,6 +752,15 @@ does. Today's date stood under the theme control from 2026-08-21 until
 labels went with it, and the bar's vertical padding returns to what it was
 before the date arrived. No footer ceremony; About holds the editorial matter.
 Header collapses to a wrapping row at 360 px; no hamburger — four links fit.
+*Superseded (author, 2026-08-24): narrow, the header is three rows rather
+than a wrapping one — the site name **centred across the top**, the language
+and theme toggles under it at the right, and the nav on the last line with
+**the calendar control at its right end**, in line with the four links and
+under the toggles. Still no hamburger, and the wide header is untouched: the
+calendar control simply left the corner's flex box for one of its own, so the
+two can part company below 560 px. What the old wrapping row cost was the
+name — crowded on one line beside a control whose label is a church's name in
+five languages («Румынская»), it had nowhere to go.*
 
 *Revised (2026-08-22): the text button names the church — Russian, Romanian or
 Greek — and opens a chooser of the three; the switches and the plate are gone

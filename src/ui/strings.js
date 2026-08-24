@@ -268,6 +268,12 @@ export const STRINGS = {
     saved: 'Saved',
     resume: 'Resume',
     remove: 'Remove from this shelf',
+    // The Continue-reading rows are cleared by swiping them across (author,
+    // 2026-08-24); this names the button that does the same thing for a
+    // reader who cannot swipe, and which only a keyboard or a screen reader
+    // ever reaches. It says the whole action, because out of the row's
+    // visual context it has nothing else to lean on.
+    removeNamed: 'Remove {name} from Continue reading',
   },
 
   map: {

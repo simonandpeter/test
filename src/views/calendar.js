@@ -1088,6 +1088,49 @@ const stepMonth = (n) => moveMonth(n);
 /* ---- the day panel: hero + register ----------------------------------- */
 
 /**
+ * A commemorated saint in the Index's own row dress (author, 2026-08-24:
+ * "display the saint card row layout instead of the text only"). It is the
+ * third place this markup is written — views/saints.js builds it for the
+ * grid, ui/shelf.js for Continue reading — and it stays written out rather
+ * than shared, because each of the three carries something the others do
+ * not: the grid's is virtualised and absolutely positioned, the shelf's is
+ * swiped away, and this one carries the church's title for the day and the
+ * shared-element name that travels into the saint's page. index.css styles
+ * the card; calendar.css only places it.
+ *
+ * The day's face is the hero above; these are the rest of the day, and they
+ * now show what they were: a picture, a lifespan, and Save where every other
+ * card in the site keeps it.
+ */
+function registerRow(saint, title, transition) {
+  const image = saint.image
+    ? `<span class="index-media" style="background-image:url('${BASE + saint.image.lqip}')">
+        <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
+          loading="lazy" decoding="async" />
+      </span>`
+    : '<span class="index-media is-empty" aria-hidden="true"></span>';
+  return `<li class="index-card panel is-row reg-card">
+    ${image}
+    <span class="row-body">
+      <span class="name-line">
+        <a class="index-name" href="${state.router.href(`/saints/${saint.slug}`)}"
+          data-prefetch="${saint.slug}"${transition}>${esc(withHonorific(saint.display_name))}</a>
+      </span>
+      ${/* No day in any of the four calendars currently puts a *titled*
+             saint in the register: all 20 titled attestations in the corpus
+             belong to saints who are their own day's hero, so this branch has
+             no reachable trigger today and carries no browser test — said
+             plainly rather than left looking covered. It is kept because
+             titles are data and the corpus grows; the register is where a
+             church's own title for the day belongs when one arrives. */ ''}
+      ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
+      <span class="index-dates utility">${esc(formatLifespan(saint.dates))}</span>
+    </span>
+    ${renderBookmark(saint.slug, saint.display_name)}
+  </li>`;
+}
+
+/**
  * Two silences, and a reader is owed the difference between them (redrawn
  * 2026-08-22 for one church at a time). The corpus having nothing for a day is
  * a statement about our sourcing; this church's calendar having nothing while
@@ -1149,15 +1192,12 @@ function paintDay(panel) {
       const title = titleFor(saint, e.church);
       const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
       named.add(saint.slug);
-      return `<li>
-        <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-          data-prefetch="${saint.slug}"${transition}>${esc(withHonorific(saint.display_name))}</a>
-        ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      </li>`;
+      return registerRow(saint, title, transition);
     })
     .join('');
   const register = registerEntries.length
-    ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2><ul class="register">${rows}</ul>`
+    ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>
+       <ul class="register register-cards">${rows}</ul>`
     : '';
 
   panel.innerHTML = `

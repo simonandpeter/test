@@ -328,26 +328,119 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
   // The shelf wears the Index's own row dress (author, 2026-08-24): the same
-  // card classes, so the two read as one register — with the × stacked over
-  // the bookmark at the trailing edge, and both above the link's ::after so
-  // a press removes or saves rather than opens.
+  // card classes, so the two read as one register — the bookmark alone at the
+  // trailing edge, centred on the row's height, above the link's ::after so a
+  // press saves rather than opens. The × that stood over it went the same
+  // evening; the row is swiped away instead, which has its own test below.
   const shelfRow = shelf.locator('.index-card.is-row.shelf-row').first();
   await expect(shelfRow).toBeVisible();
   await expect(shelfRow.locator('.index-name')).toContainText('Moses the Hungarian');
   await expect(shelfRow.locator('.bookmark')).toHaveCount(1);
-  const stack = await shelfRow.evaluate((row) => {
-    const x = row.querySelector('.shelf-tools .shelf-remove').getBoundingClientRect();
+  // No visible × anywhere on the row: the removal that remains is the
+  // hidden one, and it is clipped to a pixel until it takes focus.
+  const placed = await shelfRow.evaluate((row) => {
     const mark = row.querySelector('.shelf-tools .bookmark').getBoundingClientRect();
     const card = row.getBoundingClientRect();
-    return { x, mark, card };
+    const quiet = row.querySelector('.shelf-remove');
+    const q = quiet.getBoundingClientRect();
+    return {
+      mark,
+      card,
+      quietWidth: q.width,
+      quietText: quiet.textContent.trim(),
+      visibleXs: [...row.querySelectorAll('button')].filter((b) => b.textContent.trim() === '×').length,
+    };
   });
-  expect(stack.x.bottom).toBeLessThanOrEqual(stack.mark.top + 1); // × above the bookmark
-  expect(stack.card.right - stack.x.right).toBeLessThan(20); // in the top right
-  expect(stack.x.top - stack.card.top).toBeLessThan(20);
+  expect(placed.visibleXs).toBe(0);
+  expect(placed.quietWidth).toBeLessThan(3);
+  expect(placed.quietText).toBe('Remove Moses the Hungarian from Continue reading');
+  // Centred on the card's height, at its trailing edge.
+  const markMid = placed.mark.top + placed.mark.height / 2;
+  const cardMid = placed.card.top + placed.card.height / 2;
+  expect(Math.abs(markMid - cardMid)).toBeLessThan(2);
+  expect(placed.card.right - placed.mark.right).toBeLessThan(20);
 
-  // And it can be dismissed: a shelf the reader cannot clear is a nag.
+  // And it can still be dismissed without a gesture: a shelf the reader
+  // cannot clear is a nag, and a shelf only a swipe can clear strands
+  // everyone who cannot swipe (DESIGN.md §5b). Focus reveals the control.
+  await shelf.locator('.shelf-remove').first().focus();
+  await expect(shelf.locator('.shelf-remove').first()).toBeVisible();
   await shelf.locator('.shelf-remove').first().click();
   await expect(shelf).not.toContainText('Continue reading');
+});
+
+test('a Continue reading row is swiped away, and a short push springs back', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: the × goes and "if you swipe across on them they get
+   * removed". Pointer events, so the mouse does it too — the same reversal
+   * the week rail made when it took the desktop drag.
+   *
+   * The spring-back half is the one worth pinning hardest: a row that
+   * vanished on any push at all would make the shelf unscrollable by touch,
+   * and a row that never moved would read as a dead press. So: a short push
+   * leaves the row exactly where it was and still on the shelf, and a long
+   * one takes it off.
+   */
+  await ready(page);
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+
+  const rows = page.locator('.shelf-row');
+  await expect(rows).toHaveCount(2);
+  // The push starts on the saint's *name*, which is where a reader's finger
+  // or cursor lands and — as the first rendering of this gesture showed — the
+  // one place it can be stolen: a row is a link with a picture in it, and
+  // dragging a link starts a native drag that cancels the pointer stream.
+  // Pushing from the thumbnail instead would pass with that defect present.
+  const push = async (distance) => {
+    const name = rows.first().locator('.index-name');
+    const box = await name.boundingBox();
+    const y = box.y + box.height / 2;
+    const x = box.x + box.width / 2;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    for (let i = 1; i <= 8; i += 1) await page.mouse.move(x + (distance * i) / 8, y);
+    await page.mouse.up();
+  };
+
+  await push(70);
+  // A real wait, and it has to be: a removal is a 200 ms flight and only then
+  // a repaint, so asserting the count straight after the push passes while
+  // the row is still on screen on its way out. (Caught by backing the
+  // threshold out to zero and watching this test pass regardless.) Past the
+  // flight, a row that was going is gone and a row that sprang back is home.
+  await page.waitForTimeout(500);
+  await expect(rows).toHaveCount(2);
+  // Home again, not left hanging where the hand let go.
+  expect(await rows.first().evaluate((r) => r.style.transform || 'none')).toBe('none');
+  await expect(page).toHaveURL(/\/calendar\//); // the swipe did not open the saint
+
+  await push(420);
+  await expect(rows).toHaveCount(1);
+  await expect(page.locator('.shelves')).toContainText('Continue reading');
+});
+
+test('under reduced motion a swiped row goes without flying', async ({ browser }) => {
+  // Removed, not shortened: the travel is an animation and goes; the row is
+  // still cleared, and nothing is left mid-flight.
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  const row = page.locator('.shelf-row').first();
+  const name = row.locator('.index-name');
+  const box = await name.boundingBox();
+  const y = box.y + box.height / 2;
+  const x = box.x + box.width / 2;
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i += 1) await page.mouse.move(x + (420 * i) / 8, y);
+  await page.mouse.up();
+  await expect(page.locator('.shelf-row')).toHaveCount(0);
+  await expect(page.locator('.shelves')).not.toContainText('Continue reading');
+  await ctx.close();
 });
 
 test('opening from the calendar goes through the prefetched payload', async ({ page }) => {
@@ -1553,11 +1646,18 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
   expect(new Set(measured.map((m) => m.button)).size, JSON.stringify(measured)).toBe(1);
 });
 
-test('the header carries no date, and the corner holds two controls', async ({ page }) => {
-  // Today's date stood under the theme control from 2026-08-21 to 2026-08-22
-  // and is withdrawn; the corner is the calendar control — which names the
-  // church the site reads — and the icon toggle, one line, and the bar is no
-  // taller than it was with the date (61 px desktop).
+test('the header carries no date, and the controls keep their places at both widths', async ({ page }) => {
+  /*
+   * Today's date stood under the theme control from 2026-08-21 to 2026-08-22
+   * and is withdrawn. Wide, the row is unchanged: the calendar control — which
+   * names the church the site reads — then the language control and the icon
+   * toggle, all on one line, the bar no taller than it was with the date
+   * (61 px). Narrow, the author rearranged it on 2026-08-24: the site name
+   * spans the top centred, the two toggles sit under it at the right, and the
+   * calendar control drops to the nav's own line at its right end. So the
+   * "one line" assertion is now the wide branch's alone, and the narrow
+   * branch pins the arrangement that replaced it.
+   */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -1565,19 +1665,39 @@ test('the header carries no date, and the corner holds two controls', async ({ p
   await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', /Switch to the (dark|light) theme/);
   const m = await page.evaluate(() => {
-    const header = document.querySelector('header.chrome').getBoundingClientRect();
-    const open = document.querySelector('#church-open').getBoundingClientRect();
-    const theme = document.querySelector('#theme-toggle').getBoundingClientRect();
+    const box = (sel) => document.querySelector(sel).getBoundingClientRect();
+    const header = box('header.chrome');
+    const open = box('#church-open');
+    const theme = box('#theme-toggle');
+    const lang = box('#lang-open');
+    const name = box('.site-name');
+    const nav = box('.site-nav');
+    const mid = (r) => r.top + r.height / 2;
     return {
       header: header.height,
-      sameLine: Math.abs(open.top + open.height / 2 - (theme.top + theme.height / 2)) < 4,
+      sameLine: Math.abs(mid(open) - mid(theme)) < 4,
       themeAfter: theme.left >= open.right,
       wide: innerWidth >= 560,
+      // Narrow: the name centred across the whole header, the toggles under
+      // it, the calendar control on the nav's line and to its right.
+      nameCentred: Math.abs((name.left + name.right) / 2 - (header.left + header.right) / 2) < 8,
+      togglesAboveCalendar: theme.bottom <= open.top + 1 && lang.bottom <= open.top + 1,
+      calendarOnNavLine: mid(open) >= nav.top && mid(open) <= nav.bottom,
+      calendarAfterNav: open.left >= nav.right,
+      nameAboveNav: name.bottom <= nav.top + 1,
     };
   });
-  expect(m.sameLine).toBe(true);
-  expect(m.themeAfter).toBe(true);
-  if (m.wide) expect(m.header).toBeLessThan(64);
+  if (m.wide) {
+    expect(m.sameLine).toBe(true);
+    expect(m.themeAfter).toBe(true);
+    expect(m.header).toBeLessThan(64);
+  } else {
+    expect(m.nameCentred).toBe(true);
+    expect(m.nameAboveNav).toBe(true);
+    expect(m.togglesAboveCalendar).toBe(true);
+    expect(m.calendarOnNavLine).toBe(true);
+    expect(m.calendarAfterNav).toBe(true);
+  }
 });
 
 test('the days at the rail edges are real days, unmasked, and one click each', async ({ page }) => {
@@ -3192,6 +3312,97 @@ test('the Index speaks the chosen language, saints excepted', async ({ page }) =
   await expect(page.locator('[data-set-aside]')).toContainText('Руска');
   // The saint is still English, honorific included.
   await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+});
+
+/* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */
+
+test('Also commemorated is a column of saint cards, not a list of links', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: "display the saint card row layout instead of the
+   * text only". The rest of the day now shows what it always was — a picture,
+   * a lifespan, and Save where every other card on the site keeps it — in the
+   * Index's own row dress, so the Daily page and All Saints read as one
+   * register. The church's title for the day ("Venerable, the Great") is what
+   * these rows carry that no other card does, and it survives the change.
+   *
+   * 1 September 2026 in the Russian calendar: Pitirim of Perm is the hero and
+   * six more are commemorated under him.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  const cards = page.locator('.register-cards .reg-card');
+  await expect(cards).toHaveCount(6);
+
+  const first = cards.first();
+  await expect(first.locator('.index-name')).toHaveText('St Agapius of Gaza');
+  await expect(first.locator('.index-dates')).toContainText('304–306');
+  // Every row is a card: a media box even with no picture, so the column of
+  // names stays a column, and its own Save.
+  await expect(cards.locator('.index-media')).toHaveCount(6);
+  await expect(cards.locator('.bookmark')).toHaveCount(6);
+  // The hero is not repeated among them.
+  await expect(page.locator('.register-cards')).not.toContainText('Pitirim');
+
+  // Saving from a register row is the same Save as everywhere else, and the
+  // saint's own page agrees without a reload.
+  await first.locator('.bookmark').click();
+  await expect(first.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
+  await first.locator('.index-name').click();
+  await expect(page.locator('h1.saint-name')).toHaveText('St Agapius of Gaza');
+  await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('there is one bookmark drawing, on an icon and on the page alike', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: "There are two bookmark visuals. One with an outline,
+   * one that is 50% opacity... Replace the former with the latter in all
+   * cases, remove the outline version completely." There never were two
+   * components — there was one mark with a gesso halo under it, and over a
+   * dark icon the halo was all that showed, so the reader met an outlined
+   * bookmark on a card with a picture and a filled one everywhere else.
+   *
+   * The halo is gone from the markup, which is what makes this checkable:
+   * every bookmark on the site is now one path, at half opacity until saved.
+   * Legibility over an image is a drop shadow — the ground pushed away from
+   * the shape rather than a second shape drawn around it.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  await expect(page.locator('.bm-halo')).toHaveCount(0);
+  const shapes = await page.locator('.bookmark-mark').evaluateAll((marks) =>
+    marks.map((m) => {
+      const paths = m.querySelectorAll('path');
+      const style = getComputedStyle(paths[0]);
+      return { paths: paths.length, opacity: style.opacity, fill: style.fill, stroke: style.stroke };
+    }),
+  );
+  expect(shapes.length).toBeGreaterThan(3);
+  // One path each, one fill, one opacity — no second rendering anywhere.
+  expect(new Set(shapes.map((s) => s.paths))).toEqual(new Set([1]));
+  expect(new Set(shapes.map((s) => s.opacity))).toEqual(new Set(['0.5']));
+  expect(new Set(shapes.map((s) => s.fill)).size).toBe(1);
+  expect(new Set(shapes.map((s) => s.stroke)).size).toBe(1);
+  // The shadow is only where a picture is under it; on the page's own ground
+  // the mark has all the contrast it needs and a shadow would be furniture.
+  const filters = await page.evaluate(() => {
+    const on = (sel) => {
+      const el = document.querySelector(sel);
+      return el ? getComputedStyle(el.querySelector('.bookmark-mark')).filter : null;
+    };
+    return {
+      overImage: on('.index-card:has(.index-media img) '),
+      onGround: on('.register-cards .reg-card:has(.index-media.is-empty)'),
+    };
+  });
+  expect(filters.onGround).toBe('none');
+
+  // And it fills to full strength when saved — the second of the two states,
+  // which is all the states there are.
+  const mark = page.locator('.register-cards .bookmark').first();
+  await mark.click();
+  await expect
+    .poll(() => mark.locator('.bm-shape').evaluate((p) => getComputedStyle(p).opacity))
+    .toBe('1');
 });
 
 /* ---- the coast, and the hymns' own tongue (Amendment 37) ---------------- */

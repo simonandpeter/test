@@ -735,9 +735,43 @@
 /* Also commemorated reads as one company, not a ruled ledger (author,
    2026-08-24): the day panel's register drops the line between saints. The
    saint page's related list and the shelves keep theirs — the instruction
-   named this section. */
+   named this section.
+
+   *Superseded the same evening for the day panel* (author: "display the
+   saint card row layout instead of the text only"): those rows are cards
+   now, with their own panel edge, so there is no line to drop. The rule
+   stays for any other register that lands inside a day panel. */
 .day-panel .register li {
   border-bottom: 0;
+}
+
+/* ---- Also commemorated, as cards (author, 2026-08-24) ------------------ */
+
+/* index.css dresses the row — thumbnail, name line, dates, bookmark — and
+   these rules only place the list: a column of cards, like the shelves, not
+   the flex line the text register was. The base .register li rules are undone
+   rather than avoided, because the card is the Index's and must not inherit a
+   calendar register's padding or baseline alignment. */
+.register-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.register-cards li.reg-card {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
+  border-bottom: 0;
+  position: relative;
+}
+
+/* The church's title for the day — "Venerable, the Great" — is what these
+   rows carry that no other card does, so it keeps the register's italic
+   serif and sits between the name and the dates. */
+.register-cards .reg-title {
+  display: block;
+  margin-block: 2px;
 }
 
 

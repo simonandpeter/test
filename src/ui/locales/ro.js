@@ -204,6 +204,7 @@ export const ro = {
     saved: 'Salvate',
     resume: 'Reia',
     remove: 'Scoate de pe acest raft',
+    removeNamed: 'Scoate pe {name} din „Continuă lectura”',
   },
 
   map: {

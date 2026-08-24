@@ -143,16 +143,17 @@ button:hover {
   line-height: 1;
 }
 
-/* The bookmark's two states: filled at half strength when not saved, full
-   strength when it is, each over a gesso halo so the mark keeps an edge on
-   gold ground and dark ground alike. Never gold, never red — Save is chrome. */
-.bookmark-mark .bm-halo {
-  fill: none;
-  stroke: var(--gesso);
-  stroke-width: 4;
-  stroke-linejoin: round;
-}
+/* The bookmark's two states, and there are only two (author, 2026-08-24):
+   filled at half strength when not saved, full strength when it is. Never
+   gold, never red — Save is chrome.
 
+   A gesso halo rode under the shape until then, to keep an edge on gold and
+   dark ground. It cost the site its single rendering: over a dark icon the
+   halo was the only part that showed, so the mark read as an outline there
+   and as a filled silhouette everywhere else — two bookmarks, which is what
+   the instruction removed. Legibility over an image is now the drop shadow
+   below: a shadow is the ground's own darkness pushed away from the shape,
+   not a second shape. */
 .bookmark-mark .bm-shape {
   fill: var(--ink);
   stroke: var(--ink);
@@ -163,6 +164,16 @@ button:hover {
 
 .bookmark.is-saved .bookmark-mark .bm-shape {
   opacity: 1;
+}
+
+/* Over an image the ink needs separating from what is behind it, and a
+   shadow does that without drawing anything: the same one mark, legible on a
+   gold icon and a dark one. Only where a picture is actually under it — on
+   the page's own ground the mark has all the contrast it needs, and a shadow
+   there would be furniture. */
+.index-card:has(.index-media:not(.is-empty)) > .bookmark .bookmark-mark,
+.hero-figure > .bookmark .bookmark-mark {
+  filter: drop-shadow(0 0 1.5px var(--gesso)) drop-shadow(0 1px 2px rgb(0 0 0 / 0.45));
 }
 
 /* ---- chrome ---------------------------------------------------------- */
@@ -176,15 +187,22 @@ button:hover {
 /* The theme control keeps the top right corner at every width. A wrapping flex
    row could not promise that — the widest thing on the line decides who gets
    pushed, and the control is the widest thing on it. So: a grid, where the
-   corner is a named place rather than whatever is left over. Below 560 px the
-   nav takes its own full-width row underneath, which is the collapse DESIGN.md
-   §5b asks for, and the control stays exactly where it was. */
+   corner is a named place rather than whatever is left over.
+
+   Narrow (author, 2026-08-24) the header is three rows: the site name
+   centred across the top, the two toggles under it at the right, and the nav
+   on the last line with the calendar control at its right end — "in line
+   with Daily, All Saints, Map and About, under the language and display mode
+   toggles". The name was on the first row's left with the controls beside it
+   until then, which left it crowded and the calendar control's long label
+   («Румынская») fighting the toggles for the same line. */
 header.chrome {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:
-    'name theme'
-    'nav nav';
+    'name name'
+    'theme theme'
+    'nav cal';
   align-items: center;
   column-gap: var(--space-6);
   row-gap: var(--space-2);
@@ -197,8 +215,8 @@ header.chrome {
 
 @media (min-width: 560px) {
   header.chrome {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: 'name nav theme';
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: 'name nav cal theme';
   }
 }
 
@@ -206,19 +224,36 @@ header.chrome .site-name {
   grid-area: name;
 }
 
+/* Centred across the top on a narrow screen, and back on the left the moment
+   the header is one line again. */
+@media (max-width: 559.98px) {
+  header.chrome .site-name {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
 header.chrome .site-nav {
   grid-area: nav;
 }
 
-/* The corner holds two controls side by side (author, 2026-08-22): Select
-   Tradition, a text button, and the theme toggle, an icon. Today's date and
-   the three-label theme button stood here until then. */
+/* The corner holds the language control and the theme toggle side by side.
+   The calendar control stood here too until 2026-08-24, when it took the
+   nav's line on a narrow screen; wide, the two boxes sit next to each other
+   and the row reads exactly as it did. */
 header.chrome .chrome-corner {
   grid-area: theme;
   justify-self: end;
   display: flex;
   align-items: center;
   gap: var(--space-2);
+}
+
+header.chrome .chrome-calendar {
+  grid-area: cal;
+  justify-self: end;
+  display: flex;
+  align-items: center;
 }
 
 /* The calendar control (author, 2026-08-22): names the church the site reads

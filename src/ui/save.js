@@ -5,10 +5,17 @@
  * saved mark, without a reload. That is what subscribing to the store buys,
  * and it is the reason this is a component rather than separate handlers.
  *
- * One rendering: the **bookmark**, a frameless silhouette, outlined when not
- * saved and filled when saved. `aria-pressed` carries the state, the
+ * One rendering, and since 2026-08-24 that is meant strictly: the
+ * **bookmark**, a frameless ink silhouette at half strength when not saved
+ * and full strength when it is. `aria-pressed` carries the state, the
  * accessible name says which state it is in, and nothing about it is red or
  * gold — Save is chrome, and chrome stays quiet (DESIGN.md §2, §5).
+ *
+ * The gesso halo that used to ride under the shape went with the author's
+ * instruction that same day: on a dark icon it read as a light *outline*
+ * around a hollow mark, so the site had two bookmarks — an outlined one over
+ * images and a filled one everywhere else — where it had always claimed to
+ * have one. See DESIGN.md for what the halo was defending.
  *
  * Painting re-queries the root each time rather than keeping a list, because
  * the Index mounts and unmounts cards on every scroll frame: a list taken at
@@ -19,13 +26,11 @@ import * as store from '../lib/store.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { STRINGS, fill } from './strings.js';
 
-/* One shape, drawn twice: a wide gesso halo under an ink outline, so the mark
-   keeps an edge on gold ground and dark ground alike (an icon is both). The
-   saved state fills the upper path; base.css holds the two rules. */
+/* One shape, drawn once (author, 2026-08-24). base.css holds the two states. */
 const SHAPE = 'M4 2h12v19.5l-6-4.2-6 4.2z';
 const BOOKMARK =
   `<svg class="bookmark-mark" viewBox="0 0 20 24" width="20" height="24" aria-hidden="true" focusable="false">` +
-  `<path class="bm-halo" d="${SHAPE}"/><path class="bm-shape" d="${SHAPE}"/></svg>`;
+  `<path class="bm-shape" d="${SHAPE}"/></svg>`;
 
 /**
  * The bookmark carries the saint's name in its accessible name: on the Index

@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-24 (Amendment 37)
+## State as of 2026-08-24 (Amendment 38)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,19 +75,18 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 139 unit tests (`npm test`) — pure logic, no DOM.
-- 256 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-24, the sitting of Amendments 34–37), not carried
+- 264 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-24, the sitting of Amendments 34–38), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
-- **Amendment 34 was committed and pushed by the author mid-sitting**
-  (`7b7b10d`, 2026-08-24 20:58 — the parallel-session pattern this file warns
-  about, caught by fetching before committing rather than by luck).
-  Amendments 35–36 (`1df505b`) were pushed the same way while 37 was being
-  built. **Amendment 37 is committed on top but not pushed** — the agent
-  session had no credentials, which is the usual state (see "Pushing happens
-  outside this session" below). None of that is evidence that CI is green:
-  this environment has no `gh` CLI to check the Actions run itself, so
-  eyeball it on GitHub before building on top.
+- **Amendments 34–37 are pushed.** The author pushed 34 (`7b7b10d`) and then
+  35–36 (`1df505b`) *mid-sitting* — the parallel-session pattern this file
+  warns about, caught both times by fetching before committing rather than by
+  luck — and 37 (`a2c56fa`) followed. **Amendment 38 is committed on top and
+  not pushed**: the agent session had no credentials, which is the usual
+  state (see "Pushing happens outside this session" below). None of that is
+  evidence that CI is green: this environment has no `gh` CLI to check the
+  Actions run itself, so eyeball it on GitHub before building on top.
 
 **Corpus as of 2026-08-24: 708 saints**, every one with a life and four
 attestation rows; 430 hymns; readings/fasting for 23 August – 19 September in
@@ -162,6 +161,22 @@ day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
   the Hymns heading that the hymns stay in the church's own tongue on purpose
   — the corpus holds no English hymn texts, by decision, and the line shows
   exactly when the site's language is not the hymns' language.
+
+- **Amendment 38, nine refinements in one list:** the "A" key beside S; the
+  Daily heading in the abbreviated month ("28 Aug 2026"); centuries as
+  "3rd C."; **"Also called" removed** from the saint page (which reverses
+  DESIGN.md's script-coverage passage — the multi-script name forms are now
+  shown nowhere, recorded in place, corpus untouched); **Random as the Index's
+  default order**, reversing the same morning's Earliest default with a fresh
+  seed per visit; Continue reading cleared by **swiping a row across** with
+  its × gone and a focus-revealed button keeping the keyboard's way in; Also
+  commemorated as a column of the Index's own **row cards**; the **narrow
+  header** rearranged into three rows (name centred on top, toggles under it,
+  calendar control on the nav's line); and **one bookmark drawing** at last —
+  the gesso halo is gone, a drop shadow carries legibility over a picture.
+  Five pre-existing test defects were found and fixed on the way; see the
+  amendment for the `leaders()` helper and why DOM order stopped being screen
+  order.
 
 **Pushing happens outside this session** unless your own session has been
 given credentials — check before assuming otherwise. Agent sessions
