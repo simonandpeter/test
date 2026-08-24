@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-24 (Amendment 38)
+## State as of 2026-08-25 (Amendment 39)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,8 +74,8 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 139 unit tests (`npm test`) — pure logic, no DOM.
-- 264 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 141 unit tests (`npm test`) — pure logic, no DOM.
+- 280 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-24, the sitting of Amendments 34–38), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
@@ -91,7 +91,7 @@ them.
 - **Amendments 34–37 are pushed.** The author pushed 34 (`7b7b10d`) and then
   35–36 (`1df505b`) *mid-sitting* — the parallel-session pattern this file
   warns about, caught both times by fetching before committing rather than by
-  luck — and 37 (`a2c56fa`) followed. **Amendment 38 is committed on top and
+  luck — and 37 (`a2c56fa`) followed. **Amendments 38 and 39 are committed on top and
   not pushed**: the agent session had no credentials, which is the usual
   state (see "Pushing happens outside this session" below). None of that is
   evidence that CI is green: this environment has no `gh` CLI to check the
@@ -366,6 +366,34 @@ up cold; the two the author has to decide are marked.
   calendar at oca.org, citable saint by saint the way Amendment 31's three
   weeks were. Corpus work on the author's commission — the hymns note under
   the heading is the shipped answer until then.
+
+- **The saints' names in each language — needs the author, and it is
+  sourcing rather than translation.** Asked for on 2026-08-25 ("St Titus the
+  Apostle should be Sf Apostol Tit") and delivered by half: the *honorific*
+  follows the language in all five (St. / Sf. / Св. / Άγ. / Св.), the 708
+  names do not. There is no source in this repository that gives them in four
+  languages and inventing them is Amendment 2's forbidden content, so the
+  page currently reads «Св. Moses the Prophet» in Serbian — an honest hybrid,
+  pinned by a test that says so. The affordable shape is the one every corpus
+  decision has taken: each church's synaxarion already prints its own saints'
+  names in its own language at the very URLs these entries were read from, so
+  this is a transcription pass over the corpus, one language at a time, on
+  the author's commission. Worth knowing before it is scoped: the honorific
+  declines for a woman in Greek and Slavonic and 68 of the corpus's saints
+  are women, which is why the *abbreviated* forms were chosen — they are the
+  ones that dodge the grammar. Full reasoning in SESSIONS.md Amendment 39.
+
+- **eBiblia.ro has no linkable passage URL** (Amendment 39). The author asked
+  for the Romanian readings to open there; its reader is a JavaScript
+  application whose own navigation is `javascript:app.…` calls, so Romanian
+  opens Bible Gateway's Cornilescu instead, which opens the passage. One line
+  in `lib/bible.js` changes it if eBiblia ever exposes one.
+
+- **Eutychius, Bishop of Rome 275–283, is not in the corpus** (Amendment 39).
+  The five Eutychius/Eutychian entries are other men. Adding him is an
+  ordinary sourcing task — a synaxarion entry, a life, attestations — not a
+  display fix; the display half of that report *was* fixed, and the calendars'
+  own titles now print on the info line.
 
 - **The lives, hymns-labels and data displays stay English by decision**
   (Amendments 2 and 36) — "5th century", the register's quoted lines, the

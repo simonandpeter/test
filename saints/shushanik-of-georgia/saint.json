@@ -68,5 +68,13 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 475,
+      "latest": 475,
+      "display": "475",
+      "basis": "attested"
+    }
+  }
 }

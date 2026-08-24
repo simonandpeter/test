@@ -58,7 +58,10 @@ export const ro = {
     },
     readings: {
       heading: 'Citiri',
-      source: 'Așa cum tipărește {source}. Legăturile deschid Biblia (NKJV) la Bible Gateway.',
+      source: 'După cum tipărește {source}. Legăturile deschid {bible}.',
+      bible: 'traducerea Cornilescu la Bible Gateway',
+      epistle: 'Apostol',
+      gospel: 'Evanghelie',
     },
     hymns: {
       heading: 'Cântări',
@@ -151,6 +154,13 @@ export const ro = {
       latest: 'Cei mai târzii întâi',
       random: 'La întâmplare',
     },
+  },
+
+  contact: {
+    heading: 'Contact',
+    lede: 'Îndreptări, un sfânt care lipsește, o sursă care spune altfel — toate sunt binevenite.',
+    open: 'Deschide o sesizare la proiect',
+    note: 'Sesizările fac parte din depozitul public din care e construit acest site, așa că ce scrieți acolo poate fi citit de oricine. Vă rugăm să nu includeți nimic ce n-ați pune pe o pagină a lui.',
   },
 
   saint: {

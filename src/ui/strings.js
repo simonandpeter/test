@@ -63,6 +63,45 @@ export const STRINGS = {
     openSaint: 'Read about {name}',
     // Under the date (author, 2026-08-22): where the day stands in the
     // paschal cycle, the tone, and whether it is a fast — lib/liturgy.js.
+    /**
+     * The fast, explained when the reader asks (author, 2026-08-25: a modal on
+     * the fast label, hinted by an (i), describing "exactly what is allowed on
+     * the fast, e.g. fish, oils, etc.").
+     *
+     * What it says and what it refuses to say are both deliberate.
+     * `lib/liturgy.js` states *whether* a day is a fast and *which* fast; it
+     * does not compute the day's allowance, because that is the typikon's and
+     * differs between jurisdictions keeping the very same fast — and a site
+     * that invented one would be handing out a ruling nobody gave it. So the
+     * modal gives three things: the day's own kind in words; the *source's own
+     * note* for the day where the calendar printed one, quoted and cited as
+     * everything else in this corpus is; and a glossary of the terms those
+     * sources use, which describes what the words mean rather than what the
+     * reader must do. The last line says whose the answer actually is.
+     */
+    fastModal: {
+      open: 'What this fast allows',
+      hint: 'What this fast allows',
+      heading: 'What this fast allows',
+      kinds: {
+        fast: 'A fast day. Meat, dairy and eggs are set aside; how far beyond that the day goes is what the levels below name.',
+        fish: 'A fast day on which fish is permitted — a feast keeping its own honour inside a fast.',
+        'fast-free': 'Not a fast. Nothing is set aside, including on a Wednesday or Friday.',
+      },
+      sourceHeading: 'What the calendar printed for this day',
+      sourceNote: 'As printed by {source}.',
+      levelsHeading: 'The words the calendars use',
+      levels: [
+        '<b>Xerophagy</b> — uncooked food, without oil or wine. The strictest of the ordinary days.',
+        '<b>Cooked without oil</b> — food from the fire, still without oil or wine.',
+        '<b>Oil and wine permitted</b> — the usual relaxation on a feast or a Saturday or Sunday within a fast.',
+        '<b>Fish permitted</b> — kept for the greater feasts inside a fast.',
+      ],
+      whose:
+        'Which of these a given day holds is the typikon’s to say, and jurisdictions keeping the same fast differ. This page states which fast the day falls in and prints what the church’s own calendar printed; your own church gives the rule.',
+      close: 'Close',
+    },
+
     liturgy: {
       tone: 'Tone {tone}',
       fast: 'Fast — {reason}',
@@ -75,7 +114,17 @@ export const STRINGS = {
     // at Bible Gateway for now.
     readings: {
       heading: 'Readings',
-      source: 'As printed by {source}. Links open the New King James Version at Bible Gateway.',
+      // Which Bible a link opens follows the reader's language (author,
+      // 2026-08-25); lib/bible.js holds the four and says how each was
+      // settled. The sentence names the one this language actually opens.
+      source: 'As printed by {source}. Links open {bible}.',
+      bible: 'the New King James Version at Bible Gateway',
+      // The two labels the lectionaries use. The data carries each church's
+      // own — "Апостол", "Evanghelie" — and often a qualifier with it
+      // ("Epistle (Прор)"); the base is translated here and the qualifier is
+      // kept exactly as the calendar printed it.
+      epistle: 'Epistle',
+      gospel: 'Gospel',
     },
     // The hymns of the day's saint or feast, in the chosen church's language,
     // copied whole from the cited source (author, 2026-08-22).
@@ -217,6 +266,20 @@ export const STRINGS = {
       // again reshuffles.
       random: 'Random',
     },
+  },
+
+  contact: {
+    heading: 'Contact',
+    // Through the project's issue tracker, not an inbox (author, 2026-08-25:
+    // "or even better if they can be stored in the github repo by some
+    // built-in affordance so my name doesn't get too involved"). GitHub
+    // issues are that affordance: they land in the repository this site is
+    // built from, they need no server, and no address of the author's appears
+    // on any page. The trade is that an issue is public, which the reader is
+    // told before they open one rather than after.
+    lede: 'Corrections, a saint who is missing, a source that says otherwise — all of it is welcome.',
+    open: 'Open an issue on the project',
+    note: 'Issues are part of the public repository this site is built from, so what you write there can be read by anyone. Please leave out anything you would not put on a page of it.',
   },
 
   saint: {

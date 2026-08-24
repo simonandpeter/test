@@ -697,6 +697,29 @@
   z-index: 1;
 }
 
+/* The opening of the hero's life (author, 2026-08-25), in the column the
+   name and dates leave empty beside a square icon. Wide screens only: below
+   760 px the hero stacks and there is no spare column — the life is a short
+   scroll away under the register there, and a paragraph repeated above it
+   would push the day's other saints off the first screen. Three lines,
+   clamped, because this is a way in rather than the life itself. */
+.hero-lede {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .hero.has-media .hero-lede {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    overflow: hidden;
+    margin: var(--space-3) 0 0;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+}
+
 .hero-media {
   display: block;
   width: 100%;
@@ -1035,4 +1058,85 @@
   max-width: 65ch;
   line-height: 1.55;
   margin-bottom: var(--space-1);
+}
+
+/* ---- the fast, and what it allows (author, 2026-08-25) ------------------ */
+
+/* The fast reads as it always did — its kind in its own colour, inside the
+   liturgy line — but it is a button now, so it must not take a button's
+   frame. The (i) is the whole of the affordance: small, in the same ink, and
+   aria-hidden because the button already says in words that it opens. */
+.fast {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: inline;
+}
+
+.fast-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  margin-inline-start: 4px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-family: var(--font-utility);
+  font-size: 9px;
+  font-style: italic;
+  line-height: 1;
+  vertical-align: 2px;
+  opacity: 0.75;
+}
+
+.fast:hover .fast-info,
+.fast:focus-visible .fast-info {
+  opacity: 1;
+}
+
+.fast-modal {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  background: var(--gesso);
+  color: var(--ink);
+  padding: 0;
+  max-width: min(52ch, calc(100vw - 2 * var(--space-4)));
+}
+
+.fast-modal::backdrop {
+  background: var(--ink);
+  opacity: 0.35;
+}
+
+.fast-modal-inner {
+  padding: var(--space-4) var(--space-4) var(--space-6);
+}
+
+.fast-modal-sub {
+  margin: var(--space-4) 0 var(--space-1);
+  color: var(--ink-soft);
+}
+
+/* The source's own words, quoted rather than translated — as every other
+   quotation in this corpus is. */
+.fast-note {
+  margin: 0;
+  font-style: italic;
+}
+
+.fast-levels {
+  margin: 0;
+  padding-inline-start: var(--space-4);
+}
+
+.fast-levels li {
+  margin-bottom: var(--space-1);
+}
+
+.fast-modal-close {
+  margin-top: var(--space-4);
 }

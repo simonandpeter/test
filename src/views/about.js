@@ -4,6 +4,17 @@ export const title = () => STRINGS.about.title;
 
 const P = STRINGS.about.privacy;
 
+/*
+ * Contact goes to the repository's issue tracker (author, 2026-08-25), which
+ * is the "built-in affordance" that keeps a reader's message in the project
+ * rather than in anyone's inbox: no address is printed, no form is posted
+ * anywhere, and a static site needs no server to receive it. The label is
+ * prefilled so an issue arrives already sorted.
+ */
+const ISSUES = 'https://github.com/simonandpeter/test/issues/new?labels=contact';
+
+const C = STRINGS.contact;
+
 const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li>`).join('')}</ul>`;
 
 /**
@@ -35,6 +46,13 @@ export function render(el) {
 
       <p>${P.clearing}</p>
       <p class="utility">${P.hosting}</p>
+    </section>
+
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">${C.heading}</h2>
+      <p>${C.lede}</p>
+      <p><a href="${ISSUES}" rel="noopener noreferrer">${C.open}</a></p>
+      <p class="utility">${C.note}</p>
     </section>
   `;
 }

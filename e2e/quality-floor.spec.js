@@ -128,7 +128,7 @@ test('reduced motion removes animation rather than shortening it', async ({ brow
 test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // One calendar at a time (author, 2026-08-22; one church of three): the
@@ -142,7 +142,7 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
   await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
   // Only the civil date is printed (author, 2026-08-24): the line that gave
   // the day in the church's own reckoning went with the "Change calendar"
   // control under the strip, because two dates for one day read as confusion
@@ -203,7 +203,7 @@ test('the hero image box is a square, cropped from the centre and the top', asyn
 test('a saint opens with its own names, citations and life', async ({ page }) => {
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
   // The "Also called" block — the multi-script name forms (Ἀντώνιος,
   // Ⲁⲛⲧⲱⲛⲓⲟⲥ) that used to stand here — was removed by the author,
   // 2026-08-24, reversing the "attest, never adjudicate" passage in
@@ -275,7 +275,7 @@ test('a place keeps the note that says how far it is really fixed', async ({ pag
 
 test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
   await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('St Christopher');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Christopher');
   await expect(page.locator('.saint-media')).toHaveCount(0);
   // Removed from the General Roman Calendar in 1969 and still venerated: the
   // page must not turn that into a refusal.
@@ -533,7 +533,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
   expect(afterHover).toBe(1);
 
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
   // The click reuses what the hover fetched rather than asking again.
   expect(fetched.length).toBe(afterHover);
 });
@@ -557,7 +557,7 @@ test('the shared element is named once, on both sides of the navigation', async 
   expect(new Set(onCalendar).size).toBe(onCalendar.length);
 
   await page.locator('.hero-name a').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
   const onDetail = await names();
   expect(onDetail).toContain('s-anthony-the-great-name');
   expect(new Set(onDetail).size).toBe(onDetail.length);
@@ -653,16 +653,17 @@ test('Overlaps and Entirely within are different questions, and both are offered
   await page.locator('[data-from]').fill('240');
   await page.locator('[data-to]').fill('460');
 
-  // A hundred and fifty-eight lives touch 240–460 and a hundred and forty-six
-  // sit inside it (the counts of the 708-saint corpus of Amendment 31,
-  // recomputed with .tmp/counts2.mjs): the Roman martyrs of 258, the
-  // Nicomedians of 305 and the martyrs of the Great Persecution are inside;
-  // Paul of Thebes (born 220), the third- and fourth-century bishops dated
-  // only to their century and Moses the Hungarian with his open birth bound
-  // overlap it without being contained.
-  await expect(page.locator('[data-count]')).toHaveText('158');
+  // A hundred and sixty lives touch 240–460 and a hundred and forty-eight sit
+  // inside it: the Roman martyrs of 258, the Nicomedians of 305 and the
+  // martyrs of the Great Persecution are inside; Paul of Thebes (born 220),
+  // the third- and fourth-century bishops dated only to their century and
+  // Moses the Hungarian with his open birth bound overlap it without being
+  // contained. Both counts rose by two on 2026-08-25, when nine saints whose
+  // *lives* stated a death year the data had never recorded were given it —
+  // Hosius of Córdoba (359) and Poemen the Great (450) fall in this range.
+  await expect(page.locator('[data-count]')).toHaveText('160');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('146');
+  await expect(page.locator('[data-count]')).toHaveText('148');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
@@ -680,7 +681,12 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // The calendars' saints often carry no dates — their pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  await expect(page.locator('.tray')).toContainText('239 undated');
+  // 230, not the 239 of the day before: nine of these saints had a death year
+  // stated in their own life text that the data had never recorded, and on
+  // 2026-08-25 they were given it (Titus the Apostle's 105 among them). The
+  // rest are undated because their sources say nothing, which is the finding
+  // this tray exists to keep visible.
+  await expect(page.locator('.tray')).toContainText('230 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -702,7 +708,7 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
   // Every name is drawn with "St" before it (author, 2026-08-24), so typing
   // back what the screen shows must find the saint: the honorific is dropped
   // from the query, because the index holds the bare name and terms AND.
-  await query.fill('St John Chrysostom');
+  await query.fill('St. John Chrysostom');
   await expect(page.locator('.index-card').first()).toContainText('John Chrysostom');
 });
 
@@ -831,7 +837,7 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await day('2026-06-28').click();
   await expect(page.locator('h1')).toHaveText(/28 Jun 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
-  await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
+  await expect(page.locator('.hero-name')).toHaveText('St. Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
@@ -2157,7 +2163,7 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
   await expect(page.locator('.hero .hero-actions')).toHaveCount(0);
 
   await media.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St Augustine of Hippo');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Augustine of Hippo');
 });
 
 /**
@@ -2680,7 +2686,7 @@ test('the × returns to the Daily page when the saint was opened from it, not to
   await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Daily');
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(new RegExp(`${POPULATED}$`));
-  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
 
   // Opened from All Saints instead, the × still returns there.
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -2901,7 +2907,12 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // calendar printed for the day (tests/liturgy.test.mjs has the comparison).
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  // The fast is a button since 2026-08-25 — it opens what the fast allows —
+  // so the line's text now carries the (i) and the announcement a screen
+  // reader is given. The visible words are unchanged, which is what this
+  // asserts, with the control's own role pinned beside it.
+  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   // The fast carries its kind, so the three states are told apart by colour
   // as well as by their wording (author, 2026-08-24).
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast');
@@ -2922,9 +2933,9 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-liturgy]')).toHaveText('13th week after Pentecost · Tone 3 · Fast — Friday');
+  await expect(page.locator('[data-liturgy]')).toContainText('13th week after Pentecost · Tone 3 · Fast — Friday');
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · No fast');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast-free');
 });
 
@@ -2956,7 +2967,7 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   // recorded with the day, before any saint's payload arrives.
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('St Kosmas of Aetolia');
+  await expect(page.locator('.hero-name')).toHaveText('St. Kosmas of Aetolia');
   await expect(page.locator('[data-hymns] .hymn')).toHaveCount(2);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'el');
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Κοσμᾶν τὸν ἰσαπόστολον');
@@ -2992,7 +3003,12 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(serbian.locator('.choice-calendar')).toHaveText('Julian calendar');
   await serbian.click();
   await expect(page.locator('#church-open')).toContainText('Serbian');
-  await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  // The fast is a button since 2026-08-25 — it opens what the fast allows —
+  // so the line's text now carries the (i) and the announcement a screen
+  // reader is given. The visible words are unchanged, which is what this
+  // asserts, with the control's own role pinned beside it.
+  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
   const links = page.locator('[data-readings] .readings a');
   await expect(links).toHaveCount(2);
@@ -3005,7 +3021,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
-  await expect(page.locator('[data-liturgy]')).toHaveText('13th week after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy]')).toContainText('13th week after Pentecost · Tone 3 · No fast');
 
   // The Russian week (Amendment 29 too): the 24th is its 11 August, Euplus
   // and the Caves fathers with Church Slavonic tropars from the Patriarchate's
@@ -3086,7 +3102,7 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(2);
 
   await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('St Eleutherius, Monk-martyr (1937)');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Eleutherius, Monk-martyr (1937)');
   await expect(page.locator('.life p').first()).toContainText('Eleutherius Pechennikov was born in 1870');
   await expect(page.locator('.fact-row', { hasText: 'Died' })).toContainText('1937');
   await expect(page.locator('.life em a[href*="azbyka.ru"]')).toHaveCount(1);
@@ -3131,7 +3147,7 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Acts 13:25-32');
   await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /days\.pravoslavie\.ru\/Days\/20260829\.html/);
-  await expect(page.locator('.hero-name')).toHaveText('St John the Baptist and Forerunner');
+  await expect(page.locator('.hero-name')).toHaveText('St. John the Baptist and Forerunner');
   await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго с похвалами');
 
   await openChooser(page);
@@ -3142,7 +3158,7 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Ephesians 1:7-17');
 
   await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('St Babylas, Bishop of Antioch');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Babylas, Bishop of Antioch');
   await expect(page.locator('.life p').first()).toContainText('this great and wonderful man');
   await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
   await expect(page.locator('.saint-media img')).toBeVisible();
@@ -3378,11 +3394,11 @@ test('latest runs the other way from earliest', async ({ page }) => {
   // this test's subject, so it chooses them explicitly — and reads the leader
   // off the screen, because a re-sort does not reorder the DOM.
   await page.selectOption('[data-sort]', 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
   await page.selectOption('[data-sort]', 'latest');
-  await expect.poll(() => leaders(page)).toBe('St Peter (Cheltsov), Archpriest, Confessor (1972)');
+  await expect.poll(() => leaders(page)).toBe('St. Peter (Cheltsov), Archpriest, Confessor (1972)');
   await page.selectOption('[data-sort]', 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
 });
 
 test('random deals an order, and holds it still under the reader', async ({ page }) => {
@@ -3402,7 +3418,7 @@ test('random deals an order, and holds it still under the reader', async ({ page
   // Random is the default now; stepping through Earliest first keeps this
   // test what it was — proof that choosing Random deals and then holds.
   await page.selectOption('[data-sort]', 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
   const earliest = await leaders(page);
 
   await page.selectOption('[data-sort]', 'random');
@@ -3519,15 +3535,25 @@ test('the Index speaks the chosen language, saints excepted', async ({ page }) =
   );
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await expect(page.locator('h1')).toHaveText('Сви светитељи');
-  // The names stay English in every language; pinned in a known order,
-  // because the Random default would hand this assertion a different first
-  // card each run. The leader is read off the screen: a re-sort repositions
-  // the cards without reordering the DOM.
+  // Pinned in a known order, because the Random default would hand this
+  // assertion a different first card each run. The leader is read off the
+  // screen: a re-sort repositions the cards without reordering the DOM.
   await page.selectOption('[data-sort]', 'earliest');
   await expect(page.locator('[data-sort] option:checked')).toHaveText('Најранији прво');
   await expect(page.locator('[data-set-aside]')).toContainText('Руска');
-  // The saint is still English, honorific included.
-  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  /*
+   * And here is exactly where the boundary now falls, which is worth being
+   * blunt about: **the honorific translates and the name does not.** The
+   * author asked on 2026-08-25 for the saints' names themselves to be
+   * Romanian in Romanian, Russian in Russian ("St Titus the Apostle should be
+   * Sf Apostol Tit"). The honorific is chrome and is a closed set of five
+   * words, so it moved; the 708 names are corpus, and there is no source in
+   * this repository that gives them in four languages. Inventing them would
+   * be Amendment 2's forbidden content, so what ships is the honest halfway
+   * house — «Св.» before an English name — and the rest is sourcing work
+   * recorded in HANDOFF's queue.
+   */
+  await expect.poll(() => leaders(page)).toBe('Св. Moses the Prophet and God-seer');
 });
 
 /* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */
@@ -3550,7 +3576,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(cards).toHaveCount(6);
 
   const first = cards.first();
-  await expect(first.locator('.index-name')).toHaveText('St Agapius of Gaza');
+  await expect(first.locator('.index-name')).toHaveText('St. Agapius of Gaza');
   await expect(first.locator('.index-dates')).toContainText('304–306');
   // Every row is a card: a media box even with no picture, so the column of
   // names stays a column, and its own Save.
@@ -3564,7 +3590,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await first.locator('.bookmark').click();
   await expect(first.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
   await first.locator('.index-name').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St Agapius of Gaza');
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Agapius of Gaza');
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 });
 
@@ -3619,6 +3645,174 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
   await expect
     .poll(() => mark.locator('.bm-shape').evaluate((p) => getComputedStyle(p).opacity))
     .toBe('1');
+});
+
+/* ---- the 2026-08-25 batch: the fast, the hymns, the lede, the Bibles ---- */
+
+test('the fast opens what it allows, quoting the calendar rather than ruling', async ({ page }) => {
+  /*
+   * Author, 2026-08-25: a modal on the fast label, hinted by an (i),
+   * describing "exactly what is allowed on the fast, e.g. fish, oils, etc."
+   *
+   * The boundary is the point of the test. `lib/liturgy.js` states *which*
+   * fast a day falls in and refuses to compute the day's allowance, because
+   * that is the typikon's and differs between jurisdictions keeping the very
+   * same fast. So the modal quotes the church's own calendar where it printed
+   * a note, explains the vocabulary those calendars use, and says whose the
+   * ruling is. A modal that answered for the reader would be this site
+   * handing out a ruling nobody gave it.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+  const fast = page.locator('[data-liturgy] .fast');
+  await expect(fast).toHaveAttribute('aria-haspopup', 'dialog');
+  // The (i) is the hint that it can be asked, and it is decoration: the
+  // button already says in words what it opens.
+  await expect(page.locator('[data-liturgy] .fast-info')).toHaveText('i');
+  await expect(page.locator('[data-liturgy] .fast-info')).toHaveAttribute('aria-hidden', 'true');
+  await expect(page.locator('dialog.fast-modal')).toHaveCount(0);
+
+  await fast.click();
+  const modal = page.locator('dialog.fast-modal');
+  await expect(modal).toBeVisible();
+  // The day's own kind, in words.
+  await expect(modal).toContainText('A fast day.');
+  // The calendar's own note, quoted untranslated and tagged for a screen
+  // reader, with the page it was read from cited.
+  await expect(modal.locator('.fast-note')).toHaveText('Успенский пост; разрешается пища с растительным маслом');
+  await expect(modal.locator('.fast-note')).toHaveAttribute('lang', 'ru');
+  await expect(modal).toContainText('days.pravoslavie.ru');
+  // The vocabulary, and whose the answer is.
+  await expect(modal.locator('.fast-levels li')).toHaveCount(4);
+  await expect(modal).toContainText('Fish permitted');
+  await expect(modal).toContainText('your own church gives the rule');
+
+  await page.keyboard.press('Escape');
+  await expect(page.locator('dialog.fast-modal')).toHaveCount(0);
+});
+
+test('a fast-free day says so, and quotes nothing it was not given', async ({ page }) => {
+  // The other side: a day with no fast still opens and still explains the
+  // vocabulary, and prints no "what the calendar printed" section at all,
+  // because for that day nobody printed one. A heading over an empty
+  // quotation would be the furniture DESIGN.md 5b refuses.
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  await page.locator('[data-liturgy] .fast').click();
+  const modal = page.locator('dialog.fast-modal');
+  await expect(modal).toContainText('Not a fast.');
+  await expect(modal.locator('.fast-note')).toHaveCount(0);
+  await expect(modal).not.toContainText('What the calendar printed for this day');
+  await expect(modal.locator('.fast-levels li')).toHaveCount(4);
+});
+
+test('a saint page carries the saint own hymns, the reader church first', async ({ page }) => {
+  /*
+   * Author, 2026-08-25: "on each Saint Profile page, add their hymns at the
+   * bottom." Adrian of Nicomedia has nine, from all four calendars - 50 of
+   * the 132 saints with hymns have them from more than one - so the church is
+   * named on each, which on the Daily page it never needs to be. The reader's
+   * own church leads, because that is the calendar the site is read in.
+   */
+  await ready(page, { church: 'greek' });
+  await page.goto('/saints/adrian-of-nicomedia', { waitUntil: 'networkidle' });
+  const hymns = page.locator('.saint-hymns .hymn');
+  await expect(hymns).toHaveCount(9);
+  await expect(hymns.first().locator('.hymn-kind')).toContainText('Greek');
+  // Untranslated, in the source's own tongue, tagged so a screen reader knows.
+  await expect(hymns.first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
+  // And a saint the corpus has no hymns for prints no heading over nothing.
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await expect(page.locator('.saint-hymns')).toHaveCount(0);
+});
+
+test('the day hero opens its life on a wide screen, and not on a narrow one', async ({ page }) => {
+  // Author, 2026-08-25: "because there is space on the left of the saint card
+  // under their name, add a preview of their Life section". The same first
+  // paragraph the Index's Detailed rows show, from the same helper, so the
+  // two can never disagree about where a life begins.
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  const lede = page.locator('[data-hero-lede]');
+  await expect(lede).toContainText('Gerasim, Pitirim and Jonah were bishops of Great Perm');
+  const shown = await lede.evaluate((el) => ({
+    display: getComputedStyle(el).display,
+    wide: innerWidth >= 760,
+  }));
+  // Wide it fills the column the name and dates leave empty; narrow the hero
+  // stacks and there is no spare column, so the box is not drawn at all.
+  expect(shown.display === 'none').toBe(!shown.wide);
+});
+
+test('a reading opens a Bible in the reader own language', async ({ browser }) => {
+  /*
+   * Author, 2026-08-25, naming a site per language. Three of the four were
+   * opened and read before being written down; the fourth was refused.
+   * eBiblia.ro, which the author asked for, is a JavaScript application whose
+   * own navigation is javascript:app.* calls and which exposes no addressable
+   * passage URL - so Romanian goes to Bible Gateway's Cornilescu, which opens
+   * the passage, and the refusal is recorded in lib/bible.js for the author
+   * to overrule.
+   *
+   * The reference itself is printed in the reader's language too - the book
+   * names are a closed set of sixteen - while the data keeps the English it
+   * was transcribed with, because a reference is a key as much as a text.
+   */
+  for (const [language, church, book, href] of [
+    ['ru', 'russian', '1 Коринфянам 15:1-11', /biblegateway\.com.*version=RUSV/],
+    ['ro', 'romanian', '1 Corinteni 15:1-11', /biblegateway\.com.*version=RMNN/],
+    ['el', 'greek', 'Φιλιππησίους 2:5-11', /greekbible\.com\/philippians\/2\//],
+    ['sr', 'serbian', '1. Коринћанима 15:1-11', /wordproject\.org\/bibles\/sr\/46\/15\.htm/],
+  ]) {
+    const ctx = await browser.newContext();
+    const page = await ctx.newPage();
+    await page.addInitScript(
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      { l: language, c: church },
+    );
+    await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+    const first = page.locator('.readings li').first();
+    await expect(first, language).toContainText(book);
+    expect(await first.locator('a').getAttribute('href'), language).toMatch(href);
+    await ctx.close();
+  }
+});
+
+test('the reading labels are the reader language, keeping the calendar own qualifier', async ({ browser }) => {
+  // The data carries each church's own label - "Epistle (Prophet)",
+  // "Apostol" - and it is the *kind* that translates: the bracketed qualifier
+  // names which commemoration the reading belongs to and is a quotation, so
+  // it is passed through exactly as the calendar printed it.
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await page.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ro' })),
+  );
+  await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+  await expect(page.locator('.readings .reading-label').first()).toHaveText('Apostol');
+  await expect(page.locator('.readings-source')).toContainText('Cornilescu');
+  await ctx.close();
+});
+
+test('About offers a way to write, and it goes to the repository', async ({ page }) => {
+  /*
+   * Author, 2026-08-25: a contact option, "or even better if they can be
+   * stored in the github repo by some built-in affordance so my name doesn't
+   * get too involved". Issues are that affordance: no address is printed, no
+   * form is posted anywhere, and a static site needs no server to receive
+   * one. The trade - that an issue is public - is told to the reader before
+   * they open one rather than after.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  const contact = page.locator('section.contact');
+  await expect(contact.locator('h2')).toHaveText('Contact');
+  const link = contact.locator('a');
+  await expect(link).toHaveAttribute('href', /github\.com\/.+\/issues\/new/);
+  await expect(contact).toContainText('can be read by anyone');
+  // No address of the author's anywhere on the page, which is the whole point.
+  expect(await page.content()).not.toContain('mailto:');
+  expect(await page.locator('body').textContent()).not.toMatch(/@[\w.-]+\.(com|org|ro)/);
 });
 
 /* ---- the coast, and the hymns' own tongue (Amendment 37) ---------------- */

@@ -66,6 +66,15 @@ build's — and until then the page's restraint is the whole of its statement.
 The discipline that gold carries a finding and nothing else is not repealed; it
 has nothing to carry.*
 
+*Reversed again by the author, 2026-08-25: "make the site icon gold colour
+orthodox cross."* The favicon is `--gold` in both themes. So gold is spent in
+exactly one place on this site, and that place is the site's own mark rather
+than a finding about veneration — the discipline below is therefore **not**
+literally true of the favicon, by instruction, and is true of every other
+surface. The reasoning of the 2026-08-24 correction is kept underneath
+because it is the argument the author overruled, and because if a signature
+element is ever chosen the question returns with it.*
+
 *Corrected (author, 2026-08-24): "spent nowhere" had one exception nobody had
 noticed, and it was the site's own mark. The favicon was a single gold cell —
 the badge's attested mark, put there when the badge was the signature element —
@@ -361,6 +370,13 @@ sits in a scrolling page and stealing a scroll to dismiss something the reader
 was only scrolling past is the one failure this gesture can commit; reduced
 motion keeps the dismissal and removes the travel.
 
+*Revised (author, 2026-08-25): the × returns **on a hovering pointer only**,
+to the right of the bookmark rather than above it. A mouse has the swipe too,
+but a visible control is the faster hand where there is a cursor to aim it;
+touch keeps the swipe alone. It is the same button in both worlds — always in
+the markup, named in full for a screen reader — and only a `(hover: hover) and
+(pointer: fine)` query lets it out of its clip.*
+
 **A gesture is never the only way to a thing**, which is this section's own
 rule about the peeks ("the peek is the swipe's affordance for anyone who
 cannot swipe") applied where the affordance had been removed by instruction.
@@ -424,9 +440,15 @@ month's column never had the fault: its cells take the grid's own classes.
 2.1:1 against gesso and the quality floor fails it on sight, which is the right
 answer: text a sighted reader might try to read has to clear 4.5:1 wherever it
 is legible at all. The ink stays at full strength and the dissolve happens over
-the outer half of the peek, where there is no longer a glyph to read. *For the
-week, moot since Amendment 35 (2026-08-24): the rail's edge days are ordinary
-buttons at full strength with no mask at all — the contrast problem the mask
+the outer half of the peek, where there is no longer a glyph to read. *Restored for the week (author, 2026-08-25): the rail's edges fade again, so a
+half-cut column reads as the grain continuing rather than as a clipped
+mistake, and the days sit 2 px apart instead of 4 so the edge day's own name
+is whole before the dissolve begins. The mask is still a mask and not an
+opacity, and it still dims no glyph a reader might try to read: it works on
+the outer 12 px, inside the peek inset. The month grid follows the same 2 px,
+because the two grains share their columns to the pixel.* *For the
+week, moot from Amendment 35 (2026-08-24) until then: the rail's edge days are
+ordinary buttons at full strength with no mask at all — the contrast problem the mask
 solved only existed because the edge was a decorated copy. The month's peeks
 keep the mask, and this paragraph keeps its force there and for anything else
 that fades text.* **Picking a date does not close the month**;
@@ -771,6 +793,14 @@ fit one line at all* — the translated nav ("Сегодня · Все свят�
 budget. Those languages wrap to a second row, which is legible and overflows
 nothing; making them fit would mean shortening nav labels or moving a control,
 both the author's call, not a build's.
+
+*Superseded again (author, 2026-08-25): narrow, the header is **one line of
+chrome and one row of pages** — the calendar control at the left, the site
+name between, the language and theme toggles at the right, and the four pages
+centred beneath. "Make sure they remain in one line across all screen sizes"
+is the requirement, and it holds to 320 px in all five languages: the name is
+the elastic part and gives up size, then its tail, before any control gives up
+its label. The arrangement below stood for one day.*
 
 *Superseded (author, 2026-08-24): narrow, the header is three rows rather
 than a wrapping one — the site name **centred across the top**, the language

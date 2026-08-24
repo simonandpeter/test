@@ -151,5 +151,13 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 450,
+      "latest": 450,
+      "display": "450",
+      "basis": "traditional"
+    }
+  }
 }

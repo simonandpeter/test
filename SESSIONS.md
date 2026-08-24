@@ -1897,6 +1897,114 @@ across the whole 780 px viewport left no such card. Order pinned for that
 test, and the search now says what went wrong instead of dying on an undefined
 click. Two full suites run back to back to shake out the rest; both clean.
 
+**39. Nineteen refinements, a date audit, and one instruction the corpus
+cannot obey** (author's instruction, 2026-08-25 — nineteen items in one list,
+delivered in two commits).
+
+**The chrome (eleven items).** The narrow header became one line of chrome —
+calendar control, name, language, theme — over a centred row of pages, holding
+to 320 px in all five languages; S stopped stepping a day back, leaving A and
+D; the day a reader leaves keeps no focus ring; "Entered eternal glory in
+1515" became **"Reposed 1515"**; dates gained capitals and lost the
+abbreviation dot; the count says **"122/708 saints venerated in the Romanian
+calendar"** instead of making the reader subtract; the facets became chips
+that fit one line where they used to wrap; the rail's edges fade and its days
+sit 2 px apart; the × returned to Continue reading on a hovering pointer; the
+site's name follows the language in the header and the veil; and the favicon
+went gold.
+
+*Four reversals, each marked where it sits.* The mobile header (the previous
+evening's arrangement, one day old); the gold favicon (Amendment 34's ink
+correction, which had itself corrected a §2 violation — so §2 now records that
+gold is spent on the site's mark **by instruction**, and nowhere else); the ×
+on the shelf (removed that same evening); and the rail's edge fade (Amendment
+35's "no mask for the week"). The fifth was the hymns note, added at Amendment
+37 and removed the next morning; the decision it announced still stands.
+
+**The features (five items).** The fast label opens a modal saying what the
+fast allows. The boundary there is the whole design: `lib/liturgy.js` states
+*which* fast a day falls in and refuses to compute the day's allowance,
+because that is the typikon's and jurisdictions keeping the same fast differ —
+so the modal quotes **the church's own calendar** where it printed a note
+(«Успенский пост; разрешается пища с растительным маслом», cited and
+untranslated), explains the vocabulary those calendars use, and says whose the
+ruling is. A modal that answered for the reader would be this site handing out
+a ruling nobody gave it.
+
+The saint page gained its own hymns, the reader's church first and each named
+by calendar where a saint's hymns span several — 50 of the 132 do. The Daily
+hero gained the opening of its life in the column the name and dates leave
+empty, on wide screens only. About gained **Contact**, which goes to the
+repository's issue tracker: no address printed, no form posted, nothing for a
+static site to receive, and the reader is told the issue is public before they
+open one. And the readings now print their book names in the reader's language
+and open a Bible in it.
+
+*Three of the four Bibles were opened and read before being written down.*
+greekbible.com takes `/{book}/{chapter}/`; wordproject.org/bibles/sr takes
+`/{n}/{chapter}.htm` with 40 for Matthew; Bible Gateway takes the version code
+(`RUSV`). The fourth was refused: **eBiblia.ro, which the author named, is a
+JavaScript application whose own navigation is `javascript:app.…` calls and
+which exposes no addressable passage URL.** Romanian therefore opens Bible
+Gateway's Cornilescu, which opens the passage; shipping a link to eBiblia's
+front page and leaving the reader to find the chapter would have been obeying
+the letter of the instruction and failing the reader. Recorded in
+`lib/bible.js` for the author to overrule in one line.
+
+**The corpus (two items, and the interesting one).** *St Titus said undated
+while his life said 105.* The audit found **nine** such saints — every one
+with a death year stated in their own cited life and never recorded in the
+data — and all nine now carry it: Titus (105), Sabina (c. 126), Irenaeus of
+Lyon (202), Hosius of Córdoba (359), Poemen the Great (450), Shushanik (475),
+Adrian of Ondrusov (1549), Arsenios (1550), Maria of Diveyevo (1931). This is
+transcription, not inference: the life *is* the cited source. A second pass
+looked for saints with a birth but no death whose life stated one and found
+none, so the audit is complete; 230 saints remain undated because their
+sources say nothing, which is the finding the undated tray exists to keep
+visible. The corpus counts moved with it — the 240–460 range gained two, the
+tray lost nine.
+
+*Eutychius as Bishop of Rome 275–283 is not a display bug.* The corpus holds
+five Eutychius/Eutychian entries and none of them is the Roman bishop; he is
+not in it at all. What the request is right about is the display, and that is
+fixed: the offices and epithets the calendars themselves give — "Hierarch,
+Archbishop of Constantinople", "Venerable, the Great, Father of monasticism" —
+were printed only inside the veneration register, one church at a time, and
+now join the info line under the name, deduplicated across the churches.
+
+**The instruction the corpus cannot obey.** The author asked for the saints'
+*names* in each language: "St Titus the Apostle should be Sf Apostol Tit". The
+honorific went — it is chrome, a closed set of five words, and all five take
+an abbreviation's stop, so the site now prints St. / Sf. / Св. / Άγ. / Св.
+following the language. The **names did not**, because there is no source in
+this repository that gives 708 names in four languages, and inventing them is
+exactly Amendment 2's forbidden content. What ships is the honest halfway
+house — «Св.» before an English name — pinned by a test that says so in as
+many words. The affordable shape is the one every corpus decision has taken:
+citation, not translation. Each church's synaxarion already prints its own
+saints' names in its own language at the URLs the entries were read from, so
+this is sourcing work on the author's commission, and it is in HANDOFF's
+queue.
+
+The abbreviated honorifics are also the ones that dodge a grammar this corpus
+cannot answer: Greek and Slavonic decline the honorific for a woman, and 68 of
+these saints are women. A spelled-out form would need a rule per language
+rather than a word.
+
+*One departure said plainly:* the dates' capitals. Lower-case weekday and
+month names are **correct** orthography in Romanian, Russian and Serbian, and
+"aug." wants its dot — it marks the truncation. The author asked for capitals
+and no dot, and that is what is printed; only the weekday and month parts are
+touched, so Russian keeps the «г.» whose dot belongs to a different word.
+
+**Verification.** 141 unit (two new: the honorific in five languages, and a
+name already carrying any of them), 280 browser (266 + 14). Nine backouts run
+and watched fail: the S key, the pointer blur, the name's `justify-self`, the
+desktop ×, the header gaps, the modal's quoted note, the per-language Bibles,
+the saint page's hymns, and the hero's lede. A tenth was run and **passed** —
+`minmax(0, 1fr)` on the name's track — and is documented as the guard it is
+rather than left looking covered.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

@@ -27,6 +27,7 @@ import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
+import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { formatDate } from '../lib/i18n.js';
@@ -121,8 +122,33 @@ function shell(card, backLabel) {
       <p class="image-credit utility" data-credit></p>`
     : '';
 
+  /*
+   * The info line: what a saint *was*. Rank from `types`, then the offices
+   * and epithets the calendars themselves give — "Hierarch, Archbishop of
+   * Constantinople", "Venerable, the Great" — which until 2026-08-25 were
+   * printed only inside the veneration register, one church at a time, so a
+   * reader glancing at the head of the page never met them (author: "this
+   * sort of stuff should be listed in the small info session for each
+   * saint").
+   *
+   * Deduplicated across the churches and against `types`, because three
+   * calendars calling the same man a hierarch should say it once. Only 20
+   * attestations in the corpus carry titles at all, so for most saints this
+   * line is exactly what it was.
+   */
+  const seen = new Set((card.types ?? []).map((t) => t.toLowerCase()));
+  const titles = [];
+  for (const att of card.attestations ?? []) {
+    for (const title of att.titles ?? []) {
+      const key = title.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      titles.push(title);
+    }
+  }
   const facts = [
     card.types?.length ? card.types.join(', ') : null,
+    titles.length ? titles.join(', ') : null,
     STRINGS.saint.sexLabel[card.sex] ?? null,
   ]
     .filter(Boolean)
@@ -157,6 +183,7 @@ function shell(card, backLabel) {
       <h2 class="register-heading">${STRINGS.saint.life}</h2>
       <div class="life" data-life>${skeletonLines(6)}</div>
       <div data-sources></div>
+      <div data-hymns-box></div>
       <div data-related></div>
     </div>
   </article>`;
@@ -227,6 +254,10 @@ function fillIn(el, payload, { data, router }) {
   }
 
   el.querySelector('[data-sources]').innerHTML = sources(saint);
+  // The saint's own hymns, at the foot of the page (author, 2026-08-25).
+  // They arrive with the rest of the fetched payload rather than in the
+  // manifest, which is why they are filled here and not in the shell.
+  el.querySelector('[data-hymns-box]').innerHTML = saintHymnsSection(saint.hymns, currentChurch());
   wireSources(el, saint.slug);
 
   el.querySelector('[data-related]').innerHTML = related(saint, data, router);

@@ -58,5 +58,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested"
+    }
   }
 }

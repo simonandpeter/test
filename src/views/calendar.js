@@ -23,17 +23,19 @@ import {
 } from '../lib/calendar-page.js';
 import { loadDetail, observePrefetch } from '../lib/detail.js';
 import { churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
-import { escapeHtml as esc } from '../lib/markdown.js';
+import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
 import { withHonorific } from '../lib/honorific.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
+import { hymnMarkup } from '../ui/hymns.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
-import { formatDate, translateReason } from '../lib/i18n.js';
-import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
+import { currentLanguage, formatDate, translateReason } from '../lib/i18n.js';
+import { recordedDay } from '../data/liturgical-days.js';
+import { bibleUrl, refInLanguage } from '../lib/bible.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.calendar.title;
@@ -220,6 +222,7 @@ export function render(el, { data, params, router }) {
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
     wireRail(el.querySelector('.week-strip')),
     wireDayKeys(),
+    wireFastModal(el),
   );
 
   paintGate();
@@ -351,7 +354,15 @@ function paintLiturgy() {
     : f.kind === 'fish' ? fill(L.fish, { reason })
     : f.reason ? fill(L.freeBecause, { reason })
     : L.free;
-  const fastHtml = `<span class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}">${esc(fastText)}</span>`;
+  // The fast is a control now (author, 2026-08-25): it opens a modal saying
+  // what the fast allows, and carries an (i) so the reader knows it can be
+  // asked. A button rather than a span, so it is reachable by keyboard and
+  // announced as something that does a thing.
+  const fastHtml =
+    `<button type="button" class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}" data-fast-open ` +
+    `aria-haspopup="dialog" title="${esc(STRINGS.calendar.fastModal.hint)}">${esc(fastText)}` +
+    `<span class="fast-info" aria-hidden="true">i</span>` +
+    `<span class="sr-only"> — ${esc(STRINGS.calendar.fastModal.open)}</span></button>`;
   const plain = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null].filter(Boolean).map(esc);
   box.innerHTML = [...plain, fastHtml].join(' · ');
 }
@@ -362,32 +373,45 @@ function paintLiturgy() {
  * the page it was read from named. Nothing is printed for a day nobody has
  * recorded — an absence is not a claim.
  */
+/**
+ * A reading's label in the reader's language, keeping whatever the calendar
+ * put in brackets after it. The data's labels are the church's own — "Epistle
+ * (Прор)", "Απόστολος", "Јеванђеље" — and it is the *kind* that translates:
+ * the qualifier names which commemoration the reading belongs to and is a
+ * quotation, so it is passed through exactly as printed.
+ */
+function readingLabel(label) {
+  const R = STRINGS.calendar.readings;
+  const text = String(label ?? '');
+  const qualifier = text.match(/\s*(\([^)]*\))\s*$/)?.[1] ?? '';
+  const base = qualifier ? text.slice(0, text.length - qualifier.length).trim() : text;
+  const kind =
+    /^(epistle|apostol|απόστολος|апостол)$/i.test(base) ? R.epistle
+    : /^(gospel|evanghelie|ευαγγέλιο|јеванђеље)$/i.test(base) ? R.gospel
+    : base;
+  return qualifier ? `${kind} ${qualifier}` : kind;
+}
+
 function readingsMarkup(iso, churchId) {
   const rec = recordedDay(iso, churchId);
   if (!rec?.readings?.length) return '';
   const R = STRINGS.calendar.readings;
+  const language = currentLanguage();
   const items = rec.readings
-    .map((x) => `<li><span class="reading-label">${esc(x.label)}</span> <a href="${bibleGatewayUrl(x.ref)}" rel="noopener noreferrer">${esc(x.ref)}</a></li>`)
+    .map(
+      (x) =>
+        `<li><span class="reading-label">${esc(readingLabel(x.label))}</span> ` +
+        `<a href="${bibleUrl(x.ref, language)}" rel="noopener noreferrer">${esc(refInLanguage(x.ref, language))}</a></li>`,
+    )
     .join('');
   const src = rec.source?.url ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>` : esc(rec.source?.text ?? '');
   return `<section class="day-readings" data-readings>
     <h2 class="register-heading">${R.heading}</h2>
     <ul class="readings utility">${items}</ul>
-    <p class="readings-source utility">${fill(R.source, { source: src })}</p>
+    <p class="readings-source utility">${fill(R.source, { source: src, bible: R.bible })}</p>
   </section>`;
 }
 
-/** One hymn, in its own language, with its tone, its model and its source. */
-function hymnMarkup(h) {
-  const H = STRINGS.calendar.hymns;
-  const head = [H[h.kind] ?? h.kind, h.tone, h.model].filter(Boolean).map(esc).join(' · ');
-  const src = h.source?.url ? `<a href="${esc(h.source.url)}" rel="noopener noreferrer">${esc(h.source.text)}</a>` : esc(h.source?.text ?? '');
-  return `<div class="hymn">
-    <h3 class="hymn-kind utility">${head}</h3>
-    <p class="hymn-text" lang="${esc(h.lang)}">${esc(h.text)}</p>
-    <p class="hymn-source utility">${fill(H.source, { source: src })}</p>
-  </div>`;
-}
 
 /* A note saying the hymns keep the church's own tongue stood under the Hymns
    heading from Amendment 37 (2026-08-24) until the author removed it the next
@@ -417,6 +441,96 @@ function fillSaintHymns(panel, slug, iso) {
       if (!hymns.length) return;
       box.innerHTML = hymns.map(hymnMarkup).join('');
       panel.querySelector('[data-hymns]').hidden = false;
+    },
+    () => {},
+  );
+}
+
+/**
+ * One delegated listener for the fast control, on the view root: the liturgy
+ * line is repainted on every day change, so a listener bound to the button
+ * itself would have to be remade each time and would leak the one before it.
+ */
+function wireFastModal(root) {
+  const onClick = (e) => {
+    const button = e.target.closest('[data-fast-open]');
+    if (button && root.contains(button)) openFastModal(button.dataset.fast);
+  };
+  root.addEventListener('click', onClick);
+  return () => root.removeEventListener('click', onClick);
+}
+
+/**
+ * What the fast allows, when the reader asks (author, 2026-08-25). A modal
+ * over the page rather than a line under the date, because it is a thing
+ * consulted rather than read daily — and the Daily page's whole shape is one
+ * day at a glance.
+ *
+ * The content is in ui/strings.js, where its boundary is argued: this states
+ * which fast the day falls in, quotes the source's own note where the
+ * calendar printed one, and explains the terms — it does not rule on the day.
+ */
+function openFastModal(kind) {
+  const M = STRINGS.calendar.fastModal;
+  const rec = recordedDay(state.selected, state.calendar);
+  const note = rec?.fastingNote;
+  const src = rec?.source?.url
+    ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>`
+    : esc(rec?.source?.text ?? '');
+  const dialog = document.createElement('dialog');
+  dialog.className = 'fast-modal';
+  dialog.innerHTML = `
+    <div class="fast-modal-inner">
+      <h2 class="register-heading">${M.heading}</h2>
+      <p>${esc(M.kinds[kind] ?? '')}</p>
+      ${
+        note
+          ? `<h3 class="fast-modal-sub utility">${M.sourceHeading}</h3>
+             <p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>
+             ${src ? `<p class="utility">${fill(M.sourceNote, { source: src })}</p>` : ''}`
+          : ''
+      }
+      <h3 class="fast-modal-sub utility">${M.levelsHeading}</h3>
+      <ul class="fast-levels">${M.levels.map((l) => `<li>${l}</li>`).join('')}</ul>
+      <p class="utility">${esc(M.whose)}</p>
+      <button type="button" class="fast-modal-close" data-fast-close>${esc(M.close)}</button>
+    </div>`;
+  document.body.appendChild(dialog);
+  const shut = () => {
+    dialog.close();
+    dialog.remove();
+  };
+  dialog.addEventListener('click', (e) => {
+    // The backdrop is the dialog itself; a press inside the panel is not it.
+    if (e.target === dialog || e.target.closest('[data-fast-close]')) shut();
+  });
+  dialog.addEventListener('close', () => dialog.remove());
+  dialog.showModal();
+  dialog.querySelector('[data-fast-close]')?.focus();
+}
+
+/* The tongue the church's own calendar prints its fasting note in — the note
+   is quoted, not translated, so it is tagged for a screen reader. */
+const languageOfNote = (churchId) =>
+  ({ russian: 'ru', greek: 'el', romanian: 'ro', serbian: 'sr' })[churchId] ?? 'en';
+
+/**
+ * The hero's life, opened (author, 2026-08-25). The same first paragraph the
+ * Index's Detailed rows show, from the same fetched payload and the same
+ * helper, so the two never disagree about where a life begins. Wide screens
+ * only — the CSS hides the box below 760 px, where the hero has no spare
+ * column and the life is a scroll away under the register anyway.
+ */
+function fillHeroLede(panel, slug, iso) {
+  loadDetail(slug).then(
+    (payload) => {
+      if (!state || state.selected !== iso) return;
+      const box = panel.querySelector('[data-hero-lede]');
+      if (!box) return;
+      const text = firstParagraphText(payload?.life);
+      if (!text) return;
+      box.textContent = text;
+      box.hidden = false;
     },
     () => {},
   );
@@ -1211,6 +1325,14 @@ function paintDay(panel) {
           </h2>
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
+        <!-- The opening of the life, on a wide screen only (author,
+             2026-08-25: "because there is space on the left of the saint card
+             under their name"). It arrives with the fetched life rather than
+             from the manifest, so the box is here from the first paint and
+             fills a moment later; empty until then, and empty for good where
+             a saint has no life recorded, because a heading over nothing is
+             the furniture DESIGN.md §5b refuses. -->
+        <p class="hero-lede" data-hero-lede hidden></p>
         ${hero.image ? '' : `<div class="hero-actions">${renderBookmark(hero.slug, hero.display_name)}</div>`}
       </div>
     </article>
@@ -1218,6 +1340,7 @@ function paintDay(panel) {
     ${readingsMarkup(selected, state.calendar)}
     ${hymnsMarkup(selected, state.calendar)}`;
   fillSaintHymns(panel, hero.slug, selected);
+  fillHeroLede(panel, hero.slug, selected);
 }
 
 const titleFor = (saint, churchId) =>

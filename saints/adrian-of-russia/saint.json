@@ -58,5 +58,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1549,
+      "latest": 1549,
+      "display": "1549",
+      "basis": "attested"
+    }
   }
 }
