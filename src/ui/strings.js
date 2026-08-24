@@ -101,14 +101,14 @@ export const STRINGS = {
   church: {
     open: 'Choose a calendar',
     openLabel: 'Which church’s calendar the site shows',
-    showing: '{church} calendar',
+    // The header's control is a calendar mark and the church's name alone
+    // (author, 2026-08-24). It read "{church} calendar" until then, which
+    // said "calendar" twice once the icon was beside it and made the widest
+    // control in the header wider still. The accessible name keeps the whole
+    // sentence, because an icon says nothing to a screen reader.
+    showing: '{church}',
+    showingLabel: '{church} calendar — change which church’s calendar the site shows',
     heading: 'Which calendar do you keep?',
-    lede:
-      'Four churches keep their calendars here: the Russian and the Serbian ' +
-      'on the Julian calendar, the Romanian and the Greek on the Revised ' +
-      'Julian. Choose the ' +
-      'one you keep — the calendar, the saints and each saint’s page read it — ' +
-      'and change it whenever you like.',
     groupLabel: 'Churches',
     calendarOf: { julian: 'Julian calendar', 'revised-julian': 'Revised Julian calendar' },
   },
@@ -176,6 +176,10 @@ export const STRINGS = {
       name: 'Name',
       earliest: 'Earliest date',
       latest: 'Latest date',
+      // Author, 2026-08-24. Distinct from the *Random saint* button beside it:
+      // that one opens a saint, this one orders the whole Index. Choosing it
+      // again reshuffles.
+      random: 'Random',
     },
   },
 
@@ -254,6 +258,44 @@ export const STRINGS = {
   about: {
     title: 'About',
     placeholder: 'This page will state the editorial policy plainly: the inclusion criterion, the attestation model, the calendar conversion rules, the coverage statistics, the sourcing, the licence, and how to submit a correction. It is written as substance in Session 9, not boilerplate now.',
+    /*
+     * Privacy (author, 2026-08-24). Written against what the code actually
+     * does rather than as boilerplate: lib/settings.js owns the localStorage
+     * key and lib/store.js the four IndexedDB stores, and this text names
+     * exactly those and nothing else. If either grows a field, this changes
+     * with it — a privacy policy that has drifted from the code is worse than
+     * none, because a reader has no way to tell.
+     */
+    privacy: {
+      heading: 'Privacy',
+      lede:
+        'Nothing about you is collected, and there is no account to make. ' +
+        'What this site remembers, it remembers on your own device, and it is ' +
+        'only what it needs to give you back the page you left.',
+      keepsHeading: 'What is kept on your device',
+      keeps: [
+        'Where you were reading, and how far down the page you had got.',
+        'The saints you have saved, and the saints you have opened recently.',
+        'The church whose calendar you chose, and the light or dark setting.',
+        'How you last left the All Saints page — cards or rows, and whether descriptions were shown.',
+      ],
+      notHeading: 'What is not done',
+      not: [
+        'No analytics, no tracking pixels, no advertising, and no cookies.',
+        'Nothing you do here is sent to this site’s makers or to anyone else.',
+        'Nothing is shared or sold, because nothing is gathered to share or sell.',
+      ],
+      clearing:
+        'All of it stays in this browser, on this device, and clearing the ' +
+        'site’s data in your browser removes every trace of it. Nothing is ' +
+        'kept anywhere else, so there is nothing to ask us to delete.',
+      hosting:
+        'Two honest footnotes. The files are served by GitHub Pages, and any ' +
+        'web server sees the requests made to it; that is the host’s doing, ' +
+        'not this site’s, and it is the same for every page on the internet. ' +
+        'And the day’s readings link out to Bible Gateway — following one ' +
+        'takes you to a different site, with its own policy.',
+    },
   },
 
   notFound: {

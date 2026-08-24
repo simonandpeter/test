@@ -66,6 +66,16 @@ build's — and until then the page's restraint is the whole of its statement.
 The discipline that gold carries a finding and nothing else is not repealed; it
 has nothing to carry.*
 
+*Corrected (author, 2026-08-24): "spent nowhere" had one exception nobody had
+noticed, and it was the site's own mark. The favicon was a single gold cell —
+the badge's attested mark, put there when the badge was the signature element —
+and it outlived the badge by three weeks and nine amendments. It is now the
+eight-pointed Orthodox cross, **drawn in ink**, because a site mark is not a
+finding about veneration. Gold is now genuinely spent nowhere. The lesson worth
+keeping: the tokens.css audit that says where a colour is used does not reach
+`index.html`, and the mark a reader sees before the page paints is the one
+place a design rule can rot unread.*
+
 A parallel discipline for red: **rubric marks liturgical time and the reader's
 place, nothing else.** Today in the week strip, a feast marker, the current
 page in the nav — the "red-letter day" idiom doing literal work. Red is never a
@@ -660,6 +670,23 @@ Header collapses to a wrapping row at 360 px; no hamburger — four links fit.
 *Revised (2026-08-22): the text button names the church — Russian, Romanian or
 Greek — and opens a chooser of the three; the switches and the plate are gone
 with the traditions.*
+
+*Revised again (author, 2026-08-24): the control is **a calendar mark and the
+church's name** — "Romanian", not "Romanian calendar". The word was being said
+twice once the mark was beside it, and the header's widest control was reading
+as a sentence where everything around it is a label. The mark is the calendar
+page's own month toggle at 15 px, so a reader learns one drawing rather than
+two. **The accessible name went the other way, and deliberately:** an icon says
+nothing to a screen reader, and the `aria-label` had been swallowing the
+church's name while the visible text carried it, so a screen-reader user was
+told the control existed and never which calendar it was set to. It now names
+the church and what a press does.*
+
+*The chooser the button opens lost its explanatory paragraph the same day
+(author): it named the four churches and their two calendars in prose,
+immediately above four buttons each printing exactly that. Four lines of
+delay between a question and its answer, and the answer said it better.
+`STRINGS.church.lede` is deleted rather than left dark.*
 
 ### 5c. The saint's page
 

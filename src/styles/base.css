@@ -66,6 +66,35 @@ p {
   max-width: 65ch;
 }
 
+/* The About page's two statements of fact (author, 2026-08-24). Set to the
+   same 65ch measure as a paragraph so a list reads as prose that happens to be
+   itemised, and marked with the rule rather than a disc: the register's own
+   idiom is a line, not a bullet. */
+.plain-list {
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  max-width: 65ch;
+  list-style: none;
+}
+
+.plain-list li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.plain-list li:last-child {
+  border-bottom: 0;
+}
+
+.privacy {
+  margin-top: var(--space-12);
+}
+
+.privacy h3 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -199,6 +228,17 @@ header.chrome .chrome-corner {
   white-space: nowrap;
   color: var(--ink-soft);
   padding: var(--space-1) var(--space-2);
+  /* A calendar mark and the church's name (author, 2026-08-24). Inline-flex
+     rather than an inline SVG in a text run, so the mark sits on the name's
+     centre instead of its baseline and the button keeps one height whatever
+     the name is. */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.church-open svg {
+  flex: none;
 }
 
 .church-open[aria-expanded='true'] {

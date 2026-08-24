@@ -7,6 +7,7 @@ import {
   facetsOf,
   hasActiveFilters,
   lifeInterval,
+  shuffleKey,
   sortCards,
 } from '../src/lib/index-filters.js';
 
@@ -78,19 +79,17 @@ test('a life spans from its first interval to its last, keeping open bounds open
 
 test('Overlaps and Entirely within ask different questions', () => {
   const range = { from: 300, to: 400 };
+  // Who matches, not in what order: the default order became Earliest on
+  // 2026-08-24 and these two assertions were reading as order tests by
+  // accident. The orders have tests of their own below.
+  const slugs = (result) => result.matched.map((c) => c.slug).sort();
   // Moses is here because his birth bound is open below: nothing we have found
   // rules out his life touching the 4th century, and Overlaps asks exactly
   // that. Narrowing it would mean inventing a lower bound.
-  assert.deepEqual(
-    run({ ...range, rangeMode: 'overlaps' }).matched.map((c) => c.slug),
-    ['anthony', 'moses'],
-  );
+  assert.deepEqual(slugs(run({ ...range, rangeMode: 'overlaps' })), ['anthony', 'moses']);
   // Anthony's life runs 250–356 and so is not contained by 300–400.
-  assert.deepEqual(run({ ...range, rangeMode: 'within' }).matched.map((c) => c.slug), []);
-  assert.deepEqual(
-    run({ from: 240, to: 400, rangeMode: 'within' }).matched.map((c) => c.slug),
-    ['anthony', 'christopher'],
-  );
+  assert.deepEqual(slugs(run({ ...range, rangeMode: 'within' })), []);
+  assert.deepEqual(slugs(run({ from: 240, to: 400, rangeMode: 'within' })), ['anthony', 'christopher']);
 });
 
 test('an open-ended life overlaps but is never entirely within', () => {
@@ -126,17 +125,79 @@ test('feast months come from the caller, who owns the calendar arithmetic', () =
   assert.equal(applyFilters(all, { ...EMPTY_FILTERS, months: [2] }, { monthsBySlug }).matched.length, 0);
 });
 
-test('name is the default order', () => {
-  assert.equal(EMPTY_FILTERS.sort, 'name');
-  assert.deepEqual(sortCards(all).map((c) => c.slug), ['undated-one', 'anthony', 'christopher', 'moses']);
-  // Undated saints have no place on a timeline, so they sort last rather than
-  // to year zero.
-  assert.deepEqual(sortCards(all, 'earliest').map((c) => c.slug), [
+test('earliest is the default order, and name is still offered', () => {
+  // Author, 2026-08-24: Earliest took the default from Name, so the corpus
+  // opens on its oldest lives and reads down through the centuries rather
+  // than being filed by the accident of a first letter.
+  assert.equal(EMPTY_FILTERS.sort, 'earliest');
+  assert.deepEqual(sortCards(all).map((c) => c.slug), [
     'christopher',
     'anthony',
     'moses',
     'undated-one',
   ]);
+  assert.deepEqual(sortCards(all, 'name').map((c) => c.slug), [
+    'undated-one',
+    'anthony',
+    'christopher',
+    'moses',
+  ]);
+});
+
+test('latest runs the other way, and undated sorts last at either end', () => {
+  /*
+   * Author, 2026-08-24. Both date orders were ascending until then and keyed
+   * only on a different bound, so they produced nearly the same list and
+   * *Latest date* read as a control that did nothing. The undated saint is the
+   * part worth pinning: negating the comparator would have floated them to the
+   * head of the descending list, which is the opposite of having no place on
+   * a timeline.
+   */
+  assert.deepEqual(sortCards(all, 'latest').map((c) => c.slug), [
+    'moses',
+    'anthony',
+    'christopher',
+    'undated-one',
+  ]);
+  assert.equal(sortCards(all, 'earliest').at(-1).slug, 'undated-one');
+  assert.equal(sortCards(all, 'latest').at(-1).slug, 'undated-one');
+  // The two orders are now genuinely different questions, not one question
+  // asked twice.
+  assert.notDeepEqual(
+    sortCards(all, 'latest').map((c) => c.slug),
+    sortCards(all, 'earliest').map((c) => c.slug),
+  );
+});
+
+test('random is a seeded order, so it holds still until the seed changes', () => {
+  /*
+   * The Index is virtualised and re-filters on every keystroke, so a shuffled
+   * array would be re-dealt under the reader mid-scroll. The order is derived
+   * from (seed, slug) instead, which is why the same seed twice is the same
+   * list and no seed at all is still a stable one.
+   */
+  const order = (seed) => sortCards(all, 'random', { seed }).map((c) => c.slug);
+  assert.deepEqual(order('one'), order('one'));
+  assert.deepEqual(sortCards(all, 'random').map((c) => c.slug), sortCards(all, 'random').map((c) => c.slug));
+  // Every card is still present — a shuffle that loses or duplicates one is
+  // the failure mode worth catching.
+  assert.deepEqual(order('two').slice().sort(), all.map((c) => c.slug).sort());
+  // Some seed in a handful must deal a different hand, or the key is not
+  // spreading at all.
+  const seeds = ['a', 'b', 'c', 'd', 'e', 'f'];
+  assert.ok(seeds.some((seed) => order(seed).join() !== order('one').join()));
+});
+
+test('the shuffle key is a pure function of seed and slug', () => {
+  assert.equal(shuffleKey('anthony', 'seed'), shuffleKey('anthony', 'seed'));
+  assert.notEqual(shuffleKey('anthony', 'seed'), shuffleKey('anthony', 'other'));
+  assert.notEqual(shuffleKey('anthony', 'seed'), shuffleKey('moses', 'seed'));
+  // A uint32, so the comparator's subtraction can never overflow into a
+  // wrong sign.
+  for (const slug of ['anthony', 'moses', 'christopher', 'undated-one']) {
+    const key = shuffleKey(slug, 'seed');
+    assert.ok(Number.isInteger(key) && key >= 0 && key <= 0xffffffff);
+  }
 });
 
 test('the facet lists offer only what the corpus contains', () => {

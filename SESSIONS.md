@@ -1325,6 +1325,54 @@ the way. (4) RU 0902's second pair of pericopes ("за понедельник и
 carries no set label. (5) The new-martyr lives are first paragraphs plus the
 summary — the full azbyka lives are long and were read to the point noted.
 
+**Item (1), closed (session of 2026-08-23 evening, before Amendment 31's own
+verification pass the next day).** Running the suite for the first time
+against 708 saints found four real defects behind the recomputed numbers
+above, not just a count to paste in: `e2e/quality-floor.spec.js` still named
+**Tithoes** as the alphabetically-last saint (now Zoticus of Tomis) and
+searched for a bare **'Christopher'** that now matches two saints
+(Christopher and Christopher the Roman — narrowed to the latter); the header
+test's Russian figures were never updated for the recount above and still
+read 78/71 (fixed to 405/303, matching `.tmp/counts2.mjs` exactly); and CI's
+own log named a real rollup warning, an unused `enabledCommunions` import in
+`views/saints.js` (removed). Separately, the Romanian 8 September kontakion
+existed twice in `liturgical-days.js` — the same text in two orthography
+variants, cedilla-ş vs comma-ș, each cited to a different Doxologia page —
+reordered to lead with the troparion and the duplicate dropped. All four
+confirmed against the failing CI output before fixing, and the browser suite
+run clean at 218 (pre-Amendment-31-verification baseline) after. This is the
+first run item (1) above refers to as not yet done; treat "run it and watch
+it" as shorthand for this, not a formality.
+
+**Also that evening, seven small aesthetic requests, unrelated to the corpus
+above** (author's instruction, 2026-08-23) — recorded here rather than as its
+own numbered Amendment because the numbering had already moved on by the time
+this is being written up; Amendment 32 below builds directly on some of it.
+*Also commemorated* dropped its trailing feast date, keeping the name alone
+(still stands, untouched since). The Daily hero's own repeated feast-date line
+(`.hero-feasts`, a near-exact duplicate of what is now the header's calendar
+name) was removed outright — this is the line Amendment 32 went on to remove
+the *other* copy of, under the strip. The hero's text *Save* button — the one
+outstanding item Amendment 22 left open — was swapped for the bookmark
+(`renderBookmark`), which Amendment 32's item (5) then moved onto the image's
+corner; the dead `renderSaveButton`/`.save-button` code was deleted rather
+than left unused. The bookmark itself was changed to read filled at both
+states, half-opacity unsaved and full saved, in place of outline-vs-fill —
+DESIGN.md §5's bookmark paragraph is marked superseded in place for this; it
+still stands. The site header's corner link was renamed "Orthodoxy Daily",
+deliberately a second name from the one in `<title>` and the veil — still
+stands. The saint page's × now returns to the exact calendar day it was
+opened from rather than always to All Saints (`main.js` tracks the previous
+route; `saint.js` reads it as `cameFrom`) — still stands, untested by anything
+above since it touches neither the corpus nor the Daily hero. And a mobile
+layout fix kept the shelf's × beside the name rather than wrapping under the
+date (`.shelf .reg-feast { order: 3 }` in `saint.css`) — Amendment 33's row
+rewrite below moved *Continue reading* to a different markup this rule does
+not reach, but *Saved* still renders through the old `row()` function in
+`shelf.js`, where this rule is the one keeping its mobile layout correct.
+220 browser tests, 123 unit tests green at the time; the back-navigation fix
+was backed out and confirmed to fail before being trusted.
+
 **32. Six changes to the Daily page, and St before every name** (author's
 instruction, 2026-08-24). Four of the six reverse settled decisions; each is
 recorded where it sat rather than absorbed.
@@ -1424,6 +1472,132 @@ disjoint so no click toggles twice. One trap found on the way: the existing
 the register rows below 480 px) would have put the × *under* the bookmark in
 the new tools column — overridden with `order: 0` where the column is. The
 Saved shelf keeps the register dress: the instruction named Continue reading.
+
+**34. Seven of the round of 2026-08-24: the site's own mark, the chooser's
+silence, the Index's order** (author's instruction, 2026-08-24, a batch of nine
+of which two are held — see the end of this entry). Two of the seven reverse
+settled decisions and both are recorded where the old one sits.
+
+**(1) The loading veil reads "Orthodoxy Daily".** It read "The Orthodox Saint",
+the name in the `<title>`. This narrows Amendment 31's deliberate two-name
+split — the corner link renamed while the head and the veil kept the other
+name — to the `<title>` alone. The reasoning for the split is not repealed and
+the head still holds it; what changed is that the first thing painted and the
+name it fades into are now the same words, where before a reader met one name
+for half a second and a different one for the rest of the visit. The split now
+survives only where it is met out of context, in a tab or a bookmark.
+
+**(2) The site mark is the eight-pointed Orthodox cross, and it spends no
+gold.** The favicon was a single gold cell — the veneration badge's attested
+mark, put there when the badge was the signature element. **The badge was
+removed whole at Amendment 25 and the favicon outlived it by nine amendments**,
+so DESIGN.md §2's "gold is spent nowhere on the site" had been quietly untrue
+that entire time. The cross is drawn in ink, with a `prefers-color-scheme` rule
+inside the SVG so it flips to vigil ink rather than vanishing into a dark tab
+strip. §2 is corrected in place with the lesson: an audit of where a colour is
+used reads the stylesheets and does not reach `index.html`, and the mark a
+reader sees before the page paints is exactly where a design rule rots unread.
+The slant of the footrest is the whole of what makes the drawing Orthodox
+rather than Latin, and the browser test asserts its direction from the polygon
+itself — left end raised, the good thief at Christ's right hand — rather than
+just counting bars.
+
+**(3) The calendar chooser lost its paragraph.** It named the four churches and
+their two calendars in prose, directly above four buttons each printing exactly
+that: the choices said twice, and four lines between the question and the
+answer. `STRINGS.church.lede` is deleted rather than left dark. One component,
+so both hosts lost it together — the first-visit gate and the header's panel —
+and the test checks both, because a chooser that is drawn once and mounted
+twice is exactly the shape where one host keeps a stale copy.
+
+**(4) The header's calendar control is a mark and a name.** "Romanian", not
+"Romanian calendar": the mark says "calendar", so the word was being said twice
+and the header's widest control was reading as a sentence among labels. The
+drawing is the calendar page's own month toggle at 15 px, so there is one mark
+to learn rather than two. **The accessible name went the other way on purpose.**
+The `aria-label` had been swallowing the church's name for as long as the
+control has existed — a screen-reader user was told the control was there and
+never which calendar it was set to, while the visible text said so plainly. It
+now names the church *and* what a press does. Shortening the visible text is
+what made the omission worth fixing rather than merely noticing.
+
+**(5) About states a privacy policy, written from the code.** Four things are
+kept and all four are on the reader's own device: the reading position, the
+saved and recently-opened saints, the church and the theme, and how the Index
+was left. Written by reading `lib/settings.js` and `lib/store.js` rather than
+from a template, and the browser test names each of the four — a privacy policy
+that has drifted from the code is worse than none, because a reader has no way
+to check. Two honest footnotes the instruction did not ask for and that the
+statement is weaker without: the files are served by GitHub Pages and any web
+server sees the requests made to it, and the day's readings link out to Bible
+Gateway. Neither is this site collecting anything; both are things a reader
+would rightly feel misled to discover after being told "nothing is collected".
+
+**(6) Earliest is the Index's default order, and Latest now runs the other
+way.** The second half is a defect, and it is the one the author saw: *both*
+date orders were ascending and differed only in which bound of the life they
+keyed on, so *Latest date* opened on Moses, Joshua and Samuel exactly as
+*Earliest* did. It read as a control that did nothing — which is what "the
+Earliest / Latest sorting mechanisms don't seem to work for St Moses, St
+Joshua" was describing. Latest is descending now; the undated are pinned last
+at **both** directions, because negating the comparator would float saints with
+no place on a timeline to the head of the descending list, which is the
+opposite of what "no place on a timeline" means.
+
+*The trap inside the default change:* the `<select>` was written out option by
+option with the default implied by their order, so switching `EMPTY_FILTERS`
+to Earliest left the control reading "Name" over a grid that was already in
+Earliest order. The list was right and the label was lying about it — visible
+in a screenshot, invisible to every test. The options are built from `SORTS`
+with the current one marked now.
+
+**(7) A Random order, seeded.** Distinct from the *Random saint* button beside
+it, which opens one saint. The Index is virtualised and re-filters on every
+keystroke in the search box, so a shuffled array would be re-dealt under the
+reader mid-scroll; the order is derived from `shuffleKey(slug, seed)` instead
+and holds still until the seed changes. The seed is minted when Random is
+arrived at and kept while it stays chosen.
+
+**What the default change cost in the suite, which is the part worth reading.**
+Six browser tests failed, and only five were the change reaching an assumption
+that had gone stale. The sixth was a real defect the change merely exposed:
+*Detailed adds the opening of the life* measured the plain box of **the
+unfiltered first card** and the detailed box of **Anthony's card**, and a
+card's height comes from its own picture's aspect ratio — so it had been
+comparing two different boxes since the day it was written, and passed only
+while the first card happened to be a saint with no picture. Earliest put a
+tall icon there and "taller by exactly what was added" started reading as a
+shrink. It now narrows to Anthony before measuring either box. Two others
+(*the grid keeps a window*, *the feast-month filter*) assert on a specific
+mounted card while the grid is virtualised — at 360 px it holds one — so they
+now ask for the alphabetical order they name instead of riding the default;
+that is the "a count in the DOM is not a count in the corpus" rule wearing its
+other face, where the trap is *which* card rather than how many.
+
+**Verification.** 132 unit (129 + 3: latest's direction with the undated at
+both ends, the seeded order's stability, and the shuffle key itself), 236
+browser (220 + 8 × 2 projects). All nine changes were backed out one at a time
+and each was watched to fail its own test before being put back — including
+the two that only a unit test covers, and the `<select>` fix, whose backout
+was caught by `option:checked` rather than by the value. Full suite green at
+the end, and the restore was proved by running the whole floor again rather
+than by trusting the copy back.
+
+**Held, not done, and why.** Two of the author's nine are not in this entry.
+The **week strip's rework** — a continuous horizontal scroll locking to any
+day, a mouse drag on the desktop, and the peeked edges printed as real days
+rather than masked buttons — reverses four settled decisions at once
+(DESIGN.md §5b: no chevrons but the edges stay buttons; the fade is a mask,
+never an opacity; the grain's unit of travel is a week; touch and pen only)
+and rebuilds `ui/grain.js`'s track model for the week, so it was raised with
+the author before being built rather than absorbed. Notably the *reason*
+§5b gives for keeping the edges as buttons — "a mouse has no gesture here at
+all" — is the very thing the instruction fixes, so this is a reversal the
+document half argues for. The **site translation control** was answered as the
+question it was asked as ("how difficult would it be") rather than started:
+the UI strings are one module and genuinely cheap, but the corpus is 708 lives
+and 430 hymns and no part of that is a UI translation job. Both are the
+author's call and are recorded in HANDOFF.md's queue.
 
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.

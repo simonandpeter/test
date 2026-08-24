@@ -32,7 +32,14 @@ export const EMPTY_FILTERS = {
   from: null,
   to: null,
   rangeMode: 'overlaps',
-  sort: 'name',
+  // Earliest is the default (author, 2026-08-24). Alphabetical order was the
+  // default from Session 5; it files the corpus by the accident of a name's
+  // first letter, where the earliest-first order opens on Moses and Joshua and
+  // reads down through the centuries, which is the shape the corpus has.
+  sort: 'earliest',
+  // Set when `sort` is 'random', null otherwise: the order has to survive a
+  // re-render, and the Index is virtualised, so it cannot be a shuffled array.
+  shuffleSeed: null,
 };
 
 export const hasActiveFilters = (f) =>
@@ -128,29 +135,73 @@ export function applyFilters(cards, filters, { monthsBySlug, matchesQuery } = {}
     ? []
     : facetMatched.filter((card) => isUndated(lifeInterval(card.dates)));
 
-  return { matched: sortCards(matched, f.sort), undated: sortCards(undated, 'name') };
+  return {
+    matched: sortCards(matched, f.sort, { seed: f.shuffleSeed ?? '' }),
+    undated: sortCards(undated, 'name'),
+  };
 }
 
 /**
- * Name is the default. Breadth of veneration was a fourth order until
- * 2026-08-22 — offered, never defaulted to, because a corpus ranked by how
- * many communions venerate someone reads as a ranking of importance (brief
- * §8.2) — and went with the glyph: in a one-communion corpus it counts nothing.
+ * Four orders. Name was the default until 2026-08-24, when Earliest took it
+ * (see EMPTY_FILTERS). Breadth of veneration was an order until 2026-08-22 —
+ * offered, never defaulted to, because a corpus ranked by how many communions
+ * venerate someone reads as a ranking of importance (brief §8.2) — and went
+ * with the glyph: in a one-communion corpus it counts nothing.
  */
-export const SORTS = ['name', 'earliest', 'latest'];
+export const SORTS = ['name', 'earliest', 'latest', 'random'];
 
-export function sortCards(cards, sort = 'name') {
+/**
+ * A stable pseudo-random position for one slug under one seed — FNV-1a, which
+ * is four lines and spreads well enough for a shuffle nobody is betting on.
+ *
+ * The Index is virtualised: a card is mounted and unmounted on every scroll
+ * frame, and `applyFilters` runs again on every keystroke in the search box.
+ * A shuffled *array* would therefore be reshuffled under the reader mid-scroll.
+ * Deriving each card's position from the seed instead means the order is a
+ * pure function of (seed, slug) and holds still until the seed changes.
+ */
+export function shuffleKey(slug, seed = '') {
+  let h = 0x811c9dc5;
+  const text = `${seed}:${slug}`;
+  for (let i = 0; i < text.length; i += 1) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/**
+ * `latest` runs descending (author, 2026-08-24). Both date orders were
+ * ascending until then, differing only in which bound of the life they keyed
+ * on, so the two produced nearly the same list — Moses, Joshua, Samuel at the
+ * head of both — and *Latest date* read as a control that did nothing. Latest
+ * now means what it says: the most recently reposed first, which in this
+ * corpus is the new-martyrs of 1937 and 1938.
+ */
+export function sortCards(cards, sort = EMPTY_FILTERS.sort, { seed = '' } = {}) {
   const byName = (a, b) => a.display_name.localeCompare(b.display_name);
   const copy = cards.slice();
   if (sort === 'name') return copy.sort(byName);
-  // Undated saints have no position on a timeline, so they sort last rather
-  // than to year zero.
+  if (sort === 'random') {
+    return copy.sort((a, b) => shuffleKey(a.slug, seed) - shuffleKey(b.slug, seed) || byName(a, b));
+  }
   const key = (card) => {
     const iv = lifeInterval(card.dates);
-    const year = sort === 'latest' ? (iv.latest ?? iv.earliest) : (iv.earliest ?? iv.latest);
-    return year === null ? Infinity : year;
+    return sort === 'latest' ? (iv.latest ?? iv.earliest) : (iv.earliest ?? iv.latest);
   };
-  return copy.sort((a, b) => key(a) - key(b) || byName(a, b));
+  const direction = sort === 'latest' ? -1 : 1;
+  return copy.sort((a, b) => {
+    const ka = key(a);
+    const kb = key(b);
+    // Undated saints have no position on a timeline, so they sort last at
+    // either direction — not to year zero, and not to the far end of a
+    // descending list, which is where negating the comparator would put them.
+    if (ka === null || kb === null) {
+      if (ka === kb) return byName(a, b);
+      return ka === null ? 1 : -1;
+    }
+    return direction * (ka - kb) || byName(a, b);
+  });
 }
 
 /** The facet values the corpus actually contains, so no filter offers a dead end. */

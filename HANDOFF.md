@@ -60,45 +60,103 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-22
+## State as of 2026-08-24 (Amendment 34)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
 
 Complete: Phase 0 data foundations, the design pass, the app shell, the
-veneration glyph in both its views, the calendar page, the saint detail page
-with the local store, All Saints in Index mode, and an About page that explains
-the mark.
+calendar page, the saint detail page with the local store, All Saints in Index
+mode, and an About page that explains the corpus. **The veneration glyph named
+in several sections below no longer exists** — removed entirely at Amendment
+25 — and the single-church chooser (`lib/church.js`, `ui/church-chooser.js`)
+has since replaced the four-communion "plate" those same sections describe.
+See "Two sections below are now history" just under this one before reading
+them.
 
-- 123 unit tests (`npm test`) — pure logic, no DOM.
-- 218 browser tests (`npm run test:e2e`) — 109 across desktop and 360 px.
-  (Counts as of 2026-08-23, Amendment 31 — **the browser suite was not run
-  after Amendment 31**; its counts were recomputed for the 708-saint corpus
-  and a test added, and the first thing to do is run it, watch it, and back the
-  new test out to see it fail. Read the suite's own summary rather than
-  trusting this line.)
-- `npm run test:all` runs both. CI runs both on every push.
+- 132 unit tests (`npm test`) — pure logic, no DOM.
+- 236 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-24, Amendment 34's sitting), not carried over from a
+  commit message. `npm run test:all` runs both; CI runs both on every push.
+  They were 129 and 220 through Amendment 33.
+- **Amendment 34 is committed but not pushed** — this session had no
+  credentials, which is the usual state (see "Pushing happens outside this
+  session" below). `git fetch origin` at the start of that session showed
+  `origin/main` at `ab94de3`, level with local HEAD, so everything through
+  Amendment 33 is pushed and CI's last word is about that. Neither statement
+  is evidence that CI is green: this environment has no `gh` CLI to check the
+  Actions run itself, so eyeball it on GitHub before building on top.
 
-**Corpus as of 2026-08-23 (Amendment 31): 708 saints**, every one with a life
-and four attestation rows; 430 hymns; readings/fasting for 23 August –
-19 September in `src/data/liturgical-days.js` (the Greek 7–19 September empty
-with a note — saint.gr had not published them); 91 icons (84 from Wikimedia
-Commons with their file pages cited). The generating pipeline is under
-`.tmp/w3/` (untracked) and SESSIONS.md Amendment 31 lists what is left:
-the browser run, the Greek readings once saint.gr publishes them, more icons.
+**Corpus as of 2026-08-24: 708 saints**, every one with a life and four
+attestation rows; 430 hymns; readings/fasting for 23 August – 19 September in
+`src/data/liturgical-days.js` (the Greek 7–19 September still empty with a
+note — saint.gr has not published that far out as of Amendment 31's check on
+2026-08-24). 95 icons (88 from Wikimedia Commons with their file pages cited,
+four added at Amendment 31). The generating pipeline is under `.tmp/w3/`
+(untracked).
 
-**Pushing happens outside this session.** Agent sessions have no git
-credentials — `git push` fails with "could not read Username" from both shells.
-Your half of the arrangement is to stage and commit; a separate session of the
-author's pushes. So: commit, say the commit is ready, and ask for confirmation
-that the GitHub Actions run is green before building on top of it. Do not try
-to push, and do not treat a local pass as evidence about what was committed.
+**Since Amendment 31 was written up, four more amendments landed the same
+day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
 
-**Check `git log origin/main..HEAD` before anything else**, all the same: it
-tells you which commits have not yet been through GitHub Actions, whoever is
-doing the pushing. Three commits stood unpushed at the start of the 2026-08-22
-round — Amendment 20's pair and the ground change (Amendment 21) — and the
-round's own commits stack on them.
+- **Amendment 31's own loose ends, closed:** the browser suite run and watched
+  green against 708 saints, four more Commons icons sourced and cited, one
+  Russian pericope-pair label fixed. Still open: Greek readings past
+  6 September (saint.gr hasn't published them) and the ~200 new-martyr lives
+  still sourced from azbyka.ru, which is now returning 403 to direct fetches.
+- **Amendment 32, six author instructions, four of them reversals:** the
+  own-reckoning line under the strip is gone entirely (the Daily page prints
+  the civil date alone; the header is the only place the calendar is named and
+  changed); the fast is now coloured by kind — the one sanctioned exception to
+  the two-colour rule, three conditions attached (DESIGN.md §2); the weekday
+  was dropped from the liturgical title line (already in the h1); the hero's
+  bookmark moved to the image's corner, matching an Index card; and every name
+  now renders with "St" before it (`lib/honorific.js`, applied at render, never
+  written to data). Rank deliberately stays out of `display_name` — for the
+  new-martyrs it is the disambiguator between namesakes.
+- **Amendment 33, three more:** "Also commemorated" lost its row rule; a life
+  with a known death and no birth now reads "Entered eternal glory in {year}"
+  rather than "undated – {year}" (`formatLifespan`, one place, reaches every
+  view); and "Continue reading" now wears the Index's own row-card markup
+  rather than the plain register.
+
+- **Amendment 34, seven of a batch of nine:** the loading veil now reads
+  "Orthodoxy Daily" like the header; the favicon is the eight-pointed Orthodox
+  cross **in ink** — it had been a gold cell from the veneration badge, which
+  was removed nine amendments earlier, so §2's "gold is spent nowhere" was
+  untrue the whole time and is corrected in place; the calendar chooser lost
+  its explanatory paragraph; the header's control is a calendar mark plus the
+  church's name ("Romanian", not "Romanian calendar") with the church now in
+  its accessible name too; About carries a privacy policy written from
+  `settings.js` and `store.js`; the Index defaults to **Earliest** and
+  **Latest now runs descending** — both date orders were ascending and
+  differed only in which bound they keyed on, so Latest read as a control that
+  did nothing; and there is a seeded **Random** order. The other two of the
+  nine — the week strip's rework and site translations — are in the queue
+  below, both needing the author.
+
+**Pushing happens outside this session** unless your own session has been
+given credentials — check before assuming otherwise. Agent sessions
+historically have none: `git push` fails with "could not read Username" from
+both shells. Commit, say the commit is ready, and ask for confirmation that
+the GitHub Actions run is green before building on top of it. Do not treat a
+local pass as evidence about what was committed or pushed.
+
+## Two sections below are now history, not the current UI
+
+This section and "The glyph, because it has moved twice" just after it were
+accurate when written and are kept for the reasoning they carry, but two of
+the mechanisms they describe are gone: the veneration glyph (badge and matrix
+both — `badge.js` no longer exists) was removed whole at Amendment 25, and the
+four-communion "plate" / *Select Tradition* control this section describes
+(`lib/tradition.js`, also gone) was replaced by the single-church chooser at
+Amendments 27 and 29 — one church at a time, `lib/church.js`,
+`ui/church-chooser.js`. Amendment 32 (2026-08-24) then removed the own-date
+line this section's last-but-two bullet describes: the Daily page now prints
+the civil date alone, and the header is the only place the calendar is named
+and changed. For what the calendar page and the veneration UI actually look
+like today, read DESIGN.md's current text (it is kept live, superseded
+passages marked in place) and SESSIONS.md's Amendments 25, 27, 29 and 32
+rather than trusting the bullets below.
 
 ## The calendar chrome, because it moved three times on 2026-08-21
 
@@ -218,6 +276,57 @@ the standard:
   the chevrons, and the date bars. Each is written up with the reasoning, and
   the superseded entry is marked as such where it sits.
 
+
+#### The queue, as of Amendment 34 (2026-08-24)
+
+Open refinements, in the order they were raised. Each is small enough to pick
+up cold; the two the author has to decide are marked.
+
+- **A card's lifespan runs under the bookmark.** Index, Cards view: a long
+  lifespan line truncates *behind* the bookmark icon rather than stopping
+  short of it, so the ellipsis sits under the mark — "St Abraham the
+  Industrious of the Kyiv Caves", "Entered eternal glory in the 12th–13th
+  ce…". Probably new since Amendment 33: "Entered eternal glory in {year}"
+  is a great deal longer than the "undated – 1779" it replaced, and every
+  undated-birth saint now carries the longer line — 304 of 708. Amendment
+  26's `a card lifespan is one line` test pins the ellipsis, not the
+  clearance, so it passes. Raised by looking at a screenshot, 2026-08-24;
+  the author queued it the same day.
+
+- **The week strip's rework — needs the author, raised and awaiting an
+  answer.** A continuous horizontal scroll across the dates, locking to
+  whichever day it slows on rather than to week boundaries; hold-and-drag on
+  the desktop as well as on touch; and the peeked edges printed as real days
+  instead of masked buttons. This reverses four decisions in DESIGN.md §5b at
+  once (no chevrons but the edges stay buttons; the fade is a mask, never an
+  opacity; a grain's unit of travel is a week; touch and pen only) and
+  rebuilds the week's half of `ui/grain.js`. Worth knowing before it is
+  argued: §5b's stated reason for keeping the edges as buttons is that a
+  mouse has no gesture here at all — which the desktop drag in the same
+  instruction removes. The part that needs care either way is the keyboard:
+  the strip's arrow keys and the peeks' `aria-label`s are how a keyboard
+  reaches a day off the end, and a scroll container is not a substitute for
+  them. Full reasoning in SESSIONS.md Amendment 34.
+
+- **Site translations (EN, RU, RO, GR, RS) — needs the author.** Asked as a
+  question ("how difficult would it be") and answered as one rather than
+  started. The short version: the chrome is cheap and the corpus is not.
+  `ui/strings.js` is already the single home for every UI string, by design
+  (brief §16), so translating the chrome is a contained job. The corpus is
+  708 lives, 430 hymns, the readings and the fasting notes, and translating
+  those is not a UI task at all — it is the sourcing discipline of Amendment
+  2 again, where a machine-translated life would be exactly the kind of
+  invented content the project refuses. The author's own suggestion —
+  each church's saints in English and that church's language — is the
+  affordable shape, because for most of those saints the source text
+  *already exists* in that language in the cited page the entry was read
+  from. Also unresolved and cheap to get wrong: the honorific ("St" is
+  `lib/honorific.js`, applied at render, and every language forms it
+  differently), the search index, which is built from bare names and already
+  needed a special case for "St", and `<html lang>`, which currently claims
+  `en` for pages already printing Greek and Church Slavonic. Awaiting the
+  author's scope.
+
 **The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
 phases, both built. Phase 1 — the Index's *Detailed* option, the bookmark that
 is Save, the saint page's × back into the Index as the reader left it, and the
@@ -290,9 +399,16 @@ session). SESSIONS.md has each in full.
   discipline applies to tests: if no saint exercises a feature, say so rather
   than inventing one that does. Two features have no browser coverage for
   exactly this reason.
-- **Gold appears only in the veneration glyph. Red marks only liturgical time
-  and the reader's place.** These two sentences are the design (DESIGN.md §2).
-  Errors are prose in ink, never a red banner.
+- **Gold marks a finding about veneration, never anything else — and since the
+  glyph's removal (Amendment 25) it is spent nowhere on the site, on purpose,
+  against the day a new signature element earns it.** Rubric marks liturgical
+  time and the reader's place, nothing else. Amendment 32 added the one
+  sanctioned exception — the fast of the day is coloured by kind: strict in
+  the rubric itself, and two new hues for fish-permitted and fast-free, chosen
+  specifically not to be mistaken for gold. DESIGN.md §2 states the three
+  conditions that keep the exception honest. Read §2 before giving any other
+  category a colour of its own: this one does not generalise. Errors are still
+  prose in ink, never a red banner.
 - **Reduced motion removes animation, never shortens it.** There is a global
   CSS rule and a test. Where JS waits for a transition, it must skip the wait
   under reduced motion too — a 420 ms pause with no animation behind it is the
@@ -352,36 +468,32 @@ session). SESSIONS.md has each in full.
 
 ## Outstanding, needs the author — not you
 
-- **The calendar hero's text *Save* button** is the one text Save left on the
-  site; every other Save is the bookmark (Amendment 22). It was in no
-  instruction and is unchanged; the author's answer to the question was "not
-  sure what you mean" — it is the button under the saint of the day on the
-  calendar page. Follow the bookmark or keep it: a one-line change either way.
-- **Two lines of the build's wording** (Amendment 23): the first-visit
-  question's heading *Which traditions do you keep?* and its lede, chosen
-  because a second question now asks which calendar to *see*. Both are in
-  `src/ui/strings.js` under `traditions.ask`.
-
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
   anything is built on top.
-- **Nothing shows a day in a non-civil reckoning any more.** The toggle that
-  did was withdrawn on 2026-08-21 when the tradition filter took its place.
-  `lib/jdn.js` and `data/calendars.js` still convert, the saint page still
-  prints each attestation's own feast in its own calendar, but the habit page
-  no longer offers "this day, in Coptic". Whether that belongs somewhere — the
-  saint page, About, a line under the hero — is the author's call.
+- **Nothing shows a day in a non-civil reckoning any more, and it is now
+  further from doing so than it was.** A brief window (2026-08-23) had the
+  Daily page print the chosen church's own-reckoning date under the strip;
+  Amendment 32 (2026-08-24) removed that line outright, the author's reason
+  being that two dates for one day read as confusion. `lib/jdn.js` and
+  `data/calendars.js` still convert, and the saint page still prints each
+  attestation's own feast in its own calendar, but the habit page itself now
+  states only the civil date. Whether a non-civil reading belongs somewhere —
+  the saint page, About, a line under the hero — is the author's call, made
+  twice now in the negative for the calendar page specifically.
+- **Rank stays out of `display_name`, by deliberate choice (Amendment 32).**
+  The author asked for rank to read as "a category in the profile, not in the
+  name" — already true via `types`, printed on the saint page's facts line —
+  but stripping rank out of the ~200 new-martyr names was surveyed (226
+  distinct trailing segments, no safe mechanical split) and left undone,
+  because for namesakes sharing a forename and year the rank and year are the
+  only disambiguator. Revisit only if the author asks again with a rule for
+  telling disambiguator from decoration.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because
   provenance is how a reader checks that claim. 7 live build warnings. Blocks
   publication, not your work.
-- **Breadth of veneration counts communions, not the thirteen expanded cells.**
-  Six of the thirteen come from one registry entry, so counting them separately
-  would inflate breadth for anything Eastern Catholic venerates. If the count
-  should be out of thirteen, that is a data decision.
-- **Assyrian Church of the East `paschal_computus`** is unverified and flagged
-  `needs_sourcing`. Nothing renders a movable feast yet.
 - **Manifest budget:** projects to 864 KB gzipped at 5,000 saints against a
   400 KB ceiling. Meaningless below ~200 saints. Re-check past that mark; do
   not build sharding before then. When the trigger fires the shape is settled
@@ -402,6 +514,3 @@ session). SESSIONS.md has each in full.
   first and were withdrawn on 2026-08-21; the map halo and the timeline
   dissolve are still to come. `tests/uncertainty.test.mjs` pins its three
   constants directly in the meantime, so they cannot drift unnoticed.
-- **Data acquisition has not started.** Amendment 2 says the overnight work is
-  the pipeline and the review workflow, not the corpus. It is the critical path
-  to anything shipping.

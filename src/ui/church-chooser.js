@@ -24,6 +24,20 @@ import { STRINGS, fill } from './strings.js';
 
 const C = STRINGS.church;
 
+/**
+ * The calendar mark the header's control wears (author, 2026-08-24), so the
+ * button can drop the word "calendar" and carry the church's name alone. Same
+ * drawing and same stroke as the month toggle on the calendar page, one size
+ * down: the two mean the same thing and a reader should not have to learn
+ * two marks for it.
+ */
+const ICON_CALENDAR = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+  stroke-width="1.7" aria-hidden="true" focusable="false">
+  <rect x="3.25" y="5" width="17.5" height="15.75" rx="2.5"/>
+  <path d="M3.25 9.75h17.5"/>
+  <path d="M8 2.75v4M16 2.75v4" stroke-linecap="round"/>
+</svg>`;
+
 /** The three as buttons, the current one pressed. */
 export function renderChoices(current = currentChurch()) {
   return enabledChurches()
@@ -37,11 +51,18 @@ export function renderChoices(current = currentChurch()) {
     .join('');
 }
 
-/** The question and its choices — the same inside wherever it stands. */
-export function renderChooser({ current = currentChurch(), heading = C.heading, lede = C.lede } = {}) {
+/**
+ * The question and its choices — the same inside wherever it stands.
+ *
+ * The explanatory paragraph under the heading was removed by the author
+ * (2026-08-24): it named the four churches and their two calendars in prose
+ * directly above four buttons that each print exactly that, so it said the
+ * choices twice and delayed them by four lines. `STRINGS.church.lede` is
+ * deleted rather than left dark.
+ */
+export function renderChooser({ current = currentChurch(), heading = C.heading } = {}) {
   return (
     `<h2 class="ask-heading">${heading}</h2>` +
-    `<p>${lede}</p>` +
     `<div class="ask-choices" role="group" aria-label="${esc(C.groupLabel)}">${renderChoices(current)}</div>`
   );
 }
@@ -76,8 +97,14 @@ export function mountChurchControl(button, panel) {
 
   const paintButton = () => {
     const id = currentChurch();
-    button.textContent = id ? fill(C.showing, { church: churchName(id) }) : C.open;
-    button.setAttribute('aria-label', C.openLabel);
+    const name = id ? churchName(id) : null;
+    // The mark carries "calendar" so the words do not have to; the accessible
+    // name still says the whole sentence, and now says which church, which
+    // the aria-label swallowed while the visible text was carrying it.
+    button.innerHTML =
+      ICON_CALENDAR +
+      `<span class="church-open-name">${esc(name ? fill(C.showing, { church: name }) : C.open)}</span>`;
+    button.setAttribute('aria-label', name ? fill(C.showingLabel, { church: name }) : C.openLabel);
   };
   const close = () => {
     open = false;

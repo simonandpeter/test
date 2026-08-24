@@ -427,9 +427,12 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
 
   await expect(page.locator('[data-count]')).toHaveText('708');
   await expect(page.locator('.index-card').first()).toBeVisible();
-  // Breadth of veneration is offered but is never the order the reader arrives
-  // in: a corpus sorted by it would read as a ranking of importance.
-  await expect(page.locator('[data-sort]')).toHaveValue('name');
+  // Unranked is the load-bearing word. Breadth of veneration was offered and
+  // never defaulted to, because a corpus sorted by it reads as a ranking of
+  // importance; Earliest took the default from Name on 2026-08-24 (author) and
+  // is the same kind of order as either — a fact about the lives, not a claim
+  // about their standing.
+  await expect(page.locator('[data-sort]')).toHaveValue('earliest');
   await expect(page.locator('input[name="rangeMode"][value="overlaps"]')).toBeChecked();
   await expect(page.locator('[data-clear]')).toBeHidden();
 });
@@ -586,6 +589,11 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   const ctx = await browser.newContext({ viewport: { width: 360, height: 480 } });
   const page = await ctx.newPage();
   await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // Alphabetical, asked for rather than assumed: this test names the saint it
+  // expects at the bottom, so it has to name the order that puts them there.
+  // It rode the default until 2026-08-24, when Earliest took it and the last
+  // card became whichever undated saint sorts last by name instead.
+  await page.selectOption('[data-sort]', 'name');
 
   // 708 saints now; Zoticus of Tomis is last alphabetically and far below
   // a 480 px viewport. A window is far fewer than the corpus at either end.
@@ -603,6 +611,13 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
 
 test('the feast-month filter reckons each tradition in its own calendar', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // Alphabetical, so the named saint is the one the grid actually mounts. The
+  // grid is virtualised and at 360 px it holds a single card: under the
+  // Earliest order this became Paul of Thebes (227) and the assertion below
+  // read as a filter failure when nothing was wrong with the filter. The count
+  // is the claim about the corpus; this is the claim about one card, and it
+  // has to say which card it means.
+  await page.selectOption('[data-sort]', 'name');
   await (await facet(page, 'months')).getByLabel('January').check();
 
   // Anthony (17 January), Athanasius (18 January) and Paul of Thebes (15
@@ -1387,7 +1402,7 @@ test('the header carries no date, and the corner holds two controls', async ({ p
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.chrome-today')).toHaveCount(0);
-  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', /Switch to the (dark|light) theme/);
   const m = await page.evaluate(() => {
     const header = document.querySelector('header.chrome').getBoundingClientRect();
@@ -1493,13 +1508,13 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   // The day, the hero, and the density dots under that date in the strip: one
   // choice, read everywhere, rather than in the one place someone remembered.
-  await expect(page.locator('#church-open')).toHaveText('Greek calendar');
+  await expect(page.locator('#church-open')).toHaveText('Greek');
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
@@ -1528,7 +1543,7 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
   const open = page.locator('#church-open');
-  await expect(open).toHaveText('Russian calendar');
+  await expect(open).toHaveText('Russian');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
@@ -1538,12 +1553,12 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
-  await expect(open).toHaveText('Greek calendar');
+  await expect(open).toHaveText('Greek');
   await expect(page.locator('.empty-day')).toBeVisible();
 
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
-  await expect(page.locator('#church-open')).toHaveText('Greek calendar');
+  await expect(page.locator('#church-open')).toHaveText('Greek');
   await expect(page.locator('[data-ask]')).toHaveCount(0);
 });
 
@@ -1588,14 +1603,14 @@ test('the question is asked once, and answering it is choosing', async ({ page }
   await page.locator('[data-ask] [data-church="romanian"]').click();
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
-  await expect(page.locator('#church-open')).toHaveText('Romanian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Romanian');
   // Focus goes somewhere that still exists: the strip's own chrome.
   expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-today'))).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('romanian');
 
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('[data-ask]')).toHaveCount(0);
-  await expect(page.locator('#church-open')).toHaveText('Romanian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Romanian');
 });
 
 test('the peeked day sits on the same line as the days beside it', async ({ page }) => {
@@ -1927,12 +1942,24 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   const box = page.locator('[data-detailed]');
   await expect(box).not.toBeChecked();
   await expect(page.locator('.index-desc')).toHaveCount(0);
-  const plain = (await page.locator('.index-card').first().boundingBox()).height;
+
+  /*
+   * One saint, measured twice. This narrowed to Anthony before the plain
+   * measurement on 2026-08-24, having compared the unfiltered first card
+   * against Anthony's since it was written: a card's height comes from its own
+   * picture's aspect ratio, so the two were never the same box, and the
+   * assertion below only held while the first card happened to be a saint
+   * without a picture. Changing the default order to Earliest put a tall icon
+   * there and "taller by what was added" started reading as a shrink — a
+   * defect in the test, not in the boxes.
+   */
+  await page.locator('[data-query]').fill('Anthony the Great');
+  const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
+  await expect(first).toHaveCount(1);
+  const plain = (await first.boundingBox()).height;
 
   await box.check();
   await expect(page.locator('.index-card').first()).toHaveClass(/is-detailed/);
-  await page.locator('[data-query]').fill('Anthony the Great');
-  const first = page.locator('.index-card', { hasText: 'Anthony the Great' });
   await expect(first).toHaveCount(1);
   await expect(first.locator('.index-desc')).toContainText('Born to a prosperous Coptic family');
   // Still the manifest's numbers: three lines of description, and a taller
@@ -1943,7 +1970,7 @@ test('Detailed adds the opening of the life, and every box still holds', async (
     return { descLines: Math.round((r(desc).height / 19.575) * 10) / 10 };
   });
   expect(geometry.descLines).toBe(3);
-  expect((await page.locator('.index-card').first().boundingBox()).height).toBeGreaterThan(plain + 60);
+  expect((await first.boundingBox()).height).toBeGreaterThan(plain + 60);
   expect(await nothingCropped(page)).toEqual([]);
 
   // Rows take it too, at two lines, and nothing in a row is cropped either.
@@ -2271,7 +2298,7 @@ test('the first visit is asked which calendar, and sees no strip until it answer
   // nothing under the strip offers it any more.
   await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
   expect(stored.church).toBe('russian');
   expect(stored.traditions).toBeUndefined();
@@ -2290,7 +2317,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('[data-set-aside]')).toContainText('303 saints are not in the Russian calendar');
 
   const open = page.locator('#church-open');
-  await expect(open).toHaveText('Russian calendar');
+  await expect(open).toHaveText('Russian');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
@@ -2302,7 +2329,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await page.locator('#church-panel [data-church="romanian"]').click();
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
-  await expect(open).toHaveText('Romanian calendar');
+  await expect(open).toHaveText('Romanian');
   await expect(page.locator('[data-count]')).toHaveText('122');
   await expect(page.locator('[data-set-aside]')).toContainText('586 saints are not in the Romanian calendar');
 
@@ -2377,10 +2404,12 @@ test('the theme follows the system until it is touched, and holds once it is', a
 });
 
 test('the site is The Orthodox Saint, and the habit page is Daily', async ({ page }) => {
-  // Author, 2026-08-23. The name in the head and the veil; the page's nav
-  // label. The header's own corner reads "Orthodoxy Daily" since (author,
-  // 2026-08-23, later the same day) — a second, deliberately different name
-  // from the head's. The route stays /calendar so no link breaks.
+  // Author, 2026-08-23. The name in the head and the page's nav label. The
+  // header's own corner reads "Orthodoxy Daily" since (author, 2026-08-23,
+  // later the same day) — a second, deliberately different name from the
+  // head's. The veil carried the head's name until 2026-08-24 and now carries
+  // the header's; that has a test of its own below. The route stays /calendar
+  // so no link breaks.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
@@ -2486,7 +2515,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(serbian).toContainText('Serbian');
   await expect(serbian.locator('.choice-calendar')).toHaveText('Julian calendar');
   await serbian.click();
-  await expect(page.locator('#church-open')).toContainText('Serbian calendar');
+  await expect(page.locator('#church-open')).toContainText('Serbian');
   await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
   const links = page.locator('[data-readings] .readings a');
@@ -2646,4 +2675,207 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   // forms resolve to the same Commons file page.
   await expect(credit).toHaveAttribute('href', /commons\.wikimedia\.org\/wiki\/File(:|%3A)/);
   await expect(credit).toHaveText('Public domain');
+});
+
+/* ---- the round of 2026-08-24 (Amendment 34) ----------------------------- */
+
+test('the veil names the site the way the header does', async ({ page }) => {
+  /*
+   * Author, 2026-08-24. The loading veil read "The Orthodox Saint" — the
+   * head's name — and now reads "Orthodoxy Daily", the header's. This narrows
+   * Amendment 31's deliberate two-name split to the <title> alone: the first
+   * thing a reader sees painted and the name in the corner it fades into are
+   * now the same words, and the split survives only where a reader meets it
+   * in a tab or a bookmark.
+   *
+   * The veil is removed 300 ms after the manifest lands, so it is read out of
+   * the served HTML rather than raced for in a live page.
+   */
+  const html = await (await page.request.get('/')).text();
+  expect(html).toContain('<div class="veil-name">Orthodoxy Daily</div>');
+  expect(html).not.toContain('<div class="veil-name">The Orthodox Saint</div>');
+  // The head keeps its own name, which is the half of the split that stands.
+  expect(html).toContain('<title>The Orthodox Saint</title>');
+});
+
+test('the site mark is the Orthodox cross, and it spends no gold', async ({ page }) => {
+  /*
+   * Author, 2026-08-24. The favicon was one gold cell — the attested mark of
+   * the veneration badge, which was removed whole at Amendment 25, so it had
+   * been standing for a thing that no longer exists. It is now the
+   * eight-pointed cross: upright, titulus, crossbar, and the slanted
+   * footrest, whose slant is the whole of what makes it Orthodox rather than
+   * Latin.
+   *
+   * Gold is the assertion that matters. DESIGN.md §2 reserves it for a
+   * finding about veneration and nothing else, and a site mark is not one —
+   * so the cross is drawn in ink, and this fails if anyone re-spends the
+   * token here.
+   */
+  const html = await (await page.request.get('/')).text();
+  const href = html.match(/<link rel="icon" href="([^"]+)"/)?.[1];
+  expect(href).toBeTruthy();
+  const svg = decodeURIComponent(href.replace('data:image/svg+xml,', ''));
+  // Three bars and a slanted footrest: the eight points.
+  expect(svg.match(/<rect/g)).toHaveLength(3);
+  expect(svg).toContain('<polygon');
+  // The footrest's left end sits higher than its right — the good thief was at
+  // Christ's right hand, which is the viewer's left. A level bar here would be
+  // a Latin cross with an extra rung.
+  const points = svg
+    .match(/points='([^']+)'/)[1]
+    .split(' ')
+    .map((pair) => pair.split(',').map(Number));
+  const xs = points.map((q) => q[0]);
+  const leftTop = points.find(([x]) => x === Math.min(...xs));
+  const rightTop = points.find(([x]) => x === Math.max(...xs));
+  expect(leftTop[1]).toBeLessThan(rightTop[1]);
+  // Ink, not gold, in either theme.
+  expect(svg).toContain('#221d19');
+  expect(svg.toLowerCase()).not.toContain('a98237');
+  expect(svg.toLowerCase()).not.toContain('c79a4b');
+  // It flips rather than vanishing into a dark tab strip.
+  expect(svg).toContain('prefers-color-scheme:dark');
+});
+
+test('the calendar chooser asks its question and offers the four, with nothing between', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: the paragraph under the heading is removed outright.
+   * It named the four churches and their two calendars in prose directly
+   * above four buttons each printing exactly that, so it said the choices
+   * twice and put four lines between the question and the answer.
+   *
+   * Both hosts, because one component draws both: the first-visit gate on the
+   * calendar page, and the header's panel.
+   */
+  await page.goto('/', { waitUntil: 'networkidle' });
+  const gate = page.locator('[data-ask]');
+  await expect(gate.locator('.ask-heading')).toHaveText('Which calendar do you keep?');
+  await expect(gate.locator('p')).toHaveCount(0);
+  await expect(gate).not.toContainText('Four churches keep their calendars here');
+  await expect(gate.locator('[data-church]')).toHaveCount(4);
+
+  await ready(page);
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await openChooser(page);
+  const panel = page.locator('#church-panel');
+  await expect(panel.locator('.ask-heading')).toHaveText('Which calendar do you keep?');
+  await expect(panel.locator('p')).toHaveCount(0);
+  await expect(panel).not.toContainText('change it whenever you like');
+});
+
+test('the header names the church with a mark, not with the word calendar', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: the control read "{church} calendar" and now wears a
+   * calendar mark and the church's name alone, to give the header its width
+   * back. The mark is the same drawing as the month toggle on the calendar
+   * page, one size down.
+   *
+   * The accessible name is the part that must not thin out with the visible
+   * text: an icon says nothing to a screen reader, and the aria-label used to
+   * swallow the church's name while the visible text carried it. It now says
+   * which church as well as what a press does.
+   */
+  await ready(page, { church: 'romanian' });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const open = page.locator('#church-open');
+  await expect(open).toHaveText('Romanian');
+  await expect(open.locator('svg')).toHaveCount(1);
+  await expect(open).toHaveAttribute('aria-label', /Romanian calendar/);
+  await expect(open).toHaveAttribute('aria-label', /change which church/i);
+  // Shorter than the sentence it replaced, which was the point of the change:
+  // "Romanian calendar" at this face is comfortably past 130 px.
+  const box = await open.boundingBox();
+  expect(box.width).toBeLessThan(130);
+});
+
+test('About states the privacy policy, and states it as the code behaves', async ({ page }) => {
+  /*
+   * Author, 2026-08-24. Written against lib/settings.js and lib/store.js
+   * rather than as boilerplate: the four things kept are the reading
+   * position, the saved and recently-opened saints, the church and the theme,
+   * and how the Index was left. A privacy policy that has drifted from the
+   * code is worse than none, because a reader has no way to tell.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  const privacy = page.locator('section.privacy');
+  await expect(privacy.locator('h2')).toHaveText('Privacy');
+  await expect(privacy).toContainText('Nothing about you is collected');
+  await expect(privacy).toContainText('no account to make');
+  // The four kept things, each named.
+  await expect(privacy).toContainText('Where you were reading');
+  await expect(privacy).toContainText('saints you have saved');
+  await expect(privacy).toContainText('church whose calendar you chose');
+  await expect(privacy).toContainText('cards or rows');
+  // And what is not done.
+  await expect(privacy).toContainText('No analytics');
+  await expect(privacy).toContainText('no cookies');
+  await expect(privacy).toContainText('clearing the site');
+  // The two honest footnotes: this site does not host itself, and the
+  // readings link out.
+  await expect(privacy).toContainText('GitHub Pages');
+  await expect(privacy).toContainText('Bible Gateway');
+});
+
+test('the Index opens in earliest order, and says so', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: Earliest took the default from Name. The control is
+   * the half worth pinning — the <select> was written out option by option
+   * with the default implied by their order, so it read "Name" while the grid
+   * was already in Earliest order, and the label was lying about the list
+   * under it.
+   */
+  await ready(page);
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-sort]')).toHaveValue('earliest');
+  await expect(page.locator('[data-sort] option:checked')).toHaveText('Earliest date');
+  await expect(page.locator('.index-name').first()).toHaveText('St Moses the Prophet and God-seer');
+});
+
+test('latest runs the other way from earliest', async ({ page }) => {
+  /*
+   * Author, 2026-08-24, and this is the defect behind the instruction: both
+   * date orders were ascending and keyed only on a different bound of the
+   * life, so *Latest date* opened on Moses and Joshua exactly as *Earliest*
+   * did and read as a control that did nothing. Latest now means the most
+   * recently reposed first, which in the Russian calendar is a confessor of
+   * 1972.
+   */
+  await ready(page);
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  const first = page.locator('.index-name').first();
+  await expect(first).toHaveText('St Moses the Prophet and God-seer');
+  await page.selectOption('[data-sort]', 'latest');
+  await expect(first).toHaveText('St Peter (Cheltsov), Archpriest, Confessor (1972)');
+  await page.selectOption('[data-sort]', 'earliest');
+  await expect(first).toHaveText('St Moses the Prophet and God-seer');
+});
+
+test('random deals an order, and holds it still under the reader', async ({ page }) => {
+  /*
+   * Author, 2026-08-24. The Index is virtualised and re-filters on every
+   * keystroke in the search box, so the order cannot be a shuffled array — it
+   * would be re-dealt mid-scroll. It is derived from a seed and the slug
+   * instead, and the seed is kept for as long as Random stays chosen.
+   *
+   * The second half is the part a shuffle usually gets wrong, so it is forced
+   * here: two spaces typed into the search box trim to an empty query, which
+   * changes nothing about which saints match but runs the whole filter pass
+   * again.
+   */
+  await ready(page);
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  const first = page.locator('.index-name').first();
+  const earliest = await first.textContent();
+
+  await page.selectOption('[data-sort]', 'random');
+  const dealt = await first.textContent();
+  expect(dealt).not.toBe(earliest);
+  // The count is untouched: an order is not a filter.
+  await expect(page.locator('[data-count]')).toHaveText('405');
+
+  await page.locator('[data-query]').fill('  ');
+  await expect(page.locator('[data-count]')).toHaveText('405');
+  expect(await first.textContent()).toBe(dealt);
 });

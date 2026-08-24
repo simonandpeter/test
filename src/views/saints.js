@@ -27,6 +27,7 @@ import { loadDetail, prefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
 import {
   EMPTY_FILTERS,
+  SORTS,
   applyFilters,
   facetsOf,
   hasActiveFilters,
@@ -192,7 +193,7 @@ function applySnapshot(snap) {
   controlsEl.querySelector('[data-to]').value = f.to ?? '';
   const mode = controlsEl.querySelector(`input[name="rangeMode"][value="${f.rangeMode}"]`);
   if (mode) mode.checked = true;
-  controlsEl.querySelector('[data-sort]').value = f.sort ?? 'name';
+  controlsEl.querySelector('[data-sort]').value = f.sort ?? EMPTY_FILTERS.sort;
   for (const name of snap.openFacets ?? []) {
     const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
     if (group) group.open = true;
@@ -321,10 +322,17 @@ function controls(state) {
     <div class="index-foot">
       <div class="sort-group">
         <label class="sort-field utility">${STRINGS.saints.sort.label}
+          <!-- Built from SORTS with the current one marked, not written out
+               with the default implied by option order (author, 2026-08-24).
+               A <select> with no selected option shows its first, so listing
+               them by hand meant the control read "Name" while the grid was
+               already in Earliest order — the list was right and the label
+               was lying about it. -->
           <select data-sort>
-            <option value="name">${STRINGS.saints.sort.name}</option>
-            <option value="earliest">${STRINGS.saints.sort.earliest}</option>
-            <option value="latest">${STRINGS.saints.sort.latest}</option>
+            ${SORTS.map(
+              (id) => `<option value="${id}"${id === state.filters.sort ? ' selected' : ''}>` +
+                `${STRINGS.saints.sort[id]}</option>`,
+            ).join('')}
           </select>
         </label>
         <button type="button" data-random>${STRINGS.saints.random}</button>
@@ -346,6 +354,21 @@ function controls(state) {
       <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>
     </div>
   </div>`;
+}
+
+/**
+ * The sort, and the seed the Random order needs (author, 2026-08-24).
+ *
+ * A fresh seed each time Random is *arrived at*, so choosing it again after
+ * leaving it deals a new hand; the same seed for as long as it stays chosen,
+ * so typing in the search box or opening a facet does not reshuffle the grid
+ * under the reader — this function runs on every `input` event in the panel,
+ * which is most of them.
+ */
+function readSort(sort) {
+  if (sort !== 'random') return { sort, shuffleSeed: null };
+  const kept = state.filters.sort === 'random' ? state.filters.shuffleSeed : null;
+  return { sort, shuffleSeed: kept ?? String(Date.now()) };
 }
 
 function wireControls() {
@@ -373,7 +396,7 @@ function wireControls() {
       from: from === '' ? null : Number(from),
       to: to === '' ? null : Number(to),
       rangeMode: controlsEl.querySelector('input[name="rangeMode"]:checked').value,
-      sort: controlsEl.querySelector('[data-sort]').value,
+      ...readSort(controlsEl.querySelector('[data-sort]').value),
     };
     update({ animate: true });
   };
