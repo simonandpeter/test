@@ -19,6 +19,7 @@
 
 import { enabledChurches } from '../data/churches.js';
 import { chooseChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
+import { subscribeLanguage } from '../lib/i18n.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { STRINGS, fill } from './strings.js';
 
@@ -44,7 +45,7 @@ export function renderChoices(current = currentChurch()) {
     .map(
       (c) =>
         `<button type="button" class="church-choice" data-church="${c.id}" aria-pressed="${String(c.id === current)}">` +
-        `<span class="choice-name">${esc(c.display_name)}</span>` +
+        `<span class="choice-name">${esc(churchName(c.id))}</span>` +
         `<span class="choice-calendar utility">${esc(C.calendarOf[c.default_calendar] ?? c.default_calendar)}</span>` +
         `</button>`,
     )
@@ -130,5 +131,8 @@ export function mountChurchControl(button, panel) {
     if (e.key === 'Escape' && open) close();
   });
   paintButton();
+  // The button carries words in two registers — the church's name and the
+  // accessible sentence — so it repaints on either kind of change.
+  subscribeLanguage(paintButton);
   return subscribeChurch(paintButton);
 }

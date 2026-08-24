@@ -161,8 +161,11 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
-  // The chrome stays: an empty day must still offer a way onward.
-  await expect(page.locator('.week-strip button')).toHaveCount(7);
+  // The chrome stays: an empty day must still offer a way onward. The rail
+  // holds far more than seven days (2026-08-24); what matters here is that it
+  // is there and populated.
+  expect(await page.locator('.week-strip button').count()).toBeGreaterThan(7);
+  await expect(page.locator('.week-strip')).toBeVisible();
 });
 
 test('the hero image box is a square, cropped from the centre and the top', async ({ page }) => {
@@ -636,18 +639,20 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   // 24 and 27 are empty.
   await ready(page);
   await page.goto('/calendar/2026-06-22', { waitUntil: 'networkidle' });
-  const days = page.locator('.week-strip button');
+  // By date, not by position: the rail holds 121 days (2026-08-24), so the
+  // nth button is no longer the nth of this week.
+  const day = (iso) => page.locator(`.week-strip [data-iso="${iso}"]`);
 
-  await days.nth(5).click();
+  await day('2026-06-27').click();
   await page.waitForTimeout(60);
-  await days.nth(6).click();
+  await day('2026-06-28').click();
   await expect(page.locator('h1')).toHaveText(/28 June 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
-  await days.nth(2).click();
+  await day('2026-06-24').click();
   await expect(page.locator('h1')).toHaveText(/24 June 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
@@ -676,21 +681,62 @@ test('the month replaces the week rather than opening beneath it', async ({ page
   await expect(month).toBeHidden();
 });
 
-test('the chevrons move a week, and a day is chosen by clicking it', async ({ page }) => {
+test('a day is one click, and the keys step it from anywhere', async ({ page }) => {
+  /*
+   * Author, 2026-08-24 (Amendment 35). The peeked edges that moved a week are
+   * gone with the rail — the reader scrolls to any day instead — and the
+   * keyboard is now the page's, not the strip's: ArrowLeft/ArrowRight and S/D
+   * step a day from anywhere on the page. They were bound inside the strip
+   * until then, which meant they worked only after tabbing into it.
+   */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  // Scoped to the row that is current. The edges travel inside it now, so for
-  // the length of a slide the document holds two of every step button and only
-  // one of them is the reader's (Amendment 9's lesson, applied again).
-  const step = (n) => page.locator(`.week-row:not(.grain-side) [data-step="${n}"]`);
-  await step(7).click();
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await step(-7).click();
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 
-  // Days are still one click each.
-  await page.locator('.week-strip button').first().click();
+  // Days are one click each.
+  await page.locator('.week-strip [data-iso="2026-08-24"]').click();
   await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+
+  // The arrows, from the page body — no focus in the strip.
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await page.keyboard.press('ArrowLeft');
+  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+
+  // S and D beside them, for a hand that is not on the arrows.
+  await page.keyboard.press('d');
+  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await page.keyboard.press('s');
+  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+
+  // A modifier means the key is the browser's: ctrl+D must stay a bookmark.
+  await page.keyboard.press('Control+d');
+  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+});
+
+test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
+  /*
+   * The failure this pins is a leaked listener: wireDayKeys binds on
+   * `document`, so if its cleanup were dropped, S and D pressed in the
+   * Index's search box would be preventDefault-ed into dead keys — the
+   * letters would simply not appear. The route must also hold still.
+   *
+   * Honesty note (house rule): the in-page typing guard inside onKey has no
+   * reachable trigger today — the calendar page itself carries no text
+   * input, and on every other page the view is destroyed and `state` is
+   * null. It is defence-in-depth for the day the Daily page gains an input,
+   * and this test cannot exercise it alone; what it can and does exercise is
+   * the teardown, which is the layer that fails first in practice.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  // Leave through the app's own nav, so the calendar's destroy() runs the
+  // cleanups — the path a leak would leak through.
+  await page.locator('.site-nav a[href$="/saints"]').click();
+  const query = page.locator('[data-query]');
+  await query.focus();
+  await page.keyboard.type('sd');
+  await expect(query).toHaveValue('sd');
+  expect(page.url()).toContain('/saints');
 });
 
 test('the two jump controls hold the left edge and carry names, not glyphs alone', async ({ page }) => {
@@ -738,10 +784,28 @@ test('the week and the month both take a swipe, in the same direction', async ({
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  // A flick left is forward in time, at either grain.
-  await swipe(page, '.cal-week', -120);
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await swipe(page, '.cal-week', 120);
+  /*
+   * The week's swipe is the browser's own scroll now (2026-08-24, Amendment
+   * 35): the rail is a scroll container, a touch pan needs no listener of
+   * ours, and the alignment asserted here is the CSS proximity snap's own
+   * work — backing out settle() does not fail this test, and is not meant
+   * to. What settle() uniquely owns is re-anchoring, which has a test of its
+   * own below. A scroll left is forward in time by construction.
+   */
+  const settled = await page.evaluate(async () => {
+    const strip = document.querySelector('.week-strip');
+    const before = strip.scrollLeft;
+    strip.scrollBy({ left: 150, behavior: 'instant' });
+    await new Promise((r) => setTimeout(r, 400));
+    const pad = parseFloat(getComputedStyle(strip).scrollPaddingLeft);
+    const aligned = [...strip.querySelectorAll('[data-iso]')].some(
+      (b) => Math.abs(b.offsetLeft - strip.scrollLeft - pad) < 2,
+    );
+    return { moved: strip.scrollLeft > before, aligned };
+  });
+  expect(settled.moved).toBe(true);
+  expect(settled.aligned).toBe(true);
+  // Scrolling is not selecting: the day only changes when one is chosen.
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 
   await page.locator('[data-month]').click();
@@ -779,26 +843,24 @@ test('the month keeps the week edges where they were, and names itself in the gu
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
-  const weekPrev = await box('.cal-week .peek');
-  const weekNext = await box('.cal-week .peek-next');
+  const strip = await box('.week-strip');
+  // The rail replaced the week's peek buttons with real days (2026-08-24,
+  // Amendment 35), so the reference is the rail's own snap inset: the month's
+  // peeked column must stand in it — start where the strip starts, and end
+  // where the snapped days begin — or the two grains shift sideways as they
+  // swap. The snapped day's left edge is the strip's scroll-padding.
+  const inset = await page
+    .locator('.week-strip')
+    .evaluate((el) => parseFloat(getComputedStyle(el).scrollPaddingLeft));
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   const monthPrev = await box('.cal-month .peek');
   const monthNext = await box('.cal-month .peek-next');
 
-  // Same column at either grain, which is what keeps anything from moving
-  // sideways as the two swap. Not the same height, and — since the month's
-  // edges came inside the track so that they travel with the grid (author,
-  // 2026-08-21) — no longer the same top either: the month's button now starts
-  // under the day-name line, where its first cell is. What has to line up is
-  // the ink, and the peeked cell sharing the grid's first row is asserted
-  // directly in the test below.
-  for (const [w, m] of [[weekPrev, monthPrev], [weekNext, monthNext]]) {
-    expect(Math.round(m.x)).toBe(Math.round(w.x));
-    expect(Math.round(m.width)).toBe(Math.round(w.width));
-    expect(m.y).toBeGreaterThan(w.y);
-  }
+  expect(Math.round(monthPrev.x)).toBe(Math.round(strip.x));
+  expect(monthPrev.x + monthPrev.width).toBeLessThanOrEqual(strip.x + inset + 1);
+  expect(Math.round(monthNext.x + monthNext.width)).toBe(Math.round(strip.x + strip.width));
 
   // The name prints in the gutter under the jump stack and the back chevron
   // (author, 2026-08-21) rather than centred over the grid, where it pushed
@@ -834,7 +896,22 @@ test('the month is the week grown taller: the day names do not move', async ({ p
       });
     }, sel);
 
-  const week = await text('.week-strip .day-name');
+  // The seven snapped days of the rail — the ones standing where the week
+  // stood. The rail holds 121 (2026-08-24), so the visible run is selected by
+  // geometry: from the snap inset to its mirror on the right.
+  const week = (await page.evaluate(() => {
+    const strip = document.querySelector('.week-strip');
+    const sb = strip.getBoundingClientRect();
+    const pad = parseFloat(getComputedStyle(strip).scrollPaddingLeft);
+    const range = document.createRange();
+    return [...strip.querySelectorAll('.day-name')]
+      .map((el) => {
+        range.selectNodeContents(el);
+        const r = range.getBoundingClientRect();
+        return [Math.round(r.x + r.width / 2), Math.round(r.top), Math.round(r.height)];
+      })
+      .filter(([x]) => x > sb.x + pad - 2 && x < sb.right - pad + 2);
+  })).slice(0, 7);
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await page.waitForTimeout(600);
@@ -842,7 +919,16 @@ test('the month is the week grown taller: the day names do not move', async ({ p
   expect(week).toHaveLength(7);
   // Scoped to the day-name row: the peeked column beside the grid carries a
   // spacer in the same class, because it takes the same metrics from it.
-  expect(await text('.month-days .month-day-name')).toEqual(week);
+  // Within a pixel, not exact (2026-08-24): the rail is a flex row and the
+  // month a grid, and at 360 px the two round the same fractional column to
+  // neighbouring pixels. A real shift is a column's worth, not one pixel.
+  const month = await text('.month-days .month-day-name');
+  expect(month).toHaveLength(7);
+  for (let i = 0; i < 7; i += 1) {
+    expect(Math.abs(month[i][0] - week[i][0])).toBeLessThanOrEqual(1);
+    expect(Math.abs(month[i][1] - week[i][1])).toBeLessThanOrEqual(1);
+    expect(month[i][2]).toBe(week[i][2]);
+  }
 });
 
 test('the month spends its height on dates rather than on leading', async ({ page }) => {
@@ -947,36 +1033,39 @@ const duringMove = (page, viewport, rowClass, act) =>
     [viewport, rowClass, act],
   );
 
-test('a week travels sideways rather than swapping in place, edges and all', async ({ page }) => {
+test('the rail scrolls in one piece: real days, no copies, no track', async ({ page }) => {
+  /*
+   * The heir of "a week travels sideways rather than swapping in place"
+   * (2026-08-24, Amendment 35). The week no longer travels at all: it is one
+   * run of days on a scroll container, so there is nothing to copy, nothing
+   * to mark aside, and no transform to clean up after — Amendment 9's whole
+   * class of defect is structurally impossible here. What is worth pinning
+   * instead: the run is continuous (the day beyond each edge is a real,
+   * clickable day, not scenery), and scrolling it changes nothing until a day
+   * is chosen.
+   */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  const during = await duringMove(page, '.cal-week', 'week-row', '.week-row [data-step="7"]');
 
-  // Both weeks are on the track for the length of it, and the one being left is
-  // scenery: the document briefly holds two of every date, and only one set of
-  // them is the reader's. Out of reach as well as out of the accessibility
-  // tree — a copy laid over the live row swallows the next click otherwise.
-  expect(during.rows).toBe(2);
-  expect(during.sides).toEqual(['-100%']);
-  expect(during.hidden).toBe('true');
-  expect(during.reachable).toBe(0);
-  expect(during.reach).toBe('none');
-  expect(during.clipped).toBe(true);
+  // No swap machinery in the week, at rest or ever.
+  await expect(page.locator('.cal-week .grain-side')).toHaveCount(0);
+  await expect(page.locator('.cal-week .grain-track')).toHaveCount(0);
 
-  // The edges travel with the week (author, 2026-08-21). Each copy carries its
-  // own peeked days out and in — 23 and 31 leaving with the week they belong
-  // to, 30 and 7 arriving with the week that does. They used to be siblings of
-  // the viewport, repainting in place while the seven days between them slid,
-  // which read as the edges switching rather than as the grain continuing.
-  expect(during.sidePeeks).toEqual(['23', '31']);
-  expect(during.livePeeks).toEqual(['30', '7']);
+  // The day just beyond the trailing edge is real: the 31st, next Monday, in
+  // the same button dress as the 28th — and clicking it selects it.
+  const edge = page.locator('.week-strip [data-iso="2026-08-31"]');
+  await expect(edge).toBeVisible();
+  expect(await edge.evaluate((el, sel) => el.className === document.querySelector(sel).className,
+    '.week-strip [data-iso="2026-08-28"]')).toBe(true);
+  await edge.click();
+  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
 
-  // And it lands — one row, nothing clipped, no transform left on the track.
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await expect(page.locator('.week-row')).toHaveCount(1);
-  await expect(page.locator('.grain-side')).toHaveCount(0);
-  await expect(page.locator('.cal-week.is-moving')).toHaveCount(0);
-  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
+  // Scrolling the rail is not a selection.
+  await page.evaluate(() => {
+    document.querySelector('.week-strip').scrollBy({ left: 200, behavior: 'instant' });
+  });
+  await page.waitForTimeout(300);
+  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
 });
 
 test('a month travels sideways with its own edges, and its day names do not', async ({ page }) => {
@@ -1012,37 +1101,71 @@ test('a month travels sideways with its own edges, and its day names do not', as
   expect(await names()).toEqual(before);
 });
 
-test('picking a day inside the week showing does not move it', async ({ page }) => {
-  // The movement decides, not the gesture: there is nothing to travel to when
-  // the week under the strip is the same week.
+test('the rail never dead-ends: scrolled to its edge, it rebuilds around the reader', async ({ page }) => {
+  /*
+   * The rail is finite — 121 days around an anchor — and settle() re-anchors
+   * it when the reader comes to rest near an end, carrying the scroll offset
+   * across so nothing moves under them. This is the one job the CSS snap
+   * cannot do for us, so this is the test that fails when settle() is backed
+   * out: the run would simply stop 60 days out.
+   */
   await ready(page);
-  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  const moved = await page.evaluate(() => {
-    const vp = document.querySelector('.cal-week');
-    let seen = false;
-    const observer = new MutationObserver(() => {
-      if (vp.querySelector('.grain-side')) seen = true;
-    });
-    observer.observe(vp, { childList: true, subtree: true, attributes: true });
-    vp.querySelectorAll('[data-iso]')[3].click();
-    observer.disconnect();
-    return seen;
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const strip = page.locator('.week-strip');
+  const before = await strip.evaluate((el) => ({
+    n: el.querySelectorAll('[data-iso]').length,
+    last: [...el.querySelectorAll('[data-iso]')].at(-1).dataset.iso,
+  }));
+
+  await strip.evaluate((el) => {
+    el.scrollTo({ left: el.scrollWidth, behavior: 'instant' });
   });
-  expect(moved).toBe(false);
-  await expect(page.locator('h1')).toHaveText(/27 August 2026/);
+  await page.waitForTimeout(450);
+
+  const after = await strip.evaluate((el) => ({
+    n: el.querySelectorAll('[data-iso]').length,
+    last: [...el.querySelectorAll('[data-iso]')].at(-1).dataset.iso,
+    // And the reader was not thrown: some day is still on the snap column.
+    aligned: (() => {
+      const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
+      return [...el.querySelectorAll('[data-iso]')].some(
+        (b) => Math.abs(b.offsetLeft - el.scrollLeft - pad) < 2,
+      );
+    })(),
+  }));
+  expect(after.n).toBe(before.n);
+  expect(after.last > before.last).toBe(true);
+  expect(after.aligned).toBe(true);
 });
 
-test('under reduced motion a week step leaves no second copy behind', async ({ browser }) => {
+test('picking a day already in view does not move the rail', async ({ page }) => {
+  // The movement decides, not the gesture (DESIGN.md §5b, unchanged by the
+  // rail): a day already on screen has nowhere to be brought from, so the
+  // rail must not stir under the click.
+  await ready(page);
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  const before = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
+  await page.locator('.week-strip [data-iso="2026-08-27"]').click();
+  await expect(page.locator('h1')).toHaveText(/27 August 2026/);
+  await page.waitForTimeout(250);
+  const after = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
+  expect(Math.abs(after - before)).toBeLessThan(2);
+});
+
+test('under reduced motion the rail steps without a glide', async ({ browser }) => {
+  // Removed, not shortened: the reveal that brings a stepped day into view is
+  // an instant scroll under reduced motion, not a smooth one — and stepping
+  // off the visible edge still arrives.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('.week-row [data-step="7"]').click();
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  // Removed, not shortened: no trip to sit through, and so no copy to clean up
-  // after one.
-  await expect(page.locator('.grain-side')).toHaveCount(0);
-  await expect(page.locator('.cal-week.is-moving')).toHaveCount(0);
+  // Sunday is the last snapped day; stepping past it forces a reveal.
+  await page.locator('.week-strip [data-iso="2026-08-30"]').click();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  // The stepped-to day is in view at once, nothing left mid-glide.
+  await expect(page.locator('.week-strip [data-iso="2026-08-31"]')).toBeInViewport();
   await ctx.close();
 });
 
@@ -1090,49 +1213,47 @@ const releaseGrain = (page, selector, dx) =>
     [selector, dx],
   );
 
-test('the week follows the finger, and lets go into the grain it is nearest', async ({ page }) => {
-  // Hold-and-slide (author, 2026-08-21). The state does not move while the
-  // reader is still holding it: what is under the finger is the chrome, and the
-  // day only changes once they have let go somewhere.
+test('a mouse holds the rail and slides it, and letting go settles on a day', async ({ page }) => {
+  /*
+   * The reversal (author, 2026-08-24, Amendment 35): §5b called a mouse drag
+   * across a date grid a selection, not a gesture, and the instruction is
+   * that it is a gesture here. Nothing is lost to selection — the rail holds
+   * numerals in buttons, no prose. Touch and pen need none of this handling:
+   * the browser pans a scroll container natively.
+   *
+   * The state does not move while the reader is holding it — scrolling is not
+   * selecting — and the click that ends a drag is swallowed, so the day under
+   * the pointer at release is not accidentally chosen.
+   */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await dragGrain(page, '.cal-week', -24, { release: false });
+  const strip = page.locator('.week-strip');
+  const box = await strip.boundingBox();
+  const y = box.y + box.height / 2;
+  const before = await strip.evaluate((el) => el.scrollLeft);
 
-  const held = await page.evaluate(() => {
-    const vp = document.querySelector('.cal-week');
-    return {
-      rows: vp.querySelectorAll('.week-row').length,
-      sides: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.left).sort(),
-      transform: vp.querySelector('.grain-track').style.transform,
-      clipped: vp.classList.contains('is-moving'),
-      heading: document.querySelector('h1').textContent,
-    };
-  });
-  // Both neighbours are parked either side, so there is something to drag into
-  // view in either direction without waiting for a repaint mid-gesture.
-  expect(held.rows).toBe(3);
-  expect(held.sides).toEqual(['-100%', '100%']);
-  expect(held.transform).toMatch(/^translateX\(-\d/);
-  expect(held.clipped).toBe(true);
-  expect(held.heading).toContain('28 August 2026');
-
-  // Let go short of a finger's travel — under SETTLE — and the week the reader
-  // started in is still the nearest one, so it settles back and nothing has
-  // happened.
-  await releaseGrain(page, '.cal-week', -24);
-  await expect(page.locator('.grain-side')).toHaveCount(0);
+  await page.mouse.move(box.x + box.width / 2, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 12, y);
+  // Held: the rail has followed the hand, the day has not changed.
+  const held = await strip.evaluate((el) => el.scrollLeft);
+  expect(held).toBeGreaterThan(before + 60);
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
-  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
+  expect(await strip.evaluate((el) => el.classList.contains('is-dragging'))).toBe(true);
 
-  // Past it — and 48 px is a small swipe, not a haul — and it lets go into the
-  // next week. Measured in pixels rather than as a fraction of the grain, which
-  // is what the threshold is: the same swipe has to work at 1280 and at 360,
-  // and it used to need a third of the width, which was 210 px on a laptop.
-  await dragGrain(page, '.cal-week', -48);
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await expect(page.locator('.grain-side')).toHaveCount(0);
-  await expect(page.locator('.cal-week .peek-prev .day-num')).toHaveText('30');
-  await expect(page.locator('.cal-week .peek-next .day-num')).toHaveText('7');
+  await page.mouse.up();
+  await page.waitForTimeout(450);
+  // Released: it settles onto a day — any day, not a Monday — and the click
+  // that ended the drag chose nothing.
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  const aligned = await strip.evaluate((el) => {
+    const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
+    return [...el.querySelectorAll('[data-iso]')].some(
+      (b) => Math.abs(b.offsetLeft - el.scrollLeft - pad) < 2,
+    );
+  });
+  expect(aligned).toBe(true);
+  expect(await strip.evaluate((el) => el.classList.contains('is-dragging'))).toBe(false);
 });
 
 test('the month follows the finger too, and takes its height with it', async ({ page }) => {
@@ -1169,23 +1290,32 @@ test('the month follows the finger too, and takes its height with it', async ({ 
   expect((await page.locator('.month-body').boundingBox()).height).toBeGreaterThan(fiveRows);
 });
 
-test('under reduced motion a drag lets go into place with nothing to sit through', async ({ browser }) => {
-  // Removed, not shortened. Following the finger is direct manipulation and
-  // stays; the settle is an animation and goes, so the grain is simply there
-  // the moment the reader lets go.
+test('under reduced motion a mouse drag settles with nothing to sit through', async ({ browser }) => {
+  // Removed, not shortened. Following the hand is direct manipulation and
+  // stays; the settle's glide is an animation and goes — the rail is simply
+  // on a day the moment it comes to rest.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const strip = page.locator('.week-strip');
+  const box = await strip.boundingBox();
+  const y = box.y + box.height / 2;
 
-  await dragGrain(page, '.cal-week', -48, { release: false });
-  expect(await page.locator('.grain-side').count()).toBe(2);
-  await releaseGrain(page, '.cal-week', -48);
-
-  // Read on the very next turn, with nothing awaited that could hide a wait.
-  expect(await page.locator('h1').textContent()).toContain('4 September 2026');
-  expect(await page.locator('.grain-side').count()).toBe(0);
-  expect(await page.locator('.cal-week .grain-track').evaluate((el) => el.style.transform)).toBe('');
+  await page.mouse.move(box.x + box.width / 2, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 12, y);
+  await page.mouse.up();
+  // The settle detector waits for the rail to rest, then aligns instantly:
+  // one bounded wait, no glide after it.
+  await page.waitForTimeout(300);
+  const aligned = await strip.evaluate((el) => {
+    const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
+    return [...el.querySelectorAll('[data-iso]')].some(
+      (b) => Math.abs(b.offsetLeft - el.scrollLeft - pad) < 2,
+    );
+  });
+  expect(aligned).toBe(true);
   await ctx.close();
 });
 
@@ -1420,54 +1550,65 @@ test('the header carries no date, and the corner holds two controls', async ({ p
   if (m.wide) expect(m.header).toBeLessThan(64);
 });
 
-test('the arrows are gone and the grain itself stands at each edge', async ({ page }) => {
+test('the days at the rail edges are real days, unmasked, and one click each', async ({ page }) => {
+  /*
+   * The heir of "the arrows are gone and the grain itself stands at each
+   * edge" (author, 2026-08-24, Amendment 35). The peeked edges were buttons
+   * that *looked* like the grain continuing — one masked copy of a day either
+   * side, each a disguised week-step. Now the grain actually continues: the
+   * 23rd and the 31st in the inset are the same buttons as the seven between
+   * them, in full ink with no mask, and clicking one selects that day rather
+   * than moving a week.
+   */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  // Nothing in the row draws a chevron any more (author, 2026-08-21).
+  // Still no chevrons anywhere in the chrome (author, 2026-08-21 — stands).
   const glyphs = await page.locator('.cal-controls button').allTextContents();
   expect(glyphs.join('')).not.toMatch(/[‹›]/);
 
-  // What stands there is the week continuing: the day behind it and the day
-  // ahead of it, on the same lines as the days between.
-  await expect(page.locator('.cal-week .peek-prev .day-num')).toHaveText('23');
-  await expect(page.locator('.cal-week .peek-next .day-num')).toHaveText('31');
-  const fades = await page.locator('.cal-week .peek').evaluateAll((els) =>
-    els.map((el) => getComputedStyle(el).maskImage),
-  );
-  expect(fades.every((f) => f.includes('gradient'))).toBe(true);
+  // The neighbours are in the document and partly in view at each edge.
+  const prev = page.locator('.week-strip [data-iso="2026-08-23"]');
+  const next = page.locator('.week-strip [data-iso="2026-08-31"]');
+  await expect(prev).toBeVisible();
+  await expect(next).toBeVisible();
 
-  // The swipe is touch and pen only, so the edge has to stay clickable or a
-  // reader with a mouse has no way through the weeks at all.
-  const current = '.week-row:not(.grain-side)';
-  await page.locator(`${current} .peek-next`).click();
-  await expect(page.locator('h1')).toHaveText(/4 September 2026/);
-  await page.locator(`${current} .peek-prev`).click();
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  // Unmasked and at full strength: the fade went with the peek buttons. The
+  // contrast argument that forced the mask (Amendment 16) is moot — these are
+  // ordinary day buttons in the ordinary ink.
+  for (const day of [prev, next]) {
+    const style = await day.evaluate((el) => {
+      const s = getComputedStyle(el);
+      return { mask: s.maskImage, opacity: s.opacity };
+    });
+    expect(style.mask).toBe('none');
+    expect(style.opacity).toBe('1');
+  }
+
+  // One click selects the day itself — the edge is not a week-step any more.
+  await next.click();
+  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
 });
 
-test('the peeked numbers clear the contrast floor rather than being a faded wash', async ({ page }) => {
-  // A flat 50% opacity over --ink-soft is 2.1:1 and axe failed it on sight.
-  // The fade is a mask instead, so the ink stays at full strength wherever
-  // there is still a glyph to read.
+test('every day on the rail is full-strength ink — no wash, no mask', async ({ page }) => {
+  // The heir of the peeked-contrast test (Amendment 16 → Amendment 35). The
+  // mask existed to fade a *copy* without washing its ink below 4.5:1; the
+  // rail has no copies, so the honest assertion is now uniformity: every day
+  // button, snapped or at the clipped edge, is the same colour at the same
+  // strength. A backout that dimmed the edge days would land here.
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  // Both edges. A first draft of this checked only the trailing one, and a
-  // backout that washed out just the leading one walked straight past it.
-  const peeks = await page.locator('.cal-week .peek').evaluateAll((els) =>
-    els.map((el) => {
-      const s = getComputedStyle(el);
-      return { color: s.color, opacity: s.opacity };
-    }),
-  );
-  const soft = await page.evaluate(() =>
-    getComputedStyle(document.querySelector('.week-strip button')).color,
-  );
-  expect(peeks).toHaveLength(2);
-  for (const peek of peeks) {
-    expect(peek.opacity).toBe('1');
-    expect(peek.color).toBe(soft);
-  }
+  const days = await page.evaluate(() => {
+    const buttons = [...document.querySelectorAll('.week-strip [data-iso]')];
+    const seen = new Set();
+    for (const b of buttons) {
+      const s = getComputedStyle(b);
+      seen.add(`${s.color}|${s.opacity}|${s.maskImage}`);
+    }
+    return [...seen];
+  });
+  expect(days).toHaveLength(1);
+  expect(days[0]).toMatch(/\|1\|none$/);
 });
 
 test('the month peeks a column of the neighbouring month, on the grid own rows', async ({ page }) => {
@@ -1613,32 +1754,25 @@ test('the question is asked once, and answering it is choosing', async ({ page }
   await expect(page.locator('#church-open')).toHaveText('Romanian');
 });
 
-test('the peeked day sits on the same line as the days beside it', async ({ page }) => {
-  // The peek is not inside a day button, so it inherits neither that button's
-  // one transparent border nor its --space-1 of padding, and both its name and
-  // its numeral printed 5 px high (author, 2026-08-21). Measured on the text
-  // rather than on the boxes, which legitimately differ: the day name is a flex
-  // item in a bordered button on one side and a span in the peek on the other.
+test('every day on the rail sits on one line', async ({ page }) => {
+  // The heir of "the peeked day sits on the same line as the days beside it"
+  // (Amendment 35): the fault it guarded — an edge element outside the day
+  // buttons missing their border and padding and printing 5 px high — cannot
+  // recur in this form, because the edge days *are* day buttons. What is
+  // pinned instead is the property itself: one top for every day name and one
+  // for every numeral, across the whole rail.
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  const lines = await page.evaluate(() => {
-    const top = (sel) => Math.round(document.querySelector(sel).getBoundingClientRect().top);
-    return {
-      prevName: top('.cal-week .peek-prev .day-name'),
-      nextName: top('.cal-week .peek-next .day-name'),
-      dayName: top('.week-strip .day-name'),
-      prevNum: top('.cal-week .peek-prev .day-num'),
-      nextNum: top('.cal-week .peek-next .day-num'),
-      dayNum: top('.week-strip .day-num'),
-    };
+  const tops = await page.evaluate(() => {
+    const one = (sel) =>
+      new Set(
+        [...document.querySelectorAll(sel)].map((el) => Math.round(el.getBoundingClientRect().top)),
+      ).size;
+    return { names: one('.week-strip .day-name'), nums: one('.week-strip .day-num') };
   });
-  // Both edges. A backout that fixed only the leading one would otherwise walk
-  // straight past this, which is how the contrast check on these was written.
-  expect(lines.prevName).toBe(lines.dayName);
-  expect(lines.nextName).toBe(lines.dayName);
-  expect(lines.prevNum).toBe(lines.dayNum);
-  expect(lines.nextNum).toBe(lines.dayNum);
+  expect(tops.names).toBe(1);
+  expect(tops.nums).toBe(1);
 });
 
 test('the hero image is 85% of the width it took, and opens the saint', async ({ page }) => {
@@ -2878,4 +3012,107 @@ test('random deals an order, and holds it still under the reader', async ({ page
   await page.locator('[data-query]').fill('  ');
   await expect(page.locator('[data-count]')).toHaveText('405');
   expect(await first.textContent()).toBe(dealt);
+});
+
+/* ---- the site's language (Amendment 36) --------------------------------- */
+
+test('the language control offers five, each naming itself in its own tongue', async ({ page }) => {
+  /*
+   * Author, 2026-08-24. A globe mark and the current code between the
+   * calendar control and the theme toggle; the panel offers each language in
+   * its own name — «Русский», not "Russian" — because the reader who needs
+   * the control is precisely the one who may not read the language the site
+   * is currently in. Each choice carries its own lang attribute so a screen
+   * reader pronounces it in that language.
+   */
+  await ready(page);
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const open = page.locator('#lang-open');
+  await expect(open).toHaveText('EN');
+  await expect(open.locator('svg')).toHaveCount(1);
+  await expect(open).toHaveAttribute('aria-label', /English/);
+
+  await open.click();
+  const choices = page.locator('#lang-panel [data-language]');
+  await expect(choices).toHaveCount(5);
+  await expect(choices.locator('.choice-name')).toHaveText([
+    'English', 'Русский', 'Română', 'Ελληνικά', 'Српски',
+  ]);
+  await expect(choices.nth(1)).toHaveAttribute('lang', 'ru');
+  // The author's codes — GR and RS, not the BCP tags.
+  await expect(choices.locator('.choice-calendar')).toHaveText(['EN', 'RU', 'RO', 'GR', 'RS']);
+});
+
+test('choosing Russian redraws the page in Russian, dates included, and it holds across a reload', async ({ page }) => {
+  await ready(page);
+  await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
+  await page.locator('#lang-open').click();
+  await page.locator('#lang-panel [data-language="ru"]').click();
+
+  // The whole chrome, live, with no reload: the document's language, the
+  // nav, the header's church control (through the same STRINGS the packs
+  // merge over), the date through Intl — which is why the formatters are a
+  // per-language cache and not module constants — and the title.
+  expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
+  await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
+  await expect(page.locator('#church-open')).toHaveText('Русская');
+  await expect(page.locator('h1')).toHaveText('среда, 26 августа 2026 г.');
+  await expect(page).toHaveTitle(/Православный святой/);
+  // The fast line: label and recurring reason translated, the cycle line
+  // deliberately not — it is composed in English by lib/liturgy.js, the
+  // recorded seam of Amendment 36.
+  await expect(page.locator('[data-liturgy]')).toContainText('Пост — Успенский пост');
+  await expect(page.locator('[data-liturgy]')).toContainText('Глас 3');
+
+  // And it is a setting, not a session: the reload comes back Russian.
+  await page.reload({ waitUntil: 'networkidle' });
+  expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
+  await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
+  await expect(page.locator('#lang-open')).toHaveText('RU');
+});
+
+test('every language fits the 360 px header, and none leaks a placeholder', async ({ browser }) => {
+  /*
+   * The two failure modes hand-written packs actually produce: a string long
+   * enough to overflow the narrow header (Russian did, at first writing —
+   * «Русская церковь» put it 6 px over, which is why the packs name the
+   * churches by adjective alone), and a {placeholder} that survives to the
+   * reader because a template lost its token (the unit suite pins token
+   * parity; this pins the rendered page).
+   */
+  for (const lang of ['ru', 'ro', 'el', 'sr']) {
+    const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+    const page = await ctx.newPage();
+    await page.addInitScript(
+      (l) => localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: l })),
+      lang,
+    );
+    await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+    expect(overflow, `${lang} overflows 360px`).toBe(0);
+    const chrome = await page.evaluate(
+      () => document.querySelector('header').innerText + document.querySelector('[data-liturgy]').innerText,
+    );
+    expect(chrome, `${lang} leaks a placeholder`).not.toMatch(/\{\w+\}/);
+    await ctx.close();
+  }
+});
+
+test('the Index speaks the chosen language, saints excepted', async ({ page }) => {
+  // The boundary of Amendment 36, asserted from both sides: the chrome is
+  // Serbian, the corpus is not — names and lives stay English by decision
+  // (a machine-translated life is Amendment 2's forbidden invention), and
+  // the source-language material is already on the page elsewhere.
+  await ready(page);
+  await page.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'sr' })),
+  );
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1')).toHaveText('Сви светитељи');
+  await expect(page.locator('[data-sort] option:checked')).toHaveText('Најранији прво');
+  await expect(page.locator('[data-set-aside]')).toContainText('Руска');
+  // The saint is still English, honorific included.
+  await expect(page.locator('.index-name').first()).toHaveText('St Moses the Prophet and God-seer');
 });

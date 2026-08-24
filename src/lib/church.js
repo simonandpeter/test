@@ -14,6 +14,7 @@
  */
 
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
+import { STRINGS } from '../ui/strings.js';
 import { readSettings, writeSetting } from './settings.js';
 
 export const churchIds = () => enabledChurches().map((c) => c.id);
@@ -58,7 +59,9 @@ export function chooseChurch(id) {
   return id;
 }
 
-export const churchName = (id) => CHURCHES_BY_ID[id]?.display_name ?? '';
+// Through STRINGS first (Amendment 36), so the locale packs reach it; the
+// registry's display_name is the fallback and the English truth.
+export const churchName = (id) => STRINGS.church.names?.[id] ?? CHURCHES_BY_ID[id]?.display_name ?? '';
 
 /* ---- what it does ------------------------------------------------------- */
 

@@ -37,10 +37,11 @@ import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { churchName, currentChurch, keptBy, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
+import { dateFormatter } from '../lib/i18n.js';
 
 const BASE = import.meta.env.BASE_URL;
 
-export const title = STRINGS.saints.title;
+export const title = () => STRINGS.saints.title;
 
 const GAP = 16;
 /**
@@ -71,8 +72,8 @@ const DETAILED_CARD_TEXT_HEIGHT = 157;
 const DETAILED_ROW_HEIGHT = 112;
 const LAYOUTS = ['cards', 'rows'];
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'long', timeZone: 'UTC' });
-const monthLabel = (m) => monthFmt.format(new Date(Date.UTC(2001, m - 1, 1)));
+const monthLabel = (m) =>
+  dateFormatter({ month: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(2001, m - 1, 1)));
 
 let state = null;
 

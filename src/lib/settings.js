@@ -18,6 +18,10 @@ const DEFAULTS = {
   // `traditions` and `calendar` stood here for the cross-church build and went
   // with it; values left in a reader's storage from then are simply ignored.
   church: null,
+  // The site's language (author, 2026-08-24): one of lib/i18n.js's five ids.
+  // English until chosen; unlike the church there is no ask-first state,
+  // because English is an answer and not a question.
+  language: 'en',
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.

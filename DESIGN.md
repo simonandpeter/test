@@ -356,6 +356,17 @@ one `--cal-peek`, so nothing moves sideways as the two swap; the month's edge
 is taller because it is a column where the week's is a day, which is the one
 thing that legitimately differs.
 
+*Superseded for the week (author, 2026-08-24, Amendment 35): **the week's
+edges are not buttons any more, because they are not copies any more.** The
+strip is a rail — one continuous scrolling run of days — and what shows in the
+inset at each edge is the neighbouring day itself, a real button in full ink,
+clicked to be selected like any other. The affordance the peek-as-button
+existed to preserve (a mouse's way through the weeks) is preserved better: the
+mouse drags the rail directly, and the arrow keys and S/D step the day from
+anywhere on the page. The month's edges are unchanged — it still travels a
+month at a time, so its peeked columns still need to be clickable. This
+paragraph and the three below it stand in full for the month.*
+
 **The peeked day sits on the line the days beside it sit on.** It is not
 inside a day button, so it inherits neither that button's one transparent
 border nor its `--space-1` of padding, and without them it printed 5 px high —
@@ -366,7 +377,12 @@ month's column never had the fault: its cells take the grid's own classes.
 2.1:1 against gesso and the quality floor fails it on sight, which is the right
 answer: text a sighted reader might try to read has to clear 4.5:1 wherever it
 is legible at all. The ink stays at full strength and the dissolve happens over
-the outer half of the peek, where there is no longer a glyph to read. **Picking a date does not close the month**;
+the outer half of the peek, where there is no longer a glyph to read. *For the
+week, moot since Amendment 35 (2026-08-24): the rail's edge days are ordinary
+buttons at full strength with no mask at all — the contrast problem the mask
+solved only existed because the edge was a decorated copy. The month's peeks
+keep the mask, and this paragraph keeps its force there and for anything else
+that fades text.* **Picking a date does not close the month**;
 only the toggle does, so a reader comparing days is not reopening it between
 each one.
 
@@ -395,6 +411,21 @@ drop the jump buttons off the left edge, which is the arrangement — so at
 narrow widths the chevrons and day cells give up width instead; seven days plus
 both controls fit 360 px and the quality floor's overflow check holds it.
 
+*Superseded for the week (author, 2026-08-24, Amendment 35), in three of its
+claims. The unit of travel: the rail scrolls freely and settles on **any
+day**, not a week at a time — a Wednesday can lead the strip. The mouse: **a
+mouse drag on the rail is a gesture now**, by instruction; the old text's
+reason ("a drag across a date grid is a selection") loses nothing here because
+the rail holds numerals in buttons, no selectable prose, and clicking is
+untouched. The keyboard: the arrow keys — with **S and D** as their
+off-hand twins — step the day **from anywhere on the page**, not from inside
+the strip, guarded so they never fire while the reader is typing and never
+override a modifier chord. Touch is unchanged in behaviour and simpler in
+mechanism: the browser's own scroll, snapped by CSS. What still stands: a day
+is chosen by clicking it, scrolling is never selecting, and the swallowed
+click at the end of a mouse drag. The month keeps every word of the paragraph
+above.*
+
 The page opens on this row rather than on a heading, so it takes a heading's
 worth less air beneath the site header than every other view.
 
@@ -412,7 +443,14 @@ shortened.
 
 **A grain travels sideways, edges included, and it can be dragged.** Each
 grain sits on a **track** inside a viewport, and the track is what moves. It
-moves two ways, and they are deliberately the same movement.
+moves two ways, and they are deliberately the same movement. *(Since
+Amendment 35, 2026-08-24, this and the four paragraphs after it describe the
+**month alone**: the week left the track for a native scroll container — no
+copies, no `swap.js` flight, no transform — because a rail that actually
+scrolls does not need machinery for pretending to. `ui/grain.js` remains the
+month's, and River mode should still weigh both shapes: the track where
+content must move a fixed span at a time, the rail where it should rest
+anywhere.)*
 
 *Travel* — a peeked edge, an arrow key off the end of the strip, the jump to
 today. The state changes first and the live row is repainted to where it has
@@ -687,6 +725,15 @@ the church and what a press does.*
 immediately above four buttons each printing exactly that. Four lines of
 delay between a question and its answer, and the answer said it better.
 `STRINGS.church.lede` is deleted rather than left dark.*
+
+*A third control (author, 2026-08-24, Amendment 36): **the language**, a
+globe mark and the current code — "EN" — between the calendar control and the
+theme toggle, opening the five languages in the same panel dress. Each
+language names itself in its own tongue, because the reader who needs the
+control is the one who may not read the site's current language. The chrome
+translates whole (`src/ui/locales/`); the corpus stays English plus the
+source-language material already on the page — the boundary and its two
+accepted seams are Amendment 36's entry and `lib/i18n.js`'s header.*
 
 ### 5c. The saint's page
 

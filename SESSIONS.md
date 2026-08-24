@@ -1599,6 +1599,126 @@ the UI strings are one module and genuinely cheap, but the corpus is 708 lives
 and 430 hymns and no part of that is a UI translation job. Both are the
 author's call and are recorded in HANDOFF.md's queue.
 
+**35. The week strip becomes a rail** (author's instruction, 2026-08-24,
+confirming the reversal Amendment 34 held for the asking: "Remake the weekly
+display … a clean horizontal scroll across the dates, locking into place when
+it slows down at any point not just between Monday and Sunday … click and drag
+in desktop just like … mobile … the gradient faded left and right 'buttons' no
+longer exist but are actual days printed on the screen", plus "left/right, and
+'S' and 'D' also work to go left and right when not typing").
+
+**What it is now.** The strip is a scroll container holding a run of 121 real
+day buttons — RAIL_RADIUS 60 either side of an anchor — that the browser pans
+on touch and pen, a mouse drags directly, and CSS `scroll-snap-type: x
+proximity` lands on a day when it slows: *any* day, a Wednesday as readily as
+a Monday. What shows at each edge is the neighbouring day itself, full ink, no
+mask, clicked to be selected like any other. A settle listener (140 ms after
+the last scroll event) aligns the rest and **re-anchors**: within 14 days of
+either end the rail is rebuilt around where the reader is, the scroll offset
+carried across, so the run never dead-ends — that re-anchor is the one job the
+CSS snap cannot do, and its test is the one that fails when the settle is
+backed out. Arrow keys and **S/D** step a day from anywhere on the page,
+guarded off modifier chords and text inputs. Selecting a day already in view
+moves nothing; a day stepped off the edge brings itself in by one column.
+
+**Four §5b decisions reverse, each marked where it sits in DESIGN.md.** The
+edges-as-buttons (the affordance they preserved — a mouse's way through — is
+preserved better by the drag and the keys); the mask-not-opacity fade (moot
+for the week: the edge days are ordinary buttons at full strength; the month
+keeps it); the week as the unit of travel; and touch-and-pen-only (the old
+text's own reason — "a mouse has no gesture here at all" — was the thing the
+instruction fixed; nothing is lost to text selection because the rail holds
+numerals in buttons). The month's track, `ui/grain.js` and `swap.js` are
+untouched and still the month's; the week simply left the track, because a
+rail that actually scrolls needs no machinery for pretending to. **What was
+deliberately kept:** the rail's snapped columns are the month grid's columns
+to the pixel — `--rail-inset` is derived from the same `--cal-peek` and gap —
+so "the month is the week grown taller" survived the rewrite, verified to the
+pixel at 1280 and within one at 360 (flex and grid round a fractional column
+to neighbouring pixels; the test allows exactly that one).
+
+**What the suite said, which is most of the story.** Fourteen tests pinned the
+old mechanism and were rewritten as heirs — each keeping its old purpose where
+the purpose survived (fast clicks, one-click days, the month alignment) and
+saying plainly where it did not (no copies to mark aside means Amendment 9's
+defect class is structurally impossible in the week, so the travel test now
+pins *real days, no copies, no track*). Two of the first rewrites were caught
+asserting nothing: backing out the settle passed the swipe test (CSS proximity
+snap was doing the aligning — the comment now credits it, and the settle got
+the dead-end test it uniquely deserves), and the typing-guard test was
+vacuous because the calendar page has no text input and `state` is null
+elsewhere — it now pins the teardown (a leaked document listener turning S and
+D into dead keys in the Index's search box), and the in-page guard is
+documented as defence-in-depth with no reachable trigger today, per the house
+rule about saying so. One piece of the drag handling is knowingly untested:
+the click-swallow after a mouse drag is reachable only when
+`setPointerCapture` fails (with capture held, the browser retargets the
+release click to the strip, where it finds no day — probed directly), so it is
+kept as the catch-path's companion with a comment saying exactly that.
+Backouts run and watched fail: the keys, the leaked-listener teardown, the
+settle's re-anchor, the drag handlers. 240 browser tests at this amendment's
+close.
+
+**36. The site speaks five languages, and the corpus stays in its own**
+(author's instruction, 2026-08-24: a language control in the header — EN, RU,
+RO, GR, RS — "and provide these translations", scoped by the author's answer
+to do "the English and source languages").
+
+**The mechanism.** `lib/i18n.js` mirrors `lib/church.js` — one live copy,
+choose/subscribe — and merges a partial, STRINGS-shaped locale pack over a
+deep-cloned English base **in place**, so `const C = STRINGS.church` captured
+at import time keeps working: branches are mutated, never replaced. A prune
+pass deletes pack-only keys first — without it the `reasons` branch rode along
+into every later language, found by the unit test that asserts English
+restores *exactly*, not by a reader. Dates go through a per-language formatter
+cache (`dateFormatter`), because an `Intl.DateTimeFormat` built once can never
+change language — the five module-level `en-GB` constants in three views
+became functions of the current language, and flushing that cache on change is
+what makes «среда, 26 августа 2026 г.» appear without a reload. The header's
+control is a globe and the current code, opening the five in the church
+panel's own dress; each choice names its language in its own tongue —
+«Русский», not "Russian" — because the reader who needs the control is
+precisely the one who may not read the language the site is currently in.
+`<html lang>` follows the choice, which also retires the standing dishonesty
+of `lang="en"` on pages already printing Greek and Church Slavonic. A change
+re-renders the open view through `router.refresh()` (new), and the view
+titles became thunks so `document.title` follows.
+
+**The packs are hand-written, and the grammar drove real decisions.** Russian
+past tense carries gender and 68 of the corpus's saints are women, so
+"Entered eternal glory in {when}" is recast nominally — «Кончина — {when}» —
+rather than shipped broken as «Отошёл»; Serbian and Greek follow the same
+shape. The church names are translated through a new `STRINGS.church.names`
+(the registry keeps the English truth; `churchName()` reads STRINGS first)
+and are the **adjective alone** — «Русская» — because «Русская церковь» put
+the 360 px header six pixels over its width; that overflow, and a leaked
+`{placeholder}`, are exactly the two failures hand-written packs produce, and
+both have a browser test that walks all four languages at 360.
+
+**The boundary, drawn on purpose and tested from both sides.** The chrome
+translates; the corpus does not: 708 lives written in English after their
+synaxaria, names, and the data's own display strings ("5th century") stay
+English, because a machine-translated life is Amendment 2's forbidden
+invention — and the source-language material a reader of that language
+actually wants (hymns, quoted calendar lines, name forms) is already on the
+page in the original, which is what "English and source languages" affordably
+means. Two seams are accepted and recorded rather than half-done:
+`lib/liturgy.js` composes its cycle line ("13th week after Pentecost") in
+English — localising it means restructuring the generator to return shape
+rather than sentence, four languages of ordinal grammar deep, the author's
+call if wanted — and the fast reasons are English strings in the data, so the
+packs carry a `reasons` map for the ~24 recurring ones («Успенский пост») and
+pass anything unlisted through in English, honestly. The honorific stays "St"
+in every language because the name it decorates is English.
+
+**Verification.** 139 unit (132 + 7: pack keys all exist in the English base,
+placeholder parity across every string of all four packs, in-place mutation
+with exact English restore, fill over a translated template, the reasons
+passthrough, church names through STRINGS), 248 browser (240 + 4 × 2). Five
+backouts run and watched fail: persistence, the formatter-cache flush, the
+church-name STRINGS read, the reason translation, the prune. Both suites
+green at the close of the sitting.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

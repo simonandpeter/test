@@ -32,20 +32,21 @@ import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
+import { dateFormatter, translateReason } from '../lib/i18n.js';
 import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
-export const title = STRINGS.calendar.title;
+export const title = () => STRINGS.calendar.title;
 
 const BASE = import.meta.env.BASE_URL;
 
-const dayFmt = new Intl.DateTimeFormat('en-GB', {
-  weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
-});
-const weekdayFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'UTC' });
+// Through lib/i18n.js's cache rather than module constants (Amendment 36): a
+// formatter built once can never change language.
+const dayFmt = () => dateFormatter({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const weekdayFmt = () => dateFormatter({ weekday: 'short', timeZone: 'UTC' });
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.
-const monthFmt = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+const monthFmt = () => dateFormatter({ month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 const utc = (iso) => {
   const d = parseIso(iso);
@@ -117,7 +118,7 @@ export function render(el, { data, params, router }) {
     monthCursor: null, monthOpen: false,
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
-    weekGrain: null, monthGrain: null,
+    monthGrain: null, railAnchor: null,
   };
 
   el.innerHTML = `
@@ -132,15 +133,8 @@ export function render(el, { data, params, router }) {
           </div>
           <div class="cal-span">
             <div class="cal-week">
-              <div class="grain-track">
-                <div class="week-row">
-                  <button type="button" class="peek peek-prev" data-step="-7"
-                    aria-label="${STRINGS.calendar.prevWeek}"></button>
-                  <div class="week-strip" role="group" aria-label="${STRINGS.calendar.weekLabel}"></div>
-                  <button type="button" class="peek peek-next" data-step="7"
-                    aria-label="${STRINGS.calendar.nextWeek}"></button>
-                </div>
-              </div>
+              <div class="week-strip" role="group" tabindex="0"
+                aria-label="${STRINGS.calendar.weekLabel}"></div>
             </div>
             <div class="cal-month" hidden>
               <span class="month-name"></span>
@@ -170,11 +164,6 @@ export function render(el, { data, params, router }) {
       <div class="shelves" data-shelves></div>
     </div>`;
 
-  // The chevrons move a week; a day is chosen by clicking it in the strip.
-  // Arrow keys inside the strip stay on a day, because that is the only way a
-  // keyboard reaches one without tabbing across the whole week.
-  el.querySelector('[data-step="-7"]').addEventListener('click', () => step(-7));
-  el.querySelector('[data-step="7"]').addEventListener('click', () => step(7));
   el.querySelector('[data-today]').addEventListener('click', () => select(todayIso()));
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
@@ -189,22 +178,20 @@ export function render(el, { data, params, router }) {
     subscribeChurch(() => {
       if (!state) return;
       paintGate();
+      // The density dots under every date are the chosen church's counts, so
+      // the rail is rebuilt, not just re-marked — carrying its anchor and
+      // then re-revealing the selected day so the reader's place holds.
+      buildRail(state.railAnchor ?? state.selected);
       paintChrome();
+      revealSelected();
       repaintDay();
     }),
   );
 
-  // Both grains sit on a track and both take a hold-and-slide, in the same
-  // direction: dragging left is forward in time. The week's viewport is the
-  // whole row; the month's is the body under the day-name line, because those
-  // names are the one thing that must not travel.
-  state.weekGrain = makeGrain({
-    viewport: el.querySelector('.cal-week'),
-    row: el.querySelector('.week-row'),
-    paint: (row, offset, opts) => paintWeekInto(row, addDaysIso(state.selected, 7 * offset), opts),
-    settle: (offset) => select(addDaysIso(state.selected, 7 * offset), { travelled: true }),
-    flick: (dir) => step(7 * dir),
-  });
+  // The month still travels a whole month at a time on a track it is thrown
+  // along; the week does not travel at all any more — it scrolls (see
+  // wireRail). Its viewport is the body under the day-name line, because those
+  // names are the one thing that must not move.
   state.monthGrain = makeGrain({
     viewport: el.querySelector('.month-body'),
     row: el.querySelector('.month-row'),
@@ -222,20 +209,20 @@ export function render(el, { data, params, router }) {
     },
   });
   state.cleanups.push(
-    () => state.weekGrain?.land(),
     () => state.monthGrain?.land(),
     () => landSwap(el.querySelector('.slot-viewport')),
     () => landSwap(el.querySelector('.cal-span')),
-    onGrainDrag(el.querySelector('.cal-week'), state.weekGrain.handlers),
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
+    wireRail(el.querySelector('.week-strip')),
+    wireDayKeys(),
   );
-  el.querySelector('.week-strip').addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
-  });
 
   paintGate();
+  buildRail(selected);
   paintChrome();
+  // The whole week the day sits in, not the day pinned to an edge: a reader
+  // arriving by deep link gets the same first picture the old strip gave.
+  revealSelected({ week: true });
   paintDay(el.querySelector('.day-panel'));
   wireDay(el.querySelector('.day-panel'));
   state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
@@ -253,20 +240,18 @@ function wireDay(panel) {
 
 const step = (n) => select(addDaysIso(state.selected, n));
 
-function select(iso, { travelled = false } = {}) {
+function select(iso) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;
-  // The strip travels when the week under it actually changes — a peeked edge,
-  // a flick, an arrow key off the end, the jump to today — and not when a day
-  // is picked inside the week already showing, where there is nowhere to
-  // travel to. The gesture is not what decides it; the movement is. A drag has
-  // already made the trip by hand, and does not make it twice.
-  const moved = weekOf(iso)[0] !== weekOf(state.selected)[0];
   state.selected = iso;
   state.monthCursor = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
   paintChrome();
-  if (moved && !travelled) state.weekGrain.travel(forward ? 1 : -1);
+  // The rail does not travel — it is scrolled, and only as far as it has to be
+  // (author, 2026-08-24). A day picked inside the days already showing moves
+  // nothing at all; a day stepped off the end brings itself into view by one
+  // column, not by a week, because the rail has no weeks in it to step by.
+  revealSelected();
   slotSwap(forward);
 }
 
@@ -327,8 +312,8 @@ function repaintDay() {
 
 function paintChrome() {
   const { el, selected } = state;
-  paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
-  el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
+  markRail();
+  el.querySelector('.cal-date').textContent = dayFmt().format(utc(selected));
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }
@@ -351,10 +336,15 @@ function paintLiturgy() {
   const L = STRINGS.calendar.liturgy;
   const day = liturgicalDay(selected, calendar);
   const f = day.fasting;
+  // The reason is an English string from the data or from lib/liturgy.js;
+  // the locale packs translate the recurring ones and pass the rest through
+  // (Amendment 36). day.title stays English — the cycle line is composed by
+  // lib/liturgy.js and localising its grammar is the recorded seam.
+  const reason = f.reason ? translateReason(f.reason) : f.reason;
   const fastText =
-    f.kind === 'fast' ? fill(L.fast, { reason: f.reason })
-    : f.kind === 'fish' ? fill(L.fish, { reason: f.reason })
-    : f.reason ? fill(L.freeBecause, { reason: f.reason })
+    f.kind === 'fast' ? fill(L.fast, { reason })
+    : f.kind === 'fish' ? fill(L.fish, { reason })
+    : f.reason ? fill(L.freeBecause, { reason })
     : L.free;
   const fastHtml = `<span class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}">${esc(fastText)}</span>`;
   const plain = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null].filter(Boolean).map(esc);
@@ -504,56 +494,266 @@ function paintGate() {
   body.hidden = false;
 }
 
-/**
- * One week into one row: the seven days, and the two edges either side of them
- * — the Sunday behind the week and the Monday ahead of it, set on the same
- * lines as the days between and dissolving toward the margin.
+/* ---- the day rail ------------------------------------------------------- */
+
+/*
+ * The week strip is a rail of days that scrolls, and this replaced the week
+ * grain on 2026-08-24 at the author's instruction. Four decisions of
+ * DESIGN.md §5b go with it and each is marked superseded where it sits: the
+ * peeked edges were buttons, the fade was a mask, the unit of travel was a
+ * week, and a drag was touch and pen only.
  *
- * The edges replaced the chevrons (author, 2026-08-21) and they travel with
- * the week, which is why they are painted here rather than beside it: the peek
- * is the week continuing, and a row is the whole of one.
+ * What the reader gets instead: one continuous run of days, snapping to
+ * whichever day it comes to rest nearest — any day, not only a Monday — and
+ * the days either side of the seven on screen are *real days*, printed in the
+ * same ink as the rest and clickable, rather than a masked copy of one.
  *
- * They are still buttons. A drag is touch and pen only by design, so an edge
- * with nothing to click would strand every reader with a mouse; what went is
- * the glyph, not the affordance.
- *
- * `live` is false for the copies parked either side during a move. They are
- * `aria-hidden` and out of reach, so a listener on them would be a listener
- * nothing can reach — and the day it selected would be the wrong one anyway.
+ * The rail is finite and re-anchors itself. RADIUS days either side of an
+ * anchor is 121 buttons, which is cheap; when the reader scrolls within
+ * MARGIN days of an end, the rail is rebuilt around where they are and the
+ * scroll offset is carried across, so nothing moves under them and the run
+ * never dead-ends.
  */
-function paintWeekInto(row, iso, { live }) {
-  const { selected } = state;
+
+const RAIL_RADIUS = 60;
+const RAIL_MARGIN = 14;
+/** Where a mouse hold stops being a click and starts being a drag. */
+const DRAG_SLOP = 6;
+/** How long after the last scroll event the rail counts as at rest. */
+const SETTLED = 140;
+
+const dayButton = (iso) => {
+  const n = countFor(iso, state.data);
+  const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
+  return `<button type="button" data-iso="${iso}" tabindex="-1"
+    aria-label="${dayFmt().format(utc(iso))}${density}">
+    <span class="day-name">${weekdayFmt().format(utc(iso))}</span>
+    <span class="day-num">${parseIso(iso).day}</span>
+    <span class="density" aria-hidden="true">${densityDots(iso)}</span>
+  </button>`;
+};
+
+/** Every day in the rail, anchored on `iso`. Density is read here, so this is
+ *  also how the rail is repainted when the church changes under it. */
+function buildRail(iso) {
+  const strip = state.el.querySelector('.week-strip');
+  state.railAnchor = iso;
+  const days = [];
+  for (let i = -RAIL_RADIUS; i <= RAIL_RADIUS; i += 1) days.push(addDaysIso(iso, i));
+  strip.innerHTML = days.map(dayButton).join('');
+  markRail();
+}
+
+/** The two marks that move without the rail being rebuilt. */
+function markRail() {
+  const strip = state.el?.querySelector('.week-strip');
+  if (!strip) return;
   const today = todayIso();
-  const week = weekOf(iso);
-
-  row.querySelector('.week-strip').innerHTML = week
-    .map((day) => {
-      const n = countFor(day, state.data);
-      const current = day === selected ? ' aria-current="date"' : '';
-      const cls = day === today ? ' class="is-today"' : '';
-      const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
-      return `<button type="button" data-iso="${day}"${current}${cls}
-        aria-label="${dayFmt.format(utc(day))}${density}">
-        <span class="day-name">${weekdayFmt.format(utc(day))}</span>
-        <span class="day-num">${parseIso(day).day}</span>
-        <span class="density" aria-hidden="true">${densityDots(day)}</span>
-      </button>`;
-    })
-    .join('');
-
-  for (const [sel, edge] of [
-    ['.peek-prev', addDaysIso(week[0], -1)],
-    ['.peek-next', addDaysIso(week[6], 1)],
-  ]) {
-    row.querySelector(sel).innerHTML = `
-      <span class="day-name" aria-hidden="true">${weekdayFmt.format(utc(edge))}</span>
-      <span class="day-num" aria-hidden="true">${parseIso(edge).day}</span>`;
+  for (const b of strip.querySelectorAll('[data-iso]')) {
+    const iso = b.dataset.iso;
+    b.classList.toggle('is-today', iso === today);
+    if (iso === state.selected) b.setAttribute('aria-current', 'date');
+    else b.removeAttribute('aria-current');
   }
+}
 
-  if (!live) return;
-  for (const b of row.querySelectorAll('.week-strip [data-iso]')) {
-    b.addEventListener('click', () => select(b.dataset.iso));
+const dayAt = (iso) => state.el?.querySelector(`.week-strip [data-iso="${iso}"]`);
+
+/** The inset a snapped day sits at: the peeked column and the row's gap. */
+function railPad(strip) {
+  return parseFloat(getComputedStyle(strip).scrollPaddingLeft) || 0;
+}
+
+/** Where the rail would rest with `iso` at the leading edge. */
+const restFor = (strip, button) => Math.max(0, button.offsetLeft - railPad(strip));
+
+function scrollRail(strip, left, { smooth = true } = {}) {
+  strip.scrollTo({ left, behavior: smooth && !reducedMotion() ? 'smooth' : 'auto' });
+}
+
+/** The day currently nearest the leading edge — what a rest settles onto. */
+function leadingDay(strip) {
+  const target = strip.scrollLeft + railPad(strip);
+  let best = null;
+  for (const b of strip.querySelectorAll('[data-iso]')) {
+    const d = Math.abs(b.offsetLeft - target);
+    if (!best || d < best.d) best = { d, button: b };
   }
+  return best?.button ?? null;
+}
+
+/**
+ * The selected day, brought into view by as little as possible — and on a
+ * first paint, its whole week, because a reader arriving at a date should see
+ * the week it sits in rather than that day pinned to the edge.
+ */
+function revealSelected({ week = false } = {}) {
+  const strip = state.el?.querySelector('.week-strip');
+  const button = dayAt(state.selected);
+  if (!strip || !button) return;
+  if (week) {
+    const monday = dayAt(weekOf(state.selected)[0]) ?? button;
+    scrollRail(strip, restFor(strip, monday), { smooth: false });
+    return;
+  }
+  const pad = railPad(strip);
+  const left = button.offsetLeft - strip.scrollLeft;
+  const right = left + button.offsetWidth;
+  if (left >= pad - 1 && right <= strip.clientWidth - pad + 1) return;
+  // Off one end: bring it just inside that end, which is one column of travel
+  // rather than a week of it.
+  const rest =
+    left < pad
+      ? restFor(strip, button)
+      : button.offsetLeft + button.offsetWidth - strip.clientWidth + pad;
+  scrollRail(strip, Math.max(0, rest));
+}
+
+/**
+ * Everything the rail needs to be a rail: choosing a day, a mouse drag, the
+ * settle after one, and the re-anchoring that keeps it endless. Returns the
+ * teardown.
+ *
+ * Touch and pen need none of it — the browser pans a scroll container and
+ * `scroll-snap-type` lands it on a day, which is the whole of the gesture.
+ * A mouse gets the same movement by hand, which is the reversal: §5b called a
+ * mouse drag across a date grid a selection rather than a gesture, and the
+ * author's instruction is that it is a gesture here. Text selection is not
+ * lost — there is no prose in the rail, only numerals in buttons.
+ */
+function wireRail(strip) {
+  let hold = null;
+  let restTimer = null;
+
+  const onClick = (e) => {
+    const button = e.target.closest('[data-iso]');
+    if (button && strip.contains(button)) select(button.dataset.iso);
+  };
+
+  const swallow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  /** Come to rest on a day, and re-anchor if the reader is near an end. */
+  const settle = () => {
+    const button = leadingDay(strip);
+    if (!button) return;
+    scrollRail(strip, restFor(strip, button));
+    reanchor(button.dataset.iso);
+  };
+
+  /**
+   * Rebuild around where the reader is, carrying the scroll offset across so
+   * nothing moves. Both rails have identical geometry, so the same day at the
+   * same offset is the same picture.
+   */
+  const reanchor = (iso) => {
+    const buttons = [...strip.querySelectorAll('[data-iso]')];
+    const at = buttons.findIndex((b) => b.dataset.iso === iso);
+    if (at < 0 || (at >= RAIL_MARGIN && at < buttons.length - RAIL_MARGIN)) return;
+    const offset = buttons[at].offsetLeft - strip.scrollLeft;
+    buildRail(iso);
+    const moved = dayAt(iso);
+    if (moved) strip.scrollLeft = moved.offsetLeft - offset;
+  };
+
+  const onScroll = () => {
+    if (hold) return;
+    clearTimeout(restTimer);
+    restTimer = setTimeout(settle, SETTLED);
+  };
+
+  const down = (e) => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    hold = { x: e.clientX, from: strip.scrollLeft, id: e.pointerId, dragging: false };
+  };
+
+  const move = (e) => {
+    if (!hold || e.pointerId !== hold.id) return;
+    const dx = e.clientX - hold.x;
+    if (!hold.dragging) {
+      if (Math.abs(dx) < DRAG_SLOP) return;
+      hold.dragging = true;
+      // Snapping is suspended for the length of the hold: mandatory snap
+      // fights a scrollLeft written every frame, and the rail stutters.
+      strip.classList.add('is-dragging');
+      try {
+        strip.setPointerCapture(e.pointerId);
+      } catch {
+        // A synthetic pointer has nothing to capture; the drag still tracks.
+      }
+    }
+    strip.scrollLeft = hold.from - dx;
+    e.preventDefault();
+  };
+
+  const up = (e) => {
+    if (!hold || e.pointerId !== hold.id) return;
+    const dragged = hold.dragging;
+    hold = null;
+    if (!dragged) return;
+    strip.classList.remove('is-dragging');
+    // The click that ends a drag reaches a day only when setPointerCapture
+    // failed (the catch above): with capture held, the browser retargets the
+    // click to the strip and onClick finds no [data-iso] — verified by
+    // probing, 2026-08-24. So this is the catch-path's companion, and no
+    // browser test exercises it while capture works; it is kept because the
+    // failure it prevents — a drag that also selects — is the one §5b's old
+    // text warned about, and the cost is two lines.
+    strip.addEventListener('click', swallow, { capture: true, once: true });
+    setTimeout(() => strip.removeEventListener('click', swallow, { capture: true }), 0);
+    settle();
+  };
+
+  strip.addEventListener('click', onClick);
+  strip.addEventListener('scroll', onScroll, { passive: true });
+  strip.addEventListener('pointerdown', down);
+  strip.addEventListener('pointermove', move);
+  strip.addEventListener('pointerup', up);
+  strip.addEventListener('pointercancel', up);
+
+  return () => {
+    clearTimeout(restTimer);
+    strip.removeEventListener('click', onClick);
+    strip.removeEventListener('scroll', onScroll);
+    strip.removeEventListener('pointerdown', down);
+    strip.removeEventListener('pointermove', move);
+    strip.removeEventListener('pointerup', up);
+    strip.removeEventListener('pointercancel', up);
+    strip.removeEventListener('click', swallow, { capture: true });
+  };
+}
+
+/**
+ * A day either way from anywhere on the page (author, 2026-08-24): the arrow
+ * keys, and S and D beside them for a hand that is not on the arrows. They
+ * were bound to the week strip alone until then, which meant they worked only
+ * once a reader had tabbed into it.
+ *
+ * Not while the reader is typing. A key that steps the day out from under
+ * someone halfway through a search term is worse than no shortcut, so
+ * anything with a text cursor in it — input, textarea, contenteditable — and
+ * anything a select is handling keeps its keys. A modifier means the key
+ * belongs to the browser: ctrl+D is a bookmark and must stay one.
+ */
+function wireDayKeys() {
+  const typing = (node) =>
+    node instanceof HTMLElement &&
+    (node.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(node.tagName));
+
+  const onKey = (e) => {
+    if (!state || e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (typing(e.target) || typing(document.activeElement)) return;
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    const dir = key === 'ArrowLeft' || key === 's' ? -1 : key === 'ArrowRight' || key === 'd' ? 1 : 0;
+    if (!dir) return;
+    e.preventDefault();
+    step(dir);
+  };
+
+  document.addEventListener('keydown', onKey);
+  return () => document.removeEventListener('keydown', onKey);
 }
 
 /* ---- month view ------------------------------------------------------- */
@@ -584,7 +784,6 @@ function toggleMonth() {
 
   button.setAttribute('aria-expanded', String(monthOpen));
   button.classList.toggle('is-on', monthOpen);
-  state.weekGrain.land();
   state.monthGrain.land();
   // A fade still in flight lands rather than being abandoned mid-air, so this
   // toggle always starts from one grain showing and one at rest.
@@ -700,12 +899,12 @@ function paintMonth() {
 
   // The name prints in the gutter beside the grid rather than above it, so it
   // costs the row no height (author, 2026-08-21).
-  el.querySelector('.month-name').textContent = monthFmt.format(utc(first));
+  el.querySelector('.month-name').textContent = monthFmt().format(utc(first));
 
   // They say nothing a date's own label does not — the button below each of
   // them reads "Friday, 30 January 2026" in full.
   el.querySelector('.month-days').innerHTML = weekOf(first)
-    .map((iso) => `<span class="month-day-name">${weekdayFmt.format(utc(iso))}</span>`)
+    .map((iso) => `<span class="month-day-name">${weekdayFmt().format(utc(iso))}</span>`)
     .join('');
 
   paintMonthInto(el.querySelector('.month-row'), cursor, { live: true });
@@ -728,7 +927,7 @@ function paintMonthInto(row, cursor, { live }) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
     cells.push(`<button type="button" data-iso="${iso}"${current}
-      aria-label="${dayFmt.format(utc(iso))}">${day}<span class="density"
+      aria-label="${dayFmt().format(utc(iso))}">${day}<span class="density"
       aria-hidden="true">${densityDots(iso)}</span></button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');

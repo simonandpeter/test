@@ -1,6 +1,6 @@
 import { STRINGS } from '../ui/strings.js';
 
-export const title = STRINGS.about.title;
+export const title = () => STRINGS.about.title;
 
 const P = STRINGS.about.privacy;
 

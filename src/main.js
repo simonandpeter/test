@@ -12,6 +12,8 @@ import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
 import { cancelPrefetches } from './lib/detail.js';
 import { mountChurchControl } from './ui/church-chooser.js';
+import { mountLanguageControl } from './ui/language-chooser.js';
+import { currentLanguage, languageTag, subscribeLanguage } from './lib/i18n.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -77,7 +79,11 @@ function show({ route, params, path }, nav = {}) {
     // A view whose title depends on what it is showing supplies titleFor; the
     // manifest is already loaded, so it never has to wait for a fetch to name
     // the page.
-    const heading = view.titleFor ? view.titleFor(params, data) : view.title;
+    const heading = view.titleFor
+      ? view.titleFor(params, data)
+      : typeof view.title === 'function'
+        ? view.title()
+        : view.title;
     document.title = `${heading} — ${STRINGS.site.name}`;
     view.render(viewEl, { data, params, router, nav, cameFrom });
     // Keyboard and screen-reader focus follows the page change — but not
@@ -110,10 +116,22 @@ function show({ route, params, path }, nav = {}) {
 
 async function boot() {
   initTheme(document.getElementById('theme-toggle'));
+  // The stored language is applied before anything renders (Amendment 36):
+  // currentLanguage() merges the locale over STRINGS on first read, and the
+  // document says what language it now speaks.
+  currentLanguage();
+  document.documentElement.lang = languageTag();
   // The site-wide church control (author, 2026-08-22): one choice, read by
   // every view through lib/church.js. It names itself.
   mountChurchControl(document.getElementById('church-open'), document.getElementById('church-panel'));
+  mountLanguageControl(document.getElementById('lang-open'), document.getElementById('lang-panel'));
   router = createRouter(routes, show);
+
+  // A language change re-renders everything that carries words: the open view
+  // and the nav through refresh() — every render reads STRINGS afresh — the
+  // title through show()'s own path, and the church control through its own
+  // language subscription in church-chooser.js.
+  subscribeLanguage(() => router.refresh());
 
   const veil = document.getElementById('veil');
   try {

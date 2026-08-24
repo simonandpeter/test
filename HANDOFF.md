@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-24 (Amendment 34)
+## State as of 2026-08-24 (Amendment 36)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,18 +74,19 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 132 unit tests (`npm test`) — pure logic, no DOM.
-- 236 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-24, Amendment 34's sitting), not carried over from a
-  commit message. `npm run test:all` runs both; CI runs both on every push.
-  They were 129 and 220 through Amendment 33.
-- **Amendment 34 is committed but not pushed** — this session had no
-  credentials, which is the usual state (see "Pushing happens outside this
-  session" below). `git fetch origin` at the start of that session showed
-  `origin/main` at `ab94de3`, level with local HEAD, so everything through
-  Amendment 33 is pushed and CI's last word is about that. Neither statement
-  is evidence that CI is green: this environment has no `gh` CLI to check the
-  Actions run itself, so eyeball it on GitHub before building on top.
+- 139 unit tests (`npm test`) — pure logic, no DOM.
+- 248 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-24, the sitting of Amendments 34–36), not carried
+  over from a commit message. `npm run test:all` runs both; CI runs both on
+  every push. They were 129 and 220 through Amendment 33.
+- **Amendment 34 was committed and pushed by the author mid-sitting**
+  (`7b7b10d`, 2026-08-24 20:58 — the parallel-session pattern this file warns
+  about, caught by fetching before committing rather than by luck).
+  **Amendments 35–36 are committed on top of it but not pushed** — the agent
+  session had no credentials, which is the usual state (see "Pushing happens
+  outside this session" below). None of that is evidence that CI is green:
+  this environment has no `gh` CLI to check the Actions run itself, so
+  eyeball it on GitHub before building on top.
 
 **Corpus as of 2026-08-24: 708 saints**, every one with a life and four
 attestation rows; 430 hymns; readings/fasting for 23 August – 19 September in
@@ -95,7 +96,7 @@ note — saint.gr has not published that far out as of Amendment 31's check on
 four added at Amendment 31). The generating pipeline is under `.tmp/w3/`
 (untracked).
 
-**Since Amendment 31 was written up, four more amendments landed the same
+**Since Amendment 31 was written up, six more amendments landed the same
 day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
 
 - **Amendment 31's own loose ends, closed:** the browser suite run and watched
@@ -131,8 +132,27 @@ day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
   **Latest now runs descending** — both date orders were ascending and
   differed only in which bound they keyed on, so Latest read as a control that
   did nothing; and there is a seeded **Random** order. The other two of the
-  nine — the week strip's rework and site translations — are in the queue
-  below, both needing the author.
+  nine — the week strip's rework and site translations — were confirmed by
+  the author the same day and became Amendments 35 and 36.
+
+- **Amendment 35, the rail:** the week strip is a native scroll container of
+  121 real day buttons — free horizontal scroll snapping to *any* day, mouse
+  drag on desktop, arrow keys and S/D stepping the day from anywhere, the
+  masked peek buttons replaced by the neighbouring days themselves in full
+  ink. Four §5b decisions reversed, each marked in place in DESIGN.md; the
+  month keeps its track and `ui/grain.js` untouched. The rail's columns are
+  the month grid's to the pixel, so "the month is the week grown taller"
+  survived. Fourteen browser tests rewritten as heirs; two were caught
+  asserting nothing and got real failure modes to pin.
+
+- **Amendment 36, five languages:** EN, RU, RO, GR, RS from a globe control in
+  the header — the full chrome hand-translated in `src/ui/locales/`, dates
+  through a per-language `Intl` cache, `<html lang>` honest at last. The
+  corpus stays English plus its existing source-language material, by
+  decision (Amendment 2: no invented content). Two recorded seams: the
+  liturgical cycle line is composed in English by `lib/liturgy.js`, and fast
+  reasons are English data strings — a per-pack `reasons` map translates the
+  recurring ones and passes the rest through.
 
 **Pushing happens outside this session** unless your own session has been
 given credentials — check before assuming otherwise. Agent sessions
@@ -293,39 +313,21 @@ up cold; the two the author has to decide are marked.
   clearance, so it passes. Raised by looking at a screenshot, 2026-08-24;
   the author queued it the same day.
 
-- **The week strip's rework — needs the author, raised and awaiting an
-  answer.** A continuous horizontal scroll across the dates, locking to
-  whichever day it slows on rather than to week boundaries; hold-and-drag on
-  the desktop as well as on touch; and the peeked edges printed as real days
-  instead of masked buttons. This reverses four decisions in DESIGN.md §5b at
-  once (no chevrons but the edges stay buttons; the fade is a mask, never an
-  opacity; a grain's unit of travel is a week; touch and pen only) and
-  rebuilds the week's half of `ui/grain.js`. Worth knowing before it is
-  argued: §5b's stated reason for keeping the edges as buttons is that a
-  mouse has no gesture here at all — which the desktop drag in the same
-  instruction removes. The part that needs care either way is the keyboard:
-  the strip's arrow keys and the peeks' `aria-label`s are how a keyboard
-  reaches a day off the end, and a scroll container is not a substitute for
-  them. Full reasoning in SESSIONS.md Amendment 34.
+- **The liturgical cycle line still speaks English in every language**
+  (Amendment 36's recorded seam). "13th week after Pentecost" is composed as
+  an English sentence inside `lib/liturgy.js`; giving it to the packs means
+  restructuring the generator to return shape ({kind, n, weekday}) and
+  formatting per language — four languages of ordinal grammar. The fast
+  *reasons* are already translated through each pack's `reasons` map; the
+  cycle line is the remaining English on a translated Daily page. The
+  author's call whether it is worth the restructure.
 
-- **Site translations (EN, RU, RO, GR, RS) — needs the author.** Asked as a
-  question ("how difficult would it be") and answered as one rather than
-  started. The short version: the chrome is cheap and the corpus is not.
-  `ui/strings.js` is already the single home for every UI string, by design
-  (brief §16), so translating the chrome is a contained job. The corpus is
-  708 lives, 430 hymns, the readings and the fasting notes, and translating
-  those is not a UI task at all — it is the sourcing discipline of Amendment
-  2 again, where a machine-translated life would be exactly the kind of
-  invented content the project refuses. The author's own suggestion —
-  each church's saints in English and that church's language — is the
-  affordable shape, because for most of those saints the source text
-  *already exists* in that language in the cited page the entry was read
-  from. Also unresolved and cheap to get wrong: the honorific ("St" is
-  `lib/honorific.js`, applied at render, and every language forms it
-  differently), the search index, which is built from bare names and already
-  needed a special case for "St", and `<html lang>`, which currently claims
-  `en` for pages already printing Greek and Church Slavonic. Awaiting the
-  author's scope.
+- **The lives, hymns-labels and data displays stay English by decision**
+  (Amendments 2 and 36) — "5th century", the register's quoted lines, the
+  `display` strings in dates. If the author ever wants per-church-language
+  lives, the affordable shape remains citation, not translation: the source
+  text already exists in that language at the cited URL for most of the
+  corpus.
 
 **The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
 phases, both built. Phase 1 — the Index's *Detailed* option, the bookmark that

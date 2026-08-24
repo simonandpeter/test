@@ -1,7 +1,7 @@
 import { churchName, currentChurch, keptBy } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
-export const title = STRINGS.map.title;
+export const title = () => STRINGS.map.title;
 
 /**
  * A placeholder until Session 7, but one that already reads the reader's

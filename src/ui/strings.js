@@ -111,6 +111,23 @@ export const STRINGS = {
     heading: 'Which calendar do you keep?',
     groupLabel: 'Churches',
     calendarOf: { julian: 'Julian calendar', 'revised-julian': 'Revised Julian calendar' },
+    // The churches by id, here rather than only in data/churches.js, so the
+    // locale packs can translate them (Amendment 36): the registry stays the
+    // authority on what exists, this is the authority on what it is called.
+    names: { russian: 'Russian', romanian: 'Romanian', greek: 'Greek', serbian: 'Serbian' },
+  },
+
+  /*
+   * The site's language (author, 2026-08-24, Amendment 36): five, chosen from
+   * the header. Each language names itself in lib/i18n.js's registry; these
+   * are only the control's own strings.
+   */
+  language: {
+    open: 'Language',
+    openLabel: 'The site’s language',
+    showingLabel: '{name} — change the site’s language',
+    heading: 'In which language?',
+    groupLabel: 'Languages',
   },
 
   dates: {

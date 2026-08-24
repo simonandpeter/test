@@ -17,6 +17,11 @@
   /* The empty column to the left of the strip — the jump stack, the row gap
      and the leading peek. The month prints its name into it. */
   --cal-gutter: calc(34px + var(--space-3) + var(--cal-peek));
+  /* Where the rail's snapped day comes to rest, measured from the strip's
+     edge: the peek column plus the gap the month row puts after it — so the
+     rail's seven columns are the month's seven columns, and "the month is the
+     week grown taller" survives the rail (2026-08-24). */
+  --rail-inset: calc(var(--cal-peek) + var(--space-2));
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -65,6 +70,10 @@
   flex: 1 1 auto;
   min-width: 0;
   display: grid;
+  /* minmax(0, 1fr), not the auto track: the rail inside holds 121 days and an
+     auto track would size itself to all of them, carrying the cell to 4600 px
+     and the buttons' percentage widths with it (2026-08-24). */
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .cal-week,
@@ -75,15 +84,14 @@
   touch-action: pan-y;
 }
 
-/* Both grains travel as a whole row — leading peek, dates, trailing peek —
+/* The month travels as a whole row — leading peek, dates, trailing peek —
    because the peek is the grain continuing and an edge that repainted in place
    while the dates between them slid read as the edges switching rather than as
-   the grain moving (author, 2026-08-21). The month's day names are the one
-   thing that does not travel: they are the same seven whichever month is under
-   them, and they are what the week strip holds in exactly the same place. So
-   they stand on their own line above the body, with a gap at each end standing
-   in for the peeked column. */
-.week-row,
+   the grain moving (author, 2026-08-21). Its day names are the one thing that
+   does not travel: they stand on their own line above the body, with a gap at
+   each end standing in for the peeked column. The week had a row of its own
+   here until 2026-08-24, when it became the scrolling rail below and stopped
+   travelling at all. */
 .month-row,
 .month-days-line {
   display: flex;
@@ -101,7 +109,6 @@
    the gaps in the day-name line and the gutter derived from them — so the
    month's column lands in exactly the place the week's edge did and nothing
    moves sideways as the two grains swap. */
-.week-row > .peek,
 .month-row > .peek {
   flex: none;
   width: var(--cal-peek);
@@ -112,15 +119,6 @@
   border: 0;
   background: none;
   color: var(--ink-soft);
-}
-
-/* The peeked day sits on the same line as the days beside it. It is not inside
-   a day button, so it does not inherit that button's one transparent border and
-   one --space-1 of padding, and without them its name and its numeral printed
-   5 px above every real day in the row (author, 2026-08-21). */
-.week-row > .peek {
-  height: var(--cal-row-h);
-  padding-top: calc(var(--space-1) + 1px);
 }
 
 /* The month's peek is a column, and it is as tall as the grid is at this
@@ -202,15 +200,56 @@
   pointer-events: none;
 }
 
+/* The rail (author, 2026-08-24; this supersedes the grain-track for the week
+   — see §5b's marked paragraphs). A scroll container of days: the browser owns
+   the pan on touch and pen, wireRail gives a mouse the same movement by hand,
+   and proximity snap is what "locks into place when it slows down" — any day,
+   not only a Monday, and a slow deliberate drag is left exactly where the
+   reader put it.
+
+   The days either side of the seven on screen are real days in full ink —
+   what stood there before was a masked copy of one day, a button dressed as
+   the grain continuing. Now it is the grain continuing. The seven-plus-edges
+   geometry survives: each button is a seventh of the width between the two
+   peek insets, so the eighth and ninth days show half-cut at the edges
+   exactly where the peeks stood. */
 .week-strip {
   display: flex;
   flex: 1 1 auto;
   min-width: 0;
   gap: var(--space-1);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  /* Where a snapped day comes to rest: one peek in from the edge, which is
+     the column the old peeked edge held. */
+  scroll-padding-left: var(--rail-inset);
+  scroll-padding-right: var(--rail-inset);
+  /* The rail is its own scrollbar: a second one under the dates would say
+     "this is a pane", and the snap already does the wayfinding. */
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.week-strip::-webkit-scrollbar {
+  display: none;
+}
+
+/* Snapping is suspended while a mouse holds the rail: mandatory-adjacent snap
+   fights a scrollLeft written every frame, and the rail stutters under the
+   hand. wireRail settles it onto a day at release instead. */
+.week-strip.is-dragging {
+  scroll-snap-type: none;
+  cursor: grabbing;
+  user-select: none;
 }
 
 .week-strip button {
-  flex: 1 1 0;
+  flex: none;
+  scroll-snap-align: start;
+  /* The month's own column width — a seventh of what is between the two
+     insets — so a snapped day and a month cell share their centres to the
+     pixel, and the neighbours show themselves in the inset at each edge. */
+  width: calc((100% - 2 * var(--rail-inset) - 6 * var(--space-1)) / 7);
   min-width: 34px;
   padding: var(--space-1) 0;
   border: 1px solid transparent;
@@ -239,9 +278,9 @@
   .cal-controls {
     --cal-peek: 24px;
     --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
+    --rail-inset: calc(var(--cal-peek) + var(--space-1));
     gap: var(--space-2);
   }
-  .week-row,
   .month-row,
   .month-days-line {
     gap: var(--space-1);
@@ -254,6 +293,13 @@
 .week-strip .day-num {
   font-size: 15px;
   color: var(--ink);
+}
+
+/* The rail itself takes focus (the day buttons are tabindex="-1"): one tab
+   stop for the whole run of days, stepped by the arrow keys, instead of a
+   button per day between the reader and the rest of the page. */
+.week-strip:focus-visible {
+  outline-offset: 2px;
 }
 
 /* The selected day is a red letter; underline so colour never stands alone. */
@@ -274,15 +320,15 @@
 
 /* ---- the peeked edges -------------------------------------------------- */
 
-/* The chevrons are gone (author, 2026-08-21). What stands at each edge now is
-   the grain itself, continuing: the day before the week and the day after it,
-   the column of dates that runs off each side of the month — set on the same
-   lines as the days between them and dissolving toward the margin. The hint
-   that there is more either way is the more, showing.
+/* The chevrons are gone (author, 2026-08-21). What stands at each edge of the
+   month is the grain itself, continuing: the column of dates that runs off
+   each side, set on the grid's own rows and dissolving toward the margin.
+   The hint that there is more either way is the more, showing.
 
-   They are still buttons. The swipe is touch and pen only by design, so an
-   edge with nothing to click would strand every reader with a mouse; what went
-   is the glyph, not the affordance. */
+   They are still buttons — the month still travels a month at a time, so an
+   edge with nothing to click would strand a mouse. The week's edges were the
+   same mechanism until 2026-08-24; the rail replaced them with real days
+   (see .week-strip above), so from here down this section is the month's. */
 .peek {
   display: flex;
   flex-direction: column;

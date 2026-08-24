@@ -29,10 +29,11 @@ import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
+import { dateFormatter } from '../lib/i18n.js';
 
 const BASE = import.meta.env.BASE_URL;
 
-export const title = STRINGS.saints.title;
+export const title = () => STRINGS.saints.title;
 
 /** The manifest already knows the name, so the tab title never waits. */
 export const titleFor = (params, data) => {
@@ -40,9 +41,7 @@ export const titleFor = (params, data) => {
   return card ? withHonorific(card.display_name) : STRINGS.saint.notFoundTitle;
 };
 
-const gregorianFmt = new Intl.DateTimeFormat('en-GB', {
-  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
-});
+const gregorianFmt = () => dateFormatter({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 /** How often a scroll position is written while reading. */
 const READING_INTERVAL = 1500;
@@ -353,7 +352,7 @@ function feastLine(feast, church, year) {
   const d = occurrences[0];
   return fill(STRINGS.saint.feastThisYear, {
     feast: own,
-    gregorian: gregorianFmt.format(new Date(Date.UTC(d.year, d.month - 1, d.day))),
+    gregorian: gregorianFmt().format(new Date(Date.UTC(d.year, d.month - 1, d.day))),
     year,
   });
 }
