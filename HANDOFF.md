@@ -82,7 +82,8 @@ them.
 - **Amendment 34 was committed and pushed by the author mid-sitting**
   (`7b7b10d`, 2026-08-24 20:58 — the parallel-session pattern this file warns
   about, caught by fetching before committing rather than by luck).
-  **Amendments 35–37 are committed on top of it but not pushed** — the agent
+  Amendments 35–36 (`1df505b`) were pushed the same way while 37 was being
+  built. **Amendment 37 is committed on top but not pushed** — the agent
   session had no credentials, which is the usual state (see "Pushing happens
   outside this session" below). None of that is evidence that CI is green:
   this environment has no `gh` CLI to check the Actions run itself, so
