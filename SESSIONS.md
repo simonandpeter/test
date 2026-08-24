@@ -1719,6 +1719,68 @@ backouts run and watched fail: persistence, the formatter-cache flush, the
 church-name STRINGS read, the reason translation, the prune. Both suites
 green at the close of the sitting.
 
+**37. The rail gains weight, and the hymns say why they keep their tongue**
+(author's instruction, 2026-08-24, the same sitting as 35 and 36: "make the
+desktop click hold and drag … smoother like it has a bit of weight and slows
+down to a halt when let go instead of snapping", and "When EN is on, I still
+see the hymns in Russian").
+
+**(1) A released drag coasts.** The flick is read from the last 80 ms of the
+drag — not the whole haul, so a slow pull ending in a snap of the wrist reads
+as the throw it is — and spent against exponential friction (`FRICTION_TAU`
+325 ms, the feel of platform kinetic scrolling), `scrollLeft` integrated by
+hand each frame with snap suspended (`.is-coasting`) so the browser cannot
+snatch the rail mid-glide. The handover to settle() comes at 0.15 px/ms rather
+than near zero, because the exponential's tail is a crawl the eye reads as
+jank and the settle's own glide is a better ending; settle keeps sole
+ownership of alignment and re-anchoring, so the coast added no second
+implementation of either. A hand on a coasting rail catches it; an edge stops
+it dead (momentum the reader never gave it); below `MIN_FLICK` the release had
+no throw in it and settles as before; reduced motion removes the coast
+entirely — never shortens it. Only the hold wears the grabbing cursor: a
+coasting rail is not being held.
+
+*The defect the old test caught on the way:* the sample window was pruned only
+when moves arrived, so a fast drag held **still** and then released read the
+stale flick and threw a rail the hand had already stopped — a perfectly still
+hold fires no pointermoves, so nothing ever aged the samples out. Freshness is
+now measured from the release itself (120 ms), and Amendment 35's
+drag-and-settle test — which failed the moment the coast landed, exactly as it
+should have — now pauses before releasing and documents that it is the settle
+path on purpose, the coast having a test of its own. Backed out (stale samples
+readmitted), watched fail, restored.
+
+**(2) The hymns keep their tongue, and now say so.** The author's report reads
+as a defect — "When EN is on, I still see the hymns in Russian" — and the
+honest answer is that it is the recorded boundary, not a bug: **the corpus
+holds no English hymn texts at all.** Every hymn is copied whole from the
+chosen church's cited source (days.pravoslavie.ru's Slavonic, saint.gr's
+Greek, doxologia.ro's Romanian, pravoslavno.rs's Serbian — Amendment 28), and
+translating liturgical poetry here would be Amendment 2's invented content
+wearing vestments. What the page owed the reader was that this be visibly a
+decision: one utility line under the Hymns heading — "In the church's own
+tongue, as the source prints it; no translation is recorded." — shown exactly
+when the site's language is not the hymns' language (`HYMN_LANG` per church).
+The Russian chrome sees it too, correctly: the Russian church's hymns are
+Church Slavonic, which Russian is not. The Greek chrome on the Greek church
+sees nothing, because there the tongues actually match. The line is in all
+five languages; both directions are tested and were backed out to fail — the
+note removed, and the note shown unconditionally.
+
+**If the author wants English hymns for real,** the affordable shape is the
+same as every corpus decision: sourcing, not translating — the OCA
+(oca.org) prints its own English troparia and kontakia for much of the
+calendar, citable saint by saint like Amendment 31's three weeks were. That is
+corpus work on the author's commission, not a session's refinement; it is
+recorded in HANDOFF's queue.
+
+**Verification.** 139 unit (unchanged — the packs' new `own` string rides the
+existing placeholder-parity and key-existence sweeps), 256 browser (248 + 4 ×
+2: the coast, the reduced-motion throw, the note in two languages, the
+matched-tongue silence). Five backouts run and watched fail: the coast, its
+reduced-motion gate, the sample freshness, the note, the note's condition.
+Both suites green at the close.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

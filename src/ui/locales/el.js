@@ -64,6 +64,7 @@ export const el = {
       troparion: 'Απολυτίκιο',
       kontakion: 'Κοντάκιο',
       source: 'Κείμενο από {source}',
+      own: 'Στη γλώσσα της ίδιας της εκκλησίας, όπως το τυπώνει η πηγή· μετάφραση δεν έχει καταγραφεί.',
     },
     silence: {
       otherChurchOne:

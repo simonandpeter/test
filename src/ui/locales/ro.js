@@ -64,6 +64,7 @@ export const ro = {
       troparion: 'Troparul',
       kontakion: 'Condacul',
       source: 'Text din {source}',
+      own: 'În limba bisericii, așa cum o tipărește sursa; o traducere nu e înregistrată.',
     },
     silence: {
       otherChurchOne:

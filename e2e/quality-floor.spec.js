@@ -1241,6 +1241,13 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
   expect(await strip.evaluate((el) => el.classList.contains('is-dragging'))).toBe(true);
 
+  // Held *still*, then released: a stopped hand has no throw in it, so this
+  // is the settle path, not the coast — the coast has a test of its own.
+  // Since Amendment 37 the release reads only samples fresh at the release;
+  // without that freshness this pause changes nothing, the stale flick
+  // reads as a throw, and the alignment below is still coasting when it is
+  // measured — which is exactly how this test caught the defect.
+  await page.waitForTimeout(200);
   await page.mouse.up();
   await page.waitForTimeout(450);
   // Released: it settles onto a day — any day, not a Monday — and the click
@@ -3115,4 +3122,113 @@ test('the Index speaks the chosen language, saints excepted', async ({ page }) =
   await expect(page.locator('[data-set-aside]')).toContainText('Руска');
   // The saint is still English, honorific included.
   await expect(page.locator('.index-name').first()).toHaveText('St Moses the Prophet and God-seer');
+});
+
+/* ---- the coast, and the hymns' own tongue (Amendment 37) ---------------- */
+
+test('a thrown rail coasts to a halt and settles, instead of stopping dead', async ({ page }) => {
+  /*
+   * Author, 2026-08-24: "a bit of weight … slows down to a halt when let go
+   * instead of snapping without any momentum". The release's velocity is
+   * read from the last 80 ms of the drag and spent against exponential
+   * friction; what is left below the handover threshold goes to the same
+   * settle that has owned alignment and re-anchoring since the rail was
+   * built. So the assertions are: still moving *after* the release, coming
+   * to rest, aligned at the end, and no coasting class left behind.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const strip = page.locator('.week-strip');
+  const box = await strip.boundingBox();
+  const y = box.y + box.height / 2;
+  const at = () => strip.evaluate((el) => el.scrollLeft);
+
+  await page.mouse.move(box.x + box.width / 2, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 6; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 25, y);
+  await page.mouse.up();
+  const released = await at();
+
+  await page.waitForTimeout(150);
+  const coasting = await at();
+  expect(coasting).toBeGreaterThan(released + 20);
+
+  await page.waitForTimeout(1500);
+  const rested = await at();
+  expect(rested).toBeGreaterThan(coasting);
+  const state = await strip.evaluate((el) => {
+    const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
+    return {
+      classes: el.className,
+      aligned: [...el.querySelectorAll('[data-iso]')].some(
+        (b) => Math.abs(b.offsetLeft - el.scrollLeft - pad) < 2,
+      ),
+    };
+  });
+  expect(state.aligned).toBe(true);
+  expect(state.classes).not.toContain('is-coasting');
+  expect(state.classes).not.toContain('is-dragging');
+  // Scrolling was still not selecting, momentum included.
+  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+});
+
+test('under reduced motion a throw does not coast', async ({ browser }) => {
+  // Removed, not shortened: the weight is an animation and goes; the settle
+  // aligns without a glide, and after it nothing moves at all.
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const strip = page.locator('.week-strip');
+  const box = await strip.boundingBox();
+  const y = box.y + box.height / 2;
+
+  await page.mouse.move(box.x + box.width / 2, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 6; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 25, y);
+  await page.mouse.up();
+  await page.waitForTimeout(100);
+  const early = await strip.evaluate((el) => el.scrollLeft);
+  await page.waitForTimeout(400);
+  const late = await strip.evaluate((el) => el.scrollLeft);
+  expect(late).toBe(early);
+  await ctx.close();
+});
+
+test('a translated page says the hymns stay in the church\'s tongue on purpose', async ({ page }) => {
+  /*
+   * Author, 2026-08-24 ("When EN is on, I still see the hymns in Russian").
+   * The hymns have no English texts in the corpus, by decision: they are
+   * copied whole from each church's cited source, and translating them here
+   * would be Amendment 2's invented content. What the page owes the reader
+   * is that this is visibly a decision — one line under the heading, shown
+   * exactly when the site's language is not the hymns' language. The Russian
+   * chrome sees it too, because the Russian church's hymns are Church
+   * Slavonic, which Russian is not; the Greek chrome on the Greek church
+   * sees nothing, because there the tongues actually match.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+  const note = page.locator('[data-hymns] .hymn-own');
+  await expect(note).toHaveText(
+    'In the church’s own tongue, as the source prints it; no translation is recorded.',
+  );
+  // And the hymn under it is still the source's Slavonic, untouched.
+  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго');
+
+  await page.locator('#lang-open').click();
+  await page.locator('#lang-panel [data-language="ru"]').click();
+  await expect(page.locator('[data-hymns] .hymn-own')).toContainText('На языке самой церкви');
+});
+
+test('where the tongues match, the hymns carry no note', async ({ browser }) => {
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await page.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
+  );
+  await page.goto('/calendar/2026-09-08', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn-text').first()).toBeVisible();
+  await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
+  await ctx.close();
 });

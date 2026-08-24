@@ -72,6 +72,12 @@ export const STRINGS = {
       troparion: 'Troparion',
       kontakion: 'Kontakion',
       source: 'Text from {source}',
+      // Shown when the site's language is not the hymns' language (Amendment
+      // 37): the hymns are the one part of a translated page that stays in
+      // the church's tongue on purpose — copied whole from the cited source,
+      // never translated here (Amendment 2) — and without this line that
+      // reads as a translation bug rather than a decision.
+      own: 'In the church’s own tongue, as the source prints it; no translation is recorded.',
     },
 
     /*

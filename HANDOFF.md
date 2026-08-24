@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-24 (Amendment 36)
+## State as of 2026-08-24 (Amendment 37)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,14 +75,14 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 139 unit tests (`npm test`) — pure logic, no DOM.
-- 248 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-24, the sitting of Amendments 34–36), not carried
+- 256 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-24, the sitting of Amendments 34–37), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **Amendment 34 was committed and pushed by the author mid-sitting**
   (`7b7b10d`, 2026-08-24 20:58 — the parallel-session pattern this file warns
   about, caught by fetching before committing rather than by luck).
-  **Amendments 35–36 are committed on top of it but not pushed** — the agent
+  **Amendments 35–37 are committed on top of it but not pushed** — the agent
   session had no credentials, which is the usual state (see "Pushing happens
   outside this session" below). None of that is evidence that CI is green:
   this environment has no `gh` CLI to check the Actions run itself, so
@@ -96,7 +96,7 @@ note — saint.gr has not published that far out as of Amendment 31's check on
 four added at Amendment 31). The generating pipeline is under `.tmp/w3/`
 (untracked).
 
-**Since Amendment 31 was written up, six more amendments landed the same
+**Since Amendment 31 was written up, seven more amendments landed the same
 day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
 
 - **Amendment 31's own loose ends, closed:** the browser suite run and watched
@@ -153,6 +153,14 @@ day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
   liturgical cycle line is composed in English by `lib/liturgy.js`, and fast
   reasons are English data strings — a per-pack `reasons` map translates the
   recurring ones and passes the rest through.
+
+- **Amendment 37, weight and honesty:** a released mouse drag on the rail now
+  coasts against friction and hands off to the settle (reduced motion gets no
+  coast; a still hold then release is not a throw — that freshness rule was a
+  real defect the old drag test caught); and a translated page now says under
+  the Hymns heading that the hymns stay in the church's own tongue on purpose
+  — the corpus holds no English hymn texts, by decision, and the line shows
+  exactly when the site's language is not the hymns' language.
 
 **Pushing happens outside this session** unless your own session has been
 given credentials — check before assuming otherwise. Agent sessions
@@ -321,6 +329,12 @@ up cold; the two the author has to decide are marked.
   *reasons* are already translated through each pack's `reasons` map; the
   cycle line is the remaining English on a translated Daily page. The
   author's call whether it is worth the restructure.
+
+- **English hymn texts, if ever wanted, are a sourcing task** (Amendment 37):
+  the OCA prints its own English troparia and kontakia for much of the
+  calendar at oca.org, citable saint by saint the way Amendment 31's three
+  weeks were. Corpus work on the author's commission — the hymns note under
+  the heading is the shipped answer until then.
 
 - **The lives, hymns-labels and data displays stay English by decision**
   (Amendments 2 and 36) — "5th century", the register's quoted lines, the

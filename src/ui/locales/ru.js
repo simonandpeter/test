@@ -67,6 +67,7 @@ export const ru = {
       troparion: 'Тропарь',
       kontakion: 'Кондак',
       source: 'Текст: {source}',
+      own: 'На языке самой церкви, как печатает источник; перевод не записан.',
     },
     silence: {
       otherChurchOne:

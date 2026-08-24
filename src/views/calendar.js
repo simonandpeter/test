@@ -32,7 +32,7 @@ import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
-import { dateFormatter, translateReason } from '../lib/i18n.js';
+import { dateFormatter, languageTag, translateReason } from '../lib/i18n.js';
 import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -391,11 +391,26 @@ function hymnMarkup(h) {
  * is painted empty and filled when the payload lands, for the day still
  * showing. Only the chosen church's hymns, in that church's language.
  */
+/*
+ * What each church sings in (Amendment 37): the language its cited source
+ * prints the hymns in. The note below shows whenever the site's language is
+ * not this one — which for the Russian church is always, because the hymns
+ * are Church Slavonic and the chrome's Russian is not — so a reader on a
+ * translated page is told the untranslated block is a decision, not a bug.
+ */
+const HYMN_LANG = { russian: 'cu', greek: 'el', romanian: 'ro', serbian: 'sr' };
+
+const hymnsOwnNote = (churchId) =>
+  languageTag() === HYMN_LANG[churchId]
+    ? ''
+    : `<p class="hymn-own utility">${STRINGS.calendar.hymns.own}</p>`;
+
 function hymnsMarkup(iso, churchId) {
   const rec = recordedDay(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
   return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
+    ${hymnsOwnNote(churchId)}
     <div data-feast-hymns>${feastHymns.map(hymnMarkup).join('')}</div>
     <div data-saint-hymns></div>
   </section>`;
@@ -521,6 +536,19 @@ const RAIL_MARGIN = 14;
 const DRAG_SLOP = 6;
 /** How long after the last scroll event the rail counts as at rest. */
 const SETTLED = 140;
+/*
+ * The weight of a released drag (author, 2026-08-24: "a bit of weight …
+ * slows down to a halt … instead of snapping"). Velocity decays as
+ * exp(-t/tau); 325 ms is the feel of platform kinetic scrolling. Below
+ * MIN_FLICK the release had no throw in it and the rail settles as before;
+ * below COAST_STOP the coast is spent and the settle takes over.
+ */
+const FRICTION_TAU = 325;
+const MIN_FLICK = 0.25;
+/* Handing over at 0.15 px/ms rather than at nearly zero: the exponential's
+   tail is a crawl the eye reads as jank, and the settle's own glide is a
+   better ending — it is still moving when the snap takes the wheel. */
+const COAST_STOP = 0.15;
 
 const dayButton = (iso) => {
   const n = countFor(iso, state.data);
@@ -624,6 +652,54 @@ function revealSelected({ week = false } = {}) {
 function wireRail(strip) {
   let hold = null;
   let restTimer = null;
+  let coast = null;
+
+  /** The flick is read from the last ~80 ms of movement, not the whole drag:
+   *  a long slow haul that ends with a snap of the wrist is a throw, and the
+   *  average over the haul would say it was not. */
+  const recordSample = (e) => {
+    const now = e.timeStamp;
+    hold.samples = hold.samples.filter((sample) => now - sample.t < 80);
+    hold.samples.push({ t: now, x: e.clientX });
+  };
+
+  const stopCoast = () => {
+    if (!coast) return;
+    cancelAnimationFrame(coast.raf);
+    coast = null;
+    strip.classList.remove('is-coasting');
+  };
+
+  /**
+   * The rail keeps the drag's momentum and spends it against friction —
+   * scrollLeft integrated by hand each frame, snap suspended for the length
+   * of it (the .is-coasting class) so the browser does not fight the coast —
+   * and hands what is left to settle(), which is where the alignment and the
+   * re-anchoring have lived since the rail was built. An edge stops it dead:
+   * coasting into a wall and then sliding along it would be momentum the
+   * reader never gave it.
+   */
+  const beginCoast = (velocity) => {
+    stopCoast();
+    strip.classList.add('is-coasting');
+    coast = { v: velocity, last: performance.now(), raf: 0 };
+    const step = (now) => {
+      if (!coast) return;
+      const dt = Math.min(now - coast.last, 64);
+      coast.last = now;
+      const before = strip.scrollLeft;
+      strip.scrollLeft = before + coast.v * dt;
+      coast.v *= Math.exp(-dt / FRICTION_TAU);
+      const atWall = strip.scrollLeft === before && dt > 0;
+      if (Math.abs(coast.v) < COAST_STOP || atWall) {
+        stopCoast();
+        settle();
+        return;
+      }
+      coast.raf = requestAnimationFrame(step);
+    };
+    coast.raf = requestAnimationFrame(step);
+  };
 
   const onClick = (e) => {
     const button = e.target.closest('[data-iso]');
@@ -659,18 +735,24 @@ function wireRail(strip) {
   };
 
   const onScroll = () => {
-    if (hold) return;
+    // The coast writes scrollLeft every frame; its own end calls settle().
+    if (hold || coast) return;
     clearTimeout(restTimer);
     restTimer = setTimeout(settle, SETTLED);
   };
 
   const down = (e) => {
     if (e.pointerType !== 'mouse' || e.button !== 0) return;
-    hold = { x: e.clientX, from: strip.scrollLeft, id: e.pointerId, dragging: false };
+    // A hand on a coasting rail catches it, the way a hand on a spinning
+    // globe does.
+    stopCoast();
+    hold = { x: e.clientX, from: strip.scrollLeft, id: e.pointerId, dragging: false, samples: [] };
+    recordSample(e);
   };
 
   const move = (e) => {
     if (!hold || e.pointerId !== hold.id) return;
+    recordSample(e);
     const dx = e.clientX - hold.x;
     if (!hold.dragging) {
       if (Math.abs(dx) < DRAG_SLOP) return;
@@ -691,6 +773,7 @@ function wireRail(strip) {
   const up = (e) => {
     if (!hold || e.pointerId !== hold.id) return;
     const dragged = hold.dragging;
+    const samples = hold.samples;
     hold = null;
     if (!dragged) return;
     strip.classList.remove('is-dragging');
@@ -703,7 +786,21 @@ function wireRail(strip) {
     // text warned about, and the cost is two lines.
     strip.addEventListener('click', swallow, { capture: true, once: true });
     setTimeout(() => strip.removeEventListener('click', swallow, { capture: true }), 0);
-    settle();
+    // The release's velocity, from the sample window. The pointer moves one
+    // way and the content the other, hence the sign. Reduced motion removes
+    // the coast, never shortens it: a throw settles where it is.
+    // Only samples still fresh at the release: the window is pruned when
+    // moves arrive, so a fast drag held still and *then* released would
+    // otherwise read the stale flick and throw a rail the hand had already
+    // stopped. A still hold fires no moves; staleness is measured from the
+    // release itself.
+    const fresh = samples.filter((sample) => e.timeStamp - sample.t < 120);
+    const first = fresh[0];
+    const last = fresh[fresh.length - 1];
+    const dt = last && first ? last.t - first.t : 0;
+    const velocity = dt > 0 ? -(last.x - first.x) / dt : 0;
+    if (Math.abs(velocity) >= MIN_FLICK && !reducedMotion()) beginCoast(velocity);
+    else settle();
   };
 
   strip.addEventListener('click', onClick);
@@ -714,6 +811,7 @@ function wireRail(strip) {
   strip.addEventListener('pointercancel', up);
 
   return () => {
+    stopCoast();
     clearTimeout(restTimer);
     strip.removeEventListener('click', onClick);
     strip.removeEventListener('scroll', onScroll);

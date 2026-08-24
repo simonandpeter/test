@@ -234,11 +234,17 @@
   display: none;
 }
 
-/* Snapping is suspended while a mouse holds the rail: mandatory-adjacent snap
-   fights a scrollLeft written every frame, and the rail stutters under the
-   hand. wireRail settles it onto a day at release instead. */
-.week-strip.is-dragging {
+/* Snapping is suspended while a mouse holds the rail — mandatory-adjacent
+   snap fights a scrollLeft written every frame, and the rail stutters under
+   the hand — and stays suspended while a released throw coasts (Amendment
+   37), or the browser would snatch the rail mid-glide. Only the hold wears
+   the grabbing cursor; a coasting rail is not being held. */
+.week-strip.is-dragging,
+.week-strip.is-coasting {
   scroll-snap-type: none;
+}
+
+.week-strip.is-dragging {
   cursor: grabbing;
   user-select: none;
 }

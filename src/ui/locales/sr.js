@@ -64,6 +64,7 @@ export const sr = {
       troparion: 'Тропар',
       kontakion: 'Кондак',
       source: 'Текст из {source}',
+      own: 'На језику саме цркве, како је штампа извор; превод није записан.',
     },
     silence: {
       otherChurchOne:
