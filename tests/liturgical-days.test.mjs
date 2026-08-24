@@ -70,6 +70,11 @@ test('the readings differ where the calendars differ, and agree where they agree
   assert.equal(recordedDay('2026-09-11', 'serbian').readings[1].ref, 'Acts 13:25-32');
   // A Russian day with several sets of pericopes keeps the set's label.
   assert.ok(recordedDay('2026-09-17', 'russian').readings.some((r) => r.label === 'Epistle (Свв)' && r.ref === 'Hebrews 11:33-12:2'));
+  // 15 September (2 September Julian): the source page's second pericope pair
+  // carries its own label — "за понедельник и за вторник (под зачало)" — not
+  // the day's plain "Epistle"/"Gospel" the first pair uses.
+  assert.ok(recordedDay('2026-09-15', 'russian').readings.some((r) => r.label === 'Epistle (за понедельник и за вторник)' && r.ref === 'Galatians 5:11-21'));
+  assert.ok(recordedDay('2026-09-15', 'russian').readings.some((r) => r.label === 'Gospel (за понедельник и за вторник)' && r.ref === 'Mark 7:5-16'));
   // Serbian day troparia of feasts: the Belt (13 September), the Archangel (19 September).
   assert.ok(recordedDay('2026-09-13', 'serbian').hymns.some((h) => /Полагање појаса/.test(h.source.text)));
   assert.ok(recordedDay('2026-09-19', 'serbian').hymns.some((h) => /архангела Михаила/.test(h.source.text)));

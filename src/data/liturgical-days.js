@@ -1031,7 +1031,7 @@ export const LITURGICAL_DAYS = {
   },
   '2026-09-15': {
     russian: {
-      readings: [r('Epistle', 'Galatians 4:28-5:10'), r('Gospel', 'Mark 6:54-7:8'), r('Epistle', 'Galatians 5:11-21'), r('Gospel', 'Mark 7:5-16'), r('Epistle (Мч)', 'Romans 8:28-39'), r('Gospel (Мч)', 'John 15:1-7')],
+      readings: [r('Epistle', 'Galatians 4:28-5:10'), r('Gospel', 'Mark 6:54-7:8'), r('Epistle (за понедельник и за вторник)', 'Galatians 5:11-21'), r('Gospel (за понедельник и за вторник)', 'Mark 7:5-16'), r('Epistle (Мч)', 'Romans 8:28-39'), r('Gospel (Мч)', 'John 15:1-7')],
       title: 'Седмица 16-я по Пятидесятнице',
       fastingNote: null,
       source: { text: 'days.pravoslavie.ru, 2 сентября ст. ст. — Седмица 16-я по Пятидесятнице', url: RU('0902') },
