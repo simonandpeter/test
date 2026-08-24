@@ -110,7 +110,7 @@ export function render(el, { data, router, nav }) {
     data,
     router,
     cards,
-    filters: { ...EMPTY_FILTERS },
+    filters: seeded({ ...EMPTY_FILTERS }),
     facets: facetsOf(cards),
     monthsBySlug: monthsBySlugFor(cards),
     search: null,
@@ -174,7 +174,7 @@ function snapshot(state) {
 function applySnapshot(snap) {
   const { el } = state;
   const controlsEl = el.querySelector('.index-controls');
-  const f = { ...EMPTY_FILTERS, ...snap.filters };
+  const f = seeded({ ...EMPTY_FILTERS, ...snap.filters });
   state.filters = f;
 
   controlsEl.querySelector('[data-query]').value = f.query ?? '';
@@ -355,6 +355,18 @@ function controls(state) {
       <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>
     </div>
   </div>`;
+}
+
+/**
+ * A filter set holding Random with no seed gets one minted (author,
+ * 2026-08-24: Random is the default "so each time you open the site you get
+ * exposed to more saints" — the fresh seed per visit is that exposure). A
+ * snapshot that carries its seed keeps it: returning from a saint must find
+ * the grid as it was left, not re-dealt.
+ */
+function seeded(f) {
+  if (f.sort === 'random' && !f.shuffleSeed) f.shuffleSeed = String(Date.now());
+  return f;
 }
 
 /**

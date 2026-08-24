@@ -153,7 +153,6 @@ export const ro = {
   },
 
   saint: {
-    nameForms: 'Numit și',
     saveNamed: 'Salvează: {name}',
     savedNamed: '{name} e salvat. Apasă ca să-l scoți.',
     back: 'Înapoi la toți sfinții',

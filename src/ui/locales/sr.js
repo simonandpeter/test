@@ -153,7 +153,6 @@ export const sr = {
   },
 
   saint: {
-    nameForms: 'Назива се и',
     saveNamed: 'Сачувај: {name}',
     savedNamed: '{name} је сачуван. Притисните да уклоните.',
     back: 'Назад на све светитеље',

@@ -158,7 +158,6 @@ export const ru = {
   },
 
   saint: {
-    nameForms: 'Также именуется',
     saveNamed: 'Сохранить: {name}',
     savedNamed: '{name} — в закладках. Нажмите, чтобы убрать.',
     back: 'Назад ко всем святым',

@@ -58,7 +58,10 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
 /** A year interval for display: its own display string, or derived honestly. */
 export function formatInterval(iv) {
   if (!iv) return STRINGS.dates.undated;
-  if (iv.display) return iv.display;
+  // The data says "3rd century"; the page prints "3rd C." (author,
+  // 2026-08-24). A render-time abbreviation, not a data edit: the displays
+  // are quoted source-shaped strings and stay whole in the corpus.
+  if (iv.display) return iv.display.replace(/\bcentury\b/g, 'C.');
   const { earliest, latest } = iv;
   if (earliest === null && latest === null) return STRINGS.dates.undated;
   if (earliest === null) return fill(STRINGS.dates.before, { y: latest });
@@ -81,7 +84,7 @@ export function formatLifespan(dates) {
   // which carry their own.
   if (birth === STRINGS.dates.undated) {
     if (/^(before|after|under)\s/.test(death)) return fill(STRINGS.dates.repose, { when: death });
-    if (/century/.test(death)) return fill(STRINGS.dates.reposeInThe, { when: death });
+    if (/\bC\./.test(death)) return fill(STRINGS.dates.reposeInThe, { when: death });
     return fill(STRINGS.dates.reposeIn, { when: death });
   }
   return `${birth} – ${death}`;

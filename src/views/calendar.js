@@ -43,6 +43,11 @@ const BASE = import.meta.env.BASE_URL;
 // Through lib/i18n.js's cache rather than module constants (Amendment 36): a
 // formatter built once can never change language.
 const dayFmt = () => dateFormatter({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+// The page's own date wears the abbreviated month (author, 2026-08-24:
+// "display abbreviated months, e.g. Aug"); the buttons' aria-labels keep
+// dayFmt's full month, because a label is spoken, not glanced at.
+const headingFmt = () =>
+  dateFormatter({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 const weekdayFmt = () => dateFormatter({ weekday: 'short', timeZone: 'UTC' });
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.
@@ -313,7 +318,7 @@ function repaintDay() {
 function paintChrome() {
   const { el, selected } = state;
   markRail();
-  el.querySelector('.cal-date').textContent = dayFmt().format(utc(selected));
+  el.querySelector('.cal-date').textContent = headingFmt().format(utc(selected));
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }
@@ -825,9 +830,10 @@ function wireRail(strip) {
 
 /**
  * A day either way from anywhere on the page (author, 2026-08-24): the arrow
- * keys, and S and D beside them for a hand that is not on the arrows. They
- * were bound to the week strip alone until then, which meant they worked only
- * once a reader had tabbed into it.
+ * keys, and A/S and D beside them for a hand that is not on the arrows — A
+ * joined S the same day, because a hand resting on WASD expects A to be
+ * "left". They were bound to the week strip alone until then, which meant
+ * they worked only once a reader had tabbed into it.
  *
  * Not while the reader is typing. A key that steps the day out from under
  * someone halfway through a search term is worse than no shortcut, so
@@ -844,7 +850,10 @@ function wireDayKeys() {
     if (!state || e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return;
     if (typing(e.target) || typing(document.activeElement)) return;
     const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    const dir = key === 'ArrowLeft' || key === 's' ? -1 : key === 'ArrowRight' || key === 'd' ? 1 : 0;
+    const dir =
+      key === 'ArrowLeft' || key === 'a' || key === 's' ? -1
+      : key === 'ArrowRight' || key === 'd' ? 1
+      : 0;
     if (!dir) return;
     e.preventDefault();
     step(dir);

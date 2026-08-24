@@ -98,7 +98,9 @@ test('an open-ended life overlaps but is never entirely within', () => {
 });
 
 test('a date range sets undated saints aside rather than deleting them', () => {
-  const { matched, undated: tray } = run({ from: 300, to: 400 });
+  // sort pinned: this test is about the tray, and the default order is
+  // Random since 2026-08-24 (evening).
+  const { matched, undated: tray } = run({ from: 300, to: 400, sort: 'earliest' });
   assert.deepEqual(matched.map((c) => c.slug), ['anthony', 'moses']);
   assert.deepEqual(tray.map((c) => c.slug), ['undated-one']);
 
@@ -125,12 +127,16 @@ test('feast months come from the caller, who owns the calendar arithmetic', () =
   assert.equal(applyFilters(all, { ...EMPTY_FILTERS, months: [2] }, { monthsBySlug }).matched.length, 0);
 });
 
-test('earliest is the default order, and name is still offered', () => {
-  // Author, 2026-08-24: Earliest took the default from Name, so the corpus
-  // opens on its oldest lives and reads down through the centuries rather
-  // than being filed by the accident of a first letter.
-  assert.equal(EMPTY_FILTERS.sort, 'earliest');
-  assert.deepEqual(sortCards(all).map((c) => c.slug), [
+test('random is the default order, and earliest and name are still offered', () => {
+  // Author, 2026-08-24, evening — reversing the same morning's Earliest
+  // default: Random opens the Index on a different hand of the corpus each
+  // visit "so each time you open the site you get exposed to more saints".
+  // The seed is minted by the view, not here: EMPTY_FILTERS stays unseeded,
+  // and sortCards without one must still deal a stable (not thrown) order.
+  assert.equal(EMPTY_FILTERS.sort, 'random');
+  assert.equal(EMPTY_FILTERS.shuffleSeed, null);
+  assert.deepEqual(sortCards(all).map((c) => c.slug), sortCards(all).map((c) => c.slug));
+  assert.deepEqual(sortCards(all, 'earliest').map((c) => c.slug), [
     'christopher',
     'anthony',
     'moses',

@@ -139,7 +139,6 @@ function shell(card, backLabel) {
           <button type="button" class="close-button icon-button" data-back aria-label="${esc(backLabel)}">${CLOSE}</button>
         </span>
       </div>
-      <p class="names" data-names hidden></p>
       <p class="saint-facts utility">${esc(formatLifespan(card.dates))}${facts ? ` · ${esc(facts)}` : ''}</p>
       <p class="resume-note utility" data-resume hidden></p>
     </header>
@@ -193,17 +192,17 @@ const skeletonLines = (n) =>
 function fillIn(el, payload, { data, router }) {
   const { saint, life, images } = payload;
 
-  const names = el.querySelector('[data-names]');
-  if (saint.names?.length) {
-    names.hidden = false;
-    names.innerHTML =
-      `<span class="names-label utility">${STRINGS.saint.nameForms}</span> ` +
-      saint.names
-        // An empty lang is worse than none: it tells a screen reader the
-        // language is unspecified rather than letting it keep the page's.
-        .map((n) => `<span${n.lang ? ` lang="${esc(n.lang)}"` : ''}>${esc(n.form)}</span>`)
-        .join('<span class="names-sep" aria-hidden="true"> · </span>');
-  }
+  // The "Also called" line — the multi-script name forms (Ἀντώνιος,
+  // Ⲁⲛⲧⲱⲛⲓⲟⲥ) — stood here until 2026-08-24 (author: remove it). This
+  // reverses DESIGN.md's "script coverage is a hard requirement, not a
+  // nicety" passage, which named this exact block as how "attest, never
+  // adjudicate" appears on screen; flagged to the author the same sitting,
+  // reversal recorded in place in DESIGN.md. The forms still live in each
+  // saint's own data file — payload.saint.names, unread here now — but were
+  // never in the search index (loadSearch's own comment says why: a
+  // manifest-size decision, not a code one), so nothing on the site surfaces
+  // them any longer. If that turns out to matter, the corpus itself is
+  // untouched and the line can return.
 
   const credit = el.querySelector('[data-credit]');
   if (credit) credit.innerHTML = creditLine(images?.[0]?.credit);

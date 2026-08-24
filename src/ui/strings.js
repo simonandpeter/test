@@ -207,7 +207,6 @@ export const STRINGS = {
   },
 
   saint: {
-    nameForms: 'Also called',
     // The bookmark's accessible names carry the saint's name: on the Index
     // there are many on one page, and a column of identical "Save" buttons is
     // what a screen reader would otherwise be given.

@@ -153,7 +153,6 @@ export const el = {
   },
 
   saint: {
-    nameForms: 'Λέγεται και',
     saveNamed: 'Αποθήκευση: {name}',
     savedNamed: 'Ο/Η {name} είναι αποθηκευμένος/η. Πατήστε για αφαίρεση.',
     back: 'Πίσω σε όλους τους αγίους',

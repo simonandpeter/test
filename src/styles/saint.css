@@ -14,18 +14,6 @@
   text-decoration: none;
 }
 
-.names {
-  margin-bottom: var(--space-2);
-}
-
-.names-label {
-  color: var(--ink-soft);
-}
-
-.names-sep {
-  color: var(--rule);
-}
-
 .saint-facts {
   color: var(--ink-soft);
   margin-bottom: var(--space-3);

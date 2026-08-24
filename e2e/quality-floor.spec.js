@@ -204,10 +204,13 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
 
   await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
-  // Multi-script name forms are how "attest, never adjudicate" appears on
-  // screen (Addendum C3), so their presence is a requirement, not a detail.
-  await expect(page.locator('.names span[lang="grc"]')).toHaveText('Ἀντώνιος');
-  await expect(page.locator('.names span[lang="cop"]')).toHaveText('Ⲁⲛⲧⲱⲛⲓⲟⲥ');
+  // The "Also called" block — the multi-script name forms (Ἀντώνιος,
+  // Ⲁⲛⲧⲱⲛⲓⲟⲥ) that used to stand here — was removed by the author,
+  // 2026-08-24, reversing the "attest, never adjudicate" passage in
+  // DESIGN.md that named this exact block; the reversal is recorded in
+  // place there. The heir of this test's old assertion is negative: the
+  // block is gone from the page entirely, not merely relabelled.
+  await expect(page.locator('.names')).toHaveCount(0);
 
   // Every church in the registry appears, each with its own source and its
   // own reckoning of the one menologion date.
@@ -434,8 +437,11 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
   // never defaulted to, because a corpus sorted by it reads as a ranking of
   // importance; Earliest took the default from Name on 2026-08-24 (author) and
   // is the same kind of order as either — a fact about the lives, not a claim
-  // about their standing.
-  await expect(page.locator('[data-sort]')).toHaveValue('earliest');
+  // about their standing. Random is the default since the same evening
+  // (author: "so each time you open the site you get exposed to more
+  // saints"); this test's subject is the unfiltered *set*, not the order, so
+  // it chooses Earliest explicitly rather than asserting on a shuffled deal.
+  await page.selectOption('[data-sort]', 'earliest');
   await expect(page.locator('input[name="rangeMode"][value="overlaps"]')).toBeChecked();
   await expect(page.locator('[data-clear]')).toBeHidden();
 });
@@ -447,7 +453,12 @@ test('card boxes come from the manifest, not from measuring the image', async ({
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.locator('[data-query]').fill('Anthony the Great');
   await expect(page.locator('.index-card', { hasText: 'Anthony the Great' })).toHaveCount(1);
-  const card = page.locator('.index-card:has(.index-media)').first();
+  // Anthony by name, not the first card with a picture: a card filtered out
+  // keeps its box for the length of its leaving animation, so ".first()"
+  // could measure whichever card the opening deal happened to put there
+  // (Random has been the default since 2026-08-24 evening — the same defect
+  // class the detailed-card test hit earlier that day).
+  const card = page.locator('.index-card', { hasText: 'Anthony the Great' });
   const media = card.locator('.index-media');
   const [cardBox, mediaBox] = [await card.boundingBox(), await media.boundingBox()];
   // Card height is the image box plus a fixed text block, and the image box is
@@ -558,7 +569,13 @@ test('Random saint stays inside the reader own filters', async ({ page }) => {
   await expect(page.locator('h1.saint-name')).toBeVisible();
   // Whoever it landed on, the Romanian row says Venerated: a random saint the
   // reader's own filters exclude would look like the filters had failed.
-  const romanian = page.locator('.att', { hasText: 'Romanian' });
+  // Scoped to .att-church, not .att's full text: a citation or note in
+  // another church's row can itself contain the word "Romanian" (a
+  // cross-reference in a source note), which made the looser locator match
+  // two rows on an unlucky deal — found while adding the "A" key elsewhere in
+  // this sitting, unseeded and pre-existing, so tightened here rather than
+  // left as a known flake in a suite the house rules call a real gate.
+  const romanian = page.locator('.att', { has: page.locator('.att-church', { hasText: 'Romanian' }) });
   await expect(romanian).toContainText('Venerated');
 });
 
@@ -646,14 +663,14 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await day('2026-06-27').click();
   await page.waitForTimeout(60);
   await day('2026-06-28').click();
-  await expect(page.locator('h1')).toHaveText(/28 June 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Jun 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
   await day('2026-06-24').click();
-  await expect(page.locator('h1')).toHaveText(/24 June 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Jun 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
@@ -687,30 +704,36 @@ test('a day is one click, and the keys step it from anywhere', async ({ page }) 
    * gone with the rail — the reader scrolls to any day instead — and the
    * keyboard is now the page's, not the strip's: ArrowLeft/ArrowRight and S/D
    * step a day from anywhere on the page. They were bound inside the strip
-   * until then, which meant they worked only after tabbing into it.
+   * until then, which meant they worked only after tabbing into it. A joined
+   * S later the same day (author: "'A' key doesn't work for going back") —
+   * a hand resting on WASD expects A to be "left".
    */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   // Days are one click each.
   await page.locator('.week-strip [data-iso="2026-08-24"]').click();
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 
   // The arrows, from the page body — no focus in the strip.
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/25 Aug 2026/);
   await page.keyboard.press('ArrowLeft');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 
-  // S and D beside them, for a hand that is not on the arrows.
+  // A/S and D beside them, for a hand that is not on the arrows.
   await page.keyboard.press('d');
-  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/25 Aug 2026/);
   await page.keyboard.press('s');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
+  await page.keyboard.press('d');
+  await expect(page.locator('h1')).toHaveText(/25 Aug 2026/);
+  await page.keyboard.press('a');
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 
   // A modifier means the key is the browser's: ctrl+D must stay a bookmark.
   await page.keyboard.press('Control+d');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 });
 
 test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
@@ -806,7 +829,7 @@ test('the week and the month both take a swipe, in the same direction', async ({
   expect(settled.moved).toBe(true);
   expect(settled.aligned).toBe(true);
   // Scrolling is not selecting: the day only changes when one is chosen.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
@@ -830,7 +853,7 @@ test('picking a date leaves the month open; only the button closes it', async ({
   await toggle.click();
   await expect(month).toBeVisible();
   await page.locator('.month-grid [data-iso="2026-08-08"]').click();
-  await expect(page.locator('h1')).toHaveText(/8 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/8 Aug 2026/);
   // A reader comparing days should not have to reopen the month between them.
   await expect(month).toBeVisible();
 
@@ -1058,14 +1081,14 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
   expect(await edge.evaluate((el, sel) => el.className === document.querySelector(sel).className,
     '.week-strip [data-iso="2026-08-28"]')).toBe(true);
   await edge.click();
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
 
   // Scrolling the rail is not a selection.
   await page.evaluate(() => {
     document.querySelector('.week-strip').scrollBy({ left: 200, behavior: 'instant' });
   });
   await page.waitForTimeout(300);
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
 });
 
 test('a month travels sideways with its own edges, and its day names do not', async ({ page }) => {
@@ -1146,7 +1169,7 @@ test('picking a day already in view does not move the rail', async ({ page }) =>
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   const before = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
   await page.locator('.week-strip [data-iso="2026-08-27"]').click();
-  await expect(page.locator('h1')).toHaveText(/27 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/27 Aug 2026/);
   await page.waitForTimeout(250);
   const after = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
   expect(Math.abs(after - before)).toBeLessThan(2);
@@ -1163,7 +1186,7 @@ test('under reduced motion the rail steps without a glide', async ({ browser }) 
   // Sunday is the last snapped day; stepping past it forces a reveal.
   await page.locator('.week-strip [data-iso="2026-08-30"]').click();
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
   // The stepped-to day is in view at once, nothing left mid-glide.
   await expect(page.locator('.week-strip [data-iso="2026-08-31"]')).toBeInViewport();
   await ctx.close();
@@ -1238,7 +1261,7 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
   // Held: the rail has followed the hand, the day has not changed.
   const held = await strip.evaluate((el) => el.scrollLeft);
   expect(held).toBeGreaterThan(before + 60);
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
   expect(await strip.evaluate((el) => el.classList.contains('is-dragging'))).toBe(true);
 
   // Held *still*, then released: a stopped hand has no throw in it, so this
@@ -1252,7 +1275,7 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
   await page.waitForTimeout(450);
   // Released: it settles onto a day — any day, not a Monday — and the click
   // that ended the drag chose nothing.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
   const aligned = await strip.evaluate((el) => {
     const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
     return [...el.querySelectorAll('[data-iso]')].some(
@@ -1594,7 +1617,7 @@ test('the days at the rail edges are real days, unmasked, and one click each', a
 
   // One click selects the day itself — the edge is not a week-step any more.
   await next.click();
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
 });
 
 test('every day on the rail is full-strength ink — no wash, no mask', async ({ page }) => {
@@ -2959,19 +2982,55 @@ test('About states the privacy policy, and states it as the code behaves', async
   await expect(privacy).toContainText('Bible Gateway');
 });
 
-test('the Index opens in earliest order, and says so', async ({ page }) => {
+/**
+ * The leading names *as the reader sees them*. The grid is virtualised and
+ * absolutely positioned: paintWindow appends newly-mounted cards and leaves
+ * already-mounted ones where they sit, so after a re-sort the DOM order is no
+ * longer the order on screen — `.index-name` .first() is the first card
+ * *mounted*, which on a fresh load is the leader and after a sort change is
+ * whatever happened to survive. Every assertion about order reads geometry.
+ */
+const leaders = (page, n = 1) =>
+  page.locator('.index-card').evaluateAll(
+    (cards, count) =>
+      cards
+        .map((c) => ({ box: c.getBoundingClientRect(), name: c.querySelector('.index-name')?.textContent ?? '' }))
+        .sort((a, b) => a.box.top - b.box.top || a.box.left - b.box.left)
+        .slice(0, count)
+        .map((x) => x.name)
+        .join('|'),
+    n,
+  );
+
+test('the Index opens shuffled, says so, and deals a new hand next visit', async ({ page }) => {
   /*
-   * Author, 2026-08-24: Earliest took the default from Name. The control is
-   * the half worth pinning — the <select> was written out option by option
-   * with the default implied by their order, so it read "Name" while the grid
-   * was already in Earliest order, and the label was lying about the list
-   * under it.
+   * Author, 2026-08-24, evening — reversing the same morning's Earliest
+   * default: Random opens the Index "so each time you open the site you get
+   * exposed to more saints". Two halves worth pinning: the control says
+   * Random over a shuffled grid (the morning's lesson — a label must not lie
+   * about the list under it), and a fresh visit mints a fresh seed. The
+   * reload compares the first three names, not one: two different seeds
+   * agreeing on three leading cards out of 708 is not a coincidence the test
+   * will ever meet, where a single card could someday tie.
    */
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-sort]')).toHaveValue('earliest');
-  await expect(page.locator('[data-sort] option:checked')).toHaveText('Earliest date');
-  await expect(page.locator('.index-name').first()).toHaveText('St Moses the Prophet and God-seer');
+  await expect(page.locator('[data-sort]')).toHaveValue('random');
+  await expect(page.locator('[data-sort] option:checked')).toHaveText('Random');
+  const trio = () => leaders(page, 3);
+  const dealt = await trio();
+
+  // A trip into a saint's page and back (the × or the browser's own back)
+  // restores the remembered grid, seed included — the nav link is different
+  // on purpose (its own comment: "opens the Index fresh, because it does not
+  // ask") and is not what this half tests.
+  await page.locator('.index-card').first().locator('.index-name').click();
+  await page.locator('[data-back]').click();
+  await expect(page.locator('[data-sort]')).toHaveValue('random');
+  expect(await trio()).toBe(dealt);
+
+  await page.reload({ waitUntil: 'networkidle' });
+  expect(await trio()).not.toBe(dealt);
 });
 
 test('latest runs the other way from earliest', async ({ page }) => {
@@ -2985,12 +3044,15 @@ test('latest runs the other way from earliest', async ({ page }) => {
    */
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  const first = page.locator('.index-name').first();
-  await expect(first).toHaveText('St Moses the Prophet and God-seer');
-  await page.selectOption('[data-sort]', 'latest');
-  await expect(first).toHaveText('St Peter (Cheltsov), Archpriest, Confessor (1972)');
+  // Random is the default since the same evening; the two date orders are
+  // this test's subject, so it chooses them explicitly — and reads the leader
+  // off the screen, because a re-sort does not reorder the DOM.
   await page.selectOption('[data-sort]', 'earliest');
-  await expect(first).toHaveText('St Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  await page.selectOption('[data-sort]', 'latest');
+  await expect.poll(() => leaders(page)).toBe('St Peter (Cheltsov), Archpriest, Confessor (1972)');
+  await page.selectOption('[data-sort]', 'earliest');
+  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
 });
 
 test('random deals an order, and holds it still under the reader', async ({ page }) => {
@@ -3007,18 +3069,21 @@ test('random deals an order, and holds it still under the reader', async ({ page
    */
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  const first = page.locator('.index-name').first();
-  const earliest = await first.textContent();
+  // Random is the default now; stepping through Earliest first keeps this
+  // test what it was — proof that choosing Random deals and then holds.
+  await page.selectOption('[data-sort]', 'earliest');
+  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
+  const earliest = await leaders(page);
 
   await page.selectOption('[data-sort]', 'random');
-  const dealt = await first.textContent();
-  expect(dealt).not.toBe(earliest);
+  await expect.poll(() => leaders(page)).not.toBe(earliest);
+  const dealt = await leaders(page);
   // The count is untouched: an order is not a filter.
   await expect(page.locator('[data-count]')).toHaveText('405');
 
   await page.locator('[data-query]').fill('  ');
   await expect(page.locator('[data-count]')).toHaveText('405');
-  expect(await first.textContent()).toBe(dealt);
+  expect(await leaders(page)).toBe(dealt);
 });
 
 /* ---- the site's language (Amendment 36) --------------------------------- */
@@ -3063,7 +3128,7 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
   await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
   await expect(page.locator('#church-open')).toHaveText('Русская');
-  await expect(page.locator('h1')).toHaveText('среда, 26 августа 2026 г.');
+  await expect(page.locator('h1')).toHaveText('среда, 26 авг. 2026 г.');
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the
@@ -3118,10 +3183,15 @@ test('the Index speaks the chosen language, saints excepted', async ({ page }) =
   );
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await expect(page.locator('h1')).toHaveText('Сви светитељи');
+  // The names stay English in every language; pinned in a known order,
+  // because the Random default would hand this assertion a different first
+  // card each run. The leader is read off the screen: a re-sort repositions
+  // the cards without reordering the DOM.
+  await page.selectOption('[data-sort]', 'earliest');
   await expect(page.locator('[data-sort] option:checked')).toHaveText('Најранији прво');
   await expect(page.locator('[data-set-aside]')).toContainText('Руска');
   // The saint is still English, honorific included.
-  await expect(page.locator('.index-name').first()).toHaveText('St Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('St Moses the Prophet and God-seer');
 });
 
 /* ---- the coast, and the hymns' own tongue (Amendment 37) ---------------- */
@@ -3169,7 +3239,7 @@ test('a thrown rail coasts to a halt and settles, instead of stopping dead', asy
   expect(state.classes).not.toContain('is-coasting');
   expect(state.classes).not.toContain('is-dragging');
   // Scrolling was still not selecting, momentum included.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
 });
 
 test('under reduced motion a throw does not coast', async ({ browser }) => {

@@ -218,7 +218,16 @@ is the voice of the *content*, and only the content. Dates and counts set
 
 **Script coverage is a hard requirement, not a nicety** — the multi-script name
 forms (Ἁγνή, Мойсей, Ⲁⲛⲧⲱⲛⲓⲟⲥ, ܢܣܛܘܪܝܘܣ) are how "attest, never adjudicate"
-actually appears on screen. Coverage as shipped: Literata carries Latin,
+actually appears on screen. **Reversed in part, 2026-08-24:** the author
+instructed "remove the 'Also called' section from each saint profile," which
+was exactly this passage's own on-screen evidence — the alternate-form block
+(`views/saint.js`'s `.names`, headed by the "Also called" label) no longer
+renders anywhere, so a saint's *other* name forms (Ἀντώνιος, Ⲁⲛⲧⲱⲛⲓⲟⲥ) go
+unseen; the requirement stands unreversed for a saint's *display* name, which
+still sets in Literata wherever the corpus writes it in its own script (Мойсей
+on the Index, e.g.). Flagged to the author in the same sitting; the
+reversal is theirs to revisit — the data is untouched, so restoring the line
+costs nothing. Coverage as shipped: Literata carries Latin,
 Latin-ext, Greek including polytonic, and Cyrillic. Coptic, Syriac, Armenian
 and Ge'ez fall through the stack to system fonts (Windows: Segoe UI Historic;
 macOS/iOS and Android: their Noto equivalents) — rendered, always, even where

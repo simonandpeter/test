@@ -32,13 +32,16 @@ export const EMPTY_FILTERS = {
   from: null,
   to: null,
   rangeMode: 'overlaps',
-  // Earliest is the default (author, 2026-08-24). Alphabetical order was the
-  // default from Session 5; it files the corpus by the accident of a name's
-  // first letter, where the earliest-first order opens on Moses and Joshua and
-  // reads down through the centuries, which is the shape the corpus has.
-  sort: 'earliest',
+  // Random is the default (author, 2026-08-24, evening — reversing the same
+  // morning's Earliest default: "so each time you open the site you get
+  // exposed to more saints"). Earliest had replaced Name that morning;
+  // views/saints.js mints a fresh seed per visit, so each open deals a
+  // different hand from the same 708.
+  sort: 'random',
   // Set when `sort` is 'random', null otherwise: the order has to survive a
   // re-render, and the Index is virtualised, so it cannot be a shuffled array.
+  // EMPTY_FILTERS itself stays unseeded — the seed is per visit, not a
+  // constant, or every reader would be dealt the same "random" order forever.
   shuffleSeed: null,
 };
 
