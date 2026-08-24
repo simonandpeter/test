@@ -213,13 +213,48 @@
    geometry survives: each button is a seventh of the width between the two
    peek insets, so the eighth and ninth days show half-cut at the edges
    exactly where the peeks stood. */
+/* The edges fade (author, 2026-08-25: "add a fade on the edges so the half
+   cropped 'Sun' or 'Mon' don't read as accidental"), which reverses Amendment
+   35's "the rail's edge days are ordinary buttons at full strength with no
+   mask at all" — recorded in place in DESIGN.md §5b. The reason 35 gave still
+   holds where it was aimed: the edge day is a *real* day, clickable and in
+   full ink, and nothing here dims a glyph a reader might try to read. What
+   the mask does is end the run, so a half-cut column reads as the grain
+   continuing rather than as a clipped mistake.
+
+   A mask, never an opacity — §5b's rule, and the reason is the quality
+   floor's own: a wash over --ink-soft is 2.1:1 on gesso. The dissolve happens
+   in the outer 12 px, which is inside the peek inset, so it begins only after
+   the neighbouring day's name is whole. */
 .week-strip {
   display: flex;
   flex: 1 1 auto;
   min-width: 0;
-  gap: var(--space-1);
+  /* Tightened from space-1 (author, same instruction: "reduce the spacing
+     between the days a touch so that you see the full Sun / Mon edges before
+     the fade is applied") — 2 px between columns instead of 4 gives each day
+     button a fraction more width, which is what carries the edge day's own
+     name clear of the dissolve. The button width formula below follows the
+     gap, and the month grid follows the same two constants, so the week and
+     the month keep sharing their column centres to the pixel. */
+  gap: 2px;
   overflow-x: auto;
   scroll-snap-type: x proximity;
+  --rail-fade: 12px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 var(--rail-fade),
+    #000 calc(100% - var(--rail-fade)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 var(--rail-fade),
+    #000 calc(100% - var(--rail-fade)),
+    transparent 100%
+  );
   /* Where a snapped day comes to rest: one peek in from the edge, which is
      the column the old peeked edge held. */
   scroll-padding-left: var(--rail-inset);
@@ -255,7 +290,7 @@
   /* The month's own column width — a seventh of what is between the two
      insets — so a snapped day and a month cell share their centres to the
      pixel, and the neighbours show themselves in the inset at each edge. */
-  width: calc((100% - 2 * var(--rail-inset) - 6 * var(--space-1)) / 7);
+  width: calc((100% - 2 * var(--rail-inset) - 6 * 2px) / 7);
   min-width: 34px;
   padding: var(--space-1) 0;
   border: 1px solid transparent;
@@ -450,7 +485,14 @@
   flex: 1 1 auto;
   min-width: 0;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  column-gap: var(--space-1);
+  /* 2 px, following the rail (author, 2026-08-25, who asked for the *week's*
+     days to sit closer together). The month follows because "the month is the
+     week grown taller" is a geometry the two share to the pixel — the rail's
+     button width is derived from this same number — and a month whose columns
+     had drifted 2 px from the week's would move the day names as the reader
+     toggles, which is the one thing that must never happen (DESIGN.md §5b).
+     It was --space-1 from 2026-08-21 until now. */
+  column-gap: 2px;
 }
 
 /* The day names land exactly on the week strip's — same columns, and the same

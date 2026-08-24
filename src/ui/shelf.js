@@ -41,13 +41,20 @@ function row(card, router, { removable = false } = {}) {
  * centred on the row's height at the trailing edge, because a row without
  * Save would disagree with the card it copies.
  *
- * The × that stood above that bookmark went the same evening, at the author's
- * instruction: a row is cleared by **swiping it across** instead. The button
- * survives as a screen-reader-and-keyboard route, hidden until focused —
+ * The × that stood above that bookmark went on 2026-08-24, at the author's
+ * instruction: a row is cleared by **swiping it across** instead. It came
+ * back the next day, *on the desktop only* and to the right of the bookmark
+ * rather than above it — a mouse has the swipe too, but a visible control is
+ * the faster hand where there is a cursor to aim it, and the pointer that
+ * can hover is the one that finds an × worth having. Touch keeps the swipe
+ * alone, which is the gesture it came for.
+ *
+ * The button is the same button either way: `shelf-remove`, always in the
+ * markup, let out of its clip by a `(hover: hover)` query. Hidden, it is
+ * still a screen-reader-and-keyboard route that focus brings out —
  * DESIGN.md §5b's rule is that a gesture is never the only way to a thing,
  * and a shelf whose only clearing gesture is a swipe would strand every
- * reader who cannot make one. Tabbing to a row surfaces it; a mouse or a
- * finger never sees it.
+ * reader who cannot make one.
  */
 function readingRow(card, router) {
   const image = card.image

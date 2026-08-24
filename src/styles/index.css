@@ -72,7 +72,14 @@ select:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--space-2) var(--space-4);
+  /* space-2 across, not space-4 (author, 2026-08-25: the facets "wrap
+     raggedly across two lines"). Chips are wider than the bare labels were,
+     so dressing them as controls without this would have wrapped the row
+     harder, not less; at this gap all seven fit one line in Arial's metrics
+     at the 580 px cold-load column — 545 of it — and the row that used to
+     wrap does not. Amendment 24's budget test is the one that catches it if
+     an eighth facet ever arrives. */
+  gap: var(--space-2);
   margin-bottom: var(--space-2);
 }
 
@@ -80,16 +87,69 @@ select:hover {
   flex: none;
 }
 
+/* A chip, not a run of text (author, 2026-08-25: the disclosure triangles
+   "look like inline text, not controls, and wrap raggedly across two lines").
+   The marker is the browser's own triangle, which is what read as prose; it
+   is replaced by a caret drawn in the chip's own ink, rotating when the facet
+   opens, and the chip carries the field and the hairline every other control
+   on this page has. Nothing about the row's arithmetic changes — the chips
+   are still `flex: none` in the same flex row, and the index-foot budget
+   (Amendment 24) measures the row below this one. */
 .facet > summary {
   cursor: pointer;
   font-family: var(--font-utility);
   font-size: 13.5px;
   color: var(--ink-soft);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 3px var(--space-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  list-style: none;
+}
+
+/* Both spellings: WebKit still wants the pseudo-element. */
+.facet > summary::-webkit-details-marker {
+  display: none;
+}
+
+.facet > summary::marker {
+  content: '';
+}
+
+/* The caret is the chip's own, and turns down when the facet opens — the
+   affordance the browser's triangle was carrying, now inside the control. */
+.facet > summary::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-1px) rotate(-45deg);
+  transition: transform 120ms ease-out;
+}
+
+.facet[open] > summary::after {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .facet > summary::after {
+    transition: none;
+  }
 }
 
 .facet > summary:hover {
   color: var(--ink);
+  border-color: var(--ink-soft);
+}
+
+/* Open is a state the reader should see without opening the fieldset. */
+.facet[open] > summary {
+  color: var(--ink);
+  background: var(--field);
 }
 
 .facet fieldset {

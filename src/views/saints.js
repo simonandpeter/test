@@ -37,7 +37,7 @@ import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { churchName, currentChurch, keptBy, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
-import { dateFormatter } from '../lib/i18n.js';
+import { dateFormatter, formatDate } from '../lib/i18n.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -73,7 +73,7 @@ const DETAILED_ROW_HEIGHT = 112;
 const LAYOUTS = ['cards', 'rows'];
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthLabel = (m) =>
-  dateFormatter({ month: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(2001, m - 1, 1)));
+  formatDate({ month: 'long', timeZone: 'UTC' }, new Date(Date.UTC(2001, m - 1, 1)));
 
 let state = null;
 
@@ -593,12 +593,17 @@ function update({ animate }) {
   const church = currentChurch();
   const mine = cards.filter((card) => keptBy(card, church));
   const asideNote = el.querySelector('[data-set-aside]');
-  const aside = cards.length - mine.length;
-  asideNote.hidden = aside === 0;
-  asideNote.textContent =
-    aside === 1
-      ? fill(STRINGS.saints.setAsideOne, { church: churchName(church) })
-      : fill(STRINGS.saints.setAsideMany, { count: aside, church: churchName(church) });
+  // "122/708 saints venerated in the Romanian calendar" (author, 2026-08-25).
+  // It said how many were *not* kept, which left the reader subtracting to
+  // learn the number they wanted; the ratio says both at once, and the
+  // header's part is a title rather than a sentence repeated on every filter.
+  asideNote.hidden = mine.length === cards.length;
+  asideNote.textContent = fill(STRINGS.saints.kept, {
+    shown: mine.length,
+    total: cards.length,
+    church: churchName(church),
+  });
+  asideNote.title = STRINGS.saints.keptTitle;
 
   const { matched, undated } = applyFilters(mine, filters, {
     monthsBySlug: state.monthsBySlug,

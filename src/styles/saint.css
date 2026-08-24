@@ -367,6 +367,37 @@
   color: var(--ink);
 }
 
+/* On a pointer that can hover — a desktop mouse — the x is simply there, to
+   the right of the bookmark (author, 2026-08-25), because a visible control
+   is the faster hand where there is a cursor to aim it. Touch keeps the
+   swipe alone. The glyph is a pseudo-element so the button's accessible name
+   stays the whole sentence a screen reader needs. */
+@media (hover: hover) and (pointer: fine) {
+  .shelf .shelf-remove-quiet {
+    position: relative;
+    z-index: 1;
+    align-self: center;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 var(--space-1);
+    padding: 0 var(--space-1);
+    overflow: visible;
+    clip-path: none;
+    font-size: 0;
+    color: var(--ink-soft);
+    line-height: 1;
+  }
+
+  .shelf .shelf-remove-quiet::after {
+    content: '×';
+    font-size: 17px;
+  }
+
+  .shelf .shelf-remove-quiet:hover {
+    color: var(--ink);
+  }
+}
+
 /* Below 480 px .reg-feast wraps onto its own full-width line (calendar.css);
    ordered after it, the × would wrap with it onto a third line, under the
    name, so it moves ahead of the date here and stays on the name's line. */

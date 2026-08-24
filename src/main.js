@@ -72,7 +72,7 @@ function show({ route, params, path }, nav = {}) {
     // §5c). The first render keeps whatever position the browser gave it.
     if (!firstRender) window.scrollTo(0, 0);
     if (!view) {
-      document.title = `${STRINGS.notFound.title} — ${STRINGS.site.name}`;
+      document.title = `${STRINGS.notFound.title} — ${STRINGS.site.tabName}`;
       viewEl.innerHTML = `<h1>${STRINGS.notFound.title}</h1><p>${STRINGS.notFound.body}</p>`;
       return;
     }
@@ -84,7 +84,7 @@ function show({ route, params, path }, nav = {}) {
       : typeof view.title === 'function'
         ? view.title()
         : view.title;
-    document.title = `${heading} — ${STRINGS.site.name}`;
+    document.title = `${heading} — ${STRINGS.site.tabName}`;
     view.render(viewEl, { data, params, router, nav, cameFrom });
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
@@ -114,6 +114,18 @@ function show({ route, params, path }, nav = {}) {
   first = false;
 }
 
+/**
+ * The site's name, wherever it is printed (author, 2026-08-25: "change the
+ * title on header and loading screen to the picked language"). Both were
+ * hard-coded in index.html — and stale there, still saying The Orthodox Saint
+ * a rename later — so they carry a data-site-name hook and the pack fills it.
+ */
+function paintSiteName() {
+  for (const el of document.querySelectorAll('[data-site-name]')) {
+    el.textContent = STRINGS.site.name;
+  }
+}
+
 async function boot() {
   initTheme(document.getElementById('theme-toggle'));
   // The stored language is applied before anything renders (Amendment 36):
@@ -131,9 +143,17 @@ async function boot() {
   // and the nav through refresh() — every render reads STRINGS afresh — the
   // title through show()'s own path, and the church control through its own
   // language subscription in church-chooser.js.
-  subscribeLanguage(() => router.refresh());
+  subscribeLanguage(() => {
+    router.refresh();
+    paintSiteName();
+  });
+  paintSiteName();
 
   const veil = document.getElementById('veil');
+  // The veil is up before this runs, so its English stands for the moment the
+  // modules take to parse and is replaced here — a language chosen on a
+  // previous visit paints before the manifest arrives, which is the long wait.
+  paintSiteName();
   try {
     data = await loadManifest();
   } catch (e) {

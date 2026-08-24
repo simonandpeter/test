@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, devices } from '@playwright/test';
 import { AxeBuilder } from '@axe-core/playwright';
 
 /**
@@ -336,8 +336,21 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   await expect(shelfRow).toBeVisible();
   await expect(shelfRow.locator('.index-name')).toContainText('Moses the Hungarian');
   await expect(shelfRow.locator('.bookmark')).toHaveCount(1);
-  // No visible × anywhere on the row: the removal that remains is the
-  // hidden one, and it is clipped to a pixel until it takes focus.
+  /*
+   * The × came back on 2026-08-25, *on the desktop only* and to the right of
+   * the bookmark: a mouse has the swipe too, but a visible control is the
+   * faster hand where there is a cursor to aim it. It is the same button
+   * either way — always in the markup, carrying the whole sentence as its
+   * accessible name, let out of its clip by `(hover: hover) and (pointer:
+   * fine)`.
+   *
+   * Both of this suite's projects are Desktop Chrome — mobile-360 is a narrow
+   * viewport, not a touch device (playwright.config.js) — so both take the
+   * hovering branch here, and the query is read at runtime rather than
+   * assumed from the project's name. The touch half has a test of its own
+   * below, on a real touch device, because a branch asserted only where it
+   * cannot run is not asserted at all.
+   */
   const placed = await shelfRow.evaluate((row) => {
     const mark = row.querySelector('.shelf-tools .bookmark').getBoundingClientRect();
     const card = row.getBoundingClientRect();
@@ -347,18 +360,33 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
       mark,
       card,
       quietWidth: q.width,
+      quietRight: q.right,
+      quietMid: q.top + q.height / 2,
       quietText: quiet.textContent.trim(),
-      visibleXs: [...row.querySelectorAll('button')].filter((b) => b.textContent.trim() === '×').length,
+      glyph: getComputedStyle(quiet, '::after').content,
+      hovers: matchMedia('(hover: hover) and (pointer: fine)').matches,
     };
   });
-  expect(placed.visibleXs).toBe(0);
-  expect(placed.quietWidth).toBeLessThan(3);
+  // The accessible name is the whole action in both worlds: out of the row's
+  // context an "×" says nothing.
   expect(placed.quietText).toBe('Remove Moses the Hungarian from Continue reading');
-  // Centred on the card's height, at its trailing edge.
-  const markMid = placed.mark.top + placed.mark.height / 2;
   const cardMid = placed.card.top + placed.card.height / 2;
+  const markMid = placed.mark.top + placed.mark.height / 2;
   expect(Math.abs(markMid - cardMid)).toBeLessThan(2);
-  expect(placed.card.right - placed.mark.right).toBeLessThan(20);
+  if (placed.hovers) {
+    // Visible, an ×, beside the bookmark and after it, centred on the row.
+    expect(placed.quietWidth).toBeGreaterThan(8);
+    expect(placed.glyph).toContain('×');
+    expect(placed.quietRight).toBeGreaterThan(placed.mark.right);
+    expect(Math.abs(placed.quietMid - cardMid)).toBeLessThan(2);
+    expect(placed.card.right - placed.quietRight).toBeLessThan(20);
+  } else {
+    // Not reached by either project today; kept so this test still says the
+    // truth if one ever runs on a touch device. The touch case is asserted
+    // properly below.
+    expect(placed.quietWidth).toBeLessThan(3);
+    expect(placed.card.right - placed.mark.right).toBeLessThan(20);
+  }
 
   // And it can still be dismissed without a gesture: a shelf the reader
   // cannot clear is a nag, and a shelf only a swipe can clear strands
@@ -419,6 +447,51 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   await push(420);
   await expect(rows).toHaveCount(1);
   await expect(page.locator('.shelves')).toContainText('Continue reading');
+});
+
+test('on a touch device the shelf row carries no ×, and the swipe still clears it', async ({ browser }) => {
+  /*
+   * The other half of 2026-08-25's instruction: the × came back "on desktop
+   * only". A phone keeps the swipe alone, because a control sized for a
+   * fingertip beside a bookmark on a 48 px row is how a reader clears a shelf
+   * they meant to scroll past.
+   *
+   * This needs a real touch device — both of the suite's own projects are
+   * Desktop Chrome, one of them merely narrow, and both report a fine
+   * hovering pointer — so the media query that hides the × never fires there.
+   */
+  const ctx = await browser.newContext({ ...devices['Pixel 5'] });
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+
+  const row = page.locator('.shelf-row').first();
+  await expect(row).toBeVisible();
+  const seen = await row.evaluate((r) => {
+    const quiet = r.querySelector('.shelf-remove');
+    return {
+      hovers: matchMedia('(hover: hover) and (pointer: fine)').matches,
+      width: quiet.getBoundingClientRect().width,
+      name: quiet.textContent.trim(),
+    };
+  });
+  expect(seen.hovers).toBe(false);
+  expect(seen.width).toBeLessThan(3);
+  // Still named in full for the screen reader that meets it.
+  expect(seen.name).toBe('Remove Moses the Hungarian from Continue reading');
+
+  // And the gesture that replaced it works with a finger.
+  const name = row.locator('.index-name');
+  const box = await name.boundingBox();
+  const y = box.y + box.height / 2;
+  const x = box.x + box.width / 2;
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i += 1) await page.mouse.move(x + (300 * i) / 8, y);
+  await page.mouse.up();
+  await expect(page.locator('.shelf-row')).toHaveCount(0);
+  await ctx.close();
 });
 
 test('under reduced motion a swiped row goes without flying', async ({ browser }) => {
@@ -799,7 +872,10 @@ test('a day is one click, and the keys step it from anywhere', async ({ page }) 
    * step a day from anywhere on the page. They were bound inside the strip
    * until then, which meant they worked only after tabbing into it. A joined
    * S later the same day (author: "'A' key doesn't work for going back") —
-   * a hand resting on WASD expects A to be "left".
+   * a hand resting on WASD expects A to be "left" — and S left the next
+   * morning, at the author's instruction: "it should only be the 'A' key".
+   * So the pair is A and D, and S is asserted *dead* below, because a key
+   * that quietly kept working would be the defect this test exists for.
    */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
@@ -814,19 +890,37 @@ test('a day is one click, and the keys step it from anywhere', async ({ page }) 
   await page.keyboard.press('ArrowLeft');
   await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 
-  // A/S and D beside them, for a hand that is not on the arrows.
-  await page.keyboard.press('d');
-  await expect(page.locator('h1')).toHaveText(/25 Aug 2026/);
-  await page.keyboard.press('s');
-  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
+  // A and D beside them, for a hand that is not on the arrows.
   await page.keyboard.press('d');
   await expect(page.locator('h1')).toHaveText(/25 Aug 2026/);
   await page.keyboard.press('a');
+  await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
+  // And S does nothing: it stepped back a day for one day (2026-08-24) and
+  // the author removed it the next.
+  await page.keyboard.press('s');
   await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
 
   // A modifier means the key is the browser's: ctrl+D must stay a bookmark.
   await page.keyboard.press('Control+d');
   await expect(page.locator('h1')).toHaveText(/24 Aug 2026/);
+
+  /*
+   * And the day the reader left keeps no focus ring (author, 2026-08-25: "a
+   * selection highlight remains over the day where you started moving from").
+   * A day pressed with a pointer *is* focused — silently, because the press
+   * was a pointer's — and the browser paints the ring on it the moment any
+   * key is touched, so the old day wore a ring while the new day wore the
+   * selection. The buttons are tabindex="-1" and the rail is the tab stop, so
+   * that focus was never anyone's way in.
+   */
+  const ringed = await page.evaluate(() => {
+    const active = document.activeElement;
+    return {
+      onADay: !!active?.closest?.('.week-strip [data-iso]'),
+      tag: active?.tagName ?? null,
+    };
+  });
+  expect(ringed.onADay).toBe(false);
 });
 
 test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
@@ -1652,11 +1746,14 @@ test('the header carries no date, and the controls keep their places at both wid
    * and is withdrawn. Wide, the row is unchanged: the calendar control — which
    * names the church the site reads — then the language control and the icon
    * toggle, all on one line, the bar no taller than it was with the date
-   * (61 px). Narrow, the author rearranged it on 2026-08-24: the site name
-   * spans the top centred, the two toggles sit under it at the right, and the
-   * calendar control drops to the nav's own line at its right end. So the
-   * "one line" assertion is now the wide branch's alone, and the narrow
-   * branch pins the arrangement that replaced it.
+   * (61 px). Narrow, the author rearranged it twice: on 2026-08-24 the name
+   * spanned the top with the calendar control down on the nav's line, and on
+   * 2026-08-25 that became **one line of chrome** — calendar control, name,
+   * language and theme — with the four pages centred on a row beneath it,
+   * "in one line across all screen sizes". So the "one line" assertion is
+   * the wide branch's alone, and the narrow branch pins the arrangement that
+   * replaced both: the three controls level with the name and in order across
+   * it, the nav centred underneath, down to a 320 px phone.
    *
    * **The wide branch is measured in a wide utility face**, Amendment 24's
    * lesson applied to the header: `--font-utility` is the reader's own system
@@ -1704,13 +1801,16 @@ test('the header carries no date, and the controls keep their places at both wid
       sameLine: Math.abs(mid(open) - mid(theme)) < 4,
       themeAfter: theme.left >= open.right,
       wide: innerWidth >= 560,
-      // Narrow: the name centred across the whole header, the toggles under
-      // it, the calendar control on the nav's line and to its right.
-      nameCentred: Math.abs((name.left + name.right) / 2 - (header.left + header.right) / 2) < 8,
-      togglesAboveCalendar: theme.bottom <= open.top + 1 && lang.bottom <= open.top + 1,
-      calendarOnNavLine: mid(open) >= nav.top && mid(open) <= nav.bottom,
-      calendarAfterNav: open.left >= nav.right,
-      nameAboveNav: name.bottom <= nav.top + 1,
+      // Narrow: one chrome line — calendar, name, language, theme, all on
+      // the same centre — with the nav centred on its own row beneath.
+      chromeOneLine:
+        Math.abs(mid(open) - mid(name)) < 6 &&
+        Math.abs(mid(open) - mid(lang)) < 6 &&
+        Math.abs(mid(open) - mid(theme)) < 6,
+      chromeInOrder: open.right <= name.left + 1 && name.right <= lang.left + 1 && lang.right <= theme.left + 1,
+      nameCentred: Math.abs((name.left + name.right) / 2 - (header.left + header.right) / 2) < 12,
+      navBelowChrome: nav.top >= open.bottom - 1,
+      navCentred: Math.abs((nav.left + nav.right) / 2 - (header.left + header.right) / 2) < 12,
     };
   });
   if (m.wide) {
@@ -1718,11 +1818,62 @@ test('the header carries no date, and the controls keep their places at both wid
     expect(m.themeAfter).toBe(true);
     expect(m.header, `the header wrapped in a wide utility face: ${m.header.toFixed(2)} px`).toBeLessThan(64);
   } else {
+    expect(m.chromeOneLine).toBe(true);
+    expect(m.chromeInOrder).toBe(true);
     expect(m.nameCentred).toBe(true);
-    expect(m.nameAboveNav).toBe(true);
-    expect(m.togglesAboveCalendar).toBe(true);
-    expect(m.calendarOnNavLine).toBe(true);
-    expect(m.calendarAfterNav).toBe(true);
+    expect(m.navBelowChrome).toBe(true);
+    expect(m.navCentred).toBe(true);
+  }
+});
+
+test('the chrome line holds down to a 320 px phone, in every language', async ({ browser }) => {
+  /*
+   * Author, 2026-08-25: the calendar control, the name and the two toggles
+   * "remain in one line across all screen sizes". 320 px is the narrowest
+   * phone the site meets, and the name is the elastic part — it gives up size
+   * and then tail rather than pushing a control off the line, because a
+   * calendar control that says nothing is worse than a smaller masthead.
+   *
+   * The first cut of this layout failed here in a way worth keeping a note
+   * of: the name's track was a bare `1fr`, whose automatic minimum is
+   * min-content, so a long name widened the track instead of ellipsising and
+   * printed straight across the controls — at 320 px in English and at 360 in
+   * Russian. `minmax(0, 1fr)` is the fix, and the same trap caught the
+   * month's own span at Amendment 35.
+   */
+  for (const [width, language] of [[320, 'en'], [360, 'ru'], [360, 'el'], [412, 'ro']]) {
+    const ctx = await browser.newContext({ viewport: { width, height: 780 } });
+    const page = await ctx.newPage();
+    await page.addInitScript(
+      (l) => localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: l })),
+      language,
+    );
+    await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    // The widest realistic chrome, as the header's own test measures it.
+    await page.addStyleTag({
+      content: ':root { --font-utility: "DejaVu Sans", Verdana, sans-serif !important; }',
+    });
+    await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+    const m = await page.evaluate(() => {
+      const b = (sel) => document.querySelector(sel).getBoundingClientRect();
+      const mid = (r) => r.top + r.height / 2;
+      const cal = b('#church-open');
+      const name = b('.site-name');
+      const lang = b('#lang-open');
+      const theme = b('#theme-toggle');
+      return {
+        level: Math.abs(mid(cal) - mid(theme)) < 6 && Math.abs(mid(cal) - mid(lang)) < 6 && Math.abs(mid(cal) - mid(name)) < 6,
+        inOrder: cal.right <= name.left + 1 && name.right <= lang.left + 1 && lang.right <= theme.left + 1,
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        nameVisible: name.width > 20,
+      };
+    });
+    expect(m.level, `${language} at ${width}: the chrome line broke`).toBe(true);
+    expect(m.inOrder, `${language} at ${width}: the name overran a control`).toBe(true);
+    expect(m.overflow, `${language} at ${width}: the page overflowed`).toBe(0);
+    expect(m.nameVisible, `${language} at ${width}: the name was squeezed away`).toBe(true);
+    await ctx.close();
   }
 });
 
@@ -2633,7 +2784,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   // 31): its own week, the Russian new martyrs read off azbyka.ru, and the
   // original eight; the rest stand undocumented for it.
   await expect(page.locator('[data-count]')).toHaveText('405');
-  await expect(page.locator('[data-set-aside]')).toContainText('303 saints are not in the Russian calendar');
+  await expect(page.locator('[data-set-aside]')).toHaveText('405/708 saints venerated in the Russian calendar.');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -2650,14 +2801,16 @@ test('the header control names the calendar, offers the three, and the Index fol
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian');
   await expect(page.locator('[data-count]')).toHaveText('122');
-  await expect(page.locator('[data-set-aside]')).toContainText('586 saints are not in the Romanian calendar');
+  // The count says the useful number outright (author, 2026-08-25): it named
+  // how many were *not* kept, which left the reader subtracting.
+  await expect(page.locator('[data-set-aside]')).toHaveText('122/708 saints venerated in the Romanian calendar.');
 
   // Greek keeps three hundred and forty-four: the Synaxaristis lists most of
   // the four weeks, one entry per name.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('344');
-  await expect(page.locator('[data-set-aside]')).toContainText('364 saints are not in the Greek calendar');
+  await expect(page.locator('[data-set-aside]')).toHaveText('344/708 saints venerated in the Greek calendar.');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
@@ -2722,13 +2875,15 @@ test('the theme follows the system until it is touched, and holds once it is', a
   await ctx.close();
 });
 
-test('the site is The Orthodox Saint, and the habit page is Daily', async ({ page }) => {
+test('the site is named in the reader\u2019s own language, and the habit page is Daily', async ({ page }) => {
   // Author, 2026-08-23. The name in the head and the page's nav label. The
   // header's own corner reads "Orthodoxy Daily" since (author, 2026-08-23,
   // later the same day) — a second, deliberately different name from the
   // head's. The veil carried the head's name until 2026-08-24 and now carries
   // the header's; that has a test of its own below. The route stays /calendar
-  // so no link breaks.
+  // so no link breaks. Since 2026-08-25 the header's name comes from the pack
+  // rather than from the markup, so it follows the chosen language — the
+  // English pack says the same words the markup used to.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
@@ -2753,7 +2908,9 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // A life with no recorded beginning is read from its end (author,
   // 2026-08-24): the hero of this day, Lawrence of Kaluga, said
   // "undated – 1515" until then.
-  await expect(page.locator('.hero-dates')).toHaveText('Entered eternal glory in 1515');
+  // "Entered eternal glory in 1515" until 2026-08-25, when the author
+  // replaced the phrase with plain "Reposed".
+  await expect(page.locator('.hero-dates')).toHaveText('Reposed 1515');
   // And Also commemorated reads as one company, not a ruled ledger: no line
   // between the saints (author, 2026-08-24; the shelves keep theirs).
   expect(
@@ -3011,13 +3168,25 @@ test('the veil names the site the way the header does', async ({ page }) => {
    * the served HTML rather than raced for in a live page.
    */
   const html = await (await page.request.get('/')).text();
-  expect(html).toContain('<div class="veil-name">Orthodoxy Daily</div>');
-  expect(html).not.toContain('<div class="veil-name">The Orthodox Saint</div>');
+  expect(html).toContain('<div class="veil-name" data-site-name>Orthodoxy Daily</div>');
+  expect(html).not.toContain('The Orthodox Saint</div>');
   // The head keeps its own name, which is the half of the split that stands.
   expect(html).toContain('<title>The Orthodox Saint</title>');
+
+  /*
+   * And both printed names follow the language (author, 2026-08-25). The
+   * markup's English is what a reader with no stored choice gets and what
+   * stands for the moment the modules take to parse; the pack paints over it
+   * at boot, before the manifest — which is the long wait — has landed.
+   */
+  await page.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ro' })),
+  );
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await expect(page.locator('.site-name')).toHaveText('Ortodoxia Zilnică');
 });
 
-test('the site mark is the Orthodox cross, and it spends no gold', async ({ page }) => {
+test('the site mark is the Orthodox cross, in gold by instruction', async ({ page }) => {
   /*
    * Author, 2026-08-24. The favicon was one gold cell — the attested mark of
    * the veneration badge, which was removed whole at Amendment 25, so it had
@@ -3026,10 +3195,14 @@ test('the site mark is the Orthodox cross, and it spends no gold', async ({ page
    * footrest, whose slant is the whole of what makes it Orthodox rather than
    * Latin.
    *
-   * Gold is the assertion that matters. DESIGN.md §2 reserves it for a
+   * It was drawn in ink for exactly one day. DESIGN.md §2 reserves gold for a
    * finding about veneration and nothing else, and a site mark is not one —
-   * so the cross is drawn in ink, and this fails if anyone re-spends the
-   * token here.
+   * which is why Amendment 34 took the gold out. *The author put it back on
+   * 2026-08-25* ("make the site icon gold colour orthodox cross"), and §2
+   * records the exception in place: gold is spent here and nowhere else on
+   * the site. So this pins the two gold tokens exactly — a mark drifting to
+   * some other yellow would be the failure now — and the "spent nowhere else"
+   * half is still guarded by its own test over the rendered pages.
    */
   const html = await (await page.request.get('/')).text();
   const href = html.match(/<link rel="icon" href="([^"]+)"/)?.[1];
@@ -3049,10 +3222,12 @@ test('the site mark is the Orthodox cross, and it spends no gold', async ({ page
   const leftTop = points.find(([x]) => x === Math.min(...xs));
   const rightTop = points.find(([x]) => x === Math.max(...xs));
   expect(leftTop[1]).toBeLessThan(rightTop[1]);
-  // Ink, not gold, in either theme.
-  expect(svg).toContain('#221d19');
-  expect(svg.toLowerCase()).not.toContain('a98237');
-  expect(svg.toLowerCase()).not.toContain('c79a4b');
+  // Gold, by instruction (author, 2026-08-25), and exactly the two tokens:
+  // #A98237 on a light tab strip, #C79A4B on a dark one. Ink here from
+  // Amendment 34 until then.
+  expect(svg.toLowerCase()).toContain('a98237');
+  expect(svg.toLowerCase()).toContain('c79a4b');
+  expect(svg).not.toContain('#221d19');
   // It flips rather than vanishing into a dark tab strip.
   expect(svg).toContain('prefers-color-scheme:dark');
 });
@@ -3283,7 +3458,13 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
   await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
   await expect(page.locator('#church-open')).toHaveText('Русская');
-  await expect(page.locator('h1')).toHaveText('среда, 26 авг. 2026 г.');
+  // Capitalised, and the month's own abbreviation dot dropped (author,
+  // 2026-08-25). Said plainly because it is a departure: lower case is
+  // correct Russian orthography for a weekday and a month, and «авг.» wants
+  // its dot; the author asked for capitals and no dot, and only the weekday
+  // and month parts are touched — the literal «2026 г.» keeps the dot that
+  // belongs to a different word.
+  await expect(page.locator('h1')).toHaveText('Среда, 26 Авг 2026 г.');
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the
@@ -3511,40 +3692,28 @@ test('under reduced motion a throw does not coast', async ({ browser }) => {
   await ctx.close();
 });
 
-test('a translated page says the hymns stay in the church\'s tongue on purpose', async ({ page }) => {
+test('the hymns carry no note about their own tongue', async ({ page }) => {
   /*
-   * Author, 2026-08-24 ("When EN is on, I still see the hymns in Russian").
-   * The hymns have no English texts in the corpus, by decision: they are
-   * copied whole from each church's cited source, and translating them here
-   * would be Amendment 2's invented content. What the page owes the reader
-   * is that this is visibly a decision — one line under the heading, shown
-   * exactly when the site's language is not the hymns' language. The Russian
-   * chrome sees it too, because the Russian church's hymns are Church
-   * Slavonic, which Russian is not; the Greek chrome on the Greek church
-   * sees nothing, because there the tongues actually match.
+   * Two tests stood here from 2026-08-24 to 2026-08-25. Amendment 37 put a
+   * line under the Hymns heading — "In the church's own tongue, as the source
+   * prints it; no translation is recorded." — shown exactly when the site's
+   * language was not the hymns' language, because the author had reported the
+   * Russian hymns showing under an English chrome and the honest answer was
+   * that the corpus holds no English hymn texts by decision.
+   *
+   * The author removed the line the next morning ("don't print it. Remove
+   * it"). The decision it announced still stands — the hymns are the source's
+   * own language, untranslated — so what this heir pins is both halves: the
+   * note is gone in every language, and the hymns under it are still the
+   * source's own text, which is the thing the note was talking about.
    */
   await ready(page);
   await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
-  const note = page.locator('[data-hymns] .hymn-own');
-  await expect(note).toHaveText(
-    'In the church’s own tongue, as the source prints it; no translation is recorded.',
-  );
-  // And the hymn under it is still the source's Slavonic, untouched.
+  await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
   await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго');
 
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
-  await expect(page.locator('[data-hymns] .hymn-own')).toContainText('На языке самой церкви');
-});
-
-test('where the tongues match, the hymns carry no note', async ({ browser }) => {
-  const ctx = await browser.newContext();
-  const page = await ctx.newPage();
-  await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
-  );
-  await page.goto('/calendar/2026-09-08', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn-text').first()).toBeVisible();
   await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
-  await ctx.close();
+  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго');
 });

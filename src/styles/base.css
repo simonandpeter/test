@@ -198,11 +198,25 @@ button:hover {
    («Румынская») fighting the toggles for the same line. */
 header.chrome {
   display: grid;
-  grid-template-columns: 1fr auto;
+  /* Narrow (author, 2026-08-25, revising the previous evening's
+     arrangement): one line of chrome — the calendar control at the left, the
+     name between, the language and theme toggles at the right — and the four
+     pages centred on a row beneath it. The name spanned the top with the
+     calendar control down on the nav's line until then; this puts the three
+     controls back on one line together, which is what the author asked to
+     hold "across all screen sizes". */
+  /* minmax(0, 1fr), not a bare `1fr`, whose automatic minimum is min-content:
+     a *single word* longer than the track would widen the track rather than
+     be clipped. Said plainly, because backing it out on its own leaves every
+     test green: no site name in the five packs has a word that long — the
+     overlap this layout actually shipped with came from `justify-self`
+     (below), and that is what the 320 px test catches. This line is the
+     guard for a longer name arriving, and the same trap caught the month's
+     own span at Amendment 35. */
+  grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas:
-    'name name'
-    'theme theme'
-    'nav cal';
+    'cal name theme'
+    'nav nav nav';
   align-items: center;
   /* space-4, not space-6 (2026-08-24, after CI): the header is one row of
      five things now — name, four nav links, calendar, language, theme — and
@@ -231,12 +245,37 @@ header.chrome .site-name {
   grid-area: name;
 }
 
-/* Centred across the top on a narrow screen, and back on the left the moment
-   the header is one line again. */
+/* Narrow, the name sits centred between the two control boxes; wide, it is
+   back at the left where the row begins. The nav row is centred under it. */
 @media (max-width: 559.98px) {
+  header.chrome {
+    /* The chrome line has to hold at every width the site meets, down to the
+       320 px of a small phone (author, 2026-08-25: "make sure they remain in
+       one line across all screen sizes"), so its three parts give up their
+       comfortable gaps rather than wrapping. */
+    column-gap: var(--space-2);
+  }
+
   header.chrome .site-name {
-    justify-self: center;
+    /* Stretched to the track and centred *inside* it, not shrink-wrapped.
+       `justify-self: center` sizes the item to its own text, so the track's
+       width stops constraining it and overflow/ellipsis never engage — the
+       name printed straight across the controls at 320 px and in Russian at
+       360. This is the line the 320 px test fails without. */
+    justify-self: stretch;
     text-align: center;
+    /* The name is the only elastic thing on the line: below about 380 px it
+       gives up size before the controls give up their labels, because a
+       calendar control that says nothing is worse than a smaller masthead. */
+    font-size: clamp(15px, 4.4vw, 19px);
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  header.chrome .site-nav {
+    justify-self: center;
   }
 }
 
@@ -270,6 +309,14 @@ header.chrome .chrome-calendar {
 @media (min-width: 560px) {
   header.chrome .chrome-corner {
     margin-inline-start: calc(var(--space-2) - var(--space-4));
+  }
+}
+
+/* Narrow, the calendar control is at the *start* of the chrome line, so it
+   loses the end-justification the wide layout gives it. */
+@media (max-width: 559.98px) {
+  header.chrome .chrome-calendar {
+    justify-self: start;
   }
 }
 

@@ -151,6 +151,30 @@ export function dateFormatter(options) {
 }
 
 /**
+ * A date in the reader's language, capitalised (author, 2026-08-25: the
+ * Romanian date "was all lower case and doesn't have any capital letters …
+ * and for some reason aug has a full stop after it").
+ *
+ * Said plainly, because it is a deliberate departure: lower-case weekday and
+ * month names are *correct* orthography in Romanian, Russian and Serbian, and
+ * "aug." is the correct Romanian abbreviation — the dot marks the truncation.
+ * The author asked for capitals and no dot, so the parts are capitalised and
+ * the month's own trailing dot is dropped. Only the weekday and month parts
+ * are touched: the literals are left alone, so Russian keeps its «2026 г.»,
+ * whose dot belongs to a different word.
+ */
+export function formatDate(options, date) {
+  return dateFormatter(options)
+    .formatToParts(date)
+    .map((part) => {
+      if (part.type !== 'weekday' && part.type !== 'month') return part.value;
+      const bare = part.value.replace(/\.$/, '');
+      return bare.charAt(0).toLocaleUpperCase(languageTag()) + bare.slice(1);
+    })
+    .join('');
+}
+
+/**
  * A data-borne English phrase — a fast reason from liturgical-days.js —
  * through the current pack's `reasons` map, untouched where the pack has no
  * entry (or there is no pack): a reason passed through in English is honest;

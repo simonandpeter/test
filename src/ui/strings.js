@@ -6,7 +6,19 @@
 
 export const STRINGS = {
   site: {
-    name: 'The Orthodox Saint',
+    // The header and the loading veil print this (author, 2026-08-25: "change
+    // the title on header and loading screen to the picked language"). It was
+    // hard-coded in index.html in both places, and stale there besides — the
+    // site was renamed Orthodoxy Daily on 2026-08-24 and this key still said
+    // The Orthodox Saint.
+    name: 'Orthodoxy Daily',
+    // The tab and the bookmark keep the *other* name, which is Amendment 31's
+    // deliberate split: the head says The Orthodox Saint, the page says
+    // Orthodoxy Daily. Painting the header from the pack (2026-08-25) nearly
+    // collapsed that split by accident — one key was feeding both — so the
+    // head has a key of its own now, translated in every pack exactly as the
+    // old shared one was.
+    tabName: 'The Orthodox Saint',
     tagline: 'The saints of the Orthodox Church, church by church — Russian, Romanian, Greek and Serbian, each in its own calendar.',
   },
 
@@ -72,12 +84,6 @@ export const STRINGS = {
       troparion: 'Troparion',
       kontakion: 'Kontakion',
       source: 'Text from {source}',
-      // Shown when the site's language is not the hymns' language (Amendment
-      // 37): the hymns are the one part of a translated page that stays in
-      // the church's tongue on purpose — copied whole from the cited source,
-      // never translated here (Amendment 2) — and without this line that
-      // reads as a translation bug rather than a decision.
-      own: 'In the church’s own tongue, as the source prints it; no translation is recorded.',
     },
 
     /*
@@ -141,13 +147,15 @@ export const STRINGS = {
     before: 'before {y}',
     after: 'after {y}',
     // A life with no recorded beginning is read from its end (author,
-    // 2026-08-24): "undated – 1779" became "Entered eternal glory in 1779".
-    // Three forms because the corpus's death displays are not all years:
-    // "in 1779", "in the 5th century", and bare for "before 556" or
-    // "under Licinius", which carry their own preposition.
-    reposeIn: 'Entered eternal glory in {when}',
-    reposeInThe: 'Entered eternal glory in the {when}',
-    repose: 'Entered eternal glory {when}',
+    // 2026-08-24): "undated - 1779" became "Entered eternal glory in 1779",
+    // and on 2026-08-25 that became plain "Reposed 1779". One form now
+    // instead of three: with the verb doing no grammatical work the
+    // prepositions went with it, and "Reposed 5th C.", "Reposed c. 250" and
+    // "Reposed before 556" all read as the register entries they are. The
+    // three keys survive so the packs need no surgery.
+    reposeIn: 'Reposed {when}',
+    reposeInThe: 'Reposed {when}',
+    repose: 'Reposed {when}',
     undatedNote: 'No date is recorded at either end of this life. Undated is a finding rather than a blank: it means nothing we have found fixes a bound.',
   },
 
@@ -165,8 +173,13 @@ export const STRINGS = {
     undatedNote: 'A date range can neither include nor exclude a saint with no bound at either end, so these are set aside rather than dropped. They match everything else you have chosen.',
     // The Index keeps the reader's church (author, 2026-08-22): what is set
     // aside by it is counted and named, never silently dropped.
-    setAsideOne: 'One saint is not in the {church} calendar — the calendar control in the header changes it.',
-    setAsideMany: '{count} saints are not in the {church} calendar — the calendar control in the header changes it.',
+    // The count says the useful number outright (author, 2026-08-25): the
+    // pair of counts made the reader subtract to learn how much of the
+    // corpus this calendar keeps. The header's role moved into a title
+    // attribute rather than being said on the page every time.
+    kept: '{shown}/{total} saints venerated in the {church} calendar.',
+    keptAll: '{total} saints, the whole corpus.',
+    keptTitle: 'The calendar control in the header changes which church’s calendar this is.',
     filters: {
       church: 'Church',
       month: 'Feast month',

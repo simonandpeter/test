@@ -7,7 +7,8 @@
  */
 export const ro = {
   site: {
-    name: 'Sfântul Ortodox',
+    name: 'Ortodoxia Zilnică',
+    tabName: 'Sfântul Ortodox',
     tagline: 'Sfinții Bisericii Ortodoxe, biserică după biserică — rusă, română, greacă și sârbă, fiecare pe calendarul ei.',
   },
 
@@ -64,7 +65,6 @@ export const ro = {
       troparion: 'Troparul',
       kontakion: 'Condacul',
       source: 'Text din {source}',
-      own: 'În limba bisericii, așa cum o tipărește sursa; o traducere nu e înregistrată.',
     },
     silence: {
       otherChurchOne:
@@ -117,8 +117,9 @@ export const ro = {
     noneMatch: 'Niciun sfânt din corpus nu se potrivește tuturor acestor filtre. E un fapt despre corpus, nu despre calendar — lărgește un filtru sau șterge-le și privește în jur.',
     undatedTray: '{count} fără dată, puși deoparte',
     undatedNote: 'Un interval de ani nu poate nici include, nici exclude un sfânt fără nicio margine datată, așa că aceștia sunt puși deoparte, nu aruncați. Tuturor celorlalte alegeri le corespund.',
-    setAsideOne: 'Un sfânt nu e în calendarul ales ({church}) — calendarul se schimbă din antet.',
-    setAsideMany: '{count} sfinți nu sunt în calendarul ales ({church}) — calendarul se schimbă din antet.',
+    kept: '{shown}/{total} sfinți venerați în calendarul ales ({church}).',
+    keptAll: '{total} de sfinți — întregul corpus.',
+    keptTitle: 'Calendarul se schimbă din antet.',
     filters: {
       church: 'Biserica',
       month: 'Luna prăznuirii',

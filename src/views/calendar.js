@@ -32,7 +32,7 @@ import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
-import { dateFormatter, languageTag, translateReason } from '../lib/i18n.js';
+import { formatDate, translateReason } from '../lib/i18n.js';
 import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -42,16 +42,16 @@ const BASE = import.meta.env.BASE_URL;
 
 // Through lib/i18n.js's cache rather than module constants (Amendment 36): a
 // formatter built once can never change language.
-const dayFmt = () => dateFormatter({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const dayFmt = (d) => formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 // The page's own date wears the abbreviated month (author, 2026-08-24:
 // "display abbreviated months, e.g. Aug"); the buttons' aria-labels keep
 // dayFmt's full month, because a label is spoken, not glanced at.
-const headingFmt = () =>
-  dateFormatter({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
-const weekdayFmt = () => dateFormatter({ weekday: 'short', timeZone: 'UTC' });
+const headingFmt = (d) =>
+  formatDate({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
+const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.
-const monthFmt = () => dateFormatter({ month: 'short', year: 'numeric', timeZone: 'UTC' });
+const monthFmt = (d) => formatDate({ month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
 
 const utc = (iso) => {
   const d = parseIso(iso);
@@ -318,7 +318,7 @@ function repaintDay() {
 function paintChrome() {
   const { el, selected } = state;
   markRail();
-  el.querySelector('.cal-date').textContent = headingFmt().format(utc(selected));
+  el.querySelector('.cal-date').textContent = headingFmt(utc(selected));
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }
@@ -389,33 +389,19 @@ function hymnMarkup(h) {
   </div>`;
 }
 
-/**
- * The hymns of the day: a feast's, recorded with the day (the Leavetaking of
- * the Dormition on the Greek 23 August), and the hero saint's, which live in
- * the saint's own folder and arrive with its detail payload — so the section
- * is painted empty and filled when the payload lands, for the day still
- * showing. Only the chosen church's hymns, in that church's language.
- */
-/*
- * What each church sings in (Amendment 37): the language its cited source
- * prints the hymns in. The note below shows whenever the site's language is
- * not this one — which for the Russian church is always, because the hymns
- * are Church Slavonic and the chrome's Russian is not — so a reader on a
- * translated page is told the untranslated block is a decision, not a bug.
- */
-const HYMN_LANG = { russian: 'cu', greek: 'el', romanian: 'ro', serbian: 'sr' };
-
-const hymnsOwnNote = (churchId) =>
-  languageTag() === HYMN_LANG[churchId]
-    ? ''
-    : `<p class="hymn-own utility">${STRINGS.calendar.hymns.own}</p>`;
+/* A note saying the hymns keep the church's own tongue stood under the Hymns
+   heading from Amendment 37 (2026-08-24) until the author removed it the next
+   morning. The decision it announced is unchanged — every hymn is the cited
+   source's own text and no translation is recorded — it is simply no longer
+   said on the page. The HYMN_LANG map the note read went with it: each hymn
+   already carries its own `lang` from the data, which is where the attribute
+   on the printed text comes from. */
 
 function hymnsMarkup(iso, churchId) {
   const rec = recordedDay(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
   return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
-    ${hymnsOwnNote(churchId)}
     <div data-feast-hymns>${feastHymns.map(hymnMarkup).join('')}</div>
     <div data-saint-hymns></div>
   </section>`;
@@ -559,8 +545,8 @@ const dayButton = (iso) => {
   const n = countFor(iso, state.data);
   const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
   return `<button type="button" data-iso="${iso}" tabindex="-1"
-    aria-label="${dayFmt().format(utc(iso))}${density}">
-    <span class="day-name">${weekdayFmt().format(utc(iso))}</span>
+    aria-label="${dayFmt(utc(iso))}${density}">
+    <span class="day-name">${weekdayFmt(utc(iso))}</span>
     <span class="day-num">${parseIso(iso).day}</span>
     <span class="density" aria-hidden="true">${densityDots(iso)}</span>
   </button>`;
@@ -708,7 +694,21 @@ function wireRail(strip) {
 
   const onClick = (e) => {
     const button = e.target.closest('[data-iso]');
-    if (button && strip.contains(button)) select(button.dataset.iso);
+    if (!button || !strip.contains(button)) return;
+    select(button.dataset.iso);
+    /*
+     * A day pressed with a pointer does not keep the focus (author,
+     * 2026-08-25: "a selection highlight remains over the day where you
+     * started moving from … also occurs when you use the arrow keys to go
+     * down or up the page"). A clicked button *is* focused, silently — no
+     * ring, because the press was a pointer's — and the browser paints the
+     * ring on it the moment the reader touches any key, arrow keys included,
+     * so the day they left kept a ring while the day they moved to wore the
+     * selection. The day buttons are tabindex="-1" and the rail is the tab
+     * stop, so this focus was never anyone's way in; a keyboard activation
+     * (detail 0) is left alone regardless.
+     */
+    if (e.detail > 0) button.blur();
   };
 
   const swallow = (e) => {
@@ -830,10 +830,11 @@ function wireRail(strip) {
 
 /**
  * A day either way from anywhere on the page (author, 2026-08-24): the arrow
- * keys, and A/S and D beside them for a hand that is not on the arrows — A
- * joined S the same day, because a hand resting on WASD expects A to be
- * "left". They were bound to the week strip alone until then, which meant
- * they worked only once a reader had tabbed into it.
+ * keys, and A and D beside them for a hand that is not on the arrows. S went
+ * back a day from 2026-08-24 until the author removed it the next day —
+ * "it should only be the 'A' key" — which leaves the pair a hand on WASD
+ * expects. They were bound to the week strip alone until Amendment 35, which
+ * meant they worked only once a reader had tabbed into it.
  *
  * Not while the reader is typing. A key that steps the day out from under
  * someone halfway through a search term is worse than no shortcut, so
@@ -851,7 +852,7 @@ function wireDayKeys() {
     if (typing(e.target) || typing(document.activeElement)) return;
     const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
     const dir =
-      key === 'ArrowLeft' || key === 'a' || key === 's' ? -1
+      key === 'ArrowLeft' || key === 'a' ? -1
       : key === 'ArrowRight' || key === 'd' ? 1
       : 0;
     if (!dir) return;
@@ -1006,12 +1007,12 @@ function paintMonth() {
 
   // The name prints in the gutter beside the grid rather than above it, so it
   // costs the row no height (author, 2026-08-21).
-  el.querySelector('.month-name').textContent = monthFmt().format(utc(first));
+  el.querySelector('.month-name').textContent = monthFmt(utc(first));
 
   // They say nothing a date's own label does not — the button below each of
   // them reads "Friday, 30 January 2026" in full.
   el.querySelector('.month-days').innerHTML = weekOf(first)
-    .map((iso) => `<span class="month-day-name">${weekdayFmt().format(utc(iso))}</span>`)
+    .map((iso) => `<span class="month-day-name">${weekdayFmt(utc(iso))}</span>`)
     .join('');
 
   paintMonthInto(el.querySelector('.month-row'), cursor, { live: true });
@@ -1034,7 +1035,7 @@ function paintMonthInto(row, cursor, { live }) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
     cells.push(`<button type="button" data-iso="${iso}"${current}
-      aria-label="${dayFmt().format(utc(iso))}">${day}<span class="density"
+      aria-label="${dayFmt(utc(iso))}">${day}<span class="density"
       aria-hidden="true">${densityDots(iso)}</span></button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
