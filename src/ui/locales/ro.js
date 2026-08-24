@@ -9,7 +9,7 @@ export const ro = {
   site: {
     name: 'Ortodoxia Zilnică',
     tabName: 'Sfântul Ortodox',
-    tagline: 'Sfinții Bisericii Ortodoxe, biserică după biserică — rusă, română, greacă și sârbă, fiecare pe calendarul ei.',
+    tagline: 'Sfinții Bisericii Ortodoxe, biserică după biserică - rusă, română, greacă și sârbă, fiecare pe calendarul ei.',
   },
 
   nav: {
@@ -49,12 +49,35 @@ export const ro = {
     heroIn: 'Calendarul: {church}',
     densityLabel: '{count} pomeniri',
     openSaint: 'Citește despre {name}',
+    fastModal: {
+      open: 'Ce se dezleagă în acest post',
+      hint: 'Ce se dezleagă în acest post',
+      grades: {
+        xerophagy: 'Uscată',
+        'no-oil': 'Gătită, fără ulei',
+        oil: 'Ulei și vin',
+        fish: 'Dezlegare la pește',
+        dairy: 'Dezlegare la lactate',
+      },
+      allows: {
+        xerophagy: 'Mâncare negătită, fără ulei și fără vin.',
+        'no-oil': 'Mâncare gătită, dar fără ulei și fără vin.',
+        oil: 'Se dezleagă la ulei și vin.',
+        fish: 'Se dezleagă la pește.',
+        dairy: 'Fără carne; lactatele și ouăle sunt îngăduite.',
+        none: 'Astăzi nu se lasă nimic deoparte.',
+      },
+      unstated: 'Carnea, lactatele și ouăle se lasă deoparte. Acest calendar nu tipărește o rânduială mai amănunțită pentru ziua aceasta.',
+      free: 'Nu e zi de post. Nu se lasă nimic deoparte, nici miercurea sau vinerea.',
+      sourceNote: 'Așa cum a tipărit {source}.',
+      close: 'Închide',
+    },
     liturgy: {
       tone: 'Glasul {tone}',
-      fast: 'Post — {reason}',
-      fish: 'Post, dezlegare la pește — {reason}',
+      fast: 'Post - {reason}',
+      graded: '{grade} - {reason}',
       free: 'Fără post',
-      freeBecause: 'Fără post — {reason}',
+      freeBecause: 'Fără post - {reason}',
     },
     readings: {
       heading: 'Citiri',
@@ -72,10 +95,10 @@ export const ro = {
     silence: {
       otherChurchOne:
         'Nimic în calendarul ales ({church}) astăzi. O pomenire cade azi în ' +
-        'calendarul altei biserici — schimbă calendarul din antet ca să o vezi.',
+        'calendarul altei biserici - schimbă calendarul din antet ca să o vezi.',
       otherChurchMany:
         'Nimic în calendarul ales ({church}) astăzi. {count} pomeniri cad azi în ' +
-        'calendarele altor biserici — schimbă calendarul din antet ca să le vezi.',
+        'calendarele altor biserici - schimbă calendarul din antet ca să le vezi.',
     },
   },
 
@@ -83,7 +106,7 @@ export const ro = {
     open: 'Alege un calendar',
     openLabel: 'Calendarul cărei biserici arată site-ul',
     showing: '{church}',
-    showingLabel: 'Calendarul: {church} — schimbă calendarul cărei biserici îl arată site-ul',
+    showingLabel: 'Calendarul: {church} - schimbă calendarul cărei biserici îl arată site-ul',
     heading: 'Ce calendar ții?',
     groupLabel: 'Biserici',
     calendarOf: { julian: 'Calendarul iulian', 'revised-julian': 'Calendarul iulian îndreptat' },
@@ -93,35 +116,81 @@ export const ro = {
   language: {
     open: 'Limbă',
     openLabel: 'Limba site-ului',
-    showingLabel: '{name} — schimbă limba site-ului',
+    showingLabel: '{name} - schimbă limba site-ului',
     heading: 'În ce limbă?',
     groupLabel: 'Limbi',
   },
 
   dates: {
-    undated: 'fără dată',
+    undated: 'Fără dată',
     before: 'înainte de {y}',
     after: 'după {y}',
-    reposeIn: 'Adormirea — {when}',
-    reposeInThe: 'Adormirea — {when}',
-    repose: 'Adormirea — {when}',
+    reposeIn: 'Adormirea - {when}',
+    reposeInThe: 'Adormirea - {when}',
+    repose: 'Adormirea - {when}',
     undatedNote: 'Niciun capăt al acestei vieți nu are dată. „Fără dată” e o constatare, nu un gol: nimic din ce am găsit nu fixează o margine.',
   },
 
   saints: {
     title: 'Toți sfinții',
-    lede: 'Întregul corpus, filtrabil.',
+    /* The hagiographic vocabulary this church's own synaxarion uses; the
+       rest fall back to English. */
+
+    types: {
+      martyr: 'Mucenic',
+      hieromartyr: 'Sfințit mucenic',
+      venerable: 'Cuvios',
+      presbyter: 'Preot',
+      bishop: 'Episcop',
+      hierarch: 'Ierarh',
+      'venerable-martyr': 'Cuvios mucenic',
+      righteous: 'Drept',
+      confessor: 'Mărturisitor',
+      abbot: 'Stareț',
+      virgin: 'Fecioară',
+      deacon: 'Diacon',
+      'new-martyr': 'Nou-mucenic',
+      patriarch: 'Patriarh',
+      prince: 'Voievod',
+      apostle: 'Apostol',
+      metropolitan: 'Mitropolit',
+      hermit: 'Sihastru',
+      'great-martyr': 'Mare mucenic',
+      prophet: 'Prooroc',
+      'fool-for-christ': 'Nebun pentru Hristos',
+      monk: 'Monah',
+      theologian: 'Teolog',
+      king: 'Rege',
+      soldier: 'Ostaș',
+      abbess: 'Stareță',
+      princess: 'Domniță',
+      empress: 'Împărăteasă',
+      stylite: 'Stâlpnic',
+      iconographer: 'Iconar',
+      prophetess: 'Proorociță',
+      apologist: 'Apologet',
+      physician: 'Doctor',
+      'passion-bearer': 'Purtător de patimi',
+      preacher: 'Propovăduitor',
+      forerunner: 'Înaintemergătorul',
+      ascetic: 'Nevoitor',
+      hymnographer: 'Imnograf',
+      queen: 'Regină',
+      'equal-to-the-apostles': 'Întocmai cu Apostolii',
+      hieromonk: 'Ieromonah',
+      deaconess: 'Diaconiță',
+    },
     search: 'Caută',
     searchHint: 'nume, tip, biserică, regiune',
     random: 'Un sfânt la întâmplare',
     clear: 'Șterge filtrele',
     countLabel: 'sfinți',
     countAnnounce: '{count} sfinți se potrivesc',
-    noneMatch: 'Niciun sfânt din corpus nu se potrivește tuturor acestor filtre. E un fapt despre corpus, nu despre calendar — lărgește un filtru sau șterge-le și privește în jur.',
+    noneMatch: 'Niciun sfânt din corpus nu se potrivește tuturor acestor filtre. E un fapt despre corpus, nu despre calendar - lărgește un filtru sau șterge-le și privește în jur.',
     undatedTray: '{count} fără dată, puși deoparte',
     undatedNote: 'Un interval de ani nu poate nici include, nici exclude un sfânt fără nicio margine datată, așa că aceștia sunt puși deoparte, nu aruncați. Tuturor celorlalte alegeri le corespund.',
     kept: '{shown}/{total} sfinți venerați în calendarul ales ({church}).',
-    keptAll: '{total} de sfinți — întregul corpus.',
+    keptAll: '{total} de sfinți - întregul corpus.',
     keptTitle: 'Calendarul se schimbă din antet.',
     filters: {
       church: 'Biserica',
@@ -136,7 +205,7 @@ export const ro = {
       rangeMode: 'Cum se aplică intervalul',
       overlaps: 'Se suprapune',
       within: 'În întregime înăuntru',
-      rangeNote: '„Se suprapune” ia orice viață care a atins intervalul; „în întregime înăuntru” — doar viețile cuprinse în el. Anii negativi sunt î.Hr.',
+      rangeNote: '„Se suprapune” ia orice viață care a atins intervalul; „în întregime înăuntru” - doar viețile cuprinse în el. Anii negativi sunt î.Hr.',
       any: 'Oricare',
     },
     layout: {
@@ -158,7 +227,7 @@ export const ro = {
 
   contact: {
     heading: 'Contact',
-    lede: 'Îndreptări, un sfânt care lipsește, o sursă care spune altfel — toate sunt binevenite.',
+    lede: 'Îndreptări, un sfânt care lipsește, o sursă care spune altfel - toate sunt binevenite.',
     open: 'Deschide o sesizare la proiect',
     note: 'Sesizările fac parte din depozitul public din care e construit acest site, așa că ce scrieți acolo poate fi citit de oricine. Vă rugăm să nu includeți nimic ce n-ați pune pe o pagină a lui.',
   },
@@ -183,8 +252,8 @@ export const ro = {
     statusUndocumented: 'Nedocumentat',
     undocumentedNote: 'Fără surse în niciun sens. Lipsa datelor nu e lipsa cinstirii.',
     refusedNote: 'O constatare pozitivă: această biserică a stabilit că nu cinstește această figură.',
-    feastThisYear: '{feast} — anul acesta cade pe {gregorian}',
-    feastNoOccurrence: '{feast} — nu cade în {year}',
+    feastThisYear: '{feast} - anul acesta cade pe {gregorian}',
+    feastNoOccurrence: '{feast} - nu cade în {year}',
     noFeast: 'Zi de prăznuire neînregistrată.',
     citation: 'Sursa: {text}',
     notFoundTitle: 'Niciun asemenea sfânt',
@@ -192,10 +261,10 @@ export const ro = {
     failed: 'Articolul acestui sfânt nu a putut fi încărcat. Textul stă într-un fișier lângă restul site-ului, deci e mai degrabă o poticnire de rețea decât un sfânt lipsă.',
     retry: 'Încearcă din nou',
     historicity: {
-      attested: 'Atestat — documentat de surse apropiate evenimentelor.',
-      traditional: 'Din tradiție — transmis de tradiție, fără documentare independentă.',
-      disputed: 'Disputat — sursele se contrazic sau cercetarea se împarte.',
-      legendary: 'Legendar — relatarea e o legendă; persoana poate să nu fi existat.',
+      attested: 'Atestat - documentat de surse apropiate evenimentelor.',
+      traditional: 'Din tradiție - transmis de tradiție, fără documentare independentă.',
+      disputed: 'Disputat - sursele se contrazic sau cercetarea se împarte.',
+      legendary: 'Legendar - relatarea e o legendă; persoana poate să nu fi existat.',
     },
     sexLabel: { male: 'Bărbat', female: 'Femeie', unknown: 'Sex neînregistrat' },
     factsLabel: 'Date și locuri',
@@ -220,7 +289,7 @@ export const ro = {
 
   map: {
     title: 'Hartă',
-    placeholder: 'Globul sosește în sesiunea a 7-a. {located} din {count} sfinți au acum coordonate utilizabile; ceilalți vor aștepta în tava celor nelocalizați — nimeni nu e lăsat deoparte în tăcere.',
+    placeholder: 'Globul sosește în sesiunea a 7-a. {located} din {count} sfinți au acum coordonate utilizabile; ceilalți vor aștepta în tava celor nelocalizați - nimeni nu e lăsat deoparte în tăcere.',
     setAside: 'Încă {count} nu sunt în calendarul ales ({church}).',
   },
 
@@ -231,14 +300,14 @@ export const ro = {
       heading: 'Confidențialitate',
       lede:
         'Nu se colectează nimic despre tine și nu e niciun cont de făcut. ' +
-        'Ce își amintește site-ul, își amintește pe dispozitivul tău — și doar ' +
+        'Ce își amintește site-ul, își amintește pe dispozitivul tău - și doar ' +
         'atât cât îi trebuie ca să-ți dea înapoi pagina unde ai rămas.',
       keepsHeading: 'Ce se păstrează pe dispozitivul tău',
       keeps: [
         'Unde citeai și cât de jos ajunseseși pe pagină.',
         'Sfinții pe care i-ai salvat și sfinții pe care i-ai deschis de curând.',
         'Biserica al cărei calendar l-ai ales, limba și tema luminoasă sau întunecată.',
-        'Cum ai lăsat pagina „Toți sfinții” — cartele sau rânduri, și dacă se arătau descrierile.',
+        'Cum ai lăsat pagina „Toți sfinții” - cartele sau rânduri, și dacă se arătau descrierile.',
       ],
       notHeading: 'Ce nu se face',
       not: [
@@ -254,7 +323,7 @@ export const ro = {
         'Două note cinstite. Fișierele sunt servite de GitHub Pages, și orice server ' +
         'web vede cererile care îi sunt făcute; e treaba gazdei, nu a site-ului, și ' +
         'așa e fiecare pagină de pe internet. Iar citirile zilei duc la Bible ' +
-        'Gateway — urmând o legătură ajungi pe alt site, cu politica lui.',
+        'Gateway - urmând o legătură ajungi pe alt site, cu politica lui.',
     },
   },
 
@@ -268,7 +337,7 @@ export const ro = {
     'Great Lent': 'Postul Mare',
     'Bright Week': 'Săptămâna Luminată',
     'Cheesefare Week': 'Săptămâna brânzei',
-    'Cheesefare Week — no meat; dairy and eggs permitted': 'Săptămâna brânzei — fără carne; lactatele și ouăle sunt îngăduite',
+    'Cheesefare Week - no meat; dairy and eggs permitted': 'Săptămâna brânzei - fără carne; lactatele și ouăle sunt îngăduite',
     'Palm Sunday': 'Duminica Floriilor',
     'the Annunciation, in Great Lent': 'Buna Vestire, în Postul Mare',
     'the Apostles’ Fast': 'Postul Sfinților Apostoli',

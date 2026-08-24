@@ -20,6 +20,7 @@
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
 import { withHonorific } from '../lib/honorific.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
+import { allNames, historicityName, typeName, typeNames } from '../lib/saint-types.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
@@ -37,7 +38,7 @@ import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { churchName, currentChurch, keptBy, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
-import { dateFormatter, formatDate } from '../lib/i18n.js';
+import { dateFormatter, formatDate, languageTag } from '../lib/i18n.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -130,7 +131,6 @@ export function render(el, { data, router, nav }) {
 
   el.innerHTML = `
     <h1>${STRINGS.saints.title}</h1>
-    <p class="index-lede">${STRINGS.saints.lede}</p>
     ${controls(state)}
     <p class="result-count utility" data-count-row></p>
     <p class="set-aside utility" data-set-aside hidden></p>
@@ -227,7 +227,15 @@ async function loadSearch(cards) {
     cards.map((card) => ({
       slug: card.slug,
       name: card.display_name,
-      types: (card.types ?? []).join(' '),
+      /*
+       * Every language's name for the type, not the chosen one (author,
+       * 2026-08-25 evening: "add the other language equivalents of the search
+       * terms"). The index is built once and the chrome's language can change
+       * under it, so indexing the current language would leave a reader who
+       * switched searching a Russian grid with Romanian words. The slug is in
+       * there too, so an old bookmarked query still matches.
+       */
+      types: (card.types ?? []).flatMap(allNames).join(' '),
       churches: card.attestations
         .filter((a) => a.status === 'venerated')
         .map((a) => CHURCHES_BY_ID[a.church]?.display_name ?? '')
@@ -279,6 +287,17 @@ const facetGroup = (legend, name, options) =>
         </fieldset></details>`
     : '';
 
+/**
+ * Facet options in the order the reader reads them. `facetsOf` sorts by the
+ * *slug*, which was the label until 2026-08-25 evening; now that the label is
+ * a word in the reader's language, sorting by the slug leaves a Russian list
+ * running Игумения, Игумен, Апологет, Апостол — alphabetical in a language
+ * nobody is reading. Collated in the chosen language, so the ordering is the
+ * one that language actually uses.
+ */
+const byLabel = (options) =>
+  [...options].sort((a, b) => a.label.localeCompare(b.label, languageTag()));
+
 function controls(state) {
   const { facets } = state;
   const churchOptions = enabledChurches()
@@ -296,10 +315,10 @@ function controls(state) {
     <div class="facets">
       ${facetGroup(STRINGS.saints.filters.church, 'churches', churchOptions)}
       ${facetGroup(STRINGS.saints.filters.month, 'months', MONTHS.map((m) => ({ value: String(m), label: monthLabel(m) })))}
-      ${facetGroup(STRINGS.saints.filters.type, 'types', facets.types.map((t) => ({ value: t, label: t })))}
+      ${facetGroup(STRINGS.saints.filters.type, 'types', byLabel(facets.types.map((t) => ({ value: t, label: typeName(t) }))))}
       ${facetGroup(STRINGS.saints.filters.sex, 'sexes', facets.sexes.map((s) => ({ value: s, label: STRINGS.saint.sexLabel[s] ?? s })))}
-      ${facetGroup(STRINGS.saints.filters.region, 'regions', facets.regions.map((r) => ({ value: r, label: REGIONS_BY_ID[r]?.display_name ?? r })))}
-      ${facetGroup(STRINGS.saints.filters.historicity, 'historicities', facets.historicities.map((h) => ({ value: h, label: h })))}
+      ${facetGroup(STRINGS.saints.filters.region, 'regions', byLabel(facets.regions.map((r) => ({ value: r, label: REGIONS_BY_ID[r]?.display_name ?? r }))))}
+      ${facetGroup(STRINGS.saints.filters.historicity, 'historicities', facets.historicities.map((h) => ({ value: h, label: historicityName(h) })))}
 
       <details class="facet" data-facet="dates"><summary>${STRINGS.saints.filters.dates}</summary>
         <div class="range">
@@ -776,10 +795,10 @@ function card(item, router, { rows = false, detailed = false } = {}) {
 async function fillDescription(node, item) {
   const box = node.querySelector('[data-desc]');
   if (!box) return;
-  const fallback = () => {
-    const types = (item.types ?? []).join(', ');
-    return types ? types.charAt(0).toUpperCase() + types.slice(1) : '';
-  };
+  // The types, named rather than slugged (2026-08-25 evening). It used to
+  // capitalise the joined run's first letter only, which made "Martyr,
+  // hieromartyr" out of two words that are equally names.
+  const fallback = () => typeNames(item.types);
   let text = ledes.get(item.slug);
   if (text === undefined) {
     try {

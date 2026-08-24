@@ -234,10 +234,60 @@ header.chrome {
   border-bottom: 1px solid var(--rule);
 }
 
+/* Wide, five tracks rather than four (author, 2026-08-25 evening: switching
+   to Russian "the buttons for Daily, All Saints, Map and About pages go into
+   two rows because the content column on the screen is too narrow. Make sure
+   this never displays like that").
+
+   The old `auto 1fr auto auto` gave the nav the *leftovers*: the name, the
+   calendar control and the toggles each took their intrinsic width first, and
+   in Russian — «Православие ежедневно» beside «Русская» — what was left was
+   narrower than «Сегодня Все святые Карта О сайте», so the nav wrapped inside
+   its own column. Which of the two gives way is the whole decision, and the
+   nav wins: the four pages are how the site is used, the masthead is a
+   constant a reader learns once. So the nav's track is `auto` — it is never
+   given less than it needs — the slack moves to a spacer between the nav and
+   the corner, and the name's track is `minmax(0, auto)`, which is the only
+   track a shortfall can come out of. It clips with an ellipsis rather than
+   wrapping, and `nav.site-nav` carries `flex-wrap: nowrap` besides, so no
+   later arrangement can quietly reintroduce the second line. */
 @media (min-width: 560px) {
   header.chrome {
-    grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: 'name nav cal theme';
+    grid-template-columns: minmax(0, auto) auto minmax(0, 1fr) auto auto;
+    grid-template-areas: 'name nav . cal theme';
+    /* space-3 rather than space-4 (2026-08-25 evening): five tracks means
+       four gaps, and 16 px of Romanian was the whole difference between one
+       line and two. English keeps 22 px of slack either way. */
+    column-gap: var(--space-3);
+  }
+
+  /* The masthead is the track a shortfall comes out of, and it pays in
+     *lines*, not in letters. At the 72ch column the one-line row needs 678 px
+     in Russian, 695 in Greek and 672 in Serbian where 580 exist, so those
+     three packs cannot hold one line at any gap — the arithmetic was in
+     HANDOFF as a known limit before the instruction arrived. Clipping the
+     name to «Правосла…» would satisfy the letter of "never two rows" and
+     leave the site unnamed; wrapping it to «Православие / ежедневно» keeps
+     every word, keeps the nav on its one line, and reads as a masthead.
+     English and Romanian are unaffected: both still fit the single line.
+
+     `break-word` is the floor under that — a name whose *single word* outran
+     the track would otherwise print across the nav, which is the overlap the
+     320 px test was written for. Not `anywhere`, which would also let the
+     track shrink to one glyph and hyphenate «Καθημερινά» for a width it
+     never needed. */
+  header.chrome .site-name {
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  /* And the nav gives up its wide gap on this line, which is where the two
+     lines of masthead come from: at space-4 the Greek nav wants 261 px of
+     580, leaving the name 93 — narrower than «Καθημερινά», so the longest
+     word broke. space-2 hands back 24 px, which is enough for every pack's
+     longest word, and the four labels still read as four. */
+  header.chrome .site-nav {
+    gap: var(--space-2);
   }
 }
 
@@ -366,11 +416,31 @@ header.chrome .chrome-calendar {
   letter-spacing: 0.01em;
 }
 
+/* One line, always (author, 2026-08-25 evening). Narrow, the nav has a row of
+   the header to itself and the four labels fit 320 px in all five packs with
+   the gap below; wide, the grid above guarantees it its own width. `nowrap`
+   is the belt to that braces: a wrapped nav is the defect being fixed, and it
+   should fail loudly — as overflow the quality floor catches — rather than
+   quietly taking a second line again.
+
+   `min-width: 0` came off with the same instruction, and it is the line that
+   actually did the work. A grid `auto` track will not shrink a child below
+   its min-content — which, with the labels set `nowrap`, is the whole row of
+   four — but `min-width: 0` overrides exactly that floor, and the nav went on
+   being squeezed out of its own track while its links overhung it. */
 nav.site-nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2) var(--space-4);
-  min-width: 0;
+}
+
+/* The four labels give up their gap before they give up the line: at 320 px
+   in Russian «Сегодня Все святые Карта О сайте» wants more than four
+   space-4 gaps leave. */
+@media (max-width: 400px) {
+  nav.site-nav {
+    gap: var(--space-2);
+  }
 }
 
 nav.site-nav a,
@@ -384,6 +454,13 @@ nav.site-nav a,
 nav.site-nav a {
   text-decoration: none;
   color: var(--ink-soft);
+  /* A label is one word-run, never two lines of one. Without this the flex
+     row honours `nowrap` by shrinking the anchors instead, and «Все святые»
+     breaks across two lines inside its own box — the same two-line header,
+     arrived at by a different road. It is also what gives the nav's grid
+     track a min-content width worth the name, so the shortfall lands on the
+     masthead's ellipsis where the rule above puts it. */
+  white-space: nowrap;
 }
 
 nav.site-nav a:hover {

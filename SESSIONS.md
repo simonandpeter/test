@@ -2005,6 +2005,149 @@ the saint page's hymns, and the hero's lede. A tenth was run and **passed** —
 `minmax(0, 1fr)` on the name's track — and is documented as the guard it is
 rather than left looking covered.
 
+**40. Fifteen more, twelve of them built and three of them commissions**
+(author's instruction, 2026-08-25 evening — fifteen items in one list).
+
+**The chrome (seven items).** The rail's peek went 30 → 44 px, so the days
+either side of the seven show themselves whole before the mask begins — and
+the peek is the lever, not the gap, because the seven divide what is left
+*after* both insets and tightening the gap hands the width straight back to
+them. The density dots are gone at both grains. The register's card rows keep
+their bookmark on the row. "undated" took a capital in all five packs. The All
+Saints lede went. The four pages hold one line in every language at every
+width. And every string the site prints lost its em dash.
+
+*Two of those want their reasoning said.* **The nav against the masthead:** at
+the 72ch column the one-line header needs 678 px in Russian, 695 in Greek and
+672 in Serbian where 580 exist, so the arithmetic HANDOFF had recorded as "not
+fixable at any gap" was right and something had to give. The nav wins and the
+masthead pays *in lines* — «Ορθοδοξία / Καθημερινά», every word intact —
+because the four pages are how the site is used and a masthead is a constant
+learnt once. Clipping it to «Правосла…» would have obeyed the instruction and
+left the site unnamed. The line that actually did the work was deleting
+`min-width: 0` from `nav.site-nav`: a grid `auto` track will not shrink a
+child below its min-content, and `min-width: 0` overrides exactly that floor,
+which is why the nav went on being squeezed out of its own track while its
+links overhung it.
+
+**The em dashes stop at the corpus.** 149 in string literals were swept — by a
+scanner that knows a literal from a comment, so the house's own prose keeps
+its dashes — and the 3,638 in `saints/*/life.md` and `saints/*/saint.json`
+were **not**. Those are inside quoted source text and citation lines
+transcribed from four synaxaria, and editing a quotation for typography is the
+one thing Amendment 2 forbids. Said to the author rather than done quietly.
+
+**The fast (three items, and the interesting one).** The line under the date
+now says *which type* of fast, and the pop-up says that and nothing else:
+"Xerophagy — uncooked food, without oil or wine", in the reader's language,
+with the calendar's own note quoted under it.
+
+This looks like a reversal of Amendment 28 and is not one. `lib/liturgy.js`
+still refuses to compute an allowance, because the allowance is the typikon's
+and jurisdictions keeping the very same fast differ. What changed is that the
+site now *reads* one: each of the four calendars prints its own allowance
+beside the day where it has one, in its own words, and those words were
+already transcribed. `lib/fast-grade.js` matches them against a closed
+vocabulary of six — xerophagy, cooked without oil, oil and wine, fish, dairy,
+none — on whole phrases rather than stems, because «горячая пища без масла»
+and «пища с растительным маслом» differ by one word and mean opposite things.
+The grade is a quotation resolved, never a derivation, and **a day whose
+calendar named no allowance still says only which fast it is.** That silence
+is the design, not a gap in it.
+
+The glossary of all four grades that Amendment 39 argued for lasted one day.
+The author's cut is right: a reader looking at Tuesday is owed Tuesday, and
+three grades that do not apply are three chances to act on the wrong one.
+
+*And the modal became a bubble*, which is the same argument in a different
+register: `showModal()` paints a backdrop and takes the whole screen for what
+is a footnote to one word. The bubble points at the word, the page stays lit
+behind it, and a press elsewhere, Escape, a scroll or a second press on the
+control all put it away. Under reduced motion it is simply there and simply
+gone (§6).
+
+**The first visit (one item).** Two questions now — which calendar, and which
+of the five languages — and they are deliberately not the same kind of
+question. The calendar has no default and the page waits for it; the language
+has one, so that half is an offer and answering the calendar alone opens the
+whole site. `settings.language` gains a null "not asked" state, which reads as
+English, so no first paint changes.
+
+**And an answered panel flies home**, shrinking and fading into the header
+control that changes it from now on. It is a teaching gesture: the site hides
+both answers behind two small controls, and a reader who answers without
+seeing where the answer went has to hunt next time. Which is why reduced
+motion **removes** it rather than shortening it — the lesson survives in the
+controls' accessible names, which say the whole sentence.
+
+**The search terms (one item).** The 44 types the corpus uses are named in
+words now, capitalised, in all five languages, and the search index carries
+*every* language's name at once rather than the chosen one — the index is
+built once and the chrome's language can change under it. The slug stays the
+key and is indexed too, so an old bookmarked query still matches. Three
+smaller things came with it and each is a decision: a type no pack has named
+falls back to English rather than disappearing; a type *nobody* has named
+prints as its title-cased slug, so the corpus can grow a type without waiting
+for a string; and the facet lists are collated in the reader's language,
+because sorting by the slug underneath left the Russian list running
+Игумения, Игумен, Апологет, Апостол.
+
+**The three that are commissions, not builds.** The author asked for English
+translations of every hymn, icons for every saint without one, and six months
+of calendar content across four churches. None of the three is code, and none
+can be done by this build without breaking Amendment 2. Sized rather than
+waved at:
+
+- **415 hymns** across 132 saints, in Church Slavonic (143), Greek (137),
+  Romanian (117) and Serbian (18). Translating them here would be inventing
+  liturgical text. Sourcing published English — the OCA prints English
+  troparia and kontakia for a large part of this calendar — is per-saint
+  transcription with a citation each, exactly as the hymns already there were
+  got. The display side is a day's work once the texts exist; the texts are
+  the commission.
+- **613 saints without an icon.** Each needs a file, a licence, a credit and a
+  *real* source URL — the build already warns on the placeholder the 95
+  existing images carry, so this is 613 sourcing decisions with a rights
+  question in each. Bulk-fetching images and guessing at their licences is
+  the failure mode this repository is built to refuse.
+- **Six months of days.** The corpus holds 23 August to 19 September 2026:
+  28 days, transcribed by hand from four calendars. Six months is roughly 180
+  days × 4 churches = 720 day-records of readings, fasting notes, feast titles
+  and hymns, three of the four from sites that publish only a fortnight or so
+  ahead — saint.gr's absence for 7–19 September is already recorded in the
+  data as an absence rather than filled in. The dated part cannot be
+  transcribed before the sources print it.
+
+All three are in HANDOFF's queue with what each needs.
+
+**Verification.** 142 unit (one new: no string in any of the five packs
+carries an em dash), 310 browser (280 + 30). Thirteen backouts run and watched
+fail: the rail's peek, the grade read off the note, the Russian fast
+vocabulary, the bubble's outside-press, the dots' return, the nav's
+`min-width`, the gate's second question, the flight itself, the type facet's
+slug, the All Saints lede, the register row's wrap, the lower-case "undated",
+and the em dash.
+
+*One backout escaped its browser test and got a better one.* Putting the em
+dash back into `liturgy.fast` left the page test green, because every day it
+looks at has a *graded* fast and never reaches that string — a page test can
+only see the strings that page happens to print. The guard is a unit test now,
+walking all five packs entire, and the browser test stays for what is actually
+on screen.
+
+*Two bugs the tests found in this batch's own code.* A scroll that settled the
+rail repainted the liturgy line under an open bubble, so the next press opened
+a second one instead of closing the first — the bubble's owner was a node no
+longer on the page. And the bubble closed on any scroll *event*, including one
+queued from a scroll that had already finished, so opening it just after a
+scroll shut it in the same frame; it now closes on a scroll that has actually
+moved something.
+
+*And one line that never ran:* `.ask-block + .ask-block { margin-top:
+var(--space-5) }` — there is no `--space-5` in the token set, so the
+declaration was dropped silently and the two questions sat flush. Caught by
+looking at the render, which is the only thing that catches it.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

@@ -619,7 +619,19 @@ the week, and whether it is a fast for this church and why — computed from
 Pascha and the church's calendar (`lib/liturgy.js`), which is why two churches
 disagree about the same civil day. Fasting is stated as fast, fish permitted
 or no fast with its reason, never the finer allowances, which differ between
-typika. Under the day's saint — or the empty note — the readings the church's
+typika.
+
+*Amended (author, 2026-08-25 evening): "the fasting text should say which type
+of fast is required."* The finer allowance is now printed — **where the
+church's own calendar printed it**, and nowhere else. The rule above is not
+repealed, and the distinction is the whole of the design: `lib/liturgy.js`
+still refuses to *compute* an allowance, because that is the typikon's and
+jurisdictions keeping the same fast differ. `lib/fast-grade.js` *reads* one,
+matching the calendar's own words against a closed vocabulary — xerophagy,
+cooked without oil, oil and wine, fish, dairy — so what the line says is a
+quotation resolved, never a derivation. A day whose calendar named no
+allowance still says only which fast it is, and the bubble on it says what
+every fast sets aside and stops. Under the day's saint — or the empty note — the readings the church's
 own calendar printed for the day, each a link (Bible Gateway, NKJV for now)
 with the page named, printed only where a day has been recorded; and the
 hymns of the day, a feast's recorded with the day and a saint's from the
@@ -721,6 +733,27 @@ heading because there is only one church in it.
 *Stands, simplified (2026-08-22): the one calendar is the chosen church's, so
 there is no second choice to remember and nothing can fail to allow it.*
 
+*Joined by a second question (author, 2026-08-25 evening): "same as the
+message to choose which church, open the language options as well for first
+time visitors to know they can change language."* The two are deliberately not
+the same kind of question, and the difference is kept. The calendar has no
+default and the page below waits for it; the language has one — English, which
+the reader is already reading — so that half is an offer rather than a gate,
+and answering the calendar alone opens the whole site. `settings.language`
+gains a null "not asked" state to tell "English because the reader chose it"
+from "English because nobody has said"; null reads as English, so no first
+paint changes.
+
+**And an answered panel flies home.** Each block shrinks and fades into the
+header control that changes it from now on — the calendar question into the
+calendar control, the language question into the globe — because the site
+hides both answers behind two small controls and a reader who answers without
+seeing where the answer went has to hunt for it next time. The same flight
+closes both header disclosures. It is a teaching gesture, not decoration,
+which is why under reduced motion it is **removed** rather than shortened
+(§6): the lesson survives in the controls' accessible names, which say the
+whole sentence.
+
 The strip and the grid stay in the civil calendar the URL is in.
 
 **The hero image is a square** (author, 2026-08-21), cropped from the centre
@@ -755,6 +788,14 @@ day keeps the hero at exactly the same scale and stacks the rest as
 church-grouped register rows beneath it; the hero never shrinks to make room.
 The week strip shows a small dot-count under each day (one dot per
 commemoration, capped at five) so density is legible before arrival.
+
+*Reversed (author, 2026-08-25 evening): "remove the dots under each date in
+the calendar."* The dots are gone at both grains. What survives is the
+**count**, in each day button's accessible name, and that divergence is
+deliberate rather than an oversight: a reader who cannot glance at the
+register has no other way to learn a day's weight before opening it, and the
+number is the day's own rather than a description of a mark that no longer
+exists.
 
 **An empty day is a designed state, not a fallback** (this holds for every
 tray and gap in the product — the undated tray, the unlocated tray, an
@@ -793,6 +834,27 @@ fit one line at all* — the translated nav ("Сегодня · Все свят�
 budget. Those languages wrap to a second row, which is legible and overflows
 nothing; making them fit would mean shortening nav labels or moving a control,
 both the author's call, not a build's.
+
+**Fixed, and the author made the call** (2026-08-25 evening): "the buttons for
+Daily, All Saints, Map and About pages go into two rows because the content
+column on the screen is too narrow. Make sure this never displays like that."
+The arithmetic above stands and is why there was no third option — at the 72ch
+column the one-line row needs 678 px in Russian, 695 in Greek and 672 in
+Serbian, where 580 exist. So *something* gives, and the decision is which:
+**the nav wins and the masthead pays, in lines rather than letters.** The four
+pages are how the site is used; the masthead is a constant a reader learns
+once and can read across two lines — «Ορθοδοξία / Καθημερινά», every word
+intact. Clipping it to «Правосла…» would have satisfied the letter of the
+instruction and left the site unnamed.
+
+Mechanically: five tracks rather than four, the nav's `auto` so it is never
+given less than it needs, the slack moved to a spacer before the corner, and
+the name's `minmax(0, auto)` — the only track a shortfall can come out of.
+`nav.site-nav` lost `min-width: 0`, which is the line that actually did the
+work: a grid `auto` track will not shrink a child below its min-content, and
+`min-width: 0` overrides exactly that floor. `flex-wrap: nowrap` and
+`white-space: nowrap` on the labels are the belt to those braces, so a wrapped
+nav fails as overflow the quality floor catches rather than quietly returning.
 
 *Superseded again (author, 2026-08-25): narrow, the header is **one line of
 chrome and one row of pages** — the calendar control at the left, the site

@@ -125,6 +125,14 @@ export function chooseLanguage(id) {
   return id;
 }
 
+/**
+ * Whether the reader has chosen a language, which is not the same as which
+ * language they are reading: a first visit reads English and has chosen
+ * nothing (lib/settings.js). The calendar's first-visit gate asks on the
+ * strength of this, and stops asking on the strength of `chooseLanguage`.
+ */
+export const hasChosenLanguage = () => readSettings().language !== null;
+
 /** The BCP 47 tag of the current language, for <html lang> and Intl. */
 export const languageTag = () => LANGUAGES_BY_ID[currentLanguage()]?.tag ?? 'en';
 

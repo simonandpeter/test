@@ -118,3 +118,35 @@ test('the church names read through STRINGS, so the packs reach them', async () 
   chooseLanguage('en');
   assert.equal(churchName('russian'), 'Russian');
 });
+
+test('no string the site prints carries an em dash, in any of the five', () => {
+  /*
+   * Author, 2026-08-25 evening: "replace all emm dashes with normal dashes."
+   * The sweep ran over string literals only — a scanner that knows a literal
+   * from a comment — so the house's own prose in the source keeps its em
+   * dashes and the reader gets none.
+   *
+   * Here rather than only in the browser, and that is the lesson of a backout
+   * that escaped: reverting `liturgy.fast` to "Fast — {reason}" left the
+   * browser test green, because every day it looks at has a *graded* fast and
+   * never reaches that string. A page test can only see the strings that page
+   * happens to print. This walks all five packs entire.
+   *
+   * What is deliberately not covered is the corpus: those em dashes are
+   * inside quoted source text transcribed from four synaxaria, and editing a
+   * quotation for typography is what Amendment 2 forbids.
+   */
+  const dashed = (value, path, found) => {
+    if (typeof value === 'string') {
+      if (value.includes('\u2014')) found.push(`${path}: ${value.slice(0, 60)}`);
+    } else if (value && typeof value === 'object') {
+      for (const [key, inner] of Object.entries(value)) dashed(inner, `${path}.${key}`, found);
+    }
+    return found;
+  };
+  for (const id of ['en', 'ru', 'ro', 'el', 'sr']) {
+    chooseLanguage(id);
+    assert.deepEqual(dashed(STRINGS, id, []), [], `${id} prints an em dash`);
+  }
+  chooseLanguage('en');
+});

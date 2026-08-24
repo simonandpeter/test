@@ -66,7 +66,7 @@ test('a second place of one kind is another line, not a second claim about the y
 
 test('a place says what it was called and where it is now, without repeating itself', () => {
   assert.equal(formatPlace({ historical_name: 'Coma', modern_name: 'Qiman al-Arus, Egypt' }),
-    'Coma — Qiman al-Arus, Egypt');
+    'Coma - Qiman al-Arus, Egypt');
   assert.equal(formatPlace({ historical_name: 'Alexandria' }), 'Alexandria');
   assert.equal(formatPlace({ modern_name: 'Annaba, Algeria' }), 'Annaba, Algeria');
   assert.equal(formatPlace({ historical_name: 'Rome', modern_name: 'Rome' }), 'Rome');

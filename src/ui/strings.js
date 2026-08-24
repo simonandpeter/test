@@ -19,7 +19,7 @@ export const STRINGS = {
     // head has a key of its own now, translated in every pack exactly as the
     // old shared one was.
     tabName: 'The Orthodox Saint',
-    tagline: 'The saints of the Orthodox Church, church by church — Russian, Romanian, Greek and Serbian, each in its own calendar.',
+    tagline: 'The saints of the Orthodox Church, church by church - Russian, Romanian, Greek and Serbian, each in its own calendar.',
   },
 
   nav: {
@@ -57,57 +57,70 @@ export const STRINGS = {
     weekLabel: 'Choose a day',
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
-    emptyDay: 'No commemorations are recorded for this day — yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
+    emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     heroIn: 'In the {church}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
     // Under the date (author, 2026-08-22): where the day stands in the
     // paschal cycle, the tone, and whether it is a fast — lib/liturgy.js.
     /**
-     * The fast, explained when the reader asks (author, 2026-08-25: a modal on
-     * the fast label, hinted by an (i), describing "exactly what is allowed on
-     * the fast, e.g. fish, oils, etc.").
+     * The fast, and what it allows (author, 2026-08-25 evening: "the fasting
+     * text should say which type of fast is required, and the pop-up
+     * shouldn't explain more than what that day requires. E.g. if a day is
+     * Xerophagy, the pop-up says 'Uncooked food, without oil or wine'").
      *
-     * What it says and what it refuses to say are both deliberate.
-     * `lib/liturgy.js` states *whether* a day is a fast and *which* fast; it
-     * does not compute the day's allowance, because that is the typikon's and
-     * differs between jurisdictions keeping the very same fast — and a site
-     * that invented one would be handing out a ruling nobody gave it. So the
-     * modal gives three things: the day's own kind in words; the *source's own
-     * note* for the day where the calendar printed one, quoted and cited as
-     * everything else in this corpus is; and a glossary of the terms those
-     * sources use, which describes what the words mean rather than what the
-     * reader must do. The last line says whose the answer actually is.
+     * A glossary of all four grades stood here for one day. It went because
+     * the instruction is right: a reader looking at Tuesday is owed Tuesday,
+     * and three grades that do not apply are three chances to act on the
+     * wrong one.
+     *
+     * What replaced it does not repeal the boundary that glossary was built
+     * around. `lib/liturgy.js` still refuses to compute an allowance, because
+     * the allowance is the typikon's and jurisdictions keeping the same fast
+     * differ. The grade a day now carries is *read* off the church's own
+     * printed note (lib/fast-grade.js) and named in the reader's language
+     * from the closed vocabulary below — a quotation resolved, never a
+     * derivation. Where a calendar printed no allowance, `unstated` says that
+     * much and stops, which is the shape this site takes everywhere else it
+     * has been given a fact and not a rule.
      */
     fastModal: {
       open: 'What this fast allows',
       hint: 'What this fast allows',
-      heading: 'What this fast allows',
-      kinds: {
-        fast: 'A fast day. Meat, dairy and eggs are set aside; how far beyond that the day goes is what the levels below name.',
-        fish: 'A fast day on which fish is permitted — a feast keeping its own honour inside a fast.',
-        'fast-free': 'Not a fast. Nothing is set aside, including on a Wednesday or Friday.',
+      // The grade as it leads the fasting line, under the date.
+      grades: {
+        xerophagy: 'Xerophagy',
+        'no-oil': 'Cooked without oil',
+        oil: 'Oil and wine',
+        fish: 'Fish permitted',
+        dairy: 'Dairy permitted',
       },
-      sourceHeading: 'What the calendar printed for this day',
+      // And the whole of what the bubble says, one line per grade.
+      allows: {
+        xerophagy: 'Uncooked food, without oil or wine.',
+        'no-oil': 'Cooked food, still without oil or wine.',
+        oil: 'Oil and wine are permitted.',
+        fish: 'Fish is permitted.',
+        dairy: 'No meat; dairy and eggs are permitted.',
+        none: 'Nothing is set aside today.',
+      },
+      // A fast whose calendar printed no allowance. It says what every fast
+      // sets aside and refuses the rest, rather than guessing a grade.
+      unstated: 'Meat, dairy and eggs are set aside. This calendar prints no finer rule for the day.',
+      free: 'Not a fast. Nothing is set aside, including on a Wednesday or Friday.',
       sourceNote: 'As printed by {source}.',
-      levelsHeading: 'The words the calendars use',
-      levels: [
-        '<b>Xerophagy</b> — uncooked food, without oil or wine. The strictest of the ordinary days.',
-        '<b>Cooked without oil</b> — food from the fire, still without oil or wine.',
-        '<b>Oil and wine permitted</b> — the usual relaxation on a feast or a Saturday or Sunday within a fast.',
-        '<b>Fish permitted</b> — kept for the greater feasts inside a fast.',
-      ],
-      whose:
-        'Which of these a given day holds is the typikon’s to say, and jurisdictions keeping the same fast differ. This page states which fast the day falls in and prints what the church’s own calendar printed; your own church gives the rule.',
       close: 'Close',
     },
 
     liturgy: {
       tone: 'Tone {tone}',
-      fast: 'Fast — {reason}',
-      fish: 'Fast, fish permitted — {reason}',
+      fast: 'Fast - {reason}',
+      // The grade leads the line where the calendar gave one (2026-08-25
+      // evening). `fish` went with it: a fish-permitted day always resolves
+      // to the `fish` grade, so the old wording had no reachable caller.
+      graded: '{grade} - {reason}',
       free: 'No fast',
-      freeBecause: 'No fast — {reason}',
+      freeBecause: 'No fast - {reason}',
     },
     // The day's readings, where a church's calendar has been read and recorded
     // (author, 2026-08-22; src/data/liturgical-days.js). Links open the NKJV
@@ -146,10 +159,10 @@ export const STRINGS = {
     silence: {
       otherChurchOne:
         'Nothing in the {church} calendar today. One commemoration falls today ' +
-        'in another church’s calendar — change calendar in the header to see it.',
+        'in another church’s calendar - change calendar in the header to see it.',
       otherChurchMany:
         'Nothing in the {church} calendar today. {count} commemorations fall ' +
-        'today in other churches’ calendars — change calendar in the header to see them.',
+        'today in other churches’ calendars - change calendar in the header to see them.',
     },
   },
 
@@ -168,7 +181,7 @@ export const STRINGS = {
     // control in the header wider still. The accessible name keeps the whole
     // sentence, because an icon says nothing to a screen reader.
     showing: '{church}',
-    showingLabel: '{church} calendar — change which church’s calendar the site shows',
+    showingLabel: '{church} calendar - change which church’s calendar the site shows',
     heading: 'Which calendar do you keep?',
     groupLabel: 'Churches',
     calendarOf: { julian: 'Julian calendar', 'revised-julian': 'Revised Julian calendar' },
@@ -186,13 +199,13 @@ export const STRINGS = {
   language: {
     open: 'Language',
     openLabel: 'The site’s language',
-    showingLabel: '{name} — change the site’s language',
+    showingLabel: '{name} - change the site’s language',
     heading: 'In which language?',
     groupLabel: 'Languages',
   },
 
   dates: {
-    undated: 'undated',
+    undated: 'Undated',
     before: 'before {y}',
     after: 'after {y}',
     // A life with no recorded beginning is read from its end (author,
@@ -210,14 +223,74 @@ export const STRINGS = {
 
   saints: {
     title: 'All Saints',
-    lede: 'The whole corpus, filterable.',
+    /*
+     * The 44 types the corpus uses, as words (author, 2026-08-25 evening:
+     * "make all the search terms have a capital letter at the start, like
+     * 'Abbot'"). The data keeps the slug, because the filter matches on it;
+     * this is what a reader is shown, and lib/saint-types.js is the only
+     * place that crosses between the two. A type nobody has named here still
+     * prints as a word - the slug, title-cased - so the corpus can grow a
+     * type without waiting for a string.
+     */
+    types: {
+      martyr: 'Martyr',
+      hieromartyr: 'Hieromartyr',
+      venerable: 'Venerable',
+      presbyter: 'Presbyter',
+      bishop: 'Bishop',
+      hierarch: 'Hierarch',
+      'venerable-martyr': 'Venerable martyr',
+      righteous: 'Righteous',
+      confessor: 'Confessor',
+      abbot: 'Abbot',
+      virgin: 'Virgin',
+      deacon: 'Deacon',
+      'new-martyr': 'New martyr',
+      patriarch: 'Patriarch',
+      prince: 'Prince',
+      apostle: 'Apostle',
+      metropolitan: 'Metropolitan',
+      hermit: 'Hermit',
+      'great-martyr': 'Great martyr',
+      monastic: 'Monastic',
+      prophet: 'Prophet',
+      'fool-for-christ': 'Fool for Christ',
+      monk: 'Monk',
+      'patriarch-of-israel': 'Patriarch of Israel',
+      theologian: 'Theologian',
+      king: 'King',
+      soldier: 'Soldier',
+      abbess: 'Abbess',
+      princess: 'Princess',
+      empress: 'Empress',
+      stylite: 'Stylite',
+      iconographer: 'Iconographer',
+      prophetess: 'Prophetess',
+      apologist: 'Apologist',
+      physician: 'Physician',
+      'passion-bearer': 'Passion-bearer',
+      preacher: 'Preacher',
+      forerunner: 'Forerunner',
+      ascetic: 'Ascetic',
+      hymnographer: 'Hymnographer',
+      queen: 'Queen',
+      'equal-to-the-apostles': 'Equal to the Apostles',
+      hieromonk: 'Hieromonk',
+      deaconess: 'Deaconess',
+    },
+    /* "The whole corpus, filterable." stood under the All Saints heading from
+       the first Index until the author removed it (2026-08-25 evening). The
+       count note under the controls already says how much of the corpus this
+       calendar keeps, and the filters are visibly filters; a line that only
+       describes the furniture is the furniture DESIGN.md 5b refuses. The key
+       is gone from all five packs with it. */
     search: 'Search',
     searchHint: 'name, type, church, region',
     random: 'Random saint',
     clear: 'Clear filters',
     countLabel: 'saints',
     countAnnounce: '{count} saints match',
-    noneMatch: 'No saint in the corpus matches all of these filters. That is a fact about a corpus of ten, not about the calendar — widen a filter, or clear them and look around.',
+    noneMatch: 'No saint in the corpus matches all of these filters. That is a fact about a corpus of ten, not about the calendar - widen a filter, or clear them and look around.',
     undatedTray: '{count} undated, set aside',
     undatedNote: 'A date range can neither include nor exclude a saint with no bound at either end, so these are set aside rather than dropped. They match everything else you have chosen.',
     // The Index keeps the reader's church (author, 2026-08-22): what is set
@@ -277,7 +350,7 @@ export const STRINGS = {
     // built from, they need no server, and no address of the author's appears
     // on any page. The trade is that an issue is public, which the reader is
     // told before they open one rather than after.
-    lede: 'Corrections, a saint who is missing, a source that says otherwise — all of it is welcome.',
+    lede: 'Corrections, a saint who is missing, a source that says otherwise - all of it is welcome.',
     open: 'Open an issue on the project',
     note: 'Issues are part of the public repository this site is built from, so what you write there can be read by anyone. Please leave out anything you would not put on a page of it.',
   },
@@ -318,10 +391,10 @@ export const STRINGS = {
     failed: 'This saint’s entry could not be loaded. The text lives in a file alongside the rest of the site, so this is usually a network hiccup rather than a missing saint.',
     retry: 'Try again',
     historicity: {
-      attested: 'Attested — documented by sources close to the events.',
-      traditional: 'Traditional — transmitted by the tradition, without independent documentation.',
-      disputed: 'Disputed — the sources conflict, or scholarship divides.',
-      legendary: 'Legendary — the account is a legend; the person may not have existed.',
+      attested: 'Attested - documented by sources close to the events.',
+      traditional: 'Traditional - transmitted by the tradition, without independent documentation.',
+      disputed: 'Disputed - the sources conflict, or scholarship divides.',
+      legendary: 'Legendary - the account is a legend; the person may not have existed.',
     },
     sexLabel: { male: 'Male', female: 'Female', unknown: 'Sex unrecorded' },
     // One register of what is known about when and where, keyed by the kind
@@ -381,7 +454,7 @@ export const STRINGS = {
         'Where you were reading, and how far down the page you had got.',
         'The saints you have saved, and the saints you have opened recently.',
         'The church whose calendar you chose, and the light or dark setting.',
-        'How you last left the All Saints page — cards or rows, and whether descriptions were shown.',
+        'How you last left the All Saints page - cards or rows, and whether descriptions were shown.',
       ],
       notHeading: 'What is not done',
       not: [
@@ -397,7 +470,7 @@ export const STRINGS = {
         'Two honest footnotes. The files are served by GitHub Pages, and any ' +
         'web server sees the requests made to it; that is the host’s doing, ' +
         'not this site’s, and it is the same for every page on the internet. ' +
-        'And the day’s readings link out to Bible Gateway — following one ' +
+        'And the day’s readings link out to Bible Gateway - following one ' +
         'takes you to a different site, with its own policy.',
     },
   },

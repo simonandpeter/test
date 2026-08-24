@@ -17,6 +17,7 @@
  */
 
 import { CHURCHES } from '../data/churches.js';
+import { typeNames } from '../lib/saint-types.js';
 import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
@@ -147,7 +148,7 @@ function shell(card, backLabel) {
     }
   }
   const facts = [
-    card.types?.length ? card.types.join(', ') : null,
+    card.types?.length ? typeNames(card.types) : null,
     titles.length ? titles.join(', ') : null,
     STRINGS.saint.sexLabel[card.sex] ?? null,
   ]

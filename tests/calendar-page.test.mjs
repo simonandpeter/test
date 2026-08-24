@@ -90,17 +90,17 @@ test('intervals display honestly: display string, derivation, open bounds', () =
   assert.equal(formatInterval({ earliest: 285, latest: 295, display: null }), '285–295');
   assert.equal(formatInterval({ earliest: null, latest: 1000, display: null }), 'before 1000');
   assert.equal(formatInterval({ earliest: 1015, latest: null, display: null }), 'after 1015');
-  assert.equal(formatInterval({ earliest: null, latest: null, display: null }), 'undated');
-  assert.equal(formatInterval(null), 'undated');
+  assert.equal(formatInterval({ earliest: null, latest: null, display: null }), 'Undated');
+  assert.equal(formatInterval(null), 'Undated');
 });
 
-test('a lifespan with no bounds at all says undated once, not twice', () => {
+test('a lifespan with no bounds at all says Undated once, not twice', () => {
   assert.equal(
     formatLifespan({
       birth: { earliest: null, latest: null, display: null },
       death: { earliest: null, latest: null, display: null },
     }),
-    'undated',
+    'Undated',
   );
 });
 
@@ -124,7 +124,7 @@ test('a life with no recorded beginning is read from its end', () => {
   // the death is being asserted, so nothing is dressed up.
   assert.equal(
     formatLifespan({ birth: { earliest: 1779, latest: 1779, display: null }, death: null }),
-    '1779 – undated',
+    '1779 – Undated',
   );
 });
 

@@ -64,15 +64,15 @@ export function cycleTitle(iso, computus = 'julian') {
   if (t <= 70) {
     if (t === 70) return 'Sunday of the Publican and the Pharisee';
     if (t === 63) return 'Sunday of the Prodigal Son';
-    if (t === 56) return 'Meatfare Sunday — the Last Judgement';
-    if (t === 49) return 'Cheesefare Sunday — Forgiveness Sunday';
-    if (t === 42) return '1st Sunday of Great Lent — the Triumph of Orthodoxy';
-    if (t === 35) return '2nd Sunday of Great Lent — St Gregory Palamas';
-    if (t === 28) return '3rd Sunday of Great Lent — the Veneration of the Cross';
-    if (t === 21) return '4th Sunday of Great Lent — St John Climacus';
-    if (t === 14) return '5th Sunday of Great Lent — St Mary of Egypt';
+    if (t === 56) return 'Meatfare Sunday - the Last Judgement';
+    if (t === 49) return 'Cheesefare Sunday - Forgiveness Sunday';
+    if (t === 42) return '1st Sunday of Great Lent - the Triumph of Orthodoxy';
+    if (t === 35) return '2nd Sunday of Great Lent - St Gregory Palamas';
+    if (t === 28) return '3rd Sunday of Great Lent - the Veneration of the Cross';
+    if (t === 21) return '4th Sunday of Great Lent - St John Climacus';
+    if (t === 14) return '5th Sunday of Great Lent - St Mary of Egypt';
     if (t === 8) return 'Lazarus Saturday';
-    if (t === 7) return 'Palm Sunday — the Entry into Jerusalem';
+    if (t === 7) return 'Palm Sunday - the Entry into Jerusalem';
     if (t < 7) return `Great and Holy ${day}`;
     // The weeks between the Sundays take the name of the Sunday that ends
     // them: the fast-free week after the Publican and the Pharisee, Meatfare
@@ -80,14 +80,14 @@ export function cycleTitle(iso, computus = 'julian') {
     if (t > 63) return `${day} of the week of the Publican and the Pharisee`;
     if (t > 56) return `${day} of Meatfare Week`;
     if (t > 49) return `${day} of Cheesefare Week`;
-    if (t === 48) return 'Clean Monday — Great Lent begins';
+    if (t === 48) return 'Clean Monday - Great Lent begins';
     const week = Math.floor((48 - t) / 7) + 1;
     return `${day} of the ${ordinal(week)} week of Great Lent`;
   }
 
-  if (d === 0) return 'Pascha — the Resurrection of the Lord';
+  if (d === 0) return 'Pascha - the Resurrection of the Lord';
   if (d < 7) return `Bright ${day}`;
-  if (d === 7) return 'Thomas Sunday — Antipascha';
+  if (d === 7) return 'Thomas Sunday - Antipascha';
   if (d === 14) return 'Sunday of the Myrrh-bearing Women';
   if (d === 21) return 'Sunday of the Paralytic';
   if (d === 24) return 'Mid-Pentecost';
@@ -173,7 +173,7 @@ export function fasting(iso, churchId) {
   }
   if (t > 49 && t < 56) {
     return wedFri
-      ? { kind: 'fast', reason: 'Cheesefare Week — no meat; dairy and eggs permitted' }
+      ? { kind: 'fast', reason: 'Cheesefare Week - no meat; dairy and eggs permitted' }
       : { kind: 'fast-free', reason: 'Cheesefare Week' };
   }
 

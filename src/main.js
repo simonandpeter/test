@@ -72,7 +72,7 @@ function show({ route, params, path }, nav = {}) {
     // §5c). The first render keeps whatever position the browser gave it.
     if (!firstRender) window.scrollTo(0, 0);
     if (!view) {
-      document.title = `${STRINGS.notFound.title} — ${STRINGS.site.tabName}`;
+      document.title = `${STRINGS.notFound.title} - ${STRINGS.site.tabName}`;
       viewEl.innerHTML = `<h1>${STRINGS.notFound.title}</h1><p>${STRINGS.notFound.body}</p>`;
       return;
     }
@@ -84,7 +84,7 @@ function show({ route, params, path }, nav = {}) {
       : typeof view.title === 'function'
         ? view.title()
         : view.title;
-    document.title = `${heading} — ${STRINGS.site.tabName}`;
+    document.title = `${heading} - ${STRINGS.site.tabName}`;
     view.render(viewEl, { data, params, router, nav, cameFrom });
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce

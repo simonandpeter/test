@@ -13,6 +13,7 @@
 
 import { LANGUAGES, chooseLanguage, currentLanguage, LANGUAGES_BY_ID } from '../lib/i18n.js';
 import { STRINGS, fill } from './strings.js';
+import { flyInto } from './fly.js';
 
 /* The same drawing family as the calendar mark: stroked, currentColor, named
    by the button's label rather than by being understood. */
@@ -22,6 +23,16 @@ const ICON_GLOBE = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" 
   <ellipse cx="12" cy="12" rx="4.1" ry="9.25"/>
   <path d="M3.3 9h17.4M3.3 15h17.4"/>
 </svg>`;
+
+/** The question and the five, the same inside wherever it stands — the
+ *  header's panel, and (since 2026-08-25 evening) the calendar's first-visit
+ *  gate, where it stands beside the calendar question. */
+export function renderLanguageChooser(current = currentLanguage()) {
+  return (
+    `<h2 class="ask-heading">${STRINGS.language.heading}</h2>` +
+    `<div class="ask-choices" role="group" aria-label="${STRINGS.language.groupLabel}">${renderChoices(current)}</div>`
+  );
+}
 
 function renderChoices(current) {
   return LANGUAGES.map(
@@ -45,21 +56,22 @@ export function mountLanguageControl(button, panel) {
     button.innerHTML = ICON_GLOBE + `<span class="church-open-name">${lang.code}</span>`;
     button.setAttribute('aria-label', fill(L.showingLabel, { name: lang.name }));
   };
+  // The same flight home the calendar control makes, for the same reason.
   const close = () => {
     open = false;
-    panel.hidden = true;
     button.setAttribute('aria-expanded', 'false');
+    const inner = panel.querySelector('.church-panel-inner');
+    flyInto(inner, button, () => {
+      panel.hidden = true;
+      panel.innerHTML = '';
+    });
     button.focus();
   };
   const openPanel = () => {
     open = true;
     panel.hidden = false;
     button.setAttribute('aria-expanded', 'true');
-    panel.innerHTML =
-      `<div class="church-panel-inner">` +
-      `<h2 class="ask-heading">${STRINGS.language.heading}</h2>` +
-      `<div class="ask-choices" role="group" aria-label="${STRINGS.language.groupLabel}">${renderChoices(currentLanguage())}</div>` +
-      `</div>`;
+    panel.innerHTML = `<div class="church-panel-inner">${renderLanguageChooser()}</div>`;
     (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus();
   };
 

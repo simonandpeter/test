@@ -21,6 +21,7 @@ import { enabledChurches } from '../data/churches.js';
 import { chooseChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
 import { subscribeLanguage } from '../lib/i18n.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { flyInto } from './fly.js';
 import { STRINGS, fill } from './strings.js';
 
 const C = STRINGS.church;
@@ -107,12 +108,23 @@ export function mountChurchControl(button, panel) {
       `<span class="church-open-name">${esc(name ? fill(C.showing, { church: name }) : C.open)}</span>`;
     button.setAttribute('aria-label', name ? fill(C.showingLabel, { church: name }) : C.openLabel);
   };
+  /*
+   * Closing, the panel shrinks and fades into the control that opened it
+   * (author, 2026-08-25 evening), so a reader who answers learns where the
+   * answer lives. The inner box flies, not the panel: the panel is the
+   * full-width band with the rule under it, and a band scaling towards a
+   * corner would take its own border with it.
+   */
   const close = () => {
     open = false;
-    panel.hidden = true;
     button.setAttribute('aria-expanded', 'false');
     unwire?.();
     unwire = null;
+    const inner = panel.querySelector('.church-panel-inner');
+    flyInto(inner, button, () => {
+      panel.hidden = true;
+      panel.innerHTML = '';
+    });
     button.focus();
   };
   const openPanel = () => {

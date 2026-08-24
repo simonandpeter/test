@@ -12,8 +12,19 @@
   --cal-row-h: 53px;
   /* Pinned rather than intrinsic, because the gutter below is derived from it
      and an edge that sized itself to its content would move the month's name
-     whenever a two-digit date became a one-digit one. */
-  --cal-peek: 30px;
+     whenever a two-digit date became a one-digit one.
+
+     Widened 30 -> 44 px (author, 2026-08-25 evening: "more of the Sunday to
+     the left is peaking out and more of the Monday to the right is peaking
+     out from the fade"). The peek, not the gap, is the lever: the seven day
+     buttons divide what is left *after* both insets, so tightening the gap
+     between columns hands the width back to the seven and shows the
+     neighbours no more of themselves. 14 px more of each neighbour costs each
+     of the seven about 4 px, and a day button is a two-line stack of "Mon"
+     over "24" — 34 px of glyph in a 65 px column. Below 560 px the peek is
+     overridden to 24 px, so a phone is untouched: there the rail is scrolled,
+     not read across. */
+  --cal-peek: 44px;
   /* The empty column to the left of the strip — the jump stack, the row gap
      and the leading peek. The month prints its name into it. */
   --cal-gutter: calc(34px + var(--space-3) + var(--cal-peek));
@@ -433,24 +444,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
   font-size: 13px;
   line-height: 1.2;
 }
 
-/* Density: one dot per commemoration, capped at five, legible before arrival. */
-.density {
-  display: flex;
-  gap: 2px;
-  height: 4px;
-}
-
-.density i {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--ink-soft);
-}
+/* The density dots — one per commemoration, capped at five — stood under every
+   date at both grains from the first calendar until the author removed them
+   (2026-08-25 evening: "remove the dots under each date in the calendar").
+   DESIGN.md's "Dense against sparse" argued them as density made legible
+   before arrival; that paragraph now records the reversal in place. What
+   survives is the *count*, in the day button's accessible name, said plainly
+   here because it is a divergence: a reader who cannot glance at the register
+   has no other way to learn a day's weight, and the number is the day's own
+   rather than a description of a mark that is gone. */
 
 /* ---- month view ------------------------------------------------------- */
 
@@ -858,8 +864,16 @@
   white-space: nowrap;
 }
 
+/* The text register's own narrow arrangement: the feast date drops under the
+   name rather than crowding it. `:not(.reg-card)` since 2026-08-25 evening —
+   Also commemorated became *cards* the evening before (Amendment 38) and
+   inherited this wrap, so a name a few glyphs too long for the row pushed the
+   bookmark to a second line instead of holding the trailing edge (author:
+   "the row card for St Bartholomew on mobile pushes the bookmark to the next
+   line"). A card row is a fixed three-part shape — thumbnail, body, mark —
+   and the body is the elastic one; nothing in it may wrap the mark away. */
 @media (max-width: 480px) {
-  .register li {
+  .register li:not(.reg-card) {
     flex-wrap: wrap;
   }
   .register .reg-feast {
@@ -884,6 +898,14 @@
 .church-ask {
   padding: var(--space-4);
   margin-bottom: var(--space-6);
+}
+
+/* Two questions in the one panel since 2026-08-25 evening — which calendar,
+   and which of the five languages — so they need a rule between them that is
+   not a rule: the space does the separating, because a line inside a panel
+   would read as two panels badly joined. */
+.ask-block + .ask-block {
+  margin-top: var(--space-6);
 }
 
 .ask-heading {
@@ -1098,45 +1120,90 @@
   opacity: 1;
 }
 
-.fast-modal {
+/* A bubble, not a dialogue (author, 2026-08-25 evening: "the fasting pop-up
+   should be a bubble, the background doesn't go white as it currently does").
+
+   It was a `<dialog>` opened with `showModal()` for one day, and `::backdrop`
+   is what went white: a modal takes the whole screen's attention, which is far
+   too much ceremony for a footnote to one word on one line. This points at the
+   word instead. The page stays lit behind it and every ordinary way of moving
+   on — a press elsewhere, Escape, a scroll — puts it away.
+
+   Positioned in document coordinates by views/calendar.js, so it travels with
+   the page rather than hovering over a scroll it no longer belongs to; the
+   scroll listener closes it long before that matters, and this is what keeps
+   the frame between the two honest. */
+.fast-bubble {
+  position: absolute;
+  z-index: 40;
+  max-width: min(36ch, calc(100vw - 2 * var(--space-4)));
+  padding: var(--space-3);
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
   background: var(--gesso);
   color: var(--ink);
-  padding: 0;
-  max-width: min(52ch, calc(100vw - 2 * var(--space-4)));
+  /* The one shadow on the site that is not a picture's: a bubble has to read
+     as *above* the line it explains, and it has no ground of its own. */
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.14);
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: var(--arrow-x, 50%) 0;
+  transition: opacity 140ms ease-out, transform 140ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
 }
 
-.fast-modal::backdrop {
-  background: var(--ink);
-  opacity: 0.35;
+.fast-bubble.is-in {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.fast-modal-inner {
-  padding: var(--space-4) var(--space-4) var(--space-6);
+.fast-bubble:focus-visible {
+  outline-offset: 3px;
 }
 
-.fast-modal-sub {
-  margin: var(--space-4) 0 var(--space-1);
-  color: var(--ink-soft);
+/* The arrow: two squares, one in the rule's colour and one in the ground's a
+   pixel below it, so the bubble's border runs unbroken across the point. */
+.fast-bubble::before,
+.fast-bubble::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--arrow-x, 50%) - 6px);
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+.fast-bubble::before {
+  top: -7px;
+  background: var(--rule);
+}
+
+.fast-bubble::after {
+  top: -5px;
+  background: var(--gesso);
+}
+
+/* What the day allows, which is the whole point of the bubble. */
+.fast-allows {
+  margin: 0;
 }
 
 /* The source's own words, quoted rather than translated — as every other
    quotation in this corpus is. */
 .fast-note {
-  margin: 0;
+  margin: var(--space-2) 0 0;
   font-style: italic;
+  color: var(--ink-soft);
 }
 
-.fast-levels {
-  margin: 0;
-  padding-inline-start: var(--space-4);
+.fast-source {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-soft);
 }
 
-.fast-levels li {
-  margin-bottom: var(--space-1);
-}
-
-.fast-modal-close {
-  margin-top: var(--space-4);
+/* Reduced motion removes the movement, it does not hurry it (DESIGN.md §6):
+   the bubble is simply there, and simply gone. */
+@media (prefers-reduced-motion: reduce) {
+  .fast-bubble {
+    transition: none;
+  }
 }

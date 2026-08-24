@@ -59,7 +59,7 @@ export function formatPlace(place) {
   if (!place) return '';
   const historical = place.historical_name ?? '';
   const modern = place.modern_name ?? '';
-  if (historical && modern && historical !== modern) return `${historical} — ${modern}`;
+  if (historical && modern && historical !== modern) return `${historical} - ${modern}`;
   return historical || modern || STRINGS.saint.placeUnnamed;
 }
 

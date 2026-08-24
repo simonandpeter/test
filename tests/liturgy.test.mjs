@@ -41,10 +41,16 @@ test('the tone turns weekly from Thomas Sunday and restarts after eight', () => 
   assert.equal(tone('2027-04-30'), null);
 });
 
+/* The composed titles print an ordinary hyphen since 2026-08-25 evening
+   ("replace all emm dashes with normal dashes"): the sweep ran over string
+   literals only, so this file's own commentary keeps the em dash and the
+   assertions below carry what the page now shows. The pack `reasons` maps are
+   keyed on these same English strings and were swept in the same pass, so key
+   and value still meet. */
 test('the named Sundays of the Pentecostarion and the Triodion', () => {
-  assert.equal(cycleTitle('2026-04-12'), 'Pascha — the Resurrection of the Lord');
+  assert.equal(cycleTitle('2026-04-12'), 'Pascha - the Resurrection of the Lord');
   assert.equal(cycleTitle('2026-04-15'), 'Bright Wednesday');
-  assert.equal(cycleTitle('2026-04-19'), 'Thomas Sunday — Antipascha');
+  assert.equal(cycleTitle('2026-04-19'), 'Thomas Sunday - Antipascha');
   assert.equal(cycleTitle('2026-05-21'), 'Ascension of the Lord');
   assert.equal(cycleTitle('2026-05-31'), 'Pentecost');
   assert.equal(cycleTitle('2026-06-07'), 'Sunday of All Saints');
@@ -59,15 +65,15 @@ test('the named Sundays of the Pentecostarion and the Triodion', () => {
   assert.equal(cycleTitle('2027-02-21'), 'Sunday of the Publican and the Pharisee');
   assert.equal(cycleTitle('2027-02-24'), 'Wednesday of the week of the Publican and the Pharisee');
   assert.equal(cycleTitle('2027-03-03'), 'Wednesday of Meatfare Week');
-  assert.equal(cycleTitle('2027-03-07'), 'Meatfare Sunday — the Last Judgement');
+  assert.equal(cycleTitle('2027-03-07'), 'Meatfare Sunday - the Last Judgement');
   assert.equal(cycleTitle('2027-03-10'), 'Wednesday of Cheesefare Week');
-  assert.equal(cycleTitle('2027-03-14'), 'Cheesefare Sunday — Forgiveness Sunday');
-  assert.equal(cycleTitle('2027-03-15'), 'Clean Monday — Great Lent begins');
+  assert.equal(cycleTitle('2027-03-14'), 'Cheesefare Sunday - Forgiveness Sunday');
+  assert.equal(cycleTitle('2027-03-15'), 'Clean Monday - Great Lent begins');
   assert.equal(cycleTitle('2027-03-17'), 'Wednesday of the 1st week of Great Lent');
-  assert.equal(cycleTitle('2027-03-21'), '1st Sunday of Great Lent — the Triumph of Orthodoxy');
+  assert.equal(cycleTitle('2027-03-21'), '1st Sunday of Great Lent - the Triumph of Orthodoxy');
   assert.equal(cycleTitle('2027-04-07'), 'Wednesday of the 4th week of Great Lent');
   assert.equal(cycleTitle('2027-04-24'), 'Lazarus Saturday');
-  assert.equal(cycleTitle('2027-04-25'), 'Palm Sunday — the Entry into Jerusalem');
+  assert.equal(cycleTitle('2027-04-25'), 'Palm Sunday - the Entry into Jerusalem');
   assert.equal(cycleTitle('2027-04-30'), 'Great and Holy Friday');
 });
 

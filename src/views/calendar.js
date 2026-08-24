@@ -22,7 +22,7 @@ import {
   weekOf,
 } from '../lib/calendar-page.js';
 import { loadDetail, observePrefetch } from '../lib/detail.js';
-import { churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
+import { chooseChurch, churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
 import { withHonorific } from '../lib/honorific.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -31,10 +31,13 @@ import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { hymnMarkup } from '../ui/hymns.js';
-import { renderChooser, wireChooser } from '../ui/church-chooser.js';
+import { renderChooser } from '../ui/church-chooser.js';
+import { renderLanguageChooser } from '../ui/language-chooser.js';
+import { flyInto } from '../ui/fly.js';
 import { liturgicalDay } from '../lib/liturgy.js';
-import { currentLanguage, formatDate, translateReason } from '../lib/i18n.js';
+import { chooseLanguage, currentLanguage, formatDate, hasChosenLanguage, translateReason } from '../lib/i18n.js';
 import { recordedDay } from '../data/liturgical-days.js';
+import { gradeForDay } from '../lib/fast-grade.js';
 import { bibleUrl, refInLanguage } from '../lib/bible.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -185,9 +188,11 @@ export function render(el, { data, params, router }) {
     subscribeChurch(() => {
       if (!state) return;
       paintGate();
-      // The density dots under every date are the chosen church's counts, so
-      // the rail is rebuilt, not just re-marked — carrying its anchor and
-      // then re-revealing the selected day so the reader's place holds.
+      // Every date's own count is the chosen church's — it is read into the
+      // day button's accessible name — so the rail is rebuilt, not just
+      // re-marked, carrying its anchor and then re-revealing the selected day
+      // so the reader's place holds. (It drew dots under each date until the
+      // author removed them, 2026-08-25 evening; the count survives them.)
       buildRail(state.railAnchor ?? state.selected);
       paintChrome();
       revealSelected();
@@ -222,7 +227,7 @@ export function render(el, { data, params, router }) {
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
     wireRail(el.querySelector('.week-strip')),
     wireDayKeys(),
-    wireFastModal(el),
+    wireFastBubble(el),
   );
 
   paintGate();
@@ -340,6 +345,15 @@ function paintLiturgy() {
   const { el, selected, calendar } = state;
   const box = el.querySelector('[data-liturgy]');
   if (!box) return;
+  /*
+   * Any open bubble belongs to the button this repaint is about to replace,
+   * and it is about *this* day's fast — so it goes with the line. Found by
+   * its own test: a scroll that settled the rail repainted the line under an
+   * open bubble, and the next press on the control opened a second one
+   * instead of closing the first, because the bubble's owner was a node no
+   * longer on the page.
+   */
+  closeFastBubble();
   if (!calendar) { box.innerHTML = ''; return; }
   const L = STRINGS.calendar.liturgy;
   const day = liturgicalDay(selected, calendar);
@@ -349,20 +363,32 @@ function paintLiturgy() {
   // (Amendment 36). day.title stays English — the cycle line is composed by
   // lib/liturgy.js and localising its grammar is the recorded seam.
   const reason = f.reason ? translateReason(f.reason) : f.reason;
+  /*
+   * Which fast, and — where the church's own calendar printed one — which
+   * grade of it (author, 2026-08-25 evening: "the fasting text should say
+   * which type of fast is required"). The grade is read off that printed
+   * note, never computed: lib/fast-grade.js argues the boundary and
+   * lib/liturgy.js still refuses to rule. A fast-free day takes no grade,
+   * because there is no allowance to name.
+   */
+  const M = STRINGS.calendar.fastModal;
+  const isFast = f.kind === 'fast' || f.kind === 'fish';
+  const grade = isFast ? gradeForDay(f, recordedDay(selected, calendar)?.fastingNote) : null;
+  const gradeName = grade ? M.grades[grade] : null;
   const fastText =
-    f.kind === 'fast' ? fill(L.fast, { reason })
-    : f.kind === 'fish' ? fill(L.fish, { reason })
+    gradeName ? fill(L.graded, { grade: gradeName, reason })
+    : isFast ? fill(L.fast, { reason })
     : f.reason ? fill(L.freeBecause, { reason })
     : L.free;
-  // The fast is a control now (author, 2026-08-25): it opens a modal saying
-  // what the fast allows, and carries an (i) so the reader knows it can be
-  // asked. A button rather than a span, so it is reachable by keyboard and
-  // announced as something that does a thing.
+  // The fast is a control (author, 2026-08-25): it opens a bubble saying what
+  // this day allows and nothing else. A button rather than a span, so it is
+  // reachable by keyboard and announced as something that does a thing.
   const fastHtml =
     `<button type="button" class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}" data-fast-open ` +
-    `aria-haspopup="dialog" title="${esc(STRINGS.calendar.fastModal.hint)}">${esc(fastText)}` +
+    `data-grade="${esc(grade ?? '')}" aria-expanded="false" ` +
+    `aria-haspopup="dialog" title="${esc(M.hint)}">${esc(fastText)}` +
     `<span class="fast-info" aria-hidden="true">i</span>` +
-    `<span class="sr-only"> — ${esc(STRINGS.calendar.fastModal.open)}</span></button>`;
+    `<span class="sr-only"> - ${esc(M.open)}</span></button>`;
   const plain = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null].filter(Boolean).map(esc);
   box.innerHTML = [...plain, fastHtml].join(' · ');
 }
@@ -450,63 +476,156 @@ function fillSaintHymns(panel, slug, iso) {
  * One delegated listener for the fast control, on the view root: the liturgy
  * line is repainted on every day change, so a listener bound to the button
  * itself would have to be remade each time and would leak the one before it.
+ * A second press on the same control closes what the first opened.
  */
-function wireFastModal(root) {
+function wireFastBubble(root) {
   const onClick = (e) => {
     const button = e.target.closest('[data-fast-open]');
-    if (button && root.contains(button)) openFastModal(button.dataset.fast);
+    if (!button || !root.contains(button)) return;
+    if (bubble?.owner === button) closeFastBubble();
+    else openFastBubble(button);
   };
   root.addEventListener('click', onClick);
-  return () => root.removeEventListener('click', onClick);
+  return () => {
+    root.removeEventListener('click', onClick);
+    closeFastBubble();
+  };
 }
 
+/* The one bubble that can be open, and everything it has to undo. */
+let bubble = null;
+
 /**
- * What the fast allows, when the reader asks (author, 2026-08-25). A modal
- * over the page rather than a line under the date, because it is a thing
- * consulted rather than read daily — and the Daily page's whole shape is one
- * day at a glance.
+ * What this day allows, when the reader asks (author, 2026-08-25 evening: "the
+ * fasting pop-up should be a bubble, the background doesn't go white as it
+ * currently does, it's just a bobble that smoothly pops into view and out of
+ * view when scrolling or clicking elsewhere").
  *
- * The content is in ui/strings.js, where its boundary is argued: this states
- * which fast the day falls in, quotes the source's own note where the
- * calendar printed one, and explains the terms — it does not rule on the day.
+ * It was a `<dialog>` opened with `showModal()` for one day, which is why the
+ * page went white behind it: a modal dialog paints a backdrop and takes the
+ * whole screen's attention for what is a footnote to one word. A bubble is
+ * the honest shape — it points at the word it explains, the page stays lit
+ * and readable behind it, and any of the ordinary ways of moving on close it.
+ *
+ * What it says is argued in ui/strings.js: this day's own allowance and
+ * nothing else, in the reader's language, with the calendar's own note quoted
+ * under it where one was printed. Not a glossary of the other three grades.
  */
-function openFastModal(kind) {
+function openFastBubble(button) {
+  closeFastBubble();
   const M = STRINGS.calendar.fastModal;
   const rec = recordedDay(state.selected, state.calendar);
   const note = rec?.fastingNote;
+  const grade = button.dataset.grade || null;
+  const kind = button.dataset.fast;
+  const allows =
+    grade ? M.allows[grade]
+    : kind === 'fast-free' ? M.free
+    : M.unstated;
   const src = rec?.source?.url
     ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>`
     : esc(rec?.source?.text ?? '');
-  const dialog = document.createElement('dialog');
-  dialog.className = 'fast-modal';
-  dialog.innerHTML = `
-    <div class="fast-modal-inner">
-      <h2 class="register-heading">${M.heading}</h2>
-      <p>${esc(M.kinds[kind] ?? '')}</p>
-      ${
-        note
-          ? `<h3 class="fast-modal-sub utility">${M.sourceHeading}</h3>
-             <p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>
-             ${src ? `<p class="utility">${fill(M.sourceNote, { source: src })}</p>` : ''}`
-          : ''
-      }
-      <h3 class="fast-modal-sub utility">${M.levelsHeading}</h3>
-      <ul class="fast-levels">${M.levels.map((l) => `<li>${l}</li>`).join('')}</ul>
-      <p class="utility">${esc(M.whose)}</p>
-      <button type="button" class="fast-modal-close" data-fast-close>${esc(M.close)}</button>
-    </div>`;
-  document.body.appendChild(dialog);
-  const shut = () => {
-    dialog.close();
-    dialog.remove();
+
+  const el = document.createElement('div');
+  el.className = 'fast-bubble';
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', M.open);
+  el.tabIndex = -1;
+  el.innerHTML =
+    `<p class="fast-allows">${esc(allows)}</p>` +
+    (note
+      ? `<p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>` +
+        (src ? `<p class="fast-source utility">${fill(M.sourceNote, { source: src })}</p>` : '')
+      : '');
+  document.body.appendChild(el);
+
+  place(el, button);
+  button.setAttribute('aria-expanded', 'true');
+
+  /*
+   * Anything that moves the reader on closes it: a press outside, Escape, a
+   * scroll, a resize. The scroll listener is captured, so a scroll inside any
+   * pane counts, and all four are passive — none of them prevents the thing
+   * the reader was actually doing.
+   */
+  const away = (e) => {
+    if (!el.contains(e.target) && !button.contains(e.target)) closeFastBubble();
   };
-  dialog.addEventListener('click', (e) => {
-    // The backdrop is the dialog itself; a press inside the panel is not it.
-    if (e.target === dialog || e.target.closest('[data-fast-close]')) shut();
-  });
-  dialog.addEventListener('close', () => dialog.remove());
-  dialog.showModal();
-  dialog.querySelector('[data-fast-close]')?.focus();
+  const key = (e) => {
+    if (e.key === 'Escape') {
+      closeFastBubble();
+      button.focus();
+    }
+  };
+  /*
+   * A scroll that has actually moved something, not merely a scroll *event*.
+   * The page can be mid-settle when the bubble opens — a control brought into
+   * view by the browser, a smooth scroll finishing — and a queued event from
+   * a scroll that has already ended would shut the bubble in the same frame
+   * it appeared. Found by the dismissal test, which pressed the control right
+   * after a wheel and got nothing.
+   */
+  const at = { x: scrollX, y: scrollY };
+  const gone = () => {
+    if (Math.abs(scrollY - at.y) > 4 || Math.abs(scrollX - at.x) > 4) closeFastBubble();
+  };
+  document.addEventListener('pointerdown', away, true);
+  document.addEventListener('keydown', key);
+  window.addEventListener('scroll', gone, { capture: true, passive: true });
+  const onResize = () => closeFastBubble();
+  window.addEventListener('resize', onResize, { passive: true });
+
+  bubble = {
+    el,
+    owner: button,
+    teardown: () => {
+      document.removeEventListener('pointerdown', away, true);
+      document.removeEventListener('keydown', key);
+      window.removeEventListener('scroll', gone, { capture: true });
+      window.removeEventListener('resize', onResize);
+    },
+  };
+
+  // The pop: one frame at rest, then the class that runs the transition. Under
+  // reduced motion the class is on from the first paint and the CSS gives it
+  // no transition to run — the movement is *removed*, not shortened (DESIGN.md
+  // §6). Focus follows so Escape and a screen reader both land on it.
+  if (reducedMotion()) el.classList.add('is-in');
+  else requestAnimationFrame(() => el.classList.add('is-in'));
+  el.focus({ preventScroll: true });
+}
+
+/** Under the control, pointing at it, and never off the side of the page. */
+function place(el, button) {
+  const b = button.getBoundingClientRect();
+  const width = el.getBoundingClientRect().width;
+  const inset = 12;
+  const wanted = b.left + b.width / 2 - width / 2;
+  const left = Math.max(inset, Math.min(wanted, document.documentElement.clientWidth - width - inset));
+  el.style.left = `${Math.round(left + scrollX)}px`;
+  el.style.top = `${Math.round(b.bottom + scrollY + 8)}px`;
+  // Where the arrow — and the transform the bubble grows from — sit: over the
+  // control, wherever the clamp above had to put the box.
+  el.style.setProperty('--arrow-x', `${Math.round(b.left + b.width / 2 - left)}px`);
+}
+
+function closeFastBubble() {
+  if (!bubble) return;
+  const { el, owner, teardown } = bubble;
+  bubble = null;
+  teardown();
+  owner.setAttribute('aria-expanded', 'false');
+  if (reducedMotion()) {
+    el.remove();
+    return;
+  }
+  el.classList.remove('is-in');
+  // transitionend is the truth; the timer is the guarantee that a bubble
+  // whose transition never fires — an interrupted paint, a hidden tab — is
+  // still taken off the page rather than left invisible over the day.
+  const off = () => el.remove();
+  el.addEventListener('transitionend', off, { once: true });
+  setTimeout(off, 400);
 }
 
 /* The tongue the church's own calendar prints its fasting note in — the note
@@ -536,11 +655,12 @@ function fillHeroLede(panel, slug, iso) {
   );
 }
 
-/** Density: one dot per commemoration, capped at five, legible before arrival. */
-function densityDots(iso) {
-  const n = countFor(iso, state.data);
-  return Array.from({ length: Math.min(n, 5) }, () => '<i></i>').join('');
-}
+/* The dots that stood under every date at both grains — one per
+   commemoration, capped at five — were removed by the author on 2026-08-25
+   ("remove the dots under each date in the calendar"). The count they drew is
+   still read, once, into the day button's accessible name below: `countFor`
+   is the same call, and a reader who cannot glance at the register still
+   learns a day's weight before opening it. */
 
 /** The days of one month that fall on one weekday, 0 = Monday. JDN 0 was a Monday. */
 function monthColumn(cursor, weekday) {
@@ -569,49 +689,81 @@ const stepCursor = (c, n) => ({
  * first (author, 2026-08-21; redrawn 2026-08-22 for one church of three). It
  * stands where the strip will stand: this is a question, not an obstacle, and
  * a reader who ignores it has chosen nothing and is asked again next visit.
- * One question — which calendar, by church — because the calendar follows the
- * church; the header's control is where the answer is changed afterwards, and
- * so is "change calendar" under the strip, which shows the same choices.
+ *
+ * **Two questions since 2026-08-25 evening** (author: "same as the message to
+ * choose which church, open the language options as well for first time
+ * visitors to know they can change language"). They are not the same kind of
+ * question and the difference is kept: the calendar has no default and the
+ * page below waits for it; the language has one — English, and the reader is
+ * already reading it — so that half is an offer rather than a gate. A reader
+ * who answers only the calendar gets the whole site and is asked about the
+ * language again next visit, which is exactly what "has chosen nothing" has
+ * always meant here.
+ *
+ * Each block carries the control it belongs to, because each flies to a
+ * different corner when it is answered.
  */
-const askMarkup = () => (hasChosen() ? '' : `<div class="church-ask panel" data-ask>${renderChooser()}</div>`);
+function askMarkup() {
+  const blocks = [];
+  if (!hasChosen()) {
+    blocks.push(`<div class="ask-block" data-ask-church data-flies-to="church-open">${renderChooser()}</div>`);
+  }
+  if (!hasChosenLanguage()) {
+    blocks.push(`<div class="ask-block" data-ask-language data-flies-to="lang-open">${renderLanguageChooser()}</div>`);
+  }
+  return blocks.length ? `<div class="church-ask panel" data-ask>${blocks.join('')}</div>` : '';
+}
 
 /**
- * One wiring for both places the choices can stand — the gate above the strip
- * and the change panel under it — because it is the same chooser. Choosing
- * closes the change panel; the subscription above repaints everything else;
- * focus goes to the nearest control in the strip's chrome, since the question
- * has gone.
+ * The gate's own wiring, which the header's disclosures do not share: an
+ * answer here *flies before it lands*. Both `chooseChurch` and
+ * `chooseLanguage` tear this view down and rebuild it — the church through
+ * paintGate, the language through the router's refresh — so choosing first
+ * and animating after would animate a node that no longer exists. The order
+ * is: fly the block into the control that will change it from now on, then
+ * answer.
  */
 function wireAsk() {
   const { el } = state;
-  state.cleanups.push(
-    wireChooser(el.querySelector('.cal'), {
-      onChange: () => {
+  const gate = el.querySelector('[data-gate]');
+  const onClick = (e) => {
+    const button = e.target.closest('[data-church], [data-language]');
+    if (!button || !gate.contains(button)) return;
+    const block = button.closest('.ask-block');
+    const target = document.getElementById(block?.dataset.fliesTo ?? '');
+    const answer = () => {
+      block?.remove();
+      if (!gate.querySelector('.ask-block')) gate.innerHTML = '';
+      if (button.dataset.church) {
+        chooseChurch(button.dataset.church);
         el.querySelector('[data-today]')?.focus();
-      },
-    }),
-  );
+      } else {
+        chooseLanguage(button.dataset.language);
+      }
+    };
+    flyInto(block, target, answer);
+  };
+  gate.addEventListener('click', onClick);
+  state.cleanups.push(() => gate.removeEventListener('click', onClick));
 }
 
 /**
  * Before the week or the month can be seen the reader has to have chosen
- * (author, 2026-08-22): the question stands where the strip would, and the
- * strip, the date and the day are hidden until there is an answer. The
- * calendar is named and changed in the header (author, 2026-08-24).
+ * (author, 2026-08-22): the calendar question stands where the strip would,
+ * and the strip, the date and the day are hidden until there is an answer.
+ * The calendar is named and changed in the header (author, 2026-08-24).
+ *
+ * The gate is only *built* here, never rebuilt: from the moment it is on the
+ * page its blocks are removed one at a time by wireAsk, at the end of their
+ * flights. Repainting it on every church change would snatch a block out of
+ * mid-air — which is what the `firstElementChild` guard is for.
  */
 function paintGate() {
   const { el } = state;
   state.calendar = currentChurch();
   const gate = el.querySelector('[data-gate]');
-  const body = el.querySelector('[data-cal-body]');
-
-  if (!state.calendar) {
-    gate.innerHTML = askMarkup();
-    body.hidden = true;
-    return;
-  }
-  gate.innerHTML = '';
-  body.hidden = false;
+  el.querySelector('[data-cal-body]').hidden = !state.calendar;
+  if (!gate.firstElementChild) gate.innerHTML = askMarkup();
 }
 
 /* ---- the day rail ------------------------------------------------------- */
@@ -657,12 +809,11 @@ const COAST_STOP = 0.15;
 
 const dayButton = (iso) => {
   const n = countFor(iso, state.data);
-  const density = n ? ` — ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
+  const density = n ? ` - ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
   return `<button type="button" data-iso="${iso}" tabindex="-1"
     aria-label="${dayFmt(utc(iso))}${density}">
     <span class="day-name">${weekdayFmt(utc(iso))}</span>
     <span class="day-num">${parseIso(iso).day}</span>
-    <span class="density" aria-hidden="true">${densityDots(iso)}</span>
   </button>`;
 };
 
@@ -1149,8 +1300,7 @@ function paintMonthInto(row, cursor, { live }) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
     cells.push(`<button type="button" data-iso="${iso}"${current}
-      aria-label="${dayFmt(utc(iso))}">${day}<span class="density"
-      aria-hidden="true">${densityDots(iso)}</span></button>`);
+      aria-label="${dayFmt(utc(iso))}">${day}</button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 
@@ -1161,7 +1311,7 @@ function paintMonthInto(row, cursor, { live }) {
     const column = monthColumn(c, weekday)
       .map((day) => {
         const iso = toIsoDate({ year: c.year, month: c.month, day });
-        return `<span class="peek-cell">${day}<span class="density">${densityDots(iso)}</span></span>`;
+        return `<span class="peek-cell">${day}</span>`;
       })
       .join('');
     row.querySelector(sel).innerHTML = `<span class="peek-col" aria-hidden="true">${column}</span>`;

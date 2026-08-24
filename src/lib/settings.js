@@ -18,10 +18,21 @@ const DEFAULTS = {
   // `traditions` and `calendar` stood here for the cross-church build and went
   // with it; values left in a reader's storage from then are simply ignored.
   church: null,
-  // The site's language (author, 2026-08-24): one of lib/i18n.js's five ids.
-  // English until chosen; unlike the church there is no ask-first state,
-  // because English is an answer and not a question.
-  language: 'en',
+  /*
+   * The site's language (author, 2026-08-24): one of lib/i18n.js's five ids,
+   * or null until the reader has been asked. Null *reads* as English —
+   * i18n.js falls back to it and always did — so nothing about a first paint
+   * changes; what the null buys is the difference between "English because
+   * the reader chose it" and "English because nobody has said".
+   *
+   * It said 'en' outright until 2026-08-25 evening, on the reasoning that
+   * English is an answer and not a question. The author reversed that: "same
+   * as the message to choose which church, open the language options as well
+   * for first time visitors to know they can change language" — the question
+   * is not which language the site should be in, it is whether the reader
+   * knows the site has five.
+   */
+  language: null,
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.

@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-25 (Amendment 39)
+## State as of 2026-08-25 (Amendment 40)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,9 +74,9 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 141 unit tests (`npm test`) — pure logic, no DOM.
-- 280 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-24, the sitting of Amendments 34–38), not carried
+- 142 unit tests (`npm test`) — pure logic, no DOM.
+- 310 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-25, the sitting of Amendments 39–40), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -86,16 +86,21 @@ them.
   passed. Both the index foot (Amendment 24) and the header (Amendment 38)
   now force a known face before asserting. **If you add anything to the
   header row, the nav is what pays**: check the wide-face assertion, not the
-  look on your desk.
+  look on your desk. *Amended at Amendment 40:* the nav no longer pays — it
+  has its own `auto` track and cannot be squeezed — so what pays is the
+  **masthead**, which wraps to a second line rather than clipping. A control
+  added to the row now shows up as a two-line site name in Russian, Greek and
+  Serbian before it shows up anywhere else.
 
-- **Amendments 34–37 are pushed.** The author pushed 34 (`7b7b10d`) and then
+- **Amendments 34–39 are pushed.** The author pushed 34 (`7b7b10d`), then
   35–36 (`1df505b`) *mid-sitting* — the parallel-session pattern this file
   warns about, caught both times by fetching before committing rather than by
-  luck — and 37 (`a2c56fa`) followed. **Amendments 38 and 39 are committed on top and
-  not pushed**: the agent session had no credentials, which is the usual
-  state (see "Pushing happens outside this session" below). None of that is
-  evidence that CI is green: this environment has no `gh` CLI to check the
-  Actions run itself, so eyeball it on GitHub before building on top.
+  luck — then 37 (`a2c56fa`), and 38–39 (`52178bf`, `e93e493`) before the
+  evening sitting began. **Amendment 40 is committed on top and not pushed**:
+  the agent session had no credentials, which is the usual state (see
+  "Pushing happens outside this session" below). None of that is evidence
+  that CI is green: this environment has no `gh` CLI to check the Actions run
+  itself, so eyeball it on GitHub before building on top.
 
 **Corpus as of 2026-08-24: 708 saints**, every one with a life and four
 attestation rows; 430 hymns; readings/fasting for 23 August – 19 September in
@@ -361,11 +366,39 @@ up cold; the two the author has to decide are marked.
   cycle line is the remaining English on a translated Daily page. The
   author's call whether it is worth the restructure.
 
-- **English hymn texts, if ever wanted, are a sourcing task** (Amendment 37):
-  the OCA prints its own English troparia and kontakia for much of the
-  calendar at oca.org, citable saint by saint the way Amendment 31's three
-  weeks were. Corpus work on the author's commission — the hymns note under
-  the heading is the shipped answer until then.
+- **English hymn texts: asked for outright, and still a sourcing task**
+  (Amendment 40; raised at 37). The author asked on 2026-08-25 evening for an
+  English translation of every hymn when English is the chosen language.
+  **415 hymns across 132 saints** — Church Slavonic 143, Greek 137, Romanian
+  117, Serbian 18 — and translating them in this build would be inventing
+  liturgical text, which is exactly Amendment 2. The OCA prints its own
+  English troparia and kontakia for much of this calendar at oca.org, citable
+  saint by saint the way Amendment 31's three weeks were. The display side is
+  a day's work once the texts exist (`ui/hymns.js` already groups by church
+  and tags each text with its `lang`; an `en` variant preferred when the
+  reader's language is English is a few lines); **the texts are the
+  commission.**
+
+- **Icons for the 613 saints without one** (Amendment 40, asked for
+  outright). 95 of 708 have an `images/icon.jpg`, and every one of those
+  carries a *placeholder* `source_url` on an unresolvable reserved domain —
+  the build warns while it stands. So this is 613 sourcing decisions each
+  carrying a rights question, not a fetch loop: a file, a licence, a credit
+  and a real source URL apiece. Bulk-fetching images and guessing at their
+  licences is the failure mode `lib/licence.js` and the build's warnings
+  exist to refuse. Wikimedia Commons supplied the 88 that are cited properly
+  and is the obvious well; the work is per-saint verification.
+
+- **Six months of liturgical days across four churches** (Amendment 40, asked
+  for outright). `src/data/liturgical-days.js` holds **28 days**, 23 August to
+  19 September 2026, transcribed by hand from four calendars. Six months is
+  roughly 180 days × 4 = **720 day-records** of readings, fasting notes, feast
+  titles and hymns. Two things make it more than volume: three of the four
+  sources publish only a fortnight or so ahead — saint.gr's absence for 7–19
+  September is already *in* the data as a recorded absence rather than filled
+  in — so the later months cannot be transcribed before the sources print
+  them; and the fasting notes are now load-bearing in a way they were not,
+  because `lib/fast-grade.js` reads the day's allowance off them.
 
 - **The saints' names in each language — needs the author, and it is
   sourcing rather than translation.** Asked for on 2026-08-25 ("St Titus the
