@@ -24,6 +24,7 @@ import {
 import { loadDetail, observePrefetch } from '../lib/detail.js';
 import { churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { withHonorific } from '../lib/honorific.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
@@ -32,8 +33,6 @@ import { mountShelves } from '../ui/shelf.js';
 import { renderChooser, wireChooser } from '../ui/church-chooser.js';
 import { liturgicalDay } from '../lib/liturgy.js';
 import { bibleGatewayUrl, recordedDay } from '../data/liturgical-days.js';
-import { CALENDAR_LABELS, monthName } from '../data/calendars.js';
-import { fromJdn } from '../lib/jdn.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = STRINGS.calendar.title;
@@ -115,7 +114,6 @@ export function render(el, { data, params, router }) {
   state = {
     el, data, router, selected,
     calendar: currentChurch(),
-    whichOpen: false,
     monthCursor: null, monthOpen: false,
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
@@ -165,13 +163,6 @@ export function render(el, { data, params, router }) {
             </div>
           </div>
         </div>
-        <div class="cal-which utility" data-which>
-          <span class="cal-which-name" data-which-name></span>
-          <button type="button" class="cal-which-change" data-which-change aria-expanded="false"
-            aria-controls="cal-which-panel" aria-label="${STRINGS.calendar.which.changeLabel}">${STRINGS.calendar.which.change}</button>
-          <span class="cal-own-date" data-own-date></span>
-          <div class="which-panel" id="cal-which-panel" data-which-panel hidden></div>
-        </div>
         <h1 class="cal-date"></h1>
         <p class="cal-liturgy utility" data-liturgy></p>
         <div class="slot-viewport"><div class="day-panel"></div></div>
@@ -190,7 +181,6 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
 
   wireAsk();
-  wireWhich();
 
   // The header's control can change the church while this page is open: the
   // question goes once it has been answered, and everything that counts
@@ -339,25 +329,8 @@ function paintChrome() {
   const { el, selected } = state;
   paintWeekInto(el.querySelector('.week-row'), selected, { live: true });
   el.querySelector('.cal-date').textContent = dayFmt.format(utc(selected));
-  paintOwnDate();
   paintLiturgy();
   if (state.monthOpen) paintMonth();
-}
-
-/**
- * The day in the chosen church's own reckoning, after the calendar's name
- * (author, 2026-08-22): a civil 23 August is 10 August on the Julian calendar
- * and 23 August on the Revised Julian, and the line says which.
- */
-function paintOwnDate() {
-  const { el, selected, calendar } = state;
-  const box = el.querySelector('[data-own-date]');
-  if (!box) return;
-  const cal = CHURCHES_BY_ID[calendar]?.default_calendar;
-  if (!cal) { box.textContent = ''; return; }
-  const d = parseIso(selected);
-  const own = fromJdn(cal, gregorianToJdn(d.year, d.month, d.day));
-  box.textContent = fill(STRINGS.calendar.ownDate, { date: `${own.day} ${monthName(cal, own.month)}`, calendar: CALENDAR_LABELS[cal] ?? cal });
 }
 
 /**
@@ -365,12 +338,16 @@ function paintOwnDate() {
  * cycle, the tone of the week, and whether it is a fast for this church — all
  * three from lib/liturgy.js, which reckons each in the church's own calendar.
  * Joined with middle dots; a fast-free day with no reason says only "No fast".
+ *
+ * The fast carries its kind as a class (author, 2026-08-24) so the three
+ * states are told apart by colour as well as by wording — the colour is a
+ * second channel, never the only one, so it survives greyscale.
  */
 function paintLiturgy() {
   const { el, selected, calendar } = state;
   const box = el.querySelector('[data-liturgy]');
   if (!box) return;
-  if (!calendar) { box.textContent = ''; return; }
+  if (!calendar) { box.innerHTML = ''; return; }
   const L = STRINGS.calendar.liturgy;
   const day = liturgicalDay(selected, calendar);
   const f = day.fasting;
@@ -379,7 +356,9 @@ function paintLiturgy() {
     : f.kind === 'fish' ? fill(L.fish, { reason: f.reason })
     : f.reason ? fill(L.freeBecause, { reason: f.reason })
     : L.free;
-  box.textContent = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null, fastText].filter(Boolean).join(' · ');
+  const fastHtml = `<span class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}">${esc(fastText)}</span>`;
+  const plain = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null].filter(Boolean).map(esc);
+  box.innerHTML = [...plain, fastHtml].join(' · ');
 }
 
 /**
@@ -498,22 +477,17 @@ function wireAsk() {
   state.cleanups.push(
     wireChooser(el.querySelector('.cal'), {
       onChange: () => {
-        closeWhich();
         el.querySelector('[data-today]')?.focus();
       },
     }),
   );
 }
 
-/* ---- which calendar (author, 2026-08-22) -------------------------------- */
-
-const whichMarkup = (current) => `<div class="church-ask panel" data-calendar-ask>${renderChooser({ current })}</div>`;
-
 /**
  * Before the week or the month can be seen the reader has to have chosen
  * (author, 2026-08-22): the question stands where the strip would, and the
- * strip, the date and the day are hidden until there is an answer. Once
- * chosen, the calendar names itself under the strip with the way to change it.
+ * strip, the date and the day are hidden until there is an answer. The
+ * calendar is named and changed in the header (author, 2026-08-24).
  */
 function paintGate() {
   const { el } = state;
@@ -524,38 +498,10 @@ function paintGate() {
   if (!state.calendar) {
     gate.innerHTML = askMarkup();
     body.hidden = true;
-    closeWhich();
     return;
   }
   gate.innerHTML = '';
   body.hidden = false;
-  const W = STRINGS.calendar.which;
-  el.querySelector('[data-which-name]').textContent = fill(W.showing, { church: churchName(state.calendar) });
-  if (state.whichOpen) el.querySelector('[data-which-panel]').innerHTML = whichMarkup(state.calendar);
-}
-
-function wireWhich() {
-  const { el } = state;
-  el.querySelector('[data-which-change]').addEventListener('click', () => {
-    state.whichOpen = !state.whichOpen;
-    const panel = el.querySelector('[data-which-panel]');
-    const button = el.querySelector('[data-which-change]');
-    button.setAttribute('aria-expanded', String(state.whichOpen));
-    panel.hidden = !state.whichOpen;
-    if (state.whichOpen) {
-      panel.innerHTML = whichMarkup(state.calendar);
-      (panel.querySelector('[data-church][aria-pressed="true"]') ?? panel.querySelector('[data-church]'))?.focus();
-    }
-  });
-}
-
-function closeWhich() {
-  const { el } = state;
-  state.whichOpen = false;
-  const panel = el.querySelector('[data-which-panel]');
-  const button = el.querySelector('[data-which-change]');
-  if (panel) panel.hidden = true;
-  if (button) button.setAttribute('aria-expanded', 'false');
 }
 
 /**
@@ -870,13 +816,20 @@ function paintDay(panel) {
   // accessibility tree and out of the tab order on purpose: the name beside it
   // already links to the same page, and a second link with no text of its own
   // would be either an unnamed link or the same one announced twice.
+  // The bookmark sits over the image's top-right corner, as it does on an
+  // Index card (author, 2026-08-24). It is a sibling of the link rather than
+  // inside it — a button within an anchor is not valid, and the press has to
+  // save rather than open.
   const media = hero.image
-    ? `<a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
+    ? `<div class="hero-figure">
+        <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
           style="background-image:url('${BASE + hero.image.lqip}')">
-        <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
-          style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
-      </a>`
+          <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
+            style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
+        </a>
+        ${renderBookmark(hero.slug, hero.display_name)}
+      </div>`
     : '';
 
   // One calendar, one church: the register needs no church heading, and a
@@ -892,7 +845,7 @@ function paintDay(panel) {
       named.add(saint.slug);
       return `<li>
         <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-          data-prefetch="${saint.slug}"${transition}>${esc(saint.display_name)}</a>
+          data-prefetch="${saint.slug}"${transition}>${esc(withHonorific(saint.display_name))}</a>
         ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
       </li>`;
     })
@@ -907,11 +860,11 @@ function paintDay(panel) {
       <div class="hero-body">
         <div class="name-line">
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(hero.display_name)}</a>
+            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(withHonorific(hero.display_name))}</a>
           </h2>
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
-        <div class="hero-actions">${renderBookmark(hero.slug, hero.display_name)}</div>
+        ${hero.image ? '' : `<div class="hero-actions">${renderBookmark(hero.slug, hero.display_name)}</div>`}
       </div>
     </article>
     ${register}

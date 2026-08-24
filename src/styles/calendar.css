@@ -586,11 +586,27 @@
    loses is its lower half rather than the face. The blurred placeholder is
    anchored the same way, or it would paint a differently-framed image under the
    one arriving. */
+/* The figure is the image's box, and the bookmark is positioned against it —
+   over the top-right corner, exactly as on an Index card (author, 2026-08-24).
+   It is also where the 85% below is applied, so the proportion lands once: on
+   the box, not on the box and the image both. */
+.hero-figure {
+  position: relative;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.hero-figure > .bookmark {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 1;
+}
+
 .hero-media {
   display: block;
   width: 100%;
   aspect-ratio: 1;
-  margin-inline: auto;
   background-size: cover;
   background-position: 50% 0;
   border-radius: var(--radius-cell);
@@ -614,7 +630,7 @@
 }
 
 @media (max-width: 619.98px) {
-  .hero-media {
+  .hero-figure {
     width: 85%;
   }
 }
@@ -821,6 +837,23 @@
 
 .cal-liturgy:empty {
   display: none;
+}
+
+/* The fast, told apart by colour as well as by its wording (author,
+   2026-08-24): strict in the rubric, fish-permitted in teal, fast-free in
+   green. The words still say which, so the line reads the same in greyscale
+   and to a reader who cannot separate the hues. */
+.cal-liturgy .fast {
+  color: var(--fast-free);
+  font-weight: 500;
+}
+
+.cal-liturgy .fast-fast {
+  color: var(--fast-strict);
+}
+
+.cal-liturgy .fast-fish {
+  color: var(--fast-fish);
 }
 
 /* ---- readings and hymns, under the day's saint (author, 2026-08-22) ------- */

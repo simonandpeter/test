@@ -15,6 +15,7 @@
 import * as store from '../lib/store.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { withHonorific } from '../lib/honorific.js';
 import { STRINGS } from './strings.js';
 
 const SHELF_LIMIT = 5;
@@ -25,7 +26,7 @@ function row(card, router, { removable = false } = {}) {
         aria-label="${STRINGS.shelf.remove}: ${esc(card.display_name)}">×</button>`
     : '';
   return `<li>
-    <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(card.display_name)}</a>
+    <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
     <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
     ${remove}
   </li>`;

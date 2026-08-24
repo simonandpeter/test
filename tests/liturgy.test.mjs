@@ -19,8 +19,8 @@ test('the paschal year is the one whose Pascha is on or before the day', () => {
 
 test('the week of 23 August 2026 is the 12th Sunday after Pentecost and the 13th week, Tone 3 — as all three calendars print', () => {
   assert.equal(cycleTitle('2026-08-23'), '12th Sunday after Pentecost');
-  assert.equal(cycleTitle('2026-08-24'), 'Monday of the 13th week after Pentecost');
-  assert.equal(cycleTitle('2026-08-29'), 'Saturday of the 13th week after Pentecost');
+  assert.equal(cycleTitle('2026-08-24'), '13th week after Pentecost');
+  assert.equal(cycleTitle('2026-08-29'), '13th week after Pentecost');
   assert.equal(cycleTitle('2026-08-30'), '13th Sunday after Pentecost');
   for (const day of [23, 24, 25, 26, 27, 28, 29]) assert.equal(tone(`2026-08-${day}`), 3, `tone on ${day} August`);
 });
@@ -52,8 +52,8 @@ test('the named Sundays of the Pentecostarion and the Triodion', () => {
   // count, and the one days.pravoslavie.ru prints ("Седмица 13-я" for 24
   // August): the fast-free week after Pentecost is the 1st, ending with All
   // Saints, and the Monday after All Saints opens the 2nd.
-  assert.equal(cycleTitle('2026-06-02'), 'Tuesday of the 1st week after Pentecost');
-  assert.equal(cycleTitle('2026-06-08'), 'Monday of the 2nd week after Pentecost');
+  assert.equal(cycleTitle('2026-06-02'), '1st week after Pentecost');
+  assert.equal(cycleTitle('2026-06-08'), '2nd week after Pentecost');
   // Pascha 2027 is 2 May: the Publican and the Pharisee 70 days before,
   // Clean Monday 48, the 1st Sunday of Lent 42, Palm Sunday 7.
   assert.equal(cycleTitle('2027-02-21'), 'Sunday of the Publican and the Pharisee');
@@ -122,7 +122,7 @@ test('the other fasts and the feasts that lift them, in the church’s own calen
 
 test('liturgicalDay gathers the three for the chosen church', () => {
   assert.deepEqual(liturgicalDay('2026-08-28', 'russian'), {
-    title: 'Friday of the 13th week after Pentecost',
+    title: '13th week after Pentecost',
     tone: 3,
     fasting: { kind: 'fish', reason: 'a Great Feast on a Friday' },
   });

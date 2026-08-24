@@ -128,30 +128,29 @@ test('reduced motion removes animation rather than shortening it', async ({ brow
 test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // One calendar at a time (author, 2026-08-22; one church of three): the
   // Russian calendar names Anthony once, by the Julian feast that falls on 30
   // January; change to the Greek and the same civil day holds nothing of his,
   // because the New Calendar keeps 17 January on the 17th — the same menologion
-  // date, two civil days, and never the same saint listed twice. The hero card
-  // no longer repeats this date (author, 2026-08-23; it doubled the own-date
-  // line under the strip), so it is read from there instead.
-  await expect(page.locator('[data-own-date]')).toHaveText('17 January (Julian)');
+  // date, two civil days, and never the same saint listed twice.
   await expect(page.locator('.day-panel .register li')).toHaveCount(0);
-  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
-  await page.locator('[data-which-change]').click();
-  await page.locator('[data-which-panel] [data-church="greek"]').click();
-  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
   await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
-  await expect(page.locator('[data-own-date]')).toHaveText('17 January (Revised Julian)');
-  // Nothing under the strip prints the day in another reckoning. The line of
-  // equivalencies went when the toggle arrived, and the toggle went when the
-  // tradition filter took its place (author, 2026-08-21).
+  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
+  // Only the civil date is printed (author, 2026-08-24): the line that gave
+  // the day in the church's own reckoning went with the "Change calendar"
+  // control under the strip, because two dates for one day read as confusion
+  // rather than precision. The calendar is named and changed in the header.
+  await expect(page.locator('[data-own-date]')).toHaveCount(0);
+  await expect(page.locator('[data-which]')).toHaveCount(0);
+  await expect(page.locator('[data-which-change]')).toHaveCount(0);
+  // The older reckoning lines went earlier still (author, 2026-08-21).
   await expect(page.locator('.cal-reckonings')).toHaveCount(0);
   await expect(page.locator('.cal-reckoning')).toHaveCount(0);
   await expect(page.locator('.day-date')).toHaveCount(0);
@@ -201,7 +200,7 @@ test('the hero image box is a square, cropped from the centre and the top', asyn
 test('a saint opens with its own names, citations and life', async ({ page }) => {
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('h1.saint-name')).toHaveText('Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
   // Multi-script name forms are how "attest, never adjudicate" appears on
   // screen (Addendum C3), so their presence is a requirement, not a detail.
   await expect(page.locator('.names span[lang="grc"]')).toHaveText('Ἀντώνιος');
@@ -270,7 +269,7 @@ test('a place keeps the note that says how far it is really fixed', async ({ pag
 
 test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
   await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Christopher');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Christopher');
   await expect(page.locator('.saint-media')).toHaveCount(0);
   // Removed from the General Roman Calendar in 1969 and still venerated: the
   // page must not turn that into a refusal.
@@ -344,7 +343,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
   expect(afterHover).toBe(1);
 
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
   // The click reuses what the hover fetched rather than asking again.
   expect(fetched.length).toBe(afterHover);
 });
@@ -368,7 +367,7 @@ test('the shared element is named once, on both sides of the navigation', async 
   expect(new Set(onCalendar).size).toBe(onCalendar.length);
 
   await page.locator('.hero-name a').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Anthony the Great');
   const onDetail = await names();
   expect(onDetail).toContain('s-anthony-the-great-name');
   expect(new Set(onDetail).size).toBe(onDetail.length);
@@ -498,6 +497,12 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
   await query.fill('zzzznotasaint');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('[data-count]')).toHaveText('0');
+
+  // Every name is drawn with "St" before it (author, 2026-08-24), so typing
+  // back what the screen shows must find the saint: the honorific is dropped
+  // from the query, because the index holds the bare name and terms AND.
+  await query.fill('St John Chrysostom');
+  await expect(page.locator('.index-card').first()).toContainText('John Chrysostom');
 });
 
 test('a filtered-out saint fades rather than vanishing', async ({ page }) => {
@@ -605,7 +610,7 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await days.nth(6).click();
   await expect(page.locator('h1')).toHaveText(/28 June 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
-  await expect(page.locator('.hero-name')).toHaveText('Augustine of Hippo');
+  await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
@@ -1470,13 +1475,13 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Russian calendar');
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   // The day, the hero, and the density dots under that date in the strip: one
   // choice, read everywhere, rather than in the one place someone remembered.
-  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
+  await expect(page.locator('#church-open')).toHaveText('Greek calendar');
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
@@ -1495,7 +1500,6 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   // civil day of that name.
   await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
-  await expect(page.locator('[data-own-date]')).toHaveText('15 June (Revised Julian)');
 });
 
 test('the calendar is remembered, and the header changes it', async ({ page }) => {
@@ -1522,7 +1526,6 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
   await expect(page.locator('#church-open')).toHaveText('Greek calendar');
-  await expect(page.locator('[data-which-name]')).toHaveText('The Greek calendar');
   await expect(page.locator('[data-ask]')).toHaveCount(0);
 });
 
@@ -1567,7 +1570,7 @@ test('the question is asked once, and answering it is choosing', async ({ page }
   await page.locator('[data-ask] [data-church="romanian"]').click();
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
-  await expect(page.locator('[data-which-name]')).toHaveText('The Romanian calendar');
+  await expect(page.locator('#church-open')).toHaveText('Romanian calendar');
   // Focus goes somewhere that still exists: the strip's own chrome.
   expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-today'))).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('romanian');
@@ -1643,8 +1646,24 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
   const media = page.locator('.hero-media');
   await expect(media).toHaveAttribute('aria-hidden', 'true');
   await expect(media).toHaveAttribute('tabindex', '-1');
+
+  // The bookmark sits over the image's top-right corner, exactly as on an
+  // Index card (author, 2026-08-24) — a sibling of the link, because a button
+  // inside an anchor is invalid and a press must save rather than open.
+  const boxes = await page.evaluate(() => {
+    const img = document.querySelector('.hero-figure').getBoundingClientRect();
+    const mark = document.querySelector('.hero-figure > .bookmark').getBoundingClientRect();
+    return { img, mark };
+  });
+  expect(boxes.mark.top).toBeGreaterThan(boxes.img.top);
+  expect(boxes.mark.right).toBeLessThanOrEqual(boxes.img.right);
+  expect(boxes.mark.top - boxes.img.top).toBeLessThan(20);
+  expect(boxes.img.right - boxes.mark.right).toBeLessThan(20);
+  // And nowhere else: the body carries no second bookmark for an imaged hero.
+  await expect(page.locator('.hero .hero-actions')).toHaveCount(0);
+
   await media.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Augustine of Hippo');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Augustine of Hippo');
 });
 
 /**
@@ -2146,7 +2165,7 @@ test('the × returns to the Daily page when the saint was opened from it, not to
   await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Daily');
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(new RegExp(`${POPULATED}$`));
-  await expect(page.locator('.hero-name')).toHaveText('Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('St Anthony the Great');
 
   // Opened from All Saints instead, the × still returns there.
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -2230,8 +2249,9 @@ test('the first visit is asked which calendar, and sees no strip until it answer
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
   await expect(page.locator('.week-strip')).toBeVisible();
-  await expect(page.locator('[data-which-name]')).toHaveText('The Russian calendar');
-  await expect(page.locator('[data-which-change]')).toBeVisible();
+  // The calendar is named and changed in the header (author, 2026-08-24);
+  // nothing under the strip offers it any more.
+  await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('.hero-name')).toContainText('Augustine');
   await expect(page.locator('#church-open')).toHaveText('Russian calendar');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
@@ -2351,27 +2371,29 @@ test('the site is The Orthodox Saint, and the habit page is Daily', async ({ pag
   await expect(page.locator('.site-nav')).not.toContainText('Calendar');
 });
 
-test('the Daily page prints the day in the church own reckoning, the paschal cycle, the tone and the fast', async ({ page }) => {
-  // Author, 2026-08-23. After "Change calendar", the civil day as this church
-  // reckons it; under the date, where the day stands in the paschal cycle, the
+test('the Daily page prints the civil date alone, the paschal cycle, the tone and the fast in its colour', async ({ page }) => {
+  // Author, 2026-08-23, amended 2026-08-24: only the civil date is printed
+  // now. Under it, where the day stands in the paschal cycle, the
   // tone, and whether it is a fast for this church — which is why the Russian
   // and the Greek disagree on the same civil day (the Dormition Fast runs to
   // 27 August on the Julian calendar). Each figure is what the church's own
   // calendar printed for the day (tests/liturgy.test.mjs has the comparison).
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-own-date]')).toHaveText('10 August (Julian)');
   await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
+  // The fast carries its kind, so the three states are told apart by colour
+  // as well as by their wording (author, 2026-08-24).
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast');
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-own-date]')).toHaveText('15 August (Julian)');
   await expect(page.locator('[data-liturgy]')).toContainText('Fast, fish permitted — a Great Feast on a Friday');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fish');
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-own-date]')).toHaveText('28 August (Revised Julian)');
-  await expect(page.locator('[data-liturgy]')).toHaveText('Friday of the 13th week after Pentecost · Tone 3 · Fast — Friday');
+  await expect(page.locator('[data-liturgy]')).toHaveText('13th week after Pentecost · Tone 3 · Fast — Friday');
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast-free');
 });
 
 test('the readings of the day link to Bible Gateway and name the page they were read from', async ({ page }) => {
@@ -2402,7 +2424,7 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   // recorded with the day, before any saint's payload arrives.
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Kosmas of Aetolia');
+  await expect(page.locator('.hero-name')).toHaveText('St Kosmas of Aetolia');
   await expect(page.locator('[data-hymns] .hymn')).toHaveCount(2);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'el');
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Κοσμᾶν τὸν ἰσαπόστολον');
@@ -2437,8 +2459,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(serbian).toContainText('Serbian');
   await expect(serbian.locator('.choice-calendar')).toHaveText('Julian calendar');
   await serbian.click();
-  await expect(page.locator('[data-which-name]')).toContainText('Serbian calendar');
-  await expect(page.locator('[data-own-date]')).toHaveText('10 August (Julian)');
+  await expect(page.locator('#church-open')).toContainText('Serbian calendar');
   await expect(page.locator('[data-liturgy]')).toHaveText('12th Sunday after Pentecost · Tone 3 · Fast — the Dormition Fast');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
   const links = page.locator('[data-readings] .readings a');
@@ -2452,7 +2473,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
-  await expect(page.locator('[data-liturgy]')).toHaveText('Saturday of the 13th week after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy]')).toHaveText('13th week after Pentecost · Tone 3 · No fast');
 
   // The Russian week (Amendment 29 too): the 24th is its 11 August, Euplus
   // and the Caves fathers with Church Slavonic tropars from the Patriarchate's
@@ -2460,7 +2481,6 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await openChooser(page);
   await page.locator('#church-panel [data-church="russian"]').click();
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-own-date]')).toHaveText('11 August (Julian)');
   await expect(page.locator('.hero-name')).toHaveText(/Euplus|Theodore|Basil/);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'cu');
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('глас');
@@ -2534,7 +2554,7 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(2);
 
   await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Eleutherius, Monk-martyr (1937)');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Eleutherius, Monk-martyr (1937)');
   await expect(page.locator('.life p').first()).toContainText('Eleutherius Pechennikov was born in 1870');
   await expect(page.locator('.fact-row', { hasText: 'Died' })).toContainText('1937');
   await expect(page.locator('.life em a[href*="azbyka.ru"]')).toHaveCount(1);
@@ -2577,10 +2597,9 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await openChooser(page);
   await page.locator('#church-panel [data-church="russian"]').click();
   await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-own-date]')).toHaveText('29 August (Julian)');
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Acts 13:25-32');
   await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /days\.pravoslavie\.ru\/Days\/20260829\.html/);
-  await expect(page.locator('.hero-name')).toHaveText('John the Baptist and Forerunner');
+  await expect(page.locator('.hero-name')).toHaveText('St John the Baptist and Forerunner');
   await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго с похвалами');
 
   await openChooser(page);
@@ -2591,7 +2610,7 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Ephesians 1:7-17');
 
   await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Babylas, Bishop of Antioch');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Babylas, Bishop of Antioch');
   await expect(page.locator('.life p').first()).toContainText('this great and wonderful man');
   await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
   await expect(page.locator('.saint-media img')).toBeVisible();

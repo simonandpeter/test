@@ -49,9 +49,6 @@ export const STRINGS = {
     heroIn: 'In the {church}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
-    // The day in the chosen church's own reckoning, after the calendar's name
-    // (author, 2026-08-22): "10 August (Julian)" under a civil 23 August.
-    ownDate: '{date} ({calendar})',
     // Under the date (author, 2026-08-22): where the day stands in the
     // paschal cycle, the tone, and whether it is a fast — lib/liturgy.js.
     liturgy: {
@@ -78,30 +75,20 @@ export const STRINGS = {
     },
 
     /*
-     * One calendar at a time (author, 2026-08-22, Addendum H8; redrawn the
-     * same day for one church of three): the calendar is the chosen church's,
-     * named under the strip with the way to change it.
-     */
-    which: {
-      showing: 'The {church} calendar',
-      change: 'Change calendar',
-      changeLabel: 'Change which church’s calendar is shown',
-    },
-
-    /*
      * Two silences (redrawn 2026-08-22 for one church at a time): a day the
      * corpus has nothing for, which is a gap in our sourcing; and a day this
      * church's calendar has nothing for while another of the three does, which
      * is a fact about the choice made above and says where the others are.
-     * Prose in ink, never a banner.
+     * Prose in ink, never a banner. Since 2026-08-24 the calendar is changed
+     * in the header, so that is where these two point.
      */
     silence: {
       otherChurchOne:
         'Nothing in the {church} calendar today. One commemoration falls today ' +
-        'in another church’s calendar — change calendar to see it.',
+        'in another church’s calendar — change calendar in the header to see it.',
       otherChurchMany:
         'Nothing in the {church} calendar today. {count} commemorations fall ' +
-        'today in other churches’ calendars — change calendar to see them.',
+        'today in other churches’ calendars — change calendar in the header to see them.',
     },
   },
 

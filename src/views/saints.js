@@ -18,6 +18,7 @@
  */
 
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
+import { withHonorific } from '../lib/honorific.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatLifespan, parseIso } from '../lib/calendar-page.js';
@@ -541,7 +542,12 @@ function wireGrid() {
 
 function update({ animate }) {
   const { el, cards, filters, search } = state;
-  const query = filters.query.trim();
+  // The index holds the bare name and every name is drawn with "St" before it
+  // (lib/honorific.js), so a reader who types back what the screen shows —
+  // "St John" — must not be told there is no such saint. The honorific is
+  // dropped from the query, not added to the index: terms combine with AND,
+  // and a term no document carries would zero every search it appears in.
+  const query = filters.query.trim().replace(/^(St\.?|Saint)\s+/i, '');
   const hits = query && search ? new Set(search.search(query).map((r) => r.id)) : null;
 
   // The reader's church comes first (author, 2026-08-22): a saint not in that
@@ -710,7 +716,7 @@ function card(item, router, { rows = false, detailed = false } = {}) {
   // rather than opens. (The veneration glyph stood beside the name in this
   // line until 2026-08-22 — DESIGN.md §2.)
   const body = `<span class="name-line">
-      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(item.display_name)}</a>
+      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(withHonorific(item.display_name))}</a>
     </span>
     <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
     ${description}`;
@@ -800,7 +806,7 @@ function paintTray(undated) {
       ${undated
         .map(
           (c) => `<li><a class="reg-name" href="${state.router.href(`/saints/${c.slug}`)}"
-            data-prefetch="${esc(c.slug)}">${esc(c.display_name)}</a></li>`,
+            data-prefetch="${esc(c.slug)}">${esc(withHonorific(c.display_name))}</a></li>`,
         )
         .join('')}
     </ul>

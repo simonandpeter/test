@@ -17,6 +17,15 @@
   --field: #dfdcd1; /* recessed panel interior only — never a page background */
   --veil: rgba(229, 228, 221, 0.8);
 
+  /* The fast of the day (author, 2026-08-24, DESIGN.md §2b): three states the
+     reader sorts at a glance. Strict is the rubric itself, because a fast is
+     liturgical time; the other two are new hues and the one sanctioned
+     exception to the two-colour rule. Teal rather than amber for fish so the
+     mitigated day is never mistaken for the gold of the veneration glyph. */
+  --fast-strict: var(--rubric);
+  --fast-fish: #1f5a6e;
+  --fast-free: #356038;
+
 
   --space-1: 4px;
   --space-2: 8px;
@@ -61,6 +70,10 @@ html.dark {
 
   --field: #231a17;
   --veil: rgba(26, 20, 18, 0.8);
+
+  --fast-strict: var(--rubric);
+  --fast-fish: #7ab4c9;
+  --fast-free: #8fbe8a;
 
   /* Ink is lighter in vigil mode and the ground is warm rather than white, so
      both marks need a little more weight to hold the same reading. */

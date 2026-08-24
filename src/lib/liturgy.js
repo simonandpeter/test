@@ -104,7 +104,7 @@ export function cycleTitle(iso, computus = 'julian') {
   if (wd === 0) return `${ordinal((d - 49) / 7)} Sunday after Pentecost`;
   // The week that ends with the coming Sunday.
   const n = Math.floor((d - 49) / 7) + 1;
-  return `${day} of the ${ordinal(n)} week after Pentecost`;
+  return `${ordinal(n)} week after Pentecost`;
 }
 
 /**

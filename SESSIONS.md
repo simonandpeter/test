@@ -1325,6 +1325,72 @@ the way. (4) RU 0902's second pair of pericopes ("за понедельник и
 carries no set label. (5) The new-martyr lives are first paragraphs plus the
 summary — the full azbyka lives are long and were read to the point noted.
 
+**32. Six changes to the Daily page, and St before every name** (author's
+instruction, 2026-08-24). Four of the six reverse settled decisions; each is
+recorded where it sat rather than absorbed.
+
+**(1) and (2) — the line under the strip is gone.** It carried the calendar's
+name, a *Change calendar* button and the day in that church's own reckoning
+("10 August (Julian)"). All three are removed and the Daily page now prints the
+civil date alone. This reverses Amendment 23's second host for the chooser and
+the own-date line added on 2026-08-23; the author's reason is that two dates
+for one day read as confusion rather than precision. Nothing is stranded — the
+header has named and changed the calendar since Amendment 23 — and the two
+silences now point there ("change calendar in the header to see it"). DESIGN.md
+§5b marks the superseded paragraph in place; `paintOwnDate`, `wireWhich`,
+`closeWhich`, `whichMarkup` and `STRINGS.calendar.which`/`ownDate` are deleted
+rather than left dark.
+
+**(3) — the fast is coloured, and it is the one exception to the two-colour
+rule.** Strict takes the rubric (a fast is liturgical time, so it needs no new
+hue); fish-permitted takes teal `--fast-fish`, fast-free green `--fast-free`.
+Two new hues now exist outside gold and rubric and DESIGN.md §2 is amended to
+say so, with the three conditions that keep it honest: the words still carry
+the whole meaning so the line survives greyscale, the mitigated day is teal
+*because* amber at this contrast is within a few degrees of `--gold` and a
+reader taught that gold is a finding must never meet it on a line about
+herring, and both hues clear 4.5:1 in both themes (6.00/5.72 on gesso,
+7.98/8.59 on bole — computed, not eyeballed). No other category may cite this
+entry to take a colour.
+
+**(4) — "Monday of the 13th week after Pentecost" is now "13th week after
+Pentecost."** The weekday was already in the h1 above it. One line in
+`lib/liturgy.js`; five unit fixtures and two browser assertions followed.
+
+**(5) — the Daily hero's bookmark moved to the top-right of the image**, where
+the Index card has kept it since Amendment 22. The image is wrapped in a
+`.hero-figure` because a button inside the `<a>` is invalid and the press must
+save rather than open. Note the trap: the 85% of Amendment 16 moved *onto the
+figure* rather than being added to it, because a proportion applied in two
+places multiplies — the browser test that measures `.hero-media` against its
+used grid track is what would have caught it, and it still passes at 221 px.
+
+**(6) — every name is read with "St" before it.** `lib/honorific.js` is
+applied when a name is drawn and never written into the data, so the manifest
+keeps the bare name: sorting still files a saint under their own initial
+instead of filing all 708 under S. Search needed one line of its own — the
+reader now sees "St John Chrysostom" and will type it back, but the index
+holds the bare name and MiniSearch combines terms with AND, so the term "St"
+would have zeroed every search it appeared in. The honorific is therefore
+stripped from the query, not added to the index. The 26 companies that begin
+with an article ("The Fifty Martyrs of Palestine") take no honorific, because
+"St The Fifty Martyrs" is not English — a unit test walks the whole corpus and
+asserts that every name either takes the honorific or is one of those.
+
+*What the author asked for that was already built:* rank as "a category in
+their profile not in their name". The `types` field already holds exactly that
+— martyr, hieromartyr, presbyter, hierarch, venerable, on 699 of 708 folders —
+and the saint page has always printed it on the facts line. **What was not
+done, deliberately: stripping the rank out of `display_name`.** For the ~200
+new-martyrs the rank and year *are* the disambiguator — "Alexander (Medvedev),
+Deacon, Hieromartyr (1918)" and "Alexander (Malinovsky), Presbyter,
+Hieromartyr (1918)" are two men who share a forename and a year — and reducing
+both to "St Alexander" would lose the distinction the corpus exists to keep.
+226 distinct trailing segments were surveyed; they mix rank ("Presbyter"), see
+("Bishop of Gortyna"), relation ("son of Bassa") and disambiguator
+("2 September"), so no mechanical split is safe. This is the author's call and
+is left open.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

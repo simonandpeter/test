@@ -76,6 +76,32 @@ decoration.
 day is the typikon's own idiom — a Great Feast, a Sunday of the Triodion — and
 rubric is where those entries will live once the entry shape is settled.*
 
+**Amended 2026-08-24 (author): the fast of the day is the one sanctioned
+exception, and it is a narrow one.** The Daily page's fast now carries its kind
+as a colour — strict in `--fast-strict` (the rubric itself, because a fast *is*
+liturgical time and needs no new hue), fish-permitted in `--fast-fish`, and
+fast-free in `--fast-free`. Two new hues therefore exist outside gold and
+rubric, and the two-colour rule of §2 is no longer literally true.
+
+Three things keep the exception honest, and none of them is optional:
+
+1. **The colour is never the only channel.** The line still says "Fast — the
+   Dormition Fast", "Fast, fish permitted — …" or "No fast" in words. Remove
+   every colour and the reader loses nothing; that is the §7 greyscale test
+   applied to text rather than to the glyph.
+2. **Fish-permitted is teal, deliberately not amber.** Amber at the contrast
+   the ground needs lands within a few degrees of `--gold`, and a reader who
+   has learnt that gold is a finding about veneration should never meet it on a
+   line about herring. The hue was chosen to be unmistakably *not* gold.
+3. **Both hues clear 4.5:1 on their ground in both themes** — 6.00 and 5.72 on
+   gesso, 7.98 and 8.59 on bole — so the quality floor's contrast gate passes
+   on the colour rather than in spite of it.
+
+The discipline this does not repeal: gold still appears only in the veneration
+badge, errors are still ink, and no *other* category anywhere on the site may
+take a colour of its own by citing this entry. The fast earned it by being the
+one datum a reader scans for daily and acts on the same morning.
+
 ## 3. Colour tokens
 
 Six named colours, all drawn from the materials of panel and book. Every colour
@@ -89,6 +115,9 @@ in the CSS goes through these custom properties; hard-coded values are a defect.
 | `--rubric` | `#8A2E26` | `#C05B4B` | cinnabar rubric | liturgical time, current place (§2) |
 | `--gold` | `#A98237` | `#C79A4B` | burnished leaf | veneration badge only (§2) |
 | `--rule` | `#C8C2B7` | `#3A2F29` | ruled line | separators, borders, skeletons |
+| `--fast-strict` | `= --rubric` | `= --rubric` | cinnabar rubric | a strict fast (§2, 2026-08-24) |
+| `--fast-fish` | `#1F5A6E` | `#7AB4C9` | verdigris | fish permitted (§2, 2026-08-24) |
+| `--fast-free` | `#356038` | `#8FBE8A` | terre verte | no fast (§2, 2026-08-24) |
 
 **The light ground is gesso, not paper** (author, 2026-08-22). It was
 `#FBFAF7` — a near-white — until then, and is `#E5E4DD`: the tone of an actual
@@ -453,11 +482,21 @@ cross-church control.*
 
 **The page is *Daily*, and under its date stands the liturgical day** (author,
 2026-08-23; the site itself is *The Orthodox Saint* from the same day — the
-route `/calendar` and the settings key are unchanged so nothing breaks). After
-*Change calendar* the civil day is printed as the chosen church reckons it —
-"10 August (Julian)" under a civil 23 August — because the Old and New
-Calendar readers are looking at the same day under different names. Under the
-h1, one utility line: where the day stands in the paschal cycle, the tone of
+route `/calendar` and the settings key are unchanged so nothing breaks).
+
+*Superseded in two parts on 2026-08-24 (author). The strip no longer carries
+the calendar's name, a "Change calendar" control, or the day in the church's
+own reckoning — that whole line is gone. **The Daily page prints the civil
+date and only the civil date**: two dates for one day was read as confusion
+rather than as precision, which is the opposite of what the own-date line was
+added to do. The calendar is named and changed in the header, which has
+offered both since Amendment 23, so nothing is lost but the duplication. The
+superseded reasoning — that Old and New Calendar readers are looking at the
+same day under different names — is true and is why the register still prints
+each attestation's feast in its own calendar on the saint's page; it simply
+does not earn a second date under the strip.*
+
+Under the h1, one utility line: where the day stands in the paschal cycle, the tone of
 the week, and whether it is a fast for this church and why — computed from
 Pascha and the church's calendar (`lib/liturgy.js`), which is why two churches
 disagree about the same civil day. Fasting is stated as fast, fish permitted
