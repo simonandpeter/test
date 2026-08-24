@@ -752,6 +752,26 @@ does. Today's date stood under the theme control from 2026-08-21 until
 labels went with it, and the bar's vertical padding returns to what it was
 before the date arrived. No footer ceremony; About holds the editorial matter.
 Header collapses to a wrapping row at 360 px; no hamburger — four links fit.
+**The row's width is a budget, and it is nearly spent** (2026-08-24, after
+CI). `--font-utility` is the reader's own system stack, so this row is a
+different width on every machine: in Segoe UI it had 6 px of slack at the 72ch
+column, and in DejaVu Sans — a bare Linux runner's face — it was 20 px over
+and the nav wrapped, making the bar 76 px instead of 61. The gaps are
+`--space-4` and the two control boxes stand `--space-2` apart because that is
+what fits; the nav sits in the `1fr` column, so the slack the wider gaps used
+to hold simply stays inside the nav's column and nothing looks tighter.
+**A control added to this row costs the nav its line** — the language control
+in Amendment 36 is what spent the margin, and nobody saw it for two
+amendments because the desk that built it runs a narrower face. The quality
+floor now measures this row in a wide face on every machine.
+
+*Known and not fixed: in Russian, Greek and Serbian the desktop row does not
+fit one line at all* — the translated nav ("Сегодня · Все святые · Карта · О
+сайте") needs 65–75 px more than English, which is more than the whole gap
+budget. Those languages wrap to a second row, which is legible and overflows
+nothing; making them fit would mean shortening nav labels or moving a control,
+both the author's call, not a build's.
+
 *Superseded (author, 2026-08-24): narrow, the header is three rows rather
 than a wrapping one — the site name **centred across the top**, the language
 and theme toggles under it at the right, and the nav on the last line with

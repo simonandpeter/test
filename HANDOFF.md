@@ -79,6 +79,15 @@ them.
   running them (2026-08-24, the sitting of Amendments 34–38), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
+- **CI is the only place the header's width is honest** (2026-08-24). The
+  chrome's utility face is the reader's system stack, so the same row is a
+  different width on Windows (Segoe UI) and on the runner (DejaVu Sans), and
+  the desktop header wrapped there for two amendments while every local run
+  passed. Both the index foot (Amendment 24) and the header (Amendment 38)
+  now force a known face before asserting. **If you add anything to the
+  header row, the nav is what pays**: check the wide-face assertion, not the
+  look on your desk.
+
 - **Amendments 34–37 are pushed.** The author pushed 34 (`7b7b10d`) and then
   35–36 (`1df505b`) *mid-sitting* — the parallel-session pattern this file
   warns about, caught both times by fetching before committing rather than by
@@ -176,7 +185,13 @@ day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
   the gesso halo is gone, a drop shadow carries legibility over a picture.
   Five pre-existing test defects were found and fixed on the way; see the
   amendment for the `leaders()` helper and why DOM order stopped being screen
-  order.
+  order. **CI then caught a sixth**: the desktop header had been wrapping on
+  the runner since Amendment 36 put the language control in the corner —
+  76.13 px against a 64 px assertion, invisible on a Windows desk. Fixed by
+  tightening the row's gaps, and pinned by measuring the header in a forced
+  wide face on every machine. Russian, Greek and Serbian still wrap the
+  desktop row and cannot be made to fit at any gap; recorded in DESIGN.md §5
+  as the author's call.
 
 **Pushing happens outside this session** unless your own session has been
 given credentials — check before assuming otherwise. Agent sessions

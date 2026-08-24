@@ -1657,10 +1657,36 @@ test('the header carries no date, and the controls keep their places at both wid
    * calendar control drops to the nav's own line at its right end. So the
    * "one line" assertion is now the wide branch's alone, and the narrow
    * branch pins the arrangement that replaced it.
+   *
+   * **The wide branch is measured in a wide utility face**, Amendment 24's
+   * lesson applied to the header: `--font-utility` is the reader's own system
+   * stack, so the same row is a different width on every machine — Segoe UI on
+   * Windows, DejaVu Sans on a bare Linux runner. This row had 6 px of slack in
+   * Segoe and was 20 px over in DejaVu, so it held one line on the desk that
+   * built it and wrapped to 76 px in CI, unseen, from Amendment 36 (which put
+   * the language control in the corner) until CI said so at Amendment 38. The
+   * face is forced here, and the native one is printed to the run's log, so
+   * the assertion is one width on every machine and the runner still says in
+   * numbers what its own face costs.
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  const nativeHeight = await page.locator('header.chrome').evaluate((h) => {
+    // The nav, not the header: the header is set in the display serif and the
+    // face that decides this row's width is the utility one the nav wears.
+    const face = getComputedStyle(h.querySelector('.site-nav')).fontFamily.split(',')[0];
+    return `${h.getBoundingClientRect().height.toFixed(2)} px, utility face ${face}`;
+  });
+  console.log(`[header, native utility face] ${nativeHeight}`);
+  // DejaVu Sans is what a bare ubuntu runner has and is among the widest
+  // faces a reader will meet; Verdana is its Windows/macOS equivalent in
+  // width, and fontconfig aliases Verdana to DejaVu on Linux. Either way the
+  // header is measured against the widest realistic chrome, not the local one.
+  await page.addStyleTag({
+    content: ':root { --font-utility: "DejaVu Sans", Verdana, sans-serif !important; }',
+  });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
   await expect(page.locator('.chrome-today')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', /Switch to the (dark|light) theme/);
@@ -1690,7 +1716,7 @@ test('the header carries no date, and the controls keep their places at both wid
   if (m.wide) {
     expect(m.sameLine).toBe(true);
     expect(m.themeAfter).toBe(true);
-    expect(m.header).toBeLessThan(64);
+    expect(m.header, `the header wrapped in a wide utility face: ${m.header.toFixed(2)} px`).toBeLessThan(64);
   } else {
     expect(m.nameCentred).toBe(true);
     expect(m.nameAboveNav).toBe(true);
@@ -2446,6 +2472,14 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
   await expect(page.locator('[data-count]')).toHaveText('122');
+  // The order is pinned because the card this test opens has to be one that
+  // fits between the header and the fold, and card heights come from each
+  // icon's aspect ratio — under the Random default (2026-08-24) a deal that
+  // put a tall portrait across the whole 780 px viewport left no such card
+  // and the search came back empty. The subject here is what comes back
+  // after a trip into a saint, not which saints are on top.
+  await page.selectOption('[data-sort]', 'earliest');
+  await expect(page.locator('[data-count]')).toHaveText('122');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
 
@@ -2457,6 +2491,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
         const r = el.getBoundingClientRect();
         return r.top > 60 && r.bottom < innerHeight;
       });
+      if (!a) throw new Error('no card sits wholly between the header and the fold');
       a.click();
       return a.textContent;
     });

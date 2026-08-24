@@ -1860,6 +1860,43 @@ guard, the swipe threshold, the halo's return, the text-link register, the
 narrow header grid, and the shelf's keyboard route. Both suites green at the
 close.
 
+**And then CI failed, which is the part worth reading.** The desktop header
+came back 76.13 px against a 64 px assertion — on a Linux runner, where
+`--font-utility` resolves to DejaVu Sans rather than the Segoe UI this desk
+draws it in. Measured rather than guessed at: the row's fixed parts (name,
+calendar control, language control, theme toggle) leave the nav 212.9 px of
+need against 192.6 px of column in that face. **The failure was not new.**
+Rebuilding the *previous* commit's header and measuring it the same way gave
+the same 76.13 px: the row ran out of width when Amendment 36 put the language
+control in the corner, and CI had been red about it for two amendments while
+every local run stayed green. This amendment's four-column header deepened it
+by 16 px — a full column gap where the two control boxes had been `--space-2`
+apart inside one flex box — but did not cause it.
+
+The fix is 24 px of gap the row was not using well: `--space-4` between the
+header's parts, `--space-2` between the two control boxes (the gap they had
+when they were one), which puts English at 11.8 px of slack in DejaVu and
+38 px in Segoe, and costs nothing visible because the nav's `1fr` column
+absorbed that slack either way. **The guard matters more than the fix**: the
+test now forces the wide face and asserts against it, and prints the runner's
+native measurement to the log — Amendment 24's own remedy for exactly this
+class of bug, applied to the header two amendments after it should have been.
+Backed out (the old gaps restored), watched fail at 76.13 px — CI's number to
+the hundredth — and restored.
+
+*Recorded and not fixed:* in Russian, Greek and Serbian the desktop row cannot
+hold one line at any gap — the translated nav needs 65–75 px more than English,
+more than the entire gap budget — so those languages wrap to a second row.
+Legible, overflows nothing, and the remedy (shorter nav labels, or a control
+that leaves the row) is the author's call.
+
+*A second flake the Random default had planted:* the back-navigation test
+opens whichever card sits wholly between the header and the fold, and card
+heights come from each icon's aspect ratio — a deal that put a tall portrait
+across the whole 780 px viewport left no such card. Order pinned for that
+test, and the search now says what went wrong instead of dying on an undefined
+click. Two full suites run back to back to shake out the rest; both clean.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

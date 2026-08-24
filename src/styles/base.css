@@ -204,7 +204,14 @@ header.chrome {
     'theme theme'
     'nav cal';
   align-items: center;
-  column-gap: var(--space-6);
+  /* space-4, not space-6 (2026-08-24, after CI): the header is one row of
+     five things now — name, four nav links, calendar, language, theme — and
+     in a wide utility face (DejaVu Sans on a bare Linux runner, where Segoe
+     UI is not) the row was 20 px over its 72ch column and the nav wrapped,
+     making the bar 76 px where §5 wants 61. The nav sits in the 1fr column,
+     so on a roomy desk this costs nothing visible — the slack it used to
+     spend on the gap simply stays inside the nav's own column. */
+  column-gap: var(--space-4);
   row-gap: var(--space-2);
   /* 16/12 again: it was trimmed to 8/8 while today's date stood in the corner
      (2026-08-21 to 2026-08-22) and the corner is one line once more. */
@@ -254,6 +261,16 @@ header.chrome .chrome-calendar {
   justify-self: end;
   display: flex;
   align-items: center;
+}
+
+/* Wide, the calendar control and the toggles are two grid columns but read as
+   the one corner they were until 2026-08-24, so they stand space-2 apart —
+   the gap they had inside that single flex box — rather than a full column
+   gap. Without this the split alone cost the row 8 px it does not have. */
+@media (min-width: 560px) {
+  header.chrome .chrome-corner {
+    margin-inline-start: calc(var(--space-2) - var(--space-4));
+  }
 }
 
 /* The calendar control (author, 2026-08-22): names the church the site reads
