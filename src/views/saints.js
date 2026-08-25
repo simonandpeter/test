@@ -36,7 +36,7 @@ import {
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
-import { churchName, currentChurch, keptBy, subscribeChurch } from '../lib/church.js';
+import { chosenChurch, churchName, keptBy, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { dateFormatter, formatDate, languageTag } from '../lib/i18n.js';
 
@@ -635,7 +635,11 @@ function update({ animate }) {
   // church's calendar is not on the grid, and what that sets aside is counted
   // and named under the count rather than silently dropped. The search and
   // the facets apply within what remains. No church chosen yet keeps all.
-  const church = currentChurch();
+  // `chosenChurch`, not `currentChurch` (2026-08-26): a *guess* from the
+  // browser's language must not set part of the corpus aside here. lib/church.js
+  // argues the split; the Daily page is the one page that cannot open without a
+  // calendar, and it is the one page that reads the guess.
+  const church = chosenChurch();
   const mine = cards.filter((card) => keptBy(card, church));
   const asideNote = el.querySelector('[data-set-aside]');
   // "122/708 saints venerated in the Romanian calendar" (author, 2026-08-25).

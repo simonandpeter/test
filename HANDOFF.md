@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 45)
+## State as of 2026-08-26 (Amendment 46)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,9 +74,9 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 145 unit tests (`npm test`) — pure logic, no DOM.
-- 364 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 45), not carried
+- 163 unit tests (`npm test`) — pure logic, no DOM.
+- 376 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 46), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,8 +101,46 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
-  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43, 44 and
-  45 are committed on top. The author pushes.*
+  *Amendments 40–44 are on the remote (`f6aaa2e`, `cf8a3e1`, `8e6c197`,
+  `0e88192`, `55a0ffc`); 45 (`24dd14d`) and 46 are committed on top. The author
+  pushes.*
+
+### What Amendment 46 changed about how the site behaves (2026-08-26)
+
+Sixteen instructions in one message; SESSIONS.md has the whole of it. Four
+things here because they change assumptions the rest of this file rests on:
+
+* **There is no first-visit gate.** The calendar no longer asks which church
+  before showing anything. `defaultChurch()` guesses from the reader's browser
+  language and **never writes it**, two coachmarks point at the header's two
+  controls, and `hasChosen()` still means "the reader has answered". Anything
+  written against `[data-ask]`, `[data-gate]` or `[data-cal-body]` is gone.
+* **`currentChurch()` and `chosenChurch()` are different questions.** The first
+  always answers (the guess included) and is the Daily page's; the second is
+  null until the reader chooses and is the Index's, the saint page's and the
+  map's. Reach for `chosenChurch` unless the thing genuinely cannot exist
+  without a calendar. Getting this wrong filtered All Saints down to 426 of 742
+  on a first visit, and eleven browser tests said so.
+* **The day's hero and its register sit on the ground.** No `.panel`, and no
+  hairline either — the hairline broke 2026-08-24's "one company, not a ruled
+  ledger". The shelves keep their panel on purpose: "genuinely secondary
+  things" is the author's own scoping.
+* **Gold is spent again**, on the week strip's feast marker (a finding, sourced
+  from the day's own hymns) and on a hairline under the date heading (an accent,
+  admitted as such). DESIGN.md §2 carries the argument.
+
+Two audit scripts came out of the round and are worth knowing about:
+
+    node scripts/locale-coverage.mjs    which strings each pack falls back to
+                                        English for. All four are 288 of 288
+                                        as of 2026-08-26; a new key in
+                                        ui/strings.js shows up here first.
+    node scripts/cross-link-audit.mjs   every link the automatic cross-linker
+                                        would make across all 742 lives. Run it
+                                        whenever the corpus grows or a rule in
+                                        lib/cross-link.js is loosened, and
+                                        *read the list*: a wrong link says two
+                                        people are one person.
 
 **Day records as of 2026-08-26: 144 days**, 23 August 2026 – 13 January 2027,
 russian and romanian throughout, greek and serbian for the first four weeks
@@ -606,6 +644,30 @@ up cold; the two the author has to decide are marked.
   lives, the affordable shape remains citation, not translation: the source
   text already exists in that language at the cited URL for most of the
   corpus.
+
+  *Asked for outright at Amendment 46* ("The saint profile pages do not have
+  russian, greek, serbian or romanian translations. We need to add them") and
+  answered as far as it honestly can be. Everything on that page that is the
+  **site's own words** now translates — three real defects were found and fixed
+  doing it, see Amendment 46 — and the reader is told, once and in their own
+  language, that the life itself is English. **The 742 lives are still English
+  and this build will not translate them**: machine translation is Amendment 2's
+  invented content, and a mistranslated clause in a hagiography is a false claim
+  about a person and about a source the entry cites by name. Two shapes remain
+  affordable if the author wants more: linking each attestation's cited source,
+  which is already in that language, and the same for the `note` fields, which
+  are the site's prose sitting in the data rather than in the packs (742 x 4
+  rows, template-generated, so translatable by pattern rather than by hand).
+
+- **`saints.keptAll` is dead in all five packs.** views/saints.js hides the
+  count line rather than printing the whole-corpus wording, and has since before
+  Amendment 46. Harmless; noted so the next person to grep for it does not go
+  looking for the caller.
+
+- **One icon is a scanned page rather than a picture** (Amendment 46).
+  `sozon-of-pompeiopolis/images/icon.jpg` is 555x1707 and mostly margin, so the
+  hero's 3:2 top crop shows the paper and not the saint. The ratio is right and
+  the file is wrong; cropping it is a data fix, not a CSS one.
 
 **The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
 phases, both built. Phase 1 — the Index's *Detailed* option, the bookmark that

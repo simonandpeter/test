@@ -49,6 +49,11 @@ export const el = {
     dayWithoutSaints: 'Τα αναγνώσματα και οι ύμνοι πιο κάτω είναι της ημέρας αυτής, από το εορτολόγιο. Οι άγιοί της δεν έχουν ακόμη φακέλους - το σώμα φτάνει ως τις 19 Σεπτεμβρίου και μεγαλώνει φάκελο-φάκελο. Τίποτα εδώ δεν λέει ότι η ημέρα είναι κενή.',
     heroIn: 'Ημερολόγιο: {church}',
     densityLabel: '{count} μνήμες',
+    marks: {
+      fast: 'νηστεία',
+      fish: 'νηστεία, επιτρέπεται το ψάρι',
+      feast: 'εορτή',
+    },
     openSaint: 'Διαβάστε για τον/την {name}',
     fastModal: {
       open: 'Τι επιτρέπει αυτή η νηστεία',
@@ -140,6 +145,7 @@ export const el = {
       epistle: 'Απόστολος',
       gospel: 'Ευαγγέλιο',
     },
+    nameDays: { heading: 'Ονομαστικές εορτές' },
     hymns: {
       heading: 'Ύμνοι',
       troparion: 'Απολυτίκιο',
@@ -164,6 +170,7 @@ export const el = {
     heading: 'Ποιο ημερολόγιο κρατάτε;',
     groupLabel: 'Εκκλησίες',
     calendarOf: { julian: 'Ιουλιανό ημερολόγιο', 'revised-julian': 'Διορθωμένο ιουλιανό ημερολόγιο' },
+    calendarNames: { julian: 'Ιουλιανό', 'revised-julian': 'Νέο Ιουλιανό' },
     names: { russian: 'Ρωσική', romanian: 'Ρουμανική', greek: 'Ελλαδική', serbian: 'Σερβική' },
   },
 
@@ -173,6 +180,12 @@ export const el = {
     showingLabel: '{name} - αλλάξτε τη γλώσσα του ιστότοπου',
     heading: 'Σε ποια γλώσσα;',
     groupLabel: 'Γλώσσες',
+  },
+
+  coach: {
+      church: 'Η Εκκλησία και το ημερολόγιό σας',
+      language: 'Η γλώσσα σας',
+      dismiss: 'Κλείσιμο',
   },
 
   dates: {
@@ -207,6 +220,7 @@ export const el = {
       deacon: 'Διάκονος',
       'new-martyr': 'Νεομάρτυς',
       patriarch: 'Πατριάρχης',
+      'patriarch-of-israel': 'Προπάτορας',
       prince: 'Πρίγκιπας',
       apostle: 'Απόστολος',
       metropolitan: 'Μητροπολίτης',
@@ -215,6 +229,7 @@ export const el = {
       prophet: 'Προφήτης',
       'fool-for-christ': 'Διά Χριστόν σαλός',
       monk: 'Μοναχός',
+      monastic: 'Μοναστικός',
       theologian: 'Θεολόγος',
       king: 'Βασιλεύς',
       soldier: 'Στρατιώτης',
@@ -229,6 +244,7 @@ export const el = {
       preacher: 'Κήρυκας',
       forerunner: 'Πρόδρομος',
       ascetic: 'Ασκητής',
+      'passion-bearer': 'Παθοφόρος',
       hymnographer: 'Υμνογράφος',
       queen: 'Βασίλισσα',
       'equal-to-the-apostles': 'Ισαπόστολος',
@@ -307,6 +323,14 @@ export const el = {
     statusUndocumented: 'Ατεκμηρίωτο',
     undocumentedNote: 'Χωρίς πηγές προς καμία κατεύθυνση. Η απουσία στοιχείων δεν είναι απουσία τιμής.',
     refusedNote: 'Θετικό εύρημα: η εκκλησία αυτή έχει ορίσει ότι δεν τιμά το πρόσωπο αυτό.',
+    feastIn: {
+      dayMonth: '{day} {month}',
+      inCalendar: '{feast} ({calendar} ημερολόγιο)',
+      pascha: 'Πάσχα',
+      afterPascha: '{n} ημέρες μετά το Πάσχα',
+      beforePascha: '{n} ημέρες πριν από το Πάσχα',
+    },
+    lifeInEnglish: 'Ο βίος είναι γραμμένος στα αγγλικά και δεν έχει μεταφραστεί ακόμη.',
     feastThisYear: '{feast} - φέτος πέφτει στις {gregorian}',
     feastNoOccurrence: '{feast} - δεν πέφτει το {year}',
     noFeast: 'Ημέρα μνήμης δεν έχει καταγραφεί.',

@@ -52,6 +52,11 @@ export const ru = {
     dayWithoutSaints: 'Чтения и песнопения ниже - этого дня, взятые из календаря. Памяти его пока не записаны папками: корпус доходит до 19 сентября и растёт папка за папкой. Это не утверждение, что день пуст.',
     heroIn: 'Календарь: {church}',
     densityLabel: 'Памятей: {count}',
+    marks: {
+      fast: 'пост',
+      fish: 'пост, разрешается рыба',
+      feast: 'праздник',
+    },
     openSaint: 'Читать о {name}',
     fastModal: {
       open: 'Что разрешается в этот пост',
@@ -143,6 +148,7 @@ export const ru = {
       epistle: 'Апостол',
       gospel: 'Евангелие',
     },
+    nameDays: { heading: 'Именины' },
     hymns: {
       heading: 'Песнопения',
       troparion: 'Тропарь',
@@ -167,6 +173,7 @@ export const ru = {
     heading: 'По какому календарю вы живёте?',
     groupLabel: 'Церкви',
     calendarOf: { julian: 'Юлианский календарь', 'revised-julian': 'Новоюлианский календарь' },
+    calendarNames: { julian: 'юлианский', 'revised-julian': 'новоюлианский' },
     // The adjective alone — «Русская», the church understood — because the
     // full «Русская церковь» put the 360 px header 6 px over its width.
     names: { russian: 'Русская', romanian: 'Румынская', greek: 'Греческая', serbian: 'Сербская' },
@@ -178,6 +185,12 @@ export const ru = {
     showingLabel: '{name} - сменить язык сайта',
     heading: 'На каком языке?',
     groupLabel: 'Языки',
+  },
+
+  coach: {
+      church: 'Ваша Церковь и календарь',
+      language: 'Ваш язык',
+      dismiss: 'Закрыть',
   },
 
   dates: {
@@ -213,6 +226,7 @@ export const ru = {
       deacon: 'Диакон',
       'new-martyr': 'Новомученик',
       patriarch: 'Патриарх',
+      'patriarch-of-israel': 'Праотец',
       prince: 'Князь',
       apostle: 'Апостол',
       metropolitan: 'Митрополит',
@@ -221,6 +235,7 @@ export const ru = {
       prophet: 'Пророк',
       'fool-for-christ': 'Юродивый',
       monk: 'Монах',
+      monastic: 'Монашествующий',
       theologian: 'Богослов',
       king: 'Царь',
       soldier: 'Воин',
@@ -314,6 +329,14 @@ export const ru = {
     statusUndocumented: 'Не задокументировано',
     undocumentedNote: 'Источников нет ни в ту, ни в другую сторону. Отсутствие данных - не отсутствие почитания.',
     refusedNote: 'Положительный вывод: эта церковь установила, что не почитает эту фигуру.',
+    feastIn: {
+      dayMonth: '{day} {month}',
+      inCalendar: '{feast} ({calendar} календарь)',
+      pascha: 'Пасха',
+      afterPascha: '{n}-й день по Пасхе',
+      beforePascha: '{n}-й день до Пасхи',
+    },
+    lifeInEnglish: 'Житие написано по-английски и пока не переведено.',
     feastThisYear: '{feast} - в этом году {gregorian}',
     feastNoOccurrence: '{feast} - в {year} году не выпадает',
     noFeast: 'День памяти не записан.',

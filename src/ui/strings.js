@@ -63,6 +63,14 @@ export const STRINGS = {
     heroIn: 'In the {church}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
+    /* The two dots under a date on the week strip (author, 2026-08-26). They
+       are what a screen reader is given in place of the dots, so each says
+       the whole fact rather than naming a colour. */
+    marks: {
+      fast: 'a fast',
+      fish: 'a fast, fish permitted',
+      feast: 'a feast',
+    },
     // Under the date (author, 2026-08-22): where the day stands in the
     // paschal cycle, the tone, and whether it is a fast — lib/liturgy.js.
     /**
@@ -215,6 +223,16 @@ export const STRINGS = {
       epistle: 'Epistle',
       gospel: 'Gospel',
     },
+    /*
+     * Whose name day it is (author, 2026-08-26: "add name days"). A heading
+     * and nothing else: the names under it are the day's own saints read a
+     * second way, and a sentence explaining that would be the furniture
+     * DESIGN.md §5b refuses. What the site will not say is who *should*
+     * celebrate on which day — usage differs between the four churches and
+     * between families inside them, and lib/name-days.js states the day's
+     * names rather than anyone's obligation.
+     */
+    nameDays: { heading: 'Name days' },
     // The hymns of the day's saint or feast, in the chosen church's language,
     // copied whole from the cited source (author, 2026-08-22).
     hymns: {
@@ -261,6 +279,12 @@ export const STRINGS = {
     heading: 'Which calendar do you keep?',
     groupLabel: 'Churches',
     calendarOf: { julian: 'Julian calendar', 'revised-julian': 'Revised Julian calendar' },
+    /* The same two calendars, named rather than described: `calendarOf` reads
+       under a church's name in the chooser ("Julian calendar"), and this reads
+       inside the brackets after a feast's date ("17 January (Julian)"). Two
+       keys because Romanian and Russian do not put the same word in both
+       places, and one of them would have had to be wrong. */
+    calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian' },
     // The churches by id, here rather than only in data/churches.js, so the
     // locale packs can translate them (Amendment 36): the registry stays the
     // authority on what exists, this is the authority on what it is called.
@@ -278,6 +302,19 @@ export const STRINGS = {
     showingLabel: '{name} - change the site’s language',
     heading: 'In which language?',
     groupLabel: 'Languages',
+  },
+
+  /*
+   * The two marks a first visit meets (author, 2026-08-26, replacing the
+   * first-visit gate — ui/coachmark.js): "Text as minimal as possible."
+   * Four or five words each, naming the thing the button changes rather than
+   * describing the button. They sit *under* the control they point at, with an
+   * arrow on it, so neither has to say "here" twice.
+   */
+  coach: {
+    church: 'Your church and calendar',
+    language: 'Your language',
+    dismiss: 'Dismiss',
   },
 
   dates: {
@@ -465,6 +502,27 @@ export const STRINGS = {
     refusedNote: 'A positive finding: this church has established that it does not venerate this figure.',
     // The Gregorian date carries its own year; saying it twice read as a stutter
     // ("30 January 2026 in 2026") until 2026-08-22.
+    /*
+     * A feast in its own reckoning (data/calendars.js), in the reader's
+     * language since 2026-08-26. The month name comes from Intl; these are the
+     * words around it, and each pack sets its own order — Romanian and Greek
+     * put a preposition between the day and the month, Russian and Serbian
+     * decline the month into the genitive, which Intl already gives them.
+     */
+    feastIn: {
+      dayMonth: '{day} {month}',
+      inCalendar: '{feast} ({calendar})',
+      pascha: 'Pascha',
+      afterPascha: '{n} days after Pascha',
+      beforePascha: '{n} days before Pascha',
+    },
+    // The life is the author's own paraphrase in English and is not
+    // translated — Amendment 2 forbids the machine translation that would be
+    // the only way to do it at this scale, and a mistranslated hagiography is
+    // a false claim about a person. So a reader in one of the other four is
+    // told, once, in their own language, rather than left to wonder whether
+    // the page is broken.
+    lifeInEnglish: 'This life is written in English and has not been translated.',
     feastThisYear: '{feast}, which falls on {gregorian}',
     feastNoOccurrence: '{feast}, which has no occurrence in {year}',
     noFeast: 'No feast day recorded.',

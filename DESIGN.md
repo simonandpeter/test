@@ -121,6 +121,30 @@ badge, errors are still ink, and no *other* category anywhere on the site may
 take a colour of its own by citing this entry. The fast earned it by being the
 one datum a reader scans for daily and acts on the same morning.
 
+**Amended again 2026-08-26 (author): gold is spent, on two marks, and both are
+findings.** "Gold is almost unused. Your design rules reserved it, and the
+favicon spends it. One gold hairline under the date heading, or gold for the
+feast-day marker on the week strip, would give the page the one warm accent
+it's missing." Both were built, and the pair is deliberate:
+
+* **the feast marker on the week strip** — a dot under a date whose own record
+  carries the day's hymns, which is the rank cross that calendar printed. That
+  is a finding about the day, sourced, and it is the nearest thing this site
+  has to what the veneration badge was for. Gold is doing the work §2 reserved
+  it for, on a different datum.
+* **a short hairline under the date heading** — which is *not* a finding, and
+  is the concession. It is 2.5 em of 1 px rule under one heading on one page:
+  a warm accent, admitted as such rather than dressed up as a claim. If the
+  rule "gold carries a finding and nothing else" is ever wanted back whole,
+  this is the line to remove.
+
+A third mark takes gold at one remove: the coachmarks' border and glow (§5b),
+which is chrome shown once on a first visit and gone. It is named here so the
+tokens.css audit finds three users of `--gold` and not one.
+
+The greyscale test still holds on both: the feast dot is named in the day
+button's accessible label, and the hairline says nothing at all.
+
 ## 3. Colour tokens
 
 Six named colours, all drawn from the materials of panel and book. Every colour
@@ -345,9 +369,9 @@ date is set in `--rubric` — the red-letter day, literally.
 
 The habit page, so its shape is specified here rather than improvised.
 
-**The hero.** The day opens on one saint, large: image in a square box
-(author, 2026-08-21 — it took the manifest's aspect until then; see "the hero
-image is a square" below),
+**The hero.** The day opens on one saint, large: image in a fixed box
+(author, 2026-08-21 — it took the manifest's aspect until then; a square from
+then until 2026-08-26 and a 3:2 band since, see "the hero image" below),
 name in display voice at h1 scale, the badge immediately to the right of the
 name (§7), then that day's other commemorations as a register below.
 *Superseded for the register (author, 2026-08-24): "display the saint card row
@@ -726,6 +750,41 @@ no (advanced), no plate. Asked once; a reader who scrolls past has chosen
 nothing and is asked again; the header changes it afterwards. The fold
 exception stands.*
 
+*Superseded outright (author, 2026-08-26): **the question is not asked.***
+"Replace the language and calendar pop-ups on first opening with a fade-in
+glowing tool tip with an arrow pointing to each of the two buttons, explaining
+you can select your church from here, and language from here. Text as minimal as
+possible."
+
+What the gate was for was not decoration and is worth restating: a calendar with
+no church chosen is the site picking one and not saying so, which is why the
+page below waited. That argument is **answered rather than dropped**, on three
+legs:
+
+1. the guess is `defaultChurch()` — the reader's own browser language, the only
+   thing about them this site knows and does not ask for, falling through to
+   Russian, which is a corpus fact (426 of 742 folders, day records running
+   furthest) and not a preference;
+2. it is **never written to settings**, so `hasChosen()` still means "the reader
+   has answered", the marks return next visit, and nothing downstream mistakes a
+   guess for a choice;
+3. the header has **named the church on every page since 2026-08-24** — the
+   control that did not exist when the gate was designed — and a mark under it
+   says which control changes it.
+
+The guess is confined to the one page that cannot open without a calendar. The
+Index still keeps the whole corpus until the reader has chosen, a saint's page
+still shows all four churches, and the map still counts as the Index does
+(`chosenChurch`, lib/church.js). A guess is allowed to *show* a calendar; it is
+not allowed to set 316 saints aside.
+
+**The fold exception goes with it**, and that is the stronger claim: a first
+visit now gets the day *and* is told where the two controls are, and the saint's
+own name clears the fold on that visit as on every other. The marks fade in,
+glow twice in `--gold`, and leave by any of four doors — the ×, a swipe on a
+touch screen, the second scroll input either way, or opening the control they
+point at.
+
 **One calendar at a time** (author, 2026-08-22, Addendum H8). The calendar
 page shows a single church's calendar — never two traditions interleaved,
 never one saint listed twice because two churches keep him on the same day
@@ -766,7 +825,7 @@ whole sentence.
 
 The strip and the grid stay in the civil calendar the URL is in.
 
-**The hero image is a square** (author, 2026-08-21), cropped from the centre
+**The hero image** (author, 2026-08-21) is a fixed box, cropped from the centre
 across and hard against the top, so what a tall icon loses is its lower half
 rather than the face. On the habit page every day's saint is asked to sit in
 the same box: an icon three times as tall as it is wide spends the fold on a
@@ -777,6 +836,19 @@ square is as structural a guarantee against layout shift as a measured ratio
 was — and the blurred placeholder is anchored the same way, or it paints a
 differently-framed image under the one arriving.
 
+*Superseded (author, 2026-08-26): **a 3:2 band**, not a square.* "Change the
+daily saint image crop from square to a horizontal rectangle, focusing on the
+top third of the image where the saint's face is most likely to be. This is to
+reduce the height of the card to show more of what's below in the also
+commemorated section." Everything above holds except the number: one box for
+every day's saint, reserved before the image decodes, anchored to the top so
+what a tall icon loses is its lower half. A 3:2 shows a square source's top two
+thirds and is a third of the height back, which is what the register below it
+gains. One case it does not serve, and it is worth writing down rather than
+discovering twice: a *whole scanned page* — Sozon of Pompeiopolis's icon is
+555x1707, mostly margin — has its figure below any sensible top crop. That is a
+fault in the image, not in the ratio, and the fix is to crop the file.
+
 **The hero image takes 85% of the width it took** (author, 2026-08-21) — the
 column narrows from 260 to 221 where the panel gives the image a column, and
 the image narrows within the panel where it does not. A tall icon at full width
@@ -784,6 +856,39 @@ was pushing the saint's own name below the fold at 360 px, which is the one
 thing a hero cannot do. The reduction is applied **once**, in whichever place
 actually holds the box: applying it in both took 15% twice. Where the image
 does not fill its container it is centred in it.
+
+*Superseded (2026-08-26) on the narrow layout, where the 15% was.* Both halves
+of it were bought by the square: the reduction kept a tall icon's name above the
+fold, and the 3:2 band does that on its own — Anthony at 360 px now clears it by
+a third of a screen. The centring was a frame's habit, and with the panel gone
+(below) an inset picture over a full-measure name reads as a mistake rather than
+as a margin. The wide layout is untouched: the 221 px track was the *column's*
+measurement and the image still fills it.
+
+**The day's saint sits on the ground, with no panel** (author, 2026-08-26):
+"Too many boxes. Language panel, day card, each commemorated saint, filters —
+all outlined and inset. Let the main saint sit directly on the ground with the
+icon as the strongest element, and keep the recessed panel for genuinely
+secondary things."
+
+This is a real exception to §4's card, and it is scoped: the hero and the *Also
+commemorated* rows come off `--field` and lose their border; the shelves keep
+theirs, because Continue reading and Saved are exactly the "genuinely secondary
+things" the instruction names. A bordered box around a bordered icon was two
+frames arguing, and the gesso ground behind an icon is the wall a panel hangs
+on.
+
+What replaces the register rows' edge is **nothing** — not a hairline. That was
+the obvious substitute and it stood for one build, until the browser suite
+caught it against the older instruction it breaks: on 2026-08-24 the author
+asked that Also commemorated "read as one company, not a ruled ledger". Frames
+and rules are the same answer to the same question. Space separates the rows;
+the row lighting under the pointer says it is a target.
+
+It also settles a margin the author had to ask about twice in one day — first
+"move the bottom edge of the card higher" (Amendment 45), then "the margin on
+the bottom of the Daily saint card is still too much" in the round after it.
+With no frame there is no foot.
 
 **The image opens the saint**, like the name beside it. It is hidden from the
 accessibility tree and out of the tab order on purpose — the name already links
@@ -806,6 +911,19 @@ deliberate rather than an oversight: a reader who cannot glance at the
 register has no other way to learn a day's weight before opening it, and the
 number is the day's own rather than a description of a mark that no longer
 exists.
+
+*Two marks return on 2026-08-26, and they are not those dots* (author: "Dots on
+the week strip for fast and feast days would let someone plan the week at a
+glance"). The distinction is the whole justification: the density dot said a day
+was **busy**, which is a fact about our corpus; these say a day is a **fast** or
+a **feast**, which are facts about the calendar that a reader plans a week
+around. Each has a source — the fast from `lib/liturgy.js` in that church's own
+reckoning, the feast from the day's record carrying hymns, which is the rank
+cross the calendar itself printed. A fast-free day carries none, which is what
+makes a run of them legible. Week strip only, where a week is planned; the month
+is unchanged. Both are named in the day button's accessible label, because a dot
+says nothing to a screen reader and colour says nothing to a reader who cannot
+separate hues.
 
 **An empty day is a designed state, not a fallback** (this holds for every
 tray and gap in the product — the undated tray, the unlocated tray, an

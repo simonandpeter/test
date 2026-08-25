@@ -49,6 +49,11 @@ export const sr = {
     dayWithoutSaints: 'Читања и песме испод су овог дана, узети из календара. Његови светитељи још немају фасцикле - корпус досеже до 19. септембра и расте фасциклу по фасциклу. Ништа овде не тврди да је дан празан.',
     heroIn: 'Календар: {church}',
     densityLabel: 'Помена: {count}',
+    marks: {
+      fast: 'пост',
+      fish: 'пост, дозвољена риба',
+      feast: 'празник',
+    },
     openSaint: 'Читајте о {name}',
     fastModal: {
       open: 'Шта овај пост дозвољава',
@@ -140,6 +145,7 @@ export const sr = {
       epistle: 'Апостол',
       gospel: 'Јеванђеље',
     },
+    nameDays: { heading: 'Имендани' },
     hymns: {
       heading: 'Песме',
       troparion: 'Тропар',
@@ -164,6 +170,7 @@ export const sr = {
     heading: 'Који календар држите?',
     groupLabel: 'Цркве',
     calendarOf: { julian: 'Јулијански календар', 'revised-julian': 'Новојулијански календар' },
+    calendarNames: { julian: 'јулијански', 'revised-julian': 'новојулијански' },
     names: { russian: 'Руска', romanian: 'Румунска', greek: 'Грчка', serbian: 'Српска' },
   },
 
@@ -173,6 +180,12 @@ export const sr = {
     showingLabel: '{name} - промените језик сајта',
     heading: 'На ком језику?',
     groupLabel: 'Језици',
+  },
+
+  coach: {
+      church: 'Ваша Црква и календар',
+      language: 'Ваш језик',
+      dismiss: 'Затвори',
   },
 
   dates: {
@@ -207,6 +220,7 @@ export const sr = {
       deacon: 'Ђакон',
       'new-martyr': 'Новомученик',
       patriarch: 'Патријарх',
+      'patriarch-of-israel': 'Праотац',
       prince: 'Кнез',
       apostle: 'Апостол',
       metropolitan: 'Митрополит',
@@ -215,6 +229,7 @@ export const sr = {
       prophet: 'Пророк',
       'fool-for-christ': 'Јуродиви',
       monk: 'Монах',
+      monastic: 'Монашки',
       theologian: 'Богослов',
       king: 'Краљ',
       soldier: 'Војник',
@@ -308,6 +323,14 @@ export const sr = {
     statusUndocumented: 'Недокументовано',
     undocumentedNote: 'Без извора ни у једном смеру. Одсуство података није одсуство поштовања.',
     refusedNote: 'Позитиван налаз: ова црква је утврдила да не поштује ову личност.',
+    feastIn: {
+      dayMonth: '{day} {month}',
+      inCalendar: '{feast} ({calendar} календар)',
+      pascha: 'Васкрс',
+      afterPascha: '{n}. дан по Васкрсу',
+      beforePascha: '{n}. дан пре Васкрса',
+    },
+    lifeInEnglish: 'Житије је написано на енглеском и још није преведено.',
     feastThisYear: '{feast} - ове године пада {gregorian}',
     feastNoOccurrence: '{feast} - не пада у {year}. години',
     noFeast: 'Дан помена није записан.',

@@ -22,7 +22,7 @@ import {
   weekOf,
 } from '../lib/calendar-page.js';
 import { loadDetail, observePrefetch } from '../lib/detail.js';
-import { chooseChurch, churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
+import { churchName, currentChurch, entriesInChurch, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
 import { saintName } from '../lib/honorific.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -31,12 +31,10 @@ import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { hymnMarkup } from '../ui/hymns.js';
-import { renderChooser } from '../ui/church-chooser.js';
-import { renderLanguageChooser } from '../ui/language-chooser.js';
-import { flyInto } from '../ui/fly.js';
 import { liturgicalDay } from '../lib/liturgy.js';
-import { chooseLanguage, currentLanguage, formatDate, hasChosenLanguage, translateReason } from '../lib/i18n.js';
+import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
 import { recordedDay } from '../data/liturgical-days.js';
+import { nameDays } from '../lib/name-days.js';
 import { gradeForDay } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
 import { bibleUrl, refInLanguage } from '../lib/bible.js';
@@ -134,8 +132,7 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = `
     <div class="cal">
-      <div class="cal-gate" data-gate></div>
-      <div class="cal-body" data-cal-body>
+      <div class="cal-body">
         <div class="cal-controls">
           <div class="cal-jump">
             <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
@@ -179,8 +176,6 @@ export function render(el, { data, params, router }) {
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
-
-  wireAsk();
 
   // The header's control can change the church while this page is open: the
   // question goes once it has been answered, and everything that counts
@@ -384,18 +379,41 @@ function paintLiturgy() {
   // The fast is a control (author, 2026-08-25): it opens a bubble saying what
   // this day allows and nothing else. A button rather than a span, so it is
   // reachable by keyboard and announced as something that does a thing.
+  //
+  // **A chip since 2026-08-26** (author: "Fasting is the number-one daily
+  // question and it's currently the quietest element … Make it a chip at the
+  // top of the day — coloured with your fast-strict/fish/free tokens — and
+  // print the allowance inline on fast days"). The change is one of weight,
+  // not of claim: the same words, the same three colours, the same grade read
+  // off the same printed note. What moves is that the fast now leads the line
+  // instead of trailing two facts nobody came for, and that the allowance is
+  // printed rather than kept behind the (i).
   const fastHtml =
-    `<button type="button" class="fast fast-${esc(f.kind)}" data-fast="${esc(f.kind)}" data-fast-open ` +
+    `<button type="button" class="fast fast-chip fast-${esc(f.kind)}" data-fast="${esc(f.kind)}" data-fast-open ` +
     `data-grade="${esc(grade ?? '')}" aria-expanded="false" ` +
     `aria-haspopup="dialog" title="${esc(M.hint)}">${esc(fastText)}` +
     `<span class="fast-info" aria-hidden="true">i</span>` +
     `<span class="sr-only"> - ${esc(M.open)}</span></button>`;
+  /*
+   * What the day allows, beside the chip rather than behind it. Only on a
+   * fast: "Nothing is set aside" under a chip that already reads "No fast" is
+   * the same sentence twice. Where the calendar printed no allowance the
+   * `unstated` line stands — meat, dairy and eggs — which is what every fast
+   * shares and the most the site will say unasked.
+   */
+  const allowance = isFast ? (grade ? M.allows[grade] : M.unstated) : null;
+  const allowanceHtml = allowance ? `<span class="fast-allowance">${esc(allowance)}</span>` : '';
   // The cycle line follows the language too (author, 2026-08-26): lib/liturgy.js
   // hands out which day of the cycle it is, ui/cycle-name.js gives it words.
   const plain = [cycleName(day.cycle, selected), day.tone ? fill(L.tone, { tone: day.tone }) : null]
     .filter(Boolean)
     .map(esc);
-  box.innerHTML = [...plain, fastHtml].join(' · ');
+  // Newline-separated so the three read as three when the line is taken as
+  // text — a screen reader, a browser test — rather than running the chip's
+  // last word into the allowance's first. The flex row collapses it to a gap.
+  box.innerHTML = [fastHtml, allowanceHtml, plain.length ? `<span class="cal-cycle">${plain.join(' · ')}</span>` : '']
+    .filter(Boolean)
+    .join('\n');
 }
 
 /**
@@ -702,90 +720,31 @@ const stepCursor = (c, n) => ({
   month: ((c.month + n - 1 + 12) % 12) + 1,
 });
 
-/* ---- the question a first visit is asked, and the way to change it ------- */
+/* ---- the calendar the page reads --------------------------------------- */
 
 /**
- * Asked once, on the calendar, because the calendar is what the answer changes
- * first (author, 2026-08-21; redrawn 2026-08-22 for one church of three). It
- * stands where the strip will stand: this is a question, not an obstacle, and
- * a reader who ignores it has chosen nothing and is asked again next visit.
+ * From 2026-08-21 to 2026-08-26 this file held a *gate*: a panel above the
+ * strip asking which church the reader kept, with the week, the date and the
+ * day hidden until it was answered, and from 2026-08-25 evening a second block
+ * beside it offering the language. Both are gone at the author's instruction —
+ * "Replace the language and calendar pop-ups on first opening with a fade-in
+ * glowing tool tip with an arrow pointing to each of the two buttons" — and
+ * what replaces them is `ui/coachmark.js`, mounted once at boot against the two
+ * header controls.
  *
- * **Two questions since 2026-08-25 evening** (author: "same as the message to
- * choose which church, open the language options as well for first time
- * visitors to know they can change language"). They are not the same kind of
- * question and the difference is kept: the calendar has no default and the
- * page below waits for it; the language has one — English, and the reader is
- * already reading it — so that half is an offer rather than a gate. A reader
- * who answers only the calendar gets the whole site and is asked about the
- * language again next visit, which is exactly what "has chosen nothing" has
- * always meant here.
+ * The gate's argument was that a calendar with no church chosen is the site
+ * choosing one silently. That is answered rather than abandoned: the guess is
+ * `defaultChurch()` in lib/church.js, made from the reader's own browser
+ * language and never written to settings, the header names the church on every
+ * page, and a mark under that control says so on a first visit. `hasChosen()`
+ * is untouched and still means "the reader has answered", which is what the
+ * coachmarks, the Index's set-aside count and next visit's marks all read.
  *
- * Each block carries the control it belongs to, because each flies to a
- * different corner when it is answered.
- */
-function askMarkup() {
-  const blocks = [];
-  if (!hasChosen()) {
-    blocks.push(`<div class="ask-block" data-ask-church data-flies-to="church-open">${renderChooser()}</div>`);
-  }
-  if (!hasChosenLanguage()) {
-    blocks.push(`<div class="ask-block" data-ask-language data-flies-to="lang-open">${renderLanguageChooser()}</div>`);
-  }
-  return blocks.length ? `<div class="church-ask panel" data-ask>${blocks.join('')}</div>` : '';
-}
-
-/**
- * The gate's own wiring, which the header's disclosures do not share: an
- * answer here *flies before it lands*. Both `chooseChurch` and
- * `chooseLanguage` tear this view down and rebuild it — the church through
- * paintGate, the language through the router's refresh — so choosing first
- * and animating after would animate a node that no longer exists. The order
- * is: fly the block into the control that will change it from now on, then
- * answer.
- */
-function wireAsk() {
-  const { el } = state;
-  const gate = el.querySelector('[data-gate]');
-  const onClick = (e) => {
-    const button = e.target.closest('[data-church], [data-language]');
-    if (!button || !gate.contains(button)) return;
-    const block = button.closest('.ask-block');
-    const target = document.getElementById(block?.dataset.fliesTo ?? '');
-    const answer = () => {
-      block?.remove();
-      if (!gate.querySelector('.ask-block')) gate.innerHTML = '';
-      if (button.dataset.church) {
-        chooseChurch(button.dataset.church);
-        el.querySelector('[data-today]')?.focus();
-      } else {
-        chooseLanguage(button.dataset.language);
-      }
-    };
-    // 'self': the block *is* the box holding the space, so a placeholder of
-    // its size stands in while it flies and closes behind it.
-    flyInto(block, target, answer, { collapse: 'self' });
-  };
-  gate.addEventListener('click', onClick);
-  state.cleanups.push(() => gate.removeEventListener('click', onClick));
-}
-
-/**
- * Before the week or the month can be seen the reader has to have chosen
- * (author, 2026-08-22): the calendar question stands where the strip would,
- * and the strip, the date and the day are hidden until there is an answer.
- * The calendar is named and changed in the header (author, 2026-08-24).
- *
- * The gate is only *built* here, never rebuilt: from the moment it is on the
- * page its blocks are removed one at a time by wireAsk, at the end of their
- * flights. Repainting it on every church change would snatch a block out of
- * mid-air — which is what the `firstElementChild` guard is for.
+ * What is left here is the one line that used to be a paint: the view reads
+ * the church, and the body is always shown.
  */
 function paintGate() {
-  const { el } = state;
   state.calendar = currentChurch();
-  const gate = el.querySelector('[data-gate]');
-  el.querySelector('[data-cal-body]').hidden = !state.calendar;
-  if (!gate.firstElementChild) gate.innerHTML = askMarkup();
 }
 
 /* ---- the day rail ------------------------------------------------------- */
@@ -829,13 +788,56 @@ const MIN_FLICK = 0.25;
    better ending — it is still moving when the snap takes the wheel. */
 const COAST_STOP = 0.15;
 
+/**
+ * Two marks under a date, and only two (author, 2026-08-26: "Dots on the week
+ * strip for fast and feast days would let someone plan the week at a glance").
+ *
+ * This is *not* the return of the density dots the author removed on
+ * 2026-08-25 — one dot per commemoration, capped at five, which said only
+ * "this day is busy". These say something a reader plans around, and each is
+ * a fact with a source behind it:
+ *
+ *   fast   lib/liturgy.js, reckoned in this church's own calendar. The colour
+ *          is the same three tokens the chip uses. A fast-free day gets none,
+ *          which is what makes a run of them legible at a glance.
+ *   feast  the day's own record carrying hymns for this church. That is the
+ *          rank cross the calendar itself printed: the harvest ships hymns
+ *          only for its top-rank days, so the mark is the source's judgement
+ *          rather than ours. Days outside the recorded span carry none, and
+ *          an absent mark is not a claim that the day is ordinary.
+ *
+ * Both are named in the button's accessible label, because a dot is nothing
+ * to a screen reader and colour is nothing to a reader who cannot see it.
+ */
+const dayMarks = (iso) => {
+  const { kind } = liturgicalDay(iso, state.calendar).fasting;
+  const feast = Boolean(recordedDay(iso, state.calendar)?.hymns?.length);
+  const marks = [];
+  const words = [];
+  const D = STRINGS.calendar.marks;
+  if (kind === 'fast' || kind === 'fish') {
+    marks.push(`<span class="day-mark mark-${esc(kind)}"></span>`);
+    words.push(kind === 'fish' ? D.fish : D.fast);
+  }
+  if (feast) {
+    marks.push('<span class="day-mark mark-feast"></span>');
+    words.push(D.feast);
+  }
+  return {
+    html: marks.length ? `<span class="day-marks" aria-hidden="true">${marks.join('')}</span>` : '',
+    label: words.length ? ` - ${words.join(', ')}` : '',
+  };
+};
+
 const dayButton = (iso) => {
   const n = countFor(iso, state.data);
   const density = n ? ` - ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
+  const marks = dayMarks(iso);
   return `<button type="button" data-iso="${iso}" tabindex="-1"
-    aria-label="${dayFmt(utc(iso))}${density}">
+    aria-label="${dayFmt(utc(iso))}${density}${marks.label}">
     <span class="day-name">${weekdayFmt(utc(iso))}</span>
     <span class="day-num">${parseIso(iso).day}</span>
+    ${marks.html}
   </button>`;
 };
 
@@ -897,6 +899,18 @@ function revealSelected({ week = false } = {}) {
   const strip = state.el?.querySelector('.week-strip');
   const button = dayAt(state.selected);
   if (!strip || !button) return;
+  /*
+   * A hidden rail has no geometry, and asking it for some is worse than
+   * useless: `offsetLeft` and `clientWidth` are 0 while the month is showing,
+   * so every branch below computes a scroll from zeroes and the rail is left
+   * wherever the arithmetic put it — which is the bug the author reported on
+   * 2026-08-26 ("When I scroll away in the monthly display, select a date
+   * there, and go back to the weekly display, the weekly display should open
+   * in the new location, not the old"). The reveal is *deferred* rather than
+   * skipped: toggleMonth does it as the week comes back, by which time the
+   * rail has a width again.
+   */
+  if (state.monthOpen) return;
   if (week) {
     const monday = dayAt(weekOf(state.selected)[0]) ?? button;
     scrollRail(strip, restFor(strip, monday), { smooth: false });
@@ -1223,9 +1237,15 @@ function toggleMonth() {
   if (reduced) {
     month.hidden = true;
     week.hidden = false;
+    showWeekOfSelected();
     return;
   }
   week.hidden = false;
+  // Before the fade, not after: the rail has its width the instant it is
+  // un-hidden, and scrolling it while it is still transparent means the week
+  // is already in the right place when the reader can first see it. Doing it
+  // at the end of the swap would show the old week arriving and then jumping.
+  showWeekOfSelected();
   week.classList.add('is-out');
   growMonthBody(body, measure(body), 0);
   requestAnimationFrame(() => week.classList.remove('is-out'));
@@ -1233,6 +1253,34 @@ function toggleMonth() {
     month.hidden = true;
     body.style.height = '';
   }).settle(MONTH_FADE);
+}
+
+/**
+ * The week the selected day sits in, brought back under the reader as the
+ * month closes (author, 2026-08-26: "When I scroll away in the monthly
+ * display, select a date there, and go back to the weekly display, the weekly
+ * display should open in the new location, not the old as it currently does").
+ *
+ * Picking a date in the month leaves the month open — that decision stands,
+ * and it is why the rail is never scrolled at the moment of the pick — so
+ * this is the one place where the rail catches up with where the reader went.
+ * Two things had to happen for it to work at all: the rail has to be visible,
+ * which is why the caller un-hides the week first; and it has to *hold* the
+ * day, which a rail anchored 60 days away no longer does once the reader has
+ * paged through a few months. `buildRail` re-anchors, and it is cheap — 121
+ * buttons, the same cost as any settle.
+ *
+ * `week: true`, not the ordinary minimal reveal: coming back from the month
+ * is an arrival, and an arrival shows the whole week the day sits in rather
+ * than that day pinned to an edge. It is the same choice a deep link makes.
+ *
+ * Called only from the closing branch of toggleMonth, which has already
+ * flipped `state.monthOpen` to false — so revealSelected's hidden-rail guard
+ * is open by the time this runs.
+ */
+function showWeekOfSelected() {
+  if (!dayAt(state.selected)) buildRail(state.selected);
+  revealSelected({ week: true });
 }
 
 const measure = (el) => el.getBoundingClientRect().height;
@@ -1396,7 +1444,7 @@ function registerRow(saint, title, transition) {
           loading="lazy" decoding="async" />
       </span>`
     : '';
-  return `<li class="index-card panel is-row reg-card">
+  return `<li class="index-card is-row reg-card">
     ${image}
     <span class="row-body">
       <span class="name-line">
@@ -1496,7 +1544,7 @@ function paintDay(panel) {
     : '';
 
   panel.innerHTML = `
-    <article class="hero panel ${hero.image ? 'has-media' : ''}">
+    <article class="hero ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">
         <div class="name-line">
@@ -1517,6 +1565,7 @@ function paintDay(panel) {
       </div>
     </article>
     ${register}
+    ${nameDaysMarkup(entries, data)}
     ${readingsMarkup(selected, state.calendar)}
     ${hymnsMarkup(selected, state.calendar)}`;
   fillSaintHymns(panel, hero.slug, selected);
@@ -1525,3 +1574,33 @@ function paintDay(panel) {
 
 const titleFor = (saint, churchId) =>
   saint.attestations.find((a) => a.church === churchId)?.titles?.join(', ') ?? '';
+
+/**
+ * Whose name day it is (author, 2026-08-26: "add name days"). Under the day's
+ * saints, because it is a second reading of the same list and not a new claim
+ * about the day: every name here is the first word of a commemoration already
+ * printed above it. lib/name-days.js argues the reduction and the three things
+ * it refuses to do.
+ *
+ * A name links to its saint only where exactly one of the day's saints bears
+ * it; where two or more do, the name stands as text, because a link would be
+ * the site choosing between them. On 20 September that is five of the day's
+ * twenty-one — two Eugenes, two Macariuses, a John who is also a John — and
+ * they read exactly as the linked ones do, which is the point.
+ */
+function nameDaysMarkup(entries, data) {
+  const cards = entries.map((e) => data.bySlug.get(e.slug)).filter(Boolean);
+  const names = nameDays(cards, { lang: currentLanguage(), locale: languageTag() });
+  if (!names.length) return '';
+  const items = names
+    .map(({ name, slug }) =>
+      slug
+        ? `<li><a class="name-day" href="${state.router.href(`/saints/${slug}`)}" data-prefetch="${esc(slug)}">${esc(name)}</a></li>`
+        : `<li><span class="name-day">${esc(name)}</span></li>`,
+    )
+    .join('');
+  return `<section class="day-namedays" data-namedays>
+    <h2 class="register-heading">${STRINGS.calendar.nameDays.heading}</h2>
+    <ul class="namedays">${items}</ul>
+  </section>`;
+}

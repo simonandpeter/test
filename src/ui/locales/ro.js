@@ -49,6 +49,11 @@ export const ro = {
     dayWithoutSaints: 'Citirile și cântările de mai jos sunt ale acestei zile, luate din calendar. Sfinții ei nu au încă dosare - corpusul ajunge deocamdată la 19 septembrie și crește dosar cu dosar. Nimic de aici nu spune că ziua ar fi goală.',
     heroIn: 'Calendarul: {church}',
     densityLabel: '{count} pomeniri',
+    marks: {
+      fast: 'post',
+      fish: 'post, se dezleagă la pește',
+      feast: 'sărbătoare',
+    },
     openSaint: 'Citește despre {name}',
     fastModal: {
       open: 'Ce se dezleagă în acest post',
@@ -140,6 +145,7 @@ export const ro = {
       epistle: 'Apostol',
       gospel: 'Evanghelie',
     },
+    nameDays: { heading: 'Onomastici' },
     hymns: {
       heading: 'Cântări',
       troparion: 'Troparul',
@@ -164,6 +170,7 @@ export const ro = {
     heading: 'Ce calendar ții?',
     groupLabel: 'Biserici',
     calendarOf: { julian: 'Calendarul iulian', 'revised-julian': 'Calendarul iulian îndreptat' },
+    calendarNames: { julian: 'iulian', 'revised-julian': 'iulian îndreptat' },
     names: { russian: 'Rusă', romanian: 'Română', greek: 'Greacă', serbian: 'Sârbă' },
   },
 
@@ -173,6 +180,12 @@ export const ro = {
     showingLabel: '{name} - schimbă limba site-ului',
     heading: 'În ce limbă?',
     groupLabel: 'Limbi',
+  },
+
+  coach: {
+      church: 'Biserica și calendarul tău',
+      language: 'Limba ta',
+      dismiss: 'Închide',
   },
 
   dates: {
@@ -207,6 +220,7 @@ export const ro = {
       deacon: 'Diacon',
       'new-martyr': 'Nou-mucenic',
       patriarch: 'Patriarh',
+      'patriarch-of-israel': 'Patriarh al Vechiului Testament',
       prince: 'Voievod',
       apostle: 'Apostol',
       metropolitan: 'Mitropolit',
@@ -215,6 +229,7 @@ export const ro = {
       prophet: 'Prooroc',
       'fool-for-christ': 'Nebun pentru Hristos',
       monk: 'Monah',
+      monastic: 'Viețuitor în mănăstire',
       theologian: 'Teolog',
       king: 'Rege',
       soldier: 'Ostaș',
@@ -308,6 +323,14 @@ export const ro = {
     statusUndocumented: 'Nedocumentat',
     undocumentedNote: 'Fără surse în niciun sens. Lipsa datelor nu e lipsa cinstirii.',
     refusedNote: 'O constatare pozitivă: această biserică a stabilit că nu cinstește această figură.',
+    feastIn: {
+      dayMonth: '{day} {month}',
+      inCalendar: '{feast} (calendarul {calendar})',
+      pascha: 'Paștile',
+      afterPascha: 'la {n} zile după Paști',
+      beforePascha: 'cu {n} zile înainte de Paști',
+    },
+    lifeInEnglish: 'Viața este scrisă în engleză și încă nu a fost tradusă.',
     feastThisYear: '{feast} - anul acesta cade pe {gregorian}',
     feastNoOccurrence: '{feast} - nu cade în {year}',
     noFeast: 'Zi de prăznuire neînregistrată.',

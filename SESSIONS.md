@@ -2961,6 +2961,142 @@ from 20 September altogether for a Russian reader — which is the right failure
 because without that row he is not a saint of that day at all.
 
 
+## Amendment 46 — the refinement round, and three defects it turned up (2026-08-26, sixth sitting)
+
+Sixteen instructions from the author in one message, plus one that arrived
+mid-work ("Also, before commiting and pushing, add name days") and one that set
+the terms ("Work autonomously, im going to sleep"). Most were design; three
+turned out to be defects with a translation instruction on top of them.
+
+### The gate is gone, and this is what replaced its argument
+
+**The largest reversal in the round**, and DESIGN.md §5b carries it in place.
+From 2026-08-21 the calendar asked which church the reader kept and showed
+*nothing* until it was answered. The author: *"Replace the language and calendar
+pop-ups on first opening with a fade-in glowing tool tip with an arrow pointing
+to each of the two buttons."*
+
+The gate's argument was sound — a calendar with no church chosen is the site
+picking one and not saying so — so it is answered rather than dropped:
+
+    defaultChurch()   the reader's browser language, nothing else about them,
+                      falling through to Russian: 426 of 742 folders, and day
+                      records to January where the Greek and Serbian stop in
+                      September. A corpus fact, not a preference.
+    never stored      hasChosen() still means "the reader has answered". The
+                      marks return next visit; nothing downstream is fooled.
+    chosenChurch()    the guess is confined to the one page that cannot open
+                      without a calendar. The Index still keeps the whole
+                      corpus, a saint still shows all four churches, the map
+                      still counts as the Index does. **A guess may show a
+                      calendar; it may not set 316 saints aside.**
+
+That third line is the one worth carrying forward. The first cut of this made
+`currentChurch()` return the default everywhere, and eleven browser tests went
+red at once — the Index counting 426 of 742 on a page called All Saints, a
+saint's page hiding three churches behind a button. The tests were right and
+the code was wrong.
+
+### Three translation defects, and only one looked like a missing string
+
+The instruction was *"The saint profile pages do not have russian, greek,
+serbian or romanian translations."* A key-coverage diff — written to answer it,
+kept as `scripts/locale-coverage.mjs` — said the packs were **already
+complete**: two or three missing of 273, all of them saint types. So the packs
+were not the problem, and that is what narrowed it:
+
+(Those last few were closed too, so all four packs are now 288 of 288. A type
+prints on the saint page's own facts line, so an untranslated one was part of
+what was reported.)
+
+1. **A leaf captured at import.** `views/saint.js` held
+   `const STATUS_TEXT = { venerated: STRINGS.saint.statusVenerated, … }` at
+   module scope. lib/i18n.js's contract is that a pack mutates STRINGS'
+   *branches* in place, so `const C = STRINGS.church` keeps working — a **leaf
+   is the one thing that cannot be captured**, because a string does not
+   mutate, and module scope runs before any pack is merged. Every veneration
+   row in all five languages read "Venerated". The only such capture in the app.
+2. **A registry field used instead of a pack.** The row printed
+   `church.display_name` from `data/churches.js` rather than
+   `STRINGS.church.names[id]`, so a Romanian page said ROMANIAN.
+3. **A formatter with a table of its own.** `data/calendars.js` composed
+   "17 January (Revised Julian)" out of an English month array and two English
+   literals. It now takes the month from Intl and the words from the packs.
+
+**What is still English on that page, and stays English:** the life. 742 of
+them, each the author's paraphrase of a named source, and the only way to render
+them into four languages is machine translation — which Amendment 2 forbids and
+which in hagiography turns a mistranslated clause into a false claim about a
+person *and* about a source cited by name. The page now says so, once, in the
+reader's own language, above prose tagged `lang="en"`.
+
+### The cross-linker: four rules, each earned by measuring
+
+*"In each Saint Profile, automatically scan for names of other saints to
+hyperlink to their profile."* The temptation is to match names and ship it. The
+run over all 742 lives (`scripts/cross-link-audit.mjs`) is what set the rules:
+
+    cut at the first comma or bracket   "Ignatius (Lebedev), Schema-archimandrite,
+                                        Monk-martyr (1938)" is a folder title,
+                                        not what a life writes
+    two words minimum                   43 folders are one name; a life
+                                        mentioning a Laurence is not mentioning
+                                        that Laurence
+    no regnal numerals                  **the one false positive in the whole
+                                        corpus**: "John II" matched
+                                        john-ii-metropolitan-of-kyiv inside "the
+                                        emperor John II Komnenos"
+    a shared form links to neither      seven forms have two claimants, all new
+                                        martyrs of the 1930s differing by a year
+
+Result: **18 links across 742 lives**, every one right. Small, and that is the
+correct size — Amendment 45's dedupe finding is the same lesson, that a name is
+not an identifier in this corpus.
+
+Worth saying plainly: the author's own example does not link. "St Ignatius the
+God-bearer" is named in Titus's life and **is not a folder**, so there is
+nothing to point at. The feature is right and the corpus is short a saint.
+
+### Name days
+
+Added mid-round. Every name is the first word of a commemoration already printed
+above it, in the reader's language where the corpus recorded a form. A company
+gives nobody a name day, decided on the English (lib/honorific.js's reason: the
+other four carry no article to test). A name two of the day's saints share is
+listed once and links to neither — the cross-linker's fourth rule again.
+
+### Two things the suite caught that a screenshot would not have
+
+* **A hairline is a ruled ledger.** Taking `.panel` off the *Also commemorated*
+  rows, the obvious substitute for the frame was a hairline between them — and
+  the suite failed it against 2026-08-24's "reads as one company, not a ruled
+  ledger". Frames and rules are the same answer to the same question. What
+  separates the rows now is space.
+* **An opacity is a contrast failure.** `.cal-cycle` wore `opacity: 0.85` for
+  one build to sit behind the new fast chip: `--ink-soft` washed over gesso is
+  **4.17:1**, under AA's 4.5 for 13.5 px text. DESIGN.md §5b already says this
+  in as many words about the rail's fade ("a mask, never an opacity"). Third
+  time this file has learnt it.
+
+### And one the suite caught that a screenshot *did* miss
+
+The two coachmarks overlapped on desktop and the language one covered the
+church one's ×. It looked fine at 360 px, where the two header controls are a
+screen apart; at 1280 they are four pixels apart. The browser suite timed out
+clicking a button it could see, and `document.elementFromPoint` at the button's
+own coordinates came back `SPAN.coachmark-text` — the *wrong mark's*. They open
+outwards from the midpoint between the two controls now, each keeping its arrow
+over its own button.
+
+### Verification
+
+163 unit, 376 browser. **Ten backouts run and watched to fail**, one per fix,
+each restored — including two that first passed and were therefore not pinning
+anything: a backout that only inserted a comment, and one that replaced a
+translated call with a *differently* translated literal. A backout that does not
+reproduce the defect is not a backout.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

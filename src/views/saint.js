@@ -18,20 +18,21 @@
 
 import { CHURCHES } from '../data/churches.js';
 import { typeNames } from '../lib/saint-types.js';
-import { currentChurch, subscribeChurch } from '../lib/church.js';
+import { chosenChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { saintName } from '../lib/honorific.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
+import { linkSaintNames } from '../lib/cross-link.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
-import { formatDate } from '../lib/i18n.js';
+import { currentLanguage, formatDate } from '../lib/i18n.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -115,12 +116,21 @@ export function render(el, { data, params, router, cameFrom }) {
 /* ---- the manifest-only shell ------------------------------------------- */
 
 function shell(card, backLabel) {
+  /*
+   * The picture, and *not* its licence (author, 2026-08-26: "'Public domain' as
+   * the image caption is metadata that belongs at the bottom"). A caption under
+   * an icon is a place a reader expects to be told what they are looking at,
+   * and "Public Domain Mark 1.0" answers a question nobody standing in front of
+   * an icon is asking. The line itself is unchanged and still says everything
+   * lib/licence.js requires — including, where a licence is unsettled, the
+   * whole paragraph saying so — it now stands at the foot of the page with the
+   * sources, which is where the rest of the page's apparatus lives.
+   */
   const media = card.image
     ? `<figure class="saint-media" style="aspect-ratio:${card.image.aspect};background-image:url('${BASE + card.image.lqip}')">
         <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
           style="view-transition-name:s-${esc(card.slug)}-image" decoding="async" />
-      </figure>
-      <p class="image-credit utility" data-credit></p>`
+      </figure>`
     : '';
 
   /*
@@ -147,10 +157,17 @@ function shell(card, backLabel) {
       titles.push(title);
     }
   }
+  /*
+   * Rank, then offices, and *not* the sex (author, 2026-08-26: "'Male' in the
+   * subtitle reads oddly for a devotional page (keep it as a filter, drop it
+   * from the heading line)"). It is still in the data, still a facet on the
+   * Index, and still what `saints.sexLabel` names there — it is only no longer
+   * announced under a saint's name, where it read as a database field that had
+   * wandered onto a page about a person.
+   */
   const facts = [
     card.types?.length ? typeNames(card.types) : null,
     titles.length ? titles.join(', ') : null,
-    STRINGS.saint.sexLabel[card.sex] ?? null,
   ]
     .filter(Boolean)
     .join(' · ');
@@ -186,6 +203,7 @@ function shell(card, backLabel) {
       <div data-sources></div>
       <div data-hymns-box></div>
       <div data-related></div>
+      <p class="image-credit utility" data-credit></p>
     </div>
   </article>`;
 }
@@ -244,8 +262,32 @@ function fillIn(el, payload, { data, router }) {
   paintVeneration(el, saint);
 
   const lifeEl = el.querySelector('[data-life]');
+  /*
+   * The life is English, and a reader in one of the other four is told so
+   * (author, 2026-08-26: "The saint profile pages do not have russian, greek,
+   * serbian or romanian translations. We need to add them").
+   *
+   * Everything on this page that *is* the site's own words now translates —
+   * the headings, the status of each attestation, the feast in its own
+   * reckoning, the types, the historicity, and the saint's own name where a
+   * calendar in that language recorded one. What does not is the corpus: 742
+   * lives, each the author's paraphrase of a named source, and there is no way
+   * to render them into four languages that does not mean machine translation.
+   * Amendment 2 forbids exactly that, and hagiography is the worst possible
+   * place to start: a mistranslated clause is a false claim about a person and
+   * about a source we cited by name.
+   *
+   * So the honest thing, which is also the smallest: say it once, in the
+   * reader's language, above the English. `lang="en"` on the prose so a screen
+   * reader switches voice rather than reading English in a Greek one — which
+   * is the same rule the hymns follow in the other direction.
+   */
+  const untranslated = life && currentLanguage() !== 'en'
+    ? `<p class="life-language utility">${STRINGS.saint.lifeInEnglish}</p>`
+    : '';
   lifeEl.innerHTML = life
-    ? renderMarkdown(stripLeadingHeading(life), { link: (href) => (href.startsWith('/') ? router.href(href) : href) })
+    ? untranslated +
+      `<div lang="en">${renderMarkdown(stripLeadingHeading(life), { link: (href) => (href.startsWith('/') ? router.href(href) : href) })}</div>`
     : `<p class="utility">${STRINGS.saint.noLife}</p>`;
   // Links inside a life point at other saints; they get the same prefetch
   // budget as any other route into a detail page.
@@ -253,6 +295,18 @@ function fillIn(el, payload, { data, router }) {
     const match = /\/saints\/([^/?#]+)$/.exec(a.getAttribute('href') ?? '');
     if (match) a.dataset.prefetch = match[1];
   }
+  /*
+   * And the ones nobody wrote a link for (author, 2026-08-26). After the loop
+   * above, not before: the hand-written links are already <a> elements by
+   * then, and the walker refuses to enter one — so a life that names Athanasius
+   * twice, once linked, keeps its own link and gains nothing.
+   * lib/cross-link.js argues the four rules that decide what is safe to link.
+   */
+  linkSaintNames(lifeEl, {
+    saints: data.saints,
+    skipSlug: saint.slug,
+    href: (slug) => router.href(`/saints/${slug}`),
+  });
 
   el.querySelector('[data-sources]').innerHTML = sources(saint);
   // The saint's own hymns, at the foot of the page (author, 2026-08-25).
@@ -293,11 +347,30 @@ function creditLine(meta) {
 
 /* ---- veneration, church by church -------------------------------------- */
 
-const STATUS_TEXT = {
-  venerated: STRINGS.saint.statusVenerated,
-  'not-venerated': STRINGS.saint.statusRefused,
-  undocumented: STRINGS.saint.statusUndocumented,
-};
+/**
+ * The three words a row can carry, **read at paint time and never captured**
+ * (author, 2026-08-26: "The saint profile pages do not have russian, greek,
+ * serbian or romanian translations").
+ *
+ * This was a module constant holding the three *strings*, evaluated the moment
+ * the module was imported — which is before `currentLanguage()` has merged any
+ * pack over STRINGS, and in any case once for the life of the page. So every
+ * veneration row on every saint's page read "Venerated" in English in all five
+ * languages, in a file whose neighbours all translate correctly.
+ *
+ * lib/i18n.js's contract is that a pack mutates STRINGS' *branches* in place,
+ * so `const C = STRINGS.church` keeps working. A leaf is the one thing that
+ * cannot be captured, because a leaf is a string and strings do not mutate.
+ * This is the only place in the app that captured one; `scripts/locale-coverage.mjs`
+ * found the pack coverage was already complete, which is what narrowed the
+ * search from "the packs are missing keys" to "one file is not reading them".
+ */
+const statusText = (status) =>
+  ({
+    venerated: STRINGS.saint.statusVenerated,
+    'not-venerated': STRINGS.saint.statusRefused,
+    undocumented: STRINGS.saint.statusUndocumented,
+  })[status] ?? status;
 
 /**
  * The reader's church first, the other two behind a button, for this page only
@@ -308,7 +381,10 @@ const STATUS_TEXT = {
 function paintVeneration(el, saint) {
   const box = el.querySelector('[data-veneration]');
   if (!box) return;
-  const church = currentChurch();
+  // A guess does not hide three churches: this page showed all four before
+  // there was a default and shows all four still, until the reader chooses
+  // (lib/church.js, `chosenChurch`).
+  const church = chosenChurch();
   const churches = CHURCHES.filter((c) => c.enabled !== false);
   const mine = church ? churches.filter((c) => c.id === church) : churches;
   const others = churches.filter((c) => !mine.includes(c));
@@ -353,8 +429,8 @@ function veneration(saint, churches) {
     if (att?.source) lines.push(`<span class="att-source utility">${citation(att.source)}</span>`);
 
     return `<li class="att att-${status}">
-      <span class="att-church utility">${esc(church.display_name)}</span>
-      <span class="att-status utility">${STATUS_TEXT[status]}</span>
+      <span class="att-church utility">${esc(churchName(church.id))}</span>
+      <span class="att-status utility">${esc(statusText(status))}</span>
       <span class="att-body">${lines.join('')}</span>
     </li>`;
   });

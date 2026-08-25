@@ -1,4 +1,4 @@
-import { churchName, currentChurch, keptBy } from '../lib/church.js';
+import { chosenChurch, churchName, keptBy } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.map.title;
@@ -9,7 +9,11 @@ export const title = () => STRINGS.map.title;
  * the count here says so now.
  */
 export function render(el, { data }) {
-  const church = currentChurch();
+  // `chosenChurch`, not `currentChurch` (2026-08-26): a *guess* from the
+  // browser's language must not set part of the corpus aside here. lib/church.js
+  // argues the split; the Daily page is the one page that cannot open without a
+  // calendar, and it is the one page that reads the guess.
+  const church = chosenChurch();
   const mine = data.saints.filter((s) => keptBy(s, church));
   const located = mine.filter((s) => s.locations.length > 0).length;
   const setAside = data.saints.length - mine.length;

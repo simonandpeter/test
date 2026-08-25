@@ -69,11 +69,36 @@ export function formatPlace(place) {
  * location's `kind` but not its name, which is exactly enough to reserve the
  * box.
  */
+/**
+ * The kinds `formatLifespan` already prints under the saint's name. A register
+ * whose whole content is one of these and nothing else says nothing the header
+ * did not say two lines above it.
+ */
+const IN_THE_LIFESPAN = new Set(['birth', 'floruit', 'death']);
+
 export function renderDateFacts(dates, locations) {
   const rows = factRows(dates, locations);
   if (!rows.length) {
     return `<p class="date-facts-undated utility">${STRINGS.dates.undatedNote}</p>`;
   }
+
+  /*
+   * One row, no place, and a year the header has already given: nothing is
+   * printed (author, 2026-08-26: "On the saint page, 'Died · 105 AD' as a lone
+   * table row looks empty").
+   *
+   * It looked empty because it *was* empty — a two-column register drawn across
+   * the page to carry a single cell whose content is the phrase "Reposed 105
+   * AD" from the subtitle, rewritten. Titus is the shape of it: no birth, no
+   * places, one year, known twice.
+   *
+   * Only that exact case. A row with a place is a second fact and keeps its
+   * register; two rows are a life with a shape and keep theirs; a lone
+   * *ministry*, *see* or *relics* date is something the lifespan line never
+   * carried and keeps its row. And an undated saint still gets the note above,
+   * because "no date is recorded" is a finding this site prints on purpose.
+   */
+  if (rows.length === 1 && !rows[0].place && IN_THE_LIFESPAN.has(rows[0].kind)) return '';
 
   const items = rows
     .map(

@@ -140,10 +140,33 @@ export function mountShelves(el, { data, router }) {
   };
 }
 
-/** Past this much of the row's width, the hand meant it. */
-const SWIPE_OUT = 0.4;
+/**
+ * Past this much of the row's width, the hand meant it. **0.25 since
+ * 2026-08-26**, down from 0.4 (author: "Make the swipe on the Continue Reading
+ * row cards easier, it snaps back too easily making it too hard to remove").
+ * On a 360 px phone that is 90 px of travel instead of 144.
+ */
+const SWIPE_OUT = 0.25;
+/**
+ * …or a flick, whatever the distance. This is the other half of the same
+ * complaint and probably the larger half: a quick push across a row is over in
+ * about 120 ms and covers barely a third of the width, so a distance-only test
+ * reads the most natural version of the gesture as a miss. px/ms at the
+ * release, measured over the last ~80 ms the way the week rail measures its
+ * throw — a long slow haul that ends still is not a flick.
+ */
+const SWIPE_FLICK = 0.4;
 /** Where a hold stops being a press and starts being a swipe. */
 const SWIPE_SLOP = 8;
+/**
+ * How much taller than wide the movement has to be before it is the page
+ * scrolling rather than the row moving. It used to be any excess at all,
+ * tested on the *first* move event: a finger that starts a degree off
+ * horizontal produced dy > dx for one frame and lost the gesture for good,
+ * with no way back short of lifting and starting again. Now the axis is
+ * decided once, at the slop, and the vertical has to win by a fifth.
+ */
+const SWIPE_AXIS = 1.2;
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
@@ -180,7 +203,7 @@ function wireSwipe(el) {
     // The bookmark and the hidden remove button are controls: a press that
     // starts on one is that control's, not a swipe's.
     if (!row || e.target.closest('button')) return;
-    hold = { row, x: e.clientX, y: e.clientY, id: e.pointerId, swiping: false, dx: 0 };
+    hold = { row, x: e.clientX, y: e.clientY, id: e.pointerId, swiping: false, dx: 0, samples: [] };
   };
 
   const move = (e) => {
@@ -188,16 +211,21 @@ function wireSwipe(el) {
     const dx = e.clientX - hold.x;
     const dy = e.clientY - hold.y;
     if (!hold.swiping) {
-      if (Math.abs(dy) > Math.abs(dx)) {
+      // Nothing is decided until the hold has travelled: an early frame says
+      // more about the hand settling than about which way it is going.
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < SWIPE_SLOP) return;
+      if (Math.abs(dy) > Math.abs(dx) * SWIPE_AXIS) {
         // The page is scrolling under the hand; this was never a swipe.
         hold = null;
         return;
       }
-      if (Math.abs(dx) < SWIPE_SLOP) return;
       hold.swiping = true;
       hold.row.classList.add('is-swiping');
       hold.row.setPointerCapture?.(e.pointerId);
     }
+    // The last ~80 ms of travel, for the flick test at the release.
+    hold.samples = hold.samples.filter((s) => e.timeStamp - s.t < 80);
+    hold.samples.push({ t: e.timeStamp, x: e.clientX });
     hold.dx = dx;
     const width = hold.row.getBoundingClientRect().width || 1;
     hold.row.style.transform = `translateX(${dx}px)`;
@@ -207,7 +235,7 @@ function wireSwipe(el) {
 
   const up = (e) => {
     if (!hold || e.pointerId !== hold.id) return;
-    const { row, dx, swiping } = hold;
+    const { row, dx, swiping, samples } = hold;
     hold = null;
     if (!swiping) return;
     row.releasePointerCapture?.(e.pointerId);
@@ -219,7 +247,21 @@ function wireSwipe(el) {
 
     const width = row.getBoundingClientRect().width || 1;
     const slug = row.querySelector('[data-forget]')?.dataset.forget;
-    if (Math.abs(dx) < width * SWIPE_OUT || !slug) {
+    /*
+     * Far enough, *or* fast enough, and in the direction it actually went: a
+     * flick back toward where it started is a reader changing their mind, and
+     * dismissing on the speed of that would be the opposite of what the hand
+     * said. Samples still fresh at the release only — the window is pruned as
+     * moves arrive, so a fast drag held still and then let go would otherwise
+     * read the stale flick.
+     */
+    const fresh = samples.filter((s) => e.timeStamp - s.t < 120);
+    const first = fresh[0];
+    const last = fresh[fresh.length - 1];
+    const dt = first && last ? last.t - first.t : 0;
+    const velocity = dt > 0 ? (last.x - first.x) / dt : 0;
+    const flicked = Math.abs(velocity) >= SWIPE_FLICK && Math.sign(velocity) === Math.sign(dx);
+    if ((Math.abs(dx) < width * SWIPE_OUT && !flicked) || !slug) {
       release(row, !reducedMotion());
       return;
     }

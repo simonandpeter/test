@@ -370,6 +370,54 @@
   color: var(--rubric);
 }
 
+/* ---- the two marks under a date (author, 2026-08-26) -------------------- */
+
+/* A fast and a feast, and nothing else — views/calendar.js says why these two
+   and not the density dots the author removed on 2026-08-25. The row is a
+   fixed 5 px whether or not it holds anything, so a week with one fast in it
+   does not sit 5 px taller than the week beside it and the rail's column
+   height never changes under a scroll.
+
+   Colour alone carries nothing here: each mark is named in the day button's
+   accessible label, and the day's own chip says the fast in words the moment
+   the reader opens it. */
+.week-strip .day-marks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  height: 5px;
+  margin-top: 1px;
+}
+
+.week-strip button:not(:has(.day-marks))::after {
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: 1px;
+}
+
+.day-mark {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.mark-fast {
+  background: var(--fast-strict);
+}
+
+.mark-fish {
+  background: var(--fast-fish);
+}
+
+/* The one place the site spends gold on the calendar (author, 2026-08-26:
+   "Gold is almost unused … gold for the feast-day marker on the week strip").
+   It is the leaf under the icon, and a feast is what it is for. */
+.mark-feast {
+  background: var(--gold);
+}
+
 /* ---- the peeked edges -------------------------------------------------- */
 
 /* The chevrons are gone (author, 2026-08-21). What stands at each edge of the
@@ -670,6 +718,12 @@
 
 /* ---- hero ------------------------------------------------------------- */
 
+/* **The day's saint sits on the ground, 2026-08-26** (author: "Let the main
+   saint sit directly on the ground with the icon as the strongest element").
+   It wore `.panel` — the recessed field and its border — from the first Daily
+   page. Taking the frame away is what lets the icon be the strongest thing on
+   the page: a bordered box around a bordered image was two frames arguing,
+   and the gesso ground behind an icon is the wall a panel hangs on. */
 .hero {
   display: grid;
   gap: var(--space-4);
@@ -726,10 +780,24 @@
   }
 }
 
+/* **A landscape band since 2026-08-26**, where it was a square from
+   2026-08-21 (author: "Change the daily saint image crop from square to a
+   horizontal rectangle, focusing on the top third of the image where the
+   saint's face is most likely to be. This is to reduce the height of the card
+   to show more of what's below in the also commemorated section").
+
+   3:2 on a square source shows its top two thirds, which is where an icon's
+   face and inscription are and is a third of the height back. The anchor stays
+   at the top for the same reason it always was — what a tall icon loses is its
+   lower half, never the face — and the placeholder is anchored identically, or
+   it would paint a differently-framed image under the one arriving.
+
+   The reservation is unchanged in kind: a ratio is still fixed before the
+   image decodes, so nothing reflows on arrival. */
 .hero-media {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 2;
   background-size: cover;
   background-position: 50% 0;
   border-radius: var(--radius-cell);
@@ -752,9 +820,15 @@
   }
 }
 
+/* 85% and centred until 2026-08-26, and both go with the square. The 15% was
+   bought to keep a tall icon's own name above the fold, and the 3:2 band does
+   that on its own — Anthony at 360 px now clears it by a third of a screen.
+   Centring was a frame's habit: with the panel gone the picture is a block in
+   the column like the name under it, and an inset picture over a full-measure
+   name reads as a mistake rather than as a margin. */
 @media (max-width: 619.98px) {
   .hero-figure {
-    width: 85%;
+    width: 100%;
   }
 }
 
@@ -772,26 +846,19 @@
 
 
 
+/* The margin under the dating, chased twice in one day. In the morning
+   (Amendment 45) the author asked for the box's bottom edge to come up, and it
+   did — space-2 of panel foot instead of space-4, and the dates sitting
+   straight on the control. In the round after it they said it again: "The
+   margin on the bottom of the Daily saint card is still too much."
+
+   This time the frame itself goes (see `.hero` above), which is the honest
+   answer: there is no box left to have a foot. The dates are the last line and
+   they end where they end. What remains is the gap to *Also commemorated*
+   below, and that is `.hero`'s own margin, kept — two things that are not the
+   same thing need a space between them. */
 .hero-dates {
   color: var(--ink-soft);
-  margin-bottom: var(--space-3);
-}
-
-/* A hero with no icon is a name, a lifespan and Save, and the box under them
-   was 65 px deep — space-3 under the dates, a 36 px control, and the panel's
-   own 16 px (author, 2026-08-26: "move the bottom edge of the card higher so
-   there isn't as big a margin between the dating and the bottom of the
-   card"). The dates now sit straight on the control and the panel keeps half
-   its foot, which brings the edge up 20 px without moving anything else.
-
-   Only where there is no picture: with one, the image column is the taller
-   side and its own bottom sets the panel's depth, so trimming here would
-   crowd the image instead. */
-.hero:not(.has-media) {
-  padding-bottom: var(--space-2);
-}
-
-.hero:not(.has-media) .hero-dates {
   margin-bottom: 0;
 }
 
@@ -841,18 +908,44 @@
    the flex line the text register was. The base .register li rules are undone
    rather than avoided, because the card is the Index's and must not inherit a
    calendar register's padding or baseline alignment. */
+/* **Off the field, 2026-08-26** (author: "Too many boxes. Language panel, day
+   card, each commemorated saint, filters — all outlined and inset … keep the
+   recessed panel for genuinely secondary things"). Each of these rows carried
+   `.panel` — a recessed field and a border — from Amendment 38 until now,
+   which put twenty outlined boxes down one column under a day that was itself
+   an outlined box.
+
+   Nothing replaces the edge, and that is the point. A hairline between rows
+   was the obvious substitute and it stood for one build, until the suite
+   caught it against the *older* instruction it breaks: on 2026-08-24 the
+   author asked that Also commemorated "reads as one company, not a ruled
+   ledger", and the day panel's register has dropped the line between saints
+   ever since. Frames and rules are the same answer to the same question, and
+   both are refused here — what separates one saint from the next is space,
+   and what says a row is a target is the row lighting under the pointer.
+
+   The row keeps its thumbnail, its dates and its bookmark: 2026-08-24's other
+   instruction was about the *layout*, and only the dress goes. */
 .register-cards {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .register-cards li.reg-card {
   display: flex;
   align-items: center;
-  padding: var(--space-2);
-  border-bottom: 0;
+  padding: var(--space-2) var(--space-1);
+  border: 0;
+  border-radius: var(--radius-cell);
+  background: none;
   position: relative;
+}
+
+/* The whole row lights, rather than an edge changing colour: with no border
+   there is nothing for `.panel:hover` to have coloured. */
+.register-cards li.reg-card:hover {
+  background: color-mix(in srgb, var(--field) 60%, transparent);
 }
 
 /* The church's title for the day — "Venerable, the Great" — is what these
@@ -898,6 +991,45 @@
     margin-inline-start: calc(var(--space-3) + 20px);
     width: 100%;
   }
+}
+
+/* ---- name days (author, 2026-08-26) ------------------------------------ */
+
+/* A run of names, not a list of rows: they are one fact about the day and read
+   best as one line that wraps. Set in the serif at the register's size, because
+   these are people's names and the utility face is for the site's own
+   apparatus. The separator is a middle dot in the ::after of every item but the
+   last, so the names can wrap anywhere and never strand a comma at a line's
+   start. */
+.namedays {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-2);
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+.namedays li:not(:last-child)::after {
+  content: '·';
+  margin-inline-start: var(--space-2);
+  color: var(--ink-soft);
+}
+
+/* Ink, and underlined only on hover — the same rule the saint names on this
+   page follow (base.css). A name day that is a link and a name day that is not
+   have to look alike: the difference between them is that two saints of the
+   day share the name, which is a fact about the calendar and not something to
+   put a reader's eye on. */
+a.name-day {
+  text-decoration: none;
+}
+
+a.name-day:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--ink-soft);
 }
 
 /* The empty day is a designed state, not a fallback (DESIGN.md §5b). */
@@ -1022,13 +1154,36 @@
   margin-inline-end: var(--space-3);
 }
 
-/* Under the date: the paschal cycle, the tone, the fast — one quiet line in
-   the utility voice, the h1 giving up a little of its margin to it. */
+/* Under the date: the fast first, then what it allows, then the paschal cycle
+   and the tone. The order is the author's (2026-08-26) and it is the whole of
+   the change: "Fasting is the number-one daily question and it's currently the
+   quietest element."
+
+   One gold hairline separates the date from it (author, same instruction:
+   "One gold hairline under the date heading … would give the page the one warm
+   accent it's missing"). Short rather than full-measure — a rule across the
+   column would read as a divider between two sections, and this is one head. */
 .cal-date:has(+ .cal-liturgy:not(:empty)) {
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  position: relative;
+}
+
+.cal-date:has(+ .cal-liturgy:not(:empty))::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5em;
+  height: 1px;
+  background: var(--gold);
 }
 
 .cal-liturgy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
   color: var(--ink-soft);
   margin-bottom: var(--space-4);
   max-width: 65ch;
@@ -1041,18 +1196,58 @@
 /* The fast, told apart by colour as well as by its wording (author,
    2026-08-24): strict in the rubric, fish-permitted in teal, fast-free in
    green. The words still say which, so the line reads the same in greyscale
-   and to a reader who cannot separate the hues. */
-.cal-liturgy .fast {
+   and to a reader who cannot separate the hues.
+
+   A chip since 2026-08-26: the same three tokens, now carrying a tinted field
+   and a hairline of their own colour so the day's answer is found before it is
+   read. `color-mix` off `currentColor` means the tint follows whichever of the
+   three the chip is wearing, and follows the dark palette too, without a
+   second table of six colours to keep in step. */
+.fast.fast-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 1px var(--space-2) 2px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  background: color-mix(in srgb, currentColor 9%, transparent);
   color: var(--fast-free);
   font-weight: 500;
+  line-height: 1.4;
 }
 
-.cal-liturgy .fast-fast {
+.fast.fast-chip.fast-fast {
   color: var(--fast-strict);
 }
 
-.cal-liturgy .fast-fish {
+.fast.fast-chip.fast-fish {
   color: var(--fast-fish);
+}
+
+.fast.fast-chip:hover {
+  background: color-mix(in srgb, currentColor 16%, transparent);
+}
+
+/* What the day allows, printed rather than kept behind the (i). In the
+   ordinary ink of the line: the chip is the alarm, this is the instruction,
+   and setting both in the fast's colour would leave neither leading. */
+.fast-allowance {
+  color: var(--ink-soft);
+}
+
+/* The cycle and the tone keep the line. They wore `opacity: 0.85` for one
+   build, to sit a step behind the chip — and the quality floor caught it the
+   same run: --ink-soft washed over gesso is 4.17:1, under the 4.5 that WCAG AA
+   asks of 13.5 px text. DESIGN.md §5b already says this in as many words about
+   the rail's fade ("a mask, never an opacity — a wash over --ink-soft is 2.1:1
+   on gesso"), so this is the same mistake the same file warns about, made
+   again in a different place.
+
+   The hierarchy the opacity was reaching for is carried by the chip instead,
+   which is the right way round: the fast leads because it is *coloured and
+   framed*, not because the line beside it has been dimmed below legibility. */
+.cal-cycle {
+  color: var(--ink-soft);
 }
 
 /* ---- readings and hymns, under the day's saint (author, 2026-08-22) ------- */
@@ -1106,6 +1301,15 @@
    liturgy line — but it is a button now, so it must not take a button's
    frame. The (i) is the whole of the affordance: small, in the same ink, and
    aria-hidden because the button already says in words that it opens. */
+/* The control's reset: a button that must not look like one. It was the whole
+   of the fast's dress until 2026-08-26, when the fast became a chip — so what
+   is left here is only the parts a chip still wants (the font, the cursor) and
+   the parts it overrides are stated as such rather than fought.
+
+   The chip's own rules sit above, and they lost to these for one build because
+   both are one class deep and this block comes later in the file. Named
+   `.fast.fast-chip` there, which is what actually settles it: the chip is
+   *more* specific than the reset it is undoing, in either order. */
 .fast {
   border: 0;
   background: none;

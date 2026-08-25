@@ -13,6 +13,7 @@ import { loadManifest } from './lib/manifest.js';
 import { cancelPrefetches } from './lib/detail.js';
 import { mountChurchControl } from './ui/church-chooser.js';
 import { mountLanguageControl } from './ui/language-chooser.js';
+import { mountCoachmarks } from './ui/coachmark.js';
 import { currentLanguage, languageTag, subscribeLanguage } from './lib/i18n.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
@@ -168,6 +169,11 @@ async function boot() {
   }
 
   router.start();
+  // After the first view is on the page, so the marks are placed against a
+  // header that has finished settling — the calendar control's own name is
+  // painted by mountChurchControl above, and a mark placed against a button
+  // still reading its default width would point a few pixels off.
+  mountCoachmarks();
   veil.classList.add('done');
   // Gone entirely once faded, so it can never intercept a tap.
   setTimeout(() => veil.remove(), 300);

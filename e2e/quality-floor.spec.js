@@ -168,18 +168,25 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   await expect(page.locator('.week-strip')).toBeVisible();
 });
 
-test('the hero image box is a square, cropped from the centre and the top', async ({ page }) => {
-  // The box is reserved before the image decodes either way — a square is as
-  // structural a guarantee against layout shift as a measured ratio was — but
-  // on the habit page every day's saint now sits in the same box (author,
-  // 2026-08-21). Anthony's icon is 369x501, so this is a real crop and not a
-  // ratio that happened to be square already.
+test('the hero image box is a 3:2 band, cropped from the centre and the top', async ({ page }) => {
+  /*
+   * A square from 2026-08-21 to 2026-08-26, when the author asked for the band:
+   * "Change the daily saint image crop from square to a horizontal rectangle,
+   * focusing on the top third of the image where the saint's face is most
+   * likely to be. This is to reduce the height of the card to show more of
+   * what's below in the also commemorated section."
+   *
+   * What has not changed is why there is a fixed ratio at all: the box is
+   * reserved before the image decodes, so nothing reflows on arrival. A 3:2 is
+   * as structural a guarantee as a square was, and a third shorter. Anthony's
+   * icon is 369x501, so this is a real crop either way.
+   */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const img = page.locator('.hero-media img');
   await expect(img).toBeVisible();
   const box = await img.boundingBox();
-  expect(Math.abs(box.width / box.height - 1)).toBeLessThan(0.02);
+  expect(Math.abs(box.width / box.height - 1.5)).toBeLessThan(0.03);
 
   // What a tall icon loses is its lower half, not the face: cover, anchored to
   // the top and centred across. The blurred placeholder underneath is anchored
@@ -283,10 +290,21 @@ test('a saint with no life, no image and no birth date is still a whole page', a
   // Removed from the General Roman Calendar in 1969 and still venerated: the
   // page must not turn that into a refusal.
   await expect(page.locator('.att').first()).toContainText('Venerated');
-  // Undated at birth and dated at death: the register prints the row it has
-  // and does not invent the one it does not.
-  await expect(page.locator('.fact-row')).toHaveCount(1);
-  await expect(page.locator('.fact-row')).toContainText('Died');
+  /*
+   * Undated at birth, dated at death, and no place at either end — so the
+   * register prints *nothing* (author, 2026-08-26: "'Died · 105 AD' as a lone
+   * table row looks empty"). It looked empty because it was: a two-column
+   * register drawn across the page to carry one cell saying what the subtitle
+   * two lines above it already said.
+   *
+   * The old assertion — one row, reading "Died" — is superseded, and the fact
+   * it was guarding is not: the year is still on the page, in the line under
+   * the name, and this now checks it there. A register with a *place* in it, or
+   * with two rows, still draws; ui/datefacts.js scopes the silence to the exact
+   * shape that was empty.
+   */
+  await expect(page.locator('.date-facts')).toHaveCount(0);
+  await expect(page.locator('.saint-facts')).toContainText('Reposed');
 });
 
 test('an address with no saint behind it is prose, not a red banner', async ({ page }) => {
@@ -424,18 +442,40 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   // one place it can be stolen: a row is a link with a picture in it, and
   // dragging a link starts a native drag that cancels the pointer stream.
   // Pushing from the thumbnail instead would pass with that defect present.
-  const push = async (distance) => {
+  // `pause` is what separates a haul from a flick: 30 ms a step is a hand
+  // moving deliberately, 0 is a hand snapping. The shelf measures the last
+  // 80 ms of travel at the release, so the two produce velocities an order of
+  // magnitude apart from the same distance.
+  const push = async (distance, pause = 0) => {
     const name = rows.first().locator('.index-name');
     const box = await name.boundingBox();
     const y = box.y + box.height / 2;
     const x = box.x + box.width / 2;
     await page.mouse.move(x, y);
     await page.mouse.down();
-    for (let i = 1; i <= 8; i += 1) await page.mouse.move(x + (distance * i) / 8, y);
+    for (let i = 1; i <= 8; i += 1) {
+      await page.mouse.move(x + (distance * i) / 8, y);
+      if (pause) await page.waitForTimeout(pause);
+    }
     await page.mouse.up();
   };
 
-  await push(70);
+  /*
+   * **The two halves parted on 2026-08-26** (author: "Make the swipe on the
+   * Continue Reading row cards easier, it snaps back too easily making it too
+   * hard to remove"). Until then "short" was the whole test of intent, and 70 px
+   * pushed at any speed sprang back.
+   *
+   * A short push is now two different gestures and the shelf reads them
+   * differently: a short *slow* one is a reader nudging a row and it springs
+   * back; a short *fast* one is a flick and the row goes. That second reading is
+   * the fix — a real swipe across a row is over in about a tenth of a second and
+   * covers a third of the width, which the old distance-only test called a miss.
+   *
+   * So this pushes slowly, with the moves spaced in time, and the flick has a
+   * test of its own below.
+   */
+  await push(70, 30);
   // A real wait, and it has to be: a removal is a 200 ms flight and only then
   // a repaint, so asserting the count straight after the push passes while
   // the row is still on screen on its way out. (Caught by backing the
@@ -447,7 +487,7 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   expect(await rows.first().evaluate((r) => r.style.transform || 'none')).toBe('none');
   await expect(page).toHaveURL(/\/calendar\//); // the swipe did not open the saint
 
-  await push(420);
+  await push(420, 30);
   await expect(rows).toHaveCount(1);
   await expect(page.locator('.shelves')).toContainText('Continue reading');
 });
@@ -2048,9 +2088,13 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
    * not. Same reading, same one calendar answering for the whole day.
    */
   await expect(page.locator('.density')).toHaveCount(0);
+  // The label carries the day's own marks since 2026-08-26 — a fast, a fish
+  // day, a feast — because a dot says nothing to a screen reader. 28 June is a
+  // Sunday inside the Apostles' Fast in the Greek calendar, so it keeps that
+  // clause after the count goes.
   await expect(
     page.locator('.week-strip [data-iso="2026-06-28"]'),
-  ).toHaveAttribute('aria-label', 'Sunday, 28 June 2026');
+  ).toHaveAttribute('aria-label', 'Sunday, 28 June 2026 - a fast');
 
   // And in the month, which counts the same entries.
   await page.locator('[data-month]').click();
@@ -2179,47 +2223,104 @@ test('an empty day says which of the two silences it is', async ({ page }) => {
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
 });
 
-test('the first visit is asked two questions, and each is answered on its own', async ({ page }) => {
+test('a first visit is shown where the two controls are, and the day is not held back', async ({ page }) => {
   /*
-   * One question until 2026-08-25 evening, when the author added the second:
-   * "same as the message to choose which church, open the language options as
-   * well for first time visitors to know they can change language."
+   * **This reverses the first-visit gate**, at the author's instruction of
+   * 2026-08-26: "Replace the language and calendar pop-ups on first opening
+   * with a fade-in glowing tool tip with an arrow pointing to each of the two
+   * buttons, explaining you can select your church from here, and language from
+   * here."
    *
-   * The two are deliberately not the same kind of question, and this is where
-   * the difference is pinned. The calendar has no default and the page waits
-   * for it. The language has one — English, which the reader is already
-   * reading — so answering the calendar alone opens the whole site, and the
-   * language is asked again next visit rather than assumed. Nothing under
-   * either but its own choices.
+   * What the gate was for is worth restating, because it was not decoration.
+   * From 2026-08-21 the calendar asked which church the reader kept and showed
+   * *nothing* until it was answered — no strip, no date, no day — on the
+   * argument that a calendar with no church chosen is the site picking one and
+   * not saying so. A second block joined it on 2026-08-25 evening for the
+   * language, and that one was an offer rather than a gate, because English is
+   * a default the reader is already reading.
+   *
+   * The argument is answered rather than dropped, and this is where that is
+   * pinned. The guess is `defaultChurch()` — the reader's own browser language,
+   * never written to settings — the header has named the church on every page
+   * since 2026-08-24, and a mark under that control says which control changes
+   * it. `hasChosen()` is untouched: the marks come back next visit, and the
+   * three pages that can do without a calendar still do (`chosenChurch`).
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-ask]')).toBeVisible();
-  await expect(page.locator('.ask-block')).toHaveCount(2);
-  await expect(page.locator('[data-ask-church] [data-church]')).toHaveCount(4);
-  await expect(page.locator('[data-ask-language] [data-language]')).toHaveCount(5);
-  await expect(page.locator('[data-advanced]')).toHaveCount(0);
-  await expect(page.locator('[data-ask-choice]')).toHaveCount(0);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
+  // The gate itself, gone: no panel, no blocks, and nothing hidden behind them.
+  await expect(page.locator('[data-ask]')).toHaveCount(0);
+  await expect(page.locator('.cal-gate')).toHaveCount(0);
+  await expect(page.locator('.week-strip')).toBeVisible();
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
 
-  await page.locator('[data-ask-church] [data-church="romanian"]').click();
-  // The calendar's question goes; the language's stays, because it has not
-  // been answered and the page below no longer waits on it.
-  await expect(page.locator('[data-ask-church]')).toHaveCount(0);
-  await expect(page.locator('[data-ask-language]')).toHaveCount(1);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
+  // Two marks, each under the control it names, each with a way out.
+  const marks = page.locator('.coachmark');
+  await expect(marks).toHaveCount(2);
+  await expect(marks.first()).toContainText('Your church and calendar');
+  await expect(marks.last()).toContainText('Your language');
+  await expect(page.locator('.coachmark-close')).toHaveCount(2);
+
+  // Each points at its own control: the arrow's x is set on the box after the
+  // box has been clamped into the viewport, so this is the only honest way to
+  // ask where a mark is pointing.
+  const pointing = await page.evaluate(() =>
+    [...document.querySelectorAll('.coachmark')].map((el) => {
+      const box = el.getBoundingClientRect();
+      const arrow = parseFloat(getComputedStyle(el).getPropertyValue('--arrow-x'));
+      return box.left + arrow;
+    }),
+  );
+  for (const [i, id] of ['church-open', 'lang-open'].entries()) {
+    const target = await page.locator(`#${id}`).boundingBox();
+    expect(Math.abs(pointing[i] - (target.x + target.width / 2))).toBeLessThan(2);
+  }
+
+  // A mark is not an answer: nothing is stored until the reader chooses, so
+  // the marks are owed again next visit.
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church)).toBeUndefined();
+  await page.locator('.coachmark-close').first().click();
+  await expect(marks).toHaveCount(1);
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(2);
+
+  // Answering from the header is what stops the asking — and opening either
+  // control takes both marks, because they are one message in two halves.
+  await openChooser(page);
+  await expect(page.locator('.coachmark')).toHaveCount(0);
+  await page.locator('#church-panel [data-church="romanian"]').click();
   await expect(page.locator('#church-open')).toHaveText('Romanian');
-  // Focus goes somewhere that still exists: the strip's own chrome.
-  expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-today'))).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('romanian');
 
-  // English is an answer too, and answering it is what stops the asking.
-  await page.locator('[data-ask-language] [data-language="en"]').click();
-  await expect(page.locator('[data-ask]')).toHaveCount(0);
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).language)).toBe('en');
-
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-ask]')).toHaveCount(0);
-  await expect(page.locator('#church-open')).toHaveText('Romanian');
+  // The language is still unanswered, so its mark alone comes back.
+  await expect(page.locator('.coachmark')).toHaveCount(1);
+  await expect(page.locator('.coachmark')).toContainText('Your language');
+});
+
+test('a coachmark goes on the second scroll, and not on the first', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "It also disappears after the second scroll input, down
+   * or up." Two, not one, and the reason is that the first scroll is a reader
+   * looking at the page they arrived on — dismissing on it would mean most
+   * readers never read the mark at all.
+   *
+   * What counts as *one* input is the part worth pinning: a wheel notch fires
+   * scroll events every frame for a few hundred milliseconds, so counting raw
+   * events would spend both on one gesture. ui/coachmark.js separates them by a
+   * pause, which is what the waits below are.
+   */
+  await page.setViewportSize({ width: 1280, height: 700 });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(2);
+
+  await page.mouse.wheel(0, 400);
+  await page.waitForTimeout(600);
+  await expect(page.locator('.coachmark')).toHaveCount(2);
+
+  // Up counts as readily as down: it is an input, not a direction.
+  await page.mouse.wheel(0, -400);
+  await page.waitForTimeout(600);
+  await expect(page.locator('.coachmark')).toHaveCount(0);
 });
 
 test('every day on the rail sits on one line', async ({ page }) => {
@@ -2243,23 +2344,27 @@ test('every day on the rail sits on one line', async ({ page }) => {
   expect(tops.nums).toBe(1);
 });
 
-test('the hero image is 85% of the width it took, and opens the saint', async ({ page }) => {
-  // A tall icon at full width put the saint's own name below the fold at
-  // 360 px, which is the one thing a hero cannot do (author, 2026-08-21).
+test('the hero image fills its column, and opens the saint', async ({ page }) => {
+  /*
+   * **Full width from 2026-08-26**, where it was 85% and centred from
+   * 2026-08-21. Both halves of that decision were bought by the square: the
+   * 15% kept a tall icon's own name above the fold at 360 px, and the centring
+   * was a frame's habit. The 3:2 band clears the fold on its own — the test
+   * below still measures it — and with the panel gone (author: "Let the main
+   * saint sit directly on the ground") an inset picture over a full-measure
+   * name reads as a mistake rather than as a margin.
+   *
+   * Wide, the image still has a column of its own and still fills it; the
+   * 221 px track is unchanged, because that number was the *column's* and not
+   * the image's.
+   */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  // 85% of the width it took, which is a different measurement in each of the
-  // panel's two layouts: the column narrowed from 260 to 221 where the panel
-  // gives the image a column, and the image narrowed within the panel where it
-  // does not.
   const m = await page.evaluate(() => {
     const hero = document.querySelector('.hero');
     const s = getComputedStyle(hero);
-    // The used track sizes, which is the image's actual containing block. The
-    // panel has a border as well as padding, and subtracting only the padding
-    // from a bounding box is off by exactly the border.
     const tracks = s.gridTemplateColumns.split(' ').map(parseFloat).filter((n) => !Number.isNaN(n));
     return {
       tracks,
@@ -2267,10 +2372,7 @@ test('the hero image is 85% of the width it took, and opens the saint', async ({
       width: document.querySelector('.hero-media').getBoundingClientRect().width,
     };
   });
-  // Where the panel gives the image a column, the column itself narrowed from
-  // 260 to 221 and the image fills it. Where it does not, the image narrowed
-  // inside the panel.
-  const expected = m.tracks.length === 2 ? m.tracks[0] : 0.85 * m.column;
+  const expected = m.tracks.length === 2 ? m.tracks[0] : m.column;
   if (m.tracks.length === 2) expect(Math.round(m.tracks[0])).toBe(221);
   expect(Math.abs(m.width - expected)).toBeLessThan(1);
 
@@ -2344,30 +2446,37 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
   expect(name.y).toBeLessThan(780);
 });
 
-test('on a first visit both questions clear the fold, and the day does not', async ({ page }) => {
-  // The one deliberate exception to the rule above (author, 2026-08-21;
-  // revised 2026-08-22). A first visit is asked which calendar it keeps, and
-  // nothing weekly or daily shows until it answers: what has to be above the
-  // fold on that visit is the question and every one of its answers. Every
-  // visit after it is the test above.
-  //
-  // Two questions since 2026-08-25 evening, and *both* clear it — the second
-  // is the one telling a reader the site has five languages, and a question
-  // below the fold on a first visit has not been asked. On a 360x780 phone
-  // the pair ends 457 px down, which is the measurement that keeps this from
-  // being an aspiration.
+test('on a first visit the two marks clear the fold, and so does the day', async ({ page }) => {
+  /*
+   * The exception this test was written for is gone with the gate (2026-08-26).
+   * From 2026-08-21 to 2026-08-26 a first visit saw the question and nothing
+   * else, and what had to clear the fold was the question and every one of its
+   * answers — which is why the rule above about the saint's name clearing the
+   * fold had to make an exception for the first visit.
+   *
+   * There is no exception now, and that is the stronger claim: a first visit
+   * gets the day *and* is told where the two controls are. Both marks stand
+   * clear of the fold on a 360x780 phone, and so does the saint's own name
+   * under them, which no first visit could see at all before.
+   *
+   * The marks must also not overlap each other. They sit under controls at
+   * opposite ends of the header, and a 30ch box under each overlapped in the
+   * middle of a 390 px screen — the one drawn second covering the ×  of the one
+   * drawn first. Found by rendering it and looking; kept honest here.
+   */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  const ask = await page.locator('[data-ask]').boundingBox();
-  const churches = await page.locator('[data-ask-church] [data-church]').last().boundingBox();
-  const languages = await page.locator('[data-ask-language] [data-language]').last().boundingBox();
+  const boxes = [];
+  for (let i = 0; i < 2; i += 1) boxes.push(await page.locator('.coachmark').nth(i).boundingBox());
+  for (const box of boxes) expect(box.y + box.height).toBeLessThan(780);
 
-  expect(ask.y + ask.height).toBeLessThan(780);
-  expect(churches.y + churches.height).toBeLessThan(780);
-  expect(languages.y + languages.height).toBeLessThan(780);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
+  const [a, b] = boxes.sort((x, y) => x.x - y.x);
+  expect(a.x + a.width, 'the two marks overlap').toBeLessThanOrEqual(b.x);
+
+  const name = await page.locator('.hero-name').boundingBox();
+  expect(name.y).toBeLessThan(780);
 });
 
 /* ---- one swap primitive (src/ui/swap.js) -------------------------------- */
@@ -2908,31 +3017,43 @@ test('the saint page puts the register beside the image on desktop, the body ben
 
 /* ---- the 2026-08-22 round, Phase 2: the header, the selection, one calendar -- */
 
-test('the first visit is asked which calendar, and sees no strip until it answers', async ({ page }) => {
-  // Addendum H7–H8, redrawn for one church of three (author, 2026-08-22): one
-  // question, standing where the strip will stand, and the week, the date and
-  // the day stay hidden until it is answered. The answer is the site's.
+test('a first visit opens on a calendar it did not choose, and is told which', async ({ page }) => {
+  /*
+   * Addendum H7–H8 said the strip, the date and the day stay hidden until the
+   * reader has said which calendar they keep (author, 2026-08-22). **Superseded
+   * 2026-08-26**, with the coachmarks: the day opens on a guessed calendar and
+   * the guess is named in the header, which is the whole of what makes it
+   * honest. The test is kept and turned around, because the property it guards
+   * is the same one — the reader must never be shown a calendar without being
+   * told which it is.
+   *
+   * The guess is the browser's own language and nothing else about the reader.
+   * This context is en-US, which none of the four churches claims, so it falls
+   * through to Russian — the calendar with the most to show: 426 of the 742
+   * folders and day records running to January where the Greek and Serbian stop
+   * in September.
+   */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-gate] [data-ask]')).toBeVisible();
-  await expect(page.locator('[data-ask] [data-church]')).toHaveCount(4);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(true);
-  await expect(page.locator('.week-strip')).toBeHidden();
-  await expect(page.locator('#church-open')).toHaveText('Choose a calendar');
-
-  await page.locator('[data-ask] [data-church="russian"]').click();
-  // The calendar's question goes. The language's remains until it is answered
-  // in its own right (2026-08-25 evening), and the page below no longer waits.
-  await expect(page.locator('[data-ask-church]')).toHaveCount(0);
-  expect(await page.evaluate(() => document.querySelector('[data-cal-body]').hidden)).toBe(false);
   await expect(page.locator('.week-strip')).toBeVisible();
-  // The calendar is named and changed in the header (author, 2026-08-24);
-  // nothing under the strip offers it any more.
-  await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
+  // And it is a guess, not an answer: nothing is written until the reader says.
+  const before = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
+  expect(before.church).toBeUndefined();
+  await expect(page.locator('.coachmark')).toHaveCount(2);
+
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  // Choosing the same calendar the guess had picked still changes something:
+  // it is stored, and the marks stop.
+  await expect(page.locator('.week-strip')).toBeVisible();
+  await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
   expect(stored.church).toBe('russian');
   expect(stored.traditions).toBeUndefined();
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(1);
 });
 
 test('the header control names the calendar, offers the three, and the Index follows every press', async ({ page }) => {
@@ -3077,9 +3198,31 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
    * refuses to compute an allowance, which is why a day whose calendar
    * printed none still says only "Fast".
    */
-  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · Oil and wine - the Dormition Fast');
+  /*
+   * **The fast leads the line, as a chip, since 2026-08-26** (author: "Fasting
+   * is the number-one daily question and it's currently the quietest element …
+   * Make it a chip at the top of the day — coloured with your
+   * fast-strict/fish/free tokens — and print the allowance inline on fast
+   * days"). The three facts are the same three and the order is reversed: the
+   * fast first, then what it allows, then the cycle and the tone.
+   *
+   * So the one string that asserted all three in one reading is three
+   * assertions, which is also a truer test — it can no longer pass on a line
+   * that happens to contain the right words in the wrong places.
+   */
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil and wine - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Oil and wine are permitted.');
+  await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'oil');
+  // A chip, not a run of coloured words: it carries a field and a hairline of
+  // its own colour, which is what makes it findable before it is read.
+  const chip = await page.locator('[data-liturgy] .fast').evaluate((el) => {
+    const cs = getComputedStyle(el);
+    return { radius: parseFloat(cs.borderTopLeftRadius), border: parseFloat(cs.borderTopWidth) };
+  });
+  expect(chip.radius).toBeGreaterThan(8);
+  expect(chip.border).toBeGreaterThan(0);
   // The fast carries its kind, so the three states are told apart by colour
   // as well as by their wording (author, 2026-08-24).
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast');
@@ -3105,9 +3248,17 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   await page.locator('#church-panel [data-church="greek"]').click();
   // And an ordinary Friday, whose calendar printed no allowance: the line
   // says which fast and stops.
-  await expect(page.locator('[data-liturgy]')).toContainText('13th week after Pentecost · Tone 3 · Fast - Friday');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Fast - Friday');
+  await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
+  // A fast whose calendar printed no allowance still prints the one every fast
+  // shares, which is the most the site will say unasked.
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Meat, dairy and eggs are set aside.');
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('No fast');
+  await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
+  // And a fast-free day prints no allowance at all: "Nothing is set aside"
+  // under a chip that already reads "No fast" is the same sentence twice.
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveCount(0);
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast-free');
 });
 
@@ -3203,7 +3354,8 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   // reader is given. The Serbian calendar records no fasting note at all for
   // this day, so no grade leads the line: what a calendar has not printed,
   // the page does not say.
-  await expect(page.locator('[data-liturgy]')).toContainText('12th Sunday after Pentecost · Tone 3 · Fast - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Fast - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
   const links = page.locator('[data-readings] .readings a');
@@ -3217,7 +3369,8 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
-  await expect(page.locator('[data-liturgy]')).toContainText('13th week after Pentecost · Tone 3 · No fast');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('No fast');
+  await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
 
   // The Russian week (Amendment 29 too): the 24th is its 11 August, Euplus
   // and the Caves fathers with Church Slavonic tropars from the Patriarchate's
@@ -3274,9 +3427,9 @@ test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async (
   }
 });
 
-test('no axe violations on the first visit, with the question standing', async ({ page }) => {
+test('no axe violations on the first visit, with the two marks standing', async ({ page }) => {
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-ask]')).toBeVisible();
+  await expect(page.locator('.coachmark')).toHaveCount(2);
   const results = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
     .analyze();
@@ -3312,7 +3465,10 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
   await expect(page.locator('h1.saint-name')).toHaveText('St. Eleutherius, Monk-martyr (1937)');
   await expect(page.locator('.life p').first()).toContainText('Eleutherius Pechennikov was born in 1870');
-  await expect(page.locator('.fact-row', { hasText: 'Died' })).toContainText('1937');
+  // The year, in the line under the name: his register is a lone dated death
+  // with no place, which ui/datefacts.js stopped drawing on 2026-08-26 because
+  // it only ever repeated the subtitle.
+  await expect(page.locator('.saint-facts')).toContainText('1937');
   await expect(page.locator('.life em a[href*="azbyka.ru"]')).toHaveCount(1);
 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -3373,7 +3529,24 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
 
   await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
   await expect(page.locator('h1.saint-name')).toHaveText('Sf. Vavila, Episcopul Antiohiei');
-  await expect(page.locator('.life p').first()).toContainText('this great and wonderful man');
+  /*
+   * The life itself is English and the page says so first, in Romanian
+   * (author, 2026-08-26: "The saint profile pages do not have russian, greek,
+   * serbian or romanian translations. We need to add them").
+   *
+   * Everything on this page that is the *site's* words now translates. The
+   * corpus does not, and will not by this build: 742 lives, each the author's
+   * paraphrase of a named source, and the only way to render them into four
+   * languages is machine translation — which Amendment 2 forbids outright, and
+   * which in hagiography would turn a mistranslated clause into a false claim
+   * about a person and about a source cited by name. So the reader is told,
+   * once, rather than left to wonder whether the page is broken.
+   */
+  await expect(page.locator('.life-language')).toHaveText(
+    'Viața este scrisă în engleză și încă nu a fost tradusă.',
+  );
+  await expect(page.locator('.life [lang="en"]')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('.life p').nth(1)).toContainText('this great and wonderful man');
   await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
   await expect(page.locator('.saint-media img')).toBeVisible();
   const credit = page.locator('.image-credit a');
@@ -3469,18 +3642,12 @@ test('the calendar chooser asks its question and offers the four, with nothing b
    * above four buttons each printing exactly that, so it said the choices
    * twice and put four lines between the question and the answer.
    *
-   * Both hosts, because one component draws both: the first-visit gate on the
-   * calendar page, and the header's panel.
+   * **One host since 2026-08-26**, where there were two. The component drew the
+   * calendar page's first-visit gate as well as the header's panel; the gate is
+   * gone with the coachmarks that replaced it, so the header's panel is the
+   * whole of where this question is now asked — which is also where the marks
+   * point.
    */
-  await page.goto('/', { waitUntil: 'networkidle' });
-  // Scoped to the calendar's own block since 2026-08-25 evening: the gate
-  // holds the language question under it, and that has a heading too.
-  const gate = page.locator('[data-ask-church]');
-  await expect(gate.locator('.ask-heading')).toHaveText('Which calendar do you keep?');
-  await expect(gate.locator('p')).toHaveCount(0);
-  await expect(gate).not.toContainText('Four churches keep their calendars here');
-  await expect(gate.locator('[data-church]')).toHaveCount(4);
-
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await openChooser(page);
@@ -4361,17 +4528,26 @@ test('the rail shows the days either side whole, not clipped by the fade', async
   expect(seen.afterVisible).toBeGreaterThan(seen.afterNeeds + seen.fade);
 });
 
-test('no date carries dots, at either grain', async ({ page }) => {
+test('no date carries a density dot, and a fast or a feast carries its own', async ({ page }) => {
   /*
    * Author, 2026-08-25 evening: "remove the dots under each date in the
    * calendar." They stood under every date at both grains from the first
-   * calendar; DESIGN.md's "Dense against sparse" argued them and now records
-   * the reversal in place.
+   * calendar — one per commemoration, capped at five — and DESIGN.md's "Dense
+   * against sparse" argued them and now records the reversal in place. That
+   * removal stands and is still the first half of this test.
    *
-   * The count they drew is not gone, and this says where it went: the day
-   * button's accessible name. That is a divergence between what is seen and
-   * what is spoken, and it is deliberate — a reader who cannot glance at the
-   * register has no other way to learn a day's weight before opening it.
+   * **Two marks came back on 2026-08-26**, and they are not those dots
+   * returning: "Dots on the week strip for fast and feast days would let
+   * someone plan the week at a glance." The old dots said only that a day was
+   * busy. These say a thing a reader plans around, each with a source: the fast
+   * from lib/liturgy.js in this church's own calendar, the feast from the day's
+   * record carrying hymns — which is the rank cross the calendar itself
+   * printed, since the harvest ships hymns only for its top-rank days.
+   *
+   * 25 August 2026 is inside the Dormition Fast in the Russian calendar, and
+   * carries no feast. Both facts are in the day button's accessible name too:
+   * a dot says nothing to a screen reader, and colour says nothing to a reader
+   * who cannot separate hues.
    */
   await ready(page);
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
@@ -4379,13 +4555,46 @@ test('no date carries dots, at either grain', async ({ page }) => {
   await expect(page.locator('.week-strip i')).toHaveCount(0);
   await expect(page.locator('.week-strip [data-iso="2026-08-25"]')).toHaveAttribute(
     'aria-label',
-    /^Tuesday, 25 August 2026 - \d+ commemorations$/,
+    /^Tuesday, 25 August 2026 - \d+ commemorations - a fast$/,
   );
+  const today = page.locator('.week-strip [data-iso="2026-08-25"]');
+  await expect(today.locator('.mark-fast')).toHaveCount(1);
+  await expect(today.locator('.mark-feast')).toHaveCount(0);
+  // The marks are aria-hidden: what they say is said in words on the button.
+  await expect(today.locator('.day-marks')).toHaveAttribute('aria-hidden', 'true');
 
+  // A fast-free day carries none at all, which is what makes a run of them
+  // legible. 20 September is the one: 23 August is a Sunday and still inside
+  // the Dormition Fast, which the Julian calendar runs to the civil 27th — the
+  // exact difference this site exists to show, and a reminder that "Sunday"
+  // is not a synonym for "no fast".
+  const sunday = page.locator('.week-strip [data-iso="2026-09-20"]');
+  await expect(sunday.locator('.day-mark')).toHaveCount(0);
+  await expect(sunday).toHaveAttribute('aria-label', /^Sunday, 20 September 2026 - \d+ commemorations$/);
+
+  // The feast mark is the one place the calendar spends gold (author,
+  // 2026-08-26: "Gold is almost unused"). 21 September is the Nativity of the
+  // Theotokos in the Russian calendar and its record carries the day's hymns.
+  await page.goto('/calendar/2026-09-21', { waitUntil: 'networkidle' });
+  const feast = page.locator('.week-strip [data-iso="2026-09-21"] .mark-feast');
+  await expect(feast).toHaveCount(1);
+  const gold = await page.evaluate(() =>
+    getComputedStyle(document.documentElement).getPropertyValue('--gold').trim(),
+  );
+  const painted = await feast.evaluate((el) => getComputedStyle(el).backgroundColor);
+  const hex = (rgb) => {
+    const [r, g, b] = rgb.match(/\d+/g).map(Number);
+    return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
+  };
+  expect(hex(painted)).toBe(gold.toLowerCase());
+
+  // The month is unchanged: the marks are the week strip's, which is where the
+  // author asked for them and where a week is planned.
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
   await expect(page.locator('.density')).toHaveCount(0);
   await expect(page.locator('.month-grid i')).toHaveCount(0);
+  await expect(page.locator('.month-grid .day-mark')).toHaveCount(0);
 });
 
 test('a register row keeps its bookmark on the row, however long the name', async ({ page }) => {
@@ -4821,17 +5030,35 @@ test('the hero keeps its foot close under the dates', async ({ page }) => {
   expect(foot).toBeLessThan(50);
 });
 
-test('a hero with a picture keeps its full foot', async ({ page }) => {
-  // The trim is scoped to the heroes that needed it. Where there is an icon
-  // the image column is the taller side and its own bottom sets the panel's
-  // depth, so taking the foot off there would crowd the picture instead.
+test('a hero with a picture has no frame to have a foot', async ({ page }) => {
+  /*
+   * The trim was scoped to the heroes that needed it: where there is an icon
+   * the image column is the taller side and its own bottom set the panel's
+   * depth, so taking the foot off there would have crowded the picture.
+   * **Superseded in the round after Amendment 45**, when the author said it a
+   * second time — "The margin on the bottom of the Daily saint card is still
+   * too much" — and, in the same breath, took the frame away: "Let the main saint sit directly on
+   * the ground with the icon as the strongest element."
+   *
+   * With no panel there is no foot to scope, on either kind of hero, and the
+   * question this test asked no longer has two answers. What it guards now is
+   * that the frame is really gone — no border, no field — because a hero that
+   * quietly regained either would be the boxes coming back.
+   */
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero.has-media')).toBeVisible();
-  const padded = await page.evaluate(
-    () => parseFloat(getComputedStyle(document.querySelector('.hero')).paddingBottom),
-  );
-  expect(padded).toBeGreaterThan(12);
+  const dress = await page.evaluate(() => {
+    const cs = getComputedStyle(document.querySelector('.hero'));
+    return {
+      padded: parseFloat(cs.paddingBottom),
+      border: parseFloat(cs.borderBottomWidth),
+      background: cs.backgroundColor,
+    };
+  });
+  expect(dress.padded).toBe(0);
+  expect(dress.border).toBe(0);
+  expect(dress.background).toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
 });
 
 test('a row for a saint with no icon starts at the card margin', async ({ page }) => {
@@ -5449,6 +5676,259 @@ test('the first day past the runway has its saints, and the eight the corpus alr
   await page.locator('[data-reveal]').click();
   await expect(page.locator('main')).toContainText('doxologia.ro');
   await expect(page.locator('main')).not.toContainText('Not checked: doxologia.ro');
+});
+
+test('a date picked in the month is where the week opens, however far it was scrolled', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "When I scroll away in the monthly display, select a
+   * date there, and go back to the weekly display, the weekly display should
+   * open in the new location, not the old as it currently does."
+   *
+   * Two things were wrong and both had the same cause. Picking a date in the
+   * month leaves the month open — that decision stands, so a reader comparing
+   * days need not reopen it — and the rail underneath is `hidden` for the whole
+   * of it. A hidden rail has no geometry: `offsetLeft` and `clientWidth` are
+   * both 0, so the reveal that runs on every selection computed its scroll from
+   * zeroes and left the rail wherever that arithmetic put it. And a rail
+   * anchored sixty days away does not hold a date three months out at all.
+   *
+   * So the reveal is deferred rather than attempted, and it re-anchors: the
+   * week is brought back as the month closes, before the fade, so the right
+   * week is already there when the reader can first see it.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+  // Three months out, which is past the rail's own radius and well past the
+  // seven days it was showing.
+  for (let i = 0; i < 3; i += 1) {
+    await page.locator('[data-mstep="1"]').click();
+    await page.waitForTimeout(500);
+  }
+  await page.locator('.month-grid [data-iso="2026-12-14"]').click();
+  await expect(page.locator('.cal-date')).toContainText('14 Dec 2026');
+
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(700);
+
+  // The rail holds the day at all — it was rebuilt around it — and the day is
+  // inside the strip's own scroll window rather than three months off one end.
+  const where = await page.evaluate(() => {
+    const strip = document.querySelector('.week-strip');
+    const day = strip.querySelector('[data-iso="2026-12-14"]');
+    if (!day) return null;
+    const pad = parseFloat(getComputedStyle(strip).scrollPaddingLeft) || 0;
+    return {
+      left: day.offsetLeft - strip.scrollLeft,
+      width: day.offsetWidth,
+      viewport: strip.clientWidth,
+      pad,
+    };
+  });
+  expect(where, 'the rail does not hold the day at all').not.toBeNull();
+  expect(where.left).toBeGreaterThanOrEqual(where.pad - 2);
+  expect(where.left + where.width).toBeLessThanOrEqual(where.viewport - where.pad + 2);
+
+  // And it is the whole week that shows, not the day pinned to an edge: coming
+  // back from the month is an arrival, and an arrival shows the week the day
+  // sits in. 14 December 2026 is a Monday, so it leads its own week.
+  await expect(page.locator('.week-strip [data-iso="2026-12-14"]')).toHaveAttribute('aria-current', 'date');
+  const monday = await page.evaluate(() => {
+    const strip = document.querySelector('.week-strip');
+    const day = strip.querySelector('[data-iso="2026-12-14"]');
+    const pad = parseFloat(getComputedStyle(strip).scrollPaddingLeft) || 0;
+    return Math.abs(day.offsetLeft - pad - strip.scrollLeft);
+  });
+  expect(monday).toBeLessThan(3);
+});
+
+test('the day says whose name day it is, and links only the names one saint bears', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "add name days". In Orthodox practice a name day is the
+   * feast of the saint whose name you bear, and in Greece, Romania, Russia and
+   * Serbia alike it is the day that is actually kept.
+   *
+   * Nothing here is looked up or invented: every name is the first word of a
+   * commemoration already printed above it, cut at the first comma or bracket
+   * (lib/name-days.js). 20 September in the Russian calendar is the case worth
+   * pinning, because it holds both halves — nineteen names from twenty-one
+   * saints, two of them shared.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+
+  const names = page.locator('[data-namedays] .name-day');
+  await expect(page.locator('[data-namedays] .register-heading')).toHaveText('Name days');
+  // The hero counts: he is one of the day's saints, not a separate thing.
+  await expect(names.filter({ hasText: 'Sozon' })).toHaveCount(1);
+  await expect(names.filter({ hasText: 'Serapion' })).toHaveCount(1);
+
+  // A name one saint bears opens that saint.
+  await expect(page.locator('[data-namedays] a[data-prefetch="serapion-of-pskov"]')).toHaveCount(1);
+  // A name two of the day's saints share is text, because the site cannot tell
+  // which is meant: two Eugenes on this day, and two Macariuses.
+  const eugene = names.filter({ hasText: 'Eugene' });
+  await expect(eugene).toHaveCount(1);
+  expect(await eugene.evaluate((el) => el.tagName)).toBe('SPAN');
+  // Once each, however many saints bear it.
+  await expect(names.filter({ hasText: 'Macarius' })).toHaveCount(1);
+
+  // A collective gives nobody a name day. 26 August in the Greek calendar keeps
+  // a company whose English name is the company: it must not contribute "The".
+  await expect(names.filter({ hasText: /^The$/ })).toHaveCount(0);
+
+  // In the reader's own language, where the corpus recorded the form — a name
+  // day is the reader's name, and «Иоанн» is not "John" to whoever bears it.
+  await page.goto('/?lang', { waitUntil: 'networkidle' });
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    localStorage.setItem(key, JSON.stringify({ ...JSON.parse(localStorage.getItem(key)), language: 'ru' }));
+  });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-namedays] .register-heading')).toHaveText('Именины');
+  await expect(page.locator('[data-namedays]')).toContainText('Иоанн');
+});
+
+test('a life links the saints it names, and refuses the ones it cannot be sure of', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "In each Saint Profile, automatically scan for names of
+   * other saints to hyperlink to their profile."
+   *
+   * Hosius of Córdoba's life names Athanasius twice — once as "Athanasius the
+   * Great", which is not a folder title, and once as "Athanasius of
+   * Alexandria", which is. Only the second is linked, and that is the whole
+   * discipline: the site links a name it can be certain of and leaves the rest
+   * as prose. lib/cross-link.js has the four rules and the measurement they came
+   * from.
+   */
+  await ready(page);
+  await page.goto('/saints/hosius-of-cordoba', { waitUntil: 'networkidle' });
+  const link = page.locator('.life a[data-cross-link][data-prefetch="athanasius-of-alexandria"]');
+  await expect(link).toHaveCount(1);
+  await expect(link).toHaveText('Athanasius of Alexandria');
+  // The looser mention stays prose: "Athanasius the Great" is nobody's folder.
+  await expect(page.locator('.life')).toContainText('Athanasius the Great');
+  await expect(page.locator('.life a', { hasText: 'Athanasius the Great' })).toHaveCount(0);
+  // Once per saint, not once per mention: a paragraph naming someone four
+  // times wants one link.
+  await expect(page.locator('.life a[data-prefetch="athanasius-of-alexandria"]')).toHaveCount(1);
+  await link.click();
+  await expect(page.locator('h1.saint-name')).toHaveText('St. Athanasius of Alexandria');
+
+  // A life that already carries a hand-written link keeps its own and gains no
+  // second one: the walker refuses to enter an <a>.
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await expect(page.locator('.life a[href$="/saints/athanasius-of-alexandria"]')).toHaveCount(1);
+  await expect(page.locator('.life a[data-cross-link]')).toHaveCount(0);
+});
+
+test('a saint page reads in the reader’s own language, down to the feast and the status', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "The saint profile pages do not have russian, greek,
+   * serbian or romanian translations. We need to add them."
+   *
+   * Three separate defects, and only the first was visible as a missing string:
+   *
+   *   the church's name came from the registry's `display_name` instead of the
+   *     packs, so every row said ROMANIAN on a Romanian page;
+   *   the *status* was a module constant holding three strings, evaluated at
+   *     import — before any pack is merged, and once for the life of the page —
+   *     so "Venerated" was English in all five languages;
+   *   `formatFeast` composed "17 January (Revised Julian)" out of an English
+   *     month table and two English literals.
+   *
+   * The pack coverage was already complete, which is what narrowed the search
+   * from "the packs are missing keys" to "three places are not reading them".
+   */
+  await ready(page, { church: 'romanian', language: 'ro' });
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+
+  const row = page.locator('.attestations .att').first();
+  await expect(row.locator('.att-church')).toHaveText('Română');
+  await expect(row.locator('.att-status')).toHaveText('Cinstit');
+  await expect(row.locator('.att-feast')).toContainText('17 Ianuarie (calendarul iulian îndreptat)');
+  await expect(row.locator('.att-feast')).toContainText('anul acesta cade pe');
+  await expect(page.locator('.register-heading').first()).toHaveText('Cinstire');
+  // And no English survives in the site's own words on the row.
+  await expect(row.locator('.att-status')).not.toContainText('Venerated');
+
+  // The sex is off the line under the name (author, same instruction: "'Male'
+  // in the subtitle reads oddly for a devotional page"), and still a facet on
+  // the Index, which is where it was asked to stay.
+  await expect(page.locator('.saint-facts')).not.toContainText('Bărbat');
+  await expect(page.locator('.saint-facts')).not.toContainText('Male');
+
+  // The licence is at the foot of the page, not under the icon (author: "'Public
+  // domain' as the image caption is metadata that belongs at the bottom").
+  const order = await page.evaluate(() => {
+    const media = document.querySelector('.saint-media');
+    const credit = document.querySelector('.image-credit');
+    return {
+      creditInMediaColumn: Boolean(credit.closest('.saint-media-col')),
+      creditBelowLife: credit.getBoundingClientRect().top > document.querySelector('.life').getBoundingClientRect().bottom,
+      mediaAbove: media.getBoundingClientRect().top < credit.getBoundingClientRect().top,
+    };
+  });
+  expect(order.creditInMediaColumn).toBe(false);
+  expect(order.creditBelowLife).toBe(true);
+  expect(order.mediaAbove).toBe(true);
+});
+
+test('a flick clears a Continue reading row that a slow push of the same length does not', async ({ page }) => {
+  /*
+   * The other half of 2026-08-26's "Make the swipe on the Continue Reading row
+   * cards easier, it snaps back too easily making it too hard to remove", and
+   * the half that actually fixes it.
+   *
+   * Distance alone was the test of intent, and a real swipe fails it: the
+   * natural gesture is a quick push across a third of the row, over in about a
+   * tenth of a second. So the release is measured as well — the last 80 ms of
+   * travel, the same window the week rail reads its throw from — and a flick
+   * dismisses whatever the distance.
+   *
+   * Same distance in both halves, so the only variable is the speed.
+   */
+  await ready(page);
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+
+  const rows = page.locator('.shelf-row');
+  await expect(rows).toHaveCount(2);
+
+  /*
+   * `steps` matters as much as `pause`, and the reason is the harness rather
+   * than the shelf. Every mouse.move is a round trip to the browser, and under
+   * a fully parallel suite those round trips are slow enough that eight of them
+   * turn a flick into a haul — this test failed once that way and passed alone.
+   * Three moves is still a gesture with a direction and a speed, and it leaves
+   * the reading well clear of the threshold on a loaded machine.
+   */
+  const push = async (distance, { pause = 0, steps = 8 } = {}) => {
+    const name = rows.first().locator('.index-name');
+    const box = await name.boundingBox();
+    const y = box.y + box.height / 2;
+    const x = box.x + box.width / 2;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    for (let i = 1; i <= steps; i += 1) {
+      await page.mouse.move(x + (distance * i) / steps, y);
+      if (pause) await page.waitForTimeout(pause);
+    }
+    await page.mouse.up();
+  };
+
+  // 60 px is well under the quarter-width the distance test asks for, at any
+  // screen this suite runs at.
+  await push(60, { pause: 30 });
+  await page.waitForTimeout(500);
+  await expect(rows, 'a slow short push should spring back').toHaveCount(2);
+
+  await push(60, { steps: 3 });
+  await page.waitForTimeout(500);
+  await expect(rows, 'a flick of the same length should clear the row').toHaveCount(1);
 });
 
 test('a saint from a Greek company is named for herself, not for the whole entry', async ({ browser }) => {

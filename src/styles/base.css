@@ -106,6 +106,35 @@ a:hover {
   text-decoration-color: var(--ink);
 }
 
+/* A saint's name is a name, not a link wearing the marks of one (author,
+   2026-08-26: "Saint names as underlined headings … read as default hyperlinks
+   and fight the otherwise refined typography. Set them in rubric or ink with
+   underline on hover only; the whole card is already the tap target").
+
+   Ink rather than rubric, and the choice is DESIGN.md §2's: red is where the
+   reader *is* — the current nav item, today's weekday, the selected date — and
+   spending it on every name in a register would leave the reader's own place
+   with nothing to say it. The Index's cards have read this way since they were
+   built (`.index-name`, index.css); this is the same rule reaching the three
+   places it had not: the day's hero, the register beside it, and the related
+   list on a saint's page.
+
+   Where a name sits inside prose it keeps the underline: a life's link to
+   another saint is a link in running text and has no card to be the target. */
+.hero-name a,
+.reg-name,
+.shelf-name {
+  text-decoration: none;
+}
+
+.hero-name a:hover,
+.reg-name:hover,
+.shelf-name:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--ink-soft);
+}
+
 :focus-visible {
   outline: 2px solid var(--rubric);
   outline-offset: 2px;
@@ -556,6 +585,101 @@ main.chrome:has(.cal-controls) {
 
 .panel:hover {
   border-color: var(--ink-soft);
+}
+
+/* ---- coachmarks ------------------------------------------------------- */
+
+/* The two marks a first visit meets (author, 2026-08-26), replacing the panel
+   of choices the calendar used to open with. Positioned in document
+   coordinates by ui/coachmark.js, exactly as the fast bubble is, so a mark
+   travels with the page rather than hovering over a scroll it no longer
+   belongs to.
+
+   The glow is the one the author asked for and it is the second thing gold is
+   spent on: a warm halo rather than a border, so the mark reads as lit from
+   under the control it points at instead of as another outlined box on a page
+   the same instruction is taking boxes off. It breathes once and stops —
+   `coach-glow` runs twice and rests. An animation that never ends is a thing
+   the eye keeps returning to, and this one has three sentences of work to do. */
+.coachmark {
+  position: absolute;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  /* Half the viewport, less the inset — because there are *two* of these and
+     they stand under controls at opposite ends of the header. A 30ch box under
+     each overlapped in the middle of a 390 px phone, and the one drawn first
+     lost its × underneath the other. Two marks that fit side by side is the
+     constraint; the text was cut to fit it rather than the box grown to fit
+     the text. */
+  max-width: min(26ch, calc(50vw - 10px));
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  border-radius: var(--radius-panel);
+  background: var(--field);
+  font-family: var(--font-utility);
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--ink);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity var(--dur-slot) var(--ease),
+    transform var(--dur-slot) var(--ease);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 40%, transparent);
+}
+
+.coachmark.is-in {
+  opacity: 1;
+  transform: none;
+  animation: coach-glow 2.4s var(--ease) 2;
+}
+
+@keyframes coach-glow {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 0%, transparent); }
+  50% { box-shadow: 0 0 14px 1px color-mix(in srgb, var(--gold) 45%, transparent); }
+}
+
+/* The arrow: two triangles, the outer one the border's colour and the inner
+   one the field, so the mark keeps its hairline all the way round the point.
+   --arrow-x is where the control's centre is, set by the JS after the box has
+   been clamped into the viewport — so the point stays on the button even when
+   the box could not be centred under it. */
+.coachmark::before,
+.coachmark::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: var(--arrow-x, 50%);
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  transform: translateX(-50%);
+}
+
+.coachmark::before {
+  border-bottom-color: color-mix(in srgb, var(--gold) 55%, transparent);
+}
+
+.coachmark::after {
+  margin-bottom: -1px;
+  border-width: 6px;
+  border-bottom-color: var(--field);
+}
+
+.coachmark-text {
+  flex: 1 1 auto;
+}
+
+.coachmark-close {
+  flex: none;
+  color: var(--ink-soft);
+  padding: var(--space-1);
+}
+
+.coachmark-close:hover {
+  color: var(--ink);
 }
 
 /* ---- loading --------------------------------------------------------- */
