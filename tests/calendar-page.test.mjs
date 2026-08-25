@@ -85,9 +85,18 @@ test('the saint the chosen church sings for that day is the hero before any imag
 });
 
 test('intervals display honestly: display string, derivation, open bounds', () => {
-  assert.equal(formatInterval({ earliest: 285, latest: 295, display: 'c. 291' }), 'c. 291');
-  assert.equal(formatInterval({ earliest: 356, latest: 356, display: null }), '356');
-  assert.equal(formatInterval({ earliest: 285, latest: 295, display: null }), '285–295');
+  /*
+   * The era, back on the dates that need it (author, 2026-08-26: "add AD back
+   * to the dates so it's more obvious for stuff like 'Reposed 105' what that
+   * means"), reversing Amendment 39's "BC only, no AD". The rule is a rule
+   * rather than a blanket: marked below 1000, where a three-digit number
+   * reads as a quantity as easily as a year, and left alone above it, because
+   * 1937 says what it is.
+   */
+  assert.equal(formatInterval({ earliest: 285, latest: 295, display: 'c. 291' }), 'c. 291 AD');
+  assert.equal(formatInterval({ earliest: 356, latest: 356, display: null }), '356 AD');
+  assert.equal(formatInterval({ earliest: 285, latest: 295, display: null }), '285–295 AD');
+  // 1000 is the boundary and is above it: a four-digit year says what it is.
   assert.equal(formatInterval({ earliest: null, latest: 1000, display: null }), 'before 1000');
   assert.equal(formatInterval({ earliest: 1015, latest: null, display: null }), 'after 1015');
   assert.equal(formatInterval({ earliest: null, latest: null, display: null }), 'Undated');
@@ -112,13 +121,17 @@ test('a life with no recorded beginning is read from its end', () => {
   // the prepositions gone with the verb that needed them.
   const noBirth = (death) => formatLifespan({ birth: { earliest: null, latest: null, display: null }, death });
   assert.equal(noBirth({ earliest: 1779, latest: 1779, display: null }), 'Reposed 1779');
+  // Past the first millennium the number carries its own era.
   assert.equal(noBirth({ earliest: 1155, latest: 1165, display: 'c. 1160' }), 'Reposed c. 1160');
-  assert.equal(noBirth({ earliest: 305, latest: 311, display: null }), 'Reposed 305–311');
+  assert.equal(noBirth({ earliest: 305, latest: 311, display: null }), 'Reposed 305–311 AD');
   // The data says "century"; the page prints "C." (author, 2026-08-24).
-  assert.equal(noBirth({ earliest: 401, latest: 500, display: '5th century' }), 'Reposed 5th C.');
-  assert.equal(noBirth({ earliest: 730, latest: 770, display: 'mid-8th century' }), 'Reposed mid-8th C.');
+  assert.equal(noBirth({ earliest: 401, latest: 500, display: '5th century' }), 'Reposed 5th C. AD');
+  assert.equal(noBirth({ earliest: 730, latest: 770, display: 'mid-8th century' }), 'Reposed mid-8th C. AD');
   assert.equal(noBirth({ earliest: -1400, latest: -1300, display: '14th century BC' }), 'Reposed 14th C. BC');
-  assert.equal(noBirth({ earliest: null, latest: 556, display: null }), 'Reposed before 556');
+  assert.equal(noBirth({ earliest: null, latest: 556, display: null }), 'Reposed before 556 AD');
+  // A sentence, not a number: nothing is appended, because "under Hadrian or
+  // Antoninus AD" is not English. The era is added only to a display that
+  // ends in the figure it would be qualifying.
   assert.equal(noBirth({ earliest: 117, latest: 161, display: 'under Hadrian or Antoninus' }), 'Reposed under Hadrian or Antoninus');
   // A known birth with an unrecorded end keeps the honest dash: nothing about
   // the death is being asserted, so nothing is dressed up.

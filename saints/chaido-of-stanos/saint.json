@@ -44,5 +44,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1801,
+      "latest": 1900,
+      "display": "19th century",
+      "basis": "traditional"
+    }
   }
 }

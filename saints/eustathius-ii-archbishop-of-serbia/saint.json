@@ -44,5 +44,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1282,
+      "latest": 1321,
+      "display": "under King Milutin",
+      "basis": "traditional"
+    }
   }
 }

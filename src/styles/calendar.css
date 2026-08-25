@@ -777,6 +777,24 @@
   margin-bottom: var(--space-3);
 }
 
+/* A hero with no icon is a name, a lifespan and Save, and the box under them
+   was 65 px deep — space-3 under the dates, a 36 px control, and the panel's
+   own 16 px (author, 2026-08-26: "move the bottom edge of the card higher so
+   there isn't as big a margin between the dating and the bottom of the
+   card"). The dates now sit straight on the control and the panel keeps half
+   its foot, which brings the edge up 20 px without moving anything else.
+
+   Only where there is no picture: with one, the image column is the taller
+   side and its own bottom sets the panel's depth, so trimming here would
+   crowd the image instead. */
+.hero:not(.has-media) {
+  padding-bottom: var(--space-2);
+}
+
+.hero:not(.has-media) .hero-dates {
+  margin-bottom: 0;
+}
+
 .hero-feasts {
   list-style: none;
   margin: 0;

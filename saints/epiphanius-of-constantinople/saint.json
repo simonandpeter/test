@@ -44,5 +44,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 535,
+      "latest": 535,
+      "display": "535",
+      "basis": "traditional"
+    }
   }
 }

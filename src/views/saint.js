@@ -22,7 +22,7 @@ import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
-import { withHonorific } from '../lib/honorific.js';
+import { saintName } from '../lib/honorific.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
@@ -40,7 +40,7 @@ export const title = () => STRINGS.saints.title;
 /** The manifest already knows the name, so the tab title never waits. */
 export const titleFor = (params, data) => {
   const card = data.bySlug.get(params.slug);
-  return card ? withHonorific(card.display_name) : STRINGS.saint.notFoundTitle;
+  return card ? saintName(card) : STRINGS.saint.notFoundTitle;
 };
 
 const gregorianFmt = (d) => formatDate({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
@@ -160,7 +160,7 @@ function shell(card, backLabel) {
   return `<article class="saint">
     <header class="saint-head">
       <div class="name-line">
-        <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(withHonorific(card.display_name))}</h1>
+        <h1 class="saint-name" style="view-transition-name:s-${esc(card.slug)}-name">${esc(saintName(card))}</h1>
         <span class="saint-tools">
           ${renderBookmark(card.slug, card.display_name)}
           <button type="button" class="close-button icon-button" data-back aria-label="${esc(backLabel)}">${CLOSE}</button>
@@ -449,7 +449,7 @@ function related(saint, data, router) {
     .filter(Boolean)
     .map(
       (card) => `<li>
-        <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
+        <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
         <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
       </li>`,
     );

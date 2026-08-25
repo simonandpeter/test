@@ -96,5 +96,13 @@
         "year": 2026
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional"
+    }
+  }
 }

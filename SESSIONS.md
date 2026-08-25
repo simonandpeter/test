@@ -2148,6 +2148,200 @@ var(--space-5) }` — there is no `--space-5` in the token set, so the
 declaration was dropped silently and the two questions sat flush. Caught by
 looking at the render, which is the only thing that catches it.
 
+**41. Twelve more, the corpus's own names found, and one instruction blocked
+by copyright** (author's instruction, 2026-08-26 — eleven items, and a twelfth
+added mid-sitting).
+
+**The bubble says less, twice over.** "Nothing is set aside." for a fast-free
+day, and "Meat, dairy and eggs are set aside." for a fast whose calendar named
+no allowance — the second sentence of each went. And the *quotation* goes with
+it where the note says nothing the label did not: „Post" over a hyperlink from
+doxologia.ro tells a reader who has just read "Fast - the Beheading of the
+Forerunner" that the day is a fast. So the note is printed when a grade was
+read **out of** it — exactly when it carries more than the label — and the
+citation stands either way, because the day's record came from that page
+whether or not its words bear repeating.
+
+**The era is back, by a rule rather than a blanket** (reversing Amendment 39's
+"BC only, no AD"). Marked below 1000, where a three-digit number reads as a
+quantity as easily as a year, and left alone above it, because 1937 says what
+it is. Appended only to a display that *ends* in the figure, so "under
+Licinius" stays English.
+
+**The rest of the chrome.** The random order is minted once per page load, so
+a trip through Daily and back finds the same hand — it was `Date.now()` at
+every call, and every fresh mount dealt again and lost the card the reader had
+gone to find. The hero's foot came up 20 px where there is no icon. A row for
+a saint with no icon prints no empty frame; the body carries the 48 px the
+thumbnail used to, so the virtualised grid's fixed 66 px still holds. And the
+flight home is 160 ms rather than 320, with **the page closing behind it** —
+these panels sit in the flow, so hiding one at the end of its flight dropped
+everything below it in a single frame; the space now closes over the same
+duration, and the flier is pinned out of flow first so the closing box cannot
+clip it.
+
+**The cycle line stops being English.** `cycleTitle` composed a sentence
+inside `lib/liturgy.js` — the seam Amendment 36 recorded and HANDOFF has
+carried as open ever since — and that module is the one place that knows the
+paschal reckoning and the one place that must not know about words. It is
+`cycleOf` now, returning which day of the cycle it is, and `ui/cycle-name.js`
+gives it words from the packs.
+
+Two details of that are the whole reason it took a file rather than a
+translation. **Holy Week and Bright Week are tables of seven, not templates**:
+Slavonic, Serbian and Greek decline the adjective for the weekday's gender —
+«Великая Среда» beside «Великий Четверг», «Μεγάλη Παρασκευή» beside «Μέγα
+Σάββατο» — so a weekday poured into one pattern is wrong in three languages
+out of five. And there is **one** placeholder for the number, not two: English
+is ordinalised in code because its ordinals are irregular, the other four take
+the bare number and add their own suffix in the pattern, and the unit test
+that checks every pack's placeholders against English stays a real guard.
+
+**The saints' names, which the corpus had all along.** On 2026-08-25 the
+author asked for the names in the reader's language and was told it could not
+be done without inventing 708 names in four languages. Asked again on
+2026-08-26 — "the names are not printed in cyrillic when the Russian language
+is chosen" — and the second look found **every folder carries a `names` array**
+of forms with their language, transcribed from the same calendar entries the
+attestations were read from. They were on the saint page under "Also called"
+until Amendment 38 removed that block, and have sat unused since.
+
+So nothing is translated: a recorded form is *chosen*
+(`lib/saint-name.js`, at build time, into the manifest). Two rules decide what
+is usable, and both exist because a calendar entry is not a name field. A form
+naming several people is not this saint's name — the Greek entry for
+Agathocleia is «Άγιοι Εύοδος, Καλλίστη, Αγαθόκλεια και Ερμογένης», the whole
+company of that day — and the honorific and rank are stripped, because the
+site prints its own and «Св. Св. Аврамије» is what leaving them in produces.
+
+Coverage is 393 Russian, 240 Greek, 111 Serbian, 102 Romanian of 708. Counted
+against the churches that actually *keep* each saint it is 393/393, 331/344,
+116/129 and 116/122 — so the English fallback nearly always means "this church
+does not keep this saint", not "nobody looked". **The earlier answer was
+wrong, and it was wrong in the most ordinary way: I described what the corpus
+could not do without looking at what it already held.**
+
+*A bug in that file, found by its own unit test:* JavaScript's `\b` is
+ASCII-only, so `/\bκαι\b/` never matches — a Greek letter is not a word
+character to it. The list-rejection rule was passing every listed Greek entry
+straight through while looking like it filtered them. Ninety-one Greek forms
+turned out to be lists.
+
+**The dates, audited a third time and much wider.** The author: "Saints like
+Natalia and Adrian of Nicomedia are dated around 4th C, 305-311, as their
+synaxarion says … And scan the whole corpus for any others because I've told
+you this already and there are still saints with this error."
+
+They were right to be irritated. **Amendment 39's audit read the lives and
+nothing else**, and the datings mostly are not in the prose: they are in the
+*calendar entry lines* transcribed into each attestation's `source.text` —
+«Мчч. Адриана и Наталии и прочих 23, с ними пострадавших (305-311)» — and in
+the reigns and councils the lives name. Adrian's own life says "lived at
+Nicomedia in Bithynia under Maximian (305–311)" in as many words.
+
+Widening the audit to those wells produced 47 proposals, which were then read
+one at a time, because **a parenthesis is not always about the saint**. Four
+were thrown out: Phanourios was proposed 1355–1369, the tenure of the
+metropolitan who read the name on his icon when it was *found*; Cassian of
+Glyphia the fifteenth century, which belongs to the historian who mentions
+him; Constantia of Paphos the sixteenth, which belongs to Stephen Lusignan;
+Theodore of Alexandria 608–610, the patriarchate of the Theodore his own
+passage distinguishes him from. A whole class had to be excluded for the same
+reason — the Russian calendar's parenthesis dates *the commemoration*, and
+«Обретение мощей прп. Александра исп (2001)» is not a man who died in 2001.
+
+**43 saints dated. Undated: 239 → 230 → 187.** Reigns follow the convention
+twelve saints already used (`display: "under Licinius"`, the reign as the
+bounds, `basis: "traditional"`), and one saint takes an open bound from the
+only record of him there is: Sabbas of Venetala, `before the 11th century`,
+`basis: "inferred"`, because a tenth–eleventh-century codex is all that
+attests him.
+
+*And "at least centuries for every saint" needed a display, not just data.*
+`floruit` has been in the schema since it was written and nothing ever printed
+it, so Agathocles of Corone read Undated while his life said he sat at the
+Third Ecumenical Council. `formatLifespan` falls through to it now — "Lived at
+the Council of Ephesus".
+
+The remaining **187 are not a backlog of unread sources.** Their lives read
+"That is the whole of the Prologue's notice", "the Greek synaxarion … says it
+has no details of his life". Dating them means consulting sources this corpus
+has not cited, which is a sourcing commission, not an audit.
+
+**The instruction that copyright blocked, and the source that unblocked it.**
+The author, asked what "the hymns in other languages" meant, was unambiguous:
+"when you select English as the language, on any calendar, it should be in
+English."
+
+The reason it could not simply be done is worth stating, because it is not
+effort. **The 415 hymns in this corpus are the original texts** — Greek,
+Church Slavonic, Romanian, Serbian — centuries out of copyright, which is why
+transcribing them from saint.gr and days.pravoslavie.ru was sound. **An
+English translation is a modern work with a living author.** The OCA prints
+English troparia and kontakia for much of this calendar and marks them its
+own; copying 415 into a published site is a rights decision, and it is the
+author's to make, not a build's. `WebFetch` declined to reproduce them
+verbatim for the same reason, which is the tool being right rather than in the
+way.
+
+*Two paths were put to the author, and the author chose one:* **Isabel
+Florence Hapgood's Service Book of the Holy Orthodox-Catholic Apostolic
+(Greco-Russian) Church, 1906** — published before 1929 and long in the public
+domain. Done, and its size is the finding.
+
+**Her book holds no menaion of per-saint troparia.** It is the fixed services,
+the eight tones and the Great Feasts, so of the 132 saints here with hymns it
+names *none*. What it does give, and what the corpus's four weeks of days
+overlap with, is three feasts: the Falling-Asleep, the Nativity of the
+Birth-giver of God, and the Elevation of the Cross. **Five texts, carried by
+twelve hymn objects across two calendars and two languages.** The Dormition
+kontakion is not among them — she prints that service's troparion and no
+Collect-Hymn.
+
+A hymn now carries an optional `english` block: somebody else's published
+rendering of that same hymn, with its own citation, which `ui/hymns.js`
+prefers when the reader is reading English. **Nothing is translated by this
+build**, which is the line Amendment 2 draws and this does not cross. Two
+things in her text are kept rather than corrected, because it is a quotation:
+the petitions are the **1906** ones — "unto our Sovereign, N.", "our most
+God-fearing (Emperor, King, or President), N." — where the modern Greek and
+Romanian beside them read "unto the faithful"; and her forms are hers
+throughout, "Birth-giver of God" for Theotokos, "Collect-Hymn" for kontakion.
+What *was* repaired is scanning damage and only that: words split across line
+breaks ("cor- ruption"), a lost space ("grantingvictory"), running heads
+falling through the middle of a page, and the French spacing before ; and :.
+
+Everywhere else an English reader still meets the original, and that is the
+state of the corpus rather than a gap in the code — asserted as such.
+
+**Verification.** 145 unit (three new: the name picker's stripping, its
+company rule, and its fullest-form rule), 342 browser (310 + 32). Fourteen
+backouts run and watched fail — the bubble's wording, the quoted note, the
+era, the printed floruit, the per-visit seed, the hero's foot, the empty
+frame, the cycle line's words, the localised name, the flight's duration, the
+English rendering's preference, the flight's cancellation token, and two
+*corpus* backouts: Adrian's dates taken out of his folder, and Hapgood's
+English taken off the Cross troparion.
+
+*The last of those caught a weak backout before it caught anything else.*
+Blanking one copy of the Cross troparion's English left the suite green,
+because the text is carried by two hymn objects — the Greek calendar's and
+the Romanian's — and the test reads the Greek. Backing out *all* copies failed
+as it should. A backout that only half backs out proves nothing.
+
+*Two bugs this batch introduced, and the suite caught both.* `withHonorific`
+was replaced by `saintName` at eight call sites and missed at two, which threw
+at render and left the saint page blank; it failed as "a saint opens with its
+own names" rather than as a blank page in front of a reader.
+
+And the flight had a hole in it. Closing pins the panel out of flow and
+collapses the band over 160 ms, hiding and emptying it at the end — so a
+reader who reopened *inside* that window met the old callback landing on the
+new panel, which was then open, empty and nought pixels tall with its buttons
+unclickable. A test that changed calendar twice in quick succession timed out
+pressing one. A token cancels a flight the reader has overtaken, and that has
+a test of its own now.
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

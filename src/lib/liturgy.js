@@ -26,12 +26,10 @@ const parse = (iso) => {
 };
 /** 0 = Sunday … 6 = Saturday. JDN 0 was a Monday. */
 const weekdayOf = (jdn) => (jdn + 1) % 7;
+/* Still English, and deliberately: these name a *fasting reason* — "a Great
+   Feast on a Friday" — which the packs translate through their `reasons` map,
+   the arrangement Amendment 36 settled. Nothing else here composes words. */
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const ordinal = (n) => {
-  const s = ['th', 'st', 'nd', 'rd'];
-  const v = n % 100;
-  return `${n}${s[(v - 20) % 10] || s[v] || s[0]}`;
-};
 
 /** Pascha of the paschal year the day belongs to, and the next one, as JDNs. */
 export function paschaAround(iso, computus = 'julian') {
@@ -47,64 +45,77 @@ export function paschaAround(iso, computus = 'julian') {
 }
 
 /**
- * The day's title in the paschal cycle: the named Sundays of the Triodion and
- * the Pentecostarion, the weeks of Great Lent, Bright Week, and otherwise the
- * Nth Sunday — or the weekday of the Nth week — after Pentecost. A weekday
- * belongs to the week that ends with the coming Sunday, which is the
- * lectionary's count and both the Greek and the Slavic usage.
+ * *Which* day of the paschal cycle this is — a key, and the number the key
+ * needs — rather than a sentence about it (author, 2026-08-26: "make sure you
+ * print '13th week after Pentecost' in the chosen language as well").
+ *
+ * It returned an English string until then, composed here, which put a
+ * sentence in the reader's language beyond reach: this module is the one
+ * place that knows the paschal reckoning and the one place that must not know
+ * about words. Amendment 36 recorded that as an accepted seam and HANDOFF has
+ * carried it as open since. `ui/cycle-name.js` renders the key.
+ *
+ * The named Sundays of the Triodion and the Pentecostarion, the weeks of
+ * Great Lent, Bright Week, and otherwise the Nth Sunday — or the weekday of
+ * the Nth week — after Pentecost. A weekday belongs to the week that ends
+ * with the coming Sunday, which is the lectionary's count and both the Greek
+ * and the Slavic usage.
+ *
+ * `weekday` is 0 = Sunday, and is carried on every key that needs to name a
+ * day: the Slavic and Greek names of Holy Week and Bright Week decline for
+ * gender ("Великая Среда" beside "Великий Четверг"), so those two runs are
+ * a table of seven in each pack rather than a template with a weekday poured
+ * into it.
  */
-export function cycleTitle(iso, computus = 'julian') {
+export function cycleOf(iso, computus = 'julian') {
   const { jdn, pascha: p, next } = paschaAround(iso, computus);
   const d = jdn - p;
   const t = next - jdn;
-  const wd = weekdayOf(jdn);
-  const day = WEEKDAYS[wd];
+  const weekday = weekdayOf(jdn);
 
   // Holy Week and the Triodion, counted back from the Pascha to come.
   if (t <= 70) {
-    if (t === 70) return 'Sunday of the Publican and the Pharisee';
-    if (t === 63) return 'Sunday of the Prodigal Son';
-    if (t === 56) return 'Meatfare Sunday - the Last Judgement';
-    if (t === 49) return 'Cheesefare Sunday - Forgiveness Sunday';
-    if (t === 42) return '1st Sunday of Great Lent - the Triumph of Orthodoxy';
-    if (t === 35) return '2nd Sunday of Great Lent - St Gregory Palamas';
-    if (t === 28) return '3rd Sunday of Great Lent - the Veneration of the Cross';
-    if (t === 21) return '4th Sunday of Great Lent - St John Climacus';
-    if (t === 14) return '5th Sunday of Great Lent - St Mary of Egypt';
-    if (t === 8) return 'Lazarus Saturday';
-    if (t === 7) return 'Palm Sunday - the Entry into Jerusalem';
-    if (t < 7) return `Great and Holy ${day}`;
+    if (t === 70) return { key: 'publican' };
+    if (t === 63) return { key: 'prodigal' };
+    if (t === 56) return { key: 'meatfare' };
+    if (t === 49) return { key: 'cheesefare' };
+    if (t === 42) return { key: 'lent1' };
+    if (t === 35) return { key: 'lent2' };
+    if (t === 28) return { key: 'lent3' };
+    if (t === 21) return { key: 'lent4' };
+    if (t === 14) return { key: 'lent5' };
+    if (t === 8) return { key: 'lazarus' };
+    if (t === 7) return { key: 'palm' };
+    if (t < 7) return { key: 'holyWeek', weekday };
     // The weeks between the Sundays take the name of the Sunday that ends
     // them: the fast-free week after the Publican and the Pharisee, Meatfare
     // Week before Meatfare Sunday, Cheesefare Week before Forgiveness Sunday.
-    if (t > 63) return `${day} of the week of the Publican and the Pharisee`;
-    if (t > 56) return `${day} of Meatfare Week`;
-    if (t > 49) return `${day} of Cheesefare Week`;
-    if (t === 48) return 'Clean Monday - Great Lent begins';
-    const week = Math.floor((48 - t) / 7) + 1;
-    return `${day} of the ${ordinal(week)} week of Great Lent`;
+    if (t > 63) return { key: 'publicanWeekday', weekday };
+    if (t > 56) return { key: 'meatfareWeekday', weekday };
+    if (t > 49) return { key: 'cheesefareWeekday', weekday };
+    if (t === 48) return { key: 'cleanMonday' };
+    return { key: 'lentWeekday', weekday, n: Math.floor((48 - t) / 7) + 1 };
   }
 
-  if (d === 0) return 'Pascha - the Resurrection of the Lord';
-  if (d < 7) return `Bright ${day}`;
-  if (d === 7) return 'Thomas Sunday - Antipascha';
-  if (d === 14) return 'Sunday of the Myrrh-bearing Women';
-  if (d === 21) return 'Sunday of the Paralytic';
-  if (d === 24) return 'Mid-Pentecost';
-  if (d === 28) return 'Sunday of the Samaritan Woman';
-  if (d === 35) return 'Sunday of the Blind Man';
-  if (d === 38) return 'Leavetaking of Pascha';
-  if (d === 39) return 'Ascension of the Lord';
-  if (d === 42) return 'Sunday of the Holy Fathers of the First Council';
-  if (d === 48) return 'Saturday of Souls';
-  if (d === 49) return 'Pentecost';
-  if (d === 50) return 'Monday of the Holy Spirit';
-  if (d === 56) return 'Sunday of All Saints';
-  if (d < 49) return `${day} of the ${ordinal(Math.floor(d / 7) + 1)} week of Pascha`;
-  if (wd === 0) return `${ordinal((d - 49) / 7)} Sunday after Pentecost`;
+  if (d === 0) return { key: 'pascha' };
+  if (d < 7) return { key: 'brightWeek', weekday };
+  if (d === 7) return { key: 'thomas' };
+  if (d === 14) return { key: 'myrrhbearers' };
+  if (d === 21) return { key: 'paralytic' };
+  if (d === 24) return { key: 'midPentecost' };
+  if (d === 28) return { key: 'samaritan' };
+  if (d === 35) return { key: 'blindMan' };
+  if (d === 38) return { key: 'leavetaking' };
+  if (d === 39) return { key: 'ascension' };
+  if (d === 42) return { key: 'fathers' };
+  if (d === 48) return { key: 'souls' };
+  if (d === 49) return { key: 'pentecost' };
+  if (d === 50) return { key: 'holySpirit' };
+  if (d === 56) return { key: 'allSaints' };
+  if (d < 49) return { key: 'paschaWeekday', weekday, n: Math.floor(d / 7) + 1 };
+  if (weekday === 0) return { key: 'sundayAfterPentecost', n: (d - 49) / 7 };
   // The week that ends with the coming Sunday.
-  const n = Math.floor((d - 49) / 7) + 1;
-  return `${ordinal(n)} week after Pentecost`;
+  return { key: 'weekAfterPentecost', n: Math.floor((d - 49) / 7) + 1 };
 }
 
 /**
@@ -204,5 +215,5 @@ export function fasting(iso, churchId) {
 export function liturgicalDay(iso, churchId) {
   const church = CHURCHES_BY_ID[churchId];
   const computus = church?.paschal_computus ?? 'julian';
-  return { title: cycleTitle(iso, computus), tone: tone(iso, computus), fasting: fasting(iso, churchId) };
+  return { cycle: cycleOf(iso, computus), tone: tone(iso, computus), fasting: fasting(iso, churchId) };
 }

@@ -41,5 +41,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 395,
+      "latest": 408,
+      "display": "395–408",
+      "basis": "traditional"
+    }
   }
 }

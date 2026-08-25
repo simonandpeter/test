@@ -104,14 +104,88 @@ export const STRINGS = {
         dairy: 'No meat; dairy and eggs are permitted.',
         none: 'Nothing is set aside today.',
       },
-      // A fast whose calendar printed no allowance. It says what every fast
-      // sets aside and refuses the rest, rather than guessing a grade.
-      unstated: 'Meat, dairy and eggs are set aside. This calendar prints no finer rule for the day.',
-      free: 'Not a fast. Nothing is set aside, including on a Wednesday or Friday.',
+      /* A fast whose calendar printed no allowance: what every fast sets
+         aside, and nothing else. It carried a second sentence — "This
+         calendar prints no finer rule for the day" — for one day; the author
+         cut it (2026-08-26) on the same principle that cut the glossary. The
+         silence it announced is still the truth and is still what the page
+         does; saying so in the bubble was the site talking about itself. */
+      unstated: 'Meat, dairy and eggs are set aside.',
+      // Likewise: "Not a fast. Nothing is set aside, including on a Wednesday
+      // or Friday." The Wednesday-and-Friday clause was answering a question
+      // about *other* days.
+      free: 'Nothing is set aside.',
       sourceNote: 'As printed by {source}.',
       close: 'Close',
     },
 
+    /*
+     * The paschal cycle's day, in words (author, 2026-08-26). lib/liturgy.js
+     * says which day it is; ui/cycle-name.js turns that into this. `{n}` is
+     * the week's number, already in the shape that language wants it: English
+     * gets "13th", because its ordinals are irregular and no template can
+     * build them; the other four get a bare 13 and add their own suffix in
+     * the pattern («{n}-я седмица», «Săptămâna a {n}-a»).
+     *
+     * Holy Week and Bright Week are tables of seven, indexed by weekday, and
+     * not templates: Slavonic, Serbian and Greek decline the adjective for
+     * the weekday's gender, so «Великая Среда» and «Великий Четверг» cannot
+     * come out of one pattern. Index 0 is Sunday and is never reached — that
+     * Sunday is Pascha itself, and Palm Sunday before it.
+     */
+    cycle: {
+      publican: 'Sunday of the Publican and the Pharisee',
+      prodigal: 'Sunday of the Prodigal Son',
+      meatfare: 'Meatfare Sunday - the Last Judgement',
+      cheesefare: 'Cheesefare Sunday - Forgiveness Sunday',
+      lent1: '1st Sunday of Great Lent - the Triumph of Orthodoxy',
+      lent2: '2nd Sunday of Great Lent - St Gregory Palamas',
+      lent3: '3rd Sunday of Great Lent - the Veneration of the Cross',
+      lent4: '4th Sunday of Great Lent - St John Climacus',
+      lent5: '5th Sunday of Great Lent - St Mary of Egypt',
+      lazarus: 'Lazarus Saturday',
+      palm: 'Palm Sunday - the Entry into Jerusalem',
+      holyWeek: [
+        'Great and Holy Sunday',
+        'Great and Holy Monday',
+        'Great and Holy Tuesday',
+        'Great and Holy Wednesday',
+        'Great and Holy Thursday',
+        'Great and Holy Friday',
+        'Great and Holy Saturday',
+      ],
+      publicanWeekday: '{weekday} of the week of the Publican and the Pharisee',
+      meatfareWeekday: '{weekday} of Meatfare Week',
+      cheesefareWeekday: '{weekday} of Cheesefare Week',
+      cleanMonday: 'Clean Monday - Great Lent begins',
+      lentWeekday: '{weekday} of the {n} week of Great Lent',
+      pascha: 'Pascha - the Resurrection of the Lord',
+      brightWeek: [
+        'Bright Sunday',
+        'Bright Monday',
+        'Bright Tuesday',
+        'Bright Wednesday',
+        'Bright Thursday',
+        'Bright Friday',
+        'Bright Saturday',
+      ],
+      thomas: 'Thomas Sunday - Antipascha',
+      myrrhbearers: 'Sunday of the Myrrh-bearing Women',
+      paralytic: 'Sunday of the Paralytic',
+      midPentecost: 'Mid-Pentecost',
+      samaritan: 'Sunday of the Samaritan Woman',
+      blindMan: 'Sunday of the Blind Man',
+      leavetaking: 'Leavetaking of Pascha',
+      ascension: 'Ascension of the Lord',
+      fathers: 'Sunday of the Holy Fathers of the First Council',
+      souls: 'Saturday of Souls',
+      pentecost: 'Pentecost',
+      holySpirit: 'Monday of the Holy Spirit',
+      allSaints: 'Sunday of All Saints',
+      paschaWeekday: '{weekday} of the {n} week of Pascha',
+      sundayAfterPentecost: '{n} Sunday after Pentecost',
+      weekAfterPentecost: '{n} week after Pentecost',
+    },
     liturgy: {
       tone: 'Tone {tone}',
       fast: 'Fast - {reason}',
@@ -206,6 +280,13 @@ export const STRINGS = {
 
   dates: {
     undated: 'Undated',
+    // The era, on dates whose own numbers do not carry it (author,
+    // 2026-08-26). A string rather than a suffix in the code because the
+    // packs may want it before the number, or not at all.
+    ad: '{when} AD',
+    // A life placed but not bounded: no birth, no death, and a floruit that
+    // says where in time the sources put them (author, 2026-08-26).
+    flourished: 'Lived {when}',
     before: 'before {y}',
     after: 'after {y}',
     // A life with no recorded beginning is read from its end (author,

@@ -58,5 +58,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -696,
+      "latest": -696,
+      "display": "696 BC",
+      "basis": "traditional"
+    }
   }
 }

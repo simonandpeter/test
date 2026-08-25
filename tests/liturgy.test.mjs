@@ -1,6 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cycleTitle, fasting, liturgicalDay, paschaAround, tone } from '../src/lib/liturgy.js';
+import { cycleOf, fasting, liturgicalDay, paschaAround, tone } from '../src/lib/liturgy.js';
+import { cycleName } from '../src/ui/cycle-name.js';
+
+/*
+ * `cycleTitle` composed an English sentence inside lib/liturgy.js until
+ * 2026-08-26, when the author asked for that line in the reader's language
+ * too. The reckoning stayed where it was and the words moved out:
+ * `cycleOf` returns which day of the cycle it is, `cycleName` renders it from
+ * the packs. These assertions read through the pair, so they still pin the
+ * same sentences — and the English pack is now one of the things they pin.
+ */
+const cycleTitle = (iso, computus) => cycleName(cycleOf(iso, computus), iso);
 
 /**
  * The liturgical day, checked against what the three churches' own calendars
@@ -127,13 +138,16 @@ test('the other fasts and the feasts that lift them, in the church’s own calen
 });
 
 test('liturgicalDay gathers the three for the chosen church', () => {
+  // `title` became `cycle` on 2026-08-26: a key and its number rather than an
+  // English sentence, so the line can be printed in five languages. The
+  // rendering is asserted through cycleName above.
   assert.deepEqual(liturgicalDay('2026-08-28', 'russian'), {
-    title: '13th week after Pentecost',
+    cycle: { key: 'weekAfterPentecost', n: 13 },
     tone: 3,
     fasting: { kind: 'fish', reason: 'a Great Feast on a Friday' },
   });
   assert.deepEqual(liturgicalDay('2026-08-23', 'greek'), {
-    title: '12th Sunday after Pentecost',
+    cycle: { key: 'sundayAfterPentecost', n: 12 },
     tone: 3,
     fasting: { kind: 'fast-free', reason: null },
   });

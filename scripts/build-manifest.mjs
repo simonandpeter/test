@@ -18,6 +18,7 @@
  */
 
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { pickNameForms } from '../src/lib/saint-name.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { imageSize } from 'image-size';
 import path from 'node:path';
@@ -344,6 +345,16 @@ function toCard(saint, dir) {
   return {
     slug: saint.slug,
     display_name: saint.display_name,
+    /*
+     * One display form per language, chosen from the folder's recorded
+     * `names` (author, 2026-08-26: the saints' names in the chosen language).
+     * The array itself stays detail-level — it holds every recorded form,
+     * with its notes and its scripts — and this is the card-level pick, made
+     * here so the runtime is a lookup and the choosing has a unit test.
+     * Languages with no usable form are absent rather than English, so a
+     * caller can tell "not recorded" from "the same in both".
+     */
+    names: pickNameForms(saint.names, saint.display_name),
     sex: saint.sex ?? 'unknown',
     types: saint.types ?? [],
     historicity: saint.historicity ?? null,

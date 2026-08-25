@@ -50,5 +50,13 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "traditional"
+    }
+  }
 }

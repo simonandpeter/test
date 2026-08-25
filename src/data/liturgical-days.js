@@ -58,6 +58,10 @@ export const LITURGICAL_DAYS = {
           church: 'greek', kind: 'troparion', lang: 'el', tone: 'Ἦχος α΄',
           text: 'Ἐν τὴ Γεννήσει τὴν παρθενίαν ἐφύλαξας, ἐν τὴ Κοιμήσει τὸν κόσμον οὐ κατέλιπες Θεοτόκε, Μετέστης πρὸς τὴν ζωήν, μήτηρ ὑπάρχουσα τῆς ζωῆς, καὶ ταὶς πρεσβείαις ταὶς σαὶς λυτρουμένη, ἐκ θανάτου τᾶς ψυχᾶς ἠμῶν.',
           source: { text: 'Ορθόδοξος Συναξαριστής (saint.gr), Απόδοση εορτής κοιμήσεως Θεοτόκου', url: 'https://www.saint.gr/857/saint.aspx', year: 2026 },
+          english: {
+            text: 'In Birth-giving thou didst preserve thy virginity; in thy Falling-asleep thou hast not forsaken the world, O Birth-giver of God. Thou hast passed over into life, thou who art the Mother of Life, and through thine intercessions dost deliver our souls from death.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Falling-Asleep of the Most Holy Birth-giver of God, p. 265', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'greek', kind: 'kontakion', lang: 'el', tone: 'Ἦχος πλ. β΄', model: 'Αὐτόμελον',
@@ -191,6 +195,10 @@ export const LITURGICAL_DAYS = {
           church: 'russian', kind: 'troparion', lang: 'cu', tone: 'глас 1',
           text: 'В рождестве девство сохранила еси,/ во успении мира не оставила еси, Богородице,/ преставилася еси к животу,/ Мати сущи Живота,// и молитвами Твоими избавляеши от смерти души наша.',
           source: { text: 'days.pravoslavie.ru, 15 августа ст. ст. — Тропарь праздника Успения', url: RU('0815'), year: 2026 },
+          english: {
+            text: 'In Birth-giving thou didst preserve thy virginity; in thy Falling-asleep thou hast not forsaken the world, O Birth-giver of God. Thou hast passed over into life, thou who art the Mother of Life, and through thine intercessions dost deliver our souls from death.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Falling-Asleep of the Most Holy Birth-giver of God, p. 265', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'russian', kind: 'kontakion', lang: 'cu', tone: 'глас 2',
@@ -676,11 +684,19 @@ export const LITURGICAL_DAYS = {
           church: 'romanian', kind: 'troparion', lang: 'ro', tone: 'Glasul 4',
           text: 'Naşterea ta, de Dumnezeu Născătoare Fecioară, bucurie a vestit la toată lumea; că din tine a Răsărit Soarele dreptăţii, Hristos Dumnezeul nostru. Şi dezlegând blestemul, a dat binecuvântare; şi stricând moartea, ne-a dăruit nouă viaţă veşnică.',
           source: { text: 'Doxologia — Tropar la Praznicul Naşterii Maicii Domnului', url: 'https://doxologia.ro/tropar-la-praznicul-nasterii-maicii-domnului', year: 2026 },
+          english: {
+            text: 'Thy holy Nativity, O virgin Birth-giver of God, hath proclaimed joy unto all the universe; for from thee is risen the Sun of Righteousness, even Christ our God. And having destroyed the curse, he hath bestowed a blessing; and having brought Death to naught, he hath given unto us life eternal.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Nativity of the Most Holy Birth-giver of God, p. 164', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'romanian', kind: 'kontakion', lang: 'ro', tone: 'Glasul 4',
           text: 'Sfinţii Ioachim şi Ana din defăimarea nenaşterii de fii, iar Adam şi Eva din stricăciunea morţii au scăpat, Preacurată, prin Sfântă naşterea ta. Aceasta o prăznuieşte şi poporul tău, de vina greşelilor mântuindu-se, când striga către tine: cea stearpă naşte pe Născătoarea de Dumnezeu şi Hrănitoarea vieţii noastre.',
           source: { text: 'Doxologia — Condac la Praznicul Naşterii Maicii Domnului', url: 'https://doxologia.ro/condac-la-praznicul-nasterii-maicii-domnului', year: 2026 },
+          english: {
+            text: 'Joachim and Anna were delivered from the reproach of childlessness, and Adam and Eve from the corruption of death, at thy holy Nativity, O All-pure One. This do thy people celebrate, being redeemed from the guilt of transgressions, when they cry unto thee: The barren giveth birth to the Birth-giver of God and the Nourisher of our Life.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Nativity of the Most Holy Birth-giver of God, p. 165', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
       ],
     },
@@ -695,11 +711,19 @@ export const LITURGICAL_DAYS = {
           church: 'greek', kind: 'troparion', lang: 'el', tone: 'Ἦχος δ’.',
           text: 'Ἡ γέννησίς σου Θεοτόκε, χαρὰν ἐμήνυσε πάσῃ τῇ οικουμένῃ, ἐκ σοῦ γὰρ ἀνέτειλεν ὁ Ἥλιος τῆς δικαιοσύνης, Χριστὸς ὁ Θεὸς ἡμῶν, καὶ λύσας τὴν κατάραν, ἔδωκε τὴν εὐλογίαν, καὶ καταργήσας τὸν θάνατον, ἐδωρήσατο ἡμῖν ζωὴν τὴν αἰώνιον.',
           source: { text: 'Ορθόδοξος Συναξαριστής (saint.gr) — Γέννηση της Υπεραγίας Θεοτόκου, Λειτουργικά κείμενα: Ἀπολυτίκιον', url: 'https://www.saint.gr/955/saint.aspx', year: 2026 },
+          english: {
+            text: 'Thy holy Nativity, O virgin Birth-giver of God, hath proclaimed joy unto all the universe; for from thee is risen the Sun of Righteousness, even Christ our God. And having destroyed the curse, he hath bestowed a blessing; and having brought Death to naught, he hath given unto us life eternal.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Nativity of the Most Holy Birth-giver of God, p. 164', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'greek', kind: 'kontakion', lang: 'el', tone: 'Ἦχος δ’.', model: 'Αὐτόμελον.',
           text: 'Ἰωακεὶμ καὶ Ἄννα ὀνειδισμοῦ ἀτεκνίας, καὶ Ἀδὰμ καὶ Εὔα, ἐκ τῆς φθορᾶς τοῦ θανάτου, ἠλευθερώθησαν, Ἄχραντε, ἐν τῇ ἁγίᾳ γεννήσει σου, αὐτὴν ἑορτάζει καὶ ὁ λαός σου, ἐνοχῆς τῶν πταισμάτων, λυτρωθεὶς ἐν τῷ κράζειν σοι· Ἡ Στεῖρα τίκτει τὴν Θεοτόκον, καὶ τροφὸν τῆς ζωῆς ἡμῶν.',
           source: { text: 'Ορθόδοξος Συναξαριστής (saint.gr) — Γέννηση της Υπεραγίας Θεοτόκου, Λειτουργικά κείμενα: Κοντάκιον', url: 'https://www.saint.gr/955/saint.aspx', year: 2026 },
+          english: {
+            text: 'Joachim and Anna were delivered from the reproach of childlessness, and Adam and Eve from the corruption of death, at thy holy Nativity, O All-pure One. This do thy people celebrate, being redeemed from the guilt of transgressions, when they cry unto thee: The barren giveth birth to the Birth-giver of God and the Nourisher of our Life.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Nativity of the Most Holy Birth-giver of God, p. 165', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
       ],
     },
@@ -985,11 +1009,19 @@ export const LITURGICAL_DAYS = {
           church: 'romanian', kind: 'kontakion', lang: 'ro', tone: 'Glasul 4', model: 'Cel Ce Te-ai înălţat...',
           text: 'Cel Ce Te-ai înălţat pe Cruce de bunăvoie, poporului Tău celui nou numit cu numele Tău, îndurările Tale dăruieşte-i, Hristoase Dumnezeule. Veseleşte cu puterea Ta pe dreptcredincioşii creştini, dăruindu-le biruinţă asupra celui protivnic; având ajutorul Tău, armă de pace nebiruită biruinţă.',
           source: { text: 'Doxologia — Condac la Praznicul Înălţării Sfintei Cruci', url: 'https://doxologia.ro/condac-la-praznicul-inaltarii-sfintei-cruci', year: 2026 },
+          english: {
+            text: 'Do thou who, of thine own good will, upon the Cross wast lifted up, bestow thy bounties upon the new State which is called by thy Name, O Christ, our God; make glad with thy might our most God-fearing (Emperor, King, or President), N., granting victory over his adversaries unto him who hath thine aid, which is a panoply of peace, a trophy invincible.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Collect-Hymn of the Cross, p. 61', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'romanian', kind: 'troparion', lang: 'ro', tone: 'Glasul 1',
           text: 'Mântuieşte, Doamne, poporul Tău şi binecuvintează moştenirea Ta; biruinţă binecredincioşilor creştini asupra celui protivnic dăruieşte şi cu Crucea Ta păzeşte pe poporul Tău.',
           source: { text: 'Doxologia — Tropar la Praznicul Înălţării Sfintei Cruci', url: 'https://doxologia.ro/tropar-la-praznicul-inaltarii-sfintei-cruci', year: 2026 },
+          english: {
+            text: 'O Lord, save thy people, and bless thine inheritance, granting victory over enemies unto our Sovereign, N., and through thy Cross preserving thine Estate.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Elevation of the Precious Cross of the Lord, p. 167', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
       ],
     },
@@ -1004,11 +1036,19 @@ export const LITURGICAL_DAYS = {
           church: 'greek', kind: 'troparion', lang: 'el', tone: 'Ἦχος α’.',
           text: 'Σῶσον Κύριε τὸν λαόν σου καὶ εὐλόγησον τὴν κληρονομίαν σου, νίκας τοῖς Βασιλεῦσι κατὰ βαρβάρων δωρούμενος καὶ τὸ σὸν φυλάττων διὰ τοῦ Σταυροῦ σου πολίτευμα.',
           source: { text: 'Ορθόδοξος Συναξαριστής (saint.gr) — Ύψωση του Τιμίου και Ζωοποιού Σταυρού, Λειτουργικά κείμενα: Ἀπολυτίκιον', url: 'https://www.saint.gr/2391/saint.aspx', year: 2026 },
+          english: {
+            text: 'O Lord, save thy people, and bless thine inheritance, granting victory over enemies unto our Sovereign, N., and through thy Cross preserving thine Estate.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Elevation of the Precious Cross of the Lord, p. 167', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'greek', kind: 'kontakion', lang: 'el', tone: 'Ἦχος δ’.', model: 'Αὐτόμελον.',
           text: 'Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ ἑκουσίως, τῇ ἐπωνύμῳ σου καινὴ πολιτεία, τοὺς οἰκτιρμούς σου δώρησαι, Χριστὲ ὁ Θεός, Εὔφρανον ἐν τῇ δυνάμει σου, τοὺς πιστοὺς Βασιλεῖς ἡμῶν, νίκας χορηγῶν αὐτοῖς, κατὰ τῶν πολεμίων, τὴν συμμαχίαν ἔχοιεν τὴν σήν, ὅπλον εἰρήνης, ἀήττητον τρόπαιον.',
           source: { text: 'Ορθόδοξος Συναξαριστής (saint.gr) — Ύψωση του Τιμίου και Ζωοποιού Σταυρού, Λειτουργικά κείμενα: Κοντάκιον', url: 'https://www.saint.gr/2391/saint.aspx', year: 2026 },
+          english: {
+            text: 'Do thou who, of thine own good will, upon the Cross wast lifted up, bestow thy bounties upon the new State which is called by thy Name, O Christ, our God; make glad with thy might our most God-fearing (Emperor, King, or President), N., granting victory over his adversaries unto him who hath thine aid, which is a panoply of peace, a trophy invincible.',
+            source: { text: 'Hapgood, Service Book of the Holy Orthodox-Catholic Apostolic (Greco-Russian) Church (1906), the Collect-Hymn of the Cross, p. 61', url: 'https://archive.org/details/cu31924029363128', year: 1906 },
+          },
         },
         {
           church: 'greek', kind: 'troparion', lang: 'el', tone: 'Ἦχος α’.', model: 'Του λίθου σφραγισθέντος.',

@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-25 (Amendment 40)
+## State as of 2026-08-26 (Amendment 41)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,9 +74,9 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 142 unit tests (`npm test`) — pure logic, no DOM.
-- 310 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-25, the sitting of Amendments 39–40), not carried
+- 145 unit tests (`npm test`) — pure logic, no DOM.
+- 342 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 41), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,9 +101,14 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
+  *Amendment 40 was pushed (`f6aaa2e`); 41 is committed on top and is not.*
 
-**Corpus as of 2026-08-24: 708 saints**, every one with a life and four
-attestation rows; 430 hymns; readings/fasting for 23 August – 19 September in
+**Corpus as of 2026-08-26: 708 saints**, every one with a life and four
+attestation rows; **187 undated**, down from 239 in three audits (Amendments
+39 and 41 — the second read the calendar entry lines and the reigns, not just
+the lives, which is where most datings actually live); **the manifest now
+carries each saint's name in the languages the corpus records one for** —
+393 Russian, 240 Greek, 111 Serbian, 102 Romanian; 430 hymns; readings/fasting for 23 August – 19 September in
 `src/data/liturgical-days.js` (the Greek 7–19 September still empty with a
 note — saint.gr has not published that far out as of Amendment 31's check on
 2026-08-24). 95 icons (88 from Wikimedia Commons with their file pages cited,
@@ -366,18 +371,43 @@ up cold; the two the author has to decide are marked.
   cycle line is the remaining English on a translated Daily page. The
   author's call whether it is worth the restructure.
 
-- **English hymn texts: asked for outright, and still a sourcing task**
-  (Amendment 40; raised at 37). The author asked on 2026-08-25 evening for an
-  English translation of every hymn when English is the chosen language.
-  **415 hymns across 132 saints** — Church Slavonic 143, Greek 137, Romanian
-  117, Serbian 18 — and translating them in this build would be inventing
-  liturgical text, which is exactly Amendment 2. The OCA prints its own
-  English troparia and kontakia for much of this calendar at oca.org, citable
-  saint by saint the way Amendment 31's three weeks were. The display side is
-  a day's work once the texts exist (`ui/hymns.js` already groups by church
-  and tags each text with its `lang`; an `en` variant preferred when the
-  reader's language is English is a few lines); **the texts are the
-  commission.**
+- **English hymn texts: begun from Hapgood, and the rest is a rights
+  decision** (Amendment 41; raised at 37 and 40). Asked for outright on
+  2026-08-26 and answered from the source the author chose: **Isabel Hapgood's
+  1906 Service Book, public domain.** Her book holds no menaion of per-saint
+  troparia — of the 132 saints here with hymns it names none — so what landed
+  is the Great Feasts falling inside the corpus's four weeks: the
+  Falling-Asleep, the Nativity of the Birth-giver of God, the Elevation of the
+  Cross. **Five texts, twelve hymn objects.** The mechanism is in (`english`
+  on a hymn; `ui/hymns.js` prefers it when the reader reads English), so any
+  further text is data rather than code.
+
+  What is still open is the other 403, and the reason has not changed.
+
+  **The 415 hymns in this corpus are the original texts** — Greek, Church
+  Slavonic, Romanian, Serbian — centuries out of copyright, which is why
+  transcribing them from saint.gr and days.pravoslavie.ru was sound. **An
+  English translation is a modern work with a living author.** The OCA prints
+  English troparia and kontakia for much of this calendar and marks them its
+  own; copying 415 into a published site is a decision only the author can
+  take. `WebFetch` declines to reproduce them verbatim for the same reason.
+
+  Two paths remain, both the author's call: **another public-domain
+  translation** with wider per-saint coverage than Hapgood's, or **permission**
+  from a modern translator or publisher. Whichever it is, the work is
+  transcription into `english` blocks with a citation each — no code.
+
+- **Dating the remaining 187** (Amendment 41). Three audits have taken this
+  from 239: the third read the calendar entry lines and the reigns and
+  councils the lives name, not just the prose, and dated 43. The 187 that
+  remain are **not** unread sources — their lives say "That is the whole of
+  the Prologue's notice" and "the Greek synaxarion … says it has no details of
+  his life". Dating them means consulting sources this corpus has not cited,
+  saint by saint, which is a sourcing commission. Read Amendment 41 before
+  scoping it: four of the 47 mechanical proposals were thrown out because a
+  parenthesis in a life is often about somebody else, and the Russian
+  calendar's parenthesis dates *the commemoration*, which for a relics entry
+  is centuries after the man.
 
 - **Icons for the 613 saints without one** (Amendment 40, asked for
   outright). 95 of 708 have an `images/icon.jpg`, and every one of those
@@ -400,21 +430,23 @@ up cold; the two the author has to decide are marked.
   them; and the fasting notes are now load-bearing in a way they were not,
   because `lib/fast-grade.js` reads the day's allowance off them.
 
-- **The saints' names in each language — needs the author, and it is
-  sourcing rather than translation.** Asked for on 2026-08-25 ("St Titus the
-  Apostle should be Sf Apostol Tit") and delivered by half: the *honorific*
-  follows the language in all five (St. / Sf. / Св. / Άγ. / Св.), the 708
-  names do not. There is no source in this repository that gives them in four
-  languages and inventing them is Amendment 2's forbidden content, so the
-  page currently reads «Св. Moses the Prophet» in Serbian — an honest hybrid,
-  pinned by a test that says so. The affordable shape is the one every corpus
-  decision has taken: each church's synaxarion already prints its own saints'
-  names in its own language at the very URLs these entries were read from, so
-  this is a transcription pass over the corpus, one language at a time, on
-  the author's commission. Worth knowing before it is scoped: the honorific
-  declines for a woman in Greek and Slavonic and 68 of the corpus's saints
-  are women, which is why the *abbreviated* forms were chosen — they are the
-  ones that dodge the grammar. Full reasoning in SESSIONS.md Amendment 39.
+- **The saints' names in each language — done, 2026-08-26, and the entry
+  above it was wrong.** This said there was "no source in this repository that
+  gives them in four languages". There was: every folder carries a `names`
+  array of forms with their language, transcribed from the same calendar
+  entries the attestations were read from, shown on the saint page under "Also
+  called" until Amendment 38 removed that block. They are chosen at build time
+  now (`lib/saint-name.js`) and printed wherever a name is drawn — nothing
+  translated, a recorded form selected. **The lesson is the general one:
+  before reporting that the corpus cannot do something, read what it holds.**
+
+  What is left is small and countable: **44 saints have an attestation in a
+  church whose language records no name form for them** — 12 Russian, 13
+  Greek, 6 Romanian, 13 Serbian. The entry line for those does carry a name,
+  but in the genitive («Мч. Христофора»), and putting a genitive in a name
+  field is grammar this build should not be doing. A nominative apiece, by
+  hand, closes it. Everything else falls back to English because that church
+  does not keep that saint, which is not a gap.
 
 - **eBiblia.ro has no linkable passage URL** (Amendment 39). The author asked
   for the Romanian readings to open there; its reader is a JavaScript

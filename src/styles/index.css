@@ -472,9 +472,21 @@ select:hover {
   flex: none;
 }
 
-.index-card.is-row .index-media.is-empty {
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-cell);
+/* A row for a saint with no icon drew an empty 48 px frame where the
+   thumbnail would be, holding the column open so a run of rows kept one
+   left edge. The author removed it (2026-08-26): "remove the empty frame and
+   just print the text all the way to the left margin of the card." An empty
+   box is a promise of a picture that is not coming, and 613 of 708 saints
+   have none — the ragged left edge is the honest picture of the corpus, and
+   the one that says where the gaps are.
+
+   What the frame was also doing is holding the row's *height*: the Index's
+   rows are virtualised against a fixed ROW_HEIGHT of 66 px, which is a 48 px
+   thumbnail inside the card's padding and border. So the body carries that
+   48 px now, and the two numbers stay tied. */
+.index-card.is-row .row-body {
+  min-height: 48px;
+  justify-content: center;
 }
 
 .index-card.is-row .row-body {

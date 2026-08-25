@@ -42,5 +42,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 324,
+      "display": "under Licinius",
+      "basis": "traditional"
+    }
   }
 }

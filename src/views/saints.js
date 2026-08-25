@@ -18,7 +18,7 @@
  */
 
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
-import { withHonorific } from '../lib/honorific.js';
+import { saintName } from '../lib/honorific.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { allNames, historicityName, typeName, typeNames } from '../lib/saint-types.js';
 import { buildFeastIndex } from '../lib/feasts.js';
@@ -226,7 +226,15 @@ async function loadSearch(cards) {
   index.addAll(
     cards.map((card) => ({
       slug: card.slug,
-      name: card.display_name,
+      /*
+       * The English name and every recorded form (2026-08-26). A reader is
+       * shown «Феврония Муромская» and must be able to type it; a reader who
+       * knows the English must keep finding it. Same reasoning as the types
+       * below, and the same reason it is every language at once rather than
+       * the chosen one: the index is built once and the chrome can change
+       * under it.
+       */
+      name: [card.display_name, ...Object.values(card.names ?? {})].join(' '),
       /*
        * Every language's name for the type, not the chosen one (author,
        * 2026-08-25 evening: "add the other language equivalents of the search
@@ -383,8 +391,26 @@ function controls(state) {
  * snapshot that carries its seed keeps it: returning from a saint must find
  * the grid as it was left, not re-dealt.
  */
+/*
+ * One hand per page load, not per arrival (author, 2026-08-26: "unless the
+ * site is refreshed, retain the first random sorting order the site loads
+ * with, so if you see a saint and want to switch back you can still find
+ * them"). It was `Date.now()` at each call, so every fresh mount of the Index
+ * — every trip through Daily or Map and back — dealt again and lost the card
+ * the reader had gone to find. The seed is minted once, when the module is
+ * first asked for one, and a reload is the only thing that changes it.
+ *
+ * Choosing Random *again* from the sort control still deals a new hand; that
+ * is `nextSort` below, which mints its own and is the one place a reshuffle
+ * is something the reader asked for.
+ */
+let visitSeed = null;
+
 function seeded(f) {
-  if (f.sort === 'random' && !f.shuffleSeed) f.shuffleSeed = String(Date.now());
+  if (f.sort === 'random' && !f.shuffleSeed) {
+    visitSeed = visitSeed ?? String(Date.now());
+    f.shuffleSeed = visitSeed;
+  }
   return f;
 }
 
@@ -760,9 +786,7 @@ function card(item, router, { rows = false, detailed = false } = {}) {
         <img src="${BASE + item.image.src}" alt="" width="${item.image.w}" height="${item.image.h}"
           loading="lazy" decoding="async" />
       </span>`
-    : rows
-      ? '<span class="index-media is-empty" aria-hidden="true"></span>'
-      : '';
+    : '';
 
   const description = detailed
     ? `<span class="index-desc utility" data-desc>
@@ -776,7 +800,7 @@ function card(item, router, { rows = false, detailed = false } = {}) {
   // rather than opens. (The veneration glyph stood beside the name in this
   // line until 2026-08-22 — DESIGN.md §2.)
   const body = `<span class="name-line">
-      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(withHonorific(item.display_name))}</a>
+      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(saintName(item))}</a>
     </span>
     <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
     ${description}`;
@@ -866,7 +890,7 @@ function paintTray(undated) {
       ${undated
         .map(
           (c) => `<li><a class="reg-name" href="${state.router.href(`/saints/${c.slug}`)}"
-            data-prefetch="${esc(c.slug)}">${esc(withHonorific(c.display_name))}</a></li>`,
+            data-prefetch="${esc(c.slug)}">${esc(saintName(c))}</a></li>`,
         )
         .join('')}
     </ul>

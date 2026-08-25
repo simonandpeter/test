@@ -44,5 +44,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 912,
+      "latest": 925,
+      "display": "under Nicholas Mystikos",
+      "basis": "traditional"
+    }
   }
 }

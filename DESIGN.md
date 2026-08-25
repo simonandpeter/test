@@ -621,6 +621,16 @@ disagree about the same civil day. Fasting is stated as fast, fish permitted
 or no fast with its reason, never the finer allowances, which differ between
 typika.
 
+*Trimmed further (author, 2026-08-26).* Two sentences went out of the bubble —
+"including on a Wednesday or Friday", and "This calendar prints no finer rule
+for the day" — on the ground that a reader looking at today is owed today; the
+second was the site talking about its own silence rather than about the day.
+And **a quotation that says nothing the label did not is no longer printed**:
+where the calendar's note carries no allowance («Post», «Νηστεία», «Пост
+(означен у календару)»), the citation stands alone. The note is shown exactly
+when a grade was read out of it, which is exactly when it says more than the
+line above.
+
 *Amended (author, 2026-08-25 evening): "the fasting text should say which type
 of fast is required."* The finer allowance is now printed — **where the
 church's own calendar printed it**, and nowhere else. The rule above is not
@@ -903,6 +913,39 @@ control is the one who may not read the site's current language. The chrome
 translates whole (`src/ui/locales/`); the corpus stays English plus the
 source-language material already on the page — the boundary and its two
 accepted seams are Amendment 36's entry and `lib/i18n.js`'s header.*
+
+*Both seams closed, 2026-08-26, and the boundary moved with them.* The
+**paschal cycle line** was one: `lib/liturgy.js` composed "13th week after
+Pentecost" as an English sentence, which put it beyond the packs' reach. It
+returns a key and a number now (`cycleOf`), and `ui/cycle-name.js` renders it
+— Holy Week and Bright Week as tables of seven rather than templates, because
+three of the five languages decline the adjective for the weekday's gender.
+
+The **saints' names** were the other, and that one was not a seam at all but
+a thing overlooked. "The corpus stays English" was true of the *lives* and
+false of the names: every folder has carried a `names` array of forms in
+Russian, Greek, Romanian and Serbian since the corpus was built, transcribed
+from the same calendar entries the attestations were read from. The saint page
+printed them under "Also called" until Amendment 38 removed that block, and
+nothing has read them since. They are chosen at build time now
+(`lib/saint-name.js`) and printed wherever a name is drawn. **Nothing is
+translated; a recorded form is selected.** The lives stay English, which is
+the part of this boundary that stands.
+
+What remains of the fast reasons — English strings the packs map through
+`reasons` — is the last of the seam, and is smaller than either of these.
+
+*And the hymns crossed too, but only where somebody else had already carried
+them* (author, 2026-08-26). A hymn may hold an `english` block: a **published**
+rendering of that same hymn, with its own citation, preferred when the reader
+reads English. Isabel Hapgood's 1906 Service Book is the one source so far,
+being long in the public domain — a modern translation is a living author's
+work and needs their permission, which is a decision for the author of this
+site and not for a build. Her book has no per-saint troparia, so five texts
+and three feasts are the whole of it; every other hymn an English reader meets
+is still the source's own tongue, which is the state of the corpus rather than
+a gap in the code. **The rule that nothing here is translated by this build is
+untouched, and is the reason the block carries a citation of its own.**
 
 ### 5c. The saint's page
 

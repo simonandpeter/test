@@ -26,15 +26,15 @@ test('a date and a place of the same kind share one row', () => {
   assert.deepEqual(
     rows.map((r) => [r.kind, r.date, r.place?.historical_name]),
     [
-      ['birth', 'c. 251', 'Coma'],
-      ['death', '356', 'Mount Colzim'],
+      ['birth', 'c. 251 AD', 'Coma'],
+      ['death', '356 AD', 'Mount Colzim'],
     ],
   );
 });
 
 test('a kind with only one of the two still gets its row', () => {
   const datedOnly = factRows({ death: { earliest: 430, latest: 430 } }, []);
-  assert.deepEqual(datedOnly.map((r) => [r.kind, r.date, r.place]), [['death', '430', null]]);
+  assert.deepEqual(datedOnly.map((r) => [r.kind, r.date, r.place]), [['death', '430 AD', null]]);
 
   const placedOnly = factRows({}, [{ kind: 'see', historical_name: 'Alexandria' }]);
   assert.equal(placedOnly.length, 1);
@@ -60,7 +60,7 @@ test('a second place of one kind is another line, not a second claim about the y
     { kind: 'relics', historical_name: 'Pavia' },
     { kind: 'relics', historical_name: 'Cagliari' },
   ]);
-  assert.equal(rows[0].date, '430');
+  assert.equal(rows[0].date, '430 AD');
   assert.deepEqual(relics.map((r) => r.date), [null, null]);
 });
 

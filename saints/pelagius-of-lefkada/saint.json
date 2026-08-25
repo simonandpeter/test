@@ -46,5 +46,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 680,
+      "latest": 681,
+      "display": "at the Council in Trullo",
+      "basis": "traditional"
+    }
   }
 }

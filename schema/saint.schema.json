@@ -51,7 +51,17 @@
           "tone": { "type": "string" },
           "model": { "$comment": "The automelon the hymn is sung to, where the source names it.", "type": "string" },
           "text": { "type": "string", "minLength": 1 },
-          "source": { "$ref": "#/$defs/source" }
+          "source": { "$ref": "#/$defs/source" },
+          "english": {
+            "$comment": "A published English rendering of this same hymn, where one exists in a source this site may copy (author, 2026-08-26). Not a translation made here — Amendment 2 forbids that — and not a different church's hymn: the same text, rendered, with its own citation. Isabel Hapgood's 1906 Service Book is the one source used so far, being long in the public domain; a modern translation is a living author's work and needs their permission, which is the author's decision and not a build's.",
+            "type": "object",
+            "required": ["text", "source"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string", "minLength": 1 },
+              "source": { "$ref": "#/$defs/source" }
+            }
+          }
         }
       }
     }

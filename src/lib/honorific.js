@@ -51,3 +51,28 @@ export function withHonorific(displayName) {
   if (/^(St\.?|Saint|Sf\.?|Св\.?|Άγ\.?)\s/.test(name)) return name;
   return `${honorific} ${name}`;
 }
+
+/**
+ * A saint's name as this reader should see it (author, 2026-08-26): the form
+ * the corpus recorded in their language where there is one, the English
+ * otherwise, with the honorific in front either way.
+ *
+ * The manifest carries one chosen form per language — `lib/saint-name.js`
+ * argues the choosing, and does it at build time. Where a language has none,
+ * the reason is usually that the church reading in that language does not
+ * keep this saint, so there is no source in it to take a name from.
+ *
+ * **Whether a name is a collective is decided on the English**, always. "The
+ * Twenty-three Martyrs" takes no honorific because "St. The Twenty-three
+ * Martyrs" is not English; «Двадцать три мученика» carries no article to give
+ * the test a handle, so asking the localised form would put «Св.» in front of
+ * a company. The English name is the one place the corpus is complete, and it
+ * is the same figure either way.
+ */
+export function saintName(card) {
+  const english = String(card?.display_name ?? '');
+  const local = card?.names?.[currentLanguage()];
+  const name = local ? String(local) : english;
+  if (!name || isCollective(english)) return name;
+  return withHonorific(name);
+}

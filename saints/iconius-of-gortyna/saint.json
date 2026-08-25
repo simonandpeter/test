@@ -45,5 +45,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 431,
+      "latest": 431,
+      "display": "at the Council of Ephesus",
+      "basis": "traditional"
+    }
   }
 }

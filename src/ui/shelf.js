@@ -16,7 +16,7 @@ import * as store from '../lib/store.js';
 import { fill } from './strings.js';
 import { formatLifespan } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import { withHonorific } from '../lib/honorific.js';
+import { saintName } from '../lib/honorific.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from './save.js';
 import { STRINGS } from './strings.js';
 
@@ -29,7 +29,7 @@ function row(card, router, { removable = false } = {}) {
         aria-label="${STRINGS.shelf.remove}: ${esc(card.display_name)}">×</button>`
     : '';
   return `<li>
-    <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
+    <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
     <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
     ${remove}
   </li>`;
@@ -62,12 +62,12 @@ function readingRow(card, router) {
         <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
           loading="lazy" decoding="async" />
       </span>`
-    : '<span class="index-media is-empty" aria-hidden="true"></span>';
+    : '';
   return `<li class="index-card panel is-row shelf-row">
     ${image}
     <span class="row-body">
       <span class="name-line">
-        <a class="index-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(withHonorific(card.display_name))}</a>
+        <a class="index-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
       </span>
       <span class="index-dates utility">${esc(formatLifespan(card.dates))}</span>
     </span>

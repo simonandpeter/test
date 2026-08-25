@@ -44,5 +44,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1373,
+      "latest": 1389,
+      "display": "under Prince Lazar",
+      "basis": "traditional"
+    }
   }
 }

@@ -71,5 +71,13 @@
         "year": 2026
       }
     }
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1438,
+      "latest": 1440,
+      "display": "1438–1440",
+      "basis": "traditional"
+    }
+  }
 }

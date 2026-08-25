@@ -189,5 +189,13 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "under Maximian",
+      "basis": "traditional"
+    }
+  }
 }

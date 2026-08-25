@@ -49,6 +49,7 @@ function renderChoices(current) {
  *  outlives every view. */
 export function mountLanguageControl(button, panel) {
   let open = false;
+  let flight = 0;
 
   const paintButton = () => {
     const L = STRINGS.language;
@@ -59,17 +60,41 @@ export function mountLanguageControl(button, panel) {
   // The same flight home the calendar control makes, for the same reason.
   const close = () => {
     open = false;
+    const mine = (flight += 1);
     button.setAttribute('aria-expanded', 'false');
     const inner = panel.querySelector('.church-panel-inner');
-    flyInto(inner, button, () => {
-      panel.hidden = true;
-      panel.innerHTML = '';
-    });
+    flyInto(
+      inner,
+      button,
+      () => {
+        if (mine !== flight) return;
+        panel.hidden = true;
+        panel.innerHTML = '';
+      },
+      // The band closes over the same 160 ms, so the page below rises with
+      // the panel instead of snapping up when it goes (author, 2026-08-26).
+      { collapse: panel },
+    );
     button.focus();
   };
+  /*
+   * A close that is still in the air when the panel is opened again must not
+   * land on the new one. `flight` is the token: the closing callback checks
+   * that it is still the current flight before hiding and emptying, and the
+   * panel's own collapse styles are cleared here, because until the old
+   * flight finishes it is still holding `height: 0`.
+   *
+   * Found by the suite — a test that changed calendar twice inside 160 ms hit
+   * a panel that was open, empty and nought pixels tall, and timed out trying
+   * to press a button inside it.
+   */
   const openPanel = () => {
     open = true;
+    flight += 1;
     panel.hidden = false;
+    panel.style.height = '';
+    panel.style.overflow = '';
+    panel.style.transition = '';
     button.setAttribute('aria-expanded', 'true');
     panel.innerHTML = `<div class="church-panel-inner">${renderLanguageChooser()}</div>`;
     (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus();

@@ -24,7 +24,7 @@ import {
 import { loadDetail, observePrefetch } from '../lib/detail.js';
 import { chooseChurch, churchName, currentChurch, entriesInChurch, hasChosen, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
-import { withHonorific } from '../lib/honorific.js';
+import { saintName } from '../lib/honorific.js';
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
@@ -38,6 +38,7 @@ import { liturgicalDay } from '../lib/liturgy.js';
 import { chooseLanguage, currentLanguage, formatDate, hasChosenLanguage, translateReason } from '../lib/i18n.js';
 import { recordedDay } from '../data/liturgical-days.js';
 import { gradeForDay } from '../lib/fast-grade.js';
+import { cycleName } from '../ui/cycle-name.js';
 import { bibleUrl, refInLanguage } from '../lib/bible.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -360,8 +361,8 @@ function paintLiturgy() {
   const f = day.fasting;
   // The reason is an English string from the data or from lib/liturgy.js;
   // the locale packs translate the recurring ones and pass the rest through
-  // (Amendment 36). day.title stays English — the cycle line is composed by
-  // lib/liturgy.js and localising its grammar is the recorded seam.
+  // (Amendment 36). The cycle line was the other half of that seam and is
+  // closed as of 2026-08-26; the fast reasons are what remains of it.
   const reason = f.reason ? translateReason(f.reason) : f.reason;
   /*
    * Which fast, and — where the church's own calendar printed one — which
@@ -389,7 +390,11 @@ function paintLiturgy() {
     `aria-haspopup="dialog" title="${esc(M.hint)}">${esc(fastText)}` +
     `<span class="fast-info" aria-hidden="true">i</span>` +
     `<span class="sr-only"> - ${esc(M.open)}</span></button>`;
-  const plain = [day.title, day.tone ? fill(L.tone, { tone: day.tone }) : null].filter(Boolean).map(esc);
+  // The cycle line follows the language too (author, 2026-08-26): lib/liturgy.js
+  // hands out which day of the cycle it is, ui/cycle-name.js gives it words.
+  const plain = [cycleName(day.cycle, selected), day.tone ? fill(L.tone, { tone: day.tone }) : null]
+    .filter(Boolean)
+    .map(esc);
   box.innerHTML = [...plain, fastHtml].join(' · ');
 }
 
@@ -531,12 +536,23 @@ function openFastBubble(button) {
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', M.open);
   el.tabIndex = -1;
+  /*
+   * The quotation earns its place by saying something the line above does not
+   * (author, 2026-08-26: on the Beheading, "remove the italic 'Post' above
+   * the hyperlink from doxologia.ro, just keep the hyperlink"). A note that
+   * reads only «Post», «Νηστεία» or «Пост (означен у календару)» says "this
+   * is a fast" to a reader who has just been told that in their own language,
+   * in larger type. So the note is printed when a grade was read *out of it*
+   * — which is exactly when it carries more than the label — and the citation
+   * stands either way, because the day's record came from that page whether
+   * or not its words are worth repeating.
+   */
   el.innerHTML =
     `<p class="fast-allows">${esc(allows)}</p>` +
-    (note
-      ? `<p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>` +
-        (src ? `<p class="fast-source utility">${fill(M.sourceNote, { source: src })}</p>` : '')
-      : '');
+    (note && grade
+      ? `<p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>`
+      : '') +
+    (note && src ? `<p class="fast-source utility">${fill(M.sourceNote, { source: src })}</p>` : '');
   document.body.appendChild(el);
 
   place(el, button);
@@ -741,7 +757,9 @@ function wireAsk() {
         chooseLanguage(button.dataset.language);
       }
     };
-    flyInto(block, target, answer);
+    // 'self': the block *is* the box holding the space, so a placeholder of
+    // its size stands in while it flies and closes behind it.
+    flyInto(block, target, answer, { collapse: 'self' });
   };
   gate.addEventListener('click', onClick);
   state.cleanups.push(() => gate.removeEventListener('click', onClick));
@@ -1373,13 +1391,13 @@ function registerRow(saint, title, transition) {
         <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
           loading="lazy" decoding="async" />
       </span>`
-    : '<span class="index-media is-empty" aria-hidden="true"></span>';
+    : '';
   return `<li class="index-card panel is-row reg-card">
     ${image}
     <span class="row-body">
       <span class="name-line">
         <a class="index-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-          data-prefetch="${saint.slug}"${transition}>${esc(withHonorific(saint.display_name))}</a>
+          data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
       </span>
       ${/* No day in any of the four calendars currently puts a *titled*
              saint in the register: all 20 titled attestations in the corpus
@@ -1471,7 +1489,7 @@ function paintDay(panel) {
       <div class="hero-body">
         <div class="name-line">
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(withHonorific(hero.display_name))}</a>
+            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
           </h2>
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>

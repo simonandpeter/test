@@ -41,5 +41,13 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1100,
+      "display": "before the 11th century",
+      "basis": "inferred"
+    }
   }
 }
