@@ -16,6 +16,22 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Nectarios of Aegina”: Metropolitan of Pentapolis, 1846–1920."
+    },
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Nectarios of Aegina”: Metropolitan of Pentapolis, 1846–1920; glorified 20 April 1961."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

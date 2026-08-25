@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1407,
+      "latest": 1407,
+      "display": "1407",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Sabbas of Storozhi”: a Russian monk who died in 1407, founder and first hegumen of the monastery on Storozhi hill."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

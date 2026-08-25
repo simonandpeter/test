@@ -663,44 +663,59 @@ test('Overlaps and Entirely within are different questions, and both are offered
   // Moses the Hungarian with his open birth bound overlap it without being
   // contained.
   //
-  // The counts have moved twice with the corpus, and both times for the same
+  // The counts have moved three times with the corpus, always for the same
   // reason. Two on 2026-08-25, when nine saints whose *lives* stated a death
   // year the data had never recorded were given it. Twenty-one more on
   // 2026-08-26, when the audit was widened past the lives to the calendar
   // entry lines and the reigns — Adrian and Natalia of Nicomedia "under
   // Maximian (305–311)", the Twenty-three Martyrs in the fourth century,
-  // Pothinus of Lyon in the second — 43 saints in all.
-  await expect(page.locator('[data-count]')).toHaveText('181');
+  // Pothinus of Lyon in the second — 43 saints in all. And ten more in the
+  // pass after it, which opened two further seams: saint.gr's *per-saint*
+  // pages, which date people its day index does not (the three sisters of
+  // Bithynia at 290, Irenaeus of Sirmium at 288, Ia of Persia under Shapur),
+  // and named authorities outside the four calendars for figures the
+  // calendars are silent about.
+  await expect(page.locator('[data-count]')).toHaveText('191');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('168');
+  await expect(page.locator('[data-count]')).toHaveText('177');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
-  await page.locator('[data-from]').fill('1322');
-  await page.locator('[data-to]').fill('1329');
+  await page.locator('[data-from]').fill('1327');
+  await page.locator('[data-to]').fill('1334');
 
-  // Nobody in the corpus has a dated life touching 1322–1329. The empty range
-  // has had to move twice: the 17th century served until Amendment 31 gave it
-  // Athanasius of Brest and Cyriacus of Tazlău, and 1320–1330 served until
-  // 2026-08-26 gave Eustathius II of Serbia a floruit "under King Milutin",
-  // 1282–1321. A range that stays empty is a range the corpus is not filling,
-  // and this one narrowing is the corpus doing its work.
+  // Nobody in the corpus has a dated life touching 1327–1334. The empty range
+  // has had to move three times: the 17th century served until Amendment 31
+  // gave it Athanasius of Brest and Cyriacus of Tazlău; 1320–1330 served
+  // until 2026-08-26 gave Eustathius II of Serbia a floruit "under King
+  // Milutin", 1282–1321; and 1322–1329 served until Peter, Metropolitan of
+  // Moscow, was dated 1260–1326 from the article that records he moved his
+  // see from Vladimir to Moscow in 1325. A range that stays empty is a range
+  // the corpus is not filling, and this one narrowing again is the corpus
+  // doing its work.
   await expect(page.locator('[data-count]')).toHaveText('0');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
   // The calendars' saints often carry no dates — their pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  // 187, down from 239 in two audits. Nine on 2026-08-25, from death years
+  // 157, down from 239 in three audits. Nine on 2026-08-25, from death years
   // stated in the saints' own life texts (Titus the Apostle's 105 among
   // them); 43 more on 2026-08-26, when the audit was widened past the lives
   // to the calendar entry lines, the reigns those lives name and the councils
-  // they place a man at. The rest are undated because their sources say
-  // nothing, which is the finding
+  // they place a man at; 30 more in the pass after it, from saint.gr's
+  // per-saint pages and from named authorities outside the four calendars.
+  //
+  // The rest are undated because their sources say nothing, and the third
+  // audit is the one that showed how firmly. 152 of these people are kept by
+  // the Greek church, so all 152 of saint.gr's per-saint pages were fetched:
+  // 44 carry no biography at all, 15 say in as many words that no details of
+  // the life survive, and of the 75 that are silent about time only 11 so
+  // much as name a ruler. That is a finding rather than a gap, which is what
   // this tray exists to keep visible.
-  await expect(page.locator('.tray')).toContainText('187 undated');
+  await expect(page.locator('.tray')).toContainText('157 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -3183,9 +3198,21 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await page.locator('#church-panel [data-church="russian"]').click();
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toHaveText(/Euplus|Theodore|Basil/);
-  await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'cu');
+  // Euplus sings the martyrs' *common* troparion, which Orloff's General
+  // Menaion prints, so this reader — who is reading English — meets it in
+  // English. The tone beside it is still the Slavonic calendar's own «глас»,
+  // because a rendering does not change which church's book the hymn is from.
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('глас');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="en"]').first())
+    .toContainText('Thy martyr, O Lord');
+  // The claim this line has always made: nothing Serbian on the Russian
+  // calendar. Unchanged.
   await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]')).toHaveCount(0);
+  // And a Russian reader still meets the Slavonic, which is the corpus's text.
+  await page.locator('#lang-open').click();
+  await page.locator('#lang-panel [data-language="ru"]').click();
+  await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'cu');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="en"]')).toHaveCount(0);
 });
 
 test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async ({ page }) => {
@@ -4201,20 +4228,38 @@ test('the hymns carry no note about their own tongue', async ({ page }) => {
    * that the corpus holds no English hymn texts by decision.
    *
    * The author removed the line the next morning ("don't print it. Remove
-   * it"). The decision it announced still stands — the hymns are the source's
-   * own language, untranslated — so what this heir pins is both halves: the
-   * note is gone in every language, and the hymns under it are still the
-   * source's own text, which is the thing the note was talking about.
+   * it").
+   *
+   * *The half of it about translation has since been reversed by the author,
+   * and this test is corrected in place rather than left standing* (2026-08-26
+   * and the Orloff pass after it): "when you select English as the language,
+   * on any calendar, it should be in English." So the corpus now carries a
+   * published English rendering beside a hymn wherever a source it may copy
+   * prints one, and the reader reading English gets it. 11 September's
+   * troparion is the Forerunner's, which Orloff's General Menaion of 1899
+   * prints, so it is the case in point.
+   *
+   * What survives unchanged is the note itself: it is gone in every language.
+   * And what is pinned beside it is the shape of the reversal — English gets
+   * the English *where one exists*, everyone else gets the source's own text,
+   * and a hymn with no published rendering (the kontakion below it) stays in
+   * Slavonic even for an English reader.
    */
   await ready(page);
   await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
-  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="en"]').first())
+    .toContainText('The memory of a righteous one');
+  // the kontakion has no published English and is still the Slavonic
+  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first())
+    .toContainText('Предтечево славное усекновение');
 
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
   await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
-  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго');
+  await expect(page.locator('[data-hymns] .hymn-text[lang="en"]')).toHaveCount(0);
+  await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first())
+    .toContainText('Память праведнаго');
 });
 
 /* ---- the 2026-08-25 evening batch ---------------------------------------- */
@@ -5053,4 +5098,103 @@ test('a panel reopened mid-flight is not emptied by the flight it interrupted', 
   // And it is still a working control, which is what the timeout was about.
   await page.locator('#church-panel [data-church="russian"]').click();
   await expect(page.locator('#church-open')).toHaveText('Russian');
+});
+
+test('a general troparion reads in Orloff’s English, and the original stays for everyone else', async ({ browser }) => {
+  /*
+   * Hapgood's Service Book holds no menaion, so Amendment 41 could only reach
+   * the Great Feasts. Orloff's *General Menaion* of 1899 is the other seam:
+   * the common services, one troparion for any martyr, any hierarch, any
+   * prophet — which is what this corpus records for a good many of its
+   * lesser-known saints. Mamas of Caesarea sings the martyrs' common
+   * troparion in Greek, so an English reader meets Orloff there.
+   *
+   * The second half of the test is the point. This is a *rendering* of the
+   * Greek, offered only to a reader reading English; a Greek reader must
+   * still meet the Greek.
+   */
+  const en = await browser.newContext();
+  const enPage = await en.newPage();
+  await enPage.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'en' })),
+  );
+  await enPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
+  const rendered = enPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' });
+  // Two, and that is the point rather than a slip: Mamas sings the martyrs'
+  // common troparion in the Greek *and* the Romanian, they are two hymns in
+  // two churches' books, and each gets its own rendering with its own
+  // citation. The corpus does not merge them into one.
+  await expect(rendered).toHaveCount(2);
+  await expect(rendered.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
+  await expect(rendered.first().locator('.hymn-source')).toContainText('Orloff');
+  await expect(rendered.first().locator('.hymn-source')).toContainText('1899');
+  await en.close();
+
+  const el = await browser.newContext();
+  const elPage = await el.newPage();
+  await elPage.addInitScript(() =>
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
+  );
+  await elPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
+  await expect(elPage.locator('[data-hymns-box]')).toContainText('Ὁ Μάρτυς σου Κύριε');
+  await expect(elPage.locator('[data-hymns-box]')).not.toContainText('Orloff');
+  await el.close();
+});
+
+test('the hymns Orloff does not print are still the original in English', async ({ page }) => {
+  /*
+   * Orloff prints the *singular* martyr's troparion and, for many martyrs, a
+   * different hymn altogether — so «Мученицы Твои, Господи … венцы прияша»,
+   * which four saints here sing, has no English in that book. The temptation
+   * is to lend it the singular's words. This says the corpus would rather
+   * print the Slavonic than print something the source does not.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+  await page.goto('/saints/photius-of-nicomedia', { waitUntil: 'networkidle' });
+  const hymns = page.locator('[data-hymns-box]');
+  await expect(hymns).toContainText('Мученицы Твои');
+  await expect(hymns).not.toContainText('Thy martyr, O Lord');
+});
+
+test('the saints dated this batch print their dates rather than Undated', async ({ page }) => {
+  /*
+   * Two seams: saint.gr's *per-saint* pages, which date people the day index
+   * does not (Andronicus lived under Nikephoros and Staurakios), and named
+   * authorities outside the four calendars for figures the calendars are
+   * silent about. Irenaeus is here because his two sources disagree — 288 on
+   * saint.gr, 304 elsewhere — and the corpus keeps a disagreement whole
+   * rather than picking a winner.
+   */
+  await ready(page);
+  for (const [slug, shown] of [
+    ['pulcheria-the-empress', '399 AD – 453 AD'],
+    ['irenaeus-of-sirmium', '288 or 304 AD'],
+    ['andronicus-of-atroa', 'early 9th C. AD'],
+    ['edith-of-wilton', 'c. 961 AD – 984 AD'],
+  ]) {
+    await page.goto(`/saints/${slug}`, { waitUntil: 'networkidle' });
+    await expect(page.locator('main')).toContainText(shown);
+    await expect(page.locator('main')).not.toContainText('Undated');
+  }
+});
+
+test('an icon taken from the Menologion prints a real source and a credit', async ({ page }) => {
+  /*
+   * "Bulk-fetching images and guessing at their licences is the failure mode
+   * this repository is built to refuse" (Amendment 32). So an icon added here
+   * must carry what the build checks: a licence Commons actually states, a
+   * credit where one is owed, and a source_url that is not the placeholder.
+   */
+  await ready(page);
+  await page.goto('/saints/theodora-of-alexandria', { waitUntil: 'networkidle' });
+  const img = page.locator('.saint-media img, main img').first();
+  await expect(img).toHaveAttribute('src', /theodora-of-alexandria\/images\/icon\.jpg/);
+  const credit = page.locator('[data-credit]');
+  await expect(credit).toContainText('Public domain');
+  await expect(credit).not.toContainText('example.invalid');
+  await expect(credit).not.toContainText('not recorded');
+  // and the plate that carries a company gives each of them the same icon
+  await page.goto('/saints/urban-child-martyr', { waitUntil: 'networkidle' });
+  await expect(page.locator('.saint-media img, main img').first())
+    .toHaveAttribute('src', /urban-child-martyr\/images\/icon\.jpg/);
 });

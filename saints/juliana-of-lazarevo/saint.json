@@ -11,6 +11,22 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1530,
+      "latest": 1530,
+      "display": "1530",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Juliana of Lazarevo”: born in Moscow to Justin and Stefanida Nedyurev; Wikidata Q4205383 gives 1530–1604."
+    },
+    "death": {
+      "earliest": 1604,
+      "latest": 1604,
+      "display": "1604",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Juliana of Lazarevo”: Wikidata Q4205383 gives 1530–1604."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

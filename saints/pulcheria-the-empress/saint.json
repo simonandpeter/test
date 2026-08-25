@@ -16,6 +16,22 @@
     "righteous",
     "empress"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 399,
+      "latest": 399,
+      "display": "399",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Pulcheria”: Aelia Pulcheria, Eastern Roman empress; Wikidata Q231919 gives her birth in 399."
+    },
+    "death": {
+      "earliest": 453,
+      "latest": 453,
+      "display": "453",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Pulcheria”: wife of the emperor Marcian from November 450 to her death in 453."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

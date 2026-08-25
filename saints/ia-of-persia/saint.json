@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 309,
+      "latest": 379,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: taken captive with nine thousand Christians and handed over by Shapur, king of the Persians, who reigned 309–379."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -44,5 +53,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

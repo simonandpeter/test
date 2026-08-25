@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 306,
+      "latest": 337,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr, retelling the Barlaam narrative ascribed to John of Damascus: in the days of Constantine the Great, who reigned 306–337. The story is a legend and the date is the story’s, not a record of a life."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

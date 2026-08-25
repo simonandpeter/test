@@ -11,6 +11,15 @@
   "types": [
     "new-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1680,
+      "latest": 1680,
+      "display": "1680",
+      "basis": "attested",
+      "note": "saint.gr: beheaded before the palace, near Hagia Sophia, on 1 September 1680 AD."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

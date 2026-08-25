@@ -12,6 +12,15 @@
     "princess",
     "righteous"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1228,
+      "latest": 1228,
+      "display": "1228",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Peter and Fevronia of Murom”: thirteenth-century Russian saints, the prince and princess consort of Murom; Wikidata Q4386215 gives 1228."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd or 4th century",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Saint Alban”: traditionally believed to have been beheaded in Verulamium sometime during the 3rd or 4th century."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -52,5 +52,11 @@
       "display": "under Diocletian",
       "basis": "traditional"
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

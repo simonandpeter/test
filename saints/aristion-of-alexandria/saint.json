@@ -82,5 +82,11 @@
       },
       "model": "Ταχὺ προκατάλαβε."
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
   ]
 }

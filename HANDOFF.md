@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 41)
+## State as of 2026-08-26 (Amendment 42)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,8 +75,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 145 unit tests (`npm test`) — pure logic, no DOM.
-- 342 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 41), not carried
+- 350 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 42), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,18 +101,22 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
-  *Amendment 40 was pushed (`f6aaa2e`); 41 is committed on top and is not.*
+  *Amendments 40 and 41 were pushed (`f6aaa2e`, `cf8a3e1`); 42 is committed
+  on top and is not.*
 
 **Corpus as of 2026-08-26: 708 saints**, every one with a life and four
-attestation rows; **187 undated**, down from 239 in three audits (Amendments
-39 and 41 — the second read the calendar entry lines and the reigns, not just
-the lives, which is where most datings actually live); **the manifest now
+attestation rows; **157 undated**, down from 239 in four audits (Amendments
+39, 41 and 42 — the third read the calendar entry lines and the reigns rather
+than only the lives, and the fourth read saint.gr's *per-saint* pages, which
+are a different document from its day index); **the manifest now
 carries each saint's name in the languages the corpus records one for** —
-393 Russian, 240 Greek, 111 Serbian, 102 Romanian; 430 hymns; readings/fasting for 23 August – 19 September in
+393 Russian, 240 Greek, 111 Serbian, 102 Romanian; 430 hymns, **49 of whose
+objects carry a published English rendering** (12 Hapgood, 37 Orloff); readings/fasting for 23 August – 19 September in
 `src/data/liturgical-days.js` (the Greek 7–19 September still empty with a
 note — saint.gr has not published that far out as of Amendment 31's check on
-2026-08-24). 95 icons (88 from Wikimedia Commons with their file pages cited,
-four added at Amendment 31). The generating pipeline is under `.tmp/w3/`
+2026-08-24). **128 icons** — 95 through Amendment 31, and 33 added at
+Amendment 42 from the Menologion of Basil II, all public domain with their
+Commons file pages cited. The generating pipeline is under `.tmp/w3/`
 (untracked).
 
 **Since Amendment 31 was written up, seven more amendments landed the same
@@ -371,53 +375,81 @@ up cold; the two the author has to decide are marked.
   cycle line is the remaining English on a translated Daily page. The
   author's call whether it is worth the restructure.
 
-- **English hymn texts: begun from Hapgood, and the rest is a rights
-  decision** (Amendment 41; raised at 37 and 40). Asked for outright on
-  2026-08-26 and answered from the source the author chose: **Isabel Hapgood's
-  1906 Service Book, public domain.** Her book holds no menaion of per-saint
-  troparia — of the 132 saints here with hymns it names none — so what landed
-  is the Great Feasts falling inside the corpus's four weeks: the
-  Falling-Asleep, the Nativity of the Birth-giver of God, the Elevation of the
-  Cross. **Five texts, twelve hymn objects.** The mechanism is in (`english`
-  on a hymn; `ui/hymns.js` prefers it when the reader reads English), so any
-  further text is data rather than code.
+- **English hymn texts: 49 of 495, and the public-domain well is dry**
+  (Amendments 41 and 42; raised at 37 and 40). Two public-domain books have
+  now been worked through, on the author's instruction "try public-domain
+  translation".
 
-  What is still open is the other 403, and the reason has not changed.
+  **Hapgood's 1906 Service Book** gave 12 objects: it is the fixed services
+  and the Great Feasts, and holds no menaion at all. **Orloff's General
+  Menaion (London, 1899)** gave 37: it is the *common* services, one troparion
+  per order of saint, which is what a real part of this corpus sings for its
+  lesser-known people. Neither is a menaion of propers, because no
+  public-domain English one was found.
 
-  **The 415 hymns in this corpus are the original texts** — Greek, Church
-  Slavonic, Romanian, Serbian — centuries out of copyright, which is why
-  transcribing them from saint.gr and days.pravoslavie.ru was sound. **An
-  English translation is a modern work with a living author.** The OCA prints
-  English troparia and kontakia for much of this calendar and marks them its
-  own; copying 415 into a published site is a decision only the author can
-  take. `WebFetch` declines to reproduce them verbatim for the same reason.
+  **The one that would finish the job is Seraphim Nassar's Book of Divine
+  Prayers and Services (1938), and its status is unresolved.** It is a full
+  English menaion and it is served openly on archive.org. A 1938 American
+  publication is public domain only if the copyright was not renewed; no
+  renewal record was found either way, and archive.org's own record for one
+  copy says "This material may be protected by copyright law". **Settling that
+  is a real, bounded piece of work** — the Catalog of Copyright Entries for
+  1965–66 is digitised — and it is worth doing before anything else, because
+  it would take the remaining ~440 objects in one source. It is a rights
+  question, so it is the author's.
 
-  Two paths remain, both the author's call: **another public-domain
-  translation** with wider per-saint coverage than Hapgood's, or **permission**
-  from a modern translator or publisher. Whichever it is, the work is
-  transcription into `english` blocks with a citation each — no code.
+  Otherwise the paths are as before: **permission** from a modern translator
+  (the OCA prints English for much of this calendar and marks it its own), or
+  another public-domain menaion nobody has found yet. The mechanism is done
+  either way — `english` on a hymn, `ui/hymns.js` prefers it for an English
+  reader — so anything further is transcription with a citation each, no code.
 
-- **Dating the remaining 187** (Amendment 41). Three audits have taken this
-  from 239: the third read the calendar entry lines and the reigns and
-  councils the lives name, not just the prose, and dated 43. The 187 that
-  remain are **not** unread sources — their lives say "That is the whole of
-  the Prologue's notice" and "the Greek synaxarion … says it has no details of
-  his life". Dating them means consulting sources this corpus has not cited,
-  saint by saint, which is a sourcing commission. Read Amendment 41 before
-  scoping it: four of the 47 mechanical proposals were thrown out because a
-  parenthesis in a life is often about somebody else, and the Russian
-  calendar's parenthesis dates *the commemoration*, which for a relics entry
-  is centuries after the man.
+- **Dating the remaining 157** (Amendment 42). Four audits have taken this
+  from 239. The fourth opened two seams and then established, rather than
+  assumed, that they are exhausted.
 
-- **Icons for the 613 saints without one** (Amendment 40, asked for
-  outright). 95 of 708 have an `images/icon.jpg`, and every one of those
-  carries a *placeholder* `source_url` on an unresolvable reserved domain —
-  the build warns while it stands. So this is 613 sourcing decisions each
-  carrying a rights question, not a fetch loop: a file, a licence, a credit
-  and a real source URL apiece. Bulk-fetching images and guessing at their
-  licences is the failure mode `lib/licence.js` and the build's warnings
-  exist to refuse. Wikimedia Commons supplied the 88 that are cited properly
-  and is the obvious well; the work is per-saint verification.
+  **saint.gr's per-saint pages** are a different document from the day index
+  every earlier audit had read, and they do date some people the index does
+  not. All 152 that this corpus cites were fetched. **44 carry no biography at
+  all, 15 say in as many words that no details of the life survive, and of the
+  75 silent about time only 11 so much as name a ruler.** The Greek synaxarion
+  does not date these people; that is a finding, and the undated tray's test
+  now records it.
+
+  So what is left needs sources this corpus has not cited — saint by saint,
+  a sourcing commission. **Read Amendment 42 before scoping it.** A name is
+  not evidence: a Wikidata search returned Pushkin for "Alexander, companion
+  of Susanna", Damon Hill for "Damon the hieromartyr" and Callista Gingrich
+  for Callista of Nicomedia. Everything that landed came from an article
+  chosen by hand and checked. And read Amendment 41 too, for why four of its
+  47 mechanical proposals were thrown out: a parenthesis in a life is often
+  about somebody else.
+
+- **Icons for the 580 saints without one** (Amendments 40 and 42, asked for
+  outright). **128 of 708** now have an `images/icon.jpg`. Amendment 42 added
+  33 from the **Menologion of Basil II** (Vat. gr. 1613, c. 985): Commons
+  holds 494 of its miniatures, 492 of them public domain, and it depicts
+  exactly the Byzantine martyrs this corpus is thickest in.
+
+  **What Amendment 42 settled is the method, and it is not a fetch loop.** A
+  general Commons search by name, probed over eighteen saints, offered
+  Callista Gingrich for Callista of Nicomedia, Julian Assange for the martyr
+  Julian and Rodin's *Ève* for the abbess Eve. What works is harvesting a
+  *known corpus* of icons whole and matching the corpus against it, with every
+  pairing read by hand — the refusals in Amendment 42 include two the corpus's
+  own life texts caught after the matcher had passed them.
+
+  **Next wells, in order of promise**, both named at Amendment 31 and neither
+  yet worked: the **1903–1911 Жития Святых engravings** on Commons, which
+  cover the Russian calendar's saints as the Menologion covers the Greek; and
+  the per-saint **"Category:Icons of …"** trees, which are already
+  hand-curated by subject and so carry the matching that a filename cannot.
+
+  Seven of the 95 older icons still carry a *placeholder* `source_url` on an
+  unresolvable reserved domain and the build warns while it stands. **These
+  are the author's to fix, not a successor's**: their note reads "Author
+  reports these are public-domain works", so the files came from the author
+  and only the author knows where from.
 
 - **Six months of liturgical days across four churches** (Amendment 40, asked
   for outright). `src/data/liturgical-days.js` holds **28 days**, 23 August to

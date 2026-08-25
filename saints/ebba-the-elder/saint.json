@@ -11,6 +11,22 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 615,
+      "latest": 615,
+      "display": "c. 615",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Æbbe of Coldingham”: an Anglian abbess and saint, c. 615–683."
+    },
+    "death": {
+      "earliest": 681,
+      "latest": 683,
+      "display": "683",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Æbbe of Coldingham”: an Anglian abbess and saint, c. 615–683; Wikidata Q3717838 records 683 and 681."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

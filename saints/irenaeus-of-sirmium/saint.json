@@ -12,6 +12,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 304,
+      "display": "288 or 304",
+      "basis": "attested",
+      "note": "saint.gr: beheaded by the governor Probus and his head thrown into the river Savus (288 AD). Wikidata Q240598 and the article “Irenaeus of Sirmium” put it at 304; the two prints disagree and both are kept."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

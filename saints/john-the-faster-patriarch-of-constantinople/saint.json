@@ -111,7 +111,15 @@
         "url": "https://www.saint.gr/926/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As a rule of faith and model of tenderness, and teacher of abstinence hath the reality shewn thee unto thy flock; therewithal hast thou acquired by humility greatness, by poverty riches; O father hierarch (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter X, The General Service to One Hierarch",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
     },
     {
       "church": "greek",
@@ -136,6 +144,14 @@
         "text": "Doxologia — Troparul Sfântului Ierarh Ioan Postitorul, Patriarhul Constantinopolului",
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-ioan-postitorul-patriarhul-constantinopolului",
         "year": 2026
+      },
+      "english": {
+        "text": "As a rule of faith and model of tenderness, and teacher of abstinence hath the reality shewn thee unto thy flock; therewithal hast thou acquired by humility greatness, by poverty riches; O father hierarch (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter X, The General Service to One Hierarch",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     }
   ],

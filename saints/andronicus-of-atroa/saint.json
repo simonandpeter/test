@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 802,
+      "latest": 811,
+      "display": "early 9th century",
+      "basis": "traditional",
+      "note": "saint.gr: he lived in the reign of Nikephoros and Staurakios, and of Patriarch Tarasios. Nikephoros I reigned 802–811, Staurakios in 811."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

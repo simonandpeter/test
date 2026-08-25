@@ -15,6 +15,22 @@
   "types": [
     "hierarch"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1260,
+      "latest": 1260,
+      "display": "c. 1260",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Peter of Moscow”: Wikidata Q1652445 gives 1260–1326."
+    },
+    "death": {
+      "earliest": 1326,
+      "latest": 1326,
+      "display": "1326",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Peter of Moscow”: he moved his see from Vladimir to Moscow in 1325; Wikidata Q1652445 gives his death in 1326."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

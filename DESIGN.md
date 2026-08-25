@@ -938,14 +938,31 @@ What remains of the fast reasons — English strings the packs map through
 *And the hymns crossed too, but only where somebody else had already carried
 them* (author, 2026-08-26). A hymn may hold an `english` block: a **published**
 rendering of that same hymn, with its own citation, preferred when the reader
-reads English. Isabel Hapgood's 1906 Service Book is the one source so far,
-being long in the public domain — a modern translation is a living author's
-work and needs their permission, which is a decision for the author of this
-site and not for a build. Her book has no per-saint troparia, so five texts
-and three feasts are the whole of it; every other hymn an English reader meets
-is still the source's own tongue, which is the state of the corpus rather than
-a gap in the code. **The rule that nothing here is translated by this build is
-untouched, and is the reason the block carries a citation of its own.**
+reads English. The sources must be ones this site may copy — a modern
+translation is a living author's work and needs their permission, which is a
+decision for the author of this site and not for a build.
+
+*Two are in, and between them they say what kind of gap this is* (extended
+2026-08-26, second sitting). **Isabel Hapgood's 1906 Service Book** is the
+fixed services and the Great Feasts, and has no per-saint troparia at all:
+five texts, twelve objects. **N. Orloff's General Menaion (London, 1899)** is
+the *common* services — one troparion for any martyr, any hierarch, any
+prophet — which is what a good part of this corpus sings for its
+lesser-known saints: ten texts, thirty-seven objects. Neither is a menaion of
+propers, because no public-domain English one has been found.
+
+49 of 495 hymn objects, then, and every other hymn an English reader meets is
+still the source's own tongue — the state of the corpus rather than a gap in
+the code, and asserted as such by a test that keeps the plural martyrs'
+troparion in Slavonic because Orloff does not print it.
+
+**The rule that nothing here is translated by this build is untouched, and is
+the reason the block carries a citation of its own.** Its two corollaries are
+worth stating because both were live decisions: a rendering is matched to a
+hymn by the *hymn*, never by the saint's type — several propers here open with
+the common troparion's words and then diverge — and the source's text is
+quoted as printed, so Orloff's "(mentioned by name)" and Hapgood's 1906
+petitions stand where a modern book would have the saint's name.
 
 ### 5c. The saint's page
 

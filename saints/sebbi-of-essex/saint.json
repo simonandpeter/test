@@ -11,6 +11,15 @@
   "types": [
     "king"
   ],
+  "dates": {
+    "death": {
+      "earliest": 694,
+      "latest": 695,
+      "display": "694 or 695",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Sæbbi of Essex”: King of Essex, joint ruler from 664 and sole ruler until 694; the article heads him “d. 695” and Wikidata Q888546 gives 694."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

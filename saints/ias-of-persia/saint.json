@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 309,
+      "latest": 379,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: taken by the Persians with nine thousand Christians and brought before the chief magi of the king of Persia; Shapur reigned 309–379."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

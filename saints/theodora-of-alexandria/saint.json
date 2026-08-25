@@ -91,6 +91,14 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Θεοδώρα από την Αλεξάνδρεια, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/1001/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, was manifestly preserved what is in the image of God; for, having taken up the cross, thou didst follow Christ, and by thine own example hast taught that the flesh is to be despised as transient, but that particular care should be bestowed on the soul, as a thing immortal; wherefore together with the angels rejoiceth also thine, O religious (mentioned by name), spirit.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XXII, The General Service to a Nun",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     },
     {
@@ -142,7 +150,21 @@
         "text": "Doxologia — Troparul Sfintei Cuvioase Teodora din Alexandria",
         "url": "https://doxologia.ro/troparul-sfintei-cuvioase-teodora-din-alexandria",
         "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, was manifestly preserved what is in the image of God; for, having taken up the cross, thou didst follow Christ, and by thine own example hast taught that the flesh is to be despised as transient, but that particular care should be bestowed on the soul, as a thing immortal; wherefore together with the angels rejoiceth also thine, O religious (mentioned by name), spirit.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XXII, The General Service to a Nun",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ]
 }

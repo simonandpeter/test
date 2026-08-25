@@ -12,6 +12,15 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 360,
+      "latest": 432,
+      "display": "late 4th or early 5th century",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Ninian”: a fifth-century bishop and missionary among the southern Picts; Wikidata Q1269112 gives 360–432."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

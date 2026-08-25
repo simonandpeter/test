@@ -11,6 +11,22 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1440,
+      "latest": 1440,
+      "display": "1440",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Joseph Volotsky”: born Ivan Sanin; Wikidata Q1383356 gives 1440–1515."
+    },
+    "death": {
+      "earliest": 1515,
+      "latest": 1515,
+      "display": "1515",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Joseph Volotsky”: a Russian theologian and saint; Wikidata Q1383356 gives 1440–1515."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

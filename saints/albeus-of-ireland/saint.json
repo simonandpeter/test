@@ -15,6 +15,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 528,
+      "latest": 528,
+      "display": "528",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Ailbe of Emly”: an Irish saint who died in the early 6th century; Wikidata Q4531465 gives 528."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

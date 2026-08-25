@@ -11,6 +11,22 @@
   "types": [
     "bishop"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1435,
+      "latest": 1440,
+      "display": "c. 1435–1440",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Nephon II of Constantinople”: born Nicholas; Wikidata Q3067006 records 1435 and 1440."
+    },
+    "death": {
+      "earliest": 1508,
+      "latest": 1508,
+      "display": "1508",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Nephon II of Constantinople”: Ecumenical Patriarch three times between 1486 and 1502; Wikidata Q3067006 gives 1508."
+    }
+  },
   "attestations": [
     {
       "church": "serbian",

@@ -11,6 +11,22 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 961,
+      "latest": 961,
+      "display": "c. 961",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Edith of Wilton”: an English nun and saint, c. 961 – 984."
+    },
+    "death": {
+      "earliest": 984,
+      "latest": 984,
+      "display": "984",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Edith of Wilton”: an English nun and saint, c. 961 – 984."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

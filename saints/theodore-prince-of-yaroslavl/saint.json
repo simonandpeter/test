@@ -12,6 +12,22 @@
     "righteous",
     "prince"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1233,
+      "latest": 1240,
+      "display": "c. 1240",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Fyodor Rostislavich”: a Russian saint, c. 1240–c. 1299; Wikidata Q172502 also records 1233."
+    },
+    "death": {
+      "earliest": 1298,
+      "latest": 1299,
+      "display": "1299",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Fyodor Rostislavich”: ruler of Smolensk and Yaroslavl, c. 1240–c. 1299."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

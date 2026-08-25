@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 720,
+      "latest": 729,
+      "display": "c. 720",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Cuthburh”: the first Abbess of Wimborne Minster, sister of Ine, King of Wessex; Wikidata Q5196821 gives her death to the 720s."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

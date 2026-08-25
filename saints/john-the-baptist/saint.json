@@ -29,6 +29,22 @@
     "forerunner",
     "martyr"
   ],
+  "dates": {
+    "birth": {
+      "earliest": -6,
+      "latest": -6,
+      "display": "c. 6 BC",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “John the Baptist”: a prophet, 6 BC – AD 30."
+    },
+    "death": {
+      "earliest": 30,
+      "latest": 30,
+      "display": "c. 30",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “John the Baptist”: a prophet, 6 BC – AD 30; a religious preacher active by the Jordan in the early first century."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -106,6 +122,14 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr), σελίδα 2322",
         "url": "https://www.saint.gr/2322/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "The memory of a righteous one calleth forth for praises, and as to thee, O precursor, the Lord’s testimony alone sufficeth; for thou didst truly shew thyself to be even more honourable than the prophets, since thou wast found worthy to baptize in the streams Him Whom thou hadst preached; therefore, having joyfully suffered for the truth, didst thou announce also to those in hades the glad tidings of God that was manifested in flesh, that took up the sin of the world and granteth us great mercy.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter V, General Service to John, Precursor, Prophet and Baptist of the Lord",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     },
     {
@@ -130,6 +154,14 @@
         "text": "Doxologia — Tropar la Praznicul tăierii Cinstitului Cap al Sfântului Ioan Botezătorul",
         "url": "https://doxologia.ro/tropar-la-praznicul-taierii-cinstitului-cap-al-sfantului-ioan-botezatorul",
         "year": 2026
+      },
+      "english": {
+        "text": "The memory of a righteous one calleth forth for praises, and as to thee, O precursor, the Lord’s testimony alone sufficeth; for thou didst truly shew thyself to be even more honourable than the prophets, since thou wast found worthy to baptize in the streams Him Whom thou hadst preached; therefore, having joyfully suffered for the truth, didst thou announce also to those in hades the glad tidings of God that was manifested in flesh, that took up the sin of the world and granteth us great mercy.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter V, General Service to John, Precursor, Prophet and Baptist of the Lord",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     },
     {
@@ -154,6 +186,14 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 августа ст. ст. — «Тропарь Предтечи»",
         "url": "https://days.pravoslavie.ru/Days/20260829.html",
         "year": 2026
+      },
+      "english": {
+        "text": "The memory of a righteous one calleth forth for praises, and as to thee, O precursor, the Lord’s testimony alone sufficeth; for thou didst truly shew thyself to be even more honourable than the prophets, since thou wast found worthy to baptize in the streams Him Whom thou hadst preached; therefore, having joyfully suffered for the truth, didst thou announce also to those in hades the glad tidings of God that was manifested in flesh, that took up the sin of the world and granteth us great mercy.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter V, General Service to John, Precursor, Prophet and Baptist of the Lord",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     },
     {

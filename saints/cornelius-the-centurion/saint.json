@@ -16,6 +16,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "Wikipedia’s article “Cornelius the Centurion”: a Roman centurion, the first Gentile to convert, as related in the Acts of the Apostles."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -83,6 +92,14 @@
         "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Corneliu Sutaşul",
         "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-corneliu-sutasul",
         "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
       }
     }
   ],

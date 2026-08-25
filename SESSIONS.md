@@ -2342,6 +2342,193 @@ unclickable. A test that changed calendar twice in quick succession timed out
 pressing one. A token cancels a flight the reader has overtaken, and that has
 a test of its own now.
 
+## Amendment 42 — the three that were waiting on a decision (2026-08-26, second sitting)
+
+The author, asked whether to keep refining the surface or move on, was told
+the surface was at the scale of a capital letter and eight pixels of padding
+and that three things were blocked on a decision rather than on work: **icons
+for the 613 saints without one, English for the other 403 hymns, and dates for
+the 187 undated.** The answer was "Do all three. Try public-domain translation
+for english hymns."
+
+None of the three is finished. All three moved, and *what stopped each one is
+the finding.*
+
+### The hymns: Orloff's General Menaion, 1899
+
+Hapgood (Amendment 41) gave five texts because her Service Book holds no
+menaion. The author's instruction this time named the constraint — public
+domain — so the search was for a book with **per-saint** coverage that may be
+copied.
+
+**Nassar's Book of Divine Prayers and Services (1938)** is the obvious
+candidate and was refused. It is a full English menaion, it is served openly
+on archive.org, and its copyright status is unresolved: a 1938 American
+publication is public domain only if its copyright was not renewed, no renewal
+record was found either way, and archive.org's own record for one copy carries
+"This material may be protected by copyright law". A licence that cannot be
+established is not a licence, and this repository does not guess at them.
+
+**N. Orloff's The General Menaion (London: J. Davy & Sons, 1899)** is what
+landed. Published 1899, unambiguously in the public domain, and served as a
+PDF by the Ponomar Project and the CCEL. It is not propers either — but it is
+the other half of the gap Hapgood left: the **common** services, one troparion
+for any martyr, any hierarch, any prophet, any nun. A real part of what this
+corpus records for its lesser-known saints is exactly those.
+
+**37 hymn objects**, from ten of Orloff's twenty-seven general services. With
+Hapgood's twelve, 49 of 495 now carry an English rendering.
+
+**The matching is the work, and it is a table rather than a rule.** A saint of
+a given order does not thereby sing that order's common troparion — most of
+this corpus sings a proper — and worse, several propers here are *modelled* on
+the common one and open with its very words. Three were rejected for exactly
+that after their opening words matched:
+
+* **Gleb** opens with the martyr's troparion and then goes its own way, about
+  healing and swift help;
+* **Mitrophan of Voronezh** opens with the hierarch's and then names Mitrophan
+  and his city;
+* **Pitirim of Perm** opens with the confessor's and then diverges to the
+  treasury of mercy and the Zyrian people.
+
+And three whole classes were checked and left alone, because Orloff does not
+print them: the **plural** martyrs' troparion (9 objects — his Chapter XV
+gives a different hymn, "Through the sufferings of Thy saints"); the monastic
+"streams of thy tears" (4 objects — his Chapter XII gives "In thee, O father");
+and the Archangel's troparion in the singular (2 — his Chapter IV addresses
+the chief-captains together). *A test now says the plural martyrs' troparion
+stays Slavonic for an English reader*, so the temptation to lend it the
+singular's words has something standing in its way.
+
+Orloff's "(mentioned by name)" is left where he prints it, on the principle
+Hapgood's 1906 petitions were kept on: the Slavonic and Greek name the saint
+at that point, and putting the name into his English would be editing a
+quotation.
+
+### The dates: two seams, thirty saints, 187 → 157
+
+**saint.gr's per-saint pages** are a different document from its day index,
+and the day index is all the previous audits had read. 147 of the 187 undated
+are kept by the Greek church, so all 152 pages the corpus cites were fetched.
+Andronicus of Atroa "lived in the reign of Nikephoros and Staurakios, and of
+Patriarch Tarasios", which 12 September does not say; the three sisters of
+Bithynia gave up their souls "(290 AD)"; Irenaeus of Sirmium was beheaded and
+his head thrown into the Savus "(288 AD)"; Angelis was beheaded near Hagia
+Sophia on 1 September 1680.
+
+**And what the other pages say is the finding.** 44 carry no biography at all,
+15 say in as many words that no details of the life survive, and of the 75
+that are silent about time only 11 so much as name a ruler — none of them with
+a year. The Greek synaxarion does not date these people. That is now recorded
+in the undated tray's test rather than left as an open question.
+
+**Named authorities outside the four calendars** did the rest, which this
+corpus already does where a calendar has nothing (Amendment 30: the OCA's
+lives, the Orthodox Encyclopaedia, pstgu.ru, fond.ru). Here it was Wikipedia
+and Wikidata — **and the article for each saint was chosen by hand**, because
+a search is worthless here: it returned Pushkin for "Alexander, companion of
+Susanna", the emperor Claudius for "Claudius, companion of Susanna", Damon
+Hill for "Damon the hieromartyr", Julian Assange for the martyr Julian, and
+Callista Gingrich for Callista of Nicomedia. Each hand-picked article was then
+checked for words that had to be in it before a date was taken.
+
+Rejected after looking: **Symeon the Lesbian Stylite**, offered Simeon
+Stylites the Younger (521–596), who is of the Admirable Mountain near Antioch
+and a different man; **Abraham, Isaac and Jacob**, because no source consulted
+gives a year and Wikipedia calls Abraham legendary, so a millennium invented
+here would be Amendment 2 exactly; **Agathocleia**, whose article confirms her
+17 September feast and gives no date; **Phanourios**, already excluded at
+Amendment 41.
+
+*One disagreement is kept whole rather than resolved*, on the pattern set for
+Vladimir Tsedrinsky at Amendment 30: **Irenaeus of Sirmium** is 288 on saint.gr
+and 304 on Wikidata, and the page prints "Reposed 288 or 304 AD" with both
+recorded.
+
+### The icons: the Menologion of Basil II, 33 of them
+
+Amendment 32 set the rule this had to keep: "Bulk-fetching images and guessing
+at their licences is the failure mode this repository is built to refuse."
+
+A general Commons search by name is exactly that failure. Probed over eighteen
+saints it offered **Callista Gingrich** for Callista of Nicomedia, **Julian
+Assange** for the martyr Julian, **Damon Hill** for Damon the hieromartyr, and
+Rodin's *Ève* for the abbess Eve. A name is not evidence.
+
+So the seam SESSIONS named at Amendment 31 was harvested whole instead: the
+**Menologion of Basil II**, Vat. gr. 1613, made for the emperor about 985.
+Commons holds 494 of its miniatures and records 492 public domain. It depicts
+precisely the Byzantine martyrs this corpus is thickest in and thinnest on
+pictures for. **33 icons across 21 plates**, taking the corpus from 95 to 128.
+
+Every pairing was chosen by hand from the matcher's proposals, and the
+refusals are the substance:
+
+* Basil of Gortyna was offered **"Eumenes, Bishop of Gortyna"** — a different
+  bishop, and the reason it was offered is worth keeping: the matcher's stop
+  list had "basil" in it for the manuscript's *name*, which swallowed the
+  saint's own name and left only the see to match on;
+* John V of Constantinople was offered **"Patriarch John IV"**;
+* Paul the New (d. 784) was offered **"Paul the Confessor"** (d. 350);
+* the 3,628 martyrs of Nicomedia were offered the **20,000**, and the Six of
+  Melitene the **Thirty-three**;
+* **Ias of Persia** was offered Ia of Persia's plate. saint.gr wonders whether
+  they are one person; the corpus keeps two, and an icon must not quietly
+  decide it;
+* **Susanna of Rome** was offered a bare "Susanna" whose Commons categories
+  put her among the *Saints of Palestine*;
+* **Onesiphorus of Colophon**, Apostle of the Seventy, was offered a bare
+  "Onesiphorus", which in this manuscript is the martyr kept with Porphyrius.
+
+*Twice the corpus's own files corrected the match.* **Bebaia** was offered
+"Sarbelius and Bebaia of Edessa" — but this corpus's life says Bebaia is
+**Thathuel's** sister, so hers is the Thathuil plate and Sarbel gets nothing.
+And **Christodula** was rejected on a truncated filename that named only the
+three children; the full name ends "…and their mother Christodula", which let
+her back in.
+
+**The credits were moved out of `credit` and into the note.** lib/licence.js
+says a public-domain work "owes nobody a credit and simply names its licence",
+and the 95 icons already here follow that. Commons lists eight illuminators for
+the Menologion, which ran to seven wrapped lines under a thumbnail; the artist
+string is kept in the note, where the meta file records provenance rather than
+an obligation.
+
+### What was corrected in place
+
+Three standing tests encoded decisions this batch reverses, and were rewritten
+where they sit rather than loosened:
+
+* **"the hymns carry no note about their own tongue"** also pinned "the hymns
+  are the source's own language, untranslated". The author reversed that half
+  on 2026-08-26; it survived Amendment 41 only because Hapgood's five texts
+  missed 11 September, and Orloff's Forerunner troparion does not. It now pins
+  the shape of the reversal — English where a published rendering exists, the
+  source's own text otherwise, and the kontakion beside it still Slavonic for
+  an English reader because nothing prints it.
+* **the Serbian calendar test** asserted Euplus's first hymn is `lang="cu"`.
+  Euplus sings the martyrs' common troparion, so an English reader now meets
+  Orloff. Its actual claim — nothing Serbian on the Russian calendar — is
+  untouched, and a Russian reader is checked to still get the Slavonic.
+* **the two date-facet tests** moved with the corpus for the third and fourth
+  time, as their own comments record. 240–460 is 191 overlapping and 177
+  within; the undated tray reads 157; and the empty range moved from 1322–1329
+  to **1327–1334**, because Peter of Moscow was dated 1260–1326.
+
+### Verification
+
+145 unit, 350 browser (346 + 4). Four backouts run and watched fail: Orloff's
+English taken off both of Mamas's copies; a *wrong* English added to the plural
+martyrs' troparion, to prove the guard that keeps it Slavonic actually guards;
+the dates taken out of four folders; the images taken out of two. All four
+failed, all four were restored, and the suite is green after the restore.
+
+Three placeholder `source_url`s times seven folders remain, and are **not**
+this batch's to fix: their note reads "Author reports these are public-domain
+works", so the files came from the author and only the author knows where.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

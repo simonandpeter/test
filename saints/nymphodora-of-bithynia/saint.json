@@ -16,6 +16,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 290,
+      "latest": 290,
+      "display": "290",
+      "basis": "attested",
+      "note": "saint.gr: they gave up their souls to Christ their bridegroom (290 AD)."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

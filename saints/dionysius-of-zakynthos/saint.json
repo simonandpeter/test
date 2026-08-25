@@ -15,6 +15,22 @@
   "types": [
     "hierarch"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1547,
+      "latest": 1547,
+      "display": "1547",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Dionysios of Zakynthos”: born on Zakynthos in 1547."
+    },
+    "death": {
+      "earliest": 1622,
+      "latest": 1622,
+      "display": "1622",
+      "basis": "attested",
+      "note": "Wikipedia’s article “Dionysios of Zakynthos”: Greek archbishop, c. 1547 – 1622."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
