@@ -58,6 +58,8 @@ export const STRINGS = {
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
+    // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
+    dayWithoutSaints: 'The readings and hymns below are this day\'s own, read off the calendar. Its saints are not folders yet - the corpus reaches 19 September so far, and grows folder by folder. Nothing here is a claim that the day is bare.',
     heroIn: 'In the {church}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',

@@ -46,6 +46,7 @@ export const ro = {
     commemorationsFor: 'Pomeniri pentru {date}',
     alsoToday: 'Se mai pomenesc',
     emptyDay: 'Pentru această zi nu sunt încă pomeniri înregistrate. Corpusul crește dosar cu dosar, iar o zi goală e o lipsă în sursele noastre, nu o afirmație despre calendar. Încearcă o zi vecină sau sfinții înșiși.',
+    dayWithoutSaints: 'Citirile și cântările de mai jos sunt ale acestei zile, luate din calendar. Sfinții ei nu au încă dosare - corpusul ajunge deocamdată la 19 septembrie și crește dosar cu dosar. Nimic de aici nu spune că ziua ar fi goală.',
     heroIn: 'Calendarul: {church}',
     densityLabel: '{count} pomeniri',
     openSaint: 'Citește despre {name}',

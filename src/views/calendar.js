@@ -414,7 +414,11 @@ function paintLiturgy() {
 function readingLabel(label) {
   const R = STRINGS.calendar.readings;
   const text = String(label ?? '');
-  const qualifier = text.match(/\s*(\([^)]*\))\s*$/)?.[1] ?? '';
+  // Greedy from the first bracket to the last, because a qualifier can carry
+  // brackets of its own: days.pravoslavie.ru prints «за понедельник и за
+  // вторник (под зачало)», and a pattern that refuses a nested bracket finds
+  // no qualifier at all and leaves the kind untranslated.
+  const qualifier = text.match(/\s*(\(.*\))\s*$/)?.[1] ?? '';
   const base = qualifier ? text.slice(0, text.length - qualifier.length).trim() : text;
   const kind =
     /^(epistle|apostol|απόστολος|апостол)$/i.test(base) ? R.epistle
@@ -1414,11 +1418,17 @@ function registerRow(saint, title, transition) {
 }
 
 /**
- * Two silences, and a reader is owed the difference between them (redrawn
- * 2026-08-22 for one church at a time). The corpus having nothing for a day is
- * a statement about our sourcing; this church's calendar having nothing while
- * another of the three does is a fact about the choice made above, and says
- * where the others are. Prose in ink in either case, never a banner.
+ * Three silences, and a reader is owed the difference between them (redrawn
+ * 2026-08-22 for one church at a time; a third added at Amendment 44). The
+ * corpus having nothing for a day is a statement about our sourcing; this
+ * church's calendar having nothing while another of the three does is a fact
+ * about the choice made above, and says where the others are.
+ *
+ * The third is new because the day records now run months past the saints. A
+ * day can carry its readings, its fast and a dozen hymns and still have no
+ * folder for any saint of it — and the old wording called that "an empty day"
+ * directly above the day's own readings, which told the reader the opposite of
+ * what the page was showing. Prose in ink in every case, never a banner.
  */
 function emptyDayNote(iso) {
   const S = STRINGS.calendar.silence;
@@ -1429,6 +1439,8 @@ function emptyDayNote(iso) {
   if (elsewhere > 0) {
     return elsewhere === 1 ? fill(S.otherChurchOne, { church }) : fill(S.otherChurchMany, { church, count: elsewhere });
   }
+  // the day's own calendar is recorded even though none of its saints is a folder
+  if (recordedDay(iso, state.calendar)?.readings?.length) return STRINGS.calendar.dayWithoutSaints;
   return STRINGS.calendar.emptyDay;
 }
 

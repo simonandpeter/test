@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 43)
+## State as of 2026-08-26 (Amendment 44)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,8 +75,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 145 unit tests (`npm test`) — pure logic, no DOM.
-- 354 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 43), not carried
+- 362 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 44), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,8 +101,12 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
-  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43 is
-  committed on top and is not.*
+  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43 and 44
+  are committed on top and are not.*
+
+**Day records as of 2026-08-26: 144 days**, 23 August 2026 – 13 January 2027,
+russian and romanian throughout, greek and serbian for the first four weeks
+only (Amendment 44).
 
 **Corpus as of 2026-08-26: 729 saints**, every one with a life and four
 attestation rows — 708 from the four weeks of days, and **21 added at
@@ -480,28 +484,49 @@ up cold; the two the author has to decide are marked.
   reports these are public-domain works", so the files came from the author
   and only the author knows where from.
 
-- **Six months of liturgical days — and it is NOT blocked on the sources, which
-  the earlier version of this entry got wrong** (Amendments 40 and 43).
-  `src/data/liturgical-days.js` still holds **28 days**, 23 August to 19
-  September 2026. **The site runs dry on 19 September**, which is the one item
-  in this queue with a deadline.
+- **DONE for the two calendars that publish, at Amendment 44; what remains is
+  the other two and the year 2027.** `src/data/liturgical-days.js` holds
+  **144 days, 23 August 2026 to 13 January 2027** — russian 144 days / 535
+  readings, romanian 131 / 272, greek and serbian unchanged at 28.
+  **The site no longer runs dry on 19 September.**
+
+  What is left of this item, and it is not blocked on us:
+
+  * **2027, for the Russian and Romanian.** Neither site publishes it yet —
+    five URL forms probed, none exists. `python .tmp/ruro_harvest.py
+    2027-01-14 2027-07-14` then `python .tmp/ruro_emit.py --write` is the whole
+    job when they do. The ingestion is re-runnable and cached precisely for
+    this.
+  * **The Greek and Serbian day records**, which wait on saint.gr's fortnight
+    and pravoslavno.rs's thirty days, or on the author reversing the 2026-08-26
+    decision not to take last year's paschal-equivalent readings.
+  * **The hymns that did not ship.** 1,203 were harvested for the new months
+    and **131 ship** — only the days each calendar gives its own top rank
+    (Russian T6, Romanian rank cross). The rest are whole in
+    `.tmp/ruro_harvest.json`. They were cut for weight: this module is imported
+    eagerly and every byte is in every visitor's first download. **Load it
+    lazily and the cut can be reversed** — that is the real fix and it is a
+    separate job.
 
   This entry used to say "three of the four sources publish only a fortnight or
   so ahead". That was generalised from saint.gr's known gap without testing the
-  others. Measured at Amendment 43:
+  others. Measured at Amendment 43, and the Romanian line corrected again at 44
+  — a page existing is not the same as a *future* date being published:
 
   * **Russian** — days.pravoslavie.ru's URL carries the year and 25 December
     2026 is served *now*. 2027 is a 404, so it is a year at a time.
   * **Romanian** — doxologia.ro returns readings for 12 November and 4
-    February. The whole year is up.
+    February. *"The whole year is up" was wrong — corrected at Amendment 44.*
+    The URL carries no year and the site keeps one calendar year: `/4-februarie`
+    is **4 February 2026**, already past. The horizon is **31 December 2026**.
   * **Greek** — saint.gr really is a short window; 25 December and 15 March
     carry no Αναγνώσματα block.
   * **Serbian** — pravoslavno.rs says it itself: readings 30 days ahead. Its
     *month calendar* of saints has no such limit.
 
-  **So the Russian and Romanian day records for the next six months can be
-  written today, and they are the two that would stop the Daily page going
-  dark.** That is the obvious next job and it was not started.
+  **So the Russian and Romanian day records could be written, and they are the
+  two that stop the Daily page going dark.** Done at Amendment 44 — four
+  months, not six, because that is all either source has.
 
   The other half is settled: the calendars repeat. Two civil dates at the same
   slot in the paschal cycle give byte-identical readings (2026-09-02 and

@@ -3117,7 +3117,11 @@ test('the readings of the day link to Bible Gateway and name the page they were 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('2 Corinthians 11:5-21');
-  // (1 September became a recorded day with Amendment 31; the 20th is not.)
+  // 20 September is a recorded day for the Russian and Romanian calendars
+  // since Amendment 44 — but not for the Greek, which is the church selected
+  // here: saint.gr publishes about a fortnight ahead and its records stop on
+  // the 19th. So this still shows nothing, and now it shows nothing for a
+  // reason a reader could check.
   await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]')).toHaveCount(0);
 });
@@ -3161,10 +3165,14 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await expect(page.locator('.hero-name')).toHaveText(/Φανούριος|Ποιμήν/);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'ro');
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Glas');
-  // Nothing Greek on the Romanian page, and nothing at all where nothing is recorded.
+  // Nothing Greek on the Romanian page, and nothing at all where nothing is
+  // recorded. That day used to be 20 September; since Amendment 44 the
+  // Romanian records run to the end of 2026, so the empty day has to be one
+  // past every source's horizon.
   await expect(page.locator('[data-hymns] .hymn-text[lang="el"]')).toHaveCount(0);
-  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2027-03-01', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns]:not([hidden])')).toHaveCount(0);
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
 });
 
 test('the Serbian calendar is the fourth choice, on the Julian calendar, with its own week of saints, readings, fast and tropars', async ({ page }) => {
@@ -5265,6 +5273,124 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
   // page to stand in for this year's.
   await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]:not([hidden])')).toHaveCount(0);
+});
+
+test('the day the site used to run dry on is lit, and reads off the calendar that printed it', async ({ page }) => {
+  /*
+   * Amendment 44 (author: "Do the Romanian and Russian day records for the
+   * next 6 months"). The records stopped on 19 September, so 20 September was
+   * the day the Daily page went dark. It does not now.
+   *
+   * days.pravoslavie.ru prints three sets for that day — the Sunday before the
+   * Exaltation, the ordinary set, and the martyr's — and each keeps the label
+   * the calendar gave it. The second of them is «Ряд. (под зачало)», a label
+   * with brackets *inside* it, and that is here on purpose: the pattern that
+   * lifts a qualifier off a label used to refuse a nested bracket, find no
+   * qualifier at all, and leave the kind untranslated.
+   */
+  //
+  // The reader here is Russian *because* of that: in English the broken path
+  // renders an identical string, since the untranslated fallback is the word
+  // "Epistle" itself. The defect is only visible where the kind changes.
+  await ready(page, { church: 'russian', language: 'ru' });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  const labels = page.locator('[data-readings] .readings .reading-label');
+  await expect(labels.first()).toHaveText('Апостол (Недели пред Воздвижением)');
+  // the kind is the reader's, the qualifier is the calendar's, brackets and all
+  await expect(labels.nth(2)).toHaveText('Апостол (Ряд. (под зачало))');
+  await expect(page.locator('[data-readings] .readings a').nth(2)).toHaveText('2 Коринфянам 6:1-10');
+  await expect(page.locator('[data-readings] .readings-source a'))
+    .toHaveAttribute('href', /days\.pravoslavie\.ru\/Days\/20260907\.html/);
+
+  // and the Greek is still and deliberately dark on that day, which is the
+  // author's instruction of 2026-08-26 holding: its saints are folders, its
+  // days are not.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
+});
+
+test('a great feast months past the corpus keeps its readings, its fast and its hymns', async ({ page }) => {
+  /*
+   * 14 October 2026 is 1 October Julian, the Protection of the Theotokos, and
+   * the Russian calendar gives it the Typikon's highest sign. Its page prints
+   *
+   *   День постный.   Разрешается рыба.
+   *   Лит. - Богородицы: Евр., 320 зач., IX, 1-7.  Лк., 54 зач., X, 38-42; XI, 27-28.
+   *
+   * — which is two claims about the fast, not one: the day is a fast *and*
+   * fish is allowed on it. Both are quoted, and `lib/fast-grade.js` reads the
+   * allowance off the second.
+   */
+  await ready(page, { church: 'russian', language: 'ru' });
+  await page.goto('/calendar/2026-10-14', { waitUntil: 'networkidle' });
+  // the reference in the reader's own language, the qualifier as printed
+  await expect(page.locator('[data-readings] .readings .reading-label').first())
+    .toHaveText('Апостол (Богородицы)');
+  await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Евреям 9:1-7');
+  await expect(page.locator('[data-readings] .readings a').nth(1)).toHaveText('Луки 10:38-42; 11:27-28');
+  // the fast the calendar printed, resolved to what it allows
+  await expect(page.locator('[data-liturgy]')).toContainText('Разрешается рыба');
+  // a great feast sings, and every hymn says where it was read
+  const hymns = page.locator('[data-hymns]:not([hidden]) [data-feast-hymns] .hymn-text');
+  expect(await hymns.count()).toBeGreaterThan(4);
+  await expect(hymns.first()).toHaveAttribute('lang', 'cu');
+  await expect(page.locator('[data-hymns] .hymn-source a').first())
+    .toHaveAttribute('href', /days\.pravoslavie\.ru/);
+});
+
+test('a day whose calendar is recorded but whose saints are not says which half is missing', async ({ page }) => {
+  /*
+   * `emptyDayNote` told two silences apart: the corpus having nothing, and
+   * this church having nothing while another has something. Amendment 44 made
+   * a third — the day records now run to January and the saints stop on 19
+   * September — and the old wording called such a day "an empty day" directly
+   * above its own readings and a dozen hymns, which said the opposite of what
+   * the page showed.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+  await page.goto('/calendar/2026-10-14', { waitUntil: 'networkidle' });
+  const note = page.locator('.empty-day p');
+  await expect(note).toHaveCount(1);
+  await expect(note).toContainText('Its saints are not folders yet');
+  await expect(note).not.toContainText('No commemorations are recorded');
+  // and the readings it is standing above are really there
+  await expect(page.locator('[data-readings] .readings li')).toHaveCount(2);
+
+  // Past every source's horizon the day really is empty, and says so plainly.
+  await page.goto('/calendar/2027-03-01', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day p')).toContainText('No commemorations are recorded');
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
+});
+
+test('the Romanian months carry Romanian book names, and stop where doxologia stops', async ({ page }) => {
+  /*
+   * doxologia.ro's URL carries no year and the site keeps one calendar year,
+   * so `/1-ianuarie` serves 1 January *2026* — a date already past. Every page
+   * asked for in January 2027 was refused for printing the wrong year, and the
+   * Romanian records end on 31 December. The Russian keeps going to 13 January
+   * 2027, because its URL carries the Julian date and the Julian year has not
+   * turned over yet.
+   */
+  await ready(page, { church: 'romanian', language: 'ro' });
+  await page.goto('/calendar/2026-12-31', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings] .readings li').first()).toBeVisible();
+  await expect(page.locator('[data-readings] .readings-source a'))
+    .toHaveAttribute('href', /doxologia\.ro\/31-decembrie/);
+
+  // 1 January is past what doxologia serves: nothing recorded, nothing borrowed
+  await page.goto('/calendar/2027-01-01', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
+
+  // but the Russian is still printing that day
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.goto('/calendar/2027-01-01', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings] .readings li').first()).toBeVisible();
+  // and one day past its own end, nothing
+  await page.goto('/calendar/2027-01-14', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-readings]')).toHaveCount(0);
 });
 
 test('a saint from a Greek company is named for herself, not for the whole entry', async ({ browser }) => {

@@ -1029,6 +1029,20 @@ folders; their hymns travel with the day. Where a calendar has not yet
 published a day's readings the record says so (`readings: []` and a note)
 rather than borrowing another church's.*
 
+*Amended again (author, 2026-08-26, Amendment 44): **the day records and the
+saints no longer cover the same span, and the page says so.** The Russian and
+Romanian calendars publish months ahead, so their day records run to 13 January
+2027 and 31 December 2026 respectively — 144 days in all — while the saints are still the
+four weeks plus the Greek's 20 September. A day can therefore carry its
+readings, its fast and its hymns and have no folder for any saint of it; the
+Daily page names that as its own kind of silence (`dayWithoutSaints`), distinct
+both from a day the corpus has nothing for and from a day this church keeps and
+another does not. The hymns that travel with such a day are cut to each
+calendar's own top rank — the Russian's T6, the Romanian's rank cross —
+because this module is imported eagerly and the whole harvest would be half a
+megabyte in every visitor's first download; what is cut is banked, not
+discarded.*
+
 ## 6. Motion and states
 
 - Durations: 200 ms standard, 260 ms the hero slot roll, 300 ms theme change,

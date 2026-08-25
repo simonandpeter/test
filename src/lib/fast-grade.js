@@ -36,7 +36,28 @@
  * days not yet transcribed, and each is matched on a whole phrase rather than
  * a stem, because «горячая пища без масла» and «пища с растительным маслом»
  * differ by one word and mean opposite things.
+ *
+ * One trap is worth naming, because it cost this file a whole grade in
+ * silence. days.pravoslavie.ru prints «Монастырский устав: cухоядение (хлеб,
+ * овощи, фрукты)», and the first letter of that word is a LATIN SMALL LETTER
+ * C. It renders exactly like the Cyrillic «с», so the strictest fast in the
+ * vocabulary matched nothing at all and the day showed no grade. Notes are now
+ * tested as printed *and* with confusable Latin letters folded to their
+ * Cyrillic twins — the quotation itself is never altered, and a Romanian note,
+ * which is Latin script and means it, is matched on its own terms first.
  */
+
+/**
+ * The Latin letters that have a Cyrillic twin no reader can tell apart. Only
+ * these: a letter that merely resembles another is not on the list, because
+ * folding it would invent a match rather than repair one.
+ */
+const CONFUSABLE = {
+  a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у', j: 'ј',
+};
+
+const cyrillicFold = (text) =>
+  text.replace(/[aceopxyj]/g, (ch) => CONFUSABLE[ch] ?? ch);
 
 /** Order matters: a note states one allowance, and the first match wins. */
 const PATTERNS = [
@@ -88,6 +109,11 @@ const PATTERNS = [
     'δεν υπάρχει νηστεία',
     'нема поста',
     'fără post',
+    // seen (ro, Amendment 44): doxologia prints «(Harți)» beside the date for
+    // a day the fast is lifted on — 25 December among them. It names the day,
+    // and naming it is naming the allowance.
+    'harți',
+    'harti',
   ]],
 ];
 
@@ -99,8 +125,11 @@ const PATTERNS = [
 export function gradeFromNote(note) {
   if (!note) return null;
   const text = String(note).toLocaleLowerCase();
+  // as printed first, then with the Cyrillic twins folded in — see the trap
+  // described at the head of this file
+  const forms = [text, cyrillicFold(text)];
   for (const [grade, phrases] of PATTERNS) {
-    if (phrases.some((p) => text.includes(p))) return grade;
+    if (phrases.some((p) => forms.some((f) => f.includes(p)))) return grade;
   }
   return null;
 }

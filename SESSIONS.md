@@ -2557,7 +2557,11 @@ was generalised from saint.gr's known gap without testing the others. Measured:
   * **Russian** (days.pravoslavie.ru) — the URL carries the year and **25
     December 2026 is served now**; 2027 is a 404.
   * **Romanian** (doxologia.ro) — 12 November and 4 February both return
-    readings. **The whole year is up.**
+    readings. *This was read as "the whole year is up", and that was wrong;
+    corrected at Amendment 44.* The URL carries no year and the site keeps one
+    calendar year at a time: `/4-februarie` serves **4 February 2026**, a date
+    already past. The horizon is **31 December 2026**, and every page after it
+    prints last year's day.
   * **Greek** (saint.gr) — a short window, confirmed: 2 September has its
     Αναγνώσματα block, 25 December and 15 March have none.
   * **Serbian** (pravoslavno.rs) — says so itself: «Свакодневна читања су
@@ -2654,6 +2658,184 @@ without normalising first.**
 Eustathius folder taken out, and Theopiste given the company line back as her
 name — the defect that had actually been there. Both restored, suite green
 after.
+
+
+## Amendment 44 — four months of two calendars, and the answer key that earned them (2026-08-26, fourth sitting)
+
+The author: **"Do the Romanian and Russian day records for the next 6 months.
+Have it as a one-off pass for now unless you think a rerunnable ingestion isnt
+too much extra work."**
+
+Re-runnable, because the extra work is a few lines and the case for it turned
+out to be the finding below. `src/data/liturgical-days.js` holds **144 days
+now, 23 August to 13 January**, where it held 28.
+
+    russian   144 days   535 readings    68 hymns
+    romanian  131 days   272 readings   117 hymns
+    greek      28 days                          (unchanged — see Amendment 43)
+    serbian    28 days                          (unchanged)
+
+**The Daily page no longer runs dry on 19 September.**
+
+### Six months was not there to be had, and Amendment 43 said otherwise
+
+43 recorded that doxologia.ro "returns readings for 12 November and 4 February.
+The whole year is up." Both pages do return readings. The conclusion was still
+wrong, and the reason is a trap worth naming: **doxologia's URL carries no
+year**, and the site keeps one calendar year at a time. `/4-februarie` prints
+«4 februarie **2026**» — a date already past. Reading a page that exists as
+proof that a *future* date is published is the mistake.
+
+Measured properly:
+
+  * **Romanian** — the last day it serves is **31 December 2026**. Every page
+    asked for in January 2027 prints 2026 and was refused.
+  * **Russian** — the URL carries the *Julian* date, so it keeps going to civil
+    **13 January 2027** (Julian 31 December) and 404s the day after. Five URL
+    forms were probed for a 2027 anywhere on either site; there is none.
+
+So this is four months, not six, and it is everything the two sources publish.
+The claim is corrected in place at Amendment 43 and in the handoff. **The
+re-runnable ingestion is the answer to the shortfall**: when they print 2027 it
+is one command.
+
+### Why a script here, when the Greek saints were refused one
+
+Amendment 43 refused to generate saint folders and proved why — a
+transliterator scored 17 of 331 against the corpus's own names. A day record is
+the opposite kind of object, and the sources say so themselves: **both publish
+the reference in machine-readable form beside the printed one.**
+
+    days.pravoslavie.ru   <a href=".../bible/z_gal_5_22_0_6_0_2.html">Гал., 213 зач., V, 22 - VI, 2.</a>
+    doxologia.ro          <a class="ev-title" href="/apostol/ap-i-corinteni-4-17-21-5-1-5">Ap. I Corinteni 4, 17-21; 5, 1-5</a>
+
+No Roman numeral is read and no Cyrillic abbreviation is guessed at. The one
+lookup is book-code to English name, and that table is **closed**: a code not
+in it is reported and the reading refused. It refused four times on the answer
+key and three times on the range — every one a real gap (`deqn` not `deyan`
+for Деяния, `1-sol` where the table guessed `1-fes`, `iacov` where it guessed
+`iacob`) — and after those, *every reference in four months resolved*.
+
+### The answer key, which is the part that makes this trustworthy
+
+The 28 records already in the file were transcribed **by hand** off these same
+two calendars on 22–23 August. `.tmp/ruro_verify.py` re-derives them and diffs:
+
+    references identical : 138
+    references differing : 2
+
+Of the two, one is **the hand record's error**: the page prints «Тит., 300
+зач., I, 1-4; II, 15 - III, 3, 12-13, 15» and the record stops at `2:15-3:3`.
+The other is punctuation. Three further days where the hand kept only the first
+pair of readings and the page prints two or three labelled sets.
+
+Running the diff also found four defects in the harvester, and this is what an
+answer key is for:
+
+  * The set label was lost wherever the calendar abbreviates it — «Свт.:»,
+    «Апп.:», «Ряд.:» — because the pattern would not let a full stop stand
+    before the colon. **Forty labels**, every labelled set on a weekday.
+  * The heading leaked into the first label: «Epistle (Евангельские Чтения
+    Богородицы)».
+  * An **alternative** was counted as a reading. The page offers «Кол., 250
+    зач., I, 12-18 (или 2 Кор., 173 зач., III, 4-11)», and «или» is "or".
+  * The Romanian parenthetical was filed as a fasting note. It holds «Post» and
+    «Harți» — and «Tedeum», and «Slujba la cumpăna dintre ani». It is banked
+    raw now and resolved against a vocabulary read off the whole range.
+
+### A live defect in shipped code, found by reading the source's own words
+
+days.pravoslavie.ru prints its strictest allowance as
+
+    Монастырский устав: cухоядение (хлеб, овощи, фрукты)
+
+and the first letter of that word is a **LATIN SMALL LETTER C**. It renders
+exactly like the Cyrillic «с». `fast-grade.js` matched the all-Cyrillic
+«сухоядение», so **the strictest fast in the calendar showed no grade at all**,
+silently, and would have gone on doing so.
+
+Fixed without touching the quotation: a note is matched as printed first, then
+once more with confusable Latin letters folded to their Cyrillic twins — so a
+Romanian note, which is Latin script and means it, is matched on its own terms
+before any folding. `tests/fast-grade.test.mjs` is **new**; the file had no unit
+test at all, only browser coverage, which is exactly where a defect that
+renders correctly and merely says too little can hide.
+
+**This is the third of its family**: the ASCII-only `\b` that matched nothing in
+Greek (41), saint.gr's accented iota failing `in` against an identical-looking
+literal (43), and now a Latin letter inside a Russian word.
+
+### Weight, which decided how much of this ships
+
+`liturgical-days.js` is imported eagerly, so every byte is in every visitor's
+first download. Measured on the answer key:
+
+    readings, titles, fasting notes only     0.8 kB a day
+    the same plus every festal day's hymns   3.9 kB a day
+
+Four months of the second is most of half a megabyte. So the hymns that travel
+with a day are cut to **each calendar's own top rank** — the Russian's T6,
+«Совершается служба великому празднику», and the Romanian's rank cross, which
+marks «(✝) Înălțarea Sfintei Cruci» and leaves an ordinary red-letter Sunday
+unmarked. Neither line is drawn here; both are the calendars'.
+
+**1,203 hymns were harvested; 131 ship.** The rest are whole in
+`.tmp/ruro_harvest.json`. The file went 116 kB → 299 kB raw, **23 kB → 53 kB
+gzipped**, which is the number that crosses a wire. The real fix is to load this
+module lazily and then keep every hymn; that is a separate job and it is in the
+handoff.
+
+### A third silence
+
+`emptyDayNote` told two apart: the corpus having nothing for a day, and *this*
+church having nothing while another has something. Four months of day records
+made a third, and the old wording got it backwards — a day now carrying its
+readings, its fast and a dozen hymns printed **"an empty day is a gap in our
+sourcing"** directly above them.
+
+It is not empty. What it has not got is folders for its saints. The page says
+that instead, in all five languages, and `strings.js` gains `dayWithoutSaints`.
+
+### Corrected in place
+
+  * **`src/lib/bible.js`** called its table "sixteen, and it is a closed set" —
+    true of the four weeks. Four months cite **six** more (1 John, 1 Peter,
+    2 Thessalonians, 2 Timothy, James, Philemon), measured by
+    `.tmp/bible_gaps.py` rather than guessed. Each scheme was opened and
+    identified **by the page's own title**, as that file's rule requires, and
+    the Serbian display names are read off wordproject's titles rather than
+    written from memory. Two things that settles: greekbible.com is the New
+    Testament **only** — `/genesis/1/` returns its index, not a chapter — and
+    no Old Testament book is cited by any day recorded so far.
+  * **`readingLabel` in `views/calendar.js`** lifted a qualifier with a pattern
+    that refused a nested bracket, so «Ряд. (под зачало)» matched nothing, and
+    the kind went untranslated. Greedy from the first bracket to the last now.
+  * **`tests/liturgical-days.test.mjs`**'s range test asserted the key set was
+    exactly 28 days. It is a *shape* now — four calendars for the four weeks,
+    two beyond, each stopping at its own source's horizon, and the Greek and
+    Serbian never appearing after 19 September.
+  * **Two browser tests** used 20 September as "the day nothing is recorded
+    on". It is a recorded day now for two churches; one of them was under the
+    Greek and still true with a stale parenthesis, the other was under the
+    Romanian and would have failed.
+
+### Verification
+
+151 unit (145 + 4 fast-grade + 2), 362 browser (354 + 8).
+
+**Three backouts run and watched to fail** — and the first of them found that a
+test did not pin what it claimed:
+
+  * The nested-bracket fix backed out, and the test **passed**. In English the
+    broken path renders an identical string, because the untranslated fallback
+    *is* the word "Epistle". Moved to a Russian reader, where the kind actually
+    changes; backed out again and watched it fail — «Апостол (Ряд. (под
+    зачало))» expected, «Epistle (Ряд. (под зачало))» received.
+  * The third silence backed out: the day printed "No commemorations are
+    recorded for this day" above its own two readings.
+  * A Romanian record planted on **1 January 2027**, which is the harm the year
+    guard exists to prevent — last year's readings under this year's date. The
+    range test caught it by name.
 
 
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
