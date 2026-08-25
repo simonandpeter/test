@@ -5,6 +5,10 @@
     {
       "form": "Όσιος Λουκάς από την επαρχία Λυκαόνων",
       "lang": "el"
+    },
+    {
+      "form": "Лука",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -15,8 +19,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 сентября ст. ст. — «Прп. Луки (после 975)»",
+        "url": "https://days.pravoslavie.ru/Days/20260907.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -43,6 +56,15 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 975,
+      "latest": 1000,
+      "display": "after 975",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Луки (после 975)”"
+    }
+  },
   "text": {
     "life": "life.md"
   }

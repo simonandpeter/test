@@ -20,8 +20,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 septembrie — «Sfântul Cuvios Nou Mucenic Ilarion Criteanul»",
+        "url": "https://doxologia.ro/20-septembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

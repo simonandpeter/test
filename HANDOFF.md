@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 44)
+## State as of 2026-08-26 (Amendment 45)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,8 +75,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 145 unit tests (`npm test`) — pure logic, no DOM.
-- 362 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 44), not carried
+- 364 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 45), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,14 +101,14 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
-  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43 and 44
-  are committed on top and are not.*
+  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43, 44 and
+  45 are committed on top. The author pushes.*
 
 **Day records as of 2026-08-26: 144 days**, 23 August 2026 – 13 January 2027,
 russian and romanian throughout, greek and serbian for the first four weeks
 only (Amendment 44).
 
-**Corpus as of 2026-08-26: 729 saints**, every one with a life and four
+**Corpus as of 2026-08-26: 742 saints**, every one with a life and four
 attestation rows — 708 from the four weeks of days, and **21 added at
 Amendment 43 from the Greek calendar's 20 September**, which is past the end of
 the day records and therefore in the corpus but on no Daily page; **162
@@ -431,6 +431,36 @@ up cold; the two the author has to decide are marked.
   chosen by hand and checked. And read Amendment 41 too, for why four of its
   47 mechanical proposals were thrown out: a parenthesis in a life is often
   about somebody else.
+
+- **The saints of the four new months — 20 September is done, the rest is not**
+  (Amendment 45, at the author's instruction: "Cant you make them folders?"…
+  "okay do what you would do").
+
+  The day records run to January and the saints stop on **20 September**, so
+  every day after it prints its readings above a line saying its saints are not
+  folders yet. That line is honest and it is also the largest visible gap in
+  the site.
+
+  Measured: the Russian names **658** distinct commemorations across its 116
+  days and the Romanian **445** across its 103; the week of 20–26 September
+  alone is 145 Russian names and 28 Romanian. The union cannot be taken by
+  machine, so the real figure is somewhere between **600 and 1,100 folders** —
+  roughly doubling the corpus.
+
+  **Two things learned on the first day that the next day must not relearn:**
+
+  * **Dedupe on the feast date, never on the name.** Of 21 people on 20
+    September, 8 were already in the corpus, built from the Greek and Romanian
+    calendars whose 7 September is a different civil day. Name matching found
+    none of them and produced false pairs; a feast-date scan found all eight.
+    Five would otherwise have become silent duplicates.
+  * **`Life/idNNNN.htm` is an index, not a life, and it is windows-1251 with no
+    declaration.** Both are handled in `.tmp/ruro_harvest.py` now; a fresh
+    harvester must not reintroduce either.
+
+  The pipeline is `.tmp/week_saints.py` (harvest, cached),
+  `.tmp/ru0920_decisions.py` (the editorial half, typed) and
+  `.tmp/ru0920_folders.py` (the mechanical half). A day is roughly a sitting.
 
 - **The Greek and Serbian saints, banked and waiting for their days**
   (Amendment 43, at the author's instruction: "dont put them in the calendar

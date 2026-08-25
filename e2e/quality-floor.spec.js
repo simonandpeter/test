@@ -600,13 +600,15 @@ const facet = async (page, name) => {
 test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
+  // 742 since Amendment 44's first day of saints: thirteen more for the Russian
+  // calendar's 7 September, the civil 20 September.
   // 729 since the Greek harvest of 2026-08-26: the twenty-one people the Greek
   // calendar prints for 20 September, the first day past the end of the day
   // records. Sixteen entries became twenty-one folders, not sixteen — three of
   // them are icons of the Theotokos and one a synaxis, which are not folders
   // (Amendment 31), while Eustathius arrives with his wife and both sons and
   // "the two Anastasii" are two men.
-  await expect(page.locator('[data-count]')).toHaveText('729');
+  await expect(page.locator('[data-count]')).toHaveText('742');
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Unranked is the load-bearing word. Breadth of veneration was offered and
   // never defaulted to, because a corpus sorted by it reads as a ranking of
@@ -646,14 +648,14 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
 
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   // The count is the corpus's answer; the DOM holds only the cards near the
   // viewport, which at 360 px is far fewer than a hundred and twenty-two.
   await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('729');
+  await expect(page.locator('[data-count]')).toHaveText('742');
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -707,12 +709,16 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // The calendars' saints often carry no dates — their pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  // 157, down from 239 in three audits. Nine on 2026-08-25, from death years
+  // 157, down from 239 in four audits. Nine on 2026-08-25, from death years
   // stated in the saints' own life texts (Titus the Apostle's 105 among
   // them); 43 more on 2026-08-26, when the audit was widened past the lives
   // to the calendar entry lines, the reigns those lives name and the councils
   // they place a man at; 30 more in the pass after it, from saint.gr's
-  // per-saint pages and from named authorities outside the four calendars.
+  // per-saint pages and from named authorities outside the four calendars; and
+  // 5 more at Amendment 44, when the Russian calendar's 7 September was read
+  // and printed a year for five saints the Greek and Romanian had left bare -
+  // Euodus (66), Onesiphorus (after 67), Luke of Bathys Ryax (after 975),
+  // Macarius of Optina (1860) and Serapion of Pskov (1480).
   //
   // The rest are undated because their sources say nothing, and the third
   // audit is the one that showed how firmly. 152 of these people are kept by
@@ -721,7 +727,7 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // the life survive, and of the 75 that are silent about time only 11 so
   // much as name a ruler. That is a finding rather than a gap, which is what
   // this tray exists to keep visible.
-  await expect(page.locator('.tray')).toContainText('162 undated');
+  await expect(page.locator('.tray')).toContainText('157 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -772,7 +778,7 @@ test('under reduced motion the filtered-out are gone, not gone slower', async ({
 test('Random saint stays inside the reader own filters', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
 
   await page.locator('[data-random]').click();
   await expect(page.locator('h1.saint-name')).toBeVisible();
@@ -824,7 +830,7 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   // card became whichever undated saint sorts last by name instead.
   await page.selectOption('[data-sort]', 'name');
 
-  // 729 saints now; Zoticus of Tomis is last alphabetically and far below
+  // 742 saints now; Zoticus of Tomis is last alphabetically and far below
   // a 480 px viewport. A window is far fewer than the corpus at either end.
   const last = page.locator('.index-name', { hasText: 'Zoticus of Tomis' });
   expect(await page.locator('.index-card').count()).toBeLessThan(20);
@@ -2775,7 +2781,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   const page = await ctx.newPage();
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   // The order is pinned because the card this test opens has to be one that
   // fits between the header and the fold, and card heights come from each
   // icon's aspect ratio — under the Random default (2026-08-24) a deal that
@@ -2783,7 +2789,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // and the search came back empty. The subject here is what comes back
   // after a trip into a saint, not which saints are on top.
   await page.selectOption('[data-sort]', 'earliest');
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
 
@@ -2803,7 +2809,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('h1.saint-name')).toHaveText(opened);
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
@@ -2812,12 +2818,12 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
   // The nav link is a fresh Index.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('729');
+  await expect(page.locator('[data-count]')).toHaveText('742');
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -2938,8 +2944,10 @@ test('the header control names the calendar, offers the three, and the Index fol
   // Russian keeps four hundred and five of the 708-saint corpus (Amendment
   // 31): its own week, the Russian new martyrs read off azbyka.ru, and the
   // original eight; the rest stand undocumented for it.
-  await expect(page.locator('[data-count]')).toHaveText('405');
-  await expect(page.locator('[data-set-aside]')).toHaveText('405/729 saints venerated in the Russian calendar.');
+  await expect(page.locator('[data-count]')).toHaveText('426');
+  // 426, not 418: thirteen new folders, and eight the corpus already held whose
+  // Russian row said "not checked" until days.pravoslavie.ru was read for the day.
+  await expect(page.locator('[data-set-aside]')).toHaveText('426/742 saints venerated in the Russian calendar.');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -2955,10 +2963,10 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian');
-  await expect(page.locator('[data-count]')).toHaveText('122');
+  await expect(page.locator('[data-count]')).toHaveText('127');
   // The count says the useful number outright (author, 2026-08-25): it named
   // how many were *not* kept, which left the reader subtracting.
-  await expect(page.locator('[data-set-aside]')).toHaveText('122/729 saints venerated in the Romanian calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints venerated in the Romanian calendar.');
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -2969,7 +2977,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('365');
-  await expect(page.locator('[data-set-aside]')).toHaveText('365/729 saints venerated in the Greek calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints venerated in the Greek calendar.');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
@@ -3633,10 +3641,10 @@ test('random deals an order, and holds it still under the reader', async ({ page
   await expect.poll(() => leaders(page)).not.toBe(earliest);
   const dealt = await leaders(page);
   // The count is untouched: an order is not a filter.
-  await expect(page.locator('[data-count]')).toHaveText('405');
+  await expect(page.locator('[data-count]')).toHaveText('426');
 
   await page.locator('[data-query]').fill('  ');
-  await expect(page.locator('[data-count]')).toHaveText('405');
+  await expect(page.locator('[data-count]')).toHaveText('426');
   expect(await leaders(page)).toBe(dealt);
 });
 
@@ -5391,6 +5399,56 @@ test('the Romanian months carry Romanian book names, and stop where doxologia st
   // and one day past its own end, nothing
   await page.goto('/calendar/2027-01-14', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]')).toHaveCount(0);
+});
+
+test('the first day past the runway has its saints, and the eight the corpus already held say so', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "Cant you make them folders?" — of the twenty-one
+   * people the Russian calendar names on 7 September (the civil 20 September),
+   * thirteen were new and **eight were already in the corpus**, built earlier
+   * from the Greek and Romanian calendars for their 7 September on the new
+   * calendar, which is a different civil day.
+   *
+   * That is the finding worth pinning. Matching on names found none of the
+   * eight and produced false pairs instead — «Святитель Иоанн, архиепископ
+   * Новгородский» matched a new martyr of 1937 — while asking which folders
+   * already keep a feast on 7 September found all of them. Three would have
+   * been caught by a slug collision; five would have entered the corpus as
+   * silent duplicates.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+
+  // the day is no longer bare of saints, and no longer says it is
+  await expect(page.locator('.empty-day')).toHaveCount(0);
+  await expect(page.locator('.hero-name')).toContainText('Sozon of Pompeiopolis');
+  const also = page.locator('[data-also] a, .also-list a, .day-list a');
+  const listed = await page.locator('main').textContent();
+  // one new folder and one the corpus already held, on the same day
+  expect(listed).toContain('Macarius of Kanev');
+  expect(listed).toContain('John, Archbishop of Novgorod');
+
+  // A saint the corpus already held now carries the Russian calendar's own
+  // testimony, where the row used to say the page had not been read.
+  await page.goto('/saints/john-of-novgorod', { waitUntil: 'networkidle' });
+  await expect(page.locator('main')).toContainText('7 September (Julian)');
+  await expect(page.locator('main')).toContainText('days.pravoslavie.ru');
+  await expect(page.locator('main')).not.toContainText('Not checked: days.pravoslavie.ru');
+
+  // A new folder carries a life that is a paraphrase with its source named.
+  await page.goto('/saints/gregory-averin', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1')).toContainText('Gregory Averin');
+  await expect(page.locator('main')).toContainText('Temirtau');
+  await expect(page.locator('main')).toContainText('read 26 August 2026');
+
+  // And the Romanian calendar's own 20 September fills in a row on a folder
+  // built from the Greek at Amendment 43.
+  // behind the disclosure, because the reader here keeps the Russian calendar
+  // and the other three are folded away
+  await page.goto('/saints/hilarion-the-new-monk-martyr-of-crete', { waitUntil: 'networkidle' });
+  await page.locator('[data-reveal]').click();
+  await expect(page.locator('main')).toContainText('doxologia.ro');
+  await expect(page.locator('main')).not.toContainText('Not checked: doxologia.ro');
 });
 
 test('a saint from a Greek company is named for herself, not for the whole entry', async ({ browser }) => {

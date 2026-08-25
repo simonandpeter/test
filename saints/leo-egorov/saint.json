@@ -1,0 +1,58 @@
+{
+  "slug": "leo-egorov",
+  "display_name": "Leo (Egorov), Archimandrite",
+  "names": [
+    {
+      "form": "Лев (Егоров)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 сентября ст. ст. — «Сщмч. Григория, Василия пресвитеров, прмч. Льва (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260907.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s page for 20 September 2026 was read and names other saints; the Romanian calendar’s own 7 September was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 20 September 2026, which names other saints; its page for 7 September was not read (26 August 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this Julian date was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Сщмч. Григория, Василия пресвитеров, прмч. Льва (1937)”"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

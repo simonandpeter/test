@@ -5,6 +5,10 @@
     {
       "form": "Άγιος Ευψύχιος",
       "lang": "el"
+    },
+    {
+      "form": "Евпсихий",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -23,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 сентября ст. ст. — «Мч. Евпсихия (II)»",
+        "url": "https://days.pravoslavie.ru/Days/20260907.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

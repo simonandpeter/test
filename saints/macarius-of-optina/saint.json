@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Cuvios Macarie de la Optina",
       "lang": "ro"
+    },
+    {
+      "form": "Макарий",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 7 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 сентября ст. ст. — «Прп. Макария Оптинского (1860)»",
+        "url": "https://days.pravoslavie.ru/Days/20260907.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -42,6 +55,15 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "1860",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прп. Макария Оптинского (1860)”"
+    }
+  },
   "text": {
     "life": "life.md"
   },

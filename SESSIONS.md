@@ -2838,6 +2838,129 @@ test did not pin what it claimed:
     range test caught it by name.
 
 
+## Amendment 45 — the first day of saints past the runway (2026-08-26, fifth sitting)
+
+The author, reading that the new day records showed "its saints are not folders
+yet": **"But what do you mean its saints arent folders yet? Cant you make them
+folders?"** — and then, given the size: **"okay do what you would do."**
+
+Yes, and here is what one day of it costs.
+
+### The size, measured rather than guessed
+
+    Russian, 116 days   658 distinct commemorations named
+    Romanian, 103 days  445 distinct entries
+    the week of 20-26 September alone   145 Russian names, 28 Romanian
+
+The union cannot be taken mechanically — the corpus carries a Russian name form
+for 387 of its folders and a Romanian one for 105, and the same saint in two
+calendars does not match itself by string. Somewhere between 600 and 1,100
+folders, which would roughly double the corpus.
+
+So: **one day, finished**, rather than a week of thin ones. 20 September, the
+first day past the old runway, is now complete for every calendar that names
+it. The rate is the point of the exercise and it is written down below.
+
+### What one day held: 21 people, and only 13 of them new
+
+    13  new folders
+     8  already in the corpus, their Russian row upgraded from "not checked"
+     5  Romanian rows upgraded on the Amendment 43 folders for the same day
+     5  saints who stopped saying "Undated"
+
+    corpus                   729 -> 742
+    russian attestations     405 -> 426     (13 new + 8 that were already there)
+    romanian attestations    122 -> 127
+    undated tray             162 -> 157
+
+Three of the calendar's entries are not folders and Amendment 31 says why: the
+fore-feast of the Nativity of the Theotokos is a feast, and the Соборы of the
+saints of the Altai and of the new martyrs of Kazakhstan are synaxes of saints
+kept on their own days.
+
+### The dedupe key is the feast date, and getting that wrong would have been bad
+
+Matching candidates against the corpus **by name found nothing and invented
+pairs**: «Святитель Иоанн, архиепископ Новгородский» matched
+`john-monk-martyr-1937`, a different man by seven centuries, because both begin
+with Иоанн. It is Amendment 43's transliteration finding wearing another hat.
+
+Asking instead **which folders already keep a feast on 7 September** found
+fourteen, and eight of them were the very people this batch was about to
+create:
+
+    sozon-of-pompeiopolis · john-of-novgorod · macarius-of-optina
+    euodus-of-antioch · onesiphorus-of-colophon
+    eupsychius-of-caesarea-under-hadrian · luke-of-bathys-ryax · serapion-of-pskov
+
+They were built earlier from the Greek and Romanian calendars, whose 7
+September is a different **civil** day — which is precisely the calendar
+difference this site exists to show. Three would have been caught by the slug
+colliding. **Five would not**, and would have entered the corpus as silent
+duplicates of saints it already held.
+
+`luke-abbot-of-deep-streams` was the closest call: the corpus holds him as
+`luke-of-bathys-ryax`, and Bathys Ryax *is* Deep Streams.
+
+One pair that looks like a duplicate and is not: **Sozon of Cyprus, the
+shepherd boy** — a local saint of Paphos out of Leontios Machairas — and
+**Sozon of Pompeiopolis**, the Lycaonian shepherd martyr. The Greek keeps both
+on 7 September. The corpus is right to hold both, and the Russian names only
+the second.
+
+### The fourth encoding trap, and the worst-shaped one yet
+
+days.pravoslavie.ru serves **two encodings and declares one**:
+
+    Life/life1470.htm   Content-Type: text/html; charset=utf-8   UTF-8
+    Life/id990.htm      Content-Type: text/html                  windows-1251,
+                        declared nowhere in the page at all
+
+`fetch` looked for a meta charset in the body and defaulted to UTF-8 *with
+errors='replace'*, so «Святитель Иоанн» came back as «���������� �����». That
+did not fail. It returned a page of replacement characters — and a saint's life
+is exactly the thing that must never be paraphrased from one. The order is now:
+the charset the header states, the one the document states, UTF-8 **strictly**,
+then cp1251. Strictly is the whole fix: `'replace'` is what turned an error
+into data.
+
+After the Latin «c» in «cухоядение» (44), saint.gr's accented iota (43) and the
+ASCII-only `\b` (41), this is the fourth. The rule this corpus keeps learning:
+**never decode, compare or match text in these languages without saying out
+loud which encoding and which normalisation you mean.**
+
+And a smaller one beside it: a `Life/idNNNN.htm` page is **not a life**. It is
+an index that links on to `Life/lifeNNNN.htm`, and read as prose it yields a
+column of site navigation. One more hop, and eleven of the twenty-one have a
+real written life to work from; ten have only the day's line, and their entries
+say so in as many words rather than padding.
+
+### What is editorial, and stays editorial
+
+Per Amendments 30 and 31, a folder needs a chosen English display name, a
+permanent slug, the type, the dates the page gives, four attestation rows — and
+a life that is the author's paraphrase and never the source's text. The
+mechanical half is written down (`.tmp/week_saints.py` harvests,
+`.tmp/ru0920_folders.py` writes); the other half is `.tmp/ru0920_decisions.py`,
+and it was typed.
+
+### Five saints stopped saying "Undated"
+
+Euodus, Onesiphorus, Luke of Bathys Ryax, Macarius of Optina and Serapion of
+Pskov were built from calendars that print no year. The Russian prints one for
+each — «(66)», «(после 67)», «(после 975)», «(1860)», «(1480)» — so they are
+dated now, in house style, the note quoting the calendar and `basis` saying
+what kind of claim it is. Nothing already dated was overwritten by a second
+source.
+
+### Verification
+
+151 unit, 364 browser (362 + 2). **One backout run and watched to fail**: John
+of Novgorod's Russian row set back to "not checked", after which he vanishes
+from 20 September altogether for a Russian reader — which is the right failure,
+because without that row he is not a saint of that day at all.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 
