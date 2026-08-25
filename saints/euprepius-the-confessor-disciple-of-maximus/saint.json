@@ -1,0 +1,57 @@
+{
+  "slug": "euprepius-the-confessor-disciple-of-maximus",
+  "display_name": "Euprepius the Confessor, disciple of Maximus",
+  "names": [
+    {
+      "form": "Άγιος Ευπρέπιος ο Ομολογητής",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Άγιοι Ομολογητές Ευπρέπιος, δύο Αναστάσιοι και Θεόδωρος οι μαθητές του Αγίου Μάξιμου»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 641,
+      "latest": 668,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "saint.gr: he suffered under the emperor Constans II, who reigned 641–668, and died after a year of exile."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

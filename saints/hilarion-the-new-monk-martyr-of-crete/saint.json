@@ -1,0 +1,77 @@
+{
+  "slug": "hilarion-the-new-monk-martyr-of-crete",
+  "display_name": "Hilarion the New, Monk-martyr of Crete",
+  "names": [
+    {
+      "form": "Άγιος Ιλαρίων ο νέος οσιομάρτυρας, από την Κρήτη",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Άγιος Ιλαρίων ο νέος οσιομάρτυρας, από την Κρήτη»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν σταυρόν σου ἐπ᾿ ὤμων ἄρας ἀοίδιμε, ὁλοψύχως Κυρίῳ κατηκολούθησας, Ἱλαρίων ἀθλητὰ γενναιότατε· καὶ νῦν οἰκεῖς τοὺς οὐρανούς, μετὰ πάντων ἀθλητῶν, τὸν κτίστην καθιλαρύνων, ὑπὲρ ἡμῶν τῶν ἐν πίστει, ἐπιτελούντων σου τὸ μνημόσυνον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιλαρίων ο νέος οσιομάρτυρας, από την Κρήτη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/976/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος πλ.",
+      "model": "α´.Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸν κόσμον λιπὼν Χριστῷ ἠκολούθησας, ἀθλήσας δὲ στεῤῥός, αὐτῷ νῦν παρίστασαι, μαρτυρίου αἵματι καὶ ἀσκήσεως πόνοις καλλυνόμενος Ἱλαρίων· ὅθεν καὶ ἀνεδείχθης μαρτύρων καὶ ὁσίων ὁμόσκηνος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιλαρίων ο νέος οσιομάρτυρας, από την Κρήτη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/976/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος β´.",
+      "model": "τὰ ἄνω ζητῶν."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

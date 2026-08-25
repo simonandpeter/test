@@ -1,0 +1,73 @@
+{
+  "slug": "eustathius-kataphloros-archbishop-of-thessalonica",
+  "display_name": "Eustathius Kataphloros, Archbishop of Thessalonica",
+  "names": [
+    {
+      "form": "Άγιος Ευστάθιος ο Κατάφλωρος Αρχιεπίσκοπος Θεσσαλονίκης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Άγιος Ευστάθιος ο Κατάφλωρος Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1197,
+      "latest": 1198,
+      "display": "1197 or 1198",
+      "basis": "attested",
+      "note": "saint.gr: he died in 1197 AD or 1198 AD."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σοφίας τοὶς χάρισι, κεκοσμημένος λαμπρῶς, ποιμὴν ἐνθεώτατος, τῆς Ἐκκλησίας Χριστοῦ, ἐδείχθης Εὐστάθιε, Ὅθεν Θεσσαλονίκη, ἡ ἁγία σου ποίμνη, ὕμνοις σὲ μακαρίζει καὶ συμφώνως βοᾷ σοι. Ἱκέτευε Χριστὸν τὸν Θεόν, ὑπὲρ ἠμῶν Πάτερ ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ευστάθιος ο Κατάφλωρος Αρχιεπίσκοπος Θεσσαλονίκης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/977/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

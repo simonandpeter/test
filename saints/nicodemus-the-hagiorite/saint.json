@@ -1,0 +1,64 @@
+{
+  "slug": "nicodemus-the-hagiorite",
+  "display_name": "Nicodemus the Hagiorite",
+  "names": [
+    {
+      "form": "Όσιος Νικόδημος ο Αγιορείτης ο σοφός διδάσκαλος της εκκλησίας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Όσιος Νικόδημος ο Αγιορείτης ο σοφός διδάσκαλος της εκκλησίας»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1749,
+      "latest": 1749,
+      "display": "1749",
+      "basis": "attested",
+      "note": "saint.gr: born on Naxos in the year 1749 AD."
+    },
+    "death": {
+      "earliest": 1809,
+      "latest": 1809,
+      "display": "1809",
+      "basis": "attested",
+      "note": "saint.gr: died in the early hours of 14 July 1809 AD, aged sixty, in the cell of the Skourtaioi at Karyes on Athos."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

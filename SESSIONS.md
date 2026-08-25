@@ -2529,6 +2529,133 @@ this batch's to fix: their note reads "Author reports these are public-domain
 works", so the files came from the author and only the author knows where.
 
 
+## Amendment 43 — the calendars repeat, and what that does and does not buy (2026-08-26, third sitting)
+
+The author asked the question that reorganised the plan: **"do the calendars
+not stay 99% similar from last year?"** They do, and it is worth more than 99%
+— but not uniformly, and the difference decides the work.
+
+### What repeats, measured
+
+Two civil dates, one slot in the paschal cycle — Wednesday of the 14th week
+after Pentecost — on the Serbian calendar:
+
+  2026-09-02 → «Апостола Павла Коринћанима, зачало 197 (13,3-13)»
+  2025-09-10 → «Апостола Павла Коринћанима, зачало 197 (13,3-13)»
+
+Byte for byte the same, and the Russian agrees at the same slot. **The
+lectionary is keyed to Pascha, not to the civil date**, so last year's readings
+are this year's, landing eight days off because Pascha 2026 was 12 April
+against 2025's 20 April. The *sanctoral* half — the saints, their hymns, their
+lives — is keyed to the calendar date and does not move at all.
+
+### A claim in the previous plan was wrong, and is corrected here
+
+The plan said "three of the four sources publish only a fortnight ahead". That
+was generalised from saint.gr's known gap without testing the others. Measured:
+
+  * **Russian** (days.pravoslavie.ru) — the URL carries the year and **25
+    December 2026 is served now**; 2027 is a 404.
+  * **Romanian** (doxologia.ro) — 12 November and 4 February both return
+    readings. **The whole year is up.**
+  * **Greek** (saint.gr) — a short window, confirmed: 2 September has its
+    Αναγνώσματα block, 25 December and 15 March have none.
+  * **Serbian** (pravoslavno.rs) — says so itself: «Свакодневна читања су
+    доступна до 30 дана унапред од данашњег дана». But its **month calendar**
+    has no such limit and serves any month asked for.
+
+So the six months is not blocked. **Two of the four churches could have their
+day records today.**
+
+### The author's instruction, and why it is the right cut
+
+"For Greek and Serbian calendars, dont put them in the calendar yet, but at
+least get the Saint Profile pages and hymns for the saints sorted from that
+content so all we need to do once we get the calendar information is link it
+to the Daily Page."
+
+That cut follows the keying exactly. The saints are date-keyed and published
+years ahead; the readings are Pascha-keyed and windowed. Taking last year's
+*readings* for this year's day would have been an inference rather than a
+transcription — sound, but a different kind of claim, and the author declined
+it. Taking this year's *saints* is neither.
+
+### Banked
+
+  * **Greek, 20 September – 31 October: 463 entries**, every one with its
+    biography, 98 of them with hymns — **183 hymn texts** — with tone and
+    automelon. `.tmp/gr_harvest.json`.
+  * **Serbian, October 2026 – March 2027: 182 days, 312 saint entries**, and
+    the 94 days the month grid marks as fast. `.tmp/sr_harvest.json`.
+
+### And the arithmetic the author should see
+
+**42 days of the Greek calendar hold 463 distinct entries, 460 of them new.**
+Projected over six months that is about **2,000 Greek entries** before the
+Serbian adds any, against a corpus of 708 built from 28 days of four calendars.
+Six months of Greek alone would roughly triple it.
+
+**It cannot be mechanised, and that was tested rather than assumed.** The
+corpus already holds 331 saints with both a Greek form and an English display
+name — a ready-made answer key — and a careful transliterator reproduced
+**17 of them**. The misses say why: a display name here is a *chosen* English
+form («Άγιος Αβδαίος επίσκοπος Περσίας» → "Abda (Abdias), Bishop in Persia"),
+it often carries an epithet the Greek never prints («Άγιος Αδριανός» → "Adrian
+of Nicomedia"), and one entry naming four martyrs becomes four folders. A slug
+is a permanent id; getting it by machine is not on.
+
+### The tranche that landed: 20 September, 21 folders, 708 → 729
+
+Sixteen entries, twenty-one people. Four entries are not folders at all —
+three icons of the Theotokos and one synaxis of saints kept on their own days,
+which Amendment 31 excludes — and Maximus the Confessor already has a folder.
+The rest expand, because a Greek entry names a household in one line:
+Eustathius arrives with his wife Theopiste and both sons, and "the two
+Anastasii" are two men.
+
+**They are in the corpus and on no Daily page**, which is the shape asked for,
+and a test pins both halves — the profile with its feast, citation and hymns,
+and 20 September still showing no readings.
+
+*One defect the first build had, and the corpus's own files caught it:* all
+four of Eustathius's household inherited the **whole entry line** as their
+Greek name, so a reader reading Greek would have met the entire household in
+place of Theopiste. Each carries her own form now, and that has a test of its
+own. A second, smaller: the citation quoted the day index's **truncated** link
+text («… Αγάπιος κα....»), and the untruncated name is on the saint's own page
+title.
+
+### The Unicode trap, twice in one sitting
+
+`Ἀπολυτίκιον` from saint.gr and `Ἀπολυτίκιον` typed here share their first
+three codepoints, render identically, and fail `in` — one composes an accented
+iota and the other does not. It silently found **zero hymns** on every page
+until the labels were compared accent-stripped. It then bit again in the
+browser test, where `toContainText('Τὰ πάθη Χριστοῦ')` did not match the text
+it was looking at; the needles there are unaccented runs now, and say why.
+
+This is the same family as JavaScript's ASCII-only `\b`, which matched nothing
+in Greek at Amendment 41. **In this corpus, never compare Greek or Cyrillic
+without normalising first.**
+
+### Corrected in place
+
+  * **`tests/lives.test.mjs`** asserted `/read 23 August 2026/` — true while
+    the whole corpus came from one sitting. Its claim is "the line says when it
+    was read", so it now asks for a well-formed date and lets the corpus grow.
+  * **Seven corpus-count assertions** moved with the corpus: 708 → 729, the
+    Greek's 344 → 365, the undated tray 157 → 162, 240–460 at 193 overlapping
+    and 179 within, and "hermit" 8 → 9 because John the Stranger of Siva lived
+    in the caves of Crete.
+
+### Verification
+
+145 unit, 354 browser (350 + 4). Two backouts run and watched fail: the whole
+Eustathius folder taken out, and Theopiste given the company line back as her
+name — the defect that had actually been there. Both restored, suite green
+after.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

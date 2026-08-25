@@ -60,7 +60,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 42)
+## State as of 2026-08-26 (Amendment 43)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -75,8 +75,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 145 unit tests (`npm test`) — pure logic, no DOM.
-- 350 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 42), not carried
+- 354 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 43), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33.
 - **CI is the only place the header's width is honest** (2026-08-24). The
@@ -101,11 +101,14 @@ them.
   "Pushing happens outside this session" below). None of that is evidence
   that CI is green: this environment has no `gh` CLI to check the Actions run
   itself, so eyeball it on GitHub before building on top.
-  *Amendments 40 and 41 were pushed (`f6aaa2e`, `cf8a3e1`); 42 is committed
-  on top and is not.*
+  *Amendments 40–42 were pushed (`f6aaa2e`, `cf8a3e1`, `8e6c197`); 43 is
+  committed on top and is not.*
 
-**Corpus as of 2026-08-26: 708 saints**, every one with a life and four
-attestation rows; **157 undated**, down from 239 in four audits (Amendments
+**Corpus as of 2026-08-26: 729 saints**, every one with a life and four
+attestation rows — 708 from the four weeks of days, and **21 added at
+Amendment 43 from the Greek calendar's 20 September**, which is past the end of
+the day records and therefore in the corpus but on no Daily page; **162
+undated**, down from 239 in four audits (Amendments
 39, 41 and 42 — the third read the calendar entry lines and the reigns rather
 than only the lives, and the fourth read saint.gr's *per-saint* pages, which
 are a different document from its day index); **the manifest now
@@ -425,6 +428,32 @@ up cold; the two the author has to decide are marked.
   47 mechanical proposals were thrown out: a parenthesis in a life is often
   about somebody else.
 
+- **The Greek and Serbian saints, banked and waiting for their days**
+  (Amendment 43, at the author's instruction: "dont put them in the calendar
+  yet, but at least get the Saint Profile pages and hymns for the saints
+  sorted from that content so all we need to do once we get the calendar
+  information is link it to the Daily Page").
+
+  Untracked, under `.tmp/`, and re-runnable from cache:
+
+  * `gr_harvest.json` — **463 Greek entries for 20 September – 31 October**,
+    every one with its biography, 98 with hymns (**183 texts**) carrying tone
+    and automelon.
+  * `sr_harvest.json` — **182 Serbian days, October 2026 – March 2027, 312
+    saint entries**, plus the 94 days the month grid marks as fast.
+
+  **21 folders were built from the first day of it** (20 September), which is
+  the worked example. The rest is editorial work at roughly the rate a person
+  reads, and *that was tested rather than assumed*: the corpus holds 331 saints
+  with both a Greek form and an English display name, and a careful
+  transliterator reproduced **17** of them. A display name here is a chosen
+  English form, often carries an epithet the Greek never prints, and one entry
+  naming a household becomes four folders. **Do not try to generate these.**
+
+  Scale, so it is scoped honestly: 42 days of the Greek calendar hold 463
+  distinct entries, 460 of them new. Six months is about **2,000 Greek
+  entries** before the Serbian adds any, against a corpus of 729.
+
 - **Icons for the 580 saints without one** (Amendments 40 and 42, asked for
   outright). **128 of 708** now have an `images/icon.jpg`. Amendment 42 added
   33 from the **Menologion of Basil II** (Vat. gr. 1613, c. 985): Commons
@@ -451,16 +480,40 @@ up cold; the two the author has to decide are marked.
   reports these are public-domain works", so the files came from the author
   and only the author knows where from.
 
-- **Six months of liturgical days across four churches** (Amendment 40, asked
-  for outright). `src/data/liturgical-days.js` holds **28 days**, 23 August to
-  19 September 2026, transcribed by hand from four calendars. Six months is
-  roughly 180 days × 4 = **720 day-records** of readings, fasting notes, feast
-  titles and hymns. Two things make it more than volume: three of the four
-  sources publish only a fortnight or so ahead — saint.gr's absence for 7–19
-  September is already *in* the data as a recorded absence rather than filled
-  in — so the later months cannot be transcribed before the sources print
-  them; and the fasting notes are now load-bearing in a way they were not,
-  because `lib/fast-grade.js` reads the day's allowance off them.
+- **Six months of liturgical days — and it is NOT blocked on the sources, which
+  the earlier version of this entry got wrong** (Amendments 40 and 43).
+  `src/data/liturgical-days.js` still holds **28 days**, 23 August to 19
+  September 2026. **The site runs dry on 19 September**, which is the one item
+  in this queue with a deadline.
+
+  This entry used to say "three of the four sources publish only a fortnight or
+  so ahead". That was generalised from saint.gr's known gap without testing the
+  others. Measured at Amendment 43:
+
+  * **Russian** — days.pravoslavie.ru's URL carries the year and 25 December
+    2026 is served *now*. 2027 is a 404, so it is a year at a time.
+  * **Romanian** — doxologia.ro returns readings for 12 November and 4
+    February. The whole year is up.
+  * **Greek** — saint.gr really is a short window; 25 December and 15 March
+    carry no Αναγνώσματα block.
+  * **Serbian** — pravoslavno.rs says it itself: readings 30 days ahead. Its
+    *month calendar* of saints has no such limit.
+
+  **So the Russian and Romanian day records for the next six months can be
+  written today, and they are the two that would stop the Daily page going
+  dark.** That is the obvious next job and it was not started.
+
+  The other half is settled: the calendars repeat. Two civil dates at the same
+  slot in the paschal cycle give byte-identical readings (2026-09-02 and
+  2025-09-10, both Wednesday of the 14th week after Pentecost). So for the
+  Greek and the Serbian, last year's page at the paschal-equivalent date holds
+  this year's readings — **but the author declined that route** (2026-08-26):
+  taking them would be an inference rather than a transcription. Their day
+  records wait for the sources to publish, and their *saints* were banked
+  instead, which is the entry below.
+
+  Note also that the fasting notes are load-bearing now, because
+  `lib/fast-grade.js` reads the day's allowance off them.
 
 - **The saints' names in each language — done, 2026-08-26, and the entry
   above it was wrong.** This said there was "no source in this repository that

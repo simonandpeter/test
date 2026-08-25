@@ -1,0 +1,73 @@
+{
+  "slug": "john-the-stranger-of-siva",
+  "display_name": "John the Stranger of Siva",
+  "names": [
+    {
+      "form": "Όσιος Ιωάννης ο Ξένος εκ Σίβα Πυργιωτίσσης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Όσιος Ιωάννης ο Ξένος εκ Σίβα Πυργιωτίσσης»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 951,
+      "latest": 959,
+      "display": "mid-10th century",
+      "basis": "traditional",
+      "note": "saint.gr: born in the days of the emperor Constantine VII Porphyrogenitus, who reigned 951–959."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς Κρήτης τὸν γόνον, καὶ ἀσκητῶν ἐγκαλλώπισμα, ναῶν παμπόλλων ἱδρυτήν, Ἰωάννη τὸν Ὅσιον, τιμήσωμεν ἐν ὕμνοις οἱ πιστοί, βοῶντες πρὸς αὐτὸν χαρμονικῶς· σῶζε ταῖς λιταῖς σου τοὺς τὴν μνήμην σου τελοῦντας καὶ βοῶντάς σοι· Δόξα τῷ σέ δοξάσαντι Χριστῷ, δόξα τῷ σέ θαυμαστώσαντι, δόξα τῶ ἐνεργοῦντι διά σου πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο Ξένος εκ Σίβα Πυργιωτίσσης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/978/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

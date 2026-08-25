@@ -71,6 +71,16 @@ test('a life written from a synaxarion closes by naming and linking its source',
     const last = md.split(/\n\s*\n/).pop().trim();
     assert.match(last, /^\*After .+\*$/s, `${slug}: the last paragraph is not an italic source line`);
     assert.match(last, /\]\(https?:\/\/[^)\s]+\)/, `${slug}: the source line has no link`);
-    assert.match(last, /read 23 August 2026/, `${slug}: the source line does not say when it was read`);
+    // Until 2026-08-26 this read /read 23 August 2026/, because every life in
+    // the corpus had been written in one sitting and that was the day. The
+    // claim it is making is "the line says when it was read", not "the whole
+    // corpus was read on one day" — so it now asks for a well-formed date and
+    // lets the corpus grow across sittings. The Greek tranche of 20 September
+    // was read on 26 August 2026 and is the first life that is not the 23rd.
+    assert.match(
+      last,
+      /read \d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \d{4}/,
+      `${slug}: the source line does not say when it was read`,
+    );
   }
 });

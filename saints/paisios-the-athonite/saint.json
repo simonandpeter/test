@@ -1,0 +1,118 @@
+{
+  "slug": "paisios-the-athonite",
+  "display_name": "Paisios the Athonite",
+  "names": [
+    {
+      "form": "Όσιος Παΐσιος ο Αγιορείτης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Όσιος Παΐσιος ο Αγιορείτης(1924 - 1994)»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1924,
+      "latest": 1924,
+      "display": "1924",
+      "basis": "attested",
+      "note": "saint.gr: born at Pharasa in Cappadocia on 25 July 1924 AD."
+    },
+    "death": {
+      "earliest": 1994,
+      "latest": 1994,
+      "display": "1994",
+      "basis": "attested",
+      "note": "saint.gr heads the entry «Όσιος Παΐσιος ο Αγιορείτης (1924 - 1994)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὥσπερ ἄγγελος, φανεὶς ἐν κόσμῳ, ἐν τοῖς ἔτεσι, τοῖς τελευταίοις, χριστομίμητε Παΐσιε ὅσιε, ἀσκητικῶς γὰρ βιώσας ἐν Ἄθωνι, ὡς παμφαέστατος ἥλιος ἔλαμψας, καὶ κατηύγασας, πιστῶν τὰ πλήθη τῇ χάριτι, τοῖς ῥήμασι σημείοις καὶ τοῖς θαύμασι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παΐσιος ο Αγιορείτης(1924 - 1994), Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3200/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος γ ́.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Παΐσιε γέγονας, τῶν ἀσκητῶν ἡ κρηπίς, τοῦ Ἄθωνος κλέϊσμα, καὶ Σουρωτῆς ὁ τροφός, Κονίτσης τὸ καύχημα, σὺ γὰρ ἐπὶ τὰ ἴχνη, Ἀρσενίου ὁδεύσας, εἴληφας χαρισμάτων, τὴν πληθὺν Παρακλήτου, ἀφθόνως τοῖς σὲ τιμῶσιν, παρέχων τὰ πρόσφορα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παΐσιος ο Αγιορείτης(1924 - 1994), Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3200/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος δ ́.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν πανεύφημον ἄνδρα, τοῦ ὄρους Ἄθωνος, τὸν ἐπ' ἐσχάτων τῶν χρόνων, καθάπερ φάος λαμπρόν, τὴν σκοτίαν τῶν πιστῶν διασκεδάσαντα, καὶ νοσήματα ψυχῶν, καὶ σαρκὸς ἐπιφοράς, ἰώμενον ὑπὲρ φύσιν, τῆς προοράσεως λύχνον, νέον Παΐσιον τιμήσωμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παΐσιος ο Αγιορείτης(1924 - 1994), Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3200/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος πλ.",
+      "model": "α ́.Τὸν Συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἁγίου Ὄρους ἀσκητὴν τὸν περιάκουστον, καὶ Ἐκκλησίας τὸν φωστῆρα τὸν νεόφωτον, ἐπαινέσωμεν ἐν ὕμνοις ὁλοκαρδίως, ποδηγῶν γὰρ τοὺς πιστοὺς πρὸς βίον ἄριστον, ποταμῶν τῶν δωρημάτων τούτους ἔπλησας, διὸ κράζουσι· Χαίροις πάτερ Παΐσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παΐσιος ο Αγιορείτης(1924 - 1994), Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3200/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος πλ.",
+      "model": "δ ́.Τῇ Ὑπερμάχῳ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "eustathius-the-great-martyr",
+  "display_name": "Eustathius the Great Martyr",
+  "names": [
+    {
+      "form": "Άγιος Ευστάθιος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — «Άγιος Ευστάθιος και η συνοδεία του, Θεοπίστη η σύζυγος του, Αγάπιος και Θεόπιστος τα παιδιά του»",
+        "url": "https://www.saint.gr/09/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "saint.gr: Trajan exiled him and his successor Hadrian, who reigned 117–138, required him to sacrifice; he and his household were tortured for refusing."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὰ πάθη Χριστοῦ, σαφῶς μιμησάμενος, καὶ τούτου πιών, πιστῶς τὸ ποτήριον, κοινωνὸς Εὐστάθιε, καὶ τῆς δόξης σύγκληρος γέγονας, παρ' αὐτοῦ τοῦ πάντων Θεοῦ, λαμβάνων ἐξ ὕψους θείαν ἄφεσιν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ευστάθιος και η συνοδεία του, Θεοπίστη η σύζυγος του, Αγάπιος και Θεόπιστος τα παιδιά του, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/985/saint.aspx",
+        "year": 2026
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
