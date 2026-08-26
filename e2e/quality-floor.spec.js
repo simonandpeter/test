@@ -3482,17 +3482,18 @@ test('the theme follows the system until it is touched, and holds once it is', a
 
 test('the site is named in the reader\u2019s own language, and the habit page is Daily', async ({ page }) => {
   // Author, 2026-08-23. The name in the head and the page's nav label. The
-  // header's own corner reads "Orthodoxy Daily" since (author, 2026-08-23,
-  // later the same day) — a second, deliberately different name from the
-  // head's. The veil carried the head's name until 2026-08-24 and now carries
-  // the header's; that has a test of its own below. The route stays /calendar
-  // so no link breaks. Since 2026-08-25 the header's name comes from the pack
-  // rather than from the markup, so it follows the chosen language — the
-  // English pack says the same words the markup used to.
+  // header's own corner reads a second, deliberately different name from the
+  // head's — "Orthodoxy Daily" until 2026-08-27, when it was renamed "Daily
+  // Dox" alongside the Byzantine-majuscule display face. The veil carried the
+  // head's name until 2026-08-24 and now carries the header's; that has a
+  // test of its own below. The route stays /calendar so no link breaks. Since
+  // 2026-08-25 the header's name comes from the pack rather than from the
+  // markup, so it follows the chosen language — the English pack says the
+  // same words the markup used to.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
-  await expect(page.locator('.site-name')).toHaveText('Orthodoxy Daily');
+  await expect(page.locator('.site-name')).toHaveText('Daily Dox');
   /*
    * On a day that is not today the button reads **Today** since 2026-08-26
    * evening — press it and it goes back. The claim this test makes is about
@@ -3944,17 +3945,18 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
 test('the veil names the site the way the header does', async ({ page }) => {
   /*
    * Author, 2026-08-24. The loading veil read "The Orthodox Saint" — the
-   * head's name — and now reads "Orthodoxy Daily", the header's. This narrows
-   * Amendment 31's deliberate two-name split to the <title> alone: the first
-   * thing a reader sees painted and the name in the corner it fades into are
-   * now the same words, and the split survives only where a reader meets it
-   * in a tab or a bookmark.
+   * head's name — and now reads the header's, "Orthodoxy Daily" until
+   * 2026-08-27's rename to "Daily Dox". This narrows Amendment 31's
+   * deliberate two-name split to the <title> alone: the first thing a reader
+   * sees painted and the name in the corner it fades into are now the same
+   * words, and the split survives only where a reader meets it in a tab or a
+   * bookmark.
    *
    * The veil is removed 300 ms after the manifest lands, so it is read out of
    * the served HTML rather than raced for in a live page.
    */
   const html = await (await page.request.get('/')).text();
-  expect(html).toContain('<div class="veil-name" data-site-name>Orthodoxy Daily</div>');
+  expect(html).toContain('<div class="veil-name" data-site-name>Daily Dox</div>');
   expect(html).not.toContain('The Orthodox Saint</div>');
   // The head keeps its own name, which is the half of the split that stands.
   expect(html).toContain('<title>The Orthodox Saint</title>');
