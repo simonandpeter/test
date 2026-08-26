@@ -36,7 +36,15 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
   (calendar.css L1252) and its `::after` (L1258) — full column width, not a
   fixed em measure.
 - Hero bookmark: lives in `.name-line` beside the saint's name (not over the
-  image) — `.hero .name-line > .bookmark` in calendar.css.
+  image) — `.hero .name-line > .bookmark` in calendar.css. It is **pinned**
+  (`margin-inline-start: auto`) and inset by `--space-1`, which is
+  `.reg-card`'s own padding, so it shares a column with the register's marks.
+  `.name-line`'s flex mechanism holds the mark's *width* only; it does not
+  place it.
+- Both header panels fly: `src/ui/fly.js` holds `flyInto` (closing) and
+  `flyOutOf` (opening), one `journey()` between them. Either returns its
+  `finish`; a caller starting one direction must land the other first, or the
+  rect it reads is a box mid-flight.
 
 **Coachmarks (first-visit tooltips)** — `src/ui/coachmark.js` + `.coachmark`
 in base.css (L605)
@@ -94,10 +102,10 @@ top of the file is.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 165 as of
+- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 166 as of
   2026-08-26.
 - Browser: everything lives in **one file**, `e2e/quality-floor.spec.js`
-  (~6,300 lines, 392 tests as of 2026-08-26 across two projects). Grep for a
+  (~7,000 lines, 406 tests as of 2026-08-26 across two projects). Grep for a
   selector, a class name, or a phrase from a test title before opening it —
   don't read it cold start to finish.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`

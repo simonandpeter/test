@@ -13,7 +13,7 @@
 
 import { LANGUAGES, chooseLanguage, currentLanguage, LANGUAGES_BY_ID } from '../lib/i18n.js';
 import { STRINGS, fill } from './strings.js';
-import { flyInto } from './fly.js';
+import { flyInto, flyOutOf } from './fly.js';
 
 /* The same drawing family as the calendar mark: stroked, currentColor, named
    by the button's label rather than by being understood. */
@@ -58,12 +58,27 @@ export function mountLanguageControl(button, panel) {
     button.setAttribute('aria-label', fill(L.showingLabel, { name: lang.name }));
   };
   // The same flight home the calendar control makes, for the same reason.
+  /*
+   * Whichever flight is in the air, so the other direction can land it
+   * before it sets off. `flyInto` decides where to fly *from* by reading
+   * the box's rect, and a panel halfway through arriving is at neither
+   * end of its journey — so an open still climbing when the reader
+   * presses again sent the close off in the wrong direction and by the
+   * wrong distance. Caught by the suite's own direction assertion.
+   */
+  let land = null;
+  const landFlight = () => {
+    const f = land;
+    land = null;
+    f?.();
+  };
   const close = () => {
     open = false;
+    landFlight();
     const mine = (flight += 1);
     button.setAttribute('aria-expanded', 'false');
     const inner = panel.querySelector('.church-panel-inner');
-    flyInto(
+    land = flyInto(
       inner,
       button,
       () => {
@@ -90,6 +105,7 @@ export function mountLanguageControl(button, panel) {
    */
   const openPanel = () => {
     open = true;
+    landFlight();
     flight += 1;
     panel.hidden = false;
     panel.style.height = '';
@@ -97,7 +113,9 @@ export function mountLanguageControl(button, panel) {
     panel.style.transition = '';
     button.setAttribute('aria-expanded', 'true');
     panel.innerHTML = `<div class="church-panel-inner">${renderLanguageChooser()}</div>`;
-    (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus();
+    // The same arrival the calendar control makes, for the same reason.
+    land = flyOutOf(panel.querySelector('.church-panel-inner'), button, () => {}, { expand: panel });
+    (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus({ preventScroll: true });
   };
 
   panel.addEventListener('click', (e) => {

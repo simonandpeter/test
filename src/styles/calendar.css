@@ -950,6 +950,30 @@
    to. */
 .hero .name-line > .bookmark {
   align-self: center;
+  /*
+   * **Pinned to the trailing edge, not trailing the name** (author,
+   * 2026-08-26 evening: "the bookmark icon on the main saint of the day card
+   * is sometimes wrapped to the saint name, exactly what I tried warning
+   * against by saying pin it to the right edge").
+   *
+   * The mechanism inherited from the saint's own page holds the mark's
+   * *width* against a long name, and that is all it does: a flex item sizes
+   * to its content, so a short name left the mark sitting a fixed `--space-2`
+   * after the end of the name, wherever that fell — measured on 2026-08-26 at
+   * 1280 px, "St Peter, Metropolitan of Moscow" wraps, fills the line and
+   * lands the mark on the register's column, while "St Sozon of
+   * Pompeiopolis" leaves it 5.7 px short of it. The mark moved with the name,
+   * which is exactly the thing the instruction of the morning had asked
+   * against and which the flex fix answered only for the long case.
+   *
+   * `margin-inline-start: auto` is the pin. The end margin is `--space-1`
+   * because that is `.reg-card`'s own inline padding, so the hero's mark
+   * lands in the same column as the marks on the register rows directly
+   * below it — "a column of marks down the register", which is the reason
+   * `.index-card.is-row > .bookmark` gives for its own position.
+   */
+  margin-inline-start: auto;
+  margin-inline-end: var(--space-1);
 }
 
 

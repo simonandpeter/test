@@ -702,6 +702,15 @@ refuses to compute an allowance, and this default is not a computation of one
 — it is what the site says when it has been told a day is a fast and nothing
 more.
 
+**A panel arrives the way it leaves** (author, same evening: "the exact
+reverse"). The flight home has taught where the answer lives since
+2026-08-25; the way out taught nothing, because the panel simply appeared and
+the page under it jumped down by its whole height in one frame. Both
+directions are one journey now — `ui/fly.js`'s `journey()` gives the same
+offset and the same floor-scaled size to `flyInto` and `flyOutOf` — over the
+same 160 ms, with the in-flow band opening under the panel as it closes behind
+it. Reduced motion removes both, as §6 requires.
+
 **The line is chips now, and each says one thing** (author, same evening).
 The fast's own chip is the grade alone — *"Don't mention the event for fasting
 in the fasting label, e.g. the Beheading of the Forerunner, or Dormition"* —

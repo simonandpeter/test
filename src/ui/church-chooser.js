@@ -21,7 +21,7 @@ import { enabledChurches } from '../data/churches.js';
 import { chooseChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
 import { subscribeLanguage } from '../lib/i18n.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import { flyInto } from './fly.js';
+import { flyInto, flyOutOf } from './fly.js';
 import { STRINGS, fill } from './strings.js';
 
 const C = STRINGS.church;
@@ -116,14 +116,29 @@ export function mountChurchControl(button, panel) {
    * full-width band with the rule under it, and a band scaling towards a
    * corner would take its own border with it.
    */
+  /*
+   * Whichever flight is in the air, so the other direction can land it
+   * before it sets off. `flyInto` decides where to fly *from* by reading
+   * the box's rect, and a panel halfway through arriving is at neither
+   * end of its journey — so an open still climbing when the reader
+   * presses again sent the close off in the wrong direction and by the
+   * wrong distance. Caught by the suite's own direction assertion.
+   */
+  let land = null;
+  const landFlight = () => {
+    const f = land;
+    land = null;
+    f?.();
+  };
   const close = () => {
     open = false;
+    landFlight();
     const mine = (flight += 1);
     button.setAttribute('aria-expanded', 'false');
     unwire?.();
     unwire = null;
     const inner = panel.querySelector('.church-panel-inner');
-    flyInto(
+    land = flyInto(
       inner,
       button,
       () => {
@@ -150,6 +165,7 @@ export function mountChurchControl(button, panel) {
    */
   const openPanel = () => {
     open = true;
+    landFlight();
     flight += 1;
     panel.hidden = false;
     panel.style.height = '';
@@ -158,7 +174,12 @@ export function mountChurchControl(button, panel) {
     button.setAttribute('aria-expanded', 'true');
     panel.innerHTML = `<div class="church-panel-inner">${renderChooser()}</div>`;
     unwire = wireChooser(panel, { onChange: close });
-    (panel.querySelector('[data-church][aria-pressed="true"]') ?? panel.querySelector('[data-church]'))?.focus();
+    // The flight home, run backwards (author, 2026-08-26 evening). Same two
+    // numbers, same 160 ms: the panel grows out of the control it belongs to
+    // and the band opens under it, so what is below the header comes down
+    // with the panel instead of being displaced ahead of it in one frame.
+    land = flyOutOf(panel.querySelector('.church-panel-inner'), button, () => {}, { expand: panel });
+    (panel.querySelector('[data-church][aria-pressed="true"]') ?? panel.querySelector('[data-church]'))?.focus({ preventScroll: true });
   };
 
   button.setAttribute('aria-expanded', 'false');

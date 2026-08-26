@@ -2218,6 +2218,11 @@ test('an answered panel shrinks into the control that changes it', async ({ page
   const button = page.locator('#church-open');
   const before = await button.boundingBox();
   await button.click();
+  // The panel arrives with a flight of its own since 2026-08-26 evening, so
+  // let it land before asking where it is: a box halfway through arriving is
+  // at neither end of its journey, and the direction below is measured from
+  // this rect.
+  await panelSettled(page);
   const panel = page.locator('#church-panel .church-panel-inner');
   const from = await panel.boundingBox();
   await page.locator('#church-panel [data-church="greek"]').click();
@@ -2538,6 +2543,24 @@ const ready = (page, { church = 'russian', language = 'en' } = {}) =>
     },
     { church, language },
   );
+/**
+ * Waits for a chooser panel to finish arriving. Both header panels grew
+ * instantly until 2026-08-26 evening; they now fly out of their control over
+ * 160 ms, which means "where the panel is" and "what colour its text is" are
+ * only meaningful questions once it has landed. Both flights leave inline
+ * `opacity` and `transform` on the inner box for their duration and clear
+ * them at the end, so the absence of an inline transform is the signal.
+ */
+const panelSettled = (page, sel = '#church-panel') =>
+  page.waitForFunction(
+    (s) => {
+      const inner = document.querySelector(`${s} .church-panel-inner`);
+      return Boolean(inner) && !inner.style.transform && getComputedStyle(inner).opacity === '1';
+    },
+    sel,
+    { timeout: 2000 },
+  );
+
 const answered = (page) => ready(page);
 
 test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
@@ -3600,6 +3623,19 @@ test('no axe violations on the first visit, with the two marks standing', async 
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.locator('#church-open').click();
+  /*
+   * Once it has arrived. The panel fades in over 160 ms since 2026-08-26
+   * evening and axe reads an opacity as a new colour — 303 contrast
+   * violations at 2.71:1 on the frame this used to sample, every one of them
+   * a colour that is at full strength a sixth of a second later.
+   *
+   * That is *not* the mistake DESIGN.md §2 keeps catching. The peek fade
+   * (2.1:1) and the cycle line's opacity (4.17:1) were permanent washes over
+   * text a reader had to read; this is a transient that lands at full
+   * strength and stays there. What the gate is for is the resting state, and
+   * the resting state is what this now measures.
+   */
+  await panelSettled(page);
   const open = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
     .analyze();
@@ -5433,6 +5469,7 @@ test('the panel flies home in half the time, and the page closes behind it', asy
   await page.locator('#church-open').click();
   const panel = page.locator('#church-panel');
   await expect(panel).toBeVisible();
+  await panelSettled(page);
 
   const timing = await page.evaluate(() => {
     const inner = document.querySelector('#church-panel .church-panel-inner');
@@ -6689,4 +6726,268 @@ test('the fast chip is the type alone, and the occasion stands in a chip of its 
   // the fast label and reappeared one chip to the right, which is the same
   // complaint moved rather than answered.
   await expect(page.locator('[data-liturgy]')).not.toContainText('No Fast - ');
+});
+
+test("the hero's bookmark holds the register's column, whatever the name does", async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "the bookmark icon on the main saint of the
+   * day card is sometimes wrapped to the saint name, exactly what I tried
+   * warning against by saying pin it to the right edge. it should be the same
+   * distance from the right edge as it is on the row cards."
+   *
+   * The morning's fix answered only half of it. `.name-line`'s mechanism —
+   * the name shrinks, `.icon-button`'s `flex: none` holds the mark's width —
+   * keeps a *long* name from pushing the mark out, and does nothing at all
+   * about a short one: a flex item sizes to its content, so the mark sat a
+   * fixed 8 px — the line's own flex gap — after the end of the name,
+   * wherever that fell. Measured before the fix at 1280 px: "St Peter,
+   * Metropolitan of Moscow" wraps, fills the line and puts the mark exactly
+   * on the register's column; "St Sozon of Pompeiopolis" does not, and left
+   * it 5.7 px short of that column. The mark moved with the name, which is
+   * the thing the morning's instruction had asked against.
+   *
+   * The assertion is the author's own measure — the same distance from the
+   * right edge as the row cards below it — and it is read off a real row on
+   * the same page rather than pinned to a number, so a change to
+   * `.reg-card`'s padding moves both or fails.
+   */
+  await ready(page, { church: 'russian' });
+
+  for (const width of [1280, 900, 360]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const [day, shape] of [
+      ['2026-09-20', 'a short name that leaves the line half empty'],
+      ['2026-09-06', 'a name long enough to wrap to a second line'],
+    ]) {
+      await page.goto(`/calendar/${day}`, { waitUntil: 'networkidle' });
+      await page.evaluate(() => document.fonts.ready);
+      const m = await page.evaluate(() => {
+        const line = document.querySelector('.hero .name-line');
+        const h2 = line.querySelector('.hero-name');
+        const heroMark = line.querySelector('.bookmark');
+        const regMark = document.querySelector('.register .reg-card .bookmark');
+        const R = (e) => e.getBoundingClientRect();
+        return {
+          heroMarkRight: R(heroMark).right,
+          regMarkRight: regMark ? R(regMark).right : null,
+          lineRight: R(line).right,
+          nameRight: R(h2).right,
+          // The mark keeps the *first* line of a wrapped name, never the last.
+          onFirstLine: R(heroMark).top < R(h2).top + R(h2).height / 2,
+        };
+      });
+      const where = `${width}px, ${shape}`;
+      expect(m.regMarkRight, where).not.toBeNull();
+      // The author's own measure: the same distance from the right edge as
+      // the marks on the row cards under it, to the pixel.
+      expect(Math.abs(m.heroMarkRight - m.regMarkRight), where).toBeLessThan(1);
+      // Which is *not* flush with the column: `.reg-card` insets its own mark
+      // by its inline padding, and the hero matches that rather than the edge.
+      expect(m.lineRight - m.heroMarkRight, where).toBeGreaterThan(0);
+      expect(m.onFirstLine, where).toBe(true);
+    }
+  }
+
+  // And the short name is the one that used to fail: with the mark pinned,
+  // the gap between the end of the name and the mark is wide, where before
+  // the fix it was the line's flex gap and nothing else — 8 px, whatever the
+  // name's length, which is precisely why the mark wandered.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  const slack = await page.evaluate(() => {
+    const line = document.querySelector('.hero .name-line');
+    const h2 = line.querySelector('.hero-name');
+    const mark = line.querySelector('.bookmark');
+    return mark.getBoundingClientRect().left - h2.getBoundingClientRect().right;
+  });
+  expect(slack).toBeGreaterThan(40);
+});
+
+test('a chooser panel arrives the way it leaves, and the page comes with it', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "when you click on the language or church
+   * selector, please add the same animations to the popups (and the other
+   * items on the page that move out of the way to accommodate the popups) as
+   * the animations when you close them. the exact reverse."
+   *
+   * Closing had had a flight and a collapse since 2026-08-25; opening had
+   * neither, so the panel appeared from nowhere and everything under the
+   * header jumped down by its whole height in one frame. The two directions
+   * share `journey()` in ui/fly.js now, so they cannot drift apart the first
+   * time either is tuned.
+   *
+   * Sampled frame by frame rather than asserted at one instant: what is under
+   * test is that the panel *travels*, and a single reading cannot tell a
+   * journey from a jump.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+
+  const sample = (sel, panelSel) =>
+    page.evaluate(
+      ({ sel, panelSel }) =>
+        new Promise((resolve) => {
+          const panel = document.querySelector(panelSel);
+          const out = [];
+          document.querySelector(sel).click();
+          const t0 = performance.now();
+          const tick = () => {
+            const inner = panel.querySelector('.church-panel-inner');
+            const t = performance.now() - t0;
+            if (inner) {
+              const cs = getComputedStyle(inner);
+              out.push({
+                scale: Number(cs.transform.match(/matrix\(([-\d.]+)/)?.[1] ?? 1),
+                opacity: Number(cs.opacity),
+                band: panel.getBoundingClientRect().height,
+                position: cs.position,
+              });
+            }
+            if (t < 300) requestAnimationFrame(tick);
+            else resolve(out);
+          };
+          requestAnimationFrame(tick);
+        }),
+      { sel, panelSel },
+    );
+
+  for (const [button, panelSel] of [
+    ['#church-open', '#church-panel'],
+    ['#lang-open', '#lang-panel'],
+  ]) {
+    const opening = await sample(button, panelSel);
+    const first = opening[0];
+    const last = opening[opening.length - 1];
+
+    // Out of the flow while it travels, exactly as the close pins it, so the
+    // band can open under it without clipping.
+    expect(first.position, panelSel).toBe('fixed');
+    // It grows out of the control: small and invisible, then whole.
+    expect(first.scale, panelSel).toBeLessThan(0.7);
+    expect(first.opacity, panelSel).toBeLessThan(0.3);
+    expect(last.scale, panelSel).toBe(1);
+    expect(last.opacity, panelSel).toBe(1);
+    // **And the page comes with it**: the band opens from nothing rather than
+    // being at full height on the first frame, which is the half of the
+    // instruction about "the other items on the page that move out of the
+    // way". Backed out, `first.band` is already `last.band`.
+    expect(first.band, panelSel).toBeLessThan(last.band / 2);
+    expect(last.band, panelSel).toBeGreaterThan(40);
+    // A journey, not a jump: the scale climbs across the middle of the run.
+    const mid = opening[Math.floor(opening.length / 4)];
+    expect(mid.scale, panelSel).toBeGreaterThan(first.scale);
+    expect(mid.scale, panelSel).toBeLessThan(1);
+
+    // The reverse of the reverse: closing runs the same journey the other way.
+    const closing = await sample(button, panelSel);
+    expect(closing[0].scale, panelSel).toBe(1);
+    expect(closing[closing.length - 1].scale, panelSel).toBeLessThan(0.7);
+    expect(closing[closing.length - 1].band, panelSel).toBeLessThan(closing[0].band / 2);
+  }
+});
+
+test('under reduced motion a chooser panel is simply there, arriving as well as leaving', async ({ browser }) => {
+  /*
+   * DESIGN.md §6: reduced motion **removes**, never shortens. The close has
+   * had its own test since the flight was written; the arrival needed one the
+   * moment it gained an animation of its own, and it is the same rule — no
+   * flight, no band opening, the panel simply at its full size on the first
+   * frame after the press.
+   */
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  const state = await page.evaluate(() => {
+    document.querySelector('#church-open').click();
+    const panel = document.querySelector('#church-panel');
+    const inner = panel.querySelector('.church-panel-inner');
+    const cs = getComputedStyle(inner);
+    return {
+      transform: cs.transform,
+      opacity: Number(cs.opacity),
+      position: cs.position,
+      band: panel.getBoundingClientRect().height,
+    };
+  });
+  expect(state.transform).toBe('none');
+  expect(state.opacity).toBe(1);
+  expect(state.position).not.toBe('fixed');
+  expect(state.band).toBeGreaterThan(40);
+  await ctx.close();
+});
+
+test('pressing a chooser twice inside its flight does not send it the wrong way', async ({ page }) => {
+  /*
+   * The defect the two directions introduced between them, and the reason
+   * ui/fly.js returns its `finish`. `flyInto` decides where to fly *from* by
+   * reading the box's rect; a panel halfway through arriving is at neither
+   * end of its journey, so a close that began mid-arrival set off in the
+   * wrong direction and by the wrong distance. Amendment 9's rule — land what
+   * is still moving before the next move starts — met for the fifth time.
+   *
+   * The header's control sits at the top right on a desktop, so a panel
+   * flying home travels *up*. That is the assertion, made after a press that
+   * lands 40 ms into the opening flight.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+
+  /*
+   * The symptom is not the direction — a shrunken box still sits roughly
+   * where the whole one did, so the flight still travels broadly upward. It
+   * is the *place the flight starts from*. `flyInto` pins the flier out of
+   * flow at the rect it read, so a rect read mid-arrival makes the panel jump
+   * to a half-size box near the control and fly from there. Measured with the
+   * landing removed: pinned at 583 x 38 and 295 px wide, against a resting
+   * 334 x 61 and 612 px. That jump is what this asserts away.
+   */
+  const flight = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const button = document.querySelector('#church-open');
+        const panel = document.querySelector('#church-panel');
+        const inner = () => panel.querySelector('.church-panel-inner');
+        button.click();
+        setTimeout(() => {
+          const rest = inner().getBoundingClientRect();
+          button.click(); // close it again, and let that flight finish too
+          setTimeout(() => {
+            button.click(); // open
+            setTimeout(() => {
+              button.click(); // and close, 40 ms into the arrival
+              setTimeout(() => {
+                const el = inner();
+                if (!el) return resolve(null);
+                const m = new DOMMatrixReadOnly(getComputedStyle(el).transform);
+                resolve({
+                  rest: { left: rest.left, top: rest.top, width: rest.width },
+                  pinned: {
+                    left: parseFloat(el.style.left),
+                    top: parseFloat(el.style.top),
+                    width: parseFloat(el.style.width),
+                  },
+                  dy: m.m42,
+                  scale: m.a,
+                });
+                // 60 ms, not 30: `flyInto` starts its transform in a
+                // requestAnimationFrame, so one frame after the press the box
+                // is still at identity and `dy` reads a flat zero.
+              }, 60);
+            }, 40);
+          }, 320);
+        }, 320);
+      }),
+  );
+  expect(flight).not.toBeNull();
+  // The flight home sets off from where the panel actually rests, at the size
+  // it actually is. Backed out, every one of these is out by hundreds of px.
+  expect(Math.abs(flight.pinned.left - flight.rest.left), 'starts where it rests').toBeLessThan(2);
+  expect(Math.abs(flight.pinned.top - flight.rest.top), 'starts where it rests').toBeLessThan(2);
+  expect(Math.abs(flight.pinned.width - flight.rest.width), 'starts at full size').toBeLessThan(2);
+  // And it still goes the right way: the control is above, on a desktop.
+  expect(flight.dy, 'towards the header').toBeLessThan(0);
+  expect(flight.scale, 'shrinking').toBeLessThan(1);
+  await expect(page.locator('#church-panel')).toBeHidden();
 });

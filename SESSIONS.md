@@ -3492,6 +3492,91 @@ asked. The string carries a comment saying so and naming the five places it
 would have to change; it was not changed, because the author asked what it
 means rather than for it to say something else.
 
+### The hero's bookmark is pinned at last, and the morning's fix was half of one
+
+*"The bookmark icon on the main saint of the day card is sometimes wrapped to
+the saint name, exactly what I tried warning against by saying pin it to the
+right edge. it should be the same distance from the right edge as it is on the
+row cards."*
+
+The morning's instruction (Amendment 47) had been *"reserve a spot for it, so
+as to make sure if the text is long and requires 2 lines the bookmark still
+stays in the same position"*, and the fix — `.name-line`'s "the name shrinks,
+`flex: none` holds the control" — answers **only the long case**. A flex item
+sizes to its content, so a short name left the mark sitting a fixed
+`--space-2` past the end of the name, wherever that fell. Measured at 1280 px
+before the fix: "St Peter, Metropolitan of Moscow" wraps, fills the line and
+lands the mark exactly on the register's column; "St Sozon of Pompeiopolis"
+does not, and leaves it 5.7 px short of it. **The mark moved with the name**,
+which is the thing the morning had asked against, and the morning's fix could
+not have caught it because it was never about width.
+
+`margin-inline-start: auto` is the pin. The end margin is `--space-1` because
+that is `.reg-card`'s own inline padding, so the hero's mark lands in the same
+column as the marks on the rows below it — which is the author's own measure
+("the same distance from the right edge as it is on the row cards") and is
+also `.index-card.is-row > .bookmark`'s own stated reason for where it stands:
+*a column of marks down the register*. The test reads the register's mark off
+the same page rather than pinning a number, so a change to `.reg-card`'s
+padding moves both or fails.
+
+### The panels arrive the way they leave
+
+*"When you click on the language or church selector, please add the same
+animations to the popups (and the other items on the page that move out of the
+way to accommodate the popups) as the animations when you close them. the exact
+reverse."*
+
+Closing has had a flight and a collapse since 2026-08-25; opening had neither,
+so the panel appeared from nowhere and everything under the header jumped down
+by its whole height in one frame — the mirror image of the defect the author
+had already had fixed on the way home ("make the rest of the page go back up
+smoothly not just clicking into place higher on the page").
+
+`flyOutOf` is the reverse, and the two directions now share `journey()` — the
+dx, dy and floor-scaled `scale` — so they cannot drift apart the first time
+either is tuned. One thing the reverse needs that the forward direction gets
+free: **a forced layout between the start state and the end state.**
+`flyInto` sets its end state inside a `requestAnimationFrame` and is therefore
+a frame apart from its start; `flyOutOf` sets both in one task, and without a
+`void el.offsetHeight` between them the browser coalesces the two into one
+recalculation and there is no transition left to run. DESIGN.md §5b says this
+about the month unfurling; it is the same paragraph, met again.
+
+**And the two directions collided, which is Amendment 9 for the fifth time.**
+`flyInto` decides where to fly *from* by reading the box's rect, and a panel
+halfway through arriving is at neither end of its journey. A close that began
+mid-arrival pinned the flier at the transformed rect and flew from there —
+measured with the fix removed: pinned at 583 x 38 and 295 px wide against a
+resting 334 x 61 and 612 px, a visible jump to a half-size box near the
+control before the flight even starts. Both directions return their `finish`
+now and each chooser lands whatever is in the air before it sets off.
+`src/ui/swap.js` owns this rule for the four animated swaps; this stays its
+own token because it is two directions on one element rather than two copies
+of one thing.
+
+### Three heirs, and an axe failure that is not the mistake it looks like
+
+The arrival broke three existing tests, and the third is the one worth reading.
+
+* *an answered panel shrinks into the control that changes it* measured "where
+  the panel is" immediately after opening it — which is now a box in flight.
+* *the panel flies home in half the time* did the same with the band's height.
+* ***no axe violations on the first visit* went from 0 to 303 colour-contrast
+  violations**, every one of them a colour like `#88847c` on `#dfdcd1` at
+  2.71:1 — the panel's own text, sampled mid-fade.
+
+That third one deserves its paragraph, because this file has twice recorded
+"an opacity is a new colour and axe reads it" as a *defect* (the peek fade at
+2.1:1, Amendment 16; `.cal-cycle` at 4.17:1, Amendment 46) and the reflex is
+to treat a third sighting the same way. **It is not the same thing.** Those
+two were permanent washes over text a reader had to read at that value; this
+is a transient that lands at full strength a sixth of a second later. What the
+gate is for is the resting state. A `panelSettled()` helper waits for the
+arrival to finish and all three tests measure the resting state now — and if
+the fade ever *stopped* landing at full opacity, that is what the helper's own
+timeout would catch.
+
 ### Two test defects of my own, both found by the backout
 
 * **A sign error that made two assertions vacuous.** The ring test read
@@ -3510,7 +3595,7 @@ backout that does not reproduce the defect is not a backout.
 ### Verification
 
 **166 unit** (163 at the top of the sitting; `greatFeast` added two and the
-strict default one) and **398 browser** (384; seven new tests across two
+strict default one) and **406 browser** (384; eleven new tests across two
 projects). All four locale packs are **297 of 297** with no English
 fallbacks — thirteen keys added and five removed, hand-translated,
 `scripts/locale-coverage.mjs` run after each pass. The five removed all lost
@@ -3520,7 +3605,7 @@ to the strict default, and `liturgy.graded`, `liturgy.bare` and
 rather than left for the next person to grep for, which is the fate
 `saints.keptAll` is still waiting for.
 
-**Fourteen backouts run and watched to fail**, each restored and the touched
+**Eighteen backouts run and watched to fail**, each restored and the touched
 files checksummed against pristine copies afterwards: the ring's inset (twice,
 once with each assertion isolated), the ring's radius, the name-days heading
 (and its inverse), the grade vocabulary, the feast chip's markup, the feast
@@ -3529,7 +3614,19 @@ reading of the grade (twice — the month's copy and the chip's, which are
 separate call sites and had to be shown to fail separately), the fast label's
 bare grade, the occasion chip's markup, the allowance's removal, and the
 occasion chip's rubric (swapped for gold, which fails on the green channel
-alone).
+alone), the hero bookmark's pin, the opening flight itself, and the landing of
+an in-flight animation before the other direction starts.
+
+**Two more test defects of my own, both caught by their backout**, which is
+five in one sitting and the same shape every time — a premise assumed rather
+than run. *pressing a chooser twice inside its flight* first asserted the
+flight's **direction**, and passed with the fix fully removed: a shrunken box
+still sits roughly where the whole one did, so the flight still travels
+broadly upward. It asserts the rect the flight is pinned at instead, which is
+where the defect actually shows. And it then read that rect 30 ms after the
+press, where `flyInto` starts its transform a frame later and the box is still
+at identity — the older flight test says so in its own comment, three hundred
+lines up, and I did not read it.
 
 **A third test defect of my own**, and the same shape as the first two: the
 new occasion test called `ready(page, { church: 'russian' })` halfway through
