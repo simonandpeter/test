@@ -311,8 +311,8 @@ export const STRINGS = {
    * arrow on it, so neither has to say "here" twice.
    */
   coach: {
-    church: 'Your church and calendar',
-    language: 'Your language',
+    church: 'Pick your church calendar.',
+    language: 'Pick your language.',
     dismiss: 'Dismiss',
   },
 

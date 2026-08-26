@@ -2323,8 +2323,8 @@ test('a first visit is shown where the two controls are, and the day is not held
   // Two marks, each under the control it names, each with a way out.
   const marks = page.locator('.coachmark');
   await expect(marks).toHaveCount(2);
-  await expect(marks.first()).toContainText('Your church and calendar');
-  await expect(marks.last()).toContainText('Your language');
+  await expect(marks.first()).toContainText('Pick your church calendar.');
+  await expect(marks.last()).toContainText('Pick your language.');
   await expect(page.locator('.coachmark-close')).toHaveCount(2);
 
   // Each points at its own control: the arrow's x is set on the box after the
@@ -2361,7 +2361,7 @@ test('a first visit is shown where the two controls are, and the day is not held
   await page.reload({ waitUntil: 'networkidle' });
   // The language is still unanswered, so its mark alone comes back.
   await expect(page.locator('.coachmark')).toHaveCount(1);
-  await expect(page.locator('.coachmark')).toContainText('Your language');
+  await expect(page.locator('.coachmark')).toContainText('Pick your language.');
 });
 
 test('a coachmark goes on the second scroll, and not on the first', async ({ page }) => {

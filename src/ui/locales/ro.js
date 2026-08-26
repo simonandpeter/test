@@ -182,8 +182,8 @@ export const ro = {
   },
 
   coach: {
-      church: 'Biserica și calendarul tău',
-      language: 'Limba ta',
+      church: 'Alege calendarul bisericii tale.',
+      language: 'Alege limba ta.',
       dismiss: 'Închide',
   },
 

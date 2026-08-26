@@ -1432,7 +1432,10 @@ a.name-day:hover {
   max-width: min(36ch, calc(100vw - 2 * var(--space-4)));
   padding: var(--space-3);
   border: 1px solid var(--rule);
-  border-radius: var(--radius-panel);
+  /* Rounder than the site's panels (author, 2026-08-26: "soften the corners
+     of the fasting tool tip bubble") — the same reasoning as the coachmark's
+     own corner in base.css: a bubble pointing at a word is not a panel. */
+  border-radius: 10px;
   background: var(--gesso);
   color: var(--ink);
   /* The one shadow on the site that is not a picture's: a bubble has to read

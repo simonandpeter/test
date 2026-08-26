@@ -1557,9 +1557,9 @@ function paintDay(panel) {
       </div>
     </article>
     ${register}
-    ${nameDaysMarkup(entries, data)}
     ${readingsMarkup(selected, state.calendar)}
-    ${hymnsMarkup(selected, state.calendar)}`;
+    ${hymnsMarkup(selected, state.calendar)}
+    ${nameDaysMarkup(entries, data)}`;
   fillSaintHymns(panel, hero.slug, selected);
   fillHeroLede(panel, hero.slug, selected);
 }

@@ -613,11 +613,19 @@ main.chrome:has(.cal-controls) {
      each overlapped in the middle of a 390 px phone, and the one drawn first
      lost its × underneath the other. Two marks that fit side by side is the
      constraint; the text was cut to fit it rather than the box grown to fit
-     the text. */
-  max-width: min(26ch, calc(50vw - 10px));
+     the text.
+
+     14, not 10 (author's wording lengthened both marks, 2026-08-26): two
+     boxes at the old cap plus the 10 px gap between them and the 8 px inset on
+     each side needed 366 px at 360, six more than the screen has. 14 leaves
+     two px of slack in that arithmetic instead of running it six short. */
+  max-width: min(26ch, calc(50vw - 14px));
   padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
   border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
-  border-radius: var(--radius-panel);
+  /* Rounder than the site's panels (author, 2026-08-26: "soften the corners
+     of the … calendar tool tips"): a note floating free of the page reads as
+     a bubble, and a bubble is not a panel that happens to be gold-edged. */
+  border-radius: 10px;
   background: var(--field);
   font-family: var(--font-utility);
   font-size: 13px;

@@ -236,7 +236,12 @@ function layout(marks) {
     const mid = (before.at.centre + now.at.centre) / 2;
     const width = before.at.right - before.at.left;
     before.at = place(before.mark.el, before.mark.target, mid - APART / 2 - width);
-    now.at = place(now.mark.el, now.mark.target, mid + APART / 2);
+    // The split above assumes the midpoint has room either side of it, which
+    // is false the moment "before" is itself pinned to the viewport's edge
+    // instead of landing where the split intended — a narrow phone with two
+    // wide marks, since 2026-08-26. "before"'s *actual* right edge, not the
+    // one the split assumed, is the floor "now" may not come in under.
+    now.at = place(now.mark.el, now.mark.target, Math.max(mid + APART / 2, before.at.right + APART));
   }
 }
 
