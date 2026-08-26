@@ -12,6 +12,20 @@
   --ink-soft: #5c544d;
   --rubric: #8a2e26;
   --gold: #a98237;
+  /* The same gold at a value words can be read at (2026-08-27). `--gold` on
+     gesso is **2.78:1**, which is under the 3:1 a meaningful graphic asks and
+     nowhere near the 4.5:1 text asks; it is the right hue for a glyph, a
+     border or a tint and the wrong one for a word. This is the darkest step
+     that still reads as gold rather than as brown, at **4.59:1**. The pattern
+     is Amendment 49's: where a hue cannot carry words, lift it rather than
+     print under the floor. In the dark theme `--gold` already clears text at
+     7.07:1 and the two are the same value.
+
+     **Measured against `--field` and not only against gesso**: the phone's
+     current nav button sits in the recessed field, which is where this hue is
+     first used, and the first value tried cleared 4.59:1 on gesso and 4.26 on
+     the field. axe caught it on the mobile project. 5.13 and 4.76. */
+  --gold-ink: #755925;
   --rule: #c8c2b7;
 
   --field: #dfdcd1; /* recessed panel interior only — never a page background */
@@ -66,6 +80,7 @@ html.dark {
   --ink-soft: #a89c8f;
   --rubric: #c05b4b;
   --gold: #c79a4b;
+  --gold-ink: #c79a4b;
   --rule: #3a2f29;
 
   --field: #231a17;

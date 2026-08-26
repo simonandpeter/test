@@ -13,7 +13,15 @@ export const el = {
   },
 
   nav: {
-    calendar: 'Σήμερα',
+      /* The page's own name, distinct from the word the button offers on it
+         (author, 2026-08-27: "In Russian, this 'Today' text is the same as
+         'Daily'. Is there a different word thats still short enough for the
+         header button that we could use to differentiate the two"). It was
+         the same word as `today` in all four, so the change of state the
+         English button makes was invisible outside English - Amendment 49
+         raised exactly this and left it to the author, because it changes a
+         reviewed nav label and these words are longer. */
+    calendar: 'Καθημερινά',
     today: 'Σήμερα',
     saints: 'Όλοι οι άγιοι',
     map: 'Χάρτης',
@@ -300,12 +308,10 @@ export const el = {
     noneMatch: 'Κανένας άγιος του σώματος δεν ταιριάζει σε όλα αυτά τα φίλτρα. Αυτό λέει κάτι για το σώμα, όχι για το εορτολόγιο - ανοίξτε ένα φίλτρο, ή καθαρίστε τα και κοιτάξτε γύρω.',
     undatedTray: '{count} αχρονολόγητοι, στην άκρη',
     undatedNote: 'Ένα εύρος ετών δεν μπορεί ούτε να συμπεριλάβει ούτε να αποκλείσει έναν άγιο χωρίς κανένα χρονολογημένο όριο, γι’ αυτό μπαίνουν στην άκρη αντί να πετιούνται. Σε όλα τα άλλα που διαλέξατε ταιριάζουν.',
-    keptOf: 'Από {total},',
-    kept: '{shown} άγιοι είναι στο επιλεγμένο ημερολόγιο ({church}).',
-    keptAll: '{total} άγιοι - όλο το σώμα.',
+    listed: '{shown}/{total} άγιοι στη λίστα.',
     keptTitle: 'Το ημερολόγιο αλλάζει στην κεφαλίδα.',
     filters: {
-      church: 'Εκκλησία',
+      church: 'Ημερολόγιο',
       month: 'Μήνας εορτής',
       type: 'Τύπος',
       sex: 'Φύλο',

@@ -114,8 +114,16 @@ select:hover {
      Nothing asserts this row is one line (the budget test measures the foot),
      so a runner that cannot fit it wraps the die rather than going red.
      Verdana's metrics do not fit it at all — 606.7 — and Verdana is
-     system-ui nowhere; Amendment 24 measured it as the same outlier. */
-  gap: 6px;
+     system-ui nowhere; Amendment 24 measured it as the same outlier.
+
+     **Two more pixels came out of it on 2026-08-27**, when the die was
+     squared (30.3 px where it was 27) and the first chip's label went from
+     Church to Calendar — 14 px of new cost on a row with 9.5 px of margin,
+     which put it over by a third of a pixel and wrapped the die again. 5 px
+     across seven gaps and a sixth pixel of the chips' own inline padding buy
+     21 back. There is no third pixel to take: the next thing this row needs
+     is a shorter label or a second line by design. */
+  gap: 5px;
   margin-bottom: var(--space-2);
 }
 
@@ -140,9 +148,11 @@ select:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  /* 7 px inline, not 8: the die had to come into this row (2026-08-26
-     evening) and the seven chips paid a pixel each side for it. */
-  padding: var(--facet-pad-y) 7px;
+  /* 6 px inline, not 8: the die had to come into this row (2026-08-26
+     evening) and the seven chips paid a pixel each side for it, then a second
+     pixel on 2026-08-27 when the die was squared and Church became Calendar.
+     The row's own comment has the arithmetic. */
+  padding: var(--facet-pad-y) 6px;
   border: 1px solid var(--rule);
   border-radius: 999px;
   list-style: none;
@@ -297,7 +307,15 @@ select:hover {
      filters in its row"). 24 px was bought to fit the row and the row can
      afford the 3 px back — measured after, the eight need 573.4 px of the
      580 px cold-load column in Arial's metrics. */
-  width: 27px;
+  /* Square, at the author's word (2026-08-27: "make the dice button square
+     proportions. Keep the same corner fillet, just make it as wide as it is
+     tall"). It is the same token as the height below, so the two cannot drift:
+     a chip's padding change moves both. 27 px was the old width and the old
+     height together, and the height went to `--facet-h` on 2026-08-26 without
+     the width following it, which is what left the die an upright pill. The
+     999px radius is unchanged and still reads as the same fully rounded
+     corner; on a square it simply resolves to a circle. */
+  width: var(--facet-h);
   /* The chips' height (author: "make the dice button height match the height
      of the other filters in its row"), which takes **both** of these.
      `.facets` is `align-items: flex-start`, so the die asks for the stretch
@@ -362,17 +380,6 @@ select:hover {
   color: var(--ink);
   margin: calc(-1 * var(--space-1)) 0 var(--space-2);
   max-width: 60ch;
-}
-
-/* The corpus's own size, a step back from the count that matters (author,
-   2026-08-26 evening: "make the 'Of 742, ' print in grey or whatever is
-   halfway between background colour and font colour"). The literal midpoint
-   of gesso and ink is #83807b at **3.09:1** and cannot carry text; ink-soft
-   is this palette's halfway and clears AA at 5.82:1 — so the step between the
-   two halves is bought by lifting the rest to full ink rather than by sinking
-   the lead-in under the floor. */
-.set-aside .count-of {
-  color: var(--ink-soft);
 }
 
 /* ---- the virtualised grid ---------------------------------------------- */

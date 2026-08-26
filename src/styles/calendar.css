@@ -340,7 +340,15 @@
    their comfortable minimum. Seven days, two peeks and the stack still fit
    360 px, and the quality floor's overflow check holds the line if any of them
    grow again. */
-@media (max-width: 560px) {
+/* 559.98, not 560 (found in review, 2026-08-27). base.css opens the desktop
+   header at `min-width: 560px`, so a viewport of exactly 560 was matching both
+   this and that - the phone's chrome and the desk's, at the same width, with
+   source order deciding. The site's ladder is 400 / 480 / 560 / 620 / 760, and
+   every pair on it is written the same way: `max-width` takes the hundredth
+   under, `min-width` takes the number itself. 620 is the calendar's own rung
+   and stays its own: the month grid needs its gutter back before the header
+   needs its second column, and folding the two would move one of them. */
+@media (max-width: 559.98px) {
   .cal-controls {
     --cal-peek: 24px;
     --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
@@ -759,7 +767,7 @@
    row here is 28 px of the fold that the saint's own name needs. The group
    keeps its accessible name either way — the visible word was only ever a
    repeat of it. */
-@media (max-width: 560px) {
+@media (max-width: 559.98px) {
   .cal-reckoning > .reckoning-label {
     display: none;
   }
@@ -1247,7 +1255,7 @@ a.name-day:hover {
    putting the day's own heading below the fold as well as the hero's name
    (author, 2026-08-21). The prose gives up its margin and the panel its
    padding; the fold test holds the line. */
-@media (max-width: 560px) {
+@media (max-width: 559.98px) {
   .church-ask {
     padding: var(--space-3);
     margin-bottom: var(--space-4);

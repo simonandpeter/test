@@ -1880,6 +1880,24 @@ test('the index foot holds one line in a wide utility face at the cold-load colu
   expect(foot.height, `the foot wrapped at a ${foot.column} px column`).toBeLessThan(40);
   const gridTop = (await page.locator('.grid').boundingBox()).y;
   expect(gridTop, 'the grid moved down the page at the cold-load column').toBeLessThan(400);
+
+  /*
+   * **And the same budget at the phone's column** (2026-08-27). This was the
+   * last row on the Index whose one-line-ness was asserted in whatever font
+   * the machine happened to have: `Sort, View and Detailed share a row` reads
+   * the native face at 360, where the column is 328 px and the English foot
+   * needs about 244 in Segoe UI. DejaVu Sans is wider, and the margin was
+   * about 30 px — thin enough that a label change could take it without
+   * anything going red on the desk it was made on. Amendment 24's own lesson,
+   * applied to the one row that had not had it.
+   */
+  await page.setViewportSize({ width: 360, height: 900 });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const phone = await page.locator('.index-foot').evaluate(measureFoot);
+  expect(phone.need, `the foot needs ${phone.need.toFixed(1)} px of a ${phone.column} px column`).toBeLessThan(
+    phone.column,
+  );
+  expect(phone.height, `the foot wrapped at a ${phone.column} px column`).toBeLessThan(40);
 });
 
 test('Clear filters appears beside the search bar, never below it', async ({ page }) => {
@@ -3342,7 +3360,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('[data-count]')).toHaveText('426');
   // 426, not 418: thirteen new folders, and eight the corpus already held whose
   // Russian row said "not checked" until days.pravoslavie.ru was read for the day.
-  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 426 saints are in the Russian calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('426/742 saints listed.');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -3359,9 +3377,8 @@ test('the header control names the calendar, offers the three, and the Index fol
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian');
   await expect(page.locator('[data-count]')).toHaveText('127');
-  // The count says the useful number outright (author, 2026-08-25): it named
-  // how many were *not* kept, which left the reader subtracting.
-  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
+  // A ratio of the corpus since 2026-08-27, and the Index's only count line.
+  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints listed.');
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -3372,7 +3389,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('365');
-  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 365 saints are in the Greek calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints listed.');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
@@ -4268,7 +4285,10 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // screen: a re-sort repositions the cards without reordering the DOM.
   await chooseSort(page, 'earliest');
   await expect(sortChip(page)).toHaveText(new RegExp('Најранији прво$'));
-  await expect(page.locator('[data-set-aside]')).toContainText('Руска');
+  // The count line is a ratio since 2026-08-27 and no longer names the church,
+  // so what it proves here is that the *sentence around the numbers* is
+  // Serbian — which is the boundary this test is about.
+  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 426/742.');
   /*
    * The name in the reader's own language, which this test asserted the
    * *absence* of for two days. The author asked for it on 2026-08-25 ("St
@@ -7283,9 +7303,15 @@ test('the filter row still holds one line with the die in it', async ({ page }) 
   /*
    * The die is an eighth chip in a row Amendment 24 already records as tight,
    * and it needed 14.6 px the row did not have — so it wrapped to a line of
-   * its own and read as a stray. The gap came down from 8 px to 6, the chips'
-   * own inline padding from 8 to 7, and the die is 24 px rather than the 27 a
-   * chip is tall.
+   * its own and read as a stray. The gap came down from 8 px to 6 and the
+   * chips' own inline padding from 8 to 7.
+   *
+   * **It went over again on 2026-08-27**, by a third of a pixel: the die was
+   * squared at the author's word (30.3 px where it had been 27) and the first
+   * chip's label went from Church to Calendar, which is 14 px of new cost on a
+   * row that had 9.5 px of margin. Another pixel of gap and another of inline
+   * padding buy 21 back, and the row needs 567 of its 580 in Arial's
+   * metrics.
    *
    * Measured the way Amendment 24 measures the foot, and for the same reason:
    * the webfont is blocked so the column is the cold-load 580 px on every
@@ -7317,54 +7343,46 @@ test('the filter row still holds one line with the die in it', async ({ page }) 
   expect(row.lines, 'the die shares the facets line').toBe(1);
 });
 
-test('the Index says its count once, with the corpus a step behind the calendar', async ({ page }) => {
+test('the Index says its count once, as a ratio of the corpus', async ({ page }) => {
   /*
-   * Author, 2026-08-26 evening: the page read "127 saints" over "127/742
-   * saints venerated in the Romanian calendar" — "Just print 1 line, 'Of 742,
-   * 127 saints are in Romanian calendar'", with the lead-in "in grey or
-   * whatever is halfway between background colour and font colour".
+   * Author, 2026-08-27: "instead of Of x, y saints are in the Romanian
+   * calendar, just print y/x saints listed. And remove the extra print number
+   * of saints that shows up above this line when filters are added."
    *
-   * Two things are pinned. **One line when nothing is filtering**, which is
-   * the whole complaint: the tweened count said the same number as the line
-   * under it. And **two inks**, bought the way this palette can afford them —
-   * the literal midpoint of gesso and ink is #83807b at 3.09:1, under AA's
-   * 4.5, so the step is made by lifting the rest to full ink rather than by
-   * sinking the lead-in below the floor.
+   * The page had carried two counts since Amendment 49 answered the same
+   * complaint the other way round — a tweened "127 saints" over "Of 742, 127
+   * saints are in the Romanian calendar" — with whichever was redundant
+   * hidden. One line saying what is listed out of what there is answers both
+   * states at once, which is why the numerator is the *matched* set and not
+   * the church's own: a filtered page keeps its real number here.
    */
   await ready(page, { church: 'romanian' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const line = page.locator('[data-set-aside]');
-  await expect(line).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
-  // The count that used to say it a second time is silent.
-  await expect(page.locator('[data-count-row]')).toBeHidden();
+  await expect(line).toHaveText('127/742 saints listed.');
+  /*
+   * Nothing prints above it, in any state. `not.toBeVisible` is the wrong
+   * question: the row is still rendered, because it carries the live region,
+   * and `.sr-only` clips rather than hides. What the author asked to remove is
+   * the *printed* number, so what is asserted is that the row takes no room.
+   */
+  const rowBox = async () => (await page.locator('[data-count-row]').boundingBox()).height;
+  expect(await rowBox()).toBeLessThan(2);
 
-  const ink = await page.evaluate(() => {
-    const probe = document.createElement('span');
-    document.body.append(probe);
-    const root = getComputedStyle(document.documentElement);
-    const read = (name) => {
-      probe.style.color = root.getPropertyValue(name).trim();
-      return getComputedStyle(probe).color;
-    };
-    const out = { ink: read('--ink'), soft: read('--ink-soft') };
-    probe.remove();
-    return out;
-  });
-  await expect(page.locator('[data-set-aside] .count-of')).toHaveCSS('color', ink.soft);
-  await expect(line).toHaveCSS('color', ink.ink);
-  // The two are genuinely different, or "a step behind" is no step at all.
-  expect(ink.soft).not.toBe(ink.ink);
+  // A filter moves the numerator, which is what lets the second line go.
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await expect(line).toHaveText('1/742 saints listed.');
+  expect(await rowBox()).toBeLessThan(2);
 
   /*
-   * And it speaks again when it has something the line above does not: a
-   * filter narrowing the church's own set. The two numbers differ then, and
-   * both are worth printing.
+   * The tweened row is still in the DOM and still announcing: its visible
+   * number is what the author asked to remove, and what it also carries is
+   * the live region that tells a reader who cannot see the line how many
+   * saints a filter left.
    */
-  await page.locator('[data-query]').fill('Anthony the Great');
-  await expect(page.locator('[data-count-row]')).toBeVisible();
-  await expect(line).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
+  await expect(page.locator('[data-count-live]')).toHaveText('1 saints match');
 });
 
 test('the die is a chip height, including on a line of its own', async ({ page }) => {
@@ -7844,4 +7862,287 @@ test('a coachmark is shown once, and a guess is still not an answer', async ({ p
   // And the guess is still visibly a guess, which is what the marks were for.
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('#church-open')).toHaveText('Russian');
+});
+
+test('the day records and the locale packs are fetched, not carried in the entry chunk', async ({ page }) => {
+  /*
+   * The review's second finding, 2026-08-27: the first download was 470 kB of
+   * JavaScript, of which 293 kB was `data/liturgical-days.js` — six months of
+   * hand-transcribed pericopes — and 106 kB was all four locale packs. A
+   * reader opening the Map downloaded both to look at neither.
+   *
+   * Both are their own chunks now. The day records are started at boot and
+   * awaited *beside* the manifest, which is the longer wait at 490 kB, so they
+   * arrive inside a wait the reader was making anyway and nothing on the page
+   * moves — the fast chip's grade is read out of a day's own note, so a panel
+   * painted before they landed would have shown an ungraded chip and then
+   * changed it. The packs are fetched one language at a time.
+   *
+   * This asserts the shape rather than a byte count, which would go stale the
+   * first time a saint was added.
+   */
+  const scripts = [];
+  page.on('request', (r) => {
+    if (r.resourceType() === 'script') scripts.push(r.url());
+  });
+
+  await ready(page, { church: 'russian', language: 'ru' });
+  await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
+
+  const entry = scripts.filter((u) => /\/assets\/index-[^/]+\.js$/.test(u));
+  expect(entry.length, 'one entry chunk').toBeGreaterThan(0);
+  expect(scripts.some((u) => /liturgical-days-[^/]+\.js$/.test(u)), 'the day records travel alone').toBe(true);
+
+  // One language's pack, and only one: the reader keeps Russian.
+  const packs = scripts
+    .map((u) => u.match(/\/assets\/(ru|ro|el|sr)-[^/]+\.js$/))
+    .filter(Boolean)
+    .map((m) => m[1]);
+  expect([...new Set(packs)]).toEqual(['ru']);
+
+  // And the page is whole, which is the half that matters: the records are in
+  // before the panel is painted, so the chip carries its grade at first sight.
+  await expect(page.locator('[data-readings] a').first()).toBeVisible();
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', /.+/);
+  await expect(page.locator('#church-open')).toHaveText('Русская');
+
+  /*
+   * Opening the chooser starts the other three, so that pressing one is
+   * instant rather than a fetch the reader watches. Deliberately not awaited
+   * by the panel itself, which must appear at once.
+   */
+  await page.locator('#lang-open').click();
+  await expect.poll(() => new Set(scripts.map((u) => (u.match(/\/assets\/(ru|ro|el|sr)-/) ?? [])[1]).filter(Boolean)).size).toBe(4);
+});
+
+test('the Daily button says Daily on today, and wears gold when it says Today', async ({ page }) => {
+  /*
+   * Author, 2026-08-27, two instructions on one control. First: "if you press
+   * 'Today' and you go back to the current date, the text 'Today' does not
+   * change back to 'Daily', you need to press it again ... The rule should be,
+   * if you are on the current date, it should say Daily, not Today." Second:
+   * "to make it more obvious the 'Today' fade in has a specific
+   * functionality, print 'Today' in gold whenever it is showing."
+   *
+   * The first was a race between two paints in one tick — the nav rebuilt for
+   * the new route while the view had not yet said which day it was showing —
+   * and the fade's own timer landing last. main.js has the whole account.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  const label = page.locator('[data-nav-label]');
+  await expect(label).toHaveText('Today');
+
+  // Gold, and `--gold-ink` rather than `--gold`: a word needs 4.5:1 and the
+  // hue the die wears is 2.78:1 on gesso.
+  const goldInk = await page.evaluate(() => {
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    probe.style.color = getComputedStyle(document.documentElement).getPropertyValue('--gold-ink').trim();
+    const out = getComputedStyle(probe).color;
+    probe.remove();
+    return out;
+  });
+  await expect(label).toHaveCSS('color', goldInk);
+
+  // One press, and the word is back — this is the whole of the first
+  // instruction, and it failed before the fix.
+  await page.locator('a[data-nav-daily]').click();
+  await expect(label).toHaveText('Daily');
+  await expect(label).not.toHaveCSS('color', goldInk);
+  expect(new URL(page.url()).pathname.endsWith('/')).toBe(true);
+
+  // And the four packs say a different word for the page than for the day,
+  // which they did not until this sitting: «Ежедневно» against «Сегодня».
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'ru' }));
+  });
+  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-nav-label]')).toHaveText('Сегодня');
+  await page.locator('a[data-nav-daily]').click();
+  await expect(page.locator('[data-nav-label]')).toHaveText('Ежедневно');
+});
+
+test('a section is remembered where the reader left it, and a second press goes to the top', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "when you switch between them ... you come back to the
+   * same spot. However, if you click on the page header button a second time,
+   * it will scroll you back to the top of that page."
+   *
+   * Kept by section rather than by path — the Daily page is one place to a
+   * reader whichever day it is showing — and in memory rather than in the
+   * store, because it is where this visit left off and not a preference.
+   *
+   * **The presses are dispatched rather than clicked.** Playwright scrolls a
+   * target into view before pressing it and the header is sticky, so an
+   * ordinary `click()` can move the page to the top *before* the navigation
+   * reads where the reader was — which is the one thing this test is about. A
+   * reader pressing a bar already under their thumb does no such thing.
+   */
+  const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
+
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+
+  await press('nav.site-nav a[href$="/about"]');
+  await expect(page.locator('h1')).toBeVisible();
+  // A section arrived at fresh still opens at the top.
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+  // About fetches its statistics, so it is briefly shorter than it ends up and
+  // a scroll made before that lands would clamp to whatever fits.
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollHeight)).toBeGreaterThan(1200);
+  await page.evaluate(() => window.scrollTo(0, 400));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(400);
+
+  await press('nav.site-nav a[href$="/saints"]');
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+
+  // The same button again, and it is the top of the page.
+  await press('nav.site-nav a[aria-current="page"]');
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+
+  // Each section keeps its own place, not one between them.
+  await press('nav.site-nav a[href$="/about"]');
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(400);
+});
+
+test('the Calendar facet opens on the header\'s calendar and resets when it changes', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "instead of 'Church >' filter, write 'Calendar >' and
+   * have it default to whatever the site calendar settings are, ticking that
+   * box. If you tick others, but then you change the calendar again, the
+   * filters reset to just the site calendar."
+   *
+   * The facet is the Index's only church narrowing now. It could not be
+   * otherwise and still do what was asked: the page used to cut to the
+   * reader's church *before* the filters ran, so a second calendar ticked
+   * inside that set gave the intersection, and "tick others" would have shown
+   * fewer saints rather than more. The predicate is the same either way, so
+   * the page opens on exactly the set it always did.
+   */
+  await ready(page, { church: 'romanian', language: 'en' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const facetEl = page.locator('details[data-facet="churches"]');
+  await expect(facetEl.locator('summary')).toContainText('Calendar');
+  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints listed.');
+  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(1);
+  await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
+  // The default selection is where the page opens, so it is not a filter the
+  // reader has applied and Clear does not offer itself.
+  await expect(page.locator('[data-clear]')).toBeHidden();
+
+  // Ticking another adds saints rather than taking them away.
+  await facetEl.locator('summary').click();
+  await page.locator('input[name="churches"][value="russian"]').check();
+  await expect(page.locator('[data-set-aside]')).toHaveText('506/742 saints listed.');
+  await expect(page.locator('[data-clear]')).toBeVisible();
+
+  // Changing the calendar in the header puts the facet back to just that one.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints listed.');
+  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(1);
+  await expect(page.locator('input[name="churches"][value="greek"]')).toBeChecked();
+});
+
+test('the die is square, and the header rule sits on the buttons', async ({ page }) => {
+  /*
+   * Two of the author's smaller instructions, 2026-08-27: "make the dice
+   * button square proportions. Keep the same corner fillet, just make it as
+   * wide as it is tall", and "there is a horizontal line under the header
+   * buttons ... There should be no margin. The bottom of the buttons should
+   * coincide with that line."
+   *
+   * The die took its height from `--facet-h` on 2026-08-26 and its width did
+   * not follow, which is what left it an upright pill; both read the same
+   * token now, so a chip's padding change moves the two together. The row's
+   * budget paid 3.3 px for it and another 14 for Church becoming Calendar —
+   * `the filter row still holds one line with the die in it` is where that
+   * arithmetic lives.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const die = await page.locator('.random-die').evaluate((el) => {
+    const box = el.getBoundingClientRect();
+    return { w: box.width, h: box.height, radius: getComputedStyle(el).borderTopLeftRadius };
+  });
+  expect(Math.abs(die.w - die.h), `die ${die.w} x ${die.h}`).toBeLessThan(0.5);
+  // The fillet is untouched: on a square that resolves to a circle, which is
+  // the same fully rounded corner it had.
+  expect(parseFloat(die.radius)).toBeGreaterThan(die.w / 2 - 1);
+
+  /*
+   * Nothing between the bar's contents and its rule. On a phone the four page
+   * buttons are the header's own last row, so the two coincide to the pixel;
+   * on a desk the nav shares a line with the taller calendar control, and what
+   * touches the rule there is whichever of them is tallest. So the padding is
+   * asserted at both widths and the coincidence at the one where the buttons
+   * are the thing in question.
+   */
+  await expect(page.locator('header.chrome')).toHaveCSS('padding-bottom', '0px');
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const edge = await page.evaluate(() => {
+    const header = document.querySelector('header.chrome');
+    const nav = document.querySelector('nav.site-nav');
+    const box = header.getBoundingClientRect();
+    return {
+      // The rule is the header's own bottom border, so its top edge is the
+      // header's bottom less the border's width.
+      rule: box.bottom - parseFloat(getComputedStyle(header).borderBottomWidth),
+      buttons: nav.getBoundingClientRect().bottom,
+    };
+  });
+  expect(Math.abs(edge.rule - edge.buttons), `rule at ${edge.rule}, buttons end at ${edge.buttons}`).toBeLessThan(1);
+});
+
+test('the calendar panel follows a language change while it is open', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "when switching languages, make sure the choose church
+   * calendar pop-up, which may still be open when changing languages, also
+   * shows the updated language without having to close it first to see it
+   * update."
+   *
+   * The button repainted on a language change and the panel did not, so a
+   * reader who changed language with the calendar chooser open was left
+   * reading the old one until they closed and reopened it. The panel is a
+   * disclosure in the page's flow rather than a dialogue, so being open while
+   * something else changes is its normal state, not an edge case.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await openChooser(page);
+  await expect(page.locator('#church-panel')).toContainText('Which calendar do you keep?');
+
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'ru' }));
+  });
+  // Through the language control itself, which is the reader's own path.
+  await page.reload({ waitUntil: 'networkidle' });
+  await openChooser(page);
+  await expect(page.locator('#church-panel')).toContainText('По какому календарю вы живёте?');
+
+  /*
+   * And live, with the calendar panel open the whole time — which is the
+   * author's own case. The two panels are independent disclosures and both can
+   * stand open at once, so the language one is opened *over* the calendar one
+   * and the calendar one is never pressed again.
+   */
+  await page.locator('#lang-open').click();
+  await expect(page.locator('#lang-panel')).toBeVisible();
+  await page.locator('#lang-panel [data-language="en"]').click();
+  await expect(page.locator('#church-panel')).toContainText('Which calendar do you keep?');
+  await page.locator('#lang-open').click();
+  await page.locator('#lang-panel [data-language="ro"]').click();
+  await expect(page.locator('#church-panel')).toContainText('Ce calendar ții?');
 });

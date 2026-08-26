@@ -26,10 +26,25 @@
 
 import { STRINGS } from '../ui/strings.js';
 import { readSettings, writeSetting } from './settings.js';
-import { ru } from '../ui/locales/ru.js';
-import { ro } from '../ui/locales/ro.js';
-import { el } from '../ui/locales/el.js';
-import { sr } from '../ui/locales/sr.js';
+
+/**
+ * The four packs, fetched rather than bundled (2026-08-27).
+ *
+ * They were static imports, so all four were in the entry chunk and every
+ * reader downloaded 106 kB of four languages to read in one. Each is its own
+ * chunk now, and a language's pack arrives when that language is wanted: at
+ * boot for the one the reader keeps, from the chooser for one they are about
+ * to keep, and all four together only where all four are genuinely needed,
+ * which is the search index — a reader typing «игумен» finds the abbots
+ * whatever the chrome is set to, and that is the one thing that cannot be
+ * built from the current language alone.
+ */
+const LOADERS = {
+  ru: () => import('../ui/locales/ru.js').then((m) => m.ru),
+  ro: () => import('../ui/locales/ro.js').then((m) => m.ro),
+  el: () => import('../ui/locales/el.js').then((m) => m.el),
+  sr: () => import('../ui/locales/sr.js').then((m) => m.sr),
+};
 
 /**
  * `code` is what the header button shows (the author's spelling — GR and RS,
@@ -38,11 +53,14 @@ import { sr } from '../ui/locales/sr.js';
  * form every reader can find themselves in.
  */
 export const LANGUAGES = [
+  /* `pack` is null until that language's chunk has landed, and every reader of
+     it — `applyLocale` here, `allNames` in lib/saint-types.js — already treats
+     null as "English", which is what an unloaded pack should read as. */
   { id: 'en', code: 'EN', tag: 'en', name: 'English', pack: null },
-  { id: 'ru', code: 'RU', tag: 'ru', name: 'Русский', pack: ru },
-  { id: 'ro', code: 'RO', tag: 'ro', name: 'Română', pack: ro },
-  { id: 'el', code: 'GR', tag: 'el', name: 'Ελληνικά', pack: el },
-  { id: 'sr', code: 'RS', tag: 'sr', name: 'Српски', pack: sr },
+  { id: 'ru', code: 'RU', tag: 'ru', name: 'Русский', pack: null },
+  { id: 'ro', code: 'RO', tag: 'ro', name: 'Română', pack: null },
+  { id: 'el', code: 'GR', tag: 'el', name: 'Ελληνικά', pack: null },
+  { id: 'sr', code: 'RS', tag: 'sr', name: 'Српски', pack: null },
 ];
 
 export const LANGUAGES_BY_ID = Object.fromEntries(LANGUAGES.map((l) => [l.id, l]));
@@ -93,6 +111,50 @@ function applyLocale(id) {
   if (pack) mergeInto(STRINGS, pack);
   formatters.clear();
 }
+
+/* ---- fetching a pack ----------------------------------------------------- */
+
+const inFlight = new Map();
+
+/**
+ * Loads one language's pack, once, and applies it if that language is the one
+ * being read. The re-apply is what makes `chooseLanguage` safe to keep
+ * synchronous: a caller that chooses a language whose pack has not landed gets
+ * English for as long as the fetch takes and the right words the moment it
+ * arrives, with the usual subscriber refresh behind it. Callers who would
+ * rather not show that moment — the chooser is the only one — await this
+ * first.
+ */
+export function ensurePack(id) {
+  const entry = LANGUAGES_BY_ID[id];
+  if (!entry || !LOADERS[id] || entry.pack) return Promise.resolve(entry?.pack ?? null);
+  if (!inFlight.has(id)) {
+    inFlight.set(
+      id,
+      LOADERS[id]().then(
+        (pack) => {
+          entry.pack = pack;
+          if (current === id) {
+            applyLocale(id);
+            for (const fn of listeners) fn(id);
+          }
+          return pack;
+        },
+        (error) => {
+          // English is a working answer, so a pack that will not load is a
+          // degraded page rather than a broken one.
+          console.error(`locale pack ${id} failed to load`, error);
+          inFlight.delete(id);
+          return null;
+        },
+      ),
+    );
+  }
+  return inFlight.get(id);
+}
+
+/** All four, for the one caller that needs every language at once. */
+export const ensureAllPacks = () => Promise.all(Object.keys(LOADERS).map(ensurePack));
 
 /* ---- the one live copy -------------------------------------------------- */
 

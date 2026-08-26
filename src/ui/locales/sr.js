@@ -13,7 +13,15 @@ export const sr = {
   },
 
   nav: {
-    calendar: 'Данас',
+      /* The page's own name, distinct from the word the button offers on it
+         (author, 2026-08-27: "In Russian, this 'Today' text is the same as
+         'Daily'. Is there a different word thats still short enough for the
+         header button that we could use to differentiate the two"). It was
+         the same word as `today` in all four, so the change of state the
+         English button makes was invisible outside English - Amendment 49
+         raised exactly this and left it to the author, because it changes a
+         reviewed nav label and these words are longer. */
+    calendar: 'Дневно',
     today: 'Данас',
     saints: 'Сви светитељи',
     map: 'Карта',
@@ -300,12 +308,10 @@ export const sr = {
     noneMatch: 'Ниједан светитељ корпуса не одговара свим овим филтерима. То је чињеница о корпусу, не о календару - проширите филтер, или их очистите и разгледајте.',
     undatedTray: 'Без датума, остављено са стране: {count}',
     undatedNote: 'Распон година не може ни да укључи ни да искључи светитеља без иједне датиране границе, па су остављени са стране, а не одбачени. Свему осталом што сте изабрали одговарају.',
-    keptOf: 'Од {total}:',
-    kept: '{shown} светитеља је у изабраном календару ({church}).',
-    keptAll: 'Цео зборник: {total}.',
+    listed: 'Приказано светитеља: {shown}/{total}.',
     keptTitle: 'Календар се мења у заглављу.',
     filters: {
-      church: 'Црква',
+      church: 'Календар',
       month: 'Месец празновања',
       type: 'Тип',
       sex: 'Пол',
@@ -325,7 +331,8 @@ export const sr = {
       cards: 'Картице',
       rows: 'Редови',
       description: 'Како су светитељи распоређени',
-      detailed: 'Детаљно',
+      /* As Russian, and for the same row (author, 2026-08-27). */
+      detailed: 'Детаљ',
       detailedDescription: 'Прикажи кратак опис уз сваког светитеља',
     },
     sort: {
@@ -333,7 +340,8 @@ export const sr = {
       name: 'По имену',
       earliest: 'Најранији прво',
       latest: 'Најпознији прво',
-      random: 'Насумични редослед',
+      /* As Russian: «Редослед:» already carries the noun. */
+      random: 'Насумично',
     },
   },
 

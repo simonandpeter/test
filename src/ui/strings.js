@@ -582,12 +582,26 @@ export const STRINGS = {
      * already put the church's name in parentheses, because these names are
      * adjectives («Русская») and do not decline into the sentence.
      */
-    keptOf: 'Of {total},',
-    kept: '{shown} saints are in the {church} calendar.',
-    keptAll: '{total} saints, the whole corpus.',
+    /*
+     * The page's only count, and a ratio (author, 2026-08-27: "instead of Of
+     * x, y saints are in the Romanian calendar, just print y/x saints listed.
+     * And remove the extra print number of saints that shows up above this
+     * line when filters are added").
+     *
+     * `{shown}` is what is *on the grid* rather than what the church keeps,
+     * which is the change that lets the tweened count go: with the church's
+     * own number as the numerator a filtered page would have had its real
+     * count nowhere. So the line answers both questions the two lines used to
+     * answer between them, and it answers them in the word the author chose —
+     * listed is what is listed.
+     */
+    listed: '{shown}/{total} saints listed.',
     keptTitle: 'The calendar control in the header changes which church’s calendar this is.',
     filters: {
-      church: 'Church',
+      // "Calendar", not "Church" (author, 2026-08-27): since the same
+      // sitting this facet *is* the Index's calendar choice, opened on the
+      // one the header keeps, so it should carry the header's own word.
+      church: 'Calendar',
       month: 'Feast month',
       type: 'Type',
       sex: 'Gender',

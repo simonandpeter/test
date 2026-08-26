@@ -10,11 +10,12 @@ import { STRINGS } from './ui/strings.js';
 import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
+import { loadDays, readyDays } from './data/days.js';
 import { cancelPrefetches } from './lib/detail.js';
 import { mountChurchControl } from './ui/church-chooser.js';
 import { mountLanguageControl } from './ui/language-chooser.js';
 import { mountCoachmarks } from './ui/coachmark.js';
-import { currentLanguage, languageTag, subscribeLanguage } from './lib/i18n.js';
+import { currentLanguage, ensurePack, languageTag, subscribeLanguage } from './lib/i18n.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -53,28 +54,63 @@ let lastRoute = null;
  * text would rebuild the element the reader may be hovering or tabbed to.
  */
 let dailyIsToday = true;
+/*
+ * The word a fade is on its way to, and its timer.
+ *
+ * **Both exist because of a bug the author could describe better than the code
+ * could** (2026-08-27: "if you press 'Today' and you go back to the current
+ * date, the text 'Today' does not change back to 'Daily', you need to press it
+ * again"). Pressing the button paints twice in the same tick: the nav is
+ * rebuilt for the new route while `dailyIsToday` is still false, which starts a
+ * fade to *Today*, and the Daily view's own `gos:day` follows a moment later
+ * saying the day is today. The second call read the label's *current* text —
+ * still "Daily", because the first fade had not landed — decided there was
+ * nothing to do, and returned. Then the first timer fired and wrote "Today"
+ * over the top of it, for good.
+ *
+ * So the comparison is against the word in flight, and a new decision cancels
+ * the one it overtakes. The author's rule is the one this now keeps: on the
+ * current date it says Daily.
+ */
+let pendingWord = null;
+let fadeTimer = null;
 
 function paintDailyLabel(fade = true) {
   const label = navEl.querySelector('[data-nav-label]');
   if (!label) return;
   const onDaily = navEl.querySelector('a[aria-current="page"][data-nav-daily]') !== null;
-  const word = onDaily && !dailyIsToday ? STRINGS.nav.today : STRINGS.nav.calendar;
-  if (label.textContent === word) return;
+  const isToday = onDaily && !dailyIsToday;
+  const word = isToday ? STRINGS.nav.today : STRINGS.nav.calendar;
+  const settle = () => label.classList.toggle('is-today', isToday);
+  if ((pendingWord ?? label.textContent) === word) {
+    settle();
+    return;
+  }
+  clearTimeout(fadeTimer);
   // Removed, not shortened (DESIGN.md §6): reduced motion gets the word, not
   // a faster fade to it.
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!fade || reduced) {
+    pendingWord = null;
     label.textContent = word;
+    settle();
     return;
   }
+  pendingWord = word;
   label.classList.add('is-fading');
-  setTimeout(() => {
+  fadeTimer = setTimeout(() => {
+    pendingWord = null;
     label.textContent = word;
+    settle();
     label.classList.remove('is-fading');
   }, 140);
 }
 
 function renderNav(current) {
+  // The span the fade was working on is about to be replaced, so nothing is
+  // in flight any more.
+  clearTimeout(fadeTimer);
+  pendingWord = null;
   navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
     .map((key) => {
       const to = key === 'calendar' ? '/' : `/${key}`;
@@ -93,17 +129,85 @@ function renderNav(current) {
   paintDailyLabel(current === 'calendar');
 }
 
+/*
+ * Pressing the button for the page you are already on takes you to the top of
+ * it (author, same instruction). The listener sits on the nav rather than on
+ * each anchor, so it survives every re-render, and it runs before the router's
+ * own document-level click handler because the nav is inside the document —
+ * which is what lets it forget the remembered position first, so the
+ * navigation that follows lands at the top rather than putting the reader back
+ * where they just asked not to be.
+ */
+navEl.addEventListener('click', (e) => {
+  const link = e.target.closest('a[aria-current="page"]');
+  if (!link || !navEl.contains(link)) return;
+  sectionScroll.delete(lastRoute?.nav);
+  // Instant, like every other scroll this file makes. A smooth one would still
+  // be travelling when the navigation that follows lands, and it would carry
+  // the page away from wherever that navigation put it.
+  window.scrollTo(0, 0);
+});
+
 // The Daily view says which day it is showing; the button answers.
 document.addEventListener('gos:day', (e) => {
   dailyIsToday = e.detail.today;
   paintDailyLabel();
 });
 
+/**
+ * Where the reader was in each of the four sections (author, 2026-08-27: "when
+ * you switch between them ... you come back to the same spot. However, if you
+ * click on the page header button a second time, it will scroll you back to
+ * the top of that page").
+ *
+ * Kept by section rather than by path, because that is the unit the header
+ * offers: the Daily page is one place to a reader whichever day it is showing.
+ * In memory and not in the store — it is where this visit left off, not a
+ * preference, and a new tab should open at the top.
+ *
+ * The saint page is deliberately not a section. It has no nav button, it is
+ * opened from a card and closed back to it, and `views/saints.js` has kept its
+ * own record for that journey since DESIGN.md §5c; two mechanisms restoring
+ * one scroll would fight.
+ */
+const sectionScroll = new Map();
+
+/**
+ * Puts the page back to a remembered position, and keeps trying for a moment.
+ *
+ * A view is rendered synchronously but is not always its final height
+ * synchronously: About fetches its statistics, the Index fills descriptions,
+ * and a scroll to 400 on a page that is briefly 814 px tall lands at 14 and
+ * stays there. So this scrolls, and then re-scrolls on each frame until the
+ * position is *reachable* — at which point one more call lands it — or half a
+ * second has passed, which is long enough for a fetch that was already warm
+ * and short enough that a reader who starts scrolling is not fought for long.
+ */
+function restoreScroll(y) {
+  if (!y) return;
+  let frames = 0;
+  const tick = () => {
+    window.scrollTo(0, y);
+    const reachable = document.documentElement.scrollHeight >= y + window.innerHeight;
+    if (!reachable && frames++ < 30) requestAnimationFrame(tick);
+  };
+  tick();
+}
+
 function show({ route, params, path }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
   const cameFrom = lastRoute;
+  // Where this reader is *leaving* from, before anything moves.
+  if (!firstRender && cameFrom?.nav) sectionScroll.set(cameFrom.nav, window.scrollY);
   lastRoute = { path, nav: route?.nav };
+  // Only a change of section restores: within one, the view owns the question
+  // — the Index puts a reader back on the card they opened — and every other
+  // navigation lands at the top, which is what it has always done.
+  const returning =
+    !firstRender && !nav.restore && route?.nav && route.nav !== cameFrom?.nav
+      ? (sectionScroll.get(route.nav) ?? 0)
+      : 0;
   // Every prefetch in flight was a guess about where this reader was going,
   // and the navigation has just answered it (brief §7).
   cancelPrefetches();
@@ -157,8 +261,19 @@ function show({ route, params, path }, nav = {}) {
   // the app's first paint on that is a blank page waiting to happen; it was
   // reproducibly a second long in a headless browser.
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (document.startViewTransition && !reduced && !first) document.startViewTransition(swap);
-  else swap();
+  /*
+   * The section restore runs *after* the transition, not inside `swap`. A
+   * cross-fade snapshots the page and hands the scroll back at the end, so a
+   * position set inside the callback is undone the moment the transition
+   * finishes — which is why the Index, whose own restore is inside its render,
+   * needs no such care and this does.
+   */
+  if (document.startViewTransition && !reduced && !first) {
+    document.startViewTransition(swap).finished.finally(() => restoreScroll(returning));
+  } else {
+    swap();
+    restoreScroll(returning);
+  }
   first = false;
 }
 
@@ -172,6 +287,9 @@ function paintSiteName() {
   for (const el of document.querySelectorAll('[data-site-name]')) {
     el.textContent = STRINGS.site.name;
   }
+  // And the masthead's own href, once, with the base path on it.
+  const home = document.querySelector('[data-site-home]');
+  if (home) home.setAttribute('href', router.href('/'));
 }
 
 async function boot() {
@@ -192,7 +310,14 @@ async function boot() {
   // title through show()'s own path, and the church control through its own
   // language subscription in church-chooser.js.
   subscribeLanguage(() => {
-    router.refresh();
+    /*
+     * Guarded on the manifest since 2026-08-27, when the locale packs became
+     * per-language chunks: the reader's pack is 20 kB against the manifest's
+     * 490 kB, so it lands *first*, and `ensurePack` notifies on arrival — which
+     * asked the router to repaint a view whose data was still null. The site
+     * name is painted either way, because that is the half the veil shows.
+     */
+    if (data) router.refresh();
     paintSiteName();
   });
   paintSiteName();
@@ -202,8 +327,23 @@ async function boot() {
   // modules take to parse and is replaced here — a language chosen on a
   // previous visit paints before the manifest arrives, which is the long wait.
   paintSiteName();
+  /*
+   * The day records are 293 kB and were in the entry chunk until 2026-08-27.
+   * The fetch is started here rather than awaited here, so it runs *beside*
+   * the manifest's 490 kB rather than after it, and the two land inside one
+   * wait the reader was making anyway. See src/data/days.js for why it is not
+   * deferred any further than this.
+   */
+  loadDays();
+  /*
+   * And the reader's own locale pack, for the same reason and in the same
+   * wait: it is 20-30 kB of one language rather than 106 kB of four, and
+   * having it before the first paint is what keeps a page from appearing in
+   * English and then changing.
+   */
+  const pack = ensurePack(currentLanguage());
   try {
-    data = await loadManifest();
+    data = (await Promise.all([loadManifest(), readyDays(), pack]))[0];
   } catch (e) {
     console.error(e);
     veil.innerHTML = `

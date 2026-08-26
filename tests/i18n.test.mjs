@@ -6,9 +6,16 @@ import {
   LANGUAGES,
   LANGUAGES_BY_ID,
   chooseLanguage,
+  ensureAllPacks,
   currentLanguage,
   translateReason,
 } from '../src/lib/i18n.js';
+
+/* The locale packs are fetched per language since 2026-08-27, so they are
+   not there the moment this module is evaluated. Every assertion below
+   about a translated string wants all four, and node's ESM gives a test
+   file top-level await to get them with. */
+await ensureAllPacks();
 
 /**
  * The language layer (Amendment 36). The packs are hand-written prose in four
@@ -76,14 +83,14 @@ test('switching language mutates STRINGS in place, and English restores exactly'
   const before = currentLanguage();
 
   chooseLanguage('ru');
-  assert.equal(STRINGS.nav.calendar, 'Сегодня');
+  assert.equal(STRINGS.nav.calendar, 'Ежедневно');
   assert.equal(churchBranch.heading, 'По какому календарю вы живёте?');
   assert.equal(STRINGS.church, churchBranch);
 
   // ru → ro must not build Romanian on Russian: a key Romanian happens to
   // share with English must come back English-shaped, not stay Russian.
   chooseLanguage('ro');
-  assert.equal(STRINGS.nav.calendar, 'Astăzi');
+  assert.equal(STRINGS.nav.calendar, 'Zilnic');
 
   chooseLanguage('en');
   assert.deepEqual(JSON.parse(JSON.stringify(STRINGS)), snapshot);

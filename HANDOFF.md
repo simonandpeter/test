@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendment 51)
+## State as of 2026-08-27 (Amendments 50 to 52)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -81,11 +81,24 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 436 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendments 50 and 51), not carried
+- 448 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendments 50 to 52), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **The first download is 133 kB of JavaScript, not 470** (Amendment 52). The
+  day records and the four locale packs are their own chunks: `data/days.js`
+  holds the seam for the first — started at boot, awaited *beside* the
+  manifest, synchronous accessors that answer null until it lands — and
+  `ensurePack`/`ensureAllPacks` in `lib/i18n.js` for the second. **Anything
+  that subscribes to a language change must tolerate the manifest not being
+  there yet**: the reader's pack is 20 kB against the manifest's 490 and lands
+  first, which took every language-dependent test in the suite red once.
+- **The Index's Calendar facet is the page's only church narrowing**
+  (Amendment 52). It opens ticked to the header's calendar and resets to it
+  when that changes; the page no longer cuts to the reader's church before the
+  filters run. Same predicate, so the opening set is unchanged — but a change
+  to one of them now has to be made in the other.
 - **A saint is named by rank now, not by "St."** (Amendment 50, author's
   instruction, reversing Amendment 32). `display_name` is the bare name;
   `office` is a field of its own on 246 records and is drawn on the subtext

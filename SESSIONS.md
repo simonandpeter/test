@@ -4560,3 +4560,165 @@ tests for, and null is what "nobody has said" means.
 fallbacks. Four backouts run and watched to fail, each restored and confirmed:
 the feast lead, the fast citation, the licence line, the horizon note, and the
 seen list. Rendered and looked at, in English and Russian, at 1280 and 360.
+
+## Amendment 52 — 336 kB out of the first download, and eleven things the author asked for in one message (2026-08-27, eleventh sitting)
+
+### The entry chunk goes from 470 kB to 133
+
+The second review's finding, and the one number on it that mattered: the first
+download was **469.6 kB of JavaScript**, of which 293 kB was
+`data/liturgical-days.js` — six months of hand-transcribed pericopes — and
+106 kB was all four locale packs. A reader opening the Map downloaded both to
+look at neither.
+
+    entry chunk   469.6 kB → 133.4 kB      gzipped  124.9 → 46.4
+    day records         — → 257.3 kB       gzipped      — → 50.5
+    ru / ro / el / sr   — → 24 / 17 / 26 / 23 kB, one of them per reader
+
+**The day records are started at boot and awaited beside the manifest**, and
+that is the whole trick rather than an accident of ordering: the veil is
+already up for the manifest, which is the longer wait at 490 kB, so the records
+arrive inside a wait the reader was making anyway and nothing on the page
+moves. Deferring them further would have been visible — the fast chip's *grade*
+is read out of a day's own note, so a panel painted before they landed would
+have shown an ungraded chip and then changed it under the reader.
+
+`src/data/days.js` is the seam: two synchronous accessors that answer `null`
+until the module lands, so every caller reads exactly as it did before, and a
+fetch that fails leaves the computed half of the page — the fast, the tone, the
+week — which is the same shape as a day past the end of the records and already
+has its own sentence.
+
+**The packs are fetched one language at a time**, and `chooseLanguage` stays
+synchronous, which is what kept this from becoming a refactor of the whole
+language layer. `ensurePack` applies a pack on arrival and notifies, so a
+caller that chooses a language whose chunk has not landed gets English for as
+long as the fetch takes and the right words the moment it arrives; the chooser
+prefetches all four the instant its panel opens and awaits the one it needs, so
+that path never shows the gap. The search index is the one caller that
+genuinely needs every language at once — a reader typing «игумен» finds the
+abbots whatever the chrome is set to — and it was already async.
+
+**One bug came out of it, and it is worth recording.** The reader's pack is
+20 kB against the manifest's 490, so it lands *first*, and `ensurePack`
+notifying on arrival asked the router to repaint a view whose data was still
+null. Every language-dependent test in the suite went red at once. The
+subscriber is guarded on the manifest now; the site name still paints either
+way, because that is the half the veil shows.
+
+### Chrome hygiene, and one real overlap
+
+- The `<meta name="description">` named three churches. The registry has held
+  four since the Serbian calendar arrived.
+- The masthead's `href="/"` walked a middle-click straight out of the app under
+  `/test/`. The router's own click handler had always kept an ordinary press
+  inside it, so this was wrong only for the presses the browser handles itself
+  — middle-click, open in new tab, copy link address — which are exactly the
+  ones nobody notices. `main.js` writes the href, with the base path on it.
+- **A viewport of exactly 560 px matched both the phone's chrome and the
+  desk's.** calendar.css asked `max-width: 560px` where base.css opens the
+  desktop header at `min-width: 560px`, so at that one width source order
+  decided which rules won. The ladder is 400 / 480 / 560 / 620 / 760 and every
+  pair on it is written the same way now: `max-width` takes the hundredth
+  under, `min-width` takes the number itself. **620 stays its own rung** — the
+  month grid needs its gutter back before the header needs its second column,
+  and folding the two would move one of them.
+- And the rider Amendment 50 left: `Sort, View and Detailed share a row` was
+  the last assertion on the Index reading the native face, at 360, with about
+  30 px of margin. The foot budget test measures the phone's column in a forced
+  face now, which is Amendment 24's own lesson applied to the row that had not
+  had it.
+
+### Eleven instructions in one message
+
+**The Daily button.** *"If you press 'Today' and you go back to the current
+date, the text 'Today' does not change back to 'Daily'."* It was a race between
+two paints in one tick: the nav was rebuilt for the new route while the view
+had not yet said which day it was showing, which started a fade to *Today*, and
+the second call read the label's *current* text — still "Daily", the first fade
+not having landed — decided there was nothing to do, and returned. Then the
+first timer fired and wrote "Today" over the top of it, for good. The
+comparison is against the word in flight now, and a new decision cancels the
+one it overtakes.
+
+**And the four packs finally say a different word for the page than for the
+day.** «Ежедневно» against «Сегодня», Zilnic against Astăzi, Καθημερινά against
+Σήμερα, Дневно against Данас. Amendment 49 raised this and left it to the
+author, because it changes a nav label they had reviewed a dozen times and
+because those words are longer; all four hold their line at 360.
+
+**Gold on the word Today**, which is the second control on the site to wear
+gold and the first to wear it as *words*. That is why it takes a new token:
+`--gold` on gesso is **2.78:1**, a value for a glyph, and a word needs 4.5:1.
+`--gold-ink` is the darkest step that still reads as gold rather than brown, at
+**4.59:1**, and in the dark theme the two are the same value because `--gold`
+already clears text there at 7.07:1. This is Amendment 49's pattern for the
+third time: where a hue cannot carry words, lift it rather than print under the
+floor.
+
+**Where the reader was.** Each of the four sections is remembered and returned
+to; pressing the button for the page you are already on goes to the top. Two
+things had to be got right and neither was obvious. The restore runs *after*
+the view transition, because a cross-fade hands the scroll back at the end and
+a position set inside the callback is undone. And it keeps trying for half a
+second: About fetches its statistics, so it is briefly 814 px tall, and a
+scroll to 400 on that page lands at 14 and stays there.
+
+**The count line is one line and a ratio** — "426/742 saints listed" — which
+reverses half of Amendment 49, and reverses it better. The numerator is the
+*matched* set rather than the church's own, which is what lets the tweened
+count go: a filtered page keeps its real number in the same line. The tweened
+row stays in the DOM and out of sight, because what it also carries is the live
+region that tells a reader who cannot see the line how many saints a filter
+left.
+
+**Church becomes Calendar, and becomes the Index's own calendar choice.** It
+opens on the one the header keeps and resets to it whenever that changes. This
+had to take the church narrowing *out* of the page and into the facet: the
+Index used to cut to the reader's church before the filters ran, so a second
+calendar ticked inside that set gave the intersection, and "tick others" would
+have shown fewer saints rather than more. `keptBy` and the facet's own test are
+the same line of code, so the page opens on exactly the set it always did.
+
+**The chooser panel follows a language change while it is open**, which is its
+normal state — it is a disclosure in the page's flow, not a dialogue. The
+children of the flying box are replaced rather than the box itself, which
+carries the inline transform of whatever flight is in the air.
+
+**The die is square** — the same token for its width as for its height, so a
+chip's padding change moves both — **and the header's rule sits on its
+buttons**, the bar's foot padding gone.
+
+**Two labels that would not fit.** «Деталь» and «Детаљ» for Detailed, at the
+author's word. That alone did not close the fourth row: the thing overflowing
+was «Случайный порядок» under a chip already reading «Порядок:», which said the
+word twice and cost 151 px. The value alone is what the chip wants, and all
+four packs hold the foot on one line at 360 now.
+
+### The filter row went over by a third of a pixel
+
+Squaring the die cost 3.3 px and Church becoming Calendar cost 11, on a row
+Amendment 24 already recorded as tight and which had **9.5 px of margin**. It
+wrapped. A pixel off the gap and a pixel off each chip's inline padding buy 21
+back, and the eight need **567 px of their 580 in Arial's metrics**. There is
+no third pixel: the next thing this row needs is a shorter label or a second
+line by design.
+
+### What is not done, and why
+
+**The manifest's 490 kB.** Addendum G5's sharding question, with a trigger the
+author set at ~200 saints and a shape already agreed. Not an overnight change.
+
+**The icons.** They still ship as authored: mean 302 kB, largest 1.04 MB, no
+WebP, and the hero loads one at full size. A build step emitting derivatives at
+the sizes actually used is the fix, and the originals and their
+`icon.meta.json` provenance must not be touched by it — a derivative is not a
+re-authored file. It was the phase to drop if the night ran long, and the night
+ran long.
+
+### Verification
+
+**171 unit, 448 browser.** All four packs 335 of 335 with no English
+fallbacks. Rendered and looked at in English and Russian, at 1280 and 360.
+Every fix in this sitting carries a browser test; the ones whose defect could
+be written as a single condition were backed out and watched to fail.

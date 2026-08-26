@@ -191,6 +191,26 @@ export function mountChurchControl(button, panel) {
   paintButton();
   // The button carries words in two registers — the church's name and the
   // accessible sentence — so it repaints on either kind of change.
-  subscribeLanguage(paintButton);
+  subscribeLanguage(() => {
+    paintButton();
+    /*
+     * And the panel too, if it is open (author, 2026-08-27: "make sure the
+     * choose church calendar pop-up, which may still be open when changing
+     * languages, also shows the updated language without having to close it
+     * first to see it update"). Its heading and its four church names are all
+     * translated, and a panel is a disclosure in the page's flow rather than a
+     * dialogue — it is normal for it to be open while something else changes.
+     *
+     * The *children* of `.church-panel-inner` are replaced rather than the box
+     * itself: the box carries the inline transform and opacity of whatever
+     * flight is in the air, and swapping it would strand them.
+     */
+    if (!open) return;
+    const inner = panel.querySelector('.church-panel-inner');
+    if (!inner) return;
+    unwire?.();
+    inner.innerHTML = renderChooser();
+    unwire = wireChooser(panel, { onChange: close });
+  });
   return subscribeChurch(paintButton);
 }

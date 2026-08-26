@@ -11,7 +11,7 @@
  * read the language the site is currently in.
  */
 
-import { LANGUAGES, chooseLanguage, currentLanguage, LANGUAGES_BY_ID } from '../lib/i18n.js';
+import { LANGUAGES, chooseLanguage, currentLanguage, ensureAllPacks, ensurePack, LANGUAGES_BY_ID } from '../lib/i18n.js';
 import { STRINGS, fill } from './strings.js';
 import { flyInto, flyOutOf } from './fly.js';
 
@@ -111,6 +111,12 @@ export function mountLanguageControl(button, panel) {
     panel.style.height = '';
     panel.style.overflow = '';
     panel.style.transition = '';
+    /* The packs are fetched per language since 2026-08-27, so the four this
+       panel offers are started the moment it opens: by the time a reader has
+       read five words and pressed one, the chunk is in cache and the change
+       is instant. Deliberately not awaited — the panel must not wait on a
+       network to appear. */
+    ensureAllPacks();
     button.setAttribute('aria-expanded', 'true');
     panel.innerHTML = `<div class="church-panel-inner">${renderLanguageChooser()}</div>`;
     // The same arrival the calendar control makes, for the same reason.
@@ -118,9 +124,14 @@ export function mountLanguageControl(button, panel) {
     (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus({ preventScroll: true });
   };
 
-  panel.addEventListener('click', (e) => {
+  panel.addEventListener('click', async (e) => {
     const choice = e.target.closest('[data-language]');
     if (!choice || !panel.contains(choice)) return;
+    /* Awaited, so the page never shows the moment between the choice and the
+       pack: `chooseLanguage` is synchronous and merges whatever has landed,
+       which would be English if a reader pressed inside the fetch. The prefetch
+       on open means this has almost always already resolved. */
+    await ensurePack(choice.dataset.language);
     chooseLanguage(choice.dataset.language);
     paintButton();
     close();

@@ -265,7 +265,14 @@ header.chrome {
      page below sits against, and taking the air from *under* the chrome
      would crowd it instead of the browser's own edge. */
   padding-top: var(--space-2);
-  padding-bottom: var(--space-3);
+  /* Nothing under the buttons (author, 2026-08-27: "There is a horizontal line
+     under the header buttons. That line has a margin separating it from the
+     buttons. There should be no margin. The bottom of the buttons should
+     coincide with that line."). It was space-3, on the reasoning that the rule
+     is what the page below sits against; the author wants the bar and its rule
+     read as one edge, which is what a sticky bar over scrolling text is. The
+     air the page needs is `main`'s own top margin, below the rule. */
+  padding-bottom: 0;
   border-bottom: 1px solid var(--rule);
   /*
    * **Sticky** (author, same evening). The bar carries the four pages, the
@@ -528,6 +535,21 @@ nav.site-nav a:hover {
 
 .nav-label.is-fading {
   opacity: 0;
+}
+
+/*
+ * **Gold while it reads Today** (author, 2026-08-27: "to make it more obvious
+ * the 'Today' fade in has a specific functionality, print 'Today' in gold
+ * whenever it is showing"). This is the second control on the site to wear
+ * gold, after the die (Amendment 49), and the first to wear it as *words* —
+ * which is why it takes `--gold-ink` and not `--gold`: 2.78:1 is a hue for a
+ * glyph, and a word needs 4.5:1. The rule is more specific than the
+ * `[aria-current]` rubric above it on purpose, because the word is only ever
+ * gold on the page it is current on, and the underline still carries the
+ * "you are here" that colour must never carry alone.
+ */
+nav.site-nav a[aria-current='page'] .nav-label.is-today {
+  color: var(--gold-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

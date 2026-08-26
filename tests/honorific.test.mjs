@@ -2,7 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { rankKey, rankLabel, saintName, typesBeside, withHonorific } from '../src/lib/honorific.js';
-import { chooseLanguage } from '../src/lib/i18n.js';
+import { chooseLanguage, ensureAllPacks } from '../src/lib/i18n.js';
+
+/* The locale packs are fetched per language since 2026-08-27, so they are
+   not there the moment this module is evaluated. Every assertion below
+   about a translated string wants all four, and node's ESM gives a test
+   file top-level await to get them with. */
+await ensureAllPacks();
 
 /**
  * The rank in front of a name (author, 2026-08-27), which replaced the blanket

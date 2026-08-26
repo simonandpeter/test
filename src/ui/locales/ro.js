@@ -13,7 +13,15 @@ export const ro = {
   },
 
   nav: {
-    calendar: 'Astăzi',
+      /* The page's own name, distinct from the word the button offers on it
+         (author, 2026-08-27: "In Russian, this 'Today' text is the same as
+         'Daily'. Is there a different word thats still short enough for the
+         header button that we could use to differentiate the two"). It was
+         the same word as `today` in all four, so the change of state the
+         English button makes was invisible outside English - Amendment 49
+         raised exactly this and left it to the author, because it changes a
+         reviewed nav label and these words are longer. */
+    calendar: 'Zilnic',
     today: 'Astăzi',
     saints: 'Toți sfinții',
     map: 'Hartă',
@@ -300,12 +308,10 @@ export const ro = {
     noneMatch: 'Niciun sfânt din corpus nu se potrivește tuturor acestor filtre. E un fapt despre corpus, nu despre calendar - lărgește un filtru sau șterge-le și privește în jur.',
     undatedTray: '{count} fără dată, puși deoparte',
     undatedNote: 'Un interval de ani nu poate nici include, nici exclude un sfânt fără nicio margine datată, așa că aceștia sunt puși deoparte, nu aruncați. Tuturor celorlalte alegeri le corespund.',
-    keptOf: 'Din {total},',
-    kept: '{shown} sfinți sunt în calendarul ales ({church}).',
-    keptAll: '{total} de sfinți - întregul corpus.',
+    listed: '{shown}/{total} de sfinți afișați.',
     keptTitle: 'Calendarul se schimbă din antet.',
     filters: {
-      church: 'Biserica',
+      church: 'Calendar',
       month: 'Luna prăznuirii',
       type: 'Tip',
       sex: 'Gen',

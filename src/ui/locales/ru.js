@@ -16,7 +16,15 @@ export const ru = {
   },
 
   nav: {
-    calendar: 'Сегодня',
+      /* The page's own name, distinct from the word the button offers on it
+         (author, 2026-08-27: "In Russian, this 'Today' text is the same as
+         'Daily'. Is there a different word thats still short enough for the
+         header button that we could use to differentiate the two"). It was
+         the same word as `today` in all four, so the change of state the
+         English button makes was invisible outside English - Amendment 49
+         raised exactly this and left it to the author, because it changes a
+         reviewed nav label and these words are longer. */
+    calendar: 'Ежедневно',
     today: 'Сегодня',
     saints: 'Все святые',
     map: 'Карта',
@@ -306,12 +314,10 @@ export const ru = {
     noneMatch: 'Ни один святой корпуса не подходит под все эти фильтры. Это факт о корпусе, а не о календаре - расширьте фильтр или сбросьте их и осмотритесь.',
     undatedTray: 'Без дат, отложены: {count}',
     undatedNote: 'Диапазон дат не может ни включить, ни исключить святого без единой границы, поэтому они отложены, а не отброшены. Всем остальным выбранным условиям они соответствуют.',
-    keptOf: 'Из {total}:',
-    kept: '{shown} святых в выбранном календаре ({church}).',
-    keptAll: 'Весь свод: {total}.',
+    listed: 'Показано святых: {shown}/{total}.',
     keptTitle: 'Календарь меняется в шапке.',
     filters: {
-      church: 'Церковь',
+      church: 'Календарь',
       month: 'Месяц памяти',
       type: 'Тип',
       sex: 'Пол',
@@ -331,7 +337,11 @@ export const ru = {
       cards: 'Карточки',
       rows: 'Строки',
       description: 'Как расположены святые',
-      detailed: 'Подробно',
+      /* «Подробно» pushed the Index's foot onto a fourth row (author,
+         2026-08-27: "replace it with 'деталь' so that it fits in the 3rd row").
+         The full word survives in `detailedDescription`, which is the
+         checkbox's accessible description and has room. */
+      detailed: 'Деталь',
       detailedDescription: 'Показывать краткое описание у каждого святого',
     },
     sort: {
@@ -339,7 +349,11 @@ export const ru = {
       name: 'По имени',
       earliest: 'Сначала ранние',
       latest: 'Сначала поздние',
-      random: 'Случайный порядок',
+      /* «Случайный порядок» under a chip that already reads «Порядок:» said
+         the word twice, and its 151 px pushed Detailed onto a fourth row at
+         360 - which is the row the author asked to close (2026-08-27). The
+         value alone is what the chip wants. */
+      random: 'Случайный',
     },
   },
 

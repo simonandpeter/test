@@ -21,6 +21,7 @@ import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
 import { saintName, withoutRank } from '../lib/honorific.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { allNames, historicityName, typeName, typeNames } from '../lib/saint-types.js';
+import { ensureAllPacks } from '../lib/i18n.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatSubtext, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
@@ -36,7 +37,7 @@ import {
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
-import { chosenChurch, churchName, keptBy, subscribeChurch } from '../lib/church.js';
+import { chosenChurch, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { dateFormatter, formatDate, languageTag } from '../lib/i18n.js';
 
@@ -132,16 +133,39 @@ export function render(el, { data, router, nav }) {
   el.innerHTML = `
     <h1>${STRINGS.saints.title}</h1>
     ${controls(state)}
-    <p class="result-count utility" data-count-row></p>
-    <p class="set-aside utility" data-set-aside hidden></p>
+    <p class="result-count sr-only" data-count-row></p>
+    <p class="set-aside utility" data-set-aside></p>
     <div class="grid" data-grid><div class="grid-inner" data-grid-inner></div></div>
     <div data-tray></div>
     <p class="index-empty" data-empty hidden>${STRINGS.saints.noneMatch}</p>`;
 
+  /*
+   * **The Calendar facet opens on the calendar the header keeps** (author,
+   * 2026-08-27: "have it default to whatever the site calendar settings are,
+   * ticking that box. If you tick others, but then you change the calendar
+   * again, the filters reset to just the site calendar").
+   *
+   * This makes the facet the Index's *only* church narrowing, where the page
+   * used to narrow to the reader's church before the filters ran and then
+   * offer the facet on top of what was left. That arrangement could not do
+   * what the author asks: ticking a second calendar inside a set already cut
+   * to the first gives the *intersection*, so "tick others" would have shown
+   * fewer saints rather than more. The predicate is unchanged — `keptBy` and
+   * the facet's own test are the same line of code — so the opening set is
+   * exactly what it was.
+   */
+  syncCalendarFacet();
   wireControls();
   wireGrid();
-  // The header's control can change the church while the grid is open.
-  state.cleanups.push(subscribeChurch(() => state && update({ animate: true })));
+  // The header's control can change the church while the grid is open, and
+  // when it does the facet goes back to just the new one.
+  state.cleanups.push(
+    subscribeChurch(() => {
+      if (!state) return;
+      syncCalendarFacet();
+      update({ animate: true });
+    }),
+  );
 
   // Back where the reader was, if that is what this navigation is — the saint
   // page's × says so, and so does a history traversal. The grid's height has
@@ -155,6 +179,29 @@ export function render(el, { data, router, nav }) {
   }
   loadSearch(cards);
 }
+
+/** The calendar the header keeps, as the facet's own default selection. */
+const defaultChurches = () => (chosenChurch() ? [chosenChurch()] : []);
+
+/** Ticks the header's calendar in the facet and unticks every other. */
+function syncCalendarFacet() {
+  const want = new Set(defaultChurches());
+  for (const input of state.el.querySelectorAll('input[name="churches"]')) {
+    input.checked = want.has(input.value);
+  }
+  state.filters = { ...state.filters, churches: [...want] };
+}
+
+/**
+ * Whether anything the reader did is narrowing the page. The facet's default
+ * selection is not: it is where the page opens, so counting it would leave
+ * Clear filters showing on a page nobody has filtered.
+ */
+const readerHasFiltered = (f) => {
+  const def = defaultChurches();
+  const same = f.churches.length === def.length && f.churches.every((id) => def.includes(id));
+  return hasActiveFilters(same ? { ...f, churches: [] } : f);
+};
 
 /* ---- remembering the place --------------------------------------------- */
 
@@ -199,7 +246,7 @@ function applySnapshot(snap) {
     const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
     if (group) group.open = true;
   }
-  el.querySelector('[data-clear]').hidden = !hasActiveFilters(f);
+  el.querySelector('[data-clear]').hidden = !readerHasFiltered(f);
 }
 
 /* ---- search -------------------------------------------------------------- */
@@ -217,7 +264,11 @@ function applySnapshot(snap) {
  * searchable; putting them in the manifest is a size decision, not a code one.
  */
 async function loadSearch(cards) {
-  const { default: MiniSearch } = await import('minisearch');
+  /* Every language's names go into the index, not the chosen one, so a reader
+     typing «игумен» finds the abbots whatever the chrome is set to. Since the
+     packs are fetched per language (2026-08-27) this is the one caller that
+     genuinely needs all four, and it is already async. */
+  const [{ default: MiniSearch }] = await Promise.all([import('minisearch'), ensureAllPacks()]);
   const index = new MiniSearch({
     idField: 'slug',
     fields: ['name', 'types', 'churches', 'regions'],
@@ -625,6 +676,9 @@ function wireControls() {
     controlsEl.querySelector('[data-from]').value = '';
     controlsEl.querySelector('[data-to]').value = '';
     controlsEl.querySelector('input[name="rangeMode"][value="overlaps"]').checked = true;
+    // Clear returns the page to where it opens, which since 2026-08-27
+    // includes the header's calendar ticked in the Calendar facet.
+    syncCalendarFacet();
     readFilters();
   };
   clear.addEventListener('click', onClear);
@@ -750,27 +804,10 @@ function update({ animate }) {
   // browser's language must not set part of the corpus aside here. lib/church.js
   // argues the split; the Daily page is the one page that cannot open without a
   // calendar, and it is the one page that reads the guess.
-  const church = chosenChurch();
-  const mine = cards.filter((card) => keptBy(card, church));
+  // The Calendar facet does this now, and it is the same predicate.
+  const mine = cards;
   const asideNote = el.querySelector('[data-set-aside]');
-  // "122/708 saints venerated in the Romanian calendar" (author, 2026-08-25).
-  // It said how many were *not* kept, which left the reader subtracting to
-  // learn the number they wanted; the ratio says both at once, and the
-  // header's part is a title rather than a sentence repeated on every filter.
-  /*
-   * One line, and the lead-in set apart (author, 2026-08-26 evening). It is
-   * built rather than assigned because two spans of it are coloured
-   * differently: `keptOf` carries the corpus's own size in the secondary ink,
-   * the rest carries the church's count in the page's. ui/strings.js argues
-   * why the lead-in is `--ink-soft` and not the literal midpoint the
-   * instruction describes.
-   */
   const S = STRINGS.saints;
-  asideNote.hidden = mine.length === cards.length;
-  asideNote.innerHTML =
-    `<span class="count-of">${esc(fill(S.keptOf, { total: cards.length }))}</span> ` +
-    esc(fill(S.kept, { shown: mine.length, church: churchName(church) }));
-  asideNote.title = STRINGS.saints.keptTitle;
 
   const { matched, undated } = applyFilters(mine, filters, {
     monthsBySlug: state.monthsBySlug,
@@ -779,15 +816,26 @@ function update({ animate }) {
 
   state.shownCards = matched;
   /*
-   * The tweened count says how many *match*, which is the same number as the
-   * line above whenever nothing is filtering — "127 saints" over "Of 742, 127
-   * saints are in the Romanian calendar" is what the author was reading. It
-   * speaks when it has something that line does not: a filter narrowing the
-   * church's own set, or no church setting anything aside in the first place,
-   * in which case it is the only count on the page.
+   * **One count line, and it is a ratio** (author, 2026-08-27). It stood as two
+   * — a tweened "127 saints" over "Of 742, 127 saints are in the Romanian
+   * calendar" — which was the same number twice in the state the Index opens
+   * in, and Amendment 49 answered that by hiding whichever was redundant. The
+   * author's answer is better: one line saying what is listed out of what
+   * there is, which is true whether the narrowing came from the church, from a
+   * filter, or from both.
+   *
+   * The numerator is `matched`, not the church's own count, which is what lets
+   * the tweened line go: a filtered page keeps its real number here.
    */
-  el.querySelector('[data-count-row]').hidden = !asideNote.hidden && matched.length === mine.length;
-  el.querySelector('[data-clear]').hidden = !hasActiveFilters(filters);
+  asideNote.textContent = fill(S.listed, { shown: matched.length, total: cards.length });
+  asideNote.title = S.keptTitle;
+  /*
+   * The tweened row stays in the DOM and out of sight. Its visible number was
+   * what the author asked to remove; what it also carries is the `aria-live`
+   * region that announces the count as filters change, and a reader who cannot
+   * see the line is the one reader who needs that most.
+   */
+  el.querySelector('[data-clear]').hidden = !readerHasFiltered(filters);
   el.querySelector('[data-empty]').hidden = matched.length > 0;
   paintCount(matched.length, animate);
   paintTray(undated);

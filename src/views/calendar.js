@@ -33,7 +33,7 @@ import { mountShelves } from '../ui/shelf.js';
 import { hymnMarkup } from '../ui/hymns.js';
 import { greatFeast, liturgicalDay } from '../lib/liturgy.js';
 import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
-import { RECORDS_REACH, recordedDay } from '../data/liturgical-days.js';
+import { recordedDay, recordsReach } from '../data/days.js';
 import { nameDays } from '../lib/name-days.js';
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
@@ -590,9 +590,10 @@ function readingsMarkup(iso, churchId) {
      * and those days carry a note of their own - which is a different fact and
      * must not be told in these words.
      */
-    if (!RECORDS_REACH || iso <= RECORDS_REACH) return '';
+    const reach = recordsReach();
+    if (!reach || iso <= reach) return '';
     return `<p class="beyond-records utility">${esc(
-      fill(STRINGS.calendar.beyondRecords, { until: plainDateFmt(utc(RECORDS_REACH)) }),
+      fill(STRINGS.calendar.beyondRecords, { until: plainDateFmt(utc(reach)) }),
     )}</p>`;
   }
   const R = STRINGS.calendar.readings;

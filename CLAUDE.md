@@ -100,6 +100,19 @@ changed UI string, then run `node scripts/locale-coverage.mjs` — it reports
 which keys each pack still falls back to English for (should be 0 across the
 board before calling a text change done).
 
+**Boot and payload** — `src/main.js`'s `boot()` awaits three things together:
+the manifest, `readyDays()` from `src/data/days.js` (the 293 kB day records, a
+dynamic chunk), and `ensurePack(currentLanguage())` from `lib/i18n.js` (that
+one language's pack, ~20 kB). `data/liturgical-days.js` is imported *only* by
+days.js; import it anywhere else and it goes back into the entry chunk.
+`ensureAllPacks()` is for the search index, which needs every language at once.
+
+**Where the reader was** — `sectionScroll` in `src/main.js` keeps a scroll
+position per nav section and `restoreScroll` puts it back after the view
+transition, retrying for half a second because some views (About) are shorter
+than their final height for a moment. Pressing the current section's nav button
+forgets the position and goes to the top.
+
 **Names** — `src/lib/honorific.js` decides the rank in front of a name
 (precedence walk over `types`, written out in the file's header);
 `src/lib/saint-name.js` chooses which recorded form to print per language and
