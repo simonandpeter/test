@@ -133,10 +133,7 @@ export const ro = {
     },
     liturgy: {
       tone: 'Glasul {tone}',
-      graded: '{grade} - {reason}',
-      bare: '{grade}',
       free: 'Fără post',
-      freeBecause: 'Fără post - {reason}',
     },
     feasts: {
       label: 'Praznic împărătesc',

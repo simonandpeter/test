@@ -1365,11 +1365,32 @@ a.name-day:hover {
   line-height: 1.4;
 }
 
-/* What the day allows, printed rather than kept behind the (i). In the
-   ordinary ink of the line: the chip is the alarm, this is the instruction,
-   and setting both in the fast's colour would leave neither leading. */
-.fast-allowance {
-  color: var(--ink-soft);
+/* The occasion the fast belongs to — the Dormition Fast, Great Lent, the
+   Beheading of the Forerunner — in a chip of its own beside the fast's
+   (author, 2026-08-26 evening: "Mention The Beheading of the Forerunner in a
+   second separate bubble tag like the feast tag but different colour"). It
+   took the fast chip's trailing "- {reason}" with it.
+
+   **Rubric, where the feast's is gold, and both are edge and tint only.**
+   DESIGN.md §2 spends rubric on liturgical time and the reader's place, which
+   is what a fast's occasion is; gold marks a finding about veneration, which
+   is the feast chip standing next to it. The words stay ink in both, because
+   --gold on gesso is 2.78:1 and dark-mode --rubric is 4.20:1 — neither can
+   carry text, and neither has to.
+
+   `.fast-allowance` stood here until the same evening: the allowance printed
+   inline beside the chip. The author removed it ("Remove the explanation of
+   the fasting under the bubble tag") and the bubble is its home again. */
+.occasion-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px var(--space-2) 2px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--rubric) 45%, transparent);
+  background: color-mix(in srgb, var(--rubric) 9%, transparent);
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* The cycle and the tone keep the line. They wore `opacity: 0.85` for one

@@ -3353,8 +3353,13 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
    * assertions, which is also a truer test — it can no longer pass on a line
    * that happens to contain the right words in the wrong places.
    */
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil and Wine Allowed - the Dormition Fast');
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Meat, dairy and eggs are set aside; oil and wine are permitted.');
+  // The chip is the grade alone since the evening of 2026-08-26 (author:
+  // "Don't mention the event for fasting in the fasting label"); the occasion
+  // it used to trail stands beside it in a chip of its own, and the allowance
+  // it used to print beneath is back in the bubble.
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Oil and Wine Allowed/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveCount(0);
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'oil');
@@ -3384,7 +3389,15 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // A fish-permitted day resolves to the `fish` grade, which is the one
    // grade taken from lib/liturgy.js rather than from a printed note — that
    // claim is liturgy.js's own and predates this.
-  await expect(page.locator('[data-liturgy]')).toContainText('Oil, Wine and Fish Allowed - a Great Feast on a Friday');
+  // The chip is the grade alone, and the occasion is *not* chipped beside it
+  // on this day: "a Great Feast on a Friday" and the gold chip's "Great Feast
+  // - The Dormition of the Theotokos" are the same sentence twice, so the one
+  // that names the feast wins and the other is suppressed.
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Oil, Wine and Fish Allowed/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveCount(0);
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveText(
+    'Great Feast - The Dormition of the Theotokos',
+  );
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fish');
 
   await openChooser(page);
@@ -3396,14 +3409,15 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // reversal).
   await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
-    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
-  );
+  // The weekday earns no occasion chip: on this day the reason *is* the
+  // weekday, printed in full in the heading above.
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveCount(0);
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
-  // And a fast-free day prints no allowance at all: "Nothing is set aside"
-  // under a chip that already reads "No fast" is the same sentence twice.
+  // Nothing prints the allowance inline any more, on any day: the author
+  // withdrew that line on the evening of 2026-08-26 and the bubble is its
+  // home again.
   await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveCount(0);
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fast-free');
 });
@@ -3501,7 +3515,8 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   // this day, which used to mean no grade led the line; since the evening of
   // 2026-08-26 an unstated fast is Strict Fasting by default, and the reason
   // stays because "the Dormition Fast" is not a weekday.
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('the Dormition Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
@@ -4019,7 +4034,8 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // the grade leads the line, in Russian, from the pack's own vocabulary —
   // naming the *type* of fast since 2026-08-26 rather than the technical
   // term, which is why this reads Строгий пост and not Сухоядение.
-  await expect(page.locator('[data-liturgy]')).toContainText('Строгий пост - Успенский пост');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Строгий пост/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('Успенский пост');
   await expect(page.locator('[data-liturgy]')).toContainText('Глас 3');
 
   // And it is a setting, not a session: the reload comes back Russian.
@@ -4342,7 +4358,8 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   const fast = page.locator('[data-liturgy] .fast');
   await expect(fast).toHaveAttribute('data-grade', 'strict');
-  await expect(page.locator('[data-liturgy]')).toContainText('Strict Fasting - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('the Dormition Fast');
   await fast.click();
   const bubble = page.locator('.fast-bubble');
   await expect(bubble.locator('.fast-allows')).toHaveText(
@@ -4401,7 +4418,8 @@ test('the fast and its bubble are in the reader own language', async ({ browser 
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   // «Успенский пост; сухоядение» → the xerophagy grade, in Russian, and the
   // label its type shares with `no-oil` since 2026-08-26.
-  await expect(page.locator('[data-liturgy]')).toContainText('Строгий пост - Успенский пост');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Строгий пост/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('Успенский пост');
   await page.locator('[data-liturgy] .fast').click();
   const bubble = page.locator('.fast-bubble');
   await expect(bubble.locator('.fast-allows')).toHaveText(
@@ -6291,11 +6309,9 @@ test('the fast chip names the type of fast, and the bubble still quotes the cale
   // 25 August 2026: days.pravoslavie.ru printed cooked-without-oil for the
   // day, which resolves to the `no-oil` grade.
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('the Dormition Fast');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'no-oil');
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
-    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
-  );
   await page.locator('[data-liturgy] .fast').click();
   await expect(page.locator('.fast-bubble .fast-note')).toContainText('без масла');
 
@@ -6346,13 +6362,11 @@ test('every calendar names its type of fast, not only the one that prints allowa
   await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
   await expect(page.locator('[data-liturgy] .fast')).not.toContainText('Friday');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'strict');
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
-    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
-  );
   // A reason that says where in the year the reader is *is* kept: the drop is
   // for the weekday alone.
   await page.goto('/calendar/2026-11-18', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Nativity Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('the Nativity Fast');
 
   // The Greek and the Serbian, whose calendars are equally silent.
   for (const church of ['greek', 'serbian']) {
@@ -6550,4 +6564,129 @@ test("the month's numerals wear the same colour as the rail's dots", async ({ pa
   expect(strict.label).toContain('a fast');
   expect(fish.label).toContain('fish permitted');
   expect(free.label).not.toContain('fast');
+});
+
+test('the fast chip is the type alone, and the occasion stands in a chip of its own', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening, three instructions in one breath:
+   *
+   *   1. "Don't mention the event for fasting in the fasting label, e.g. the
+   *      Beheading of the Forerunner, or Dormition."
+   *   2. "Mention The Beheading of the Forerunner in a second separate bubble
+   *      tag like the feast tag but different colour."
+   *   3. "Remove the explanation of the fasting under the bubble tag."
+   *
+   * So the line went from one chip carrying three things — "Strict Fasting -
+   * the Beheading of the Forerunner" over "Vegan; set aside meat, animal
+   * products…" — to two chips carrying one each, and the explanation back
+   * behind the (i) where it lived before the morning of the same day.
+   *
+   * 29 August is the worked case in the instruction itself: the Beheading is
+   * a strict fast whatever the weekday, in every one of the four calendars
+   * that keeps it on the civil 29th.
+   */
+  await ready(page, { church: 'romanian' });
+  await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
+
+  const fast = page.locator('[data-liturgy] .fast');
+  const occasion = page.locator('[data-liturgy] .occasion-chip');
+
+  // 1. The label is the type and stops. `toHaveText` and not `toContainText`,
+  //    because what is under test is the absence of the trailing occasion.
+  await expect(fast).toHaveText(/^Strict Fasting/);
+  await expect(fast).not.toContainText('Beheading');
+  // 2. Which stands beside it instead.
+  await expect(occasion).toHaveText('the Beheading of the Forerunner');
+  // 3. And nothing explains the fast under either of them.
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveCount(0);
+  await expect(page.locator('[data-liturgy]')).not.toContainText('Vegan');
+
+  /*
+   * The explanation is not lost, which is the half of instruction 3 that
+   * would be easy to take too far: the chip is still a control and the bubble
+   * it opens is still the sentence's home.
+   */
+  await fast.click();
+  await expect(page.locator('.fast-bubble .fast-allows')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
+
+  /*
+   * "Like the feast tag but different colour." Both chips are edge-and-tint
+   * with ink words — --gold on gesso is 2.78:1 and dark-mode --rubric is
+   * 4.20:1, so neither hue may carry text — and the two edges are far enough
+   * apart to be told at a glance. Composited over the page, because both are
+   * `color-mix` and compute to `color(srgb …/ a)` with no integer channels.
+   */
+  /*
+   * 19 August in the Russian calendar is the one shape that shows both chips
+   * at once: the Transfiguration (a Great Feast, so the gold chip) whose fast
+   * reason is "the Transfiguration, in the Dormition Fast" — which names the
+   * *fast* the feast sits inside and so says more than the gold chip does,
+   * and is therefore one of the reasons deliberately left un-suppressed.
+   */
+  // Driven through the header's own chooser, not a second `ready()`: the
+  // helper seeds only where nothing is stored (Amendments 19 and 23), so
+  // calling it again mid-test changes nothing and the page stays Romanian.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.goto('/calendar/2026-08-19', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveCount(1);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveCount(1);
+  const paint = await page.evaluate(() => {
+    const c = document.createElement('canvas');
+    c.width = 1;
+    c.height = 1;
+    const ctx = c.getContext('2d');
+    const page_ = getComputedStyle(document.body).backgroundColor;
+    const over = (value) => {
+      ctx.fillStyle = page_;
+      ctx.fillRect(0, 0, 1, 1);
+      ctx.fillStyle = value;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      return { r, g, b };
+    };
+    const el = (sel) => document.querySelector(sel);
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    probe.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ink').trim();
+    const ink = getComputedStyle(probe).color;
+    probe.remove();
+    return {
+      feastEdge: over(getComputedStyle(el('.feast-chip')).borderTopColor),
+      occasionEdge: over(getComputedStyle(el('.occasion-chip')).borderTopColor),
+      feastText: getComputedStyle(el('.feast-chip')).color,
+      occasionText: getComputedStyle(el('.occasion-chip')).color,
+      ink,
+    };
+  });
+  // Both wear the page's ink, neither its own hue.
+  expect(paint.feastText).toBe(paint.ink);
+  expect(paint.occasionText).toBe(paint.ink);
+  // Gold leans green of red; rubric leans hard red. A swap of the two tokens
+  // fails on the green channel alone.
+  expect(paint.feastEdge.g).toBeGreaterThan(paint.occasionEdge.g);
+  expect(paint.occasionEdge.r - paint.occasionEdge.g).toBeGreaterThan(
+    paint.feastEdge.r - paint.feastEdge.g,
+  );
+
+  /*
+   * And the occasion is suppressed where the feast chip says it better. This
+   * is the Dormition in the Greek calendar: liturgy.js's reason for the fish
+   * is "a Great Feast on a Saturday", which beside "Great Feast - The
+   * Dormition of the Theotokos" would be the same sentence twice.
+   */
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveText(
+    'Great Feast - The Dormition of the Theotokos',
+  );
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveCount(0);
+  // This is the author's own second example — "e.g. the Beheading of the
+  // Forerunner, or Dormition" — and it took two passes: the word came out of
+  // the fast label and reappeared one chip to the right, which is the same
+  // complaint moved rather than answered.
+  await expect(page.locator('[data-liturgy]')).not.toContainText('No Fast - ');
 });

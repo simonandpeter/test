@@ -368,19 +368,16 @@ function paintLiturgy() {
   const grade = isFast ? gradeForDay(f, recordedDay(selected, calendar)?.fastingNote) : null;
   const gradeName = grade ? M.grades[grade] : null;
   /*
-   * Every fast day names its type now (author, 2026-08-26 evening: '"Fast -
-   * Friday" becomes "Strict Fasting"'), so `gradeName` is set whenever
-   * `isFast` is and the old ungraded branch has no reachable caller. The
-   * reason still leads with the grade where it says something — "Strict
-   * Fasting - Great Lent" — and is dropped where it is only the weekday the
-   * reader can already see in the heading above, which is the author's own
-   * example of the change.
+   * **The chip is the type and nothing else** (author, 2026-08-26 evening:
+   * "Don't mention the event for fasting in the fasting label, e.g. the
+   * Beheading of the Forerunner, or Dormition"). It said "{grade} - {reason}"
+   * for one build; the occasion has a chip of its own now, just below, so the
+   * fast answers one question — what may I eat — in as few words as it can.
+   *
+   * Every fast day has a grade since earlier the same evening, so `gradeName`
+   * is set whenever `isFast` is, and a day that is not a fast says so.
    */
-  const fastText =
-    gradeName && f.reasonKind === 'weekday' ? fill(L.bare, { grade: gradeName })
-    : gradeName ? fill(L.graded, { grade: gradeName, reason })
-    : f.reason ? fill(L.freeBecause, { reason })
-    : L.free;
+  const fastText = gradeName ?? L.free;
   // The fast is a control (author, 2026-08-25): it opens a bubble saying what
   // this day allows and nothing else. A button rather than a span, so it is
   // reachable by keyboard and announced as something that does a thing.
@@ -412,14 +409,40 @@ function paintLiturgy() {
     `<span class="fast-info" aria-hidden="true">i</span>` +
     `<span class="sr-only"> - ${esc(M.open)}</span></button>`;
   /*
-   * What the day allows, beside the chip rather than behind it. Only on a
-   * fast: "Nothing is set aside" under a chip that already reads "No fast" is
-   * the same sentence twice. Where the calendar printed no allowance the
-   * `unstated` line stands — meat, dairy and eggs — which is what every fast
-   * shares and the most the site will say unasked.
+   * The allowance was printed inline beside the chip from 2026-08-26 morning
+   * — "Make a chip at the top of the day … and print the allowance inline on
+   * fast days" — and is **withdrawn the same evening** (author: "Remove the
+   * explanation of the fasting under the bubble tag"). It is not lost: the
+   * chip is a control and the bubble it opens is that sentence's home, which
+   * is where it lived before the morning and is what the (i) has always
+   * promised. What the line keeps is the answer; what the bubble keeps is the
+   * explanation.
    */
-  const allowance = isFast ? M.allows[grade] : null;
-  const allowanceHtml = allowance ? `<span class="fast-allowance">${esc(allowance)}</span>` : '';
+  /*
+   * The occasion the fast belongs to, in a chip of its own (author, same
+   * evening: "Mention The Beheading of the Forerunner in a second separate
+   * bubble tag like the feast tag but different colour"). The reason string is
+   * lib/liturgy.js's and the packs translate the recurring ones through their
+   * `reasons` map, exactly as it did when it trailed the fast's own label.
+   *
+   * The weekday is the one reason that never earns a chip: on an ordinary
+   * Wednesday the reason *is* the weekday, printed in full in the heading
+   * above, and `reasonKind` marks it so this does not have to match strings.
+   *
+   * **Rubric, and rubric is the right claim rather than a spare colour.**
+   * DESIGN.md §2 gives it to liturgical time and the reader's place, and
+   * "the Dormition Fast", "Great Lent", "the Beheading of the Forerunner" are
+   * liturgical time exactly. Gold would have said this was a finding about
+   * veneration, which is the feast chip's business beside it. The words are
+   * ink either way: dark-mode rubric is 4.20:1 and under AA, a defect this
+   * chip must not spread.
+   */
+  const namedFeast = Boolean(day.feast && STRINGS.calendar.feasts.names[day.feast]);
+  const occasionSaidBetter = f.reasonKind === 'weekday' || (f.reasonKind === 'greatFeast' && namedFeast);
+  const occasionHtml =
+    reason && !occasionSaidBetter
+      ? `<span class="occasion-chip" data-occasion>${esc(reason)}</span>`
+      : '';
   /*
    * And whether the day is a Great Feast, named (author, 2026-08-26: "Add a
    * label if its a Feast Day as well with the name of the Feast").
@@ -455,7 +478,7 @@ function paintLiturgy() {
   // Newline-separated so the three read as three when the line is taken as
   // text — a screen reader, a browser test — rather than running the chip's
   // last word into the allowance's first. The flex row collapses it to a gap.
-  box.innerHTML = [fastHtml, allowanceHtml, feastHtml, plain.length ? `<span class="cal-cycle">${plain.join(' · ')}</span>` : '']
+  box.innerHTML = [fastHtml, occasionHtml, feastHtml, plain.length ? `<span class="cal-cycle">${plain.join(' · ')}</span>` : '']
     .filter(Boolean)
     .join('\n');
 }

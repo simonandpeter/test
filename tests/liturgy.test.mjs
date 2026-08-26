@@ -194,7 +194,7 @@ test('liturgicalDay gathers the four for the chosen church', () => {
   assert.deepEqual(liturgicalDay('2026-08-28', 'russian'), {
     cycle: { key: 'weekAfterPentecost', n: 13 },
     tone: 3,
-    fasting: { kind: 'fish', reason: 'a Great Feast on a Friday' },
+    fasting: { kind: 'fish', reason: 'a Great Feast on a Friday', reasonKind: 'greatFeast' },
     feast: 'dormition',
   });
   assert.deepEqual(liturgicalDay('2026-08-23', 'greek'), {

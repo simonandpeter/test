@@ -702,6 +702,25 @@ refuses to compute an allowance, and this default is not a computation of one
 — it is what the site says when it has been told a day is a fast and nothing
 more.
 
+**The line is chips now, and each says one thing** (author, same evening).
+The fast's own chip is the grade alone — *"Don't mention the event for fasting
+in the fasting label, e.g. the Beheading of the Forerunner, or Dormition"* —
+and the occasion it used to trail stands beside it in a chip of its own
+(*"Mention The Beheading of the Forerunner in a second separate bubble tag
+like the feast tag but different colour"*), in **rubric**, which §2 spends on
+liturgical time and which a fast's occasion is. The gold chip beside it is a
+finding about veneration; both are edge and tint with ink words, because
+neither hue clears AA as text. The allowance printed under the chip from that
+morning is **withdrawn** (*"Remove the explanation of the fasting under the
+bubble tag"*) and the bubble is its home again, which is what the (i) has
+always promised.
+
+An occasion that a chip beside it already names is not printed twice: where
+`greatFeast()` names the day and the fast's reason is only that feast's name
+— 25 December, 6 January, 15 August, 14 September, "a Great Feast on a
+Friday" — the occasion chip is dropped. The Beheading and the Eve of Theophany
+keep theirs, being outside the Twelve and named nowhere else.
+
 **And the fast's colour follows the allowance, not the kind** (same evening:
 "I dont see any blue labels in the Romanian calendar as i do in the Russian
 calendar"). `lib/liturgy.js`'s `kind` and the resolved grade disagreed on

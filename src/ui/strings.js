@@ -220,15 +220,24 @@ export const STRINGS = {
       weekAfterPentecost: '{n} week after Pentecost',
     },
     liturgy: {
+      /*
+       * The tone of the *week* — the Octoechos turns once a week from the
+       * Sunday, and a weekday keeps its Sunday's tone (lib/liturgy.js). It is
+       * not the tone of any hymn printed below: a troparion carries its own,
+       * and the two routinely differ, which is a question the author asked on
+       * 2026-08-26 looking at a Monday in Tone 4 whose troparion is Tone 8.
+       * If this line is ever to say so it says it here, in five languages.
+       */
       tone: 'Tone {tone}',
-      // The grade leads the line where the calendar gave one (2026-08-25
-      // evening) — and since the evening of 2026-08-26 every fast day has a
-      // grade, so this is the only shape a fast takes. `bare` is the same
-      // line without its reason, used where the reason is only the weekday.
-      graded: '{grade} - {reason}',
-      bare: '{grade}',
+      /*
+       * A fast day's chip is its grade alone, so the only template left here
+       * is the one for a day that is no fast at all. `graded`, `bare` and
+       * `freeBecause` stood beside it until the evening of 2026-08-26, when
+       * the author moved the occasion to a chip of its own ("Don't mention
+       * the event for fasting in the fasting label") and left none of the
+       * three with a caller.
+       */
       free: 'No Fast',
-      freeBecause: 'No Fast - {reason}',
     },
     /*
      * The Great Feasts, named (author, 2026-08-26: "Add a label if its a

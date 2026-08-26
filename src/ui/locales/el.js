@@ -133,10 +133,7 @@ export const el = {
     },
     liturgy: {
       tone: 'Ήχος {tone}',
-      graded: '{grade} - {reason}',
-      bare: '{grade}',
       free: 'Χωρίς νηστεία',
-      freeBecause: 'Χωρίς νηστεία - {reason}',
     },
     feasts: {
       label: 'Μεγάλη εορτή',

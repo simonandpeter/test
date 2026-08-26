@@ -81,7 +81,7 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 166 unit tests (`npm test`) — pure logic, no DOM.
-- 396 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 398 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-26, the sitting of Amendment 48), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
@@ -319,12 +319,27 @@ bubble underneath, and **a fast whose calendar printed no allowance now
 defaulting to strict** (DESIGN.md §5b carries that reversal in place). The
 fast's colour follows what the day *allows* rather than liturgy.js's `kind`,
 from one helper the rail's dot, the chip and the month all read, and **the
-month's numerals wear it too**, named in each button's accessible label. And a
+month's numerals wear it too**, named in each button's accessible label. The
+line under the date is **three chips and a cycle line** now: the fast's grade
+alone, the occasion in rubric beside it, the Great Feast in gold, and the
+allowance back behind the (i) where it was before that morning. And a
 **Great Feast is now named beside the fast**, from a nine-key table in
 `lib/liturgy.js` reckoned in the church's own calendar, in a gold-edged chip
 whose *words are ink* because `--gold` on gesso is 2.78:1.
 
 **Two things the author should decide, both flagged rather than taken:**
+
+* **The rail's gold dot and the feast chip are still different findings, and
+  the author has now seen the seam** (2026-08-26: "Why is Mon 31 and Tue 32
+  gold dot in Romanian calendar but no tag for feast day?"). Measured: **44
+  day/church pairs on 35 civil dates** in the 144 records carry hymns without
+  a Great Feast to name them — 21 Romanian, 14 Russian, 7 Greek, 2 Serbian —
+  and most are commemorations of a particular icon of the Theotokos or a local
+  synaxis rather than feasts the chip is failing to name. Three ways to close
+  it, none a display fix: name the 35 dates by hand in five languages (a
+  sourcing commission, and the only one that loses nothing); narrow the dot to
+  the Twelve (throws away the source's own rank judgement); or leave them
+  different findings and say so. **Left as it stands, for the author.**
 
 * ~~Three of the four calendars will still mostly say plain "Fast."~~
   **Answered by the author the same evening and reversed** — this was flagged

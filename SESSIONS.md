@@ -3396,6 +3396,102 @@ day is one of the Twelve" (5). A day can wear the dot and no chip. Both are
 honest findings and neither is wrong; whether they should be one finding is the
 author's call.
 
+### The line becomes chips, and the fast label says one thing
+
+Four more instructions, and three of them are one move: **the fast chip
+answers one question and everything else that was crowded onto it gets a chip
+of its own or goes back behind the (i).**
+
+    1. "Don't mention the event for fasting in the fasting label, e.g. the
+       Beheading of the Forerunner, or Dormition."
+    2. "Mention The Beheading of the Forerunner in a second separate bubble
+       tag like the feast tag but different colour."
+    3. "Remove the explanation of the fasting under the bubble tag."
+
+So `{grade} - {reason}` over an allowance line became **Strict Fasting** ·
+*the Beheading of the Forerunner*, and the allowance went back to the bubble
+— which is where it lived until the morning of the same day, when it was
+pulled inline. Three of `liturgy`'s templates lost their last caller with it
+(`graded`, `bare`, `freeBecause`) and are deleted from all five packs rather
+than left to be grepped for.
+
+**Rubric for the occasion, gold for the feast, and neither carries its words.**
+DESIGN.md §2 spends rubric on liturgical time and the reader's place, and "the
+Dormition Fast", "Great Lent", "the Beheading of the Forerunner" are
+liturgical time exactly; gold marks a finding about veneration, which is the
+feast chip beside it. Both are edge-and-tint with ink text, because --gold on
+gesso is 2.78:1 and dark-mode --rubric is 4.20:1 — the same arithmetic that
+decided the feast chip earlier in the sitting, applied a second time without
+having to relearn it.
+
+**The instruction had to be applied twice, and that is the entry's lesson.**
+Taking the occasion out of the fast label and putting it in a chip is not the
+same as *not saying it twice*. On 15 August the Greek page read "No Fast - the
+Dormition"; after the first pass it read **No Fast** · *the Dormition* ·
+*Great Feast - The Dormition of the Theotokos* — the author's own second
+example ("or Dormition"), moved one chip to the right rather than answered.
+`reasonKind` now marks the reasons that are *only* a feast's name — 25
+December, 6 January, 15 August, 14 September and "a Great Feast on a
+{weekday}" — and the view drops the occasion chip for those when
+`greatFeast()` has named the day.
+
+**What is deliberately not marked**, because the chip is the only thing that
+would name them: the Beheading of the Forerunner and the Eve of Theophany,
+neither of which is in the Twelve; and "the Transfiguration, in the Dormition
+Fast" and "the Annunciation, in Great Lent", which say which fast the feast
+sits inside and so carry more than the gold chip does. 19 August in the
+Russian calendar is the worked case and the browser test uses it, because it
+is the one shape that shows both chips at once.
+
+### The gold dot is not the feast chip, and the author found the seam
+
+*"Why is Mon 31 and Tue 32 gold dot in Romanian calendar but no tag for feast
+day?"* — 31 August is the Placing of the Cincture of the Theotokos and 1
+September the beginning of the church year, and doxologia.ro prints proper
+hymns for both. Neither is one of the Twelve, so the rail marks them and the
+chip does not.
+
+This is the mismatch flagged at the end of the previous round, found on the
+screen one round later, and **it is measured now rather than described**:
+across the 144 day records, **44 day/church pairs on 35 distinct civil dates
+carry hymns without a Great Feast to name** — 21 Romanian, 14 Russian, 7
+Greek, 2 Serbian. Reading what they are is what settles the shape of the fix:
+most are commemorations of a particular icon of the Theotokos («Тропарь
+Божией Матери пред иконой Ее», nine of the Russian fourteen) or a local
+synaxis («Собор Московских святых»). **They are not feasts the chip is
+failing to name; they are days the calendar sings for.**
+
+Which means the rail's own accessible word for the dot — "a feast" — is the
+looser claim of the two, and closing the seam is a choice between three
+things, none of them a display fix:
+
+* name the 35 dates by hand, per church, in five languages — a sourcing
+  commission of the ordinary kind, and the only option that makes the dot and
+  the chip agree without losing anything;
+* narrow the dot to the Twelve, which throws away the source's own judgement
+  of rank (Amendment 46's reason for the mark);
+* leave them different findings and say so.
+
+Left as it stands, for the author. Nothing was invented to close it.
+
+### And the tone is the week's, not the hymn's
+
+*"What does the Tone 4 on those days refer to, since the hymns have different
+tones?"* A fair question and the answer is that the two are different things.
+The line's tone is the **Octoechos tone of the week** — it turns once a week
+from Thomas Sunday, a weekday keeps its Sunday's, and `lib/liturgy.js` reckons
+it from Pascha. 30 August 2026 is the 13th Sunday after Pentecost in Tone 4,
+so the whole week to 5 September is Tone 4. **A hymn's tone is a property of
+the hymn**: the troparion of the Cincture is Glasul 8 and its kontakion Glasul
+2, printed as the source printed them, and neither has anything to do with the
+week.
+
+Nothing is wrong, and the label may still be ambiguous — "Tone 4" beside two
+hymns that say Glasul 8 and Glasul 2 invites exactly the question that was
+asked. The string carries a comment saying so and naming the five places it
+would have to change; it was not changed, because the author asked what it
+means rather than for it to say something else.
+
 ### Two test defects of my own, both found by the backout
 
 * **A sign error that made two assertions vacuous.** The ring test read
@@ -3414,21 +3510,33 @@ backout that does not reproduce the defect is not a backout.
 ### Verification
 
 **166 unit** (163 at the top of the sitting; `greatFeast` added two and the
-strict default one) and **396 browser** (384; six new tests across two
-projects). All four locale packs are **300 of 300** with no English
-fallbacks — thirteen keys added and two removed, hand-translated,
-`scripts/locale-coverage.mjs` run after. The two removed are `fastModal.
-unstated` and `liturgy.fast`, both of which the strict default left without a
-caller; they are deleted rather than left for the next person to grep for,
-which is the fate `saints.keptAll` is still waiting for.
+strict default one) and **398 browser** (384; seven new tests across two
+projects). All four locale packs are **297 of 297** with no English
+fallbacks — thirteen keys added and five removed, hand-translated,
+`scripts/locale-coverage.mjs` run after each pass. The five removed all lost
+their last caller in the same evening: `fastModal.unstated` and `liturgy.fast`
+to the strict default, and `liturgy.graded`, `liturgy.bare` and
+`liturgy.freeBecause` to the occasion moving into a chip. They are deleted
+rather than left for the next person to grep for, which is the fate
+`saints.keptAll` is still waiting for.
 
-**Ten backouts run and watched to fail**, each restored and the touched files
-checksummed against pristine copies afterwards: the ring's inset (twice, once
-with each assertion isolated), the ring's radius, the name-days heading (and
-its inverse), the grade vocabulary, the feast chip's markup, the feast chip's
-ink, the strict default, the month's numeral colour, and `fastTone`'s reading
-of the grade (twice — the month's copy and the chip's, which are separate call
-sites and had to be shown to fail separately).
+**Fourteen backouts run and watched to fail**, each restored and the touched
+files checksummed against pristine copies afterwards: the ring's inset (twice,
+once with each assertion isolated), the ring's radius, the name-days heading
+(and its inverse), the grade vocabulary, the feast chip's markup, the feast
+chip's ink, the strict default, the month's numeral colour, `fastTone`'s
+reading of the grade (twice — the month's copy and the chip's, which are
+separate call sites and had to be shown to fail separately), the fast label's
+bare grade, the occasion chip's markup, the allowance's removal, and the
+occasion chip's rubric (swapped for gold, which fails on the green channel
+alone).
+
+**A third test defect of my own**, and the same shape as the first two: the
+new occasion test called `ready(page, { church: 'russian' })` halfway through
+to change calendars, and `ready` seeds only where nothing is stored
+(Amendments 19 and 23), so the page stayed Romanian and the probe read a null
+element. It drives the header's own chooser now, as the older tests do. Three
+guessed premises in one sitting, each caught by running the thing.
 
 **Seven existing tests were heirs rather than casualties.** Six were updated:
 the two reading the Russian grade wording, the one on 14 October reading

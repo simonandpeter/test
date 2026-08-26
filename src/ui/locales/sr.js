@@ -133,10 +133,7 @@ export const sr = {
     },
     liturgy: {
       tone: 'Глас {tone}',
-      graded: '{grade} - {reason}',
-      bare: '{grade}',
       free: 'Нема поста',
-      freeBecause: 'Нема поста - {reason}',
     },
     feasts: {
       label: 'Велики празник',

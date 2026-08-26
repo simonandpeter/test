@@ -165,7 +165,25 @@ export function fasting(iso, churchId) {
   const wedFri = wd === 3 || wd === 5;
 
   // The fast lifted entirely: Nativity and Theophany, and the fast-free weeks.
-  if (x === 1225 || x === 106) return { kind: 'fast-free', reason: x === 1225 ? 'Nativity of the Lord' : 'Theophany' };
+  /*
+   * `reasonKind: 'greatFeast'` on every reason that is *only* the feast's own
+   * name. The view drops the occasion chip for these when `greatFeast()` has
+   * named the day, because "the Dormition" beside "Great Feast - The
+   * Dormition of the Theotokos" is the author's own complaint of 2026-08-26
+   * evening — "Don't mention the event for fasting in the fasting label, e.g.
+   * the Beheading of the Forerunner, or Dormition" — reappearing one chip to
+   * the right.
+   *
+   * The Beheading and the Eve of Theophany are deliberately *not* marked:
+   * neither is in the Twelve, so nothing else on the line names them and the
+   * chip is the only place a reader learns why the day is a fast. Nor are
+   * "the Transfiguration, in the Dormition Fast" and "the Annunciation, in
+   * Great Lent", which say which fast the feast sits inside — more than the
+   * feast chip beside them says.
+   */
+  if (x === 1225 || x === 106) {
+    return { kind: 'fast-free', reason: x === 1225 ? 'Nativity of the Lord' : 'Theophany', reasonKind: 'greatFeast' };
+  }
   if (d >= 0 && d < 7) return { kind: 'fast-free', reason: 'Bright Week' };
   if (d >= 50 && d < 56) return { kind: 'fast-free', reason: 'the week after Pentecost' };
   if (x >= 1225 || x <= 104) return { kind: 'fast-free', reason: 'the days of the Nativity' };
@@ -173,7 +191,7 @@ export function fasting(iso, churchId) {
 
   // Three strict days whatever the weekday.
   if (x === 829) return { kind: 'fast', reason: 'the Beheading of the Forerunner' };
-  if (x === 914) return { kind: 'fast', reason: 'the Exaltation of the Cross' };
+  if (x === 914) return { kind: 'fast', reason: 'the Exaltation of the Cross', reasonKind: 'greatFeast' };
   if (x === 105) return { kind: 'fast', reason: 'the Eve of Theophany' };
 
   // Great Lent and Holy Week, with the two days fish is permitted.
@@ -212,7 +230,16 @@ export function fasting(iso, churchId) {
     // A Great Feast on a Wednesday or Friday: fish.
     const greatFixed = [202, 325, 624, 629, 806, 815, 908, 1121];
     if (greatFixed.includes(x) || d === 24 || d === 38) {
-      return { kind: 'fish', reason: `a Great Feast on a ${WEEKDAYS[wd]}` };
+      /*
+       * `reasonKind` again, for the other reason a chip beside it can say
+       * better: where `greatFeast()` names the day, "a Great Feast on a
+       * Friday" and "Great Feast - The Dormition of the Theotokos" are the
+       * same sentence twice. The two great feasts that are not of the Twelve
+       * (24 and 29 June) reach this branch with nothing else to name them, so
+       * the view suppresses on the *feast being named*, not on this mark
+       * alone.
+       */
+      return { kind: 'fish', reason: `a Great Feast on a ${WEEKDAYS[wd]}`, reasonKind: 'greatFeast' };
     }
     /*
      * `reasonKind` marks the one reason that is not worth printing beside the
@@ -224,7 +251,7 @@ export function fasting(iso, churchId) {
      */
     return { kind: 'fast', reason: WEEKDAYS[wd], reasonKind: 'weekday' };
   }
-  if (x === 815) return { kind: 'fast-free', reason: 'the Dormition' };
+  if (x === 815) return { kind: 'fast-free', reason: 'the Dormition', reasonKind: 'greatFeast' };
   return { kind: 'fast-free', reason: null };
 }
 

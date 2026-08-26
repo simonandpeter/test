@@ -136,10 +136,7 @@ export const ru = {
     },
     liturgy: {
       tone: 'Глас {tone}',
-      graded: '{grade} - {reason}',
-      bare: '{grade}',
       free: 'Поста нет',
-      freeBecause: 'Поста нет - {reason}',
     },
     feasts: {
       label: 'Великий праздник',
