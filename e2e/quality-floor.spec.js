@@ -14,6 +14,30 @@ import { AxeBuilder } from '@axe-core/playwright';
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:
 // one menologion date, two civil days, the most load-bearing date in the corpus.
 const POPULATED = '/calendar/2026-01-30';
+
+/**
+ * A Daily page the machine is certainly not having today, read off its own
+ * clock.
+ *
+ * **The Daily button's word depends on the date the runner thinks it is**, and
+ * that had been invisible: until 2026-08-27 the four packs used one word for
+ * both *Daily* and *Today*, so an assertion about either passed whichever
+ * state the button was in. Giving Russian its own base word turned a
+ * hardcoded `/calendar/2026-08-26` into a test that failed on exactly one day
+ * of the year — and CI ran on that day, hours after the change.
+ *
+ * So any test that asserts the *Today* word navigates through this rather than
+ * through a literal. Three days back is well outside a timezone's worth of
+ * slop, and the calendar renders any date, so the day's own contents do not
+ * matter to the assertions that use it.
+ */
+const aDayThatIsNotToday = (page) =>
+  page.evaluate(() => {
+    const d = new Date();
+    d.setDate(d.getDate() - 3);
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    return `/calendar/${iso}`;
+  });
 const EMPTY = '/calendar/2026-08-20';
 
 // Anthony carries an image, all three churches' attestations, name forms in
@@ -3473,6 +3497,7 @@ test('the site is named in the reader\u2019s own language, and the habit page is
    * the *base* word, so it is read where the base word is what shows: on
    * today itself, and on any page that is not the Daily one.
    */
+  await page.goto(await aDayThatIsNotToday(page), { waitUntil: 'networkidle' });
   await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Today');
   await page.goto('/', { waitUntil: 'networkidle' });
   await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Daily');
@@ -4211,7 +4236,17 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // merge over), the date through Intl — which is why the formatters are a
   // per-language cache and not module constants — and the title.
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
-  await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
+  /*
+   * **All Saints and not Daily.** The first nav link is the one word in the
+   * chrome that changes with the *date*, and this page is a hardcoded one:
+   * on 26 August the button reads «Ежедневно» and on every other day
+   * «Сегодня». It read the same either way until 2026-08-27, when the packs
+   * were given a distinct base word, and CI went red the same evening because
+   * the runner's clock was on the 26th. What this test is claiming — that the
+   * whole chrome redraws in Russian — is made by a word that stands still;
+   * the Daily button's two words have two tests of their own.
+   */
+  await expect(page.locator('.site-nav a').nth(1)).toHaveText('Все святые');
   await expect(page.locator('#church-open')).toHaveText('Русская');
   // Capitalised, and the month's own abbreviation dot dropped (author,
   // 2026-08-25). Said plainly because it is a departure: lower case is
@@ -4235,7 +4270,7 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // And it is a setting, not a session: the reload comes back Russian.
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
-  await expect(page.locator('.site-nav a').first()).toHaveText('Сегодня');
+  await expect(page.locator('.site-nav a').nth(1)).toHaveText('Все святые');
   await expect(page.locator('#lang-open')).toHaveText('RU');
 });
 
@@ -7492,8 +7527,10 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await page.goto('/', { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
 
-  // A day that is not today, arrived at by deep link.
-  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  // A day that is not today, arrived at by deep link — and read off the
+  // machine's own clock, because a literal here is a test that fails on one
+  // day of the year.
+  await page.goto(await aDayThatIsNotToday(page), { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Today');
 
   // Off the Daily page it is Daily again.
@@ -7929,7 +7966,8 @@ test('the Daily button says Daily on today, and wears gold when it says Today', 
    * and the fade's own timer landing last. main.js has the whole account.
    */
   await ready(page);
-  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  const away = await aDayThatIsNotToday(page);
+  await page.goto(away, { waitUntil: 'networkidle' });
   const label = page.locator('[data-nav-label]');
   await expect(label).toHaveText('Today');
 
@@ -7959,7 +7997,7 @@ test('the Daily button says Daily on today, and wears gold when it says Today', 
     const now = JSON.parse(localStorage.getItem(key) ?? '{}');
     localStorage.setItem(key, JSON.stringify({ ...now, language: 'ru' }));
   });
-  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  await page.goto(away, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-nav-label]')).toHaveText('Сегодня');
   await page.locator('a[data-nav-daily]').click();
   await expect(page.locator('[data-nav-label]')).toHaveText('Ежедневно');

@@ -159,6 +159,15 @@ top of the file is.
   precondition* that the row was on one line. Where a wrap is the thing under
   test, force it with the column (`.facets { max-width: 40px }`) rather than
   with a font, and the state is the same on every machine.
+- **A third trap, and it cost a red CI run on 2026-08-27.** Anything that
+  depends on *what day the machine thinks it is* is a measurement of one
+  clock. The Daily button reads **Today** on a day that is not today and its
+  own name on today, so an assertion about either word, on a hardcoded date,
+  is a test that fails on exactly one day of the year — and CI ran on that day,
+  hours after the four packs were given a base word distinct from their word
+  for Today, which is what made the two states tell apart at all. Navigate
+  through `aDayThatIsNotToday(page)` (top of the spec) rather than a literal,
+  or assert a word that does not move.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored. A test that doesn't actually
   reproduce the defect when the fix is reverted isn't pinning anything —

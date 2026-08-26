@@ -4716,6 +4716,28 @@ the sizes actually used is the fix, and the originals and their
 re-authored file. It was the phase to drop if the night ran long, and the night
 ran long.
 
+### The one CI caught, hours later
+
+**A test that failed on exactly one day of the year, and CI ran on that day.**
+`choosing Russian redraws the page in Russian` deep-links to
+`/calendar/2026-08-26` and asserted the first nav link read «Сегодня». That
+passed for as long as the Russian pack used one word for both *Daily* and
+*Today* — whichever state the button was in, the word was the same. Giving the
+four packs a base word of their own, in this sitting, is what made the two
+states tell apart, and the runner's clock was on the 26th.
+
+Reproduced rather than reasoned about: with Playwright's clock pinned to
+2026-08-26 the link reads «Ежедневно», exactly as the runner said.
+
+The fix is at the class and not at the two assertions. Anything that asserts
+the *Today* word now navigates through `aDayThatIsNotToday(page)`, which reads
+the machine's own clock and steps three days back — well outside a timezone's
+worth of slop — and the Russian chrome test makes its claim with a word that
+does not move (All Saints), the Daily button's two words having two tests of
+their own. **CLAUDE.md gains it as a third standing trap**, beside the
+virtualised grid and the reader's font: a hardcoded date plus an assertion
+about today-ness is a measurement of one clock.
+
 ### Verification
 
 **171 unit, 448 browser.** All four packs 335 of 335 with no English
