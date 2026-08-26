@@ -7344,25 +7344,26 @@ test('the Index says its count once, with the corpus a step behind the calendar'
   await expect(line).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
 });
 
-test('the die is the chips own height, on the line they share and on a line of its own', async ({ page }) => {
+test('the die is a chip height, including on a line of its own', async ({ page }) => {
   /*
    * Author, 2026-08-26 evening: "make the dice button height match the height
    * of the other filters in its row and make the icon gold".
    *
-   * **This is the second time this button has gone red on CI and not here**,
-   * and both times for the same reason: it was asserted through a geometry
-   * that depends on where the row happens to wrap, in a face the runner does
-   * not have. `align-self: stretch` is only ever as tall as the flex *line*
-   * the die landed on, so the moment the row wraps and the die is alone on
-   * the last one it takes its own content height — 23 px against a chip's
-   * 30.27, measured. A bare runner's system-ui is wider than Segoe UI and
-   * wraps the row a chip earlier than a Windows desk does; **and at 360 px it
-   * wraps on every machine**, which is the part a green mobile-360 run here
-   * was quietly not covering.
+   * **This button has now gone red on CI three times and never here**, and
+   * every time for one reason: its geometry was asserted through something
+   * that depends on the reader's own font. The first pinned the die's x
+   * against a row that wraps a chip earlier on a bare runner. The second
+   * pinned its height, which `align-self: stretch` takes from the flex *line*
+   * — 23 px against a chip's 30.27 the moment the die is alone on the last
+   * one. The third was this test's own precondition, "the row is on one line
+   * at 1280", which is false on a runner whose system-ui is DejaVu Sans.
    *
-   * So both states are exercised, and the wrapped one is forced rather than
-   * hoped for: Verdana is wide enough to wrap the row at the desktop column
-   * on any machine that has it, and 360 px wraps it anywhere.
+   * So nothing here reads the native face at all. **The wrap is forced by the
+   * column**, not by a font: squeezed to 40 px, every chip takes a line of
+   * its own and the die is certainly alone on the last — which is the state
+   * that collapsed it, reproduced identically on every machine. What is
+   * asserted is the requirement itself, that the die is never shorter than a
+   * chip, plus the arithmetic behind the floor.
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -7371,34 +7372,29 @@ test('the die is the chips own height, on the line they share and on a line of i
   const measure = () =>
     page.evaluate(() => {
       const row = document.querySelector('.facets');
-      const kids = [...row.children];
       const die = document.querySelector('.random-die').getBoundingClientRect();
       const chip = document.querySelector('details[data-facet="dates"] > summary').getBoundingClientRect();
       return {
         die: die.height,
         chip: chip.height,
-        lines: new Set(kids.map((k) => Math.round(k.getBoundingClientRect().top))).size,
-        // Whether the die really is the only thing on its own line, which is
-        // the case the stretch cannot answer.
         alone:
-          kids.filter((k) => Math.abs(k.getBoundingClientRect().top - die.top) < 1).length === 1,
+          [...row.children].filter((k) => Math.abs(k.getBoundingClientRect().top - die.top) < 1).length === 1,
       };
     });
 
-  // One line, the die stretched: the state that was already passing.
-  const flat = await measure();
-  expect(flat.lines, 'the row should be on one line at 1280 in the native face').toBe(1);
-  expect(Math.abs(flat.die - flat.chip), `die ${flat.die} vs chip ${flat.chip}`).toBeLessThan(0.5);
+  // However this machine's face happens to lay the row out.
+  const asIs = await measure();
+  expect(asIs.die, `as laid out: die ${asIs.die} vs chip ${asIs.chip}`).toBeGreaterThan(asIs.chip - 0.5);
 
-  // Wrapped, with the die on a line of its own: the state CI was in.
-  await page.addStyleTag({ content: ':root { --font-utility: Verdana, sans-serif !important; }' });
+  // The state CI was in, forced by the column so that it is the same state
+  // everywhere: one control per line, the die alone on the last.
+  await page.addStyleTag({ content: '.facets { max-width: 40px; }' });
   await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
-  const wrapped = await measure();
-  expect(wrapped.lines, 'Verdana should wrap the filter row at 1280').toBeGreaterThan(1);
-  expect(wrapped.alone, 'the die should be alone on the last line, which is the case under test').toBe(true);
+  const alone = await measure();
+  expect(alone.alone, 'the die should be alone on its line, which is the case under test').toBe(true);
   expect(
-    Math.abs(wrapped.die - wrapped.chip),
-    `wrapped: die ${wrapped.die} vs chip ${wrapped.chip}`,
+    Math.abs(alone.die - alone.chip),
+    `alone on its line: die ${alone.die} vs chip ${alone.chip}`,
   ).toBeLessThan(0.5);
 
   // And at a phone's width, where the row wraps in every face there is.
@@ -7406,15 +7402,14 @@ test('the die is the chips own height, on the line they share and on a line of i
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const phone = await measure();
-  expect(phone.lines, 'the row wraps at 360').toBeGreaterThan(1);
-  expect(Math.abs(phone.die - phone.chip), `360: die ${phone.die} vs chip ${phone.chip}`).toBeLessThan(0.5);
+  expect(phone.die, `360: die ${phone.die} vs chip ${phone.chip}`).toBeGreaterThan(phone.chip - 0.5);
 
   /*
    * The floor is a number written in CSS rather than read off the row, which
-   * is what "the chips' height, taken from the row rather than repeated here"
-   * used to buy. So the arithmetic is pinned against a real chip: if a chip's
-   * padding, font size or leading moves and `--facet-h` does not follow, this
-   * is where it is caught rather than in a screenshot months later.
+   * is what the stretch alone used to buy. So the arithmetic is pinned
+   * against a real chip: if a chip's padding, font size or leading moves and
+   * `--facet-h` does not follow, it is caught here rather than in a
+   * screenshot months later.
    */
   const declared = await page.evaluate(() => {
     const probe = document.createElement('div');

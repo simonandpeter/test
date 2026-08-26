@@ -131,7 +131,13 @@ top of the file is.
   utility face is a measurement of one machine: CI's system-ui is wider than
   Arial. Assert layout either by *order* (face-independent) or inside a test
   that blocks the webfont and forces Arial, as the foot and filter-row budget
-  tests do.
+  tests do. **This includes anything that depends on where a row wraps** —
+  a line count, a box's x or y, a height taken from a flex line. The Random
+  die went red on CI three times running (2026-08-26) on three different
+  face-dependent assertions about the same row, the third being a *test's own
+  precondition* that the row was on one line. Where a wrap is the thing under
+  test, force it with the column (`.facets { max-width: 40px }`) rather than
+  with a font, and the state is the same on every machine.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored. A test that doesn't actually
   reproduce the defect when the fix is reverted isn't pinning anything —
