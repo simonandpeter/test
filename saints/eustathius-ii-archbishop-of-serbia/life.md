@@ -1,4 +1,4 @@
-# Eustathius II, Archbishop of Serbia
+# Eustathius II
 
 Eustathius II succeeded Jakov on the archiepiscopal throne and governed the Serbian Church from 1292 to 1309 — a strict ascetic and a zealous pastor, the calendar says.
 

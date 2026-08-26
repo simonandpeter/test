@@ -1,4 +1,4 @@
-# Pachomius (Ionov), Hieromonk
+# Pachomius (Ionov)
 
 Pachomius Ionov was a hieromonk, shot in 1937 and kept by the Russian church among
 the new martyrs, named in the day's line with Metropolitan

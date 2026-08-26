@@ -1,4 +1,4 @@
-# Anna, Nun-martyr (1937)
+# Anna
 
 Anna Ivanovna Ezhova was born in 1885 in the Semyonov district of Nizhny Novgorod province. After her tonsure she lived in the settlement of Gnilitsy in the Avtozavod district on the edge of Nizhny Novgorod, then Gorky. At the end of July or beginning of August 1937 she was arrested, with Orthodox clergy and laity, as a member of a church counter-revolutionary group supposed to be at work in the district; she admitted no guilt and refused to give evidence against the others in the case, among them the mechanic [James Gortinsky](/saints/james-martyr-1937). On 21 August 1937 she was shot. She was rehabilitated afterwards, and glorified at the Council of 2000. The Russian calendar keeps her on 16 August (Julian) with the presbyter [Alexander](/saints/alexander-presbyter-martyr-1937) and the martyr James; the Sretensky calendar prints no life for her, and this one follows azbyka.ru, which cites the Orthodox Encyclopaedia.
 

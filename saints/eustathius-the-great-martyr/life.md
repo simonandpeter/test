@@ -1,4 +1,4 @@
-# Eustathius the Great Martyr
+# Eustathius
 
 Eustathius was a distinguished officer at Rome, called Placidas before his
 baptism, and came to the faith in a marvellous way: hunting a stag, he saw a cross between its

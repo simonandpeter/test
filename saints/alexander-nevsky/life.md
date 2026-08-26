@@ -1,4 +1,4 @@
-# Alexander Nevsky, Grand Prince
+# Alexander Nevsky
 
 Alexander was born on 30 May 1220 at Pereslavl-Zalessky, the second son of Prince Yaroslav — Theodore in baptism, a prince meek, merciful and humane — and of Theodosia, a princess of Ryazan; his elder brother Theodore died at fifteen. He grew up at Pereslavl, where his father ruled, and received the princely tonsure, the rite that makes a boy a warrior, in the cathedral of the Transfiguration there from Simon, bishop of Suzdal. The Romanian life remembers him tall, handsome, brave and full of faith, trained from childhood in the Scriptures, in Latin and Greek and then in the art of war; he began to reign in 1236 and in 1239 married.
 

@@ -1,4 +1,4 @@
-# Vladimir the Presbyter, Hieromartyr (1918 or 1920)
+# Vladimir the Presbyter
 
 Vladimir Ionovich Tsedrinsky was born in Nizhny Novgorod province and began his service to the Church in the Omsk diocese; in 1909, already a priest, he was moved to the Turkestan diocese as district observer of parish schools and missionary, and afterwards served at the cathedral of St Nicholas in Lepsinsk in the Semirechye region, its rector from 6 July 1912 and later dean of the Lepsinsk district. It was his report — that the peasant union of the district had resolved to take the clergy’s land and stop payment for services — that moved Bishop Innokenty of Turkestan to publish an appeal to all true Orthodox Christians and Russian citizens to care for the Church and ease the priests’ lot.
 

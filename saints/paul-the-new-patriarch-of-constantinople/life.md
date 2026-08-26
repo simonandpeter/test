@@ -1,4 +1,4 @@
-# Paul the New, Patriarch of Constantinople
+# Paul the New
 
 Paul IV, called the New, governed the Church of Constantinople for five years and eight months in the years of the iconoclasm, and gave up the throne, secretly taking the schema, to repent of having at first gone along with the iconoclasts — so the Prologue tells it for the Serbian calendar. He was the predecessor of the great Tarasius, and reposed in 784, in the reign of Irene and Constantine. The Sretensky calendar’s joint life of the three patriarchs kept on 30 August says of all three, [Alexander](/saints/alexander-patriarch-of-constantinople), John the Faster and Paul, that they lived at different times but each had to face the heretics who distorted the teaching of the Church.
 

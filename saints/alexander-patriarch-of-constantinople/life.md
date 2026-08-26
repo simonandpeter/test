@@ -1,4 +1,4 @@
-# Alexander, Patriarch of Constantinople
+# Alexander
 
 Alexander was chorepiscopus under Metrophanes, first patriarch of Constantinople, and because of the old man’s age stood in for him at the First Ecumenical Council at Nicaea against the Arians (325) — already, the Greek synaxarion says, a man shining with apostolic gifts, distinguished as a presbyter for piety, virtue and goodness. Metrophanes left word that his vicar be elected to the throne, and Alexander governed the Church of Constantinople from 325 to 340, contending with Arians and pagans alike. Once, in dispute with a pagan philosopher, he said: in the name of my Lord Jesus Christ I command you to be silent — and the man was struck dumb until he confessed by signs his error and the truth of the Christian faith. After Nicaea, though seventy years old, he travelled through Thrace, Macedonia, Thessaly and the rest of Greece to teach the right doctrine; and the Prologue says his prayer cut short the life of Arius himself. He died in his ninety-eighth year, in 340.
 

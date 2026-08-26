@@ -1,4 +1,4 @@
-# James the Presbyter, Hieromartyr (1937)
+# James the Presbyter
 
 James Arkhipov was born on 14 October 1888 in the village of Belenitsyno in Vladimir province, into a poor peasant family, gifted with a fine voice and with a love of God from childhood. He left home young, went from church to church as a singer until 1914, then served as psalmist in the Poshekhonye and Danilov districts and taught singing at the school in Yermakovo, where he met his wife Anna. Called up into the Red Army in 1919, he was put in charge of a choir section; demobilised, he was ordained, and in 1921 appointed to the Transfiguration cathedral of the already closed Spaso-Gennadiev monastery, where the company of the monks and the common services shaped him so that, sent nine years later to an ordinary parish, he went on serving in the monastic way. At Voskresenye-Runovo the congregation grew; despite his three years’ schooling he struck people as educated, read much and wrote well, and his house was full of books; the family was poor and, the parishioners said, he could give away his last.
 

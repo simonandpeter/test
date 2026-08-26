@@ -1,4 +1,4 @@
-# Alexander (Blokhin), Martyr (1937)
+# Alexander (Blokhin)
 
 Alexander Ivanovich Blokhin was born in 1879 in the village of Pokrov in the Gagino district of the Gorky region, to a peasant family. On 8 September 1937 the clergy and Orthodox laity of the Gagino district were arrested, ten people in all — the priests John Romashkin, Nicholas Khvoshchev, Alexander Nikolsky and Peter Lebedinsky, and the laymen Basil Yezhov, Peter Lonskov, Stephen Mityushkin and Alexander Blokhin among them; none admitted guilt. They were charged with having organised on 6 July a solemn service in which four priests and a crowd of believers took part, and though no sermon on a political theme was preached the church service itself was given the meaning of an anti-state act, because it took the peasants from work on the collective farm. On 17 September 1937 eight were sentenced to be shot, and shot; Alexander was charged with having organised the service that took the peasants from the collective farm. He was numbered among the new martyrs and confessors of Russia in August 2000, and the Russian calendar keeps him on 4 September (Julian).
 

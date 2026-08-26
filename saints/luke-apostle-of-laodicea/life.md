@@ -1,4 +1,4 @@
-# Luke, Apostle of the Seventy, Bishop of Laodicea
+# Luke
 
 Luke — another than the Evangelist — lived in the apostolic years too; he was made bishop of Laodicea in Syria and ended his life struggling, with love and boldness, for his flock and for the chief shepherd Jesus Christ. The Greek calendar keeps him on 10 September with [Apelles](/saints/apelles-the-apostle) and [Clement](/saints/clement-apostle-of-sardis).
 

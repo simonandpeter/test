@@ -1,4 +1,4 @@
-# Alexander, Bishop of Comana
+# Alexander
 
 Alexander lived in the third century near Neocaesarea. He had studied the Scriptures and knew many sciences, but took on the feat of folly for Christ and lived in poverty, selling charcoal in the city square; many, seeing his face always black with coal dust, despised him.
 

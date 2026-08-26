@@ -1,4 +1,4 @@
-# Andrew (Dalnikov), Presbyter, Hieromartyr (1920)
+# Andrew (Dalnikov)
 
 Andrew Iosifovich Dalnikov was one of the priests of the Semirechye region; of his places of service the town of Turgen and the stanitsa of Nadezhdinskaya in the Verny district — today the town of Issyk — are known. In September 1920 he was arrested and charged with counter-revolutionary activity, failure to deliver the grain quota and hiding the confession books of the Cossacks from the troika of the regional Cheka; he was sentenced to a concentration camp, and served his sentence in the Pishpek camp, where he died in 1920. In his case file stands a note of 13 April 1921: the family of the priest Andrew Iosifovich Dalnikov, who died in the Pishpek camp, to be evicted with confiscation of property. He was numbered among the saints in 2000, and the Russian calendar keeps him on 3 September (Julian) with [Theophanes Sokolov](/saints/theophanes-presbyter-martyr-1920) and the other martyrs of Semirechye.
 

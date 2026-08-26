@@ -1,4 +1,4 @@
-# Paul, Bishop of Nicaea
+# Paul
 
 The Greek synaxarion keeps Paul, bishop of Nicaea, on 10 September and says it has no details of his life. This entry records the line and nothing more.
 

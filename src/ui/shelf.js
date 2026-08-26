@@ -14,7 +14,7 @@
 
 import * as store from '../lib/store.js';
 import { fill } from './strings.js';
-import { formatLifespan } from '../lib/calendar-page.js';
+import { formatLifespan, formatSubtext } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { saintName } from '../lib/honorific.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from './save.js';
@@ -69,7 +69,7 @@ function readingRow(card, router) {
       <span class="name-line">
         <a class="index-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
       </span>
-      <span class="index-dates utility">${esc(formatLifespan(card.dates))}</span>
+      <span class="index-dates utility">${esc(formatSubtext(card))}</span>
     </span>
     <span class="shelf-tools">
       ${renderBookmark(card.slug, card.display_name)}

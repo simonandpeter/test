@@ -1,4 +1,4 @@
-# Alypius of the Kyiv Caves, Iconographer
+# Alypius of the Kyiv Caves
 
 Alypius, one of the first and best of Russian iconographers, was tonsured by Nikon of the Caves and laboured at the Kyiv Caves monastery from his youth. He learned icon-painting from the Greek masters who from 1083 were adorning the monastery’s church of the Dormition, and he painted for nothing: if he heard that the icons in some church had decayed he took them home and restored them without payment, and when he was paid he spent one third on materials, gave one third to the poor and kept one third. He was never idle, and left his painting only for the divine services; ordained hieromonk, he was known in his lifetime for the gift of miracles — he healed a leper, the Prologue says, and saw an angel of God — and he died in peace in old age, around 1114. The Prologue, which keeps him on the same day for the Serbian calendar, says that in painting the likenesses of the saints on wood he was painting their virtues in his own soul.
 

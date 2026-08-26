@@ -1,4 +1,4 @@
-# Basil, Martyr (1942)
+# Basil
 
 Basil Afanasyevich Aleksandrin was born on 8 February 1872 in the village of Vertelim in the Insar district of Penza province, now in Mordovia — a man thorough in everything, the life says: before the revolution he farmed ten hectares of his own and rented seventy or eighty more, kept horses, cows and forty sheep, with two permanent hands and fifteen seasonal workers, and had a wife and three children. His fellow villagers respected him, and in 1918 the parish meeting elected him psalmist of the village church, which the Penza diocesan administration confirmed that August; the priest’s report of 1929 calls his conduct excellent, his reading and singing superb, his life outside the services that of an Orthodox Christian — which may be why that year the village soviet not only stripped him of his property and his vote but voted to expel him from the village. He left of his own accord, came back in 1932 with his rights restored, and the faithful gathered round him again.
 

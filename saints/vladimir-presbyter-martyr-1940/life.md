@@ -1,4 +1,4 @@
-# Vladimir (Sokolov), Archpriest, Hieromartyr (1940)
+# Vladimir (Sokolov)
 
 Vladimir was born on 12 October 1883 in the village of Alexandrovo in the Zvenigorod district of Moscow province, the son of the priest Ivan Georgievich Sokolov. In 1898 he finished the Zaikonospassky church school and in 1904 the Moscow seminary, and for many years served as psalmist at the church of St Pimen in Sushchevo in Moscow; in 1924 he was ordained priest to that church and served there until the Renovationists seized it, raised meanwhile to archpriest and given the jewelled cross. When the church, to the great grief of all the Orthodox, was seized by the Renovationists he was appointed to the church of Peter and Paul by the Yauza gate, and on 26 February 1937 moved to the church of the Protection — the calendar’s life runs on past the point read here. Arrested in 1937 on a charge of counter-revolutionary activity and organising mass protests, he was sentenced to five years in the camps and died in the Vorkuta camp on 9 September 1940; he was numbered among the saints in 2005, and the Russian calendar keeps him on 27 August (Julian).
 

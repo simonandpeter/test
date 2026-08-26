@@ -1,4 +1,4 @@
-# Vladimir (Dvinsky), Deacon, Hieromartyr (1918)
+# Vladimir (Dvinsky)
 
 Vladimir Dvinsky came of a family of clergy; his father too served at Polonsk in Pskov province, and the Dvinskys lived in the family homestead beside the church of the Prophet Elijah, where Vladimir served as deacon with the priest [Alexander Lyubimov](/saints/alexander-presbyter-martyr-1918-31-august), their long service together binding them in spiritual kinship. Besides his deacon’s duties he laboured many years in religious education, teaching the Law of God in two zemstvo schools, and tried to give an education to his own five children. After the revolution he and Father Alexander went on serving, preaching and calling the flock to defend the church’s property; on 10 September 1918 both were arrested on a denunciation, briefly questioned by the Petrograd Cheka and shot the same day in a grove behind the Polonsk churchyard. The Russian calendar keeps them on 31 August (Julian).
 

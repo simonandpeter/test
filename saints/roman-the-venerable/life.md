@@ -1,4 +1,4 @@
-# Roman the Venerable
+# Roman
 
 The Serbian calendar’s note for him is a troparion of the common kind for a monastic saint — a desert-dweller and an angel in the body, a wonderworker who by fasting, vigil and prayer received heavenly gifts and heals those who come to him in faith — and no life. The Diocese of Niš, on its page for his monastery, supplies what tradition holds.
 

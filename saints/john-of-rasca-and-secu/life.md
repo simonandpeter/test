@@ -1,4 +1,4 @@
-# John of Râșca and Secu, Bishop of Roman
+# John of Râșca and Secu
 
 John — whom the metropolitan Dosoftei, in his Lives of the Saints, calls the holy and wonderful archbishop — lived in the seventeenth century, a contemporary and close friend of the metropolitans Varlaam and Dosoftei. Born in the land of Vrancea of free peasant stock, to George and Anastasia, he wished for the monastic life from his youth; he was tonsured at Râșca by the abbot Agathon around 1630, and when his kinsman [Varlaam](/saints/varlaam-of-moldavia) became metropolitan in 1632 he moved him to Secu and gave him his own cell, books and belongings. In 1641 the prince Vasile Lupu founded a small monastery of St John in the fortress of Neamț, and John was its abbot until 1665; in 1650 he baptised the daughter of the fortress’s captain, the future hermit Theodora of Sihla, and was her confessor until she was sixteen, urging her to the monastic life. Abbot of Secu for a year from 1666, he was elected bishop of Huși in 1667, and from 1674 until his death in 1685 shepherded the diocese of Roman.
 

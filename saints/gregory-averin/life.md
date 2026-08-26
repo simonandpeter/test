@@ -1,4 +1,4 @@
-# Gregory Averin, Priest
+# Gregory Averin
 
 Gregory Ivanovich Averin was born in 1889 to a peasant family in the Kostroma
 province, finished a teachers' seminary in 1910 and taught in a parish school at

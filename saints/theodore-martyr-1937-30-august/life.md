@@ -1,4 +1,4 @@
-# Theodore (Ivanov), Martyr (1937)
+# Theodore (Ivanov)
 
 Theodore Mikhailovich Ivanov was born in 1895 in the city of Tobolsk; his father was a courier and watchman at the state archive and earned extra by sewing men’s clothes, and when he died in 1911 ten children were left on the mother’s hands, the youngest only ten months old, and she went to work at the archive in her late husband’s place and did needlework besides. From childhood Theodore served in the cathedral; the cathedral was cold, and sleeping in it he caught bad chills more than once, so that at thirteen he fell ill with rheumatism of the joints and a year later was an invalid, his legs paralysed — for the first years the pain was so bad that at times he cried out; in 1916, at the solemn canonisation of John of Tobolsk — the calendar’s life runs on past the point read here. He became a spiritual comforter to whom priests and laity came for counsel; in 1937 he was arrested because believers went on coming to him, was not even interrogated, and was shot on 11 September 1937 in the Tobolsk prison. The Russian calendar keeps him on 30 August (Julian).
 

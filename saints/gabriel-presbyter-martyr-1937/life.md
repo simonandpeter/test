@@ -1,4 +1,4 @@
-# Gabriel (Arkhangelsky), Presbyter, Hieromartyr (1937)
+# Gabriel (Arkhangelsky)
 
 Gabriel Ivanovich Arkhangelsky was born on 25 March 1890 in the village of Urleika in the Petrovsk district of Saratov province, a psalmist’s son. He had his first schooling at the Petrovsk church school, in 1910 was made acting psalmist of the church of St Nicholas at Guselka in the Kamyshin district, and in 1917 finished the Saratov seminary; ordained deacon, and priest in 1918, he served in the churches of the Penza diocese. On 29 November 1929 he was arrested among the clergy of the church of the Nativity of the Theotokos at Kanaevka and on 12 February 1930 sentenced to five years in a concentration camp; having served it he went on serving, and in 1936, a psalmist at Penza, was arrested with Bishop [Theodore (Smirnov)](/saints/theodore-of-penza) on a false charge of counter-revolutionary activity. He did not admit guilt, and was executed on 4 September 1937; he was canonised in 2000, and the Russian calendar keeps him on 22 August (Julian).
 

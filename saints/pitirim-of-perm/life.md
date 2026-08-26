@@ -1,4 +1,4 @@
-# Pitirim, Bishop of Great Perm
+# Pitirim
 
 Gerasim, Pitirim and Jonah were bishops of Great Perm and Ust-Vym, and the Sretensky calendar’s life takes the three together. Gerasim, third bishop of the Zyrian people and worthy successor of Stephen, the enlightener of Perm, was raised to the see after 1416, when only part of the Zyrians had been converted; with great zeal he cared for his flock, which suffered from the constant raids of the Novgorodians and the pagan Voguls, going fearlessly into the Voguls’ camps to persuade them to stop plundering the defenceless Christians of Perm, and on one such journey he died a martyr — strangled, tradition says, with his own omophorion. The life, read only so far, goes on to Pitirim, who followed him and died in 1456, the year the calendar prints, and to Jonah after him. The Russian calendar keeps Pitirim on 19 August (Julian) with a troparion and a kontakion.
 

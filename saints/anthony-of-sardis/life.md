@@ -1,4 +1,4 @@
-# Anthony, Bishop of Sardis
+# Anthony
 
 Anthony, bishop of Sardis, is unknown to the Synaxaristes and the Menaia. His memory is kept, together with the martyr [Lupus](/saints/lupus-the-martyr), in Sinai Codex 631, which also carries a joint supplicatory canon to the two of them.
 

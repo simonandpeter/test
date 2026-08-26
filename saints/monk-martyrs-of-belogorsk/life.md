@@ -1,4 +1,4 @@
-# The Monk-martyrs of Belogorsk (1918)
+# The Monk-martyrs of Belogorsk
 
 Archimandrite Varlaam and the brethren of the Belogorsk monastery killed with him in 1918 — the Russian calendar names them: Antony, Sergius, Elijah, Vyacheslav, Joasaph, John, Bessarion, Micah, Matthew, Euthymius, Barnabas, Hermogenes, Arcadius, Euthymius, Marcellus, John, Sergius, Demetrius, Savva, James, Peter, James, Alexander, Theodore, Alexius and Peter.
 

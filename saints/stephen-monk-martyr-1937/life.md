@@ -1,4 +1,4 @@
-# Stephen, Monk-martyr (1937)
+# Stephen
 
 Stephen — Stepan Ivanovich Kuskov in the world — was born on 10 December 1870 in the town of Vyshny Volochyok in Tver province, the son of the owner of a turner’s workshop. After school he entered a monastery, where he bore the obedience of a singer, and in 1898 took the tonsure. The civil strife that began after the revolution of 1917 found him in the town of Petropavlovsk; cut off from the Tver diocese by the front line, he found a place as psalmist in a church. The town was taken now by the Reds, now by the Whites; some priests left with the retreating White units, others died as martyrs at the Bolsheviks’ hands, priests grew scarce, and the monk — the Sretensky calendar’s life runs on past the point read here. He was shot in 1937, and the Russian calendar keeps him on 4 September (Julian) with the bishops Gregory and Sergius and their company.
 

@@ -1,4 +1,4 @@
-# Anastasius of Radovishte, New Martyr
+# Anastasius of Radovishte
 
 Anastasius was a young man of Radovishte in the diocese of Strumica who was learning a trade at Thessalonica; the Turks pressed him to turn Turk, which he firmly refused, for which he was tortured — the Prologue’s notice, which the Serbian calendar keeps on 29 August (Julian), runs on past the point read here.
 

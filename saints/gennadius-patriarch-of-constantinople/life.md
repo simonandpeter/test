@@ -1,4 +1,4 @@
-# Gennadius, Patriarch of Constantinople
+# Gennadius
 
 Gennadius was set on the throne of Constantinople in 458, in the reign of the emperor Leo the Great, after Anatolius. What is known of his life comes from the Spiritual Meadow, which records the stories of the monks of the monastery of Salama near Alexandria, Sophronius and John, who were clerics of the Church of Constantinople in his time; he was known for meekness, patience, purity and abstinence, and the power of his prayer is shown by the case of Charisimus, an unworthy cleric of the church of the martyr Eleutherius who lived in idleness and impurity and even practised robbery and sorcery — the life breaks off there as read. The Prologue adds that in his time the senator Studius came from Rome and with his blessing built the church of John the Forerunner and the monastery of the Studion; that he would ordain no one who did not know the whole Psalter by heart; that he presided over the council at Constantinople which anathematised simony; that he worked miracles and learned his end in a vision; and that he governed the Church thirteen years and reposed in peace in 471.
 

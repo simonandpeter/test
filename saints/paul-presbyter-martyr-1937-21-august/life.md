@@ -1,4 +1,4 @@
-# Paul (Yagodinsky), Presbyter, Hieromartyr (1937)
+# Paul (Yagodinsky)
 
 Paul Yagodinsky was born on 8 December 1879 in the village of Saigushi in the Ardatov district of Simbirsk province, today the Chamzinka district of Mordovia, the son of the psalmist of the local church. He was educated at the seminary, married in 1900 and was ordained deacon, serving in the village of Shugurovo in the Ardatov district, and after a time was ordained priest; by the recollections he was hard-working, kind and scrupulously honest, did not try to hide his thoughts on what was happening in the years after the revolution and spoke of what troubled him, and so his name came into the lists of the counter-revolutionary kulak rising that broke out in the district in 1919. He was arrested three times: in 1929 for non-payment of taxes, in 1930 and 1937 for counter-revolutionary activity — the calendar’s life runs on past the point read here. He refused to lay aside his orders — I shall die a priest, he said — and was shot on 3 September 1937; the Russian calendar keeps him on 21 August (Julian).
 

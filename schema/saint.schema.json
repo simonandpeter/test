@@ -12,7 +12,20 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "description": "Permanent id. Must equal the folder name."
     },
-    "display_name": { "type": "string", "minLength": 1 },
+    "display_name": {
+      "$comment": "The bare name, and only the name (author, 2026-08-27). It used to hold name, office, rank and death year in one string - \"Gorazd, Bishop of Bohemia and Moravia-Silesia, Hieromartyr (1942)\" - which is why the site could only ever prefix \"St.\": any other honorific would have collided with a rank already sitting in the string. The rank is read from `types`, the office is the field below, and the year is in `dates.death`; none of the three belongs here.",
+      "type": "string",
+      "minLength": 1
+    },
+    "office": {
+      "$comment": "What the figure held, not what they are called: \"Presbyter\", \"Bishop of Sardis\", \"Metropolitan of Moschonisia\". Printed on the subtext line beside the dates, never in the name - the rank is short and is how a saint is named, the office is long and is a fact about them, so the long half goes on the line that can truncate without losing the identity.",
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "$comment": "A folder is a saint unless it says otherwise. The one alternative is a feast: when the Great Feasts become folders, \"St. Dormition of the Theotokos\" is what a blanket honorific would print, so the naming function opts out on this flag rather than on a guess about the name (saints-naming-addendum.md, Step 3). Nothing in the corpus carries it yet; it is here before the work that needs it, not after.",
+      "enum": ["saint", "feast"]
+    },
     "names": { "type": "array", "items": { "$ref": "#/$defs/name" } },
     "sex": { "enum": ["male", "female", "unknown"] },
     "types": { "type": "array", "items": { "type": "string", "minLength": 1 } },

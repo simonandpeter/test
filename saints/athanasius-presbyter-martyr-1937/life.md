@@ -1,4 +1,4 @@
-# Athanasius the Presbyter, Hieromartyr (1937)
+# Athanasius the Presbyter
 
 Athanasius Kislov was born in March 1880 in the village of Taraskino in the Sebezh district of Pskov province, to poor peasants who worked for hire; orphaned at four — his father died of heart failure surrounded by wolves in the forest, his mother soon after — he and his two sisters were taken in by the parish priest, Joseph Nikanovich, who raised them as his own. He finished the four-year people’s school, went at sixteen to Petersburg as a clerk, and in 1908 married his foster-father’s daughter Anna, who bore him nine children. He studied to be a reader, served as psalmist at the Dormition church of Yasluizhi in Vitebsk province, and was ordained deacon in 1910 by Bishop Seraphim of Polotsk; he became a priest in 1924, and stood firm against the Renovationist schism despite persecution.
 

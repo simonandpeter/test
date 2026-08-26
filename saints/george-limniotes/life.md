@@ -1,4 +1,4 @@
-# George Limniotes the Confessor
+# George Limniotes
 
 George loved the monastic life from childhood, and when he came of age he became a monk and lived the ascetic life on the Olympus of Bithynia.
 

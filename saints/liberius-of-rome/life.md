@@ -1,4 +1,4 @@
-# Liberius the Confessor, Pope of Rome
+# Liberius
 
 Liberius succeeded Pope Julius on the episcopal throne of Rome. Like him he was an advocate of Athanasius the Great in the struggle against Arianism and for the Orthodox creed, and he protected Paul I, archbishop of Constantinople, whom the emperor Constantius persecuted for his Orthodoxy.
 

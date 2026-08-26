@@ -1,4 +1,4 @@
-# Anna the Prophetess, daughter of Phanuel
+# Anna, daughter of Phanuel
 
 The Greek calendar’s entry for 28 August refers to 3 February, the Meeting of the Lord, where her chief memory is kept; the Romanian calendar keeps her on 28 August with a short life.
 

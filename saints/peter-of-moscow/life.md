@@ -1,4 +1,4 @@
-# Peter, Metropolitan of Moscow
+# Peter
 
 The Greek calendar keeps 24 August for the translation of his relics and refers his life to 21 December, where its own entry has no details; what follows is the Orthodox Church in America’s note for the day.
 

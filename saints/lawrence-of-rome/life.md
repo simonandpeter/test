@@ -1,4 +1,4 @@
-# Lawrence of Rome, Archdeacon
+# Lawrence of Rome
 
 Lawrence, archdeacon of Rome, suffered in 258 under the emperor Valerian, together with Pope Sixtus, the deacons Felicissimus and Agapitus and the soldier Romanus. [Sixtus](/saints/sixtus-ii-of-rome), an Athenian by birth and well educated, had preached in Spain and been made bishop of Rome after the martyrdom of Pope Stephen, in a time when the bishop of Rome was elected to a certain death; he was soon seized and imprisoned with his two deacons, [Felicissimus](/saints/felicissimus-the-deacon) and [Agapitus](/saints/agapitus-the-deacon). Lawrence met him as he was led to prison and wept: where are you going, father, without your archdeacon, with whom you always offered the bloodless sacrifice — take your son with you, that I may share with you the shedding of blood for Christ. I am not leaving you, my son, Sixtus answered; I am old and go to an easy death, but heavier sufferings await you; three days after our death you will follow me. Now go, sell the church’s treasures and give to the persecuted and needy Christians. Lawrence did so with zeal.
 

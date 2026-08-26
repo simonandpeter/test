@@ -1,4 +1,4 @@
-# Cyril, Bishop of Gortyna
+# Cyril
 
 Cyril, bishop of Gortyna, lived under Diocletian and his co-emperor Maximian. As a Christian he stood trial before the governor Agrippinus and after questioning was thrown into prison; in the night he heard a voice bidding him go to Rome, and in the morning the prison doors stood open and the idols lay overthrown and broken. On the road to Rome he had a vision: the venerable Philoxenus appeared and foretold him two crowns, a bishop’s and a martyr’s. At Rome he gave the Church great help by his preaching, and when persecution broke out set off for Jerusalem to keep up the spirits of the Christians there; on the way a vision bade him not to pass Crete by, and arriving there he was chosen bishop of Gortyna, being then sixty. He held the see until he was ninety-five, and in the new persecution was tried, condemned and beheaded at the place called Raxa at the beginning of the fourth century. The Russian calendar keeps him on 6 September and 9 July (Julian), with a troparion — led out of prison by a divine voice, it begins — and a kontakion.
 

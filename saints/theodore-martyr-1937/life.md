@@ -1,4 +1,4 @@
-# Theodore, Martyr (1937)
+# Theodore
 
 Fyodor Dmitrievich Zakharov was born on 13 April 1874 in the settlement of Uglitsky in the Chelyabinsk district of Orenburg province, to a family of hereditary Cossacks. In 1919 he was arrested by White officers and let go the next day; until 1920 he lived in Vladivostok, and in 1920 was arrested at Verkhneudinsk for crossing from Vladivostok through the White zone, and released after thirty-two days.
 

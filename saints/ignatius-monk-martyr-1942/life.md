@@ -1,4 +1,4 @@
-# Ignatius (Dalanov), Hieromonk of Optina, Monk-martyr (1942)
+# Ignatius (Dalanov)
 
 Ignatius was born on 12 September 1885 in the village of Kozhemyakino in the Sebezh district of Vitebsk province to the peasant Michael Dalanov, and named John at baptism; he had his schooling at the village school. On 6 June 1911 he entered Optina, on 11 September was blessed to wear the cassock, and from 1914 bore his obedience in the skete of John the Forerunner; in July 1914 part of the brethren — rasophores and novices — were called to the front in the war with Germany, among them the novice John, sent to the 5th Siberian reserve infantry regiment, and on Great Friday 1917 he was tonsured rasophore. After Optina was closed — the calendar’s life runs on past the point read here. He served in the churches of the Kozelsk district; arrested in 1937 on a charge of counter-revolutionary agitation he did not admit guilt despite torture, was sentenced to ten years in the camps, and died in the Temnikov camp in Mordovia on 3 September 1942 of the harsh conditions. The Russian calendar keeps him on 21 August (Julian), among the saints of Optina.
 

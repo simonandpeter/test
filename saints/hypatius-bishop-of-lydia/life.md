@@ -1,4 +1,4 @@
-# Hypatius, Bishop of Lydia
+# Hypatius
 
 Hypatius and [Andrew](/saints/andrew-the-presbyter-confessor) were schoolfellows
 and models of brotherhood even as boys, raised from childhood in the Christian faith and marked

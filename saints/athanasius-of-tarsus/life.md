@@ -1,4 +1,4 @@
-# Athanasius, Bishop of Tarsus
+# Athanasius
 
 Athanasius, bishop of Tarsus in Cilicia, who baptised [Anthousa](/saints/anthousa-of-seleucia), was beheaded under the emperor Aurelian (270–275). That is the whole of the Sretensky calendar’s life; the Prologue, which keeps him in Anthousa’s entry for the Serbian calendar, has him beheaded with her two servants Charisimus and Neophytus under Valerian, about 257.
 

@@ -1,4 +1,4 @@
-# Basil (Smirnov), Presbyter, Hieromartyr (1937)
+# Basil (Smirnov)
 
 Basil Sergeevich Smirnov was born in 1889 in the village of Kazeevka in the Narovchat district of Penza province, a priest’s son. In 1912 he finished the Penza seminary and was ordained priest; in 1930 he was arrested and sentenced to eight years in the camps, serving them on the building of the White Sea–Baltic canal. Returning from imprisonment he settled at Penza in 1935, and was well acquainted with the bishop of Penza, the hieromartyr [Theodore (Smirnov)](/saints/theodore-of-penza), and the town clergy; on 18 October 1936 Bishop Theodore, Basil Smirnov and other priests were arrested on a false charge and held in the town prison. He did not admit guilt; the investigation ended on 4 April 1937, and on 10 April the special collegium of the Kuibyshev regional court found the evidence insufficient and sent the case back — the calendar’s life runs on past the point read here. He was sentenced to be shot and shot on 4 September 1937; he was numbered among the saints in 2000, and the Russian calendar keeps him on 22 August (Julian).
 

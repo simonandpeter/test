@@ -1,4 +1,4 @@
-# Shushanik, Queen of Georgia
+# Shushanik
 
 Shushanik — Susanna — was the wife of Prince Varsken of Georgia, ruler of the province of Hereti, raised in a devout Christian family and deeply imbued with the love and fear of God. Kartli then lay under heavy Persian pressure, and Varsken visited the Persian king Peroz hoping to win favour; he renounced the true faith, turned to fire-worship, and promised the king to convert his wife and children when he came home.
 

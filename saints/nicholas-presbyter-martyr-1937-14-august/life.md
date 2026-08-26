@@ -1,4 +1,4 @@
-# Nicholas the Presbyter, Hieromartyr (1937, 14 August)
+# Nicholas the Presbyter (14 August)
 
 Nikolai Vasilievich Tolgsky was born on 20 February 1886 in the village of Dorki in the Bronnitsy district of Moscow province, the youngest of three brothers who all became priests — sons of the archpriest Vasily Tolgsky, who served at Dorki. He finished the Moscow seminary in 1907 and the Academy in 1911 as candidate of theology, was ordained and sent to the church of the Exaltation of the Cross at Altufyevo, and then moved into Moscow, to the church of St Sergius in Pushkari. A vivid figure in the church life of those years, he went on with his teaching and founded choirs despite the persecution, came to the notice of Patriarch Tikhon himself, and was made dean of the Sretensky district, archpriest and mitred.
 

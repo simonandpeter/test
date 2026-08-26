@@ -1,4 +1,4 @@
-# John the Presbyter, Hieromartyr (1937)
+# John the Presbyter
 
 John Nikolsky was born on 4 January 1878 in the village of Lyatskovo in the Bezhetsk district of Tver province, the son of a psalmist; after the Tver seminary he was ordained to a village church in the Kimry district. In 1929 the authorities ordered him to deliver twenty-five poods of rye to the state collection point by 10 November; he was away, received the summons on the 12th, brought the rye the next day, and was arrested for being three days late — the court confiscated all he had and banished him from the district. He moved his family to Tver, where his cousin Archpriest Vasily Vladimirsky lived, and Archbishop Thaddeus appointed him to the church of the Nativity. When the OGPU arrested the worthiest priests of Tver, his cousin among them, he visited the old man’s seventy-two-year-old wife, who had no one else, and that was enough: he was arrested on 29 January 1933, and at his first interrogation six weeks later answered that as a believer he held the Soviet power to be established by God and obeyed it not for fear but for conscience, though he felt wronged at times by its lower organs.
 

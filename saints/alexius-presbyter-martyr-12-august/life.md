@@ -1,4 +1,4 @@
-# Alexius the Presbyter, Hieromartyr
+# Alexius the Presbyter
 
 Alexius Lopatin was born in 1868 in the settlement of Kukarka in Vyatka province and finished the Vyatka seminary. From 1890 to October 1916 he served at the Transfiguration church of the village of Verkhovino — dean of his district from 1906, teacher of religion in the local schools, a deputy to the diocesan congresses and a member of the diocese’s missionary and temperance societies; in October 1916 he was made rector of the Transfiguration cathedral of Slobodskoy and archpriest, and in February 1917 dean of the town’s churches.
 

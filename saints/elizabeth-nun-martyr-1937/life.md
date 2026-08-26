@@ -1,4 +1,4 @@
-# Elizabeth (Yarygina), Nun, Monastic Martyr (1937)
+# Elizabeth (Yarygina)
 
 Elizabeth — Elizaveta Alexandrovna Yarygina in the world — was born in 1879 in the village of Safronovo in the Yarensk district of Vologda province, today the Lensky district of the Archangel region, to a peasant family. She entered the Kyltovo convent of the Exaltation of the Cross as a novice and in 1918 was tonsured; after the convent was closed she served as psalmist at the church of the Meeting of the Lord in the village of Vylgort in the Syktyvdin district of Komi. On 4 August 1937 she was arrested on a charge of active counter-revolutionary activity and spreading rumours of the imminent collapse of collective farming and the Soviet power; she did not admit guilt, and the troika of the Komi NKVD sentenced her to the highest measure. On 12 September 1937 she was shot near Syktyvkar; she was numbered among the saints in 2001, and the Russian calendar keeps her on 30 August (Julian).
 

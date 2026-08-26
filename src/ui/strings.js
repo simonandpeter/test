@@ -427,6 +427,38 @@ export const STRINGS = {
      * prints as a word - the slug, title-cased - so the corpus can grow a
      * type without waiting for a string.
      */
+    /*
+     * The rank a saint's name is printed with (author, 2026-08-27: "Add the
+     * rank Hieromartyr or Righteous if it applies to the saint, and if there
+     * is no special rank, print 'St.' prefixed"). One entry per rank the
+     * precedence walk in `lib/honorific.js` can reach, masculine and
+     * feminine. English declines none of these, so both forms are the same
+     * word here; the pair exists for the four packs that do decline them.
+     *
+     * **`honorific` lost its stop with the same instruction** ("and then
+     * strip the ."), reversing 2026-08-25's "please add '.' after St or Sf".
+     * It is stripped in all five packs rather than in English alone: a stop
+     * in four of them and none in the fifth is the inconsistency that would
+     * need correcting next.
+     */
+    ranks: {
+      honorific: { m: 'St', f: 'St' },
+      forefather: { m: 'Righteous Forefather', f: 'Righteous Foremother' },
+      'great-martyr': { m: 'Great Martyr', f: 'Great Martyr' },
+      'virgin-martyr': { m: 'Virgin Martyr', f: 'Virgin Martyr' },
+      'passion-bearer': { m: 'Passion-bearer', f: 'Passion-bearer' },
+      'equal-to-the-apostles': { m: 'Equal to the Apostles', f: 'Equal to the Apostles' },
+      apostle: { m: 'Apostle', f: 'Apostle' },
+      prophet: { m: 'Prophet', f: 'Prophetess' },
+      hieromartyr: { m: 'Hieromartyr', f: 'Hieromartyr' },
+      'venerable-martyr': { m: 'Venerable Martyr', f: 'Venerable Martyr' },
+      'new-martyr': { m: 'New Martyr', f: 'New Martyr' },
+      martyr: { m: 'Martyr', f: 'Martyr' },
+      venerable: { m: 'Venerable', f: 'Venerable' },
+      confessor: { m: 'Confessor', f: 'Confessor' },
+      blessed: { m: 'Blessed', f: 'Blessed' },
+      righteous: { m: 'Righteous', f: 'Righteous' },
+    },
     types: {
       martyr: 'Martyr',
       hieromartyr: 'Hieromartyr',

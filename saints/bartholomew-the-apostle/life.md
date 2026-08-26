@@ -1,4 +1,4 @@
-# Bartholomew the Apostle
+# Bartholomew
 
 The Greek calendar keeps 25 August for the return of his relics, and the synaxarion’s note for the day tells that story rather than his life.
 

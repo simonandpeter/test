@@ -1,4 +1,4 @@
-# Peter (Iovlev), Presbyter, Hieromartyr (1918)
+# Peter (Iovlev)
 
 The Russian calendar keeps on 26 August (Julian) the hieromartyr Peter the presbyter, killed in 1918; the Sretensky calendar’s name page calls him Peter (Iovlev), priest, hieromartyr, and prints no life under the line, and the Russian church calendar at azbyka.ru has no page for him under the day. This entry records the line and the name and nothing more.
 

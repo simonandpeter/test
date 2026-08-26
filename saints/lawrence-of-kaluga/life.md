@@ -1,4 +1,4 @@
-# Lawrence of Kaluga, Fool for Christ
+# Lawrence of Kaluga
 
 The blessed Lawrence, fool for Christ and wonderworker of Kaluga, lived at the beginning of the sixteenth century half a verst from old Kaluga, beside a forest church of the Nativity of Christ that stood at the top of a hill; an underground passage was dug from his hut to the church, where he listened to the services. He was also a guest in the house of the Kaluga prince Simeon Ioannovich, and is thought to have come of the boyar family Khitrovo, whose family book of commemoration at the Lyutikov monastery of Peremyshl began with his name. Winter and summer he went barefoot, in a shirt and a sheepskin coat, and by his self-denial he was known in his lifetime for gifts of grace.
 

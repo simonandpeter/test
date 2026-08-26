@@ -128,7 +128,7 @@ test('reduced motion removes animation rather than shortening it', async ({ brow
 test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // One calendar at a time (author, 2026-08-22; one church of three): the
@@ -142,7 +142,7 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
   await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
   // Only the civil date is printed (author, 2026-08-24): the line that gave
   // the day in the church's own reckoning went with the "Change calendar"
   // control under the strip, because two dates for one day read as confusion
@@ -230,7 +230,7 @@ test('the hero image is a square on desktop and a 3:2 band on a phone', async ({
 test('a saint opens with its own names, citations and life', async ({ page }) => {
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
 
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Anthony the Great');
   // The "Also called" block — the multi-script name forms (Ἀντώνιος,
   // Ⲁⲛⲧⲱⲛⲓⲟⲥ) that used to stand here — was removed by the author,
   // 2026-08-24, reversing the "attest, never adjudicate" passage in
@@ -305,7 +305,7 @@ test('a place keeps the note that says how far it is really fixed', async ({ pag
 
 test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
   await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Christopher');
+  await expect(page.locator('h1.saint-name')).toHaveText('Martyr Christopher');
   await expect(page.locator('.saint-media')).toHaveCount(0);
   // Removed from the General Roman Calendar in 1969 and still venerated: the
   // page must not turn that into a refusal.
@@ -596,7 +596,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
   expect(afterHover).toBe(1);
 
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Anthony the Great');
   // The click reuses what the hover fetched rather than asking again.
   expect(fetched.length).toBe(afterHover);
 });
@@ -620,7 +620,7 @@ test('the shared element is named once, on both sides of the navigation', async 
   expect(new Set(onCalendar).size).toBe(onCalendar.length);
 
   await page.locator('.hero-name a').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Anthony the Great');
   const onDetail = await names();
   expect(onDetail).toContain('s-anthony-the-great-name');
   expect(new Set(onDetail).size).toBe(onDetail.length);
@@ -808,11 +808,20 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('[data-count]')).toHaveText('0');
 
-  // Every name is drawn with "St" before it (author, 2026-08-24), so typing
-  // back what the screen shows must find the saint: the honorific is dropped
-  // from the query, because the index holds the bare name and terms AND.
-  await query.fill('St. John Chrysostom');
+  // Every name is drawn with a rank before it, so typing back what the screen
+  // shows must find the saint: the rank is dropped from the query, because the
+  // index holds the bare name and terms AND.
+  await query.fill('St John Chrysostom');
   await expect(page.locator('.index-card').first()).toContainText('John Chrysostom');
+
+  /*
+   * And a real rank, not only the honorific. This is the case that would go
+   * quietly wrong: *Venerable* is implied for the monastics rather than typed,
+   * so `venerable` is not a term in the index for Anthony the Great at all,
+   * and a query carrying it would AND its way to nothing.
+   */
+  await query.fill('Venerable Anthony the Great');
+  await expect(page.locator('.index-card').first()).toContainText('Anthony the Great');
 });
 
 test('a filtered-out saint fades rather than vanishing', async ({ page }) => {
@@ -940,7 +949,7 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await day('2026-06-28').click();
   await expect(page.locator('h1')).toHaveText(/28 Jun 2026/);
   await expect(page.locator('.day-panel')).toHaveCount(1);
-  await expect(page.locator('.hero-name')).toHaveText('St. Augustine of Hippo');
+  await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
@@ -2526,7 +2535,7 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
   await expect(page.locator('.hero .bookmark')).toHaveCount(1);
 
   await media.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Augustine of Hippo');
+  await expect(page.locator('h1.saint-name')).toHaveText('St Augustine of Hippo');
 });
 
 test('the hero bookmark holds its place beside the name when it wraps to two lines', async ({ page }) => {
@@ -2536,8 +2545,8 @@ test('the hero bookmark holds its place beside the name when it wraps to two lin
    * position and doesn't drop down another line." 14 September 2026 in the
    * Romanian calendar is the day's sole Romanian entry, so pickHero is
    * deterministic rather than the usual hash over a pool — and his name,
-   * "St. Macarius the New, disciple of Patriarch Niphon, Monk-martyr (1527)",
-   * is long enough to wrap at 360 px without being constructed for the test.
+   * "Cuviosul Mucenic Macarie, ucenicul Patriarhului Nifon", is long enough to
+   * wrap at 360 px without being constructed for the test.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page, { church: 'romanian' });
@@ -3214,7 +3223,7 @@ test('the × returns to the Daily page when the saint was opened from it, not to
   await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Daily');
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(new RegExp(`${POPULATED}$`));
-  await expect(page.locator('.hero-name')).toHaveText('St. Anthony the Great');
+  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
 
   // Opened from All Saints instead, the × still returns there.
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -3510,7 +3519,10 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // "undated – 1515" until then.
   // "Entered eternal glory in 1515" until 2026-08-25, when the author
   // replaced the phrase with plain "Reposed".
-  await expect(page.locator('.hero-dates')).toHaveText('Reposed 1515');
+  // The office joined the line under the name on 2026-08-27, when it moved
+  // out of `display_name`: the heading reads "Blessed Lawrence of Kaluga" and
+  // this line says what he was.
+  await expect(page.locator('.hero-dates')).toHaveText('Fool for Christ · Reposed 1515');
   // And Also commemorated reads as one company, not a ruled ledger: no line
   // between the saints (author, 2026-08-24; the shelves keep theirs).
   expect(
@@ -3594,7 +3606,7 @@ test('the hymns of the day are the chosen church own, in its language, and the h
    */
   await ready(page, { church: 'greek', language: 'el' });
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Άγ. Κοσμάς ο Αιτωλός');
+  await expect(page.locator('.hero-name')).toHaveText('Ισαπόστολος Κοσμάς ο Αιτωλός');
   await expect(page.locator('[data-hymns] .hymn')).toHaveCount(2);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'el');
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Κοσμᾶν τὸν ἰσαπόστολον');
@@ -3609,7 +3621,7 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await page.locator('#church-panel [data-church="romanian"]').click();
   await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
   // The *calendar* changed to Romanian; the *language* is still Greek, and
-  // the name follows the language: «Άγ. Φανούριος», the form the Greek
+  // the name follows the language: «Μεγαλομάρτυς Φανούριος», the form the Greek
   // synaxarion prints. Which is the distinction this whole test is about,
   // arriving in the names as well as in the hymns (2026-08-26).
   await expect(page.locator('.hero-name')).toHaveText(/Φανούριος|Ποιμήν/);
@@ -3791,7 +3803,7 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(2);
 
   await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Eleutherius, Monk-martyr (1937)');
+  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Martyr Eleutherius');
   await expect(page.locator('.life p').first()).toContainText('Eleutherius Pechennikov was born in 1870');
   // The year, in the line under the name: his register is a lone dated death
   // with no place, which ui/datefacts.js stopped drawing on 2026-08-26 because
@@ -3844,19 +3856,19 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   // reader's language and links to a Bible in it (Amendment 39).
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Faptele Apostolilor 13:25-32');
   await expect(page.locator('[data-readings] .readings-source a')).toHaveAttribute('href', /days\.pravoslavie\.ru\/Days\/20260829\.html/);
-  await expect(page.locator('.hero-name')).toHaveText('Sf. Ioan Botezătorul');
+  await expect(page.locator('.hero-name')).toHaveText('Proorocul Ioan Botezătorul');
   await expect(page.locator('[data-hymns] .hymn-text[lang="cu"]').first()).toContainText('Память праведнаго с похвалами');
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="serbian"]').click();
   await page.goto('/calendar/2026-09-18', { waitUntil: 'networkidle' });
-  // Serbian calendar, Romanian page: «Sf. Zaharia», from the Romanian form.
-  await expect(page.locator('.hero-name')).toContainText('Sf. Zaharia');
+  // Serbian calendar, Romanian page: «Proorocul Zaharia», from the Romanian form.
+  await expect(page.locator('.hero-name')).toContainText('Proorocul Zaharia');
   await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]').first()).toContainText('Обучен у свештеничке одежде');
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Efeseni 1:7-17');
 
   await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Sf. Vavila, Episcopul Antiohiei');
+  await expect(page.locator('h1.saint-name')).toHaveText('Sfințitul Mucenic Vavila, Episcopul Antiohiei');
   /*
    * The life itself is English and the page says so first, in Romanian
    * (author, 2026-08-26: "The saint profile pages do not have russian, greek,
@@ -4105,11 +4117,11 @@ test('latest runs the other way from earliest', async ({ page }) => {
   // this test's subject, so it chooses them explicitly — and reads the leader
   // off the screen, because a re-sort does not reorder the DOM.
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
   await chooseSort(page, 'latest');
-  await expect.poll(() => leaders(page)).toBe('St. Peter (Cheltsov), Archpriest, Confessor (1972)');
+  await expect.poll(() => leaders(page)).toBe('Confessor Peter (Cheltsov)');
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
 });
 
 test('random deals an order, and holds it still under the reader', async ({ page }) => {
@@ -4129,7 +4141,7 @@ test('random deals an order, and holds it still under the reader', async ({ page
   // Random is the default now; stepping through Earliest first keeps this
   // test what it was — proof that choosing Random deals and then holds.
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
+  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
   const earliest = await leaders(page);
 
   await chooseSort(page, 'random');
@@ -4275,7 +4287,7 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
    * saint — counted against the churches that do keep them, the coverage is
    * 393/393 Russian, 331/344 Greek, 116/122 Romanian, 116/129 Serbian.
    */
-  await expect.poll(() => leaders(page)).toBe('Св. Мојсеј Боговидац');
+  await expect.poll(() => leaders(page)).toBe('Пророк Мојсеј Боговидац');
 });
 
 /* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */
@@ -4298,7 +4310,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(cards).toHaveCount(6);
 
   const first = cards.first();
-  await expect(first.locator('.index-name')).toHaveText('St. Agapius of Gaza');
+  await expect(first.locator('.index-name')).toHaveText('Martyr Agapius of Gaza');
   await expect(first.locator('.index-dates')).toContainText('304–306');
   // Every row is a card: a media box even with no picture, so the column of
   // names stays a column, and its own Save.
@@ -4317,7 +4329,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await first.locator('.bookmark').click();
   await expect(first.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
   await first.locator('.index-name').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Agapius of Gaza');
+  await expect(page.locator('h1.saint-name')).toHaveText('Martyr Agapius of Gaza');
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 });
 
@@ -5529,8 +5541,8 @@ test('a saint is named in the reader own language where the corpus has the name'
    * So nothing here is translated; a recorded form is chosen.
    */
   for (const [language, church, name] of [
-    ['ru', 'russian', 'Св. Максим Исповедник'],
-    ['sr', 'serbian', 'Св. Мојсеј Боговидац'],
+    ['ru', 'russian', 'Преподобный Максим Исповедник'],
+    ['sr', 'serbian', 'Пророк Мојсеј Боговидац'],
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
@@ -5558,7 +5570,7 @@ test('a saint is named in the reader own language where the corpus has the name'
     localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
   );
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Св. Anthony the Great');
+  await expect(page.locator('h1.saint-name')).toHaveText('Преподобный Anthony the Great');
   await ctx.close();
 });
 
@@ -5861,7 +5873,7 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
 
   // The profile is there, with the Greek attestation and the Greek's own name.
   await page.goto('/saints/eustathius-the-great-martyr', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1')).toContainText('Eustathius the Great Martyr');
+  await expect(page.locator('h1')).toContainText('Great Martyr Eustathius');
   await expect(page.locator('main')).toContainText('20 September (Revised Julian)');
   await expect(page.locator('main')).toContainText('saint.gr');
   // and a hymn, which is the other half of what was asked for.
@@ -6041,7 +6053,9 @@ test('the first day past the runway has its saints, and the eight the corpus alr
   const listed = await page.locator('main').textContent();
   // one new folder and one the corpus already held, on the same day
   expect(listed).toContain('Macarius of Kanev');
-  expect(listed).toContain('John, Archbishop of Novgorod');
+  // The see is on the subtext line rather than in the name since 2026-08-27,
+  // so this looks for it where it now is.
+  expect(listed).toContain('Archbishop of Novgorod');
 
   // A saint the corpus already held now carries the Russian calendar's own
   // testimony, where the row used to say the page had not been read.
@@ -6203,7 +6217,7 @@ test('a life links the saints it names, and refuses the ones it cannot be sure o
   // times wants one link.
   await expect(page.locator('.life a[data-prefetch="athanasius-of-alexandria"]')).toHaveCount(1);
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('St. Athanasius of Alexandria');
+  await expect(page.locator('h1.saint-name')).toHaveText('Confessor Athanasius of Alexandria');
 
   // A life that already carries a hand-written link keeps its own and gains no
   // second one: the walker refuses to enter an <a>.
@@ -6928,9 +6942,19 @@ test("the hero's bookmark holds the register's column, whatever the name does", 
     const line = document.querySelector('.hero .name-line');
     const h2 = line.querySelector('.hero-name');
     const mark = line.querySelector('.bookmark');
-    return mark.getBoundingClientRect().left - h2.getBoundingClientRect().right;
+    return {
+      gap: mark.getBoundingClientRect().left - h2.getBoundingClientRect().right,
+      // The line's own flex gap, which is what the mark used to sit at and
+      // nothing more. Read off the page rather than written down, because the
+      // number this test is really about is "wider than the gap", and a name
+      // that grows or shrinks must not be able to turn that into a threshold
+      // nobody meant — this assertion went red on 2026-08-27 at 31.5 px when
+      // the rank moved into the name and made the name seven characters
+      // longer, while proving exactly what it was written to prove.
+      flexGap: parseFloat(getComputedStyle(line).columnGap) || 8,
+    };
   });
-  expect(slack).toBeGreaterThan(40);
+  expect(slack.gap, `${slack.gap} against a flex gap of ${slack.flexGap}`).toBeGreaterThan(slack.flexGap * 2);
 });
 
 test('a chooser panel arrives the way it leaves, and the page comes with it', async ({ page }) => {
@@ -7577,4 +7601,67 @@ test('two months of the same height do not move the page between them', async ({
   // Jul to Jun and Jun to May are five rows to five rows, at speed.
   expect(runs[1].grew, `${runs[1].month} moved the page`).toBe(false);
   expect(runs[2].grew, `${runs[2].month} moved the page`).toBe(false);
+});
+
+test('a saint is named by rank, and what they held is on the line below', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "Add the rank Hieromartyr or Righteous if it applies
+   * to the saint, and if there is no special rank, print 'St.' prefixed, and
+   * then strip the ." — which reverses Amendment 32's blanket honorific.
+   *
+   * 28 August on the Greek calendar is the day the addendum names for the
+   * check, because the corpus and OCA's own listing for it share three
+   * figures and OCA prints all three the way this now does: *Venerable Moses
+   * the Ethiopian*, *Righteous Hezekiah*, and Anna as a prophetess. It is
+   * also a day with six commemorations, so the hero and the register are both
+   * exercised on one page.
+   *
+   * The office is the other half. It came out of `display_name` in the same
+   * sitting — the names used to read "Hezekiah the Righteous, King of Judah"
+   * — and it is drawn on the subtext line beside the dates, never in the
+   * name: the rank is short and is how a saint is named, the office is long
+   * and is a fact about them, so the long half sits on the line that can
+   * truncate without losing the identity.
+   */
+  await ready(page, { church: 'greek', language: 'en' });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  await expect(page.locator('.hero-name')).toHaveText('Venerable Moses the Ethiopian');
+
+  const register = page.locator('.day-panel .register .index-name');
+  await expect(register.filter({ hasText: 'Hezekiah' })).toHaveText('Righteous Hezekiah');
+  await expect(register.filter({ hasText: 'Anna' })).toHaveText('Prophetess Anna, daughter of Phanuel');
+  // Not "Hezekiah the Righteous, King of Judah": the rank leads, the office
+  // has moved down a line, and the death year is read off `dates.death`.
+  const hezekiah = page.locator('.day-panel .register .index-card', { hasText: 'Hezekiah' });
+  await expect(hezekiah.locator('.index-dates')).toHaveText('King of Judah · Reposed 696 BC');
+
+  /*
+   * And "St" is the marked case now — 58 of 742, the hierarchs and the
+   * theologians — carrying no stop, which is the second half of the same
+   * instruction. Athanasius is one of the seven saints who have an icon, so
+   * this is a page a reader actually reaches.
+   */
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toHaveText('St John Chrysostom');
+
+  // The office is printed on the facts line, and the type that says the same
+  // word is not printed twice beside it.
+  await page.goto('/saints/gorazd-of-bohemia', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toHaveText('Hieromartyr Gorazd');
+  await expect(page.locator('.saint-facts')).toContainText('Bishop of Bohemia and Moravia-Silesia');
+  await expect(page.locator('.saint-facts')).not.toContainText('Silesia · Bishop');
+
+  /*
+   * The rank follows the reader's language and declines with the saint's sex,
+   * which the old abbreviation-only honorific existed to avoid: «Άγ.» dodged
+   * the question, «Οσία» answers it. Greek page, Greek calendar.
+   */
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'el' }));
+  });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText('Όσιος');
 });

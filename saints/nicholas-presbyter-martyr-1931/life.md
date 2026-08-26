@@ -1,4 +1,4 @@
-# Nicholas (Georgievsky), Archpriest, Hieromartyr (1931)
+# Nicholas (Georgievsky)
 
 Nicholas was born in 1865 in the village of Kolomenskoye in the Nagatino district of the Moscow county, the son of the priest Sergius Georgievsky. Finishing the Moscow seminary in 1886 he was ordained priest and served in the churches of the Moscow diocese; at the beginning of the twentieth century he served at the church of Cosmas and Damian in the settlement of Bolshevo in the Mytishchi district, built at the end of the eighteenth century, where in 1900 by his efforts and the local benefactors’ the south chapel of the Kazan icon was finished; raised to archpriest, he was for a long time, through the persecutions too, dean of the churches of the Mytishchi district. At the beginning of 1930 the godless managed to get the church closed — the calendar’s life runs on past the point read here; he actively resisted the closing. Arrested in 1931 on a charge of anti-Soviet agitation he refused to admit guilt, was sentenced to three years’ exile in Kazakhstan, and died on 10 September 1931 in the transit prison at Alma-Ata. The Russian calendar keeps him on 28 August (Julian).
 

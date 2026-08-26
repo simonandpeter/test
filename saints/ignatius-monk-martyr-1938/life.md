@@ -1,4 +1,4 @@
-# Ignatius (Lebedev), Schema-archimandrite, Monk-martyr (1938)
+# Ignatius (Lebedev)
 
 Ignatius — Alexander Alexandrovich Lebedev in the world — was born on 28 May 1884 in the town of Chukhloma in Kostroma province, into the devout family of Alexander Konstantinovich and Maria Filosofovna Lebedev; his mother was the daughter of the secretary of the zemstvo court, his father secretary of the congress of justices of the peace of Chukhloma, raised for zealous and blameless service to court councillor and decorated with three orders — the calendar’s life runs on past the point read here. In 1908 he entered the Smolensk Zosimova hermitage, where he was tonsured; after the hermitage was closed he moved to Moscow, became archimandrite and confessor of the Vysoko-Petrovsky monastery, gathering a large flock about him, led a strict ascetic life and secretly tonsured believers as monks. Arrested repeatedly for the faith, in 1935 he was sentenced and sent to a camp, and died in custody on 11 September 1938 in the camp infirmary, buried in the camp cemetery. The Russian calendar keeps him on 30 August (Julian).
 

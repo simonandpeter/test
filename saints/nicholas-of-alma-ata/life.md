@@ -1,4 +1,4 @@
-# Nicholas, Metropolitan of Alma-Ata, Confessor
+# Nicholas
 
 The Russian calendar keeps on 26 August (Julian) the finding in 2000 of the relics of the hierarch Nicholas the confessor, metropolitan of Alma-Ata, and prints no life under the line; this entry records the line and nothing more.
 

@@ -1,4 +1,4 @@
-# Natalia (Kozlova), Martyr (1937)
+# Natalia (Kozlova)
 
 Natalia Ivanovna Kozlova was born on 12 September 1895 into a devout peasant family of the village of Churiki in the Skopin district of Ryazan province, the youngest of five children; her parents managed to give their children the traditional peasant love of work, love of God and the Church, and such education as peasant children could have then — Natalia finished the three-class village school, was literate and read the Scriptures and spiritual books with great interest, and tried not to miss a single service — the calendar’s life runs on past the point read here. A peasant of Churiki, mother of eight children and churchwarden, after her husband was killed by the communists and their property confiscated she went on actively defending the faith, organising petitions for arrested priests and travelling to Moscow to demand the church back for the believers; arrested in 1937 on a charge of anti-Soviet agitation, she was shot on 14 September 1937 at the Butovo range. She was numbered among the saints in 2004, and the Russian calendar keeps her on 1 September (Julian).
 

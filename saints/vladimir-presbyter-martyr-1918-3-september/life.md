@@ -1,4 +1,4 @@
-# Vladimir (Dmitrievsky), Presbyter, Hieromartyr (1918)
+# Vladimir (Dmitrievsky)
 
 Vladimir Fyodorovich Dmitrievsky was born in 1876 in Novgorod province, of a psalmist’s family. He finished two classes of the Novgorod seminary and became a teacher in the school of the village of Kuvizino in the Valdai district; on 25 March 1895 he was made psalmist of the church of Kolpakovskoye in the Lepsinsk district of the Semirechye region, and on 4 October 1902 moved to the town of Pishpek — Bishkek. On 18 June 1903 Paisius (Vinogradov), bishop of Turkestan and Tashkent, ordained him deacon, and on 22 September priest, appointing him to the parish of Arasan-Kopal, where he was also catechist of the Kopal girls’ school; in 1910 he was rector of the church of St Nicholas in the stanitsa of Kopalskaya — the calendar’s life runs on past the point read here. In 1918 he died in a clash between a church procession and a Bolshevik demonstration; he was numbered among the saints in 2000, and the Russian calendar keeps him on 3 September (Julian) among the martyrs of Semirechye.
 

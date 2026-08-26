@@ -1,4 +1,4 @@
-# Maximus of Moscow, Fool for Christ
+# Maximus of Moscow
 
 The Russian calendar keeps 13 August (Julian) for the finding of his relics, around 1547; his chief memory is 11 November.
 

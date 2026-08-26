@@ -18,11 +18,11 @@
  */
 
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
-import { saintName } from '../lib/honorific.js';
+import { saintName, withoutRank } from '../lib/honorific.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { allNames, historicityName, typeName, typeNames } from '../lib/saint-types.js';
 import { buildFeastIndex } from '../lib/feasts.js';
-import { formatLifespan, parseIso } from '../lib/calendar-page.js';
+import { formatSubtext, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
 import { loadDetail, prefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
@@ -734,12 +734,12 @@ function wireGrid() {
 
 function update({ animate }) {
   const { el, cards, filters, search } = state;
-  // The index holds the bare name and every name is drawn with "St" before it
-  // (lib/honorific.js), so a reader who types back what the screen shows —
-  // "St John" — must not be told there is no such saint. The honorific is
-  // dropped from the query, not added to the index: terms combine with AND,
-  // and a term no document carries would zero every search it appears in.
-  const query = filters.query.trim().replace(/^(St\.?|Saint)\s+/i, '');
+  // The index holds the bare name and every name is drawn with a rank before
+  // it, so a reader who types back what the screen shows must not be told
+  // there is no such saint. `withoutRank` argues it; it is built from the
+  // reader's own pack, because since 2026-08-27 the word in front is one of
+  // sixteen in five languages rather than one abbreviation.
+  const query = withoutRank(filters.query);
   const hits = query && search ? new Set(search.search(query).map((r) => r.id)) : null;
 
   // The reader's church comes first (author, 2026-08-22): a saint not in that
@@ -933,7 +933,7 @@ function card(item, router, { rows = false, detailed = false } = {}) {
   const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(saintName(item))}</a>
     </span>
-    <span class="index-dates utility">${esc(formatLifespan(item.dates))}</span>
+    <span class="index-dates utility">${esc(formatSubtext(item))}</span>
     ${description}`;
   const bookmark = renderBookmark(item.slug, item.display_name);
 

@@ -1,4 +1,4 @@
-# Joasaph the Presbyter, Hieromartyr (1918)
+# Joasaph the Presbyter
 
 Joasaph Panov was born in 1860, the son of the priest Stefan Panov and Agnia, herself a priest’s daughter; of the seven children three sons became priests, and later, in Soviet times, a grandson. He finished the Dalmatovo church school in 1875, was psalmist for some years at the Ascension cathedral in Yekaterinburg, deacon from 1889 at the church of St Nicholas at the Verkhne-Turinsk works, and priest from April 1891 at the village of Nizhneye on the Chusovaya — a river port where every winter the Siberian wagon-trains unloaded honey, wax, butter and grain for the spring floating, and every spring the barge-haulers gathered, so that a single priest had to shepherd a shifting crowd of strangers as well as two thousand parishioners. Thirteen years there; then from November 1904 the Dormition church of Tygish, by the lake of that name; retired for illness in 1911 and back in charge of the parish of Mostovskoye within months; decorated at Pascha 1914 for zealous and useful service.
 

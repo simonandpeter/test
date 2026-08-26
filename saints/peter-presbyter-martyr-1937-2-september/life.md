@@ -1,4 +1,4 @@
-# Peter (Novoselsky), Presbyter, Hieromartyr (1937)
+# Peter (Novoselsky)
 
 Peter Ivanovich Novoselsky was born in the village of Smirnovo in Nizhny Novgorod province to a deacon’s family in 1883. He finished the seminary in 1905 and was ordained, and served as priest in one of the churches of Nizhny Novgorod; in 1929 he was arrested for the first time, charged with counter-revolutionary activity and sentenced to three years’ exile in the Turukhansk country, and when the term ended went on serving at Nizhny Novgorod. On 23 May 1935 came the second arrest — for organising a service on 1 May to draw people away from the demonstration — and three years in the Karaganda camp; in the camp he was arrested in August 1937 on a charge of performing secret baptisms and counter-revolutionary activity, did not admit guilt, and was sentenced by the troika to be shot. He was executed on 15 September 1937, and the Russian calendar keeps him on 2 September (Julian).
 

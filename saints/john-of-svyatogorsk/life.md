@@ -1,4 +1,4 @@
-# John of Svyatogorsk, Recluse
+# John of Svyatogorsk
 
 Ivan Kryukov was born in Kursk on 20 September 1795 to poor townspeople. From the age of seven he longed to save his soul — a playmate’s tale of a grandfather who lived in a monastery in reclusion settled it — but his parents, who saw idleness in the wish, refused him schooling and bound him for seven years to a tile-maker, a harsh master who beat his apprentices, once nearly to death, over a tile worth a kopeck. He left home for good on 30 June 1833, aged thirty-eight, and entered the Glinsk hermitage that August; tonsured in the mantle on 22 June 1840 with the name Ioannikios, he was one of the twelve Glinsk monks who on 20 April 1844 came to refound the ancient monastery of Svyatogorsk on the Donets, closed since 1788, and was ordained hierodeacon and hieromonk there in August 1849.
 

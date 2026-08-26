@@ -1,4 +1,4 @@
-# Meletius, Bishop of Cyprus
+# Meletius
 
 Meletius became a bishop of the Church of Cyprus, a reverent and God-fearing
 man. He spent his whole life handing on the divine word and in unceasing almsgiving to the poor

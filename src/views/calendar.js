@@ -15,7 +15,7 @@ import { gregorianToJdn } from '../lib/jdn.js';
 import { CHURCHES_BY_ID } from '../data/churches.js';
 import {
   addDaysIso,
-  formatLifespan,
+  formatSubtext,
   parseIso,
   pickHero,
   todayIso,
@@ -1607,7 +1607,7 @@ function registerRow(saint, title, transition) {
              titles are data and the corpus grows; the register is where a
              church's own title for the day belongs when one arrives. */ ''}
       ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      <span class="index-dates utility">${esc(formatLifespan(saint.dates))}</span>
+      <span class="index-dates utility">${esc(formatSubtext(saint))}</span>
     </span>
     ${renderBookmark(saint.slug, saint.display_name)}
   </li>`;
@@ -1696,7 +1696,7 @@ function paintDay(panel) {
           </h2>
           ${renderBookmark(hero.slug, hero.display_name)}
         </div>
-        <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
+        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
         <!-- The opening of the life, on a wide screen only (author,
              2026-08-25: "because there is space on the left of the saint card
              under their name"). It arrives with the fetched life rather than

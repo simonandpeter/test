@@ -224,6 +224,27 @@ export const ru = {
        it has no settled word for are left out and fall back to English
        (lib/saint-types.js), which is an honest gap and a visible one. */
 
+    /* The ranks, in this church's own vocabulary and in both forms it
+       declines (2026-08-27). The masculine is the unmarked one and is what a
+       record with no recorded sex is given. */
+    ranks: {
+      honorific: { m: 'Св', f: 'Св' },
+      forefather: { m: 'Праотец', f: 'Праматерь' },
+      'great-martyr': { m: 'Великомученик', f: 'Великомученица' },
+      'virgin-martyr': { m: 'Мученик', f: 'Мученица' },
+      'passion-bearer': { m: 'Страстотерпец', f: 'Страстотерпица' },
+      'equal-to-the-apostles': { m: 'Равноапостольный', f: 'Равноапостольная' },
+      apostle: { m: 'Апостол', f: 'Апостол' },
+      prophet: { m: 'Пророк', f: 'Пророчица' },
+      hieromartyr: { m: 'Священномученик', f: 'Священномученица' },
+      'venerable-martyr': { m: 'Преподобномученик', f: 'Преподобномученица' },
+      'new-martyr': { m: 'Новомученик', f: 'Новомученица' },
+      martyr: { m: 'Мученик', f: 'Мученица' },
+      venerable: { m: 'Преподобный', f: 'Преподобная' },
+      confessor: { m: 'Исповедник', f: 'Исповедница' },
+      blessed: { m: 'Блаженный', f: 'Блаженная' },
+      righteous: { m: 'Праведный', f: 'Праведная' },
+    },
     types: {
       martyr: 'Мученик',
       hieromartyr: 'Священномученик',

@@ -1,4 +1,4 @@
-# Raphael of Šišatovac, Hieromartyr (1941)
+# Raphael of Šišatovac
 
 The Serbian calendar keeps on 21 August (Julian) the hieromartyr Raphael of Šišatovac, and the Russian calendar the same day the monk-martyr Raphael (1941), marked as a saint of the Serbian church — one of the new martyrs of the Serbian Church killed in 1941, named for the monastery of Šišatovac in Syrmia. Neither calendar prints a life under the line, the Ohrid Prologue being older than his death; this entry records the two lines and nothing more.
 

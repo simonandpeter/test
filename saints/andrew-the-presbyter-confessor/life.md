@@ -1,4 +1,4 @@
-# Andrew the Presbyter, Confessor
+# Andrew the Presbyter
 
 Andrew was the schoolfellow and lifelong companion of [Hypatius, Bishop of
 Lydia](/saints/hypatius-bishop-of-lydia), raised with him in the faith. He was made deacon and

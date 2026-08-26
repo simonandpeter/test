@@ -218,6 +218,27 @@ export const el = {
     /* The hagiographic vocabulary this church's own synaxarion uses; the
        rest fall back to English. */
 
+    /* The ranks, in this church's own vocabulary and in both forms it
+       declines (2026-08-27). The masculine is the unmarked one and is what a
+       record with no recorded sex is given. */
+    ranks: {
+      honorific: { m: 'Άγ', f: 'Άγ' },
+      forefather: { m: 'Προπάτωρ', f: 'Προμήτωρ' },
+      'great-martyr': { m: 'Μεγαλομάρτυς', f: 'Μεγαλομάρτυς' },
+      'virgin-martyr': { m: 'Μάρτυς', f: 'Παρθενομάρτυς' },
+      'passion-bearer': { m: 'Αθλοφόρος', f: 'Αθλοφόρος' },
+      'equal-to-the-apostles': { m: 'Ισαπόστολος', f: 'Ισαπόστολος' },
+      apostle: { m: 'Απόστολος', f: 'Απόστολος' },
+      prophet: { m: 'Προφήτης', f: 'Προφήτις' },
+      hieromartyr: { m: 'Ιερομάρτυς', f: 'Ιερομάρτυς' },
+      'venerable-martyr': { m: 'Οσιομάρτυς', f: 'Οσιομάρτυς' },
+      'new-martyr': { m: 'Νεομάρτυς', f: 'Νεομάρτυς' },
+      martyr: { m: 'Μάρτυς', f: 'Μάρτυς' },
+      venerable: { m: 'Όσιος', f: 'Οσία' },
+      confessor: { m: 'Ομολογητής', f: 'Ομολογήτρια' },
+      blessed: { m: 'Μακάριος', f: 'Μακαρία' },
+      righteous: { m: 'Δίκαιος', f: 'Δικαία' },
+    },
     types: {
       martyr: 'Μάρτυς',
       hieromartyr: 'Ιερομάρτυς',

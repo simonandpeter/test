@@ -1,4 +1,4 @@
-# Vladimir the Presbyter, Hieromartyr (1937)
+# Vladimir the Presbyter
 
 Vladimir Konstantinovich Smirnov was born in Moscow on 18 February 1885, the son of a postal clerk, and finished both the seminary and the law faculty of Moscow University. Ordained in 1911, he was in 1924 legal adviser to Patriarch Tikhon — and that year was arrested for counter-revolutionary agitation and spent some three months in the Butyrki prison; soon after his release he was made archpriest. He was arrested again in 1930 and 1931, and in 1932 sentenced to five years in the camps and sent to Svirlag; after eleven months, because of his illness, the camp was commuted to exile in Chimkent.
 

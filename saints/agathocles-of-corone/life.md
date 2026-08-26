@@ -1,4 +1,4 @@
-# Agathocles, Bishop of Corone
+# Agathocles
 
 Agathocles, bishop of Corone, was a member of the Third Ecumenical Council, whose memory the Greek calendar keeps on 9 September with his. That is the whole of the Greek synaxarion’s notice; this entry records it and nothing more.
 

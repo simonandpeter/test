@@ -1,4 +1,4 @@
-# Michael (Yeregodsky), Psalmist, Martyr (1937)
+# Michael (Yeregodsky)
 
 Michael Petrovich Yeregodsky was born on 17 September 1878 to a hereditary church servant, a psalmist, which no doubt shaped his wish to give himself to the service of God after his father, grandfather and great-grandfather; Gabriel, bishop of Veliky Ustyug, allowed him to act as psalmist in place of his father, then ill. People who give themselves to God and try to bring their life into line with the Lord’s commandments shine from within, as if the eyes reflected a soul that has touched eternity, and so Michael remained in people’s memory — handsome, radiant — and his wife Anna Artemyevna matched him, admired for her beauty; the wages received in church were not enough to feed a large family, so the parents and their six children worked much on their own field, one of his daughters, Elizabeth, recalled — the calendar’s life runs on past the point read here. In the thirties the family was persecuted: property and house confiscated, the elder children arrested; on 31 August 1937 he was shot at Syktyvkar. The Russian calendar keeps him on 18 August (Julian).
 

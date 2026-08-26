@@ -1,4 +1,4 @@
-# Demetrius (Ostroumov), Archpriest, Hieromartyr (1937)
+# Demetrius (Ostroumov)
 
 Demetrius was born on 5 February 1869 in the village of Kuzminka in the Serpukhov district of Moscow province, the son of the priest John Ostroumov. In 1899 he finished the Moscow seminary and was sent as teacher to the Moscow Transfiguration two-class parish school; in 1906 he was ordained priest to the Trinity church of the village of Mineevo in the Dmitrov district, and in 1909 appointed rector of the Annunciation church in the village of Fedosyino in the Moscow district, where he served until his arrest in 1937, raised to archpriest for long and blameless service. He was persecuted repeatedly — arrested in 1919, 1930 and 1932 on false charges and each time released; in 1937 he was charged with anti-Soviet agitation and espionage on the denunciations of informers, and despite the lack of evidence the troika of the NKVD sentenced him to be shot. He was executed on 30 August 1937 and buried at Butovo; the Russian calendar keeps him on 17 August (Julian).
 

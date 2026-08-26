@@ -1,4 +1,4 @@
-# Emilian, Bishop of Trebia
+# Emilian
 
 Emilian, bishop of Trebia, and with him Hilarion, Dionysius and Hermippus, were born and lived in Armenia. After their parents’ death Emilian, Dionysius and Hermippus, who were brothers, and Hilarion, their teacher, left home and came to Italy, to Spoleto, where Emilian began to preach the Gospel to the pagans; by his strict and virtuous life he won the deep respect of the Christian community and was chosen bishop of Trebia, consecrated by Pope Marcellinus. Moving to Trebia he turned many pagans to Christ, and was brought to trial before the emperor Maximian (284–305); the Prologue says that a thousand pagans came to believe through the miracles at his torture, and that he was beheaded with his spiritual father Hilarion and his two brothers, around 300. The Prologue adds that he went to Italy of his own wish, seeking martyrdom.
 

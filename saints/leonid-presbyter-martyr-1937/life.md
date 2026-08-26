@@ -1,4 +1,4 @@
-# Leonid the Presbyter, Hieromartyr (1937)
+# Leonid the Presbyter
 
 Leonid Biryukovich was born in 1864 in the village of Ukhvala in the Borisov district, of a family of hereditary clergy, and finished the Minsk seminary. Ordained priest in 1899, he was rector of the Dormition church in the village of Brodets in the Igumen district — a little village lost among forests and marshes — and served there thirty-seven years.
 

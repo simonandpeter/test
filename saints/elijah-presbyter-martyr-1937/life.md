@@ -1,4 +1,4 @@
-# Elijah (Bazhanov), Archpriest, Hieromartyr (1937)
+# Elijah (Bazhanov)
 
 Elijah Vasilievich Bazhanov was born on 24 July 1877 to Basil Alekseevich Bazhanov, psalmist of the Protection church of the village of Selishchi in the Kasimov district of Ryazan province, and his wife Tatiana Ismailovna, and finished the Ryazan seminary. In 1900 he went as teacher to the parish school of Kochemary, but in 1901 Bishop Polyeuctus of Ryazan made him deacon of the Kazan church of the village of Malakhovo and ordained him there, and he taught in the village school; at his own petition Bishop Arcadius moved him on 13 November 1904 to the deacon’s post at the Protection church of Nikitkino in the Yegoryevsk district, built in 1842 by the Moscow merchants Simeon and Chrysanthus Kurov, where he served nearly ten years; on 23 June 1914 he was moved to the priest’s post at the church of St Nicholas at Ksenofontovo and on 19 July ordained priest by Ambrose, bishop of Mikhailov — the calendar’s life runs on past the point read here. He was shot in 1937, among the martyrs of Butovo, and the Russian calendar keeps him on 3 September (Julian).
 

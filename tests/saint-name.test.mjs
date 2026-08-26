@@ -17,13 +17,38 @@ test('a recorded form is used, with its honorific and rank stripped', () => {
   ];
   assert.deepEqual(pickNameForms(names, 'Anthimus, Bishop of Nicomedia'), {
     ru: 'Феврония Муромская',
-    // The site prints its own "Sf." / "Άγ." / "Св.", so the entry's own
-    // honorific and rank come off: «Св. Св. Аврамије» is what leaving them in
-    // produces. A comma is left alone — it is an apposition here, not a list.
+    // The site prints its own rank, so the entry's own honorific and rank
+    // come off: «Св. Св. Аврамије» is what leaving them in produces. A comma
+    // is left alone — it is an apposition here, not a list.
     ro: 'Antim, Episcopul Nicomidiei',
-    el: 'Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας',
+    /*
+     * **And the Greek rank comes off wherever it sits.** Until 2026-08-27 only
+     * a leading one was stripped, which was enough while the site printed
+     * "Άγ." in front of everything; with the rank in the name it produced
+     * «Ιερομάρτυς Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας». Greek writes
+     * the rank after the name as readily as before it, and 31 of the recorded
+     * Greek forms did. The office («επίσκοπος Νικομήδειας») is not a rank and
+     * stays.
+     */
+    el: 'Άνθιμος επίσκοπος Νικομήδειας',
     sr: 'Аврамије Смоленски',
   });
+});
+
+test('a rank in the plural names a company too, and without a conjunction', () => {
+  /*
+   * «Св. исповедници Едески» is *the confessors of Edessa*, one line the
+   * Serbian calendar prints for three men, and all three folders carried it
+   * as their own Serbian name. There is no "и" in it, so the conjunction rule
+   * above could not see it, and the site printed the company over each of
+   * them in turn. Found 2026-08-27 when the rank moved into the name and it
+   * started reading «Исповедник исповедници Едески».
+   */
+  const names = [{ form: 'Св. исповедници Едески', lang: 'sr' }];
+  assert.deepEqual(pickNameForms(names, 'Barses of Edessa'), {});
+  // A saint whose English name is itself a company keeps the listed form,
+  // because there the list is the name.
+  assert.deepEqual(pickNameForms(names, 'The Martyrs of Edessa'), { sr: 'исповедници Едески' });
 });
 
 test('a form naming the whole company is not one saint’s name', () => {

@@ -1,4 +1,4 @@
-# Eulalius, Bishop of Caesarea
+# Eulalius
 
 Eulalius, who perhaps came from Cyprus, died in peace — so the Greek synaxarion, with its verse that the well-spoken cicada falls silent at the winter of his end. The Prologue, which keeps him for the Serbian calendar as bishop of Caesarea in Cappadocia, calls him one of the predecessors of Basil the Great and says he deposed his own son from his rank for wearing clothes unbefitting a spiritual vow.
 

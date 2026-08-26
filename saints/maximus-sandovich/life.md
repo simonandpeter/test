@@ -1,4 +1,4 @@
-# Maximus Sandovich of Gorlice, Hieromartyr (1914)
+# Maximus Sandovich of Gorlice
 
 The Russian calendar keeps on 24 August (Julian) the hieromartyr Maximus of Gorlice, presbyter, killed in 1914 — the martyr Maximus Sandovich, its index calls him — and prints no life under the line. This entry records the line and nothing more.
 

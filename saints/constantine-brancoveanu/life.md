@@ -1,4 +1,4 @@
-# Constantine Brâncoveanu, Great Martyr and Prince
+# Constantine Brâncoveanu
 
 Constantine Brâncoveanu was born in 1654 of good family — descended on his father’s side from the voivode Matei Basarab, and on his mother’s the nephew of the voivode Șerban Cantacuzino, in whose reign, in 1688, the whole Scripture was first printed in Romanian. Fatherless from infancy, he was raised by his uncle the stolnic Constantin Cantacuzino, the most learned boyar of his day, who saw to his education; for his skill and wisdom he held high offices while still young. On 29 October 1688, after Șerban’s death, the boyars and dignitaries of the land pressed him to take the throne of Wallachia, and he was anointed by the patriarch of Constantinople, Dionysius IV, and the metropolitan Theodosius.
 

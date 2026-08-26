@@ -1,4 +1,4 @@
-# Callinicus, Patriarch of Constantinople
+# Callinicus
 
 Callinicus I succeeded Paul III on the throne of Constantinople and held it from 693 to 705. Before that he had been a presbyter of the Great Church and keeper of the vessels at the church of Blachernae; the chronicler Ephraemius calls him a man distinguished in word and in life.
 

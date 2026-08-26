@@ -1,4 +1,4 @@
-# John (Boyarshinov), Presbyter, Hieromartyr (1918)
+# John (Boyarshinov)
 
 John Boyarshinov was born in 1858 to a craftsman’s family. After the Ochyor primary school he served as psalmist at the church of Peter and Paul of the Pavlovsky works in the Okhansk district, and was a worker of the missionary department of the town of Okhansk; on 27 October 1900 Peter (Losev), bishop of Perm and Solikamsk, ordained him deacon to the Dormition church of the village of Putino — the calendar’s life runs on past the point read here. He was priest of the church of the village of Sepych in the Okhansk district of Perm province, and on 4 September 1918 was shot by the new power: the pretext was the ringing of the bells with which he called his parishioners to the service — the uneasy conscience of the new godless power, the calendar says, could not bear the reproach and the call to repentance in the sound of the bell. At the jubilee council of 2000 he was numbered among the saints, and the Russian calendar keeps him on 22 August (Julian).
 

@@ -1,4 +1,4 @@
-# Joasaph, son of Abenner, King of India
+# Joasaph, son of Abenner
 
 What is known of Joasaph comes from the tale called Barlaam, attributed to John of Damascus. In the days of Constantine the Great there was a king in the Indies called Abenner, to whom astrologers said that his newborn son Joasaph would one day embrace the Christian religion. To defeat the prophecy Abenner shut the prince in a remote palace with servants and teachers ordered to tell him nothing of the Christians’ faith, and there Joasaph grew up and was given a great education.
 

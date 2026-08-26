@@ -1,4 +1,4 @@
-# Faustus, Presbyter of Alexandria
+# Faustus
 
 Faustus suffered at Alexandria under Decius (249–251), among the martyrs Faustus the presbyter, Abibus the deacon and the others with them, eleven in number, who in the persecution all firmly confessed themselves Christians before the governor Valerius and were beheaded about 250; their bodies were buried by the Christians at Alexandria. The Greek synaxarion, which keeps the company in separate entries, has Faustus tortured and beheaded by the governor Valerian; Bibus, monk and deacon, cruelly tortured and beheaded; Cyriacus, an attendant of the presbyter Faustus, with Dionysius the reader and Andrew (or Andronicus) the soldier; and with them the sisters Andropelagia and Thecla, Theoctistus the shipmaster, Macarius the magistrate and Andrew the curator, Cyriacus the commoner, Sarapabon the senator and Calodote, wife of one Cyrus, beheaded while with child.
 

@@ -1,4 +1,4 @@
-# Theodore the Confessor, disciple of Maximus
+# Theodore, disciple of Maximus
 
 Theodore was one of the disciples of [Maximus the
 Confessor](/saints/maximus-the-confessor), and suffered what his teacher suffered: his tongue and

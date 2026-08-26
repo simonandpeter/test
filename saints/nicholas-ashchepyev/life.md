@@ -1,4 +1,4 @@
-# Nicholas (Ashchepyev), Abbot
+# Nicholas (Ashchepyev)
 
 Nicholas Ashchepyev was an abbot, shot in 1937 and kept by the Russian church among
 the new martyrs, named in the day's line with Metropolitan

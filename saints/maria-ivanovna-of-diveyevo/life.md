@@ -1,4 +1,4 @@
-# Maria Ivanovna of Diveyevo, Fool for Christ
+# Maria Ivanovna of Diveyevo
 
 Maria was born in the village of Goletkovo in the province of Tambov. At thirteen she lost both parents, Zacharias and Pelagia, and went to live with her elder brother’s family, who did not want her: she neglected herself, never combed her hair, dressed in rags and behaved strangely from very young. So she left, and wandered between Sarov, Diveyevo and Ardatov, half-naked and hungry, in broken shoes winter and summer, passing the nights in the forest in prayer and almost always caked with mud.
 

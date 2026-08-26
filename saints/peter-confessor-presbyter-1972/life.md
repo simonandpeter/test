@@ -1,4 +1,4 @@
-# Peter (Cheltsov), Archpriest, Confessor (1972)
+# Peter (Cheltsov)
 
 Peter Alekseevich Cheltsov was born on 20 August 1888 (old style) in the village of Shekhmino in the Rybnoye district of the Ryazan region, the son of a psalmist who later became a priest. In 1904 he finished the Ryazan church school, then the Ryazan seminary as its first pupil, and as first pupil was sent at the state’s expense to the Kyiv Academy; at home a bride remained, Maria Ivanovna Starodubrovskaya, whose father — the calendar’s life runs on past the point read here. A graduate of the Kyiv Academy and a father of the Local Council of 1917–1918, he was arrested many times by the Soviet power and spent fifteen years in the camps, Solovki among them; when his exile ended he served in the churches of the Vladimir region, winning his flock’s love by the gift of clairvoyance and his compassion for people, and despite persecution bore his pastoral service to the end of his life, dying in 1972. He was glorified in 2000, and the Russian calendar keeps him on 30 August (Julian).
 

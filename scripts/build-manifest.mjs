@@ -355,6 +355,14 @@ function toCard(saint, dir) {
      * caller can tell "not recorded" from "the same in both".
      */
     names: pickNameForms(saint.names, saint.display_name),
+    // What they held, printed on the subtext line beside the dates. Absent
+    // rather than empty where there is none, so a card can tell "no office
+    // recorded" from a blank one; 340 of 742 carry one.
+    ...(saint.office ? { office: saint.office } : {}),
+    // A folder is a saint unless it says otherwise, and only a feast does.
+    // Carried so `lib/honorific.js` can keep a rank off it without fetching
+    // the detail payload; nothing in the corpus sets it yet.
+    ...(saint.kind && saint.kind !== 'saint' ? { kind: saint.kind } : {}),
     sex: saint.sex ?? 'unknown',
     types: saint.types ?? [],
     historicity: saint.historicity ?? null,

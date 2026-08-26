@@ -1,4 +1,4 @@
-# Basil, Bishop of Chernigov, Hieromartyr (1918)
+# Basil
 
 Vasily Dmitrievich Bogoyavlensky was born in February 1867 in the village of Staroye Seslavino in Tambov province, a priest’s son. He finished the Tambov seminary in 1888, was ordained in 1890 and served at Ovsyanka in the Tambov diocese; in 1896 he entered the Kazan Academy, finished in 1900, and in 1907 took his master’s degree with a study of the Second Book of Maccabees. Widowed in 1908, he was tonsured and soon made rector of the Chernigov seminary and archimandrite; in 1909 he was consecrated bishop of Sumy, and he held the see of Chernigov from 12 May 1911 to 6 May 1917. In 1917 the Provisional Government dismissed the members of the Holy Synod, all but one, and Basil among them, charged with attachment to the old order and “not answering to the revolutionary spirit of the times”, was retired to the Nikolaev Terebenskaya hermitage in the Tver diocese, and afterwards administered the Zaikonospassky monastery in Moscow.
 

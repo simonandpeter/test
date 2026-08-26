@@ -1,4 +1,4 @@
-# Peter Snezhnitsky, Priest
+# Peter Snezhnitsky
 
 Peter Snezhnitsky was a priest, killed in 1918 and kept by the Russian church among
 the new martyrs, with Michael Tikhonitsky on the same day.

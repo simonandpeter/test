@@ -4249,3 +4249,194 @@ being "commit static files to a branch" and becomes "Actions builds, Pages
 serves the artifact". This also removes the prototype's runtime dependency on
 the GitHub API for listing the saints folder — the manifest is the listing now,
 so new saints no longer need a push before they are visible locally.
+
+## Amendment 50 — the name is the rank, and the office moves to the line below (2026-08-27, tenth sitting)
+
+Two instructions and one addendum, and the order between them was the whole
+job: *"Add the rank Hieromartyr or Righteous if it applies to the saint, and if
+there is no special rank, print 'St.' prefixed, and then strip the ."*, with
+`saints-naming-addendum.md` beside it and its own rule in bold — **data first,
+naming last**.
+
+This reverses Amendment 32, which put the rank in `types` and kept it out of
+the name, and it reverses it at the author's own instruction. The reversal is
+recorded here rather than quietly made: HANDOFF's "Rank stays out of
+`display_name`, by deliberate choice" was true when written and is not true
+now, and the entry has been rewritten rather than deleted.
+
+### The three claims were checked before anything was touched
+
+The addendum asks for that in as many words, and it earned the asking.
+
+| Claim | What the corpus says |
+|---|---|
+| 179 names end in a bracketed year, all of them already in `dates.death`, zero mismatches | **Confirmed, and the important half exactly.** 180 names end in a parenthetical that opens with a year, 178 of them non-collective; **every one matches `dates.death`, with no exceptions.** The count is a rounding of which parentheticals you count, the zero is not. |
+| All 742 `life.md` headings match their `display_name` | **Confirmed exactly.** 742 of 742, which is why the lockstep held: the heading test stayed green through a 348-folder rewrite. |
+| 239 of the 720 non-collective names carry the rank word | **Directionally right, not a number to build on.** It is 207 against a strict vocabulary and 248 against a loose one; 239 sits between them. Nothing depends on it. |
+| "Exactly one needs a human eye: *Kosmas the Hermit and Confessor*" | **Wrong, and this was the one worth checking.** Seventeen names did not lift mechanically, and twelve folders ended up with a hand-written decision. Had the migration trusted this line it would have mangled sixteen names quietly. |
+
+Two of the twelve are corrections rather than reshufflings, and both are
+sourced. *Andrew the Presbyter* carried "Confessor" in his name and not in his
+types, though saint.gr calls him one («οι Ομολογητές»), so the word moved to
+`types` where the site reads it. *Constantine Brâncoveanu* read "Great Martyr
+and Prince": the Russian entry is «Мч. вел. кн. Константина» — martyr, *grand
+prince* — so the "Great" was «вел. кн.» read as a rank, and it is an office.
+
+### What the migration did, and what it refused to do
+
+`display_name` is now the bare name. 348 folders changed, `saint.json` and
+`life.md` in lockstep, and the rule was conservative on purpose: **a segment
+was only moved or dropped when it matched a closed vocabulary, and a rank was
+only dropped when the matching type was actually in `types`** — so nothing left
+a name that was not already somewhere else in the record. Everything
+unrecognised stayed exactly where it was and was reported; the report is what
+produced the twelve.
+
+- **Office** → a new optional `office` field, on 246 records. "Presbyter",
+  "Bishop of Sardis", "Metropolitan of Moschonisia", "Hierodeacon of Zilantov".
+- **Rank word** → deleted; it is in `types`.
+- **Death year** → deleted, having been verified against `dates.death` first.
+  **What was not deleted is the rest of the parenthetical**: "Hieromartyr
+  (1937, 4 September, the first)" became "(4 September, the first)", because
+  for the priests of 1937 the date is the only thing telling two men of the
+  same name apart. Sixteen records collapse to eight identical rendered names
+  even so, and every one of the eight is separated by its office or its year on
+  the line below.
+- **Kinship and companionship clauses stayed in the name.** "son of Bassa",
+  "mother of the Theotokos", "with 28 martyrs", "disciple of Babylas" — about
+  sixty of these. They are not offices and they are not decoration; they are
+  how the source names the person.
+
+The written diff was read before it was committed, as the addendum insists:
+339 names, of which 24 were rearranged rather than merely shortened, and those
+24 read one by one.
+
+### The naming function, and the precedence written out in words
+
+`lib/honorific.js` is a precedence walk now, and the order is an editorial
+choice rather than a lookup, so it is written out in the file's header where a
+non-coder can read it. Over the corpus it resolves to:
+
+    253 Martyr          16 Confessor          4 Blessed
+    156 Hieromartyr     11 Virgin Martyr      3 Righteous Forefather
+    130 Venerable        8 Apostle            1 Prophetess
+     58 St               7 New Martyr         1 Passion-bearer
+     37 Venerable Martyr 6 Great Martyr       1 Equal to the Apostles
+     23 Righteous        5 Prophet           22 collectives, unchanged
+
+which is the addendum's own estimate almost line for line. **"St" is the marked
+case now** — 58 of 742, the hierarchs and the theologians — which is how OCA
+prints those too.
+
+Three departures from the addendum's list, each for a reason:
+
+1. **Great Martyr sits above Virgin Martyr**, not below. It is the rarer and
+   the stronger title, and the other way round would have printed *Virgin
+   Martyr* over a saint her calendar calls a Great Martyr.
+2. **Righteous Forefather needs no list of names.** The corpus already types
+   `patriarch-of-israel` apart from `patriarch`, so Abraham, Isaac and Jacob
+   are told from the patriarchs of Constantinople by the data and not by a
+   hardcoded opt-out. The reviewer who asked for one was right about the
+   defect and did not know the distinction was already recorded.
+3. **The monastic types imply Venerable**, per the addendum's own preference:
+   nine folders carry `monk`/`hermit`/`ascetic`/`monastic` without
+   `venerable`, three of them among the seven saints who have an icon.
+
+**The names print shorter, which is the opposite of how it sounds.** Median
+rendered length 32 → 28, longest 74 → 63, over 32 characters 49% → 29%. The
+cards that truncated mid-word are exactly the ones that collapsed.
+
+### The stop comes off, in all five
+
+*"print 'St.' prefixed, and then strip the ."* reverses 2026-08-25's *"please
+add '.' after St or Sf"*, and it is applied in all five packs rather than in
+English alone: **St, Sf, Св, Άγ**. A stop in four of them and none in the fifth
+is the inconsistency that would need correcting next, and it is one constant in
+one file if the author meant only the English.
+
+### Five languages, sixteen ranks, and a table rather than a grammar
+
+The old file's own header called a spelled-out honorific impossible: it "would
+need the saint's sex, which the manifest carries, and a grammar per language,
+which it does not". **Half of that was always smaller than it read.** `sex` is
+populated on all 742 records — 633 male, 89 female, 20 unknown, and the
+unknowns are essentially the collectives, which take no rank at all — so what
+is needed is two forms per label. Sixteen labels, two forms, five packs;
+`locale-coverage` reports **331 of 331 with no fallbacks** in all four.
+
+### Three defects the change exposed, all of them older than it
+
+None of these was introduced here. All three were invisible while the site
+printed one abbreviation in front of everything.
+
+1. **Greek writes the rank after the name as readily as before it.**
+   `saint-name.js` stripped only what led, so «Βαβύλας ο Ιερομάρτυρας» became
+   «Ιερομάρτυς Βαβύλας ο Ιερομάρτυρας» the moment a rank went in front.
+   **Thirty-one Greek forms read that way; one does now**, and that one is an
+   office rather than a rank. The apposition rule matches the article
+   separately from the rank so a byname keeps its own — «Ιλαρίων ο νέος
+   οσιομάρτυρας» loses the rank and stays "the New" — and its tail is a
+   lookahead rather than `\b`, which is the ASCII-word-boundary trap this file
+   has now paid for twice.
+2. **A rank in the plural names a company, and does it without a
+   conjunction.** «Св. исповедници Едески» is *the confessors of Edessa*, one
+   line the Serbian calendar prints for three men, and all three folders
+   carried it as their own name. The site had been printing the company over
+   each of them in turn — the same false claim the conjunction rule exists to
+   refuse, arriving by a door that rule could not see.
+3. **The Romanian prefix list was missing six of its own words** — Dreptul,
+   Dreapta, Cuvioasă, Marele Mucenic, Nou-Mucenic, Preot Mucenic — so ten
+   Romanian forms kept a rank the site then said again.
+
+### Where each part is drawn now
+
+Rank in the name; office and dates on the line below it, in that order, on the
+Index card, the Daily hero, the Daily register and Continue reading's cards.
+The saint page's facts line prints the office too, **and stops repeating what
+the name and the office have already said**: "Reposed 1942 · Bishop of Bohemia
+and Moravia-Silesia · Bishop" is what it read before the overlap was taken out.
+
+The office is printed as the corpus recorded it, which is English. That is the
+same bargain `display_name` already makes for a saint with no recorded form in
+the reader's language, and it is said plainly rather than papered over: the
+packs cannot hold 246 sees.
+
+**The search box had to learn the same lesson.** The index holds the bare name,
+so a reader typing back what the screen shows must not be told there is no such
+saint. The query drops a leading rank, built from the reader's own pack rather
+than written down — and the case that would have gone quietly wrong is
+*Venerable*, which is implied for the monastics rather than typed, so
+`venerable` is not a term in the index for Anthony the Great at all.
+
+### A feast opts out by name, before the work that needs it
+
+`kind: "feast"` is in the schema and honoured by the naming function, and
+**nothing in the corpus sets it**. It is here because the Great Feasts are the
+next work and a blanket prefix would emit "St Dormition of the Theotokos", and
+"Martyr Mary" if the Theotokos ever gets an entry of her own. The unit test is
+the only place it is exercised, which is said here rather than left looking
+covered.
+
+### One result the author may want to overturn
+
+**Athanasius of Alexandria now reads *Confessor Athanasius of Alexandria***.
+His types are `bishop, theologian, confessor`, and Confessor outranks the
+fallback, so the walk is doing what it was told. But he is Athanasius the
+Great, both major calendars print him as a hierarch, and he is one of the seven
+saints who have an icon — so it is a visible case. The fix, if the author wants
+one, is data (drop `confessor` from that record) rather than code.
+
+### Verification
+
+**171 unit, 426 browser.** All four packs 331 of 331 with no English fallbacks.
+`npm run validate` clean at 742 saints, 7 pre-existing image-source warnings and
+no new ones. The manifest came *down*, 507.3 KB to 491.8 KB, because the names
+got shorter.
+
+**The backout was run and watched to fail**: `rankKey` forced back to the
+blanket honorific, the new browser test red on both projects with the old
+strings, then restored and green. Fifteen existing assertions were heirs and
+were updated with their reasons; one of them — the hero bookmark's slack — had
+been pinned to a bare `> 40` px that the longer name turned into 31.5, and it
+now reads the line's own flex gap off the page and asserts against that, which
+is the number it was always about.

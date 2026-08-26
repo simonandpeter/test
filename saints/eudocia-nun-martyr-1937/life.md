@@ -1,4 +1,4 @@
-# Eudocia, Nun-martyr (1937)
+# Eudocia
 
 Evdokia Alexandrovna Perevoznikova was born on 7 February 1880 in the village of Cherevkovo in the Solvychegodsk district of Vologda province, to a peasant family. When she was tonsured is not known; before the revolution she lived in a monastery, and afterwards worked in a tailoring shop. She followed Metropolitan Kirill (Smirnov) of Kazan and Sviyazhsk into exile at Yany-Kurgan in South Kazakhstan and was his cell-attendant there.
 

@@ -1,4 +1,4 @@
-# Michael (Sushkov), Presbyter, Hieromartyr (1921)
+# Michael (Sushkov)
 
 Michael Mikhailovich Sushkov was born in 1876 in the town of Verny in the Semirechye region — today Almaty. He finished the parish school and from 1893 was sacristan of the Turkestan cathedral; in 1896–1899 he was subdeacon and novice at the bishop’s house, and from 1899 to 1901 had to do military service at Kopal, where he became sacristan of the military church of St Nicholas too, joining its staff in 1901 and serving there until 1906, when he became psalmist of the church of St Nicholas at Kokand. From 3 January 1907 he moved to the Arasan-Kopal church, and then, until 1916, was psalmist of the church of St Nicholas of the stanitsa of Kopalskaya and of the cathedral of Lepsinsk; in September 1916 he was ordained priest and appointed rector of the church of the Archangel Michael in the village of Osinovka in the Lepsinsk district. In 1921 the archpriest Michael Sushkov, who had served the Church long, was shot by the Bolsheviks; the Russian calendar keeps him on 3 September (Julian).
 

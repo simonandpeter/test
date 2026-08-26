@@ -1,4 +1,4 @@
-# Hezekiah the Righteous, King of Judah
+# Hezekiah
 
 Hezekiah was the son of Ahaz, the apostate king of Judah and a zealous supporter of the idols, and he took an entirely different road from his father. He fought idolatry, gave the feast of Passover greater splendour, and upheld the true God by his own example and his royal authority — and God upheld him: he defeated the Philistines and threw off the Assyrian yoke, routing their king Sennacherib, and his counsellors were the prophets Isaiah and [Micah](/saints/micah-the-prophet). He favoured agriculture and trade, fortified Jerusalem and adorned the Temple.
 

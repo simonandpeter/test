@@ -1,4 +1,4 @@
-# Alexius the Deacon, Hieromartyr (1937)
+# Alexius the Deacon
 
 Alexius Vvedensky was born on 19 February 1903 in the village of Prusovo in Yaroslavl province, a priest’s son, and was schooled for three years and then at the Yaroslavl church school. Ordained deacon in 1925, he served at the church of Petropavlovskoye in the Bolshoye Selo district, and was at once deprived of his civil rights. On 3 February 1930 he was arrested in the case of a group of clergy and laity of the district, charged with systematic anti-Soviet agitation and attempts to stir up mass disorder, sentenced to five years in the camps with confiscation of property and the exile of his wife and child, and sent from the Yaroslavl isolator to the White Sea canal and then to the Temnikov camp in the north. Freed in 1934 he went home and took up his deacon’s service again, and was almost at once arrested and given a year of forced labour; after it he worked for a time at a power station, hoping to return to the Church.
 

@@ -1,4 +1,4 @@
-# Daniel of Moscow, Prince
+# Daniel of Moscow
 
 The right-believing prince Daniel of Moscow, son of [Alexander Nevsky](/saints/alexander-nevsky), died on 4 March 1303. On 30 August 1652 his relics were found incorrupt, and the Russian calendar keeps the finding on this day; the Sretensky calendar’s life for the day says only that, and refers the rest to 4 March, where his chief memory is.
 

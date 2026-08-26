@@ -22,7 +22,7 @@ import { chosenChurch, churchName, currentChurch, subscribeChurch } from '../lib
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
-import { saintName } from '../lib/honorific.js';
+import { saintName, typesBeside } from '../lib/honorific.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { linkSaintNames } from '../lib/cross-link.js';
@@ -165,8 +165,14 @@ function shell(card, backLabel) {
    * announced under a saint's name, where it read as a database field that had
    * wandered onto a page about a person.
    */
+  const beside = typesBeside(card);
   const facts = [
-    card.types?.length ? typeNames(card.types) : null,
+    // The office first, where one is recorded: it is the most particular
+    // thing this line knows, and since 2026-08-27 it is no longer in the
+    // name. The types follow with the rank taken out of them, the rank being
+    // the first word of the heading above.
+    card.office ?? null,
+    beside.length ? typeNames(beside) : null,
     titles.length ? titles.join(', ') : null,
   ]
     .filter(Boolean)

@@ -1,4 +1,4 @@
-# Basil (Sokolsky), Presbyter, Hieromartyr (1937)
+# Basil (Sokolsky)
 
 Basil Petrovich Sokolsky was born on 30 January 1878 in the village of Beloye Ozero in the Sengiley district of Simbirsk province, a priest’s son. Finishing the Kazan Academy in 1902 as a candidate of theology he married and was ordained priest, and in 1905 was made master of theology for his work The Gospel Ideal of the Christian Pastor; he taught Holy Scripture at the Astrakhan and later the Chernigov seminaries, and afterwards served at the church of the Annunciation on Vasilievsky Island in Petrograd, whose parish kept faith with the canonical Church when the Renovationists seized the diocesan administration — the Petergof autocephaly, the Orthodox parishes were called, after Bishop Nicholas (Yarushevich) of Petergof who led the fight against the schism. He was arrested repeatedly — exiled in 1923 and 1929, and in 1935 deported with his family to Kazakhstan; in 1937 he was arrested on a charge of counter-revolutionary agitation and shot at Atbasar on 10 September 1937. He was glorified in 2000, and the Russian calendar keeps him on 28 August (Julian).
 

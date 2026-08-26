@@ -1,4 +1,4 @@
-# Gregory (Bronnikov), Presbyter, Hieromartyr (1937)
+# Gregory (Bronnikov)
 
 Gregory Alekseevich Bronnikov was born in 1876 in the village of Pyeldino in the Ust-Sysolsk district of Vologda province, today the Sysola district of Komi; his father Alexis served as deacon in the village church. By 1895 he had finished two classes of the Vologda seminary, after which he acted as psalmist in churches of the district and taught singing in the zemstvo schools; a deacon from 1904, without a post in 1912–1914, a psalmist in 1914–1918, he was ordained priest in 1921 and served to the end of his life at the Epiphany church of the village of Selib in the Udora district. In 1930 he was counted a kulak and taxed individually; in 1936 the church was closed and used as a village club, and in August 1937 he was arrested and charged with systematic counter-revolutionary agitation against the Soviet — the calendar’s life runs on past the point read here. He was shot on 31 August 1937 near Syktyvkar; he was canonised in 2001, and the Russian calendar keeps him on 18 August (Julian).
 

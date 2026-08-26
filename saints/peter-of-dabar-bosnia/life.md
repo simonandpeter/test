@@ -1,4 +1,4 @@
-# Peter, Metropolitan of Dabar-Bosnia, Hieromartyr (1941)
+# Peter
 
 The Serbian calendar keeps on 4 September (Julian) the holy Peter of Dabar-Bosnia, and the Russian calendar the same day the hieromartyr Peter, metropolitan of Dabar-Bosnia, killed in 1941, marked as a saint of the Serbian church. Neither prints a life under the line, the Ohrid Prologue being older than his death; this entry records the two lines and nothing more.
 

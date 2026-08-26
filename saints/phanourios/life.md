@@ -1,4 +1,4 @@
-# Phanourios the Great Martyr
+# Phanourios
 
 Phanourios is among the best loved saints of the Greek people, who keep his feast every year on 27 August; yet he was unknown for centuries. He became known through the finding of his icon on Rhodes in the fourteenth century, when old houses were being dug out on the south side of the old wall: an ancient church came to light, full of ruined icons, and among them one well preserved, on which Neilos II Diasporinos, metropolitan of Rhodes (1355–1369), read the name “the holy Phano…”.
 

@@ -1,4 +1,4 @@
-# Demetrius (Smirnov), Presbyter, Hieromartyr (1938)
+# Demetrius (Smirnov)
 
 Demetrius was born in 1868 in the village of Chernyaevo in the Dmitrov district of Moscow province, the son of Basil Timofeevich Smirnov, forty-seven years a priest. In 1883 he finished the Zvenigorod church school and lived some years with his parents; in April 1889 he became psalmist at the Kazan church in the village of Kotelniki in the Moscow district, in November 1910 was moved as psalmist to the Blachernae church at Vlakhernskoye-Kuzminki, and on 18 March 1912 was ordained deacon to that church. For blameless service Patriarch Tikhon gave him a certificate of blessing in 1920 and in 1924 the double orarion, and in March 1924 he was appointed to the church of St Nicholas — the calendar’s life runs on past the point read here. A priest in the Moscow region, he was arrested in 1938 on a false charge of counter-revolutionary activity for his sermons and molebens, and despite his age sentenced to five years’ exile in Kazakhstan; he died in custody on 13 September 1938, probably in Moscow, and was buried in an unknown grave. The Russian calendar keeps him on 31 August (Julian).
 

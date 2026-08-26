@@ -1,4 +1,4 @@
-# Maximus the Confessor
+# Maximus
 
 The Russian calendar keeps 13 August (Julian) for his death and the translation of his relics; his chief memory is 21 January.
 

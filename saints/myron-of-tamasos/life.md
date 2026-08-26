@@ -1,4 +1,4 @@
-# Myron, Bishop of Tamasos
+# Myron
 
 [Heraclides](/saints/heraclides-of-tamasos) was born at Lampadou — or Lampadistos — a village near today’s Mitsero, the son of the pagan priest Hierocles. The priest was marked by his hospitable feelings, and so did not hesitate to receive Paul, Barnabas and Mark when they were on the soil of Cyprus; they then drew his son Heraclides to Christ, and he in turn brought his parents to Christ. Paul appointed Heraclides bishop of Tamasos in Cyprus, and he worked with great zeal, with Myron for his fellow-worker; both were able to bring many pagans to Christ, but their successes roused the fury of the unbelievers, and one day they rushed on them armed, killed them and threw them into the fire — and so they received the unfading crown of martyrdom: set on the pyre, the verse says, Heraclides and Myron were offered to Christ like the scent of myrrh. The Greek calendar keeps the two bishops of Tamasos on 17 September, with a troparion; the Romanian calendar keeps Heraclides, and says that even after his falling asleep he gives healing to the sick and drives demons from them — by tradition the sick who lie on his tomb are healed.
 

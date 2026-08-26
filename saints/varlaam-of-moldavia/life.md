@@ -1,4 +1,4 @@
-# Varlaam, Metropolitan of Moldavia
+# Varlaam
 
 Varlaam — Vasile at baptism — was born around 1590 of a family of free peasants called Moțoc at Borcești, a vanished village near Târgu-Neamț, and went as a youth to the hermitage of Zosim on the Secu valley, where he learned letters, Slavonic and Greek; the monastery of Secu was founded on that ground in 1602 with a school, and there he translated John Climacus’s Ladder (1618). Trusted counsellor of the prince Miron Barnovschi, he was sent in 1628 to Kyiv and Moscow to buy icons for the monasteries of Dragomirna and Bârnova, and on his return, the metropolitan Anastasie Crimca having died and his prince been deposed, withdrew to Secu; in 1632 he was called to the throne of Moldavia, which he held until 1653 under four princes.
 

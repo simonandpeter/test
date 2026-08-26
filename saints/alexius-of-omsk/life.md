@@ -1,4 +1,4 @@
-# Alexius (Orlov), Archbishop of Omsk, Hieromartyr (1937)
+# Alexius (Orlov)
 
 Alexius (Orlov) was born on 8 February 1862 into the family of a Samara cleric, passed through the local church schools and finished the St Petersburg Academy, after which he served in the church. In August 1923 he was consecrated bishop of Bugulma, but soon fell into Renovationism and in 1923–1924 temporarily governed the schismatic diocese of Kuibyshev; yet by 1924–1927 he is among the Orthodox bishops on the see of Kurgan, and in 1927–1931 successively at Malmyzh, Enotaevsk and Syzran. In August 1931 the sixty-year-old archbishop came to serve permanently at Omsk, where his service lasted four years, until his arrest in April 1935; on 25 October 1935 he was exiled for five years to the little town of Mirzoyan — the calendar’s life runs on past the point read here. A new arrest followed in 1937, and on 27 August 1937 he was shot; he was glorified in 2000, and the Russian calendar keeps him on 22 August (Julian).
 

@@ -1,4 +1,4 @@
-# Isaac the Patriarch
+# Isaac
 
 The Ohrid Prologue keeps the holy forefathers Abraham, Isaac and Jacob on 21 August (Julian) for the Serbian calendar, and says of them only that they are remembered too on the Sunday of the Forefathers before the Nativity, as righteous men and servants of God. Their story is the book of Genesis; nothing more is recorded here.
 

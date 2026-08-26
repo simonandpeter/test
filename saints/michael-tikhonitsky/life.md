@@ -1,4 +1,4 @@
-# Michael Tikhonitsky, Archpriest
+# Michael Tikhonitsky
 
 Michael Tikhonitsky was an archpriest, killed in 1918 and kept by the Russian
 church among the new martyrs, with [Peter Snezhnitsky](/saints/peter-snezhnitsky)

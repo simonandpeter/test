@@ -1,4 +1,4 @@
-# John, Archbishop of Novgorod, Wonderworker
+# John
 
 John the wonderworker became archbishop of Novgorod in 1162 and reposed in 1186. That is the whole of the Greek synaxarion’s notice, which says it has no further details of the Russian saint’s life; the Greek calendar keeps him on 7 September, and the Russian calendar keeps him the same day of its own reckoning, outside the weeks read here.
 

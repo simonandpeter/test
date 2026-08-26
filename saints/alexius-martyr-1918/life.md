@@ -1,4 +1,4 @@
-# Alexius, Martyr (1918)
+# Alexius
 
 Alexei Danilovich Zverev was born in 1867 or 1868 to a peasant family and finished the primary school. He served as a missionary of the Moscow diocese, and in 1917 was elected its lay delegate to the Church Council of 1917–18, which sent him to Perm in August 1918 as a member of the commission investigating the murder of Archbishop Andronik of Perm. On 27 August 1918, on the way back between Perm and Vyatka, beyond the bridge over the Kama, Red Army men burst into the carriage where the Council’s delegation travelled under Archbishop [Basil](/saints/basil-of-chernigov), took its members off the train and shot them — Alexius, the archimandrite [Matthew](/saints/matthew-monk-martyr-1918) and the rest; the materials of the inquiry and the money collected for the Council were stolen. The local peasants found the bodies and buried them; when a pilgrimage began, the authorities dug them up and burned them. He was numbered among the new martyrs and confessors of Russia at the Council of 2000. The Sretensky calendar prints no life of his own; this one follows azbyka.ru.
 

@@ -1,4 +1,4 @@
-# Titus the Apostle
+# Titus
 
 Titus was a Greek by birth and well educated. He was made a Christian by the apostle Paul, with whom he worked in the spreading of the Gospel: he followed him to Jerusalem, was sent to Corinth to see the state of the Church there, met Paul again in Macedonia on his way back, and went with him to Crete, where Paul made him bishop of the island and told him to appoint presbyters throughout it.
 

@@ -1,4 +1,4 @@
-# Joachim I Pany, Patriarch of Alexandria
+# Joachim I Pany
 
 Joachim the Pany — the very great — the first patriarch of Alexandria after the Turkish conquest of Egypt in 1517, when Sultan Selim I defeated the Mamelukes and took from them the lordship of Egypt and the caliphate, was born at Athens in 1448 and was a monk at the monastery of Sinai and at the Lavra of Sabbas the Sanctified in Palestine. He ascended the ancient apostolic throne of Saint Mark in August 1487, and spent himself on the reorganisation of the Patriarchate with sharpness and a practical spirit; he took part in the council of Jerusalem of 1526, at which the so-called Sinaitic question was discussed and settled, sought and secured financial support for his hard-pressed patriarchal throne from the tsar Basil, and stoutly resisted the approaches, chiefly of the Venetian archbishop of Crete Peter Lando, to consent to the union of the Churches and take part in 1562 in the Roman Catholic council of Trent — this stance strengthened still more the impression — the synaxarion’s life runs on past the point read here. The Greek calendar keeps him on 17 September.
 

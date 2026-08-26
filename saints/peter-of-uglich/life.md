@@ -1,4 +1,4 @@
-# Peter of Uglich, Fool for Christ
+# Peter of Uglich
 
 Peter was a Russian priest and a fool for Christ. That is the whole of the Greek synaxarion’s notice for 3 September, and this entry adds nothing; the Russian calendar’s line for the same day does not name him.
 

@@ -1,4 +1,4 @@
-# Basil (Krasivsky), Presbyter, Hieromartyr (1919)
+# Basil (Krasivsky)
 
 Basil Petrovich Krasivsky was born in 1850 at Tomsk, the brother of the hieromartyr [Parthenius Krasivsky](/saints/parthenius-presbyter-martyr-1919), of a deacon’s family; in 1866 the family moved to the stanitsa of Urdzhar in the Semirechye region. In October 1869 he was made psalmist at the stanitsa of Lepsinskaya; on 24 November 1876 Bishop Sophonias (Sokolsky) ordained him deacon to the Trinity church there, on 18 April next year he was moved to the church of Elijah at Kuldja and on 22 September returned to Lepsinskaya; on 14 September 1903 he was ordained priest and served in the town of Lepsinsk, teaching at the same time in the parish school, and from 1904 at the Protection church in the village of Chemolgan; in 1916 he was sent to the prison church of Peter and Paul at Verny. He died a martyr in the autumn of 1919 at the hands of criminals released from the prison, who tied the priest to a horse’s tail. He was glorified by the jubilee council of 2000, and the Russian calendar keeps him on 3 September (Julian).
 

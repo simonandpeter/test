@@ -1,4 +1,4 @@
-# Nicholas the Presbyter, Hieromartyr (1937)
+# Nicholas the Presbyter
 
 Nicholas Dobroumov was born on 24 December 1876 — or 1875 — in the village of Nebdino in the Ust-Sysolsk district of Vologda province, the fifth and youngest child of the priest Nicholas Dobroumov, and grew up at Ust-Kulom, where his father was rector of the church of Peter and Paul. He finished the Ust-Sysolsk church school and, in 1899, the Vologda seminary, and soon married Antonina, the youngest daughter of the priest of Mezhador — and kept, the life says, a vow of chastity within the marriage, living with his wife as brother and sister, a monk in the world to the end of his days. Ordained on 29 September 1899 to the Dormition church at Pomozdino, he served then at Ust-Kulom and from 1906 as rector at Anyb, teaching the faith in the schools wherever he went, and preaching in Zyrian; he was decorated in 1909 and 1913.
 

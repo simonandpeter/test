@@ -1,4 +1,4 @@
-# Sixtus II, Pope of Rome
+# Sixtus II
 
 Sixtus, an Athenian by birth and well educated, had preached in Spain and was made bishop of Rome after the martyrdom of Pope Stephen (253–257) — a time, the life says, when whoever was elected to the Roman see was elected to a certain death. He was soon seized and imprisoned with his two deacons, [Felicissimus](/saints/felicissimus-the-deacon) and [Agapitus](/saints/agapitus-the-deacon).
 

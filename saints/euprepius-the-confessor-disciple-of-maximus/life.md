@@ -1,4 +1,4 @@
-# Euprepius the Confessor, disciple of Maximus
+# Euprepius, disciple of Maximus
 
 Euprepius was one of the disciples of [Maximus the
 Confessor](/saints/maximus-the-confessor). Like his teacher and his fellow disciples he suffered

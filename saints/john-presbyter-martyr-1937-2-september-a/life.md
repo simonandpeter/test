@@ -1,4 +1,4 @@
-# John (Melnichenko), Presbyter, Hieromartyr (1937)
+# John (Melnichenko)
 
 John Melnichenko was born on 26 September 1889 in the village of Ustye in the Bershad district of the Vinnytsia region. From 1917 to 1922 he worked as a teacher in the village school, and in 1922 was ordained priest and began his pastoral service in a church of the Vinnytsia region. On 5 September 1935 he was arrested and charged with counter-revolutionary agitation of a defeatist character, and sentenced to seven years in the corrective labour camps — held first in the prison of Vinnytsia, then sent by stages to the Burma section of the Karaganda camp in Kazakhstan. In the camp another arrest awaited him: on 14 August 1937 he was arrested as an active supporter of the group of Tsedrik — Bishop [Damascene](/saints/damascene-of-starodub), whose companions the Russian calendar keeps with him — and like the other members charged with counter-revolutionary activity in the camp and anti-Soviet utterances; he admitted nothing but the singing of church hymns. He was sentenced to be shot and executed on 15 September 1937; the Russian calendar keeps him on 2 September (Julian).
 

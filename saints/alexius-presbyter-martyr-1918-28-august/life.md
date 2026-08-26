@@ -1,4 +1,4 @@
-# Alexius (Budrin), Archpriest, Hieromartyr (1918)
+# Alexius (Budrin)
 
 Alexius Budrin was born on 6 February 1861 to the archpriest John Budrin, and finished the Perm seminary with a first-class certificate. At about twenty he married Kapitolina Vsevolodovna, was ordained deacon and appointed to the Annunciation church of the Perm boys’ gymnasium, teaching at the same time in the school of the Perm correctional prison; on 19 January 1883 he was ordained priest by Nathanael, bishop of Ekaterinburg, and began his service at the Holy Trinity church of the village of Syrinskoye in the Krasnoufimsk district. He served many years in the churches of Perm province, taught religion, and was a member of the fourth State Duma; after the revolution he was arrested by the Bolsheviks for his membership of the Duma and shot with particular cruelty at Krasnoufimsk on 10 September 1918. In 2002 his relics were found incorrupt and carried to the Holy Trinity cathedral. The Russian calendar keeps him on 28 August (Julian).
 

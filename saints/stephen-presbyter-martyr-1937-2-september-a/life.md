@@ -1,4 +1,4 @@
-# Stephen (Yaroshevich), Presbyter, Hieromartyr (1937)
+# Stephen (Yaroshevich)
 
 Stephen — Stepan Alexandrovich Yaroshevich — was born in 1883 in the village of Ostashkovo in the Proskurov district of Podolia province, a psalmist’s son; he had a secondary education and became a priest, and is known to have served from 1930 to 1935 in the village of Goryachevka in the Vinnytsia region. On 7 November 1935 he was arrested and sentenced to six years in the corrective labour camps, serving them in the Koktun-Kul section of the Karaganda camp, where he worked as a builder on the sixth sector. In August 1937 several arrests were made in the camp, and he was among them; all those in the group case of the priest Basil Zelensky and others were charged — the calendar’s life runs on past the point read here — with taking part in illegal prayers, anti-Soviet agitation and holding a panikhida for those shot. He did not admit guilt; the troika sentenced him to be shot, and he was executed on 15 September 1937. The Russian calendar keeps him on 2 September (Julian).
 

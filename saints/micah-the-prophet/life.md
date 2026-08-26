@@ -1,4 +1,4 @@
-# Micah the Prophet
+# Micah
 
 Micah, sixth of the twelve minor prophets, was of the tribe of Judah and came from the town of Morasthi south of Jerusalem, for which he is called the Morasthite. He began his prophetic service around 778 BC and carried it on for nearly fifty years, under the kings of Judah Jotham, Ahaz and the righteous [Hezekiah](/saints/hezekiah-the-king), a contemporary of the prophet Isaiah. His rebukes and predictions were addressed to both kingdoms, Judah and Israel: he foresaw the calamities that threatened Israel at its destruction and Judah at the invasion of Sennacherib of Assyria, and his is the prophecy of the Saviour’s birth — and you, Bethlehem, house of Ephrathah, are you small among the thousands of Judah; out of you shall come forth to me the ruler of Israel, whose goings forth are from the beginning, from the days of eternity. From the words of Jeremiah (26:18–19) it is clear that the Jews were afraid to kill him. His relics were found in the fourth century at Barathsatia, by a revelation to Zebinus, bishop of Eleutheropolis.
 

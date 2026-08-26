@@ -1,4 +1,4 @@
-# Basil, Bishop of Gortyna
+# Basil
 
 Basil, bishop of Gortyna, was the successor of Eumenius, kept on 18 September. In 680–681 he took part in the Sixth Ecumenical Council in Trullo with the bishops John of Lampe and Gregory of Kantanos; the council condemned Monothelitism and its supporters, and in its proceedings the theological training and intelligence of Basil were shown — the acts contain a speech of his addressed to the emperor Constantine IV Pogonatus proving the error of the heresy, and the dialogue between Basil and the heretical monk Stephen, disciple of the heretical patriarch Macarius of Antioch, who was counted a great theologian, and other passages show his forceful presence. He signed not only as bishop of Gortyna and so archbishop of Crete but as legate of the whole synod of the apostolic throne of elder Rome, and took part too in the Quinisext Council of 691–692 with the bishops Nicetas of Kydonia, Sisinnius of Chersonesus and Theopemptus of Kisamos — the synaxarion’s notice runs on past the point read here. The Greek calendar keeps him on 16 September.
 

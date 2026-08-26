@@ -1,4 +1,4 @@
-# Eustathius Kataphloros, Archbishop of Thessalonica
+# Eustathius Kataphloros
 
 Eustathius lived in the twelfth century. He studied letters and theology at
 Constantinople and was ordained deacon at Hagia Sophia, and he was one of the great scholars of

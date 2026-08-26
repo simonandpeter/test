@@ -1,4 +1,4 @@
-# Helen (Chernova), Martyr (1943)
+# Helen (Chernova)
 
 Helen Ivanovna Chernova was born in 1874 in the village of Alexandrovka in the Bogimovo district of the Tarusa county of Kaluga province, to a peasant family, and in time married. She was arrested on 28 September 1937 and sent to the Butyrka prison, charged as a member of an illegal counter-revolutionary monarchist organisation of churchmen, keeping the leaders of the organisation in touch with the outside world — for her dealings with priests and fools-for-Christ; from the record of her interrogation a month after — the calendar’s life runs on past the point read here. She did not admit guilt; the troika of the NKVD sentenced her to eight years in the camps, which she served in the Siblag, and she died of hunger on 17 September 1943 in the Baim section of the camp. By decree of the Holy Synod of 26 December 2006 she was numbered among the saints, and the Russian calendar keeps her on 4 September (Julian).
 

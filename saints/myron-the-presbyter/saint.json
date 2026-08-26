@@ -1,6 +1,7 @@
 {
   "slug": "myron-the-presbyter",
-  "display_name": "Myron of Cyzicus, Presbyter and Martyr",
+  "display_name": "Myron of Cyzicus",
+  "office": "Presbyter",
   "names": [
     {
       "form": "Мирон",

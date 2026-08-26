@@ -1,4 +1,4 @@
-# Demetrius (Spassky), Presbyter, Hieromartyr (1918)
+# Demetrius (Spassky)
 
 Demetrius Spassky was born in 1877 in Vologda province, in the Ust-Sysolsk district, in the settlement of Koigorodok, the son of the priest Vassian Dmitrievich Spassky. Finishing the seminary he taught religion in the zemstvo school, singing in the parish school, and served as psalmist at the Trinity cathedral of Ust-Sysolsk; marrying Anna Ivanovna Pokrovskaya, a priest’s daughter, he was ordained priest, and four children were born to them. He served at the church of the Saviour in the village of Ust-Nem, whose parishioners were Komi who understood the Church Slavonic of the services poorly; he preached daily in the Zyrian language, and was much loved for it, taught in several schools and was a district deputy for judicial and economic affairs. In 1918, during the pogrom of a punitive detachment of Red Army men, he was arrested for his sermons and for refusing to recognise the Soviet power; after tortures he was sentenced to be shot and executed on 19 September 1918, and buried by the local people. The Russian calendar keeps him on 6 September (Julian).
 

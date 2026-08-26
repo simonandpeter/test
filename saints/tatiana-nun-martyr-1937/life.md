@@ -1,4 +1,4 @@
-# Tatiana (Gribkova), Novice, Monastic Martyr (1937)
+# Tatiana (Gribkova)
 
 Tatiana was born in 1879 in the village of Shchukino in the Moscow district of Moscow province, the daughter of the peasant Ivan Gribkov. In 1896 she entered the Kazan convent of Golovino, nine versts from Moscow — founded in 1876, first as a community and from 1886 as a convent, with two stone and two wooden churches, a hospital, an almshouse, an icon workshop and a school, and nearly two hundred sisters. In 1925 the convent was liquidated by the Soviet power, and she settled with her sister in her native village; in the cruel persecutions of the Russian Church, whose next wave fell in 1937, cases were made up with the help of false witnesses — the calendar’s life runs on past the point read here. Arrested on a false denunciation and charged with anti-Soviet agitation and ties with the clergy, she was sentenced by the troika of the NKVD to be shot, executed on 14 September 1937 at the Butovo range and buried in the common grave. The Russian calendar keeps her on 1 September (Julian).
 

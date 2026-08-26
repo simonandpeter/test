@@ -1,4 +1,4 @@
-# Eugene (Dmitrev), Psalmist, Martyr (1937)
+# Eugene (Dmitrev)
 
 Eugene Fyodorovich Dmitrev was born on 18 July 1913 to the hereditary archpriest Theodore Andreevich Dmitrev, and was the nephew of the archpriest Michael Dmitrev, numbered among the new martyrs and kept on 2 December. He served as psalmist at the church of John the Theologian in the village of Mitino in the Kasimov district of the Ryazan region, was then taken for military service and worked at a factory in Perm. In 1937 he sent his father a last letter from Perm, asking him to sing his funeral; later it was learned that the workers of that factory had been arrested to a man and, it seems, shot — by the refined data the day of his martyr’s death is 31 August 1937. By decree of the Holy Synod of 27 December 2000 he was numbered among the saints for veneration everywhere, and the Russian calendar keeps him on 18 August (Julian).
 

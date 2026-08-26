@@ -1,4 +1,4 @@
-# Theodotus (Shatokhin), Presbyter, Hieromartyr (1937)
+# Theodotus (Shatokhin)
 
 Theodotus Trofimovich Shatokhin was born in 1888 in the village of Zaitsevo in Ekaterinoslav province, today the Horlivka district of Ukraine; in the First World War he was a soldier of the Oka infantry regiment. In 1926 he was arrested and imprisoned for a year on the charge of spreading religious convictions among the peasants; he was arrested a second time on 2 April 1935 at Donetsk, by then already a priest — who ordained him is unknown, because at interrogation, so as to incriminate no one, he took a very careful position: he knows nothing of himself and can say nothing of anyone, the case file records. Only about his religious feelings he would not keep silent, and so in captivity too — the calendar’s life runs on past the point read here. Sentenced to seven years in the camps, he was arrested in the Karaganda camp in August 1937 in a group case for taking part in illegal prayers and anti-Soviet agitation, did not admit guilt, and was sentenced by the troika to be shot and executed on 15 September 1937. The Russian calendar keeps him on 2 September (Julian).
 

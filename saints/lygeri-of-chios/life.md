@@ -1,4 +1,4 @@
-# Lygeri of Chios, New Martyr
+# Lygeri of Chios
 
 Lygeri was born at the beginning of the nineteenth century in the village of Anavatos on Chios and brought up in the waters of the Orthodox faith; she was remarkable for beauty of soul and body, which drew the desire of the Turkish tyrant, and despite his promises and pressure of wealth and honours the all-modest girl stood firm in her faith and refused marriage with the Hagarene of another faith. On 6 September 1822, the day Anavatos kept the feast of the Archangel’s miracle at Chonae, the tyrant’s followers came to the village, and in the uproar seized her by force, against her refusal, to take her to him; on the way she clasped a tree with all her strength, declaring openly that she would not deny Christ, and one of them beheaded her and ran with her honoured head to the beach of Elinda, where the Turk was waiting. From the blood of the victorious new martyr — the synaxarion’s life runs on past the point read here.
 

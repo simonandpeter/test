@@ -1,4 +1,4 @@
-# Alexander the Confessor (1961)
+# Alexander
 
 Georgy Andreevich Urodov was born in 1882 to a peasant family in the village of Nevezhkino in the Chembar district of Penza province; after the zemstvo school he sang in his parish choir, and in 1901, on a journey to Sarov, he stopped at the Sanaksar monastery and decided to give his life to the monastic labour there. Tonsured Alexander on 30 August 1911, he was ordained hierodeacon at Tambov and hieromonk on 22 July 1913, and on 20 July 1915 the brethren elected him superior of Sanaksar; Archbishop Kirill (Smirnov) made him igumen.
 

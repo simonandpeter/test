@@ -1,6 +1,6 @@
 {
   "slug": "andrew-the-presbyter-confessor",
-  "display_name": "Andrew the Presbyter, Confessor",
+  "display_name": "Andrew the Presbyter",
   "names": [
     {
       "form": "Άγιος Ανδρέας ο Πρεσβύτερος",
@@ -10,7 +10,8 @@
   "sex": "male",
   "types": [
     "hieromartyr",
-    "presbyter"
+    "presbyter",
+    "confessor"
   ],
   "attestations": [
     {

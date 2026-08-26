@@ -1,4 +1,4 @@
-# Susanna of Rome, Virgin Martyr
+# Susanna of Rome
 
 The virgin martyr Susanna was the daughter of the presbyter [Gabinius](/saints/gabinius-the-presbyter) and the niece of Pope [Gaius](/saints/gaius-pope-of-rome) of Rome (283–296), raised in strict Christian piety and vowed to God from her youth. Her family was related to the emperor Diocletian, who heard of her virtue and beauty and decided to marry her to his co-ruler Maximian Herculius; he sent to Gabinius his kinsman the dignitary [Claudius](/saints/claudius-companion-of-susanna), and then Claudius’s brother [Maximus](/saints/maximus-companion-of-susanna), and both, after talking with the devout family, received baptism — together with Claudius’s wife [Praepedigna](/saints/praepedigna-of-rome) and his sons [Alexander](/saints/alexander-companion-of-susanna) and [Cuphius](/saints/cuphius-of-rome). Learning that a whole family of his relatives had turned Christian, Diocletian sent them into exile; soon they were burned at Ostia near Rome and their ashes thrown into the sea.
 

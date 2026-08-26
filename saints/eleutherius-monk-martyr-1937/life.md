@@ -1,4 +1,4 @@
-# Eleutherius, Monk-martyr (1937)
+# Eleutherius
 
 Eleutherius Pechennikov was born in 1870 in the village of Pripechino in the Cherikov district of Mogilev province, to a peasant family. He was called up in 1892 and served as a private; when he was ordained is not exactly known, but he was a regimental priest, and from 1896 a monk of the Trinity monastery in Smolensk.
 

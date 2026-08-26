@@ -1,4 +1,4 @@
-# Sebbi, King of the East Saxons
+# Sebbi
 
 Sebbi, king of the East Saxons, stands in the Greek synaxarion on 29 August as an English saint. The entry has no details of his life, and none are supplied here.
 

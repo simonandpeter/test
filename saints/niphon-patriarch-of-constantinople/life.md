@@ -1,4 +1,4 @@
-# Niphon, Patriarch of Constantinople
+# Niphon
 
 A Greek by birth, Niphon became a monk in his youth and lived the ascetic life first outside the Holy Mountain and then on Athos itself, in several monasteries, longest at Vatopedi and Dionysiou, where he was loved by all for a rare wisdom and an unusual meekness.
 

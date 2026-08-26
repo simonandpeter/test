@@ -1,4 +1,4 @@
-# Eugene (Zernov), Metropolitan of Gorky
+# Eugene (Zernov)
 
 Simeon Alekseevich Zernov was born in 1877 in the Moscow province, a deacon's son.
 He finished the Moscow seminary in 1898 and went on to the Moscow Theological

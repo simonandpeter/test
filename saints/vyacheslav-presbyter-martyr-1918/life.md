@@ -1,4 +1,4 @@
-# Vyacheslav (Zakedsky), Presbyter, Hieromartyr (1918)
+# Vyacheslav (Zakedsky)
 
 Vyacheslav Ivanovich Zakedsky was born in 1879 to a priest’s family. In 1900 he finished the course of the Yaroslavl seminary and was made teacher of the parish school in the village of Tolgobol in the Yaroslavl district, and in those years married Nadezhda Mitrofanovna Solontsova, daughter of the deacon of the Rybinsk cathedral of the Transfiguration, Mitrofan Timofeevich Solontsov, of an old priestly line; on 21 January 1901 he was ordained deacon to the Transfiguration cathedral of Rybinsk and appointed catechist of the cathedral’s parish school, and in 1909 catechist too of the eighth parish primary — the calendar’s life runs on past the point read here. After the revolution of 1917 he became priest of the prison church; in August 1918, during the suppression of the Yaroslavl rising, he was savagely beaten and soon died of his wounds. He was canonised in 2001, and the Russian calendar keeps him on 23 August (Julian).
 

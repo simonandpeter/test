@@ -1,4 +1,4 @@
-# Victor (Ellansky), Archpriest, Hieromartyr (1937)
+# Victor (Ellansky)
 
 Victor Vasilievich Ellansky was born on 16 September 1874 in the village of Ploskoye in the Oster district of Chernigov province, a priest’s son. Finishing the Kyiv Academy in 1914 he was ordained priest to one of the churches of Kyiv and was one of the close helpers of the hieromartyr Metropolitan Vladimir (Bogoyavlensky). In 1924 he was arrested and sentenced to three years’ exile; returning to Kyiv at its end he resumed his service and was raised to archpriest; arrested a second time in March 1929 and held in the Kyiv house of preliminary detention, in October he was sentenced to three years’ exile, served in the Irkutsk region, and after the term — the calendar’s life runs on past the point read here. Arrested again in 1935 and sent to the Karaganda camp, he was charged with anti-Soviet agitation for his sermons and shot at Karaganda on 8 September 1937. He was glorified at the jubilee Council of 2000, and the Russian calendar keeps him on 26 August (Julian).
 

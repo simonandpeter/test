@@ -1,4 +1,4 @@
-# Martin, Pope of Rome
+# Martin
 
 The Greek calendar names Martin, Pope of Rome, on 20 September together with
 [Maximus the Confessor](/saints/maximus-the-confessor), and refers the reader to 13 April, where

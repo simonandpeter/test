@@ -1,4 +1,4 @@
-# Eve the Abbess, Nun-martyr (1937)
+# Eve the Abbess
 
 Akilina Vasilievna Pavlova was born on 10 July 1879 in the village of Issa in the Insar district, to a peasant family; it is known that she was abbess of one of the monasteries of Penza. She was arrested in 1929 in the village of Balki in the Saratov region and sent into exile in Kazakhstan — for three years by one form in her file, eight by another; the details are unknown, but one form says her term ended in 1932.
 

@@ -1,4 +1,4 @@
-# Myron of Cyzicus, Presbyter and Martyr
+# Myron of Cyzicus
 
 Myron was a presbyter in Achaia in the third century, of a rich and distinguished family — meek and merciful to people, the life says, but brave in defending his flock. At the feast of the Nativity, as he was celebrating the service, the local governor Antipater came into the church with soldiers to seize the worshippers and lead them to torture; Myron stood up for his people and rebuked the governor for his cruelty, and was given over to torment: hanged and raked with iron combs, then thrown into a red-hot furnace, where the Lord kept him whole while a hundred and fifty of the bystanders were scorched by the fire that burst out of it.
 

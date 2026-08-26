@@ -126,3 +126,20 @@ export function formatLifespan(dates) {
   }
   return `${birth} – ${death}`;
 }
+
+/**
+ * The line under a saint's name: what they held, then when they lived
+ * (2026-08-27). The rank moved into the name with the naming addendum, and
+ * the office moved out of it; this is where the office landed.
+ *
+ * Office first, because it is the half a reader is placing the name by, and
+ * because the dates are the half that reads fine truncated. It is printed as
+ * the corpus recorded it, which is English - "Bishop of Voronezh" is a fact
+ * about a see, not a UI string, and the packs cannot hold 340 of them. That is
+ * the same bargain `display_name` already makes for a saint with no recorded
+ * form in the reader's language.
+ */
+export function formatSubtext(card) {
+  const life = formatLifespan(card?.dates);
+  return card?.office ? `${card.office} · ${life}` : life;
+}

@@ -1,4 +1,4 @@
-# Symeon the Lesbian, Stylite
+# Symeon the Lesbian
 
 The Greek synaxarion keeps Symeon the Lesbian, the stylite, on 1 September and refers his life to 1 February, where it stands with that of his two brothers George and David; nothing is recorded here beyond that.
 

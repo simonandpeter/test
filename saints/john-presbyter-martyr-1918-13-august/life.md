@@ -1,4 +1,4 @@
-# John the Presbyter, Hieromartyr (1918)
+# John the Presbyter
 
 John Shishev — Shishov in some sources — was born in 1867, probably the son of the psalmist of the church of Pirogovskoye in the Kamyshlov district; he went through the Dalmatovo church school and the Perm seminary, not brilliantly, finished in 1886 and married Olga, daughter of the priest John Oransky. They had three children — Vladimir, who left the seminary for painting against his father’s wish, studied under Fechin at Kazan, spent the Great War in an Austrian prison camp sketching for the peasants in return for milk and bread, and came home only in 1918; Peter; and Elizaveta, who died at twelve, after which they adopted an orphan girl, Zoya, who also died young. The sorrows of his life, the life suggests, prepared him to take the cup of martyrdom with faith and humility.
 

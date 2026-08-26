@@ -218,6 +218,27 @@ export const ro = {
     /* The hagiographic vocabulary this church's own synaxarion uses; the
        rest fall back to English. */
 
+    /* The ranks, in this church's own vocabulary and in both forms it
+       declines (2026-08-27). The masculine is the unmarked one and is what a
+       record with no recorded sex is given. */
+    ranks: {
+      honorific: { m: 'Sf', f: 'Sf' },
+      forefather: { m: 'Strămoșul', f: 'Strămoașa' },
+      'great-martyr': { m: 'Marele Mucenic', f: 'Marea Muceniță' },
+      'virgin-martyr': { m: 'Mucenicul', f: 'Fecioara Muceniță' },
+      'passion-bearer': { m: 'Purtătorul de patimi', f: 'Purtătoarea de patimi' },
+      'equal-to-the-apostles': { m: 'Întocmai cu Apostolii', f: 'Întocmai cu Apostolii' },
+      apostle: { m: 'Apostolul', f: 'Apostola' },
+      prophet: { m: 'Proorocul', f: 'Proorocița' },
+      hieromartyr: { m: 'Sfințitul Mucenic', f: 'Sfințita Muceniță' },
+      'venerable-martyr': { m: 'Cuviosul Mucenic', f: 'Cuvioasa Muceniță' },
+      'new-martyr': { m: 'Noul Mucenic', f: 'Noua Muceniță' },
+      martyr: { m: 'Mucenicul', f: 'Mucenița' },
+      venerable: { m: 'Cuviosul', f: 'Cuvioasa' },
+      confessor: { m: 'Mărturisitorul', f: 'Mărturisitoarea' },
+      blessed: { m: 'Fericitul', f: 'Fericita' },
+      righteous: { m: 'Dreptul', f: 'Dreapta' },
+    },
     types: {
       martyr: 'Mucenic',
       hieromartyr: 'Sfințit mucenic',

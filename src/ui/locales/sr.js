@@ -218,6 +218,27 @@ export const sr = {
     /* The hagiographic vocabulary this church's own synaxarion uses; the
        rest fall back to English. */
 
+    /* The ranks, in this church's own vocabulary and in both forms it
+       declines (2026-08-27). The masculine is the unmarked one and is what a
+       record with no recorded sex is given. */
+    ranks: {
+      honorific: { m: 'Св', f: 'Св' },
+      forefather: { m: 'Праотац', f: 'Прамати' },
+      'great-martyr': { m: 'Великомученик', f: 'Великомученица' },
+      'virgin-martyr': { m: 'Мученик', f: 'Мученица' },
+      'passion-bearer': { m: 'Страстотрпац', f: 'Страстотрпица' },
+      'equal-to-the-apostles': { m: 'Равноапостолни', f: 'Равноапостолна' },
+      apostle: { m: 'Апостол', f: 'Апостол' },
+      prophet: { m: 'Пророк', f: 'Пророчица' },
+      hieromartyr: { m: 'Свештеномученик', f: 'Свештеномученица' },
+      'venerable-martyr': { m: 'Преподобномученик', f: 'Преподобномученица' },
+      'new-martyr': { m: 'Новомученик', f: 'Новомученица' },
+      martyr: { m: 'Мученик', f: 'Мученица' },
+      venerable: { m: 'Преподобни', f: 'Преподобна' },
+      confessor: { m: 'Исповедник', f: 'Исповедница' },
+      blessed: { m: 'Блажени', f: 'Блажена' },
+      righteous: { m: 'Праведни', f: 'Праведна' },
+    },
     types: {
       martyr: 'Мученик',
       hieromartyr: 'Свештеномученик',

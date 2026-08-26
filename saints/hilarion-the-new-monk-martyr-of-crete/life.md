@@ -1,4 +1,4 @@
-# Hilarion the New, Monk-martyr of Crete
+# Hilarion the New of Crete
 
 Hilarion came from Herakleion in Crete and was called John in the world, one of
 five children of Frantzeskos and Aikaterini, brought up carefully and taught the sacred letters.

@@ -1,4 +1,4 @@
-# Seraphim (Shakhmut), Archimandrite, Monk-martyr (1946)
+# Seraphim (Shakhmut)
 
 Seraphim — Roman Romanovich-Shakhmut in the world — was born in 1901 in the village of Podlesye in the Lyakhovichi district, into a large family of poor peasants. From childhood Roman was drawn to the Church: while the others played the usual games he would make little crosses of sticks, put on an apron for an epitrachelion and begin to “serve”. Despite extreme want he finished the two-class school at Lyakhovichi; in 1922 he entered the Zhirovichi Dormition monastery, where in 1923 he was tonsured Seraphim, and for his good voice was given the obedience of the choir, becoming a fine precentor and typikon-keeper; in 1926 he was ordained hierodeacon and soon hieromonk. In August 1941, with the blessing of Metropolitan Panteleimon, he left Zhirovichi for Minsk to restore parish life where the Bolsheviks had destroyed it, visiting many villages and gathering petitions — the life of the new martyrs of Belarus, printed by the Sretensky calendar, runs on past the point read here; he died in 1945 or 1946, and the Russian calendar keeps him on 24 August (Julian).
 

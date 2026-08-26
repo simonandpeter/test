@@ -1,4 +1,4 @@
-# The New Martyrs of Jasenovac (1941–1944)
+# The New Martyrs of Jasenovac
 
 The Serbian calendar keeps on 31 August (Julian) the holy martyrs of Jasenovac, and the Russian calendar the same day prints the synaxis of the new martyrs of Jasenovac (1941–1944), marked as a commemoration of the Serbian church — the Orthodox Serbs killed in the Ustaša camp at Jasenovac in the Second World War. Neither calendar prints a life under the line, the Ohrid Prologue being older than the event; this entry records the two lines and nothing more.
 

@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 49)
+## State as of 2026-08-27 (Amendment 50)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -80,12 +80,21 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 166 unit tests (`npm test`) — pure logic, no DOM.
-- 422 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 48), not carried
+- 171 unit tests (`npm test`) — pure logic, no DOM.
+- 425 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendment 50), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **A saint is named by rank now, not by "St."** (Amendment 50, author's
+  instruction, reversing Amendment 32). `display_name` is the bare name;
+  `office` is a field of its own on 246 records and is drawn on the subtext
+  line; the rank comes from `types` through a precedence walk in
+  `lib/honorific.js`, whose header writes the order out in words. "St" is the
+  marked case, 58 of 742, and carries no stop in any of the five. **Never put
+  a rank, an office or a death year back into `display_name`** — a unit test
+  sweeps the whole corpus for all three, because that collision is what kept
+  the site on a blanket honorific for three days.
 - **A `CLAUDE.md` now stands beside this file** (Amendment 47): file-and-line
   pointers into the code — where the calendar chrome, the coachmarks, the
   Index cards and the icon pipeline actually live — kept short on purpose and
@@ -965,14 +974,12 @@ session). SESSIONS.md has each in full.
   states only the civil date. Whether a non-civil reading belongs somewhere —
   the saint page, About, a line under the hero — is the author's call, made
   twice now in the negative for the calendar page specifically.
-- **Rank stays out of `display_name`, by deliberate choice (Amendment 32).**
-  The author asked for rank to read as "a category in the profile, not in the
-  name" — already true via `types`, printed on the saint page's facts line —
-  but stripping rank out of the ~200 new-martyr names was surveyed (226
-  distinct trailing segments, no safe mechanical split) and left undone,
-  because for namesakes sharing a forename and year the rank and year are the
-  only disambiguator. Revisit only if the author asks again with a rule for
-  telling disambiguator from decoration.
+- **Athanasius of Alexandria reads *Confessor Athanasius of Alexandria***
+  (Amendment 50). His types are `bishop, theologian, confessor`, and Confessor
+  outranks the "St" fallback, so the precedence walk is doing as it was told —
+  but both major calendars print Athanasius the Great as a hierarch, and he is
+  one of the seven saints who have an icon, so it is a visible result. The fix,
+  if one is wanted, is data (drop `confessor` from that record) and not code.
 - **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
   which obliges no attribution — but each `icon.meta.json` still wants a real
   `source_url` in place of the `example.invalid` placeholder, because

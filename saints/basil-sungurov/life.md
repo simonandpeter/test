@@ -1,4 +1,4 @@
-# Basil Sungurov, Priest
+# Basil Sungurov
 
 Basil Sungurov was a priest, shot in 1937 and kept by the Russian church among the new
 martyrs, named in the day's line with [Gregory Averin](/saints/gregory-averin).

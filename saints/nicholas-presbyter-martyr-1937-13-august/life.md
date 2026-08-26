@@ -1,4 +1,4 @@
-# Nicholas the Presbyter, Hieromartyr (1937, 13 August)
+# Nicholas the Presbyter (13 August)
 
 Nicholas Orlov was born on 15 February 1881 in the village of Rybnitsy in the Bolshesolsky district of Kostroma province, of a family of hereditary priests — the Orlovs had served in that church and the neighbouring village of Bor for more than a hundred years, his father forty-four of them. After the Yaroslavl seminary he taught at the people’s school in Petropavlovskoye, some fifteen kilometres away; he married, and in 1911 was ordained to the church of his native village.
 
