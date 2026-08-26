@@ -3353,8 +3353,8 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
    * assertions, which is also a truer test — it can no longer pass on a line
    * that happens to contain the right words in the wrong places.
    */
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil and wine - the Dormition Fast');
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Oil and wine are permitted.');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil and Wine Allowed - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Meat, dairy and eggs are set aside; oil and wine are permitted.');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'oil');
@@ -3384,7 +3384,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // A fish-permitted day resolves to the `fish` grade, which is the one
    // grade taken from lib/liturgy.js rather than from a printed note — that
    // claim is liturgy.js's own and predates this.
-  await expect(page.locator('[data-liturgy]')).toContainText('Fish permitted - a Great Feast on a Friday');
+  await expect(page.locator('[data-liturgy]')).toContainText('Oil, Wine and Fish Allowed - a Great Feast on a Friday');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-fast', 'fish');
 
   await openChooser(page);
@@ -3397,7 +3397,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // shares, which is the most the site will say unasked.
   await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Meat, dairy and eggs are set aside.');
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('No fast');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   // And a fast-free day prints no allowance at all: "Nothing is set aside"
   // under a chip that already reads "No fast" is the same sentence twice.
@@ -3512,7 +3512,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('No fast');
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
 
   // The Russian week (Amendment 29 too): the 24th is its 11 August, Euplus
@@ -4012,8 +4012,10 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // deliberately not — it is composed in English by lib/liturgy.js, the
   // recorded seam of Amendment 36.
   // 26 August: days.pravoslavie.ru printed «Успенский пост; сухоядение», so
-  // the grade leads the line, in Russian, from the pack's own vocabulary.
-  await expect(page.locator('[data-liturgy]')).toContainText('Сухоядение - Успенский пост');
+  // the grade leads the line, in Russian, from the pack's own vocabulary —
+  // naming the *type* of fast since 2026-08-26 rather than the technical
+  // term, which is why this reads Строгий пост and not Сухоядение.
+  await expect(page.locator('[data-liturgy]')).toContainText('Строгий пост - Успенский пост');
   await expect(page.locator('[data-liturgy]')).toContainText('Глас 3');
 
   // And it is a setting, not a session: the reload comes back Russian.
@@ -4260,8 +4262,8 @@ test('the fast bubble says what this day allows, and nothing about the others', 
   await expect(bubble).toBeVisible();
   await expect(fast).toHaveAttribute('aria-expanded', 'true');
   // This day's allowance, and only this day's.
-  await expect(bubble.locator('.fast-allows')).toHaveText('Oil and wine are permitted.');
-  await expect(bubble).not.toContainText('Xerophagy');
+  await expect(bubble.locator('.fast-allows')).toHaveText('Meat, dairy and eggs are set aside; oil and wine are permitted.');
+  await expect(bubble).not.toContainText('Strict Fasting');
   await expect(bubble).not.toContainText('Fish');
   await expect(bubble.locator('.fast-levels')).toHaveCount(0);
   // The calendar's own note, quoted untranslated and tagged for a screen
@@ -4382,11 +4384,14 @@ test('the fast and its bubble are in the reader own language', async ({ browser 
     localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
   );
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  // «Успенский пост; сухоядение» → the xerophagy grade, in Russian.
-  await expect(page.locator('[data-liturgy]')).toContainText('Сухоядение - Успенский пост');
+  // «Успенский пост; сухоядение» → the xerophagy grade, in Russian, and the
+  // label its type shares with `no-oil` since 2026-08-26.
+  await expect(page.locator('[data-liturgy]')).toContainText('Строгий пост - Успенский пост');
   await page.locator('[data-liturgy] .fast').click();
   const bubble = page.locator('.fast-bubble');
-  await expect(bubble.locator('.fast-allows')).toHaveText('Неварёная пища, без масла и вина.');
+  await expect(bubble.locator('.fast-allows')).toHaveText(
+    'Растительная пища; отлагаются мясо, животные продукты, растительное масло и алкоголь.',
+  );
   await expect(bubble.locator('.fast-note')).toHaveAttribute('lang', 'ru');
   await ctx.close();
 });
@@ -5745,7 +5750,7 @@ test('a great feast months past the corpus keeps its readings, its fast and its 
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Евреям 9:1-7');
   await expect(page.locator('[data-readings] .readings a').nth(1)).toHaveText('Луки 10:38-42; 11:27-28');
   // the fast the calendar printed, resolved to what it allows
-  await expect(page.locator('[data-liturgy]')).toContainText('Разрешается рыба');
+  await expect(page.locator('[data-liturgy]')).toContainText('Разрешаются масло, вино и рыба');
   // a great feast sings, and every hymn says where it was read
   const hymns = page.locator('[data-hymns]:not([hidden]) [data-feast-hymns] .hymn-text');
   expect(await hymns.count()).toBeGreaterThan(4);
@@ -6133,4 +6138,249 @@ test('a saint from a Greek company is named for herself, not for the whole entry
   await expect(name).not.toContainText(/παιδι/);
   await expect(name).not.toContainText(/συνοδ/);
   await ctx.close();
+});
+
+/* ---- the 2026-08-26 evening batch: the ring, the name days, the fast
+        types and the Great Feasts -------------------------------------- */
+
+test("today's ring closes on the underline and clears the marks under it", async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "The bubble highlighting today is overlapping
+   * with both the underline and dot in a weird way. Make the bubble corners a
+   * bit sharper and make it line up perfectly with the underline so it blends
+   * in."
+   *
+   * Both halves of that were real and were measured before they were fixed,
+   * by rendering the today button at 8x and reading the rubric pixels back:
+   * the ring's bottom border ran at css_y 42.9 while the underline ran at
+   * 39.0-40.0 and the fast dot began at 42.0 - so the ring hung about three
+   * pixels past the underline and took a bite out of the dot below it. With
+   * `bottom: 0` the ring's bottom border and the underline land in the same
+   * band, which is what "blends in" means here: the underline is drawn at
+   * `text-underline-offset: 3px` from the baseline, and that falls inside the
+   * last pixel of this span's own line box.
+   *
+   * The assertions are relationships rather than the numbers above, because
+   * the numbers belong to one face at one size and the relationships are what
+   * the instruction asked for. Each fails on its own if the rule is put back
+   * the way it was (`inset: -3px -6px` and a 999px radius).
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const geom = await page.evaluate(() => {
+    const btn = document.querySelector('.week-strip button.is-today');
+    const num = btn.querySelector('.day-num');
+    const marks = btn.querySelector('.day-marks');
+    const before = getComputedStyle(num, '::before');
+    const box = num.getBoundingClientRect();
+    return {
+      /*
+       * Where the ring's own bottom edge falls. A pseudo-element has no
+       * `getBoundingClientRect`, so it is computed the way the layout engine
+       * does: the offset parent here is the `.day-num` span itself
+       * (`position: relative`), and `inset`'s bottom leg is negative when the
+       * ring hangs *past* the box. The first draft of this test read that leg
+       * raw and asserted it was `<= 0.5` — which -3 satisfies, so the
+       * assertion passed with the defect restored and was pinning nothing.
+       * Caught by the backout, which is what backouts are for.
+       */
+      ringBottom: box.bottom - parseFloat(before.bottom),
+      radius: parseFloat(before.borderBottomLeftRadius),
+      boxBottom: box.bottom,
+      marksTop: marks ? marks.getBoundingClientRect().top : null,
+      isToday: btn.classList.contains('is-today'),
+      isSelected: btn.getAttribute('aria-current') === 'date',
+      // Landing on `/` puts the reader on today, so the ring and the
+      // underline are on the same numeral - which is the case the
+      // instruction is about.
+      underlined: getComputedStyle(num).textDecorationLine,
+    };
+  });
+
+  expect(geom.isToday && geom.isSelected).toBe(true);
+  expect(geom.underlined).toContain('underline');
+  // 1. The ring does not hang below the line box the underline is drawn in.
+  //    Backed out, the ring's bottom sits 3 px past it and this fails.
+  expect(geom.ringBottom).toBeLessThanOrEqual(geom.boxBottom + 0.5);
+  // 2. And so it clears the fast and feast dots, which begin below it.
+  //    Backed out, the ring's bottom is 116.1 against a marks top of 115.1.
+  expect(geom.marksTop).not.toBeNull();
+  expect(geom.ringBottom).toBeLessThanOrEqual(geom.marksTop);
+  // 3. Sharper corners: a soft rectangle, not the pill it was.
+  expect(geom.radius).toBeGreaterThan(0);
+  expect(geom.radius).toBeLessThan(12);
+
+  // The month keeps the same shape, so the two grains read as one mark.
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  const month = await page.evaluate(() => {
+    const num = document.querySelector('.month-grid button.is-today .day-num');
+    const before = getComputedStyle(num, '::before');
+    const box = num.getBoundingClientRect();
+    return {
+      ringBottom: box.bottom - parseFloat(before.bottom),
+      boxBottom: box.bottom,
+      radius: parseFloat(before.borderBottomLeftRadius),
+    };
+  });
+  expect(month.ringBottom).toBeLessThanOrEqual(month.boxBottom + 0.5);
+  expect(month.radius).toBeLessThan(12);
+});
+
+test('name days say "today" only on the day that is today', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: replace "Name Days" with "Today's Name Days".
+   * Taken at its word on the day it is true and refused on every other,
+   * because the Daily page is a day browser - the rail reaches 121 days
+   * either side of today - and the heading would be a plain falsehood on all
+   * but one of them. The rest of this panel says "this day" for the same
+   * reason.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  const heading = page.locator('[data-namedays] .register-heading');
+  // Some days hold no names at all - the corpus is thin past 20 September and
+  // the section does not render then. Only assert where it is there.
+  if (await heading.count()) await expect(heading).toHaveText("Today's name days");
+
+  // 20 September is not today and says so. (It is also the day the older
+  // name-days test uses, for the same reason: it is the richest one.)
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-namedays] .register-heading')).toHaveText('Name days');
+});
+
+test('the fast chip names the type of fast, and the bubble still quotes the calendar', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "For the fasting labels, change to show the
+   * types directly: Strict Fasting (tool tip shows Vegan; set aside meat,
+   * animal products, cooking oils and alcohol), 'Oil and Wine Allowed' (tool
+   * tip explains meat dairy and eggs set aside), 'Oil, Wine and Fish
+   * Allowed', or 'No Fast'."
+   *
+   * The load-bearing part of this test is the *merge*. Two grades of the
+   * closed vocabulary now share one label - `xerophagy` (uncooked) and
+   * `no-oil` (cooked, still without oil) are both Strict Fasting - and the
+   * thing to protect is that the merge is a change of headline and not a loss
+   * of what the calendar printed. So: two days that resolve to the two
+   * different grades, both reading Strict Fasting on the chip, and each still
+   * quoting its own different Russian note in the bubble underneath.
+   */
+  await ready(page, { church: 'russian' });
+
+  // 25 August 2026: days.pravoslavie.ru printed cooked-without-oil for the
+  // day, which resolves to the `no-oil` grade.
+  await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Dormition Fast');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'no-oil');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
+  await page.locator('[data-liturgy] .fast').click();
+  await expect(page.locator('.fast-bubble .fast-note')).toContainText('без масла');
+
+  // 24 August 2026: the same calendar printed xerophagy for the day. The same
+  // chip and the same allowance line, a different quotation under them -
+  // which is the whole point of the pair.
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'xerophagy');
+  await page.locator('[data-liturgy] .fast').click();
+  await expect(page.locator('.fast-bubble .fast-note')).toContainText('ухояд');
+
+  // The other three of the four the author named.
+  await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil and Wine Allowed');
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Oil, Wine and Fish Allowed');
+  await page.goto('/calendar/2026-08-30', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
+});
+
+test('a Great Feast is named beside the fast, in gold that never carries the words', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "Add a label if its a Feast Day as well with
+   * the name of the Feast." lib/liturgy.js says which of the nine fixed Great
+   * Feasts the day is - from the same table its own fish rule reads, in the
+   * church's own calendar - and the words come from the reader's pack.
+   *
+   * Two things are pinned besides the words. **The calendar, not the civil
+   * date**: 28 August 2026 is the Dormition for a Russian reader and an
+   * ordinary Friday for a Greek one, and the chip has to follow the reader.
+   * And **the colour**: gold is what this site marks a finding with, but
+   * --gold on gesso is 2.78:1, so it may carry the chip's edge and its tint
+   * and never its text. That is the trap the peek fade (2.1:1) and the cycle
+   * line's opacity (4.17:1) both fell into before it, and the third time it
+   * gets an assertion of its own.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const chip = page.locator('[data-liturgy] .feast-chip');
+  await expect(chip).toHaveText('Great Feast - The Dormition of the Theotokos');
+  await expect(chip).toHaveAttribute('data-feast', 'dormition');
+
+  const paint = await chip.evaluate((el) => {
+    const cs = getComputedStyle(el);
+    const root = getComputedStyle(document.documentElement);
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    const resolve = (value) => {
+      probe.style.color = value;
+      return getComputedStyle(probe).color;
+    };
+    const goldRgb = resolve(root.getPropertyValue('--gold').trim());
+    const inkRgb = resolve(root.getPropertyValue('--ink').trim());
+    probe.remove();
+    /*
+     * The border is a `color-mix`, and Chrome computes it as
+     * `color(srgb 0.66 0.51 0.21 / 0.6)` — no decimal-integer channels to
+     * read, and a translucent colour besides. Compositing it over white on a
+     * 1x1 canvas gives the number that actually reaches the reader's eye,
+     * which is the thing under test anyway.
+     */
+    const c = document.createElement('canvas');
+    c.width = 1;
+    c.height = 1;
+    const ctx = c.getContext('2d');
+    const overWhite = (value) => {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 1, 1);
+      ctx.fillStyle = value;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      return { r, g, b, warmth: r - b };
+    };
+    return {
+      color: cs.color,
+      goldRgb,
+      inkRgb,
+      borderWidth: parseFloat(cs.borderTopWidth),
+      border: overWhite(cs.borderTopColor),
+      rule: overWhite(root.getPropertyValue('--rule').trim()),
+    };
+  });
+  // The words are ink, never gold.
+  expect(paint.color).toBe(paint.inkRgb);
+  expect(paint.color).not.toBe(paint.goldRgb);
+  // And the edge is gold - a mix of it against the page, so not the token
+  // exactly, but unmistakably warm where the site's ordinary hairline is not.
+  // Measured 2026-08-26: the edge composites to r-b of 68, --rule to 17.
+  expect(paint.borderWidth).toBeGreaterThan(0);
+  expect(paint.border.warmth).toBeGreaterThan(40);
+  expect(paint.border.warmth).toBeGreaterThan(paint.rule.warmth * 2);
+
+  // The same civil day, the other calendar: no feast, because the Greek keeps
+  // the Dormition on the 15th.
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="greek"]').click();
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveCount(0);
+  await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveText(
+    'Great Feast - The Dormition of the Theotokos',
+  );
+
+  // An ordinary day wears none at all.
+  await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .feast-chip')).toHaveCount(0);
 });

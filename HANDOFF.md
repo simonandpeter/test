@@ -48,8 +48,14 @@ This file remains the accurate briefing for the code you will be copying.
 4. `DESIGN.md` — binding. §5b is the calendar page, §6b the uncertainty curve,
    §7 the glyph.
 5. `SESSIONS.md` — the delivery plan. **Its Amendments section at the top is
-   the most important page in the repo**; thirty entries now, each recording
-   something that cost real time to learn.
+   the most important page in the repo**; forty-eight entries now, each
+   recording something that cost real time to learn.
+6. `CLAUDE.md` — added at Amendment 47, and not a substitute for any of the
+   above. It carries no reasoning, only file-and-line pointers into the code
+   for the areas sessions keep coming back to (the calendar chrome, the
+   coachmarks, the Index cards, the icon pipeline), so a fresh session spends
+   fewer tokens re-Grepping its way to places already found. Expect it to
+   drift as the code moves; fix a wrong pointer in place rather than trusting it.
 
 The first three now also live in `docs/`, copied there when this repo was
 archived (2026-08-22), so the reasoning travels with the code: an archive that
@@ -60,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 46)
+## State as of 2026-08-26 (Amendment 48)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -74,11 +80,17 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 163 unit tests (`npm test`) — pure logic, no DOM.
-- 376 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-26, the sitting of Amendment 46), not carried
+- 165 unit tests (`npm test`) — pure logic, no DOM.
+- 392 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-26, the sitting of Amendment 48), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
-  every push. They were 129 and 220 through Amendment 33.
+  every push. They were 129 and 220 through Amendment 33, 163 and 376 through
+  Amendment 46, and 163 and 384 through Amendment 47.
+- **A `CLAUDE.md` now stands beside this file** (Amendment 47): file-and-line
+  pointers into the code — where the calendar chrome, the coachmarks, the
+  Index cards and the icon pipeline actually live — kept short on purpose and
+  expected to drift. Read it when you need *where*; this file and SESSIONS.md
+  remain where *why* lives.
 - **CI is the only place the header's width is honest** (2026-08-24). The
   chrome's utility face is the reader's system stack, so the same row is a
   different width on Windows (Segoe UI) and on the runner (DejaVu Sans), and
@@ -104,6 +116,20 @@ them.
   *Amendments 40–44 are on the remote (`f6aaa2e`, `cf8a3e1`, `8e6c197`,
   `0e88192`, `55a0ffc`); 45 (`24dd14d`) and 46 are committed on top. The author
   pushes.*
+
+  **Amendment 47 is split across two commits and one working-tree change.**
+  `4ea0cad` (the crosshair withdrawn, the hero bookmark moved beside the
+  name, today's own mark) and `e5e37da` (the coachmarks' wording and
+  softened corners, Andrew the Stratelates, Name Days moved to the foot of
+  the day panel) are both on the branch, both `Co-Authored-By: Claude`, from
+  a session run alongside this one — a live example of the parallel-session
+  pattern this file has warned about since Amendment 34, this time landing
+  cleanly rather than caught mid-collision. *This paragraph used to say the
+  lifespan-vs-bookmark fix and the Sozon crop were uncommitted; they landed as
+  `2474a31` before the next sitting opened, which is what reading `git log`
+  rather than trusting the prose turned up.* **Amendment 48's twelve files and
+  `CLAUDE.md` itself are uncommitted as of this writing.** Check `git status`
+  and `git log` before trusting either this paragraph or the state above it.
 
 ### What Amendment 46 changed about how the site behaves (2026-08-26)
 
@@ -259,6 +285,58 @@ both shells. Commit, say the commit is ready, and ask for confirmation that
 the GitHub Actions run is green before building on top of it. Do not treat a
 local pass as evidence about what was committed or pushed.
 
+### What Amendment 47 changed (2026-08-26, seventh sitting)
+
+The headline only — SESSIONS.md's own entry has the reasoning and is worth
+reading before touching any of this again. Today's date carries its own ring
+in the week rail and the month grid now, independent of which day is
+selected, and the button that used to recentre the rail on today is gone —
+the toggle beside it stretches into the row's full height instead. The hero's
+bookmark moved off the image and into the name line, beside the saint's own
+name, using the same "name shrinks, control holds its width" mechanism the
+saint's own page already used. The two first-visit coachmarks read as plain
+instructions now ("Pick your church calendar.", "Pick your language.") and
+both they and the fasting bubble have softened corners. Andrew the
+Stratelates lost his "(31 August)" disambiguator, and Name Days moved to the
+foot of the Daily page, just before Continue Reading. Two smaller, older
+queue items closed alongside all of that: a card's lifespan text no longer
+truncates behind the Index bookmark, and Sozon of Pompeiopolis's icon is
+cropped to the figure rather than the scanned page it sat on. See "Pushing
+happens outside this session" above for exactly what of this is committed.
+
+### What Amendment 48 changed (2026-08-26, eighth sitting)
+
+Four instructions, all of them the Daily page's top line. Today's ring is a
+soft rectangle whose bottom edge lands on the selected day's underline instead
+of a pill hanging three pixels past it and clipping the dot below — measured at
+8× before and after, not eyeballed. Name Days reads **"Today's name days" only
+on the day that is today**, because the page is a day browser and the word
+would be false on the other 143 days in the records. The fast chip names the
+**type** of fast — Strict Fasting, Oil and Wine Allowed, Oil Wine and Fish
+Allowed, No Fast — with `xerophagy` and `no-oil` merged under one label and the
+calendar's own words still quoted verbatim in the bubble underneath. And a
+**Great Feast is now named beside the fast**, from a nine-key table in
+`lib/liturgy.js` reckoned in the church's own calendar, in a gold-edged chip
+whose *words are ink* because `--gold` on gesso is 2.78:1.
+
+**Two things the author should decide, both flagged rather than taken:**
+
+* **Three of the four calendars will still mostly say plain "Fast."** The four
+  new labels can only appear where a calendar printed an allowance, and 67
+  Romanian, 59 Greek and 62 Serbian fast days in the records carry no note at
+  all. Making the labels universal means *deriving* an allowance, which
+  `lib/liturgy.js` has refused since Amendment 28 on the grounds that the
+  allowance is the typikon's and jurisdictions differ. Reversing that is the
+  author's, not a successor's.
+* **The rail's gold feast dot and the new feast chip are different findings.**
+  The dot means "this day's record carries hymns for this church" (19 Russian
+  days in range), the chip means "the day is one of the Twelve Great Feasts"
+  (5). A day can wear the dot and no chip. Both are honest; whether they should
+  be one mark is a design call.
+
+Also of note: the four labels and the feast names are hand-translated into all
+four packs, which are **299 of 299** with no English fallbacks.
+
 ## Two sections below are now history, not the current UI
 
 This section and "The glyph, because it has moved twice" just after it were
@@ -395,21 +473,25 @@ the standard:
   the superseded entry is marked as such where it sits.
 
 
-#### The queue, as of Amendment 34 (2026-08-24)
+#### The queue, as of Amendment 47 (2026-08-26)
 
 Open refinements, in the order they were raised. Each is small enough to pick
-up cold; the two the author has to decide are marked.
+up cold; the two the author has to decide are marked. This heading used to
+say Amendment 34; nothing below had been swept for staleness in the three
+weeks since until this pass — read each item as a claim to re-check, not as
+settled fact, the way "Entered eternal glory" turned out to be gone entirely
+by the time someone finally chased down the bug it was blamed for.
 
-- **A card's lifespan runs under the bookmark.** Index, Cards view: a long
-  lifespan line truncates *behind* the bookmark icon rather than stopping
-  short of it, so the ellipsis sits under the mark — "St Abraham the
-  Industrious of the Kyiv Caves", "Entered eternal glory in the 12th–13th
-  ce…". Probably new since Amendment 33: "Entered eternal glory in {year}"
-  is a great deal longer than the "undated – 1779" it replaced, and every
-  undated-birth saint now carries the longer line — 304 of 708. Amendment
-  26's `a card lifespan is one line` test pins the ellipsis, not the
-  clearance, so it passes. Raised by looking at a screenshot, 2026-08-24;
-  the author queued it the same day.
+- ~~A card's lifespan runs under the bookmark.~~ **Done, Amendment 47.**
+  Index, Cards view: a long lifespan line was truncating *behind* the
+  bookmark icon rather than stopping short of it. The wording this item
+  blamed ("Entered eternal glory in {year}") had itself been replaced by
+  plain "Reposed {when}" the day after Amendment 33 introduced it — a stale
+  premise in this very item, caught only while fixing it — but the underlying
+  bug was real: a full two-date lifespan or a long "Reposed under {ruler}"
+  line still reaches the card's own padding edge, exactly where the mark
+  stands. `.index-dates` now reserves the mark's width; pinned with Placilla
+  the Empress, a real saint whose recorded death is long enough to overflow.
 
 - **The liturgical cycle line still speaks English in every language**
   (Amendment 36's recorded seam). "13th week after Pentecost" is composed as
@@ -664,10 +746,14 @@ up cold; the two the author has to decide are marked.
   Amendment 46. Harmless; noted so the next person to grep for it does not go
   looking for the caller.
 
-- **One icon is a scanned page rather than a picture** (Amendment 46).
-  `sozon-of-pompeiopolis/images/icon.jpg` is 555x1707 and mostly margin, so the
-  hero's 3:2 top crop shows the paper and not the saint. The ratio is right and
-  the file is wrong; cropping it is a data fix, not a CSS one.
+- ~~One icon is a scanned page rather than a picture.~~ **Done, Amendment 47.**
+  `sozon-of-pompeiopolis/images/icon.jpg` was 555×1707 and mostly margin
+  (Amendment 46 raised it), so the hero's 3:2 top crop showed the paper and
+  not the saint. Cropped to the figure alone, 555×1410 — margin and printed
+  caption removed, nothing else touched — with the crop and its reasoning
+  recorded in `icon.meta.json`; the original scan is still at its
+  `source_url` for anyone checking provenance. Confirms the general
+  lesson still holds: this was a data fix, not a CSS one.
 
 **The round of 2026-08-22 is Addendum H** in `../saintsplanaddendum.md`, in two
 phases, both built. Phase 1 — the Index's *Detailed* option, the bookmark that

@@ -211,9 +211,63 @@ export function fasting(iso, churchId) {
   return { kind: 'fast-free', reason: null };
 }
 
+/* ---- the Great Feasts ----------------------------------------------------- */
+
+/**
+ * The nine *fixed* Great Feasts, keyed by month-day in the church's own
+ * calendar, in the order the church year keeps them (1 September).
+ *
+ * These are not a new claim. `fasting()` above already asserts this list —
+ * it is the `greatFixed` array its Wednesday-and-Friday branch reads, plus
+ * the three it handles earlier because they override the weekday outright
+ * (Nativity, Theophany, the Exaltation). Naming them is the same assertion
+ * said out loud, so nothing here can drift from the fast rule without the
+ * unit test that pins the two together going red.
+ *
+ * What is deliberately absent: the Nativity of the Forerunner (24 June) and
+ * Saints Peter and Paul (29 June), which `greatFixed` carries because the
+ * fish rule wants them and which are *great* feasts without being of the
+ * Twelve; and the four movable ones — Pascha, Palm Sunday, the Ascension and
+ * Pentecost — which the cycle line under the date already names in all five
+ * languages (`STRINGS.calendar.cycle`), and naming them a second time in a
+ * chip beside it would be the same words twice.
+ */
+const GREAT_FIXED = {
+  908: 'nativityTheotokos',
+  914: 'exaltation',
+  1121: 'entryTheotokos',
+  1225: 'nativity',
+  106: 'theophany',
+  202: 'meeting',
+  325: 'annunciation',
+  806: 'transfiguration',
+  815: 'dormition',
+};
+
+/**
+ * Which Great Feast the day is, or null. The month and day are taken in the
+ * church's own calendar, exactly as the dated fasts are — which is why the
+ * Russian calendar keeps the Dormition on the civil 28 August and the other
+ * three on the 15th.
+ *
+ * The key is a `STRINGS.calendar.feasts` key, never a rendered name: the
+ * words belong to the reader's language pack, not to this file.
+ */
+export function greatFeast(iso, churchId) {
+  const church = CHURCHES_BY_ID[churchId];
+  const calendar = church?.default_calendar ?? 'julian';
+  const own = fromJdn(calendar, jdnOf(parse(iso)));
+  return GREAT_FIXED[md(own)] ?? null;
+}
+
 /** Everything the Daily page prints under the date, for one church. */
 export function liturgicalDay(iso, churchId) {
   const church = CHURCHES_BY_ID[churchId];
   const computus = church?.paschal_computus ?? 'julian';
-  return { cycle: cycleOf(iso, computus), tone: tone(iso, computus), fasting: fasting(iso, churchId) };
+  return {
+    cycle: cycleOf(iso, computus),
+    tone: tone(iso, computus),
+    fasting: fasting(iso, churchId),
+    feast: greatFeast(iso, churchId),
+  };
 }

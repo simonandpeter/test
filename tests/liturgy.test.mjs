@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cycleOf, fasting, liturgicalDay, paschaAround, tone } from '../src/lib/liturgy.js';
+import { cycleOf, fasting, greatFeast, liturgicalDay, paschaAround, tone } from '../src/lib/liturgy.js';
 import { cycleName } from '../src/ui/cycle-name.js';
 
 /*
@@ -137,18 +137,68 @@ test('the other fasts and the feasts that lift them, in the church’s own calen
   assert.equal(fasting('2026-09-14', 'greek').reason, 'the Exaltation of the Cross');
 });
 
-test('liturgicalDay gathers the three for the chosen church', () => {
+test('a Great Feast is named in the church own calendar, not the civil one', () => {
+  // The Dormition is 15 August in every one of the four, and the four do not
+  // agree on which civil day that is: Russian and Serbian keep the Julian
+  // calendar, Romanian and Greek the Revised Julian. Getting this wrong would
+  // name the feast thirteen days out for half the readers, which is exactly
+  // the failure the church-own-calendar reckoning exists to prevent.
+  assert.equal(greatFeast('2026-08-28', 'russian'), 'dormition');
+  assert.equal(greatFeast('2026-08-28', 'serbian'), 'dormition');
+  assert.equal(greatFeast('2026-08-28', 'greek'), null);
+  assert.equal(greatFeast('2026-08-15', 'greek'), 'dormition');
+  assert.equal(greatFeast('2026-08-15', 'romanian'), 'dormition');
+  assert.equal(greatFeast('2026-08-15', 'russian'), null);
+
+  // One of each of the other eight, in a calendar that keeps it in range.
+  assert.equal(greatFeast('2026-09-08', 'romanian'), 'nativityTheotokos');
+  assert.equal(greatFeast('2026-09-14', 'greek'), 'exaltation');
+  assert.equal(greatFeast('2026-11-21', 'romanian'), 'entryTheotokos');
+  assert.equal(greatFeast('2026-12-25', 'greek'), 'nativity');
+  assert.equal(greatFeast('2027-01-06', 'romanian'), 'theophany');
+  assert.equal(greatFeast('2027-02-02', 'greek'), 'meeting');
+  assert.equal(greatFeast('2027-03-25', 'romanian'), 'annunciation');
+  assert.equal(greatFeast('2026-08-06', 'greek'), 'transfiguration');
+
+  // An ordinary day is null, and so are the two great feasts that are not of
+  // the Twelve — 24 and 29 June are in `fasting()`'s fish list and are
+  // deliberately not in this one.
+  assert.equal(greatFeast('2026-08-26', 'russian'), null);
+  assert.equal(greatFeast('2026-06-29', 'greek'), null);
+});
+
+test('the feast table and the fast rule tell the same story', () => {
+  /*
+   * The chip's list and `fasting()`'s own `greatFixed` are two statements of
+   * the same fact, and this is what keeps them from drifting apart: 28 August
+   * 2026 is a Friday, and it is the Dormition in the Russian calendar, so the
+   * feast has to be named *and* the fast has to give fish. If either list is
+   * edited alone this fails.
+   */
+  assert.equal(greatFeast('2026-08-28', 'russian'), 'dormition');
+  assert.equal(fasting('2026-08-28', 'russian').kind, 'fish');
+  // And the Exaltation is the counter-case: a Great Feast that is a strict
+  // fast whatever the weekday. Named by one and refused fish by the other.
+  assert.equal(greatFeast('2026-09-14', 'greek'), 'exaltation');
+  assert.equal(fasting('2026-09-14', 'greek').kind, 'fast');
+});
+
+test('liturgicalDay gathers the four for the chosen church', () => {
   // `title` became `cycle` on 2026-08-26: a key and its number rather than an
   // English sentence, so the line can be printed in five languages. The
-  // rendering is asserted through cycleName above.
+  // rendering is asserted through cycleName above. `feast` joined the three
+  // the same day, and is null on a day that is not a Great Feast — the second
+  // case below is one, and asserting the null is the point of it.
   assert.deepEqual(liturgicalDay('2026-08-28', 'russian'), {
     cycle: { key: 'weekAfterPentecost', n: 13 },
     tone: 3,
     fasting: { kind: 'fish', reason: 'a Great Feast on a Friday' },
+    feast: 'dormition',
   });
   assert.deepEqual(liturgicalDay('2026-08-23', 'greek'), {
     cycle: { key: 'sundayAfterPentecost', n: 12 },
     tone: 3,
     fasting: { kind: 'fast-free', reason: null },
+    feast: null,
   });
 });

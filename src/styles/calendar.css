@@ -400,9 +400,19 @@
 .week-strip .is-today .day-num::before {
   content: '';
   position: absolute;
-  inset: -3px -6px;
-  border: 1.5px solid var(--rubric);
-  border-radius: 999px;
+  /* The bottom edge sits *on* the selected day's underline rather than below
+     it (author, 2026-08-26: "make it line up perfectly with the underline so
+     it blends in"), which is what `bottom: 0` buys: the underline is drawn at
+     `text-underline-offset: 3px` from the baseline, which lands inside the
+     last pixel of this span's own line box. The two rubric lines then read as
+     one edge on the day that is both today and the day being read, instead of
+     a pill hanging 3 px past it. It also lifts the ring clear of the fast and
+     feast dots, which the old -3px bottom cut 1 px into. */
+  inset: 1px -5px 0;
+  /* Sharper than the pill it was (author, same instruction). A soft rectangle
+     shares the underline's own straight run; a 999px pill met it at a curve. */
+  border: 1px solid var(--rubric);
+  border-radius: 4px;
   pointer-events: none;
 }
 
@@ -658,9 +668,14 @@
 .month-grid button.is-today .day-num::before {
   content: '';
   position: absolute;
-  inset: -3px -6px;
-  border: 1.5px solid var(--rubric);
-  border-radius: 999px;
+  /* The same shape at the month's grain. There is no underline here — a
+     selected date in the month wears the field and the rule, not a rule under
+     the numeral — so the bottom edge has nothing to meet and simply closes on
+     the line box as the week's does, which is what keeps the two marks
+     recognisably one mark. */
+  inset: 0 -5px;
+  border: 1px solid var(--rubric);
+  border-radius: 4px;
   pointer-events: none;
 }
 
@@ -1297,6 +1312,31 @@ a.name-day:hover {
 
 .fast.fast-chip:hover {
   background: color-mix(in srgb, currentColor 16%, transparent);
+}
+
+/* The day's Great Feast, named beside the fast (author, 2026-08-26). The
+   chip's shape is the fast chip's, so the two read as one row of answers
+   about the day, and the difference between them is what carries the
+   difference in kind: the fast is a control that opens what it allows, this
+   is a statement and opens nothing.
+
+   **Gold is the edge and the tint; the words are ink.** A feast is a finding
+   about the day and gold is what this site marks findings with — the rail's
+   own feast dot since Amendment 46 — but --gold on gesso is 2.78:1, and this
+   file has already learnt twice what happens when a colour that reads as
+   decoration is asked to carry text (the peek fade at 2.1:1, the cycle line's
+   opacity at 4.17:1). Ink on the tint is 13.1:1, and greyscale still tells the
+   chip from the fast's, because the words say which. */
+.feast-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px var(--space-2) 2px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--gold) 60%, transparent);
+  background: color-mix(in srgb, var(--gold) 13%, transparent);
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* What the day allows, printed rather than kept behind the (i). In the

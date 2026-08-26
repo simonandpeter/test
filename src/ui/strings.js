@@ -96,20 +96,42 @@ export const STRINGS = {
     fastModal: {
       open: 'What this fast allows',
       hint: 'What this fast allows',
-      // The grade as it leads the fasting line, under the date.
+      /*
+       * The grade as it leads the fasting line, under the date — and since
+       * 2026-08-26 it names the *type* of fast rather than the technical
+       * term for its allowance (author: "For the fasting labels, change to
+       * show the types directly: Strict Fasting …, Oil and Wine Allowed,
+       * Oil, Wine and Fish Allowed, or No Fast").
+       *
+       * Two of the vocabulary's five grades now share a label. `xerophagy`
+       * (uncooked) and `no-oil` (cooked, still without oil) are both Strict
+       * Fasting to a reader deciding what to eat, and the distinction
+       * between them is a difference in how the food is prepared rather than
+       * in what is set aside. **Nothing sourced is lost by the merge**: the
+       * bubble still prints the calendar's own words verbatim under the
+       * allowance — «сухоядение» and «горячая пища без масла» read as
+       * differently there as they ever did — with the page they came from
+       * named beside them. What changed is only which of the two the chip
+       * leads with.
+       *
+       * `dairy` keeps a label of its own because it is not one of the four:
+       * Cheesefare Week sets aside meat and permits what the other grades do
+       * not, and calling it any of the author's four would be wrong rather
+       * than coarse.
+       */
       grades: {
-        xerophagy: 'Xerophagy',
-        'no-oil': 'Cooked without oil',
-        oil: 'Oil and wine',
-        fish: 'Fish permitted',
-        dairy: 'Dairy permitted',
+        xerophagy: 'Strict Fasting',
+        'no-oil': 'Strict Fasting',
+        oil: 'Oil and Wine Allowed',
+        fish: 'Oil, Wine and Fish Allowed',
+        dairy: 'Dairy Allowed',
       },
       // And the whole of what the bubble says, one line per grade.
       allows: {
-        xerophagy: 'Uncooked food, without oil or wine.',
-        'no-oil': 'Cooked food, still without oil or wine.',
-        oil: 'Oil and wine are permitted.',
-        fish: 'Fish is permitted.',
+        xerophagy: 'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+        'no-oil': 'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+        oil: 'Meat, dairy and eggs are set aside; oil and wine are permitted.',
+        fish: 'Meat, dairy and eggs are set aside; oil, wine and fish are permitted.',
         dairy: 'No meat; dairy and eggs are permitted.',
         none: 'Nothing is set aside today.',
       },
@@ -202,8 +224,35 @@ export const STRINGS = {
       // evening). `fish` went with it: a fish-permitted day always resolves
       // to the `fish` grade, so the old wording had no reachable caller.
       graded: '{grade} - {reason}',
-      free: 'No fast',
-      freeBecause: 'No fast - {reason}',
+      free: 'No Fast',
+      freeBecause: 'No Fast - {reason}',
+    },
+    /*
+     * The Great Feasts, named (author, 2026-08-26: "Add a label if its a
+     * Feast Day as well with the name of the Feast"). lib/liturgy.js says
+     * which feast the day is — reckoned in the church's own calendar, so the
+     * Russian keeps the Dormition on the civil 28 August — and hands back a
+     * key; the words are here, per language, and are never composed.
+     *
+     * Nine keys and not thirteen. The four movable Great Feasts — Pascha,
+     * Palm Sunday, the Ascension and Pentecost — are already named by the
+     * cycle line that stands in this same row, in all five languages, so a
+     * chip beside it would print the same words twice.
+     */
+    feasts: {
+      label: 'Great Feast',
+      line: '{label} - {name}',
+      names: {
+        nativityTheotokos: 'The Nativity of the Theotokos',
+        exaltation: 'The Exaltation of the Cross',
+        entryTheotokos: 'The Entry of the Theotokos into the Temple',
+        nativity: 'The Nativity of the Lord',
+        theophany: 'Theophany',
+        meeting: 'The Meeting of the Lord',
+        annunciation: 'The Annunciation',
+        transfiguration: 'The Transfiguration',
+        dormition: 'The Dormition of the Theotokos',
+      },
     },
     // The day's readings, where a church's calendar has been read and recorded
     // (author, 2026-08-22; src/data/liturgical-days.js). Links open the NKJV
@@ -231,7 +280,7 @@ export const STRINGS = {
      * between families inside them, and lib/name-days.js states the day's
      * names rather than anyone's obligation.
      */
-    nameDays: { heading: 'Name days' },
+    nameDays: { heading: 'Name days', headingToday: "Today's name days" },
     // The hymns of the day's saint or feast, in the chosen church's language,
     // copied whole from the cited source (author, 2026-08-22).
     hymns: {

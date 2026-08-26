@@ -399,6 +399,33 @@ function paintLiturgy() {
    */
   const allowance = isFast ? (grade ? M.allows[grade] : M.unstated) : null;
   const allowanceHtml = allowance ? `<span class="fast-allowance">${esc(allowance)}</span>` : '';
+  /*
+   * And whether the day is a Great Feast, named (author, 2026-08-26: "Add a
+   * label if its a Feast Day as well with the name of the Feast").
+   * lib/liturgy.js answers it from the same table its own fish rule reads, in
+   * the church's own calendar; the words come from the reader's pack.
+   *
+   * A span, not a button: unlike the fast it opens nothing, because there is
+   * nothing further the site can say about the feast that the day's own hymns
+   * and register below do not already say better.
+   *
+   * It is gold, and gold is spent here for the reason Amendment 46 spent it
+   * on the rail's feast marker — a feast is a finding about the day, not a
+   * control. Gold carries the *edge and the tint*, never the words: --gold on
+   * gesso is 2.78:1, well under AA, which is the same trap the peek fade and
+   * the cycle line's opacity both fell into. The text is ink at 13.1:1.
+   *
+   * Worth knowing, because the two marks are sourced differently: the gold
+   * dot on the week rail means "this day's record carries hymns for this
+   * church", which is a looser and broader finding than this chip's "the day
+   * is one of the Twelve". A day can wear the dot and no chip, and neither is
+   * a defect in the other.
+   */
+  const F = STRINGS.calendar.feasts;
+  const feastName = day.feast ? F.names[day.feast] : null;
+  const feastHtml = feastName
+    ? `<span class="feast-chip" data-feast="${esc(day.feast)}">${esc(fill(F.line, { label: F.label, name: feastName }))}</span>`
+    : '';
   // The cycle line follows the language too (author, 2026-08-26): lib/liturgy.js
   // hands out which day of the cycle it is, ui/cycle-name.js gives it words.
   const plain = [cycleName(day.cycle, selected), day.tone ? fill(L.tone, { tone: day.tone }) : null]
@@ -407,7 +434,7 @@ function paintLiturgy() {
   // Newline-separated so the three read as three when the line is taken as
   // text — a screen reader, a browser test — rather than running the chip's
   // last word into the allowance's first. The flex row collapses it to a gap.
-  box.innerHTML = [fastHtml, allowanceHtml, plain.length ? `<span class="cal-cycle">${plain.join(' · ')}</span>` : '']
+  box.innerHTML = [fastHtml, allowanceHtml, feastHtml, plain.length ? `<span class="cal-cycle">${plain.join(' · ')}</span>` : '']
     .filter(Boolean)
     .join('\n');
 }
@@ -1591,8 +1618,18 @@ function nameDaysMarkup(entries, data) {
         : `<li><span class="name-day">${esc(name)}</span></li>`,
     )
     .join('');
+  /*
+   * "Today's name days" only on the day that is actually today (author,
+   * 2026-08-26). The Daily page is a day browser — the rail reaches 121 days
+   * either side — so the word would be false on every day but one, and the
+   * rest of this panel is careful to say "this day" rather than "today" for
+   * exactly that reason. The heading the author asked for stands where it is
+   * true and the plain one stands everywhere else.
+   */
+  const N = STRINGS.calendar.nameDays;
+  const heading = state.selected === todayIso() ? N.headingToday : N.heading;
   return `<section class="day-namedays" data-namedays>
-    <h2 class="register-heading">${STRINGS.calendar.nameDays.heading}</h2>
+    <h2 class="register-heading">${esc(heading)}</h2>
     <ul class="namedays">${items}</ul>
   </section>`;
 }
