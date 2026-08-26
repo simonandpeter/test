@@ -2861,6 +2861,43 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
   expect(await nothingCropped(page)).toEqual([]);
 });
 
+test('a card lifespan stops before the bookmark, not behind it', async ({ page }) => {
+  /*
+   * Raised by looking at a screenshot (HANDOFF's queue): a long lifespan line
+   * on an imageless card truncates *behind* the bookmark rather than clearing
+   * it, so the ellipsis sits under the mark. Nothing reserved the mark's own
+   * width out of the line — `.index-card > .bookmark` and `.index-dates` share
+   * a right edge by construction, both measured from the card's own padding
+   * box, so the mark's 32 px was always going to sit over whichever
+   * characters happened to render there.
+   *
+   * Placilla the Empress is a real example, not a constructed one: she has no
+   * image, and both ends of her death are recorded ("Reposed under
+   * Theodosius I (379–395)"), long enough to overflow a three-across card at
+   * 1280 px — and she is venerated only in the Greek calendar, which is why
+   * this test asks for it rather than the Russian `ready()` default.
+   */
+  await ready(page, { church: 'greek' });
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('[data-query]').fill('Placilla');
+  const card = page.locator('.index-card', { hasText: 'Placilla' });
+  await expect(card).toHaveCount(1);
+  const geo = await card.evaluate((el) => {
+    const datesEl = el.querySelector('.index-dates');
+    const dates = datesEl.getBoundingClientRect();
+    const contentRight = dates.right - parseFloat(getComputedStyle(datesEl).paddingRight);
+    return {
+      overflowing: datesEl.scrollWidth > datesEl.clientWidth,
+      contentRight,
+      markLeft: el.querySelector('.bookmark').getBoundingClientRect().left,
+    };
+  });
+  expect(geo.overflowing, 'the line is not actually long enough to exercise this').toBe(true);
+  expect(geo.contentRight, 'the ellipsis lands behind the mark').toBeLessThanOrEqual(geo.markLeft);
+});
+
 test('the grid follows its column, not only the window', async ({ page }) => {
   // Literata arriving inside font-display: optional's window widens the 72ch
   // column from 580 to 678 px after the grid has counted its columns, and a

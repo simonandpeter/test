@@ -455,6 +455,21 @@ select:hover {
   top: 50px;
 }
 
+/* "the one line of the block that is short" above is not always true: a
+   saint with both ends of a life dated prints "{birth} – {death}", and one
+   long enough — a full day, month and year at each end, or a "Reposed under
+   {ruler} ({earliest}–{latest})" — reaches the card's own right padding edge,
+   which is exactly where the mark stands. Nothing had reserved the mark's own
+   width out of the line before this, so the ellipsis truncated *behind* the
+   icon instead of clearing it. The mark's footprint — 32 px, plus a few more
+   so the ellipsis does not sit flush against it — is reserved here instead.
+   Only this card shape needs it: a card with an image has the mark over the
+   picture, and a row's mark is a flex sibling that already takes its own
+   column out of the line's width. */
+.index-card:not(.is-row):not(:has(.index-media)) .index-dates {
+  padding-right: 40px;
+}
+
 /* ---- rows -------------------------------------------------------------- */
 
 /* The other half of ROW_HEIGHT in views/saints.js: a 48 px thumbnail plus the
