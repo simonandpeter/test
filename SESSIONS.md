@@ -3247,50 +3247,115 @@ would have been a plain falsehood on every day but one, and this panel says
 the selected day is today and `heading` on every other. Both directions are
 pinned, and the inverse backout (always saying "today") fails two tests.
 
-### The fast says its type, and two grades now share a label
+### The fast says its type — and the first build of it was too narrow
 
 *"For the fasting labels, change to show the types directly: Strict Fasting
 (tool tip shows Vegan; set aside meat, animal products, cooking oils and
 alcohol), 'Oil and Wine Allowed' (tool tip explains meat dairy and eggs set
 aside), 'Oil, Wine and Fish Allowed', or 'No Fast'."*
 
-The closed vocabulary of `lib/fast-grade.js` is unchanged — five grades read
-off what a calendar printed — and what changed is which words each leads with:
+**Built twice in one sitting, and the first build was wrong.** I read this as a
+relabelling of the five grades `lib/fast-grade.js` reads off a printed note,
+left the ungraded case saying "Fast - {reason}", and flagged in the handover
+that three of the four calendars would therefore still mostly say plain
+"Fast". The author read the flag and answered it: *"Why are these changes
+applied only to the Russian calendar?"* … *"This change hasnt been applied to
+the Romanian calendar for instance, and I dont see any blue labels in the
+Romanian calendar as i do in the Russian calendar"* … *"That means, 'Fast -
+Friday' becomes 'Strict Fasting', and tool tip shows 'Vegan; set aside meat,
+animal products, cooking oils and alcohol.'"*
 
-    xerophagy   ┐
-    no-oil      ┴─ Strict Fasting        Vegan; set aside meat, animal
-                                         products, cooking oils and alcohol.
-    oil            Oil and Wine Allowed  Meat, dairy and eggs are set aside;
-                                         oil and wine are permitted.
-    fish           Oil, Wine and Fish    … oil, wine and fish are permitted.
-    dairy          Dairy Allowed         (not one of the four — see below)
+The lesson is not that the flag was wrong to raise — the reversal is real and
+DESIGN.md §5b carries it in place. It is that **a flag is not a substitute for
+reading the instruction's own example.** "Fast - Friday" is an ungraded day,
+and it was in the instruction from the start.
 
-**Nothing sourced is lost by the merge, and that is the part with a test.**
-«сухоядение» and «горячая пища без масла» are a real distinction the Russian
-calendar prints, and it survives where it always lived: the bubble quotes the
-day's own note verbatim with its page cited. Two days that resolve to the two
-different grades now show the same chip and the same allowance line over two
-different quotations, which is what the new browser test asserts. `dairy` keeps
-a label of its own because Cheesefare Week is not one of the author's four and
-calling it any of them would be wrong rather than coarse.
+**What shipped, in three parts.**
 
-**What the author should know before reading this as done: three of the four
-calendars will still mostly say plain "Fast".** Measured across all 144 day
-records:
+**1. A fast with no printed allowance defaults to strict.** Measured first, so
+the size of the silence is on the record: of the 144 day records, 67 Romanian,
+59 Greek and 62 Serbian fast days carry **no fasting note at all**, and the
+rest print «Νηστεία» or «Пост» with no allowance beside them. That is source
+silence, not a matcher gap — checked before defaulting rather than assumed.
+The direction is the argument: strict cannot mislead a reader into eating
+something their church set aside, and on an ordinary Wednesday or Friday it is
+the plain typikon rule in all four churches.
 
-    russian    oil 43, no-oil 12, fish 14, xerophagy 3, unstated 1
-    romanian   unstated 69
-    greek      unstated 67, oil 2
-    serbian    unstated 72, fish 1
+    russian    oil 43, fish 13, no-oil 12, xerophagy 3, strict 1, +1 kind=fish
+    romanian   strict 69
+    greek      strict 67, oil 2
+    serbian    strict 72, +1 kind=fish
 
-Checked rather than assumed that this is source silence and not a matcher
-gap: 67 Romanian, 59 Greek and 62 Serbian of those days carry **no fasting note
-at all**, and the rest print «Νηστεία» or «Пост» with no allowance beside it.
-So the four labels can only appear where a calendar named an allowance. Making
-them appear everywhere means deriving one — which is precisely what
-`lib/liturgy.js` refuses to do and has refused since Amendment 28, because the
-allowance is the typikon's and jurisdictions keeping the same fast differ. That
-is a decision, not an oversight, and it is the author's to reverse.
+**Where it errs, it errs knowably**, and the case is worth naming because a
+screenshot shows it: a Saturday or Sunday inside the Nativity Fast reads Strict
+Fasting in the Romanian calendar while doxologia.ro prints *dezlegare la pește*
+on its own site. The Russian calendar, whose notes *were* captured, shows those
+same two days in fish. Two month grids side by side, the same fast, different
+answers — and the difference is entirely which notes this corpus harvested.
+**Capturing the missing notes is the fix; a cleverer default is not.**
+
+**2. Two grades share a label, and nothing sourced is lost.** `xerophagy`
+(uncooked) and `no-oil` (cooked, still without oil) are both Strict Fasting to
+a reader deciding what to eat. The distinction survives where it always lived —
+the bubble quotes the day's own note verbatim with its page cited — and the
+browser test pins exactly that: two days, two different grades, one chip, two
+different quotations. `dairy` keeps a label of its own because Cheesefare Week
+is not one of the author's four.
+
+**3. The reason drops where the reason is the weekday.** "Fast - Friday"
+becomes "Strict Fasting"; "Strict Fasting - Great Lent" keeps its reason,
+because that one says where in the year the reader is. `fasting()` marks it
+with `reasonKind: 'weekday'` rather than the view matching strings.
+
+**Two things the default broke that had to be caught, not noticed later.**
+
+* **Cheesefare would have contradicted itself.** Its reason reads "no meat;
+  dairy and eggs permitted" and a strict default would have printed "Vegan;
+  set aside … animal products" directly beneath it. `fasting()` hands that
+  branch's allowance over explicitly (`allows: 'dairy'`) — the one branch that
+  does. Unreachable in today's records, which end 13 January, and reachable by
+  URL right now, which is why it is handled rather than deferred.
+* **The bubble would have started quoting the notes it exists to suppress.**
+  Its condition was `note && grade`, and every fast day has a grade now. It
+  asks whether the grade was read *out of* the note instead — `gradeFromNote`,
+  not `gradeForDay` — so «Post» and «Пост (означен у календару)» are still not
+  repeated back at a reader who has just read the label in larger type.
+
+### The colour follows what the day allows, and the month takes it too
+
+*"I dont see any blue labels in the Romanian calendar as i do in the Russian
+calendar."* Two causes, and only the first was the missing default.
+
+The second: **the chip's colour came from `lib/liturgy.js`'s `kind` and its
+words came from the grade**, and the two disagree on thirteen Russian days of
+the 144. days.pravoslavie.ru printed «разрешается рыба» for 14 October; the
+grade resolved to fish and the words read "Oil, Wine and Fish Allowed", while
+`kind` stayed a plain `fast` and painted the chip in the rubric of a strict
+day. A chip whose colour contradicts its own text is worse than an uncoloured
+one.
+
+One helper, `fastTone(iso)` in views/calendar.js, now makes that decision once
+for all three places a day wears the fast's colour — the rail's dot, the chip,
+and the month. `kind` is still the liturgical fact and `data-fast` still
+carries it; the colour is about what the day *allows*, which is what a colour
+has always been marking here.
+
+**And the month's numerals join them** (*"in monthly view, make the text
+colour of each day match the fasting dot colour for that day"*). The browser
+test reads the rail's dot and the month's numeral for the same day and
+compares the two computed colours, which is the instruction almost word for
+word and cannot pass on two rules that merely look alike.
+
+**It is named as well as coloured, and that was not optional.** The rail has
+named its marks in the accessible label since the dots arrived; the month had
+no words at all until it took a hue. A dot is nothing to a screen reader and
+these two hues are nothing to a reader who cannot separate them, so the fast
+goes into each month button's accessible name — DESIGN.md §2's "the words
+still say which", applied to the one grain that had none. Contrast computed
+before shipping: strict 6.59:1 on gesso and 6.12:1 on the selected day's
+field, fish 6.0:1 and 5.57:1. Dark mode's rubric is 4.20:1 and under AA, which
+is the pre-existing defect HANDOFF.md already lists rather than one this rule
+introduced.
 
 ### The Great Feasts, named — and the third time gold tried to carry words
 
@@ -3348,23 +3413,39 @@ backout that does not reproduce the defect is not a backout.
 
 ### Verification
 
-**165 unit** (163 at the top of the sitting; `greatFeast` added two) and **392
-browser** (384; four new tests across two projects). All four locale packs are
-**299 of 299** with no English fallbacks — twelve new keys, hand-translated,
-`scripts/locale-coverage.mjs` run after.
+**166 unit** (163 at the top of the sitting; `greatFeast` added two and the
+strict default one) and **396 browser** (384; six new tests across two
+projects). All four locale packs are **300 of 300** with no English
+fallbacks — thirteen keys added and two removed, hand-translated,
+`scripts/locale-coverage.mjs` run after. The two removed are `fastModal.
+unstated` and `liturgy.fast`, both of which the strict default left without a
+caller; they are deleted rather than left for the next person to grep for,
+which is the fate `saints.keptAll` is still waiting for.
 
-**Six backouts run and watched to fail**, each restored and the three touched
-files checksummed against pristine copies afterwards: the ring's inset (twice,
-once with each assertion isolated), the ring's radius, the name-days heading
-(and its inverse), the grade vocabulary, the feast chip's markup, and the feast
-chip's ink. Three existing tests were heirs and were updated rather than
-retired — the two that read the Russian grade wording and the one on 14 October
-that read «Разрешается рыба».
+**Ten backouts run and watched to fail**, each restored and the touched files
+checksummed against pristine copies afterwards: the ring's inset (twice, once
+with each assertion isolated), the ring's radius, the name-days heading (and
+its inverse), the grade vocabulary, the feast chip's markup, the feast chip's
+ink, the strict default, the month's numeral colour, and `fastTone`'s reading
+of the grade (twice — the month's copy and the chip's, which are separate call
+sites and had to be shown to fail separately).
+
+**Seven existing tests were heirs rather than casualties.** Six were updated:
+the two reading the Russian grade wording, the one on 14 October reading
+«Разрешается рыба», the Daily-page line test, the Serbian calendar test, and
+the Romanian note-quoting test. The seventh was *a day whose calendar named no
+allowance says that much and stops* — the test that pinned the very rule this
+sitting reversed. It is **kept and renamed** rather than retired, because half
+of what it pinned is untouched: the note is still not quoted back at a reader
+when the grade was not read out of it. Its comment carries the reversal.
 
 Rendered and looked at, at 1280 and 360, in both themes: the ring in the week
-and the month, the four fast labels, and the feast chip in English, Russian and
-Romanian. Dark mode is checked by eye and by composite here because the browser
-suite is light-mode only, which is still true and still a gap.
+and the month, the four fast labels in all four calendars, the feast chip in
+English, Russian and Romanian, and the month grid for November 2026 in the
+Russian and the Romanian side by side — which is where the strict default's one
+known wrong case is visible. Dark mode is checked by eye and by composite here
+because the browser suite is light-mode only, which is still true and still a
+gap.
 
 
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are

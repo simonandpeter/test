@@ -183,8 +183,17 @@ export function fasting(iso, churchId) {
     return { kind: 'fast', reason: t < 7 ? 'Holy Week' : 'Great Lent' };
   }
   if (t > 49 && t < 56) {
+    /*
+     * Cheesefare carries `allows`, and it is the only branch here that does.
+     * From 2026-08-26 a fast whose calendar printed no allowance is labelled
+     * Strict Fasting by default (lib/fast-grade.js), and this is the one day
+     * that default would contradict outright: the reason beside it says in as
+     * many words that dairy and eggs are permitted. Where this function
+     * already knows the allowance it hands it over rather than letting the
+     * default guess past it.
+     */
     return wedFri
-      ? { kind: 'fast', reason: 'Cheesefare Week - no meat; dairy and eggs permitted' }
+      ? { kind: 'fast', reason: 'Cheesefare Week - no meat; dairy and eggs permitted', allows: 'dairy' }
       : { kind: 'fast-free', reason: 'Cheesefare Week' };
   }
 
@@ -205,7 +214,15 @@ export function fasting(iso, churchId) {
     if (greatFixed.includes(x) || d === 24 || d === 38) {
       return { kind: 'fish', reason: `a Great Feast on a ${WEEKDAYS[wd]}` };
     }
-    return { kind: 'fast', reason: WEEKDAYS[wd] };
+    /*
+     * `reasonKind` marks the one reason that is not worth printing beside the
+     * grade: on an ordinary Wednesday or Friday the reason *is* the weekday,
+     * and the reader is looking at the date. The author's own example of the
+     * 2026-08-26 relabelling is this exact case — "Fast - Friday" becomes
+     * "Strict Fasting" — while "Strict Fasting - Great Lent" keeps its
+     * reason, because that one says where in the year the reader is.
+     */
+    return { kind: 'fast', reason: WEEKDAYS[wd], reasonKind: 'weekday' };
   }
   if (x === 815) return { kind: 'fast-free', reason: 'the Dormition' };
   return { kind: 'fast-free', reason: null };

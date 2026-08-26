@@ -105,9 +105,11 @@ test('the week of 23 August 2026: the Julian-calendar churches are still in the 
   for (const church of ['romanian', 'greek']) {
     assert.equal(fasting('2026-08-23', church).kind, 'fast-free', `${church} Sunday`);
     assert.equal(fasting('2026-08-25', church).kind, 'fast-free', `${church} Tuesday`);
-    assert.deepEqual(fasting('2026-08-26', church), { kind: 'fast', reason: 'Wednesday' }, `${church} Wednesday`);
+    // `reasonKind` marks the reason the chip drops, because on an ordinary
+    // Wednesday the reason is the weekday the heading already prints.
+    assert.deepEqual(fasting('2026-08-26', church), { kind: 'fast', reason: 'Wednesday', reasonKind: 'weekday' }, `${church} Wednesday`);
     assert.equal(fasting('2026-08-27', church).kind, 'fast-free', `${church} Thursday`);
-    assert.deepEqual(fasting('2026-08-28', church), { kind: 'fast', reason: 'Friday' }, `${church} Friday`);
+    assert.deepEqual(fasting('2026-08-28', church), { kind: 'fast', reason: 'Friday', reasonKind: 'weekday' }, `${church} Friday`);
     assert.deepEqual(fasting('2026-08-29', church), { kind: 'fast', reason: 'the Beheading of the Forerunner' }, `${church} Saturday`);
   }
 });

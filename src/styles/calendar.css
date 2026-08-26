@@ -655,6 +655,32 @@
   color: var(--rubric);
 }
 
+/* The month's numerals wear the fast's colour (author, 2026-08-26 evening:
+   "in monthly view, make the text colour of each day match the fasting dot
+   colour for that day"). The same two tokens the rail's dots and the chip
+   use, from the same `fastTone` in views/calendar.js, so one day cannot be
+   red in one grain and teal in another.
+
+   It goes on `.day-num` rather than on the button because the button's own
+   `color` is the reader's place — `[aria-current='date']` sets rubric — and
+   these are different facts that must not fight over one property. The
+   selected day keeps its field and its rule, which are what carry the
+   selection without a colour; today keeps its ring, likewise.
+
+   Colour is never the only channel here: the word is in each button's
+   accessible name (see paintMonthInto). Contrast measured 2026-08-26 —
+   strict 6.59:1 on gesso and 6.12:1 on the selected day's field, fish 6.0:1
+   and 5.57:1, all clear of AA. Dark mode's rubric is 4.20:1 and under it,
+   which is the pre-existing defect HANDOFF.md lists as outstanding rather
+   than anything this rule introduced. */
+.month-grid button.fast-fast .day-num {
+  color: var(--fast-strict);
+}
+
+.month-grid button.fast-fish .day-num {
+  color: var(--fast-fish);
+}
+
 /* Today's own bubble, at the month's grain (author, 2026-08-26 — see the
    week strip's own copy of this rule above for the reasoning). The numeral is
    wrapped in its own `.day-num` span for this alone: the month button has

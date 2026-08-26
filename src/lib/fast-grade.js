@@ -23,6 +23,8 @@
  *
  * The vocabulary, strictest first:
  *
+ *   strict     a fast whose calendar named no allowance (2026-08-26); the
+ *              strictest reading, and the default rather than a quotation
  *   xerophagy  uncooked food, without oil or wine
  *   no-oil     cooked food, still without oil or wine
  *   oil        oil and wine permitted
@@ -135,13 +137,42 @@ export function gradeFromNote(note) {
 }
 
 /**
- * The day's grade: what its own calendar printed, or — only for a day
- * liturgy.js has already called fish-permitted — `fish`. Null means the
- * calendar has not said, and the page must not fill the silence.
+ * The day's grade: what its own calendar printed, or — where it printed
+ * nothing — what the day is by default.
+ *
+ * **The default is new on 2026-08-26 and it is a reversal**, made at the
+ * author's instruction and recorded in DESIGN.md §5b in place: *'"Fast -
+ * Friday" becomes "Strict Fasting", and tool tip shows "Vegan; set aside
+ * meat, animal products, cooking oils and alcohol."'* Until then a fast whose
+ * calendar named no allowance said only which fast it was, on the ground that
+ * the allowance is the typikon's and jurisdictions differ — and the cost of
+ * that rule was that three of the four calendars never named a type at all,
+ * because only days.pravoslavie.ru prints one. 67 Romanian, 59 Greek and 62
+ * Serbian fast days of the 144 recorded carry no note whatsoever.
+ *
+ * So the silence is filled, and the direction it is filled in is the one that
+ * cannot mislead a reader into eating something their church set aside:
+ * **strict**. On an ordinary Wednesday or Friday — the author's own example —
+ * that is the plain typikon rule in all four churches. Inside a fast season
+ * where the calendar published nothing it is the strictest reading of that
+ * season, which errs toward asking more rather than permitting more.
+ *
+ * Where it errs it errs *knowably*, and one case is worth naming because it
+ * is the most likely to be wrong: a Saturday or Sunday inside the Nativity
+ * Fast, where the Romanian calendar does print «dezlegare la pește» on its
+ * own site and this corpus never captured the note. Such a day now reads
+ * Strict Fasting. Capturing those notes is the fix; the default is not.
+ *
+ * The one exception is a day this build already *knows* the allowance for
+ * without reading it: `fasting.allows`, which today is Cheesefare Week alone
+ * — see lib/liturgy.js, where the reason itself says dairy and eggs are
+ * permitted and a strict default would contradict the words beside it.
  */
 export function gradeForDay(fasting, note) {
   const printed = gradeFromNote(note);
   if (printed) return printed;
   if (fasting?.kind === 'fish') return 'fish';
-  return null;
+  if (fasting?.kind !== 'fast') return null;
+  if (fasting.allows) return fasting.allows;
+  return 'strict';
 }

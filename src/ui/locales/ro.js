@@ -58,6 +58,7 @@ export const ro = {
       open: 'Ce se dezleagă în acest post',
       hint: 'Ce se dezleagă în acest post',
       grades: {
+        strict: 'Post aspru',
         xerophagy: 'Post aspru',
         'no-oil': 'Post aspru',
         oil: 'Dezlegare la ulei și vin',
@@ -65,6 +66,7 @@ export const ro = {
         dairy: 'Dezlegare la lactate',
       },
       allows: {
+        strict: 'Mâncare de post; se lasă deoparte carnea, produsele de origine animală, uleiul de gătit și alcoolul.',
         xerophagy: 'Mâncare de post; se lasă deoparte carnea, produsele de origine animală, uleiul de gătit și alcoolul.',
         'no-oil': 'Mâncare de post; se lasă deoparte carnea, produsele de origine animală, uleiul de gătit și alcoolul.',
         oil: 'Carnea, lactatele și ouăle se lasă deoparte; se dezleagă la ulei și vin.',
@@ -72,7 +74,6 @@ export const ro = {
         dairy: 'Fără carne; lactatele și ouăle sunt îngăduite.',
         none: 'Astăzi nu se lasă nimic deoparte.',
       },
-      unstated: 'Carnea, lactatele și ouăle se lasă deoparte.',
       free: 'Nu se lasă nimic deoparte.',
       sourceNote: 'Așa cum a tipărit {source}.',
       close: 'Închide',
@@ -132,8 +133,8 @@ export const ro = {
     },
     liturgy: {
       tone: 'Glasul {tone}',
-      fast: 'Post - {reason}',
       graded: '{grade} - {reason}',
+      bare: '{grade}',
       free: 'Fără post',
       freeBecause: 'Fără post - {reason}',
     },

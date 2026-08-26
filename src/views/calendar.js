@@ -35,7 +35,7 @@ import { liturgicalDay } from '../lib/liturgy.js';
 import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
 import { recordedDay } from '../data/liturgical-days.js';
 import { nameDays } from '../lib/name-days.js';
-import { gradeForDay } from '../lib/fast-grade.js';
+import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
 import { bibleUrl, refInLanguage } from '../lib/bible.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -367,9 +367,18 @@ function paintLiturgy() {
   const isFast = f.kind === 'fast' || f.kind === 'fish';
   const grade = isFast ? gradeForDay(f, recordedDay(selected, calendar)?.fastingNote) : null;
   const gradeName = grade ? M.grades[grade] : null;
+  /*
+   * Every fast day names its type now (author, 2026-08-26 evening: '"Fast -
+   * Friday" becomes "Strict Fasting"'), so `gradeName` is set whenever
+   * `isFast` is and the old ungraded branch has no reachable caller. The
+   * reason still leads with the grade where it says something — "Strict
+   * Fasting - Great Lent" — and is dropped where it is only the weekday the
+   * reader can already see in the heading above, which is the author's own
+   * example of the change.
+   */
   const fastText =
-    gradeName ? fill(L.graded, { grade: gradeName, reason })
-    : isFast ? fill(L.fast, { reason })
+    gradeName && f.reasonKind === 'weekday' ? fill(L.bare, { grade: gradeName })
+    : gradeName ? fill(L.graded, { grade: gradeName, reason })
     : f.reason ? fill(L.freeBecause, { reason })
     : L.free;
   // The fast is a control (author, 2026-08-25): it opens a bubble saying what
@@ -384,8 +393,20 @@ function paintLiturgy() {
   // off the same printed note. What moves is that the fast now leads the line
   // instead of trailing two facts nobody came for, and that the allowance is
   // printed rather than kept behind the (i).
+  /*
+   * The chip's colour follows the **grade**, not the kind (author, 2026-08-26
+   * evening: "I dont see any blue labels in the Romanian calendar as i do in
+   * the Russian calendar"). The two disagreed on thirteen Russian days of the
+   * 144 recorded: days.pravoslavie.ru printed «разрешается рыба», so the words
+   * read "Oil, Wine and Fish Allowed" while `kind` stayed `fast` and painted
+   * them in the rubric of a strict day. A chip whose colour contradicts its
+   * own text is worse than an uncoloured one. `data-fast` still carries the
+   * liturgical kind, which is a different fact and is what the older tests
+   * mean by it.
+   */
+  const tone = isFast ? (grade === 'fish' ? 'fish' : 'fast') : 'fast-free';
   const fastHtml =
-    `<button type="button" class="fast fast-chip fast-${esc(f.kind)}" data-fast="${esc(f.kind)}" data-fast-open ` +
+    `<button type="button" class="fast fast-chip fast-${esc(tone)}" data-fast="${esc(f.kind)}" data-fast-open ` +
     `data-grade="${esc(grade ?? '')}" aria-expanded="false" ` +
     `aria-haspopup="dialog" title="${esc(M.hint)}">${esc(fastText)}` +
     `<span class="fast-info" aria-hidden="true">i</span>` +
@@ -397,7 +418,7 @@ function paintLiturgy() {
    * `unstated` line stands — meat, dairy and eggs — which is what every fast
    * shares and the most the site will say unasked.
    */
-  const allowance = isFast ? (grade ? M.allows[grade] : M.unstated) : null;
+  const allowance = isFast ? M.allows[grade] : null;
   const allowanceHtml = allowance ? `<span class="fast-allowance">${esc(allowance)}</span>` : '';
   /*
    * And whether the day is a Great Feast, named (author, 2026-08-26: "Add a
@@ -568,10 +589,16 @@ function openFastBubble(button) {
   const note = rec?.fastingNote;
   const grade = button.dataset.grade || null;
   const kind = button.dataset.fast;
-  const allows =
-    grade ? M.allows[grade]
-    : kind === 'fast-free' ? M.free
-    : M.unstated;
+  /*
+   * Whether the grade was read *out of* this note, which since the evening of
+   * 2026-08-26 is a different question from whether there is a grade at all:
+   * an ungraded fast day now defaults to Strict Fasting, and a note reading
+   * only «Post» or «Νηστεία» would otherwise start being quoted under a label
+   * it adds nothing to — the exact thing DESIGN.md §5b had this condition
+   * stop doing.
+   */
+  const gradeIsQuoted = Boolean(gradeFromNote(note));
+  const allows = grade ? M.allows[grade] : kind === 'fast-free' ? M.free : M.allows.strict;
   const src = rec?.source?.url
     ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>`
     : esc(rec?.source?.text ?? '');
@@ -594,7 +621,7 @@ function openFastBubble(button) {
    */
   el.innerHTML =
     `<p class="fast-allows">${esc(allows)}</p>` +
-    (note && grade
+    (note && gradeIsQuoted
       ? `<p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>`
       : '') +
     (note && src ? `<p class="fast-source utility">${fill(M.sourceNote, { source: src })}</p>` : '');
@@ -832,15 +859,40 @@ const COAST_STOP = 0.15;
  * Both are named in the button's accessible label, because a dot is nothing
  * to a screen reader and colour is nothing to a reader who cannot see it.
  */
+/**
+ * Which of the fast's three colours a day wears — `fast`, `fish`, or null for
+ * a day that is not a fast — and **the one place that decision is made**.
+ *
+ * It answers off the *grade* rather than off liturgy.js's `kind`, which is
+ * the correction of 2026-08-26 evening. The two disagreed on thirteen Russian
+ * days of the 144 recorded: days.pravoslavie.ru printed «разрешается рыба»,
+ * so `gradeForDay` read fish while `kind` stayed a plain `fast`, and the day
+ * was painted in the rubric of a strict fast while its own chip read "Oil,
+ * Wine and Fish Allowed". `kind` is still the liturgical fact and still what
+ * `data-fast` carries; this is the fact about what the day *allows*, which is
+ * what a colour on this site has always been marking.
+ *
+ * Three callers, and they must not drift apart: the rail's dot, the chip
+ * under the date, and — since the author asked for it on 2026-08-26 evening
+ * ("in monthly view, make the text colour of each day match the fasting dot
+ * colour for that day") — the month's own numerals.
+ */
+const fastTone = (iso) => {
+  const f = liturgicalDay(iso, state.calendar).fasting;
+  if (f.kind !== 'fast' && f.kind !== 'fish') return null;
+  const grade = gradeForDay(f, recordedDay(iso, state.calendar)?.fastingNote);
+  return grade === 'fish' ? 'fish' : 'fast';
+};
+
 const dayMarks = (iso) => {
-  const { kind } = liturgicalDay(iso, state.calendar).fasting;
+  const tone = fastTone(iso);
   const feast = Boolean(recordedDay(iso, state.calendar)?.hymns?.length);
   const marks = [];
   const words = [];
   const D = STRINGS.calendar.marks;
-  if (kind === 'fast' || kind === 'fish') {
-    marks.push(`<span class="day-mark mark-${esc(kind)}"></span>`);
-    words.push(kind === 'fish' ? D.fish : D.fast);
+  if (tone) {
+    marks.push(`<span class="day-mark mark-${esc(tone)}"></span>`);
+    words.push(tone === 'fish' ? D.fish : D.fast);
   }
   if (feast) {
     marks.push('<span class="day-mark mark-feast"></span>');
@@ -1392,9 +1444,25 @@ function paintMonthInto(row, cursor, { live }) {
   for (let day = 1; day <= daysInMonth(cursor); day++) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
-    const today = iso === todayIso() ? ' class="is-today"' : '';
-    cells.push(`<button type="button" data-iso="${iso}"${current}${today}
-      aria-label="${dayFmt(utc(iso))}"><span class="day-num">${day}</span></button>`);
+    /*
+     * The month's numerals take the fast's own colour (author, 2026-08-26
+     * evening: "in monthly view, make the text colour of each day match the
+     * fasting dot colour for that day"), from the same `fastTone` the rail's
+     * dot reads, so the two grains cannot say different things about one day.
+     *
+     * **And it is named, not only coloured.** A dot is nothing to a screen
+     * reader and a hue is nothing to a reader who cannot separate these two,
+     * so the word goes into the button's accessible name exactly as the
+     * rail's has since the dots arrived — this is DESIGN.md §2's "the words
+     * still say which" applied to the one grain that had no words.
+     */
+    const tone = fastTone(iso);
+    const D = STRINGS.calendar.marks;
+    const toneLabel = tone ? ` - ${tone === 'fish' ? D.fish : D.fast}` : '';
+    const classes = [iso === todayIso() ? 'is-today' : '', tone ? `fast-${tone}` : ''].filter(Boolean);
+    const cls = classes.length ? ` class="${classes.join(' ')}"` : '';
+    cells.push(`<button type="button" data-iso="${iso}"${current}${cls}
+      aria-label="${dayFmt(utc(iso))}${toneLabel}"><span class="day-num">${day}</span></button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 

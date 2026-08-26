@@ -80,8 +80,8 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 165 unit tests (`npm test`) — pure logic, no DOM.
-- 392 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 166 unit tests (`npm test`) — pure logic, no DOM.
+- 396 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-26, the sitting of Amendment 48), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
@@ -312,22 +312,31 @@ of a pill hanging three pixels past it and clipping the dot below — measured a
 8× before and after, not eyeballed. Name Days reads **"Today's name days" only
 on the day that is today**, because the page is a day browser and the word
 would be false on the other 143 days in the records. The fast chip names the
-**type** of fast — Strict Fasting, Oil and Wine Allowed, Oil Wine and Fish
-Allowed, No Fast — with `xerophagy` and `no-oil` merged under one label and the
-calendar's own words still quoted verbatim in the bubble underneath. And a
+**type** of fast on every day of every calendar — Strict Fasting, Oil and Wine
+Allowed, Oil Wine and Fish Allowed, No Fast — with `xerophagy` and `no-oil`
+merged under one label, the calendar's own words still quoted verbatim in the
+bubble underneath, and **a fast whose calendar printed no allowance now
+defaulting to strict** (DESIGN.md §5b carries that reversal in place). The
+fast's colour follows what the day *allows* rather than liturgy.js's `kind`,
+from one helper the rail's dot, the chip and the month all read, and **the
+month's numerals wear it too**, named in each button's accessible label. And a
 **Great Feast is now named beside the fast**, from a nine-key table in
 `lib/liturgy.js` reckoned in the church's own calendar, in a gold-edged chip
 whose *words are ink* because `--gold` on gesso is 2.78:1.
 
 **Two things the author should decide, both flagged rather than taken:**
 
-* **Three of the four calendars will still mostly say plain "Fast."** The four
-  new labels can only appear where a calendar printed an allowance, and 67
-  Romanian, 59 Greek and 62 Serbian fast days in the records carry no note at
-  all. Making the labels universal means *deriving* an allowance, which
-  `lib/liturgy.js` has refused since Amendment 28 on the grounds that the
-  allowance is the typikon's and jurisdictions differ. Reversing that is the
-  author's, not a successor's.
+* ~~Three of the four calendars will still mostly say plain "Fast."~~
+  **Answered by the author the same evening and reversed** — this was flagged
+  after the first build of the labels and the answer was that "Fast - Friday"
+  should read "Strict Fasting". What remains of it is a known wrong case, and
+  it is a *data* gap rather than a design one: **a Saturday or Sunday inside
+  the Nativity Fast reads Strict Fasting in the Romanian calendar while
+  doxologia.ro prints *dezlegare la pește*.** The Russian calendar shows those
+  same days in fish because its notes were harvested and the Romanian's were
+  not. Harvesting the Romanian, Greek and Serbian fasting notes closes it and
+  is ordinary ingestion work — `.tmp/ruro_harvest.py` already reaches the
+  pages.
 * **The rail's gold feast dot and the new feast chip are different findings.**
   The dot means "this day's record carries hymns for this church" (19 Russian
   days in range), the chip means "the day is one of the Twelve Great Feasts"

@@ -120,6 +120,7 @@ export const STRINGS = {
        * than coarse.
        */
       grades: {
+        strict: 'Strict Fasting',
         xerophagy: 'Strict Fasting',
         'no-oil': 'Strict Fasting',
         oil: 'Oil and Wine Allowed',
@@ -128,6 +129,7 @@ export const STRINGS = {
       },
       // And the whole of what the bubble says, one line per grade.
       allows: {
+        strict: 'Vegan; set aside meat, animal products, cooking oils and alcohol.',
         xerophagy: 'Vegan; set aside meat, animal products, cooking oils and alcohol.',
         'no-oil': 'Vegan; set aside meat, animal products, cooking oils and alcohol.',
         oil: 'Meat, dairy and eggs are set aside; oil and wine are permitted.',
@@ -135,14 +137,14 @@ export const STRINGS = {
         dairy: 'No meat; dairy and eggs are permitted.',
         none: 'Nothing is set aside today.',
       },
-      /* A fast whose calendar printed no allowance: what every fast sets
-         aside, and nothing else. It carried a second sentence — "This
-         calendar prints no finer rule for the day" — for one day; the author
-         cut it (2026-08-26) on the same principle that cut the glossary. The
-         silence it announced is still the truth and is still what the page
-         does; saying so in the bubble was the site talking about itself. */
-      unstated: 'Meat, dairy and eggs are set aside.',
-      // Likewise: "Not a fast. Nothing is set aside, including on a Wednesday
+      /* `unstated` stood here — "Meat, dairy and eggs are set aside." — for a
+         fast whose calendar printed no allowance. It has no caller since the
+         evening of 2026-08-26, when such a day started reading Strict Fasting
+         by default (lib/fast-grade.js argues it, DESIGN.md §5b records the
+         reversal), and it is removed rather than left for someone to grep
+         for. `liturgy.fast` — "Fast - {reason}" — went with it and for the
+         same reason: there is no longer a fast day without a grade to name. */
+      // Note: "Not a fast. Nothing is set aside, including on a Wednesday
       // or Friday." The Wednesday-and-Friday clause was answering a question
       // about *other* days.
       free: 'Nothing is set aside.',
@@ -219,11 +221,12 @@ export const STRINGS = {
     },
     liturgy: {
       tone: 'Tone {tone}',
-      fast: 'Fast - {reason}',
       // The grade leads the line where the calendar gave one (2026-08-25
-      // evening). `fish` went with it: a fish-permitted day always resolves
-      // to the `fish` grade, so the old wording had no reachable caller.
+      // evening) — and since the evening of 2026-08-26 every fast day has a
+      // grade, so this is the only shape a fast takes. `bare` is the same
+      // line without its reason, used where the reason is only the weekday.
       graded: '{grade} - {reason}',
+      bare: '{grade}',
       free: 'No Fast',
       freeBecause: 'No Fast - {reason}',
     },

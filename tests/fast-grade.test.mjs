@@ -56,7 +56,40 @@ test('fish comes from liturgy.js only where the calendar itself is silent', () =
   assert.equal(gradeForDay({ kind: 'fish' }, null), 'fish');
   assert.equal(gradeForDay({ kind: 'fish' }, 'Сухоядение'), 'xerophagy',
     'what the calendar printed outranks what the cycle would imply');
-  assert.equal(gradeForDay({ kind: 'fast' }, null), null,
-    'a fast whose allowance no calendar stated is left unstated');
   assert.equal(gradeForDay(null, null), null);
+});
+
+test('a fast whose calendar printed nothing is strict, and only Cheesefare escapes it', () => {
+  /*
+   * The reversal of 2026-08-26 evening (author: '"Fast - Friday" becomes
+   * "Strict Fasting"'). This used to return null and the page used to print
+   * only which fast it was — which meant three of the four calendars never
+   * named a type at all, because only days.pravoslavie.ru prints one.
+   *
+   * The direction matters as much as the default: strict is the reading that
+   * cannot mislead a reader into eating something their church set aside. See
+   * lib/fast-grade.js for where it is knowably wrong and why capturing the
+   * missing notes is the fix rather than a cleverer default.
+   */
+  assert.equal(gradeForDay({ kind: 'fast' }, null), 'strict');
+  assert.equal(gradeForDay({ kind: 'fast', reason: 'Friday' }, null), 'strict');
+  // A note that names an allowance still outranks the default, in either
+  // direction - looser as well as stricter.
+  assert.equal(gradeForDay({ kind: 'fast' }, 'разрешается рыба'), 'fish');
+  assert.equal(gradeForDay({ kind: 'fast' }, 'сухоядение'), 'xerophagy');
+  // And a note that names none does not: «Post» is not an allowance.
+  assert.equal(gradeForDay({ kind: 'fast' }, 'Post'), 'strict');
+
+  /*
+   * Cheesefare is the one day the default would contradict the reason printed
+   * beside it - liturgy.js's own words are "no meat; dairy and eggs
+   * permitted" - so that branch hands the allowance over rather than letting
+   * the default guess past it.
+   */
+  assert.equal(
+    gradeForDay({ kind: 'fast', reason: 'Cheesefare Week - no meat; dairy and eggs permitted', allows: 'dairy' }, null),
+    'dairy',
+  );
+  // A fast-free day still has no grade: there is no allowance to name.
+  assert.equal(gradeForDay({ kind: 'fast-free', reason: null }, null), null);
 });

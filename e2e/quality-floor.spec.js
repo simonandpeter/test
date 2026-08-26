@@ -3389,13 +3389,16 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
 
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  // And an ordinary Friday, whose calendar printed no allowance: the line
-  // says which fast and stops.
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Fast - Friday');
+  // And an ordinary Friday, whose calendar printed no allowance. It said
+  // "Fast - Friday" and stopped until the evening of 2026-08-26; it is Strict
+  // Fasting by default now, and the weekday goes with the change because on
+  // this day the reason *was* the weekday (DESIGN.md §5b carries the
+  // reversal).
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
-  // A fast whose calendar printed no allowance still prints the one every fast
-  // shares, which is the most the site will say unasked.
-  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText('Meat, dairy and eggs are set aside.');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
@@ -3495,9 +3498,10 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   // The fast is a button since 2026-08-25 — it opens what the fast allows —
   // so the line's text now carries the (i) and the announcement a screen
   // reader is given. The Serbian calendar records no fasting note at all for
-  // this day, so no grade leads the line: what a calendar has not printed,
-  // the page does not say.
-  await expect(page.locator('[data-liturgy] .fast')).toContainText('Fast - the Dormition Fast');
+  // this day, which used to mean no grade led the line; since the evening of
+  // 2026-08-26 an unstated fast is Strict Fasting by default, and the reason
+  // stays because "the Dormition Fast" is not a weekday.
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Dormition Fast');
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('12th Sunday after Pentecost · Tone 3');
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('aria-haspopup', 'dialog');
   await expect(page.locator('.hero-name')).toContainText('Lawrence of Rome');
@@ -4316,28 +4320,34 @@ test('the fast bubble goes when the reader moves on', async ({ page }) => {
   await expect(page.locator('.fast-bubble')).toHaveCount(0);
 });
 
-test('a day whose calendar named no allowance says that much and stops', async ({ page }) => {
+test('a day whose calendar named no allowance is strict, and quotes nothing back', async ({ page }) => {
   /*
-   * The honest silence, which is the whole reason the grade is read and not
-   * computed. 25 August in the Serbian calendar is a fast — the Dormition
-   * Fast — and pravoslavno.rs printed «Пост (означен у календару)» beside it,
-   * which says *that* it is a fast and not what it allows. So the line says
-   * "Fast" with no grade in front of it, and the bubble says what every fast
-   * sets aside and refuses to guess the rest.
+   * **This test's premise was reversed on the evening of 2026-08-26 and it is
+   * kept as the heir rather than retired**, because half of what it pins is
+   * unchanged. It used to be called *a day whose calendar named no allowance
+   * says that much and stops*, and it asserted the honest silence: 25 August
+   * in the Serbian calendar is the Dormition Fast, pravoslavno.rs printed
+   * «Пост (означен у календару)» beside it — which says *that* it is a fast
+   * and not what it allows — so the line said "Fast" with no grade and the
+   * bubble said what every fast sets aside and refused to guess the rest.
+   *
+   * The author's instruction ('"Fast - Friday" becomes "Strict Fasting"')
+   * fills that silence, in the strict direction, and DESIGN.md §5b carries
+   * the reversal in place. What did *not* change, and is the reason this test
+   * still earns its name: the note is still not quoted back. A grade the site
+   * defaulted to was not read out of «Пост», and the bubble prints a
+   * quotation only where the quotation says more than the label above it.
    */
   await ready(page, { church: 'serbian' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   const fast = page.locator('[data-liturgy] .fast');
-  await expect(fast).toHaveAttribute('data-grade', '');
-  await expect(page.locator('[data-liturgy]')).toContainText('Fast - the Dormition Fast');
+  await expect(fast).toHaveAttribute('data-grade', 'strict');
+  await expect(page.locator('[data-liturgy]')).toContainText('Strict Fasting - the Dormition Fast');
   await fast.click();
   const bubble = page.locator('.fast-bubble');
-  // What every fast sets aside, and not a word about what this page does not
-  // know. It carried a second sentence — "This calendar prints no finer rule
-  // for the day" — for one day; the author cut it on 2026-08-26, and the cut
-  // is right: the silence is real and announcing it is the site talking about
-  // itself.
-  await expect(bubble.locator('.fast-allows')).toHaveText('Meat, dairy and eggs are set aside.');
+  await expect(bubble.locator('.fast-allows')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
   /*
    * And the quotation is gone with it, while the citation stays (author, same
    * instruction, about the Beheading in the Romanian calendar: "remove the
@@ -4347,6 +4357,11 @@ test('a day whose calendar named no allowance says that much and stops', async (
    * note is printed when a grade was read out of it — exactly when it says
    * more than the label — and the source line stands either way, because the
    * day's record came from that page whether or not its words bear repeating.
+   *
+   * That condition had to be rewritten when the strict default landed: it was
+   * `note && grade`, and every fast day has a grade now, so it would have
+   * started quoting the very notes it exists to suppress. It asks whether the
+   * grade was read *out of* the note instead.
    */
   await expect(bubble.locator('.fast-note')).toHaveCount(0);
   await expect(bubble.locator('.fast-source')).toContainText('pravoslavno.rs');
@@ -5079,10 +5094,14 @@ test('a note that only says "a fast" is not quoted back at the reader', async ({
   await ready(page, { church: 'romanian' });
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   const fast = page.locator('[data-liturgy] .fast');
-  await expect(fast).toHaveAttribute('data-grade', '');
+  // `strict` is the default a silent calendar falls to, not something read
+  // out of „Post" — which is exactly why the note below is still not quoted.
+  await expect(fast).toHaveAttribute('data-grade', 'strict');
   await fast.click();
   const bubble = page.locator('.fast-bubble');
-  await expect(bubble.locator('.fast-allows')).toHaveText('Meat, dairy and eggs are set aside.');
+  await expect(bubble.locator('.fast-allows')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
   await expect(bubble.locator('.fast-note')).toHaveCount(0);
   await expect(bubble).not.toContainText('Post');
   // The hyperlink, which is the half the author kept.
@@ -6298,6 +6317,81 @@ test('the fast chip names the type of fast, and the bubble still quotes the cale
   await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
 });
 
+test('every calendar names its type of fast, not only the one that prints allowances', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening, after seeing the first build of the labels:
+   * "Why are these changes applied only to the Russian calendar?" … "This
+   * change hasnt been applied to the Romanian calendar for instance, and I
+   * dont see any blue labels in the Romanian calendar as i do in the Russian
+   * calendar."
+   *
+   * Both halves were true and both had the same root. Only
+   * days.pravoslavie.ru prints an allowance beside its days: of the 144 day
+   * records, 67 Romanian, 59 Greek and 62 Serbian fast days carry **no
+   * fasting note at all**. A grade read strictly off a printed note therefore
+   * existed almost nowhere but the Russian, and every other calendar fell
+   * through to a bare "Fast - Friday".
+   *
+   * So a fast with no printed allowance is Strict Fasting by default now
+   * (lib/fast-grade.js argues the direction; DESIGN.md §5b records the
+   * reversal), and this test is the one that would catch the default being
+   * quietly dropped again — it walks the three calendars that have no notes
+   * to read.
+   */
+  await ready(page, { church: 'romanian' });
+  // 28 August 2026 is an ordinary Friday in the Revised Julian calendar, and
+  // it is the author's own example: "Fast - Friday" becomes "Strict Fasting",
+  // with the reason gone because the reason was the weekday.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
+  await expect(page.locator('[data-liturgy] .fast')).not.toContainText('Friday');
+  await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'strict');
+  await expect(page.locator('[data-liturgy] .fast-allowance')).toHaveText(
+    'Vegan; set aside meat, animal products, cooking oils and alcohol.',
+  );
+  // A reason that says where in the year the reader is *is* kept: the drop is
+  // for the weekday alone.
+  await page.goto('/calendar/2026-11-18', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-liturgy] .fast')).toContainText('Strict Fasting - the Nativity Fast');
+
+  // The Greek and the Serbian, whose calendars are equally silent.
+  for (const church of ['greek', 'serbian']) {
+    await openChooser(page);
+    await page.locator(`#church-panel [data-church="${church}"]`).click();
+    await page.goto('/calendar/2026-09-04', { waitUntil: 'networkidle' });
+    await expect(page.locator('[data-liturgy] .fast'), church).toHaveText(/^Strict Fasting/);
+  }
+
+  /*
+   * And the blue. The chip's colour follows the *grade* now rather than
+   * liturgy.js's `kind`, because the two disagreed on thirteen Russian days:
+   * 14 October's note reads «Разрешается рыба», so the words said fish was
+   * permitted while the chip was painted in the rubric of a strict day. Its
+   * `kind` is still `fast` — that is a different fact and `data-fast` still
+   * carries it — and it is teal now because its grade is fish.
+   */
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.goto('/calendar/2026-10-14', { waitUntil: 'networkidle' });
+  const fish = page.locator('[data-liturgy] .fast');
+  await expect(fish).toContainText('Oil, Wine and Fish Allowed');
+  await expect(fish).toHaveAttribute('data-fast', 'fast');
+  await expect(fish).toHaveAttribute('data-grade', 'fish');
+  const paint = await fish.evaluate((el) => {
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    const root = getComputedStyle(document.documentElement);
+    probe.style.color = root.getPropertyValue('--fast-fish').trim();
+    const teal = getComputedStyle(probe).color;
+    probe.style.color = root.getPropertyValue('--fast-strict').trim();
+    const strict = getComputedStyle(probe).color;
+    probe.remove();
+    return { colour: getComputedStyle(el).color, teal, strict };
+  });
+  expect(paint.colour).toBe(paint.teal);
+  expect(paint.colour).not.toBe(paint.strict);
+});
+
 test('a Great Feast is named beside the fast, in gold that never carries the words', async ({ page }) => {
   /*
    * Author, 2026-08-26 evening: "Add a label if its a Feast Day as well with
@@ -6383,4 +6477,77 @@ test('a Great Feast is named beside the fast, in gold that never carries the wor
   // An ordinary day wears none at all.
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy] .feast-chip')).toHaveCount(0);
+});
+
+test("the month's numerals wear the same colour as the rail's dots", async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "in monthly view, make the text colour of
+   * each day match the fasting dot colour for that day."
+   *
+   * The assertion is the instruction almost word for word — the rail's dot
+   * and the month's numeral are read for the *same* day and compared as
+   * computed colours, so this cannot pass on two rules that happen to look
+   * alike. Both come from `fastTone` in views/calendar.js, which is the one
+   * place the decision is made.
+   *
+   * November 2026 in the Russian calendar is the month worth walking: the
+   * Nativity Fast opens on the 28th (15 November, Julian), Wednesdays and
+   * Fridays are strict before it, and days.pravoslavie.ru printed
+   * «разрешается рыба» for the 28th and 29th — so the month holds all three
+   * states at once, which no earlier month does.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-11-18', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const read = async (iso) =>
+    page.evaluate((day) => {
+      const dot = document.querySelector(`.week-strip button[data-iso="${day}"] .day-mark:not(.mark-feast)`);
+      const cell = document.querySelector(`.month-grid button[data-iso="${day}"]`);
+      return {
+        dot: dot ? getComputedStyle(dot).backgroundColor : null,
+        numeral: cell ? getComputedStyle(cell.querySelector('.day-num')).color : null,
+        cellClass: cell ? cell.className : null,
+        label: cell ? cell.getAttribute('aria-label') : null,
+      };
+    }, iso);
+
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+
+  // A strict fast: an ordinary Wednesday before the Nativity Fast opens.
+  const strict = await read('2026-11-11');
+  expect(strict.dot).not.toBeNull();
+  expect(strict.numeral).toBe(strict.dot);
+  expect(strict.cellClass).toContain('fast-fast');
+
+  // Fish, which is the state that used to be invisible: `kind` here is a
+  // plain `fast` and only the printed note makes it fish, so before
+  // 2026-08-26 evening the dot *and* the numeral would have been strict red.
+  const fish = await read('2026-11-28');
+  expect(fish.dot).not.toBeNull();
+  expect(fish.numeral).toBe(fish.dot);
+  expect(fish.cellClass).toContain('fast-fish');
+  // And the two states are genuinely different colours, or the equality above
+  // would be satisfied by everything being one colour.
+  expect(fish.numeral).not.toBe(strict.numeral);
+
+  // A day that is not a fast wears neither: no dot, and the numeral is left
+  // to the button's own ink. A run of them is what makes a fast legible.
+  const free = await read('2026-11-10');
+  expect(free.dot).toBeNull();
+  expect(free.cellClass).not.toContain('fast-');
+  expect(free.numeral).not.toBe(strict.numeral);
+  expect(free.numeral).not.toBe(fish.numeral);
+
+  /*
+   * **The colour is never the only channel.** The rail has named its marks in
+   * the accessible label since the dots arrived; the month had no words at
+   * all until it took a colour, and DESIGN.md §2's rule is that the words say
+   * which. A screen reader and a reader who cannot separate these two hues
+   * both get the fast from the name.
+   */
+  expect(strict.label).toContain('a fast');
+  expect(fish.label).toContain('fish permitted');
+  expect(free.label).not.toContain('fast');
 });

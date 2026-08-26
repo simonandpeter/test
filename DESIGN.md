@@ -663,9 +663,57 @@ still refuses to *compute* an allowance, because that is the typikon's and
 jurisdictions keeping the same fast differ. `lib/fast-grade.js` *reads* one,
 matching the calendar's own words against a closed vocabulary — xerophagy,
 cooked without oil, oil and wine, fish, dairy — so what the line says is a
-quotation resolved, never a derivation. A day whose calendar named no
+quotation resolved, never a derivation. ~~A day whose calendar named no
 allowance still says only which fast it is, and the bubble on it says what
-every fast sets aside and stops. Under the day's saint — or the empty note — the readings the church's
+every fast sets aside and stops.~~
+
+*Reversed (author, 2026-08-26 evening): "For the fasting labels, change to
+show the types directly … That means, 'Fast - Friday' becomes 'Strict
+Fasting', and tool tip shows 'Vegan; set aside meat, animal products, cooking
+oils and alcohol.'"* The struck sentence was the honest silence and it had a
+cost the author saw on the screen before this file did: **only
+days.pravoslavie.ru prints an allowance**, so of the 144 day records, 67
+Romanian, 59 Greek and 62 Serbian fast days carry no note at all and never
+named a type. Three of the four calendars were silent, and the reader's
+question — what may I eat today — went unanswered on the days it is asked.
+
+So the silence is filled, and the two halves of the rule are now different
+rules rather than one:
+
+* **What a calendar printed is still a quotation resolved.** Nothing about
+  `gradeFromNote` changed. The five printed grades still outrank everything,
+  in the looser direction as well as the stricter, and the calendar's own
+  words are still quoted in the bubble with the page cited — but only where
+  the grade was read *out of* them, which is unchanged and is why «Post» and
+  «Νηστεία» are still not quoted back.
+* **What no calendar printed now defaults, and defaults strict.** The
+  direction is the point: strict cannot mislead a reader into eating
+  something their church set aside. On an ordinary Wednesday or Friday — the
+  author's own example — it is the plain typikon rule in all four churches.
+
+**Where the default is wrong it is wrong knowably, and the fix is data, not a
+cleverer rule.** A Saturday or Sunday inside the Nativity Fast reads Strict
+Fasting in the Romanian calendar while doxologia.ro prints *dezlegare la
+pește* on its own site, because this corpus never captured that note; the
+Russian calendar, whose notes *were* captured, shows those same days in fish.
+The two months sit side by side in the screenshots of Amendment 48. Capturing
+the Romanian, Greek and Serbian notes closes it; `lib/liturgy.js` still
+refuses to compute an allowance, and this default is not a computation of one
+— it is what the site says when it has been told a day is a fast and nothing
+more.
+
+**And the fast's colour follows the allowance, not the kind** (same evening:
+"I dont see any blue labels in the Romanian calendar as i do in the Russian
+calendar"). `lib/liturgy.js`'s `kind` and the resolved grade disagreed on
+thirteen Russian days — «разрешается рыба» printed beside a day whose `kind`
+is a plain `fast` — so the chip read "Oil, Wine and Fish Allowed" in the
+rubric of a strict day. One helper, `fastTone`, now decides for all three
+places a day wears the colour: the rail's dot, the chip, and the month's
+numerals. **The month's numerals are new** (same evening: "in monthly view,
+make the text colour of each day match the fasting dot colour for that day")
+and they are named as well as coloured — the fast goes into each button's
+accessible name, because the month had no words at all until it took a hue,
+and §2's rule is that the words say which. Under the day's saint — or the empty note — the readings the church's
 own calendar printed for the day, each a link (Bible Gateway, NKJV for now)
 with the page named, printed only where a day has been recorded; and the
 hymns of the day, a feast's recorded with the day and a saint's from the
