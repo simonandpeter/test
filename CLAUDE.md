@@ -86,6 +86,14 @@ changing the shared token). Two theme blocks (light, then dark) — a colour
 change needs both, and dark mode isn't covered by the axe/contrast browser
 tests (they run light-mode only).
 
+**Chrome / nav** — `src/main.js` renders the four nav links; the Daily one
+carries a `[data-nav-label]` span whose word swaps to *Today* while the reader
+is on the Daily page looking at another day. The Daily view announces the day
+with a `gos:day` CustomEvent from `select()`; main.js listens. Header layout
+(sticky, the phone's four-across grid) is `header.chrome` / `nav.site-nav` in
+base.css — the phone's `[aria-current]` override must stay **after** the base
+one, same specificity.
+
 **Strings / i18n** — `src/ui/strings.js` (English, the source of truth) +
 `src/ui/locales/{ru,ro,el,sr}.js`. Touch all five together for any new or
 changed UI string, then run `node scripts/locale-coverage.mjs` — it reports
@@ -110,7 +118,7 @@ top of the file is.
 - Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 166 as of
   2026-08-26.
 - Browser: everything lives in **one file**, `e2e/quality-floor.spec.js`
-  (~7,300 lines, 412 tests as of 2026-08-26 across two projects). Grep for a
+  (~7,600 lines, 422 tests as of 2026-08-26 across two projects). Grep for a
   selector, a class name, or a phrase from a test title before opening it —
   don't read it cold start to finish.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`

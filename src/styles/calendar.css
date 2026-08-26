@@ -408,7 +408,12 @@
      one edge on the day that is both today and the day being read, instead of
      a pill hanging 3 px past it. It also lifts the ring clear of the fast and
      feast dots, which the old -3px bottom cut 1 px into. */
-  inset: 1px -5px 0;
+  /* -2px at the top, not 1 (author, 2026-08-26 evening: "move the bubble over
+     the current date slightly higher, currently the top of the bubble and the
+     top of the number are too close"). Only the top moves: the bottom stays
+     at 0 because that is what lands it on the selected day's underline, which
+     is the whole of the morning's fix. */
+  inset: -2px -5px 0;
   /* Sharper than the pill it was (author, same instruction). A soft rectangle
      shares the underline's own straight run; a 999px pill met it at a curve. */
   border: 1px solid var(--rubric);
@@ -699,7 +704,7 @@
      the numeral — so the bottom edge has nothing to meet and simply closes on
      the line box as the week's does, which is what keeps the two marks
      recognisably one mark. */
-  inset: 0 -5px;
+  inset: -3px -5px 0;
   border: 1px solid var(--rubric);
   border-radius: 4px;
   pointer-events: none;

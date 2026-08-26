@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-26 (Amendment 48)
+## State as of 2026-08-26 (Amendment 49)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -81,7 +81,7 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 166 unit tests (`npm test`) — pure logic, no DOM.
-- 412 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 422 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-26, the sitting of Amendment 48), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
@@ -367,6 +367,31 @@ whose *words are ink* because `--gold` on gesso is 2.78:1.
 
 Also of note: the four labels and the feast names are hand-translated into all
 four packs, which are **299 of 299** with no English fallbacks.
+
+### What Amendment 49 changed (2026-08-26, ninth sitting)
+
+Ten instructions. The Index prints **one** count line — "Of 742, 127 saints are
+in the Romanian calendar", the lead-in a step back in `--ink-soft` because the
+literal midpoint of gesso and ink is 3.09:1 and cannot carry text — and the
+tweened count speaks only when a filter gives it something that line does not.
+The Random die takes the chips' own height and **wears gold, the first control
+on the site to**; the browser test allows it by name and still fails a second
+gold anywhere. The header is **sticky** and 8 px shorter, and on a phone the
+four pages are equal buttons edge to edge with the current one bold in a field.
+The Daily button reads **Today** while the reader is on the Daily page looking
+at another day. Today's ring sits 3 px higher. The Gender facet's third option
+is "Unrecorded". And a month stepping to another of the same height no longer
+moves the page — `moveMonth` was measuring the height it was leaving before
+releasing what a grow still had pinned, which only showed inside the 420 ms a
+grow takes.
+
+**One thing the author should decide:** in Russian, Romanian, Greek and
+Serbian the nav's word for *Daily* is already that language's word for
+*Today*, so the new label does not visibly change there. The control works —
+pressing it returns to today — but the change of state is invisible. Giving
+those four packs a distinct base label is the fix; it is theirs because it
+changes a reviewed label and because those words are longer, which is the
+320 px chrome line's whole budget.
 
 ## Two sections below are now history, not the current UI
 

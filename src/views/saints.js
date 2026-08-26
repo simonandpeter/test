@@ -757,12 +757,19 @@ function update({ animate }) {
   // It said how many were *not* kept, which left the reader subtracting to
   // learn the number they wanted; the ratio says both at once, and the
   // header's part is a title rather than a sentence repeated on every filter.
+  /*
+   * One line, and the lead-in set apart (author, 2026-08-26 evening). It is
+   * built rather than assigned because two spans of it are coloured
+   * differently: `keptOf` carries the corpus's own size in the secondary ink,
+   * the rest carries the church's count in the page's. ui/strings.js argues
+   * why the lead-in is `--ink-soft` and not the literal midpoint the
+   * instruction describes.
+   */
+  const S = STRINGS.saints;
   asideNote.hidden = mine.length === cards.length;
-  asideNote.textContent = fill(STRINGS.saints.kept, {
-    shown: mine.length,
-    total: cards.length,
-    church: churchName(church),
-  });
+  asideNote.innerHTML =
+    `<span class="count-of">${esc(fill(S.keptOf, { total: cards.length }))}</span> ` +
+    esc(fill(S.kept, { shown: mine.length, church: churchName(church) }));
   asideNote.title = STRINGS.saints.keptTitle;
 
   const { matched, undated } = applyFilters(mine, filters, {
@@ -771,6 +778,15 @@ function update({ animate }) {
   });
 
   state.shownCards = matched;
+  /*
+   * The tweened count says how many *match*, which is the same number as the
+   * line above whenever nothing is filtering — "127 saints" over "Of 742, 127
+   * saints are in the Romanian calendar" is what the author was reading. It
+   * speaks when it has something that line does not: a filter narrowing the
+   * church's own set, or no church setting anything aside in the first place,
+   * in which case it is the only count on the page.
+   */
+  el.querySelector('[data-count-row]').hidden = !asideNote.hidden && matched.length === mine.length;
   el.querySelector('[data-clear]').hidden = !hasActiveFilters(filters);
   el.querySelector('[data-empty]').hidden = matched.length > 0;
   paintCount(matched.length, animate);

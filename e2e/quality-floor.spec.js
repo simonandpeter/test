@@ -3334,7 +3334,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('[data-count]')).toHaveText('426');
   // 426, not 418: thirteen new folders, and eight the corpus already held whose
   // Russian row said "not checked" until days.pravoslavie.ru was read for the day.
-  await expect(page.locator('[data-set-aside]')).toHaveText('426/742 saints venerated in the Russian calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 426 saints are in the Russian calendar.');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -3353,7 +3353,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('[data-count]')).toHaveText('127');
   // The count says the useful number outright (author, 2026-08-25): it named
   // how many were *not* kept, which left the reader subtracting.
-  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints venerated in the Romanian calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -3364,7 +3364,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-count]')).toHaveText('365');
-  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints venerated in the Greek calendar.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('Of 742, 365 saints are in the Greek calendar.');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 });
 
@@ -3442,6 +3442,14 @@ test('the site is named in the reader\u2019s own language, and the habit page is
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
   await expect(page.locator('.site-name')).toHaveText('Orthodoxy Daily');
+  /*
+   * On a day that is not today the button reads **Today** since 2026-08-26
+   * evening — press it and it goes back. The claim this test makes is about
+   * the *base* word, so it is read where the base word is what shows: on
+   * today itself, and on any page that is not the Daily one.
+   */
+  await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Today');
+  await page.goto('/', { waitUntil: 'networkidle' });
   await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Daily');
   await expect(page.locator('.site-nav')).not.toContainText('Calendar');
 });
@@ -3681,12 +3689,27 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn-text[lang="en"]')).toHaveCount(0);
 });
 
-test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async ({ page }) => {
-  // The author's decision for the Eastern Orthodox project (2026-08-22;
-  // DESIGN.md §2, and §7 superseded in full): in a one-communion corpus the
-  // mark said nothing and is removed, and gold — spent only on it — is spent
-  // nowhere until a new signature element is chosen. Four routes; every
-  // element's computed colours. A reintroduction anywhere fails here by name.
+test('the veneration glyph is drawn nowhere, and gold is spent only where it was asked for', async ({ page }) => {
+  /*
+   * The author's decision for the Eastern Orthodox project (2026-08-22;
+   * DESIGN.md §2, and §7 superseded in full): in a one-communion corpus the
+   * mark said nothing and is removed, and gold — spent only on it — is spent
+   * nowhere until a new signature element is chosen. Four routes; every
+   * element's computed colours. A reintroduction anywhere fails here by name.
+   *
+   * **The die is the first exception, and it is an exception rather than a
+   * loosening** (author, 2026-08-26 evening: "make the icon gold to draw
+   * attention"). Every gold on these four routes since has been a *finding* —
+   * the rail's feast dot, the feast chip, the hairline under the date — and
+   * this is the first control to wear it. It is allowed here **by name**, so
+   * a second one anywhere still fails, which is the whole value of the test.
+   * DESIGN.md §2 carries the reversal and the cost: --gold on gesso is
+   * 2.78:1, under the 3:1 WCAG asks of a meaningful non-text graphic.
+   *
+   * The allowance is `el.closest('.random-die')` in the sweep below, and the
+   * assertion at the end is what keeps it honest — an exception nobody
+   * exercises would let the die lose its gold with this test still green.
+   */
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const gold = await page.evaluate(() => {
@@ -3702,6 +3725,8 @@ test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async (
       const props = ['color', 'backgroundColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'fill', 'stroke', 'outlineColor'];
       const hits = [];
       for (const el of document.querySelectorAll('body *')) {
+        // The die and the icon inside it: named, so nothing else may.
+        if (el.closest('.random-die')) continue;
         const cs = getComputedStyle(el);
         const hit = props.find((p) => cs[p] === goldRgb);
         if (hit) hits.push(`${el.tagName.toLowerCase()}.${el.getAttribute('class') || ''} ${hit}`);
@@ -3710,6 +3735,11 @@ test('the veneration glyph is drawn nowhere, and gold is spent nowhere', async (
     }, gold);
     expect(golden, `${path} spends gold on ${golden.join(', ')}`).toEqual([]);
   }
+
+  // The one that is allowed is also *there*: an exception nobody exercises
+  // would let the die quietly lose its gold and this test go on passing.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.random-die')).toHaveCSS('color', gold);
 });
 
 test('no axe violations on the first visit, with the two marks standing', async ({ page }) => {
@@ -7262,4 +7292,224 @@ test('the filter row still holds one line with the die in it', async ({ page }) 
   expect(row.count, 'seven facets and the die').toBe(8);
   expect(row.need, `the filter row needs ${row.need.toFixed(1)} px of a 580 px column`).toBeLessThan(580);
   expect(row.lines, 'the die shares the facets line').toBe(1);
+});
+
+test('the Index says its count once, with the corpus a step behind the calendar', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: the page read "127 saints" over "127/742
+   * saints venerated in the Romanian calendar" — "Just print 1 line, 'Of 742,
+   * 127 saints are in Romanian calendar'", with the lead-in "in grey or
+   * whatever is halfway between background colour and font colour".
+   *
+   * Two things are pinned. **One line when nothing is filtering**, which is
+   * the whole complaint: the tweened count said the same number as the line
+   * under it. And **two inks**, bought the way this palette can afford them —
+   * the literal midpoint of gesso and ink is #83807b at 3.09:1, under AA's
+   * 4.5, so the step is made by lifting the rest to full ink rather than by
+   * sinking the lead-in below the floor.
+   */
+  await ready(page, { church: 'romanian' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const line = page.locator('[data-set-aside]');
+  await expect(line).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
+  // The count that used to say it a second time is silent.
+  await expect(page.locator('[data-count-row]')).toBeHidden();
+
+  const ink = await page.evaluate(() => {
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    const root = getComputedStyle(document.documentElement);
+    const read = (name) => {
+      probe.style.color = root.getPropertyValue(name).trim();
+      return getComputedStyle(probe).color;
+    };
+    const out = { ink: read('--ink'), soft: read('--ink-soft') };
+    probe.remove();
+    return out;
+  });
+  await expect(page.locator('[data-set-aside] .count-of')).toHaveCSS('color', ink.soft);
+  await expect(line).toHaveCSS('color', ink.ink);
+  // The two are genuinely different, or "a step behind" is no step at all.
+  expect(ink.soft).not.toBe(ink.ink);
+
+  /*
+   * And it speaks again when it has something the line above does not: a
+   * filter narrowing the church's own set. The two numbers differ then, and
+   * both are worth printing.
+   */
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await expect(page.locator('[data-count-row]')).toBeVisible();
+  await expect(line).toHaveText('Of 742, 127 saints are in the Romanian calendar.');
+});
+
+test('the die is the chips own height, and the Gender facet drops its heading from its option', async ({ page }) => {
+  // Author, 2026-08-26 evening: "make the dice button height match the height
+  // of the other filters in its row and make the icon gold"; and under
+  // Gender, "Sex unrecorded" becomes "Unrecorded" — the facet's own summary
+  // was carrying that word already.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const heights = await page.evaluate(() => {
+    const die = document.querySelector('.random-die').getBoundingClientRect();
+    const chip = document.querySelector('details[data-facet="dates"] > summary').getBoundingClientRect();
+    return { die: die.height, chip: chip.height };
+  });
+  // To the pixel, and read off a chip rather than pinned to a number: the die
+  // takes the row's height with `align-self: stretch`, so the two move
+  // together when a chip's padding next does.
+  expect(Math.abs(heights.die - heights.chip), `die ${heights.die} vs chip ${heights.chip}`).toBeLessThan(0.5);
+
+  await page.locator('details[data-facet="sexes"] > summary').click();
+  const options = (await page.locator('details[data-facet="sexes"] label').allTextContents()).map((t) => t.trim());
+  expect(options).toContain('Unrecorded');
+  expect(options.join(' ')).not.toContain('Sex');
+});
+
+test('the Daily button offers Today when the reader has left it, and only there', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "when today's date is scrolled away from on
+   * the Daily page, the text 'Daily' on the Daily button fades and is
+   * replaced by 'Today', so when you press it, it takes you to today's date.
+   * But it only says 'Today' while on the Daily page."
+   *
+   * The word only ever offers what the page it is on can give: on the Index
+   * the button is how you reach the Daily page at all, so it says Daily
+   * whatever day that page was last showing.
+   */
+  await ready(page);
+  const label = page.locator('[data-nav-label]');
+
+  // Today itself: nothing to go back to.
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await expect(label).toHaveText('Daily');
+
+  // A day that is not today, arrived at by deep link.
+  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  await expect(label).toHaveText('Today');
+
+  // Off the Daily page it is Daily again.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(label).toHaveText('Daily');
+
+  // And stepping the rail is what changes it, not only a fresh load.
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await expect(label).toHaveText('Daily');
+  await page.keyboard.press('d');
+  await expect(label).toHaveText('Today');
+  // Pressing it goes back to today, and the word goes with it.
+  await page.locator('.site-nav a[data-nav-daily]').click();
+  await expect(label).toHaveText('Daily');
+  await expect(page.locator('.week-strip button.is-today')).toHaveAttribute('aria-current', 'date');
+});
+
+test('the header is sticky, shorter, and the phone gets four equal pages', async ({ page }) => {
+  /*
+   * Three of the evening's instructions, which are one bar: "Make the site
+   * header a sticky header", "make the header slightly shorter in height by
+   * cropping more from the top margin", and — on a phone — "make the 'Daily',
+   * 'All Saints', 'Map' and 'About' buttons equal width and stretch across
+   * the whole width of the screen … slightly shorter in height … and make the
+   * whole button go bold when selected".
+   */
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const header = page.locator('header.chrome');
+  await expect(header).toHaveCSS('position', 'sticky');
+  const tall = (await header.boundingBox()).height;
+  // It was 61 px at 1280 for four amendments; the top margin came down by 8.
+  expect(tall, `the header is ${tall} px`).toBeLessThan(58);
+
+  // Sticky is a claim about scrolling, so it is asserted by scrolling: the
+  // bar is still at the top of the viewport after the page has moved under it.
+  await page.evaluate(() => window.scrollTo(0, 900));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(100);
+  const after = await header.boundingBox();
+  expect(Math.round(after.y), 'the header scrolled away').toBe(0);
+  // And it is opaque, or the page reads straight through it.
+  await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+
+  // The phone's nav: four equal buttons, edge to edge.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const nav = await page.evaluate(() => {
+    const links = [...document.querySelectorAll('.site-nav a')];
+    const boxes = links.map((a) => a.getBoundingClientRect());
+    const current = links.find((a) => a.getAttribute('aria-current') === 'page');
+    return {
+      widths: boxes.map((b) => Math.round(b.width)),
+      left: Math.round(Math.min(...boxes.map((b) => b.left))),
+      right: Math.round(Math.max(...boxes.map((b) => b.right))),
+      viewport: document.documentElement.clientWidth,
+      height: Math.round(boxes[0].height),
+      weight: current ? getComputedStyle(current).fontWeight : null,
+      field: current ? getComputedStyle(current).backgroundColor : null,
+    };
+  });
+  expect(new Set(nav.widths).size, `widths ${nav.widths.join(', ')}`).toBe(1);
+  expect(nav.left, 'the row starts at the screen edge').toBe(0);
+  expect(nav.right, 'and ends at it').toBe(nav.viewport);
+  // Shorter than the buttons a comfortable padding would give, and shorter
+  // than the 28 px the four-pages test allows at 320.
+  expect(nav.height, `the buttons are ${nav.height} px`).toBeLessThan(28);
+  // The whole button carries the current page, in weight and in a field —
+  // never in colour alone, and `aria-current` says it besides.
+  expect(Number(nav.weight)).toBeGreaterThanOrEqual(700);
+  expect(nav.field).not.toBe('rgba(0, 0, 0, 0)');
+});
+
+test('two months of the same height do not move the page between them', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "Sometimes, when scrolling across months of
+   * equal height (i.e. only 5 rows of days) The content below still slides up
+   * and down … Remove this slide up and down bug."
+   *
+   * `moveMonth` read the height it was leaving *before* releasing whatever a
+   * grow still in flight had pinned, so the number came back interpolated and
+   * two five-row months — identical to the pixel at rest — animated between
+   * them. It only showed when the reader stepped inside the 420 ms a grow
+   * takes, which is what "sometimes" was.
+   *
+   * Reproduced at 250 ms: Aug→Jul→Jun→May animated at every step, each one
+   * pinning the same 119.969px, where at 700 ms only Aug→Jul (six rows to
+   * five) did. So the test steps *fast* — a slow walk passed before the fix.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  await page.waitForTimeout(600);
+
+  const runs = await page.evaluate(async () => {
+    const body = document.querySelector('.month-body');
+    const seen = [];
+    let growing = false;
+    const obs = new MutationObserver(() => {
+      if (body.classList.contains('is-growing')) growing = true;
+    });
+    obs.observe(body, { attributes: true, attributeFilter: ['class', 'style'] });
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+    const out = [];
+    for (let i = 0; i < 3; i += 1) {
+      growing = false;
+      document.querySelector('.month-row .peek-prev').click();
+      await sleep(250);
+      out.push({ month: document.querySelector('.month-name').textContent.trim(), grew: growing });
+    }
+    obs.disconnect();
+    return out;
+  });
+
+  // Aug (six rows) to Jul (five) is a real change and still animates.
+  expect(runs[0].grew, `${runs[0].month} should still animate`).toBe(true);
+  // Jul to Jun and Jun to May are five rows to five rows, at speed.
+  expect(runs[1].grew, `${runs[1].month} moved the page`).toBe(false);
+  expect(runs[2].grew, `${runs[2].month} moved the page`).toBe(false);
 });

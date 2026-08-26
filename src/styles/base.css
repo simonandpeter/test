@@ -259,10 +259,30 @@ header.chrome {
   row-gap: var(--space-2);
   /* 16/12 again: it was trimmed to 8/8 while today's date stood in the corner
      (2026-08-21 to 2026-08-22) and the corner is one line once more. */
-  padding-top: var(--space-4);
+  /* space-2 at the top, not space-4 (author, 2026-08-26 evening: "make the
+     header slightly shorter in height by cropping more from the top
+     margin"). The foot keeps space-3: the rule under the bar is what the
+     page below sits against, and taking the air from *under* the chrome
+     would crowd it instead of the browser's own edge. */
+  padding-top: var(--space-2);
   padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--rule);
+  /*
+   * **Sticky** (author, same evening). The bar carries the four pages, the
+   * calendar and the language, and on a long Index or a long life all six go
+   * off the top of the screen with everything else.
+   *
+   * `--gesso` behind it rather than nothing: a sticky bar over scrolling text
+   * with a transparent ground is unreadable the moment a line passes under
+   * it. The z-index puts it over the page and *under* the chooser panels,
+   * which sit in the flow beneath it and open downward.
+   */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--gesso);
 }
+
 
 /* Wide, five tracks rather than four (author, 2026-08-25 evening: switching
    to Russian "the buttons for Daily, All Saints, Map and About pages go into
@@ -497,12 +517,81 @@ nav.site-nav a:hover {
   color: var(--ink);
 }
 
+/* The Daily button's word crosses over rather than cutting (author,
+   2026-08-26 evening: "the text 'Daily' on the Daily button fades and is
+   replaced by 'Today'"). A transient, landing at full strength either way —
+   `main.js` swaps the word at the fade's floor and reduced motion skips the
+   whole thing rather than hurrying it. */
+.nav-label {
+  transition: opacity 140ms ease-out;
+}
+
+.nav-label.is-fading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-label {
+    transition: none;
+  }
+}
+
 /* The current page is a red letter — rubric marks the reader's place
    (DESIGN.md §2) — and is underlined so colour never carries it alone. */
 nav.site-nav a[aria-current='page'] {
   color: var(--rubric);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/*
+ * On a phone the four pages are a row of equal buttons across the whole
+ * screen (author, 2026-08-26 evening: "make the 'Daily', 'All Saints', 'Map'
+ * and 'About' buttons equal width and stretch across the whole width of the
+ * screen. Make these buttons slightly shorter in height and make the whole
+ * button go bold when selected").
+ *
+ * `1fr` each rather than a flex row, so the four are equal whatever their
+ * words are — «Все святые» is three times the width of «Карта» and a flex row
+ * sizes each to its own text. The grid breaks out of the header's own inline
+ * padding with a negative margin so the row reaches the screen's edges, which
+ * is what "across the whole width" asks for and what a flex row inside the
+ * padding cannot do.
+ *
+ * **Bold is the whole button, and the underline goes with it.** The current
+ * page was rubric plus an underline on the words; at this size the button
+ * *is* the target, so the weight and a tinted field carry it and the rule
+ * above the row separates the four. Colour still never carries it alone —
+ * `aria-current` says it, and so does the weight.
+ */
+@media (max-width: 559.98px) {
+  nav.site-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    border-top: 1px solid var(--rule);
+  }
+
+  nav.site-nav a {
+    text-align: center;
+    /* Shorter than the comfortable row above it (author, same instruction):
+       the label's own line plus 3 px either side, which is 25.6 px against
+       the 28 the four-pages test allows at 320 px. 5 px read as a button and
+       measured 29.6 — taller than the bare links it replaced, which is the
+       opposite of what was asked. */
+    padding: 3px var(--space-1);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  nav.site-nav a[aria-current='page'] {
+    font-weight: 700;
+    background: var(--field);
+    text-decoration: none;
+  }
 }
 
 /* A sun or a moon, stroked in currentColor: what a press does, not what is
@@ -516,7 +605,10 @@ nav.site-nav a[aria-current='page'] {
 }
 
 main.chrome {
-  padding-top: var(--space-8);
+  /* space-6, not space-8 (author, 2026-08-26 evening: "move the text 'All
+     Saints' a bit higher up the page"). The Daily page has its own smaller
+     value below and is untouched. */
+  padding-top: var(--space-6);
   padding-bottom: var(--space-16);
 }
 

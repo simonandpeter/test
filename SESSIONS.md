@@ -3787,6 +3787,152 @@ because the browser suite is light-mode only, which is still true and still a
 gap.
 
 
+## Amendment 49 — one count, a sticky bar, a phone's own nav, and the slide that only showed at speed (2026-08-26, ninth sitting)
+
+Ten instructions in one message. Four are the Index's chrome, three are the
+header, two are the Daily page, and one was a bug the author could describe
+better than the code could.
+
+### The count said itself twice
+
+*"Just print 1 line, 'Of 742, 127 saints are in Romanian calendar'"*, with the
+lead-in "in grey or whatever is halfway between background colour and font
+colour".
+
+The page carried a tweened `127 saints` over `127/742 saints venerated in the
+Romanian calendar` — the same number twice whenever nothing was filtering,
+which is the state the Index opens in. The church line is now the page's only
+count there, and the tweened one speaks when it has something that line does
+not: a filter narrowing the church's own set, or no church setting anything
+aside at all, in which case it is the only count on the page.
+
+**The lead-in's colour is the third time this file has been asked for a hue
+that cannot carry words.** The literal midpoint of gesso and ink is `#83807b`
+at **3.09:1**, under AA's 4.5. `--ink-soft` is this palette's own halfway and
+clears it at 5.82:1 — so the step between the two halves is bought by lifting
+the *rest* to full ink rather than by sinking the lead-in below the floor. The
+peek fade (2.1:1) and the cycle line's opacity (4.17:1) were the first two.
+
+Two words were added: "the" before the church's name, because "in Romanian
+calendar" is not English on a site that writes as carefully as this one; and
+`keptOf` as a key of its own, so each pack orders its own two halves. The four
+that are not English already put the church in parentheses, these names being
+adjectives that do not decline into the sentence.
+
+### The die grows, and gold lands on a control for the first time
+
+*"Make the dice button height match the height of the other filters in its row
+and make the icon gold to draw attention."*
+
+The height is taken from the row rather than written down again —
+`align-self: stretch` against a `flex-start` row — so the die and the chips
+move together when a chip's padding next changes. It was 24 px against their
+30.3; the 3 px it gives back cost the eight-chip row nothing it had (573.4 px
+of the 580 px cold-load column in Arial's metrics).
+
+**The gold is a reversal and is recorded as one.** DESIGN.md §2 has spent gold
+on a *finding* about veneration and never on chrome: the rail's feast dot, the
+feast chip, the hairline under the date. This is the first control to wear it,
+and the cost is written down rather than passed off — `--gold` on gesso is
+**2.78:1**, under the 3:1 WCAG asks of a meaningful non-text graphic. axe does
+not check icon contrast, so nothing goes red, which is exactly why the number
+is in the CSS and in the test. *the veneration glyph is drawn nowhere* becomes
+*gold is spent only where it was asked for*: the die is allowed **by name**, a
+second gold anywhere still fails, and the test also asserts the die really is
+gold — an exception nobody exercises would let it quietly lose the hue.
+
+### The bar stays, and the phone gets a row of its own
+
+Sticky, eight pixels shorter off the top margin, and on a phone the four pages
+become equal buttons edge to edge, shorter, the current one bold in a field.
+
+`1fr` each rather than a flex row, because the Russian for All Saints is three
+times the width of the Russian for Map and a flex row sizes each to its own
+words; the grid breaks the header's inline padding with a negative margin to
+reach the screen. The current page keeps `aria-current` and gains weight and a
+field, and **loses its underline** — which took a second pass: the phone's
+rule sat *before* the base `[aria-current]` rule at equal specificity, so
+source order handed the underline straight back. Rendering it is what showed
+that; the computed style says `none` now.
+
+Shorter also took a second pass in the other direction. 5 px of padding made
+the buttons **taller** than the bare links they replaced — 29.6 px against
+19.6 — which is the opposite of what was asked, and *the four pages hold one
+line in every pack, at every width* caught it at 28. 3 px reads as a button
+and measures 25.6.
+
+### The slide that only showed at speed
+
+*"Sometimes, when scrolling across months of equal height (i.e. only 5 rows of
+days) the content below still slides up and down … e.g. between Jul and Jun,
+when approaching from Aug."*
+
+`moveMonth` read the height it was leaving **before** releasing whatever a grow
+still in flight had pinned, so `before` came back an *interpolated* value and
+two five-row months — identical to the pixel at rest — animated between them.
+The author's "sometimes" is the 420 ms a grow takes: measured by stepping the
+peek at four speeds,
+
+    700 ms   Aug -> Jul ANIM   Jul -> Jun  -      Jun -> May  -
+    450 ms   Aug -> Jul ANIM   Jul -> Jun  -      Jun -> May  -
+    250 ms   Aug -> Jul ANIM   Jul -> Jun ANIM    Jun -> May ANIM
+
+and each of those spurious runs pinned the same 119.969px, which is what a
+five-row month *is*. The release moves above the measurement, so the month
+leaving is measured at its own settled height and equal months compare equal.
+This is Amendment 9's rule — land what is in flight before the next move
+starts — met for the sixth time, and the third time in two sittings. Its usual
+price is paid here too: a step taken mid-grow snaps the last pixels rather
+than easing them.
+
+**The test steps at 250 ms on purpose.** A slow walk passed before the fix.
+
+### The Daily button offers Today, and in four languages it already did
+
+*"When today's date is scrolled away from on the Daily page, the text 'Daily'
+… fades and is replaced by 'Today' … But it only says 'Today' while on the
+Daily page."*
+
+The Daily view dispatches `gos:day` on every change of day — `select` is the
+one funnel, and it is where the URL is written already — and main.js owns the
+word. The label is its own span so the anchor, its href and its `aria-current`
+are never rebuilt under a reader's cursor.
+
+**And in the four packs that are not English, nothing visibly changes**: the
+Russian, Romanian, Greek and Serbian words for Daily in this chrome are all
+already the word for Today. The control still does what the word says — press
+it and it goes back — so what is lost is the change of state, not the
+affordance. Giving those packs a distinct base label is the fix and it is
+**the author's**, because it changes a nav label they have reviewed a dozen
+times and because those words are longer, which is the whole budget of the
+320 px chrome line.
+
+### Two smaller ones
+
+*"Move the bubble over the current date slightly higher"* — only the top moves,
+from 1 px to -2 px. The bottom stays at 0 because that is what lands it on the
+selected day's underline, which was the morning's own fix.
+
+*"Under Gender filter change from 'Sex unrecorded' to 'Unrecorded'"* — the
+facet's summary was carrying that word already. And the Index's heading comes
+up: `main.chrome` from space-8 to space-6, the h1's own foot to space-2.
+
+### Verification
+
+**166 unit, 422 browser** (412 at the top of the sitting; five new tests across
+two projects). All four packs **299 of 299** with no English fallbacks.
+
+**Five backouts run and watched to fail**, each restored and the touched files
+checksummed: the month's release order, the nav label's swap, the merged count,
+the sticky header, and the die's stretch. Six existing tests were heirs — three
+count-line assertions, the gold sweep, the nav-label claim, and the phone's
+button height.
+
+One caught by the unit suite rather than by me: the Russian and Serbian
+`keptOf` shipped an em dash, which this repo forbids in anything it prints and
+has a test for. Colons instead.
+
+
 Working plan for delivering `saintsbuildplan.md`. The brief's phase gates are
 binding: no session starts until the previous one's acceptance criteria pass.
 

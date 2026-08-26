@@ -702,6 +702,28 @@ refuses to compute an allowance, and this default is not a computation of one
 — it is what the site says when it has been told a day is a fast and nothing
 more.
 
+**Gold is spent on one control, and it is the only one** (author, 2026-08-26
+evening: "make the icon gold to draw attention"). §2 gives gold to a finding
+about veneration and to nothing else, and the Index's Random die is the first
+piece of chrome to wear it. The cost is stated rather than absorbed: --gold on
+gesso is 2.78:1, under the 3:1 asked of a meaningful non-text graphic, and axe
+does not check icon contrast — so the browser test allows the die **by name**
+and fails a second gold anywhere. The rule is not loosened; one exception is
+written into it.
+
+**The header is sticky, and on a phone the four pages are a row of their own**
+(same evening): equal widths edge to edge, shorter than the links they
+replaced, the current one carried by weight and a field rather than by the
+underline the wide layout uses. Colour never carries it alone there either —
+`aria-current` says it, and so does the weight.
+
+**The Daily button reads Today when the reader has left today**, and only on
+the Daily page (same evening). It is an offer of what that page can give, so
+it is withdrawn on every other. In the four packs whose word for Daily is
+already their word for Today the label does not change; the control is
+unaffected and the fix, if the author wants one, is a distinct base label in
+those packs.
+
 **Every control on the Index is a chip** (author, 2026-08-26 evening, five
 instructions). Sort and View print their *answer* where a filter chip prints
 its question — "Random order", "Cards" — with the control's own word carried

@@ -14,6 +14,7 @@ export const ro = {
 
   nav: {
     calendar: 'Astăzi',
+    today: 'Astăzi',
     saints: 'Toți sfinții',
     map: 'Hartă',
     about: 'Despre',
@@ -272,7 +273,8 @@ export const ro = {
     noneMatch: 'Niciun sfânt din corpus nu se potrivește tuturor acestor filtre. E un fapt despre corpus, nu despre calendar - lărgește un filtru sau șterge-le și privește în jur.',
     undatedTray: '{count} fără dată, puși deoparte',
     undatedNote: 'Un interval de ani nu poate nici include, nici exclude un sfânt fără nicio margine datată, așa că aceștia sunt puși deoparte, nu aruncați. Tuturor celorlalte alegeri le corespund.',
-    kept: '{shown}/{total} sfinți venerați în calendarul ales ({church}).',
+    keptOf: 'Din {total},',
+    kept: '{shown} sfinți sunt în calendarul ales ({church}).',
     keptAll: '{total} de sfinți - întregul corpus.',
     keptTitle: 'Calendarul se schimbă din antet.',
     filters: {
@@ -357,7 +359,7 @@ export const ro = {
       disputed: 'Disputat - sursele se contrazic sau cercetarea se împarte.',
       legendary: 'Legendar - relatarea e o legendă; persoana poate să nu fi existat.',
     },
-    sexLabel: { male: 'Bărbat', female: 'Femeie', unknown: 'Sex neînregistrat' },
+    sexLabel: { male: 'Bărbat', female: 'Femeie', unknown: 'Neînregistrat' },
     factsLabel: 'Date și locuri',
     kinds: {
       birth: 'Nașterea',

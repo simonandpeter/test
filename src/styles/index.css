@@ -68,6 +68,17 @@ select:hover {
   border-color: var(--ink-soft);
 }
 
+/* The heading comes up and the controls close up under it (author,
+   2026-08-26 evening: "move the text 'All Saints' a bit higher up the page
+   and condense the filters vertically a bit more"). Amendment 13 spent a
+   whole pass on this same measure and the block has gained two rows of
+   chrome since; these are the margins, not the controls' own heights, so
+   nothing gets harder to hit. */
+.index-controls h1,
+.chrome h1 {
+  margin-bottom: var(--space-2);
+}
+
 .facets {
   display: flex;
   flex-wrap: wrap;
@@ -270,17 +281,37 @@ select:hover {
   align-items: center;
   justify-content: center;
   padding: 3px;
-  width: 24px;
-  height: 24px;
-  color: var(--ink-soft);
-  border: 1px solid var(--rule);
+  /* The chips' own height, not three pixels under it (author, 2026-08-26
+     evening: "make the dice button height match the height of the other
+     filters in its row"). 24 px was bought to fit the row and the row can
+     afford the 3 px back — measured after, the eight need 573.4 px of the
+     580 px cold-load column in Arial's metrics. */
+  width: 27px;
+  /* The chips' height, taken from the row rather than repeated as a number
+     here: `.facets` is `align-items: flex-start`, so the die has to ask for
+     the stretch itself, and asking is what keeps the two in step when a chip's
+     padding or leading next changes. */
+  align-self: stretch;
+  /* **Gold, at the author's instruction** ("make the icon gold to draw
+     attention"), and it is worth saying what it costs rather than passing it
+     off. DESIGN.md §2 spends gold on a *finding* about veneration and never
+     on chrome, so this is the first control on the site to wear it. And
+     --gold on gesso is **2.78:1**, under the 3:1 WCAG asks of a meaningful
+     non-text graphic — axe does not check icon contrast, so nothing goes red,
+     which is exactly why the number is written down here. The die is not the
+     only way to a random saint (Random order is a sort), and its accessible
+     name carries the whole of it, so what a reader who cannot pick the hue
+     out loses is the *attention* it was asked to draw, not the control. */
+  color: var(--gold);
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--rule));
   border-radius: 999px;
   flex: none;
 }
 
 .random-die:hover {
-  color: var(--ink);
-  border-color: var(--ink-soft);
+  color: var(--gold);
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
 }
 
 /* Detailed (author, 2026-08-22): a tick box beside the layout control, and a
@@ -304,11 +335,24 @@ select:hover {
 }
 
 /* What the reader's traditions set aside, counted under the count (author,
-   2026-08-22): an honest gap, named, never a silent drop. */
+   2026-08-22): an honest gap, named, never a silent drop. Since 2026-08-26
+   evening it is the page's only count line whenever nothing is filtering,
+   which is why it sits in the page's own ink rather than the secondary. */
 .set-aside {
-  color: var(--ink-soft);
+  color: var(--ink);
   margin: calc(-1 * var(--space-1)) 0 var(--space-2);
   max-width: 60ch;
+}
+
+/* The corpus's own size, a step back from the count that matters (author,
+   2026-08-26 evening: "make the 'Of 742, ' print in grey or whatever is
+   halfway between background colour and font colour"). The literal midpoint
+   of gesso and ink is #83807b at **3.09:1** and cannot carry text; ink-soft
+   is this palette's halfway and clears AA at 5.82:1 — so the step between the
+   two halves is bought by lifting the rest to full ink rather than by sinking
+   the lead-in under the floor. */
+.set-aside .count-of {
+  color: var(--ink-soft);
 }
 
 /* ---- the virtualised grid ---------------------------------------------- */

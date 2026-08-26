@@ -42,15 +42,62 @@ let first = true;
 // Saints, which was already the fallback.
 let lastRoute = null;
 
+/*
+ * The Daily button reads **Today** while the reader is on the Daily page and
+ * looking at a day that is not today (author, 2026-08-26 evening) — press it
+ * and `/` takes them back. Off that page it is Daily again, so the word only
+ * ever offers what the page it is on can give.
+ *
+ * The label is its own span because the word changes under a link whose href,
+ * `aria-current` and place in the row do not; swapping the anchor's whole
+ * text would rebuild the element the reader may be hovering or tabbed to.
+ */
+let dailyIsToday = true;
+
+function paintDailyLabel(fade = true) {
+  const label = navEl.querySelector('[data-nav-label]');
+  if (!label) return;
+  const onDaily = navEl.querySelector('a[aria-current="page"][data-nav-daily]') !== null;
+  const word = onDaily && !dailyIsToday ? STRINGS.nav.today : STRINGS.nav.calendar;
+  if (label.textContent === word) return;
+  // Removed, not shortened (DESIGN.md §6): reduced motion gets the word, not
+  // a faster fade to it.
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!fade || reduced) {
+    label.textContent = word;
+    return;
+  }
+  label.classList.add('is-fading');
+  setTimeout(() => {
+    label.textContent = word;
+    label.classList.remove('is-fading');
+  }, 140);
+}
+
 function renderNav(current) {
   navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
     .map((key) => {
       const to = key === 'calendar' ? '/' : `/${key}`;
       const cur = key === current ? ' aria-current="page"' : '';
-      return `<a href="${router.href(to)}"${cur}>${STRINGS.nav[key]}</a>`;
+      const mark = key === 'calendar' ? ' data-nav-daily' : '';
+      const text =
+        key === 'calendar'
+          ? `<span class="nav-label" data-nav-label>${STRINGS.nav.calendar}</span>`
+          : STRINGS.nav[key];
+      return `<a href="${router.href(to)}"${cur}${mark}>${text}</a>`;
     })
     .join('');
+  // Leaving the Daily page puts the word back without a fade: the button the
+  // reader pressed has already gone somewhere, and a word changing after the
+  // page has is a second event where there was one.
+  paintDailyLabel(current === 'calendar');
 }
+
+// The Daily view says which day it is showing; the button answers.
+document.addEventListener('gos:day', (e) => {
+  dailyIsToday = e.detail.today;
+  paintDailyLabel();
+});
 
 function show({ route, params, path }, nav = {}) {
   const view = route?.view;

@@ -119,6 +119,9 @@ const countFor = (iso, data) => entriesFor(iso, data).length;
 export function render(el, { data, params, router }) {
   destroy();
   const selected = params.date && parseIso(params.date) ? params.date : todayIso();
+  // A deep link into a day that is not today arrives already scrolled away
+  // from it, so the button has to be told on the way in as well as on a step.
+  queueMicrotask(() => announceDay(selected));
   state = {
     el, data, router, selected,
     calendar: currentChurch(),
@@ -245,12 +248,25 @@ function wireDay(panel) {
 
 const step = (n) => select(addDaysIso(state.selected, n));
 
+/**
+ * The Daily page says which day it is on, so the header's own Daily button can
+ * become Today while the reader is looking at another day (author,
+ * 2026-08-26 evening). An event rather than an import: main.js owns the nav
+ * and this view owns the day, and neither should have to hold the other.
+ *
+ * Every change of day goes through `select`, which is also where the URL is
+ * written — so this is the one place that needs to say so.
+ */
+const announceDay = (iso) =>
+  document.dispatchEvent(new CustomEvent('gos:day', { detail: { iso, today: iso === todayIso() } }));
+
 function select(iso) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;
   state.selected = iso;
   state.monthCursor = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
+  announceDay(iso);
   paintChrome();
   // The rail does not travel — it is scrolled, and only as far as it has to be
   // (author, 2026-08-24). A day picked inside the days already showing moves
@@ -1518,16 +1534,33 @@ function paintMonthInto(row, cursor, { live }) {
 function moveMonth(n, { travelled = false } = {}) {
   if (!state.monthCursor) return;
   const body = state.el.querySelector('.month-body');
-  const before = measure(body);
-  state.monthCursor = stepCursor(state.monthCursor, n);
-  paintMonth();
-
-  // Whatever a grow still in flight had pinned, so the new month is measured at
-  // its own height rather than at the height it was on its way to.
+  /*
+   * **Land whatever is still growing before measuring what is leaving**
+   * (author, 2026-08-26 evening: "Sometimes, when scrolling across months of
+   * equal height … the content below still slides up and down … Remove this
+   * slide up and down bug").
+   *
+   * `before` was read here while a previous grow still had a pixel height
+   * pinned and its transition still running, so it came back an *interpolated*
+   * value — and two five-row months, whose settled heights are identical to
+   * the pixel, would then animate from that stale number to the real one and
+   * shunt the page below. Reproduced by stepping at 250 ms: Aug→Jul→Jun→May
+   * animated at every step, each one pinning the same 119.969px, where at
+   * 700 ms only the Aug→Jul step (six rows to five) did.
+   *
+   * So the release moves above the measurement: the month leaving is measured
+   * at its own settled height, and equal months compare equal and do not move.
+   * The cost is that a step taken mid-grow snaps the last few pixels instead
+   * of easing them, which is Amendment 9's rule — land what is in flight
+   * before the next move starts — paying its usual small price.
+   */
   clearTimeout(state.sizeTimer);
   state.sizeTimer = null;
   body.classList.remove('is-growing');
   body.style.height = '';
+  const before = measure(body);
+  state.monthCursor = stepCursor(state.monthCursor, n);
+  paintMonth();
   const after = measure(body);
   if (!travelled) state.monthGrain.travel(n > 0 ? 1 : -1);
   if (after !== before) growMonthBody(body, before, after);

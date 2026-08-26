@@ -24,6 +24,21 @@ export const STRINGS = {
 
   nav: {
     calendar: 'Daily',
+    /*
+     * What the Daily button reads while the reader is on the Daily page
+     * looking at a day that is not today (author, 2026-08-26 evening) — press
+     * it and it takes them back. Off that page it is Daily again.
+     *
+     * **In the four packs that are not English this is the word they already
+     * use for Daily** — «Сегодня», Astăzi, Σήμερα, Данас all mean Today — so
+     * the label does not visibly change there. The control still does what
+     * the word says; what is lost is only the change of state. Giving those
+     * packs a distinct base label («Ежедневно», Zilnic, Καθημερινά, Дневно)
+     * is the fix and it is the author's, because it changes a nav label they
+     * have reviewed a dozen times and because those words are longer, which
+     * is the 320 px chrome line's whole budget.
+     */
+    today: 'Today',
     saints: 'All Saints',
     map: 'Map',
     about: 'About',
@@ -479,7 +494,28 @@ export const STRINGS = {
     // pair of counts made the reader subtract to learn how much of the
     // corpus this calendar keeps. The header's role moved into a title
     // attribute rather than being said on the page every time.
-    kept: '{shown}/{total} saints venerated in the {church} calendar.',
+    /*
+     * One line where there were two (author, 2026-08-26 evening: "Just print
+     * 1 line, 'Of 742, 127 saints are in Romanian calendar'"). The page said
+     * "127 saints" over "127/742 saints venerated in the Romanian calendar",
+     * which is the same number twice whenever no filter is narrowing.
+     *
+     * Split in two so the lead-in can be set in the secondary ink and the
+     * rest in the page's own: the author asked for it "in grey or whatever is
+     * halfway between background colour and font colour", and the literal
+     * midpoint of gesso and ink is #83807b at **3.09:1**, under AA's 4.5 for
+     * text. `--ink-soft` is this palette's own answer to that question and
+     * clears it at 5.82:1, so the contrast between the two halves is bought
+     * by lifting the *rest* to full ink rather than by sinking the lead-in
+     * below the floor. DESIGN.md §2, and the third time this file has been
+     * asked for a colour that cannot carry words.
+     *
+     * Each pack orders its own two halves; the four that are not English
+     * already put the church's name in parentheses, because these names are
+     * adjectives («Русская») and do not decline into the sentence.
+     */
+    keptOf: 'Of {total},',
+    kept: '{shown} saints are in the {church} calendar.',
     keptAll: '{total} saints, the whole corpus.',
     keptTitle: 'The calendar control in the header changes which church’s calendar this is.',
     filters: {
@@ -597,7 +633,9 @@ export const STRINGS = {
       disputed: 'Disputed - the sources conflict, or scholarship divides.',
       legendary: 'Legendary - the account is a legend; the person may not have existed.',
     },
-    sexLabel: { male: 'Male', female: 'Female', unknown: 'Sex unrecorded' },
+    // 'Sex unrecorded' until 2026-08-26 evening: the facet above it says
+    // Gender, so the word was carrying its own heading a second time.
+    sexLabel: { male: 'Male', female: 'Female', unknown: 'Unrecorded' },
     // One register of what is known about when and where, keyed by the kind
     // a date and a location share. The date bar that used to stand here was
     // withdrawn by the author on 2026-08-21.
