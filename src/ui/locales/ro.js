@@ -46,7 +46,8 @@ export const ro = {
     commemorationsFor: 'Pomeniri pentru {date}',
     alsoToday: 'Se mai pomenesc',
     emptyDay: 'Pentru această zi nu sunt încă pomeniri înregistrate. Corpusul crește dosar cu dosar, iar o zi goală e o lipsă în sursele noastre, nu o afirmație despre calendar. Încearcă o zi vecină sau sfinții înșiși.',
-    dayWithoutSaints: 'Citirile și cântările de mai jos sunt ale acestei zile, luate din calendar. Sfinții ei nu au încă dosare - corpusul ajunge deocamdată la 19 septembrie și crește dosar cu dosar. Nimic de aici nu spune că ziua ar fi goală.',
+    beyondRecords: 'Citirile și cântările sunt consemnate până la {until}, iar ziua aceasta este după. Ce stă mai sus - postul, glasul și săptămâna - se calculează și este valabil pentru orice dată.',
+    dayWithoutSaints: 'Citirile și cântările de mai jos sunt ale acestei zile, luate din calendar. Sfinții ei nu au încă dosare - corpusul ajunge deocamdată la {reach} și crește dosar cu dosar. Nimic de aici nu spune că ziua ar fi goală.',
     heroIn: 'Calendarul: {church}',
     densityLabel: '{count} pomeniri',
     marks: {
@@ -77,6 +78,7 @@ export const ro = {
       },
       free: 'Nu se lasă nimic deoparte.',
       sourceNote: 'Așa cum a tipărit {source}.',
+      sourceDay: 'Însemnarea zilei este luată din {source}.',
       close: 'Închide',
     },
     cycle: {
@@ -166,12 +168,16 @@ export const ro = {
       source: 'Text din {source}',
     },
     silence: {
-      otherChurchOne:
-        'Nimic în calendarul ales ({church}) astăzi. O pomenire cade azi în ' +
-        'calendarul altei biserici - schimbă calendarul din antet ca să o vezi.',
-      otherChurchMany:
-        'Nimic în calendarul ales ({church}) astăzi. {count} pomeniri cad azi în ' +
-        'calendarele altor biserici - schimbă calendarul din antet ca să le vezi.',
+      none: 'Nimic în calendarul ales ({church}) astăzi.',
+      feast: 'Astăzi este {feast} în calendarul ales ({church}).',
+      feastRecords: 'Citirile și cântările de mai jos sunt ale praznicului.',
+      feastNoSaints: 'Niciun sfânt al zilei nu are încă dosar aici.',
+      elsewhereOne:
+        'O pomenire cade azi în calendarul altei biserici - schimbă calendarul ' +
+        'din antet ca să o vezi.',
+      elsewhereMany:
+        '{count} pomeniri cad azi în calendarele altor biserici - schimbă ' +
+        'calendarul din antet ca să le vezi.',
     },
   },
 

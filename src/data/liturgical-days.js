@@ -3442,6 +3442,17 @@ export const LITURGICAL_DAYS = {
 /** What one church's calendar recorded for a day, or null. */
 export const recordedDay = (iso, churchId) => LITURGICAL_DAYS[iso]?.[churchId] ?? null;
 
+/**
+ * The last civil date any of the four calendars has been read for.
+ *
+ * Derived, never written down: a literal date in a printed sentence is a
+ * sentence that goes stale, and one already had — the Daily page told readers
+ * "the corpus reaches 19 September" for a fortnight after it stopped being
+ * true. The Daily page uses this to say, once and in prose, that a day past
+ * the end of the records has no readings rather than none printed.
+ */
+export const RECORDS_REACH = Object.keys(LITURGICAL_DAYS).sort().at(-1) ?? null;
+
 /** A Bible Gateway link for a reference, in the NKJV for now (author, 2026-08-22). */
 export const bibleGatewayUrl = (ref) =>
   `https://www.biblegateway.com/passage/?search=${encodeURIComponent(ref)}&version=NKJV`;

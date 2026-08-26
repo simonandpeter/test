@@ -32,6 +32,7 @@
 
 import { hasChosen } from '../lib/church.js';
 import { hasChosenLanguage } from '../lib/i18n.js';
+import { readSettings, writeSetting } from '../lib/settings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { STRINGS } from './strings.js';
 
@@ -60,20 +61,46 @@ const CLOSE =
   '<path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/></svg>';
 
 /**
+ * Which marks this browser has already been shown. **Shown, not answered**
+ * (found in review, 2026-08-27): the gate was `hasChosen()` alone, so a reader
+ * who is content with the guessed calendar and with English answers neither
+ * question and was met by both marks on every load, for ever. The two
+ * conditions are different questions and the mark wants the second one.
+ *
+ * Written when the mark is *mounted* rather than when it is dismissed, which
+ * is the literal reading of "has been shown" and the only one that cannot
+ * leak: a reader who closes the tab without touching either mark has still
+ * seen it, and a dismissal-only flag would bring both back the next morning.
+ * The four ways out stay exactly as they were; they are how a reader gets rid
+ * of the mark *now*, not what stops it coming back.
+ */
+const seenMarks = () => {
+  const seen = readSettings().coachSeen;
+  return Array.isArray(seen) ? seen : [];
+};
+
+/**
  * Mounts whichever marks this visit is owed, and returns a teardown. Nothing
- * is mounted for a reader who has answered both questions, which is every
- * visit after the first they answer on.
+ * is mounted for a reader who has answered both questions, or for one who has
+ * been shown both marks once.
  */
 export function mountCoachmarks() {
+  const seen = seenMarks();
   const wanted = [];
   if (!hasChosen()) wanted.push(['church-open', STRINGS.coach.church]);
   if (!hasChosenLanguage()) wanted.push(['lang-open', STRINGS.coach.language]);
 
   const live = [];
+  const shown = [];
   for (const [id, text] of wanted) {
+    if (seen.includes(id)) continue;
     const target = document.getElementById(id);
-    if (target) live.push(build(target, text));
+    if (target) {
+      live.push(build(target, text));
+      shown.push(id);
+    }
   }
+  if (shown.length) writeSetting('coachSeen', [...seen, ...shown]);
   if (!live.length) return () => {};
   // Both at once, because where one goes depends on where the other is.
   layout(live);

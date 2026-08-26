@@ -73,7 +73,15 @@ export const STRINGS = {
     alsoToday: 'Also commemorated',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
-    dayWithoutSaints: 'The readings and hymns below are this day\'s own, read off the calendar. Its saints are not folders yet - the corpus reaches 19 September so far, and grows folder by folder. Nothing here is a claim that the day is bare.',
+    // The reach used to be the literal "19 September" and had been stale for a
+    // fortnight when it was found (2026-08-27). It is read off the corpus now:
+    // a printed sentence that names a date is a sentence that goes stale.
+    dayWithoutSaints: 'The readings and hymns below are this day\'s own, read off the calendar. Its saints are not folders yet - the corpus reaches {reach} so far, and grows folder by folder. Nothing here is a claim that the day is bare.',
+    /* Past the end of the day records (2026-08-27). The computed lines - the
+       fast, the tone, the week - hold for any date, so a day months ahead
+       looked whole while the half that is read off a calendar was simply
+       absent. Said once, in prose, in the register of the three silences. */
+    beyondRecords: 'The readings and hymns are recorded as far as {until}, and this day is past that. What stands above - the fast, the tone and the week - is computed, and holds for any date.',
     heroIn: 'In the {church}',
     densityLabel: '{count} commemorations',
     openSaint: 'Read about {name}',
@@ -164,6 +172,16 @@ export const STRINGS = {
       // about *other* days.
       free: 'Nothing is set aside.',
       sourceNote: 'As printed by {source}.',
+      /*
+       * The same citation, doing a different job (2026-08-27). `sourceNote`
+       * labels a quotation and is right above one. Where the note is *not*
+       * quoted - an ungraded fast day, which has defaulted to Strict Fasting
+       * since the evening of 2026-08-26 - the sentence above the citation is
+       * ours and not the calendar's, and "As printed by saint.gr" was
+       * attributing our reading to them. saint.gr printed «Νηστεία»; the word
+       * Strict is this site's.
+       */
+      sourceDay: 'The day’s record comes from {source}.',
       close: 'Close',
     },
 
@@ -325,13 +343,31 @@ export const STRINGS = {
      * Prose in ink, never a banner. Since 2026-08-24 the calendar is changed
      * in the header, so that is where these two point.
      */
+    /*
+     * The day panel's notices, as a lead and a pointer (redrawn 2026-08-27).
+     *
+     * The two halves used to be one string apiece, which is what let 28 August
+     * 2026 print the Dormition's chip, its readings and its troparion around
+     * the sentence "Nothing in the Russian calendar today" - the day's subject
+     * being a feast, and the page's subject being a saint folder, of which
+     * that day has none. A lead says what the day *is*; the pointer says where
+     * the other churches' commemorations are; and the feast lead is the one
+     * that was missing. Both halves keep their old wording to the word.
+     */
     silence: {
-      otherChurchOne:
-        'Nothing in the {church} calendar today. One commemoration falls today ' +
-        'in another church’s calendar - change calendar in the header to see it.',
-      otherChurchMany:
-        'Nothing in the {church} calendar today. {count} commemorations fall ' +
-        'today in other churches’ calendars - change calendar in the header to see them.',
+      none: 'Nothing in the {church} calendar today.',
+      feast: 'Today is {feast} in the {church} calendar.',
+      // Only where the day's own record is here to say it of. Past 13 January
+      // 2027 there are no readings below, and the sentence would be promising
+      // what the page cannot show.
+      feastRecords: 'The readings and hymns below are the feast’s own.',
+      feastNoSaints: 'No saint of the day is a folder here yet.',
+      elsewhereOne:
+        'One commemoration falls today in another church’s calendar - change ' +
+        'calendar in the header to see it.',
+      elsewhereMany:
+        '{count} commemorations fall today in other churches’ calendars - ' +
+        'change calendar in the header to see them.',
     },
   },
 

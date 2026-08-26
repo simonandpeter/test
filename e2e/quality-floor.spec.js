@@ -2407,26 +2407,23 @@ test('a first visit is shown where the two controls are, and the day is not held
     expect(Math.abs(pointing[i] - (target.x + target.width / 2))).toBeLessThan(2);
   }
 
-  // A mark is not an answer: nothing is stored until the reader chooses, so
-  // the marks are owed again next visit.
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church)).toBeUndefined();
+  // A mark is still not an answer: nothing about the *church* is stored by
+  // being shown one, which is what keeps the guess a guess.
+  // Not `toBeUndefined`: since 2026-08-27 being *shown* a mark writes the
+  // seen list, and `writeSetting` persists the whole settings object, so
+  // `church` is stored as an explicit null. Every reader of it — `hasChosen`
+  // above all — asks whether it is null, so nothing about the guess changes.
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church ?? null)).toBeNull();
   await page.locator('.coachmark-close').first().click();
   await expect(marks).toHaveCount(1);
-  await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.coachmark')).toHaveCount(2);
 
-  // Answering from the header is what stops the asking — and opening either
-  // control takes both marks, because they are one message in two halves.
+  // Opening either control takes both marks, because they are one message in
+  // two halves.
   await openChooser(page);
   await expect(page.locator('.coachmark')).toHaveCount(0);
   await page.locator('#church-panel [data-church="romanian"]').click();
   await expect(page.locator('#church-open')).toHaveText('Romanian');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('romanian');
-
-  await page.reload({ waitUntil: 'networkidle' });
-  // The language is still unanswered, so its mark alone comes back.
-  await expect(page.locator('.coachmark')).toHaveCount(1);
-  await expect(page.locator('.coachmark')).toContainText('Pick your language.');
 });
 
 test('a coachmark goes on the second scroll, and not on the first', async ({ page }) => {
@@ -3314,7 +3311,7 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   await expect(page.locator('#church-open')).toHaveText('Russian');
   // And it is a guess, not an answer: nothing is written until the reader says.
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
-  expect(before.church).toBeUndefined();
+  expect(before.church ?? null).toBeNull();
   await expect(page.locator('.coachmark')).toHaveCount(2);
 
   await openChooser(page);
@@ -3328,7 +3325,9 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   expect(stored.church).toBe('russian');
   expect(stored.traditions).toBeUndefined();
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('.coachmark')).toHaveCount(1);
+  // Both marks were shown on the first load, so neither is owed again — see
+  // "a coachmark is shown once, and a guess is still not an answer" below.
+  await expect(page.locator('.coachmark')).toHaveCount(0);
 });
 
 test('the header control names the calendar, offers the three, and the Index follows every press', async ({ page }) => {
@@ -7664,4 +7663,185 @@ test('a saint is named by rank, and what they held is on the line below', async 
   });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Όσιος');
+});
+
+test('a Great Feast is what the day is, and the page stops saying there is nothing', async ({ page }) => {
+  /*
+   * Found in review, 2026-08-27: 28 August 2026 in the Russian calendar
+   * printed the Dormition's gold chip, the fish it allows on a Friday, the
+   * feast's own readings and the feast's own troparion — and, in the middle of
+   * them, "Nothing in the Russian calendar today."
+   *
+   * The defect was structural rather than a wording slip. The Daily page's
+   * subject is a saint *folder*, so a day whose subject is a feast had no
+   * subject at all and fell through to the silence; 28 August has no folder
+   * for any saint of it, which is a true sentence about the corpus and a false
+   * one about the day. The feast is read in the church's own calendar, exactly
+   * as the chip above reads it, so the Russian keeps the Dormition on the
+   * civil 28 August and the Greek on the 15th, and both are checked here.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  const note = page.locator('.empty-day');
+  await expect(note).toContainText('Today is The Dormition of the Theotokos in the Russian calendar');
+  await expect(note).not.toContainText('Nothing in the Russian calendar today');
+  // What is missing is the folders, and the note now says so in those words.
+  await expect(note).toContainText('No saint of the day is a folder here yet');
+  // The pointer half of the old sentence survives the split intact.
+  await expect(note).toContainText('other churches’ calendars');
+  // And it was standing in the middle of the feast's own record all along.
+  await expect(page.locator('[data-hymns] .hymn')).not.toHaveCount(0);
+  await expect(page.locator('.feast-chip')).toContainText('Dormition');
+
+  /*
+   * Past the end of the day records the readings clause comes off, because
+   * there are none below to be the feast's own — which is the same defect one
+   * horizon further on.
+   */
+  await page.goto('/calendar/2027-04-07', { waitUntil: 'networkidle' });
+  await expect(note).toContainText('Today is The Annunciation in the Russian calendar');
+  await expect(note).not.toContainText('readings and hymns below');
+
+  // The Greek keeps the same feast on the civil 15 August, and reads the same.
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, church: 'greek' }));
+  });
+  await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
+  await expect(note).toContainText('Today is The Dormition of the Theotokos in the Greek calendar');
+
+  // A day that is not a feast and has no folders still reads exactly as it did.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toHaveCount(0);
+});
+
+test('the fast bubble cites a source for the day, and credits it only for what it printed', async ({ page }) => {
+  /*
+   * Found in review, 2026-08-27: the Greek chip for 28 August 2026 reads
+   * Strict Fasting, and under it stood "As printed by saint.gr". saint.gr
+   * printed «Νηστεία» — *a fast*, with no grade — and *Strict* is this site's
+   * default for an ungraded fast day, taken on the evening of 2026-08-26. The
+   * citation was putting our reading in their mouth.
+   *
+   * The two jobs split. Where the calendar's own words are quoted, the
+   * sentence still labels that quotation. Where they are not, it cites the
+   * page as the source of the day's record, which is what it is.
+   */
+  await ready(page, { church: 'greek', language: 'en' });
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.locator('[data-liturgy] .fast').click();
+  await expect(page.locator('.fast-bubble')).toBeVisible();
+  await expect(page.locator('.fast-bubble .fast-source')).toContainText('The day’s record comes from');
+  await expect(page.locator('.fast-bubble .fast-source')).not.toContainText('As printed by');
+  // Nothing is quoted, which is the condition the citation now follows.
+  await expect(page.locator('.fast-bubble .fast-note')).toHaveCount(0);
+
+  /*
+   * And the Russian bubble, which quotes its calendar's actual words, is
+   * unchanged: 25 August 2026 prints «без масла» and "As printed by" is a
+   * label on that quotation.
+   */
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, church: 'russian' }));
+  });
+  await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+  await page.locator('[data-liturgy] .fast').click();
+  await expect(page.locator('.fast-bubble .fast-note')).toContainText('без масла');
+  await expect(page.locator('.fast-bubble .fast-source')).toContainText('As printed by');
+});
+
+test('a saint with no image is not given a licence for one', async ({ page }) => {
+  /*
+   * Found in review, 2026-08-27. The credit line is filled from
+   * `images[0].credit`, and 614 of the 742 saints have no image at all:
+   * `creditLine(undefined)` returns the "not yet recorded" sentence, which is
+   * the right answer for a picture whose provenance is a gap and the wrong one
+   * for a page with no picture. Every imageless page ended in a disclaimer
+   * about something that was never there.
+   */
+  await ready(page);
+  await page.goto('/saints/gorazd-of-bohemia', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-life] p').first()).toBeVisible();
+  await expect(page.locator('.saint-media, .saint-media-col')).toHaveCount(0);
+  await expect(page.locator('[data-credit]')).toBeHidden();
+
+  // A saint who *has* one still carries its licence, which is the half that
+  // must not be lost: Anthony the Great is one of the seven.
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-credit]')).toBeVisible();
+  await expect(page.locator('[data-credit]')).not.toHaveText('');
+});
+
+test('the day records say where they stop, and the corpus says how far it reaches', async ({ page }) => {
+  /*
+   * Found in review, 2026-08-27: past 13 January 2027 the readings and the
+   * hymns simply stopped. The computed lines — the fast, the tone, the week —
+   * hold for any date, so a day in March 2027 printed all three and looked
+   * whole, with the half that is read off a calendar silently absent.
+   *
+   * The second half of this is the sentence that had already gone stale. The
+   * note for a day whose calendar is recorded but whose saints are not folders
+   * yet said "the corpus reaches 19 September", as a literal, and had been
+   * wrong for a fortnight. It is read off the index now.
+   */
+  await ready(page, { church: 'russian', language: 'en' });
+
+  await page.goto('/calendar/2027-03-10', { waitUntil: 'networkidle' });
+  const beyond = page.locator('.beyond-records');
+  await expect(beyond).toContainText('recorded as far as 13 January 2027');
+  await expect(beyond).toContainText('computed');
+
+  // Inside the records nothing of the sort is said, because there the
+  // readings are simply there.
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.beyond-records')).toHaveCount(0);
+  await expect(page.locator('[data-readings] a').first()).toBeVisible();
+
+  // And the reach is a date read off the corpus, not a literal: the Russian
+  // calendar's folders run to 20 September 2026 (7 September, Julian).
+  await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 20 September 2026');
+  await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
+});
+
+test('a coachmark is shown once, and a guess is still not an answer', async ({ page }) => {
+  /*
+   * Found in review, 2026-08-27: both marks came back on every load, for ever.
+   * They were gated on `hasChosen()` and `hasChosenLanguage()` — *has
+   * answered* — and a reader content with the guessed calendar and with
+   * English never answers either question. The reviewer met them on the fifth
+   * visit and the fiftieth.
+   *
+   * The gate is *has been shown* now, written when the mark is mounted. What
+   * must not go with it is the honesty the guess rests on: being shown a mark
+   * still stores nothing about the church, so `hasChosen()` keeps its own
+   * meaning, the header still names a guess as a guess, and the Index still
+   * calls that church's saints a selection rather than the corpus.
+   */
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(2);
+
+  // Shown is recorded; answered is not.
+  const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
+  expect(stored.coachSeen).toEqual(['church-open', 'lang-open']);
+  // Null, not absent: `writeSetting` persists the whole settings object, so
+  // storing the seen list stores the defaults with it. Null is what every
+  // reader of these two tests for, and it is what "nobody has said" means.
+  expect(stored.church).toBeNull();
+  expect(stored.language).toBeNull();
+
+  // Reloaded, and again on another page, they stay gone without anything
+  // having been chosen.
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(0);
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await expect(page.locator('.coachmark')).toHaveCount(0);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church)).toBeNull();
+  // And the guess is still visibly a guess, which is what the marks were for.
+  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('#church-open')).toHaveText('Russian');
 });

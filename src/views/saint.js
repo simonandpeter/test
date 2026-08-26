@@ -256,8 +256,21 @@ function fillIn(el, payload, { data, router }) {
   // them any longer. If that turns out to matter, the corpus itself is
   // untouched and the line can return.
 
+  /*
+   * The licence line belongs to an image, and 614 of the 742 saints have none
+   * (found in review, 2026-08-27). `creditLine(undefined)` returns the "not
+   * yet recorded" sentence, which is the right answer for a picture whose
+   * provenance is a gap and the wrong one for a page with no picture at all —
+   * so every imageless page ended in a disclaimer about something that was
+   * never there. Hidden rather than emptied, so the paragraph's own space goes
+   * with it.
+   */
   const credit = el.querySelector('[data-credit]');
-  if (credit) credit.innerHTML = creditLine(images?.[0]?.credit);
+  if (credit) {
+    const image = images?.[0];
+    credit.innerHTML = image ? creditLine(image.credit) : '';
+    credit.hidden = !image;
+  }
 
   // The manifest carries each location's kind and coordinates but not its
   // name, so the rows were drawn at their final size from the card and the

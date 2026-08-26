@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendment 50)
+## State as of 2026-08-27 (Amendment 51)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -81,8 +81,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 425 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendment 50), not carried
+- 436 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendments 50 and 51), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.

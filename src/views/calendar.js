@@ -31,9 +31,9 @@ import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { hymnMarkup } from '../ui/hymns.js';
-import { liturgicalDay } from '../lib/liturgy.js';
+import { greatFeast, liturgicalDay } from '../lib/liturgy.js';
 import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
-import { recordedDay } from '../data/liturgical-days.js';
+import { RECORDS_REACH, recordedDay } from '../data/liturgical-days.js';
 import { nameDays } from '../lib/name-days.js';
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
@@ -53,6 +53,10 @@ const dayFmt = (d) => formatDate({ weekday: 'long', day: 'numeric', month: 'long
 const headingFmt = (d) =>
   formatDate({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
 const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
+// A date named inside a sentence rather than set as a heading: no weekday, and
+// the month in full, because "13 Jan 2027" reads as a label and this reads as
+// prose.
+const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.
 const monthFmt = (d) => formatDate({ month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
@@ -115,6 +119,50 @@ function indexFor(year, data) {
 const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
 const entriesFor = (iso, data) => entriesInChurch(allEntriesFor(iso, data), state?.calendar);
 const countFor = (iso, data) => entriesFor(iso, data).length;
+
+/**
+ * How far ahead the corpus has a saint for, in the calendar the reader keeps.
+ *
+ * The Daily page prints this in the note for a day whose calendar is recorded
+ * but whose saints are not folders yet, and until 2026-08-27 it printed a
+ * literal - "the corpus reaches 19 September" - which had been stale for a
+ * fortnight. A printed sentence that names a date is a sentence that goes
+ * stale, so this reads it off the index instead.
+ *
+ * **The run, not the furthest date, and the run tolerates a gap.** The feast
+ * index maps a saint's (month, day) onto every year, so the single Russian
+ * saint with a November feast would have "the corpus reaches" say November
+ * while the two months before it were bare. And an unbroken run is too strict
+ * the other way: 28 August 2026 has no Russian folder at all - it is the
+ * Dormition, whose subject is the feast - so a run that stops at the first
+ * empty day would have reported today. What the sentence means is "we have
+ * folders up to about here", so the walk carries on over a fortnight of
+ * silence and stops at anything longer.
+ */
+const REACH_GAP = 14;
+const reachCache = new Map();
+function corpusReaches() {
+  const key = state.calendar;
+  if (reachCache.has(key)) return reachCache.get(key);
+  let day = todayIso();
+  let last = null;
+  let empty = 0;
+  for (let i = 0; i < 500; i += 1) {
+    if (countFor(day, state.data) > 0) {
+      last = day;
+      empty = 0;
+    } else if (last && (empty += 1) > REACH_GAP) break;
+    day = addDaysIso(day, 1);
+  }
+  reachCache.set(key, last);
+  return last;
+}
+
+/** The reach, named in the reader's language; an empty string if there is none. */
+const reachInWords = () => {
+  const reach = corpusReaches();
+  return reach ? plainDateFmt(utc(reach)) : '';
+};
 
 export function render(el, { data, params, router }) {
   destroy();
@@ -530,7 +578,23 @@ function readingLabel(label) {
 
 function readingsMarkup(iso, churchId) {
   const rec = recordedDay(iso, churchId);
-  if (!rec?.readings?.length) return '';
+  if (!rec?.readings?.length) {
+    /*
+     * Past the end of the day records the page used to simply stop (found in
+     * review, 2026-08-27). The computed lines hold for any date, so a day in
+     * March 2027 printed its fast, its tone and its week and looked whole,
+     * with the half that is read off a calendar silently absent.
+     *
+     * Only *past* the horizon. Inside it, a day with no readings is a day
+     * whose calendar prints none - saint.gr publishes about a fortnight ahead
+     * and those days carry a note of their own - which is a different fact and
+     * must not be told in these words.
+     */
+    if (!RECORDS_REACH || iso <= RECORDS_REACH) return '';
+    return `<p class="beyond-records utility">${esc(
+      fill(STRINGS.calendar.beyondRecords, { until: plainDateFmt(utc(RECORDS_REACH)) }),
+    )}</p>`;
+  }
   const R = STRINGS.calendar.readings;
   const language = currentLanguage();
   const items = rec.readings
@@ -657,13 +721,22 @@ function openFastBubble(button) {
    * — which is exactly when it carries more than the label — and the citation
    * stands either way, because the day's record came from that page whether
    * or not its words are worth repeating.
+   *
+   * **What the citation says changes with it** (2026-08-27). "As printed by
+   * saint.gr" is a label on a quotation, and on a day with no quotation it was
+   * putting our reading in their mouth: saint.gr printed «Νηστεία», and the
+   * word *Strict* above it is this site's default for an ungraded fast, not
+   * theirs. So the un-quoted case cites the page as the source of the day's
+   * record, which is what it is.
    */
   el.innerHTML =
     `<p class="fast-allows">${esc(allows)}</p>` +
     (note && gradeIsQuoted
       ? `<p class="fast-note" lang="${esc(languageOfNote(state.calendar))}">${esc(note)}</p>`
       : '') +
-    (note && src ? `<p class="fast-source utility">${fill(M.sourceNote, { source: src })}</p>` : '');
+    (note && src
+      ? `<p class="fast-source utility">${fill(gradeIsQuoted ? M.sourceNote : M.sourceDay, { source: src })}</p>`
+      : '');
   document.body.appendChild(el);
 
   place(el, button);
@@ -1632,12 +1705,42 @@ function emptyDayNote(iso) {
   const here = new Set(entriesInChurch(all, state.calendar).map((e) => e.slug));
   const elsewhere = new Set(all.map((e) => e.slug).filter((slug) => !here.has(slug))).size;
   const church = churchName(state.calendar);
-  if (elsewhere > 0) {
-    return elsewhere === 1 ? fill(S.otherChurchOne, { church }) : fill(S.otherChurchMany, { church, count: elsewhere });
-  }
-  // the day's own calendar is recorded even though none of its saints is a folder
-  if (recordedDay(iso, state.calendar)?.readings?.length) return STRINGS.calendar.dayWithoutSaints;
-  return STRINGS.calendar.emptyDay;
+
+  /*
+   * **A fourth, and it is the one that was wrong rather than missing.** The
+   * page's subject is a saint folder, so a day whose subject is a *feast* had
+   * no subject and fell straight to the silence: 28 August 2026 in the Russian
+   * calendar printed the Dormition's gold chip, the fast it earns, the feast's
+   * readings and the feast's troparion, with "Nothing in the Russian calendar
+   * today" sitting in the middle of them. The day was never empty; the corpus
+   * has no folder for any saint of it, which is a different sentence.
+   *
+   * The feast is read in the church's own calendar, exactly as the chip above
+   * reads it, so the Russian keeps the Dormition on the civil 28 August and
+   * the other three on the 15th - and the note follows the chip rather than
+   * guessing at the civil date.
+   */
+  const feast = greatFeast(iso, state.calendar);
+  // The day's own calendar, which is recorded further ahead than its saints
+  // are folders and stops a good deal short of the feasts, which are computed.
+  const recorded = Boolean(recordedDay(iso, state.calendar)?.readings?.length);
+  const lead = feast
+    ? [
+        fill(S.feast, { church, feast: STRINGS.calendar.feasts?.names?.[feast] ?? feast }),
+        recorded ? S.feastRecords : '',
+        S.feastNoSaints,
+      ]
+        .filter(Boolean)
+        .join(' ')
+    : elsewhere > 0
+      ? fill(S.none, { church })
+      : recorded
+        ? fill(STRINGS.calendar.dayWithoutSaints, { reach: reachInWords() })
+        : STRINGS.calendar.emptyDay;
+
+  if (elsewhere === 0) return lead;
+  const pointer = elsewhere === 1 ? S.elsewhereOne : fill(S.elsewhereMany, { count: elsewhere });
+  return `${lead} ${pointer}`;
 }
 
 function paintDay(panel) {

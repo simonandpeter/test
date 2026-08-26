@@ -33,6 +33,15 @@ const DEFAULTS = {
    * knows the site has five.
    */
   language: null,
+  /*
+   * Which coachmarks this browser has already been shown, by control id
+   * (2026-08-27). It is a *seen* list and not an *answered* one, and that is
+   * the whole point of it: the two marks were gated on `hasChosen()` and
+   * `hasChosenLanguage()`, so a reader content with the guessed calendar and
+   * with English never answered either question and was shown both marks on
+   * every load, for ever. A coachmark that returns is not a coachmark.
+   */
+  coachSeen: [],
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.

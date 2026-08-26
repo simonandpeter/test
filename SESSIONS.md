@@ -4440,3 +4440,123 @@ were updated with their reasons; one of them — the hero bookmark's slack — h
 been pinned to a bare `> 40` px that the longer name turned into 31.5, and it
 now reads the line's own flex gap off the page and asserts against that, which
 is the number it was always about.
+
+## Amendment 51 — four sentences the page could not support, and a mark that would not leave (2026-08-27, tenth sitting)
+
+Two independent reviews arrived together. Everything below was checked against
+the code before it was planned, and where a review was wrong that is said here
+rather than quietly built around. Three of its claims were wrong and are
+recorded at the end.
+
+### The Dormition, which the page was showing and denying at once
+
+**The worst of the lot, and it was structural rather than a wording slip.** On
+28 August 2026 in the Russian calendar the page printed the Dormition's gold
+chip, the fish it allows on a Friday, the feast's own readings and the feast's
+own troparion — and, in the middle of them, *"Nothing in the Russian calendar
+today."*
+
+The Daily page's subject is a saint *folder*. A day whose subject is a feast
+therefore had no subject at all and fell straight through to the silence, and
+28 August has **no folder for any saint of it** — a true sentence about the
+corpus and a false one about the day. HANDOFF has named this shape as agreed
+and next since 2026-08-22: "the calendar-entry shape for feasts that are not
+saints is agreed and is the next work".
+
+The fix is a fourth lead. `greatFeast()` already knows which feast a day is,
+read in the church's own calendar, which is why the Russian keeps the Dormition
+on the civil 28 August and the Greek on the 15th; the note now says so and then
+says what is actually missing, which is the folders.
+
+**The two halves of the old sentence had to be separated to do it.**
+`otherChurchOne`/`otherChurchMany` each carried "nothing here" and "it is over
+there" in one string, so a feast day could not keep the second without the
+first. They are a lead and a pointer now, both halves keeping their old wording
+to the word, and every existing assertion about them still holds.
+
+**And the feast lead splits again past the records.** "The readings and hymns
+below are the feast's own" is a promise, and past 13 January 2027 there is
+nothing below to keep it — which is the same defect one horizon further on, so
+the clause is printed only where the day's own record is there to be cited.
+
+### Three sentences that claimed more than they knew
+
+**1. The fast bubble credited saint.gr with our reading.** The Greek chip for
+28 August reads *Strict Fasting*, and under it stood "As printed by saint.gr".
+saint.gr printed «Νηστεία» — *a fast*, no grade — and *Strict* is this site's
+default for an ungraded fast day, taken on the evening of 2026-08-26. The
+citation was putting our word in their mouth.
+
+The two jobs are now two sentences. Where the calendar's own words are quoted,
+the citation still labels that quotation, and the Russian bubble — which quotes
+«без масла» and «сухояд» — is unchanged. Where they are not, it cites the page
+as the source of *the day's record*, which is what it is.
+
+**2. Six hundred and fourteen saints were given a licence for a picture that
+does not exist.** The credit line is filled from `images[0].credit`, and
+`creditLine(undefined)` returns the "not yet recorded" sentence — the right
+answer for a picture whose provenance is a gap, and the wrong one for a page
+with no picture at all. Hidden now rather than emptied, so the paragraph's own
+space goes with it.
+
+**3. The records stop at 13 January 2027, and the page did not say so.** The
+computed lines — the fast, the tone, the week — hold for any date, so a day in
+March 2027 printed all three and looked whole while the half that is read off a
+calendar was silently absent. Said once, in prose, in the register of the three
+silences, and only *past* the horizon: inside it a day with no readings is a
+day whose calendar prints none, which is a different fact.
+
+**The horizon is derived, never written down**, and so is the corpus's reach —
+which is the same defect caught in the act. The note for a day whose calendar
+is recorded but whose saints are not folders yet said "the corpus reaches 19
+September", as a literal, and it had been wrong for a fortnight. A printed
+sentence that names a date is a sentence that goes stale.
+
+The reach is read off the feast index, and **it is a run rather than a
+maximum**: the index maps a saint's (month, day) onto every year, so the one
+Russian saint with a November feast would have had it say November while the
+two months before were bare. The run tolerates a fortnight of silence, because
+an unbroken one is too strict in the other direction — 28 August has no Russian
+folder at all, being the Dormition, and a run that stopped at the first empty
+day would have reported today.
+
+### The coachmarks would not leave
+
+Both marks came back on every load, for ever. They were gated on `hasChosen()`
+and `hasChosenLanguage()` — *has answered* — and a reader content with the
+guessed calendar and with English never answers either question. The reviewer
+met them on the fifth visit and would have met them on the fiftieth.
+
+The gate is *has been shown* now, and it is written when the mark is **mounted**
+rather than when it is dismissed: that is the literal reading, and the only one
+that cannot leak, since a reader who closes the tab without touching a mark has
+still seen it. The four ways out are untouched — they are how a reader is rid
+of the mark now, not what stops it coming back.
+
+**What did not go with it is the honesty the guess rests on.** Being shown a
+mark still stores nothing about the church, so `hasChosen()` keeps its own
+meaning, the header still names a guess as a guess, and the Index still calls
+that church's saints a selection rather than the corpus. One visible
+consequence, recorded because it changed two assertions: `writeSetting`
+persists the whole settings object, so storing the seen list also stores
+`church: null` and `language: null`. Null is what every reader of those two
+tests for, and null is what "nobody has said" means.
+
+### Three review claims that were wrong
+
+- **"The hero has no `width`/`height`."** It does: `calendar.js` and
+  `saint.js` both emit them from the manifest. No action.
+- **"Two ghost columns of adjacent-month dates in the month view."** Designed,
+  and pinned by three browser tests: DESIGN.md §5b's peeked neighbouring
+  column, on the grid's own rows, dissolving through a mask, and buttons on
+  purpose so a mouse has a way through.
+- **"All Saints uses 612 of 1440 px."** Known and the author's: the Index sits
+  in the standard 72ch column, and widening that one page is a design decision
+  already recorded in HANDOFF.
+
+### Verification
+
+**171 unit, 436 browser.** All four packs 337 of 337 with no English
+fallbacks. Four backouts run and watched to fail, each restored and confirmed:
+the feast lead, the fast citation, the licence line, the horizon note, and the
+seen list. Rendered and looked at, in English and Russian, at 1280 and 360.
