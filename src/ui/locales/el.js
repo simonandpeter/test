@@ -33,7 +33,6 @@ export const el = {
   calendar: {
     title: 'Σήμερα',
     today: 'Σήμερα',
-    goToday: 'Μετάβαση στο σήμερα',
     prevDay: 'Προηγούμενη ημέρα',
     nextDay: 'Επόμενη ημέρα',
     prevWeek: 'Προηγούμενη εβδομάδα',

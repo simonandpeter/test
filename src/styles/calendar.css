@@ -2,14 +2,23 @@
    density; the register carries the rest; the week strip is the red-letter
    idiom doing literal work. */
 
-/* Two stacked icon buttons hold the left edge — recentre on today, and open
-   the month — and the week or the month fills the rest of the row. They are
-   the two things that are true of any day; the week is the thing you are
-   looking at. Keeping them out of the strip means the strip's own edges are
-   unambiguously about the week. */
+/* One icon button holds the left edge — open the month — and the week or the
+   month fills the rest of the row. A second, stacked button used to recentre
+   the rail on today; it is gone (author, 2026-08-26: "remove the old button
+   and stretch the monthly toggle to take up the extra space"), because today
+   now carries its own mark in both grains and a reader who has stepped away
+   from it can see it rather than needing a button back to it. Keeping the
+   toggle out of the strip means the strip's own edges are unambiguously about
+   the week. */
 .cal-controls {
-  /* Every control in the row is this tall, or half of it stacked. */
-  --cal-row-h: 53px;
+  /* Every control in the row is this tall. Shaved from 53 to 51 (author,
+     2026-08-26: "condense the weekly display vertically a bit more, shave a
+     few more pixels off of margins") — measured against the rail's own
+     content after its padding and gaps were trimmed below, not derived from
+     the CSS numbers alone: a line-height multiplier does not predict a real
+     font's ascent and descent, and the two were a couple of pixels apart the
+     first time this was tried by arithmetic. */
+  --cal-row-h: 51px;
   /* Pinned rather than intrinsic, because the gutter below is derived from it
      and an edge that sized itself to its content would move the month's name
      whenever a two-digit date became a one-digit one.
@@ -37,13 +46,15 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
-  margin-bottom: var(--space-6);
+  /* The date heading used to stand a full space-6 below the strip; brought up
+     to space-3 (author, 2026-08-26: "move today's date on daily page further
+     up the page closer to the weekly display"). */
+  margin-bottom: var(--space-3);
 }
 
 .cal-jump {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
   flex: none;
 }
 
@@ -51,11 +62,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Derived from the row height, so the pair stands exactly as tall as the
-     strip beside it and the left edge reads as one block rather than two
-     stray controls. */
+  /* Derived from the row height, so the button stands exactly as tall as the
+     strip beside it. It took half of this, stacked over the button that
+     recentred on today, until that button was removed and this one stretched
+     to take the space it left (author, 2026-08-26). */
   width: 34px;
-  height: calc((var(--cal-row-h) - var(--space-1)) / 2);
+  height: var(--cal-row-h);
   padding: 0;
   color: var(--ink-soft);
 }
@@ -303,12 +315,14 @@
      pixel, and the neighbours show themselves in the inset at each edge. */
   width: calc((100% - 2 * var(--rail-inset) - 6 * 2px) / 7);
   min-width: 34px;
-  padding: var(--space-1) 0;
+  /* Shaved from --space-1 (author, 2026-08-26: "condense the weekly display
+     vertically a bit more, shave a few more pixels off of margins"). */
+  padding: 3px 0;
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
   font-family: var(--font-utility);
   font-size: 12px;
   line-height: 1.3;
@@ -368,6 +382,28 @@
 
 .week-strip .is-today .day-name {
   color: var(--rubric);
+}
+
+/* A bubble around today's own numeral, so it keeps reading as today even once
+   a different day is selected and wears the field and the underline instead
+   (author, 2026-08-26: "put a bubble around today's date in the weekly and
+   monthly display so even when selecting a different day you still recognise
+   today's date"). Drawn as a ring around the numeral rather than a filled
+   disc — gold and a flat fill both belong to other things (DESIGN.md §2) —
+   and as an absolutely positioned ::before rather than a box on `.day-num`
+   itself, so it costs the row no width or height of its own and cannot be the
+   thing that nudges the rail's column measurements. */
+.week-strip .day-num {
+  position: relative;
+}
+
+.week-strip .is-today .day-num::before {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border: 1.5px solid var(--rubric);
+  border-radius: 999px;
+  pointer-events: none;
 }
 
 /* ---- the two marks under a date (author, 2026-08-26) -------------------- */
@@ -609,6 +645,25 @@
   color: var(--rubric);
 }
 
+/* Today's own bubble, at the month's grain (author, 2026-08-26 — see the
+   week strip's own copy of this rule above for the reasoning). The numeral is
+   wrapped in its own `.day-num` span for this alone: the month button has
+   nothing else in it, but the ring has to size itself to the numeral rather
+   than to the button's own grid-column width, which is far wider. */
+.month-grid .day-num {
+  position: relative;
+  display: inline-block;
+}
+
+.month-grid button.is-today .day-num::before {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border: 1.5px solid var(--rubric);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
 /* ---- the reckoning toggle ---------------------------------------------- */
 
 /* Which calendar the day is shown in, under the strip that chooses the day
@@ -740,21 +795,15 @@
    loses is its lower half rather than the face. The blurred placeholder is
    anchored the same way, or it would paint a differently-framed image under the
    one arriving. */
-/* The figure is the image's box, and the bookmark is positioned against it —
-   over the top-right corner, exactly as on an Index card (author, 2026-08-24).
-   It is also where the 85% below is applied, so the proportion lands once: on
-   the box, not on the box and the image both. */
+/* The figure is the image's box (author, 2026-08-24). It is also where the
+   85% below is applied, so the proportion lands once: on the box, not on the
+   box and the image both. The bookmark stood over its top-right corner, as on
+   an Index card, until 2026-08-26 — see `.hero .name-line > .bookmark` below
+   for where it stands now. */
 .hero-figure {
   position: relative;
   margin-inline: auto;
   width: 100%;
-}
-
-.hero-figure > .bookmark {
-  position: absolute;
-  top: var(--space-2);
-  right: var(--space-2);
-  z-index: 1;
 }
 
 /* The opening of the hero's life (author, 2026-08-25), in the column the
@@ -844,6 +893,23 @@
   margin-bottom: var(--space-2);
 }
 
+/* The bookmark moved off the image and beside the name (author, 2026-08-26:
+   "move the bookmark on the main saint card from the top right of the image
+   to the right of the text. reserve a spot for it, so as to make sure if the
+   text is long and requires 2 lines the bookmark still stays in the same
+   position and doesn't drop down another line"). `.name-line` already does
+   exactly this for the saint's own page (base.css: "a name and what stands
+   beside it … are one line that never wraps: the name shrinks and wraps
+   within itself") — the name is the flex item that gives, `.icon-button`'s
+   own `flex: none` is what holds the bookmark's width, and `min-width: 0` on
+   the heading (also base.css) is what lets it shrink below its content size
+   rather than push the mark out past the column. `align-self: center` is the
+   one addition: baseline alignment would hang the mark off the *last* line of
+   a wrapped name, which reads as dropping exactly as the author asked it not
+   to. */
+.hero .name-line > .bookmark {
+  align-self: center;
+}
 
 
 /* The margin under the dating, chased twice in one day. In the morning
@@ -1161,11 +1227,16 @@ a.name-day:hover {
 
    One gold hairline separates the date from it (author, same instruction:
    "One gold hairline under the date heading … would give the page the one warm
-   accent it's missing"). Short rather than full-measure — a rule across the
-   column would read as a divider between two sections, and this is one head. */
+   accent it's missing"). It ran 2.5em wide and a full space-2 below the
+   heading's text until the author asked it closer and full width to match
+   every other rule on the page (2026-08-26: "make the gold line on daily page
+   go full width like the other lines and make it closer to the date not so
+   far down") — the register's own rows, the register-heading's underline,
+   all run the column's full measure, and this one read as a stray fragment
+   beside them. */
 .cal-date:has(+ .cal-liturgy:not(:empty)) {
   margin-bottom: var(--space-2);
-  padding-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
   position: relative;
 }
 
@@ -1173,8 +1244,8 @@ a.name-day:hover {
   content: '';
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 2.5em;
   height: 1px;
   background: var(--gold);
 }

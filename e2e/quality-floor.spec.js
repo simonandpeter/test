@@ -1038,23 +1038,90 @@ test('the keys are the Daily page\'s, and typing elsewhere is untouched', async 
   expect(page.url()).toContain('/saints');
 });
 
-test('the two jump controls hold the left edge and carry names, not glyphs alone', async ({ page }) => {
+test('the one jump control holds the left edge, carries a name, and fills the row', async ({ page }) => {
+  /*
+   * The crosshair that recentred the rail on today stood here until
+   * 2026-08-26 (author: "remove the old button and stretch the monthly
+   * toggle to take up the extra space"), stacked over the month toggle at
+   * half the row's height each. It is withdrawn now that today carries its
+   * own bubble in both grains — see the tests below — so this pins what is
+   * left: one control, an icon-only button so its name has to come from the
+   * label, standing the row's own full height rather than half of it.
+   */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const jump = page.locator('.cal-jump button');
-  await expect(jump).toHaveCount(2);
-  // Icon-only buttons, so the name has to come from somewhere.
-  for (const name of await jump.evaluateAll((els) => els.map((e) => e.getAttribute('aria-label')))) {
-    expect(name?.length).toBeGreaterThan(3);
-  }
-  const [stack, strip] = [
+  await expect(jump).toHaveCount(1);
+  const name = await jump.getAttribute('aria-label');
+  expect(name?.length).toBeGreaterThan(3);
+  const [stack, strip, span] = [
     await page.locator('.cal-jump').boundingBox(),
+    await page.locator('.week-strip').boundingBox(),
     await page.locator('.cal-span').boundingBox(),
   ];
-  expect(stack.x + stack.width).toBeLessThanOrEqual(strip.x);
-  // Stacked, not side by side.
-  const boxes = await jump.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().y));
-  expect(new Set(boxes.map(Math.round)).size).toBe(2);
+  expect(stack.x + stack.width).toBeLessThanOrEqual(span.x);
+  // The full row height, not half of it — the space the second button left.
+  expect(Math.round(stack.height)).toBe(Math.round(strip.height));
+});
+
+test('today carries its own bubble in the week and the month, apart from the selection', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "put a bubble around today's date in the weekly and
+   * monthly display so even when selecting a different day you still
+   * recognise today's date." A date three days after today is selected here
+   * precisely so the two marks are pulled apart: `aria-current` on the
+   * selected button, and a ring around today's own numeral regardless of
+   * which day is picked.
+   */
+  await ready(page);
+  // Same month as today, or the month view below would show today's mark in
+  // a different month grid than the one the selection opens on — a real
+  // failure mode near either end of a month, not a hypothetical one.
+  const iso = await page.evaluate(() => {
+    const today = new Date();
+    const toIso = (d) =>
+      `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const sameMonth = (n) => {
+      const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + n);
+      return d.getMonth() === today.getMonth() && d.getFullYear() === today.getFullYear() ? d : null;
+    };
+    const picked = sameMonth(3) || sameMonth(-3) || sameMonth(1) || sameMonth(-1);
+    return toIso(picked);
+  });
+  await page.goto(`/calendar/${iso}`, { waitUntil: 'networkidle' });
+
+  const week = await page.evaluate(() => {
+    const today = document.querySelector('.week-strip .is-today');
+    const selected = document.querySelector('.week-strip [aria-current="date"]');
+    const ringed = (el) => getComputedStyle(el.querySelector('.day-num'), '::before').borderStyle !== 'none';
+    return {
+      distinct: today.dataset.iso !== selected.dataset.iso,
+      todayRinged: ringed(today),
+      selectedRinged: ringed(selected),
+    };
+  });
+  expect(week.distinct).toBe(true);
+  expect(week.todayRinged).toBe(true);
+  // The selected day is not also today here, and wears no ring of its own —
+  // the field and the underline are what mark it, so a ring on both would be
+  // two marks for one day and no way to tell today from "the reader's place".
+  expect(week.selectedRinged).toBe(false);
+
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  const month = await page.evaluate(() => {
+    const today = document.querySelector('.month-grid button.is-today');
+    const selected = document.querySelector('.month-grid [aria-current="date"]');
+    const ringed = (el) => getComputedStyle(el.querySelector('.day-num'), '::before').borderStyle !== 'none';
+    return {
+      distinct: today.dataset.iso !== selected.dataset.iso,
+      todayRinged: ringed(today),
+      selectedRinged: ringed(selected),
+    };
+  });
+  expect(month.distinct).toBe(true);
+  expect(month.todayRinged).toBe(true);
+  expect(month.selectedRinged).toBe(false);
 });
 
 /**
@@ -2384,23 +2451,62 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
   await expect(media).toHaveAttribute('aria-hidden', 'true');
   await expect(media).toHaveAttribute('tabindex', '-1');
 
-  // The bookmark sits over the image's top-right corner, exactly as on an
-  // Index card (author, 2026-08-24) — a sibling of the link, because a button
-  // inside an anchor is invalid and a press must save rather than open.
+  // The bookmark stood over the image's top-right corner until 2026-08-26
+  // (author: "move the bookmark on the main saint card from the top right of
+  // the image to the right of the text"). It is a sibling of the name inside
+  // `.name-line` now, not of the image link — a button inside an anchor is
+  // still invalid, and the press still has to save rather than open.
+  await expect(page.locator('.hero-figure > .bookmark')).toHaveCount(0);
   const boxes = await page.evaluate(() => {
-    const img = document.querySelector('.hero-figure').getBoundingClientRect();
-    const mark = document.querySelector('.hero-figure > .bookmark').getBoundingClientRect();
-    return { img, mark };
+    const name = document.querySelector('.hero-name').getBoundingClientRect();
+    const mark = document.querySelector('.hero .name-line > .bookmark').getBoundingClientRect();
+    return { name, mark };
   });
-  expect(boxes.mark.top).toBeGreaterThan(boxes.img.top);
-  expect(boxes.mark.right).toBeLessThanOrEqual(boxes.img.right);
-  expect(boxes.mark.top - boxes.img.top).toBeLessThan(20);
-  expect(boxes.img.right - boxes.mark.right).toBeLessThan(20);
-  // And nowhere else: the body carries no second bookmark for an imaged hero.
+  expect(boxes.mark.left).toBeGreaterThanOrEqual(boxes.name.right - 1);
+  // And nowhere else: `.hero-actions`, which used to carry it for a hero with
+  // no image, is gone along with the branch that wrote it — one bookmark, one
+  // place, whether or not there is a picture.
   await expect(page.locator('.hero .hero-actions')).toHaveCount(0);
+  await expect(page.locator('.hero .bookmark')).toHaveCount(1);
 
   await media.click();
   await expect(page.locator('h1.saint-name')).toHaveText('St. Augustine of Hippo');
+});
+
+test('the hero bookmark holds its place beside the name when it wraps to two lines', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "reserve a spot for it, so as to make sure if the
+   * text is long and requires 2 lines the bookmark still stays in the same
+   * position and doesn't drop down another line." 14 September 2026 in the
+   * Romanian calendar is the day's sole Romanian entry, so pickHero is
+   * deterministic rather than the usual hash over a pool — and his name,
+   * "St. Macarius the New, disciple of Patriarch Niphon, Monk-martyr (1527)",
+   * is long enough to wrap at 360 px without being constructed for the test.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await ready(page, { church: 'romanian' });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const name = page.locator('.hero-name');
+  await expect(name).toContainText('Macarius');
+  const lines = await name.evaluate((el) => {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    return range.getClientRects().length;
+  });
+  expect(lines).toBeGreaterThan(1);
+
+  const placed = await page.evaluate(() => {
+    const nameBox = document.querySelector('.hero-name').getBoundingClientRect();
+    const mark = document.querySelector('.hero .name-line > .bookmark').getBoundingClientRect();
+    return { nameBox, mark };
+  });
+  // Beside the wrapped name's block, contained within its vertical span —
+  // not below it, which is what "drops to another line" would look like.
+  expect(placed.mark.top).toBeGreaterThanOrEqual(placed.nameBox.top - 1);
+  expect(placed.mark.bottom).toBeLessThanOrEqual(placed.nameBox.bottom + 1);
+  expect(placed.mark.left).toBeGreaterThanOrEqual(placed.nameBox.left);
 });
 
 /**
@@ -4044,6 +4150,42 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
   await expect
     .poll(() => mark.locator('.bm-shape').evaluate((p) => getComputedStyle(p).opacity))
     .toBe('1');
+});
+
+test('the gold hairline under the date runs full width, close to the text', async ({ page }) => {
+  /*
+   * Author, 2026-08-26: "make the gold line on daily page go full width like
+   * the other lines and make it closer to the date not so far down." It ran
+   * 2.5em (40px at this size) and sat a full space-2 (8 px) below the
+   * heading's text; now it spans the column like the register's own rules and
+   * the register-heading's underline, and stands a tighter space-1 (4 px)
+   * under it.
+   */
+  await ready(page);
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  const m = await page.evaluate(() => {
+    const heading = document.querySelector('.cal-date');
+    const body = document.querySelector('.cal-body');
+    const s = getComputedStyle(heading, '::after');
+    return {
+      headingWidth: heading.getBoundingClientRect().width,
+      bodyWidth: body.getBoundingClientRect().width,
+      afterWidth: parseFloat(s.width),
+      paddingBottom: parseFloat(getComputedStyle(heading).paddingBottom),
+      goldRgb: (() => {
+        const hex = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();
+        const n = parseInt(hex.slice(1), 16);
+        return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+      })(),
+      afterBackground: s.backgroundColor,
+    };
+  });
+  // Full column width, not the old 2.5em fixed measure.
+  expect(Math.abs(m.headingWidth - m.bodyWidth)).toBeLessThan(2);
+  expect(Math.abs(m.afterWidth - m.bodyWidth)).toBeLessThan(2);
+  // Close to the text: one space-1 (4 px), not two (8 px).
+  expect(m.paddingBottom).toBeLessThanOrEqual(4);
+  expect(m.afterBackground).toBe(m.goldRgb);
 });
 
 /* ---- the 2026-08-25 batch: the fast, the hymns, the lede, the Bibles ---- */

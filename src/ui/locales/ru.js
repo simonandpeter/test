@@ -36,7 +36,6 @@ export const ru = {
   calendar: {
     title: 'Сегодня',
     today: 'Сегодня',
-    goToday: 'К сегодняшнему дню',
     prevDay: 'Предыдущий день',
     nextDay: 'Следующий день',
     prevWeek: 'Предыдущая неделя',

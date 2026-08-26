@@ -33,7 +33,6 @@ export const sr = {
   calendar: {
     title: 'Данас',
     today: 'Данас',
-    goToday: 'На данашњи дан',
     prevDay: 'Претходни дан',
     nextDay: 'Следећи дан',
     prevWeek: 'Претходна недеља',

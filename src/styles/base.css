@@ -199,9 +199,10 @@ button:hover {
    shadow does that without drawing anything: the same one mark, legible on a
    gold icon and a dark one. Only where a picture is actually under it — on
    the page's own ground the mark has all the contrast it needs, and a shadow
-   there would be furniture. */
-.index-card:has(.index-media:not(.is-empty)) > .bookmark .bookmark-mark,
-.hero-figure > .bookmark .bookmark-mark {
+   there would be furniture. The hero's own bookmark stood over its image and
+   carried this too until 2026-08-26, when it moved beside the name onto the
+   page's own ground (calendar.css, `.hero .name-line > .bookmark`). */
+.index-card:has(.index-media:not(.is-empty)) > .bookmark .bookmark-mark {
   filter: drop-shadow(0 0 1.5px var(--gesso)) drop-shadow(0 1px 2px rgb(0 0 0 / 0.45));
 }
 

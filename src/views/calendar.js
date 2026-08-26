@@ -62,16 +62,14 @@ const utc = (iso) => {
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
 
-/* Two icon buttons stand in for the old text ones. Both are stroked in
-   currentColor and carry their name on the button's aria-label, so neither
-   introduces a colour and neither depends on the icon being understood. */
-const ICON_TODAY = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-  stroke-width="1.6" aria-hidden="true" focusable="false">
-  <circle cx="12" cy="12" r="5.5"/>
-  <circle cx="12" cy="12" r="1.75" fill="currentColor" stroke="none"/>
-  <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke-linecap="round"/>
-</svg>`;
-
+/* One icon button stood beside this until 2026-08-26 — a crosshair that
+   jumped the rail back to today (author: "remove the old button and stretch
+   the monthly toggle to take up the extra space"). It is withdrawn now that
+   today carries its own mark at both grains (below, "the two marks a date can
+   carry"): a reader who has stepped away from today can see it rather than
+   needing a button to return to it. What is left is stroked in currentColor
+   and carries its name on the button's aria-label, so it introduces no colour
+   and depends on nothing but the label to be understood. */
 const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
   stroke-width="1.6" aria-hidden="true" focusable="false">
   <rect x="3.25" y="5" width="17.5" height="15.75" rx="2.5"/>
@@ -135,7 +133,6 @@ export function render(el, { data, params, router }) {
       <div class="cal-body">
         <div class="cal-controls">
           <div class="cal-jump">
-            <button type="button" data-today aria-label="${STRINGS.calendar.goToday}">${ICON_TODAY}</button>
             <button type="button" data-month aria-expanded="false"
               aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
           </div>
@@ -172,7 +169,6 @@ export function render(el, { data, params, router }) {
       <div class="shelves" data-shelves></div>
     </div>`;
 
-  el.querySelector('[data-today]').addEventListener('click', () => select(todayIso()));
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
@@ -1369,8 +1365,9 @@ function paintMonthInto(row, cursor, { live }) {
   for (let day = 1; day <= daysInMonth(cursor); day++) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
-    cells.push(`<button type="button" data-iso="${iso}"${current}
-      aria-label="${dayFmt(utc(iso))}">${day}</button>`);
+    const today = iso === todayIso() ? ' class="is-today"' : '';
+    cells.push(`<button type="button" data-iso="${iso}"${current}${today}
+      aria-label="${dayFmt(utc(iso))}"><span class="day-num">${day}</span></button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 
@@ -1508,10 +1505,6 @@ function paintDay(panel) {
   // accessibility tree and out of the tab order on purpose: the name beside it
   // already links to the same page, and a second link with no text of its own
   // would be either an unnamed link or the same one announced twice.
-  // The bookmark sits over the image's top-right corner, as it does on an
-  // Index card (author, 2026-08-24). It is a sibling of the link rather than
-  // inside it — a button within an anchor is not valid, and the press has to
-  // save rather than open.
   const media = hero.image
     ? `<div class="hero-figure">
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
@@ -1520,7 +1513,6 @@ function paintDay(panel) {
           <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
             style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
         </a>
-        ${renderBookmark(hero.slug, hero.display_name)}
       </div>`
     : '';
 
@@ -1551,6 +1543,7 @@ function paintDay(panel) {
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
             <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
           </h2>
+          ${renderBookmark(hero.slug, hero.display_name)}
         </div>
         <p class="hero-dates utility">${esc(formatLifespan(hero.dates))}</p>
         <!-- The opening of the life, on a wide screen only (author,
@@ -1561,7 +1554,6 @@ function paintDay(panel) {
              a saint has no life recorded, because a heading over nothing is
              the furniture DESIGN.md §5b refuses. -->
         <p class="hero-lede" data-hero-lede hidden></p>
-        ${hero.image ? '' : `<div class="hero-actions">${renderBookmark(hero.slug, hero.display_name)}</div>`}
       </div>
     </article>
     ${register}

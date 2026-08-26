@@ -45,7 +45,6 @@ export const STRINGS = {
   calendar: {
     title: 'Daily',
     today: 'Today',
-    goToday: 'Go to today',
     prevDay: 'Previous day',
     nextDay: 'Next day',
     prevWeek: 'Previous week',

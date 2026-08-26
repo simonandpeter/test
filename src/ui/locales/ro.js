@@ -33,7 +33,6 @@ export const ro = {
   calendar: {
     title: 'Astăzi',
     today: 'Astăzi',
-    goToday: 'Mergi la ziua de azi',
     prevDay: 'Ziua precedentă',
     nextDay: 'Ziua următoare',
     prevWeek: 'Săptămâna precedentă',
