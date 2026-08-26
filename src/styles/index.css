@@ -14,6 +14,17 @@
   border-bottom: 1px solid var(--rule);
   padding-bottom: var(--space-3);
   margin-bottom: var(--space-2);
+  /* **A chip's height, in one place, because three controls across these two
+     rows have to be exactly as tall as one and each was carrying its own copy
+     of the number** — and one of those copies (Detailed's "the chips are 27 px
+     tall") had already gone stale by 3 px. `--facet-lh` is base.css's root
+     line-height, which a summary inherits; the rest is its own padding and
+     border. A test measures a real chip against this arithmetic, so the two
+     cannot drift apart in silence. */
+  --facet-font: 13.5px;
+  --facet-lh: 1.65;
+  --facet-pad-y: 3px;
+  --facet-h: calc(var(--facet-font) * var(--facet-lh) + var(--facet-pad-y) * 2 + 2px);
 }
 
 /* Never wraps. Clear filters appears and disappears as filters come and go,
@@ -123,7 +134,7 @@ select:hover {
 .facet > summary {
   cursor: pointer;
   font-family: var(--font-utility);
-  font-size: 13.5px;
+  font-size: var(--facet-font);
   color: var(--ink-soft);
   white-space: nowrap;
   display: inline-flex;
@@ -131,7 +142,7 @@ select:hover {
   gap: var(--space-1);
   /* 7 px inline, not 8: the die had to come into this row (2026-08-26
      evening) and the seven chips paid a pixel each side for it. */
-  padding: 3px 7px;
+  padding: var(--facet-pad-y) 7px;
   border: 1px solid var(--rule);
   border-radius: 999px;
   list-style: none;
@@ -287,11 +298,18 @@ select:hover {
      afford the 3 px back — measured after, the eight need 573.4 px of the
      580 px cold-load column in Arial's metrics. */
   width: 27px;
-  /* The chips' height, taken from the row rather than repeated as a number
-     here: `.facets` is `align-items: flex-start`, so the die has to ask for
-     the stretch itself, and asking is what keeps the two in step when a chip's
-     padding or leading next changes. */
+  /* The chips' height (author: "make the dice button height match the height
+     of the other filters in its row"), which takes **both** of these.
+     `.facets` is `align-items: flex-start`, so the die asks for the stretch
+     itself — and a stretch is only ever as tall as the *line* the die landed
+     on. The moment the row wraps and the die is alone on the last line, that
+     line is the die's own content and the stretch gives back 23 px against a
+     chip's 30.3. CI caught exactly that (2026-08-26) because a bare runner's
+     system-ui is wider than a Windows desk's and wraps the row a chip
+     earlier; at 360 px it wraps on every machine. So the floor is the chip's
+     own arithmetic and the stretch is what keeps it in step above the floor. */
   align-self: stretch;
+  min-height: var(--facet-h);
   /* **Gold, at the author's instruction** ("make the icon gold to draw
      attention"), and it is worth saying what it costs rather than passing it
      off. DESIGN.md §2 spends gold on a *finding* about veneration and never
@@ -323,9 +341,11 @@ select:hover {
   gap: var(--space-1);
   color: var(--ink-soft);
   cursor: pointer;
-  /* The chips are 27 px tall and this is a line of text; matching their height
-     is what puts the three on one baseline now that they share a row. */
-  min-height: 27px;
+  /* A chip's height, from the one place that states it: this is a line of
+     text and they are chips, and matching them is what puts the three on one
+     baseline now that they share a row. It said 27 px until 2026-08-26, which
+     is what a chip was two paddings ago. */
+  min-height: var(--facet-h);
 }
 
 .result-count {
