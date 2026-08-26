@@ -78,8 +78,22 @@ select:hover {
      harder, not less; at this gap all seven fit one line in Arial's metrics
      at the 580 px cold-load column — 545 of it — and the row that used to
      wrap does not. Amendment 24's budget test is the one that catches it if
-     an eighth facet ever arrives. */
-  gap: var(--space-2);
+     an eighth facet ever arrives.
+
+     **An eighth arrived on 2026-08-26 evening** — the die, at the author's
+     instruction to put Random beside Dates — and it needed 14.6 px the row
+     did not have, so it wrapped to a line of its own and read as a stray.
+     6 px here rather than 8 frees 14 across the seven gaps, and the chips'
+     own inline padding gives another 14; the die is 24 px rather than the
+     27 a chip is tall. Measured after, at the 580 px cold-load column: the
+     eight need **570.5 px in Arial's metrics**, where the seven alone needed
+     545 — 9.5 px of margin, which is thin, and Amendment 24 is the standing
+     warning that a bare Linux runner's system-ui is wider than Arial again.
+     Nothing asserts this row is one line (the budget test measures the foot),
+     so a runner that cannot fit it wraps the die rather than going red.
+     Verdana's metrics do not fit it at all — 606.7 — and Verdana is
+     system-ui nowhere; Amendment 24 measured it as the same outlier. */
+  gap: 6px;
   margin-bottom: var(--space-2);
 }
 
@@ -104,7 +118,9 @@ select:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  padding: 3px var(--space-2);
+  /* 7 px inline, not 8: the die had to come into this row (2026-08-26
+     evening) and the seven chips paid a pixel each side for it. */
+  padding: 3px 7px;
   border: 1px solid var(--rule);
   border-radius: 999px;
   list-style: none;
@@ -208,7 +224,10 @@ select:hover {
 .index-foot {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* `flex-start`, not `center`: from 2026-08-26 evening two of the three are
+     disclosures that grow downward when they open, and a centred row would
+     lift the Detailed box to the middle of an open tray. */
+  align-items: flex-start;
   /* The facets' own column gap, not 24. At the cold-load column (580 px —
      the serif fallback's "0" sets 72ch) the three groups left 0.1 px of room
      in Segoe UI and none in Arial's metrics, which macOS, Android and
@@ -219,52 +238,49 @@ select:hover {
   gap: var(--space-2) var(--space-4);
 }
 
-/* Sort and Random travel together and sit tight against each other: they are
-   both "which saint next", where the layout toggle is a different question. */
-.sort-group {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
+/* Sort and View are chips (author, 2026-08-26 evening), so they need nothing
+   of their own: `.facet > summary` above already draws the chip, the caret and
+   the open state, and `.facet fieldset` already draws the tray under it. What
+   `.facet-choice` adds is only what a one-of-many chip differs in — it prints
+   an *answer* rather than a question, so it is set in the page's ink rather
+   than the secondary ink the questions wear, and its tray is a single column
+   because four orders read as a list and not as a field of options.
 
-.sort-group button {
-  font-family: var(--font-utility);
-  font-size: 13.5px;
-  color: var(--ink-soft);
-  padding: 2px var(--space-2);
-}
-
-.sort-group button:hover {
+   `.sort-group`, `.sort-field` and `.layout-toggle` stood here until that
+   evening: a native `<select>` behind a visible *Sort* label, and a segmented
+   two-button toggle behind a visible *View* label. Both are gone with the
+   markup, and the row they were too wide for is the row the Detailed box now
+   shares. Amendment 24's foot-budget test is the one that measures what that
+   bought. */
+.facet-choice > summary {
   color: var(--ink);
 }
 
-.sort-field {
+.facet-choice fieldset {
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* The die (author, 2026-08-26 evening: "make it a dice icon, remove the
+   text"). It sits at the end of the facet row, so it takes the facet chip's
+   own height and hairline rather than inventing a second kind of control —
+   what differs is that it is square, because there is no word in it. */
+.random-die {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: center;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
   color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  flex: none;
 }
 
-/* A segmented control: which view is on is carried by aria-pressed and by the
-   recessed field behind it, never by colour alone. */
-.layout-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--ink-soft);
-}
-
-.layout-toggle button {
-  font-family: var(--font-utility);
-  font-size: 13.5px;
-  color: var(--ink-soft);
-  padding: 2px var(--space-2);
-}
-
-.layout-toggle button[aria-pressed='true'] {
-  background: var(--field);
+.random-die:hover {
+  color: var(--ink);
   border-color: var(--ink-soft);
-  color: var(--ink);
 }
 
 /* Detailed (author, 2026-08-22): a tick box beside the layout control, and a
@@ -276,6 +292,9 @@ select:hover {
   gap: var(--space-1);
   color: var(--ink-soft);
   cursor: pointer;
+  /* The chips are 27 px tall and this is a line of text; matching their height
+     is what puts the three on one baseline now that they share a row. */
+  min-height: 27px;
 }
 
 .result-count {
@@ -444,28 +463,29 @@ select:hover {
   z-index: 1;
 }
 
-/* A card with no picture has the name line first, and a long name would run
-   under a mark in that corner — so the bookmark stands beside the dates
-   instead: the one line of the block that is short. (It was the glyph that
-   held the corner until 2026-08-22; the reason survives the glyph.) 8 px
-   padding + the 42 px name line + 6 px gap puts the dates at 56; a 32 px
-   button centred on a 19.575 px line starts 6 px above it. The same spot with
-   or without a description beneath. */
-.index-card:not(.is-row):not(:has(.index-media)) > .bookmark {
-  top: 50px;
-}
+/* **Every card puts the mark in the same corner** (author, 2026-08-26
+   evening: "the bookmark for entries without images should be top right of
+   the card just like the imaged ones. In fact, just position it relative to
+   the margins instead of the image, to make sure its consistently top
+   right"). The rule above is the whole of it now, and it is measured from the
+   card's own padding box rather than from the picture — which is what it
+   always was in CSS, and is now what it is in intent too.
 
-/* "the one line of the block that is short" above is not always true: a
-   saint with both ends of a life dated prints "{birth} – {death}", and one
-   long enough — a full day, month and year at each end, or a "Reposed under
-   {ruler} ({earliest}–{latest})" — reaches the card's own right padding edge,
-   which is exactly where the mark stands. Nothing had reserved the mark's own
-   width out of the line before this, so the ellipsis truncated *behind* the
-   icon instead of clearing it. The mark's footprint — 32 px, plus a few more
-   so the ellipsis does not sit flush against it — is reserved here instead.
-   Only this card shape needs it: a card with an image has the mark over the
-   picture, and a row's mark is a flex sibling that already takes its own
-   column out of the line's width. */
+   **This reverses a position twice recorded.** A card with no picture has the
+   name line first, so the mark stood beside the *dates* at `top: 50px` from
+   2026-08-22 — first because the veneration glyph held that corner, and after
+   the glyph was removed (Amendment 25) because a long name would run under a
+   mark in it. The glyph's reason is gone and the name's reason is real, so it
+   is paid for rather than argued away: the name line and the dates both
+   reserve the mark's own footprint below, exactly as the dates alone did.
+   What the author gets for it is the thing the old rule could not give — one
+   corner, whatever the card holds.
+
+   The reserve is 40 px: the mark is 32, and the few over keep an ellipsis
+   from sitting flush against it. Only this card shape needs it — a card with
+   an image has the mark over the picture, where no text runs, and a row's
+   mark is a flex sibling that already takes its own column out of the line. */
+.index-card:not(.is-row):not(:has(.index-media)) .name-line,
 .index-card:not(.is-row):not(:has(.index-media)) .index-dates {
   padding-right: 40px;
 }

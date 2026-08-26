@@ -910,6 +910,23 @@
   }
 }
 
+/* **Square again on desktop** (author, 2026-08-26 evening: "make sure on
+   desktop the icon on the Daily main saint card is only cropped to square,
+   not to the horizontal rectangle"). The 3:2 band above was bought for one
+   reason and one reason only — "to reduce the height of the card to show more
+   of what's below in the also commemorated section" — and from 620 px the
+   image has a column of its own beside the body, so its height buys the
+   register nothing: what sets the hero's height there is the taller of the
+   two columns, and the body carries the name, the dates and six clamped lines
+   of the life. So the band costs a third of every icon and saves nothing.
+   Below 620 px the image is full width and *is* the card's height, which is
+   where the instruction that bought the band still applies; it keeps it. */
+@media (min-width: 620px) {
+  .hero-media {
+    aspect-ratio: 1 / 1;
+  }
+}
+
 /* 85% and centred until 2026-08-26, and both go with the square. The 15% was
    bought to keep a tall icon's own name above the fold, and the 3:2 band does
    that on its own — Anthony at 360 px now clears it by a third of a screen.

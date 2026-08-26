@@ -168,25 +168,45 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   await expect(page.locator('.week-strip')).toBeVisible();
 });
 
-test('the hero image box is a 3:2 band, cropped from the centre and the top', async ({ page }) => {
+test('the hero image is a square on desktop and a 3:2 band on a phone', async ({ page }) => {
   /*
-   * A square from 2026-08-21 to 2026-08-26, when the author asked for the band:
-   * "Change the daily saint image crop from square to a horizontal rectangle,
-   * focusing on the top third of the image where the saint's face is most
-   * likely to be. This is to reduce the height of the card to show more of
-   * what's below in the also commemorated section."
+   * A square from 2026-08-21, a band from 2026-08-26 morning — "Change the
+   * daily saint image crop from square to a horizontal rectangle … This is to
+   * reduce the height of the card to show more of what's below in the also
+   * commemorated section" — and **both, from the evening of the same day**:
+   * "make sure on desktop the icon on the Daily main saint card is only
+   * cropped to square, not to the horizontal rectangle."
    *
-   * What has not changed is why there is a fixed ratio at all: the box is
-   * reserved before the image decodes, so nothing reflows on arrival. A 3:2 is
-   * as structural a guarantee as a square was, and a third shorter. Anthony's
-   * icon is 369x501, so this is a real crop either way.
+   * The two are not in conflict once the reason is read. The band was bought
+   * to buy the register height, and from 620 px the image has a column of its
+   * own beside the body: the hero's height is the taller of the two columns
+   * and the body carries the name, the dates and six clamped lines of the
+   * life, so the band costs a third of every icon and saves nothing. Below
+   * 620 px the image is full width and *is* the card's height, which is where
+   * the morning's instruction still applies, and it keeps the band there.
+   *
+   * What has not changed either way is why there is a fixed ratio at all: the
+   * box is reserved before the image decodes, so nothing reflows on arrival.
+   * Anthony's icon is 369x501, so this is a real crop at both.
    */
   await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const img = page.locator('.hero-media img');
   await expect(img).toBeVisible();
-  const box = await img.boundingBox();
-  expect(Math.abs(box.width / box.height - 1.5)).toBeLessThan(0.03);
+  const desktop = await img.boundingBox();
+  expect(Math.abs(desktop.width / desktop.height - 1), 'square on desktop').toBeLessThan(0.03);
+
+  // And the band survives where it was bought: a phone, where the picture is
+  // the card's own height.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await expect(img).toBeVisible();
+  const phone = await img.boundingBox();
+  expect(Math.abs(phone.width / phone.height - 1.5), '3:2 on a phone').toBeLessThan(0.03);
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
   // What a tall icon loses is its lower half, not the face: cover, anchored to
   // the top and centred across. The blurred placeholder underneath is anchored
@@ -658,7 +678,7 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
   // (author: "so each time you open the site you get exposed to more
   // saints"); this test's subject is the unfiltered *set*, not the order, so
   // it chooses Earliest explicitly rather than asserting on a shuffled deal.
-  await page.selectOption('[data-sort]', 'earliest');
+  await chooseSort(page, 'earliest');
   await expect(page.locator('input[name="rangeMode"][value="overlaps"]')).toBeChecked();
   await expect(page.locator('[data-clear]')).toBeHidden();
 });
@@ -868,7 +888,7 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   // expects at the bottom, so it has to name the order that puts them there.
   // It rode the default until 2026-08-24, when Earliest took it and the last
   // card became whichever undated saint sorts last by name instead.
-  await page.selectOption('[data-sort]', 'name');
+  await chooseSort(page, 'name');
 
   // 742 saints now; Zoticus of Tomis is last alphabetically and far below
   // a 480 px viewport. A window is far fewer than the corpus at either end.
@@ -892,7 +912,7 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // read as a filter failure when nothing was wrong with the filter. The count
   // is the claim about the corpus; this is the claim about one card, and it
   // has to say which card it means.
-  await page.selectOption('[data-sort]', 'name');
+  await chooseSort(page, 'name');
   await (await facet(page, 'months')).getByLabel('January').check();
 
   // Anthony (17 January), Athanasius (18 January) and Paul of Thebes (15
@@ -1746,13 +1766,25 @@ test('the index spends as little height as it can before the first card', async 
   await expect(query).toHaveAttribute('aria-label', 'Search');
   await expect(page.locator('.index-controls label:has-text("Search")')).toHaveCount(0);
 
-  // Random sits with Sort, tight, and both are above the layout toggle's row.
-  const [sort, random] = [
-    await page.locator('.sort-group .sort-field').boundingBox(),
-    await page.locator('.sort-group [data-random]').boundingBox(),
+  /*
+   * Random travels with the *filters* now (author, 2026-08-26 evening: "move
+   * the 'Random saint' button next to 'Dates' filter and make it a dice icon,
+   * remove the text"), where it used to sit tight against Sort on the row
+   * below. It belongs there by argument too: it opens a saint from what the
+   * filters have left, so it ends the row that decides the pool rather than
+   * beginning the row that arranges it. It carries no text at all now, so the
+   * word is its accessible name and this is where that is pinned.
+   */
+  const die = page.locator('.facets .random-die');
+  await expect(die).toHaveAttribute('aria-label', 'Random saint');
+  await expect(die).toHaveText('');
+  const [dates, dieBox] = [
+    await page.locator('details[data-facet="dates"] > summary').boundingBox(),
+    await die.boundingBox(),
   ];
-  expect(random.x).toBeGreaterThan(sort.x + sort.width - 1);
-  expect(random.x - (sort.x + sort.width)).toBeLessThan(16);
+  // Beside Dates, on its line, and after it.
+  expect(dieBox.x).toBeGreaterThan(dates.x + dates.width - 1);
+  expect(Math.abs(dieBox.y - dates.y)).toBeLessThan(dates.height);
 
   // "The whole corpus, filterable." stood here until 2026-08-25 evening,
   // when the author removed it: the count note under the controls already
@@ -1849,16 +1881,22 @@ test('Clear filters appears beside the search bar, never below it', async ({ pag
 });
 
 test('the index offers two layouts, and remembers which one the reader chose', async ({ page }) => {
+  /*
+   * The control changed shape on 2026-08-26 evening — a chip that prints the
+   * view it is showing, where it was a two-button segmented toggle carrying
+   * `aria-pressed` — so what says "which view is on" is the chip's own words
+   * and the radio behind them. What the test is about is unchanged: two
+   * layouts, and the choice survives a reload.
+   */
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');
-  const rows = page.locator('[data-layout="rows"]');
 
-  await expect(page.locator('[data-layout="cards"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(viewChip(page)).toHaveText(/Cards$/);
   await expect(cards.first()).not.toHaveClass(/is-row/);
   const cardHeight = (await cards.first().boundingBox()).height;
 
-  await rows.click();
-  await expect(rows).toHaveAttribute('aria-pressed', 'true');
+  await chooseView(page, 'rows');
+  await expect(viewChip(page)).toHaveText(/Rows$/);
   await expect(cards.first()).toHaveClass(/is-row/);
   const rowHeight = (await cards.first().boundingBox()).height;
   // Tighter: that is the whole point of the second layout.
@@ -1868,7 +1906,8 @@ test('the index offers two layouts, and remembers which one the reader chose', a
   expect(new Set(heights).size).toBe(1);
 
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-layout="rows"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(viewChip(page)).toHaveText(/Rows$/);
+  await expect(page.locator('input[name="layout"]:checked')).toHaveValue('rows');
   await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
 });
 
@@ -2551,6 +2590,30 @@ const ready = (page, { church = 'russian', language = 'en' } = {}) =>
  * `opacity` and `transform` on the inner box for their duration and clear
  * them at the end, so the absence of an inline transform is the signal.
  */
+/**
+ * Sort and View became `.facet` chips holding radio groups on 2026-08-26
+ * evening, where they had been a `<select>` and a pair of `aria-pressed`
+ * buttons (author: "have it like the other drop down filters but it displays
+ * the selected setting"). These two are what every test that used to call
+ * `selectOption('[data-sort]')` or click `[data-layout="rows"]` calls now —
+ * one place, so the next change to that control is one edit and not thirty.
+ */
+const chooseSort = async (page, value) => {
+  const chip = page.locator('details[data-facet="sort"] > summary');
+  if (!(await page.locator('details[data-facet="sort"]').evaluate((d) => d.open))) await chip.click();
+  await page.locator(`input[name="sort"][value="${value}"]`).check();
+};
+
+const chooseView = async (page, value) => {
+  const chip = page.locator('details[data-facet="layout"] > summary');
+  if (!(await page.locator('details[data-facet="layout"]').evaluate((d) => d.open))) await chip.click();
+  await page.locator(`input[name="layout"][value="${value}"]`).check();
+};
+
+/** What the Sort chip is advertising, which is the grid's own order. */
+const sortChip = (page) => page.locator('details[data-facet="sort"] > summary');
+const viewChip = (page) => page.locator('details[data-facet="layout"] > summary');
+
 const panelSettled = (page, sel = '#church-panel') =>
   page.waitForFunction(
     (s) => {
@@ -2832,7 +2895,7 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   expect(await nothingCropped(page)).toEqual([]);
 
   // Rows take it too, at two lines, and nothing in a row is cropped either.
-  await page.locator('[data-layout="rows"]').click();
+  await chooseView(page, 'rows');
   await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
   await expect(page.locator('.index-card').first().locator('.index-desc')).toBeVisible();
   expect(await nothingCropped(page)).toEqual([]);
@@ -2846,7 +2909,7 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   await expect(page.locator('[data-detailed]')).toBeChecked();
   await expect(page.locator('.index-card').first().locator('.index-desc')).toBeVisible();
   await page.locator('[data-detailed]').uncheck();
-  await page.locator('[data-layout="cards"]').click();
+  await chooseView(page, 'cards');
 });
 
 test('a card lifespan is one line, ending in an ellipsis where three across would wrap it', async ({ page }) => {
@@ -2955,11 +3018,12 @@ test('the grid follows its column, not only the window', async ({ page }) => {
   expect(after.rightGap, `the grid leaves ${after.rightGap} px of its column unused`).toBeLessThan(2);
 });
 
-test('the bookmark stands in the image corner, takes the press, and is the Save', async ({ page }) => {
-  // Addendum H2. A frameless silhouette over the picture's top-right corner,
-  // above the link's ::after, so pressing it saves rather than opens; on a
-  // card with no picture it stands beside the dates, where a long name cannot
-  // run under it.
+test('the bookmark stands in the card corner, takes the press, and is the Save', async ({ page }) => {
+  // Addendum H2. A frameless silhouette over the card's top-right corner,
+  // above the link's ::after, so pressing it saves rather than opens — and
+  // **the same corner whether or not there is a picture** since 2026-08-26
+  // evening (author: "just position it relative to the margins instead of the
+  // image, to make sure its consistently top right").
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   // The grid is virtualised and seventy long, so a card is brought into the
@@ -3011,19 +3075,43 @@ test('the bookmark stands in the image corner, takes the press, and is the Save'
   expect(seen.fill).toBe(tokens.ink);
   expect(seen.opacity).toBe('0.5');
 
-  // A card with no picture: beside the dates. ('Christopher' alone now
-  // matches two saints in the 708-saint corpus — Christopher and
-  // Christopher the Roman, both imageless — so the search is narrowed.)
+  /*
+   * A card with no picture: **the same corner**, measured from the card's own
+   * padding box rather than from a picture that is not there. It stood beside
+   * the *dates* at `top: 50px` from 2026-08-22 — first because the veneration
+   * glyph held that corner, then (Amendment 25) because a long name would run
+   * under a mark in it — and the author reversed it on 2026-08-26 evening.
+   * The name's reason was real, so it is paid for rather than argued away:
+   * the name line reserves the mark's own footprint, exactly as the dates
+   * already did, and the assertion below is that a two-line name clears it.
+   *
+   * ('Christopher' alone matches two saints in the corpus — Christopher and
+   * Christopher the Roman, both imageless — so the search is narrowed.)
+   */
   const imageless = await showOnly('Christopher the Roman');
   const corner = await imageless.evaluate((card) => {
     const r = (el) => el.getBoundingClientRect();
+    const box = r(card);
     const b = r(card.querySelector('.bookmark'));
-    const d = r(card.querySelector('.index-dates'));
+    const name = r(card.querySelector('.index-name'));
     return {
-      centredOnDates: Math.abs((b.top + b.bottom) / 2 - (d.top + d.bottom) / 2) < 2,
+      fromTop: Math.round(b.top - box.top),
+      fromRight: Math.round(box.right - b.right),
+      // The name stops short of the mark rather than running under it.
+      nameClears: Math.round(b.left - name.right),
     };
   });
-  expect(corner.centredOnDates).toBe(true);
+  const imaged = await (await showOnly('Anthony the Great')).evaluate((card) => {
+    const r = (el) => el.getBoundingClientRect();
+    const box = r(card);
+    const b = r(card.querySelector('.bookmark'));
+    return { fromTop: Math.round(b.top - box.top), fromRight: Math.round(box.right - b.right) };
+  });
+  // One corner, whatever the card holds — which is the whole of the
+  // instruction, and is why these are compared rather than pinned.
+  expect(corner.fromTop).toBe(imaged.fromTop);
+  expect(corner.fromRight).toBe(imaged.fromRight);
+  expect(corner.nameClears).toBeGreaterThanOrEqual(0);
 
   // It is the Save: pressing it writes the store, the shape fills, the name
   // says so, the page stays where it was, and a reload finds it saved.
@@ -3063,7 +3151,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // put a tall portrait across the whole 780 px viewport left no such card
   // and the search came back empty. The subject here is what comes back
   // after a trip into a saint, not which saints are on top.
-  await page.selectOption('[data-sort]', 'earliest');
+  await chooseSort(page, 'earliest');
   await expect(page.locator('[data-count]')).toHaveText('127');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
@@ -3942,8 +4030,8 @@ test('the Index opens shuffled, says so, and deals a new hand next visit', async
    */
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-sort]')).toHaveValue('random');
-  await expect(page.locator('[data-sort] option:checked')).toHaveText('Random');
+  await expect(page.locator('input[name="sort"]:checked')).toHaveValue('random');
+  await expect(sortChip(page)).toHaveText(new RegExp('Random order$'));
   const trio = () => leaders(page, 3);
   const dealt = await trio();
 
@@ -3953,7 +4041,7 @@ test('the Index opens shuffled, says so, and deals a new hand next visit', async
   // ask") and is not what this half tests.
   await page.locator('.index-card').first().locator('.index-name').click();
   await page.locator('[data-back]').click();
-  await expect(page.locator('[data-sort]')).toHaveValue('random');
+  await expect(page.locator('input[name="sort"]:checked')).toHaveValue('random');
   expect(await trio()).toBe(dealt);
 
   await page.reload({ waitUntil: 'networkidle' });
@@ -3974,11 +4062,11 @@ test('latest runs the other way from earliest', async ({ page }) => {
   // Random is the default since the same evening; the two date orders are
   // this test's subject, so it chooses them explicitly — and reads the leader
   // off the screen, because a re-sort does not reorder the DOM.
-  await page.selectOption('[data-sort]', 'earliest');
+  await chooseSort(page, 'earliest');
   await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
-  await page.selectOption('[data-sort]', 'latest');
+  await chooseSort(page, 'latest');
   await expect.poll(() => leaders(page)).toBe('St. Peter (Cheltsov), Archpriest, Confessor (1972)');
-  await page.selectOption('[data-sort]', 'earliest');
+  await chooseSort(page, 'earliest');
   await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
 });
 
@@ -3998,11 +4086,11 @@ test('random deals an order, and holds it still under the reader', async ({ page
   await page.goto('/saints', { waitUntil: 'networkidle' });
   // Random is the default now; stepping through Earliest first keeps this
   // test what it was — proof that choosing Random deals and then holds.
-  await page.selectOption('[data-sort]', 'earliest');
+  await chooseSort(page, 'earliest');
   await expect.poll(() => leaders(page)).toBe('St. Moses the Prophet and God-seer');
   const earliest = await leaders(page);
 
-  await page.selectOption('[data-sort]', 'random');
+  await chooseSort(page, 'random');
   await expect.poll(() => leaders(page)).not.toBe(earliest);
   const dealt = await leaders(page);
   // The count is untouched: an order is not a filter.
@@ -4125,8 +4213,8 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // Pinned in a known order, because the Random default would hand this
   // assertion a different first card each run. The leader is read off the
   // screen: a re-sort repositions the cards without reordering the DOM.
-  await page.selectOption('[data-sort]', 'earliest');
-  await expect(page.locator('[data-sort] option:checked')).toHaveText('Најранији прво');
+  await chooseSort(page, 'earliest');
+  await expect(sortChip(page)).toHaveText(new RegExp('Најранији прво$'));
   await expect(page.locator('[data-set-aside]')).toContainText('Руска');
   /*
    * The name in the reader's own language, which this test asserted the
@@ -5101,7 +5189,7 @@ test('a saint is found by the type name in any of the five languages', async ({ 
   // where he sorts as much as about whether he matched. Alexander of Svir is
   // the second abbot alphabetically, which puts him in the first window of any
   // result set that holds him.
-  await page.selectOption('[data-sort]', 'name');
+  await chooseSort(page, 'name');
   const query = page.locator('[data-query]');
   const abbot = page.locator('.index-name', { hasText: 'Alexander of Svir' });
   // A retrying assertion, not a fixed wait: the search index is imported and
@@ -5247,7 +5335,7 @@ test('the random order holds until the page is reloaded', async ({ page }) => {
    */
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-sort] option:checked')).toHaveText('Random');
+  await expect(sortChip(page)).toHaveText(new RegExp('Random order$'));
   const first = await expect.poll(() => leaders(page)).not.toBe('');
   const dealt = await leaders(page);
   expect(dealt, 'the grid dealt something').not.toBe('');
@@ -5443,7 +5531,7 @@ test('a name in the reader language is searchable in it', async ({ browser }) =>
     localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
   );
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  await page.selectOption('[data-sort]', 'name');
+  await chooseSort(page, 'name');
   const card = page.locator('.index-name', { hasText: 'Феврония' });
   await page.locator('[data-query]').fill('Феврония Муромская');
   await expect(card).toHaveCount(1);
@@ -6990,4 +7078,158 @@ test('pressing a chooser twice inside its flight does not send it the wrong way'
   expect(flight.dy, 'towards the header').toBeLessThan(0);
   expect(flight.scale, 'shrinking').toBeLessThan(1);
   await expect(page.locator('#church-panel')).toBeHidden();
+});
+
+test('Sort and View are chips that print their own answer, and Detailed joins their row', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening, three instructions that are one move:
+   *
+   *   "Instead of Sort <button>, have it like the other drop down filters but
+   *    it displays the selected setting, e.g. 'Random order >' … This is to
+   *    compact the filter."
+   *   "Now with the new space on the Sort button row, do a similar button but
+   *    with the View options, listing 'Cards >' or 'Rows >'."
+   *   "Move the 'detailed' tick box up a row as well."
+   *
+   * A native `<select>` behind a visible *Sort* label and a two-button
+   * segmented toggle behind a visible *View* label became two `.facet` chips
+   * printing their answers, which is what freed the row for Detailed.
+   *
+   * The load-bearing assertion is that **the chip does not lie about the
+   * grid**. Amendment 24 records the same failure in the control this
+   * replaces: a `<select>` written out by hand showed "Name" while the grid
+   * was already in Earliest order, because the list was right and the label
+   * was not. A chip whose whole job is to print the answer can fail the same
+   * way, so the words and the grid are read together here.
+   */
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  // All three on one row, which is the point of compacting the other two.
+  const rows = await page.evaluate(() => {
+    const foot = document.querySelector('.index-foot');
+    const kids = [...foot.children].filter((k) => !k.classList.contains('sr-only'));
+    return {
+      count: kids.length,
+      lines: new Set(kids.map((k) => Math.round(k.getBoundingClientRect().top))).size,
+      classes: kids.map((k) => k.className.split(' ')[0]),
+    };
+  });
+  expect(rows.count).toBe(3);
+  expect(rows.lines, 'Sort, View and Detailed share a row').toBe(1);
+  expect(rows.classes).toContain('detail-toggle');
+
+  // The chip prints the answer, and its accessible name still says the
+  // question — the visible word is the value, so the control's own word goes
+  // in beside it out of sight rather than being dropped.
+  await expect(sortChip(page)).toHaveText('Sort: Random order');
+  await expect(sortChip(page).locator('.sr-only')).toHaveText('Sort: ');
+  await expect(viewChip(page)).toHaveText('View: Cards');
+
+  // A one-of-many chip, not a facet's any-of-many: radios, and it closes
+  // behind the answer.
+  await expect(page.locator('input[name="sort"]')).toHaveCount(4);
+  await expect(page.locator('input[name="sort"][type="radio"]')).toHaveCount(4);
+
+  await chooseSort(page, 'name');
+  await expect(sortChip(page)).toHaveText('Sort: Name');
+  expect(await page.locator('details[data-facet="sort"]').evaluate((d) => d.open)).toBe(false);
+  // And the grid is in that order, which is the half a printed answer can lie
+  // about: A before B before C, by the Index's own first three cards.
+  const names = await page.locator('.index-card .index-name').evaluateAll((els) =>
+    els.slice(0, 3).map((e) => e.textContent.trim()),
+  );
+  expect([...names].sort((a, b) => a.localeCompare(b))).toEqual(names);
+
+  await chooseView(page, 'rows');
+  await expect(viewChip(page)).toHaveText('View: Rows');
+  await expect(page.locator('.index-card').first()).toHaveClass(/is-row/);
+});
+
+test('Random is a die at the end of the filter row, and still keeps to the filters', async ({ page }) => {
+  /*
+   * Author, 2026-08-26 evening: "move the 'Random saint' button next to
+   * 'Dates' filter and make it a dice icon, remove the text."
+   *
+   * The word is gone from the face and kept as the accessible name — a button
+   * whose only content is a decorative SVG has no name at all otherwise, and
+   * this one is reachable by keyboard like any other.
+   *
+   * What it does is unchanged and is asserted again here rather than taken on
+   * trust, because it moved rows: it opens a saint from *what the filters have
+   * left*, and a random saint the reader's own filters exclude would look like
+   * the filters had failed.
+   */
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const die = page.locator('.facets .random-die');
+  await expect(die).toHaveCount(1);
+  await expect(die).toHaveText('');
+  await expect(die).toHaveAttribute('aria-label', 'Random saint');
+  // The icon inside is decoration: the name is on the button.
+  await expect(die.locator('svg')).toHaveAttribute('aria-hidden', 'true');
+  // It is in the filter row, after the last facet — not in the foot.
+  await expect(page.locator('.index-foot .random-die')).toHaveCount(0);
+  const [dates, box] = [
+    await page.locator('details[data-facet="dates"] > summary').boundingBox(),
+    await die.boundingBox(),
+  ];
+  expect(box.x).toBeGreaterThan(dates.x + dates.width - 1);
+  expect(Math.abs(box.y - dates.y), 'on the same line as Dates').toBeLessThan(dates.height);
+
+  /*
+   * Still inside the reader's own filters — narrowed to exactly one saint, so
+   * the die has one place it can land and the assertion is deterministic.
+   *
+   * The first draft of this collected every mounted card and asserted the die
+   * landed on one of them. It passed alone and failed in the suite on both
+   * projects, because **the grid is virtualised**: the pool the die draws from
+   * is every card the filters left, and the pool the DOM holds is however many
+   * of them happen to be mounted. That is the house rule about counting the
+   * DOM instead of the corpus, met in a test written the same day it was read.
+   */
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await expect(page.locator('.index-card')).toHaveCount(1);
+  await die.click();
+  await page.waitForURL(/\/saints\/anthony-the-great/);
+  await expect(page.locator('h1')).toContainText('Anthony the Great');
+});
+
+test('the filter row still holds one line with the die in it', async ({ page }) => {
+  /*
+   * The die is an eighth chip in a row Amendment 24 already records as tight,
+   * and it needed 14.6 px the row did not have — so it wrapped to a line of
+   * its own and read as a stray. The gap came down from 8 px to 6, the chips'
+   * own inline padding from 8 to 7, and the die is 24 px rather than the 27 a
+   * chip is tall.
+   *
+   * Measured the way Amendment 24 measures the foot, and for the same reason:
+   * the webfont is blocked so the column is the cold-load 580 px on every
+   * machine, and the utility face is forced to Arial so the widths are one
+   * number everywhere rather than Segoe UI on a Windows desk and DejaVu Sans
+   * on the runner. **This is a backstop and not a promise**: nothing here
+   * fails if a wider face wraps the die, because a wrapped chip row is
+   * graceful where a wrapped foot pushed the grid down the page.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.route('**/*.woff2', (route) => route.abort());
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.addStyleTag({ content: ':root { --font-utility: Arial, sans-serif !important; }' });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+
+  const row = await page.locator('.facets').evaluate((el) => {
+    const kids = [...el.children];
+    const gap = parseFloat(getComputedStyle(el).columnGap);
+    return {
+      count: kids.length,
+      need: kids.reduce((a, k) => a + k.getBoundingClientRect().width, 0) + gap * (kids.length - 1),
+      lines: new Set(kids.map((k) => Math.round(k.getBoundingClientRect().top))).size,
+      column: el.clientWidth,
+    };
+  });
+  expect(row.count, 'seven facets and the die').toBe(8);
+  expect(row.need, `the filter row needs ${row.need.toFixed(1)} px of a 580 px column`).toBeLessThan(580);
+  expect(row.lines, 'the die shares the facets line').toBe(1);
 });

@@ -81,7 +81,7 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 166 unit tests (`npm test`) — pure logic, no DOM.
-- 406 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 412 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-26, the sitting of Amendment 48), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
@@ -325,7 +325,11 @@ alone, the occasion in rubric beside it, the Great Feast in gold, and the
 allowance back behind the (i) where it was before that morning. The hero's
 bookmark is **pinned** to the register's own column rather than trailing the
 name, and the two header panels **arrive the way they leave** — one journey,
-both directions, `ui/fly.js`. And a
+both directions, `ui/fly.js`. On the Index, **Sort and View are chips that
+print their answer**, Random is a die at the end of the filter row, Detailed
+shares their line, *Sex* is *Gender*, and a card's mark is in the card's own
+corner whether or not it has a picture. The Daily hero is **square on desktop**
+and keeps the 3:2 band on a phone. And a
 **Great Feast is now named beside the fast**, from a nine-key table in
 `lib/liturgy.js` reckoned in the church's own calendar, in a gold-edged chip
 whose *words are ink* because `--gold` on gesso is 2.78:1.

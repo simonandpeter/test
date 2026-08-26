@@ -59,11 +59,16 @@ in base.css (L605)
 **Index / All Saints** — `src/views/saints.js` (`card()`, L785) +
 `src/styles/index.css`
 - `.index-card` (index.css L309), `.index-dates` (L390).
-- Bookmark positioning is **three separate rules** depending on card shape:
-  imaged card (`.index-card > .bookmark`, L440), imageless card (a lower
-  `top`, plus `.index-dates` padding-right reserved so long text's ellipsis
-  clears the icon, L469), and row (`.index-card.is-row > .bookmark`, L531,
-  a static flex sibling). Fixing one shape's overlap does not fix the others.
+- Bookmark positioning is **two rules** since 2026-08-26 evening: every
+  non-row card uses `.index-card > .bookmark` (the card's own corner), and a
+  row uses `.index-card.is-row > .bookmark` (a static flex sibling). An
+  imageless card reserves the mark's 40 px out of its name line and its dates
+  so neither runs under it — that reserve is what the single corner cost.
+- The Index's controls: seven facet chips plus the `.random-die` in `.facets`;
+  Sort, View and Detailed in `.index-foot`. Sort and View are `.facet-choice`
+  disclosures built by `choiceGroup()` in views/saints.js, read with
+  `currentChoice()` and written with `setChoice()` — **both, always**, or the
+  chip advertises an order the grid is not in.
 - Bookmark component itself: `src/ui/save.js` (one implementation, rendered
   everywhere a saint appears — Index, calendar hero, saint page).
 
@@ -105,7 +110,7 @@ top of the file is.
 - Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 166 as of
   2026-08-26.
 - Browser: everything lives in **one file**, `e2e/quality-floor.spec.js`
-  (~7,000 lines, 406 tests as of 2026-08-26 across two projects). Grep for a
+  (~7,300 lines, 412 tests as of 2026-08-26 across two projects). Grep for a
   selector, a class name, or a phrase from a test title before opening it —
   don't read it cold start to finish.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`

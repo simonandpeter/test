@@ -486,7 +486,7 @@ export const STRINGS = {
       church: 'Church',
       month: 'Feast month',
       type: 'Type',
-      sex: 'Sex',
+      sex: 'Gender',
       region: 'Region',
       historicity: 'Historicity',
       dates: 'Dates',
@@ -517,7 +517,7 @@ export const STRINGS = {
       // Author, 2026-08-24. Distinct from the *Random saint* button beside it:
       // that one opens a saint, this one orders the whole Index. Choosing it
       // again reshuffles.
-      random: 'Random',
+      random: 'Random order',
     },
   },
 

@@ -702,6 +702,27 @@ refuses to compute an allowance, and this default is not a computation of one
 — it is what the site says when it has been told a day is a fast and nothing
 more.
 
+**Every control on the Index is a chip** (author, 2026-08-26 evening, five
+instructions). Sort and View print their *answer* where a filter chip prints
+its question — "Random order", "Cards" — with the control's own word carried
+`sr-only` beside it, so the row reads as settings rather than as labels and
+values. Random is a die at the end of the filter row, its word kept as its
+accessible name. Detailed came up to join Sort and View on one line, and stays
+a box rather than a third option inside View: Addendum H1's axes are unchanged.
+
+**The hero is square on desktop and a 3:2 band on a phone** (same evening),
+which is the morning's band kept exactly where its own reason applies. From
+620 px the picture has a column beside the body and the hero's height is the
+taller column, so the band bought the register nothing there and cost a third
+of every icon; below 620 px the picture *is* the card's height and the band
+still earns its keep.
+
+**An Index card's mark is in the card's corner, whatever the card holds**
+(same evening), reversing the imageless card's `top: 50px` twice recorded —
+once for the veneration glyph that held that corner, once for the long name
+that would run under it. The name's reason is paid for with a reserve rather
+than argued away.
+
 **A panel arrives the way it leaves** (author, same evening: "the exact
 reverse"). The flight home has taught where the answer lives since
 2026-08-25; the way out taught nothing, because the panel simply appeared and

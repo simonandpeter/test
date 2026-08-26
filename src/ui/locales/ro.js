@@ -279,7 +279,7 @@ export const ro = {
       church: 'Biserica',
       month: 'Luna prăznuirii',
       type: 'Tip',
-      sex: 'Sex',
+      sex: 'Gen',
       region: 'Regiune',
       historicity: 'Istoricitate',
       dates: 'Date',
@@ -304,7 +304,7 @@ export const ro = {
       name: 'După nume',
       earliest: 'Cei mai timpurii întâi',
       latest: 'Cei mai târzii întâi',
-      random: 'La întâmplare',
+      random: 'Ordine aleatorie',
     },
   },
 

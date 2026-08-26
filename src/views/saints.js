@@ -194,7 +194,7 @@ function applySnapshot(snap) {
   controlsEl.querySelector('[data-to]').value = f.to ?? '';
   const mode = controlsEl.querySelector(`input[name="rangeMode"][value="${f.rangeMode}"]`);
   if (mode) mode.checked = true;
-  controlsEl.querySelector('[data-sort]').value = f.sort ?? EMPTY_FILTERS.sort;
+  setChoice(controlsEl, 'sort', f.sort ?? EMPTY_FILTERS.sort);
   for (const name of snap.openFacets ?? []) {
     const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
     if (group) group.open = true;
@@ -287,6 +287,61 @@ const checkboxes = (name, options) =>
     )
     .join('');
 
+/**
+ * A die, for the Random saint control (author, 2026-08-26 evening: "move the
+ * 'Random saint' button next to 'Dates' filter and make it a dice icon,
+ * remove the text"). Five pips on a face, which is the reading that is
+ * unmistakable at 15 px; the word it replaces is still the button's
+ * accessible name, so nothing is lost to a reader who cannot see it.
+ */
+const ICON_DIE = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+  stroke-width="1.7" aria-hidden="true" focusable="false">
+  <rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/>
+  <circle cx="8.5" cy="8.5" r="1.15" fill="currentColor" stroke="none"/>
+  <circle cx="15.5" cy="8.5" r="1.15" fill="currentColor" stroke="none"/>
+  <circle cx="12" cy="12" r="1.15" fill="currentColor" stroke="none"/>
+  <circle cx="8.5" cy="15.5" r="1.15" fill="currentColor" stroke="none"/>
+  <circle cx="15.5" cy="15.5" r="1.15" fill="currentColor" stroke="none"/>
+</svg>`;
+
+/**
+ * A one-of-many chip, wearing the same `.facet` disclosure the filters wear
+ * (author, 2026-08-26 evening, of Sort: "have it like the other drop down
+ * filters but it displays the selected setting, e.g. 'Random order >'" — and
+ * of View, "do a similar button"). Both were wider controls on the row below:
+ * a native `<select>` with a visible *Sort* label, and a three-part segmented
+ * toggle with a visible *View* label. Compacting them is what freed the row
+ * for the Detailed box.
+ *
+ * **The summary prints the value and the name is carried out of sight.** A
+ * chip reading "Random order" says what it is to a reader looking at it, and
+ * says nothing at all to a reader who is not — so the control's own word
+ * ("Sort", "View") is the first thing inside the summary, `sr-only`. That is
+ * the same division the facet chips make, where the visible word *is* the
+ * name; here the visible word is the answer, and the name goes in beside it
+ * rather than being dropped.
+ *
+ * Radios rather than the checkboxes `facetGroup` uses, because these are one
+ * of many and not any of many — the same reason the date range's own mode is
+ * a radio group.
+ */
+const choiceGroup = (legend, name, options, current) => {
+  const chosen = options.find((o) => o.value === current) ?? options[0];
+  return `<details class="facet facet-choice" data-facet="${esc(name)}">
+    <summary><span class="sr-only">${esc(legend)}: </span>${esc(chosen?.label ?? '')}</summary>
+    <fieldset><legend class="sr-only">${esc(legend)}</legend>
+      ${options
+        .map(
+          ({ value, label }) => `<label class="facet-option">
+            <input type="radio" name="${esc(name)}" value="${esc(value)}"${
+              value === chosen?.value ? ' checked' : ''
+            } /> ${esc(label)}
+          </label>`,
+        )
+        .join('')}
+    </fieldset></details>`;
+};
+
 const facetGroup = (legend, name, options) =>
   options.length
     ? `<details class="facet" data-facet="${name}"><summary>${esc(legend)}</summary>
@@ -305,6 +360,33 @@ const facetGroup = (legend, name, options) =>
  */
 const byLabel = (options) =>
   [...options].sort((a, b) => a.label.localeCompare(b.label, languageTag()));
+
+/**
+ * The chosen value of a `choiceGroup`, and the setting of one. Since
+ * 2026-08-26 evening Sort and View are radio groups inside a `.facet`
+ * disclosure rather than a `<select>` and a segmented toggle, and the chip's
+ * own summary prints the answer — so setting one is two things, the radio and
+ * the word, and neither may be done without the other or the control lies
+ * about the grid. That is the failure Amendment 24's own comment records for
+ * the `<select>` this replaces: the list was right and the label was lying.
+ */
+const currentChoice = (root, name, fallback) =>
+  root.querySelector(`input[name="${name}"]:checked`)?.value ?? fallback;
+
+const setChoice = (root, name, value) => {
+  const input = root.querySelector(`input[name="${name}"][value="${value}"]`);
+  if (!input) return;
+  input.checked = true;
+  const summary = root.querySelector(`details[data-facet="${name}"] > summary`);
+  const label = input.closest('label');
+  if (summary && label) {
+    // The `sr-only` span is the control's own name and stays; only the value
+    // after it is rewritten.
+    const name_ = summary.querySelector('.sr-only');
+    summary.textContent = label.textContent.trim();
+    if (name_) summary.prepend(name_);
+  }
+};
 
 function controls(state) {
   const { facets } = state;
@@ -345,34 +427,36 @@ function controls(state) {
         </div>
       </details>
 
+      <!-- Random travels with the filters now (author, 2026-08-26 evening:
+           "move the 'Random saint' button next to 'Dates' filter and make it
+           a dice icon, remove the text"). It belongs there by argument as
+           well as by instruction: it opens a saint *from what the filters
+           have left*, so it is the last thing in the row that decides the
+           pool rather than the first thing in the row that arranges it. The
+           word it dropped is its accessible name and its tooltip. -->
+      <button type="button" class="random-die" data-random
+        aria-label="${esc(STRINGS.saints.random)}"
+        title="${esc(STRINGS.saints.random)}">${ICON_DIE}</button>
     </div>
 
+    <!-- Three chips where there were a select, a segmented toggle and a tick
+         box on two rows (author, 2026-08-26 evening). The Detailed box came up
+         to join them once the other two had been compacted; it is still a
+         different axis from View, which is why it is still a box of its own
+         and not a third option inside that chip. -->
     <div class="index-foot">
-      <div class="sort-group">
-        <label class="sort-field utility">${STRINGS.saints.sort.label}
-          <!-- Built from SORTS with the current one marked, not written out
-               with the default implied by option order (author, 2026-08-24).
-               A <select> with no selected option shows its first, so listing
-               them by hand meant the control read "Name" while the grid was
-               already in Earliest order — the list was right and the label
-               was lying about it. -->
-          <select data-sort>
-            ${SORTS.map(
-              (id) => `<option value="${id}"${id === state.filters.sort ? ' selected' : ''}>` +
-                `${STRINGS.saints.sort[id]}</option>`,
-            ).join('')}
-          </select>
-        </label>
-        <button type="button" data-random>${STRINGS.saints.random}</button>
-      </div>
-
-      <div class="layout-toggle utility" role="group" aria-label="${STRINGS.saints.layout.description}">
-        <span aria-hidden="true">${STRINGS.saints.layout.label}</span>
-        ${LAYOUTS.map(
-          (id) => `<button type="button" data-layout="${id}"
-            aria-pressed="${String(id === state.layout)}">${STRINGS.saints.layout[id]}</button>`,
-        ).join('')}
-      </div>
+      ${choiceGroup(
+        STRINGS.saints.sort.label,
+        'sort',
+        SORTS.map((id) => ({ value: id, label: STRINGS.saints.sort[id] })),
+        state.filters.sort,
+      )}
+      ${choiceGroup(
+        STRINGS.saints.layout.label,
+        'layout',
+        LAYOUTS.map((id) => ({ value: id, label: STRINGS.saints.layout[id] })),
+        state.layout,
+      )}
 
       <label class="detail-toggle utility">
         <input type="checkbox" data-detailed${state.detailed ? ' checked' : ''}
@@ -437,9 +521,13 @@ function wireControls() {
     [...controlsEl.querySelectorAll(`input[name="${name}"]:checked`)].map((i) => i.value);
 
   const readFilters = (e) => {
-    // Detailed is a view control, not a filter; it has its own listener below
-    // and must not run a filter pass.
-    if (e?.target?.matches?.('[data-detailed]')) return;
+    // Detailed and View are view controls, not filters; each has its own
+    // listener below and neither may run a filter pass. View joined this
+    // guard on 2026-08-26 evening, when it became a radio inside a chip and
+    // started firing the same `input` this listener is bound to — without it
+    // a change of view laid every card out in the old one first and then
+    // re-rendered them all in the new, which is two passes and a flash.
+    if (e?.target?.matches?.('[data-detailed], input[name="layout"]')) return;
     const from = controlsEl.querySelector('[data-from]').value;
     const to = controlsEl.querySelector('[data-to]').value;
     state.filters = {
@@ -454,7 +542,7 @@ function wireControls() {
       from: from === '' ? null : Number(from),
       to: to === '' ? null : Number(to),
       rangeMode: controlsEl.querySelector('input[name="rangeMode"]:checked').value,
-      ...readSort(controlsEl.querySelector('[data-sort]').value),
+      ...readSort(currentChoice(controlsEl, 'sort', EMPTY_FILTERS.sort)),
     };
     update({ animate: true });
   };
@@ -463,6 +551,21 @@ function wireControls() {
   // element, and `input` fires for all of them — typing, checking, selecting —
   // so listening for `change` as well would only run every filter pass twice.
   controlsEl.addEventListener('input', readFilters);
+
+  /*
+   * A chip that prints its own answer has to be told when the answer changes,
+   * or it goes on advertising the order the grid is no longer in. Closing it
+   * is the other half: unlike a facet, which is any-of-many and stays open
+   * while the reader ticks a second box, this is one-of-many and the question
+   * is over the moment it is answered.
+   */
+  const onChoice = (e) => {
+    const input = e.target;
+    if (!input?.matches?.('input[name="sort"]')) return;
+    setChoice(controlsEl, 'sort', input.value);
+    input.closest('details')?.removeAttribute('open');
+  };
+  controlsEl.addEventListener('input', onChoice);
 
   const random = controlsEl.querySelector('[data-random]');
   const onRandom = () => {
@@ -486,17 +589,24 @@ function wireControls() {
     update({ animate: false });
   };
 
+  /*
+   * View is a chip of its own since 2026-08-26 evening, so the change arrives
+   * as an `input` on a radio rather than a click on one of two buttons. It
+   * has to run *before* `readFilters` would: both listen on the same element
+   * for the same event, and a re-render that has not yet been told the layout
+   * changed lays every card out in the old one.
+   */
   const onLayout = (e) => {
-    const button = e.target.closest('[data-layout]');
-    if (!button || button.dataset.layout === state.layout) return;
-    state.layout = button.dataset.layout;
+    if (!e.target?.matches?.('input[name="layout"]')) return;
+    const next = currentChoice(controlsEl, 'layout', state.layout);
+    if (next === state.layout) return;
+    state.layout = next;
+    setChoice(controlsEl, 'layout', next);
+    e.target.closest('details')?.removeAttribute('open');
     store.setSetting('indexLayout', state.layout);
-    for (const b of controlsEl.querySelectorAll('[data-layout]')) {
-      b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
-    }
     rerenderAll();
   };
-  controlsEl.addEventListener('click', onLayout);
+  controlsEl.addEventListener('input', onLayout);
 
   const detailedBox = controlsEl.querySelector('[data-detailed]');
   const onDetailed = () => {
@@ -521,7 +631,8 @@ function wireControls() {
 
   state.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
-    controlsEl.removeEventListener('click', onLayout);
+    controlsEl.removeEventListener('input', onChoice);
+    controlsEl.removeEventListener('input', onLayout);
     detailedBox.removeEventListener('change', onDetailed);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);

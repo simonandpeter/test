@@ -3577,6 +3577,87 @@ arrival to finish and all three tests measure the resting state now — and if
 the fade ever *stopped* landing at full opacity, that is what the helper's own
 timeout would catch.
 
+### The Index's controls compact into two rows
+
+Five instructions in one message, and they are one move: **every control on
+the Index is a chip now, and the two rows they took became one row of filters
+and one row of settings.**
+
+    "In All Saints page rename 'Sex >' filter to 'Gender >'."
+    "Move the 'Random saint' button next to 'Dates' filter and make it a dice
+     icon, remove the text."
+    "Instead of Sort <button>, have it like the other drop down filters but it
+     displays the selected setting, e.g. 'Random order >' … This is to compact
+     the filter."
+    "Now with the new space on the Sort button row, do a similar button but
+     with the View options, listing 'Cards >' or 'Rows >'."
+    "Move the 'detailed' tick box up a row as well."
+
+Sort was a native `<select>` behind a visible *Sort* label; View was a
+two-button segmented toggle behind a visible *View* label; Detailed was a tick
+box that wrapped to a row of its own. All three now sit on one line, because
+the first two became `.facet` disclosures holding radio groups — the same chip
+the filters wear, printing an **answer** where a filter chip prints a question.
+
+**The visible word is the value, so the control's own word goes in beside it
+out of sight.** A chip reading "Random order" tells a reader looking at it what
+it is and tells a reader who is not looking absolutely nothing, so "Sort: " is
+the first thing inside the summary, `sr-only`. Radios rather than the
+checkboxes `facetGroup` uses, because these are one-of-many; and the chip
+closes behind the answer, where a filter stays open for the second tick.
+
+**The failure a chip that prints its own answer can have is the one Amendment
+24 already recorded for the control it replaces**: the `<select>` there was
+written out by hand and showed "Name" while the grid was in Earliest order —
+the list was right and the label was lying. So `setChoice` writes the radio
+*and* the summary and neither may be done without the other, and the test
+reads the words and the grid's own first three cards together. Backed out —
+the summary left unrepainted — it reads "Sort: Random order" over a grid in
+name order, which is the same lie in the new shape.
+
+**The die needed 14.6 px the filter row did not have.** Random moved next to
+Dates and wrapped to a line of its own, reading as a stray. The row's gap came
+down from 8 px to 6, the chips' own inline padding from 8 to 7, and the die is
+24 px rather than the 27 a chip is tall: measured at the 580 px cold-load
+column in Arial's metrics, the eight need **570.5 px** where the seven alone
+needed 545. That is 9.5 px of margin and it is thin — Amendment 24 is the
+standing warning that a bare Linux runner's system-ui is wider than Arial
+again. **Nothing goes red if it wraps there**: the budget test measures the
+*foot*, where a second line pushed the grid down the page, and a wrapped chip
+row is graceful. The new test says so in as many words rather than pretending
+to a promise it cannot keep.
+
+One thing not moved: Detailed is still a box and not a third option inside the
+View chip. Addendum H1's reason stands — the layout says how the saints are
+arranged, this says how much of each is shown, and they are different axes.
+
+### Two crops, and a position reversed
+
+**The hero is square again on desktop** (author: "make sure on desktop the icon
+on the Daily main saint card is only cropped to square, not to the horizontal
+rectangle"). This is a *partial* reversal of the same day's morning, and the
+two instructions do not conflict once the reason is read: the 3:2 band was
+bought "to reduce the height of the card to show more of what's below in the
+also commemorated section", and from 620 px the image has a column of its own
+beside the body. What sets the hero's height there is the taller of the two
+columns, and the body carries the name, the dates and six clamped lines of the
+life — so the band cost a third of every icon and saved nothing. Below 620 px
+the image is full width and *is* the card's height, which is where the
+morning's instruction still bites, and the band stays. Measured: 221 x 221 at
+1280, 468 x 312 at 500.
+
+**Every Index card puts the mark in the same corner** (author: "the bookmark
+for entries without images should be top right of the card just like the imaged
+ones. In fact, just position it relative to the margins instead of the image").
+This reverses a position recorded twice. A card with no picture put the mark
+beside the *dates* at `top: 50px` from 2026-08-22 — first because the
+veneration glyph held that corner, and after the glyph went (Amendment 25)
+because a long name would run under a mark in it. The glyph's reason is gone;
+the name's reason is real and is **paid for rather than argued away**, with the
+name line reserving the mark's own 40 px exactly as the dates already did.
+Measured after: imaged and imageless cards both put the mark 9 px down and 9 px
+in from the card's own box, and a two-line name stops short of it.
+
 ### Two test defects of my own, both found by the backout
 
 * **A sign error that made two assertions vacuous.** The ring test read
@@ -3595,8 +3676,8 @@ backout that does not reproduce the defect is not a backout.
 ### Verification
 
 **166 unit** (163 at the top of the sitting; `greatFeast` added two and the
-strict default one) and **406 browser** (384; eleven new tests across two
-projects). All four locale packs are **297 of 297** with no English
+strict default one) and **412 browser** (384; fourteen new tests across two
+projects, and sixteen heirs rewritten to the Index's new controls). All four locale packs are **297 of 297** with no English
 fallbacks — thirteen keys added and five removed, hand-translated,
 `scripts/locale-coverage.mjs` run after each pass. The five removed all lost
 their last caller in the same evening: `fastModal.unstated` and `liturgy.fast`
@@ -3605,7 +3686,7 @@ to the strict default, and `liturgy.graded`, `liturgy.bare` and
 rather than left for the next person to grep for, which is the fate
 `saints.keptAll` is still waiting for.
 
-**Eighteen backouts run and watched to fail**, each restored and the touched
+**Twenty-two backouts run and watched to fail**, each restored and the touched
 files checksummed against pristine copies afterwards: the ring's inset (twice,
 once with each assertion isolated), the ring's radius, the name-days heading
 (and its inverse), the grade vocabulary, the feast chip's markup, the feast
@@ -3614,8 +3695,9 @@ reading of the grade (twice — the month's copy and the chip's, which are
 separate call sites and had to be shown to fail separately), the fast label's
 bare grade, the occasion chip's markup, the allowance's removal, and the
 occasion chip's rubric (swapped for gold, which fails on the green channel
-alone), the hero bookmark's pin, the opening flight itself, and the landing of
-an in-flight animation before the other direction starts.
+alone), the hero bookmark's pin, the opening flight itself, the landing of
+an in-flight animation before the other direction starts, the hero's desktop
+square, the card corner, the sort chip's repaint, and the filter row's budget.
 
 **Two more test defects of my own, both caught by their backout**, which is
 five in one sitting and the same shape every time — a premise assumed rather
@@ -3627,6 +3709,15 @@ where the defect actually shows. And it then read that rect 30 ms after the
 press, where `flyInto` starts its transform a frame later and the box is still
 at identity — the older flight test says so in its own comment, three hundred
 lines up, and I did not read it.
+
+**A sixth test defect of my own, and the plainest yet.** The die's test
+collected every *mounted* card and asserted the die landed on one of them. It
+passed alone and failed in the full suite on both projects, because the grid
+is virtualised: the pool the die draws from is every card the filters left,
+and the pool the DOM holds is however many happen to be mounted. That is
+HANDOFF.md's own house rule — "a count in the DOM is not a count in the
+corpus" — broken in a test written by someone who had read it that morning.
+It filters to one saint now.
 
 **A third test defect of my own**, and the same shape as the first two: the
 new occasion test called `ready(page, { church: 'russian' })` halfway through
