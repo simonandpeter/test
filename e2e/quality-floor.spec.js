@@ -1778,13 +1778,25 @@ test('the index spends as little height as it can before the first card', async 
   const die = page.locator('.facets .random-die');
   await expect(die).toHaveAttribute('aria-label', 'Random saint');
   await expect(die).toHaveText('');
-  const [dates, dieBox] = [
-    await page.locator('details[data-facet="dates"] > summary').boundingBox(),
-    await die.boundingBox(),
-  ];
-  // Beside Dates, on its line, and after it.
-  expect(dieBox.x).toBeGreaterThan(dates.x + dates.width - 1);
-  expect(Math.abs(dieBox.y - dates.y)).toBeLessThan(dates.height);
+  /*
+   * **Order, not geometry.** "Next to Dates" is asserted as the die being the
+   * last thing in the filter row with the dates facet immediately before it,
+   * which is true in every face; the first draft measured that they shared a
+   * line and CI went red on 2026-08-26, because the runner's system-ui is
+   * wider than Arial (Amendment 24, again) and the row wraps there. This test
+   * is about the page's *height* and its own comment two paragraphs down says
+   * absolute assertions are flaky by construction across the two faces — so
+   * it should never have carried a position at all. The one-line claim lives
+   * in `the filter row still holds one line with the die in it`, which blocks
+   * the webfont and forces Arial so the answer is one number everywhere.
+   */
+  const order = await page.locator('.facets').evaluate((row) => {
+    const kids = [...row.children];
+    const i = kids.findIndex((k) => k.classList.contains('random-die'));
+    return { last: i === kids.length - 1, before: kids[i - 1]?.dataset?.facet ?? null };
+  });
+  expect(order.last, 'the die ends the filter row').toBe(true);
+  expect(order.before, 'and Dates is what it stands next to').toBe('dates');
 
   // "The whole corpus, filterable." stood here until 2026-08-25 evening,
   // when the author removed it: the count note under the controls already
@@ -7134,12 +7146,20 @@ test('Sort and View are chips that print their own answer, and Detailed joins th
   await chooseSort(page, 'name');
   await expect(sortChip(page)).toHaveText('Sort: Name');
   expect(await page.locator('details[data-facet="sort"]').evaluate((d) => d.open)).toBe(false);
-  // And the grid is in that order, which is the half a printed answer can lie
-  // about: A before B before C, by the Index's own first three cards.
-  const names = await page.locator('.index-card .index-name').evaluateAll((els) =>
-    els.slice(0, 3).map((e) => e.textContent.trim()),
-  );
-  expect([...names].sort((a, b) => a.localeCompare(b))).toEqual(names);
+  /*
+   * And the grid is in that order, which is the half a printed answer can lie
+   * about — read through `leaders()`, which sorts by *geometry*.
+   *
+   * The first draft took the first three `.index-name` nodes in DOM order and
+   * failed in the full suite: the grid's cards are absolutely positioned and
+   * `paintWindow` leaves already-mounted ones where they sit, so after a
+   * re-sort the DOM order is not the order on screen. `leaders()` exists for
+   * exactly this and says so in its own comment — "every assertion about
+   * order reads geometry" — which I had read and then not used.
+   */
+  const top3 = (await leaders(page, 3)).split('|').map((n) => n.trim());
+  expect(top3).toHaveLength(3);
+  expect([...top3].sort((a, b) => a.localeCompare(b))).toEqual(top3);
 
   await chooseView(page, 'rows');
   await expect(viewChip(page)).toHaveText('View: Rows');
@@ -7171,12 +7191,22 @@ test('Random is a die at the end of the filter row, and still keeps to the filte
   await expect(die.locator('svg')).toHaveAttribute('aria-hidden', 'true');
   // It is in the filter row, after the last facet — not in the foot.
   await expect(page.locator('.index-foot .random-die')).toHaveCount(0);
-  const [dates, box] = [
-    await page.locator('details[data-facet="dates"] > summary').boundingBox(),
-    await die.boundingBox(),
-  ];
-  expect(box.x).toBeGreaterThan(dates.x + dates.width - 1);
-  expect(Math.abs(box.y - dates.y), 'on the same line as Dates').toBeLessThan(dates.height);
+  /*
+   * Read as order rather than measured as position, for the reason CI gave on
+   * 2026-08-26: the runner's system-ui is wider than Arial, the eight-chip row
+   * wraps there, and a die on the second line is still the thing standing
+   * next to Dates. Whether it *shares* that line is a question about one face
+   * at one column, and it is asked where it can be answered portably — in
+   * `the filter row still holds one line with the die in it`, which blocks the
+   * webfont and forces Arial.
+   */
+  const order = await page.locator('.facets').evaluate((row) => {
+    const kids = [...row.children];
+    const i = kids.findIndex((k) => k.classList.contains('random-die'));
+    return { last: i === kids.length - 1, before: kids[i - 1]?.dataset?.facet ?? null };
+  });
+  expect(order.last, 'the die ends the filter row').toBe(true);
+  expect(order.before, 'and Dates is what it stands next to').toBe('dates');
 
   /*
    * Still inside the reader's own filters — narrowed to exactly one saint, so

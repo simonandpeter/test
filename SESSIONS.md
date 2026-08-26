@@ -3673,6 +3673,45 @@ in from the card's own box, and a two-line name stops short of it.
 Amendment 46's rule again, and it earned its keep twice in one sitting: a
 backout that does not reproduce the defect is not a backout.
 
+### CI went red, and it was the warning I had written myself
+
+`a7e1022` failed on the runner: four failures, two assertions, both mine, both
+about the die's position. The handover paragraph for that commit said the die
+had 9.5 px of margin in Arial's metrics, that a bare Linux runner's system-ui
+is wider than Arial again, and that **"nothing goes red if it wraps there,
+because the budget test measures the foot"**. The first two clauses were right
+and the third was false: I had put a *geometric* assertion — the die shares
+Dates' line — into two tests that do not force a face.
+
+    desktop      dieBox.x 350 against dates.x + width - 1 = 926.4
+    mobile-360   dieBox.x 16  against 336.5
+
+Both are the die at the left edge of a second line. `the filter row still holds
+one line with the die in it` **passed on the same run**, because that one
+blocks the webfont and forces Arial, which is the whole reason Amendment 24
+built it that way.
+
+So the two positional assertions are gone and what replaces them is order
+rather than geometry: the die is the last child of `.facets` and the dates
+facet is immediately before it. That is what "next to Dates" means in a row
+that is allowed to wrap, and it is true in every face — checked by forcing
+Verdana, where the row takes two lines and both assertions still hold. The
+one-line claim stays where it can be answered portably.
+
+**The general lesson, and it is Amendment 24's own, learnt again**: a
+measurement in the native utility face is a measurement of one machine. The
+test at 1751 even carries a comment saying absolute assertions are flaky by
+construction between the two faces — and I added a position to it anyway.
+
+**And a third virtualisation defect in my own tests, in the same sitting.**
+The Sort chip's order assertion read the first three `.index-name` nodes in
+DOM order. The grid's cards are absolutely positioned and `paintWindow` leaves
+already-mounted ones where they sit, so after a re-sort the DOM order is not
+the order on screen; it passed alone and failed in the full suite. `leaders()`
+exists for exactly this and its own comment says "every assertion about order
+reads geometry". I had read it and not used it. Three of my six test defects
+this sitting were the same misconception about this grid.
+
 ### Verification
 
 **166 unit** (163 at the top of the sitting; `greatFeast` added two and the
@@ -3685,6 +3724,10 @@ to the strict default, and `liturgy.graded`, `liturgy.bare` and
 `liturgy.freeBecause` to the occasion moving into a chip. They are deleted
 rather than left for the next person to grep for, which is the fate
 `saints.keptAll` is still waiting for.
+
+*Counts below are the sitting's; `a7e1022` then went red on CI and was fixed by
+`the die is next to Dates` becoming an order assertion rather than a measured
+one — see the section above. Two clean full runs after it.*
 
 **Twenty-two backouts run and watched to fail**, each restored and the touched
 files checksummed against pristine copies afterwards: the ring's inset (twice,

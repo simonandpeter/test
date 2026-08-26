@@ -116,6 +116,14 @@ top of the file is.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`
 - Full run: `npx playwright test` (~5 min: `desktop` + `mobile-360` projects,
   each running every test).
+- **Two traps this file keeps paying for.** (1) The Index grid is virtualised
+  *and* absolutely positioned, so the mounted set is not the corpus and DOM
+  order is not screen order — assert order through `leaders()`, which sorts by
+  geometry, and never off `.first()`. (2) A width measured in the native
+  utility face is a measurement of one machine: CI's system-ui is wider than
+  Arial. Assert layout either by *order* (face-independent) or inside a test
+  that blocks the webfont and forces Arial, as the foot and filter-row budget
+  tests do.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored. A test that doesn't actually
   reproduce the defect when the fix is reverted isn't pinning anything —
