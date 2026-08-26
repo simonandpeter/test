@@ -55,6 +55,7 @@
 
   --font-serif: 'Literata', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
   --font-utility: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'GFS Nicefore', var(--font-serif);
 
   --ease: cubic-bezier(0.2, 0, 0, 1);
   --dur: 200ms;

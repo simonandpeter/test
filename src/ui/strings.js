@@ -11,7 +11,7 @@ export const STRINGS = {
     // hard-coded in index.html in both places, and stale there besides — the
     // site was renamed Orthodoxy Daily on 2026-08-24 and this key still said
     // The Orthodox Saint.
-    name: 'Orthodoxy Daily',
+    name: 'Daily Dox',
     // The tab and the bookmark keep the *other* name, which is Amendment 31's
     // deliberate split: the head says The Orthodox Saint, the page says
     // Orthodoxy Daily. Painting the header from the pack (2026-08-25) nearly

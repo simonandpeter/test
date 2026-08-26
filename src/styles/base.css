@@ -473,6 +473,21 @@ header.chrome .chrome-calendar {
   letter-spacing: 0.01em;
 }
 
+/* English only ("Daily Dox" is the English name; other packs keep their own
+   translated name in Literata). GFS Nicefore is Latin+Greek caps with no
+   accented lowercase, so letting it apply to the other packs' names would
+   drop mid-word into Literata for just the accented letters (Romanian's ă,
+   Greek's tonos) and silently move the pixel-tuned wrap widths in the
+   `header.chrome .site-name` rules above (678/695/672 px at the 72ch column,
+   the Καθημερινά break-word floor at 320 px). Cyrillic packs are unaffected
+   either way - this font has no Cyrillic, so they fall back to Literata
+   in full regardless of scoping. */
+html[lang='en'] .site-name,
+html[lang='en'] .veil-name {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
 /* One line, always (author, 2026-08-25 evening). Narrow, the nav has a row of
    the header to itself and the four labels fit 320 px in all five packs with
    the gap below; wide, the grid above guarantees it its own width. `nowrap`
