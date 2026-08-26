@@ -142,12 +142,15 @@ function shell(card, backLabel) {
    * sort of stuff should be listed in the small info session for each
    * saint").
    *
-   * Deduplicated across the churches and against `types`, because three
-   * calendars calling the same man a hierarch should say it once. Only 20
-   * attestations in the corpus carry titles at all, so for most saints this
-   * line is exactly what it was.
+   * Deduplicated across the churches, against `types`, and against `office`
+   * where one is recorded — a title that only repeats the office in different
+   * words ("Archbishop of Constantinople" from a church's own titles, beside
+   * an `office` field reading the same) would otherwise print twice on the
+   * same line. Only 20 attestations in the corpus carry titles at all, so for
+   * most saints this line is exactly what it was.
    */
   const seen = new Set((card.types ?? []).map((t) => t.toLowerCase()));
+  if (card.office) seen.add(String(card.office).toLowerCase());
   const titles = [];
   for (const att of card.attestations ?? []) {
     for (const title of att.titles ?? []) {

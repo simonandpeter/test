@@ -129,23 +129,60 @@ function renderNav(current) {
   paintDailyLabel(current === 'calendar');
 }
 
+/**
+ * A fixed span home, however far down the reader was (2026-08-27: "make sure
+ * it scrolls back to the top instead of just jumping back with no animation
+ * ... a set time animation so if you scroll really far down it doesn't take
+ * ages"). Fixed rather than proportional to distance — three thousand pixels
+ * eases over the same span as three hundred — which is why this is a
+ * hand-rolled tween against `performance.now()` rather than the platform's
+ * `scrollTo({ behavior: 'smooth' })`: the CSSOM View spec leaves smooth
+ * scroll's duration and curve to the browser, and Chrome's own scales with
+ * distance. Reduced motion is still every other scroll in this file —
+ * removed, not shortened.
+ */
+function animateScrollToTop(duration = 300) {
+  const from = window.scrollY;
+  if (!from || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, 0);
+    return;
+  }
+  const start = performance.now();
+  const easeOutCubic = (t) => 1 - (1 - t) ** 3;
+  const tick = (now) => {
+    const t = Math.min(1, (now - start) / duration);
+    window.scrollTo(0, Math.round(from * (1 - easeOutCubic(t))));
+    if (t < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
 /*
  * Pressing the button for the page you are already on takes you to the top of
- * it (author, same instruction). The listener sits on the nav rather than on
- * each anchor, so it survives every re-render, and it runs before the router's
- * own document-level click handler because the nav is inside the document —
- * which is what lets it forget the remembered position first, so the
- * navigation that follows lands at the top rather than putting the reader back
- * where they just asked not to be.
+ * it (author, 2026-08-27). The listener sits on the nav rather than on each
+ * anchor, so it survives every re-render, and it runs before the router's own
+ * document-level click handler because the nav is inside the document — which
+ * is what lets it forget the remembered position first, so the navigation
+ * that follows lands at the top rather than putting the reader back where
+ * they just asked not to be.
+ *
+ * The navigation itself is never skipped, same URL or not: the Index's nav
+ * link opens fresh, filters and all, even from `/saints` back to `/saints`
+ * (Addendum H3, "the nav link still opens the Index fresh, because it does
+ * not ask") — a real render the reader's press has to trigger, not a no-op
+ * this file could shortcut by comparing pathnames. What changes is only how
+ * `swap` lands the scroll once that render has happened: a flag set here and
+ * read there, because two things trying to own `window.scrollY` for the same
+ * click — this listener animating toward 0 while `swap`'s own reset jumps
+ * there first — is exactly the race an earlier version of this fell into, the
+ * animation caught mid-flight and yanked back to its own target a frame in.
  */
+let animateLanding = false;
 navEl.addEventListener('click', (e) => {
   const link = e.target.closest('a[aria-current="page"]');
   if (!link || !navEl.contains(link)) return;
   sectionScroll.delete(lastRoute?.nav);
-  // Instant, like every other scroll this file makes. A smooth one would still
-  // be travelling when the navigation that follows lands, and it would carry
-  // the page away from wherever that navigation put it.
-  window.scrollTo(0, 0);
+  animateLanding = link.pathname === location.pathname;
 });
 
 // The Daily view says which day it is showing; the button answers.
@@ -212,17 +249,25 @@ function show({ route, params, path }, nav = {}) {
   // and the navigation has just answered it (brief §7).
   cancelPrefetches();
 
+  // Read and clear immediately: this navigation is the one the flag was set
+  // for, and the next one — whatever triggers it — starts from instant again.
+  const landAnimated = animateLanding;
+  animateLanding = false;
+
   const swap = () => {
     // Views that hold listeners or timers get told they are leaving; the rest
     // are pure renderers and do not implement it.
     currentView?.destroy?.();
     currentView = view ?? null;
     renderNav(route?.nav);
-    // Every navigation lands at the top of the page it opens. A view that puts
-    // the reader back where they were — the Index, on its × or on the
-    // browser's back — does so after this, from its own record (DESIGN.md
-    // §5c). The first render keeps whatever position the browser gave it.
-    if (!firstRender) window.scrollTo(0, 0);
+    // Every navigation lands at the top of the page it opens, or — a change
+    // of section — back where this section was left (`returning`). The first
+    // render keeps whatever position the browser gave it. A press of the
+    // current page's own nav button eases there instead of jumping.
+    if (!firstRender) {
+      if (landAnimated) animateScrollToTop();
+      else window.scrollTo(0, 0);
+    }
     if (!view) {
       document.title = `${STRINGS.notFound.title} - ${STRINGS.site.tabName}`;
       viewEl.innerHTML = `<h1>${STRINGS.notFound.title}</h1><p>${STRINGS.notFound.body}</p>`;
@@ -238,6 +283,14 @@ function show({ route, params, path }, nav = {}) {
         : view.title;
     document.title = `${heading} - ${STRINGS.site.tabName}`;
     view.render(viewEl, { data, params, router, nav, cameFrom });
+    // A returning section is put back where it was *before* the transition's
+    // new-state snapshot is taken (the Index's own restore — the saint page's
+    // × or a browser back — happens separately, from its own record, DESIGN.md
+    // §5c). The view has just rendered synchronously, so its height already
+    // exists for everything but async-filled content, which the retry loop
+    // after `finished` corrects. Doing it here means the fade crosses into the
+    // page already at the right spot instead of at the top with a jump after.
+    if (!firstRender && returning) window.scrollTo(0, returning);
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
     // yet, focus is already at the top of the document, and Chrome treats a
@@ -262,11 +315,13 @@ function show({ route, params, path }, nav = {}) {
   // reproducibly a second long in a headless browser.
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   /*
-   * The section restore runs *after* the transition, not inside `swap`. A
-   * cross-fade snapshots the page and hands the scroll back at the end, so a
-   * position set inside the callback is undone the moment the transition
-   * finishes — which is why the Index, whose own restore is inside its render,
-   * needs no such care and this does.
+   * `swap` already put a returning section back where it was, so the fade
+   * itself crosses into the right spot. This second call, after the
+   * transition settles, is only for a view that was not yet its final height
+   * inside `swap` — About's fetched statistics, the Index's filled-in
+   * descriptions — where the first attempt landed short and this corrects it
+   * once the content has grown. In the common case it lands on the same y a
+   * second time and does nothing.
    */
   if (document.startViewTransition && !reduced && !first) {
     document.startViewTransition(swap).finished.finally(() => restoreScroll(returning));

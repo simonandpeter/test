@@ -3244,10 +3244,12 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('[data-count]')).toHaveText('127');
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
-  // The nav link is a fresh Index.
+  // The nav link is a fresh Index. Landing at the top now eases there
+  // (2026-08-27) rather than jumping, so the scroll check polls like the
+  // count check beside it instead of reading a single instant.
   await page.locator('nav a[href$="/saints"]').click();
   await expect(page.locator('[data-count]')).toHaveText('742');
-  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
 
@@ -7699,6 +7701,28 @@ test('a saint is named by rank, and what they held is on the line below', async 
   await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
   await expect(page.locator('h1.saint-name')).toHaveText('St John Chrysostom');
 
+  /*
+   * 2026-08-27, a reader: "st John Chrysostom does not display 'Archbishop
+   * of Constantinople' on his saint card rank like others." He is one of the
+   * eight saints left over from the original ten-saint seed corpus, whose
+   * attestations still carry a per-church `titles` array (`Hierarch`,
+   * `Archbishop of Constantinople`) from a schema `office` later replaced —
+   * a genuine miss, not a display bug, closed by giving him and 22 others an
+   * `office` the same audit found missing. Fixing it uncovered a second,
+   * real bug: the facts line's old titles-dedup only checked `card.types`,
+   * never `card.office`, so a title repeating the office in the same words
+   * printed twice. Both the card and the page are pinned here.
+   */
+  const facts = (await page.locator('.saint-facts').innerText()).trim();
+  expect(facts.match(/Archbishop of Constantinople/g)?.length, facts).toBe(1);
+  expect(facts).toContain('Hierarch');
+
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.locator('[data-query]').fill('John Chrysostom');
+  await expect(page.locator('.index-card', { hasText: 'John Chrysostom' }).locator('.index-dates')).toContainText(
+    'Archbishop of Constantinople',
+  );
+
   // The office is printed on the facts line, and the type that says the same
   // word is not printed twice beside it.
   await page.goto('/saints/gorazd-of-bohemia', { waitUntil: 'networkidle' });
@@ -8047,6 +8071,121 @@ test('a section is remembered where the reader left it, and a second press goes 
   // Each section keeps its own place, not one between them.
   await press('nav.site-nav a[href$="/about"]');
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(400);
+});
+
+test('a second press of the current page eases to the top over a fixed span, not a jump', async ({ page }) => {
+  /*
+   * 2026-08-27, a reader, right after the test above shipped: "when you press
+   * the current page header button, make sure it scrolld back to the top
+   * instead of just jumping back with no animation. make sure its a set time
+   * animation so if you scroll really far down it doesn't take ages to
+   * animate back to the top."
+   *
+   * Two things pinned together. First, motion: `window.scrollY` is sampled on
+   * every animation frame for a second after the press, entirely inside the
+   * page — a click-then-sample round-tripped through Node instead, one
+   * `page.evaluate` at a time, turned out to be measuring this suite's own
+   * IPC latency as often as the animation: a real ease calls `scrollTo`
+   * several times, at least one of them strictly between the start and 0; a
+   * jump goes straight to 0 and every sample after the first frame reads it.
+   * Second, *fixed* span: a scroll five times deeper must still settle inside
+   * the same rough deadline, which is the difference between this
+   * hand-rolled tween and the platform's own `scrollTo({ behavior: 'smooth'
+   * })` — Chrome scales that one's duration with distance, which is exactly
+   * "takes ages" for a long page.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  async function pressAndTrace(startY) {
+    await page.evaluate((y) => window.scrollTo(0, y), startY);
+    return page.evaluate(
+      ({ windowMs }) =>
+        new Promise((resolve) => {
+          const samples = [];
+          const start = performance.now();
+          document.querySelector('nav.site-nav a[aria-current="page"]').click();
+          const tick = () => {
+            samples.push({ t: performance.now() - start, y: window.scrollY });
+            if (performance.now() - start < windowMs) requestAnimationFrame(tick);
+            else resolve(samples);
+          };
+          requestAnimationFrame(tick);
+        }),
+      { windowMs: 1200 },
+    );
+  }
+
+  const short = await pressAndTrace(600);
+  const midpoints = short.filter((s) => s.y > 0 && s.y < 600);
+  expect(midpoints.length, `a jump goes straight to 0: ${JSON.stringify(short)}`).toBeGreaterThan(0);
+  expect(short.at(-1).y, JSON.stringify(short)).toBe(0);
+
+  const long = await pressAndTrace(3000);
+  const longMidpoints = long.filter((s) => s.y > 0 && s.y < 3000);
+  expect(longMidpoints.length, JSON.stringify(long)).toBeGreaterThan(0);
+  // Five times the depth, and still settled well inside the sampling window —
+  // not scaled, and nowhere near "ages".
+  const longSettledAt = long.find((s) => s.y === 0)?.t;
+  expect(longSettledAt, JSON.stringify(long)).toBeLessThan(900);
+});
+
+test('under reduced motion the same press still lands at the top, with no ease', async ({ browser }) => {
+  // Removed, not shortened, like every other motion in this file: a press
+  // under reduced motion has nothing to be mid-flight in, so a sample taken
+  // immediately after must already read 0.
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
+
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, 600));
+  await press('nav.site-nav a[aria-current="page"]');
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  await ctx.close();
+});
+
+test('the remembered spot is where the fade lands, not where it starts', async ({ page }) => {
+  /*
+   * Author, 2026-08-27, a follow-up to the test above: the section restore
+   * used to run only after the cross-fade finished (`.finished.finally(...)`),
+   * so the fade itself always ran from the top of the page and then jumped to
+   * the remembered spot once the animation was over — the restore was real,
+   * the fade lying about it was the bug. The fix moved the restore into
+   * `swap`, after the view has rendered, so it lands before
+   * `startViewTransition`'s new-state snapshot is taken and the fade crosses
+   * into the right spot instead of past it.
+   *
+   * Measured through the transition's own `ready` promise rather than a fixed
+   * wait: `ready` resolves once that snapshot has been captured and before
+   * the animation runs, so whatever `window.scrollY` reads at that instant is
+   * what the reader's fade actually shows. A `waitForTimeout` would be
+   * measuring a clock rather than the moment the transition itself keys off.
+   */
+  const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
+
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await press('nav.site-nav a[href$="/about"]');
+  await expect(page.locator('h1')).toBeVisible();
+
+  await page.evaluate(() => {
+    const orig = document.startViewTransition.bind(document);
+    document.startViewTransition = (cb) => {
+      const t = orig(cb);
+      window.__readyScrollY = undefined;
+      t.ready.then(() => {
+        window.__readyScrollY = window.scrollY;
+      });
+      return t;
+    };
+  });
+  await press('nav.site-nav a[href$="/saints"]');
+  await expect.poll(() => page.evaluate(() => window.__readyScrollY)).toBe(1200);
 });
 
 test('the Calendar facet opens on the header\'s calendar and resets when it changes', async ({ page }) => {
