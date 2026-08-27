@@ -83,5 +83,11 @@
       },
       "model": "Pe Cuvântul cel împreună..."
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
   ]
 }

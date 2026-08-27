@@ -1,6 +1,6 @@
 {
   "credit": null,
-  "licence": "Public Domain Mark 1.0",
-  "source_url": "https://example.invalid/source-to-be-recorded",
-  "note": "Author reports these are public-domain works under the Creative Commons Public Domain Mark (2026-08-21): copyright has expired, and no attribution is required. The source_url is a deliberate placeholder on an unresolvable reserved domain, entered on the author's instruction so the field can be exercised before the real links are in hand — the build warns while it stands, and the page prints the licence without linking it."
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Anthony_the_Great_icon_(lebanon).jpg",
+  "note": "Wikimedia Commons, “Anthony the Great icon (lebanon).jpg” — fetched 2026-08-28 at 1280px wide. Artist as recorded there: Unknown authorUnknown author. Date as recorded there: 18th century. The licence is as Commons records it.\n\n**Replaces the image this record carried until 2026-08-28.** That one was a modern painted icon with no recorded source, and its meta claimed copyright had expired — which cannot be true of a recent painting, because a living iconographer holds copyright in their own work as any painter does. The author asked on 2026-08-28 for pictures whose licence can actually be checked, so this one comes from Commons, where the provenance and the licence are recorded and linked rather than asserted here. That is what source_url is for: it is how a reader tests the claim instead of taking it on trust."
 }

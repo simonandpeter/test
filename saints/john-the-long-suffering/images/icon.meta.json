@@ -1,6 +1,6 @@
 {
   "credit": null,
-  "licence": "Public Domain Mark 1.0",
-  "source_url": "https://example.invalid/source-to-be-recorded",
-  "note": "Author reports these are public-domain works under the Creative Commons Public Domain Mark (2026-08-21): copyright has expired, and no attribution is required. The source_url is a deliberate placeholder on an unresolvable reserved domain, entered on the author's instruction so the field can be exercised before the real links are in hand — the build warns while it stands, and the page prints the licence without linking it."
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%BE%D0%B0%D0%BD%D0%BD_%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9.jpg",
+  "note": "Wikimedia Commons, “Иоанн Многострадальный.jpg” — fetched 2026-08-28 at 339px wide. Artist as recorded there: Unknown authorUnknown author. Date as recorded there: 1890-03-08. The licence is as Commons records it.\n\n**Replaces the image this record carried until 2026-08-28.** That one was a modern painted icon with no recorded source, and its meta claimed copyright had expired — which cannot be true of a recent painting, because a living iconographer holds copyright in their own work as any painter does. The author asked on 2026-08-28 for pictures whose licence can actually be checked, so this one comes from Commons, where the provenance and the licence are recorded and linked rather than asserted here. That is what source_url is for: it is how a reader tests the claim instead of taking it on trust."
 }
