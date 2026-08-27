@@ -381,6 +381,24 @@ everything, counted, filterable, and honest about what the corpus does and does
 not hold. Neither is allowed to pretend to be the other, and the toggle is one
 press either way.
 
+**The carousel's cards show their pictures whole** (author, 2026-08-27). A
+fixed 150 px column, and whatever height the icon's own proportions make —
+never a crop. Each card is a grid whose picture row takes the row's slack, so
+the icons stand on one line and the captions start on one line without anything
+being resized to arrange it; a picture tall enough to reach the 240 px ceiling
+is scaled to fit, which is the one case where a card is narrower than its
+column and still shows the whole image. Under the name go the office and the
+dates — the same subtext the Index's cards carry, because a face in a row of
+faces is worth placing.
+
+**The search field follows the reader down the register** (author,
+2026-08-27). Past the head of the page it holds the line under the chrome, and
+the filters ride with it: away while scrolling, down over the register when the
+cursor goes into the field, away again at the next turn of the wheel. It is the
+one control both of the page's faces share, and it does not move or fade when
+they change — a control that is in the same place before and after has not
+happened to the reader, and animating it would say it had.
+
 **A row reads name-first.** The picture stands at the trailing end of the row,
 just inside the bookmark, and a saint with no icon keeps the slot rather than
 closing it up. So every name begins at the same left edge down a scrolling

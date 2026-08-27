@@ -8657,6 +8657,13 @@ test('a row reads name-first, with the picture at the trailing end', async ({ pa
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await chooseView(page, 'rows');
+  /*
+   * Pinned, because the Index opens in **random order** and this test needs
+   * both kinds of row on screen at once — it failed on a deal that happened to
+   * put no icon in the first screenful, which is a test measuring its own luck.
+   * Earliest is deterministic and its opening rows carry both.
+   */
+  await chooseSort(page, 'earliest');
   await expect(page.locator('.index-card.is-row').first()).toBeVisible();
 
   const rows = await page.evaluate(() => {
@@ -8687,8 +8694,30 @@ test('a row reads name-first, with the picture at the trailing end', async ({ pa
   expect(one('bodyLeft'), 'names do not share a left edge').toBe(1);
   expect(one('mediaLeft'), 'pictures do not share a column').toBe(1);
   expect(one('markLeft'), 'marks do not share a column').toBe(1);
-  // The test is only worth anything if both kinds of row are on screen.
-  expect(new Set(rows.map((r) => r.hasImage)).size, 'no imageless row in view').toBe(2);
+  // The columns are only a claim if both kinds of row were among them.
+  expect(rows.some((r) => !r.hasImage), 'no imageless row in view').toBe(true);
+
+  /*
+   * And an imaged row, named rather than hoped for: two saints who certainly
+   * have icons, so the picture's own placement is asserted against a real
+   * thumbnail rather than whichever rows the deal produced.
+   */
+  await page.locator('[data-query]').fill('Anthony');
+  await expect(page.locator('.index-card.is-row').first()).toBeVisible();
+  const imaged = await page.evaluate(() =>
+    [...document.querySelectorAll('.index-card.is-row')]
+      .filter((c) => c.querySelector('.index-media img'))
+      .map((c) => ({
+        bodyLeft: Math.round(c.querySelector('.row-body').getBoundingClientRect().left),
+        mediaLeft: Math.round(c.querySelector('.index-media').getBoundingClientRect().left),
+        markLeft: Math.round(c.querySelector('.bookmark').getBoundingClientRect().left),
+      })),
+  );
+  expect(imaged.length, 'no row with a picture to check').toBeGreaterThan(0);
+  for (const r of imaged) {
+    expect(r.bodyLeft, JSON.stringify(r)).toBeLessThan(r.mediaLeft);
+    expect(r.mediaLeft, JSON.stringify(r)).toBeLessThan(r.markLeft);
+  }
 });
 
 test('the life comes before the veneration on a saint page', async ({ page }) => {
@@ -8838,4 +8867,315 @@ test('a second press inside the fall lands the first one rather than racing it',
   await expect(page.locator('.facets')).toBeHidden();
   // Nothing left mid-fall, and no card stranded pointer-inert.
   await expect.poll(() => page.locator('.is-falling').count()).toBe(0);
+});
+
+/* ---- the round of 2026-08-27, late ---------------------------------------- */
+
+test('a carousel card prints the whole name, the office and the dates, and shows the icon entire', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "make sure the full name is printed and is not
+   * shortened with '...'. Also dont crop the images, but fix their width to
+   * what they currently are. Also include their office and dating under their
+   * names in carousel mode."
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const cards = await page.evaluate(() => {
+    const out = [];
+    for (const card of document.querySelectorAll('.cx-card')) {
+      const name = card.querySelector('.cx-name');
+      const media = card.querySelector('.cx-media img');
+      out.push({
+        clamp: getComputedStyle(name).webkitLineClamp,
+        nameOverflows: name.scrollHeight > name.clientHeight + 1,
+        width: Math.round(card.getBoundingClientRect().width),
+        hasSub: !!card.querySelector('.cx-sub'),
+        fit: media ? getComputedStyle(media).objectFit : null,
+      });
+    }
+    return out;
+  });
+  expect(cards.length).toBeGreaterThan(10);
+  // Nothing clamped, and no name cut off by its own box.
+  for (const c of cards) {
+    expect(c.clamp, 'a name is still line-clamped').toBe('none');
+    expect(c.nameOverflows, 'a name is cut off by its box').toBe(false);
+  }
+  // One column width for every card, whatever its picture.
+  expect(new Set(cards.map((c) => c.width)).size, 'the cards are not one width').toBe(1);
+  // Never `cover`, which is the crop the author asked to remove.
+  for (const c of cards.filter((c) => c.fit)) expect(c.fit).toBe('contain');
+  // And the subtext is there for the saints who have one to show.
+  expect(cards.some((c) => c.hasSub), 'no card carries an office or a date').toBe(true);
+});
+
+test('the carousel fades in rather than appearing, and comes back where it was left', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "The carousel mode doesnt fade back in, it just
+   * appears. Also make sure when you switch back to carousel mode, the site
+   * saves the location the carousel was in so you go back there."
+   *
+   * The fade failed for a reason worth pinning: the arriving state is held for
+   * two frames, and with a transition on it the opacity only *began*
+   * travelling toward 0 before being released, so there was nothing to fade
+   * up from. The snap is what makes the second beat visible.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  /*
+   * Compared as an offset within a card's width, not as the name at the head
+   * of the row. The row is *drifting* the whole time — that is the mode — so
+   * between the reading before the switch and the reading after it the answer
+   * moves by however long the two mode changes took, and a leading-card test
+   * flips the moment that crosses a card boundary. What is being claimed is
+   * "it comes back where it was", and a card's width is the resolution at
+   * which that claim means anything.
+   */
+  const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
+  const cardWidth = await page.evaluate(
+    () => document.querySelector('.cx-card').getBoundingClientRect().width,
+  );
+  await page.evaluate(() => {
+    document.querySelector('[data-carousel-track]').scrollLeft += 2400;
+  });
+  await page.waitForTimeout(200);
+  const before = await at();
+  expect(before).toBeGreaterThan(0);
+
+  // Waited on the *label*, which only changes once `applyMode` has run: the
+  // fall takes about half a second first, and pressing again inside it is the
+  // double-press the guard cancels — which is a race, not a test.
+  await page.locator('[data-mode-toggle]').click();
+  await expect(page.locator('[data-mode-label]')).toHaveText('Carousel mode');
+
+  // Back, watching the carousel's own opacity through the change.
+  const fade = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const out = [];
+        const t0 = performance.now();
+        document.querySelector('[data-mode-toggle]').click();
+        const tick = () => {
+          const el = document.querySelector('[data-carousel]');
+          if (!el.hidden) out.push(Number(getComputedStyle(el).opacity));
+          if (performance.now() - t0 < 1500) requestAnimationFrame(tick);
+          else resolve(out);
+        };
+        requestAnimationFrame(tick);
+      }),
+  );
+  expect(fade.length, 'the carousel never came back').toBeGreaterThan(4);
+  expect(fade[0], 'it appeared at full strength instead of fading in').toBeLessThan(0.1);
+  expect(fade.at(-1)).toBeGreaterThan(0.9);
+  // And within a card of where it was left, rather than back at the start.
+  const after = await at();
+  expect(
+    Math.abs(after - before),
+    `the row reopened at ${after}, having been left at ${before}`,
+  ).toBeLessThan(cardWidth);
+});
+
+test('the mode toggle wears no frame, and its word crosses over', async ({ page }) => {
+  // Author, 2026-08-27: "Remove the bubble frame around the carousel button,
+  // and make it fade between modes instead of just snapping to its other
+  // state."
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const toggle = page.locator('[data-mode-toggle]');
+  await expect(toggle).toHaveCSS('border-style', 'none');
+  await expect(page.locator('[data-mode-label]')).toHaveText('Advanced search');
+
+  // The word goes to nothing before it comes back as the other one.
+  const faded = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const label = document.querySelector('[data-mode-label]');
+        let sawFade = false;
+        const t0 = performance.now();
+        document.querySelector('[data-mode-toggle]').click();
+        const tick = () => {
+          if (Number(getComputedStyle(label).opacity) < 0.5) sawFade = true;
+          // Past the fall (about 560 ms) and the 140 ms cross-over after it.
+          if (performance.now() - t0 < 1100) requestAnimationFrame(tick);
+          else resolve(sawFade);
+        };
+        requestAnimationFrame(tick);
+      }),
+  );
+  expect(faded, 'the word snapped instead of crossing over').toBe(true);
+  await expect(page.locator('[data-mode-label]')).toHaveText('Carousel mode');
+});
+
+test('the search field is untouched by the change of mode', async ({ page }) => {
+  // Author, 2026-08-27: "make sure the search bar doesnt disappear when
+  // transitioning between carousel and advanced search; its in the same place
+  // in both modes, should stay untouched."
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const box = () => page.evaluate(() => {
+    const r = document.querySelector('.index-row').getBoundingClientRect();
+    return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width) };
+  });
+  const before = await box();
+
+  // Watched through the change: it must never be caught mid-fall.
+  const fell = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        let seen = false;
+        const t0 = performance.now();
+        document.querySelector('[data-mode-toggle]').click();
+        const tick = () => {
+          const row = document.querySelector('.index-row');
+          if (row.classList.contains('is-falling') || Number(getComputedStyle(row).opacity) < 0.99) seen = true;
+          if (performance.now() - t0 < 900) requestAnimationFrame(tick);
+          else resolve(seen);
+        };
+        requestAnimationFrame(tick);
+      }),
+  );
+  expect(fell, 'the search row was animated out with the filters').toBe(false);
+  await expect(page.locator('.facets')).toBeVisible();
+  expect(await box(), 'the search row moved between modes').toEqual(before);
+});
+
+test('the search field sticks under the chrome, and the filters drop from it', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "Have the search bar become a sticky header when you
+   * scroll down the All Saints advanced search mode, otherwise you need to go
+   * all the way back to the top to search for anything. When you click on that
+   * search bar, make the filters drop down from that sticky header. And when
+   * you go back to scrolling, the filters drop back up disappearing under the
+   * search bar."
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const state = () =>
+    page.evaluate(() => {
+      const bar = document.querySelector('[data-index-sticky]');
+      const drop = document.querySelector('[data-filter-drop]');
+      const inner = document.querySelector('.filter-drop-inner');
+      const row = document.querySelector('.index-row');
+      return {
+        stuck: bar.classList.contains('is-stuck'),
+        open: bar.classList.contains('is-filters-open'),
+        rowTop: Math.round(row.getBoundingClientRect().top),
+        rowBottom: Math.round(row.getBoundingClientRect().bottom),
+        // Where the filters actually are, and whether they can be seen. The
+        // band keeps its height either way — that is the point of it — so the
+        // question is the contents' position, not the box's size.
+        innerTop: Math.round(inner.getBoundingClientRect().top),
+        shown: getComputedStyle(inner).visibility === 'visible',
+        docH: document.documentElement.scrollHeight,
+        chromeBottom: Math.round(document.querySelector('header.chrome').getBoundingClientRect().bottom),
+      };
+    });
+
+  // At the top it is just the page's own head, filters and all.
+  const top = await state();
+  expect(top.stuck).toBe(false);
+  expect(top.shown).toBe(true);
+  const heightAtTop = top.docH;
+
+  // Scrolled: it holds the line under the chrome, and the filters are away —
+  // up behind the row, which is above their own band.
+  await page.evaluate(() => window.scrollTo(0, 1500));
+  await expect.poll(async () => (await state()).stuck).toBe(true);
+  await expect.poll(async () => (await state()).shown).toBe(false);
+  await expect
+    .poll(async () => {
+      const s = await state();
+      return s.innerTop < s.rowBottom;
+    })
+    .toBe(true);
+  const held = await state();
+  expect(held.rowTop, 'the field did not stop under the chrome').toBe(held.chromeBottom);
+
+  // **And none of it moved the page.** The fold used to collapse the band's
+  // height, which took 69 px out of the document and left every remembered
+  // position 69 px short on the next visit.
+  expect(held.docH, 'folding the filters changed the document height').toBe(heightAtTop);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(1500);
+
+  // Asked for: they come down, below the row and over the register.
+  await page.evaluate(() => document.querySelector('[data-query]').focus({ preventScroll: true }));
+  await expect.poll(async () => (await state()).open).toBe(true);
+  await expect.poll(async () => (await state()).shown).toBe(true);
+  // Polled, not sampled: the drop takes `--dur-slot` to travel, and the class
+  // is on before the transform has moved.
+  await expect
+    .poll(async () => {
+      const s = await state();
+      return s.innerTop >= s.rowBottom;
+    })
+    .toBe(true);
+  const open = await state();
+  expect(open.rowTop, 'the row left its line under the chrome').toBe(open.chromeBottom);
+  expect(open.docH, 'opening the filters changed the document height').toBe(heightAtTop);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(1500);
+
+  // Scrolling on folds them back under the field.
+  await page.mouse.move(640, 500);
+  await page.mouse.wheel(0, 300);
+  await expect.poll(async () => (await state()).open).toBe(false);
+  await expect.poll(async () => (await state()).shown).toBe(false);
+
+  // Back at the top they are simply on the page again.
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect.poll(async () => (await state()).stuck).toBe(false);
+  await expect.poll(async () => (await state()).shown).toBe(true);
+});
+
+test('a restored section never touches zero on the way', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "the website header still sometimes jumps up and down
+   * when changing pages."
+   *
+   * The header element does not move — measured across six navigations at two
+   * widths, it is pinned at 0 throughout. What moved was the *page*, and on a
+   * phone the header rides it: the restore used to reset to 0 and scroll to
+   * the remembered position a moment later, and arriving at 0 tells the
+   * browser the reader is at the top, so it begins showing its URL bar and
+   * then has to put it away again. One scroll, one direction, no bounce.
+   */
+  const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
+  await ready(page);
+  await page.setViewportSize({ width: 390, height: 780 });
+  await page.addInitScript(() => {
+    window.__scrolls = [];
+    const orig = window.scrollTo.bind(window);
+    window.scrollTo = (...a) => {
+      window.__scrolls.push(a[1]);
+      return orig(...a);
+    };
+  });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+
+  await press('nav.site-nav a[href$="/saints"]');
+  await expect(page.locator('.index-controls')).toBeVisible();
+
+  await page.evaluate(() => {
+    window.__scrolls = [];
+  });
+  await press('nav.site-nav a[data-nav-daily]');
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+
+  const scrolls = await page.evaluate(() => window.__scrolls);
+  expect(scrolls, `the restore went by way of the top: ${JSON.stringify(scrolls)}`).not.toContain(0);
+  expect(scrolls.at(-1)).toBe(1200);
 });

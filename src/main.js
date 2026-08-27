@@ -358,11 +358,22 @@ function show({ route, params, path }, nav = {}) {
     currentView?.destroy?.();
     currentView = view ?? null;
     renderNav(route?.nav);
-    // Every navigation lands at the top of the page it opens, or — a change
-    // of section — back where this section was left (`returning`). The first
-    // render keeps whatever position the browser gave it. A press of the
-    // current page's own nav button eases there instead of jumping.
-    if (!firstRender) {
+    /*
+     * Every navigation lands at the top of the page it opens, or — a change of
+     * section — back where this section was left (`returning`). The first
+     * render keeps whatever position the browser gave it. A press of the
+     * current page's own nav button eases there instead of jumping.
+     *
+     * **A restore does not touch zero on the way.** It used to: reset to 0,
+     * then scroll to the remembered position a moment later. On a desk that is
+     * invisible, and on a phone it is the header "jumping up and down when
+     * changing pages" — arriving at 0 tells the browser the reader is at the
+     * top, so it starts showing its URL bar, and the scroll that follows sends
+     * it away again. The whole page moves twice, and the sticky bar rides it
+     * both ways. Where there is a position to go back to, that is the only
+     * place this navigation scrolls to.
+     */
+    if (!firstRender && !returning) {
       if (landAnimated) animateScrollToTop();
       else window.scrollTo(0, 0);
     }
@@ -436,7 +447,32 @@ function paintSiteName() {
   if (home) home.setAttribute('href', router.href('/'));
 }
 
+/**
+ * The height of the sticky bar, published to CSS as `--chrome-h`.
+ *
+ * Anything that wants to stick *under* the chrome needs to know how tall it is
+ * — the Index's search field does — and that is not a constant: the narrow
+ * header is two rows, the five packs set their own widths, and an open chooser
+ * panel makes the bar taller still. A ResizeObserver is the only honest answer;
+ * a number written into the stylesheet would be wrong at some width in some
+ * language on the day it was written.
+ */
+function watchChromeHeight() {
+  const bar = document.querySelector('.chrome-bar');
+  if (!bar) return;
+  const publish = () => {
+    // The header alone, not the panels: a panel opens *downward* over the page
+    // and should not push what is stuck under the bar down with it.
+    const header = bar.querySelector('header.chrome');
+    const h = Math.round((header ?? bar).getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--chrome-h', `${h}px`);
+  };
+  publish();
+  new ResizeObserver(publish).observe(bar);
+}
+
 async function boot() {
+  watchChromeHeight();
   initTheme(document.getElementById('theme-toggle'));
   // The stored language is applied before anything renders (Amendment 36):
   // currentLanguage() merges the locale over STRINGS on first read, and the

@@ -79,7 +79,7 @@ export function loopSafe(list, min = 10) {
  * element reports `scrollLeft` 0 and ignores writes, which silently throws the
  * position away.
  */
-export function loopScroll(track, count, { buffer = 12, speed = 26 } = {}) {
+export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = null } = {}) {
   let headSpan = 0; // where the first real item starts
   let bodySpan = 0; // one full period, first real item to the copy after the run
   let lowerBound = 0; // one item in from the true leading edge
@@ -92,6 +92,7 @@ export function loopScroll(track, count, { buffer = 12, speed = 26 } = {}) {
   let focused = false;
   let raf = null;
   let pos = null;
+  let lastWritten = -1;
   let currentSpeed = 0;
   let last = performance.now();
 
@@ -105,18 +106,24 @@ export function loopScroll(track, count, { buffer = 12, speed = 26 } = {}) {
     // with each resize until the wrap arithmetic no longer lands on a copy.
     if (bodySpan && next && bodySpan !== next) {
       track.scrollLeft = track.scrollLeft * (next / bodySpan);
+      lastWritten = track.scrollLeft;
       if (pos !== null) pos *= next / bodySpan;
     }
     bodySpan = next;
     headSpan = first ? first.offsetLeft : 0;
     lowerBound = edge ? edge.offsetLeft : 0;
     // Open on the first *real* item rather than at the DOM's true edge, which
-    // is `buffer` copies back. Only before the reader has touched it: after
+    // is `buffer` copies back — or, where the caller remembers one, on the
+    // offset the row was left at. Only before the reader has touched it: after
     // that, where the track sits is their business.
     if (!started && headSpan) {
       started = true;
-      track.scrollLeft = headSpan;
-      pos = headSpan;
+      const at = startAt ?? headSpan;
+      track.scrollLeft = at;
+      lastWritten = track.scrollLeft;
+      pos = track.scrollLeft;
+      wrap();
+      pos = track.scrollLeft;
     }
   }
 
@@ -128,14 +135,29 @@ export function loopScroll(track, count, { buffer = 12, speed = 26 } = {}) {
     let delta = 0;
     if (at < lowerBound) delta = Math.ceil((lowerBound - at) / bodySpan) * bodySpan;
     else if (at > upper) delta = -Math.ceil((at - upper) / bodySpan) * bodySpan;
-    if (delta) track.scrollLeft = at + delta;
+    if (delta) {
+      track.scrollLeft = at + delta;
+      lastWritten = track.scrollLeft;
+    }
     return delta;
   }
 
   const onScroll = () => {
-    // The reader's own scrolling is the authority on where the track is; the
-    // drift picks up from wherever they left it.
-    if (pos !== null && !raf) pos = track.scrollLeft;
+    /*
+     * **Whose scroll was that?** The drift writes `scrollLeft` every frame, and
+     * every one of those writes comes back through here. The test used to be
+     * `!raf` — "no frame is scheduled, so it cannot have been us" — which is
+     * never true while the drift is running, so the answer was always *ours*
+     * and a scroll from anybody else was silently discarded: the next frame
+     * wrote the drift's own stale `pos` straight back over it. That undid a
+     * reader's drag and threw away the offset the carousel was asked to
+     * reopen at.
+     *
+     * The honest test is the position itself. Anything that is not what the
+     * drift last wrote came from somewhere else — a finger, a wheel, a caller
+     * — and that is the authority.
+     */
+    if (Math.abs(track.scrollLeft - lastWritten) > 1) pos = track.scrollLeft;
     wrap();
   };
   const onTouchStart = () => {
@@ -199,6 +221,7 @@ export function loopScroll(track, count, { buffer = 12, speed = 26 } = {}) {
     currentSpeed += (speed - currentSpeed) * 0.06;
     pos += currentSpeed * (dt / 1000);
     track.scrollLeft = pos;
+    lastWritten = track.scrollLeft;
     // Corrected in the same frame, synchronously, rather than through the
     // async scroll event — which would race the next nudge.
     pos += wrap();

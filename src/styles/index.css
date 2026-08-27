@@ -726,36 +726,157 @@ html.is-rolling #view {
   margin: 0;
 }
 
-/* A chip, like the filters it replaces — the same hairline and height, so the
-   control that swaps the page's face is visibly one of the page's own. */
+/* No frame around it (author, 2026-08-27: "Remove the bubble frame around the
+   carousel button"). It is a word beside a heading now — the underline on
+   hover is the affordance, the same one a name in a register carries. */
 .mode-toggle {
   flex: none;
   min-height: var(--facet-h);
-  padding: var(--facet-pad-y) var(--space-3);
-  border: 1px solid var(--rule);
-  border-radius: 999px;
+  padding: var(--facet-pad-y) 0;
+  border: none;
+  border-radius: 0;
   background: none;
-  color: var(--ink);
+  color: var(--ink-soft);
   cursor: pointer;
-  transition:
-    background-color var(--dur) var(--ease),
-    border-color var(--dur) var(--ease);
+  text-underline-offset: 3px;
+  transition: color var(--dur) var(--ease);
 }
 
 .mode-toggle:hover {
-  background: var(--field);
-  border-color: var(--ink-soft);
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* The word crosses over rather than snapping (author, same instruction: "make
+   it fade between modes instead of just snapping to its other state"). The
+   label is its own span so the button — its box, its focus ring, its place in
+   the row — is untouched while the word inside it changes, which is the same
+   arrangement the Daily nav link uses for Today. */
+.mode-toggle .mode-label {
+  display: inline-block;
+  transition: opacity 140ms ease-out;
+}
+
+.mode-toggle .mode-label.is-fading {
+  opacity: 0;
 }
 
 /* In carousel mode the page is the search field and the row under it, and
    nothing else (author: "which only has the search bar and the carousel
    underneath it"). The filters keep their DOM so the reader's choices survive
    the trip; they are simply not shown. */
-.is-carousel .facets,
-.is-carousel .index-foot,
+.is-carousel .filter-drop,
 .is-carousel [data-set-aside],
 .is-carousel [data-tray] {
   display: none;
+}
+
+/* ---- the search field, stuck ---------------------------------------------- */
+
+/* Zero-height marker just above the block. When it leaves the top of the
+   viewport the block has become stuck, and an IntersectionObserver says so —
+   see `wireSticky` in views/saints.js. */
+.sticky-sentinel {
+  height: 0;
+}
+
+/* The search field and the filters travel together, under the chrome bar.
+   `--chrome-h` is published by main.js from a ResizeObserver, because the
+   header's height is not a constant: two rows on a phone, and five packs of
+   its own widths.
+
+   The ground is opaque for the same reason the chrome's is — a bar over
+   scrolling text with a transparent ground is unreadable the moment a line
+   passes under it — and it sits *below* the chrome's z-index so the chooser
+   panels still open over it. */
+/* **The controls block itself is what sticks**, and that is not a detail: a
+   sticky element can only travel inside its own containing block, so a wrapper
+   *inside* `.index-controls` came unstuck the moment the page scrolled past
+   the controls' own few hundred pixels. This block is a direct child of the
+   view, which is as tall as the register, so it has the whole page to travel. */
+.index-controls {
+  position: sticky;
+  top: var(--chrome-h, 0px);
+  z-index: 12;
+  /* Transparent, and the *row* carries the ground — see the fold below for
+     why the block's own height must never change. */
+  background: none;
+}
+
+/* The ground belongs to the search row, which is the part that is actually a
+   bar: over scrolling text a transparent one is unreadable the moment a line
+   passes under it.
+   
+   The hairline is *reserved* rather than added on sticking — transparent until
+   it is wanted. A border that appears is a row one pixel taller, the document
+   one pixel longer, and the page nudged by one to compensate; two tests caught
+   exactly that as a scroll restored to 501 where it was left at 500. The
+   padding and margin trade places for the same reason, so the row's outer
+   height never moves. */
+.index-row {
+  background: var(--gesso);
+  border-bottom: 1px solid transparent;
+}
+
+/* The hairline and the shadow that separate the stuck bar from the register
+   running under it. On the row, not the block: the block is taller than the
+   bar and mostly transparent. */
+.index-controls.is-stuck .index-row {
+  box-shadow: 0 6px 12px -10px rgb(0 0 0 / 0.5);
+  border-bottom-color: var(--rule);
+  margin-bottom: 0;
+  padding-bottom: var(--space-2);
+}
+
+/* ---- the fold, which must not cost a pixel of layout ---------------------- */
+
+/*
+ * **The filters keep their space whether or not they are shown**, and that is
+ * the whole design of this rule rather than an oversight.
+ *
+ * The obvious way is to collapse the height — `grid-template-rows` 1fr to 0fr
+ * — and it was written that way first. It takes 69 px out of the document the
+ * moment the bar sticks, the browser's scroll anchoring answers by moving the
+ * page to keep the content still, and the reader sees nothing wrong. What it
+ * breaks is *remembered* positions: the Index stores a scroll measured with
+ * the filters folded and restores it with them open, folds again, and loses
+ * the same 69 px — creeping up the page a little further on every visit. Two
+ * tests caught it as a 68 px shortfall.
+ *
+ * So the band stays. It is clipped, and the filters slide up out of it and
+ * behind the search row, which is the movement the author asked for ("the
+ * filters drop back up disappearing under the search bar"). What is left is a
+ * transparent 69 px through which the register scrolls, and no layout change
+ * anywhere.
+ */
+.filter-drop {
+  overflow: hidden;
+}
+
+.filter-drop-inner {
+  transition:
+    transform var(--dur-slot) var(--ease),
+    opacity var(--dur-slot) var(--ease);
+}
+
+/* Stuck and unasked: up behind the row, and inert — the band is still over the
+   register, so it must not take a click or a tab stop meant for a card. */
+.index-controls.is-stuck:not(.is-filters-open) .filter-drop-inner {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    transform var(--dur-slot) var(--ease),
+    opacity var(--dur-slot) var(--ease),
+    visibility 0s linear var(--dur-slot);
+}
+
+/* Stuck and asked for: down over the register, on the page's own ground so the
+   register does not read through them. */
+.index-controls.is-stuck.is-filters-open .filter-drop-inner {
+  background: var(--gesso);
+  box-shadow: 0 8px 14px -12px rgb(0 0 0 / 0.5);
 }
 
 /* ---- the drifting row ---------------------------------------------------- */
@@ -773,6 +894,9 @@ html.is-rolling #view {
    length). `scrollbar-width: none` because the row has no ends to scroll to. */
 .carousel-track {
   display: flex;
+  /* Stretch, so every card is as tall as the tallest in the row and the text
+     under the pictures starts on one line — see `.cx-card` for how. */
+  align-items: stretch;
   gap: var(--space-3);
   overflow-x: auto;
   overflow-y: hidden;
@@ -793,52 +917,90 @@ html.is-rolling #view {
 
 /* Sized from its height: a card is as wide as its own icon makes it, which is
    the whole reason the loop measures real offsets rather than a stride. */
+/* A grid rather than a column, so the names can share a line without any
+   picture being cropped to make them.
+   
+   The pictures are their own heights (the author's instruction), which left
+   every caption starting at a different y and the row reading as rubble. The
+   media row takes the slack — `1fr`, so it is the same height on every card in
+   the row — and each picture sits at the *bottom* of it. The images stand on
+   one line, the text below them starts on one line, and nothing was resized to
+   arrange it. */
 .cx-card {
   flex: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  width: max-content;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  row-gap: var(--space-1);
+  width: 150px;
   text-decoration: none;
   color: inherit;
 }
 
+.cx-card .cx-media {
+  align-self: end;
+}
+
+/* The width is fixed and the height is not (author, 2026-08-27: "dont crop the
+   images, but fix their width to what they currently are"). Every card is the
+   same 150 px column, so the row keeps its rhythm; a tall icon simply makes a
+   tall card, and nothing is cut off. `align-items: start` on the track is what
+   stops the short ones stretching to match. */
 .cx-media {
   display: block;
-  height: 200px;
   width: 150px;
-  background-size: cover;
-  background-position: center;
   border-radius: var(--radius-cell);
   overflow: hidden;
 }
 
+/* Fitted, never cut. `contain` is the whole of the author's instruction: the
+   picture is shown entire, and where one is tall enough to reach the ceiling
+   it is scaled to fit rather than having its head and feet taken off.
+   
+   The ceiling exists because the cards share a caption line, so every card in
+   the row is as tall as the tallest picture in it — and one 555x1707 scan
+   would otherwise hold a 230 px band of empty ground open above every other
+   saint. 240 px clears the ordinary icon, which is square or a little taller
+   than wide, so in the common case nothing is scaled at all. */
 .cx-media img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
 }
 
-/* A saint with no icon keeps a tile of the same box, drawn as the recessed
-   field rather than as a frame around nothing. */
+/* The blank keeps a box so an imageless saint is still a card rather than a
+   line of text; a square is the least it can claim without implying a shape
+   the picture would have had. */
+.cx-media.is-blank {
+  height: 150px;
+}
+
+/* A saint with no icon keeps a tile, drawn as the recessed field rather than
+   as a frame around nothing. */
 .cx-media.is-blank {
   background: var(--field);
 }
 
-/* Two lines, clamped: a three-line name under a 200 px tile makes the row's
-   foot ragged, and the whole name is on the page it opens. */
+/* The whole name, however many lines it takes (author, 2026-08-27: "make sure
+   the full name is printed and is not shortened"). It was clamped to two to
+   keep the row's foot even; the cards are ragged-bottomed now anyway, since
+   the pictures are their own heights. */
 .cx-name {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  overflow: hidden;
+  display: block;
   width: 150px;
-  min-height: 2.7em;
   font-size: 14px;
   line-height: 1.35;
   color: var(--ink);
+}
+
+/* What they held and when they lived — the Index card's own subtext line. */
+.cx-sub {
+  display: block;
+  width: 150px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.35;
 }
 
 .cx-card:hover .cx-name {
@@ -867,12 +1029,6 @@ html.is-rolling #view {
   }
 }
 
-.is-arriving .index-controls,
-.is-arriving .carousel,
-.is-arriving .grid {
-  opacity: 0;
-}
-
 .is-carousel .index-controls,
 .is-carousel .carousel,
 .is-carousel .grid,
@@ -881,4 +1037,19 @@ html.is-rolling #view {
 .is-search .grid {
   transition: opacity var(--dur-slot) var(--ease);
 }
+
+/* **`transition: none` is the whole of this rule working.** The arriving state
+   is held for two frames — just long enough to be the starting point of the
+   fade — and with a transition on it the opacity merely *began* travelling
+   toward 0 and was released at about 0.99, so the new mode appeared instead of
+   fading in (author, 2026-08-27: "The carousel mode doesnt fade back in, it
+   just appears"). Snapping to 0 and animating only on the way back up is what
+   makes the second beat visible. */
+.is-arriving .index-controls,
+.is-arriving .carousel,
+.is-arriving .grid {
+  opacity: 0;
+  transition: none;
+}
+
 

@@ -162,7 +162,8 @@ export function render(el, { data, router, nav }) {
   el.innerHTML = `
     <div class="index-head">
       <h1>${STRINGS.saints.title}</h1>
-      <button type="button" class="mode-toggle utility" data-mode-toggle></button>
+      <button type="button" class="mode-toggle utility" data-mode-toggle
+        ><span class="mode-label" data-mode-label></span></button>
     </div>
     ${controls(state)}
     <p class="result-count sr-only" data-count-row></p>
@@ -190,8 +191,13 @@ export function render(el, { data, router, nav }) {
    * the facet's own test are the same line of code — so the opening set is
    * exactly what it was.
    */
+  // The label starts filled rather than faded in: there is no previous word to
+  // cross over from on the page's first paint.
+  el.querySelector('[data-mode-label]').textContent =
+    state.mode === 'carousel' ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel;
   syncCalendarFacet();
   wireControls();
+  wireSticky();
   wireGrid();
   // The header's control can change the church while the grid is open, and
   // when it does the facet goes back to just the new one.
@@ -482,13 +488,25 @@ function controls(state) {
     .filter((c) => facets.churches.includes(c.id))
     .map((c) => ({ value: c.id, label: c.display_name }));
 
-  return `<div class="index-controls">
+  /*
+   * The search field and the filters under it are one sticky block (author,
+   * 2026-08-27: "Have the search bar become a sticky header when you scroll
+   * down... When you click on that search bar, make the filters drop down from
+   * that sticky header"). The sentinel above it is how the page knows the
+   * block has *become* stuck — an IntersectionObserver on a zero-height marker,
+   * which costs nothing and is honest at every width, where a scroll threshold
+   * would be a number that goes stale.
+   */
+  return `<div class="sticky-sentinel" data-sticky-sentinel aria-hidden="true"></div>
+    <div class="index-controls" data-index-sticky>
     <div class="index-row">
       <input class="search-field" type="search" data-query
         aria-label="${STRINGS.saints.search}"
         placeholder="${STRINGS.saints.search}: ${STRINGS.saints.searchHint}" />
       <button type="button" data-clear hidden>${STRINGS.saints.clear}</button>
     </div>
+
+    <div class="filter-drop" data-filter-drop><div class="filter-drop-inner">
 
     <div class="facets">
       ${facetGroup(STRINGS.saints.filters.church, 'churches', churchOptions)}
@@ -552,6 +570,9 @@ function controls(state) {
         ${STRINGS.saints.layout.detailed}
       </label>
       <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>
+    </div>
+
+    </div></div>
     </div>
   </div>`;
 }
@@ -739,6 +760,96 @@ function wireControls() {
   });
 }
 
+/* ---- the search field, stuck --------------------------------------------- */
+
+/**
+ * The search field follows the reader down the register (author, 2026-08-27:
+ * "otherwise you need to go all the way back to the top to search for
+ * anything"), and the filters ride with it — folded away while scrolling, let
+ * down when the reader puts the cursor in the field, folded again the moment
+ * they move on.
+ *
+ * **Stuck is observed, not calculated.** A zero-height sentinel sits above the
+ * block; when it leaves the top of the viewport the block has taken over. A
+ * scroll threshold would have to know the height of everything above it, which
+ * changes with the language, the width and the count line.
+ */
+function wireSticky() {
+  const { el } = state;
+  const bar = el.querySelector('[data-index-sticky]');
+  const sentinel = el.querySelector('[data-sticky-sentinel]');
+  const query = el.querySelector('[data-query]');
+  if (!bar || !sentinel || !query) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      const stuck = !entry.isIntersecting;
+      bar.classList.toggle('is-stuck', stuck);
+      // Coming unstuck ends the question: the filters are simply on the page
+      // again, and leaving the flag on would fold them away at the top.
+      if (!stuck) bar.classList.remove('is-filters-open');
+    },
+    // The sentinel is judged against the line the bar sticks to, not the top
+    // of the window, or the bar would be called stuck a header's height early.
+    { rootMargin: `-${chromeHeight()}px 0px 0px 0px`, threshold: 0 },
+  );
+  observer.observe(sentinel);
+
+  let openedY = 0;
+  const open = () => {
+    if (!bar.classList.contains('is-stuck')) return;
+    openedY = window.scrollY;
+    bar.classList.add('is-filters-open');
+  };
+  // Focus rather than click alone: a reader who tabs to the field wants the
+  // filters as much as one who presses it.
+  query.addEventListener('focus', open);
+  query.addEventListener('click', open);
+
+  const close = () => {
+    if (!bar.classList.contains('is-filters-open')) return;
+    bar.classList.remove('is-filters-open');
+    query.blur();
+  };
+
+  /*
+   * **The reader's own input closes it, not the scroll event.**
+   *
+   * Letting the filters down grows the sticky block by their own height, and
+   * the browser answers that by moving the page to keep the visible content
+   * still — measured here as an overshoot of 33 px and a settle back over
+   * about 150 ms. Every version of "close when the page scrolls" was fooled by
+   * that: a stopwatch grace period only moved the race, and a distance test
+   * closed on the overshoot. A wheel or a finger is unambiguous — layout
+   * shifts do not produce input events.
+   *
+   * The scroll listener stays as the fallback for the one way of scrolling
+   * that sends no input event to this page: dragging the scrollbar. Its
+   * threshold is well past the settling nudge.
+   */
+  const onScroll = () => {
+    if (Math.abs(window.scrollY - openedY) > 120) close();
+  };
+  window.addEventListener('wheel', close, { passive: true });
+  window.addEventListener('touchmove', close, { passive: true });
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  state.cleanups.push(() => {
+    observer.disconnect();
+    query.removeEventListener('focus', open);
+    query.removeEventListener('click', open);
+    window.removeEventListener('wheel', close);
+    window.removeEventListener('touchmove', close);
+    window.removeEventListener('scroll', onScroll);
+  });
+}
+
+/** What main.js published, as a number. */
+function chromeHeight() {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue('--chrome-h');
+  return Number.parseFloat(raw) || 0;
+}
+
 /* ---- the two modes ------------------------------------------------------- */
 
 /**
@@ -753,23 +864,65 @@ function wireControls() {
 function applyMode() {
   const { el, mode } = state;
   const carousel = mode === 'carousel';
+  /*
+   * **Read the row's offset before anything is hidden.** A `display: none`
+   * element reports `scrollLeft` 0 and ignores writes — the pitfall
+   * `ui/loop-scroll.js` opens by warning about, walked into three lines later
+   * by hiding the carousel and *then* asking where it was. The answer was
+   * always 0, so coming back always reopened at the start.
+   */
+  if (!carousel && state.loop) {
+    state.carouselAt = el.querySelector('[data-carousel-track]').scrollLeft;
+  }
   el.classList.toggle('is-carousel', carousel);
   el.classList.toggle('is-search', !carousel);
   el.querySelector('[data-carousel]').hidden = !carousel;
   el.querySelector('[data-grid]').hidden = carousel;
 
   // The button names the mode it goes to, not the one it is in.
-  const toggle = el.querySelector('[data-mode-toggle]');
-  toggle.textContent = carousel ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel;
+  paintModeLabel(carousel ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel);
 
   if (carousel) paintCarousel();
   else {
+    // The offset was taken above, while the row could still answer.
     state.loop?.destroy();
     state.loop = null;
     state.carouselPrefetch?.();
     state.carouselPrefetch = null;
     state.carouselKey = null;
   }
+}
+
+/**
+ * The toggle's word, crossed over rather than snapped (author, 2026-08-27).
+ *
+ * The span fades out, the word is swapped while nothing can be read, and it
+ * fades back — so the button's box never changes under the pointer. A second
+ * press inside the fade overtakes the first: `pending` is what the label is on
+ * its way to, so the comparison is against where it is *going*, not where it
+ * is, which is the bug the Daily nav label had to be taught (main.js).
+ */
+let modeFade = null;
+let modePending = null;
+
+function paintModeLabel(word) {
+  const label = state?.el.querySelector('[data-mode-label]');
+  if (!label) return;
+  if ((modePending ?? label.textContent) === word) return;
+  clearTimeout(modeFade);
+  // Removed, not shortened: reduced motion gets the word.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    modePending = null;
+    label.textContent = word;
+    return;
+  }
+  modePending = word;
+  label.classList.add('is-fading');
+  modeFade = setTimeout(() => {
+    modePending = null;
+    label.textContent = word;
+    label.classList.remove('is-fading');
+  }, 140);
 }
 
 /**
@@ -780,14 +933,25 @@ function applyMode() {
  * multiplying out a stride.
  */
 function carouselCard(item, router) {
+  // The picture is shown whole (author, 2026-08-27: "dont crop the images, but
+  // fix their width to what they currently are"). The column stays 150 px so
+  // the row keeps its rhythm; the height is whatever that width makes it, and
+  // an icon that is taller than it is wide is simply a taller card. The
+  // blurred placeholder is dropped with the crop — it was a background sized
+  // to *cover* the box, which is the cropping this removes.
   const media = item.image
-    ? `<span class="cx-media" style="background-image:url('${BASE + item.image.lqip}')">
-        <img src="${BASE + item.image.src}" alt="" loading="lazy" decoding="async" />
+    ? `<span class="cx-media">
+        <img src="${BASE + item.image.src}" alt=""
+          width="${item.image.w}" height="${item.image.h}" loading="lazy" decoding="async" />
       </span>`
     : '<span class="cx-media is-blank" aria-hidden="true"></span>';
+  // The office and the dates, the same line the Index cards carry (author,
+  // 2026-08-27).
+  const sub = esc(formatSubtext(item));
   return `<a class="cx-card" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
       ${media}
       <span class="cx-name">${esc(saintName(item))}</span>
+      ${sub ? `<span class="cx-sub utility">${sub}</span>` : ''}
     </a>`;
 }
 
@@ -816,6 +980,9 @@ function paintCarousel() {
   const run = loopSafe(pool);
   const key = run.map((c) => c.slug).join(',');
   if (key === state.carouselKey) return;
+  // A different set of saints is a different row, and the remembered offset
+  // belonged to the old one.
+  if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;
   state.carouselKey = key;
 
   state.loop?.destroy();
@@ -831,7 +998,12 @@ function paintCarousel() {
   // The images decide the widths, so the loop cannot measure until they have
   // laid out. It measures now for the common case — a warm cache — and again
   // when each picture arrives.
-  state.loop = loopScroll(track, run.length, { buffer: CAROUSEL_BUFFER });
+  state.loop = loopScroll(track, run.length, {
+    buffer: CAROUSEL_BUFFER,
+    // Only where the row is the *same* row: a search that changes the pool has
+    // no offset worth keeping, and the old one would land on other saints.
+    startAt: state.carouselAt ?? null,
+  });
   for (const img of track.querySelectorAll('img')) {
     if (img.complete) continue;
     img.addEventListener('load', () => state.loop?.measure(), { once: true });
@@ -878,7 +1050,15 @@ function switchMode(next) {
 
   // Only what a reader can actually see falls. A card below the fold has
   // nowhere to fall from, and staggering 400 of them would run for a minute.
-  const onScreen = [...el.querySelectorAll('.index-controls > *, .index-card, .cx-card')].filter((node) => {
+  /*
+   * The search field is left out of the fall on purpose (author, 2026-08-27:
+   * "make sure the search bar doesnt disappear when transitioning between
+   * carousel and advanced search; its in the same place in both modes, should
+   * stay untouched"). It is the one control the two faces share, so animating
+   * it out and back in would be the page telling the reader it had gone and
+   * come back when it had done neither.
+   */
+  const onScreen = [...el.querySelectorAll('.facets, .index-foot, .index-card, .cx-card')].filter((node) => {
     const b = node.getBoundingClientRect();
     return b.bottom > 0 && b.top < window.innerHeight && b.width > 0;
   });

@@ -4900,3 +4900,109 @@ asserts the page is still deep before it measures. That is the same trap the
 section-scroll test wrote down at Amendment 52, met from the other side: there
 it moved a scroll position under an assertion, here it moved the assertion
 under a scroll position.
+
+## Amendment 54 — the carousel earns its captions, and the search field follows the reader down (2026-08-27, thirteenth sitting)
+
+Eleven instructions and one bug report, all of the Index and the chrome.
+
+### The carousel's cards
+
+The pictures are shown **entire** — `object-fit: contain`, never `cover` — at a
+fixed 150 px column, so a tall icon makes a tall card and nothing is cut off.
+The name prints whole, unclamped. Underneath it the office and the dates, which
+is the same subtext line the Index's own cards carry.
+
+Two things had to be arranged around that. Variable picture heights left every
+caption starting at a different y and the row reading as rubble, so the card is
+a **grid** whose media row takes the slack — `1fr`, identical on every card in
+the row — with each picture sitting at the *bottom* of it: the icons stand on
+one line, the captions start on one line, and nothing was resized to arrange
+it. And because the row is then as tall as its tallest picture, one 555×1707
+scan would have held a 230 px band of empty ground open above every other
+saint; the picture box has a 240 px ceiling, which the ordinary icon never
+reaches, and anything taller is *scaled* to fit rather than cropped.
+
+### Three animations that were not animating
+
+* **The carousel appeared instead of fading in.** The arriving state is held
+  for two frames as the fade's starting point — but with a transition on the
+  property, adding the class only started the opacity *travelling* toward 0,
+  and it was released at about 0.99. There was nothing to fade up from.
+  `transition: none` on the arriving state makes it snap, and the release is
+  the fade. The rule has to sit *after* the transition rule to win: same
+  specificity, later one takes it.
+* **The mode toggle snapped between its two words.** It fades now, through the
+  same span-and-timer arrangement the Daily nav label uses — and against the
+  word it is *travelling to*, not the one it is showing, which is the bug that
+  label had to be taught at Amendment 52. Its bubble frame is gone with it.
+* **The search field was falling away with the filters.** It is the one control
+  both faces share and it is in the same place in both, so animating it out and
+  back in was the page reporting a change that had not happened. It is exempt
+  from the fall.
+
+### The row remembers where it was
+
+Switching to Advanced search and back reopened the carousel at the beginning.
+The offset was being read *after* the row was hidden — and a `display: none`
+element reports `scrollLeft` 0 and ignores writes, which is the first thing
+`ui/loop-scroll.js` warns about in its own header, walked into three lines
+later. It is read before anything is hidden now.
+
+Fixing it uncovered a worse one behind it. The drift writes `scrollLeft` every
+frame, and its test for "was that scroll mine?" was `!raf` — *no frame is
+scheduled, so it cannot have been us* — which is never true while the drift is
+running. So every scroll from anywhere else was discarded and the next frame
+wrote the drift's own stale position back over it: **a reader's drag was being
+undone**, and so was the offset the row was asked to reopen at. The honest test
+is the position the drift last wrote.
+
+### The search field sticks, and the filters drop from it
+
+Scrolled, the search field holds the line under the chrome — `--chrome-h`,
+published by a ResizeObserver in main.js, because the header's height is two
+rows on a phone and its own width in each of five packs. Put the cursor in the
+field and the filters come down over the register; scroll on and they go back
+up behind it.
+
+**Two mistakes worth keeping.** The first: a sticky element can only travel
+inside its own containing block, so a sticky wrapper *inside* `.index-controls`
+came unstuck the moment the page passed the controls' own few hundred pixels.
+The controls block itself is what sticks now — a direct child of the view,
+which is as tall as the register.
+
+The second is the one the tests caught. Folding the filters by collapsing their
+height takes 69 px out of the document; the browser's scroll anchoring answers
+by moving the page to keep the content still, so the reader sees nothing wrong
+— and every *remembered* position is then 69 px short on the next visit,
+creeping up the page a little further each time. Two existing tests failed by
+exactly 68. So the band **keeps its height** and the filters slide up out of it
+and behind the row, which is the movement that was asked for anyway; what is
+left is a transparent strip the register scrolls through, and no layout change
+at all. The hairline that marks the stuck bar is reserved rather than added,
+for the same reason at one pixel's scale — it was restoring a scroll to 501
+that had been left at 500.
+
+Closing the drop is driven by the reader's **input** — a wheel or a finger —
+not by the scroll event. Letting the filters down grows the block by their own
+height, and the browser moves the page to compensate: measured as a 33 px
+overshoot settling back over 150 ms, which closed the drop the instant it had
+finished opening. A stopwatch grace period only moved the race and a distance
+test closed on the overshoot; a layout shift produces no input event.
+
+### The header that jumped when changing pages
+
+Measured first, across six navigations at two widths: the header element does
+not move — pinned at 0 throughout, at a constant height. What moved was the
+*page*, and on a phone the header rides it. A restore used to reset the scroll
+to 0 and go to the remembered position a moment later, and arriving at 0 tells
+the browser the reader is at the top, so it begins showing its URL bar and then
+has to put it away again. Where there is a position to go back to, that is now
+the only place the navigation scrolls to: one scroll, one direction.
+
+### Verification
+
+**171 unit, 490 browser.** All four packs **338 of 338** with no English
+fallbacks. Every claim in this amendment was rendered and looked at — the
+carousel's captions, both fold states, the stuck bar — rather than inferred
+from a passing assertion, which is how three of the animations above were found
+not to be running at all.

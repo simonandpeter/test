@@ -69,6 +69,19 @@ in base.css (L605)
   disclosures built by `choiceGroup()` in views/saints.js, read with
   `currentChoice()` and written with `setChoice()` — **both, always**, or the
   chip advertises an order the grid is not in.
+- **The search field sticks** (`.index-controls` is the sticky element — a
+  sticky box can only travel inside its containing block, and this one is a
+  direct child of the view). `--chrome-h` is published from a ResizeObserver in
+  `main.js`; `wireSticky()` handles the stuck state and the filter drop.
+  **The fold must never change layout height**: the band keeps its height and
+  the filters translate up behind the row. Collapsing it instead takes 69 px
+  out of the document, which scroll anchoring hides from the eye and which
+  silently shortens every remembered scroll position by the same amount on the
+  next visit. The stuck hairline is reserved (transparent) for the same reason
+  at 1 px.
+- **The drop closes on reader *input*** (wheel/touch), not on the scroll event:
+  opening it makes the browser move the page ~33 px to compensate, which no
+  stopwatch or distance test can tell from a real scroll.
 - **Two modes since 2026-08-27, and the page opens on the carousel.**
   `state.mode` is `'carousel'` or `'search'`, remembered in `settings.indexMode`;
   `applyMode()` toggles `is-carousel`/`is-search` on the *view root* and
@@ -76,6 +89,12 @@ in base.css (L605)
   change face — the filters keep their DOM and the reader's choices survive the
   trip. The `--facet-*` custom properties live on those two root classes (not
   on `.index-controls`) because the mode toggle is a chip outside the controls.
+- **Read a hidden element's `scrollLeft` before you hide it.** `display: none`
+  reports 0 and ignores writes — which is how the carousel lost its offset on
+  every mode switch. `applyMode()` reads it first, deliberately.
+- **`ui/loop-scroll.js` decides whose scroll it was by position**, not by
+  whether a frame is scheduled: the drift writes every frame, so "no frame
+  pending" is never true and a reader's own drag was being discarded.
 - **The carousel**: `paintCarousel()` fills `[data-carousel-track]`, and
   `src/ui/loop-scroll.js` is the endless-scroll engine (clone buffer, wrap by
   one period, measure real offsets, never write `scrollLeft` mid-touch). Its

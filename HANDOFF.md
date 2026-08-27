@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 53)
+## State as of 2026-08-27 (Amendments 50 to 54)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -82,8 +82,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 478 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendment 53), not carried
+- 490 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendment 54), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
@@ -103,6 +103,13 @@ them.
   way `ready` handles church and language, so a test that sets the mode itself
   still gets it. If you add an Index test, that default is already applied;
   reach for `carouselMode(page)` when you mean the other one.
+- **The Index's search field is sticky, and the filters drop from it**
+  (Amendment 54). Two rules there are load-bearing and neither is obvious:
+  the *fold must not change layout height* — collapsing it silently shortens
+  every remembered scroll by 69 px per visit — and the drop closes on the
+  reader's **input**, not on the scroll event, because opening it makes the
+  browser move the page by itself.
+
 - **The carousel is a sample, not the corpus** — 48 saints, imaged first,
   drawn through the seeded shuffle. `ui/loop-scroll.js` carries the
   cross-church build's endless-scroll engine and its header says which parts
