@@ -64,16 +64,37 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   await expect(page.locator('.register a[data-prefetch="paul-of-thebes"]')).toHaveCount(1);
 });
 
-test('an image says what its licence is, and never links a placeholder source', async ({ page }) => {
+test('an image says what its licence is, and links the source it can be checked against', async ({ page }) => {
+  /*
+   * The heir of 'never links a placeholder source'. Both of that test's
+   * assertions were about a corpus that no longer exists: the seven images
+   * carrying `example.invalid` were replaced on 2026-08-28 with Wikimedia
+   * Commons files whose provenance is recorded, so the line now says
+   * "Public domain" — Commons' own words for these — where it said "Public
+   * Domain Mark 1.0", and it *links*, where the placeholder made it refuse to.
+   *
+   * **The link is the better assertion and it was only ever exercised in the
+   * negative.** `creditLine` in views/saint.js has always had two branches, and
+   * until now the corpus could only reach the one that declines to link. The
+   * point of a source_url is that a reader can test the licence claim instead
+   * of taking it on trust, and that is worth pinning positively — the negative
+   * case still has a test of its own wherever a placeholder remains, and if
+   * every placeholder is gone, so is the thing that test was guarding.
+   */
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   const credit = page.locator('.image-credit');
 
   // Public domain: no credit is owed, so the line names the licence rather
-  // than apologising for a missing author.
-  await expect(credit).toHaveText('Public Domain Mark 1.0');
-  // The source_url in the corpus is a stand-in until the real ones are
-  // recorded, and a reader must not be handed it as if it led somewhere.
-  await expect(credit.locator('a')).toHaveCount(0);
+  // than apologising for a missing author. The exact string is the one the
+  // record carries, and the record carries what Commons says rather than a
+  // tidier variant this project preferred — asserting a licence the source
+  // does not name is the thing the source_url exists to prevent.
+  await expect(credit).toHaveText('Public domain');
+
+  const link = credit.locator('a');
+  await expect(link).toHaveCount(1);
+  await expect(link).toHaveAttribute('href', /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+  await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
 });
 
 test('dates and places read as one register, keyed by kind', async ({ page }) => {
