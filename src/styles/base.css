@@ -205,16 +205,21 @@ button:hover {
   opacity: 1;
 }
 
-/* Over an image the ink needs separating from what is behind it, and a
-   shadow does that without drawing anything: the same one mark, legible on a
-   gold icon and a dark one. Only where a picture is actually under it — on
-   the page's own ground the mark has all the contrast it needs, and a shadow
-   there would be furniture. The hero's own bookmark stood over its image and
-   carried this too until 2026-08-26, when it moved beside the name onto the
-   page's own ground (calendar.css, `.hero .name-line > .bookmark`). */
-.index-card:has(.index-media:not(.is-blank)) > .bookmark .bookmark-mark {
-  filter: drop-shadow(0 0 1.5px var(--gesso)) drop-shadow(0 1px 2px rgb(0 0 0 / 0.45));
-}
+/* **No mark on this site sits over a picture any more, so the shadow that
+   made one legible there is gone with them** (2026-08-28). It read: over an
+   image the ink needs separating from what is behind it, and a shadow does
+   that without drawing anything — only where a picture is actually under it,
+   because on the page's own ground the mark has all the contrast it needs and
+   a shadow there would be furniture.
+
+   Every place that could match it has since been withdrawn by the author, in
+   this order: the Daily hero's mark moved off its image and beside the name
+   (2026-08-26), the Index's rows lost theirs (2026-08-27), and the Index's
+   cards and the Continue reading rows lost theirs (2026-08-28). Save survives
+   on the saint's own page alone, where it has never stood over a picture. The
+   rule is recorded here rather than deleted silently, because the reasoning is
+   sound and the day a mark goes back over an icon it is what should be
+   reached for. */
 
 /* ---- chrome ---------------------------------------------------------- */
 
@@ -502,19 +507,31 @@ header.chrome .chrome-calendar {
   letter-spacing: 0.01em;
 }
 
-/* English only ("Daily Dox" is the English name; other packs keep their own
-   translated name in Literata). GFS Nicefore is Latin+Greek caps with no
-   accented lowercase, so letting it apply to the other packs' names would
-   drop mid-word into Literata for just the accented letters (Romanian's ă,
-   Greek's tonos) and silently move the pixel-tuned wrap widths in the
-   `header.chrome .site-name` rules above (678/695/672 px at the 72ch column,
-   the Καθημερινά break-word floor at 320 px). Cyrillic packs are unaffected
-   either way - this font has no Cyrillic, so they fall back to Literata
-   in full regardless of scoping. */
-html[lang='en'] .site-name,
-html[lang='en'] .veil-name {
+/* **Every language, because the name is no longer a translation** (author,
+   2026-08-28: "make sure this new website title is applied to all languages,
+   it no longer gets translated, it stays constant as a stamp of branding").
+
+   The `html[lang='en']` scoping this replaces was there because the packs
+   printed their own translated names, and GFS Nicefore is Latin+Greek caps
+   with no accented lowercase — so it would have dropped mid-word into Literata
+   for Romanian's ă and Greek's tonos, and moved the pixel-tuned wrap widths in
+   the `header.chrome .site-name` rules above. There are no other names now:
+   every pack prints the two Latin words in ui/strings.js's BRAND, which this
+   face covers whole, and those wrap widths belong to one string on every
+   machine for the first time. */
+.site-name,
+.veil-name {
   font-family: var(--font-display);
   letter-spacing: 0.04em;
+}
+
+/* Half a space, exactly (author, 2026-08-28: "Make the space between 'DAILY'
+   and 'DOX' half as wide"). A space set at half the font size is half as wide,
+   because a glyph's advance scales with the size — so this needs no em-guess
+   at what a space measures in a face that is Nicefore once it loads and
+   Literata until it does. */
+.brand-gap {
+  font-size: 0.5em;
 }
 
 /* One line, always (author, 2026-08-25 evening). Narrow, the nav has a row of

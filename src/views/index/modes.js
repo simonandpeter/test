@@ -155,6 +155,70 @@ function carouselCard(item, router) {
     </a>`;
 }
 
+/** A picture wider than it is tall, by enough to be worth pairing. */
+const isWide = (item) => (item.image?.aspect ?? 1) > 1.2;
+
+/** Whether the row is being built for a phone. */
+const stacking = () => !window.matchMedia('(min-width: 700px)').matches;
+
+/**
+ * The row's children, which are **cells rather than cards** (author,
+ * 2026-08-28: "On mobile, make the carousel a bit more organic and double
+ * stack any saint images and texts that are wide aspect ratio, and arrange
+ * them a bit more spread out vertically, not all lined up at the bottom").
+ *
+ * A wide icon in a column sized for a tall one leaves half the column empty,
+ * and a row of them reads as a band of letterboxes. Two of them in the space of
+ * one tall card is the same column width doing twice the work.
+ *
+ * **A cell, not a card, is what the loop counts.** `loopScroll` works out one
+ * period from the offset between child `buffer` and child `buffer + count`, so
+ * everything it knows about the row is the sequence of its children — and if
+ * two saints share a child, the arithmetic is untouched. That is the whole
+ * reason for the wrapper: a two-row grid over the track itself would pack each
+ * period from wherever the last one ended, and a period that starts mid-column
+ * packs differently from one that starts at a column edge, which is a drift the
+ * wrap cannot correct. This way nothing about the loop changes at all.
+ *
+ * Pairs are adjacent wide saints only, so a wide icon next to a tall one keeps
+ * its own column rather than being scaled to make a pair that is not there.
+ */
+export function carouselCells(pool, stacked = stacking()) {
+  if (!stacked) return pool.map((item) => [item]);
+  /*
+   * **The wide ones are brought together rather than paired where they fall.**
+   * The first build only paired neighbours, and 44 of the corpus's 128 icons
+   * are wide but scattered — a shuffled pool of 48 produced *one* pair, which
+   * is not "double stack any saint images that are wide aspect ratio". Pairing
+   * them deliberately gets every wide icon but at most one, and the pool is
+   * already ordered for the row's sake rather than the reader's (imaged first),
+   * so its order is not something to protect.
+   */
+  const wide = pool.filter(isWide);
+  const singles = pool.filter((item) => !isWide(item)).map((item) => [item]);
+  const stacks = [];
+  for (let i = 0; i + 1 < wide.length; i += 2) stacks.push([wide[i], wide[i + 1]]);
+  // An odd wide icon keeps a column of its own rather than being stacked with
+  // a tall one, which would scale one of the two to fit the other's half.
+  if (wide.length % 2) singles.push([wide.at(-1)]);
+  if (!stacks.length) return singles;
+
+  // Dealt back through the row at an even step, so the stacks are spread
+  // rather than arriving in a block — the same reason the lifts cycle.
+  const out = [];
+  const step = singles.length / stacks.length;
+  let next = 0;
+  for (let i = 0; i < singles.length; i += 1) {
+    if (next < stacks.length && i >= Math.round(next * step)) {
+      out.push(stacks[next]);
+      next += 1;
+    }
+    out.push(singles[i]);
+  }
+  out.push(...stacks.slice(next));
+  return out;
+}
+
 /**
  * Fills the track from what the filters have left, and wires it once.
  *
@@ -177,8 +241,12 @@ export function paintCarousel() {
     .slice()
     .sort((a, b) => (a.image ? 0 : 1) - (b.image ? 0 : 1))
     .slice(0, CAROUSEL_POOL);
-  const run = loopSafe(pool);
-  const key = run.map((c) => c.slug).join(',');
+  const stacked = stacking();
+  const run = loopSafe(carouselCells(pool, stacked));
+  // The width the row was built for is part of what the row *is*: a phone and
+  // a desk pair the wide icons differently, so crossing 700 px has to rebuild
+  // rather than keep a set of cells that were grouped for the other one.
+  const key = `${stacked ? 'stacked' : 'flat'}:${run.map((cell) => cell.map((c) => c.slug).join('+')).join(',')}`;
   if (key === state.carouselKey) return;
   // A different set of saints is a different row, and the remembered offset
   // belonged to the old one.
@@ -194,8 +262,31 @@ export function paintCarousel() {
     return;
   }
 
+  /*
+   * The cells are dealt a vertical resting place from their own position in
+   * the run rather than all standing on the row's floor ("arrange them a bit
+   * more spread out vertically, not all lined up at the bottom"). Three
+   * positions on a repeating cycle, which reads as arrangement rather than as
+   * noise, and — because it is a function of the index — a card is in the same
+   * place every time the row comes round to it. The alignment is inside the
+   * track's own height, so it costs no room and holds at every screen size.
+   */
+  const lift = ['is-low', 'is-high', 'is-mid'];
+  /*
+   * **Keyed to the run, not to the rendered strip.** `loopSlice` puts `buffer`
+   * copies either side, and a card whose clone sat at a different height from
+   * itself would visibly jump every time the row came round — which is the one
+   * thing the wrap exists to make invisible. This is the same index the clone
+   * was copied from, so a saint has one resting place wherever they appear.
+   */
+  const n = run.length;
   track.innerHTML = loopSlice(run, CAROUSEL_BUFFER)
-    .map((item) => carouselCard(item, router))
+    .map((cell, i) => {
+      const atRun = (((i - CAROUSEL_BUFFER) % n) + n) % n;
+      return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}">${cell
+        .map((item) => carouselCard(item, router))
+        .join('')}</span>`;
+    })
     .join('');
   // The images decide the widths, so the loop cannot measure until they have
   // laid out. It measures now for the common case — a warm cache — and again

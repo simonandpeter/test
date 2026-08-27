@@ -269,6 +269,42 @@ const chooseSort = async (page, value) => {
   await page.locator(`input[name="sort"][value="${value}"]`).check();
 };
 
+/**
+ * The Index narrowed to one calendar.
+ *
+ * **Narrowing is unticking since 2026-08-28** (author: "display all saints by
+ * default, i.e. have all the calendars ... ticked by default, so that people
+ * get exposed to the full range"). Every test that used to tick one calendar to
+ * make a filtered state was ticking a box that is already ticked, and got the
+ * whole corpus back. Clearing them all first is the same end state by the route
+ * a reader now takes.
+ */
+export const onlyCalendar = async (page, name) => {
+  const group = await facet(page, 'churches');
+  // Attached, not visible: at 360 the filter panel can be folded away, and the
+  // state below is set on the elements rather than through the pointer.
+  await group.locator('input[name="churches"]').first().waitFor({ state: 'attached' });
+  /*
+   * Dispatched rather than clicked, which is this file's own idiom for setting
+   * up a filter state (the row test does the same to clear the calendars). The
+   * facet drops open on a transition, so a click on the fourth checkbox raced
+   * the panel and Playwright refused a target that was still moving — "element
+   * is not stable", once, in a full run. The click path is asserted by the
+   * tests that are *about* these controls; here the state is the fixture, and a
+   * fixture should not be a timing question.
+   */
+  await group.evaluate((root, wanted) => {
+    for (const box of root.querySelectorAll('input[name="churches"]')) {
+      const label = box.closest('label')?.textContent?.trim();
+      const on = label === wanted;
+      if (box.checked !== on) {
+        box.checked = on;
+        box.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    }
+  }, name);
+};
+
 export const chooseView = async (page, value) => {
   const chip = page.locator('details[data-facet="layout"] > summary');
   if (!(await page.locator('details[data-facet="layout"]').evaluate((d) => d.open))) await chip.click();

@@ -315,6 +315,7 @@ export const el = {
     keptTitle: 'Το ημερολόγιο αλλάζει στην κεφαλίδα.',
     filters: {
       church: 'Ημερολόγιο',
+      uncalendared: 'Εκτός ημερολογίου',
       month: 'Μήνας εορτής',
       type: 'Τύπος',
       sex: 'Φύλο',

@@ -113,12 +113,16 @@ export function windowImages(track, { margin = 700 } = {}) {
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
-        const img = e.target.querySelector('img[data-src]');
-        if (!img) continue;
-        if (e.isIntersecting) {
-          if (img.getAttribute('src') !== img.dataset.src) img.src = img.dataset.src;
-        } else if (img.hasAttribute('src')) {
-          img.removeAttribute('src');
+        // **Every picture in the child, not the first** (2026-08-28). A track
+        // child is a *cell* since the carousel started pairing wide icons, and
+        // a stacked cell holds two — `querySelector` handed a source to the top
+        // one and left the one under it permanently blank.
+        for (const img of e.target.querySelectorAll('img[data-src]')) {
+          if (e.isIntersecting) {
+            if (img.getAttribute('src') !== img.dataset.src) img.src = img.dataset.src;
+          } else if (img.hasAttribute('src')) {
+            img.removeAttribute('src');
+          }
         }
       }
     },
@@ -159,6 +163,16 @@ export function loopScroll(
   let currentSpeed = 0;
   let wheelVel = 0;
   let last = performance.now();
+  // When a pointer last went down on the track, and how long the drift is held
+  // off after an interaction that is not the keyboard's.
+  let pointerAt = -Infinity;
+  let holdUntil = 0;
+  // A mouse drag: where it started, and how far it has gone, which is what
+  // decides whether the press that ends it was a click or the end of a haul.
+  let dragging = false;
+  let dragFrom = 0;
+  let dragLeft = 0;
+  let dragMoved = 0;
 
   function measure() {
     const first = track.children[buffer];
@@ -266,7 +280,33 @@ export function loopScroll(
     // snapped, so letting go of the wheel does not read as a second push.
     currentSpeed = 0;
   };
+  /*
+   * **A click must not stop the row for good** (author, 2026-08-28: "If you
+   * click a second time, the auto scroll stops completely? Make sure this
+   * doesnt happen, make sure it keeps scrolling afterwards no matter how many
+   * times you click. It seems like the auto scroll can get reset by pressing
+   * the Advanced search button and then back to the Carousel mode").
+   *
+   * That last observation is the diagnosis. Clicking anywhere on the track
+   * focuses it — it is `tabindex="0"` — and `focused` latched until focus went
+   * somewhere else, which a second click on the same row never does. The row
+   * stopped for the rest of the visit, and the only thing that cleared it was
+   * the mode toggle, because leaving the carousel destroys the loop and coming
+   * back builds a fresh one.
+   *
+   * So focus is split by how it arrived. **Keyboard focus still holds the
+   * row**, and must: a reader tabbing through cards cannot be chasing them
+   * across the screen. **A pointer press holds it for a moment and then lets
+   * go** — long enough to read what was clicked on, short enough that the row
+   * always comes back on its own.
+   */
+  const POINTER_HOLD = 2500;
+
   const onFocusIn = () => {
+    if (performance.now() - pointerAt < 400) {
+      hold();
+      return;
+    }
     focused = true;
     pos = null;
   };
@@ -274,7 +314,91 @@ export function loopScroll(
     focused = false;
   };
 
+  const hold = () => {
+    holdUntil = performance.now() + POINTER_HOLD;
+    currentSpeed = 0;
+  };
+
+  /*
+   * **Hold and drag with the mouse** (author, 2026-08-28: "Also add a hold and
+   * drag scroll function with the mouse"). A touch already has this from the
+   * platform — the track is a native scroller — and a mouse has never had any
+   * way to take hold of the row except the wheel.
+   *
+   * Touch is left to the browser: `pointerdown` records the moment for the
+   * focus rule above and then stands aside, because writing `scrollLeft` under
+   * a live touch is the one thing this file's header forbids outright.
+   *
+   * A drag that moved is not a click. The threshold is 4 px, and the click is
+   * cancelled in the *capture* phase so it never reaches the card's own link —
+   * otherwise every haul across the row would open whichever saint the mouse
+   * happened to come down on.
+   */
+  const onPointerDown = (e) => {
+    pointerAt = performance.now();
+    dragMoved = 0;
+    if (e.pointerType === 'touch' || e.button !== 0) return;
+    dragging = true;
+    dragFrom = e.clientX;
+    dragLeft = track.scrollLeft;
+    wheelVel = 0;
+    currentSpeed = 0;
+    track.classList.add('is-dragging');
+    track.setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerMove = (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - dragFrom;
+    dragMoved = Math.max(dragMoved, Math.abs(dx));
+    track.scrollLeft = dragLeft - dx;
+    lastWritten = track.scrollLeft;
+    pos = track.scrollLeft;
+    pos += wrap();
+    // The row wrapped under the hand, so the anchor has to move with it or the
+    // next pixel of the drag would haul the position back to where it was.
+    dragLeft = track.scrollLeft + dx;
+  };
+
+  const onPointerUp = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    track.classList.remove('is-dragging');
+    track.releasePointerCapture?.(e.pointerId);
+    hold();
+  };
+
+  const onClickCapture = (e) => {
+    if (dragMoved > 4) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    dragMoved = 0;
+  };
+
+  /*
+   * **The browser's own drag has to be refused, or there is no drag of ours.**
+   * Every card is an `<a>` around an `<img>`, and both are natively draggable:
+   * pressing one and moving starts Chromium's link-and-image drag, which takes
+   * the pointer into a nested loop, hands the reader a ghost of the icon, and
+   * never sends another `pointermove` here. The row simply did not follow the
+   * hand, and — found the hard way — a harness driving the same gesture hangs
+   * outright waiting for input that the nested loop is swallowing.
+   *
+   * There is nothing on this row worth dragging *out* of it, so the answer is
+   * the blunt one rather than a conditional on `dragging`: a press that turns
+   * into a haul and a press that was going to be a link both want the native
+   * drag gone.
+   */
+  const onDragStart = (e) => e.preventDefault();
+
   track.addEventListener('scroll', onScroll, { passive: true });
+  track.addEventListener('pointerdown', onPointerDown);
+  track.addEventListener('pointermove', onPointerMove);
+  track.addEventListener('pointerup', onPointerUp);
+  track.addEventListener('pointercancel', onPointerUp);
+  track.addEventListener('click', onClickCapture, true);
+  track.addEventListener('dragstart', onDragStart);
   track.addEventListener('touchstart', onTouchStart, { passive: true });
   track.addEventListener('touchend', onTouchEnd, { passive: true });
   track.addEventListener('touchcancel', onTouchEnd, { passive: true });
@@ -282,7 +406,25 @@ export function loopScroll(
   track.addEventListener('focusin', onFocusIn);
   track.addEventListener('focusout', onFocusOut);
 
-  const still = () => paused || focused || touchActive || performance.now() < touchSettle;
+  /**
+   * Two different questions, which were one until 2026-08-28.
+   *
+   * `frozen` is *no writes at all*: a live touch or its momentum (writing under
+   * either takes the element's touch tracking away, per this file's header), a
+   * paused loop, a track that is not laid out, or a hand on it.
+   *
+   * `drifting` is only whether the row moves *by itself*. The wheel is not the
+   * drift, and the author found the difference: "if you click and then instantly
+   * try to scroll, it cant scroll. You have to wait." A click focused the track,
+   * the single `still()` test returned early, and the early return zeroed
+   * `wheelVel` on every frame — so the wheel pushed against a variable that was
+   * being wiped before it could be spent. Stopping the drift and refusing the
+   * reader's own scroll are not the same thing and no longer share a test.
+   */
+  const frozen = () =>
+    paused || touchActive || dragging || performance.now() < touchSettle || !track.clientWidth;
+
+  const drifting = () => !focused && performance.now() >= holdUntil && !reducedMotion();
 
   function frame(now) {
     const dt = Math.min(now - last, 50);
@@ -316,7 +458,7 @@ export function loopScroll(
     // The width is still asked, second: an unrendered track cannot scroll. It
     // reads back 0 and ignores writes, so drifting against one throws away the
     // position it will be restored to the moment it is shown again.
-    if (still() || reducedMotion() || !track.clientWidth) {
+    if (frozen()) {
       currentSpeed = 0;
       wheelVel = 0;
       pos = null;
@@ -324,8 +466,10 @@ export function loopScroll(
     }
     if (pos === null) pos = track.scrollLeft;
     // Eased up to cruising speed rather than snapped to it, on the same shape
-    // the old build used for its wheel decay, run the other way.
-    currentSpeed += (speed - currentSpeed) * 0.06;
+    // the old build used for its wheel decay, run the other way. Held at a
+    // stop while the reader has the row — but the wheel below is still theirs.
+    if (drifting()) currentSpeed += (speed - currentSpeed) * 0.06;
+    else currentSpeed = 0;
     /*
      * The wheel's own velocity, decaying toward nothing, added to the drift's.
      * Added rather than substituted: a small nudge forward should read as the
@@ -337,7 +481,12 @@ export function loopScroll(
       wheelVel *= wheelDecay ** (dt / 16.67);
       if (Math.abs(wheelVel) < 1) wheelVel = 0;
     }
-    pos += (currentSpeed + wheelVel) * (dt / 1000);
+    const velocity = currentSpeed + wheelVel;
+    // Nothing to move: a held row with a spent wheel should not be writing its
+    // own position back over a reader who is dragging it or a caller who has
+    // just placed it.
+    if (!velocity) return;
+    pos += velocity * (dt / 1000);
     track.scrollLeft = pos;
     lastWritten = track.scrollLeft;
     // Corrected in the same frame, synchronously, rather than through the
@@ -368,6 +517,12 @@ export function loopScroll(
       raf = null;
       window.removeEventListener('resize', onResize);
       track.removeEventListener('scroll', onScroll);
+      track.removeEventListener('pointerdown', onPointerDown);
+      track.removeEventListener('pointermove', onPointerMove);
+      track.removeEventListener('pointerup', onPointerUp);
+      track.removeEventListener('pointercancel', onPointerUp);
+      track.removeEventListener('click', onClickCapture, true);
+      track.removeEventListener('dragstart', onDragStart);
       track.removeEventListener('touchstart', onTouchStart);
       track.removeEventListener('touchend', onTouchEnd);
       track.removeEventListener('touchcancel', onTouchEnd);

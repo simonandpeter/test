@@ -173,9 +173,28 @@ test('saving persists across a reload, and the shelf agrees', async ({ page }) =
   await expect(page.locator('.register .bookmark')).toHaveCount(0);
   await expect(page.locator('.shelves')).toContainText('Saved');
   await expect(page.locator('.shelves a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
-  // The shelf keeps its own mark, which is the un-save for anything saved: it
-  // was not part of the instruction and removing it would strand the list.
-  await expect(page.locator('.shelves .bookmark').first()).toHaveAttribute('aria-pressed', 'true');
+  /*
+   * **And the shelf carries no mark at all** (author, 2026-08-28: "Remove
+   * bookmark on continue reading row cards").
+   *
+   * This corrects something this test asserted, and something said to the
+   * author on 2026-08-27, in the same breath: that the shelf's mark "is the
+   * un-save for anything saved" and removing it "would strand the list". That
+   * was wrong. The mark was on the **Continue reading** rows; the *Saved*
+   * shelf's own rows are built by a different function and never had one, and
+   * are rendered without their × as well. So the mark that was defended as the
+   * Saved list's only exit was never on the Saved list.
+   *
+   * What is true after the instruction: nothing on this page un-saves a saint,
+   * and the saint's own page is the only route back. That is consistent with
+   * where the author sent Save, and it is asserted rather than left to be
+   * discovered — if a mark is ever wanted here, this is the test that says it
+   * is missing on purpose.
+   */
+  await expect(page.locator('.shelves .bookmark')).toHaveCount(0);
+  // The saint's page is the one place that still offers it, and still knows.
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('the saint page puts the register beside the image on desktop, the body beneath both, and the controls on the name line', async ({ page }) => {
@@ -620,4 +639,35 @@ test('the life comes before the veneration on a saint page', async ({ page }) =>
   // Sources stay with the life they document, above veneration.
   const sources = order.indexOf('Sources');
   if (sources !== -1) expect(sources).toBeLessThan(order.indexOf('Veneration'));
+});
+
+test('the icon the author supplied is on the page, with the licence Commons states', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Make sure all main saint cards for each day and each
+   * calendar has an image in its profile. Great Martyr Phanourious has a saint
+   * image in public domain here from Wikipedia: …"
+   *
+   * The link was to a thumbnail; what is recorded here is the file's own page,
+   * and the licence, artist and photographer are as the Commons API answers for
+   * that file rather than as read off the rendered page. Fetched through
+   * `Special:FilePath`, the file's own redirect, because a hotlinked thumbnail
+   * URL is refused outright.
+   *
+   * **This is one saint, not the instruction's whole scope.** Measured over the
+   * days the four calendars cover, 38 of 133 day-and-church combinations led
+   * with an imageless hero; preferring an imaged saint inside the sung pool
+   * (lib/calendar-page.js) takes that to 27, and the rest are days where nobody
+   * the church sings for has an icon at all. Those need 19 more licensed
+   * pictures, which is a data job and not a code one.
+   */
+  await ready(page);
+  await page.goto('/saints/phanourios', { waitUntil: 'networkidle' });
+  const img = page.locator('.saint-media img, main img').first();
+  await expect(img).toHaveAttribute('src', /phanourios\/images\/icon\.jpg/);
+  const credit = page.locator('[data-credit]');
+  await expect(credit).toContainText('Public domain');
+  await expect(credit).not.toContainText('example.invalid');
+  await expect(credit).not.toContainText('not recorded');
+  // The artist and the photographer, both as Commons records them.
+  await expect(credit).toContainText('Akotantos');
 });

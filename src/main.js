@@ -6,7 +6,7 @@ import './styles/calendar.css';
 import './styles/saint.css';
 import './styles/index.css';
 
-import { STRINGS } from './ui/strings.js';
+import { BRAND, STRINGS } from './ui/strings.js';
 import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
@@ -439,8 +439,10 @@ function show({ route, params, path }, nav = {}) {
  * a rename later — so they carry a data-site-name hook and the pack fills it.
  */
 function paintSiteName() {
+  // The gap is a space at half size, which is half a space wide — see BRAND.
+  const stamp = `${BRAND[0]}<span class="brand-gap"> </span>${BRAND[1]}`;
   for (const el of document.querySelectorAll('[data-site-name]')) {
-    el.textContent = STRINGS.site.name;
+    el.innerHTML = stamp;
   }
   // And the masthead's own href, once, with the base path on it.
   const home = document.querySelector('[data-site-home]');

@@ -9,6 +9,7 @@ import {
   chooseView,
   facet,
   leaders,
+  onlyCalendar,
   nothingCropped,
   openChooser,
   ready,
@@ -88,7 +89,17 @@ test('card boxes come from the manifest, not from measuring the image', async ({
 
 test('filtering by church narrows the corpus and the count follows', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Romanian').check();
+  /*
+   * **Narrowing is unticking now** (author, 2026-08-28: "display all saints by
+   * default, i.e. have all the calendars ... ticked by default"). The page used
+   * to open on the reader's own calendar and ticking Romanian narrowed it to
+   * 127; it opens on all four, so ticking Romanian adds nothing and a reader
+   * who wants only Romanian turns the others off. The count is still the
+   * corpus's answer to whatever is ticked, which is what this test is about.
+   */
+  const group = await facet(page, 'churches');
+  await expect(page.locator('[data-count]')).toHaveText('742');
+  for (const name of ['Russian', 'Greek', 'Serbian']) await group.getByLabel(name).uncheck();
 
   await expect(page.locator('[data-count]')).toHaveText('127');
   // The count is the corpus's answer; the DOM holds only the cards near the
@@ -229,7 +240,10 @@ test('under reduced motion the filtered-out are gone, not gone slower', async ({
 
 test('Random saint stays inside the reader own filters', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Romanian').check();
+  // Every calendar is ticked on open since 2026-08-28, so narrowing to one is
+  // three unticks rather than a tick.
+  const only = await facet(page, 'churches');
+  for (const name of ['Russian', 'Greek', 'Serbian']) await only.getByLabel(name).uncheck();
   await expect(page.locator('[data-count]')).toHaveText('127');
 
   await page.locator('[data-random]').click();
@@ -731,42 +745,6 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
   expect(await nothingCropped(page)).toEqual([]);
 });
 
-test('a card lifespan stops before the bookmark, not behind it', async ({ page }) => {
-  /*
-   * Raised by looking at a screenshot (HANDOFF's queue): a long lifespan line
-   * on an imageless card truncates *behind* the bookmark rather than clearing
-   * it, so the ellipsis sits under the mark. Nothing reserved the mark's own
-   * width out of the line — `.index-card > .bookmark` and `.index-dates` share
-   * a right edge by construction, both measured from the card's own padding
-   * box, so the mark's 32 px was always going to sit over whichever
-   * characters happened to render there.
-   *
-   * Placilla the Empress is a real example, not a constructed one: she has no
-   * image, and both ends of her death are recorded ("Reposed under
-   * Theodosius I (379–395)"), long enough to overflow a three-across card at
-   * 1280 px — and she is venerated only in the Greek calendar, which is why
-   * this test asks for it rather than the Russian `ready()` default.
-   */
-  await ready(page, { church: 'greek' });
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  await page.locator('[data-query]').fill('Placilla');
-  const card = page.locator('.index-card', { hasText: 'Placilla' });
-  await expect(card).toHaveCount(1);
-  const geo = await card.evaluate((el) => {
-    const datesEl = el.querySelector('.index-dates');
-    const dates = datesEl.getBoundingClientRect();
-    const contentRight = dates.right - parseFloat(getComputedStyle(datesEl).paddingRight);
-    return {
-      overflowing: datesEl.scrollWidth > datesEl.clientWidth,
-      contentRight,
-      markLeft: el.querySelector('.bookmark').getBoundingClientRect().left,
-    };
-  });
-  expect(geo.overflowing, 'the line is not actually long enough to exercise this').toBe(true);
-  expect(geo.contentRight, 'the ellipsis lands behind the mark').toBeLessThanOrEqual(geo.markLeft);
-});
 
 test('the grid follows its column, not only the window', async ({ page }) => {
   // Literata arriving inside font-display: optional's window widens the 72ch
@@ -802,128 +780,6 @@ test('the grid follows its column, not only the window', async ({ page }) => {
   expect(after.rightGap, `the grid leaves ${after.rightGap} px of its column unused`).toBeLessThan(2);
 });
 
-test('the bookmark stands in the card corner, takes the press, and is the Save', async ({ page }) => {
-  // Addendum H2. A frameless silhouette over the card's top-right corner,
-  // above the link's ::after, so pressing it saves rather than opens — and
-  // **the same corner whether or not there is a picture** since 2026-08-26
-  // evening (author: "just position it relative to the margins instead of the
-  // image, to make sure its consistently top right").
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  // **The card, specifically.** A row has carried no mark since 2026-08-27
-  // ("on all row cards, remove the bookmark entirely"), and a phone opens on
-  // rows since the same message — so this asks for cards rather than trusting
-  // whichever the screen chose.
-  await chooseView(page, 'cards');
-  await page.evaluate(() => document.fonts.ready);
-  // The grid is virtualised and seventy long, so a card is brought into the
-  // document by searching for it rather than by scrolling a headless page
-  // (Amendment 26: a scroll's repaint waits for a frame the harness may not
-  // produce). The search is the Index's own; the bookmark is the same.
-  const showOnly = async (name) => {
-    await page.locator('[data-query]').fill(name);
-    await expect(page.locator('.index-card', { hasText: name })).toHaveCount(1);
-    return page.locator('.index-card', { hasText: name });
-  };
-  const first = await showOnly('Anthony the Great');
-  const seen = await first.evaluate((card) => {
-    const r = (el) => el.getBoundingClientRect();
-    const image = r(card.querySelector('.index-media'));
-    const button = card.querySelector('.bookmark');
-    const b = r(button);
-    const style = getComputedStyle(button);
-    const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2);
-    const shape = getComputedStyle(card.querySelector('.bookmark .bm-shape'));
-    return {
-      flushRight: Math.round(image.right - b.right),
-      flushTop: Math.round(b.top - image.top),
-      hitIsBookmark: !!hit?.closest('.bookmark'),
-      border: style.borderStyle,
-      background: style.backgroundColor,
-      stroke: shape.stroke,
-      fill: shape.fill,
-      opacity: shape.opacity,
-    };
-  });
-  expect(seen.flushRight).toBe(0);
-  expect(seen.flushTop).toBe(0);
-  expect(seen.hitIsBookmark).toBe(true);
-  // No frame: no border and no field behind the shape.
-  expect(seen.border).toBe('none');
-  expect(seen.background).toBe('rgba(0, 0, 0, 0)');
-  // Ink, never gold: Save is chrome (DESIGN.md §2). Filled at both states
-  // (author, 2026-08-23) — half strength when not saved, full when it is.
-  const tokens = await page.evaluate(() => {
-    const root = getComputedStyle(document.documentElement);
-    const rgb = (hex) => {
-      const n = parseInt(hex.trim().slice(1), 16);
-      return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
-    };
-    return { ink: rgb(root.getPropertyValue('--ink')), gold: rgb(root.getPropertyValue('--gold')) };
-  });
-  expect(seen.stroke).toBe(tokens.ink);
-  expect(seen.fill).toBe(tokens.ink);
-  expect(seen.opacity).toBe('0.5');
-
-  /*
-   * A card with no picture: **the same corner**, measured from the card's own
-   * padding box rather than from a picture that is not there. It stood beside
-   * the *dates* at `top: 50px` from 2026-08-22 — first because the veneration
-   * glyph held that corner, then (Amendment 25) because a long name would run
-   * under a mark in it — and the author reversed it on 2026-08-26 evening.
-   * The name's reason was real, so it is paid for rather than argued away:
-   * the name line reserves the mark's own footprint, exactly as the dates
-   * already did, and the assertion below is that a two-line name clears it.
-   *
-   * ('Christopher' alone matches two saints in the corpus — Christopher and
-   * Christopher the Roman, both imageless — so the search is narrowed.)
-   */
-  const imageless = await showOnly('Christopher the Roman');
-  const corner = await imageless.evaluate((card) => {
-    const r = (el) => el.getBoundingClientRect();
-    const box = r(card);
-    const b = r(card.querySelector('.bookmark'));
-    const name = r(card.querySelector('.index-name'));
-    return {
-      fromTop: Math.round(b.top - box.top),
-      fromRight: Math.round(box.right - b.right),
-      // The name stops short of the mark rather than running under it.
-      nameClears: Math.round(b.left - name.right),
-    };
-  });
-  const imaged = await (await showOnly('Anthony the Great')).evaluate((card) => {
-    const r = (el) => el.getBoundingClientRect();
-    const box = r(card);
-    const b = r(card.querySelector('.bookmark'));
-    return { fromTop: Math.round(b.top - box.top), fromRight: Math.round(box.right - b.right) };
-  });
-  // One corner, whatever the card holds — which is the whole of the
-  // instruction, and is why these are compared rather than pinned.
-  expect(corner.fromTop).toBe(imaged.fromTop);
-  expect(corner.fromRight).toBe(imaged.fromRight);
-  expect(corner.nameClears).toBeGreaterThanOrEqual(0);
-
-  // It is the Save: pressing it writes the store, the shape fills, the name
-  // says so, the page stays where it was, and a reload finds it saved.
-  const button = (await showOnly('Anthony the Great')).locator('.bookmark');
-  await expect(button).toHaveAttribute('aria-pressed', 'false');
-  await expect(button).toHaveAttribute('aria-label', 'Save Anthony the Great');
-  await button.click();
-  await expect(button).toHaveAttribute('aria-pressed', 'true');
-  await expect(button).toHaveAttribute('aria-label', /Anthony the Great is saved/);
-  await expect(page).toHaveURL(/\/saints$/);
-  const saved = await button.locator('.bm-shape').evaluate((el) => {
-    const style = getComputedStyle(el);
-    return { fill: style.fill, opacity: style.opacity };
-  });
-  expect(saved.fill).toBe(tokens.ink);
-  expect(saved.fill).not.toBe(tokens.gold);
-  expect(saved.opacity).toBe('1');
-  await page.reload({ waitUntil: 'networkidle' });
-  const again = await showOnly('Anthony the Great');
-  await expect(again.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
-  await again.locator('.bookmark').click();
-  await expect(again.locator('.bookmark')).toHaveAttribute('aria-pressed', 'false');
-});
 
 test('the × returns the reader to the Index as they left it, and so does the browser back', async ({ browser }) => {
   // Addendum H3. Filters, open facets and scroll position all come back; the
@@ -933,7 +789,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   const page = await ctx.newPage();
   await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await (await facet(page, 'churches')).getByLabel('Romanian').check();
+  await onlyCalendar(page, 'Romanian');
   await expect(page.locator('[data-count]')).toHaveText('127');
   // The order is pinned because the card this test opens has to be one that
   // fits between the header and the fold, and card heights come from each
@@ -1013,13 +869,21 @@ test('the header control names the calendar, offers the three, and the Index fol
   // sets aside, never silently dropping anyone.
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  // Russian keeps four hundred and five of the 708-saint corpus (Amendment
-  // 31): its own week, the Russian new martyrs read off azbyka.ru, and the
-  // original eight; the rest stand undocumented for it.
-  await expect(page.locator('[data-count]')).toHaveText('426');
-  // 426, not 418: thirteen new folders, and eight the corpus already held whose
-  // Russian row said "not checked" until days.pravoslavie.ru was read for the day.
-  await expect(page.locator('[data-set-aside]')).toHaveText('426/742 saints listed.');
+  /*
+   * **And the Index no longer follows it** (author, 2026-08-28: "display all
+   * saints by default ... so that people get exposed to the full range and not
+   * have hidden saints without their realising. Orthodoxy allows for personal
+   * freedom in private prayer life"). The header used to seed the Calendar
+   * facet, so a reader who had chosen Russian met 426 of the 742 here and was
+   * never told the other 316 existed. The header still decides what the Daily
+   * page reckons by; this page shows the corpus whatever it says.
+   *
+   * The per-calendar arithmetic that used to be asserted through the header is
+   * kept below, through the facet — it is the corpus's own shape and worth
+   * pinning, only not as a thing the header does.
+   */
+  await expect(page.locator('[data-count]')).toHaveText('742');
+  await expect(page.locator('[data-set-aside]')).toContainText('742/742');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -1035,9 +899,9 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Romanian');
-  await expect(page.locator('[data-count]')).toHaveText('127');
-  // A ratio of the corpus since 2026-08-27, and the Index's only count line.
-  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints listed.');
+  // Still the whole corpus: pressing a calendar in the header changes what the
+  // Daily page reckons by and nothing about what this page lists.
+  await expect(page.locator('[data-count]')).toHaveText('742');
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -1047,9 +911,21 @@ test('the header control names the calendar, offers the three, and the Index fol
   // the hymns now, link them when the readings are published.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('365');
-  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints listed.');
+  await expect(page.locator('[data-count]')).toHaveText('742');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
+
+  /*
+   * And the corpus's own shape, through the control that does narrow it. These
+   * are the numbers this test carried through the header until 2026-08-28:
+   * Russian 426 — its own week, the new martyrs read off azbyka.ru and the
+   * original eight; Romanian 127; Greek 365, the Synaxaristis listing most of
+   * the four weeks one entry per name.
+   */
+  for (const [name, count] of [['Russian', '426'], ['Romanian', '127'], ['Greek', '365']]) {
+    await onlyCalendar(page, name);
+    await expect(page.locator('[data-count]'), name).toHaveText(count);
+    await expect(page.locator('[data-set-aside]'), name).toContainText(count + '/742');
+  }
 });
 
 test('the veneration glyph is drawn nowhere, and gold is spent only where it was asked for', async ({ page }) => {
@@ -1190,8 +1066,18 @@ test('latest runs the other way from earliest', async ({ page }) => {
   // off the screen, because a re-sort does not reorder the DOM.
   await chooseSort(page, 'earliest');
   await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
+  /*
+   * **Not the confessor of 1972 any more** (2026-08-28). The Index opened on
+   * the reader's own calendar until that morning, so "latest" meant the latest
+   * *Russian* saint; it opens on all four now, and the whole corpus's most
+   * recent is elsewhere. The relation is asserted first, because that is the
+   * claim — the two orders are different questions and must not agree — and
+   * the leader after it, because that is what a reader sees.
+   */
   await chooseSort(page, 'latest');
-  await expect.poll(() => leaders(page)).toBe('Confessor Peter (Cheltsov)');
+  const latest = await leaders(page);
+  expect(latest, 'latest opens where earliest does').not.toBe('Prophet Moses the God-seer');
+  await expect.poll(() => leaders(page)).toBe('Venerable Sofian of Antim');
   await chooseSort(page, 'earliest');
   await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
 });
@@ -1219,11 +1105,14 @@ test('random deals an order, and holds it still under the reader', async ({ page
   await chooseSort(page, 'random');
   await expect.poll(() => leaders(page)).not.toBe(earliest);
   const dealt = await leaders(page);
-  // The count is untouched: an order is not a filter.
-  await expect(page.locator('[data-count]')).toHaveText('426');
+  // The count is untouched: an order is not a filter. 742 rather than the
+  // Russian 426 since 2026-08-28, when the Index stopped opening on the
+  // reader's own calendar — which is itself the claim that an order is not a
+  // filter, seen from the other side.
+  await expect(page.locator('[data-count]')).toHaveText('742');
 
   await page.locator('[data-query]').fill('  ');
-  await expect(page.locator('[data-count]')).toHaveText('426');
+  await expect(page.locator('[data-count]')).toHaveText('742');
   expect(await leaders(page)).toBe(dealt);
 });
 
@@ -1247,7 +1136,9 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // The count line is a ratio since 2026-08-27 and no longer names the church,
   // so what it proves here is that the *sentence around the numbers* is
   // Serbian — which is the boundary this test is about.
-  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 426/742.');
+  // 742 of 742: the Index stopped opening on the reader's own calendar on
+  // 2026-08-28, and what this test is about is the *pack*, not the count.
+  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 742/742.');
   /*
    * The name in the reader's own language, which this test asserted the
    * *absence* of for two days. The author asked for it on 2026-08-25 ("St
@@ -1318,7 +1209,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
 });
 
-test('there is one bookmark drawing, on an icon and on the page alike', async ({ page }) => {
+test('there is one bookmark drawing, and one place left that draws it', async ({ page }) => {
   /*
    * Author, 2026-08-24: "There are two bookmark visuals. One with an outline,
    * one that is 50% opacity... Replace the former with the latter in all
@@ -1327,97 +1218,60 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
    * dark icon the halo was all that showed, so the reader met an outlined
    * bookmark on a card with a picture and a filled one everywhere else.
    *
-   * The halo is gone from the markup, which is what makes this checkable:
-   * every bookmark on the site is now one path, at half opacity until saved.
-   * Legibility over an image is a drop shadow — the ground pushed away from
-   * the shape rather than a second shape drawn around it.
+   * **Read off the saint's own page since 2026-08-28**, which is the third
+   * place this test has lived and the last one available: it was the Daily
+   * register until that register lost its marks, then the Index's cards until
+   * the author took the mark off those too ("Remove the bookmark from the
+   * normal Cards in the All Saints view"). Save exists on the saint's page and
+   * nowhere else now.
    *
-   * **Read off the Index's cards since 2026-08-27**, where it used to be read
-   * off the Daily page's register. That register has no marks any more, and
-   * neither do the row cards; the card is where the mark still lives, and it
-   * is the shape that has both cases — a card with a picture under the mark
-   * and a card without one. `chooseView` is not optional here even though
-   * cards are the desktop default: this spec runs at 360 as well, where the
-   * default is rows.
-   *
-   * **Both cases are asked for by name rather than dealt** (2026-08-27,
-   * second sitting). The first version read them off whatever the opening
-   * screenful happened to hold, and the Index opens in **random order** with a
-   * fresh seed every visit while only 128 of 742 saints have an icon — so "a
-   * card with a picture is mounted" was a property of the deal and not of the
-   * page. Twenty loads of the built site: no picture anywhere in the window on
-   * **7 of 20 deals at 360 and 2 of 20 at 1280**, which is a test that fails
-   * about a third of the time on a phone and one run in ten at a desk. The
-   * remedy is the one the row test below already carries, three hundred lines
-   * on: name the saint and let the Index's own search mount him.
+   * **The drop-shadow half of this test is gone with the same instruction.**
+   * It asserted that a mark over a picture is given a shadow and one on the
+   * page's own ground is not; there is no mark over a picture anywhere on the
+   * site any more, so the rule it checked matched nothing. base.css records
+   * the withdrawal where the rule stood rather than deleting it silently.
    */
   await ready(page);
-  await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await chooseView(page, 'cards');
-  await expect(page.locator('.index-card > .bookmark').first()).toBeVisible();
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  const mark = page.locator('.saint-head .bookmark');
+  await expect(mark).toHaveCount(1);
   await expect(page.locator('.bm-halo')).toHaveCount(0);
 
-  const shapes = await page.locator('.index-card .bookmark-mark').evaluateAll((marks) =>
-    marks.map((m) => {
-      const paths = m.querySelectorAll('path');
-      const style = getComputedStyle(paths[0]);
-      return { paths: paths.length, opacity: style.opacity, fill: style.fill, stroke: style.stroke };
-    }),
-  );
-  /*
-   * A sweep of the deal, so its size is the deal's: at 360 the window can be
-   * a single card. It is worth having as a sweep and cannot be the proof,
-   * which is why the two cards that matter are named below.
-   */
-  expect(shapes.length).toBeGreaterThan(0);
-  // One path each, one fill, one opacity — no second rendering anywhere.
-  expect(new Set(shapes.map((s) => s.paths))).toEqual(new Set([1]));
-  expect(new Set(shapes.map((s) => s.opacity))).toEqual(new Set(['0.5']));
-  expect(new Set(shapes.map((s) => s.fill)).size).toBe(1);
-  expect(new Set(shapes.map((s) => s.stroke)).size).toBe(1);
-
-  // The shadow is only where a picture is under it; on the page's own ground
-  // the mark has all the contrast it needs and a shadow would be furniture.
-  // Anthony the Great has an icon and Christopher the Roman has none — the
-  // same two saints the card test above stands its measurements on.
-  const markOn = async (name) => {
-    await page.locator('[data-query]').fill(name);
-    const card = page.locator('.index-card', { hasText: name });
-    await expect(card).toHaveCount(1);
-    return card.evaluate((c) => {
-      const mark = c.querySelector('.bookmark-mark');
-      const paths = mark.querySelectorAll('path');
-      const style = getComputedStyle(paths[0]);
-      return {
-        picture: Boolean(c.querySelector('.index-media img')),
-        slot: Boolean(c.querySelector('.index-media')),
-        paths: paths.length,
-        opacity: style.opacity,
-        filter: getComputedStyle(mark).filter,
-      };
-    });
-  };
-  const overImage = await markOn('Anthony the Great');
-  const onGround = await markOn('Christopher the Roman');
-  // The pins are only pins while the corpus still says so; a saint who lost
-  // his icon would otherwise turn this into two readings of the same case.
-  expect(overImage.picture, 'the imaged pin has no icon in the corpus any more').toBe(true);
-  expect(onGround.slot, 'the imageless pin has an icon in the corpus now').toBe(false);
-  // One drawing on both of them, which is the whole claim.
-  expect(overImage.paths).toBe(1);
-  expect(onGround.paths).toBe(1);
-  expect(overImage.opacity).toBe('0.5');
-  expect(onGround.opacity).toBe('0.5');
-  expect(onGround.filter).toBe('none');
-  expect(overImage.filter).not.toBe('none');
+  const drawing = await mark.evaluate((button) => {
+    const svg = button.querySelector('.bookmark-mark');
+    const paths = svg.querySelectorAll('path');
+    const style = getComputedStyle(paths[0]);
+    return {
+      paths: paths.length,
+      opacity: style.opacity,
+      fill: style.fill,
+      stroke: style.stroke,
+      filter: getComputedStyle(svg).filter,
+    };
+  });
+  // One path, one fill, one opacity — no second rendering left anywhere.
+  expect(drawing.paths).toBe(1);
+  expect(drawing.opacity).toBe('0.5');
+  expect(drawing.fill).toBe(drawing.stroke);
+  // On the page's own ground, where the mark has all the contrast it needs.
+  expect(drawing.filter).toBe('none');
 
   // And it fills to full strength when saved — the second of the two states,
   // which is all the states there are.
-  const mark = page.locator('.index-card > .bookmark').first();
   await mark.click();
   await expect
     .poll(() => mark.locator('.bm-shape').evaluate((p) => getComputedStyle(p).opacity))
     .toBe('1');
+
+  // The Index draws none, in either shape: that is the instruction, asserted
+  // where a reintroduction would show up first.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'cards');
+  await expect(page.locator('.index-card').first()).toBeVisible();
+  await expect(page.locator('.index-card .bookmark')).toHaveCount(0);
+  await chooseView(page, 'rows');
+  await expect(page.locator('.index-card.is-row').first()).toBeVisible();
+  await expect(page.locator('.index-card .bookmark')).toHaveCount(0);
 });
 
 test('a lifespan with nothing at either end says Undated, capitalised', async ({ page }) => {
@@ -1861,6 +1715,11 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
   await page.evaluate(() => document.fonts.ready);
 
   const line = page.locator('[data-set-aside]');
+  // The unfiltered state first — the page opens on the whole corpus since
+  // 2026-08-28 — and then the narrowed one, which is what this line was
+  // written about and reads the same either way.
+  await expect(line).toHaveText('742/742 saints listed.');
+  await onlyCalendar(page, 'Romanian');
   await expect(line).toHaveText('127/742 saints listed.');
   /*
    * Nothing prints above it, in any state. `not.toBeVisible` is the wrong
@@ -2059,44 +1918,54 @@ test('a saint is named by rank, and what they held is on the line below', async 
   await expect(page.locator('.hero-name')).toContainText('Όσιος');
 });
 
-test('the Calendar facet opens on the header\'s calendar and resets when it changes', async ({ page }) => {
+test('the Calendar facet opens on every calendar, and the header no longer narrows it', async ({ page }) => {
   /*
    * Author, 2026-08-27: "instead of 'Church >' filter, write 'Calendar >' and
    * have it default to whatever the site calendar settings are, ticking that
    * box. If you tick others, but then you change the calendar again, the
    * filters reset to just the site calendar."
    *
-   * The facet is the Index's only church narrowing now. It could not be
-   * otherwise and still do what was asked: the page used to cut to the
-   * reader's church *before* the filters ran, so a second calendar ticked
-   * inside that set gave the intersection, and "tick others" would have shown
-   * fewer saints rather than more. The predicate is the same either way, so
-   * the page opens on exactly the set it always did.
+   * **The default half of that is reversed** (author, 2026-08-28: "display all
+   * saints by default, i.e. have all the calendars ... ticked by default, so
+   * that people get exposed to the full range and not have hidden saints
+   * without their realising"). What survives is the rest, and it is the
+   * load-bearing part: this facet is the Index's only church narrowing, the
+   * calendars are additive, and the chip says Calendar.
+   *
+   * Opening on one calendar was never the whole of the older instruction
+   * anyway — the page used to cut to the reader's church *before* the filters
+   * ran, so a second calendar ticked inside that set gave the intersection and
+   * "tick others" showed fewer saints rather than more. That is fixed and stays
+   * fixed; what changed is only where the ticking starts.
    */
   await ready(page, { church: 'romanian', language: 'en' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
   const facetEl = page.locator('details[data-facet="churches"]');
+  const boxes = page.locator('input[name="churches"]');
+  const all = await boxes.count();
   await expect(facetEl.locator('summary')).toContainText('Calendar');
-  await expect(page.locator('[data-set-aside]')).toHaveText('127/742 saints listed.');
-  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(1);
-  await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
-  // The default selection is where the page opens, so it is not a filter the
+  await expect(page.locator('[data-set-aside]')).toContainText('742/742');
+  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
+  // Every calendar ticked is where the page opens, so it is not a filter the
   // reader has applied and Clear does not offer itself.
   await expect(page.locator('[data-clear]')).toBeHidden();
 
-  // Ticking another adds saints rather than taking them away.
+  // Unticking takes saints away, and the calendars are still additive: what is
+  // left is the union of whatever stays ticked, never an intersection.
   await facetEl.locator('summary').click();
-  await page.locator('input[name="churches"][value="russian"]').check();
-  await expect(page.locator('[data-set-aside]')).toHaveText('506/742 saints listed.');
+  for (const value of ['greek', 'serbian']) {
+    await page.locator(`input[name="churches"][value="${value}"]`).uncheck();
+  }
+  await expect(page.locator('[data-set-aside]')).toContainText('506/742');
   await expect(page.locator('[data-clear]')).toBeVisible();
 
-  // Changing the calendar in the header puts the facet back to just that one.
+  // Changing the calendar in the header puts every box back, rather than
+  // cutting the page down to the one the reader just chose.
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-set-aside]')).toHaveText('365/742 saints listed.');
-  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(1);
-  await expect(page.locator('input[name="churches"][value="greek"]')).toBeChecked();
+  await expect(page.locator('[data-set-aside]')).toContainText('742/742');
+  await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
 });
 
 /* ---- the round of 2026-08-27 evening ------------------------------------- */
@@ -3300,4 +3169,236 @@ test('leaving a saint puts the carousel back where it was', async ({ page }) => 
   // the whole difference this test is about.
   expect(Math.abs(after - before)).toBeLessThan(40);
   await ctx.close();
+});
+
+test('a carousel card is sized by the window height as well as its width', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "On desktop, the saint images in the carousel stay the
+   * same width which is good in full screen BUT not good when window is
+   * resized. Make the icon width adjust with the window height to keep the
+   * display of the images in a differently sized window on desktop."
+   *
+   * The row is sized off the picture, whose height is its own, so a fixed width
+   * in a short window pushes the captions off the fold. `--cx-w` is a clamp on
+   * `vh` now: a full-screen desk is exactly what it was, and a short window
+   * gets a smaller card rather than a cropped one.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const cell = page.locator('.cx-cell').first();
+  await expect(cell).toBeVisible();
+  const tall = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
+
+  await page.setViewportSize({ width: 1280, height: 560 });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const short = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
+
+  // Narrower in a short window, and never below the phone's own 150.
+  expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
+  expect(short).toBeGreaterThanOrEqual(150);
+  expect(tall).toBe(240);
+});
+
+test('the row comes back on its own after a press, and takes the wheel while it waits', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "if you click and then instantly try to scroll, it cant
+   * scroll. You have to wait" — and "If you click a second time, the auto
+   * scroll stops completely? ... It seems like the auto scroll can get reset by
+   * pressing the Advanced search button and then back to the Carousel mode."
+   *
+   * Both were the same latch. A press focuses the track (it is `tabindex="0"`)
+   * and `focused` held the row until focus went elsewhere, which a second press
+   * on the same row never does — so it stopped for the rest of the visit, and
+   * the only thing that cleared it was the mode toggle, because leaving the
+   * carousel destroys the loop and coming back builds a fresh one. A pointer
+   * press now holds the drift for a moment and lets go; the keyboard still
+   * holds it, because a reader tabbing through cards cannot be chasing them.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const track = page.locator('[data-carousel-track]');
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  const at = () => track.evaluate((el) => el.scrollLeft);
+
+  // The track itself, not a card, which would navigate away.
+  const box = await track.boundingBox();
+  await page.mouse.move(box.x + 40, box.y + 8);
+  await page.mouse.down();
+  await page.mouse.up();
+
+  // The wheel answers straight away rather than after the hold has expired.
+  const held = await at();
+  await page.mouse.wheel(0, -300);
+  await expect.poll(at, { timeout: 3000 }).not.toBe(held);
+
+  // And the drift returns by itself — twice, because pressing again must not
+  // be what ends it.
+  const resting = await at();
+  await expect.poll(at, { timeout: 9000 }).not.toBe(resting);
+  await page.mouse.down();
+  await page.mouse.up();
+  const second = await at();
+  await expect.poll(at, { timeout: 9000 }).not.toBe(second);
+});
+
+test('the row can be hauled with the mouse, and a haul is not a click', async ({ page }) => {
+  // Author, 2026-08-28: "Also add a hold and drag scroll function with the
+  // mouse." A touch has had this from the platform all along; a mouse had only
+  // the wheel. A drag past 4 px swallows the click in the capture phase, or
+  // every haul across the row would open whichever saint it started on.
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const track = page.locator('[data-carousel-track]');
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await expect(track).toHaveCSS('cursor', 'grab');
+
+  /*
+   * Pressed at the track's own centre, not on `.cx-card` first — the first card
+   * in the DOM is a buffer clone sitting off the leading edge at a negative x,
+   * and a press dispatched there lands outside the window. The virtualisation
+   * trap in CLAUDE.md in its other form: the first child is not the first
+   * thing on screen.
+   */
+  const box = await track.boundingBox();
+  const from = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+  const before = await track.evaluate((el) => el.scrollLeft);
+  await page.mouse.move(from.x, from.y);
+  await page.mouse.down();
+  for (let step = 1; step <= 6; step += 1) {
+    await page.mouse.move(from.x - step * 30, from.y);
+  }
+  await page.mouse.up();
+
+  const after = await track.evaluate((el) => el.scrollLeft);
+  expect(Math.abs(after - before), 'the row did not follow the drag').toBeGreaterThan(60);
+  await expect(page.locator('h1.saint-name')).toHaveCount(0);
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+});
+
+test('the Index opens on every calendar, and says its total in a quieter ink', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "In the Carousel mode, and advanced search, display all
+   * saints by default, i.e. have all the calendars ... ticked by default, so
+   * that people get exposed to the full range and not have hidden saints
+   * without their realising. Orthodoxy allows for personal freedom in private
+   * prayer life." It opened on the header's own calendar, which showed a
+   * Russian reader 426 of the 742 and never said so.
+   *
+   * And: "make the '/742' ... a considerably darker / lighter (depending on the
+   * light mode) font colour so the main number that stands out is the number
+   * listed by the current filters."
+   */
+  await searchMode(page);
+  await ready(page, { church: 'russian' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const boxes = page.locator('input[name="churches"]');
+  const count = await boxes.count();
+  expect(count).toBeGreaterThan(3);
+  for (let i = 0; i < count; i += 1) await expect(boxes.nth(i)).toBeChecked();
+
+  // The whole corpus, not the reader's own calendar.
+  await expect(page.locator('[data-set-aside]')).toContainText('742/742');
+  // Nothing is being narrowed, so the page does not offer to clear itself.
+  await expect(page.locator('[data-clear]')).toBeHidden();
+
+  const inks = await page.evaluate(() => {
+    const line = document.querySelector('[data-set-aside]');
+    const dim = line.querySelector('.count-of');
+    return {
+      line: getComputedStyle(line).color,
+      dim: dim && getComputedStyle(dim).color,
+      text: dim?.textContent,
+    };
+  });
+  expect(inks.text).toBe('/742');
+  expect(inks.dim, 'the denominator is set in the line own ink').not.toBe(inks.line);
+});
+
+test('a card carries no mark, and its text sits as close as a row does', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Remove the bookmark from the normal Cards in the All
+   * Saints view", and "Make the card view cards match the row view cards in
+   * terms of margins between name, subtext and frame."
+   *
+   * The row lost its mark the day before; the card kept it, along with the
+   * 40 px an imageless card's name and dates reserved for it. Both are gone,
+   * and the gap between the name and the dates is the row's 2 px rather than
+   * the card's 6 — the padding was already the same on both.
+   */
+  await searchMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'cards');
+  await expect(page.locator('.index-card').first()).toBeVisible();
+  await expect(page.locator('.index-card .bookmark')).toHaveCount(0);
+
+  const gaps = await page.evaluate(() => {
+    const card = document.querySelector('.index-card:not(.is-row)');
+    const name = card.querySelector('.name-line').getBoundingClientRect();
+    const dates = card.querySelector('.index-dates').getBoundingClientRect();
+    const box = card.getBoundingClientRect();
+    const style = getComputedStyle(card);
+    return {
+      nameToDates: Math.round(dates.top - name.bottom),
+      // Nothing is held clear for a mark that is not there.
+      nameInset: Math.round(box.right - name.right - parseFloat(style.paddingRight)),
+    };
+  });
+  expect(gaps.nameToDates, 'the card keeps the row 2 px between name and dates').toBeLessThanOrEqual(3);
+  expect(gaps.nameInset, 'the name still reserves the mark footprint').toBeLessThan(8);
+});
+
+test('a phone pairs the wide icons and stands the row at varied heights', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "On mobile, make the carousel a bit more organic and
+   * double stack any saint images and texts that are wide aspect ratio, and
+   * arrange them a bit more spread out vertically, not all lined up at the
+   * bottom, but make sure they render on all mobile screen sizes at appropriate
+   * spreads and not out of the page."
+   *
+   * A track child is a *cell* now — one tall saint, or two wide ones sharing a
+   * column. The loop works out its period from the offset between children, so
+   * two saints in one child leaves its arithmetic untouched; a two-row grid
+   * over the track itself would have packed each period from wherever the last
+   * one ended, which is a drift the wrap cannot correct.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const row = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const cells = [...track.querySelectorAll('.cx-cell')];
+    const inside = track.getBoundingClientRect();
+    return {
+      cells: cells.length,
+      stacked: cells.filter((c) => c.classList.contains('is-stack')).length,
+      pairs: cells.filter((c) => c.querySelectorAll('.cx-card').length === 2).length,
+      tops: new Set(cells.slice(0, 15).map((c) => Math.round(c.getBoundingClientRect().top))).size,
+      escapes: cells.filter((c) => {
+        const r = c.getBoundingClientRect();
+        return r.top < inside.top - 1 || r.bottom > inside.bottom + 1;
+      }).length,
+      // A vertical gesture belongs to the page, wherever on the track it lands.
+      touch: getComputedStyle(track).touchAction,
+    };
+  });
+  expect(row.stacked, 'no wide icons were paired on a phone').toBeGreaterThan(2);
+  expect(row.pairs).toBe(row.stacked);
+  expect(row.tops, 'every cell stands on the same line').toBeGreaterThan(1);
+  expect(row.escapes, 'a cell hangs out of the row').toBe(0);
+  expect(row.touch).toContain('pan-y');
+
+  // And a desk does not stack: the column there is wide enough for the picture.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await expect(page.locator('.cx-cell.is-stack')).toHaveCount(0);
 });

@@ -441,15 +441,30 @@ html.is-rolling #view {
    92 px for the block beneath it: the two-line name line (which carries the
    glyph beside the name), the dates, and the gaps between them. Change one of
    these and change the other. */
+/* The gap is the *row's* gap (author, 2026-08-28: "Make the card view cards
+   match the row view cards in terms of margins between name, subtext and
+   frame"). A row's `.row-body` sets 2 px between the name and its dates and
+   the card set 6, which is the whole of the difference — the padding, the
+   frame and the border were already the same on both. The picture keeps its
+   own distance from the name through `.index-media`'s margin below, so the
+   two gaps are separately stated rather than one number serving both.
+
+   CARD_TEXT_HEIGHT in views/index/grid.js is the other half of this: the card
+   is virtualised, so its text block is a number there before it is a box
+   here. Change one and measure the other. */
 .index-card {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 2px;
   padding: var(--space-2);
   overflow: hidden;
+}
+
+.index-card:not(.is-row) > .index-media {
+  margin-bottom: 4px;
 }
 
 .index-card > * {
@@ -568,43 +583,15 @@ html.is-rolling #view {
 
 /* ---- the bookmark ------------------------------------------------------ */
 
-/* Over the image's top-right corner (author, 2026-08-22), above the link's
-   ::after that covers the card, so a press saves rather than opens. The card's
-   padding edge is the image's edge, so a card with no picture puts it in the
-   same corner — the card's own. */
-.index-card > .bookmark {
-  position: absolute;
-  top: var(--space-2);
-  right: var(--space-2);
-  z-index: 1;
-}
-
-/* **Every card puts the mark in the same corner** (author, 2026-08-26
-   evening: "the bookmark for entries without images should be top right of
-   the card just like the imaged ones. In fact, just position it relative to
-   the margins instead of the image, to make sure its consistently top
-   right"). The rule above is the whole of it now, and it is measured from the
-   card's own padding box rather than from the picture — which is what it
-   always was in CSS, and is now what it is in intent too.
-
-   **This reverses a position twice recorded.** A card with no picture has the
-   name line first, so the mark stood beside the *dates* at `top: 50px` from
-   2026-08-22 — first because the veneration glyph held that corner, and after
-   the glyph was removed (Amendment 25) because a long name would run under a
-   mark in it. The glyph's reason is gone and the name's reason is real, so it
-   is paid for rather than argued away: the name line and the dates both
-   reserve the mark's own footprint below, exactly as the dates alone did.
-   What the author gets for it is the thing the old rule could not give — one
-   corner, whatever the card holds.
-
-   The reserve is 40 px: the mark is 32, and the few over keep an ellipsis
-   from sitting flush against it. Only this card shape needs it — a card with
-   an image has the mark over the picture, where no text runs, and a row's
-   mark is a flex sibling that already takes its own column out of the line. */
-.index-card:not(.is-row):not(:has(.index-media)) .name-line,
-.index-card:not(.is-row):not(:has(.index-media)) .index-dates {
-  padding-right: 40px;
-}
+/* **No mark on a card either** (author, 2026-08-28: "Remove the bookmark from
+   the normal Cards in the All Saints view"), a day after the rows lost theirs.
+   Two rules went with it, and they are recorded because both were argued for
+   at the time and both are now moot: the mark's corner, measured from the
+   card's own padding box so a card with no picture put it in the same place
+   (2026-08-26 evening); and the 40 px the name line and the dates reserved
+   below it, so a long name could not run under it. Nothing on the Index
+   reserves anything for a mark now, in either shape, and the text has the
+   card's full width. Save lives on the saint's own page. */
 
 /* ---- rows -------------------------------------------------------------- */
 
@@ -953,10 +940,24 @@ html.is-rolling #view {
    700px, not the 560 the chrome splits at: at 240 a 560px screen holds barely
    two cards and the row stops reading as a row. Between the two widths the
    phone's size is the right one. */
+/* **And it follows the window's height, not only its width** (author,
+   2026-08-28: "the saint images in the carousel stay the same width which is
+   good in full screen BUT not good when window is resized. Make the icon width
+   adjust with the window height"). A fixed 240 is right in a full-screen
+   window and wrong in a short one: the row is sized off the *picture*, whose
+   height is its own, so a window half as tall shows a band of cropped-looking
+   cards with their captions pushed off the fold.
+
+   `clamp` rather than a second breakpoint, because the thing that has changed
+   is continuous. 30vh reaches the old 240 at about 800 px of window height and
+   holds there for anything taller, so a full-screen desk is exactly what it
+   was; a 600 px window gets 180, a 500 px one the phone's own 150 and no less.
+   The ceiling moves with it in the same 1.6 ratio the two numbers have always
+   had, so a tall icon is never suddenly scaled to a band it used to clear. */
 @media (min-width: 700px) {
   .carousel {
-    --cx-w: 240px;
-    --cx-max-h: 384px;
+    --cx-w: clamp(150px, 30vh, 240px);
+    --cx-max-h: clamp(240px, 48vh, 384px);
   }
 }
 
@@ -972,12 +973,39 @@ html.is-rolling #view {
   overflow-y: hidden;
   padding: var(--space-2) var(--space-4) var(--space-4);
   scrollbar-width: none;
-  touch-action: pan-x;
+  /* **`pan-y` as well** (author, 2026-08-28: "On mobile, make sure you can
+     scroll in the space under the carousel as well. Currently if your hand
+     accidentally touches the space under the carousel, the scroll instantly
+     stops, causing a break in flow of experience"). `pan-x` alone tells the
+     browser that a touch starting on this element pans horizontally *and
+     nothing else*, so a finger landing anywhere on the track — including the
+     padding under the cards, which looks like page and is not — could not
+     carry the page. It killed the momentum and gave nothing back.
+
+     The track scrolls only on x (`overflow-y: hidden`), so `pan-y` costs it
+     nothing and hands the vertical gesture to the page, where the reader
+     meant it. What must never appear here is `touch-action: none`, for the
+     reason ui/loop-scroll.js gives at length. */
+  touch-action: pan-x pan-y;
   overscroll-behavior-x: contain;
 }
 
 .carousel-track::-webkit-scrollbar {
   display: none;
+}
+
+/* The row can be taken hold of (author, 2026-08-28: "add a hold and drag
+   scroll function with the mouse"), so it says so. `grabbing` is set by
+   ui/loop-scroll.js for as long as the button is down; a drag that moved more
+   than a few pixels swallows the click, so hauling the row past a saint does
+   not open them. */
+.carousel-track {
+  cursor: grab;
+}
+
+.carousel-track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
 }
 
 .carousel-track:focus-visible {
@@ -996,6 +1024,46 @@ html.is-rolling #view {
    the row — and each picture sits at the *bottom* of it. The images stand on
    one line, the text below them starts on one line, and nothing was resized to
    arrange it. */
+/* **A cell is what the row is made of** (author, 2026-08-28: "double stack any
+   saint images and texts that are wide aspect ratio, and arrange them a bit
+   more spread out vertically, not all lined up at the bottom"). One tall saint,
+   or two wide ones sharing a column — views/index/modes.js groups them and
+   says why the wrapper exists rather than a two-row grid over the track.
+
+   The three lift classes are the spread: a cell rests low, high or mid inside
+   the track's own height, dealt from its place in the run so a card and its
+   clones share one resting place. `stretch` is what the row used to do to
+   every card, and is what made it a line of tiles standing on a floor. */
+.cx-cell {
+  flex: none;
+  display: grid;
+  gap: var(--space-3);
+  width: var(--cx-w);
+}
+
+.cx-cell.is-low {
+  align-self: end;
+}
+
+.cx-cell.is-high {
+  align-self: start;
+}
+
+.cx-cell.is-mid {
+  align-self: center;
+}
+
+/* Two wide icons in the space one tall one asks for. Each takes half the
+   ceiling, so the pair stands as tall as a single card and the row's rhythm is
+   unchanged — the column width never moves, which is what the loop measures. */
+.cx-cell.is-stack {
+  grid-template-rows: 1fr 1fr;
+}
+
+.cx-cell.is-stack .cx-media img {
+  max-height: calc((var(--cx-max-h) - var(--space-3)) / 2);
+}
+
 .cx-card {
   flex: none;
   display: grid;
@@ -1123,3 +1191,22 @@ html.is-rolling #view {
 }
 
 
+
+/* The count's denominator (author, 2026-08-28: "make the '/742' … a
+   considerably darker / lighter … font colour so the main number that stands
+   out is the number listed by the current filters"). The filtered number is
+   the reader's own result and the total is the constant behind it, so the
+   ratio is set two-tone rather than flat.
+
+   **90% is as far as this can go, and the number is the floor's, not a
+   taste.** The first build mixed to 55% and axe was right to fail it: that is
+   2.33:1 against gesso where the brief's §13 gate wants 4.5. Measured across
+   the mix, light is the binding side — 90% gives 4.69:1 there and 5.70:1 in
+   the dark, and 85% gives 4.18 and fails. The step the reader sees is still
+   large, because it is measured against the *numerator*, which sits in the
+   page's full ink at 13.10:1. Going further would be dimming text below
+   legibility to make a number stand out, which is the wrong end of the
+   trade. */
+.count-of {
+  color: color-mix(in srgb, var(--ink-soft) 90%, var(--gesso));
+}

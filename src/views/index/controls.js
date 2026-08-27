@@ -1,6 +1,6 @@
 import { enabledChurches } from '../../data/churches.js';
 import { formatDate, languageTag } from '../../lib/i18n.js';
-import { EMPTY_FILTERS, SORTS } from '../../lib/index-filters.js';
+import { EMPTY_FILTERS, SORTS, UNCALENDARED } from '../../lib/index-filters.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { REGIONS_BY_ID } from '../../lib/regions.js';
 import { historicityName, typeName } from '../../lib/saint-types.js';
@@ -46,13 +46,26 @@ const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthLabel = (m) =>
   formatDate({ month: 'long', timeZone: 'UTC' }, new Date(Date.UTC(2001, m - 1, 1)));
 
-/** Ticks the header's calendar in the facet and unticks every other. */
+/**
+ * Ticks **every** calendar the facet offers (author, 2026-08-28: "display all
+ * saints by default … so that people get exposed to the full range and not
+ * have hidden saints without their realising").
+ *
+ * It used to tick the header's own calendar and untick the rest, which hid 316
+ * of the 742 from a reader who had chosen Russian without ever saying so. The
+ * header still decides what the Daily page reckons by; this page shows the
+ * corpus.
+ *
+ * The options are read from the DOM rather than from the church list, so
+ * whatever the facet is actually offering is what gets ticked — including the
+ * empty-calendar value on the day the corpus first has someone to put in it.
+ * `defaultChurches` is given the same set, so Clear filters stays hidden on a
+ * page nobody has narrowed.
+ */
 export function syncCalendarFacet() {
-  const want = new Set(defaultChurches());
-  for (const input of state.el.querySelectorAll('input[name="churches"]')) {
-    input.checked = want.has(input.value);
-  }
-  state.filters = { ...state.filters, churches: [...want] };
+  const inputs = [...state.el.querySelectorAll('input[name="churches"]')];
+  for (const input of inputs) input.checked = true;
+  state.filters = { ...state.filters, churches: defaultChurches(inputs.map((i) => i.value)) };
 }
 
 const checkboxes = (name, options) =>
@@ -170,6 +183,15 @@ export function controls(state) {
   const churchOptions = enabledChurches()
     .filter((c) => facets.churches.includes(c.id))
     .map((c) => ({ value: c.id, label: c.display_name }));
+  /*
+   * The fifth value, offered only when the corpus has someone in it (author,
+   * 2026-08-28). Today it never renders — all 742 carry a venerated
+   * attestation — and the day one does not, it appears here and is ticked with
+   * the rest, rather than that saint being quietly unreachable from this page.
+   */
+  if (facets.churches.includes(UNCALENDARED)) {
+    churchOptions.push({ value: UNCALENDARED, label: STRINGS.saints.filters.uncalendared });
+  }
 
   /*
    * The search field and the filters under it are one sticky block (author,

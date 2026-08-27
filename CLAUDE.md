@@ -325,9 +325,9 @@ top of the file is.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 171 as of
-  2026-08-27. One file per `src/lib` module, named for the module.
-- Browser: `e2e/`, **one file per surface** since 2026-08-27 — 510 tests across
+- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 174 as of
+  2026-08-28. One file per `src/lib` module, named for the module.
+- Browser: `e2e/`, **one file per surface** since 2026-08-28 — 527 tests across
   two projects.
   - `daily.spec.js` — the rail, the month, the day panel, readings, the fast.
   - `index.spec.js` — the carousel, the grid, the facets, search, the counts.

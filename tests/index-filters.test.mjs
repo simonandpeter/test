@@ -9,6 +9,7 @@ import {
   lifeInterval,
   shuffleKey,
   sortCards,
+  UNCALENDARED,
 } from '../src/lib/index-filters.js';
 
 /**
@@ -30,8 +31,15 @@ const card = (slug, over = {}) => ({
   image: over.image ?? null,
 });
 
+/* Two of the four carry a picture, because since 2026-08-28 the Random order
+   promotes an imaged saint into the first and third places and a fixture with
+   none could not tell whether it did. In the corpus the ratio is 128 of 742,
+   which is why the promotion is a real intervention rather than a formality. */
+const ICON = { src: 'icon.jpg', lqip: '', aspect: 1, w: 100, h: 100 };
+
 const anthony = card('anthony', {
   display_name: 'Anthony the Great',
+  image: ICON,
   types: ['monk'],
   dates: {
     birth: { earliest: 250, latest: 252 },
@@ -57,6 +65,7 @@ const moses = card('moses', {
 
 const christopher = card('christopher', {
   display_name: 'Christopher',
+  image: ICON,
   historicity: 'legendary',
   dates: { birth: null, death: { earliest: 249, latest: 251 } },
   attestations: [{ church: 'roman-catholic', status: 'venerated' }],
@@ -210,8 +219,75 @@ test('the facet lists offer only what the corpus contains', () => {
   const facets = facetsOf(all);
   assert.deepEqual(facets.types, ['monk']);
   assert.deepEqual(facets.regions, ['egypt']);
-  assert.deepEqual(facets.churches.sort(), ['coptic', 'eastern-orthodox', 'roman-catholic']);
+  /*
+   * **A saint no calendar keeps is a value, not a gap** (author, 2026-08-28:
+   * "a new option for Not calendarised … so that people get exposed to the
+   * full range and not have hidden saints without their realising"). This
+   * fixture has one, so the option is offered here. The live corpus does not —
+   * all 742 carry a venerated attestation — so the reader is not shown a
+   * control that selects nobody, and would be the day that changed.
+   */
+  assert.deepEqual(facets.churches.sort(), [
+    'coptic',
+    'eastern-orthodox',
+    'roman-catholic',
+    UNCALENDARED,
+  ]);
   assert.deepEqual(facets.historicities, ['attested', 'legendary']);
+});
+
+test('the empty-calendar value selects the saints no calendar keeps, and only those', () => {
+  const kept = (churches) =>
+    applyFilters(all, { ...EMPTY_FILTERS, churches, sort: 'name' }).matched.map((c) => c.slug);
+  const uncalendared = kept([UNCALENDARED]);
+  assert.ok(uncalendared.length > 0, 'the fixture has a saint with no venerated attestation');
+  for (const slug of uncalendared) {
+    const card = all.find((c) => c.slug === slug);
+    assert.equal(
+      card.attestations.some((a) => a.status === 'venerated'),
+      false,
+    );
+  }
+  // And it adds to the others rather than intersecting them away: ticking a
+  // calendar and the empty value shows both sets, which is what "all ticked by
+  // default" has to mean for the default to show the whole corpus.
+  const both = kept(['coptic', UNCALENDARED]);
+  for (const slug of [...kept(['coptic']), ...uncalendared]) assert.ok(both.includes(slug));
+});
+
+test('a random deal leads with pictures in the first and third places', () => {
+  /*
+   * Author, 2026-08-28: "Despite applying a random order, make it so the first
+   * and third entries in the Advanced search are always profiles with an
+   * image, for user engagement purposes."
+   *
+   * Every seed, not one: the whole point is that it holds for whichever hand
+   * is dealt, and a single seed would be one deal's luck all over again — the
+   * defect this repository spent 2026-08-27 on.
+   */
+  const imaged = all.filter((c) => c.image).length;
+  assert.ok(imaged >= 2, 'the fixture has pictures to lead with');
+  for (let i = 0; i < 40; i += 1) {
+    const seed = `seed-${i}`;
+    const { matched } = applyFilters(all, { ...EMPTY_FILTERS, sort: 'random', shuffleSeed: seed });
+    assert.ok(matched[0].image, `no picture first under ${seed}`);
+    assert.ok(matched[2].image, `no picture third under ${seed}`);
+    // Nobody is lost or duplicated by the promotion.
+    assert.equal(matched.length, all.length);
+    assert.equal(new Set(matched.map((c) => c.slug)).size, all.length);
+  }
+});
+
+test('the other three orders are left exactly as the reader asked for them', () => {
+  // A reader who asked for alphabetical and got someone else first is looking
+  // at a bug; Random is the only order that promised nothing.
+  for (const sort of ['name', 'earliest', 'latest']) {
+    const { matched } = applyFilters(all, { ...EMPTY_FILTERS, sort });
+    assert.deepEqual(
+      matched.map((c) => c.slug),
+      sortCards(all, sort).map((c) => c.slug),
+    );
+  }
 });
 
 test('an untouched filter set is inactive, and any one of them activates it', () => {

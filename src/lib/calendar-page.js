@@ -45,7 +45,28 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
   // saints with images; then anyone.
   const sung = churchId ? slugs.filter((slug) => bySlug.get(slug)?.hymned?.includes(churchId)) : [];
   const withImage = slugs.filter((slug) => bySlug.get(slug)?.image);
-  const pool = sung.length ? sung : withImage.length ? withImage : slugs;
+  /*
+   * **And an icon breaks the tie inside the sung pool** (author, 2026-08-28:
+   * "Make sure all main saint cards for each day and each calendar has an
+   * image in its profile"). This does not reverse the 2026-08-22 rule above —
+   * a saint the church sings for still outranks any imaged saint who is not —
+   * it only decides *which* of the sung, where before that was the hash alone.
+   *
+   * Measured over the days the four calendars cover: 38 of 133 day-and-church
+   * combinations led with an imageless hero, and this takes it to 27. The rest
+   * are days where nobody the church sings for has an icon, and 19 distinct
+   * saints among them have no picture on their day at all. Those are a data
+   * gap and are not code's to close — an icon needs a licence someone has
+   * actually checked, which is the rule this repository is built around.
+   */
+  const sungImaged = sung.filter((slug) => bySlug.get(slug)?.image);
+  const pool = sungImaged.length
+    ? sungImaged
+    : sung.length
+      ? sung
+      : withImage.length
+        ? withImage
+        : slugs;
   // FNV-1a over the ISO date: stable across sessions and visitors.
   let h = 0x811c9dc5;
   for (const ch of iso) {

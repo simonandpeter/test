@@ -4,7 +4,6 @@ import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { typeNames } from '../../lib/saint-types.js';
 import { layout, windowOf } from '../../lib/virtual-grid.js';
-import { paintSaved, renderBookmark, wireSaveButtons } from '../../ui/save.js';
 import { beginSwap, restore, setAside } from '../../ui/swap.js';
 import { paintCarousel } from './modes.js';
 import { state } from './state.js';
@@ -21,7 +20,7 @@ const GAP = 16;
  * two-line box so that these stay true. Changing either without the other
  * crops cards.
  */
-const CARD_TEXT_HEIGHT = 92;
+const CARD_TEXT_HEIGHT = 88;
 
 const CARD_INSET = 18;
 
@@ -76,13 +75,13 @@ const ROW_GAP = 8;
  * the box is still known before render: the matrix fits the 42 px name line a
  * card already reserves, and the description is a fixed count of utility lines
  * (13.5 px at 1.45 = 19.575 each), clamped — three on a card, two on a row.
- * Card: 92 + 6 gap + 58.725 = 156.7.
+ * Card: 88 + 2 gap + 58.725 = 148.7.
  *
  * The row's numbers run by line count for the same reason the plain row's do,
  * and from the same measurement: 18 inset + lines x 21.25 + 2 + 19.575 dates +
  * 2 + 39.15 description. index.css fixes the other half of each number.
  */
-const DETAILED_CARD_TEXT_HEIGHT = 157;
+const DETAILED_CARD_TEXT_HEIGHT = 149;
 
 const DETAILED_ROW_HEIGHTS = [102, 124, 145];
 
@@ -358,10 +357,6 @@ export function wireGrid({ onChange }) {
   };
   if (state.finePointer) el.addEventListener('pointerover', onHover);
 
-  // The bookmarks: one delegated listener for every card that will ever mount
-  // here, and one subscription that repaints them all when the store changes.
-  const unwireSave = wireSaveButtons(grid);
-
   state.cleanups.push(() => {
     if (frame) cancelAnimationFrame(frame);
     if (resizeFrame) cancelAnimationFrame(resizeFrame);
@@ -370,7 +365,6 @@ export function wireGrid({ onChange }) {
     observer?.disconnect();
     grid.removeEventListener('click', onClick);
     el.removeEventListener('pointerover', onHover);
-    unwireSave();
   });
 }
 
@@ -412,9 +406,6 @@ export function paintWindow() {
     node.style.height = `${position.h}px`;
     node.style.transform = `translate(${position.x}px, ${position.y}px)`;
   }
-  // New cards arrive with their bookmark unpainted; one read of the store
-  // paints every card in the window, not one per card.
-  if (mounted) paintSaved(inner);
 }
 
 /**
@@ -473,10 +464,17 @@ export function card(item, router, { rows = false, detailed = false } = {}) {
    * author sent anyone who wants it. What the row buys with the 44 px is the
    * next instruction in the same breath: names print whole.
    */
+  /*
+   * **And a card carries none either** (author, 2026-08-28: "Remove the
+   * bookmark from the normal Cards in the All Saints view"). The row lost its
+   * mark the day before and the card kept it; both are gone now, and with the
+   * mark goes the footprint the name and the dates were reserving for it — the
+   * 40 px inset an imageless card used to keep clear, and the two-line name
+   * box's own gap. The Index does not offer Save any more, in either shape.
+   * The saint's own page does, which is where the author sent it.
+   */
   const slot = image || '<span class="index-media is-blank" aria-hidden="true"></span>';
-  return rows
-    ? `<span class="row-body">${body}</span>${slot}`
-    : `${image}${body}${renderBookmark(item.slug, item.display_name)}`;
+  return rows ? `<span class="row-body">${body}</span>${slot}` : `${image}${body}`;
 }
 
 /**

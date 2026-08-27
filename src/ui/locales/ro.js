@@ -315,6 +315,7 @@ export const ro = {
     keptTitle: 'Calendarul se schimbă din antet.',
     filters: {
       church: 'Calendar',
+      uncalendared: 'Fără calendar',
       month: 'Luna prăznuirii',
       type: 'Tip',
       sex: 'Gen',

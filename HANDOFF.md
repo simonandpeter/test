@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 57)
+## State as of 2026-08-28 (Amendments 50 to 59)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -81,8 +81,8 @@ has since replaced the four-communion "plate" those same sections describe.
 See "Two sections below are now history" just under this one before reading
 them.
 
-- 171 unit tests (`npm test`) — pure logic, no DOM.
-- 510 browser tests (`npm run test:e2e`) — both counts verified by actually
+- 174 unit tests (`npm test`) — pure logic, no DOM.
+- 527 browser tests (`npm run test:e2e`) — both counts verified by actually
   running them (2026-08-27, the sittings of Amendments 56 and 57), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
@@ -144,12 +144,44 @@ them.
   other** (the month calls `buildRail`, `settle`, `travel`, `stepCursor`), and
   two documents the audit called archive are living specification, cited as
   `brief §N` and `Addendum X` in some thirty comments.
-- **The bookmark is on cards, the saint's page and the shelves only**
-  (Amendment 56). The author withdrew it from the Index's rows, the Daily
-  hero and the Daily register: "From my own experience a 'watch later' style
-  bookmarking system is never actually revisited." The shelf keeping its mark
-  is a judgement, not the instruction — on the Saved shelf that mark is the
-  un-save — and it is the author's to reverse.
+- **Save is on the saint's own page and nowhere else** (Amendment 59). The
+  author withdrew the mark in three instructions across two days: the Index's
+  rows, the Daily hero and the Daily register (2026-08-27), then the Index's
+  cards and the Continue reading rows (2026-08-28). "From my own experience a
+  'watch later' style bookmarking system is never actually revisited."
+  **Two consequences worth knowing before touching this.** Nothing on the shelf
+  page un-saves a saint any more — the Saved shelf's own rows never carried a
+  mark, which corrects a claim made here on 2026-08-27 that the shelf's mark
+  was "the only un-save"; it was the *Continue reading* row's. And the drop
+  shadow in base.css that made a mark legible over an icon now matches nothing,
+  because no mark on this site sits over a picture; it is kept as a comment
+  where it stood.
+- **All Saints shows the whole corpus, whatever calendar the header keeps**
+  (Amendment 59). Every calendar is ticked on open; narrowing is *unticking*,
+  and `onlyCalendar` in e2e/helpers.js is how a test makes a narrowed state now.
+  The header still decides what the Daily page reckons by. `UNCALENDARED` is
+  implemented in lib/index-filters.js and renders nowhere: all 742 saints carry
+  a venerated attestation, so the option would select nobody, and it appears the
+  day one does not.
+- **The site's name is `BRAND` in ui/strings.js, not a pack key** (Amendment
+  59). `site.name` still exists in all five packs and **nothing reads it**. The
+  tab is the exception and still translates — Amendment 31's two-name split
+  survives where a reader meets it in a tab or a bookmark. The stamp face is the
+  only `font-display: swap` in the project, because `optional` was leaving a
+  slow phone in the fallback for the life of the page.
+- **A carousel track child is a cell, not a card** (Amendment 59) — one saint,
+  or two wide-aspect ones stacked. `loopScroll` reads its period from the offset
+  between children, so a cell keeps that arithmetic untouched; a two-row grid
+  over the track would not, and the reason is in views/index/modes.js.
+- **`dragstart` is refused on the carousel** and must stay refused. Every card
+  is an `<a>` around an `<img>`; without it, pressing one and moving starts
+  Chromium's native link-and-image drag, which swallows the pointer — and hangs
+  a test harness outright rather than failing it.
+- **19 saints who lead a day have no icon** (Amendment 59). Measured: 38 of 133
+  day-and-church combinations led with an imageless hero, and preferring an
+  imaged saint inside the sung pool took it to 27; the rest are days where
+  nobody the church sings for has a picture. That is a data job — a licence
+  someone has checked, one at a time — and never a bulk fetch.
 - **A virtualised row's height does not have to be a constant** (Amendment 56,
   and the author asked the question that produced it). `nameLines()` in
   views/index/grid.js counts the browser's own greedy wrapping with canvas

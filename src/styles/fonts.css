@@ -129,11 +129,24 @@
    lowercase - the font maps lowercase codepoints to smaller capitals).
    Fetched 2026-08-27 from github.com/lecramyajiv/Fonts-GFS-Majuscule;
    licence OFL 1.1, full text in src/fonts/OFL-GFSNicefore.txt. */
+/* **`swap`, alone among this project's faces** (author, 2026-08-28:
+   "Sometimes on mobile, the title does not render in the new font, but in the
+   old font"). That is `optional` doing exactly what it promises: it gives the
+   file a few frames and, if the network has not answered, keeps the fallback
+   *for the life of the page* — so a phone on a slow connection got Literata in
+   the masthead, permanently, and a reload on a warm cache got the stamp. Two
+   different mastheads for the same reader, which is the one thing a brand
+   cannot be.
+
+   Every other face here stays `optional` and should: the body text is what
+   that policy protects, and a reflow of a page of prose is the cost it avoids.
+   The masthead is two words in a fixed box, so a swap moves nothing but
+   itself. This is the trade `optional` exists to let you make deliberately. */
 @font-face {
   font-family: 'GFS Nicefore';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: url('../fonts/gfs-nicefore.woff2') format('woff2');
 }
 

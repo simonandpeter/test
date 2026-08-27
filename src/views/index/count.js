@@ -96,7 +96,22 @@ export function paintSummary({ matched, undated }, { animate }) {
    * The numerator is `matched`, not the church's own count, which is what lets
    * the tweened line go: a filtered page keeps its real number here.
    */
-  asideNote.textContent = fill(S.listed, { shown: matched.length, total: cards.length });
+  /*
+   * **The denominator recedes** (author, 2026-08-28: "make the '/742', the
+   * total number of saints and the '/', a considerably darker / lighter
+   * (depending on the light mode) font colour so the main number that stands
+   * out is the number listed by the current filters"). The numerator is what
+   * the reader's filters just did; the total is the constant behind it.
+   *
+   * Done by wrapping the substring rather than by giving the pack a second
+   * template, because all five write the ratio the same way — `{shown}/{total}`
+   * — and a pack that ever moves the slash away from the total keeps a working
+   * line, just an undimmed one. The text is escaped first and the span is
+   * added after, so the wrapping cannot smuggle markup out of a translation.
+   */
+  const total = String(cards.length);
+  const line = esc(fill(S.listed, { shown: matched.length, total }));
+  asideNote.innerHTML = line.replace(`/${total}`, `<span class="count-of">/${total}</span>`);
   asideNote.title = S.keptTitle;
   /*
    * The tweened row stays in the DOM and out of sight. Its visible number was
@@ -104,7 +119,7 @@ export function paintSummary({ matched, undated }, { animate }) {
    * region that announces the count as filters change, and a reader who cannot
    * see the line is the one reader who needs that most.
    */
-  el.querySelector('[data-clear]').hidden = !readerHasFiltered(filters);
+  el.querySelector('[data-clear]').hidden = !readerHasFiltered(filters, state.facets?.churches);
   el.querySelector('[data-empty]').hidden = matched.length > 0;
   paintCount(matched.length, animate);
   paintTray(undated);

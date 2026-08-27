@@ -93,5 +93,5 @@ export function applySnapshot(snap) {
     const group = controlsEl.querySelector(`details.facet[data-facet="${name}"]`);
     if (group) group.open = true;
   }
-  el.querySelector('[data-clear]').hidden = !readerHasFiltered(f);
+  el.querySelector('[data-clear]').hidden = !readerHasFiltered(f, state.facets?.churches);
 }

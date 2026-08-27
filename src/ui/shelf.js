@@ -17,7 +17,7 @@ import { fill } from './strings.js';
 import { formatLifespan, formatSubtext } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { saintName } from '../lib/honorific.js';
-import { paintSaved, renderBookmark, wireSaveButtons } from './save.js';
+import { paintSaved, wireSaveButtons } from './save.js';
 import { STRINGS } from './strings.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -37,9 +37,22 @@ function row(card, router, { removable = false } = {}) {
 
 /**
  * Continue reading wears the Index's own row dress (author, 2026-08-24): the
- * same card, the same classes, so the two read as one register — the bookmark
- * centred on the row's height at the trailing edge, because a row without
- * Save would disagree with the card it copies.
+ * same card, the same classes, so the two read as one register.
+ *
+ * **It carries no bookmark** (author, 2026-08-28: "Remove bookmark on continue
+ * reading row cards. And why was it even on the left side to begin with?").
+ * It was there because the row copied the Index's, which had one until the day
+ * before; the Index's rows lost theirs on 2026-08-27 and this was the last row
+ * still wearing it. As for the left: the row builds `image, body, tools`, and
+ * the Index's rows were re-ordered to name-first with the picture trailing
+ * while this one was not — so the mark sat where the row's own dress had moved
+ * on from. Removing it settles both halves of the question.
+ *
+ * **Note for whoever picks this up**: after this the shelf page has no Save
+ * control at all. The Saved shelf's own rows (`row()` above) never had one, and
+ * are rendered without `removable`, so nothing on this page un-saves a saint —
+ * the saint's own page is the only route, which is where the author sent it
+ * ("If people want to bookmark they can go to the profile page itself").
  *
  * The × that stood above that bookmark went on 2026-08-24, at the author's
  * instruction: a row is cleared by **swiping it across** instead. It came
@@ -70,9 +83,6 @@ function readingRow(card, router) {
         <a class="index-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
       </span>
       <span class="index-dates utility">${esc(formatSubtext(card))}</span>
-    </span>
-    <span class="shelf-tools">
-      ${renderBookmark(card.slug, card.display_name)}
     </span>
     <button type="button" class="shelf-remove shelf-remove-quiet utility" data-forget="${esc(card.slug)}"
       >${esc(fill(STRINGS.shelf.removeNamed, { name: card.display_name }))}</button>

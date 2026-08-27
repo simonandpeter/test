@@ -315,6 +315,7 @@ export const sr = {
     keptTitle: 'Календар се мења у заглављу.',
     filters: {
       church: 'Календар',
+      uncalendared: 'Ван календара',
       month: 'Месец празновања',
       type: 'Тип',
       sex: 'Пол',

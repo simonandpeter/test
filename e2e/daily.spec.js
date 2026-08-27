@@ -3736,3 +3736,46 @@ test('a returning Daily page lands where it was left, though it grows after it r
   // The floor is a prop for the arrival, not a permanent change to the page.
   await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
 });
+
+test('the day leads with a sung saint who has an icon, where the day has one', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Make sure all main saint cards for each day and each
+   * calendar has an image in its profile."
+   *
+   * The hero rule is the author's own, from 2026-08-22: the saint the chosen
+   * church *sings for* is the day's principal commemoration and stands as hero
+   * before any image does. That is not reversed here — an imaged saint the
+   * church does not sing for still does not take the day. What changed is which
+   * of the *sung* leads, where before it was the date's hash alone: an icon
+   * breaks that tie now.
+   *
+   * Measured over the days the four calendars cover: 38 of 133 day-and-church
+   * combinations led with an imageless hero, and this takes it to 27. The rest
+   * are days where nobody the church sings for has a picture, and no ordering
+   * can conjure one.
+   */
+  await ready(page, { church: 'greek' });
+  await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
+  const hero = page.locator('.hero').first();
+  await expect(hero).toBeVisible();
+
+  const day = await page.evaluate(() => {
+    const heroName = document.querySelector('.hero-name')?.textContent?.trim();
+    const heroHasIcon = Boolean(document.querySelector('.hero img'));
+    // Everyone else the day commemorates, and whether any of them has a picture.
+    const others = [...document.querySelectorAll('.reg-card')].map((c) => ({
+      name: c.querySelector('.reg-name')?.textContent?.trim(),
+      imaged: Boolean(c.querySelector('.reg-thumb img')),
+    }));
+    return { heroName, heroHasIcon, others };
+  });
+
+  // The claim, stated so it cannot pass vacuously: if the hero has no icon,
+  // then nobody else on the page has one either — the day simply has none.
+  if (!day.heroHasIcon) {
+    const spare = day.others.find((o) => o.imaged);
+    expect(spare, `${day.heroName} leads with no icon while ${spare?.name} has one`).toBeFalsy();
+  } else {
+    expect(day.heroName).toBeTruthy();
+  }
+});

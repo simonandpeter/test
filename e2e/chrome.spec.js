@@ -1,6 +1,7 @@
 import { devices } from '@playwright/test';
 import { test, expect } from './fixtures.js';
 import {
+  DETAIL,
   EMPTY,
   INDEX,
   POPULATED,
@@ -46,14 +47,15 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
   // The shelf wears the Index's own row dress (author, 2026-08-24): the same
-  // card classes, so the two read as one register — the bookmark alone at the
-  // trailing edge, centred on the row's height, above the link's ::after so a
-  // press saves rather than opens. The × that stood over it went the same
-  // evening; the row is swiped away instead, which has its own test below.
+  // card classes, so the two read as one register. **The mark that stood at
+  // its trailing edge went on 2026-08-28** ("Remove bookmark on continue
+  // reading row cards"), which is the last row on the site to lose one — the
+  // Index's rows lost theirs the day before and this one was still copying a
+  // dress that had moved on. The × below is now the only control on the row.
   const shelfRow = shelf.locator('.index-card.is-row.shelf-row').first();
   await expect(shelfRow).toBeVisible();
   await expect(shelfRow.locator('.index-name')).toContainText('Moses the Hungarian');
-  await expect(shelfRow.locator('.bookmark')).toHaveCount(1);
+  await expect(shelfRow.locator('.bookmark')).toHaveCount(0);
   /*
    * The × came back on 2026-08-25, *on the desktop only* and to the right of
    * the bookmark: a mouse has the swipe too, but a visible control is the
@@ -70,12 +72,10 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
    * cannot run is not asserted at all.
    */
   const placed = await shelfRow.evaluate((row) => {
-    const mark = row.querySelector('.shelf-tools .bookmark').getBoundingClientRect();
     const card = row.getBoundingClientRect();
     const quiet = row.querySelector('.shelf-remove');
     const q = quiet.getBoundingClientRect();
     return {
-      mark,
       card,
       quietWidth: q.width,
       quietRight: q.right,
@@ -89,13 +89,17 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   // context an "×" says nothing.
   expect(placed.quietText).toBe('Remove Moses the Hungarian from Continue reading');
   const cardMid = placed.card.top + placed.card.height / 2;
-  const markMid = placed.mark.top + placed.mark.height / 2;
-  expect(Math.abs(markMid - cardMid)).toBeLessThan(2);
+  /*
+   * **The × is placed against the row itself now** (2026-08-28). It used to be
+   * measured from the bookmark it stood beside — "after the mark, and the mark
+   * centred on the row" — and the author took that mark off these rows. Every
+   * claim the × makes on its own account survives: an ×, visible where there
+   * is a cursor to aim it, centred on the row, at the trailing edge, carrying
+   * the whole sentence as its name.
+   */
   if (placed.hovers) {
-    // Visible, an ×, beside the bookmark and after it, centred on the row.
     expect(placed.quietWidth).toBeGreaterThan(8);
     expect(placed.glyph).toContain('×');
-    expect(placed.quietRight).toBeGreaterThan(placed.mark.right);
     expect(Math.abs(placed.quietMid - cardMid)).toBeLessThan(2);
     expect(placed.card.right - placed.quietRight).toBeLessThan(20);
   } else {
@@ -103,7 +107,6 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
     // truth if one ever runs on a touch device. The touch case is asserted
     // properly below.
     expect(placed.quietWidth).toBeLessThan(3);
-    expect(placed.card.right - placed.mark.right).toBeLessThan(20);
   }
 
   // And it can still be dismissed without a gesture: a shelf the reader
@@ -769,16 +772,29 @@ test('the veil names the site the way the header does', async ({ page }) => {
   expect(html).toContain('<title>The Orthodox Saint</title>');
 
   /*
-   * And both printed names follow the language (author, 2026-08-25). The
-   * markup's English is what a reader with no stored choice gets and what
-   * stands for the moment the modules take to parse; the pack paints over it
-   * at boot, before the manifest — which is the long wait — has landed.
+   * **And neither printed name follows the language any more** (author,
+   * 2026-08-28: "make sure this new website title is applied to all languages,
+   * it no longer gets translated, it stays constant as a stamp of branding").
+   *
+   * This supersedes 2026-08-25's "change the title on header and loading screen
+   * to the picked language" rather than reversing it: what that instruction was
+   * fixing was a name hard-coded in index.html and stale by a rename, and the
+   * name still comes from exactly one place — `BRAND` in ui/strings.js. What
+   * has changed is that the place is not the pack.
+   *
+   * The markup's own English is now simply right rather than a placeholder the
+   * pack paints over, which is why the assertion above can read it out of the
+   * served HTML at all.
    */
   await page.addInitScript(() =>
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
   );
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.site-name')).toHaveText('Ortodoxia Zilnică');
+  await expect(page.locator('.site-name')).toHaveText('Daily Dox');
+  // The tab keeps the *other* name and keeps translating it: Amendment 31's
+  // split survives where a reader meets it in a tab or a bookmark, which is
+  // the half the stamp instruction does not touch.
+  await expect(page).toHaveTitle(/Sfântul Ortodox/);
 });
 
 test('the site mark is the Orthodox cross, in gold by instruction', async ({ page }) => {
@@ -2002,4 +2018,108 @@ test('a restored section never touches zero on the way', async ({ page }) => {
   const scrolls = await page.evaluate(() => window.__scrolls);
   expect(scrolls, `the restore went by way of the top: ${JSON.stringify(scrolls)}`).not.toContain(0);
   expect(scrolls.at(-1)).toBe(deep);
+});
+
+test('the name is a stamp: the same two words in every language, in the stamp face', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Make the space between 'DAILY' and 'DOX' half as wide.
+   * And make sure this new website title is applied to all languages, it no
+   * longer gets translated, it stays constant as a stamp of branding."
+   *
+   * It superseded 2026-08-25's "change the title on header and loading screen
+   * to the picked language" rather than reversing it: what that instruction was
+   * fixing was a name hard-coded in index.html and stale by a rename, and the
+   * name still comes from one place — `BRAND` in ui/strings.js, which the packs
+   * no longer feed.
+   *
+   * The gap is a space set at half the font size, which is half a space wide,
+   * because a glyph's advance scales with the size. That is why this can assert
+   * a ratio at all: it holds in whichever face the machine resolved.
+   */
+  for (const language of ['en', 'ru', 'el']) {
+    await ready(page, { language });
+    await page.goto('/', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const stamp = await page.evaluate(() => {
+      const name = document.querySelector('.site-name');
+      const gap = name.querySelector('.brand-gap');
+      const size = (el) => parseFloat(getComputedStyle(el).fontSize);
+      return {
+        text: name.textContent.replace(/\s+/g, ' ').trim(),
+        face: getComputedStyle(name).fontFamily.split(',')[0].replace(/"/g, ''),
+        gapRatio: gap ? size(gap) / size(name) : null,
+        gapWidth: gap ? gap.getBoundingClientRect().width : null,
+      };
+    });
+    expect(stamp.text, `the ${language} pack translated the name`).toBe('Daily Dox');
+    // Latin caps in every pack now, where the display face used to be scoped to
+    // English because the other packs printed accented names it cannot set.
+    expect(stamp.face, `the ${language} pack lost the stamp face`).toBe('GFS Nicefore');
+    expect(stamp.gapRatio, 'the gap is not half a space').toBeCloseTo(0.5, 2);
+    expect(stamp.gapWidth).toBeGreaterThan(0);
+  }
+});
+
+test('the brand face is allowed to arrive late rather than never', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Sometimes on mobile, the title does not render in the
+   * new font, but in the old font."
+   *
+   * That is `font-display: optional` keeping its promise: a few frames for the
+   * file, and if the network has not answered, the fallback for the *life of
+   * the page*. A phone on a slow connection got Literata in the masthead
+   * permanently and a warm reload got the stamp — two mastheads for one reader,
+   * which is the one thing a brand cannot be. It is `swap` now, alone among
+   * this project's faces: the body text keeps `optional`, because that policy
+   * is there to protect a page of prose from reflowing, and the masthead is two
+   * words in a fixed box.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  const face = await page.evaluate(async () => {
+    await document.fonts.ready;
+    const rules = [...document.styleSheets]
+      .flatMap((sheet) => {
+        try {
+          return [...sheet.cssRules];
+        } catch {
+          return [];
+        }
+      })
+      .filter((r) => r.constructor.name === 'CSSFontFaceRule')
+      .map((r) => ({ family: r.style.fontFamily.replace(/["']/g, ''), display: r.style.fontDisplay }));
+    return rules.find((r) => r.family === 'GFS Nicefore');
+  });
+  expect(face, 'the stamp face has no @font-face rule').toBeTruthy();
+  expect(face.display, 'the masthead can still be left in the fallback for good').toBe('swap');
+});
+
+test('a Continue reading row carries no mark, and the shelf still clears', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Remove bookmark on continue reading row cards. And why
+   * was it even on the left side to begin with?"
+   *
+   * It was there because the row copied the Index's, which had one until
+   * 2026-08-27; the Index's rows lost theirs that day and this was the last row
+   * still wearing it. The left was the same borrowing half-undone: the row
+   * builds image, body, tools, and the Index's rows had been re-ordered to
+   * name-first with the picture trailing while this one was not.
+   *
+   * **The shelf now has no Save control at all** — the Saved shelf's own rows
+   * never had one — so this also pins that the *other* way off a reading row
+   * still works: the swipe, and the × a pointer gets.
+   */
+  await ready(page);
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  const row = page.locator('.shelf-row').first();
+  await expect(row).toBeVisible();
+  await expect(page.locator('.shelf-row .bookmark')).toHaveCount(0);
+  // The row is still the whole of a card: a picture or its slot, a name, dates.
+  await expect(row.locator('.index-name')).toHaveCount(1);
+  // And it can still be cleared, which is what the mark was standing next to.
+  await expect(row.locator('[data-forget]')).toHaveCount(1);
+  await row.locator('[data-forget]').evaluate((el) => el.click());
+  await expect(page.locator('.shelf-row')).toHaveCount(0);
 });

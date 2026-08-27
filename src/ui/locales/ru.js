@@ -321,6 +321,7 @@ export const ru = {
     keptTitle: 'Календарь меняется в шапке.',
     filters: {
       church: 'Календарь',
+      uncalendared: 'Вне календаря',
       month: 'Месяц памяти',
       type: 'Тип',
       sex: 'Пол',

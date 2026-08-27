@@ -4,13 +4,44 @@
  * No other file may contain literal UI text.
  */
 
+/**
+ * The site's name, in every language (author, 2026-08-28). A brand is a mark
+ * rather than a word, so it does not go through the packs — see `site.name`
+ * below for what that key is still doing there.
+ *
+ * The two words are printed with their own gap rather than a plain space
+ * ("Make the space between 'DAILY' and 'DOX' half as wide"), and the way that
+ * is done is worth stating because it is exact rather than tuned: a space set
+ * at half the font size is half as wide, because a glyph's advance scales with
+ * the size. No em-guess at what a space measures in a face that is Nicefore on
+ * one machine and Literata on another.
+ */
+export const BRAND = ['Daily', 'Dox'];
+
 export const STRINGS = {
   site: {
-    // The header and the loading veil print this (author, 2026-08-25: "change
-    // the title on header and loading screen to the picked language"). It was
-    // hard-coded in index.html in both places, and stale there besides — the
-    // site was renamed Orthodoxy Daily on 2026-08-24 and this key still said
-    // The Orthodox Saint.
+    /*
+     * **The name is a stamp, not a string** (author, 2026-08-28: "make sure
+     * this new website title is applied to all languages, it no longer gets
+     * translated, it stays constant as a stamp of branding"). `BRAND` below is
+     * what the masthead, the veil and the tab now print, in every pack.
+     *
+     * This key stays in all five packs so the coverage script has the same key
+     * set everywhere, and because a translated name is a decision a future
+     * author might want back. **Nothing reads it.** Editing `ru.site.name` will
+     * not change what the header says — change `BRAND`.
+     *
+     * **`tabName` below is untouched and still translated**, which is not an
+     * oversight. The head and the page carry deliberately different names —
+     * Amendment 31 — and the instruction here is about the one the reader
+     * *sees*, the stamp in the corner. Collapsing the split would undo a
+     * decision the author made rather than carry out the one they gave.
+     *
+     * The instruction it replaces (2026-08-25: "change the title on header and
+     * loading screen to the picked language") is superseded rather than
+     * reversed: what that one was fixing was a title hard-coded in index.html
+     * and stale by a rename, and the name still comes from one place.
+     */
     name: 'Daily Dox',
     // The tab and the bookmark keep the *other* name, which is Amendment 31's
     // deliberate split: the head says The Orthodox Saint, the page says
@@ -612,6 +643,8 @@ export const STRINGS = {
       // sitting this facet *is* the Index's calendar choice, opened on the
       // one the header keeps, so it should carry the header's own word.
       church: 'Calendar',
+      // Offered only when the corpus holds a saint no calendar keeps.
+      uncalendared: 'Not calendarised',
       month: 'Feast month',
       type: 'Type',
       sex: 'Gender',
