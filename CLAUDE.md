@@ -10,11 +10,20 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
 ## Where things live
 
 **Calendar (Daily page)** — `src/views/calendar.js` + `src/styles/calendar.css`
-- `src/views/daily/state.js` holds the page's state and is the only file that
-  writes it (`open`/`close`); everything else reads the live binding. It moved
-  out on 2026-08-28 as the first step of splitting this view — every section of
-  calendar.js reads `state`, so nothing could be lifted while the object lived
-  in the same file.
+- **`src/views/daily/` is the half that answers "what is today"**, split out
+  on 2026-08-28. calendar.js keeps the half that answers "which day" — the
+  roll, the rail, the month, `render` and `select`.
+  - `state.js` — the page's state, and the only file that writes it
+    (`open`/`close`); everything else reads the live binding.
+  - `format.js` — the four Intl formats and `utc`.
+  - `entries.js` — the feast index, `entriesFor`/`countFor`, and how far the
+    corpus reaches.
+  - `record.js` — the readings and the feast's hymns, as markup.
+  - `panel.js` — the hero, the register and the three silences. It exports
+    `paintDay` and nothing else.
+  - Imports run one way: format ← entries, record ← panel, and calendar.js
+    imports from all of them. **Nothing in `daily/` calls back into
+    calendar.js**, which is what keeps that true.
 - **The rail and the month are one seam, not two.** The month calls
   `buildRail`, `settle`, `travel`, `stepCursor` and `dayAt`; DESIGN.md says why
   ("the month is the week grown taller"). The separable half is the *day* —

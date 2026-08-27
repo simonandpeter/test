@@ -10,37 +10,33 @@
  * Cold loads and back/forward still arrive through the router.
  */
 
-import { buildFeastIndex, toIsoDate } from '../lib/feasts.js';
+import { toIsoDate } from '../lib/feasts.js';
 import { gregorianToJdn } from '../lib/jdn.js';
-import { CHURCHES_BY_ID } from '../data/churches.js';
-import {
-  addDaysIso,
-  formatSubtext,
-  parseIso,
-  pickHero,
-  todayIso,
-  weekOf,
-} from '../lib/calendar-page.js';
-import { loadDetail, observePrefetch } from '../lib/detail.js';
-import { churchName, currentChurch, entriesInChurch, subscribeChurch } from '../lib/church.js';
-import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
-import { saintName } from '../lib/honorific.js';
+
+import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
+import { observePrefetch } from '../lib/detail.js';
+import { currentChurch, subscribeChurch } from '../lib/church.js';
+import { escapeHtml as esc } from '../lib/markdown.js';
+
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
 import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
-import { renderBookmark, wireSaveButtons } from '../ui/save.js';
+import { wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
-import { hymnMarkup } from '../ui/hymns.js';
+
 import { greatFeast, liturgicalDay } from '../lib/liturgy.js';
-import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
-import { recordedDay, recordsReach } from '../data/days.js';
+import { formatDate, translateReason } from '../lib/i18n.js';
+import { recordedDay } from '../data/days.js';
 /* The page's own state, and the one file allowed to write it — see
    views/daily/state.js for why it is a singleton and why it moved. */
 import { state, open as openState, close as closeState } from './daily/state.js';
-import { nameDays } from '../lib/name-days.js';
+import { countFor } from './daily/entries.js';
+import { headingFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
+import { paintDay } from './daily/panel.js';
+
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
-import { bibleUrl, refInLanguage } from '../lib/bible.js';
+
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.calendar.title;
@@ -50,24 +46,7 @@ const BASE = import.meta.env.BASE_URL;
 // Through lib/i18n.js's cache rather than module constants (Amendment 36): a
 // formatter built once can never change language.
 const dayFmt = (d) => formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
-// The page's own date wears the abbreviated month (author, 2026-08-24:
-// "display abbreviated months, e.g. Aug"); the buttons' aria-labels keep
-// dayFmt's full month, because a label is spoken, not glanced at.
-const headingFmt = (d) =>
-  formatDate({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
-const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
-// A date named inside a sentence rather than set as a heading: no weekday, and
-// the month in full, because "13 Jan 2027" reads as a label and this reads as
-// prose.
-const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
-// Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
-// grid, and a full "September" reached across into the dates.
-const monthFmt = (d) => formatDate({ month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
 
-const utc = (iso) => {
-  const d = parseIso(iso);
-  return new Date(Date.UTC(d.year, d.month - 1, d.day));
-};
 
 /* One icon button stood beside this until 2026-08-26 — a crosshair that
    jumped the rail back to today (author: "remove the old button and stretch
@@ -101,69 +80,6 @@ export function destroy() {
   closeState();
 }
 
-const indexCache = new Map();
-function indexFor(year, data) {
-  if (!indexCache.has(year)) {
-    indexCache.set(year, buildFeastIndex(data.saints, year, CHURCHES_BY_ID));
-  }
-  return indexCache.get(year);
-}
-
-/**
- * The day's commemorations in the one calendar the page shows (author,
- * 2026-08-22). Everything downstream reads through here — the hero, the
- * register, the density dots under every date at both grains — so the page
- * counts one church everywhere rather than in the one place someone
- * remembered. The church itself is re-read from lib/church.js whenever it
- * changes, never cached beyond `state.calendar`.
- */
-const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
-const entriesFor = (iso, data) => entriesInChurch(allEntriesFor(iso, data), state?.calendar);
-const countFor = (iso, data) => entriesFor(iso, data).length;
-
-/**
- * How far ahead the corpus has a saint for, in the calendar the reader keeps.
- *
- * The Daily page prints this in the note for a day whose calendar is recorded
- * but whose saints are not folders yet, and until 2026-08-27 it printed a
- * literal - "the corpus reaches 19 September" - which had been stale for a
- * fortnight. A printed sentence that names a date is a sentence that goes
- * stale, so this reads it off the index instead.
- *
- * **The run, not the furthest date, and the run tolerates a gap.** The feast
- * index maps a saint's (month, day) onto every year, so the single Russian
- * saint with a November feast would have "the corpus reaches" say November
- * while the two months before it were bare. And an unbroken run is too strict
- * the other way: 28 August 2026 has no Russian folder at all - it is the
- * Dormition, whose subject is the feast - so a run that stops at the first
- * empty day would have reported today. What the sentence means is "we have
- * folders up to about here", so the walk carries on over a fortnight of
- * silence and stops at anything longer.
- */
-const REACH_GAP = 14;
-const reachCache = new Map();
-function corpusReaches() {
-  const key = state.calendar;
-  if (reachCache.has(key)) return reachCache.get(key);
-  let day = todayIso();
-  let last = null;
-  let empty = 0;
-  for (let i = 0; i < 500; i += 1) {
-    if (countFor(day, state.data) > 0) {
-      last = day;
-      empty = 0;
-    } else if (last && (empty += 1) > REACH_GAP) break;
-    day = addDaysIso(day, 1);
-  }
-  reachCache.set(key, last);
-  return last;
-}
-
-/** The reach, named in the reader's language; an empty string if there is none. */
-const reachInWords = () => {
-  const reach = corpusReaches();
-  return reach ? plainDateFmt(utc(reach)) : '';
-};
 
 export function render(el, { data, params, router }) {
   destroy();
@@ -548,72 +464,6 @@ function paintLiturgy() {
     .join('\n');
 }
 
-/**
- * The day's readings, where the chosen church's calendar has been read and
- * recorded (author, 2026-08-22): each reference a link to Bible Gateway, and
- * the page it was read from named. Nothing is printed for a day nobody has
- * recorded — an absence is not a claim.
- */
-/**
- * A reading's label in the reader's language, keeping whatever the calendar
- * put in brackets after it. The data's labels are the church's own — "Epistle
- * (Прор)", "Απόστολος", "Јеванђеље" — and it is the *kind* that translates:
- * the qualifier names which commemoration the reading belongs to and is a
- * quotation, so it is passed through exactly as printed.
- */
-function readingLabel(label) {
-  const R = STRINGS.calendar.readings;
-  const text = String(label ?? '');
-  // Greedy from the first bracket to the last, because a qualifier can carry
-  // brackets of its own: days.pravoslavie.ru prints «за понедельник и за
-  // вторник (под зачало)», and a pattern that refuses a nested bracket finds
-  // no qualifier at all and leaves the kind untranslated.
-  const qualifier = text.match(/\s*(\(.*\))\s*$/)?.[1] ?? '';
-  const base = qualifier ? text.slice(0, text.length - qualifier.length).trim() : text;
-  const kind =
-    /^(epistle|apostol|απόστολος|апостол)$/i.test(base) ? R.epistle
-    : /^(gospel|evanghelie|ευαγγέλιο|јеванђеље)$/i.test(base) ? R.gospel
-    : base;
-  return qualifier ? `${kind} ${qualifier}` : kind;
-}
-
-function readingsMarkup(iso, churchId) {
-  const rec = recordedDay(iso, churchId);
-  if (!rec?.readings?.length) {
-    /*
-     * Past the end of the day records the page used to simply stop (found in
-     * review, 2026-08-27). The computed lines hold for any date, so a day in
-     * March 2027 printed its fast, its tone and its week and looked whole,
-     * with the half that is read off a calendar silently absent.
-     *
-     * Only *past* the horizon. Inside it, a day with no readings is a day
-     * whose calendar prints none - saint.gr publishes about a fortnight ahead
-     * and those days carry a note of their own - which is a different fact and
-     * must not be told in these words.
-     */
-    const reach = recordsReach();
-    if (!reach || iso <= reach) return '';
-    return `<p class="beyond-records utility">${esc(
-      fill(STRINGS.calendar.beyondRecords, { until: plainDateFmt(utc(reach)) }),
-    )}</p>`;
-  }
-  const R = STRINGS.calendar.readings;
-  const language = currentLanguage();
-  const items = rec.readings
-    .map(
-      (x) =>
-        `<li><span class="reading-label">${esc(readingLabel(x.label))}</span> ` +
-        `<a href="${bibleUrl(x.ref, language)}" rel="noopener noreferrer">${esc(refInLanguage(x.ref, language))}</a></li>`,
-    )
-    .join('');
-  const src = rec.source?.url ? `<a href="${esc(rec.source.url)}" rel="noopener noreferrer">${esc(rec.source.text)}</a>` : esc(rec.source?.text ?? '');
-  return `<section class="day-readings" data-readings>
-    <h2 class="register-heading">${R.heading}</h2>
-    <ul class="readings utility">${items}</ul>
-    <p class="readings-source utility">${fill(R.source, { source: src, bible: R.bible })}</p>
-  </section>`;
-}
-
 
 /* A note saying the hymns keep the church's own tongue stood under the Hymns
    heading from Amendment 37 (2026-08-24) until the author removed it the next
@@ -623,30 +473,6 @@ function readingsMarkup(iso, churchId) {
    already carries its own `lang` from the data, which is where the attribute
    on the printed text comes from. */
 
-function hymnsMarkup(iso, churchId) {
-  const rec = recordedDay(iso, churchId);
-  const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
-  return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
-    <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
-    <div data-feast-hymns>${feastHymns.map(hymnMarkup).join('')}</div>
-    <div data-saint-hymns></div>
-  </section>`;
-}
-
-function fillSaintHymns(panel, slug, iso) {
-  loadDetail(slug).then(
-    (payload) => {
-      if (!state || state.selected !== iso) return;
-      const box = panel.querySelector('[data-saint-hymns]');
-      if (!box) return;
-      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
-      if (!hymns.length) return;
-      box.innerHTML = hymns.map(hymnMarkup).join('');
-      panel.querySelector('[data-hymns]').hidden = false;
-    },
-    () => {},
-  );
-}
 
 /**
  * One delegated listener for the fast control, on the view root: the liturgy
@@ -835,27 +661,6 @@ function closeFastBubble() {
 const languageOfNote = (churchId) =>
   ({ russian: 'ru', greek: 'el', romanian: 'ro', serbian: 'sr' })[churchId] ?? 'en';
 
-/**
- * The hero's life, opened (author, 2026-08-25). The same first paragraph the
- * Index's Detailed rows show, from the same fetched payload and the same
- * helper, so the two never disagree about where a life begins. Wide screens
- * only — the CSS hides the box below 760 px, where the hero has no spare
- * column and the life is a scroll away under the register anyway.
- */
-function fillHeroLede(panel, slug, iso) {
-  loadDetail(slug).then(
-    (payload) => {
-      if (!state || state.selected !== iso) return;
-      const box = panel.querySelector('[data-hero-lede]');
-      if (!box) return;
-      const text = firstParagraphText(payload?.life);
-      if (!text) return;
-      box.textContent = text;
-      box.hidden = false;
-    },
-    () => {},
-  );
-}
 
 /* The dots that stood under every date at both grains — one per
    commemoration, capped at five — were removed by the author on 2026-08-25
@@ -1645,220 +1450,4 @@ const stepMonth = (n) => moveMonth(n);
 
 /* ---- the day panel: hero + register ----------------------------------- */
 
-/**
- * A commemorated saint in the Index's own row dress (author, 2026-08-24:
- * "display the saint card row layout instead of the text only"). It is the
- * third place this markup is written — views/saints.js builds it for the
- * grid, ui/shelf.js for Continue reading — and it stays written out rather
- * than shared, because each of the three carries something the others do
- * not: the grid's is virtualised and absolutely positioned, the shelf's is
- * swiped away, and this one carries the church's title for the day and the
- * shared-element name that travels into the saint's page. index.css styles
- * the card; calendar.css only places it.
- *
- * The day's face is the hero above; these are the rest of the day, and they
- * now show what they were: a picture, a lifespan, and Save where every other
- * card in the site keeps it.
- */
-function registerRow(saint, title, transition) {
-  const image = saint.image
-    ? `<span class="index-media" style="background-image:url('${BASE + saint.image.lqip}')">
-        <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
-          loading="lazy" decoding="async" />
-      </span>`
-    : '';
-  return `<li class="index-card is-row reg-card">
-    ${image}
-    <span class="row-body">
-      <span class="name-line">
-        <a class="index-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-          data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
-      </span>
-      ${/* No day in any of the four calendars currently puts a *titled*
-             saint in the register: all 20 titled attestations in the corpus
-             belong to saints who are their own day's hero, so this branch has
-             no reachable trigger today and carries no browser test — said
-             plainly rather than left looking covered. It is kept because
-             titles are data and the corpus grows; the register is where a
-             church's own title for the day belongs when one arrives. */ ''}
-      ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      <span class="index-dates utility">${esc(formatSubtext(saint))}</span>
-    </span>
-    ${renderBookmark(saint.slug, saint.display_name)}
-  </li>`;
-}
 
-/**
- * Three silences, and a reader is owed the difference between them (redrawn
- * 2026-08-22 for one church at a time; a third added at Amendment 44). The
- * corpus having nothing for a day is a statement about our sourcing; this
- * church's calendar having nothing while another of the three does is a fact
- * about the choice made above, and says where the others are.
- *
- * The third is new because the day records now run months past the saints. A
- * day can carry its readings, its fast and a dozen hymns and still have no
- * folder for any saint of it — and the old wording called that "an empty day"
- * directly above the day's own readings, which told the reader the opposite of
- * what the page was showing. Prose in ink in every case, never a banner.
- */
-function emptyDayNote(iso) {
-  const S = STRINGS.calendar.silence;
-  const all = allEntriesFor(iso, state.data);
-  const here = new Set(entriesInChurch(all, state.calendar).map((e) => e.slug));
-  const elsewhere = new Set(all.map((e) => e.slug).filter((slug) => !here.has(slug))).size;
-  const church = churchName(state.calendar);
-
-  /*
-   * **A fourth, and it is the one that was wrong rather than missing.** The
-   * page's subject is a saint folder, so a day whose subject is a *feast* had
-   * no subject and fell straight to the silence: 28 August 2026 in the Russian
-   * calendar printed the Dormition's gold chip, the fast it earns, the feast's
-   * readings and the feast's troparion, with "Nothing in the Russian calendar
-   * today" sitting in the middle of them. The day was never empty; the corpus
-   * has no folder for any saint of it, which is a different sentence.
-   *
-   * The feast is read in the church's own calendar, exactly as the chip above
-   * reads it, so the Russian keeps the Dormition on the civil 28 August and
-   * the other three on the 15th - and the note follows the chip rather than
-   * guessing at the civil date.
-   */
-  const feast = greatFeast(iso, state.calendar);
-  // The day's own calendar, which is recorded further ahead than its saints
-  // are folders and stops a good deal short of the feasts, which are computed.
-  const recorded = Boolean(recordedDay(iso, state.calendar)?.readings?.length);
-  const lead = feast
-    ? [
-        fill(S.feast, { church, feast: STRINGS.calendar.feasts?.names?.[feast] ?? feast }),
-        recorded ? S.feastRecords : '',
-        S.feastNoSaints,
-      ]
-        .filter(Boolean)
-        .join(' ')
-    : elsewhere > 0
-      ? fill(S.none, { church })
-      : recorded
-        ? fill(STRINGS.calendar.dayWithoutSaints, { reach: reachInWords() })
-        : STRINGS.calendar.emptyDay;
-
-  if (elsewhere === 0) return lead;
-  const pointer = elsewhere === 1 ? S.elsewhereOne : fill(S.elsewhereMany, { count: elsewhere });
-  return `${lead} ${pointer}`;
-}
-
-function paintDay(panel) {
-  const { data, selected } = state;
-  const entries = entriesFor(selected, data);
-
-  if (entries.length === 0) {
-    panel.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
-    return;
-  }
-
-  const heroSlug = pickHero(selected, entries, data.bySlug, state.calendar);
-  const hero = data.bySlug.get(heroSlug);
-
-  // The image opens the saint too (author, 2026-08-21). Hidden from the
-  // accessibility tree and out of the tab order on purpose: the name beside it
-  // already links to the same page, and a second link with no text of its own
-  // would be either an unnamed link or the same one announced twice.
-  const media = hero.image
-    ? `<div class="hero-figure">
-        <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
-          data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
-          style="background-image:url('${BASE + hero.image.lqip}')">
-          <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
-            style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
-        </a>
-      </div>`
-    : '';
-
-  // One calendar, one church: the register needs no church heading, and a
-  // saint can appear in it only once. The shared element is the first row
-  // that names them all the same, because the hero already carries its own.
-  const registerEntries = entries.filter((e) => e.slug !== heroSlug);
-  const named = new Set([heroSlug]);
-  const rows = registerEntries
-    .map((e) => {
-      const saint = data.bySlug.get(e.slug);
-      const title = titleFor(saint, e.church);
-      const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
-      named.add(saint.slug);
-      return registerRow(saint, title, transition);
-    })
-    .join('');
-  const register = registerEntries.length
-    ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>
-       <ul class="register register-cards">${rows}</ul>`
-    : '';
-
-  panel.innerHTML = `
-    <article class="hero ${hero.image ? 'has-media' : ''}">
-      ${media}
-      <div class="hero-body">
-        <div class="name-line">
-          <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
-          </h2>
-          ${renderBookmark(hero.slug, hero.display_name)}
-        </div>
-        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
-        <!-- The opening of the life, on a wide screen only (author,
-             2026-08-25: "because there is space on the left of the saint card
-             under their name"). It arrives with the fetched life rather than
-             from the manifest, so the box is here from the first paint and
-             fills a moment later; empty until then, and empty for good where
-             a saint has no life recorded, because a heading over nothing is
-             the furniture DESIGN.md §5b refuses. -->
-        <p class="hero-lede" data-hero-lede hidden></p>
-      </div>
-    </article>
-    ${register}
-    ${readingsMarkup(selected, state.calendar)}
-    ${hymnsMarkup(selected, state.calendar)}
-    ${nameDaysMarkup(entries, data)}`;
-  fillSaintHymns(panel, hero.slug, selected);
-  fillHeroLede(panel, hero.slug, selected);
-}
-
-const titleFor = (saint, churchId) =>
-  saint.attestations.find((a) => a.church === churchId)?.titles?.join(', ') ?? '';
-
-/**
- * Whose name day it is (author, 2026-08-26: "add name days"). Under the day's
- * saints, because it is a second reading of the same list and not a new claim
- * about the day: every name here is the first word of a commemoration already
- * printed above it. lib/name-days.js argues the reduction and the three things
- * it refuses to do.
- *
- * A name links to its saint only where exactly one of the day's saints bears
- * it; where two or more do, the name stands as text, because a link would be
- * the site choosing between them. On 20 September that is five of the day's
- * twenty-one — two Eugenes, two Macariuses, a John who is also a John — and
- * they read exactly as the linked ones do, which is the point.
- */
-function nameDaysMarkup(entries, data) {
-  const cards = entries.map((e) => data.bySlug.get(e.slug)).filter(Boolean);
-  const names = nameDays(cards, { lang: currentLanguage(), locale: languageTag() });
-  if (!names.length) return '';
-  const items = names
-    .map(({ name, slug }) =>
-      slug
-        ? `<li><a class="name-day" href="${state.router.href(`/saints/${slug}`)}" data-prefetch="${esc(slug)}">${esc(name)}</a></li>`
-        : `<li><span class="name-day">${esc(name)}</span></li>`,
-    )
-    .join('');
-  /*
-   * "Today's name days" only on the day that is actually today (author,
-   * 2026-08-26). The Daily page is a day browser — the rail reaches 121 days
-   * either side — so the word would be false on every day but one, and the
-   * rest of this panel is careful to say "this day" rather than "today" for
-   * exactly that reason. The heading the author asked for stands where it is
-   * true and the plain one stands everywhere else.
-   */
-  const N = STRINGS.calendar.nameDays;
-  const heading = state.selected === todayIso() ? N.headingToday : N.heading;
-  return `<section class="day-namedays" data-namedays>
-    <h2 class="register-heading">${esc(heading)}</h2>
-    <ul class="namedays">${items}</ul>
-  </section>`;
-}
