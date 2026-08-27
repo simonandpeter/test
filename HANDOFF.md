@@ -112,6 +112,32 @@ them.
   the manifest on the boot path. **Two different things are called `names`** — a
   saint record's own name forms, and the search index. Neither is
   `display_name`, and a change to one is not a change to the other.
+- **Two agent sessions work this repo at once, and they share port 4173.**
+  Nothing else in these documents says so, and it cost both sessions runs on
+  2026-08-28. `playwright.config.js` refuses to reuse a server it did not start,
+  so a suite started while another is live dies on "4173 is already used" — and
+  the reflex, killing whatever holds the port, kills the other session's run
+  mid-flight. One gate died at test 494 of 528 that way: a 0 ms failure and a
+  truncated log, which reads exactly like a broken test and is not one.
+  `Stop-Process -Name node -Force` is worse; it takes everything.
+  **Ask before clearing the port, and say when you start a long run.** And
+  before believing a failure, check whether the other session's tree was in
+  flight — two of that run's three failures belonged to an uncommitted image
+  batch.
+- **A test that passes only in the fallback face is testing something else**
+  (Amendment 62). `a row prints its name whole` measured clipping as
+  `scrollHeight > clientHeight + 1`, and a *one-line* name in a 21.25 px line
+  box reports 23 against 21 — so every row in Literata is "clipped". It passed
+  for a day because the rows were being read before the webfont arrived, and
+  preloading the Latin subsets turned it red every time. Clipping is measured
+  against the clamp's allowance now. **Making a flake worse is a legitimate
+  debugging move**: the intermittent red became a permanent one, and only then
+  was the real fault visible.
+- **The grid lays out twice on a cold load, by design.** Row heights come from
+  the name measured in the face resolved *at layout time*; `wireGrid`'s
+  `document.fonts.ready` hook re-lays them when the webfont lands. A test that
+  reads row geometry must poll — `await document.fonts.ready` in the page does
+  not order it after the app's own `.then` on that same promise.
 - **The suite has no known flakes** (2026-08-28, Amendment 60), and the way the
   last two were closed is the standing method. Both looked like assertions
   sampling at a fixed moment, and were: waiting for the state instead took the

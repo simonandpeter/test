@@ -3046,17 +3046,59 @@ test('a row prints its name whole and is only as tall as that name needs', async
           text: name.textContent.trim(),
           height: Math.round(row.getBoundingClientRect().height),
           lines: Math.round(name.getBoundingClientRect().height / line),
-          // Content taller than the box it was laid into is a cropped row; a
-          // name taller than its own clamp is an ellipsis.
+          // Content taller than the box it was laid into is a cropped row.
           overflow: row.scrollHeight - Math.round(row.getBoundingClientRect().height),
-          clipped: name.scrollHeight > name.clientHeight + 1,
+          /*
+           * **Clipped means the clamp truncated the name**, measured against
+           * the clamp's own allowance rather than against the element's box.
+           *
+           * It was `scrollHeight > clientHeight + 1`, and that is not a test of
+           * clipping at all: with a 21.25 px line box a *one-line* name reports
+           * scrollHeight 23 against clientHeight 21, so every row in Literata
+           * answers "clipped". It only ever passed because the rows were being
+           * read before the webfont arrived — which is why it fired as a
+           * load-sensitive flake naming a different saint each run, and why
+           * preloading the Latin subsets turned it red every time. The names
+           * were never cut off; the ruler was wrong.
+           */
+          clipped: name.scrollHeight > Math.ceil(3 * line) + 2,
         };
       });
     });
 
+  const byLines = { 1: 66, 2: 83, 3: 104 };
+  /*
+   * **Waited for, because the grid lays out twice on a cold load** (2026-08-28).
+   *
+   * A row's height is worked out from the name measured in the face that was
+   * *resolved at layout time*, and on a cold load that is the fallback. When
+   * the webfont lands, `wireGrid`'s `document.fonts.ready` hook re-measures and
+   * lays the rows out again — the site repairs itself, and this test was
+   * reading between the two. `await document.fonts.ready` in the page does not
+   * order the test after the app's own `.then` on the same promise, let alone
+   * after the repaint it schedules.
+   *
+   * It failed under load on three different commits and named a *different
+   * saint each time*, which is the signature: not one row being wrong, but
+   * whichever row the two faces disagree about most. The third of this suite's
+   * load-sensitive family and the first about text rather than timing.
+   *
+   * So the window is polled until every row agrees with its own line count. A
+   * layout that is genuinely wrong never agrees and the poll still fails; one
+   * that is mid-repair is given the frame it needs.
+   */
+  await expect
+    .poll(
+      async () =>
+        (await read())
+          .filter((r) => r.height !== byLines[r.lines] || r.clipped)
+          .map((r) => `${r.lines} lines at ${r.height}px: ${r.text}`),
+      { timeout: 5000 },
+    )
+    .toEqual([]);
+
   const rows = await read();
   expect(rows.length).toBeGreaterThan(5);
-  const byLines = { 1: 66, 2: 83, 3: 104 };
   for (const r of rows) {
     // Not one name in the mounted window is cut off, in either sense.
     expect(r.clipped, r.text).toBe(false);
