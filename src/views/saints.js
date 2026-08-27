@@ -25,7 +25,8 @@ import { ensureAllPacks } from '../lib/i18n.js';
 import { buildFeastIndex } from '../lib/feasts.js';
 import { formatSubtext, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
-import { loadDetail, prefetch } from '../lib/detail.js';
+import { loadDetail, observePrefetch, prefetch } from '../lib/detail.js';
+import { loopSafe, loopScroll, loopSlice } from '../ui/loop-scroll.js';
 import * as store from '../lib/store.js';
 import {
   EMPTY_FILTERS,
@@ -36,6 +37,7 @@ import {
 } from '../lib/index-filters.js';
 import { layout, windowOf } from '../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../ui/swap.js';
+import { rollDie } from '../ui/roll.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { chosenChurch, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -73,6 +75,23 @@ const ROW_GAP = 8;
 const DETAILED_CARD_TEXT_HEIGHT = 157;
 const DETAILED_ROW_HEIGHT = 112;
 const LAYOUTS = ['cards', 'rows'];
+const MODES = ['carousel', 'search'];
+/**
+ * How many saints the carousel draws from (author, 2026-08-27: "implement it
+ * intelligently to work efficiently and smartly").
+ *
+ * The old build's carousel held its whole corpus because that corpus was ten
+ * saints. This one is 742, and a track carrying every one of them plus the
+ * clone buffer either side is ~800 nodes and 742 images the reader will never
+ * reach — a drifting row is a way of *meeting* saints, not a register of them,
+ * and the register is one press away in the other mode. So the track takes a
+ * sample, drawn through the same seeded shuffle the Random order uses, which
+ * makes it stable for a visit and different on the next one.
+ */
+const CAROUSEL_POOL = 48;
+/** Copies either side of the run. Wide enough that a hard fling cannot outrun
+ *  the buffer before the correction is allowed to land (see ui/loop-scroll). */
+const CAROUSEL_BUFFER = 12;
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const monthLabel = (m) =>
   formatDate({ month: 'long', timeZone: 'UTC' }, new Date(Date.UTC(2001, m - 1, 1)));
@@ -124,17 +143,34 @@ export function render(el, { data, router, nav }) {
     // control that forgets is one the reader has to set every time. Detailed
     // is remembered the same way.
     layout: LAYOUTS.includes(settings.indexLayout) ? settings.indexLayout : 'cards',
+    // The page opens on the carousel (author, 2026-08-27), and remembers a
+    // reader who has moved off it — the same bargain Layout and Detailed make.
+    mode: MODES.includes(settings.indexMode) ? settings.indexMode : 'carousel',
     detailed: settings.indexDetailed === true,
+    loop: null,
     finePointer: window.matchMedia('(pointer: fine)').matches,
     named: null,
     cleanups: [],
   };
 
+  /*
+   * The heading carries the mode toggle beside it (author, 2026-08-27: "a
+   * button toggle to the right of 'All Saints'"). The button names where it
+   * goes, not where it is, so its own label is the answer to "what happens if
+   * I press this".
+   */
   el.innerHTML = `
-    <h1>${STRINGS.saints.title}</h1>
+    <div class="index-head">
+      <h1>${STRINGS.saints.title}</h1>
+      <button type="button" class="mode-toggle utility" data-mode-toggle></button>
+    </div>
     ${controls(state)}
     <p class="result-count sr-only" data-count-row></p>
     <p class="set-aside utility" data-set-aside></p>
+    <div class="carousel" data-carousel hidden>
+      <div class="carousel-track" data-carousel-track
+        tabindex="0" role="region" aria-label="${esc(STRINGS.saints.carouselLabel)}"></div>
+    </div>
     <div class="grid" data-grid><div class="grid-inner" data-grid-inner></div></div>
     <div data-tray></div>
     <p class="index-empty" data-empty hidden>${STRINGS.saints.noneMatch}</p>`;
@@ -173,6 +209,7 @@ export function render(el, { data, router, nav }) {
   const restoring = (nav?.restore || nav?.pop) && remembered ? remembered : null;
   if (restoring) applySnapshot(restoring);
   update({ animate: false });
+  applyMode();
   if (restoring) {
     window.scrollTo(0, restoring.scrollY);
     paintWindow();
@@ -625,7 +662,9 @@ function wireControls() {
     const pool = state.shownCards.length ? state.shownCards : state.cards;
     if (!pool.length) return;
     const card = pool[Math.floor(Math.random() * pool.length)];
-    state.router.navigate(`/saints/${card.slug}`);
+    // The saint is drawn before the die turns, not after: the roll is how the
+    // answer is shown, not how it is decided.
+    rollDie(random, () => state.router.navigate(`/saints/${card.slug}`));
   };
   random.addEventListener('click', onRandom);
 
@@ -683,6 +722,10 @@ function wireControls() {
   };
   clear.addEventListener('click', onClear);
 
+  const toggle = state.el.querySelector('[data-mode-toggle]');
+  const onToggle = () => switchMode(state.mode === 'carousel' ? 'search' : 'carousel');
+  toggle.addEventListener('click', onToggle);
+
   state.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
     controlsEl.removeEventListener('input', onChoice);
@@ -690,7 +733,178 @@ function wireControls() {
     detailedBox.removeEventListener('change', onDetailed);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);
+    toggle.removeEventListener('click', onToggle);
+    state.loop?.destroy();
+    state.carouselPrefetch?.();
   });
+}
+
+/* ---- the two modes ------------------------------------------------------- */
+
+/**
+ * Which of the page's two faces is showing (author, 2026-08-27).
+ *
+ * Carousel is the page as it opens: the heading, its toggle, the search field,
+ * and a drifting row of saints under it. Advanced search is everything else the
+ * Index has always been. The parts are the same DOM either way — the mode is a
+ * class on the view, so nothing is rebuilt to change face and the reader's
+ * filters survive a trip through the carousel and back.
+ */
+function applyMode() {
+  const { el, mode } = state;
+  const carousel = mode === 'carousel';
+  el.classList.toggle('is-carousel', carousel);
+  el.classList.toggle('is-search', !carousel);
+  el.querySelector('[data-carousel]').hidden = !carousel;
+  el.querySelector('[data-grid]').hidden = carousel;
+
+  // The button names the mode it goes to, not the one it is in.
+  const toggle = el.querySelector('[data-mode-toggle]');
+  toggle.textContent = carousel ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel;
+
+  if (carousel) paintCarousel();
+  else {
+    state.loop?.destroy();
+    state.loop = null;
+    state.carouselPrefetch?.();
+    state.carouselPrefetch = null;
+    state.carouselKey = null;
+  }
+}
+
+/**
+ * One card of the drifting row: the picture, and the name under it.
+ *
+ * Sized from its height rather than its width, so a card is as wide as its own
+ * icon is — which is why `ui/loop-scroll` measures real offsets instead of
+ * multiplying out a stride.
+ */
+function carouselCard(item, router) {
+  const media = item.image
+    ? `<span class="cx-media" style="background-image:url('${BASE + item.image.lqip}')">
+        <img src="${BASE + item.image.src}" alt="" loading="lazy" decoding="async" />
+      </span>`
+    : '<span class="cx-media is-blank" aria-hidden="true"></span>';
+  return `<a class="cx-card" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
+      ${media}
+      <span class="cx-name">${esc(saintName(item))}</span>
+    </a>`;
+}
+
+/**
+ * Fills the track from what the filters have left, and wires it once.
+ *
+ * **Saints with an icon come first.** A carousel is a way of meeting people by
+ * looking at them, and 614 of the 742 have no picture — a sample taken flat
+ * would be mostly empty tiles. The imageless are not excluded, they are simply
+ * last, and the mode that shows the corpus as it really is sits behind one
+ * press of the toggle.
+ *
+ * The track is rebuilt only when the pool itself changes. Typing in the search
+ * field runs `update` on every keystroke, and tearing down 72 nodes and a
+ * scroll loop for a set that has not moved is the kind of work that shows up
+ * as a stutter in the drift.
+ */
+function paintCarousel() {
+  const { el, router } = state;
+  const track = el.querySelector('[data-carousel-track]');
+
+  const pool = state.shownCards
+    .slice()
+    .sort((a, b) => (a.image ? 0 : 1) - (b.image ? 0 : 1))
+    .slice(0, CAROUSEL_POOL);
+  const run = loopSafe(pool);
+  const key = run.map((c) => c.slug).join(',');
+  if (key === state.carouselKey) return;
+  state.carouselKey = key;
+
+  state.loop?.destroy();
+  state.loop = null;
+  if (!run.length) {
+    track.innerHTML = '';
+    return;
+  }
+
+  track.innerHTML = loopSlice(run, CAROUSEL_BUFFER)
+    .map((item) => carouselCard(item, router))
+    .join('');
+  // The images decide the widths, so the loop cannot measure until they have
+  // laid out. It measures now for the common case — a warm cache — and again
+  // when each picture arrives.
+  state.loop = loopScroll(track, run.length, { buffer: CAROUSEL_BUFFER });
+  for (const img of track.querySelectorAll('img')) {
+    if (img.complete) continue;
+    img.addEventListener('load', () => state.loop?.measure(), { once: true });
+  }
+  // One observer at a time. The track is rebuilt whenever the pool changes, and
+  // pushing a fresh cleanup onto the pile each time would leave every previous
+  // observer watching nodes that are no longer in the document.
+  state.carouselPrefetch?.();
+  state.carouselPrefetch = observePrefetch(track);
+}
+
+/**
+ * The change of face (author, 2026-08-27: "a falling away animation on the
+ * filters and cards visible on screen, followed by a fade-in of the new mode").
+ *
+ * Two beats, and the second does not start until the first is over: what is on
+ * screen drops and fades, staggered so it reads as a fall rather than a blink,
+ * and then the mode it left behind comes up.
+ *
+ * Reduced motion gets the swap with no fall and no fade — removed, not
+ * shortened (DESIGN.md §6).
+ */
+function switchMode(next) {
+  if (!state || state.mode === next) return;
+  const { el } = state;
+  state.mode = next;
+  store.setSetting('indexMode', next);
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) {
+    applyMode();
+    return;
+  }
+
+  /*
+   * A second press inside the fall lands the first one first. Two falls
+   * overlapping would leave the earlier `land` to run against a set of nodes
+   * the later one has already taken the class off — and the mode it applies is
+   * read from `state.mode`, so the *stale* timer would have the last word.
+   * This is Amendment 9's rule for animated swaps, in the shape this one
+   * needs: while two are in flight, exactly one is current.
+   */
+  state.falling?.();
+
+  // Only what a reader can actually see falls. A card below the fold has
+  // nowhere to fall from, and staggering 400 of them would run for a minute.
+  const onScreen = [...el.querySelectorAll('.index-controls > *, .index-card, .cx-card')].filter((node) => {
+    const b = node.getBoundingClientRect();
+    return b.bottom > 0 && b.top < window.innerHeight && b.width > 0;
+  });
+
+  onScreen.forEach((node, i) => {
+    node.style.setProperty('--fall-delay', `${Math.min(i, 12) * 26}ms`);
+    node.classList.add('is-falling');
+  });
+
+  const land = () => {
+    clearTimeout(timer);
+    state.falling = null;
+    for (const node of onScreen) {
+      node.classList.remove('is-falling');
+      node.style.removeProperty('--fall-delay');
+    }
+    applyMode();
+    el.classList.add('is-arriving');
+    // One frame at the arriving state before it is released, or there is no
+    // change for the transition to run between.
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('is-arriving')));
+  };
+
+  const fall = onScreen.length ? 260 + Math.min(onScreen.length - 1, 12) * 26 : 0;
+  const timer = setTimeout(land, fall);
+  state.falling = land;
 }
 
 /* ---- the grid ------------------------------------------------------------ */
@@ -904,6 +1118,9 @@ function update({ animate }) {
 
   inner.style.height = `${result.height}px`;
   paintWindow();
+  // The carousel draws from the same filtered set, so it follows a search or a
+  // filter change like the grid does. It is a no-op when the pool has not moved.
+  if (state.mode === 'carousel') paintCarousel();
 }
 
 function paintWindow() {
@@ -985,7 +1202,21 @@ function card(item, router, { rows = false, detailed = false } = {}) {
     ${description}`;
   const bookmark = renderBookmark(item.slug, item.display_name);
 
-  return rows ? `${image}<span class="row-body">${body}</span>${bookmark}` : `${image}${body}${bookmark}`;
+  /*
+   * A row reads name-first (author, 2026-08-27): the text starts at the card's
+   * left edge and the picture stands at the trailing end, just inside the
+   * bookmark. A saint with no icon keeps the slot rather than closing it up —
+   * an empty 48 px on the right — so the marks stay in one column and the eye
+   * running down a scrolling register meets every name at the same left edge.
+   *
+   * This is not the empty frame the author struck out on 2026-08-26. That one
+   * stood *before* the name and pushed every title in from the margin, which
+   * is the thing objected to; the instruction was "print the text all the way
+   * to the left margin of the card", and moving the picture to the other end
+   * is what finally does it for the 614 saints who have none.
+   */
+  const slot = image || '<span class="index-media is-blank" aria-hidden="true"></span>';
+  return rows ? `<span class="row-body">${body}</span>${slot}${bookmark}` : `${image}${body}${bookmark}`;
 }
 
 /**

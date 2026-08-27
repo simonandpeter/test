@@ -69,8 +69,26 @@ in base.css (L605)
   disclosures built by `choiceGroup()` in views/saints.js, read with
   `currentChoice()` and written with `setChoice()` — **both, always**, or the
   chip advertises an order the grid is not in.
+- **Two modes since 2026-08-27, and the page opens on the carousel.**
+  `state.mode` is `'carousel'` or `'search'`, remembered in `settings.indexMode`;
+  `applyMode()` toggles `is-carousel`/`is-search` on the *view root* and
+  `switchMode()` runs the fall-then-fade between them. Nothing is rebuilt to
+  change face — the filters keep their DOM and the reader's choices survive the
+  trip. The `--facet-*` custom properties live on those two root classes (not
+  on `.index-controls`) because the mode toggle is a chip outside the controls.
+- **The carousel**: `paintCarousel()` fills `[data-carousel-track]`, and
+  `src/ui/loop-scroll.js` is the endless-scroll engine (clone buffer, wrap by
+  one period, measure real offsets, never write `scrollLeft` mid-touch). Its
+  header says which parts came from the cross-church build and why each is
+  load-bearing. The track draws a **sample** — `CAROUSEL_POOL`, imaged saints
+  first — not the whole corpus.
+- A **row** reads name-first since 2026-08-27: `.row-body`, then the picture,
+  then the mark (`order: 1/2/3`). An imageless row keeps a blank 48 px slot
+  (`.index-media.is-blank`) so the marks stay in one column.
 - Bookmark component itself: `src/ui/save.js` (one implementation, rendered
   everywhere a saint appears — Index, calendar hero, saint page).
+- The die's roll is `src/ui/roll.js` — a fixed copy of the die over a faded
+  view, then the navigation, then the reveal.
 
 **Saint detail page** — `src/views/saint.js` + `src/styles/saint.css`
 - The `.name-line` pattern (name shrinks and wraps within itself; a sibling
@@ -90,9 +108,12 @@ tests (they run light-mode only).
 carries a `[data-nav-label]` span whose word swaps to *Today* while the reader
 is on the Daily page looking at another day. The Daily view announces the day
 with a `gos:day` CustomEvent from `select()`; main.js listens. Header layout
-(sticky, the phone's four-across grid) is `header.chrome` / `nav.site-nav` in
+(the phone's four-across grid) is `header.chrome` / `nav.site-nav` in
 base.css — the phone's `[aria-current]` override must stay **after** the base
-one, same specificity.
+one, same specificity. **The sticking is on `.chrome-bar`** (index.html), which
+wraps the header and both chooser panels so the panels travel with it
+(2026-08-27); `header.chrome` keeps its own `position: sticky` so the bar's top
+is still the header's own box.
 
 **Strings / i18n** — `src/ui/strings.js` (English, the source of truth) +
 `src/ui/locales/{ru,ro,el,sr}.js`. Touch all five together for any new or
@@ -107,11 +128,24 @@ one language's pack, ~20 kB). `data/liturgical-days.js` is imported *only* by
 days.js; import it anywhere else and it goes back into the entry chunk.
 `ensureAllPacks()` is for the search index, which needs every language at once.
 
+**A view transition suspends rendering while its callback runs.** Anything
+awaited inside `startViewTransition`'s callback must not wait on
+`requestAnimationFrame`: the browser will not run a frame until the callback's
+promise settles, so a frame-await in there deadlocks both ways and the
+transition never finishes — leaving the page at the top of the new view.
+Timers keep running and a layout read is still honest, so poll with
+`setTimeout`. `restoreSection` says this at the point of use.
+
 **Where the reader was** — `sectionScroll` in `src/main.js` keeps a scroll
-position per nav section and `restoreScroll` puts it back after the view
-transition, retrying for half a second because some views (About) are shorter
-than their final height for a moment. Pressing the current section's nav button
-forgets the position and goes to the top.
+position per nav section and `restoreSection` is **awaited inside** the
+transition callback — `swap` is async and `startViewTransition` does not
+snapshot the new state until the promise settles, so the fade is captured with
+the page already in place. It waits (bounded, on a timer) for the view to be
+tall enough, because a view is not its final height synchronously: the Daily
+page grows 508 px when `fillSaintHymns` lands, and a scroll applied against the
+shorter page clamps short. `settleLate` is the net for a load slower than the
+wait, and fires only if the page is still exactly where the wait left it. Pressing the current section's nav button forgets the position and
+eases to the top over a fixed 300 ms (`animateScrollToTop`).
 
 **Names** — `src/lib/honorific.js` decides the rank in front of a name
 (precedence walk over `types`, written out in the file's header);
@@ -159,6 +193,14 @@ top of the file is.
   precondition* that the row was on one line. Where a wrap is the thing under
   test, force it with the column (`.facets { max-width: 40px }`) rather than
   with a font, and the state is the same on every machine.
+- **A fourth, and it made a test pass that was pinning nothing (2026-08-27).**
+  `locator.click()` scrolls its target into view first. Press a control that
+  lives in the **sticky bar** that way and Playwright carries the page back to
+  the top on its own — so any assertion about a *scrolled* page taken after
+  such a press is measuring the top of the document. Backing the fix out is
+  what found it: the panel test passed against a non-sticky bar. Dispatch the
+  press (`page.evaluate(() => el.click())`) and assert the scroll position is
+  still where you put it before measuring anything else.
 - **A third trap, and it cost a red CI run on 2026-08-27.** Anything that
   depends on *what day the machine thinks it is* is a measurement of one
   clock. The Daily button reads **Today** on a day that is not today and its

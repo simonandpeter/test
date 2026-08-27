@@ -204,12 +204,21 @@ function shell(card, backLabel) {
       </div>
     </div>
 
+    <!-- The life first, veneration under it (author, 2026-08-27). The page is
+         about a person: the prose that says who they were is what a reader
+         came for, and the church-by-church register is the apparatus behind
+         it. Veneration led from the first build to this one, which put four
+         skeleton rows and a table of feast dates between the name and the
+         first sentence of the life. -->
     <div class="saint-main" data-detail>
-      <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
-      <div data-veneration>${skeletonLines(4)}</div>
       <h2 class="register-heading">${STRINGS.saint.life}</h2>
       <div class="life" data-life>${skeletonLines(6)}</div>
+      <!-- Sources stay under the life: they are text.sources, the documents
+           the prose above was written from, and they followed it before this
+           reorder too. -->
       <div data-sources></div>
+      <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
+      <div data-veneration>${skeletonLines(4)}</div>
       <div data-hymns-box></div>
       <div data-related></div>
       <p class="image-credit utility" data-credit></p>

@@ -141,7 +141,25 @@ function renderNav(current) {
  * distance. Reduced motion is still every other scroll in this file —
  * removed, not shortened.
  */
+/**
+ * The running ease, so a navigation can call it off.
+ *
+ * **A tween outlives the press that started it**, and the last frames of this
+ * one write 0 — so a reader who presses the current section and then another
+ * one within the same third of a second had the second page's remembered
+ * position overwritten by the tail of the first page's scroll home. Found by
+ * the section test, which is the third time this codebase has been bitten by
+ * two things owning `window.scrollY` at once (Amendment 9's rule, again).
+ */
+let scrollTween = null;
+
+function stopScrollTween() {
+  if (scrollTween) cancelAnimationFrame(scrollTween);
+  scrollTween = null;
+}
+
 function animateScrollToTop(duration = 300) {
+  stopScrollTween();
   const from = window.scrollY;
   if (!from || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.scrollTo(0, 0);
@@ -152,9 +170,9 @@ function animateScrollToTop(duration = 300) {
   const tick = (now) => {
     const t = Math.min(1, (now - start) / duration);
     window.scrollTo(0, Math.round(from * (1 - easeOutCubic(t))));
-    if (t < 1) requestAnimationFrame(tick);
+    scrollTween = t < 1 ? requestAnimationFrame(tick) : null;
   };
-  requestAnimationFrame(tick);
+  scrollTween = requestAnimationFrame(tick);
 }
 
 /*
@@ -210,25 +228,94 @@ document.addEventListener('gos:day', (e) => {
 const sectionScroll = new Map();
 
 /**
- * Puts the page back to a remembered position, and keeps trying for a moment.
+ * Puts a section back where it was left, waiting — briefly — for the view to
+ * be tall enough to hold the position.
  *
- * A view is rendered synchronously but is not always its final height
- * synchronously: About fetches its statistics, the Index fills descriptions,
- * and a scroll to 400 on a page that is briefly 814 px tall lands at 14 and
- * stays there. So this scrolls, and then re-scrolls on each frame until the
- * position is *reachable* — at which point one more call lands it — or half a
- * second has passed, which is long enough for a fetch that was already warm
- * and short enough that a reader who starts scrolling is not fought for long.
+ * A view renders synchronously but is not its final height synchronously. The
+ * Daily page is the worst of them: `fillSaintHymns` waits on the hero saint's
+ * detail record and then adds the hymns, which is 508 px on an ordinary day —
+ * so a scroll applied the moment the markup lands clamps against a page a
+ * third shorter than the one the reader is about to see, and the correction
+ * arrives after the fade has finished. That is the jump.
+ *
+ * **This is awaited from inside the transition callback, which is the whole
+ * mechanism.** `startViewTransition` does not snapshot the new state until the
+ * promise its callback returns has settled, so waiting here means the fade is
+ * captured with the page already at the right place — no second pass, and
+ * nothing to correct afterwards.
+ *
+ * *An earlier version propped a `min-height` floor under the view instead, so
+ * the scroll could not clamp. It worked on a desk and was the wrong tool: a
+ * floor changes the document's height, and it measured the natural height by
+ * clearing and re-setting the property on every frame. On a phone, repeated
+ * document-height changes are what make the URL bar show and hide — and the
+ * sticky header jumps with it. Nothing here touches layout now.*
  */
-function restoreScroll(y) {
+const reachableTop = () =>
+  Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+
+/**
+ * Where the last restore actually put the page, so the late pass below can
+ * tell "the reader has not moved" from "the reader has scrolled away".
+ */
+let landedAt = null;
+
+async function restoreSection(y) {
+  landedAt = null;
   if (!y) return;
+  /*
+   * **A timer, and on no account `requestAnimationFrame`.**
+   *
+   * This runs inside the transition callback, and for the length of that
+   * callback the browser has *suspended rendering* — it will not run an
+   * animation frame until the promise the callback returned has settled. So
+   * awaiting a frame in here is a deadlock in both directions: the promise is
+   * waiting for a frame that is waiting for the promise. The transition never
+   * finishes, and the page is left at the top of the new view — the very fault
+   * this function exists to remove, made permanent. Cost a whole debugging
+   * round on 2026-08-27; the timer queue keeps running throughout, and a
+   * layout read is still honest while painting is held.
+   *
+   * Ten turns of ~16 ms is about 160 ms, which covers a warm `loadDetail`
+   * several times over and still reads as one movement rather than a wait.
+   */
+  for (let turns = 0; turns < 10 && reachableTop() < y; turns++) {
+    await new Promise((resolve) => setTimeout(resolve, 16));
+  }
+  // Clamped, in case the view genuinely ended up shorter than where the reader
+  // had been — a filter can do that between one visit and the next.
+  const to = Math.min(y, reachableTop());
+  window.scrollTo(0, to);
+  landedAt = to;
+}
+
+/**
+ * The safety net, and it is deliberately a net rather than the mechanism.
+ *
+ * On a slow phone a cold `loadDetail` can outlast the wait above, and then the
+ * page is put down short of where the reader left it. Landing short and
+ * *staying* short is quietly wrong, which is worse than the jump this round
+ * set out to remove — so if the content arrives late, the position is
+ * completed after the fade.
+ *
+ * It fires only when it has something to fix and nobody to fight: the earlier
+ * pass fell short, the target is reachable now, and the page is still sitting
+ * exactly where that pass left it. When the wait did its job — which is every
+ * warm navigation — this does nothing at all.
+ */
+function settleLate(y) {
+  if (!y || landedAt === null || landedAt >= y) return;
   let frames = 0;
   const tick = () => {
-    window.scrollTo(0, y);
-    const reachable = document.documentElement.scrollHeight >= y + window.innerHeight;
-    if (!reachable && frames++ < 30) requestAnimationFrame(tick);
+    if (Math.abs(window.scrollY - landedAt) > 2) return;
+    if (reachableTop() >= y) {
+      window.scrollTo(0, y);
+      landedAt = y;
+      return;
+    }
+    if (frames++ < 40) requestAnimationFrame(tick);
   };
-  tick();
+  requestAnimationFrame(tick);
 }
 
 function show({ route, params, path }, nav = {}) {
@@ -253,8 +340,19 @@ function show({ route, params, path }, nav = {}) {
   // for, and the next one — whatever triggers it — starts from instant again.
   const landAnimated = animateLanding;
   animateLanding = false;
+  // Whatever the last press set moving, this navigation is the end of it: a
+  // tween still easing toward the *old* page's top would otherwise land on the
+  // new page and take it there.
+  stopScrollTween();
 
-  const swap = () => {
+  /*
+   * **Async on purpose.** `startViewTransition` waits for the promise its
+   * callback returns before snapshotting the new state, so awaiting the scroll
+   * restore in here is what makes the fade cross into a page that is already
+   * where the reader left it. Everything before the await is synchronous and
+   * unchanged.
+   */
+  const swap = async () => {
     // Views that hold listeners or timers get told they are leaving; the rest
     // are pure renderers and do not implement it.
     currentView?.destroy?.();
@@ -284,13 +382,11 @@ function show({ route, params, path }, nav = {}) {
     document.title = `${heading} - ${STRINGS.site.tabName}`;
     view.render(viewEl, { data, params, router, nav, cameFrom });
     // A returning section is put back where it was *before* the transition's
-    // new-state snapshot is taken (the Index's own restore — the saint page's
-    // × or a browser back — happens separately, from its own record, DESIGN.md
-    // §5c). The view has just rendered synchronously, so its height already
-    // exists for everything but async-filled content, which the retry loop
-    // after `finished` corrects. Doing it here means the fade crosses into the
-    // page already at the right spot instead of at the top with a jump after.
-    if (!firstRender && returning) window.scrollTo(0, returning);
+    // new-state snapshot is taken, so the fade crosses into the page already at
+    // the right spot rather than at the top with a jump after it. (The Index's
+    // own restore — the saint page's × or a browser back — happens separately,
+    // from its own record, DESIGN.md §5c.)
+    if (!firstRender) await restoreSection(returning);
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
     // yet, focus is already at the top of the document, and Chrome treats a
@@ -314,20 +410,13 @@ function show({ route, params, path }, nav = {}) {
   // the app's first paint on that is a blank page waiting to happen; it was
   // reproducibly a second long in a headless browser.
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  /*
-   * `swap` already put a returning section back where it was, so the fade
-   * itself crosses into the right spot. This second call, after the
-   * transition settles, is only for a view that was not yet its final height
-   * inside `swap` — About's fetched statistics, the Index's filled-in
-   * descriptions — where the first attempt landed short and this corrects it
-   * once the content has grown. In the common case it lands on the same y a
-   * second time and does nothing.
-   */
+  // `swap` owns the section restore now, floor and all, so there is nothing
+  // left to correct once the transition settles — a second pass here is what
+  // used to produce the jump this fixed.
   if (document.startViewTransition && !reduced && !first) {
-    document.startViewTransition(swap).finished.finally(() => restoreScroll(returning));
+    document.startViewTransition(swap).finished.finally(() => settleLate(returning));
   } else {
-    swap();
-    restoreScroll(returning);
+    swap().then(() => settleLate(returning));
   }
   first = false;
 }

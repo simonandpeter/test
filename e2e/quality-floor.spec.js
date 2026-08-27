@@ -16,6 +16,43 @@ import { AxeBuilder } from '@axe-core/playwright';
 const POPULATED = '/calendar/2026-01-30';
 
 /**
+ * **All Saints opens on the carousel now** (author, 2026-08-27), and almost
+ * every test in this file that visits it was written about the *other* mode —
+ * the filters, the grid, the cards, the counts. Those tests are not wrong and
+ * the behaviour they pin has not changed; what changed is which face the page
+ * shows first.
+ *
+ * So the suite states which face it is testing rather than each of forty-odd
+ * tests growing a line to press the toggle. The key is only written when the
+ * test has not set one itself, exactly as `ready` does for church and language
+ * — so `carouselMode()` below, and any test that stamps `indexMode` directly,
+ * still gets the mode it asked for.
+ *
+ * The page's *own* default — a reader who has never chosen — is a real claim
+ * and has a test of its own: "All Saints opens on the carousel".
+ */
+const searchMode = (page) =>
+  page.addInitScript(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    if (typeof now.indexMode !== 'string') {
+      localStorage.setItem(key, JSON.stringify({ ...now, indexMode: 'search' }));
+    }
+  });
+
+/** The opposite: a reader who is on the carousel, whatever they chose before. */
+const carouselMode = (page) =>
+  page.addInitScript(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, indexMode: 'carousel' }));
+  });
+
+test.beforeEach(async ({ page }) => {
+  await searchMode(page);
+});
+
+/**
  * A Daily page the machine is certainly not having today, read off its own
  * clock.
  *
@@ -47,18 +84,27 @@ const EMPTY = '/calendar/2026-08-20';
 const DETAIL = '/saints/anthony-the-great';
 const SPARSE_DETAIL = '/saints/christopher';
 
+/*
+ * The third entry of each row is anything the route needs before the floor can
+ * see it. All Saints is on the list twice since 2026-08-27: the suite's default
+ * puts it in search mode, so without the second row the carousel — a full-bleed
+ * row of pictures, which is exactly the shape that overflows — would never be
+ * measured by the floor at all.
+ */
 const ROUTES = [
   ['calendar, populated', POPULATED],
   ['calendar, empty day', EMPTY],
   ['saint detail', DETAIL],
   ['saint detail, sparse', SPARSE_DETAIL],
   ['all saints', '/saints'],
+  ['all saints, carousel', '/saints', carouselMode],
   ['map', '/map'],
   ['about', '/about'],
 ];
 
-for (const [label, path] of ROUTES) {
+for (const [label, path, prepare] of ROUTES) {
   test(`no axe violations: ${label}`, async ({ page }) => {
+    if (prepare) await prepare(page);
     await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
     const results = await new AxeBuilder({ page })
@@ -68,6 +114,7 @@ for (const [label, path] of ROUTES) {
   });
 
   test(`no horizontal overflow: ${label}`, async ({ page }) => {
+    if (prepare) await prepare(page);
     await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
     const overflows = await page.evaluate(
@@ -136,6 +183,7 @@ test('the day is reachable by keyboard through the week strip', async ({ page })
 test('reduced motion removes animation rather than shortening it', async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const animated = await page.evaluate(() =>
@@ -549,6 +597,7 @@ test('on a touch device the shelf row carries no ×, and the swipe still clears 
    */
   const ctx = await browser.newContext({ ...devices['Pixel 5'] });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
@@ -586,6 +635,7 @@ test('under reduced motion a swiped row goes without flying', async ({ browser }
   // still cleared, and nothing is left mid-flight.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
@@ -655,6 +705,7 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
   // is the half that can rot unnoticed while the desktop half keeps passing.
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 }, isMobile: true, hasTouch: true });
   const page = await ctx.newPage();
+  await searchMode(page);
   const fetched = [];
   await page.route('**/saints/*/saint.json', (route) => {
     fetched.push(route.request().url());
@@ -861,6 +912,7 @@ test('a filtered-out saint fades rather than vanishing', async ({ page }) => {
 test('under reduced motion the filtered-out are gone, not gone slower', async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'historicities')).getByLabel('legendary').check();
   await expect(page.locator('.index-card')).toHaveCount(1);
@@ -916,6 +968,7 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   // short window, and the last saint in the order well below the fold.
   const ctx = await browser.newContext({ viewport: { width: 360, height: 480 } });
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   // Alphabetical, asked for rather than assumed: this test names the saint it
   // expects at the bottom, so it has to name the order that puts them there.
@@ -1401,6 +1454,7 @@ test('the month unfurls out of the week and the page follows it down', async ({ 
 test('under reduced motion the month arrives whole, with no held height', async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const closed = (await page.locator('h1').boundingBox()).y;
@@ -1577,6 +1631,7 @@ test('under reduced motion the rail steps without a glide', async ({ browser }) 
   // off the visible edge still arrives.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   // Sunday is the last snapped day; stepping past it forces a reveal.
@@ -1722,6 +1777,7 @@ test('under reduced motion a mouse drag settles with nothing to sit through', as
   // on a day the moment it comes to rest.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const strip = page.locator('.week-strip');
@@ -2106,8 +2162,9 @@ test('the chrome line holds down to a 320 px phone, in every language', async ({
   for (const [width, language] of [[320, 'en'], [360, 'ru'], [360, 'el'], [412, 'ro']]) {
     const ctx = await browser.newContext({ viewport: { width, height: 780 } });
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (l) => localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: l })),
+      (l) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: l })),
       language,
     );
     await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
@@ -2355,6 +2412,7 @@ test('under reduced motion the panel does not fly, it is simply gone', async ({ 
   // not lost with it: the control's accessible name says the whole sentence.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.locator('#church-open').click();
@@ -3202,6 +3260,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // viewport so there is a scroll position to lose.
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'churches')).getByLabel('Romanian').check();
   await expect(page.locator('[data-count]')).toHaveText('127');
@@ -3282,6 +3341,7 @@ test('a navigation lands at the top of the page it opens', async ({ browser }) =
   // app owns scroll now (DESIGN.md §5c).
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight - innerHeight - 100));
   await page.waitForTimeout(200);
@@ -3458,6 +3518,7 @@ test('the theme follows the system until it is touched, and holds once it is', a
   // untouched; the first press fixes a choice the system no longer moves.
   const ctx = await browser.newContext({ colorScheme: 'dark' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.documentElement.classList.contains('dark'))).toBe(true);
   await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', 'Switch to the light theme');
@@ -3968,7 +4029,7 @@ test('the veil names the site the way the header does', async ({ page }) => {
    * at boot, before the manifest — which is the long wait — has landed.
    */
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ro' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
   );
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.site-name')).toHaveText('Ortodoxia Zilnică');
@@ -4290,8 +4351,9 @@ test('every language fits the 360 px header, and none leaks a placeholder', asyn
   for (const lang of ['ru', 'ro', 'el', 'sr']) {
     const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (l) => localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: l })),
+      (l) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: l })),
       lang,
     );
     await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
@@ -4315,7 +4377,7 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // being *found already recorded*.
   await ready(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'sr' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'sr' })),
   );
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await expect(page.locator('h1')).toHaveText('Сви светитељи');
@@ -4648,8 +4710,9 @@ test('the fast and its bubble are in the reader own language', async ({ browser 
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ru' })),
   );
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   // «Успенский пост; сухоядение» → the xerophagy grade, in Russian, and the
@@ -4669,6 +4732,7 @@ test('under reduced motion the bubble does not pop, it is simply there', async (
   // Removed, not shortened (DESIGN.md §6): no scale, no fade, no wait.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await page.locator('[data-liturgy] .fast').click();
@@ -4746,8 +4810,9 @@ test('a reading opens a Bible in the reader own language', async ({ browser }) =
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: a.c, language: a.l })),
       { l: language, c: church },
     );
     await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
@@ -4765,8 +4830,9 @@ test('the reading labels are the reader language, keeping the calendar own quali
   // it is passed through exactly as the calendar printed it.
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ro' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
   );
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await expect(page.locator('.readings .reading-label').first()).toHaveText('Apostol');
@@ -4848,6 +4914,7 @@ test('under reduced motion a throw does not coast', async ({ browser }) => {
   // aligns without a glide, and after it nothing moves at all.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const strip = page.locator('.week-strip');
@@ -5116,8 +5183,9 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
   ]) {
     const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: a.c, language: a.l })),
       { c: church, l: language },
     );
     await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
@@ -5171,8 +5239,9 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: a.c, language: a.l })),
       { c: church, l: language },
     );
     for (const url of ['/calendar/2026-08-25', '/saints', '/about']) {
@@ -5256,8 +5325,9 @@ test('the type filter is named in words, in the reader own language', async ({ b
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (l) => localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: l })),
+      (l) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: l })),
       language,
     );
     await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -5518,38 +5588,55 @@ test('a hero with a picture has no frame to have a foot', async ({ page }) => {
   expect(dress.background).toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
 });
 
-test('a row for a saint with no icon starts at the card margin', async ({ page }) => {
+test('every row starts its name at the card margin, picture or no picture', async ({ page }) => {
   /*
    * Author, 2026-08-26: "where a saint has no icon, in the row card, remove
    * the empty frame and just print the text all the way to the left margin of
    * the card." An empty 48 px box is a promise of a picture that is not
-   * coming, and 613 of the 708 have none.
+   * coming, and 614 of the 742 have none.
    *
-   * What the frame was also doing is holding the row's height — the Index's
-   * rows are virtualised against a fixed 66 px — so the body carries that 48
-   * px now, and the two numbers stay tied.
+   * **Superseded in its mechanism, kept in its point** (author, 2026-08-27:
+   * "Reformat all row cards, put the image to the right side, to the left of
+   * the bookmark, and start the text on the left edge"). The frame is back,
+   * but at the *trailing* end — so the name starts at the margin on every row
+   * rather than only on the ones with nothing to show, which is more than the
+   * first instruction asked for and is why it supersedes rather than reverses
+   * it. What this test asserted for a day and a half — that an imageless row
+   * carries no `.index-media` at all, and that an imaged one indents past it —
+   * was the old arrangement's way of getting there and is now false of both.
+   *
+   * The slot still holds the row's height: the Index's rows are virtualised
+   * against a fixed 66 px, and the body carries the same 48 px, so either
+   * alone is enough.
    */
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const seen = await page.evaluate(() => {
     const withPicture = document.querySelector('.reg-card:has(.index-media img)');
-    const without = document.querySelector('.reg-card:not(:has(.index-media))');
+    const without = document.querySelector('.reg-card:not(:has(.index-media img))');
     const inset = (row) => {
       const card = row.getBoundingClientRect();
       const name = row.querySelector('.index-name').getBoundingClientRect();
-      return { gap: name.left - card.left, height: card.height, frames: row.querySelectorAll('.index-media').length };
+      const media = row.querySelector('.index-media');
+      return {
+        gap: name.left - card.left,
+        height: card.height,
+        mediaLeft: media ? media.getBoundingClientRect().left : null,
+        nameRight: name.right,
+      };
     };
     return { withPicture: inset(withPicture), without: inset(without) };
   });
-  // No box at all, and the name sits within the card's own padding of the edge.
-  expect(seen.without.frames).toBe(0);
+  // The name begins at the card's own padding on both, which is the whole
+  // point of the reformat: one left edge down a scrolling register.
   expect(seen.without.gap).toBeLessThan(16);
-  // The one with a picture still indents past it, so the two are visibly
-  // different rather than both flush.
-  expect(seen.withPicture.gap).toBeGreaterThan(50);
-  // And both rows are still the same height, which is what the virtualised
-  // grid measures against.
+  expect(seen.withPicture.gap).toBeLessThan(16);
+  expect(Math.abs(seen.without.gap - seen.withPicture.gap)).toBeLessThan(2);
+  // And the picture is past the name, not in front of it.
+  expect(seen.withPicture.mediaLeft).toBeGreaterThan(seen.withPicture.gap);
+  // Both rows are still the same height, which is what the virtualised grid
+  // measures against.
   expect(Math.abs(seen.without.height - seen.withPicture.height)).toBeLessThan(2);
 });
 
@@ -5575,8 +5662,9 @@ test('the paschal cycle line is in the reader own language', async ({ browser })
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: a.c, language: a.l })),
       { c: church, l: language },
     );
     await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
@@ -5604,8 +5692,9 @@ test('a saint is named in the reader own language where the corpus has the name'
   ]) {
     const ctx = await browser.newContext();
     const page = await ctx.newPage();
+  await searchMode(page);
     await page.addInitScript(
-      (a) => localStorage.setItem('gos-settings', JSON.stringify({ church: a.c, language: a.l })),
+      (a) => localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: a.c, language: a.l })),
       { c: church, l: language },
     );
     if (language === 'ru') {
@@ -5624,8 +5713,9 @@ test('a saint is named in the reader own language where the corpus has the name'
   // blank or an invention.
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ru' })),
   );
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
   await expect(page.locator('h1.saint-name')).toHaveText('Преподобный Anthony the Great');
@@ -5639,8 +5729,9 @@ test('a name in the reader language is searchable in it', async ({ browser }) =>
   // built once and the chrome can change under it.
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'ru' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ru' })),
   );
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await chooseSort(page, 'name');
@@ -5725,8 +5816,9 @@ test('an English reader is given a published English hymn where one exists', asy
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'en' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' })),
   );
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   const cross = page.locator('[data-hymns] .hymn', { hasText: 'O Lord, save thy people' });
@@ -5752,8 +5844,9 @@ test('a hymn with no published English stays in its own tongue', async ({ browse
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'en' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' })),
   );
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   const gerasimus = page.locator('[data-hymns] .hymn', { hasText: 'Γεράσιμος' });
@@ -5768,8 +5861,9 @@ test('a Greek reader keeps the Greek, translation or no translation', async ({ b
   // church actually sings, cited to the page it was read from.
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'el' })),
   );
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   const cross = page.locator('[data-hymns] .hymn', { hasText: 'Σῶσον Κύριε τὸν λαόν σου' });
@@ -5829,7 +5923,7 @@ test('a general troparion reads in Orloff’s English, and the original stays fo
   const en = await browser.newContext();
   const enPage = await en.newPage();
   await enPage.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'en' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' })),
   );
   await enPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
   const rendered = enPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' });
@@ -5846,7 +5940,7 @@ test('a general troparion reads in Orloff’s English, and the original stays fo
   const el = await browser.newContext();
   const elPage = await el.newPage();
   await elPage.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'el' })),
   );
   await elPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
   await expect(elPage.locator('[data-hymns-box]')).toContainText('Ὁ Μάρτυς σου Κύριε');
@@ -6310,7 +6404,10 @@ test('a saint page reads in the reader’s own language, down to the feast and t
   await expect(row.locator('.att-status')).toHaveText('Cinstit');
   await expect(row.locator('.att-feast')).toContainText('17 Ianuarie (calendarul iulian îndreptat)');
   await expect(row.locator('.att-feast')).toContainText('anul acesta cade pe');
-  await expect(page.locator('.register-heading').first()).toHaveText('Cinstire');
+  // By name, not by position: the life leads the page since 2026-08-27, so
+  // `.first()` here is Viața. What this line is about is that the heading is
+  // in Romanian at all.
+  await expect(page.locator('.register-heading', { hasText: 'Cinstire' })).toHaveCount(1);
   // And no English survives in the site's own words on the row.
   await expect(row.locator('.att-status')).not.toContainText('Venerated');
 
@@ -6405,8 +6502,9 @@ test('a saint from a Greek company is named for herself, not for the whole entry
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
+  await searchMode(page);
   await page.addInitScript(() =>
-    localStorage.setItem('gos-settings', JSON.stringify({ church: 'greek', language: 'el' })),
+    localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'el' })),
   );
   await page.goto('/saints/theopiste-wife-of-eustathius', { waitUntil: 'networkidle' });
   const name = page.locator('h1');
@@ -7108,6 +7206,7 @@ test('under reduced motion a chooser panel is simply there, arriving as well as 
    */
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   const state = await page.evaluate(() => {
@@ -7567,7 +7666,11 @@ test('the header is sticky, shorter, and the phone gets four equal pages', async
   await page.evaluate(() => document.fonts.ready);
 
   const header = page.locator('header.chrome');
-  await expect(header).toHaveCSS('position', 'sticky');
+  // The *bar* is what sticks — header plus both chooser panels, so the panels
+  // travel with it (2026-08-27). The header itself carried `position: sticky`
+  // as well for a day, which was one nested sticky too many; what a reader can
+  // point at is asserted just below, by scrolling.
+  await expect(page.locator('.chrome-bar')).toHaveCSS('position', 'sticky');
   const tall = (await header.boundingBox()).height;
   // It was 61 px at 1280 for four amendments; the top margin came down by 8.
   expect(tall, `the header is ${tall} px`).toBeLessThan(58);
@@ -8139,6 +8242,7 @@ test('under reduced motion the same press still lands at the top, with no ease',
   // immediately after must already read 0.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
+  await searchMode(page);
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
   await ready(page);
@@ -8324,4 +8428,414 @@ test('the calendar panel follows a language change while it is open', async ({ p
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ro"]').click();
   await expect(page.locator('#church-panel')).toContainText('Ce calendar ții?');
+});
+
+/* ---- the round of 2026-08-27 evening ------------------------------------- */
+
+test('All Saints opens on the carousel, and the toggle names where it goes', async ({ browser }) => {
+  /*
+   * Author, 2026-08-27: "The All Saints page should default to horizontal
+   * carousel mode, which only has the search bar and the carousel underneath
+   * it. The button toggle to the right of 'All Saints' should say 'Advanced
+   * search', and when you click it the horizontal carousel mode changes to the
+   * advanced search mode which shows all the filters. When the mode has
+   * changed, the button toggle then says 'Carousel mode'."
+   *
+   * A fresh context, and deliberately without the suite's `searchMode`
+   * default: this is the one test about the face a reader who has never chosen
+   * is shown, so it must not be handed an answer.
+   */
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const toggle = page.locator('[data-mode-toggle]');
+  await expect(toggle).toHaveText('Advanced search');
+  // The search field and the row, and nothing else: no filter chips, no foot,
+  // no grid.
+  await expect(page.locator('[data-query]')).toBeVisible();
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+  await expect(page.locator('.facets')).toBeHidden();
+  await expect(page.locator('.index-foot')).toBeHidden();
+  await expect(page.locator('[data-grid]')).toBeHidden();
+
+  // And it sits to the right of the heading, on its line.
+  const geo = await page.evaluate(() => {
+    const h = document.querySelector('.index-head h1').getBoundingClientRect();
+    const b = document.querySelector('[data-mode-toggle]').getBoundingClientRect();
+    return { headRight: Math.round(h.right), toggleLeft: Math.round(b.left) };
+  });
+  expect(geo.toggleLeft).toBeGreaterThan(geo.headRight);
+
+  // One press, and the page is the other mode, with the word swapped.
+  await toggle.click();
+  await expect(toggle).toHaveText('Carousel mode');
+  await expect(page.locator('.facets')).toBeVisible();
+  await expect(page.locator('[data-grid]')).toBeVisible();
+  await expect(page.locator('[data-carousel]')).toBeHidden();
+
+  // And back.
+  await toggle.click();
+  await expect(toggle).toHaveText('Advanced search');
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+  await expect(page.locator('.facets')).toBeHidden();
+  await ctx.close();
+});
+
+test('the carousel is a real loop: periodic content, and no dead end at either edge', async ({ page }) => {
+  /*
+   * The infinite scroll, which is the part of the old build's carousel the
+   * author asked to bring forward. It rests on one invariant: the rendered row
+   * is *periodic*, so a correction of exactly one period lands on identical
+   * content and cannot be seen. Everything else - the clone buffer, measuring
+   * real offsets rather than a stride - exists to keep that true.
+   *
+   * Asserted on the DOM rather than by watching it drift, because a drift
+   * assertion is a measurement of one machine's frame rate.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const shape = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const kids = [...track.children];
+    const buffer = 12;
+    const count = kids.length - 2 * buffer;
+    const slug = (e) => e.getAttribute('data-prefetch');
+    let periodic = true;
+    for (let i = 0; i < kids.length - count; i++) {
+      if (slug(kids[i]) !== slug(kids[i + count])) periodic = false;
+    }
+    return {
+      total: kids.length,
+      count,
+      periodic,
+      bodySpan: kids[buffer + count].offsetLeft - kids[buffer].offsetLeft,
+      at: track.scrollLeft,
+      max: track.scrollWidth - track.clientWidth,
+    };
+  });
+  expect(shape.count, 'the run is the pool, not the whole corpus').toBeLessThanOrEqual(48);
+  expect(shape.total).toBe(shape.count + 24);
+  expect(shape.periodic, 'a shift of one period must land on the same saints').toBe(true);
+  expect(shape.bodySpan).toBeGreaterThan(0);
+  // Never sitting at the DOM's true edge, which is what a dead end *is*. The
+  // exact opening offset is asserted under reduced motion, where the drift is
+  // off and the position holds still long enough to be a fact.
+  expect(shape.at, 'the row sat at its true leading edge').toBeGreaterThan(0);
+  expect(shape.at).toBeLessThan(shape.max);
+
+  // Neither edge is a dead end: pushed hard against each, the track comes back
+  // into the middle rather than stopping.
+  const edges = await page.evaluate(async () => {
+    const track = document.querySelector('[data-carousel-track]');
+    const settle = () => new Promise((r) => setTimeout(r, 400));
+    track.scrollLeft = track.scrollWidth - track.clientWidth - 20;
+    const highBefore = track.scrollLeft;
+    await settle();
+    const highAfter = track.scrollLeft;
+    track.scrollLeft = 4;
+    const lowBefore = track.scrollLeft;
+    await settle();
+    const lowAfter = track.scrollLeft;
+    return { highBefore, highAfter, lowBefore, lowAfter };
+  });
+  expect(edges.highAfter, 'the far edge wrapped back').toBeLessThan(edges.highBefore);
+  expect(edges.lowAfter, 'the near edge wrapped forward').toBeGreaterThan(edges.lowBefore);
+});
+
+test('the carousel drifts on its own, and stands still while a reader is on it', async ({ page }) => {
+  // The drift is the mode's whole reason for being, and it must give way the
+  // moment a reader reaches for the row.
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
+  const started = await at();
+  await expect.poll(at, { timeout: 4000 }).toBeGreaterThan(started);
+
+  // A pointer on the row stops it.
+  await page.locator('.cx-card').first().hover();
+  await page.waitForTimeout(200);
+  const held = await at();
+  await page.waitForTimeout(700);
+  expect(await at(), 'the drift ran on under the reader').toBe(held);
+});
+
+test('under reduced motion the carousel does not drift, and the modes swap without falling', async ({ browser }) => {
+  // Removed, not shortened (DESIGN.md 6) - for both of this round's motions.
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
+  const started = await at();
+  await page.waitForTimeout(900);
+  expect(await at(), 'the row drifted under reduced motion').toBe(started);
+
+  // With nothing moving, where it opened is a fact: on the first *real* item,
+  // twelve copies in from the DOM's leading edge.
+  const opening = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    return {
+      at: Math.round(track.scrollLeft),
+      firstReal: Math.round(track.children[12].offsetLeft),
+    };
+  });
+  expect(opening.at, 'the row opened inside the head clones').toBe(opening.firstReal);
+
+  // The swap is immediate: nothing is left falling a frame after the press.
+  await page.locator('[data-mode-toggle]').click();
+  expect(await page.locator('.is-falling').count()).toBe(0);
+  await expect(page.locator('.facets')).toBeVisible();
+  await ctx.close();
+});
+
+test('the chooser panels travel with the sticky header', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "Have the calendar and language popups stick to the
+   * sticky header so you can access them at the bottom of a scrolled page."
+   *
+   * Asserted where it matters - far down a long page - because in the flow at
+   * the top of the document a panel under the header looks identical whether
+   * it sticks or not.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 700 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, 2500));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(1000);
+
+  /*
+   * **Dispatched, not clicked.** Playwright scrolls a target into view before
+   * pressing it, and pressing a control in a sticky bar that way scrolls the
+   * page back to the top — which is the one condition this test exists to get
+   * away from. Backed out against a non-sticky bar, the `click()` version
+   * passed: it had scrolled itself somewhere the claim was trivially true.
+   */
+  await page.evaluate(() => document.querySelector('#church-open').click());
+  const geo = await page.evaluate(() => {
+    const b = (s) => {
+      const r = document.querySelector(s).getBoundingClientRect();
+      return { top: Math.round(r.top), bottom: Math.round(r.bottom) };
+    };
+    return {
+      scrollY: window.scrollY,
+      header: b('header.chrome'),
+      panel: b('#church-panel'),
+      vh: window.innerHeight,
+    };
+  });
+  expect(geo.scrollY, 'the press took the page back to the top').toBeGreaterThan(1000);
+  expect(geo.header.top, 'the header left the top of the screen').toBe(0);
+  // The panel is under the header, and wholly on screen - which is the whole
+  // of the instruction: reachable without scrolling back up.
+  expect(geo.panel.top).toBe(geo.header.bottom);
+  expect(geo.panel.bottom).toBeLessThan(geo.vh);
+  await expect(page.locator('#church-panel')).toBeVisible();
+});
+
+test('a row reads name-first, with the picture at the trailing end', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "For all row cards without images, move the text back
+   * in line with the other row cards with images... Reformat all row cards,
+   * put the image to the right side, to the left of the bookmark, and start
+   * the text on the left edge."
+   *
+   * The point is the column: every name begins at the same x whether or not
+   * the saint has an icon, and the marks line up down the register.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'rows');
+  await expect(page.locator('.index-card.is-row').first()).toBeVisible();
+
+  const rows = await page.evaluate(() => {
+    const out = [];
+    for (const card of document.querySelectorAll('.index-card.is-row')) {
+      const body = card.querySelector('.row-body');
+      const media = card.querySelector('.index-media');
+      const mark = card.querySelector('.bookmark');
+      if (!body || !media || !mark) continue;
+      out.push({
+        hasImage: !media.classList.contains('is-blank'),
+        bodyLeft: Math.round(body.getBoundingClientRect().left),
+        mediaLeft: Math.round(media.getBoundingClientRect().left),
+        markLeft: Math.round(mark.getBoundingClientRect().left),
+      });
+    }
+    return out;
+  });
+  expect(rows.length).toBeGreaterThan(3);
+
+  // The order across a row: text, then picture, then mark.
+  for (const r of rows) {
+    expect(r.bodyLeft, JSON.stringify(r)).toBeLessThan(r.mediaLeft);
+    expect(r.mediaLeft, JSON.stringify(r)).toBeLessThan(r.markLeft);
+  }
+  // And all three are columns - the same x down the register, imaged or not.
+  const one = (key) => new Set(rows.map((r) => r[key])).size;
+  expect(one('bodyLeft'), 'names do not share a left edge').toBe(1);
+  expect(one('mediaLeft'), 'pictures do not share a column').toBe(1);
+  expect(one('markLeft'), 'marks do not share a column').toBe(1);
+  // The test is only worth anything if both kinds of row are on screen.
+  expect(new Set(rows.map((r) => r.hasImage)).size, 'no imageless row in view').toBe(2);
+});
+
+test('the life comes before the veneration on a saint page', async ({ page }) => {
+  // Author, 2026-08-27: "Move veneration down the page on saint profile pages,
+  // put Life section first." The page is about a person; the church-by-church
+  // register is the apparatus behind the prose, not the way into it.
+  await ready(page);
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await expect(page.locator('.life')).not.toBeEmpty();
+
+  const order = await page.evaluate(() =>
+    [...document.querySelectorAll('.saint-main .register-heading')].map((h) => h.textContent.trim()),
+  );
+  expect(order[0]).toBe('Life');
+  expect(order.indexOf('Veneration')).toBeGreaterThan(0);
+  // Sources stay with the life they document, above veneration.
+  const sources = order.indexOf('Sources');
+  if (sources !== -1) expect(sources).toBeLessThan(order.indexOf('Veneration'));
+});
+
+test('the die stays while the page goes, turns once, and the saint fades up', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "Add an animation for the dice button, make the page
+   * fade out but the dice remains, spin once then fade into the destination
+   * page."
+   *
+   * Three beats, and the order is the claim. Traced inside the page so the
+   * assertion is about the animation rather than about this runner's IPC.
+   */
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const beats = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const out = [];
+        const t0 = performance.now();
+        document.querySelector('[data-random]').click();
+        const tick = () => {
+          out.push({
+            t: performance.now() - t0,
+            ghost: !!document.querySelector('.die-ghost'),
+            viewOpacity: Number(getComputedStyle(document.getElementById('view')).opacity),
+            onSaint: location.pathname.includes('/saints/'),
+          });
+          if (performance.now() - t0 < 1600) requestAnimationFrame(tick);
+          else resolve(out);
+        };
+        requestAnimationFrame(tick);
+      }),
+  );
+
+  // 1. The page fades while the die stands.
+  const faded = beats.find((b) => b.viewOpacity < 0.1);
+  expect(faded, 'the page never faded').toBeTruthy();
+  expect(faded.ghost, 'the die went with the page').toBe(true);
+  expect(faded.onSaint, 'it navigated before the fade finished').toBe(false);
+
+  // 2. It turns alone, on a page that has gone, before the navigation.
+  const spinning = beats.filter((b) => b.ghost && b.viewOpacity < 0.05 && !b.onSaint);
+  expect(spinning.length, 'the die never had the screen to itself').toBeGreaterThan(3);
+
+  // 3. Then the saint, and the view comes back up.
+  const last = beats.at(-1);
+  expect(last.onSaint, 'the roll never landed on a saint').toBe(true);
+  expect(last.ghost, 'the copy outlived the roll').toBe(false);
+  expect(last.viewOpacity).toBeGreaterThan(0.9);
+});
+
+test('a returning Daily page lands where it was left, though it grows after it renders', async ({ page }) => {
+  /*
+   * Author, 2026-08-27, after the first fix shipped: "switching from All
+   * Saints to the Daily page still transitions at the top and jumps to the
+   * bottom."
+   *
+   * The test above pins the same claim for the Index and *passed the whole
+   * time this was broken*, which is why this one exists. The Index is its
+   * final height the moment it renders; the Daily page is not. Measured: at
+   * the instant the transition callback runs it is **2097 px**, so a scroll to
+   * 1500 clamps to 1297 — and ten milliseconds later `fillSaintHymns` lands
+   * the hero saint's hymns and it is **2605 px**. The old correction could
+   * only fire after that growth, which is after the fade had finished, so the
+   * reader watched the fade at the wrong place and then the page jump.
+   *
+   * So the assertion is the position *at the transition's own `ready`* — the
+   * moment the new-state snapshot has been taken and before the animation
+   * runs, which is exactly what the reader's fade will show — and it is taken
+   * on the page that grows.
+   */
+  const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
+
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto('/', { waitUntil: 'networkidle' });
+  // Deep enough that a clamp against the pre-hymns height cannot reach it.
+  await page.evaluate(() => window.scrollTo(0, 1500));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1500);
+
+  await press('nav.site-nav a[href$="/saints"]');
+  await expect(page.locator('.index-controls')).toBeVisible();
+
+  await page.evaluate(() => {
+    const orig = document.startViewTransition.bind(document);
+    window.__readyScrollY = undefined;
+    document.startViewTransition = (cb) => {
+      const t = orig(cb);
+      t.ready.then(() => {
+        window.__readyScrollY = window.scrollY;
+      });
+      return t;
+    };
+  });
+  await press('nav.site-nav a[data-nav-daily]');
+
+  // What the fade shows, not what the page settles to.
+  await expect.poll(() => page.evaluate(() => window.__readyScrollY)).toBe(1500);
+  // And it stays there once the hymns have landed and the floor is released.
+  await expect(page.locator('[data-hymns]')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1500);
+  // The floor is a prop for the arrival, not a permanent change to the page.
+  await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
+});
+
+test('a second press inside the fall lands the first one rather than racing it', async ({ page }) => {
+  /*
+   * Amendment 9's rule, in the shape the mode swap needs: while two flights are
+   * in the air, exactly one is current. `land` reads the mode off `state`, so
+   * two overlapping falls would leave the *stale* timer with the last word —
+   * pressing twice quickly could settle on the mode you had just left.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+
+  // Two presses well inside the 260 ms fall.
+  await page.evaluate(() => {
+    const b = document.querySelector('[data-mode-toggle]');
+    b.click();
+    b.click();
+  });
+
+  // Back where it started, and settled: the second press cancelled the first's
+  // landing rather than queueing behind it.
+  await expect(page.locator('[data-mode-toggle]')).toHaveText('Advanced search');
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+  await expect(page.locator('.facets')).toBeHidden();
+  // Nothing left mid-fall, and no card stranded pointer-inert.
+  await expect.poll(() => page.locator('.is-falling').count()).toBe(0);
 });

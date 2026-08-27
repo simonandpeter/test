@@ -4744,3 +4744,159 @@ about today-ness is a measurement of one clock.
 fallbacks. Rendered and looked at in English and Russian, at 1280 and 360.
 Every fix in this sitting carries a browser test; the ones whose defect could
 be written as a single condition were backed out and watched to fail.
+
+## Amendment 53 — the carousel comes back, and a scroll that lied about where it landed (2026-08-27, twelfth sitting)
+
+Eight instructions in one message, and a bug report that turned out to be the
+unfinished half of the sitting before it.
+
+### The scroll that faded at the top and jumped to the bottom
+
+Amendment 52's section restore was right about *what* to do and wrong about
+*when*. It put the scroll inside the transition callback so the fade would
+cross into the remembered spot — and it did, on the Index. On the **Daily**
+page it landed short and then jumped once the fade was over, which is exactly
+the fault it had been written to remove.
+
+Measured rather than reasoned about: at the moment the callback runs, the
+Daily page is **2097 px** tall, and a scroll to 1500 clamps to 1297. Ten
+milliseconds later it is **2605 px**. The 508 px is `fillSaintHymns` — the
+hero saint's own hymns, which wait on `loadDetail` and land a microtask after
+the markup. The old retry loop then corrected the position *after* the
+transition had finished, which is the jump the author saw.
+
+So the fix is not a better retry. **A floor goes under the view for the length
+of the arrival** — `min-height: y + innerHeight` on `#view` — so the position
+exists to be scrolled to on the first attempt, before the snapshot is taken.
+The floor is released as soon as the real content can stand without it,
+measured by clearing the property and reading the height inside one frame,
+which costs a layout but never a paint. `restoreScroll` is now
+`restoreSection`, and the second pass after `finished` is gone: two things
+correcting one scroll is what produced the visible seam.
+
+**The fix above was itself wrong twice before it was right, and the author
+found both.** The first version propped a `min-height` floor under the view so
+the scroll could not clamp. It passed every test on a desk and was the wrong
+tool: a floor changes the *document's height*, and it measured the natural
+height by clearing and re-setting the property on every frame. On a phone,
+repeated document-height changes are exactly what makes Chrome show and hide
+its URL bar — which is the author's second report, the header "jumping up and
+down behind the google URL tab".
+
+The second version awaited the view's height from inside the transition
+callback, which is the API's own mechanism — `startViewTransition` does not
+snapshot the new state until the promise its callback returns has settled — and
+**deadlocked**: for the length of that callback the browser has suspended
+rendering, so the `requestAnimationFrame` the wait was built on never fires,
+and the frame is waiting for the promise that is waiting for the frame. The
+transition never finished and the page sat at the top of the new view, which is
+the original fault made permanent. It polls on a timer now; timers keep running
+while painting is held, and a layout read is still honest. **CLAUDE.md carries
+it as a standing note** — nothing awaited inside a transition callback may wait
+on a frame.
+
+Two more things came out of chasing the mobile half of it. `header.chrome` had
+been left `position: sticky` *inside* the sticky `.chrome-bar` — two sticky
+boxes nested for one job, kept only because a test asserted that selector, which
+is a bad reason for a rule to exist. And `html { height: 100% }` pinned the root
+box to the viewport's current height, so every URL-bar toggle resized the sticky
+bar's own ancestor. Nothing needed the pin: the veil is `position: fixed` and
+the root background paints the canvas regardless, so the only thing it bought
+was the percentage `min-height` under it, which is `100svh` now — the *small*
+viewport height, which by definition does not move as the bar comes and goes.
+
+### The seven the author asked for
+
+* **Rows read name-first.** The picture moved to the trailing end, just inside
+  the bookmark, and the text starts at the card's left edge. A saint with no
+  icon keeps the slot rather than closing it up, so the marks stay in one
+  column. This is *not* the empty frame struck out on 2026-08-26: that one
+  stood before the name and pushed every title in from the margin, which was
+  the objection. Moving the picture to the other end is what finally prints
+  the text at the left margin for the 614 saints who have none.
+* **The chooser panels travel with the header.** `.chrome-bar` wraps the
+  header and both panels and carries the sticking. Sticking them separately
+  would need each to know the header's height, and that is not one number —
+  the narrow header is two rows and the five packs set their own widths.
+* **The die rolls.** The page fades, a fixed copy of the die stands where the
+  real one was and turns once, and the saint fades up in its place. The copy
+  is `ui/roll.js`, `aria-hidden` and out of the tab order for the third of a
+  second it exists — `ui/swap.js`'s discipline, applied to a control rather
+  than to a panel. The navigation is issued while the view is still faded, so
+  the router's own transition has two invisible snapshots and nothing to draw:
+  the reveal is the roll's own.
+* **The life comes before the veneration** on a saint page. Sources stay with
+  the life they document, above the register.
+
+### The carousel, brought forward
+
+The cross-church build's horizontal carousel is back as the Index's opening
+mode. Its source is `Agios Website Ex/Backup/260820_01`, and `ui/loop-scroll.js`
+says in its header which parts were kept and why each is load-bearing: native
+scrolling rather than JS physics (so the row stays on its own composited
+layer), a clone buffer with corrections of exactly one period (so the seam
+cannot be seen), geometry read from real offsets rather than a stride (cards
+are as wide as their own icon), and never writing `scrollLeft` while a touch
+or its momentum is live (on Android that desyncs the element's own touch
+tracking and it stops answering gestures altogether).
+
+**What is not brought forward is the scale.** That corpus was ten saints and
+its carousel held all of them; this one is 742. A track carrying every one of
+them plus the buffer is ~800 nodes and 742 pictures a reader will never reach.
+So the row draws a **sample of 48**, imaged saints first — a drifting row is a
+way of meeting saints by looking at them, and 614 of the 742 have no picture,
+so a flat sample would be mostly empty tiles. The register that shows the
+corpus as it really is sits behind one press of the toggle, which is the
+honest arrangement rather than a hidden bias.
+
+The old build's wheel tween was dropped: it existed to give a ten-item row its
+own easing, and one authority over `scrollLeft` is one fewer thing to desync.
+The drift is new — continuous rather than idle-gated, because here it is the
+mode's whole reason for being — and it stands down while a reader is touching,
+hovering or tabbed into the row.
+
+**The page opens on the carousel**, with the search field and nothing else;
+the toggle beside the heading names the mode it goes to. The change of face is
+a fall — what is on screen drops and fades, staggered — and then the new mode
+comes up. Nothing is rebuilt to change face: the filters keep their DOM, so a
+reader's choices survive the trip and come back.
+
+### What that cost the suite, and what was done about it
+
+**90 of 454 browser tests went red**, every one of them because All Saints now
+opens on a face they were not written about. They are not wrong and the
+behaviour they pin has not moved. So the suite states which face it is testing
+— a `beforeEach` and the 33 self-made contexts stamp `indexMode: 'search'`
+*when the test has not set one itself*, the same conditional shape `ready` uses
+for church and language. The page's own default is a real claim and has a test
+of its own, in a fresh context that is deliberately handed no answer.
+
+### Verification
+
+**171 unit, 478 browser.** All four packs **338 of 338** with no English
+fallbacks. Rendered and looked at at 1280 and 360. The carousel's periodicity
+is asserted on the DOM rather than by watching it drift, because a drift
+assertion is a measurement of one machine's frame rate; the opening offset is
+asserted under reduced motion, where the position holds still long enough to
+be a fact.
+
+**The gate run then found a real defect that none of the round's own tests
+was looking for**, in the fixed-span ease Amendment 52 added: a tween outlives
+the press that started it, and its last frames write 0. So a reader who pressed
+the current section and then a different one inside the same third of a second
+had the second page's remembered position overwritten by the tail of the first
+page's scroll home — the section test caught it as About returning to 0 instead
+of 400. The ease is cancellable now and every navigation calls it off. That is
+the third time this codebase has been bitten by two things owning
+`window.scrollY` at once, which is Amendment 9's rule wearing a third hat.
+
+Three of the round's fixes were backed out and watched to fail — the scroll
+floor, the row's order, and the sticky bar — and **the third of those caught a
+test of mine that was pinning nothing.** With the bar's stickiness removed the
+panel test still passed, because `locator.click()` scrolls its target into
+view first and had quietly carried the page back to the top, which is the one
+condition the test exists to get away from. It dispatches the press now and
+asserts the page is still deep before it measures. That is the same trap the
+section-scroll test wrote down at Amendment 52, met from the other side: there
+it moved a scroll position under an assertion, here it moved the assertion
+under a scroll position.

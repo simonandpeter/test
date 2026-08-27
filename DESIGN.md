@@ -365,6 +365,29 @@ rule beneath it, entries grouped by church with the church's name in small-caps
 utility and each tradition's own title for the saint in body italic. Today's
 date is set in `--rubric` — the red-letter day, literally.
 
+**All Saints has two faces, and opens on the carousel** (author, 2026-08-27).
+The page as it opens is a search field and a drifting horizontal row of saints
+beneath it; a chip beside the heading — naming *the mode it goes to* — swaps it
+for the filters, the counts and the grid, and back. The change of face is a
+fall and then a fade: what is on screen drops, staggered, and the mode that
+replaces it comes up.
+
+The two modes answer different questions, which is why both exist rather than
+one being a tidier version of the other. The carousel is for a reader with no
+particular saint in mind — it is a way of *meeting* people by looking at them,
+and it is the reason the row draws a sample with the icons first rather than a
+flat slice of a corpus that is 83% pictureless. Advanced search is the register:
+everything, counted, filterable, and honest about what the corpus does and does
+not hold. Neither is allowed to pretend to be the other, and the toggle is one
+press either way.
+
+**A row reads name-first.** The picture stands at the trailing end of the row,
+just inside the bookmark, and a saint with no icon keeps the slot rather than
+closing it up. So every name begins at the same left edge down a scrolling
+register and the marks stay in one column — which is what the 2026-08-26
+instruction ("print the text all the way to the left margin of the card") was
+reaching for, and gets for all 742 rather than only for the pictureless ones.
+
 ### 5b. The calendar page
 
 The habit page, so its shape is specified here rather than improvised.
@@ -1225,6 +1248,13 @@ restoration for that reason: the browser's own `auto` mode restores before a
 virtualised grid has been re-rendered and so restores into nothing, and
 without a reset anywhere a reader who had scrolled the Index was landing 696 px
 down the saint's page at 360 px. Found measuring the ×, fixed with it.
+
+**The life leads the page; the veneration register follows it** (author,
+2026-08-27). The page is about a person, and the prose that says who they were
+is what a reader came for. Veneration led from the first build until then,
+which put four skeleton rows and a table of feast dates between the name and
+the first sentence of the life — the apparatus in front of the thing it
+supports. Sources stay with the life they document, above the register.
 
 **The veneration register reads the reader's traditions first** (author,
 2026-08-22, Addendum H9): the churches in the site-wide selection stand at the

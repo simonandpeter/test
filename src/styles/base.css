@@ -14,13 +14,23 @@
   display: none !important;
 }
 
-html {
-  height: 100%;
-}
-
+/*
+ * **Not `height: 100%`** (2026-08-27). It was, and on a phone that is a root
+ * box pinned to the viewport's *current* height — so every time Chrome hides
+ * or shows its URL bar the root resizes, and the sticky bar's own ancestor
+ * changes height underneath it. That is the header "jumping up and down behind
+ * the URL tab": intrinsic sticky-on-mobile wobble is mild, a containing block
+ * that really does resize is not.
+ *
+ * Nothing needed the pin. The veil is `position: fixed`, and the root
+ * background paints the canvas whatever the root box measures, so the only
+ * thing `height: 100%` was buying was the percentage `min-height` below it —
+ * which is now `svh`, the *small* viewport height: the height with the URL bar
+ * showing, which by definition never changes as it comes and goes.
+ */
 body {
   margin: 0;
-  min-height: 100%;
+  min-height: 100svh;
   background: var(--gesso);
   color: var(--ink);
   font-family: var(--font-serif);
@@ -202,7 +212,7 @@ button:hover {
    there would be furniture. The hero's own bookmark stood over its image and
    carried this too until 2026-08-26, when it moved beside the name onto the
    page's own ground (calendar.css, `.hero .name-line > .bookmark`). */
-.index-card:has(.index-media:not(.is-empty)) > .bookmark .bookmark-mark {
+.index-card:has(.index-media:not(.is-blank)) > .bookmark .bookmark-mark {
   filter: drop-shadow(0 0 1.5px var(--gesso)) drop-shadow(0 1px 2px rgb(0 0 0 / 0.45));
 }
 
@@ -275,15 +285,34 @@ header.chrome {
   padding-bottom: 0;
   border-bottom: 1px solid var(--rule);
   /*
-   * **Sticky** (author, same evening). The bar carries the four pages, the
-   * calendar and the language, and on a long Index or a long life all six go
-   * off the top of the screen with everything else.
-   *
    * `--gesso` behind it rather than nothing: a sticky bar over scrolling text
-   * with a transparent ground is unreadable the moment a line passes under
-   * it. The z-index puts it over the page and *under* the chooser panels,
-   * which sit in the flow beneath it and open downward.
+   * with a transparent ground is unreadable the moment a line passes under it.
+   *
+   * **The sticking is `.chrome-bar`'s, not this element's** (2026-08-27). It
+   * was declared in both places for a day — the wrapper, so the chooser panels
+   * would travel with the header, and here as well because a test asserted
+   * this selector was sticky. Two sticky boxes nested for one job is two
+   * things to disagree during a mobile URL-bar resize, and the inner one had
+   * nowhere to move in any case. The test asserts the bar now, which is the
+   * thing that actually does it.
    */
+  background: var(--gesso);
+}
+
+/*
+ * Header and both chooser panels, sticky as one piece (author, 2026-08-27:
+ * "have the calendar and language popups stick to the sticky header so you can
+ * access them at the bottom of a scrolled page").
+ *
+ * Sticking the panels *separately* would need each to know the header's
+ * height, and that is not one number — the narrow header is two rows, and the
+ * five packs set their own. Wrapping the three sidesteps the measurement
+ * entirely: they share one sticky box, so the panels open downward from a
+ * header that is already where it is going to stay.
+ *
+ * The z-index puts the whole bar over the page it scrolls above.
+ */
+.chrome-bar {
   position: sticky;
   top: 0;
   z-index: 20;

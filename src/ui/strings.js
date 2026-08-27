@@ -549,6 +549,16 @@ export const STRINGS = {
        is gone from all five packs with it. */
     search: 'Search',
     searchHint: 'name, type, church, region',
+    /*
+     * The two ways into All Saints (author, 2026-08-27). The page opens on the
+     * carousel — a search field and a drifting row of saints — and the button
+     * beside the heading names *the mode it will take you to*, not the one you
+     * are in: "Advanced search" while the carousel is showing, "Carousel mode"
+     * while the filters are.
+     */
+    modeToSearch: 'Advanced search',
+    modeToCarousel: 'Carousel mode',
+    carouselLabel: 'Saints, drifting',
     random: 'Random saint',
     clear: 'Clear filters',
     countLabel: 'saints',

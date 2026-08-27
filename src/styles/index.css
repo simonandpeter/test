@@ -10,21 +10,30 @@
   margin-bottom: var(--space-3);
 }
 
-.index-controls {
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: var(--space-3);
-  margin-bottom: var(--space-2);
-  /* **A chip's height, in one place, because three controls across these two
-     rows have to be exactly as tall as one and each was carrying its own copy
-     of the number** — and one of those copies (Detailed's "the chips are 27 px
-     tall") had already gone stale by 3 px. `--facet-lh` is base.css's root
-     line-height, which a summary inherits; the rest is its own padding and
-     border. A test measures a real chip against this arithmetic, so the two
-     cannot drift apart in silence. */
+/* **A chip's height, in one place, because four controls across these rows
+   have to be exactly as tall as one and each was carrying its own copy of the
+   number** — and one of those copies (Detailed's "the chips are 27 px tall")
+   had already gone stale by 3 px. `--facet-lh` is base.css's root line-height,
+   which a summary inherits; the rest is its own padding and border. A test
+   measures a real chip against this arithmetic, so the two cannot drift apart
+   in silence.
+
+   Declared on the view root rather than on `.index-controls`, because the mode
+   toggle (2026-08-27) is a chip that stands *outside* the controls, beside the
+   heading — and a custom property only reaches its own subtree. The root is
+   whichever of the two mode classes is on: views/saints.js always sets one. */
+.is-carousel,
+.is-search {
   --facet-font: 13.5px;
   --facet-lh: 1.65;
   --facet-pad-y: 3px;
   --facet-h: calc(var(--facet-font) * var(--facet-lh) + var(--facet-pad-y) * 2 + 2px);
+}
+
+.index-controls {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 /* Never wraps. Clear filters appears and disappears as filters come and go,
@@ -350,6 +359,32 @@ select:hover {
   background: color-mix(in srgb, var(--gold) 12%, transparent);
 }
 
+/* ---- the roll ----------------------------------------------------------- */
+
+/* The page goes and the die stays (author, 2026-08-27). `ui/roll.js` argues the
+   three beats and why the die that turns is a copy; these are the two rules it
+   drives. The view carries the fade — not the chrome, which is the frame the
+   reader keeps hold of while the page behind it changes. */
+html.is-rolling #view {
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+#view {
+  transition: opacity var(--dur) var(--ease);
+}
+
+/* The copy, fixed where the real die stood. Above the sticky bar's z-index of
+   20 so it is not clipped by a die that sat under the header when the roll
+   began, and inert to the pointer so a second press lands on nothing. */
+.die-ghost {
+  position: fixed;
+  z-index: 40;
+  margin: 0;
+  pointer-events: none;
+  background: var(--gesso);
+}
+
 /* Detailed (author, 2026-08-22): a tick box beside the layout control, and a
    different axis from it — the layout says how the saints are arranged, this
    says how much of each is shown. */
@@ -576,23 +611,30 @@ select:hover {
   width: 48px;
   height: 48px;
   flex: none;
+  order: 2;
 }
 
-/* A row for a saint with no icon drew an empty 48 px frame where the
-   thumbnail would be, holding the column open so a run of rows kept one
-   left edge. The author removed it (2026-08-26): "remove the empty frame and
-   just print the text all the way to the left margin of the card." An empty
-   box is a promise of a picture that is not coming, and 613 of 708 saints
-   have none — the ragged left edge is the honest picture of the corpus, and
-   the one that says where the gaps are.
+/* The picture sits at the trailing end of a row (author, 2026-08-27), so a
+   saint with no icon keeps the slot rather than closing it up: the bookmarks
+   stay in one column and every name starts at the same left edge. It draws
+   nothing — no rule, no wash — because an empty box that *looks* like a frame
+   is the promise of a picture that is not coming, which is what the author
+   struck out on 2026-08-26. Holding the space without drawing it is what lets
+   both things be true at once.
 
-   What the frame was also doing is holding the row's *height*: the Index's
-   rows are virtualised against a fixed ROW_HEIGHT of 66 px, which is a 48 px
-   thumbnail inside the card's padding and border. So the body carries that
-   48 px now, and the two numbers stay tied. */
+   It also holds the row's *height*: the Index's rows are virtualised against
+   a fixed ROW_HEIGHT of 66 px, which is a 48 px thumbnail inside the card's
+   padding and border. The body carries the same 48 px, so either alone is
+   enough and the two numbers stay tied. */
+.index-card.is-row .index-media.is-blank {
+  background: none;
+  border-radius: 0;
+}
+
 .index-card.is-row .row-body {
   min-height: 48px;
   justify-content: center;
+  order: 1;
 }
 
 .index-card.is-row .row-body {
@@ -617,11 +659,12 @@ select:hover {
 }
 
 /* A 48 px thumbnail has no corner to spare, so in a row the bookmark stands at
-   the trailing edge: a column of marks down the register, beyond the glyphs'
+   the trailing edge: a column of marks down the register, beyond the pictures'
    own column. */
 .index-card.is-row > .bookmark {
   position: static;
   align-self: center;
+  order: 3;
 }
 
 /* Detailed rows: the description takes two lines. The 112 px row saints.js
@@ -665,3 +708,177 @@ select:hover {
   color: var(--ink-soft);
   max-width: 60ch;
 }
+
+/* ==== the two modes ======================================================= */
+
+/* The heading and its toggle on one line (author, 2026-08-27: "a button toggle
+   to the right of 'All Saints'"). `baseline` rather than `center` so the button
+   sits on the heading's own line rather than floating against its box. */
+.index-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.index-head h1 {
+  margin: 0;
+}
+
+/* A chip, like the filters it replaces — the same hairline and height, so the
+   control that swaps the page's face is visibly one of the page's own. */
+.mode-toggle {
+  flex: none;
+  min-height: var(--facet-h);
+  padding: var(--facet-pad-y) var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+.mode-toggle:hover {
+  background: var(--field);
+  border-color: var(--ink-soft);
+}
+
+/* In carousel mode the page is the search field and the row under it, and
+   nothing else (author: "which only has the search bar and the carousel
+   underneath it"). The filters keep their DOM so the reader's choices survive
+   the trip; they are simply not shown. */
+.is-carousel .facets,
+.is-carousel .index-foot,
+.is-carousel [data-set-aside],
+.is-carousel [data-tray] {
+  display: none;
+}
+
+/* ---- the drifting row ---------------------------------------------------- */
+
+/* Full-bleed: the row runs to both edges of the window rather than stopping in
+   the 72ch column, because a carousel that ends where the text ends reads as a
+   list that happens to be sideways. The margin trick keeps it inside the
+   column's flow without needing a second layout container. */
+.carousel {
+  margin-inline: calc(50% - 50vw);
+  margin-top: var(--space-5);
+}
+
+/* A native scroller — never `touch-action: none` (ui/loop-scroll.js says why at
+   length). `scrollbar-width: none` because the row has no ends to scroll to. */
+.carousel-track {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  scrollbar-width: none;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+
+/* Sized from its height: a card is as wide as its own icon makes it, which is
+   the whole reason the loop measures real offsets rather than a stride. */
+.cx-card {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: max-content;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cx-media {
+  display: block;
+  height: 200px;
+  width: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-cell);
+  overflow: hidden;
+}
+
+.cx-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A saint with no icon keeps a tile of the same box, drawn as the recessed
+   field rather than as a frame around nothing. */
+.cx-media.is-blank {
+  background: var(--field);
+}
+
+/* Two lines, clamped: a three-line name under a 200 px tile makes the row's
+   foot ragged, and the whole name is on the page it opens. */
+.cx-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  width: 150px;
+  min-height: 2.7em;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.cx-card:hover .cx-name {
+  text-decoration: underline;
+}
+
+/* ---- falling away, and arriving ------------------------------------------ */
+
+/* The change of face (author, 2026-08-27). What is on screen drops and fades,
+   staggered by `--fall-delay` from views/saints.js, and the mode that replaces
+   it comes up once the last of it has gone.
+
+   No reduced-motion rule of its own: base.css already disarms every animation
+   and transition under it, and views/saints.js swaps the modes outright rather
+   than waiting out a fall that will not run. */
+.is-falling {
+  animation: fall-away 260ms var(--ease) both;
+  animation-delay: var(--fall-delay, 0ms);
+  pointer-events: none;
+}
+
+@keyframes fall-away {
+  to {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.is-arriving .index-controls,
+.is-arriving .carousel,
+.is-arriving .grid {
+  opacity: 0;
+}
+
+.is-carousel .index-controls,
+.is-carousel .carousel,
+.is-carousel .grid,
+.is-search .index-controls,
+.is-search .carousel,
+.is-search .grid {
+  transition: opacity var(--dur-slot) var(--ease);
+}
+

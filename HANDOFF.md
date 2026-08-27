@@ -66,14 +66,15 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 52)
+## State as of 2026-08-27 (Amendments 50 to 53)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
 
 Complete: Phase 0 data foundations, the design pass, the app shell, the
-calendar page, the saint detail page with the local store, All Saints in Index
-mode, and an About page that explains the corpus. **The veneration glyph named
+calendar page, the saint detail page with the local store, All Saints in **both
+its modes** — the drifting carousel it opens on and the Advanced search behind
+the toggle (Amendment 53) — and an About page that explains the corpus. **The veneration glyph named
 in several sections below no longer exists** — removed entirely at Amendment
 25 — and the single-church chooser (`lib/church.js`, `ui/church-chooser.js`)
 has since replaced the four-communion "plate" those same sections describe.
@@ -81,8 +82,8 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 448 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendments 50 to 52), not carried
+- 478 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendment 53), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
@@ -94,6 +95,19 @@ them.
   that subscribes to a language change must tolerate the manifest not being
   there yet**: the reader's pack is 20 kB against the manifest's 490 and lands
   first, which took every language-dependent test in the suite red once.
+- **All Saints opens on a carousel** (Amendment 53). `state.mode` is
+  `'carousel'` or `'search'`, remembered in `settings.indexMode`, and the page
+  defaults to the first. **Almost every browser test that visits the Index was
+  written about the other face**, so the suite stamps `indexMode: 'search'` in
+  a `beforeEach` and in each of the 33 self-made contexts — conditionally, the
+  way `ready` handles church and language, so a test that sets the mode itself
+  still gets it. If you add an Index test, that default is already applied;
+  reach for `carouselMode(page)` when you mean the other one.
+- **The carousel is a sample, not the corpus** — 48 saints, imaged first,
+  drawn through the seeded shuffle. `ui/loop-scroll.js` carries the
+  cross-church build's endless-scroll engine and its header says which parts
+  are load-bearing. Do not "fix" it by rendering all 742.
+
 - **The Index's Calendar facet is the page's only church narrowing**
   (Amendment 52). It opens ticked to the header's calendar and resets to it
   when that changes; the page no longer cuts to the reader's church before the

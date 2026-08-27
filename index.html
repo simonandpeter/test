@@ -57,6 +57,14 @@
     <div class="veil-line"></div>
   </div>
 
+  <!-- The bar is the header *and* the two chooser panels, sticky as one piece
+       (author, 2026-08-27: "have the calendar and language popups stick to the
+       sticky header so you can access them at the bottom of a scrolled page").
+       The panels open in the flow directly under the header, so wrapping the
+       three is what makes them travel together without anyone having to know
+       how tall the header is - and it is not one number: the narrow header is
+       two rows, and the five packs set their own widths. -->
+  <div class="chrome-bar">
   <header class="chrome">
     <!-- The href is written by main.js, which knows the base path: under
          /test/ a literal "/" walks a middle-click straight out of the app
@@ -87,6 +95,7 @@
   </header>
   <div class="church-panel" id="church-panel" hidden></div>
   <div class="church-panel" id="lang-panel" hidden></div>
+  </div>
 
   <main class="chrome">
     <div id="view"></div>
