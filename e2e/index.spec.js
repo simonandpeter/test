@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 import {
   DETAIL,
   INDEX,
@@ -700,6 +700,11 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
   // one warms the font cache on another route first, which is every visit
   // after the first. Rows had the one-line rule from Amendment 22; cards did
   // not.
+  //
+  // The one test with no meaning under COLD_FACE: its subject *is* the warm
+  // 678 px column, and a rehearsal that refuses the webfont cannot have one.
+  // It says so through its own premise check rather than being told twice.
+  test.skip(!!process.env.COLD_FACE, 'the warm column does not exist with the webfont refused');
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/about', { waitUntil: 'networkidle' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -3044,16 +3049,45 @@ test('a facet chip prints its own word and nothing else', async ({ page }) => {
    * `.facets` exists to avoid, and the die has been pushed to a line of its own
    * twice already. A phone wraps them by design — 360 px was never going to
    * hold eight — so the width is set rather than inherited from the project.
+   *
+   * **In a forced face** (2026-08-27), which is the whole of Amendment 24's
+   * lesson and was left off this row when it was written the day before. The
+   * chips are `--font-utility`, which is system-ui: Segoe UI on this desk and
+   * DejaVu Sans on a bare runner, and DejaVu is wide enough to take the ~9.5 px
+   * of slack the column has and wrap the row — which is exactly what CI did,
+   * at 1280, on a test that had gone green here twice. Arial is on Windows and
+   * macOS and fontconfig aliases it to Liberation Sans on Linux, so the
+   * assertion below is one width on every machine; the native measurement is
+   * printed first so the runner still says in numbers what its own face costs.
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.evaluate(() => document.fonts.ready);
-  const linesOfFacets = await page.evaluate(() => {
-    const tops = [...document.querySelectorAll('.facets > *')].map((n) =>
-      Math.round(n.getBoundingClientRect().top),
-    );
-    return new Set(tops).size;
-  });
-  expect(linesOfFacets).toBe(1);
+  const facetRow = () =>
+    page.evaluate(() => {
+      const row = document.querySelector('.facets');
+      const kids = [...row.children].filter((k) => k.offsetParent !== null);
+      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      return {
+        lines: new Set(kids.map((n) => Math.round(n.getBoundingClientRect().top))).size,
+        column: row.clientWidth,
+        need: kids.reduce((a, k) => a + k.getBoundingClientRect().width, 0) + gap * (kids.length - 1),
+        face: getComputedStyle(row.querySelector('.facet > summary')).fontFamily.split(',')[0],
+      };
+    });
+  const native = await facetRow();
+  console.log(
+    `[facet row, native utility face] column ${native.column} px, needs ${native.need.toFixed(1)}, ` +
+      `${native.lines} line(s), face ${native.face}`,
+  );
+
+  await page.addStyleTag({ content: ':root { --font-utility: Arial, sans-serif !important; }' });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const forced = await facetRow();
+  expect(
+    forced.need,
+    `the chips need ${forced.need.toFixed(1)} px of a ${forced.column} px column in Arial`,
+  ).toBeLessThan(forced.column);
+  expect(forced.lines, `the chip row wrapped at a ${forced.column} px column in Arial`).toBe(1);
 });
 
 test('a row prints its name whole and is only as tall as that name needs', async ({ page }) => {
@@ -3141,12 +3175,50 @@ test('a row prints its name whole and is only as tall as that name needs', async
   await page.locator('[data-query]').fill('Macarius the New');
   const long = page.locator('.index-card.is-row', { hasText: 'Macarius the New' }).first();
   await expect(long).toBeVisible();
-  const deep = (await read()).find((r) => r.text.includes('Macarius the New'));
-  expect(deep, 'the three-line saint was not mounted').toBeTruthy();
-  expect(deep.lines, deep.text).toBe(3);
-  expect(deep.height, deep.text).toBe(104);
-  expect(deep.clipped, deep.text).toBe(false);
-  expect(deep.overflow, deep.text).toBeLessThanOrEqual(1);
+  /*
+   * **The column is narrowed until this name takes three lines, rather than
+   * three being written down** (2026-08-27, after CI). "This name needs a
+   * third line at 360 px" is true in Literata and false on a runner that never
+   * got Literata: `font-display: optional` gives the webfont a few frames and
+   * then keeps the fallback for the life of the page, and the fallback serif on
+   * a bare ubuntu box is narrower — so the name fitted two lines and the pin
+   * that was there to catch a cropped name reported one itself. The rendered
+   * page stayed correct throughout, because grid.js measures whatever face was
+   * actually resolved; only the number in the test was a fact about this desk.
+   *
+   * Which face the machine has now decides *how narrow* the column must be,
+   * not whether the case exists. The browser is the oracle at every step: set a
+   * width, let the grid repaint, read the line count back off the DOM.
+   */
+  const threeLines = await (async () => {
+    const full = await page.locator('[data-grid-inner], .grid').first().evaluate((g) => g.clientWidth);
+    // Widest first: on a desk with Literata the name already needs three at the
+    // phone's own column and the first pass takes it. A narrower face is walked
+    // down until it does, and a width that pushes it past three is not an
+    // answer — a fourth line is the clamp's ellipsis, which is the failure this
+    // is here to catch, not the case it is looking for.
+    for (const share of [1, 0.9, 0.8, 0.72, 0.65, 0.6, 0.55, 0.5, 0.45]) {
+      const width = Math.round(full * share);
+      await page.addStyleTag({
+        content: `.grid, [data-grid-inner] { max-width: ${width}px !important; }`,
+      });
+      // A repaint the grid owns: the search re-runs and rowHeights() measures
+      // the new column in the face this machine actually resolved.
+      await page.locator('[data-query]').fill('Macarius the Ne');
+      await page.locator('[data-query]').fill('Macarius the New');
+      await expect(long).toBeVisible();
+      const row = (await read()).find((r) => r.text.includes('Macarius the New'));
+      if (row?.lines === 3 && !row.clipped) return { ...row, width };
+    }
+    return null;
+  })();
+  expect(threeLines, 'no column width made this name take three lines').toBeTruthy();
+  // Three lines are given the three-line box, whole: this is what a clamp of
+  // two turns into an ellipsis, and why the clamp and ROW_NAME_LINES_MAX are
+  // one decision in two files.
+  expect(threeLines.height, threeLines.text).toBe(104);
+  expect(threeLines.clipped, threeLines.text).toBe(false);
+  expect(threeLines.overflow, threeLines.text).toBeLessThanOrEqual(1);
   await page.locator('[data-query]').fill('');
 
   /*

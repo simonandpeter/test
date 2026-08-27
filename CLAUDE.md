@@ -347,28 +347,32 @@ top of the file is.
     provenance lives.
 ### What to run, and when (measured 2026-08-27)
 
-**The full suite is a gate, not a loop.** All 510 is 372s wall — 2,073s of test
-work over six workers — and running it after every edit is most of a sitting
-spent watching a list scroll. What a run costs, on this machine:
+**The full suite is a gate, not a loop.** All 510 is 2,073s of test work packed
+into six workers, and running it after every edit is most of a sitting spent
+watching a list scroll. What a run costs here — **wall times swing by a factor
+of two with what else the machine is doing** (the same full run measured 372s
+against a busy machine and 174s against a quiet one), so read the ratios rather
+than the seconds:
 
 | | wall | when |
 | --- | --- | --- |
-| `npx playwright test -g "<title>"` | **30s** | while iterating on one test |
-| one spec, one project (`npm run test:e2e:desktop -- e2e/index.spec.js`) | **66s** | after a change to that surface |
+| `npx playwright test -g "<title>"` | **~30s** | while iterating on one test |
+| one spec, one project (`npm run test:e2e:desktop -- e2e/index.spec.js`) | **~66s** | after a change to that surface |
 | one spec, both projects | ~110s | when the change is about layout |
-| everything (`npm run test:e2e`) | **372s** | at a milestone — see below |
-| everything, `--workers=10` | 289s | same, in a hurry |
+| everything (`npm run test:e2e`) | **3 to 6 min** | at a milestone — see below |
 
 - **~25s of every invocation is fixed** — the manifest build, `vite preview`
   booting and the browser launching, before a single test runs. So a whole
   spec at one project (66s) costs less than three single tests run separately
   (90s). **Batch by surface rather than firing off one test at a time.**
-- `--workers=10` takes 83s off the full run and is green, but it makes every
-  individual test 22% slower under contention (2,073s of test time becomes
-  2,525s), which is headroom taken from the animation-timing tests that are
-  already the two known flakes. It is on the scoped scripts, where a flake
-  costs seconds to re-run, and **off the full gate**, which should keep the
-  timing CI runs it under.
+- `--workers=10` (up from the default six) ran the whole suite green, but it
+  makes every individual test **22% slower under contention** — 2,073s of test
+  time becomes 2,525s — and that headroom belongs to the animation-timing tests
+  that are already the two known flakes. Its wall-time saving was measured
+  against a busy machine and is not a clean number; the per-test slowdown is,
+  because it is a ratio inside one run. So it is on the scoped scripts, where a
+  flake costs seconds to re-run, and **off the full gate**, which keeps the
+  default workers and the timing CI runs it under.
 
 **Run everything at these four moments, and not otherwise:** before a commit
 that is going to be pushed, before asking a peer to push, after a change that
@@ -396,6 +400,35 @@ box, `npm run test:e2e:mobile` is the loop that will actually break.
 
 - Scoped runs take the same arguments as `playwright test`, after a `--`:
   `npm run test:e2e:desktop -- e2e/index.spec.js -g "bookmark"`.
+
+### `COLD_FACE=1` — rehearse the runner before pushing
+
+**A green local run is not a prediction of CI, and the gap is text.** Three
+tests went green here and red on the runner on 2026-08-27, all for one reason:
+
+1. **The webfont never applies there.** `font-display: optional` gives Literata
+   a few frames and then keeps the fallback *for the life of the page*; a cold
+   runner misses that window, so the 72ch column is 580 px rather than 678.
+2. **`system-ui` is DejaVu Sans**, not Segoe UI, and DejaVu is wider.
+
+`COLD_FACE=1` reproduces both, harder than the runner does — the webfont is
+refused and `--font-utility` is forced to Verdana, which is wider than DejaVu
+and present on every Windows and macOS machine (`e2e/fixtures.js`):
+
+```
+COLD_FACE=1 npm run test:e2e:desktop -- e2e/index.spec.js
+```
+
+Sixty seconds against one spec, or 2.5 minutes against all of them at one
+project. It found the CI failure exactly: `[facet row, native utility face]
+column 580 px, needs 604.2, 2 line(s)` — the chips needing 604 px of a 580 px
+column, which is the red CI threw and this desk cannot otherwise see. **Run it
+on anything that measures text before asking for a push.**
+
+Two tests are excluded from the rehearsal and say why in their own comments,
+which is the only honest way to exclude one: `a card lifespan is one line`
+(its subject *is* the warm 678 px column, which the rehearsal removes) and the
+console-error gate (the refused font is the harness talking, not the page).
 - **Four traps this suite keeps paying for.** (1) The Index grid is virtualised
   *and* absolutely positioned, so the mounted set is not the corpus and DOM
   order is not screen order — assert order through `leaders()`, which sorts by

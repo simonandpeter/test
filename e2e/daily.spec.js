@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 import {
   EMPTY,
   POPULATED,
@@ -3656,9 +3656,24 @@ test('a returning Daily page lands where it was left, though it grows after it r
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto('/', { waitUntil: 'networkidle' });
-  // Deep enough that a clamp against the pre-hymns height cannot reach it.
-  await page.evaluate(() => window.scrollTo(0, 1500));
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1500);
+  /*
+   * Deep enough that a clamp against the pre-hymns height cannot reach it —
+   * and **taken from the page rather than written down** (2026-08-27). A
+   * literal 1500 is a measurement of one machine's text: this page's height is
+   * its hymns and its register wrapping in whatever face the machine resolved,
+   * and CI's is not Literata, because a cold runner misses `font-display:
+   * optional`'s window and keeps the fallback serif for the life of the page.
+   * The runner's Daily page ends at 1399, so `scrollTo(0, 1500)` clamped and
+   * the poll waited five seconds for a number the page could not hold. Scroll
+   * as deep as asked, keep what the page gave, and require only that it is
+   * deep enough for the claim to mean something.
+   */
+  const deep = await page.evaluate(() => {
+    window.scrollTo(0, 1500);
+    return Math.round(window.scrollY);
+  });
+  expect(deep, 'the Daily page is too short for a deep return to be a claim').toBeGreaterThan(900);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
 
   await press('nav.site-nav a[href$="/saints"]');
   await expect(page.locator('.index-controls')).toBeVisible();
@@ -3677,10 +3692,10 @@ test('a returning Daily page lands where it was left, though it grows after it r
   await press('nav.site-nav a[data-nav-daily]');
 
   // What the fade shows, not what the page settles to.
-  await expect.poll(() => page.evaluate(() => window.__readyScrollY)).toBe(1500);
+  await expect.poll(() => page.evaluate(() => Math.round(window.__readyScrollY))).toBe(deep);
   // And it stays there once the hymns have landed and the floor is released.
   await expect(page.locator('[data-hymns]')).toBeVisible();
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1500);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
   // The floor is a prop for the arrival, not a permanent change to the page.
   await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
 });

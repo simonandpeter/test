@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 import {
   INDEX,
   POPULATED,
@@ -60,7 +60,10 @@ test('no console errors on load', async ({ page }) => {
     // The SPA deep-link fallback makes GitHub Pages return a 404 status whose
     // body is the app shell; the resulting resource error is inherent to the
     // technique and is not a fault.
-    if (m.type() === 'error' && !m.text().includes('404')) errors.push(m.text());
+    // And under COLD_FACE the rehearsal refuses the webfont itself, so the
+    // failed request is the harness talking, not the page (fixtures.js).
+    const mine = process.env.COLD_FACE && m.text().includes('net::ERR_FAILED');
+    if (m.type() === 'error' && !m.text().includes('404') && !mine) errors.push(m.text());
   });
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });

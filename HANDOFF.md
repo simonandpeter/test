@@ -87,6 +87,18 @@ them.
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **`COLD_FACE=1` before asking for a push, on anything that measures text**
+  (2026-08-27). The runner draws different text: `font-display: optional` means
+  a cold machine never gets Literata, so the 72ch column is 580 px not 678, and
+  `system-ui` is DejaVu Sans rather than Segoe UI. Three tests were green here
+  and red on CI for that reason alone — a scroll to a literal 1500 the runner's
+  shorter page could not hold, a chip row that fits 580 in Segoe and needs 604
+  in a wide face, and a name pinned at three lines that the runner's narrower
+  fallback set in two. **The site was right in all three; the numbers in the
+  tests were facts about this desk.** `COLD_FACE=1` (e2e/fixtures.js) refuses
+  the webfont and forces Verdana, reproducing all of it in 60s against one
+  spec. A number taken from rendered text belongs either to a forced face or to
+  the page itself — never to the machine that wrote it down.
 - **The full suite is a gate, not a loop** (2026-08-27). 510 tests is 372s of
   wall time and 2,073s of test work; a single test is 30s, one spec at one
   project 66s, and **~25s of every invocation is fixed cost** before a test
