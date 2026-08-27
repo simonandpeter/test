@@ -51,9 +51,83 @@ const contentDirs = () => ({
   },
 });
 
+/**
+ * The two Latin subsets, preloaded (Addendum G6; author, 2026-08-28: "ignore
+ * svg, just preload texts as recommended").
+ *
+ * `font-display: optional` stands, and is the reason this is worth doing at
+ * all: optional gives the file about a hundred milliseconds and then keeps the
+ * fallback *for the life of the page*, so on a cold load the reader either gets
+ * Literata or does not, and no amount of later arrival changes it. A preload
+ * starts the request with the HTML instead of after the stylesheet has been
+ * parsed and matched, which is what puts the face inside that window on most
+ * loads — without reintroducing the layout shift `swap` would cost. Zero shift
+ * outranks brand (DESIGN.md); this buys the brand back where it is free.
+ *
+ * **Which two, and why not four.** `normal-latin` is the face every page is set
+ * in. `normal-latin-ext` is not a luxury beside it: the corpus is full of names
+ * like *Cyriacus of Tazlău*, whose accented characters live in that subset, so
+ * a page given one and not the other would change face mid-word — the same
+ * failure the display face's own scoping comment in base.css describes. Italic
+ * is deliberately left out: it appears inside lives and quotations rather than
+ * at first paint, and two more files would spend the budget this exists to
+ * protect.
+ *
+ * **Why a plugin rather than a line in index.html.** Vite hashes the filenames,
+ * so the name cannot be written down; `transformIndexHtml` runs with the
+ * finished bundle and can look an emitted asset up by its source name.
+ * `crossorigin` is not optional on a font preload — without it the browser
+ * fetches the file a second time for the CSS, and the preload becomes a cost
+ * rather than a saving.
+ */
+const preloadLatin = () => ({
+  name: 'gallery-preload-latin',
+  apply: 'build',
+  enforce: 'post',
+
+  transformIndexHtml: {
+    order: 'post',
+    handler(html, ctx) {
+      const base = process.env.BASE_PATH || '/';
+      /*
+       * Matched on the asset's **own record of where it came from**, not on
+       * its emitted name. The first build here did the latter and shipped the
+       * same subset twice: Vite's hash can itself begin with a hyphen —
+       * `literata-normal-latin-ext--vWOuwpV.woff2` — so any pattern loose
+       * enough to match a hash after `literata-normal-latin-` also matches
+       * `ext-` and the plain Latin file was never found. The bundle knows the
+       * source it emitted each asset from; asking it removes the guess.
+       */
+      const sourceOf = (asset) =>
+        [...(asset.originalFileNames ?? []), asset.name ?? '']
+          .map((name) => String(name).split('/').pop())
+          .filter(Boolean);
+      const emitted = Object.values(ctx.bundle ?? {}).filter(
+        (asset) => typeof asset.fileName === 'string' && asset.fileName.endsWith('.woff2'),
+      );
+      const tags = [];
+      for (const stem of ['literata-normal-latin', 'literata-normal-latin-ext']) {
+        const found = emitted.find((asset) => sourceOf(asset).includes(`${stem}.woff2`))?.fileName;
+        if (!found) {
+          // Loud rather than silent: a renamed or dropped subset should break
+          // the build's claim about itself, not quietly ship no preload.
+          this.warn(`preload: no built file for ${stem}.woff2`);
+          continue;
+        }
+        tags.push({
+          tag: 'link',
+          attrs: { rel: 'preload', as: 'font', type: 'font/woff2', crossorigin: '', href: base + found },
+          injectTo: 'head-prepend',
+        });
+      }
+      return { html, tags };
+    },
+  },
+});
+
 export default defineConfig({
   // '/' locally; CI sets BASE_PATH to '/<repo>/' for project Pages. A custom
   // domain later means removing the variable from the workflow, nothing else.
   base: process.env.BASE_PATH || '/',
-  plugins: [contentDirs()],
+  plugins: [contentDirs(), preloadLatin()],
 });

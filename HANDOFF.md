@@ -87,6 +87,31 @@ them.
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **The two Latin subsets are preloaded** (Addendum G6, decided 2026-08-28;
+  the SVG wordmark alternative was rejected — "ignore svg, just preload texts as
+  recommended"). `preloadLatin()` in vite.config.js, because the filenames are
+  hashed and cannot be written into index.html. It matches on the **bundle's own
+  record of each asset's source**, not on the emitted name: Vite's hash can
+  begin with a hyphen (`literata-normal-latin-ext--vWOuwpV.woff2`), so any
+  pattern loose enough to match a hash after `literata-normal-latin-` also
+  matches `ext-`, and the first build shipped one subset twice. `font-display:
+  optional` stands and is why the preload helps at all.
+- **The saint page already prints the non-civil reckoning** and has since
+  Amendment 31 — "7 September (Julian), which falls on 20 September 2026". Every
+  venerated attestation in the corpus carries a feast (0 without), so there is no
+  Russian or Serbian veneration it misses. A row that shows no feast is one whose
+  status is `undocumented`, which is the site refusing to invent an entry rather
+  than a gap. **The Daily page is a separate question and has been declined
+  twice**; the 2026-08-28 instruction was the saint page only and does not
+  reopen it.
+- **The Index's 72ch column is deferred, not declined** — the author is holding
+  it for a possible separate desktop layout design. Recorded as a deferral on
+  purpose: a bare "no" here would stop someone asking again.
+- **The script-forms cost is known and not being paid down**: 742 saints carry a
+  `names` array, 1,142 forms, 93,961 bytes raw and 20,606 gzipped, about 4% of
+  the manifest on the boot path. **Two different things are called `names`** — a
+  saint record's own name forms, and the search index. Neither is
+  `display_name`, and a change to one is not a change to the other.
 - **The suite has no known flakes** (2026-08-28, Amendment 60), and the way the
   last two were closed is the standing method. Both looked like assertions
   sampling at a fixed moment, and were: waiting for the state instead took the

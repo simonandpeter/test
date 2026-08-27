@@ -2123,3 +2123,52 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
   await row.locator('[data-forget]').evaluate((el) => el.click());
   await expect(page.locator('.shelf-row')).toHaveCount(0);
 });
+
+test('the two Latin subsets are preloaded, and only those', async ({ page }) => {
+  /*
+   * Addendum G6, decided by the author on 2026-08-28: "ignore svg, just preload
+   * texts as recommended". An SVG wordmark was the alternative considered and
+   * rejected, so GFS Nicefore stays a face and this is the whole of the fix.
+   *
+   * `font-display: optional` stands and is *why* this matters: optional gives
+   * the file about a hundred milliseconds and then keeps the fallback for the
+   * life of the page. A preload starts the request with the HTML rather than
+   * after the stylesheet is parsed and matched, which puts the face inside that
+   * window on most loads without the layout shift `swap` would cost.
+   *
+   * Read out of the served HTML rather than off a live page: this is a claim
+   * about what the document says before anything runs.
+   */
+  const html = await (await page.request.get('/')).text();
+  const links = [...html.matchAll(/<link[^>]*rel="preload"[^>]*>/g)].map((m) => m[0]);
+  expect(links.length, html.slice(0, 400)).toBe(2);
+
+  const latin = links.find((tag) => /literata-normal-latin-[^"]*\.woff2/.test(tag) && !/latin-ext/.test(tag));
+  const ext = links.find((tag) => /literata-normal-latin-ext-[^"]*\.woff2/.test(tag));
+  /*
+   * **Two different files.** The first build of this shipped the same subset
+   * twice: Vite's hash can itself begin with a hyphen, so a pattern loose
+   * enough to match a hash after `literata-normal-latin-` also matches `ext-`.
+   * The plugin asks the bundle which source each asset came from now, and this
+   * is the assertion that would have caught it.
+   */
+  expect(latin, 'the plain Latin subset is not preloaded').toBeTruthy();
+  expect(ext, 'the Latin-ext subset is not preloaded').toBeTruthy();
+  expect(latin).not.toBe(ext);
+
+  for (const tag of [latin, ext]) {
+    // Without `crossorigin` the browser fetches the file a second time for the
+    // CSS and the preload is a cost rather than a saving.
+    expect(tag, 'a font preload without crossorigin is fetched twice').toContain('crossorigin');
+    expect(tag).toContain('as="font"');
+  }
+
+  /*
+   * And not the italics, nor the Greek and Cyrillic subsets. The budget is the
+   * point: italic appears inside lives and quotations rather than at first
+   * paint, and a reader in one script should not be made to fetch three others.
+   */
+  expect(links.join(' ')).not.toContain('italic');
+  expect(links.join(' ')).not.toContain('cyrillic');
+  expect(links.join(' ')).not.toContain('greek');
+});
