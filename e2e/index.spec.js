@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures.js';
+import { COLD, coldFace, test, expect } from './fixtures.js';
 import {
   DETAIL,
   INDEX,
@@ -3190,6 +3190,17 @@ test('a row prints its name whole and is only as tall as that name needs', async
    */
   const wideCtx = await page.context().browser().newContext({ viewport: { width: 1280, height: 900 } });
   const widePage = await wideCtx.newPage();
+  /*
+   * **The rehearsal has to be carried across by hand** (2026-08-28). The
+   * COLD_FACE fixture decorates the injected `page`, and this context is opened
+   * by the test, so under `COLD_FACE=1` everything above ran in the forced face
+   * and this block — which is a text measurement, and the only one here about
+   * the desktop column — ran in whatever this desk resolved: measured, Times
+   * New Roman with Literata refused above, Literata at the warm 678 px column
+   * below. A rehearsal that exempts a block silently is the failure mode
+   * fixtures.js's own header warns about, because it is green either way.
+   */
+  await coldFace(widePage);
   await widePage.addInitScript(() => {
     localStorage.setItem(
       'gos-settings',
@@ -3199,6 +3210,20 @@ test('a row prints its name whole and is only as tall as that name needs', async
   await widePage.goto(INDEX, { waitUntil: 'networkidle' });
   await widePage.evaluate(() => document.fonts.ready);
   await expect(widePage.locator('.index-card.is-row').first()).toBeVisible();
+  /*
+   * And it says so. Backing the call above out leaves every assertion in this
+   * block green, because Literata is the face the numbers were written in — so
+   * the only thing that tells the rehearsal from a page that quietly refused it
+   * is asking the page. Only sayable under COLD_FACE: in the ordinary gate the
+   * webfont is meant to arrive, and asserting that it did would be an assertion
+   * about `font-display: optional`'s window rather than about this test.
+   */
+  if (COLD) {
+    expect(
+      await widePage.evaluate(() => document.fonts.check('1em Literata')),
+      'the cold-face rehearsal did not reach the context this test opened itself',
+    ).toBe(false);
+  }
   const wide = await read(widePage);
   expect(wide.length).toBeGreaterThan(5);
   for (const r of wide) {

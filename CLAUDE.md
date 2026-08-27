@@ -436,6 +436,17 @@ Two tests are excluded from the rehearsal and say why in their own comments,
 which is the only honest way to exclude one: `a card lifespan is one line`
 (its subject *is* the warm 678 px column, which the rehearsal removes) and the
 console-error gate (the refused font is the harness talking, not the page).
+
+**The fixture only decorates the injected `page`, and 42 tests open a context of
+their own.** A `browser.newContext()` inside a test body is a page the fixture
+never saw, so under `COLD_FACE=1` such a test runs half forced and half raw —
+green either way, which is the one thing a rehearsal must not be. `coldFace(page)`
+is exported from e2e/fixtures.js for exactly this, and `COLD` beside it is what
+lets a test *assert* the treatment took (`document.fonts.check('1em Literata')`
+must be false). `a row prints its name whole` does both and is the worked
+example; the other 41 contexts are still outside the rehearsal (Amendment 63,
+which also records why the obvious ten-line fix does not work — 36 tests take
+`{ browser }` and never touch the `page` fixture).
 - **Four traps this suite keeps paying for.** (1) The Index grid is virtualised
   *and* absolutely positioned, so the mounted set is not the corpus and DOM
   order is not screen order — assert order through `leaders()`, which sorts by

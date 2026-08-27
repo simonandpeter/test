@@ -82,9 +82,9 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 174 unit tests (`npm test`) — pure logic, no DOM.
-- 527 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sittings of Amendments 56 and 57), not carried
-  over from a commit message. `npm run test:all` runs both; CI runs both on
+- 530 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-28, the sitting of Amendment 63; 527 through Amendment
+  57), not carried over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
 - **The two Latin subsets are preloaded** (Addendum G6, decided 2026-08-28;
@@ -124,6 +124,17 @@ them.
   before believing a failure, check whether the other session's tree was in
   flight — two of that run's three failures belonged to an uncommitted image
   batch.
+- **The rehearsal does not reach a context a test opens itself** (Amendment 63).
+  `COLD_FACE=1` decorates the injected `page`; **42 tests open their own
+  `browser.newContext()`**, and such a test runs half forced and half raw — green
+  either way, which is the one thing an instrument must not be. `coldFace(page)`
+  and `COLD` are exported from e2e/fixtures.js so a hand-made context can take
+  the treatment *and assert it took*. One is routed through it so far; **41 are
+  not**, and the obvious ten-line fix does not work — a wrap inside the `page`
+  fixture measured green over both projects while closing almost nothing,
+  because **36 tests take `{ browser }` and never ask for `page`**. Closing it
+  wants a worker-scoped `browser` override and a pin inside a `{ browser }`
+  test; it is a sitting of its own and it tightens 41 tests at once.
 - **A test that passes only in the fallback face is testing something else**
   (Amendment 62). `a row prints its name whole` measured clipping as
   `scrollHeight > clientHeight + 1`, and a *one-line* name in a 21.25 px line
