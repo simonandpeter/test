@@ -14,6 +14,25 @@ import { state } from './state.js';
  */
 
 /**
+ * How far the carousel had drifted, for the same reason the scroll position is
+ * kept (author, 2026-08-27: "When exiting a saint card from the carousel, make
+ * sure you return to where you came from, just like you do when you leave
+ * advanced search and come back to the carousel").
+ *
+ * **Read from the track while it can still answer.** A `display: none` element
+ * reports `scrollLeft` 0 and ignores writes — the pitfall ui/loop-scroll.js
+ * opens by warning about, and which cost the mode switch its offset once
+ * already. Nothing is hidden yet when `destroy` runs, so on the carousel the
+ * element is the truth. In search mode the row is already hidden and the truth
+ * is `state.carouselAt`, which `switchMode` took on the way out for exactly
+ * this reason.
+ */
+const carouselOffset = (state) => {
+  const track = state.el.querySelector('[data-carousel-track]');
+  return state.mode === 'carousel' && track ? track.scrollLeft : (state.carouselAt ?? null);
+};
+
+/**
  * The page's state is the argument here rather than the import above, because
  * `destroy` calls this on the way out: by the next line the singleton is
  * closed, and a snapshot taken from it would be a snapshot of nothing.
@@ -23,6 +42,7 @@ export function snapshot(state) {
     filters: { ...state.filters },
     openFacets: [...state.el.querySelectorAll('details.facet[open]')].map((d) => d.dataset.facet),
     scrollY: window.scrollY,
+    carouselAt: carouselOffset(state),
   };
 }
 
@@ -36,6 +56,20 @@ export function applySnapshot(snap) {
   const controlsEl = el.querySelector('.index-controls');
   const f = seeded({ ...EMPTY_FILTERS, ...snap.filters });
   state.filters = f;
+
+  /*
+   * The row's offset goes back before `paintCarousel` builds it, because that
+   * is where it is read: the loop is handed `startAt` at construction and
+   * writing `scrollLeft` afterwards would fight its own first correction.
+   *
+   * It survives that trip only because `state.carouselKey` is undefined on a
+   * fresh render — `paintCarousel` drops a remembered offset when the *pool*
+   * has changed under it, and no pool has been painted yet. The filters this
+   * function has just put back are what make that safe rather than lucky: the
+   * same filters mean the same run of saints, so the offset lands on the saint
+   * it was taken from.
+   */
+  state.carouselAt = snap.carouselAt ?? null;
 
   controlsEl.querySelector('[data-query]').value = f.query ?? '';
   const check = (name, values) => {

@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 55)
+## State as of 2026-08-27 (Amendments 50 to 56)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -82,11 +82,21 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 496 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendment 55), not carried
+- 510 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendment 56), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **Read Playwright's own exit code and its `N failed` line, never the passed
+  count.** A run was reported green in Amendment 56's sitting off a `tail` that
+  had cut the `6 failed` header off the top, with an `exit 0` beside it that
+  belonged to `tail` at the end of a pipeline rather than to the suite — a
+  pipeline's status is its last command's. Both halves of the mistake said the
+  same reassuring thing. Write the run to a file and grep it.
+- **Run both projects.** All six of those failures were on `mobile-360`;
+  `desktop` was green throughout and would have shipped them. The two differ by
+  more than width now — the Index opens on rows on a phone and cards at a desk
+  (Amendment 56), so a test that assumes a layout has to ask for one.
 - **The view split is done** (Amendment 55). `views/calendar.js` is 699 lines
   over seven modules in `src/views/daily/`; `views/saints.js` is 183 over nine
   in `src/views/index/`; the 9,308-line browser spec is six files by surface.
@@ -96,6 +106,19 @@ them.
   other** (the month calls `buildRail`, `settle`, `travel`, `stepCursor`), and
   two documents the audit called archive are living specification, cited as
   `brief §N` and `Addendum X` in some thirty comments.
+- **The bookmark is on cards, the saint's page and the shelves only**
+  (Amendment 56). The author withdrew it from the Index's rows, the Daily
+  hero and the Daily register: "From my own experience a 'watch later' style
+  bookmarking system is never actually revisited." The shelf keeping its mark
+  is a judgement, not the instruction — on the Saved shelf that mark is the
+  un-save — and it is the author's to reverse.
+- **A virtualised row's height does not have to be a constant** (Amendment 56,
+  and the author asked the question that produced it). `nameLines()` in
+  views/index/grid.js counts the browser's own greedy wrapping with canvas
+  `measureText` — no layout, no render — so each row is laid out to what its
+  name needs: 66, 83 or 104. Verified exact against the real wrapping over all
+  734 names at both widths. If you touch the row's box, `ROW_NAME_LINES_MAX`
+  and the `-webkit-line-clamp` in index.css are one decision in two files.
 - **Run `node scripts/extraction-check.mjs` on every code move, before the
   build.** A green build says nothing about whether an extraction is complete:
   a bare reference to a name that never travelled is valid JavaScript until the

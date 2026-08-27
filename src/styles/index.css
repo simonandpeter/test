@@ -30,9 +30,19 @@
   --facet-h: calc(var(--facet-font) * var(--facet-lh) + var(--facet-pad-y) * 2 + 2px);
 }
 
+/* **No rule under the controls** (author, 2026-08-27: "a stray horizontal line
+   on the All Saints page, in both carousel and advanced mode. Remove it"). What
+   separates the controls from the register below them is space, which is the
+   answer this project reached for the day panel's own register on 2026-08-24 —
+   frames and rules are one answer to one question, and this page was giving
+   both. The bottom padding comes down with it, because most of what it was
+   holding open was distance from the line.
+
+   The stuck hairline on `.index-row` is a different claim and stays: that one
+   marks a bar the register runs *underneath*, which is a fact about depth
+   rather than a division between two blocks. */
 .index-controls {
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: var(--space-3);
+  padding-bottom: var(--space-1);
   margin-bottom: var(--space-2);
 }
 
@@ -160,8 +170,18 @@ select:hover {
   /* 6 px inline, not 8: the die had to come into this row (2026-08-26
      evening) and the seven chips paid a pixel each side for it, then a second
      pixel on 2026-08-27 when the die was squared and Church became Calendar.
-     The row's own comment has the arithmetic. */
-  padding: var(--facet-pad-y) 6px;
+     The row's own comment has the arithmetic.
+
+     **10.5 px since the caret went** (author, 2026-08-27: "remove all the ' >'
+     arrows from the filter bubbles and keep just the text. Although you remove
+     the arrows, make sure the bubbles don't get any narrower than they are
+     currently"). The caret was 5 px and the gap before it 4, so each chip had
+     9 px to give back: 4.5 a side puts every chip at exactly the width it was.
+     That is what the author asked for, and it is also the only answer this row
+     could afford — the facets row has 9.5 px of slack across eight chips and
+     letting them shrink would have re-flowed it on the next machine with a
+     wide system-ui, in the other direction. */
+  padding: var(--facet-pad-y) 10.5px;
   border: 1px solid var(--rule);
   border-radius: 999px;
   list-style: none;
@@ -176,27 +196,17 @@ select:hover {
   content: '';
 }
 
-/* The caret is the chip's own, and turns down when the facet opens — the
-   affordance the browser's triangle was carrying, now inside the control. */
-.facet > summary::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-1px) rotate(-45deg);
-  transition: transform 120ms ease-out;
-}
+/* **No caret** (author, 2026-08-27: "remove all the ' >' arrows from the filter
+   bubbles and keep just the text"). A chip drawn as a control — field, hairline,
+   pill — already reads as pressable, and eight carets down one row was the same
+   mark repeated eight times to say the same thing.
 
-.facet[open] > summary::after {
-  transform: translateY(-2px) rotate(45deg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .facet > summary::after {
-    transition: none;
-  }
-}
+   The affordance it carried is not lost, only moved: an open facet keeps its
+   own state below, and `.facet[open] > summary` still takes the ink and the
+   field, so which chip is open is visible without it. Between the browser's
+   triangle (2026-08-25: "look like inline text, not controls"), the drawn caret
+   that replaced it, and nothing at all, this row has now tried every answer —
+   worth saying so the next reader does not put a third one back. */
 
 .facet > summary:hover {
   color: var(--ink);
@@ -650,21 +660,31 @@ html.is-rolling #view {
   align-items: baseline;
 }
 
-/* One line in a row, where a second would overflow a fixed box. */
+/* **Up to three lines, and the row is only as tall as its own name needs**
+   (author, 2026-08-27: "Don't cut off names with '…', display them in full",
+   and then "Why not just collapse whenever there is an empty line??").
+
+   The first answer to the first instruction clamped at two lines and gave
+   *every* row the two-line box, on the reasoning that a virtualised row has to
+   know its height before it exists. That reasoning was wrong — canvas
+   `measureText` gives an exact name width without laying anything out — and it
+   was also still not "in full": five names in the corpus need a third line at
+   360 px and were being ellipsised by that very clamp. views/index/grid.js now
+   measures each name in the row's own face and lays the row out to 66, 83 or
+   104.
+
+   **This number and `ROW_NAME_LINES_MAX` there are one decision in two files.**
+   Change either alone and the box and the text part company — a clamp below the
+   cap crops a name the row made room for, and a clamp above it overflows a box
+   that was never told.
+
+   The bookmark that used to hold this row's trailing edge went in the same
+   message, and its 32 px plus the gap is most of what buys the extra lines. */
 .index-card.is-row .index-name {
   max-height: none;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   word-break: break-word;
-}
-
-/* A 48 px thumbnail has no corner to spare, so in a row the bookmark stands at
-   the trailing edge: a column of marks down the register, beyond the pictures'
-   own column. */
-.index-card.is-row > .bookmark {
-  position: static;
-  align-self: center;
-  order: 3;
 }
 
 /* Detailed rows: the description takes two lines. The 112 px row saints.js
@@ -849,11 +869,38 @@ html.is-rolling #view {
  * transparent 69 px through which the register scrolls, and no layout change
  * anywhere.
  */
+/* The clip window is a little wider than the column it sits in, and pulled
+   back out by the same amount, so its *content* box is exactly the column and
+   nothing inside it moves. That headroom is what lets the open panel's ground
+   reach past the chips — see `.filter-drop-inner` below. */
 .filter-drop {
   overflow: hidden;
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
 }
 
+/*
+ * **Room inside the ground the open panel draws** (author, 2026-08-27: "there
+ * is no margin to the background of the filter when it pops out of the search
+ * bar … Add a bit of a margin").
+ *
+ * Sideways it is bleed, not padding: the border box grows and an equal
+ * negative margin pulls it back, so the chips keep every pixel of the column.
+ * They need it. The facets row fits eight chips at the 580 px cold-load column
+ * with 9.5 px to spare and its own comment says there is no third pixel to
+ * take — twelve a side would wrap the die on the first machine with a wide
+ * system-ui.
+ *
+ * Vertically it is ordinary padding, and **unconditional on purpose**. Adding
+ * it with the ground would make the band taller in one state than the other,
+ * which is the fold's one forbidden move: the page stores a scroll measured
+ * with the filters folded and restores it with them open. `.index-controls`
+ * gives up most of its bottom padding to pay for the height.
+ */
 .filter-drop-inner {
+  padding-block: var(--space-2);
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
   transition:
     transform var(--dur-slot) var(--ease),
     opacity var(--dur-slot) var(--ease);

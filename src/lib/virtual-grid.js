@@ -25,11 +25,18 @@ export function columnsFor(width, { min = MIN_COLUMN, gap = 16, max = 4 } = {}) 
  * Absolute positions for every card, shortest-column-first.
  *
  * `textHeight` is the fixed part of a card below the image — name, badge,
- * dates, and the card's own padding and border — and it is fixed on purpose:
- * the stylesheet clamps the name to a known number of line boxes (metrics.css
- * derives those from the font's own tables), so this number stays true when a
- * Coptic or Syriac fallback face substitutes in. A card with no image is that
- * block and nothing else.
+ * dates, and the card's own padding and border. For a card it is a number, and
+ * fixed on purpose: the stylesheet clamps the name to a known count of line
+ * boxes (metrics.css derives those from the font's own tables), so it stays
+ * true when a Coptic or Syriac fallback face substitutes in. A card with no
+ * image is that block and nothing else.
+ *
+ * **It may also be a function of the item**, which is how the row list stopped
+ * paying for its worst case on every row (2026-08-27). A row has no image to
+ * take a height from, so its box is text and only text: one line of name or
+ * two. The caller answers that per saint — views/index/grid.js measures the
+ * name against the line it has, before anything is rendered — and this stays
+ * what it was, arithmetic over sizes it is handed. Nothing here measures.
  *
  * `mediaInset` is what the card's padding and border take off the column
  * before the image gets its width. Without it the image is sized to a box
@@ -43,6 +50,7 @@ export function layout(
 ) {
   const cols = columns ?? columnsFor(width, { gap });
   const columnWidth = Math.max(1, (width - gap * (cols - 1)) / cols);
+  const textOf = typeof textHeight === 'function' ? textHeight : () => textHeight;
   const bottoms = new Array(cols).fill(0);
   const positions = [];
 
@@ -52,7 +60,7 @@ export function layout(
 
     const aspect = aspectOf(item);
     const media = aspect ? (columnWidth - mediaInset) / aspect : 0;
-    const height = Math.round(media + textHeight);
+    const height = Math.round(media + textOf(item));
     positions.push({
       ...item,
       x: target * (columnWidth + gap),

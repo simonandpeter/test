@@ -26,11 +26,47 @@ const CARD_TEXT_HEIGHT = 92;
 const CARD_INSET = 18;
 
 /**
- * Rows are a fixed box: a 48 px thumbnail, the name and its glyph beside it,
- * the dates beneath. Nothing in a row varies with the image, so its height is
- * a constant rather than a calculation — index.css holds the other half of it.
+ * A row's height, by how many lines its name needs.
+ *
+ * **This was one constant until 2026-08-27, and the author asked why.** Names
+ * stopped being cut off that afternoon, and the first answer was to give every
+ * row the tallest box — a bound rather than a sample, safe, and wasteful.
+ * Measured across the corpus: at 1280 *no* name wraps at all, and at 360 only
+ * 258 of 734 do. Nearly every row was carrying an empty line for the ones that
+ * were not. "Why not just collapse whenever there is an empty line?"
+ *
+ * Because a virtualised row has to know its height before it exists, and the
+ * reason given for the single constant was that text height cannot be known
+ * without rendering. That is wrong — `nameLines` below measures the name in
+ * the row's own face with canvas `measureText`, which touches no layout — and
+ * the reason is now a measurement instead: checked against the browser's real
+ * wrapping over all 734 names, the count agrees **exactly**, with no error in
+ * either direction. That bar is not pedantry: predicting one line for a name
+ * that needs two is precisely the cropping the afternoon's instruction was
+ * about.
+ *
+ * By line count, with index.css holding the other half of each number —
+ * 18 px inset + max(48 thumbnail, lines x 21.25 + 2 + 19.575 dates):
  */
-const ROW_HEIGHT = 66;
+const ROW_HEIGHTS = [66, 83, 104];
+
+/**
+ * Three lines is where this stops, in the stylesheet's clamp and here, and the
+ * two must agree or the box and the text part company. Nothing in the corpus
+ * reaches it — the five longest at 360 are exactly three, "Venerable Martyr
+ * Macarius the New, disciple of Patriarch Niphon" among them — so a fourth
+ * would be clamped and ellipsised as every name used to be. That is the
+ * degradation, stated rather than discovered.
+ */
+const ROW_NAME_LINES_MAX = 3;
+
+/**
+ * What the row takes off the column before the name gets its line: the card's
+ * own padding and border, the 48 px thumbnail, and the gap between them.
+ * Measured at 360, 700 and 1280 — flat 78 at all three, which it must be, or
+ * the arithmetic above is width-dependent in a way nothing else here is.
+ */
+const ROW_TEXT_INSET = CARD_INSET + 48 + 12;
 
 const ROW_GAP = 8;
 
@@ -40,12 +76,85 @@ const ROW_GAP = 8;
  * the box is still known before render: the matrix fits the 42 px name line a
  * card already reserves, and the description is a fixed count of utility lines
  * (13.5 px at 1.45 = 19.575 each), clamped — three on a card, two on a row.
- * Card: 92 + 6 gap + 58.725 = 156.7. Row: 18 inset + 31 name line + 2 + 19.575
- * dates + 2 + 39.15 = 111.7. index.css fixes the other half of each number.
+ * Card: 92 + 6 gap + 58.725 = 156.7.
+ *
+ * The row's numbers run by line count for the same reason the plain row's do,
+ * and from the same measurement: 18 inset + lines x 21.25 + 2 + 19.575 dates +
+ * 2 + 39.15 description. index.css fixes the other half of each number.
  */
 const DETAILED_CARD_TEXT_HEIGHT = 157;
 
-const DETAILED_ROW_HEIGHT = 112;
+const DETAILED_ROW_HEIGHTS = [102, 124, 145];
+
+/**
+ * The face the rows are actually drawn in, as a canvas pen.
+ *
+ * **A canvas, not the document.** `measureText` resolves a string against a
+ * font and returns its width; it reads no element, forces no reflow, and the
+ * whole corpus comes to well under a millisecond. The virtualiser's rule is
+ * that no *card* is rendered to find out how tall it is, and this keeps it —
+ * nothing is laid out, and the answer is exact rather than estimated.
+ *
+ * The face is read from a probe wearing the row's own classes rather than
+ * written down, because what decides where a name breaks is whatever the
+ * browser resolved: Literata if it arrived, Iowan Old Style or Georgia if it
+ * did not, something else again for a script none of them cover. One probe per
+ * layout pass, not one per saint. It hangs off the grid rather than off a row,
+ * because rows are recycled out of the DOM and a detached element measures
+ * nothing — which is a mistake this was written on the far side of.
+ */
+function pen(el) {
+  const probe = document.createElement('span');
+  probe.className = 'index-card panel is-row';
+  probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;top:0;left:0';
+  probe.innerHTML = '<span class="row-body"><span class="name-line"><span class="index-name"></span></span></span>';
+  el.appendChild(probe);
+  const cs = getComputedStyle(probe.querySelector('.index-name'));
+  const font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  probe.remove();
+  pen.ctx ??= document.createElement('canvas').getContext('2d');
+  pen.ctx.font = font;
+  return { ctx: pen.ctx, font };
+}
+
+/**
+ * How many lines a name will take on a line of `avail` pixels.
+ *
+ * The browser's own algorithm, which is greedy: take words while they fit,
+ * break when the next one does not. Whitespace is the only break opportunity
+ * considered — a hyphen is one too, so a hyphenated name may come out *shorter*
+ * than this says, and over-counting costs a row 21 px rather than cropping it.
+ * A single word wider than the line is the one case that breaks mid-word, under
+ * `word-break: break-word`, and it takes as many lines as it needs.
+ *
+ * Verified against the real thing over all 734 names at 360 px, where the
+ * distribution is 476 / 253 / 5: **no disagreement in either direction.**
+ */
+function nameLines(text, avail, ctx) {
+  if (!(avail > 0)) return 1;
+  const space = ctx.measureText(' ').width;
+  let lines = 1;
+  let used = 0;
+  for (const word of text.split(/\s+/)) {
+    if (!word) continue;
+    const w = ctx.measureText(word).width;
+    if (w > avail) {
+      // Broken mid-word; it starts a line of its own unless one is empty.
+      if (used > 0) lines += 1;
+      lines += Math.ceil(w / avail) - 1;
+      used = w % avail;
+      continue;
+    }
+    const next = used === 0 ? w : used + space + w;
+    if (used > 0 && next > avail) {
+      lines += 1;
+      used = w;
+    } else {
+      used = next;
+    }
+  }
+  return Math.min(lines, ROW_NAME_LINES_MAX);
+}
 
 /**
  * The opening of each life, derived once from the fetched text and kept across
@@ -65,6 +174,23 @@ const ledes = new Map();
  * not the corpus and DOM order is not screen order. Anything asserting order
  * has to sort by geometry; CLAUDE.md keeps that as the first of its traps.
  */
+/**
+ * A row's height, per saint: the short box, or the tall one if its name needs
+ * a second line.
+ *
+ * Built per layout pass rather than per row, so the probe is read once and the
+ * pen is set once; the returned function is then pure arithmetic over a width
+ * already known. The face it measured in is recorded on the function, which is
+ * what `wireGrid` compares against when the fonts finish loading.
+ */
+function rowHeights(grid) {
+  const { ctx, font } = pen(grid);
+  const line = grid.clientWidth - ROW_TEXT_INSET;
+  const heights = state.detailed ? DETAILED_ROW_HEIGHTS : ROW_HEIGHTS;
+  state.rowFont = font;
+  return (item) => heights[nameLines(saintName(item), line, ctx) - 1];
+}
+
 export function paintGrid(matched, { animate }) {
   const { el } = state;
   const grid = el.querySelector('[data-grid]');
@@ -78,10 +204,10 @@ export function paintGrid(matched, { animate }) {
         width: grid.clientWidth,
         gap: ROW_GAP,
         columns: 1,
-        textHeight: state.detailed ? DETAILED_ROW_HEIGHT : ROW_HEIGHT,
-        // A row's thumbnail is a fixed box, so no row's height depends on its
-        // image and every row is the same height. Still exact, still no
-        // measurement — the constant is simply the whole answer here.
+        textHeight: rowHeights(grid),
+        // A row has no picture in its box — the thumbnail is a fixed 48 px
+        // square beside the text — so nothing about its height comes from the
+        // image. What varies is the name, and `rowHeights` answers that.
         aspectOf: () => null,
       })
     : layout(matched, {
@@ -188,6 +314,22 @@ export function wireGrid({ onChange }) {
         })
       : null;
   observer?.observe(grid);
+
+  /*
+   * **The face decides where a name wraps, and it can arrive late.**
+   * `font-display: optional` settles Literata within the first moments of a
+   * load, which is usually before the grid first lays out and sometimes after.
+   * At a wide width the observer above already catches it, because the arriving
+   * face widens the 72ch column and the grid's box changes with it; on a phone
+   * the column is the viewport, nothing moves, and a row laid out in Georgia's
+   * metrics would keep them. One relayout when the fonts settle, and only if
+   * the face this actually measured in has changed.
+   */
+  document.fonts?.ready.then(() => {
+    if (!state || state.layout !== 'rows') return;
+    const { font } = pen(grid);
+    if (font !== state.rowFont) update({ animate: false });
+  });
 
   // A card's shared-element name is set at the moment of the click and not
   // before: naming sixty visible cards would make the browser capture sixty
@@ -309,23 +451,32 @@ export function card(item, router, { rows = false, detailed = false } = {}) {
     </span>
     <span class="index-dates utility">${esc(formatSubtext(item))}</span>
     ${description}`;
-  const bookmark = renderBookmark(item.slug, item.display_name);
 
   /*
    * A row reads name-first (author, 2026-08-27): the text starts at the card's
-   * left edge and the picture stands at the trailing end, just inside the
-   * bookmark. A saint with no icon keeps the slot rather than closing it up —
-   * an empty 48 px on the right — so the marks stay in one column and the eye
-   * running down a scrolling register meets every name at the same left edge.
+   * left edge and the picture stands at the trailing end. A saint with no icon
+   * keeps the slot rather than closing it up — an empty 48 px on the right — so
+   * the pictures stay in one column and the eye running down a scrolling
+   * register meets every name at the same left edge.
    *
    * This is not the empty frame the author struck out on 2026-08-26. That one
    * stood *before* the name and pushed every title in from the margin, which
    * is the thing objected to; the instruction was "print the text all the way
    * to the left margin of the card", and moving the picture to the other end
    * is what finally does it for the 614 saints who have none.
+   *
+   * **A row carries no bookmark** (author, 2026-08-27: "on all row cards,
+   * remove the bookmark entirely, and just have the image square to the right
+   * side, giving more space for the text … From my own experience a 'watch
+   * later' style bookmarking system is never actually revisited"). The mark
+   * stays on the card shapes and on the saint's own page, which is where the
+   * author sent anyone who wants it. What the row buys with the 44 px is the
+   * next instruction in the same breath: names print whole.
    */
   const slot = image || '<span class="index-media is-blank" aria-hidden="true"></span>';
-  return rows ? `<span class="row-body">${body}</span>${slot}${bookmark}` : `${image}${body}${bookmark}`;
+  return rows
+    ? `<span class="row-body">${body}</span>${slot}`
+    : `${image}${body}${renderBookmark(item.slug, item.display_name)}`;
 }
 
 /**

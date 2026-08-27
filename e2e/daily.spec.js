@@ -1154,37 +1154,44 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
   await expect(media).toHaveAttribute('aria-hidden', 'true');
   await expect(media).toHaveAttribute('tabindex', '-1');
 
-  // The bookmark stood over the image's top-right corner until 2026-08-26
-  // (author: "move the bookmark on the main saint card from the top right of
-  // the image to the right of the text"). It is a sibling of the name inside
-  // `.name-line` now, not of the image link — a button inside an anchor is
-  // still invalid, and the press still has to save rather than open.
+  /*
+   * **No bookmark anywhere on the hero** (author, 2026-08-27: "remove the
+   * bookmark on the main saint card … If people want to bookmark they can go
+   * to the profile page itself").
+   *
+   * The mark moved three times before it was withdrawn — off the image's
+   * corner and beside the name (2026-08-26 morning), pinned to the trailing
+   * edge rather than trailing the name (that evening), then centred against a
+   * wrapped name — so the count is checked in every place it has ever stood
+   * rather than only the last one. `.hero-actions` is the oldest of them: it
+   * carried the mark for a hero with no picture, and went with that branch.
+   */
   await expect(page.locator('.hero-figure > .bookmark')).toHaveCount(0);
-  const boxes = await page.evaluate(() => {
-    const name = document.querySelector('.hero-name').getBoundingClientRect();
-    const mark = document.querySelector('.hero .name-line > .bookmark').getBoundingClientRect();
-    return { name, mark };
-  });
-  expect(boxes.mark.left).toBeGreaterThanOrEqual(boxes.name.right - 1);
-  // And nowhere else: `.hero-actions`, which used to carry it for a hero with
-  // no image, is gone along with the branch that wrote it — one bookmark, one
-  // place, whether or not there is a picture.
   await expect(page.locator('.hero .hero-actions')).toHaveCount(0);
-  await expect(page.locator('.hero .bookmark')).toHaveCount(1);
+  await expect(page.locator('.hero .bookmark')).toHaveCount(0);
+  await expect(page.locator('.hero .name-line')).toHaveCount(0);
 
   await media.click();
   await expect(page.locator('h1.saint-name')).toHaveText('St Augustine of Hippo');
 });
 
-test('the hero bookmark holds its place beside the name when it wraps to two lines', async ({ page }) => {
+test('the hero name takes the whole line, with no mark to make room for', async ({ page }) => {
   /*
-   * Author, 2026-08-26: "reserve a spot for it, so as to make sure if the
-   * text is long and requires 2 lines the bookmark still stays in the same
-   * position and doesn't drop down another line." 14 September 2026 in the
-   * Romanian calendar is the day's sole Romanian entry, so pickHero is
-   * deterministic rather than the usual hash over a pool — and his name,
-   * "Cuviosul Mucenic Macarie, ucenicul Patriarhului Nifon", is long enough to
-   * wrap at 360 px without being constructed for the test.
+   * Author, 2026-08-27: "remove the bookmark on the main saint card, and
+   * remove the margin that kept the text from overlapping with the bookmark,
+   * let the text go full width now."
+   *
+   * This was the test that the mark *held its place* beside a name that wraps,
+   * from the instruction of the day before ("reserve a spot for it, so as to
+   * make sure if the text is long and requires 2 lines the bookmark still
+   * stays in the same position"). The reservation is what has been withdrawn,
+   * so the assertion turns over on the same day and the same saint: the name's
+   * own box is now the whole column rather than the column less a mark.
+   *
+   * 14 September 2026 in the Romanian calendar is the day's sole Romanian
+   * entry, so pickHero is deterministic rather than the usual hash over a
+   * pool — and "Cuviosul Mucenic Macarie, ucenicul Patriarhului Nifon" is long
+   * enough to wrap at 360 px without being built for the test.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page, { church: 'romanian' });
@@ -1193,23 +1200,23 @@ test('the hero bookmark holds its place beside the name when it wraps to two lin
 
   const name = page.locator('.hero-name');
   await expect(name).toContainText('Macarius');
-  const lines = await name.evaluate((el) => {
+  await expect(page.locator('.hero .bookmark')).toHaveCount(0);
+
+  const m = await page.evaluate(() => {
+    const el = document.querySelector('.hero-name');
     const range = document.createRange();
     range.selectNodeContents(el);
-    return range.getClientRects().length;
+    return {
+      lines: range.getClientRects().length,
+      nameWidth: el.getBoundingClientRect().width,
+      bodyWidth: document.querySelector('.hero-body').getBoundingClientRect().width,
+    };
   });
-  expect(lines).toBeGreaterThan(1);
-
-  const placed = await page.evaluate(() => {
-    const nameBox = document.querySelector('.hero-name').getBoundingClientRect();
-    const mark = document.querySelector('.hero .name-line > .bookmark').getBoundingClientRect();
-    return { nameBox, mark };
-  });
-  // Beside the wrapped name's block, contained within its vertical span —
-  // not below it, which is what "drops to another line" would look like.
-  expect(placed.mark.top).toBeGreaterThanOrEqual(placed.nameBox.top - 1);
-  expect(placed.mark.bottom).toBeLessThanOrEqual(placed.nameBox.bottom + 1);
-  expect(placed.mark.left).toBeGreaterThanOrEqual(placed.nameBox.left);
+  // Still the wrapping name the older test needed, so the two are comparable.
+  expect(m.lines).toBeGreaterThan(1);
+  // The whole column. A reserved slot shows up here as the mark's 32 px and
+  // its gap missing from the name's own box, which is what this used to be.
+  expect(m.bodyWidth - m.nameWidth).toBeLessThan(1);
 });
 
 test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
@@ -2243,18 +2250,20 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   await expect(page.locator('.month-grid .day-mark')).toHaveCount(0);
 });
 
-test('a register row keeps its bookmark on the row, however long the name', async ({ page }) => {
+test("a register row is the register's own, tighter than the Index's and with no mark", async ({ page }) => {
   /*
-   * Author, 2026-08-25 evening: "the row card for St Bartholomew on mobile
-   * pushes the bookmark to the next line instead of remaining pinned to the
-   * right side as it should be."
+   * Author, 2026-08-27: "for saints under 'Also Commemorated' on the Daily
+   * page, don't do it in the exact same row style anymore, pack them more
+   * tightly" — and, in the same message, "on all row cards, remove the
+   * bookmark entirely".
    *
-   * The cause was inherited, not written: Also commemorated became *cards*
-   * the evening before (Amendment 38) and picked up the text register's
-   * narrow rule, `.register li { flex-wrap: wrap }`, which is there so a
-   * feast date can drop under a name. A card row is a fixed three-part shape
-   * and its body is the elastic one; the mark holds the trailing edge and the
-   * name clips instead.
+   * This was the test that the mark held the row's trailing edge on a phone
+   * (author, 2026-08-25 evening: "the row card for St Bartholomew on mobile
+   * pushes the bookmark to the next line instead of remaining pinned to the
+   * right side as it should be"). That fault was inherited rather than
+   * written — the register had borrowed the Index's row wholesale at
+   * Amendment 38 — and the borrowing is what has now been undone. The same
+   * day, saint and width are kept so the two can be read against each other.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page, { church: 'greek' });
@@ -2263,23 +2272,24 @@ test('a register row keeps its bookmark on the row, however long the name', asyn
 
   const row = page.locator('.reg-card', { hasText: 'Bartholomew' }).first();
   await expect(row).toBeVisible();
-  const placed = await row.evaluate((li) => {
-    const card = li.getBoundingClientRect();
-    const mark = li.querySelector('.bookmark').getBoundingClientRect();
-    const name = li.querySelector('.index-name').getBoundingClientRect();
-    return { card, mark, name };
-  });
-  // One line: the mark's middle is the card's middle, not a row below it.
-  expect(Math.abs(placed.mark.top + placed.mark.height / 2 - (placed.card.top + placed.card.height / 2)))
-    .toBeLessThan(2);
-  // At the trailing edge, and to the right of the name rather than under it.
-  expect(placed.card.right - placed.mark.right).toBeLessThan(20);
-  expect(placed.mark.left).toBeGreaterThan(placed.name.right - 1);
-  // And the row is still one thumbnail tall.
-  expect(placed.card.height).toBeLessThan(80);
-});
+  // Not the Index's row any more, and carrying none of its parts.
+  await expect(row).not.toHaveClass(/index-card/);
+  await expect(row.locator('.bookmark')).toHaveCount(0);
+  await expect(row.locator('.index-media, .index-name, .index-dates')).toHaveCount(0);
 
-/* ---- the 2026-08-26 batch ------------------------------------------------ */
+  const m = await row.evaluate((li) => ({
+    card: li.getBoundingClientRect(),
+    name: li.querySelector('.reg-name').getBoundingClientRect(),
+    thumb: li.querySelector('.reg-thumb').getBoundingClientRect(),
+  }));
+  // Square, and trailing the name rather than standing before it.
+  expect(Math.round(m.thumb.width)).toBe(Math.round(m.thumb.height));
+  expect(m.thumb.left).toBeGreaterThanOrEqual(m.name.right - 1);
+  expect(m.card.right - m.thumb.right).toBeLessThan(8);
+  // Tighter than the row it used to be, which is 83 px since the same
+  // afternoon. This is the whole of "pack them more tightly" as a number.
+  expect(m.card.height).toBeLessThan(66);
+});
 
 test('a note that only says "a fast" is not quoted back at the reader', async ({ page }) => {
   /*
@@ -2339,7 +2349,7 @@ test('an early date says which era it is in, and a late one does not', async ({ 
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-dates')).toHaveText('Reposed 305–306 AD');
-  const dates = page.locator('.reg-card .index-dates');
+  const dates = page.locator('.reg-card .reg-sub');
   await expect(dates.filter({ hasText: 'Reposed 3rd C. AD' }).first()).toBeVisible();
   // Four figures carry their own era.
   await expect(dates.filter({ hasText: 'Reposed 1937' }).first()).toBeVisible();
@@ -2371,7 +2381,7 @@ test('the corpus dates a saint its own sources date, and says Lived where they o
   await expect(page.locator('.hero-name')).toContainText('Adrian of Nicomedia');
   await expect(page.locator('.hero-dates')).toHaveText('Reposed under Maximian');
   const natalia = page.locator('.reg-card', { hasText: 'Natalia of Nicomedia' }).first();
-  await expect(natalia.locator('.index-dates')).toHaveText('Reposed under Maximian');
+  await expect(natalia.locator('.reg-sub')).toHaveText('Reposed under Maximian');
   await expect(page.locator('.hero')).not.toContainText('Undated');
 
   /*
@@ -3338,28 +3348,28 @@ test('the fast chip is the type alone, and the occasion stands in a chip of its 
   await expect(page.locator('[data-liturgy]')).not.toContainText('No Fast - ');
 });
 
-test("the hero's bookmark holds the register's column, whatever the name does", async ({ page }) => {
+test('the Daily page carries no bookmark, at any width and whatever the name does', async ({ page }) => {
   /*
-   * Author, 2026-08-26 evening: "the bookmark icon on the main saint of the
-   * day card is sometimes wrapped to the saint name, exactly what I tried
-   * warning against by saying pin it to the right edge. it should be the same
-   * distance from the right edge as it is on the row cards."
+   * Author, 2026-08-27: "remove the bookmark on the main saint card … If
+   * people want to bookmark they can go to the profile page itself. From my
+   * own experience a 'watch later' style bookmarking system is never actually
+   * revisited. Thus the bookmark does not need to be such a prominent feature
+   * especially on first view." The register's marks went in the same message,
+   * with the row cards.
    *
-   * The morning's fix answered only half of it. `.name-line`'s mechanism —
-   * the name shrinks, `.icon-button`'s `flex: none` holds the mark's width —
-   * keeps a *long* name from pushing the mark out, and does nothing at all
-   * about a short one: a flex item sizes to its content, so the mark sat a
-   * fixed 8 px — the line's own flex gap — after the end of the name,
-   * wherever that fell. Measured before the fix at 1280 px: "St Peter,
-   * Metropolitan of Moscow" wraps, fills the line and puts the mark exactly
-   * on the register's column; "St Sozon of Pompeiopolis" does not, and left
-   * it 5.7 px short of that column. The mark moved with the name, which is
-   * the thing the morning's instruction had asked against.
+   * **This test is the inverse of the one it replaces, deliberately kept at
+   * the same three widths and the same two days.** That one pinned the hero's
+   * mark to the register's column of marks, to the pixel, and was the third
+   * answer to a mark that had wandered: `.name-line` held its *width* against
+   * a long name and did nothing about a short one, so it sat a fixed 8 px
+   * after whatever the name happened to end at — at 1280, "St Peter,
+   * Metropolitan of Moscow" landed it on the column and "St Sozon of
+   * Pompeiopolis" left it 5.7 px short. Two of those days are these two.
    *
-   * The assertion is the author's own measure — the same distance from the
-   * right edge as the row cards below it — and it is read off a real row on
-   * the same page rather than pinned to a number, so a change to
-   * `.reg-card`'s padding moves both or fails.
+   * The shapes still matter with the mark gone, which is why they are still
+   * here: a short name and a wrapping one are the two cases where a leftover
+   * reservation would show, and it would show as the name stopping short of
+   * the column rather than as a mark in the wrong place.
    */
   await ready(page, { church: 'russian' });
 
@@ -3369,58 +3379,34 @@ test("the hero's bookmark holds the register's column, whatever the name does", 
       ['2026-09-20', 'a short name that leaves the line half empty'],
       ['2026-09-06', 'a name long enough to wrap to a second line'],
     ]) {
+      const where = `${width}px, ${shape}`;
       await page.goto(`/calendar/${day}`, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts.ready);
+
+      // Nowhere on the page: not on the hero, not on a register row, and not
+      // in the `.name-line` wrapper, which is gone with the thing it held.
+      expect(await page.locator('.hero .bookmark').count(), where).toBe(0);
+      expect(await page.locator('.register .bookmark').count(), where).toBe(0);
+      expect(await page.locator('.hero .name-line').count(), where).toBe(0);
+
       const m = await page.evaluate(() => {
-        const line = document.querySelector('.hero .name-line');
-        const h2 = line.querySelector('.hero-name');
-        const heroMark = line.querySelector('.bookmark');
-        const regMark = document.querySelector('.register .reg-card .bookmark');
-        const R = (e) => e.getBoundingClientRect();
+        const h2 = document.querySelector('.hero-name');
+        const body = document.querySelector('.hero-body');
         return {
-          heroMarkRight: R(heroMark).right,
-          regMarkRight: regMark ? R(regMark).right : null,
-          lineRight: R(line).right,
-          nameRight: R(h2).right,
-          // The mark keeps the *first* line of a wrapped name, never the last.
-          onFirstLine: R(heroMark).top < R(h2).top + R(h2).height / 2,
+          nameWidth: h2.getBoundingClientRect().width,
+          bodyWidth: body.getBoundingClientRect().width,
+          rows: document.querySelectorAll('.register .reg-card').length,
         };
       });
-      const where = `${width}px, ${shape}`;
-      expect(m.regMarkRight, where).not.toBeNull();
-      // The author's own measure: the same distance from the right edge as
-      // the marks on the row cards under it, to the pixel.
-      expect(Math.abs(m.heroMarkRight - m.regMarkRight), where).toBeLessThan(1);
-      // Which is *not* flush with the column: `.reg-card` insets its own mark
-      // by its inline padding, and the hero matches that rather than the edge.
-      expect(m.lineRight - m.heroMarkRight, where).toBeGreaterThan(0);
-      expect(m.onFirstLine, where).toBe(true);
+      // The name's box is the whole column. A reserved slot is 32 px of mark
+      // and a gap missing from exactly this number, which is what makes the
+      // measurement worth taking rather than only counting elements.
+      expect(m.bodyWidth - m.nameWidth, where).toBeLessThan(1);
+      // The register is on the page in both shapes, so the count above is a
+      // real zero rather than an empty list agreeing with itself.
+      expect(m.rows, where).toBeGreaterThan(0);
     }
   }
-
-  // And the short name is the one that used to fail: with the mark pinned,
-  // the gap between the end of the name and the mark is wide, where before
-  // the fix it was the line's flex gap and nothing else — 8 px, whatever the
-  // name's length, which is precisely why the mark wandered.
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
-  const slack = await page.evaluate(() => {
-    const line = document.querySelector('.hero .name-line');
-    const h2 = line.querySelector('.hero-name');
-    const mark = line.querySelector('.bookmark');
-    return {
-      gap: mark.getBoundingClientRect().left - h2.getBoundingClientRect().right,
-      // The line's own flex gap, which is what the mark used to sit at and
-      // nothing more. Read off the page rather than written down, because the
-      // number this test is really about is "wider than the gap", and a name
-      // that grows or shrinks must not be able to turn that into a threshold
-      // nobody meant — this assertion went red on 2026-08-27 at 31.5 px when
-      // the rank moved into the name and made the name seven characters
-      // longer, while proving exactly what it was written to prove.
-      flexGap: parseFloat(getComputedStyle(line).columnGap) || 8,
-    };
-  });
-  expect(slack.gap, `${slack.gap} against a flex gap of ${slack.flexGap}`).toBeGreaterThan(slack.flexGap * 2);
 });
 
 test('two months of the same height do not move the page between them', async ({ page }) => {

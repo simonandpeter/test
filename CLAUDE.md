@@ -47,6 +47,17 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
 - Day panel (hero, register, readings, hymns, name days): `paintDay()`
   (L1519). **Order is deliberate** — name days render last, immediately before
   the `Continue reading` shelf that follows outside `.cal-body`.
+- **Also commemorated is `.reg-card`, the register's own row, not the Index's**
+  (2026-08-27: "don't do it in the exact same row style anymore, pack them more
+  tightly"). It wore `.index-card.is-row` from Amendment 38; that borrowing
+  ended the afternoon the Index's rows grew a second line of name and a taller
+  box. Its parts are `.reg-body` / `.reg-name` / `.reg-sub` / `.reg-thumb`
+  (40 px, square, trailing the name), all styled in calendar.css. No frame, no
+  rule between rows, no bookmark. **Nothing here is clamped** — this list is in
+  ordinary flow, not virtualised, so a long name simply wraps.
+- **The hero carries no bookmark and no `.name-line`** (2026-08-27). The name
+  is the whole line. Three sittings of work on that one mark came out with it;
+  `.hero-name`'s rule in calendar.css lists them so nobody re-derives one.
 - Fast bubble: `openFastBubble()` (L564) / `closeFastBubble()` (L673) in
   calendar.js; styles at `.fast-bubble` (calendar.css L1469).
 - The line under the date (fast chip, allowance, feast chip, cycle) is one
@@ -97,6 +108,13 @@ in base.css (L605)
   the die, and `syncCalendarFacet`, which ticks the box *and* re-reads the
   filters), `search.js` (MiniSearch and the feast-month index, both built after
   the first paint), `place.js` (the snapshot the saint page's × comes back to).
+- **The snapshot carries the carousel's offset too** (2026-08-27), so leaving a
+  saint returns the row to where it was and not to its start. Read from the
+  track *before* anything is hidden — a `display: none` element reports
+  `scrollLeft` 0 and ignores writes — and put back before `paintCarousel`
+  builds the loop, which takes it as `startAt`. It survives only because the
+  restored filters mean the same pool: `paintCarousel` drops a remembered
+  offset when the run of saints has changed under it.
 - `update()` in saints.js is six lines of composition. It was 121 and two
   responsibilities joined by one value: `matching()` works out `matched`,
   everything after reports or places it. `animate` is an input to *both* halves
@@ -114,22 +132,38 @@ in base.css (L605)
 - `ui/loop-scroll.js` is the row's own mechanics and is already a module; it
   wants no splitting.
 - `.index-card` (index.css L309), `.index-dates` (L390).
-- Bookmark positioning is **two rules** since 2026-08-26 evening: every
-  non-row card uses `.index-card > .bookmark` (the card's own corner), and a
-  row uses `.index-card.is-row > .bookmark` (a static flex sibling). An
-  imageless card reserves the mark's 40 px out of its name line and its dates
-  so neither runs under it — that reserve is what the single corner cost.
+- **The bookmark is on cards only** since 2026-08-27 (author: "on all row
+  cards, remove the bookmark entirely … From my own experience a 'watch later'
+  style bookmarking system is never actually revisited"). One rule,
+  `.index-card > .bookmark`, the card's own corner. An imageless card reserves
+  the mark's 40 px out of its name line and its dates so neither runs under it.
+  **Rows, the Daily hero and the Daily register carry none**; the saint's own
+  page and the shelves still do, and the shelf's is the un-save for a saved
+  list, which is why it stayed.
 - The Index's controls: seven facet chips plus the `.random-die` in `.facets`;
   Sort, View and Detailed in `.index-foot`. Sort and View are `.facet-choice`
   disclosures built by `choiceGroup()` in views/index/controls.js, read with
   `currentChoice()` and written with `setChoice()` — **both, always**, or the
   chip advertises an order the grid is not in.
+- **No rule under `.index-controls`** (2026-08-27) and **no caret on a chip**.
+  The chips' inline padding is **10.5 px, not 6**, and that number is the
+  caret's 5 px plus its 4 px gap paid back so the chips did not narrow — the
+  author asked for both halves. This row has 9.5 px of slack across eight chips
+  at the cold-load column; anything that changes a chip's width re-checks it.
+- The **stuck hairline on `.index-row` is not the rule that was removed** and
+  stays: it says the register is running *under* the bar, which is a fact about
+  depth rather than a division between blocks. Reserved transparent at 1 px so
+  the row's height never changes.
 - **The search field sticks** (`.index-controls` is the sticky element — a
   sticky box can only travel inside its containing block, and this one is a
   direct child of the view). `--chrome-h` is published from a ResizeObserver in
   `main.js`; `wireSticky()` handles the stuck state and the filter drop.
   **The fold must never change layout height**: the band keeps its height and
-  the filters translate up behind the row. Collapsing it instead takes 69 px
+  the filters translate up behind the row. The open panel's ground reaches past
+  the chips (2026-08-27) — *bleed*, not padding, sideways: the border box grows
+  and a negative margin pulls it back, because the chips cannot give up column
+  width. Vertically it is real padding and **unconditional**, for the same
+  reason the fold is. Collapsing it instead takes 69 px
   out of the document, which scroll anchoring hides from the eye and which
   silently shortens every remembered scroll position by the same amount on the
   next visit. The stuck hairline is reserved (transparent) for the same reason
@@ -185,11 +219,29 @@ in base.css (L605)
   `.cx-sub` each held. 240 px past 700 px wide, 150 below it (2026-08-27, "at
   least 1.5x on desktop" — 1.6). 700 and not the chrome's 560: at 240 a 560 px
   screen holds barely two cards.
-- A **row** reads name-first since 2026-08-27: `.row-body`, then the picture,
-  then the mark (`order: 1/2/3`). An imageless row keeps a blank 48 px slot
-  (`.index-media.is-blank`) so the marks stay in one column.
-- Bookmark component itself: `src/ui/save.js` (one implementation, rendered
-  everywhere a saint appears — Index, calendar hero, saint page).
+- A **row** reads name-first since 2026-08-27: `.row-body`, then the picture
+  (`order: 1/2`). An imageless row keeps a blank 48 px slot
+  (`.index-media.is-blank`) so the pictures stay in one column.
+- **A row's name prints whole, and the row is only as tall as that name needs**
+  — `ROW_HEIGHTS` is `[66, 83, 104]` by line count (detailed `[102, 124, 145]`).
+  **A virtualised row's height does not have to be a constant.** The first
+  answer here gave every row the tallest box, on the reasoning that text height
+  cannot be known before render; that is wrong. `nameLines()` in grid.js counts
+  the browser's own greedy wrapping with canvas `measureText` — no layout, no
+  render — and `layout()` takes `textHeight` as a function. Checked against the
+  real wrapping over all 734 names at both widths: **exact, in both
+  directions.** At 1280 nothing wraps and every row is 66; the constant was
+  buying nothing there.
+- `ROW_NAME_LINES_MAX` (3) and the `-webkit-line-clamp` on
+  `.index-card.is-row .index-name` are **one decision in two files** — a clamp
+  below the cap crops a name the row made room for, above it overflows a box
+  that was never told. Five names in the corpus need the third line at 360.
+- **The Index opens on cards at a desk and rows on a phone** (700 px, this
+  page's one existing break). `settings.indexLayout` is **null** until the
+  reader chooses — a stored default would answer before `defaultLayout()` in
+  index/controls.js could ask, which is exactly what it did on the first try.
+- Bookmark component itself: `src/ui/save.js` (one implementation, wherever a
+  mark is still drawn — Index cards, the saint page, the shelves).
 - The die's roll is `src/ui/roll.js` — a fixed copy of the die over a faded
   view, then the navigation, then the reveal.
 

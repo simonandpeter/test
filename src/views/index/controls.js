@@ -25,6 +25,22 @@ import { state } from './state.js';
 
 export const LAYOUTS = ['cards', 'rows'];
 
+/**
+ * Which arrangement a reader who has never chosen one opens on (author,
+ * 2026-08-27: "On desktop, default to card view in All Saints. On mobile,
+ * default to row view").
+ *
+ * 700 px because it is already this page's one break — the width at which the
+ * carousel's cards go from 150 to 240 — and a second breakpoint a hundred
+ * pixels from it would be two numbers meaning the same thing.
+ *
+ * Read once, at render, and deliberately not watched: a reader who turns their
+ * phone sideways is not asking for a different view, and one who has ever
+ * touched the control has a stored answer that outranks this at every width.
+ */
+export const defaultLayout = () =>
+  window.matchMedia('(min-width: 700px)').matches ? 'cards' : 'rows';
+
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const monthLabel = (m) =>

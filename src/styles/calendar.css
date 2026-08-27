@@ -851,9 +851,10 @@
    one arriving. */
 /* The figure is the image's box (author, 2026-08-24). It is also where the
    85% below is applied, so the proportion lands once: on the box, not on the
-   box and the image both. The bookmark stood over its top-right corner, as on
-   an Index card, until 2026-08-26 — see `.hero .name-line > .bookmark` below
-   for where it stands now. */
+   box and the image both. A bookmark stood over its top-right corner, as on an
+   Index card, until 2026-08-26; it moved beside the name, and on 2026-08-27 it
+   was withdrawn from this page altogether — the rule below `.hero-name` says
+   why. Nothing is positioned against this box any more. */
 .hero-figure {
   position: relative;
   margin-inline: auto;
@@ -960,51 +961,28 @@
   object-position: 50% 0;
 }
 
-.hero .name-line {
+/* The name is the whole line, and the gap under it is the one the `.name-line`
+   wrapper used to carry. */
+.hero-name {
   margin-bottom: var(--space-2);
 }
 
-/* The bookmark moved off the image and beside the name (author, 2026-08-26:
-   "move the bookmark on the main saint card from the top right of the image
-   to the right of the text. reserve a spot for it, so as to make sure if the
-   text is long and requires 2 lines the bookmark still stays in the same
-   position and doesn't drop down another line"). `.name-line` already does
-   exactly this for the saint's own page (base.css: "a name and what stands
-   beside it … are one line that never wraps: the name shrinks and wraps
-   within itself") — the name is the flex item that gives, `.icon-button`'s
-   own `flex: none` is what holds the bookmark's width, and `min-width: 0` on
-   the heading (also base.css) is what lets it shrink below its content size
-   rather than push the mark out past the column. `align-self: center` is the
-   one addition: baseline alignment would hang the mark off the *last* line of
-   a wrapped name, which reads as dropping exactly as the author asked it not
-   to. */
-.hero .name-line > .bookmark {
-  align-self: center;
-  /*
-   * **Pinned to the trailing edge, not trailing the name** (author,
-   * 2026-08-26 evening: "the bookmark icon on the main saint of the day card
-   * is sometimes wrapped to the saint name, exactly what I tried warning
-   * against by saying pin it to the right edge").
-   *
-   * The mechanism inherited from the saint's own page holds the mark's
-   * *width* against a long name, and that is all it does: a flex item sizes
-   * to its content, so a short name left the mark sitting a fixed `--space-2`
-   * after the end of the name, wherever that fell — measured on 2026-08-26 at
-   * 1280 px, "St Peter, Metropolitan of Moscow" wraps, fills the line and
-   * lands the mark on the register's column, while "St Sozon of
-   * Pompeiopolis" leaves it 5.7 px short of it. The mark moved with the name,
-   * which is exactly the thing the instruction of the morning had asked
-   * against and which the flex fix answered only for the long case.
-   *
-   * `margin-inline-start: auto` is the pin. The end margin is `--space-1`
-   * because that is `.reg-card`'s own inline padding, so the hero's mark
-   * lands in the same column as the marks on the register rows directly
-   * below it — "a column of marks down the register", which is the reason
-   * `.index-card.is-row > .bookmark` gives for its own position.
-   */
-  margin-inline-start: auto;
-  margin-inline-end: var(--space-1);
-}
+/* **The hero carries no bookmark** (author, 2026-08-27: "remove the bookmark on
+   the main saint card, and remove the margin that kept the text from
+   overlapping with the bookmark, let the text go full width now. If people want
+   to bookmark they can go to the profile page itself. From my own experience a
+   'watch later' style bookmarking system is never actually revisited. Thus the
+   bookmark does not need to be such a prominent feature especially on first
+   view").
+
+   Three sittings of work on this one mark comes out with it: off the image and
+   beside the name (2026-08-26 morning), then pinned to the trailing edge rather
+   than trailing the name (that evening), then `align-self: center` so a wrapped
+   name did not hang it off the last line. Every one of those was the right
+   answer to the question as asked; the question is withdrawn. The name is the
+   whole line now and needs no `.name-line` mechanism to hold a width beside it
+   — which is why the wrapper is gone from the markup too, rather than left
+   standing around a single child. */
 
 
 /* The margin under the dating, chased twice in one day. In the morning
@@ -1062,41 +1040,51 @@
   border-bottom: 0;
 }
 
-/* ---- Also commemorated, as cards (author, 2026-08-24) ------------------ */
+/* ---- Also commemorated -------------------------------------------------- */
 
-/* index.css dresses the row — thumbnail, name line, dates, bookmark — and
-   these rules only place the list: a column of cards, like the shelves, not
-   the flex line the text register was. The base .register li rules are undone
-   rather than avoided, because the card is the Index's and must not inherit a
-   calendar register's padding or baseline alignment. */
-/* **Off the field, 2026-08-26** (author: "Too many boxes. Language panel, day
-   card, each commemorated saint, filters — all outlined and inset … keep the
-   recessed panel for genuinely secondary things"). Each of these rows carried
-   `.panel` — a recessed field and a border — from Amendment 38 until now,
-   which put twenty outlined boxes down one column under a day that was itself
-   an outlined box.
-
-   Nothing replaces the edge, and that is the point. A hairline between rows
-   was the obvious substitute and it stood for one build, until the suite
-   caught it against the *older* instruction it breaks: on 2026-08-24 the
-   author asked that Also commemorated "reads as one company, not a ruled
-   ledger", and the day panel's register has dropped the line between saints
-   ever since. Frames and rules are the same answer to the same question, and
-   both are refused here — what separates one saint from the next is space,
-   and what says a row is a target is the row lighting under the pointer.
-
-   The row keeps its thumbnail, its dates and its bookmark: 2026-08-24's other
-   instruction was about the *layout*, and only the dress goes. */
+/*
+ * **The register's own row, no longer the Index's** (author, 2026-08-27: "for
+ * saints under 'Also Commemorated' on the Daily page, don't do it in the exact
+ * same row style anymore, pack them more tightly").
+ *
+ * From Amendment 38 these rows wore `.index-card.is-row` and index.css dressed
+ * them. That borrowing was right while both lists wanted the same row and
+ * stopped being right the moment they did not: the Index's rows took a second
+ * line of name and a taller box on the same afternoon this instruction
+ * arrived, which is the opposite of packing tightly. views/daily/panel.js has
+ * the rest of the argument.
+ *
+ * What survives the move is everything the *older* instructions won, and they
+ * are worth restating because nothing now points at them from index.css:
+ *
+ * - **No frame and no rule between rows** (2026-08-26: "Too many boxes"; and
+ *   2026-08-24: Also commemorated "reads as one company, not a ruled ledger").
+ *   A hairline between rows stood for one build before the suite caught it
+ *   against the second of those. What separates one saint from the next is
+ *   space, and what says a row is a target is the row lighting under the
+ *   pointer.
+ * - **The picture trails the name**, and a saint without one keeps the slot
+ *   rather than closing it up, so every name starts at the same left edge and
+ *   the pictures hold one column.
+ *
+ * Tighter is four things, none of them a squeeze: a 40 px thumbnail where the
+ * Index's row has 48, the row's own vertical padding halved, the name at the
+ * register's serif size rather than the card's 17 px, and 2 px between the
+ * name and its dates. Nothing is clamped — this list is a few dozen rows in
+ * ordinary document flow, not a virtualised register against a fixed height,
+ * so a long name simply wraps and the row is as tall as it needs to be.
+ */
 .register-cards {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: 0;
 }
 
 .register-cards li.reg-card {
   display: flex;
   align-items: center;
-  padding: var(--space-2) var(--space-1);
+  gap: var(--space-3);
+  padding: var(--space-1);
   border: 0;
   border-radius: var(--radius-cell);
   background: none;
@@ -1104,9 +1092,59 @@
 }
 
 /* The whole row lights, rather than an edge changing colour: with no border
-   there is nothing for `.panel:hover` to have coloured. */
+   there is nothing for a hover to have coloured. */
 .register-cards li.reg-card:hover {
   background: color-mix(in srgb, var(--field) 60%, transparent);
+}
+
+.reg-card .reg-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+/* Square, and the trailing end of the row. `is-blank` draws nothing — an empty
+   box that *looks* like a frame is the promise of a picture that is not coming,
+   which the author struck out on 2026-08-26 — but it still holds its width, so
+   the pictures that do exist stay in one column. */
+.reg-card .reg-thumb {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: var(--radius-cell);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.reg-card .reg-thumb.is-blank {
+  background: none;
+}
+
+.reg-card .reg-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The register's serif, not the Index card's 17 px sans line: this is a list
+   inside a page of prose and it should read as one. */
+.reg-card .reg-name {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.reg-card .reg-sub {
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* The church's title for the day — "Venerable, the Great" — is what these
@@ -1116,8 +1154,6 @@
   display: block;
   margin-block: 2px;
 }
-
-
 
 .register .reg-name {
   font-weight: 500;
@@ -1136,14 +1172,18 @@
   white-space: nowrap;
 }
 
-/* The text register's own narrow arrangement: the feast date drops under the
-   name rather than crowding it. `:not(.reg-card)` since 2026-08-25 evening —
-   Also commemorated became *cards* the evening before (Amendment 38) and
-   inherited this wrap, so a name a few glyphs too long for the row pushed the
-   bookmark to a second line instead of holding the trailing edge (author:
-   "the row card for St Bartholomew on mobile pushes the bookmark to the next
-   line"). A card row is a fixed three-part shape — thumbnail, body, mark —
-   and the body is the elastic one; nothing in it may wrap the mark away. */
+/* The text register's own narrow arrangement — the shelves and the saint page's
+   related list — where the feast date drops under the name rather than crowding
+   it.
+
+   `:not(.reg-card)` since 2026-08-25 evening. Also commemorated became *cards*
+   the evening before (Amendment 38), inherited this wrap, and a name a few
+   glyphs too long pushed the bookmark to a second line instead of holding the
+   trailing edge (author: "the row card for St Bartholomew on mobile pushes the
+   bookmark to the next line"). That mark is gone and the row has its own rules
+   now, so the exclusion is no longer load-bearing for the reason it was
+   written — but it is still correct, because `.reg-card` is a two-part shape
+   whose body is the elastic one and which has no business wrapping. */
 @media (max-width: 480px) {
   .register li:not(.reg-card) {
     flex-wrap: wrap;

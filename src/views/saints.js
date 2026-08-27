@@ -23,7 +23,14 @@ import { subscribeChurch } from '../lib/church.js';
 import { STRINGS } from '../ui/strings.js';
 import * as store from '../lib/store.js';
 import { state, open as openState, close as closeState } from './index/state.js';
-import { LAYOUTS, controls, seeded, syncCalendarFacet, wireControls } from './index/controls.js';
+import {
+  LAYOUTS,
+  controls,
+  defaultLayout,
+  seeded,
+  syncCalendarFacet,
+  wireControls,
+} from './index/controls.js';
 import { loadSearch, monthsBySlugFor } from './index/search.js';
 import { applySnapshot, snapshot } from './index/place.js';
 import { matching } from './index/filter.js';
@@ -74,8 +81,9 @@ export function render(el, { data, router, nav }) {
     shown: 0,
     // Which layout the reader last chose, remembered across visits: a view
     // control that forgets is one the reader has to set every time. Detailed
-    // is remembered the same way.
-    layout: LAYOUTS.includes(settings.indexLayout) ? settings.indexLayout : 'cards',
+    // is remembered the same way. Failing a stored choice the screen decides —
+    // cards on a desktop, rows on a phone (author, 2026-08-27).
+    layout: LAYOUTS.includes(settings.indexLayout) ? settings.indexLayout : defaultLayout(),
     // The page opens on the carousel (author, 2026-08-27), and remembers a
     // reader who has moved off it — the same bargain Layout and Detailed make.
     mode: MODES.includes(settings.indexMode) ? settings.indexMode : 'carousel',

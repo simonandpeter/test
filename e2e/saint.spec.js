@@ -143,9 +143,16 @@ test('an address with no saint behind it is prose, not a red banner', async ({ p
   expect(colours.replace(/\s/g, '')).not.toBe(rubric);
 });
 
-test('saving persists across a reload, and both bookmarks agree', async ({ page }) => {
-  // The saint's page and the calendar hero both carry the bookmark (author,
-  // 2026-08-23; the hero's text Save button is gone). Same store, one state.
+test('saving persists across a reload, and the shelf agrees', async ({ page }) => {
+  /*
+   * The saint's page carries the bookmark, and since 2026-08-27 it is the only
+   * page that does: the author took the mark off the Daily hero, the register
+   * and the row cards in one instruction ("If people want to bookmark they can
+   * go to the profile page itself"). This used to read the same state back off
+   * the hero, which was the second reader of one store; the shelf on the same
+   * page is now that second reader, and it was always the more interesting of
+   * the two because it is built from the store rather than from the day.
+   */
   await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   const save = page.locator('.saint-head .bookmark');
@@ -157,12 +164,18 @@ test('saving persists across a reload, and both bookmarks agree', async ({ page 
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 
-  // And the saved shelf on the habit page knows about it, as does the hero's
-  // own bookmark — Anthony is that day's hero.
+  // And the saved shelf on the habit page knows about it. Anthony is that
+  // day's hero, so the page that used to answer twice now answers once — the
+  // count is asserted rather than assumed, or this test would go on passing
+  // if a mark came back somewhere it was told to leave.
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero .bookmark')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.hero .bookmark')).toHaveCount(0);
+  await expect(page.locator('.register .bookmark')).toHaveCount(0);
   await expect(page.locator('.shelves')).toContainText('Saved');
   await expect(page.locator('.shelves a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
+  // The shelf keeps its own mark, which is the un-save for anything saved: it
+  // was not part of the instruction and removing it would strand the list.
+  await expect(page.locator('.shelves .bookmark').first()).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('the saint page puts the register beside the image on desktop, the body beneath both, and the controls on the name line', async ({ page }) => {

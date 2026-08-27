@@ -7,7 +7,6 @@ import { currentLanguage, languageTag } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
-import { renderBookmark } from '../../ui/save.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, entriesFor, reachInWords } from './entries.js';
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
@@ -50,34 +49,33 @@ function fillHeroLede(panel, slug, iso) {
 }
 
 /**
- * A commemorated saint in the Index's own row dress (author, 2026-08-24:
- * "display the saint card row layout instead of the text only"). It is the
- * third place this markup is written — views/saints.js builds it for the
- * grid, ui/shelf.js for Continue reading — and it stays written out rather
- * than shared, because each of the three carries something the others do
- * not: the grid's is virtualised and absolutely positioned, the shelf's is
- * swiped away, and this one carries the church's title for the day and the
- * shared-element name that travels into the saint's page. index.css styles
- * the card; calendar.css only places it.
+ * One saint under *Also commemorated*.
  *
- * The day's face is the hero above; these are the rest of the day, and they
- * now show what they were: a picture, a lifespan, and Save where every other
- * card in the site keeps it.
+ * **This row is the register's own, not the Index's** (author, 2026-08-27:
+ * "for saints under 'Also Commemorated' on the Daily page, don't do it in the
+ * exact same row style anymore, pack them more tightly"). It wore
+ * `.index-card.is-row` from Amendment 38, which was a good borrowing while the
+ * two wanted the same thing and stopped being one the moment they did not: the
+ * Index's rows grew a second line of name and a taller box the same afternoon,
+ * and this list wants the opposite of that. Sharing a class would have made
+ * every future change to either a decision about both.
+ *
+ * No bookmark, by the same instruction that took it off the rows and the hero.
+ * The thumbnail is smaller and trails the name, which is where the Index's own
+ * picture went on 2026-08-27 and for the same reason: the names start at one
+ * left edge, and a saint with no icon does not push the column about.
  */
 function registerRow(saint, title, transition) {
   const image = saint.image
-    ? `<span class="index-media" style="background-image:url('${BASE + saint.image.lqip}')">
+    ? `<span class="reg-thumb" style="background-image:url('${BASE + saint.image.lqip}')">
         <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
           loading="lazy" decoding="async" />
       </span>`
-    : '';
-  return `<li class="index-card is-row reg-card">
-    ${image}
-    <span class="row-body">
-      <span class="name-line">
-        <a class="index-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-          data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
-      </span>
+    : '<span class="reg-thumb is-blank" aria-hidden="true"></span>';
+  return `<li class="reg-card">
+    <span class="reg-body">
+      <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
+        data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
       ${/* No day in any of the four calendars currently puts a *titled*
              saint in the register: all 20 titled attestations in the corpus
              belong to saints who are their own day's hero, so this branch has
@@ -86,9 +84,9 @@ function registerRow(saint, title, transition) {
              titles are data and the corpus grows; the register is where a
              church's own title for the day belongs when one arrives. */ ''}
       ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      <span class="index-dates utility">${esc(formatSubtext(saint))}</span>
+      <span class="reg-sub utility">${esc(formatSubtext(saint))}</span>
     </span>
-    ${renderBookmark(saint.slug, saint.display_name)}
+    ${image}
   </li>`;
 }
 
@@ -199,12 +197,9 @@ export function paintDay(panel) {
     <article class="hero ${hero.image ? 'has-media' : ''}">
       ${media}
       <div class="hero-body">
-        <div class="name-line">
-          <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
-          </h2>
-          ${renderBookmark(hero.slug, hero.display_name)}
-        </div>
+        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
+        </h2>
         <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
         <!-- The opening of the life, on a wide screen only (author,
              2026-08-25: "because there is space on the left of the saint card

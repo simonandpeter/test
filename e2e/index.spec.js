@@ -489,7 +489,17 @@ test('the index offers two layouts, and remembers which one the reader chose', a
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const cards = page.locator('.index-card');
 
-  await expect(viewChip(page)).toHaveText(/Cards$/);
+  /*
+   * **Which one it opens on is the screen's answer since 2026-08-27** (author:
+   * "On desktop, default to card view in All Saints. On mobile, default to row
+   * view"), and this file runs at both widths — so the opening state is read
+   * from the viewport rather than written down. `chooseView` then puts it on
+   * cards whatever it opened on, because the rest of this test is about the
+   * *choice* surviving, not about the default.
+   */
+  const wide = page.viewportSize().width >= 700;
+  await expect(viewChip(page)).toHaveText(wide ? /Cards$/ : /Rows$/);
+  await chooseView(page, 'cards');
   await expect(cards.first()).not.toHaveClass(/is-row/);
   const cardHeight = (await cards.first().boundingBox()).height;
 
@@ -499,9 +509,34 @@ test('the index offers two layouts, and remembers which one the reader chose', a
   const rowHeight = (await cards.first().boundingBox()).height;
   // Tighter: that is the whole point of the second layout.
   expect(rowHeight).toBeLessThan(cardHeight);
-  // Every row is the same height, whatever its image — or absence of one.
+  /*
+   * **A row's height does not depend on its picture, and does depend on its
+   * name.** This asserted one height for every row until 2026-08-27, which was
+   * true while every row was given the tallest box; the author asked why they
+   * should be ("Why not just collapse whenever there is an empty line??") and
+   * they are not any more. What survives is the part that was actually being
+   * defended: the image is a fixed 48 px square beside the text, so a saint
+   * with an icon and a saint without get the same box. The name is the only
+   * thing that moves it, and only ever to 66, 83 or 104.
+   */
   const heights = await cards.evaluateAll((els) => els.map((el) => Math.round(el.getBoundingClientRect().height)));
-  expect(new Set(heights).size).toBe(1);
+  for (const h of heights) expect([66, 83, 104], `row height ${h}`).toContain(h);
+  const byPicture = await cards.evaluateAll((els) =>
+    els.map((el) => ({
+      h: Math.round(el.getBoundingClientRect().height),
+      lines: Math.round(
+        el.querySelector('.index-name').getBoundingClientRect().height /
+          parseFloat(getComputedStyle(el.querySelector('.index-name')).lineHeight),
+      ),
+      imaged: Boolean(el.querySelector('.index-media img')),
+    })),
+  );
+  // Same line count, same height — whatever the picture is doing.
+  const perLines = new Map();
+  for (const r of byPicture) {
+    if (perLines.has(r.lines)) expect(r.h, `${r.lines} lines`).toBe(perLines.get(r.lines));
+    else perLines.set(r.lines, r.h);
+  }
 
   await page.reload({ waitUntil: 'networkidle' });
   await expect(viewChip(page)).toHaveText(/Rows$/);
@@ -601,6 +636,9 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   // render, so nothing may be cropped. (Until 2026-08-22 Detailed also swapped
   // the badge for the matrix; the glyph is removed — DESIGN.md §2.)
   await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // A *card's* box is what this measures, and a phone opens on rows since
+  // 2026-08-27 — whose description is clamped to two lines, not three.
+  await chooseView(page, 'cards');
   const box = page.locator('[data-detailed]');
   await expect(box).not.toBeChecked();
   await expect(page.locator('.index-desc')).toHaveCount(0);
@@ -766,6 +804,11 @@ test('the bookmark stands in the card corner, takes the press, and is the Save',
   // evening (author: "just position it relative to the margins instead of the
   // image, to make sure its consistently top right").
   await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // **The card, specifically.** A row has carried no mark since 2026-08-27
+  // ("on all row cards, remove the bookmark entirely"), and a phone opens on
+  // rows since the same message — so this asks for cards rather than trusting
+  // whichever the screen chose.
+  await chooseView(page, 'cards');
   await page.evaluate(() => document.fonts.ready);
   // The grid is virtualised and seventy long, so a card is brought into the
   // document by searching for it rather than by scrolling a headless page
@@ -1240,27 +1283,34 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(cards).toHaveCount(6);
 
   const first = cards.first();
-  await expect(first.locator('.index-name')).toHaveText('Martyr Agapius of Gaza');
-  await expect(first.locator('.index-dates')).toContainText('304–306');
-  // Every row is a card: a media box even with no picture, so the column of
-  // names stays a column, and its own Save.
-  // One picture between them, and five rows that print no frame at all: the
-  // empty 48 px box went on 2026-08-26 ("remove the empty frame and just
-  // print the text all the way to the left margin of the card"). 613 of the
-  // 708 have no icon, so an empty box is a promise of a picture that is not
-  // coming, over and over down the register.
-  await expect(cards.locator('.index-media')).toHaveCount(1);
-  await expect(cards.locator('.bookmark')).toHaveCount(6);
+  await expect(first.locator('.reg-name')).toHaveText('Martyr Agapius of Gaza');
+  await expect(first.locator('.reg-sub')).toContainText('304–306');
+
+  /*
+   * **Every row keeps its picture's slot, and none of them keeps a mark**
+   * (author, 2026-08-27, of the row cards: "remove the bookmark entirely, and
+   * just have the image square to the right side, giving more space for the
+   * text").
+   *
+   * One of the six has an icon. The other five hold the slot without drawing
+   * in it, which is not the empty frame the author struck out on 2026-08-26
+   * ("remove the empty frame and just print the text all the way to the left
+   * margin of the card") — that one stood *before* the name and pushed every
+   * title in from the margin. This one is after the name, at the trailing
+   * edge, so the names still start at the card's own margin while the pictures
+   * that do exist still hold one column.
+   */
+  await expect(cards.locator('.reg-thumb img')).toHaveCount(1);
+  await expect(cards.locator('.reg-thumb')).toHaveCount(6);
+  await expect(cards.locator('.bookmark')).toHaveCount(0);
   // The hero is not repeated among them.
   await expect(page.locator('.register-cards')).not.toContainText('Pitirim');
 
-  // Saving from a register row is the same Save as everywhere else, and the
-  // saint's own page agrees without a reload.
-  await first.locator('.bookmark').click();
-  await expect(first.locator('.bookmark')).toHaveAttribute('aria-pressed', 'true');
-  await first.locator('.index-name').click();
+  // The row still opens the saint, which is now the only thing it does.
+  await first.locator('.reg-name').click();
   await expect(page.locator('h1.saint-name')).toHaveText('Martyr Agapius of Gaza');
-  await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
+  // Save is still there, on the page the author sent anyone who wants it.
+  await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
 });
 
 test('there is one bookmark drawing, on an icon and on the page alike', async ({ page }) => {
@@ -1276,11 +1326,22 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
    * every bookmark on the site is now one path, at half opacity until saved.
    * Legibility over an image is a drop shadow — the ground pushed away from
    * the shape rather than a second shape drawn around it.
+   *
+   * **Read off the Index's cards since 2026-08-27**, where it used to be read
+   * off the Daily page's register. That register has no marks any more, and
+   * neither do the row cards; the card is where the mark still lives, and it
+   * is the shape that has both cases on one page — a card with a picture under
+   * the mark and a card without one. `chooseView` is not optional here even
+   * though cards are the desktop default: this spec runs at 360 as well, where
+   * the default is rows.
    */
   await ready(page);
-  await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'cards');
+  await expect(page.locator('.index-card > .bookmark').first()).toBeVisible();
   await expect(page.locator('.bm-halo')).toHaveCount(0);
-  const shapes = await page.locator('.bookmark-mark').evaluateAll((marks) =>
+
+  const shapes = await page.locator('.index-card .bookmark-mark').evaluateAll((marks) =>
     marks.map((m) => {
       const paths = m.querySelectorAll('path');
       const style = getComputedStyle(paths[0]);
@@ -1293,6 +1354,7 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
   expect(new Set(shapes.map((s) => s.opacity))).toEqual(new Set(['0.5']));
   expect(new Set(shapes.map((s) => s.fill)).size).toBe(1);
   expect(new Set(shapes.map((s) => s.stroke)).size).toBe(1);
+
   // The shadow is only where a picture is under it; on the page's own ground
   // the mark has all the contrast it needs and a shadow would be furniture.
   const filters = await page.evaluate(() => {
@@ -1301,18 +1363,18 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
       return el ? getComputedStyle(el.querySelector('.bookmark-mark')).filter : null;
     };
     return {
-      overImage: on('.index-card:has(.index-media img) '),
-      // A row with no picture has no media box at all since 2026-08-26, so
-      // "on the page's own ground" is a card *without* one rather than one
-      // with an empty frame.
-      onGround: on('.register-cards .reg-card:not(:has(.index-media))'),
+      overImage: on('.index-card:has(.index-media img)'),
+      onGround: on('.index-card:not(:has(.index-media))'),
     };
   });
+  expect(filters.overImage, 'a card with a picture was not mounted').not.toBeNull();
+  expect(filters.onGround, 'a card without a picture was not mounted').not.toBeNull();
   expect(filters.onGround).toBe('none');
+  expect(filters.overImage).not.toBe('none');
 
   // And it fills to full strength when saved — the second of the two states,
   // which is all the states there are.
-  const mark = page.locator('.register-cards .bookmark').first();
+  const mark = page.locator('.index-card > .bookmark').first();
   await mark.click();
   await expect
     .poll(() => mark.locator('.bm-shape').evaluate((p) => getComputedStyle(p).opacity))
@@ -1326,7 +1388,7 @@ test('a lifespan with nothing at either end says Undated, capitalised', async ({
   // are, and made in all five packs so none of them disagrees with itself.
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
-  const dates = page.locator('.reg-card .index-dates');
+  const dates = page.locator('.reg-card .reg-sub');
   await expect(dates.filter({ hasText: 'Undated' }).first()).toBeVisible();
   await expect(dates.filter({ hasText: /^undated$/ })).toHaveCount(0);
 });
@@ -1496,20 +1558,24 @@ test('every row starts its name at the card margin, picture or no picture', asyn
    * carries no `.index-media` at all, and that an imaged one indents past it —
    * was the old arrangement's way of getting there and is now false of both.
    *
-   * The slot still holds the row's height: the Index's rows are virtualised
-   * against a fixed 66 px, and the body carries the same 48 px, so either
-   * alone is enough.
+   * **And superseded once more in its subject** (author, 2026-08-27: "don't do
+   * it in the exact same row style anymore"). These are the Daily page's
+   * register rows, which stopped being the Index's row cards that afternoon
+   * and now carry `.reg-name` and a 40 px `.reg-thumb` of their own. The point
+   * outlived both mechanisms, which is why the test is still here and still on
+   * this page: whatever dresses a row, every name starts at the same left edge
+   * and a saint with no icon does not pull the column about.
    */
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const seen = await page.evaluate(() => {
-    const withPicture = document.querySelector('.reg-card:has(.index-media img)');
-    const without = document.querySelector('.reg-card:not(:has(.index-media img))');
+    const withPicture = document.querySelector('.reg-card:has(.reg-thumb img)');
+    const without = document.querySelector('.reg-card:not(:has(.reg-thumb img))');
     const inset = (row) => {
       const card = row.getBoundingClientRect();
-      const name = row.querySelector('.index-name').getBoundingClientRect();
-      const media = row.querySelector('.index-media');
+      const name = row.querySelector('.reg-name').getBoundingClientRect();
+      const media = row.querySelector('.reg-thumb');
       return {
         gap: name.left - card.left,
         height: card.height,
@@ -1526,8 +1592,10 @@ test('every row starts its name at the card margin, picture or no picture', asyn
   expect(Math.abs(seen.without.gap - seen.withPicture.gap)).toBeLessThan(2);
   // And the picture is past the name, not in front of it.
   expect(seen.withPicture.mediaLeft).toBeGreaterThan(seen.withPicture.gap);
-  // Both rows are still the same height, which is what the virtualised grid
-  // measures against.
+  // Both rows are still the same height. This list is not virtualised — that
+  // was the Index's reason and it left with the Index's row — but a register
+  // whose rows change height depending on whether a saint has an icon reads as
+  // ragged, and the held slot is what stops it.
   expect(Math.abs(seen.without.height - seen.withPicture.height)).toBeLessThan(2);
 });
 
@@ -1596,7 +1664,13 @@ test('Sort and View are chips that print their own answer, and Detailed joins th
   // in beside it out of sight rather than being dropped.
   await expect(sortChip(page)).toHaveText('Sort: Random order');
   await expect(sortChip(page).locator('.sr-only')).toHaveText('Sort: ');
-  await expect(viewChip(page)).toHaveText('View: Cards');
+  // The *answer* is what the chip prints, and since 2026-08-27 the answer on
+  // an unvisited page is the screen's: cards at a desk, rows on a phone. What
+  // this test is about is that the chip prints one of them rather than the
+  // control's own word, so it reads the page and asserts the pair agree.
+  const view = await page.locator('input[name="layout"]:checked').inputValue();
+  expect(view).toBe(page.viewportSize().width >= 700 ? 'cards' : 'rows');
+  await expect(viewChip(page)).toHaveText(view === 'cards' ? 'View: Cards' : 'View: Rows');
 
   // A one-of-many chip, not a facet's any-of-many: radios, and it closes
   // behind the answer.
@@ -1886,13 +1960,13 @@ test('a saint is named by rank, and what they held is on the line below', async 
 
   await expect(page.locator('.hero-name')).toHaveText('Venerable Moses the Ethiopian');
 
-  const register = page.locator('.day-panel .register .index-name');
+  const register = page.locator('.day-panel .register .reg-name');
   await expect(register.filter({ hasText: 'Hezekiah' })).toHaveText('Righteous Hezekiah');
   await expect(register.filter({ hasText: 'Anna' })).toHaveText('Prophetess Anna, daughter of Phanuel');
   // Not "Hezekiah the Righteous, King of Judah": the rank leads, the office
   // has moved down a line, and the death year is read off `dates.death`.
-  const hezekiah = page.locator('.day-panel .register .index-card', { hasText: 'Hezekiah' });
-  await expect(hezekiah.locator('.index-dates')).toHaveText('King of Judah · Reposed 696 BC');
+  const hezekiah = page.locator('.day-panel .register .reg-card', { hasText: 'Hezekiah' });
+  await expect(hezekiah.locator('.reg-sub')).toHaveText('King of Judah · Reposed 696 BC');
 
   /*
    * And "St" is the marked case now — 58 of 742, the hierarchs and the
@@ -2163,15 +2237,21 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
   await ctx.close();
 });
 
-test('a row reads name-first, with the picture at the trailing end', async ({ page }) => {
+test('a row reads name-first, with the picture at the trailing end and no mark', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "For all row cards without images, move the text back
-   * in line with the other row cards with images... Reformat all row cards,
-   * put the image to the right side, to the left of the bookmark, and start
-   * the text on the left edge."
+   * Author, 2026-08-27, morning: "For all row cards without images, move the
+   * text back in line with the other row cards with images... Reformat all row
+   * cards, put the image to the right side, to the left of the bookmark, and
+   * start the text on the left edge."
    *
-   * The point is the column: every name begins at the same x whether or not
-   * the saint has an icon, and the marks line up down the register.
+   * And that evening, the third part of it withdrawn: "on all row cards,
+   * remove the bookmark entirely, and just have the image square to the right
+   * side, giving more space for the text." So the row is two columns where it
+   * was three, and the picture now holds the trailing edge the mark held.
+   *
+   * The point is unchanged and is the column: every name begins at the same x
+   * whether or not the saint has an icon, and the pictures line up down the
+   * register.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
@@ -2191,29 +2271,35 @@ test('a row reads name-first, with the picture at the trailing end', async ({ pa
     for (const card of document.querySelectorAll('.index-card.is-row')) {
       const body = card.querySelector('.row-body');
       const media = card.querySelector('.index-media');
-      const mark = card.querySelector('.bookmark');
-      if (!body || !media || !mark) continue;
+      if (!body || !media) continue;
+      const box = media.getBoundingClientRect();
       out.push({
         hasImage: !media.classList.contains('is-blank'),
+        marks: card.querySelectorAll('.bookmark').length,
         bodyLeft: Math.round(body.getBoundingClientRect().left),
-        mediaLeft: Math.round(media.getBoundingClientRect().left),
-        markLeft: Math.round(mark.getBoundingClientRect().left),
+        mediaLeft: Math.round(box.left),
+        mediaRight: Math.round(box.right),
+        cardRight: Math.round(card.getBoundingClientRect().right),
+        square: Math.abs(box.width - box.height) < 1,
       });
     }
     return out;
   });
   expect(rows.length).toBeGreaterThan(3);
 
-  // The order across a row: text, then picture, then mark.
   for (const r of rows) {
-    expect(r.bodyLeft, JSON.stringify(r)).toBeLessThan(r.mediaLeft);
-    expect(r.mediaLeft, JSON.stringify(r)).toBeLessThan(r.markLeft);
+    const where = JSON.stringify(r);
+    // The order across a row: text, then picture, and nothing after it.
+    expect(r.bodyLeft, where).toBeLessThan(r.mediaLeft);
+    expect(r.marks, where).toBe(0);
+    // Square, and holding the trailing edge the mark used to hold.
+    expect(r.square, where).toBe(true);
+    expect(r.cardRight - r.mediaRight, where).toBeLessThan(20);
   }
-  // And all three are columns - the same x down the register, imaged or not.
+  // And both are columns - the same x down the register, imaged or not.
   const one = (key) => new Set(rows.map((r) => r[key])).size;
   expect(one('bodyLeft'), 'names do not share a left edge').toBe(1);
   expect(one('mediaLeft'), 'pictures do not share a column').toBe(1);
-  expect(one('markLeft'), 'marks do not share a column').toBe(1);
   // The columns are only a claim if both kinds of row were among them.
   expect(rows.some((r) => !r.hasImage), 'no imageless row in view').toBe(true);
 
@@ -2230,13 +2316,13 @@ test('a row reads name-first, with the picture at the trailing end', async ({ pa
       .map((c) => ({
         bodyLeft: Math.round(c.querySelector('.row-body').getBoundingClientRect().left),
         mediaLeft: Math.round(c.querySelector('.index-media').getBoundingClientRect().left),
-        markLeft: Math.round(c.querySelector('.bookmark').getBoundingClientRect().left),
+        marks: c.querySelectorAll('.bookmark').length,
       })),
   );
   expect(imaged.length, 'no row with a picture to check').toBeGreaterThan(0);
   for (const r of imaged) {
     expect(r.bodyLeft, JSON.stringify(r)).toBeLessThan(r.mediaLeft);
-    expect(r.mediaLeft, JSON.stringify(r)).toBeLessThan(r.markLeft);
+    expect(r.marks, JSON.stringify(r)).toBe(0);
   }
 });
 
@@ -2704,4 +2790,408 @@ test('the search field sticks under the chrome, and the filters drop from it', a
   await page.evaluate(() => window.scrollTo(0, 0));
   await expect.poll(async () => (await state()).stuck).toBe(false);
   await expect.poll(async () => (await state()).shown).toBe(true);
+});
+
+/* ---- the evening of 2026-08-27, seven instructions ------------------------ */
+
+test('nothing draws a rule under the controls, in either mode', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "a stray horizontal line on the All Saints page, in
+   * both carousel and advanced mode. Remove it."
+   *
+   * The line was `.index-controls`' own `border-bottom`, and both modes is the
+   * whole of the report: the block is shared, so a rule on it shows under the
+   * carousel and under the grid alike. What separates the controls from the
+   * register is space now — the same answer the day panel's register reached
+   * on 2026-08-24, that frames and rules are one answer to one question.
+   */
+  await ready(page);
+  for (const mode of ['carousel', 'search']) {
+    const ctx = await page.context().browser().newContext({ viewport: { width: 1280, height: 900 } });
+    const p = await ctx.newPage();
+    await p.addInitScript((m) => {
+      localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'en', indexMode: m }));
+    }, mode);
+    await p.goto(INDEX, { waitUntil: 'networkidle' });
+    await p.evaluate(() => document.fonts.ready);
+    const widths = await p.evaluate(() => {
+      const s = getComputedStyle(document.querySelector('.index-controls'));
+      return { bottom: s.borderBottomWidth, top: s.borderTopWidth };
+    });
+    expect(widths.bottom, mode).toBe('0px');
+    expect(widths.top, mode).toBe('0px');
+    await ctx.close();
+  }
+});
+
+test('the stuck bar keeps its own hairline, which is a different claim', async ({ page }) => {
+  /*
+   * The rule above the register went on 2026-08-27; this one did not, and the
+   * distinction is worth pinning because the obvious reading of "remove the
+   * line" takes both. A block-level rule divides two things on a page. The
+   * hairline under `.index-row` appears only when the bar is *stuck*, and says
+   * the register is running underneath it — a fact about depth, which is still
+   * true and still needs saying.
+   *
+   * It is reserved transparent rather than added, so the row's height never
+   * changes; the assertion is therefore about its colour, not its existence.
+   */
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const colour = () =>
+    page.evaluate(() => getComputedStyle(document.querySelector('.index-row')).borderBottomColor);
+  const loose = await colour();
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.locator('.index-controls.is-stuck').count()).toBe(1);
+  const stuck = await colour();
+  expect(loose).toMatch(/rgba\(.*0\)$/);
+  expect(stuck).not.toBe(loose);
+  // And the row is the same height in both, which is what "reserved" buys.
+  const heights = await page.evaluate(() => {
+    const s = getComputedStyle(document.querySelector('.index-row'));
+    return s.borderBottomWidth;
+  });
+  expect(heights).toBe('1px');
+});
+
+test('the Index opens on cards at a desk and on rows on a phone', async ({ browser }) => {
+  /*
+   * Author, 2026-08-27: "On desktop, default to card view in All Saints. On
+   * mobile, default to row view."
+   *
+   * Both widths in one test, in their own contexts, because this is a decision
+   * taken once at render from `matchMedia` — a `setViewportSize` after the page
+   * is up would be asking a question that has already been answered.
+   *
+   * **The stored default had to go for this to be possible at all.** Settings
+   * carried `indexLayout: 'cards'` until now, so the fallback in views/saints.js
+   * was unreachable and the phone opened on cards no matter what the screen
+   * said. It is null until the reader chooses, and that is the point of it
+   * being null: a stored value cannot say "whichever suits the screen".
+   */
+  for (const [width, expected] of [[1280, 'cards'], [360, 'rows']]) {
+    const ctx = await browser.newContext({ viewport: { width, height: 900 } });
+    const p = await ctx.newPage();
+    await p.addInitScript(() => {
+      localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'en', indexMode: 'search' }));
+    });
+    await p.goto(INDEX, { waitUntil: 'networkidle' });
+    await expect(p.locator('input[name="layout"]:checked'), `${width}px`).toHaveValue(expected);
+    await expect(p.locator('.index-card.is-row'), `${width}px`).toHaveCount(
+      expected === 'rows' ? await p.locator('.index-card').count() : 0,
+    );
+    await ctx.close();
+  }
+
+  // And a reader who has chosen keeps their choice at either width, which is
+  // the older instruction this must not have broken: "a view control that
+  // forgets is one the reader has to set every time".
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 900 } });
+  const p = await ctx.newPage();
+  await p.addInitScript(() => {
+    localStorage.setItem(
+      'gos-settings',
+      JSON.stringify({ church: 'russian', language: 'en', indexMode: 'search', indexLayout: 'cards' }),
+    );
+  });
+  await p.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(p.locator('input[name="layout"]:checked')).toHaveValue('cards');
+  await ctx.close();
+});
+
+test('the open filter panel draws its ground past the chips, and costs no height', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "there is no margin to the background of the filter
+   * when it pops out of the search bar in All Saints page when scrolled down.
+   * Add a bit of a margin."
+   *
+   * Sideways the ground *bleeds* rather than the chips coming in, and that is
+   * load-bearing: the facets row fits eight chips at the cold-load column with
+   * around nine pixels to spare, so twelve a side of real padding would wrap
+   * the die on the next machine with a wide system-ui. The chips keep the
+   * column; the border box grows and a negative margin pulls it back.
+   *
+   * Vertically the padding is real and unconditional, which the second half of
+   * this test is about: the band's height must be the same folded as open, or
+   * the page stores a scroll measured in one state and restores it in the
+   * other. That is the 69 px bug the fold's own comment records.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const bandHeight = () =>
+    page.evaluate(() => document.querySelector('.filter-drop').getBoundingClientRect().height);
+  const folded = await bandHeight();
+
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.locator('.index-controls.is-stuck').count()).toBe(1);
+  await page.evaluate(() => document.querySelector('.search-field').focus());
+  await expect.poll(() => page.locator('.index-controls.is-filters-open').count()).toBe(1);
+  await page.waitForTimeout(400);
+
+  const m = await page.evaluate(() => {
+    const R = (s) => document.querySelector(s).getBoundingClientRect();
+    return {
+      ground: R('.filter-drop-inner'),
+      chips: R('.facets'),
+      foot: R('.index-foot'),
+      row: R('.index-row'),
+    };
+  });
+  // The ground reaches past the chips on both sides, and past the last row of
+  // controls at the bottom.
+  expect(m.chips.left - m.ground.left).toBeGreaterThan(6);
+  expect(m.ground.right - m.chips.right).toBeGreaterThan(6);
+  expect(m.ground.bottom - m.foot.bottom).toBeGreaterThan(4);
+  expect(m.chips.top - m.ground.top).toBeGreaterThan(4);
+  // And the chips still have the whole column: they line up with the search
+  // field above them, which is what the bleed is protecting.
+  expect(Math.abs(m.chips.left - m.row.left)).toBeLessThan(1);
+  expect(Math.abs(m.chips.right - m.row.right)).toBeLessThan(1);
+
+  // The band is the same height open as folded. This is the assertion that
+  // fails if anyone ever moves the vertical padding into the open state.
+  expect(Math.abs((await bandHeight()) - folded)).toBeLessThan(1);
+});
+
+test('a facet chip prints its own word and nothing else', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "remove all the ' >' arrows from the filter bubbles
+   * and keep just the text. Although you remove the arrows, make sure the
+   * bubbles don't get any narrower than they are currently."
+   *
+   * Both halves are checkable and both are here. The caret was a `::after` of
+   * 5 px with a 4 px gap before it, so a chip had exactly 9 px to give back and
+   * the inline padding took it: 6 px became 10.5 a side. Asserting the padding
+   * rather than a chip's absolute width is deliberate — a width is a
+   * measurement of one machine's system-ui, which this row has gone red over
+   * three times, and the padding is the thing the instruction was actually
+   * about.
+   *
+   * Between the browser's own triangle, the drawn caret that replaced it in
+   * 2026-08-25, and nothing at all, this row has now tried every answer.
+   */
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const chips = await page.locator('.facet > summary').evaluateAll((nodes) =>
+    nodes.map((n) => {
+      const s = getComputedStyle(n);
+      const after = getComputedStyle(n, '::after');
+      return {
+        text: n.textContent.trim(),
+        left: s.paddingLeft,
+        right: s.paddingRight,
+        afterContent: after.content,
+        afterWidth: after.width,
+        markers: n.querySelectorAll('svg, .caret').length,
+      };
+    }),
+  );
+  // Every facet and both choice chips.
+  expect(chips.length).toBeGreaterThan(7);
+  for (const c of chips) {
+    const where = c.text;
+    // No caret drawn, by content or by box.
+    expect(['none', 'normal'], where).toContain(c.afterContent);
+    expect(c.afterWidth === 'auto' || parseFloat(c.afterWidth) === 0, where).toBe(true);
+    expect(c.markers, where).toBe(0);
+    // And the width the caret used to take, paid back as padding.
+    expect(c.left, where).toBe('10.5px');
+    expect(c.right, where).toBe('10.5px');
+  }
+
+  /*
+   * The row still fits on one line **at a desk**, which is what the padding was
+   * protecting: eight chips wrapping there is the failure the arithmetic in
+   * `.facets` exists to avoid, and the die has been pushed to a line of its own
+   * twice already. A phone wraps them by design — 360 px was never going to
+   * hold eight — so the width is set rather than inherited from the project.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.evaluate(() => document.fonts.ready);
+  const linesOfFacets = await page.evaluate(() => {
+    const tops = [...document.querySelectorAll('.facets > *')].map((n) =>
+      Math.round(n.getBoundingClientRect().top),
+    );
+    return new Set(tops).size;
+  });
+  expect(linesOfFacets).toBe(1);
+});
+
+test('a row prints its name whole and is only as tall as that name needs', async ({ page }) => {
+  /*
+   * Two instructions, and the second undid the way the first was answered.
+   *
+   * Author, 2026-08-27: "Don't cut off names with '…', display them in full."
+   * The first answer clamped at two lines and gave *every* row the two-line
+   * box, on the reasoning that a virtualised row must know its height before it
+   * exists. Then: "Why not just collapse whenever there is an empty line??"
+   *
+   * It can, and the reasoning was wrong. views/index/grid.js measures each name
+   * in the row's own face with canvas `measureText` — no layout, no render —
+   * and lays each row out to 66, 83 or 104. Checked against the browser's real
+   * wrapping over all 734 names before it was built and again after: the count
+   * agrees exactly, in both directions.
+   *
+   * The clamp also turned out to be hiding five names that need a *third* line
+   * at 360 px, so "in full" was not yet true when it was first called done.
+   *
+   * 360 px is where names wrap at all; at 1280 none of them do, which the last
+   * assertion here is about.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'rows');
+  await chooseSort(page, 'name');
+  await expect(page.locator('.index-card.is-row').first()).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+
+  const read = (target = page) =>
+    target.evaluate(() => {
+      const line = parseFloat(
+        getComputedStyle(document.querySelector('.index-card.is-row .index-name')).lineHeight,
+      );
+      return [...document.querySelectorAll('.index-card.is-row')].map((row) => {
+        const name = row.querySelector('.index-name');
+        return {
+          text: name.textContent.trim(),
+          height: Math.round(row.getBoundingClientRect().height),
+          lines: Math.round(name.getBoundingClientRect().height / line),
+          // Content taller than the box it was laid into is a cropped row; a
+          // name taller than its own clamp is an ellipsis.
+          overflow: row.scrollHeight - Math.round(row.getBoundingClientRect().height),
+          clipped: name.scrollHeight > name.clientHeight + 1,
+        };
+      });
+    });
+
+  const rows = await read();
+  expect(rows.length).toBeGreaterThan(5);
+  const byLines = { 1: 66, 2: 83, 3: 104 };
+  for (const r of rows) {
+    // Not one name in the mounted window is cut off, in either sense.
+    expect(r.clipped, r.text).toBe(false);
+    expect(r.overflow, r.text).toBeLessThanOrEqual(1);
+    // And the box is the one its line count calls for — this is the assertion
+    // that fails if the collapse is removed and the tallest box comes back.
+    expect(r.height, `${r.lines} lines: ${r.text}`).toBe(byLines[r.lines]);
+  }
+  // The window has to hold both shapes, or the line above proves nothing: a
+  // page of one-line names agrees with a single constant of 66 just as well.
+  expect(new Set(rows.map((r) => r.height)).size, 'no wrapped row in view').toBeGreaterThan(1);
+
+  /*
+   * **The three-line case, by name.** Five saints in the corpus need a third
+   * line at 360 px, and the mounted window is ten rows — so this cannot be left
+   * to whichever rows the sort deals out. Backing the clamp down to 2 with this
+   * absent passed the test, which is the whole reason it is here: the earlier
+   * assertions all hold for a page of one- and two-line names.
+   *
+   * This is also the case that showed "in full" was not yet true when the first
+   * answer was called done: at a clamp of 2 this name ends in an ellipsis.
+   */
+  /* The Calendar facet opens on the reader's own church and this saint is
+     Romanian, so it comes off first — the claim is about the corpus, not about
+     what one calendar happens to keep. */
+  await page.evaluate(() => {
+    for (const box of document.querySelectorAll('input[name="churches"]:checked')) {
+      box.checked = false;
+      box.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  });
+  await page.locator('[data-query]').fill('Macarius the New');
+  const long = page.locator('.index-card.is-row', { hasText: 'Macarius the New' }).first();
+  await expect(long).toBeVisible();
+  const deep = (await read()).find((r) => r.text.includes('Macarius the New'));
+  expect(deep, 'the three-line saint was not mounted').toBeTruthy();
+  expect(deep.lines, deep.text).toBe(3);
+  expect(deep.height, deep.text).toBe(104);
+  expect(deep.clipped, deep.text).toBe(false);
+  expect(deep.overflow, deep.text).toBeLessThanOrEqual(1);
+  await page.locator('[data-query]').fill('');
+
+  /*
+   * And at a desk nothing wraps, so nothing pays for a second line. This is
+   * the whole of what the collapse bought: the corpus's longest name fits the
+   * 72ch column on one line, and before this every row here was 83 px.
+   *
+   * A fresh context rather than a resize and a reload — the layout is a stored
+   * setting written through IndexedDB, and a test that reloads is testing that
+   * write's timing as much as anything it means to.
+   */
+  const wideCtx = await page.context().browser().newContext({ viewport: { width: 1280, height: 900 } });
+  const widePage = await wideCtx.newPage();
+  await widePage.addInitScript(() => {
+    localStorage.setItem(
+      'gos-settings',
+      JSON.stringify({ church: 'russian', language: 'en', indexMode: 'search', indexLayout: 'rows' }),
+    );
+  });
+  await widePage.goto(INDEX, { waitUntil: 'networkidle' });
+  await widePage.evaluate(() => document.fonts.ready);
+  await expect(widePage.locator('.index-card.is-row').first()).toBeVisible();
+  const wide = await read(widePage);
+  expect(wide.length).toBeGreaterThan(5);
+  for (const r of wide) {
+    expect(r.clipped, r.text).toBe(false);
+    expect(r.height, r.text).toBe(66);
+  }
+  await wideCtx.close();
+});
+
+test('leaving a saint puts the carousel back where it was', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "When exiting a saint card from the carousel, make
+   * sure you return to where you came from, just like you do when you leave
+   * advanced search and come back to the carousel, you return to the last
+   * position you were at."
+   *
+   * The offset already survived a *mode* switch — `switchMode` reads the
+   * track's `scrollLeft` before hiding it, because a hidden element reports 0
+   * — but not a navigation, because the snapshot the saint page's × comes back
+   * to kept the filters and the vertical scroll and not this. It does now.
+   *
+   * **Reduced motion, so the row is standing still.** The drift writes
+   * `scrollLeft` every frame; under `prefers-reduced-motion` it does not run at
+   * all, which turns "roughly where it was" into an exact number and makes the
+   * test worth having. The restore itself is not animated, so nothing being
+   * measured is switched off by this.
+   */
+  const ctx = await page.context().browser().newContext({
+    viewport: { width: 1280, height: 900 },
+    reducedMotion: 'reduce',
+  });
+  const p = await ctx.newPage();
+  await p.addInitScript(() => {
+    localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'en', indexMode: 'carousel' }));
+  });
+  await p.goto(INDEX, { waitUntil: 'networkidle' });
+  const track = p.locator('[data-carousel-track]');
+  await expect(track.locator('a.cx-card').first()).toBeVisible();
+
+  await p.evaluate(() => {
+    document.querySelector('[data-carousel-track]').scrollLeft = 1400;
+  });
+  const before = await track.evaluate((el) => el.scrollLeft);
+  expect(before).toBeGreaterThan(1000);
+
+  // In through a card, and back out the way the browser's own back does.
+  await p.evaluate(() => document.querySelector('.carousel-track a.cx-card').click());
+  await expect(p.locator('h1.saint-name')).toBeVisible();
+  await p.goBack();
+  await expect(p.locator('[data-carousel-track] a.cx-card').first()).toBeVisible();
+
+  await expect
+    .poll(() => track.evaluate((el) => el.scrollLeft), { timeout: 5000 })
+    .toBeGreaterThan(before - 40);
+  const after = await track.evaluate((el) => el.scrollLeft);
+  // Where it was, not where it opens: 1400 against a row that starts near 0 is
+  // the whole difference this test is about.
+  expect(Math.abs(after - before)).toBeLessThan(40);
+  await ctx.close();
 });

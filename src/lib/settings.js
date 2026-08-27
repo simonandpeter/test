@@ -45,8 +45,16 @@ const DEFAULTS = {
   defaultLocationKind: 'death',
   riverSeed: null,
   // 'cards' — image above the name, box from the manifest's aspect ratio.
-  // 'rows'  — thumbnail left, name and glyph right, packed tight.
-  indexLayout: 'cards',
+  // 'rows'  — name and dates first, a square thumbnail at the trailing edge.
+  //
+  // **null until the reader chooses**, since 2026-08-27, and that is the whole
+  // point of it being null rather than 'cards': the author asked for cards on a
+  // desktop and rows on a phone, and a stored value cannot say "whichever suits
+  // the screen". A default here would have answered the question before
+  // `defaultLayout()` in views/index/controls.js ever got to ask it — which is
+  // exactly what happened the first time this was written, silently, because
+  // 'cards' is a perfectly valid layout and nothing looked wrong.
+  indexLayout: null,
   // Detailed (author, 2026-08-22): the matrix for the badge and a line of the
   // life on every card. Off until asked for, and remembered once it is.
   indexDetailed: false,
