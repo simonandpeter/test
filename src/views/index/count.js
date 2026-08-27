@@ -1,7 +1,7 @@
-import { prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
-import { STRINGS, fill } from '../../ui/strings.js';
+import { fill, STRINGS } from '../../ui/strings.js';
+import { readerHasFiltered } from './filter.js';
 import { state } from './state.js';
 
 /**
@@ -69,4 +69,43 @@ export function paintTray(undated) {
         .join('')}
     </ul>
   </details>`;
+}
+
+/**
+ * What the page says about what it found: the count line, the Clear button,
+ * the empty note, and the tray beneath them.
+ *
+ * This was the second third of `update()`. It reports the answer `matching()`
+ * works out, and it is here rather than there because reporting is not
+ * deciding — the same numbers could be said in a different place without
+ * changing which saints matched.
+ */
+export function paintSummary({ matched, undated }, { animate }) {
+  const { el, cards, filters } = state;
+  const S = STRINGS.saints;
+  const asideNote = el.querySelector('[data-set-aside]');
+  /*
+   * **One count line, and it is a ratio** (author, 2026-08-27). It stood as two
+   * — a tweened "127 saints" over "Of 742, 127 saints are in the Romanian
+   * calendar" — which was the same number twice in the state the Index opens
+   * in, and Amendment 49 answered that by hiding whichever was redundant. The
+   * author's answer is better: one line saying what is listed out of what
+   * there is, which is true whether the narrowing came from the church, from a
+   * filter, or from both.
+   *
+   * The numerator is `matched`, not the church's own count, which is what lets
+   * the tweened line go: a filtered page keeps its real number here.
+   */
+  asideNote.textContent = fill(S.listed, { shown: matched.length, total: cards.length });
+  asideNote.title = S.keptTitle;
+  /*
+   * The tweened row stays in the DOM and out of sight. Its visible number was
+   * what the author asked to remove; what it also carries is the `aria-live`
+   * region that announces the count as filters change, and a reader who cannot
+   * see the line is the one reader who needs that most.
+   */
+  el.querySelector('[data-clear]').hidden = !readerHasFiltered(filters);
+  el.querySelector('[data-empty]').hidden = matched.length > 0;
+  paintCount(matched.length, animate);
+  paintTray(undated);
 }

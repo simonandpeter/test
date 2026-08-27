@@ -43,41 +43,16 @@ import { chosenChurch, subscribeChurch } from '../lib/church.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { dateFormatter, formatDate, languageTag } from '../lib/i18n.js';
 import { state, open as openState, close as closeState } from './index/state.js';
+import { defaultChurches, matching, readerHasFiltered } from './index/filter.js';
+import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
 import { applyMode, paintCarousel, switchMode } from './index/modes.js';
-import { paintCount, paintTray } from './index/count.js';
+import { paintCount, paintSummary, paintTray } from './index/count.js';
 
 const BASE = import.meta.env.BASE_URL;
 
 export const title = () => STRINGS.saints.title;
 
-const GAP = 16;
-/**
- * The two numbers the grid's geometry rests on, and the stylesheet's side of
- * the bargain: index.css fixes the card's padding, border, gaps and the name's
- * two-line box so that these stay true. Changing either without the other
- * crops cards.
- */
-const CARD_TEXT_HEIGHT = 92;
-const CARD_INSET = 18;
-/**
- * Rows are a fixed box: a 48 px thumbnail, the name and its glyph beside it,
- * the dates beneath. Nothing in a row varies with the image, so its height is
- * a constant rather than a calculation — index.css holds the other half of it.
- */
-const ROW_HEIGHT = 66;
-const ROW_GAP = 8;
-/**
- * Detailed (author, 2026-08-22) adds the rite × communion matrix in place of
- * the badge and a short description under the dates, and both are sized so
- * the box is still known before render: the matrix fits the 42 px name line a
- * card already reserves, and the description is a fixed count of utility lines
- * (13.5 px at 1.45 = 19.575 each), clamped — three on a card, two on a row.
- * Card: 92 + 6 gap + 58.725 = 156.7. Row: 18 inset + 31 name line + 2 + 19.575
- * dates + 2 + 39.15 = 111.7. index.css fixes the other half of each number.
- */
-const DETAILED_CARD_TEXT_HEIGHT = 157;
-const DETAILED_ROW_HEIGHT = 112;
 const LAYOUTS = ['cards', 'rows'];
 const MODES = ['carousel', 'search'];
 const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -95,12 +70,6 @@ const monthLabel = (m) =>
  */
 let remembered = null;
 
-/**
- * The opening of each life, derived once from the fetched text and kept across
- * re-renders — the same card is mounted and unmounted on every scroll frame
- * and must not refetch to say the same sentence again.
- */
-const ledes = new Map();
 
 export function destroy() {
   if (state) remembered = snapshot(state);
@@ -185,7 +154,7 @@ export function render(el, { data, router, nav }) {
   syncCalendarFacet();
   wireControls();
   wireSticky();
-  wireGrid();
+  wireGrid({ onChange: update });
   // The header's control can change the church while the grid is open, and
   // when it does the facet goes back to just the new one.
   state.cleanups.push(
@@ -210,8 +179,6 @@ export function render(el, { data, router, nav }) {
   loadSearch(cards);
 }
 
-/** The calendar the header keeps, as the facet's own default selection. */
-const defaultChurches = () => (chosenChurch() ? [chosenChurch()] : []);
 
 /** Ticks the header's calendar in the facet and unticks every other. */
 function syncCalendarFacet() {
@@ -222,16 +189,6 @@ function syncCalendarFacet() {
   state.filters = { ...state.filters, churches: [...want] };
 }
 
-/**
- * Whether anything the reader did is narrowing the page. The facet's default
- * selection is not: it is where the page opens, so counting it would leave
- * Clear filters showing on a page nobody has filtered.
- */
-const readerHasFiltered = (f) => {
-  const def = defaultChurches();
-  const same = f.churches.length === def.length && f.churches.every((id) => def.includes(id));
-  return hasActiveFilters(same ? { ...f, churches: [] } : f);
-};
 
 /* ---- remembering the place --------------------------------------------- */
 
@@ -750,340 +707,25 @@ function wireControls() {
 
 /* ---- the grid ------------------------------------------------------------ */
 
-function wireGrid() {
-  const { el } = state;
-  const grid = el.querySelector('[data-grid]');
-  let frame = null;
-
-  const onScroll = () => {
-    if (frame) return;
-    frame = requestAnimationFrame(() => {
-      frame = null;
-      paintWindow();
-    });
-  };
-  // Column width changes with the window even when the column *count* does
-  // not, and every card's box is computed from that width — so a resize is a
-  // relayout, not a repaint. Coalesced to one per frame.
-  let resizeFrame = null;
-  const onResize = () => {
-    if (resizeFrame) return;
-    resizeFrame = requestAnimationFrame(() => {
-      resizeFrame = null;
-      update({ animate: false });
-    });
-  };
-
-  // The page scrolls, not a box inside it: an inner scroller would trap the
-  // wheel and give the reader two scrollbars to think about.
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onResize);
-  // The column can move without the window moving: Literata arriving inside
-  // font-display: optional's window widens the 72ch column from 580 to 678 px
-  // after the grid has counted its columns, and a cold load at 1280 was laying
-  // two columns into a three-column width (Amendment 26). An observer on the
-  // grid's own box catches that; its first callback reports the size already
-  // laid out and is ignored by the comparison. The relayout runs *inside* the
-  // callback, not behind a frame like the window path: resize observers are
-  // delivered at the rendering update the change itself caused, which is the
-  // moment meant for layout work — and a headless browser produces no further
-  // frame on an idle page, so a relayout queued behind requestAnimationFrame
-  // there waits for damage that may never come (the suite saw it six runs in
-  // eight). Synchronous is deterministic in both.
-  const observer =
-    typeof ResizeObserver === 'function'
-      ? new ResizeObserver(() => {
-          if (state && grid.clientWidth !== state.laidOutWidth) update({ animate: false });
-        })
-      : null;
-  observer?.observe(grid);
-
-  // A card's shared-element name is set at the moment of the click and not
-  // before: naming sixty visible cards would make the browser capture sixty
-  // pairs to animate two of them.
-  const onClick = (e) => {
-    const link = e.target.closest('[data-prefetch]');
-    if (!link) return;
-    const card = link.closest('.index-card');
-    if (state.named) for (const node of state.named) node.style.viewTransitionName = '';
-    const image = card.querySelector('.index-media img');
-    const name = card.querySelector('.index-name');
-    const slug = link.dataset.prefetch;
-    if (image) image.style.viewTransitionName = `s-${slug}-image`;
-    if (name) name.style.viewTransitionName = `s-${slug}-name`;
-    state.named = [image, name].filter(Boolean);
-  };
-  grid.addEventListener('click', onClick);
-
-  // Cards enter and leave the DOM on every scroll frame, so hover prefetching
-  // is delegated to the container rather than bound per card. The coarse
-  // pointer case has no hover at all and is handled where cards are created:
-  // entering the window *is* the signal there.
-  const onHover = (e) => {
-    const link = e.target.closest('[data-prefetch]');
-    if (link) prefetch(link.dataset.prefetch);
-  };
-  if (state.finePointer) el.addEventListener('pointerover', onHover);
-
-  // The bookmarks: one delegated listener for every card that will ever mount
-  // here, and one subscription that repaints them all when the store changes.
-  const unwireSave = wireSaveButtons(grid);
-
-  state.cleanups.push(() => {
-    if (frame) cancelAnimationFrame(frame);
-    if (resizeFrame) cancelAnimationFrame(resizeFrame);
-    window.removeEventListener('scroll', onScroll);
-    window.removeEventListener('resize', onResize);
-    observer?.disconnect();
-    grid.removeEventListener('click', onClick);
-    el.removeEventListener('pointerover', onHover);
-    unwireSave();
-  });
-}
-
+/**
+ * One pass over the page: what matches, what that says, and where it goes.
+ *
+ * This was 121 lines and two responsibilities joined by a single value. The
+ * data crosses one way — `matching()` works out `matched`, and everything
+ * after reports or places it. `animate` is an input to *both* halves rather
+ * than a product of the first, which is worth saying so nobody re-derives it
+ * and thinks they have found a second thread between them.
+ *
+ * `matching()` is pure and returns its answer; the assignment to
+ * `state.shownCards` is here, in the composition, because a function that both
+ * returns a value and writes it to shared state is testable in name only.
+ */
 function update({ animate }) {
-  const { el, cards, filters, search } = state;
-  // The index holds the bare name and every name is drawn with a rank before
-  // it, so a reader who types back what the screen shows must not be told
-  // there is no such saint. `withoutRank` argues it; it is built from the
-  // reader's own pack, because since 2026-08-27 the word in front is one of
-  // sixteen in five languages rather than one abbreviation.
-  const query = withoutRank(filters.query);
-  const hits = query && search ? new Set(search.search(query).map((r) => r.id)) : null;
-
-  // The reader's church comes first (author, 2026-08-22): a saint not in that
-  // church's calendar is not on the grid, and what that sets aside is counted
-  // and named under the count rather than silently dropped. The search and
-  // the facets apply within what remains. No church chosen yet keeps all.
-  // `chosenChurch`, not `currentChurch` (2026-08-26): a *guess* from the
-  // browser's language must not set part of the corpus aside here. lib/church.js
-  // argues the split; the Daily page is the one page that cannot open without a
-  // calendar, and it is the one page that reads the guess.
-  // The Calendar facet does this now, and it is the same predicate.
-  const mine = cards;
-  const asideNote = el.querySelector('[data-set-aside]');
-  const S = STRINGS.saints;
-
-  const { matched, undated } = applyFilters(mine, filters, {
-    monthsBySlug: state.monthsBySlug,
-    matchesQuery: hits ? (slug) => hits.has(slug) : null,
-  });
-
-  state.shownCards = matched;
-  /*
-   * **One count line, and it is a ratio** (author, 2026-08-27). It stood as two
-   * — a tweened "127 saints" over "Of 742, 127 saints are in the Romanian
-   * calendar" — which was the same number twice in the state the Index opens
-   * in, and Amendment 49 answered that by hiding whichever was redundant. The
-   * author's answer is better: one line saying what is listed out of what
-   * there is, which is true whether the narrowing came from the church, from a
-   * filter, or from both.
-   *
-   * The numerator is `matched`, not the church's own count, which is what lets
-   * the tweened line go: a filtered page keeps its real number here.
-   */
-  asideNote.textContent = fill(S.listed, { shown: matched.length, total: cards.length });
-  asideNote.title = S.keptTitle;
-  /*
-   * The tweened row stays in the DOM and out of sight. Its visible number was
-   * what the author asked to remove; what it also carries is the `aria-live`
-   * region that announces the count as filters change, and a reader who cannot
-   * see the line is the one reader who needs that most.
-   */
-  el.querySelector('[data-clear]').hidden = !readerHasFiltered(filters);
-  el.querySelector('[data-empty]').hidden = matched.length > 0;
-  paintCount(matched.length, animate);
-  paintTray(undated);
-
-  const grid = el.querySelector('[data-grid]');
-  const inner = el.querySelector('[data-grid-inner]');
-  const rows = state.layout === 'rows';
-  // What this layout was computed from, so the container observer below can
-  // tell a real move from its own first, informational, callback.
-  state.laidOutWidth = grid.clientWidth;
-  const result = rows
-    ? layout(matched, {
-        width: grid.clientWidth,
-        gap: ROW_GAP,
-        columns: 1,
-        textHeight: state.detailed ? DETAILED_ROW_HEIGHT : ROW_HEIGHT,
-        // A row's thumbnail is a fixed box, so no row's height depends on its
-        // image and every row is the same height. Still exact, still no
-        // measurement — the constant is simply the whole answer here.
-        aspectOf: () => null,
-      })
-    : layout(matched, {
-        width: grid.clientWidth,
-        gap: GAP,
-        textHeight: state.detailed ? DETAILED_CARD_TEXT_HEIGHT : CARD_TEXT_HEIGHT,
-        mediaInset: CARD_INSET,
-        // The manifest keeps a card's pixel dimensions on its image, and a
-        // saint may have no image at all.
-        aspectOf: (card) => card.image?.aspect ?? null,
-      });
-  state.positions = result.positions;
-
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const keep = new Set(result.positions.map((p) => p.slug));
-  const leaving = [...state.rendered.keys()].filter((slug) => !keep.has(slug));
-
-  // Fading is the reason the removal is deferred: a filtered-out saint should
-  // leave visibly. Reduced motion removes them now — disabled means removed,
-  // never shortened. The fade is one flight in swap.js's registry, so a second
-  // filter change lands the first batch rather than leaving two removals
-  // racing, and each fading card is marked aside — a card on its way out must
-  // not hold the tab order or a click (Amendment 17's corollary).
-  if (animate && !reduced && leaving.length) {
-    for (const slug of leaving) {
-      const node = state.rendered.get(slug);
-      node.classList.add('leaving');
-      setAside(node);
-    }
-    beginSwap(inner, () => {
-      for (const slug of leaving) {
-        // Still fading, and not a card that a second filter change brought
-        // back in the meantime — paintWindow restores those when it does.
-        const node = state?.rendered.get(slug);
-        if (!node?.classList.contains('leaving')) continue;
-        node.remove();
-        state.rendered.delete(slug);
-      }
-      if (state) paintWindow();
-    }).settle(200);
-  } else {
-    for (const slug of leaving) {
-      state.rendered.get(slug).remove();
-      state.rendered.delete(slug);
-    }
-  }
-
-  inner.style.height = `${result.height}px`;
-  paintWindow();
+  const found = matching(state);
+  state.shownCards = found.matched;
+  paintSummary(found, { animate });
+  paintGrid(found.matched, { animate });
   // The carousel draws from the same filtered set, so it follows a search or a
   // filter change like the grid does. It is a no-op when the pool has not moved.
   if (state.mode === 'carousel') paintCarousel();
-}
-
-function paintWindow() {
-  if (!state) return;
-  const inner = state.el.querySelector('[data-grid-inner]');
-  const top = -inner.getBoundingClientRect().top;
-  const visible = windowOf(state.positions, top, window.innerHeight);
-  const wanted = new Set(visible.map((p) => p.slug));
-
-  for (const [slug, node] of state.rendered) {
-    if (!wanted.has(slug) && !node.classList.contains('leaving')) {
-      node.remove();
-      state.rendered.delete(slug);
-    }
-  }
-
-  let mounted = false;
-  for (const position of visible) {
-    let node = state.rendered.get(position.slug);
-    if (!node) {
-      const rows = state.layout === 'rows';
-      node = document.createElement('div');
-      node.className = `index-card panel${rows ? ' is-row' : ''}${state.detailed ? ' is-detailed' : ''}`;
-      node.innerHTML = card(position, state.router, { rows, detailed: state.detailed });
-      inner.appendChild(node);
-      state.rendered.set(position.slug, node);
-      mounted = true;
-      if (!state.finePointer) prefetch(position.slug);
-      if (state.detailed) fillDescription(node, position);
-    }
-    if (node.classList.contains('leaving')) {
-      // Brought back mid-fade by a second filter change: current again, so the
-      // aside marks come off with the class.
-      node.classList.remove('leaving');
-      restore(node);
-    }
-    node.style.width = `${position.w}px`;
-    node.style.height = `${position.h}px`;
-    node.style.transform = `translate(${position.x}px, ${position.y}px)`;
-  }
-  // New cards arrive with their bookmark unpainted; one read of the store
-  // paints every card in the window, not one per card.
-  if (mounted) paintSaved(inner);
-}
-
-/**
- * A card and a row are the same three things — image, name with its glyph,
- * dates — in two arrangements, plus the bookmark. In cards the box comes from
- * the image's aspect ratio; in rows the thumbnail is square and the box is a
- * constant, so an imageless saint still gets an empty one and the column of
- * names stays a column. Detailed swaps the badge for the matrix and adds the
- * description box, held by skeleton bars until the life arrives.
- */
-function card(item, router, { rows = false, detailed = false } = {}) {
-  const image = item.image
-    ? `<span class="index-media" style="background-image:url('${BASE + item.image.lqip}')${
-        rows ? '' : `;aspect-ratio:${item.image.aspect}`
-      }">
-        <img src="${BASE + item.image.src}" alt="" width="${item.image.w}" height="${item.image.h}"
-          loading="lazy" decoding="async" />
-      </span>`
-    : '';
-
-  const description = detailed
-    ? `<span class="index-desc utility" data-desc>
-        <span class="desc-skel" aria-hidden="true"><span class="skeleton"></span><span class="skeleton"></span></span>
-      </span>`
-    : '';
-
-  // The link wraps the name only, and its ::after covers the whole card, so
-  // the image is clickable without a second link that has no accessible name
-  // of its own. The bookmark sits above that ::after, so pressing it saves
-  // rather than opens. (The veneration glyph stood beside the name in this
-  // line until 2026-08-22 — DESIGN.md §2.)
-  const body = `<span class="name-line">
-      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(saintName(item))}</a>
-    </span>
-    <span class="index-dates utility">${esc(formatSubtext(item))}</span>
-    ${description}`;
-  const bookmark = renderBookmark(item.slug, item.display_name);
-
-  /*
-   * A row reads name-first (author, 2026-08-27): the text starts at the card's
-   * left edge and the picture stands at the trailing end, just inside the
-   * bookmark. A saint with no icon keeps the slot rather than closing it up —
-   * an empty 48 px on the right — so the marks stay in one column and the eye
-   * running down a scrolling register meets every name at the same left edge.
-   *
-   * This is not the empty frame the author struck out on 2026-08-26. That one
-   * stood *before* the name and pushed every title in from the margin, which
-   * is the thing objected to; the instruction was "print the text all the way
-   * to the left margin of the card", and moving the picture to the other end
-   * is what finally does it for the 614 saints who have none.
-   */
-  const slot = image || '<span class="index-media is-blank" aria-hidden="true"></span>';
-  return rows ? `<span class="row-body">${body}</span>${slot}${bookmark}` : `${image}${body}${bookmark}`;
-}
-
-/**
- * The description is the opening paragraph of the saint's own life, fetched
- * through the same second layer the detail page uses (brief §7) and derived
- * once per saint. It is not in the manifest on purpose — Addendum H1 has the
- * budget arithmetic. A saint with no life, or a fetch that fails, shows what
- * the manifest does say: the types.
- */
-async function fillDescription(node, item) {
-  const box = node.querySelector('[data-desc]');
-  if (!box) return;
-  // The types, named rather than slugged (2026-08-25 evening). It used to
-  // capitalise the joined run's first letter only, which made "Martyr,
-  // hieromartyr" out of two words that are equally names.
-  const fallback = () => typeNames(item.types);
-  let text = ledes.get(item.slug);
-  if (text === undefined) {
-    try {
-      const payload = await loadDetail(item.slug);
-      text = firstParagraphText(payload.life) || fallback();
-      ledes.set(item.slug, text);
-    } catch {
-      text = fallback();
-    }
-  }
-  if (!box.isConnected) return;
-  box.textContent = text;
 }

@@ -88,8 +88,22 @@ in base.css (L605)
   scrollLeft *before* hiding it, because a hidden element measures zero),
   `sticky.js` (the search field that follows the reader down), `count.js` (the
   count line and the undated tray).
-- Still in saints.js and sharing `update()`: the grid, the controls, the search
-  and the snapshot. That is the next cut and it is the entangled half.
+  `filter.js` (which saints match — **no DOM at all**, so it is the one part of
+  this view that could take a unit test), `grid.js` (the layout, the reconcile
+  and the mounted window; it also owns `wireGrid`, because `state.laidOutWidth`
+  is written by the layout and read by that observer and the pair should not
+  span a boundary).
+- `update()` in saints.js is six lines of composition. It was 121 and two
+  responsibilities joined by one value: `matching()` works out `matched`,
+  everything after reports or places it. `animate` is an input to *both* halves
+  rather than a product of the first.
+- The controls, the search and the snapshot are still in saints.js. They call
+  `update` directly; `wireGrid` takes it as `onChange` because it moved out.
+- **Splitting a function body is the case `extraction-check` cannot see by
+  default** — it compares module-scope names, and a local declared in one half
+  and used in the other is invisible to it. `asideNote` was stranded exactly
+  that way and cost 116 red tests. Use `--locals` with the original function
+  saved to a file.
 - `ui/loop-scroll.js` is the row's own mechanics and is already a module; it
   wants no splitting.
 - `.index-card` (index.css L309), `.index-dates` (L390).

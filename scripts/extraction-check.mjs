@@ -97,12 +97,24 @@ function boundIn(code) {
   for (const m of code.matchAll(/\b(?:const|let|var|function|class)\s+([A-Za-z_$][\w$]*)/g)) {
     names.add(m[1]);
   }
-  for (const m of code.matchAll(/\bfunction\s*[\w$]*\s*\(([^)]*)\)/g)) {
-    for (const part of m[1].split(',')) {
-      const t = part.trim().replace(/[={].*$/, '').trim();
-      if (/^[A-Za-z_$][\w$]*$/.test(t)) names.add(t);
+  /*
+   * Parameter lists, of named functions and of arrows, and every identifier in
+   * them — destructured, defaulted or plain. Being generous *inside a
+   * parameter list* is safe; being generous about what counts as one is not.
+   * The version that matched `(...)` before `=>` **or `{`** swallowed every
+   * `if`, `for` and `while` in the file, and with them most of the English in
+   * the markup. Only `=>` is a parameter list without question.
+   *
+   * `(slug) => hits.has(slug)` and `paintSummary({ matched, undated }, …)`
+   * were both reported as stranded until this took both shapes.
+   */
+  const params = (list) => {
+    for (const part of list.split(/[^A-Za-z0-9_$]+/)) {
+      if (part && !/^\d/.test(part)) names.add(part);
     }
-  }
+  };
+  for (const m of code.matchAll(/\bfunction\s*[\w$]*\s*\(([^)]*)\)/g)) params(m[1]);
+  for (const m of code.matchAll(/\(([^()]*)\)\s*=>/g)) params(m[1]);
   for (const m of code.matchAll(/\b(?:const|let|var)\s*\{([^}]*)\}/g)) {
     for (const part of m[1].split(',')) {
       const t = part.trim().split(':').pop().replace(/=.*$/, '').trim();
@@ -112,9 +124,25 @@ function boundIn(code) {
   return names;
 }
 
-const [before, ...after] = process.argv.slice(2);
+/*
+ * `--locals`, for when the thing being split is a *function body* rather than
+ * a file.
+ *
+ * The default mode compares module-scope names, and is blind to a local
+ * declared in one half of a function and used in the other. Splitting
+ * `update()` in views/saints.js stranded `asideNote` — one line, a
+ * `querySelector` in the half that computed, read by the half that reported.
+ * The check said nothing, the build said nothing, and 116 browser tests went
+ * red. Here the candidates are everything the fragment *binds*, so a stranded
+ * local is reported like a stranded const.
+ *
+ * Save the original function to a file of its own and pass it as `before`.
+ */
+const argv = process.argv.slice(2);
+const locals = argv[0] === '--locals';
+const [before, ...after] = locals ? argv.slice(1) : argv;
 if (!before || !after.length) {
-  console.error('usage: extraction-check.mjs <before.js> <after.js> [after.js ...]');
+  console.error('usage: extraction-check.mjs [--locals] <before.js> <after.js> [after.js ...]');
   process.exit(2);
 }
 
@@ -128,8 +156,12 @@ const originalCode = stripped(await readFile(before, 'utf8'));
  * `BASE` did. Found by cutting the picker out and noticing the check could not
  * have caught it.
  */
-const candidates = new Set([...moduleScope(originalCode), ...imported(originalCode)]);
-console.log(`${candidates.size} names available at module scope in ${path.basename(before)}\n`);
+const candidates = locals
+  ? new Set([...boundIn(originalCode)].filter((n) => !imported(originalCode).has(n)))
+  : new Set([...moduleScope(originalCode), ...imported(originalCode)]);
+console.log(
+  `${candidates.size} ${locals ? 'names bound in' : 'names available at module scope in'} ${path.basename(before)}\n`,
+);
 
 let findings = 0;
 for (const file of after) {
