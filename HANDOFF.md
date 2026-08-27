@@ -87,6 +87,14 @@ them.
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **The view split has started, and the seam is not where the audit guessed**
+  (2026-08-28). `views/daily/state.js` is out, which is what unblocks the rest.
+  The next cut is the *day* half of calendar.js — the panel, the readings and
+  hymns markup, the feast index and the reach helpers, about 450 lines that
+  call nothing in the roll, the rail or the month. **The rail and the month
+  cannot be separated from each other** and should be taken as one module when
+  their turn comes. Approved as a multi-sitting job: one view per sitting,
+  suite green between.
 - **The first download is 133 kB of JavaScript, not 470** (Amendment 52). The
   day records and the four locale packs are their own chunks: `data/days.js`
   holds the seam for the first — started at boot, awaited *beside* the

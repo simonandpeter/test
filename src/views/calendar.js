@@ -34,6 +34,9 @@ import { hymnMarkup } from '../ui/hymns.js';
 import { greatFeast, liturgicalDay } from '../lib/liturgy.js';
 import { currentLanguage, formatDate, languageTag, translateReason } from '../lib/i18n.js';
 import { recordedDay, recordsReach } from '../data/days.js';
+/* The page's own state, and the one file allowed to write it — see
+   views/daily/state.js for why it is a singleton and why it moved. */
+import { state, open as openState, close as closeState } from './daily/state.js';
 import { nameDays } from '../lib/name-days.js';
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
@@ -86,8 +89,6 @@ const MONTH_FADE = 420;
 
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let state = null;
-
 /**
  * Listeners that outlive a single paint — the shelves' store subscription, the
  * selection subscription, and whatever the current day panel wired up. The
@@ -97,7 +98,7 @@ export function destroy() {
   state?.cleanups.forEach((fn) => fn?.());
   clearTimeout(state?.sizeTimer);
   if (state) state.cleanups = [];
-  state = null;
+  closeState();
 }
 
 const indexCache = new Map();
@@ -170,14 +171,14 @@ export function render(el, { data, params, router }) {
   // A deep link into a day that is not today arrives already scrolled away
   // from it, so the button has to be told on the way in as well as on a step.
   queueMicrotask(() => announceDay(selected));
-  state = {
+  openState({
     el, data, router, selected,
     calendar: currentChurch(),
     monthCursor: null, monthOpen: false,
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
-  };
+  });
 
   el.innerHTML = `
     <div class="cal">

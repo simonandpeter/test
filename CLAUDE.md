@@ -10,6 +10,16 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
 ## Where things live
 
 **Calendar (Daily page)** — `src/views/calendar.js` + `src/styles/calendar.css`
+- `src/views/daily/state.js` holds the page's state and is the only file that
+  writes it (`open`/`close`); everything else reads the live binding. It moved
+  out on 2026-08-28 as the first step of splitting this view — every section of
+  calendar.js reads `state`, so nothing could be lifted while the object lived
+  in the same file.
+- **The rail and the month are one seam, not two.** The month calls
+  `buildRail`, `settle`, `travel`, `stepCursor` and `dayAt`; DESIGN.md says why
+  ("the month is the week grown taller"). The separable half is the *day* —
+  the panel, the readings and hymns markup, the feast index and the reach
+  helpers — which calls nothing in the roll, the rail or the month.
 - `render()` (L119) builds the page shell: `.cal-controls` (the jump button +
   week/month), `.cal-date` heading, the day panel.
 - The week rail (scrolling day strip): `wireRail()` (L967) is the drag/coast/
