@@ -9,7 +9,8 @@ import { STRINGS } from '../ui/strings.js';
  * held the name, the office, the rank and the death year in one string -
  * "Gorazd, Bishop of Bohemia and Moravia-Silesia, Hieromartyr (1942)" - and
  * "St." was the one honorific that could not collide with a rank already
- * sitting in the name. Splitting the data (saints-naming-addendum.md, Step 1)
+ * sitting in the name. Splitting the data (docs/saints-naming-addendum.md,
+ * Step 1)
  * is what made this possible, and it was done first for exactly that reason.
  *
  * Neither major English-language Orthodox calendar names saints the other way.

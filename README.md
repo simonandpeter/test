@@ -1,4 +1,4 @@
-# The Orthodox Saint
+# Daily Dox
 
 A static site for engaging daily with the saints of the Orthodox Church, church
 by church — Russian, Romanian, Greek and Serbian for now, each in its own
@@ -8,11 +8,25 @@ structure, the same quality floor, one tradition, to be proven before the
 four-communion corpus comes back onto it. That corpus and its build are
 archived at the tag `archive/cross-church-2026-08`.
 
-The brief is `docs/saintsbuildplan.md` and its addendum (the addendum wins
-where they disagree); `docs/HANDOFF-ORTHODOX.md` is why this project exists and
-what carried over; the delivery plan and its **Amendments** are `SESSIONS.md`;
-the design system is `DESIGN.md` and it is binding. `npm run dev` serves the
-site.
+## The documents, and which are live
+
+- `docs/saintsbuildplan.md` — the brief. Live reference: the code cites it as
+  "brief §N" in some thirty places.
+- `docs/saintsplanaddendum.md` — Addendum A, its companion, and it wins where
+  the two disagree. Also live: "Addendum G5", "Addendum H1" and the rest are
+  citations of this.
+- `docs/saints-naming-addendum.md` — how a saint's name is printed, rank
+  first. Live, and actioned at Amendment 50.
+- `docs/HANDOFF-ORTHODOX.md` — why this project exists and what carried over
+  from the cross-church build. History, and still the best account of it.
+- `docs/archive/` — things the site no longer has. Nothing there is imported
+  or built; it has its own README saying what each was and what removed it.
+- `HANDOFF.md` is the briefing to start from, `CLAUDE.md` is the map of where
+  code lives, `DESIGN.md` is the design system and is binding, and `SESSIONS.md`
+  is the delivery plan and its **Amendments** — the record of every decision,
+  in order.
+
+`npm run dev` serves the site.
 
 ## The contract
 
