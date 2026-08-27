@@ -87,6 +87,27 @@ them.
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **The suite has no known flakes** (2026-08-28, Amendment 60), and the way the
+  last two were closed is the standing method. Both looked like assertions
+  sampling at a fixed moment, and were: waiting for the state instead took the
+  rail's coast from failing about once a suite to **1 in 32**. The residue was
+  the real fault and it was in the *gesture* — the rail reads its release
+  velocity from the last 120 ms, and the harness's mouse moves are each a round
+  trip, so under load the samples fall outside the window, the velocity is zero
+  and no coast is ever started. `throwRail` in e2e/helpers.js dispatches the
+  flick inside the page, spaced by a **spin on `performance.now()`** rather than
+  `setTimeout`, because a spin blocks and the spacing is real elapsed time
+  whatever the machine is doing. **148 contended runs, none failing.**
+  **A flake in the COLD_FACE rehearsal is worse than one in the gate** — that
+  run exists to say whether CI will be red, and noise there is a loss of the one
+  signal that predicts the runner. That is what made these worth a sitting.
+- **`under reduced motion a throw does not coast` proved nothing until
+  2026-08-28**, and a back-out is what said so: with the reduced-motion guard
+  removed from picker.js it stayed green, because it sampled 100 ms and 500 ms
+  after a coast that is spent inside the first 100. It watches for the
+  `is-coasting` class now. **Back out a test's subject even when the test is
+  green** — that is the only thing that tells a passing test from a watching
+  one.
 - **`COLD_FACE=1` before asking for a push, on anything that measures text**
   (2026-08-27). The runner draws different text: `font-display: optional` means
   a cold machine never gets Literata, so the 72ch column is 580 px not 678, and
@@ -1108,13 +1129,15 @@ session). SESSIONS.md has each in full.
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
   anything is built on top.
-- **Two browser tests have started flaking, and they want their own sitting.**
-  `a thrown rail coasts to a halt` and `the Index opens shuffled` fail
-  intermittently in a full run and pass 6 of 6 in isolation, which points at
-  machine load rather than at the pages. They were left alone through the whole
-  view split on purpose: guessing at a timing failure in the middle of a
-  refactor is how a real regression gets buried in a sleep. Worth deciding
-  whether to make them deterministic or to accept a retry.
+- **Seven saints carry `confessor` beside a hierarchical type**, and the author
+  decides them one at a time. Barses and Eulogius of Edessa, Liberius of Rome,
+  Martin the Pope, Nicholas of Alma-Ata, Paul the New of Constantinople,
+  Protogenes of Carrhae. Each currently reads *Confessor*, because that is a
+  rank in the precedence walk and the hierarchical types deliberately are not.
+  For several of them the epithet is right — Martin the Confessor, Nicholas the
+  Confessor — so this is a reading per saint and not a rule. Athanasius was
+  fixed on 2026-08-28 at the author's word ("do hierarch for athanasius") by
+  dropping `confessor` from his record; the walk was not touched.
 - **Nothing shows a day in a non-civil reckoning any more, and it is now
   further from doing so than it was.** A brief window (2026-08-23) had the
   Daily page print the chosen church's own-reckoning date under the strip;

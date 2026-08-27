@@ -511,7 +511,10 @@ test('a life links the saints it names, and refuses the ones it cannot be sure o
   // times wants one link.
   await expect(page.locator('.life a[data-prefetch="athanasius-of-alexandria"]')).toHaveCount(1);
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Confessor Athanasius of Alexandria');
+  // "St", not "Confessor", since 2026-08-28 ("do hierarch for athanasius"):
+  // `confessor` came out of his record, so the walk falls through to the
+  // honorific — which is how both major English calendars print a hierarch.
+  await expect(page.locator('h1.saint-name')).toHaveText('St Athanasius of Alexandria');
 
   // A life that already carries a hand-written link keeps its own and gains no
   // second one: the walker refuses to enter an <a>.

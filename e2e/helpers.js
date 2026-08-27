@@ -279,6 +279,66 @@ const chooseSort = async (page, value) => {
  * whole corpus back. Clearing them all first is the same end state by the route
  * a reader now takes.
  */
+/**
+ * A flick of the week rail, dispatched **inside the page** with its own timing.
+ *
+ * The rail reads its release velocity from the samples of the last 120 ms
+ * (`up` in views/daily/picker.js) and coasts only past `MIN_FLICK`. Driven
+ * through the harness's mouse, each move is a separate round trip, and under
+ * parallel load the moves stretch past that window — the fresh samples collapse
+ * to one, `dt` is 0, the velocity is 0, and the rail settles instead of
+ * coasting. Nothing is wrong with the rail when that happens: the gesture never
+ * became a flick. That was this suite's oldest flake, and it was still 1 in 32
+ * after the assertions around it stopped being fixed samples.
+ *
+ * The moves are spaced by a spin on `performance.now()` rather than by
+ * `setTimeout`, because a spin blocks: the spacing is real elapsed time
+ * whatever else the machine is doing. Four moves, 8 ms apart, 25 px each — a
+ * 24 ms window well inside the rail's 120, and the same velocity on every
+ * machine. The product path is untouched: pointerdown, four pointermoves,
+ * pointerup, and the rail's own sampling decides what to make of them.
+ *
+ * **It matters as much to the test that asserts a flick does *not* coast.**
+ * A gesture that fails to be a flick passes that one trivially, which is a
+ * test whose sample cannot reach the case it is pinning.
+ *
+ * Returns the rail's position at the moment of release.
+ */
+export const throwRail = (strip, { moves = 4, step = 25, gap = 8 } = {}) =>
+  strip.evaluate(
+    (el, { moves: n, step: dx, gap: ms }) => {
+      const rect = el.getBoundingClientRect();
+      const midY = rect.top + rect.height / 2;
+      const from = rect.left + rect.width / 2;
+      const fire = (type, x) =>
+        el.dispatchEvent(
+          new PointerEvent(type, {
+            pointerId: 1,
+            pointerType: 'mouse',
+            isPrimary: true,
+            button: type === 'pointerdown' ? 0 : -1,
+            buttons: type === 'pointerup' ? 0 : 1,
+            clientX: x,
+            clientY: midY,
+            bubbles: true,
+            cancelable: true,
+          }),
+        );
+      const spin = (wait) => {
+        const until = performance.now() + wait;
+        while (performance.now() < until);
+      };
+      fire('pointerdown', from);
+      for (let i = 1; i <= n; i += 1) {
+        spin(ms);
+        fire('pointermove', from - i * dx);
+      }
+      fire('pointerup', from - n * dx);
+      return el.scrollLeft;
+    },
+    { moves, step, gap },
+  );
+
 export const onlyCalendar = async (page, name) => {
   const group = await facet(page, 'churches');
   // Attached, not visible: at 360 the filter panel can be folded away, and the

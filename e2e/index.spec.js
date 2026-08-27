@@ -1034,7 +1034,18 @@ test('the Index opens shuffled, says so, and deals a new hand next visit', async
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await expect(page.locator('input[name="sort"]:checked')).toHaveValue('random');
   await expect(sortChip(page)).toHaveText(new RegExp('Random order$'));
-  const trio = () => leaders(page, 3);
+  /*
+   * **Read only once three cards are actually up** (2026-08-28). Both halves
+   * of this test compared a string of names taken the moment it was asked for,
+   * and the grid is virtualised: a read that lands mid-paint gets one or two
+   * names, which is neither the dealt hand nor a different one. It is the
+   * suite's second-oldest flake and it went the same way as the rail's — the
+   * timing came out, the claims stayed.
+   */
+  const trio = async () => {
+    await expect.poll(async () => (await leaders(page, 3)).split('|').length).toBe(3);
+    return leaders(page, 3);
+  };
   const dealt = await trio();
 
   // A trip into a saint's page and back (the × or the browser's own back)
@@ -1044,10 +1055,13 @@ test('the Index opens shuffled, says so, and deals a new hand next visit', async
   await page.locator('.index-card').first().locator('.index-name').click();
   await page.locator('[data-back]').click();
   await expect(page.locator('input[name="sort"]:checked')).toHaveValue('random');
-  expect(await trio()).toBe(dealt);
+  // Polled: the restore repaints the grid, and the hand is what it settles on.
+  await expect.poll(trio, { timeout: 5000 }).toBe(dealt);
 
   await page.reload({ waitUntil: 'networkidle' });
-  expect(await trio()).not.toBe(dealt);
+  // Not polled, deliberately. "Eventually different" would pass on any
+  // half-painted frame; this asks the settled hand, once, and compares it.
+  expect(await trio(), 'a fresh visit dealt the same three').not.toBe(dealt);
 });
 
 test('latest runs the other way from earliest', async ({ page }) => {
@@ -1916,6 +1930,39 @@ test('a saint is named by rank, and what they held is on the line below', async 
   });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Όσιος');
+
+  /*
+   * **And Athanasius reads the same way** (author, 2026-08-28: "do hierarch
+   * for athanasius"), which he did not until that morning: his record carried
+   * `bishop, theologian, confessor`, and `confessor` is a rank in the
+   * precedence walk while the hierarchical types are not — they fall through
+   * to the `honorific` fallback on purpose, because "St" *is* how both major
+   * English calendars print a hierarch and this file's header argues it at
+   * length. So he was announced as a Confessor over a page about the
+   * archbishop who wrote against the Arians.
+   *
+   * **The code was doing what it was told, so the fix is the record**: the
+   * word came out of his types and nothing in the walk changed. Seven other
+   * saints carry the same pair and are deliberately left alone — for several
+   * of them, Martin the Pope and Nicholas of Alma-Ata among them, *Confessor*
+   * is the epithet the calendars actually print, so the collision is only
+   * wrong where the tradition says it is. That is a judgement per saint, and
+   * the count is in HANDOFF for the author.
+   */
+  // Back into English first: the block above left the reader in Greek, and
+  // this claim is about which rank he resolves to, not how it is spelt.
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'en' }));
+  });
+  await page.goto('/saints/athanasius-of-alexandria', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toHaveText('St Athanasius of Alexandria');
+  await expect(page.locator('h1.saint-name')).not.toContainText('Confessor');
+  // What the quiet rank does not say, the line below still does — including
+  // the word *Hierarch*, which his Greek and Russian rows both print.
+  await expect(page.locator('.saint-facts')).toContainText('Bishop, Theologian');
+  await expect(page.locator('.saint-facts')).toContainText('Hierarch');
 });
 
 test('the Calendar facet opens on every calendar, and the header no longer narrows it', async ({ page }) => {

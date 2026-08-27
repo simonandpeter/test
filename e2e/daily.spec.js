@@ -10,6 +10,7 @@ import {
   releaseGrain,
   searchMode,
   swipe,
+  throwRail,
 } from './helpers.js';
 
 /**
@@ -2041,19 +2042,61 @@ test('a thrown rail coasts to a halt and settles, instead of stopping dead', asy
   const y = box.y + box.height / 2;
   const at = () => strip.evaluate((el) => el.scrollLeft);
 
-  await page.mouse.move(box.x + box.width / 2, y);
-  await page.mouse.down();
-  for (let i = 1; i <= 6; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 25, y);
-  await page.mouse.up();
-  const released = await at();
+  /*
+   * **The throw is dispatched in the page, with its own timing** (2026-08-28).
+   *
+   * The rail reads its release velocity from the samples of the last 120 ms
+   * (`up` in views/daily/picker.js) and coasts only past `MIN_FLICK`. Driven
+   * through the harness's mouse, each move is a separate round trip, and under
+   * parallel load six of them stretch past that window — so the fresh samples
+   * collapse to one, `dt` is 0, the velocity is 0, and the rail *settles*
+   * instead of coasting. Nothing was wrong with the rail: the gesture never
+   * became a flick. That is the whole of this suite's oldest flake, and it
+   * failed 1 in 32 even after the assertions stopped being fixed samples.
+   *
+   * So the moves are dispatched from inside the page, spaced by a spin on
+   * `performance.now()` rather than by `setTimeout` — a spin blocks, so the
+   * spacing is real elapsed time whatever else the machine is doing. Four
+   * moves, 8 ms apart, 25 px each: a 24 ms window well inside the rail's 120,
+   * and a velocity that is the same on every machine. The product path is
+   * untouched — pointerdown, four pointermoves, pointerup, and the rail's own
+   * sampling decides what to do with them.
+   */
+  const released = await throwRail(strip);
 
-  await page.waitForTimeout(150);
-  const coasting = await at();
-  expect(coasting).toBeGreaterThan(released + 20);
+  /*
+   * **Waited for, not sampled at a fixed moment** (2026-08-28). This read the
+   * position 150 ms after the release and required 20 px of travel in that
+   * window, which is not a fact about the coast — it is a fact about how many
+   * frames the machine got through in 150 ms. It failed three times under
+   * parallel load, most recently *inside the COLD_FACE rehearsal*, where noise
+   * costs more than anywhere else: that run exists to say whether CI will be
+   * red, and an answer that has nothing to do with the commit is worse than no
+   * answer. Six of six alone, every time.
+   *
+   * The claims are unchanged and neither has a clock in it now: it is still
+   * moving after the release, and it comes to rest rather than stopping dead.
+   * A coast that never starts still fails — the poll runs out — and a slow
+   * machine simply waits.
+   */
+  await expect.poll(at, { timeout: 4000 }).toBeGreaterThan(released + 20);
 
-  await page.waitForTimeout(1500);
+  // At rest is two reads that agree, which is the thing itself rather than a
+  // guess at how long friction takes.
+  let previous = -1;
+  await expect
+    .poll(
+      async () => {
+        const now = await at();
+        const still = now === previous;
+        previous = now;
+        return still;
+      },
+      { timeout: 8000, intervals: [100] },
+    )
+    .toBe(true);
   const rested = await at();
-  expect(rested).toBeGreaterThan(coasting);
+  expect(rested, 'the rail stopped dead at the release').toBeGreaterThan(released + 20);
   const state = await strip.evaluate((el) => {
     const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
     return {
@@ -2082,11 +2125,44 @@ test('under reduced motion a throw does not coast', async ({ browser }) => {
   const box = await strip.boundingBox();
   const y = box.y + box.height / 2;
 
-  await page.mouse.move(box.x + box.width / 2, y);
-  await page.mouse.down();
-  for (let i = 1; i <= 6; i += 1) await page.mouse.move(box.x + box.width / 2 - i * 25, y);
-  await page.mouse.up();
-  await page.waitForTimeout(100);
+  /*
+   * **This test proved nothing until 2026-08-28, and the back-out is what said
+   * so.** It threw the rail and compared the position 100 ms after release with
+   * the position 500 ms after. Backing the reduced-motion guard out of
+   * views/daily/picker.js — so a throw coasts under reduced motion, the exact
+   * regression this exists to catch — left it *green*: the coast is spent well
+   * inside the first 100 ms, so both samples were taken after everything had
+   * already happened. It was reading the end of the story twice.
+   *
+   * It watches for the coast instead of sampling around it. `is-coasting` is
+   * put on the strip for exactly as long as one runs, so a MutationObserver
+   * armed before the flick sees it or the coast did not happen — the same
+   * reason `duringMove` in helpers.js observes rather than polls: a 260 ms
+   * animation and a poll racing it is a flake waiting to be blamed on the
+   * machine.
+   */
+  const watching = strip.evaluate(
+    (el) =>
+      new Promise((resolve) => {
+        let sawCoast = false;
+        const observer = new MutationObserver(() => {
+          if (el.classList.contains('is-coasting')) sawCoast = true;
+        });
+        observer.observe(el, { attributes: true, attributeFilter: ['class'] });
+        setTimeout(() => {
+          observer.disconnect();
+          resolve({ sawCoast, at: el.scrollLeft });
+        }, 600);
+      }),
+  );
+  // The same dispatched flick the coast test uses. Through the harness's own
+  // mouse this test also passed whenever the gesture failed to *be* a flick,
+  // which was a second way of saying nothing.
+  await throwRail(strip);
+  const seen = await watching;
+  expect(seen.sawCoast, 'the rail coasted under reduced motion').toBe(false);
+
+  // And nothing is still moving once the settle has had its say.
   const early = await strip.evaluate((el) => el.scrollLeft);
   await page.waitForTimeout(400);
   const late = await strip.evaluate((el) => el.scrollLeft);
