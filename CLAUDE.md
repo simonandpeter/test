@@ -260,7 +260,7 @@ top of the file is.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`
 - Full run: `npx playwright test` (~5 min: `desktop` + `mobile-360` projects,
   each running every test).
-- **Three traps this suite keeps paying for.** (1) The Index grid is virtualised
+- **Four traps this suite keeps paying for.** (1) The Index grid is virtualised
   *and* absolutely positioned, so the mounted set is not the corpus and DOM
   order is not screen order — assert order through `leaders()`, which sorts by
   geometry, and never off `.first()`. (2) A width measured in the native
@@ -291,8 +291,21 @@ top of the file is.
   for Today, which is what made the two states tell apart at all. Navigate
   through `aDayThatIsNotToday(page)` (top of the spec) rather than a literal,
   or assert a word that does not move.
+- **A fourth trap, and it is the least obvious: a green `npm run build` says
+  nothing about whether a code move is complete.** Splitting views/calendar.js
+  on 2026-08-28 left `BASE` behind — a module-scope const rather than an
+  import, so the tool carrying the imports never looked at it — and the build
+  was perfectly happy while 88 browser tests went red. A bare reference to a
+  name that never travelled is valid JavaScript until the line runs, and
+  reading the diff does not catch it either. `node scripts/extraction-check.mjs
+  <before.js> <moved.js...>` asks the one question that does: which names did
+  the original declare, rather than import, that a new file uses without
+  having? Run it on every extraction.
 - House rule: every fix gets a browser test, and the test gets **backed out
-  and confirmed to fail** before being restored. A test that doesn't actually
+  and confirmed to fail** before being restored. **That applies to a tool as
+  much as to a fix**: extraction-check.mjs was written, reported "clean", and
+  was only shown to be broken by deleting `BASE` again and watching it stay
+  silent. Twice, for two different reasons. A test that doesn't actually
   reproduce the defect when the fix is reverted isn't pinning anything —
   several tests in this repo's history looked right and weren't.
 
