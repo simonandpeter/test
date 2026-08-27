@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 56)
+## State as of 2026-08-27 (Amendments 50 to 57)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -83,7 +83,7 @@ them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
 - 510 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendment 56), not carried
+  running them (2026-08-27, the sittings of Amendments 56 and 57), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
@@ -97,6 +97,21 @@ them.
   `desktop` was green throughout and would have shipped them. The two differ by
   more than width now — the Index opens on rows on a phone and cards at a desk
   (Amendment 56), so a test that assumes a layout has to ask for one.
+- **A test whose subject is drawn from the Index's deal must name its subject**
+  (Amendment 57). The Index opens in Random order with a fresh `Date.now()`
+  seed, and only 128 of the 742 saints have an icon — so "a card with a
+  picture is mounted" is a property of the deal. One test read both kinds off
+  the opening screenful and failed on **7 of 20 deals at 360 and 2 of 20 at
+  1280**, which is a red the suite shows you one run in three on a phone and
+  one in ten at a desk. At 360 the mounted window can be a single card, so a
+  threshold like `length > 3` on the unfiltered grid is the same bug wearing a
+  number. Pin the saint by name and let the Index's own search mount him
+  (`Anthony the Great` has an icon, `Christopher the Roman` has none), or fix
+  the sort to Earliest or Name; and assert the pin's premise, so a saint who
+  loses his icon fails loudly instead of turning two cases into one. **A green
+  run is not evidence a test is deterministic** — three greens here and one red
+  on a peer's machine was the whole of the information, and the greens were the
+  less informative half.
 - **The view split is done** (Amendment 55). `views/calendar.js` is 699 lines
   over seven modules in `src/views/daily/`; `views/saints.js` is 183 over nine
   in `src/views/index/`; the 9,308-line browser spec is six files by surface.

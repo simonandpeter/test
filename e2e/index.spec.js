@@ -1330,10 +1330,21 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
    * **Read off the Index's cards since 2026-08-27**, where it used to be read
    * off the Daily page's register. That register has no marks any more, and
    * neither do the row cards; the card is where the mark still lives, and it
-   * is the shape that has both cases on one page — a card with a picture under
-   * the mark and a card without one. `chooseView` is not optional here even
-   * though cards are the desktop default: this spec runs at 360 as well, where
-   * the default is rows.
+   * is the shape that has both cases — a card with a picture under the mark
+   * and a card without one. `chooseView` is not optional here even though
+   * cards are the desktop default: this spec runs at 360 as well, where the
+   * default is rows.
+   *
+   * **Both cases are asked for by name rather than dealt** (2026-08-27,
+   * second sitting). The first version read them off whatever the opening
+   * screenful happened to hold, and the Index opens in **random order** with a
+   * fresh seed every visit while only 128 of 742 saints have an icon — so "a
+   * card with a picture is mounted" was a property of the deal and not of the
+   * page. Twenty loads of the built site: no picture anywhere in the window on
+   * **7 of 20 deals at 360 and 2 of 20 at 1280**, which is a test that fails
+   * about a third of the time on a phone and one run in ten at a desk. The
+   * remedy is the one the row test below already carries, three hundred lines
+   * on: name the saint and let the Index's own search mount him.
    */
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -1348,7 +1359,12 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
       return { paths: paths.length, opacity: style.opacity, fill: style.fill, stroke: style.stroke };
     }),
   );
-  expect(shapes.length).toBeGreaterThan(3);
+  /*
+   * A sweep of the deal, so its size is the deal's: at 360 the window can be
+   * a single card. It is worth having as a sweep and cannot be the proof,
+   * which is why the two cards that matter are named below.
+   */
+  expect(shapes.length).toBeGreaterThan(0);
   // One path each, one fill, one opacity — no second rendering anywhere.
   expect(new Set(shapes.map((s) => s.paths))).toEqual(new Set([1]));
   expect(new Set(shapes.map((s) => s.opacity))).toEqual(new Set(['0.5']));
@@ -1357,20 +1373,38 @@ test('there is one bookmark drawing, on an icon and on the page alike', async ({
 
   // The shadow is only where a picture is under it; on the page's own ground
   // the mark has all the contrast it needs and a shadow would be furniture.
-  const filters = await page.evaluate(() => {
-    const on = (sel) => {
-      const el = document.querySelector(sel);
-      return el ? getComputedStyle(el.querySelector('.bookmark-mark')).filter : null;
-    };
-    return {
-      overImage: on('.index-card:has(.index-media img)'),
-      onGround: on('.index-card:not(:has(.index-media))'),
-    };
-  });
-  expect(filters.overImage, 'a card with a picture was not mounted').not.toBeNull();
-  expect(filters.onGround, 'a card without a picture was not mounted').not.toBeNull();
-  expect(filters.onGround).toBe('none');
-  expect(filters.overImage).not.toBe('none');
+  // Anthony the Great has an icon and Christopher the Roman has none — the
+  // same two saints the card test above stands its measurements on.
+  const markOn = async (name) => {
+    await page.locator('[data-query]').fill(name);
+    const card = page.locator('.index-card', { hasText: name });
+    await expect(card).toHaveCount(1);
+    return card.evaluate((c) => {
+      const mark = c.querySelector('.bookmark-mark');
+      const paths = mark.querySelectorAll('path');
+      const style = getComputedStyle(paths[0]);
+      return {
+        picture: Boolean(c.querySelector('.index-media img')),
+        slot: Boolean(c.querySelector('.index-media')),
+        paths: paths.length,
+        opacity: style.opacity,
+        filter: getComputedStyle(mark).filter,
+      };
+    });
+  };
+  const overImage = await markOn('Anthony the Great');
+  const onGround = await markOn('Christopher the Roman');
+  // The pins are only pins while the corpus still says so; a saint who lost
+  // his icon would otherwise turn this into two readings of the same case.
+  expect(overImage.picture, 'the imaged pin has no icon in the corpus any more').toBe(true);
+  expect(onGround.slot, 'the imageless pin has an icon in the corpus now').toBe(false);
+  // One drawing on both of them, which is the whole claim.
+  expect(overImage.paths).toBe(1);
+  expect(onGround.paths).toBe(1);
+  expect(overImage.opacity).toBe('0.5');
+  expect(onGround.opacity).toBe('0.5');
+  expect(onGround.filter).toBe('none');
+  expect(overImage.filter).not.toBe('none');
 
   // And it fills to full strength when saved — the second of the two states,
   // which is all the states there are.

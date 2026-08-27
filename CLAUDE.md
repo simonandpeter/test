@@ -395,9 +395,24 @@ top of the file is.
   reach for it first. Cutting the picker out left thirteen missing imports on
   the page the site opens on; the check named all thirteen and the build said
   `✓ built` throughout.
+- **And one more, which is the first trap wearing a different coat
+  (2026-08-27): a card read off the Index's opening screenful is a measurement
+  of one shuffle.** The grid opens in Random order with a fresh `Date.now()`
+  seed and only 128 of the 742 saints have an icon, so "a card with a picture
+  is mounted" is a property of the deal — measured, absent on **7 of 20 deals
+  at 360 and 2 of 20 at 1280**. A test that reads its subject from the deal is
+  a red the suite shows you one run in three, which is worse than a failing
+  test because it looks like weather. Pin the saint by name and let the Index's
+  own search mount him, or fix the sort to Earliest or Name — and assert the
+  pin still is what it was pinned for. The window bottoms out at **one card at
+  360**, so `length > 3` on the unfiltered grid is the same trap wearing a
+  number. **A green run is not evidence a test is deterministic.**
 - House rule: every fix gets a browser test, and the test gets **backed out
-  and confirmed to fail** before being restored. **That applies to a tool as
-  much as to a fix**: extraction-check.mjs was written, reported "clean", and
+  and confirmed to fail** before being restored — and where the fix is to a
+  flake, backed out against a **rate**, not a single red: twelve repeats at
+  each width, which turned one red on a peer's machine into 2 of 24 before and
+  0 of 24 after. **That applies to a tool as much as to a fix**:
+  extraction-check.mjs was written, reported "clean", and
   was only shown to be broken by deleting `BASE` again and watching it stay
   silent. Twice, for two different reasons. A test that doesn't actually
   reproduce the defect when the fix is reverted isn't pinning anything —
