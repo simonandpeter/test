@@ -87,6 +87,17 @@ them.
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
+- **The full suite is a gate, not a loop** (2026-08-27). 510 tests is 372s of
+  wall time and 2,073s of test work; a single test is 30s, one spec at one
+  project 66s, and **~25s of every invocation is fixed cost** before a test
+  runs (manifest build, `vite preview`, browser launch) — so batch by surface
+  instead of firing single tests. `npm run test:e2e:desktop` and
+  `test:e2e:mobile` take `playwright test` arguments after a `--`. Run
+  *everything* before a commit that will be pushed, before asking a peer to
+  push, after touching shared chrome or `src/lib`, and after a merge. CLAUDE.md
+  §Tests carries the surface-to-spec map and the rule that a layout change
+  iterates at **mobile-360**, not desktop, because that is the width that
+  breaks.
 - **Read Playwright's own exit code and its `N failed` line, never the passed
   count.** A run was reported green in Amendment 56's sitting off a `tail` that
   had cut the `6 failed` header off the top, with an `exit 0` beside it that

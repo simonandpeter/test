@@ -327,7 +327,7 @@ top of the file is.
 
 - Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 171 as of
   2026-08-27. One file per `src/lib` module, named for the module.
-- Browser: `e2e/`, **one file per surface** since 2026-08-27 — 496 tests across
+- Browser: `e2e/`, **one file per surface** since 2026-08-27 — 510 tests across
   two projects.
   - `daily.spec.js` — the rail, the month, the day panel, readings, the fast.
   - `index.spec.js` — the carousel, the grid, the facets, search, the counts.
@@ -345,9 +345,57 @@ top of the file is.
     built. The tests themselves did not change in the move: each still carries
     the instruction that caused it and its date, which is where the
     provenance lives.
-- Run one test while iterating: `npx playwright test -g "<part of the title>"`
-- Full run: `npx playwright test` (~5 min: `desktop` + `mobile-360` projects,
-  each running every test).
+### What to run, and when (measured 2026-08-27)
+
+**The full suite is a gate, not a loop.** All 510 is 372s wall — 2,073s of test
+work over six workers — and running it after every edit is most of a sitting
+spent watching a list scroll. What a run costs, on this machine:
+
+| | wall | when |
+| --- | --- | --- |
+| `npx playwright test -g "<title>"` | **30s** | while iterating on one test |
+| one spec, one project (`npm run test:e2e:desktop -- e2e/index.spec.js`) | **66s** | after a change to that surface |
+| one spec, both projects | ~110s | when the change is about layout |
+| everything (`npm run test:e2e`) | **372s** | at a milestone — see below |
+| everything, `--workers=10` | 289s | same, in a hurry |
+
+- **~25s of every invocation is fixed** — the manifest build, `vite preview`
+  booting and the browser launching, before a single test runs. So a whole
+  spec at one project (66s) costs less than three single tests run separately
+  (90s). **Batch by surface rather than firing off one test at a time.**
+- `--workers=10` takes 83s off the full run and is green, but it makes every
+  individual test 22% slower under contention (2,073s of test time becomes
+  2,525s), which is headroom taken from the animation-timing tests that are
+  already the two known flakes. It is on the scoped scripts, where a flake
+  costs seconds to re-run, and **off the full gate**, which should keep the
+  timing CI runs it under.
+
+**Run everything at these four moments, and not otherwise:** before a commit
+that is going to be pushed, before asking a peer to push, after a change that
+touches shared chrome or `src/lib` (which every surface imports), and after
+resolving a merge. In between, run what the change is about.
+
+**Which tests a change is about:**
+
+| touched | run |
+| --- | --- |
+| `views/index/*`, `styles/index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `e2e/index.spec.js` |
+| `views/daily/*`, `views/calendar.js`, `styles/calendar.css`, `lib/liturgy.js`, `lib/feasts.js`, `lib/computus.js`, `lib/fast-grade.js` | `e2e/daily.spec.js` |
+| `views/saint.js`, `styles/saint.css`, `lib/detail.js`, `lib/licence.js`, `lib/cross-link.js`, `ui/hymns.js` | `e2e/saint.spec.js` |
+| `ui/*` (choosers, shelf, coachmark, save, swipe), `main.js`, `styles/base.css`, `styles/tokens.css` | `e2e/chrome.spec.js` **and** the surface you touched |
+| `ui/strings.js`, `ui/locales/*` | `node scripts/locale-coverage.mjs`, then the full run — the language sweeps are spread across all five specs |
+| `lib/*` otherwise, `data/`, `scripts/build-manifest.mjs` | `npm test` first (10s, and it is where a data or logic fault actually shows), then the surface that consumes it |
+| anything else shared | the full run |
+
+**Iterate at the width the change is about, not always at `desktop`.** The
+Index opens on rows on a phone and cards at a desk, row heights collapse only
+where names wrap, and the chip row fits one line at 1280 and not at 360 — six
+real failures in Amendment 56's sitting were all on `mobile-360` while
+`desktop` stayed green. If the change is about layout, a default, a wrap or a
+box, `npm run test:e2e:mobile` is the loop that will actually break.
+
+- Scoped runs take the same arguments as `playwright test`, after a `--`:
+  `npm run test:e2e:desktop -- e2e/index.spec.js -g "bookmark"`.
 - **Four traps this suite keeps paying for.** (1) The Index grid is virtualised
   *and* absolutely positioned, so the mounted set is not the corpus and DOM
   order is not screen order — assert order through `leaders()`, which sorts by
