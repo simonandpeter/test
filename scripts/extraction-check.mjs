@@ -23,6 +23,12 @@
  * It is not a linter and will not find an undefined name that was already
  * undefined before the move.
  *
+ * **Expect a false positive per cut, roughly.** A candidate is judged "used"
+ * by looking for the bare name, and markup is full of words: `class="index-card"`
+ * reads as a use of `card`, because the character before it is a hyphen rather
+ * than a dot. Check what it names before moving it; the direction of the error
+ * is the safe one.
+ *
  * Names bound **anywhere** in the new file count as declared — parameters,
  * locals, destructuring, not just column zero. The narrow version cried wolf on
  * `title`, which is a parameter in one function of panel.js and a const in

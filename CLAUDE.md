@@ -81,8 +81,17 @@ in base.css (L605)
   actually fit a 360px screen with the gap between them. If either changes,
   re-check at 360px.
 
-**Index / All Saints** — `src/views/saints.js` (`card()`, L785) +
-`src/styles/index.css`
+**Index / All Saints** — `src/views/saints.js` + `src/styles/index.css`
+- **`src/views/index/` holds the parts that call nothing back**, split out on
+  2026-08-28: `state.js` (the page's state, sole writer), `modes.js` (the two
+  faces, the carousel and the toggle — `switchMode` reads the track's
+  scrollLeft *before* hiding it, because a hidden element measures zero),
+  `sticky.js` (the search field that follows the reader down), `count.js` (the
+  count line and the undated tray).
+- Still in saints.js and sharing `update()`: the grid, the controls, the search
+  and the snapshot. That is the next cut and it is the entangled half.
+- `ui/loop-scroll.js` is the row's own mechanics and is already a module; it
+  wants no splitting.
 - `.index-card` (index.css L309), `.index-dates` (L390).
 - Bookmark positioning is **two rules** since 2026-08-26 evening: every
   non-row card uses `.index-card > .bookmark` (the card's own corner), and a
@@ -308,6 +317,11 @@ top of the file is.
   the original declare, rather than import, that a new file uses without
   having? Run it on every extraction. **It exits 1 with names outstanding**, so
   it works as a pre-commit or CI step and not only by eye.
+  **The order that works is: cut, extraction-check, fix, build, suite.** The
+  build is the *least* informative of the three gates and the instinct is to
+  reach for it first. Cutting the picker out left thirteen missing imports on
+  the page the site opens on; the check named all thirteen and the build said
+  `✓ built` throughout.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored. **That applies to a tool as
   much as to a fix**: extraction-check.mjs was written, reported "clean", and
