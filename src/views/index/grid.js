@@ -3,7 +3,6 @@ import { loadDetail, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { typeNames } from '../../lib/saint-types.js';
-import * as store from '../../lib/store.js';
 import { layout, windowOf } from '../../lib/virtual-grid.js';
 import { paintSaved, renderBookmark, wireSaveButtons } from '../../ui/save.js';
 import { beginSwap, restore, setAside } from '../../ui/swap.js';

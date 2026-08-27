@@ -11,7 +11,7 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
 
 **Calendar (Daily page)** — `src/views/calendar.js` + `src/styles/calendar.css`
 - **`src/views/daily/` is the half that answers "what is today"**, split out
-  on 2026-08-28. calendar.js keeps the half that answers "which day" — the
+  on 2026-08-27. calendar.js keeps the half that answers "which day" — the
   roll, the rail, the month, `render` and `select`.
   - `state.js` — the page's state, and the only file that writes it
     (`open`/`close`); everything else reads the live binding.
@@ -83,7 +83,7 @@ in base.css (L605)
 
 **Index / All Saints** — `src/views/saints.js` + `src/styles/index.css`
 - **`src/views/index/` holds the parts that call nothing back**, split out on
-  2026-08-28: `state.js` (the page's state, sole writer), `modes.js` (the two
+  2026-08-27: `state.js` (the page's state, sole writer), `modes.js` (the two
   faces, the carousel and the toggle — `switchMode` reads the track's
   scrollLeft *before* hiding it, because a hidden element measures zero),
   `sticky.js` (the search field that follows the reader down), `count.js` (the
@@ -93,12 +93,19 @@ in base.css (L605)
   and the mounted window; it also owns `wireGrid`, because `state.laidOutWidth`
   is written by the layout and read by that observer and the pair should not
   span a boundary).
+  `controls.js` (everything above the grid — the facets, Sort, View, Detailed,
+  the die, and `syncCalendarFacet`, which ticks the box *and* re-reads the
+  filters), `search.js` (MiniSearch and the feast-month index, both built after
+  the first paint), `place.js` (the snapshot the saint page's × comes back to).
 - `update()` in saints.js is six lines of composition. It was 121 and two
   responsibilities joined by one value: `matching()` works out `matched`,
   everything after reports or places it. `animate` is an input to *both* halves
   rather than a product of the first.
-- The controls, the search and the snapshot are still in saints.js. They call
-  `update` directly; `wireGrid` takes it as `onChange` because it moved out.
+- **saints.js is 183 lines and is now only the composition**: `render`,
+  `destroy`, `update`, and the page's shell markup. `wireControls`, `wireGrid`
+  and `loadSearch` each take `update` as `onChange` at their single call site,
+  because it belongs to the composition root and an import from a module back
+  into the view would run the wrong way.
 - **Splitting a function body is the case `extraction-check` cannot see by
   default** — it compares module-scope names, and a local declared in one half
   and used in the other is invisible to it. `asideNote` was stranded exactly
@@ -114,7 +121,7 @@ in base.css (L605)
   so neither runs under it — that reserve is what the single corner cost.
 - The Index's controls: seven facet chips plus the `.random-die` in `.facets`;
   Sort, View and Detailed in `.index-foot`. Sort and View are `.facet-choice`
-  disclosures built by `choiceGroup()` in views/saints.js, read with
+  disclosures built by `choiceGroup()` in views/index/controls.js, read with
   `currentChoice()` and written with `setChoice()` — **both, always**, or the
   chip advertises an order the grid is not in.
 - **The search field sticks** (`.index-controls` is the sticky element — a
@@ -267,8 +274,8 @@ top of the file is.
 ## Tests
 
 - Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 171 as of
-  2026-08-28. One file per `src/lib` module, named for the module.
-- Browser: `e2e/`, **one file per surface** since 2026-08-28 — 496 tests across
+  2026-08-27. One file per `src/lib` module, named for the module.
+- Browser: `e2e/`, **one file per surface** since 2026-08-27 — 496 tests across
   two projects.
   - `daily.spec.js` — the rail, the month, the day panel, readings, the fast.
   - `index.spec.js` — the carousel, the grid, the facets, search, the counts.
@@ -322,7 +329,7 @@ top of the file is.
   or assert a word that does not move.
 - **A fourth trap, and it is the least obvious: a green `npm run build` says
   nothing about whether a code move is complete.** Splitting views/calendar.js
-  on 2026-08-28 left `BASE` behind — a module-scope const rather than an
+  on 2026-08-27 left `BASE` behind — a module-scope const rather than an
   import, so the tool carrying the imports never looked at it — and the build
   was perfectly happy while 88 browser tests went red. A bare reference to a
   name that never travelled is valid JavaScript until the line runs, and

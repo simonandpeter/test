@@ -1,4 +1,3 @@
-import { layout } from '../../lib/virtual-grid.js';
 import { state } from './state.js';
 
 /**

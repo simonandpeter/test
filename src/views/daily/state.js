@@ -1,5 +1,5 @@
 /**
- * The Daily page's own state, in a module of its own (2026-08-28).
+ * The Daily page's own state, in a module of its own (2026-08-27).
  *
  * This is the first move of the view split, and it is deliberately the *only*
  * thing this commit does, because it is what every later move depends on.

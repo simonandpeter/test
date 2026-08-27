@@ -6,7 +6,7 @@
  *
  * SESSIONS.md is the project's memory: every decision, in the order it was
  * taken, with the reasoning that produced it. It is 5,000 lines and grows by a
- * couple of hundred each sitting, and the author's instruction (2026-08-28) was
+ * couple of hundred each sitting, and the author's instruction (2026-08-27) was
  * to index it and **leave it whole** — end-to-end readability is worth more
  * than shorter files.
  *

@@ -6,7 +6,7 @@ import { expect } from '@playwright/test';
  *
  * These lived at the top of `quality-floor.spec.js` — and, as it grew, wherever
  * in it they were first needed — until the suite was refiled by surface on
- * 2026-08-28. Nothing here is new; each one is the block that was there, with
+ * 2026-08-27. Nothing here is new; each one is the block that was there, with
  * the comment that explained it.
  */
 

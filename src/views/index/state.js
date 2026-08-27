@@ -1,7 +1,7 @@
 /**
  * All Saints' own state, in a module of its own.
  *
- * The same move the Daily page made on 2026-08-28, for the same reason and to
+ * The same move the Daily page made on 2026-08-27, for the same reason and to
  * the same shape: every section of views/saints.js reads a module-scoped
  * `state`, so nothing could be lifted out while the object lived in that file.
  * `views/daily/state.js` argues the choice at length — one instance at a time

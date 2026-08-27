@@ -9,7 +9,7 @@
  *     git show a452975:src/views/calendar.js > /tmp/before.js
  *     node scripts/extraction-check.mjs /tmp/before.js src/views/daily/*.js
  *
- * **Why this exists.** Splitting views/calendar.js on 2026-08-28 left `BASE`
+ * **Why this exists.** Splitting views/calendar.js on 2026-08-27 left `BASE`
  * behind: a module-scope `const`, not an import, so the tool carrying the
  * imports had no reason to look at it. `npm run build` was perfectly happy and
  * 88 browser tests went red. **A green build says nothing about whether an
@@ -22,6 +22,15 @@
  * that a new file now uses without declaring or importing them?* Nothing else.
  * It is not a linter and will not find an undefined name that was already
  * undefined before the move.
+ *
+ * **When this has been wrong, it has been wrong by excluding candidates, and
+ * the symptom is silence.** Three times now: module scope only, which missed a
+ * name that was imported; declared-but-not-imported, which missed the imports
+ * themselves; and module-scope-only again, which missed a local split across a
+ * function body. Each exclusion had a plausible argument behind it and each
+ * produced a clean report over a broken tree. Whoever extends this will be
+ * tempted to exclude something too; the failure will not look like a failure.
+ * (Observed by agios-website-03, who has checked every version of it.)
  *
  * **Expect a false positive per cut, roughly.** A candidate is judged "used"
  * by looking for the bare name, and markup is full of words: `class="index-card"`
@@ -52,6 +61,16 @@ import path from 'node:path';
  */
 const stripped = (src) =>
   src.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/(^|[^:"'`\\])\/\/[^\n]*/g, '$1 ');
+
+/**
+ * The same, with the import statements taken out.
+ *
+ * For the *usage* test only. A module specifier is not a use of a name:
+ * `import { seeded } from './controls.js'` was reporting `controls` as
+ * stranded in the very file that imports it, which is the opposite of the
+ * truth. The bindings those lines create are read separately, by `imported`.
+ */
+const withoutImports = (code) => code.replace(/^\s*import\s[^;]*;?/gm, ' ');
 
 /** Names declared at module scope, which is what can fail to travel. */
 function moduleScope(code) {
@@ -137,6 +156,12 @@ function boundIn(code) {
  * local is reported like a stranded const.
  *
  * Save the original function to a file of its own and pass it as `before`.
+ *
+ * **Aim it at the halves, not at the tree.** The candidates are everything the
+ * fragment binds, which means common locals — `grid`, `query`, `result`,
+ * `rows` — are all candidates, and any file with its own is flagged. Pointed
+ * at views/saints.js after the split it reports ten names of nothing. The
+ * default mode invites a whole directory; this one does not.
  */
 const argv = process.argv.slice(2);
 const locals = argv[0] === '--locals';
@@ -170,7 +195,11 @@ for (const file of after) {
   const missing = [...candidates]
     .filter((n) => !bound.has(n))
     // a bare reference, not a property access and not a key
-    .filter((n) => new RegExp(String.raw`(?<![.\w$])` + n + String.raw`\s*[\(\.\[,;)\]}=+\-*/?:&|<>\s]`).test(code))
+    .filter((n) =>
+      new RegExp(String.raw`(?<![.\w$])` + n + String.raw`\s*[\(\.\[,;)\]}=+\-*/?:&|<>\s]`).test(
+        withoutImports(code),
+      ),
+    )
     .sort();
   findings += missing.length;
   console.log(`${file}\n   ${missing.length ? missing.join(', ') : '(nothing left behind)'}`);

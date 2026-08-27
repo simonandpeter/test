@@ -66,7 +66,7 @@ working folder; `docs/` is the copy that survives a clone.
 Do not re-litigate settled decisions. If something looks odd, assume there is a
 recorded reason and search these documents before changing it.
 
-## State as of 2026-08-27 (Amendments 50 to 54)
+## State as of 2026-08-27 (Amendments 50 to 55)
 
 Live at https://simonandpeter.github.io/test/ — deployed by GitHub Actions from
 `dist/`, **not** from the branch.
@@ -82,19 +82,28 @@ See "Two sections below are now history" just under this one before reading
 them.
 
 - 171 unit tests (`npm test`) — pure logic, no DOM.
-- 490 browser tests (`npm run test:e2e`) — both counts verified by actually
-  running them (2026-08-27, the sitting of Amendment 54), not carried
+- 496 browser tests (`npm run test:e2e`) — both counts verified by actually
+  running them (2026-08-27, the sitting of Amendment 55), not carried
   over from a commit message. `npm run test:all` runs both; CI runs both on
   every push. They were 129 and 220 through Amendment 33, 163 and 376 through
   Amendment 46, and 163 and 384 through Amendment 47.
-- **The view split has started, and the seam is not where the audit guessed**
-  (2026-08-28). `views/daily/state.js` is out, which is what unblocks the rest.
-  The next cut is the *day* half of calendar.js — the panel, the readings and
-  hymns markup, the feast index and the reach helpers, about 450 lines that
-  call nothing in the roll, the rail or the month. **The rail and the month
-  cannot be separated from each other** and should be taken as one module when
-  their turn comes. Approved as a multi-sitting job: one view per sitting,
-  suite green between.
+- **The view split is done** (Amendment 55). `views/calendar.js` is 699 lines
+  over seven modules in `src/views/daily/`; `views/saints.js` is 183 over nine
+  in `src/views/index/`; the 9,308-line browser spec is six files by surface.
+  **No behaviour changed** — the same suite asserts the same things about the
+  same pages, which is the whole claim. Two things the audit got wrong and the
+  code corrected: **the rail and the month cannot be separated from each
+  other** (the month calls `buildRail`, `settle`, `travel`, `stepCursor`), and
+  two documents the audit called archive are living specification, cited as
+  `brief §N` and `Addendum X` in some thirty comments.
+- **Run `node scripts/extraction-check.mjs` on every code move, before the
+  build.** A green build says nothing about whether an extraction is complete:
+  a bare reference to a name that never travelled is valid JavaScript until the
+  line runs. `BASE` left behind cost 88 red tests, a stranded local called
+  `asideNote` cost 116, and thirteen missing imports on the site's front page
+  went unremarked by `✓ built`. The order that works is **cut, check, fix,
+  build, suite** — the build is the least informative of the three gates. Use
+  `--locals` when the thing being split is a function body rather than a file.
 - **The first download is 133 kB of JavaScript, not 470** (Amendment 52). The
   day records and the four locale packs are their own chunks: `data/days.js`
   holds the seam for the first — started at boot, awaited *beside* the
@@ -1006,6 +1015,13 @@ session). SESSIONS.md has each in full.
 - **Confirmation that CI is green** for whatever was pushed last. Pushing
   happens in a separate session; what is owed here is the green run before
   anything is built on top.
+- **Two browser tests have started flaking, and they want their own sitting.**
+  `a thrown rail coasts to a halt` and `the Index opens shuffled` fail
+  intermittently in a full run and pass 6 of 6 in isolation, which points at
+  machine load rather than at the pages. They were left alone through the whole
+  view split on purpose: guessing at a timing failure in the middle of a
+  refactor is how a real regression gets buried in a sleep. Worth deciding
+  whether to make them deterministic or to accept a retry.
 - **Nothing shows a day in a non-civil reckoning any more, and it is now
   further from doing so than it was.** A brief window (2026-08-23) had the
   Daily page print the chosen church's own-reckoning date under the strip;
@@ -1037,9 +1053,14 @@ session). SESSIONS.md has each in full.
   without reintroducing layout shift, at the cost of a small build step for
   the hashed filenames. Perceived quality, not correctness — your call, at the
   ship gate.
-- **Search reaches display names only.** The MiniSearch index is built from the
-  manifest, which carries `display_name` but not the `names` array, so Ἀντώνιος
-  and Ⲁⲛⲧⲱⲛⲓⲟⲥ find nothing. Fixing it costs manifest bytes — author's call.
+- **Search does not reach the historical name forms.** It reaches every
+  language's display form — `card.names` in the manifest is `{ru: "Авдий",
+  el: "Αβδαίος…"}`, present on 665 of 742 and indexed since 2026-08-26. But
+  `saint.json` has a *different* field of the same name, an array of script
+  forms (`{form: "Ἀντώνιος", lang: "grc"}`, `Ⲁⲛⲧⲱⲛⲓⲟⲥ`, `Antonius`), and that
+  one is not in the manifest, so those find nothing. **Two fields called
+  `names` holding unrelated things** is worth knowing before reading either.
+  Carrying the array costs manifest bytes — author's call.
 - **The Index sits in the standard 72ch content column** (DESIGN.md §5), which
   is two cards wide on a desktop. Widening it for that one page is a design
   decision.

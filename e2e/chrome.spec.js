@@ -17,7 +17,7 @@ import {
  * The chrome: the header, its two choosers, the coachmarks, the shelf and the theme.
  *
  * Part of the browser suite, which was one file of 9,308 lines until
- * 2026-08-28 and is now one file per surface. **The tests themselves are
+ * 2026-08-27 and is now one file per surface. **The tests themselves are
  * unchanged** — each carries the instruction that caused it and the date it
  * was written, which is where this suite's provenance has always lived; what
  * moved is only which file it sits in. `helpers.js` holds the shared fixtures.
