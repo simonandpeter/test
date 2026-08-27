@@ -218,16 +218,30 @@ top of the file is.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 166 as of
-  2026-08-26.
-- Browser: everything lives in **one file**, `e2e/quality-floor.spec.js`
-  (~7,600 lines, 422 tests as of 2026-08-26 across two projects). Grep for a
-  selector, a class name, or a phrase from a test title before opening it —
-  don't read it cold start to finish.
+- Unit: `tests/*.test.mjs`, run with `npm test`. Fast (~10s), 171 as of
+  2026-08-28. One file per `src/lib` module, named for the module.
+- Browser: `e2e/`, **one file per surface** since 2026-08-28 — 496 tests across
+  two projects.
+  - `daily.spec.js` — the rail, the month, the day panel, readings, the fast.
+  - `index.spec.js` — the carousel, the grid, the facets, search, the counts.
+  - `saint.spec.js` — the register, the life, the hymns, the licence.
+  - `chrome.spec.js` — the header, its two choosers, the coachmarks, the
+    shelf, the theme, the section scroll.
+  - `quality-floor.spec.js` — the brief's §13 gate: axe, overflow, focus,
+    console. It keeps the name because that is what the gate is called.
+  - `helpers.js` — the shared fixtures (`ready`, `openChooser`, `leaders`,
+    `facet`, `chooseSort`, `aDayThatIsNotToday`, `swipe`, …). **Every spec
+    file repeats the `searchMode` `beforeEach`**; it was one `beforeEach` over
+    one file, and a spec that drops it hands its tests the carousel instead.
+  - It was a single 9,308-line file until then, filed by the sitting each test
+    was written in, so finding a feature's tests meant knowing when it was
+    built. The tests themselves did not change in the move: each still carries
+    the instruction that caused it and its date, which is where the
+    provenance lives.
 - Run one test while iterating: `npx playwright test -g "<part of the title>"`
 - Full run: `npx playwright test` (~5 min: `desktop` + `mobile-360` projects,
   each running every test).
-- **Two traps this file keeps paying for.** (1) The Index grid is virtualised
+- **Three traps this suite keeps paying for.** (1) The Index grid is virtualised
   *and* absolutely positioned, so the mounted set is not the corpus and DOM
   order is not screen order — assert order through `leaders()`, which sorts by
   geometry, and never off `.first()`. (2) A width measured in the native
