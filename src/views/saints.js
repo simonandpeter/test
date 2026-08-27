@@ -26,7 +26,7 @@ import { buildFeastIndex } from '../lib/feasts.js';
 import { formatSubtext, parseIso } from '../lib/calendar-page.js';
 import { escapeHtml as esc, firstParagraphText } from '../lib/markdown.js';
 import { loadDetail, observePrefetch, prefetch } from '../lib/detail.js';
-import { loopSafe, loopScroll, loopSlice } from '../ui/loop-scroll.js';
+import { loopSafe, loopScroll, loopSlice, windowImages } from '../ui/loop-scroll.js';
 import * as store from '../lib/store.js';
 import {
   EMPTY_FILTERS,
@@ -757,6 +757,7 @@ function wireControls() {
     toggle.removeEventListener('click', onToggle);
     state.loop?.destroy();
     state.carouselPrefetch?.();
+    state.carouselWindow?.();
   });
 }
 
@@ -889,6 +890,8 @@ function applyMode() {
     state.loop = null;
     state.carouselPrefetch?.();
     state.carouselPrefetch = null;
+    state.carouselWindow?.();
+    state.carouselWindow = null;
     state.carouselKey = null;
   }
 }
@@ -939,10 +942,18 @@ function carouselCard(item, router) {
   // an icon that is taller than it is wide is simply a taller card. The
   // blurred placeholder is dropped with the crop — it was a background sized
   // to *cover* the box, which is the cropping this removes.
+  // `data-src`, not `src`: `windowImages` hands the source over as the card
+  // comes near and takes it back when it goes away, so the row holds only the
+  // pictures around it rather than all 72 at once. The `width` and `height`
+  // attributes are what make that free — they give the box an aspect ratio, so
+  // it is exactly as tall with no picture in it as with one, and nothing
+  // reflows either way. `loading="lazy"` is gone with them: the source is not
+  // in the document until we put it there, which is a stricter promise than
+  // the browser's own.
   const media = item.image
     ? `<span class="cx-media">
-        <img src="${BASE + item.image.src}" alt=""
-          width="${item.image.w}" height="${item.image.h}" loading="lazy" decoding="async" />
+        <img data-src="${BASE + item.image.src}" alt=""
+          width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
     : '<span class="cx-media is-blank" aria-hidden="true"></span>';
   // The office and the dates, the same line the Index cards carry (author,
@@ -987,6 +998,8 @@ function paintCarousel() {
 
   state.loop?.destroy();
   state.loop = null;
+  state.carouselWindow?.();
+  state.carouselWindow = null;
   if (!run.length) {
     track.innerHTML = '';
     return;
@@ -1004,10 +1017,18 @@ function paintCarousel() {
     // no offset worth keeping, and the old one would land on other saints.
     startAt: state.carouselAt ?? null,
   });
-  for (const img of track.querySelectorAll('img')) {
-    if (img.complete) continue;
-    img.addEventListener('load', () => state.loop?.measure(), { once: true });
-  }
+  /*
+   * Only the pictures around the viewport are held; the rest keep their boxes
+   * and give up their bitmaps.
+   *
+   * Nothing re-measures on a picture's arrival any more, and nothing needs to:
+   * a card's width is `--cx-w` and a picture cannot change it, so the offsets
+   * the loop reads are the same before any image has loaded as after. The
+   * `load` listeners that used to sit here were repairing a *different* fault
+   * — a `measure()` that ran before the track had been laid out — which
+   * loop-scroll now repairs from its own frame, where it can see it.
+   */
+  state.carouselWindow = windowImages(track);
   // One observer at a time. The track is rebuilt whenever the pool changes, and
   // pushing a fresh cleanup onto the pile each time would leave every previous
   // observer watching nodes that are no longer in the document.

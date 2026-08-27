@@ -885,9 +885,32 @@ html.is-rolling #view {
    the 72ch column, because a carousel that ends where the text ends reads as a
    list that happens to be sideways. The margin trick keeps it inside the
    column's flow without needing a second layout container. */
+/* One column width for the whole row, and one ceiling for the pictures. Both
+   are read by `.cx-card`, `.cx-media`, `.cx-name` and `.cx-sub`, which held
+   four copies of the same 150px until 2026-08-27 — four places to miss when
+   the size changes, which is exactly what the desktop step below would have
+   had to do. */
 .carousel {
   margin-inline: calc(50% - 50vw);
   margin-top: var(--space-5);
+  --cx-w: 150px;
+  --cx-max-h: 240px;
+}
+
+/* **Half again as wide on a desktop** (author, 2026-08-27: "Make the carousel
+   images larger on desktop they are tiny at the moment. The width should be at
+   least 1.5x on desktop"). 240 against 150 is 1.6x, and the ceiling rises with
+   it in the same proportion so a tall icon is not suddenly scaled down to a
+   band it used to clear.
+
+   700px, not the 560 the chrome splits at: at 240 a 560px screen holds barely
+   two cards and the row stops reading as a row. Between the two widths the
+   phone's size is the right one. */
+@media (min-width: 700px) {
+  .carousel {
+    --cx-w: 240px;
+    --cx-max-h: 384px;
+  }
 }
 
 /* A native scroller — never `touch-action: none` (ui/loop-scroll.js says why at
@@ -931,7 +954,7 @@ html.is-rolling #view {
   display: grid;
   grid-template-rows: 1fr auto auto;
   row-gap: var(--space-1);
-  width: 150px;
+  width: var(--cx-w);
   text-decoration: none;
   color: inherit;
 }
@@ -947,7 +970,7 @@ html.is-rolling #view {
    stops the short ones stretching to match. */
 .cx-media {
   display: block;
-  width: 150px;
+  width: var(--cx-w);
   border-radius: var(--radius-cell);
   overflow: hidden;
 }
@@ -965,7 +988,7 @@ html.is-rolling #view {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 240px;
+  max-height: var(--cx-max-h);
   object-fit: contain;
 }
 
@@ -973,7 +996,7 @@ html.is-rolling #view {
    line of text; a square is the least it can claim without implying a shape
    the picture would have had. */
 .cx-media.is-blank {
-  height: 150px;
+  height: var(--cx-w);
 }
 
 /* A saint with no icon keeps a tile, drawn as the recessed field rather than
@@ -988,7 +1011,7 @@ html.is-rolling #view {
    the pictures are their own heights. */
 .cx-name {
   display: block;
-  width: 150px;
+  width: var(--cx-w);
   font-size: 14px;
   line-height: 1.35;
   color: var(--ink);
@@ -997,7 +1020,7 @@ html.is-rolling #view {
 /* What they held and when they lived — the Index card's own subtext line. */
 .cx-sub {
   display: block;
-  width: 150px;
+  width: var(--cx-w);
   color: var(--ink-soft);
   font-size: 12.5px;
   line-height: 1.35;

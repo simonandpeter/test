@@ -101,6 +101,35 @@ in base.css (L605)
   header says which parts came from the cross-church build and why each is
   load-bearing. The track draws a **sample** — `CAROUSEL_POOL`, imaged saints
   first — not the whole corpus.
+- **The row does not stop for the pointer** (2026-08-27) — a cursor over a
+  full-bleed row is where a desktop cursor simply is. A touch and a focus still
+  stop it; `still()` is the list.
+- **`windowImages()` hands out the `src`es**, a few cards either side of the
+  track, and takes them back after. Cards are never removed — the loop's
+  arithmetic is read from real offsets and removing one moves every offset
+  after it. This is only free because each `<img>` carries `width`/`height`:
+  those give the box an `aspect-ratio`, so it is exactly as tall empty as
+  full. **Drop the attributes and every scroll becomes a reflow.**
+- **The wheel is capped velocity, not a target** — `wheelMax` px/s however hard
+  it is spun, `wheelDecay` for how far one hand's worth carries. The cap is
+  what turns `windowImages`' fixed distance into a guaranteed decode time, so
+  the two numbers are a pair. It `preventDefault`s, so over the row the wheel
+  drives the row and not the page.
+- **`loopScroll` re-measures from its own frame until the geometry is real.**
+  A `measure()` that runs before the track is laid out reads every offset as 0,
+  which leaves `bodySpan` 0, `wrap()` disabled and `started` unlatched — the
+  row drifts off the end of the clone buffer with no period to correct
+  against. That was survivable only by accident until 2026-08-27: every `<img>`
+  had a `load` listener that re-measured, so the first picture to arrive
+  repaired it. `windowImages` stopped the pictures loading on their own and the
+  accident stopped happening (the row opened at 62 px, unwrapped). Card widths
+  are `--cx-w` and no picture can change them, so nothing re-measures on load
+  any more and nothing needs to.
+- **The card's size is `--cx-w`/`--cx-max-h` on `.carousel`**, one place rather
+  than the four copies of `150px` that `.cx-card`, `.cx-media`, `.cx-name` and
+  `.cx-sub` each held. 240 px past 700 px wide, 150 below it (2026-08-27, "at
+  least 1.5x on desktop" — 1.6). 700 and not the chrome's 560: at 240 a 560 px
+  screen holds barely two cards.
 - A **row** reads name-first since 2026-08-27: `.row-body`, then the picture,
   then the mark (`order: 1/2/3`). An imageless row keeps a blank 48 px slot
   (`.index-media.is-blank`) so the marks stay in one column.

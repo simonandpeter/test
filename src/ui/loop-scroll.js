@@ -27,14 +27,27 @@
  *    touch tracking for the element and the track stops answering gestures
  *    altogether. Corrections wait for the gesture to finish.
  *
- * **What is dropped:** the old wheel tween. It existed to give a ten-item row
- * its own easing; a native scroller with `scroll-behavior: smooth` does the
- * same job here without a second position to keep in step, and one authority
- * over `scrollLeft` is one fewer thing to desync.
+ * **What came back on 2026-08-27:** the wheel, asked for so that a card which
+ * has gone past can be fetched back ("allow a bit of horizontal scrolling on
+ * desktop with the mouse wheel ... so if something goes off screen that caught
+ * your interest you can go back. But limit the scroll speed so the images load
+ * well"). It is expressed as *velocity* rather than as the old build's second
+ * position eased toward: a notch adds to `wheelVel`, which is clamped to
+ * `wheelMax` px/s and decays. That clamp is the whole point — it is what a
+ * spun wheel cannot exceed, so the window of loaded images ahead of the row
+ * (see `windowImages`) always has time to fill. One authority over
+ * `scrollLeft` is kept: the wheel moves `pos`, the same variable the drift
+ * moves, and `wrap()` corrects both.
  *
  * **What is new:** the drift runs *continuously* rather than after five idle
  * seconds, because here it is the mode's whole reason for being, and it stands
- * down while a reader is touching, hovering, or tabbed into the track.
+ * down while a reader is touching the track or tabbed into it.
+ *
+ * **It does not stand down for the pointer** (author, 2026-08-27: "when
+ * hovering over a saint, the carousel stops, but it should keep going"). A
+ * mouse resting anywhere over a full-bleed row is the ordinary state of a
+ * desktop reader — the cursor has to be somewhere — so pausing on hover meant
+ * the row was stopped most of the time it was being looked at.
  */
 
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -69,6 +82,53 @@ export function loopSafe(list, min = 10) {
 }
 
 /**
+ * Holds only the pictures near the viewport, and lets go of the rest (author,
+ * 2026-08-27: "It is also quite slow and laggy, maybe only render whats on
+ * screen and 2-3 cards just off screen as well").
+ *
+ * **The nodes are never removed, only their `src`.** The track's whole
+ * arithmetic is read from real offsets — `measure()` above — so taking cards
+ * out of the DOM would move every offset after them and the wrap would stop
+ * landing on identical content. What is expensive here is not the empty
+ * `<a>`: it is a decoded bitmap per card held live while the row is composited
+ * every frame, and that is what this releases.
+ *
+ * Releasing a `src` is layout-safe *only because* every `<img>` carries its
+ * `width` and `height` attributes: the UA style sheet turns those into an
+ * `aspect-ratio`, so the box keeps its exact size with no picture in it. Drop
+ * the attributes and this silently becomes a reflow on every scroll.
+ *
+ * `margin` is in pixels either side of the track's own box. It should be a
+ * few cards wide — the request was two or three — and it works with the
+ * wheel's speed clamp: a bounded speed turns a fixed distance into a
+ * guaranteed decode time, which is why neither number is meaningful alone.
+ */
+export function windowImages(track, { margin = 700 } = {}) {
+  if (typeof IntersectionObserver !== 'function') {
+    // No observer is not a reason to show an empty row: hand every picture its
+    // source at once and behave exactly as the build did before this existed.
+    for (const img of track.querySelectorAll('img[data-src]')) img.src = img.dataset.src;
+    return () => {};
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        const img = e.target.querySelector('img[data-src]');
+        if (!img) continue;
+        if (e.isIntersecting) {
+          if (img.getAttribute('src') !== img.dataset.src) img.src = img.dataset.src;
+        } else if (img.hasAttribute('src')) {
+          img.removeAttribute('src');
+        }
+      }
+    },
+    { root: track, rootMargin: `0px ${margin}px` },
+  );
+  for (const card of track.children) io.observe(card);
+  return () => io.disconnect();
+}
+
+/**
  * Wires an already-populated track for endless scrolling.
  *
  * `track` holds `loopSlice(items, buffer)` children in order. `count` is the
@@ -79,7 +139,11 @@ export function loopSafe(list, min = 10) {
  * element reports `scrollLeft` 0 and ignores writes, which silently throws the
  * position away.
  */
-export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = null } = {}) {
+export function loopScroll(
+  track,
+  count,
+  { buffer = 12, speed = 26, startAt = null, wheelMax = 900, wheelGain = 1.4, wheelDecay = 0.94 } = {},
+) {
   let headSpan = 0; // where the first real item starts
   let bodySpan = 0; // one full period, first real item to the copy after the run
   let lowerBound = 0; // one item in from the true leading edge
@@ -88,12 +152,12 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
   let touchActive = false;
   let touchSettle = 0;
   let paused = false;
-  let hovered = false;
   let focused = false;
   let raf = null;
   let pos = null;
   let lastWritten = -1;
   let currentSpeed = 0;
+  let wheelVel = 0;
   let last = performance.now();
 
   function measure() {
@@ -171,13 +235,36 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
     // course, which the clone buffer is sized to survive.
     touchSettle = performance.now() + 700;
   };
-  const onEnter = () => {
-    hovered = true;
+  /*
+   * A notch of the wheel is a push, not a destination. `wheelVel` is clamped
+   * to `wheelMax` px/s however hard the wheel is spun, which is what keeps a
+   * flick from outrunning the images: `windowImages` loads a fixed distance
+   * ahead of the row, and a capped speed is what turns that distance into a
+   * guaranteed amount of *time* for a picture to decode.
+   *
+   * The dominant axis wins, so a trackpad's sideways swipe reads as naturally
+   * as a mouse's only wheel. `preventDefault` is why the listener cannot be
+   * passive — and it is the trade this makes: over the row the wheel drives
+   * the row, so a reader scrolling the *page* has to be off it. The row is a
+   * band rather than a screenful, and the page moves anywhere above or below.
+   *
+   * **`wheelDecay` is a distance, not a feel.** At 0.86 a notch spent itself in
+   * about a tenth of a second and a hard spin bought 64 px — a quarter of one
+   * desktop card, which is not "going back" to anything. 0.94 is a ~270 ms
+   * tail, so one notch travels about a third of a card and a reader who keeps
+   * spinning holds the clamp for as long as they spin. The cap still decides
+   * how *fast*; this decides how far a hand's worth of it carries.
+   */
+  const onWheel = (e) => {
+    if (reducedMotion()) return;
+    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    if (!delta) return;
+    e.preventDefault();
+    if (pos === null) pos = track.scrollLeft;
+    wheelVel = Math.max(-wheelMax, Math.min(wheelMax, wheelVel + delta * wheelGain));
+    // The drift is eased back up from wherever the wheel leaves the row, not
+    // snapped, so letting go of the wheel does not read as a second push.
     currentSpeed = 0;
-    pos = null;
-  };
-  const onLeave = () => {
-    hovered = false;
   };
   const onFocusIn = () => {
     focused = true;
@@ -191,17 +278,36 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
   track.addEventListener('touchstart', onTouchStart, { passive: true });
   track.addEventListener('touchend', onTouchEnd, { passive: true });
   track.addEventListener('touchcancel', onTouchEnd, { passive: true });
-  track.addEventListener('pointerenter', onEnter);
-  track.addEventListener('pointerleave', onLeave);
+  track.addEventListener('wheel', onWheel, { passive: false });
   track.addEventListener('focusin', onFocusIn);
   track.addEventListener('focusout', onFocusOut);
 
-  const still = () => paused || hovered || focused || touchActive || performance.now() < touchSettle;
+  const still = () => paused || focused || touchActive || performance.now() < touchSettle;
 
   function frame(now) {
     const dt = Math.min(now - last, 50);
     last = now;
     raf = requestAnimationFrame(frame);
+
+    /*
+     * **Until the row has real geometry, keep asking for it.** `measure()` runs
+     * once from the constructor, and if the track is not laid out at that
+     * moment every offset reads 0 — so `bodySpan` is 0, `wrap()` returns
+     * early, and `started` never latches: the row drifts from wherever it
+     * happens to be, with no period to correct against, until it runs off the
+     * true end of the clone buffer.
+     *
+     * This was survivable only by accident before 2026-08-27. Each `<img>`
+     * carried a `load` listener that re-measured, so the first picture to
+     * arrive repaired the geometry. Then the pictures stopped loading on their
+     * own (`windowImages` hands out sources now) and the accident stopped
+     * happening — the row opened at 62 px instead of the first real item, with
+     * no wrap at all. The repair belongs here, where the failure is, and not
+     * in whatever else the caller happens to be doing.
+     *
+     * It costs a forced layout per frame only while the answer is still 0.
+     */
+    if (!started || !bodySpan) measure();
 
     // The cheap questions first: `clientWidth` forces a layout, and there is no
     // reason to pay for one on a frame that was never going to move anyway —
@@ -212,6 +318,7 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
     // position it will be restored to the moment it is shown again.
     if (still() || reducedMotion() || !track.clientWidth) {
       currentSpeed = 0;
+      wheelVel = 0;
       pos = null;
       return;
     }
@@ -219,7 +326,18 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
     // Eased up to cruising speed rather than snapped to it, on the same shape
     // the old build used for its wheel decay, run the other way.
     currentSpeed += (speed - currentSpeed) * 0.06;
-    pos += currentSpeed * (dt / 1000);
+    /*
+     * The wheel's own velocity, decaying toward nothing, added to the drift's.
+     * Added rather than substituted: a small nudge forward should read as the
+     * row briefly hurrying, and a push *backwards* strong enough to beat the
+     * drift carries the row back — which is the whole request. When it has
+     * decayed away the drift is simply what is left, with no handover to see.
+     */
+    if (wheelVel) {
+      wheelVel *= wheelDecay ** (dt / 16.67);
+      if (Math.abs(wheelVel) < 1) wheelVel = 0;
+    }
+    pos += (currentSpeed + wheelVel) * (dt / 1000);
     track.scrollLeft = pos;
     lastWritten = track.scrollLeft;
     // Corrected in the same frame, synchronously, rather than through the
@@ -238,6 +356,7 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
     pause() {
       paused = true;
       currentSpeed = 0;
+      wheelVel = 0;
       pos = null;
     },
     resume() {
@@ -252,8 +371,7 @@ export function loopScroll(track, count, { buffer = 12, speed = 26, startAt = nu
       track.removeEventListener('touchstart', onTouchStart);
       track.removeEventListener('touchend', onTouchEnd);
       track.removeEventListener('touchcancel', onTouchEnd);
-      track.removeEventListener('pointerenter', onEnter);
-      track.removeEventListener('pointerleave', onLeave);
+      track.removeEventListener('wheel', onWheel);
       track.removeEventListener('focusin', onFocusIn);
       track.removeEventListener('focusout', onFocusOut);
     },

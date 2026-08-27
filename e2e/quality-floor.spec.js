@@ -8547,9 +8547,18 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
   expect(edges.lowAfter, 'the near edge wrapped forward').toBeGreaterThan(edges.lowBefore);
 });
 
-test('the carousel drifts on its own, and stands still while a reader is on it', async ({ page }) => {
-  // The drift is the mode's whole reason for being, and it must give way the
-  // moment a reader reaches for the row.
+test('the carousel drifts on its own, and keeps drifting under the pointer', async ({ page }) => {
+  /*
+   * The heir of 'stands still while a reader is on it', inverted at the
+   * author's instruction (2026-08-27: "on desktop, when hovering over a saint,
+   * the carousel stops, but it should keep going"). A mouse over a full-bleed
+   * row is where a desktop cursor simply *is* — it has to rest somewhere, and
+   * the row runs the width of the window — so pausing on hover meant the row
+   * was stopped for most of the time anyone was looking at it.
+   *
+   * What still stops it is a reader who has actually taken hold: a touch, or
+   * the keyboard tabbing into the track. Those have their own tests.
+   */
   await carouselMode(page);
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -8559,12 +8568,11 @@ test('the carousel drifts on its own, and stands still while a reader is on it',
   const started = await at();
   await expect.poll(at, { timeout: 4000 }).toBeGreaterThan(started);
 
-  // A pointer on the row stops it.
   await page.locator('.cx-card').first().hover();
-  await page.waitForTimeout(200);
   const held = await at();
-  await page.waitForTimeout(700);
-  expect(await at(), 'the drift ran on under the reader').toBe(held);
+  await expect
+    .poll(at, { timeout: 4000, message: 'the row stopped under the pointer' })
+    .toBeGreaterThan(held);
 });
 
 test('under reduced motion the carousel does not drift, and the modes swap without falling', async ({ browser }) => {
@@ -8910,6 +8918,125 @@ test('a carousel card prints the whole name, the office and the dates, and shows
   for (const c of cards.filter((c) => c.fit)) expect(c.fit).toBe('contain');
   // And the subtext is there for the saints who have one to show.
   expect(cards.some((c) => c.hasSub), 'no card carries an office or a date').toBe(true);
+});
+
+test('the carousel holds only the pictures near it, and the empty boxes keep their size', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "It is also quite slow and laggy, maybe only render
+   * whats on screen and 2-3 cards just off screen as well."
+   *
+   * The nodes stay — `ui/loop-scroll.js` measures real offsets and taking
+   * cards out would move every offset after them — so what is asserted is the
+   * *sources*: far fewer than the 72 cards in the row, and the boxes of the
+   * ones without a source exactly as tall as the boxes of the ones with, which
+   * is the property that makes releasing a src free of reflow.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await page.waitForTimeout(700);
+
+  const held = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const imgs = [...track.querySelectorAll('img')];
+    const boxOf = (i) => Math.round(i.getBoundingClientRect().height);
+    const withSrc = imgs.filter((i) => i.hasAttribute('src'));
+    const without = imgs.filter((i) => !i.hasAttribute('src'));
+    return {
+      total: imgs.length,
+      loaded: withSrc.length,
+      // Every picture keeps a box, source or none. A zero here is the reflow
+      // this design exists to avoid.
+      collapsed: imgs.filter((i) => boxOf(i) === 0).length,
+      trackWidth: track.clientWidth,
+      // Nothing far from the row should be holding a bitmap.
+      farLoaded: withSrc.filter((i) => {
+        const r = i.getBoundingClientRect();
+        return r.right < -1500 || r.left > track.clientWidth + 1500;
+      }).length,
+      sample: without.length,
+    };
+  });
+
+  expect(held.total, 'the row is not the full rendered run').toBeGreaterThan(40);
+  expect(held.loaded, 'every picture in the row is still loaded at once').toBeLessThan(held.total / 2);
+  expect(held.loaded, 'nothing loaded at all').toBeGreaterThan(0);
+  expect(held.sample, 'no picture was released').toBeGreaterThan(0);
+  expect(held.collapsed, 'a released picture collapsed its box').toBe(0);
+  expect(held.farLoaded, 'a picture far off the row is holding a bitmap').toBe(0);
+});
+
+test('a carousel card is half again as wide on a desktop', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "Make the carousel images larger on desktop they are
+   * tiny at the moment. The width should be at least 1.5x on desktop."
+   *
+   * Both widths are taken in one test rather than left to the two projects,
+   * because the claim is a *ratio* between them and neither project can see
+   * the other. It is a CSS pixel measure either way, so no face reads into it
+   * (CLAUDE.md's second standing trap).
+   */
+  await carouselMode(page);
+  await ready(page);
+
+  const widthAt = async (w) => {
+    await page.setViewportSize({ width: w, height: 900 });
+    await page.goto(INDEX, { waitUntil: 'networkidle' });
+    await expect(page.locator('.cx-card').first()).toBeVisible();
+    return page.evaluate(() => document.querySelector('.cx-card').getBoundingClientRect().width);
+  };
+
+  const phone = await widthAt(360);
+  const desk = await widthAt(1280);
+  expect(desk / phone, 'a desktop card is not half again as wide').toBeGreaterThanOrEqual(1.5);
+});
+
+test('the wheel carries the carousel back, and no faster than its cap', async ({ page }) => {
+  /*
+   * Author, 2026-08-27: "allow a bit of horizontal scrolling on desktop with
+   * the mouse wheel ... This is so if something goes off screen that caught
+   * your interest your can go back. But limit the scroll speed so the images
+   * load well."
+   *
+   * Two claims, and the second is the one that needs a test at all: *back* is
+   * easy to see, but a cap is invisible until something is spun hard enough to
+   * exceed it. So the wheel is spun far harder than any reader would, and the
+   * row is asked how fast it actually went. The cap is what gives
+   * `windowImages`' fixed distance a guaranteed decode time; without it the
+   * two halves of the answer do not hold together.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const run = await page.evaluate(async () => {
+    const track = document.querySelector('[data-carousel-track]');
+    const start = track.scrollLeft;
+    // Twenty notches at once: far past anything a hand does, so the clamp is
+    // the only thing that can be deciding the speed below.
+    for (let i = 0; i < 20; i++) {
+      track.dispatchEvent(new WheelEvent('wheel', { deltaY: -240, bubbles: true, cancelable: true }));
+    }
+    // Two frames, timed, and the distance between them.
+    const frame = () => new Promise((r) => requestAnimationFrame(r));
+    await frame();
+    const t0 = performance.now();
+    const p0 = track.scrollLeft;
+    await frame();
+    await frame();
+    const t1 = performance.now();
+    const p1 = track.scrollLeft;
+    await new Promise((r) => setTimeout(r, 1200));
+    return { start, p0, p1, pxPerSec: Math.abs((p1 - p0) / ((t1 - t0) / 1000)), settled: track.scrollLeft };
+  });
+
+  expect(run.settled, 'the wheel did not carry the row backwards').toBeLessThan(run.start);
+  // The clamp is 900 px/s. A frame's worth of slack either side of it, and the
+  // drift's own 26 px/s pushing the other way.
+  expect(run.pxPerSec, 'the wheel outran its own speed cap').toBeLessThan(1100);
+  expect(run.pxPerSec, 'the wheel barely moved the row').toBeGreaterThan(100);
 });
 
 test('the carousel fades in rather than appearing, and comes back where it was left', async ({ page }) => {
