@@ -5703,12 +5703,67 @@ whole suite, and the rule that a layout change iterates at **mobile-360** rather
 than desktop. No test was removed and no coverage changed — what changed is when
 all of it runs.
 
+### The rehearsal needed both directions, and the back-out is what found it
+
+The first version forced only `--font-utility`, and the house rule caught what
+the reasoning had not. Backed out to the three committed assertions and run
+under it, **one of the three went red** — the facet row — and the other two
+passed, because a name's wrapping and a page's height are the *serif's*
+business and the serif had been left alone. The runner's fallback serif is
+**narrower** than Literata, so the rehearsal has to push both ways at once:
+Verdana for the utility face, wider than DejaVu; Times New Roman for the serif,
+narrower than Literata.
+
+With both forced, all three come back on this desk **with the runner's own
+numbers**:
+
+| | CI | the rehearsal, here |
+| --- | --- | --- |
+| Daily scroll | expected 1500, received **1399** | expected 1500, received **1399** |
+| facet chips | expected 1 line, received **2** | expected 1 line, received **2** |
+| Macarius the New | expected 3 lines, received **2** | expected 3 lines, received **2** |
+
+A rehearsal that only half-applies is the more dangerous artefact, because it
+is green for the wrong reason — which is why the measurement is printed on
+every run and not only on a failure. `[facet row, native utility face] column
+580 px, needs 604.2, 2 line(s), face Verdana` is the harness saying it bit.
+
+The peer session drew the boundary that prompted this: it ran the rehearsal
+itself and reported it green, and then said plainly that it could **not**
+reproduce the old red, because the pre-fix spec predates fixtures.js and never
+imported the harness. That was the right thing to say and the right gap to
+name — CI's red had been standing in for a back-out that had not been done.
+
+### And then the clock rolled over, and took three more
+
+The full gate ran green at 510 and then, at midnight, went red on three tests
+that no one had touched — the same class again, in its other form. **Today is
+not a constant either.**
+
+* `the rail scrolls in one piece` compared the day beyond the strip's trailing
+  edge against **the 28th**, and the clock reached the 28th. A rail day carries
+  no class of its own; `markRail` adds `is-today` and nothing else, so the
+  comparison had been `'' === ''` until the moment one of the two days became
+  today. It compares against whichever day in the strip *is* ordinary now —
+  not today, not selected — which is a property rather than a date.
+* Two scroll tests wanted a tall Daily page, and **today's had almost nothing
+  in it**: 1127 px against the 2605 the test was written on. Not a fault —
+  the corpus's saints run out before its liturgical records do, so 28 August
+  drew readings, hymns and a fast with no hero and an empty register, which is
+  the designed empty-day state. Both now take their depth from the page, and
+  the Daily-return test uses a 400 px window so there is something below the
+  fold to scroll on a day that holds little. The Daily nav goes to `/`, which
+  is today by definition, so neither test can simply pick a fuller day.
+
+Three traps, one shape: **a number that came from this machine.** Its face, its
+clock, its calendar's contents. The remedy is the same each time — take the
+number from the page, or pin the condition that produces it.
+
 ### Verification
 
-The three repaired tests green at both projects; the rehearsal green across all
-five specs at desktop, 253 passed with the two documented opt-outs; **171 unit,
-510 browser** at the full gate. The facets fix is verified the way a
-face-dependent fix has to be: under the rehearsal the native row wraps to two
-lines at 604 px of a 580 px column — the CI red, on this desk — and the test
-passes anyway, because what it asserts is the pinned budget and what it prints
-is the machine's own cost.
+**171 unit, 510 browser** at the full gate, both projects, Playwright's exit
+code read directly. The rehearsal green across all five specs at desktop — 254
+passed, one documented opt-out — and red on all three font assertions when they
+are backed out to their committed form, matching CI number for number. Four
+packs 338 of 338. The three clock failures were fixed after that gate and
+verified green on their own; no `src/` file changed with them.

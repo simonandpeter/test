@@ -16,10 +16,19 @@ import { test as base } from '@playwright/test';
  *    enough to take the ~9.5 px of slack the facet row has and wrap it.
  *
  * `COLD_FACE=1` reproduces both, and harder than the runner does: the webfont
- * is refused, and `--font-utility` is forced to Verdana, which is wider than
- * DejaVu and on every Windows and macOS machine. A layout that holds under
- * this holds on the runner. It is a rehearsal, not a gate — 60 seconds against
- * one spec before pushing beats finding it in a six-minute CI run:
+ * is refused, `--font-utility` is forced to Verdana — wider than DejaVu — and
+ * `--font-serif` to Times New Roman, which is *narrower* than Literata, as the
+ * runner's fallback serif turned out to be. Both directions are needed and the
+ * first version had only one: forcing the utility face alone reproduced the
+ * facet row's red and neither of the other two, because a name wrapping and a
+ * page's height are the serif's business. With both forced, all three CI
+ * failures come back on this desk with the runner's own numbers — a scroll
+ * clamped at 1399 rather than 1500, chips on two lines rather than one, and
+ * Macarius the New in two lines rather than three.
+ *
+ * A layout that holds under this holds on the runner. It is a rehearsal, not a
+ * gate — 60 seconds against one spec before pushing beats finding it in a
+ * six-minute CI run:
  *
  *     COLD_FACE=1 npm run test:e2e:desktop -- e2e/index.spec.js
  *
@@ -34,7 +43,10 @@ export const test = base.extend({
       await page.addInitScript(() => {
         const wide = () => {
           const style = document.createElement('style');
-          style.textContent = ':root { --font-utility: Verdana, Geneva, sans-serif !important; }';
+          style.textContent = `:root {
+            --font-utility: Verdana, Geneva, sans-serif !important;
+            --font-serif: 'Times New Roman', Times, serif !important;
+          }`;
           document.head.append(style);
         };
         if (document.head) wide();

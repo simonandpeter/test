@@ -412,18 +412,25 @@ tests went green here and red on the runner on 2026-08-27, all for one reason:
 2. **`system-ui` is DejaVu Sans**, not Segoe UI, and DejaVu is wider.
 
 `COLD_FACE=1` reproduces both, harder than the runner does — the webfont is
-refused and `--font-utility` is forced to Verdana, which is wider than DejaVu
-and present on every Windows and macOS machine (`e2e/fixtures.js`):
+refused, `--font-utility` is forced to Verdana (wider than DejaVu) and
+`--font-serif` to Times New Roman (**narrower** than Literata, as the runner's
+fallback proved to be). **Both directions are load-bearing**: forcing the
+utility face alone reproduces the facet row's failure and neither of the other
+two, because a name's wrapping and a page's height are the serif's business
+(`e2e/fixtures.js`):
 
 ```
 COLD_FACE=1 npm run test:e2e:desktop -- e2e/index.spec.js
 ```
 
-Sixty seconds against one spec, or 2.5 minutes against all of them at one
-project. It found the CI failure exactly: `[facet row, native utility face]
-column 580 px, needs 604.2, 2 line(s)` — the chips needing 604 px of a 580 px
-column, which is the red CI threw and this desk cannot otherwise see. **Run it
-on anything that measures text before asking for a push.**
+Sixty seconds against one spec, or ~90s against all of them at one project. It
+reproduces all three CI failures **with the runner's own numbers** — a scroll
+clamped at 1399, chips on two lines, Macarius the New in two — and prints what
+it cost the native face on every run, pass or fail: `[facet row, native utility
+face] column 580 px, needs 604.2, 2 line(s), face Verdana`. That line is the
+harness saying it bit; **a rehearsal that silently failed to apply would also be
+green**, and there would be no way to tell the two apart. **Run it on anything
+that measures text before asking for a push.**
 
 Two tests are excluded from the rehearsal and say why in their own comments,
 which is the only honest way to exclude one: `a card lifespan is one line`

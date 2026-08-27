@@ -1974,8 +1974,21 @@ test('a restored section never touches zero on the way', async ({ page }) => {
     };
   });
   await page.goto('/', { waitUntil: 'networkidle' });
-  await page.evaluate(() => window.scrollTo(0, 1200));
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+  /*
+   * **The depth is taken from the page** (2026-08-28). A literal 1200 is a
+   * measurement of one day's content: this is `/`, which is today, and the
+   * corpus's saints run out before its liturgical records do — on 28 August
+   * the page had readings, hymns and a fast but no saints, and 1200 px of
+   * scroll simply was not there to be had. What the test is about is the
+   * *route* the restore takes, which is the same at any depth that is not the
+   * top.
+   */
+  const deep = await page.evaluate(() => {
+    window.scrollTo(0, 1200);
+    return Math.round(window.scrollY);
+  });
+  expect(deep, 'the Daily page had nothing to scroll').toBeGreaterThan(200);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
 
   await press('nav.site-nav a[href$="/saints"]');
   await expect(page.locator('.index-controls')).toBeVisible();
@@ -1984,9 +1997,9 @@ test('a restored section never touches zero on the way', async ({ page }) => {
     window.__scrolls = [];
   });
   await press('nav.site-nav a[data-nav-daily]');
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1200);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
 
   const scrolls = await page.evaluate(() => window.__scrolls);
   expect(scrolls, `the restore went by way of the top: ${JSON.stringify(scrolls)}`).not.toContain(0);
-  expect(scrolls.at(-1)).toBe(1200);
+  expect(scrolls.at(-1)).toBe(deep);
 });

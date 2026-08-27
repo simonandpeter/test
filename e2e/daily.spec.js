@@ -668,12 +668,40 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
   await expect(page.locator('.cal-week .grain-side')).toHaveCount(0);
   await expect(page.locator('.cal-week .grain-track')).toHaveCount(0);
 
-  // The day just beyond the trailing edge is real: the 31st, next Monday, in
-  // the same button dress as the 28th — and clicking it selects it.
+  /*
+   * The day just beyond the trailing edge is real: the 31st, next Monday, in
+   * the same button dress as an ordinary day inside the strip — and clicking
+   * it selects it.
+   *
+   * **The dress is compared against a day chosen for being ordinary**
+   * (2026-08-28). It used to be compared against the 28th, the page's own
+   * date, which went red the morning the clock reached it: today wears a ring
+   * of its own, so the two days stopped matching for a reason that has nothing
+   * to do with the rail. CLAUDE.md's third trap, and the third time it has
+   * been paid — a hardcoded date is a measurement of one clock, and every
+   * hardcoded date becomes today eventually. The comparison day is now picked
+   * from the strip by what it is: not selected, and not today.
+   */
   const edge = page.locator('.week-strip [data-iso="2026-08-31"]');
   await expect(edge).toBeVisible();
-  expect(await edge.evaluate((el, sel) => el.className === document.querySelector(sel).className,
-    '.week-strip [data-iso="2026-08-28"]')).toBe(true);
+  const sameDress = await edge.evaluate((el) => {
+    // A rail day carries no class of its own; `markRail` adds `is-today` and
+    // `aria-current="date"` and nothing else. So an ordinary day is one that
+    // is neither, and the comparison is against whichever the strip holds.
+    const ordinary = [...document.querySelectorAll('.week-strip [data-iso]')].find(
+      (d) => d !== el && !d.classList.contains('is-today') && d.getAttribute('aria-current') === null,
+    );
+    return {
+      edge: el.className,
+      ordinary: ordinary?.className ?? null,
+      iso: ordinary?.dataset.iso ?? null,
+      tag: `${el.tagName}/${ordinary?.tagName}`,
+    };
+  });
+  expect(sameDress.ordinary, 'no ordinary day in the strip to compare the edge with').not.toBeNull();
+  expect(sameDress.edge, `the ${sameDress.iso} is dressed differently`).toBe(sameDress.ordinary);
+  // A real day, not scenery: the same element the strip builds for every other.
+  expect(sameDress.tag).toBe('BUTTON/BUTTON');
   await edge.click();
   await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
 
@@ -3654,7 +3682,16 @@ test('a returning Daily page lands where it was left, though it grows after it r
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
   await ready(page);
-  await page.setViewportSize({ width: 1280, height: 800 });
+  /*
+   * **A short window, because the page is today's and today may be empty**
+   * (2026-08-28). The Daily nav goes to `/`, which is today by definition, so
+   * this test cannot pick a day with plenty in it — and the corpus's saints
+   * run out before its liturgical records do. The morning the clock reached
+   * 28 August the page had readings, hymns and a fast but no saints at all:
+   * 1127 px, against the 2605 this was written on. A 400 px window leaves
+   * enough of it below the fold to scroll deep into whatever the day holds.
+   */
+  await page.setViewportSize({ width: 1280, height: 400 });
   await page.goto('/', { waitUntil: 'networkidle' });
   /*
    * Deep enough that a clamp against the pre-hymns height cannot reach it —
@@ -3672,7 +3709,7 @@ test('a returning Daily page lands where it was left, though it grows after it r
     window.scrollTo(0, 1500);
     return Math.round(window.scrollY);
   });
-  expect(deep, 'the Daily page is too short for a deep return to be a claim').toBeGreaterThan(900);
+  expect(deep, 'the Daily page is too short for a deep return to be a claim').toBeGreaterThan(300);
   await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
 
   await press('nav.site-nav a[href$="/saints"]');
