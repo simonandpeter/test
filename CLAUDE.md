@@ -21,8 +21,14 @@ duplicates HANDOFF.md's reasoning; it only says *where*, not *why*.
   - `record.js` — the readings and the feast's hymns, as markup.
   - `panel.js` — the hero, the register and the three silences. It exports
     `paintDay` and nothing else.
-  - Imports run one way: format ← entries, record ← panel, and calendar.js
-    imports from all of them. **Nothing in `daily/` calls back into
+  - `picker.js` — the rail *and* the month, which are one control and not two.
+    It calls `state.select` rather than importing `select`, because the page's
+    navigation funnel stays in calendar.js and an import would run backwards.
+  - `motion.js` — `reducedMotion`, asked by three of the page's parts.
+  - calendar.js is down to ~700 lines: `render`, `select`, the day roll, the
+    liturgy line and the fast bubble. Imports run one way — format and motion
+    at the bottom, then entries and record, then panel and picker, with
+    calendar.js importing from all of them. **Nothing in `daily/` calls back into
     calendar.js**, which is what keeps that true.
 - **The rail and the month are one seam, not two.** The month calls
   `buildRail`, `settle`, `travel`, `stepCursor` and `dayAt`; DESIGN.md says why
@@ -300,7 +306,8 @@ top of the file is.
   reading the diff does not catch it either. `node scripts/extraction-check.mjs
   <before.js> <moved.js...>` asks the one question that does: which names did
   the original declare, rather than import, that a new file uses without
-  having? Run it on every extraction.
+  having? Run it on every extraction. **It exits 1 with names outstanding**, so
+  it works as a pre-commit or CI step and not only by eye.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored. **That applies to a tool as
   much as to a fix**: extraction-check.mjs was written, reported "clean", and

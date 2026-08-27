@@ -32,3 +32,7 @@ export const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
+
+export // Through lib/i18n.js's cache rather than module constants (Amendment 36): a
+// formatter built once can never change language.
+const dayFmt = (d) => formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);

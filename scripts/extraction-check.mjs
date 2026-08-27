@@ -113,8 +113,17 @@ if (!before || !after.length) {
 }
 
 const originalCode = stripped(await readFile(before, 'utf8'));
-const candidates = new Set([...moduleScope(originalCode)].filter((n) => !imported(originalCode).has(n)));
-console.log(`${candidates.size} module-scope declarations in ${path.basename(before)}\n`);
+/*
+ * Everything the original had at module scope: what it declared *and* what it
+ * imported. Imports were left out at first, on the reasoning that a missing
+ * import fails the build — which is wrong twice over. Vite resolves import
+ * *specifiers*; a name that was simply never imported into the new file is a
+ * bare reference, which builds clean and throws at runtime, exactly like
+ * `BASE` did. Found by cutting the picker out and noticing the check could not
+ * have caught it.
+ */
+const candidates = new Set([...moduleScope(originalCode), ...imported(originalCode)]);
+console.log(`${candidates.size} names available at module scope in ${path.basename(before)}\n`);
 
 let findings = 0;
 for (const file of after) {
