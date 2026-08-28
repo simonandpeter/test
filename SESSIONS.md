@@ -6856,6 +6856,50 @@ success are the same green, and the defence is the same: make the instrument
 report what it did. HANDOFF carries that as a class now rather than as three
 anecdotes.
 
+### The fix did not close it, and the failure is not a flake
+
+CI on `90600f5` came back flaky on the same test, and on `1f9069e` **red through
+the retry**, with the deploy skipped. The numbers are the finding:
+
+    90600f5 (flaky)     Expected > 4388   Received 4345
+    1f9069e attempt 1   Expected > 4388   Received 4345
+    1f9069e retry #1    Expected > 4388   Received 4345
+
+**Identical to the pixel, three attempts across two runs**, with `released` 4368
+every time. Timing noise scatters; this does not. It is a deterministic state
+the runner sometimes enters, and what varies is whether it is entered at all.
+
+**The `delivered` assertion passed on all three.** The gesture was a flick; the
+harness did its job. So the throttle mechanism of this amendment is real *and*
+excluded as the cause of these three, which is what a premise assertion is for —
+before it, this run would have said "the rail did not coast" and told nobody
+whether it had been thrown.
+
+### What was measured next, and why nothing shipped for it
+
+Locally, with the gesture now reliable, the rail was found to **rebuild its own
+window mid-coast**: the strip's first day moved from 2026-06-29 to 2026-08-21
+and `scrollLeft` reset from 7995 to a canonical 4489. A coast that carries the
+cursor near the edge of the loaded range re-anchors, and *position after a
+re-anchor measures nothing the reader would notice*. CI's "23 px backwards" is
+plausibly the same event seen small.
+
+So the test was rewritten to watch `is-coasting` — the instrument Amendment 60
+established for this rail's absence case — instead of inferring a coast from net
+displacement. It passed, and **it was not shipped**, because at
+`--repeat-each=12 --workers=10` it failed **5 of 48** on a different assertion:
+`state.aligned`, deterministically, at `released at 4287`. The old test never
+reached that line because it failed earlier. **A second fault sits behind the
+first**, and "at rest" detected as two equal reads 100 ms apart can be a pause
+inside a sequence rather than the end of one.
+
+**That work is reverted and recorded rather than shipped**, on the verifying
+session's advice and on the day's own evidence: three diagnoses of this test
+have already been killed by measurements, and `trace: 'on-first-retry'` means
+`1f9069e`'s run holds a trace of the real failure — the scrollLeft timeline and
+the pointer events, which will say whether a coast began at all. **Read the
+trace before touching the rail's arithmetic.**
+
 ### Verification
 
 174 unit; the full browser suite at both projects; the rehearsal separately. The

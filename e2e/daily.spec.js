@@ -3750,6 +3750,44 @@ test('the day records and the locale packs are fetched, not carried in the entry
   await expect.poll(() => new Set(scripts.map((u) => (u.match(/\/assets\/(ru|ro|el|sr)-/) ?? [])[1]).filter(Boolean)).size).toBe(4);
 });
 
+test('the boot path fetches the manifest and not the coverage statistics', async ({ page }) => {
+  /*
+   * Addendum G1, done 2026-08-28. `loadManifest` fetched `manifest.meta.json`
+   * beside the manifest in one `Promise.all` and hung it on `data.meta`, and a
+   * sweep of `src/` found **no reader** — the only other `.meta` in the
+   * codebase is `image.meta` in lib/detail.js, a different field.
+   *
+   * The file is 1,247 bytes, so the cost was never the payload: it was a second
+   * round trip on the path that blocks first paint, taken on every visit for a
+   * page that does not exist yet. About's statistics are Session 9's and call
+   * `loadManifestMeta()` when they arrive.
+   *
+   * Asserted at the network rather than in a unit test on purpose. What is
+   * claimed is *which requests the boot makes*, and `lib/manifest.js` builds its
+   * URLs from `import.meta.env.BASE_URL`, which does not exist under
+   * `node --test`. A unit test would have had to fake the thing under test.
+   */
+  const fetched = [];
+  page.on('request', (r) => fetched.push(r.url()));
+
+  await ready(page);
+  await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
+
+  // The premise: the boot really did load the manifest through this path, so
+  // the absence below is an absence and not a page that never started.
+  expect(
+    fetched.filter((u) => /data\/manifest\.json$/.test(u)).length,
+    'the manifest was not fetched at all',
+  ).toBe(1);
+  expect(
+    fetched.filter((u) => /manifest\.meta\.json$/.test(u)),
+    'the coverage statistics are back on the boot path',
+  ).toEqual([]);
+
+  // And the page is whole without them, which is the half that matters.
+  await expect(page.locator('[data-readings] a').first()).toBeVisible();
+});
+
 test('a returning Daily page lands where it was left, though it grows after it renders', async ({ page }) => {
   /*
    * Author, 2026-08-27, after the first fix shipped: "switching from All

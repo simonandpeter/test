@@ -203,6 +203,25 @@ them.
   **This desk had never reproduced it in 148 contended runs**, and contention
   was the wrong instrument — see the entry below.
 
+  **It is not a flake, and Amendment 67's gesture fix did not close it.** On
+  `90600f5` it was flaky and on `1f9069e` it went **red through the retry with
+  the deploy skipped**, and all three attempts across those two runs failed with
+  *the same numbers to the pixel* — `released` 4368, at rest 4345, expected
+  > 4388. Timing noise scatters; this does not. `delivered` passed every time,
+  so the gesture was a flick and the harness is not the cause of these three.
+  **Read `1f9069e`'s trace before touching the rail's arithmetic** —
+  `trace: 'on-first-retry'` is in playwright.config.js, so the retry recorded
+  one, and it holds the scrollLeft timeline and the pointer events. Three
+  diagnoses of this test have already been killed by measurements in one day.
+
+  Two things measured locally and **deliberately not shipped**: the rail
+  **rebuilds its window mid-coast** (first day 2026-06-29 → 2026-08-21,
+  `scrollLeft` 7995 → a canonical 4489), so net displacement after a coast
+  measures nothing a reader would notice; and a test rewritten to watch
+  `is-coasting` instead passes, but then fails **5 of 48** contended runs on
+  `state.aligned` at `released at 4287` — a second fault the old test never
+  reached because it failed earlier.
+
   **`random deals an order, and holds it still under the reader` — 2 of ~30
   runs**, `fbcaef8` and `102fd83`, same project. Not a rate worth acting on
   yet; recorded because it was reported as non-recurring after the first
