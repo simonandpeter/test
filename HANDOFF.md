@@ -165,32 +165,34 @@ them.
   config's CI reporter was `[github, list]` with no `html`. Every red run
   warned "No files were found with the provided path" and uploaded nothing,
   which is why five reds were invisible without reading the raw job log.
-- **The suite has three live flakes, measured** (2026-08-28, Amendment 65 and
-  the sitting after it). **This entry used to say the suite had none**, citing
-  148 contended runs; that sentence was written about two specific tests that
-  had just been fixed and read as a claim about the whole suite. It was wrong
-  three times over. Each rate below is a measurement with its conditions
-  attached, because a flake rate without them is not a number:
+- **Two of the three flakes are closed, and both were the same fault**
+  (2026-08-28, Amendment 66). Neither was the assertion, which is Amendment
+  60's standing finding for the third time: **a fixed millisecond budget
+  standing in for a state.** `the carousel fades in` sampled 1500 ms and `the
+  die stays while the page goes` 1600 ms, and under contention the thing being
+  watched simply takes longer than the window, so the trace ends mid-flight and
+  the test reports an absence. Both poll to the arrival now, with a generous
+  ceiling, and a loaded machine takes longer instead of going red.
 
-  | test | rate | conditions |
+  | test | before | after |
   | --- | --- | --- |
-  | `the carousel fades in rather than appearing` | **7 of 24** | `COLD_FACE=1`, `--repeat-each=12 --workers=10` |
-  | `the die stays while the page goes` | **10 of 24** | warm, `--repeat-each=12 --workers=10` |
-  | *same test* | **4 of 24** | warm, in isolation, no contention |
-  | the rail's coast | seen once | on **CI**, at `f723798`, retried green |
+  | `the carousel fades in rather than appearing` | 7 of 24 | **0 of 24** |
+  | `the die stays while the page goes` | 10 of 24, and 4 of 24 on a quieter machine | **0 of 24** |
 
-  The first two were each measured **against a control on an unmodified tree**,
-  so neither can be blamed on the change it was found beside. All three are
-  contention-sensitive, which is why single runs at the default worker count
-  keep coming back green and why none of them had been seen. **Amendment 60's
-  rule stands and is the reason these matter**: a flake in the `COLD_FACE`
-  rehearsal costs more than one in the gate, because that run is the only local
-  instrument that predicts the runner.
+  All at `--repeat-each=12 --workers=10`, the carousel's under `COLD_FACE=1`
+  and the roll's warm, each backed out against a **rate** rather than one red.
+  **The carousel had a second cause and it was a real one**: the test wrote a
+  `scrollLeft` into the track *before `loopScroll` had started*, and a position
+  written then is discarded when the loop first measures. The failures said so
+  exactly — every one had read the seed back as a bare 2400, meaning it had
+  landed on a track still at 0, while every passing run read 4374 or 5165, the
+  buffer's offset plus the seed. Waiting for the track to be past 0 took the
+  remainder out. Fixing only the windows left it at 4 of 24.
 
-  The standing method for closing one is Amendment 60's: they are almost never
-  the assertion. Wait for the state rather than sampling at a fixed moment, then
-  look at what is left — and back the fix out against a **rate**, never against
-  a single red.
+- **One flake remains and it is on CI, not here**: the rail's coast went flaky
+  at `f723798`, retried and passed. It has never been reproduced locally — 148
+  contended runs at Amendment 60 and none since — so it is the one whose rate
+  this desk cannot measure.
 - **`under reduced motion a throw does not coast` proved nothing until
   2026-08-28**, and a back-out is what said so: with the reduced-motion guard
   removed from picker.js it stayed green, because it sampled 100 ms and 500 ms

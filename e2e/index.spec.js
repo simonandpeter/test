@@ -2382,6 +2382,16 @@ test('the die stays while the page goes, turns once, and the saint fades up', as
    *
    * Three beats, and the order is the claim. Traced inside the page so the
    * assertion is about the animation rather than about this runner's IPC.
+   *
+   * **Polled to the arrival, not for a fixed 1600 ms** (2026-08-28). The window
+   * was a budget for the whole sequence — fade, spin, navigate, fade up — and
+   * under contention the sequence simply outlasts it: the trace then ends
+   * mid-flight and the last beat has not landed, which reported as `the roll
+   * never landed on a saint` at **10 of 24** at ten workers (4 of 24 in
+   * isolation; the same test, and the difference is the load). Nothing was
+   * wrong with the roll. The three beats below are read out of the trace either
+   * way, so waiting for the end costs nothing and a slow machine simply takes
+   * longer instead of reporting an absence.
    */
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -2399,7 +2409,9 @@ test('the die stays while the page goes, turns once, and the saint fades up', as
             viewOpacity: Number(getComputedStyle(document.getElementById('view')).opacity),
             onSaint: location.pathname.includes('/saints/'),
           });
-          if (performance.now() - t0 < 1600) requestAnimationFrame(tick);
+          const b = out.at(-1);
+          const arrived = b.onSaint && !b.ghost && b.viewOpacity > 0.9;
+          if (!arrived && performance.now() - t0 < 10000) requestAnimationFrame(tick);
           else resolve(out);
         };
         requestAnimationFrame(tick);
@@ -2638,47 +2650,85 @@ test('the carousel fades in rather than appearing, and comes back where it was l
    * "it comes back where it was", and a card's width is the resolution at
    * which that claim means anything.
    */
-  const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
   const cardWidth = await page.evaluate(
     () => document.querySelector('.cx-card').getBoundingClientRect().width,
   );
-  await page.evaluate(() => {
-    document.querySelector('[data-carousel-track]').scrollLeft += 2400;
-  });
-  await page.waitForTimeout(200);
-  const before = await at();
-  expect(before).toBeGreaterThan(0);
 
-  // Waited on the *label*, which only changes once `applyMode` has run: the
-  // fall takes about half a second first, and pressing again inside it is the
-  // double-press the guard cancels — which is a race, not a test.
-  await page.locator('[data-mode-toggle]').click();
+  /*
+   * **Wait for the loop to have started before writing a position into it**
+   * (2026-08-28). This was the flake: 7 of 24 under `COLD_FACE=1` at ten
+   * workers, measured on an unmodified tree so it could not be blamed on the
+   * change it was found beside.
+   *
+   * `loopScroll` re-measures from its own frame until the geometry is real, and
+   * only then applies the clone buffer's offset. Until that happens the track
+   * sits at **0**, and a `scrollLeft` written into it is discarded when the loop
+   * finally measures — the row then opens wherever the buffer puts it. The
+   * failures said so exactly: every one of them had read `before` as a bare
+   * 2400, meaning the `+= 2400` had landed on a track still at zero, and the
+   * row came back at 2752 or 1965. Every run that had started first read `before`
+   * as 4374 or 5165 — the buffer's offset plus the seed — and passed.
+   *
+   * So the row is waited for rather than the page: a started loop is one whose
+   * track is past 0, which is the buffer's own offset and never zero.
+   */
+  await expect
+    .poll(() => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft))
+    .toBeGreaterThan(0);
+
+  /*
+   * **Both readings are taken in the turn they belong to.** The row drifts every
+   * frame — that is the mode — so a position read on one round trip and compared
+   * with one read on another is a measurement of how long the round trips took,
+   * and the tolerance of one card is then a budget for wall time. The seed and
+   * the reading are one evaluate, and the reading back happens on the first
+   * frame the carousel is unhidden, before the drift has anywhere to go.
+   */
+  const before = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    track.scrollLeft += 2400;
+    const at = track.scrollLeft;
+    // Waited on the *label* below, which only changes once `applyMode` has run:
+    // the fall takes about half a second first, and pressing again inside it is
+    // the double-press the guard cancels — a race, not a test.
+    document.querySelector('[data-mode-toggle]').click();
+    return at;
+  });
+  expect(before).toBeGreaterThan(0);
   await expect(page.locator('[data-mode-label]')).toHaveText('Carousel mode');
 
-  // Back, watching the carousel's own opacity through the change.
+  // Back, watching the carousel's own opacity through the change — polled to
+  // the state rather than for a fixed 1500 ms, so a loaded machine takes longer
+  // instead of reporting an absence.
   const fade = await page.evaluate(
     () =>
       new Promise((resolve) => {
         const out = [];
+        let reopenedAt = null;
         const t0 = performance.now();
         document.querySelector('[data-mode-toggle]').click();
         const tick = () => {
           const el = document.querySelector('[data-carousel]');
-          if (!el.hidden) out.push(Number(getComputedStyle(el).opacity));
-          if (performance.now() - t0 < 1500) requestAnimationFrame(tick);
-          else resolve(out);
+          if (!el.hidden) {
+            if (reopenedAt === null) {
+              reopenedAt = document.querySelector('[data-carousel-track]').scrollLeft;
+            }
+            out.push(Number(getComputedStyle(el).opacity));
+          }
+          const arrived = out.length > 4 && out.at(-1) > 0.9;
+          if (!arrived && performance.now() - t0 < 8000) requestAnimationFrame(tick);
+          else resolve({ out, reopenedAt });
         };
         requestAnimationFrame(tick);
       }),
   );
-  expect(fade.length, 'the carousel never came back').toBeGreaterThan(4);
-  expect(fade[0], 'it appeared at full strength instead of fading in').toBeLessThan(0.1);
-  expect(fade.at(-1)).toBeGreaterThan(0.9);
+  expect(fade.out.length, 'the carousel never came back').toBeGreaterThan(4);
+  expect(fade.out[0], 'it appeared at full strength instead of fading in').toBeLessThan(0.1);
+  expect(fade.out.at(-1)).toBeGreaterThan(0.9);
   // And within a card of where it was left, rather than back at the start.
-  const after = await at();
   expect(
-    Math.abs(after - before),
-    `the row reopened at ${after}, having been left at ${before}`,
+    Math.abs(fade.reopenedAt - before),
+    `the row reopened at ${fade.reopenedAt}, having been left at ${before}`,
   ).toBeLessThan(cardWidth);
 });
 
