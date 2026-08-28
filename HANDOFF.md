@@ -1178,7 +1178,12 @@ session). SESSIONS.md has each in full.
 - **Git Bash rewrites a leading-slash argument into a Windows path**, so
   `node scripts/shot.mjs x /calendar/2026-01-30` navigates to
   `C:/Program Files/Git/calendar/…`. `export MSYS_NO_PATHCONV=1` first, and
-  verify anything path-shaped against a live URL.
+  verify anything path-shaped against a live URL. **It rewrites a leading-slash
+  *environment variable* too**, which is the same trap wearing different
+  clothes and cost a build on 2026-08-28: `BASE_PATH=/test/ npm run build`
+  emits every asset href under `C:/Program Files/Git/test/`. The build exits 0
+  and only the artefact says so. `MSYS_NO_PATHCONV=1 BASE_PATH=/test/ npm run
+  build`.
 - `scripts/shot.mjs <name> <url> [width] [click:sel|wait:ms …]` screenshots a
   running preview into `shots/`, which is how the house rule about rendering a
   change and looking at it gets honoured. Not part of the suite; `shots/` and
@@ -1258,6 +1263,19 @@ session). SESSIONS.md has each in full.
   bundle's record of each asset's source by exact filename rather than by
   prefix, and it `warn`s rather than silently shipping nothing if a subset goes
   missing. No such warning in the build.
+
+  **And the check above is a claim about one build's base, which is the part
+  that differs on the runner.** The preload href is `base + found` where the
+  plugin reads `process.env.BASE_PATH || '/'` *independently* of vite's own
+  `base` on line 131, which is the same expression. If those two ever
+  disagreed the preload would point at a URL that 404s on the deployed site
+  while every local build looked perfect, because locally both are `/`. Built
+  at CI's own base (`.github/workflows/build.yml` sets `BASE_PATH` to
+  `/<repo>/`, so `/test/`) both sessions got
+  `/test/assets/literata-normal-latin-…` against a stylesheet at
+  `/test/assets/index-…css`, and both files exist at those paths. **Rebuild at
+  the default base afterwards** or a local `preview` serves a `dist/` whose
+  assets are all under `/test/`.
 - **Answered at Amendment 61 and left as it stands** — recorded, not acted on.
   **Search does not reach the historical name forms.** It reaches every
   language's display form — `card.names` in the manifest is `{ru: "Авдий",
