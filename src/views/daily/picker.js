@@ -69,6 +69,28 @@ const SETTLED = 140;
  */
 const FRICTION_TAU = 325;
 const MIN_FLICK = 0.25;
+
+/**
+ * How much time a coast frame may spend, or `null` for a frame that should be
+ * skipped. Exported because it is the whole of a defect that took a fortnight
+ * of red CI runs to find, and it is pure.
+ *
+ * `requestAnimationFrame` hands the callback **the frame's start time**, which
+ * on a loaded machine can predate the pointerup that scheduled it. Seeding the
+ * clock from `performance.now()` at the release therefore produced a *negative*
+ * first `dt`, and `scrollLeft = before + v * dt` wrote the rail backwards —
+ * measured on CI, and reproduced here under a 120x CPU throttle at -28.7 to
+ * -47.6 ms on six releases out of six.
+ *
+ * `null` for the first frame (nothing has elapsed that anyone can measure) and
+ * for any frame whose timestamp does not advance. Clamped at 64 ms so a tab
+ * that was backgrounded does not spend a second of momentum in one step.
+ */
+export function coastDelta(last, now, cap = 64) {
+  if (last === null || !(now > last)) return null;
+  return Math.min(now - last, cap);
+}
+
 /* Handing over at 0.15 px/ms rather than at nearly zero: the exponential's
    tail is a crawl the eye reads as jank, and the settle's own glide is a
    better ending — it is still moving when the snap takes the wheel. */
@@ -285,15 +307,48 @@ export function wireRail(strip) {
   const beginCoast = (velocity) => {
     stopCoast();
     strip.classList.add('is-coasting');
-    coast = { v: velocity, last: performance.now(), raf: 0 };
+    /*
+     * **The clock starts on the first frame, not here** (2026-08-28). This read
+     * `performance.now()` at the release and took the first frame's `dt` from
+     * it — but a `requestAnimationFrame` callback's timestamp is *the frame's
+     * start*, and on a loaded machine the frame can have started before the
+     * pointerup that scheduled the callback was processed. `dt` then comes out
+     * **negative**, and `before + v * dt` writes the rail *backwards*.
+     *
+     * Measured on CI, which reproduced it about one run in three, and then
+     * deterministically here under a 120x CPU throttle: first frames of -47.6,
+     * -37, -28.9, -34.2, -28.7 and -36.1 ms, dragging the rail 77 to 108 px the
+     * wrong way. The frame after that has a `dt` of 0 or a fraction, the write
+     * lands on the same pixel, and the wall check below used to fire — so the
+     * coast aborted against a wall that was not there and the reader got a
+     * flick that jumped backwards and stopped dead.
+     *
+     * Seeding from the first frame makes every `dt` a difference between two
+     * frame timestamps, which is monotonic. It costs one frame of stillness at
+     * the start of a coast, which is not perceptible and is the honest price:
+     * the rail cannot know how much time a frame it never saw took.
+     */
+    coast = { v: velocity, last: null, raf: 0 };
     const step = (now) => {
       if (!coast) return;
-      const dt = Math.min(now - coast.last, 64);
+      const dt = coastDelta(coast.last, now);
+      if (dt === null) {
+        coast.last = coast.last === null ? now : coast.last;
+        coast.raf = requestAnimationFrame(step);
+        return;
+      }
       coast.last = now;
       const before = strip.scrollLeft;
-      strip.scrollLeft = before + coast.v * dt;
+      const wanted = coast.v * dt;
+      strip.scrollLeft = before + wanted;
       coast.v *= Math.exp(-dt / FRICTION_TAU);
-      const atWall = strip.scrollLeft === before && dt > 0;
+      /*
+       * A wall is the element **refusing** to move, not us asking it to move a
+       * fraction of a pixel. The old predicate could not tell the two apart,
+       * and a short frame after a slow one was enough to end a coast in the
+       * middle of the rail.
+       */
+      const atWall = Math.abs(wanted) >= 1 && strip.scrollLeft === before;
       if (Math.abs(coast.v) < COAST_STOP || atWall) {
         stopCoast();
         settle();
