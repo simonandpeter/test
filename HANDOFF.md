@@ -189,82 +189,34 @@ them.
   buffer's offset plus the seed. Waiting for the track to be past 0 took the
   remainder out. Fixing only the windows left it at 4 of 24.
 
-- **Two flakes remain, both runner-side, and the CI summary is the only
-  instrument for either** (2026-08-28). Read them out of the Actions API: the
-  Playwright summary line carries `N flaky` and names the tests, and it is
-  readable for as long as the reporter keeps writing it.
+- **The rail's coast is fixed, and three clean CI runs is not yet proof**
+  (2026-08-28, Amendment 67 and `5d6c2bd`). It was **not a flake in the test**:
+  `beginCoast` seeded its clock with `performance.now()` at the release, and a
+  `requestAnimationFrame` callback is handed *the frame's start time*, which on
+  a loaded machine can predate the pointerup that scheduled it. The first `dt`
+  came out **negative**, the rail was written backwards, the next frame asked
+  for a fraction of a pixel and tripped the wall check — so the coast aborted
+  against a wall that was not there. **A reader on a slow phone got a flick that
+  jumped back a dozen pixels and stopped dead**, and the test had been reporting
+  it honestly for a fortnight.
 
-  **The rail's coast — 3 of the 10 runs since the spec split.** `f723798` (both
-  projects, flaky), `09ad096` (**desktop failed through the retry**, mobile
-  flaky), `102fd83` (desktop, flaky). It has been red through a retry once,
-  which means with `retries: 1` it was two consecutive failures in one job. **4
-  of the 5 sightings are desktop**, which is the opposite of where this suite's
-  faults usually sit; at n=5 that is an observation, not a finding.
-  **This desk had never reproduced it in 148 contended runs**, and contention
-  was the wrong instrument — see the entry below.
+  `coastDelta` in views/daily/picker.js is the rule, and `tests/coast.test.mjs`
+  pins it. **Three consecutive clean runs** — `5d6c2bd`, `b39f6fe`, `46a5499` —
+  against a base rate of 7 red in 15. That is roughly a 1-in-9 coincidence, so
+  it is supporting evidence and not proof; **six or seven would be.** If it
+  reappears, the probe method is in Amendment 67 and the branch approach in
+  CLAUDE.md.
 
-  **It is not a flake, and Amendment 67's gesture fix did not close it.** On
-  `90600f5` it was flaky and on `1f9069e` it went **red through the retry with
-  the deploy skipped**, and all three attempts across those two runs failed with
-  *the same numbers to the pixel* — `released` 4368, at rest 4345, expected
-  > 4388. Timing noise scatters; this does not. `delivered` passed every time,
-  so the gesture was a flick and the harness is not the cause of these three.
-  **Read `1f9069e`'s trace before touching the rail's arithmetic** —
-  `trace: 'on-first-retry'` is in playwright.config.js, so the retry recorded
-  one, and it holds the scrollLeft timeline and the pointer events. Three
-  diagnoses of this test have already been killed by measurements in one day.
+- **One flake is still open and it is not this one.** `random deals an order,
+  and holds it still under the reader` has been seen twice in about thirty runs,
+  at `fbcaef8` and `102fd83`, both desktop. Not a rate worth acting on; recorded
+  because it was called non-recurring after the first sighting and then
+  recurred.
 
-  **The trace has been read** (`1f9069e`'s retry recorded one; it has no
-  scrollLeft timeline, but it has the action list and 26 screencast frames).
-  What it establishes: the rail's window is the **canonical** one at the moment
-  of failure — 121 buttons, 29 June to 27 October, the selected day at index 60
-  — and there is **no coast**. After the throw at 969 ms the screencast has two
-  frames, 1115 and 1128 ms, moving *backwards*, and then no visual change for
-  four seconds. A drag, a release, a settle back to alignment.
-
-  **Five diagnoses have been killed by measurement**, so distrust the sixth:
-  the sampling window; Amendment 65's chip pin; the carousel run being rebuilt;
-  the rail re-anchoring mid-coast (real locally — first day 2026-06-29 →
-  2026-08-21, `scrollLeft` 7995 → 4489 — but *not* what CI hit); and
-  `prefers-reduced-motion` (forcing `reduce` gives the right shape, net 0 px
-  against +272, but pinning the test to `no-preference` and backing it out
-  **left it passing**, because the settle alone can clear the 20 px the
-  assertion asks for). Two rewrites were measured and **not shipped**: the
-  `is-coasting` watch fails **5 of 48** contended runs on `state.aligned`, a
-  second fault behind the first.
-
-  **Instrument the rail, not the test.** The open question is why no coast runs
-  when the delivered gesture's velocity should clear `MIN_FLICK`. Log the
-  fresh-sample count and the computed velocity at release behind a flag, push
-  it, and read the CI console — nothing this desk runs has reproduced it.
-
-  **`random deals an order, and holds it still under the reader` — 2 of ~30
-  runs**, `fbcaef8` and `102fd83`, same project. Not a rate worth acting on
-  yet; recorded because it was reported as non-recurring after the first
-  sighting and then recurred, which is exactly the claim that should not be
-  left standing.
-
-- **Three of this repo's instruments have failed by looking like a pass**
-  (2026-08-28), which is worth holding as a class rather than as three
-  anecdotes. The `COLD_FACE` fixture never reached a context a test opened for
-  itself, so half a test rehearsed and half did not. The font preload shipped
-  the same Latin subset twice, and two preload tags look exactly like two
-  subsets. CPU throttling set before a navigation does not survive it, and the
-  gesture then looks healthy. **In each case the silent no-op and the success
-  are the same green**, so the only defence is to make the instrument report
-  what it did — the rehearsal prints the face it measured, the preload test
-  asserts the two hrefs *differ*, and a throttle is proved with a timed loop.
-  When you add an instrument, ask what it would look like if it were doing
-  nothing.
-- **CPU throttling reproduces what parallel load cannot** (2026-08-28,
-  Amendment 67). The rail coast resisted 148 contended runs here and fell over
-  in one attempt under CDP `Emulation.setCPUThrottlingRate`. The span of the
-  test's own flick gesture stretches with the rate — **25 ms at 1x, 33 at 6x,
-  81 at 20x, and 140 ms at 150x, at which point the rail stops coasting** — and
-  it is the *first* gesture after the page settles that is slow while every one
-  after it is fast, which is the shape of a test that runs once, cold, per CI
-  job. **Reach for the throttle before concluding a runner-only flake cannot be
-  reproduced.**
+- **Read the CI summary's `flaky` line, not only its conclusion.** A green run
+  with `N flaky` is a test that failed and passed on retry, and that is the only
+  place a rate like the above can be seen. It is readable through the public
+  REST API for as long as the reporter keeps writing summaries.
 - **`under reduced motion a throw does not coast` proved nothing until
   2026-08-28**, and a back-out is what said so: with the reduced-motion guard
   removed from picker.js it stayed green, because it sampled 100 ms and 500 ms
