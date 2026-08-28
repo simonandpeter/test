@@ -297,17 +297,20 @@ export function sortCards(cards, sort = EMPTY_FILTERS.sort, { seed = '' } = {}) 
     return sort === 'latest' ? (iv.latest ?? iv.earliest) : (iv.earliest ?? iv.latest);
   };
   /*
-   * Keyed once per card rather than once per comparison. `Array.sort` calls its
-   * comparator O(n log n) times and each call asked *both* operands for a key,
-   * so a date order over the corpus derived the same handful of numbers
-   * thousands of times over. The memo above makes each derivation cheap; this
-   * makes the lookups few.
+   * **No decorate-sort-undecorate here, deliberately.** The obvious next step
+   * is to key the whole set into a `Map` before sorting so the comparator does
+   * lookups rather than derivations — and with the memo above in place it buys
+   * nothing measurable, because `key()` is already a `WeakMap` hit and a
+   * property read. It was written, and then **no test could be made to fail
+   * when it was removed**: the memo underneath makes each derivation free, so
+   * a test counting derivations can only ever see the lower mechanism. An
+   * optimisation that cannot be pinned and cannot be shown to pay is a layer
+   * to leave out, not one to add a test for.
    */
-  const keyed = new Map(copy.map((card) => [card, key(card)]));
   const direction = sort === 'latest' ? -1 : 1;
   return copy.sort((a, b) => {
-    const ka = keyed.get(a);
-    const kb = keyed.get(b);
+    const ka = key(a);
+    const kb = key(b);
     // Undated saints have no position on a timeline, so they sort last at
     // either direction — not to year zero, and not to the far end of a
     // descending list, which is where negating the comparator would put them.

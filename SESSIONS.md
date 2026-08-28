@@ -4319,13 +4319,26 @@ be a page that never started.*
    to run a derivation step before the filters are safe to call.
    **`sortCards` was the real cost** and the item did not say so — it called
    `lifeInterval` *inside the comparator*, so a date order over 742 cards
-   derived the same handful of numbers some 2n log n times. It keys the whole
-   set once now, before sorting.
+   derived the same handful of numbers some 2n log n times. The memo alone
+   closes that; the comparator now hits a `WeakMap` instead of walking three
+   interval keys.
+   **A second layer was written and then removed, which is worth recording.**
+   Keying the whole set into a `Map` before sorting — decorate-sort-undecorate,
+   the obvious next step — shipped in the first version of this. The verifying
+   session backed it out and **no test failed**: with the memo underneath, each
+   derivation is already free, so a test that counts derivations can only ever
+   see the lower mechanism. It also buys nothing measurable, since `key()` was
+   by then a `WeakMap` hit and a property read. An optimisation that cannot be
+   pinned *and* cannot be shown to pay is a layer to leave out rather than one
+   to write a cleverer test for, so it is gone and the reason is in the code.
    The existing unit tests pin the semantics and pass unchanged, which is the
    claim. Two new ones pin the *cost*, because a cost change needs a cost
    measurement: a card whose `dates` and `attestations` are counting getters is
    asked **once** across a 24-card sort and once across three separate calls.
-   Backed out, they fail by name — `s01 was asked for its dates 2 times`.
+   Backed out, they fail by name — `s01 was asked for its dates 2 times` here,
+   `derived 3 times across three calls` on the peer's different back-out, and
+   **the two sessions backing out different halves is how the unpinned second
+   layer was found at all.**
 3. **One memoised feast index** (G3). `lib/feasts.js` exports a
    `feastIndexFor(year, data)` cached by year; the calendar's module-level
    `indexCache` and the Index's `monthsBySlugFor` both read it. `facetsOf` is
