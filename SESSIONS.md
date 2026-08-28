@@ -6617,10 +6617,21 @@ predicts the runner.
 ### Verification
 
 174 unit; the full browser suite at both projects; the rehearsal separately. The
-fix backed out and confirmed red **on the symptom rather than on the premise**,
-at both projects, and the neighbouring `the die is a chip height, including on a
-line of its own` — the 2026-08-26 case the stretch was added for, and the one
-the obvious fix reintroduces — green throughout. Rendered at 1280 and 360 and
+fix backed out in **both halves separately** and confirmed red on the symptom
+rather than on the premise, and the neighbouring `the die is a chip height,
+including on a line of its own` — the 2026-08-26 case the stretch was added
+for, and the one the obvious fix reintroduces — green throughout.
+
+**Say which back-out, because two are possible and they prove different
+things** (corrected after the verifying session ran the other one). Removing the
+chip's `height` and running warm gives `the chip grew from 30.265625 to 41`.
+For the die, *restoring `align-self: stretch` and `min-height` in place of the
+height* is the back-out that demonstrates the claim — `die 30.265625 x 31.6875`
+under `COLD_FACE=1`, which is pinning-beats-stretching. Merely *deleting* the
+die's height leaves it nothing to take a height from at all and gives
+`die 30.265625 x 23`, which is the 2026-08-26 collapse rather than this
+amendment's case. Both are red, so the declaration is load-bearing either way;
+only the first is evidence for what is claimed here. Rendered at 1280 and 360 and
 looked at: the die is a circle on the chips' own line, nothing clipped.
 
 **None of that is a green CI run**, which is the whole subject of this

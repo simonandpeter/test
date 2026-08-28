@@ -165,34 +165,32 @@ them.
   config's CI reporter was `[github, list]` with no `html`. Every red run
   warned "No files were found with the provided path" and uploaded nothing,
   which is why five reds were invisible without reading the raw job log.
-- **There is a live flake in the rehearsal, and it is the worst place for one**
-  (measured 2026-08-28, Amendment 65, and **not fixed** — it is the next thing
-  to take). `the carousel fades in rather than appearing, and comes back where
-  it was left` fails **7 of 24** under `COLD_FACE=1` at `--repeat-each=12
-  --workers=10`, *on an unmodified tree* — that number is a control, run with
-  the sitting's own changes stashed, precisely so it could not be blamed on
-  them. It is contention-sensitive, which is why single full rehearsal runs at
-  the default worker count keep coming back green and why nobody had seen it.
-  Amendment 60's rule applies: **a flake in the rehearsal is worse than one in
-  the gate**, because that run exists to say whether CI will be red.
-- **The suite has no known flakes** *on this desk* (2026-08-28, Amendment 60),
-  and the way the last two were closed is the standing method. **CI has since
-  contradicted the flat claim**: the rail's coast went flaky on both projects
-  at `f723798`, retried and passed. 148 contended runs here were not enough to
-  make "no flakes" a statement about the runner, and this entry used to read as
-  though they were. Both looked like assertions
-  sampling at a fixed moment, and were: waiting for the state instead took the
-  rail's coast from failing about once a suite to **1 in 32**. The residue was
-  the real fault and it was in the *gesture* — the rail reads its release
-  velocity from the last 120 ms, and the harness's mouse moves are each a round
-  trip, so under load the samples fall outside the window, the velocity is zero
-  and no coast is ever started. `throwRail` in e2e/helpers.js dispatches the
-  flick inside the page, spaced by a **spin on `performance.now()`** rather than
-  `setTimeout`, because a spin blocks and the spacing is real elapsed time
-  whatever the machine is doing. **148 contended runs, none failing.**
-  **A flake in the COLD_FACE rehearsal is worse than one in the gate** — that
-  run exists to say whether CI will be red, and noise there is a loss of the one
-  signal that predicts the runner. That is what made these worth a sitting.
+- **The suite has three live flakes, measured** (2026-08-28, Amendment 65 and
+  the sitting after it). **This entry used to say the suite had none**, citing
+  148 contended runs; that sentence was written about two specific tests that
+  had just been fixed and read as a claim about the whole suite. It was wrong
+  three times over. Each rate below is a measurement with its conditions
+  attached, because a flake rate without them is not a number:
+
+  | test | rate | conditions |
+  | --- | --- | --- |
+  | `the carousel fades in rather than appearing` | **7 of 24** | `COLD_FACE=1`, `--repeat-each=12 --workers=10` |
+  | `the die stays while the page goes` | **10 of 24** | warm, `--repeat-each=12 --workers=10` |
+  | *same test* | **4 of 24** | warm, in isolation, no contention |
+  | the rail's coast | seen once | on **CI**, at `f723798`, retried green |
+
+  The first two were each measured **against a control on an unmodified tree**,
+  so neither can be blamed on the change it was found beside. All three are
+  contention-sensitive, which is why single runs at the default worker count
+  keep coming back green and why none of them had been seen. **Amendment 60's
+  rule stands and is the reason these matter**: a flake in the `COLD_FACE`
+  rehearsal costs more than one in the gate, because that run is the only local
+  instrument that predicts the runner.
+
+  The standing method for closing one is Amendment 60's: they are almost never
+  the assertion. Wait for the state rather than sampling at a fixed moment, then
+  look at what is left — and back the fix out against a **rate**, never against
+  a single red.
 - **`under reduced motion a throw does not coast` proved nothing until
   2026-08-28**, and a back-out is what said so: with the reduced-motion guard
   removed from picker.js it stayed green, because it sampled 100 ms and 500 ms
