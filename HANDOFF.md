@@ -202,19 +202,31 @@ them.
 
   `coastDelta` in views/daily/picker.js is the rule, and `tests/coast.test.mjs`
   pins it. **Closed 2026-08-28 on six consecutive clean runs** — `5d6c2bd`,
-  `b39f6fe`, `46a5499`, `54219c7`, `1b1d8a1`, `2ebe682` — with no coast in
-  either column of any of them, against a base rate of 7 red in 15. Six is the
+  `b39f6fe`, `46a5499`, `54219c7`, `1b1d8a1`, `2ebe682`, and `5063113` since —
+  with no coast in either column of any of them, against a base rate of 7 red
+  in 15. Six is the
   number this entry itself named as the point where it stops being supporting
   evidence, and it is *exactly* six rather than more: the count was written down
   before the runs came in, which is the only reason it means anything. If it
   reappears, the probe method is in Amendment 67 and the branch approach in
   CLAUDE.md.
 
-- **One flake is still open and it is not this one.** `random deals an order,
-  and holds it still under the reader` has been seen twice in about thirty runs,
-  at `fbcaef8` and `102fd83`, both desktop. Not a rate worth acting on; recorded
-  because it was called non-recurring after the first sighting and then
-  recurred.
+- **Two flakes are still open, and neither is the coast.** Both are at two
+  sightings in about thirty-seven runs, and **both were filed as "seen once, not
+  recurring" before they recurred** — which is the whole reason this entry lists
+  them by SHA rather than by impression:
+
+  | test | sightings | project |
+  | --- | --- | --- |
+  | `random deals an order, and holds it still under the reader` | `fbcaef8`, `102fd83` | desktop |
+  | `the index offers two layouts, and remembers which one the reader chose` | `6905aba`, `5063113` | mobile-360 |
+
+  Neither is a rate worth acting on and neither should be chased. What should be
+  resisted is the sentence that keeps getting written about them: *seen once,
+  probably nothing*. It has now been wrong twice in one day, about two different
+  tests, and both times the correction came from someone reading the run list
+  rather than remembering it. **A second sighting is the first fact about a
+  flake; the first sighting is only a rumour.**
 
 - **Three commits on main have one set of eyes, not two** (2026-08-28):
   `f0ddb12`, `1b1d8a1` and `2ebe682` — the author's refinement round and the
