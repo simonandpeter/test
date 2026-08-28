@@ -1837,6 +1837,99 @@ test('the die is a chip height, including on a line of its own', async ({ page }
   expect(Math.abs(declared - phone.chip), `--facet-h ${declared} vs a chip's ${phone.chip}`).toBeLessThan(0.5);
 });
 
+test('the die stays square when the chip line is taller than the token', async ({ page }) => {
+  /*
+   * **CI was red on this for five consecutive pushes and nobody had looked**
+   * (found 2026-08-28). The deploy job is gated on the build job, so the live
+   * site sat at `b11322c` the whole time. The failure:
+   *
+   *     the die is square … Error: die 30.265625 x 31.265625
+   *
+   * The die's two author instructions pull against each other, and the seam is
+   * `--facet-h`. It is *arithmetic* — `font-size x line-height + padding + 2` —
+   * and a chip's real height is a **line box**, which is that arithmetic plus
+   * whatever the face's own ascent and descent add. On this desk the two agree
+   * to the pixel. On the runner, whose system-ui is DejaVu Sans, the chip line
+   * is 31.27 px and the token is 30.27. The die took its height from the line
+   * (`align-self: stretch`, added 2026-08-26 for the opposite failure — the die
+   * alone on a wrapped last line, 23 px against a chip's 30.3) and its width
+   * from the token, so it came out a pixel taller than it was wide.
+   *
+   * **The condition is forced here rather than waited for**, the way the wrap
+   * is forced by the column in `the die is a chip height`: a chip's block
+   * padding is pushed 2 px past `--facet-pad-y` on each side, which makes the
+   * line taller than the token *without touching the token* — which is exactly
+   * what a taller face does. The same state on every machine, and it fails on
+   * this desk against the CSS that was red on the runner.
+   *
+   * **`COLD_FACE=1` does not reach this** (measured, both faces, before the
+   * fix): the rehearsal forces a font *family*, which changes where text wraps,
+   * and the die's fault is how tall the line is. Those are different questions
+   * and a family swap does not settle the second — DejaVu's metrics are not
+   * Verdana's. The rehearsal is a wrapping instrument, not a leading one.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const measure = () =>
+    page.evaluate(() => {
+      const die = document.querySelector('.random-die').getBoundingClientRect();
+      const chip = document.querySelector('details[data-facet="dates"] > summary').getBoundingClientRect();
+      return { w: die.width, h: die.height, chip: chip.height };
+    });
+
+  const asIs = await measure();
+  expect(Math.abs(asIs.w - asIs.h), `as laid out: die ${asIs.w} x ${asIs.h}`).toBeLessThan(0.5);
+
+  /*
+   * **The runner's condition, forced through the chip's *content*.** A face
+   * does not make a chip's box taller directly — it makes the box's *contents*
+   * want more room, and whether the box grows is the question. So the forcing
+   * is a bigger font on the chip, not a bigger box: `--facet-h` is computed
+   * from `--facet-font` on `:root` and is untouched by it, exactly as the token
+   * is untouched by DejaVu being taller than Segoe UI.
+   *
+   * Forcing the box directly is what this test did first, and the fix made the
+   * forcing stop working rather than making the assertion pass — which is worth
+   * writing down, because a test that cannot tell "fixed" from "the forcing
+   * fell off" is the silent-exemption fault this suite has now met three times.
+   */
+  await page.addStyleTag({
+    content: '.facets .facet > summary { font-size: 20px !important; }',
+  });
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+  const taller = await measure();
+
+  /*
+   * The premise: the forcing landed. Deliberately **not** "the chip's content
+   * overflows its box" — that is only true once the fix is in, so backing the
+   * fix out would fail here, on a message that reads like the harness slipping,
+   * instead of on the squareness below. A premise has to hold in both states or
+   * it hides the failure it was meant to frame.
+   */
+  const forced = await page.evaluate(
+    () => getComputedStyle(document.querySelector('details[data-facet="dates"] > summary')).fontSize,
+  );
+  expect(forced, 'the forcing did not reach the chip').toBe('20px');
+
+  // And the row does not grow under a control that cannot follow it.
+  expect(
+    Math.abs(taller.chip - asIs.chip),
+    `the chip grew from ${asIs.chip} to ${taller.chip}, which is what leaves the die behind`,
+  ).toBeLessThan(0.5);
+
+  // Both instructions at once: as wide as it is tall, and as tall as the row.
+  expect(
+    Math.abs(taller.w - taller.h),
+    `chip line ${taller.chip}: die ${taller.w} x ${taller.h}`,
+  ).toBeLessThan(0.5);
+  expect(
+    Math.abs(taller.h - taller.chip),
+    `die ${taller.h} against a chip's ${taller.chip}`,
+  ).toBeLessThan(0.5);
+});
+
 test('the Gender facet drops its heading from its option', async ({ page }) => {
   // Author, 2026-08-26 evening: under Gender, "Sex unrecorded" becomes
   // "Unrecorded" — the facet's own summary was carrying that word already.

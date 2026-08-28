@@ -182,6 +182,27 @@ select:hover {
      letting them shrink would have re-flowed it on the next machine with a
      wide system-ui, in the other direction. */
   padding: var(--facet-pad-y) 10.5px;
+  /* **The token is the chip's height, not an estimate of it** (2026-08-28).
+     `--facet-h` is arithmetic — font-size x line-height + padding + 2 — and a
+     chip left to size itself is a *line box*, which is that plus whatever the
+     face's own ascent and descent add. The two agree to the pixel on a Windows
+     desk and differ by one on the runner, whose system-ui is DejaVu Sans, and
+     that pixel is why CI was red on `the die is square` for five consecutive
+     pushes with the deploy skipped behind it.
+
+     The die is `width: var(--facet-h)` and takes its height from the flex line
+     it sits on, so it can only be square where the line *is* the token. Those
+     are the author's two instructions — "as wide as it is tall" and "match the
+     height of the other filters in its row" — and they cannot both hold on a
+     face whose line box is taller than the arithmetic unless something pins
+     one of them. Pinning the chip is the pin that costs least: the row is the
+     height it was designed to be on every machine, and a face that wants a
+     pixel more centres its text into the same box rather than growing the row
+     under a control that cannot follow it. Measured against the alternatives —
+     an `aspect-ratio` on the die does nothing, because Chromium will not
+     transfer a *stretched* cross size to the main size; dropping the stretch
+     makes the die square and 4 px shorter than its neighbours. */
+  height: var(--facet-h);
   border: 1px solid var(--rule);
   border-radius: 999px;
   list-style: none;
@@ -345,8 +366,16 @@ select:hover {
      system-ui is wider than a Windows desk's and wraps the row a chip
      earlier; at 360 px it wraps on every machine. So the floor is the chip's
      own arithmetic and the stretch is what keeps it in step above the floor. */
-  align-self: stretch;
-  min-height: var(--facet-h);
+  /* **Pinned, not stretched** (2026-08-28). The stretch was the 2026-08-26
+     answer to the die collapsing to 23 px when it was alone on a wrapped last
+     line, and `min-height` was the floor under it. Both are now the wrong
+     shape: a stretch takes the height of the *line*, and the line is as tall
+     as the tallest thing on it — which, under a utility face taller than this
+     desk's, is the die's own icon. Pinning the chips alone left the die 30.27
+     wide by 31.69 tall under `COLD_FACE=1`, the same failure one step along.
+     Both dimensions are the token now, so the die is square and a chip's
+     height on every machine and there is no line for either to chase. */
+  height: var(--facet-h);
   /* **Gold, at the author's instruction** ("make the icon gold to draw
      attention"), and it is worth saying what it costs rather than passing it
      off. DESIGN.md §2 spends gold on a *finding* about veneration and never

@@ -149,8 +149,38 @@ them.
   `document.fonts.ready` hook re-lays them when the webfont lands. A test that
   reads row geometry must poll — `await document.fonts.ready` in the page does
   not order it after the app's own `.then` on that same promise.
-- **The suite has no known flakes** (2026-08-28, Amendment 60), and the way the
-  last two were closed is the standing method. Both looked like assertions
+- **CI had been red for five consecutive pushes and nobody had looked**
+  (found 2026-08-28, Amendment 65). The deploy job is gated on the build job,
+  so it was *skipped* every time and the live site served `b11322c` throughout
+  while five green local gates were reported. Two of the three failures had
+  already been fixed by later commits; the third was real and is fixed at
+  Amendment 65. **The house rule at the bottom of this file — CI is the source
+  of truth, not your local run — is the rule that was broken, and it was broken
+  by a session that had run the full suite four times.** A local gate is
+  evidence about this desk. Read the Actions run before calling a sitting done,
+  and if this environment has no `gh`, the public REST API answers and the PAT
+  reads a job log.
+- **A red CI run left no artefact until Amendment 65.** The workflow has always
+  uploaded `playwright-report/` on failure and nothing ever wrote it: the
+  config's CI reporter was `[github, list]` with no `html`. Every red run
+  warned "No files were found with the provided path" and uploaded nothing,
+  which is why five reds were invisible without reading the raw job log.
+- **There is a live flake in the rehearsal, and it is the worst place for one**
+  (measured 2026-08-28, Amendment 65, and **not fixed** — it is the next thing
+  to take). `the carousel fades in rather than appearing, and comes back where
+  it was left` fails **7 of 24** under `COLD_FACE=1` at `--repeat-each=12
+  --workers=10`, *on an unmodified tree* — that number is a control, run with
+  the sitting's own changes stashed, precisely so it could not be blamed on
+  them. It is contention-sensitive, which is why single full rehearsal runs at
+  the default worker count keep coming back green and why nobody had seen it.
+  Amendment 60's rule applies: **a flake in the rehearsal is worse than one in
+  the gate**, because that run exists to say whether CI will be red.
+- **The suite has no known flakes** *on this desk* (2026-08-28, Amendment 60),
+  and the way the last two were closed is the standing method. **CI has since
+  contradicted the flat claim**: the rail's coast went flaky on both projects
+  at `f723798`, retried and passed. 148 contended runs here were not enough to
+  make "no flakes" a statement about the runner, and this entry used to read as
+  though they were. Both looked like assertions
   sampling at a fixed moment, and were: waiting for the state instead took the
   rail's coast from failing about once a suite to **1 in 32**. The residue was
   the real fault and it was in the *gesture* — the rail reads its release

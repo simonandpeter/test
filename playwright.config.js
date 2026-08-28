@@ -14,7 +14,18 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  reporter: process.env.CI ? [['github'], ['list']] : [['list']],
+  /*
+   * **The HTML reporter is what makes a red CI run readable**, and its absence
+   * is why five consecutive reds went unnoticed (2026-08-28). The workflow has
+   * always had an `upload-artifact` step for `playwright-report/` on failure —
+   * but nothing ever wrote that directory, so every red run warned "No files
+   * were found with the provided path" and uploaded nothing. The only way to
+   * see what had failed was the raw job log through the API. A gate whose
+   * failures cannot be read is a gate people stop reading.
+   */
+  reporter: process.env.CI
+    ? [['github'], ['list'], ['html', { open: 'never' }]]
+    : [['list']],
   use: {
     baseURL: 'http://localhost:4173',
     trace: 'on-first-retry',
