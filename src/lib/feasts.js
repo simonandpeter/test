@@ -56,6 +56,31 @@ export const toIsoDate = ({ year, month, day }) =>
  * is what the calendar page actually needs. Built from the manifest in one pass
  * so that moving between days costs a map lookup rather than a re-resolution.
  */
+/**
+ * The feast index for one year, built once (Addendum G3).
+ *
+ * `buildFeastIndex` walks every attestation of every saint and resolves each
+ * feast into the Gregorian year, which is the most expensive thing either view
+ * asks for. The calendar wanted it per year and the Index wanted it once for
+ * the feast-month facet, and each kept its own copy — so the same walk ran
+ * twice over 742 saints on a first visit that touched both pages.
+ *
+ * Keyed on the manifest array itself, so a different corpus is a different
+ * index and nothing has to be invalidated by hand; the entry dies with the
+ * manifest.
+ */
+const indexes = new WeakMap();
+
+export function feastIndexFor(saints, year, churchesById) {
+  let byYear = indexes.get(saints);
+  if (!byYear) {
+    byYear = new Map();
+    indexes.set(saints, byYear);
+  }
+  if (!byYear.has(year)) byYear.set(year, buildFeastIndex(saints, year, churchesById));
+  return byYear.get(year);
+}
+
 export function buildFeastIndex(saints, year, churchesById) {
   const index = new Map();
   for (const saint of saints) {

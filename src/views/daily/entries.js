@@ -1,7 +1,7 @@
 import { CHURCHES_BY_ID } from '../../data/churches.js';
 import { addDaysIso, parseIso, todayIso } from '../../lib/calendar-page.js';
 import { entriesInChurch } from '../../lib/church.js';
-import { buildFeastIndex } from '../../lib/feasts.js';
+import { feastIndexFor } from '../../lib/feasts.js';
 import { plainDateFmt, utc } from './format.js';
 import { state } from './state.js';
 
@@ -15,14 +15,10 @@ import { state } from './state.js';
  * church everywhere rather than in the one place someone remembered.
  */
 
-const indexCache = new Map();
-
-function indexFor(year, data) {
-  if (!indexCache.has(year)) {
-    indexCache.set(year, buildFeastIndex(data.saints, year, CHURCHES_BY_ID));
-  }
-  return indexCache.get(year);
-}
+// The cache lives in lib/feasts.js now (Addendum G3), so the Index's
+// feast-month facet and this page share one index rather than building the
+// same walk over 742 saints twice.
+const indexFor = (year, data) => feastIndexFor(data.saints, year, CHURCHES_BY_ID);
 
 /**
  * The day's commemorations in the one calendar the page shows (author,

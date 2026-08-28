@@ -4349,6 +4349,36 @@ be a page that never started.*
    from it**, and that difference is what exposed the layer nothing could pin.
    `d2d10e6`'s commit message carries the wrong version and cannot be amended;
    this is the correction.
+3. ~~**One memoised feast index** (G3).~~ **Done 2026-08-28.** `feastIndexFor`
+   in lib/feasts.js, memoised on the manifest array itself through a `WeakMap`
+   so a different corpus is a different index and nothing is invalidated by
+   hand. The pointers here were stale: the calendar's cache had moved to
+   `views/daily/entries.js` in the Amendment 55 split, and `monthsBySlugFor`
+   lives in `views/index/search.js`. Both read the shared index now, so a first
+   visit that touches both pages walks 742 saints' attestations once instead of
+   twice. `facetsOf` is left alone — it is one pass over the cards with no
+   calendar arithmetic in it, and caching it would be a layer with nothing
+   underneath.
+4. ~~**Bounded detail cache** (G4).~~ **Done 2026-08-28.** `evictOldest` in a
+   new `lib/lru.js`, capped at 24 payloads, with `loadDetail` re-inserting on a
+   hit so the Map's insertion order really is least-recently-used. Its own
+   module because `lib/detail.js` reads `import.meta.env.BASE_URL` at module
+   scope and cannot be imported under `node --test` — the same wall G1 hit.
+   The queue and the speculative set are untouched, as the item says.
+5. ~~**Hygiene**~~ **Done 2026-08-28.** `daysInMonth` walked upward from 28
+   building and re-parsing an ISO string per candidate day, in the *condition*
+   of two loops in `views/daily/picker.js` (the item said calendar.js; it moved
+   at Amendment 55). It is the difference of two JDNs now, hoisted out of both
+   conditions.
+   **December needed no special case and the first version had one.** A ternary
+   rolling into January was written, and then removed when no test could be
+   made to fail without it: `gregorianToJdn(y, 13, 1)` is exactly
+   `gregorianToJdn(y + 1, 1, 1)` by construction of the formula. That is the
+   second unpinnable branch withdrawn in this session rather than given a
+   cleverer test, after G2's decorate-sort-undecorate layer.
+
+*The original items 3 to 5, for the record:*
+
 3. **One memoised feast index** (G3). `lib/feasts.js` exports a
    `feastIndexFor(year, data)` cached by year; the calendar's module-level
    `indexCache` and the Index's `monthsBySlugFor` both read it. `facetsOf` is

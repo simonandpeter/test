@@ -1,6 +1,6 @@
 import { CHURCHES_BY_ID } from '../../data/churches.js';
 import { parseIso } from '../../lib/calendar-page.js';
-import { buildFeastIndex } from '../../lib/feasts.js';
+import { feastIndexFor } from '../../lib/feasts.js';
 import { ensureAllPacks } from '../../lib/i18n.js';
 import { REGIONS_BY_ID } from '../../lib/regions.js';
 import { allNames } from '../../lib/saint-types.js';
@@ -86,7 +86,7 @@ export async function loadSearch(cards, { onChange: update }) {
 export function monthsBySlugFor(cards) {
   const year = new Date().getFullYear();
   const months = new Map();
-  for (const [iso, entries] of buildFeastIndex(cards, year, CHURCHES_BY_ID)) {
+  for (const [iso, entries] of feastIndexFor(cards, year, CHURCHES_BY_ID)) {
     const month = parseIso(iso).month;
     for (const entry of entries) {
       if (!months.has(entry.slug)) months.set(entry.slug, new Set());

@@ -732,7 +732,8 @@ export function paintMonthInto(row, cursor, { live }) {
 
   const cells = [];
   for (let i = 0; i < lead; i++) cells.push('<span></span>');
-  for (let day = 1; day <= daysInMonth(cursor); day++) {
+  const days = daysInMonth(cursor);
+  for (let day = 1; day <= days; day++) {
     const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
     /*
@@ -823,17 +824,32 @@ export const stepMonth = (n) => moveMonth(n);
 /** The days of one month that fall on one weekday, 0 = Monday. JDN 0 was a Monday. */
 function monthColumn(cursor, weekday) {
   const days = [];
-  for (let day = 1; day <= daysInMonth(cursor); day++) {
+  const n = daysInMonth(cursor);
+  for (let day = 1; day <= n; day++) {
     if (gregorianToJdn(cursor.year, cursor.month, day) % 7 === weekday) days.push(day);
   }
   return days;
 }
 
-const daysInMonth = (cursor) => {
-  let n = 28;
-  while (parseIso(toIsoDate({ year: cursor.year, month: cursor.month, day: n + 1 }))) n++;
-  return n;
-};
+/**
+ * Days in the cursor's month, as the distance between two first-of-months
+ * (Addendum G5).
+ *
+ * It used to walk from 28 upwards, building an ISO string and parsing it back
+ * for each candidate day — four JDN conversions a step, and it sat in the
+ * *condition* of two loops, so painting a month re-derived it thirty-odd times
+ * to answer the same question. The difference of two JDNs is the same answer in
+ * constant time.
+ *
+ * **December needs no special case**, which is worth saying because the obvious
+ * version has one. `gregorianToJdn(y, 13, 1)` is exactly `gregorianToJdn(y + 1,
+ * 1, 1)`: with month 13 the formula's `a` is 0 and `m` is 10, which is what
+ * month 1 gives with `y` one lower. A ternary for the roll was written first
+ * and then removed, because no test could be made to fail when it went — the
+ * arithmetic underneath already handled it.
+ */
+export const daysInMonth = ({ year, month }) =>
+  gregorianToJdn(year, month + 1, 1) - gregorianToJdn(year, month, 1);
 
 export const stepCursor = (c, n) => ({
   year: c.year + Math.floor((c.month + n - 1) / 12),

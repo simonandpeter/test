@@ -10,6 +10,8 @@
  * and a reader-initiated open never waits behind the queue.
  */
 
+import { evictOldest } from './lru.js';
+
 const BASE = import.meta.env.BASE_URL;
 
 const MAX_IN_FLIGHT = 4;
@@ -21,8 +23,23 @@ const MAX_IN_FLIGHT = 4;
  */
 const MAX_QUEUED = 12;
 
+/**
+ * How many payloads are kept (Addendum G4). A life plus its images is the
+ * heaviest thing this app holds per saint, and the cache had no ceiling: a
+ * reader working through the Index could accumulate every saint they had
+ * opened for the life of the page. Twenty-four is well past any plausible
+ * back-and-forth and small enough to bound the tab.
+ *
+ * **Payloads only.** The queue and the in-flight speculative set below are not
+ * touched — evicting an in-flight request would leave its `AbortController`
+ * orphaned and its `catch` writing to a map that no longer expects it.
+ */
+const MAX_CACHED = 24;
+
 /** slug -> Promise of the payload. A rejection is evicted, never cached. */
 const cache = new Map();
+
+
 const speculative = new Map(); // slug -> AbortController
 const waiting = [];
 
@@ -60,6 +77,7 @@ async function fetchPayload(slug, signal) {
 function start(slug, signal) {
   const promise = fetchPayload(slug, signal);
   cache.set(slug, promise);
+  evictOldest(cache, MAX_CACHED);
   promise.catch(() => cache.delete(slug));
   return promise;
 }
@@ -70,7 +88,12 @@ function start(slug, signal) {
  * duplicated.
  */
 export function loadDetail(slug) {
-  return cache.get(slug) ?? start(slug);
+  const hit = cache.get(slug);
+  if (!hit) return start(slug);
+  // Re-inserted so the Map's order stays "least recently used first".
+  cache.delete(slug);
+  cache.set(slug, hit);
+  return hit;
 }
 
 export const isLoaded = (slug) => cache.has(slug);
