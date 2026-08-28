@@ -122,12 +122,19 @@ them.
 
   Three things survive the change:
 
-  * **Read the CI run, not your local gate.** That is the rule the split existed
-    to enforce and it is now yours alone. A green suite here is evidence about
-    this desk; the site once went five pushes without deploying and nobody had
-    looked. Read the run's **`flaky` line** as well as its conclusion — a green
-    run with `N flaky` contains a test that failed and passed on retry, and that
-    is the only place a flake rate is visible.
+  * **Read the CI run, not your local gate — and read it on a schedule.** That
+    is the rule the split existed to enforce and it is now yours alone. A green
+    suite here is evidence about this desk; the site once went five pushes
+    without deploying and nobody had looked. Read the run's **`flaky` line** as
+    well as its conclusion — a green run with `N flaky` contains a test that
+    failed and passed on retry, and that is the only place a flake rate shows.
+
+    **The habit is the load-bearing part, not the access.** The second session's
+    token mattered because it read every run after every push, rather than
+    looking when something seemed wrong — which is how a flake at 2 sightings in
+    37 runs gets counted at all, and how five consecutive reds were found. A
+    session that pushes and moves on has the same tool and none of the benefit.
+    **Push, then wait for the run and read it before starting the next thing.**
   * **Back out your own fix, and distrust your own framing.** A single session
     backing out its own change confirms its own account of it; twice in one day
     a second reader caught a claim that was embroidered rather than wrong.
