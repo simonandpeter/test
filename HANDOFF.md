@@ -1246,8 +1246,18 @@ session). SESSIONS.md has each in full.
   author's answer being "ignore svg, just preload texts as recommended".
   `preloadLatin` in vite.config.js, verified present 2026-08-28.
   `font-display: optional` still stands and is why the preload helps at all.
-  **The one thing still owed on it is a second pair of eyes**: `7eea8f8` is
-  listed in this repo's provenance as verified by its author only.
+  **`7eea8f8` has a second pair of eyes now** (2026-08-28), taken off the built
+  artefact rather than off the test, because the test and the plugin were
+  written together and would agree with each other whatever they did. 13 woff2
+  files are emitted and exactly 2 are preloaded: `literata-normal-latin` and
+  `literata-normal-latin-ext`, **different md5s and different sizes** (85,672
+  and 70,804 bytes), so it is not Amendment 61's same-subset-twice defect. That
+  defect's own trigger is present in this build and handled — the ext file's
+  hash begins with a hyphen, `literata-normal-latin-ext--vWOuwpV.woff2`. No
+  italic, Greek or Cyrillic subset is preloaded, the plugin matches on the
+  bundle's record of each asset's source by exact filename rather than by
+  prefix, and it `warn`s rather than silently shipping nothing if a subset goes
+  missing. No such warning in the build.
 - **Answered at Amendment 61 and left as it stands** — recorded, not acted on.
   **Search does not reach the historical name forms.** It reaches every
   language's display form — `card.names` in the manifest is `{ru: "Авдий",
