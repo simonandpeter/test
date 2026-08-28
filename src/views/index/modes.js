@@ -327,11 +327,37 @@ export function paintCarousel() {
  * Reduced motion gets the swap with no fall and no fade — removed, not
  * shortened (DESIGN.md §6).
  */
+/**
+ * The mode for the rest of this document's life, and no longer than that.
+ *
+ * Module scope rather than the store: leaving the Index for the Daily page and
+ * coming back re-mounts the view, so `state.mode` alone would reset on every
+ * visit within one session — but a reload gets a fresh module and therefore the
+ * carousel, which is exactly the line the author drew.
+ */
+let chosenMode = null;
+
+export const sessionMode = () => chosenMode;
+
 export function switchMode(next) {
   if (!state || state.mode === next) return;
   const { el } = state;
   state.mode = next;
-  store.setSetting('indexMode', next);
+  chosenMode = next;
+  /*
+   * **The mode is not remembered across loads** (author, 2026-08-28: "have it
+   * default to Carousel mode on first open, and if the site is refreshed or
+   * opened again in a different tab, have it still default to Carousel mode.
+   * It only doesnt default while you are still on the site without
+   * refreshing").
+   *
+   * So the toggle holds for the visit and no longer for the reader: `state.mode`
+   * carries it between pages within one document, and a reload starts at the
+   * carousel again. The setting is still *read* on open (views/saints.js), which
+   * is deliberate rather than vestigial — it is how a test asks for the other
+   * face without pressing anything, and it means a future "remember my choice"
+   * needs this line back rather than a new mechanism.
+   */
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) {

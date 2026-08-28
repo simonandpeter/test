@@ -532,7 +532,6 @@ html.is-rolling #view {
   font-weight: 500;
   font-size: 17px;
   line-height: 1.25;
-  max-height: 42px;
   text-decoration: none;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -552,8 +551,15 @@ html.is-rolling #view {
   text-underline-offset: 2px;
 }
 
+/* **No fixed height** (author, 2026-08-28). It reserved two lines for every
+   name, so a one-line name left an empty line above the dates and the card
+   stood taller than the same saint's row — which is the gap the author was
+   pointing at. `cardHeights` in views/index/grid.js is the other half: the
+   virtualiser sizes the card to the lines the name actually needs, exactly as
+   it has done for rows since Amendment 56. The clamp on `.index-name` still
+   caps it at two, and CARD_NAME_LINES_MAX is the same decision in the other
+   file. */
 .index-card .name-line {
-  height: 42px;
   align-items: flex-start;
   gap: var(--space-2);
   overflow: hidden;

@@ -7,6 +7,7 @@ import './styles/saint.css';
 import './styles/index.css';
 
 import { BRAND, STRINGS } from './ui/strings.js';
+import { WORDMARK } from './ui/wordmark.js';
 import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
 import { loadManifest } from './lib/manifest.js';
@@ -439,10 +440,20 @@ function show({ route, params, path }, nav = {}) {
  * a rename later — so they carry a data-site-name hook and the pack fills it.
  */
 function paintSiteName() {
-  // The gap is a space at half size, which is half a space wide — see BRAND.
-  const stamp = `${BRAND[0]}<span class="brand-gap"> </span>${BRAND[1]}`;
+  /*
+   * **The stamp is outlines now, and the markup already has them** (author,
+   * 2026-08-28). `vite.config.js`'s wordmark plugin substitutes the same SVG
+   * into both slots at build time, so the veil carries it in the first paint
+   * rather than waiting for this module to parse — which was the whole
+   * complaint, since the veil is what a reader looks at while the modules
+   * arrive.
+   *
+   * This still runs, and only fills a slot that is somehow empty: the name is
+   * no longer a translation (it is `BRAND`, constant in every pack), so there
+   * is nothing here to repaint on a language change.
+   */
   for (const el of document.querySelectorAll('[data-site-name]')) {
-    el.innerHTML = stamp;
+    if (!el.firstElementChild) el.innerHTML = WORDMARK;
   }
   // And the masthead's own href, once, with the base path on it.
   const home = document.querySelector('[data-site-home]');

@@ -1930,6 +1930,136 @@ test('the die stays square when the chip line is taller than the token', async (
   ).toBeLessThan(0.5);
 });
 
+test('a card is only as tall as its name needs, like a row', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "my request to make the text / frame margins of the
+   * saint card view equal to the margins in the row view was not addressed ...
+   * the extra line is printed instead of being collapsed as we discussed."
+   *
+   * A card reserved two lines of name whatever the name was, so a one-line
+   * saint left an empty line between the name and the dates and stood taller
+   * than the same saint's row. Rows have been sized to their own line count
+   * since Amendment 56; `cardHeights` in views/index/grid.js now does the same
+   * arithmetic for cards, and `.index-card .name-line` gave up its fixed 42 px.
+   *
+   * Pinned by name rather than off the deal, which is this suite's oldest trap:
+   * the Index opens in Random order and a screenful is a property of the
+   * shuffle. Anthony the Great wraps to two lines in the card column; Apostle
+   * Titus does not.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'cards');
+  await page.evaluate(() => document.fonts.ready);
+
+  /*
+   * **The residual, not two card heights.** Comparing one card with another
+   * measures their pictures more than their names — the first version of this
+   * did, and passed with the fix backed out. What is claimed is that the text
+   * block under the picture is *base plus the lines the name needs*, so the
+   * quantity to hold constant is `height - media - lines x lineHeight`. With a
+   * fixed two-line box that residual is a whole line bigger for a one-line
+   * name, which is the empty line the author was pointing at.
+   */
+  const residuals = await page.evaluate(() => {
+    const out = [];
+    for (const el of document.querySelectorAll('.index-card')) {
+      const nameEl = el.querySelector('.index-name');
+      const media = el.querySelector('.index-media');
+      const line = parseFloat(getComputedStyle(nameEl).lineHeight);
+      const lines = Math.round(nameEl.getBoundingClientRect().height / line);
+      out.push({
+        text: nameEl.textContent.trim(),
+        lines,
+        line,
+        residual:
+          el.getBoundingClientRect().height -
+          (media ? media.getBoundingClientRect().height : 0) -
+          lines * line,
+      });
+    }
+    return out;
+  });
+
+  const byLines = new Map();
+  for (const r of residuals) {
+    if (!byLines.has(r.lines)) byLines.set(r.lines, []);
+    byLines.get(r.lines).push(r);
+  }
+  // The premise: the screenful holds both shapes, or there is nothing to
+  // compare and a fixed box would satisfy this as happily as a collapsing one.
+  expect([...byLines.keys()].sort(), 'the window should hold one- and two-line names').toEqual([1, 2]);
+
+  const mean = (rs) => rs.reduce((a, r) => a + r.residual, 0) / rs.length;
+  const one = mean(byLines.get(1));
+  const two = mean(byLines.get(2));
+  expect(
+    Math.abs(one - two),
+    `a one-line card reserves ${one.toFixed(1)} px beyond its name and a two-line one ${two.toFixed(1)}`,
+  ).toBeLessThan(4);
+
+  const card = await page.locator('.index-card').first().evaluate((el) => {
+    const s = getComputedStyle(el);
+    return { padLeft: s.paddingLeft, padRight: s.paddingRight };
+  });
+
+  // And the frame's own margins are the row's: the same rule sets both, which
+  // is the other half of what was asked for.
+  await chooseView(page, 'rows');
+  await page.locator('[data-query]').fill('Apostle Titus');
+  const row = page.locator('.index-card.is-row').first();
+  await expect(row).toBeVisible();
+  const rowPad = await row.evaluate((el) => {
+    const s = getComputedStyle(el);
+    return { padLeft: s.paddingLeft, padRight: s.paddingRight };
+  });
+  expect(rowPad.padLeft).toBe(card.padLeft);
+  expect(rowPad.padRight).toBe(card.padRight);
+});
+
+test('the Index opens on the carousel however the reader left it', async ({ browser }) => {
+  /*
+   * Author, 2026-08-28: "have it default to Carousel mode on first open, and if
+   * the site is refreshed or opened again in a different tab, have it still
+   * default to Carousel mode. It only doesnt default while you are still on the
+   * site without refreshing."
+   *
+   * `switchMode` wrote `settings.indexMode`, so the choice outlived the visit.
+   * It no longer writes it. The setting is still *read* on open, deliberately:
+   * that is how the rest of this suite asks for the other face without pressing
+   * anything, and a future "remember my choice" wants the write back rather
+   * than a new mechanism.
+   *
+   * Its own context, with no `searchMode` stamp — this test is about what a
+   * reader with nothing stored gets, and the suite's `beforeEach` would answer
+   * the question before it was asked.
+   */
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+
+  await page.locator('[data-mode-toggle]').click();
+  await expect(page.locator('.facets')).toBeVisible();
+
+  // Within the visit the choice holds: leaving the page and coming back is not
+  // a reload, and the reader has not asked to be sent back to the row.
+  await page.locator('nav.site-nav a').first().click();
+  await page.goBack();
+  await expect(page.locator('.facets')).toBeVisible();
+
+  // A reload is where it resets.
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('[data-carousel]')).toBeVisible();
+  await expect(page.locator('.facets')).toBeHidden();
+
+  // And nothing was written, which is the mechanism rather than the symptom.
+  const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
+  expect(stored.indexMode, 'the mode should not be persisted').toBeUndefined();
+  await ctx.close();
+});
+
 test('the Gender facet drops its heading from its option', async ({ page }) => {
   // Author, 2026-08-26 evening: under Gender, "Sex unrecorded" becomes
   // "Unrecorded" — the facet's own summary was carrying that word already.

@@ -736,7 +736,10 @@ test('the site is named in the reader\u2019s own language, and the habit page is
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/The Orthodox Saint/);
-  await expect(page.locator('.site-name')).toHaveText('Daily Dox');
+  // The corner is outlines rather than text since 2026-08-28, so its name is
+  // the mark's label. What this test is about — that the corner carries the
+  // site's name and the nav's word for the habit page moves — is unchanged.
+  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'Daily Dox');
   /*
    * On a day that is not today the button reads **Today** since 2026-08-26
    * evening — press it and it goes back. The claim this test makes is about
@@ -766,7 +769,14 @@ test('the veil names the site the way the header does', async ({ page }) => {
    * the served HTML rather than raced for in a live page.
    */
   const html = await (await page.request.get('/')).text();
-  expect(html).toContain('<div class="veil-name" data-site-name>Daily Dox</div>');
+  /*
+   * **The veil carries the mark, not the words** (2026-08-28). The claim is
+   * unchanged and so is the reason for reading the served HTML rather than the
+   * live page: the veil is what a reader sees before the modules parse, so the
+   * name has to be in the markup. It is now an SVG of the stamp face's own
+   * outlines, which is what stopped it being painted in Literata first.
+   */
+  expect(html).toContain('class="veil-name" data-site-name><svg');
   expect(html).not.toContain('The Orthodox Saint</div>');
   // The head keeps its own name, which is the half of the split that stands.
   expect(html).toContain('<title>The Orthodox Saint</title>');
@@ -790,7 +800,10 @@ test('the veil names the site the way the header does', async ({ page }) => {
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
   );
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.site-name')).toHaveText('Daily Dox');
+  // The corner is outlines rather than text since 2026-08-28, so its name is
+  // the mark's label. What this test is about — that the corner carries the
+  // site's name and the nav's word for the habit page moves — is unchanged.
+  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'Daily Dox');
   // The tab keeps the *other* name and keeps translating it: Amendment 31's
   // split survives where a reader meets it in a tab or a bookmark, which is
   // the half the stamp instruction does not touch.
@@ -2040,23 +2053,30 @@ test('the name is a stamp: the same two words in every language, in the stamp fa
     await ready(page, { language });
     await page.goto('/', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    /*
+     * **The stamp is outlines now** (author, 2026-08-28), so the face and the
+     * half-space gap are baked into the path rather than resolved at render:
+     * `scripts/make_wordmark.py` reads base.css's two numbers and draws the
+     * glyphs from src/fonts/gfs-nicefore.woff2. What this test still asserts is
+     * the part that is about the packs — that every language gets the same
+     * mark, and that none of them translates it.
+     */
     const stamp = await page.evaluate(() => {
-      const name = document.querySelector('.site-name');
-      const gap = name.querySelector('.brand-gap');
-      const size = (el) => parseFloat(getComputedStyle(el).fontSize);
+      const mark = document.querySelector('.site-name .brand-mark');
       return {
-        text: name.textContent.replace(/\s+/g, ' ').trim(),
-        face: getComputedStyle(name).fontFamily.split(',')[0].replace(/"/g, ''),
-        gapRatio: gap ? size(gap) / size(name) : null,
-        gapWidth: gap ? gap.getBoundingClientRect().width : null,
+        label: mark?.getAttribute('aria-label') ?? null,
+        paths: mark?.querySelectorAll('path').length ?? 0,
+        width: mark?.getBoundingClientRect().width ?? 0,
+        text: document.querySelector('.site-name').textContent.replace(/\s+/g, ' ').trim(),
       };
     });
-    expect(stamp.text, `the ${language} pack translated the name`).toBe('Daily Dox');
-    // Latin caps in every pack now, where the display face used to be scoped to
-    // English because the other packs printed accented names it cannot set.
-    expect(stamp.face, `the ${language} pack lost the stamp face`).toBe('GFS Nicefore');
-    expect(stamp.gapRatio, 'the gap is not half a space').toBeCloseTo(0.5, 2);
-    expect(stamp.gapWidth).toBeGreaterThan(0);
+    expect(stamp.label, `the ${language} pack translated the name`).toBe('Daily Dox');
+    expect(stamp.text, `the ${language} pack printed the name as live text`).toBe('');
+    // Eight glyphs, one path each: the mark is the same drawing in every pack,
+    // where the face used to be scoped to English because the others printed
+    // accented names GFS Nicefore cannot set.
+    expect(stamp.paths, `the ${language} pack drew a different mark`).toBe(8);
+    expect(stamp.width).toBeGreaterThan(0);
   }
 });
 
@@ -2122,6 +2142,46 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
   await expect(row.locator('[data-forget]')).toHaveCount(1);
   await row.locator('[data-forget]').evaluate((el) => el.click());
   await expect(page.locator('.shelf-row')).toHaveCount(0);
+});
+
+test('the masthead is outlines in the served HTML, not text waiting for a face', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "Daily Dox still sometimes opens with literata on
+   * loading screen and title before updating to the new font. Is this because
+   * the browser has to download? If it is, can you create an .svg yourself
+   * based on the title and replace it with that so it always has the intended
+   * font".
+   *
+   * It was. GFS Nicefore is the only face here at `font-display: swap` and the
+   * only one not preloaded, so a cold load printed the name in Literata and
+   * swapped it when the file landed. **This reverses Addendum G6's rejection of
+   * an SVG wordmark** — that was rejected in favour of preloading the *body*
+   * subsets, which never addressed the masthead.
+   *
+   * Asserted against the **raw HTML** rather than the rendered page, because
+   * the whole claim is about the first paint: the veil is what a reader looks
+   * at while the modules are still parsing, so a mark injected by JavaScript
+   * would be exactly as late as the font was.
+   */
+  const html = await (await page.request.get('/')).text();
+  const marks = [...html.matchAll(/<svg[^>]*class="brand-mark"/g)];
+  expect(marks.length, 'the veil and the masthead should both carry the mark').toBe(2);
+  expect(html, 'the wordmark should not still be live text').not.toContain('>Daily Dox<');
+
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  const mark = page.locator('.site-name .brand-mark');
+  await expect(mark).toBeVisible();
+
+  // It is sized in em, so the narrow rule's font-size clamp still shrinks it.
+  const box = await mark.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    return { w: r.width, h: r.height, font: parseFloat(getComputedStyle(el.parentElement).fontSize) };
+  });
+  expect(box.h, 'the mark is 0.9em tall, so 1000 font units are 1em').toBeCloseTo(box.font * 0.9, 0);
+  expect(box.w).toBeGreaterThan(box.h);
+
+  // And it still names itself, since it replaced text that did.
+  await expect(mark).toHaveAttribute('aria-label', 'Daily Dox');
 });
 
 test('the two Latin subsets are preloaded, and only those', async ({ page }) => {

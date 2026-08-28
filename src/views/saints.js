@@ -36,7 +36,7 @@ import { applySnapshot, snapshot } from './index/place.js';
 import { matching } from './index/filter.js';
 import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
-import { applyMode, paintCarousel } from './index/modes.js';
+import { applyMode, paintCarousel, sessionMode } from './index/modes.js';
 import { paintSummary } from './index/count.js';
 
 export const title = () => STRINGS.saints.title;
@@ -86,7 +86,13 @@ export function render(el, { data, router, nav }) {
     layout: LAYOUTS.includes(settings.indexLayout) ? settings.indexLayout : defaultLayout(),
     // The page opens on the carousel (author, 2026-08-27), and remembers a
     // reader who has moved off it — the same bargain Layout and Detailed make.
-    mode: MODES.includes(settings.indexMode) ? settings.indexMode : 'carousel',
+    /*
+     * **The carousel on every fresh load** (author, 2026-08-28). `sessionMode`
+     * is what the reader pressed during this visit and dies with the document;
+     * `settings.indexMode` is no longer written by the toggle and survives only
+     * as the way a test asks for the other face without pressing anything.
+     */
+    mode: sessionMode() ?? (MODES.includes(settings.indexMode) ? settings.indexMode : 'carousel'),
     detailed: settings.indexDetailed === true,
     loop: null,
     finePointer: window.matchMedia('(pointer: fine)').matches,

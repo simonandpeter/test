@@ -525,8 +525,23 @@ header.chrome .chrome-calendar {
   letter-spacing: 0.04em;
 }
 
+/* **The mark is outlines, so it scales rather than reflows** (author,
+   2026-08-28). Its own inline height maps the viewBox back onto the em, so at
+   any font-size it is exactly the size the live text was; `width: auto` keeps
+   the aspect. The narrow rule below still shrinks the masthead with
+   `font-size: clamp(...)` and that still works — the mark is sized in `em`.
+   What it can no longer do is ellipsis or break across two lines, and it no
+   longer needs to: the name is one constant Latin string in every pack now
+   (BRAND), where the wrap rules were written for translated ones. */
+.brand-mark {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
 /* Half a space, exactly (author, 2026-08-28: "Make the space between 'DAILY'
-   and 'DOX' half as wide"). A space set at half the font size is half as wide,
+   and 'DOX' half as wide"). Kept because scripts/make_wordmark.py reads these
+   two numbers to build the mark; they are no longer applied to live text. A space set at half the font size is half as wide,
    because a glyph's advance scales with the size — so this needs no em-guess
    at what a space measures in a face that is Nicefore once it loads and
    Literata until it does. */

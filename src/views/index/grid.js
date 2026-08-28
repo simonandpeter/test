@@ -3,7 +3,7 @@ import { loadDetail, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { typeNames } from '../../lib/saint-types.js';
-import { layout, windowOf } from '../../lib/virtual-grid.js';
+import { columnsFor, layout, windowOf } from '../../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../../ui/swap.js';
 import { paintCarousel } from './modes.js';
 import { state } from './state.js';
@@ -23,6 +23,31 @@ const GAP = 16;
 const CARD_TEXT_HEIGHT = 88;
 
 const CARD_INSET = 18;
+
+/**
+ * A card's name box, by line count — the same collapse the rows got at
+ * Amendment 56, a day later than they should have had it (author, 2026-08-28:
+ * "my request to make the text / frame margins of the saint card view equal to
+ * the margins in the row view was not addressed ... the extra line is printed
+ * instead of being collapsed").
+ *
+ * A card reserved two lines for every name, so a one-line name left an empty
+ * line between it and the dates and the card's frame stood that much taller
+ * than a row's would have. The reasoning that made rows variable applies
+ * unchanged here: `nameLines` counts the browser's own greedy wrapping with
+ * canvas `measureText`, before anything is laid out, so a virtualised card can
+ * know its height without being rendered.
+ *
+ * **Cards carry no bookmark since 2026-08-28**, so the name has the card's full
+ * width less its own padding — there is no 40 px column to subtract, which is
+ * what made this arithmetic simpler than the row's.
+ */
+const CARD_NAME_LINE = 21.25;
+
+const CARD_NAME_LINES_MAX = 2;
+
+/** Everything in the text block that is not the name: the gap and the dates. */
+const CARD_TEXT_BASE = CARD_TEXT_HEIGHT - CARD_NAME_LINES_MAX * CARD_NAME_LINE;
 
 /**
  * A row's height, by how many lines its name needs.
@@ -182,6 +207,24 @@ const ledes = new Map();
  * already known. The face it measured in is recorded on the function, which is
  * what `wireGrid` compares against when the fonts finish loading.
  */
+/**
+ * A card's text height, per saint. Built once per layout pass like
+ * `rowHeights`: the pen is read once and the column worked out once, and the
+ * returned function is arithmetic over a width already known.
+ */
+function cardHeights(grid) {
+  const { ctx, font } = pen(grid);
+  const cols = columnsFor(grid.clientWidth, { gap: GAP });
+  const columnWidth = Math.max(1, (grid.clientWidth - GAP * (cols - 1)) / cols);
+  const line = columnWidth - CARD_INSET;
+  const base = state.detailed
+    ? DETAILED_CARD_TEXT_HEIGHT - CARD_NAME_LINES_MAX * CARD_NAME_LINE
+    : CARD_TEXT_BASE;
+  state.rowFont = font;
+  return (item) =>
+    base + Math.min(nameLines(saintName(item), line, ctx), CARD_NAME_LINES_MAX) * CARD_NAME_LINE;
+}
+
 function rowHeights(grid) {
   const { ctx, font } = pen(grid);
   const line = grid.clientWidth - ROW_TEXT_INSET;
@@ -212,7 +255,7 @@ export function paintGrid(matched, { animate }) {
     : layout(matched, {
         width: grid.clientWidth,
         gap: GAP,
-        textHeight: state.detailed ? DETAILED_CARD_TEXT_HEIGHT : CARD_TEXT_HEIGHT,
+        textHeight: cardHeights(grid),
         mediaInset: CARD_INSET,
         // The manifest keeps a card's pixel dimensions on its image, and a
         // saint may have no image at all.
