@@ -1134,8 +1134,51 @@ html.is-rolling #view {
   grid-template-rows: 1fr 1fr;
 }
 
-.cx-cell.is-stack .cx-media img {
-  max-height: calc((var(--cx-max-h) - var(--space-3)) / 2);
+/* **The column's fit is guaranteed here, not estimated in JS** (2026-08-28).
+   `carouselCells` packs by an estimate — a caption's height is not knowable
+   before it wraps — and an estimate that is low by a little puts the last card
+   past the fold, which is the one error a reader sees. So the depth is written
+   onto the cell as `data-n` and each picture is capped by it: the column's
+   share of the room, less its captions and the gaps between them. The packer
+   decides *how many* saints share a column; this decides that they fit.
+
+   `--cx-caption` is the same 64 px `CAPTION_H` in views/index/modes.js, and the
+   two are one decision in two files. */
+.carousel {
+  --cx-caption: 64px;
+}
+
+.cx-cell[data-n='1'] .cx-media img {
+  max-height: calc(var(--cx-space, 480px) - var(--cx-caption));
+}
+
+.cx-cell[data-n='2'] .cx-media img {
+  max-height: calc((var(--cx-space, 480px) - 2 * var(--cx-caption) - var(--space-3)) / 2);
+}
+
+.cx-cell[data-n='3'] .cx-media img {
+  max-height: calc((var(--cx-space, 480px) - 3 * var(--cx-caption) - 2 * var(--space-3)) / 3);
+}
+
+.cx-cell[data-n='4'] .cx-media img {
+  max-height: calc((var(--cx-space, 480px) - 4 * var(--cx-caption) - 3 * var(--space-3)) / 4);
+}
+
+/* **No blanket halving any more** (2026-08-28). This halved the ceiling for a
+   stacked card, which was right while a stack was always exactly two wide
+   icons. `carouselCells` packs columns by measured height now and only adds a
+   card that fits, so the column's total is governed before anything renders —
+   and a rule that still divided by two capped a four-deep column at twice the
+   room it had. The packer is the authority; the cap below is the single
+   card's. */
+
+/* A saint with no picture is a caption and nothing else (author, 2026-08-28:
+   "have them just as text, no blank square"). Two rows rather than three, and
+   no media row to leave empty — which is also what lets `carouselCells` pack
+   several of them into one column. */
+.cx-card.is-text {
+  grid-template-rows: auto auto;
+  align-self: start;
 }
 
 .cx-card {

@@ -4282,7 +4282,7 @@ The Index grid sits in the standard 72ch content column, which is two cards
 wide on a desktop. That is DESIGN.md §5 built exactly; widening the column for
 this page is a design decision, not a code one, and is left to the author.
 
-## Session 5b — Structural efficiency pass — SCHEDULED (2026-08-22)
+## Session 5b — Structural efficiency pass — DONE (2026-08-28)
 
 Addendum G, applied to the code as it stands. Scheduled before Session 6
 because the River reuses the Index's filter pipeline and the grain track, and
@@ -4394,7 +4394,35 @@ Out of scope, by decision: code-splitting views, splitting CSS, tuning the
 calendar's per-day paints (Addendum G's closing paragraph). The font preload
 question (G6) is the author's and sits with Session 4b's ship gate.
 
-## Session 6 — Phase 2b: River mode
+## Session 6 — Phase 2b: River mode — CANCELLED (2026-08-28)
+
+**The carousel is the River, and the author cancelled the session** once that
+was laid out. Compared against the brief's §8.2:
+
+| River, §8.2 | the carousel |
+| --- | --- |
+| horizontal, unsorted, shuffled stream | yes |
+| **the default face** of All Saints | yes, since 2026-08-28 |
+| no ranking, no ordinal numbers, no sort control | yes |
+| drag, wheel, trackpad | yes, `ui/loop-scroll.js` |
+| the whole corpus | yes, since 2026-08-28 |
+| **a single card box** — "equality of standing is the point" | **no, and deliberately** |
+| virtualised horizontal scroll | no — every cell is in the DOM, only the *pictures* are windowed |
+| arrow-key navigation | no; Tab reaches every card |
+| a Shuffle control | no; the die is in Advanced search |
+| a deep-linked seed | no; `settings.riverSeed` exists and nothing reads it |
+
+**The single card box is the one that decides it.** Addendum C2 calls it "the
+one exception" and says equal size *is* the equality-of-standing work the mode
+exists for — and the author's own instructions have since asked for wide icons
+to pair and for columns to pack by height, which breaks it on purpose. River as
+specified can no longer be built without reversing those. That is the difference
+between a mode that resembles it and a mode that replaced it.
+
+What is left is not a session but three items, to be taken on their merits or
+dropped: **arrow-key navigation, a shuffle control in carousel mode, and a
+shareable seed.** `settings.riverSeed` stays in the store for the third.
+
 ## Session 7 — Phase 3a: globe
 ## Session 8 — Phase 3b: timeline, export/import, rite × communion table (§9.2)
 ## Session 9 — Phase 4: PWA, offline, About page statistics

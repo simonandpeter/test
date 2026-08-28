@@ -70,6 +70,25 @@ export function applySnapshot(snap) {
    * it was taken from.
    */
   state.carouselAt = snap.carouselAt ?? null;
+  /*
+   * **And written straight in if the row is already built** (2026-08-28).
+   * The paragraph above is true when the render happens after this — which it
+   * does behind a view transition, and does *not* under `prefers-reduced-
+   * motion`, where the transition is skipped and `paintCarousel` has already
+   * run by the time the snapshot comes back. The offset was then set too late
+   * to be handed to the loop as `startAt`, and the row opened at its own head:
+   * a reader with reduced motion lost their place on every trip through a
+   * saint. It went unseen while the head was a few hundred pixels in; the row
+   * carrying the whole corpus put it 3,760 px away and the test said so.
+   *
+   * Writing `scrollLeft` is safe rather than a fight with the loop's first
+   * correction: `onScroll` treats anything that is not what the drift last
+   * wrote as the authority, which is exactly what this is.
+   */
+  if (state.loop && state.carouselAt !== null) {
+    const track = el.querySelector('[data-carousel-track]');
+    if (track && track.clientWidth > 0) track.scrollLeft = state.carouselAt;
+  }
 
   controlsEl.querySelector('[data-query]').value = f.query ?? '';
   const check = (name, values) => {

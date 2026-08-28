@@ -173,6 +173,10 @@ export function loopScroll(
   let dragFrom = 0;
   let dragLeft = 0;
   let dragMoved = 0;
+  // Which pointer is hauling, and whether it has been captured yet — capture is
+  // taken when a press becomes a haul rather than when it begins.
+  let dragId = null;
+  let captured = false;
 
   function measure() {
     const first = track.children[buffer];
@@ -341,16 +345,40 @@ export function loopScroll(
     dragging = true;
     dragFrom = e.clientX;
     dragLeft = track.scrollLeft;
+    dragId = e.pointerId;
+    captured = false;
     wheelVel = 0;
     currentSpeed = 0;
     track.classList.add('is-dragging');
-    track.setPointerCapture?.(e.pointerId);
+    /*
+     * **The pointer is not captured here, and that is the whole of a
+     * regression** (author, 2026-08-28: "On desktop you can no longer click on
+     * any card in the carousel to take you to the profile page").
+     *
+     * Capturing on `pointerdown` makes the track the capture target for the
+     * rest of the gesture, and Chromium then dispatches the `click` at the
+     * track rather than at the `<a>` under the finger. The router's delegated
+     * handler looks for an anchor on the event's target, finds none, and the
+     * press does nothing at all — the card is not slow to open, it never opens.
+     *
+     * Capture is what keeps a haul following the mouse once it leaves the
+     * track's box, so it is taken at the moment a press *becomes* a haul —
+     * `onPointerMove` below, past the same 4 px that already decides a haul
+     * from a click. A press that never moves is never captured and reaches the
+     * link the way an ordinary press does.
+     */
   };
 
   const onPointerMove = (e) => {
     if (!dragging) return;
     const dx = e.clientX - dragFrom;
     dragMoved = Math.max(dragMoved, Math.abs(dx));
+    // Past the threshold this is a haul, and a haul wants the pointer even
+    // when it leaves the track. See `onPointerDown` for why not before.
+    if (!captured && dragMoved > 4) {
+      captured = true;
+      track.setPointerCapture?.(dragId);
+    }
     track.scrollLeft = dragLeft - dx;
     lastWritten = track.scrollLeft;
     pos = track.scrollLeft;
@@ -364,7 +392,10 @@ export function loopScroll(
     if (!dragging) return;
     dragging = false;
     track.classList.remove('is-dragging');
-    track.releasePointerCapture?.(e.pointerId);
+    if (captured) {
+      captured = false;
+      track.releasePointerCapture?.(e.pointerId);
+    }
     hold();
   };
 

@@ -1153,18 +1153,21 @@ suite must pass unchanged because nothing the reader sees moves. Do this
 and giving it derived keys and a shared index once is cheaper than retrofitting
 two views.
 
-### Then: Session 6 — River mode
+### ~~Then: Session 6 — River mode~~ — CANCELLED (2026-08-28)
 
-The horizontal, unsorted, shuffled stream (brief §8.2). The mode toggle belongs
-above the Index's controls; `views/saints.js` needs no restructuring for it.
-Addendum C2's one exception: **the River normalises to a single card box** —
-equal size is doing that mode's equality-of-standing work — where the Index
-varies card heights from the manifest's aspect ratios. Deep-link the shuffle
-seed; `settings.riverSeed` already exists in the store.
+**The carousel is the River.** It is the default face of All Saints, horizontal,
+shuffled, sorted by nothing, drag/wheel/trackpad, and since 2026-08-28 it
+carries the whole corpus. SESSIONS' Session 6 entry has the point-by-point
+comparison.
 
-The Index's View control (cards / rows) is a different axis from the mode
-toggle and stays beside Sort. The River takes neither: no sort control by
-design, and its single card box is the point of the mode.
+The deciding one: Addendum C2 says the River **normalises to a single card box**
+and that equal size *is* its equality-of-standing work — and the author has
+since asked for wide icons to pair and for columns to pack by height. River as
+specified cannot be built now without reversing those instructions.
+
+Three items survive it and are worth taking or dropping on their own merits, not
+as a phase: **arrow-key navigation, a shuffle control in carousel mode, and a
+shareable seed** (`settings.riverSeed` is still in the store for the last).
 
 ### After that
 

@@ -2153,6 +2153,50 @@ test('the carousel fades out and back in when the search changes it', async ({ p
   await expect(page.locator('[data-carousel-track]')).toHaveCSS('opacity', '1');
 });
 
+test('a press on a carousel card opens the saint', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "On desktop you can no longer click on any card in the
+   * carousel to take you to the profile page for some reason."
+   *
+   * `loop-scroll.js` took `setPointerCapture` on `pointerdown` so a haul would
+   * keep following the mouse past the track's edge. Capture also makes the
+   * track the target the `click` is dispatched at, rather than the `<a>` under
+   * the finger — so the router's delegated handler found no anchor and the
+   * press did nothing at all. Capture is taken when a press *becomes* a haul
+   * now, past the same 4 px that already told a haul from a click.
+   *
+   * Its own test rather than a line in `the row can be hauled with the mouse`,
+   * which asserted only that a haul moves the row and stayed green throughout.
+   * A press and a haul are two claims and they broke independently.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  // A card well inside the viewport, so the press cannot land on the edge of
+  // one the row has half carried off.
+  const find = () =>
+    page.evaluate(() => {
+      for (const el of document.querySelectorAll('.carousel-track a.cx-card')) {
+        const r = el.getBoundingClientRect();
+        const inset = Math.min(120, window.innerWidth / 6);
+        if (r.left > inset && r.right < window.innerWidth - inset && r.height > 40) {
+          return { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) };
+        }
+      }
+      return null;
+    });
+  // Polled: the row is laid out a frame or two after the first card is
+  // visible, and a single read can land before any card is wholly inside.
+  await expect.poll(find, { timeout: 5000, message: 'no card was fully in view to press' }).not.toBeNull();
+  const target = await find();
+
+  await page.mouse.click(target.x, target.y);
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+});
+
 test('the Gender facet drops its heading from its option', async ({ page }) => {
   // Author, 2026-08-26 evening: under Gender, "Sex unrecorded" becomes
   // "Unrecorded" — the facet's own summary was carrying that word already.
@@ -2414,6 +2458,9 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
       total: kids.length,
       count,
       periodic,
+      saints: new Set(
+        [...track.querySelectorAll('.cx-card')].map((a) => a.getAttribute('data-prefetch')),
+      ).size,
       bodySpan: kids[buffer + count].offsetLeft - kids[buffer].offsetLeft,
       at: track.scrollLeft,
       max: track.scrollWidth - track.clientWidth,
@@ -2427,7 +2474,11 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
    * what makes the corpus affordable is `windowImages`, which holds only the
    * bitmaps near the viewport.
    */
-  expect(shape.count, 'the run should be every matched saint').toBeGreaterThan(400);
+  /* Cells, not saints: a column holds up to four since the row started packing
+     by height, so the run is shorter than the corpus while still carrying all
+     of it. The count that matters is the saints, asserted below. */
+  expect(shape.count, 'the run should be most of the corpus in columns').toBeGreaterThan(150);
+  expect(shape.saints, 'every matched saint should be in the run').toBeGreaterThan(700);
   expect(shape.total).toBe(shape.count + 24);
   expect(shape.periodic, 'a shift of one period must land on the same saints').toBe(true);
   expect(shape.bodySpan).toBeGreaterThan(0);
@@ -2437,23 +2488,55 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
   expect(shape.at, 'the row sat at its true leading edge').toBeGreaterThan(0);
   expect(shape.at).toBeLessThan(shape.max);
 
-  // Neither edge is a dead end: pushed hard against each, the track comes back
-  // into the middle rather than stopping.
-  const edges = await page.evaluate(async () => {
+  /*
+   * **Waited for the loop to have measured, not sampled straight after paint**
+   * (2026-08-28). `loopScroll` re-measures from its own frame until the
+   * geometry is real, and only then knows a period to correct against. With a
+   * 48-saint sample that landed on the first frame and this block could follow
+   * the paint; carrying the whole corpus it takes a few more, and both edges
+   * then read as dead ends because there is no period yet — the row is fine and
+   * the test was early. CLAUDE.md has warned since 2026-08-27 that this loop is
+   * not measurable until it says so.
+   *
+   * A started loop is one sitting at its own head rather than at the DOM's
+   * edge, which is the assertion just above turned into a wait.
+   */
+  await expect
+    .poll(() => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft), {
+      timeout: 5000,
+    })
+    .toBeGreaterThan(0);
+
+  /*
+   * Neither edge is a dead end: pushed hard against each, the track comes back
+   * into the middle rather than stopping.
+   *
+   * **Polled, not settled for 400 ms** (2026-08-28). The correction runs on the
+   * track's own scroll event and the drift's next frame, and a fixed wait is a
+   * measurement of how quickly this machine gets round to both — which with a
+   * 48-saint sample was always inside 400 ms and with the whole corpus is
+   * sometimes not. A wait that ends when the thing has happened says the same
+   * thing and cannot be outrun; a correction that never comes still fails it.
+   */
+  const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
+
+  const highBefore = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');
-    const settle = () => new Promise((r) => setTimeout(r, 400));
     track.scrollLeft = track.scrollWidth - track.clientWidth - 20;
-    const highBefore = track.scrollLeft;
-    await settle();
-    const highAfter = track.scrollLeft;
-    track.scrollLeft = 4;
-    const lowBefore = track.scrollLeft;
-    await settle();
-    const lowAfter = track.scrollLeft;
-    return { highBefore, highAfter, lowBefore, lowAfter };
+    return track.scrollLeft;
   });
-  expect(edges.highAfter, 'the far edge wrapped back').toBeLessThan(edges.highBefore);
-  expect(edges.lowAfter, 'the near edge wrapped forward').toBeGreaterThan(edges.lowBefore);
+  await expect
+    .poll(at, { timeout: 5000, message: 'the far edge wrapped back' })
+    .toBeLessThan(highBefore);
+
+  const lowBefore = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    track.scrollLeft = 4;
+    return track.scrollLeft;
+  });
+  await expect
+    .poll(at, { timeout: 5000, message: 'the near edge wrapped forward' })
+    .toBeGreaterThan(lowBefore);
 });
 
 test('the carousel drifts on its own, and keeps drifting under the pointer', async ({ page }) => {
@@ -3767,6 +3850,7 @@ test('the row can be hauled with the mouse, and a haul is not a click', async ({
 
   const after = await track.evaluate((el) => el.scrollLeft);
   expect(Math.abs(after - before), 'the row did not follow the drag').toBeGreaterThan(60);
+
   await expect(page.locator('h1.saint-name')).toHaveCount(0);
   await expect(page.locator('.cx-card').first()).toBeVisible();
 });
@@ -3882,8 +3966,12 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
       touch: getComputedStyle(track).touchAction,
     };
   });
-  expect(row.stacked, 'no wide icons were paired on a phone').toBeGreaterThan(2);
-  expect(row.pairs).toBe(row.stacked);
+  /* **Columns of one to four, not pairs** (2026-08-28). The row packed wide
+     icons two at a time; it packs any column by height now, so a stack is
+     "more than one" rather than "exactly two" and text-only saints — which
+     carry no picture and so no media box — go deepest. */
+  expect(row.stacked, 'nothing was stacked on a phone').toBeGreaterThan(2);
+  expect(row.pairs, 'pairs are a subset of stacks now, not the whole of them').toBeLessThanOrEqual(row.stacked);
   expect(row.tops, 'every cell stands on the same line').toBeGreaterThan(1);
   expect(row.escapes, 'a cell hangs out of the row').toBe(0);
   expect(row.touch).toContain('pan-y');
@@ -3908,7 +3996,25 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
     'a tall desktop window should pair its wide icons',
   ).toBeVisible();
 
-  // And a short one gives the stacks up rather than cramming two bands in.
+  /*
+   * And a short window packs *shallower* rather than cramming the same columns
+   * in — "depending on resize bring them closer together / remove double
+   * stacks". Not to zero: a saint with no picture is a caption 64 px tall, and
+   * two of those fit a window that no longer has room for two icons. What has
+   * to fall is the depth.
+   */
+  const deepest = () =>
+    page.evaluate(() =>
+      Math.max(
+        0,
+        ...[...document.querySelectorAll('.cx-cell')].map((c) => c.querySelectorAll('.cx-card').length),
+      ),
+    );
+  await expect.poll(deepest, { timeout: 5000 }).toBeGreaterThan(2);
+  const tallWindow = await deepest();
+
   await page.setViewportSize({ width: 1280, height: 420 });
-  await expect(page.locator('.cx-cell.is-stack')).toHaveCount(0);
+  await expect
+    .poll(deepest, { timeout: 5000, message: 'a short window packed as deep as a tall one' })
+    .toBeLessThan(tallWindow);
 });

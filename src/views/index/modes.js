@@ -155,11 +155,21 @@ function carouselCard(item, router) {
         <img data-src="${BASE + item.image.src}" alt=""
           width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
-    : '<span class="cx-media is-blank" aria-hidden="true"></span>';
+    : '';
   // The office and the dates, the same line the Index cards carry (author,
   // 2026-08-27).
   const sub = esc(formatSubtext(item));
-  return `<a class="cx-card" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
+  /*
+   * **No blank box where there is no picture** (author, 2026-08-28: "For any
+   * saint profiles that lack an image ... have them just as text, no blank
+   * square"). The Index's *rows* keep an empty slot on purpose, so their
+   * pictures stay in one column; a drifting row has no column to keep, and an
+   * empty frame there is the promise of a picture that is not coming.
+   *
+   * It reads `item.image`, so a saint who gains one later is drawn with it
+   * without anything here being told: there is no list of who has a picture.
+   */
+  return `<a class="cx-card${item.image ? '' : ' is-text'}" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
       ${media}
       <span class="cx-name">${esc(saintName(item))}</span>
       ${sub ? `<span class="cx-sub utility">${sub}</span>` : ''}
@@ -234,41 +244,107 @@ const stacking = () =>
  * Pairs are adjacent wide saints only, so a wide icon next to a tall one keeps
  * its own column rather than being scaled to make a pair that is not there.
  */
-export function carouselCells(pool, stacked = stacking()) {
-  if (!stacked) return pool.map((item) => [item]);
-  /*
-   * **The wide ones are brought together rather than paired where they fall.**
-   * The first build only paired neighbours, and 44 of the corpus's 128 icons
-   * are wide but scattered — a shuffled pool of 48 produced *one* pair, which
-   * is not "double stack any saint images that are wide aspect ratio". Pairing
-   * them deliberately gets every wide icon but at most one, and the pool is
-   * already ordered for the row's sake rather than the reader's (imaged first),
-   * so its order is not something to protect.
-   */
-  const wide = pool.filter(isWide);
-  const singles = pool.filter((item) => !isWide(item)).map((item) => [item]);
-  const stacks = [];
-  for (let i = 0; i + 1 < wide.length; i += 2) stacks.push([wide[i], wide[i + 1]]);
-  // An odd wide icon keeps a column of its own rather than being stacked with
-  // a tall one, which would scale one of the two to fit the other's half.
-  if (wide.length % 2) singles.push([wide.at(-1)]);
-  if (!stacks.length) return singles;
-
-  // Dealt back through the row at an even step, so the stacks are spread
-  // rather than arriving in a block — the same reason the lifts cycle.
-  const out = [];
-  const step = singles.length / stacks.length;
-  let next = 0;
-  for (let i = 0; i < singles.length; i += 1) {
-    if (next < stacks.length && i >= Math.round(next * step)) {
-      out.push(stacks[next]);
-      next += 1;
-    }
-    out.push(singles[i]);
-  }
-  out.push(...stacks.slice(next));
-  return out;
+/**
+ * `--cx-w` in pixels.
+ *
+ * **A custom property does not compute.** `getPropertyValue('--cx-w')` hands
+ * back the literal `clamp(150px, …, 300px)` the stylesheet wrote, and
+ * `parseFloat` of that is **150** — the first number in the string. Every
+ * column was then packed against half the real card width, so one that should
+ * have held two imaged saints held four and the row ran a third of a window
+ * past the fold.
+ *
+ * A probe with `width: var(--cx-w)` makes the browser resolve it, which is the
+ * only way to read a clamp correctly from script. One offscreen element and one
+ * layout read, once per paint.
+ */
+function resolveCardWidth(carouselEl) {
+  if (!carouselEl) return 150;
+  const probe = document.createElement('span');
+  probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;width:var(--cx-w)';
+  carouselEl.append(probe);
+  const width = probe.getBoundingClientRect().width;
+  probe.remove();
+  return width || 150;
 }
+
+/**
+ * A caption's own height: the name, the subtext line and the gaps around them.
+ *
+ * Generous on purpose. A one-line name is nearer 46, but names wrap to two at
+ * this column width often enough that packing to the shorter figure overflowed
+ * the window and cut the last caption off. Over-estimating leaves a column
+ * slightly short of the fold; under-estimating puts it past it, and only one of
+ * those is visible to a reader.
+ */
+const CAPTION_H = 64;
+
+/** The gap between two cards stacked in one cell (`--space-3`). */
+const CELL_GAP = 12;
+
+/**
+ * How deep a column may go. Without a cap, text-only saints — 46 px each —
+ * would pack fifteen deep in a tall window and the row would read as a list
+ * turned sideways rather than a carousel.
+ */
+const STACK_MAX = 4;
+
+/**
+ * What a card will stand, before anything is rendered.
+ *
+ * The picture is shown whole at `--cx-w`, so its height is the width over its
+ * own aspect; a saint with no picture is a caption and nothing else.
+ */
+function cardHeight(item, cardWidth) {
+  if (!item.image) return CAPTION_H;
+  const aspect = item.image.aspect || 1;
+  return cardWidth / aspect + CAPTION_H;
+}
+
+/**
+ * The row's children, which are **cells rather than cards**: a column of one
+ * or more saints.
+ *
+ * **Packed by height since 2026-08-28**, where it used to pair wide icons and
+ * nothing else (author: "There is no double stacking on desktop carousel that
+ * I can see ... the carousel does not spread all across the height of the
+ * window ... For any saint profiles that lack an image, stack them more").
+ *
+ * Pairing wide icons was a special case of a general fact: a card shorter than
+ * the row leaves the rest of its column empty. Filling the column instead
+ * subsumes it — two wide icons still pair, because two of them are what fits —
+ * and it is what puts the row across the window rather than in a band at the
+ * top, because the space it packs into *is* the window's.
+ *
+ * **A cell, not a card, is what the loop counts.** `loopScroll` reads one
+ * period from the offset between child `buffer` and child `buffer + count`, so
+ * everything it knows is the sequence of children; two saints sharing a child
+ * leaves that arithmetic untouched. A two-row grid over the track itself would
+ * not, and the reason is worth keeping: a period starting mid-column packs
+ * differently from one starting at a column edge, which is a drift the wrap
+ * cannot correct.
+ */
+export function carouselCells(pool, { space = 0, cardWidth = 150 } = {}) {
+  if (!space) return pool.map((item) => [item]);
+  const cells = [];
+  let column = [];
+  let used = 0;
+  for (const item of pool) {
+    const h = cardHeight(item, cardWidth);
+    const next = column.length ? used + CELL_GAP + h : h;
+    if (column.length && (next > space || column.length >= STACK_MAX)) {
+      cells.push(column);
+      column = [item];
+      used = h;
+      continue;
+    }
+    column.push(item);
+    used = next;
+  }
+  if (column.length) cells.push(column);
+  return cells;
+}
+
 
 /**
  * Fills the track from what the filters have left, and wires it once.
@@ -335,7 +411,33 @@ export function paintCarousel() {
    * it evenly.
    */
   const pool = state.shownCards.slice();
-  const stacked = stacking();
+  /*
+   * The room a column has, and the width a card will be — both read once here
+   * and handed to the packer, which is then arithmetic with no layout in it.
+   */
+  /*
+   * **Nothing is decided before the row can be measured** (2026-08-28). The
+   * packing depends on the card's width and the window's room, and both are
+   * nonsense while the track is unlaid — so `paintCarousel` used to run once
+   * against zeroes and again against the real geometry, produce two different
+   * runs, and treat the second as a *changed pool*: which drops the remembered
+   * offset, and a reader coming back from a saint lost their place. The second
+   * paint arrives on its own from the resize observer and from `update`.
+   */
+  if (!track || track.clientWidth === 0) return;
+  const carouselEl = el.querySelector('.carousel');
+  const cardWidth = resolveCardWidth(carouselEl);
+  /*
+   * **Quantised, so the packing is stable across paints.** The run is the
+   * carousel's identity — the key that decides whether the remembered offset
+   * survives — and packing against a raw pixel height made it depend on the
+   * exact moment the space was published. A first paint whose track had not
+   * settled produced a run one card different from the one the reader left, the
+   * key changed, and the offset was dropped: the row reopened at its start
+   * instead of where they were. Rounding to 40 px absorbs that without being
+   * coarse enough for a reader to see.
+   */
+  const space = Math.round(Math.max(0, carouselSpace - CX_FOOT) / 40) * 40;
   /*
    * **Each saint once** (author, 2026-08-28: "When you search for a saint in
    * the carousel, only display 1 instance of each saint, not multiple as it
@@ -346,11 +448,14 @@ export function paintCarousel() {
    * search matching two saints showed each of them five times. A run that does
    * not fill the track does not loop at all now; see `fits` below.
    */
-  const run = carouselCells(pool, stacked);
+  const run = carouselCells(pool, { space, cardWidth });
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
   // rather than keep a set of cells that were grouped for the other one.
-  const key = `${stacked ? 'stacked' : 'flat'}:${run.map((cell) => cell.map((c) => c.slug).join('+')).join(',')}`;
+  // The run itself is the key: a resize that changes how the columns pack
+  // changes the run, and one that does not leaves it alone. It no longer needs
+  // the width band spelled out separately — the packing is what that stood for.
+  const key = run.map((cell) => cell.map((c) => c.slug).join('+')).join(',');
   if (key === state.carouselKey) return;
 
   /*
@@ -377,19 +482,19 @@ export function paintCarousel() {
       // The key is set by the rebuild, so clearing it here is what lets the
       // deferred call past the early return above.
       state.carouselKey = null;
-      buildCarousel(key, run);
+      buildCarousel(key, run, cardWidth);
     }, CX_FADE);
     state.cleanups.push(() => clearTimeout(state.carouselFade));
     return;
   }
-  buildCarousel(key, run);
+  buildCarousel(key, run, cardWidth);
 }
 
 /** How long the row takes to go before the new one is built. */
 const CX_FADE = 150;
 
 /** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
-function buildCarousel(key, run) {
+function buildCarousel(key, run, cardWidth) {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
   if (!track) return;
@@ -430,7 +535,9 @@ function buildCarousel(key, run) {
     track.innerHTML = loopSlice(run, buffer)
       .map((cell, i) => {
         const atRun = (((i - buffer) % n) + n) % n;
-        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}">${cell
+        // `data-n` is the column's depth, and index.css caps each picture by it
+        // so the column cannot exceed the window whatever the packer estimated.
+        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}" data-n="${cell.length}">${cell
           .map((item) => carouselCard(item, router))
           .join('')}</span>`;
       })
@@ -469,8 +576,6 @@ function buildCarousel(key, run) {
    */
   const cs = getComputedStyle(track);
   const gap = parseFloat(cs.columnGap || cs.gap) || 0;
-  const cardWidth =
-    parseFloat(getComputedStyle(el.querySelector('.carousel')).getPropertyValue('--cx-w')) || 150;
   const contentWidth = n * (cardWidth + gap) - gap;
   const fits = track.clientWidth > 0 && contentWidth <= track.clientWidth;
   if (!fits) paint(CAROUSEL_BUFFER);
