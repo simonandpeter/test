@@ -90,7 +90,16 @@ function start(slug, signal) {
 export function loadDetail(slug) {
   const hit = cache.get(slug);
   if (!hit) return start(slug);
-  // Re-inserted so the Map's order stays "least recently used first".
+  /*
+   * Re-inserted so the Map's order stays "least recently used first".
+   *
+   * **This re-inserts a promise that may still be pending, and that is
+   * load-bearing** rather than sloppy: it means a payload cannot be evicted
+   * while a caller is actively waiting on it. A tidy-up that re-inserted only
+   * settled entries would let a pending fetch age to the back of the queue and
+   * be dropped mid-flight, which is the orphaned-`AbortController` case the
+   * cap's own comment guards against for the speculative set.
+   */
   cache.delete(slug);
   cache.set(slug, hit);
   return hit;
