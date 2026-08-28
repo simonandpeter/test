@@ -2,7 +2,7 @@ import { formatSubtext } from '../../lib/calendar-page.js';
 import { observePrefetch, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
-import { loopSafe, loopScroll, loopSlice, windowImages } from '../../ui/loop-scroll.js';
+import { loopScroll, loopSlice, windowImages } from '../../ui/loop-scroll.js';
 import * as store from '../../lib/store.js';
 import { STRINGS } from '../../ui/strings.js';
 import { state } from './state.js';
@@ -10,19 +10,30 @@ import { state } from './state.js';
 /* The site's base path, declared per file as every other view does. */
 const BASE = import.meta.env.BASE_URL;
 
-/**
- * How many saints the carousel draws from (author, 2026-08-27: "implement it
- * intelligently to work efficiently and smartly").
- *
- * The old build's carousel held its whole corpus because that corpus was ten
- * saints. This one is 742, and a track carrying every one of them plus the
- * clone buffer either side is ~800 nodes and 742 images the reader will never
- * reach — a drifting row is a way of *meeting* saints, not a register of them,
- * and the register is one press away in the other mode. So the track takes a
- * sample, drawn through the same seeded shuffle the Random order uses, which
- * makes it stable for a visit and different on the next one.
+/*
+ * **The carousel drew from a sample of 48 until 2026-08-28**, on the reasoning
+ * that a track carrying all 742 plus its clone buffer is ~800 nodes and 742
+ * pictures the reader will never reach. The author reversed it — "It should be
+ * able to show all of them" — and the cost half of that reasoning had already
+ * been paid down by `windowImages`, which holds only the bitmaps near the
+ * viewport, and by the width/height attributes that keep an empty box the size
+ * of a full one. What is left is nodes, which are cheap, rather than decoded
+ * images, which are not.
  */
-const CAROUSEL_POOL = 48;
+
+/**
+ * How far either side of the track a picture is held (author, 2026-08-28:
+ * "increasing the loading distance off screen for mobile").
+ *
+ * A phone's cards are 150 px against a desk's 240, so a flat margin buys a
+ * phone *fewer* cards of warning than a desk while being the surface where a
+ * picture arriving late is most obvious. Roughly seven cards ahead on a phone
+ * and three at a desk; the desk's number is unchanged, because that is the
+ * surface the author called laggy and more held bitmaps is the wrong direction
+ * there.
+ */
+const imageMargin = () => (stacking() ? 1100 : 700);
+
 /** Copies either side of the run. Wide enough that a hard fling cannot outrun
  *  the buffer before the correction is allowed to land (see ui/loop-scroll). */
 const CAROUSEL_BUFFER = 12;
@@ -158,8 +169,48 @@ function carouselCard(item, router) {
 /** A picture wider than it is tall, by enough to be worth pairing. */
 const isWide = (item) => (item.image?.aspect ?? 1) > 1.2;
 
-/** Whether the row is being built for a phone. */
-const stacking = () => !window.matchMedia('(min-width: 700px)').matches;
+/**
+ * The room the row has: from the top of the track to the bottom of the window.
+ *
+ * Published to CSS as `--cx-space` so the card size can follow it (author,
+ * 2026-08-28: "they only take up the top half of the window, spread them across
+ * the available window, depending on resize bring them closer together / remove
+ * double stacks"). A fixed band left the row sitting in the top third of a tall
+ * desktop window with nothing under it.
+ */
+const CX_FOOT = 24;
+
+export function publishCarouselSpace() {
+  const track = state?.el?.querySelector('[data-carousel-track]');
+  const carousel = state?.el?.querySelector('.carousel');
+  if (!track || !carousel) return 0;
+  const top = track.getBoundingClientRect().top;
+  const space = Math.max(200, Math.round(window.innerHeight - top - CX_FOOT));
+  carousel.style.setProperty('--cx-space', `${space}px`);
+  return space;
+}
+
+/** What was last published, so `stacking()` costs no layout of its own. */
+let carouselSpace = 0;
+
+/**
+ * Two rows' worth of room: a stacked cell is two pictures and two captions, and
+ * below this it reads as two cramped bands rather than one generous one.
+ */
+const STACK_SPACE = 460;
+
+/**
+ * Whether cells pair their wide icons.
+ *
+ * **Height, not width, since 2026-08-28.** It was `not (min-width: 700px)` —
+ * phones only — which is why the author saw no stacking at a desk at all. What
+ * a stack actually needs is vertical room, and that is the thing a desktop
+ * window has plenty of and a short one does not: "depending on resize bring
+ * them closer together / remove double stacks". A phone still always stacks,
+ * because its 150 px cards leave room for two whatever the window does.
+ */
+const stacking = () =>
+  !window.matchMedia('(min-width: 700px)').matches || carouselSpace >= STACK_SPACE;
 
 /**
  * The row's children, which are **cells rather than cards** (author,
@@ -236,18 +287,112 @@ export function carouselCells(pool, stacked = stacking()) {
 export function paintCarousel() {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
+  carouselSpace = publishCarouselSpace();
+  /*
+   * One listener for the view's life: the card size follows the window's height
+   * now, and so does whether cells stack at all. `paintCarousel` is a no-op
+   * when its key has not moved, so a resize that only changes the size repaints
+   * nothing and a resize that crosses the stacking threshold rebuilds once.
+   */
+  if (state && !state.carouselResize) {
+    let frame = null;
+    const onResize = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = null;
+        if (!state) return;
+        carouselSpace = publishCarouselSpace();
+        if (state.mode === 'carousel') paintCarousel();
+      });
+    };
+    window.addEventListener('resize', onResize, { passive: true });
+    state.carouselResize = () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener('resize', onResize);
+    };
+    state.cleanups.push(() => state.carouselResize?.());
+  }
 
-  const pool = state.shownCards
-    .slice()
-    .sort((a, b) => (a.image ? 0 : 1) - (b.image ? 0 : 1))
-    .slice(0, CAROUSEL_POOL);
+  /*
+   * **The whole matched set, in the reader's own order** (author, 2026-08-28:
+   * "the carousel does not cycle through all saints just a limited number and
+   * then it cycles back to the start of that pool? It should be able to show
+   * all of them").
+   *
+   * **This reverses a recorded decision** — HANDOFF's "the carousel is a
+   * sample, not the corpus … do not 'fix' it by rendering all 742" — and the
+   * reasoning it reversed is worth keeping, because it was about cost rather
+   * than taste: a cell per saint is a cell the loop has to measure past and an
+   * element the observer has to watch. What makes it affordable is the two
+   * mechanisms built since: `windowImages` holds only the pictures near the
+   * viewport, and every `<img>` carries width/height so an empty box is exactly
+   * as tall as a full one. The DOM grows; the decoded bitmaps do not.
+   *
+   * The imaged-first sort went with the slice. It existed to make a 48-card
+   * *sample* look like the good half of the corpus; over the whole set it would
+   * front-load 130 pictures and leave a long tail of text, which is a worse row
+   * than the reader's own order — Random by default, so pictures fall through
+   * it evenly.
+   */
+  const pool = state.shownCards.slice();
   const stacked = stacking();
-  const run = loopSafe(carouselCells(pool, stacked));
+  /*
+   * **Each saint once** (author, 2026-08-28: "When you search for a saint in
+   * the carousel, only display 1 instance of each saint, not multiple as it
+   * currently happens to complete the carousel").
+   *
+   * `loopSafe` repeated a short run to a floor of ten so the period was long
+   * enough not to judder — honest about the data but not about the reading: a
+   * search matching two saints showed each of them five times. A run that does
+   * not fill the track does not loop at all now; see `fits` below.
+   */
+  const run = carouselCells(pool, stacked);
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
   // rather than keep a set of cells that were grouped for the other one.
   const key = `${stacked ? 'stacked' : 'flat'}:${run.map((cell) => cell.map((c) => c.slug).join('+')).join(',')}`;
   if (key === state.carouselKey) return;
+
+  /*
+   * **The row fades out and the new one fades in** (author, 2026-08-28: "When
+   * searching for saints in the carousel, fade out and fade in when loading the
+   * new displays"). Without it a search replaced the whole track between two
+   * frames, which reads as a flicker rather than a change.
+   *
+   * The rebuild is deferred behind the fade, which is the only way to have an
+   * *out* at all — so this function now returns before the track has changed.
+   * Two consequences, both handled here rather than left to callers: a second
+   * keystroke inside the fade supersedes the first (the timer is cancelled and
+   * the later key wins), and reduced motion skips the whole arrangement and
+   * rebuilds in place, because a wait with no animation behind it is the same
+   * defect wearing a different hat (DESIGN.md §6).
+   */
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const first = state.carouselKey === null || state.carouselKey === undefined;
+  if (!reduced && !first && track.children.length) {
+    clearTimeout(state.carouselFade);
+    track.classList.add('is-swapping');
+    state.carouselFade = setTimeout(() => {
+      if (!state) return;
+      // The key is set by the rebuild, so clearing it here is what lets the
+      // deferred call past the early return above.
+      state.carouselKey = null;
+      buildCarousel(key, run);
+    }, CX_FADE);
+    state.cleanups.push(() => clearTimeout(state.carouselFade));
+    return;
+  }
+  buildCarousel(key, run);
+}
+
+/** How long the row takes to go before the new one is built. */
+const CX_FADE = 150;
+
+/** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
+function buildCarousel(key, run) {
+  const { el, router } = state;
+  const track = el.querySelector('[data-carousel-track]');
+  if (!track) return;
   // A different set of saints is a different row, and the remembered offset
   // belonged to the old one.
   if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;
@@ -259,6 +404,7 @@ export function paintCarousel() {
   state.carouselWindow = null;
   if (!run.length) {
     track.innerHTML = '';
+    track.classList.remove('is-swapping');
     return;
   }
 
@@ -280,14 +426,67 @@ export function paintCarousel() {
    * was copied from, so a saint has one resting place wherever they appear.
    */
   const n = run.length;
-  track.innerHTML = loopSlice(run, CAROUSEL_BUFFER)
-    .map((cell, i) => {
-      const atRun = (((i - CAROUSEL_BUFFER) % n) + n) % n;
-      return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}">${cell
-        .map((item) => carouselCard(item, router))
-        .join('')}</span>`;
-    })
-    .join('');
+  const paint = (buffer) => {
+    track.innerHTML = loopSlice(run, buffer)
+      .map((cell, i) => {
+        const atRun = (((i - buffer) % n) + n) % n;
+        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}">${cell
+          .map((item) => carouselCard(item, router))
+          .join('')}</span>`;
+      })
+      .join('');
+  };
+
+  /*
+   * **A row that fits does not loop** (author, 2026-08-28: "If there are not
+   * enough saints to complete the auto scroll carousel, have the scroll gently
+   * stop and display left justified. The auto scroll resumes when there are
+   * enough cards to reach both ends of the window size").
+   *
+   * Decided by measurement rather than by a card count, because the answer
+   * depends on the card width, the window width and whether wide icons paired
+   * — three things that move independently. So the plain run is laid out first
+   * and asked whether it overflows; only then are the clone buffers built.
+   * Reading `scrollWidth` forces the layout, which is the cost of asking.
+   */
+  // The new row comes up as the old one went down. One frame, so the browser
+  // has the new children before the class comes off and there is something to
+  // fade rather than a jump from nothing.
+  const reveal = () => requestAnimationFrame(() => track.classList.remove('is-swapping'));
+
+  /*
+   * **Computed, not measured.** The first version laid the plain run out and
+   * read `scrollWidth`, which meant painting 742 cells twice on every
+   * keystroke — two full layouts of the largest thing on the page, which is
+   * exactly the stutter the author reported. Every cell is one column of
+   * `--cx-w` whether it holds one saint or a stacked pair, so the width is
+   * arithmetic and needs no layout at all.
+   *
+   * **A hidden track still measures zero**, and zero fits inside zero — this
+   * asked while the Index was in search mode and concluded that 742 cards
+   * needed no loop, which is the same trap `switchMode` documents for
+   * `scrollLeft`. `clientWidth > 0` is the guard.
+   */
+  const cs = getComputedStyle(track);
+  const gap = parseFloat(cs.columnGap || cs.gap) || 0;
+  const cardWidth =
+    parseFloat(getComputedStyle(el.querySelector('.carousel')).getPropertyValue('--cx-w')) || 150;
+  const contentWidth = n * (cardWidth + gap) - gap;
+  const fits = track.clientWidth > 0 && contentWidth <= track.clientWidth;
+  if (!fits) paint(CAROUSEL_BUFFER);
+  else paint(0);
+  track.classList.toggle('is-static', fits);
+  state.carouselStatic = fits;
+  if (fits) {
+    // Left-justified and still: no clones to wrap between, and no drift to
+    // start. `windowImages` still runs — a short row is not necessarily a small
+    // one, and its pictures should still be released when scrolled past.
+    state.carouselWindow = windowImages(track, { margin: imageMargin() });
+    state.carouselPrefetch?.();
+    state.carouselPrefetch = observePrefetch(track);
+    reveal();
+    return;
+  }
   // The images decide the widths, so the loop cannot measure until they have
   // laid out. It measures now for the common case — a warm cache — and again
   // when each picture arrives.
@@ -308,12 +507,13 @@ export function paintCarousel() {
    * — a `measure()` that ran before the track had been laid out — which
    * loop-scroll now repairs from its own frame, where it can see it.
    */
-  state.carouselWindow = windowImages(track);
+  state.carouselWindow = windowImages(track, { margin: imageMargin() });
   // One observer at a time. The track is rebuilt whenever the pool changes, and
   // pushing a fresh cleanup onto the pile each time would leave every previous
   // observer watching nodes that are no longer in the document.
   state.carouselPrefetch?.();
   state.carouselPrefetch = observePrefetch(track);
+  reveal();
 }
 
 /**

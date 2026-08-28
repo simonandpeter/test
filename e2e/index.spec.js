@@ -2060,6 +2060,99 @@ test('the Index opens on the carousel however the reader left it', async ({ brow
   await ctx.close();
 });
 
+test('a search too short to fill the row stops it, left-justified, each saint once', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "When you search for a saint in the carousel, only
+   * display 1 instance of each saint, not multiple as it currently happens to
+   * complete the carousel. If there are not enough saints to complete the auto
+   * scroll carousel, have the scroll gently stop and display left justified.
+   * The auto scroll resumes when there are enough cards to reach both ends of
+   * the window size."
+   *
+   * `loopSafe` repeated a short run to a floor of ten so the period was long
+   * enough not to judder — honest about the data and not about the reading: a
+   * search matching two saints showed each of them five times. A run that does
+   * not fill the track no longer loops at all.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  // A name narrow enough that only a couple of saints answer to it.
+  await page.locator('[data-query]').fill('Placilla');
+  const track = page.locator('[data-carousel-track]');
+  await expect(track).toHaveClass(/is-static/);
+
+  const row = await track.evaluate((el) => {
+    const cards = [...el.querySelectorAll('.cx-card')];
+    const slugs = cards.map((a) => a.getAttribute('data-prefetch'));
+    return {
+      slugs,
+      unique: new Set(slugs).size,
+      left: Math.round(cards[0].getBoundingClientRect().left - el.getBoundingClientRect().left),
+      scroll: el.scrollLeft,
+      overflow: el.scrollWidth - el.clientWidth,
+    };
+  });
+  expect(row.slugs.length, 'the premise: the search matched a short row').toBeLessThan(10);
+  expect(row.unique, `each saint once, got ${row.slugs.join(', ')}`).toBe(row.slugs.length);
+  // Left-justified and standing still: no clone buffer to open inside, so the
+  // first card is at the track's own leading edge rather than a period in.
+  expect(row.scroll, 'a row that fits should not be scrolled into a buffer').toBe(0);
+  expect(row.overflow, 'a row that fits has nothing to scroll').toBeLessThanOrEqual(1);
+
+  /*
+   * And the drift comes back when the set is big enough to reach both ends —
+   * the other half of the instruction, and the reason this is one test.
+   */
+  await page.locator('[data-query]').fill('');
+  await expect(track).not.toHaveClass(/is-static/);
+  await expect
+    .poll(async () => track.evaluate((el) => el.scrollLeft), { timeout: 4000 })
+    .toBeGreaterThan(0);
+});
+
+test('the carousel fades out and back in when the search changes it', async ({ page }) => {
+  /*
+   * Author, 2026-08-28: "When searching for saints in the carousel, fade out
+   * and fade in when loading the new displays." Without it the whole track was
+   * replaced between two frames, which reads as a flicker.
+   *
+   * Watched through the class rather than sampled at a moment: the rebuild is
+   * deferred behind the fade, so what is claimed is that the row goes *before*
+   * its content changes, which a snapshot of opacity cannot tell from a row
+   * that was already dark.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const seen = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const track = document.querySelector('[data-carousel-track]');
+        let faded = false;
+        const obs = new MutationObserver(() => {
+          if (track.classList.contains('is-swapping')) faded = true;
+        });
+        obs.observe(track, { attributes: true, attributeFilter: ['class'] });
+        const input = document.querySelector('[data-query]');
+        input.value = 'Placilla';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        setTimeout(() => {
+          obs.disconnect();
+          resolve({ faded, swapping: track.classList.contains('is-swapping') });
+        }, 900);
+      }),
+  );
+  expect(seen.faded, 'the row never faded out before the new one was built').toBe(true);
+  expect(seen.swapping, 'the row was left faded out').toBe(false);
+  await expect(page.locator('[data-carousel-track]')).toHaveCSS('opacity', '1');
+});
+
 test('the Gender facet drops its heading from its option', async ({ page }) => {
   // Author, 2026-08-26 evening: under Gender, "Sex unrecorded" becomes
   // "Unrecorded" — the facet's own summary was carrying that word already.
@@ -2326,7 +2419,15 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
       max: track.scrollWidth - track.clientWidth,
     };
   });
-  expect(shape.count, 'the run is the pool, not the whole corpus').toBeLessThanOrEqual(48);
+  /*
+   * **The run is the whole matched set** (author, 2026-08-28: "the carousel
+   * does not cycle through all saints just a limited number and then it cycles
+   * back to the start of that pool? It should be able to show all of them").
+   * It was capped at a 48-saint sample, which is the decision this reverses;
+   * what makes the corpus affordable is `windowImages`, which holds only the
+   * bitmaps near the viewport.
+   */
+  expect(shape.count, 'the run should be every matched saint').toBeGreaterThan(400);
   expect(shape.total).toBe(shape.count + 24);
   expect(shape.periodic, 'a shift of one period must land on the same saints').toBe(true);
   expect(shape.bodySpan).toBeGreaterThan(0);
@@ -3585,7 +3686,11 @@ test('a carousel card is sized by the window height as well as its width', async
   // Narrower in a short window, and never below the phone's own 150.
   expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
   expect(short).toBeGreaterThanOrEqual(150);
-  expect(tall).toBe(240);
+  /* 300 since 2026-08-28 ("Make the carousel images slightly bigger on
+     desktop"), and it is a clamp on `--cx-space` — the room between the top of
+     the track and the bottom of the window — rather than on `vh`, because the
+     row's top depends on the header and the controls above it. */
+  expect(tall).toBe(300);
 });
 
 test('the row comes back on its own after a press, and takes the wheel while it waits', async ({ page }) => {
@@ -3783,9 +3888,27 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
   expect(row.escapes, 'a cell hangs out of the row').toBe(0);
   expect(row.touch).toContain('pan-y');
 
-  // And a desk does not stack: the column there is wide enough for the picture.
+  /*
+   * **A desk stacks too now, when the window is tall enough** (author,
+   * 2026-08-28: "There is no double stacking on desktop carousel that I can
+   * see ... depending on resize bring them closer together / remove double
+   * stacks"). The test used to assert the opposite, and it was right about the
+   * build rather than about what was wanted: `stacking()` was a width query,
+   * so a desk never paired at any height.
+   *
+   * It is a *height* query now, which is the thing a stack actually needs, so
+   * the same desk answers both ways depending on the window — which is what
+   * makes this pair of assertions worth having rather than one.
+   */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  await expect(
+    page.locator('.cx-cell.is-stack').first(),
+    'a tall desktop window should pair its wide icons',
+  ).toBeVisible();
+
+  // And a short one gives the stacks up rather than cramming two bands in.
+  await page.setViewportSize({ width: 1280, height: 420 });
   await expect(page.locator('.cx-cell.is-stack')).toHaveCount(0);
 });

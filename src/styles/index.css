@@ -989,11 +989,50 @@ html.is-rolling #view {
    was; a 600 px window gets 180, a 500 px one the phone's own 150 and no less.
    The ceiling moves with it in the same 1.6 ratio the two numbers have always
    had, so a tall icon is never suddenly scaled to a band it used to clear. */
+/* **And it fills the room it has, rather than a band at the top** (author,
+   2026-08-28: "they only take up the top half of the window, spread them across
+   the available window, depending on resize bring them closer together / remove
+   double stacks").
+
+   `--cx-space` is published from views/index/modes.js on every resize: the
+   distance from the top of the track to the bottom of the window. The ceiling
+   follows it and the width follows the ceiling, so a tall window gets tall
+   cards and a short one gets the phone's size and no less — which is the
+   "bring them closer together" half. `vh` could not do this: the row's top
+   depends on the header and the controls above it, which the reader can change.
+
+   The cap is 520/300 rather than 384/240 because the author also asked for the
+   pictures to be "slightly bigger on desktop"; 300 against 240 is 1.25x, and
+   the ceiling keeps the 1.73 ratio the two numbers have always had so a tall
+   icon is never scaled into a band it used to clear. */
 @media (min-width: 700px) {
   .carousel {
-    --cx-w: clamp(150px, 30vh, 240px);
-    --cx-max-h: clamp(240px, 48vh, 384px);
+    --cx-max-h: clamp(240px, var(--cx-space, 48vh), 520px);
+    --cx-w: clamp(150px, calc(var(--cx-max-h) * 0.58), 300px);
   }
+}
+
+/* A row short enough to fit does not loop, so it has no ends to drift between:
+   it sits where it starts, left-justified, and the reader can see that the set
+   really is that small (author, 2026-08-28: "If there are not enough saints to
+   complete the auto scroll carousel, have the scroll gently stop and display
+   left justified"). */
+/* The row goes before the new one is built, and comes up when it is (author,
+   2026-08-28: "When searching for saints in the carousel, fade out and fade in
+   when loading the new displays"). views/index/modes.js holds the other half —
+   the rebuild is deferred behind this, which is the only way to have an *out*
+   at all, and reduced motion skips both. */
+.carousel-track {
+  transition: opacity 150ms var(--ease);
+}
+
+.carousel-track.is-swapping {
+  opacity: 0;
+}
+
+.carousel-track.is-static {
+  justify-content: flex-start;
+  overflow-x: hidden;
 }
 
 /* A native scroller — never `touch-action: none` (ui/loop-scroll.js says why at
