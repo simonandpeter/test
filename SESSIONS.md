@@ -4291,16 +4291,41 @@ both into two views. One sitting; every item is a pure-function change with a
 unit test, and the browser suite is the regression gate. Nothing here changes
 what the reader sees.
 
+*Progress, 2026-08-28: G1 and G2 are done (`481c29b` and the commit after it).
+Two of the five items carried stale pointers from the Amendment 55 view split
+and one named a function that no longer exists; each is corrected in place
+below.*
+
+*And one instruction here has moved: "every item is a pure-function change with
+a unit test" does not fit G1, whose claim is **which requests the boot makes** —
+not a pure function, and `lib/manifest.js` builds its URLs from
+`import.meta.env.BASE_URL`, which does not exist under `node --test`. A unit
+test would have had to stub the code under test. G1 is pinned at the network in
+`e2e/daily.spec.js` instead, asserting the manifest was fetched **exactly once**
+before asserting the statistics were not fetched at all — so the absence cannot
+be a page that never started.*
+
 1. **`manifest.meta.json` off the boot path** (G1). `lib/manifest.js` fetches
    the manifest alone; the meta loads from About when Session 9 gives About a
    reason to read it. Until then nothing reads it — verify with a grep before
    and after.
-2. **Per-card derived keys** (G2). One module derives `{ breadth, lifeInterval,
-   venerated }` per card once at manifest load; `index-filters.js`'s
-   `matchesFacets`, `inRange` and `sortCards` read the keys instead of calling
-   `breadthOf` / `lifeInterval` / `veneratedChurches` per comparison. The unit
-   tests for `index-filters.js` already pin the semantics; they must pass
-   unchanged — this is a cost change, not a meaning change.
+2. ~~**Per-card derived keys** (G2).~~ **Done 2026-08-28.** The item named
+   three values and **`breadthOf` no longer exists** — Breadth of veneration
+   stopped being an order at Amendment 22 and the function went with it, so
+   this was two values: `lifeInterval` and the Calendar facet's
+   `veneratedChurches`. Both are derived once per card through a `WeakMap` in
+   `index-filters.js` rather than at manifest load: the manifest's cards are the
+   only cards there are, the entry dies with them, and nothing has to remember
+   to run a derivation step before the filters are safe to call.
+   **`sortCards` was the real cost** and the item did not say so — it called
+   `lifeInterval` *inside the comparator*, so a date order over 742 cards
+   derived the same handful of numbers some 2n log n times. It keys the whole
+   set once now, before sorting.
+   The existing unit tests pin the semantics and pass unchanged, which is the
+   claim. Two new ones pin the *cost*, because a cost change needs a cost
+   measurement: a card whose `dates` and `attestations` are counting getters is
+   asked **once** across a 24-card sort and once across three separate calls.
+   Backed out, they fail by name — `s01 was asked for its dates 2 times`.
 3. **One memoised feast index** (G3). `lib/feasts.js` exports a
    `feastIndexFor(year, data)` cached by year; the calendar's module-level
    `indexCache` and the Index's `monthsBySlugFor` both read it. `facetsOf` is

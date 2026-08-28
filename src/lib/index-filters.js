@@ -99,11 +99,43 @@ export const UNCALENDARED = 'uncalendared';
 const veneratedChurches = (card) =>
   card.attestations.filter((a) => a.status === 'venerated').map((a) => a.church);
 
+/**
+ * The two values every filter and sort asks a card for, derived once (Addendum
+ * G2, done 2026-08-28).
+ *
+ * Both were recomputed per call, and `sortCards` asks inside its comparator —
+ * so a date order over 742 cards called `lifeInterval` some **2n log n** times,
+ * each walking three interval keys and building objects, to answer the same
+ * question about the same card over and over. `matchesFacets` did the same for
+ * the Calendar facet on every keystroke.
+ *
+ * A `WeakMap` on the card rather than a field derived at manifest load: the
+ * manifest's cards are the only cards there are, the entry dies with them, and
+ * nothing has to remember to run a derivation step before the filters are safe
+ * to call. **The values are frozen** because they are shared now — a caller
+ * that mutated one would be mutating every later reader's copy, which is the
+ * one hazard memoising introduces here.
+ *
+ * This is a cost change and not a meaning change: `tests/index-filters.test.mjs`
+ * pins the semantics and passes unchanged, which is the whole claim.
+ */
+const derived = new WeakMap();
+
+function cardKeys(card) {
+  let keys = derived.get(card);
+  if (!keys) {
+    const churches = veneratedChurches(card);
+    keys = Object.freeze({
+      interval: Object.freeze(lifeInterval(card.dates)),
+      calendars: Object.freeze(churches.length ? churches : [UNCALENDARED]),
+    });
+    derived.set(card, keys);
+  }
+  return keys;
+}
+
 /** What the Calendar facet selects a card by, including the empty case. */
-const calendarsOf = (card) => {
-  const churches = veneratedChurches(card);
-  return churches.length ? churches : [UNCALENDARED];
-};
+const calendarsOf = (card) => cardKeys(card).calendars;
 
 /**
  * Everything except the date range and the text query, which the caller layers
@@ -125,7 +157,7 @@ function matchesFacets(card, f) {
 
 const inRange = (card, f) => {
   if (f.from === null && f.to === null) return true;
-  const iv = lifeInterval(card.dates);
+  const iv = cardKeys(card).interval;
   const from = f.from ?? -Infinity;
   const to = f.to ?? Infinity;
   return f.rangeMode === 'within' ? within(iv, from, to) : overlaps(iv, from, to);
@@ -159,7 +191,7 @@ export function applyFilters(cards, filters, { monthsBySlug, matchesQuery } = {}
   // filtered out by church or by type is not undated, they simply do not match.
   const undated = dateFiltered
     ? []
-    : facetMatched.filter((card) => isUndated(lifeInterval(card.dates)));
+    : facetMatched.filter((card) => isUndated(cardKeys(card).interval));
 
   const ordered = sortCards(matched, f.sort, { seed: f.shuffleSeed ?? '' });
   return {
@@ -261,13 +293,21 @@ export function sortCards(cards, sort = EMPTY_FILTERS.sort, { seed = '' } = {}) 
     return copy.sort((a, b) => shuffleKey(a.slug, seed) - shuffleKey(b.slug, seed) || byName(a, b));
   }
   const key = (card) => {
-    const iv = lifeInterval(card.dates);
+    const iv = cardKeys(card).interval;
     return sort === 'latest' ? (iv.latest ?? iv.earliest) : (iv.earliest ?? iv.latest);
   };
+  /*
+   * Keyed once per card rather than once per comparison. `Array.sort` calls its
+   * comparator O(n log n) times and each call asked *both* operands for a key,
+   * so a date order over the corpus derived the same handful of numbers
+   * thousands of times over. The memo above makes each derivation cheap; this
+   * makes the lookups few.
+   */
+  const keyed = new Map(copy.map((card) => [card, key(card)]));
   const direction = sort === 'latest' ? -1 : 1;
   return copy.sort((a, b) => {
-    const ka = key(a);
-    const kb = key(b);
+    const ka = keyed.get(a);
+    const kb = keyed.get(b);
     // Undated saints have no position on a timeline, so they sort last at
     // either direction — not to year zero, and not to the far end of a
     // descending list, which is where negating the comparator would put them.

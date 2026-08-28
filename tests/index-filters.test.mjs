@@ -303,3 +303,70 @@ test('sorting by earliest orders open-ended lives by the bound they do have', ()
   assert.equal(moses1043.earliest, null);
   assert.equal(sortCards([moses, anthony], 'earliest')[0].slug, 'anthony');
 });
+
+/*
+ * Addendum G2: the per-card values are derived once, not once per comparison.
+ *
+ * A cost claim needs a cost measurement, so these count how many times a card
+ * is asked for the fields the derivation reads. `dates` and `attestations`
+ * become getters that tally; nothing else about the card changes, and the
+ * semantics are pinned by every test above rather than here.
+ */
+const counting = (slug, over = {}) => {
+  const reads = { dates: 0, attestations: 0 };
+  const base = card(slug, over);
+  const { dates, attestations } = base;
+  Object.defineProperties(base, {
+    dates: {
+      get() {
+        reads.dates += 1;
+        return dates;
+      },
+    },
+    attestations: {
+      get() {
+        reads.attestations += 1;
+        return attestations;
+      },
+    },
+  });
+  return { card: base, reads };
+};
+
+test('a date sort derives each card key once, not once per comparison', () => {
+  // Enough cards that `sort` must compare each of them several times: with
+  // n = 24, `Array.sort` runs its comparator far more often than 24 times, and
+  // the old code asked both operands for a key on every call.
+  const made = Array.from({ length: 24 }, (_, i) =>
+    counting(`s${String(i).padStart(2, '0')}`, {
+      dates: { birth: { earliest: 1900 + i, latest: 1900 + i }, death: null, floruit: null },
+    }),
+  );
+  const cards = made.map((m) => m.card);
+
+  const ordered = sortCards(cards, 'earliest');
+  assert.equal(ordered.length, 24);
+  assert.deepEqual(
+    ordered.map((c) => c.slug),
+    cards.map((c) => c.slug),
+    'already in ascending order, so the sort should not disturb them',
+  );
+
+  for (const { card: c, reads } of made) {
+    assert.equal(reads.dates, 1, `${c.slug} was asked for its dates ${reads.dates} times`);
+  }
+});
+
+test('the derivation is shared across calls, not repeated per call', () => {
+  const { card: c, reads } = counting('shared', {
+    dates: { birth: { earliest: 400, latest: 400 }, death: null, floruit: null },
+    attestations: [{ church: 'russian', status: 'venerated' }],
+  });
+
+  sortCards([c], 'earliest');
+  sortCards([c], 'latest');
+  applyFilters([c], { ...EMPTY_FILTERS, churches: ['russian'] });
+  assert.equal(reads.dates, 1, `derived ${reads.dates} times across three calls`);
+  assert.equal(reads.attestations, 1, `read attestations ${reads.attestations} times`);
+
+});
