@@ -1124,6 +1124,16 @@ session). SESSIONS.md has each in full.
 - **CI is the source of truth, not your local run.** A `.gitignore` bug once
   left `src/data/` untracked while every local test passed. Confirm CI is green
   before calling a session done. If CI is red, stop and fix it.
+- **"Verified by both sessions" means two sets of eyes on the claim, one set of
+  hands on the gate** — say it that way, because the short form gets read as
+  "everything was run twice" and that has never been what happens. The standing
+  arrangement is that the building session runs the full suite and the
+  verifying session checks the *load-bearing claim*: the back-out, the counts,
+  the `CLAUDE.md` hunk, the one measurement the author could not check. Where
+  the parent commit had a verified full run and the new one touches no `src/`,
+  the verifier deliberately does not repeat the 530 — that is the arrangement
+  working, not a gap in it. Recorded 2026-08-28 because a provenance list is
+  exactly the kind of note a later session over-reads.
 - **A count in the DOM is not a count in the corpus.** The Index is
   virtualised: at 360 px it renders one card of ten. Assert what the page
   claims, not what happens to be mounted.
@@ -1276,6 +1286,13 @@ session). SESSIONS.md has each in full.
   `/test/assets/index-…css`, and both files exist at those paths. **Rebuild at
   the default base afterwards** or a local `preview` serves a `dist/` whose
   assets are all under `/test/`.
+
+  **Do not re-cite that as cross-platform evidence.** Two sessions ran it, but
+  on one desk against one `node_modules`, so what the second run rules out is a
+  transcription slip or a one-off bad build — not a machine-specific result.
+  The second *environment* is CI, which builds at the real base on every push;
+  the honest closer for this claim is a green Actions run, not a pair of local
+  builds.
 - **Answered at Amendment 61 and left as it stands** — recorded, not acted on.
   **Search does not reach the historical name forms.** It reaches every
   language's display form — `card.names` in the manifest is `{ru: "Авдий",
