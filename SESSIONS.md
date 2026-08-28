@@ -6816,6 +6816,46 @@ reader` has now been seen **twice in about thirty runs**, `fbcaef8` and
 `102fd83`; it was reported as non-recurring after the first and recurred, which
 is the kind of sentence that should not be left standing.
 
+### Replicated, and the instrument has a trap of its own
+
+The verifying session reproduced all of this independently, and took two
+attempts — which is the useful part. Its first probe set the throttle, *then*
+navigated: eight runs, spans 26 to 35 ms, delivered and coasting every time. On
+its own that reads as "the mechanism does not reproduce", and it was nearly
+reported that way.
+
+**A throttle applied before a navigation does not survive it.** Timed twice on
+this desk, once by each session, with a fixed 3e6-iteration loop in the page:
+the ratio is **3.8x** when the rate is set before the `goto` and **35x** when it
+is set after. *Twice on one desk, not on two machines* — the distinction is
+`ac7db1a`'s own house rule, written four commits earlier and nearly contradicted
+here in the file sessions read first. What a second run rules out is a
+transcription slip, not a machine-specific result; this trap happens to be
+deterministic, and reproduced first time in both sessions. With it
+verifiably biting, 4 of 6 single-attempt gestures were not flicks — and the two
+that were are the two runs where the ratio said the throttle had stopped biting
+at that moment. **The gesture fails exactly when the page is slow and not
+otherwise**, which is a tighter correlation than the rate alone gives. With the
+default eight tries, every run delivered in **one attempt at 26 to 27 ms**.
+
+Note also that the achieved ratio is not the requested one: 150 was asked for
+and 21x to 135x was measured — and those figures and the 35x above are **the
+same machine under different load**, which is the sharper reason to print the
+ratio. A throttle rate is not merely a request rather than a setting; the
+slowdown it buys is not stable within one desk, so a number taken from it is
+only worth what the run that printed it says.
+
+And the peer's four undelivered gestures **all still coasted**, matching the
+back-out here: the test would have passed with its premise false. That is the
+argument for asserting `delivered` first, from the other end.
+
+**This is the third instrument in this repo to fail by looking like a pass** —
+after the `COLD_FACE` fixture that never reached a self-made context and the
+preload that shipped one subset twice. In all three the silent no-op and the
+success are the same green, and the defence is the same: make the instrument
+report what it did. HANDOFF carries that as a class now rather than as three
+anecdotes.
+
 ### Verification
 
 174 unit; the full browser suite at both projects; the rehearsal separately. The

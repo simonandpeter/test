@@ -209,6 +209,18 @@ them.
   sighting and then recurred, which is exactly the claim that should not be
   left standing.
 
+- **Three of this repo's instruments have failed by looking like a pass**
+  (2026-08-28), which is worth holding as a class rather than as three
+  anecdotes. The `COLD_FACE` fixture never reached a context a test opened for
+  itself, so half a test rehearsed and half did not. The font preload shipped
+  the same Latin subset twice, and two preload tags look exactly like two
+  subsets. CPU throttling set before a navigation does not survive it, and the
+  gesture then looks healthy. **In each case the silent no-op and the success
+  are the same green**, so the only defence is to make the instrument report
+  what it did — the rehearsal prints the face it measured, the preload test
+  asserts the two hrefs *differ*, and a throttle is proved with a timed loop.
+  When you add an instrument, ask what it would look like if it were doing
+  nothing.
 - **CPU throttling reproduces what parallel load cannot** (2026-08-28,
   Amendment 67). The rail coast resisted 148 contended runs here and fell over
   in one attempt under CDP `Emulation.setCPUThrottlingRate`. The span of the

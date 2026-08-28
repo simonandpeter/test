@@ -513,6 +513,18 @@ which also records why the obvious ten-line fix does not work — 36 tests take
   The rail's coast survived 148 contended runs here and fell over at the first
   attempt under it. Reach for it before concluding something cannot be
   reproduced locally.
+  **Set the rate *after* the `goto`, and prove it bit before believing a
+  negative.** A throttle applied before navigation does not survive it, and the
+  symptom is a clean green with plausible numbers. Measured twice on this desk,
+  by both sessions: a fixed 3e6-iteration loop timed in the page comes out
+  **3.8x** when the rate is set before the navigation and **35x** when it is set
+  after. **Print the ratio whichever side you are on** — 150 was requested and
+  21x to 135x measured across those runs, so the achieved slowdown is neither
+  the number you asked for nor stable within one machine; it moves with whatever
+  else is running. This is the third instrument in this repo
+  that fails by looking like a pass, after the COLD_FACE fixture that never
+  reached a self-made context and the preload that shipped one subset twice; in
+  all three a silent no-op and a success are the same green.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored — and where the fix is to a
   flake, backed out against a **rate**, not a single red: twelve repeats at
