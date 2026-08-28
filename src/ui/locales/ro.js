@@ -419,8 +419,23 @@ export const ro = {
 
   map: {
     title: 'Hartă',
-    placeholder: 'Globul sosește în sesiunea a 7-a. {located} din {count} sfinți au acum coordonate utilizabile; ceilalți vor aștepta în tava celor nelocalizați - nimeni nu e lăsat deoparte în tăcere.',
+    lede: '{located} din {count} sfinți au un loc pe care îl putem arăta. Ceilalți sunt în tava de mai jos, numiți, nu lăsați deoparte.',
     setAside: 'Încă {count} nu sunt în calendarul ales ({church}).',
+    kindGroup: 'Ce loc să fie arătat',
+    kinds: {
+      death: 'A adormit',
+      birth: 'S-a născut',
+      see: 'Scaun',
+      relics: 'Moaște',
+    },
+    canvasLabel: 'O hartă a lumii. Fiecare loc însemnat pe ea este trecut și mai jos.',
+    caption: 'Linia țărmului: Natural Earth, domeniu public. Marginea difuză arată un loc nesigur.',
+    landFailed: 'Linia țărmului nu a putut fi încărcată. Locurile sunt trecute mai jos.',
+    placesHeading: 'Locuri',
+    noneOfKind: 'Niciun sfânt din acest calendar nu are un loc însemnat de acest fel ({kind}).',
+    uncertainty: 'cam pe o rază de {km} km',
+    unlocated: '{count} sfinți nu au un loc însemnat',
+    unlocatedNote: 'Un loc se însemnează doar acolo unde îl dă un izvor. Aceștia nu lipsesc din culegere, ci doar de pe hartă.',
   },
 
   about: {

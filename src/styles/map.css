@@ -1,0 +1,133 @@
+/* The map (§8.3, redrawn as a flat Mercator by the author on 2026-08-29).
+   Built on base.css and tokens.css; DESIGN.md wins any argument. */
+
+.map-lede {
+  color: var(--ink-soft);
+  max-width: 65ch;
+}
+
+/* ---- the kind selector ------------------------------------------------- */
+
+/* Four facts, one dot each, and the reader says which one they are looking at
+   (§8.3: "one dot cannot honestly represent all four"). A row of pressed
+   buttons rather than a select, because the current kind has to be legible at
+   all times without opening anything — the brief asks for exactly that. */
+.map-kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.map-kind {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+/* The pressed one carries weight and a field, never colour alone — the same
+   rule the nav's current page follows, and brief §13's fourth criterion. */
+.map-kind[aria-pressed='true'] {
+  font-weight: 700;
+  background: var(--field);
+  border-color: var(--ink-soft);
+}
+
+.map-kind-count {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-kind[aria-pressed='true'] .map-kind-count {
+  color: inherit;
+}
+
+/* ---- the picture ------------------------------------------------------- */
+
+.map-figure {
+  margin: 0 0 var(--space-6);
+}
+
+/* **The box is reserved before the coastline arrives.** `aspect-ratio` from the
+   projection's own number (lib/mercator.js exports it, and a unit test pins it),
+   so the figure is exactly as tall empty as full and the fetch cannot move the
+   page under the reader — brief §13's no-layout-shift, on the one view whose
+   picture is loaded rather than drawn from the manifest.
+
+   `display: block` because an inline canvas sits on the text baseline and
+   leaves a few pixels of descender space below it, which is a gap that appears
+   only once there is something to see. */
+.map-figure canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.1243;
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+.map-caption {
+  color: var(--ink-soft);
+  margin-top: var(--space-2);
+}
+
+/* ---- the list, which is the map --------------------------------------- */
+
+/* Every point on the canvas is a row here. That is not a fallback: a canvas is
+   one opaque image to a screen reader and to the keyboard both, and the honest
+   way to carry 16 places is to carry them as text and let the picture
+   illustrate. DESIGN.md §7's greyscale test, taken to its end — remove the
+   picture entirely and the reader still loses nothing. */
+.map-places .reg-row,
+.map-unlocated-list .reg-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.map-place {
+  color: var(--ink-soft);
+}
+
+/* Uncertainty is said in words as well as drawn as a halo. §6b's rule is that
+   doubt must never read as precision, and "within about 150 km" is the only
+   part of that a reader can act on. */
+.map-uncertainty {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ---- the unlocated tray ------------------------------------------------ */
+
+/* "They are never silently dropped" (§8.3). It holds all but seven of the
+   corpus today, so it is a disclosure in the page's own voice rather than a
+   footnote — the reader should be able to see how much of the map is missing. */
+.map-unlocated {
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-4);
+}
+
+.map-unlocated > summary {
+  cursor: pointer;
+  font-family: var(--font-utility);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+.map-unlocated > summary:focus-visible {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+
+.map-unlocated-list {
+  /* Seven hundred names is a scroll, not a page. Its own box keeps the tray a
+     tray rather than turning the map into a directory with a picture on top. */
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-top: var(--space-3);
+}

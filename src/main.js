@@ -5,6 +5,7 @@ import './styles/base.css';
 import './styles/calendar.css';
 import './styles/saint.css';
 import './styles/index.css';
+import './styles/map.css';
 
 import { BRAND, STRINGS } from './ui/strings.js';
 import { WORDMARK } from './ui/wordmark.js';

@@ -791,9 +791,31 @@ export const STRINGS = {
 
   map: {
     title: 'Map',
-    placeholder: 'The globe arrives in Session 7. {located} of {count} saints currently carry usable coordinates; the rest will wait in the unlocated tray, never silently dropped.',
+    // `placeholder` is gone with the placeholder (Session 7, 2026-08-29).
+    lede: '{located} of {count} saints carry a place we can point to. The rest are in the tray below, named rather than dropped.',
     // The map reads the reader's church too (author, 2026-08-22).
     setAside: '{count} more are not in the {church} calendar.',
+    kindGroup: 'Which place to show',
+    /*
+     * One dot cannot honestly stand for four different facts (§8.3), so the
+     * reader picks which. `see` rather than the brief's "ministry" because it
+     * is what the corpus records: a bishop's see is a specific claim, and
+     * relabelling it ministry here would say something the data does not.
+     */
+    kinds: {
+      death: 'Died',
+      birth: 'Born',
+      see: 'See',
+      relics: 'Relics',
+    },
+    canvasLabel: 'A world map. Every place marked on it is also listed below.',
+    caption: 'Coastline: Natural Earth, public domain. Soft edges mark uncertain places.',
+    landFailed: 'The coastline could not be loaded. The places are listed below.',
+    placesHeading: 'Places',
+    noneOfKind: 'No saint in this calendar has a recorded place of this kind ({kind}).',
+    uncertainty: 'within about {km} km',
+    unlocated: '{count} saints have no place recorded',
+    unlocatedNote: 'A place is only recorded where a source gives one. These are not missing from the corpus, only from the map.',
   },
 
   about: {

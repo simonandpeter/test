@@ -27,7 +27,9 @@
     "chrome-launcher": "^1.2.1",
     "image-size": "^2.0.2",
     "lighthouse": "^13.4.1",
-    "vite": "^7.1.3"
+    "topojson-client": "^3.1.0",
+    "vite": "^7.1.3",
+    "world-atlas": "^2.0.2"
   },
   "dependencies": {
     "idb": "^8.0.3",
