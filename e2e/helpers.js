@@ -304,9 +304,12 @@ const chooseSort = async (page, value) => {
  *
  * Returns the rail's position at the moment of release.
  */
-export const throwRail = (strip, { moves = 4, step = 25, gap = 8 } = {}) =>
+export const throwRail = (
+  strip,
+  { moves = 4, step = 25, gap = 8, within = 60, tries = 8 } = {},
+) =>
   strip.evaluate(
-    (el, { moves: n, step: dx, gap: ms }) => {
+    (el, { moves: n, step: dx, gap: ms, within: limit, tries: attempts }) => {
       const rect = el.getBoundingClientRect();
       const midY = rect.top + rect.height / 2;
       const from = rect.left + rect.width / 2;
@@ -328,15 +331,48 @@ export const throwRail = (strip, { moves = 4, step = 25, gap = 8 } = {}) =>
         const until = performance.now() + wait;
         while (performance.now() < until);
       };
-      fire('pointerdown', from);
-      for (let i = 1; i <= n; i += 1) {
-        spin(ms);
-        fire('pointermove', from - i * dx);
+      /*
+       * **A spin bounds the gap from below, not from above**, and that is the
+       * suite's oldest flake (2026-08-28). `spin(8)` says "at least 8 ms"; on a
+       * preempted machine one of these gaps can be tens of milliseconds, and
+       * the rail prunes its samples at 80 ms per move and 120 ms at the
+       * release. Stretch the gesture past those and the fresh samples collapse,
+       * the velocity is computed over nothing, and the rail settles instead of
+       * coasting — so the test reports a rail that did not coast when what
+       * happened is that nobody ever threw it.
+       *
+       * Reproduced at last on 2026-08-28 with CDP CPU throttling rather than
+       * with parallel load: at 150x the *first* gesture spans 140 ms and does
+       * not coast, while every one after it spans 26 ms and does. That is the
+       * shape of it on CI too, where this test runs once, cold, per job — 2 of
+       * the last 9 runs touched it and one went red through the retry.
+       *
+       * So the gesture is *measured and re-thrown* until it is genuinely a
+       * flick. The product path is untouched — pointerdown, four pointermoves,
+       * pointerup, and the rail's own sampling decides — and a fresh
+       * `pointerdown` cancels any coast a slow attempt may have started. What
+       * changes is that the helper now knows whether it delivered what it
+       * promised, and says so, so a caller can assert its own premise instead
+       * of inferring it from the rail's behaviour.
+       */
+      let span = Infinity;
+      let used = 0;
+      for (let attempt = 1; attempt <= attempts; attempt += 1) {
+        const ts = [];
+        fire('pointerdown', from);
+        for (let i = 1; i <= n; i += 1) {
+          spin(ms);
+          ts.push(performance.now());
+          fire('pointermove', from - i * dx);
+        }
+        fire('pointerup', from - n * dx);
+        span = ts.at(-1) - ts[0];
+        used = attempt;
+        if (span <= limit) break;
       }
-      fire('pointerup', from - n * dx);
-      return el.scrollLeft;
+      return { released: el.scrollLeft, span, attempts: used, delivered: span <= limit };
     },
-    { moves, step, gap },
+    { moves, step, gap, within, tries },
   );
 
 export const onlyCalendar = async (page, name) => {

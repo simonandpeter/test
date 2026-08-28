@@ -2062,7 +2062,19 @@ test('a thrown rail coasts to a halt and settles, instead of stopping dead', asy
    * untouched — pointerdown, four pointermoves, pointerup, and the rail's own
    * sampling decides what to do with them.
    */
-  const released = await throwRail(strip);
+  const throw_ = await throwRail(strip);
+  /*
+   * **The test's own premise, asserted rather than assumed.** A gesture that
+   * was preempted past the rail's 120 ms sampling window is not a flick, and a
+   * rail that then settles is behaving correctly — so without this the failure
+   * reads "the rail did not coast" when the truth is "nobody threw it". That
+   * mistranslation is the whole history of this test.
+   */
+  expect(
+    throw_.delivered,
+    `could not deliver a flick in ${throw_.attempts} attempts; best span ${throw_.span.toFixed(1)} ms`,
+  ).toBe(true);
+  const released = throw_.released;
 
   /*
    * **Waited for, not sampled at a fixed moment** (2026-08-28). This read the
@@ -2158,7 +2170,10 @@ test('under reduced motion a throw does not coast', async ({ browser }) => {
   // The same dispatched flick the coast test uses. Through the harness's own
   // mouse this test also passed whenever the gesture failed to *be* a flick,
   // which was a second way of saying nothing.
-  await throwRail(strip);
+  const thrown = await throwRail(strip);
+  // Same premise as the coast test: an absence only means something if the
+  // gesture that should have produced a presence was actually delivered.
+  expect(thrown.delivered, `no flick delivered; best span ${thrown.span.toFixed(1)} ms`).toBe(true);
   const seen = await watching;
   expect(seen.sawCoast, 'the rail coasted under reduced motion').toBe(false);
 

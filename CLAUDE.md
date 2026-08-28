@@ -506,6 +506,13 @@ which also records why the obvious ten-line fix does not work — 36 tests take
   pin still is what it was pinned for. The window bottoms out at **one card at
   360**, so `length > 3` on the unfiltered grid is the same trap wearing a
   number. **A green run is not evidence a test is deterministic.**
+- **CPU throttling is the instrument for a runner-only flake, not parallel
+  load** (Amendment 67). `client.send('Emulation.setCPUThrottlingRate', { rate })`
+  through `page.context().newCDPSession(page)`. Load makes *round trips* slow;
+  the throttle makes the *page* slow, which is what a shared CI runner does.
+  The rail's coast survived 148 contended runs here and fell over at the first
+  attempt under it. Reach for it before concluding something cannot be
+  reproduced locally.
 - House rule: every fix gets a browser test, and the test gets **backed out
   and confirmed to fail** before being restored — and where the fix is to a
   flake, backed out against a **rate**, not a single red: twelve repeats at

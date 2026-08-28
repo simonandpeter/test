@@ -189,10 +189,35 @@ them.
   buffer's offset plus the seed. Waiting for the track to be past 0 took the
   remainder out. Fixing only the windows left it at 4 of 24.
 
-- **One flake remains and it is on CI, not here**: the rail's coast went flaky
-  at `f723798`, retried and passed. It has never been reproduced locally — 148
-  contended runs at Amendment 60 and none since — so it is the one whose rate
-  this desk cannot measure.
+- **Two flakes remain, both runner-side, and the CI summary is the only
+  instrument for either** (2026-08-28). Read them out of the Actions API: the
+  Playwright summary line carries `N flaky` and names the tests, and it is
+  readable for as long as the reporter keeps writing it.
+
+  **The rail's coast — 3 of the 10 runs since the spec split.** `f723798` (both
+  projects, flaky), `09ad096` (**desktop failed through the retry**, mobile
+  flaky), `102fd83` (desktop, flaky). It has been red through a retry once,
+  which means with `retries: 1` it was two consecutive failures in one job. **4
+  of the 5 sightings are desktop**, which is the opposite of where this suite's
+  faults usually sit; at n=5 that is an observation, not a finding.
+  **This desk had never reproduced it in 148 contended runs**, and contention
+  was the wrong instrument — see the entry below.
+
+  **`random deals an order, and holds it still under the reader` — 2 of ~30
+  runs**, `fbcaef8` and `102fd83`, same project. Not a rate worth acting on
+  yet; recorded because it was reported as non-recurring after the first
+  sighting and then recurred, which is exactly the claim that should not be
+  left standing.
+
+- **CPU throttling reproduces what parallel load cannot** (2026-08-28,
+  Amendment 67). The rail coast resisted 148 contended runs here and fell over
+  in one attempt under CDP `Emulation.setCPUThrottlingRate`. The span of the
+  test's own flick gesture stretches with the rate — **25 ms at 1x, 33 at 6x,
+  81 at 20x, and 140 ms at 150x, at which point the rail stops coasting** — and
+  it is the *first* gesture after the page settles that is slow while every one
+  after it is fast, which is the shape of a test that runs once, cold, per CI
+  job. **Reach for the throttle before concluding a runner-only flake cannot be
+  reproduced.**
 - **`under reduced motion a throw does not coast` proved nothing until
   2026-08-28**, and a back-out is what said so: with the reduced-motion guard
   removed from picker.js it stayed green, because it sampled 100 ms and 500 ms
