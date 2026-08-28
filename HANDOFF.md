@@ -189,7 +189,7 @@ them.
   buffer's offset plus the seed. Waiting for the track to be past 0 took the
   remainder out. Fixing only the windows left it at 4 of 24.
 
-- **The rail's coast is fixed, and three clean CI runs is not yet proof**
+- **The rail's coast is fixed and closed** (six clean runs; it was never a flake)
   (2026-08-28, Amendment 67 and `5d6c2bd`). It was **not a flake in the test**:
   `beginCoast` seeded its clock with `performance.now()` at the release, and a
   `requestAnimationFrame` callback is handed *the frame's start time*, which on
@@ -201,9 +201,12 @@ them.
   it honestly for a fortnight.
 
   `coastDelta` in views/daily/picker.js is the rule, and `tests/coast.test.mjs`
-  pins it. **Three consecutive clean runs** — `5d6c2bd`, `b39f6fe`, `46a5499` —
-  against a base rate of 7 red in 15. That is roughly a 1-in-9 coincidence, so
-  it is supporting evidence and not proof; **six or seven would be.** If it
+  pins it. **Closed 2026-08-28 on six consecutive clean runs** — `5d6c2bd`,
+  `b39f6fe`, `46a5499`, `54219c7`, `1b1d8a1`, `2ebe682` — with no coast in
+  either column of any of them, against a base rate of 7 red in 15. Six is the
+  number this entry itself named as the point where it stops being supporting
+  evidence, and it is *exactly* six rather than more: the count was written down
+  before the runs came in, which is the only reason it means anything. If it
   reappears, the probe method is in Amendment 67 and the branch approach in
   CLAUDE.md.
 
@@ -213,6 +216,20 @@ them.
   because it was called non-recurring after the first sighting and then
   recurred.
 
+- **Three commits on main have one set of eyes, not two** (2026-08-28):
+  `f0ddb12`, `1b1d8a1` and `2ebe682` — the author's refinement round and the
+  carousel work. They were pushed unverified at the author's explicit
+  instruction, so nothing in them was independently re-measured: not the
+  back-outs, not the generated `src/ui/wordmark.js` and its Vite plugin, and not
+  `2ebe682`'s cancellation of Session 6 in this file and in SESSIONS.md. Their
+  gates are real — 546 browser, 185 unit, exit 0, each fix backed out and
+  confirmed red — and they are the *building* session's alone. **CI is green on
+  all three and the third is deployed**, which is a different assurance and the
+  stronger one for anything a reader meets.
+  **And `f0ddb12` has no CI run of its own**: it went up in the same push as
+  `1b1d8a1`, and GitHub builds only the head commit of a push. Its content is
+  covered by the run above it, which is the same thing in practice — but it is a
+  gap if anyone ever needs "every commit on main has a green run".
 - **Read the CI summary's `flaky` line, not only its conclusion.** A green run
   with `N flaky` is a test that failed and passed on retry, and that is the only
   place a rate like the above can be seen. It is readable through the public
