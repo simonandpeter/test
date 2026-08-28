@@ -91,8 +91,8 @@ rather than absorbing it quietly.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
-All seven of §13 are measured. Six pass; one sits on its line. Every number
-below is this desk's — CI prints its own into the run summary.
+**All seven of §13 are measured and all seven pass on CI**, which is the only
+machine whose answer counts. Every number below is the runner's, from `dc6fc22`.
 
 | § 13 criterion | measured | where |
 | --- | --- | --- |
@@ -102,8 +102,8 @@ below is this desk's — CI prints its own into the run summary.
 | No axe violations | 0, light **and** dark, 8 routes | `quality-floor.spec.js` |
 | Lighthouse accessibility ≥ 95 | **100** on all 4 routes | `npm run test:lighthouse` |
 | Colour duplicated in text or shape | 3 marks, 3 silhouettes | `quality-floor.spec.js` |
-| No layout shift when data arrives | **0.0040**, budget 0.02 | `quality-floor.spec.js` |
-| FCP < 1.5 s throttled 4G | **1450–1700 ms** — on the line | `npm run test:lighthouse` |
+| No layout shift when data arrives | **0.0042**, budget 0.02 | `quality-floor.spec.js` |
+| FCP < 1.5 s throttled 4G | **1206–1221 ms** | `npm run test:lighthouse` |
 
 Fixed here: the header reserves its height (`--chrome-h-reserve`) instead of
 growing 26 px into place, which was 0.0307 of CLS on almost every route; the
@@ -113,12 +113,15 @@ saint page appends below the life instead of skeletonning above it, which was
 the rail's three marks are a disc, a ring and a diamond rather than one disc in
 three hues.
 
-**FCP is the one that did not close.** Medians-of-three: 1451/1453/1458/**1703**
-one run, 1459/1484/1470/**1490** the next. The CI step is `continue-on-error`
-until it clears 1500 with room — a gate decided by a coin toss is worse than no
-gate. The measured lever is the two preloaded Latin subsets, worth ~190 ms, and
-they earn it: the preload wins the `font-display: optional` race under the same
-throttle, 4 of 4. **Spending the serif to buy the margin is the author's call.**
+**FCP is worth knowing two numbers for.** On the author's desk it straddles the
+line — medians-of-three of 1451/1453/1458/**1703** ms one run and
+1459/1484/1470/**1490** ms the next. On the runner it is **1206–1221 ms with the
+three samples behind each median spread by 3 ms.** The desk's variance was a
+fact about the desk, which is why the gate blocks: ~280 ms of margin, and a gate
+that cannot fail is a report. If it ever goes red on timing, the measured lever
+is the two preloaded Latin subsets (~190 ms) — but they earn it, winning the
+`font-display: optional` race under the same throttle 4 of 4, so **spending the
+serif to buy the margin is the author's call.**
 
 Two findings left for the author, both recorded in Amendment 68: the rail and
 month buttons fail WCAG 2.5.3 Label in Name (visible "Fri 30", accessible name

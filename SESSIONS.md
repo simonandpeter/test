@@ -7173,12 +7173,23 @@ property carries it. The assertion is unchanged.
 
 ### What it found and this session did not fix
 
-**FCP sits on the line, not under it.** Medians-of-three came back
-1451/1453/1458/**1703** ms on one run and 1459/1484/1470/**1490** ms on the next,
-against 1500 ms. All Saints alone moved 213 ms between two medians. "Does this
-push pass" is not yet a fact about the push, so the CI step is
-`continue-on-error` and says why — a gate decided by a coin toss is worse than no
-gate, and this repo has already learnt what happens to reds nobody reads.
+**FCP sat on the line here, and does not on the runner — corrected after
+reading CI.** On this desk medians-of-three came back 1451/1453/1458/**1703** ms
+on one run and 1459/1484/1470/**1490** ms on the next, against 1500 ms; All
+Saints alone moved 213 ms between two medians. On that evidence the CI step
+shipped `continue-on-error`, because a gate decided by a coin toss is worse than
+no gate.
+
+The first run said otherwise. `dc6fc22`: **1206–1221 ms** on all four routes, and
+the three samples behind each median spread by **3 ms** rather than 200. ~280 ms
+of margin. So the desk's variance was a fact about the desk — the thing this
+document says about local runs, arriving as a conclusion this session had already
+written down — and the `continue-on-error` came off in the follow-up commit.
+
+**The median-of-three is still right, and for a reason the green run does not
+show.** It was added because a single sample changed which routes failed; that
+the runner turns out to be steady is not something a session could have known
+from here, and the next machine may not be.
 
 The one measured lever is the two preloaded Latin subsets. Blocking them takes
 FCP from ~700 ms to ~510 ms (Playwright, 4x CPU and 1.6 Mbit/s, five samples
@@ -7212,5 +7223,8 @@ Neither CLS cause appeared on an idle desk. The parallel suite found them and a
 6x CPU throttle reproduced them deterministically, which is CLAUDE.md trap 10
 pointing the other way round: load surfaced them, throttling explained them.
 
-Every Lighthouse number here is this desk's. CI's own are in the run summary from
-now on.
+CI (`dc6fc22`): **584 passed, no flaky line**, and the Lighthouse step green on
+all four routes — accessibility 100, FCP 1206–1221 ms, CLS 0.0042. Where a
+Lighthouse number above is this desk's it says so; the runner's are in the run
+summary from now on, and the two disagree enough that it matters which is being
+quoted.

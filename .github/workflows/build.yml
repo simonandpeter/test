@@ -31,26 +31,26 @@ jobs:
         # The two §13 criteria no Playwright test could reach. Reports into the
         # run summary as a table.
         #
-        # `continue-on-error` because FCP lands *on* the brief's line rather
-        # than under it, and a gate decided by a coin toss is worse than no
-        # gate. Measured 2026-08-28, the first time either criterion was ever
-        # measured: accessibility is **100** on all four routes, and FCP
-        # medians-of-three came back 1451/1453/1458/1703 ms on one run and
-        # 1459/1484/1470/1490 ms on the next, against a 1500 ms floor. All
-        # Saints alone moved 213 ms between two medians. So "does this push
-        # pass" is not yet a fact about the push.
+        # It blocks, and that took reading a CI run to justify. On the author's
+        # desk FCP straddles the 1500 ms line — medians-of-three of
+        # 1451/1453/1458/1703 ms one run and 1459/1484/1470/1490 ms the next —
+        # and this step shipped `continue-on-error` for exactly one commit on
+        # the strength of that, because a gate decided by a coin toss is worse
+        # than no gate.
         #
-        # The one measured lever is the two preloaded Latin subsets: blocking
-        # them takes FCP from ~700 ms to ~510 ms on a 4x/1.6 Mbit profile
-        # (Playwright, 5 samples each). They earn it — the preload does win the
-        # `font-display: optional` race under that same throttle, checked four
-        # times out of four — so trading the site's serif for the margin is the
-        # author's call and not a session's.
+        # The runner disagrees, and the runner is the source of truth. First run
+        # (dc6fc22): accessibility **100** on all four routes, FCP **1206-1221
+        # ms** against the 1500 ms floor, and the three samples behind each
+        # median spread by 3 ms rather than by 200. The desk's variance was a
+        # fact about the desk. There is ~280 ms of margin here, so the gate can
+        # fail honestly, and a gate that cannot fail is a report.
         #
-        # **Drop this line when FCP clears 1500 ms with room.** A gate that
-        # cannot fail is a report, and this file already knows what happens to
-        # reds nobody reads.
-        continue-on-error: true
+        # If this goes red on timing rather than on a11y, the measured lever is
+        # the two preloaded Latin subsets: blocking them takes FCP from ~700 ms
+        # to ~510 ms on a 4x/1.6 Mbit profile. **Do not reach for it casually.**
+        # They earn their cost — the preload wins the `font-display: optional`
+        # race under that same throttle, four times out of four — so trading the
+        # site's serif for the margin is the author's call, not a session's.
         run: npm run test:lighthouse
 
       - name: Upload Playwright report on failure
