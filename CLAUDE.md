@@ -563,8 +563,13 @@ which also records why the obvious ten-line fix does not work — 36 tests take
   alone. More than one bug in this codebase's history was invisible in the
   diff and obvious on screen (a proportion applied twice, a fade that failed
   contrast, a today-marker overlap that only showed up at exactly 360px).
-- **CI, or a full local `npx playwright test` run, is the source of truth** —
-  not one test passing in isolation, and not a local pass in general (a
-  `.gitignore` bug once shipped untracked data files while every local run
-  was green).
+- **CI is the source of truth, and you are the one who has to look** (author,
+  2026-08-28, collapsing this repo from two sessions to one). A full local run
+  is not a substitute: a `.gitignore` bug once shipped untracked data files
+  while every local run was green, and the site once went five pushes without
+  deploying because nobody read the Actions tab. **Read the run's `flaky` line
+  as well as its conclusion** — a green run with `N flaky` contains a test that
+  failed and passed on retry, which is the only place a flake rate shows.
+- **You push your own commits, and that needs the author's PAT** — see
+  HANDOFF.md. A bare `git push` fails with "could not read Username".
 - **`git status` before anything destructive; never `git add -A`.**

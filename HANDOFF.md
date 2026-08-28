@@ -112,18 +112,30 @@ them.
   the manifest on the boot path. **Two different things are called `names`** — a
   saint record's own name forms, and the search index. Neither is
   `display_name`, and a change to one is not a change to the other.
-- **Two agent sessions work this repo at once, and they share port 4173.**
-  Nothing else in these documents says so, and it cost both sessions runs on
-  2026-08-28. `playwright.config.js` refuses to reuse a server it did not start,
-  so a suite started while another is live dies on "4173 is already used" — and
-  the reflex, killing whatever holds the port, kills the other session's run
-  mid-flight. One gate died at test 494 of 528 that way: a 0 ms failure and a
-  truncated log, which reads exactly like a broken test and is not one.
-  `Stop-Process -Name node -Force` is worse; it takes everything.
-  **Ask before clearing the port, and say when you start a long run.** And
-  before believing a failure, check whether the other session's tree was in
-  flight — two of that run's three failures belonged to an uncommitted image
-  batch.
+- **One session works this repo, and it pushes its own commits** (author,
+  2026-08-28). It was two for a day — one building, one holding the token and
+  verifying — and that ended on the author's instruction after a sitting whose
+  message traffic cost more than the review caught. **What was load-bearing was
+  the second session's *access*** (push, the Actions API, artifact download),
+  not its review: a runner-only bug is invisible without it. So the access moved
+  to the one session rather than the arrangement continuing.
+
+  Three things survive the change:
+
+  * **Read the CI run, not your local gate.** That is the rule the split existed
+    to enforce and it is now yours alone. A green suite here is evidence about
+    this desk; the site once went five pushes without deploying and nobody had
+    looked. Read the run's **`flaky` line** as well as its conclusion — a green
+    run with `N flaky` contains a test that failed and passed on retry, and that
+    is the only place a flake rate is visible.
+  * **Back out your own fix, and distrust your own framing.** A single session
+    backing out its own change confirms its own account of it; twice in one day
+    a second reader caught a claim that was embroidered rather than wrong.
+    Nothing replaces that except deliberate suspicion of the sentence you are
+    about to write.
+  * **Port 4173 is no longer shared**, so that etiquette is gone — but
+    `playwright.config.js` still refuses to reuse a server it did not start, so
+    a stray `vite preview` fails a run loudly. Kill it when done.
 - **The rehearsal does not reach a context a test opens itself** (Amendment 63).
   `COLD_FACE=1` decorates the injected `page`; **42 tests open their own
   `browser.newContext()`**, and such a test runs half forced and half raw — green
@@ -612,12 +624,17 @@ day (2026-08-24) — read them in SESSIONS.md, this is only the headline:**
   desktop row and cannot be made to fit at any gap; recorded in DESIGN.md §5
   as the author's call.
 
-**Pushing happens outside this session** unless your own session has been
-given credentials — check before assuming otherwise. Agent sessions
-historically have none: `git push` fails with "could not read Username" from
-both shells. Commit, say the commit is ready, and ask for confirmation that
-the GitHub Actions run is green before building on top of it. Do not treat a
-local pass as evidence about what was committed or pushed.
+**You push your own commits** (author, 2026-08-28), and **that needs the
+author's PAT**, which is not in this repository and not in the environment: a
+bare `git push` fails with "could not read Username" from both shells. The
+pattern this project uses is the author's own and is recorded as deliberate —
+set the remote to an https URL carrying the token, push, then reset the remote
+so the token is not left in `.git/config`. Ask the author for it rather than
+working around it.
+
+**Then read the Actions run before building on top of the push.** A local pass
+is evidence about this desk and nothing else. That is the rule the two-session
+arrangement existed to enforce, and it is now one session's to keep.
 
 ### What Amendment 47 changed (2026-08-26, seventh sitting)
 
@@ -1248,16 +1265,16 @@ session). SESSIONS.md has each in full.
 - **CI is the source of truth, not your local run.** A `.gitignore` bug once
   left `src/data/` untracked while every local test passed. Confirm CI is green
   before calling a session done. If CI is red, stop and fix it.
-- **"Verified by both sessions" means two sets of eyes on the claim, one set of
-  hands on the gate** — say it that way, because the short form gets read as
-  "everything was run twice" and that has never been what happens. The standing
-  arrangement is that the building session runs the full suite and the
-  verifying session checks the *load-bearing claim*: the back-out, the counts,
-  the `CLAUDE.md` hunk, the one measurement the author could not check. Where
-  the parent commit had a verified full run and the new one touches no `src/`,
-  the verifier deliberately does not repeat the 530 — that is the arrangement
-  working, not a gap in it. Recorded 2026-08-28 because a provenance list is
-  exactly the kind of note a later session over-reads.
+- **"Verified by both sessions" is history and the phrase should not be reused**
+  (2026-08-28). For one day this repo was worked by two agent sessions, and the
+  provenance list distinguished commits both had seen from commits only their
+  author had. That ended when the author collapsed it to one. Where the phrase
+  appears in commits of 2026-08-27 and 2026-08-28 it meant *two sets of eyes on
+  the claim, one set of hands on the gate*: the verifier checked the back-out,
+  the counts and the `CLAUDE.md` hunk, and deliberately did not repeat the full
+  suite. It never meant anything was run twice. **Nothing from 2026-08-29 onward
+  carries that assurance**, and the honest substitute is the CI run — a stronger
+  one for anything a reader actually meets.
 - **A count in the DOM is not a count in the corpus.** The Index is
   virtualised: at 360 px it renders one card of ten. Assert what the page
   claims, not what happens to be mounted.
