@@ -4335,10 +4335,20 @@ be a page that never started.*
    claim. Two new ones pin the *cost*, because a cost change needs a cost
    measurement: a card whose `dates` and `attestations` are counting getters is
    asked **once** across a 24-card sort and once across three separate calls.
-   Backed out, they fail by name — `s01 was asked for its dates 2 times` here,
-   `derived 3 times across three calls` on the peer's different back-out, and
-   **the two sessions backing out different halves is how the unpinned second
-   layer was found at all.**
+   Backed out, they fail by name — `s01 was asked for its dates 2 times`.
+   **How the unpinned layer was found is worth stating accurately, because the
+   first version of this paragraph got it wrong.** It said the two sessions had
+   backed out different halves. They had not: both backed out the *same* half,
+   and the two different failure messages — `s01 was asked for its dates 2
+   times` and `derived 3 times across three calls` — are the same experiment on
+   trees in two different states, the two cost tests taking turns depending on
+   whether layer B was still present to dedupe the sort. The verifying session
+   inferred two experiments from two strings, checked, and corrected itself.
+   What survives is smaller and still worth having: **a second person ran the
+   same back-out against a tree in a different state and got a different signal
+   from it**, and that difference is what exposed the layer nothing could pin.
+   `d2d10e6`'s commit message carries the wrong version and cannot be amended;
+   this is the correction.
 3. **One memoised feast index** (G3). `lib/feasts.js` exports a
    `feastIndexFor(year, data)` cached by year; the calendar's module-level
    `indexCache` and the Index's `monthsBySlugFor` both read it. `facetsOf` is
