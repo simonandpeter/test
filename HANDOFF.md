@@ -214,13 +214,29 @@ them.
   one, and it holds the scrollLeft timeline and the pointer events. Three
   diagnoses of this test have already been killed by measurements in one day.
 
-  Two things measured locally and **deliberately not shipped**: the rail
-  **rebuilds its window mid-coast** (first day 2026-06-29 → 2026-08-21,
-  `scrollLeft` 7995 → a canonical 4489), so net displacement after a coast
-  measures nothing a reader would notice; and a test rewritten to watch
-  `is-coasting` instead passes, but then fails **5 of 48** contended runs on
-  `state.aligned` at `released at 4287` — a second fault the old test never
-  reached because it failed earlier.
+  **The trace has been read** (`1f9069e`'s retry recorded one; it has no
+  scrollLeft timeline, but it has the action list and 26 screencast frames).
+  What it establishes: the rail's window is the **canonical** one at the moment
+  of failure — 121 buttons, 29 June to 27 October, the selected day at index 60
+  — and there is **no coast**. After the throw at 969 ms the screencast has two
+  frames, 1115 and 1128 ms, moving *backwards*, and then no visual change for
+  four seconds. A drag, a release, a settle back to alignment.
+
+  **Five diagnoses have been killed by measurement**, so distrust the sixth:
+  the sampling window; Amendment 65's chip pin; the carousel run being rebuilt;
+  the rail re-anchoring mid-coast (real locally — first day 2026-06-29 →
+  2026-08-21, `scrollLeft` 7995 → 4489 — but *not* what CI hit); and
+  `prefers-reduced-motion` (forcing `reduce` gives the right shape, net 0 px
+  against +272, but pinning the test to `no-preference` and backing it out
+  **left it passing**, because the settle alone can clear the 20 px the
+  assertion asks for). Two rewrites were measured and **not shipped**: the
+  `is-coasting` watch fails **5 of 48** contended runs on `state.aligned`, a
+  second fault behind the first.
+
+  **Instrument the rail, not the test.** The open question is why no coast runs
+  when the delivered gesture's velocity should clear `MIN_FLICK`. Log the
+  fresh-sample count and the computed velocity at release behind a flag, push
+  it, and read the CI console — nothing this desk runs has reproduced it.
 
   **`random deals an order, and holds it still under the reader` — 2 of ~30
   runs**, `fbcaef8` and `102fd83`, same project. Not a rate worth acting on

@@ -6894,11 +6894,45 @@ first**, and "at rest" detected as two equal reads 100 ms apart can be a pause
 inside a sequence rather than the end of one.
 
 **That work is reverted and recorded rather than shipped**, on the verifying
-session's advice and on the day's own evidence: three diagnoses of this test
-have already been killed by measurements, and `trace: 'on-first-retry'` means
-`1f9069e`'s run holds a trace of the real failure — the scrollLeft timeline and
-the pointer events, which will say whether a coast began at all. **Read the
-trace before touching the rail's arithmetic.**
+session's advice and on the day's own evidence.
+
+### The trace, read — and two more diagnoses killed by it
+
+`1f9069e`'s retry recorded one. It does **not** carry a scrollLeft timeline
+(frame snapshots do not record scroll, and poll results are not stored), but it
+carries the action list and 26 screencast frames, and both are decisive.
+
+**The rebuild hypothesis is wrong.** At the moment of failure the rail's window
+is the canonical one — 121 buttons, first Monday 29 June 2026, last Tuesday 27
+October, 2026-08-28 at index 60, dead centre. Nothing re-anchored. The local
+reproduction was a real behaviour of the rail and **not** what CI hit.
+
+**There was no coast.** The screencast records only visual change, and after the
+throw at 969 ms there are exactly **two frames — 1115 ms and 1128 ms — and then
+nothing for the remaining four seconds**. Read side by side they show the rail
+one column further on and then moving *backwards*: a drag of 100 px, a release,
+and a settle pulling back to alignment. The action list agrees; the nine
+`.week-strip` resolutions from 1039 ms to 5085 ms at doubling intervals are the
+failing poll and nothing else happened between them.
+
+**`prefers-reduced-motion` was the next hypothesis and it is also wrong.**
+`beginCoast` is guarded by `!reducedMotion()`, and a context forced to `reduce`
+gives net **0 px** from the release against **+272** under `no-preference` —
+the right shape. But pinning the test to `no-preference` and then backing it out
+to `reduce` **left the test passing**, because the settle alone can carry more
+than the 20 px the assertion asks for depending on where the release lands. A
+fix whose back-out does not fail is pinning nothing, so it was not shipped
+either.
+
+**Five diagnoses of this test have now been killed by measurement in one day**:
+the sampling window, the chip pin, the run being rebuilt, the rail re-anchoring,
+and reduced motion. What is established is narrow and worth having — on CI the
+gesture is delivered, no coast runs, and the rail settles backwards by 23 px,
+deterministically. Why no coast runs when the velocity should clear `MIN_FLICK`
+is the open question, and it is the rail's own arithmetic. **The next person
+should instrument the rail rather than the test**: log the fresh-sample count
+and the computed velocity at release behind a flag, push it, and read the CI
+console. Nothing this desk can run has reproduced it.
 
 ### Verification
 
