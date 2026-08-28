@@ -1156,18 +1156,56 @@ prompt, the Index and the saint's page respecting the selection — is Amendment
 23, built on the author's five answers recorded at the end of Addendum H.
 What it leaves for the author is listed under "Outstanding" below.
 
-### Then: Session 4b, the ship gate — still outstanding
+### Then: Session 4b, the ship gate — the recommended next session (2026-08-28)
 
-Skipped by instruction, not by accident. What the executable quality floor
-already covers — axe at WCAG 2.1 AA, keyboard focus, reduced motion, 360 px, no
-layout shift — is green on every route. What 4b still owes: **Lighthouse
-accessibility ≥ 95** and **first contentful paint under 1.5 s on a throttled 4G
-profile**. Neither has tooling in the project yet.
+Skipped by instruction, not by accident, and the reason it was skipped no longer
+holds. **This entry used to say "the corpus is ten saints, so the calendar is
+empty on ~355 days a year"** and offered that as the reason not to claim the
+gate. The corpus is **742 saints** with **144 day records** running 23 August
+2026 to 13 January 2027; the Daily page has a hero, a register, readings, hymns
+and a fast on every day in that range. That objection is dead.
 
-Note before claiming the gate: 4b's own criterion is "a genuinely usable daily
-site on its own", and the corpus is ten saints, so the calendar is empty on
-~355 days a year. That is a data question, not an engineering one, and whether
-to ship against it is the author's call rather than yours.
+**Three of the brief's seven §13 criteria are executably green** on every route,
+in `e2e/quality-floor.spec.js`: no axe violations, no horizontal overflow at
+360 px, visible keyboard focus on every interactive element, reduced motion
+removing animation rather than shortening it, and no console errors.
+
+**Four are not, and two of those this file has been claiming.** Read them apart:
+
+* **Lighthouse accessibility ≥ 95** — no tooling in the project. `lighthouse`
+  and `chrome-launcher` are not dependencies. It is a script and a threshold,
+  and axe already passing makes a low score unlikely rather than impossible:
+  Lighthouse scores things axe does not, notably tap-target size and contrast on
+  states axe samples differently.
+* **First contentful paint under 1.5 s on a throttled 4G profile** — no tooling
+  either, and this is the one with real work behind it. Three things landed
+  today that move it and none has been measured: the masthead is outlines rather
+  than a `font-display: swap` webfont (no swap in first paint), `manifest.meta.json`
+  came off the boot path (one fewer round trip), and the two Latin subsets are
+  preloaded. **Measure before optimising** — the entry that sent this session
+  chasing a font was itself an unmeasured guess.
+* **No layout shift when data arrives** — **this file has called it green and
+  nothing measures it.** There is no CLS assertion anywhere in `e2e/`; the claim
+  rests on skeletons being built to match, which is a reason to expect it rather
+  than evidence of it. The Daily page grows 508 px when `fillSaintHymns` lands,
+  which `restoreSection` already works around — that is exactly the shape a CLS
+  measurement would find.
+* **All colour information duplicated in text or shape** — never audited as a
+  criterion. The fast's colour-by-kind is the one deliberate exception in
+  DESIGN.md §2 and it does carry its grade in text, so this is likely green; it
+  has simply never been checked route by route.
+
+**What the session is.** Add the two missing measurements as tooling, run all
+seven, fix what they find, and correct this entry with numbers rather than
+adjectives. The gate is a claim about the site, and four of its seven criteria
+currently rest on inference.
+
+**Two cautions carried from today.** A number taken from this desk is a fact
+about this desk — a throttled FCP measured on a fast Windows machine is not the
+runner's and is certainly not a phone's. And when an instrument is added, ask
+what it would look like if it were doing nothing: three of them failed that way
+in one day (`COLD_FACE`'s reach, the preload's two subsets, the CPU throttle's
+ordering).
 
 ### Then: Session 5b — the structural efficiency pass
 
