@@ -462,12 +462,33 @@
   border-radius: 50%;
 }
 
+/* Three marks, three silhouettes, and that is brief §13's doing rather than a
+   flourish: "all colour information duplicated in text or shape". These were
+   one disc in three hues until 2026-08-28 — same size, same radius, differing
+   in `background` and in nothing else. The words are on the button's
+   `aria-label` and the dots are `aria-hidden`, so a screen reader was told
+   which mark it was and a sighted reader who cannot separate red from teal
+   from gold was not. That reader is the one the criterion is written for.
+
+   Read as a scale of strictness rather than three arbitrary tokens: the strict
+   fast is the disc filled, fish-permitted is the same disc opened up, and a
+   feast is a different figure because it is a different kind of fact — not a
+   grade of fasting at all. All three stay inside the 5 px box, so the rail's
+   row height and the `::after` spacer that stands in for a missing mark are
+   untouched.
+
+   The shapes are the smallest thing that satisfies the criterion, not a
+   drawing decision defended on its merits; the author may want to redraw them.
+   Two marks the same shape is the part that must not come back. */
 .mark-fast {
   background: var(--fast-strict);
 }
 
 .mark-fish {
-  background: var(--fast-fish);
+  background: none;
+  /* box-sizing is border-box globally, so this opens a 2 px hole in the same
+     5 px footprint rather than growing the mark. */
+  border: 1.5px solid var(--fast-fish);
 }
 
 /* The one place the site spends gold on the calendar (author, 2026-08-26:
@@ -475,6 +496,11 @@
    It is the leaf under the icon, and a feast is what it is for. */
 .mark-feast {
   background: var(--gold);
+  /* A diamond by clip-path rather than a rotated square: a 5 px square turned
+     45 degrees measures 7.07 px corner to corner and would push the 5 px row
+     it sits in. This stays in the box. */
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
 /* ---- the peeked edges -------------------------------------------------- */

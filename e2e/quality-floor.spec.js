@@ -42,6 +42,34 @@ for (const [label, path, prepare] of ROUTES) {
     expect(results.violations, JSON.stringify(results.violations.map((v) => v.id))).toEqual([]);
   });
 
+  /*
+   * The same sweep in vigil mode, which until 2026-08-28 nothing ran at all —
+   * CLAUDE.md said so plainly ("dark mode is not covered by the axe/contrast
+   * tests") and it cost a real WCAG AA failure four days of standing: dark
+   * `--rubric` at 3.93:1 on the field, on the token carrying the current nav
+   * item and today's date. DESIGN.md had it recorded as a live defect the whole
+   * time. What finally said it out loud was Lighthouse, whose headless Chrome
+   * happens to ask for dark — an accident, and not a thing to leave a gate
+   * resting on.
+   *
+   * `tests/contrast.test.mjs` holds the *tokens* to the floor and is much the
+   * faster check. This one holds the **compositions**: a token pair no test
+   * thought to look at is exactly how the last one hid.
+   */
+  test(`no axe violations in vigil mode: ${label}`, async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'dark' });
+    if (prepare) await prepare(page);
+    await ready(page);
+    await page.goto(path, { waitUntil: 'networkidle' });
+    // The theme is a class the boot script sets, so prove the emulation took
+    // rather than measuring the light palette twice and calling it two passes.
+    await expect(page.locator('html')).toHaveClass(/dark/);
+    const results = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+      .analyze();
+    expect(results.violations, JSON.stringify(results.violations.map((v) => v.id))).toEqual([]);
+  });
+
   test(`no horizontal overflow: ${label}`, async ({ page }) => {
     if (prepare) await prepare(page);
     await ready(page);
@@ -52,6 +80,152 @@ for (const [label, path, prepare] of ROUTES) {
     expect(overflows).toBe(false);
   });
 }
+
+/*
+ * Brief §13: "No layout shift when data arrives — skeletons must match final
+ * dimensions." HANDOFF.md called this criterion green for weeks and **nothing
+ * measured it** — there was no CLS assertion anywhere in `e2e/` until now.
+ *
+ * The measurement is the browser's own `layout-shift` entries rather than a
+ * before/after `getBoundingClientRect`: a rect pair catches the shift a test
+ * thought to look for, and the layout-shift buffer catches the one it did not.
+ * `hadRecentInput` drops shifts a reader caused by pressing something, which is
+ * the whole point — growing when asked is not a defect, growing on its own is.
+ *
+ * The budget is 0.02, not the 0.1 of Core Web Vitals "good". The brief says
+ * *no* shift; 0.1 is the threshold below which Google stops complaining, and
+ * adopting it here would license eight times the movement the brief allows. The
+ * value is what the site actually scores with room for the runner's rounding,
+ * and it should be argued down rather than up.
+ */
+const CLS_BUDGET = 0.02;
+
+const watchShifts = (page) =>
+  page.addInitScript(() => {
+    window.__shifts = [];
+    new PerformanceObserver((list) => {
+      for (const e of list.getEntries()) {
+        if (e.hadRecentInput) continue;
+        window.__shifts.push({
+          value: e.value,
+          // The nodes that moved, so a red run says what to fix rather than
+          // only that something somewhere grew.
+          sources: (e.sources ?? [])
+            .map((s) => s.node?.tagName?.toLowerCase() + (s.node?.className ? '.' + String(s.node.className).split(' ')[0] : ''))
+            .filter((n) => n && !n.startsWith('undefined')),
+        });
+      }
+    }).observe({ type: 'layout-shift', buffered: true });
+  });
+
+const clsOf = async (page) => {
+  const shifts = await page.evaluate(() => window.__shifts ?? []);
+  const total = shifts.reduce((n, s) => n + s.value, 0);
+  const blame = shifts
+    .filter((s) => s.value > 0.0001)
+    .map((s) => `${s.value.toFixed(4)} [${s.sources.join(', ') || 'unattributed'}]`)
+    .join('; ');
+  return { total, blame };
+};
+
+for (const [label, path, prepare] of ROUTES) {
+  test(`nothing shifts as the data arrives: ${label}`, async ({ page }) => {
+    await watchShifts(page);
+    if (prepare) await prepare(page);
+    await ready(page);
+    await page.goto(path, { waitUntil: 'networkidle' });
+    /*
+     * The Daily page's hymns are the late arrival this criterion is about:
+     * `fillSaintHymns` waits on the hero saint's detail payload, lands after
+     * `networkidle` has already been declared, and grows the panel by ~500 px.
+     * Whether that *shifts* anything is the question — growth below the fold is
+     * not a shift — so the wait has to outlast it either way. That second fetch
+     * starts *after* the first `networkidle` is declared, so waiting for idle
+     * again is what actually straddles it; the timeout then buys the paint.
+     */
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(800);
+    const { total, blame } = await clsOf(page);
+    expect(total, `CLS ${total.toFixed(4)} over budget ${CLS_BUDGET} — ${blame}`).toBeLessThanOrEqual(CLS_BUDGET);
+  });
+}
+
+/*
+ * Brief §13: "All colour information duplicated in text or shape." DESIGN.md
+ * calls this the §7 greyscale test — remove every colour and the reader loses
+ * nothing — and §2 makes it the first of the three conditions that keep the
+ * fast's colour-by-kind honest. It had never been audited, executably or by
+ * hand, until 2026-08-28.
+ *
+ * The rail's marks are where it failed. Each day can carry up to three dots —
+ * a strict fast, fish-permitted, a feast — and they were one 5 px disc in three
+ * hues: same size, same `border-radius: 50%`, same position, differing in
+ * `background` and in nothing else. The words exist, but only in the button's
+ * `aria-label`; the dots are `aria-hidden`. So a screen reader was told which
+ * mark it was and a sighted reader who cannot separate the hues was not, which
+ * is the one reader this criterion is written for.
+ *
+ * The assertion is deliberately about *shape and not hue*: it compares the
+ * non-colour computed styles and requires every pair of kinds to differ in at
+ * least one of them. Asserting the colours differ would pass on the defect.
+ */
+test('a day mark is told apart by shape, not only by hue', async ({ page }) => {
+  await ready(page);
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+
+  const shapes = await page.evaluate(() => {
+    const kinds = ['mark-fast', 'mark-fish', 'mark-feast'];
+    const out = {};
+    /*
+     * Probe elements in the rail's own row rather than whichever marks this
+     * week happens to carry. The first version read the live dots and asserted
+     * its own premise, which is how it reported that 30 January's week stands
+     * only a strict fast: one kind, and a comparison of one thing against
+     * itself is green for the wrong reason.
+     *
+     * The question here is exactly "do these three classes draw differently
+     * with the colour taken away", which is a fact about the stylesheet and not
+     * about the corpus — and the corpus is free to stop having a fish week.
+     * They are mounted inside a real `.day-marks` row so anything inherited or
+     * descendant-scoped applies as it does in place.
+     */
+    const row = document.querySelector('.week-strip .day-marks') ?? document.querySelector('.week-strip button');
+    for (const kind of kinds) {
+      const el = document.createElement('span');
+      el.className = `day-mark ${kind}`;
+      row.append(el);
+      const s = getComputedStyle(el);
+      // Everything a reader could tell the marks apart by *except* colour.
+      out[kind] = [
+        s.width,
+        s.height,
+        s.borderRadius,
+        s.borderTopWidth,
+        s.borderStyle,
+        s.transform,
+        s.clipPath,
+        getComputedStyle(el, '::before').content,
+      ].join('|');
+      el.remove();
+    }
+    return out;
+  });
+
+  const kinds = Object.keys(shapes);
+  // The premise, asserted rather than assumed: three kinds, or the loop below
+  // is green because it compared nothing.
+  expect(kinds, 'a mark kind went missing from the probe').toHaveLength(3);
+
+  for (const a of kinds) {
+    for (const b of kinds) {
+      if (a >= b) continue;
+      expect(
+        shapes[a],
+        `${a} and ${b} are the same shape, so only colour tells them apart`,
+      ).not.toBe(shapes[b]);
+    }
+  }
+});
 
 test('no console errors on load', async ({ page }) => {
   const errors = [];

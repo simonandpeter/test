@@ -3294,8 +3294,23 @@ test("the month's numerals wear the same colour as the rail's dots", async ({ pa
     page.evaluate((day) => {
       const dot = document.querySelector(`.week-strip button[data-iso="${day}"] .day-mark:not(.mark-feast)`);
       const cell = document.querySelector(`.month-grid button[data-iso="${day}"]`);
+      /*
+       * Whichever property carries the mark's colour, which is not always the
+       * fill. Since 2026-08-28 the three marks have three silhouettes — brief
+       * §13 wants colour duplicated in shape, and they were one disc in three
+       * hues — and fish-permitted is the disc *opened up*, so its hue moved
+       * from `background` to `border-color` and its background is `none`.
+       *
+       * The assertion below is untouched: the month's numeral still has to be
+       * the same computed colour as that day's mark, which is the instruction
+       * this test was written for. Only where the mark keeps its colour moved.
+       */
+      const markColour = (el) => {
+        const s = getComputedStyle(el);
+        return s.backgroundColor === 'rgba(0, 0, 0, 0)' ? s.borderTopColor : s.backgroundColor;
+      };
       return {
-        dot: dot ? getComputedStyle(dot).backgroundColor : null,
+        dot: dot ? markColour(dot) : null,
         numeral: cell ? getComputedStyle(cell.querySelector('.day-num')).color : null,
         cellClass: cell ? cell.className : null,
         label: cell ? cell.getAttribute('aria-label') : null,

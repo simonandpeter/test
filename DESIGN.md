@@ -197,17 +197,27 @@ recalled — every figure in the previous version of this paragraph was wrong,
 which is §6b's lesson about worked values arriving in the palette. Light:
 ink/gesso 13.10:1, ink/field 12.16:1; ink-soft 5.82:1 on gesso and **5.40:1 on
 the field**, which is the binding one, because secondary text sits inside cards;
-rubric 6.59:1 on gesso, 6.12:1 on field. Dark, unchanged by this pass:
-ink/gesso 14.71:1, ink-soft 6.78:1, rubric 4.20:1.
+rubric 6.59:1 on gesso, 6.12:1 on field. Dark: ink/gesso 14.71:1, ink-soft
+6.78:1, rubric **5.54:1 on gesso and 5.18:1 on the field**.
 
 Two things that paragraph used to say and should not have. It claimed
 ink-soft "≥ 5.4:1 both modes" while the value on the light *field* was 5.29:1 —
 the ground moving is what surfaced it, and it is 5.40:1 now, so the claim is
 true for the first time. And it called dark-mode rubric 5.1:1 and "safe for text
-at any size": it is **4.20:1**, below the AA floor for normal text, and rubric
-carries the current nav item and today's date. That is a live defect in vigil
-mode, untouched by this pass and recorded in SESSIONS.md as outstanding — the
-browser suite runs in light mode only, so nothing has been checking it.
+at any size": it was **4.20:1**, below the AA floor for normal text, on the
+token that carries the current nav item and today's date.
+
+*Fixed 2026-08-28, Session 4b.* Dark `--rubric` was `#C05B4B` and is `#CB7769`
+— lifted 8% in HSL with hue and saturation held, so it is the same cinnabar at a
+value words can be read at. The defect had stood since 2026-08-22 because
+nothing measured it: the browser suite ran in light mode only, and it took
+Lighthouse — whose headless Chrome asks for dark — to say so out loud. Every
+figure in this paragraph is now recomputed from `tokens.css` by
+`tests/contrast.test.mjs`, which fails if this document and the palette disagree,
+and holds every text token in **both** themes to 4.5:1 rather than trusting a
+number typed into a paragraph. `--gold` is 2.78:1 on light gesso and takes no
+floor, because it is never text; `--gold-ink` is the one that carries words and
+is gated instead.
 
 `--rule` is not text and takes no AA floor, but it has to stay visible against
 both surfaces it divides: 1.39:1 on gesso and 1.29:1 on the field, which is the

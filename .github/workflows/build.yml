@@ -27,6 +27,32 @@ jobs:
         # Brief §13, as an executable gate rather than an aspiration. Runs
         # against a real production build via vite preview.
         run: npm run test:e2e
+      - name: Quality floor (Lighthouse accessibility and FCP on throttled 4G)
+        # The two §13 criteria no Playwright test could reach. Reports into the
+        # run summary as a table.
+        #
+        # `continue-on-error` because FCP lands *on* the brief's line rather
+        # than under it, and a gate decided by a coin toss is worse than no
+        # gate. Measured 2026-08-28, the first time either criterion was ever
+        # measured: accessibility is **100** on all four routes, and FCP
+        # medians-of-three came back 1451/1453/1458/1703 ms on one run and
+        # 1459/1484/1470/1490 ms on the next, against a 1500 ms floor. All
+        # Saints alone moved 213 ms between two medians. So "does this push
+        # pass" is not yet a fact about the push.
+        #
+        # The one measured lever is the two preloaded Latin subsets: blocking
+        # them takes FCP from ~700 ms to ~510 ms on a 4x/1.6 Mbit profile
+        # (Playwright, 5 samples each). They earn it — the preload does win the
+        # `font-display: optional` race under that same throttle, checked four
+        # times out of four — so trading the site's serif for the margin is the
+        # author's call and not a session's.
+        #
+        # **Drop this line when FCP clears 1500 ms with room.** A gate that
+        # cannot fail is a report, and this file already knows what happens to
+        # reds nobody reads.
+        continue-on-error: true
+        run: npm run test:lighthouse
+
       - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4

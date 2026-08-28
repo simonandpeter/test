@@ -213,15 +213,42 @@ function shell(card, backLabel) {
     <div class="saint-main" data-detail>
       <h2 class="register-heading">${STRINGS.saint.life}</h2>
       <div class="life" data-life>${skeletonLines(6)}</div>
-      <!-- Sources stay under the life: they are text.sources, the documents
-           the prose above was written from, and they followed it before this
-           reorder too. -->
-      <div data-sources></div>
-      <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
-      <div data-veneration>${skeletonLines(4)}</div>
-      <div data-hymns-box></div>
-      <div data-related></div>
-      <p class="image-credit utility" data-credit></p>
+      <!--
+        Everything below the life waits for the payload rather than standing
+        in the flow while it is fetched, and this is the shape of brief §13's
+        "no layout shift when data arrives" on this page.
+
+        A skeleton can only hold a box open honestly when its final size is
+        knowable, and the life's is not: six skeleton lines stood in for a life
+        that runs anywhere from two lines to sixty. On Christopher it measured
+        six and arrived at sixty-one, so the Veneration heading was painted at
+        y=528 — a third of the way down a 780 px phone — and landed at y=1307.
+        779 px, on the one criterion the brief spells out, and nothing measured
+        it until e2e/quality-floor.spec.js grew a CLS assertion on 2026-08-28.
+
+        Nothing here can be sized ahead of the fetch either: the sources are a
+        list of the documents the life was written from, and the veneration
+        register is four rows or one depending on the churches that attest.
+        Their skeletons were furniture in the §5b sense — they held a shape
+        that was not the shape that arrived.
+
+        So the rule is *append below*, not *reserve above*: the life grows or
+        shrinks into a box with nothing under it, and this block arrives
+        underneath whatever height it settled at. An insertion below the last
+        laid-out element moves nothing, whichever way the life went.
+
+        Sources stay under the life — they are text.sources, and they followed
+        it before this too. The error path replaces [data-detail] wholesale,
+        so a payload that never comes discards this rather than stranding it.
+      -->
+      <div data-late hidden>
+        <div data-sources></div>
+        <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
+        <div data-veneration></div>
+        <div data-hymns-box></div>
+        <div data-related></div>
+        <p class="image-credit utility" data-credit></p>
+      </div>
     </div>
   </article>`;
 }
@@ -347,6 +374,15 @@ function fillIn(el, payload, { data, router }) {
   wireSources(el, saint.slug);
 
   el.querySelector('[data-related]').innerHTML = related(saint, data, router);
+
+  /*
+   * Last, once every box inside it holds what it is going to hold. A hidden
+   * element reports 0 and ignores writes (CLAUDE.md trap 7), so this has to
+   * come after the writes and not before — and it is one reveal rather than
+   * six, because unhiding as each section filled would put back the shift this
+   * block exists to remove.
+   */
+  el.querySelector('[data-late]').hidden = false;
 
   // The links that just arrived were not in the DOM when the shell was wired.
   live?.cleanups.push(observePrefetch(el));

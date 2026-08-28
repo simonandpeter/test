@@ -79,7 +79,14 @@ html.dark {
   --gesso: #1a1412;
   --ink: #ede6dc;
   --ink-soft: #a89c8f;
-  --rubric: #c05b4b;
+  /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the
+     AA floor for normal text, on the token that carries the current nav item
+     and today's date. DESIGN.md had recorded that as a live defect since
+     2026-08-22 and nothing checked it, because the browser suite ran in light
+     mode only. Lifted 8% in HSL with hue (8.2 deg) and saturation (0.48) held,
+     so it is the same cinnabar: 5.54:1 and 5.18:1. `tests/contrast.test.mjs`
+     now holds both themes to the floor. */
+  --rubric: #cb7769;
   --gold: #c79a4b;
   --gold-ink: #c79a4b;
   --rule: #3a2f29;

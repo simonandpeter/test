@@ -241,7 +241,56 @@ button:hover {
    toggles". The name was on the first row's left with the controls beside it
    until then, which left it crowded and the calendar control's long label
    («Румынская») fighting the toggles for the same line. */
+/*
+ * The height the header settles at once main.js has filled it, reserved so it
+ * does not grow into place.
+ *
+ * Brief §13's last criterion is "no layout shift when data arrives", and this
+ * was the site's whole CLS: the shell ships the header's *boxes* but the nav is
+ * an empty `<nav>` and all three controls are empty `<button>`s until the
+ * modules parse, so the bar stood 50 px tall and then became 76, carrying every
+ * page on the site down 26 px with it. 0.0307 on almost every route — which is
+ * small, and is also the entire budget on four of them.
+ *
+ * It never appeared on an idle desk. It takes a slow machine for the gap
+ * between the two paints to open wide enough to be scored, which is why six of
+ * these went red under a full parallel run and one did on its own; a 6x CPU
+ * throttle reproduces it every time (CLAUDE.md trap 10). The reader who sees it
+ * is the reader on the slow phone.
+ *
+ * Two numbers because the narrow header is two rows and the wide one is one.
+ * Both are measured, not derived — the row heights come from the controls'
+ * own line-heights — and `e2e/chrome.spec.js` asserts the settled header
+ * matches what is reserved here, so a change to either row goes red naming the
+ * new number rather than quietly restoring the shift.
+ *
+ * Safe as pixels, which a measured constant usually is not here: the height is
+ * face-independent. Measured 75.56/41 in both the native face and under
+ * COLD_FACE's Verdana + Times, at every width from 320 to 1280 and in all five
+ * language packs, because the nav is forbidden to wrap (see the 560 px block
+ * below) so no wider face can add it a line.
+ */
+/*
+ * `--chrome-h-reserve`, and emphatically *not* `--chrome-h`: that name is
+ * already taken by main.js, which publishes the bar's *measured* height from a
+ * ResizeObserver for the Index's sticky controls to sit under. Reusing it here
+ * was the first attempt and it closed a loop — the header's min-height read a
+ * value main.js derived from the header — which showed up as a reservation of
+ * 75.5625 px reporting itself as 76. One name, one direction: this one is
+ * declared and read by CSS, that one is measured and written by JS.
+ */
+:root {
+  --chrome-h-reserve: 75.5625px;
+}
+
+@media (min-width: 560px) {
+  :root {
+    --chrome-h-reserve: 41px;
+  }
+}
+
 header.chrome {
+  min-height: var(--chrome-h-reserve);
   display: grid;
   /* Narrow (author, 2026-08-25, revising the previous evening's
      arrangement): one line of chrome — the calendar control at the left, the

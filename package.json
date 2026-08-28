@@ -13,6 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:desktop": "playwright test --project=desktop --workers=10",
     "test:e2e:mobile": "playwright test --project=mobile-360 --workers=10",
+    "test:lighthouse": "node scripts/lighthouse-floor.mjs",
     "test:all": "npm test && npm run test:e2e",
     "dev": "npm run build:manifest && vite",
     "build": "npm run build:manifest && vite build",
@@ -23,7 +24,9 @@
     "@playwright/test": "^1.62.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "chrome-launcher": "^1.2.1",
     "image-size": "^2.0.2",
+    "lighthouse": "^13.4.1",
     "vite": "^7.1.3"
   },
   "dependencies": {

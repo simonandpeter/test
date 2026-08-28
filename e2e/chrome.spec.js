@@ -1,5 +1,5 @@
 import { devices } from '@playwright/test';
-import { test, expect } from './fixtures.js';
+import { coldFace, test, expect } from './fixtures.js';
 import {
   DETAIL,
   EMPTY,
@@ -2232,3 +2232,53 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
   expect(links.join(' ')).not.toContain('cyrillic');
   expect(links.join(' ')).not.toContain('greek');
 });
+
+/*
+ * The reserved header height, pinned against the height the header actually
+ * settles at. `--chrome-h-reserve` in base.css exists to stop the bar growing into
+ * place at boot, which was the site's whole layout shift (brief §13); reserving
+ * the wrong number restores the shift when it is short and leaves a permanent
+ * strip of dead air when it is long, and neither says anything on the page.
+ *
+ * Both breakpoints, because the narrow header is two rows and the wide one is
+ * one, and it is the *narrow* value that no desktop-only run would ever check.
+ */
+for (const [label, width, expected] of [
+  ['narrow, two rows', 360, 75.5625],
+  ['wide, one row', 900, 41],
+]) {
+  test(`the header reserves the height it settles at: ${label}`, async ({ browser }) => {
+    const ctx = await browser.newContext({ ...devices['Desktop Chrome'], viewport: { width, height: 780 } });
+    const page = await ctx.newPage();
+    // The fixture only decorates the injected `page`, and this test opens its
+    // own context — so the rehearsal has to be applied by hand, and asserted.
+    await coldFace(page);
+    await ready(page);
+    await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+    const [reserved, settled] = await page.evaluate(() => {
+      const header = document.querySelector('header.chrome');
+      /*
+       * The declared value, not a probe element's rect. A probe was the first
+       * version and it reported 76 for a 75.5625 px reservation, because a box
+       * is snapped to device pixels while the header — sized by its own
+       * content — keeps the fraction. That is trap 9's cousin: the property
+       * resolves fine here, since it holds a plain length rather than a
+       * `clamp()`, and it is the *rendering* that rounds.
+       */
+      const declared = getComputedStyle(document.documentElement).getPropertyValue('--chrome-h-reserve');
+      return [parseFloat(declared), header.getBoundingClientRect().height];
+    });
+
+    expect(reserved, `--chrome-h-reserve is ${reserved} at ${width} px, not the ${expected} this pins`).toBeCloseTo(expected, 2);
+    /*
+     * Exactly, not "at least". A settled header taller than the reservation is
+     * the shift coming back; shorter is dead air. The height is face-
+     * independent — it comes from the controls' line-heights and the nav is
+     * forbidden to wrap — so this holds under COLD_FACE as well, which is the
+     * claim that makes a pixel constant safe to write down here at all.
+     */
+    expect(settled, `the header settles at ${settled} but reserves ${reserved}`).toBeCloseTo(reserved, 1);
+    await ctx.close();
+  });
+}
