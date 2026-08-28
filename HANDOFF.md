@@ -260,11 +260,25 @@ them.
   is an `<a>` around an `<img>`; without it, pressing one and moving starts
   Chromium's native link-and-image drag, which swallows the pointer — and hangs
   a test harness outright rather than failing it.
-- **19 saints who lead a day have no icon** (Amendment 59). Measured: 38 of 133
-  day-and-church combinations led with an imageless hero, and preferring an
-  imaged saint inside the sung pool took it to 27; the rest are days where
-  nobody the church sings for has a picture. That is a data job — a licence
-  someone has checked, one at a time — and never a bulk fetch.
+- **21 saints lead a day with no icon** (re-measured at Amendment 64; the
+  figure here read 19 and that was never right). **The population is calendar
+  year 2026 — the 133 day-and-church combinations that carry at least one
+  entry**, which is what Amendment 59's "the days the four calendars cover"
+  meant and did not say. Without the sung-and-imaged tie-break **37** of those
+  133 lead with an imageless hero over 32 distinct saints; with it, **26** over
+  **21**. The rest are days where nobody the church sings for has a picture.
+  That is a data job — a licence someone has checked, one at a time — and never
+  a bulk fetch.
+
+  **Re-measured against Amendment 59's own commit**, not against its prose: at
+  `b11322c` the 133 and the 27 come back exactly, which is what says it is the
+  same measurement, and the distinct count comes back **22** rather than 19.
+  Macarie's portrait then closed exactly one day, 27 to 26 and 22 to 21. A
+  handover predicted this figure would be "at most 18"; it was inference from
+  that one icon on top of a base that was already wrong, and it was wrong in
+  both directions at once. **Adding an icon can only ever lower this count** —
+  an imaged saint in the sung pool makes the pool imaged — so a figure that
+  rises after icons land is two different populations, not a regression.
 - **A virtualised row's height does not have to be a constant** (Amendment 56,
   and the author asked the question that produced it). `nameLines()` in
   views/index/grid.js counts the browser's own greedy wrapping with canvas
@@ -421,9 +435,10 @@ carries each saint's name in the languages the corpus records one for** —
 objects carry a published English rendering** (12 Hapgood, 37 Orloff); readings/fasting for 23 August – 19 September in
 `src/data/liturgical-days.js` (the Greek 7–19 September still empty with a
 note — saint.gr has not published that far out as of Amendment 31's check on
-2026-08-24). **128 icons** — 95 through Amendment 31, and 33 added at
+2026-08-24). **130 icons** (counted off the manifest, 2026-08-28; this said 128) —
+95 through Amendment 31, 33 added at
 Amendment 42 from the Menologion of Basil II, all public domain with their
-Commons file pages cited. The generating pipeline is under `.tmp/w3/`
+Commons file pages cited, and Macarie's portrait at Amendment 61. The generating pipeline is under `.tmp/w3/`
 (untracked).
 
 **Since Amendment 31 was written up, seven more amendments landed the same
@@ -1210,28 +1225,31 @@ session). SESSIONS.md has each in full.
   states only the civil date. Whether a non-civil reading belongs somewhere —
   the saint page, About, a line under the hero — is the author's call, made
   twice now in the negative for the calendar page specifically.
-- **Athanasius of Alexandria reads *Confessor Athanasius of Alexandria***
-  (Amendment 50). His types are `bishop, theologian, confessor`, and Confessor
-  outranks the "St" fallback, so the precedence walk is doing as it was told —
-  but both major calendars print Athanasius the Great as a hierarch, and he is
-  one of the seven saints who have an icon, so it is a visible result. The fix,
-  if one is wanted, is data (drop `confessor` from that record) and not code.
-- **Seven image source links.** Licence is settled — Public Domain Mark 1.0,
-  which obliges no attribution — but each `icon.meta.json` still wants a real
-  `source_url` in place of the `example.invalid` placeholder, because
-  provenance is how a reader checks that claim. 7 live build warnings. Blocks
-  publication, not your work.
+- ~~**Athanasius of Alexandria reads *Confessor Athanasius of Alexandria***~~
+  **Closed at Amendment 60 (`10fbb5a`)**, at the author's word "do hierarch for
+  athanasius". `confessor` was dropped from his record and the precedence walk
+  was not touched; verified 2026-08-28, his types are now `bishop, theologian`.
+  Kept here rather than deleted because the *reasoning* is still live for the
+  seven records above, which are the same collision left standing on purpose.
+- ~~**Seven image source links.**~~ **Closed at `6905aba`** — "seven icons get a
+  licence that can be checked". Licence was already settled (Public Domain Mark
+  1.0, which obliges no attribution); what was missing was a real `source_url`
+  in place of the `example.invalid` placeholder, because provenance is how a
+  reader checks that claim. Verified 2026-08-28: **zero** `example.invalid`
+  under `saints/`, and no build warning left to go with them.
 - **Manifest budget:** projects to 864 KB gzipped at 5,000 saints against a
   400 KB ceiling. Meaningless below ~200 saints. Re-check past that mark; do
   not build sharding before then. When the trigger fires the shape is settled
   (Addendum G5): calendar-first — a per-year feast slice the calendar paints
   from, card data behind it — not by century.
-- **Font preload** (Addendum G6): `font-display: optional` stands; preloading
-  the two Latin subsets would make Literata actually show on most cold loads
-  without reintroducing layout shift, at the cost of a small build step for
-  the hashed filenames. Perceived quality, not correctness — your call, at the
-  ship gate.
-- **Search does not reach the historical name forms.** It reaches every
+- ~~**Font preload** (Addendum G6)~~ **Built at Amendment 61 (`7eea8f8`)**, the
+  author's answer being "ignore svg, just preload texts as recommended".
+  `preloadLatin` in vite.config.js, verified present 2026-08-28.
+  `font-display: optional` still stands and is why the preload helps at all.
+  **The one thing still owed on it is a second pair of eyes**: `7eea8f8` is
+  listed in this repo's provenance as verified by its author only.
+- **Answered at Amendment 61 and left as it stands** — recorded, not acted on.
+  **Search does not reach the historical name forms.** It reaches every
   language's display form — `card.names` in the manifest is `{ru: "Авдий",
   el: "Αβδαίος…"}`, present on 665 of 742 and indexed since 2026-08-26. But
   `saint.json` has a *different* field of the same name, an array of script

@@ -52,12 +52,21 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
    * a saint the church sings for still outranks any imaged saint who is not —
    * it only decides *which* of the sung, where before that was the hash alone.
    *
-   * Measured over the days the four calendars cover: 38 of 133 day-and-church
-   * combinations led with an imageless hero, and this takes it to 27. The rest
-   * are days where nobody the church sings for has an icon, and 19 distinct
-   * saints among them have no picture on their day at all. Those are a data
-   * gap and are not code's to close — an icon needs a licence someone has
-   * actually checked, which is the rule this repository is built around.
+   * Measured over **calendar year 2026**, which is the 133 day-and-church
+   * combinations carrying at least one entry: without this tie-break **37**
+   * led with an imageless hero and **32 distinct saints** were involved; with
+   * it, **26** and **21** (2026-08-28). It was 38 / 27 / 22 until Macarie got
+   * his portrait, so one icon closed exactly one day. The rest are days where
+   * nobody the church sings for has an icon. Those are a data gap and are not
+   * code's to close — an icon needs a licence someone has actually checked,
+   * which is the rule this repository is built around.
+   *
+   * **State the population with the number.** This said "the days the four
+   * calendars cover", which nobody could check. Re-measured at Amendment 64
+   * against this amendment's own commit: the 133 and the 27 came back exactly,
+   * which is what says the method is the same one — and the third figure did
+   * not. It read 19 and is 22. A count whose denominator is a phrase is a
+   * count nobody can audit, including the person who wrote it down.
    */
   const sungImaged = sung.filter((slug) => bySlug.get(slug)?.image);
   const pool = sungImaged.length
