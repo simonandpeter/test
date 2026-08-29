@@ -32,10 +32,10 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **213 unit, 596 browser** across two projects. `npm run test:all`.
+- **221 unit, 608 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
-- Locale packs 352/352, no English fallbacks.
+- Locale packs 356/356, no English fallbacks.
 - First download is ~133 kB JS: day records, locale packs and the map's
   coastline are their own chunks.
 
@@ -85,6 +85,19 @@ card opens the saint` (`index.spec.js`), which failed one local full run on
 2026-08-29 with "no card was fully in view to press" and passed the next. Local,
 so it is evidence about one desk twice over. Written down because the two flakes
 above were each dismissed at this stage and then recurred.
+
+**And one fact, found 2026-08-29 and not acted on**: `the wheel carries the
+carousel back, and no faster than its cap` (`index.spec.js:2895`) fails about one
+local run in three at **1116-1161 px/s against its 1100 limit**. Three sightings,
+and — the part worth having — *it fails on a clean checkout too*, which was
+checked by stashing: the first reading blamed the session's own changes, and a
+controlled comparison said otherwise.
+
+The diagnosis is Amendment 66's shape again. The clamp is 900 px/s; the test
+samples **two frames**, about 33 ms, so one uneven frame decides the rate and a
+dropped one puts it over. Measuring across a longer window would measure the cap
+rather than one frame's luck. Never seen on CI, whose runner is slower than this
+desk — so it is a test to fix before it is a bug to chase.
 
 The rail's coast is **closed** — never a flake but a negative first `dt` in
 `beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
@@ -158,8 +171,20 @@ threshold, collide-detected labels and the timeline brush would all be machinery
 verified against nothing — a threshold that never fires and labels that never
 collide. They come back when the data does, and that is data work, not this.
 
-Also not done: drag/zoom, and the Index's filter set (the map filters by church
-only). Both are small next to the data.
+**Zoom and pan landed 2026-08-29** (author: the page zoomed, the map did not).
+`lib/map-view.js` is the arithmetic — scale plus a centre, clamped so the world
+never comes off its box and a zoom keeps the point it was aimed at — and
+`tests/map-view.test.mjs` pins both. Buttons, Ctrl+wheel, drag, pinch, and the
+keyboard (arrows pan, +/- zoom, Home resets).
+
+**The rule it is built around: a reader must never get stuck.** A bare wheel
+scrolls the page as it always did; only Ctrl zooms. Touch keeps `pan-y` until
+the reader has deliberately zoomed in, and one press of Reset hands it back. A
+map that eats a thumb-swipe is a trap, and it is the reader who wanted to scroll
+*past* it who pays.
+
+Still not done: the Index's filter set (the map filters by church only), which
+is small next to the data.
 
 **The map names the region, not the village.** `modern_name` and
 `historical_name` are in each saint's own file and dropped from the manifest on

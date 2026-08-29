@@ -57,6 +57,13 @@
    `display: block` because an inline canvas sits on the text baseline and
    leaves a few pixels of descender space below it, which is a gap that appears
    only once there is something to see. */
+/* The canvas and its controls share a stacking context so the buttons can sit
+   over the picture's own corner rather than below it, where they would push the
+   list down and cost the figure its reserved height. */
+.map-frame {
+  position: relative;
+}
+
 .map-figure canvas {
   display: block;
   width: 100%;
@@ -64,6 +71,91 @@
   background: var(--field);
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
+  /* Vertical page scroll stays the browser's until the reader has zoomed in on
+     purpose; views/map.js swaps this to `none` at that point and back on Reset.
+     A map that eats a thumb-swipe is a trap, and it is the reader who wanted to
+     scroll past who pays for it. */
+  touch-action: pan-y;
+}
+
+/* The pointer says what a drag will do, and only once there is somewhere to
+   drag to: at scale 1 the world already fills the box and panning is refused
+   by the arithmetic, so a grab cursor there would be a promise the map breaks. */
+.map-figure canvas.is-zoomed {
+  cursor: grab;
+}
+
+.map-figure canvas.is-zoomed:active {
+  cursor: grabbing;
+}
+
+/* ---- the zoom controls ------------------------------------------------- */
+
+.map-zoom {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  /* Opaque, not a tint: these sit over a picture whose colour is not knowable
+     from here, and a translucent ground would put the labels at whatever
+     contrast the coastline happened to give them. `--gesso` is the page's own
+     ground and the same thing the sticky chrome uses for the same reason. */
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+.map-zoom-btn {
+  width: 28px;
+  height: 28px;
+  font-family: var(--font-utility);
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* A disabled control still has to be readable — it is telling the reader they
+   are already at the whole world, which is information. `--ink-soft` clears AA
+   in both themes (tests/contrast.test.mjs), where a stock 0.4 opacity would
+   not: an opacity on a colour is a new colour and axe reads it. */
+.map-zoom [disabled] {
+  color: var(--ink-soft);
+  cursor: default;
+}
+
+.map-zoom-level {
+  min-width: 3.2ch;
+  text-align: center;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-zoom-home {
+  padding: var(--space-1) var(--space-2);
+}
+
+/* Narrow: the four controls and a 360 px picture are a tight fit in a corner,
+   so they come out of the corner and sit under the picture as an ordinary row.
+
+   **The first version hid the wordy one instead, and that was wrong twice
+   over.** A clipped button is still in the layout, so it sat under the minus
+   and swallowed its presses — the suite caught that at 360. And on a phone the
+   gestures are the *only* other way to move the map, so taking away the
+   labelled way back to the whole world leaves a reader who zoomed in with
+   nothing but repeated presses of minus. Below the picture, everything fits and
+   nothing is hidden from anyone. */
+@media (max-width: 419.98px) {
+  .map-zoom {
+    position: static;
+    margin-top: var(--space-2);
+    justify-content: flex-end;
+    /* The row is the page's own ground here, not a panel floating on a picture. */
+    background: none;
+    border: 0;
+    padding: 0;
+  }
 }
 
 .map-caption {

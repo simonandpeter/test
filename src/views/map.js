@@ -1,4 +1,5 @@
 import { chosenChurch, churchName, keptBy } from '../lib/church.js';
+import { HOME, MAX_SCALE, MIN_SCALE, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { softness } from '../lib/uncertainty.js';
@@ -51,6 +52,29 @@ let kind = DEFAULT_KIND;
 /** The live resize listener, so `destroy` can take it off again. */
 let onResize = null;
 
+/*
+ * Where the map is looking. Reset on every render rather than held across
+ * visits: the kind selector holds for the visit because it is a question the
+ * reader asked, but arriving at the map zoomed into a corner you left three
+ * pages ago is disorienting rather than helpful. `lib/map-view.js` owns the
+ * arithmetic and `tests/map-view.test.mjs` pins it.
+ */
+let view = HOME;
+
+/** A press of + or -, and one wheel notch's worth of the same. */
+const ZOOM_STEP = 1.6;
+
+/**
+ * Longitude and latitude to a fraction of the *box as it is currently framed* —
+ * the projection, then the view on top of it. Two pure functions and this one
+ * composition, so "where is Athens in the world" and "which part of the world
+ * am I looking at" never get tangled together.
+ */
+const place = (lon, lat) => {
+  const p = project(lon, lat);
+  return toScreen(view, p.x, p.y);
+};
+
 const located = (card) => (card.locations ?? []).length > 0;
 
 /** Every point of one kind, with the saint it belongs to. */
@@ -89,7 +113,27 @@ export function render(el, { data, router }) {
       <!-- The box is reserved by aspect-ratio in CSS from the projection's own
            number, so it is the same height before the coastline arrives as
            after: brief §13's no-layout-shift, on a view whose data is fetched. -->
-      <canvas data-map role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
+      <div class="map-frame">
+        <!--
+          tabindex="0" and arrow keys, because a canvas the pointer can drag
+          and the keyboard cannot is half a control. The label says the map is
+          movable and how, since a reader who cannot see it has no other way to
+          learn that pressing an arrow does anything.
+        -->
+        <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
+        <!--
+          The buttons are not a fallback for the gestures, they are the primary
+          control: they work by keyboard, by screen reader and by touch without
+          anyone having to discover a gesture, and on a phone they are the whole
+          of the zoom. aria-live on the level so a press says what it did.
+        -->
+        <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
+          <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
+          <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
+          <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
+          <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
+        </div>
+      </div>
       <figcaption class="map-caption utility" data-caption></figcaption>
     </figure>
 
@@ -118,6 +162,7 @@ export function render(el, { data, router }) {
   const canvas = el.querySelector('[data-map]');
   const draw = () => paintCanvas(canvas, withPlace);
   destroy();
+  view = HOME;
 
   for (const button of el.querySelectorAll('[data-kind]')) {
     button.addEventListener('click', () => {
@@ -136,6 +181,8 @@ export function render(el, { data, router }) {
    */
   drawWhenReady(el, canvas, withPlace);
 
+  wireZoom(el, canvas, withPlace);
+
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
    * box changes. Torn down in `destroy` rather than returned: main.js calls
@@ -150,6 +197,163 @@ export function render(el, { data, router }) {
 export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
+}
+
+/**
+ * Zoom and pan.
+ *
+ * The rule the whole arrangement is built around: **a reader must never be able
+ * to get stuck on this page.** A map in the middle of a scrolling article that
+ * swallows the wheel, or that eats a thumb-swipe on a phone, is a trap — and it
+ * is the reader who wanted to scroll past who pays for it, not the one who
+ * wanted to zoom.
+ *
+ * So: the wheel scrolls the page as it always did unless Ctrl (or Command) is
+ * held, which is the convention browsers themselves use for zoom. Touch keeps
+ * `pan-y` until the reader has *deliberately* zoomed in, and only then does the
+ * map take the gestures — a state they entered on purpose and can leave with
+ * one press of Reset. At scale 1 there is nowhere to pan to anyway
+ * (`lib/map-view.js` collapses the range), so nothing is lost by it.
+ */
+function wireZoom(el, canvas, cards) {
+  const level = el.querySelector('[data-zoom-level]');
+  const apply = () => {
+    /*
+     * Touch gestures are taken only once the reader has zoomed in. `pan-y`
+     * leaves the page's own vertical scroll to the browser, which is the thing
+     * a thumb on a phone is almost always trying to do.
+     */
+    canvas.style.touchAction = view.scale > MIN_SCALE ? 'none' : 'pan-y';
+    canvas.classList.toggle('is-zoomed', view.scale > MIN_SCALE);
+    // A number, not a bar: "2.8x" is a fact a screen reader can read out, and
+    // `aria-live` means a press on + says what it did rather than only looking
+    // like it did something.
+    level.textContent = `${view.scale.toFixed(1)}×`;
+    el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
+    el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
+    el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
+    paintCanvas(canvas, cards);
+  };
+
+  const set = (next) => {
+    view = next;
+    apply();
+  };
+
+  for (const button of el.querySelectorAll('[data-zoom]')) {
+    button.addEventListener('click', () => {
+      const how = button.dataset.zoom;
+      if (how === 'home') set(HOME);
+      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP));
+      // A disabled button drops focus to the body, which strands the keyboard
+      // at the top of the document. Hand it to the map, which is the thing the
+      // reader was working.
+      if (button.disabled) canvas.focus();
+    });
+  }
+
+  canvas.addEventListener(
+    'wheel',
+    (e) => {
+      // Without the modifier this listener does nothing at all and the page
+      // scrolls — no preventDefault, no interception.
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      const box = canvas.getBoundingClientRect();
+      set(
+        zoomAbout(
+          view,
+          Math.exp(-e.deltaY * 0.002),
+          (e.clientX - box.left) / box.width,
+          (e.clientY - box.top) / box.height,
+        ),
+      );
+    },
+    // Not passive: this one calls preventDefault, and Chrome ignores it on a
+    // passive listener while warning about it in a console nobody is reading.
+    { passive: false },
+  );
+
+  /*
+   * One pointer drags, two pinch. Held in a Map rather than as two variables
+   * because a finger that leaves and returns mid-gesture is ordinary, and
+   * `pointerId` is the only thing that tells them apart.
+   */
+  const active = new Map();
+  let pinch = 0;
+
+  canvas.addEventListener('pointerdown', (e) => {
+    if (view.scale <= MIN_SCALE && e.pointerType === 'touch') return;
+    canvas.setPointerCapture(e.pointerId);
+    active.set(e.pointerId, e);
+    if (active.size === 2) pinch = spread(active);
+  });
+
+  canvas.addEventListener('pointermove', (e) => {
+    if (!active.has(e.pointerId)) return;
+    const previous = active.get(e.pointerId);
+    active.set(e.pointerId, e);
+    const box = canvas.getBoundingClientRect();
+
+    if (active.size >= 2) {
+      const now = spread(active);
+      if (pinch > 0 && now > 0) {
+        const mid = midpoint(active);
+        set(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height));
+      }
+      pinch = now;
+      return;
+    }
+
+    if (view.scale <= MIN_SCALE) return;
+    set(panBy(view, (e.clientX - previous.clientX) / box.width, (e.clientY - previous.clientY) / box.height));
+  });
+
+  const release = (e) => {
+    active.delete(e.pointerId);
+    if (active.size < 2) pinch = 0;
+  };
+  canvas.addEventListener('pointerup', release);
+  canvas.addEventListener('pointercancel', release);
+
+  /*
+   * The keyboard, which is not a courtesy either: §13 wants every interactive
+   * element reachable, and a map that only answers to a dragged pointer is not.
+   * A step is a tenth of the box, so ten presses cross it at any zoom.
+   */
+  canvas.addEventListener('keydown', (e) => {
+    const pan = { ArrowLeft: [-0.1, 0], ArrowRight: [0.1, 0], ArrowUp: [0, -0.1], ArrowDown: [0, 0.1] }[e.key];
+    if (pan) {
+      if (view.scale <= MIN_SCALE) return;
+      e.preventDefault();
+      set(panBy(view, -pan[0], -pan[1]));
+      return;
+    }
+    if (e.key === '+' || e.key === '=') {
+      e.preventDefault();
+      set(zoomAbout(view, ZOOM_STEP));
+    } else if (e.key === '-' || e.key === '_') {
+      e.preventDefault();
+      set(zoomAbout(view, 1 / ZOOM_STEP));
+    } else if (e.key === 'Home' || e.key === '0') {
+      e.preventDefault();
+      set(HOME);
+    }
+  });
+
+  apply();
+}
+
+/** The distance between the first two live pointers, for a pinch. */
+function spread(active) {
+  const [a, b] = [...active.values()];
+  return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+}
+
+/** The point a pinch is happening about. */
+function midpoint(active) {
+  const [a, b] = [...active.values()];
+  return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 };
 }
 
 async function drawWhenReady(el, canvas, cards) {
@@ -253,7 +457,7 @@ function paintCanvas(canvas, cards) {
     ctx.beginPath();
     for (const ring of land) {
       for (let i = 0; i < ring.length; i += 2) {
-        const p = project(ring[i], ring[i + 1]);
+        const p = place(ring[i], ring[i + 1]);
         const x = p.x * w;
         const y = p.y * h;
         if (i === 0) ctx.moveTo(x, y);
@@ -265,9 +469,12 @@ function paintCanvas(canvas, cards) {
   }
 
   for (const { where } of pointsOfKind(cards, kind)) {
-    const p = project(where.lon, where.lat);
+    const p = place(where.lon, where.lat);
     const x = p.x * w;
     const y = p.y * h;
+    // Off the visible box once zoomed, which is ordinary. The row for it is
+    // still in the list below, so nothing has gone missing from the page.
+    if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
 
     /*
      * The uncertainty curve's first shipping consumer (DESIGN.md §6b). The halo
@@ -276,7 +483,18 @@ function paintCanvas(canvas, cards) {
      * a date bar, a map halo and a timeline dissolve the same statement about
      * doubt.
      */
-    const halo = softness(where.uncertainty_km) * (w / 360);
+    /*
+     * Scaled by the zoom as well as by the picture's width. The uncertainty is
+     * a distance on the ground, so a halo that stayed the same size in pixels
+     * would claim a tighter and tighter place the further in the reader went —
+     * precision the data does not have. §6b permits scaling the curve linearly
+     * and forbids reshaping it, which is exactly this multiplication.
+     *
+     * The ceiling is drawing, not doubt: at full zoom an open interval's halo
+     * would be a thousand pixels of wash over the whole picture, which tells
+     * the reader nothing they cannot already read in the row below.
+     */
+    const halo = Math.min(softness(where.uncertainty_km) * (w / 360) * view.scale, w / 2);
     if (halo > 1) {
       const glow = ctx.createRadialGradient(x, y, 0, x, y, halo);
       glow.addColorStop(0, hexWithAlpha(rubric, 0.45));
