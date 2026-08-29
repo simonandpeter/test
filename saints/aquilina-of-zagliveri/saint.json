@@ -1,0 +1,64 @@
+{
+  "slug": "aquilina-of-zagliveri",
+  "display_name": "Aquilina of Zagliveri",
+  "names": [
+    {
+      "form": "Sfânta Muceniță Achilina din Zagliveri",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 14 сентября ст. ст. (civil 27 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 Septembrie — „Sfânta Muceniță Achilina din Zagliveri”",
+        "url": "https://doxologia.ro/sfanta-mucenita-achilina-din-zagliveri",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1744,
+      "latest": 1745,
+      "display": "c. 1745",
+      "basis": "attested",
+      "note": "The life: she was martyred on 27 September 1764 at the age of nineteen."
+    },
+    "death": {
+      "earliest": 1764,
+      "latest": 1764,
+      "display": "1764",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „martirizată de turci după câteva zile de tortură pe 27 septembrie 1764, la vârsta de 19 ani”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

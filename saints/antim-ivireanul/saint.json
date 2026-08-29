@@ -1,0 +1,59 @@
+{
+  "slug": "antim-ivireanul",
+  "display_name": "Antim Ivireanul",
+  "office": "Metropolitan of Wallachia",
+  "names": [
+    {
+      "form": "Sfântul Ierarh Martir Antim Ivireanul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 14 сентября ст. ст. (civil 27 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 Septembrie — „Sfântul Ierarh Martir Antim Ivireanul, Mitropolitul Țării Românești”",
+        "url": "https://doxologia.ro/sfantul-ierarh-martir-antim-ivireanul-mitropolitul-tarii-romanesti",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1690,
+      "latest": 1690,
+      "display": "c. 1690",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „Către anul 1690, evlaviosul voievod, Sfântul martir Constantin Brâncoveanu îl aduce la București”. No year is printed for his martyrdom."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

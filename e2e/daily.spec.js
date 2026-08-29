@@ -3711,9 +3711,11 @@ test('the day records say where they stop, and the corpus says how far it reache
    * And the reach is a date read off the corpus, not a literal. The literal
    * *here* moves with every day the corpus gains - it is the assertion that
    * the page computes the right answer, and the right answer is a corpus
-   * fact: 26 September 2026 since the fifth 2026-08-30 batch (13 September,
-   * Julian - fourteen upgrades and John the Theologian arriving with his
-   * own repose).
+   * fact - and a church fact: the reach walks the reader's own calendar
+   * (entries.js), and the sixth 2026-08-30 batch was the Exaltation day,
+   * whose four arrivals are all the Romanian calendar's. The Russian reach
+   * therefore stays at the 26th while the Romanian reads the 27th, and this
+   * page - default church, Russian - prints the Russian number.
    */
   // Not the 27th: that is the Exaltation of the Cross, and a Great Feast day
   // prints the feast's own sentence rather than the reach.

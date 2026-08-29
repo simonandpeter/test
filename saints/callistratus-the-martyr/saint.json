@@ -1,0 +1,57 @@
+{
+  "slug": "callistratus-the-martyr",
+  "display_name": "Callistratus",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Calistrat",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 14 сентября ст. ст. (civil 27 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 Septembrie — „Sfântul Mucenic Calistrat și cei împreună cu dânsul patruzeci și nouă de mucenici”",
+        "url": "https://doxologia.ro/sfantul-mucenic-calistrat-cei-impreuna-cu-dansul-patruzeci-noua-de-mucenici",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284-305)",
+      "basis": "attested",
+      "note": "The life on doxologia.ro sets his contest under Diocletian (284-305) and Maximian (286-305)."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

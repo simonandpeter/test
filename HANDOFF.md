@@ -27,11 +27,14 @@ you inferred, and keep them apart.
 
 ## State (2026-08-30)
 
-- **828 saints**, every one with a life; **1179 attestations**, every one
+- **832 saints**, every one with a life; **1183 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
   About page says so. **157 undated**; **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **26 September 2026**
-  (Russian 533, Romanian 152, Greek 365, Serbian 129).
+  published English rendering. The corpus reaches **27 September 2026 in
+  the Romanian calendar and 26 September in the Russian** - the reach walks
+  each reader's own calendar (entries.js), and the Exaltation day's four
+  arrivals were all Romanian (Russian 533, Romanian 156, Greek 365,
+  Serbian 129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -87,8 +90,9 @@ sightings are consecutive green runs. Nothing this session touched goes near it.
 sighting on 2026-08-29 ("no card was fully in view to press"), one on CI
 the same day (`01324b1`, mobile-360, green through the retry), and a third
 locally on 2026-08-30 (mobile-360, full parallel suite; 3/3 green rerun in
-isolation immediately after). Three sightings, two machines, always
-mobile-360 under load. Not yet diagnosed; the card-in-view premise poll is
+isolation immediately after), and a fourth the same day in the next full
+run, same shape. Four sightings, two machines, always mobile-360 under
+load. Not yet diagnosed; the card-in-view premise poll is
 where it fails, which smells like the same late-rebuild family the gesture
 handoff fixed - but that is an inference, not a measurement.
 
@@ -97,13 +101,15 @@ fifteen frames with the clamp held pinned, rather than two frames of luck. Four
 consecutive greens where it failed one run in three; backed out by raising the
 cap to 2000, it reads ~1900 — it measures the cap it guards now.
 
-**And `the row comes back on its own after a press` may be closed** by the same
-day's gesture handoff: the service worker shifted the late carousel rebuild
-into the interaction window and made that flake a hard local failure, which is
-what finally exposed the mechanism — a wheel spun on a dying loop died with it.
-With `handoff`/`inherit` in loop-scroll, two consecutive full local runs are
-clean. Its CI rate was 2-in-5; the first CI run after the fix (`01324b1`) did
-not touch it. **A few more clean flaky lines before calling it closed.**
+**And `the row comes back on its own after a press` is NOT closed** by the
+gesture handoff after all. The handoff exposed and fixed one mechanism - a
+wheel spun on a dying loop died with it - and bought seven consecutive clean
+CI flaky lines; but on 2026-08-30 the test failed once locally mid-batch
+(passed on rerun) and then flaked on CI the same day (`5e9841e`, desktop,
+green through the retry). Whatever remains is rarer than the 2-in-5 it was,
+and load-sensitive like everything in this family; the watch continues, and
+a diagnosis needs a CPU-throttled reproduction (trap 10), not another
+inference.
 
 The rail's coast is **closed** — never a flake but a negative first `dt` in
 `beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
@@ -279,7 +285,7 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 26 September.** 600–1,100 folders. Dedupe on the
+- **Saints for the days past 27 September.** 600–1,100 folders. Dedupe on the
   *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
   harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
   sitting — though 21 September was light, being the Nativity of the

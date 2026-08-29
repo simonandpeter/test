@@ -1,0 +1,7 @@
+# Callistratus
+
+A brave soldier of Christ under Diocletian and Maximian, Callistratus went the fair road of martyrdom, the life says, not alone but with many others. Betrayed as a Christian in his cohort, he was tortured and thrown into the sea in a sack; the sea gave him back alive, and forty-nine soldiers who saw it fell at his feet - "behold, we know that your God is great and true, who delivered you from the deep" - and asked him to lead them out of the deception of idols to his Christ. "My Lord Jesus Christ drives away none who come to Him," he answered.
+
+Imprisoned together, they were baptized in the prison, and Callistratus raised them all in prayer: Lord, who wills that all men be saved, who drew this flock of Yours out of the lions' mouths, grant that we finish in the holy faith. When night fell, soldiers entered the prison on the tormentor's orders and cut them all to pieces with their swords - Callistratus and the forty-nine with him. A hundred and thirty soldiers who had come to believe gathered their relics and buried them with honour, and afterwards built a church over them - fulfilling the word Callistratus had spoken to his persecutor: in the midst of this city I will build a church. The Romanian calendar keeps him and his company on this day.
+
+*After doxologia.ro, [Viața Sfântului Mucenic Calistrat](https://doxologia.ro/viata-sfantului-mucenic-calistrat); read 30 August 2026.*
