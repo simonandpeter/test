@@ -1,0 +1,7 @@
+# Peter the Aleut
+
+He was born around 1800 on Kodiak Island in Alaska, named Cungagnaq by his parents and Peter at his baptism by the Russian monks of the Alaskan mission. At fourteen he joined a party hunting otter and seal, and near California their ship was seized by Spanish sailors; the fourteen Aleuts were taken to San Francisco and imprisoned. A priest came to convert the captives to Roman Catholicism, and finding them immovable had them pricked with swords and separated.
+
+The next day he took Peter and Kychaly, and when Peter would not renounce the Orthodox faith, ordered the fingers cut from his hands, one by one, then the toes; then the hands and feet themselves. Feeling his life ending, Peter prayed for the strength to endure to the end. Pressed once more to renounce and refusing, he was disembowelled, and so received the martyr's crown - the first native American among the choirs of the martyrs. As the rest were being readied for the same, an order arrived for their release. His story is told in the life of St Herman of Alaska - "a holy new martyr Peter has suffered," Herman said, crossing himself - and the Orthodox Church in America glorified him in 1980, with his feast on 24 September, the day Saints Herman and his companions had first landed in America.
+
+*After doxologia.ro, [Viața Sfântului Mucenic Petru Aleutul](https://doxologia.ro/viata-sfantului-mucenic-petru-aleutul); read 30 August 2026.*

@@ -1,0 +1,57 @@
+{
+  "slug": "copris-of-palestine",
+  "display_name": "Copris",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Coprie",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 24 Septembrie — „Sfântul Cuvios Coprie”",
+        "url": "https://doxologia.ro/sfantul-cuvios-coprie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 460,
+      "latest": 570,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The life gives no year: he was born beside the monastery of Theodosius the Cenobiarch (d. 529), was dear to the great Theodosius, and lived to ninety."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

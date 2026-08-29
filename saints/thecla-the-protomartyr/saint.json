@@ -1,0 +1,59 @@
+{
+  "slug": "thecla-the-protomartyr",
+  "display_name": "Thecla",
+  "names": [
+    {
+      "form": "Sfânta Mare Muceniță, întocmai cu apostolii, Tecla",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "equal-to-the-apostles",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 24 Septembrie — „Sfânta Mare Muceniță, întocmai cu apostolii, Tecla”",
+        "url": "https://doxologia.ro/sfanta-mare-mucenita-intocmai-cu-apostolii-tecla",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 40,
+      "latest": 130,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The life prints no year: she heard the Apostle Paul at Iconium and died at ninety, so her death falls at the turn of the first century."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

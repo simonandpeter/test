@@ -1,0 +1,59 @@
+{
+  "slug": "nicholas-podyakov",
+  "display_name": "Nicholas (Podyakov)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Подьяков)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 сентября ст. ст. — «Сщмчч. Николая и Виктора пресвитеров (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260911.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 24 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The life: the punitive detachment killed him on 24 September 1918."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

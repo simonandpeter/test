@@ -5,6 +5,10 @@
     {
       "form": "Άγιοι Δημήτριος, Ευανθία η σύζυγος του και Δημητριανός ο γιός τους",
       "lang": "el"
+    },
+    {
+      "form": "Димитрий Скепсийский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 11 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 сентября ст. ст. — «Мчч. Димитрия, Еванфии, жены его, и Димитриана, сына их (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260911.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -44,5 +57,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 30,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Димитрия, Еванфии, жены его, и Димитриана, сына их (I)»."
+    }
   }
 }

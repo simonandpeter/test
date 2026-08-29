@@ -1,0 +1,77 @@
+{
+  "slug": "silouan-the-athonite",
+  "display_name": "Silouan the Athonite",
+  "names": [
+    {
+      "form": "Силуан Афонский",
+      "lang": "ru"
+    },
+    {
+      "form": "Sfântul Cuvios Siluan Athonitul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 сентября ст. ст. — «Прп. Силуана Афонского (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260911.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 24 Septembrie — „Sfântul Cuvios Siluan Athonitul”",
+        "url": "https://doxologia.ro/sfantul-cuvios-siluan-athonitul",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: born in 1866 to a Russian peasant family, in the world Simeon Ivanovich Antonov."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: he died between one and two in the night of 24 September 1938, while Matins was sung in the infirmary chapel; the Russian line prints the same year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
