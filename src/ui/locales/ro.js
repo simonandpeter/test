@@ -361,6 +361,7 @@ export const ro = {
     savedNamed: '{name} e salvat. Apasă ca să-l scoți.',
     back: 'Înapoi la toți sfinții',
     backDaily: 'Înapoi la calendar',
+    backMap: 'Înapoi la hartă',
     veneration: 'Cinstire',
     otherChurches: 'Arată celelalte biserici ({count})',
     hideOtherChurches: 'Ascunde celelalte biserici',
@@ -422,8 +423,6 @@ export const ro = {
 
   map: {
     title: 'Hartă',
-    lede: '{located} din {count} sfinți au un loc pe care îl putem arăta. Ceilalți sunt în tava de mai jos, numiți, nu lăsați deoparte.',
-    setAside: 'Încă {count} nu sunt în calendarul ales ({church}).',
     kindGroup: 'Ce loc să fie arătat',
     kinds: {
       death: 'A adormit',
@@ -431,18 +430,13 @@ export const ro = {
       see: 'Scaun',
       relics: 'Moaște',
     },
-    canvasLabel: 'O hartă a lumii. Trageți ca s-o mutați, săgețile o deplasează, plus și minus schimbă mărirea. Fiecare loc însemnat pe ea este trecut și mai jos.',
-    caption: 'Linia țărmului: Natural Earth, domeniu public. Marginea difuză arată un loc nesigur. Ctrl plus derulare pentru mărire.',
+    canvasLabel: 'O hartă a lumii. Trageți ca s-o mutați, săgețile o deplasează, plus și minus sau derularea schimbă mărirea.',
+    caption: 'Linia țărmului: Natural Earth, domeniu public. Marginea difuză arată un loc nesigur. Derulați pentru mărire.',
     zoomGroup: 'Mărirea hărții',
     zoomIn: 'Mărește',
     zoomOut: 'Micșorează',
     zoomReset: 'Toată lumea',
-    landFailed: 'Linia țărmului nu a putut fi încărcată. Locurile sunt trecute mai jos.',
-    placesHeading: 'Locuri',
-    noneOfKind: 'Niciun sfânt din acest calendar nu are un loc însemnat de acest fel ({kind}).',
-    uncertainty: 'cam pe o rază de {km} km',
-    unlocated: '{count} sfinți nu au un loc însemnat',
-    unlocatedNote: 'Un loc se însemnează doar acolo unde îl dă un izvor. Aceștia nu lipsesc din culegere, ci doar de pe hartă.',
+    landFailed: 'Linia țărmului nu a putut fi încărcată. Punctele își arată totuși locurile.',
   },
 
   about: {

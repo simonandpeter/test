@@ -1,12 +1,8 @@
-import { churchName } from '../lib/church.js';
-import { EMPTY_FILTERS, applyFilters, facetsOf } from '../lib/index-filters.js';
 import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
-import { REGIONS_BY_ID } from '../lib/regions.js';
-import { typeName } from '../lib/saint-types.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
-import { STRINGS, fill } from '../ui/strings.js';
+import { STRINGS } from '../ui/strings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
 export const title = () => STRINGS.map.title;
@@ -30,9 +26,16 @@ export const title = () => STRINGS.map.title;
  * and a count in the DOM is not a count in the corpus. They come back when the
  * data does.
  *
- * The picture is a canvas and the reader is not asked to see it: every point is
- * also a row in the list below, which is what carries the keyboard, the screen
- * reader, and the names. The canvas is the illustration; the list is the map.
+ * **The page is the map and a small footer, nothing else** (author,
+ * 2026-08-30: "remove everything on the map page outside of the map itself
+ * except for leaving a small footer with the coastline map credit and scroll
+ * to zoom hint"). That reversed Amendment 76's below-map reading a day after
+ * it shipped - the lede, the Index's facets, the Places register and the
+ * unlocated tray are gone, and with them the "list is the map" answer to the
+ * canvas being one opaque image to a screen reader. What remains for a reader
+ * not looking at the picture: the labelled canvas, the kind counts in the
+ * legend, and the Index itself, which still names every saint the dots do.
+ * That trade is the author's, recorded in Amendment 77 rather than absorbed.
  */
 
 /*
@@ -55,21 +58,12 @@ let kind = DEFAULT_KIND;
 let onResize = null;
 
 /*
- * The Index's filter set, on the map (brief §8.3: "shares the same filter set
- * as the Index mode"). The same `applyFilters` over the same fields, so a
- * facet means the identical thing on both pages; only the chrome is the map's
- * own. Reset per render like `kind` is not - filters are a question the reader
- * asked, and the Index resets on a fresh mount too.
- *
- * Three facets, not the Index's seven. Calendar, Type and Region are the ones
- * that answer "who is on this map"; the date range is the timeline's axis and
- * the timeline is corpus-blocked (Amendment 69), months duplicate the feast
- * machinery the map does not draw, and gender and historicity earn their row
- * only where there is a corpus to slice - 7 located saints is not it. They
- * arrive by deleting a line from FACETS when they earn it.
+ * The Index's filter set lived here for one day (Amendment 76, 2026-08-30)
+ * and went with the reading it stood in when the author asked for the map
+ * alone. The Index remains the place a reader narrows the corpus; if filters
+ * return to this page they return as something drawn on the stage, because
+ * there is nowhere else left to put them.
  */
-let filters = { ...EMPTY_FILTERS };
-const FACETS = ['churches', 'types', 'regions'];
 
 /** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
 let drawnDots = [];
@@ -120,19 +114,13 @@ const pointsOfKind = (cards, which) =>
 
 export function render(el, { data, router }) {
   /*
-   * **The whole corpus, and the Calendar facet narrows it** - the Index's own
-   * model since 2026-08-27, which Amendment 46 already said the map counts by
-   * («the map still counts as the Index does»). The chosen-church narrowing
-   * this replaces was the placeholder's behaviour carried over: a guess or a
-   * choice in the header set 316 saints aside on a page whose job is the
-   * whole picture. The set-aside sentence goes with it - nothing is set
-   * aside now that unticking cannot explain.
+   * The whole corpus, always - the Index's own model since 2026-08-27, which
+   * Amendment 46 already said the map counts by («the map still counts as the
+   * Index does»). With the facets gone (Amendment 77) there is nothing left
+   * that narrows it, so the located set is a constant of the render.
    */
-  filters = { ...EMPTY_FILTERS };
   const M = STRINGS.map;
-  const initial = applyFilters(data.saints, filters).matched;
-  const initialPlaced = initial.filter(located);
-  const initialWithout = initial.filter((s) => !located(s));
+  const withPlace = data.saints.filter(located);
 
   /*
    * **The map is the window, not a card in the column** (author, 2026-08-29:
@@ -168,7 +156,7 @@ export function render(el, { data, router }) {
             (k) =>
               `<button type="button" class="map-kind utility" data-kind="${k}"
                  aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
-                 <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(initialPlaced, k).length}</span></button>`,
+                 <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(withPlace, k).length}</span></button>`,
           ).join('')}
         </div>
       </div>
@@ -187,74 +175,27 @@ export function render(el, { data, router }) {
       </div>
     </div>
 
-    <div class="map-below">
-      <p class="map-caption utility" data-caption></p>
-
-      <p class="map-lede" data-map-lede>${esc(fill(M.lede, { located: initialPlaced.length, count: initial.length }))}</p>
-
-      <!-- The Index's facets, in the Index's own dress (the .facet CSS is
-           shared): the same fields through the same applyFilters, so a facet
-           means the identical thing on both pages. -->
-      <div class="facets map-facets" data-map-facets>${facetRow(data.saints)}</div>
-
-      <h2 class="register-heading">${esc(M.placesHeading)}</h2>
-      <ul class="register map-places" data-places></ul>
-
-      <!-- "They are never silently dropped" (§8.3). The tray is a disclosure
-           and not a footnote: at present it holds all but seven of the corpus,
-           which is the honest shape of this page today and should be impossible
-           to miss. -->
-      <details class="map-unlocated">
-        <summary data-unlocated-summary>${esc(fill(M.unlocated, { count: initialWithout.length }))}</summary>
-        <p class="utility">${esc(M.unlocatedNote)}</p>
-        <ul class="register map-unlocated-list" data-unlocated-list>
-          ${unlocatedRows(initialWithout, router)}
-        </ul>
-      </details>
-    </div>`;
+    <!--
+      The one thing kept below the picture (author, 2026-08-30): the credit
+      and the hint. The credit is printed from the first paint - it is a fact
+      about the data, not about this visit's network - and only *changes* if
+      the coastline fails, at which point the failure note replaces it.
+    -->
+    <footer class="map-foot">
+      <p class="map-caption utility" data-caption>${esc(M.caption)}</p>
+    </footer>`;
 
   const canvas = el.querySelector('[data-map]');
   destroy();
   view = HOME;
 
-  /*
-   * One pass over the page, the Index's own shape: what matches, what that
-   * says, and where it goes. Everything below the facets reads the filtered
-   * set - the lede, the kind counts, the rows, the tray, the picture - so a
-   * tick moves all of them together or it is a filter that lies somewhere.
-   */
-  let withPlace = [];
-  const refresh = () => {
-    const { matched } = applyFilters(data.saints, filters);
-    withPlace = matched.filter(located);
-    const without = matched.filter((s) => !located(s));
-    el.querySelector('[data-map-lede]').textContent = fill(M.lede, {
-      located: withPlace.length,
-      count: matched.length,
-    });
-    for (const k of KINDS) {
-      el.querySelector(`[data-kind-count="${k}"]`).textContent = String(pointsOfKind(withPlace, k).length);
-    }
-    el.querySelector('[data-unlocated-summary]').textContent = fill(M.unlocated, { count: without.length });
-    el.querySelector('[data-unlocated-list]').innerHTML = unlocatedRows(without, router);
-    paintPlaces(el, withPlace, router);
-    paintCanvas(canvas, withPlace);
-  };
-  const draw = () => paintCanvas(canvas, withPlace);
-  refresh();
-
-  el.querySelector('[data-map-facets]').addEventListener('input', () => {
-    for (const name of FACETS) {
-      filters[name] = [...el.querySelectorAll(`[data-map-facets] input[name="${name}"]:checked`)].map((i) => i.value);
-    }
-    refresh();
-  });
+  paintCanvas(canvas, withPlace);
 
   for (const button of el.querySelectorAll('[data-kind]')) {
     button.addEventListener('click', () => {
       kind = button.dataset.kind;
       for (const b of el.querySelectorAll('[data-kind]')) b.setAttribute('aria-pressed', String(b === button));
-      refresh();
+      paintCanvas(canvas, withPlace);
     });
   }
 
@@ -263,15 +204,12 @@ export function render(el, { data, router }) {
   /*
    * The coastline is fetched, so the first paint is the empty box and the
    * second has land in it. Nothing moves between them — the box is reserved —
-   * and the caption says which state the reader is looking at rather than a
-   * blank picture standing there meaning nothing.
+   * and `data-land` says which state the picture is in, because a canvas that
+   * drew nothing and one that drew the sea are the same screenshot.
    */
-  drawWhenReady(el, canvas, () => withPlace);
+  drawWhenReady(el, canvas, withPlace);
 
-  // A getter, not the array: refresh() *replaces* withPlace, and a closure
-  // over the old value would zoom an empty map forever (found by the label
-  // test reading 0 at 4x while a hand-driven shot showed a label).
-  wireZoom(el, canvas, () => withPlace);
+  wireZoom(el, canvas, withPlace);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -282,40 +220,6 @@ export function render(el, { data, router }) {
    */
   onResize = () => paintCanvas(canvas, withPlace);
   window.addEventListener('resize', onResize);
-}
-
-/** The facet row: the Index's own markup shape, so its CSS dresses it. */
-function facetRow(cards) {
-  const F = STRINGS.saints.filters;
-  const facets = facetsOf(cards);
-  const label = {
-    churches: (id) => churchName(id),
-    types: (id) => typeName(id),
-    regions: (id) => REGIONS_BY_ID[id]?.display_name ?? id,
-  };
-  const legend = { churches: F.church, types: F.type, regions: F.region };
-  return FACETS.map((name) => {
-    const options = facets[name].map((value) => ({ value, label: label[name](value) }));
-    options.sort((a, b) => a.label.localeCompare(b.label));
-    return `<details class="facet" data-facet="${name}"><summary>${esc(legend[name])}</summary>
-      <fieldset><legend class="sr-only">${esc(legend[name])}</legend>
-        ${options
-          .map(
-            (o) => `<label class="facet-option">
-          <input type="checkbox" name="${name}" value="${esc(o.value)}" /> ${esc(o.label)}
-        </label>`,
-          )
-          .join('')}
-      </fieldset></details>`;
-  }).join('');
-}
-
-function unlocatedRows(without, router) {
-  return without
-    .map(
-      (s) => `<li class="reg-row"><a class="reg-name" href="${esc(router.href(`/saints/${s.slug}`))}">${esc(saintName(s))}</a></li>`,
-    )
-    .join('');
 }
 
 /**
@@ -368,29 +272,20 @@ export function destroy() {
 /**
  * Zoom and pan.
  *
- * The rule the whole arrangement is built around: **a reader must never be able
- * to get stuck on this page.** A map in the middle of a scrolling article that
- * swallows the wheel, or that eats a thumb-swipe on a phone, is a trap — and it
- * is the reader who wanted to scroll past who pays for it, not the one who
- * wanted to zoom.
- *
- * So: the wheel scrolls the page as it always did unless Ctrl (or Command) is
- * held, which is the convention browsers themselves use for zoom. Touch keeps
- * `pan-y` until the reader has *deliberately* zoomed in, and only then does the
- * map take the gestures — a state they entered on purpose and can leave with
- * one press of Reset. At scale 1 there is nowhere to pan to anyway
- * (`lib/map-view.js` collapses the range), so nothing is lost by it.
+ * Until 2026-08-30 the rule here was that a bare wheel must scroll the page
+ * and only Ctrl could zoom, because a map in the middle of a scrolling
+ * article that swallows the wheel is a trap. The author reversed it ("have
+ * the mouse scroll zoom in or out smoothly without having to hold Ctrl at
+ * all") in the same breath as removing everything below the map — and the
+ * two instructions only work together: with no page under the stage there is
+ * nothing to scroll past, so the wheel has one honest meaning left and the
+ * trap the old rule guarded against cannot be built any more. Touch is the
+ * map's for the same reason (`touch-action: none` in map.css); the header
+ * above the stage remains the way out.
  */
 function wireZoom(el, canvas, cards) {
-  // `cards` is a getter throughout - see the call site.
   const level = el.querySelector('[data-zoom-level]');
   const apply = () => {
-    /*
-     * Touch gestures are taken only once the reader has zoomed in. `pan-y`
-     * leaves the page's own vertical scroll to the browser, which is the thing
-     * a thumb on a phone is almost always trying to do.
-     */
-    canvas.style.touchAction = view.scale > MIN_SCALE ? 'none' : 'pan-y';
     /*
      * There is somewhere to go whenever an axis is cropped, which on a window
      * wider than the projection is true at 1.0x — the poles are off the top and
@@ -405,7 +300,7 @@ function wireZoom(el, canvas, cards) {
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
     el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
     el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
-    paintCanvas(canvas, cards());
+    paintCanvas(canvas, cards);
   };
 
   const set = (next) => {
@@ -428,9 +323,13 @@ function wireZoom(el, canvas, cards) {
   canvas.addEventListener(
     'wheel',
     (e) => {
-      // Without the modifier this listener does nothing at all and the page
-      // scrolls — no preventDefault, no interception.
-      if (!e.ctrlKey && !e.metaKey) return;
+      /*
+       * No modifier gate (author, 2026-08-30) - the wheel *is* the zoom.
+       * `exp(-deltaY * 0.002)` makes it smooth by construction: every unit of
+       * wheel travel multiplies the scale by the same factor, so a slow roll
+       * creeps and a spin sweeps, continuously, with no notch steps - and the
+       * anchor stays under the pointer the whole way.
+       */
       e.preventDefault();
       const box = canvas.getBoundingClientRect();
       set(
@@ -481,25 +380,18 @@ function wireZoom(el, canvas, cards) {
 
     if (!canPan(canvas)) return;
     /*
-     * **A thumb at rest may pan sideways but never up and down**, and the
-     * canvas's own `touch-action: pan-y` is what makes that safe rather than a
-     * guess: the browser has already claimed the vertical for the page's
-     * scroll, so the only touch moves that reach here at scale 1 are sideways
-     * ones. Dropping `dy` matches this handler to that promise instead of
-     * fighting it.
-     *
-     * It matters most on a phone, where the window is far taller than the
-     * projection and the world is cropped *horizontally*: without this the
-     * Americas and East Asia could not be reached at 1.0x by the one input a
-     * phone has. Once the reader has zoomed in deliberately, `touch-action`
-     * becomes `none` and both axes are the map's.
+     * Both axes, at every scale. The old vertical-drop for a thumb at rest
+     * existed to honour `touch-action: pan-y` - the browser owned vertical
+     * for the page's scroll - and went with the page it protected
+     * (2026-08-30): touch is `none` now, every move reaches here, and an axis
+     * with nowhere to go is already refused by the clamp arithmetic rather
+     * than by this handler guessing.
      */
-    const held = e.pointerType === 'touch' && view.scale <= MIN_SCALE;
     set(
       panBy(
         view,
         (e.clientX - previous.clientX) / box.width,
-        held ? 0 : (e.clientY - previous.clientY) / box.height,
+        (e.clientY - previous.clientY) / box.height,
         coverFractions(box.width, box.height, ASPECT),
       ),
     );
@@ -560,8 +452,6 @@ function midpoint(active) {
 }
 
 async function drawWhenReady(el, canvas, cards) {
-  // `cards` is a getter: the coastline may land after the reader has already
-  // ticked a facet, and the paint must draw the set they are looking at.
   const caption = el.querySelector('[data-caption]');
   try {
     // Dynamic, so the coastline is its own chunk: 19 kB gzipped that a reader
@@ -569,53 +459,19 @@ async function drawWhenReady(el, canvas, cards) {
     const { LAND } = await import('../data/land.js');
     if (!canvas.isConnected) return;
     canvas.__land = LAND;
-    paintCanvas(canvas, cards());
-    caption.textContent = STRINGS.map.caption;
+    paintCanvas(canvas, cards);
+    /*
+     * The page's own report that the fetch landed *and* the paint used it -
+     * written after the draw, so a chunk that resolved into a canvas that
+     * never repainted would still read as not-ready. The suite waits on this;
+     * the credit in the footer is static and says nothing about the network.
+     */
+    canvas.dataset.land = 'ok';
   } catch {
     // A map that cannot draw says so; it does not leave an empty rectangle
     // that reads as a bug or, worse, as an empty world.
     caption.textContent = STRINGS.map.landFailed;
   }
-}
-
-/** The rows, which are the map for anyone not looking at the picture. */
-function paintPlaces(el, cards, router) {
-  const M = STRINGS.map;
-  const points = pointsOfKind(cards, kind);
-  const list = el.querySelector('[data-places]');
-  if (!points.length) {
-    list.innerHTML = `<li class="reg-row utility">${esc(fill(M.noneOfKind, { kind: M.kinds[kind] }))}</li>`;
-    return;
-  }
-  list.innerHTML = points
-    .map(({ card, where }) => {
-      /*
-       * The region's display name, which is the only place-name the manifest
-       * carries. `modern_name` and `historical_name` are in each saint's own
-       * file but are dropped from the manifest on purpose — two strings per
-       * location across 5,000 saints is real weight on the one request the
-       * whole site boots from (§4). So the map names the region and the saint's
-       * own page names the village, which is where a reader who wants that has
-       * already gone.
-       *
-       * The raw id is never printed: `slavic-east` is a key, not a place.
-       */
-      const place = REGIONS_BY_ID[where.region]?.display_name ?? '';
-      /*
-       * The uncertainty is printed, not only drawn. The halo says "about here"
-       * to a reader looking at the picture; this says it in kilometres to
-       * everyone else, and DESIGN.md §6b's rule is that uncertainty is never
-       * allowed to read as precision.
-       */
-      const km = Number.isFinite(where.uncertainty_km)
-        ? ` <span class="map-uncertainty utility">${esc(fill(M.uncertainty, { km: where.uncertainty_km }))}</span>`
-        : '';
-      return `<li class="reg-row">
-        <a class="reg-name" href="${esc(router.href(`/saints/${card.slug}`))}">${esc(saintName(card))}</a>
-        <span class="map-place utility">${esc(place)}${km}</span>
-      </li>`;
-    })
-    .join('');
 }
 
 function paintCanvas(canvas, cards) {

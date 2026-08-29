@@ -81,13 +81,14 @@ export function render(el, { data, params, router, cameFrom }) {
     return;
   }
 
-  // Opened from the calendar: the × goes back to that same day rather than
-  // to All Saints (author, 2026-08-23).
-  const fromCalendar = cameFrom?.nav === 'calendar' ? cameFrom.path : null;
-  const backLabel = fromCalendar ? STRINGS.saint.backDaily : STRINGS.saint.back;
+  // Opened from the calendar or the map: the × goes back there rather than to
+  // All Saints (author, 2026-08-23 for the calendar, 2026-08-30 for the map).
+  const backTo = cameFrom?.nav === 'calendar' || cameFrom?.nav === 'map' ? cameFrom.path : null;
+  const backLabel =
+    cameFrom?.nav === 'calendar' ? STRINGS.saint.backDaily : cameFrom?.nav === 'map' ? STRINGS.saint.backMap : STRINGS.saint.back;
 
   el.innerHTML = shell(card, backLabel);
-  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router, fromCalendar)];
+  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router, backTo)];
   // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
   live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
@@ -271,10 +272,10 @@ function shell(card, backLabel) {
 
 /**
  * The × closes the page back to wherever the reader opened it from. Opened
- * from the calendar, it returns to that same day — the Index keeps its own
+ * from the calendar or the map, it returns there — the Index keeps its own
  * record of where it was and restores itself when asked to (views/saints.js),
- * but the calendar has no analogous state to restore, so its own path is
- * enough. Anywhere else, including a deep link with nothing to go back to,
+ * but neither of those two has analogous state to restore, so their own path
+ * is enough. Anywhere else, including a deep link with nothing to go back to,
  * falls back to All Saints.
  */
 function wireBack(el, router, backTo) {

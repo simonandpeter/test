@@ -712,6 +712,7 @@ export const STRINGS = {
     savedNamed: '{name} is saved. Activate to remove it.',
     back: 'Back to All Saints',
     backDaily: 'Back to Daily',
+    backMap: 'Back to the map',
     veneration: 'Veneration',
     // The register reads the reader's church first (author, 2026-08-22); the
     // other two wait behind this, for this page only.
@@ -807,10 +808,11 @@ export const STRINGS = {
 
   map: {
     title: 'Map',
-    // `placeholder` is gone with the placeholder (Session 7, 2026-08-29).
-    lede: '{located} of {count} saints carry a place we can point to. The rest are in the tray below, named rather than dropped.',
-    // The map reads the reader's church too (author, 2026-08-22).
-    setAside: '{count} more are not in the {church} calendar.',
+    /* The lede, the tray and the Places register are gone with the reading
+       they lived in (author, 2026-08-30: the page is the map and a small
+       footer, nothing else), and their strings went with them - `lede`,
+       `setAside`, `placesHeading`, `noneOfKind`, `uncertainty`, `unlocated`,
+       `unlocatedNote` all read by nothing after Amendment 77. */
     kindGroup: 'Which place to show',
     /*
      * One dot cannot honestly stand for four different facts (§8.3), so the
@@ -824,18 +826,13 @@ export const STRINGS = {
       see: 'See',
       relics: 'Relics',
     },
-    canvasLabel: 'A world map. Drag to move it, arrow keys to pan, plus and minus to zoom. Every place marked on it is also listed below.',
-    caption: 'Coastline: Natural Earth, public domain. Soft edges mark uncertain places. Hold Ctrl and scroll to zoom.',
+    canvasLabel: 'A world map. Drag to move it, arrow keys to pan, plus and minus or a scroll to zoom.',
+    caption: 'Coastline: Natural Earth, public domain. Soft edges mark uncertain places. Scroll to zoom.',
     zoomGroup: 'Zoom the map',
     zoomIn: 'Zoom in',
     zoomOut: 'Zoom out',
     zoomReset: 'Whole world',
-    landFailed: 'The coastline could not be loaded. The places are listed below.',
-    placesHeading: 'Places',
-    noneOfKind: 'No saint in this calendar has a recorded place of this kind ({kind}).',
-    uncertainty: 'within about {km} km',
-    unlocated: '{count} saints have no place recorded',
-    unlocatedNote: 'A place is only recorded where a source gives one. These are not missing from the corpus, only from the map.',
+    landFailed: 'The coastline could not be loaded. The dots still mark their places.',
   },
 
   about: {

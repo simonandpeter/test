@@ -1,10 +1,6 @@
-/* The map (§8.3, redrawn as a flat Mercator by the author on 2026-08-29).
+/* The map (§8.3, redrawn as a flat Mercator by the author on 2026-08-29,
+   and stripped to the map alone on 2026-08-30).
    Built on base.css and tokens.css; DESIGN.md wins any argument. */
-
-.map-lede {
-  color: var(--ink-soft);
-  max-width: 65ch;
-}
 
 /* ---- the stage -------------------------------------------------------- */
 
@@ -25,25 +21,54 @@
 html[data-route='map'] main.chrome {
   max-width: none;
   padding: 0;
+  /* The page is the map and a footer, nothing else (author, 2026-08-30), so
+     `main` is a column exactly as tall as the space under the sticky bar: the
+     stage takes what the footer leaves, with no magic number naming the
+     footer's height — it is one line of utility text on a desktop and two on
+     a phone, and a hard-coded height would be wrong at one of those widths.
+
+     `--chrome-h-reserve` is the header's *declared* height (base.css), not
+     the `--chrome-h` main.js measures and publishes — those are 75.5625px and
+     76px, and the difference matters here for one reason: the declared one is
+     a CSS value available at first paint, so the stage is its final height
+     before a line of JavaScript runs. Sizing from the measured one would be
+     the layout shift §13 forbids.
+
+     `svh`, not `vh`: the *small* viewport height is the one with a phone's
+     URL bar showing, and it does not change as the bar comes and goes. */
+  display: flex;
+  flex-direction: column;
+  height: calc(100svh - var(--chrome-h-reserve));
 }
 
-/* As tall as the space under the sticky bar, and no taller.
+/* `#view` is the div main.js renders every view into (index.html), sitting
+   between `main` and the stage — the column has to pass through it or the
+   stage's flex:1 has no flex parent and the canvas answers to nothing. The
+   first cut of this skipped it and the map came out 17 px too tall, which
+   the window test caught by measuring. */
+html[data-route='map'] main.chrome > #view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
 
-   `--chrome-h-reserve` is the header's *declared* height (base.css), not the
-   `--chrome-h` main.js measures and publishes — those are 75.5625px and 76px,
-   and the difference matters here for one reason: the declared one is a CSS
-   value available at first paint, so the stage is its final height before a
-   line of JavaScript runs. Deriving it from the measured one would size the map
-   after boot, which is the layout shift §13 forbids and which this view used to
-   avoid with `aspect-ratio`.
+/* Nothing on this page scrolls (author, 2026-08-30: "remove any up and down
+   scroll from the map page"). The column above already fits the window
+   exactly; this closes the last gap — a focus ring nudge, an svh rounding —
+   so the page cannot be scrolled even by accident. */
+html[data-route='map'],
+html[data-route='map'] body {
+  overflow: hidden;
+}
 
-   `svh`, not `vh`: the *small* viewport height is the one with a phone's URL bar
-   showing, and it does not change as the bar comes and goes. base.css argues the
-   same choice for `body` — a stage that resized on every scroll gesture would
-   repaint the canvas each time. */
 .map-stage {
   position: relative;
-  height: calc(100svh - var(--chrome-h-reserve));
+  flex: 1;
+  /* A flex child's min-height is content-sized by default, and the canvas
+     would rather overflow than shrink; 0 lets the stage be exactly the room
+     the footer leaves. */
+  min-height: 0;
 }
 
 .map-stage canvas {
@@ -51,12 +76,12 @@ html[data-route='map'] main.chrome {
   width: 100%;
   height: 100%;
   background: var(--field);
-  /* Vertical page scroll stays the browser's until the reader has zoomed in on
-     purpose; views/map.js swaps this to `none` at that point and back on Reset.
-     A map that eats a thumb-swipe is a trap, and it is the reader who wanted to
-     scroll past who pays for it. That matters far more now the map is the whole
-     window than it did when it was a box in the middle of a page. */
-  touch-action: pan-y;
+  /* The map's, always. `pan-y` reserved a thumb-swipe for the page's scroll
+     while there was a page below to scroll to; that page is gone (author,
+     2026-08-30) and with it the trap the reservation guarded against, so
+     every touch gesture belongs to the picture and the header above the
+     stage remains the way out. */
+  touch-action: none;
 }
 
 /* The pointer says what a drag will do, and only once there is somewhere to
@@ -187,99 +212,25 @@ html[data-route='map'] main.chrome {
   padding: var(--space-1) var(--space-2);
 }
 
-/* ---- below the map ----------------------------------------------------- */
+/* ---- the footer -------------------------------------------------------- */
 
-/* The column comes back for the reading. `main` gave up its own so the stage
-   could have the window; everything after the stage is prose and a register,
-   and prose wants a measure. Same numbers as `.chrome` in base.css, because it
-   is the same column — a reader should not be able to tell that the page
-   stopped using one and started using another. */
-/* The rule between the map and the reading belongs to *this* box, not to the
-   stage. It was `border-bottom` on the stage for one build, and because
-   `box-sizing` is border-box everywhere that quietly took a pixel out of the
-   canvas's own height — the map came out 1 px short of the window it is
-   supposed to be, which the suite caught to the pixel. Nothing else about the
-   line changes; it is drawn by the box below instead of the box above. */
-.map-below {
-  max-width: 72ch;
-  margin: 0 auto;
-  padding: var(--space-6) var(--space-4) var(--space-16);
+/* The one strip below the picture (author, 2026-08-30: "leaving a small
+   footer with the coastline map credit and scroll to zoom hint"). Its height
+   is its text's - one line on a desktop, two on a phone - and the flex column
+   above hands the stage whatever it leaves, so no number here has to agree
+   with any number there.
+
+   The rule between map and footer belongs to *this* box, not to the stage:
+   drawn as the stage's border-bottom it took a pixel out of the canvas's own
+   height under border-box sizing, and the map came out 1 px short of its
+   window - the suite caught it to the pixel. */
+.map-foot {
+  flex: none;
+  padding: var(--space-2) var(--space-4);
   border-top: 1px solid var(--rule);
 }
 
 .map-caption {
+  margin: 0;
   color: var(--ink-soft);
-  margin-bottom: var(--space-4);
-}
-
-/* ---- the list, which is the map --------------------------------------- */
-
-/* Every point on the canvas is a row here. That is not a fallback: a canvas is
-   one opaque image to a screen reader and to the keyboard both, and the honest
-   way to carry 16 places is to carry them as text and let the picture
-   illustrate. DESIGN.md §7's greyscale test, taken to its end — remove the
-   picture entirely and the reader still loses nothing. */
-.map-places .reg-row,
-.map-unlocated-list .reg-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-2) var(--space-3);
-  padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.map-place {
-  color: var(--ink-soft);
-}
-
-/* Uncertainty is said in words as well as drawn as a halo. §6b's rule is that
-   doubt must never read as precision, and "within about 150 km" is the only
-   part of that a reader can act on. */
-.map-uncertainty {
-  color: var(--ink-soft);
-  white-space: nowrap;
-}
-
-/* ---- the unlocated tray ------------------------------------------------ */
-
-/* "They are never silently dropped" (§8.3). It holds all but seven of the
-   corpus today, so it is a disclosure in the page's own voice rather than a
-   footnote — the reader should be able to see how much of the map is missing. */
-.map-unlocated {
-  margin-top: var(--space-8);
-  border-top: 1px solid var(--rule);
-  padding-top: var(--space-4);
-}
-
-.map-unlocated > summary {
-  cursor: pointer;
-  font-family: var(--font-utility);
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.06em;
-  color: var(--ink-soft);
-}
-
-.map-unlocated > summary:focus-visible {
-  outline: 2px solid var(--rubric);
-  outline-offset: 2px;
-}
-
-.map-unlocated-list {
-  /* Seven hundred names is a scroll, not a page. Its own box keeps the tray a
-     tray rather than turning the map into a directory with a picture on top. */
-  max-height: 60vh;
-  overflow-y: auto;
-  margin-top: var(--space-3);
-}
-
-/* ---- the Index's facets, on the map ------------------------------------ */
-
-/* The row wears the Index's own facet dress (.facet is unscoped and shared);
-   what is the map's is only where it stands - under the picture with the
-   reading, because the stage is the window and nothing gets to push the map
-   down the screen. The kind selector stays on the stage: §8.3 wants the
-   current kind visible at all times, and a facet is a question, not a state. */
-.map-facets {
-  margin: var(--space-3) 0 var(--space-4);
 }

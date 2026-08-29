@@ -162,12 +162,18 @@ runtime dependency at all: `lib/mercator.js` is the whole projection, pinned by
 gzipped chunk off the boot path**; `world-atlas` and `topojson-client` are
 dev-only and the bundle never sees them.
 
-Shipped: the picture, the four-kind selector (death default), uncertainty halos
-— **the curve's first shipping consumer at last** — the Unlocated tray, and a
-`Places` list under the canvas. That list is not a courtesy. A canvas is one
-opaque image to a screen reader and to the keyboard both, so **the list is the
-map and the picture illustrates it**; the count on the pressed kind button and
-the number of rows are one claim, and `map.spec.js` asserts they agree.
+Shipped: the picture, the four-kind selector (death default) and uncertainty
+halos — **the curve's first shipping consumer at last**. Since 2026-08-30 the
+page is **the map and a small footer, nothing else** (author: "remove
+everything on the map page outside of the map itself except for leaving a
+small footer with the coastline map credit and scroll to zoom hint") — the
+lede, the Places list, the Unlocated tray and the Index's facets all went, one
+day after the facets arrived (Amendment 77 records the reversal). The kind
+counts in the legend are now the page's one statement of what it shows, and
+`map.spec.js` holds them to `data-dots`, the draw pass's own hit-map. The
+canvas is one opaque image to a screen reader; with the list gone, the Index
+is where every located saint remains reachable as text — a trade that is the
+author's, recorded rather than absorbed.
 
 **Deferred, and the reason is the corpus rather than the effort: 7 of 742 saints
 carry a location, 16 points between them.** Clustering below a density
@@ -181,11 +187,13 @@ never comes off its box and a zoom keeps the point it was aimed at — and
 `tests/map-view.test.mjs` pins both. Buttons, Ctrl+wheel, drag, pinch, and the
 keyboard (arrows pan, +/- zoom, Home resets).
 
-**The rule it is built around: a reader must never get stuck.** A bare wheel
-scrolls the page as it always did; only Ctrl zooms. Touch keeps `pan-y` until
-the reader has deliberately zoomed in, and one press of Reset hands it back. A
-map that eats a thumb-swipe is a trap, and it is the reader who wanted to scroll
-*past* it who pays.
+**A bare wheel zooms, smoothly, no Ctrl, and touch is the map's always**
+(author, 2026-08-30 — reversing the never-get-stuck arrangement of 2026-08-29).
+The old rule existed so a reader scrolling *past* the map could not be trapped
+by it; with nothing below the stage there is no page to scroll past, the trap
+cannot be built, and the wheel has one honest meaning left. The map route
+cannot scroll at all (`overflow: hidden` on the route, and the column fits the
+window exactly); the header above the stage is the way out.
 
 **The stage is the whole window 2026-08-29** (author: "make sure on mobile and
 desktop the map is the whole window, under the header, not just a predefined
@@ -200,13 +208,13 @@ Egypt, with every other test still green. One axis is cropped instead, and that
 axis can be panned even at 1.0x, including sideways by thumb, or the Americas
 would be unreachable on a phone.
 
-**The Index's filter set arrived 2026-08-30** — same `applyFilters`, three
-facets (Calendar, Type, Region; the others wait with reasons written in
-map.js), one refresh moving every number on the page together. With it came
-§8.3's zoom labels (overlap-drop at the corpus's density) and pressable dots
-(a press under 5 px of travel opens the saint; a haul does not). The map now
-counts as the Index does — whole corpus, Calendar facet narrows — retiring the
-placeholder's chosen-church narrowing and the set-aside sentence with it.
+**The Index's filter set arrived and left on 2026-08-30** — it lived in the
+below-map reading the author removed the same day. What survives of Amendment
+76: §8.3's zoom labels (overlap-drop past 2.5x), pressable dots (a press under
+5 px of travel opens the saint; a haul does not — and since the same day the
+saint's x returns to the map, mirroring the calendar's courtesy of
+2026-08-23), and the whole-corpus model. If filters return to this page they
+return as something drawn on the stage; the Index keeps the facets meanwhile.
 
 **The map names the region, not the village.** `modern_name` and
 `historical_name` are in each saint's own file and dropped from the manifest on
@@ -312,7 +320,8 @@ names Basilica, and both statements are true about different things.
 - Never leave `vite preview` running; `playwright.config.js` refuses to reuse a
   server it did not start. Kill by PID if the wrapper survives.
 - CRLF warnings were **not** noise: this desk's global `core.autocrlf=true`
-  rewrote 76 batch files during a stash/pop and a unit test caught the ``
+  rewrote 76 batch files during a stash/pop and a unit test caught the `
+`
   inside a heading. Repo-local `core.autocrlf=false` plus `.gitattributes`
   (`* text=auto eol=lf`) now pin every clone; the blobs were always LF.
 

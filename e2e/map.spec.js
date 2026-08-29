@@ -16,8 +16,12 @@ import { ready } from './helpers.js';
  *
  * What there is: the projection is pinned in `tests/mercator.test.mjs`, which is
  * arithmetic and needs no browser. These are the things only a browser can
- * answer — that the picture is drawn, that the list carries what the picture
- * shows, and that the reader can work the page without seeing either.
+ * answer — that the picture is drawn, that the counts agree with the drawing,
+ * and that the reader can work the page by wheel, touch and keyboard alike.
+ *
+ * The page was stage-plus-reading until 2026-08-30, when the author asked for
+ * the map alone with a small footer; the tests for the list, the tray and the
+ * Index's facets went with the surfaces they tested.
  */
 
 const MAP = '/map';
@@ -33,11 +37,14 @@ test('the map draws its coastline, and says so when it has', async ({ page }) =>
   await expect(canvas).toBeVisible();
 
   /*
-   * The caption is written only after the coastline chunk resolves, so it is
-   * the page's own report that the fetch landed — and the assertion is on the
-   * caption rather than on pixels because a canvas that drew nothing and a
-   * canvas that drew the sea are the same screenshot.
+   * `data-land` is written only after the coastline chunk resolves and the
+   * paint that uses it has run, so it is the page's own report that the fetch
+   * landed — and the readiness signal every drawing assertion in this file
+   * waits on, because a canvas that drew nothing and a canvas that drew the
+   * sea are the same screenshot. The credit itself is static in the footer:
+   * it is a fact about the data, not about this visit's network.
    */
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
 
   // And it really put ink on the canvas: a blank one is every pixel identical.
@@ -53,31 +60,32 @@ test('the map draws its coastline, and says so when it has', async ({ page }) =>
   expect(drew, 'the canvas is one flat colour — nothing was drawn on it').toBe(true);
 });
 
-test('every place on the picture is also a row a reader can reach', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
-
+test('the count on a kind button is the count the picture draws', async ({ page }) => {
   /*
-   * The canvas is one opaque image to a screen reader and to the keyboard both.
-   * The list is not a courtesy under it — it *is* the map, and the count on the
-   * pressed kind button is the claim the list has to match. If those two ever
-   * disagree the picture is showing something the page cannot name.
+   * The list under the picture is gone (author, 2026-08-30: "remove everything
+   * on the map page outside of the map itself"), so the kind counts in the
+   * legend are the one place the page still states what it is showing — and
+   * `data-dots`, written by the draw pass itself, is what they must agree
+   * with. At scale 1 the whole world is inside the box, so nothing is culled
+   * and the drawn dots *are* the kind's points; a count that drifted from the
+   * picture would be the page lying about its own drawing.
    */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
   const pressed = page.locator('.map-kind[aria-pressed="true"]');
   await expect(pressed).toHaveCount(1);
   const claimed = Number(await pressed.locator('.map-kind-count').textContent());
-  await expect(page.locator('.map-places .reg-row')).toHaveCount(claimed);
-
-  // Each row names a saint and links to them, and names where — never the raw
-  // region key, which is what the first version of this printed.
-  const first = page.locator('.map-places .reg-row').first();
-  await expect(first.locator('.reg-name')).not.toHaveText('');
-  await expect(first.locator('.map-place')).not.toHaveText('');
-  await expect(first.locator('.map-place')).not.toContainText('slavic-east');
-  await expect(first.locator('.reg-name')).toHaveAttribute('href', /\/saints\//);
+  expect(claimed).toBeGreaterThan(0);
+  const drawn = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(drawn.length).toBe(claimed);
 });
 
 test('the four kinds are four different questions, and the map answers one at a time', async ({ page }) => {
   await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   // Death is the default (§8.3), and exactly one kind is ever current.
   await expect(page.locator('.map-kind[aria-pressed="true"]')).toHaveText(/Died/);
@@ -88,8 +96,10 @@ test('the four kinds are four different questions, and the map answers one at a 
 
   await expect(born).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('.map-kind[aria-pressed="true"]')).toHaveCount(1);
-  // The list followed the button rather than the button merely lighting up.
-  await expect(page.locator('.map-places .reg-row')).toHaveCount(claimed);
+  // The picture followed the button rather than the button merely lighting up.
+  await expect
+    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).length)
+    .toBe(claimed);
 });
 
 test('the current kind is not told by colour alone', async ({ page }) => {
@@ -113,26 +123,25 @@ test('the current kind is not told by colour alone', async ({ page }) => {
   expect(on.field, 'the pressed kind has no field behind it').not.toBe(off.field);
 });
 
-test('the saints with no place are named, not dropped', async ({ page }) => {
+test('the page is the map, a small footer, and nothing else', async ({ page }) => {
+  /*
+   * Author, 2026-08-30: "remove everything on the map page outside of the map
+   * itself except for leaving a small footer with the coastline map credit and
+   * scroll to zoom hint." That reverses Amendment 76's below-map reading — the
+   * lede, the Index's facets, the Places register and the unlocated tray all
+   * go — so this is the assertion that they stay gone, and that what the
+   * instruction kept is actually there: the credit and the hint, in a footer.
+   */
   await page.goto(MAP, { waitUntil: 'networkidle' });
 
-  /*
-   * "They are never silently dropped" (§8.3). Today the tray holds all but
-   * seven of the calendar's saints, which is the honest shape of this page —
-   * so the assertion is that the tray's count *is* the corpus minus the mapped
-   * ones, rather than some number the page felt like printing.
-   */
-  const tray = page.locator('.map-unlocated');
-  await expect(tray).toBeVisible();
+  for (const gone of ['.map-below', '.map-places', '.map-unlocated', '[data-map-facets]', '[data-map-lede]']) {
+    await expect(page.locator(gone)).toHaveCount(0);
+  }
 
-  const summary = await tray.locator('summary').textContent();
-  const counted = Number(/(\d+)/.exec(summary)[1]);
-  expect(counted).toBeGreaterThan(0);
-
-  await tray.locator('summary').click();
-  await expect(tray.locator('.map-unlocated-list .reg-row')).toHaveCount(counted);
-  // And every one of them is a way back to the saint.
-  await expect(tray.locator('.map-unlocated-list .reg-name').first()).toHaveAttribute('href', /\/saints\//);
+  const foot = page.locator('.map-foot');
+  await expect(foot).toBeVisible();
+  await expect(foot).toContainText('Natural Earth');
+  await expect(foot).toContainText(/[Ss]croll/);
 });
 
 test('the map is the window, and holds that size before the coastline arrives', async ({ page }) => {
@@ -152,7 +161,7 @@ test('the map is the window, and holds that size before the coastline arrives', 
   await expect(canvas).toBeVisible();
   const before = await canvas.boundingBox();
 
-  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
   const after = await canvas.boundingBox();
 
   expect(after.height).toBeCloseTo(before.height, 0);
@@ -160,18 +169,26 @@ test('the map is the window, and holds that size before the coastline arrives', 
 
   /*
    * The whole window, measured rather than assumed: the full viewport width,
-   * and the height left under the bar. `--chrome-h-reserve` is where that
-   * second number comes from, so this is also what catches the two drifting
-   * apart — a header that grew without the token growing would leave the map
-   * hanging off the bottom of the screen with nothing else to say so.
+   * and the height left under the bar and above the footer — the one strip
+   * the author kept below the picture (2026-08-30). `--chrome-h-reserve` is
+   * where the bar's number comes from, so this is also what catches the two
+   * drifting apart — a header that grew without the token growing would leave
+   * the map hanging off the bottom of the screen with nothing else to say so.
    */
   const room = await page.evaluate(() => ({
     vw: document.documentElement.clientWidth,
     vh: window.innerHeight,
     bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
+    foot: document.querySelector('.map-foot').getBoundingClientRect().height,
   }));
   expect(after.width).toBeCloseTo(room.vw, 0);
-  expect(after.height).toBeCloseTo(room.vh - room.bar, 0);
+  expect(after.height).toBeCloseTo(room.vh - room.bar - room.foot, 0);
+
+  // And the window is all there is: nothing on this page can scroll away.
+  const scroll = await page.evaluate(() => ({
+    room: document.documentElement.scrollHeight - document.documentElement.clientHeight,
+  }));
+  expect(scroll.room, 'the map page has vertical scroll room').toBeLessThanOrEqual(0);
 });
 
 /* ---- zoom and pan (2026-08-29) ----------------------------------------- */
@@ -230,43 +247,47 @@ test('the buttons zoom, and Reset comes home', async ({ page }) => {
   expect(zoomed, 'the canvas drew the same thing zoomed in as zoomed out').not.toBe(home);
 });
 
-test('a plain wheel scrolls the page; only Ctrl zooms the map', async ({ page }) => {
+test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }) => {
   /*
-   * **The rule the whole arrangement is built around.** A map in the middle of
-   * a scrolling page that swallows the wheel is a trap, and it is the reader
-   * who wanted to scroll *past* it who pays. So a bare wheel must leave the map
-   * alone, and this is the assertion that stops a later refactor from being
-   * helpful about it.
+   * The reversal of this file's oldest rule, by the author (2026-08-30:
+   * "have the mouse scroll zoom in or out smoothly without having to hold
+   * Ctrl at all"). The old rule — bare wheel scrolls, only Ctrl zooms —
+   * existed so a reader scrolling *past* the map could not be trapped by it;
+   * with everything below the map removed there is no page to scroll past,
+   * so the wheel has exactly one honest meaning left and it takes it.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
   const box = await canvas.boundingBox();
   const centre = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
 
   await page.mouse.move(centre.x, centre.y);
   await page.mouse.wheel(0, -400);
-  expect(await zoomLevel(page), 'a bare wheel zoomed the map').toBe('1.0×');
+  expect(await zoomLevel(page), 'a bare wheel did not zoom the map').not.toBe('1.0×');
 
-  await page.keyboard.down('Control');
-  await page.mouse.wheel(0, -400);
-  await page.keyboard.up('Control');
-  expect(await zoomLevel(page), 'Ctrl and the wheel did not zoom').not.toBe('1.0×');
+  // And back out: a long spin down runs into the floor and stops at the world.
+  await page.mouse.wheel(0, 1200);
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
 });
 
-test('the map takes touch gestures only once the reader has zoomed in', async ({ page }) => {
+test('touch belongs to the map, because there is no page left to scroll', async ({ page }) => {
+  /*
+   * While the map sat in a scrolling article, `touch-action: pan-y` kept a
+   * thumb-swipe the page's until the reader had zoomed in on purpose. The
+   * page below is gone (author, 2026-08-30), so the gesture has nothing to be
+   * reserved for — the map takes touch always, and the header above it is
+   * still the way out.
+   */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
-
-  // `pan-y` leaves the page's vertical scroll to the browser, which is what a
-  // thumb on a phone is nearly always doing.
-  await expect(canvas).toHaveCSS('touch-action', 'pan-y');
-
-  await page.locator('[data-zoom="in"]').click();
   await expect(canvas).toHaveCSS('touch-action', 'none');
 
-  // And one press of Reset hands it back, so the state is always escapable.
+  // Zooming in and coming home never hands the gesture anywhere else.
+  await page.locator('[data-zoom="in"]').click();
+  await expect(canvas).toHaveCSS('touch-action', 'none');
   await page.locator('[data-zoom="home"]').click();
-  await expect(canvas).toHaveCSS('touch-action', 'pan-y');
+  await expect(canvas).toHaveCSS('touch-action', 'none');
 });
 
 test('the keyboard works the map, not only the pointer', async ({ page }) => {
@@ -297,27 +318,25 @@ test('the keyboard works the map, not only the pointer', async ({ page }) => {
 
 test('zooming does not move the page under the reader', async ({ page }) => {
   /*
-   * The figure's height comes from `aspect-ratio`, so zooming redraws inside a
-   * box that does not change — brief §13's no-layout-shift, which a control
-   * that resized its own picture would break on every press.
+   * Zooming redraws inside a box that does not change — brief §13's
+   * no-layout-shift, which a control that resized its own picture would break
+   * on every press.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
   const before = await canvas.boundingBox();
 
   /*
-   * The gap between the picture and the list, not either one's position on
-   * screen. `locator.click()` scrolls its target into view (CLAUDE.md trap 3)
-   * and the zoom buttons sit in the picture's bottom corner, so pressing one
-   * moves the whole page under the viewport — the first version of this read
-   * that as a 456 px layout shift, which is the trap doing exactly what the
-   * trap list says it does. The distance between two boxes is a fact about the
-   * layout and survives any amount of scrolling.
+   * The gap between the picture and the footer, not either one's position on
+   * screen. `locator.click()` scrolls its target into view (CLAUDE.md trap 3),
+   * and the distance between two boxes is a fact about the layout that
+   * survives any amount of scrolling — the lesson this test learned when the
+   * list still lived below and a click read as a 456 px layout shift.
    */
   const gap = async () => {
     const c = await canvas.boundingBox();
-    const list = await page.locator('.map-places').boundingBox();
-    return list.y - (c.y + c.height);
+    const foot = await page.locator('.map-foot').boundingBox();
+    return foot.y - (c.y + c.height);
   };
   const gapBefore = await gap();
 
@@ -352,55 +371,7 @@ test('the world is not stretched to fit the window', async ({ page }) => {
   expect(shape.pixels, 'the backing store is a different shape from the box, so it is being stretched').toBeCloseTo(shape.css, 2);
 });
 
-/* ---- the Index's filters, labels, and pressable dots (2026-08-30) ------- */
-
-test('the map shares the Index filter set, and every number follows a tick', async ({ page }) => {
-  /*
-   * Brief §8.3: "shares the same filter set as the Index mode." The same
-   * fields through the same applyFilters, so the claim to pin is coherence:
-   * one tick moves the lede, the kind counts, the rows, the tray and the
-   * picture together, or a filter is lying somewhere on the page.
-   */
-  await ready(page);
-  await page.goto(MAP, { waitUntil: 'networkidle' });
-
-  const rows = page.locator('.map-places .reg-row');
-  const before = await rows.count();
-  const trayBefore = Number(/(\d+)/.exec(await page.locator('[data-unlocated-summary]').textContent())[1]);
-
-  /*
-   * `bishop`, not `venerable` - a premise this test's first version got wrong.
-   * The rows print "Venerable Anthony" through the honorific *rank*, but the
-   * `types` field the facet filters on holds monk/hermit/abbot for him, and no
-   * located saint carries `venerable` at all. Three located bishops do, each
-   * with a death point, which leaves the narrowed page non-empty in the
-   * default kind - a filter test over an empty answer proves only emptiness.
-   */
-  const typeFacet = page.locator('[data-map-facets] [data-facet="types"]');
-  await typeFacet.locator('summary').click();
-  await typeFacet.locator('input[value="bishop"]').check();
-
-  // The rows narrowed to the pressed kind's venerables, and the pressed kind's
-  // own count agrees with them - the invariant the first map tests pinned,
-  // holding under a filter.
-  await expect
-    .poll(async () => Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent()))
-    .toBeLessThan(before);
-  const claimed = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
-  await expect(rows).toHaveCount(claimed);
-
-  // The tray follows the same filter: fewer unlocated venerables than
-  // unlocated saints - "never silently dropped" holds inside a filter too.
-  const trayAfter = Number(/(\d+)/.exec(await page.locator('[data-unlocated-summary]').textContent())[1]);
-  expect(trayAfter).toBeLessThan(trayBefore);
-
-  // And the lede counts the filtered corpus, not the whole one.
-  await expect(page.locator('[data-map-lede]')).not.toContainText(`of ${before + trayBefore} `);
-
-  // Unticking restores the page whole.
-  await typeFacet.locator('input[value="bishop"]').uncheck();
-  await expect(rows).toHaveCount(before);
-});
+/* ---- labels and pressable dots (2026-08-30) ----------------------------- */
 
 test('names arrive with the zoom, and not before', async ({ page }) => {
   /*
@@ -413,7 +384,7 @@ test('names arrive with the zoom, and not before', async ({ page }) => {
   await ready(page);
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
-  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   await expect(canvas).toHaveAttribute('data-labels', '0');
 
@@ -431,10 +402,8 @@ test('names arrive with the zoom, and not before', async ({ page }) => {
     return { x: b.x + d.x, y: b.y + d.y };
   });
   await page.mouse.move(at.x, at.y);
-  await page.keyboard.down('Control');
   await page.mouse.wheel(0, -400);
   await page.mouse.wheel(0, -400);
-  await page.keyboard.up('Control');
   await expect
     .poll(() => canvas.getAttribute('data-labels'), { message: 'no labels appeared zoomed at a dot' })
     .not.toBe('0');
@@ -444,7 +413,7 @@ test('a dot is a door: a press opens the saint, a drag does not', async ({ page 
   await ready(page);
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
-  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   const { dot, box } = await canvas.evaluate((el) => {
     const dots = JSON.parse(el.dataset.dots ?? '[]');
@@ -471,4 +440,17 @@ test('a dot is a door: a press opens the saint, a drag does not', async ({ page 
   await page.mouse.click(box.x + dot2.x, box.y + dot2.y);
   await expect(page).toHaveURL(new RegExp(`/saints/${dot2.slug}$`));
   await expect(page.locator('h1')).not.toHaveText('Map');
+
+  /*
+   * And the door swings both ways (author, 2026-08-30: "if you close a saint
+   * page from the map page, make sure you go back to the map page not the all
+   * saints page"). The calendar earned the same courtesy on 2026-08-23; the
+   * map gets it the same way — the × returns to where the reader was, and its
+   * label says so rather than promising All Saints.
+   */
+  // The × carries its promise as an accessible name, not visible text.
+  const back = page.locator('[data-back]');
+  await expect(back).toHaveAttribute('aria-label', /map/i);
+  await back.click();
+  await expect(page).toHaveURL(/\/map$/);
 });
