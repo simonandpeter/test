@@ -6,6 +6,10 @@
     {
       "form": "Όσιος Φιλόθεος ο Πρεσβύτερος και θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Филофей",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -16,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 сентября ст. ст. — «Прп. Филофея пресвитера, в Малой Азии (X)»",
+        "url": "https://days.pravoslavie.ru/Days/20260915.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -52,5 +65,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 900,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Филофея пресвитера, в Малой Азии (X)»."
+    }
+  }
 }

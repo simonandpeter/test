@@ -1,0 +1,66 @@
+{
+  "slug": "john-borozdin",
+  "display_name": "John (Borozdin)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Иоанн (Бороздин)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 сентября ст. ст. — «Сщмчч. Иоанна и Иакова, Петра, Николая пресвитеров и Николая диакона, прмц. Марии и мц. Людмилы (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260915.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "The life: born 1878 at Mstera, in the icon-painting workshop family of Pyotr Kuzmich Borozdin."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life: shot 27 September 1937 at the Butovo range near Moscow."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

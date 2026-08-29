@@ -27,14 +27,14 @@ you inferred, and keep them apart.
 
 ## State (2026-08-30)
 
-- **832 saints**, every one with a life; **1183 attestations**, every one
+- **851 saints**, every one with a life; **1210 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
-  About page says so. **157 undated**; **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **27 September 2026 in
-  the Romanian calendar and 26 September in the Russian** - the reach walks
-  each reader's own calendar (entries.js), and the Exaltation day's four
-  arrivals were all Romanian (Russian 533, Romanian 156, Greek 365,
-  Serbian 129).
+  About page says so. **154 undated**; **130 icons**; 430 hymns, 49 with a
+  published English rendering. The corpus reaches **28 September 2026** in
+  both calendars - the reach walks each reader's own calendar (entries.js),
+  and its fortnight gap-tolerance carries the Russian run over the
+  folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
+  129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -105,11 +105,12 @@ cap to 2000, it reads ~1900 — it measures the cap it guards now.
 gesture handoff after all. The handoff exposed and fixed one mechanism - a
 wheel spun on a dying loop died with it - and bought seven consecutive clean
 CI flaky lines; but on 2026-08-30 the test failed once locally mid-batch
-(passed on rerun) and then flaked on CI the same day (`5e9841e`, desktop,
-green through the retry). Whatever remains is rarer than the 2-in-5 it was,
-and load-sensitive like everything in this family; the watch continues, and
-a diagnosis needs a CPU-throttled reproduction (trap 10), not another
-inference.
+(passed on rerun) and then flaked on CI twice in a row the same day
+(`5e9841e` desktop, `bd1392f` mobile-360 - both green through the retry).
+Whatever remains is not project-specific and its rate is climbing back
+toward the old 2-in-5; the watch continues, and a diagnosis needs a
+CPU-throttled reproduction (trap 10), not another inference - it is the
+next non-corpus work item.
 
 The rail's coast is **closed** — never a flake but a negative first `dt` in
 `beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
@@ -285,7 +286,7 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 27 September.** 600–1,100 folders. Dedupe on the
+- **Saints for the days past 28 September.** 600–1,100 folders. Dedupe on the
   *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
   harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
   sitting — though 21 September was light, being the Nativity of the

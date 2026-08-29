@@ -1,0 +1,58 @@
+{
+  "slug": "chariton-the-confessor",
+  "display_name": "Chariton the Confessor",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Hariton Mărturisitorul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 15 сентября ст. ст. (civil 28 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 Septembrie — „Sfântul Cuvios Hariton Mărturisitorul”",
+        "url": "https://doxologia.ro/sfantul-cuvios-hariton-marturisitorul",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 270,
+      "latest": 275,
+      "display": "under Aurelian (270-275)",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „în vremea lui Aurelian, rău credinciosul împărat (270-275), s-a arătat Mărturisitor”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

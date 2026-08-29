@@ -1,0 +1,57 @@
+{
+  "slug": "baruch-the-prophet",
+  "display_name": "Baruch",
+  "names": [
+    {
+      "form": "Sfântul Proroc Baruh",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 15 сентября ст. ст. (civil 28 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 Septembrie — „Sfântul Proroc Baruh”",
+        "url": "https://doxologia.ro/sfantul-proroc-baruh",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -629,
+      "latest": -585,
+      "display": "7th-6th century BC",
+      "basis": "traditional",
+      "note": "The life on doxologia.ro sets Jeremiah’s prophesying „înainte și după începutul robiei babilonice: 629-585 î.Hr.”, with Baruch his disciple; in 605 BC Jeremiah sent Baruch to Jerusalem with his letter."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "john-yakovlev",
+  "display_name": "John (Yakovlev)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Яковлев)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 сентября ст. ст. — «Сщмчч. Андрея, Григория, Григория, Иоанна пресвитеров (1921)»",
+        "url": "https://days.pravoslavie.ru/Days/20260915.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Сщмчч. Андрея, Григория, Григория, Иоанна пресвитеров (1921)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

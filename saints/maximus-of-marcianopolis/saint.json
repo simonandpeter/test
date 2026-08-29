@@ -5,6 +5,10 @@
     {
       "form": "Άγιοι Μάξιμος, Θεόδοτος και Ασκληπιοδότη",
       "lang": "el"
+    },
+    {
+      "form": "Максим Маркианопольский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 сентября ст. ст. — «Мчч. Максима, Феодота, Асклиады (Асклипиодоты) (305-311)»",
+        "url": "https://days.pravoslavie.ru/Days/20260915.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -44,5 +57,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305-311",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Максима, Феодота, Асклиады (Асклипиодоты) (305-311)»."
+    }
   }
 }

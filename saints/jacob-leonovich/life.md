@@ -1,0 +1,7 @@
+# Jacob (Leonovich)
+
+By 1936, the life the calendar links begins, the rulers of the Soviet state had established that after eighteen years of persecution and terror only the Russian Orthodox Church still stood against their atheism - some twenty-five thousand churches, thousands of ascetic priests, hundreds of thousands of lay believers whom confiscation, taxes, hunger, arrest, exile and camps had only confirmed in the faith. They could be dealt with only by killing them, and in 1937 the government set about it.
+
+Jacob Leonovich was the priest at Yegoryevo in the Belsky district. On 15 August 1937 the NKVD arrested the parish reader, who agreed to confirm the testimony the interrogator put to him; on 3 September they took the priest, the church warden and the watchman. None of the arrested admitted guilt - some laboured to show the investigation the absurdity of its own charges, and the life pauses over the audit-commission chairman, an orphan and a Red Army volunteer who had never in his life been anything but poor. Ten days after the interrogation the troika sentenced the priest and the reader to be shot; the warden and watchman got eight years, the chairman ten. Jacob Leonovich was shot on 28 September 1937 at four in the afternoon - the very civil day the calendar now keeps him. He was glorified among the New Martyrs and Confessors of Russia in 2000.
+
+*After the Православный церковный календарь (days.pravoslavie.ru), [Священномученик Иаков (Леонович)](https://days.pravoslavie.ru/Life/life4808.htm); read 30 August 2026.*

@@ -1,0 +1,64 @@
+{
+  "slug": "neophytos-the-recluse",
+  "display_name": "Neophytos the Recluse",
+  "names": [
+    {
+      "form": "Sfântul Neofit Zăvorâtul din Pafos",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 15 сентября ст. ст. (civil 28 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 Septembrie — „Sfântul Neofit Zăvorâtul din Pafos, insula Cipru”",
+        "url": "https://doxologia.ro/sfantul-neofit-zavoratul-din-pafos-insula-cipru",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1134,
+      "latest": 1134,
+      "display": "1134",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: born in 1134 at Lefkara near Larnaka, Cyprus."
+    },
+    "death": {
+      "earliest": 1219,
+      "latest": 1219,
+      "display": "1219",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „a părăsit viața aceasta la bătrâneți adânci pe 12 Aprilie 1219”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -3712,15 +3712,14 @@ test('the day records say where they stop, and the corpus says how far it reache
    * *here* moves with every day the corpus gains - it is the assertion that
    * the page computes the right answer, and the right answer is a corpus
    * fact - and a church fact: the reach walks the reader's own calendar
-   * (entries.js), and the sixth 2026-08-30 batch was the Exaltation day,
-   * whose four arrivals are all the Romanian calendar's. The Russian reach
-   * therefore stays at the 26th while the Romanian reads the 27th, and this
-   * page - default church, Russian - prints the Russian number.
+   * (entries.js). The 28 September batch put Russian folders on the 28th,
+   * and the reach's fortnight gap-tolerance carries the Russian run over
+   * the folderless Exaltation, so both calendars read the 28th now.
    */
   // Not the 27th: that is the Exaltation of the Cross, and a Great Feast day
   // prints the feast's own sentence rather than the reach.
-  await page.goto('/calendar/2026-09-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 26 September 2026');
+  await page.goto('/calendar/2026-09-29', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 28 September 2026');
   await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
 });
 

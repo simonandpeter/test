@@ -5,6 +5,10 @@
     {
       "form": "Άγιος Πορφύριος ο μίμος",
       "lang": "el"
+    },
+    {
+      "form": "Порфирий",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -23,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 15 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 сентября ст. ст. — «Мч. Порфирия (361)»",
+        "url": "https://days.pravoslavie.ru/Days/20260915.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
