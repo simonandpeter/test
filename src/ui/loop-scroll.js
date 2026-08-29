@@ -545,6 +545,26 @@ export function loopScroll(
 
   return {
     measure,
+    /*
+     * **A gesture survives the rebuild that interrupts it** (2026-08-29). A
+     * late repaint - the packing key moves when fonts or pictures settle -
+     * destroys this loop and constructs a successor, and a wheel spun in that
+     * window died with its loop: the reader's spin simply stopped, and the
+     * suite's press-and-wheel test showed it as a row that never answered.
+     * `handoff()` is what the old loop knows that the new one cannot ask the
+     * DOM for; modes.js carries it across. The successor adopts the velocity
+     * and the hold, and the reader never learns a rebuild happened - which is
+     * the standard the focus latch already set at construction.
+     */
+    handoff() {
+      return { wheelVel, holdUntil, pointerAt };
+    },
+    inherit(prev) {
+      if (!prev) return;
+      wheelVel = Math.max(-wheelMax, Math.min(wheelMax, prev.wheelVel ?? 0));
+      holdUntil = prev.holdUntil ?? 0;
+      pointerAt = prev.pointerAt ?? -Infinity;
+    },
     pause() {
       paused = true;
       currentSpeed = 0;

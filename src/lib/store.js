@@ -21,6 +21,7 @@
  */
 
 import { openDB } from 'idb';
+import { precacheSaint } from './offline.js';
 import { readSettings, writeSetting } from './settings.js';
 
 const DB_NAME = 'gallery-of-saints';
@@ -145,6 +146,9 @@ const announce = (what) => {
 
 export async function save(slug) {
   await (await db()).put('saved', savedRecord(slug));
+  // Save is a promise the shelf works offline (brief §12), so the press is
+  // what fetches. Fire-and-forget: the save itself never waits on the network.
+  precacheSaint(slug);
   announce('saved');
 }
 

@@ -391,6 +391,7 @@ export const ro = {
     notFoundTitle: 'Niciun asemenea sfânt',
     notFound: 'La această adresă nu e niciun sfânt. Corpusul e mic și crește dosar cu dosar, așa că o legătură care ieri mergea azi nu poate fi decât o greșeală de tipar.',
     failed: 'Articolul acestui sfânt nu a putut fi încărcat. Textul stă într-un fișier lângă restul site-ului, deci e mai degrabă o poticnire de rețea decât un sfânt lipsă.',
+    offline: 'Acest sfânt nu a fost încă citit pe acest dispozitiv, așa că nu e nimic păstrat de arătat fără rețea. Sfinții deschiși sau salvați se păstrează; acesta are nevoie de rețea o singură dată.',
     retry: 'Încearcă din nou',
     historicity: {
       attested: 'Atestat - documentat de surse apropiate evenimentelor.',

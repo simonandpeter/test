@@ -103,10 +103,26 @@ export function render(el, { data, params, router, cameFrom }) {
     (payload) => {
       if (mine === generation) fillIn(el, payload, { data, router });
     },
-    () => {
+    (error) => {
       if (mine !== generation) return;
       const body = el.querySelector('[data-detail]');
-      body.innerHTML = `<div class="error-note"><p>${STRINGS.saint.failed}</p>
+      /*
+       * Offline is not a hiccup (brief §12): an uncached saint gets the plain
+       * truth - the network is away and this one was never stored - rather
+       * than a retry button pointed at no network.
+       *
+       * Read off the failure, not only off `navigator.onLine`: the flag stays
+       * true under DevTools' and Playwright's request-level offline (found
+       * writing the test), and a reader on broken wifi is offline in every way
+       * that matters with the flag still up. A fetch that died without a
+       * status - `TypeError: Failed to fetch`, or the worker's `HTTP 0` for a
+       * total cache miss - is the network being away; a real 404 or 500 keeps
+       * the hiccup wording, because there the network answered.
+       */
+      const away =
+        navigator.onLine === false || error?.name === 'TypeError' || /HTTP 0/.test(String(error ?? ''));
+      const note = away ? STRINGS.saint.offline : STRINGS.saint.failed;
+      body.innerHTML = `<div class="error-note"><p>${note}</p>
         <button type="button" data-retry>${STRINGS.saint.retry}</button></div>`;
       body.querySelector('[data-retry]').addEventListener('click', () => render(el, { data, params, router, cameFrom }));
     },

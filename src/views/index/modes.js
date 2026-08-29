@@ -503,6 +503,11 @@ function buildCarousel(key, run, cardWidth) {
   if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;
   state.carouselKey = key;
 
+  // What the loop being replaced knew that the DOM cannot say: a wheel still
+  // spinning, a pointer hold still running. Taken here, because this is where
+  // the old loop dies - by the time the successor is constructed below,
+  // `state.loop` is already null.
+  state.loopHandoff = state.loop?.handoff?.();
   state.loop?.destroy();
   state.loop = null;
   state.carouselWindow?.();
@@ -601,6 +606,9 @@ function buildCarousel(key, run, cardWidth) {
     // no offset worth keeping, and the old one would land on other saints.
     startAt: state.carouselAt ?? null,
   });
+  // The predecessor's gesture, adopted - see the handoff at the destroy site.
+  state.loop.inherit(state.loopHandoff);
+  state.loopHandoff = null;
   /*
    * Only the pictures around the viewport are held; the rest keep their boxes
    * and give up their bitmaps.

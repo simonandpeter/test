@@ -18,6 +18,7 @@ import { mountChurchControl } from './ui/church-chooser.js';
 import { mountLanguageControl } from './ui/language-chooser.js';
 import { mountCoachmarks } from './ui/coachmark.js';
 import { currentLanguage, ensurePack, languageTag, subscribeLanguage } from './lib/i18n.js';
+import { registerServiceWorker } from './lib/offline.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -574,3 +575,4 @@ async function boot() {
 }
 
 boot();
+registerServiceWorker();

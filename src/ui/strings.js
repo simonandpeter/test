@@ -759,6 +759,14 @@ export const STRINGS = {
     notFoundTitle: 'No such saint',
     notFound: 'There is no saint at this address. The corpus is small and grows folder by folder, so a link that worked yesterday can only be a typo today.',
     failed: 'This saint’s entry could not be loaded. The text lives in a file alongside the rest of the site, so this is usually a network hiccup rather than a missing saint.',
+    /*
+     * The honest offline state (brief §12: "uncached saints show a clear 'Not
+     * available offline' state, not a broken card"). Chosen over `failed`
+     * when the browser says it is offline - the fetch failing for want of a
+     * network is not a hiccup, and telling a reader to retry into no network
+     * is telling them the site is broken when it is the metro that is.
+     */
+    offline: 'This saint has not been read on this device yet, so there is nothing stored to show offline. Saints you have opened or saved are kept; this one needs the network once.',
     retry: 'Try again',
     historicity: {
       attested: 'Attested - documented by sources close to the events.',

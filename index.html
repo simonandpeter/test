@@ -12,6 +12,11 @@
      arrived - found in review, 2026-08-27. -->
 <title>The Orthodox Saint</title>
 <meta name="description" content="The saints of the Orthodox Church, church by church - Russian, Romanian, Greek and Serbian, each in its own calendar." />
+<!-- App mode (brief §12): installable, standalone, its own icon. `%BASE_URL%`
+     is Vite's, so the manifest resolves under /test/ on Pages and / locally;
+     start_url and the icons inside it are relative to it for the same reason. -->
+<link rel="manifest" href="%BASE_URL%site.webmanifest" />
+<link rel="apple-touch-icon" href="%BASE_URL%icon-192.png" />
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#e5e4dd" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1412" />
 <!-- The eight-pointed Orthodox cross (author, 2026-08-24). It replaces the
