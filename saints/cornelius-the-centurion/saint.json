@@ -10,6 +10,10 @@
     {
       "form": "Sfântul Sfințit Mucenic Corneliu Sutașul",
       "lang": "ro"
+    },
+    {
+      "form": "Корнилий сотник",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -24,13 +28,29 @@
       "display": "1st century",
       "basis": "traditional",
       "note": "Wikipedia’s article “Cornelius the Centurion”: a Roman centurion, the first Gentile to convert, as related in the Acts of the Apostles."
+    },
+    "death": {
+      "earliest": 30,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Сщмч. Корнилия сотника (I)»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 сентября ст. ст. — «Сщмч. Корнилия сотника (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260913.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

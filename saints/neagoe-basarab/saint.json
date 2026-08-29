@@ -1,0 +1,65 @@
+{
+  "slug": "neagoe-basarab",
+  "display_name": "Neagoe Basarab",
+  "office": "Voivode of Wallachia",
+  "names": [
+    {
+      "form": "Sfântul Voievod Neagoe Basarab",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 13 сентября ст. ст. (civil 26 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 26 Septembrie — „Sfântul Voievod Neagoe Basarab”",
+        "url": "https://doxologia.ro/sfantul-voievod-neagoe-basarab",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1481,
+      "latest": 1482,
+      "display": "probably 1481 or 1482",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „s-a născut în ultimul sfert al veacului al XV-lea, probabil în 1481 sau 1482”."
+    },
+    "death": {
+      "earliest": 1521,
+      "latest": 1521,
+      "display": "1521",
+      "basis": "attested",
+      "note": "doxologia.ro’s life of his wife Platonida: „După moartea Voievodului Neagoe Basarab, în 1521…”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

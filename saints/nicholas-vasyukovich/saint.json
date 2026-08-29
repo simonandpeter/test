@@ -1,0 +1,66 @@
+{
+  "slug": "nicholas-vasyukovich",
+  "display_name": "Nicholas (Vasyukovich)",
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Николай (Васюкович)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 сентября ст. ст. — «Сщмчч. Стефана, Александра пресвитеров и Николая диакона (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260913.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "The life: born 28 March 1882, a priest’s son, in the Minsk district."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life: «Он был убит в Минске 26 сентября 1937 года»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

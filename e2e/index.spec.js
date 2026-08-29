@@ -43,6 +43,11 @@ test.beforeEach(async ({ page }) => {
 test('the index opens on the whole corpus, unfiltered and unranked', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
 
+  // 828 since the 26 September batch (2026-08-30): three new martyrs of the
+  // 1937 line, and the Romanian day's five - John the Theologian at last
+  // (his repose is his feast, and the apostle had no folder), Neagoe Basarab
+  // and Platonida his wife, Hira, Gideon. Fourteen Greek-harvest folders
+  // took Russian rows the same day - the corpus is meeting itself.
   // 820 since the 25 September batch (2026-08-30): the Serpukhov and Tiksna
   // venerables, the four new martyrs of the 1937 line, and the Romanian
   // day's three - led by Sergius of Radonezh, who arrives through the
@@ -71,7 +76,7 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
   // them are icons of the Theotokos and one a synaxis, which are not folders
   // (Amendment 31), while Eustathius arrives with his wife and both sons and
   // "the two Anastasii" are two men.
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Unranked is the load-bearing word. Breadth of veneration was offered and
   // never defaulted to, because a corpus sorted by it reads as a ranking of
@@ -118,17 +123,17 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
    * corpus's answer to whatever is ticked, which is what this test is about.
    */
   const group = await facet(page, 'churches');
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
   for (const name of ['Russian', 'Greek', 'Serbian']) await group.getByLabel(name).uncheck();
 
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
   // The count is the corpus's answer; the DOM holds only the cards near the
   // viewport, which at 360 px is far fewer than a hundred and twenty-two.
   await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -205,7 +210,7 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // the life survive, and of the 75 that are silent about time only 11 so
   // much as name a ruler. That is a finding rather than a gap, which is what
   // this tray exists to keep visible.
-  await expect(page.locator('.tray')).toContainText('154 undated');
+  await expect(page.locator('.tray')).toContainText('157 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {
@@ -270,7 +275,7 @@ test('Random saint stays inside the reader own filters', async ({ page }) => {
   // three unticks rather than a tick.
   const only = await facet(page, 'churches');
   for (const name of ['Russian', 'Greek', 'Serbian']) await only.getByLabel(name).uncheck();
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
 
   await page.locator('[data-random]').click();
   await expect(page.locator('h1.saint-name')).toBeVisible();
@@ -816,7 +821,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await onlyCalendar(page, 'Romanian');
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
   // The order is pinned because the card this test opens has to be one that
   // fits between the header and the fold, and card heights come from each
   // icon's aspect ratio — under the Random default (2026-08-24) a deal that
@@ -824,7 +829,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // and the search came back empty. The subject here is what comes back
   // after a trip into a saint, not which saints are on top.
   await chooseSort(page, 'earliest');
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
 
@@ -844,7 +849,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('h1.saint-name')).toHaveText(opened);
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
@@ -853,14 +858,14 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
-  await expect(page.locator('[data-count]')).toHaveText('147');
+  await expect(page.locator('[data-count]')).toHaveText('152');
   expect(await page.evaluate(() => window.scrollY)).toBe(500);
 
   // The nav link is a fresh Index. Landing at the top now eases there
   // (2026-08-27) rather than jumping, so the scroll check polls like the
   // count check beside it instead of reading a single instant.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -908,8 +913,8 @@ test('the header control names the calendar, offers the three, and the Index fol
    * kept below, through the facet — it is the corpus's own shape and worth
    * pinning, only not as a thing the header does.
    */
-  await expect(page.locator('[data-count]')).toHaveText('820');
-  await expect(page.locator('[data-set-aside]')).toContainText('820/820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
+  await expect(page.locator('[data-set-aside]')).toContainText('828/828');
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -927,7 +932,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(open).toHaveText('Romanian');
   // Still the whole corpus: pressing a calendar in the header changes what the
   // Daily page reckons by and nothing about what this page lists.
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -937,7 +942,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   // the hymns now, link them when the readings are published.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 
   /*
@@ -947,10 +952,10 @@ test('the header control names the calendar, offers the three, and the Index fol
    * original eight; Romanian 127; Greek 365, the Synaxaristis listing most of
    * the four weeks one entry per name.
    */
-  for (const [name, count] of [['Russian', '516'], ['Romanian', '147'], ['Greek', '365']]) {
+  for (const [name, count] of [['Russian', '533'], ['Romanian', '152'], ['Greek', '365']]) {
     await onlyCalendar(page, name);
     await expect(page.locator('[data-count]'), name).toHaveText(count);
-    await expect(page.locator('[data-set-aside]'), name).toContainText(count + '/820');
+    await expect(page.locator('[data-set-aside]'), name).toContainText(count + '/828');
   }
 });
 
@@ -1149,10 +1154,10 @@ test('random deals an order, and holds it still under the reader', async ({ page
   // Russian 464, since the Index stopped opening on the
   // reader's own calendar — which is itself the claim that an order is not a
   // filter, seen from the other side.
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
 
   await page.locator('[data-query]').fill('  ');
-  await expect(page.locator('[data-count]')).toHaveText('820');
+  await expect(page.locator('[data-count]')).toHaveText('828');
   expect(await leaders(page)).toBe(dealt);
 });
 
@@ -1178,7 +1183,7 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // Serbian — which is the boundary this test is about.
   // 781/781: the Index stopped opening on the reader's own calendar on
   // 2026-08-28, and what this test is about is the *pack*, not the count.
-  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 820/820.');
+  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 828/828.');
   /*
    * The name in the reader's own language, which this test asserted the
    * *absence* of for two days. The author asked for it on 2026-08-25 ("St
@@ -1479,7 +1484,7 @@ test('every row starts its name at the card margin, picture or no picture', asyn
    * Author, 2026-08-26: "where a saint has no icon, in the row card, remove
    * the empty frame and just print the text all the way to the left margin of
    * the card." An empty 48 px box is a promise of a picture that is not
-   * coming, and 690 of the 820 have none.
+   * coming, and 698 of the 828 have none.
    *
    * **Superseded in its mechanism, kept in its point** (author, 2026-08-27:
    * "Reformat all row cards, put the image to the right side, to the left of
@@ -1758,9 +1763,9 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
   // The unfiltered state first — the page opens on the whole corpus since
   // 2026-08-28 — and then the narrowed one, which is what this line was
   // written about and reads the same either way.
-  await expect(line).toHaveText('820/820 saints listed.');
+  await expect(line).toHaveText('828/828 saints listed.');
   await onlyCalendar(page, 'Romanian');
-  await expect(line).toHaveText('147/820 saints listed.');
+  await expect(line).toHaveText('152/828 saints listed.');
   /*
    * Nothing prints above it, in any state. `not.toBeVisible` is the wrong
    * question: the row is still rendered, because it carries the live region,
@@ -1772,7 +1777,7 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
 
   // A filter moves the numerator, which is what lets the second line go.
   await page.locator('[data-query]').fill('Anthony the Great');
-  await expect(line).toHaveText('1/820 saints listed.');
+  await expect(line).toHaveText('1/828 saints listed.');
   expect(await rowBox()).toBeLessThan(2);
 
   /*
@@ -2378,7 +2383,7 @@ test('the Calendar facet opens on every calendar, and the header no longer narro
   const boxes = page.locator('input[name="churches"]');
   const all = await boxes.count();
   await expect(facetEl.locator('summary')).toContainText('Calendar');
-  await expect(page.locator('[data-set-aside]')).toContainText('820/820');
+  await expect(page.locator('[data-set-aside]')).toContainText('828/828');
   await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
   // Every calendar ticked is where the page opens, so it is not a filter the
   // reader has applied and Clear does not offer itself.
@@ -2390,14 +2395,14 @@ test('the Calendar facet opens on every calendar, and the header no longer narro
   for (const value of ['greek', 'serbian']) {
     await page.locator(`input[name="churches"][value="${value}"]`).uncheck();
   }
-  await expect(page.locator('[data-set-aside]')).toContainText('603/820');
+  await expect(page.locator('[data-set-aside]')).toContainText('617/828');
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   // Changing the calendar in the header puts every box back, rather than
   // cutting the page down to the one the reader just chose.
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-set-aside]')).toContainText('820/820');
+  await expect(page.locator('[data-set-aside]')).toContainText('828/828');
   await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
 });
 
@@ -3928,7 +3933,7 @@ test('the Index opens on every calendar, and says its total in a quieter ink', a
   for (let i = 0; i < count; i += 1) await expect(boxes.nth(i)).toBeChecked();
 
   // The whole corpus, not the reader's own calendar.
-  await expect(page.locator('[data-set-aside]')).toContainText('820/820');
+  await expect(page.locator('[data-set-aside]')).toContainText('828/828');
   // Nothing is being narrowed, so the page does not offer to clear itself.
   await expect(page.locator('[data-clear]')).toBeHidden();
 
@@ -3941,7 +3946,7 @@ test('the Index opens on every calendar, and says its total in a quieter ink', a
       text: dim?.textContent,
     };
   });
-  expect(inks.text).toBe('/820');
+  expect(inks.text).toBe('/828');
   expect(inks.dim, 'the denominator is set in the line own ink').not.toBe(inks.line);
 });
 

@@ -3711,14 +3711,14 @@ test('the day records say where they stop, and the corpus says how far it reache
    * And the reach is a date read off the corpus, not a literal. The literal
    * *here* moves with every day the corpus gains - it is the assertion that
    * the page computes the right answer, and the right answer is a corpus
-   * fact: 25 September 2026 since the fourth 2026-08-30 batch (12 September,
-   * Julian - the leave-taking day: Athanasius of Vysotsk, Bassian of Tiksna,
-   * the 1937 line, and Sergius of Radonezh through the Romanian calendar).
+   * fact: 26 September 2026 since the fifth 2026-08-30 batch (13 September,
+   * Julian - fourteen upgrades and John the Theologian arriving with his
+   * own repose).
    */
   // Not the 27th: that is the Exaltation of the Cross, and a Great Feast day
   // prints the feast's own sentence rather than the reach.
-  await page.goto('/calendar/2026-09-26', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 25 September 2026');
+  await page.goto('/calendar/2026-09-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 26 September 2026');
   await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
 });
 
