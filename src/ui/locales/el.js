@@ -304,6 +304,8 @@ export const el = {
     modeToSearch: 'Σύνθετη αναζήτηση',
     modeToCarousel: 'Λειτουργία καρουζέλ',
     carouselLabel: 'Άγιοι, σε ροή',
+    shuffle: 'Ανακάτεμα',
+    carouselKeys: 'Τα βέλη μετακινούν τη σειρά.',
     random: 'Τυχαίος άγιος',
     clear: 'Καθαρισμός φίλτρων',
     countLabel: 'άγιοι',

@@ -304,6 +304,8 @@ export const ro = {
     modeToSearch: 'Căutare avansată',
     modeToCarousel: 'Mod carusel',
     carouselLabel: 'Sfinți, în trecere',
+    shuffle: 'Amestecă',
+    carouselKeys: 'Săgețile mută rândul.',
     random: 'Un sfânt la întâmplare',
     clear: 'Șterge filtrele',
     countLabel: 'sfinți',

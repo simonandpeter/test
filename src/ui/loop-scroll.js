@@ -156,7 +156,19 @@ export function loopScroll(
   let touchActive = false;
   let touchSettle = 0;
   let paused = false;
-  let focused = false;
+  /*
+   * **Adopted, not assumed false.** The latch used to start false always, and
+   * a carousel rebuild — a late repaint whose packing key changed once fonts
+   * or images settled — constructs a fresh loop around a track that may
+   * *already hold the keyboard's focus*. The old loop was holding the drift
+   * for that focus; the new one started drifting under a reader mid-keystroke,
+   * and wrote its own remembered position over the step they had just made
+   * (found 2026-08-29, wiring the arrow keys). `focusin` cannot re-fire for a
+   * focus that never moved, so construction is the only place this can be
+   * asked. No recent pointer means it is treated as the keyboard's, which is
+   * the same rule `onFocusIn` applies.
+   */
+  let focused = track === document.activeElement || track.contains(document.activeElement);
   let raf = null;
   let pos = null;
   let lastWritten = -1;

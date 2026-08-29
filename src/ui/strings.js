@@ -590,6 +590,14 @@ export const STRINGS = {
     modeToSearch: 'Advanced search',
     modeToCarousel: 'Carousel mode',
     carouselLabel: 'Saints, drifting',
+    /*
+     * The three survivors of cancelled Session 6, taken on their merits
+     * (2026-08-29): the shuffle deals the row a new hand, and the label says
+     * the act rather than the mechanism — no reader owes us the word "seed".
+     * `carouselKeys` is the row's own keyboard, announced on the focused track.
+     */
+    shuffle: 'Shuffle',
+    carouselKeys: 'Arrow keys step the row.',
     random: 'Random saint',
     clear: 'Clear filters',
     countLabel: 'saints',

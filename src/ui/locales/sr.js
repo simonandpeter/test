@@ -304,6 +304,8 @@ export const sr = {
     modeToSearch: 'Напредна претрага',
     modeToCarousel: 'Режим вртешке',
     carouselLabel: 'Светитељи, у смени',
+    shuffle: 'Промешај',
+    carouselKeys: 'Стрелице померају ред.',
     random: 'Насумични светитељ',
     clear: 'Очисти филтере',
     countLabel: 'светитеља',

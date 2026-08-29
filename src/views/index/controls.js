@@ -304,6 +304,18 @@ export function controls(state) {
  */
 let visitSeed = null;
 
+/**
+ * A seed handed in from outside — a shared link's `?seed=`, or the Shuffle
+ * button's fresh deal — becomes the visit's own, so wandering off to the Daily
+ * page and back keeps the order the reader arrived at or asked for. Without
+ * this, `seeded` below would fall back to the visit's original hand the next
+ * time the Index mounted, and the shared order would hold for exactly one page
+ * view.
+ */
+export function adoptSeed(seed) {
+  if (seed) visitSeed = String(seed);
+}
+
 export function seeded(f) {
   if (f.sort === 'random' && !f.shuffleSeed) {
     visitSeed = visitSeed ?? String(Date.now());

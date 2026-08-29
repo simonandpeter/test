@@ -4042,3 +4042,141 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
     .poll(deepest, { timeout: 5000, message: 'a short window packed as deep as a tall one' })
     .toBeLessThan(tallWindow);
 });
+
+/* ---- Session 6's three survivors (2026-08-29) --------------------------- */
+
+/** The row's order, read as the first several slugs in DOM order. */
+const dealtOrder = (page, n = 10) =>
+  page.evaluate(
+    (count) =>
+      // `data-prefetch` is the card's slug - the identity attribute the
+      // carousel actually carries.
+      [...document.querySelectorAll('[data-carousel-track] .cx-card')]
+        .slice(0, count)
+        .map((el) => el.dataset.prefetch),
+    n,
+  );
+
+test('a shared seed deals the same hand, and the address bar carries it', async ({ page }) => {
+  /*
+   * The third survivor of cancelled Session 6. The random order is a pure
+   * function of the seed (`shuffleKey`), so the seed *is* the shuffle, and a
+   * URL carrying it is a dealt row one reader can hand to another. Two visits
+   * with the same seed must agree exactly; the assertion is the first ten
+   * slugs, which 742! orderings do not survive by luck.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto('/saints?seed=e2e-shared-hand', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  const first = await dealtOrder(page);
+
+  await page.goto('/saints?seed=e2e-shared-hand', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  expect(await dealtOrder(page), 'the same seed dealt a different hand').toEqual(first);
+
+  // And the bar keeps the seed, so what is copied is what was seen.
+  expect(new URL(page.url()).search).toBe('?seed=e2e-shared-hand');
+
+  // A different seed is a different hand - over ten slugs, indistinguishable
+  // from certainty, and the guard that the parameter is actually being read.
+  await page.goto('/saints?seed=e2e-other-hand', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  expect(await dealtOrder(page)).not.toEqual(first);
+});
+
+test('Shuffle deals a new hand and writes the new seed', async ({ page }) => {
+  await carouselMode(page);
+  await ready(page);
+  await page.goto('/saints?seed=e2e-before-shuffle', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  const before = await dealtOrder(page);
+
+  const shuffle = page.locator('[data-shuffle]');
+  await expect(shuffle).toBeVisible();
+  /*
+   * Dispatched rather than clicked: the row under it is drifting sideways, and
+   * `locator.click()` re-resolves positions in a way a moving layout can turn
+   * into a miss (CLAUDE.md trap 3's cousin). The press itself is what is under
+   * test, not the hit-testing.
+   */
+  await shuffle.dispatchEvent('click');
+
+  await expect
+    .poll(() => dealtOrder(page), { message: 'the shuffle did not re-deal the row' })
+    .not.toEqual(before);
+  // The bar follows: a new seed, and not the one the reader arrived with.
+  expect(new URL(page.url()).search).toMatch(/^\?seed=/);
+  expect(new URL(page.url()).search).not.toBe('?seed=e2e-before-shuffle');
+});
+
+test('the shuffle is a carousel control, and the search face does not offer it', async ({ page }) => {
+  // The search face already owns chance - the sort control and the die - and a
+  // second control writing the same state is two controls disagreeing.
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-shuffle]')).toBeHidden();
+});
+
+test('arrow keys step the focused row', async ({ page }) => {
+  /*
+   * The first survivor. The track is tabindex="0" and keyboard focus holds the
+   * drift still (loop-scroll's focus rule), so the keys act on a stationary
+   * row. The assertion is the scroll position, before and after, in both
+   * directions - and the premise that focus really did stop the drift is
+   * asserted first, because a drifting row would move on its own and pass the
+   * "it moved" half without the keys doing anything.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  const track = page.locator('[data-carousel-track]');
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  await track.focus();
+  /*
+   * Focus holds the drift, but the page may still owe the row one rebuild — a
+   * late repaint whose packing changed as fonts and pictures settled, which
+   * repositions the track once. So the premise is polled to *stillness* rather
+   * than read twice at a fixed delay: still means two reads a beat apart agree,
+   * which outlives any rebuild rather than racing it. (The rebuild used to
+   * drop the focus hold entirely; loop-scroll adopts an existing focus at
+   * construction now, and this test is what found that.)
+   */
+  let still = await track.evaluate((el) => el.scrollLeft);
+  await expect
+    .poll(
+      async () => {
+        const a = await track.evaluate((el) => el.scrollLeft);
+        await page.waitForTimeout(300);
+        const b = await track.evaluate((el) => el.scrollLeft);
+        still = b;
+        return Math.abs(b - a);
+      },
+      { message: 'focus never held the row still', timeout: 10000 },
+    )
+    .toBeLessThan(1);
+
+  /*
+   * **Baseline and press in one evaluate**, because the page still owes the row
+   * a late rebuild on a cold load, and a rebuild repositions the track: a
+   * baseline read in one round-trip and a key pressed in the next left a
+   * window for the rebuild to move the goalposts, which read as "ArrowRight
+   * did not step the row" about one run in three on mobile-360. Dispatching
+   * the key is the same listener the real key reaches — the handler is on the
+   * track and calls preventDefault, so there is no default action being
+   * skipped — and it is the suite's own idiom for a press whose target moves
+   * (trap 3). The step is an instant write, so the read that follows it is the
+   * answer — no animation to outwait, which is also why the step survives the
+   * loop's wrap teleports (the write and the wrap land in the same breath).
+   */
+  const step = (key) =>
+    track.evaluate((el, k) => {
+      const before = el.scrollLeft;
+      el.dispatchEvent(new KeyboardEvent('keydown', { key: k, bubbles: true, cancelable: true }));
+      return el.scrollLeft - before;
+    }, key);
+
+  expect(await step('ArrowRight'), 'ArrowRight did not step the row').toBeGreaterThan(50);
+  expect(await step('ArrowLeft'), 'ArrowLeft did not step back').toBeLessThan(-50);
+});

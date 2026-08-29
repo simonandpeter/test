@@ -310,6 +310,8 @@ export const ru = {
     modeToSearch: 'Расширенный поиск',
     modeToCarousel: 'Режим карусели',
     carouselLabel: 'Святые, чередой',
+    shuffle: 'Перемешать',
+    carouselKeys: 'Стрелки сдвигают ряд.',
     random: 'Случайный святой',
     clear: 'Сбросить фильтры',
     countLabel: 'святых',

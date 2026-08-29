@@ -768,10 +768,24 @@ html.is-rolling #view {
   margin: 0;
 }
 
+/* Shuffle wears the mode toggle's dress - a word beside the heading - and
+   shows only on the carousel face: the search face already owns chance through
+   the sort control and the die, and a second way to the same deal would be two
+   controls disagreeing about one state. The heading keeps them apart with the
+   head's own gap; `margin-left: auto` walks the pair to the right edge. */
+.shuffle-btn {
+  margin-left: auto;
+}
+
+.is-search .shuffle-btn {
+  display: none;
+}
+
 /* No frame around it (author, 2026-08-27: "Remove the bubble frame around the
    carousel button"). It is a word beside a heading now — the underline on
    hover is the affordance, the same one a name in a register carries. */
-.mode-toggle {
+.mode-toggle,
+.shuffle-btn {
   flex: none;
   min-height: var(--facet-h);
   padding: var(--facet-pad-y) 0;
@@ -784,7 +798,8 @@ html.is-rolling #view {
   transition: color var(--dur) var(--ease);
 }
 
-.mode-toggle:hover {
+.mode-toggle:hover,
+.shuffle-btn:hover {
   color: var(--ink);
   text-decoration: underline;
 }

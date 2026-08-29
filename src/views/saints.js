@@ -25,9 +25,11 @@ import * as store from '../lib/store.js';
 import { state, open as openState, close as closeState } from './index/state.js';
 import {
   LAYOUTS,
+  adoptSeed,
   controls,
   defaultLayout,
   seeded,
+  setChoice,
   syncCalendarFacet,
   wireControls,
 } from './index/controls.js';
@@ -66,6 +68,19 @@ export function render(el, { data, router, nav }) {
 
   const cards = data.saints;
   const settings = store.getSettings();
+  /*
+   * **A shared link's order is the order it opens on** (Session 6's third
+   * survivor, 2026-08-29). The random sort is a pure function of a seed
+   * (`shuffleKey`), so the seed *is* the shuffle — carrying it in the URL is
+   * what makes a dealt row a thing one reader can hand to another. Read before
+   * the filters are seeded, and adopted as the visit's own so leaving and
+   * coming back keeps it; `reflectSeed` below writes the other direction.
+   *
+   * The router never produces a query string, so this can only be an arrival —
+   * a paste, a bookmark, a message — which is exactly the case it is for.
+   */
+  const sharedSeed = new URLSearchParams(location.search).get('seed');
+  adoptSeed(sharedSeed);
   openState({
     el,
     data,
@@ -96,6 +111,17 @@ export function render(el, { data, router, nav }) {
     detailed: settings.indexDetailed === true,
     loop: null,
     finePointer: window.matchMedia('(pointer: fine)').matches,
+    /*
+     * Whether the address bar should carry the seed. **Only when the reader
+     * made this hand theirs** — they arrived on a shared link, or pressed
+     * Shuffle — and never on a plain visit, because a URL that always carried
+     * the seed would make every reload repeat the hand, and "a fresh visit
+     * deals a new hand" is a recorded author decision (2026-08-24: "each time
+     * you open the site you get exposed to more saints") with a test pinning
+     * it. The deep link *reads* unconditionally; it is only the writing that
+     * asks for a reason.
+     */
+    seedShared: Boolean(sharedSeed),
     named: null,
     cleanups: [],
   });
@@ -109,6 +135,10 @@ export function render(el, { data, router, nav }) {
   el.innerHTML = `
     <div class="index-head">
       <h1>${STRINGS.saints.title}</h1>
+      <!-- Session 6's second survivor: a new hand for the row, on the face
+           that has no sort control to ask twice from. Hidden on the search
+           face by CSS - the die and the sort chips already own chance there. -->
+      <button type="button" class="shuffle-btn utility" data-shuffle>${esc(STRINGS.saints.shuffle)}</button>
       <button type="button" class="mode-toggle utility" data-mode-toggle
         ><span class="mode-label" data-mode-label></span></button>
     </div>
@@ -144,6 +174,8 @@ export function render(el, { data, router, nav }) {
     state.mode === 'carousel' ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel;
   syncCalendarFacet();
   wireControls({ onChange: update });
+  wireShuffle();
+  wireCarouselKeys();
   wireSticky();
   wireGrid({ onChange: update });
   // The header's control can change the church while the grid is open, and
@@ -168,6 +200,83 @@ export function render(el, { data, router, nav }) {
     paintWindow();
   }
   loadSearch(cards, { onChange: update });
+  reflectSeed();
+}
+
+/**
+ * A fresh hand, dealt on request. The sort is put to Random through
+ * `setChoice`, so the search face's own control tells the truth if the reader
+ * flips over to look — a state changed behind a control is a control that
+ * lies. The new seed goes through `adoptSeed` for the same reason the URL's
+ * does: a shuffle the reader asked for should survive a trip to a saint's
+ * page and back.
+ */
+function wireShuffle() {
+  const { el } = state;
+  el.querySelector('[data-shuffle]').addEventListener('click', () => {
+    const seed = String(Date.now());
+    adoptSeed(seed);
+    // A hand the reader dealt is a hand worth keeping and handing on: the
+    // press is what makes the seed theirs, so the press is what puts it in
+    // the bar.
+    state.seedShared = true;
+    setChoice(el.querySelector('.index-controls'), 'sort', 'random');
+    state.filters = { ...state.filters, sort: 'random', shuffleSeed: seed };
+    update({ animate: true });
+  });
+}
+
+/**
+ * Arrow keys step the row (Session 6's first survivor). The track is already
+ * `tabindex="0"` and **keyboard focus holds the drift still** (ui/loop-scroll's
+ * focus rule), so the keys act on a stationary row rather than chasing one.
+ * The write goes straight to `scrollLeft`; the loop's own scroll handler
+ * adopts any position it did not write itself, which is the seam built for
+ * exactly this.
+ */
+function wireCarouselKeys() {
+  const { el } = state;
+  const track = el.querySelector('[data-carousel-track]');
+  track.setAttribute('aria-description', STRINGS.saints.carouselKeys);
+  track.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    e.preventDefault();
+    // One column per press: the cell is the row's own unit, measured off the
+    // first one rather than recomputed from tokens - a probe of what is
+    // actually there. 166 only if the row is somehow empty.
+    const cell = track.querySelector('.cx-cell, .cx-card');
+    const step = (cell?.getBoundingClientRect().width ?? 150) + 16;
+    /*
+     * **Instant, not smooth — and not as a motion opinion.** A smooth scrollBy
+     * aims at an absolute position, and the loop's own `wrap()` teleports the
+     * track a whole period whenever it nears an edge: the animation then eases
+     * toward a target from the *old* frame of reference, and on a narrow
+     * screen — short period, frequent wraps — a press moved the row 4 px
+     * instead of a column. A direct write is applied and wrapped in the same
+     * breath, which is the seam `onScroll` adopts external positions through.
+     */
+    track.scrollLeft += e.key === 'ArrowLeft' ? -step : step;
+  });
+}
+
+/**
+ * The seed, written into the address bar so it can be copied.
+ *
+ * `replaceState`, never `pushState`: the order is a property of the page the
+ * reader is on, not a place they went, and Back should leave the site rather
+ * than step through old shuffles. Stripped when the sort is not Random -
+ * a seed on a name-sorted page would be a claim the URL cannot keep.
+ */
+function reflectSeed() {
+  if (!state) return;
+  const random = state.filters.sort === 'random' && state.filters.shuffleSeed;
+  const next = state.seedShared && random ? `?seed=${encodeURIComponent(state.filters.shuffleSeed)}` : '';
+  // Leaving Random orphans the seed twice over: strip it, and stop writing it
+  // back if the reader returns to Random later - the new hand is not the one
+  // the link named.
+  if (!random) state.seedShared = false;
+  if (location.search === next) return;
+  history.replaceState(null, '', location.pathname + next);
 }
 
 
@@ -194,4 +303,7 @@ function update({ animate }) {
   // The carousel draws from the same filtered set, so it follows a search or a
   // filter change like the grid does. It is a no-op when the pool has not moved.
   if (state.mode === 'carousel') paintCarousel();
+  // The address bar follows the sort: a seed appears with Random and goes with
+  // it, whichever control made the change.
+  reflectSeed();
 }
