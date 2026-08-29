@@ -6,6 +6,101 @@
   max-width: 65ch;
 }
 
+/* ---- the stage -------------------------------------------------------- */
+
+/* **The map is the window** (author, 2026-08-29: "make sure on mobile and
+   desktop the map is the whole window, under the header, not just a predefined
+   window").
+
+   The column belongs to `main`, not to anything this view renders, so `main`
+   is what gives it up. The section is published as `data-route` on the root —
+   by index.html before first paint and by main.js on every navigation after —
+   because a rule that only applied once the modules had parsed would paint the
+   column for a frame and the window after it, which measured 0.21 of layout
+   shift against a budget of 0.02.
+
+   No `100vw` anywhere: on a desktop with a vertical scrollbar `100vw` is wider
+   than the page, and the quality floor's horizontal-overflow check catches it.
+   Staying in the normal flow avoids the trap rather than working around it. */
+html[data-route='map'] main.chrome {
+  max-width: none;
+  padding: 0;
+}
+
+/* As tall as the space under the sticky bar, and no taller.
+
+   `--chrome-h-reserve` is the header's *declared* height (base.css), not the
+   `--chrome-h` main.js measures and publishes — those are 75.5625px and 76px,
+   and the difference matters here for one reason: the declared one is a CSS
+   value available at first paint, so the stage is its final height before a
+   line of JavaScript runs. Deriving it from the measured one would size the map
+   after boot, which is the layout shift §13 forbids and which this view used to
+   avoid with `aspect-ratio`.
+
+   `svh`, not `vh`: the *small* viewport height is the one with a phone's URL bar
+   showing, and it does not change as the bar comes and goes. base.css argues the
+   same choice for `body` — a stage that resized on every scroll gesture would
+   repaint the canvas each time. */
+.map-stage {
+  position: relative;
+  height: calc(100svh - var(--chrome-h-reserve));
+}
+
+.map-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--field);
+  /* Vertical page scroll stays the browser's until the reader has zoomed in on
+     purpose; views/map.js swaps this to `none` at that point and back on Reset.
+     A map that eats a thumb-swipe is a trap, and it is the reader who wanted to
+     scroll past who pays for it. That matters far more now the map is the whole
+     window than it did when it was a box in the middle of a page. */
+  touch-action: pan-y;
+}
+
+/* The pointer says what a drag will do, and only once there is somewhere to
+   drag to: at scale 1 the world already fills the box and panning is refused
+   by the arithmetic, so a grab cursor there would be a promise the map breaks. */
+.map-stage canvas.is-pannable {
+  cursor: grab;
+}
+
+.map-stage canvas.is-pannable:active {
+  cursor: grabbing;
+}
+
+/* ---- what sits on the map ---------------------------------------------- */
+
+/* The page's name and its legend, drawn over the map's top-left rather than
+   above it — the map is the page, so nothing gets to push it down the screen.
+   §8.3 asks for the current kind to be "visible in the legend at all times",
+   and on a full-window map that means on the map. */
+.map-legend {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  /* Never wider than the room it has, so a five-language legend wraps inside
+     its own box instead of running under the zoom controls. */
+  max-width: calc(100% - var(--space-6));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+/* An h1 at display size would be a title card over a map. It is still the
+   page's h1, still first in the document, and still what a screen reader
+   announces — it is only drawn at the size a legend wants. */
+.map-title {
+  margin: 0;
+  font-size: 21px;
+}
+
 /* ---- the kind selector ------------------------------------------------- */
 
 /* Four facts, one dot each, and the reader says which one they are looking at
@@ -16,7 +111,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-bottom: var(--space-4);
 }
 
 .map-kind {
@@ -42,59 +136,16 @@
   color: inherit;
 }
 
-/* ---- the picture ------------------------------------------------------- */
-
-.map-figure {
-  margin: 0 0 var(--space-6);
-}
-
-/* **The box is reserved before the coastline arrives.** `aspect-ratio` from the
-   projection's own number (lib/mercator.js exports it, and a unit test pins it),
-   so the figure is exactly as tall empty as full and the fetch cannot move the
-   page under the reader — brief §13's no-layout-shift, on the one view whose
-   picture is loaded rather than drawn from the manifest.
-
-   `display: block` because an inline canvas sits on the text baseline and
-   leaves a few pixels of descender space below it, which is a gap that appears
-   only once there is something to see. */
-/* The canvas and its controls share a stacking context so the buttons can sit
-   over the picture's own corner rather than below it, where they would push the
-   list down and cost the figure its reserved height. */
-.map-frame {
-  position: relative;
-}
-
-.map-figure canvas {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.1243;
-  background: var(--field);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-panel);
-  /* Vertical page scroll stays the browser's until the reader has zoomed in on
-     purpose; views/map.js swaps this to `none` at that point and back on Reset.
-     A map that eats a thumb-swipe is a trap, and it is the reader who wanted to
-     scroll past who pays for it. */
-  touch-action: pan-y;
-}
-
-/* The pointer says what a drag will do, and only once there is somewhere to
-   drag to: at scale 1 the world already fills the box and panning is refused
-   by the arithmetic, so a grab cursor there would be a promise the map breaks. */
-.map-figure canvas.is-zoomed {
-  cursor: grab;
-}
-
-.map-figure canvas.is-zoomed:active {
-  cursor: grabbing;
-}
-
 /* ---- the zoom controls ------------------------------------------------- */
 
+/* Bottom right of the stage, at every width. They were tucked under the picture
+   on a narrow screen while the map was a small box and the four controls would
+   not fit beside it; a full-window map has the room, so they sit on it
+   everywhere and the special case is gone. */
 .map-zoom {
   position: absolute;
-  right: var(--space-2);
-  bottom: var(--space-2);
+  right: var(--space-3);
+  bottom: var(--space-3);
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -136,31 +187,29 @@
   padding: var(--space-1) var(--space-2);
 }
 
-/* Narrow: the four controls and a 360 px picture are a tight fit in a corner,
-   so they come out of the corner and sit under the picture as an ordinary row.
+/* ---- below the map ----------------------------------------------------- */
 
-   **The first version hid the wordy one instead, and that was wrong twice
-   over.** A clipped button is still in the layout, so it sat under the minus
-   and swallowed its presses — the suite caught that at 360. And on a phone the
-   gestures are the *only* other way to move the map, so taking away the
-   labelled way back to the whole world leaves a reader who zoomed in with
-   nothing but repeated presses of minus. Below the picture, everything fits and
-   nothing is hidden from anyone. */
-@media (max-width: 419.98px) {
-  .map-zoom {
-    position: static;
-    margin-top: var(--space-2);
-    justify-content: flex-end;
-    /* The row is the page's own ground here, not a panel floating on a picture. */
-    background: none;
-    border: 0;
-    padding: 0;
-  }
+/* The column comes back for the reading. `main` gave up its own so the stage
+   could have the window; everything after the stage is prose and a register,
+   and prose wants a measure. Same numbers as `.chrome` in base.css, because it
+   is the same column — a reader should not be able to tell that the page
+   stopped using one and started using another. */
+/* The rule between the map and the reading belongs to *this* box, not to the
+   stage. It was `border-bottom` on the stage for one build, and because
+   `box-sizing` is border-box everywhere that quietly took a pixel out of the
+   canvas's own height — the map came out 1 px short of the window it is
+   supposed to be, which the suite caught to the pixel. Nothing else about the
+   line changes; it is drawn by the box below instead of the box above. */
+.map-below {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-16);
+  border-top: 1px solid var(--rule);
 }
 
 .map-caption {
   color: var(--ink-soft);
-  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 /* ---- the list, which is the map --------------------------------------- */

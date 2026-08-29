@@ -44,6 +44,21 @@
     } catch (e) {
       /* storage disabled — system-light default, harmless */
     }
+    /*
+     * Which section this is, before first paint, for the same reason the theme
+     * is: the map gives up `main`'s column and takes the whole window, and a
+     * stylesheet that only learns that once the modules have parsed paints the
+     * column first and the window second. That is a 0.21 layout shift on a
+     * criterion the brief calls non-negotiable (§13), and the quality floor
+     * caught it the moment the map went full-bleed.
+     *
+     * main.js keeps this in step on every navigation; this is only the first
+     * frame, which is the one JavaScript is too late for. Path-suffix matching
+     * rather than the router's own table, because the app is served under
+     * /test/ on Pages and under / everywhere else — and because a routing table
+     * inlined in the head would be a second copy of routes.
+     */
+    document.documentElement.dataset.route = /\/map\/?$/.test(location.pathname) ? 'map' : '';
   })();
 </script>
 </head>

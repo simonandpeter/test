@@ -135,12 +135,14 @@ test('the saints with no place are named, not dropped', async ({ page }) => {
   await expect(tray.locator('.map-unlocated-list .reg-name').first()).toHaveAttribute('href', /\/saints\//);
 });
 
-test('the picture reserves its box before the coastline arrives', async ({ page }) => {
+test('the map is the window, and holds that size before the coastline arrives', async ({ page }) => {
   /*
-   * Brief §13's no-layout-shift, on the one view whose picture is fetched. The
-   * figure's height comes from `aspect-ratio` in CSS, so it is the same before
-   * the chunk lands as after — measured either side of the load rather than
-   * inferred from the stylesheet.
+   * **The map is the whole window under the header** (author, 2026-08-29: "make
+   * sure on mobile and desktop the map is the whole window, under the header,
+   * not just a predefined window"), which is two claims worth pinning: it fills
+   * the viewport's width and the space under the sticky bar, and it is that
+   * size before the coastline lands as well as after — brief §13's
+   * no-layout-shift, on the one view whose picture is fetched.
    *
    * `domcontentloaded`, not `networkidle`: the point is to be looking before
    * the coastline has had a chance to arrive.
@@ -155,8 +157,21 @@ test('the picture reserves its box before the coastline arrives', async ({ page 
 
   expect(after.height).toBeCloseTo(before.height, 0);
   expect(after.width).toBeCloseTo(before.width, 0);
-  // A box with no height would satisfy the equality above and show nothing.
-  expect(before.height).toBeGreaterThan(100);
+
+  /*
+   * The whole window, measured rather than assumed: the full viewport width,
+   * and the height left under the bar. `--chrome-h-reserve` is where that
+   * second number comes from, so this is also what catches the two drifting
+   * apart — a header that grew without the token growing would leave the map
+   * hanging off the bottom of the screen with nothing else to say so.
+   */
+  const room = await page.evaluate(() => ({
+    vw: document.documentElement.clientWidth,
+    vh: window.innerHeight,
+    bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
+  }));
+  expect(after.width).toBeCloseTo(room.vw, 0);
+  expect(after.height).toBeCloseTo(room.vh - room.bar, 0);
 });
 
 /* ---- zoom and pan (2026-08-29) ----------------------------------------- */
@@ -313,4 +328,26 @@ test('zooming does not move the page under the reader', async ({ page }) => {
   expect(after.height).toBeCloseTo(before.height, 0);
   expect(after.width).toBeCloseTo(before.width, 0);
   expect(await gap()).toBeCloseTo(gapBefore, 0);
+});
+
+test('the world is not stretched to fit the window', async ({ page }) => {
+  /*
+   * The bug this exists for: the stage became the browser window on 2026-08-29
+   * and the painter went on sizing its backing store to the projection's own
+   * 1.1243, so the browser scaled a 1.12:1 bitmap into whatever shape the
+   * window was. Egypt was visibly taller than Egypt, and **every other test
+   * here still passed** — the coastline drew, the dots landed, the list matched.
+   * Only looking at it caught it.
+   *
+   * So: the canvas's pixels are its CSS box's shape, and a degree of longitude
+   * measures the same as a degree of latitude at the equator, which is the one
+   * thing Mercator guarantees and the one thing a stretch would break.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  const shape = await page.locator('[data-map]').evaluate((el) => {
+    const box = el.getBoundingClientRect();
+    return { css: box.width / box.height, pixels: el.width / el.height };
+  });
+  expect(shape.pixels, 'the backing store is a different shape from the box, so it is being stretched').toBeCloseTo(shape.css, 2);
 });

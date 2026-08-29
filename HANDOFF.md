@@ -32,7 +32,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **221 unit, 608 browser** across two projects. `npm run test:all`.
+- **225 unit, 610 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -182,6 +182,19 @@ scrolls the page as it always did; only Ctrl zooms. Touch keeps `pan-y` until
 the reader has deliberately zoomed in, and one press of Reset hands it back. A
 map that eats a thumb-swipe is a trap, and it is the reader who wanted to scroll
 *past* it who pays.
+
+**The stage is the whole window 2026-08-29** (author: "make sure on mobile and
+desktop the map is the whole window, under the header, not just a predefined
+window"). `main` gives up its column on `html[data-route='map']`, and that
+attribute is written by **index.html before first paint** as well as by main.js
+— in JS alone it measured 0.21 of layout shift, which the §13 gate caught.
+
+The world now **covers** its box rather than fitting in it (`coverFractions`):
+a window is whatever shape the reader made it, fitting would letterbox, and the
+first attempt simply stretched the picture — Egypt was visibly taller than
+Egypt, with every other test still green. One axis is cropped instead, and that
+axis can be panned even at 1.0x, including sideways by thumb, or the Americas
+would be unreachable on a phone.
 
 Still not done: the Index's filter set (the map filters by church only), which
 is small next to the data.

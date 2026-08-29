@@ -1,5 +1,5 @@
 import { chosenChurch, churchName, keptBy } from '../lib/church.js';
-import { HOME, MAX_SCALE, MIN_SCALE, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
 import { softness } from '../lib/uncertainty.js';
@@ -70,9 +70,21 @@ const ZOOM_STEP = 1.6;
  * composition, so "where is Athens in the world" and "which part of the world
  * am I looking at" never get tangled together.
  */
-const place = (lon, lat) => {
+const place = (lon, lat, frame) => {
   const p = project(lon, lat);
-  return toScreen(view, p.x, p.y);
+  return toScreen(view, p.x, p.y, frame);
+};
+
+/**
+ * The cover frame for the canvas as it currently stands — how much of the world
+ * each axis shows at scale 1. The stage is the window, so this changes with the
+ * window and cannot be computed once: every gesture and every repaint asks
+ * again. Without it the clamps and the zoom anchor would both be doing their
+ * arithmetic against a box shape the map does not have.
+ */
+const frameOf = (canvas) => {
+  const box = canvas.getBoundingClientRect();
+  return coverFractions(box.width, box.height, ASPECT);
 };
 
 const located = (card) => (card.locations ?? []).length > 0;
@@ -94,68 +106,86 @@ export function render(el, { data, router }) {
 
   const M = STRINGS.map;
 
+  /*
+   * **The map is the window, not a card in the column** (author, 2026-08-29:
+   * "make sure on mobile and desktop the map is the whole window, under the
+   * header, not just a predefined window").
+   *
+   * So the stage is full-bleed and exactly as tall as the space under the
+   * sticky bar, and the page's own reading — the lede, the register, the tray —
+   * is below it. The two things that had to survive the change:
+   *
+   * - The **h1 stays first in the document**, where a heading belongs and where
+   *   `the heading takes focus on navigation` expects it, and is drawn over the
+   *   map's top-left rather than above it. It is the page's name; the map is
+   *   the page.
+   * - The **kinds stay visible at all times**, which §8.3 asks for by name:
+   *   "make the current kind visible in the legend at all times". They are the
+   *   legend, so they sit on the map with the heading.
+   */
   el.innerHTML = `
-    <h1>${esc(M.title)}</h1>
-    <p class="map-lede">${esc(
-      fill(M.lede, { located: withPlace.length, count: mine.length }),
-    )}${setAside ? ` ${esc(fill(M.setAside, { count: setAside, church: churchName(church) }))}` : ''}</p>
+    <div class="map-stage" data-stage>
+      <!--
+        tabindex="0" and arrow keys, because a canvas the pointer can drag
+        and the keyboard cannot is half a control. The label says the map is
+        movable and how, since a reader who cannot see it has no other way to
+        learn that pressing an arrow does anything.
+      -->
+      <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
 
-    <div class="map-kinds" role="group" aria-label="${esc(M.kindGroup)}">
-      ${KINDS.map(
-        (k) =>
-          `<button type="button" class="map-kind utility" data-kind="${k}"
-             aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
-             <span class="map-kind-count">${pointsOfKind(withPlace, k).length}</span></button>`,
-      ).join('')}
-    </div>
-
-    <figure class="map-figure">
-      <!-- The box is reserved by aspect-ratio in CSS from the projection's own
-           number, so it is the same height before the coastline arrives as
-           after: brief §13's no-layout-shift, on a view whose data is fetched. -->
-      <div class="map-frame">
-        <!--
-          tabindex="0" and arrow keys, because a canvas the pointer can drag
-          and the keyboard cannot is half a control. The label says the map is
-          movable and how, since a reader who cannot see it has no other way to
-          learn that pressing an arrow does anything.
-        -->
-        <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
-        <!--
-          The buttons are not a fallback for the gestures, they are the primary
-          control: they work by keyboard, by screen reader and by touch without
-          anyone having to discover a gesture, and on a phone they are the whole
-          of the zoom. aria-live on the level so a press says what it did.
-        -->
-        <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
-          <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
-          <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
-          <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
-          <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
+      <div class="map-legend">
+        <h1 class="map-title">${esc(M.title)}</h1>
+        <div class="map-kinds" role="group" aria-label="${esc(M.kindGroup)}">
+          ${KINDS.map(
+            (k) =>
+              `<button type="button" class="map-kind utility" data-kind="${k}"
+                 aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
+                 <span class="map-kind-count">${pointsOfKind(withPlace, k).length}</span></button>`,
+          ).join('')}
         </div>
       </div>
-      <figcaption class="map-caption utility" data-caption></figcaption>
-    </figure>
 
-    <h2 class="register-heading">${esc(M.placesHeading)}</h2>
-    <ul class="register map-places" data-places></ul>
+      <!--
+        The buttons are not a fallback for the gestures, they are the primary
+        control: they work by keyboard, by screen reader and by touch without
+        anyone having to discover a gesture, and on a phone they are the whole
+        of the zoom. aria-live on the level so a press says what it did.
+      -->
+      <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
+        <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
+        <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
+        <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
+        <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
+      </div>
+    </div>
 
-    <!-- "They are never silently dropped" (§8.3). The tray is a disclosure and
-         not a footnote: at present it holds all but seven of the corpus, which
-         is the honest shape of this page today and should be impossible to
-         miss. -->
-    <details class="map-unlocated">
-      <summary>${esc(fill(M.unlocated, { count: without.length }))}</summary>
-      <p class="utility">${esc(M.unlocatedNote)}</p>
-      <ul class="register map-unlocated-list">
-        ${without
-          .map(
-            (s) =>
-              `<li class="reg-row"><a class="reg-name" href="${esc(router.href(`/saints/${s.slug}`))}">${esc(saintName(s))}</a></li>`,
-          )
-          .join('')}
-      </ul>
-    </details>`;
+    <div class="map-below">
+      <p class="map-caption utility" data-caption></p>
+
+      <p class="map-lede">${esc(
+        fill(M.lede, { located: withPlace.length, count: mine.length }),
+      )}${setAside ? ` ${esc(fill(M.setAside, { count: setAside, church: churchName(church) }))}` : ''}</p>
+
+      <h2 class="register-heading">${esc(M.placesHeading)}</h2>
+      <ul class="register map-places" data-places></ul>
+
+      <!-- "They are never silently dropped" (§8.3). The tray is a disclosure
+           and not a footnote: at present it holds all but seven of the corpus,
+           which is the honest shape of this page today and should be impossible
+           to miss. -->
+      <details class="map-unlocated">
+        <summary>${esc(fill(M.unlocated, { count: without.length }))}</summary>
+        <p class="utility">${esc(M.unlocatedNote)}</p>
+        <ul class="register map-unlocated-list">
+          ${without
+            .map(
+              (s) =>
+                `<li class="reg-row"><a class="reg-name" href="${esc(router.href(`/saints/${s.slug}`))}">${esc(saintName(s))}</a></li>`,
+            )
+            .join('')}
+        </ul>
+      </details>
+    </div>`;
 
   paintPlaces(el, withPlace, router);
 
@@ -224,7 +254,13 @@ function wireZoom(el, canvas, cards) {
      * a thumb on a phone is almost always trying to do.
      */
     canvas.style.touchAction = view.scale > MIN_SCALE ? 'none' : 'pan-y';
-    canvas.classList.toggle('is-zoomed', view.scale > MIN_SCALE);
+    /*
+     * There is somewhere to go whenever an axis is cropped, which on a window
+     * wider than the projection is true at 1.0x — the poles are off the top and
+     * bottom and no amount of zooming *in* would bring them back, so a reader
+     * who could not pan at rest could never see them at all.
+     */
+    canvas.classList.toggle('is-pannable', canPan(canvas));
     // A number, not a bar: "2.8x" is a fact a screen reader can read out, and
     // `aria-live` means a press on + says what it did rather than only looking
     // like it did something.
@@ -244,7 +280,7 @@ function wireZoom(el, canvas, cards) {
     button.addEventListener('click', () => {
       const how = button.dataset.zoom;
       if (how === 'home') set(HOME);
-      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP));
+      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
       // A disabled button drops focus to the body, which strands the keyboard
       // at the top of the document. Hand it to the map, which is the thing the
       // reader was working.
@@ -266,6 +302,7 @@ function wireZoom(el, canvas, cards) {
           Math.exp(-e.deltaY * 0.002),
           (e.clientX - box.left) / box.width,
           (e.clientY - box.top) / box.height,
+          coverFractions(box.width, box.height, ASPECT),
         ),
       );
     },
@@ -283,7 +320,7 @@ function wireZoom(el, canvas, cards) {
   let pinch = 0;
 
   canvas.addEventListener('pointerdown', (e) => {
-    if (view.scale <= MIN_SCALE && e.pointerType === 'touch') return;
+    if (!canPan(canvas)) return;
     canvas.setPointerCapture(e.pointerId);
     active.set(e.pointerId, e);
     if (active.size === 2) pinch = spread(active);
@@ -299,14 +336,36 @@ function wireZoom(el, canvas, cards) {
       const now = spread(active);
       if (pinch > 0 && now > 0) {
         const mid = midpoint(active);
-        set(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height));
+        set(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT)));
       }
       pinch = now;
       return;
     }
 
-    if (view.scale <= MIN_SCALE) return;
-    set(panBy(view, (e.clientX - previous.clientX) / box.width, (e.clientY - previous.clientY) / box.height));
+    if (!canPan(canvas)) return;
+    /*
+     * **A thumb at rest may pan sideways but never up and down**, and the
+     * canvas's own `touch-action: pan-y` is what makes that safe rather than a
+     * guess: the browser has already claimed the vertical for the page's
+     * scroll, so the only touch moves that reach here at scale 1 are sideways
+     * ones. Dropping `dy` matches this handler to that promise instead of
+     * fighting it.
+     *
+     * It matters most on a phone, where the window is far taller than the
+     * projection and the world is cropped *horizontally*: without this the
+     * Americas and East Asia could not be reached at 1.0x by the one input a
+     * phone has. Once the reader has zoomed in deliberately, `touch-action`
+     * becomes `none` and both axes are the map's.
+     */
+    const held = e.pointerType === 'touch' && view.scale <= MIN_SCALE;
+    set(
+      panBy(
+        view,
+        (e.clientX - previous.clientX) / box.width,
+        held ? 0 : (e.clientY - previous.clientY) / box.height,
+        coverFractions(box.width, box.height, ASPECT),
+      ),
+    );
   });
 
   const release = (e) => {
@@ -324,17 +383,17 @@ function wireZoom(el, canvas, cards) {
   canvas.addEventListener('keydown', (e) => {
     const pan = { ArrowLeft: [-0.1, 0], ArrowRight: [0.1, 0], ArrowUp: [0, -0.1], ArrowDown: [0, 0.1] }[e.key];
     if (pan) {
-      if (view.scale <= MIN_SCALE) return;
+      if (!canPan(canvas)) return;
       e.preventDefault();
-      set(panBy(view, -pan[0], -pan[1]));
+      set(panBy(view, -pan[0], -pan[1], frameOf(canvas)));
       return;
     }
     if (e.key === '+' || e.key === '=') {
       e.preventDefault();
-      set(zoomAbout(view, ZOOM_STEP));
+      set(zoomAbout(view, ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
     } else if (e.key === '-' || e.key === '_') {
       e.preventDefault();
-      set(zoomAbout(view, 1 / ZOOM_STEP));
+      set(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
     } else if (e.key === 'Home' || e.key === '0') {
       e.preventDefault();
       set(HOME);
@@ -342,6 +401,13 @@ function wireZoom(el, canvas, cards) {
   });
 
   apply();
+}
+
+/** Whether the map has anywhere to move: zoomed in, or cropped by its window. */
+function canPan(canvas) {
+  if (view.scale > MIN_SCALE) return true;
+  const frame = frameOf(canvas);
+  return frame.fx < 1 || frame.fy < 1;
 }
 
 /** The distance between the first two live pointers, for a pinch. */
@@ -424,10 +490,22 @@ function paintCanvas(canvas, cards) {
   if (!box.width) return;
 
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  /*
+   * The box's own height, not one derived from the projection.
+   *
+   * It used to be `box.width / ASPECT`, which was right while the map was a
+   * card with `aspect-ratio` on it and wrong the moment the stage became the
+   * window (2026-08-29): the backing store stayed 1.12:1 while the CSS box
+   * became whatever shape the window was, and the browser stretched one into
+   * the other. Egypt was noticeably taller than Egypt. The frame below is what
+   * replaces it — the world covers a box of any shape, and the surplus axis is
+   * cropped rather than squashed.
+   */
   const w = Math.round(box.width);
-  const h = Math.round(box.width / ASPECT);
+  const h = Math.round(box.height);
   canvas.width = Math.round(w * dpr);
   canvas.height = Math.round(h * dpr);
+  const frame = coverFractions(w, h, ASPECT);
 
   const ctx = canvas.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -457,7 +535,7 @@ function paintCanvas(canvas, cards) {
     ctx.beginPath();
     for (const ring of land) {
       for (let i = 0; i < ring.length; i += 2) {
-        const p = place(ring[i], ring[i + 1]);
+        const p = place(ring[i], ring[i + 1], frame);
         const x = p.x * w;
         const y = p.y * h;
         if (i === 0) ctx.moveTo(x, y);
@@ -469,7 +547,7 @@ function paintCanvas(canvas, cards) {
   }
 
   for (const { where } of pointsOfKind(cards, kind)) {
-    const p = place(where.lon, where.lat);
+    const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary. The row for it is
@@ -494,7 +572,7 @@ function paintCanvas(canvas, cards) {
      * would be a thousand pixels of wash over the whole picture, which tells
      * the reader nothing they cannot already read in the row below.
      */
-    const halo = Math.min(softness(where.uncertainty_km) * (w / 360) * view.scale, w / 2);
+    const halo = Math.min((softness(where.uncertainty_km) * (w / 360) * view.scale) / frame.fx, w / 2);
     if (halo > 1) {
       const glow = ctx.createRadialGradient(x, y, 0, x, y, halo);
       glow.addColorStop(0, hexWithAlpha(rubric, 0.45));

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -101,4 +101,70 @@ test('a drag moves the land with the finger at every zoom', () => {
     const after = toScreen(panBy(v, dx, 0), v.cx, v.cy);
     near(after.x - before.x, dx, 1e-9);
   }
+});
+
+/* ---- covering a window of any shape (2026-08-29) ------------------------ */
+
+test('the world covers its box rather than fitting inside it', () => {
+  /*
+   * The stage is the browser window now, and a window is whatever shape the
+   * reader made it. Fitting would letterbox — dead ground down the sides of a
+   * wide desktop, and a map filling less than half a phone. So one axis shows
+   * the whole world and the other is cropped, and which one depends on whether
+   * the box is wider or narrower than the projection.
+   */
+  const A = 1.1243;
+
+  // A wide desktop window: full width, cropped top and bottom.
+  const wide = coverFractions(1280, 860, A);
+  near(wide.fx, 1, 1e-12);
+  assert.ok(wide.fy < 1, `nothing was cropped: fy ${wide.fy}`);
+
+  // A phone: full height, cropped left and right.
+  const tall = coverFractions(360, 700, A);
+  near(tall.fy, 1, 1e-12);
+  assert.ok(tall.fx < 1, `nothing was cropped: fx ${tall.fx}`);
+
+  // A box of the projection's own shape crops nothing at all.
+  const exact = coverFractions(1124.3, 1000, A);
+  near(exact.fx, 1, 1e-6);
+  near(exact.fy, 1, 1e-6);
+});
+
+test('there is nowhere to pan on the axis that already shows everything', () => {
+  const wide = coverFractions(1280, 860, 1.1243);
+  // Full width: sliding sideways is refused, and the crop top-to-bottom is not.
+  const panned = panBy(HOME, 0.3, 0.3, wide);
+  near(panned.cx, 0.5);
+  assert.ok(panned.cy !== 0.5, 'the cropped axis should have somewhere to go');
+});
+
+test('a covered box stays covered, at every scale and in either shape', () => {
+  for (const [w, h] of [[1280, 860], [360, 700], [1000, 1000]]) {
+    const frame = coverFractions(w, h, 1.1243);
+    for (const scale of [1, 2, 5, MAX_SCALE]) {
+      for (const [cx, cy] of [[-5, -5], [5, 5], [0, 1], [1, 0]]) {
+        const v = clampView({ scale, cx, cy }, frame);
+        // The box's own corners still land inside the world — no dead ground
+        // anywhere, which is the promise "cover" makes.
+        const tl = toScreen(v, 0, 0, frame);
+        const br = toScreen(v, 1, 1, frame);
+        assert.ok(tl.x <= 1e-9 && tl.y <= 1e-9, `a gap opened at the top left in ${w}x${h} at ${scale}`);
+        assert.ok(br.x >= 1 - 1e-9 && br.y >= 1 - 1e-9, `a gap opened at the bottom right in ${w}x${h} at ${scale}`);
+      }
+    }
+  }
+});
+
+test('zooming at a point still holds it still in a cropped box', () => {
+  const frame = coverFractions(1280, 860, 1.1243);
+  let v = clampView({ scale: 2, cx: 0.5, cy: 0.5 }, frame);
+  const anchor = [0.3, 0.7];
+  const target = toWorld(v, ...anchor, frame);
+
+  for (let i = 0; i < 6; i++) v = zoomAbout(v, 1.4, ...anchor, frame);
+
+  const now = toScreen(v, target.px, target.py, frame);
+  near(now.x, anchor[0], 1e-6);
+  near(now.y, anchor[1], 1e-6);
 });

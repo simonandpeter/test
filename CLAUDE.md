@@ -51,8 +51,18 @@ is the illustration, and the counts on the kind buttons must match the rows.
 Zoom and pan live in `lib/map-view.js` — also pure, also unit-tested — and the
 rule they are built around is that **a reader must never get stuck**: a bare
 wheel scrolls the page and only Ctrl zooms, and touch keeps `pan-y` until the
-reader has deliberately zoomed in. Clustering, labels and the timeline are
-deferred until the corpus has places — 7 of 742 saints do.
+reader has deliberately zoomed in.
+
+**The stage is the window, not a card** (author, 2026-08-29), which costs two
+things worth knowing. `main` gives up its column on `html[data-route='map']`,
+and that attribute is set by **index.html before first paint** as well as by
+main.js on navigation — set only in JS it is a 0.21 layout shift. And the world
+*covers* a box of any shape (`coverFractions`), so one axis is cropped rather
+than the picture being stretched; the painter must size its backing store from
+the box, never from `ASPECT`.
+
+Clustering, labels and the timeline are deferred until the corpus has places —
+7 of 742 saints do.
 
 **Tokens** — `src/styles/tokens.css`. Two theme blocks; a colour change needs
 both, and **both are now checked**: `tests/contrast.test.mjs` recomputes every
@@ -82,8 +92,8 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~14s, 221).
-- Browser: `e2e/`, one file per surface, 608 across two projects —
+- Unit: `tests/*.test.mjs`, `npm test` (~14s, 225).
+- Browser: `e2e/`, one file per surface, 610 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —

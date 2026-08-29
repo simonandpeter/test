@@ -361,6 +361,19 @@ function show({ route, params, path }, nav = {}) {
     currentView = view ?? null;
     renderNav(route?.nav);
     /*
+     * Which section is on, published to CSS so a stylesheet can answer
+     * questions a view cannot answer about itself — the map wants the whole
+     * window under the header, and the column it would otherwise sit in belongs
+     * to `main`, not to anything the view renders.
+     *
+     * **On the root element, and index.html sets it before first paint too.**
+     * Here alone it would arrive with the modules, and the map would paint in
+     * the column for a frame and then take the window: 0.21 of layout shift on
+     * the one criterion §13 spells out. This keeps it in step from the second
+     * navigation onward; the head does the first frame.
+     */
+    document.documentElement.dataset.route = route?.nav ?? '';
+    /*
      * Every navigation lands at the top of the page it opens, or — a change of
      * section — back where this section was left (`returning`). The first
      * render keeps whatever position the browser gave it. A press of the
