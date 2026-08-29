@@ -1,0 +1,66 @@
+{
+  "slug": "sophronius-of-vratsa",
+  "display_name": "Sophronius of Vratsa",
+  "office": "Bishop of Vratsa",
+  "names": [
+    {
+      "form": "Sfântul Sofronie, Episcopul Vratsei",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 22 Septembrie — „Sfântul Sofronie, Episcopul Vratsei”",
+        "url": "https://doxologia.ro/sfantul-sofronie-episcopul-vratsei",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1739,
+      "latest": 1739,
+      "display": "1739",
+      "basis": "attested",
+      "note": "The life: born 1739 in Kotel, Bulgaria, „potrivit frumoasei lui autobiografii”."
+    },
+    "death": {
+      "earliest": 1813,
+      "latest": 1813,
+      "display": "1813",
+      "basis": "attested",
+      "note": "The life: „A adormit în pace pe 22 sau pe 23 septembrie în anul 1813”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

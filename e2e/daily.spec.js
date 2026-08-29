@@ -3711,11 +3711,11 @@ test('the day records say where they stop, and the corpus says how far it reache
    * And the reach is a date read off the corpus, not a literal. The literal
    * *here* moves with every day the corpus gains - it is the assertion that
    * the page computes the right answer, and the right answer is a corpus
-   * fact: 21 September 2026 since the 2026-08-29 batch (8 September, Julian,
-   * the two Georgian confessors of the Nativity feast day).
+   * fact: 22 September 2026 since the 2026-08-30 batch (9 September, Julian,
+   * the afterfeast day of the thirty-six).
    */
   await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 21 September 2026');
+  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 22 September 2026');
   await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
 });
 
@@ -3877,11 +3877,33 @@ test('a returning Daily page lands where it was left, though it grows after it r
   });
   await press('nav.site-nav a[data-nav-daily]');
 
-  // What the fade shows, not what the page settles to.
-  await expect.poll(() => page.evaluate(() => Math.round(window.__readyScrollY))).toBe(deep);
-  // And it stays there once the hymns have landed and the floor is released.
+  /*
+   * What the fade shows, not what the page settles to - **up to scroll
+   * anchoring's own correction** (2026-08-30). This asserted `toBe(deep)` and
+   * went red the day the calendar rolled to 30 August: on that day's page a
+   * late arrival lands *above* the reader's position, the browser's scroll
+   * anchoring adds the growth to `scrollY` to hold their reading line still,
+   * and the fade honestly showed 1520 for a reader who left at 1500 - the
+   * same line of text, twenty pixels of new content above it. That is the
+   * promise kept, not broken; `toBe` was measuring the number instead of the
+   * line. Which day has such an arrival depends on what today's page holds,
+   * so this is trap 4 wearing a new coat - found because the suite ran on
+   * both sides of midnight.
+   *
+   * The band is one card's worth. The defect this test exists for was a fade
+   * at the top and a 1300 px jump after it; anchoring drift is two orders
+   * smaller, and a clamp to a not-yet-grown page would land *short* of deep,
+   * which the lower bound still catches.
+   */
+  await expect
+    .poll(() => page.evaluate(() => Math.round(window.__readyScrollY)))
+    .toBeGreaterThanOrEqual(deep - 4);
+  const shownAt = await page.evaluate(() => Math.round(window.__readyScrollY));
+  expect(shownAt - deep, 'the fade landed far from where the reader left').toBeLessThanOrEqual(120);
+  // And it stays where the fade showed it once the hymns have landed and the
+  // floor is released.
   await expect(page.locator('[data-hymns]')).toBeVisible();
-  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(deep);
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(shownAt);
   // The floor is a prop for the arrival, not a permanent change to the page.
   await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
 });

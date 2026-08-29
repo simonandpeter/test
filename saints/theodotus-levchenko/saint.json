@@ -1,0 +1,58 @@
+{
+  "slug": "theodotus-levchenko",
+  "display_name": "Theodotus (Levchenko)",
+  "names": [
+    {
+      "form": "Феодот (Левченко)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Named among the Glinsk fathers («Глинских святых»), which is how the day keeps him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 сентября ст. ст. — «Глинских святых: прпп. Василия (1831) … Зиновия Глинского, митр. Тетрицкаройского, в схиме Серафима (1985)»",
+        "url": "https://days.pravoslavie.ru/Days/20260909.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 22 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1859,
+      "latest": 1859,
+      "display": "1859",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Феодот (1859) …»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

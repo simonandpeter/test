@@ -1,0 +1,60 @@
+{
+  "slug": "theodosius-of-chernigov",
+  "display_name": "Theodosius of Chernigov",
+  "office": "Archbishop of Chernigov",
+  "names": [
+    {
+      "form": "Феодосий Черниговский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The uncovering and translation of his relics (1896), which is how the calendar keeps this day; his repose is kept on 5 February."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 сентября ст. ст. — «Обретение и перенесение мощей свт. Феодосия, архиеп. Черниговского (1896)»",
+        "url": "https://days.pravoslavie.ru/Days/20260909.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 22 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1696,
+      "latest": 1696,
+      "display": "1696",
+      "basis": "attested",
+      "note": "The life on days.pravoslavie.ru: «В 1696 году 5 февраля святитель Феодосий скончался…»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

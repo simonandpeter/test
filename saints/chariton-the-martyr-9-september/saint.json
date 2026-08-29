@@ -5,6 +5,10 @@
     {
       "form": "Άγιος Χαρίτων",
       "lang": "el"
+    },
+    {
+      "form": "Харитон",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 9 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 сентября ст. ст. — «Мчч. Харитона и Стратора (Стратоника) (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260909.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -44,5 +57,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Харитона и Стратора (III)». The Greek line prints no year."
+    }
   }
 }

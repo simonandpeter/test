@@ -1,0 +1,58 @@
+{
+  "slug": "cosmas-of-zographou",
+  "display_name": "Cosmas of Zographou",
+  "names": [
+    {
+      "form": "Sfântul Cosma de la Zografu",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 22 Septembrie — „Sfântul Cosma de la Zografu”",
+        "url": "https://doxologia.ro/sfantul-cosma-de-la-zografu",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1323,
+      "latest": 1323,
+      "display": "1323",
+      "basis": "attested",
+      "note": "The life: „Acestea toate s-au întâmplat în anul 1323”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

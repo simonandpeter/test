@@ -1,0 +1,59 @@
+{
+  "slug": "theodosius-of-brazi",
+  "display_name": "Theodosius of Brazi",
+  "office": "Metropolitan of Moldavia",
+  "names": [
+    {
+      "form": "Sfântul Sfințit Mucenic Teodosie de la Mănăstirea Brazi",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 22 Septembrie — „Sfântul Sfințit Mucenic Teodosie de la Mănăstirea Brazi, Mitropolitul Moldovei”",
+        "url": "https://doxologia.ro/sfantul-sfintit-mucenic-teodosie-de-la-manastirea-brazi-mitropolitul-moldovei",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1694,
+      "latest": 1694,
+      "display": "1694",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „în anul 1694 o hoardă de tătari … l-au ucis tăindu-i cinstitul său cap”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

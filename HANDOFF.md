@@ -27,11 +27,11 @@ you inferred, and keep them apart.
 
 ## State (2026-08-29)
 
-- **746 saints**, every one with a life; **1051 attestations**, every one
+- **781 saints**, every one with a life; **1093 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
-  About page says so. **157 undated**; **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **21 September 2026**
-  (Russian 428, Romanian 129, Greek 365, Serbian 129).
+  About page says so. **159 undated**; **130 icons**; 430 hymns, 49 with a
+  published English rendering. The corpus reaches **22 September 2026**
+  (Russian 464, Romanian 135, Greek 365, Serbian 129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -264,7 +264,7 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 21 September.** 600–1,100 folders. Dedupe on the
+- **Saints for the days past 22 September.** 600–1,100 folders. Dedupe on the
   *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
   harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
   sitting — though 21 September was light, being the Nativity of the
