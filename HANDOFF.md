@@ -83,11 +83,12 @@ The third recurred on 2026-08-28 and is now a fact: `fa7abcb` on desktop,
 are, and 2 in ~5 runs is a much higher rate than their 2 in ~38 — the two
 sightings are consecutive green runs. Nothing this session touched goes near it.
 
-**One rumour, seen once and therefore not yet a fact**: `a press on a carousel
-card opens the saint` (`index.spec.js`), which failed one local full run on
-2026-08-29 with "no card was fully in view to press" and passed the next. Local,
-so it is evidence about one desk twice over. Written down because the two flakes
-above were each dismissed at this stage and then recurred.
+**`a press on a carousel card opens the saint` is a fact now**: one local
+sighting on 2026-08-29 ("no card was fully in view to press"), and one on CI
+the same day (`01324b1`, mobile-360, green through the retry). Second sighting,
+different machines. Not yet diagnosed; the card-in-view premise poll is where
+it fails, which smells like the same late-rebuild family the gesture handoff
+fixed - but that is an inference, not a measurement.
 
 **The wheel-cap test was fixed 2026-08-29**: it measures an average over
 fifteen frames with the clamp held pinned, rather than two frames of luck. Four
@@ -99,8 +100,8 @@ day's gesture handoff: the service worker shifted the late carousel rebuild
 into the interaction window and made that flake a hard local failure, which is
 what finally exposed the mechanism — a wheel spun on a dying loop died with it.
 With `handoff`/`inherit` in loop-scroll, two consecutive full local runs are
-clean. Its CI rate was 2-in-5; **watch the flaky line before calling it
-closed.**
+clean. Its CI rate was 2-in-5; the first CI run after the fix (`01324b1`) did
+not touch it. **A few more clean flaky lines before calling it closed.**
 
 The rail's coast is **closed** — never a flake but a negative first `dt` in
 `beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
