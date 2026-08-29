@@ -1,0 +1,57 @@
+{
+  "slug": "athanasius-of-vysotsk",
+  "display_name": "Athanasius of Vysotsk",
+  "names": [
+    {
+      "form": "Афанасий Высоцкий",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 сентября ст. ст. — «Прп. Афанасия Высоцкого, Серпуховского чудотворца (1395)»",
+        "url": "https://days.pravoslavie.ru/Days/20260912.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1395,
+      "latest": 1395,
+      "display": "1395",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Афанасия Высоцкого, Серпуховского чудотворца (1395)» - the year of Athanasius the Younger; the linked life tells the founder’s story, who died in Constantinople in 1401 or later."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

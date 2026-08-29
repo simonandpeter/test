@@ -6,6 +6,10 @@
     {
       "form": "Άγιος Ιουλιανός ο πρεσβύτερος Αγκύρας από τη Γαλατία",
       "lang": "el"
+    },
+    {
+      "form": "Иулиан Галатийский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -25,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 12 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 сентября ст. ст. — «Мч. Иулиана и с ним 40 мучеников (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260912.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

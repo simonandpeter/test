@@ -27,11 +27,11 @@ you inferred, and keep them apart.
 
 ## State (2026-08-30)
 
-- **811 saints**, every one with a life; **1144 attestations**, every one
+- **820 saints**, every one with a life; **1157 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
-  About page says so. **153 undated**; **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **24 September 2026**
-  (Russian 506, Romanian 144, Greek 365, Serbian 129).
+  About page says so. **154 undated**; **130 icons**; 430 hymns, 49 with a
+  published English rendering. The corpus reaches **25 September 2026**
+  (Russian 516, Romanian 147, Greek 365, Serbian 129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -84,11 +84,13 @@ are, and 2 in ~5 runs is a much higher rate than their 2 in ~38 — the two
 sightings are consecutive green runs. Nothing this session touched goes near it.
 
 **`a press on a carousel card opens the saint` is a fact now**: one local
-sighting on 2026-08-29 ("no card was fully in view to press"), and one on CI
-the same day (`01324b1`, mobile-360, green through the retry). Second sighting,
-different machines. Not yet diagnosed; the card-in-view premise poll is where
-it fails, which smells like the same late-rebuild family the gesture handoff
-fixed - but that is an inference, not a measurement.
+sighting on 2026-08-29 ("no card was fully in view to press"), one on CI
+the same day (`01324b1`, mobile-360, green through the retry), and a third
+locally on 2026-08-30 (mobile-360, full parallel suite; 3/3 green rerun in
+isolation immediately after). Three sightings, two machines, always
+mobile-360 under load. Not yet diagnosed; the card-in-view premise poll is
+where it fails, which smells like the same late-rebuild family the gesture
+handoff fixed - but that is an inference, not a measurement.
 
 **The wheel-cap test was fixed 2026-08-29**: it measures an average over
 fifteen frames with the clamp held pinned, rather than two frames of luck. Four
@@ -277,7 +279,7 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 24 September.** 600–1,100 folders. Dedupe on the
+- **Saints for the days past 25 September.** 600–1,100 folders. Dedupe on the
   *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
   harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
   sitting — though 21 September was light, being the Nativity of the

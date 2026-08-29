@@ -1,0 +1,49 @@
+{
+  "slug": "euphrosyne-of-alexandria",
+  "display_name": "Euphrosyne of Alexandria",
+  "names": [
+    {
+      "form": "Sfânta Cuvioasă Eufrosina",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 12 сентября ст. ст. (civil 25 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 25 Septembrie — „Sfânta Cuvioasă Eufrosina”",
+        "url": "https://doxologia.ro/sfanta-cuvioasa-eufrosina",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
