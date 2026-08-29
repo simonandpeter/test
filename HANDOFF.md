@@ -27,8 +27,12 @@ you inferred, and keep them apart.
 
 ## State (2026-08-29)
 
-- **742 saints**, every one with a life and four attestation rows; **162
-  undated**; **130 icons**; 430 hymns, 49 with a published English rendering.
+- **742 saints**, every one with a life; **1047 attestations**, every one
+  `venerated` — no refusal and no sourced absence is recorded yet, and the
+  About page now says so. Rows per saint are **518 with one, 171 with two, 25
+  with three, 28 with four**; the old "four attestation rows" here was wrong.
+  **157 undated** (it said 162; `manifest.meta.json` and `index.spec.js` both
+  say 157); **130 icons**; 430 hymns, 49 with a published English rendering.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -204,6 +208,23 @@ is small next to the data.
 purpose — two strings per location across 5,000 saints is real weight on the one
 request the site boots from. The saint's own page names the village.
 
+### Session 9 — the About page — done 2026-08-29 (Amendment 72)
+
+Brief §8.4's editorial policy, written as substance: what the site claims and
+refuses to claim, the three attestation states and why collapsing two of them
+would flatter the better-digitised church, dates as intervals, the calendars per
+church, the sourcing, and the coverage.
+
+**Nothing on it states a number.** `loadManifestMeta()` finally has its caller,
+and `by_source` was added to the meta so the page can name the publications the
+corpus *actually cites* rather than the registry's prose about daily calendars —
+121 of the 127 Romanian attestations cite doxologia.ro while the registry note
+names Basilica, and both statements are true about different things.
+
+Still Session 9's, and not done: the PWA and offline shell.
+
+**No LICENSE file exists**, so the page does not claim one — see Outstanding.
+
 ### Done or cancelled
 
 - **Session 5b** (efficiency pass) — done 2026-08-28, all five items.
@@ -279,6 +300,16 @@ request the site boots from. The saint's own page names the village.
   possible desktop layout design.
 - **The uncertainty curve now has a shipping consumer** — the map's halos
   (2026-08-29). Date bars and timeline dissolves are still the unspent two.
+- **There is no LICENSE file.** Brief §8.4 lists the licence among the things
+  the About page must state, and the page states everything else on that list.
+  It does not invent one: the *images* carry their own licences per file
+  (`lib/licence.js`), and that is said on each saint's page, but the site's own
+  terms — the code, and the lives, which are the author's paraphrase — are
+  unstated anywhere in the repository. **A rights question, so the author's.**
+- **The manifest budget line above says 864 KB**, which predates the shipping
+  manifest: `npm run build:manifest` reports **328 KB gzipped projected at
+  5,000** today. Left as the author wrote it pending a re-check of which
+  projection is meant.
 
 ## Provenance
 

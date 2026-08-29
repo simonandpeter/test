@@ -824,13 +824,75 @@ export const STRINGS = {
 
   about: {
     title: 'About',
-    placeholder: 'This page will state the editorial policy plainly: the inclusion criterion, the attestation model, the calendar conversion rules, the coverage statistics, the sourcing, the licence, and how to submit a correction. It is written as substance in Session 9, not boilerplate now.',
+    /*
+     * The editorial policy, written 2026-08-29 against what the code and the
+     * corpus actually do (brief §8.4: "write it as substance, not boilerplate";
+     * it is "the project's defence against the objection that it takes sides").
+     *
+     * Every claim below was checked against the thing that would make it false:
+     * the three states against `schema/saint.schema.json`, the calendars
+     * against `src/data/churches.js`, the counts against
+     * `data/manifest.meta.json` - which is why the counts are not written here
+     * at all but read at render time. A statistic typed into a sentence is
+     * stale the next time a folder is added.
+     */
+    policy: {
+      heading: 'What this site claims',
+      /*
+       * Brief §2's first principle, in the reader's words rather than the
+       * repository's. The distinction it draws is the whole project: a
+       * commemoration is a fact about a church, and this site reports those
+       * facts rather than settling them.
+       */
+      attest: 'This site never says that someone is a saint. It reports that a named church commemorates them, on a stated day, according to a source you can open. Where two churches differ, both are shown, and neither is corrected.',
+      statesHeading: 'Three answers, not two',
+      /*
+       * §2 again: collapsing "not venerated" into "undocumented" would
+       * systematically flatter whichever tradition is better digitised, which
+       * is the specific bias this project exists to avoid.
+       */
+      states: 'For each church a figure is *venerated*, *not venerated*, or *undocumented*. The first two are findings and both require a citation; the third means only that we have not sourced it. Treating a gap in our reading as a refusal would quietly favour whichever church publishes most on the web.',
+      datesHeading: 'Dates are intervals',
+      dates: 'Every date is a range, and a date known exactly is a range whose ends meet. Where a life is uncertain the page says so rather than choosing a year - an undated saint is listed as undated, not omitted.',
+    },
+    calendars: {
+      heading: 'The calendars',
+      lede: 'Fixed feasts are stored with the calendar they were given in and converted for display; they are never rewritten into one reckoning. Pascha and everything that moves with it are reckoned by the Julian computus in all four churches.',
+      /** One line per church: which reckoning it keeps. */
+      old: 'Old Calendar - fixed feasts by the Julian reckoning, thirteen days behind the civil date until 2100.',
+      new: 'New Calendar - fixed feasts on the civil date.',
+    },
+    sourcing: {
+      heading: 'Where it comes from',
+      lede: 'Each commemoration is taken from that church\'s own published calendar or synaxarion, and every saint\'s page links the page it was read from. These are the publications the corpus cites today.',
+      /** "{count} commemorations from {host}" - the numbers are read, not typed. */
+      fromHost: '{count} from {host}',
+      lives: 'The lives are written here from the sources each page names. They are in English only: they are paraphrase, and machine-translating a life would turn a sourced claim about a person into an unsourced one.',
+    },
+    coverage: {
+      heading: 'How much is here',
+      lede: 'Counted from the corpus at the last build rather than stated from memory.',
+      saints: '{count} saints',
+      commemorations: '{count} commemorations across four churches',
+      undated: '{count} with no date recorded',
+      located: '{count} with a place we can point to',
+      /*
+       * The most honest line on the page, and the one that will date fastest.
+       * Every attestation in the corpus is currently a *positive* finding: no
+       * refusal and no sourced "we looked and found nothing" has been recorded
+       * yet. Saying so is the difference between a coverage statistic and a
+       * claim about the churches.
+       */
+      positiveOnly: 'Every attestation recorded so far is a positive one. No refusal and no sourced absence has been entered yet, so a church missing from a saint\'s page means we have not read that church on them - not that it does not keep them.',
+      built: 'Counted {when}.',
+      unavailable: 'The coverage figures could not be loaded.',
+    },
     /*
      * Privacy (author, 2026-08-24). Written against what the code actually
      * does rather than as boilerplate: lib/settings.js owns the localStorage
      * key and lib/store.js the four IndexedDB stores, and this text names
      * exactly those and nothing else. If either grows a field, this changes
-     * with it — a privacy policy that has drifted from the code is worse than
+     * with it - a privacy policy that has drifted from the code is worse than
      * none, because a reader has no way to tell.
      */
     privacy: {

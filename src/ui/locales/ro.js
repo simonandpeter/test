@@ -444,7 +444,37 @@ export const ro = {
 
   about: {
     title: 'Despre',
-    placeholder: 'Această pagină va spune limpede politica editorială: criteriul de includere, modelul mărturiilor, regulile de convertire a calendarelor, statistica acoperirii, sursele, licența și cum se trimite o îndreptare. Va fi scrisă pe fond în sesiunea a 9-a, nu umplută cu șabloane acum.',
+    policy: {
+      heading: 'Ce susține acest sit',
+      attest: 'Acest sit nu spune niciodată că cineva este sfânt. El arată că o Biserică anume îl pomenește, într-o zi precizată, după un izvor pe care îl puteți deschide. Unde două Biserici se deosebesc, sunt arătate amândouă, și niciuna nu este îndreptată.',
+      statesHeading: 'Trei răspunsuri, nu două',
+      states: 'Pentru fiecare Biserică, un chip este *cinstit*, *necinstit* sau *nedocumentat*. Primele două sunt constatări și cer amândouă o trimitere; al treilea înseamnă doar că nu am cercetat. A socoti un gol din citirea noastră drept o respingere ar măguli pe tăcute Biserica ce publică mai mult pe internet.',
+      datesHeading: 'Datele sunt intervale',
+      dates: 'Orice dată este un interval, iar o dată știută întocmai este un interval ale cărui capete se ating. Unde viața e nesigură, pagina o spune în loc să aleagă un an: un sfânt fără dată este trecut ca nedatat, nu lăsat afară.',
+    },
+    calendars: {
+      heading: 'Calendarele',
+      lede: 'Praznicele nemișcătoare se păstrează în calendarul în care au fost date și se prefac la afișare; ele nu sunt niciodată rescrise într-o singură socoteală. Paștile și tot ce se mișcă odată cu ele se socotesc după pascalia iuliană în toate cele patru Biserici.',
+      old: 'Calendarul vechi - praznice nemișcătoare după socoteala iuliană, cu treisprezece zile în urma datei civile până în 2100.',
+      new: 'Calendarul nou - praznice nemișcătoare la data civilă.',
+    },
+    sourcing: {
+      heading: 'De unde vine',
+      lede: 'Fiecare pomenire este luată din calendarul sau sinaxarul publicat de Biserica însăși, iar pagina fiecărui sfânt trimite la pagina de unde a fost citită. Acestea sunt publicațiile pe care culegerea le citează astăzi.',
+      fromHost: '{count} de la {host}',
+      lives: 'Viețile sunt scrise aici după izvoarele pe care le numește fiecare pagină. Sunt doar în engleză: ele sunt parafrază, iar traducerea automată a unei vieți ar preface o afirmație cu izvor despre un om într-una fără izvor.',
+    },
+    coverage: {
+      heading: 'Cât se află aici',
+      lede: 'Numărat din culegere la ultima construire, nu spus din amintire.',
+      saints: '{count} de sfinți',
+      commemorations: '{count} de pomeniri în patru Biserici',
+      undated: '{count} fără dată însemnată',
+      located: '{count} cu un loc pe care îl putem arăta',
+      positiveOnly: 'Orice mărturie însemnată până acum este una pozitivă. Nicio respingere și nicio absență cu izvor nu au fost trecute încă, așa că o Biserică ce lipsește de pe pagina unui sfânt înseamnă că nu am citit-o pe el - nu că nu îl ține.',
+      built: 'Numărat la {when}.',
+      unavailable: 'Cifrele de acoperire nu au putut fi încărcate.',
+    },
     privacy: {
       heading: 'Confidențialitate',
       lede:

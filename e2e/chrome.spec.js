@@ -1136,6 +1136,18 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
           '.reg-title',
           'h1',
           'h2',
+          /*
+           * The About page's own body, added 2026-08-29 with the editorial
+           * policy. It is the site's own prose rather than the corpus's, so the
+           * author's "replace all emm dashes" applies to it in full — and the
+           * separator between a church and its calendar was an em dash for one
+           * build, printed on every language, because this list read the chrome
+           * around the page and not the page.
+           */
+          'section[aria-labelledby="policy"]',
+          'section[aria-labelledby="calendars"]',
+          'section[aria-labelledby="sourcing"]',
+          'section[aria-labelledby="coverage"]',
         ];
         const found = [];
         for (const sel of chrome) {
@@ -2282,3 +2294,83 @@ for (const [label, width, expected] of [
     await ctx.close();
   });
 }
+
+/* ---- About: the editorial policy (Session 9, 2026-08-29) ---------------- */
+
+test('About states the coverage from the corpus, not from memory', async ({ page }) => {
+  /*
+   * Brief §8.4 wants the coverage statistics on this page, and the whole point
+   * of putting them here is that they are *read* — `loadManifestMeta()` finally
+   * has a caller. So the assertion is against the file itself: whatever
+   * `manifest.meta.json` says today is what the page has to print, and a number
+   * typed into a sentence would fail this the next time a folder is added.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+
+  const meta = await page.evaluate(() => fetch('/data/manifest.meta.json').then((r) => r.json()));
+  const coverage = page.locator('[data-coverage]');
+
+  await expect(coverage).toContainText(String(meta.total));
+  await expect(coverage).toContainText(String(meta.by_century.undated));
+  await expect(coverage).toContainText(String(meta.total - meta.unlocated));
+
+  // Commemorations are summed across the four churches rather than stored.
+  const commemorations = Object.values(meta.by_church).reduce((n, c) => n + c.venerated, 0);
+  await expect(coverage).toContainText(String(commemorations));
+});
+
+test('About names the publications the corpus actually cites', async ({ page }) => {
+  /*
+   * Not the registry's prose. `src/data/churches.js` names the source each
+   * church's *daily calendar* comes from, and that is not always the
+   * publication the attestations were read from — 121 of the 127 Romanian
+   * attestations cite doxologia.ro while the registry note names Basilica.
+   * `by_source` in the build counts what is actually cited, and this is what
+   * stops the page drifting back to the prose.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+
+  const meta = await page.evaluate(() => fetch('/data/manifest.meta.json').then((r) => r.json()));
+  const sources = page.locator('[data-sources]');
+
+  for (const [church, cited] of Object.entries(meta.by_source)) {
+    for (const { host, count } of cited) {
+      await expect(sources, `${church} should cite ${host}`).toContainText(host);
+      await expect(sources).toContainText(String(count));
+    }
+  }
+  // And each one is a link a reader can follow.
+  await expect(sources.locator('a[href^="https://"]').first()).toBeVisible();
+});
+
+test('About says which reckoning each church keeps, and says it from the registry', async ({ page }) => {
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+
+  /*
+   * The two Old Calendar churches and the two New. Read off `default_calendar`
+   * in the registry rather than restated in prose, so a church whose reckoning
+   * changed changes this section with it — the assertion here is that the page
+   * and the registry agree, which is the only way that promise is worth
+   * anything.
+   */
+  const said = await page.locator('section[aria-labelledby="calendars"] li').allTextContents();
+  const line = (name) => said.find((t) => t.startsWith(name)) ?? '';
+  expect(line('Russian')).toContain('Old Calendar');
+  expect(line('Serbian')).toContain('Old Calendar');
+  expect(line('Romanian')).toContain('New Calendar');
+  expect(line('Greek')).toContain('New Calendar');
+});
+
+test('About no longer promises the page it now is', async ({ page }) => {
+  // The placeholder said the policy "is written as substance in Session 9".
+  // It is, so the sentence has to be gone — a page that still promises itself
+  // is the tell that the section was added beside the placeholder rather than
+  // in place of it.
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await expect(page.locator('#view')).not.toContainText('Session 9');
+  await expect(page.locator('#view')).not.toContainText('boilerplate');
+});

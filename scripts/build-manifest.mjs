@@ -232,7 +232,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
   if (errors.length) return { errors, warnings, manifest: null, meta: null };
 
   const manifest = loaded.map(({ folder, saint }) => toCard(saint, path.join(saintsDir, folder)));
-  const meta = buildMeta(manifest, warnings);
+  const meta = buildMeta(manifest, warnings, loaded);
   const manifestJson = JSON.stringify(manifest);
 
   if (write) {
@@ -404,7 +404,49 @@ function toCard(saint, dir) {
  * a plain total, and that difference is exactly what this project claims to
  * show.
  */
-function buildMeta(manifest, warnings) {
+/**
+ * Which publications the corpus actually cites, per church.
+ *
+ * Read from the saints' own files rather than from the registry's prose,
+ * because the two are different facts and the About page needs the one that
+ * cannot drift. `src/data/churches.js` names the source each church's *daily
+ * calendar* comes from; this counts the source each *attestation* was taken
+ * from, and they are not always the same publication — 121 of the 127 Romanian
+ * attestations cite doxologia.ro while the registry note names Basilica, and
+ * both statements are true about different things.
+ *
+ * The host, not the URL: a page's address is a fact about one saint, and what
+ * the About page is answering is "where does this come from", which is a fact
+ * about the publication.
+ */
+function sourcesByChurch(loaded) {
+  const byChurch = {};
+  for (const { saint } of loaded) {
+    for (const a of saint.attestations ?? []) {
+      const url = a.source?.url;
+      if (!url) continue;
+      let host;
+      try {
+        host = new URL(url).host;
+      } catch {
+        continue;
+      }
+      byChurch[a.church] ??= {};
+      byChurch[a.church][host] = (byChurch[a.church][host] ?? 0) + 1;
+    }
+  }
+  // Commonest first, so a page printing only the leaders prints the right ones.
+  return Object.fromEntries(
+    Object.entries(byChurch).map(([church, hosts]) => [
+      church,
+      Object.entries(hosts)
+        .map(([host, count]) => ({ host, count }))
+        .sort((a, b) => b.count - a.count),
+    ]),
+  );
+}
+
+function buildMeta(manifest, warnings, loaded = []) {
   const byChurch = {};
   for (const id of Object.keys(CHURCHES_BY_ID)) {
     byChurch[id] = { venerated: 0, 'not-venerated': 0, undocumented: 0, unattested: 0 };
@@ -412,6 +454,7 @@ function buildMeta(manifest, warnings) {
   const byCentury = {};
   const byHistoricity = {};
   const byRegion = {};
+  const bySource = sourcesByChurch(loaded);
   let unlocated = 0;
 
   for (const card of manifest) {
@@ -453,6 +496,7 @@ function buildMeta(manifest, warnings) {
     by_century: byCentury,
     by_historicity: byHistoricity,
     by_region: byRegion,
+    by_source: bySource,
     warnings: warnings.map(({ folder, msg }) => ({ slug: folder, message: msg })),
   };
 }

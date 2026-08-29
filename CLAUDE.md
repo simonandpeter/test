@@ -81,7 +81,14 @@ done). `BRAND` is the site name and is never translated.
 
 **Boot** — `boot()` awaits manifest + `readyDays()` + one locale pack.
 `data/liturgical-days.js` is imported only by `days.js`. `manifest.meta.json` is
-off the boot path (`loadManifestMeta`, for Session 9).
+off the boot path and **the About page is its one reader** (`loadManifestMeta`).
+
+**About** — `src/views/about.js`. The editorial policy, written as substance
+(brief §8.4). **It states no number and no source name of its own**: coverage is
+read from `manifest.meta.json` at render time, the calendars come from
+`data/churches.js`, and the cited publications from that file's `by_source`,
+which the build counts from the saints' own files. Anything typed in here goes
+stale the next time a folder is added.
 
 **Names** — `lib/honorific.js` (rank precedence), `lib/saint-name.js` (which
 recorded form to print). `office` is a field, drawn on the subtext line.
@@ -92,8 +99,8 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~14s, 225).
-- Browser: `e2e/`, one file per surface, 610 across two projects —
+- Unit: `tests/*.test.mjs`, `npm test` (~14s, 226).
+- Browser: `e2e/`, one file per surface, 618 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —
