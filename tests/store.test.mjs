@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+import * as store from '../src/lib/store.js';
 import {
   HISTORY_CAP,
   historyRecord,
@@ -75,4 +76,42 @@ test('history overflow is the oldest rows beyond the cap', () => {
   const dropped = overflow(rows).map((r) => r.slug);
   assert.deepEqual(dropped, ['s2', 's1', 's0']);
   assert.deepEqual(overflow(rows, 1000), []);
+});
+
+/* ---- export / import (Session 8's surviving third, 2026-08-29) ---------- */
+
+test('an export round-trips, and an import is a merge rather than a replacement', async () => {
+  await store.save('round-trip-a');
+  await store.save('round-trip-b');
+  await store.unsave('round-trip-b'); // a tombstone must travel too
+  const dump = await store.exportData();
+
+  assert.equal(dump.schema, 1);
+  const saved = dump.stores.saved.filter((r) => r.id.startsWith('round-trip-'));
+  assert.equal(saved.length, 2, 'the tombstone did not travel');
+
+  /*
+   * Import the dump back over newer local state: the merge rule is newest
+   * `updatedAt` wins, so a stale backup must not roll this device backwards -
+   * which is the difference between an import and a restore, and the exact
+   * behaviour a future sync adapter will be judged by.
+   */
+  // Genuinely later: updatedAt is Date.now(), and a re-save inside the same
+  // millisecond as the tombstone is a tie - which goes to the *incoming*
+  // record by rule, making this test fail for the right behaviour. One run in
+  // a few did exactly that before this wait.
+  await new Promise((r) => setTimeout(r, 3));
+  await store.save('round-trip-b'); // saved again, later than the tombstone
+  await store.importData(dump);
+  assert.equal(await store.isSaved('round-trip-b'), true, 'a stale tombstone rolled the device backwards');
+  assert.equal(await store.isSaved('round-trip-a'), true);
+});
+
+test('an import that is not an export refuses whole', async () => {
+  for (const bad of [null, {}, { schema: 2, stores: {} }, { schema: 1, stores: { saved: [{ id: 5 }] } }]) {
+    await assert.rejects(() => store.importData(bad), /not a Daily Dox export/);
+  }
+  // And nothing half-landed: the malformed row above never reached the store.
+  const dump = await store.exportData();
+  assert.ok(!dump.stores.saved.some((r) => r.id === 5));
 });

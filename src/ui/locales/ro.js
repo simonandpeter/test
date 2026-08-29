@@ -467,6 +467,15 @@ export const ro = {
       fromHost: '{count} de la {host}',
       lives: 'Viețile sunt scrise aici după izvoarele pe care le numește fiecare pagină. Sunt doar în engleză: ele sunt parafrază, iar traducerea automată a unei vieți ar preface o afirmație cu izvor despre un om într-una fără izvor.',
     },
+    data: {
+      heading: 'Datele tale - portabile',
+      lede: 'Tot ce e mai sus se poate descărca într-un singur fișier, iar fișierul descărcat se poate aduce pe alt dispozitiv. Importul îmbină: câștigă înregistrarea mai nouă, așa că o copie veche nu poate desface ce ai făcut aici ieri.',
+      exportButton: 'Descarcă-ți datele',
+      importButton: 'Importă un fișier',
+      imported: 'Importat. {count} înregistrări erau mai noi decât ce ținea acest dispozitiv.',
+      importedNone: 'Importat. Acest dispozitiv ținea deja tot ce e în fișier, la aceeași vârstă sau mai nou.',
+      importFailed: 'Fișierul nu este un export de pe acest sit, așa că nimic nu s-a schimbat.',
+    },
     coverage: {
       heading: 'Cât se află aici',
       lede: 'Numărat din culegere la ultima construire, nu spus din amintire.',

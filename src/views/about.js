@@ -3,6 +3,7 @@ import { churchName } from '../lib/church.js';
 import { loadManifestMeta } from '../lib/manifest.js';
 import { formatDate } from '../lib/i18n.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import * as store from '../lib/store.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.about.title;
@@ -105,6 +106,16 @@ export function render(el) {
       ${list(P.not)}
 
       <p>${P.clearing}</p>
+
+      <h3>${esc(A.data.heading)}</h3>
+      <p>${esc(A.data.lede)}</p>
+      <p class="data-controls">
+        <button type="button" data-export>${esc(A.data.exportButton)}</button>
+        <button type="button" data-import>${esc(A.data.importButton)}</button>
+        <input type="file" accept="application/json,.json" data-import-file hidden />
+      </p>
+      <p class="utility" data-import-note aria-live="polite"></p>
+
       <p class="utility">${P.hosting}</p>
     </section>
 
@@ -117,6 +128,51 @@ export function render(el) {
   `;
 
   fillCounted(el);
+  wireDataControls(el);
+}
+
+/**
+ * Export / Import (brief §11): the whole log as one JSON file, and back.
+ *
+ * The export is an <a download> minted on the press - a static site has no
+ * endpoint to download *from*, so the file is built in memory and the URL
+ * revoked once the click has gone through. The import announces its result in
+ * an aria-live note rather than an alert, and says how many records were
+ * actually newer - "imported" with nothing taken is a different fact from
+ * "imported", and the store's merge answer is worth the sentence.
+ */
+function wireDataControls(el) {
+  const A = STRINGS.about;
+  const note = el.querySelector('[data-import-note]');
+  const file = el.querySelector('[data-import-file]');
+
+  el.querySelector('[data-export]').addEventListener('click', async () => {
+    const dump = await store.exportData();
+    const blob = new Blob([JSON.stringify(dump, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    // The date in the name, so two backups on one desk stay tellable apart.
+    a.download = `daily-dox-${dump.exportedAt.slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+
+  el.querySelector('[data-import]').addEventListener('click', () => file.click());
+  file.addEventListener('change', async () => {
+    const chosen = file.files?.[0];
+    if (!chosen) return;
+    // The same file twice must fire change twice; a picker that remembers is
+    // a second press that silently does nothing.
+    file.value = '';
+    try {
+      const taken = await store.importData(JSON.parse(await chosen.text()));
+      note.textContent = taken
+        ? fill(A.data.imported, { count: taken })
+        : A.data.importedNone;
+    } catch {
+      note.textContent = A.data.importFailed;
+    }
+  });
 }
 
 /**

@@ -115,15 +115,26 @@ let dbPromise = null;
 
 function db() {
   if (!dbPromise) {
-    dbPromise = openDB(DB_NAME, DB_VERSION, {
-      upgrade(database) {
-        for (const name of STORES) {
-          if (!database.objectStoreNames.contains(name)) {
-            database.createObjectStore(name, { keyPath: 'id' });
+    /*
+     * Both failure shapes. `openDB` can *reject* (private browsing denying the
+     * open) or *throw synchronously* (`indexedDB` not defined at all - a
+     * hardened browser context, or Node, which is how the unit suite found
+     * this: the `.catch` below never attaches to an exception). Either way the
+     * answer is the same session-only Map.
+     */
+    try {
+      dbPromise = openDB(DB_NAME, DB_VERSION, {
+        upgrade(database) {
+          for (const name of STORES) {
+            if (!database.objectStoreNames.contains(name)) {
+              database.createObjectStore(name, { keyPath: 'id' });
+            }
           }
-        }
-      },
-    }).catch(() => memoryDb());
+        },
+      }).catch(() => memoryDb());
+    } catch {
+      dbPromise = Promise.resolve(memoryDb());
+    }
   }
   return dbPromise;
 }
@@ -237,6 +248,66 @@ export async function clearHistory() {
   const d = await db();
   for (const row of await d.getAll('history')) await d.delete('history', row.id);
   announce('history');
+}
+
+/* ---- export / import ----------------------------------------------------- */
+
+/**
+ * Everything the reader's device knows, as one JSON document (brief §11:
+ * "Export / Import as JSON in Phase 3 - it gives real cross-device portability
+ * for zero backend, and it means the promise of accounts isn't load-bearing").
+ *
+ * Records go out as they are stored, tombstones included: an export is a copy
+ * of the log, not a report about it, and a tombstone is the only thing that
+ * stops an import from resurrecting a saint the reader unsaved on the other
+ * device. Settings ride along from their own store.
+ */
+export async function exportData() {
+  const d = await db();
+  const stores = {};
+  for (const name of STORES) stores[name] = await d.getAll(name);
+  return { schema: 1, exportedAt: new Date().toISOString(), stores };
+}
+
+/**
+ * The import is a merge, not a replacement, and the rule is the store's own
+ * `merge`: per record, the newer `updatedAt` wins - which is exactly what a
+ * sync adapter would do with the same log, and why importing a stale backup
+ * cannot roll a device backwards. Malformed input throws before anything is
+ * written; a file that half-imports would be worse than one that refuses.
+ */
+export async function importData(data) {
+  if (!data || data.schema !== 1 || typeof data.stores !== 'object') {
+    throw new Error('not a Daily Dox export');
+  }
+  for (const name of STORES) {
+    const rows = data.stores[name];
+    if (rows === undefined) continue;
+    if (!Array.isArray(rows)) throw new Error('not a Daily Dox export');
+    for (const row of rows) {
+      if (!row || typeof row.id !== 'string' || typeof row.updatedAt !== 'number') {
+        throw new Error('not a Daily Dox export');
+      }
+    }
+  }
+  const d = await db();
+  let taken = 0;
+  for (const name of STORES) {
+    for (const row of data.stores[name] ?? []) {
+      const mine = await d.get(name, row.id);
+      const kept = merge(mine, row);
+      if (kept === row && kept !== mine) {
+        await d.put(name, row);
+        taken += 1;
+        // The settings store mirrors into localStorage (settings.js), and an
+        // imported setting the reader chose on another device is a choice to
+        // honour here too - pre-paint reads come from the mirror alone.
+        if (name === 'settings' && !row.deletedAt) writeSetting(row.key, row.value);
+      }
+    }
+  }
+  for (const name of STORES) announce(name);
+  return taken;
 }
 
 /* ---- settings ------------------------------------------------------------ */

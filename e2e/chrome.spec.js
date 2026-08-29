@@ -2374,3 +2374,48 @@ test('About no longer promises the page it now is', async ({ page }) => {
   await expect(page.locator('#view')).not.toContainText('Session 9');
   await expect(page.locator('#view')).not.toContainText('boilerplate');
 });
+
+/* ---- export / import (Session 8's surviving third, 2026-08-29) ---------- */
+
+test('the reader can take their data with them, and bring it back', async ({ page }) => {
+  /*
+   * Brief §11: "Export / Import as JSON ... real cross-device portability for
+   * zero backend." The claim worth a browser test is the round trip through
+   * the real controls: a save made, a file downloaded, the device wiped, the
+   * file imported, the save standing again. The store's merge rules have unit
+   * tests; this is the promise as a reader meets it.
+   */
+  await ready(page);
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await page.locator('[data-save]').first().click();
+  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'true');
+
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  const download = page.waitForEvent('download');
+  await page.locator('[data-export]').click();
+  const exported = await (await download).path();
+
+  // A different reader's device: storage cleared, nothing saved.
+  await page.evaluate(() => indexedDB.deleteDatabase('gallery-of-saints'));
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'false');
+
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await page.locator('[data-import-file]').setInputFiles(exported);
+  await expect(page.locator('[data-import-note]')).toContainText(/Imported/);
+
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('a file that is not an export changes nothing and says so', async ({ page }) => {
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await page.locator('[data-import-file]').setInputFiles({
+    name: 'not-an-export.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from('{"schema":99}'),
+  });
+  await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
+});

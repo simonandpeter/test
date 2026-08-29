@@ -79,6 +79,16 @@ masthead is an SVG wordmark: `scripts/make_wordmark.py` generates
 Touch all five, then `node scripts/locale-coverage.mjs` (0 fallbacks before
 done). `BRAND` is the site name and is never translated.
 
+**App mode** — `public/sw.js` (hand-written, four caches, one per §12
+strategy) + `lib/offline.js` (registration, and Save's eager precache). Every
+cache match ignores `Vary`, the shell's own assets are precached at install by
+parsing index.html, and nothing non-ok is ever cached. The worker runs under
+the whole e2e suite via `vite preview`; `e2e/pwa.spec.js` is the offline
+claims. Icons: `scripts/make-app-icons.py` (committed output in `public/`).
+**A carousel rebuild hands its live gesture to its successor**
+(`handoff`/`inherit` in loop-scroll) — the worker shifts when fonts settle, and
+a wheel spun on a dying loop used to die with it.
+
 **Boot** — `boot()` awaits manifest + `readyDays()` + one locale pack.
 `data/liturgical-days.js` is imported only by `days.js`. `manifest.meta.json` is
 off the boot path and **the About page is its one reader** (`loadManifestMeta`).
@@ -99,9 +109,9 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~14s, 226).
-- Browser: `e2e/`, one file per surface, 618 across two projects —
-  `daily`, `index`, `saint`, `chrome`, `map`, `quality-floor`, plus `helpers.js`.
+- Unit: `tests/*.test.mjs`, `npm test` (~15s, 228).
+- Browser: `e2e/`, one file per surface, 642 across two projects —
+  `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —
   accessibility and FCP on throttled 4G. It builds and serves its own preview,

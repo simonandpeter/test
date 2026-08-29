@@ -36,7 +36,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **225 unit, 610 browser** across two projects. `npm run test:all`.
+- **228 unit, 642 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -90,18 +90,18 @@ card opens the saint` (`index.spec.js`), which failed one local full run on
 so it is evidence about one desk twice over. Written down because the two flakes
 above were each dismissed at this stage and then recurred.
 
-**And one fact, found 2026-08-29 and not acted on**: `the wheel carries the
-carousel back, and no faster than its cap` (`index.spec.js:2895`) fails about one
-local run in three at **1116-1161 px/s against its 1100 limit**. Three sightings,
-and — the part worth having — *it fails on a clean checkout too*, which was
-checked by stashing: the first reading blamed the session's own changes, and a
-controlled comparison said otherwise.
+**The wheel-cap test was fixed 2026-08-29**: it measures an average over
+fifteen frames with the clamp held pinned, rather than two frames of luck. Four
+consecutive greens where it failed one run in three; backed out by raising the
+cap to 2000, it reads ~1900 — it measures the cap it guards now.
 
-The diagnosis is Amendment 66's shape again. The clamp is 900 px/s; the test
-samples **two frames**, about 33 ms, so one uneven frame decides the rate and a
-dropped one puts it over. Measuring across a longer window would measure the cap
-rather than one frame's luck. Never seen on CI, whose runner is slower than this
-desk — so it is a test to fix before it is a bug to chase.
+**And `the row comes back on its own after a press` may be closed** by the same
+day's gesture handoff: the service worker shifted the late carousel rebuild
+into the interaction window and made that flake a hard local failure, which is
+what finally exposed the mechanism — a wheel spun on a dying loop died with it.
+With `handoff`/`inherit` in loop-scroll, two consecutive full local runs are
+clean. Its CI rate was 2-in-5; **watch the flaky line before calling it
+closed.**
 
 The rail's coast is **closed** — never a flake but a negative first `dt` in
 `beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
@@ -208,6 +208,31 @@ is small next to the data.
 purpose — two strings per location across 5,000 saints is real weight on the one
 request the site boots from. The saint's own page names the village.
 
+### Sessions 8 and 9 — finished 2026-08-29 (Amendment 73)
+
+**Session 9's second half, App mode (§12), is built**: a hand-written worker
+(`public/sw.js`) with the brief's four strategies, a web manifest with maskable
+icons, honest offline degradation (an uncached saint says the network is needed
+once — read off the failure, because `navigator.onLine` lies under
+request-level offline), and Save as an eager precache that waits for the worker
+to take the page. The worker runs under the entire e2e suite; `pwa.spec.js`
+holds the offline claims, including the round trip through a wiped device.
+
+**Session 8 re-scoped against reality, and one third survived:**
+
+- **Export / Import (§11) — built.** One JSON file of the whole log,
+  tombstones included; import is the store's own `merge`, so a stale backup
+  cannot roll a device backwards. Controls live on About beside the privacy
+  statement; round-tripped through a wiped IndexedDB in `chrome.spec.js`.
+- **The rite × communion table (§9.2) — inapplicable to this build**, not
+  deferred: it was written for the cross-church corpus (four communions, seven
+  rites), which is archived at `archive/cross-church-2026-08`. This build's
+  four churches share one rite and one communion, so the table is one cell.
+  It revives if the cross-church registry does.
+- **The timeline brush — still blocked on the corpus**, with the map's density
+  work (Amendment 69): 7 of 742 saints carry a location, and the fades the
+  brief describes need lifespans the corpus mostly lacks. Data, then code.
+
 ### Session 9 — the About page — done 2026-08-29 (Amendment 72)
 
 Brief §8.4's editorial policy, written as substance: what the site claims and
@@ -220,8 +245,6 @@ and `by_source` was added to the meta so the page can name the publications the
 corpus *actually cites* rather than the registry's prose about daily calendars —
 121 of the 127 Romanian attestations cite doxologia.ro while the registry note
 names Basilica, and both statements are true about different things.
-
-Still Session 9's, and not done: the PWA and offline shell.
 
 **No LICENSE file exists**, so the page does not claim one — see Outstanding.
 

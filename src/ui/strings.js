@@ -885,6 +885,21 @@ export const STRINGS = {
       fromHost: '{count} from {host}',
       lives: 'The lives are written here from the sources each page names. They are in English only: they are paraphrase, and machine-translating a life would turn a sourced claim about a person into an unsourced one.',
     },
+    /*
+     * Export / Import (brief §11, Session 8's surviving third, 2026-08-29).
+     * In the privacy section, because that is where the page explains what the
+     * device holds - and taking it with you, or bringing it along, is the
+     * other half of that explanation.
+     */
+    data: {
+      heading: 'Your data, portable',
+      lede: 'Everything above can be downloaded as one file, and a downloaded file can be brought to another device. Importing merges: the newer record wins, so bringing an old backup cannot undo what you did here yesterday.',
+      exportButton: 'Download your data',
+      importButton: 'Import a file',
+      imported: 'Imported. {count} records were newer than what this device held.',
+      importedNone: 'Imported. This device already held everything in the file, at the same age or newer.',
+      importFailed: 'That file is not an export from this site, so nothing was changed.',
+    },
     coverage: {
       heading: 'How much is here',
       lede: 'Counted from the corpus at the last build rather than stated from memory.',
