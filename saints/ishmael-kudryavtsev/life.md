@@ -1,0 +1,7 @@
+# Ishmael (Kudryavtsev)
+
+Ishmael Kudryavtsev was born in 1876 in the village of Sadunovo in the Tver province, a peasant's son with three years of parish school behind him. He served in the army as a senior non-commissioned officer and later as a village constable; it was after the revolution of 1917, when the path was already a confessor's, that he chose the Church and was ordained priest. In the persecutions of the early thirties he was sentenced to five years of exile, released after two because of illness, and returned to serve at the church of Arkhangelskoye near Kimry.
+
+At the start of 1937 the district executive committee ordered that church closed, on the invented pretext that the building was unsafe. Father Ishmael managed to defend it - and on 7 August 1937 the NKVD arrested him. The interrogation preserved in the case file is short: he acknowledged plainly that he had been stripped of voting rights and that the household he left his son had been dekulakized, and to the charge of anti-Soviet agitation he answered that he was telling the investigation nothing but the truth and had waged no struggle against Soviet power. On 20 September the NKVD troika sentenced him to be shot, and the sentence was carried out two days later, on 23 September 1937. He was glorified among the New Martyrs and Confessors of Russia in 2000.
+
+*After the Православный церковный календарь (days.pravoslavie.ru), [Священномученик Измаил (Кудрявцев)](https://days.pravoslavie.ru/Life/life4811.htm); read 30 August 2026.*

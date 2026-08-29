@@ -1,0 +1,57 @@
+{
+  "slug": "polyxena-of-spain",
+  "display_name": "Polyxena",
+  "names": [
+    {
+      "form": "Sfânta Cuvioasă Polixenia",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 10 сентября ст. ст. (civil 23 September, checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 Septembrie — „Sfânta Cuvioasă Polixenia”",
+        "url": "https://doxologia.ro/sfanta-cuvioasa-polixenia",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 41,
+      "latest": 54,
+      "display": "under Claudius (41-54)",
+      "basis": "traditional",
+      "note": "The life on doxologia.ro: „A trăit în Spania în timpul împăratului Claudiu (41-54)”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

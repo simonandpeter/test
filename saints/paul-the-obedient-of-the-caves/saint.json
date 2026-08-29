@@ -5,6 +5,10 @@
     {
       "form": "Όσιος Παύλος ο Υπάκουος ο «εν τω Σπηλαίω»",
       "lang": "el"
+    },
+    {
+      "form": "Павел Послушливый",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -14,8 +18,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 10 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 сентября ст. ст. — «Прп. Павла Послушливого, Печерского (XIII-XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260910.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

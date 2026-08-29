@@ -25,17 +25,17 @@ because nobody looked.
 its own change confirms its own account of it. Say what you measured and what
 you inferred, and keep them apart.
 
-## State (2026-08-29)
+## State (2026-08-30)
 
-- **781 saints**, every one with a life; **1093 attestations**, every one
+- **801 saints**, every one with a life; **1125 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
   About page says so. **159 undated**; **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **22 September 2026**
-  (Russian 464, Romanian 135, Greek 365, Serbian 129).
+  published English rendering. The corpus reaches **23 September 2026**
+  (Russian 493, Romanian 138, Greek 365, Serbian 129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **228 unit, 648 browser** across two projects. `npm run test:all`.
+- **228 unit, 646 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -277,7 +277,7 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 22 September.** 600–1,100 folders. Dedupe on the
+- **Saints for the days past 23 September.** 600–1,100 folders. Dedupe on the
   *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
   harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
   sitting — though 21 September was light, being the Nativity of the

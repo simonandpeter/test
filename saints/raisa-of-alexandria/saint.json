@@ -9,6 +9,10 @@
     {
       "form": "Ираида",
       "lang": "ru"
+    },
+    {
+      "form": "Sfânta Muceniță Iraida",
+      "lang": "ro"
     }
   ],
   "sex": "female",
@@ -41,8 +45,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 Septembrie — „Sfânta Muceniță Iraida”",
+        "url": "https://doxologia.ro/sfanta-mucenita-iraida",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

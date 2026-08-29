@@ -1,0 +1,62 @@
+{
+  "slug": "joasaph-of-kubensk",
+  "display_name": "Joasaph of Kubensk",
+  "names": [
+    {
+      "form": "Иоасаф Каменский",
+      "lang": "ru"
+    },
+    {
+      "form": "Андрей Спасокубенский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 сентября ст. ст. — «Прп. кн. Андрея, в иночестве Иоасафа, Спасокубенского (1453)»",
+        "url": "https://days.pravoslavie.ru/Days/20260910.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-08-30); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1453,
+      "latest": 1453,
+      "display": "1453",
+      "basis": "attested",
+      "note": "The life: he died on 10 September (Julian) 1453 at the Spaso-Kamenny monastery."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
