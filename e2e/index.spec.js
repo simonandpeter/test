@@ -2914,18 +2914,41 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
   const run = await page.evaluate(async () => {
     const track = document.querySelector('[data-carousel-track]');
     const start = track.scrollLeft;
-    // Twenty notches at once: far past anything a hand does, so the clamp is
-    // the only thing that can be deciding the speed below.
-    for (let i = 0; i < 20; i++) {
-      track.dispatchEvent(new WheelEvent('wheel', { deltaY: -240, bubbles: true, cancelable: true }));
-    }
-    // Two frames, timed, and the distance between them.
     const frame = () => new Promise((r) => requestAnimationFrame(r));
+    /*
+     * **Fifteen frames, not two** (2026-08-29). This assertion failed about one
+     * local run in three at 1116-1161 px/s against a 900 px/s clamp, on a clean
+     * checkout — Amendment 66's mistake in its third costume. The old version
+     * read the position across two rAF callbacks, but the loop integrates in
+     * *its own* rAF, and the two are not the same clock: a dropped frame put up
+     * to a frame and a half of integrated distance inside the test's measured
+     * window, which overstates the speed by half a frame's worth. One uneven
+     * frame decided the verdict.
+     *
+     * So the speed is now an average over ~250 ms, which measures the clamp
+     * rather than one frame's luck. A notch is dispatched *every* frame to hold
+     * the velocity pinned at the cap for the whole window — the loop's own
+     * comment says a reader who keeps spinning holds the clamp for as long as
+     * they spin, and that is the state in which the cap is the only thing
+     * deciding the speed. The boundary frames can still leak: the window opens
+     * and closes on the test's clock, not the loop's, so up to one integration
+     * frame of distance lands just inside or outside either edge. Over fifteen
+     * frames that is a ~7% error bar, which the 1100 ceiling absorbs; over two
+     * it was 50%, which nothing could.
+     */
+    const spin = () =>
+      track.dispatchEvent(new WheelEvent('wheel', { deltaY: -240, bubbles: true, cancelable: true }));
+    for (let i = 0; i < 20; i++) spin();
+    // Let the first frame integrate before the window opens, so the opening
+    // read is of a row already at the clamp rather than one still accelerating.
+    await frame();
     await frame();
     const t0 = performance.now();
     const p0 = track.scrollLeft;
-    await frame();
-    await frame();
+    for (let i = 0; i < 15; i++) {
+      spin();
+      await frame();
+    }
     const t1 = performance.now();
     const p1 = track.scrollLeft;
     await new Promise((r) => setTimeout(r, 1200));
@@ -2933,8 +2956,9 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
   });
 
   expect(run.settled, 'the wheel did not carry the row backwards').toBeLessThan(run.start);
-  // The clamp is 900 px/s. A frame's worth of slack either side of it, and the
-  // drift's own 26 px/s pushing the other way.
+  // The clamp is 900 px/s. The averaging window's edge can leak one frame of
+  // integrated distance (~7% over fifteen frames), and the drift's own
+  // 26 px/s pushes the other way; 1100 absorbs both with room.
   expect(run.pxPerSec, 'the wheel outran its own speed cap').toBeLessThan(1100);
   expect(run.pxPerSec, 'the wheel barely moved the row').toBeGreaterThan(100);
 });
