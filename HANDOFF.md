@@ -35,7 +35,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **228 unit, 642 browser** across two projects. `npm run test:all`.
+- **228 unit, 648 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -200,8 +200,13 @@ Egypt, with every other test still green. One axis is cropped instead, and that
 axis can be panned even at 1.0x, including sideways by thumb, or the Americas
 would be unreachable on a phone.
 
-Still not done: the Index's filter set (the map filters by church only), which
-is small next to the data.
+**The Index's filter set arrived 2026-08-30** — same `applyFilters`, three
+facets (Calendar, Type, Region; the others wait with reasons written in
+map.js), one refresh moving every number on the page together. With it came
+§8.3's zoom labels (overlap-drop at the corpus's density) and pressable dots
+(a press under 5 px of travel opens the saint; a haul does not). The map now
+counts as the Index does — whole corpus, Calendar facet narrows — retiring the
+placeholder's chosen-church narrowing and the set-aside sentence with it.
 
 **The map names the region, not the village.** `modern_name` and
 `historical_name` are in each saint's own file and dropped from the manifest on
@@ -306,7 +311,10 @@ names Basilica, and both statements are true about different things.
   Windows path. `MSYS_NO_PATHCONV=1`.
 - Never leave `vite preview` running; `playwright.config.js` refuses to reuse a
   server it did not start. Kill by PID if the wrapper survives.
-- CRLF warnings are noise here.
+- CRLF warnings were **not** noise: this desk's global `core.autocrlf=true`
+  rewrote 76 batch files during a stash/pop and a unit test caught the ``
+  inside a heading. Repo-local `core.autocrlf=false` plus `.gitattributes`
+  (`* text=auto eol=lf`) now pin every clone; the blobs were always LF.
 
 ## Outstanding — the author's, not yours
 

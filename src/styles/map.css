@@ -272,3 +272,14 @@ html[data-route='map'] main.chrome {
   overflow-y: auto;
   margin-top: var(--space-3);
 }
+
+/* ---- the Index's facets, on the map ------------------------------------ */
+
+/* The row wears the Index's own facet dress (.facet is unscoped and shared);
+   what is the map's is only where it stands - under the picture with the
+   reading, because the stage is the window and nothing gets to push the map
+   down the screen. The kind selector stays on the stage: §8.3 wants the
+   current kind visible at all times, and a facet is a question, not a state. */
+.map-facets {
+  margin: var(--space-3) 0 var(--space-4);
+}

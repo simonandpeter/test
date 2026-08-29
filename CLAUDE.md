@@ -51,7 +51,13 @@ is the illustration, and the counts on the kind buttons must match the rows.
 Zoom and pan live in `lib/map-view.js` — also pure, also unit-tested — and the
 rule they are built around is that **a reader must never get stuck**: a bare
 wheel scrolls the page and only Ctrl zooms, and touch keeps `pan-y` until the
-reader has deliberately zoomed in.
+reader has deliberately zoomed in. The map shares the Index's filter set
+(`applyFilters`, three facets: Calendar, Type, Region — the rest are listed in
+map.js with the reason each waits); one `refresh()` moves the lede, kind
+counts, rows, tray and picture together. Labels arrive past 2.5×
+(overlap-drop, not collide-and-nudge), and **a dot is a door** — a press under
+5 px of travel opens the saint; the canvas publishes `data-labels` and
+`data-dots` for the suite, written by the draw pass so doing-nothing reads 0.
 
 **The stage is the window, not a card** (author, 2026-08-29), which costs two
 things worth knowing. `main` gives up its column on `html[data-route='map']`,
@@ -110,7 +116,7 @@ thumb. A wrong crop is a data fix, not a CSS one.
 ## Tests
 
 - Unit: `tests/*.test.mjs`, `npm test` (~15s, 228).
-- Browser: `e2e/`, one file per surface, 642 across two projects —
+- Browser: `e2e/`, one file per surface, 648 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —

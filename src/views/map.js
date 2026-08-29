@@ -1,7 +1,9 @@
-import { chosenChurch, churchName, keptBy } from '../lib/church.js';
+import { churchName } from '../lib/church.js';
+import { EMPTY_FILTERS, applyFilters, facetsOf } from '../lib/index-filters.js';
 import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { REGIONS_BY_ID } from '../lib/regions.js';
+import { typeName } from '../lib/saint-types.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -53,6 +55,29 @@ let kind = DEFAULT_KIND;
 let onResize = null;
 
 /*
+ * The Index's filter set, on the map (brief §8.3: "shares the same filter set
+ * as the Index mode"). The same `applyFilters` over the same fields, so a
+ * facet means the identical thing on both pages; only the chrome is the map's
+ * own. Reset per render like `kind` is not - filters are a question the reader
+ * asked, and the Index resets on a fresh mount too.
+ *
+ * Three facets, not the Index's seven. Calendar, Type and Region are the ones
+ * that answer "who is on this map"; the date range is the timeline's axis and
+ * the timeline is corpus-blocked (Amendment 69), months duplicate the feast
+ * machinery the map does not draw, and gender and historicity earn their row
+ * only where there is a corpus to slice - 7 located saints is not it. They
+ * arrive by deleting a line from FACETS when they earn it.
+ */
+let filters = { ...EMPTY_FILTERS };
+const FACETS = ['churches', 'types', 'regions'];
+
+/** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
+let drawnDots = [];
+
+/** The threshold past which dots get their names (§8.3: "then labels"). */
+const LABELS_AT = 2.5;
+
+/*
  * Where the map is looking. Reset on every render rather than held across
  * visits: the kind selector holds for the visit because it is a question the
  * reader asked, but arriving at the map zoomed into a corner you left three
@@ -94,17 +119,20 @@ const pointsOfKind = (cards, which) =>
   cards.flatMap((card) => (card.locations ?? []).filter((l) => l.kind === which).map((where) => ({ card, where })));
 
 export function render(el, { data, router }) {
-  // `chosenChurch`, not `currentChurch` (2026-08-26): a *guess* from the
-  // browser's language must not set part of the corpus aside here. lib/church.js
-  // argues the split; the Daily page is the one page that cannot open without a
-  // calendar, and it is the one page that reads the guess.
-  const church = chosenChurch();
-  const mine = data.saints.filter((s) => keptBy(s, church));
-  const setAside = data.saints.length - mine.length;
-  const withPlace = mine.filter(located);
-  const without = mine.filter((s) => !located(s));
-
+  /*
+   * **The whole corpus, and the Calendar facet narrows it** - the Index's own
+   * model since 2026-08-27, which Amendment 46 already said the map counts by
+   * («the map still counts as the Index does»). The chosen-church narrowing
+   * this replaces was the placeholder's behaviour carried over: a guess or a
+   * choice in the header set 316 saints aside on a page whose job is the
+   * whole picture. The set-aside sentence goes with it - nothing is set
+   * aside now that unticking cannot explain.
+   */
+  filters = { ...EMPTY_FILTERS };
   const M = STRINGS.map;
+  const initial = applyFilters(data.saints, filters).matched;
+  const initialPlaced = initial.filter(located);
+  const initialWithout = initial.filter((s) => !located(s));
 
   /*
    * **The map is the window, not a card in the column** (author, 2026-08-29:
@@ -140,7 +168,7 @@ export function render(el, { data, router }) {
             (k) =>
               `<button type="button" class="map-kind utility" data-kind="${k}"
                  aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
-                 <span class="map-kind-count">${pointsOfKind(withPlace, k).length}</span></button>`,
+                 <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(initialPlaced, k).length}</span></button>`,
           ).join('')}
         </div>
       </div>
@@ -162,9 +190,12 @@ export function render(el, { data, router }) {
     <div class="map-below">
       <p class="map-caption utility" data-caption></p>
 
-      <p class="map-lede">${esc(
-        fill(M.lede, { located: withPlace.length, count: mine.length }),
-      )}${setAside ? ` ${esc(fill(M.setAside, { count: setAside, church: churchName(church) }))}` : ''}</p>
+      <p class="map-lede" data-map-lede>${esc(fill(M.lede, { located: initialPlaced.length, count: initial.length }))}</p>
+
+      <!-- The Index's facets, in the Index's own dress (the .facet CSS is
+           shared): the same fields through the same applyFilters, so a facet
+           means the identical thing on both pages. -->
+      <div class="facets map-facets" data-map-facets>${facetRow(data.saints)}</div>
 
       <h2 class="register-heading">${esc(M.placesHeading)}</h2>
       <ul class="register map-places" data-places></ul>
@@ -174,34 +205,60 @@ export function render(el, { data, router }) {
            which is the honest shape of this page today and should be impossible
            to miss. -->
       <details class="map-unlocated">
-        <summary>${esc(fill(M.unlocated, { count: without.length }))}</summary>
+        <summary data-unlocated-summary>${esc(fill(M.unlocated, { count: initialWithout.length }))}</summary>
         <p class="utility">${esc(M.unlocatedNote)}</p>
-        <ul class="register map-unlocated-list">
-          ${without
-            .map(
-              (s) =>
-                `<li class="reg-row"><a class="reg-name" href="${esc(router.href(`/saints/${s.slug}`))}">${esc(saintName(s))}</a></li>`,
-            )
-            .join('')}
+        <ul class="register map-unlocated-list" data-unlocated-list>
+          ${unlocatedRows(initialWithout, router)}
         </ul>
       </details>
     </div>`;
 
-  paintPlaces(el, withPlace, router);
-
   const canvas = el.querySelector('[data-map]');
-  const draw = () => paintCanvas(canvas, withPlace);
   destroy();
   view = HOME;
+
+  /*
+   * One pass over the page, the Index's own shape: what matches, what that
+   * says, and where it goes. Everything below the facets reads the filtered
+   * set - the lede, the kind counts, the rows, the tray, the picture - so a
+   * tick moves all of them together or it is a filter that lies somewhere.
+   */
+  let withPlace = [];
+  const refresh = () => {
+    const { matched } = applyFilters(data.saints, filters);
+    withPlace = matched.filter(located);
+    const without = matched.filter((s) => !located(s));
+    el.querySelector('[data-map-lede]').textContent = fill(M.lede, {
+      located: withPlace.length,
+      count: matched.length,
+    });
+    for (const k of KINDS) {
+      el.querySelector(`[data-kind-count="${k}"]`).textContent = String(pointsOfKind(withPlace, k).length);
+    }
+    el.querySelector('[data-unlocated-summary]').textContent = fill(M.unlocated, { count: without.length });
+    el.querySelector('[data-unlocated-list]').innerHTML = unlocatedRows(without, router);
+    paintPlaces(el, withPlace, router);
+    paintCanvas(canvas, withPlace);
+  };
+  const draw = () => paintCanvas(canvas, withPlace);
+  refresh();
+
+  el.querySelector('[data-map-facets]').addEventListener('input', () => {
+    for (const name of FACETS) {
+      filters[name] = [...el.querySelectorAll(`[data-map-facets] input[name="${name}"]:checked`)].map((i) => i.value);
+    }
+    refresh();
+  });
 
   for (const button of el.querySelectorAll('[data-kind]')) {
     button.addEventListener('click', () => {
       kind = button.dataset.kind;
       for (const b of el.querySelectorAll('[data-kind]')) b.setAttribute('aria-pressed', String(b === button));
-      paintPlaces(el, withPlace, router);
-      draw();
+      refresh();
     });
   }
+
+  wirePress(canvas, router);
 
   /*
    * The coastline is fetched, so the first paint is the empty box and the
@@ -209,9 +266,12 @@ export function render(el, { data, router }) {
    * and the caption says which state the reader is looking at rather than a
    * blank picture standing there meaning nothing.
    */
-  drawWhenReady(el, canvas, withPlace);
+  drawWhenReady(el, canvas, () => withPlace);
 
-  wireZoom(el, canvas, withPlace);
+  // A getter, not the array: refresh() *replaces* withPlace, and a closure
+  // over the old value would zoom an empty map forever (found by the label
+  // test reading 0 at 4x while a hand-driven shot showed a label).
+  wireZoom(el, canvas, () => withPlace);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -222,6 +282,82 @@ export function render(el, { data, router }) {
    */
   onResize = () => paintCanvas(canvas, withPlace);
   window.addEventListener('resize', onResize);
+}
+
+/** The facet row: the Index's own markup shape, so its CSS dresses it. */
+function facetRow(cards) {
+  const F = STRINGS.saints.filters;
+  const facets = facetsOf(cards);
+  const label = {
+    churches: (id) => churchName(id),
+    types: (id) => typeName(id),
+    regions: (id) => REGIONS_BY_ID[id]?.display_name ?? id,
+  };
+  const legend = { churches: F.church, types: F.type, regions: F.region };
+  return FACETS.map((name) => {
+    const options = facets[name].map((value) => ({ value, label: label[name](value) }));
+    options.sort((a, b) => a.label.localeCompare(b.label));
+    return `<details class="facet" data-facet="${name}"><summary>${esc(legend[name])}</summary>
+      <fieldset><legend class="sr-only">${esc(legend[name])}</legend>
+        ${options
+          .map(
+            (o) => `<label class="facet-option">
+          <input type="checkbox" name="${name}" value="${esc(o.value)}" /> ${esc(o.label)}
+        </label>`,
+          )
+          .join('')}
+      </fieldset></details>`;
+  }).join('');
+}
+
+function unlocatedRows(without, router) {
+  return without
+    .map(
+      (s) => `<li class="reg-row"><a class="reg-name" href="${esc(router.href(`/saints/${s.slug}`))}">${esc(saintName(s))}</a></li>`,
+    )
+    .join('');
+}
+
+/**
+ * A dot is a door (2026-08-30). The press is distinguished from a drag the
+ * same way loop-scroll's click-swallow does it - by distance, not by time -
+ * and the hit radius is a finger's, not the dot's own 2.5 px. The list below
+ * remains the keyboard's and the screen reader's way in; this is the
+ * pointer's.
+ */
+function wirePress(canvas, router) {
+  let downAt = null;
+  canvas.addEventListener('pointerdown', (e) => {
+    downAt = { x: e.clientX, y: e.clientY };
+  });
+  canvas.addEventListener('pointerup', (e) => {
+    const was = downAt;
+    downAt = null;
+    if (!was || Math.hypot(e.clientX - was.x, e.clientY - was.y) > 5) return;
+    const hit = dotAt(canvas, e);
+    if (hit) router.navigate(`/saints/${hit.slug}`);
+  });
+  // The cursor says a dot is pressable before the press finds out.
+  canvas.addEventListener('pointermove', (e) => {
+    if (e.buttons) return;
+    canvas.style.cursor = dotAt(canvas, e) ? 'pointer' : '';
+  });
+}
+
+function dotAt(canvas, e) {
+  const box = canvas.getBoundingClientRect();
+  const x = e.clientX - box.left;
+  const y = e.clientY - box.top;
+  let best = null;
+  let bestD = 12;
+  for (const dot of drawnDots) {
+    const d = Math.hypot(dot.x - x, dot.y - y);
+    if (d < bestD) {
+      bestD = d;
+      best = dot;
+    }
+  }
+  return best;
 }
 
 export function destroy() {
@@ -246,6 +382,7 @@ export function destroy() {
  * (`lib/map-view.js` collapses the range), so nothing is lost by it.
  */
 function wireZoom(el, canvas, cards) {
+  // `cards` is a getter throughout - see the call site.
   const level = el.querySelector('[data-zoom-level]');
   const apply = () => {
     /*
@@ -268,7 +405,7 @@ function wireZoom(el, canvas, cards) {
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
     el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
     el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
-    paintCanvas(canvas, cards);
+    paintCanvas(canvas, cards());
   };
 
   const set = (next) => {
@@ -423,6 +560,8 @@ function midpoint(active) {
 }
 
 async function drawWhenReady(el, canvas, cards) {
+  // `cards` is a getter: the coastline may land after the reader has already
+  // ticked a facet, and the paint must draw the set they are looking at.
   const caption = el.querySelector('[data-caption]');
   try {
     // Dynamic, so the coastline is its own chunk: 19 kB gzipped that a reader
@@ -430,7 +569,7 @@ async function drawWhenReady(el, canvas, cards) {
     const { LAND } = await import('../data/land.js');
     if (!canvas.isConnected) return;
     canvas.__land = LAND;
-    paintCanvas(canvas, cards);
+    paintCanvas(canvas, cards());
     caption.textContent = STRINGS.map.caption;
   } catch {
     // A map that cannot draw says so; it does not leave an empty rectangle
@@ -546,7 +685,9 @@ function paintCanvas(canvas, cards) {
     ctx.fill();
   }
 
-  for (const { where } of pointsOfKind(cards, kind)) {
+  drawnDots = [];
+  const labels = [];
+  for (const { card, where } of pointsOfKind(cards, kind)) {
     const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
@@ -591,7 +732,42 @@ function paintCanvas(canvas, cards) {
     ctx.strokeStyle = ink;
     ctx.lineWidth = 0.5;
     ctx.stroke();
+    drawnDots.push({ x, y, slug: card.slug, name: saintName(card) });
   }
+
+  /*
+   * Names arrive with the zoom (§8.3: "Zoom in to reveal more dots, then
+   * labels"), and a label that would overlap one already drawn is dropped
+   * rather than drawn over it - the brief's own words. Sixteen points make
+   * that a straight rectangle test; the collide-and-nudge machinery stays
+   * with the density work it belongs to (Amendment 69).
+   */
+  if (view.scale >= LABELS_AT) {
+    ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = ink;
+    for (const dot of drawnDots) {
+      const wText = ctx.measureText(dot.name).width;
+      const rect = { x: dot.x + 6, y: dot.y - 8, w: wText + 4, h: 16 };
+      if (rect.x + rect.w > w || dot.x < 0 || dot.y < 0 || dot.y > h) continue;
+      if (labels.some((r) => rect.x < r.x + r.w && r.x < rect.x + rect.w && rect.y < r.y + r.h && r.y < rect.y + rect.h)) {
+        continue;
+      }
+      labels.push(rect);
+      ctx.fillText(dot.name, rect.x + 2, dot.y);
+    }
+  }
+  /*
+   * The count of drawn labels, published for the suite. An instrument, so the
+   * standing question applies - what would it look like if it were doing
+   * nothing? Zero, always: it is written by the same pass that draws, so a
+   * paint that never labels writes '0' and the test's zoomed half goes red
+   * rather than green-by-absence.
+   */
+  canvas.dataset.labels = String(labels.length);
+  // The hit-map, published for the press test: same pass, same rule - a paint
+  // that drew nothing writes '[]' and the pressing half goes red.
+  canvas.dataset.dots = JSON.stringify(drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug })));
 }
 
 /**

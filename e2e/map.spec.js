@@ -351,3 +351,124 @@ test('the world is not stretched to fit the window', async ({ page }) => {
   });
   expect(shape.pixels, 'the backing store is a different shape from the box, so it is being stretched').toBeCloseTo(shape.css, 2);
 });
+
+/* ---- the Index's filters, labels, and pressable dots (2026-08-30) ------- */
+
+test('the map shares the Index filter set, and every number follows a tick', async ({ page }) => {
+  /*
+   * Brief §8.3: "shares the same filter set as the Index mode." The same
+   * fields through the same applyFilters, so the claim to pin is coherence:
+   * one tick moves the lede, the kind counts, the rows, the tray and the
+   * picture together, or a filter is lying somewhere on the page.
+   */
+  await ready(page);
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  const rows = page.locator('.map-places .reg-row');
+  const before = await rows.count();
+  const trayBefore = Number(/(\d+)/.exec(await page.locator('[data-unlocated-summary]').textContent())[1]);
+
+  /*
+   * `bishop`, not `venerable` - a premise this test's first version got wrong.
+   * The rows print "Venerable Anthony" through the honorific *rank*, but the
+   * `types` field the facet filters on holds monk/hermit/abbot for him, and no
+   * located saint carries `venerable` at all. Three located bishops do, each
+   * with a death point, which leaves the narrowed page non-empty in the
+   * default kind - a filter test over an empty answer proves only emptiness.
+   */
+  const typeFacet = page.locator('[data-map-facets] [data-facet="types"]');
+  await typeFacet.locator('summary').click();
+  await typeFacet.locator('input[value="bishop"]').check();
+
+  // The rows narrowed to the pressed kind's venerables, and the pressed kind's
+  // own count agrees with them - the invariant the first map tests pinned,
+  // holding under a filter.
+  await expect
+    .poll(async () => Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent()))
+    .toBeLessThan(before);
+  const claimed = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
+  await expect(rows).toHaveCount(claimed);
+
+  // The tray follows the same filter: fewer unlocated venerables than
+  // unlocated saints - "never silently dropped" holds inside a filter too.
+  const trayAfter = Number(/(\d+)/.exec(await page.locator('[data-unlocated-summary]').textContent())[1]);
+  expect(trayAfter).toBeLessThan(trayBefore);
+
+  // And the lede counts the filtered corpus, not the whole one.
+  await expect(page.locator('[data-map-lede]')).not.toContainText(`of ${before + trayBefore} `);
+
+  // Unticking restores the page whole.
+  await typeFacet.locator('input[value="bishop"]').uncheck();
+  await expect(rows).toHaveCount(before);
+});
+
+test('names arrive with the zoom, and not before', async ({ page }) => {
+  /*
+   * §8.3: "Zoom in to reveal more dots, then labels." At rest the world fits
+   * the box and sixteen names would be sixteen collisions; past the threshold
+   * there is room, and a label that would overlap one already drawn is
+   * dropped rather than drawn over it - the brief's own words, at the only
+   * density the corpus can exercise.
+   */
+  await ready(page);
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+
+  await expect(canvas).toHaveAttribute('data-labels', '0');
+
+  /*
+   * Zoomed *at a dot*, not at the box's centre: the + button anchors mid-box,
+   * and three presses of it march the eastern-Mediterranean cluster clean out
+   * of a 1280 px frame - the probe found one surviving dot, 48 px above the
+   * top edge, and a label for an off-screen dot is rightly never drawn. The
+   * wheel anchors under the pointer (the map's own promise), so the dot the
+   * pointer sits on stays put while the world grows around it.
+   */
+  const at = await canvas.evaluate((el) => {
+    const b = el.getBoundingClientRect();
+    const d = JSON.parse(el.dataset.dots)[0];
+    return { x: b.x + d.x, y: b.y + d.y };
+  });
+  await page.mouse.move(at.x, at.y);
+  await page.keyboard.down('Control');
+  await page.mouse.wheel(0, -400);
+  await page.mouse.wheel(0, -400);
+  await page.keyboard.up('Control');
+  await expect
+    .poll(() => canvas.getAttribute('data-labels'), { message: 'no labels appeared zoomed at a dot' })
+    .not.toBe('0');
+});
+
+test('a dot is a door: a press opens the saint, a drag does not', async ({ page }) => {
+  await ready(page);
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+
+  const { dot, box } = await canvas.evaluate((el) => {
+    const dots = JSON.parse(el.dataset.dots ?? '[]');
+    const b = el.getBoundingClientRect();
+    // One safely inside the box - the first may sit at an edge.
+    const inside = dots.find((d) => d.x > 20 && d.y > 60 && d.x < b.width - 20 && d.y < b.height - 60);
+    return { dot: inside, box: { x: b.x, y: b.y } };
+  });
+  expect(dot, 'premise: no dot drawn inside the box').toBeTruthy();
+
+  /*
+   * The drag first, while we are still on the page: press on the dot, pull
+   * 40 px, release. A haul across the map must never be read as a press -
+   * the same rule the carousel's click-swallow keeps.
+   */
+  await page.mouse.move(box.x + dot.x, box.y + dot.y);
+  await page.mouse.down();
+  await page.mouse.move(box.x + dot.x + 40, box.y + dot.y + 25, { steps: 4 });
+  await page.mouse.up();
+  await expect(page).toHaveURL(/\/map$/);
+
+  // The dot moved with the drag; re-read its position before the true press.
+  const { dot: dot2 } = await canvas.evaluate((el) => ({ dot: JSON.parse(el.dataset.dots ?? '[]')[0] }));
+  await page.mouse.click(box.x + dot2.x, box.y + dot2.y);
+  await expect(page).toHaveURL(new RegExp(`/saints/${dot2.slug}$`));
+  await expect(page.locator('h1')).not.toHaveText('Map');
+});

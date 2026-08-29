@@ -1,0 +1,18 @@
+# Every text file is LF, in the repository and in the worktree.
+#
+# Not a style preference - a defence. This desk's global core.autocrlf=true
+# rewrote the 22 September batch's 76 files to CRLF during an ordinary
+# stash/pop, which put a literal \r inside display-name headings the unit
+# suite compares exactly, and JSON the tooling round-trips byte-for-byte
+# (2026-08-30; PowerShell's BOM is the same family of wound, HANDOFF's
+# environment notes). Every committed blob is already LF - checked with
+# `git grep --cached` before this file landed - so this changes nothing in
+# the history and stops the worktree drifting from it on any clone.
+* text=auto eol=lf
+
+# Pictures are not text, whatever a heuristic decides.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.woff2 binary
