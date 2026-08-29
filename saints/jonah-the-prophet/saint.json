@@ -1,0 +1,57 @@
+{
+  "slug": "jonah-the-prophet",
+  "display_name": "Jonah",
+  "names": [
+    {
+      "form": "Sfântul Proroc Iona",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 8 сентября ст. ст. (civil 21 September, checked 2026-08-29); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 21 Septembrie — „Sfântul Proroc Iona”",
+        "url": "https://doxologia.ro/sfantul-proroc-iona",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-29)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-29)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": -850,
+      "latest": -750,
+      "display": "c. 800 BC",
+      "basis": "traditional",
+      "note": "The life on doxologia.ro closes: „fiind înainte de nașterea lui Hristos cu opt sute de ani” - eight hundred years before the birth of Christ."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

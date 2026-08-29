@@ -27,12 +27,11 @@ you inferred, and keep them apart.
 
 ## State (2026-08-29)
 
-- **742 saints**, every one with a life; **1047 attestations**, every one
+- **746 saints**, every one with a life; **1051 attestations**, every one
   `venerated` — no refusal and no sourced absence is recorded yet, and the
-  About page now says so. Rows per saint are **518 with one, 171 with two, 25
-  with three, 28 with four**; the old "four attestation rows" here was wrong.
-  **157 undated** (it said 162; `manifest.meta.json` and `index.spec.js` both
-  say 157); **130 icons**; 430 hymns, 49 with a published English rendering.
+  About page says so. **157 undated**; **130 icons**; 430 hymns, 49 with a
+  published English rendering. The corpus reaches **21 September 2026**
+  (Russian 428, Romanian 129, Greek 365, Serbian 129).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -264,9 +263,12 @@ names Basilica, and both statements are true about different things.
 
 ## Data work — larger than the engineering
 
-- **Saints for the days past 20 September.** 600–1,100 folders. Dedupe on the
-  *feast date*, never the name. Pipeline under `.tmp/`; a day is roughly a
-  sitting.
+- **Saints for the days past 21 September.** 600–1,100 folders. Dedupe on the
+  *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
+  harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
+  sitting — though 21 September was light, being the Nativity of the
+  Theotokos: a Great Feast day is mostly feast and icons, and held only four
+  people across both calendars.
 - **Greek and Serbian saints banked** under `.tmp/` (463 Greek entries for
   20 Sep – 31 Oct; 182 Serbian days). Editorial work — do not generate these.
 - **Icons for the 612 without one.** Harvest a *known* corpus and match by hand;

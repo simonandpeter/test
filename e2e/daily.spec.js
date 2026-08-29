@@ -3707,10 +3707,15 @@ test('the day records say where they stop, and the corpus says how far it reache
   await expect(page.locator('.beyond-records')).toHaveCount(0);
   await expect(page.locator('[data-readings] a').first()).toBeVisible();
 
-  // And the reach is a date read off the corpus, not a literal: the Russian
-  // calendar's folders run to 20 September 2026 (7 September, Julian).
+  /*
+   * And the reach is a date read off the corpus, not a literal. The literal
+   * *here* moves with every day the corpus gains - it is the assertion that
+   * the page computes the right answer, and the right answer is a corpus
+   * fact: 21 September 2026 since the 2026-08-29 batch (8 September, Julian,
+   * the two Georgian confessors of the Nativity feast day).
+   */
   await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 20 September 2026');
+  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 21 September 2026');
   await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
 });
 

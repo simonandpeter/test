@@ -1,0 +1,9 @@
+# Jonah
+
+The Romanian synaxarion's life of the prophet Jonah begins before his own memory does. It makes him the son of the widow of Sarepta - the boy who died as a child and was raised by the prophet Elijah, who stretched himself over the body three times and cried out to God until the soul returned. The child brought back from death would later spend three days and three nights in the belly of the great fish, and the life reads the one through the other: the raising prefigured the fish, and the fish prefigured the Resurrection of Christ.
+
+Grown, Jonah received the gift of prophecy, and the word of the Lord sent him to Nineveh, the great city, to preach its overthrow. He fled instead, taking ship in the other direction - reasoning, as the life has it, that if the city repented and was spared, he would be left a prophet whose word had failed. The storm, the lot that fell on him, the fish that swallowed him at the Lord's command: he prayed in its belly with his hands stretched out in the form of a cross, and on the third day it set him on the shore. He went then to Nineveh and preached, and the city repented in sackcloth from the king down, and God spared it - which grieved Jonah exactly as he had feared, until God taught him by the withered gourd that a city of thousands is worth more pity than a plant.
+
+Ashamed, the life says, to live among his own people as the prophet whose prophecy God had revoked, he did not return home but took his mother into the land of Assyria and settled there among strangers. He buried her in Lebanon, and died himself in the land of Assyria, eight hundred years before the birth of Christ, and was buried in the cave of Kenez.
+
+*After doxologia.ro, [Viața Sfântului Proroc Iona](https://doxologia.ro/viata-sfantului-proroc-iona); read 29 August 2026. The scriptural narrative is the Book of Jonah; the widow's son is III Kings 17.*

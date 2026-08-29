@@ -1,0 +1,59 @@
+{
+  "slug": "quadratus-the-apostle",
+  "display_name": "Quadratus",
+  "office": "Bishop of Magnesia",
+  "names": [
+    {
+      "form": "Sfântul Apostol Codrat",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 8 сентября ст. ст. (civil 21 September, checked 2026-08-29); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 21 Septembrie — „Sfântul Apostol Codrat”",
+        "url": "https://doxologia.ro/sfantul-apostol-codrat",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-29)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-29)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "under Hadrian (117–138)",
+      "basis": "traditional",
+      "note": "The life on doxologia.ro: „și-a sfârșit nevoința muceniciei, pe vremea împăratului Adrian (117-138)”."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

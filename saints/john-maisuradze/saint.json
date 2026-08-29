@@ -1,0 +1,59 @@
+{
+  "slug": "john-maisuradze",
+  "display_name": "John (Maisuradze)",
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Иоанн (Майсурадзе)",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 сентября ст. ст. — «Прпп. Иоанна (1957) и Георгия (1962), исповедников (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260908.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 21 septembrie (checked 2026-08-29); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-29)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-29)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1957,
+      "latest": 1957,
+      "display": "1957",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Прпп. Иоанна (1957)…»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
