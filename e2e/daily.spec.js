@@ -321,6 +321,30 @@ test('a day is one click, and the keys step it from anywhere', async ({ page }) 
   expect(ringed.onADay).toBe(false);
 });
 
+test('a swipe on the day panel steps a day too, left for tomorrow and right for yesterday', async ({ page }) => {
+  /*
+   * The thumb's equivalent of the arrow keys above (2026-08-31): a touch
+   * swipe left or right on the day's own panel, reusing `onGrainDrag` — the
+   * week and month's own gesture primitive — rather than a bespoke listener.
+   * `swipe`'s synthetic pointerdown/pointerup with no move in between is a
+   * flick, per its own doc comment, which is what a fast real swipe looks
+   * like once the browser coalesces its moves.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  await swipe(page, '.slot-viewport', -80);
+  await expect(page.locator('h1')).toHaveText(/29 Aug 2026/);
+  await swipe(page, '.slot-viewport', 80);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
+
+  // Short of the threshold, or mostly vertical, is a scroll or a mistap, not
+  // a page turn.
+  await swipe(page, '.slot-viewport', -20);
+  await swipe(page, '.slot-viewport', -80, 200);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
+});
+
 test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
   /*
    * The failure this pins is a leaked listener: wireDayKeys binds on

@@ -31,7 +31,7 @@ import { recordedDay } from '../data/days.js';
    views/daily/state.js for why it is a singleton and why it moved. */
 import { state, open as openState, close as closeState } from './daily/state.js';
 import { reducedMotion } from './daily/motion.js';
-import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireRail } from './daily/picker.js';
+import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor } from './daily/entries.js';
 import { headingFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
 import { paintDay } from './daily/panel.js';
@@ -185,6 +185,7 @@ export function render(el, { data, params, router }) {
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
     wireRail(el.querySelector('.week-strip')),
     wireDayKeys(),
+    wireDaySwipe(el),
     wireFastBubble(el),
   );
 

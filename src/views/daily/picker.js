@@ -5,6 +5,7 @@ import { toIsoDate } from '../../lib/feasts.js';
 import { gregorianToJdn } from '../../lib/jdn.js';
 import { liturgicalDay } from '../../lib/liturgy.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
+import { onGrainDrag, SETTLE } from '../../ui/grain-drag.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor } from './entries.js';
@@ -529,6 +530,31 @@ export function wireDayKeys() {
 
   document.addEventListener('keydown', onKey);
   return () => document.removeEventListener('keydown', onKey);
+}
+
+/**
+ * The same day-either-way as the arrow keys, for a thumb instead of a hand on
+ * the keyboard (2026-08-31): swipe the day panel left for tomorrow, right for
+ * yesterday. `onGrainDrag` is the week and month's own gesture primitive —
+ * touch and pen only, a horizontal drag told apart from a vertical scroll by
+ * its own SLOP, so this reuses that rather than re-deciding "was this a
+ * swipe" a third time.
+ *
+ * There is nothing to park beside the panel and drag into view: the day's own
+ * roll is a vertical fade (`slot-viewport`'s `slot-in`/`slot-out`), not a
+ * horizontal strip like the week or the month, so `move` is left unwired and
+ * the gesture is read for direction and distance alone. `end` still re-checks
+ * `SETTLE` even though `onGrainDrag` already gates on it for a flick — a slow
+ * drag that wandered past the 8px slop but let go after only a few pixels
+ * counts as `dragged` there and must not step a real day on a false start.
+ */
+export function wireDaySwipe(el) {
+  return onGrainDrag(el.querySelector('.slot-viewport'), {
+    end(dx) {
+      if (Math.abs(dx) < SETTLE) return;
+      step(dx < 0 ? 1 : -1);
+    },
+  });
 }
 
 /* ---- month view ------------------------------------------------------- */

@@ -1,6 +1,6 @@
 import { isUndated, overlaps } from '../lib/dates.js';
 import { lifeInterval } from '../lib/index-filters.js';
-import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -17,28 +17,41 @@ export const title = () => STRINGS.map.title;
  * `d3-geo` globe with drag-to-rotate is deferred rather than refused, and the
  * brief's reasoning for it still stands; what shipped instead needs no runtime
  * dependency at all, because Mercator is arithmetic (`lib/mercator.js`) and the
- * only weight is the coastline itself — 19 kB gzipped, in its own chunk, loaded
- * when this view is opened and never on the boot path.
+ * only weight is the picture's own data — coastline, lakes and rivers,
+ * `data/land.js` and `data/water.js` — in the map's own chunk, loaded when
+ * this view is opened and never on the boot path. Both moved from Natural
+ * Earth's 110m tier to its 50m one (2026-08-31), which is most of that
+ * chunk's ~211 kB gzipped: a deliberate trade of "very light" for "can
+ * actually zoom in on", made once the corpus's own located count made a
+ * closer look worth taking.
  *
- * **Clustering and collide-detected labels stay deferred, and the reason is
- * the corpus rather than the effort.** Seven of 851 saints carry a location,
- * sixteen points between them. A density threshold that never fires and
- * labels that never collide would be machinery verified against nothing — a
- * count in the DOM is not a count in the corpus — so they wait for the data.
+ * **The density-paced brush stays deferred, and the reason is the corpus
+ * rather than the effort.** §8.3's fuller vision — fading saints in and out
+ * by how crowded their years are — would be machinery verified against
+ * nothing at 60 of 851 saints located. Collide-detected *labels* shipped
+ * anyway (2026-08-30, `paintCanvas`'s overlap-drop): a label overlap is
+ * something sixteen points could already demonstrate. And a *dot*-level
+ * spread (`lib/map-view.js`'s `declutter`, 2026-08-31) is not the density
+ * question either — John the Long-Suffering and Moses the Hungarian die at
+ * the same rounded coordinate, and no zoom level would ever separate two
+ * identical points, so leaving them stacked was a correctness gap rather
+ * than an unexercised threshold.
  *
  * **The timeline is not one of those, by author instruction** (2026-08-30
  * evening: "add a timeline bar at the bottom ... where you can filter saints
  * by date on the map"), which overrides the corpus-blocked deferral above for
- * a plain range filter while leaving the brief's *density-paced brush* — the
- * fuller §8.3 vision, fading saints in and out by how crowded their years
- * are — exactly where it was: seven lives cannot demonstrate a pacing
- * algorithm's correctness any better than they could a cluster threshold's.
- * What is built is the light half: a dual-handle range over each located
+ * a plain range filter. What is built: a dual-handle range over each located
  * saint's own life span, reusing the Index's own `lifeInterval` and
  * `overlaps` (`lib/index-filters.js`, `lib/dates.js`) rather than inventing a
  * second reading of the same dates. An undated life is never excluded — there
  * is nothing to judge it against, and the map has no tray left to set it
  * aside in (Amendment 77) — so it always shows, indifferent to the slider.
+ * The two handles drag independently (each is a native `<input
+ * type="range">`, keyboard-operable for free); the highlighted span between
+ * them is a third grab target (`wireTimeline`'s pointer handlers on
+ * `.map-timeline-fill`, 2026-08-31) that moves both handles together and
+ * keeps their width fixed, for a reader panning the same-length window
+ * across the years rather than resizing it one edge at a time.
  *
  * **The page is the map and a small footer, nothing else** (author,
  * 2026-08-30: "remove everything on the map page outside of the map itself
@@ -309,6 +322,14 @@ export function render(el, { data, router }) {
  * blocking the other's thumb. Crossing the handles is not prevented — `wireTimeline`
  * always takes the sorted pair as the effective range, so a thumb dragged
  * past its twin still means something rather than needing to be stopped.
+ *
+ * The fill itself is a third grab target (`wireTimeline`, 2026-08-31): its
+ * hit box is the rail-wrap's full height, not the 4 px painted bar, so a
+ * pointer sliding the highlighted span does not need to land on a hairline —
+ * `.map-timeline-fill-bar` is the visible bar, `.map-timeline-fill` around it
+ * is what pointer events actually land on. It sits under both inputs in
+ * paint order, so it only ever answers a press that already passed through
+ * their `pointer-events: none` bodies.
  */
 function timelineMarkup(M, bounds) {
   return `
@@ -317,7 +338,7 @@ function timelineMarkup(M, bounds) {
         <span class="map-timeline-bound utility" aria-hidden="true">${bounds.min}</span>
         <div class="map-timeline-rail-wrap">
           <div class="map-timeline-rail"></div>
-          <div class="map-timeline-fill" data-timeline-fill></div>
+          <div class="map-timeline-fill" data-timeline-fill><span class="map-timeline-fill-bar"></span></div>
           <input type="range" class="map-timeline-input" data-timeline-from
             min="${bounds.min}" max="${bounds.max}" step="1" value="${dateFrom}"
             aria-label="${esc(STRINGS.saints.filters.from)}" />
@@ -335,10 +356,11 @@ function timelineMarkup(M, bounds) {
 }
 
 /**
- * Wires the two range inputs to one effective span, held in the module-level
- * `dateFrom`/`dateTo` so it survives the visit the way `kind` does. `visible`
- * is the same getter `refresh()` uses — one predicate, read twice, rather
- * than a second copy that could drift from it.
+ * Wires the two range inputs — and the highlighted span between them — to
+ * one effective span, held in the module-level `dateFrom`/`dateTo` so it
+ * survives the visit the way `kind` does. `visible` is the same getter
+ * `refresh()` uses — one predicate, read twice, rather than a second copy
+ * that could drift from it.
  */
 function wireTimeline(el, withPlace, bounds, refresh, visible) {
   const fromInput = el.querySelector('[data-timeline-from]');
@@ -379,6 +401,53 @@ function wireTimeline(el, withPlace, bounds, refresh, visible) {
     toInput.value = String(bounds.max);
     commit();
   });
+
+  /*
+   * The fill drag: a pointer down on the highlighted span shifts both
+   * handles by the same number of years, holding their width fixed — a pan
+   * across the timeline rather than a resize of it. `Math.round` keeps
+   * `dateFrom`/`dateTo` the same integer-year values a keyboard press would
+   * leave them at, so the readout never shows a fraction.
+   */
+  let drag = null;
+  fillEl.addEventListener('pointerdown', (e) => {
+    fillEl.setPointerCapture(e.pointerId);
+    drag = { pointerId: e.pointerId, startX: e.clientX, from: dateFrom, to: dateTo };
+    fillEl.classList.add('is-dragging');
+  });
+  fillEl.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.pointerId) return;
+    const rect = fillEl.parentElement.getBoundingClientRect();
+    const span = bounds.max - bounds.min || 1;
+    const deltaYears = ((e.clientX - drag.startX) / rect.width) * span;
+    const width = drag.to - drag.from;
+    let from = drag.from + deltaYears;
+    let to = drag.to + deltaYears;
+    // Clamped as one unit: the span slides until *either* edge meets the
+    // bound, and that edge's clamp carries the other edge with it so the
+    // width never changes mid-drag — the difference between panning the
+    // window and having it squashed against the wall.
+    if (from < bounds.min) {
+      from = bounds.min;
+      to = from + width;
+    } else if (to > bounds.max) {
+      to = bounds.max;
+      from = to - width;
+    }
+    dateFrom = Math.round(from);
+    dateTo = Math.round(to);
+    fromInput.value = String(dateFrom);
+    toInput.value = String(dateTo);
+    paint();
+    refresh();
+  });
+  const endDrag = (e) => {
+    if (!drag || e.pointerId !== drag.pointerId) return;
+    drag = null;
+    fillEl.classList.remove('is-dragging');
+  };
+  fillEl.addEventListener('pointerup', endDrag);
+  fillEl.addEventListener('pointercancel', endDrag);
 
   paint();
 }
@@ -621,19 +690,23 @@ async function drawWhenReady(el, canvas, cards) {
   // dragged the timeline, and the paint must draw the set they are looking at.
   const caption = el.querySelector('[data-caption]');
   try {
-    // Dynamic, so the coastline is its own chunk: 19 kB gzipped that a reader
-    // who never opens the map never pays for.
-    const { LAND } = await import('../data/land.js');
+    // Dynamic and in parallel, so the picture's own data is its own chunk
+    // (or two — Vite splits each module) that a reader who never opens the
+    // map never pays for, and one fetch does not wait on the other.
+    const [{ LAND }, { LAKES, RIVERS }] = await Promise.all([import('../data/land.js'), import('../data/water.js')]);
     if (!canvas.isConnected) return;
     canvas.__land = LAND;
+    canvas.__water = { LAKES, RIVERS };
     paintCanvas(canvas, cards());
     /*
      * The page's own report that the fetch landed *and* the paint used it -
      * written after the draw, so a chunk that resolved into a canvas that
-     * never repainted would still read as not-ready. The suite waits on this;
-     * the credit in the footer is static and says nothing about the network.
+     * never repainted would still read as not-ready. The suite waits on
+     * these; the credit in the footer is static and says nothing about this
+     * visit's network.
      */
     canvas.dataset.land = 'ok';
+    canvas.dataset.water = 'ok';
   } catch {
     // A map that cannot draw says so; it does not leave an empty rectangle
     // that reads as a bug or, worse, as an empty world.
@@ -708,8 +781,63 @@ function paintCanvas(canvas, cards) {
     ctx.fill();
   }
 
-  drawnDots = [];
-  const labels = [];
+  const water = canvas.__water;
+  if (water) {
+    const ringPath = (ring) => {
+      ctx.beginPath();
+      for (let i = 0; i < ring.length; i += 2) {
+        const p = place(ring[i], ring[i + 1], frame);
+        const x = p.x * w;
+        const y = p.y * h;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+    };
+    /*
+     * Lakes are cut out of the land fill rather than painted a colour of
+     * their own. `destination-out` erases exactly the lake's shape back to
+     * fully transparent, which is already what the sea is — nothing painted,
+     * the CSS `--field` showing through — so a lake reads as "the same water
+     * the coastline already implies" instead of introducing a second blue
+     * the palette does not have.
+     */
+    if (land && water.LAKES.length) {
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = '#000';
+      for (const ring of water.LAKES) ringPath(ring);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    /*
+     * Rivers are strokes, not fills: `RIVERS` is `LineString` data, open
+     * paths rather than closed rings. Ink at a slightly higher alpha than
+     * the land fill so a river still reads as a line rather than vanishing
+     * into it, but in the same tone rather than a colour the coastline
+     * itself does not use.
+     */
+    if (water.RIVERS.length) {
+      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5);
+      ctx.lineWidth = 0.75;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      for (const line of water.RIVERS) {
+        ctx.beginPath();
+        for (let i = 0; i < line.length; i += 2) {
+          const p = place(line[i], line[i + 1], frame);
+          const x = p.x * w;
+          const y = p.y * h;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+    }
+  }
+
+  const onScreen = [];
   for (const { card, where } of pointsOfKind(cards, kind)) {
     const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
@@ -717,7 +845,19 @@ function paintCanvas(canvas, cards) {
     // Off the visible box once zoomed, which is ordinary. The row for it is
     // still in the list below, so nothing has gone missing from the page.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
+    onScreen.push({ card, where, x, y });
+  }
 
+  drawnDots = [];
+  const labels = [];
+  /*
+   * Spread apart before anything is drawn, not after: the halo, the dot and
+   * the label all read from the same adjusted x/y, so two saints who share a
+   * spot (`lib/map-view.js`'s `declutter`, 2026-08-31 — John the
+   * Long-Suffering and Moses the Hungarian both at the Caves in Kyiv) get a
+   * halo and a label at the place each is actually drawn.
+   */
+  for (const { card, where, x, y } of declutter(onScreen)) {
     /*
      * The uncertainty curve's first shipping consumer (DESIGN.md §6b). The halo
      * is softness in px at base scale, scaled linearly with the picture's width

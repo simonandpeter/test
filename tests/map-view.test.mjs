@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, declutter, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -167,4 +167,62 @@ test('zooming at a point still holds it still in a cropped box', () => {
   const now = toScreen(v, target.px, target.py, frame);
   near(now.x, anchor[0], 1e-6);
   near(now.y, anchor[1], 1e-6);
+});
+
+/*
+ * `declutter` — John the Long-Suffering and Moses the Hungarian both die at
+ * the Caves in Kyiv, at the same rounded coordinate, and no amount of zoom
+ * ever moves two identical points apart. This is the fix, held to the two
+ * things that would make it worse than doing nothing: a lone point must not
+ * move (nothing to declutter it from), and a group must actually separate
+ * rather than only relabelling the same spot.
+ */
+
+test('a point with nothing to overlap stays exactly where it was', () => {
+  const out = declutter([{ x: 100, y: 200, slug: 'alone' }]);
+  assert.deepEqual(out, [{ x: 100, y: 200, slug: 'alone' }]);
+});
+
+test('two points far apart pass through untouched', () => {
+  const points = [{ x: 0, y: 0, slug: 'a' }, { x: 500, y: 500, slug: 'b' }];
+  const out = declutter(points);
+  assert.deepEqual(out.find((p) => p.slug === 'a'), points[0]);
+  assert.deepEqual(out.find((p) => p.slug === 'b'), points[1]);
+});
+
+test('two points at the exact same spot are pulled apart, around their shared centre', () => {
+  const out = declutter([
+    { x: 50, y: 50, slug: 'john-the-long-suffering' },
+    { x: 50, y: 50, slug: 'moses-the-hungarian' },
+  ]);
+  assert.equal(out.length, 2);
+  const [a, b] = out;
+  const d = Math.hypot(a.x - b.x, a.y - b.y);
+  assert.ok(d > 5, `still overlapping: ${d}px apart`);
+  // The pair straddles the point they shared, not drifted off toward one side.
+  near((a.x + b.x) / 2, 50, 1e-9);
+  near((a.y + b.y) / 2, 50, 1e-9);
+  // Every field but the position travels with its point.
+  assert.deepEqual(out.map((p) => p.slug).sort(), ['john-the-long-suffering', 'moses-the-hungarian']);
+});
+
+test('a bigger stack spreads every member out from its neighbours', () => {
+  const stack = Array.from({ length: 5 }, (_, i) => ({ x: 10, y: 10, slug: `s${i}` }));
+  const out = declutter(stack);
+  assert.equal(out.length, 5);
+  for (let i = 0; i < out.length; i++) {
+    for (let j = i + 1; j < out.length; j++) {
+      const d = Math.hypot(out[i].x - out[j].x, out[i].y - out[j].y);
+      assert.ok(d > 5, `members ${i} and ${j} still overlap: ${d}px apart`);
+    }
+  }
+});
+
+test('a custom radius scales how far a stack spreads', () => {
+  const points = [{ x: 0, y: 0 }, { x: 0, y: 0 }];
+  const tight = declutter(points, 4);
+  const wide = declutter(points, 40);
+  const dTight = Math.hypot(tight[0].x - tight[1].x, tight[0].y - tight[1].y);
+  const dWide = Math.hypot(wide[0].x - wide[1].x, wide[0].y - wide[1].y);
+  assert.ok(dWide > dTight, 'a larger radius should spread the pair further apart');
 });

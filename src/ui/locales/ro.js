@@ -431,7 +431,7 @@ export const ro = {
       relics: 'Moaște',
     },
     canvasLabel: 'O hartă a lumii. Trageți ca s-o mutați, săgețile o deplasează, plus și minus sau derularea schimbă mărirea.',
-    caption: 'Linia țărmului: Natural Earth, domeniu public. Marginea difuză arată un loc nesigur. Derulați pentru mărire.',
+    caption: 'Linia țărmului, râuri și lacuri: Natural Earth, domeniu public. Marginea difuză arată un loc nesigur. Derulați pentru mărire.',
     zoomGroup: 'Mărirea hărții',
     zoomIn: 'Mărește',
     zoomOut: 'Micșorează',

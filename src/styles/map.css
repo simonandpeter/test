@@ -272,8 +272,7 @@ html[data-route='map'] body {
   align-items: center;
 }
 
-.map-timeline-rail,
-.map-timeline-fill {
+.map-timeline-rail {
   position: absolute;
   left: 0;
   right: 0;
@@ -281,16 +280,37 @@ html[data-route='map'] body {
   height: 4px;
   margin-top: -2px;
   border-radius: 2px;
-}
-
-.map-timeline-rail {
   background: var(--rule);
 }
 
 /* `left`/`right` set inline by map.js on every drag — the two handles'
-   sorted positions, as percentages of the rail. */
+   sorted positions, as percentages of the rail. The box itself is the
+   rail-wrap's full height, not the painted bar's 4px: it is a third grab
+   target (2026-08-31) that drags both handles together, and a hit box that
+   thin would be nearly unpressable. `.map-timeline-fill-bar` inside it is
+   what actually paints. */
 .map-timeline-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  touch-action: none;
+}
+
+.map-timeline-fill.is-dragging,
+.map-timeline-fill:active {
+  cursor: grabbing;
+}
+
+.map-timeline-fill-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
   background: var(--rubric);
+  pointer-events: none;
 }
 
 /* Two native `<input type="range">` stacked on the same rail. The body of

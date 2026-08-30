@@ -20,7 +20,7 @@ const arg = (name, fallback) => {
   return hit ? hit.slice(name.length + 3) : fallback;
 };
 
-const QUALITY = arg('quality', '110m');
+const QUALITY = arg('quality', '50m');
 // One decimal place is about 11 km at the equator, which is finer than a 360 px
 // world map can draw: at that width a whole degree of longitude is a single
 // pixel. Two would double the file for detail no reader can see.

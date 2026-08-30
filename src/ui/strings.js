@@ -827,7 +827,7 @@ export const STRINGS = {
       relics: 'Relics',
     },
     canvasLabel: 'A world map. Drag to move it, arrow keys to pan, plus and minus or a scroll to zoom.',
-    caption: 'Coastline: Natural Earth, public domain. Soft edges mark uncertain places. Scroll to zoom.',
+    caption: 'Coastline, rivers and lakes: Natural Earth, public domain. Soft edges mark uncertain places. Scroll to zoom.',
     zoomGroup: 'Zoom the map',
     zoomIn: 'Zoom in',
     zoomOut: 'Zoom out',

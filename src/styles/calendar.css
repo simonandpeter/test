@@ -814,10 +814,14 @@
   margin-bottom: var(--space-4);
 }
 
-/* Slot viewport: the day rolls; the chrome around it does not. */
+/* Slot viewport: the day rolls; the chrome around it does not. `pan-y` keeps
+   the browser sending pointer events for a horizontal swipe (`wireDaySwipe`,
+   2026-08-31) while the page still scrolls vertically under a finger — the
+   same reason the month grain carries it. */
 .slot-viewport {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .slot-leaving {

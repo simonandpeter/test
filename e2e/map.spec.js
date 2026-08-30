@@ -6,13 +6,17 @@ import { ready } from './helpers.js';
  * suite is.
  *
  * **What this surface is has to be said before the tests make sense.** The
- * brief's §8.3 describes a `d3-geo` orthographic globe with clustering,
- * collide-detected labels and a timeline brush; the author asked for "a simple
- * mercator projection 2d map for now, something very light", and the density
- * machinery is deferred besides, because seven of 742 saints carry a location
- * and sixteen points cannot exercise a cluster threshold. So there are no tests
- * here for clustering or labels: there is nothing to test, and a green test over
- * absent machinery is worse than no test.
+ * brief's §8.3 describes a `d3-geo` orthographic globe with a density-paced
+ * timeline brush; the author asked for "a simple mercator projection 2d map
+ * for now, something very light", and the brush stays deferred — 60 of 851
+ * saints located is still not enough to verify a pacing algorithm against.
+ * Collide-detected labels and per-dot decluttering shipped despite that
+ * (2026-08-30 and 2026-08-31): a label overlap and two saints sharing an
+ * exact coordinate are both things the corpus can already demonstrate, which
+ * is the density brush's own bar and is not the same bar as "seven points".
+ * So there are tests below for both, and none for the brush: there is
+ * nothing yet to test there, and a green test over absent machinery is worse
+ * than no test.
  *
  * What there is: the projection is pinned in `tests/mercator.test.mjs`, which is
  * arithmetic and needs no browser. These are the things only a browser can
@@ -612,4 +616,113 @@ test('the timeline holds the range for the visit, the way the kind does', async 
   const returned = await timelineReadout(page);
   expect(returned.to).toBe(narrowed.to);
   expect(returned.shown).toBe(narrowed.shown);
+});
+
+test('dragging the highlighted span moves both handles together, and keeps their width', async ({ page }) => {
+  /*
+   * The fill's own drag (`wireTimeline`, 2026-08-31): a third grab target
+   * besides the two handles, for panning the same-length window across the
+   * years rather than resizing it one edge at a time.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  // Narrow both handles first so the span sits clear of both walls —
+  // dragging with either edge still pinned at its bound would correctly go
+  // nowhere in that direction, which is the next test's premise, not this
+  // one's.
+  const fromHandle = page.locator('[data-timeline-from]');
+  const toHandle = page.locator('[data-timeline-to]');
+  await fromHandle.focus();
+  for (let i = 0; i < 5; i++) await fromHandle.press('ArrowRight');
+  await toHandle.focus();
+  for (let i = 0; i < 5; i++) await toHandle.press('ArrowLeft');
+
+  const before = await timelineReadout(page);
+  const width = before.to - before.from;
+  expect(width, 'premise: narrowing the from handle should leave a real span to drag').toBeGreaterThan(0);
+
+  const fill = page.locator('[data-timeline-fill]');
+  const box = await fill.boundingBox();
+  const midY = box.y + box.height / 2;
+
+  await page.mouse.move(box.x + box.width / 2, midY);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + 40, midY, { steps: 5 });
+  await page.mouse.up();
+
+  const after = await timelineReadout(page);
+  expect(after.to - after.from, 'the span widened or narrowed instead of sliding').toBe(width);
+  expect(after.from, 'dragging right did not move the window forward').toBeGreaterThan(before.from);
+  expect(after.to).toBeGreaterThan(before.to);
+
+  // And it reached the same wiring the handles' own drag does.
+  expect(after.shown).toBeLessThanOrEqual(after.total);
+});
+
+test('dragging the highlighted span past a bound stops there, still holding the width', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const bounds = (await page.locator('.map-timeline-bound').allTextContents()).map(Number);
+  const [min] = bounds;
+
+  const fromHandle = page.locator('[data-timeline-from]');
+  await fromHandle.focus();
+  for (let i = 0; i < 5; i++) await fromHandle.press('ArrowRight');
+  const before = await timelineReadout(page);
+  const width = before.to - before.from;
+
+  const fill = page.locator('[data-timeline-fill]');
+  const box = await fill.boundingBox();
+  const midY = box.y + box.height / 2;
+
+  // Dragged far past the left edge — there is nowhere further to go, and the
+  // span holds its own width against the wall rather than being squashed.
+  await page.mouse.move(box.x + box.width / 2, midY);
+  await page.mouse.down();
+  await page.mouse.move(box.x - box.width * 3, midY, { steps: 5 });
+  await page.mouse.up();
+
+  const after = await timelineReadout(page);
+  expect(after.from).toBe(min);
+  expect(after.to).toBe(min + width);
+});
+
+/* ---- water (2026-08-31) -------------------------------------------------- */
+
+test('the map draws its rivers and lakes alongside the coastline', async ({ page }) => {
+  /*
+   * `data/water.js` loads in parallel with `data/land.js` (`drawWhenReady`),
+   * and `data-water` is this pass's own report that the fetch landed and the
+   * paint used it — the same rule `data-land` already keeps.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  await expect(canvas).toHaveAttribute('data-water', 'ok');
+
+  const caption = page.locator('[data-caption]');
+  await expect(caption).toContainText(/rivers?/i);
+  await expect(caption).toContainText(/lakes?/i);
+});
+
+/* ---- declutter (2026-08-31) ----------------------------------------------- */
+
+test('two saints who share an exact spot get their own dot each, not one stacked on the other', async ({ page }) => {
+  /*
+   * John the Long-Suffering and Moses the Hungarian both die at the Caves in
+   * Kyiv, at the same rounded coordinate — the case `declutter`
+   * (`lib/map-view.js`) exists for. No zoom level would ever separate two
+   * identical points, so this is checked at rest rather than by zooming in.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const john = dots.find((d) => d.slug === 'john-the-long-suffering');
+  const moses = dots.find((d) => d.slug === 'moses-the-hungarian');
+  expect(john, 'premise: John the Long-Suffering has no drawn death point').toBeTruthy();
+  expect(moses, 'premise: Moses the Hungarian has no drawn death point').toBeTruthy();
+
+  const apart = Math.hypot(john.x - moses.x, john.y - moses.y);
+  expect(apart, 'the two dots still land on the same pixel').toBeGreaterThan(3);
 });

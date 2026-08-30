@@ -40,12 +40,14 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **228 unit, 654 browser** across two projects. `npm run test:all`.
+- **233 unit, 664 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
-- First download is ~133 kB JS: day records, locale packs and the map's
-  coastline are their own chunks.
+- First download is ~133 kB JS: day records, locale packs and the map's own
+  data are their own chunks — coastline and water together, off the boot
+  path, ~211 kB gzipped since both moved to Natural Earth's 50m tier
+  (2026-08-31, up from 110m's ~19 kB for coastline alone).
 
 ### Things that will surprise you
 

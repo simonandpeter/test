@@ -37,12 +37,15 @@ export const WHOLE = { fx: 1, fy: 1 };
 export const MIN_SCALE = 1;
 
 /**
- * 12 puts roughly Cyprus across the width of a phone. Past that the 110m
- * coastline is visibly a polygon — it is rounded to a tenth of a degree, about
- * 11 km — and a map that keeps zooming into detail it does not have is lying
- * about its own precision, which is the one thing §6b will not have.
+ * 24 puts roughly Crete across the width of a phone. `land.js`/`water.js` moved
+ * from Natural Earth's 110m to its 50m tier (2026-08-31) specifically to back
+ * this: the coastline itself still rounds to a tenth of a degree (~11 km,
+ * `make-land.mjs`'s own `PRECISION`), but the 50m tier's extra vertices mean
+ * that rounding is the binding limit rather than a coarse polygon being
+ * visibly faceted underneath it. Past 24 the map would be zooming into shape
+ * the data does not have, which is the one thing §6b will not have.
  */
-export const MAX_SCALE = 12;
+export const MAX_SCALE = 24;
 
 export const HOME = { scale: MIN_SCALE, cx: 0.5, cy: 0.5 };
 
@@ -123,3 +126,50 @@ export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
     },
     frame,
   );
+
+/**
+ * Spreads points that would draw on top of each other into a small ring
+ * around their shared spot, so two saints who share a place — John the
+ * Long-Suffering and Moses the Hungarian both die at the Caves in Kyiv, to
+ * the same rounded coordinate — still each get their own dot and label
+ * instead of one covering the other at any zoom. Deferred alongside
+ * clustering while the corpus carried sixteen points (`views/map.js`'s own
+ * header); the exact-duplicate case is not that deferral — no amount of
+ * zooming ever separates two points at the same coordinate, so it is a
+ * correctness gap rather than a density question, and 851 saints already
+ * carry more than one such pair.
+ *
+ * `points` is any array of `{x, y, ...}` in the same px space the canvas
+ * draws in. Grouping is a grid bucket keyed on `radiusPx`, not a true
+ * nearest-neighbour search: cheap, and exact-duplicate coordinates — the
+ * only case this exists to fix — always land in the same bucket regardless
+ * of where the grid falls, since they are the same point. A pair merely
+ * close but not identical can occasionally miss each other across a bucket
+ * edge; at this corpus's density that is a rare cosmetic miss, not the bug
+ * being fixed.
+ */
+export function declutter(points, radiusPx = 9) {
+  const buckets = new Map();
+  for (const p of points) {
+    const key = `${Math.round(p.x / radiusPx)},${Math.round(p.y / radiusPx)}`;
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(p);
+  }
+  const out = [];
+  for (const group of buckets.values()) {
+    if (group.length === 1) {
+      out.push(group[0]);
+      continue;
+    }
+    const cx = group.reduce((s, p) => s + p.x, 0) / group.length;
+    const cy = group.reduce((s, p) => s + p.y, 0) / group.length;
+    // Grows with the group so a stack of five does not draw its own dots
+    // back on top of each other at the ring's own radius.
+    const r = radiusPx * (1 + group.length / 5);
+    group.forEach((p, i) => {
+      const angle = (2 * Math.PI * i) / group.length - Math.PI / 2;
+      out.push({ ...p, x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) });
+    });
+  }
+  return out;
+}
