@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1395,
+      "latest": 1395,
+      "display": "1395",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Афанасия Высоцкого, Серпуховского чудотворца (1395)» - the year of Athanasius the Younger; the linked life tells the founder’s story, who died in Constantinople in 1401 or later."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -42,15 +51,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 1395,
-      "latest": 1395,
-      "display": "1395",
-      "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: «Прп. Афанасия Высоцкого, Серпуховского чудотворца (1395)» - the year of Athanasius the Younger; the linked life tells the founder’s story, who died in Constantinople in 1401 or later."
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }

@@ -12,6 +12,22 @@
   "types": [
     "prince"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1481,
+      "latest": 1482,
+      "display": "probably 1481 or 1482",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: „s-a născut în ultimul sfert al veacului al XV-lea, probabil în 1481 sau 1482”."
+    },
+    "death": {
+      "earliest": 1521,
+      "latest": 1521,
+      "display": "1521",
+      "basis": "attested",
+      "note": "doxologia.ro’s life of his wife Platonida: „După moartea Voievodului Neagoe Basarab, în 1521…”."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -43,22 +59,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
     }
   ],
-  "dates": {
-    "birth": {
-      "earliest": 1481,
-      "latest": 1482,
-      "display": "probably 1481 or 1482",
-      "basis": "attested",
-      "note": "The life on doxologia.ro: „s-a născut în ultimul sfert al veacului al XV-lea, probabil în 1481 sau 1482”."
-    },
-    "death": {
-      "earliest": 1521,
-      "latest": 1521,
-      "display": "1521",
-      "basis": "attested",
-      "note": "doxologia.ro’s life of his wife Platonida: „După moartea Voievodului Neagoe Basarab, în 1521…”."
+  "locations": [
+    {
+      "kind": "relics",
+      "historical_name": "Curtea de Argeș",
+      "modern_name": "Curtea de Argeș, Romania",
+      "lat": 45.14,
+      "lon": 24.6786,
+      "uncertainty_km": 8
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }

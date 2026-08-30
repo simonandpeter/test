@@ -25,6 +25,14 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 359,
+      "latest": 359,
+      "display": "359",
+      "basis": "attested"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -83,6 +91,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Corduba",
+      "modern_name": "Córdoba, Spain",
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },
@@ -91,13 +109,5 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 359,
-      "latest": 359,
-      "display": "359",
-      "basis": "attested"
-    }
-  }
+  ]
 }

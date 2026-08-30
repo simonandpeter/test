@@ -437,6 +437,9 @@ export const el = {
     zoomOut: 'Σμίκρυνση',
     zoomReset: 'Όλος ο κόσμος',
     landFailed: 'Η ακτογραμμή δεν φορτώθηκε. Οι κουκκίδες σημειώνουν ωστόσο τους τόπους τους.',
+    timelineGroup: 'Φιλτράρισμα κατά χρονολογία',
+    timelineReadout: '{from}–{to}: {shown}/{total} εμφανίζονται',
+    timelineReset: 'Όλη η περίοδος',
   },
 
   about: {

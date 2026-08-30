@@ -437,6 +437,9 @@ export const ro = {
     zoomOut: 'Micșorează',
     zoomReset: 'Toată lumea',
     landFailed: 'Linia țărmului nu a putut fi încărcată. Punctele își arată totuși locurile.',
+    timelineGroup: 'Filtrare după dată',
+    timelineReadout: '{from}–{to}: {shown}/{total} afișați',
+    timelineReset: 'Toată perioada',
   },
 
   about: {

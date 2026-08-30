@@ -1,8 +1,10 @@
+import { isUndated, overlaps } from '../lib/dates.js';
+import { lifeInterval } from '../lib/index-filters.js';
 import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
-import { STRINGS } from '../ui/strings.js';
+import { STRINGS, fill } from '../ui/strings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
 export const title = () => STRINGS.map.title;
@@ -18,13 +20,25 @@ export const title = () => STRINGS.map.title;
  * only weight is the coastline itself — 19 kB gzipped, in its own chunk, loaded
  * when this view is opened and never on the boot path.
  *
- * **Clustering, collide-detected labels and the timeline brush are deferred
- * too, and the reason is the corpus rather than the effort.** Seven of 742
- * saints carry a location, sixteen points between them. A density threshold
- * that never fires, labels that never collide and a timeline paced by event
- * density over seven lives would all be machinery verified against nothing —
- * and a count in the DOM is not a count in the corpus. They come back when the
- * data does.
+ * **Clustering and collide-detected labels stay deferred, and the reason is
+ * the corpus rather than the effort.** Seven of 851 saints carry a location,
+ * sixteen points between them. A density threshold that never fires and
+ * labels that never collide would be machinery verified against nothing — a
+ * count in the DOM is not a count in the corpus — so they wait for the data.
+ *
+ * **The timeline is not one of those, by author instruction** (2026-08-30
+ * evening: "add a timeline bar at the bottom ... where you can filter saints
+ * by date on the map"), which overrides the corpus-blocked deferral above for
+ * a plain range filter while leaving the brief's *density-paced brush* — the
+ * fuller §8.3 vision, fading saints in and out by how crowded their years
+ * are — exactly where it was: seven lives cannot demonstrate a pacing
+ * algorithm's correctness any better than they could a cluster threshold's.
+ * What is built is the light half: a dual-handle range over each located
+ * saint's own life span, reusing the Index's own `lifeInterval` and
+ * `overlaps` (`lib/index-filters.js`, `lib/dates.js`) rather than inventing a
+ * second reading of the same dates. An undated life is never excluded — there
+ * is nothing to judge it against, and the map has no tray left to set it
+ * aside in (Amendment 77) — so it always shows, indifferent to the slider.
  *
  * **The page is the map and a small footer, nothing else** (author,
  * 2026-08-30: "remove everything on the map page outside of the map itself
@@ -60,10 +74,19 @@ let onResize = null;
 /*
  * The Index's filter set lived here for one day (Amendment 76, 2026-08-30)
  * and went with the reading it stood in when the author asked for the map
- * alone. The Index remains the place a reader narrows the corpus; if filters
- * return to this page they return as something drawn on the stage, because
- * there is nowhere else left to put them.
+ * alone. The timeline is the first of it to return, and it returns exactly
+ * as promised — drawn on the stage, because there is nowhere else left.
  */
+
+/*
+ * The timeline's own range, held for the visit like `kind`. `null` means "not
+ * set for this session yet"; `render()` fills both from the corpus's own span
+ * the first time the reader opens the map, and leaves them alone after that,
+ * so a reader who narrows the range, leaves for a saint page, and comes back
+ * finds the map exactly as they left it.
+ */
+let dateFrom = null;
+let dateTo = null;
 
 /** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
 let drawnDots = [];
@@ -117,10 +140,39 @@ export function render(el, { data, router }) {
    * The whole corpus, always - the Index's own model since 2026-08-27, which
    * Amendment 46 already said the map counts by («the map still counts as the
    * Index does»). With the facets gone (Amendment 77) there is nothing left
-   * that narrows it, so the located set is a constant of the render.
+   * that narrows it except the timeline below, so the located set itself is a
+   * constant of the render.
    */
   const M = STRINGS.map;
   const withPlace = data.saints.filter(located);
+
+  /*
+   * The timeline's span, read off `withPlace` rather than the located kind's
+   * own date: `see` and `relics` carry no date of their own (only `birth`,
+   * `death` and `floruit` do), so filtering by the point's kind would leave
+   * two of the four kinds with nothing to filter by. A life's own span —
+   * `lifeInterval`, the Index's own reading — is what the slider asks about,
+   * and it is one question regardless of which kind is currently drawn.
+   */
+  const years = withPlace
+    .flatMap((card) => {
+      const iv = lifeInterval(card.dates);
+      return [iv.earliest, iv.latest];
+    })
+    .filter((y) => y !== null);
+  const bounds = years.length ? { min: Math.min(...years), max: Math.max(...years) } : null;
+  if (bounds && (dateFrom === null || dateTo === null || dateFrom < bounds.min || dateTo > bounds.max)) {
+    dateFrom = bounds.min;
+    dateTo = bounds.max;
+  }
+
+  /*
+   * Undated is never excluded — there is nothing here to judge it against,
+   * and unlike the Index's date facet this page has no tray left to set it
+   * aside in (Amendment 77), so "always shown" is the honest stand-in.
+   */
+  const inTimeline = (card) => !bounds || isUndated(lifeInterval(card.dates)) || overlaps(lifeInterval(card.dates), dateFrom, dateTo);
+  const visible = () => withPlace.filter(inTimeline);
 
   /*
    * **The map is the window, not a card in the column** (author, 2026-08-29:
@@ -141,38 +193,43 @@ export function render(el, { data, router }) {
    */
   el.innerHTML = `
     <div class="map-stage" data-stage>
-      <!--
-        tabindex="0" and arrow keys, because a canvas the pointer can drag
-        and the keyboard cannot is half a control. The label says the map is
-        movable and how, since a reader who cannot see it has no other way to
-        learn that pressing an arrow does anything.
-      -->
-      <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
+      <div class="map-picture">
+        <!--
+          tabindex="0" and arrow keys, because a canvas the pointer can drag
+          and the keyboard cannot is half a control. The label says the map is
+          movable and how, since a reader who cannot see it has no other way
+          to learn that pressing an arrow does anything.
+        -->
+        <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
 
-      <div class="map-legend">
-        <h1 class="map-title">${esc(M.title)}</h1>
-        <div class="map-kinds" role="group" aria-label="${esc(M.kindGroup)}">
-          ${KINDS.map(
-            (k) =>
-              `<button type="button" class="map-kind utility" data-kind="${k}"
-                 aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
-                 <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(withPlace, k).length}</span></button>`,
-          ).join('')}
+        <div class="map-legend">
+          <h1 class="map-title">${esc(M.title)}</h1>
+          <div class="map-kinds" role="group" aria-label="${esc(M.kindGroup)}">
+            ${KINDS.map(
+              (k) =>
+                `<button type="button" class="map-kind utility" data-kind="${k}"
+                   aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
+                   <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(visible(), k).length}</span></button>`,
+            ).join('')}
+          </div>
+        </div>
+
+        <!--
+          The buttons are not a fallback for the gestures, they are the
+          primary control: they work by keyboard, by screen reader and by
+          touch without anyone having to discover a gesture, and on a phone
+          they are the whole of the zoom. aria-live on the level so a press
+          says what it did.
+        -->
+        <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
+          <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
+          <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
+          <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
+          <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
         </div>
       </div>
 
-      <!--
-        The buttons are not a fallback for the gestures, they are the primary
-        control: they work by keyboard, by screen reader and by touch without
-        anyone having to discover a gesture, and on a phone they are the whole
-        of the zoom. aria-live on the level so a press says what it did.
-      -->
-      <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
-        <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
-        <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
-        <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
-        <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
-      </div>
+      ${bounds ? timelineMarkup(M, bounds) : ''}
     </div>
 
     <!--
@@ -189,13 +246,27 @@ export function render(el, { data, router }) {
   destroy();
   view = HOME;
 
-  paintCanvas(canvas, withPlace);
+  /*
+   * One pass, so a kind press and a timeline drag move the same three things
+   * together: the kind counts in the legend, the picture, and (when the
+   * timeline exists) its own readout — never just one of them agreeing with
+   * itself while the others lag.
+   */
+  const refresh = () => {
+    const cards = visible();
+    for (const k of KINDS) {
+      el.querySelector(`[data-kind-count="${k}"]`).textContent = String(pointsOfKind(cards, k).length);
+    }
+    paintCanvas(canvas, cards);
+  };
+
+  refresh();
 
   for (const button of el.querySelectorAll('[data-kind]')) {
     button.addEventListener('click', () => {
       kind = button.dataset.kind;
       for (const b of el.querySelectorAll('[data-kind]')) b.setAttribute('aria-pressed', String(b === button));
-      paintCanvas(canvas, withPlace);
+      refresh();
     });
   }
 
@@ -207,9 +278,11 @@ export function render(el, { data, router }) {
    * and `data-land` says which state the picture is in, because a canvas that
    * drew nothing and one that drew the sea are the same screenshot.
    */
-  drawWhenReady(el, canvas, withPlace);
+  drawWhenReady(el, canvas, visible);
 
-  wireZoom(el, canvas, withPlace);
+  wireZoom(el, canvas, visible);
+
+  if (bounds) wireTimeline(el, withPlace, bounds, refresh, visible);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -218,8 +291,96 @@ export function render(el, { data, router }) {
    * from here would outlive the view and repaint a canvas that had left the
    * document — which is a leak per navigation, not per page.
    */
-  onResize = () => paintCanvas(canvas, withPlace);
+  onResize = () => paintCanvas(canvas, visible());
   window.addEventListener('resize', onResize);
+}
+
+/**
+ * The timeline's markup: two overlaid native range inputs over one rail, and
+ * a status row underneath. Real `<input type="range">` rather than a
+ * hand-built control, because a native one is keyboard-operable and has an
+ * accessible name for free — the "very light" instruction the map itself was
+ * built under applies to this too, and the accessibility work a custom
+ * slider would need is not light.
+ *
+ * The two inputs overlap the same track; CSS gives the invisible body
+ * `pointer-events: none` and restores it on the thumb alone, the standard way
+ * to make two overlaid range inputs each grabbable without one's body
+ * blocking the other's thumb. Crossing the handles is not prevented — `wireTimeline`
+ * always takes the sorted pair as the effective range, so a thumb dragged
+ * past its twin still means something rather than needing to be stopped.
+ */
+function timelineMarkup(M, bounds) {
+  return `
+    <div class="map-timeline">
+      <div class="map-timeline-track">
+        <span class="map-timeline-bound utility" aria-hidden="true">${bounds.min}</span>
+        <div class="map-timeline-rail-wrap">
+          <div class="map-timeline-rail"></div>
+          <div class="map-timeline-fill" data-timeline-fill></div>
+          <input type="range" class="map-timeline-input" data-timeline-from
+            min="${bounds.min}" max="${bounds.max}" step="1" value="${dateFrom}"
+            aria-label="${esc(STRINGS.saints.filters.from)}" />
+          <input type="range" class="map-timeline-input" data-timeline-to
+            min="${bounds.min}" max="${bounds.max}" step="1" value="${dateTo}"
+            aria-label="${esc(STRINGS.saints.filters.to)}" />
+        </div>
+        <span class="map-timeline-bound utility" aria-hidden="true">${bounds.max}</span>
+      </div>
+      <div class="map-timeline-status">
+        <p class="map-timeline-readout utility" data-timeline-readout aria-live="polite"></p>
+        <button type="button" class="map-timeline-reset utility" data-timeline-reset>${esc(M.timelineReset)}</button>
+      </div>
+    </div>`;
+}
+
+/**
+ * Wires the two range inputs to one effective span, held in the module-level
+ * `dateFrom`/`dateTo` so it survives the visit the way `kind` does. `visible`
+ * is the same getter `refresh()` uses — one predicate, read twice, rather
+ * than a second copy that could drift from it.
+ */
+function wireTimeline(el, withPlace, bounds, refresh, visible) {
+  const fromInput = el.querySelector('[data-timeline-from]');
+  const toInput = el.querySelector('[data-timeline-to]');
+  const fillEl = el.querySelector('[data-timeline-fill]');
+  const readout = el.querySelector('[data-timeline-readout]');
+  const resetBtn = el.querySelector('[data-timeline-reset]');
+
+  const paint = () => {
+    const span = bounds.max - bounds.min || 1;
+    const lo = ((dateFrom - bounds.min) / span) * 100;
+    const hi = ((dateTo - bounds.min) / span) * 100;
+    fillEl.style.left = `${lo}%`;
+    fillEl.style.right = `${100 - hi}%`;
+    readout.textContent = fill(STRINGS.map.timelineReadout, {
+      from: dateFrom,
+      to: dateTo,
+      shown: visible().length,
+      total: withPlace.length,
+    });
+    resetBtn.disabled = dateFrom === bounds.min && dateTo === bounds.max;
+  };
+
+  const commit = () => {
+    // Whichever handle moved, the *sorted* pair is the effective range — a
+    // thumb dragged past its twin still filters correctly rather than
+    // needing to be physically stopped from crossing (see `timelineMarkup`).
+    dateFrom = Math.min(Number(fromInput.value), Number(toInput.value));
+    dateTo = Math.max(Number(fromInput.value), Number(toInput.value));
+    paint();
+    refresh();
+  };
+
+  fromInput.addEventListener('input', commit);
+  toInput.addEventListener('input', commit);
+  resetBtn.addEventListener('click', () => {
+    fromInput.value = String(bounds.min);
+    toInput.value = String(bounds.max);
+    commit();
+  });
+
+  paint();
 }
 
 /**
@@ -282,6 +443,10 @@ export function destroy() {
  * trap the old rule guarded against cannot be built any more. Touch is the
  * map's for the same reason (`touch-action: none` in map.css); the header
  * above the stage remains the way out.
+ *
+ * `cards` is a getter, not the array — the timeline can narrow it after this
+ * wiring runs, and a closure over a stale array would zoom an empty map
+ * forever (Amendment 76's own lesson, relearned when the filter came back).
  */
 function wireZoom(el, canvas, cards) {
   const level = el.querySelector('[data-zoom-level]');
@@ -300,7 +465,7 @@ function wireZoom(el, canvas, cards) {
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
     el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
     el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
-    paintCanvas(canvas, cards);
+    paintCanvas(canvas, cards());
   };
 
   const set = (next) => {
@@ -452,6 +617,8 @@ function midpoint(active) {
 }
 
 async function drawWhenReady(el, canvas, cards) {
+  // `cards` is a getter: the coastline may land after the reader has already
+  // dragged the timeline, and the paint must draw the set they are looking at.
   const caption = el.querySelector('[data-caption]');
   try {
     // Dynamic, so the coastline is its own chunk: 19 kB gzipped that a reader
@@ -459,7 +626,7 @@ async function drawWhenReady(el, canvas, cards) {
     const { LAND } = await import('../data/land.js');
     if (!canvas.isConnected) return;
     canvas.__land = LAND;
-    paintCanvas(canvas, cards);
+    paintCanvas(canvas, cards());
     /*
      * The page's own report that the fetch landed *and* the paint used it -
      * written after the draw, so a chunk that resolved into a canvas that

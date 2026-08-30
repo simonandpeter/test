@@ -833,6 +833,13 @@ export const STRINGS = {
     zoomOut: 'Zoom out',
     zoomReset: 'Whole world',
     landFailed: 'The coastline could not be loaded. The dots still mark their places.',
+    // The timeline (author, 2026-08-30 evening: "add a timeline bar at the
+    // bottom ... where you can filter saints by date on the map"). `from`
+    // and `to` reuse `saints.filters.from`/`.to` — the same question, the
+    // same two words, asked by a slider instead of a pair of number boxes.
+    timelineGroup: 'Filter by date',
+    timelineReadout: '{from}–{to}: {shown}/{total} shown',
+    timelineReset: 'Whole span',
   },
 
   about: {

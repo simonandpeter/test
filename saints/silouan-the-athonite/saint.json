@@ -15,6 +15,22 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: born in 1866 to a Russian peasant family, in the world Simeon Ivanovich Antonov."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The life on doxologia.ro: he died between one and two in the night of 24 September 1938, while Matins was sung in the infirmary chapel; the Russian line prints the same year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -55,22 +71,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
     }
   ],
-  "dates": {
-    "birth": {
-      "earliest": 1866,
-      "latest": 1866,
-      "display": "1866",
-      "basis": "attested",
-      "note": "The life on doxologia.ro: born in 1866 to a Russian peasant family, in the world Simeon Ivanovich Antonov."
-    },
-    "death": {
-      "earliest": 1938,
-      "latest": 1938,
-      "display": "1938",
-      "basis": "attested",
-      "note": "The life on doxologia.ro: he died between one and two in the night of 24 September 1938, while Matins was sung in the infirmary chapel; the Russian line prints the same year."
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Russian monastery of St Panteleimon, Mount Athos",
+      "modern_name": "Agiou Panteleimonos Monastery, Mount Athos, Greece",
+      "lat": 40.2075,
+      "lon": 24.1364,
+      "uncertainty_km": 5
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }

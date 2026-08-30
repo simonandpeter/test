@@ -451,6 +451,9 @@ export const ru = {
     zoomOut: 'Отдалить',
     zoomReset: 'Весь мир',
     landFailed: 'Береговую линию загрузить не удалось. Точки по-прежнему отмечают свои места.',
+    timelineGroup: 'Фильтр по дате',
+    timelineReadout: '{from}–{to}: показано {shown}/{total}',
+    timelineReset: 'Весь период',
   },
 
   about: {

@@ -13,6 +13,15 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1197,
+      "latest": 1198,
+      "display": "1197 or 1198",
+      "basis": "attested",
+      "note": "saint.gr: he died in 1197 AD or 1198 AD."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -44,14 +53,18 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 1197,
-      "latest": 1198,
-      "display": "1197 or 1198",
-      "basis": "attested",
-      "note": "saint.gr: he died in 1197 AD or 1198 AD."
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Thessalonica",
+      "modern_name": "Thessaloniki, Greece",
+      "lat": 40.6401,
+      "lon": 22.9444,
+      "uncertainty_km": 10
     }
+  ],
+  "text": {
+    "life": "life.md"
   },
   "hymns": [
     {
@@ -67,8 +80,5 @@
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

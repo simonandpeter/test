@@ -62,8 +62,13 @@ html[data-route='map'] body {
   overflow: hidden;
 }
 
+/* A flex column now that the timeline sits under the picture (author,
+   2026-08-30 evening): `.map-picture` takes what `.map-timeline` leaves,
+   the same "no number here has to agree with any number there" arrangement
+   `.map-foot` already uses below the whole stage. */
 .map-stage {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   /* A flex child's min-height is content-sized by default, and the canvas
      would rather overflow than shrink; 0 lets the stage be exactly the room
@@ -71,7 +76,18 @@ html[data-route='map'] body {
   min-height: 0;
 }
 
-.map-stage canvas {
+/* The picture and its floating instruments — canvas, legend, zoom — as one
+   unit, sized to whatever `.map-timeline` below it does not need. Absolute
+   children of this box (the legend, the zoom controls) anchor to *its* edges
+   rather than the whole stage's, so they float on the canvas and never drift
+   onto the timeline strip. */
+.map-picture {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.map-picture canvas {
   display: block;
   width: 100%;
   height: 100%;
@@ -87,11 +103,11 @@ html[data-route='map'] body {
 /* The pointer says what a drag will do, and only once there is somewhere to
    drag to: at scale 1 the world already fills the box and panning is refused
    by the arithmetic, so a grab cursor there would be a promise the map breaks. */
-.map-stage canvas.is-pannable {
+.map-picture canvas.is-pannable {
   cursor: grab;
 }
 
-.map-stage canvas.is-pannable:active {
+.map-picture canvas.is-pannable:active {
   cursor: grabbing;
 }
 
@@ -193,10 +209,12 @@ html[data-route='map'] body {
 }
 
 /* A disabled control still has to be readable — it is telling the reader they
-   are already at the whole world, which is information. `--ink-soft` clears AA
-   in both themes (tests/contrast.test.mjs), where a stock 0.4 opacity would
-   not: an opacity on a colour is a new colour and axe reads it. */
-.map-zoom [disabled] {
+   are already at the whole world (or, the timeline's own reset, the whole
+   span), which is information. `--ink-soft` clears AA in both themes
+   (tests/contrast.test.mjs), where a stock 0.4 opacity would not: an opacity
+   on a colour is a new colour and axe reads it. */
+.map-zoom [disabled],
+.map-timeline-reset[disabled] {
   color: var(--ink-soft);
   cursor: default;
 }
@@ -209,6 +227,148 @@ html[data-route='map'] body {
 }
 
 .map-zoom-home {
+  padding: var(--space-1) var(--space-2);
+}
+
+/* ---- the timeline ------------------------------------------------------- */
+
+/* The reader's own filter, drawn on the stage — Amendment 77's promise that
+   a filter returning to this page would live here rather than below it
+   (author, 2026-08-30 evening: "add a timeline bar at the bottom ... where
+   you can filter saints by date"). map.js omits the whole block when the
+   corpus has nothing dated and located to filter by; a slider with nothing
+   to say is worse than no slider.
+
+   Two rows, always, rather than one that wraps unpredictably: the track on
+   top, the readout and reset below. Its total height is whatever those two
+   rows need — one line of each on a desktop, more on a narrow phone — the
+   same "measured, not guessed" rule `.map-foot` already keeps. */
+.map-timeline {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  background: var(--gesso);
+  border-top: 1px solid var(--rule);
+}
+
+.map-timeline-track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.map-timeline-bound {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-timeline-rail-wrap {
+  position: relative;
+  flex: 1;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.map-timeline-rail,
+.map-timeline-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+}
+
+.map-timeline-rail {
+  background: var(--rule);
+}
+
+/* `left`/`right` set inline by map.js on every drag — the two handles'
+   sorted positions, as percentages of the rail. */
+.map-timeline-fill {
+  background: var(--rubric);
+}
+
+/* Two native `<input type="range">` stacked on the same rail. The body of
+   each is invisible and lets pointer events pass through to the one under
+   it; only the thumb re-claims them, which is the standard way to make two
+   overlaid range inputs both grabbable without one's box blocking the
+   other's thumb. Real range inputs rather than a hand-built control, so the
+   keyboard and a screen reader get them for free — arrows, Home, End, an
+   accessible name — the same "very light" instruction the map itself was
+   built under. */
+.map-timeline-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.map-timeline-input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.map-timeline-input::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+.map-timeline-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--rubric);
+  border: 2px solid var(--gesso);
+  cursor: pointer;
+}
+
+.map-timeline-input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--rubric);
+  border: 2px solid var(--gesso);
+  cursor: pointer;
+}
+
+.map-timeline-input:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+
+.map-timeline-input:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+
+.map-timeline-status {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.map-timeline-readout {
+  margin: 0;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.map-timeline-reset {
+  flex: none;
   padding: var(--space-1) var(--space-2);
 }
 

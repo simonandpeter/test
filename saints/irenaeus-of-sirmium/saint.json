@@ -53,6 +53,24 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Sirmium",
+      "modern_name": "Sremska Mitrovica, Serbia",
+      "lat": 44.9767,
+      "lon": 19.6111,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Sirmium",
+      "modern_name": "Sremska Mitrovica, Serbia",
+      "lat": 44.9767,
+      "lon": 19.6111,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

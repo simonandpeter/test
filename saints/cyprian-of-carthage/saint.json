@@ -90,6 +90,24 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Carthage",
+      "modern_name": "Tunis, Tunisia",
+      "lat": 36.8528,
+      "lon": 10.3233,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Carthage",
+      "modern_name": "Tunis, Tunisia",
+      "lat": 36.8528,
+      "lon": 10.3233,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

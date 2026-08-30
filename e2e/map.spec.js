@@ -123,7 +123,7 @@ test('the current kind is not told by colour alone', async ({ page }) => {
   expect(on.field, 'the pressed kind has no field behind it').not.toBe(off.field);
 });
 
-test('the page is the map, a small footer, and nothing else', async ({ page }) => {
+test('the page is the map, a small footer, and nothing else read', async ({ page }) => {
   /*
    * Author, 2026-08-30: "remove everything on the map page outside of the map
    * itself except for leaving a small footer with the coastline map credit and
@@ -131,12 +131,20 @@ test('the page is the map, a small footer, and nothing else', async ({ page }) =
    * lede, the Index's facets, the Places register and the unlocated tray all
    * go — so this is the assertion that they stay gone, and that what the
    * instruction kept is actually there: the credit and the hint, in a footer.
+   *
+   * The timeline (same evening, later instruction) is not a return of the
+   * reading: it is drawn *on the stage*, over the picture the same way the
+   * zoom controls are, not printed prose below it — so its presence here does
+   * not contradict "nothing else", and the test now checks for it rather than
+   * against it.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
 
   for (const gone of ['.map-below', '.map-places', '.map-unlocated', '[data-map-facets]', '[data-map-lede]']) {
     await expect(page.locator(gone)).toHaveCount(0);
   }
+
+  await expect(page.locator('.map-timeline')).toBeVisible();
 
   const foot = page.locator('.map-foot');
   await expect(foot).toBeVisible();
@@ -169,8 +177,10 @@ test('the map is the window, and holds that size before the coastline arrives', 
 
   /*
    * The whole window, measured rather than assumed: the full viewport width,
-   * and the height left under the bar and above the footer — the one strip
-   * the author kept below the picture (2026-08-30). `--chrome-h-reserve` is
+   * and the height left under the bar, above the footer, and above the
+   * timeline — three strips outside the picture now, each measured rather
+   * than guessed, the same "no number here has to agree with any number
+   * there" rule the footer's own CSS already keeps. `--chrome-h-reserve` is
    * where the bar's number comes from, so this is also what catches the two
    * drifting apart — a header that grew without the token growing would leave
    * the map hanging off the bottom of the screen with nothing else to say so.
@@ -180,9 +190,10 @@ test('the map is the window, and holds that size before the coastline arrives', 
     vh: window.innerHeight,
     bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
     foot: document.querySelector('.map-foot').getBoundingClientRect().height,
+    timeline: document.querySelector('.map-timeline')?.getBoundingClientRect().height ?? 0,
   }));
   expect(after.width).toBeCloseTo(room.vw, 0);
-  expect(after.height).toBeCloseTo(room.vh - room.bar - room.foot, 0);
+  expect(after.height).toBeCloseTo(room.vh - room.bar - room.foot - room.timeline, 0);
 
   // And the window is all there is: nothing on this page can scroll away.
   const scroll = await page.evaluate(() => ({
@@ -453,4 +464,152 @@ test('a dot is a door: a press opens the saint, a drag does not', async ({ page 
   await expect(back).toHaveAttribute('aria-label', /map/i);
   await back.click();
   await expect(page).toHaveURL(/\/map$/);
+});
+
+/* ---- the timeline (2026-08-30 evening) ---------------------------------- */
+
+/**
+ * The readout is the one auditable channel for what the timeline is doing —
+ * `{from}–{to}: {shown}/{total} shown` — so tests read the numbers back out
+ * of it rather than re-deriving them, the same way the kind buttons' own
+ * counts are read rather than recomputed.
+ */
+const timelineReadout = async (page) => {
+  const text = await page.locator('[data-timeline-readout]').textContent();
+  const m = /(-?\d+)–(-?\d+): (\d+)\/(\d+) shown/.exec(text);
+  if (!m) throw new Error(`readout did not parse: "${text}"`);
+  return { from: Number(m[1]), to: Number(m[2]), shown: Number(m[3]), total: Number(m[4]) };
+};
+
+test("the timeline spans the located corpus's own years, unfiltered at rest", async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  const timeline = page.locator('.map-timeline');
+  await expect(timeline).toBeVisible();
+
+  const bounds = await page.locator('.map-timeline-bound').allTextContents();
+  expect(bounds).toHaveLength(2);
+  const min = Number(bounds[0]);
+  const max = Number(bounds[1]);
+  expect(min).toBeLessThan(max);
+
+  // At rest the two handles sit at the two bounds, and nothing is excluded —
+  // the readout says so in numbers rather than only looking unfiltered.
+  const read = await timelineReadout(page);
+  expect(read.from).toBe(min);
+  expect(read.to).toBe(max);
+  expect(read.shown).toBe(read.total);
+  expect(read.total).toBeGreaterThan(0);
+
+  // A control that cannot narrow anything further is disabled, the same
+  // language the zoom's own "Whole world" speaks at scale 1.
+  await expect(page.locator('[data-timeline-reset]')).toBeDisabled();
+});
+
+test('dragging a handle narrows the map, kind counts and picture together — and Whole span undoes it', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const before = await timelineReadout(page);
+  const claimedBefore = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
+  const dotsBefore = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(dotsBefore.length).toBe(claimedBefore);
+
+  /*
+   * `Home` on the upper handle jumps it to the range's own minimum — a real
+   * keyboard interaction, not a value assigned from the outside, so this is
+   * also the a11y proof: the slider is a native `<input type="range">` and
+   * needs nothing extra to answer to a keyboard. Squeezing the upper bound
+   * down to the corpus's own earliest year excludes anyone whose life had
+   * not yet begun by then, which — at any density the located corpus has
+   * today — is worth checking as a strict decrease rather than a fixed
+   * count that would go stale the day an eighth location arrives.
+   */
+  const toHandle = page.locator('[data-timeline-to]');
+  await toHandle.focus();
+  await toHandle.press('Home');
+
+  await expect
+    .poll(async () => (await timelineReadout(page)).shown, { message: 'the timeline did not narrow anything' })
+    .toBeLessThan(before.total);
+
+  const after = await timelineReadout(page);
+  expect(after.to).toBe(after.from); // squeezed to a single year
+  expect(after.shown).toBeGreaterThan(0); // and not everyone was born after it
+
+  // The kind count and the picture's own dots agree under the filter too —
+  // the same invariant the unfiltered map already holds.
+  const claimedAfter = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
+  const dotsAfter = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(dotsAfter.length).toBe(claimedAfter);
+  expect(claimedAfter).toBeLessThanOrEqual(claimedBefore);
+
+  // Whole span undoes it, and disables itself the moment it has.
+  const reset = page.locator('[data-timeline-reset]');
+  await expect(reset).toBeEnabled();
+  await reset.click();
+  await expect(reset).toBeDisabled();
+  const restored = await timelineReadout(page);
+  expect(restored.shown).toBe(restored.total);
+  expect(restored.total).toBe(before.total);
+});
+
+test('the thumb answers to a mouse drag, not only the keyboard', async ({ page }) => {
+  /*
+   * The two range inputs overlap the same rail, and the trick that lets both
+   * be grabbed — `pointer-events: none` on the input's own body, restored on
+   * the thumb pseudo-element alone — is exactly the kind of CSS that looks
+   * right and silently is not: a click on the empty track (the input's own
+   * geometric centre, which `locator.click()` would use) correctly hits
+   * nothing, since only the rendered thumb re-claims pointer events. A drag
+   * has to land on the thumb itself, which is where a real mouse would put
+   * it, so this reads the thumb's own position from the input's value rather
+   * than guessing where on the track it currently sits.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const toInput = page.locator('[data-timeline-to]');
+  const box = await toInput.boundingBox();
+
+  // At rest the "to" handle sits at the range's maximum, which is the
+  // rail's own right edge.
+  await expect(toInput).toHaveValue(/\d+/);
+  const before = Number(await toInput.inputValue());
+  const thumbY = box.y + box.height / 2;
+
+  await page.mouse.move(box.x + box.width - 8, thumbY);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2, thumbY, { steps: 5 });
+  await page.mouse.up();
+
+  const after = Number(await toInput.inputValue());
+  expect(after).toBeLessThan(before);
+
+  // And the drag reached the same wiring the keyboard does — the readout and
+  // the picture moved with it, not just the input's own value.
+  const read = await timelineReadout(page);
+  expect(read.to).toBe(after);
+  expect(read.shown).toBeLessThanOrEqual(read.total);
+});
+
+test('the timeline holds the range for the visit, the way the kind does', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  const toHandle = page.locator('[data-timeline-to]');
+  await toHandle.focus();
+  await toHandle.press('Home');
+  const narrowed = await timelineReadout(page);
+  expect(narrowed.shown).toBeLessThan(narrowed.total);
+
+  // Leave for another page and come back by the site's own nav, not a fresh
+  // load — the module state this depends on is a live-session thing, the
+  // same as the kind selector's, and a `page.goto` would reset both.
+  await page.locator('.site-nav a[href$="/saints"]').click();
+  await expect(page).toHaveURL(/\/saints$/);
+  await page.locator('.site-nav a[href$="/map"]').click();
+  await expect(page).toHaveURL(/\/map$/);
+
+  const returned = await timelineReadout(page);
+  expect(returned.to).toBe(narrowed.to);
+  expect(returned.shown).toBe(narrowed.shown);
 });

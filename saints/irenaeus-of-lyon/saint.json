@@ -29,6 +29,14 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 202,
+      "latest": 202,
+      "display": "202",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -87,6 +95,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Lugdunum",
+      "modern_name": "Lyon, France",
+      "lat": 45.764,
+      "lon": 4.8357,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },
@@ -95,13 +113,5 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 202,
-      "latest": 202,
-      "display": "202",
-      "basis": "traditional"
-    }
-  }
+  ]
 }

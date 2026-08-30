@@ -34,11 +34,12 @@ you inferred, and keep them apart.
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
   folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
-  129).
+  129). **19 saints carry a location, 32 points between them** (up from
+  7/16 — 2026-08-30 evening), which the map's timeline now filters.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **228 unit, 646 browser** across two projects. `npm run test:all`.
+- **228 unit, 654 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -184,11 +185,12 @@ canvas is one opaque image to a screen reader; with the list gone, the Index
 is where every located saint remains reachable as text — a trade that is the
 author's, recorded rather than absorbed.
 
-**Deferred, and the reason is the corpus rather than the effort: 7 of 742 saints
-carry a location, 16 points between them.** Clustering below a density
-threshold, collide-detected labels and the timeline brush would all be machinery
-verified against nothing — a threshold that never fires and labels that never
-collide. They come back when the data does, and that is data work, not this.
+**Clustering below a density threshold and collide-detected labels stay
+deferred, and the reason is the corpus rather than the effort: 19 of 851 saints
+carry a location, 32 points between them (up from 7/16 — 2026-08-30 evening).**
+A threshold that never fires and labels that never collide would be machinery
+verified against nothing. They come back when the data does, and that is data
+work, not this.
 
 **Zoom and pan landed 2026-08-29** (author: the page zoomed, the map did not).
 `lib/map-view.js` is the arithmetic — scale plus a centre, clamped so the world
@@ -229,6 +231,23 @@ return as something drawn on the stage; the Index keeps the facets meanwhile.
 `historical_name` are in each saint's own file and dropped from the manifest on
 purpose — two strings per location across 5,000 saints is real weight on the one
 request the site boots from. The saint's own page names the village.
+
+**The timeline landed 2026-08-30 evening** (author: "add a timeline bar at the
+bottom ... where you can filter saints by date on the map"), overriding the
+corpus-blocked deferral above for a plain range filter while leaving the
+brief's *density-paced brush* exactly where it was — seven (now nineteen)
+located lives still cannot demonstrate a pacing algorithm's correctness. Two
+overlaid native `<input type="range">` over one rail, filtering `withPlace` by
+each card's `lifeInterval` (`lib/index-filters.js`'s own reading, reused
+rather than reinvented) before the kind counts or the picture see it; undated
+lives are never excluded, since there is nothing to judge them against and no
+tray left to set them aside in. Drawn on the stage as Amendment 77 promised a
+returning filter would be, not printed below the picture — `.map-stage`
+became a flex column, `.map-picture` taking whatever `.map-timeline` below it
+does not need, the same "no number here has to agree with any number there"
+arrangement `.map-foot` already used. Native range inputs rather than a
+hand-built control, so the keyboard and a screen reader answer to it for free.
+Amendment 84 has the rest.
 
 ### Sessions 8 and 9 — finished 2026-08-29 (Amendment 73)
 

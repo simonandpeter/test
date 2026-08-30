@@ -439,6 +439,9 @@ export const sr = {
     zoomOut: 'Умањи',
     zoomReset: 'Цео свет',
     landFailed: 'Обала није могла да се учита. Тачке и даље означавају своја места.',
+    timelineGroup: 'Филтер по датуму',
+    timelineReadout: '{from}–{to}: приказано {shown}/{total}',
+    timelineReset: 'Цео период',
   },
 
   about: {

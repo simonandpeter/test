@@ -59,7 +59,17 @@ arrive past 2.5× (overlap-drop, not collide-and-nudge), and **a dot is a
 door** — a press under 5 px of travel opens the saint, whose × then returns
 to `/map` (saint.js wireBack); the canvas publishes `data-labels`, `data-dots`
 and `data-land` for the suite, written by the draw pass so doing-nothing
-reads 0.
+reads 0. **A timeline bar sits under the picture** (author, 2026-08-30
+evening), drawn on the stage per Amendment 77's promise rather than printed
+below it: two overlaid native `<input type="range">` over one rail, filtering
+`withPlace` by each card's `lifeInterval` (reused from `lib/index-filters.js`,
+same semantics as the Index's own date facet) before the kind counts or the
+picture ever see it. Undated cards are never excluded — there is nothing to
+judge them against and no tray left to set them aside in — so they always
+show. `dateFrom`/`dateTo` are held at module scope like `kind`, for the visit
+and not persisted. The reader's own filter, the density-paced *brush* §8.3
+describes stays deferred — seven located saints cannot demonstrate a pacing
+algorithm any better than a cluster threshold.
 
 **The stage is the window, not a card** (author, 2026-08-29), which costs two
 things worth knowing. `main` gives up its column on `html[data-route='map']`,
@@ -69,8 +79,9 @@ main.js on navigation — set only in JS it is a 0.21 layout shift. And the worl
 than the picture being stretched; the painter must size its backing store from
 the box, never from `ASPECT`.
 
-Clustering, labels and the timeline are deferred until the corpus has places —
-7 of 742 saints do.
+Clustering and collide-detected labels are deferred until the corpus has more
+places — 7 of 851 saints do. The plain timeline filter is not deferred (see
+Map above); only the density-paced brush is.
 
 **Tokens** — `src/styles/tokens.css`. Two theme blocks; a colour change needs
 both, and **both are now checked**: `tests/contrast.test.mjs` recomputes every
