@@ -64,6 +64,24 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Gaza",
+      "modern_name": "Gaza",
+      "lat": 31.5017,
+      "lon": 34.4668,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Gaza",
+      "modern_name": "Gaza",
+      "lat": 31.5017,
+      "lon": 34.4668,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

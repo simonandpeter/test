@@ -65,6 +65,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Alaverdi",
+      "modern_name": "Alaverdi Monastery, Kakheti, Georgia",
+      "lat": 41.9394,
+      "lon": 45.3697,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   }

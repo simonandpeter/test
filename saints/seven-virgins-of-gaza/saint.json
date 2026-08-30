@@ -43,6 +43,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 13.09.2026 (31. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Gaza",
+      "modern_name": "Gaza",
+      "lat": 31.5017,
+      "lon": 34.4668,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

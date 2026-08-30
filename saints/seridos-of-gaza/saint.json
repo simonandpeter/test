@@ -11,6 +11,14 @@
   "types": [
     "monastic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "serbian",
@@ -42,15 +50,17 @@
       "note": "Not found among the names read off saint.gr for 26 Αυγούστου 2026 (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "near Gaza",
+      "modern_name": "near Gaza",
+      "lat": 31.45,
+      "lon": 34.42,
+      "uncertainty_km": 25
+    }
+  ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 501,
-      "latest": 600,
-      "display": "6th century",
-      "basis": "traditional"
-    }
   }
 }

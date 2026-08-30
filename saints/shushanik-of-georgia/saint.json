@@ -21,6 +21,14 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 475,
+      "latest": 475,
+      "display": "475",
+      "basis": "attested"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -61,6 +69,16 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "relics",
+      "historical_name": "Tbilisi, church of Metekhi",
+      "modern_name": "Tbilisi, Georgia",
+      "lat": 41.6934,
+      "lon": 44.8015,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },
@@ -69,13 +87,5 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 475,
-      "latest": 475,
-      "display": "475",
-      "basis": "attested"
-    }
-  }
+  ]
 }

@@ -42,6 +42,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Sirmium",
+      "modern_name": "Sremska Mitrovica, Serbia",
+      "lat": 44.9767,
+      "lon": 19.6111,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }
