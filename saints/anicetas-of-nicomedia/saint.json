@@ -64,6 +64,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicomedia",
+      "modern_name": "İzmit, Turkey",
+      "lat": 40.7654,
+      "lon": 29.9408,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },

@@ -59,6 +59,24 @@
       "note": "Not on the Православни подсетник’s calendar line for 04.09.2026 (22. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Kursk",
+      "modern_name": "Kursk, Russia",
+      "lat": 51.7373,
+      "lon": 36.1874,
+      "uncertainty_km": 10
+    },
+    {
+      "kind": "death",
+      "historical_name": "Optina Pustyn",
+      "modern_name": "near Kozelsk, Russia",
+      "lat": 54.0356,
+      "lon": 35.7814,
+      "uncertainty_km": 8
+    }
+  ],
   "text": {
     "life": "life.md"
   }

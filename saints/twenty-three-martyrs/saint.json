@@ -11,6 +11,14 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -42,15 +50,17 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicomedia",
+      "modern_name": "İzmit, Turkey",
+      "lat": 40.7654,
+      "lon": 29.9408,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 301,
-      "latest": 400,
-      "display": "4th century",
-      "basis": "traditional"
-    }
   }
 }

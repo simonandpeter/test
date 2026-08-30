@@ -12,6 +12,14 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 312,
+      "display": "311–312",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -62,15 +70,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Melitene",
+      "modern_name": "Malatya, Turkey",
+      "lat": 38.3552,
+      "lon": 38.3095,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 311,
-      "latest": 312,
-      "display": "311–312",
-      "basis": "traditional"
-    }
   }
 }

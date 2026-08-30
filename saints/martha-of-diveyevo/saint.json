@@ -62,6 +62,24 @@
       "note": "Not on the Православни подсетник’s calendar line for 03.09.2026 (21. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Diveyevo",
+      "modern_name": "Diveyevo, Russia",
+      "lat": 55.041,
+      "lon": 43.2385,
+      "uncertainty_km": 8
+    },
+    {
+      "kind": "relics",
+      "historical_name": "Diveyevo",
+      "modern_name": "Diveyevo, Russia",
+      "lat": 55.041,
+      "lon": 43.2385,
+      "uncertainty_km": 8
+    }
+  ],
   "text": {
     "life": "life.md"
   }

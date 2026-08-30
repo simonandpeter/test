@@ -34,8 +34,8 @@ you inferred, and keep them apart.
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
   folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
-  129). **42 saints carry a location, 62 points between them** (7/16 at
-  the start of 2026-08-30 evening; Amendments 84-85), spanning 66-1938,
+  129). **60 saints carry a location, 84 points between them** (7/16 at
+  the start of 2026-08-30 evening; Amendments 84-86), spanning 66-1938,
   which the map's timeline now filters.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
@@ -188,7 +188,7 @@ author's, recorded rather than absorbed.
 
 **Clustering below a density threshold and collide-detected labels stay
 deferred, and the reason is the corpus rather than the effort: 19 of 851 saints
-carry a location, 62 points between them (7/16 at the start of 2026-08-30
+carry a location, 84 points between them (7/16 at the start of 2026-08-30
 evening).** A threshold that never fires and labels that never collide would
 be machinery verified against nothing. They come back when the data does,
 and that is data work, not this.

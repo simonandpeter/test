@@ -42,6 +42,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Melitene",
+      "modern_name": "Malatya, Turkey",
+      "lat": 38.3552,
+      "lon": 38.3095,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

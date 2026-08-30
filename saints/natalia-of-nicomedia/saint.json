@@ -23,6 +23,14 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "under Maximian",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -81,9 +89,25 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "greek",
@@ -183,19 +207,5 @@
         "year": 2026
       }
     }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 305,
-      "latest": 311,
-      "display": "under Maximian",
-      "basis": "traditional"
-    }
-  }
+  ]
 }

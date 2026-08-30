@@ -15,6 +15,14 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1549,
+      "latest": 1549,
+      "display": "1549",
+      "basis": "attested"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -56,15 +64,17 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "relics",
+      "historical_name": "Adrian's monastery, Lake Ladoga",
+      "modern_name": "near Olonets, Russia",
+      "lat": 61.05,
+      "lon": 32.65,
+      "uncertainty_km": 25
+    }
+  ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 1549,
-      "latest": 1549,
-      "display": "1549",
-      "basis": "attested"
-    }
   }
 }

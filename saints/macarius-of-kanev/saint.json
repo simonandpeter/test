@@ -12,6 +12,15 @@
     "venerable",
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1678,
+      "latest": 1678,
+      "display": "1678",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: “Прмч. Макария Каневского, архим. Овручского, Переяславского (1678)”"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -43,15 +52,24 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this Julian date was not read (26 August 2026)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 1678,
-      "latest": 1678,
-      "display": "1678",
-      "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: “Прмч. Макария Каневского, архим. Овручского, Переяславского (1678)”"
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Ovruch",
+      "modern_name": "Ovruch, Ukraine",
+      "lat": 51.3253,
+      "lon": 28.8019,
+      "uncertainty_km": 10
+    },
+    {
+      "kind": "death",
+      "historical_name": "Kanev",
+      "modern_name": "Kanev, Ukraine",
+      "lat": 49.7517,
+      "lon": 31.4694,
+      "uncertainty_km": 10
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }

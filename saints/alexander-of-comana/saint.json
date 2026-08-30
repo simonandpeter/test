@@ -66,6 +66,24 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Comana in Pontus",
+      "modern_name": "near Gümenek, Tokat Province, Turkey",
+      "lat": 40.35,
+      "lon": 36.68,
+      "uncertainty_km": 25
+    },
+    {
+      "kind": "death",
+      "historical_name": "Comana in Pontus",
+      "modern_name": "near Gümenek, Tokat Province, Turkey",
+      "lat": 40.35,
+      "lon": 36.68,
+      "uncertainty_km": 25
+    }
+  ],
   "text": {
     "life": "life.md"
   }
