@@ -54,9 +54,25 @@
       "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Voronezh",
+      "modern_name": "Voronezh, Russia",
+      "lat": 51.672,
+      "lon": 39.1843,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "russian",
@@ -81,12 +97,6 @@
         "url": "https://days.pravoslavie.ru/Days/20260904.html",
         "year": 2026
       }
-    }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

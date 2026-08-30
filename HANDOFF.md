@@ -34,8 +34,9 @@ you inferred, and keep them apart.
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
   folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
-  129). **19 saints carry a location, 32 points between them** (up from
-  7/16 — 2026-08-30 evening), which the map's timeline now filters.
+  129). **42 saints carry a location, 62 points between them** (7/16 at
+  the start of 2026-08-30 evening; Amendments 84-85), spanning 66-1938,
+  which the map's timeline now filters.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
@@ -187,10 +188,10 @@ author's, recorded rather than absorbed.
 
 **Clustering below a density threshold and collide-detected labels stay
 deferred, and the reason is the corpus rather than the effort: 19 of 851 saints
-carry a location, 32 points between them (up from 7/16 — 2026-08-30 evening).**
-A threshold that never fires and labels that never collide would be machinery
-verified against nothing. They come back when the data does, and that is data
-work, not this.
+carry a location, 62 points between them (7/16 at the start of 2026-08-30
+evening).** A threshold that never fires and labels that never collide would
+be machinery verified against nothing. They come back when the data does,
+and that is data work, not this.
 
 **Zoom and pan landed 2026-08-29** (author: the page zoomed, the map did not).
 `lib/map-view.js` is the arithmetic — scale plus a centre, clamped so the world

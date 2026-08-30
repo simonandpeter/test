@@ -57,6 +57,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Tamasos",
+      "modern_name": "Politiko, Cyprus",
+      "lat": 35.0167,
+      "lon": 33.2167,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },

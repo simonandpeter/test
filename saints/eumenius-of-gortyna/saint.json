@@ -58,9 +58,25 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Gortyna",
+      "modern_name": "Agioi Deka, Crete, Greece",
+      "lat": 35.0648,
+      "lon": 24.9496,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "greek",
@@ -112,12 +128,6 @@
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-eumenie-episcopul-gortinei",
         "year": 2026
       }
-    }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

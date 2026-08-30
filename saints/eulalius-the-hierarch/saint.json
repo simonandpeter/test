@@ -57,6 +57,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Caesarea in Cappadocia",
+      "modern_name": "Kayseri, Turkey",
+      "lat": 38.7205,
+      "lon": 35.4826,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

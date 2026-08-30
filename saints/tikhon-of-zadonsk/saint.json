@@ -66,6 +66,32 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Voronezh",
+      "modern_name": "Voronezh, Russia",
+      "lat": 51.672,
+      "lon": 39.1843,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Zadonsk",
+      "modern_name": "Zadonsk, Lipetsk Oblast, Russia",
+      "lat": 52.3903,
+      "lon": 38.9236,
+      "uncertainty_km": 8
+    },
+    {
+      "kind": "relics",
+      "historical_name": "Zadonsk",
+      "modern_name": "Zadonsk, Lipetsk Oblast, Russia",
+      "lat": 52.3903,
+      "lon": 38.9236,
+      "uncertainty_km": 8
+    }
+  ],
   "text": {
     "life": "life.md"
   }

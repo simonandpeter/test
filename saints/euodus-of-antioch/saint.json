@@ -17,6 +17,15 @@
     "apostle",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 66,
+      "latest": 66,
+      "display": "66",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: “Апп. от 70-ти Евода (66)”"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -57,15 +66,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 66,
-      "latest": 66,
-      "display": "66",
-      "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: “Апп. от 70-ти Евода (66)”"
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Antioch",
+      "modern_name": "Antakya, Turkey",
+      "lat": 36.2021,
+      "lon": 36.1613,
+      "uncertainty_km": 15
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }

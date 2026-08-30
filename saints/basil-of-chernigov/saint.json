@@ -53,6 +53,16 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Chernigov",
+      "modern_name": "Chernihiv, Ukraine",
+      "lat": 51.4982,
+      "lon": 31.2893,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   }

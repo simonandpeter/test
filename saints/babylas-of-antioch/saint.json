@@ -92,9 +92,33 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Antioch",
+      "modern_name": "Antakya, Turkey",
+      "lat": 36.2021,
+      "lon": 36.1613,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Antioch",
+      "modern_name": "Antakya, Turkey",
+      "lat": 36.2021,
+      "lon": 36.1613,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "russian",
@@ -199,12 +223,6 @@
           "year": 1899
         }
       }
-    }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

@@ -13,6 +13,14 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 431,
+      "latest": 431,
+      "display": "at the Council of Ephesus",
+      "basis": "traditional"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -44,15 +52,17 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Gortyna",
+      "modern_name": "Agioi Deka, Crete, Greece",
+      "lat": 35.0648,
+      "lon": 24.9496,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "floruit": {
-      "earliest": 431,
-      "latest": 431,
-      "display": "at the Council of Ephesus",
-      "basis": "traditional"
-    }
   }
 }

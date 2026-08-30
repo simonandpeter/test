@@ -55,6 +55,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Iconium",
+      "modern_name": "Konya, Turkey",
+      "lat": 37.8746,
+      "lon": 32.4932,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

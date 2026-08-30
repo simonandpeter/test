@@ -53,9 +53,25 @@
       "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Gortyna",
+      "modern_name": "Agioi Deka, Crete, Greece",
+      "lat": 35.0648,
+      "lon": 24.9496,
+      "uncertainty_km": 10
+    }
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "russian",
@@ -80,12 +96,6 @@
         "url": "https://days.pravoslavie.ru/Days/20260906.html",
         "year": 2026
       }
-    }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

@@ -13,6 +13,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Сщмчч. Захарии, архиеп. Воронежского, Сергия, Иосифа, Алексия пресвитеров, Димитрия диакона и мч. Василия (1937)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -44,15 +53,16 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 1937,
-      "latest": 1937,
-      "display": "1937",
-      "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: «Сщмчч. Захарии, архиеп. Воронежского, Сергия, Иосифа, Алексия пресвитеров, Димитрия диакона и мч. Василия (1937)»"
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Voronezh",
+      "modern_name": "Voronezh, Russia",
+      "lat": 51.672,
+      "lon": 39.1843,
+      "uncertainty_km": 15
     }
-  },
+  ],
   "text": {
     "life": "life.md"
   }
