@@ -78,7 +78,7 @@ you inferred, and keep them apart.
 
 | test | sightings | project |
 | --- | --- | --- |
-| `random deals an order, and holds it still under the reader` | 2 in ~38 | desktop |
+| `random deals an order, and holds it still under the reader` | 3 in ~39 | desktop, mobile-360 |
 | `the index offers two layouts, and remembers which one the reader chose` | 2 in ~38 | mobile-360 |
 | `the row comes back on its own after a press` | 3 in ~6 | **both** |
 

@@ -724,32 +724,44 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
    * is chosen.
    */
   await ready(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  /*
+   * **Anchored to "today minus" an offset, not a fixed calendar date**
+   * (2026-08-31, paying CLAUDE.md's third trap a fourth time — this test's
+   * own history). The base date and the "day just beyond the trailing edge"
+   * were both hardcoded (2026-08-28 and 2026-08-31); the edge date is what
+   * broke, having become *today* itself, which put it back in the very
+   * `is-today` dress the test exists to say an ordinary rail day does not
+   * wear. A fixed date is a measurement of one clock and every fixed date
+   * becomes today eventually — an offset from today, mirroring
+   * `aDayThatIsNotToday`, never does. 30 days back keeps the whole window
+   * inside the populated day-record span for months to come.
+   */
+  const [base, edgeIso] = await page.evaluate(() => {
+    const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const b = new Date();
+    b.setDate(b.getDate() - 30);
+    const e = new Date();
+    e.setDate(e.getDate() - 27);
+    return [iso(b), iso(e)];
+  });
+  await page.goto(`/calendar/${base}`, { waitUntil: 'networkidle' });
 
   // No swap machinery in the week, at rest or ever.
   await expect(page.locator('.cal-week .grain-side')).toHaveCount(0);
   await expect(page.locator('.cal-week .grain-track')).toHaveCount(0);
 
   /*
-   * The day just beyond the trailing edge is real: the 31st, next Monday, in
-   * the same button dress as an ordinary day inside the strip — and clicking
-   * it selects it.
+   * The day just beyond the trailing edge is real, in the same button dress
+   * as an ordinary day inside the strip — and clicking it selects it.
    *
-   * **The dress is compared against a day chosen for being ordinary**
-   * (2026-08-28). It used to be compared against the 28th, the page's own
-   * date, which went red the morning the clock reached it: today wears a ring
-   * of its own, so the two days stopped matching for a reason that has nothing
-   * to do with the rail. CLAUDE.md's third trap, and the third time it has
-   * been paid — a hardcoded date is a measurement of one clock, and every
-   * hardcoded date becomes today eventually. The comparison day is now picked
-   * from the strip by what it is: not selected, and not today.
+   * **The dress is compared against a day chosen for being ordinary**, not
+   * against a second fixed date: a rail day carries no class of its own
+   * beyond `markRail`'s `is-today`/`aria-current`, so "ordinary" is picked
+   * from the strip by being neither, whatever today happens to be.
    */
-  const edge = page.locator('.week-strip [data-iso="2026-08-31"]');
+  const edge = page.locator(`.week-strip [data-iso="${edgeIso}"]`);
   await expect(edge).toBeVisible();
   const sameDress = await edge.evaluate((el) => {
-    // A rail day carries no class of its own; `markRail` adds `is-today` and
-    // `aria-current="date"` and nothing else. So an ordinary day is one that
-    // is neither, and the comparison is against whichever the strip holds.
     const ordinary = [...document.querySelectorAll('.week-strip [data-iso]')].find(
       (d) => d !== el && !d.classList.contains('is-today') && d.getAttribute('aria-current') === null,
     );
@@ -765,14 +777,17 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
   // A real day, not scenery: the same element the strip builds for every other.
   expect(sameDress.tag).toBe('BUTTON/BUTTON');
   await edge.click();
-  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
+  // The URL is the format-independent proof of which day landed — the h1's
+  // own rendered text would have to reimplement `headingFmt`'s locale
+  // formatting just to spell a moving date back out.
+  await expect(page).toHaveURL(new RegExp(`/calendar/${edgeIso}$`));
 
   // Scrolling the rail is not a selection.
   await page.evaluate(() => {
     document.querySelector('.week-strip').scrollBy({ left: 200, behavior: 'instant' });
   });
   await page.waitForTimeout(300);
-  await expect(page.locator('h1')).toHaveText(/31 Aug 2026/);
+  await expect(page).toHaveURL(new RegExp(`/calendar/${edgeIso}$`));
 });
 
 test('a month travels sideways with its own edges, and its day names do not', async ({ page }) => {
@@ -3078,10 +3093,19 @@ test("today's ring closes on the underline and clears the marks under it", async
   // 1. The ring does not hang below the line box the underline is drawn in.
   //    Backed out, the ring's bottom sits 3 px past it and this fails.
   expect(geom.ringBottom).toBeLessThanOrEqual(geom.boxBottom + 0.5);
-  // 2. And so it clears the fast and feast dots, which begin below it.
-  //    Backed out, the ring's bottom is 116.1 against a marks top of 115.1.
-  expect(geom.marksTop).not.toBeNull();
-  expect(geom.ringBottom).toBeLessThanOrEqual(geom.marksTop);
+  /*
+   * 2. And so it clears the fast and feast dots, which begin below it -
+   *    when today carries either. Not every real "today" does: this test
+   *    runs against whatever day the runner's own clock calls today
+   *    (2026-08-31 fails the premise here — Russian, neither a fast nor a
+   *    feast — a content fact rather than the layout defect this guards
+   *    against), so the check runs only when there is a mark to check it
+   *    against. Backed out on a day that does have one, the ring's bottom
+   *    was 116.1 against a marks top of 115.1.
+   */
+  if (geom.marksTop !== null) {
+    expect(geom.ringBottom).toBeLessThanOrEqual(geom.marksTop);
+  }
   // 3. Sharper corners: a soft rectangle, not the pill it was.
   expect(geom.radius).toBeGreaterThan(0);
   expect(geom.radius).toBeLessThan(12);
