@@ -185,7 +185,16 @@ test('Overlaps and Entirely within are different questions, and both are offered
   // Theologian (329-389) sit inside it, Spyridon (late 3rd century-c. 348)
   // overlaps it from before, and Panteleimon, Catherine and Barbara all die
   // in the persecutions of 305-313 that the range was drawn around.
-  await expect(page.locator('[data-count]')).toHaveText('212');
+  //
+  // 210/195 since the date audit of 2026-09-01, and the two that left are
+  // the audit's own point. Moses the Hungarian's birth was "before 1000" and
+  // Sabbas of Venetala's death "before the 11th century" - intervals open at
+  // their start, which `overlaps` reads as reaching back without limit, so
+  // both of them matched the fourth century as readily as the tenth. Bounding
+  // one and admitting the other is undated took them out of a window neither
+  // ever belonged in. `within` is unmoved at 195: an open interval was never
+  // *entirely inside* anything.
+  await expect(page.locator('[data-count]')).toHaveText('210');
   await page.locator('input[name="rangeMode"][value="within"]').check();
   await expect(page.locator('[data-count]')).toHaveText('195');
 });
@@ -232,7 +241,12 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // the life survive, and of the 75 that are silent about time only 11 so
   // much as name a ruler. That is a finding rather than a gap, which is what
   // this tray exists to keep visible.
-  await expect(page.locator('.tray')).toContainText('154 undated');
+  // 155 since 2026-09-01: Sabbas of Venetala joined them. He carried a death
+  // of "before the 11th century", which is a bound on when he was written
+  // down - his one record is a tenth or eleventh century Sinai codex - and
+  // not on when he lived. An interval running from the apostolic age to that
+  // codex is not a date, and undated is the corpus's own word for it.
+  await expect(page.locator('.tray')).toContainText('155 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {

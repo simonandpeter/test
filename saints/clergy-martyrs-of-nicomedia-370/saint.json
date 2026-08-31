@@ -74,6 +74,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "off Nicomedia",
+      "modern_name": "the Gulf of İzmit, Turkey",
+      "lat": 40.7654,
+      "lon": 29.9408,
+      "uncertainty_km": 40,
+      "note": "They were put out to sea in a ship and burned in it. The water is off Nicomedia and no closer bearing is given, so this is the city's own coordinate with the gulf's width for its doubt."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

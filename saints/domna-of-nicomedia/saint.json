@@ -52,6 +52,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicomedia",
+      "modern_name": "İzmit, Turkey",
+      "lat": 40.7654,
+      "lon": 29.9408,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },

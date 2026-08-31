@@ -186,13 +186,40 @@ export function declutter(points, radiusPx = 9, keyOf) {
     }
     const cx = group.reduce((s, p) => s + p.x, 0) / group.length;
     const cy = group.reduce((s, p) => s + p.y, 0) / group.length;
-    // Grows with the group so a stack of five does not draw its own dots
-    // back on top of each other at the ring's own radius.
-    const r = radiusPx * (1 + group.length / 5);
-    group.forEach((p, i) => {
-      const angle = (2 * Math.PI * i) / group.length - Math.PI / 2;
-      out.push({ ...p, x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) });
-    });
+    /*
+     * **Concentric rings, filled from the inside out**, rather than one ring
+     * whose radius grows with the group.
+     *
+     * The single ring was written when the biggest stack in the corpus was
+     * two, and its radius grew linearly: `radiusPx * (1 + n/5)`. At the
+     * twenty-four martyrs of Nicomedia who share one coordinate (2026-09-01)
+     * that is a 52 px wheel drawn over Anatolia at every zoom — the spread is
+     * a fixed number of *screen* pixels by design, so it does not shrink as
+     * the reader zooms out — and it reads as twenty-four separate places,
+     * which is the opposite of what decluttering is for.
+     *
+     * Filling rings instead makes the radius grow as the square root of the
+     * group: the same twenty-four sit inside 27 px, and a pair is still a
+     * pair `radiusPx` either side of the spot they share. How many fit on a
+     * ring is its own circumference over the spacing, so no two dots on it
+     * are closer than two dots in a group of two.
+     */
+    let placed = 0;
+    let ring = 1;
+    while (placed < group.length) {
+      const r = radiusPx * ring;
+      const capacity = Math.max(1, Math.floor((2 * Math.PI * r) / radiusPx));
+      const here = Math.min(capacity, group.length - placed);
+      for (let i = 0; i < here; i += 1) {
+        const p = group[placed + i];
+        // Half a step of turn per ring, so the rings' own dots do not line up
+        // into spokes radiating out of the middle.
+        const angle = (2 * Math.PI * i) / here - Math.PI / 2 + (ring % 2 ? 0 : Math.PI / here);
+        out.push({ ...p, x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) });
+      }
+      placed += here;
+      ring += 1;
+    }
   }
   return out;
 }

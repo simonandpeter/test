@@ -45,9 +45,10 @@
   "dates": {
     "death": {
       "earliest": null,
-      "latest": 1100,
-      "display": "before the 11th century",
-      "basis": "inferred"
+      "latest": null,
+      "display": null,
+      "basis": "unknown",
+      "note": "Undated, and the honest word for it. He was carried as 'before the 11th century', which is a bound on when he was written down and not on when he lived: the one record of him, Sinai Codex 631, is of the tenth or eleventh century. No source names a century, and an interval running from the apostolic age to that codex is not a date."
     }
   }
 }

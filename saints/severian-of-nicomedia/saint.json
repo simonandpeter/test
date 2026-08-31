@@ -60,6 +60,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "near Chalcedon",
+      "modern_name": "Kadıköy, Istanbul, Turkey",
+      "lat": 40.9903,
+      "lon": 29.025,
+      "uncertainty_km": 15,
+      "note": "Killed near Chalcedon on the road out of Nicomedia, the Prologue says, and not at Nicomedia with the rest of the company."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

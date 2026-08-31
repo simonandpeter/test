@@ -60,6 +60,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the road from Nicomedia to Byzantium",
+      "modern_name": "between İzmit and Istanbul, Turkey",
+      "lat": 40.88,
+      "lon": 29.45,
+      "uncertainty_km": 50,
+      "note": "Not a place but a stretch of road. The Prologue has the company led bound from Nicomedia towards Byzantium, and says only that he died of his wounds and exhaustion on the way; this is the midpoint of that road, and the uncertainty is its length."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

@@ -267,3 +267,29 @@ test("a custom key's grouping does not change as the points themselves move", ()
     prevDist = dist;
   }
 });
+
+test('a large stack packs into rings rather than one widening wheel', () => {
+  /*
+   * The twenty-four martyrs of Nicomedia share one coordinate (2026-09-01),
+   * and the single ring this replaced grew its radius linearly with the
+   * group: twenty-four of them made a 52 px wheel drawn over Anatolia at
+   * every zoom, since the spread is a fixed number of *screen* pixels by
+   * design. Rings filled from the inside out grow as the square root
+   * instead, so the knot stays a knot — while no two dots come closer than
+   * two dots in a group of two, which is the whole point of spreading them.
+   */
+  const stack = Array.from({ length: 24 }, (_, i) => ({ x: 100, y: 100, slug: `m${i}` }));
+  const out = declutter(stack);
+  assert.equal(out.length, 24);
+
+  const radius = Math.max(...out.map((p) => Math.hypot(p.x - 100, p.y - 100)));
+  assert.ok(radius < 30, `the stack spread to ${radius.toFixed(1)}px, which reads as separate places`);
+
+  let closest = Infinity;
+  for (let i = 0; i < out.length; i += 1) {
+    for (let j = i + 1; j < out.length; j += 1) {
+      closest = Math.min(closest, Math.hypot(out[i].x - out[j].x, out[i].y - out[j].y));
+    }
+  }
+  assert.ok(closest >= 8.9, `two of them are only ${closest.toFixed(1)}px apart`);
+});

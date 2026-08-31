@@ -34,8 +34,11 @@ you inferred, and keep them apart.
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
   folderless Exaltation (Russian 567, Romanian 160, Greek 365, Serbian
-  129). **69 saints carry a location, 94 points between them** (7/16 at
-  the start of 2026-08-30 evening; Amendments 84-87), spanning 66-1938.
+  129). **97 saints carry a location, 122 points between them** (7/16 at
+  the start of 2026-08-30 evening; Amendments 84-87, and 28 more on
+  2026-09-01 from `scripts/place-candidates.mjs` — the martyrs of
+  Nicomedia, five of whom turned out to have died on the road out of it),
+  spanning 66-1938.
   The map draws **one dot per saint**, not one per point: `pointAt` picks
   which of a saint's places to show from where the timeline's upper handle
   stands, and the timeline **dims** what falls outside its range rather
@@ -54,7 +57,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **263 unit, 724 browser** across two projects. `npm run test:all`.
+- **264 unit, 724 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -325,6 +328,37 @@ names Basilica, and both statements are true about different things.
   to the veneration glyph, removed at Amendment 25; needs re-scoping).
 - **Session 9** — PWA, offline, About statistics (where `loadManifestMeta()`
   finally gets a caller).
+
+### What the 2026-09-01 audits found, and what is left
+
+`scripts/date-audit.mjs` and `scripts/place-candidates.mjs` exist so this work
+can be aimed rather than sprayed. Their standing numbers, and the standing
+job:
+
+| finding | count | note |
+| --- | --- | --- |
+| dates `open` | **0** | was 2; both fixed 2026-09-01 |
+| dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
+| dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
+| `undated` | 155 | the third audit showed how firmly; see `index.spec.js` |
+| `no-death` | 23 | **the most fixable thing in the corpus.** Well-known people with an exact birth and no death year — Joasaph of Belgorod, Mitrophan of Voronezh, Kassiani, Ilarion Felea. Each needs one source fetched; the day-index page they already cite does *not* carry it |
+| `no-birth` | 485 | mostly irreducible |
+| place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |
+
+**Two findings the audits turned up that are the author's to settle.**
+
+*The twenty-three martyrs are in the corpus twice.*
+`martyrs-23-with-adrian-of-nicomedia` (from the Prologue, Russian and
+Serbian) and `twenty-three-martyrs` (from saint.gr, Greek) are the same
+company who died with Adrian. Only the second is located, deliberately:
+locating both would put two dots on the map for one group. Merging saints is
+editorial and is not something a session should do quietly.
+
+*Five of the 99 name-matches were wrong, and the pattern is worth knowing.*
+An epithet names where someone is *from* at least as often as where they
+died — Mary of Egypt died beyond the Jordan, Sava of Serbia at Tarnovo — and
+the tool matched the personal name Jerusalem to the city three times over.
+Reading each life is the work; the tool only finds the ones worth reading.
 
 ## Data work — larger than the engineering
 

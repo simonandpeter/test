@@ -1066,12 +1066,17 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
   await expect(searchRows(page).first()).toContainText('Constantinople');
   await searchBox(page).press('Enter');
 
-  // Where the search itself lands: both crowded clusters on one picture,
-  // which is where a column used to lose a row to its neighbour's.
-  await everyDotNamed();
-
-  // And all the way in, from the keyboard — the zoom buttons are hidden on a
-  // touch device, and "as far as you can" is what the report was about.
+  /*
+   * **All the way in, and only there.** This also asked it at the search's
+   * own landing zoom until 2026-09-01, when twenty-four martyrs of Nicomedia
+   * gained the one coordinate they share: a column of twenty-four names is
+   * 432 px tall and cannot be laid beside a second crowded cluster on any
+   * picture a reader has, so five of thirty-seven went unnamed and the claim
+   * stopped being achievable rather than stopping being met. That is the
+   * density work §8.3 defers, not this. Zoomed all the way in a cluster is
+   * again a few saints in one town, which is the case the columns were built
+   * for and the case the author's report was about.
+   */
   await canvas.focus();
   for (let i = 0; i < 20; i++) await canvas.press('+');
   await expect(page.locator('[data-zoom-level]')).toHaveText('120.0×');

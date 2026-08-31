@@ -19,11 +19,11 @@
   ],
   "dates": {
     "birth": {
-      "earliest": null,
-      "latest": 1000,
-      "display": "before 1000",
+      "earliest": 975,
+      "latest": 995,
+      "display": "c. 975-995",
       "basis": "inferred",
-      "note": "No birth date is recorded. He was already in the service of Prince Boris, killed in 1015, and was taken captive in 1018, so he cannot have been born much after 1000. The upper bound is a real finding; the lower bound is simply unknown."
+      "note": "No source gives a year, and this is bounded rather than found. He and his brothers were already boyars in Prince Boris's service - given the rank for service rendered - when Boris was killed in 1015, so he was a grown man by then and born no later than about 995. He then survived six years of Polish captivity, mutilation, and ten years at the Caves, dying about 1043; born much before 975 he would be nearing seventy at the end of that, which the accounts of a tall, strong captive make unlikely. The interval is those two arguments and nothing else."
     },
     "death": {
       "earliest": 1043,
@@ -89,11 +89,11 @@
     {
       "place": "Hungary",
       "from": null,
-      "to": 1000,
+      "to": 995,
       "lat": 47.1625,
       "lon": 19.5033,
       "uncertainty_km": 300,
-      "note": "Hungarian by birth, and that is the whole of what the sources say about where. Neither the town nor the year he left is recorded; 1000 is not a departure but the latest year his own birth interval allows, and the only bound this corpus can state about him before 1015. The crossing to Rus' is drawn over the unrecorded years that follow it."
+      "note": "Hungarian by birth, and that is the whole of what the sources say about where. Neither the town nor the year he left is recorded; 995 is not a departure but the latest year his own birth interval allows, and the only bound this corpus can state about him before 1015. The crossing to Rus' is drawn over the unrecorded years that follow it."
     },
     {
       "place": "Kyiv",

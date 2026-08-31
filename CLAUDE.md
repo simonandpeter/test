@@ -250,12 +250,19 @@ screen, dropped only once the whole of it has left the box (2026-08-31,
 `map-labels.js`) — its far edge crossing the boundary used to hide the whole
 name outright; the canvas already clips whatever is drawn past its own
 bounds, so there was nothing this needed to do but stop refusing to try.
-Two or more saints who round to the same on-screen spot — John the
-Long-Suffering and Moses the Hungarian both die at the Kyiv Caves, at an
-identical coordinate — are fanned into a small ring by `declutter`
+Two or more saints who round to the same on-screen spot — twenty-four
+martyrs share Nicomedia, and John the Long-Suffering and Moses the Hungarian
+both die at the Kyiv Caves at an identical coordinate — are fanned into
+**concentric rings, filled from the inside out**, by `declutter`
 (`lib/map-view.js`, pure, unit-tested) before anything is drawn, so a halo, a
 dot and a label each land where the point is actually placed; no zoom level
-would ever separate two identical coordinates on its own. It groups by each
+would ever separate two identical coordinates on its own. **The rings matter
+as much as the fanning** (2026-09-01): a single ring whose radius grew with
+the group was right at two saints and drew a 52 px wheel over Anatolia at
+twenty-four, since the spread is a fixed number of *screen* pixels and does
+not shrink as the reader zooms out — it read as twenty-four separate places,
+the opposite of the point. Rings filled from the inside out grow as the
+square root, so the same two dozen sit inside 27 px. It groups by each
 point's own source coordinate (`declutter`'s `keyOf` parameter, map.js
 passing `where.lon`/`where.lat`) rather than by this frame's on-screen
 proximity, its own default — the default is what map.js used until
@@ -460,7 +467,7 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~15s, 263).
+- Unit: `tests/*.test.mjs`, `npm test` (~15s, 264).
 - Browser: `e2e/`, one file per surface, 724 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
@@ -542,6 +549,19 @@ nothing.** Four things in one day read as evidence and were not.
   `shots/`. Steps: `click:`, `wait:`, `key:`, `scroll:`, `lang:`, `church:`.
 - `node scripts/locale-coverage.mjs`, `cross-link-audit.mjs`,
   `extraction-check.mjs`, `sessions-index.mjs`, `python scripts/make_wordmark.py`.
+- `node scripts/date-audit.mjs [--list <finding>]` — which saints the corpus
+  dates badly, worst first: `open` (an interval null at one end, which reaches
+  to infinity and which `lifeBounds` has to paper over), `wide`, `loose-basis`
+  (`attested` and a century wide — one of the two is wrong), `undated`,
+  `no-death`, `no-birth`. **Reports rather than gates**, on purpose: a missing
+  birth year is the ordinary condition of a fourth-century martyr, and a build
+  that refused one would push authors into inventing years.
+- `node scripts/place-candidates.mjs [--place X] [--limit N]` — unlocated
+  saints whose *own life* names a place the repository can already put a
+  coordinate on, with the sentence it was found in. **Proposes; never
+  writes.** Reading is the work: it offered Edessa in Mesopotamia for a saint
+  of Edessa in Macedonia, and Nicomedia for five martyrs the Prologue says
+  died on the road out of it.
 - `node scripts/make-land.mjs` — regenerates the map's coastline. By hand only;
   the output is committed so the build never needs `world-atlas`.
 

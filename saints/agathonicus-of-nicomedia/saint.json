@@ -64,6 +64,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Selymbria",
+      "modern_name": "Silivri, Turkey",
+      "lat": 41.0736,
+      "lon": 28.2464,
+      "uncertainty_km": 10,
+      "note": "Taken from Nicomedia into Thrace and beheaded at Selymbria before the emperor, which is where the Prologue ends his account - not at Nicomedia, where he was seized."
+    }
+  ],
   "text": {
     "life": "life.md"
   },
