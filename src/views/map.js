@@ -1,5 +1,8 @@
+import { PERIODS, spanOf } from '../data/periods.js';
+import { PLACES } from '../data/places.js';
 import { isUndated, overlaps } from '../lib/dates.js';
 import { lifeInterval } from '../lib/index-filters.js';
+import { layoutLabels } from '../lib/map-labels.js';
 import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
@@ -132,6 +135,34 @@ const shapeBBoxes = new WeakMap();
 const labelState = new Map();
 const LABEL_FADE_MS = 300;
 
+/**
+ * Where each label was last actually placed, by slug. A label fading *out*
+ * has lost its placement — `layoutLabels` only returns the ones it kept —
+ * and without somewhere to fade from it would jump back to its dot for the
+ * length of the fade, which is a flicker of exactly the kind the fade was
+ * added to remove.
+ */
+const labelLastAt = new Map();
+
+/**
+ * The most alpha the halos may ever put over the map, however many overlap
+ * (author, 2026-08-31: "Make sure the glow never exceeds 50% opacity").
+ * Applied once, to a layer every halo has already been composited onto —
+ * see `paintCanvas`, which argues why capping each halo separately cannot
+ * hold this line.
+ */
+const GLOW_MAX = 0.5;
+
+/**
+ * How far a dot outside the reader's chosen span fades toward the ground:
+ * `past` is greyed, `future` "greyed out twice as much" (author,
+ * 2026-08-31), which is that instruction read as *half the remaining
+ * opacity* rather than half the number — 0.45 is a dot you can still find,
+ * 0.225 is one that is plainly not there yet.
+ */
+const DIM_PAST = 0.45;
+const DIM_FUTURE = 0.225;
+
 /** Advances one label's opacity toward `wanted` by however long it has been
  *  since this slug was last stepped, and returns the new value. */
 function stepLabelOpacity(slug, wanted, now) {
@@ -238,6 +269,84 @@ const located = (card) => (card.locations ?? []).length > 0;
 const pointsOfKind = (cards, which) =>
   cards.flatMap((card) => (card.locations ?? []).filter((l) => l.kind === which).map((where) => ({ card, where })));
 
+/**
+ * **One dot per saint, chosen by where they were when the timeline's upper
+ * handle says** (author, 2026-08-31) — the first, data-backed half of the
+ * "tracker" the author described, and the reason the four kind buttons are
+ * gone from the legend.
+ *
+ * The instruction in full: "if the saint died in 1750 and the highest year
+ * on the filter is 1777, the death location will be displayed, but if the
+ * high filter is 1732, the dot will be where the saint was at that time, and
+ * if the high filter is before their birth it will show their birth dot but
+ * greyed out and not glowing … if the timeline bar filter does not include
+ * the saint's life, if it is after, they are greyed but still visible, and
+ * if their life hasn't happened yet, they are also greyed out but greyed out
+ * twice as much."
+ *
+ * **What is deferred, and why.** The same instruction describes the dot
+ * *sliding along a rail* as the handle crosses a life — which needs a saint
+ * to carry an ordered sequence of places with dates on them, and the corpus
+ * records at most four unordered `locations` with no dates of their own
+ * (`see` and `relics` carry none at all). So the rail is not faked here:
+ * what this returns is the best-attested single place for the year asked
+ * about, and the day the data carries a real itinerary this is the function
+ * that grows one.
+ *
+ * `state` is what the drawing pass dims by:
+ *   `live`    the year sits inside the saint's own life — full colour, glow.
+ *   `past`    they had already died — greyed, still legible.
+ *   `future`  they were not yet born — greyed twice as far, and no glow,
+ *             because a halo is a claim about a place someone *was*.
+ */
+function pointAt(card, from, to) {
+  const locations = card.locations ?? [];
+  if (!locations.length) return null;
+  const byKind = (k) => locations.find((l) => l.kind === k);
+  const iv = lifeInterval(card.dates);
+  const born = iv.earliest;
+  const died = iv.latest;
+
+  // The saint's most representative single place, death first for the reason
+  // §8.3 gives — it is the one kind almost every saint has, and where a
+  // martyr died is the fact their commemoration is usually built on.
+  const settled = byKind('death') ?? byKind('relics') ?? byKind('see') ?? byKind('birth') ?? locations[0];
+
+  /*
+   * An undated life is never dimmed and never moved, the same standing it
+   * has had since the timeline shipped: there is nothing to judge it
+   * against, so it shows its settled place at full strength whatever the
+   * handles say.
+   */
+  if (to === null || born === null || died === null) return { where: settled, state: 'live' };
+
+  /*
+   * **Position from the upper handle; dimming from the whole range.** They
+   * are different questions and were briefly conflated: where a saint was
+   * in a given year is answered by that year alone, but whether the reader's
+   * chosen span *contains* that saint's life is a question about both ends.
+   * A saint who died in 1750 with the range set to 1700–1777 is squarely
+   * inside the reader's window and must not be greyed merely because the
+   * upper handle is past their death.
+   */
+  const state = overlaps(iv, from, to) ? 'live' : to < born ? 'future' : 'past';
+
+  if (to < born) {
+    // Not yet born: their birthplace is the only honest dot, and it marks a
+    // place they will be rather than one they are.
+    return { where: byKind('birth') ?? settled, state };
+  }
+  if (to >= died) {
+    // Dead by this year. `relics` outranks `death` only once the year is
+    // past the death itself, which is the one point at which "where they
+    // are" and "where they died" can honestly differ.
+    return { where: byKind('relics') ?? byKind('death') ?? settled, state };
+  }
+  // Alive at that year: a bishop's see is where they were, otherwise the
+  // place they started from.
+  return { where: byKind('see') ?? byKind('birth') ?? settled, state };
+}
+
 export function render(el, { data, router }) {
   /*
    * The whole corpus, always - the Index's own model since 2026-08-27, which
@@ -270,12 +379,17 @@ export function render(el, { data, router }) {
   }
 
   /*
-   * Undated is never excluded — there is nothing here to judge it against,
-   * and unlike the Index's date facet this page has no tray left to set it
-   * aside in (Amendment 77), so "always shown" is the honest stand-in.
+   * **The timeline dims rather than removes** (author, 2026-08-31: saints
+   * outside the range "are greyed but still visible"). Until then it
+   * excluded them outright, and `visible()` returned a narrowed array; now
+   * every located saint is drawn on every paint and the range decides only
+   * how brightly (`pointAt`'s `state`). So this is the whole located set,
+   * always, and the readout below counts how many of them the range
+   * actually contains rather than how many are on screen.
    */
-  const inTimeline = (card) => !bounds || isUndated(lifeInterval(card.dates)) || overlaps(lifeInterval(card.dates), dateFrom, dateTo);
-  const visible = () => withPlace.filter(inTimeline);
+  const visible = () => withPlace;
+  const inTimeline = (card) =>
+    !bounds || isUndated(lifeInterval(card.dates)) || overlaps(lifeInterval(card.dates), dateFrom, dateTo);
 
   /*
    * **The map is the window, not a card in the column** (author, 2026-08-29:
@@ -286,13 +400,19 @@ export function render(el, { data, router }) {
    * sticky bar, and the page's own reading — the lede, the register, the tray —
    * is below it. The two things that had to survive the change:
    *
-   * - The **h1 stays first in the document**, where a heading belongs and where
-   *   `the heading takes focus on navigation` expects it, and is drawn over the
-   *   map's top-left rather than above it. It is the page's name; the map is
-   *   the page.
-   * - The **kinds stay visible at all times**, which §8.3 asks for by name:
-   *   "make the current kind visible in the legend at all times". They are the
-   *   legend, so they sit on the map with the heading.
+   * - The **h1 stays first in the document**, where a heading belongs and
+   *   where `the heading takes focus on navigation` expects it. It is no
+   *   longer *drawn* over the map (author, 2026-08-31: "Remove the 'Map'
+   *   title that is over the map so that map takes up more screen space"),
+   *   so it is visually hidden rather than deleted — a page with no heading
+   *   at all would break both that test and the reader who navigates by
+   *   headings, and the instruction was about screen space, not about the
+   *   page ceasing to have a name.
+   * - The **kind buttons are gone** (same instruction), and with them §8.3's
+   *   "make the current kind visible in the legend at all times". What
+   *   replaces them is `pointAt`: one dot per saint, the kind chosen by
+   *   where they were when the timeline says, rather than four kinds the
+   *   reader switches between. The search takes the legend's place.
    */
   el.innerHTML = `
     <div class="map-stage" data-stage>
@@ -305,30 +425,43 @@ export function render(el, { data, router }) {
         -->
         <canvas data-map tabindex="0" role="img" aria-label="${esc(M.canvasLabel)}"></canvas>
 
-        <div class="map-legend">
-          <h1 class="map-title">${esc(M.title)}</h1>
-          <div class="map-kinds" role="group" aria-label="${esc(M.kindGroup)}">
-            ${KINDS.map(
-              (k) =>
-                `<button type="button" class="map-kind utility" data-kind="${k}"
-                   aria-pressed="${String(k === kind)}">${esc(M.kinds[k])}
-                   <span class="map-kind-count" data-kind-count="${k}">${pointsOfKind(visible(), k).length}</span></button>`,
-            ).join('')}
-          </div>
+        <h1 class="map-title sr-only">${esc(M.title)}</h1>
+
+        <!--
+          The search takes the legend's corner (author, 2026-08-31). A real
+          combobox rather than a styled div: the role, with aria-expanded,
+          aria-controls and aria-activedescendant, is what makes
+          arrow-keys-and-Enter work for a screen reader, and it is the same
+          bargain the timeline's native range inputs took — the accessible
+          behaviour of a listbox is not light to rebuild.
+        -->
+        <div class="map-search" data-search>
+          <input type="text" class="map-search-input" data-search-input
+            role="combobox" aria-expanded="false" aria-controls="map-search-list"
+            aria-autocomplete="list" autocomplete="off" spellcheck="false"
+            aria-label="${esc(M.searchLabel)}" placeholder="${esc(M.searchPlaceholder)}" />
+          <ul class="map-search-list" id="map-search-list" role="listbox"
+            aria-label="${esc(M.searchLabel)}" data-search-list hidden></ul>
         </div>
 
         <!--
-          The buttons are not a fallback for the gestures, they are the
-          primary control: they work by keyboard, by screen reader and by
-          touch without anyone having to discover a gesture, and on a phone
-          they are the whole of the zoom. aria-live on the level so a press
-          says what it did.
+          The scale readout, bottom right (author, 2026-08-31: "Remove the
+          zoom + and - and 'Whole world' buttons ... Display instead a small
+          scale indicator e.g. '4.9x'").
+
+          **The + and - survive on a pointer device and are hidden on
+          touch** (author, same message: "On desktop the zoom buttons remain,
+          the whole world does not. On mobile people will know they can use
+          their fingers to zoom in"). So the readout is the whole of the
+          control on a phone, where pinch is the gesture everyone already
+          knows, and the buttons stand beside it on a desktop, where there is
+          room and no pinch. Whole world is gone at every width; Home and 0
+          still do it from the keyboard.
         -->
         <div class="map-zoom" role="group" aria-label="${esc(M.zoomGroup)}">
           <button type="button" class="icon-button map-zoom-btn" data-zoom="out" aria-label="${esc(M.zoomOut)}">&minus;</button>
           <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
           <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
-          <button type="button" class="map-zoom-home utility" data-zoom="home">${esc(M.zoomReset)}</button>
         </div>
       </div>
 
@@ -381,35 +514,23 @@ export function render(el, { data, router }) {
   };
 
   /*
-   * One pass, so a kind press and a timeline drag move the same three things
-   * together: the kind counts in the legend, the picture, and (when the
-   * timeline exists) its own readout — never just one of them agreeing with
-   * itself while the others lag.
+   * The picture, repainted. The kind counts it used to keep in step went
+   * with the kind buttons (2026-08-31); what remains is the canvas itself,
+   * and the timeline's own readout, which `wireTimeline` paints.
    *
    * `throttled` is only ever true from the timeline fill's own pointermove
    * (`wireTimeline`) — the one other raw, many-times-a-frame pointer stream
-   * this view has, besides the map's own drag and wheel. A kind press, the
-   * reset button and a native range input's `input` event stay synchronous:
-   * each happens once, so there is nothing to coalesce.
+   * this view has, besides the map's own drag and wheel. A typed year, a
+   * preset, and a native range input's `input` event stay synchronous: each
+   * happens once, so there is nothing to coalesce.
    */
   const refresh = (throttled) => {
     const cards = visible();
-    for (const k of KINDS) {
-      el.querySelector(`[data-kind-count="${k}"]`).textContent = String(pointsOfKind(cards, k).length);
-    }
     if (throttled) schedulePaint(cards);
     else paintCanvas(canvas, cards);
   };
 
   refresh();
-
-  for (const button of el.querySelectorAll('[data-kind]')) {
-    button.addEventListener('click', () => {
-      kind = button.dataset.kind;
-      for (const b of el.querySelectorAll('[data-kind]')) b.setAttribute('aria-pressed', String(b === button));
-      refresh();
-    });
-  }
 
   wirePress(canvas, router);
 
@@ -421,9 +542,16 @@ export function render(el, { data, router }) {
    */
   drawWhenReady(el, canvas, visible);
 
-  wireZoom(el, canvas, visible, schedulePaint);
+  /*
+   * `wireZoom` hands back its own `set` so the search can fly the view
+   * through exactly the path a wheel or a button takes — the zoom readout
+   * and the disabled states are updated there, and a search that assigned
+   * `view` directly moved the picture while leaving the chrome saying 1.0×.
+   */
+  const setView = wireZoom(el, canvas, visible, schedulePaint);
+  wireSearch(el, canvas, withPlace, setView);
 
-  if (bounds) wireTimeline(el, withPlace, bounds, refresh, visible);
+  if (bounds) wireTimeline(el, withPlace, bounds, refresh, inTimeline);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -460,10 +588,48 @@ export function render(el, { data, router }) {
  * their `pointer-events: none` bodies.
  */
 function timelineMarkup(M, bounds) {
+  /*
+   * Each end is a typed year and an era (author, 2026-08-31: "Add the
+   * ability to type the years in on the left and right of the timeline,
+   * with a selection for BC / AD"), where a printed bound used to stand.
+   * The number the reader types is always positive and the era carries the
+   * sign, because "431 BC" is a year a reader can read and "-431" is one
+   * they have to decode — `yearBox` below is the one place that conversion
+   * happens in either direction.
+   */
+  const yearBox = (side, label, value) => {
+    const bc = value < 0;
+    return `
+      <div class="map-year" data-year-box="${side}">
+        <input type="number" class="map-year-num utility" data-year-num="${side}"
+          value="${Math.abs(value)}" min="1" step="1" inputmode="numeric"
+          aria-label="${esc(label)}" />
+        <select class="map-year-era utility" data-year-era="${side}" aria-label="${esc(M.era)}">
+          <option value="ad"${bc ? '' : ' selected'}>${esc(M.eraAD)}</option>
+          <option value="bc"${bc ? ' selected' : ''}>${esc(M.eraBC)}</option>
+        </select>
+      </div>`;
+  };
+
+  /*
+   * The preset list stands where "Whole span" did, and keeps it as its own
+   * first entry (author, 2026-08-31: make that button "a preset filter that
+   * shows periods of history ... both periods of time and events +- 50
+   * years"). A `<select>` rather than a menu built by hand, for the same
+   * reason the handles are native ranges: it is keyboard- and
+   * screen-reader-operable for nothing, and it is a list of one-line
+   * choices, which is exactly what a select is for.
+   */
+  const P = STRINGS.map.presets;
+  const options = PERIODS.map((p) => {
+    const { from, to } = spanOf(p);
+    return `<option value="${esc(p.id)}">${esc(P[p.id] ?? p.id)} (${yearLabel(from, M)}–${yearLabel(to, M)})</option>`;
+  }).join('');
+
   return `
     <div class="map-timeline">
       <div class="map-timeline-track">
-        <span class="map-timeline-bound utility" aria-hidden="true">${bounds.min}</span>
+        ${yearBox('from', M.yearFrom, dateFrom)}
         <div class="map-timeline-rail-wrap">
           <div class="map-timeline-rail"></div>
           <div class="map-timeline-fill" data-timeline-fill><span class="map-timeline-fill-bar"></span></div>
@@ -474,14 +640,20 @@ function timelineMarkup(M, bounds) {
             min="${bounds.min}" max="${bounds.max}" step="1" value="${dateTo}"
             aria-label="${esc(STRINGS.saints.filters.to)}" />
         </div>
-        <span class="map-timeline-bound utility" aria-hidden="true">${bounds.max}</span>
+        ${yearBox('to', M.yearTo, dateTo)}
       </div>
       <div class="map-timeline-status">
         <p class="map-timeline-readout utility" data-timeline-readout aria-live="polite"></p>
-        <button type="button" class="map-timeline-reset utility" data-timeline-reset>${esc(M.timelineReset)}</button>
+        <select class="map-timeline-preset utility" data-timeline-preset aria-label="${esc(M.presetLabel)}">
+          <option value="">${esc(M.presetWhole)}</option>
+          ${options}
+        </select>
       </div>
     </div>`;
 }
+
+/** A signed year as a reader reads it: `431 BC`, `1917 AD`. */
+const yearLabel = (year, M) => `${Math.abs(year)} ${year < 0 ? M.eraBC : M.eraAD}`;
 
 /**
  * Wires the two range inputs — and the highlighted span between them — to
@@ -490,12 +662,22 @@ function timelineMarkup(M, bounds) {
  * `refresh()` uses — one predicate, read twice, rather than a second copy
  * that could drift from it.
  */
-function wireTimeline(el, withPlace, bounds, refresh, visible) {
+function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
   const fromInput = el.querySelector('[data-timeline-from]');
   const toInput = el.querySelector('[data-timeline-to]');
   const fillEl = el.querySelector('[data-timeline-fill]');
   const readout = el.querySelector('[data-timeline-readout]');
-  const resetBtn = el.querySelector('[data-timeline-reset]');
+  const presetSel = el.querySelector('[data-timeline-preset]');
+  const numOf = (side) => el.querySelector(`[data-year-num="${side}"]`);
+  const eraOf = (side) => el.querySelector(`[data-year-era="${side}"]`);
+
+  /** The typed pair, written back from whatever the range handles now say. */
+  const paintYearBoxes = () => {
+    for (const [side, year] of [['from', dateFrom], ['to', dateTo]]) {
+      numOf(side).value = String(Math.abs(year));
+      eraOf(side).value = year < 0 ? 'bc' : 'ad';
+    }
+  };
 
   const paint = () => {
     const span = bounds.max - bounds.min || 1;
@@ -503,13 +685,20 @@ function wireTimeline(el, withPlace, bounds, refresh, visible) {
     const hi = ((dateTo - bounds.min) / span) * 100;
     fillEl.style.left = `${lo}%`;
     fillEl.style.right = `${100 - hi}%`;
+    /*
+     * `shown` counts the saints the range actually contains, not the ones
+     * drawn — since 2026-08-31 every located saint is drawn on every paint
+     * and the range only dims (`pointAt`). The number a reader wants from
+     * this line is still "how many of them am I asking about", which is
+     * what it has always meant; it simply no longer coincides with the
+     * count of dots on the picture.
+     */
     readout.textContent = fill(STRINGS.map.timelineReadout, {
       from: dateFrom,
       to: dateTo,
-      shown: visible().length,
+      shown: withPlace.filter(inTimeline).length,
       total: withPlace.length,
     });
-    resetBtn.disabled = dateFrom === bounds.min && dateTo === bounds.max;
   };
 
   const commit = () => {
@@ -519,14 +708,66 @@ function wireTimeline(el, withPlace, bounds, refresh, visible) {
     dateFrom = Math.min(Number(fromInput.value), Number(toInput.value));
     dateTo = Math.max(Number(fromInput.value), Number(toInput.value));
     paint();
+    paintYearBoxes();
     refresh();
   };
 
   fromInput.addEventListener('input', commit);
   toInput.addEventListener('input', commit);
-  resetBtn.addEventListener('click', () => {
-    fromInput.value = String(bounds.min);
-    toInput.value = String(bounds.max);
+
+  /*
+   * A typed year, with its era. **The two ends swap themselves rather than
+   * being refused** (author, 2026-08-31: "If an earlier date is typed in the
+   * right side than the left side, the timeline adjusts so that right side
+   * entry goes to the left and vice versa"), which is the same rule the
+   * handles already followed — `commit` has always taken the sorted pair —
+   * so this is that rule reaching the boxes rather than a new one.
+   *
+   * Clamped to the corpus's own span, because the two range handles cannot
+   * represent a year outside it: a reader who types 200 BC into a corpus
+   * that starts at AD 66 is asking for something the rail has no room to
+   * show, and silently keeping the number while the handle sat at the end
+   * would be the control lying about its own state.
+   */
+  const readTyped = (side) => {
+    const magnitude = Math.abs(Math.trunc(Number(numOf(side).value)));
+    if (!Number.isFinite(magnitude) || magnitude === 0) return null;
+    const signed = eraOf(side).value === 'bc' ? -magnitude : magnitude;
+    return Math.min(bounds.max, Math.max(bounds.min, signed));
+  };
+
+  const commitTyped = () => {
+    const a = readTyped('from');
+    const b = readTyped('to');
+    // A half-typed box ("1" on the way to "1917") is left alone rather than
+    // yanking the whole range to year 1 between keystrokes.
+    if (a === null || b === null) return;
+    fromInput.value = String(Math.min(a, b));
+    toInput.value = String(Math.max(a, b));
+    commit();
+  };
+
+  for (const side of ['from', 'to']) {
+    // `change`, not `input`: a number box fires `input` on every keystroke,
+    // and swapping the ends out from under someone mid-type — "19" being
+    // read as year 19 and flung to the left — is exactly the jitter the
+    // sort rule would otherwise cause. `change` waits for blur or Enter.
+    numOf(side).addEventListener('change', commitTyped);
+    eraOf(side).addEventListener('change', commitTyped);
+  }
+
+  /*
+   * A preset span. The empty value is "Whole span", which is where the old
+   * reset button's behaviour lives now; every other value is a row of
+   * `data/periods.js`, an event already widened to its ±50 window by
+   * `spanOf`. Each is clamped to the corpus's own bounds for the same
+   * reason a typed year is: the rail cannot show what it has no room for.
+   */
+  presetSel.addEventListener('change', () => {
+    const chosen = PERIODS.find((p) => p.id === presetSel.value);
+    const span = chosen ? spanOf(chosen) : { from: bounds.min, to: bounds.max };
+    fromInput.value = String(Math.min(bounds.max, Math.max(bounds.min, span.from)));
+    toInput.value = String(Math.min(bounds.max, Math.max(bounds.min, span.to)));
     commit();
   });
 
@@ -578,6 +819,196 @@ function wireTimeline(el, withPlace, bounds, refresh, visible) {
   fillEl.addEventListener('pointercancel', endDrag);
 
   paint();
+  paintYearBoxes();
+}
+
+/* ---- the search --------------------------------------------------------- */
+
+/** How many rows the list ever shows: enough to be worth scanning, few
+ *  enough that the panel never becomes the page. */
+const SEARCH_LIMIT = 8;
+
+/**
+ * Ranked matches over the two things this map can fly to — a located saint,
+ * and a place from `data/places.js`.
+ *
+ * Prefix matches rank above contained ones, and saints above places only
+ * within the same tier: a reader typing "ale" almost certainly wants
+ * Alexandria before they want Alexander, and one typing "anth" wants
+ * Anthony. Both corpora are small enough (69 located saints, ~70 places)
+ * that a linear scan per keystroke is far below the cost of the repaint the
+ * same keystroke does not even trigger — MiniSearch is on the boot path for
+ * the Index and is not worth reaching for here.
+ */
+export function searchMatches(query, saints, places, limit = SEARCH_LIMIT) {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  const scored = [];
+
+  const consider = (label, tier, payload) => {
+    const at = label.toLowerCase().indexOf(q);
+    if (at < 0) return;
+    scored.push({ rank: (at === 0 ? 0 : 1) * 2 + tier, at, label, ...payload });
+  };
+
+  for (const place of places) {
+    // A place is findable by any of the names a reader might type for it,
+    // but is always *listed* under its primary one — matching "Byzantium"
+    // and then offering a row headed "Byzantium" would suggest the corpus
+    // knows a place by that name, which it does not.
+    consider(place.name, 0, { kind: 'place', place, label: place.name });
+    for (const alias of place.also ?? []) {
+      const at = alias.toLowerCase().indexOf(q);
+      if (at >= 0) scored.push({ rank: (at === 0 ? 0 : 1) * 2 + 0, at, kind: 'place', place, label: place.name });
+    }
+  }
+  for (const card of saints) consider(saintName(card), 1, { kind: 'saint', card });
+
+  const seen = new Set();
+  return scored
+    .sort((a, b) => a.rank - b.rank || a.at - b.at || a.label.localeCompare(b.label))
+    .filter((row) => {
+      const key = `${row.kind}:${row.label}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+/**
+ * The search box: type, arrow through, Enter to fly there.
+ *
+ * **It moves the map rather than opening the saint** — a dot is already a
+ * door (`wirePress`), and a search that navigated away would make the map
+ * the thing you leave rather than the thing you look at. Choosing a saint
+ * flies to where their dot currently is; choosing a place flies to the
+ * place's own coordinates at the zoom `data/places.js` gives it.
+ */
+function wireSearch(el, canvas, withPlace, setView) {
+  const input = el.querySelector('[data-search-input]');
+  const list = el.querySelector('[data-search-list]');
+  let rows = [];
+  let active = -1;
+
+  const close = () => {
+    list.hidden = true;
+    list.innerHTML = '';
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+    rows = [];
+    active = -1;
+  };
+
+  const mark = () => {
+    for (const [i, li] of [...list.children].entries()) {
+      li.classList.toggle('is-active', i === active);
+      li.setAttribute('aria-selected', String(i === active));
+    }
+    if (active >= 0) input.setAttribute('aria-activedescendant', `map-search-row-${active}`);
+    else input.removeAttribute('aria-activedescendant');
+  };
+
+  const open = () => {
+    rows = searchMatches(input.value, withPlace, PLACES);
+    if (!rows.length) {
+      close();
+      return;
+    }
+    const M = STRINGS.map;
+    list.innerHTML = rows
+      .map(
+        (row, i) =>
+          `<li class="map-search-row" id="map-search-row-${i}" role="option" aria-selected="false" data-row="${i}">
+             <span class="map-search-name">${esc(row.kind === 'saint' ? saintName(row.card) : row.label)}</span>
+             <span class="map-search-kind utility">${esc(row.kind === 'saint' ? M.searchSaints : M.searchPlaces)}</span>
+           </li>`,
+      )
+      .join('');
+    list.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+    active = -1;
+    mark();
+  };
+
+  /** Flies the view to a chosen row, and says so — the canvas is one opaque
+   *  image to a screen reader, so a view that moved silently would be a
+   *  control that appeared to do nothing. */
+  const choose = (row) => {
+    if (!row) return;
+    const frame = frameOf(canvas);
+    let lon;
+    let lat;
+    let scale;
+    if (row.kind === 'place') {
+      ({ lon, lat } = row.place);
+      scale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, row.place.zoom));
+    } else {
+      const at = pointAt(row.card, dateFrom, dateTo);
+      if (!at) return;
+      ({ lon, lat } = at.where);
+      // Close enough to read the name and its neighbours, not so close that
+      // the reader has to zoom back out to learn where in the world they are.
+      scale = Math.min(MAX_SCALE, 30);
+    }
+    const p = project(lon, lat);
+    setView({ scale, ...clampCentre(p.x, p.y, scale, frame) });
+    input.value = row.kind === 'saint' ? saintName(row.card) : row.label;
+    close();
+    announce(el, fill(STRINGS.map.searchFlewTo, { name: input.value }));
+  };
+
+  input.addEventListener('input', open);
+  input.addEventListener('focus', () => {
+    if (input.value.trim()) open();
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      if (list.hidden) {
+        open();
+        return;
+      }
+      e.preventDefault();
+      active += e.key === 'ArrowDown' ? 1 : -1;
+      // Wraps both ways, and from the "nothing chosen yet" -1 an ArrowUp
+      // lands on the last row rather than on nothing.
+      if (active < 0) active = rows.length - 1;
+      else if (active >= rows.length) active = 0;
+      mark();
+    } else if (e.key === 'Enter') {
+      if (!list.hidden && rows.length) {
+        e.preventDefault();
+        choose(rows[active >= 0 ? active : 0]);
+      }
+    } else if (e.key === 'Escape') {
+      close();
+    }
+  });
+  list.addEventListener('mousedown', (e) => {
+    // `mousedown`, not `click`: the input's own blur would close the list
+    // out from under a click before it landed.
+    const li = e.target.closest('[data-row]');
+    if (!li) return;
+    e.preventDefault();
+    choose(rows[Number(li.dataset.row)]);
+  });
+  input.addEventListener('blur', () => {
+    // After the frame, so a mousedown on a row is not raced by the blur.
+    setTimeout(close, 0);
+  });
+}
+
+/** A live-region announcement for something only the picture shows. */
+function announce(el, message) {
+  let box = el.querySelector('[data-map-say]');
+  if (!box) {
+    box = document.createElement('p');
+    box.className = 'sr-only';
+    box.setAttribute('aria-live', 'polite');
+    box.dataset.mapSay = '';
+    el.appendChild(box);
+  }
+  box.textContent = message;
 }
 
 /**
@@ -676,7 +1107,6 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     level.textContent = `${view.scale.toFixed(1)}×`;
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
     el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
-    el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
   };
 
   const set = (next) => {
@@ -814,6 +1244,10 @@ function wireZoom(el, canvas, cards, schedulePaint) {
 
   applyChrome();
   paintCanvas(canvas, cards());
+
+  // Handed to the search, so flying to a place moves the chrome as well as
+  // the picture — see `render`.
+  return set;
 }
 
 /** Whether the map has anywhere to move: zoomed in, or cropped by its window. */
@@ -1025,19 +1459,26 @@ function paintCanvas(canvas, cards) {
     }
   }
 
+  /*
+   * **One dot per saint, not one per location of the current kind**
+   * (2026-08-31). `pointAt` picks which of a saint's places to show from
+   * where the timeline's upper handle stands, and hands back the `state`
+   * this pass dims by; the four kind buttons that used to choose for
+   * everyone at once are gone.
+   */
   const onScreen = [];
-  for (const { card, where } of pointsOfKind(cards, kind)) {
-    const p = place(where.lon, where.lat, frame);
+  for (const card of cards) {
+    const at = pointAt(card, dateFrom, dateTo);
+    if (!at) continue;
+    const p = place(at.where.lon, at.where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
-    // Off the visible box once zoomed, which is ordinary. The row for it is
-    // still in the list below, so nothing has gone missing from the page.
+    // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
-    onScreen.push({ card, where, x, y });
+    onScreen.push({ card, where: at.where, state: at.state, x, y });
   }
 
   drawnDots = [];
-  const labels = [];
   /*
    * Spread apart before anything is drawn, not after: the halo, the dot and
    * the label all read from the same adjusted x/y, so two saints who share a
@@ -1052,36 +1493,85 @@ function paintCanvas(canvas, cards) {
    * the reader goes, rather than the group dissolving the moment zooming
    * spreads them past `radiusPx` apart on screen.
    */
-  for (const { card, where, x, y } of declutter(onScreen, undefined, (p) => `${p.where.lon},${p.where.lat}`)) {
-    /*
-     * The uncertainty curve's first shipping consumer (DESIGN.md §6b). The halo
-     * is softness in px at base scale, scaled linearly with the picture's width
-     * — the curve is never reshaped, only scaled, which is the rule that keeps
-     * a date bar, a map halo and a timeline dissolve the same statement about
-     * doubt.
-     */
-    /*
-     * Scaled by the zoom as well as by the picture's width. The uncertainty is
-     * a distance on the ground, so a halo that stayed the same size in pixels
-     * would claim a tighter and tighter place the further in the reader went —
-     * precision the data does not have. §6b permits scaling the curve linearly
-     * and forbids reshaping it, which is exactly this multiplication.
-     *
-     * The ceiling is drawing, not doubt: at full zoom an open interval's halo
-     * would be a thousand pixels of wash over the whole picture, which tells
-     * the reader nothing they cannot already read in the row below.
-     */
-    const halo = Math.min((softness(where.uncertainty_km) * (w / 360) * view.scale) / frame.fx, w / 2);
-    if (halo > 1) {
-      const glow = ctx.createRadialGradient(x, y, 0, x, y, halo);
-      glow.addColorStop(0, hexWithAlpha(rubric, 0.45));
-      glow.addColorStop(1, hexWithAlpha(rubric, 0));
-      ctx.fillStyle = glow;
-      ctx.beginPath();
-      ctx.arc(x, y, halo, 0, Math.PI * 2);
-      ctx.fill();
-    }
+  const fanned = declutter(onScreen, undefined, (p) => `${p.where.lon},${p.where.lat}`);
 
+  /*
+   * **Every glow is composited on its own layer and laid down once, at
+   * `GLOW_MAX`** (author, 2026-08-31: "overlaps create opaque glow that
+   * completely hides the map underneath. Make sure the glow never exceeds
+   * 50% opacity").
+   *
+   * Drawing each halo straight onto the picture could not honour that:
+   * alpha compositing is `1-(1-a)^n` over n overlapping halos, so three at
+   * 0.45 already reach 0.83 and a cluster of eight is effectively opaque —
+   * capping the *per-halo* alpha only moves which n hides the coastline.
+   * Painting them all onto a transparent layer first means they merge
+   * amongst themselves however they like, and the single `drawImage` that
+   * puts that layer onto the picture is the only place alpha reaches the
+   * map — so the darkest pixel the coastline can ever see is exactly
+   * `GLOW_MAX`, whether one saint is under the pointer or forty.
+   *
+   * The layer is per-paint rather than cached: it is the size of the
+   * picture, and every pan and zoom moves every halo on it anyway.
+   */
+  const haloed = fanned.filter((d) => d.state !== 'future');
+  if (haloed.length) {
+    const layer = document.createElement('canvas');
+    layer.width = canvas.width;
+    layer.height = canvas.height;
+    const lc = layer.getContext('2d');
+    lc.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (const { where, x, y } of haloed) {
+      /*
+       * The uncertainty curve's first shipping consumer (DESIGN.md §6b),
+       * scaled by the zoom as well as by the picture's width: the doubt is a
+       * distance on the ground, so a halo that stayed the same size in
+       * pixels would claim a tighter place the further in the reader went.
+       * §6b permits scaling the curve linearly and forbids reshaping it,
+       * which is exactly this multiplication.
+       *
+       * **The ceiling is drawing rather than doubt, and it had to come
+       * down** (2026-08-31). It was `w / 2` — chosen when `MAX_SCALE` was
+       * 12, where it never bound. At 120 it binds constantly: every halo
+       * became a 640 px disc, a dozen of them covered the picture, and
+       * capping the *alpha* at 50% (below) could not help, because 50% of a
+       * fully saturated wash is still a fully saturated wash. An eighth of
+       * the smaller side is large enough to still read as doubt about a
+       * place and small enough that the ground stays visible under a
+       * cluster, which is the whole point of the halo being translucent.
+       */
+      const halo = Math.min(
+        (softness(where.uncertainty_km) * (w / 360) * view.scale) / frame.fx,
+        Math.min(w, h) / 8,
+      );
+      if (halo <= 1) continue;
+      const glow = lc.createRadialGradient(x, y, 0, x, y, halo);
+      // Full strength on the layer; `GLOW_MAX` is applied once, below.
+      glow.addColorStop(0, hexWithAlpha(rubric, 1));
+      glow.addColorStop(1, hexWithAlpha(rubric, 0));
+      lc.fillStyle = glow;
+      lc.beginPath();
+      lc.arc(x, y, halo, 0, Math.PI * 2);
+      lc.fill();
+    }
+    ctx.save();
+    ctx.globalAlpha = GLOW_MAX;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(layer, 0, 0);
+    ctx.restore();
+  }
+
+  for (const { card, state, x, y } of fanned) {
+    /*
+     * A saint outside the reader's chosen span is dimmed rather than
+     * removed (author, 2026-08-31), and by how much says which side of it
+     * they fall on: one who had already died is greyed, one not yet born is
+     * "greyed out twice as much" — twice as far toward the ground, so the
+     * three states are told apart by depth rather than by hue, and none of
+     * them is carried by colour alone.
+     */
+    const alpha = state === 'live' ? 1 : state === 'past' ? DIM_PAST : DIM_FUTURE;
+    ctx.globalAlpha = alpha;
     ctx.fillStyle = rubric;
     ctx.beginPath();
     ctx.arc(x, y, 2.5, 0, Math.PI * 2);
@@ -1090,45 +1580,22 @@ function paintCanvas(canvas, cards) {
     ctx.strokeStyle = ink;
     ctx.lineWidth = 0.5;
     ctx.stroke();
-    drawnDots.push({ x, y, slug: card.slug, name: saintName(card) });
+    ctx.globalAlpha = 1;
+    drawnDots.push({ x, y, state, slug: card.slug, name: saintName(card) });
   }
 
   /*
    * Names arrive with the zoom (§8.3: "Zoom in to reveal more dots, then
-   * labels"), and a label that would overlap one already drawn is dropped
-   * rather than drawn over it - the brief's own words. Sixteen points make
-   * that a straight rectangle test; the collide-and-nudge machinery stays
-   * with the density work it belongs to (Amendment 69).
-   *
-   * Every dot's rect is measured regardless of whether labels are enabled or
-   * this one wins its overlap test (2026-08-31): a label losing the battle,
-   * or the zoom dropping back under `LABELS_AT`, still needs somewhere to
-   * fade out *from*, and a rect computed only for the winners would leave a
-   * losing label with nowhere to draw the frames of its own fade.
-   *
-   * **Kept as long as any part of it is on screen, not only the whole of
-   * it.** Dropped only once the entire rect has left the box — the far edge
-   * crossing it used to hide the whole name outright, rather than letting a
-   * reader read as much of it as was actually there the way scrolling text
-   * off any other edge would. The canvas already clips whatever it draws
-   * past its own bounds, so there is nothing extra to do here but stop
-   * refusing to try.
+   * labels"), laid out by `lib/map-labels.js` — which clusters the dots and
+   * stacks a crowded cluster's names in a column with a leader line each,
+   * rather than the old pass's "place it to the right or drop it" (author,
+   * 2026-08-31: "Identify clusters of saints and then stack them with
+   * leader lines showing which dot is which text").
    */
   const labelsEnabled = view.scale >= LABELS_AT;
-  const wanted = new Set();
-  if (drawnDots.length) ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
-  for (const dot of drawnDots) {
-    const wText = ctx.measureText(dot.name).width;
-    const rect = { x: dot.x + 6, y: dot.y - 8, w: wText + 4, h: 16 };
-    dot.labelRect = rect;
-    if (!labelsEnabled) continue;
-    if (rect.x + rect.w <= 0 || rect.x >= w || rect.y + rect.h <= 0 || rect.y >= h) continue;
-    if (labels.some((r) => rect.x < r.x + r.w && r.x < rect.x + rect.w && rect.y < r.y + r.h && r.y < rect.y + rect.h)) {
-      continue;
-    }
-    labels.push(rect);
-    wanted.add(dot.slug);
-  }
+  ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
+  const laid = labelsEnabled ? layoutLabels(drawnDots, (name) => ctx.measureText(name).width, w, h) : [];
+  const placedFor = new Map(laid.map((l) => [l.dot.slug, l]));
 
   // One easing step per saint, drawn at whatever opacity it has reached —
   // 0 draws nothing, 1 is the label exactly as it always was, and anything
@@ -1137,11 +1604,29 @@ function paintCanvas(canvas, cards) {
   ctx.textBaseline = 'middle';
   let drawnLabels = 0;
   for (const dot of drawnDots) {
-    const opacity = stepLabelOpacity(dot.slug, wanted.has(dot.slug), now);
+    const label = placedFor.get(dot.slug);
+    const opacity = stepLabelOpacity(dot.slug, Boolean(label), now);
     if (opacity <= 0) continue;
-    ctx.globalAlpha = opacity;
+    // A label mid-fade-*out* has no placement of its own any more, so it
+    // fades from the last one it held rather than jumping to the dot.
+    const at = label ?? labelLastAt.get(dot.slug);
+    if (!at) continue;
+    if (label) labelLastAt.set(dot.slug, label);
+    // The dot's own dimming carries to its name: a greyed saint with a
+    // full-strength label would read as two different claims about one dot.
+    const dim = dot.state === 'live' ? 1 : dot.state === 'past' ? DIM_PAST : DIM_FUTURE;
+    ctx.globalAlpha = opacity * dim;
+    if (at.leader) {
+      // The line first, so the text sits over it rather than under.
+      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.55);
+      ctx.lineWidth = 0.75;
+      ctx.beginPath();
+      ctx.moveTo(at.leader.x1, at.leader.y1);
+      ctx.lineTo(at.leader.x2, at.leader.y2);
+      ctx.stroke();
+    }
     ctx.fillStyle = ink;
-    ctx.fillText(dot.name, dot.labelRect.x + 2, dot.y);
+    ctx.fillText(dot.name, at.x, at.y);
     drawnLabels++;
   }
   ctx.globalAlpha = 1;
@@ -1156,7 +1641,9 @@ function paintCanvas(canvas, cards) {
   canvas.dataset.labels = String(drawnLabels);
   // The hit-map, published for the press test: same pass, same rule - a paint
   // that drew nothing writes '[]' and the pressing half goes red.
-  canvas.dataset.dots = JSON.stringify(drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug })));
+  canvas.dataset.dots = JSON.stringify(
+    drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug, state: d.state })),
+  );
 
   /*
    * However this paint was triggered, it is the one place that knows

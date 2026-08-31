@@ -37,23 +37,22 @@ export const WHOLE = { fx: 1, fy: 1 };
 export const MIN_SCALE = 1;
 
 /**
- * 60, raised from 24 (2026-08-31, "make it so you can zoom even further").
- * 24 was the coastline's own ceiling — `land.js`/`water.js`'s 50m tier still
- * rounds to a tenth of a degree (~11 km, `make-land.mjs`'s own `PRECISION`),
- * and past 24 that rounding was the binding limit rather than a coarse
- * polygon being visibly faceted underneath it. This second raise is not
- * backed by finer coastline data the same way — the land is honestly a
- * coarser shape at 60 than at 24, §6b's own objection — but the reason to
- * zoom this far is reading two saints' names apart, not the coastline, and
- * `declutter`'s spread is in screen pixels: it separates by exactly as much
- * regardless of scale, so the only way to make two close names easier to
- * read apart *is* to zoom past what the land can back. Upgrading the
- * coastline itself past 50m (the 10m tier roughly doubles it again, ~250 kB
- * gzipped on top of the current ~211) is deferred rather than bundled into
- * this — a further weight-for-precision trade of its own, worth its own
- * answer rather than riding in on a request that was really about labels.
+ * 120 — doubled from 60 (2026-08-31, "enable zooming at least twice as far"),
+ * which had itself been raised from the coastline's own honest ceiling of 24.
+ *
+ * **Past 24 this is no longer a claim about the land.** `land.js`/`water.js`
+ * round to a tenth of a degree (~11 km, `make-land.mjs`'s own `PRECISION`),
+ * so the coastline at 120 is a visibly coarse polygon and §6b's objection —
+ * a map that keeps zooming into detail it does not have is lying about its
+ * own precision — is real and knowingly accepted. What earns it is that the
+ * reason to zoom this far is never the coastline: it is prising apart two
+ * saints who died in the same town, and `declutter`'s spread is a fixed
+ * number of *screen* pixels, so more zoom is the only thing that turns that
+ * fixed spread into readable distance. The labels' leader lines
+ * (`views/map.js`) are the other half of that answer and do not need zoom at
+ * all; this is for the reader who wants to see the ground as well.
  */
-export const MAX_SCALE = 60;
+export const MAX_SCALE = 120;
 
 export const HOME = { scale: MIN_SCALE, cx: 0.5, cy: 0.5 };
 

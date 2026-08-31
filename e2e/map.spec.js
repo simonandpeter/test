@@ -64,67 +64,62 @@ test('the map draws its coastline, and says so when it has', async ({ page }) =>
   expect(drew, 'the canvas is one flat colour — nothing was drawn on it').toBe(true);
 });
 
-test('the count on a kind button is the count the picture draws', async ({ page }) => {
+test('one dot per located saint, and the picture says so', async ({ page }) => {
   /*
-   * The list under the picture is gone (author, 2026-08-30: "remove everything
-   * on the map page outside of the map itself"), so the kind counts in the
-   * legend are the one place the page still states what it is showing — and
-   * `data-dots`, written by the draw pass itself, is what they must agree
-   * with. At scale 1 the whole world is inside the box, so nothing is culled
-   * and the drawn dots *are* the kind's points; a count that drifted from the
-   * picture would be the page lying about its own drawing.
+   * **The four kind buttons are gone** (author, 2026-08-31), and with them
+   * the counts that used to be the page's one statement of what it shows.
+   * What replaced them is `pointAt`: one dot per saint, the *kind* of place
+   * chosen by where the timeline's upper handle stands rather than by a
+   * button everyone shares. So the invariant worth pinning is no longer
+   * "the count matches the picture" but "every located saint is on it" —
+   * the timeline dims rather than removes, so at rest that is all of them.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  const pressed = page.locator('.map-kind[aria-pressed="true"]');
-  await expect(pressed).toHaveCount(1);
-  const claimed = Number(await pressed.locator('.map-kind-count').textContent());
-  expect(claimed).toBeGreaterThan(0);
+  await expect(page.locator('.map-kind')).toHaveCount(0);
+
   const drawn = JSON.parse(await canvas.getAttribute('data-dots'));
-  expect(drawn.length).toBe(claimed);
+  expect(drawn.length).toBeGreaterThan(0);
+  // One dot per saint, never two: a saint with both a death and a relics
+  // place used to contribute a point to each of two kinds.
+  const slugs = new Set(drawn.map((d) => d.slug));
+  expect(slugs.size).toBe(drawn.length);
+
+  // And the timeline's own readout counts against the same corpus.
+  const readout = await timelineReadout(page);
+  expect(readout.total).toBe(drawn.length);
 });
 
-test('the four kinds are four different questions, and the map answers one at a time', async ({ page }) => {
+test('the timeline dims what it excludes rather than removing it', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "if the timeline bar filter does not include the
+   * saint's life, if it is after, they are greyed but still visible, and if
+   * their life hasn't happened yet, they are also greyed out but greyed out
+   * twice as much." So narrowing the range must leave the dot count alone
+   * and change only how the dots are drawn — the exact opposite of what the
+   * timeline did when it shipped, which is why this is worth pinning.
+   */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  // Death is the default (§8.3), and exactly one kind is ever current.
-  await expect(page.locator('.map-kind[aria-pressed="true"]')).toHaveText(/Died/);
+  const before = JSON.parse(await canvas.getAttribute('data-dots')).length;
+  const wide = await timelineReadout(page);
+  expect(wide.shown).toBe(wide.total);
 
-  const born = page.locator('.map-kind[data-kind="birth"]');
-  const claimed = Number(await born.locator('.map-kind-count').textContent());
-  await born.click();
+  // Squeeze to the earliest years the corpus has: most saints are now
+  // "not yet born" and must still be drawn.
+  await page.locator('[data-timeline-preset]').selectOption('apostolic');
+  await expect.poll(async () => (await timelineReadout(page)).shown).toBeLessThan(wide.total);
 
-  await expect(born).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('.map-kind[aria-pressed="true"]')).toHaveCount(1);
-  // The picture followed the button rather than the button merely lighting up.
-  await expect
-    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).length)
-    .toBe(claimed);
-});
-
-test('the current kind is not told by colour alone', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
-  /*
-   * Brief §13: all colour information duplicated in text or shape. The pressed
-   * kind is the reader's place on this page, which is exactly what the nav's
-   * current item is, and it carries weight and a field as well as
-   * `aria-pressed` — the same three channels, for the same reason.
-   */
-  const marks = await page.locator('.map-kind').evaluateAll((els) =>
-    els.map((el) => {
-      const s = getComputedStyle(el);
-      return { pressed: el.getAttribute('aria-pressed'), weight: s.fontWeight, field: s.backgroundColor };
-    }),
-  );
-  const on = marks.find((m) => m.pressed === 'true');
-  const off = marks.find((m) => m.pressed === 'false');
-  expect(Number(on.weight)).toBeGreaterThanOrEqual(700);
-  expect(Number(on.weight)).toBeGreaterThan(Number(off.weight));
-  expect(on.field, 'the pressed kind has no field behind it').not.toBe(off.field);
+  const after = JSON.parse(await canvas.getAttribute('data-dots')).length;
+  expect(after, 'the timeline removed dots instead of dimming them').toBe(before);
+  // Every dot carries which side of the range it falls on, so the drawing
+  // has three states to dim by rather than one.
+  const states = new Set(JSON.parse(await canvas.getAttribute('data-dots')).map((d) => d.state));
+  expect(states.size, 'every dot is in the same state, so nothing is being dimmed').toBeGreaterThan(1);
 });
 
 test('the page is the map, a small footer, and nothing else read', async ({ page }) => {
@@ -235,17 +230,20 @@ test('the whole world is the way out, and the map says so before you move', asyn
 
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
   /*
-   * At rest the box *is* the world, so there is nowhere further out and nowhere
-   * to pan to. The controls say that rather than accepting presses that do
-   * nothing — a button that looks live and is inert teaches the reader the map
-   * is broken.
+   * At rest the box *is* the world, so there is nowhere further out. The
+   * control says that rather than accepting presses that do nothing — a
+   * button that looks live and is inert teaches the reader the map is
+   * broken. **"Whole world" is gone** (author, 2026-08-31: "Remove the zoom
+   * + and - and 'Whole world' buttons"); the + and - survive on a pointer
+   * device, the readout survives everywhere, and Home or 0 still comes back
+   * from the keyboard.
    */
   await expect(page.locator('[data-zoom="out"]')).toBeDisabled();
-  await expect(page.locator('[data-zoom="home"]')).toBeDisabled();
+  await expect(page.locator('[data-zoom="home"]')).toHaveCount(0);
   await expect(page.locator('[data-zoom="in"]')).toBeEnabled();
 });
 
-test('the buttons zoom, and Reset comes home', async ({ page }) => {
+test('the buttons zoom, and the keyboard comes home', async ({ page }) => {
   await page.goto(MAP, { waitUntil: 'networkidle' });
 
   await page.locator('[data-zoom="in"]').click();
@@ -256,10 +254,24 @@ test('the buttons zoom, and Reset comes home', async ({ page }) => {
   // And the picture actually changed, rather than only the number.
   const zoomed = await mapInk(page);
 
-  await page.locator('[data-zoom="home"]').click();
+  // Home, from the canvas — the button that used to do this is gone, and
+  // this is the way back that replaced it.
+  await page.locator('[data-map]').focus();
+  await page.keyboard.press('Home');
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
   const home = await mapInk(page);
   expect(zoomed, 'the canvas drew the same thing zoomed in as zoomed out').not.toBe(home);
+});
+
+test('the scale readout is the whole of the indicator, and reads like a scale', async ({ page }) => {
+  // Author, 2026-08-31: "Display instead a small scale indicator e.g. '4.9x'".
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const level = page.locator('[data-zoom-level]');
+  await expect(level).toBeVisible();
+  await expect(level).toHaveText(/^\d+\.\d×$/);
+  await page.locator('[data-zoom="in"]').click();
+  await expect(level).not.toHaveText('1.0×');
+  await expect(level).toHaveText(/^\d+\.\d×$/);
 });
 
 test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }) => {
@@ -301,7 +313,8 @@ test('touch belongs to the map, because there is no page left to scroll', async 
   // Zooming in and coming home never hands the gesture anywhere else.
   await page.locator('[data-zoom="in"]').click();
   await expect(canvas).toHaveCSS('touch-action', 'none');
-  await page.locator('[data-zoom="home"]').click();
+  await canvas.focus();
+  await page.keyboard.press('Home');
   await expect(canvas).toHaveCSS('touch-action', 'none');
 });
 
@@ -447,8 +460,8 @@ test('the map can zoom well past what the coastline itself can back', async ({ p
   // is raised (2026-08-31) even though the land data was not.
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const zoomIn = page.locator('[data-zoom="in"]');
-  for (let i = 0; i < 12 && !(await zoomIn.isDisabled()); i++) await zoomIn.click();
-  await expect(page.locator('[data-zoom-level]')).toHaveText('60.0×');
+  for (let i = 0; i < 20 && !(await zoomIn.isDisabled()); i++) await zoomIn.click();
+  await expect(page.locator('[data-zoom-level]')).toHaveText('120.0×');
   await expect(zoomIn).toBeDisabled();
 });
 
@@ -519,44 +532,39 @@ test("the timeline spans the located corpus's own years, unfiltered at rest", as
   const timeline = page.locator('.map-timeline');
   await expect(timeline).toBeVisible();
 
-  const bounds = await page.locator('.map-timeline-bound').allTextContents();
-  expect(bounds).toHaveLength(2);
-  const min = Number(bounds[0]);
-  const max = Number(bounds[1]);
-  expect(min).toBeLessThan(max);
+  /*
+   * The printed bounds became typed year boxes (author, 2026-08-31), so the
+   * range's own ends are read from those rather than from two spans — and
+   * they are the same two numbers the readout prints, which is the
+   * agreement worth checking.
+   */
+  const boxes = await page.locator('[data-year-num]').evaluateAll((els) => els.map((e) => Number(e.value)));
+  expect(boxes).toHaveLength(2);
+  expect(boxes[0]).toBeLessThan(boxes[1]);
 
-  // At rest the two handles sit at the two bounds, and nothing is excluded —
-  // the readout says so in numbers rather than only looking unfiltered.
   const read = await timelineReadout(page);
-  expect(read.from).toBe(min);
-  expect(read.to).toBe(max);
+  expect(read.from).toBe(boxes[0]);
+  expect(read.to).toBe(boxes[1]);
   expect(read.shown).toBe(read.total);
   expect(read.total).toBeGreaterThan(0);
 
-  // A control that cannot narrow anything further is disabled, the same
-  // language the zoom's own "Whole world" speaks at scale 1.
-  await expect(page.locator('[data-timeline-reset]')).toBeDisabled();
+  // "Whole span" is the preset list's own first entry now, and is what the
+  // list rests on before the reader chooses a period.
+  await expect(page.locator('[data-timeline-preset]')).toHaveValue('');
 });
 
-test('dragging a handle narrows the map, kind counts and picture together — and Whole span undoes it', async ({ page }) => {
+test('dragging a handle narrows the range, and Whole span undoes it', async ({ page }) => {
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   const before = await timelineReadout(page);
-  const claimedBefore = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
-  const dotsBefore = JSON.parse(await canvas.getAttribute('data-dots'));
-  expect(dotsBefore.length).toBe(claimedBefore);
 
   /*
    * `Home` on the upper handle jumps it to the range's own minimum — a real
    * keyboard interaction, not a value assigned from the outside, so this is
    * also the a11y proof: the slider is a native `<input type="range">` and
-   * needs nothing extra to answer to a keyboard. Squeezing the upper bound
-   * down to the corpus's own earliest year excludes anyone whose life had
-   * not yet begun by then, which — at any density the located corpus has
-   * today — is worth checking as a strict decrease rather than a fixed
-   * count that would go stale the day an eighth location arrives.
+   * needs nothing extra to answer to a keyboard.
    */
   const toHandle = page.locator('[data-timeline-to]');
   await toHandle.focus();
@@ -568,20 +576,13 @@ test('dragging a handle narrows the map, kind counts and picture together — an
 
   const after = await timelineReadout(page);
   expect(after.to).toBe(after.from); // squeezed to a single year
-  expect(after.shown).toBeGreaterThan(0); // and not everyone was born after it
+  // The typed boxes followed the handle rather than keeping a stale year.
+  const boxes = await page.locator('[data-year-num]').evaluateAll((els) => els.map((e) => Number(e.value)));
+  expect(boxes[0]).toBe(after.from);
+  expect(boxes[1]).toBe(after.to);
 
-  // The kind count and the picture's own dots agree under the filter too —
-  // the same invariant the unfiltered map already holds.
-  const claimedAfter = Number(await page.locator('.map-kind[aria-pressed="true"] .map-kind-count').textContent());
-  const dotsAfter = JSON.parse(await canvas.getAttribute('data-dots'));
-  expect(dotsAfter.length).toBe(claimedAfter);
-  expect(claimedAfter).toBeLessThanOrEqual(claimedBefore);
-
-  // Whole span undoes it, and disables itself the moment it has.
-  const reset = page.locator('[data-timeline-reset]');
-  await expect(reset).toBeEnabled();
-  await reset.click();
-  await expect(reset).toBeDisabled();
+  // Whole span undoes it, from the preset list where that button's job went.
+  await page.locator('[data-timeline-preset]').selectOption('');
   const restored = await timelineReadout(page);
   expect(restored.shown).toBe(restored.total);
   expect(restored.total).toBe(before.total);
@@ -689,8 +690,9 @@ test('dragging the highlighted span moves both handles together, and keeps their
 
 test('dragging the highlighted span past a bound stops there, still holding the width', async ({ page }) => {
   await page.goto(MAP, { waitUntil: 'networkidle' });
-  const bounds = (await page.locator('.map-timeline-bound').allTextContents()).map(Number);
-  const [min] = bounds;
+  // The range's own floor, read off the handle rather than a printed bound
+  // (the bounds became typed year boxes on 2026-08-31).
+  const min = Number(await page.locator('[data-timeline-from]').getAttribute('min'));
 
   const fromHandle = page.locator('[data-timeline-from]');
   await fromHandle.focus();
@@ -780,4 +782,130 @@ test('two saints who share an exact spot get their own dot each, not one stacked
 
   const apart = Math.hypot(john.x - moses.x, john.y - moses.y);
   expect(apart, 'the two dots still land on the same pixel').toBeGreaterThan(3);
+});
+
+/* ---- the search (2026-08-31) ---------------------------------------------- */
+
+const searchBox = (page) => page.locator('[data-search-input]');
+const searchRows = (page) => page.locator('.map-search-row');
+
+test('the search finds a place and flies the map to it', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "Add a search bar that takes you to certain locations
+   * on the map ... You can also search for places, e.g. ukraine, russia,
+   * romania, france, constantinople, antioch, alexandria, damascus."
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+
+  await searchBox(page).fill('constantin');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+
+  // The view moved, and the chrome moved with it — a search that assigned
+  // the view directly left the readout saying 1.0× while the picture flew.
+  await expect(page.locator('[data-zoom-level]')).not.toHaveText('1.0×');
+  // And it moved the map rather than leaving the page: a dot is already the
+  // door to a saint, and the search is not a second one.
+  await expect(page).toHaveURL(/\/map$/);
+});
+
+test('the search finds a saint by name, and says so for a reader who cannot see the map', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('moses the hung');
+  await expect(searchRows(page).first()).toContainText(/Moses/);
+  await searchBox(page).press('Enter');
+
+  await expect(page.locator('[data-zoom-level]')).not.toHaveText('1.0×');
+  // The canvas is one opaque image to a screen reader, so the flight is
+  // announced rather than only drawn.
+  await expect(page.locator('[data-map-say]')).toContainText(/Moses/);
+});
+
+test('the search is a real combobox: arrows move, Escape closes', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const box = searchBox(page);
+  await expect(box).toHaveAttribute('aria-expanded', 'false');
+
+  await box.fill('a');
+  await expect(box).toHaveAttribute('aria-expanded', 'true');
+  await box.press('ArrowDown');
+  // The active row is named for the assistive tech, not only highlighted.
+  await expect(box).toHaveAttribute('aria-activedescendant', /map-search-row-/);
+  await expect(page.locator('.map-search-row.is-active')).toHaveCount(1);
+
+  await box.press('Escape');
+  await expect(box).toHaveAttribute('aria-expanded', 'false');
+  await expect(searchRows(page)).toHaveCount(0);
+});
+
+/* ---- the typed years and the presets (2026-08-31) ------------------------- */
+
+test('the two ends swap themselves when an earlier year is typed on the right', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "If an earlier date is typed in the right side than
+   * the left side, the timeline adjusts so that right side entry goes to the
+   * left and vice versa."
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  const from = page.locator('[data-year-num="from"]');
+  const to = page.locator('[data-year-num="to"]');
+
+  await from.fill('1000');
+  await from.press('Enter');
+  await expect.poll(async () => (await timelineReadout(page)).from).toBe(1000);
+
+  // Now the right-hand box is given a year earlier than the left-hand one.
+  await to.fill('500');
+  await to.press('Enter');
+
+  const after = await timelineReadout(page);
+  expect(after.from, 'the ends did not swap').toBe(500);
+  expect(after.to).toBe(1000);
+  // And the boxes themselves show the swapped pair, not what was typed.
+  await expect(from).toHaveValue('500');
+  await expect(to).toHaveValue('1000');
+});
+
+test('a preset span sets both ends, and an event becomes its own window', async ({ page }) => {
+  /*
+   * "Whole span" became a list of periods and events (author, 2026-08-31),
+   * an event being read as its year ±50 (`EVENT_MARGIN`). Nicaea is 325, so
+   * choosing it must land on 275–375 — the clearest proof the margin is
+   * applied rather than the year being used as both ends.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await page.locator('[data-timeline-preset]').selectOption('nicaea');
+
+  const read = await timelineReadout(page);
+  expect(read.from).toBe(275);
+  expect(read.to).toBe(375);
+  expect(read.shown).toBeLessThan(read.total);
+});
+
+/* ---- labels: leader lines and the edge (2026-08-31) ----------------------- */
+
+test('a crowded cluster names every dot rather than only the leftmost', async ({ page }) => {
+  /*
+   * The defect `lib/map-labels.js` exists for, checked at the density the
+   * corpus actually has: the Nicomedia martyrs sit close enough that the old
+   * "place it to the right or drop it" pass named one and dropped the rest.
+   * The layout itself is pinned in `tests/map-labels.test.mjs`; this is the
+   * proof it is wired to the real picture.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+
+  // Several names at once, which is more than the old pass could manage in
+  // a cluster this tight.
+  await expect.poll(async () => Number(await canvas.getAttribute('data-labels'))).toBeGreaterThan(3);
 });

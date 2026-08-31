@@ -113,68 +113,79 @@ html[data-route='map'] body {
 
 /* ---- what sits on the map ---------------------------------------------- */
 
-/* The page's name and its legend, drawn over the map's top-left rather than
-   above it — the map is the page, so nothing gets to push it down the screen.
-   §8.3 asks for the current kind to be "visible in the legend at all times",
-   and on a full-window map that means on the map. */
-.map-legend {
+/* The page's own name is no longer drawn (author, 2026-08-31: "Remove the
+   'Map' title that is over the map so that map takes up more screen space").
+   It keeps `.sr-only` from base.css rather than being deleted: the h1 is
+   still first in the document, still what a screen reader announces, and
+   still what `the heading takes focus on navigation` finds. The instruction
+   was about screen space, not about the page ceasing to have a name. */
+
+/* ---- the search -------------------------------------------------------- */
+
+/* Where the legend stood, and for the same reason it stood there: the map is
+   the page, so its one control floats over the picture rather than pushing it
+   down the screen. Four kind buttons were here until 2026-08-31; one box that
+   finds a saint *or* a place replaced them. */
+.map-search {
   position: absolute;
   top: var(--space-3);
   left: var(--space-3);
-  /* Never wider than the room it has, so a five-language legend wraps inside
-     its own box instead of running under the zoom controls. */
-  max-width: calc(100% - var(--space-6));
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-2) var(--space-3);
+  /* Never wider than the room it has, so the list cannot run under the zoom
+     readout in the opposite corner. */
+  width: min(20rem, calc(100% - var(--space-6)));
+}
+
+.map-search-input {
+  width: 100%;
   padding: var(--space-2) var(--space-3);
+  font-family: var(--font-utility);
+  font-size: 15px;
+  color: var(--ink);
+  /* Opaque, not a tint: this sits over a picture whose colour is not knowable
+     from here, and a translucent ground would put the text at whatever
+     contrast the coastline happened to give it. */
   background: var(--gesso);
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
 }
 
-/* An h1 at display size would be a title card over a map. It is still the
-   page's h1, still first in the document, and still what a screen reader
-   announces — it is only drawn at the size a legend wants. */
-.map-title {
-  margin: 0;
-  font-size: 21px;
-}
-
-/* ---- the kind selector ------------------------------------------------- */
-
-/* Four facts, one dot each, and the reader says which one they are looking at
-   (§8.3: "one dot cannot honestly represent all four"). A row of pressed
-   buttons rather than a select, because the current kind has to be legible at
-   all times without opening anything — the brief asks for exactly that. */
-.map-kinds {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.map-kind {
-  display: inline-flex;
-  align-items: baseline;
-  gap: var(--space-2);
-}
-
-/* The pressed one carries weight and a field, never colour alone — the same
-   rule the nav's current page follows, and brief §13's fourth criterion. */
-.map-kind[aria-pressed='true'] {
-  font-weight: 700;
-  background: var(--field);
-  border-color: var(--ink-soft);
-}
-
-.map-kind-count {
+.map-search-input::placeholder {
   color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
 }
 
-.map-kind[aria-pressed='true'] .map-kind-count {
-  color: inherit;
+.map-search-list {
+  margin: var(--space-1) 0 0;
+  padding: var(--space-1);
+  list-style: none;
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  /* Long enough to be worth scanning, short enough that the panel never
+     becomes the page; `SEARCH_LIMIT` in map.js caps the rows themselves. */
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.map-search-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-panel);
+  cursor: pointer;
+}
+
+/* The arrowed-to row carries a field, never colour alone — the same rule the
+   nav's current page and the old pressed kind button both followed. */
+.map-search-row.is-active,
+.map-search-row:hover {
+  background: var(--field);
+}
+
+.map-search-kind {
+  flex: none;
+  color: var(--ink-soft);
 }
 
 /* ---- the zoom controls ------------------------------------------------- */
@@ -213,8 +224,7 @@ html[data-route='map'] body {
    span), which is information. `--ink-soft` clears AA in both themes
    (tests/contrast.test.mjs), where a stock 0.4 opacity would not: an opacity
    on a colour is a new colour and axe reads it. */
-.map-zoom [disabled],
-.map-timeline-reset[disabled] {
+.map-zoom [disabled] {
   color: var(--ink-soft);
   cursor: default;
 }
@@ -226,8 +236,17 @@ html[data-route='map'] body {
   font-variant-numeric: tabular-nums;
 }
 
-.map-zoom-home {
-  padding: var(--space-1) var(--space-2);
+/* **The + and - are a pointer device's** (author, 2026-08-31: "On desktop
+   the zoom buttons remain, the whole world does not. On mobile people will
+   know they can use their fingers to zoom in"). `any-pointer: coarse` asks
+   the right question — is there a finger available — rather than guessing
+   from width, so a small desktop window keeps its buttons and a large
+   tablet does not. The readout stays at every size and is the whole of the
+   indicator on touch; pinch, the wheel and the keyboard all still zoom. */
+@media (any-pointer: coarse) {
+  .map-zoom-btn {
+    display: none;
+  }
 }
 
 /* ---- the timeline ------------------------------------------------------- */
@@ -259,9 +278,48 @@ html[data-route='map'] body {
   gap: var(--space-2);
 }
 
-.map-timeline-bound {
-  color: var(--ink-soft);
+/* A typed year and its era, where a printed bound used to stand (author,
+   2026-08-31). The number stays narrow — four digits and a spinner — so the
+   rail between the two boxes keeps most of the row. */
+.map-year {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.map-year-num {
+  /* Four digits and the padding either side — a year is never wider, and
+     the rail between the two boxes is what this row is actually for. */
+  width: 7ch;
+  padding: var(--space-1);
   font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--ink);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+/* The spinners cost more width than they earn on a four-digit year, and the
+   rail is what this row is for. Arrow keys still step the value. */
+.map-year-num::-webkit-outer-spin-button,
+.map-year-num::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.map-year-num {
+  -moz-appearance: textfield;
+}
+
+.map-year-era {
+  padding: var(--space-1);
+  font-family: var(--font-utility);
+  color: var(--ink);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
 }
 
 .map-timeline-rail-wrap {
@@ -387,9 +445,18 @@ html[data-route='map'] body {
   font-variant-numeric: tabular-nums;
 }
 
-.map-timeline-reset {
+/* The preset spans, standing where "Whole span" did and keeping it as their
+   own first entry (author, 2026-08-31). Capped in width so a long period
+   name does not push the readout off its own row. */
+.map-timeline-preset {
   flex: none;
+  max-width: min(22rem, 55%);
   padding: var(--space-1) var(--space-2);
+  font-family: var(--font-utility);
+  color: var(--ink);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
 }
 
 /* ---- the footer -------------------------------------------------------- */

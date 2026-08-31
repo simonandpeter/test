@@ -35,12 +35,15 @@ you inferred, and keep them apart.
   and its fortnight gap-tolerance carries the Russian run over the
   folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
   129). **69 saints carry a location, 94 points between them** (7/16 at
-  the start of 2026-08-30 evening; Amendments 84-87), spanning 66-1938,
-  which the map's timeline now filters.
+  the start of 2026-08-30 evening; Amendments 84-87), spanning 66-1938.
+  The map draws **one dot per saint**, not one per point: `pointAt` picks
+  which of a saint's places to show from where the timeline's upper handle
+  stands, and the timeline **dims** what falls outside its range rather
+  than removing it (2026-08-31).
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **235 unit, 672 browser** across two projects. `npm run test:all`.
+- **243 unit, 684 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.

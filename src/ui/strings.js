@@ -840,6 +840,70 @@ export const STRINGS = {
     timelineGroup: 'Filter by date',
     timelineReadout: '{from}–{to}: {shown}/{total} shown',
     timelineReset: 'Whole span',
+    /*
+     * The map's own search (author, 2026-08-31), which replaced the four
+     * kind buttons in the legend. One box over two corpora — the located
+     * saints, and `data/places.js`'s gazetteer — because "where is Anthony"
+     * and "where is Alexandria" are the same question asked of a map, and
+     * splitting them into two controls would make the reader choose which
+     * kind of thing they were looking for before they had found it.
+     */
+    searchLabel: 'Find a saint or a place',
+    searchPlaceholder: 'Find a saint or place…',
+    searchNone: 'Nothing found',
+    searchSaints: 'Saints',
+    searchPlaces: 'Places',
+    // Announced when a choice flies the map somewhere, because the map
+    // itself is one opaque image to a screen reader and a view that moved
+    // silently would be a control that appeared to do nothing.
+    searchFlewTo: 'Showing {name}',
+    /*
+     * The timeline's typed ends (author, 2026-08-31), beside the two
+     * handles rather than instead of them: a reader who knows the year
+     * types it, a reader who is browsing drags for it. `era` is a real
+     * select rather than a minus sign, because "-431" is a number a reader
+     * has to decode and "431 BC" is one they can read.
+     */
+    yearFrom: 'From year',
+    yearTo: 'To year',
+    era: 'Era',
+    eraAD: 'AD',
+    eraBC: 'BC',
+    /*
+     * The preset spans (author, 2026-08-31), which took over the "Whole
+     * span" button's place. That button survives *inside* the list as its
+     * first entry rather than beside it: "show me everything" is the same
+     * kind of answer as "show me the fourth century", and two controls that
+     * both set the same two numbers would be one control too many.
+     */
+    presetLabel: 'Jump to a period',
+    presetWhole: 'Whole span',
+    presets: {
+      apostolic: 'The Apostolic age',
+      'ante-nicene': 'The ante-Nicene church',
+      'great-persecution': 'The Great Persecution',
+      milan: 'The Edict of Milan',
+      nicaea: 'The First Council of Nicaea',
+      'desert-fathers': 'The Desert Fathers',
+      'ecumenical-councils': 'The seven Ecumenical Councils',
+      chalcedon: 'The Council of Chalcedon',
+      'fall-of-rome': 'The fall of the Western Empire',
+      justinian: 'The age of Justinian',
+      iconoclasm: 'The Iconoclast controversy',
+      'triumph-orthodoxy': 'The Triumph of Orthodoxy',
+      'baptism-of-rus': 'The Baptism of Rus',
+      'great-schism': 'The Great Schism',
+      'kyivan-rus': 'Kyivan Rus',
+      'sack-of-constantinople': 'The sack of Constantinople',
+      hesychast: 'The Hesychast renewal',
+      'fall-of-constantinople': 'The fall of Constantinople',
+      'ottoman-period': 'Under Ottoman rule',
+      muscovite: 'Muscovite Russia',
+      'russian-empire': 'The Russian Empire',
+      'greek-independence': 'Greek independence',
+      'new-martyrs': 'The New Martyrs',
+      'soviet-persecution': 'The Soviet persecution',
+    },
   },
 
   about: {
