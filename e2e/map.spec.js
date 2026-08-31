@@ -704,6 +704,33 @@ test('the map draws its rivers and lakes alongside the coastline', async ({ page
   await expect(caption).toContainText(/lakes?/i);
 });
 
+test('the rest view is centred on the corpus, not on the equator and the prime meridian', async ({ page }) => {
+  /*
+   * `HOME`'s `cx`/`cy` of 0.5 is mid-ocean — nowhere this corpus has a
+   * saint. Zooming in with the + button anchors on the screen's own centre
+   * (predictable by design, `lib/map-view.js`'s own `zoomAbout`), so a rest
+   * view centred there zoomed a reader toward empty sea and away from every
+   * dot within two or three presses — Martha of Diveyevo, reported gone at
+   * "zoomed all the way in", was reproducibly off the top of the screen by
+   * the second press. `defaultView` (map.js, 2026-08-31) centres the rest
+   * view on the corpus's own mean position instead, so the same presses
+   * zoom toward it. This does not claim every dot survives arbitrarily deep
+   * zoom — only that the ordinary case, a reader who presses + a few times
+   * without first panning, still has a map with saints on it.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const atRest = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(atRest.length, 'premise: the corpus has located saints to begin with').toBeGreaterThan(1);
+
+  for (let i = 0; i < 3; i++) await page.locator('[data-zoom="in"]').click();
+
+  const zoomed = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(zoomed.length, 'three presses of + emptied the map of every saint').toBeGreaterThan(0);
+});
+
 /* ---- declutter (2026-08-31) ----------------------------------------------- */
 
 test('two saints who share an exact spot get their own dot each, not one stacked on the other', async ({ page }) => {

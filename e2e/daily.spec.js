@@ -345,6 +345,43 @@ test('a swipe on the day panel steps a day too, left for tomorrow and right for 
   await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
 });
 
+test('the day panel follows the finger while the swipe is still live', async ({ page }) => {
+  /*
+   * `swipe` above is a flick — pointerdown then pointerup with nothing in
+   * between — so it never touches `wireDaySwipe`'s `move` handler at all.
+   * This is the other half: a real drag, sampled mid-gesture (`dragGrain`'s
+   * `release: false`) before letting go, which is what proves the panel is
+   * actually being dragged rather than only reacting once the finger lifts.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+
+  await dragGrain(page, '.slot-viewport', -20, { release: false });
+  const live = await page.locator('.day-panel').evaluate((el) => getComputedStyle(el).transform);
+  expect(live, 'the panel did not move while the finger was still down').not.toBe('none');
+
+  // Short of the threshold: letting go here must not change the day, and the
+  // panel must spring back to its own place rather than being left adrift.
+  await releaseGrain(page, '.slot-viewport', -20);
+  await expect(page.locator('h1')).toHaveText(/28 Aug 2026/);
+  await expect
+    .poll(() => page.locator('.day-panel').evaluate((el) => el.style.transform))
+    .toBe('');
+});
+
+test('a real drag past the threshold changes the day, not only a flick', async ({ page }) => {
+  /*
+   * The dragged path (`onGrainDrag`'s `dragged: true`) is different code from
+   * the flick above — `wireDaySwipe` reads the live `panel` it set in `begin`
+   * rather than starting cold — so it needs its own test rather than trusting
+   * the flick to stand in for it.
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await dragGrain(page, '.slot-viewport', -80);
+  await expect(page.locator('h1')).toHaveText(/29 Aug 2026/);
+});
+
 test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
   /*
    * The failure this pins is a leaked listener: wireDayKeys binds on

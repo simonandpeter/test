@@ -842,6 +842,31 @@
   animation-name: slot-in-back;
 }
 
+/* The swipe's own roll (`slotSwapHorizontal`, calendar.js, 2026-08-31):
+   sideways rather than the click/keyboard roll's vertical fade, because a
+   swipe already told the reader which way the day moved — the picture
+   should carry on in the same direction rather than answering with a
+   different axis. `--drag-x` is the live drag's last offset, set inline by
+   `wireDaySwipe` right before this class lands, so the leaving panel
+   continues from wherever the finger actually let go instead of snapping
+   back to centre first. Defaults to 0 for a flick, which never had a live
+   position to continue from. */
+.slot-viewport.swipe .slot-leaving {
+  animation-name: slot-out-x;
+}
+
+.slot-viewport.swipe .slot-entering {
+  animation-name: slot-in-x;
+}
+
+.slot-viewport.swipe.backward .slot-leaving {
+  animation-name: slot-out-x-back;
+}
+
+.slot-viewport.swipe.backward .slot-entering {
+  animation-name: slot-in-x-back;
+}
+
 @keyframes slot-out {
   to { transform: translateY(-14px); opacity: 0; }
 }
@@ -850,6 +875,22 @@
 }
 @keyframes slot-out-back {
   to { transform: translateY(14px); opacity: 0; }
+}
+@keyframes slot-out-x {
+  from { transform: translateX(var(--drag-x, 0)); }
+  to { transform: translateX(-100%); opacity: 0; }
+}
+@keyframes slot-in-x {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slot-out-x-back {
+  from { transform: translateX(var(--drag-x, 0)); }
+  to { transform: translateX(100%); opacity: 0; }
+}
+@keyframes slot-in-x-back {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 @keyframes slot-in-back {
   from { transform: translateY(-14px); opacity: 0; }

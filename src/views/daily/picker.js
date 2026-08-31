@@ -540,19 +540,58 @@ export function wireDayKeys() {
  * its own SLOP, so this reuses that rather than re-deciding "was this a
  * swipe" a third time.
  *
- * There is nothing to park beside the panel and drag into view: the day's own
- * roll is a vertical fade (`slot-viewport`'s `slot-in`/`slot-out`), not a
- * horizontal strip like the week or the month, so `move` is left unwired and
- * the gesture is read for direction and distance alone. `end` still re-checks
- * `SETTLE` even though `onGrainDrag` already gates on it for a flick — a slow
- * drag that wandered past the 8px slop but let go after only a few pixels
- * counts as `dragged` there and must not step a real day on a false start.
+ * Unlike the week or month, there is no neighbour parked beside the panel to
+ * drag into view — a day's content is a whole hero and register, not a cheap
+ * cell, and pre-rendering yesterday's and tomorrow's on the chance of a swipe
+ * would be real work paid on every visit for a gesture most visits never
+ * make. So `move` follows the finger with a plain `transform` on the live
+ * panel alone — direct manipulation, not an animation, the same standing
+ * grain.js gives its own drag — and only past `SETTLE` does an actual day
+ * change happen, at which point `select`'s own roll (`slotSwap`,
+ * calendar.js) takes over and continues sliding from exactly where the
+ * finger let go rather than snapping back to centre first.
+ *
+ * `end` still re-checks `SETTLE` even though `onGrainDrag` already gates on
+ * it for a flick — a slow drag that wandered past the 8px slop but let go
+ * after only a few pixels counts as `dragged` there and must spring back
+ * rather than step a real day on a false start.
  */
 export function wireDaySwipe(el) {
+  let panel = null;
+  const springBack = (from) => {
+    if (reducedMotion()) {
+      from.style.transition = '';
+      from.style.transform = '';
+      return;
+    }
+    from.style.transition = `transform var(--dur-slot) var(--ease)`;
+    requestAnimationFrame(() => {
+      from.style.transform = 'translateX(0)';
+    });
+    const clear = () => {
+      from.style.transition = '';
+      from.style.transform = '';
+    };
+    from.addEventListener('transitionend', clear, { once: true });
+  };
+
   return onGrainDrag(el.querySelector('.slot-viewport'), {
+    begin() {
+      panel = el.querySelector('.slot-viewport .day-panel');
+      panel.style.transition = 'none';
+    },
+    move(dx) {
+      if (panel) panel.style.transform = `translateX(${dx}px)`;
+    },
     end(dx) {
-      if (Math.abs(dx) < SETTLE) return;
-      step(dx < 0 ? 1 : -1);
+      const dragged = panel;
+      panel = null;
+      if (Math.abs(dx) < SETTLE) {
+        if (dragged) springBack(dragged);
+        return;
+      }
+      if (dragged) dragged.style.transition = '';
+      state.select(addDaysIso(state.selected, dx < 0 ? 1 : -1), dragged ? dx : 0);
     },
   });
 }

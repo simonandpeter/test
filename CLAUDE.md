@@ -15,12 +15,22 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - The rail and month are one seam. The *day* half is separable.
 - A day steps three ways: click a rail/month day, the arrow/A-D keys anywhere
   on the page (`wireDayKeys`), or a touch swipe on the day panel itself
-  (`wireDaySwipe`, `picker.js`, 2026-08-31) — left for tomorrow, right for
-  yesterday, reusing the week/month's own `onGrainDrag` gesture primitive
-  rather than a bespoke listener. There is no horizontal strip to drag
-  the way the week or month has: the day's own roll is a vertical fade
-  (`.slot-viewport`'s `slot-in`/`slot-out`), so the swipe is read for
-  direction and distance alone and `select`'s existing roll does the rest.
+  (`wireDaySwipe`, `picker.js`, 2026-08-31), reusing the week/month's own
+  `onGrainDrag` gesture primitive rather than a bespoke listener. Unlike the
+  week or month there is no neighbour parked beside the panel to drag into
+  view — a day is a whole hero and register, not a cheap cell, and
+  pre-rendering both neighbours on the chance of a swipe would be real work
+  paid on every visit for a gesture most visits never make. So `move` follows
+  the finger with a plain `transform` on the live panel alone (direct
+  manipulation, the same standing `grain.js` gives its own drag — it runs
+  under reduced motion too), and only past `SETTLE` does a real day change
+  happen. **The roll itself is vertical by default and sideways for a swipe**
+  (`slotSwap`'s `swipeDx` parameter, calendar.js): a click or a keypress still
+  gets the original fade (`slot-out`/`slot-in`, translateY); a swipe gets a
+  sideways pair (`.slot-viewport.swipe`, `slot-out-x`/`slot-in-x`) instead,
+  continuing smoothly from wherever the live drag let go via an inline
+  `--drag-x` rather than snapping back to centre first — a swipe already told
+  the reader which way the day moved, so the picture answers on the same axis.
 - Also-commemorated is `.reg-card`, the register's own row, not the Index's.
 - Hero carries no bookmark. Liturgy line: `paintLiturgy`; Great Feast from
   `lib/liturgy.js`. Both header panels fly: `src/ui/fly.js`.
@@ -96,6 +106,50 @@ bound. The reader's own filter, the density-paced *brush* §8.3 describes
 stays deferred — 60 of 851 located saints still cannot demonstrate a pacing
 algorithm, which is a different bar from the label overlap-drop and the dot
 declutter above, both of which the corpus can already exercise.
+
+**The rest view is `defaultView`, not `lib/map-view.js`'s own `HOME`**
+(map.js, 2026-08-31, fixing a real bug rather than a preference). `HOME`'s
+`cx`/`cy` of 0.5 is the equator and the prime meridian — mid-ocean, nowhere
+this corpus has a saint — and every zoom the + button and the keyboard do is
+anchored on the screen's own centre (`zoomAbout(view, …, 0.5, 0.5, …)`,
+deliberately predictable). A reader who opened the map and pressed + a few
+times without first panning was therefore zooming toward empty sea and away
+from every dot: reproduced with Martha of Diveyevo, gone off the top of the
+screen by the second press. `defaultView` centres the rest view on the mean
+of every located point's own projected position instead (the mean, not the
+bounding box's midpoint, so one outlying saint cannot drag the centre toward
+ground the rest of the corpus is nowhere near) — computed once from
+`withPlace`, not `visible()`, so the timeline narrowing what is drawn does
+not also swing the frame around. It is what "Reset" and the keyboard's `Home`
+return to as well, held in module-scope `homeView` beside `view` itself. This
+does not, and cannot, guarantee every dot survives arbitrarily deep zoom from
+a fixed anchor — only that the ordinary case, a few presses with no panning,
+still shows a map with saints on it. `map.spec.js` pins the ordinary case.
+
+**Painting is throttled, and the split matters.** `land.js`/`water.js`'s
+50m tier roughly tripled the picture's own point count, and painting
+synchronously on every raw pointer event a drag or a wheel spin produces —
+several a frame — was most of what made the map feel laggy once that data
+landed. `render`'s own `schedulePaint` coalesces those into one
+`requestAnimationFrame`-scheduled repaint; `view` and the chrome (zoom level,
+disabled buttons) still update the instant an event arrives, only the canvas
+redraw itself waits a frame. **Only continuous gesture handlers use it** —
+the map's own wheel/pinch/pan, and the timeline fill's pointermove
+(`refresh(true)`, 2026-08-31). A button, a key, or a kind press paints
+synchronously through the same code path they always did: each happens once,
+so coalescing buys nothing, and `map.spec.js`'s "Reset comes home" test —
+click, then immediately read the canvas — is a real caller a frame of added
+latency would have made flaky (caught on `mobile-360`; the fix was to split
+`set`/`setThrottled` rather than throttle everything alike). Per-frame cost
+itself is cut two more ways: `paintCanvas` skips a land/lake/river shape
+entirely once its own lon/lat box cannot overlap the visible frame — cheap at
+rest (the whole world is on screen, nothing culled) and large once zoomed
+into the corpus's own corner of it, which is where a reader actually spends
+their time — and every dataset draws as one path (one `fill`/`stroke` call)
+rather than one per shape, which a bug of the same age had made 878 separate
+`ctx.stroke()` calls for the rivers alone, and — worse — a fresh
+`ctx.beginPath()` per lake ring meant only the *last* of 457 lakes was ever
+actually cut from the land.
 
 **The stage is the window, not a card** (author, 2026-08-29), which costs two
 things worth knowing. `main` gives up its column on `html[data-route='map']`,

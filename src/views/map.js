@@ -1,6 +1,6 @@
 import { isUndated, overlaps } from '../lib/dates.js';
 import { lifeInterval } from '../lib/index-filters.js';
-import { HOME, MAX_SCALE, MIN_SCALE, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -107,6 +107,14 @@ let drawnDots = [];
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
 
+/**
+ * Each land/lake/river shape's own lon/lat box, cached against the shape
+ * (its array identity) rather than recomputed: `LAND`, `LAKES` and `RIVERS`
+ * are the same arrays for the whole session, loaded once, so a shape's box
+ * is worth computing exactly once no matter how many frames a drag paints.
+ */
+const shapeBBoxes = new WeakMap();
+
 /*
  * Where the map is looking. Reset on every render rather than held across
  * visits: the kind selector holds for the visit because it is a question the
@@ -115,6 +123,44 @@ const LABELS_AT = 2.5;
  * arithmetic and `tests/map-view.test.mjs` pins it.
  */
 let view = HOME;
+
+/**
+ * What "Reset" and the first paint return to — `HOME` on an axis the box
+ * cannot move on at scale 1, but nudged toward the located corpus's own
+ * centre on whichever axis can (2026-08-31, fixing a real disappearing-dot
+ * bug: `HOME`'s `cx`/`cy` of 0.5 is the equator and the prime meridian,
+ * which is mid-ocean and nowhere near this corpus. Every zoom the + button
+ * and the keyboard do is anchored on the screen's own centre, never on a
+ * dot — that is what makes the anchor predictable rather than surprising —
+ * so a reader who presses + from an equator-centred rest view zooms toward
+ * empty sea, and a dot that started near the frame's edge, Martha of
+ * Diveyevo among them (55°N, close to the top of a landscape window's
+ * cropped vertical band at rest), is off the top of the screen within two
+ * or three presses and gone at every scale after. Centring the rest view on
+ * the data itself means the screen's centre already has something in it,
+ * so the same anchor zooms toward the corpus instead of away from it).
+ * Computed once per render from `withPlace`, not `visible()`: the timeline
+ * narrows what is drawn, not where the reader was looking, so dragging it
+ * must not also swing the frame around.
+ */
+let homeView = HOME;
+
+/** The mean of a set of `{x, y}` fractions — not the bounding box's own
+ *  midpoint, which one outlying saint could drag toward empty ground far
+ *  from where most of the corpus actually sits. */
+function meanOf(points) {
+  const n = points.length;
+  const sx = points.reduce((s, p) => s + p.x, 0);
+  const sy = points.reduce((s, p) => s + p.y, 0);
+  return { x: sx / n, y: sy / n };
+}
+
+function defaultView(cards, frame) {
+  const points = cards.flatMap((card) => (card.locations ?? []).map((l) => project(l.lon, l.lat)));
+  if (!points.length) return HOME;
+  const { x, y } = meanOf(points);
+  return { scale: MIN_SCALE, ...clampCentre(x, y, MIN_SCALE, frame) };
+}
 
 /** A press of + or -, and one wheel notch's worth of the same. */
 const ZOOM_STEP = 1.6;
@@ -257,20 +303,58 @@ export function render(el, { data, router }) {
 
   const canvas = el.querySelector('[data-map]');
   destroy();
-  view = HOME;
+  homeView = defaultView(withPlace, frameOf(canvas));
+  view = homeView;
+
+  /*
+   * A raw pointer stream — a drag, a wheel spin, a timeline thumb pulled by
+   * the pointer — can call this many times inside one animation frame, and
+   * painting synchronously on every one of them is strictly more painting
+   * than the screen will ever show; the browser presents at most one frame
+   * regardless. `view` and every other bit of state still update the
+   * instant the event arrives, so nothing reads stale — only the canvas
+   * redraw itself is coalesced to once per frame (2026-08-31, once the
+   * map's own data tripled in size on the 50m tier and made the difference
+   * audible as lag).
+   *
+   * **Deliberately not used for a discrete action** — a button, a key, a
+   * kind press — which call `paintCanvas` straight through `refresh`/`set`
+   * instead. Those happen once, coalescing them buys nothing, and a
+   * click-then-immediately-read-the-canvas test (`map.spec.js`'s "Reset
+   * comes home") is a real caller that cannot afford the extra frame of
+   * latency this would add for no benefit.
+   */
+  let paintScheduled = false;
+  let pendingCards = null;
+  const schedulePaint = (cardsToDraw) => {
+    pendingCards = cardsToDraw;
+    if (paintScheduled) return;
+    paintScheduled = true;
+    requestAnimationFrame(() => {
+      paintScheduled = false;
+      if (canvas.isConnected) paintCanvas(canvas, pendingCards);
+    });
+  };
 
   /*
    * One pass, so a kind press and a timeline drag move the same three things
    * together: the kind counts in the legend, the picture, and (when the
    * timeline exists) its own readout — never just one of them agreeing with
    * itself while the others lag.
+   *
+   * `throttled` is only ever true from the timeline fill's own pointermove
+   * (`wireTimeline`) — the one other raw, many-times-a-frame pointer stream
+   * this view has, besides the map's own drag and wheel. A kind press, the
+   * reset button and a native range input's `input` event stay synchronous:
+   * each happens once, so there is nothing to coalesce.
    */
-  const refresh = () => {
+  const refresh = (throttled) => {
     const cards = visible();
     for (const k of KINDS) {
       el.querySelector(`[data-kind-count="${k}"]`).textContent = String(pointsOfKind(cards, k).length);
     }
-    paintCanvas(canvas, cards);
+    if (throttled) schedulePaint(cards);
+    else paintCanvas(canvas, cards);
   };
 
   refresh();
@@ -293,7 +377,7 @@ export function render(el, { data, router }) {
    */
   drawWhenReady(el, canvas, visible);
 
-  wireZoom(el, canvas, visible);
+  wireZoom(el, canvas, visible, schedulePaint);
 
   if (bounds) wireTimeline(el, withPlace, bounds, refresh, visible);
 
@@ -304,7 +388,7 @@ export function render(el, { data, router }) {
    * from here would outlive the view and repaint a canvas that had left the
    * document — which is a leak per navigation, not per page.
    */
-  onResize = () => paintCanvas(canvas, visible());
+  onResize = () => schedulePaint(visible());
   window.addEventListener('resize', onResize);
 }
 
@@ -439,7 +523,7 @@ function wireTimeline(el, withPlace, bounds, refresh, visible) {
     fromInput.value = String(dateFrom);
     toInput.value = String(dateTo);
     paint();
-    refresh();
+    refresh(true);
   });
   const endDrag = (e) => {
     if (!drag || e.pointerId !== drag.pointerId) return;
@@ -516,10 +600,18 @@ export function destroy() {
  * `cards` is a getter, not the array — the timeline can narrow it after this
  * wiring runs, and a closure over a stale array would zoom an empty map
  * forever (Amendment 76's own lesson, relearned when the filter came back).
+ *
+ * `schedulePaint` is `render`'s own rAF-coalescing scheduler: the wheel and
+ * the drag/pinch handlers below call `setThrottled` through every raw
+ * pointer event, and only the last one inside a frame needs to actually
+ * reach the canvas. The buttons and the keyboard call the plain `set`
+ * instead — a discrete press paints straight away, both because there is
+ * nothing to coalesce (it happens once) and because a test that clicks and
+ * immediately reads the canvas is a real caller.
  */
-function wireZoom(el, canvas, cards) {
+function wireZoom(el, canvas, cards, schedulePaint) {
   const level = el.querySelector('[data-zoom-level]');
-  const apply = () => {
+  const applyChrome = () => {
     /*
      * There is somewhere to go whenever an axis is cropped, which on a window
      * wider than the projection is true at 1.0x — the poles are off the top and
@@ -534,18 +626,24 @@ function wireZoom(el, canvas, cards) {
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
     el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
     el.querySelector('[data-zoom="home"]').disabled = view.scale <= MIN_SCALE;
-    paintCanvas(canvas, cards());
   };
 
   const set = (next) => {
     view = next;
-    apply();
+    applyChrome();
+    paintCanvas(canvas, cards());
+  };
+
+  const setThrottled = (next) => {
+    view = next;
+    applyChrome();
+    schedulePaint(cards());
   };
 
   for (const button of el.querySelectorAll('[data-zoom]')) {
     button.addEventListener('click', () => {
       const how = button.dataset.zoom;
-      if (how === 'home') set(HOME);
+      if (how === 'home') set(homeView);
       else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
       // A disabled button drops focus to the body, which strands the keyboard
       // at the top of the document. Hand it to the map, which is the thing the
@@ -566,7 +664,7 @@ function wireZoom(el, canvas, cards) {
        */
       e.preventDefault();
       const box = canvas.getBoundingClientRect();
-      set(
+      setThrottled(
         zoomAbout(
           view,
           Math.exp(-e.deltaY * 0.002),
@@ -606,7 +704,7 @@ function wireZoom(el, canvas, cards) {
       const now = spread(active);
       if (pinch > 0 && now > 0) {
         const mid = midpoint(active);
-        set(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT)));
+        setThrottled(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT)));
       }
       pinch = now;
       return;
@@ -621,7 +719,7 @@ function wireZoom(el, canvas, cards) {
      * with nowhere to go is already refused by the clamp arithmetic rather
      * than by this handler guessing.
      */
-    set(
+    setThrottled(
       panBy(
         view,
         (e.clientX - previous.clientX) / box.width,
@@ -659,11 +757,12 @@ function wireZoom(el, canvas, cards) {
       set(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
     } else if (e.key === 'Home' || e.key === '0') {
       e.preventDefault();
-      set(HOME);
+      set(homeView);
     }
   });
 
-  apply();
+  applyChrome();
+  paintCanvas(canvas, cards());
 }
 
 /** Whether the map has anywhere to move: zoomed in, or cropped by its window. */
@@ -754,6 +853,66 @@ function paintCanvas(canvas, cards) {
   const inkSoft = style.getPropertyValue('--ink-soft').trim() || '#6b6259';
   const rubric = style.getPropertyValue('--rubric').trim() || '#8a2e26';
 
+  /*
+   * A shape entirely outside the box is skipped before a single one of its
+   * points is projected (2026-08-31). At rest this culls nothing — the whole
+   * world is on screen — but zoomed in on the corpus's own corner of it,
+   * where every reader actually spends their time, most of `land.js` and
+   * `water.js`'s 1365 land rings and ~1300 lake/river shapes are geography
+   * the box cannot see, and walking their points to draw them anyway was
+   * most of the map's per-frame cost once both moved to the 50m tier. The box
+   * is corners, not the ring's own points — cheap, and only wrong in the
+   * conservative direction (a shape that merely *might* be visible is kept).
+   */
+  const bboxOf = (shape) => {
+    let box = shapeBBoxes.get(shape);
+    if (box) return box;
+    let minLon = Infinity, minLat = Infinity, maxLon = -Infinity, maxLat = -Infinity;
+    for (let i = 0; i < shape.length; i += 2) {
+      const lon = shape[i], lat = shape[i + 1];
+      if (lon < minLon) minLon = lon;
+      if (lon > maxLon) maxLon = lon;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+    }
+    box = [minLon, minLat, maxLon, maxLat];
+    shapeBBoxes.set(shape, box);
+    return box;
+  };
+  const boxVisible = ([minLon, minLat, maxLon, maxLat]) => {
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const [lon, lat] of [[minLon, minLat], [minLon, maxLat], [maxLon, minLat], [maxLon, maxLat]]) {
+      const p = place(lon, lat, frame);
+      const x = p.x * w, y = p.y * h;
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+    return maxX >= 0 && minX <= w && maxY >= 0 && minY <= h;
+  };
+
+  /** One path, every kept ring or line as its own subpath — one `fill`/
+   *  `stroke` call for a whole dataset rather than one per shape, which is
+   *  its own cost `ctx.stroke()` alone used to pay 878 times a paint for
+   *  the rivers before this. */
+  const tracePath = (shapes, closed) => {
+    let any = false;
+    for (const shape of shapes) {
+      if (!boxVisible(bboxOf(shape))) continue;
+      any = true;
+      for (let i = 0; i < shape.length; i += 2) {
+        const p = place(shape[i], shape[i + 1], frame);
+        const x = p.x * w;
+        const y = p.y * h;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      if (closed) ctx.closePath();
+    }
+    return any;
+  };
+
   const land = canvas.__land;
   if (land) {
     /*
@@ -768,32 +927,12 @@ function paintCanvas(canvas, cards) {
      */
     ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
     ctx.beginPath();
-    for (const ring of land) {
-      for (let i = 0; i < ring.length; i += 2) {
-        const p = place(ring[i], ring[i + 1], frame);
-        const x = p.x * w;
-        const y = p.y * h;
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
-      ctx.closePath();
-    }
+    tracePath(land, true);
     ctx.fill();
   }
 
   const water = canvas.__water;
   if (water) {
-    const ringPath = (ring) => {
-      ctx.beginPath();
-      for (let i = 0; i < ring.length; i += 2) {
-        const p = place(ring[i], ring[i + 1], frame);
-        const x = p.x * w;
-        const y = p.y * h;
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
-      ctx.closePath();
-    };
     /*
      * Lakes are cut out of the land fill rather than painted a colour of
      * their own. `destination-out` erases exactly the lake's shape back to
@@ -806,8 +945,8 @@ function paintCanvas(canvas, cards) {
       ctx.save();
       ctx.globalCompositeOperation = 'destination-out';
       ctx.fillStyle = '#000';
-      for (const ring of water.LAKES) ringPath(ring);
-      ctx.fill();
+      ctx.beginPath();
+      if (tracePath(water.LAKES, true)) ctx.fill();
       ctx.restore();
     }
 
@@ -823,17 +962,8 @@ function paintCanvas(canvas, cards) {
       ctx.lineWidth = 0.75;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
-      for (const line of water.RIVERS) {
-        ctx.beginPath();
-        for (let i = 0; i < line.length; i += 2) {
-          const p = place(line[i], line[i + 1], frame);
-          const x = p.x * w;
-          const y = p.y * h;
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-      }
+      ctx.beginPath();
+      if (tracePath(water.RIVERS, false)) ctx.stroke();
     }
   }
 

@@ -223,7 +223,14 @@ function wireDay(panel) {
 const announceDay = (iso) =>
   document.dispatchEvent(new CustomEvent('gos:day', { detail: { iso, today: iso === todayIso() } }));
 
-function select(iso) {
+/**
+ * `swipeDx`, present only when a touch swipe triggered this change
+ * (`wireDaySwipe`, picker.js), is the live drag's last offset in px — 0 for
+ * a flick, which never had one. Its only job is telling `slotSwap` which
+ * roll to run; everything else about a swiped day and a clicked or
+ * keyboard-stepped one is identical.
+ */
+function select(iso, swipeDx) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;
   state.selected = iso;
@@ -236,7 +243,7 @@ function select(iso) {
   // nothing at all; a day stepped off the end brings itself into view by one
   // column, not by a week, because the rail has no weeks in it to step by.
   revealSelected();
-  slotSwap(forward);
+  slotSwap(forward, swipeDx);
 }
 
 /* ---- the day roll ------------------------------------------------------- */
@@ -247,8 +254,17 @@ function select(iso) {
  * without it a second click inside the roll found the *leaving* panel and
  * appended beside the entering one, and the orphan outlived every navigation
  * after it.
+ *
+ * **The roll is vertical by default and sideways for a swipe** (2026-08-31):
+ * `swipeDx` undefined picks the original fade (`slot-out`/`slot-in`,
+ * translateY); a number — including 0, a flick — picks `.swipe`'s sideways
+ * pair instead, and is written into `--drag-x` so the leaving panel
+ * continues from wherever the live drag actually left it (`wireDaySwipe`
+ * already moved it there by direct `transform`) rather than restarting from
+ * centre. A swipe already told the reader which way the day moved; the
+ * picture answers on the same axis instead of a different one.
  */
-function slotSwap(forward) {
+function slotSwap(forward, swipeDx) {
   const viewport = state.el.querySelector('.slot-viewport');
   landSwap(viewport);
   const old = viewport.querySelector('.day-panel');
@@ -264,11 +280,14 @@ function slotSwap(forward) {
   }
 
   if (reducedMotion()) {
+    old.style.transform = '';
     old.replaceWith(next);
     wireDay(next);
     return;
   }
   viewport.classList.toggle('backward', !forward);
+  viewport.classList.toggle('swipe', swipeDx !== undefined);
+  if (swipeDx !== undefined) old.style.setProperty('--drag-x', `${swipeDx}px`);
   old.classList.add('slot-leaving');
   setAside(old);
   next.classList.add('slot-entering');
@@ -277,6 +296,7 @@ function slotSwap(forward) {
   beginSwap(viewport, () => {
     old.remove();
     next.classList.remove('slot-entering');
+    viewport.classList.remove('swipe');
   }).settle(300);
 }
 

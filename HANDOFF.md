@@ -40,7 +40,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **233 unit, 664 browser** across two projects. `npm run test:all`.
+- **233 unit, 670 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -80,7 +80,7 @@ you inferred, and keep them apart.
 | --- | --- | --- |
 | `random deals an order, and holds it still under the reader` | 2 in ~38 | desktop |
 | `the index offers two layouts, and remembers which one the reader chose` | 2 in ~38 | mobile-360 |
-| `the row comes back on its own after a press` | 2 in ~5 | **both** |
+| `the row comes back on its own after a press` | 3 in ~6 | **both** |
 
 Two were filed as "seen once, not recurring" before they recurred. **A second
 sighting is the first fact about a flake; the first is a rumour.**
