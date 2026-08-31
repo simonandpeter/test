@@ -1,0 +1,73 @@
+{
+  "slug": "gregory-the-theologian",
+  "display_name": "Gregory the Theologian",
+  "names": [
+    {
+      "form": "Григорий Богослов",
+      "lang": "ru"
+    },
+    {
+      "form": "Γρηγόριος ὁ Θεολόγος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 329,
+      "latest": 329,
+      "display": "329",
+      "basis": "attested",
+      "note": "The year the Orthodox Church in America’s life gives."
+    },
+    "death": {
+      "earliest": 389,
+      "latest": 389,
+      "display": "389",
+      "basis": "attested",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 25 January (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 января ст. ст. — «Свт. Григория Богослова, архиеп. Константинопольского (389)»",
+        "url": "https://days.pravoslavie.ru/Days/20260125.html",
+        "year": 2026
+      },
+      "titles": [
+        "Archbishop of Constantinople"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

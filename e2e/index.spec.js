@@ -1,8 +1,10 @@
 import { COLD, coldFace, test, expect } from './fixtures.js';
 import {
+  CORPUS,
   DETAIL,
   INDEX,
   POPULATED,
+  VENERATED,
   answered,
   carouselMode,
   chooseSort,
@@ -15,6 +17,7 @@ import {
   ready,
   searchMode,
   sortChip,
+  venerateUnion,
   viewChip,
 } from './helpers.js';
 
@@ -87,7 +90,7 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
   // them are icons of the Theotokos and one a synaxis, which are not folders
   // (Amendment 31), while Eustathius arrives with his wife and both sons and
   // "the two Anastasii" are two men.
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   await expect(page.locator('.index-card').first()).toBeVisible();
   // Unranked is the load-bearing word. Breadth of veneration was offered and
   // never defaulted to, because a corpus sorted by it reads as a ranking of
@@ -134,7 +137,7 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
    * corpus's answer to whatever is ticked, which is what this test is about.
    */
   const group = await facet(page, 'churches');
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   for (const name of ['Russian', 'Greek', 'Serbian']) await group.getByLabel(name).uncheck();
 
   await expect(page.locator('[data-count]')).toHaveText('160');
@@ -144,7 +147,7 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   await page.locator('[data-clear]').click();
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
 });
 
 test('Overlaps and Entirely within are different questions, and both are offered', async ({ page }) => {
@@ -177,26 +180,34 @@ test('Overlaps and Entirely within are different questions, and both are offered
   // 460-570 by his nearness to Theodosius the Cenobiarch, touches the range
   // at its very edge - and is rightly not *within* it, which is the
   // distinction this test exists to keep.
-  await expect(page.locator('[data-count]')).toHaveText('206');
+  // 212/195 since Amendment 88 (2026-08-31), which added six saints whose
+  // lives fall in this window: Basil the Great (330-379) and Gregory the
+  // Theologian (329-389) sit inside it, Spyridon (late 3rd century-c. 348)
+  // overlaps it from before, and Panteleimon, Catherine and Barbara all die
+  // in the persecutions of 305-313 that the range was drawn around.
+  await expect(page.locator('[data-count]')).toHaveText('212');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('189');
+  await expect(page.locator('[data-count]')).toHaveText('195');
 });
 
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
-  await page.locator('[data-from]').fill('1327');
-  await page.locator('[data-to]').fill('1334');
+  await page.locator('[data-from]').fill('1361');
+  await page.locator('[data-to]').fill('1369');
 
-  // Nobody in the corpus has a dated life touching 1327–1334. The empty range
-  // has had to move three times: the 17th century served until Amendment 31
+  // Nobody in the corpus has a dated life touching 1361–1369. The empty range
+  // has had to move four times: the 17th century served until Amendment 31
   // gave it Athanasius of Brest and Cyriacus of Tazlău; 1320–1330 served
   // until 2026-08-26 gave Eustathius II of Serbia a floruit "under King
-  // Milutin", 1282–1321; and 1322–1329 served until Peter, Metropolitan of
+  // Milutin", 1282–1321; 1322–1329 served until Peter, Metropolitan of
   // Moscow, was dated 1260–1326 from the article that records he moved his
-  // see from Vladimir to Moscow in 1325. A range that stays empty is a range
+  // see from Vladimir to Moscow in 1325; and 1327–1334 served until
+  // Amendment 88 (2026-08-31) added Gregory Palamas, 1296 to about 1360,
+  // whose life runs straight through it. A range that stays empty is a range
   // the corpus is not filling, and this one narrowing again is the corpus
-  // doing its work.
+  // doing its work — the new window sits in the gap Palamas's own death year
+  // opens above him.
   await expect(page.locator('[data-count]')).toHaveText('0');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
@@ -368,7 +379,15 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // January): in the Russian calendar the Julian dates land on the civil 30th,
   // 31st and 28th, in the Romanian and Greek on the days of those names —
   // all still January, arrived at by different arithmetic.
-  await expect(page.locator('[data-count]')).toHaveText('3');
+  //
+  // Six since Amendment 88 (2026-08-31), which added three saints the Moscow
+  // Patriarchate keeps in Julian January: Basil the Great on the 1st, Sava of
+  // Serbia on the 12th and Gregory the Theologian on the 25th. Gregory is the
+  // one worth naming — Julian 25 January is civil 7 February, so he is in
+  // this count on the strength of his own calendar's month rather than the
+  // civil one, which is precisely what "reckons each tradition in its own
+  // calendar" is asserting.
+  await expect(page.locator('[data-count]')).toHaveText('6');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 
@@ -876,7 +895,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // (2026-08-27) rather than jumping, so the scroll check polls like the
   // count check beside it instead of reading a single instant.
   await page.locator('nav a[href$="/saints"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   await ctx.close();
 });
@@ -924,8 +943,8 @@ test('the header control names the calendar, offers the three, and the Index fol
    * kept below, through the facet — it is the corpus's own shape and worth
    * pinning, only not as a thing the header does.
    */
-  await expect(page.locator('[data-count]')).toHaveText('851');
-  await expect(page.locator('[data-set-aside]')).toContainText('851/851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
+  await expect(page.locator('[data-set-aside]')).toContainText(`${CORPUS}/${CORPUS}`);
 
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
@@ -943,7 +962,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   await expect(open).toHaveText('Romanian');
   // Still the whole corpus: pressing a calendar in the header changes what the
   // Daily page reckons by and nothing about what this page lists.
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
 
   // Greek keeps three hundred and sixty-five: the Synaxaristis lists most of
   // the four weeks, one entry per name — and since 2026-08-26 the twenty-one
@@ -953,7 +972,7 @@ test('the header control names the calendar, offers the three, and the Index fol
   // the hymns now, link them when the readings are published.
   await open.click();
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
 
   /*
@@ -963,10 +982,10 @@ test('the header control names the calendar, offers the three, and the Index fol
    * original eight; Romanian 127; Greek 365, the Synaxaristis listing most of
    * the four weeks one entry per name.
    */
-  for (const [name, count] of [['Russian', '556'], ['Romanian', '160'], ['Greek', '365']]) {
+  for (const [name, count] of [['Russian', VENERATED.russian], ['Romanian', VENERATED.romanian], ['Greek', VENERATED.greek]]) {
     await onlyCalendar(page, name);
     await expect(page.locator('[data-count]'), name).toHaveText(count);
-    await expect(page.locator('[data-set-aside]'), name).toContainText(count + '/851');
+    await expect(page.locator('[data-set-aside]'), name).toContainText(`${count}/${CORPUS}`);
   }
 });
 
@@ -1165,10 +1184,10 @@ test('random deals an order, and holds it still under the reader', async ({ page
   // Russian 464, since the Index stopped opening on the
   // reader's own calendar — which is itself the claim that an order is not a
   // filter, seen from the other side.
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
 
   await page.locator('[data-query]').fill('  ');
-  await expect(page.locator('[data-count]')).toHaveText('851');
+  await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   expect(await leaders(page)).toBe(dealt);
 });
 
@@ -1194,7 +1213,7 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
   // Serbian — which is the boundary this test is about.
   // 781/781: the Index stopped opening on the reader's own calendar on
   // 2026-08-28, and what this test is about is the *pack*, not the count.
-  await expect(page.locator('[data-set-aside]')).toHaveText('Приказано светитеља: 851/851.');
+  await expect(page.locator('[data-set-aside]')).toHaveText(`Приказано светитеља: ${CORPUS}/${CORPUS}.`);
   /*
    * The name in the reader's own language, which this test asserted the
    * *absence* of for two days. The author asked for it on 2026-08-25 ("St
@@ -1774,9 +1793,9 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
   // The unfiltered state first — the page opens on the whole corpus since
   // 2026-08-28 — and then the narrowed one, which is what this line was
   // written about and reads the same either way.
-  await expect(line).toHaveText('851/851 saints listed.');
+  await expect(line).toHaveText(`${CORPUS}/${CORPUS} saints listed.`);
   await onlyCalendar(page, 'Romanian');
-  await expect(line).toHaveText('160/851 saints listed.');
+  await expect(line).toHaveText(`${VENERATED.romanian}/${CORPUS} saints listed.`);
   /*
    * Nothing prints above it, in any state. `not.toBeVisible` is the wrong
    * question: the row is still rendered, because it carries the live region,
@@ -1788,7 +1807,7 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
 
   // A filter moves the numerator, which is what lets the second line go.
   await page.locator('[data-query]').fill('Anthony the Great');
-  await expect(line).toHaveText('1/851 saints listed.');
+  await expect(line).toHaveText(`1/${CORPUS} saints listed.`);
   expect(await rowBox()).toBeLessThan(2);
 
   /*
@@ -2394,7 +2413,7 @@ test('the Calendar facet opens on every calendar, and the header no longer narro
   const boxes = page.locator('input[name="churches"]');
   const all = await boxes.count();
   await expect(facetEl.locator('summary')).toContainText('Calendar');
-  await expect(page.locator('[data-set-aside]')).toContainText('851/851');
+  await expect(page.locator('[data-set-aside]')).toContainText(`${CORPUS}/${CORPUS}`);
   await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
   // Every calendar ticked is where the page opens, so it is not a filter the
   // reader has applied and Clear does not offer itself.
@@ -2406,14 +2425,14 @@ test('the Calendar facet opens on every calendar, and the header no longer narro
   for (const value of ['greek', 'serbian']) {
     await page.locator(`input[name="churches"][value="${value}"]`).uncheck();
   }
-  await expect(page.locator('[data-set-aside]')).toContainText('645/851');
+  await expect(page.locator('[data-set-aside]')).toContainText(`${venerateUnion('russian', 'romanian')}/${CORPUS}`);
   await expect(page.locator('[data-clear]')).toBeVisible();
 
   // Changing the calendar in the header puts every box back, rather than
   // cutting the page down to the one the reader just chose.
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('[data-set-aside]')).toContainText('851/851');
+  await expect(page.locator('[data-set-aside]')).toContainText(`${CORPUS}/${CORPUS}`);
   await expect(page.locator('input[name="churches"]:checked')).toHaveCount(all);
 });
 
@@ -3944,7 +3963,7 @@ test('the Index opens on every calendar, and says its total in a quieter ink', a
   for (let i = 0; i < count; i += 1) await expect(boxes.nth(i)).toBeChecked();
 
   // The whole corpus, not the reader's own calendar.
-  await expect(page.locator('[data-set-aside]')).toContainText('851/851');
+  await expect(page.locator('[data-set-aside]')).toContainText(`${CORPUS}/${CORPUS}`);
   // Nothing is being narrowed, so the page does not offer to clear itself.
   await expect(page.locator('[data-clear]')).toBeHidden();
 
@@ -3957,7 +3976,7 @@ test('the Index opens on every calendar, and says its total in a quieter ink', a
       text: dim?.textContent,
     };
   });
-  expect(inks.text).toBe('/851');
+  expect(inks.text).toBe(`/${CORPUS}`);
   expect(inks.dim, 'the denominator is set in the line own ink').not.toBe(inks.line);
 });
 

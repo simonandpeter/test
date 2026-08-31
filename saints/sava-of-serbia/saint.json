@@ -1,0 +1,74 @@
+{
+  "slug": "sava-of-serbia",
+  "display_name": "Sava of Serbia",
+  "names": [
+    {
+      "form": "Свети Сава",
+      "lang": "sr"
+    },
+    {
+      "form": "Савва Сербский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1169,
+      "latest": 1169,
+      "display": "1169",
+      "basis": "attested",
+      "note": "The Orthodox Church in America’s life gives 1169 as the year of his birth, in the aside about Saint Panteleimon’s monastery."
+    },
+    "death": {
+      "earliest": 1237,
+      "latest": 1237,
+      "display": "1237",
+      "basis": "attested",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 12 January (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 января ст. ст. — «Свт. Саввы, архиеп. Сербского (1237)»",
+        "url": "https://days.pravoslavie.ru/Days/20260112.html",
+        "year": 2026
+      },
+      "titles": [
+        "First Archbishop of Serbia"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

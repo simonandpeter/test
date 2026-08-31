@@ -27,13 +27,13 @@ you inferred, and keep them apart.
 
 ## State (2026-08-30)
 
-- **851 saints**, every one with a life; **1210 attestations**, every one
-  `venerated` — no refusal and no sourced absence is recorded yet, and the
-  About page says so. **154 undated**; **130 icons**; 430 hymns, 49 with a
+- **862 saints**, every one with a life; **1221 venerated attestations** —
+  no refusal and no sourced absence is recorded yet, and the About page
+  says so. **154 undated**; **130 icons**; 430 hymns, 49 with a
   published English rendering. The corpus reaches **28 September 2026** in
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
-  folderless Exaltation (Russian 556, Romanian 160, Greek 365, Serbian
+  folderless Exaltation (Russian 567, Romanian 160, Greek 365, Serbian
   129). **69 saints carry a location, 94 points between them** (7/16 at
   the start of 2026-08-30 evening; Amendments 84-87), spanning 66-1938.
   The map draws **one dot per saint**, not one per point: `pointAt` picks
@@ -344,6 +344,15 @@ names Basilica, and both statements are true about different things.
 - **A worked value nobody executes is a comment.** If a document pins a number,
   pin it in a test.
 - **A count in the DOM is not a count in the corpus.**
+- **Never pin the corpus's own size as a literal in a test.** `e2e/helpers.js`
+  exports `CORPUS`, `VENERATED` and `venerateUnion()`, read from the built
+  manifest. Adding eleven saints once turned 24 tests red without finding a
+  single defect (Amendment 88); growing the corpus is the work, so a test
+  that breaks on growth is taxing it. What those assertions are worth — the
+  Index shows *the whole* corpus, a facet narrows it to *that church's own*
+  count — survives being derived. Genuine count changes (a date range, a
+  feast month) still move by hand, and say in a comment which saint moved
+  them.
 
 ## Environment (Windows)
 

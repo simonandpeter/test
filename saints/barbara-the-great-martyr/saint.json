@@ -1,0 +1,66 @@
+{
+  "slug": "barbara-the-great-martyr",
+  "display_name": "Barbara",
+  "names": [
+    {
+      "form": "Варвара",
+      "lang": "ru"
+    },
+    {
+      "form": "Βαρβάρα",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "c. 306",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «ок. 306» for 4 December (old style); the bounds are the reign of Maximian, 305–311, which the Orthodox Church in America’s life gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 декабря ст. ст. — «Вмц. Варвары и мц. Иулиании (ок. 306)»",
+        "url": "https://days.pravoslavie.ru/Days/20261204.html",
+        "year": 2026
+      },
+      "titles": [
+        "Great Martyr"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "traditional",
+  "text": {
+    "life": "life.md"
+  }
+}

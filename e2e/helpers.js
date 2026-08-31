@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { expect } from '@playwright/test';
 
 /**
@@ -9,6 +10,49 @@ import { expect } from '@playwright/test';
  * 2026-08-27. Nothing here is new; each one is the block that was there, with
  * the comment that explained it.
  */
+
+/**
+ * **The corpus's own size, read from the build rather than typed** (2026-08-31).
+ *
+ * `index.spec.js` pinned `851` in twenty-six places, and the counts per church
+ * beside them. Every one of those went red the moment a saint was added —
+ * which is the one thing this project is *for*, so the numbers were a tax on
+ * doing the work rather than a check on it. Adding eleven saints turned 24
+ * tests red without a single one of them having found a defect.
+ *
+ * Reading `manifest.meta.json` keeps what the assertions were actually worth.
+ * They were never claims about the number 851: they were claims that the Index
+ * shows *the whole corpus* at rest, that a church facet narrows it to *that
+ * church's own count*, and that the ratio's two halves agree. All three survive
+ * a growing corpus; the literal did not.
+ *
+ * It is the build's own meta file, so it is the same number the page renders
+ * from — if the build and the page disagreed, `npm run build:manifest` would
+ * have failed first, and a test that read the corpus a second, independent way
+ * would be pinning the reader against a count nobody serves.
+ */
+const META = JSON.parse(readFileSync(new URL('../data/manifest.meta.json', import.meta.url), 'utf8'));
+
+/** How many saints the corpus holds, as the page prints it. */
+export const CORPUS = String(META.total);
+
+/** How many each church venerates, as the Calendar facet narrows to. */
+export const VENERATED = Object.fromEntries(
+  Object.entries(META.by_church).map(([church, counts]) => [church, String(counts.venerated)]),
+);
+
+const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+const CARDS = Array.isArray(MANIFEST.saints) ? MANIFEST.saints : Object.values(MANIFEST.saints ?? MANIFEST);
+
+/**
+ * How many saints at least one of `churches` venerates — the *union*, which is
+ * what the Calendar facet computes when more than one box is ticked and is the
+ * whole point of the assertion that uses it: the calendars are additive, never
+ * an intersection. Russian ∪ Romanian is not Russian + Romanian, so this
+ * cannot be added up from `VENERATED` and has to be counted.
+ */
+export const venerateUnion = (...churches) =>
+  String(CARDS.filter((s) => (s.attestations ?? []).some((a) => a.status === 'venerated' && churches.includes(a.church))).length);
 
 export // 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:

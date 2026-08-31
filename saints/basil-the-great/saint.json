@@ -1,0 +1,74 @@
+{
+  "slug": "basil-the-great",
+  "display_name": "Basil the Great",
+  "names": [
+    {
+      "form": "Василий Великий",
+      "lang": "ru"
+    },
+    {
+      "form": "Βασίλειος ὁ Μέγας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "attested",
+      "note": "The year the Orthodox Church in America’s life gives."
+    },
+    "death": {
+      "earliest": 379,
+      "latest": 379,
+      "display": "379",
+      "basis": "attested",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 1 January (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 января ст. ст. — «Свт. Василия Великого, архиеп. Кесарии Каппадокийской (379)»",
+        "url": "https://days.pravoslavie.ru/Days/20260101.html",
+        "year": 2026
+      },
+      "titles": [
+        "Archbishop of Caesarea in Cappadocia"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

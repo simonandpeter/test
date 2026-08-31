@@ -1,0 +1,66 @@
+{
+  "slug": "catherine-of-alexandria",
+  "display_name": "Catherine of Alexandria",
+  "names": [
+    {
+      "form": "Екатерина Александрийская",
+      "lang": "ru"
+    },
+    {
+      "form": "Αἰκατερίνη",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 313,
+      "display": "305–313",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints the reign «305-313» rather than a year for 24 November (old style); the bounds are that reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Вмц. Екатерины (305-313)»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "titles": [
+        "Great Martyr"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "traditional",
+  "text": {
+    "life": "life.md"
+  }
+}

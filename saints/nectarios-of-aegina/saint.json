@@ -1,0 +1,68 @@
+{
+  "slug": "nectarios-of-aegina",
+  "display_name": "Nectarios of Aegina",
+  "names": [
+    {
+      "form": "Нектарий Эгинский",
+      "lang": "ru"
+    },
+    {
+      "form": "Νεκτάριος Αἰγίνης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 9 November (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Свт. Нектария Эгинского, митр. Пентапольского, чудотворца (1920)»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "titles": [
+        "Metropolitan of Pentapolis",
+        "the Wonderworker"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

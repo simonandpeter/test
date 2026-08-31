@@ -1,0 +1,70 @@
+{
+  "slug": "john-of-kronstadt",
+  "display_name": "John of Kronstadt",
+  "names": [
+    {
+      "form": "Иоанн Кронштадтский",
+      "lang": "ru"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "presbyter",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1829,
+      "latest": 1829,
+      "display": "19 October 1829",
+      "basis": "attested",
+      "note": "The Orthodox Church in America’s life gives the day and year of his birth at Sura in Archangel province."
+    },
+    "death": {
+      "earliest": 1908,
+      "latest": 1908,
+      "display": "1908",
+      "basis": "attested",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 20 December (old style), where the day is his repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 декабря ст. ст. — «Прав. Иоанна Кронштадского, чудотворца (1908)»",
+        "url": "https://days.pravoslavie.ru/Days/20261220.html",
+        "year": 2026
+      },
+      "titles": [
+        "the Wonderworker"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

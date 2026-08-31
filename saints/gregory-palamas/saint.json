@@ -1,0 +1,73 @@
+{
+  "slug": "gregory-palamas",
+  "display_name": "Gregory Palamas",
+  "names": [
+    {
+      "form": "Григорий Палама",
+      "lang": "ru"
+    },
+    {
+      "form": "Γρηγόριος Παλαμᾶς",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1296,
+      "latest": 1296,
+      "display": "1296",
+      "basis": "attested",
+      "note": "The year the Orthodox Church in America’s life gives."
+    },
+    "death": {
+      "earliest": 1359,
+      "latest": 1360,
+      "display": "c. 1360",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «ок. 1360» — about 1360 — beside his name for 14 November (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Свт. Григория Паламы, архиеп. Фессалонитского (ок. 1360)»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      },
+      "titles": [
+        "Archbishop of Thessalonica"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

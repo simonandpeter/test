@@ -1,0 +1,66 @@
+{
+  "slug": "mary-of-egypt",
+  "display_name": "Mary of Egypt",
+  "names": [
+    {
+      "form": "Мария Египетская",
+      "lang": "ru"
+    },
+    {
+      "form": "Μαρία ἡ Αἰγυπτία",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 522,
+      "latest": 522,
+      "display": "522",
+      "basis": "traditional",
+      "note": "The year printed beside her name on days.pravoslavie.ru for 1 April (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 апреля ст. ст. — «Прп. Марии Египетской (522)»",
+        "url": "https://days.pravoslavie.ru/Days/20260401.html",
+        "year": 2026
+      },
+      "titles": [
+        "Venerable"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "traditional",
+  "text": {
+    "life": "life.md"
+  }
+}

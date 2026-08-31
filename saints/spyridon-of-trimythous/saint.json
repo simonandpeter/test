@@ -1,0 +1,75 @@
+{
+  "slug": "spyridon-of-trimythous",
+  "display_name": "Spyridon of Trimythous",
+  "names": [
+    {
+      "form": "Спиридон Тримифунтский",
+      "lang": "ru"
+    },
+    {
+      "form": "Σπυρίδων Τριμυθοῦντος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 270,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "inferred",
+      "note": "The Orthodox Church in America’s life says only \"towards the end of the third century\"; the bounds are that phrase, not a recorded year."
+    },
+    "death": {
+      "earliest": 348,
+      "latest": 348,
+      "display": "c. 348",
+      "basis": "traditional",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 12 December (old style), where it is given as «ок. 348» — about 348."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 декабря ст. ст. — «Свт. Спиридона, еп. Тримифунтского, чудотворца (ок. 348)»",
+        "url": "https://days.pravoslavie.ru/Days/20261212.html",
+        "year": 2026
+      },
+      "titles": [
+        "Bishop of Trimythous",
+        "the Wonderworker"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "attested",
+  "text": {
+    "life": "life.md"
+  }
+}

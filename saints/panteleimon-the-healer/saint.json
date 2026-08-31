@@ -1,0 +1,68 @@
+{
+  "slug": "panteleimon-the-healer",
+  "display_name": "Panteleimon the Healer",
+  "names": [
+    {
+      "form": "Пантелеимон целитель",
+      "lang": "ru"
+    },
+    {
+      "form": "Παντελεήμων",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "unmercenary",
+    "physician"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "The year printed beside his name on days.pravoslavie.ru for 27 July (old style)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июля ст. ст. — «Вмч. и целителя Пантелеимона (305)»",
+        "url": "https://days.pravoslavie.ru/Days/20260727.html",
+        "year": 2026
+      },
+      "titles": [
+        "Great Martyr",
+        "the Healer"
+      ]
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+    }
+  ],
+  "historicity": "traditional",
+  "text": {
+    "life": "life.md"
+  }
+}
