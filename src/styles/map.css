@@ -512,3 +512,41 @@ html[data-route='map'] body {
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
 }
+
+/* ---- the chosen saint --------------------------------------------------- */
+
+/* The door off the map, since a press on a dot became a selection rather
+   than a navigation (author, 2026-08-31). It is placed in JS, in the
+   canvas's own pixels, because the thing it must sit beside is drawn on the
+   canvas and only the paint pass knows where the name ended up.
+
+   `translateY(-50%)` because the name it follows is drawn with
+   `textBaseline: middle`, so the y it is given is the text's centre and not
+   its top — the one number that has to agree with `paintCanvas`. */
+.map-profile {
+  position: absolute;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  color: var(--ink);
+  font-family: var(--font-utility);
+  /* Opaque for the reason `.map-zoom` is: the ground under it is a picture,
+     and a tint would leave the label at whatever contrast the coastline
+     happened to give it. */
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  cursor: pointer;
+}
+
+.map-profile:hover {
+  border-color: var(--rubric);
+}
+
+.map-profile-chevron {
+  color: var(--rubric);
+}

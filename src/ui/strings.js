@@ -866,6 +866,17 @@ export const STRINGS = {
     // silently would be a control that appeared to do nothing.
     searchFlewTo: 'Showing {name}',
     /*
+     * Choosing a saint (author, 2026-08-31), which is what a press on a dot
+     * or a name does now that it no longer opens the saint. `profile` is
+     * the button's own word; `profileOf` is what a screen reader hears,
+     * because "Profile" alone on a page of dots says nothing about whose.
+     * `selected` is announced when the flight lands, for the same reason
+     * `searchFlewTo` is — the canvas is one opaque image.
+     */
+    profile: 'Profile',
+    profileOf: 'Profile of {name}',
+    selected: '{name} selected. Their path is shown.',
+    /*
      * The timeline's typed ends (author, 2026-08-31), beside the two
      * handles rather than instead of them: a reader who knows the year
      * types it, a reader who is browsing drags for it. `era` is a real

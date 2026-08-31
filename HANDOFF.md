@@ -44,11 +44,13 @@ you inferred, and keep them apart.
   (Amendment 89) — and his dot walks it as the handle crosses his life.
   That is a new shape of data, not a new saint: `locations` is unordered
   kinds with no dates, a `track` is an ordered journey with years on it,
-  and the second could not be built out of the first.
+  and the second could not be built out of the first. A press on a dot or a
+  name **selects** that saint (2026-08-31): the map centres on them, their
+  track is drawn and theirs alone, and `Profile ›` is the way to their page.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **257 unit, 704 browser** across two projects. `npm run test:all`.
+- **257 unit, 712 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -236,9 +238,12 @@ would be unreachable on a phone.
 **The Index's filter set arrived and left on 2026-08-30** — it lived in the
 below-map reading the author removed the same day. What survives of Amendment
 76: §8.3's zoom labels (overlap-drop past 2.5x), pressable dots (a press under
-5 px of travel opens the saint; a haul does not — and since the same day the
-saint's x returns to the map, mirroring the calendar's courtesy of
-2026-08-23), and the whole-corpus model. If filters return to this page they
+5 px of travel; a haul does not — and since the same day the saint's x
+returns to the map, mirroring the calendar's courtesy of 2026-08-23), and the
+whole-corpus model. **What a press does changed on 2026-08-31** (Amendment
+90): it selects rather than navigates — the map flies to centre that saint,
+draws their track, names them at any zoom and offers a `Profile ›` button,
+which is the door now. If filters return to this page they
 return as something drawn on the stage; the Index keeps the facets meanwhile.
 
 **The map names the region, not the village.** `modern_name` and

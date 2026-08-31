@@ -74,6 +74,9 @@ const overlaps = (a, b) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h
  *  (2026-08-31: a name is not hidden because its far end ran off the edge). */
 const onScreen = (r, w, h) => r.x + r.w > 0 && r.x < w && r.y + r.h > 0 && r.y < h;
 
+/** Whether the whole box is inside the picture — no word of it clipped. */
+const fullyOn = (r, w, h) => r.x >= 0 && r.x + r.w <= w && r.y >= 0 && r.y + r.h <= h;
+
 /**
  * Single-linkage clusters over the dots: anything within `CLUSTER_PX` of any
  * member joins that member's group. Single-linkage rather than a grid bucket
@@ -165,6 +168,22 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
       const textW = widths.get(dot);
       const right = boxFor(dot, textW, 'right');
       const left = boxFor(dot, textW, 'left');
+      /*
+       * **A side that fits the whole name beats a side that clips it**, and
+       * only then does a partly-visible name beat none. Right-then-left with
+       * no such preference put a long name off the edge whenever the right
+       * was merely *touched* by the picture — readable as three words and a
+       * cliff, with the far side of the word simply gone, when the left had
+       * room for all of it. It matters most for the chosen saint, whose
+       * `Profile ›` button hangs off the end of their name (`views/map.js`).
+       */
+      for (const rect of [right, left]) {
+        if (!fullyOn(rect, w, h) || placed.some((r) => overlaps(rect, r))) continue;
+        take(dot, rect, null);
+        toStack = null;
+        break;
+      }
+      if (toStack === null) continue;
       if (onScreen(right, w, h) && !placed.some((r) => overlaps(right, r))) {
         take(dot, right, null);
         continue;

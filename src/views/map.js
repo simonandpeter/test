@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, trackAt } from '../lib/map-track.js';
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -118,6 +118,75 @@ let dateTo = null;
 
 /** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
 let drawnDots = [];
+
+/**
+ * The saint the reader has chosen, by slug, or `null`.
+ *
+ * **A press on a dot selects rather than navigates** (author, 2026-08-31),
+ * which reverses "a dot is a door" (2026-08-30, Amendment 77) — the door is
+ * now the `Profile ›` button that selection puts beside the name, and the
+ * press itself buys the reader the thing a map is for: the saint centred,
+ * named whatever the zoom, and their journey drawn. Reset by `render`, like
+ * the view and unlike the timeline's range: arriving at the map with someone
+ * still picked out from three pages ago is the same disorientation
+ * `defaultView` exists to avoid.
+ */
+let selected = null;
+
+/**
+ * The centring flight, and it deliberately finishes before the selection
+ * exists ("it first centres you smoothly on them and then shows their path
+ * of travel"). Held so `destroy` and any second press can cancel it — two
+ * flights running at once would fight over `view` frame by frame.
+ */
+let flyFrame = null;
+const FLY_MS = 450;
+
+const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function cancelFlight() {
+  if (flyFrame === null) return;
+  cancelAnimationFrame(flyFrame);
+  flyFrame = null;
+}
+
+/**
+ * Eases the view to `target`, then calls `done`.
+ *
+ * **Under reduced motion the map arrives rather than travelling**, and `done`
+ * still runs — the house rule is that reduced motion removes the animation
+ * and never shortens it, and a selection that never completed would be the
+ * control failing rather than the motion being spared.
+ *
+ * Cubic ease-out on the centre alone: the scale is the reader's and this has
+ * no business changing it, so a saint chosen at 40× stays at 40×.
+ */
+function flyTo(target, apply, done) {
+  cancelFlight();
+  if (reducedMotion()) {
+    apply(target);
+    done();
+    return;
+  }
+  const from = view;
+  const start = performance.now();
+  const step = (now) => {
+    const t = Math.min(1, (now - start) / FLY_MS);
+    const eased = 1 - (1 - t) ** 3;
+    apply({
+      scale: target.scale,
+      cx: from.cx + (target.cx - from.cx) * eased,
+      cy: from.cy + (target.cy - from.cy) * eased,
+    });
+    if (t < 1) {
+      flyFrame = requestAnimationFrame(step);
+      return;
+    }
+    flyFrame = null;
+    done();
+  };
+  flyFrame = requestAnimationFrame(step);
+}
 
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
@@ -508,6 +577,20 @@ export function render(el, { data, router }) {
           takes back the strip it costs.
         -->
         <p class="map-note utility" data-caption hidden></p>
+
+        <!--
+          The door, since a press on a dot stopped being one (author,
+          2026-08-31: "Once selected, a 'Profile >' button appears next to
+          their name you can click on"). A real button in the document
+          rather than something drawn on the canvas: the canvas is one
+          opaque image to a screen reader and cannot be tabbed to a word of,
+          and this is the only way off the map to a saint now that the press
+          selects. The paint pass puts it beside whatever the label pass did
+          with the selected saint's name.
+        -->
+        <button type="button" class="map-profile utility" data-profile hidden>
+          <span data-profile-label></span><span class="map-profile-chevron" aria-hidden="true">&rsaquo;</span>
+        </button>
       </div>
 
       ${bounds ? timelineMarkup(M, bounds) : ''}
@@ -517,6 +600,7 @@ export function render(el, { data, router }) {
   destroy();
   homeView = HOME;
   view = HOME;
+  selected = null;
 
   /*
    * A raw pointer stream — a drag, a wheel spin, a timeline thumb pulled by
@@ -614,7 +698,48 @@ export function render(el, { data, router }) {
   refresh();
   settleHome();
 
-  wirePress(canvas, router);
+  /*
+   * Choosing a saint, and letting one go. Both go through `refresh` rather
+   * than touching the canvas, so the rail, the forced name and the button's
+   * own position are all decided in the one place that knows where things
+   * were drawn — `paintCanvas`.
+   */
+  const choose = (dot) => {
+    if (!dot || dot.slug === selected) return;
+    // Dropped first, so the outgoing saint's rail and name are not left
+    // standing on the picture for the length of the flight.
+    selected = null;
+    refresh();
+    /*
+     * **The world point under the dot as drawn, not the coordinate behind
+     * it.** Two saints who share a place are fanned apart by `declutter`
+     * before anything is painted — John the Long-Suffering and Moses the
+     * Hungarian both die at the Kyiv Caves — so flying to the *source*
+     * coordinate leaves the pressed dot a ring's radius off centre, which
+     * the desktop project caught at 12.5 px. Reading the world back out of
+     * the pixel the reader actually pressed is right whatever the draw pass
+     * did to get it there, and needs to know none of it.
+     */
+    const box = canvas.getBoundingClientRect();
+    const frame = coverFractions(box.width, box.height, ASPECT);
+    const { px, py } = toWorld(view, dot.x / box.width, dot.y / box.height, frame);
+    const centred = { scale: view.scale, ...clampCentre(px, py, view.scale, frame) };
+    flyTo(centred, (next) => applyView(next), () => {
+      selected = dot.slug;
+      refresh();
+      announce(el, fill(STRINGS.map.selected, { name: dot.name }));
+    });
+  };
+
+  const release = () => {
+    cancelFlight();
+    if (selected === null) return;
+    selected = null;
+    refresh();
+  };
+
+  wirePress(canvas, choose, release);
+  wireProfile(el, router);
 
   /*
    * The coastline is fetched, so the first paint is the empty box and the
@@ -1166,13 +1291,19 @@ function announce(el, message) {
 }
 
 /**
- * A dot is a door (2026-08-30). The press is distinguished from a drag the
- * same way loop-scroll's click-swallow does it - by distance, not by time -
- * and the hit radius is a finger's, not the dot's own 2.5 px. The list below
- * remains the keyboard's and the screen reader's way in; this is the
- * pointer's.
+ * The press, which **chooses a saint rather than opening one** since
+ * 2026-08-31. It was a door from 2026-08-30 (Amendment 77) and the reversal
+ * is the author's: "if you click on a saint dot (or their name) it first
+ * centres you smoothly on them and then shows their path of travel." The
+ * door is the `Profile ›` button that choosing puts beside the name, so
+ * nothing is unreachable — but a dot is now a thing you can look at as well
+ * as leave by, which is what having a rail to show made worth doing.
+ *
+ * A press is still distinguished from a drag the way loop-scroll's
+ * click-swallow does it — by distance, not by time — and the hit radius is
+ * still a finger's rather than the dot's own 2.5 px.
  */
-function wirePress(canvas, router) {
+function wirePress(canvas, choose, release) {
   let downAt = null;
   canvas.addEventListener('pointerdown', (e) => {
     downAt = { x: e.clientX, y: e.clientY };
@@ -1182,15 +1313,42 @@ function wirePress(canvas, router) {
     downAt = null;
     if (!was || Math.hypot(e.clientX - was.x, e.clientY - was.y) > 5) return;
     const hit = dotAt(canvas, e);
-    if (hit) router.navigate(`/saints/${hit.slug}`);
+    // A press that finds nobody is the "click away" that lets go — on the
+    // picture only. The timeline is not somewhere to click away *to*:
+    // scrubbing the years to watch the chosen saint move is the whole
+    // reason for choosing one.
+    if (hit) choose(hit);
+    else release();
   });
   // The cursor says a dot is pressable before the press finds out.
   canvas.addEventListener('pointermove', (e) => {
     if (e.buttons) return;
     canvas.style.cursor = dotAt(canvas, e) ? 'pointer' : '';
   });
+  canvas.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') release();
+  });
 }
 
+/**
+ * The `Profile ›` button, which is the only way from the map to a saint now
+ * that a press on a dot selects instead. Wired once; `paintCanvas` decides
+ * where it sits and whether it is shown at all.
+ */
+function wireProfile(el, router) {
+  el.querySelector('[data-profile]').addEventListener('click', () => {
+    if (selected) router.navigate(`/saints/${selected}`);
+  });
+}
+
+/**
+ * The saint under a pointer: a dot within a finger's reach, or a name.
+ *
+ * **The name counts as much as the dot** (author, 2026-08-31: "if you click
+ * on a saint dot (or their name)"), and it is the larger target of the two —
+ * 2.5 px of dot against a whole word — so where the two disagree the dot
+ * still wins, being the thing the reader was aiming at.
+ */
 function dotAt(canvas, e) {
   const box = canvas.getBoundingClientRect();
   const x = e.clientX - box.left;
@@ -1204,12 +1362,23 @@ function dotAt(canvas, e) {
       best = dot;
     }
   }
-  return best;
+  if (best) return best;
+  return (
+    drawnDots.find(
+      (dot) =>
+        dot.labelRect &&
+        x >= dot.labelRect.x &&
+        x <= dot.labelRect.x + dot.labelRect.w &&
+        y >= dot.labelRect.y &&
+        y <= dot.labelRect.y + dot.labelRect.h,
+    ) ?? null
+  );
 }
 
 export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
+  cancelFlight();
   for (const off of cleanups) off();
   cleanups = [];
   if (fadeFrame !== null) {
@@ -1628,7 +1797,11 @@ function paintCanvas(canvas, cards) {
   for (const card of cards) {
     const at = pointAt(card, dateFrom, dateTo);
     if (!at) continue;
-    if (at.track) rails.push({ track: at.track, state: at.state });
+    // Only the chosen saint's, since 2026-08-31: a journey is an answer to
+    // "where did *this* one go", and every track on the picture at once
+    // would be a second, competing kind of mark nobody asked a question to
+    // get. `release` hides it again by clearing `selected`.
+    if (at.track && card.slug === selected) rails.push({ track: at.track, state: at.state });
     const p = place(at.where.lon, at.where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
@@ -1638,10 +1811,10 @@ function paintCanvas(canvas, cards) {
   }
 
   /*
-   * **The rail a dot travels along** (author, 2026-08-31), drawn under
-   * everything else so the dot rides on top of it. It is the whole of the
-   * saint's own `track` and not the part they have reached: the reader is
-   * being shown a journey, and a line that grew behind the dot would say
+   * **The rail the chosen saint travels along** (author, 2026-08-31), drawn
+   * under everything else so the dot rides on top of it. It is the whole of
+   * that saint's own `track` and not the part they have reached: the reader
+   * is being shown a journey, and a line that grew behind the dot would say
    * the rest of it had not been decided yet. Dimmed with its own dot, so a
    * life the range does not reach is a faint thread rather than a claim
    * competing with the lit ones.
@@ -1788,9 +1961,23 @@ function paintCanvas(canvas, cards) {
    * it: `layoutLabels` never sees them, and the room goes to the living.
    */
   const nameable = drawnDots.filter((d) => d.state !== 'future');
+  /*
+   * **The chosen saint is named at any zoom, and named first.** The author's
+   * button goes "next to their name", so a selection with no name on the
+   * picture would be a button anchored to nothing — and below `LABELS_AT`
+   * there would be no names at all. First in the array is what makes it
+   * *first*: `layoutLabels` seats one cluster at a time against what is
+   * already placed, so the chosen saint's cluster is the one laid out with
+   * the whole picture still free.
+   */
+  const chosen = selected ? nameable.find((d) => d.slug === selected) : null;
+  const order = chosen ? [chosen, ...nameable.filter((d) => d !== chosen)] : nameable;
+  const measure = (name) => ctx.measureText(name).width;
   const laid = labelsEnabled
-    ? layoutLabels(nameable, (name) => ctx.measureText(name).width, w, h, view.scale >= LEADERS_AT)
-    : [];
+    ? layoutLabels(order, measure, w, h, view.scale >= LEADERS_AT)
+    : chosen
+      ? layoutLabels([chosen], measure, w, h, false)
+      : [];
   const placedFor = new Map(laid.map((l) => [l.dot.slug, l]));
 
   // One easing step per saint, drawn at whatever opacity it has reached —
@@ -1822,9 +2009,14 @@ function paintCanvas(canvas, cards) {
     }
     ctx.fillStyle = ink;
     ctx.fillText(dot.name, at.x, at.y);
+    // The name is a press target too (author, 2026-08-31), so where it
+    // landed goes back on the dot for `dotAt` to hit-test — the same
+    // draw-pass-writes-the-hit-map rule `data-dots` keeps.
+    if (label) dot.labelRect = label.rect;
     drawnLabels++;
   }
   ctx.globalAlpha = 1;
+  placeProfile(canvas, placedFor.get(selected) ?? null);
 
   /*
    * The count of drawn labels, published for the suite. An instrument, so the
@@ -1839,6 +2031,14 @@ function paintCanvas(canvas, cards) {
   canvas.dataset.dots = JSON.stringify(
     drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug, state: d.state })),
   );
+  /*
+   * Who is chosen, and how many journeys were actually stroked for them.
+   * Both written by the pass that draws, so doing nothing reads `''` and
+   * `0` — a selection that never reached the picture cannot look like one
+   * that did.
+   */
+  canvas.dataset.selected = selected ?? '';
+  canvas.dataset.rails = String(rails.length);
 
   /*
    * However this paint was triggered, it is the one place that knows
@@ -1854,6 +2054,64 @@ function paintCanvas(canvas, cards) {
       if (canvas.isConnected) paintCanvas(canvas, cards);
     });
   }
+}
+
+/**
+ * Puts the `Profile ›` button beside the chosen saint's name, or takes it
+ * away. `label` is that saint's own entry from the label pass, or `null` —
+ * which covers all three ways there is nothing to sit beside: nobody
+ * chosen, their dot panned off the picture, or their name still fading in.
+ *
+ * The button is in the document rather than on the canvas, so it is placed
+ * in the canvas's own CSS pixels — `.map-picture` is the canvas's box
+ * exactly, which is what makes the two coordinate systems the same one.
+ * It flips to the left of the name when the right would take it off the
+ * edge, the same choice `layoutLabels` makes for the name itself.
+ */
+function placeProfile(canvas, label) {
+  const button = canvas.parentElement.querySelector('[data-profile]');
+  if (!button) return;
+  if (!label) {
+    button.hidden = true;
+    return;
+  }
+  const dot = drawnDots.find((d) => d.slug === selected);
+  button.querySelector('[data-profile-label]').textContent = STRINGS.map.profile;
+  button.setAttribute('aria-label', fill(STRINGS.map.profileOf, { name: dot?.name ?? '' }));
+  button.hidden = false;
+  const width = button.offsetWidth;
+  const box = canvas.getBoundingClientRect();
+
+  /*
+   * **Beside the name if it fits, and under it when it does not.**
+   *
+   * Beside means the far side of the name from the dot, so the three read
+   * along one line — dot, name, button, or the mirror of that. Sitting it
+   * always after the name's right edge put it *between* a left-hand name and
+   * the dot it belongs to, which reads as a label for the wrong thing.
+   *
+   * The second rule is not an edge case on a phone, it is the common one: a
+   * saint the map has just centred has their dot in the middle of a 390 px
+   * picture, and a long name plus this button is wider than either half. The
+   * old answer was to clamp the button back onto the picture, which slid it
+   * over the last third of the name. Under the name, aligned to its start,
+   * always fits — the button is narrower than any name that needed it.
+   */
+  const gap = 6;
+  const nameIsLeft = dot ? label.rect.x + label.rect.w <= dot.x : false;
+  const near = nameIsLeft ? label.rect.x - width - gap : label.rect.x + label.rect.w + gap;
+  /*
+   * The far side runs back past the dot, so it is held clear of it: the
+   * button's own border landing on the 2.5 px mark it belongs to hid the
+   * one thing on the picture that says where the saint actually is.
+   */
+  const behind = label.rect.x - width - gap;
+  const far = nameIsLeft ? label.rect.x + label.rect.w + gap : Math.min(behind, (dot?.x ?? Infinity) - gap - width);
+  const fits = (x) => x >= 0 && x + width <= box.width;
+  const beside = fits(near) ? near : fits(far) ? far : null;
+
+  button.style.left = `${beside ?? Math.max(0, Math.min(label.rect.x, box.width - width))}px`;
+  button.style.top = `${beside === null ? label.y + label.rect.h : label.y}px`;
 }
 
 /**

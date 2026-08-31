@@ -480,7 +480,17 @@ test('the map can zoom well past what the coastline itself can back', async ({ p
   await expect(zoomIn).toBeDisabled();
 });
 
-test('a dot is a door: a press opens the saint, a drag does not', async ({ page }) => {
+test('a press selects the saint and a drag does not, and Profile is the door', async ({ page }) => {
+  /*
+   * **The dot stopped being the door on 2026-08-31** (author: a press
+   * "first centres you smoothly on them and then shows their path of
+   * travel ... Once selected, a 'Profile >' button appears next to their
+   * name you can click on"). It was one from 2026-08-30 (Amendment 77), so
+   * this is a recorded reversal rather than a new rule: the press now buys
+   * the selection, and the button buys the saint. What survives unchanged is
+   * the half this test was really about — a haul across the map is never a
+   * press, the same rule the carousel's click-swallow keeps.
+   */
   await ready(page);
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
@@ -506,9 +516,19 @@ test('a dot is a door: a press opens the saint, a drag does not', async ({ page 
   await page.mouse.up();
   await expect(page).toHaveURL(/\/map$/);
 
+  // Nothing is selected by a haul, either.
+  await expect(canvas).toHaveAttribute('data-selected', '');
+
   // The dot moved with the drag; re-read its position before the true press.
   const { dot: dot2 } = await canvas.evaluate((el) => ({ dot: JSON.parse(el.dataset.dots ?? '[]')[0] }));
   await page.mouse.click(box.x + dot2.x, box.y + dot2.y);
+  await expect(canvas).toHaveAttribute('data-selected', dot2.slug);
+  await expect(page).toHaveURL(/\/map$/);
+
+  // And the button that selection puts on the picture is the way through.
+  const profile = page.locator('[data-profile]');
+  await expect(profile).toBeVisible();
+  await profile.click();
   await expect(page).toHaveURL(new RegExp(`/saints/${dot2.slug}$`));
   await expect(page.locator('h1')).not.toHaveText('Map');
 
@@ -1269,4 +1289,167 @@ test('the rest view survives being computed before the canvas has a size', async
       return nan ? `${nan.slug} was drawn at ${nan.x},${nan.y}` : 'ok';
     })
     .toBe('ok');
+});
+
+/* ---- choosing a saint (2026-08-31) --------------------------------------- */
+
+/** Presses the picture at a point in the canvas's own pixels. */
+const pressAt = async (page, x, y) => {
+  const box = await page.locator('[data-map]').boundingBox();
+  await page.mouse.click(box.x + x, box.y + y);
+};
+
+/** The dot for one saint as the last paint drew it, or undefined. */
+const dotFor = async (page, slug) =>
+  JSON.parse(await page.locator('[data-map]').getAttribute('data-dots')).find((d) => d.slug === slug);
+
+test('a press centres the map on the saint, then shows their path', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "if you click on a saint dot (or their name) it
+   * first centres you smoothly on them and then shows their path of travel.
+   * Now they are 'selected'." The flight is what makes the order real — the
+   * rail is drawn by the paint that follows it, never before — so this
+   * checks both halves: the dot ends at the centre of the picture, and the
+   * path is on the picture once it does.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  // Moses the Hungarian is the one saint who carries a track, so he is the
+  // only one whose path there is anything to show.
+  await expect(canvas).toHaveAttribute('data-rails', '0');
+
+  /*
+   * Kyiv first, then back out — because **at 1.0x one axis cannot move at
+   * all**, and which one depends on the shape of the window: the world
+   * covers its box, so a landscape window shows the whole of it across and a
+   * portrait one shows the whole of it down (`coverFractions`). Past 1.0x
+   * both axes have room, and "centred" is then a claim with no window shape
+   * in it.
+   */
+  await searchBox(page).fill('kyiv');
+  await expect(searchRows(page).first()).toContainText('Kyiv');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  for (let i = 0; i < 6; i++) await canvas.press('-');
+
+  const before = await dotFor(page, 'moses-the-hungarian');
+  expect(before, 'premise: his dot is not on the picture to press').toBeTruthy();
+
+  await pressAt(page, before.x, before.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+
+  const box = await canvas.boundingBox();
+  const after = await dotFor(page, 'moses-the-hungarian');
+  expect(Math.abs(after.x - box.width / 2), 'the map did not centre on him across').toBeLessThan(2);
+  expect(Math.abs(after.y - box.height / 2), 'the map did not centre on him down').toBeLessThan(2);
+  await expect(canvas).toHaveAttribute('data-rails', '1');
+});
+
+test('the path and the button go when the reader clicks away', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "If you click away, the saint is deselected and
+   * their path is hidden." A press on the picture that finds nobody is what
+   * "away" means here — not a press on the timeline, which is how a reader
+   * watches the saint they have just chosen move.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const dot = await dotFor(page, 'moses-the-hungarian');
+  await pressAt(page, dot.x, dot.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+  await expect(page.locator('[data-profile]')).toBeVisible();
+
+  // Somewhere on the picture with no saint anywhere near it, found rather
+  // than guessed — which corner is empty depends on the window.
+  const empty = await canvas.evaluate((el) => {
+    const dots = JSON.parse(el.dataset.dots);
+    const b = el.getBoundingClientRect();
+    for (let y = b.height - 30; y > 30; y -= 20) {
+      for (let x = 30; x < b.width - 30; x += 20) {
+        if (dots.every((d) => Math.hypot(d.x - x, d.y - y) > 60)) return { x, y };
+      }
+    }
+    return null;
+  });
+  expect(empty, 'premise: every part of the picture has a saint near it').toBeTruthy();
+
+  await pressAt(page, empty.x, empty.y);
+  await expect(canvas).toHaveAttribute('data-selected', '');
+  await expect(canvas).toHaveAttribute('data-rails', '0');
+  await expect(page.locator('[data-profile]')).toBeHidden();
+});
+
+test('the chosen saint is named whatever the zoom, since the button sits beside the name', async ({ page }) => {
+  /*
+   * "A 'Profile >' button appears next to their name" needs a name to be
+   * next to, and at rest there are none at all — `LABELS_AT` is 2.5x. So a
+   * selection names its saint whatever the zoom, and that is the one name on
+   * the picture until the reader zooms in or lets go.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+  await expect(canvas).toHaveAttribute('data-labels', '0');
+
+  const dot = await dotFor(page, 'moses-the-hungarian');
+  await pressAt(page, dot.x, dot.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+  await expect(canvas).toHaveAttribute('data-labels', '1');
+
+  // Escape lets go from the keyboard, which is the only way a reader who
+  // cannot aim at empty ocean has.
+  await canvas.press('Escape');
+  await expect(canvas).toHaveAttribute('data-selected', '');
+  await expect(canvas).toHaveAttribute('data-labels', '0');
+});
+
+test('a name is a press target, not only the dot under it', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "if you click on a saint dot (or their name)". The
+   * name is by far the larger of the two targets — a whole word against
+   * 2.5 px — and pressing it used to find nothing at all, which since the
+   * same day means letting go of whoever was chosen.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const dot = await dotFor(page, 'moses-the-hungarian');
+  await pressAt(page, dot.x, dot.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+
+  /*
+   * A point well inside his name and far outside every dot's own reach.
+   * Which side the name took is a layout decision, so it is read off the
+   * ink rather than assumed — two probes, not a search.
+   */
+  const onName = await canvas.evaluate(() => {
+    const el = document.querySelector('[data-map]');
+    const dots = JSON.parse(el.dataset.dots);
+    const me = dots.find((d) => d.slug === 'moses-the-hungarian');
+    const ctx = el.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    for (const dx of [80, -80]) {
+      const x = me.x + dx;
+      if (dots.some((d) => Math.hypot(d.x - x, d.y - me.y) < 20)) continue;
+      const px = ctx.getImageData(Math.round(x * dpr), Math.round(me.y * dpr), 1, 1).data;
+      if (px[3] > 128) return { x, y: me.y };
+    }
+    return null;
+  });
+  expect(onName, 'premise: his name was not drawn clear of every dot').toBeTruthy();
+
+  /*
+   * Pressing his own name must hold the selection. Without the name in the
+   * hit-map this press finds nobody, which is the gesture that lets go — so
+   * the assertion is the same one either way and only one answer is right.
+   */
+  await pressAt(page, onName.x, onName.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
 });

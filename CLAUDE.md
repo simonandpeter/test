@@ -161,7 +161,13 @@ were one report — on a phone at full zoom two of the five saints at
 Constantinople could not be read, one because its row met the neighbouring
 Nicomedia column and one because the widest name ran off the right edge.
 A dot that is itself off the picture is still never named, or the clamp would
-draw a leader line out of the frame to a name pointing at nothing. **The columns only run past `LEADERS_AT` (29×)**;
+draw a leader line out of the frame to a name pointing at nothing. **A lone
+dot prefers the side that fits the whole name** to the side that merely
+touches the picture (2026-08-31): right-then-left with no such preference put
+a long name off the edge whenever the right was so much as grazed, and the
+chosen saint's `Profile ›` button hangs off the end of their name.
+
+**The columns only run past `LEADERS_AT` (29×)**;
 below it `layoutLabels` is called with `leaders: false` and behaves as the
 pass that shipped before them — beside the dot or not at all. The author
 asked for that on seeing the columns everywhere ("the name display worked
@@ -172,11 +178,31 @@ Mediterranean. Past 29× a cluster is a few saints in one town, which is the
 case the column was built for. They fade in and out over 300ms rather than popping
 (`stepLabelOpacity`, `labelState`, `labelLastAt`) — which label wins can flip
 frame to frame during a pan, and popping read as flicker where easing reads
-as the map settling. **A dot is a door** — a press under 5 px of travel opens
-the saint, whose × then returns to `/map` (saint.js wireBack); the canvas
-publishes `data-labels`, `data-dots` (with each dot's `state`),
-`data-land` and `data-water` for the suite, written by the draw pass so
-doing-nothing reads 0. A label is kept as long as any part of its rect is on
+as the map settling.
+
+**A press chooses a saint; it stopped being a door on 2026-08-31.** It was
+one from 2026-08-30 (Amendment 77) and the reversal is the author's: a press
+under 5 px of travel — on the dot *or on the name*, which is by far the
+larger target — flies the map to centre that saint (`choose`/`flyTo`, cubic
+ease-out over 450 ms, an instant arrival under reduced motion), and only when
+the flight lands do they become `selected`. Selection does three things: the
+saint's `track` is drawn as a dashed rail, and **only theirs** — every rail
+at once would be a second kind of mark nobody asked a question to get; their
+name is laid out whatever the zoom, and *first*, so the layout seats it with
+the picture still free; and a real `<button>` `Profile ›` is placed beside
+that name, which is now the way from the map to a saint page (whose × still
+returns to `/map`, saint.js wireBack). A press that finds nobody, or Escape,
+lets go. The button is in the document rather than drawn, because the canvas
+is one opaque image a screen reader cannot be tabbed into a word of; it sits
+beside the name on the far side from the dot, or **under** the name when
+neither side has room, which on a phone is the ordinary case rather than the
+edge one. The flight centres the world point under the *pressed pixel*, not
+the saint's own coordinate, so `declutter`'s fan does not leave the dot a
+ring's radius off centre.
+
+The canvas publishes `data-labels`, `data-dots` (with each dot's `state`),
+`data-selected`, `data-rails`, `data-land` and `data-water` for the suite,
+written by the draw pass so doing-nothing reads 0 or empty. A label is kept as long as any part of its rect is on
 screen, dropped only once the whole of it has left the box (2026-08-31,
 `map-labels.js`) — its far edge crossing the boundary used to hide the whole
 name outright; the canvas already clips whatever is drawn past its own
@@ -271,6 +297,10 @@ The density-paced *brush* §8.3 describes stays deferred — 69 of 851 located
 saints still cannot demonstrate a pacing algorithm, which is a different bar
 from the label layout and the dot declutter above, both of which the corpus
 can already exercise.
+
+**The dot's own rail is only drawn for the chosen saint**, so the tracker
+and the selection are one feature rather than two: `paintCanvas` collects
+`rails` from `pointAt`'s returned `track` and keeps only `selected`'s.
 
 **The rest view is `defaultView`, not `lib/map-view.js`'s own `HOME`**
 (map.js, 2026-08-31, fixing a real bug rather than a preference). `HOME`'s
@@ -388,7 +418,7 @@ thumb. A wrong crop is a data fix, not a CSS one.
 ## Tests
 
 - Unit: `tests/*.test.mjs`, `npm test` (~15s, 257).
-- Browser: `e2e/`, one file per surface, 704 across two projects —
+- Browser: `e2e/`, one file per surface, 712 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —
