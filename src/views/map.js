@@ -1,8 +1,8 @@
 import { PERIODS, spanOf } from '../data/periods.js';
 import { PLACES } from '../data/places.js';
-import { isUndated, overlaps } from '../lib/dates.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { layoutLabels } from '../lib/map-labels.js';
+import { lifeBounds, trackAt } from '../lib/map-track.js';
 import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
@@ -44,11 +44,15 @@ export const title = () => STRINGS.map.title;
  * evening: "add a timeline bar at the bottom ... where you can filter saints
  * by date on the map"), which overrides the corpus-blocked deferral above for
  * a plain range filter. What is built: a dual-handle range over each located
- * saint's own life span, reusing the Index's own `lifeInterval` and
- * `overlaps` (`lib/index-filters.js`, `lib/dates.js`) rather than inventing a
- * second reading of the same dates. An undated life is never excluded — there
- * is nothing to judge it against, and the map has no tray left to set it
- * aside in (Amendment 77) — so it always shows, indifferent to the slider.
+ * saint's own life span. The rail's own ends come from the Index's
+ * `lifeInterval`; judging one life against the range is `lifeBounds`
+ * (`lib/map-track.js`), which differs on exactly one point and it is the
+ * point that matters here — an interval open at its start reaches back
+ * forever under `overlaps`, and Moses the Hungarian's dot was lit six
+ * hundred years before the birth the corpus does bound. An undated life is
+ * never excluded — there is nothing to judge it against, and the map has no
+ * tray left to set it aside in (Amendment 77) — so it always shows,
+ * indifferent to the slider.
  * The two handles drag independently (each is a native `<input
  * type="range">`, keyboard-operable for free); the highlighted span between
  * them is a third grab target (`wireTimeline`'s pointer handlers on
@@ -187,6 +191,9 @@ const GLOW_MAX = 0.5;
 const DIM_PAST = 0.45;
 const DIM_FUTURE = 0.225;
 
+/** How strongly anything belonging to a saint is drawn — dot, rail, name. */
+const dimFor = (state) => (state === 'live' ? 1 : state === 'past' ? DIM_PAST : DIM_FUTURE);
+
 /** Advances one label's opacity toward `wanted` by however long it has been
  *  since this slug was last stepped, and returns the new value. */
 function stepLabelOpacity(slug, wanted, now) {
@@ -287,7 +294,7 @@ const frameOf = (canvas) => {
   return coverFractions(box.width, box.height, ASPECT);
 };
 
-const located = (card) => (card.locations ?? []).length > 0;
+const located = (card) => (card.locations ?? []).length > 0 || (card.track ?? []).length > 0;
 
 /** Every point of one kind, with the saint it belongs to. */
 const pointsOfKind = (cards, which) =>
@@ -308,14 +315,16 @@ const pointsOfKind = (cards, which) =>
  * if their life hasn't happened yet, they are also greyed out but greyed out
  * twice as much."
  *
- * **What is deferred, and why.** The same instruction describes the dot
- * *sliding along a rail* as the handle crosses a life — which needs a saint
- * to carry an ordered sequence of places with dates on them, and the corpus
- * records at most four unordered `locations` with no dates of their own
- * (`see` and `relics` carry none at all). So the rail is not faked here:
- * what this returns is the best-attested single place for the year asked
- * about, and the day the data carries a real itinerary this is the function
- * that grows one.
+ * **The rail is real now, for whoever carries one** (author, 2026-08-31:
+ * "create a test track for St Moses the Hungarian ... show him moving on
+ * that rail as the timeline bar scrolls over his lifespan"). A `track` is an
+ * ordered list of dated stays in the saint's own file, and `trackAt`
+ * (`lib/map-track.js`) reads a position off it — a stay's own coordinates
+ * while the year is inside it, a point along the line between two stays
+ * while it is in the gap between them. One saint has one today. Everyone
+ * else still gets what this returned before: the best-attested single place
+ * for the year asked about, out of `locations`, which carry no dates of
+ * their own at all.
  *
  * `state` is what the drawing pass dims by:
  *   `live`    the year sits inside the saint's own life — full colour, glow.
@@ -325,16 +334,15 @@ const pointsOfKind = (cards, which) =>
  */
 function pointAt(card, from, to) {
   const locations = card.locations ?? [];
-  if (!locations.length) return null;
+  const track = card.track ?? [];
+  if (!locations.length && !track.length) return null;
   const byKind = (k) => locations.find((l) => l.kind === k);
-  const iv = lifeInterval(card.dates);
-  const born = iv.earliest;
-  const died = iv.latest;
+  const { born, died } = lifeBounds(card.dates);
 
   // The saint's most representative single place, death first for the reason
   // §8.3 gives — it is the one kind almost every saint has, and where a
   // martyr died is the fact their commemoration is usually built on.
-  const settled = byKind('death') ?? byKind('relics') ?? byKind('see') ?? byKind('birth') ?? locations[0];
+  const settled = byKind('death') ?? byKind('relics') ?? byKind('see') ?? byKind('birth') ?? locations[0] ?? track[0];
 
   /*
    * An undated life is never dimmed and never moved, the same standing it
@@ -353,7 +361,9 @@ function pointAt(card, from, to) {
    * inside the reader's window and must not be greyed merely because the
    * upper handle is past their death.
    */
-  const state = overlaps(iv, from, to) ? 'live' : to < born ? 'future' : 'past';
+  const state = born <= to && died >= from ? 'live' : to < born ? 'future' : 'past';
+
+  if (track.length) return { where: trackAt(track, to), state, track };
 
   if (to < born) {
     // Not yet born: their birthplace is the only honest dot, and it marks a
@@ -408,12 +418,9 @@ export function render(el, { data, router }) {
    * excluded them outright, and `visible()` returned a narrowed array; now
    * every located saint is drawn on every paint and the range decides only
    * how brightly (`pointAt`'s `state`). So this is the whole located set,
-   * always, and the readout below counts how many of them the range
-   * actually contains rather than how many are on screen.
+   * always.
    */
   const visible = () => withPlace;
-  const inTimeline = (card) =>
-    !bounds || isUndated(lifeInterval(card.dates)) || overlaps(lifeInterval(card.dates), dateFrom, dateTo);
 
   /*
    * **The map is the window, not a card in the column** (author, 2026-08-29:
@@ -487,25 +494,29 @@ export function render(el, { data, router }) {
           <span class="map-zoom-level utility" data-zoom-level aria-live="polite"></span>
           <button type="button" class="icon-button map-zoom-btn" data-zoom="in" aria-label="${esc(M.zoomIn)}">+</button>
         </div>
+
+        <!--
+          Empty on every ordinary visit, and the whole of what the footer
+          below the picture used to be (author, 2026-08-31: "Remove the
+          'Coastline, rivers and lakes...' , not needed legally? If needed
+          place in About page"). Natural Earth asks for no attribution at
+          all - "no permission is needed to use Natural Earth; crediting the
+          authors is unnecessary" - so nothing here was load-bearing, and
+          the About page's sourcing section carries the credit as a courtesy
+          instead. What is left is the one thing that has to be said *here*:
+          that the coastline did not load, at which point this speaks and
+          takes back the strip it costs.
+        -->
+        <p class="map-note utility" data-caption hidden></p>
       </div>
 
       ${bounds ? timelineMarkup(M, bounds) : ''}
-    </div>
-
-    <!--
-      The one thing kept below the picture (author, 2026-08-30): the credit
-      and the hint. The credit is printed from the first paint - it is a fact
-      about the data, not about this visit's network - and only *changes* if
-      the coastline fails, at which point the failure note replaces it.
-    -->
-    <footer class="map-foot">
-      <p class="map-caption utility" data-caption>${esc(M.caption)}</p>
-    </footer>`;
+    </div>`;
 
   const canvas = el.querySelector('[data-map]');
   destroy();
-  homeView = defaultView(withPlace, frameOf(canvas));
-  view = homeView;
+  homeView = HOME;
+  view = HOME;
 
   /*
    * A raw pointer stream — a drag, a wheel spin, a timeline thumb pulled by
@@ -554,7 +565,54 @@ export function render(el, { data, router }) {
     else paintCanvas(canvas, cards);
   };
 
+  /**
+   * Moving the view, through whatever knows most about doing it. Until
+   * `wireZoom` has run that is the picture alone; afterwards it is
+   * `wireZoom`'s own `set`, which updates the scale readout and the disabled
+   * buttons as well. `settleHome` below can fire either side of that line,
+   * so it goes through this rather than assigning `view` itself.
+   */
+  let applyView = (next) => {
+    view = next;
+    refresh();
+  };
+
+  /*
+   * **The rest view waits until there is a box to compute it from.**
+   *
+   * `render` can run before this canvas has been laid out — the router calls
+   * it inside a view transition's update callback, where the document's own
+   * rendering is suppressed and a freshly written element measures 0 by 0 —
+   * and `coverFractions(0, 0)` is 0/0 on both axes. A NaN frame makes a NaN
+   * centre, `toScreen` then puts *every* dot at NaN for the rest of the
+   * visit, and the map draws an empty picture until the reader navigates
+   * away (found 2026-08-31 on a desktop window: no land, no dots, and a
+   * `createRadialGradient` refusing a non-finite radius sixty-nine times a
+   * paint). Deferring is the fix rather than defaulting the frame, because
+   * a made-up box would centre the map on ground nobody chose and nothing
+   * would ever say so.
+   *
+   * Until it settles the map looks at `HOME` — the equator and the prime
+   * meridian, which is where the rest view sat before `defaultView` — so
+   * the worst case is one frame of the old behaviour rather than a blank
+   * canvas.
+   */
+  const settleHome = () => {
+    if (!canvas.isConnected) return;
+    const box = canvas.getBoundingClientRect();
+    if (!box.width || !box.height) {
+      requestAnimationFrame(settleHome);
+      return;
+    }
+    homeView = defaultView(withPlace, coverFractions(box.width, box.height, ASPECT));
+    // Only if the reader has not moved the map themselves in the meantime:
+    // settling takes a frame or two at worst, but yanking a view someone had
+    // already started working would be worse than the centre it corrects.
+    if (view === HOME) applyView(homeView);
+  };
+
   refresh();
+  settleHome();
 
   wirePress(canvas, router);
 
@@ -573,9 +631,10 @@ export function render(el, { data, router }) {
    * `view` directly moved the picture while leaving the chrome saying 1.0×.
    */
   const setView = wireZoom(el, canvas, visible, schedulePaint);
+  applyView = setView;
   wireSearch(el, canvas, withPlace, setView);
 
-  if (bounds) wireTimeline(el, withPlace, bounds, refresh, inTimeline);
+  if (bounds) wireTimeline(el, bounds, refresh);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -681,8 +740,14 @@ function timelineMarkup(M, bounds) {
         </div>
         ${yearBox('to', M.yearTo, dateTo)}
       </div>
+      <!--
+        The "from-to: shown/total shown" line stood here until 2026-08-31,
+        when the author asked for it gone. Its two halves had both been said
+        twice over by then: the range is what the two year buttons print,
+        and the count stopped meaning "dots on the picture" the day the
+        timeline began dimming rather than removing.
+      -->
       <div class="map-timeline-status">
-        <p class="map-timeline-readout utility" data-timeline-readout aria-live="polite"></p>
         <select class="map-timeline-preset utility" data-timeline-preset aria-label="${esc(M.presetLabel)}">
           <option value="">${esc(M.presetWhole)}</option>
           ${options}
@@ -697,32 +762,18 @@ const yearLabel = (year, M) => `${Math.abs(year)} ${year < 0 ? M.eraBC : M.eraAD
 /**
  * Wires the two range inputs — and the highlighted span between them — to
  * one effective span, held in the module-level `dateFrom`/`dateTo` so it
- * survives the visit the way `kind` does. `visible` is the same getter
- * `refresh()` uses — one predicate, read twice, rather than a second copy
- * that could drift from it.
+ * survives the visit the way the view does.
  */
-function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
+function wireTimeline(el, bounds, refresh) {
   const fromInput = el.querySelector('[data-timeline-from]');
   const toInput = el.querySelector('[data-timeline-to]');
   const fillEl = el.querySelector('[data-timeline-fill]');
-  const readout = el.querySelector('[data-timeline-readout]');
   const presetSel = el.querySelector('[data-timeline-preset]');
   const numOf = (side) => el.querySelector(`[data-year-num="${side}"]`);
   const eraOf = (side) => el.querySelector(`[data-year-era="${side}"]`);
 
   const btnOf = (side) => el.querySelector(`[data-year-btn="${side}"]`);
   const popOf = (side) => el.querySelector(`[data-year-pop="${side}"]`);
-
-  /** Both ends, written back from whatever the range handles now say — the
-   *  button's printed year as well as the fields behind it, so opening the
-   *  panel after a drag shows the year the rail actually holds. */
-  const paintYearBoxes = () => {
-    for (const [side, year] of [['from', dateFrom], ['to', dateTo]]) {
-      numOf(side).value = String(Math.abs(year));
-      eraOf(side).value = year < 0 ? 'bc' : 'ad';
-      btnOf(side).textContent = yearLabel(year, STRINGS.map);
-    }
-  };
 
   /*
    * One panel open at a time, and a press anywhere else closes it — the
@@ -781,26 +832,29 @@ function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
   document.addEventListener('pointerdown', onDocDown);
   cleanups.push(() => document.removeEventListener('pointerdown', onDocDown));
 
+  /**
+   * The whole control drawn from `dateFrom`/`dateTo`: the highlighted span,
+   * and both ends — the button's printed year as well as the number and era
+   * behind it, so opening a panel after a drag shows the year the rail
+   * actually holds.
+   *
+   * **The two used to be separate, and dragging the span forgot to call the
+   * second** (author, 2026-08-31: "the date does not update anymore when
+   * sliding the whole bar along"). They are one question — what does the
+   * timeline now say — so they are one function; there is no longer a way to
+   * move the range and repaint only half of what shows it.
+   */
   const paint = () => {
     const span = bounds.max - bounds.min || 1;
     const lo = ((dateFrom - bounds.min) / span) * 100;
     const hi = ((dateTo - bounds.min) / span) * 100;
     fillEl.style.left = `${lo}%`;
     fillEl.style.right = `${100 - hi}%`;
-    /*
-     * `shown` counts the saints the range actually contains, not the ones
-     * drawn — since 2026-08-31 every located saint is drawn on every paint
-     * and the range only dims (`pointAt`). The number a reader wants from
-     * this line is still "how many of them am I asking about", which is
-     * what it has always meant; it simply no longer coincides with the
-     * count of dots on the picture.
-     */
-    readout.textContent = fill(STRINGS.map.timelineReadout, {
-      from: dateFrom,
-      to: dateTo,
-      shown: withPlace.filter(inTimeline).length,
-      total: withPlace.length,
-    });
+    for (const [side, year] of [['from', dateFrom], ['to', dateTo]]) {
+      numOf(side).value = String(Math.abs(year));
+      eraOf(side).value = year < 0 ? 'bc' : 'ad';
+      btnOf(side).textContent = yearLabel(year, STRINGS.map);
+    }
   };
 
   const commit = () => {
@@ -810,7 +864,6 @@ function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
     dateFrom = Math.min(Number(fromInput.value), Number(toInput.value));
     dateTo = Math.max(Number(fromInput.value), Number(toInput.value));
     paint();
-    paintYearBoxes();
     refresh();
   };
 
@@ -921,7 +974,6 @@ function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
   fillEl.addEventListener('pointercancel', endDrag);
 
   paint();
-  paintYearBoxes();
 }
 
 /* ---- the search --------------------------------------------------------- */
@@ -1399,6 +1451,7 @@ async function drawWhenReady(el, canvas, cards) {
     // A map that cannot draw says so; it does not leave an empty rectangle
     // that reads as a bug or, worse, as an empty world.
     caption.textContent = STRINGS.map.landFailed;
+    caption.hidden = false;
   }
 }
 
@@ -1571,15 +1624,42 @@ function paintCanvas(canvas, cards) {
    * everyone at once are gone.
    */
   const onScreen = [];
+  const rails = [];
   for (const card of cards) {
     const at = pointAt(card, dateFrom, dateTo);
     if (!at) continue;
+    if (at.track) rails.push({ track: at.track, state: at.state });
     const p = place(at.where.lon, at.where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
     onScreen.push({ card, where: at.where, state: at.state, x, y });
+  }
+
+  /*
+   * **The rail a dot travels along** (author, 2026-08-31), drawn under
+   * everything else so the dot rides on top of it. It is the whole of the
+   * saint's own `track` and not the part they have reached: the reader is
+   * being shown a journey, and a line that grew behind the dot would say
+   * the rest of it had not been decided yet. Dimmed with its own dot, so a
+   * life the range does not reach is a faint thread rather than a claim
+   * competing with the lit ones.
+   */
+  for (const rail of rails) {
+    ctx.globalAlpha = dimFor(rail.state);
+    ctx.strokeStyle = hexWithAlpha(rubric, 0.55);
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    rail.track.forEach((stop, i) => {
+      const p = place(stop.lon, stop.lat, frame);
+      if (i === 0) ctx.moveTo(p.x * w, p.y * h);
+      else ctx.lineTo(p.x * w, p.y * h);
+    });
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.globalAlpha = 1;
   }
 
   drawnDots = [];
@@ -1674,8 +1754,7 @@ function paintCanvas(canvas, cards) {
      * three states are told apart by depth rather than by hue, and none of
      * them is carried by colour alone.
      */
-    const alpha = state === 'live' ? 1 : state === 'past' ? DIM_PAST : DIM_FUTURE;
-    ctx.globalAlpha = alpha;
+    ctx.globalAlpha = dimFor(state);
     ctx.fillStyle = rubric;
     ctx.beginPath();
     ctx.arc(x, y, 2.5, 0, Math.PI * 2);
@@ -1698,8 +1777,19 @@ function paintCanvas(canvas, cards) {
    */
   const labelsEnabled = view.scale >= LABELS_AT;
   ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
+  /*
+   * **A saint not yet born is a dot and no name** (author, 2026-08-31:
+   * "before a saint is born, dont display their names anymore, just the
+   * dot"). They were drawn at `DIM_FUTURE` until now, which was legible
+   * enough to read as a claim about a person the reader's own range has not
+   * reached — and it costs the names of the saints who *are* in range the
+   * space it takes, since the layout is a fight over one picture's worth of
+   * room. So they are kept out of the layout rather than drawn faintly by
+   * it: `layoutLabels` never sees them, and the room goes to the living.
+   */
+  const nameable = drawnDots.filter((d) => d.state !== 'future');
   const laid = labelsEnabled
-    ? layoutLabels(drawnDots, (name) => ctx.measureText(name).width, w, h, view.scale >= LEADERS_AT)
+    ? layoutLabels(nameable, (name) => ctx.measureText(name).width, w, h, view.scale >= LEADERS_AT)
     : [];
   const placedFor = new Map(laid.map((l) => [l.dot.slug, l]));
 
@@ -1720,8 +1810,7 @@ function paintCanvas(canvas, cards) {
     if (label) labelLastAt.set(dot.slug, label);
     // The dot's own dimming carries to its name: a greyed saint with a
     // full-strength label would read as two different claims about one dot.
-    const dim = dot.state === 'live' ? 1 : dot.state === 'past' ? DIM_PAST : DIM_FUTURE;
-    ctx.globalAlpha = opacity * dim;
+    ctx.globalAlpha = opacity * dimFor(dot.state);
     if (at.leader) {
       // The line first, so the text sits over it rather than under.
       ctx.strokeStyle = hexWithAlpha(inkSoft, 0.55);

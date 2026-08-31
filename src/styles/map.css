@@ -65,7 +65,7 @@ html[data-route='map'] body {
 /* A flex column now that the timeline sits under the picture (author,
    2026-08-30 evening): `.map-picture` takes what `.map-timeline` leaves,
    the same "no number here has to agree with any number there" arrangement
-   `.map-foot` already uses below the whole stage. */
+   `.map-timeline` already uses below the picture. */
 .map-stage {
   display: flex;
   flex-direction: column;
@@ -258,10 +258,11 @@ html[data-route='map'] body {
    corpus has nothing dated and located to filter by; a slider with nothing
    to say is worse than no slider.
 
-   Two rows, always, rather than one that wraps unpredictably: the track on
-   top, the readout and reset below. Its total height is whatever those two
-   rows need — one line of each on a desktop, more on a narrow phone — the
-   same "measured, not guessed" rule `.map-foot` already keeps. */
+   Two rows, always, rather than one that wraps unpredictably: the rail and
+   its two year buttons on top, the preset list below. Its total height is
+   whatever those two rows need — one line of each on a desktop, more on a
+   narrow phone — the same "measured, not guessed" rule the picture above it
+   already keeps. */
 .map-timeline {
   flex: none;
   display: flex;
@@ -465,25 +466,20 @@ html[data-route='map'] body {
   outline-offset: 2px;
 }
 
+/* The row under the rail. It held a readout beside the preset list until
+   2026-08-31, when the author asked for the readout gone; the preset keeps
+   the right-hand end it already had rather than sliding across to fill a
+   row that is now its own. */
 .map-timeline-status {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-2);
 }
 
-.map-timeline-readout {
-  margin: 0;
-  color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
-}
-
-/* The preset spans, standing where "Whole span" did and keeping it as their
-   own first entry (author, 2026-08-31). Capped in width so a long period
-   name does not push the readout off its own row. */
 .map-timeline-preset {
   flex: none;
-  max-width: min(22rem, 55%);
+  max-width: min(22rem, 100%);
   padding: var(--space-1) var(--space-2);
   font-family: var(--font-utility);
   color: var(--ink);
@@ -492,25 +488,27 @@ html[data-route='map'] body {
   border-radius: var(--radius-panel);
 }
 
-/* ---- the footer -------------------------------------------------------- */
+/* ---- the failure note --------------------------------------------------- */
 
-/* The one strip below the picture (author, 2026-08-30: "leaving a small
-   footer with the coastline map credit and scroll to zoom hint"). Its height
-   is its text's - one line on a desktop, two on a phone - and the flex column
-   above hands the stage whatever it leaves, so no number here has to agree
-   with any number there.
-
-   The rule between map and footer belongs to *this* box, not to the stage:
-   drawn as the stage's border-bottom it took a pixel out of the canvas's own
-   height under border-box sizing, and the map came out 1 px short of its
-   window - the suite caught it to the pixel. */
-.map-foot {
-  flex: none;
-  padding: var(--space-2) var(--space-4);
-  border-top: 1px solid var(--rule);
-}
-
-.map-caption {
+/* All that is left of the footer that stood below the picture until
+   2026-08-31, when the author asked for its credit and its scroll hint gone
+   (Natural Earth requires no attribution; the About page carries it as a
+   courtesy). It is `hidden` on every ordinary visit and speaks only when the
+   coastline could not be fetched, so it costs the map no height at all until
+   there is something to say - which is why it floats on the picture beside
+   the search rather than taking a strip of its own. */
+.map-note {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  max-width: min(28rem, calc(100% - var(--space-3) * 2));
   margin: 0;
+  padding: var(--space-1) var(--space-2);
   color: var(--ink-soft);
+  /* Opaque for the reason `.map-zoom` is: the colour underneath is a
+     picture, and a tint would leave this at whatever contrast the coastline
+     happened to give it. */
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
 }

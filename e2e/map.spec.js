@@ -25,7 +25,9 @@ import { ready } from './helpers.js';
  *
  * The page was stage-plus-reading until 2026-08-30, when the author asked for
  * the map alone with a small footer; the tests for the list, the tray and the
- * Index's facets went with the surfaces they tested.
+ * Index's facets went with the surfaces they tested. The footer itself went a
+ * day later — Natural Earth asks for no credit, and the About page carries it
+ * anyway — so the page is the picture and the timeline under it.
  */
 
 const MAP = '/map';
@@ -49,7 +51,8 @@ test('the map draws its coastline, and says so when it has', async ({ page }) =>
    * it is a fact about the data, not about this visit's network.
    */
   await expect(canvas).toHaveAttribute('data-land', 'ok');
-  await expect(page.locator('[data-caption]')).toContainText('Natural Earth');
+  // And the note reserved for a coastline that did *not* load stays silent.
+  await expect(page.locator('[data-caption]')).toBeHidden();
 
   // And it really put ink on the canvas: a blank one is every pixel identical.
   const drew = await canvas.evaluate((el) => {
@@ -87,9 +90,10 @@ test('one dot per located saint, and the picture says so', async ({ page }) => {
   const slugs = new Set(drawn.map((d) => d.slug));
   expect(slugs.size).toBe(drawn.length);
 
-  // And the timeline's own readout counts against the same corpus.
+  // Every one of them is inside the corpus's own span at rest, so every one
+  // is drawn live — the range starts as wide as the rail can go.
   const readout = await timelineReadout(page);
-  expect(readout.total).toBe(drawn.length);
+  expect(readout.shown).toBe(drawn.length);
 });
 
 test('the timeline dims what it excludes rather than removing it', async ({ page }) => {
@@ -122,7 +126,7 @@ test('the timeline dims what it excludes rather than removing it', async ({ page
   expect(states.size, 'every dot is in the same state, so nothing is being dimmed').toBeGreaterThan(1);
 });
 
-test('the page is the map, a small footer, and nothing else read', async ({ page }) => {
+test('the page is the map and its timeline, and nothing else read', async ({ page }) => {
   /*
    * Author, 2026-08-30: "remove everything on the map page outside of the map
    * itself except for leaving a small footer with the coastline map credit and
@@ -145,10 +149,20 @@ test('the page is the map, a small footer, and nothing else read', async ({ page
 
   await expect(page.locator('.map-timeline')).toBeVisible();
 
-  const foot = page.locator('.map-foot');
-  await expect(foot).toBeVisible();
-  await expect(foot).toContainText('Natural Earth');
-  await expect(foot).toContainText(/[Ss]croll/);
+  /*
+   * **The footer went too** (author, 2026-08-31: "Remove the 'Coastline,
+   * rivers and lakes...', not needed legally? If needed place in About
+   * page"). Natural Earth asks for no attribution, so nothing in that strip
+   * was owed; the credit is on the About page now, and the map is the map.
+   */
+  await expect(page.locator('.map-foot')).toHaveCount(0);
+  await expect(page.locator('[data-map]').locator('..').locator('[data-caption]')).toBeHidden();
+});
+
+test('the coastline credit is on the About page, where the rest of the sourcing is', async ({ page }) => {
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  const sourcing = page.locator('section', { has: page.locator('#sourcing') });
+  await expect(sourcing).toContainText('Natural Earth');
 });
 
 test('the map is the window, and holds that size before the coastline arrives', async ({ page }) => {
@@ -176,10 +190,10 @@ test('the map is the window, and holds that size before the coastline arrives', 
 
   /*
    * The whole window, measured rather than assumed: the full viewport width,
-   * and the height left under the bar, above the footer, and above the
-   * timeline — three strips outside the picture now, each measured rather
-   * than guessed, the same "no number here has to agree with any number
-   * there" rule the footer's own CSS already keeps. `--chrome-h-reserve` is
+   * and the height left under the bar and above the timeline — two strips
+   * outside the picture since the footer went (2026-08-31), each measured
+   * rather than guessed, the same "no number here has to agree with any
+   * number there" rule the timeline's own CSS keeps. `--chrome-h-reserve` is
    * where the bar's number comes from, so this is also what catches the two
    * drifting apart — a header that grew without the token growing would leave
    * the map hanging off the bottom of the screen with nothing else to say so.
@@ -188,11 +202,10 @@ test('the map is the window, and holds that size before the coastline arrives', 
     vw: document.documentElement.clientWidth,
     vh: window.innerHeight,
     bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
-    foot: document.querySelector('.map-foot').getBoundingClientRect().height,
     timeline: document.querySelector('.map-timeline')?.getBoundingClientRect().height ?? 0,
   }));
   expect(after.width).toBeCloseTo(room.vw, 0);
-  expect(after.height).toBeCloseTo(room.vh - room.bar - room.foot - room.timeline, 0);
+  expect(after.height).toBeCloseTo(room.vh - room.bar - room.timeline, 0);
 
   // And the window is all there is: nothing on this page can scroll away.
   const scroll = await page.evaluate(() => ({
@@ -355,16 +368,18 @@ test('zooming does not move the page under the reader', async ({ page }) => {
   const before = await canvas.boundingBox();
 
   /*
-   * The gap between the picture and the footer, not either one's position on
-   * screen. `locator.click()` scrolls its target into view (CLAUDE.md trap 3),
-   * and the distance between two boxes is a fact about the layout that
-   * survives any amount of scrolling — the lesson this test learned when the
-   * list still lived below and a click read as a 456 px layout shift.
+   * The gap between the picture and the timeline below it, not either one's
+   * position on screen. `locator.click()` scrolls its target into view
+   * (CLAUDE.md trap 3), and the distance between two boxes is a fact about
+   * the layout that survives any amount of scrolling — the lesson this test
+   * learned when the list still lived below and a click read as a 456 px
+   * layout shift. It measured against `.map-foot` until that strip went
+   * (2026-08-31); the timeline is the box below the picture now.
    */
   const gap = async () => {
     const c = await canvas.boundingBox();
-    const foot = await page.locator('.map-foot').boundingBox();
-    return foot.y - (c.y + c.height);
+    const below = await page.locator('.map-timeline').boundingBox();
+    return below.y - (c.y + c.height);
   };
   const gapBefore = await gap();
 
@@ -514,16 +529,22 @@ test('a dot is a door: a press opens the saint, a drag does not', async ({ page 
 /* ---- the timeline (2026-08-30 evening) ---------------------------------- */
 
 /**
- * The readout is the one auditable channel for what the timeline is doing —
- * `{from}–{to}: {shown}/{total} shown` — so tests read the numbers back out
- * of it rather than re-deriving them, the same way the kind buttons' own
- * counts are read rather than recomputed.
+ * What the timeline is doing, read off the two channels a reader has.
+ *
+ * The `{from}-{to}: {shown}/{total} shown` line these numbers used to come
+ * from went on 2026-08-31 at the author's instruction, and nothing replaced
+ * it: the range is what the two year buttons print, and the count of saints
+ * inside the range is the count of dots the draw pass marked `live` — which
+ * `data-dots` has carried since the timeline began dimming rather than
+ * removing. Both are things the page already had to be right about, so this
+ * reads them rather than adding an instrument that exists for the suite.
  */
 const timelineReadout = async (page) => {
-  const text = await page.locator('[data-timeline-readout]').textContent();
-  const m = /(-?\d+)–(-?\d+): (\d+)\/(\d+) shown/.exec(text);
-  if (!m) throw new Error(`readout did not parse: "${text}"`);
-  return { from: Number(m[1]), to: Number(m[2]), shown: Number(m[3]), total: Number(m[4]) };
+  const [from, to] = await yearButtons(page);
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-dots', /\[.+\]/);
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  return { from, to, shown: dots.filter((d) => d.state === 'live').length, total: dots.length };
 };
 
 test("the timeline spans the located corpus's own years, unfiltered at rest", async ({ page }) => {
@@ -728,10 +749,6 @@ test('the map draws its rivers and lakes alongside the coastline', async ({ page
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(canvas).toHaveAttribute('data-water', 'ok');
-
-  const caption = page.locator('[data-caption]');
-  await expect(caption).toContainText(/rivers?/i);
-  await expect(caption).toContainText(/lakes?/i);
 });
 
 test('the rest view is centred on the corpus, not on the equator and the prime meridian', async ({ page }) => {
@@ -805,14 +822,25 @@ const typeYear = async (page, side, year, era) => {
   await expect(page.locator(`[data-year-pop="${side}"]`)).toBeHidden();
 };
 
-/** Both ends as the buttons print them, signed the way the readout is. */
-const yearButtons = (page) =>
-  page.locator('[data-year-btn]').evaluateAll((els) =>
+/**
+ * Both ends as the buttons print them, signed the way a year is stored.
+ *
+ * It waits for the pair rather than reading whatever is in the document
+ * right now: since the readout went (2026-08-31) this is what every timeline
+ * assertion reads, including one that navigates back to the map and would
+ * otherwise measure the page it came from — which is exactly how it failed,
+ * once, under a full parallel run.
+ */
+const yearButtons = async (page) => {
+  const buttons = page.locator('[data-year-btn]');
+  await expect(buttons).toHaveCount(2);
+  return buttons.evaluateAll((els) =>
     els.map((e) => {
       const [n, era] = e.textContent.trim().split(/\s+/);
       return era === 'BC' ? -Number(n) : Number(n);
     }),
   );
+};
 
 test('the search finds a place and flies the map to it', async ({ page }) => {
   /*
@@ -980,4 +1008,265 @@ test('a crowded cluster names every dot rather than only the leftmost', async ({
   // Several names at once, which is more than the old pass could manage in
   // a cluster this tight.
   await expect.poll(async () => Number(await canvas.getAttribute('data-labels'))).toBeGreaterThan(3);
+});
+
+test('every saint in a cluster is named at the deepest zoom, and none runs off the edge', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "On mobile Map page, zooming in as far as you can
+   * you still cant see two of the 5 saints located around constantinople."
+   * Both halves of that were the column layout: one row met the neighbouring
+   * Nicomedia column and was dropped outright, and the widest name ran past
+   * the right edge and was clipped mid-word. `lib/map-labels.js` places a
+   * column as one block now — held inside the picture, slid up or down until
+   * every row in it fits — and `tests/map-labels.test.mjs` pins the
+   * arithmetic. This is the proof against the real picture at the real zoom.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const box = await canvas.boundingBox();
+  /*
+   * Every dot the reader can see has its name drawn with it. `data-labels`
+   * is a count of `fillText` calls, so it can run *above* this for the 300 ms
+   * a name that has just lost its place takes to fade out — the claim worth
+   * making is that nothing on the picture goes unnamed, not that the two
+   * numbers are equal on every frame.
+   */
+  const everyDotNamed = async () => {
+    const drawn = JSON.parse(await canvas.getAttribute('data-dots'));
+    const onPicture = drawn.filter((d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height);
+    expect(onPicture.length, 'premise: the flight landed nowhere near the cluster').toBeGreaterThan(3);
+    await expect
+      .poll(async () => Number(await canvas.getAttribute('data-labels')))
+      .toBeGreaterThanOrEqual(onPicture.length);
+  };
+
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+
+  // Where the search itself lands: both crowded clusters on one picture,
+  // which is where a column used to lose a row to its neighbour's.
+  await everyDotNamed();
+
+  // And all the way in, from the keyboard — the zoom buttons are hidden on a
+  // touch device, and "as far as you can" is what the report was about.
+  await canvas.focus();
+  for (let i = 0; i < 20; i++) await canvas.press('+');
+  await expect(page.locator('[data-zoom-level]')).toHaveText('120.0×');
+  await everyDotNamed();
+});
+
+test('the year buttons follow the span as it is dragged, not only when it is let go', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "The date does not update anymore when sliding the
+   * whole bar along." The fill's own drag repainted the highlighted span and
+   * the picture but not the two ends, because painting the ends was a second
+   * function only `commit` called. They are one function now.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+
+  // Narrow first, so the span has somewhere to slide to.
+  const fromHandle = page.locator('[data-timeline-from]');
+  const toHandle = page.locator('[data-timeline-to]');
+  await fromHandle.focus();
+  for (let i = 0; i < 5; i++) await fromHandle.press('ArrowRight');
+  await toHandle.focus();
+  for (let i = 0; i < 5; i++) await toHandle.press('ArrowLeft');
+
+  const before = await yearButtons(page);
+
+  const fill = page.locator('[data-timeline-fill]');
+  const box = await fill.boundingBox();
+  const midY = box.y + box.height / 2;
+  await page.mouse.move(box.x + box.width / 2, midY);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + 60, midY, { steps: 5 });
+
+  // Read them *mid-drag*, with the button still down: this is the moment the
+  // buttons used to keep printing the year the span had already left.
+  const during = await yearButtons(page);
+  await page.mouse.up();
+
+  expect(during[0], 'the left-hand year did not move with the span').toBeGreaterThan(before[0]);
+  expect(during[1], 'the right-hand year did not move with the span').toBeGreaterThan(before[1]);
+});
+
+test('the timeline prints no count of its own any more', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "Remove the start date-end date: x/y shown at the
+   * bottom of the map page." Its two halves were both said elsewhere — the
+   * range by the year buttons, the count by nothing the reader needed once
+   * the timeline began dimming rather than removing.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-timeline-readout]')).toHaveCount(0);
+  await expect(page.locator('.map-timeline')).not.toContainText(/shown/i);
+  // The preset list, which shared that row, is still there.
+  await expect(page.locator('[data-timeline-preset]')).toBeVisible();
+});
+
+/* ---- the timeline and a life (2026-08-31) -------------------------------- */
+
+test('a saint whose birth is only bounded from above is not lit centuries early', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "Moses the Hungarian's dot and name are still lit up
+   * even when the timeline bar is 600 years before his birth date." His birth
+   * is recorded as "before 1000" — an interval open at its start — and
+   * `overlaps` reads an open start as reaching back without limit.
+   * `lifeBounds` (`lib/map-track.js`) falls back to the bound the corpus
+   * actually states.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const stateOf = async () =>
+    (JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian') ?? {}).state;
+
+  expect(await stateOf(), 'premise: he is not drawn at rest').toBe('live');
+
+  await typeYear(page, 'to', '400');
+  await expect.poll(stateOf).toBe('future');
+});
+
+test('a saint not yet born is a dot with no name on it', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "Before a saint is born, dont display their names
+   * anymore, just the dot." They were drawn at `DIM_FUTURE` before, which
+   * read as a claim about someone the reader's own range has not reached —
+   * and took layout room from the saints who are in it.
+   *
+   * Nicomedia is the place to ask it: four martyrs of the persecutions, all
+   * named at the zoom the search lands on, and all of them plainly unborn in
+   * the year 100.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await expect.poll(async () => Number(await canvas.getAttribute('data-labels'))).toBeGreaterThan(3);
+
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(
+    before.some((d) => d.state === 'future'),
+    'premise: somebody on screen is already unborn at rest',
+  ).toBe(false);
+
+  // Back before all of them. The dots stay — the timeline dims rather than
+  // removes — and the names go.
+  await typeYear(page, 'to', '100');
+  await expect
+    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => d.state === 'future').length)
+    .toBeGreaterThan(0);
+
+  const after = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(after.length, 'the unborn were removed rather than left unnamed').toBe(before.length);
+
+  /*
+   * No more names than there are saints eligible to carry one. `data-labels`
+   * counts `fillText` calls including a name still fading out, so the poll
+   * waits that 300 ms out rather than reading the first frame; what it must
+   * never settle above is the number of dots that are not `future`.
+   */
+  const eligible = after.filter((d) => d.state !== 'future').length;
+  expect(eligible, 'premise: the squeeze left everyone in range, so nothing is being told apart').toBeLessThan(
+    before.length,
+  );
+  await expect.poll(async () => Number(await canvas.getAttribute('data-labels'))).toBeLessThanOrEqual(eligible);
+});
+
+/* ---- the track (2026-08-31) ---------------------------------------------- */
+
+test('a saint with a dated track moves along it as the timeline crosses his life', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "Create a test track for St Moses the Hungarian ...
+   * where he was born in Hungary and went to Kiev then Poland then back to
+   * Kiev ... And show him moving on that rail as the timeline bar scrolls
+   * over his lifespan." The waypoints and their years are in his own
+   * `saint.json`; `lib/map-track.js` reads a position off them and
+   * `tests/map-track.test.mjs` pins that arithmetic. This is the proof the
+   * picture actually moves him.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  /*
+   * Kyiv, then back out far enough for Hungary and Poland to be on the
+   * picture with it — the gazetteer flies to a town at 40x, and a journey
+   * across half of Europe does not fit in a town.
+   */
+  await searchBox(page).fill('kyiv');
+  await expect(searchRows(page).first()).toContainText('Kyiv');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  for (let i = 0; i < 6; i++) await canvas.press('-');
+
+  const whereIsHe = async () =>
+    JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
+
+  const at = {};
+  for (const year of ['1010', '1016', '1022', '1029', '1040']) {
+    await typeYear(page, 'to', year);
+    await expect.poll(async () => Boolean(await whereIsHe())).toBe(true);
+    at[year] = await whereIsHe();
+  }
+
+  const apart = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  // Hungary, then Kyiv, then Poland: three different places, not one dot
+  // standing still while the years go by.
+  expect(apart(at['1010'], at['1016']), 'he never left Hungary').toBeGreaterThan(5);
+  expect(apart(at['1016'], at['1022']), 'he was never carried to Poland').toBeGreaterThan(5);
+  // And the return is walked rather than jumped: 1029 sits in the gap the
+  // sources leave between the release and the Caves, so it is neither end.
+  expect(apart(at['1029'], at['1022']), 'the return started nowhere').toBeGreaterThan(2);
+  expect(apart(at['1029'], at['1040']), 'the return had already arrived').toBeGreaterThan(2);
+});
+
+test('the rest view survives being computed before the canvas has a size', async ({ page }) => {
+  /*
+   * `render` can run inside a view transition's update callback, where the
+   * document's own rendering is suppressed and the freshly written canvas
+   * measures 0 by 0. `coverFractions(0, 0)` is 0/0 on both axes, a NaN frame
+   * makes a NaN centre, and `toScreen` then puts every dot at NaN for the
+   * rest of the visit — an empty picture and a `createRadialGradient`
+   * refusing a non-finite radius, found on a desktop window 2026-08-31.
+   * `settleHome` waits for a real box instead.
+   *
+   * Reached by navigating *within* the site rather than by `page.goto`,
+   * because it is the client-side transition that suppresses the layout.
+   */
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  /*
+   * A stage with no layout is the same 0-by-0 canvas the transition hands
+   * `render`, and it is reachable from a test where the transition itself is
+   * not. Added to the live document so it is in force at the moment the
+   * client-side navigation renders the map, and taken off again after — which
+   * is when a correct `settleHome` finds its box.
+   */
+  await page.addStyleTag({ content: '.map-stage { display: none !important; }' });
+  await page.locator('.site-nav a[href$="/map"]').click();
+  await expect(page).toHaveURL(/\/map$/);
+  await page.evaluate(() => {
+    for (const style of document.querySelectorAll('style')) {
+      if (style.textContent.includes('.map-stage')) style.remove();
+    }
+  });
+
+  const canvas = page.locator('[data-map]');
+  await expect
+    .poll(async () => {
+      const raw = await canvas.getAttribute('data-dots');
+      if (!raw) return 'the map never drew';
+      const dots = JSON.parse(raw);
+      if (!dots.length) return 'the map drew no dots at all';
+      const nan = dots.find((d) => !Number.isFinite(d.x) || !Number.isFinite(d.y));
+      return nan ? `${nan.slug} was drawn at ${nan.x},${nan.y}` : 'ok';
+    })
+    .toBe('ok');
 });

@@ -39,11 +39,16 @@ you inferred, and keep them apart.
   The map draws **one dot per saint**, not one per point: `pointAt` picks
   which of a saint's places to show from where the timeline's upper handle
   stands, and the timeline **dims** what falls outside its range rather
-  than removing it (2026-08-31).
+  than removing it (2026-08-31). **One of the 69 also carries a `track`** —
+  Moses the Hungarian, four dated stays from Hungary to the Kyiv Caves
+  (Amendment 89) — and his dot walks it as the handle crosses his life.
+  That is a new shape of data, not a new saint: `locations` is unordered
+  kinds with no dates, a `track` is an ordered journey with years on it,
+  and the second could not be built out of the first.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **245 unit, 688 browser** across two projects. `npm run test:all`.
+- **257 unit, 704 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -184,7 +189,10 @@ page is **the map and a small footer, nothing else** (author: "remove
 everything on the map page outside of the map itself except for leaving a
 small footer with the coastline map credit and scroll to zoom hint") — the
 lede, the Places list, the Unlocated tray and the Index's facets all went, one
-day after the facets arrived (Amendment 77 records the reversal). The kind
+day after the facets arrived (Amendment 77 records the reversal). **The footer
+itself went on 2026-08-31** (Amendment 89): Natural Earth asks for no
+attribution, so the credit was never owed on the picture, and it stands on the
+About page with the rest of the sourcing. The kind
 counts in the legend are now the page's one statement of what it shows, and
 `map.spec.js` holds them to `data-dots`, the draw pass's own hit-map. The
 canvas is one opaque image to a screen reader; with the list gone, the Index

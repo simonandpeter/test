@@ -150,3 +150,53 @@ test('clustering is single-linkage, so a diagonal chain is one group', () => {
   // And genuinely distant dots stay separate.
   assert.equal(clusterDots([{ x: 0, y: 0 }, { x: 500, y: 500 }], 34).length, 2);
 });
+
+test('a column is held inside the picture rather than running off its right edge', () => {
+  /*
+   * Author, 2026-08-31: on a phone at full zoom, "two of the 5 saints
+   * located around constantinople" could not be read. One of the two was a
+   * name whose column ran past the right edge and was clipped mid-word — a
+   * 375 px picture and a 200 px name leave no room beside a cluster sitting
+   * near the middle of it.
+   */
+  const w = 375;
+  const dots = [
+    { x: 187, y: 283, name: 'Alexander of Constantinople' },
+    { x: 204, y: 295, name: 'Athanasius of Vysotsk' },
+    { x: 198, y: 316, name: 'Gennadius of Constantinople' },
+    { x: 177, y: 316, name: 'Natalia of Nicomedia' },
+    { x: 170, y: 295, name: 'Niphon of Constantinople' },
+  ];
+  const out = layoutLabels(dots, measure, w, H);
+  assert.equal(out.length, dots.length, 'a name in the cluster went undrawn');
+  for (const label of out) {
+    assert.ok(label.rect.x >= 0, `${label.dot.name} starts off the left edge`);
+    assert.ok(label.rect.x + label.rect.w <= w, `${label.dot.name} runs off the right edge`);
+  }
+});
+
+test('a column slides clear of a neighbouring column rather than losing a row', () => {
+  /*
+   * The other half of the same report. The Nicomedia four are laid out
+   * first and stack leftward; the Constantinople five then want the same
+   * ground, and placing them row by row dropped whichever row met the
+   * neighbour — Natalia's, by seven pixels. The column is one block now,
+   * slid up or down until every row in it fits.
+   */
+  const w = 375;
+  const dots = [
+    { x: 320, y: 357, name: 'Adrian of Nicomedia' },
+    { x: 336, y: 373, name: 'Anicetas of Nicomedia' },
+    { x: 320, y: 390, name: 'Photius of Nicomedia' },
+    { x: 304, y: 373, name: 'The Twenty-three Martyrs' },
+    { x: 187, y: 283, name: 'Alexander of Constantinople' },
+    { x: 204, y: 295, name: 'Athanasius of Vysotsk' },
+    { x: 198, y: 316, name: 'Gennadius of Constantinople' },
+    { x: 177, y: 316, name: 'Natalia of Nicomedia' },
+    { x: 170, y: 295, name: 'Niphon of Constantinople' },
+  ];
+  const out = layoutLabels(dots, measure, w, H);
+  assert.equal(out.length, dots.length, 'two crowded clusters cost a name between them');
+  const named = new Set(out.map((l) => l.dot.name));
+  assert.ok(named.has('Natalia of Nicomedia'), 'the row that met the neighbouring column was dropped');
+});

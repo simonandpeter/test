@@ -85,6 +85,44 @@
       "uncertainty_km": 1
     }
   ],
+  "track": [
+    {
+      "place": "Hungary",
+      "from": null,
+      "to": 1015,
+      "lat": 47.1625,
+      "lon": 19.5033,
+      "uncertainty_km": 300,
+      "note": "Hungarian by birth, and that is the whole of what the sources say about where. Neither the town nor the year he left is recorded; he was already in Prince Boris's service in Rus' by 1015, so the departure is drawn as arriving at Kyiv in that year rather than at an invented earlier one."
+    },
+    {
+      "place": "Kyiv",
+      "from": 1015,
+      "to": 1018,
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "uncertainty_km": 15,
+      "note": "After Boris was killed on the Alta in 1015 he fled to Kyiv and hid with Predslava, sister of Prince Yaroslav."
+    },
+    {
+      "place": "Poland",
+      "from": 1018,
+      "to": 1025,
+      "lat": 52.0693,
+      "lon": 19.4803,
+      "uncertainty_km": 300,
+      "note": "Carried off a captive when Bolesław I took Kyiv in 1018, and held about six years. No source names the town; he was freed in the upheaval that followed Bolesław's death in 1025."
+    },
+    {
+      "place": "Monastery of the Caves, Kyiv",
+      "from": 1033,
+      "to": null,
+      "lat": 50.4344,
+      "lon": 30.5578,
+      "uncertainty_km": 1,
+      "note": "The life gives his time at the Caves as ten years, and his death as about 1043, which puts the arrival near 1033 — eight years after the release. Where he was in between is not accounted for by any source read here, and the map draws that gap as the journey back rather than pretending to a year."
+    }
+  ],
   "historicity": "traditional",
   "related": [
     "john-the-long-suffering"

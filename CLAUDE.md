@@ -69,8 +69,12 @@ it appends rather than reserving, because a life's height is unknowable.
 > timeline's two ends, a **preset period list** (`data/periods.js`) where
 > `Whole span` stood, **leader-lined label clusters** (`lib/map-labels.js`),
 > and **one dot per saint chosen by date** (`pointAt`) in place of the kind
-> selector. Sections below are current; anything elsewhere describing kind
-> buttons is stale.
+> selector. Later the same day the **footer went too** (the Natural Earth
+> credit and the scroll hint; the credit is on About now), the timeline's
+> **`x/y shown` readout** went with it, and the dot learned to **move along a
+> dated track** (`lib/map-track.js`). Sections below are current; anything
+> elsewhere describing kind buttons, a map footer or a timeline readout is
+> stale.
 
 A flat Mercator on canvas,
 not §8.3's globe (author, 2026-08-29). No runtime dependency: `lib/mercator.js`
@@ -85,9 +89,15 @@ are dev-only. Both moved from Natural Earth's 110m tier to 50m on 2026-08-31
 still `PRECISION`, ~11 km); the pair loads in parallel, dynamically, off the
 boot path, at ~211 kB gzipped combined — a deliberate weight-for-precision
 trade the size jump from 110m's ~19 kB earns by backing a real deeper zoom.
-**The page is the map and a small footer, nothing else** (author, 2026-08-30):
-the below-map reading — lede, facets, Places, tray — is gone. **One dot per
-saint**, the *kind* of place chosen by where the timeline's upper handle
+**The page is the map and its timeline, nothing else** (author, 2026-08-30
+for the reading — lede, facets, Places, tray — and 2026-08-31 for the footer
+that survived it). Natural Earth requires no attribution, so the coastline
+credit was never owed; it is on the About page's sourcing section as a
+courtesy (`about.sourcing.map`). What is left of that strip is
+`.map-note` — a box floating on the picture, `hidden` until the coastline
+*fails* to load, so it costs the map no height at all on an ordinary visit.
+
+**One dot per saint**, the *kind* of place chosen by where the timeline's upper handle
 stands (`pointAt`, 2026-08-31), replacing the four kind buttons: past the
 death year it is the relics or death place, during the life a see or
 birthplace, before the birth the birthplace. `pointAt` also returns the
@@ -95,13 +105,41 @@ birthplace, before the birth the birthplace. `pointAt` also returns the
 life (greyed), `future` before one (greyed twice as far, and no halo, since
 a halo is a claim about a place someone *was*). **The timeline therefore
 dims rather than removes**, which reverses how it shipped: every located
-saint is drawn on every paint, and the readout's `shown` counts how many
-the range contains rather than how many are on screen. This is the first,
-data-backed half of the author's "tracker"; the dot *sliding along a life's
-rail* needs per-saint dated location sequences the corpus does not carry
-(`see` and `relics` have no dates at all), so it is deferred in `pointAt`'s
-own comment rather than faked. Zoom and pan live in `lib/map-view.js` —
-pure, unit-tested; `MAX_SCALE` is 120 (2026-08-31, doubled from 60, itself
+saint is drawn on every paint. **The `{from}-{to}: {shown}/{total} shown`
+readout is gone** (author, 2026-08-31) and nothing replaced it — the range is
+what the two year buttons print, and the count stopped meaning "dots on the
+picture" the day dimming replaced removing. `map.spec.js`'s own
+`timelineReadout` helper reads those two channels instead.
+
+**Which side of the range a life falls on is `lifeBounds`, not `overlaps`**
+(`lib/map-track.js`, 2026-08-31). The difference is one case and it was a
+reported bug: `lifeInterval` keeps an open bound open, and `overlaps` reads an
+open *start* as reaching back forever — so Moses the Hungarian, whose birth
+the corpus records only as "before 1000", was lit at full strength in the
+fourth century. `lifeBounds` falls back to the bound that *is* stated. For a
+saint with no birth at all this reads their death year as the first year they
+can be placed, which is stricter than the truth and still the honest bound
+this corpus holds. **And a saint not yet born gets a dot and no name** (same
+day): `future` dots are kept out of `layoutLabels` entirely rather than drawn
+faintly, so the room goes to the saints the reader's range actually reaches.
+
+**A saint may carry a `track`, and then the dot moves along it.** This is the
+second half of the author's "tracker", and it needed data before it needed
+code: a `track` is an *ordered, dated* list of stays in the saint's own
+`saint.json` (`schema/saint.schema.json`'s `waypoint`), which `locations` —
+unordered kinds with no dates at all — could never be. `trackAt`
+(`lib/map-track.js`, pure, unit-tested) returns the stay's coordinates while
+the year is inside it and a point along the straight line between two stays
+while it is in the gap; `paintCanvas` draws the whole track as a dashed rail
+under the dots. **The legs are drawn, not sourced**, and each waypoint's own
+`note` says so — Moses the Hungarian, the one saint who carries a track today
+(Hungary → Kyiv 1015 → Poland 1018 → the Caves ~1033), was freed in 1025 and
+at the Caves for the ten years before a death in about 1043, and the eight
+years between are what the dot is seen crossing. `build-manifest.mjs` carries
+coordinates and years into the card and leaves the place names and notes in
+the folder, the same rule `locations` keeps.
+
+Zoom and pan live in `lib/map-view.js` — pure, unit-tested; `MAX_SCALE` is 120 (2026-08-31, doubled from 60, itself
 raised from the coastline's honest ceiling of 24). Past 24 this is knowingly
 not a claim about the land — the coastline is a visibly coarse polygon at
 120 and §6b's objection is real and accepted — because the reason to zoom
@@ -116,7 +154,14 @@ it single-linkage-clusters the dots, gives a lone dot the space beside it,
 and stacks a *whole* cluster into a column with a leader line each — deciding
 per cluster rather than per dot, because trying side placements first let one
 label take the space the column needed and dropped two of five (a test caught
-that, not a screenshot). **The columns only run past `LEADERS_AT` (29×)**;
+that, not a screenshot). **A column is placed as one block** (2026-08-31):
+held inside the picture, and slid up or down a row at a time (`SHIFTS`, up to
+eight) until every name in it fits, before any row is dropped. Both halves
+were one report — on a phone at full zoom two of the five saints at
+Constantinople could not be read, one because its row met the neighbouring
+Nicomedia column and one because the widest name ran off the right edge.
+A dot that is itself off the picture is still never named, or the clamp would
+draw a leader line out of the frame to a name pointing at nothing. **The columns only run past `LEADERS_AT` (29×)**;
 below it `layoutLabels` is called with `leaders: false` and behaves as the
 pass that shipped before them — beside the dot or not at all. The author
 asked for that on seeing the columns everywhere ("the name display worked
@@ -246,6 +291,18 @@ does not, and cannot, guarantee every dot survives arbitrarily deep zoom from
 a fixed anchor — only that the ordinary case, a few presses with no panning,
 still shows a map with saints on it. `map.spec.js` pins the ordinary case.
 
+**And it waits for a box** (`settleHome`, 2026-08-31). `render` can run
+before this canvas has been laid out — the router calls it inside a view
+transition's update callback, where the document's rendering is suppressed
+and a freshly written element measures 0 by 0 — and `coverFractions(0, 0)` is
+0/0 on both axes. A NaN frame makes a NaN centre and `toScreen` then puts
+*every* dot at NaN for the rest of the visit: an empty picture, and
+`createRadialGradient` refusing a non-finite radius sixty-nine times a paint.
+So the rest view is computed on the first frame there is a real box for,
+through `applyView` (which becomes `wireZoom`'s own `set` once that has run),
+and only if the reader has not already moved the map themselves. Until then
+the map looks at plain `HOME`.
+
 **Painting is throttled, and the split matters.** `land.js`/`water.js`'s
 50m tier roughly tripled the picture's own point count, and painting
 synchronously on every raw pointer event a drag or a wheel spin produces —
@@ -330,8 +387,8 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~15s, 228).
-- Browser: `e2e/`, one file per surface, 648 across two projects —
+- Unit: `tests/*.test.mjs`, `npm test` (~15s, 257).
+- Browser: `e2e/`, one file per surface, 704 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —
@@ -348,7 +405,7 @@ run the surface you touched.
 | `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js`, `fast-grade.js` | `daily.spec.js` |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `licence.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
 | `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface |
-| `views/map.js`, `map.css`, `lib/mercator.js`, `lib/map-view.js`, `lib/map-labels.js`, `data/places.js`, `data/periods.js` | `map.spec.js` |
+| `views/map.js`, `map.css`, `lib/mercator.js`, `lib/map-view.js`, `lib/map-labels.js`, `lib/map-track.js`, `data/places.js`, `data/periods.js` | `map.spec.js` |
 | `ui/strings.js`, `ui/locales/*` | `locale-coverage.mjs`, then the full run |
 | `lib/*`, `data/`, `build-manifest.mjs` | `npm test`, then the surface |
 

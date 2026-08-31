@@ -314,6 +314,22 @@ function toCard(saint, dir) {
       region: regionOf(l.lat, l.lon),
     }));
 
+  /*
+   * The dated journey, coordinates and years only. The place names and the
+   * notes stay in the folder for the same reason `locations` drops
+   * `historical_name`: the map labels a track with the saint's own name, and
+   * everything else on a waypoint is reading, which the saint's page fetches.
+   * One saint carries a track today, so this is four objects in the whole
+   * manifest — watch the size projection if that stops being true.
+   */
+  const track = (saint.track ?? []).map((w) => ({
+    from: w.from ?? null,
+    to: w.to ?? null,
+    lat: w.lat,
+    lon: w.lon,
+    uncertainty_km: w.uncertainty_km,
+  }));
+
   let primary = null;
   for (const kind of LOCATION_PREFERENCE) {
     const i = locations.findIndex((l) => l.kind === kind);
@@ -392,6 +408,7 @@ function toCard(saint, dir) {
         ...(a.titles?.length ? { titles: a.titles } : {}),
       })),
     locations,
+    ...(track.length ? { track } : {}),
     primary_location: primary,
     image,
   };

@@ -86,6 +86,7 @@ export function render(el) {
       <p>${esc(A.sourcing.lede)}</p>
       <div data-sources></div>
       <p>${esc(A.sourcing.lives)}</p>
+      <p>${esc(A.sourcing.map)}</p>
     </section>
 
     <section aria-labelledby="coverage">

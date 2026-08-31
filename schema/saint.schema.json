@@ -36,6 +36,12 @@
       "items": { "$ref": "#/$defs/attestation" }
     },
     "locations": { "type": "array", "items": { "$ref": "#/$defs/location" } },
+    "track": {
+      "description": "An ordered journey with years on it: where the sources place this person, and from when until when. Separate from `locations`, which is an unordered set of kinds carrying no dates at all — a bishop's see and a saint's relics are facts about a life, not moments in it. The map reads this to move the dot as the timeline crosses the life; without it a saint has one dot chosen by year, which is all the corpus can honestly say about almost everyone.",
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/waypoint" }
+    },
     "historicity": { "enum": ["attested", "traditional", "disputed", "legendary"] },
     "related": {
       "type": "array",
@@ -213,6 +219,22 @@
           "exclusiveMinimum": 0,
           "maximum": 20000
         },
+        "note": { "type": "string" }
+      }
+    },
+
+    "waypoint": {
+      "description": "One stay on a `track`. `from` and `to` are the years the sources place the person here; a null `from` on the first stay means 'from birth, the year unrecorded' and a null `to` on the last means 'until death'. Between one stay's `to` and the next's `from` the map draws the dot moving, which is the one thing on a track that is drawn rather than sourced — where someone travelled between two attested places is almost never recorded, and the `note` on each stay is where that is said in words.",
+      "type": "object",
+      "required": ["lat", "lon", "uncertainty_km"],
+      "additionalProperties": false,
+      "properties": {
+        "place": { "type": "string" },
+        "from": { "type": ["integer", "null"] },
+        "to": { "type": ["integer", "null"] },
+        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+        "uncertainty_km": { "type": "number", "exclusiveMinimum": 0, "maximum": 20000 },
         "note": { "type": "string" }
       }
     },

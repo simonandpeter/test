@@ -827,7 +827,12 @@ export const STRINGS = {
       relics: 'Relics',
     },
     canvasLabel: 'A world map. Drag to move it, arrow keys to pan, plus and minus or a scroll to zoom.',
-    caption: 'Coastline, rivers and lakes: Natural Earth, public domain. Soft edges mark uncertain places. Scroll to zoom.',
+    /* `caption` - the Natural Earth credit, the soft-edges gloss and the
+       scroll hint, printed in a footer under the picture - went on
+       2026-08-31 at the author's instruction. Natural Earth asks for no
+       attribution ("crediting the authors is unnecessary"), so nothing in it
+       was owed; the credit is on the About page with the rest of the
+       sourcing, where a reader looking for it would look. */
     zoomGroup: 'Zoom the map',
     zoomIn: 'Zoom in',
     zoomOut: 'Zoom out',
@@ -838,7 +843,10 @@ export const STRINGS = {
     // and `to` reuse `saints.filters.from`/`.to` — the same question, the
     // same two words, asked by a slider instead of a pair of number boxes.
     timelineGroup: 'Filter by date',
-    timelineReadout: '{from}–{to}: {shown}/{total} shown',
+    /* `timelineReadout` went on 2026-08-31 with the line it printed: the
+       range is what the two year buttons say, and its `shown` count stopped
+       meaning "dots on the picture" the day the timeline began dimming
+       rather than removing. */
     timelineReset: 'Whole span',
     /*
      * The map's own search (author, 2026-08-31), which replaced the four
@@ -952,6 +960,12 @@ export const STRINGS = {
       /** "{count} commemorations from {host}" - the numbers are read, not typed. */
       fromHost: '{count} from {host}',
       lives: 'The lives are written here from the sources each page names. They are in English only: they are paraphrase, and machine-translating a life would turn a sourced claim about a person into an unsourced one.',
+      /* The map's own ground, credited here rather than on the map (author,
+         2026-08-31). Natural Earth is public domain and asks for no
+         attribution at all, so this is a courtesy and says so - and the
+         sourcing section is where a reader who wants to know what the
+         picture is made of will look. */
+      map: 'The map’s coastline, rivers and lakes are Natural Earth, which is public domain and asks for no credit. It is named here because a reader is owed the provenance of a picture as much as of a date.',
     },
     /*
      * Export / Import (brief §11, Session 8's surviving third, 2026-08-29).

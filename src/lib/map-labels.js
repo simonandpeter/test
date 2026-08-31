@@ -20,9 +20,11 @@
  *   2. **Stacked with a leader line**, past `leaders` only. Every dot in a
  *      cluster is offered a row in a column beside that cluster, ordered by
  *      the dots' own y so the lines cross as little as they can, with a line
- *      from each dot to its row. The column goes on whichever side has more
- *      room, so a cluster near the right edge stacks to its left.
- *   3. **Dropped**, if neither is available.
+ *      from each dot to its row. The column is placed as one block: whichever
+ *      side has more room first, slid up or down a row at a time until every
+ *      name in it fits, and always held inside the picture.
+ *   3. **Dropped**, if no placement seats the column and the row's own spot
+ *      is taken.
  *
  * **Stacking is off until the reader has zoomed well in** (author,
  * 2026-08-31, on seeing it: "the name display worked better before.
@@ -50,6 +52,20 @@ const STACK_GAP = 18;
 /** Rows in a stacked column are this far apart, centre to centre. Larger
  *  than `LINE_H`, so consecutive rows cannot touch. */
 const STACK_STEP = 18;
+/**
+ * How far a column may be slid off its cluster's own centre, in whole rows,
+ * looking for somewhere every one of its names fits. Alternating out from
+ * zero so the nearest placement wins.
+ *
+ * Eight rows is the reach, and the number is a measurement rather than a
+ * taste: on a 360 px picture two crowded clusters cannot both have a column
+ * beside them — one saint's name is most of that width on its own — so the
+ * only room left for the second is *above or below* the first, and clearing
+ * a nine-row column takes more than the four rows this first shipped with.
+ * Past eight the leader line is longer than the reading it buys, and a name
+ * that far from its dot is a worse answer than the one name it saves.
+ */
+const SHIFTS = [0, -1, 1, -2, 2, -3, 3, -4, 4, -5, 5, -6, 6, -7, 7, -8, 8].map((n) => n * STACK_STEP);
 
 const overlaps = (a, b) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
 
@@ -171,35 +187,81 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
     const cy = group.reduce((s, d) => s + d.y, 0) / group.length;
     const minX = Math.min(...group.map((d) => d.x));
     const maxX = Math.max(...group.map((d) => d.x));
-    const toRight = w - maxX >= minX;
-    // The column's own inner edge — where every leader line ends, whatever
-    // its label's width, so the lines land in a row rather than a ragged
-    // fan. Left-hand labels are right-aligned to it for the same reason.
-    const edge = toRight ? maxX + STACK_GAP : minX - STACK_GAP;
+    /*
+     * Ordered by the dots' own y, so the leader lines run roughly parallel
+     * instead of crossing each other on the way out to the column — and only
+     * dots the reader can actually see. Holding the column inside the picture
+     * (below) would otherwise name a dot that is off it, with a leader line
+     * running out of the frame to a name pointing at nothing.
+     */
+    const rows = toStack.filter((d) => d.x >= 0 && d.x <= w && d.y >= 0 && d.y <= h).sort((a, b) => a.y - b.y);
+    if (!rows.length) continue;
+    // The whole column is one block this wide, so its rows share an inner
+    // edge and the leader lines land in a row rather than a ragged fan.
+    const colW = Math.max(...rows.map((d) => widths.get(d) + PAD));
 
-    // Ordered by the dots' own y, so the leader lines run roughly parallel
-    // instead of crossing each other on the way out to the column.
-    const rows = [...toStack].sort((a, b) => a.y - b.y);
-    const top = cy - ((rows.length - 1) * STACK_STEP) / 2;
-
-    rows.forEach((dot, i) => {
-      const textW = widths.get(dot);
-      const y = top + i * STACK_STEP;
-      const boxW = textW + PAD;
-      const rect = { x: toRight ? edge : edge - boxW, y: y - LINE_H / 2, w: boxW, h: LINE_H };
-      if (!onScreen(rect, w, h)) return;
-      if (placed.some((r) => overlaps(rect, r))) return;
-      placed.push(rect);
-      out.push({
-        dot,
-        x: rect.x + PAD / 2,
-        y,
-        rect,
-        // The line stops at the column's inner edge, not at the text itself,
-        // so it reads as pointing *at* the name rather than striking it.
-        leader: { x1: dot.x, y1: dot.y, x2: edge, y2: y },
+    const build = (side, shift) => {
+      const gapEdge = side === 'right' ? maxX + STACK_GAP : minX - STACK_GAP;
+      /*
+       * The block, held inside the picture. Before this a wide column beside
+       * a cluster near an edge simply ran off it, and the names hanging over
+       * the boundary were clipped mid-word — which on a 375 px phone at full
+       * zoom is most of a saint's name (author, 2026-08-31: two of the five
+       * saints at Constantinople could not be read at any zoom). A stacked
+       * label has a line back to its own dot, so moving it is unambiguous in
+       * a way moving a label that merely sits *beside* its dot would not be.
+       */
+      const left = side === 'right' ? Math.min(gapEdge, w - colW) : gapEdge - colW;
+      const x = Math.max(0, left);
+      const top = cy - ((rows.length - 1) * STACK_STEP) / 2 + shift;
+      return rows.map((dot, i) => {
+        const y = top + i * STACK_STEP;
+        const boxW = widths.get(dot) + PAD;
+        // Right-hand rows run out from the inner edge, left-hand ones back
+        // to it, so every leader line in a column stops at the same x.
+        const inner = side === 'right' ? x : x + colW;
+        return {
+          dot,
+          y,
+          rect: { x: side === 'right' ? x : inner - boxW, y: y - LINE_H / 2, w: boxW, h: LINE_H },
+          // The line stops at the column's inner edge, not at the text
+          // itself, so it reads as pointing *at* the name rather than
+          // striking it.
+          leader: { x1: dot.x, y1: dot.y, x2: inner, y2: y },
+        };
       });
-    });
+    };
+
+    const free = (row) => onScreen(row.rect, w, h) && !placed.some((r) => overlaps(row.rect, r));
+
+    /*
+     * **The whole cluster or nothing, tried in several places first.**
+     * Placing row by row and dropping whatever collided meant a column that
+     * happened to reach a neighbouring cluster's column lost a name outright
+     * — Natalia of Nicomedia, at Constantinople, whose row met the Nicomedia
+     * column's top row by seven pixels. Sliding the column a row or two up or
+     * down clears that, and a leader line means the reader still knows whose
+     * name it is; so the candidates are tried in order and the first that
+     * seats every row wins. Only when none does is a row dropped.
+     */
+    const sides = w - maxX >= minX ? ['right', 'left'] : ['left', 'right'];
+    let seated = null;
+    for (const shift of SHIFTS) {
+      for (const side of sides) {
+        const candidate = build(side, shift);
+        if (candidate.every(free)) {
+          seated = candidate;
+          break;
+        }
+      }
+      if (seated) break;
+    }
+
+    for (const row of seated ?? build(sides[0], 0)) {
+      if (!seated && !free(row)) continue;
+      placed.push(row.rect);
+      out.push({ dot: row.dot, x: row.rect.x + PAD / 2, y: row.y, rect: row.rect, leader: row.leader });
+    }
   }
 
   return out;
