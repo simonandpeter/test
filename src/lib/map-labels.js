@@ -16,13 +16,26 @@
  * Dropping is now the last resort rather than the first answer:
  *
  *   1. **Beside the dot**, right then left, if either side is clear. This is
- *      what a lone dot in open space still gets, and it needs no line.
- *   2. **Stacked with a leader line.** Every dot in a cluster is offered a
- *      row in a column beside that cluster, ordered by the dots' own y so
- *      the lines cross as little as they can, with a line from each dot to
- *      its row. The column goes on whichever side has more room, so a
- *      cluster near the right edge stacks to its left.
- *   3. **Dropped**, only if even the stack cannot place it.
+ *      what a lone dot in open space gets, and it needs no line.
+ *   2. **Stacked with a leader line**, past `leaders` only. Every dot in a
+ *      cluster is offered a row in a column beside that cluster, ordered by
+ *      the dots' own y so the lines cross as little as they can, with a line
+ *      from each dot to its row. The column goes on whichever side has more
+ *      room, so a cluster near the right edge stacks to its left.
+ *   3. **Dropped**, if neither is available.
+ *
+ * **Stacking is off until the reader has zoomed well in** (author,
+ * 2026-08-31, on seeing it: "the name display worked better before.
+ * implement the leader line system only after 29x zoom"). The reason it
+ * reads worse when zoomed out is density: at low zoom nearly every dot is
+ * within `CLUSTER_PX` of another, so almost the whole corpus becomes one or
+ * two clusters, and a column of thirty names with thirty lines fanning back
+ * across the Mediterranean is far harder to read than a handful of names
+ * beside their own dots and the rest left unnamed. Past 29× a cluster is
+ * genuinely a few saints in one town — Nicomedia's martyrs, the Kyiv Caves
+ * pair — which is the case the column was built for and the case where
+ * dropping the names is the worse answer. So the caller passes `leaders`
+ * and this stays a layout decision rather than a zoom one.
  */
 
 /** How far from the dot a label sits when it sits beside it. */
@@ -80,12 +93,16 @@ export function clusterDots(dots, radius = CLUSTER_PX) {
  * px, which is the one thing only a canvas can answer and so is passed in
  * rather than reached for. `w`/`h` are the picture's size.
  *
+ * `leaders` opts into the stacked columns; with it false every dot takes a
+ * side placement or none, which is the behaviour that shipped before the
+ * columns did.
+ *
  * Returns one entry per label actually placed: `{ dot, x, y, rect, leader }`,
  * where `x`/`y` is where to draw the text (left-aligned, vertically centred)
  * and `leader` is `null` or `{ x1, y1, x2, y2 }` — the line from the dot to
  * its label. Nothing here draws; the caller does.
  */
-export function layoutLabels(dots, measure, w, h) {
+export function layoutLabels(dots, measure, w, h, leaders = true) {
   const placed = [];
   const out = [];
 
@@ -101,7 +118,14 @@ export function layoutLabels(dots, measure, w, h) {
     out.push({ dot, x: rect.x + PAD / 2, y: dot.y, rect, leader });
   };
 
-  for (const group of clusterDots(dots)) {
+  /*
+   * With no leader lines there is nothing a cluster buys — every dot is
+   * judged on its own two sides — so the grouping pass is skipped rather
+   * than run and ignored.
+   */
+  const groups = leaders ? clusterDots(dots) : dots.map((d) => [d]);
+
+  for (const group of groups) {
     const widths = new Map(group.map((d) => [d, measure(d.name)]));
 
     /*
@@ -136,6 +160,7 @@ export function layoutLabels(dots, measure, w, h) {
       // Neither side is free: fall through and let it take a leader line
       // rather than going unnamed. If the dot itself is off the picture the
       // stacked box will be too, and it is dropped there instead.
+      if (!leaders) continue;
     }
 
     /*

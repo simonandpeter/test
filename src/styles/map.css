@@ -278,19 +278,52 @@ html[data-route='map'] body {
   gap: var(--space-2);
 }
 
-/* A typed year and its era, where a printed bound used to stand (author,
-   2026-08-31). The number stays narrow — four digits and a spinner — so the
-   rail between the two boxes keeps most of the row. */
+/* Each end of the rail is a fixed-width button that opens a small panel
+   (author, 2026-08-31), where a printed bound used to stand and where a bare
+   number box and select stood for one build. */
 .map-year {
+  position: relative;
   flex: none;
+}
+
+/* **Fixed width, and that is the point of it.** The boxes it replaced sized
+   to their own content, so the rail between them jumped every time a year
+   gained or lost a digit — 66 to 1938 moved the whole track. Wide enough for
+   the longest form the label takes ("1938 BC"), so no year changes it. */
+.map-year-btn {
+  width: 8.5ch;
+  padding: var(--space-1) var(--space-2);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* The panel: the number and the era together, since they are one answer.
+   Above the button rather than below — the timeline is the last row on the
+   page and a panel opening downward would be clipped by the footer. */
+.map-year-pop {
+  position: absolute;
+  bottom: calc(100% + var(--space-1));
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: var(--space-1);
+  padding: var(--space-2);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  /* Opened by the left-hand button it hangs from, so it grows rightward;
+     the right-hand one is flipped below, so neither leaves the window. */
+  left: 0;
+}
+
+.map-year[data-year-box='to'] .map-year-pop {
+  left: auto;
+  right: 0;
 }
 
 .map-year-num {
-  /* Four digits and the padding either side — a year is never wider, and
-     the rail between the two boxes is what this row is actually for. */
+  /* Four digits and the padding either side — a year is never wider. */
   width: 7ch;
   padding: var(--space-1);
   font-variant-numeric: tabular-nums;

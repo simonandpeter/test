@@ -87,6 +87,14 @@ let kind = DEFAULT_KIND;
 /** The live resize listener, so `destroy` can take it off again. */
 let onResize = null;
 
+/**
+ * Everything else this view attached outside its own root — anything on
+ * `document` or `window` outlives the element the router throws away, so it
+ * has to be taken off by hand or it is a leak per navigation rather than
+ * per page. `destroy` drains this.
+ */
+let cleanups = [];
+
 /*
  * The Index's filter set lived here for one day (Amendment 76, 2026-08-30)
  * and went with the reading it stood in when the author asked for the map
@@ -109,6 +117,22 @@ let drawnDots = [];
 
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
+
+/**
+ * The threshold past which a crowded cluster's names are stacked into a
+ * column with leader lines rather than simply placed beside their dots or
+ * dropped (author, 2026-08-31: "implement the leader line system only after
+ * 29x zoom" — the columns had shipped at every zoom the labels themselves
+ * appear at, and read worse than what they replaced).
+ *
+ * Density is why: at 3× nearly every located dot is within `CLUSTER_PX` of
+ * another, so the whole corpus collapses into one or two clusters and the
+ * column becomes thirty names with thirty lines fanning back across the
+ * Mediterranean. Past 29× a cluster is what the column was built for — a
+ * few saints who share one town, Nicomedia's martyrs or the Kyiv Caves
+ * pair — and there dropping their names is the worse answer.
+ */
+const LEADERS_AT = 29;
 
 /**
  * Each land/lake/river shape's own lon/lat box, cached against the shape
@@ -589,25 +613,40 @@ export function render(el, { data, router }) {
  */
 function timelineMarkup(M, bounds) {
   /*
-   * Each end is a typed year and an era (author, 2026-08-31: "Add the
-   * ability to type the years in on the left and right of the timeline,
-   * with a selection for BC / AD"), where a printed bound used to stand.
+   * Each end is a **fixed-width button that opens a small panel** (author,
+   * 2026-08-31: "make the start and end date a button of fixed width and
+   * make the AD BC selector part of the pop up from the button if you want
+   * to type it in instead of drag the slider"), where a printed bound used
+   * to stand and where a bare number box and select stood for one build.
+   *
+   * The button is the resting state and shows the year as a reader reads it
+   * — "431 BC", "1917 AD". Typing is the *other* way in, behind a press,
+   * because the two handles are the primary control and a pair of always-open
+   * number boxes gave a control the reader mostly does not want the same
+   * weight as the rail they mostly do. Fixed width so the rail between the
+   * two ends does not jump every time a year gains or loses a digit — which
+   * it did, visibly, while the boxes sized to their own content.
+   *
    * The number the reader types is always positive and the era carries the
    * sign, because "431 BC" is a year a reader can read and "-431" is one
-   * they have to decode — `yearBox` below is the one place that conversion
-   * happens in either direction.
+   * they have to decode — `yearBox` and `yearLabel` are the one place that
+   * conversion happens in either direction.
    */
   const yearBox = (side, label, value) => {
     const bc = value < 0;
     return `
       <div class="map-year" data-year-box="${side}">
-        <input type="number" class="map-year-num utility" data-year-num="${side}"
-          value="${Math.abs(value)}" min="1" step="1" inputmode="numeric"
-          aria-label="${esc(label)}" />
-        <select class="map-year-era utility" data-year-era="${side}" aria-label="${esc(M.era)}">
-          <option value="ad"${bc ? '' : ' selected'}>${esc(M.eraAD)}</option>
-          <option value="bc"${bc ? ' selected' : ''}>${esc(M.eraBC)}</option>
-        </select>
+        <button type="button" class="map-year-btn utility" data-year-btn="${side}"
+          aria-expanded="false" aria-label="${esc(label)}">${esc(yearLabel(value, M))}</button>
+        <div class="map-year-pop" data-year-pop="${side}" hidden>
+          <input type="number" class="map-year-num utility" data-year-num="${side}"
+            value="${Math.abs(value)}" min="1" step="1" inputmode="numeric"
+            aria-label="${esc(label)}" />
+          <select class="map-year-era utility" data-year-era="${side}" aria-label="${esc(M.era)}">
+            <option value="ad"${bc ? '' : ' selected'}>${esc(M.eraAD)}</option>
+            <option value="bc"${bc ? ' selected' : ''}>${esc(M.eraBC)}</option>
+          </select>
+        </div>
       </div>`;
   };
 
@@ -671,13 +710,76 @@ function wireTimeline(el, withPlace, bounds, refresh, inTimeline) {
   const numOf = (side) => el.querySelector(`[data-year-num="${side}"]`);
   const eraOf = (side) => el.querySelector(`[data-year-era="${side}"]`);
 
-  /** The typed pair, written back from whatever the range handles now say. */
+  const btnOf = (side) => el.querySelector(`[data-year-btn="${side}"]`);
+  const popOf = (side) => el.querySelector(`[data-year-pop="${side}"]`);
+
+  /** Both ends, written back from whatever the range handles now say — the
+   *  button's printed year as well as the fields behind it, so opening the
+   *  panel after a drag shows the year the rail actually holds. */
   const paintYearBoxes = () => {
     for (const [side, year] of [['from', dateFrom], ['to', dateTo]]) {
       numOf(side).value = String(Math.abs(year));
       eraOf(side).value = year < 0 ? 'bc' : 'ad';
+      btnOf(side).textContent = yearLabel(year, STRINGS.map);
     }
   };
+
+  /*
+   * One panel open at a time, and a press anywhere else closes it — the
+   * same bargain the Daily page's fast bubble keeps. Closing on `Escape`
+   * returns focus to the button that opened it, so the keyboard is not
+   * stranded in a panel that has just gone.
+   */
+  const closePops = (except) => {
+    for (const side of ['from', 'to']) {
+      if (side === except) continue;
+      popOf(side).hidden = true;
+      btnOf(side).setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  for (const side of ['from', 'to']) {
+    btnOf(side).addEventListener('click', () => {
+      const pop = popOf(side);
+      const opening = pop.hidden;
+      closePops(opening ? side : null);
+      pop.hidden = !opening;
+      btnOf(side).setAttribute('aria-expanded', String(opening));
+      if (opening) {
+        numOf(side).focus();
+        numOf(side).select();
+      }
+    });
+    popOf(side).addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        popOf(side).hidden = true;
+        btnOf(side).setAttribute('aria-expanded', 'false');
+        btnOf(side).focus();
+      } else if (e.key === 'Enter') {
+        // Enter is "I have finished typing", which `change` alone would not
+        // hear until blur — so it commits and puts the panel away.
+        e.preventDefault();
+        numOf(side).blur();
+        popOf(side).hidden = true;
+        btnOf(side).setAttribute('aria-expanded', 'false');
+        btnOf(side).focus();
+      }
+    });
+  }
+
+  /*
+   * A press anywhere but inside a year control closes both panels. On
+   * `document` rather than on the view root, because the header above the
+   * stage is outside it and a reader who reaches for the language button
+   * with a panel open should not have to press twice — and registered for
+   * teardown, since a listener on `document` outlives the view that added
+   * it and would otherwise be a leak per navigation.
+   */
+  const onDocDown = (e) => {
+    if (!e.target.closest?.('.map-year')) closePops(null);
+  };
+  document.addEventListener('pointerdown', onDocDown);
+  cleanups.push(() => document.removeEventListener('pointerdown', onDocDown));
 
   const paint = () => {
     const span = bounds.max - bounds.min || 1;
@@ -1056,6 +1158,8 @@ function dotAt(canvas, e) {
 export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
+  for (const off of cleanups) off();
+  cleanups = [];
   if (fadeFrame !== null) {
     cancelAnimationFrame(fadeFrame);
     fadeFrame = null;
@@ -1594,7 +1698,9 @@ function paintCanvas(canvas, cards) {
    */
   const labelsEnabled = view.scale >= LABELS_AT;
   ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
-  const laid = labelsEnabled ? layoutLabels(drawnDots, (name) => ctx.measureText(name).width, w, h) : [];
+  const laid = labelsEnabled
+    ? layoutLabels(drawnDots, (name) => ctx.measureText(name).width, w, h, view.scale >= LEADERS_AT)
+    : [];
   const placedFor = new Map(laid.map((l) => [l.dot.slug, l]));
 
   // One easing step per saint, drawn at whatever opacity it has reached —

@@ -116,7 +116,15 @@ it single-linkage-clusters the dots, gives a lone dot the space beside it,
 and stacks a *whole* cluster into a column with a leader line each — deciding
 per cluster rather than per dot, because trying side placements first let one
 label take the space the column needed and dropped two of five (a test caught
-that, not a screenshot). They fade in and out over 300ms rather than popping
+that, not a screenshot). **The columns only run past `LEADERS_AT` (29×)**;
+below it `layoutLabels` is called with `leaders: false` and behaves as the
+pass that shipped before them — beside the dot or not at all. The author
+asked for that on seeing the columns everywhere ("the name display worked
+better before"), and density is why: at 3× nearly every dot is within
+`CLUSTER_PX` of another, so the corpus collapses into one or two clusters
+and the column becomes thirty names with thirty lines fanning across the
+Mediterranean. Past 29× a cluster is a few saints in one town, which is the
+case the column was built for. They fade in and out over 300ms rather than popping
 (`stepLabelOpacity`, `labelState`, `labelLastAt`) — which label wins can flip
 frame to frame during a pan, and popping read as flicker where easing reads
 as the map settling. **A dot is a door** — a press under 5 px of travel opens
@@ -174,13 +182,20 @@ to judge them against — so they always show at full strength.
 persisted. The highlighted span between the two handles is a third grab
 target (`wireTimeline`, on `.map-timeline-fill`): dragging it slides both
 handles together and holds their width, clamped as one unit against either
-bound. **Each end is also a typed year plus a BC/AD select** (2026-08-31):
-the number is always positive and the era carries the sign, `change` rather
-than `input` so the ends do not swap mid-keystroke, and typing an earlier
-year on the right **swaps the two ends** rather than refusing — the same
-sorted-pair rule `commit` has always applied to the handles. Both are
-clamped to the corpus's own span, since the rail cannot represent a year
-outside it. **`Whole span` became a preset list** (`data/periods.js`,
+bound. **Each end is a fixed-width button that opens a panel** carrying the
+number and a BC/AD select (2026-08-31; it was a bare box and select for one
+build, and the author asked for the button). Fixed width is the point:
+sized to content, the rail between the two ends jumped every time a year
+gained a digit. The button prints the year as read — `431 BC`, `1917 AD` —
+the typed number is always positive and the era carries the sign, and
+`change` rather than `input` means the ends do not swap mid-keystroke.
+Typing an earlier year on the right **swaps the two ends** rather than
+refusing — the same sorted-pair rule `commit` has always applied to the
+handles. Both are clamped to the corpus's own span, since the rail cannot
+represent a year outside it (so a BC year currently clamps to 66, the
+earliest located saint — the control is right, the corpus has no ground
+below it yet). The outside-press listener that closes the panels is on
+`document` and so is registered in `cleanups`, which `destroy` drains. **`Whole span` became a preset list** (`data/periods.js`,
 `.map-timeline-preset`) and survives as that list's own first entry: a
 `period` is used as written, an `event` is read as its year ±
 `EVENT_MARGIN` (50, the author's number, applied in one place).

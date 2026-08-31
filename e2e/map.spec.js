@@ -533,12 +533,12 @@ test("the timeline spans the located corpus's own years, unfiltered at rest", as
   await expect(timeline).toBeVisible();
 
   /*
-   * The printed bounds became typed year boxes (author, 2026-08-31), so the
-   * range's own ends are read from those rather than from two spans — and
+   * The printed bounds became year buttons (author, 2026-08-31), so the
+   * range's own ends are read off those rather than from two spans — and
    * they are the same two numbers the readout prints, which is the
    * agreement worth checking.
    */
-  const boxes = await page.locator('[data-year-num]').evaluateAll((els) => els.map((e) => Number(e.value)));
+  const boxes = await yearButtons(page);
   expect(boxes).toHaveLength(2);
   expect(boxes[0]).toBeLessThan(boxes[1]);
 
@@ -576,8 +576,8 @@ test('dragging a handle narrows the range, and Whole span undoes it', async ({ p
 
   const after = await timelineReadout(page);
   expect(after.to).toBe(after.from); // squeezed to a single year
-  // The typed boxes followed the handle rather than keeping a stale year.
-  const boxes = await page.locator('[data-year-num]').evaluateAll((els) => els.map((e) => Number(e.value)));
+  // The year buttons followed the handle rather than keeping a stale year.
+  const boxes = await yearButtons(page);
   expect(boxes[0]).toBe(after.from);
   expect(boxes[1]).toBe(after.to);
 
@@ -789,6 +789,31 @@ test('two saints who share an exact spot get their own dot each, not one stacked
 const searchBox = (page) => page.locator('[data-search-input]');
 const searchRows = (page) => page.locator('.map-search-row');
 
+/**
+ * Sets one end of the timeline the way a reader does since 2026-08-31: press
+ * the fixed-width button, type into the panel it opens, and press Enter —
+ * which commits and puts the panel away. `era` is the panel's own select,
+ * left alone unless a test is about BC.
+ */
+const typeYear = async (page, side, year, era) => {
+  await page.locator(`[data-year-btn="${side}"]`).click();
+  await expect(page.locator(`[data-year-pop="${side}"]`)).toBeVisible();
+  if (era) await page.locator(`[data-year-era="${side}"]`).selectOption(era);
+  const num = page.locator(`[data-year-num="${side}"]`);
+  await num.fill(year);
+  await num.press('Enter');
+  await expect(page.locator(`[data-year-pop="${side}"]`)).toBeHidden();
+};
+
+/** Both ends as the buttons print them, signed the way the readout is. */
+const yearButtons = (page) =>
+  page.locator('[data-year-btn]').evaluateAll((els) =>
+    els.map((e) => {
+      const [n, era] = e.textContent.trim().split(/\s+/);
+      return era === 'BC' ? -Number(n) : Number(n);
+    }),
+  );
+
 test('the search finds a place and flies the map to it', async ({ page }) => {
   /*
    * Author, 2026-08-31: "Add a search bar that takes you to certain locations
@@ -852,23 +877,70 @@ test('the two ends swap themselves when an earlier year is typed on the right', 
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
 
-  const from = page.locator('[data-year-num="from"]');
-  const to = page.locator('[data-year-num="to"]');
-
-  await from.fill('1000');
-  await from.press('Enter');
+  // Typing is behind the button now (author, same day: "make the start and
+  // end date a button of fixed width and make the AD BC selector part of
+  // the pop up from the button"), so each edit opens its own panel first.
+  await typeYear(page, 'from', '1000');
   await expect.poll(async () => (await timelineReadout(page)).from).toBe(1000);
 
-  // Now the right-hand box is given a year earlier than the left-hand one.
-  await to.fill('500');
-  await to.press('Enter');
+  // Now the right-hand end is given a year earlier than the left-hand one.
+  await typeYear(page, 'to', '500');
 
   const after = await timelineReadout(page);
   expect(after.from, 'the ends did not swap').toBe(500);
   expect(after.to).toBe(1000);
-  // And the boxes themselves show the swapped pair, not what was typed.
-  await expect(from).toHaveValue('500');
-  await expect(to).toHaveValue('1000');
+  // And both buttons print the swapped pair, not what was typed into them.
+  await expect(page.locator('[data-year-btn="from"]')).toHaveText('500 AD');
+  await expect(page.locator('[data-year-btn="to"]')).toHaveText('1000 AD');
+});
+
+test('the year buttons hold one width whatever year they show', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "make the start and end date a button of fixed
+   * width". The boxes this replaced sized to their own content, so the rail
+   * between them jumped every time a year gained or lost a digit — which is
+   * the thing a fixed width is for, and the thing worth measuring.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const from = page.locator('[data-year-btn="from"]');
+  const to = page.locator('[data-year-btn="to"]');
+
+  /*
+   * At rest the two ends already differ in digit count — the corpus runs 66
+   * to 1938 — so they are the pair to compare, and no interaction is needed
+   * to make the point.
+   */
+  await expect(from).toHaveText('66 AD');
+  await expect(to).toHaveText('1938 AD');
+  const narrow = (await from.boundingBox()).width;
+  const wide = (await to.boundingBox()).width;
+  expect(wide, 'a four-digit year made its button wider than a two-digit one').toBeCloseTo(narrow, 0);
+
+  // And it holds when a year actually changes, which is when the rail used
+  // to jump. 1500 is inside the corpus's own span, so it is not clamped.
+  await typeYear(page, 'from', '1500');
+  await expect(from).toHaveText('1500 AD');
+  expect((await from.boundingBox()).width, 'the button resized to its year').toBeCloseTo(narrow, 0);
+});
+
+test('the year panel carries the BC/AD choice, and a press elsewhere puts it away', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const btn = page.locator('[data-year-btn="from"]');
+  const pop = page.locator('[data-year-pop="from"]');
+
+  await expect(pop).toBeHidden();
+  await expect(btn).toHaveAttribute('aria-expanded', 'false');
+
+  await btn.click();
+  await expect(pop).toBeVisible();
+  await expect(btn).toHaveAttribute('aria-expanded', 'true');
+  // The era lives in the panel rather than beside the rail.
+  await expect(pop.locator('[data-year-era="from"]')).toBeVisible();
+
+  // A press on the picture is a press elsewhere.
+  await page.locator('[data-map]').click({ position: { x: 10, y: 10 } });
+  await expect(pop).toBeHidden();
+  await expect(btn).toHaveAttribute('aria-expanded', 'false');
 });
 
 test('a preset span sets both ends, and an event becomes its own window', async ({ page }) => {

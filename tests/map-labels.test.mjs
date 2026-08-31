@@ -109,6 +109,35 @@ test('a dot fully off the picture is not named at all', () => {
   assert.equal(layoutLabels(dots, measure, W, H).length, 0);
 });
 
+test('with leaders off, a crowded cluster falls back to sides-or-nothing', () => {
+  /*
+   * Author, 2026-08-31: "implement the leader line system only after 29x
+   * zoom." Below that threshold `views/map.js` passes `leaders: false` and
+   * this must behave exactly as the pass that shipped before the columns
+   * did — some names beside their dots, the rest dropped, and *no lines*,
+   * because at low zoom nearly every dot clusters with another and thirty
+   * leader lines across the Mediterranean read worse than thirty missing
+   * names.
+   */
+  const dots = [
+    { x: 400, y: 300, name: 'Adrian of Nicomedia' },
+    { x: 406, y: 306, name: 'Anicetas of Nicomedia' },
+    { x: 398, y: 312, name: 'Photius of Nicomedia' },
+    { x: 410, y: 296, name: 'Paul of Thebes' },
+    { x: 394, y: 302, name: 'Thecla of Gaza' },
+  ];
+  const out = layoutLabels(dots, measure, W, H, false);
+  assert.ok(out.length < dots.length, 'nothing was dropped, so the crowding was not real');
+  assert.ok(out.length > 0, 'every name was dropped, which is worse than the columns');
+  for (const label of out) assert.equal(label.leader, null, 'a leader line was drawn with leaders off');
+});
+
+test('with leaders off a lone dot is still named, exactly as before', () => {
+  const out = layoutLabels([{ x: 100, y: 100, name: 'Anthony' }], measure, W, H, false);
+  assert.equal(out.length, 1);
+  assert.equal(out[0].leader, null);
+});
+
 test('clustering is single-linkage, so a diagonal chain is one group', () => {
   // Each 20px from the next: no pair is far apart, but the ends are 60 apart.
   const chain = [
