@@ -2,7 +2,7 @@ import { PERIODS, spanOf } from '../data/periods.js';
 import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { layoutLabels } from '../lib/map-labels.js';
-import { lifeBounds, trackAt } from '../lib/map-track.js';
+import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
 import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
@@ -290,6 +290,68 @@ function stepLabelOpacity(slug, wanted, now) {
  *  label has reached its target — nothing runs while the map is at rest. */
 let fadeFrame = null;
 
+/**
+ * Where each tracked saint's dot currently *is* along their own track, by
+ * slug, easing toward where the timeline says they should be.
+ *
+ * **The rail is far finer than the control that scrubs it.** The corpus spans
+ * 1872 years and the rail is a few hundred pixels, so one pixel of drag is
+ * six years — more than Moses the Hungarian's whole flight from Poland. Read
+ * literally that is a dot that teleports across half of Europe between two
+ * adjacent pixels, which is what the author saw ("make sure he goes a bit
+ * more smoothly across the trail"). Easing decouples the two: the timeline
+ * says where he belongs, and the dot takes a moment to get there, along the
+ * path rather than across it.
+ *
+ * **Only along a track.** A saint without one still jumps between the kinds
+ * of place they carry — a birthplace to a see — and easing *that* would draw
+ * a journey out of two facts that are not a journey.
+ */
+const railAt = new Map();
+
+/**
+ * How fast the dot closes on where the timeline puts it: the fraction of the
+ * remaining distance it covers in a millisecond is `1/RAIL_GLIDE_MS`, so it
+ * is quick where the gap is large and settles without overshooting.
+ */
+const RAIL_GLIDE_MS = 260;
+
+/** Close enough to be there. Without it the exponential ease never quite
+ *  arrives, and the map would schedule frames forever. */
+const RAIL_SETTLED = 0.002;
+
+/**
+ * Advances one saint's position along their track toward `wanted`, and
+ * returns where they now are. Under reduced motion they are simply there —
+ * the house rule is that reduced motion removes the animation, and a dot
+ * that never arrived would be the control failing rather than the motion
+ * being spared.
+ */
+function glideTo(slug, wanted, now) {
+  let state = railAt.get(slug);
+  if (!state || reducedMotion()) {
+    // First sight of this saint is not a journey from wherever the last one
+    // stood: they start where the timeline already puts them.
+    state = { value: wanted, lastT: now };
+    railAt.set(slug, state);
+    return wanted;
+  }
+  /*
+   * **Capped, because the clock between two paints is not the clock between
+   * two frames.** The map paints only when something happens, so the gap
+   * since this saint was last stepped can be the whole time the reader spent
+   * reading — and an uncapped `dt` then closes the entire distance in one
+   * step, which is the jump this exists to remove. Two frames' worth is the
+   * most any single step may take.
+   */
+  const dt = Math.min(now - state.lastT, 32);
+  state.lastT = now;
+  const gap = wanted - state.value;
+  if (Math.abs(gap) < RAIL_SETTLED) state.value = wanted;
+  else state.value += gap * Math.min(1, dt / RAIL_GLIDE_MS);
+  return state.value;
+}
+
 /*
  * Where the map is looking. Reset on every render rather than held across
  * visits: the kind selector holds for the visit because it is a question the
@@ -432,7 +494,14 @@ function pointAt(card, from, to) {
    */
   const state = born <= to && died >= from ? 'live' : to < born ? 'future' : 'past';
 
-  if (track.length) return { where: trackAt(track, to), state, track };
+  if (track.length) {
+    // The year's own place on the track, as a number rather than a position:
+    // the drawing pass eases *along* the path toward it (`glideTo`), and a
+    // position eased directly would cut across the bends instead of taking
+    // them.
+    const progress = progressAt(track, to);
+    return { where: pointOn(track, progress), state, track, progress };
+  }
 
   if (to < born) {
     // Not yet born: their birthplace is the only honest dot, and it marks a
@@ -1386,8 +1455,11 @@ export function destroy() {
     fadeFrame = null;
   }
   // A fresh visit starts every label unseen rather than resuming an old
-  // visit's opacities on saints a new render has not drawn yet.
+  // visit's opacities on saints a new render has not drawn yet — and every
+  // tracked dot standing where its year says rather than gliding there from
+  // wherever the last visit's timeline had left it.
   labelState.clear();
+  railAt.clear();
 }
 
 /**
@@ -1794,6 +1866,8 @@ function paintCanvas(canvas, cards) {
    */
   const onScreen = [];
   const rails = [];
+  const gliding = performance.now();
+  let stillGliding = false;
   for (const card of cards) {
     const at = pointAt(card, dateFrom, dateTo);
     if (!at) continue;
@@ -1802,12 +1876,24 @@ function paintCanvas(canvas, cards) {
     // would be a second, competing kind of mark nobody asked a question to
     // get. `release` hides it again by clearing `selected`.
     if (at.track && card.slug === selected) rails.push({ track: at.track, state: at.state });
-    const p = place(at.where.lon, at.where.lat, frame);
+    /*
+     * A tracked saint is drawn where they have *glided* to, not where the
+     * year says outright — see `railAt`. Everyone else is drawn where
+     * `pointAt` put them, because a saint with no track does not travel
+     * between their own places, they are simply recorded at each of them.
+     */
+    let where = at.where;
+    if (at.track) {
+      const eased = glideTo(card.slug, at.progress, gliding);
+      if (eased !== at.progress) stillGliding = true;
+      where = pointOn(at.track, eased);
+    }
+    const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
-    onScreen.push({ card, where: at.where, state: at.state, x, y });
+    onScreen.push({ card, where, state: at.state, x, y });
   }
 
   /*
@@ -1825,7 +1911,12 @@ function paintCanvas(canvas, cards) {
     ctx.lineWidth = 1;
     ctx.setLineDash([4, 4]);
     ctx.beginPath();
-    rail.track.forEach((stop, i) => {
+    // The wandering curve, not the straight line between the stays
+    // (`lib/map-track.js`, author 2026-08-31: "make the rail a bit more
+    // twisty imitating a more messy realistic path between places"). It is
+    // sampled in lon/lat rather than in pixels, so the same road bends the
+    // same way at every zoom — and it is the same curve the dot rides.
+    trackPath(rail.track).forEach((stop, i) => {
       const p = place(stop.lon, stop.lat, frame);
       if (i === 0) ctx.moveTo(p.x * w, p.y * h);
       else ctx.lineTo(p.x * w, p.y * h);
@@ -2048,7 +2139,7 @@ function paintCanvas(canvas, cards) {
    * an unrelated reason mid-fade does not end up with two of these racing.
    */
   const stillFading = [...labelState.values()].some((s) => s.value !== s.target);
-  if (stillFading) {
+  if (stillFading || stillGliding) {
     fadeFrame = requestAnimationFrame(() => {
       fadeFrame = null;
       if (canvas.isConnected) paintCanvas(canvas, cards);

@@ -89,11 +89,11 @@
     {
       "place": "Hungary",
       "from": null,
-      "to": 1015,
+      "to": 1000,
       "lat": 47.1625,
       "lon": 19.5033,
       "uncertainty_km": 300,
-      "note": "Hungarian by birth, and that is the whole of what the sources say about where. Neither the town nor the year he left is recorded; he was already in Prince Boris's service in Rus' by 1015, so the departure is drawn as arriving at Kyiv in that year rather than at an invented earlier one."
+      "note": "Hungarian by birth, and that is the whole of what the sources say about where. Neither the town nor the year he left is recorded; 1000 is not a departure but the latest year his own birth interval allows, and the only bound this corpus can state about him before 1015. The crossing to Rus' is drawn over the unrecorded years that follow it."
     },
     {
       "place": "Kyiv",
@@ -102,7 +102,7 @@
       "lat": 50.4501,
       "lon": 30.5234,
       "uncertainty_km": 15,
-      "note": "After Boris was killed on the Alta in 1015 he fled to Kyiv and hid with Predslava, sister of Prince Yaroslav."
+      "note": "He was already in Prince Boris's service before this, for a number of years no source gives - and the accounts differ on where, the fuller Paterikon summary putting the brothers at Rostov and the shorter lives calling Boris prince of Kyiv. What they agree on is 1015: Boris was killed on the Alta, and Moses fled to Kyiv and hid with Predslava, sister of Yaroslav, for three years."
     },
     {
       "place": "Poland",
@@ -111,7 +111,7 @@
       "lat": 52.0693,
       "lon": 19.4803,
       "uncertainty_km": 300,
-      "note": "Carried off a captive when Bolesław I took Kyiv in 1018, and held about six years. No source names the town; he was freed in the upheaval that followed Bolesław's death in 1025."
+      "note": "Carried off a captive when Bolesław I took Kyiv in 1018. No source names the town, and the accounts give the ordeal as five years or six; he was freed in the upheaval that followed Bolesław's death in 1025."
     },
     {
       "place": "Monastery of the Caves, Kyiv",
@@ -120,7 +120,7 @@
       "lat": 50.4344,
       "lon": 30.5578,
       "uncertainty_km": 1,
-      "note": "The life gives his time at the Caves as ten years, and his death as about 1043, which puts the arrival near 1033 — eight years after the release. Where he was in between is not accounted for by any source read here, and the map draws that gap as the journey back rather than pretending to a year."
+      "note": "The lives give his time at the Caves as ten years, and his death as about 1043, which puts the arrival near 1033 - eight years after the release. Where he was in between is not accounted for by any source read here, and the map draws that gap as the journey back rather than pretending to a year."
     }
   ],
   "historicity": "traditional",

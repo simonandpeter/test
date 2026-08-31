@@ -41,7 +41,9 @@ you inferred, and keep them apart.
   stands, and the timeline **dims** what falls outside its range rather
   than removing it (2026-08-31). **One of the 69 also carries a `track`** —
   Moses the Hungarian, four dated stays from Hungary to the Kyiv Caves
-  (Amendment 89) — and his dot walks it as the handle crosses his life.
+  (Amendments 89 and 91) — and his dot walks it as the handle crosses his
+  life, gliding rather than snapping and along a wandering road rather than
+  a straight one.
   That is a new shape of data, not a new saint: `locations` is unordered
   kinds with no dates, a `track` is an ordered journey with years on it,
   and the second could not be built out of the first. A press on a dot or a
@@ -50,7 +52,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **257 unit, 712 browser** across two projects. `npm run test:all`.
+- **263 unit, 714 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.

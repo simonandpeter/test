@@ -127,15 +127,37 @@ faintly, so the room goes to the saints the reader's range actually reaches.
 second half of the author's "tracker", and it needed data before it needed
 code: a `track` is an *ordered, dated* list of stays in the saint's own
 `saint.json` (`schema/saint.schema.json`'s `waypoint`), which `locations` —
-unordered kinds with no dates at all — could never be. `trackAt`
-(`lib/map-track.js`, pure, unit-tested) returns the stay's coordinates while
-the year is inside it and a point along the straight line between two stays
-while it is in the gap; `paintCanvas` draws the whole track as a dashed rail
-under the dots. **The legs are drawn, not sourced**, and each waypoint's own
-`note` says so — Moses the Hungarian, the one saint who carries a track today
-(Hungary → Kyiv 1015 → Poland 1018 → the Caves ~1033), was freed in 1025 and
-at the Caves for the ten years before a death in about 1043, and the eight
-years between are what the dot is seen crossing. `build-manifest.mjs` carries
+unordered kinds with no dates at all — could never be. `lib/map-track.js` (pure, unit-tested) is the whole reading: `progressAt`
+turns a year into a place on the track — `i` is "at stay `i`", `i + f` is
+"`f` of the way along the leg out of it" — and `pointOn` turns that into a
+position. **The legs wander rather than running straight** (`pointOnLeg`,
+`WANDER` a sixteenth of the leg, 2026-08-31): nobody recorded the road, and a
+straight line says so no better than a curve while also reading as a claim to
+have flown. The wobble is two harmonics under a `sin(pi t)` envelope, seeded
+from the leg's own endpoints so it is the same road every frame, and it is
+computed in lon/lat so it bends the same way at every zoom. `trackPath` is
+what `paintCanvas` strokes, and `pointOn` is where the dot rides — the same
+curve, not two that meet at the ends.
+
+**The dot glides toward its year rather than snapping to it** (`railAt`,
+`glideTo`). The rail is far coarser than the road it scrubs: 1872 years over
+a few hundred pixels is six years a pixel, more than Moses's whole flight
+from Poland, so one pixel of drag was a dot teleporting across Europe. Easing
+runs in *progress* space, not position, or it would cut the corners instead
+of taking them; `dt` is capped at two frames because the map paints only when
+something happens and an uncapped step closes the whole gap at once. Only a
+saint with a track eases — a saint without one does not travel between their
+own places, they are simply recorded at each. Reduced motion arrives instead.
+
+**The legs are drawn, not sourced**, and each waypoint's own `note` says so.
+Moses the Hungarian is the one saint who carries a track today: Hungary until
+1000 (his birth interval's own latest, the only bound the corpus states about
+him before 1015 — the year he left is unrecorded and the crossing to Rus' is
+drawn over the years that follow), Kyiv 1015–1018 (the three years of hiding
+with Predslava after Boris was killed on the Alta), Poland 1018–1025, the
+Caves from about 1033. He was freed in 1025 and at the Caves for the ten
+years before a death in about 1043, and the eight years between are what the
+dot is seen crossing. `build-manifest.mjs` carries
 coordinates and years into the card and leaves the place names and notes in
 the folder, the same rule `locations` keeps.
 
@@ -417,8 +439,8 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~15s, 257).
-- Browser: `e2e/`, one file per surface, 712 across two projects —
+- Unit: `tests/*.test.mjs`, `npm test` (~15s, 263).
+- Browser: `e2e/`, one file per surface, 714 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —

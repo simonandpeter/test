@@ -1230,17 +1230,35 @@ test('a saint with a dated track moves along it as the timeline crosses his life
   const whereIsHe = async () =>
     JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
 
+  /**
+   * Where he comes to rest, not where he is passing through. The dot eases
+   * along the track when the year changes (`railAt`, 2026-08-31), so a read
+   * taken the instant the year lands is a point on the road rather than the
+   * place — polling for two identical answers waits that out without needing
+   * the page to publish a "still moving" flag it would otherwise have no
+   * reader for.
+   */
+  const settled = async () => {
+    let last = null;
+    for (let i = 0; i < 60; i++) {
+      const now = await whereIsHe();
+      if (last && now && last.x === now.x && last.y === now.y) return now;
+      last = now;
+      await page.waitForTimeout(50);
+    }
+    throw new Error('his dot never stopped moving');
+  };
+
   const at = {};
   for (const year of ['1010', '1016', '1022', '1029', '1040']) {
     await typeYear(page, 'to', year);
-    await expect.poll(async () => Boolean(await whereIsHe())).toBe(true);
-    at[year] = await whereIsHe();
+    at[year] = await settled();
   }
 
   const apart = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
-  // Hungary, then Kyiv, then Poland: three different places, not one dot
-  // standing still while the years go by.
-  expect(apart(at['1010'], at['1016']), 'he never left Hungary').toBeGreaterThan(5);
+  // The crossing out of Hungary, then Kyiv, then Poland: three different
+  // places, not one dot standing still while the years go by.
+  expect(apart(at['1010'], at['1016']), 'he never reached Kyiv').toBeGreaterThan(5);
   expect(apart(at['1016'], at['1022']), 'he was never carried to Poland').toBeGreaterThan(5);
   // And the return is walked rather than jumped: 1029 sits in the gap the
   // sources leave between the release and the Caves, so it is neither end.
@@ -1452,4 +1470,42 @@ test('a name is a press target, not only the dot under it', async ({ page }) => 
    */
   await pressAt(page, onName.x, onName.y);
   await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+});
+
+test('the dot slides along the track rather than jumping when the year leaps', async ({ page }) => {
+  /*
+   * Author, 2026-08-31: "make sure he goes a bit more smoothly across the
+   * trail." The rail is far coarser than the road it scrubs — the corpus
+   * spans 1872 years across a few hundred pixels, so one pixel of drag is
+   * six years, more than Moses's whole flight from Poland. Read literally
+   * that is a dot teleporting across half of Europe between two adjacent
+   * pixels. `railAt` eases the drawn position toward the year's own, so a
+   * leap in years is a glide on the picture.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const whereIsHe = async () =>
+    JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
+
+  // Park him at the Caves, where the whole span already leaves him.
+  const caves = await whereIsHe();
+  expect(caves, 'premise: his dot is not on the picture').toBeTruthy();
+
+  /*
+   * Now ask for a year before he was ever in Rus'. Straight away — inside
+   * the first frames after the change — he must be neither where he was nor
+   * where he is going, which is what "sliding" means and what a jump could
+   * never produce.
+   */
+  await typeYear(page, 'to', '1001');
+  const seen = [];
+  for (let i = 0; i < 8; i++) {
+    seen.push(await whereIsHe());
+    await page.waitForTimeout(30);
+  }
+  const moved = seen.filter(Boolean);
+  const distinct = new Set(moved.map((d) => `${d.x},${d.y}`));
+  expect(distinct.size, 'he arrived in one step, so nothing slid').toBeGreaterThan(2);
 });
