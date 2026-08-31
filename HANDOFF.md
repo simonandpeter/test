@@ -39,7 +39,9 @@ you inferred, and keep them apart.
   The map draws **one dot per saint**, not one per point: `pointAt` picks
   which of a saint's places to show from where the timeline's upper handle
   stands, and the timeline **dims** what falls outside its range rather
-  than removing it (2026-08-31). **One of the 69 also carries a `track`** —
+  than removing it (2026-08-31). **Since 2026-09-01 the dots only move when
+  the reader ticks `Movement`**, and a play button beside that box walks the
+  span at a year a second. **One of the 69 also carries a `track`** —
   Moses the Hungarian, four dated stays from Hungary to the Kyiv Caves
   (Amendments 89 and 91) — and his dot walks it as the handle crosses his
   life, gliding rather than snapping and along a wandering road rather than
@@ -52,7 +54,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **263 unit, 714 browser** across two projects. `npm run test:all`.
+- **263 unit, 724 browser** across two projects. `npm run test:all`.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.

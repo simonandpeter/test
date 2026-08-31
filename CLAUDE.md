@@ -97,10 +97,29 @@ courtesy (`about.sourcing.map`). What is left of that strip is
 `.map-note` — a box floating on the picture, `hidden` until the coastline
 *fails* to load, so it costs the map no height at all on an ordinary visit.
 
-**One dot per saint**, the *kind* of place chosen by where the timeline's upper handle
-stands (`pointAt`, 2026-08-31), replacing the four kind buttons: past the
-death year it is the relics or death place, during the life a see or
-birthplace, before the birth the birthplace. `pointAt` also returns the
+**One dot per saint, and by default it does not move.** The kind of place is
+chosen by where the timeline's upper handle stands (`pointAt`, 2026-08-31) —
+past the death year the relics or death place, during the life a see or
+birthplace, before the birth the birthplace — **but only when the reader ticks
+`Movement`** (author, 2026-09-01). Unticked, which is how the map opens, every
+saint sits at their resting place and the timeline only dims. That is the
+simplification: a reader dragging the years is asking which saints belong to a
+period, and walking sixty-nine dots around the picture answered a question they
+had not asked. The box is opt-in for a second reason — the line a dot takes
+between two recorded places is nobody's finding, and behind a named box that is
+a mode rather than a claim the map makes on its own.
+
+**Beside it is a play button** (`wireMotion`, `.map-corner`, bottom left) which
+walks the *upper handle* from the low end of the reader's own span to the high
+end at a year a second (`PLAY_MS_PER_YEAR`, read as a rate off
+`performance.now()`, so a dropped frame costs frames and not years). It is
+disabled until `Movement` is ticked, and any touch on the timeline stops it
+(`wireTimeline`'s returned `onTouch`). Playback moves one handle and invents no
+second notion of "now", so the year buttons, the dimming and the dots keep
+reading the one pair of numbers they always have — and the map lights up
+through the centuries as it goes. Pausing leaves the handle where it stopped,
+which really is the range now: the next press plays the span as it then stands.
+ `pointAt` also returns the
 `state` the draw pass dims by — `live` inside the range, `past` after a
 life (greyed), `future` before one (greyed twice as far, and no halo, since
 a halo is a claim about a place someone *was*). **The timeline therefore
@@ -139,8 +158,10 @@ computed in lon/lat so it bends the same way at every zoom. `trackPath` is
 what `paintCanvas` strokes, and `pointOn` is where the dot rides — the same
 curve, not two that meet at the ends.
 
-**The dot glides toward its year rather than snapping to it** (`railAt`,
-`glideTo`). The rail is far coarser than the road it scrubs: 1872 years over
+**A moving dot glides toward its year rather than snapping to it** (`railAt`,
+`glideTo` along a track, `glidePoint` between two plain places — and
+`glideStep` returns 1 outright when `Movement` is off, so the resting map has
+no easing in it at all). The rail is far coarser than the road it scrubs: 1872 years over
 a few hundred pixels is six years a pixel, more than Moses's whole flight
 from Poland, so one pixel of drag was a dot teleporting across Europe. Easing
 runs in *progress* space, not position, or it would cut the corners instead
@@ -440,7 +461,7 @@ thumb. A wrong crop is a data fix, not a CSS one.
 ## Tests
 
 - Unit: `tests/*.test.mjs`, `npm test` (~15s, 263).
-- Browser: `e2e/`, one file per surface, 714 across two projects —
+- Browser: `e2e/`, one file per surface, 724 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
 - `npm run test:lighthouse` is the §13 pair Playwright cannot reach —

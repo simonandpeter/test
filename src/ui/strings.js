@@ -873,6 +873,18 @@ export const STRINGS = {
      * `selected` is announced when the flight lands, for the same reason
      * `searchFlewTo` is — the canvas is one opaque image.
      */
+    /*
+     * Watching the saints move (author, 2026-09-01), which is off unless the
+     * reader asks: the map's resting answer is where each of them ended, and
+     * the path between one recorded place and the next is drawn rather than
+     * sourced. `movement` names the box; the two announcements are for a
+     * reader the picture tells nothing.
+     */
+    movement: 'Movement',
+    movementOn: 'Movement on. Each saint is shown where they were in the timeline’s upper year.',
+    movementOff: 'Movement off. Each saint is shown at their resting place.',
+    play: 'Play the years',
+    pause: 'Pause',
     profile: 'Profile',
     profileOf: 'Profile of {name}',
     selected: '{name} selected. Their path is shown.',

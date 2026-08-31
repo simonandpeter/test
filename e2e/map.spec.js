@@ -1227,6 +1227,9 @@ test('a saint with a dated track moves along it as the timeline crosses his life
   await canvas.focus();
   for (let i = 0; i < 6; i++) await canvas.press('-');
 
+  // Nothing walks until the reader asks (2026-09-01).
+  await tickMovement(page);
+
   const whereIsHe = async () =>
     JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
 
@@ -1381,14 +1384,23 @@ test('the path and the button go when the reader clicks away', async ({ page }) 
   await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
   await expect(page.locator('[data-profile]')).toBeVisible();
 
-  // Somewhere on the picture with no saint anywhere near it, found rather
-  // than guessed — which corner is empty depends on the window.
+  /*
+   * Somewhere on the picture with no saint anywhere near it, found rather
+   * than guessed — which corner is empty depends on the window. And the
+   * canvas has to be the thing actually under it: the search, the zoom, the
+   * Profile button and the Movement controls all float on top of the
+   * picture, and a press that lands on one of those never reaches the map
+   * at all. The bottom-left corner used to be empty and is where the
+   * Movement box moved in on 2026-09-01.
+   */
   const empty = await canvas.evaluate((el) => {
     const dots = JSON.parse(el.dataset.dots);
     const b = el.getBoundingClientRect();
     for (let y = b.height - 30; y > 30; y -= 20) {
       for (let x = 30; x < b.width - 30; x += 20) {
-        if (dots.every((d) => Math.hypot(d.x - x, d.y - y) > 60)) return { x, y };
+        if (dots.some((d) => Math.hypot(d.x - x, d.y - y) <= 60)) continue;
+        if (document.elementFromPoint(b.x + x, b.y + y) !== el) continue;
+        return { x, y };
       }
     }
     return null;
@@ -1486,6 +1498,8 @@ test('the dot slides along the track rather than jumping when the year leaps', a
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
+  await tickMovement(page);
+
   const whereIsHe = async () =>
     JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
 
@@ -1508,4 +1522,148 @@ test('the dot slides along the track rather than jumping when the year leaps', a
   const moved = seen.filter(Boolean);
   const distinct = new Set(moved.map((d) => `${d.x},${d.y}`));
   expect(distinct.size, 'he arrived in one step, so nothing slid').toBeGreaterThan(2);
+});
+
+/* ---- movement and playback (2026-09-01) ---------------------------------- */
+
+/** Ticks the Movement box, which is what lets any dot move at all. */
+const tickMovement = async (page) => {
+  await page.locator('[data-movement]').check();
+  await expect(page.locator('[data-movement]')).toBeChecked();
+};
+
+test('the map rests at each saint until the reader asks for movement', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Only display death location, unless you tick a box
+   * in the bottom left called 'Movement' ... Again, if movements isnt
+   * selected, only final resting place is shown." A reader dragging the
+   * years is asking which saints belong to a period; answering that by
+   * walking sixty-nine dots around the picture was answering a question they
+   * had not asked.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  await expect(page.locator('[data-movement]')).not.toBeChecked();
+
+  const at = async () => JSON.parse(await canvas.getAttribute('data-dots'));
+  const resting = await at();
+  const moses = resting.find((d) => d.slug === 'moses-the-hungarian');
+  expect(moses, 'premise: his dot is not on the picture').toBeTruthy();
+
+  // A year in the middle of his life, which would put him in Poland if the
+  // dots were following the years.
+  await typeYear(page, 'to', '1022');
+  const after = await at();
+  for (const dot of after) {
+    const was = resting.find((d) => d.slug === dot.slug);
+    expect(
+      Math.hypot(dot.x - was.x, dot.y - was.y),
+      `${dot.slug} moved with the timeline while Movement was off`,
+    ).toBeLessThan(1);
+  }
+});
+
+test('ticking Movement walks the saints, and unticking sends them back', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const whereIsHe = async () =>
+    JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.slug === 'moses-the-hungarian');
+  const settled = async () => {
+    let last = null;
+    for (let i = 0; i < 60; i++) {
+      const now = await whereIsHe();
+      if (last && now && last.x === now.x && last.y === now.y) return now;
+      last = now;
+      await page.waitForTimeout(50);
+    }
+    throw new Error('his dot never stopped moving');
+  };
+
+  const resting = await whereIsHe();
+  await tickMovement(page);
+  await typeYear(page, 'to', '1022');
+  const moving = await settled();
+  expect(Math.hypot(moving.x - resting.x, moving.y - resting.y), 'he stayed put with Movement on').toBeGreaterThan(3);
+
+  // And unticking is not a journey home: he is simply back where he rests.
+  await page.locator('[data-movement]').uncheck();
+  const home = await whereIsHe();
+  expect(Math.hypot(home.x - resting.x, home.y - resting.y), 'he did not go back to his resting place').toBeLessThan(1);
+});
+
+test('play is offered only once there is something to watch move', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "This play mode is only available when Movements is
+   * selected." Playing the years with nothing moving is the timeline dimming
+   * on a clock, which a drag already does.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const play = page.locator('[data-play]');
+  await expect(play).toBeVisible();
+  await expect(play).toBeDisabled();
+
+  await tickMovement(page);
+  await expect(play).toBeEnabled();
+
+  await page.locator('[data-movement]').uncheck();
+  await expect(play).toBeDisabled();
+});
+
+test('play walks the upper year at a year a second, and pause leaves it there', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "add a play and pause button in the bottom left of
+   * the map, which plays in the selected timeline span at a rate of 1 year
+   * per second". The rate is read off `performance.now()` rather than
+   * counted in frames, so this is a wall-clock claim and holds on a machine
+   * dropping frames — which is why it can be asserted at all.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  await tickMovement(page);
+
+  // A span long enough to watch and short enough not to hold the suite up.
+  await typeYear(page, 'from', '1000');
+  await typeYear(page, 'to', '1020');
+
+  const play = page.locator('[data-play]');
+  await play.click();
+  // Playing starts at the low end of the reader's own span.
+  await expect.poll(async () => (await yearButtons(page))[1]).toBeLessThan(1005);
+
+  await page.waitForTimeout(3200);
+  const running = (await yearButtons(page))[1];
+  expect(running, 'the years did not advance').toBeGreaterThan(1001);
+  expect(running, 'the years ran far faster than a year a second').toBeLessThan(1008);
+
+  await play.click();
+  const paused = (await yearButtons(page))[1];
+  await page.waitForTimeout(1200);
+  expect((await yearButtons(page))[1], 'pause did not stop the years').toBe(paused);
+  // And the low end was never touched: playback moves one handle, not both.
+  expect((await yearButtons(page))[0]).toBe(1000);
+});
+
+test('taking hold of the timeline stops the playback', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
+  await tickMovement(page);
+  await typeYear(page, 'from', '1000');
+  await typeYear(page, 'to', '1400');
+
+  await page.locator('[data-play]').click();
+  await expect(page.locator('[data-play]')).toHaveAttribute('aria-label', /pause/i);
+
+  // The reader reaching for a handle is the end of the performance.
+  const toHandle = page.locator('[data-timeline-to]');
+  await toHandle.focus();
+  await toHandle.press('End');
+  await expect(page.locator('[data-play]')).toHaveAttribute('aria-label', /play/i);
+
+  const stopped = (await yearButtons(page))[1];
+  await page.waitForTimeout(1200);
+  expect((await yearButtons(page))[1], 'the years kept running after the reader took over').toBe(stopped);
 });

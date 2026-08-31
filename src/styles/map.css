@@ -497,11 +497,67 @@ html[data-route='map'] body {
    coastline could not be fetched, so it costs the map no height at all until
    there is something to say - which is why it floats on the picture beside
    the search rather than taking a strip of its own. */
-.map-note {
+/* The picture's bottom-left corner: the failure note when there is one, and
+   under it the two controls that decide whether the dots move (author,
+   2026-09-01). One stack rather than two separately anchored boxes, because
+   the note is the only thing on this page whose height is not knowable and
+   anchoring both to `bottom` put it straight through them. */
+.map-corner {
   position: absolute;
   left: var(--space-3);
   bottom: var(--space-3);
-  max-width: min(28rem, calc(100% - var(--space-3) * 2));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  max-width: calc(100% - var(--space-3) * 2);
+}
+
+.map-motion {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  /* Opaque for the reason `.map-zoom` is: the ground under it is a picture,
+     and a tint would leave the label at whatever contrast the coastline
+     happened to give it. */
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+.map-movement {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.map-movement input {
+  /* The box itself follows the page's own accent rather than the browser's
+     blue, which is the one colour on this map that belongs to nothing. */
+  accent-color: var(--rubric);
+  cursor: pointer;
+}
+
+.map-play {
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--rubric);
+}
+
+.map-play:disabled {
+  /* Disabled says "not yet", not "broken": the reader ticks Movement and it
+     wakes up, so it stays legible rather than fading toward the ground. */
+  color: var(--ink-soft);
+  cursor: default;
+}
+
+.map-note {
+  max-width: min(28rem, 100%);
   margin: 0;
   padding: var(--space-1) var(--space-2);
   color: var(--ink-soft);

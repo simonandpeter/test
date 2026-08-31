@@ -191,6 +191,23 @@ function flyTo(target, apply, done) {
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
 
+/*
+ * The play button's two faces. Drawn as glyphs rather than as an icon from
+ * `ui/icons.js` because they are two triangles and two bars — the one place
+ * on this page where the character *is* the picture, the way the zoom's
+ * plus and minus already are.
+ */
+const PLAY_GLYPH = '&#9654;';
+const PAUSE_GLYPH = '&#9208;';
+
+/**
+ * A year a second (author, 2026-09-01: "plays in the selected timeline span
+ * at a rate of 1 year per second"). Read as a rate rather than counted in
+ * frames, so a slow machine runs the same years in the same seconds and
+ * drops the frames in between instead of the years.
+ */
+const PLAY_MS_PER_YEAR = 1000;
+
 /**
  * The threshold past which a crowded cluster's names are stacked into a
  * column with leader lines rather than simply placed beside their dots or
@@ -291,8 +308,25 @@ function stepLabelOpacity(slug, wanted, now) {
 let fadeFrame = null;
 
 /**
- * Where each tracked saint's dot currently *is* along their own track, by
- * slug, easing toward where the timeline says they should be.
+ * **Whether the dots move with the years at all** (author, 2026-09-01: "Only
+ * display death location, unless you tick a box in the bottom left called
+ * 'Movement'"). Off is the default and the resting state of the map: the
+ * timeline dims, and nothing walks. Held for the visit like the range, and
+ * unlike the selection — it is a way of reading the map rather than a thing
+ * the reader is looking at.
+ *
+ * **It is opt-in because it draws more than the corpus states.** Between two
+ * places a saint is recorded at, the line the dot takes is nobody's finding;
+ * a track's legs say so in each waypoint's own `note`, and for a saint
+ * without a track there is no note to say it in. Behind a box the reader
+ * ticks, that is a mode with a name on it rather than a claim the map makes
+ * on its own.
+ */
+let movement = false;
+
+/**
+ * Where each moving saint's dot currently *is*, by slug, easing toward where
+ * the timeline says they should be.
  *
  * **The rail is far finer than the control that scrubs it.** The corpus spans
  * 1872 years and the rail is a few hundred pixels, so one pixel of drag is
@@ -303,9 +337,12 @@ let fadeFrame = null;
  * says where he belongs, and the dot takes a moment to get there, along the
  * path rather than across it.
  *
- * **Only along a track.** A saint without one still jumps between the kinds
- * of place they carry — a birthplace to a see — and easing *that* would draw
- * a journey out of two facts that are not a journey.
+ * **Two spaces, because a track is a road and a pair of places is not.** A
+ * saint with a track eases along their own `progress` — one number, so the
+ * dot takes the bends rather than cutting across them. A saint without one
+ * eases in plain lon/lat between the places they are recorded at, which is
+ * the only thing there is to ease between. Both are drawn rather than
+ * sourced, which is why both live behind the `Movement` box.
  */
 const railAt = new Map();
 
@@ -313,29 +350,29 @@ const railAt = new Map();
  * How fast the dot closes on where the timeline puts it: the fraction of the
  * remaining distance it covers in a millisecond is `1/RAIL_GLIDE_MS`, so it
  * is quick where the gap is large and settles without overshooting.
+ *
+ * 120 ms, down from 260 (author, 2026-09-01: "Make them move smoothly but
+ * quickly if the timeline bar is shifted quick"). Playback is a year a
+ * second, so anything slower than about a sixth of that reads as the dots
+ * lagging the year rather than keeping up with it.
  */
-const RAIL_GLIDE_MS = 260;
+const RAIL_GLIDE_MS = 120;
 
 /** Close enough to be there. Without it the exponential ease never quite
  *  arrives, and the map would schedule frames forever. */
 const RAIL_SETTLED = 0.002;
 
 /**
- * Advances one saint's position along their track toward `wanted`, and
- * returns where they now are. Under reduced motion they are simply there —
- * the house rule is that reduced motion removes the animation, and a dot
- * that never arrived would be the control failing rather than the motion
- * being spared.
+ * How much of the remaining distance to close this step, or `1` for "be
+ * there now" — no easing state yet, reduced motion, or the reader is not
+ * watching movement at all.
+ *
+ * Under reduced motion the dot is simply where the year puts it: the house
+ * rule is that reduced motion removes the animation, and a dot that never
+ * arrived would be the control failing rather than the motion being spared.
  */
-function glideTo(slug, wanted, now) {
-  let state = railAt.get(slug);
-  if (!state || reducedMotion()) {
-    // First sight of this saint is not a journey from wherever the last one
-    // stood: they start where the timeline already puts them.
-    state = { value: wanted, lastT: now };
-    railAt.set(slug, state);
-    return wanted;
-  }
+function glideStep(state, now) {
+  if (!state || reducedMotion() || !movement) return 1;
   /*
    * **Capped, because the clock between two paints is not the clock between
    * two frames.** The map paints only when something happens, so the gap
@@ -346,10 +383,49 @@ function glideTo(slug, wanted, now) {
    */
   const dt = Math.min(now - state.lastT, 32);
   state.lastT = now;
+  return Math.min(1, dt / RAIL_GLIDE_MS);
+}
+
+/** Eases one saint's progress along their own track toward `wanted`. */
+function glideTo(slug, wanted, now) {
+  const state = railAt.get(slug);
+  const step = glideStep(state, now);
+  if (step === 1 || typeof state.value !== 'number') {
+    // First sight of this saint is not a journey from wherever the last one
+    // stood: they start where the timeline already puts them.
+    railAt.set(slug, { value: wanted, lastT: now });
+    return wanted;
+  }
   const gap = wanted - state.value;
-  if (Math.abs(gap) < RAIL_SETTLED) state.value = wanted;
-  else state.value += gap * Math.min(1, dt / RAIL_GLIDE_MS);
+  state.value = Math.abs(gap) < RAIL_SETTLED ? wanted : state.value + gap * step;
   return state.value;
+}
+
+/**
+ * Eases one saint's drawn position toward `wanted`, for the saints who have
+ * no track to walk along and only a set of places they are recorded at.
+ * `RAIL_SETTLED` is in track-progress units, so the arrival test here is a
+ * distance on the ground — a hundredth of a degree, well under a pixel at
+ * any zoom this map offers.
+ */
+function glidePoint(slug, wanted, now) {
+  const state = railAt.get(slug);
+  const step = glideStep(state, now);
+  if (step === 1 || !state.point) {
+    railAt.set(slug, { point: wanted, lastT: now });
+    return wanted;
+  }
+  const from = state.point;
+  if (Math.hypot(wanted.lon - from.lon, wanted.lat - from.lat) < 0.01) {
+    state.point = wanted;
+    return wanted;
+  }
+  state.point = {
+    lon: from.lon + (wanted.lon - from.lon) * step,
+    lat: from.lat + (wanted.lat - from.lat) * step,
+    uncertainty_km: from.uncertainty_km + (wanted.uncertainty_km - from.uncertainty_km) * step,
+  };
+  return state.point;
 }
 
 /*
@@ -457,7 +533,17 @@ const pointsOfKind = (cards, which) =>
  * for the year asked about, out of `locations`, which carry no dates of
  * their own at all.
  *
- * `state` is what the drawing pass dims by:
+ * **All of that is behind the `Movement` box now** (author, 2026-09-01:
+ * "Only display death location, unless you tick a box in the bottom left
+ * called 'Movement', which then shows current location"). Unticked — the
+ * default, and how the map opens — every saint sits at the one place their
+ * commemoration is usually built on and the timeline only *dims*. That is
+ * the simplification: a reader dragging the years is asking which saints
+ * belong to a period, and answering that by walking sixty-nine dots around
+ * the picture was answering a question they had not asked.
+ *
+ * `state` is what the drawing pass dims by, and it is read from the range
+ * whether or not the dots are moving:
  *   `live`    the year sits inside the saint's own life — full colour, glow.
  *   `past`    they had already died — greyed, still legible.
  *   `future`  they were not yet born — greyed twice as far, and no glow,
@@ -493,6 +579,14 @@ function pointAt(card, from, to) {
    * upper handle is past their death.
    */
   const state = born <= to && died >= from ? 'live' : to < born ? 'future' : 'past';
+
+  /*
+   * **The resting place, unless the reader asked to watch them move.** Death
+   * outranks relics here for the reason §8.3 gave the old default: it is the
+   * fact a commemoration is usually built on, and the two are the same place
+   * for almost everyone who has both.
+   */
+  if (!movement) return { where: settled, state, track: track.length ? track : undefined };
 
   if (track.length) {
     // The year's own place on the track, as a number rather than a position:
@@ -645,7 +739,28 @@ export function render(el, { data, router }) {
           that the coastline did not load, at which point this speaks and
           takes back the strip it costs.
         -->
-        <p class="map-note utility" data-caption hidden></p>
+        <!--
+          The bottom-left corner (author, 2026-09-01): the box that lets the
+          dots move at all, and the button that walks the years for you. One
+          stack rather than two anchored boxes, so the failure note above
+          them cannot land on top of either.
+
+          Play is disabled without Movement, because playing the years with
+          nothing moving is the timeline dimming on a clock — which the
+          reader can already do by dragging, and which is not what a play
+          button promises.
+        -->
+        <div class="map-corner">
+          <p class="map-note utility" data-caption hidden></p>
+          <div class="map-motion">
+            <button type="button" class="icon-button map-play" data-play disabled
+              aria-label="${esc(M.play)}">${PLAY_GLYPH}</button>
+            <label class="map-movement utility">
+              <input type="checkbox" data-movement />
+              ${esc(M.movement)}
+            </label>
+          </div>
+        </div>
 
         <!--
           The door, since a press on a dot stopped being one (author,
@@ -828,7 +943,7 @@ export function render(el, { data, router }) {
   applyView = setView;
   wireSearch(el, canvas, withPlace, setView);
 
-  if (bounds) wireTimeline(el, bounds, refresh);
+  wireMotion(el, bounds ? wireTimeline(el, bounds, refresh) : null, refresh);
 
   /*
    * The canvas is sized from its own box, so it has to be repainted when the
@@ -1168,6 +1283,117 @@ function wireTimeline(el, bounds, refresh) {
   fillEl.addEventListener('pointercancel', endDrag);
 
   paint();
+
+  /*
+   * The upper handle, for the play button — which lives on the picture and
+   * not in this strip, but must move the range through the same `commit`
+   * every other control does, or the year buttons and the picture would
+   * disagree with the rail. `onTouch` is how playback learns to stop when
+   * the reader takes the timeline back off it.
+   */
+  return {
+    setUpper(year) {
+      toInput.value = String(Math.min(bounds.max, Math.max(bounds.min, Math.round(year))));
+      commit();
+    },
+    onTouch(stop) {
+      for (const control of [fromInput, toInput, fillEl, presetSel]) {
+        control.addEventListener('pointerdown', stop);
+        control.addEventListener('keydown', stop);
+        control.addEventListener('change', stop);
+      }
+    },
+  };
+}
+
+/* ---- movement and playback (2026-09-01) --------------------------------- */
+
+/**
+ * The `Movement` box and the play button beside it.
+ *
+ * `timeline` is `wireTimeline`'s own small API, or `null` where the corpus
+ * has nothing dated to build a rail from — in which case there is no span to
+ * play and the button stays disabled whatever the box says.
+ *
+ * **Playback walks the upper handle**, which is the control the reader can
+ * already see and work: it starts at the low end of their own span and
+ * travels to the high end at a year a second, and pressing pause leaves it
+ * wherever it stopped. Nothing about "now" is invented alongside the range —
+ * the year buttons, the dimming and the dots all keep reading the one pair
+ * of numbers they always have, and the picture lights up through the
+ * centuries as it goes.
+ */
+function wireMotion(el, timeline, refresh) {
+  const box = el.querySelector('[data-movement]');
+  const play = el.querySelector('[data-play]');
+  let frame = null;
+  let end = null;
+
+  const stop = () => {
+    if (frame === null) return;
+    cancelAnimationFrame(frame);
+    frame = null;
+    play.innerHTML = PLAY_GLYPH;
+    play.setAttribute('aria-label', STRINGS.map.play);
+  };
+
+  const chrome = () => {
+    // Playing with nothing to move is the timeline dimming on a clock, which
+    // a drag already does and a play button does not promise.
+    play.disabled = !movement || !timeline;
+    if (play.disabled) stop();
+  };
+
+  box.addEventListener('change', () => {
+    movement = box.checked;
+    chrome();
+    /*
+     * Every dot goes back to standing where the year puts it rather than
+     * gliding there from wherever the other mode had left it — the switch
+     * is a change of question, not a journey.
+     */
+    railAt.clear();
+    refresh();
+    announce(el, movement ? STRINGS.map.movementOn : STRINGS.map.movementOff);
+  });
+
+  play.addEventListener('click', () => {
+    if (frame !== null) {
+      stop();
+      return;
+    }
+    const span = { from: dateFrom, to: dateTo };
+    if (span.to <= span.from) return;
+    // A second press at the end of a run starts it again from the beginning
+    // rather than doing nothing at the wall.
+    end = span.to;
+    timeline.setUpper(span.from);
+    play.innerHTML = PAUSE_GLYPH;
+    play.setAttribute('aria-label', STRINGS.map.pause);
+
+    let last = performance.now();
+    let year = span.from;
+    const step = (now) => {
+      year += (now - last) / PLAY_MS_PER_YEAR;
+      last = now;
+      if (year >= end) {
+        timeline.setUpper(end);
+        stop();
+        return;
+      }
+      timeline.setUpper(year);
+      frame = requestAnimationFrame(step);
+    };
+    frame = requestAnimationFrame(step);
+  });
+
+  // The reader taking the timeline back is the end of the performance, and
+  // so is leaving the view: `destroy` drains `cleanups`.
+  timeline?.onTouch(stop);
+  cleanups.push(stop);
+  // The box holds for the visit, so a return to the map finds it as it was.
+  box.checked = movement;
+  chrome();
 }
 
 /* ---- the search --------------------------------------------------------- */
@@ -1882,11 +2108,22 @@ function paintCanvas(canvas, cards) {
      * `pointAt` put them, because a saint with no track does not travel
      * between their own places, they are simply recorded at each of them.
      */
+    /*
+     * Where they have *glided* to, not where the year says outright — see
+     * `railAt`. A saint with a track eases along it so the dot takes the
+     * road's own bends; everyone else eases straight between the places
+     * they are recorded at, which is all there is between them. With
+     * `Movement` unticked `glideStep` returns 1 and both are simply where
+     * `pointAt` put them, which is the resting place and never moves.
+     */
     let where = at.where;
-    if (at.track) {
+    if (at.track && at.progress !== undefined) {
       const eased = glideTo(card.slug, at.progress, gliding);
       if (eased !== at.progress) stillGliding = true;
       where = pointOn(at.track, eased);
+    } else {
+      where = glidePoint(card.slug, at.where, gliding);
+      if (where !== at.where) stillGliding = true;
     }
     const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
