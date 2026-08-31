@@ -115,6 +115,50 @@ const LABELS_AT = 2.5;
  */
 const shapeBBoxes = new WeakMap();
 
+/**
+ * A label's opacity, easing toward 1 while its saint holds the collision
+ * battle and 0 the moment it loses it — 2026-08-31, replacing an outright
+ * pop in either direction. Keyed by slug rather than held on `drawnDots`
+ * itself, which is rebuilt from nothing every paint: the fade is a property
+ * of the *saint*, remembered across paints, not of one frame's array.
+ *
+ * Which label wins the overlap test can flip from one frame to the next
+ * during a pan — the geometry moved a few pixels and a different name is
+ * now the one nearer another's box — and popping a name in and out on every
+ * such flip read as a flicker rather than as the map settling. Easing means
+ * a rapid win/lose/win never reaches full opacity in either direction, so
+ * the worst case is a shimmer rather than a flash.
+ */
+const labelState = new Map();
+const LABEL_FADE_MS = 300;
+
+/** Advances one label's opacity toward `wanted` by however long it has been
+ *  since this slug was last stepped, and returns the new value. */
+function stepLabelOpacity(slug, wanted, now) {
+  const target = wanted ? 1 : 0;
+  let s = labelState.get(slug);
+  if (!s) {
+    // Starts at 0 regardless of `wanted`: a label seen for the first time
+    // fades in like every other appearance rather than popping straight to
+    // full opacity on the frame it is first eligible.
+    s = { value: 0, target, lastT: now };
+    labelState.set(slug, s);
+    return s.value;
+  }
+  const dt = now - s.lastT;
+  s.lastT = now;
+  s.target = target;
+  const step = dt / LABEL_FADE_MS;
+  if (s.value < s.target) s.value = Math.min(s.target, s.value + step);
+  else if (s.value > s.target) s.value = Math.max(s.target, s.value - step);
+  return s.value;
+}
+
+/** The self-scheduled frame that keeps fades moving after the gesture or
+ *  event that started them has long since finished. `null` whenever every
+ *  label has reached its target — nothing runs while the map is at rest. */
+let fadeFrame = null;
+
 /*
  * Where the map is looking. Reset on every render rather than held across
  * visits: the kind selector holds for the visit because it is a question the
@@ -581,6 +625,13 @@ function dotAt(canvas, e) {
 export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
+  if (fadeFrame !== null) {
+    cancelAnimationFrame(fadeFrame);
+    fadeFrame = null;
+  }
+  // A fresh visit starts every label unseen rather than resuming an old
+  // visit's opacities on saints a new render has not drawn yet.
+  labelState.clear();
 }
 
 /**
@@ -814,6 +865,13 @@ async function drawWhenReady(el, canvas, cards) {
 }
 
 function paintCanvas(canvas, cards) {
+  // Whatever brought this paint about, it supersedes any fade-driven frame
+  // still pending from a previous one — never two of those racing.
+  if (fadeFrame !== null) {
+    cancelAnimationFrame(fadeFrame);
+    fadeFrame = null;
+  }
+
   /*
    * A hidden element reports 0 and ignores writes (CLAUDE.md trap 7). The map
    * is inside a `<details>` on no path today, but a canvas sized 0 x 0 and then
@@ -986,8 +1044,15 @@ function paintCanvas(canvas, cards) {
    * spot (`lib/map-view.js`'s `declutter`, 2026-08-31 — John the
    * Long-Suffering and Moses the Hungarian both at the Caves in Kyiv) get a
    * halo and a label at the place each is actually drawn.
+   *
+   * Grouped by `where.lon`/`where.lat` rather than the default x/y bucket
+   * (2026-08-31): two saints sharing a place are the same place at every
+   * zoom, and grouping by their *source* coordinate rather than this
+   * frame's on-screen proximity keeps that true regardless of how far in
+   * the reader goes, rather than the group dissolving the moment zooming
+   * spreads them past `radiusPx` apart on screen.
    */
-  for (const { card, where, x, y } of declutter(onScreen)) {
+  for (const { card, where, x, y } of declutter(onScreen, undefined, (p) => `${p.where.lon},${p.where.lat}`)) {
     /*
      * The uncertainty curve's first shipping consumer (DESIGN.md §6b). The halo
      * is softness in px at base scale, scaled linearly with the picture's width
@@ -1034,22 +1099,53 @@ function paintCanvas(canvas, cards) {
    * rather than drawn over it - the brief's own words. Sixteen points make
    * that a straight rectangle test; the collide-and-nudge machinery stays
    * with the density work it belongs to (Amendment 69).
+   *
+   * Every dot's rect is measured regardless of whether labels are enabled or
+   * this one wins its overlap test (2026-08-31): a label losing the battle,
+   * or the zoom dropping back under `LABELS_AT`, still needs somewhere to
+   * fade out *from*, and a rect computed only for the winners would leave a
+   * losing label with nowhere to draw the frames of its own fade.
+   *
+   * **Kept as long as any part of it is on screen, not only the whole of
+   * it.** Dropped only once the entire rect has left the box — the far edge
+   * crossing it used to hide the whole name outright, rather than letting a
+   * reader read as much of it as was actually there the way scrolling text
+   * off any other edge would. The canvas already clips whatever it draws
+   * past its own bounds, so there is nothing extra to do here but stop
+   * refusing to try.
    */
-  if (view.scale >= LABELS_AT) {
-    ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = ink;
-    for (const dot of drawnDots) {
-      const wText = ctx.measureText(dot.name).width;
-      const rect = { x: dot.x + 6, y: dot.y - 8, w: wText + 4, h: 16 };
-      if (rect.x + rect.w > w || dot.x < 0 || dot.y < 0 || dot.y > h) continue;
-      if (labels.some((r) => rect.x < r.x + r.w && r.x < rect.x + rect.w && rect.y < r.y + r.h && r.y < rect.y + rect.h)) {
-        continue;
-      }
-      labels.push(rect);
-      ctx.fillText(dot.name, rect.x + 2, dot.y);
+  const labelsEnabled = view.scale >= LABELS_AT;
+  const wanted = new Set();
+  if (drawnDots.length) ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
+  for (const dot of drawnDots) {
+    const wText = ctx.measureText(dot.name).width;
+    const rect = { x: dot.x + 6, y: dot.y - 8, w: wText + 4, h: 16 };
+    dot.labelRect = rect;
+    if (!labelsEnabled) continue;
+    if (rect.x + rect.w <= 0 || rect.x >= w || rect.y + rect.h <= 0 || rect.y >= h) continue;
+    if (labels.some((r) => rect.x < r.x + r.w && r.x < rect.x + rect.w && rect.y < r.y + r.h && r.y < rect.y + rect.h)) {
+      continue;
     }
+    labels.push(rect);
+    wanted.add(dot.slug);
   }
+
+  // One easing step per saint, drawn at whatever opacity it has reached —
+  // 0 draws nothing, 1 is the label exactly as it always was, and anything
+  // between is the fade actually happening.
+  const now = performance.now();
+  ctx.textBaseline = 'middle';
+  let drawnLabels = 0;
+  for (const dot of drawnDots) {
+    const opacity = stepLabelOpacity(dot.slug, wanted.has(dot.slug), now);
+    if (opacity <= 0) continue;
+    ctx.globalAlpha = opacity;
+    ctx.fillStyle = ink;
+    ctx.fillText(dot.name, dot.labelRect.x + 2, dot.y);
+    drawnLabels++;
+  }
+  ctx.globalAlpha = 1;
+
   /*
    * The count of drawn labels, published for the suite. An instrument, so the
    * standing question applies - what would it look like if it were doing
@@ -1057,10 +1153,25 @@ function paintCanvas(canvas, cards) {
    * paint that never labels writes '0' and the test's zoomed half goes red
    * rather than green-by-absence.
    */
-  canvas.dataset.labels = String(labels.length);
+  canvas.dataset.labels = String(drawnLabels);
   // The hit-map, published for the press test: same pass, same rule - a paint
   // that drew nothing writes '[]' and the pressing half goes red.
   canvas.dataset.dots = JSON.stringify(drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug })));
+
+  /*
+   * However this paint was triggered, it is the one place that knows
+   * whether any label is still mid-fade — so it is the one place that
+   * decides whether another frame is owed. Cancelled at the top of every
+   * call rather than left to expire on its own, so a paint that arrives for
+   * an unrelated reason mid-fade does not end up with two of these racing.
+   */
+  const stillFading = [...labelState.values()].some((s) => s.value !== s.target);
+  if (stillFading) {
+    fadeFrame = requestAnimationFrame(() => {
+      fadeFrame = null;
+      if (canvas.isConnected) paintCanvas(canvas, cards);
+    });
+  }
 }
 
 /**

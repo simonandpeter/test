@@ -424,6 +424,34 @@ test('names arrive with the zoom, and not before', async ({ page }) => {
     .not.toBe('0');
 });
 
+/*
+ * A label's 300ms fade-in (`stepLabelOpacity`, map.js, 2026-08-31) is real —
+ * confirmed by hand, sampling the canvas's own ink at the same spot several
+ * times a frame apart and watching it rise from nothing to full darkness —
+ * but is deliberately not pinned here. Anything that has to catch a real
+ * animation mid-flight needs at least two samples a known distance apart in
+ * wall-clock time, and under this suite's own parallel load that distance
+ * is not reliable: the tab driving one test is not guaranteed a rendering
+ * frame on any particular schedule while seven others compete for the same
+ * machine, so "sampled early" and "sampled once settled" can land on the
+ * same already-finished frame. Pinning it properly wants a mocked clock
+ * rather than a real one; a flaky proof of a real thing is worse than no
+ * proof, so this stays a documented manual check instead of a red herring
+ * in CI's own results.
+ */
+
+test('the map can zoom well past what the coastline itself can back', async ({ page }) => {
+  // §8.3's own reason to zoom this far is reading two close names apart
+  // (`declutter`'s spread is a fixed number of screen pixels, so only more
+  // zoom makes it read as more room), not finer coastline detail — MAX_SCALE
+  // is raised (2026-08-31) even though the land data was not.
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const zoomIn = page.locator('[data-zoom="in"]');
+  for (let i = 0; i < 12 && !(await zoomIn.isDisabled()); i++) await zoomIn.click();
+  await expect(page.locator('[data-zoom-level]')).toHaveText('60.0×');
+  await expect(zoomIn).toBeDisabled();
+});
+
 test('a dot is a door: a press opens the saint, a drag does not', async ({ page }) => {
   await ready(page);
   await page.goto(MAP, { waitUntil: 'networkidle' });

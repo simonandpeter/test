@@ -75,22 +75,52 @@ trade the size jump from 110m's ~19 kB earns by backing a real deeper zoom.
 the below-map reading — lede, facets, Places, tray — is gone, the kind counts
 in the legend are the page's one statement of what it shows, and
 `map.spec.js` holds them to `data-dots`. Zoom and pan live in
-`lib/map-view.js` — pure, unit-tested; `MAX_SCALE` is 24, tied to the 50m
-data's own resolution the same way it was tied to 110m's before. **A bare
-wheel zooms** (same author instruction, reversing the old only-Ctrl rule: with
-nothing below the stage there is no page to scroll past), touch is the map's
-always (`touch-action: none`), and the route cannot scroll (`overflow:
-hidden`; the flex column through `#view` fits the window exactly). Labels
-arrive past 2.5× (overlap-drop, not collide-and-nudge), and **a dot is a
+`lib/map-view.js` — pure, unit-tested; `MAX_SCALE` is 60 (2026-08-31, raised
+from 24). 24 was the coastline's own ceiling, tied to the 50m data's
+resolution; 60 is not backed by finer land data the same way — past 24 the
+coastline is honestly coarser than the zoom implies — because the reason to
+zoom that far is reading two close saints' names apart (`declutter`'s spread
+is a fixed number of screen pixels, so only more zoom makes it read as more
+room), not the coastline. **A bare wheel zooms** (same author instruction,
+reversing the old only-Ctrl rule: with nothing below the stage there is no
+page to scroll past), touch is the map's always (`touch-action: none`), and
+the route cannot scroll (`overflow: hidden`; the flex column through `#view`
+fits the window exactly). Labels arrive past 2.5× (overlap-drop, not
+collide-and-nudge, fading in and out over 300ms rather than popping —
+`stepLabelOpacity`, `labelState`, 2026-08-31 — because which label wins the
+overlap test can flip from one frame to the next during a pan, and popping
+read as a flicker where easing reads as the map settling), and **a dot is a
 door** — a press under 5 px of travel opens the saint, whose × then returns
 to `/map` (saint.js wireBack); the canvas publishes `data-labels`, `data-dots`,
 `data-land` and `data-water` for the suite, written by the draw pass so
-doing-nothing reads 0. Two or more saints who round to the same on-screen spot
-— John the Long-Suffering and Moses the Hungarian both die at the Kyiv Caves,
-at an identical coordinate — are fanned into a small ring by `declutter`
+doing-nothing reads 0. A label is kept as long as any part of its rect is on
+screen, dropped only once the whole of it has left the box (2026-08-31,
+`paintCanvas`) — its far edge crossing the boundary used to hide the whole
+name outright; the canvas already clips whatever is drawn past its own
+bounds, so there was nothing this needed to do but stop refusing to try.
+Two or more saints who round to the same on-screen spot — John the
+Long-Suffering and Moses the Hungarian both die at the Kyiv Caves, at an
+identical coordinate — are fanned into a small ring by `declutter`
 (`lib/map-view.js`, pure, unit-tested) before anything is drawn, so a halo, a
 dot and a label each land where the point is actually placed; no zoom level
-would ever separate two identical coordinates on its own. **A timeline bar
+would ever separate two identical coordinates on its own. It groups by each
+point's own source coordinate (`declutter`'s `keyOf` parameter, map.js
+passing `where.lon`/`where.lat`) rather than by this frame's on-screen
+proximity, its own default — the default is what map.js used until
+2026-08-31, when the deeper `MAX_SCALE` finally made a real bug in it
+reachable: two points close enough to bucket together at rest can drift past
+`radiusPx` apart as the reader zooms in, and the moment they do, the
+jittered one snaps to its true position — a discontinuity that, wheel-zoomed
+at exactly that jittered pixel, read as the dot pulling away from the
+pointer and vanishing a few notches later. A key drawn from source
+coordinates never changes underneath the reader, because two saints at the
+same place are the same place at every zoom. **This does not make every dot
+followable to the full 60×** — a wheel spun without the pointer ever
+re-centring can still out-run a dot on a window that has shrunk to a sliver
+of a degree, which is a limit of anchor-preserving zoom at a high ceiling
+more than of any one bug, and ordinary interactive use (a hand naturally
+adjusting the pointer as the target grows) is the case this fixes, not
+"scroll blind and expect it to hold." **A timeline bar
 sits under the picture** (author, 2026-08-30 evening), drawn on the stage per
 Amendment 77's promise rather than printed below it: two overlaid native
 `<input type="range">` over one rail, filtering `withPlace` by each card's

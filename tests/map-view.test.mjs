@@ -226,3 +226,44 @@ test('a custom radius scales how far a stack spreads', () => {
   const dWide = Math.hypot(wide[0].x - wide[1].x, wide[0].y - wide[1].y);
   assert.ok(dWide > dTight, 'a larger radius should spread the pair further apart');
 });
+
+/*
+ * `keyOf` — map.js's fix for a real bug the deeper `MAX_SCALE` it unlocked
+ * made reachable: two points close on screen only at *this* zoom drift
+ * apart as the reader zooms in, and the default x/y bucket dissolves their
+ * group the instant they pass `radiusPx` apart, snapping the jittered one
+ * back to its true position. A caller-supplied key sidesteps that by
+ * grouping on something that does not move with the view.
+ */
+
+test('a custom key groups by whatever the caller says, not by x/y proximity', () => {
+  // Two points far apart on screen, but sharing a caller-supplied key.
+  const points = [{ x: 0, y: 0, id: 'kyiv' }, { x: 500, y: 500, id: 'kyiv' }];
+  const out = declutter(points, 9, (p) => p.id);
+  // Both still move: the default screen-proximity bucket would have left
+  // each of these alone (they are nowhere near each other), so a change
+  // shows the custom key, not the default, decided the grouping.
+  assert.notDeepEqual(out[0], points[0]);
+  assert.notDeepEqual(out[1], points[1]);
+});
+
+test("a custom key's grouping does not change as the points themselves move", () => {
+  // The scenario the bug was: two points sharing a place, at increasing
+  // "zoom" (their x/y spreading apart run to run) but the same source key.
+  // A stable key must keep spreading them by the same constant radius at
+  // every step, never snapping one back to an unjittered position.
+  const keyOf = (p) => p.place;
+  let prevDist = null;
+  for (const scale of [1, 4, 16, 64]) {
+    const shared = { x: 100 * scale, y: 100 * scale };
+    const points = [
+      { ...shared, place: 'diveyevo' },
+      { ...shared, place: 'diveyevo' },
+    ];
+    const out = declutter(points, 9, keyOf);
+    const dist = Math.hypot(out[0].x - out[1].x, out[0].y - out[1].y);
+    assert.ok(dist > 5, `still overlapping at scale ${scale}: ${dist}px apart`);
+    if (prevDist !== null) near(dist, prevDist, 1e-9);
+    prevDist = dist;
+  }
+});

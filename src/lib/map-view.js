@@ -37,15 +37,23 @@ export const WHOLE = { fx: 1, fy: 1 };
 export const MIN_SCALE = 1;
 
 /**
- * 24 puts roughly Crete across the width of a phone. `land.js`/`water.js` moved
- * from Natural Earth's 110m to its 50m tier (2026-08-31) specifically to back
- * this: the coastline itself still rounds to a tenth of a degree (~11 km,
- * `make-land.mjs`'s own `PRECISION`), but the 50m tier's extra vertices mean
- * that rounding is the binding limit rather than a coarse polygon being
- * visibly faceted underneath it. Past 24 the map would be zooming into shape
- * the data does not have, which is the one thing §6b will not have.
+ * 60, raised from 24 (2026-08-31, "make it so you can zoom even further").
+ * 24 was the coastline's own ceiling — `land.js`/`water.js`'s 50m tier still
+ * rounds to a tenth of a degree (~11 km, `make-land.mjs`'s own `PRECISION`),
+ * and past 24 that rounding was the binding limit rather than a coarse
+ * polygon being visibly faceted underneath it. This second raise is not
+ * backed by finer coastline data the same way — the land is honestly a
+ * coarser shape at 60 than at 24, §6b's own objection — but the reason to
+ * zoom this far is reading two saints' names apart, not the coastline, and
+ * `declutter`'s spread is in screen pixels: it separates by exactly as much
+ * regardless of scale, so the only way to make two close names easier to
+ * read apart *is* to zoom past what the land can back. Upgrading the
+ * coastline itself past 50m (the 10m tier roughly doubles it again, ~250 kB
+ * gzipped on top of the current ~211) is deferred rather than bundled into
+ * this — a further weight-for-precision trade of its own, worth its own
+ * answer rather than riding in on a request that was really about labels.
  */
-export const MAX_SCALE = 24;
+export const MAX_SCALE = 60;
 
 export const HOME = { scale: MIN_SCALE, cx: 0.5, cy: 0.5 };
 
@@ -140,18 +148,34 @@ export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
  * carry more than one such pair.
  *
  * `points` is any array of `{x, y, ...}` in the same px space the canvas
- * draws in. Grouping is a grid bucket keyed on `radiusPx`, not a true
- * nearest-neighbour search: cheap, and exact-duplicate coordinates — the
- * only case this exists to fix — always land in the same bucket regardless
- * of where the grid falls, since they are the same point. A pair merely
- * close but not identical can occasionally miss each other across a bucket
- * edge; at this corpus's density that is a rare cosmetic miss, not the bug
- * being fixed.
+ * draws in. Grouping is a grid bucket keyed on `radiusPx` by default, not a
+ * true nearest-neighbour search: cheap, and exact-duplicate coordinates —
+ * the only case this exists to fix — always land in the same bucket
+ * regardless of where the grid falls, since they are the same point. A pair
+ * merely close but not identical can occasionally miss each other across a
+ * bucket edge; at this corpus's density that is a rare cosmetic miss, not
+ * the bug being fixed.
+ *
+ * `keyOf`, if given, replaces that default with the caller's own grouping
+ * key — map.js passes each point's own lon/lat rather than its *current*
+ * x/y (2026-08-31, fixing a real bug the deeper `MAX_SCALE` this unlocked
+ * finally made reachable). `x`/`y` move with every pan and zoom, so the
+ * default key is only ever a snapshot of *this frame's* proximity: two
+ * points close enough to bucket together at rest can drift past
+ * `radiusPx` apart as the reader zooms in, and the instant they do, the
+ * jittered one snaps to its true position — a discontinuity that, wheel-
+ * zoomed at exactly that jittered pixel, reads as the anchor and the dot
+ * pulling apart and the dot vanishing off the edge a few scroll notches
+ * later. A key drawn from the *source* coordinate is stable at every zoom:
+ * two saints at the same place are the same place forever, so the group
+ * they land in — and the constant-pixel offset drawn from it — never
+ * changes underneath the reader.
  */
-export function declutter(points, radiusPx = 9) {
+export function declutter(points, radiusPx = 9, keyOf) {
+  const bucketKey = keyOf ?? ((p) => `${Math.round(p.x / radiusPx)},${Math.round(p.y / radiusPx)}`);
   const buckets = new Map();
   for (const p of points) {
-    const key = `${Math.round(p.x / radiusPx)},${Math.round(p.y / radiusPx)}`;
+    const key = bucketKey(p);
     if (!buckets.has(key)) buckets.set(key, []);
     buckets.get(key).push(p);
   }
