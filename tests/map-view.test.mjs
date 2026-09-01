@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -407,4 +407,45 @@ test('a bigger group grows as the square root, not with the count', () => {
   // twelve times the width of a pair — the same reasoning the old fan's own
   // concentric rings were written with, kept when the unit changed.
   assert.ok(ringOf(24) < ringOf(2) * 4, `24 spread to ${ringOf(24)} against a pair's ${ringOf(2)}`);
+});
+
+/*
+ * `maxScaleFor` — the ceiling is a claim about what the reader can resolve,
+ * so it has the picture's width in it (author, 2026-09-01: "match zoom
+ * capabilities on mobile to what we now have on desktop, because we cant see
+ * the individual dots on mobile").
+ */
+
+test('the desk keeps the ceiling it was measured on', () => {
+  assert.equal(maxScaleFor(1280), MAX_SCALE);
+  // Wider than the reference asks for *less* zoom, and is refused: the
+  // ceiling never comes in under the number the coastline was argued at.
+  assert.equal(maxScaleFor(2560), MAX_SCALE);
+});
+
+test('a narrower picture is allowed further in, in proportion', () => {
+  // Half the width, twice the zoom: the same ring of stacked saints spans the
+  // same order of pixels either way.
+  assert.ok(Math.abs(maxScaleFor(640) - MAX_SCALE * 2) < 1e-9);
+  assert.ok(Math.abs(maxScaleFor(360) - (MAX_SCALE * 1280) / 360) < 1e-9);
+});
+
+test('the ceiling stops at four times the desk, however narrow the glass', () => {
+  assert.equal(maxScaleFor(10), MAX_SCALE * 4);
+});
+
+test('a picture with no width yet falls back rather than dividing by zero', () => {
+  assert.equal(maxScaleFor(0), MAX_SCALE);
+  assert.equal(maxScaleFor(undefined), MAX_SCALE);
+});
+
+test('the ceiling is honoured by the arithmetic that zooms', () => {
+  // The number alone is not the feature: `zoomAbout` and `clampView` have to
+  // take it, or a phone's wheel still stops at the desk's ceiling.
+  const deep = maxScaleFor(360);
+  const v = zoomAbout({ scale: 200, cx: 0.5, cy: 0.5 }, 100, 0.5, 0.5, WHOLE, deep);
+  assert.ok(Math.abs(v.scale - deep) < 1e-9, `stopped at ${v.scale}`);
+  assert.equal(clampView({ scale: 5000, cx: 0.5, cy: 0.5 }, WHOLE, deep).scale, deep);
+  // And without one, the desk's ceiling is still the default.
+  assert.equal(clampView({ scale: 5000, cx: 0.5, cy: 0.5 }).scale, MAX_SCALE);
 });

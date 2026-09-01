@@ -58,6 +58,44 @@ export const MIN_SCALE = 1;
  */
 export const MAX_SCALE = 240;
 
+/**
+ * The picture 240 was measured against. A ceiling in *scale* is only a claim
+ * about what the reader can resolve if you also say how wide the glass is.
+ */
+export const REFERENCE_W = 1280;
+
+/**
+ * How far a picture `w` px wide may zoom (author, 2026-09-01: "match zoom
+ * capabilities on mobile to what we now have on desktop, because we cant see
+ * the individual dots on mobile").
+ *
+ * **The ceiling is about resolving power, not about scale.** What 240 buys is
+ * a constellation of stacked saints about fourteen pixels across
+ * (`SPREAD_DEG`) — and that arithmetic has the picture's width in it, so the
+ * same 240 on a 360 px phone buys four pixels and the crowd stays a smudge.
+ * So the ceiling is 240 scaled by how much narrower the glass is than the
+ * desk it was measured on.
+ *
+ * **That brings a phone into the same order, not to the same number**, and
+ * the difference is `coverFractions`: the world covers the box, so on a tall
+ * narrow window the horizontal axis is cropped and a degree is worth more
+ * pixels than the width alone predicts. Measured at the Kyiv Caves, where two
+ * saints share a coordinate exactly: 28 px apart at the ceiling on a 1280x780
+ * desk and 56 on a 360x780 phone. Overshooting is the safe direction — the
+ * complaint this answers was that the phone could not separate them at all —
+ * and folding the frame into this would make the ceiling depend on the
+ * window's shape as well as its width, which is a harder number to reason
+ * about for a gain nobody asked for.
+ *
+ * Never below the desktop ceiling, and capped at four times it: a very narrow
+ * window would otherwise ask for a zoom where the coastline is a coarse
+ * polygon and nothing but the ring is legible anyway.
+ */
+export function maxScaleFor(w) {
+  if (!w || w <= 0) return MAX_SCALE;
+  return clamp((MAX_SCALE * REFERENCE_W) / w, MAX_SCALE, MAX_SCALE * 4);
+}
+
 export const HOME = { scale: MIN_SCALE, cx: 0.5, cy: 0.5 };
 
 const clamp = (n, lo, hi) => Math.min(hi, Math.max(lo, n));
@@ -79,8 +117,8 @@ export function clampCentre(cx, cy, scale, frame = WHOLE) {
 }
 
 /** A view, normalised: scale inside its bounds and the centre inside the box. */
-export const clampView = ({ scale, cx, cy }, frame = WHOLE) => {
-  const s = clamp(scale, MIN_SCALE, MAX_SCALE);
+export const clampView = ({ scale, cx, cy }, frame = WHOLE, max = MAX_SCALE) => {
+  const s = clamp(scale, MIN_SCALE, max);
   return { scale: s, ...clampCentre(cx, cy, s, frame) };
 };
 
@@ -113,12 +151,13 @@ export const toWorld = ({ scale, cx, cy }, ax, ay, frame = WHOLE) => ({
  * slides rather than refusing; near a corner the anchor drifts, and it has to,
  * because the alternative is showing the reader the void outside the map.
  */
-export function zoomAbout(view, factor, ax = 0.5, ay = 0.5, frame = WHOLE) {
-  const scale = clamp(view.scale * factor, MIN_SCALE, MAX_SCALE);
+export function zoomAbout(view, factor, ax = 0.5, ay = 0.5, frame = WHOLE, max = MAX_SCALE) {
+  const scale = clamp(view.scale * factor, MIN_SCALE, max);
   const { px, py } = toWorld(view, ax, ay, frame);
   return clampView(
     { scale, cx: px - ((ax - 0.5) * frame.fx) / scale, cy: py - ((ay - 0.5) * frame.fy) / scale },
     frame,
+    max,
   );
 }
 
@@ -308,7 +347,7 @@ export function mergeDots(points, radiusPx = MERGE_PX, rankOf = () => 0) {
  * A single point has no extent and gets `Infinity`, clamped to `MAX_SCALE`;
  * callers with an opinion about how close is too close cap it themselves.
  */
-export function fitBounds(points, frame = WHOLE, margin = 0.15) {
+export function fitBounds(points, frame = WHOLE, margin = 0.15, max = MAX_SCALE) {
   if (!points.length) return HOME;
   const xs = points.map((p) => p.x);
   const ys = points.map((p) => p.y);
@@ -316,6 +355,6 @@ export function fitBounds(points, frame = WHOLE, margin = 0.15) {
   const [minY, maxY] = [Math.min(...ys), Math.max(...ys)];
   const usable = Math.max(0.05, 1 - 2 * margin);
   const fit = (span, f) => (span > 0 ? (f * usable) / span : Infinity);
-  const scale = clamp(Math.min(fit(maxX - minX, frame.fx), fit(maxY - minY, frame.fy)), MIN_SCALE, MAX_SCALE);
-  return clampView({ scale, cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 }, frame);
+  const scale = clamp(Math.min(fit(maxX - minX, frame.fx), fit(maxY - minY, frame.fy)), MIN_SCALE, max);
+  return clampView({ scale, cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 }, frame, max);
 }

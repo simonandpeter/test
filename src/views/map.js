@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { HOME, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -644,6 +644,17 @@ const frameOf = (canvas) => {
   return coverFractions(box.width, box.height, ASPECT);
 };
 
+/**
+ * How far this picture may zoom. Not a constant, because the ceiling is a
+ * claim about what the reader can *resolve*: `MAX_SCALE` buys about fourteen
+ * pixels between two saints who share a coordinate on a 1280 px desk and four
+ * on a 360 px phone, which is why the crowd was still a smudge there (author,
+ * 2026-09-01: "match zoom capabilities on mobile to what we now have on
+ * desktop, because we cant see the individual dots on mobile"). See
+ * `maxScaleFor` for what it does and does not equalise.
+ */
+const ceilingOf = (canvas) => maxScaleFor(canvas.getBoundingClientRect().width);
+
 const located = (card) => (card.locations ?? []).length > 0 || (card.track ?? []).length > 0;
 
 /** Every point of one kind, with the saint it belongs to. */
@@ -1117,8 +1128,8 @@ export function render(el, { data, router }) {
      */
     let target;
     if (track.length > 1) {
-      const fitted = fitBounds(trackPath(track).map((p) => project(p.lon, p.lat)), frame);
-      target = clampView({ ...fitted, scale: Math.min(fitted.scale, RAIL_FIT_MAX) }, frame);
+      const fitted = fitBounds(trackPath(track).map((p) => project(p.lon, p.lat)), frame, undefined, ceilingOf(canvas));
+      target = clampView({ ...fitted, scale: Math.min(fitted.scale, RAIL_FIT_MAX) }, frame, ceilingOf(canvas));
     } else {
       const { px, py } = toWorld(view, mark.x / box.width, mark.y / box.height, frame);
       target = { scale: view.scale, ...clampCentre(px, py, view.scale, frame) };
@@ -1805,14 +1816,14 @@ function wireSearch(el, canvas, withPlace, setView) {
     let scale;
     if (row.kind === 'place') {
       ({ lon, lat } = row.place);
-      scale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, row.place.zoom));
+      scale = Math.min(ceilingOf(canvas), Math.max(MIN_SCALE, row.place.zoom));
     } else {
       const at = pointAt(row.card, dateFrom, dateTo);
       if (!at) return;
       ({ lon, lat } = at.where);
       // Close enough to read the name and its neighbours, not so close that
       // the reader has to zoom back out to learn where in the world they are.
-      scale = Math.min(MAX_SCALE, 30);
+      scale = Math.min(ceilingOf(canvas), 30);
     }
     const p = project(lon, lat);
     setView({ scale, ...clampCentre(p.x, p.y, scale, frame) });
@@ -2024,7 +2035,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     // like it did something.
     level.textContent = `${view.scale.toFixed(1)}×`;
     el.querySelector('[data-zoom="out"]').disabled = view.scale <= MIN_SCALE;
-    el.querySelector('[data-zoom="in"]').disabled = view.scale >= MAX_SCALE;
+    el.querySelector('[data-zoom="in"]').disabled = view.scale >= ceilingOf(canvas) - 0.01;
   };
 
   const set = (next) => {
@@ -2043,7 +2054,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     button.addEventListener('click', () => {
       const how = button.dataset.zoom;
       if (how === 'home') set(homeView);
-      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
+      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
       // A disabled button drops focus to the body, which strands the keyboard
       // at the top of the document. Hand it to the map, which is the thing the
       // reader was working.
@@ -2070,6 +2081,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
           (e.clientX - box.left) / box.width,
           (e.clientY - box.top) / box.height,
           coverFractions(box.width, box.height, ASPECT),
+          ceilingOf(canvas),
         ),
       );
     },
@@ -2103,7 +2115,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
       const now = spread(active);
       if (pinch > 0 && now > 0) {
         const mid = midpoint(active);
-        setThrottled(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT)));
+        setThrottled(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT), ceilingOf(canvas)));
       }
       pinch = now;
       return;
@@ -2150,10 +2162,10 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     }
     if (e.key === '+' || e.key === '=') {
       e.preventDefault();
-      set(zoomAbout(view, ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
+      set(zoomAbout(view, ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
     } else if (e.key === '-' || e.key === '_') {
       e.preventDefault();
-      set(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas)));
+      set(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
     } else if (e.key === 'Home' || e.key === '0') {
       e.preventDefault();
       set(homeView);

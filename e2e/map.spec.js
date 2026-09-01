@@ -32,6 +32,28 @@ import { ready } from './helpers.js';
 
 const MAP = '/map';
 
+/**
+ * The deepest this picture goes, which since 2026-09-01 is a function of how
+ * wide it is: the ceiling exists so that saints sharing a coordinate can be
+ * told apart, and that is a claim in *pixels*, so a 360 px phone has to go
+ * about three and a half times further than a 1280 px desk to buy the same
+ * fourteen pixels between two dots. So the tests below read the number off
+ * the page rather than naming it, and assert the thing that is true at every
+ * width: the map has stopped, and it stopped past the desktop ceiling.
+ */
+const zoomedToCeiling = async (page) => {
+  const canvas = page.locator('[data-map]');
+  await canvas.focus();
+  for (let i = 0; i < 25 && !(await page.locator('[data-zoom="in"]').isDisabled()); i++) {
+    await canvas.press('+');
+  }
+  await expect(page.locator('[data-zoom="in"]'), 'the map never reached its ceiling').toBeDisabled();
+  const scale = Number((await page.locator('[data-zoom-level]').textContent()).replace('×', ''));
+  expect(scale, 'the ceiling came in under the desktop one').toBeGreaterThanOrEqual(240);
+  return scale;
+};
+
+
 test.beforeEach(async ({ page }) => {
   await ready(page);
 });
@@ -477,10 +499,7 @@ test('the map can zoom to its ceiling', async ({ page }) => {
   // against `PRECISION`'s own hundredth-of-a-degree rounding) rather than
   // left to outrun it again.
   await page.goto(MAP, { waitUntil: 'networkidle' });
-  const zoomIn = page.locator('[data-zoom="in"]');
-  for (let i = 0; i < 20 && !(await zoomIn.isDisabled()); i++) await zoomIn.click();
-  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
-  await expect(zoomIn).toBeDisabled();
+  await zoomedToCeiling(page);
 });
 
 test('a press selects the saint and a drag does not, and Profile is the door', async ({ page }) => {
@@ -913,9 +932,7 @@ test('saints spread from one coordinate stay a tight constellation, not a wheel'
   await searchBox(page).fill('kyiv');
   await expect(searchRows(page).first()).toContainText('Kyiv');
   await searchBox(page).press('Enter');
-  await canvas.focus();
-  for (let i = 0; i < 20; i++) await canvas.press('+');
-  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
+  await zoomedToCeiling(page);
 
   const apart = await at();
   expect(apart.length, 'the pair did not separate at the deepest zoom there is').toBe(2);
@@ -1193,9 +1210,7 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
    * again a few saints in one town, which is the case the columns were built
    * for and the case the author's report was about.
    */
-  await canvas.focus();
-  for (let i = 0; i < 20; i++) await canvas.press('+');
-  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
+  await zoomedToCeiling(page);
   await everyDotNamed();
 });
 
