@@ -2,6 +2,7 @@ import { recordedDay } from '../../data/days.js';
 import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail } from '../../lib/detail.js';
+import { heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage, languageTag } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
@@ -65,6 +66,30 @@ function fillHeroLede(panel, slug, iso, card) {
       link.append(chevron);
       box.append(' ', link);
 
+      /*
+       * **And two lines of the life going on under it** (author, 2026-09-01:
+       * "gradient fade the last two lines of preview text below it").
+       *
+       * The preview used to stop dead at the button, which says the paragraph
+       * was cut and does not show it. Two more lines running under the button
+       * and fading out say the same thing by demonstration — the life carries
+       * on, and this is where you stop being able to read it.
+       *
+       * `aria-hidden`, because these words cannot be finished: a screen reader
+       * given half a sentence with no way to reach the rest is worse served
+       * than one given the button, which is right beside it and says whose life
+       * it opens. The tail is a picture of text rather than text.
+       *
+       * A generous slice rather than a measured one: the box is two lines tall
+       * with its overflow hidden, so what it needs is *enough* words, and forty
+       * is enough at any column width the card reaches.
+       */
+      const tail = document.createElement('span');
+      tail.className = 'hero-lede-tail';
+      tail.setAttribute('aria-hidden', 'true');
+      box.append(tail);
+      box.__tail = tail;
+
       // Kept whole so a resize can re-fit from the original rather than from
       // whatever the last fit left behind.
       box.__full = text;
@@ -73,6 +98,11 @@ function fillHeroLede(panel, slug, iso, card) {
     () => {},
   );
 }
+
+/** How many words are handed to the faded tail. Two lines' worth at any
+ *  column the card reaches, with room to spare — the box's own height is what
+ *  decides where they stop. */
+const TAIL_WORDS = 40;
 
 /**
  * Trims the preview until the card's text column ends above the bottom of the
@@ -85,6 +115,13 @@ function fillHeroLede(panel, slug, iso, card) {
  * thing the cut removes. So the text is shortened on a word boundary until
  * what is left, link and all, fits the budget, and the ellipsis is the link's
  * own leading character.
+ *
+ * **And the budget now has to hold the faded tail as well** (2026-09-01
+ * evening). The tail is two lines with its overflow hidden, so it is a fixed
+ * cost the search measures along with everything else — which is the whole
+ * reason it is a fixed height rather than a word count: a tail whose height
+ * depended on how many words fell into it would move under the search that was
+ * trying to fit it.
  *
  * A binary search over the word count, because each try costs a layout: nine
  * measurements for a three-hundred-word paragraph rather than three hundred.
@@ -102,8 +139,12 @@ function fitLede(panel) {
   if (limit <= 0 || box.offsetParent === null) return;
 
   const words = box.__full.split(' ');
+  const tail = box.__tail;
   const write = (n) => {
     box.firstChild.nodeValue = words.slice(0, n).join(' ');
+    // What the life says next, faded out. Empty where the paragraph ends with
+    // the head — there is nothing going on under the button to show.
+    if (tail) tail.textContent = words.slice(n, n + TAIL_WORDS).join(' ');
   };
   write(words.length);
   if (body.scrollHeight <= limit) return;
@@ -243,12 +284,12 @@ function emptyDayNote(iso) {
   return `${lead} ${pointer}`;
 }
 
-/**
- * The tallest the hero's icon may stand, as a multiple of its own width
- * (author, 2026-09-01). Past this it is cropped from the bottom, as it always
- * was; up to it the icon is shown whole.
- */
-const MAX_HERO_RATIO = 1.6;
+/* How tall the hero's icon may stand, how wide, and where it is cropped from
+   when it exceeds either — all three are `lib/hero-crop.js`. They moved out of
+   this file on 2026-09-01 evening when the author added the second limit: it is
+   arithmetic with two of their own constants in it and one branch the corpus
+   cannot reach today, and all three of those wanted a unit test a module that
+   imports the DOM cannot have. */
 
 export { fitLede };
 
@@ -289,7 +330,13 @@ export function paintDay({ main, side }) {
    * cap the author asked for is honoured by the tighter rule standing in
    * front of it rather than by a line of code that does nothing.
    */
-  const drawnH = hero.image ? Math.min(hero.image.h, hero.image.w * MAX_HERO_RATIO) : 0;
+  /*
+   * The height the box is drawn at: the icon's own, held between the two limits
+   * the author set. Whichever limit bites, `object-fit: cover` crops to it and
+   * `--hero-focus` says from where.
+   */
+  const crop = heroCrop(hero.image);
+  const drawnH = crop.height;
   const shape = hero.image ? `${hero.image.w} / ${drawnH}` : '';
   /*
    * The same shape as a plain number, for the *column*: the picture is given
@@ -304,7 +351,7 @@ export function paintDay({ main, side }) {
     ? `<div class="hero-figure">
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
-          style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${shape}">
+          style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${shape}; --hero-focus:${crop.focus}">
           <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
             style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
         </a>

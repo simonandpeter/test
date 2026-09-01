@@ -30,6 +30,20 @@ const QUALITY = arg('quality', '50m');
 // already close to a hundredth of a degree.
 const PRECISION = Number(arg('precision', 2));
 
+/**
+ * Which file this run writes.
+ *
+ * **Two tiers since 2026-09-01** (author: "until you reach at least 5x zoom,
+ * only the low definition coastlines are shown so when zoomed out the map isnt
+ * laggy"). The map draws the coarse one below that zoom and the fine one above
+ * it, so the generator has to be able to produce both — same code, two sets of
+ * arguments, recorded in the header each file carries.
+ *
+ *     node scripts/make-land.mjs --quality=50m  --precision=2
+ *     node scripts/make-land.mjs --quality=110m --precision=1 --out=land-coarse
+ */
+const OUT = arg('out', 'land');
+
 const topo = JSON.parse(await readFile(new URL(`../node_modules/world-atlas/land-${QUALITY}.json`, import.meta.url), 'utf8'));
 const land = feature(topo, topo.objects.land);
 
@@ -119,7 +133,7 @@ export const LAND = ${JSON.stringify(rings)};
 `;
 
 await mkdir(new URL('../src/data/', import.meta.url), { recursive: true });
-await writeFile(new URL('../src/data/land.js', import.meta.url), body);
+await writeFile(new URL(`../src/data/${OUT}.js`, import.meta.url), body);
 
 const points = rings.reduce((n, r) => n + r.length / 2, 0);
 const { gzipSync } = await import('node:zlib');

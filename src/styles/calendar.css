@@ -1154,6 +1154,24 @@
        against this element's own inherited 17px/1.65. */
     --card-h: calc(18 * 1.65 * 17px);
     --card-h: calc(var(--lede-lines) * 1lh);
+    /*
+     * **And never more than half the window, on any monitor** (author,
+     * 2026-09-01: "on my laptop the saint image is way bigger than on my pc
+     * monitor ... Make sure for the full window size possible on any monitor,
+     * its no more than half the window height").
+     *
+     * Eighteen lines is about 504 px whatever the screen — which is a third of
+     * a 1440 px monitor and nearly three quarters of a laptop's 700, and that
+     * difference is the whole of what the author was looking at. The picture's
+     * column is derived from this height (`--card-h / --hero-r` below), so
+     * capping it here caps the picture, and it is the only number that has to
+     * change: the card is as tall as what is in it.
+     *
+     * `dvh`, not `vh`: the *dynamic* viewport height is the one that follows a
+     * phone's URL bar, and half of a window that is momentarily taller is a
+     * picture that would have to shrink when the bar came back.
+     */
+    --card-h: min(calc(var(--lede-lines) * 1lh), 50dvh);
   }
 }
 
@@ -1227,14 +1245,40 @@
    block under it (author, 2026-09-01). `white-space: nowrap` keeps the words
    and the chevron on one line so the trim never leaves "continue" at the end
    of one line and "reading" alone on the next. */
+/* **A white pill, not a quiet phrase** (author, 2026-09-01: "Make the
+   'continue reading' button white so you can tell its a button for more").
+
+   It was the last words of the paragraph in the paragraph's own ink, which is
+   what the instruction before this one asked for — "make the '...continue
+   reading' part of the actual preview paragraph" — and reading well is exactly
+   how it stopped looking like a control. This keeps its place in the sentence
+   and gives it a face: white is the one surface the page has nowhere else, so
+   nothing else on the card can be mistaken for it.
+
+   `--button-face` and its ink are fixed rather than themed (tokens.css says
+   why): the pill's job is to stand off the page, and a pill that darkened with
+   the page would stop doing it. */
 .hero-more {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  /* Its own line-height, so a pill inside a paragraph does not open the line
+     it sits on and push the lines above and below it apart. */
+  padding: 0.1em var(--space-2);
+  border-radius: 999px;
+  background: var(--button-face);
+  color: var(--button-face-ink);
+  box-shadow: 0 1px 2px -1px rgb(0 0 0 / 0.35);
   white-space: nowrap;
-  color: var(--ink-soft);
   text-decoration: none;
+  /* Over the faded tail rather than under it: the two overlap by design, and
+     the pill is the thing that must stay readable. */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-more-chevron {
-  margin-left: var(--space-1);
+  margin-left: 0;
 }
 
 /* The standalone copy, for the width where there is no paragraph to end. */
@@ -1250,12 +1294,41 @@
 }
 
 .hero-more:hover {
-  color: var(--ink);
+  box-shadow: 0 2px 5px -2px rgb(0 0 0 / 0.45);
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .hero-more-chevron {
   color: var(--rubric);
+}
+
+/* **The life going on under the button, fading out** (author, 2026-09-01:
+   "gradient fade the last two lines of preview text below it").
+
+   Two lines exactly, and the height is what makes that true rather than the
+   word count — `fitLede` measures this box as a fixed cost while it decides how
+   much of the paragraph fits above it, and a box that sized itself to its own
+   words would move under the search trying to fit it. `1lh` is the paragraph's
+   own line, so the pair stays two lines whatever the type does.
+
+   The mask runs from opaque at the top to nothing at the foot, so the first of
+   the two reads and the second dissolves. `mask-image` rather than a gradient
+   *overlay*, which would have to be painted in the page's own background colour
+   and would therefore be wrong on the theme it was not written for. */
+.hero-lede-tail {
+  display: block;
+  height: calc(2 * 1lh);
+  overflow: hidden;
+  /* The words are a picture of text, so nothing here is a target and nothing
+     here takes a selection. */
+  user-select: none;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.85), transparent 92%);
+}
+
+.hero-lede-tail:empty {
+  display: none;
 }
 
 /* **A landscape band since 2026-08-26**, where it was a square from
@@ -1277,7 +1350,12 @@
   width: 100%;
   aspect-ratio: 3 / 2;
   background-size: cover;
-  background-position: 50% 0;
+  /* Where the crop is taken from, per saint (`heroFocus` in daily/panel.js):
+     the top for a tall icon, whose face is there, and the centre for a wide
+     one, whose subject is in the middle of it. The placeholder is anchored with
+     the picture or it would paint a differently-framed image under the one
+     arriving. */
+  background-position: var(--hero-focus, 50% 0);
   border-radius: var(--radius-cell);
   overflow: hidden;
 }
@@ -1364,7 +1442,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 0;
+  object-position: var(--hero-focus, 50% 0);
 }
 
 /* The name is the whole line, and the gap under it is the one the `.name-line`

@@ -3936,9 +3936,29 @@ test('the row comes back on its own after a press, and takes the wheel while it 
   await expect(page.locator('.cx-card').first()).toBeVisible();
   const at = () => track.evaluate((el) => el.scrollLeft);
 
-  // The track itself, not a card, which would navigate away.
+  /*
+   * The track itself, not a card, which would navigate away — and **the only
+   * place left where those are different is the track's own padding**
+   * (2026-09-01). This pressed eight pixels below the track's top edge, which
+   * was empty ground while the columns were dealt low, high and mid inside the
+   * row; the author asked for a filled stack that evening, the columns became
+   * flush, and that point became a saint's picture. The press opened her page,
+   * the track went with the view, and the wheel had nothing left to move.
+   *
+   * The foot rather than the head, because there is twice as much of it: the
+   * track's padding is 8 px above the cells and 16 px below them, so this has
+   * eight pixels of margin either side rather than four. Asserted rather than
+   * assumed below, so the day some future layout closes that gap this says so
+   * instead of navigating away again.
+   */
   const box = await track.boundingBox();
-  await page.mouse.move(box.x + 40, box.y + 8);
+  const press = { x: box.x + 40, y: box.y + box.height - 8 };
+  const onTrack = await page.evaluate(
+    (at) => document.elementFromPoint(at.x, at.y)?.closest('[data-carousel-track]') !== null,
+    press,
+  );
+  expect(onTrack, 'the press point is no longer bare track — it would navigate').toBe(true);
+  await page.mouse.move(press.x, press.y);
   await page.mouse.down();
   await page.mouse.up();
 
@@ -3977,7 +3997,15 @@ test('the row can be hauled with the mouse, and a haul is not a click', async ({
    * thing on screen.
    */
   const box = await track.boundingBox();
-  const from = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+  /*
+   * The foot of the track, not its centre, and for the reason the test above
+   * gives at length: the columns are flush since 2026-09-01, so the middle of
+   * the row is a saint's picture. A *drag* would be swallowed by the 4 px rule
+   * whatever it started on — which is the half this test is about — but the
+   * pointer has to go down somewhere that is not a link, or the browser starts
+   * a native image drag instead of giving us the pointermoves.
+   */
+  const from = { x: box.x + box.width / 2, y: box.y + box.height - 8 };
   const before = await track.evaluate((el) => el.scrollLeft);
   await page.mouse.move(from.x, from.y);
   await page.mouse.down();
@@ -4438,22 +4466,27 @@ test('the row is a filled stack: every column reaches the foot, and no saint twi
   expect(row.worstSlack, 'a stacked column stops short of the foot of the row').toBeLessThan(2);
   /*
    * A column holding *one* saint has no gap to hand its remainder to, so it can
-   * end short — but never by more than the card that would have gone under it,
-   * which is a caption (64) and the gap above it (12). Beyond that is a saint
-   * the packer could have fitted and did not.
+   * end short — but never by more than the card that would have gone under it.
+   * That is the caption the packer budgets (64) and the gap above it (12), plus
+   * the difference between that budget and a caption's real height: the budget
+   * is deliberately generous, because a name that wraps to three lines really is
+   * 64 tall and under-budgeting puts the last card past the fold. A one-line
+   * caption renders at 46, so a lone column can be 96 short and every pixel of
+   * it accounted for. Beyond that is a saint the packer could have fitted.
    */
-  expect(row.worstLoneSlack, 'a column had room for another saint and left it empty').toBeLessThan(78);
+  expect(row.worstLoneSlack, 'a column had room for another saint and left it empty').toBeLessThan(97);
   // And they all start on it, which is the scatter having gone.
   expect(row.tops, 'the columns are still dealt different heights').toBe(1);
   /*
-   * The row fills the window it was measured against, to within the 40 px the
-   * packer rounds its room to. That rounding is not slop that could be tidied
-   * away: it is what keeps the run — and so the reader's remembered place in it
-   * — from changing between two paints taken a frame apart (see `space` in
-   * views/index/modes.js). A band of at most half of it at the very foot of the
-   * page is the price, and it buys back every hole inside the columns.
+   * The row fills the room it was measured against, which is the window less
+   * the page's own bottom padding — 64 px that used to be counted as the row's
+   * and put a scrollbar on the page (2026-09-01 evening; the carousel's own fit
+   * test covers that half). Plus the 40 px the packer rounds its room down to,
+   * which is not slop that could be tidied away: it is what keeps the run — and
+   * so the reader's remembered place in it — from changing between two paints
+   * taken a frame apart (see `space` in views/index/modes.js).
    */
-  expect(row.windowBottom - row.trackBottom, 'the row does not reach the foot of the window').toBeLessThan(44);
+  expect(row.windowBottom - row.trackBottom, 'the row does not reach the foot of its room').toBeLessThan(110);
   expect(row.trackBottom - row.windowBottom, 'the row runs past the foot of the window').toBeLessThan(3);
   /*
    * Densely, not by spreading three cards over a window's height. Both of these
@@ -4554,4 +4587,85 @@ test('a card prints the whole name, however many lines it takes, and a row still
     .first()
     .evaluate((el) => getComputedStyle(el).webkitLineClamp);
   expect(rowClamp, 'the row lost its clamp too').toBe('3');
+});
+
+test('the carousel fits the window at every size, so the page never scrolls behind it', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "The carousel mode in All Saints should not have a
+   * scroll bar at all on the highest window size possible on any screen. The
+   * images should instead scale/stack appropriately."
+   *
+   * The row already sized itself to the room between its own top and the foot
+   * of the window — but "the room" was the track's own padding and nothing
+   * else, so the page's bottom padding was 64 px the row believed it had. It
+   * ended 33 px above the fold, the padding hung below it, and the page scrolled
+   * by the difference. At every window size, on a page whose whole content is
+   * one row that fits.
+   *
+   * Seven windows, because the defect was invisible at any one of them and the
+   * author found it on a monitor this suite does not run at. The short one is
+   * here for the other half of the fix: the row's room is quantised to 40 px so
+   * the packing is stable across paints, and rounding to the *nearest* 40 could
+   * round up — eleven pixels of room that was not there, which at 1440x620 was
+   * enough to put the bar back on its own.
+   */
+  await carouselMode(page);
+  await ready(page);
+  /*
+   * **One load, then resized** — where this opened the page afresh at each of
+   * the seven. Seven `networkidle` loads is twenty seconds on an idle machine
+   * and past the test's own timeout under eight parallel workers, which is how
+   * it first went red. Resizing is also the truer gesture: the row repacks on
+   * every resize, so this asks the thing a reader does rather than the thing a
+   * cold visit does.
+   */
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  for (const size of [
+    { width: 360, height: 780 },
+    { width: 1024, height: 560 },
+    { width: 1280, height: 800 },
+    { width: 1440, height: 620 },
+    { width: 1920, height: 1080 },
+    { width: 2560, height: 1440 },
+    { width: 3440, height: 1440 },
+  ]) {
+    await page.setViewportSize(size);
+    const where = `${size.width}x${size.height}`;
+
+    const measure = () =>
+      page.evaluate(() => {
+        const track = document.querySelector('[data-carousel-track]');
+        return {
+          page: document.documentElement.scrollHeight - document.documentElement.clientHeight,
+          under: Math.round(window.innerHeight - track.getBoundingClientRect().bottom),
+          cards: document.querySelectorAll('.cx-card').length,
+        };
+      });
+
+    /*
+     * **All three polled together, and none of them waited on alone.** The
+     * repack is debounced to a frame and then rebuilds the row, and no single
+     * one of these can say it is over: the page stops scrolling as soon as the
+     * row is *shorter* than the new window, which the previous window's row
+     * already is, so waiting on that alone reads the old row and passes. The
+     * gap under the row is what catches that, and the card count catches an
+     * empty one. The predicate is the whole claim — it fits by *filling*, with
+     * no page scroll and the row ending within the page's own bottom padding of
+     * the fold — and what the poll prints when it runs out is the three numbers
+     * that came nearest to satisfying it.
+     */
+    await expect
+      .poll(
+        async () => {
+          const m = await measure();
+          return m.page <= 0 && m.under < 110 && m.cards > 20 ? 'fits' : JSON.stringify(m);
+        },
+        { timeout: 15000, message: `the row does not fit ${where}` },
+      )
+      .toBe('fits');
+  }
 });

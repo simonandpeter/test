@@ -470,6 +470,7 @@ export const ro = {
     movementOn: 'Deplasările sunt pornite. Fiecare sfânt este arătat unde se afla în anul de sus al cronologiei.',
     movementOff: 'Deplasările sunt oprite. Fiecare sfânt este arătat la locul odihnei sale.',
     play: 'Rulează anii',
+    watching: 'Anul afișat',
     pause: 'Pauză',
     profile: 'Pagina',
     profileOf: 'Pagina lui {name}',

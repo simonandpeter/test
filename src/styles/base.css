@@ -61,6 +61,28 @@
   }
 }
 
+/*
+ * **A known overhang, not fixed here** (2026-09-01 evening). Because the gutter
+ * above is reserved, the root's own width is a scrollbar narrower than `100vw`
+ * — so anything built on `calc(50% - 50vw)` to run full-bleed hangs 7.5 px off
+ * each edge of the page. The carousel does exactly that.
+ *
+ * It is real and it is invisible: the root is the scroll container and reports
+ * no horizontal overflow, so nothing shakes and nothing scrolls; only
+ * `document.body.scrollWidth` knows. Two fixes were tried and both were worse
+ * than the fault. `--scrollbar: calc(100vw - 100%)` cannot be handed to the
+ * element that needs it — an unregistered custom property substitutes as an
+ * unresolved token, so the percentage resolves against *its* container and the
+ * answer is nonsense (it silently took the carousel's bleed away entirely), and
+ * registering it as a `<length>` makes the percentage invalid for the declared
+ * syntax so it falls back to zero. Clamping the bleed to the page's own padding
+ * with `max()` works, and changes what full-bleed means past `--page-max`,
+ * which is a design decision rather than a repair.
+ *
+ * Left as it is, written down, and worth a fix the day something visible rests
+ * on it.
+ */
+
 body {
   margin: 0;
   min-height: 100svh;

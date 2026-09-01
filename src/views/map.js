@@ -116,6 +116,40 @@ let cleanups = [];
 let dateFrom = null;
 let dateTo = null;
 
+/**
+ * The year the map is showing people *in*, as against the years it is showing
+ * people *from* (author, 2026-09-01: "Add a triangle you can drag over the top
+ * of the timeline bar selection ... It appears once Movement is ticked on. It
+ * gets pushed around if the high or low dates make contact with it, otherwise
+ * it starts by default on the highest year").
+ *
+ * **This separates two questions the upper handle had been answering at once.**
+ * `pointAt` has always taken position from `dateTo` and dimming from the whole
+ * range, and said so — but that made "which saints does my window reach" and
+ * "what year am I watching" one control, so a reader who wanted to see the
+ * eleventh century move had to shrink their window to a single year to do it.
+ * The triangle is the second question given its own handle: the range still
+ * decides who is lit, and this decides where they stand.
+ *
+ * It lives inside the range and is pushed by it rather than pushing back, which
+ * is the author's own rule and the only one that keeps the control honest — a
+ * "now" outside the window you are looking at is a claim about a year the map
+ * has greyed out.
+ *
+ * `null` until the corpus's span is known, then the top of the range.
+ */
+let playhead = null;
+
+/**
+ * The year the movement mechanic reads: the triangle where there is one, the
+ * upper handle otherwise.
+ *
+ * The fallback is not a fallback for long — `playhead` is set the moment bounds
+ * exist — but it is what keeps a map with no timeline at all (a corpus with no
+ * dated saint in it) drawing dots rather than throwing.
+ */
+const shownYear = () => (playhead === null ? dateTo : playhead);
+
 /** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
 let drawnDots = [];
 
@@ -303,6 +337,32 @@ function flyTo(target, frame, apply, done) {
 
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
+
+/**
+ * The zoom at which the fine coastline replaces the coarse one (author,
+ * 2026-09-01: "until you reach at least 5x zoom, only the low definition
+ * coastlines are shown so when zoomed out the map isnt laggy as it currently
+ * is. Ideally the high definition loads in tiles as you scroll over the map to
+ * be efficient").
+ *
+ * **The lag was never the fetch, it was the frame.** The draw pass already
+ * skips any shape whose box is off screen, which is what tiling would buy —
+ * but at 1x the whole world is on screen, so nothing is skipped and every one
+ * of the 50m tier's points is projected on every frame of every drag. A coarser
+ * tier is the only thing that helps there, because the problem is the number of
+ * points *inside* the picture.
+ *
+ * So there are two files now: Natural Earth 110m at one decimal place (5,118
+ * points, 19 kB gzipped) for the map as it opens, and the 50m at two (255 kB)
+ * fetched the first time the reader passes this line and kept for the visit.
+ * Below 5x the coarse tier is what is drawn even once the fine one has arrived,
+ * because zooming back out must get the cheap frame back.
+ *
+ * Five is the author's number. It is also about where the coarse tier starts to
+ * show its own edges — 0.1 degrees is 11 km, which is a pixel or two at 5x and
+ * a visible staircase past it.
+ */
+const DETAIL_AT = 5;
 
 /** One saint's mark. A merged mark grows from here — see `paintCanvas`. */
 const DOT_R = 2.5;
@@ -703,7 +763,7 @@ const pointsOfKind = (cards, which) =>
  *   `future`  they were not yet born — greyed twice as far, and no glow,
  *             because a halo is a claim about a place someone *was*.
  */
-function pointAt(card, from, to) {
+function pointAt(card, from, to, at = to) {
   const locations = card.locations ?? [];
   const track = card.track ?? [];
   if (!locations.length && !track.length) return null;
@@ -722,6 +782,14 @@ function pointAt(card, from, to) {
    * handles say.
    */
   if (to === null || born === null || died === null) return { where: settled, state: 'live' };
+  /*
+   * **`at` is where, `from`/`to` is who** (2026-09-01). The paragraph below
+   * already drew this distinction and answered both halves of it with `to`,
+   * which was right while the upper handle was the only thing that could say
+   * what year the reader was watching. The triangle says that now, so the two
+   * questions take two arguments — and where there is no triangle, `at`
+   * defaults to `to` and nothing about the old behaviour changes.
+   */
 
   /*
    * **Position from the upper handle; dimming from the whole range.** They
@@ -747,16 +815,16 @@ function pointAt(card, from, to) {
     // the drawing pass eases *along* the path toward it (`glideTo`), and a
     // position eased directly would cut across the bends instead of taking
     // them.
-    const progress = progressAt(track, to);
+    const progress = progressAt(track, at);
     return { where: pointOn(track, progress), state, track, progress };
   }
 
-  if (to < born) {
+  if (at < born) {
     // Not yet born: their birthplace is the only honest dot, and it marks a
     // place they will be rather than one they are.
     return { where: byKind('birth') ?? settled, state };
   }
-  if (to >= died) {
+  if (at >= died) {
     // Dead by this year. `relics` outranks `death` only once the year is
     // past the death itself, which is the one point at which "where they
     // are" and "where they died" can honestly differ.
@@ -796,7 +864,12 @@ export function render(el, { data, router }) {
   if (bounds && (dateFrom === null || dateTo === null || dateFrom < bounds.min || dateTo > bounds.max)) {
     dateFrom = bounds.min;
     dateTo = bounds.max;
+    playhead = null;
   }
+  // "otherwise it starts by default on the highest year" (author), which is the
+  // top of the *range* rather than of the corpus: it is a mark inside the
+  // window, so where it starts is where that window ends.
+  if (bounds && playhead === null) playhead = dateTo;
 
   /*
    * **The timeline dims rather than removes** (author, 2026-08-31: saints
@@ -1289,6 +1362,24 @@ function timelineMarkup(M, bounds) {
           <input type="range" class="map-timeline-input" data-timeline-to
             min="${bounds.min}" max="${bounds.max}" step="1" value="${dateTo}"
             aria-label="${esc(STRINGS.saints.filters.to)}" />
+          <!--
+            The year being watched (author, 2026-09-01), over the top of the
+            selection and sliding only inside it.
+
+            A slider role rather than a third native range input, and the two
+            above are the reason: a native range spans the whole rail and its
+            track would lie across both of theirs, taking the presses that
+            belong to the handles. This one is a button the width of its own
+            triangle, so it can be dragged where it is and nowhere else — and it
+            carries the range role's four attributes and answers the arrow keys,
+            so what the native input was giving for free is given back by hand
+            rather than given up.
+          -->
+          <button type="button" class="map-timeline-head" data-playhead hidden
+            role="slider" tabindex="0" aria-orientation="horizontal"
+            aria-label="${esc(M.watching)}"
+            aria-valuemin="${bounds.min}" aria-valuemax="${bounds.max}"
+            aria-valuenow="${playhead ?? bounds.max}"></button>
         </div>
         ${yearBox('to', M.yearTo, dateTo)}
       </div>
@@ -1320,6 +1411,7 @@ function wireTimeline(el, bounds, refresh) {
   const fromInput = el.querySelector('[data-timeline-from]');
   const toInput = el.querySelector('[data-timeline-to]');
   const fillEl = el.querySelector('[data-timeline-fill]');
+  const headEl = el.querySelector('[data-playhead]');
   const presetSel = el.querySelector('[data-timeline-preset]');
   const numOf = (side) => el.querySelector(`[data-year-num="${side}"]`);
   const eraOf = (side) => el.querySelector(`[data-year-era="${side}"]`);
@@ -1407,6 +1499,18 @@ function wireTimeline(el, bounds, refresh) {
       eraOf(side).value = year < 0 ? 'bc' : 'ad';
       btnOf(side).textContent = yearLabel(year, STRINGS.map);
     }
+    /*
+     * **The triangle is pushed, never pushing** (author: "It gets pushed around
+     * if the high or low dates make contact with it"). Clamping it here rather
+     * than in the handles' own listeners is what makes that true of every way
+     * the range can move — the two handles, the fill drag, a typed year, a
+     * preset — because all five end in this function. A rule enforced at the
+     * one place the state is drawn from cannot be forgotten by a sixth.
+     */
+    playhead = Math.min(dateTo, Math.max(dateFrom, playhead ?? dateTo));
+    headEl.style.left = `${((playhead - bounds.min) / span) * 100}%`;
+    headEl.setAttribute('aria-valuenow', String(playhead));
+    headEl.setAttribute('aria-valuetext', yearLabel(playhead, STRINGS.map));
   };
 
   const commit = () => {
@@ -1525,6 +1629,65 @@ function wireTimeline(el, bounds, refresh) {
   fillEl.addEventListener('pointerup', endDrag);
   fillEl.addEventListener('pointercancel', endDrag);
 
+  /*
+   * The triangle's own drag. Years from pixels against the rail's box, clamped
+   * to the selection — which is the whole of "only slides along lowest date to
+   * highest date selected".
+   *
+   * `refresh(true)` rather than `refresh()`: the flag is what tells the paint
+   * this is a hand still moving, so the dots take the direct path to where the
+   * year now puts them instead of easing toward it from where the last frame
+   * left them, half a year behind the reader's thumb.
+   */
+  let headDrag = null;
+  const yearAtX = (clientX) => {
+    const rect = fillEl.parentElement.getBoundingClientRect();
+    const span = bounds.max - bounds.min || 1;
+    const raw = bounds.min + ((clientX - rect.left) / (rect.width || 1)) * span;
+    return Math.min(dateTo, Math.max(dateFrom, Math.round(raw)));
+  };
+  const moveHead = (year, live) => {
+    if (year === playhead) return;
+    playhead = year;
+    paint();
+    refresh(live);
+  };
+  headEl.addEventListener('pointerdown', (e) => {
+    headEl.setPointerCapture(e.pointerId);
+    headDrag = e.pointerId;
+    headEl.classList.add('is-dragging');
+  });
+  headEl.addEventListener('pointermove', (e) => {
+    if (headDrag !== e.pointerId) return;
+    moveHead(yearAtX(e.clientX), true);
+  });
+  const endHead = (e) => {
+    if (headDrag !== e.pointerId) return;
+    headDrag = null;
+    headEl.classList.remove('is-dragging');
+    // One last paint that is *not* live, so the dots settle by easing into
+    // place rather than stopping dead where the thumb left them.
+    refresh();
+  };
+  headEl.addEventListener('pointerup', endHead);
+  headEl.addEventListener('pointercancel', endHead);
+
+  /*
+   * And the keys a range input would have answered: a year at a time, ten at a
+   * page, and the ends of the *selection* rather than of the corpus — Home and
+   * End mean the ends of what this control can reach.
+   */
+  headEl.addEventListener('keydown', (e) => {
+    const step = { ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1, PageDown: -10, PageUp: 10 }[e.key];
+    let next = null;
+    if (step !== undefined) next = playhead + step;
+    else if (e.key === 'Home') next = dateFrom;
+    else if (e.key === 'End') next = dateTo;
+    if (next === null) return;
+    e.preventDefault();
+    moveHead(Math.min(dateTo, Math.max(dateFrom, next)), false);
+  });
+
   paint();
 
   /*
@@ -1539,8 +1702,31 @@ function wireTimeline(el, bounds, refresh) {
       toInput.value = String(Math.min(bounds.max, Math.max(bounds.min, Math.round(year))));
       commit();
     },
+    /**
+     * Where playback puts the year now.
+     *
+     * **Playback moves the triangle, not the upper handle, since 2026-09-01.**
+     * It used to walk `dateTo` from one end of the span to the other, which was
+     * the only year-mover there was — and which meant pressing Play *narrowed
+     * the reader's window to nothing* and then widened it back out, dimming
+     * three quarters of the map on the way. With a mark of its own to move, the
+     * selection stays where the reader put it and the year walks across it,
+     * which is what watching a span play was always meant to look like.
+     */
+    setHead(year) {
+      moveHead(Math.min(dateTo, Math.max(dateFrom, Math.round(year))), true);
+    },
+    /** Where playback should start and stop: the reader's own selection. */
+    span: () => ({ from: dateFrom, to: dateTo }),
+    /** Shown while Movement is on and hidden with it (`wireMotion`). */
+    showHead(on) {
+      headEl.hidden = !on;
+    },
     onTouch(stop) {
-      for (const control of [fromInput, toInput, fillEl, presetSel]) {
+      // The triangle is in this list because dragging it during playback is the
+      // reader taking the year back by hand, which is the same interruption as
+      // touching the handles.
+      for (const control of [fromInput, toInput, fillEl, presetSel, headEl]) {
         control.addEventListener('pointerdown', stop);
         control.addEventListener('keydown', stop);
         control.addEventListener('change', stop);
@@ -1642,6 +1828,13 @@ function wireMotion(el, timeline, refresh) {
     // a drag already does and a play button does not promise.
     play.disabled = !movement || !timeline;
     if (play.disabled) stop();
+    /*
+     * "It appears once Movement is ticked on" (author, 2026-09-01). Off, the
+     * map shows every saint at their resting place and there is no year being
+     * watched — a mark pointing at one would be a control for a question the
+     * page is not asking.
+     */
+    timeline?.showHead(movement);
   };
 
   box.addEventListener('change', () => {
@@ -1662,12 +1855,20 @@ function wireMotion(el, timeline, refresh) {
       stop();
       return;
     }
-    const span = { from: dateFrom, to: dateTo };
+    const span = timeline.span();
     if (span.to <= span.from) return;
     // A second press at the end of a run starts it again from the beginning
     // rather than doing nothing at the wall.
     end = span.to;
-    timeline.setUpper(span.from);
+    /*
+     * **The triangle walks, and the selection stays where the reader put it**
+     * (2026-09-01). This ran the *upper handle* from one end of the span to the
+     * other, because until the triangle there was nothing else that could carry
+     * a year — which meant pressing Play collapsed the reader's window to a
+     * single year and then reopened it, dimming most of the map for the length
+     * of the performance. The range is untouched now; what moves is the mark.
+     */
+    timeline.setHead(span.from);
     play.innerHTML = PAUSE_GLYPH;
     play.setAttribute('aria-label', STRINGS.map.pause);
 
@@ -1677,11 +1878,11 @@ function wireMotion(el, timeline, refresh) {
       year += (now - last) / PLAY_MS_PER_YEAR;
       last = now;
       if (year >= end) {
-        timeline.setUpper(end);
+        timeline.setHead(end);
         stop();
         return;
       }
-      timeline.setUpper(year);
+      timeline.setHead(year);
       frame = requestAnimationFrame(step);
     };
     frame = requestAnimationFrame(step);
@@ -1818,7 +2019,7 @@ function wireSearch(el, canvas, withPlace, setView) {
       ({ lon, lat } = row.place);
       scale = Math.min(ceilingOf(canvas), Math.max(MIN_SCALE, row.place.zoom));
     } else {
-      const at = pointAt(row.card, dateFrom, dateTo);
+      const at = pointAt(row.card, dateFrom, dateTo, shownYear());
       if (!at) return;
       ({ lon, lat } = at.where);
       // Close enough to read the name and its neighbours, not so close that
@@ -2199,18 +2400,59 @@ function midpoint(active) {
   return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 };
 }
 
+/**
+ * The fine coastline, fetched the first time the reader zooms in far enough to
+ * see the difference, and kept for the rest of the visit.
+ *
+ * Guarded by a promise on the canvas rather than a boolean: a drag that crosses
+ * `DETAIL_AT` paints many frames a second, and a boolean set *after* the await
+ * would have started a dozen fetches before the first of them landed.
+ */
+function ensureFine(canvas, cards) {
+  if (canvas.__finePending) return;
+  canvas.__finePending = Promise.all([import('../data/land.js'), import('../data/water.js')])
+    .then(([{ LAND }, { LAKES, RIVERS }]) => {
+      if (!canvas.isConnected) return;
+      canvas.__landFine = LAND;
+      canvas.__waterFine = { LAKES, RIVERS };
+      paintCanvas(canvas, cards());
+    })
+    .catch(() => {
+      /*
+       * The coarse tier is already on the screen and is a whole map, so a fine
+       * tier that never arrives is a map slightly less detailed than it might
+       * have been — not an error a reader needs telling about. Cleared rather
+       * than left set, so a later zoom tries again on a network that has come
+       * back.
+       */
+      canvas.__finePending = null;
+    });
+}
+
 async function drawWhenReady(el, canvas, cards) {
   // `cards` is a getter: the coastline may land after the reader has already
   // dragged the timeline, and the paint must draw the set they are looking at.
   const caption = el.querySelector('[data-caption]');
   try {
-    // Dynamic and in parallel, so the picture's own data is its own chunk
-    // (or two — Vite splits each module) that a reader who never opens the
-    // map never pays for, and one fetch does not wait on the other.
-    const [{ LAND }, { LAKES, RIVERS }] = await Promise.all([import('../data/land.js'), import('../data/water.js')]);
+    /*
+     * **The coarse tier, and only the coarse tier, on the way in** (2026-09-01).
+     * Dynamic and in parallel, so the picture's own data is its own chunk (or
+     * two — Vite splits each module) that a reader who never opens the map never
+     * pays for, and one fetch does not wait on the other.
+     *
+     * 19 kB against 255: the map that opens is the one nearly every visit ever
+     * sees, and it opens at 1x where the finer file's extra points are smaller
+     * than a pixel. `ensureFine` fetches the other one the first time the reader
+     * goes past `DETAIL_AT`, which for most visits is never.
+     */
+    const [{ LAND }, { LAKES, RIVERS }] = await Promise.all([
+      import('../data/land-coarse.js'),
+      import('../data/water-coarse.js'),
+    ]);
     if (!canvas.isConnected) return;
     canvas.__land = LAND;
     canvas.__water = { LAKES, RIVERS };
+    canvas.dataset.detail = 'coarse';
     paintCanvas(canvas, cards());
     /*
      * The page's own report that the fetch landed *and* the paint used it -
@@ -2336,7 +2578,20 @@ function paintCanvas(canvas, cards) {
     return any;
   };
 
-  const land = canvas.__land;
+  /*
+   * **Which coastline this frame draws** (2026-09-01). Past `DETAIL_AT` the
+   * fine tier if it has arrived — and the ask for it if it has not, made from
+   * the paint because the paint is the one place that knows the scale — and the
+   * coarse one at every zoom below, so going back out gets the cheap frame back
+   * rather than carrying the fine tier's point count into a picture of the
+   * whole world.
+   */
+  const wantsFine = view.scale >= DETAIL_AT;
+  if (wantsFine && canvas.__land && !canvas.__landFine) ensureFine(canvas, () => cards);
+  const fine = wantsFine && canvas.__landFine;
+  if (canvas.dataset.detail) canvas.dataset.detail = fine ? 'fine' : 'coarse';
+
+  const land = fine ? canvas.__landFine : canvas.__land;
   if (land) {
     /*
      * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
@@ -2354,7 +2609,7 @@ function paintCanvas(canvas, cards) {
     ctx.fill();
   }
 
-  const water = canvas.__water;
+  const water = fine ? canvas.__waterFine : canvas.__water;
   if (water) {
     /*
      * Lakes are cut out of the land fill rather than painted a colour of
@@ -2404,7 +2659,7 @@ function paintCanvas(canvas, cards) {
   const gliding = performance.now();
   let stillGliding = false;
   for (const card of cards) {
-    const at = pointAt(card, dateFrom, dateTo);
+    const at = pointAt(card, dateFrom, dateTo, shownYear());
     if (!at) continue;
     /*
      * **Is this saint's dot travelling right now?** Two ways it can be — the

@@ -85,6 +85,24 @@
   --uncertainty-max: 24;
   --uncertainty-gamma: 0.55;
 
+  /*
+   * The one white surface on the site (author, 2026-09-01: "Make the 'continue
+   * reading' button white so you can tell its a button for more").
+   *
+   * **It is deliberately not themed.** Every other surface here moves between
+   * gesso and near-black with the theme, and this one does not, because what it
+   * is doing is *standing out from the page* — a white pill on gesso reads as a
+   * raised control, and a white pill on the dark theme reads as one more
+   * plainly still. Its ink is fixed with it, and fixed dark: white-on-ink would
+   * flip to ink-on-white in the dark theme and lose the whole point.
+   *
+   * 15.9:1 against its own face in both themes, which is the number that
+   * matters — a chip's contrast is against what it sits on, and it sits on
+   * itself.
+   */
+  --button-face: #ffffff;
+  --button-face-ink: #221d19;
+
   color-scheme: light;
 }
 

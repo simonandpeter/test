@@ -200,14 +200,49 @@ const isWide = (item) => (item.image?.aspect ?? 1) > 1.2;
  * double stacks"). A fixed band left the row sitting in the top third of a tall
  * desktop window with nothing under it.
  */
-const CX_FOOT = 24;
+/**
+ * Everything under the row that still has to fit inside the window.
+ *
+ * **Measured, not a constant, since 2026-09-01** (author: "The carousel mode in
+ * All Saints should not have a scroll bar at all on the highest window size
+ * possible on any screen. The images should instead scale/stack appropriately").
+ *
+ * It was a flat 24, which was the track's own padding and nothing else — so the
+ * page's bottom padding, `--space-16`, was room the row believed it had. The
+ * row ended 33 px above the fold and 64 px of padding then hung below it, and
+ * the page scrolled by the difference at every window size the site meets. A
+ * scrollbar on a page whose whole content is one row that fits.
+ *
+ * Reading it rather than adding another number is what keeps it true: the
+ * padding is `main.chrome`'s and the route's stylesheet is free to change it,
+ * and this asks the browser what it actually is.
+ */
+function footUnder(track) {
+  const own = getComputedStyle(track);
+  const padding = (parseFloat(own.paddingTop) || 0) + (parseFloat(own.paddingBottom) || 0);
+  const main = track.closest('main');
+  const below = main ? parseFloat(getComputedStyle(main).paddingBottom) || 0 : 0;
+  /*
+   * And four pixels the row does not claim.
+   *
+   * The room is measured from where the track's top *is* when the measurement
+   * is taken, and on a phone recovering from a resize the controls above it can
+   * still settle by a pixel or two afterwards — which the row has already been
+   * packed against, so the page ends up scrollable by exactly that much. Four
+   * pixels of cushion cost nothing (they sit inside the page's own 64 px of
+   * bottom padding, alongside the up-to-39 the flooring already gives up) and
+   * they make it impossible for the row to be the thing that puts a scrollbar
+   * on the page.
+   */
+  return padding + below + 4;
+}
 
 export function publishCarouselSpace() {
   const track = state?.el?.querySelector('[data-carousel-track]');
   const carousel = state?.el?.querySelector('.carousel');
   if (!track || !carousel) return 0;
   const top = track.getBoundingClientRect().top;
-  const space = Math.max(200, Math.round(window.innerHeight - top - CX_FOOT));
+  const space = Math.max(200, Math.round(window.innerHeight - top - footUnder(track)));
   carousel.style.setProperty('--cx-space', `${space}px`);
   return space;
 }
@@ -533,7 +568,21 @@ export function paintCarousel() {
    * instead of where they were. Rounding to 40 px absorbs that without being
    * coarse enough for a reader to see.
    */
-  const space = Math.round(Math.max(0, carouselSpace - CX_FOOT) / 40) * 40;
+  /*
+   * `carouselSpace` is already the row's own content box — everything under it
+   * that has to fit was taken off in `footUnder` — so the only thing left to do
+   * here is the rounding, and the second subtraction that used to stand here
+   * was the track's padding counted twice.
+   *
+   * **Down, not to the nearest.** Rounding to the nearest could round *up*, and
+   * a row packed against eleven pixels more room than it has is a row eleven
+   * pixels past the fold — which at 1440x620 was exactly what put the scrollbar
+   * back. Flooring is as stable across paints as rounding is, which is the only
+   * property the quantisation was ever for, and it can never claim room that is
+   * not there. What it costs is up to 39 px left unused at the foot, and those
+   * sit inside the page's own bottom padding where nothing shows them.
+   */
+  const space = Math.floor(Math.max(0, carouselSpace) / 40) * 40;
   /*
    * **Each saint once** (author, 2026-08-28: "When you search for a saint in
    * the carousel, only display 1 instance of each saint, not multiple as it
@@ -544,6 +593,26 @@ export function paintCarousel() {
    * search matching two saints showed each of them five times. A run that does
    * not fill the track does not loop at all now; see `fits` below.
    */
+  /*
+   * **The number the columns are packed against, told to the stylesheet.**
+   * `--cx-space` is the room from the top of the track to the bottom of the
+   * window; what the packer works to is that less the track's own padding and
+   * rounded down to 40 px (see `space` above). Giving the cells a floor of
+   * `--cx-space` gave them a floor taller than anything had been packed for,
+   * and a column holding one saint — which has no gaps to hand the difference
+   * to — stood that much short of its own foot.
+   *
+   * **Written here, not in `buildCarousel`, and the difference is a bug that
+   * was there for an evening** (2026-09-01). The build is skipped when the
+   * packing has not changed, and a resize can change the *room* without
+   * changing the packing — a phone turning a hundred pixels shorter still packs
+   * the same columns. The floor then kept the old window's number, the cells
+   * stayed that much too tall, and the page scrolled by the difference. This
+   * runs on every paint, before the early return, because it is a fact about
+   * the room rather than about the run.
+   */
+  el.querySelector('.carousel')?.style.setProperty('--cx-fill', `${space}px`);
+
   const run = carouselCells(pool, { space, cardWidth });
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
@@ -594,18 +663,6 @@ function buildCarousel(key, run, cardWidth, space) {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
   if (!track) return;
-  /*
-   * **The number the columns were packed against, told to the stylesheet**
-   * (2026-09-01). `--cx-space` is the room from the top of the track to the
-   * bottom of the window; what the packer works to is that less the track's own
-   * padding and rounded to 40 px (see `space` above, and why the rounding is
-   * there). Giving the cells a floor of `--cx-space` was giving them a floor
-   * two dozen pixels taller than anything had been packed for, and a column
-   * holding one saint — which has no gaps to hand the difference to — stood
-   * that much short of its own foot. This is the same number, so there is
-   * nothing left to be short by.
-   */
-  el.querySelector('.carousel')?.style.setProperty('--cx-fill', `${space}px`);
   // A different set of saints is a different row, and the remembered offset
   // belonged to the old one.
   if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;

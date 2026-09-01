@@ -4738,3 +4738,146 @@ test('the full-screen calendar is a list on a phone, so the words still fit', as
   expect(seen.namesShown, 'no day says which weekday it is').toBe(seen.names);
   expect(seen.docOverflow, 'the modal pushes the page sideways').toBeLessThanOrEqual(0);
 });
+
+/* ---- the 2026-09-01 evening batch: the way in, and the picture's size ----- */
+
+test('the way into the life is a white button with the life fading out under it', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Make the 'continue reading' button white so you can
+   * tell its a button for more, and gradient fade the last two lines of preview
+   * text below it."
+   *
+   * Two halves that answer one complaint. The link was the last words of the
+   * paragraph in the paragraph's own ink - which is what the *previous*
+   * instruction asked for ("make the '...continue reading' part of the actual
+   * preview paragraph") and is exactly how it stopped looking like a control.
+   * White is the one surface the page has nowhere else, so nothing on the card
+   * can be mistaken for it; and the two lines running on underneath say the
+   * paragraph was cut by showing it rather than by claiming it.
+   *
+   * A window narrow enough that the paragraph really is cut: on a wide one the
+   * whole first paragraph fits and there is nothing to fade.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1100, height: 900 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const more = page.locator('.hero-more').filter({ visible: true });
+  await expect(more).toHaveCount(1);
+  const seen = await page.evaluate(() => {
+    const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
+    const tail = document.querySelector('.hero-lede-tail');
+    const cs = getComputedStyle(link);
+    const media = document.querySelector('.hero-media').getBoundingClientRect();
+    return {
+      background: cs.backgroundColor,
+      tail: tail ? tail.textContent.trim() : '',
+      tailLines: tail
+        ? Math.round(tail.getBoundingClientRect().height / parseFloat(getComputedStyle(tail).lineHeight))
+        : 0,
+      masked: tail ? getComputedStyle(tail).maskImage : 'none',
+      // Under the button, which is what "below it" means.
+      below: tail && link ? tail.getBoundingClientRect().top >= link.getBoundingClientRect().top : false,
+      // And still inside the picture's height, which the rule before this one
+      // asked for and this must not have broken.
+      fits: document.querySelector('.hero-body').getBoundingClientRect().bottom <= media.bottom + 2,
+    };
+  });
+
+  expect(seen.background, 'the way in is not a white button').toBe('rgb(255, 255, 255)');
+  expect(seen.tail.length, 'the life does not go on under the button').toBeGreaterThan(10);
+  expect(seen.tailLines, 'the fading tail is not two lines').toBe(2);
+  expect(seen.masked, 'the tail does not fade').toContain('gradient');
+  expect(seen.below, 'the tail is not below the button').toBe(true);
+  expect(seen.fits, 'the card now runs below its own picture').toBe(true);
+
+  /*
+   * The words under the button are the ones the life goes on with, not a repeat
+   * of the ones above it - a tail that showed the reader the same sentence
+   * twice would be decoration rather than a continuation.
+   */
+  const repeated = await page.evaluate(() => {
+    const box = document.querySelector('[data-hero-lede]');
+    const tail = document.querySelector('.hero-lede-tail').textContent.trim();
+    const head = box.firstChild.nodeValue.trim();
+    return head.includes(tail.split(' ').slice(0, 4).join(' '));
+  });
+  expect(repeated, 'the tail repeats the preview instead of continuing it').toBe(false);
+});
+
+test('the hero picture is never more than half the window, on any monitor', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "on my laptop the saint image is way bigger than on my
+   * pc monitor. It should be more consistent. Where it was just over half the
+   * window height on my pc monitor, now its almost the whole height for the
+   * tall icons. Make sure for the full window size possible on any monitor, its
+   * no more than half the window height."
+   *
+   * The card was eighteen lines tall whatever the screen - about 504 px, which
+   * is a third of a 1440 px monitor and nearly three quarters of a laptop's
+   * 700. Not two bugs but one number that was not a share of anything. Five
+   * windows, two of them larger than this suite otherwise runs at, because the
+   * defect was invisible at the sizes it did run at.
+   */
+  await ready(page);
+  for (const size of [
+    { width: 1280, height: 720 },
+    { width: 1440, height: 700 },
+    { width: 1680, height: 900 },
+    { width: 1920, height: 1080 },
+    { width: 2560, height: 1440 },
+  ]) {
+    await page.setViewportSize(size);
+    await page.goto(POPULATED, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const media = page.locator('.hero-media');
+    await expect(media).toBeVisible();
+    const share = await media.evaluate((el) => el.getBoundingClientRect().height / window.innerHeight);
+    expect(
+      share,
+      `the picture takes ${(share * 100).toFixed(0)}% of a ${size.width}x${size.height} window`,
+    ).toBeLessThanOrEqual(0.51);
+    // And it has not been capped into a stamp: half a window is the ceiling,
+    // not the target, but a picture that fell to a tenth would be a different
+    // defect and this is where it would show.
+    expect(share, `the picture shrank to ${(share * 100).toFixed(0)}%`).toBeGreaterThan(0.2);
+  }
+});
+
+test('a tall icon is cropped from the top, and its drawn shape stays inside the two limits', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "For really tall images, crop them favouring the top
+   * edge, and for really wide images crop them favouring the centre. Tallest
+   * aspect ratio allowed for this main saint card would be 1:1.6, and widest
+   * would be 2:1."
+   *
+   * Only the tall half can be reached from the corpus - the widest icon of the
+   * 130 is 0.62 down, comfortably inside 2:1 - so the wide half is pinned in
+   * tests/hero-crop.test.mjs, where the arithmetic can be asked about a picture
+   * no folder holds yet. What this adds is that the arithmetic reaches the
+   * page: the box really is that shape and the crop really is anchored.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const shape = await page.evaluate(() => {
+    const media = document.querySelector('.hero-media');
+    const box = media.getBoundingClientRect();
+    const img = media.querySelector('img');
+    return {
+      ratio: box.height / box.width,
+      focus: getComputedStyle(media).backgroundPosition,
+      imageFocus: getComputedStyle(img).objectPosition,
+      fit: getComputedStyle(img).objectFit,
+    };
+  });
+  expect(shape.ratio, 'the box is taller than 1:1.6').toBeLessThanOrEqual(1.61);
+  expect(shape.ratio, 'the box is wider than 2:1').toBeGreaterThanOrEqual(0.49);
+  expect(shape.fit).toBe('cover');
+  // Zero resolves to `0px` in one property and `0%` in the other; what is
+  // asserted is centred across and hard against the top.
+  expect(shape.focus, 'the crop is not anchored to the top').toMatch(/^50% 0(px|%)$/);
+  expect(shape.imageFocus, 'the picture is not anchored to the top').toMatch(/^50% 0(px|%)$/);
+});

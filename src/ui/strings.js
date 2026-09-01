@@ -944,6 +944,13 @@ export const STRINGS = {
     movementOn: 'Movement on. Each saint is shown where they were in the timeline’s upper year.',
     movementOff: 'Movement off. Each saint is shown at their resting place.',
     play: 'Play the years',
+    /*
+     * The triangle over the selection (author, 2026-09-01). It has no visible
+     * label — it is a shape on a rail — so this is the whole of what a screen
+     * reader is given for it, and it says what the control *does* rather than
+     * naming its shape: the year the map is showing people in.
+     */
+    watching: 'The year being shown',
     pause: 'Pause',
     profile: 'Profile',
     profileOf: 'Profile of {name}',

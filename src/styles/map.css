@@ -679,3 +679,69 @@ html[data-route='map'] body {
 .map-profile-chevron {
   color: var(--rubric);
 }
+
+/* ---- the year being watched (2026-09-01) --------------------------------- */
+
+/*
+ * Author: "Add a triangle you can drag over the top of the timeline bar
+ * selection (i.e. only slides along lowest date to highest date selected). It
+ * appears once Movement is ticked on. It gets pushed around if the high or low
+ * dates make contact with it, otherwise it starts by default on the highest
+ * year."
+ *
+ * A triangle rather than a third round thumb, and the shape is doing work: the
+ * two handles say where the reader's window *ends*, and this says where inside
+ * it they are looking. A third circle on the same rail would read as a third
+ * end. It points down at the bar it stands over.
+ *
+ * Rubric, like the fill it rides on — this is liturgical time, the same claim
+ * (DESIGN.md 2) — and its own hairline in ink so it stays legible where it
+ * crosses the bar's own colour.
+ */
+.map-timeline-head {
+  position: absolute;
+  /* Above the two range inputs, whose invisible bodies cover the whole rail. */
+  z-index: 2;
+  /* The rail's own line, with the point of the triangle sitting on the bar. */
+  top: 50%;
+  width: 14px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* Its own centre, so the year it marks is under the point rather than under
+     the left-hand corner. `translateY` lifts it clear of the bar, and the two
+     are one transform because a second would replace the first. */
+  transform: translate(-50%, calc(-100% - 4px));
+  background: var(--rubric);
+  /* Pointing down at the bar. `clip-path` rather than the border trick, which
+     cannot take a background and so could not have carried the hover state. */
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  cursor: grab;
+  /* The drag is ours, so the browser must not take the gesture for a scroll —
+     the same reason the fill and the month grain both say it. */
+  touch-action: none;
+}
+
+.map-timeline-head:hover {
+  background: var(--ink);
+}
+
+.map-timeline-head.is-dragging,
+.map-timeline-head:active {
+  cursor: grabbing;
+  background: var(--ink);
+}
+
+/* A clipped element cannot show an outline — the clip cuts it off with the
+   rest — so the focus ring is a shadow around the shape instead. */
+.map-timeline-head:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gesso), 0 0 0 4px var(--ink);
+}
+
+/* Hidden with Movement, and `[hidden]` has to say so: the rule above sets
+   `position`, which beats the user-agent's `display: none` on specificity. */
+.map-timeline-head[hidden] {
+  display: none;
+}

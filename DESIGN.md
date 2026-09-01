@@ -1392,6 +1392,56 @@ phone the seven columns give way and the month becomes a list of days, because
 44 px cannot hold "Oil, Wine and Fish Allowed" and the instruction was for more
 detail, not less.
 
+### 5e. The evening of 2026-09-01
+
+**The year being watched is its own handle.** A triangle rides over the
+timeline's selection and slides only inside it; Movement is what brings it out,
+and it starts on the top of the range. This splits two questions the upper
+handle had been answering at once — the range says *which saints my window
+reaches*, the triangle says *what year I am looking at* — so watching the
+eleventh century move no longer means shrinking the window to a single year.
+It is pushed by the handles and never pushes back, which is the author's rule
+and the only one that keeps it honest: a "now" outside the window you are
+looking at is a claim about a year the map has greyed out. Playback moves it
+rather than the upper handle, so pressing Play no longer collapses the reader's
+selection and reopens it.
+
+**Two coastlines, one for each end of the zoom.** Natural Earth 110m at one
+decimal place (5,118 points, 19 kB) is what the map opens on, and the 50m at two
+(60,605 points, 255 kB) is fetched the first time the reader passes 5x and used
+only above it. The lag was never the fetch: the draw pass already skips shapes
+whose box is off screen — which is what tiling would buy — but at 1x the whole
+world is on screen and nothing is skipped, so every point was being projected on
+every frame of every drag. Going back below 5x returns to the coarse tier,
+because the cheap frame is the whole point of having it.
+
+**The carousel fits the window, and the window includes the page's own
+padding.** The row sized itself to the room between its top and the foot of the
+window, where "the room" was the track's own padding and nothing else — so
+`main`'s 64 px bottom padding was space the row believed it had, and the page
+scrolled by the difference at every size. The foot is measured now rather than
+declared, and the row's room is rounded *down* to its 40 px step, because
+rounding to the nearest could round up and eleven pixels of room that is not
+there is eleven pixels past the fold.
+
+**The way into the life is a white pill.** `--button-face` is the one surface on
+the site that does not move with the theme, and that is deliberate: what it is
+doing is standing off the page. Two more lines of the life run underneath it and
+fade out under a mask — the paragraph was always cut there, and this shows it
+rather than claiming it. They are `aria-hidden`, because half a sentence with no
+way to reach the rest serves a screen reader worse than the button beside it,
+which says whose life it opens.
+
+**The hero picture is never more than half the window.** It was eighteen lines
+tall whatever the screen — about 504 px, a third of a large monitor and nearly
+three quarters of a laptop — which is one number that was not a share of
+anything. `--card-h` is `min(18 lines, 50dvh)` now, and because the picture's
+column is derived from that height, capping it caps the picture. Its drawn shape
+is held between 1:1.6 and 2:1; a tall icon is cropped from the top, where the
+face is, and a wide one from the centre, where a scene's subject is. Nothing in
+the corpus is wider than 2:1 today, so that half of the rule is pinned in
+`tests/hero-crop.test.mjs` rather than in the browser.
+
 ## 6. Motion and states
 
 - Durations: 200 ms standard, 260 ms the hero slot roll, 300 ms theme change,
