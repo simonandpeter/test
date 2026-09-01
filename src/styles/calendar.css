@@ -900,70 +900,82 @@
 
 /* ---- the day in two columns (2026-09-01) -------------------------------- */
 
-/* Author: "The mobile layout on Daily page is looking great, but the desktop
-   layout needs revision ... we will have 2 columns, a wide column to the left
-   and a narrower column to the right. To the left, we have the main saint of
-   the day, with the also commemorated and name days and continue reading
-   content. On the right column, we have the readings and the hymns."
+/* Author: "we will have 2 columns, a wide column to the left and a narrower
+   column to the right", and then, the same day: only the right column moves
+   when the month opens, the two scroll independently, Continue reading
+   belongs to the left, and the name days go under the hymns on the right.
 
-   Below the breakpoint the two boxes are `display: contents` and the panel is
-   the single column it has always been, laid out in document order with the
-   wrappers not in the way of it. One thing did move on the phone as a result:
-   the name days follow the register now instead of the hymns, because the
-   left column has to be a single grid item to flow independently of the
-   right — `daily/panel.js` argues that where the markup makes the choice. */
-.day-main,
-.day-side {
+   Those four turned the columns from a split panel into two real boxes —
+   `views/calendar.js` paints a day into one panel per column and rolls both —
+   and this is where the boxes are placed.
+
+   Below the breakpoint none of it applies: the wrappers dissolve, the page is
+   one column, and `order` puts the six back into the reading order the phone
+   has always had — picker, date, liturgy, the day's saints, the church's own
+   readings, and Continue reading at the foot. The order is needed because the
+   document order is the desktop one, where the picker belongs to the right
+   column and the shelf to the left. */
+.cal {
+  display: flex;
+  flex-direction: column;
+}
+
+.cal-main,
+.cal-side {
   display: contents;
 }
 
+.cal-controls { order: 0; }
+.cal-date { order: 1; }
+.cal-liturgy { order: 2; }
+.cal [data-slot='main'] { order: 3; }
+.cal [data-slot='side'] { order: 4; }
+.shelves { order: 5; }
+
 @media (min-width: 1024px) {
   /* The page gives up the 72ch measure it reads at, because two columns of
-     prose is not a measure. 108ch until 2026-09-01, when the author asked for
-     the left column "wider and adaptive to the window size": the cap is the
-     window now, with a ceiling far enough out that only a very large screen
-     meets it, and the *right* column is what is held — see `--day-cols`. */
-  html[data-route='calendar'] main.chrome {
-    max-width: min(100%, 2000px);
-    padding-inline: var(--space-8);
-  }
+     prose is not a measure. Every route takes the same wide measure now
+     (base.css), so this only has to say the shape. */
 
-  /* **One template, declared once and used by two grids.** `.cal` carries the
-     shelves and `.day-panel` carries the day, and the columns of one line up
-     with the columns of the other only because nothing between them adds
-     horizontal padding: `.cal-body` and `.slot-viewport` are bare boxes. If
-     either ever gains padding, this is the thing that breaks, and it will
-     break by a few pixels rather than visibly — check it here first. */
-  /* **The right column is held and the left takes the rest** (author,
-     2026-09-01: "make the left column wider and adaptive to the window
-     size"). Two fractions shared the slack before, so a wider window widened
-     the readings as much as the saints — and the readings are a list of four
-     references and a line of hymn text, which does not want a wider measure.
-     Holding that column at a comfortable reading width and giving the whole
-     surplus to the left is what "adaptive" means here. */
+  /* **The right column's floor is the week.** Seven day buttons, two
+     shoulders and the month toggle need about 400 px, and at 330 the rail
+     showed six days and the month grid would not unfurl at all. The left
+     column takes all the slack, which is what "adaptive to the window size"
+     asked for. */
   .cal {
-    /* The right column's floor is the week, not the readings: seven day
-       buttons, two shoulders and the month toggle need about 400 px, and at
-       330 the rail showed six days and the month grid would not unfurl at
-       all. So the smaller column is held at 25rem before it is allowed to be
-       a share of anything — the picker is the one thing on this page with a
-       hard minimum, and it is what the reader steers the day with. */
     --day-cols: minmax(0, 1fr) clamp(25rem, 28%, 30rem);
     --day-gap: var(--space-8);
     display: grid;
     grid-template-columns: var(--day-cols);
+    /* Two rows: whatever the picker needs, and everything else. The left
+       column spans both, which is the whole of "only the right column moves
+       down to make room for the expanded calendar" — the month grows row 1,
+       row 2 shrinks under it, and a box spanning the pair keeps its top. */
+    grid-template-rows: auto minmax(0, 1fr);
     column-gap: var(--day-gap);
-    align-items: start;
+    /* The columns own the scrolling, so the grid is exactly the height it is
+       given and never more. */
+    height: 100%;
   }
 
-  /* **`contents`, so the week and month can leave the left column** (author,
-     2026-09-01: "move the weekly and monthly display over to the top of the
-     small column on the right"). The picker is the first thing in `.cal-body`
-     and the date and liturgy line follow it, which is the order a phone still
-     reads top to bottom; dissolving the wrapper on a wide screen lets the
-     three of them be placed as three grid items instead. */
-  .cal-body {
-    display: contents;
+  /* **Each column scrolls itself** (author: "make the left and right columns
+     independently scrollable"). `min-height: 0` is what makes that work at
+     all: a grid item's default floor is its content, so without it the box
+     grows to fit the day and the page scrolls instead of the column. */
+  .cal-main,
+  .cal-side {
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    /* Room for the scrollbar to sit beside the text rather than over the
+       column's last few characters. */
+    padding-right: var(--space-2);
+  }
+
+  .cal-main {
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 
   /* Top of the right column, above the readings that come with the day.
@@ -972,10 +984,9 @@
      `--cal-peek` is 44 px because the author asked for more of the Sunday
      either side to show past the fade (2026-08-25) — a promise about a rail
      running the width of the page, which this one no longer does. In a
-     column of about 330 px, seven days and two 44 px shoulders leave 34 px a
-     day; the same 24 px the rail takes below 560 px gives the seven back
-     what they need, on the same reasoning written there — a narrow rail is
-     scrolled rather than read across. */
+     column of about 400 px the same 24 px the rail takes below 560 px gives
+     the seven days back what they need, on the same reasoning written
+     there — a narrow rail is scrolled rather than read across. */
   .cal-controls {
     grid-column: 2;
     grid-row: 1;
@@ -988,10 +999,7 @@
   /* The gaps come with the peek, and taking one without the other is a bug
      rather than a saving: the month's day names are laid out from
      `--cal-gutter` and the week's from `--rail-inset`, and the two agree only
-     when both are derived from the same spacing step. Copying the three
-     custom properties and leaving these behind put the month's columns 3 px
-     off the week's — which `the month is the week grown taller` caught, being
-     the test that exists for exactly that. */
+     when both are derived from the same spacing step. */
   .month-row,
   .month-days-line {
     gap: var(--space-1);
@@ -1001,68 +1009,23 @@
     min-width: 26px;
   }
 
-  /* The day's own name and its liturgy line stay at the head of the wide
-     column, where the reader is looking. */
-  .cal-date,
-  .cal-liturgy {
-    grid-column: 1;
-  }
-
-  .slot-viewport {
-    grid-column: 1 / -1;
-  }
-
-  /* Continue reading, under the day's own saints rather than under both
-     columns: the author's left column runs the whole way down the page. */
-  .shelves {
-    grid-column: 1;
-  }
-
-  .day-panel {
-    display: grid;
-    grid-template-columns: var(--day-cols);
-    column-gap: var(--day-gap);
-    align-items: start;
-  }
-
-  /* Boxes again rather than `contents`, and `min-width: 0` because a grid
-     item's default `auto` minimum is its content's — one long unbroken
-     reference in the readings would otherwise widen the column rather than
-     wrap inside it. */
-  .day-main,
-  .day-side {
-    display: block;
-    min-width: 0;
-  }
-
-  /* One item per column, and that is the whole of the layout: two boxes side
-     by side, each as tall as its own contents. Nothing spans, because a
-     spanning item hands its height to the rows it crosses — which is what
-     drove the name days to the foot of a long day of hymns before they moved
-     inside the left box. */
-  .day-main {
-    grid-column: 1;
-  }
-
-  .day-side {
+  .cal-side {
     grid-column: 2;
+    grid-row: 2;
   }
 
   /* The hero takes the whole of the wide column; the lists under it do not.
      A register row is a name at one edge and a thumbnail at the other, and
      at 1440 px the left column is a thousand pixels of mostly nothing
-     between them. The measure is generous — still half again what the whole
-     page had before this — and it is the row that is capped rather than the
-     column, so the picture above still uses every pixel. */
-  .day-main .register-cards,
-  .day-main .namedays {
+     between them. */
+  .cal-main .register-cards {
     max-width: 80ch;
   }
 
   /* Both columns start on one line. A register heading carries six spaces of
      air above it, which is right between two stacked sections and wrong at
      the top of a column. */
-  .day-side > :first-child > .register-heading {
+  .cal-side .day-panel > :first-child > .register-heading {
     margin-top: 0;
   }
 }
@@ -1079,6 +1042,16 @@
   margin-bottom: var(--space-6);
 }
 
+/* Twice the gap between the picture and the words (author, 2026-09-01:
+   "double the left margin of the preview text from the image"). Only where
+   they are side by side — stacked on a phone this is the space between the
+   picture and the name, which was not what was asked about. */
+@media (min-width: 620px) {
+  .hero.has-media {
+    column-gap: var(--space-8);
+  }
+}
+
 /* How many lines of the life the preview runs to, and — from 620 px, where
    the hero has a column of its own — how tall the card stands whatever is in
    it (author, 2026-09-01: "make the height of the main saint card minimum 18
@@ -1092,14 +1065,22 @@
 
 @media (min-width: 620px) {
   .hero.has-media {
-    /* The explicit line first for anything without `lh`, which resolves
-       against this element's own inherited 17px/1.65; the unit version is
-       what actually holds once the type changes. The card's own height is
-       published as a property because the picture's column is derived from
-       it — see `grid-template-columns` below. */
+    /* The height the picture is *aimed* at, and the reason it is a property:
+       the image's column is derived from it below, so a portrait icon still
+       stands the eighteen lines the author asked for on 2026-09-01.
+
+       **It stopped being a `min-height` the same day.** The instruction that
+       followed — "make sure the text on the main saint card does not go below
+       the bottom of the image" — makes the picture the card's own height, and
+       the two together left a landscape icon holding a 505 px card with 264 px
+       of picture and a 240 px hole under it. The newer rule wins: the card is
+       as tall as what is in it, and this is the target the picture is sized
+       to rather than a floor the card is held at.
+
+       The explicit line first for anything without `lh`, which resolves
+       against this element's own inherited 17px/1.65. */
     --card-h: calc(18 * 1.65 * 17px);
     --card-h: calc(var(--lede-lines) * 1lh);
-    min-height: var(--card-h);
   }
 }
 
@@ -1169,16 +1150,30 @@
   flex-direction: column;
 }
 
+/* Inline, because it is the last words of the paragraph now rather than a
+   block under it (author, 2026-09-01). `white-space: nowrap` keeps the words
+   and the chevron on one line so the trim never leaves "continue" at the end
+   of one line and "reading" alone on the next. */
 .hero-more {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  align-self: flex-end;
-  margin-top: auto;
-  padding-top: var(--space-2);
+  white-space: nowrap;
   color: var(--ink-soft);
   text-decoration: none;
-  white-space: nowrap;
+}
+
+.hero-more-chevron {
+  margin-left: var(--space-1);
+}
+
+/* The standalone copy, for the width where there is no paragraph to end. */
+.hero-more-alone {
+  align-self: flex-end;
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 760px) {
+  .hero.has-media .hero-more-alone {
+    display: none;
+  }
 }
 
 .hero-more:hover {
@@ -2020,5 +2015,42 @@ a.name-day:hover {
 @media (prefers-reduced-motion: reduce) {
   .fast-bubble {
     transition: none;
+  }
+}
+
+
+/* ---- the page that does not scroll (2026-09-01) ------------------------- */
+
+/* Author: "make the left and right columns independently scrollable." Two
+   scrolling columns and a scrolling page are three scrollbars for two
+   surfaces, so the route gives up its own the way the map route already
+   does — the columns are the height of the glass under the bar, and each
+   carries its own.
+
+   Only past the breakpoint: on a phone there is one column and the page's
+   own scroll is exactly right. */
+@media (min-width: 1024px) {
+  html[data-route='calendar'],
+  html[data-route='calendar'] body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html[data-route='calendar'] main.chrome {
+    /* The glass, less the bar above it. `--chrome-h` is main.js's own
+       measured height of the sticky bar — the value it publishes for the
+       Index's sticky controls — so this follows the header rather than
+       guessing at it. */
+    height: calc(100dvh - var(--chrome-h, 53px));
+    padding-bottom: var(--space-4);
+    overflow: hidden;
+  }
+
+  /* The view and the page inside it are the same height, or the columns have
+     nothing definite to be a fraction of. */
+  html[data-route='calendar'] main.chrome > #view,
+  html[data-route='calendar'] .cal {
+    height: 100%;
+    min-height: 0;
   }
 }

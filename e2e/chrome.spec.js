@@ -609,6 +609,16 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
   await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
   await expect(page.locator('.coachmark')).toHaveCount(2);
 
+  /*
+   * The pointer has to be over something that scrolls. Since 2026-09-01 the
+   * Daily page's own columns carry the scrolling and the page does not, so a
+   * wheel spun over the header — where the mouse sits by default — reaches
+   * nothing at all. `ui/coachmark.js` takes the event from whichever element
+   * scrolled; this puts the mouse over one.
+   */
+  const column = await page.locator('.cal-main').boundingBox();
+  await page.mouse.move(column.x + column.width / 2, column.y + column.height / 2);
+
   await page.mouse.wheel(0, 400);
   await page.waitForTimeout(600);
   await expect(page.locator('.coachmark')).toHaveCount(2);
@@ -2287,7 +2297,7 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
 for (const [label, width, expected] of [
   ['narrow, two rows', 360, 75.5625],
   ['wide, one row', 900, 41],
-  ['very wide, doubled', 1440, 58.1406],
+  ['very wide, the doubled mark', 1440, 52.5],
 ]) {
   test(`the header reserves the height it settles at: ${label}`, async ({ browser }) => {
     const ctx = await browser.newContext({ ...devices['Desktop Chrome'], viewport: { width, height: 780 } });

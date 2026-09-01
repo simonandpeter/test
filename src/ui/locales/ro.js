@@ -54,6 +54,7 @@ export const ro = {
     commemorationsFor: 'Pomeniri pentru {date}',
     alsoToday: 'Se mai pomenesc',
     continueReading: '…continuă lectura',
+    heroPlaces: { birth: 'Născut la {place}', death: 'Adormit la {place}' },
     continueReadingOf: 'Continuă viața Sfântului {name}',
     emptyDay: 'Pentru această zi nu sunt încă pomeniri înregistrate. Corpusul crește dosar cu dosar, iar o zi goală e o lipsă în sursele noastre, nu o afirmație despre calendar. Încearcă o zi vecină sau sfinții înșiși.',
     beyondRecords: 'Citirile și cântările sunt consemnate până la {until}, iar ziua aceasta este după. Ce stă mai sus - postul, glasul și săptămâna - se calculează și este valabil pentru orice dată.',

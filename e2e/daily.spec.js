@@ -55,7 +55,7 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   // January; change to the Greek and the same civil day holds nothing of his,
   // because the New Calendar keeps 17 January on the 17th — the same menologion
   // date, two civil days, and never the same saint listed twice.
-  await expect(page.locator('.day-panel .register li')).toHaveCount(0);
+  await expect(page.locator('[data-slot="main"] .register li')).toHaveCount(0);
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('.hero')).toHaveCount(0);
@@ -250,14 +250,14 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await page.waitForTimeout(60);
   await day('2026-06-28').click();
   await expect(page.locator('h1')).toHaveText(/28 June 2026/);
-  await expect(page.locator('.day-panel')).toHaveCount(1);
+  await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
   await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
   await day('2026-06-24').click();
   await expect(page.locator('h1')).toHaveText(/24 June 2026/);
-  await expect(page.locator('.day-panel')).toHaveCount(1);
+  await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
 });
@@ -355,15 +355,15 @@ test('a swipe on the day panel steps a day too, left for tomorrow and right for 
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  await swipe(page, '.slot-viewport', -80);
+  await swipe(page, '[data-slot="main"]', -80);
   await expect(page.locator('h1')).toHaveText(/29 August 2026/);
-  await swipe(page, '.slot-viewport', 80);
+  await swipe(page, '[data-slot="main"]', 80);
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 
   // Short of the threshold, or mostly vertical, is a scroll or a mistap, not
   // a page turn.
-  await swipe(page, '.slot-viewport', -20);
-  await swipe(page, '.slot-viewport', -80, 200);
+  await swipe(page, '[data-slot="main"]', -20);
+  await swipe(page, '[data-slot="main"]', -80, 200);
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
 });
 
@@ -378,16 +378,16 @@ test('the day panel follows the finger while the swipe is still live', async ({ 
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  await dragGrain(page, '.slot-viewport', -20, { release: false });
-  const live = await page.locator('.day-panel').evaluate((el) => getComputedStyle(el).transform);
+  await dragGrain(page, '[data-slot="main"]', -20, { release: false });
+  const live = await page.locator('[data-slot="main"] .day-panel').evaluate((el) => getComputedStyle(el).transform);
   expect(live, 'the panel did not move while the finger was still down').not.toBe('none');
 
   // Short of the threshold: letting go here must not change the day, and the
   // panel must spring back to its own place rather than being left adrift.
-  await releaseGrain(page, '.slot-viewport', -20);
+  await releaseGrain(page, '[data-slot="main"]', -20);
   await expect(page.locator('h1')).toHaveText(/28 August 2026/);
   await expect
-    .poll(() => page.locator('.day-panel').evaluate((el) => el.style.transform))
+    .poll(() => page.locator('[data-slot="main"] .day-panel').evaluate((el) => el.style.transform))
     .toBe('');
 });
 
@@ -400,7 +400,7 @@ test('a real drag past the threshold changes the day, not only a flick', async (
    */
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await dragGrain(page, '.slot-viewport', -80);
+  await dragGrain(page, '[data-slot="main"]', -80);
   await expect(page.locator('h1')).toHaveText(/29 August 2026/);
 });
 
@@ -691,19 +691,19 @@ test('the month spends its height on dates rather than on leading', async ({ pag
 
 test('the month unfurls out of the week and the page follows it down', async ({ page }) => {
   /*
-   * **The day panel, not the h1, since 2026-09-01.** The heading was the
-   * thing the month pushed down while the picker stood above it in one
-   * column; past 1024 px the picker is at the top of the narrow right column
-   * (author: "move the weekly and monthly display over to the top of the
-   * small column on the right") and the day's own name no longer moves at
-   * all — the month unfurls beside it. What the month still pushes, at both
-   * arrangements, is everything under the controls' row, and the panel is
-   * the first of it. The claim being pinned is unchanged: it grows, it
-   * travels rather than jumping, and it lets its height go afterwards.
+   * **The right column's panel, since 2026-09-01.** The heading was what the
+   * month pushed down while the picker stood above it in one column; then the
+   * picker moved to the top of the right column, and then the columns were
+   * made to move independently (author: "ensure only the right column moves
+   * down to make room for the expanded calendar, not the left column"). So
+   * what the month pushes is now exactly one thing, and this measures that
+   * thing. On a phone it is the same box, one column down from the picker.
+   * The claim is unchanged: it grows, it travels rather than jumping, and it
+   * lets its height go afterwards.
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  const heading = page.locator('.slot-viewport');
+  const heading = page.locator('[data-slot="side"]');
   const closed = (await heading.boundingBox()).y;
 
   await page.locator('[data-month]').click();
@@ -732,10 +732,9 @@ test('under reduced motion the month arrives whole, with no held height', async 
   await searchMode(page);
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  // The panel rather than the h1, for the reason the test above gives: past
-  // 1024 px the picker is in the right column and the day's name does not
-  // move when the month opens.
-  const closed = (await page.locator('.slot-viewport').boundingBox()).y;
+  // The right column's panel, for the reason the test above gives: it is the
+  // one box the month still moves at either arrangement.
+  const closed = (await page.locator('[data-slot="side"]').boundingBox()).y;
 
   await page.locator('[data-month]').click();
   // Removed, not shortened: every row is there on the next frame, and the JS
@@ -744,7 +743,7 @@ test('under reduced motion the month arrives whole, with no held height', async 
   expect(await body.evaluate((el) => el.style.height)).toBe('');
   expect(await body.evaluate((el) => el.classList.contains('is-growing'))).toBe(false);
   await expect(page.locator('.cal-week')).toBeHidden();
-  expect((await page.locator('.slot-viewport').boundingBox()).y).toBeGreaterThan(closed + 60);
+  expect((await page.locator('[data-slot="side"]').boundingBox()).y).toBeGreaterThan(closed + 60);
   await ctx.close();
 });
 
@@ -1410,9 +1409,9 @@ test('a calendar change repaints the day in place rather than rolling it', async
   const after = await page.evaluate(() => {
     document.querySelector('#church-panel [data-church="romanian"]').click();
     return {
-      leaving: document.querySelectorAll('.day-panel.slot-leaving').length,
-      entering: document.querySelectorAll('.day-panel.slot-entering').length,
-      panels: document.querySelectorAll('.day-panel').length,
+      leaving: document.querySelectorAll('[data-slot="main"] .day-panel.slot-leaving').length,
+      entering: document.querySelectorAll('[data-slot="main"] .day-panel.slot-entering').length,
+      panels: document.querySelectorAll('[data-slot="main"] .day-panel').length,
     };
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
@@ -1432,7 +1431,7 @@ test('the rolling day leaves an inert copy behind it', async ({ page }) => {
 
   const marked = await page.evaluate(() => {
     document.querySelector('.week-strip [data-iso="2026-06-26"]').click();
-    const leaving = document.querySelector('.day-panel.slot-leaving');
+    const leaving = document.querySelector('[data-slot="main"] .day-panel.slot-leaving');
     if (!leaving) return null;
     return {
       hidden: leaving.getAttribute('aria-hidden'),
@@ -1442,7 +1441,7 @@ test('the rolling day leaves an inert copy behind it', async ({ page }) => {
     };
   });
   expect(marked).toEqual({ hidden: 'true', pointer: 'none', reachable: 0 });
-  await expect(page.locator('.day-panel')).toHaveCount(1);
+  await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
 });
 
 test('the fading week is aside while the month arrives, and current again after', async ({ page }) => {
@@ -1560,7 +1559,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // And Also commemorated reads as one company, not a ruled ledger: no line
   // between the saints (author, 2026-08-24; the shelves keep theirs).
   expect(
-    await page.locator('.day-panel .register li').first().evaluate((li) => getComputedStyle(li).borderBottomWidth),
+    await page.locator('[data-slot="main"] .register li').first().evaluate((li) => getComputedStyle(li).borderBottomWidth),
   ).toBe('0px');
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   // A fish-permitted day resolves to the `fish` grade, which is the one
@@ -2672,10 +2671,20 @@ test('the hero keeps its foot close under the dates', async ({ page }) => {
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  /*
+   * Under the last thing the card carries, which since 2026-09-01 is the way
+   * into the life rather than the dates: an imageless hero now ends with
+   * "...continue reading", and measuring to the dates counts a control the
+   * author asked for as though it were the empty margin they asked to have
+   * removed. The claim is unchanged — the card's foot is close under its own
+   * contents.
+   */
   const foot = await page.evaluate(() => {
     const hero = document.querySelector('.hero').getBoundingClientRect();
-    const dates = document.querySelector('.hero-dates').getBoundingClientRect();
-    return hero.bottom - dates.bottom;
+    const last = [...document.querySelectorAll('.hero-body > *')]
+      .filter((el) => el.offsetParent !== null)
+      .map((el) => el.getBoundingClientRect().bottom);
+    return hero.bottom - Math.max(...last);
   });
   expect(foot).toBeLessThan(50);
 });
@@ -3972,6 +3981,20 @@ test('the boot path fetches the manifest and not the coverage statistics', async
 
 test('a returning Daily page lands where it was left, though it grows after it renders', async ({ page }) => {
   /*
+   * **At a phone's width, since 2026-09-01.** The desktop Daily page stopped
+   * scrolling that day — its two columns each carry their own scrollbar and
+   * the page is fixed to the glass (author: "make the left and right columns
+   * independently scrollable") — so there is no page scroll to remember there,
+   * and `sectionScroll` in main.js remembers the window's. What it restores on
+   * a phone is unchanged, and that is what this measures.
+   *
+   * The desktop case is a real gap rather than a thing this test stopped
+   * caring about: a reader returning to the Daily page on a desktop now finds
+   * both columns at the top. Restoring a column's own `scrollTop` would mean
+   * main.js knowing which element a view scrolls, which is a bigger idea than
+   * this change, and is not in it.
+   */
+  /*
    * Author, 2026-08-27, after the first fix shipped: "switching from All
    * Saints to the Daily page still transitions at the top and jumps to the
    * bottom."
@@ -4001,8 +4024,12 @@ test('a returning Daily page lands where it was left, though it grows after it r
    * 28 August the page had readings, hymns and a fast but no saints at all:
    * 1127 px, against the 2605 this was written on. A 400 px window leaves
    * enough of it below the fold to scroll deep into whatever the day holds.
+   *
+   * 360 wide rather than 1280 since 2026-09-01: past 1024 the page does not
+   * scroll at all, its two columns doing it instead, so a claim about where
+   * the *page* lands can only be made where the page is the thing that moves.
    */
-  await page.setViewportSize({ width: 1280, height: 400 });
+  await page.setViewportSize({ width: 360, height: 400 });
   await page.goto('/', { waitUntil: 'networkidle' });
   /*
    * Deep enough that a clamp against the pre-hymns height cannot reach it —
@@ -4147,13 +4174,27 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
   await page.goto(CROWDED, { waitUntil: 'networkidle' });
 
   const boxOf = (sel) => page.locator(sel).boundingBox();
-  const main = await boxOf('.day-main');
-  const side = await boxOf('.day-side');
+  /*
+   * `.cal-main` and `.cal-side`, not the panels inside them: since 2026-09-01
+   * the columns are two real boxes — each its own scroll container, each
+   * holding its own day panel — because only that lets one move without the
+   * other. The panels are what the roll swaps; the columns are the layout.
+   */
+  const main = await boxOf('.cal-main');
+  const side = await boxOf('.cal-side');
 
   // Side by side, and the left is the wider of the two.
   expect(side.x, 'the readings are not beside the day’s saints').toBeGreaterThan(main.x + main.width - 1);
   expect(main.width, 'the left column is not the wider one').toBeGreaterThan(side.width);
-  expect(Math.abs(side.y - main.y), 'the two columns do not start on one line').toBeLessThan(4);
+  /*
+   * They no longer start on one line, and that is the layout rather than a
+   * drift: the picker took the top of the right column on 2026-09-01, so the
+   * readings begin under it while the left column starts at the top of the
+   * page. What has to be level is the *picker* and the left column.
+   */
+  const top = await boxOf('.cal-controls');
+  expect(Math.abs(top.y - main.y), 'the picker does not start level with the left column').toBeLessThan(4);
+  expect(side.y, 'the readings are not under the picker').toBeGreaterThan(top.y);
 
   /*
    * The picker moved to the top of the narrow column on 2026-09-01 (author:
@@ -4166,12 +4207,30 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
   expect(Math.abs(controls.x - side.x), 'the picker is not on the right column').toBeLessThan(2);
   expect(controls.y, 'the picker is not above the readings').toBeLessThan(side.y);
 
+  /*
+   * Each column scrolls itself and the page does not (author: "make the left
+   * and right columns independently scrollable"). The left is the one with
+   * the register under the hero, so it is the one with something to scroll.
+   */
+  const scrolling = await page.evaluate(() => {
+    const box = document.querySelector('.cal-main');
+    box.scrollTop = 150;
+    return {
+      column: box.scrollTop,
+      page: document.documentElement.scrollHeight - window.innerHeight,
+    };
+  });
+  expect(scrolling.column, 'the left column does not scroll on its own').toBeGreaterThan(0);
+  expect(scrolling.page, 'the page still scrolls behind the columns').toBeLessThanOrEqual(1);
+
   // What is in each, structurally rather than by looking at the picture.
-  await expect(page.locator('.day-main .hero')).toHaveCount(1);
-  await expect(page.locator('.day-main .register-cards')).toHaveCount(1);
-  await expect(page.locator('.day-main [data-namedays]')).toHaveCount(1);
-  await expect(page.locator('.day-side [data-readings]')).toHaveCount(1);
-  await expect(page.locator('.day-side [data-hymns]')).toHaveCount(1);
+  await expect(page.locator('.cal-main .hero')).toHaveCount(1);
+  await expect(page.locator('.cal-main .register-cards')).toHaveCount(1);
+  await expect(page.locator('.cal-side [data-readings]')).toHaveCount(1);
+  await expect(page.locator('.cal-side [data-hymns]')).toHaveCount(1);
+  // The name days moved across on 2026-09-01: "move Name Days to be under
+  // hymns in the right column".
+  await expect(page.locator('.cal-side [data-namedays]')).toHaveCount(1);
 
   /*
    * And Continue reading on the left column's own edge and inside its width —
@@ -4191,7 +4250,7 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(CROWDED, { waitUntil: 'networkidle' });
-  const display = await page.locator('.day-main').evaluate((el) => getComputedStyle(el).display);
+  const display = await page.locator('.cal-main').evaluate((el) => getComputedStyle(el).display);
   expect(display, 'the wrappers are still boxes on a phone').toBe('contents');
 
   const hero = await boxOf('.hero');
@@ -4202,83 +4261,84 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
   expect(readings.x, 'the readings are indented into a column of their own').toBeLessThan(hero.x + 2);
 });
 
-test('the card stands eighteen lines tall even when the picture and the life are short', async ({ page }) => {
+test('the card ends where the picture does, and the words with it', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "make the height of the main saint card minimum 18
-   * lines of the preview text high."
+   * Author, 2026-09-01: "make sure the text on the main saint card does not
+   * go below the bottom of the image."
    *
-   * **A minimum, so it is the declaration that is pinned and not the
-   * height.** The rendered card is usually taller — the preview runs to
-   * eighteen lines of its own and the name, the dates and the link sit above
-   * and below it — so asserting the card *equals* eighteen lines fails on
-   * every ordinary day, and asserting it is merely *at least* that would
-   * still pass with the rule deleted, the content being taller anyway. What
-   * cannot be true without the rule is `min-height` resolving to eighteen of
-   * this card's own lines.
+   * **This replaces a test that pinned an eighteen-line minimum**, given the
+   * round before. The two cannot both hold: a landscape icon is nothing like
+   * eighteen lines tall, so a card held at that minimum with its text stopped
+   * at the picture's foot is a card with a 240 px hole in it — which is what
+   * it looked like. The newer instruction wins, and the eighteen lines survive
+   * as what the *picture* is aimed at (--card-h sizes its column) rather than
+   * as a floor the card is held to.
    *
    * 24 September because Theodora of Alexandria's icon is 939x625 — landscape,
-   * so it stands about 320 px in its column and is nowhere near setting the
-   * height on its own, which the premise below states rather than assumes.
+   * so the picture is far shorter than eighteen lines and the difference
+   * between the two rules is visible.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  // The preview arrives with the payload and is trimmed once it does.
+  await expect(page.locator('[data-hero-lede]')).toBeVisible();
 
-  const m = await page.evaluate(() => {
-    const hero = document.querySelector('.hero');
-    const media = document.querySelector('.hero-media');
-    return {
-      card: hero.getBoundingClientRect().height,
-      picture: media.getBoundingClientRect().height,
-      lines: parseFloat(getComputedStyle(hero).getPropertyValue('--lede-lines')),
-      line: parseFloat(getComputedStyle(hero).lineHeight),
-      floor: parseFloat(getComputedStyle(hero).minHeight),
-    };
-  });
+  const m = await page.evaluate(() => ({
+    hero: document.querySelector('.hero').getBoundingClientRect(),
+    media: document.querySelector('.hero-media').getBoundingClientRect(),
+    body: document.querySelector('.hero-body').getBoundingClientRect(),
+    lede: document.querySelector('[data-hero-lede]').getBoundingClientRect(),
+  }));
 
-  expect(m.lines, 'premise: the card no longer counts its height in lines').toBe(18);
-  expect(m.picture, 'premise: this icon is tall enough to set the height on its own').toBeLessThan(m.lines * m.line - 20);
-  expect(Math.abs(m.floor - m.lines * m.line), `the card floor is ${m.floor} px, not ${m.lines} lines`).toBeLessThan(2);
-  expect(m.card, 'the card is shorter than its own floor').toBeGreaterThanOrEqual(m.floor - 1);
+  expect(m.media.height, 'premise: this icon is tall enough for the question not to arise').toBeLessThan(400);
+  // The words stop at the picture's foot, and the card stops with them.
+  expect(m.lede.bottom, 'the preview runs past the bottom of the picture').toBeLessThan(m.media.bottom + 2);
+  expect(m.body.bottom, 'the text column runs past the bottom of the picture').toBeLessThan(m.media.bottom + 2);
+  expect(m.hero.height - m.media.height, 'the card is taller than the picture it holds').toBeLessThan(4);
 });
 
-test('the chrome doubles and spans the window on a wide screen', async ({ page }) => {
+test('the masthead doubles and the chrome lines up with the page', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "Make header items 2x bigger and span across the
-   * whole width of the window."
+   * Author, 2026-09-01, revising the same day's own instruction: "revert
+   * everything but the site .svg to its previous size, half of what it is
+   * now. Keep the .svg the same size but line up the left with the left
+   * margin of the left column. Then bring the calendar and language and light
+   * mode button collection to line up before the right margin of the right
+   * column."
    *
-   * Both halves, and both against the narrow arrangement rather than against
-   * a constant: the claim is that these are *twice* the sizes below the
-   * breakpoint and that the bar is no longer held to the 72ch measure the
-   * page reads at. `--chrome-h-reserve` cannot answer either — it is a
-   * `min-height`, so it holds the bar open at the taller number whatever the
-   * type inside it does, which is exactly why that test passes with this one
-   * backed out.
+   * So the doubling is the mark's alone, and what the rest gained instead is
+   * alignment — which is the part worth pinning, because it is a relationship
+   * between two elements that know nothing about each other: the header is
+   * chrome, the columns belong to a view.
    */
   await ready(page);
   const measure = async (width) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto('/saints', { waitUntil: 'networkidle' });
+    await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     return page.evaluate(() => ({
-      header: document.querySelector('header.chrome').getBoundingClientRect().width,
-      viewport: document.documentElement.clientWidth,
       nav: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
       name: parseFloat(getComputedStyle(document.querySelector('.site-name')).fontSize),
+      mark: document.querySelector('.site-name').getBoundingClientRect().left,
+      corner: document.querySelector('.chrome-corner').getBoundingClientRect().right,
+      left: document.querySelector('.cal-main').getBoundingClientRect().left,
+      right: document.querySelector('.cal-side').getBoundingClientRect().right,
     }));
   };
 
   const narrow = await measure(900);
   const wide = await measure(1440);
 
-  // Twice, within a rounding: 13.5 to 27 and 17 to 34.
-  expect(wide.nav / narrow.nav, 'the nav is not twice the size it is below the breakpoint').toBeCloseTo(2, 1);
+  // The mark alone is twice the size; the nav went back to what it was.
   expect(wide.name / narrow.name, 'the masthead is not twice the size').toBeCloseTo(2, 1);
+  expect(wide.nav, 'the nav did not go back to its own size').toBeCloseTo(narrow.nav, 1);
 
-  // And the bar runs the glass, where below the breakpoint it is the column.
-  expect(wide.header, 'the header is not the width of the window').toBeCloseTo(wide.viewport, 0);
-  expect(narrow.header, 'the narrow header lost its own measure').toBeLessThan(narrow.viewport - 40);
+  // The mark starts where the left column starts, and the controls end where
+  // the right column ends.
+  expect(Math.abs(wide.mark - wide.left), 'the mark is not on the left column margin').toBeLessThan(2);
+  expect(Math.abs(wide.corner - wide.right), 'the controls do not end on the right column margin').toBeLessThan(2);
 });
 
 test('the preview ends in a way into the life, on a phone as well as a desktop', async ({ page }) => {
@@ -4298,25 +4358,46 @@ test('the preview ends in a way into the life, on a phone as well as a desktop',
     await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
 
-    const more = page.locator('.hero-more');
-    await expect(more, `missing at ${width}`).toBeVisible();
+    /*
+     * Two of these are in the document and exactly one is laid out: the
+     * inline one is the last words of the preview, which only exists from
+     * 760 px, and the standalone one stands in for it below that. So the
+     * visible one is the subject, whichever width this is.
+     */
+    const more = page.locator('.hero-more').filter({ visible: true });
+    await expect(more, `missing at ${width}`).toHaveCount(1);
     await expect(more).toContainText('continue reading');
     // Named after the saint, not a bare "continue reading" on a page of them.
     await expect(more).toHaveAttribute('aria-label', /Lupus/);
 
     const m = await page.evaluate(() => {
-      const link = document.querySelector('.hero-more').getBoundingClientRect();
-      const body = document.querySelector('.hero-body').getBoundingClientRect();
-      const dates = document.querySelector('.hero-dates').getBoundingClientRect();
-      return { link, body, dates };
+      const shown = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
+      const lede = document.querySelector('[data-hero-lede]');
+      return {
+        link: shown.getBoundingClientRect(),
+        inLede: lede.contains(shown),
+        dates: document.querySelector('.hero-dates').getBoundingClientRect(),
+        media: document.querySelector('.hero-media').getBoundingClientRect(),
+      };
     });
-    // Bottom right of the text column: its right edge on the column's, and
-    // below everything the column carries.
-    expect(Math.abs(m.link.right - m.body.right), `not at the right edge at ${width}`).toBeLessThan(2);
+    /*
+     * **Inside the paragraph where there is one** (author, 2026-09-01: "make
+     * the '...continue reading' part of the actual preview paragraph"), which
+     * is why this no longer asks for it to be flush with the column's right
+     * edge — it ends where the sentence ends, as the last words of a
+     * paragraph do. Below 760 px there is no preview and the standalone copy
+     * stands under the dates instead.
+     */
+    expect(m.inLede, `not part of the preview at ${width}`).toBe(width >= 760);
     expect(m.link.top, `not below the dates at ${width}`).toBeGreaterThan(m.dates.bottom - 1);
+    // And never past the foot of the picture, which is the rule the trim
+    // exists for: the words end where the image does.
+    if (width >= 760) {
+      expect(m.link.bottom, `the preview runs below the picture at ${width}`).toBeLessThan(m.media.bottom + 2);
+    }
   }
 
   // And it goes where the name goes.
-  await page.locator('.hero-more').click();
+  await page.locator('.hero-more').filter({ visible: true }).click();
   await expect(page).toHaveURL(/\/saints\/lupus-the-martyr/);
 });

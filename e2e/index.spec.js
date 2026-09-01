@@ -797,7 +797,16 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
   // 678 px column, and a rehearsal that refuses the webfont cannot have one.
   // It says so through its own premise check rather than being told twice.
   test.skip(!!process.env.COLD_FACE, 'the warm column does not exist with the webfont refused');
-  await page.setViewportSize({ width: 1280, height: 900 });
+  /*
+   * 900 rather than 1280 since 2026-09-01, when every route took the Daily
+   * page's own wide measure (author: "make the All Saints Page left and right
+   * margin wider to match the Daily Page"). At 1280 the cards are 290 px and
+   * the lifespan no longer wraps at all — which is a better page and a worse
+   * test, the subject here being what happens when it *would*. Below the
+   * 1024 px breakpoint the 72ch column and its three 213 px cards are exactly
+   * as they were, so the wrap this pins still has somewhere to happen.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto('/about', { waitUntil: 'networkidle' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);

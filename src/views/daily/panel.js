@@ -33,19 +33,115 @@ const BASE = import.meta.env.BASE_URL;
  * only — the CSS hides the box below 760 px, where the hero has no spare
  * column and the life is a scroll away under the register anyway.
  */
-function fillHeroLede(panel, slug, iso) {
+function fillHeroLede(panel, slug, iso, card) {
   loadDetail(slug).then(
     (payload) => {
       if (!state || state.selected !== iso) return;
+      fillHeroPlaces(panel, payload);
       const box = panel.querySelector('[data-hero-lede]');
       if (!box) return;
       const text = firstParagraphText(payload?.life);
       if (!text) return;
       box.textContent = text;
       box.hidden = false;
+
+      /*
+       * **The way in is the last words of the paragraph** (author,
+       * 2026-09-01: "make the '...continue reading' part of the actual
+       * preview paragraph"), where it was a block of its own beneath it.
+       * Appended here rather than written into the markup because it has to
+       * come *after* the text, and the text arrives with the payload.
+       */
+      const link = document.createElement('a');
+      link.className = 'hero-more';
+      link.href = state.router.href(`/saints/${slug}`);
+      link.dataset.prefetch = slug;
+      link.setAttribute('aria-label', fill(STRINGS.calendar.continueReadingOf, { name: saintName(card) }));
+      link.textContent = STRINGS.calendar.continueReading;
+      const chevron = document.createElement('span');
+      chevron.className = 'hero-more-chevron';
+      chevron.setAttribute('aria-hidden', 'true');
+      chevron.textContent = '›';
+      link.append(chevron);
+      box.append(' ', link);
+
+      // Kept whole so a resize can re-fit from the original rather than from
+      // whatever the last fit left behind.
+      box.__full = text;
+      fitLede(panel);
     },
     () => {},
   );
+}
+
+/**
+ * Trims the preview until the card's text column ends above the bottom of the
+ * picture beside it (author, 2026-09-01: "make sure the text on the main saint
+ * card does not go below the bottom of the image").
+ *
+ * **Trimmed rather than clamped**, and the link is why. `-webkit-line-clamp`
+ * cuts the box and adds its own ellipsis, which would fall *after* the words
+ * and take the link with it — the one thing that must survive the cut is the
+ * thing the cut removes. So the text is shortened on a word boundary until
+ * what is left, link and all, fits the budget, and the ellipsis is the link's
+ * own leading character.
+ *
+ * A binary search over the word count, because each try costs a layout: nine
+ * measurements for a three-hundred-word paragraph rather than three hundred.
+ */
+function fitLede(panel) {
+  const hero = panel.querySelector('.hero');
+  const box = panel.querySelector('[data-hero-lede]');
+  const media = panel.querySelector('.hero-media');
+  const body = panel.querySelector('.hero-body');
+  if (!hero || !box || !media || !body || !box.__full) return;
+
+  const limit = media.getBoundingClientRect().height;
+  // No picture laid out yet, or a width where the preview is not shown at
+  // all: there is no budget to fit and nothing to trim against.
+  if (limit <= 0 || box.offsetParent === null) return;
+
+  const words = box.__full.split(' ');
+  const write = (n) => {
+    box.firstChild.nodeValue = words.slice(0, n).join(' ');
+  };
+  write(words.length);
+  if (body.scrollHeight <= limit) return;
+
+  let lo = 0;
+  let hi = words.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi) / 2);
+    write(mid);
+    if (body.scrollHeight <= limit) lo = mid;
+    else hi = mid - 1;
+  }
+  write(lo);
+}
+
+/**
+ * Where the saint was born and where they died, under the office and the
+ * years. The manifest carries a location's coordinates without its name, so
+ * the words come from the saint's own payload — which is already being
+ * fetched for the life above.
+ */
+function fillHeroPlaces(panel, payload) {
+  const box = panel.querySelector('[data-hero-places]');
+  if (!box) return;
+  const P = STRINGS.calendar.heroPlaces;
+  const named = (kind) => {
+    const at = (payload?.saint?.locations ?? []).find((l) => l.kind === kind);
+    return at?.historical_name || at?.modern_name || null;
+  };
+  const parts = [
+    ['birth', named('birth')],
+    ['death', named('death')],
+  ]
+    .filter(([, name]) => name)
+    .map(([kind, name]) => fill(P[kind], { place: name }));
+  if (!parts.length) return;
+  box.textContent = parts.join(' · ');
+  box.hidden = false;
 }
 
 /**
@@ -154,14 +250,15 @@ function emptyDayNote(iso) {
  */
 const MAX_HERO_RATIO = 1.6;
 
-export function paintDay(panel) {
+export { fitLede };
+
+export function paintDay({ main, side }) {
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
 
   if (entries.length === 0) {
-    panel.innerHTML =
-      `<div class="day-main"><div class="empty-day"><p>${emptyDayNote(selected)}</p></div></div>` +
-      `<div class="day-side">${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}</div>`;
+    main.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
+    side.innerHTML = `${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
     return;
   }
 
@@ -256,60 +353,65 @@ export function paintDay(panel) {
    * `display: contents` and document order is the layout: the name days now
    * follow the register instead of the hymns.
    */
-  panel.innerHTML = `
-    <div class="day-main">
-      <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
-        ${media}
-        <div class="hero-body">
-          <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
-          </h2>
-          <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
-          <!-- The opening of the life, on a wide screen only (author,
-               2026-08-25: "because there is space on the left of the saint card
-               under their name"). It arrives with the fetched life rather than
-               from the manifest, so the box is here from the first paint and
-               fills a moment later; empty until then, and empty for good where
-               a saint has no life recorded, because a heading over nothing is
-               the furniture DESIGN.md §5b refuses. -->
-          <p class="hero-lede" data-hero-lede hidden></p>
-          <!--
-            The way into the life (author, 2026-09-01: "add a '...continue
-            reading >' button at the bottom right at the end of the preview
-            text"), on a phone as well as a desktop. A link and not a button:
-            it goes to the saint's own page, which is what the name above it
-            does, and the router picks it up like any other.
+  main.innerHTML = `
+    <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
+      ${media}
+      <div class="hero-body">
+        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
+        </h2>
+        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
+        <!--
+          Where they were born and where they died, under the office and the
+          years (author, 2026-09-01: "add office and locations of birth and
+          death under the name on the main saint card"). The office is already
+          in the line above — formatSubtext has carried it since it became a
+          field — so what is new here is the two places.
 
-            It is present whether or not the lede is — the lede needs a wide
-            screen and a saint with a life recorded, and the way through to
-            the page needs neither. Where the preview is showing it reads as
-            the end of that paragraph; where it is not, it sits under the
-            dates, which is the same place and a shorter card.
+          Filled late, like the lede, and for the same reason: the manifest
+          carries a location's coordinates and not its name (build-manifest.mjs
+          keeps the names in the folder), so the words come with the saint's
+          own payload. Empty until then and empty for good where the corpus has
+          no place, because a line that says "Born:" and nothing else is the
+          furniture DESIGN.md 5b refuses.
+        -->
+        <p class="hero-places utility" data-hero-places hidden></p>
+        <!-- The opening of the life, on a wide screen only (author,
+             2026-08-25: "because there is space on the left of the saint card
+             under their name"). It arrives with the fetched life rather than
+             from the manifest, so the box is here from the first paint and
+             fills a moment later; empty until then, and empty for good where
+             a saint has no life recorded, because a heading over nothing is
+             the furniture DESIGN.md 5b refuses.
 
-            **Unlike the image beside it, this one is not hidden from a screen
-            reader.** The image is a second, wordless link to a page the name
-            already opens, and hiding it spares a reader the same destination
-            announced twice with nothing to tell them apart. This has words of
-            its own and a different promise — the life, not the saint — so it
-            is a real link, named after the saint the way the map's own
-            Profile button is, rather than a third bare "continue reading" a
-            reader would have to guess the object of.
-          -->
-          <a class="hero-more utility" href="${state.router.href(`/saints/${hero.slug}`)}"
-            data-prefetch="${hero.slug}"
-            aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
-            >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true">&rsaquo;</span></a>
-        </div>
-      </article>
-      ${register}
-      ${nameDaysMarkup(entries, data)}
-    </div>
-    <div class="day-side">
-      ${readingsMarkup(selected, state.calendar)}
-      ${hymnsMarkup(selected, state.calendar)}
-    </div>`;
-  fillSaintHymns(panel, hero.slug, selected);
-  fillHeroLede(panel, hero.slug, selected);
+             The way into the life is now the last words *of this paragraph*
+             (author, 2026-09-01: "make the '...continue reading' part of the
+             actual preview paragraph"), written into it by fillHeroLede once
+             the text is there and trimmed to fit — see fitLede below. -->
+        <p class="hero-lede" data-hero-lede hidden></p>
+        <!--
+          The same way in, for the width where the preview is not shown.
+          Below 760 px the lede is not displayed and the link inside it goes
+          with it, and the author asked for the link on the phone as well as
+          the desktop (2026-09-01, the round before the one that moved it into
+          the paragraph). Exactly one of the two is ever laid out: this is
+          hidden from 760 px up, where the paragraph appears.
+        -->
+        <a class="hero-more hero-more-alone" href="${state.router.href(`/saints/${hero.slug}`)}"
+          data-prefetch="${hero.slug}"
+          aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
+          >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true">&rsaquo;</span></a>
+      </div>
+    </article>
+    ${register}`;
+
+  side.innerHTML = `
+    ${readingsMarkup(selected, state.calendar)}
+    ${hymnsMarkup(selected, state.calendar)}
+    ${nameDaysMarkup(entries, data)}`;
+
+  fillSaintHymns(side, hero.slug, selected);
+  fillHeroLede(main, hero.slug, selected, hero);
 }
 
 const titleFor = (saint, churchId) =>

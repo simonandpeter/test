@@ -112,6 +112,7 @@ export const STRINGS = {
      * reading" on a page of saints does not say whose life it opens.
      */
     continueReading: '…continue reading',
+    heroPlaces: { birth: 'Born at {place}', death: 'Died at {place}' },
     continueReadingOf: 'Continue reading the life of {name}',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.

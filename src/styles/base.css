@@ -762,59 +762,64 @@ main.chrome {
 /* ---- the wide chrome (2026-09-01) --------------------------------------- */
 
 /* Author: "Make header items 2x bigger and span across the whole width of the
-   window."
+   window", and then, once it was on the page: "revert everything but the site
+   .svg to its previous size, half of what it is now. Keep the .svg the same
+   size but line up the left with the left margin of the left column. Then
+   bring the calendar and language and light mode button collection to line up
+   before the right margin of the right column."
 
-   The header alone gives up the 72ch measure — `main` keeps its own on every
-   route but the Daily page, which widens for its two columns, and the map,
-   which took the whole window a fortnight ago. A masthead that runs the width
-   of the glass over a column of prose is the ordinary arrangement; the
-   reverse, chrome pinned to a measure while the page beneath it is twice as
-   wide, is what looked wrong.
+   So the doubling survives on the masthead alone. What replaced it for the
+   rest is alignment: the mark starts where the page's own left column starts
+   and the three controls end where its right column ends, which is a stronger
+   thing than size — the bar and the page beneath it read as one grid rather
+   than as chrome floating over content.
 
-   Doubled from the sizes above rather than scaled by a factor, because there
-   are only four of them and a stated number is easier to argue with later
-   than `1.95em` of something. The theme toggle is the exception and is not
-   doubled: it is a 32px *box* around a glyph, and 64px of it beside 27px type
-   reads as a button that has escaped rather than as a bigger one. */
+   That alignment is why `main` takes one measure on every route below
+   (`--page-max`): the header cannot line up with a column whose width depends
+   on which page is open. */
+:root {
+  /* The page's own measure, wide enough for the Daily page's two columns and
+     shared by every route so the header can line up with all of them. */
+  --page-max: 2000px;
+  --page-pad: var(--space-8);
+}
+
 @media (min-width: 1024px) {
+  main.chrome,
   header.chrome {
     max-width: none;
-    padding-inline: var(--space-8);
+    padding-inline: 0;
+  }
+
+  /* One inner box, the same on the header and on the page: this is what the
+     mark's left edge and the controls' right edge are lining up *to*.
+
+     Not on the map, which gave up `main`'s column a fortnight ago and takes
+     the whole window — putting the measure back on its `#view` is the column
+     returning by the back door, and the window test catches it as a stage
+     17 px too narrow. */
+  header.chrome,
+  html:not([data-route='map']) main.chrome > * {
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding-inline: var(--page-pad);
+  }
+
+  header.chrome {
+    box-sizing: border-box;
+    width: 100%;
   }
 
   header.chrome .site-name {
     font-size: 34px;
   }
 
-  header.chrome nav.site-nav a {
-    font-size: 27px;
-  }
-
-  header.chrome .church-open {
-    font-size: 27px;
-  }
-
-  header.chrome .icon-button {
-    width: 44px;
-    height: 44px;
-  }
-
-  /* The bar is taller for it, and the reservation has to say so or the header
-     grows into place on a slow machine — the whole of the site's CLS once.
-     Measured at 1440 px in the native face and under COLD_FACE, not derived:
-     the note above `--chrome-h-reserve` argues why, and `chrome.spec.js` pins
-     this number the same way it pins the other two. */
+  /* The bar is taller for the mark alone, and the reservation has to say so
+     or the header grows into place on a slow machine — the site's whole CLS
+     once. Measured, not derived; `chrome.spec.js` pins it. */
   :root {
-    --chrome-h-reserve: 58.1406px;
+    --chrome-h-reserve: 52.5px;
   }
-}
-
-/* The calendar opens on a row of controls rather than a heading, and a
-   heading's worth of air above a row of buttons reads as a gap rather than as
-   breathing room. Scoped to the page that starts that way; every other view
-   still opens on type and still wants the full measure. */
-main.chrome:has(.cal-controls) {
-  padding-top: var(--space-3);
 }
 
 /* Small caps for register headings — a month over a day column, a church over

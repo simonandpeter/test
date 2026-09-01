@@ -575,23 +575,31 @@ export function wireDaySwipe(el) {
     from.addEventListener('transitionend', clear, { once: true });
   };
 
-  return onGrainDrag(el.querySelector('.slot-viewport'), {
+  /*
+   * The finger goes on the day's own panel, and since 2026-09-01 there are
+   * two of them — one per column. The drag is still taken on the left, which
+   * is the hero and the register and so is most of the day on a phone, but
+   * *both* panels follow it: they roll together on release, and a swipe that
+   * moved only one of them would tear the page in half for the length of the
+   * gesture.
+   */
+  return onGrainDrag(el.querySelector('[data-slot="main"]'), {
     begin() {
-      panel = el.querySelector('.slot-viewport .day-panel');
-      panel.style.transition = 'none';
+      panel = [...el.querySelectorAll('.slot-viewport .day-panel')];
+      for (const p of panel) p.style.transition = 'none';
     },
     move(dx) {
-      if (panel) panel.style.transform = `translateX(${dx}px)`;
+      for (const p of panel ?? []) p.style.transform = `translateX(${dx}px)`;
     },
     end(dx) {
       const dragged = panel;
       panel = null;
       if (Math.abs(dx) < SETTLE) {
-        if (dragged) springBack(dragged);
+        for (const p of dragged ?? []) springBack(p);
         return;
       }
-      if (dragged) dragged.style.transition = '';
-      state.select(addDaysIso(state.selected, dx < 0 ? 1 : -1), dragged ? dx : 0);
+      for (const p of dragged ?? []) p.style.transition = '';
+      state.select(addDaysIso(state.selected, dx < 0 ? 1 : -1), dragged?.length ? dx : 0);
     },
   });
 }

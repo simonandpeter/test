@@ -12,13 +12,27 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   control), `motion.js`.
 - calendar.js keeps "which day": `render`, `select`, the roll, liturgy line,
   fast bubble. Nothing in `daily/` calls back into it.
-- **Two columns past 1024 px** (author, 2026-09-01): `.day-main` carries the
-  hero, the register and the name days, `.day-side` the readings and hymns.
-  Widened the same day, on the second pass: `main` takes the window rather
-  than 108ch, the **right** column is what is held (`clamp(25rem, 28%, 30rem)`)
-  and the left takes all the slack, and the **week/month picker sits at the
-  top of the right column** — `.cal-body` becomes `display: contents` so its
-  three children can be placed as grid items. The picker's floor is what sets
+- **Two columns past 1024 px** (author, 2026-09-01), and since the second pass
+  that day they are **two real boxes rather than one panel split in half**:
+  `.cal-main` holds the date, the liturgy line, the left day panel and the
+  shelves; `.cal-side` holds the right day panel; `.cal-controls` sits between
+  them in the document. `calendar.js` paints a day into a *pair* of panels and
+  `slotSwap` rolls both. Three instructions forced that shape and none of them
+  is possible with one panel: only the right column moves when the month opens
+  (the left spans both grid rows, so growing row 1 cannot move it), the two
+  scroll independently (each column is its own scroller and the route gives up
+  the page's), and Continue reading belongs to the left. The name days went to
+  the right, under the hymns. On a phone `.cal-main`/`.cal-side` are
+  `display: contents` and `order` puts the six children back in reading order.
+  **Known gap**: the desktop page no longer scrolls, so main.js's section
+  scroll restoration has nothing to remember there — a return lands at the top
+  of both columns. Anything that watched `window` scroll had to learn to watch
+  whatever scrolled instead (`ui/coachmark.js`, the fast bubble in
+  `calendar.js`), which is the shape of bug this change produces.
+- The measure: `main` takes the window on every route (`--page-max`, base.css)
+  rather than 72ch, which is what lets the header line up with the columns;
+  the **right** column is what is held (`clamp(25rem, 28%, 30rem)`) and the
+  left takes all the slack. The picker's floor is what sets
   the right column's: seven days, two shoulders and the month toggle need
   ~400 px, and at 330 the rail showed six days and the month would not unfurl.
   It also takes the phone's own 24 px `--cal-peek` **and its gaps** — copying

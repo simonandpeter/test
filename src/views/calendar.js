@@ -96,8 +96,7 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = `
     <div class="cal">
-      <div class="cal-body">
-        <div class="cal-controls">
+      <div class="cal-controls">
           <div class="cal-jump">
             <button type="button" data-month aria-expanded="false"
               aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
@@ -127,12 +126,33 @@ export function render(el, { data, params, router }) {
               </div>
             </div>
           </div>
-        </div>
+      </div>
+      <!--
+        **Two columns that are two boxes, not one box in two halves** (author,
+        2026-09-01: only the right column moves when the month opens, the two
+        scroll independently, and Continue reading belongs to the left).
+
+        Each of those needs the columns to be separate subtrees: a single day
+        panel spanning both could only ever move as one, scroll as one, and
+        take the month's growth as one. So the day is painted into two panels,
+        each in its own roll viewport, and slotSwap steps both together.
+
+        The picker sits between them in the document rather than inside the
+        right column, which is what lets the grid put it in the right column's
+        first row while the left column spans both — the month then grows the
+        row it is in and pushes only what is under it. On a phone the whole
+        thing is one flex column and the order property puts the four back in
+        reading order, which is why the wrappers dissolve there.
+      -->
+      <div class="cal-main" data-col="main">
         <h1 class="cal-date"></h1>
         <p class="cal-liturgy utility" data-liturgy></p>
-        <div class="slot-viewport"><div class="day-panel"></div></div>
+        <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>
+        <div class="shelves" data-shelves></div>
       </div>
-      <div class="shelves" data-shelves></div>
+      <div class="cal-side" data-col="side">
+        <div class="slot-viewport" data-slot="side"><div class="day-panel day-side"></div></div>
+      </div>
     </div>`;
 
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
@@ -180,7 +200,7 @@ export function render(el, { data, params, router }) {
   });
   state.cleanups.push(
     () => state.monthGrain?.land(),
-    () => landSwap(el.querySelector('.slot-viewport')),
+    () => el.querySelectorAll('.slot-viewport').forEach((v) => landSwap(v)),
     () => landSwap(el.querySelector('.cal-span')),
     onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
     wireRail(el.querySelector('.week-strip')),
@@ -195,8 +215,8 @@ export function render(el, { data, params, router }) {
   // The whole week the day sits in, not the day pinned to an edge: a reader
   // arriving by deep link gets the same first picture the old strip gave.
   revealSelected({ week: true });
-  paintDay(el.querySelector('.day-panel'));
-  wireDay(el.querySelector('.day-panel'));
+  paintDay(panelsIn(el));
+  wireDay(panelsIn(el));
   state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
 }
 
@@ -205,10 +225,19 @@ export function render(el, { data, params, router }) {
  * day change, so its listeners are torn down and remade rather than delegated:
  * the Save button has to re-read the store for the new day's hero anyway.
  */
-function wireDay(panel) {
+function wireDay({ main, side }) {
   state.dayCleanups.forEach((fn) => fn?.());
-  state.dayCleanups = [wireSaveButtons(panel), observePrefetch(panel)];
+  // Both halves, because either can carry a saint: the Save button and the
+  // hero live in the left, the register's own prefetch links in the left and
+  // the name days in the right.
+  state.dayCleanups = [wireSaveButtons(main), observePrefetch(main), observePrefetch(side)];
 }
+
+/** The day's two panels, which are painted and rolled as a pair. */
+const panelsIn = (el) => ({
+  main: el.querySelector('[data-slot="main"] .day-panel'),
+  side: el.querySelector('[data-slot="side"] .day-panel'),
+});
 
 
 /**
@@ -265,39 +294,57 @@ function select(iso, swipeDx) {
  * picture answers on the same axis instead of a different one.
  */
 function slotSwap(forward, swipeDx) {
-  const viewport = state.el.querySelector('.slot-viewport');
-  landSwap(viewport);
-  const old = viewport.querySelector('.day-panel');
-  const next = document.createElement('div');
-  next.className = 'day-panel';
-  paintDay(next);
+  /*
+   * **Two viewports, stepped together** (2026-09-01). The day is painted into
+   * a panel per column so that the columns can scroll and grow independently,
+   * and the roll follows: each side gets its own leaving and entering panel,
+   * both animate on the same classes and the same 300 ms, and the day is
+   * painted once into the pair rather than twice into one.
+   */
+  const sides = ['main', 'side'].map((which) => {
+    const viewport = state.el.querySelector(`[data-slot="${which}"]`);
+    landSwap(viewport);
+    const old = viewport.querySelector('.day-panel');
+    const next = document.createElement('div');
+    next.className = `day-panel day-${which}`;
+    return { which, viewport, old, next };
+  });
+  paintDay({ main: sides[0].next, side: sides[1].next });
 
   // Both panels are in the document at once during the roll, and a
   // view-transition-name may appear only once: a reader clicking through to a
   // saint mid-roll would otherwise hit a duplicate and lose the transition.
-  for (const named of old.querySelectorAll('[style*="view-transition-name"]')) {
-    named.style.viewTransitionName = 'none';
+  for (const { old } of sides) {
+    for (const named of old.querySelectorAll('[style*="view-transition-name"]')) {
+      named.style.viewTransitionName = 'none';
+    }
   }
 
   if (reducedMotion()) {
-    old.style.transform = '';
-    old.replaceWith(next);
-    wireDay(next);
+    for (const { old, next } of sides) {
+      old.style.transform = '';
+      old.replaceWith(next);
+    }
+    wireDay({ main: sides[0].next, side: sides[1].next });
     return;
   }
-  viewport.classList.toggle('backward', !forward);
-  viewport.classList.toggle('swipe', swipeDx !== undefined);
-  if (swipeDx !== undefined) old.style.setProperty('--drag-x', `${swipeDx}px`);
-  old.classList.add('slot-leaving');
-  setAside(old);
-  next.classList.add('slot-entering');
-  viewport.appendChild(next);
-  wireDay(next);
-  beginSwap(viewport, () => {
-    old.remove();
-    next.classList.remove('slot-entering');
-    viewport.classList.remove('swipe');
-  }).settle(300);
+  for (const { viewport, old, next } of sides) {
+    viewport.classList.toggle('backward', !forward);
+    viewport.classList.toggle('swipe', swipeDx !== undefined);
+    if (swipeDx !== undefined) old.style.setProperty('--drag-x', `${swipeDx}px`);
+    old.classList.add('slot-leaving');
+    setAside(old);
+    next.classList.add('slot-entering');
+    viewport.appendChild(next);
+  }
+  wireDay({ main: sides[0].next, side: sides[1].next });
+  for (const { viewport, old, next } of sides) {
+    beginSwap(viewport, () => {
+      old.remove();
+      next.classList.remove('slot-entering');
+      viewport.classList.remove('swipe');
+    }).settle(300);
+  }
 }
 
 /**
@@ -307,11 +354,10 @@ function slotSwap(forward, swipeDx) {
  * read as a step forward in time that never happened.
  */
 function repaintDay() {
-  const viewport = state.el.querySelector('.slot-viewport');
-  landSwap(viewport);
-  const panel = viewport.querySelector('.day-panel');
-  paintDay(panel);
-  wireDay(panel);
+  state.el.querySelectorAll('.slot-viewport').forEach((v) => landSwap(v));
+  const panels = panelsIn(state.el);
+  paintDay(panels);
+  wireDay(panels);
 }
 
 function paintChrome() {
@@ -611,13 +657,27 @@ function openFastBubble(button) {
    * it appeared. Found by the dismissal test, which pressed the control right
    * after a wheel and got nothing.
    */
-  const at = { x: scrollX, y: scrollY };
-  const gone = () => {
+  /*
+   * **Whatever scrolled, not the window** (2026-09-01). The Daily page's two
+   * columns carry their own scrolling now and the page itself is fixed to the
+   * glass, so a bubble watching `scrollY` alone stayed open through any
+   * amount of reading. Taken in the capture phase from `document`, which is
+   * where a scroll event on an element can be heard — they do not bubble.
+   */
+  const at = { x: scrollX, y: scrollY, top: 0 };
+  const gone = (e) => {
+    const target = e?.target;
+    const inner = target && target !== document && target !== document.documentElement ? target.scrollTop : null;
+    if (inner !== null) {
+      if (Math.abs(inner - at.top) > 4) closeFastBubble();
+      at.top = inner;
+      return;
+    }
     if (Math.abs(scrollY - at.y) > 4 || Math.abs(scrollX - at.x) > 4) closeFastBubble();
   };
   document.addEventListener('pointerdown', away, true);
   document.addEventListener('keydown', key);
-  window.addEventListener('scroll', gone, { capture: true, passive: true });
+  document.addEventListener('scroll', gone, { capture: true, passive: true });
   const onResize = () => closeFastBubble();
   window.addEventListener('resize', onResize, { passive: true });
 
@@ -627,7 +687,7 @@ function openFastBubble(button) {
     teardown: () => {
       document.removeEventListener('pointerdown', away, true);
       document.removeEventListener('keydown', key);
-      window.removeEventListener('scroll', gone, { capture: true });
+      document.removeEventListener('scroll', gone, { capture: true });
       window.removeEventListener('resize', onResize);
     },
   };

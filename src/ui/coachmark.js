@@ -115,13 +115,26 @@ export function mountCoachmarks() {
      than dismissed: a reader turning a phone has not answered anything. */
   const onResize = () => layout(live);
 
+  /*
+   * **Whatever is doing the scrolling, not the window** (2026-09-01). The
+   * Daily page stopped scrolling that day — its two columns each carry their
+   * own scrollbar and the page itself is fixed to the glass — so a mark that
+   * only watched `window.scrollY` sat there through any amount of reading.
+   * Scroll events do not bubble, but they are dispatched at the element and
+   * can be taken in the capture phase from `document`, which is what catches
+   * a column's scroll and the page's alike.
+   */
+  const position = (target) =>
+    !target || target === document || target === document.documentElement ? window.scrollY : target.scrollTop;
+
   let count = 0;
   let last = 0;
   let from = window.scrollY;
-  const onScroll = () => {
+  const onScroll = (e) => {
     const now = Date.now();
-    if (Math.abs(window.scrollY - from) < SCROLL_SLOP) return;
-    from = window.scrollY;
+    const at = position(e?.target);
+    if (Math.abs(at - from) < SCROLL_SLOP) return;
+    from = at;
     if (now - last > SCROLL_GAP) count += 1;
     last = now;
     if (count >= SCROLLS) {
@@ -145,14 +158,14 @@ export function mountCoachmarks() {
   };
 
   function teardown() {
-    window.removeEventListener('scroll', onScroll);
+    document.removeEventListener('scroll', onScroll, true);
     window.removeEventListener('resize', onResize);
     document.removeEventListener('keydown', onKey);
     document.removeEventListener('pointerdown', onPress, true);
     closeAll();
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('scroll', onScroll, { passive: true, capture: true });
   window.addEventListener('resize', onResize, { passive: true });
   document.addEventListener('keydown', onKey);
   document.addEventListener('pointerdown', onPress, true);
@@ -269,6 +282,18 @@ function layout(marks) {
     // wide marks, since 2026-08-26. "before"'s *actual* right edge, not the
     // one the split assumed, is the floor "now" may not come in under.
     now.at = place(now.mark.el, now.mark.target, Math.max(mid + APART / 2, before.at.right + APART));
+    /*
+     * And the mirror of that, which the wide chrome of 2026-09-01 made
+     * reachable: with both controls at the window's right edge the midpoint
+     * is there too, so "now" is clamped *left* of where the split asked for
+     * it and lands back on top of "before". `place` is the only thing that
+     * knows it was clamped, so the check has to be after it — and the
+     * remedy is to move the other one, the edge being immovable.
+     */
+    if (now.at.left < before.at.right + APART) {
+      const width = before.at.right - before.at.left;
+      before.at = place(before.mark.el, before.mark.target, now.at.left - APART - width);
+    }
   }
 }
 
