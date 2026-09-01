@@ -1,9 +1,9 @@
 import { PERIODS, spanOf } from '../data/periods.js';
 import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
-import { layoutLabels } from '../lib/map-labels.js';
+import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, coverFractions, declutter, panBy, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -142,6 +142,57 @@ let selected = null;
 let flyFrame = null;
 const FLY_MS = 450;
 
+/**
+ * How close the flight to a saint's rail may end up, however short the rail.
+ *
+ * A journey between two stays a few miles apart would otherwise fit the
+ * picture at 240×, which is a claim about the ground the coastline cannot
+ * back and a view the reader would have to zoom out of before they knew what
+ * country they were in. 30 is the search's own landing zoom, chosen there for
+ * the same reason: close enough to read the name and its neighbours.
+ */
+const RAIL_FIT_MAX = 30;
+
+/**
+ * How long the dot takes to walk the whole of a chosen saint's rail (author,
+ * 2026-09-01: "plays through the saint's life rail differently than through
+ * the movement mechanic: the dot goes over the rail smoothly over 5s").
+ *
+ * **It is deliberately not the `Movement` mechanic**, and the difference is
+ * the point of having both. Movement answers "where was everyone in the year
+ * the timeline says", so it moves every dot, is driven by the reader's own
+ * handle, and is opt-in because the line between two recorded places is drawn
+ * rather than sourced. This answers "show me this one life", once, on the
+ * press that chose it: one saint, their whole track end to end, at a pace
+ * nothing else on the page is keeping. The timeline does not move under it
+ * and no other dot stirs.
+ */
+const RAIL_PLAY_MS = 5000;
+
+/**
+ * The rail walk in progress: `{ slug, start }`, or `null`. Module state for
+ * the same reason `selected` is — the paint pass is a pure function of it,
+ * and `destroy` has to be able to end it.
+ */
+let railPlay = null;
+
+/**
+ * Eased at both ends rather than run at a constant rate. The dot starts from
+ * a standstill and ends at one, and a walk that begins and finishes abruptly
+ * reads as a jump-cut to the position rather than as a journey being shown.
+ */
+const smoothstep = (t) => t * t * (3 - 2 * t);
+
+/**
+ * How far everything the reader did *not* choose falls back while one saint
+ * is chosen (author, 2026-09-01: "when selected, the other saints become
+ * less prominent"). A multiplier on the dimming a dot already carries, so
+ * the timeline's own three states still read against each other underneath
+ * — this makes the rest of the map a ground for one saint rather than
+ * flattening it into one.
+ */
+const SELECT_DIM = 0.35;
+
 const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function cancelFlight() {
@@ -158,10 +209,22 @@ function cancelFlight() {
  * and never shortens it, and a selection that never completed would be the
  * control failing rather than the motion being spared.
  *
- * Cubic ease-out on the centre alone: the scale is the reader's and this has
- * no business changing it, so a saint chosen at 40× stays at 40×.
+ * **The scale travels too, since 2026-09-01.** It did not until then, and the
+ * comment here said why: the scale was the reader's and a saint chosen at 40×
+ * stayed at 40×. What changed is what the flight is *for* — "it centres you
+ * gently over its whole rail instead of one position" is a question about an
+ * extent, and there is no honest way to frame an extent without choosing how
+ * far out to stand. Geometrically rather than linearly, because zoom is
+ * multiplicative everywhere else on this map (`ZOOM_STEP`, the wheel's own
+ * `exp`): interpolating the number itself would rush the near end of a long
+ * flight and crawl through the far one.
+ *
+ * Every frame is clamped, which a constant-scale flight did not need: two
+ * valid views have valid views between them only while the scale holds still.
+ * Zooming out mid-flight can pull a centre past the edge the world may not
+ * leave, and an unclamped frame there is the Atlantic sliding off the side.
  */
-function flyTo(target, apply, done) {
+function flyTo(target, frame, apply, done) {
   cancelFlight();
   if (reducedMotion()) {
     apply(target);
@@ -173,11 +236,16 @@ function flyTo(target, apply, done) {
   const step = (now) => {
     const t = Math.min(1, (now - start) / FLY_MS);
     const eased = 1 - (1 - t) ** 3;
-    apply({
-      scale: target.scale,
-      cx: from.cx + (target.cx - from.cx) * eased,
-      cy: from.cy + (target.cy - from.cy) * eased,
-    });
+    apply(
+      clampView(
+        {
+          scale: from.scale * (target.scale / from.scale) ** eased,
+          cx: from.cx + (target.cx - from.cx) * eased,
+          cy: from.cy + (target.cy - from.cy) * eased,
+        },
+        frame,
+      ),
+    );
     if (t < 1) {
       flyFrame = requestAnimationFrame(step);
       return;
@@ -190,6 +258,9 @@ function flyTo(target, apply, done) {
 
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
+
+/** One saint's mark. A merged mark grows from here — see `paintCanvas`. */
+const DOT_R = 2.5;
 
 /*
  * The play button's two faces. Drawn as glyphs rather than as an icon from
@@ -323,6 +394,33 @@ let fadeFrame = null;
  * on its own.
  */
 let movement = false;
+
+/**
+ * **Whether a saint the reader's own span has passed, or not yet reached, is
+ * shown as well as marked** (author, 2026-09-01: "add a filter button which
+ * opens more options, like a tickbox for showing unborn saints and one for
+ * showing dead saints. by default they are not shown. however even with these
+ * boxes unticked, you still see a dot").
+ *
+ * That last sentence is the whole design of it, and it is why these are not
+ * filters in the ordinary sense: **nothing is ever removed from the picture**.
+ * Unticked, a saint outside the range keeps their dot — the timeline has dimmed
+ * rather than removed since 2026-08-31 and still does — and loses the two
+ * things that are a *claim* about them: their name, and the halo that says how
+ * sure the corpus is of the place. Ticked, they get both back and read as any
+ * other saint the range does reach.
+ *
+ * So the reader's default map answers "who belongs to these years", and the
+ * boxes turn it into "and who else is on this ground". Both are held for the
+ * visit like `movement` and the range, and unlike the selection: they are a
+ * way of reading the map rather than a thing the reader is looking at.
+ */
+let showPast = false;
+let showFuture = false;
+
+/** Whether a dot in this state is shown as a saint rather than left as a
+ *  bare mark on the ground. */
+const shownState = (state) => (state === 'past' ? showPast : state === 'future' ? showFuture : true);
 
 /**
  * Where each moving saint's dot currently *is*, by slug, easing toward where
@@ -752,6 +850,35 @@ export function render(el, { data, router }) {
         -->
         <div class="map-corner">
           <p class="map-note utility" data-caption hidden></p>
+          <!--
+            The filter button and the panel it opens (author, 2026-09-01: "add
+            a filter button which opens more options"). A panel rather than two
+            more boxes in the row below it: Movement is one word and earns its
+            place on the picture, and two more standing controls would make
+            the corner a form. It opens upward, because it is anchored to the
+            bottom of the stage and there is nothing below it to open into.
+
+            The note is not decoration. "Not shown" here means unnamed and
+            unhaloed, never removed, and a reader who ticked a box expecting
+            dots to *appear* would otherwise have to work that out from an
+            unchanged picture.
+          -->
+          <div class="map-filter" data-filter>
+            <button type="button" class="map-filter-btn utility" data-filter-btn
+              aria-expanded="false" aria-controls="map-filter-pop">${esc(M.filters)}</button>
+            <div class="map-filter-pop" id="map-filter-pop" data-filter-pop hidden
+              role="group" aria-label="${esc(M.filters)}">
+              <label class="map-filter-row utility">
+                <input type="checkbox" data-show="past" />
+                ${esc(M.showPast)}
+              </label>
+              <label class="map-filter-row utility">
+                <input type="checkbox" data-show="future" />
+                ${esc(M.showFuture)}
+              </label>
+              <p class="map-filter-note utility">${esc(M.filterNote)}</p>
+            </div>
+          </div>
           <div class="map-motion">
             <button type="button" class="icon-button map-play" data-play disabled
               aria-label="${esc(M.play)}">${PLAY_GLYPH}</button>
@@ -785,6 +912,7 @@ export function render(el, { data, router }) {
   homeView = HOME;
   view = HOME;
   selected = null;
+  railPlay = null;
 
   /*
    * A raw pointer stream — a drag, a wheel spin, a timeline thumb pulled by
@@ -888,35 +1016,79 @@ export function render(el, { data, router }) {
    * own position are all decided in the one place that knows where things
    * were drawn — `paintCanvas`.
    */
-  const choose = (dot) => {
-    if (!dot || dot.slug === selected) return;
-    // Dropped first, so the outgoing saint's rail and name are not left
-    // standing on the picture for the length of the flight.
-    selected = null;
-    refresh();
+  const choose = (mark) => {
+    if (!mark) return;
     /*
-     * **The world point under the dot as drawn, not the coordinate behind
-     * it.** Two saints who share a place are fanned apart by `declutter`
-     * before anything is painted — John the Long-Suffering and Moses the
-     * Hungarian both die at the Kyiv Caves — so flying to the *source*
-     * coordinate leaves the pressed dot a ring's radius off centre, which
-     * the desktop project caught at 12.5 px. Reading the world back out of
-     * the pixel the reader actually pressed is right whatever the draw pass
-     * did to get it there, and needs to know none of it.
+     * **A second press on the same mark steps to the next saint under it.**
+     * A mark can stand for a crowd (`mergeDots`), and saints at one identical
+     * coordinate — John the Long-Suffering and Moses the Hungarian at the
+     * Caves in Kyiv — cannot be told apart by zooming at any scale there is.
+     * Without this the reader could reach the best-ranked of them and nobody
+     * else, ever, which would make the merge a way of hiding saints rather
+     * than of drawing them honestly. Pressing a lone dot that is already
+     * chosen still does nothing: the step wraps to the one saint there is.
      */
+    const members = mark.members?.length ? mark.members : [mark.card];
+    const at = members.findIndex((c) => c.slug === selected);
+    const card = members[(at + 1) % members.length];
+    if (!card || card.slug === selected) return;
+
+    // Dropped first, so the outgoing saint's rail and name are not left
+    // standing on the picture for the length of the flight — and no walk from
+    // a previous choice carries on under the new one.
+    selected = null;
+    railPlay = null;
+    refresh();
+
     const box = canvas.getBoundingClientRect();
     const frame = coverFractions(box.width, box.height, ASPECT);
-    const { px, py } = toWorld(view, dot.x / box.width, dot.y / box.height, frame);
-    const centred = { scale: view.scale, ...clampCentre(px, py, view.scale, frame) };
-    flyTo(centred, (next) => applyView(next), () => {
-      selected = dot.slug;
+    const track = card.track ?? [];
+
+    /*
+     * **The whole rail if there is one, the dot itself if there is not**
+     * (author, 2026-09-01: "it centres you gently over its whole rail instead
+     * of one position"). A journey framed on the stay the dot happens to be
+     * standing on is a journey the reader cannot see the ends of, which is
+     * the thing the flight was doing wrong: `fitBounds` takes the extent and
+     * hands back the view that holds all of it with room to spare.
+     * `RAIL_FIT_MAX` keeps a short rail from slamming the picture to 240×.
+     *
+     * **Without a rail this is unchanged, and the pressed pixel is still the
+     * anchor rather than the saint's own coordinate.** A mark can stand for
+     * more saints than one (`mergeDots`), so its position is the
+     * representative's; reading the world back out of the pixel the reader
+     * actually pressed is right whatever the draw pass did to get it there,
+     * and needs to know none of it.
+     */
+    let target;
+    if (track.length > 1) {
+      const fitted = fitBounds(trackPath(track).map((p) => project(p.lon, p.lat)), frame);
+      target = clampView({ ...fitted, scale: Math.min(fitted.scale, RAIL_FIT_MAX) }, frame);
+    } else {
+      const { px, py } = toWorld(view, mark.x / box.width, mark.y / box.height, frame);
+      target = { scale: view.scale, ...clampCentre(px, py, view.scale, frame) };
+    }
+
+    flyTo(target, frame, (next) => applyView(next), () => {
+      selected = card.slug;
+      /*
+       * **And then the life is walked, once.** The rail is drawn by the paint
+       * this schedules — the author's original order, "first centres you
+       * smoothly on them and then shows their path" — and the dot sets off
+       * along it at the same moment. Under reduced motion it does not: the
+       * walk carries no information the still picture withholds (the rail is
+       * drawn whole either way), so removing it removes an animation and
+       * nothing else.
+       */
+      railPlay = track.length > 1 && !reducedMotion() ? { slug: card.slug, start: performance.now() } : null;
       refresh();
-      announce(el, fill(STRINGS.map.selected, { name: dot.name }));
+      announce(el, fill(STRINGS.map.selected, { name: saintName(card) }));
     });
   };
 
   const release = () => {
     cancelFlight();
+    railPlay = null;
     if (selected === null) return;
     selected = null;
     refresh();
@@ -943,6 +1115,7 @@ export function render(el, { data, router }) {
   applyView = setView;
   wireSearch(el, canvas, withPlace, setView);
 
+  wireFilters(el, refresh);
   wireMotion(el, bounds ? wireTimeline(el, bounds, refresh) : null, refresh);
 
   /*
@@ -1304,6 +1477,63 @@ function wireTimeline(el, bounds, refresh) {
       }
     },
   };
+}
+
+/* ---- the filter panel (2026-09-01) -------------------------------------- */
+
+/**
+ * The filter button and the two boxes behind it.
+ *
+ * Both boxes hold for the visit, so the panel opens showing what the map is
+ * actually doing rather than its defaults — the same standing `Movement` and
+ * the timeline's range have, and for the same reason: a reader who narrows
+ * the map, leaves for a saint page and comes back should find it as they
+ * left it.
+ *
+ * The outside-press close is `pointerdown` on `document`, the same bargain
+ * the timeline's year panels keep, and is registered in `cleanups` for the
+ * same reason — a listener on `document` outlives the view that added it.
+ */
+function wireFilters(el, refresh) {
+  const button = el.querySelector('[data-filter-btn]');
+  const pop = el.querySelector('[data-filter-pop]');
+
+  const shut = () => {
+    pop.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  };
+
+  button.addEventListener('click', () => {
+    const opening = pop.hidden;
+    pop.hidden = !opening;
+    button.setAttribute('aria-expanded', String(opening));
+  });
+
+  pop.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    // Focus goes back to the button that opened it, or the keyboard is
+    // stranded inside a panel that has just gone.
+    shut();
+    button.focus();
+  });
+
+  const onDocDown = (e) => {
+    if (!e.target.closest?.('.map-filter')) shut();
+  };
+  document.addEventListener('pointerdown', onDocDown);
+  cleanups.push(() => document.removeEventListener('pointerdown', onDocDown));
+
+  for (const box of el.querySelectorAll('[data-show]')) {
+    const which = box.dataset.show;
+    box.checked = which === 'past' ? showPast : showFuture;
+    box.addEventListener('change', () => {
+      if (which === 'past') showPast = box.checked;
+      else showFuture = box.checked;
+      refresh();
+      const M = STRINGS.map;
+      announce(el, box.checked ? (which === 'past' ? M.showingPast : M.showingFuture) : M.showingLiveOnly);
+    });
+  }
 }
 
 /* ---- movement and playback (2026-09-01) --------------------------------- */
@@ -1674,6 +1904,9 @@ export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
   cancelFlight();
+  // A walk belongs to the visit that started it; the paint loop it keeps
+  // alive is cancelled with `fadeFrame` below.
+  railPlay = null;
   for (const off of cleanups) off();
   cleanups = [];
   if (fadeFrame !== null) {
@@ -2032,7 +2265,7 @@ function paintCanvas(canvas, cards) {
   const land = canvas.__land;
   if (land) {
     /*
-     * Ink at a low alpha rather than `--rule` itself. The rule is 1.39:1 on
+     * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
      * gesso and 1.31:1 on the field — deliberately, because it divides text and
      * is not meant to be looked at — and a whole continent drawn in it was a
      * map you had to hunt for. This is quiet enough to stay a ground for the
@@ -2097,6 +2330,16 @@ function paintCanvas(canvas, cards) {
   for (const card of cards) {
     const at = pointAt(card, dateFrom, dateTo);
     if (!at) continue;
+    /*
+     * **Is this saint's dot travelling right now?** Two ways it can be — the
+     * chosen saint walking their whole rail on the press that chose them, and
+     * any tracked saint still easing toward where a moved timeline puts them
+     * — and the answer matters beyond the position: a moving name is printed
+     * over the others (author, 2026-09-01: "if a saint moves along its rail,
+     * make their name print over others while its moving"), which is what
+     * `moving` carries out of this loop for `rankOf` to sort by.
+     */
+    let moving = false;
     // Only the chosen saint's, since 2026-08-31: a journey is an answer to
     // "where did *this* one go", and every track on the picture at once
     // would be a second, competing kind of mark nobody asked a question to
@@ -2117,20 +2360,47 @@ function paintCanvas(canvas, cards) {
      * `pointAt` put them, which is the resting place and never moves.
      */
     let where = at.where;
-    if (at.track && at.progress !== undefined) {
+    const walk = railPlay?.slug === card.slug && at.track?.length > 1 ? (gliding - railPlay.start) / RAIL_PLAY_MS : null;
+    if (walk !== null && walk < 1) {
+      /*
+       * **The chosen saint's own walk, which outranks both of the above.**
+       * It reads neither the timeline nor `Movement`: the whole rail, end to
+       * end, in `RAIL_PLAY_MS`, because the question it answers is "show me
+       * this life" and not "where was everyone in 1025".
+       */
+      where = pointOn(at.track, smoothstep(walk) * (at.track.length - 1));
+      moving = true;
+    } else if (at.track && at.progress !== undefined) {
       const eased = glideTo(card.slug, at.progress, gliding);
-      if (eased !== at.progress) stillGliding = true;
+      if (eased !== at.progress) {
+        stillGliding = true;
+        moving = true;
+      }
       where = pointOn(at.track, eased);
     } else {
       where = glidePoint(card.slug, at.where, gliding);
-      if (where !== at.where) stillGliding = true;
+      if (where !== at.where) {
+        stillGliding = true;
+        moving = true;
+      }
+    }
+    /*
+     * A walk that has run its course ends here rather than on a timer, so
+     * the frame that stops it is the same frame that last drew it. The glide
+     * is left holding the rail's far end, so a reader who ticks `Movement`
+     * afterwards eases from where the walk finished rather than snapping
+     * back from a value the last paint never used.
+     */
+    if (walk !== null && walk >= 1) {
+      railAt.set(card.slug, { value: at.track.length - 1, lastT: gliding });
+      railPlay = null;
     }
     const p = place(where.lon, where.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
-    onScreen.push({ card, where, state: at.state, x, y });
+    onScreen.push({ card, where, state: at.state, x, y, moving });
   }
 
   /*
@@ -2142,6 +2412,19 @@ function paintCanvas(canvas, cards) {
    * life the range does not reach is a faint thread rather than a claim
    * competing with the lit ones.
    */
+  /*
+   * The stroked rail's own extent in CSS px, published below as `data-rail`.
+   * The suite cannot ask this of the picture: the rail is dashed rubric and
+   * so is every dot, so reading it off the ink measures the dots as well —
+   * which is exactly how the first version of the flight test passed with
+   * the framing backed out. The draw pass knows, so the draw pass says.
+   */
+  let railBox = null;
+  const spanRail = (x, y) => {
+    railBox = railBox
+      ? { minX: Math.min(railBox.minX, x), minY: Math.min(railBox.minY, y), maxX: Math.max(railBox.maxX, x), maxY: Math.max(railBox.maxY, y) }
+      : { minX: x, minY: y, maxX: x, maxY: y };
+  };
   for (const rail of rails) {
     ctx.globalAlpha = dimFor(rail.state);
     ctx.strokeStyle = hexWithAlpha(rubric, 0.55);
@@ -2155,6 +2438,7 @@ function paintCanvas(canvas, cards) {
     // same way at every zoom — and it is the same curve the dot rides.
     trackPath(rail.track).forEach((stop, i) => {
       const p = place(stop.lon, stop.lat, frame);
+      spanRail(p.x * w, p.y * h);
       if (i === 0) ctx.moveTo(p.x * w, p.y * h);
       else ctx.lineTo(p.x * w, p.y * h);
     });
@@ -2165,20 +2449,51 @@ function paintCanvas(canvas, cards) {
 
   drawnDots = [];
   /*
-   * Spread apart before anything is drawn, not after: the halo, the dot and
-   * the label all read from the same adjusted x/y, so two saints who share a
-   * spot (`lib/map-view.js`'s `declutter`, 2026-08-31 — John the
-   * Long-Suffering and Moses the Hungarian both at the Caves in Kyiv) get a
-   * halo and a label at the place each is actually drawn.
+   * **Which name wins when two cannot both have one**, and which saint a
+   * collapsed crowd is drawn as. Lower is better, and the order is the
+   * reader's own attention rather than the corpus's:
    *
-   * Grouped by `where.lon`/`where.lat` rather than the default x/y bucket
-   * (2026-08-31): two saints sharing a place are the same place at every
-   * zoom, and grouping by their *source* coordinate rather than this
-   * frame's on-screen proximity keeps that true regardless of how far in
-   * the reader goes, rather than the group dissolving the moment zooming
-   * spreads them past `radiusPx` apart on screen.
+   *   0  the saint they chose — never buried inside a mark, never unnamed;
+   *   1  a saint whose dot is moving (author, 2026-09-01: a name prints over
+   *      the others while its dot is travelling), because a mark in motion
+   *      that the reader cannot name is the one thing on the picture actively
+   *      asking a question;
+   *   2+ everyone else, by `dailyRank` — the Daily page's own precedence,
+   *      a saint some church sings for above a saint with an icon above the
+   *      rest, so the name a crowd prints is the name that page would lead
+   *      with (author, same message).
+   *
+   * Every tier is a property of the saint or of this frame, so it is stable
+   * from paint to paint: a name does not swap for its neighbour's because the
+   * reader nudged the map a pixel.
+   *
+   * **Inside a tier, a saint with a rail comes first**, which is a tie-break
+   * and not a fifth tier — it never lifts anyone above the order above. It
+   * earns its place at the Caves in Kyiv, where John the Long-Suffering and
+   * Moses the Hungarian share one coordinate and one `dailyRank`: the mark
+   * has to be one of them, no zoom can ever separate two identical points,
+   * and Moses is the one with a journey to show. Ties past that fall to the
+   * corpus's own order, which is the manifest's and is stable for a build.
    */
-  const fanned = declutter(onScreen, undefined, (p) => `${p.where.lon},${p.where.lat}`);
+  const rankOf = (d) =>
+    (d.card.slug === selected ? 0 : d.moving ? 1 : 2 + dailyRank(d.card)) * 2 + (d.card.track?.length ? 0 : 1);
+
+  /*
+   * **Dots the reader cannot tell apart become one mark, at a real
+   * coordinate** (`lib/map-view.js`'s `mergeDots`, 2026-09-01). What stood
+   * here until then spread them into rings a fixed number of screen pixels
+   * wide, which put the crowd at Constantinople on ground none of them stood
+   * on — out across the Bosphorus and into the Black Sea at low zoom — and
+   * never resolved, because a ring drawn in pixels is the same ring at 240×
+   * as at 1×.
+   *
+   * Merging is the opposite trade: fewer marks, every one of them true. The
+   * members separate as the reader zooms and their pixel distance grows past
+   * `MERGE_PX`, so the map reveals its own crowds instead of pretending to
+   * have drawn them already, and saints at one identical coordinate stay one
+   * mark carrying `n` — which no zoom could ever honestly split.
+   */
+  const fanned = mergeDots(onScreen, undefined, rankOf);
 
   /*
    * **Every glow is composited on its own layer and laid down once, at
@@ -2199,14 +2514,28 @@ function paintCanvas(canvas, cards) {
    * The layer is per-paint rather than cached: it is the size of the
    * picture, and every pan and zoom moves every halo on it anyway.
    */
-  const haloed = fanned.filter((d) => d.state !== 'future');
+  /*
+   * **A halo is one of the two things the filter boxes take away**, the name
+   * being the other (2026-09-01). It is a claim about how sure the corpus is
+   * of a place, so it belongs to a saint the reader is being shown rather
+   * than to every mark on the ground; unticked, a saint outside the range
+   * keeps their dot and loses the claim. `future` was already treated this
+   * way — a halo is a claim about a place someone *was* — and this is that
+   * same rule reaching `past` through a control instead of being hard-coded
+   * for one of the two states.
+   */
+  const haloed = fanned.filter((d) => d.card.slug === selected || shownState(d.state));
   if (haloed.length) {
     const layer = document.createElement('canvas');
     layer.width = canvas.width;
     layer.height = canvas.height;
     const lc = layer.getContext('2d');
     lc.setTransform(dpr, 0, 0, dpr, 0, 0);
-    for (const { where, x, y } of haloed) {
+    for (const { where, x, y, card } of haloed) {
+      // Everything but the chosen saint falls back while one is chosen — on
+      // the layer, so the single `GLOW_MAX` composite below still bounds the
+      // whole of it however many halos overlap.
+      lc.globalAlpha = selected && card.slug !== selected ? SELECT_DIM : 1;
       /*
        * The uncertainty curve's first shipping consumer (DESIGN.md §6b),
        * scaled by the zoom as well as by the picture's width: the doubt is a
@@ -2246,26 +2575,56 @@ function paintCanvas(canvas, cards) {
     ctx.restore();
   }
 
-  for (const { card, state, x, y } of fanned) {
+  for (const { card, state, x, y, n, moving, members } of fanned) {
     /*
      * A saint outside the reader's chosen span is dimmed rather than
      * removed (author, 2026-08-31), and by how much says which side of it
      * they fall on: one who had already died is greyed, one not yet born is
      * "greyed out twice as much" — twice as far toward the ground, so the
      * three states are told apart by depth rather than by hue, and none of
-     * them is carried by colour alone.
+     * them is carried by colour alone. Times `SELECT_DIM` for everyone the
+     * reader did not choose, once one is chosen (2026-09-01).
      */
-    ctx.globalAlpha = dimFor(state);
+    const alpha = dimFor(state) * (selected && card.slug !== selected ? SELECT_DIM : 1);
+    ctx.globalAlpha = alpha;
     ctx.fillStyle = rubric;
     ctx.beginPath();
-    ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+    /*
+     * **A mark standing for a crowd is drawn bigger, and says how many in
+     * its name.** It grows as the log of the count, not with it: twenty-four
+     * martyrs at one coordinate are a 7 px mark rather than a 60 px one, and
+     * the difference between one saint and two is still plain. This is the
+     * whole of what a merged mark does differently — it is not a cluster
+     * bubble with its own visual language, it is the same dot saying that
+     * more of the same are underneath it.
+     */
+    ctx.arc(x, y, n > 1 ? Math.min(6.5, DOT_R + Math.log2(n)) : DOT_R, 0, Math.PI * 2);
     ctx.fill();
     // A hairline in the page's ink so a dot on a dark coastline still reads.
     ctx.strokeStyle = ink;
     ctx.lineWidth = 0.5;
     ctx.stroke();
     ctx.globalAlpha = 1;
-    drawnDots.push({ x, y, state, slug: card.slug, name: saintName(card) });
+    const plain = saintName(card);
+    drawnDots.push({
+      x,
+      y,
+      state,
+      n,
+      moving,
+      alpha,
+      card,
+      slug: card.slug,
+      plain,
+      // Everyone this mark stands for, best-ranked first — what a second
+      // press on it steps through, so a saint merged into somebody else's
+      // mark is still reachable at a zoom that can never separate them.
+      members: members.map((m) => m.card),
+      // What the label pass measures and the paint prints. A merged mark
+      // carries its own count, so the reader is told there is more here
+      // rather than being left to discover it by zooming.
+      name: n > 1 ? fill(STRINGS.map.andMore, { name: plain, count: n - 1 }) : plain,
+    });
   }
 
   /*
@@ -2279,27 +2638,28 @@ function paintCanvas(canvas, cards) {
   const labelsEnabled = view.scale >= LABELS_AT;
   ctx.font = `12px ${style.getPropertyValue('--font-utility').trim() || 'sans-serif'}`;
   /*
-   * **A saint not yet born is a dot and no name** (author, 2026-08-31:
-   * "before a saint is born, dont display their names anymore, just the
-   * dot"). They were drawn at `DIM_FUTURE` until now, which was legible
-   * enough to read as a claim about a person the reader's own range has not
-   * reached — and it costs the names of the saints who *are* in range the
-   * space it takes, since the layout is a fight over one picture's worth of
-   * room. So they are kept out of the layout rather than drawn faintly by
-   * it: `layoutLabels` never sees them, and the room goes to the living.
+   * **A saint the reader's range does not reach is a dot and no name** —
+   * for the unborn since 2026-08-31 (author: "before a saint is born, dont
+   * display their names anymore, just the dot"), and for the dead as well
+   * since the filter boxes arrived on 2026-09-01. The reasoning is the one
+   * the first instruction gave and the boxes generalised: a name is legible
+   * enough to read as a claim about someone the range has not reached, and
+   * it costs the saints who *are* in range the room it takes, the layout
+   * being a fight over one picture's worth of space. `layoutLabels` never
+   * sees them, so the room goes to the saints the reader asked about.
    */
-  const nameable = drawnDots.filter((d) => d.state !== 'future');
+  const nameable = drawnDots.filter((d) => d.slug === selected || shownState(d.state));
   /*
-   * **The chosen saint is named at any zoom, and named first.** The author's
-   * button goes "next to their name", so a selection with no name on the
-   * picture would be a button anchored to nothing — and below `LABELS_AT`
-   * there would be no names at all. First in the array is what makes it
-   * *first*: `layoutLabels` seats one cluster at a time against what is
-   * already placed, so the chosen saint's cluster is the one laid out with
-   * the whole picture still free.
+   * **Laid out best-ranked first**, which is what makes `rankOf` a ranking
+   * of *names* rather than of dots: `layoutLabels` seats one cluster at a
+   * time against what is already placed, so whoever is first is laid out
+   * with the whole picture still free and whoever is last takes what is
+   * left. The chosen saint is rank 0 and so is named at any zoom — the
+   * `Profile ›` button goes "next to their name", and below `LABELS_AT`
+   * there would otherwise be no names at all to be next to.
    */
   const chosen = selected ? nameable.find((d) => d.slug === selected) : null;
-  const order = chosen ? [chosen, ...nameable.filter((d) => d !== chosen)] : nameable;
+  const order = [...nameable].sort((a, b) => rankOf(a) - rankOf(b));
   const measure = (name) => ctx.measureText(name).width;
   const laid = labelsEnabled
     ? layoutLabels(order, measure, w, h, view.scale >= LEADERS_AT)
@@ -2314,7 +2674,17 @@ function paintCanvas(canvas, cards) {
   const now = performance.now();
   ctx.textBaseline = 'middle';
   let drawnLabels = 0;
-  for (const dot of drawnDots) {
+  const named = [];
+  /*
+   * **Worst-ranked first, so the best-ranked name is painted last and lands
+   * on top of anything it meets** (author, 2026-09-01: the chosen saint's
+   * name "over all others at all zooms", and a moving saint's "over others
+   * while its moving"). The layout already keeps two placed names from
+   * overlapping, so this decides only the cases it cannot — a leader line
+   * crossing a name, a label mid-fade-out still holding its old box — and in
+   * those the name the reader is following is the one that wins.
+   */
+  for (const dot of [...drawnDots].sort((a, b) => rankOf(b) - rankOf(a))) {
     const label = placedFor.get(dot.slug);
     const opacity = stepLabelOpacity(dot.slug, Boolean(label), now);
     if (opacity <= 0) continue;
@@ -2325,7 +2695,9 @@ function paintCanvas(canvas, cards) {
     if (label) labelLastAt.set(dot.slug, label);
     // The dot's own dimming carries to its name: a greyed saint with a
     // full-strength label would read as two different claims about one dot.
-    ctx.globalAlpha = opacity * dimFor(dot.state);
+    // `dot.alpha` is that dimming and the chosen-saint fade together, so a
+    // name never argues with the mark it belongs to about either.
+    ctx.globalAlpha = opacity * dot.alpha;
     if (at.leader) {
       // The line first, so the text sits over it rather than under.
       ctx.strokeStyle = hexWithAlpha(inkSoft, 0.55);
@@ -2342,6 +2714,9 @@ function paintCanvas(canvas, cards) {
     // draw-pass-writes-the-hit-map rule `data-dots` keeps.
     if (label) dot.labelRect = label.rect;
     drawnLabels++;
+    // Only a name that currently holds a placement, so a label on its way out
+    // does not read as one the layout chose this frame.
+    if (label) named.push(dot.slug);
   }
   ctx.globalAlpha = 1;
   placeProfile(canvas, placedFor.get(selected) ?? null);
@@ -2354,11 +2729,39 @@ function paintCanvas(canvas, cards) {
    * rather than green-by-absence.
    */
   canvas.dataset.labels = String(drawnLabels);
-  // The hit-map, published for the press test: same pass, same rule - a paint
-  // that drew nothing writes '[]' and the pressing half goes red.
+  /*
+   * *Which* names, not only how many (2026-09-01). The count cannot answer
+   * the question the ranking raises — whether the name a crowded picture
+   * gave the room to is the one the Daily page would have led with — and a
+   * test that reads it off the ink instead would be measuring the font. Same
+   * pass, same rule: a paint that named nobody writes '[]'.
+   */
+  canvas.dataset.named = JSON.stringify(named);
+  /*
+   * The hit-map, published for the press test: same pass, same rule - a paint
+   * that drew nothing writes '[]' and the pressing half goes red.
+   *
+   * `n` and `alpha` joined it on 2026-09-01 and are instruments for the two
+   * things that paint added — how many saints a mark stands for, and how far
+   * back everything falls while one is chosen. Both have the doing-nothing
+   * answer the standing question asks for: with nothing merged every `n` is
+   * 1, and with nobody chosen every `alpha` is the dimming the timeline
+   * alone would give, so neither can read as working by being absent.
+   */
   canvas.dataset.dots = JSON.stringify(
-    drawnDots.map((d) => ({ x: Math.round(d.x), y: Math.round(d.y), slug: d.slug, state: d.state })),
+    drawnDots.map((d) => ({
+      x: Math.round(d.x),
+      y: Math.round(d.y),
+      slug: d.slug,
+      state: d.state,
+      n: d.n,
+      alpha: Math.round(d.alpha * 100) / 100,
+    })),
   );
+  // Which saint is mid-walk along their own rail, or '' — the walk is 5 s
+  // long and a test that measured a dot inside it would be reading a
+  // position that is still moving.
+  canvas.dataset.walking = railPlay?.slug ?? '';
   /*
    * Who is chosen, and how many journeys were actually stroked for them.
    * Both written by the pass that draws, so doing nothing reads `''` and
@@ -2367,6 +2770,16 @@ function paintCanvas(canvas, cards) {
    */
   canvas.dataset.selected = selected ?? '';
   canvas.dataset.rails = String(rails.length);
+  // Where the rail was actually stroked, rounded to whole px — '' when none
+  // was, so a paint that drew no journey cannot read as one that framed one.
+  canvas.dataset.rail = railBox
+    ? JSON.stringify({
+        x: Math.round(railBox.minX),
+        y: Math.round(railBox.minY),
+        w: Math.round(railBox.maxX - railBox.minX),
+        h: Math.round(railBox.maxY - railBox.minY),
+      })
+    : '';
 
   /*
    * However this paint was triggered, it is the one place that knows
@@ -2376,7 +2789,7 @@ function paintCanvas(canvas, cards) {
    * an unrelated reason mid-fade does not end up with two of these racing.
    */
   const stillFading = [...labelState.values()].some((s) => s.value !== s.target);
-  if (stillFading || stillGliding) {
+  if (stillFading || stillGliding || railPlay) {
     fadeFrame = requestAnimationFrame(() => {
       fadeFrame = null;
       if (canvas.isConnected) paintCanvas(canvas, cards);
@@ -2405,7 +2818,9 @@ function placeProfile(canvas, label) {
   }
   const dot = drawnDots.find((d) => d.slug === selected);
   button.querySelector('[data-profile-label]').textContent = STRINGS.map.profile;
-  button.setAttribute('aria-label', fill(STRINGS.map.profileOf, { name: dot?.name ?? '' }));
+  // The saint's own name, never the merged mark's "and 23 more" label: the
+  // button opens one profile and says whose.
+  button.setAttribute('aria-label', fill(STRINGS.map.profileOf, { name: dot?.plain ?? '' }));
   button.hidden = false;
   const width = button.offsetWidth;
   const box = canvas.getBoundingClientRect();

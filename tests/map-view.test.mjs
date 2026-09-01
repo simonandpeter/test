@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, declutter, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -168,128 +168,141 @@ test('zooming at a point still holds it still in a cropped box', () => {
   near(now.x, anchor[0], 1e-6);
   near(now.y, anchor[1], 1e-6);
 });
-
 /*
- * `declutter` — John the Long-Suffering and Moses the Hungarian both die at
- * the Caves in Kyiv, at the same rounded coordinate, and no amount of zoom
- * ever moves two identical points apart. This is the fix, held to the two
- * things that would make it worse than doing nothing: a lone point must not
- * move (nothing to declutter it from), and a group must actually separate
- * rather than only relabelling the same spot.
+ * `mergeDots` — what replaced the ring-fan on 2026-09-01, and the pair of
+ * failures it was replacing are what these hold it to.
+ *
+ * The fan drew every saint of a crowd at a position invented for them, a
+ * fixed number of *screen* pixels from the spot they shared: at Constantinople
+ * that reached across the Bosphorus and into the Black Sea, and because the
+ * spread was in pixels rather than on the ground it never dissolved — the
+ * same wheel at 1x and at 240x. So the two claims worth pinning are that
+ * every mark sits on a coordinate a saint really holds, and that zooming in
+ * really does reveal the members rather than redrawing the same knot.
  */
 
-test('a point with nothing to overlap stays exactly where it was', () => {
-  const out = declutter([{ x: 100, y: 200, slug: 'alone' }]);
-  assert.deepEqual(out, [{ x: 100, y: 200, slug: 'alone' }]);
+test('a mark stands exactly where its own saint stands', () => {
+  const out = mergeDots([{ x: 100, y: 200, slug: 'alone' }]);
+  assert.equal(out.length, 1);
+  near(out[0].x, 100, 1e-9);
+  near(out[0].y, 200, 1e-9);
+  assert.equal(out[0].n, 1);
 });
 
-test('two points far apart pass through untouched', () => {
+test('dots the reader can tell apart are left as they are', () => {
   const points = [{ x: 0, y: 0, slug: 'a' }, { x: 500, y: 500, slug: 'b' }];
-  const out = declutter(points);
-  assert.deepEqual(out.find((p) => p.slug === 'a'), points[0]);
-  assert.deepEqual(out.find((p) => p.slug === 'b'), points[1]);
+  const out = mergeDots(points);
+  assert.equal(out.length, 2);
+  for (const p of out) assert.equal(p.n, 1);
 });
 
-test('two points at the exact same spot are pulled apart, around their shared centre', () => {
-  const out = declutter([
+test('two saints at one coordinate are one mark that says so, not two invented places', () => {
+  const out = mergeDots([
     { x: 50, y: 50, slug: 'john-the-long-suffering' },
     { x: 50, y: 50, slug: 'moses-the-hungarian' },
   ]);
-  assert.equal(out.length, 2);
-  const [a, b] = out;
-  const d = Math.hypot(a.x - b.x, a.y - b.y);
-  assert.ok(d > 5, `still overlapping: ${d}px apart`);
-  // The pair straddles the point they shared, not drifted off toward one side.
-  near((a.x + b.x) / 2, 50, 1e-9);
-  near((a.y + b.y) / 2, 50, 1e-9);
-  // Every field but the position travels with its point.
-  assert.deepEqual(out.map((p) => p.slug).sort(), ['john-the-long-suffering', 'moses-the-hungarian']);
+  assert.equal(out.length, 1);
+  assert.equal(out[0].n, 2);
+  // On the spot itself — the old fan moved both off it and this must not.
+  near(out[0].x, 50, 1e-9);
+  near(out[0].y, 50, 1e-9);
+  assert.deepEqual(out[0].members.map((p) => p.slug).sort(), ['john-the-long-suffering', 'moses-the-hungarian']);
 });
 
-test('a bigger stack spreads every member out from its neighbours', () => {
-  const stack = Array.from({ length: 5 }, (_, i) => ({ x: 10, y: 10, slug: `s${i}` }));
-  const out = declutter(stack);
-  assert.equal(out.length, 5);
-  for (let i = 0; i < out.length; i++) {
-    for (let j = i + 1; j < out.length; j++) {
-      const d = Math.hypot(out[i].x - out[j].x, out[i].y - out[j].y);
-      assert.ok(d > 5, `members ${i} and ${j} still overlap: ${d}px apart`);
+test('zooming in reveals the members, one mark at a time', () => {
+  /*
+   * The same two saints, 3 px apart on the ground, as the reader zooms: the
+   * gap between them grows with the scale and the moment it passes `MERGE_PX`
+   * they are two marks. This is the property the fan never had — its ring was
+   * the same size at every zoom, so a crowd stayed a crowd forever.
+   */
+  const seen = [1, 2, 4, 8].map((scale) => {
+    const points = [{ x: 0, y: 0, slug: 'a' }, { x: 3 * scale, y: 0, slug: 'b' }];
+    return mergeDots(points).length;
+  });
+  assert.deepEqual(seen, [1, 1, 2, 2], 'the pair should split once their gap passes MERGE_PX');
+  // And every mark, merged or not, is still on one of the two real spots.
+  for (const scale of [1, 8]) {
+    const xs = [0, 3 * scale];
+    for (const mark of mergeDots([{ x: 0, y: 0 }, { x: 3 * scale, y: 0 }])) {
+      assert.ok(xs.includes(mark.x), `a mark at ${mark.x} is on neither saint's own coordinate`);
     }
   }
 });
 
-test('a custom radius scales how far a stack spreads', () => {
-  const points = [{ x: 0, y: 0 }, { x: 0, y: 0 }];
-  const tight = declutter(points, 4);
-  const wide = declutter(points, 40);
-  const dTight = Math.hypot(tight[0].x - tight[1].x, tight[0].y - tight[1].y);
-  const dWide = Math.hypot(wide[0].x - wide[1].x, wide[0].y - wide[1].y);
-  assert.ok(dWide > dTight, 'a larger radius should spread the pair further apart');
+test('the members of a mark add up to every saint handed in', () => {
+  const stack = Array.from({ length: 24 }, (_, i) => ({ x: 100, y: 100, slug: `m${i}` }));
+  const out = mergeDots([...stack, { x: 400, y: 400, slug: 'far' }]);
+  assert.equal(out.length, 2);
+  assert.equal(
+    out.reduce((sum, m) => sum + m.n, 0),
+    25,
+    'a saint went missing between the dots and the marks',
+  );
+});
+
+test('the mark is the best-ranked of its members, whatever order they arrived in', () => {
+  // Rank is what `views/map.js` sorts names by — the chosen saint, then one
+  // that is moving, then the Daily page's own precedence. A crowd prints the
+  // best-ranked name of it, so that saint has to be the mark itself.
+  const points = [
+    { x: 10, y: 10, slug: 'also-commemorated', rank: 4 },
+    { x: 12, y: 10, slug: 'leads-a-day', rank: 2 },
+    { x: 11, y: 11, slug: 'another', rank: 4 },
+  ];
+  const out = mergeDots(points, undefined, (p) => p.rank);
+  assert.equal(out.length, 1);
+  assert.equal(out[0].slug, 'leads-a-day');
+  assert.equal(out[0].n, 3);
+});
+
+test('a bigger radius merges more, a smaller one less', () => {
+  const points = [{ x: 0, y: 0 }, { x: 20, y: 0 }];
+  assert.equal(mergeDots(points, 4).length, 2);
+  assert.equal(mergeDots(points, 40).length, 1);
 });
 
 /*
- * `keyOf` — map.js's fix for a real bug the deeper `MAX_SCALE` it unlocked
- * made reachable: two points close on screen only at *this* zoom drift
- * apart as the reader zooms in, and the default x/y bucket dissolves their
- * group the instant they pass `radiusPx` apart, snapping the jittered one
- * back to its true position. A caller-supplied key sidesteps that by
- * grouping on something that does not move with the view.
+ * `fitBounds` — "centres you gently over its whole rail instead of one
+ * position" (author, 2026-09-01). A journey framed on the stay the dot
+ * happens to stand on is a journey whose ends the reader cannot see, so the
+ * claims are that everything handed in lands on the picture, and that it is
+ * centred rather than merely contained.
  */
 
-test('a custom key groups by whatever the caller says, not by x/y proximity', () => {
-  // Two points far apart on screen, but sharing a caller-supplied key.
-  const points = [{ x: 0, y: 0, id: 'kyiv' }, { x: 500, y: 500, id: 'kyiv' }];
-  const out = declutter(points, 9, (p) => p.id);
-  // Both still move: the default screen-proximity bucket would have left
-  // each of these alone (they are nowhere near each other), so a change
-  // shows the custom key, not the default, decided the grouping.
-  assert.notDeepEqual(out[0], points[0]);
-  assert.notDeepEqual(out[1], points[1]);
-});
-
-test("a custom key's grouping does not change as the points themselves move", () => {
-  // The scenario the bug was: two points sharing a place, at increasing
-  // "zoom" (their x/y spreading apart run to run) but the same source key.
-  // A stable key must keep spreading them by the same constant radius at
-  // every step, never snapping one back to an unjittered position.
-  const keyOf = (p) => p.place;
-  let prevDist = null;
-  for (const scale of [1, 4, 16, 64]) {
-    const shared = { x: 100 * scale, y: 100 * scale };
-    const points = [
-      { ...shared, place: 'diveyevo' },
-      { ...shared, place: 'diveyevo' },
-    ];
-    const out = declutter(points, 9, keyOf);
-    const dist = Math.hypot(out[0].x - out[1].x, out[0].y - out[1].y);
-    assert.ok(dist > 5, `still overlapping at scale ${scale}: ${dist}px apart`);
-    if (prevDist !== null) near(dist, prevDist, 1e-9);
-    prevDist = dist;
+test('a whole rail fits inside the box, with room to spare', () => {
+  const frame = WHOLE;
+  const rail = [
+    { x: 0.52, y: 0.3 },
+    { x: 0.56, y: 0.34 },
+    { x: 0.54, y: 0.28 },
+  ];
+  const v = fitBounds(rail, frame);
+  for (const p of rail) {
+    const s = toScreen(v, p.x, p.y, frame);
+    assert.ok(s.x > 0 && s.x < 1 && s.y > 0 && s.y < 1, `a stay landed off the picture at ${s.x}, ${s.y}`);
+    // The margin is real room, not a rounding: nothing sits against an edge.
+    assert.ok(s.x > 0.1 && s.x < 0.9, `a stay is jammed against the side at ${s.x}`);
   }
 });
 
-test('a large stack packs into rings rather than one widening wheel', () => {
-  /*
-   * The twenty-four martyrs of Nicomedia share one coordinate (2026-09-01),
-   * and the single ring this replaced grew its radius linearly with the
-   * group: twenty-four of them made a 52 px wheel drawn over Anatolia at
-   * every zoom, since the spread is a fixed number of *screen* pixels by
-   * design. Rings filled from the inside out grow as the square root
-   * instead, so the knot stays a knot — while no two dots come closer than
-   * two dots in a group of two, which is the whole point of spreading them.
-   */
-  const stack = Array.from({ length: 24 }, (_, i) => ({ x: 100, y: 100, slug: `m${i}` }));
-  const out = declutter(stack);
-  assert.equal(out.length, 24);
+test('the rail is centred on its own middle, not on one of its ends', () => {
+  const rail = [{ x: 0.4, y: 0.4 }, { x: 0.6, y: 0.5 }];
+  const v = fitBounds(rail, WHOLE);
+  const mid = toScreen(v, 0.5, 0.45, WHOLE);
+  near(mid.x, 0.5, 1e-9);
+  near(mid.y, 0.5, 1e-9);
+});
 
-  const radius = Math.max(...out.map((p) => Math.hypot(p.x - 100, p.y - 100)));
-  assert.ok(radius < 30, `the stack spread to ${radius.toFixed(1)}px, which reads as separate places`);
+test('a rail with no extent asks for the deepest zoom, and the caller caps it', () => {
+  // One stay is a point, and a point fits at any scale — so this hands back
+  // the ceiling rather than a division by zero, and `views/map.js` holds it
+  // to `RAIL_FIT_MAX` for the reader's sake.
+  const v = fitBounds([{ x: 0.5, y: 0.5 }], WHOLE);
+  assert.equal(v.scale, MAX_SCALE);
+});
 
-  let closest = Infinity;
-  for (let i = 0; i < out.length; i += 1) {
-    for (let j = i + 1; j < out.length; j += 1) {
-      closest = Math.min(closest, Math.hypot(out[i].x - out[j].x, out[i].y - out[j].y));
-    }
-  }
-  assert.ok(closest >= 8.9, `two of them are only ${closest.toFixed(1)}px apart`);
+test('a rail wider than the world cannot zoom past the whole of it', () => {
+  const v = fitBounds([{ x: 0.01, y: 0.01 }, { x: 0.99, y: 0.99 }], WHOLE);
+  assert.equal(v.scale, MIN_SCALE);
 });

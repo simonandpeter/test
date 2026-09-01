@@ -37,22 +37,26 @@ export const WHOLE = { fx: 1, fy: 1 };
 export const MIN_SCALE = 1;
 
 /**
- * 120 — doubled from 60 (2026-08-31, "enable zooming at least twice as far"),
- * which had itself been raised from the coastline's own honest ceiling of 24.
+ * 240 — doubled from 120 (2026-09-01, "zoom in further all over the place",
+ * prompted by the crowd of saints at Constantinople), matched to a doubled
+ * coastline precision rather than outrunning it as the previous doubling did.
  *
- * **Past 24 this is no longer a claim about the land.** `land.js`/`water.js`
- * round to a tenth of a degree (~11 km, `make-land.mjs`'s own `PRECISION`),
- * so the coastline at 120 is a visibly coarse polygon and §6b's objection —
- * a map that keeps zooming into detail it does not have is lying about its
- * own precision — is real and knowingly accepted. What earns it is that the
- * reason to zoom this far is never the coastline: it is prising apart two
+ * `land.js`/`water.js` now round to a hundredth of a degree (~1.1 km,
+ * `make-land.mjs`'s own `PRECISION`, raised 2026-09-01 from a tenth), so 240
+ * is the coastline's own honest ceiling at this precision — ten times finer
+ * than the tenth-of-a-degree rounding that made 24 the ceiling before it, and
+ * 240 is ten times 24. Past it the polygon would be visibly coarse again and
+ * §6b's objection — a map that keeps zooming into detail it does not have is
+ * lying about its own precision — would apply the same way it did at 120
+ * under the old rounding. What still earns zooming this far, honest or not,
+ * is that the reason is never really the coastline: it is prising apart two
  * saints who died in the same town, and `declutter`'s spread is a fixed
  * number of *screen* pixels, so more zoom is the only thing that turns that
  * fixed spread into readable distance. The labels' leader lines
  * (`views/map.js`) are the other half of that answer and do not need zoom at
  * all; this is for the reader who wants to see the ground as well.
  */
-export const MAX_SCALE = 120;
+export const MAX_SCALE = 240;
 
 export const HOME = { scale: MIN_SCALE, cx: 0.5, cy: 0.5 };
 
@@ -135,91 +139,90 @@ export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
   );
 
 /**
- * Spreads points that would draw on top of each other into a small ring
- * around their shared spot, so two saints who share a place — John the
- * Long-Suffering and Moses the Hungarian both die at the Caves in Kyiv, to
- * the same rounded coordinate — still each get their own dot and label
- * instead of one covering the other at any zoom. Deferred alongside
- * clustering while the corpus carried sixteen points (`views/map.js`'s own
- * header); the exact-duplicate case is not that deferral — no amount of
- * zooming ever separates two points at the same coordinate, so it is a
- * correctness gap rather than a density question, and 851 saints already
- * carry more than one such pair.
- *
- * `points` is any array of `{x, y, ...}` in the same px space the canvas
- * draws in. Grouping is a grid bucket keyed on `radiusPx` by default, not a
- * true nearest-neighbour search: cheap, and exact-duplicate coordinates —
- * the only case this exists to fix — always land in the same bucket
- * regardless of where the grid falls, since they are the same point. A pair
- * merely close but not identical can occasionally miss each other across a
- * bucket edge; at this corpus's density that is a rare cosmetic miss, not
- * the bug being fixed.
- *
- * `keyOf`, if given, replaces that default with the caller's own grouping
- * key — map.js passes each point's own lon/lat rather than its *current*
- * x/y (2026-08-31, fixing a real bug the deeper `MAX_SCALE` this unlocked
- * finally made reachable). `x`/`y` move with every pan and zoom, so the
- * default key is only ever a snapshot of *this frame's* proximity: two
- * points close enough to bucket together at rest can drift past
- * `radiusPx` apart as the reader zooms in, and the instant they do, the
- * jittered one snaps to its true position — a discontinuity that, wheel-
- * zoomed at exactly that jittered pixel, reads as the anchor and the dot
- * pulling apart and the dot vanishing off the edge a few scroll notches
- * later. A key drawn from the *source* coordinate is stable at every zoom:
- * two saints at the same place are the same place forever, so the group
- * they land in — and the constant-pixel offset drawn from it — never
- * changes underneath the reader.
+ * How near two dots have to be, in screen px, before the map draws them as
+ * one mark. A dot is 2.5 px, so ten is comfortably past "these two overlap"
+ * and well short of "these two are separate places I can tell apart".
  */
-export function declutter(points, radiusPx = 9, keyOf) {
-  const bucketKey = keyOf ?? ((p) => `${Math.round(p.x / radiusPx)},${Math.round(p.y / radiusPx)}`);
-  const buckets = new Map();
-  for (const p of points) {
-    const key = bucketKey(p);
-    if (!buckets.has(key)) buckets.set(key, []);
-    buckets.get(key).push(p);
+export const MERGE_PX = 10;
+
+/**
+ * Collapses dots the reader could not tell apart at this zoom into one mark
+ * each, **at a real coordinate**, and says how many saints stand behind it.
+ *
+ * **This replaces a fan, and the fan was the bug** (author, 2026-09-01: "the
+ * clustering at full zoom doesn't work: the saint dots in constantinople
+ * stretch out into the black sea. Make it so more dots are revealed as you
+ * zoom in and are actual coordinates on the map not scaling clusters").
+ * Until now, saints who shared a spot were spread into concentric rings a
+ * fixed number of *screen* pixels wide — so a crowd at Constantinople was
+ * drawn as a wheel of dots sitting on ground none of them ever stood on, and
+ * because the spread was in pixels it covered more country the further out
+ * the reader went, reaching across the Bosphorus and into the Black Sea. Every
+ * one of those positions was invented. No zoom dissolved them, either: the
+ * ring was the same size at 1× and at 240×, so the map never resolved into
+ * the places it was drawing.
+ *
+ * What replaces it says less and means it. Every mark sits at a coordinate a
+ * saint is actually recorded at — the representative's own — and a mark
+ * standing for more than one saint carries `n`, which is what lets the
+ * drawing pass say "and more here". Zooming in pushes the members apart in
+ * screen space until they exceed `radiusPx` and become marks of their own, so
+ * **more dots really are revealed as the reader goes in**, all the way down to
+ * one mark per saint. Saints who share an *identical* coordinate — the
+ * twenty-four martyrs of Nicomedia, or John the Long-Suffering and Moses the
+ * Hungarian at the Caves in Kyiv — never separate, at any zoom, because they
+ * are one place; they stay one mark that says how many, which is the honest
+ * answer the fan was avoiding.
+ *
+ * `rankOf` decides which member the mark *is*: the whole array is sorted by it
+ * first, so a group's representative is its best-ranked member and never an
+ * artefact of the order the caller built the array in. `views/map.js` ranks
+ * the chosen saint first, then one moving along a rail, then the saints the
+ * Daily page leads with — so the name a collapsed crowd prints is the name
+ * that page would print.
+ *
+ * `points` is any array of `{x, y, ...}` in the px space the canvas draws in.
+ * Returns one entry per mark: the representative's own fields, plus `members`
+ * (every saint behind it, representative first) and `n` (how many).
+ */
+export function mergeDots(points, radiusPx = MERGE_PX, rankOf = () => 0) {
+  const marks = [];
+  for (const p of [...points].sort((a, b) => rankOf(a) - rankOf(b))) {
+    // Against the marks already taken, not against every point: a mark's
+    // position is its representative's own, so this cannot drift off a real
+    // coordinate however many members join it.
+    const near = marks.find((m) => Math.hypot(m.x - p.x, m.y - p.y) <= radiusPx);
+    if (near) near.members.push(p);
+    else marks.push({ ...p, members: [p] });
   }
-  const out = [];
-  for (const group of buckets.values()) {
-    if (group.length === 1) {
-      out.push(group[0]);
-      continue;
-    }
-    const cx = group.reduce((s, p) => s + p.x, 0) / group.length;
-    const cy = group.reduce((s, p) => s + p.y, 0) / group.length;
-    /*
-     * **Concentric rings, filled from the inside out**, rather than one ring
-     * whose radius grows with the group.
-     *
-     * The single ring was written when the biggest stack in the corpus was
-     * two, and its radius grew linearly: `radiusPx * (1 + n/5)`. At the
-     * twenty-four martyrs of Nicomedia who share one coordinate (2026-09-01)
-     * that is a 52 px wheel drawn over Anatolia at every zoom — the spread is
-     * a fixed number of *screen* pixels by design, so it does not shrink as
-     * the reader zooms out — and it reads as twenty-four separate places,
-     * which is the opposite of what decluttering is for.
-     *
-     * Filling rings instead makes the radius grow as the square root of the
-     * group: the same twenty-four sit inside 27 px, and a pair is still a
-     * pair `radiusPx` either side of the spot they share. How many fit on a
-     * ring is its own circumference over the spacing, so no two dots on it
-     * are closer than two dots in a group of two.
-     */
-    let placed = 0;
-    let ring = 1;
-    while (placed < group.length) {
-      const r = radiusPx * ring;
-      const capacity = Math.max(1, Math.floor((2 * Math.PI * r) / radiusPx));
-      const here = Math.min(capacity, group.length - placed);
-      for (let i = 0; i < here; i += 1) {
-        const p = group[placed + i];
-        // Half a step of turn per ring, so the rings' own dots do not line up
-        // into spokes radiating out of the middle.
-        const angle = (2 * Math.PI * i) / here - Math.PI / 2 + (ring % 2 ? 0 : Math.PI / here);
-        out.push({ ...p, x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) });
-      }
-      placed += here;
-      ring += 1;
-    }
-  }
-  return out;
+  for (const mark of marks) mark.n = mark.members.length;
+  return marks;
+}
+
+/**
+ * The view that frames a whole set of projected points — the scale at which
+ * they all fit with `margin` of the box to spare on each side, centred on
+ * their own middle.
+ *
+ * Written for "centre me over this saint's whole rail rather than over the
+ * one spot they are standing on" (author, 2026-09-01), which is a question
+ * about an extent and not about a point: a journey the reader cannot see the
+ * ends of has not been shown to them. The bounding box's midpoint is right
+ * here where `defaultView`'s mean was right there — this is framing one
+ * saint's own recorded path, where every end matters, not choosing a view of
+ * a corpus where one outlier must not drag the centre.
+ *
+ * A single point has no extent and gets `Infinity`, clamped to `MAX_SCALE`;
+ * callers with an opinion about how close is too close cap it themselves.
+ */
+export function fitBounds(points, frame = WHOLE, margin = 0.15) {
+  if (!points.length) return HOME;
+  const xs = points.map((p) => p.x);
+  const ys = points.map((p) => p.y);
+  const [minX, maxX] = [Math.min(...xs), Math.max(...xs)];
+  const [minY, maxY] = [Math.min(...ys), Math.max(...ys)];
+  const usable = Math.max(0.05, 1 - 2 * margin);
+  const fit = (span, f) => (span > 0 ? (f * usable) / span : Infinity);
+  const scale = clamp(Math.min(fit(maxX - minX, frame.fx), fit(maxY - minY, frame.fy)), MIN_SCALE, MAX_SCALE);
+  return clampView({ scale, cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 }, frame);
 }

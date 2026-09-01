@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { clusterDots, layoutLabels } from '../src/lib/map-labels.js';
+import { clusterDots, dailyRank, layoutLabels } from '../src/lib/map-labels.js';
 
 /*
  * The map's label layout, held to the thing it was built to fix: a dot with
@@ -199,4 +199,34 @@ test('a column slides clear of a neighbouring column rather than losing a row', 
   assert.equal(out.length, dots.length, 'two crowded clusters cost a name between them');
   const named = new Set(out.map((l) => l.dot.name));
   assert.ok(named.has('Natalia of Nicomedia'), 'the row that met the neighbouring column was dropped');
+});
+
+/*
+ * `dailyRank` — "favour the saints that are main saints on the daily page and
+ * the also commemorated in order when deciding which name to print over the
+ * others when zoomed out" (author, 2026-09-01).
+ *
+ * The point of pinning it is that it is a *borrowing*: `pickHero` in
+ * `lib/calendar-page.js` leads a day with a saint the church sings for, then
+ * one with an icon, then anybody. If that precedence is ever reordered there,
+ * these should be the tests that notice the map has stopped agreeing with the
+ * page it claims to be following.
+ */
+
+test('a saint some church sings for outranks one with only an icon', () => {
+  assert.ok(dailyRank({ hymned: ['oca'], image: null }) < dailyRank({ hymned: [], image: {} }));
+});
+
+test('a saint with an icon outranks a saint with neither', () => {
+  assert.ok(dailyRank({ image: {} }) < dailyRank({}));
+});
+
+test('an empty hymned list is not a hymned saint', () => {
+  // The manifest carries `hymned: []` for most of the corpus, and reading its
+  // presence rather than its length would rank the whole corpus first.
+  assert.equal(dailyRank({ hymned: [] }), dailyRank({}));
+});
+
+test('a card that is missing altogether ranks last rather than throwing', () => {
+  assert.equal(dailyRank(undefined), dailyRank({}));
 });

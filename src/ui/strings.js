@@ -889,6 +889,29 @@ export const STRINGS = {
     profileOf: 'Profile of {name}',
     selected: '{name} selected. Their path is shown.',
     /*
+     * The filter panel (author, 2026-09-01), and the note is as load-bearing
+     * as the two boxes: "not shown" here means *unnamed and unhaloed*, never
+     * removed, so a reader who ticks a box expecting new dots to appear is
+     * told in advance that the dots were already there. `showPast` and
+     * `showFuture` are the author's own two words — a saint already dead in
+     * the reader's chosen years, and one not yet born in them — rather than
+     * the `past`/`future` the code sorts them by.
+     */
+    filters: 'Filters',
+    showPast: 'Saints already dead',
+    showFuture: 'Saints not yet born',
+    filterNote: 'Either way their dot stays on the map.',
+    showingPast: 'Showing saints who had already died.',
+    showingFuture: 'Showing saints not yet born.',
+    showingLiveOnly: 'Showing only saints alive in these years.',
+    /*
+     * What a mark standing for more than one saint prints (2026-09-01). Two
+     * saints at one coordinate can never be separated by zooming, so the
+     * map says how many are there instead of drawing positions none of them
+     * hold — `{name}` is the best-ranked of them, `{count}` is the rest.
+     */
+    andMore: '{name} +{count}',
+    /*
      * The timeline's typed ends (author, 2026-08-31), beside the two
      * handles rather than instead of them: a reader who knows the year
      * types it, a reader who is browsing drags for it. `era` is a real

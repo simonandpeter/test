@@ -7,13 +7,19 @@
    of a black void). Dark is not an inversion and contains no pure black. */
 
 :root {
-  --gesso: #e5e4dd;
+  /* Warmed on 2026-09-01 (author: "replace the background colour on light
+     theme with gesso #ece5d6"), from #E5E4DD — a near-neutral off-white — to
+     a cream that reads as primed gesso rather than as paper. It is lighter as
+     well as warmer, so every text token gained a little contrast rather than
+     losing any; the figures are recomputed in DESIGN.md and held there by
+     `tests/contrast.test.mjs`. */
+  --gesso: #ece5d6;
   --ink: #221d19;
   --ink-soft: #5c544d;
   --rubric: #8a2e26;
   --gold: #a98237;
   /* The same gold at a value words can be read at (2026-08-27). `--gold` on
-     gesso is **2.78:1**, which is under the 3:1 a meaningful graphic asks and
+     gesso is **2.82:1**, which is under the 3:1 a meaningful graphic asks and
      nowhere near the 4.5:1 text asks; it is the right hue for a glyph, a
      border or a tint and the wrong one for a word. This is the darkest step
      that still reads as gold rather than as brown, at **4.59:1**. The pattern
@@ -24,12 +30,19 @@
      **Measured against `--field` and not only against gesso**: the phone's
      current nav button sits in the recessed field, which is where this hue is
      first used, and the first value tried cleared 4.59:1 on gesso and 4.26 on
-     the field. axe caught it on the mobile project. 5.13 and 4.76. */
+     the field. axe caught it on the mobile project. 5.13 and 4.76 — and
+     5.21 and 4.84 since the ground warmed on 2026-09-01. */
   --gold-ink: #755925;
   --rule: #c8c2b7;
 
-  --field: #dfdcd1; /* recessed panel interior only — never a page background */
-  --veil: rgba(229, 228, 221, 0.8);
+  /* Both follow the ground rather than standing still while it moves
+     (2026-09-01). The veil has no choice — it *is* gesso at 0.8, and leaving
+     it behind would tint every scrim a colour the page no longer uses. The
+     field is a judgement: it is the ground one step recessed, so it keeps the
+     luminance drop it always had (0.059) and takes the new warmth with it,
+     rather than staying a grey panel let into a cream page. */
+  --field: #e6ddca; /* recessed panel interior only — never a page background */
+  --veil: rgba(236, 229, 214, 0.8);
 
   /* The fast of the day (author, 2026-08-24, DESIGN.md §2b): three states the
      reader sorts at a glance. Strict is the rubric itself, because a fast is

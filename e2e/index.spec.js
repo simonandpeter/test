@@ -670,9 +670,12 @@ test('a fading card is set aside, and one brought back mid-fade is whole again',
 
 test('the day ground is gesso, and the field is recessed into it', async ({ page }) => {
   // The author pinned the light ground at rgb(229, 228, 221) on 2026-08-22,
-  // replacing the near-white #fbfaf7 DESIGN.md §3 had carried until then.
-  // Three derived values moved with it and each is asserted here, because each
-  // was a relationship the old near-white ground was holding up by accident.
+  // replacing the near-white #fbfaf7 DESIGN.md §3 had carried until then, and
+  // warmed it again to #ECE5D6 — rgb(236, 229, 214) — on 2026-09-01. Three
+  // derived values moved with it and each is asserted below, because each was
+  // a relationship the old near-white ground was holding up by accident: the
+  // second move re-derived `--field` and `--veil` for the same reason rather
+  // than leaving a grey panel let into a cream page.
   await page.goto('/saints', { waitUntil: 'networkidle' });
 
   const lum = (rgb) => {
@@ -700,7 +703,7 @@ test('the day ground is gesso, and the field is recessed into it', async ({ page
   });
 
   // The ground itself, exactly as asked.
-  expect(seen.page).toBe('rgb(229, 228, 221)');
+  expect(seen.page).toBe('rgb(236, 229, 214)');
 
   // A card is a kovcheg: the field sits *below* the page tone (DESIGN.md §1,
   // §3). Darkening the page without re-deriving the field would have inverted

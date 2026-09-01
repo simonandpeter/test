@@ -112,7 +112,7 @@ Three things keep the exception honest, and none of them is optional:
    the ground needs lands within a few degrees of `--gold`, and a reader who
    has learnt that gold is a finding about veneration should never meet it on a
    line about herring. The hue was chosen to be unmistakably *not* gold.
-3. **Both hues clear 4.5:1 on their ground in both themes** — 6.00 and 5.72 on
+3. **Both hues clear 4.5:1 on their ground in both themes** — 6.10 and 5.81 on
    gesso, 7.98 and 8.59 on bole — so the quality floor's contrast gate passes
    on the colour rather than in spite of it.
 
@@ -192,13 +192,19 @@ under gold leaf — because the icon photography is gold-heavy and warm, and it
 must sit *in* the surface, not glow out of a black void. No pure black
 anywhere; the darkest value in the system is `#1A1412`.
 
-Contrast, computed against the shipping tokens on 2026-08-22 rather than
-recalled — every figure in the previous version of this paragraph was wrong,
-which is §6b's lesson about worked values arriving in the palette. Light:
-ink/gesso 13.10:1, ink/field 12.16:1; ink-soft 5.82:1 on gesso and **5.40:1 on
-the field**, which is the binding one, because secondary text sits inside cards;
-rubric 6.59:1 on gesso, 6.12:1 on field. Dark: ink/gesso 14.71:1, ink-soft
-6.78:1, rubric **5.54:1 on gesso and 5.18:1 on the field**.
+Contrast, computed against the shipping tokens rather than recalled — every
+figure in the 2026-08-22 version of this paragraph was wrong, which is §6b's
+lesson about worked values arriving in the palette. Light, recomputed
+2026-09-01 when the ground warmed to `#ECE5D6`: ink/gesso 13.31:1, ink/field
+12.37:1; ink-soft 5.92:1 on gesso and **5.50:1 on the field**, which is the
+binding one, because secondary text sits inside cards; rubric 6.70:1 on gesso,
+6.23:1 on field. Dark: ink/gesso 14.71:1, ink-soft 6.78:1, rubric **5.54:1 on
+gesso and 5.18:1 on the field**.
+
+The light ground moving lifted every one of those figures, which is the shape
+of the change rather than a happy accident: `#ECE5D6` is both warmer and
+*lighter* than the `#E5E4DD` it replaced, so every ink on it gained a little
+separation and nothing had to be re-tuned to keep its floor.
 
 Two things that paragraph used to say and should not have. It claimed
 ink-soft "≥ 5.4:1 both modes" while the value on the light *field* was 5.29:1 —
@@ -215,13 +221,13 @@ Lighthouse — whose headless Chrome asks for dark — to say so out loud. Every
 figure in this paragraph is now recomputed from `tokens.css` by
 `tests/contrast.test.mjs`, which fails if this document and the palette disagree,
 and holds every text token in **both** themes to 4.5:1 rather than trusting a
-number typed into a paragraph. `--gold` is 2.78:1 on light gesso and takes no
+number typed into a paragraph. `--gold` is 2.82:1 on light gesso and takes no
 floor, because it is never text; `--gold-ink` is the one that carries words and
 is gated instead.
 
 `--rule` is not text and takes no AA floor, but it has to stay visible against
-both surfaces it divides: 1.39:1 on gesso and 1.29:1 on the field, which is the
-standing it held on the old ground (1.40 and 1.29) rather than a new target.
+both surfaces it divides: 1.41:1 on gesso and 1.31:1 on the field, which is the
+standing it held on the old ground (1.39 and 1.29) rather than a new target.
 gold is **never used for text** and never carries information alone (§7).
 
 **Theme is two-way — light or dark — and the system is read, not offered**
@@ -757,7 +763,7 @@ more.
 evening: "make the icon gold to draw attention"). §2 gives gold to a finding
 about veneration and to nothing else, and the Index's Random die is the first
 piece of chrome to wear it. The cost is stated rather than absorbed: --gold on
-gesso is 2.78:1, under the 3:1 asked of a meaningful non-text graphic, and axe
+gesso is 2.82:1, under the 3:1 asked of a meaningful non-text graphic, and axe
 does not check icon contrast — so the browser test allows the die **by name**
 and fails a second gold anywhere. The rule is not loosened; one exception is
 written into it.

@@ -21,10 +21,14 @@ const arg = (name, fallback) => {
 };
 
 const QUALITY = arg('quality', '50m');
-// One decimal place is about 11 km at the equator, which is finer than a 360 px
-// world map can draw: at that width a whole degree of longitude is a single
-// pixel. Two would double the file for detail no reader can see.
-const PRECISION = Number(arg('precision', 1));
+// Two decimal places is about 1.1 km at the equator (2026-09-01, raised from
+// one/~11 km so the map's MAX_SCALE has real coastline detail behind it as
+// far as Constantinople's own crowd of saints wants to zoom — see
+// `lib/map-view.js`'s own comment on MAX_SCALE for the arithmetic). Finer
+// than this is wasted bytes for a 50m tier: the point count barely moves
+// between 2 and 3 decimal places, because the source data's own precision is
+// already close to a hundredth of a degree.
+const PRECISION = Number(arg('precision', 2));
 
 const topo = JSON.parse(await readFile(new URL(`../node_modules/world-atlas/land-${QUALITY}.json`, import.meta.url), 'utf8'));
 const land = feature(topo, topo.objects.land);
@@ -105,9 +109,9 @@ const body = `/**
  *
  * Natural Earth ${QUALITY} land, public domain, via the \`world-atlas\` package.
  * Coordinates are rounded to ${PRECISION} decimal place${PRECISION === 1 ? '' : 's'}
- * (~11 km) and flattened to [lon, lat, lon, lat, …] per ring — a world map a few
- * hundred pixels wide cannot draw finer, and the flat form halves the JSON
- * punctuation, which is most of what gzip is asked to carry here.
+ * (~${(111.32 * 10 ** -PRECISION).toFixed(1)} km) and flattened to [lon, lat, lon, lat, …] per ring — the flat
+ * form halves the JSON punctuation, which is most of what gzip is asked to
+ * carry here.
  *
  * Imported dynamically so it lands in its own chunk and never on the boot path.
  */

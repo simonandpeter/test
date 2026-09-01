@@ -40,6 +40,33 @@
  * and this stays a layout decision rather than a zoom one.
  */
 
+/**
+ * How a saint stands on the Daily page, as a number to sort names by: 0 is a
+ * saint some church sings for, 1 is a saint with an icon, 2 is everyone else.
+ *
+ * **The map borrows the Daily page's own precedence rather than inventing
+ * one** (author, 2026-09-01: "favour the saints that are main saints on the
+ * daily page and the also commemorated in order when deciding which name to
+ * print over the others when zoomed out"). `lib/calendar-page.js`'s
+ * `pickHero` chooses a day's hero as: a saint that church has hymns recorded
+ * for — "the day's principal commemoration in that church" — then a saint
+ * with an image, then anybody, with a date hash breaking the tie. The first
+ * two of those three tiers are properties of the *saint* and travel here
+ * unchanged; the third is a property of a date and cannot, which is why this
+ * stops at three tiers rather than trying to name a hero.
+ *
+ * So a saint who leads a day somewhere outranks one who only ever appears
+ * under *Also commemorated*, which is the question the instruction asked. It
+ * is a ranking of names against each other and never a claim that an
+ * unranked saint matters less: it decides which name gets the room when two
+ * cannot both have it, and nothing else.
+ */
+export function dailyRank(card) {
+  if (card?.hymned?.length) return 0;
+  if (card?.image) return 1;
+  return 2;
+}
+
 /** How far from the dot a label sits when it sits beside it. */
 const GAP = 6;
 /** A label's box is its text plus this much padding, and this tall. */

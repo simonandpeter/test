@@ -468,15 +468,18 @@ test('names arrive with the zoom, and not before', async ({ page }) => {
  * in CI's own results.
  */
 
-test('the map can zoom well past what the coastline itself can back', async ({ page }) => {
+test('the map can zoom to its ceiling', async ({ page }) => {
   // §8.3's own reason to zoom this far is reading two close names apart
   // (`declutter`'s spread is a fixed number of screen pixels, so only more
-  // zoom makes it read as more room), not finer coastline detail — MAX_SCALE
-  // is raised (2026-08-31) even though the land data was not.
+  // zoom makes it read as more room). MAX_SCALE was raised past the
+  // coastline's own honest ceiling once (2026-08-31, 120 against a ceiling
+  // of 24) and matched to a doubled ceiling the next time (2026-09-01, 240
+  // against `PRECISION`'s own hundredth-of-a-degree rounding) rather than
+  // left to outrun it again.
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const zoomIn = page.locator('[data-zoom="in"]');
   for (let i = 0; i < 20 && !(await zoomIn.isDisabled()); i++) await zoomIn.click();
-  await expect(page.locator('[data-zoom-level]')).toHaveText('120.0×');
+  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
   await expect(zoomIn).toBeDisabled();
 });
 
@@ -798,27 +801,77 @@ test('the rest view is centred on the corpus, not on the equator and the prime m
   expect(zoomed.length, 'three presses of + emptied the map of every saint').toBeGreaterThan(0);
 });
 
-/* ---- declutter (2026-08-31) ----------------------------------------------- */
+/* ---- merged marks (2026-09-01, replacing declutter) ----------------------- */
 
-test('two saints who share an exact spot get their own dot each, not one stacked on the other', async ({ page }) => {
+test('two saints who share an exact spot are one mark that says how many', async ({ page }) => {
   /*
    * John the Long-Suffering and Moses the Hungarian both die at the Caves in
-   * Kyiv, at the same rounded coordinate — the case `declutter`
-   * (`lib/map-view.js`) exists for. No zoom level would ever separate two
-   * identical points, so this is checked at rest rather than by zooming in.
+   * Kyiv, at the same rounded coordinate.
+   *
+   * **This reverses what it asserted until 2026-09-01**, which was that the
+   * two were drawn as two dots a few pixels apart. That was `declutter`, and
+   * the author's report is what retired it: "the clustering at full zoom
+   * doesn't work: the saint dots in constantinople stretch out into the black
+   * sea ... actual coordinates on the map not scaling clusters". Both dots of
+   * a pair like this stood on ground neither saint is recorded at, and since
+   * the offset was a fixed number of screen pixels it covered more country the
+   * further out the reader went. One mark on the true coordinate, carrying the
+   * count, is what replaced it.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   const dots = JSON.parse(await canvas.getAttribute('data-dots'));
-  const john = dots.find((d) => d.slug === 'john-the-long-suffering');
-  const moses = dots.find((d) => d.slug === 'moses-the-hungarian');
-  expect(john, 'premise: John the Long-Suffering has no drawn death point').toBeTruthy();
-  expect(moses, 'premise: Moses the Hungarian has no drawn death point').toBeTruthy();
+  const kyiv = dots.filter((d) => ['john-the-long-suffering', 'moses-the-hungarian'].includes(d.slug));
+  expect(kyiv.length, 'the pair is drawn as two marks, which no zoom could ever justify').toBe(1);
+  expect(kyiv[0].n, 'the mark does not say that a second saint stands under it').toBeGreaterThanOrEqual(2);
 
-  const apart = Math.hypot(john.x - moses.x, john.y - moses.y);
-  expect(apart, 'the two dots still land on the same pixel').toBeGreaterThan(3);
+  /*
+   * And nobody is lost behind it: every located saint is either their own
+   * mark or a member of one, which is the claim the old two-dots assertion
+   * was really protecting.
+   */
+  const total = dots.reduce((sum, d) => sum + d.n, 0);
+  expect(total, 'the marks account for fewer saints than the picture drew').toBeGreaterThanOrEqual(dots.length + 1);
+});
+
+test('zooming in splits a merged mark into the saints under it', async ({ page }) => {
+  /*
+   * The half of the author's report that the count alone does not answer:
+   * "make it so more dots are revealed as you zoom in". Two saints near each
+   * other but not *at* each other must come apart as the reader goes in —
+   * which the ring-fan never did, its spread being in pixels rather than on
+   * the ground.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  /*
+   * Three saints at Kyiv, and the arithmetic of the corpus is what makes them
+   * the right three. Cyprian of Kyiv is 0.038° from the Caves — close enough
+   * to be one mark at rest, far enough to be his own once the reader is in.
+   * John the Long-Suffering and Moses the Hungarian are at *one* coordinate
+   * and must stay merged at every zoom, which is the half of this that says
+   * the map is not simply splitting things up as it goes.
+   */
+  const kyiv = ['cyprian-of-kyiv', 'john-the-long-suffering', 'moses-the-hungarian'];
+  const marksFor = async () =>
+    JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => kyiv.includes(d.slug));
+
+  expect((await marksFor()).length, 'premise: Kyiv is not one mark at rest to begin with').toBe(1);
+
+  await searchBox(page).fill('kyiv');
+  await expect(searchRows(page).first()).toContainText('Kyiv');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  for (let i = 0; i < 6; i++) await canvas.press('+');
+
+  const zoomed = await marksFor();
+  expect(zoomed.length, 'Cyprian never came out from under the Caves').toBe(2);
+  const caves = zoomed.find((d) => d.slug !== 'cyprian-of-kyiv');
+  expect(caves.n, 'the two saints at one coordinate were split, which no zoom can honestly do').toBe(2);
 });
 
 /* ---- the search (2026-08-31) ---------------------------------------------- */
@@ -1056,7 +1109,20 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
   const everyDotNamed = async () => {
     const drawn = JSON.parse(await canvas.getAttribute('data-dots'));
     const onPicture = drawn.filter((d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height);
-    expect(onPicture.length, 'premise: the flight landed nowhere near the cluster').toBeGreaterThan(3);
+    /*
+     * **Two, where this asked for more than three until 2026-09-01.** The
+     * number fell because the picture stopped inventing positions: the five
+     * saints at Constantinople share one coordinate exactly and are now one
+     * mark carrying a count, where the ring-fan drew five. The saints did not
+     * go anywhere — `n` still adds up to all of them — and the claim this
+     * test exists for is unchanged and is checked below: nothing the picture
+     * draws goes unnamed.
+     */
+    expect(onPicture.length, 'premise: the flight landed nowhere near the cluster').toBeGreaterThan(1);
+    expect(
+      onPicture.reduce((sum, d) => sum + d.n, 0),
+      'premise: the marks on the picture stand for fewer saints than the cluster has',
+    ).toBeGreaterThan(3);
     await expect
       .poll(async () => Number(await canvas.getAttribute('data-labels')))
       .toBeGreaterThanOrEqual(onPicture.length);
@@ -1079,7 +1145,7 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
    */
   await canvas.focus();
   for (let i = 0; i < 20; i++) await canvas.press('+');
-  await expect(page.locator('[data-zoom-level]')).toHaveText('120.0×');
+  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
   await everyDotNamed();
 });
 
@@ -1329,14 +1395,20 @@ const pressAt = async (page, x, y) => {
 const dotFor = async (page, slug) =>
   JSON.parse(await page.locator('[data-map]').getAttribute('data-dots')).find((d) => d.slug === slug);
 
-test('a press centres the map on the saint, then shows their path', async ({ page }) => {
+test('a press centres the map on the saint’s whole rail, then walks it', async ({ page }) => {
   /*
    * Author, 2026-08-31: "if you click on a saint dot (or their name) it
    * first centres you smoothly on them and then shows their path of travel.
-   * Now they are 'selected'." The flight is what makes the order real — the
-   * rail is drawn by the paint that follows it, never before — so this
-   * checks both halves: the dot ends at the centre of the picture, and the
-   * path is on the picture once it does.
+   * Now they are 'selected'." — and 2026-09-01, which is what this now
+   * pins: "it centres you gently over its whole rail instead of one
+   * position ... the dot goes over the rail smoothly over 5s."
+   *
+   * **The reversal is deliberate and this test held the old claim**: that his
+   * *dot* landed within 2 px of the centre. It cannot any more, and should
+   * not — the dot is one stay on a journey, and framing a journey on one of
+   * its stays is what the instruction was about. So the claim moves up a
+   * level: the rail is what the picture is centred on, and the whole of it
+   * is on the picture once the flight lands.
    */
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const canvas = page.locator('[data-map]');
@@ -1347,30 +1419,80 @@ test('a press centres the map on the saint, then shows their path', async ({ pag
   await expect(canvas).toHaveAttribute('data-rails', '0');
 
   /*
-   * Kyiv first, then back out — because **at 1.0x one axis cannot move at
-   * all**, and which one depends on the shape of the window: the world
-   * covers its box, so a landscape window shows the whole of it across and a
-   * portrait one shows the whole of it down (`coverFractions`). Past 1.0x
-   * both axes have room, and "centred" is then a claim with no window shape
-   * in it.
+   * **Pressed from close in, where the rail does not fit**, which is what
+   * makes this a test of the framing rather than of the whole world happening
+   * to contain a small journey. Kyiv's own landing zoom shows the Caves and
+   * nothing of Hungary or Poland; the flight has to stand back to hold all
+   * three, and if it does not, the rail runs off the edge and this fails.
    */
   await searchBox(page).fill('kyiv');
   await expect(searchRows(page).first()).toContainText('Kyiv');
   await searchBox(page).press('Enter');
-  await canvas.focus();
-  for (let i = 0; i < 6; i++) await canvas.press('-');
 
   const before = await dotFor(page, 'moses-the-hungarian');
   expect(before, 'premise: his dot is not on the picture to press').toBeTruthy();
 
   await pressAt(page, before.x, before.y);
   await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
-
-  const box = await canvas.boundingBox();
-  const after = await dotFor(page, 'moses-the-hungarian');
-  expect(Math.abs(after.x - box.width / 2), 'the map did not centre on him across').toBeLessThan(2);
-  expect(Math.abs(after.y - box.height / 2), 'the map did not centre on him down').toBeLessThan(2);
   await expect(canvas).toHaveAttribute('data-rails', '1');
+
+  /*
+   * The rail's own drawn extent, published by the paint that stroked it. Not
+   * read off the ink: the rail is dashed rubric and so is every dot, so a
+   * scan of the pixels measures the dots as well — which is how an earlier
+   * version of this test passed with the framing backed out.
+   */
+  const box = await canvas.boundingBox();
+  const rail = JSON.parse(await canvas.getAttribute('data-rail'));
+
+  // The whole of it on the picture, and not merely by touching the edges.
+  expect(rail.x, 'the rail runs off the left').toBeGreaterThan(0);
+  expect(rail.y, 'the rail runs off the top').toBeGreaterThan(0);
+  expect(rail.x + rail.w, 'the rail runs off the right').toBeLessThan(box.width);
+  expect(rail.y + rail.h, 'the rail runs off the bottom').toBeLessThan(box.height);
+
+  // Framed rather than merely contained: a journey shown at the whole world
+  // is a speck, and this is the difference between the two.
+  expect(
+    Math.max(rail.w / box.width, rail.h / box.height),
+    'the rail is a speck on the picture rather than the thing it is framed on',
+  ).toBeGreaterThan(0.35);
+
+  // And centred on it, within a tenth of the picture either way.
+  expect(Math.abs(rail.x + rail.w / 2 - box.width / 2)).toBeLessThan(box.width / 10);
+  expect(Math.abs(rail.y + rail.h / 2 - box.height / 2)).toBeLessThan(box.height / 10);
+});
+
+test('the chosen saint walks their whole rail once, and then stands where the map says', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "plays through the saint's life rail differently
+   * than through the movement mechanic: the dot goes over the rail smoothly
+   * over 5s." Differently is the half worth pinning — `Movement` is off
+   * throughout, and the timeline is never touched, so nothing here is the
+   * other mechanic doing its job.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  await expect(page.locator('[data-movement]')).not.toBeChecked();
+
+  const resting = await dotFor(page, 'moses-the-hungarian');
+  await pressAt(page, resting.x, resting.y);
+  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+
+  // The walk is running, and his dot really is somewhere else while it is.
+  await expect(canvas).toHaveAttribute('data-walking', 'moses-the-hungarian');
+  const seen = new Set();
+  for (let i = 0; i < 6; i++) {
+    const at = await dotFor(page, 'moses-the-hungarian');
+    seen.add(`${Math.round(at.x / 4)},${Math.round(at.y / 4)}`);
+    await page.waitForTimeout(200);
+  }
+  expect(seen.size, 'his dot never moved, so nothing walked the rail').toBeGreaterThan(2);
+
+  // Once, not forever: it ends on its own and hands the dot back.
+  await expect(canvas).toHaveAttribute('data-walking', '', { timeout: 8000 });
+  await expect(page.locator('[data-movement]')).not.toBeChecked();
 });
 
 test('the path and the button go when the reader clicks away', async ({ page }) => {
@@ -1432,9 +1554,23 @@ test('the chosen saint is named whatever the zoom, since the button sits beside 
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
   await expect(canvas).toHaveAttribute('data-labels', '0');
 
-  const dot = await dotFor(page, 'moses-the-hungarian');
-  await pressAt(page, dot.x, dot.y);
-  await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
+  /*
+   * **A saint with no rail, chosen off the picture rather than named here.**
+   * It was Moses the Hungarian until 2026-09-01, and he stopped being able to
+   * answer this question that day: a press on a saint who carries a track now
+   * flies the map out to frame the whole of it (author: "centres you gently
+   * over its whole rail"), which changes the zoom and so takes the "whatever
+   * the zoom" out of the test. A saint with nothing to frame keeps the
+   * reader's own scale, which is the case this was always about.
+   */
+  const alone = JSON.parse(await canvas.getAttribute('data-dots')).find(
+    (d) => d.n === 1 && d.slug !== 'moses-the-hungarian',
+  );
+  expect(alone, 'premise: every mark on the resting map stands for a crowd').toBeTruthy();
+
+  await pressAt(page, alone.x, alone.y);
+  await expect(canvas).toHaveAttribute('data-selected', alone.slug);
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
   await expect(canvas).toHaveAttribute('data-labels', '1');
 
   // Escape lets go from the keyboard, which is the only way a reader who
@@ -1671,4 +1807,262 @@ test('taking hold of the timeline stops the playback', async ({ page }) => {
   const stopped = (await yearButtons(page))[1];
   await page.waitForTimeout(1200);
   expect((await yearButtons(page))[1], 'the years kept running after the reader took over').toBe(stopped);
+});
+
+/* ---- the filter panel, ranking and the chosen saint (2026-09-01) ---------- */
+
+/** Every name the last paint actually placed, by slug. */
+const namedOn = async (page) => JSON.parse(await page.locator('[data-map]').getAttribute('data-named'));
+
+const openFilters = async (page) => {
+  await page.locator('[data-filter-btn]').click();
+  await expect(page.locator('[data-filter-pop]')).toBeVisible();
+};
+
+test('the dead keep their dot and lose their name until the box is ticked', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "a tickbox for showing unborn saints and one for
+   * showing dead saints. by default they are not shown. however even with
+   * these boxes unticked, you still see a dot."
+   *
+   * That last sentence is the whole test. "Not shown" is a claim about the
+   * *name* — and about the halo, which is the other thing on this picture
+   * that asserts something rather than marking a place — and never about the
+   * dot, which the timeline has left standing since it began dimming rather
+   * than removing on 2026-08-31.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  // Somewhere crowded, so there are names on the picture to lose.
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await expect.poll(async () => (await namedOn(page)).length).toBeGreaterThan(0);
+
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+
+  // A window in which almost everyone on this picture is long dead.
+  await typeYear(page, 'from', '1900');
+  await typeYear(page, 'to', '1917');
+  await expect
+    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => d.state === 'past').length)
+    .toBeGreaterThan(0);
+
+  const after = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(after.length, 'the dead were removed from the picture rather than left as dots').toBe(before.length);
+
+  const dead = after.filter((d) => d.state === 'past').map((d) => d.slug);
+  await expect.poll(async () => (await namedOn(page)).filter((slug) => dead.includes(slug)).length).toBe(0);
+
+  // And the box gives them back.
+  await openFilters(page);
+  await expect(page.locator('[data-show="past"]')).not.toBeChecked();
+  await page.locator('[data-show="past"]').check();
+  await expect
+    .poll(async () => (await namedOn(page)).filter((slug) => dead.includes(slug)).length)
+    .toBeGreaterThan(0);
+});
+
+test('the unborn box is the same bargain, and both start unticked', async ({ page }) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+
+  await openFilters(page);
+  await expect(page.locator('[data-show="past"]')).not.toBeChecked();
+  await expect(page.locator('[data-show="future"]')).not.toBeChecked();
+  // The panel is a panel: a press outside it puts it away again.
+  await page.locator('[data-map]').click({ position: { x: 5, y: 5 } });
+  await expect(page.locator('[data-filter-pop]')).toBeHidden();
+
+  await typeYear(page, 'to', '100');
+  await expect
+    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => d.state === 'future').length)
+    .toBeGreaterThan(0);
+
+  const unborn = JSON.parse(await canvas.getAttribute('data-dots'))
+    .filter((d) => d.state === 'future')
+    .map((d) => d.slug);
+  await expect.poll(async () => (await namedOn(page)).filter((slug) => unborn.includes(slug)).length).toBe(0);
+
+  await openFilters(page);
+  await page.locator('[data-show="future"]').check();
+  await expect
+    .poll(async () => (await namedOn(page)).filter((slug) => unborn.includes(slug)).length)
+    .toBeGreaterThan(0);
+});
+
+test('a crowd prints the name the Daily page would lead with', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "favour the saints that are main saints on the daily
+   * page and the also commemorated in order when deciding which name to print
+   * over the others when zoomed out."
+   *
+   * Five saints share the Constantinople coordinate exactly, so no zoom will
+   * ever separate them and one of the five has to be the mark. Two of them —
+   * Alexander the Patriarch and Natalia of Nicomedia — have hymns recorded,
+   * which is what pickHero calls "the day's principal commemoration in that
+   * church"; the other three appear only under *Also commemorated*. The claim
+   * is that the mark is one of those two, whichever way their own tie falls,
+   * and never one of the other three.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const atTheCity = [
+    'alexander-patriarch-of-constantinople',
+    'athanasius-of-vysotsk',
+    'gennadius-patriarch-of-constantinople',
+    'natalia-of-nicomedia',
+    'niphon-patriarch-of-constantinople',
+  ];
+  const leads = ['alexander-patriarch-of-constantinople', 'natalia-of-nicomedia'];
+
+  /*
+   * At the whole world the five are inside a mark that reaches most of
+   * Anatolia, whose representative is a question about a much larger crowd.
+   * The city itself is where the instruction's own "zoomed out" lives: close
+   * enough that this mark is Constantinople and nowhere else, far enough that
+   * five saints at one coordinate still cannot be told apart — which no zoom
+   * will ever change.
+   */
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  for (let i = 0; i < 4; i++) await canvas.press('+');
+
+  const marks = JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => atTheCity.includes(d.slug));
+  expect(marks.length, 'premise: the five are not one mark here, so nothing is being chosen between').toBe(1);
+  expect(marks[0].n).toBeGreaterThanOrEqual(5);
+  expect(leads, 'the crowd printed a saint who leads no day anywhere: ' + marks[0].slug).toContain(marks[0].slug);
+});
+
+test('choosing a saint pushes every other saint back', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "when selected, the other saints become less
+   * prominent." `alpha` is what the draw pass actually used, so this reads
+   * the dimming itself rather than a proxy for it — and with nobody chosen
+   * every mark reads 1, which is what makes a broken version fail rather
+   * than pass by absence.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const atRest = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(
+    atRest.every((d) => d.alpha === 1),
+    'a saint was already dimmed before anyone was chosen',
+  ).toBe(true);
+
+  const pick = atRest.find((d) => d.n === 1 && d.slug !== 'moses-the-hungarian');
+  expect(pick, 'premise: every mark on the resting map stands for a crowd').toBeTruthy();
+  await pressAt(page, pick.x, pick.y);
+  await expect(canvas).toHaveAttribute('data-selected', pick.slug);
+
+  const chosen = JSON.parse(await canvas.getAttribute('data-dots'));
+  const me = chosen.find((d) => d.slug === pick.slug);
+  const others = chosen.filter((d) => d.slug !== pick.slug);
+  expect(others.length, 'premise: nobody else is on the picture to push back').toBeGreaterThan(0);
+  expect(me.alpha, 'the chosen saint was dimmed along with everyone else').toBe(1);
+  expect(Math.max(...others.map((d) => d.alpha)), 'the rest of the map is as loud as the chosen saint').toBeLessThan(1);
+
+  // And letting go gives the map back.
+  await canvas.press('Escape');
+  await expect(canvas).toHaveAttribute('data-selected', '');
+  await expect.poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).every((d) => d.alpha === 1)).toBe(true);
+});
+
+test('a saint moving along their rail is named while they move', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "if a saint moves along its rail, make their name
+   * print over others while its moving." Moses the Hungarian under
+   * `Movement`, with the years playing across his own life, is the one case
+   * in this corpus where a dot travels a rail without having been chosen —
+   * so this is the ranking tier itself rather than the selection's, which
+   * would name him anyway.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  // His own years, so playback reaches his journey in seconds rather than in
+  // the quarter of an hour it would take from the corpus's first century.
+  await typeYear(page, 'from', '1000');
+  await typeYear(page, 'to', '1043');
+
+  /*
+   * **Somebody who outranks him while he stands still**, or this proves
+   * nothing. Moses carries an icon and a rail, which is already enough to
+   * take the room from most of the corpus; the saints who beat that are the
+   * ones a church sings for. They are all long dead by 1000, so the dead have
+   * to be shown for any of them to be competing for a name at all — which is
+   * the filter box doing exactly what it says.
+   */
+  await openFilters(page);
+  await page.locator('[data-show="past"]').check();
+
+  /*
+   * Close enough that there are names on the picture at all — below
+   * `LABELS_AT` nothing is named, moving or otherwise — and then back out
+   * until his whole journey and one of those saints are on it together.
+   * Found rather than guessed: which zoom holds both is a fact about the
+   * corpus's own geography and about the window this test happens to run in.
+   */
+  const sung = [
+    'adrian-of-nicomedia',
+    'agathonicus-of-nicomedia',
+    'alexander-patriarch-of-constantinople',
+    'anicetas-of-nicomedia',
+    'eustathius-kataphloros-archbishop-of-thessalonica',
+    'natalia-of-nicomedia',
+    'photius-of-nicomedia',
+  ];
+  await searchBox(page).fill('kyiv');
+  await expect(searchRows(page).first()).toContainText('Kyiv');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  let contest = [];
+  for (let i = 0; i < 10; i++) {
+    contest = await namedOn(page);
+    if (contest.includes('moses-the-hungarian') && contest.some((slug) => sung.includes(slug))) break;
+    await canvas.press('-');
+  }
+  expect(
+    contest.some((slug) => sung.includes(slug)),
+    'premise: no saint who leads a day is named here, so nothing outranks a standing Moses',
+  ).toBe(true);
+  expect(contest.at(-1), 'premise: he is already the first name before he has moved').not.toBe(
+    'moses-the-hungarian',
+  );
+
+  await page.locator('[data-movement]').check();
+  await page.locator('[data-play]').click();
+
+  /*
+   * **Last, not merely present.** `data-named` is written in paint order and
+   * the paint runs worst-ranked first, so the final entry is the name drawn
+   * over every other — which is what the instruction asks for and what
+   * merely appearing in the list does not prove. He is named at this zoom
+   * whether or not he is moving, so an earlier version of this test passed
+   * with the whole tier backed out.
+   */
+  await expect
+    .poll(
+      async () => {
+        const names = await namedOn(page);
+        return names.length > 1 && names.at(-1) === 'moses-the-hungarian';
+      },
+      { timeout: 20000 },
+    )
+    .toBe(true);
+  await expect(canvas).toHaveAttribute('data-selected', '');
 });

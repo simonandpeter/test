@@ -513,6 +513,69 @@ html[data-route='map'] body {
   max-width: calc(100% - var(--space-3) * 2);
 }
 
+/* The filter button and the panel it opens (author, 2026-09-01). `relative`
+   so the panel can be positioned against the button rather than against the
+   stage — the corner is a flex column and the button's own place in it is not
+   knowable from here. */
+.map-filter {
+  position: relative;
+}
+
+.map-filter-btn {
+  padding: var(--space-1) var(--space-2);
+  color: var(--ink);
+  /* Opaque for the reason `.map-zoom` is: the ground under it is a picture,
+     and a tint would leave the label at whatever contrast the coastline
+     happened to give it. */
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  cursor: pointer;
+}
+
+.map-filter-btn[aria-expanded='true'] {
+  border-color: var(--rubric);
+}
+
+/* Upward, because this is anchored to the bottom of the stage and there is
+   nothing below it to open into — the timeline starts where the picture
+   stops. */
+.map-filter-pop {
+  position: absolute;
+  bottom: calc(100% + var(--space-1));
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: max-content;
+  max-width: 16rem;
+  padding: var(--space-2);
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}
+
+.map-filter-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.map-filter-row input {
+  /* The page's own accent rather than the browser's blue, the same choice
+     `.map-movement input` makes. */
+  accent-color: var(--rubric);
+  cursor: pointer;
+}
+
+.map-filter-note {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 .map-motion {
   display: flex;
   align-items: center;

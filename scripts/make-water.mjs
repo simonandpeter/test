@@ -19,11 +19,11 @@ const arg = (name, fallback) => {
 };
 
 const QUALITY = arg('quality', '50m');
-// Same rounding as make-land.mjs, and for the same reason: a tenth of a
-// degree is ~11 km, finer than the map can draw, and matching it here keeps
-// coastline and water reading as one consistent level of detail rather than
-// water looking crisper than the land it sits on.
-const PRECISION = Number(arg('precision', 1));
+// Same rounding as make-land.mjs, raised the same way and on the same day
+// (2026-09-01, a hundredth of a degree, ~1.1 km) so coastline and water keep
+// reading as one consistent level of detail rather than water looking
+// crisper — or coarser — than the land it sits on.
+const PRECISION = Number(arg('precision', 2));
 
 const BASE = `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson`;
 
@@ -114,7 +114,7 @@ const body = `/**
  * Natural Earth ${QUALITY} lakes and rivers, public domain, fetched from its own
  * GitHub mirror (no npm package carries this the way \`world-atlas\` carries
  * land). Coordinates are rounded to ${PRECISION} decimal place${PRECISION === 1 ? '' : 's'}
- * (~11 km), the same as \`land.js\`, and flattened to [lon, lat, lon, lat, …]
+ * (~${(111.32 * 10 ** -PRECISION).toFixed(1)} km), the same as \`land.js\`, and flattened to [lon, lat, lon, lat, …]
  * per ring or line.
  *
  * \`LAKES\` are closed rings, filled the way land is. \`RIVERS\` are open paths,
