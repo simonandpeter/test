@@ -513,6 +513,23 @@ export function paintCarousel() {
       });
     };
     window.addEventListener('resize', onResize, { passive: true });
+    /*
+     * **And once more when the face arrives** (2026-09-01 evening, after CI).
+     *
+     * The packing is arithmetic over a caption's height, and a caption set in
+     * the fallback face is not the height it will be in Literata. On a warm
+     * cache the font is there before the first paint and this never fires
+     * usefully; on a cold or loaded one the row is packed against the fallback,
+     * the real face lands a moment later, every caption grows, and the columns
+     * overflow the room they were packed for — which put fifteen pixels of
+     * scroll on a page whose whole content is a row that fits, on the runner
+     * and nowhere else.
+     *
+     * `fonts.ready` resolves once and is already settled by the time this runs
+     * in the common case, so the cost is one microtask and one no-op repaint —
+     * `paintCarousel` returns early when the packing has not changed.
+     */
+    document.fonts?.ready?.then(onResize);
     state.carouselResize = () => {
       if (frame) cancelAnimationFrame(frame);
       window.removeEventListener('resize', onResize);
