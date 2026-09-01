@@ -135,7 +135,7 @@ function paintModeLabel(word) {
  * icon is — which is why `ui/loop-scroll` measures real offsets instead of
  * multiplying out a stride.
  */
-function carouselCard(item, router) {
+function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
   // The picture is shown whole (author, 2026-08-27: "dont crop the images, but
   // fix their width to what they currently are"). The column stays 150 px so
   // the row keeps its rhythm; the height is whatever that width makes it, and
@@ -150,8 +150,20 @@ function carouselCard(item, router) {
   // reflows either way. `loading="lazy"` is gone with them: the source is not
   // in the document until we put it there, which is a stricter promise than
   // the browser's own.
+  /*
+   * **The ceiling is the packer's own budget, written onto the card**
+   * (2026-09-01). It used to be four rules in index.css keyed on the column's
+   * depth, each handing every picture in the column an equal share of the room
+   * — which is only right when the pictures are the same height. A 250 px icon
+   * sharing a column with an 80 px one was cut to 190 to make the shares equal,
+   * and the 60 px it gave up became a hole: the packer had already proved both
+   * fitted. This is the number the packer used when it decided to put this card
+   * in this column, so what is drawn is what was budgeted, and the depth cap
+   * needs no rule per depth now that columns go twelve deep.
+   */
+  const cap = item.image ? Math.round(pictureHeight(item, cardWidth, space || Infinity)) : 0;
   const media = item.image
-    ? `<span class="cx-media">
+    ? `<span class="cx-media"${space ? ` style="--cx-cap:${cap}px"` : ''}>
         <img data-src="${BASE + item.image.src}" alt=""
           width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
@@ -271,34 +283,80 @@ function resolveCardWidth(carouselEl) {
 /**
  * A caption's own height: the name, the subtext line and the gaps around them.
  *
- * Generous on purpose. A one-line name is nearer 46, but names wrap to two at
- * this column width often enough that packing to the shorter figure overflowed
- * the window and cut the last caption off. Over-estimating leaves a column
- * slightly short of the fold; under-estimating puts it past it, and only one of
- * those is visible to a reader.
+ * Generous on purpose. A one-line name is nearer 46, but names wrap at this
+ * column width often enough that packing to the shorter figure overflowed the
+ * window and cut the last caption off. Over-estimating leaves a column slightly
+ * short of the fold; under-estimating puts it past it, and only one of those is
+ * visible to a reader. Since 2026-09-01 the slack an over-estimate leaves is
+ * handed to the column's gaps rather than left as a hole at its foot
+ * (`align-content: space-between`, index.css), so being generous costs an airier
+ * column instead of a short one — which is what makes the number below safe to
+ * choose against the *worst* caption rather than the common one.
+ *
+ * **It is two numbers, because the wrap is a function of the column's width.**
+ * A flat 64 was measured at a desk, where a 300 px column holds nearly every
+ * name on one line (46 typical, 59 at the worst). A phone's 150 px column wraps
+ * the same names to two and three lines — 94 at the worst — so the same 64
+ * under-budgeted the one surface with no room to spare, and the deepest column
+ * on a phone ran past the fold.
  */
-const CAPTION_H = 64;
+const captionH = (cardWidth) => (cardWidth <= 200 ? 72 : 64);
 
 /** The gap between two cards stacked in one cell (`--space-3`). */
 const CELL_GAP = 12;
 
 /**
- * How deep a column may go. Without a cap, text-only saints — 46 px each —
- * would pack fifteen deep in a tall window and the row would read as a list
- * turned sideways rather than a carousel.
+ * How deep a column may go.
+ *
+ * **Raised from four to twelve on 2026-09-01** (author: "just fill in the gaps
+ * ... and just make it a fully filled horizontally scrolling stack"). Four was
+ * there to stop text-only saints packing fifteen deep and reading as a list
+ * turned sideways — but four caption-tall cards are 268 px in a 520 px column,
+ * which is the gap the author is looking at. The depth a column reaches is the
+ * room divided by what it is filled with, and twelve is the room, not a taste:
+ * a 520 px column of nothing but captions is eight deep, and the cap only ever
+ * bites on a window taller than any real one.
  */
-const STACK_MAX = 4;
+const STACK_MAX = 12;
+
+/**
+ * How far past the next saint the packer may reach for one that fits.
+ *
+ * **The gap-filler** (2026-09-01). Packing strictly in order closes a column
+ * the moment the next saint is too tall for what is left, which is where the
+ * holes came from: a column with 180 px spare and a portrait icon next in line
+ * ended 180 px short even though four captions would have filled it. Reaching
+ * forward for a saint who fits closes that hole without showing anyone twice.
+ *
+ * Bounded, because the pool is in the reader's own order — Random by default,
+ * but Alphabetical is an order a reader can *see*, and pulling a saint from
+ * position 700 into the first column would be visible as disorder. Forty-eight
+ * is roughly two windows of columns: near enough that the run still reads as
+ * the order it was given.
+ */
+const LOOKAHEAD = 48;
 
 /**
  * What a card will stand, before anything is rendered.
  *
  * The picture is shown whole at `--cx-w`, so its height is the width over its
  * own aspect; a saint with no picture is a caption and nothing else.
+ *
+ * **Bounded by the room** (2026-09-01): a 555x1707 scan is 923 px at a 300 px
+ * column, which is taller than any window the row is drawn in, and the picture
+ * is scaled to fit when it is drawn. Budgeting the unscaled height made the
+ * packer believe a column was full when it held one card and a third of a
+ * window of air — the largest gap on the page, from the tallest saint.
  */
-function cardHeight(item, cardWidth) {
-  if (!item.image) return CAPTION_H;
+function cardHeight(item, cardWidth, space = Infinity) {
+  if (!item.image) return captionH(cardWidth);
+  return pictureHeight(item, cardWidth, space) + captionH(cardWidth);
+}
+
+/** The height that picture will actually be drawn at, in this much room. */
+function pictureHeight(item, cardWidth, space = Infinity) {
   const aspect = item.image.aspect || 1;
-  return cardWidth / aspect + CAPTION_H;
+  return Math.min(cardWidth / aspect, Math.max(0, space - captionH(cardWidth)));
 }
 
 /**
@@ -323,25 +381,63 @@ function cardHeight(item, cardWidth) {
  * not, and the reason is worth keeping: a period starting mid-column packs
  * differently from one starting at a column edge, which is a drift the wrap
  * cannot correct.
+ *
+ * **And every column is filled, not merely started** (author, 2026-09-01:
+ * "You've pretty much arranged them in a horizontal grid of columns with
+ * randomised occupation. Just fill in the gaps in the same mix of randomised
+ * imageless and imaged saint cards and just make it a fully filled horizontally
+ * scrolling stack").
+ *
+ * The packer was strictly in order, so a column ended wherever the next saint
+ * happened not to fit — and since 83% of the corpus is imageless and a caption
+ * is 64 px, most of those holes were three or four cards' worth of room with a
+ * portrait icon standing in front of them. It reaches forward now for a saint
+ * who *does* fit (`LOOKAHEAD`), and only closes the column when nothing within
+ * reach will go in it. What comes out is the same mix in nearly the same order,
+ * with the air taken out.
+ *
+ * **Still each saint exactly once.** The reach marks its pick as taken and the
+ * cursor walks past what has been taken, so the run is a permutation of the
+ * pool rather than a resampling of it — which is the promise the author made
+ * the packer keep on 2026-08-28 ("only display 1 instance of each saint").
  */
 export function carouselCells(pool, { space = 0, cardWidth = 150 } = {}) {
   if (!space) return pool.map((item) => [item]);
   const cells = [];
-  let column = [];
-  let used = 0;
-  for (const item of pool) {
-    const h = cardHeight(item, cardWidth);
-    const next = column.length ? used + CELL_GAP + h : h;
-    if (column.length && (next > space || column.length >= STACK_MAX)) {
-      cells.push(column);
-      column = [item];
-      used = h;
+  const taken = new Array(pool.length).fill(false);
+  const heightOf = (item) => cardHeight(item, cardWidth, space);
+  let cursor = 0;
+  while (cursor < pool.length) {
+    if (taken[cursor]) {
+      cursor += 1;
       continue;
     }
-    column.push(item);
-    used = next;
+    const column = [pool[cursor]];
+    taken[cursor] = true;
+    let used = heightOf(pool[cursor]);
+    while (column.length < STACK_MAX) {
+      // What is left under the last card, once the gap above it is paid for.
+      const room = space - used - CELL_GAP;
+      // Nothing is shorter than a caption, so there is no point looking.
+      if (room < captionH(cardWidth)) break;
+      let pick = -1;
+      let seen = 0;
+      for (let i = cursor + 1; i < pool.length && seen < LOOKAHEAD; i += 1) {
+        if (taken[i]) continue;
+        seen += 1;
+        if (heightOf(pool[i]) <= room) {
+          pick = i;
+          break;
+        }
+      }
+      if (pick < 0) break;
+      taken[pick] = true;
+      column.push(pool[pick]);
+      used += CELL_GAP + heightOf(pool[pick]);
+    }
+    cells.push(column);
+    cursor += 1;
   }
-  if (column.length) cells.push(column);
   return cells;
 }
 
@@ -482,22 +578,34 @@ export function paintCarousel() {
       // The key is set by the rebuild, so clearing it here is what lets the
       // deferred call past the early return above.
       state.carouselKey = null;
-      buildCarousel(key, run, cardWidth);
+      buildCarousel(key, run, cardWidth, space);
     }, CX_FADE);
     state.cleanups.push(() => clearTimeout(state.carouselFade));
     return;
   }
-  buildCarousel(key, run, cardWidth);
+  buildCarousel(key, run, cardWidth, space);
 }
 
 /** How long the row takes to go before the new one is built. */
 const CX_FADE = 150;
 
 /** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
-function buildCarousel(key, run, cardWidth) {
+function buildCarousel(key, run, cardWidth, space) {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
   if (!track) return;
+  /*
+   * **The number the columns were packed against, told to the stylesheet**
+   * (2026-09-01). `--cx-space` is the room from the top of the track to the
+   * bottom of the window; what the packer works to is that less the track's own
+   * padding and rounded to 40 px (see `space` above, and why the rounding is
+   * there). Giving the cells a floor of `--cx-space` was giving them a floor
+   * two dozen pixels taller than anything had been packed for, and a column
+   * holding one saint — which has no gaps to hand the difference to — stood
+   * that much short of its own foot. This is the same number, so there is
+   * nothing left to be short by.
+   */
+  el.querySelector('.carousel')?.style.setProperty('--cx-fill', `${space}px`);
   // A different set of saints is a different row, and the remembered offset
   // belonged to the old one.
   if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;
@@ -519,31 +627,27 @@ function buildCarousel(key, run, cardWidth) {
   }
 
   /*
-   * The cells are dealt a vertical resting place from their own position in
-   * the run rather than all standing on the row's floor ("arrange them a bit
-   * more spread out vertically, not all lined up at the bottom"). Three
-   * positions on a repeating cycle, which reads as arrangement rather than as
-   * noise, and — because it is a function of the index — a card is in the same
-   * place every time the row comes round to it. The alignment is inside the
-   * track's own height, so it costs no room and holds at every screen size.
-   */
-  const lift = ['is-low', 'is-high', 'is-mid'];
-  /*
-   * **Keyed to the run, not to the rendered strip.** `loopSlice` puts `buffer`
-   * copies either side, and a card whose clone sat at a different height from
-   * itself would visibly jump every time the row came round — which is the one
-   * thing the wrap exists to make invisible. This is the same index the clone
-   * was copied from, so a saint has one resting place wherever they appear.
+   * **The columns stand on one line** (author, 2026-09-01: "just make it a
+   * fully filled horizontally scrolling stack").
+   *
+   * They used to be dealt one of three resting places — low, high, mid — from
+   * their position in the run, which was the answer to "arrange them a bit more
+   * spread out vertically, not all lined up at the bottom" (2026-08-28) at a
+   * time when a column held one or two cards and had a great deal of slack to
+   * be arranged inside. The packer fills the column now, so there is no slack
+   * left to lift them through: what the scatter produced was the gaps the
+   * author is asking to have closed. Flush top and bottom is what a filled
+   * stack looks like.
    */
   const n = run.length;
   const paint = (buffer) => {
     track.innerHTML = loopSlice(run, buffer)
-      .map((cell, i) => {
-        const atRun = (((i - buffer) % n) + n) % n;
-        // `data-n` is the column's depth, and index.css caps each picture by it
-        // so the column cannot exceed the window whatever the packer estimated.
-        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''} ${lift[atRun % lift.length]}" data-n="${cell.length}">${cell
-          .map((item) => carouselCard(item, router))
+      .map((cell) => {
+        // `data-n` is the column's depth. Nothing in the stylesheet is keyed on
+        // it any more — each picture carries its own ceiling — but it is what a
+        // test reads to see how deep the packer went, and it costs one word.
+        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''}" data-n="${cell.length}">${cell
+          .map((item) => carouselCard(item, router, { cardWidth, space }))
           .join('')}</span>`;
       })
       .join('');

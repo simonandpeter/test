@@ -33,6 +33,11 @@ import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { currentLanguage, formatDate } from '../lib/i18n.js';
+/* The Index's own row, and the Index's own memory of what it had matched —
+   both borrowed rather than copied, because the column beside the life is
+   meant to be that list rather than to resemble it (see `sideColumn`). */
+import { card as indexCard } from './index/grid.js';
+import { lastSearch } from './index/place.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -87,8 +92,17 @@ export function render(el, { data, params, router, cameFrom }) {
   const backLabel =
     cameFrom?.nav === 'calendar' ? STRINGS.saint.backDaily : cameFrom?.nav === 'map' ? STRINGS.saint.backMap : STRINGS.saint.back;
 
-  el.innerHTML = shell(card, backLabel);
-  const cleanups = [wireSaveButtons(el), wireReading(el, slug), observePrefetch(el), wireBack(el, router, backTo)];
+  el.innerHTML = `<div class="saint-cols">
+      <div class="saint-col-main">${shell(card, backLabel)}</div>
+      ${sideColumn(data, router, slug)}
+    </div>`;
+  const cleanups = [
+    wireSaveButtons(el),
+    wireReading(el, slug),
+    observePrefetch(el),
+    wireBack(el, router, backTo),
+    wireSide(el, { data, router, current: slug }),
+  ];
   // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
   live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
@@ -268,6 +282,196 @@ function shell(card, backLabel) {
       </div>
     </div>
   </article>`;
+}
+
+/* ---- the column beside the life (2026-09-01) ---------------------------- */
+
+/**
+ * Whether the column is folded away, for the rest of this visit.
+ *
+ * Module scope rather than the settings store, and the line is where the
+ * author drew it: the register's Cards/List choice was asked to be remembered
+ * ("site remembers what you left it as") and this one was not — it is a
+ * minimise, which is a thing you do to the page in front of you. So it holds
+ * across the saints opened in one visit, which is the span over which folding
+ * it once and having it come back on the next name would be the annoyance, and
+ * a reload opens it again.
+ */
+let sideFolded = false;
+
+/**
+ * The saints the reader had in front of them when they opened this one.
+ *
+ * `lastSearch()` is the Index's own snapshot (views/index/place.js) and holds
+ * the slugs it had matched, in the order it had them — so this column is not a
+ * second search that happens to agree with the first, it is the first one's
+ * result. A reader who arrived by another road — a deep link, the map, the
+ * Daily page — has no snapshot, and gets the corpus in its own order rather
+ * than an empty column claiming they searched for nothing.
+ */
+function searchResults(data) {
+  const snap = lastSearch();
+  const slugs = snap?.shown;
+  if (!slugs?.length) return data.saints;
+  const cards = slugs.map((slug) => data.bySlug.get(slug)).filter(Boolean);
+  return cards.length ? cards : data.saints;
+}
+
+/**
+ * The right column: what the reader searched, as rows, with the saint they are
+ * reading marked in it.
+ *
+ * Author, 2026-09-01: "for where the right column would be on Daily Page,
+ * provide a row view scroll of the advanced search results in All Saints where
+ * you just came from ... Add an option to minimise the search at the very top
+ * of this right column."
+ *
+ * **The rows are the Index's own**, from `card(item, router, { rows: true })`,
+ * rather than a shape that resembles them: the instruction says "the row view",
+ * and a copy would drift from it the first time either changed. The wrapper is
+ * a list item here instead of the virtualiser's absolutely positioned div, and
+ * saint.css puts it back into flow — that is the whole of the difference.
+ *
+ * Not virtualised, and that is a decision rather than an omission. The Index's
+ * grid is virtualised because it lays 862 cards against a scroll position that
+ * moves; this list is built once when the page opens and scrolls inside its own
+ * box. 862 list items is a few hundred kilobytes of DOM built once, against the
+ * complexity of a second virtualiser wired to a different scroll container.
+ */
+function sideColumn(data, router, current) {
+  const results = searchResults(data);
+  return `<aside class="saint-side${sideFolded ? ' is-folded' : ''}" data-saint-side
+      aria-label="${esc(STRINGS.saint.fromSearch)}">
+    <div class="side-head">
+      <h2 class="register-heading">${esc(STRINGS.saint.fromSearch)}</h2>
+      <button type="button" class="side-fold" data-side-fold aria-expanded="${!sideFolded}">${
+        esc(sideFolded ? STRINGS.saint.expand : STRINGS.saint.minimise)
+      }</button>
+    </div>
+    <div class="side-body" data-side-body${sideFolded ? ' hidden' : ''}>
+      <input class="search-field" type="search" data-side-query
+        aria-label="${esc(STRINGS.saint.sideSearch)}"
+        placeholder="${esc(STRINGS.saint.sideSearch)}" />
+      <p class="side-count utility" data-side-count>${esc(countLine(results.length))}</p>
+      <!-- Filled by wireSide, a chunk at a time: the count above is the whole
+           set, the list below is as much of it as has been scrolled to. -->
+      <ul class="side-results" data-side-results></ul>
+    </div>
+  </aside>`;
+}
+
+const countLine = (n) =>
+  n === 1 ? STRINGS.saint.sideCountOne : fill(STRINGS.saint.sideCount, { n: String(n) });
+
+/**
+ * Whether a saint answers to what was typed.
+ *
+ * The name as the row prints it, and every form the manifest records — so a
+ * reader shown "Venerable Moses the Hungarian" can type either that or
+ * «Моисей», exactly as the Index's own field allows. The office and the types
+ * are deliberately not searched here: this is a sieve over a list the reader
+ * can see, and matching on a word that is not on the row would look like a bug.
+ */
+function matches(item, needle) {
+  if (saintName(item).toLowerCase().includes(needle)) return true;
+  return Object.values(item.names ?? {}).some((n) => String(n).toLowerCase().includes(needle));
+}
+
+function sideRow(item, router, current) {
+  return `<li class="index-card panel is-row${item.slug === current ? ' is-here' : ''}"
+      data-slug="${esc(item.slug)}"${item.slug === current ? ' aria-current="page"' : ''}
+      >${indexCard(item, router, { rows: true })}</li>`;
+}
+
+/**
+ * How many rows are put in the document at a time.
+ *
+ * **The list is paged rather than rendered whole** (2026-09-01). It was all 862
+ * at once, which the page itself carried without complaint — `content-visibility`
+ * keeps the ones outside the scroller from being laid out — but the DOM is still
+ * 862 subtrees, and everything that *walks* the document pays for them: the
+ * accessibility audit on this page went from three seconds to twenty-three, near
+ * enough its own timeout to start failing under a loaded machine.
+ *
+ * Sixty is about three screens of rows, so the next chunk is fetched long before
+ * the reader can reach the end of the one they are in, and the count above the
+ * list is the whole set either way — nothing here is hidden from the reader, it
+ * is only late.
+ */
+const SIDE_CHUNK = 60;
+
+/**
+ * The column's two controls: the fold, and the field that narrows the list.
+ *
+ * **The field narrows what is already there; it does not search the corpus
+ * again.** The heading says "Your search", and a field that could add saints
+ * the reader had filtered out would make that heading false. It is a plain
+ * substring match over the names the row prints and the forms the manifest
+ * records, which is the honest description of a filter over a list — and
+ * deliberately not the Index's own MiniSearch, whose prefix and fuzzy matching
+ * belong to a search over the corpus rather than to a sieve over a dozen rows.
+ *
+ * **It filters the set, not the rendered rows**, which is what the paging above
+ * makes necessary: hiding list items would have searched only as far as the
+ * reader had scrolled, and a search that answers differently depending on where
+ * you were is worse than no search.
+ */
+function wireSide(el, { data, router, current }) {
+  const side = el.querySelector('[data-saint-side]');
+  if (!side) return null;
+  const body = side.querySelector('[data-side-body]');
+  const fold = side.querySelector('[data-side-fold]');
+  const query = side.querySelector('[data-side-query]');
+  const list = side.querySelector('[data-side-results]');
+  const count = side.querySelector('[data-side-count]');
+
+  const all = searchResults(data);
+  let shown = all;
+  let drawn = 0;
+
+  const draw = (upTo) => {
+    if (drawn >= shown.length) return;
+    const next = Math.min(shown.length, upTo);
+    const html = shown.slice(drawn, next).map((item) => sideRow(item, router, current)).join('');
+    list.insertAdjacentHTML('beforeend', html);
+    drawn = next;
+  };
+
+  const restart = () => {
+    list.innerHTML = '';
+    drawn = 0;
+    draw(SIDE_CHUNK);
+    count.textContent = shown.length ? countLine(shown.length) : STRINGS.saint.sideNone;
+  };
+  restart();
+
+  // Two chunks ahead of the foot, so the next arrives before it is reached.
+  const onScroll = () => {
+    if (list.scrollTop + list.clientHeight > list.scrollHeight - 600) draw(drawn + SIDE_CHUNK);
+  };
+  list.addEventListener('scroll', onScroll, { passive: true });
+
+  const onFold = () => {
+    sideFolded = !sideFolded;
+    side.classList.toggle('is-folded', sideFolded);
+    body.hidden = sideFolded;
+    fold.setAttribute('aria-expanded', String(!sideFolded));
+    fold.textContent = sideFolded ? STRINGS.saint.expand : STRINGS.saint.minimise;
+  };
+  fold.addEventListener('click', onFold);
+
+  const onQuery = () => {
+    const needle = query.value.trim().toLowerCase();
+    shown = needle ? all.filter((item) => matches(item, needle)) : all;
+    restart();
+  };
+  query.addEventListener('input', onQuery);
+
+  return () => {
+    fold.removeEventListener('click', onFold);
+    query.removeEventListener('input', onQuery);
+    list.removeEventListener('scroll', onScroll);
+  };
 }
 
 /**

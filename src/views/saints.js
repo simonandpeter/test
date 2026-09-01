@@ -34,7 +34,7 @@ import {
   wireControls,
 } from './index/controls.js';
 import { loadSearch, monthsBySlugFor } from './index/search.js';
-import { applySnapshot, snapshot } from './index/place.js';
+import { applySnapshot, keep, snapshot } from './index/place.js';
 import { matching } from './index/filter.js';
 import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
@@ -58,7 +58,9 @@ let remembered = null;
 
 
 export function destroy() {
-  if (state) remembered = snapshot(state);
+  // `keep` is what makes this readable from the saint page, which shows the
+  // same set beside the life (views/index/place.js).
+  if (state) remembered = keep(snapshot(state));
   state?.cleanups.forEach((fn) => fn?.());
   closeState();
 }

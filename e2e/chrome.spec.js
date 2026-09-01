@@ -1115,7 +1115,16 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
       expect(seen.rows, where).toBe(1);
       expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
       expect(seen.overhang, where).toBeLessThan(1);
-      expect(seen.doc, where).toBe(0);
+      /*
+       * Not `toBe(0)` since 2026-09-01. Past 1024 px the root holds the
+       * scrollbar's room open on every route (`scrollbar-gutter: stable`,
+       * base.css) so the header is laid out in the same box whether the page
+       * under it scrolls or not — which leaves the content legitimately a
+       * gutter's width *narrower* than the client box. What this line is for is
+       * the other sign: anything above zero is the page running off the side,
+       * and that is still caught exactly as it was.
+       */
+      expect(seen.doc, where).toBeLessThanOrEqual(0);
     }
     await ctx.close();
   }
@@ -2458,4 +2467,67 @@ test('a file that is not an export changes nothing and says so', async ({ page }
     buffer: Buffer.from('{"schema":99}'),
   });
   await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
+});
+
+test('the four routes lay the header out in one box, scrollbar or no scrollbar', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "The header on Daily and Map page are different widths
+   * from the All Saints and About page, make sure they are the same."
+   *
+   * Nothing in the stylesheet made them different — the header takes one
+   * measure on every route (`--page-max`, base.css) and this suite has pinned
+   * that since the masthead doubled. What made them different was the window.
+   * Daily and Map hold the page still (`html { overflow: hidden }`, one so the
+   * columns can scroll themselves and one so the canvas can fill the glass), so
+   * neither draws a classic scrollbar while All Saints and About do — 15 px of
+   * window on Windows and Linux, and the masthead sitting 7 px further left on
+   * half the site than on the other half.
+   *
+   * **The geometry half of this test cannot see that**, and saying so is the
+   * point of this paragraph: the browser these tests run in has overlay
+   * scrollbars, where the four routes measure the same either way. So the fix
+   * is pinned where it can be seen — the declaration that reserves the room —
+   * and the geometry is pinned beside it because it is the thing that would
+   * break if a route ever took its own measure again.
+   */
+  const routes = ['/calendar/2026-08-25', '/saints', '/about', '/map'];
+  const seen = [];
+  await page.setViewportSize({ width: 1280, height: 900 });
+  for (const route of routes) {
+    await page.goto(route, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    seen.push(
+      await page.evaluate(() => {
+        const r = (s) => {
+          const b = document.querySelector(s).getBoundingClientRect();
+          return [Math.round(b.left), Math.round(b.right)];
+        };
+        return {
+          gutter: getComputedStyle(document.documentElement).scrollbarGutter,
+          header: r('header.chrome'),
+          mark: r('header.chrome .site-name'),
+          corner: r('header.chrome .chrome-corner'),
+        };
+      }),
+    );
+  }
+
+  for (const [i, route] of routes.entries()) {
+    expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
+    expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
+    expect(seen[i].mark, `${route} puts the mark somewhere else`).toEqual(seen[0].mark);
+    expect(seen[i].corner, `${route} puts the controls somewhere else`).toEqual(seen[0].corner);
+  }
+
+  /*
+   * And not on a phone, which the author scoped out ("make sure 5 6 7 are on
+   * desktop only") and which has nothing to hold room for: a 7 px gutter out of
+   * 360 is a real cost against a scrollbar that is drawn over the page rather
+   * than beside it.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await expect
+    .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollbarGutter))
+    .toBe('auto');
 });

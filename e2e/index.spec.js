@@ -1563,6 +1563,19 @@ test('every row starts its name at the card margin, picture or no picture', asyn
   await ready(page, { church: 'greek' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  /*
+   * **The list face, asked for by its own control** (2026-09-01). *Also
+   * commemorated* opens as a grid of cards now, and everything below is about
+   * the other face: a card has no held slot to keep and no shared left edge to
+   * start its name at, because it is a column rather than a row. So the test
+   * presses the toggle instead of assuming which face is showing — which is
+   * also a small assertion that the toggle does what it says.
+   */
+  const asList = page.locator('[data-reg-view="list"]');
+  if (await asList.isVisible()) {
+    await asList.click();
+    await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
+  }
   const seen = await page.evaluate(() => {
     const withPicture = document.querySelector('.reg-card:has(.reg-thumb img)');
     const without = document.querySelector('.reg-card:not(:has(.reg-thumb img))');
@@ -2073,17 +2086,31 @@ test('a card is only as tall as its name needs, like a row', async ({ page }) =>
     if (!byLines.has(r.lines)) byLines.set(r.lines, []);
     byLines.get(r.lines).push(r);
   }
-  // The premise: the screenful holds both shapes, or there is nothing to
-  // compare and a fixed box would satisfy this as happily as a collapsing one.
-  expect([...byLines.keys()].sort(), 'the window should hold one- and two-line names').toEqual([1, 2]);
+  /*
+   * The premise: the screenful holds names of more than one length, or there is
+   * nothing to compare and a fixed box would satisfy this as happily as a
+   * collapsing one.
+   *
+   * **Two *or more*, since 2026-09-01**, where this used to require exactly one-
+   * and two-line names. The card's clamp was lifted that day (author: "display
+   * the full name and don't do any '...' at the end"), so a screenful now holds
+   * three- and four-line names as well and `toEqual([1, 2])` began failing on
+   * the deals that included one — a change in what the page may do, not in
+   * whether it collapses. What is claimed is unchanged and is now claimed of
+   * every length present rather than of two of them.
+   */
+  const lengths = [...byLines.keys()].sort((a, b) => a - b);
+  expect(lengths.length, 'the window should hold names of more than one length').toBeGreaterThan(1);
 
   const mean = (rs) => rs.reduce((a, r) => a + r.residual, 0) / rs.length;
-  const one = mean(byLines.get(1));
-  const two = mean(byLines.get(2));
-  expect(
-    Math.abs(one - two),
-    `a one-line card reserves ${one.toFixed(1)} px beyond its name and a two-line one ${two.toFixed(1)}`,
-  ).toBeLessThan(4);
+  const residualOf = new Map(lengths.map((n) => [n, mean(byLines.get(n))]));
+  const first = residualOf.get(lengths[0]);
+  for (const n of lengths) {
+    expect(
+      Math.abs(residualOf.get(n) - first),
+      `a ${lengths[0]}-line card reserves ${first.toFixed(1)} px beyond its name and a ${n}-line one ${residualOf.get(n).toFixed(1)}`,
+    ).toBeLessThan(4);
+  }
 
   const card = await page.locator('.index-card').first().evaluate((el) => {
     const s = getComputedStyle(el);
@@ -4083,7 +4110,12 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
      carry no picture and so no media box — go deepest. */
   expect(row.stacked, 'nothing was stacked on a phone').toBeGreaterThan(2);
   expect(row.pairs, 'pairs are a subset of stacks now, not the whole of them').toBeLessThanOrEqual(row.stacked);
-  expect(row.tops, 'every cell stands on the same line').toBeGreaterThan(1);
+  /* **And they stand on one line** (author, 2026-09-01: "just make it a fully
+     filled horizontally scrolling stack"). This asserted the opposite until
+     then — three dealt resting places, from "not all lined up at the bottom"
+     (2026-08-28) — and the assertion is inverted rather than deleted because
+     the scatter is exactly what the author is now asking to have closed up. */
+  expect(row.tops, 'the columns are still scattered vertically').toBe(1);
   expect(row.escapes, 'a cell hangs out of the row').toBe(0);
   expect(row.touch).toContain('pan-y');
 
@@ -4197,12 +4229,78 @@ test('Shuffle deals a new hand and writes the new seed', async ({ page }) => {
   expect(new URL(page.url()).search).not.toBe('?seed=e2e-before-shuffle');
 });
 
-test('the shuffle is a carousel control, and the search face does not offer it', async ({ page }) => {
-  // The search face already owns chance - the sort control and the die - and a
-  // second control writing the same state is two controls disagreeing.
+test('the shuffle stands on both faces, and deals the filtered set again without changing it', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "add also in Advanced search mode, keep the shuffle
+   * button from Carousel mode and make it so it shuffles the current filtered
+   * search, changing only the order type but keeping the other filters
+   * unchanged."
+   *
+   * **This reverses the test it replaces**, which pinned the button as hidden
+   * on the search face on the reasoning that the sort control there already
+   * owns chance and a second control writing the same state would be two
+   * controls disagreeing. The second worry is answered rather than ignored —
+   * the press writes Random into the sort control, so they agree — and the
+   * first missed that Random is usually already selected, where re-selecting it
+   * deals no new hand at all.
+   *
+   * What has to hold is the "unchanged" half: same filters, same matched set,
+   * a different order. So the query is narrowed first and the *set* is compared
+   * before and after, not just the order.
+   */
+  await searchMode(page);
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-shuffle]')).toBeHidden();
+  const shuffle = page.locator('[data-shuffle]');
+  await expect(shuffle).toBeVisible();
+
+  // Narrowed, so that "keeping the other filters unchanged" has something to be
+  // true of. Two facets, because one could survive by accident.
+  await page.locator('[data-query]').fill('Nicomedia');
+  await facet(page, 'sexes', 'male');
+  await expect.poll(() => page.locator('.index-card').count()).toBeGreaterThan(4);
+
+  /*
+   * **How many matched is read off the page's own summary, not off the DOM.**
+   * The grid is virtualised, so `.index-card` is the window of cards near the
+   * viewport and its size moves with the cards' heights — a reshuffle changes
+   * which saints are at the top and therefore how many of them are mounted.
+   * Counting nodes would have this test reporting that the shuffle changed the
+   * matched set when all it changed was the order, which is precisely the claim
+   * under examination. `[data-set-aside]` is the page saying "29 of 862".
+   */
+  const state = async () => {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    return page.evaluate(() => ({
+      // In screen order, not DOM order: the grid is virtualised and absolutely
+      // positioned, so DOM order says nothing (CLAUDE.md's first trap).
+      order: [...document.querySelectorAll('.index-card')]
+        .map((c) => ({ y: c.getBoundingClientRect().top, x: c.getBoundingClientRect().left, slug: c.querySelector('[data-prefetch]')?.dataset.prefetch }))
+        .sort((a, b) => a.y - b.y || a.x - b.x)
+        .map((c) => c.slug)
+        .slice(0, 8),
+      query: document.querySelector('[data-query]').value,
+      male: document.querySelector('input[name="sexes"][value="male"]').checked,
+      summary: document.querySelector('[data-set-aside]')?.textContent?.trim() ?? '',
+    }));
+  };
+
+  const before = await state();
+  await shuffle.click();
+  await expect.poll(async () => (await state()).order.join(','), { timeout: 5000 }).not.toBe(before.order.join(','));
+  const after = await state();
+
+  // Only the order moved.
+  expect(after.query, 'the shuffle cleared the search').toBe(before.query);
+  expect(after.male, 'the shuffle cleared a facet').toBe(before.male);
+  expect(after.summary, 'the shuffle changed how many matched').toBe(before.summary);
+
+  // And the sort control says so, rather than being changed behind its back.
+  await expect(page.locator('input[name="sort"][value="random"]')).toBeChecked();
+
+  // Still on the carousel face too, which is where it came from.
+  await page.locator('[data-mode-toggle]').click();
+  await expect(page.locator('[data-shuffle]')).toBeVisible();
 });
 
 test('arrow keys step the focused row', async ({ page }) => {
@@ -4266,4 +4364,194 @@ test('arrow keys step the focused row', async ({ page }) => {
 
   expect(await step('ArrowRight'), 'ArrowRight did not step the row').toBeGreaterThan(50);
   expect(await step('ArrowLeft'), 'ArrowLeft did not step back').toBeLessThan(-50);
+});
+
+test('the row is a filled stack: every column reaches the foot, and no saint twice', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "You've pretty much arranged them in a horizontal grid
+   * of columns with randomised occupation. Just fill in the gaps in the same mix
+   * of randomised imageless and imaged saint cards and just make it a fully
+   * filled horizontally scrolling stack."
+   *
+   * Three things had to change together and all three are measured here,
+   * because each of them alone leaves a hole the other two cannot close:
+   *
+   *   - the packer reaches forward for a saint who fits, instead of closing a
+   *     column the moment the next one is too tall (`LOOKAHEAD`);
+   *   - the columns stand on one line instead of being dealt low, high or mid;
+   *   - a column is at least as deep as the room it was packed against, so the
+   *     row reaches the foot of the window.
+   *
+   * The instrument for the first is the *gap*, not the slack. Slack is zero
+   * whatever the packer does, because `align-content: space-between` hands
+   * whatever is left to the gaps — so the way a short column shows itself is
+   * the size of those gaps, and taking the reach out inflates them at once.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+
+  const row = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const cells = [...track.querySelectorAll('.cx-cell')];
+    // Past the leading clone buffer, so the sample is the run itself.
+    const sample = cells.slice(14, 90);
+    const slack = [];
+    const loneSlack = [];
+    const gaps = [];
+    const depths = [];
+    for (const cell of sample) {
+      const cards = [...cell.querySelectorAll('.cx-card')];
+      depths.push(cards.length);
+      const short = cell.getBoundingClientRect().bottom - cards[cards.length - 1].getBoundingClientRect().bottom;
+      (cards.length > 1 ? slack : loneSlack).push(short);
+      for (let i = 1; i < cards.length; i += 1) {
+        gaps.push(cards[i].getBoundingClientRect().top - cards[i - 1].getBoundingClientRect().bottom);
+      }
+    }
+    const mid = (xs) => [...xs].sort((a, b) => a - b)[xs.length >> 1];
+    /*
+     * One period of the loop: `loopSlice` puts twelve clone cells either side,
+     * so what is between them is the run, and every saint in the run should be
+     * a saint the reader has not already met in it.
+     */
+    const period = cells.slice(12, cells.length - 12);
+    const slugs = period.flatMap((c) => [...c.querySelectorAll('[data-prefetch]')].map((a) => a.dataset.prefetch));
+    return {
+      worstSlack: Math.max(...slack),
+      worstLoneSlack: loneSlack.length ? Math.max(...loneSlack) : 0,
+      medianGap: mid(gaps),
+      worstGap: Math.max(...gaps),
+      medianDepth: mid(depths),
+      tops: new Set(sample.map((c) => Math.round(c.getBoundingClientRect().top))).size,
+      trackBottom: track.getBoundingClientRect().bottom,
+      windowBottom: window.innerHeight,
+      slugs: slugs.length,
+      unique: new Set(slugs).size,
+    };
+  });
+
+  // Every column that holds more than one saint ends on the foot of the row.
+  expect(row.worstSlack, 'a stacked column stops short of the foot of the row').toBeLessThan(2);
+  /*
+   * A column holding *one* saint has no gap to hand its remainder to, so it can
+   * end short — but never by more than the card that would have gone under it,
+   * which is a caption (64) and the gap above it (12). Beyond that is a saint
+   * the packer could have fitted and did not.
+   */
+  expect(row.worstLoneSlack, 'a column had room for another saint and left it empty').toBeLessThan(78);
+  // And they all start on it, which is the scatter having gone.
+  expect(row.tops, 'the columns are still dealt different heights').toBe(1);
+  /*
+   * The row fills the window it was measured against, to within the 40 px the
+   * packer rounds its room to. That rounding is not slop that could be tidied
+   * away: it is what keeps the run — and so the reader's remembered place in it
+   * — from changing between two paints taken a frame apart (see `space` in
+   * views/index/modes.js). A band of at most half of it at the very foot of the
+   * page is the price, and it buys back every hole inside the columns.
+   */
+  expect(row.windowBottom - row.trackBottom, 'the row does not reach the foot of the window').toBeLessThan(44);
+  expect(row.trackBottom - row.windowBottom, 'the row runs past the foot of the window').toBeLessThan(3);
+  /*
+   * Densely, not by spreading three cards over a window's height. Both of these
+   * fail on the packer as it stood before the reach was added: it closed
+   * columns two and three deep, and `space-between` then opened 200 px between
+   * their cards.
+   */
+  expect(row.medianDepth, 'the columns are packed too shallow to be filled').toBeGreaterThanOrEqual(3);
+  expect(row.medianGap, 'the cards are spread rather than stacked').toBeLessThan(90);
+  // Each saint met once in a turn of the row, which the reach must not break:
+  // it takes a saint from further down the pool, it does not copy one.
+  expect(row.unique, 'a saint appears twice in one turn of the row').toBe(row.slugs);
+});
+
+test('a card prints the whole name, however many lines it takes, and a row still does not', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Make sure all the CARD view cards, NOT row view cards,
+   * display the full name and don't do any '...' at the end."
+   *
+   * Two lines were the card's budget, and a card's column is 190 px at its
+   * narrowest against a row's whole width — so a third of the corpus was cut in
+   * a card that a row printed whole. The clamp is gone from the card and stays
+   * on the row, which is the "NOT row view cards" half and is worth pinning
+   * because one rule serves both.
+   *
+   * The bound that remains is `CARD_NAME_LINES_MAX` (views/index/grid.js): the
+   * grid is virtualised, so a card's height is decided before the card exists
+   * and a name that overran it would be drawn over its neighbour rather than
+   * merely cut. That is what the overflow half of this measures.
+   */
+  await searchMode(page);
+  await ready(page);
+  // Narrow enough for three columns of about the grid's minimum, which is where
+  // names wrap hardest and where the corpus was measured.
+  await page.setViewportSize({ width: 820, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.index-card').first()).toBeVisible();
+
+  // The longest name the site prints: five lines in a card's column.
+  await page.locator('[data-query]').fill('Theodulus');
+  const long = page.locator('.index-card:not(.is-row)').filter({ hasText: 'executioner converted by Hermione' }).first();
+  await expect(long).toBeVisible();
+
+  const m = await long.evaluate((card) => {
+    const name = card.querySelector('.index-name');
+    const cs = getComputedStyle(name);
+    return {
+      text: name.textContent.trim(),
+      lines: Math.round(name.getBoundingClientRect().height / parseFloat(cs.lineHeight)),
+      clipped: name.scrollHeight - name.clientHeight,
+      clamp: cs.webkitLineClamp,
+      // Nothing in the card reaches past the box the virtualiser reserved.
+      overflow: card.lastElementChild.getBoundingClientRect().bottom - card.getBoundingClientRect().bottom,
+    };
+  });
+  expect(m.text, 'the name was shortened').toContain('executioner converted by Hermione');
+  expect(m.lines, 'the card still stops at two lines').toBeGreaterThan(2);
+  /*
+   * Three, not one: with no clamp the box is `overflow: visible`, so
+   * `scrollHeight` is the union of the line boxes and rounds up against a
+   * `clientHeight` that rounds down — two pixels of that on a five-line name is
+   * arithmetic, not a cut. Anything a reader could see is a whole line, 21 px.
+   */
+  expect(m.clipped, 'the name is cut inside its box').toBeLessThan(3);
+  expect(m.clamp, 'the card still clamps its name').toMatch(/none/);
+  expect(m.overflow, 'the name overran the box the grid reserved for it').toBeLessThan(2);
+
+  /*
+   * And no card anywhere in the corpus overruns, which is the claim that makes
+   * the cap a measurement rather than a hope. Scrolled rather than sampled: the
+   * grid is virtualised, so only what is near the viewport exists.
+   */
+  await page.locator('[data-query]').fill('');
+  const problems = await page.evaluate(async () => {
+    const bad = [];
+    for (let y = 0; y < 14000; y += 700) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      for (const card of document.querySelectorAll('.index-card:not(.is-row)')) {
+        const name = card.querySelector('.index-name');
+        if (!name) continue;
+        if (name.scrollHeight - name.clientHeight > 3) bad.push(`cut: ${name.textContent.trim()}`);
+        const over = card.lastElementChild.getBoundingClientRect().bottom - card.getBoundingClientRect().bottom;
+        if (over > 1) bad.push(`over by ${Math.round(over)}: ${name.textContent.trim()}`);
+      }
+    }
+    return bad.slice(0, 5);
+  });
+  expect(problems, 'a card cut or overran its name').toEqual([]);
+
+  // The row keeps its own clamp: this was scoped to cards, in those words.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.index-card.is-row').first()).toBeVisible();
+  const rowClamp = await page
+    .locator('.index-card.is-row .index-name')
+    .first()
+    .evaluate((el) => getComputedStyle(el).webkitLineClamp);
+  expect(rowClamp, 'the row lost its clamp too').toBe('3');
 });

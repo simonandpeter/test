@@ -1344,6 +1344,54 @@ because this module is imported eagerly and the whole harvest would be half a
 megabyte in every visitor's first download; what is cut is banked, not
 discarded.*
 
+### 5d. What 2026-09-01 added to those two pages
+
+Four changes that are shape rather than colour, recorded here because each one
+reversed or narrowed something written above.
+
+**The day steps.** `‹ Yesterday` and `Tomorrow ›` sit on the date's own line at
+a desk, hard against the right edge of the left column — which is the margin
+between the two columns, because the column is that wide. Desktop only: a phone
+already changes the day by the rail, by a swipe across the panel and by the
+month grid, and a 360 px line has no room for a fourth. The words a reader sees
+are Yesterday and Tomorrow; what a screen reader hears is *Previous day* and
+*Next day*, because "Yesterday" is the wrong word for the thing the button does
+on a page showing a day three weeks back.
+
+**Also commemorated has two faces.** Cards by default, laid out in as many
+columns as the window has room for — the Index's own card view, packed by CSS
+columns so a tall icon beside a short one leaves no hole — and a List face
+behind a toggle beside the subheading, remembered across visits
+(`registerLayout`). *The markup does not change between them.* A register entry
+has always been a name, a subtitle and a thumbnail in that order, which is a row
+laid out in a line and a card laid out in a column; the toggle is a class, and
+nothing is re-rendered to change face. On a phone the list is the only face,
+because a card grid at 360 px is a list with larger pictures.
+
+**The saint's page is the Daily page's two columns.** The life takes the left
+column's exact measure and a column of the reader's last search stands beside
+it — the Index's own rows, in the order the Index had them, with a field that
+sieves that set and a control at the top that folds the whole column away. Two
+departures from the Daily page, both deliberate: the life keeps the *page's*
+scrolling rather than becoming its own scroll container, because the life is
+what the browser restores a reading position into; and the list is paged sixty
+rows at a time, because 862 subtrees is nothing to render — `content-visibility`
+sees to that — and a great deal to *walk*, which took the accessibility audit
+from three seconds to twenty-three.
+
+**The full-screen calendar.** A button under the week opens the month as words
+rather than as colour: every day's fast named and graded, its Great Feast if it
+has one, its occasion, and how many saints it carries, with the month's fasting
+seasons and Great Feasts listed beside it. Nothing in it is a new claim — it
+reads `liturgicalDay`, `gradeForDay` and the feast index, the same three the
+Daily page reads one day from — and the seasons strip is *assembled by reading*:
+the days are walked, each is asked for its fast's reason, and runs that answer
+alike are joined. So "Great Lent - 1 to 4 April" is a report of what
+`lib/liturgy.js` said day by day and cannot drift from the grid beside it. On a
+phone the seven columns give way and the month becomes a list of days, because
+44 px cannot hold "Oil, Wine and Fish Allowed" and the instruction was for more
+detail, not less.
+
 ## 6. Motion and states
 
 - Durations: 200 ms standard, 260 ms the hero slot roll, 300 ms theme change,

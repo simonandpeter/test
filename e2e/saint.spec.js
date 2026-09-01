@@ -426,8 +426,15 @@ test('the saints dated this batch print their dates rather than Undated', async 
     ['edith-of-wilton', 'c. 961 AD – 984 AD'],
   ]) {
     await page.goto(`/saints/${slug}`, { waitUntil: 'networkidle' });
-    await expect(page.locator('main')).toContainText(shown);
-    await expect(page.locator('main')).not.toContainText('Undated');
+    /*
+     * The saint's own half of the page, not `main`, since 2026-09-01: a column
+     * of the reader's last search sits beside the life now, and plenty of the
+     * corpus really is undated — so asking `main` for the absence of that word
+     * asks about 862 other people as well as this one.
+     */
+    const subject = page.locator('.saint-col-main');
+    await expect(subject).toContainText(shown);
+    await expect(subject).not.toContainText('Undated');
   }
 });
 
@@ -694,4 +701,160 @@ test('the icon the author supplied is on the page, with the licence Commons stat
   await expect(credit).not.toContainText('not recorded');
   // The artist and the photographer, both as Commons records them.
   await expect(credit).toContainText('Akotantos');
+});
+
+/* ---- the column beside the life (2026-09-01) ---------------------------- */
+
+test('a saint page is the Daily page’s two columns, with the reader’s own search beside the life', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "On each Saint Profile page, make the content the
+   * size/margins of the left column on the Daily Page, and for where the right
+   * column would be on Daily Page, provide a row view scroll of the advanced
+   * search results in All Saints where you just came from ... Add an option to
+   * minimise the search at the very top of this right column."
+   *
+   * Four claims, and the first is the one that is measured against another page
+   * rather than against a number: "the size/margins of the left column on the
+   * Daily Page" is a width the Daily page works out from its own grid, so the
+   * only honest instrument is to open both and compare. A hard-coded 929 px
+   * would pass on the day it was written and say nothing afterwards.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const daily = await page.evaluate(() => {
+    const r = (s) => document.querySelector(s).getBoundingClientRect();
+    return { main: [Math.round(r('.cal-main').left), Math.round(r('.cal-main').right)] };
+  });
+
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const saint = await page.evaluate(() => {
+    const r = (s) => document.querySelector(s).getBoundingClientRect();
+    return {
+      main: [Math.round(r('.saint-col-main').left), Math.round(r('.saint-col-main').right)],
+      side: [Math.round(r('.saint-side').left), Math.round(r('.saint-side').right)],
+    };
+  });
+  expect(saint.main, 'the life does not sit in the Daily page’s left column').toEqual(daily.main);
+  expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThan(saint.main[1]);
+
+  // A row view, scrolled inside its own box, and drawing no bar to do it.
+  const list = page.locator('[data-side-results]');
+  await expect(list.locator('.index-card.is-row').first()).toBeVisible();
+  const scroll = await list.evaluate((el) => ({
+    scrollable: el.scrollHeight - el.clientHeight,
+    bar: getComputedStyle(el).scrollbarWidth,
+    fits: el.getBoundingClientRect().bottom <= window.innerHeight + 1,
+  }));
+  expect(scroll.scrollable, 'the column has nothing to scroll').toBeGreaterThan(0);
+  expect(scroll.bar, 'the column still draws a scrollbar').toBe('none');
+  expect(scroll.fits, 'the column runs past the foot of the window').toBe(true);
+
+  // The fold is at the very top of the column, above everything else in it.
+  const fold = page.locator('[data-side-fold]');
+  const order = await page.evaluate(() => {
+    const side = document.querySelector('.saint-side').getBoundingClientRect();
+    const button = document.querySelector('[data-side-fold]').getBoundingClientRect();
+    const body = document.querySelector('[data-side-body]').getBoundingClientRect();
+    return { atTop: button.top - side.top < 40, aboveBody: button.bottom <= body.top + 1 };
+  });
+  expect(order.atTop, 'the fold is not at the top of the column').toBe(true);
+  expect(order.aboveBody, 'the fold is not above what it folds').toBe(true);
+
+  await fold.click();
+  await expect(page.locator('[data-side-body]')).toBeHidden();
+  await expect(fold).toHaveAttribute('aria-expanded', 'false');
+  /*
+   * Folded for the visit, not for this page only — so the next saint opened
+   * from the column itself comes up folded. Followed through the column rather
+   * than by `goto`, and the difference is the whole assertion: `goto` is a
+   * fresh document, where the fold is *meant* to open again.
+   */
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  // A fresh document opens the column: the fold is a working state, not a
+  // stored preference, and the comment in views/saint.js says why.
+  await expect(page.locator('[data-side-body]')).toBeVisible();
+  await page.locator('[data-side-fold]').click();
+  // Followed through a link inside the page rather than by `goto`, because the
+  // claim is about one visit: `goto` is a new document and is meant to reset.
+  await page.locator('.life a[data-prefetch="athanasius-of-alexandria"]').click();
+  await expect(page.locator('h1.saint-name')).toContainText('Athanasius');
+  await expect(page.locator('[data-side-body]')).toBeHidden();
+  await page.locator('[data-side-fold]').click();
+  await expect(page.locator('[data-side-body]')).toBeVisible();
+
+  // And there is no column on a phone, where a life has no room beside it.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await expect(page.locator('.saint-side')).toBeHidden();
+});
+
+test('the column beside the life is the search the reader came from, and narrows within it', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "the advanced search results in All Saints **where you
+   * just came from**."
+   *
+   * So it is not the corpus with a search box over it — it is the set the Index
+   * had matched when the reader left it. Narrowing the Index and then opening a
+   * saint is the only way to tell those two apart, and it is what this does.
+   */
+  await searchMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await page.locator('[data-query]').fill('Nicomedia');
+  // The count the Index itself is showing, so this test does not have to know
+  // how many saints match — only that the column agrees with the page.
+  await expect.poll(() => page.locator('.index-card').count()).toBeGreaterThan(0);
+  const matched = await page.locator('.index-card').count();
+  expect(matched).toBeLessThan(200);
+
+  await page.locator('.index-card .index-name').first().click();
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+
+  const rows = page.locator('[data-side-results] .index-card');
+  await expect(rows.first()).toBeVisible();
+  const shown = await rows.count();
+  expect(shown, 'the column shows the corpus rather than the search').toBeLessThan(200);
+  await expect(page.locator('[data-side-count]')).toContainText(String(shown));
+
+  /*
+   * And the saint being read is marked in it. Asserted here rather than on a
+   * saint opened cold, because the list is paged from the top: a reader who
+   * arrived by deep link may be five hundred rows down a set that has only
+   * drawn its first sixty, and marking someone who is not in the document is
+   * not a thing that can be asked for. Arriving *from* a search, which is the
+   * case this column is for, they are on the first page of it.
+   */
+  const here = await page.locator('h1.saint-name').textContent();
+  await expect(page.locator('.side-results .index-card.is-here')).toHaveCount(1);
+  await expect(page.locator('.side-results .index-card.is-here')).toContainText(here.trim());
+
+  /*
+   * And the field narrows what is there rather than searching the corpus again
+   * — the heading says "Your search", and a field that could bring back a saint
+   * the reader had filtered out would make that heading false.
+   */
+  const before = await rows.count();
+  await page.locator('[data-side-query]').fill('zzzznothing');
+  await expect.poll(() => page.locator('[data-side-results] .index-card').count()).toBe(0);
+  await expect(page.locator('[data-side-count]')).toContainText('matches');
+  await page.locator('[data-side-query]').fill('');
+  await expect.poll(() => page.locator('[data-side-results] .index-card').count()).toBe(before);
+
+  /*
+   * **And it sieves the whole set, not the rows that happen to be drawn.** The
+   * list is paged sixty at a time (views/saint.js says why: an audit that walks
+   * 862 subtrees takes twenty seconds), so a search that only looked at the
+   * document would answer differently depending on how far the reader had
+   * scrolled. A saint who is in the set but past the first page has to be
+   * findable from the top of it.
+   */
+  const late = await page.evaluate(() => {
+    const drawn = new Set([...document.querySelectorAll('[data-side-results] [data-slug]')].map((e) => e.dataset.slug));
+    return { drawn: drawn.size };
+  });
+  expect(late.drawn, 'the whole set is in the document, so paging is untested').toBeLessThanOrEqual(shown);
 });

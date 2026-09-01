@@ -58,6 +58,19 @@ const DEFAULTS = {
   // Detailed (author, 2026-08-22): the matrix for the badge and a line of the
   // life on every card. Off until asked for, and remembered once it is.
   indexDetailed: false,
+  /*
+   * How *Also commemorated* is laid out on the Daily page (author, 2026-09-01:
+   * "Cards by default, site remembers what you left it as").
+   *
+   * 'cards' rather than null, and the difference from `indexLayout` above is
+   * worth stating because they look like the same decision. The Index needed
+   * null because its answer depends on the screen — cards at a desk, rows on a
+   * phone — and a stored default would have answered before the screen was
+   * consulted. This one does not: the list is a list on a phone whatever is
+   * stored here, because the toggle is a desktop control, so the stored value
+   * only ever speaks about the surface it was set on.
+   */
+  registerLayout: 'cards',
 };
 
 export function readSettings() {

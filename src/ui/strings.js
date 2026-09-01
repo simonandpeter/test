@@ -93,15 +93,45 @@ export const STRINGS = {
     today: 'Today',
     prevDay: 'Previous day',
     nextDay: 'Next day',
+    /*
+     * The two steps beside the date on a desktop (author, 2026-09-01). The
+     * words a reader sees; `prevDay`/`nextDay` above are what a screen reader
+     * hears, because "Yesterday" on a page showing a day three weeks back is
+     * the wrong word for the thing the button does.
+     */
+    yesterday: 'Yesterday',
+    tomorrow: 'Tomorrow',
     prevWeek: 'Previous week',
     nextWeek: 'Next week',
     prevMonth: 'Previous month',
     nextMonth: 'Next month',
     monthView: 'Month view',
+    /*
+     * The whole church month at once (author, 2026-09-01: "Make an expandable
+     * calendar button under the weekly display called 'Full Screen Calendar'
+     * that opens up a full screen calendar modal in the same style as the
+     * smaller one but with lots more detail").
+     *
+     * The button's words are the author's own, capitalised as they wrote them.
+     */
+    fullScreen: 'Full Screen Calendar',
+    fullClose: 'Close',
+    fullPeriods: 'Fasts and seasons',
+    fullFeasts: 'Great Feasts',
+    // Most months hold neither, which is a fact about the church year rather
+    // than a gap in the data, so it is said in a sentence.
+    fullQuiet: 'No fasting season and no Great Feast fall in this month.',
+    fullCount: '{n} saints',
+    fullCountOne: '1 saint',
     closeMonth: 'Close month view',
     weekLabel: 'Choose a day',
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
+    /* The two faces of that list (author, 2026-09-01), and the name of the
+       pair for a reader who cannot see that they are beside a heading. */
+    registerView: 'Show also commemorated as',
+    viewCards: 'Cards',
+    viewList: 'List',
     /*
      * The way from the day's saint into their life (author, 2026-09-01: add a
      * "...continue reading >" button at the bottom right at the end of the
@@ -731,6 +761,24 @@ export const STRINGS = {
     otherChurches: 'See the other churches ({count})',
     hideOtherChurches: 'Hide the other churches',
     life: 'Life',
+    /*
+     * The column of saints beside the life (author, 2026-09-01: "for where the
+     * right column would be on Daily Page, provide a row view scroll of the
+     * advanced search results in All Saints where you just came from ... Add an
+     * option to minimise the search at the very top of this right column").
+     *
+     * "Your search" rather than "All Saints", because that is what it is: the
+     * set the reader had narrowed to when they opened this saint, in the order
+     * they had it in. A reader who arrived by any other road gets the corpus,
+     * and the heading is honest either way.
+     */
+    fromSearch: 'Your search',
+    sideSearch: 'Search these',
+    sideCount: '{n} saints',
+    sideCountOne: '1 saint',
+    sideNone: 'Nothing here matches that.',
+    minimise: 'Minimise',
+    expand: 'Show',
     noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',
     sources: 'Sources',
     related: 'Related',

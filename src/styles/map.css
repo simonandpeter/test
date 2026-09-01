@@ -15,12 +15,22 @@
    column for a frame and the window after it, which measured 0.21 of layout
    shift against a budget of 0.02.
 
-   No `100vw` anywhere: on a desktop with a vertical scrollbar `100vw` is wider
-   than the page, and the quality floor's horizontal-overflow check catches it.
-   Staying in the normal flow avoids the trap rather than working around it. */
+   **`100vw` here, and nowhere else** (2026-09-01). This paragraph read "no
+   `100vw` anywhere: on a desktop with a vertical scrollbar `100vw` is wider
+   than the page, and the quality floor's horizontal-overflow check catches it"
+   — which was true of a route that scrolls, and this one does not. Since the
+   root began holding the scrollbar's room open on every route past 1024 px
+   (base.css, so the header is the same width on all four), the map was laid out
+   in a box a scrollbar narrower than the window and left a fifteen-pixel band of
+   ground down its right-hand edge. No bar is ever drawn on this route — the rule
+   below turns its scrolling off outright — so the reserved gutter here is empty
+   room, and `vw` is what reaches across it. The overflow trap the old paragraph
+   named is closed by that same rule: the page cannot scroll sideways because it
+   cannot scroll. */
 html[data-route='map'] main.chrome {
   max-width: none;
   padding: 0;
+  width: 100vw;
   /* The page is the map and a footer, nothing else (author, 2026-08-30), so
      `main` is a column exactly as tall as the space under the sticky bar: the
      stage takes what the footer leaves, with no magic number naming the

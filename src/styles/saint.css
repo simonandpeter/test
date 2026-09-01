@@ -417,3 +417,157 @@
   animation-duration: var(--dur);
   animation-timing-function: var(--ease);
 }
+
+/* ---- the column beside the life (2026-09-01) ---------------------------- */
+
+/*
+ * Author: "On each Saint Profile page, make the content the size/margins of the
+ * left column on the Daily Page, and for where the right column would be on
+ * Daily Page, provide a row view scroll of the advanced search results in All
+ * Saints where you just came from ... Add an option to minimise the search at
+ * the very top of this right column."
+ *
+ * **The same two tracks as the Daily page**, written out rather than shared
+ * through a custom property, because they are the same *decision* in two places
+ * and a shared token would hide that: the right column's 25–30 rem floor is
+ * what the Daily page's week rail needs, and this column would have been happy
+ * with less. If either ever moves, the other should be looked at and not
+ * silently dragged along. calendar.css §the two columns holds the reasoning.
+ *
+ * Below the breakpoint there is one column and no aside: a phone reading a life
+ * has no room for a list of other lives beside it, and the author scoped the
+ * columns to the desktop.
+ */
+.saint-side {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .saint-cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(25rem, 28%, 30rem);
+    column-gap: var(--space-8);
+    align-items: start;
+  }
+
+  .saint-col-main {
+    min-width: 0;
+  }
+
+  /*
+   * **Sticky rather than a second scroll container**, and this is where this
+   * page and the Daily page part company. The Daily page gives each column its
+   * own scrollbar because neither column is the page — they are two halves of
+   * one day. Here the life *is* the page: it is what the reader came for, it is
+   * what the browser restores a scroll position into (`wireReading`), and
+   * taking the document's scroll away from it would break that restore for a
+   * column of links. So the life keeps the page's own scrolling and this column
+   * holds still beside it, scrolling inside itself when the list is longer than
+   * the window.
+   *
+   * The offset is the chrome's, so the column starts under the header rather
+   * than behind it.
+   */
+  .saint-side {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: calc(var(--chrome-h, 53px) + var(--space-4));
+    max-height: calc(100dvh - var(--chrome-h, 53px) - var(--space-8));
+    min-height: 0;
+  }
+
+  /* The fold's control at the very top of the column, in those words, and the
+     heading beside it — the same shape the register's own toggle takes on the
+     Daily page. */
+  .side-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex: none;
+  }
+
+  .side-head .register-heading {
+    margin-top: 0;
+    flex: 1 1 auto;
+  }
+
+  .side-fold {
+    flex: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+
+  .side-fold:hover {
+    color: var(--ink);
+  }
+
+  /* Folded is folded: the heading and its control stay, and the column stops
+     claiming the height it was holding. */
+  .saint-side.is-folded {
+    max-height: none;
+  }
+
+  .side-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    gap: var(--space-2);
+  }
+
+  .side-count {
+    flex: none;
+    color: var(--ink-soft);
+  }
+
+  /*
+   * The list scrolls, and draws no bar doing it (author, 2026-09-01: "Remove
+   * the scroll bar from the Daily page columns and Saint Profile columns").
+   * Same bargain as the Daily columns: the scrolling is untouched, only the
+   * rule down the side is gone.
+   */
+  .side-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .side-results::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* The Index's row, back in ordinary flow: it is absolutely positioned there
+     because a virtualiser puts every card where it goes, and there is no
+     virtualiser here. */
+  /*
+   * `content-visibility` is what makes an un-virtualised list of 862 rows
+   * affordable: the browser skips layout and paint for the ones outside the
+   * scroller, which is the expensive half of what a virtualiser buys, without a
+   * second virtualiser wired to a second scroll container. The intrinsic size
+   * is the row's own height (`ROW_HEIGHTS[0]` in views/index/grid.js), so the
+   * scrollbar is honest before anything has been laid out.
+   */
+  .side-results .index-card {
+    position: static;
+    margin-bottom: var(--space-2);
+    content-visibility: auto;
+    contain-intrinsic-size: auto 66px;
+  }
+
+  /* The saint being read, marked in the list they came from. A tinted field
+     rather than a rule or a colour of its own — the page has one accent and it
+     is not this. */
+  .side-results .index-card.is-here {
+    background: color-mix(in srgb, var(--field) 70%, transparent);
+  }
+}

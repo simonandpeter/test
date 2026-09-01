@@ -1850,7 +1850,16 @@ test('the gold hairline under the date runs full width, close to the text', asyn
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const m = await page.evaluate(() => {
-    const heading = document.querySelector('.cal-date');
+    /*
+     * **The wrapper, not the heading, since 2026-09-01.** The date shares its
+     * line with the Yesterday/Tomorrow steps now, so the h1 is only as wide as
+     * its own words and a rule hung off it would stop halfway across the
+     * column. The rule moved up to `.cal-head`, which is the box that still has
+     * the column's full measure — so this measures that, and the assertions
+     * below are unchanged, which is the point: what is being pinned is that the
+     * line runs the width of the column it heads, not which element draws it.
+     */
+    const heading = document.querySelector('.cal-head');
     /*
      * The column the heading actually heads. One page, two arrangements since
      * 2026-09-01: on a phone the day is one column and `.cal-body` is the box
@@ -1961,7 +1970,18 @@ test('the fast bubble goes when the reader moves on', async ({ page }) => {
   await page.locator('h1').click();
   await expect(page.locator('.fast-bubble')).toHaveCount(0);
 
-  // A scroll.
+  /*
+   * A scroll — and the window is shortened first so that there is one to make.
+   * Past 1024 px the day's two columns scroll themselves and the page does not,
+   * so a wheel over a column with nothing under the fold produces no scroll
+   * event and nothing to dismiss on. That is not a defect in the dismissal: it
+   * is a day whose left column happens to fit, and it started fitting on
+   * 2026-09-01 when *Also commemorated* became a grid of cards half the height
+   * of the list it replaced. The height is what the test needs; the width is
+   * left alone so the two projects still run this at their own widths.
+   */
+  const width = page.viewportSize().width;
+  await page.setViewportSize({ width, height: 420 });
   await fast.click();
   await expect(page.locator('.fast-bubble')).toBeVisible();
   await page.mouse.wheel(0, 240);
@@ -4400,4 +4420,321 @@ test('the preview ends in a way into the life, on a phone as well as a desktop',
   // And it goes where the name goes.
   await page.locator('.hero-more').filter({ visible: true }).click();
   await expect(page).toHaveURL(/\/saints\/lupus-the-martyr/);
+});
+
+/* ---- the 2026-09-01 batch: the day steps, and the bars that went ---------- */
+
+test('the day steps sit on the date line, against the margin between the columns', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Also on Daily Page add some <Yesterday and Tomorrow>
+   * Buttons to the right of today's date print in large font, right justified
+   * to the margin between left and right columns" — and, in the same breath,
+   * that 5, 6 and 7 are desktop only.
+   *
+   * Three claims, and the third is the one that costs something. "Right
+   * justified to the margin between left and right columns" is not the window's
+   * edge and not the header's: it is the right edge of the left column, which
+   * is a width the page works out from `--day-cols` and nothing in the markup
+   * knows. So it is measured against `.cal-main` rather than asserted about a
+   * class.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const before = await page.locator('.cal-date').textContent();
+  const m = await page.evaluate(() => {
+    const r = (s) => document.querySelector(s).getBoundingClientRect();
+    const step = r('.day-step');
+    const main = r('.cal-main');
+    const date = r('.cal-date');
+    return {
+      stepRight: step.right,
+      // The column's own text edge: `.cal-main` scrolls, so its right is the
+      // border box and the words stop where its padding does.
+      columnRight: main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight),
+      // The steps are beside the date, not under it: the two boxes overlap
+      // vertically, and the steps start after the date's words end.
+      sharesLine: step.top < date.bottom && step.bottom > date.top,
+      afterDate: step.left > date.right - 1,
+      // "In large font" — nearer the heading than the body it sits above.
+      size: parseFloat(getComputedStyle(document.querySelector('.day-step button')).fontSize),
+      body: parseFloat(getComputedStyle(document.body).fontSize),
+    };
+  });
+  expect(Math.abs(m.stepRight - m.columnRight), 'the steps are not on the column margin').toBeLessThan(2);
+  expect(m.sharesLine, 'the steps are not on the date’s line').toBe(true);
+  expect(m.afterDate, 'the steps are not to the right of the date').toBe(true);
+  expect(m.size, 'the steps are not in a large font').toBeGreaterThan(m.body);
+
+  // And they do what they say, through the same funnel every other way of
+  // changing the day goes through — so the panels roll rather than the page
+  // being repainted underneath the reader.
+  await page.locator('[data-dstep="1"]').click();
+  await expect.poll(() => page.locator('.cal-date').textContent()).not.toBe(before);
+  const forward = await page.locator('.cal-date').textContent();
+  await page.locator('[data-dstep="-1"]').click();
+  await expect.poll(() => page.locator('.cal-date').textContent()).toBe(before);
+  expect(forward).not.toBe(before);
+
+  /*
+   * Desktop only. A phone has the rail, a swipe across the panel and the month
+   * grid already, and no room on a 360 px line for a fourth way — so the nav is
+   * not merely small there, it is not laid out at all.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await expect(page.locator('.day-step')).toBeHidden();
+});
+
+test('neither Daily column draws a scrollbar, and both still scroll', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Remove the scroll bar from the Daily page columns."
+   *
+   * The bar, not the scrolling — which is the whole of what makes this worth a
+   * test. `overflow: hidden` would satisfy the words and break the page, so the
+   * assertion is in two halves: nothing is drawn, and the column still moves
+   * when it is asked to.
+   */
+  await ready(page);
+  /*
+   * A short window on a day whose left column is a crowd of saints and whose
+   * right one carries a long set of hymns, because a column with nothing to
+   * scroll would pass the second half of this test by having no bar to draw.
+   * 2026-08-25 overflows both by about 400 px at this height.
+   */
+  await page.setViewportSize({ width: 1280, height: 500 });
+  await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  for (const col of ['.cal-main', '.cal-side']) {
+    const seen = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      const cs = getComputedStyle(el);
+      return {
+        hidden: cs.scrollbarWidth,
+        overflow: cs.overflowY,
+        // The gutter a drawn bar would take out of the content box.
+        gutter: el.offsetWidth - el.clientWidth,
+        scrollable: el.scrollHeight - el.clientHeight,
+      };
+    }, col);
+    expect(seen.hidden, `${col} still reserves a bar`).toBe('none');
+    expect(seen.gutter, `${col} still draws a bar`).toBeLessThan(1);
+    // Still a scroll container, not a clipped one.
+    expect(seen.overflow, `${col} stopped scrolling`).toBe('auto');
+    expect(seen.scrollable, `${col} has nothing to scroll`).toBeGreaterThan(0);
+
+    const moved = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      el.scrollTop = 120;
+      return el.scrollTop;
+    }, col);
+    expect(moved, `${col} would not scroll`).toBeGreaterThan(0);
+  }
+});
+
+test('Also commemorated opens as cards in columns, and remembers a reader who wants a list', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Make the Also Commemorated saint cards on desktop
+   * behave the same as the cards view on All Saints page on desktop, separated
+   * in columns depending on window size. Have an option near the 'Also
+   * Commemorated' subheading to display them as a List or as Cards (Cards by
+   * default), site remembers what you left it as."
+   *
+   * Four claims. The one worth the most here is the last: the setting has to
+   * outlive a reload, and it is stored rather than held in the view — which is
+   * the difference between a toggle and a preference. The third is the one that
+   * is easiest to fake: "columns depending on window size" is not a fixed
+   * number, so it is measured at two widths and asked to differ.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  // Ten also-commemorated saints, several with icons.
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const list = page.locator('[data-register]');
+  await expect(list, 'the register did not open as cards').toHaveClass(/is-cards/);
+  await expect(page.locator('[data-reg-view="cards"]')).toHaveAttribute('aria-pressed', 'true');
+
+  /* The control is beside the heading, not somewhere else on the page. */
+  const near = await page.evaluate(() => {
+    const h = document.querySelector('.register-head .register-heading').getBoundingClientRect();
+    const v = document.querySelector('.register-view').getBoundingClientRect();
+    return { sameLine: v.top < h.bottom && v.bottom > h.top, after: v.left > h.left };
+  });
+  expect(near.sameLine, 'the toggle is not on the heading’s line').toBe(true);
+  expect(near.after, 'the toggle is not beside the heading').toBe(true);
+
+  const shape = () =>
+    page.evaluate(() => {
+      const cards = [...document.querySelectorAll('[data-register] .reg-card')];
+      const withImage = cards.find((c) => c.querySelector('.reg-thumb:not(.is-blank)'));
+      const thumb = withImage?.querySelector('.reg-thumb').getBoundingClientRect();
+      const body = withImage?.querySelector('.reg-body').getBoundingClientRect();
+      return {
+        columns: new Set(cards.map((c) => Math.round(c.getBoundingClientRect().left))).size,
+        // Above the name in cards, beside it in a list.
+        pictureAbove: thumb && body ? thumb.bottom <= body.top + 1 : null,
+        pictureWidth: thumb ? Math.round(thumb.width) : null,
+      };
+    });
+
+  const wide = await shape();
+  expect(wide.columns, 'the cards are not in columns').toBeGreaterThan(1);
+  expect(wide.pictureAbove, 'the picture is not above the name').toBe(true);
+  // Wider than the list's 40 px thumbnail: this is the Index's card picture.
+  expect(wide.pictureWidth).toBeGreaterThan(100);
+
+  // Fewer columns in a narrower window, which is what "depending on window
+  // size" means and what a fixed column count would not do.
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await expect.poll(async () => (await shape()).columns).toBeLessThan(wide.columns);
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  // The list face: one column, and the picture back beside the name.
+  await page.locator('[data-reg-view="list"]').click();
+  await expect(list).toHaveClass(/is-list/);
+  await expect(page.locator('[data-reg-view="list"]')).toHaveAttribute('aria-pressed', 'true');
+  const rows = await shape();
+  expect(rows.columns, 'the list is still in columns').toBe(1);
+  expect(rows.pictureAbove, 'the list still stacks the picture').toBe(false);
+
+  // Remembered: a reload comes back to the list, and stepping a day keeps it —
+  // the panel is rebuilt on a step, so this is where a face held in the DOM
+  // rather than in the setting would quietly go back to cards.
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
+  /*
+   * Forward and back rather than one step: not every day has a register, and
+   * 5 September is the one this test knows has ten. Both panels are in the
+   * document while the roll runs, so the question is asked of all of them.
+   */
+  await page.locator('[data-dstep="1"]').click();
+  await page.waitForTimeout(600);
+  await page.locator('[data-dstep="-1"]').click();
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const lists = [...document.querySelectorAll('[data-register]')];
+        return lists.length > 0 && lists.every((el) => el.classList.contains('is-list'));
+      }),
+    )
+    .toBe(true);
+
+  // And there is no choice to make on a phone, where the list is the only face.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await expect(page.locator('.register-view').first()).toBeHidden();
+});
+
+test('the full-screen calendar prints the month’s fasts, feasts and seasons', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "Make an expandable calendar button under the weekly
+   * display called 'Full Screen Calendar' that opens up a full screen calendar
+   * modal in the same style as the smaller one but with lots more detail, with
+   * text of the fast days and feasts and periods like dormition and great lent,
+   * christmas etc. Fill this in with information from each church calendar as
+   * we have it."
+   *
+   * The claim worth testing is the *content*, not the box: a modal that opens
+   * and shows a grid of numerals would satisfy every structural assertion and
+   * none of the instruction. So this asks August for the Dormition and the
+   * Transfiguration, April for Great Lent and Holy Week, and January for the
+   * Nativity — three months whose answers come from three different branches of
+   * lib/liturgy.js, in the reckoning of the church the reader keeps.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-08-10', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  // Under the week, not beside it.
+  const open = page.locator('[data-fullcal]');
+  await expect(open).toHaveText(/Full Screen Calendar/i);
+  const under = await page.evaluate(() => {
+    const week = document.querySelector('.cal-week').getBoundingClientRect();
+    const button = document.querySelector('[data-fullcal]').getBoundingClientRect();
+    return button.top >= week.bottom - 1;
+  });
+  expect(under, 'the button is not under the weekly display').toBe(true);
+
+  await open.click();
+  const dialog = page.locator('dialog.fullcal');
+  await expect(dialog).toBeVisible();
+  // Full screen: the window, not a box in the middle of it.
+  const box = await dialog.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    return { w: Math.round(r.width), h: Math.round(r.height), winW: window.innerWidth, winH: window.innerHeight };
+  });
+  expect(box.w).toBeGreaterThanOrEqual(box.winW - 2);
+  expect(box.h).toBeGreaterThanOrEqual(box.winH - 2);
+
+  await expect(page.locator('[data-fc-title]')).toHaveText('August 2026');
+  // Which church's reckoning this is, said rather than assumed.
+  await expect(page.locator('[data-fc-church]')).not.toBeEmpty();
+  await expect(page.locator('.fc-day')).toHaveCount(31);
+
+  // The detail: the fast in words on every day, and the feast where there is one.
+  await expect(page.locator('.fc-day').first()).toContainText(/Fast/i);
+  const august = page.locator('.fc-body');
+  await expect(august).toContainText('the Dormition Fast');
+  await expect(august).toContainText('The Dormition of the Theotokos');
+  await expect(august).toContainText('The Transfiguration');
+  // And the seasons are dated runs, not a list of thirty-one identical lines.
+  await expect(page.locator('.fc-period').first()).toContainText(/\d+ - \d+ August/);
+
+  // Great Lent, Holy Week and Bright Week come out of a different branch.
+  for (let i = 0; i < 8; i += 1) await page.locator('[data-fc-step="-1"]').click();
+  await expect(page.locator('[data-fc-title]')).toHaveText('December 2025');
+  await expect(page.locator('.fc-body')).toContainText('the Nativity Fast');
+
+  await page.locator('[data-fc-close]').click();
+  await expect(dialog).toBeHidden();
+
+  // April: Lent, and picking a day takes the page there and closes the modal.
+  await page.goto('/calendar/2026-04-10', { waitUntil: 'networkidle' });
+  await page.locator('[data-fullcal]').click();
+  const april = page.locator('.fc-body');
+  await expect(april).toContainText('Great Lent');
+  await expect(april).toContainText('Holy Week');
+  await expect(april).toContainText('Bright Week');
+
+  await page.locator('.fc-day[data-iso="2026-04-16"]').click();
+  await expect(page.locator('dialog.fullcal')).toBeHidden();
+  await expect(page.locator('.cal-date')).toContainText('16 April 2026');
+});
+
+test('the full-screen calendar is a list on a phone, so the words still fit', async ({ page }) => {
+  /*
+   * Seven columns of 44 px cannot hold "Oil, Wine and Fish Allowed", and the
+   * first draft of this proved it by spilling the words out of their cells. The
+   * instruction was for *more* detail, so on a phone the grid gives way rather
+   * than the words: one day to a row, each carrying the weekday name the column
+   * heading used to carry.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-08-10', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('[data-fullcal]').click();
+  await expect(page.locator('dialog.fullcal')).toBeVisible();
+
+  const seen = await page.evaluate(() => {
+    const cells = [...document.querySelectorAll('.fc-day')];
+    const lefts = new Set(cells.map((c) => Math.round(c.getBoundingClientRect().left)));
+    const spills = cells.filter((c) => c.scrollWidth - c.clientWidth > 1).length;
+    return {
+      columns: lefts.size,
+      spills,
+      // The weekday, which the missing column heading used to say.
+      names: document.querySelectorAll('.fc-day-name').length,
+      namesShown: [...document.querySelectorAll('.fc-day-name')].filter((e) => e.offsetParent !== null).length,
+      docOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    };
+  });
+  expect(seen.columns, 'a phone still lays the month out in columns').toBe(1);
+  expect(seen.spills, 'the words run out of their cells').toBe(0);
+  expect(seen.namesShown, 'no day says which weekday it is').toBe(seen.names);
+  expect(seen.docOverflow, 'the modal pushes the page sideways').toBeLessThanOrEqual(0);
 });

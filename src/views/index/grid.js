@@ -44,10 +44,38 @@ const CARD_INSET = 18;
  */
 const CARD_NAME_LINE = 21.25;
 
-const CARD_NAME_LINES_MAX = 2;
+/**
+ * The lines `CARD_TEXT_HEIGHT` was measured with. Two, and it stays two however
+ * many the name below is allowed: it is the constant that turns the measured
+ * block height back into "everything that is not the name", not a limit.
+ */
+const CARD_NAME_LINES_RESERVED = 2;
+
+/**
+ * How many lines of name a card will carry.
+ *
+ * **Two until 2026-09-01**, when the author asked for the opposite: "Make sure
+ * all the CARD view cards, NOT row view cards, display the full name and don't
+ * do any '...' at the end." Two lines cut a third of the corpus — a card's
+ * column is 190 px at its narrowest against a row's whole width, so names that
+ * fit a row on one line take three and four in a card.
+ *
+ * Six, and the number is a measurement rather than a margin. Every name the
+ * site prints, at the narrowest column the grid ever lays out (190 px less the
+ * card's 18 px inset): 148 take one line, 521 two, 159 three, 23 four and 3
+ * five — the longest being "Righteous Theodulus, executioner converted by
+ * Hermione". Six is one line of headroom over the worst name in the corpus,
+ * which is what a *cap* is for here: the virtualiser has to know a card's
+ * height before the card exists, so a name that overran its box would be drawn
+ * over the card beneath it rather than merely ellipsised. A seventh line would
+ * be clamped — that is the degradation, stated rather than discovered, and the
+ * browser test pins the corpus against it so a longer name arriving later fails
+ * a test instead of a reader.
+ */
+const CARD_NAME_LINES_MAX = 6;
 
 /** Everything in the text block that is not the name: the gap and the dates. */
-const CARD_TEXT_BASE = CARD_TEXT_HEIGHT - CARD_NAME_LINES_MAX * CARD_NAME_LINE;
+const CARD_TEXT_BASE = CARD_TEXT_HEIGHT - CARD_NAME_LINES_RESERVED * CARD_NAME_LINE;
 
 /**
  * A row's height, by how many lines its name needs.
@@ -154,7 +182,7 @@ function pen(el) {
  * Verified against the real thing over all 734 names at 360 px, where the
  * distribution is 476 / 253 / 5: **no disagreement in either direction.**
  */
-function nameLines(text, avail, ctx) {
+function nameLines(text, avail, ctx, max = ROW_NAME_LINES_MAX) {
   if (!(avail > 0)) return 1;
   const space = ctx.measureText(' ').width;
   let lines = 1;
@@ -177,7 +205,9 @@ function nameLines(text, avail, ctx) {
       used = next;
     }
   }
-  return Math.min(lines, ROW_NAME_LINES_MAX);
+  // The cap is the caller's, because a row and a card allow different numbers
+  // of lines and the same greedy count serves both.
+  return Math.min(lines, max);
 }
 
 /**
@@ -218,11 +248,10 @@ function cardHeights(grid) {
   const columnWidth = Math.max(1, (grid.clientWidth - GAP * (cols - 1)) / cols);
   const line = columnWidth - CARD_INSET;
   const base = state.detailed
-    ? DETAILED_CARD_TEXT_HEIGHT - CARD_NAME_LINES_MAX * CARD_NAME_LINE
+    ? DETAILED_CARD_TEXT_HEIGHT - CARD_NAME_LINES_RESERVED * CARD_NAME_LINE
     : CARD_TEXT_BASE;
   state.rowFont = font;
-  return (item) =>
-    base + Math.min(nameLines(saintName(item), line, ctx), CARD_NAME_LINES_MAX) * CARD_NAME_LINE;
+  return (item) => base + nameLines(saintName(item), line, ctx, CARD_NAME_LINES_MAX) * CARD_NAME_LINE;
 }
 
 function rowHeights(grid) {

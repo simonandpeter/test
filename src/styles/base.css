@@ -28,6 +28,39 @@
  * which is now `svh`, the *small* viewport height: the height with the URL bar
  * showing, which by definition never changes as it comes and goes.
  */
+/*
+ * **The scrollbar's room is held on every route** (author, 2026-09-01: "The
+ * header on Daily and Map page are different widths from the All Saints and
+ * About page, make sure they are the same").
+ *
+ * The header takes one measure everywhere — `--page-max` centred in the window,
+ * base.css §the wide chrome — so nothing in the stylesheet made those two
+ * routes different. What made them different was the window: Daily and Map hold
+ * the page still (`html { overflow: hidden }`, one so the two columns can scroll
+ * themselves and one so the canvas can fill the glass), so neither draws a
+ * classic scrollbar, while All Saints and About do. On a platform with overlay
+ * scrollbars — every phone, and the headless browser the tests run in — the two
+ * are the same width and there is nothing to see; on Windows and Linux the
+ * bar is a real 15 px of window, and the masthead sits 7 px further left on
+ * half the site than on the other half. It is only visible when you cross
+ * between them, which is exactly how the author found it.
+ *
+ * `stable` reserves the gutter whether the bar is drawn or not, so the four
+ * routes are laid out in the same box. It applies to the routes that hold
+ * themselves still too: `overflow: hidden` makes a scroll container, and a
+ * scroll container is what this property is about.
+ *
+ * **Desktop only**, which the author asked for and the measurements agree with:
+ * the gutter is 7 px of a 360 px phone, and a phone has no classic scrollbar to
+ * hold room for in the first place. Below the breakpoint the four routes are
+ * the same width already.
+ */
+@media (min-width: 1024px) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
 body {
   margin: 0;
   min-height: 100svh;

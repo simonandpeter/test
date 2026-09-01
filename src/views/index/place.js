@@ -43,8 +43,40 @@ export function snapshot(state) {
     openFacets: [...state.el.querySelectorAll('details.facet[open]')].map((d) => d.dataset.facet),
     scrollY: window.scrollY,
     carouselAt: carouselOffset(state),
+    /*
+     * **The result, not the recipe** (2026-09-01). The saint page carries a
+     * column of "the advanced search results in All Saints where you just came
+     * from" (author), and the honest way to give it those is the list itself:
+     * the slugs the Index had matched, in the order it had them.
+     *
+     * The alternative was to hand over `filters` and re-run `applyFilters`
+     * there, and it is worse in two ways that matter. The query is answered by
+     * a MiniSearch index built once and held in the Index's own state, so a
+     * second run would either rebuild it or answer the query differently from
+     * the page it claims to be showing; and `months` needs the feast index,
+     * which is calendar work this page has no reason to do. A list of slugs is
+     * exactly what was on the screen.
+     */
+    shown: state.shownCards.map((card) => card.slug),
   };
 }
+
+/**
+ * The last snapshot, for readers of it outside the Index.
+ *
+ * views/saints.js has always kept one to put itself back with; this only makes
+ * it legible to the saint page, which needs the same set for the column beside
+ * the life. Module scope, so it lives as long as the document and dies with a
+ * reload — the same life as the Index's own memory of where the reader was.
+ */
+let kept = null;
+
+export function keep(snap) {
+  kept = snap;
+  return snap;
+}
+
+export const lastSearch = () => kept;
 
 /**
  * Puts a snapshot back into both the state and the controls, because

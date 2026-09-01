@@ -15,6 +15,7 @@ import { gregorianToJdn } from '../lib/jdn.js';
 
 import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
+import * as store from '../lib/store.js';
 import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
@@ -35,6 +36,7 @@ import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, pa
 import { countFor } from './daily/entries.js';
 import { headingFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
 import { paintDay } from './daily/panel.js';
+import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
 import { cycleName } from '../ui/cycle-name.js';
@@ -92,6 +94,10 @@ export function render(el, { data, params, router }) {
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
+    /* Cards or list under *Also commemorated* (author, 2026-09-01), read from
+       the reader's last answer. views/daily/panel.js writes it onto the list as
+       a class, which is why nothing here has to repaint when it changes. */
+    registerView: store.getSettings().registerLayout === 'list' ? 'list' : 'cards',
   });
 
   el.innerHTML = `
@@ -125,6 +131,18 @@ export function render(el, { data, params, router }) {
                 </div>
               </div>
             </div>
+            <!--
+              Under the weekly display, in the author's own placement
+              (2026-09-01). Inside the span rather than after it, and the span
+              is a grid whose first row holds the week and the month stacked on
+              one another — so a third child lands in a second row, under
+              whichever of the two is showing, and moves down when the month
+              unfurls. Outside the span it would be a third flex item of the
+              controls row, and a full-width one there makes the row *wrap*:
+              the week strip goes to its own line and the whole picker's
+              geometry moves, which four of this page's tests caught at once.
+            -->
+            ${fullCalButton()}
           </div>
       </div>
       <!--
@@ -145,7 +163,30 @@ export function render(el, { data, params, router }) {
         reading order, which is why the wrappers dissolve there.
       -->
       <div class="cal-main" data-col="main">
-        <h1 class="cal-date"></h1>
+        <!--
+          **The date and the two steps beside it** (author, 2026-09-01: "add
+          some &lt;Yesterday and Tomorrow&gt; Buttons to the right of today's date
+          print in large font, right justified to the margin between left and
+          right columns"). Desktop only — a phone already steps the day by
+          swiping the panel and by the rail above it, and two more targets on a
+          360 px line would crowd the date out of it.
+
+          The wrapper exists so the gold rule under the date can still run the
+          column's full measure: it used to hang off the heading itself, which
+          is now only as wide as its own words. Everything the rule cared about
+          — that there is a liturgy line under it and that the line is not
+          empty — is asked of the wrapper instead, and the sibling it asks
+          about is unchanged.
+        -->
+        <div class="cal-head">
+          <h1 class="cal-date"></h1>
+          <nav class="day-step" aria-label="${STRINGS.calendar.weekLabel}">
+            <button type="button" data-dstep="-1" aria-label="${STRINGS.calendar.prevDay}">
+              <span aria-hidden="true">‹</span>${STRINGS.calendar.yesterday}</button>
+            <button type="button" data-dstep="1" aria-label="${STRINGS.calendar.nextDay}">
+              ${STRINGS.calendar.tomorrow}<span aria-hidden="true">›</span></button>
+          </nav>
+        </div>
         <p class="cal-liturgy utility" data-liturgy></p>
         <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>
         <div class="shelves" data-shelves></div>
@@ -156,6 +197,35 @@ export function render(el, { data, params, router }) {
     </div>`;
 
   el.querySelector('[data-month]').addEventListener('click', toggleMonth);
+  // Through `select`, like every other way of changing the day, so the two
+  // panels roll and the rail follows rather than the page being repainted
+  // underneath the reader.
+  el.querySelectorAll('[data-dstep]').forEach((b) => {
+    b.addEventListener('click', () => select(addDaysIso(state.selected, Number(b.dataset.dstep))));
+  });
+
+  /*
+   * Cards or list under *Also commemorated* (author, 2026-09-01).
+   *
+   * **Delegated on the view, not bound to the buttons**, because the buttons
+   * are inside the day panel and the panel is rebuilt every time the reader
+   * steps a day — a listener on the button itself would be alive for exactly
+   * one day and then silently gone. This one outlives every repaint, and the
+   * only thing it touches is a class and a pair of aria-pressed attributes:
+   * both faces are the same markup (views/daily/panel.js says why), so there is
+   * nothing to re-render.
+   */
+  const onRegisterView = (e) => {
+    const button = e.target.closest?.('[data-reg-view]');
+    if (!button || !el.contains(button)) return;
+    const next = button.dataset.regView;
+    if (next === state.registerView) return;
+    state.registerView = next;
+    store.setSetting('registerLayout', next);
+    paintRegisterView();
+  };
+  el.addEventListener('click', onRegisterView);
+  state.cleanups.push(() => el.removeEventListener('click', onRegisterView));
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
 
@@ -207,6 +277,7 @@ export function render(el, { data, params, router }) {
     wireDayKeys(),
     wireDaySwipe(el),
     wireFastBubble(el),
+    wireFullCal(el),
   );
 
   paintGate();
@@ -259,6 +330,25 @@ const announceDay = (iso) =>
  * roll to run; everything else about a swiped day and a clicked or
  * keyboard-stepped one is identical.
  */
+/**
+ * Puts the reader's answer onto whichever register lists are in the document.
+ *
+ * Both panels are asked, not just the visible one: a day change rolls a new
+ * panel in beside the old one, and a list built during the roll would otherwise
+ * arrive in the other face and change under the reader as the roll landed.
+ * `paintDay` writes the same class on a cold paint; this is the live change.
+ */
+function paintRegisterView() {
+  const view = state.registerView === 'list' ? 'list' : 'cards';
+  for (const list of state.el.querySelectorAll('[data-register]')) {
+    list.classList.toggle('is-cards', view === 'cards');
+    list.classList.toggle('is-list', view === 'list');
+  }
+  for (const button of state.el.querySelectorAll('[data-reg-view]')) {
+    button.setAttribute('aria-pressed', String(button.dataset.regView === view));
+  }
+}
+
 function select(iso, swipeDx) {
   if (iso === state.selected) return;
   const forward = iso > state.selected;

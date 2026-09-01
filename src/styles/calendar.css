@@ -810,8 +810,24 @@
 
 /* ---- the day ---------------------------------------------------------- */
 
-.cal-date {
+.cal-head {
   margin-bottom: var(--space-4);
+}
+
+/* **The date, and the two steps beside it** (author, 2026-09-01: "add some
+   &lt;Yesterday and Tomorrow&gt; Buttons to the right of today's date print in
+   large font, right justified to the margin between left and right columns").
+
+   Baselines rather than boxes: the words sit on the same line as the date
+   however tall the heading's clamp makes it, and `space-between` is what puts
+   them against the right edge of the left column — which is the margin between
+   the columns, because the column *is* that wide.
+
+   Desktop only, so the nav is hidden here and shown at the breakpoint. A phone
+   already has three ways to change the day (the rail, a swipe across the panel,
+   the month grid) and no room on a 360 px line for a fourth. */
+.day-step {
+  display: none;
 }
 
 /* Slot viewport: the day rolls; the chrome around it does not. `pan-y` keeps
@@ -926,7 +942,7 @@
 }
 
 .cal-controls { order: 0; }
-.cal-date { order: 1; }
+.cal-head { order: 1; }
 .cal-liturgy { order: 2; }
 .cal [data-slot='main'] { order: 3; }
 .cal [data-slot='side'] { order: 4; }
@@ -968,14 +984,67 @@
     min-width: 0;
     min-height: 0;
     overflow-y: auto;
-    /* Room for the scrollbar to sit beside the text rather than over the
-       column's last few characters. */
-    padding-right: var(--space-2);
+    /* **No bar down either column** (author, 2026-09-01: "Remove the scroll bar
+       from the Daily page columns"). Two of them on one page is two vertical
+       rules the reader did not ask for, and neither is telling them anything
+       the column's own motion does not. The column still scrolls by every means
+       it did — wheel, trackpad, keyboard, the scrollbar gesture itself — it
+       simply does not draw the bar.
+
+       The `padding-right` that used to hold the bar clear of the text goes with
+       it: it was room for a thing that is no longer there. */
+    scrollbar-width: none;
+  }
+
+  .cal-main::-webkit-scrollbar,
+  .cal-side::-webkit-scrollbar {
+    display: none;
   }
 
   .cal-main {
     grid-column: 1;
     grid-row: 1 / span 2;
+  }
+
+  /* The date and its two steps share a line, the steps against the right edge
+     of the left column (author, 2026-09-01). `baseline` rather than `center`,
+     so the words sit on the heading's own line however the h1's clamp resolves.
+     The heading takes the slack, which is what keeps the steps hard against the
+     margin between the columns rather than floating in beside a short date. */
+  .cal-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+  .day-step {
+    display: flex;
+    flex: none;
+    align-items: baseline;
+    gap: var(--space-6);
+  }
+
+  /* "in large font": h2's size, which is the largest thing on the page that is
+     not the date itself, so the pair reads as part of the heading line rather
+     than as controls that happen to be near it. */
+  .day-step button {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: clamp(18px, 1.9vw, 26px);
+    line-height: 1.25;
+    color: var(--ink-soft);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .day-step button:hover {
+    color: var(--ink);
   }
 
   /* Top of the right column, above the readings that come with the day.
@@ -1018,7 +1087,11 @@
      A register row is a name at one edge and a thumbnail at the other, and
      at 1440 px the left column is a thousand pixels of mostly nothing
      between them. */
-  .cal-main .register-cards {
+  /* The list face only, since 2026-09-01. A card grid *wants* the column's
+     whole width — that is what "separated in columns depending on window size"
+     asks for, and capping it at 80ch would hold the fourth column back at
+     exactly the widths that had just made room for it. */
+  .cal-main .register-cards.is-list {
     max-width: 80ch;
   }
 
@@ -1480,6 +1553,131 @@
   text-overflow: ellipsis;
 }
 
+/* ---- Also commemorated: list or cards (2026-09-01) ----------------------- */
+
+/* Author: "Have an option near the 'Also Commemorated' subheading to display
+   them as a List or as Cards (Cards by default), site remembers what you left
+   it as." Near the subheading is where it sits: one line, the heading taking
+   the slack, the pair of words at the far end of it. */
+.register-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.register-head .register-heading {
+  flex: 1 1 auto;
+}
+
+.register-view {
+  display: flex;
+  flex: none;
+  gap: var(--space-3);
+}
+
+.register-view button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.register-view button:hover {
+  color: var(--ink);
+}
+
+/* The one that is showing is named in ink and underlined, the other is not:
+   the same "you are here" the Index's own view chips use, and the reason it is
+   not a pair of framed toggles is that this is two words beside a heading. */
+.register-view button[aria-pressed='true'] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* **Desktop only**, in those words, and the list is what a phone gets. A card
+   grid at 360 px is one column of cards, which is a list with the pictures made
+   larger — the toggle would offer a choice between a thing and itself. */
+@media (max-width: 1023.98px) {
+  .register-view {
+    display: none;
+  }
+}
+
+/* Cards: the Index's own card, laid out in as many columns as the window has
+   room for (author: "behave the same as the cards view on All Saints page on
+   desktop, separated in columns depending on window size").
+
+   190 px is `MIN_COLUMN` from lib/virtual-grid.js — the same floor the Index's
+   own grid packs to, so the two pages break into another column at the same
+   width rather than at two widths that happen to be near each other. `auto-fill`
+   is what does the packing here; the Index needs a virtualiser for it because it
+   lays out 862 cards against a scroll position, and a register is a dozen. */
+@media (min-width: 1024px) {
+  /* Multi-column rather than a grid of equal rows, and the difference is the
+     point of the borrowing. The Index packs its cards shortest-column-first, so
+     a tall icon beside a short one leaves no hole; a `repeat(auto-fill, …)`
+     grid puts every card in a row as tall as the tallest in that row, which on
+     ten saints with two pictures between them is a page of air. Columns pack
+     the same way the Index's own layout does, and `break-inside: avoid` is what
+     keeps a card whole across the break. */
+  .register-cards.is-cards {
+    display: block;
+    columns: 190px;
+    column-gap: var(--space-4);
+  }
+
+  .register-cards.is-cards li.reg-card {
+    break-inside: avoid;
+    margin-bottom: var(--space-4);
+  }
+
+  /* The row turned on its side: the picture leads instead of trailing, and the
+     body sits under it. `order` rather than a second markup, which is what lets
+     the toggle be a class — see views/daily/panel.js. */
+  .register-cards.is-cards li.reg-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: var(--space-2);
+  }
+
+  .register-cards.is-cards .reg-thumb {
+    order: -1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  /* Whole, not cropped to a square: a card has the width to show the icon as it
+     is, which is the thumbnail's only reason for being square in a row. */
+  .register-cards.is-cards .reg-thumb img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* No frame around a picture that is not coming (DESIGN.md, and the author's
+     own instruction of 2026-08-26). A row keeps the empty slot so the pictures
+     stay in one column; a card grid has no column to keep. */
+  .register-cards.is-cards .reg-thumb.is-blank {
+    display: none;
+  }
+
+  /* The name may take the lines it needs here, as the Index's cards do since
+     2026-09-01 — a card's column is narrow and the register prints whole
+     names. The dates give up their single-line ellipsis with it. */
+  .register-cards.is-cards .reg-sub {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
 /* The church's title for the day — "Venerable, the Great" — is what these
    rows carry that no other card does, so it keeps the register's italic
    serif and sits between the name and the dates. */
@@ -1702,13 +1900,19 @@ a.name-day:hover {
    far down") — the register's own rows, the register-heading's underline,
    all run the column's full measure, and this one read as a stray fragment
    beside them. */
-.cal-date:has(+ .cal-liturgy:not(:empty)) {
+/* **Hung off the wrapper since 2026-09-01**, not off the heading. The heading
+   shares its line with the two day-steps now and is only as wide as its own
+   words; the rule has to run the column's full measure, which is the wrapper's
+   width. What it asks about is unchanged — the liturgy line is still the very
+   next sibling, because the wrapper took the heading's place rather than
+   sitting inside it. */
+.cal-head:has(+ .cal-liturgy:not(:empty)) {
   margin-bottom: var(--space-2);
   padding-bottom: var(--space-1);
   position: relative;
 }
 
-.cal-date:has(+ .cal-liturgy:not(:empty))::after {
+.cal-head:has(+ .cal-liturgy:not(:empty))::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2052,5 +2256,323 @@ a.name-day:hover {
   html[data-route='calendar'] .cal {
     height: 100%;
     min-height: 0;
+  }
+}
+
+/* ---- the full-screen calendar (2026-09-01) ------------------------------- */
+
+/*
+ * Author: "Make an expandable calendar button under the weekly display called
+ * 'Full Screen Calendar' that opens up a full screen calendar modal in the same
+ * style as the smaller one but with lots more detail, with text of the fast
+ * days and feasts and periods like dormition and great lent, christmas etc."
+ *
+ * "In the same style as the smaller one" is taken literally where it can be:
+ * the same three fast tones, the same seven columns beginning on Monday, the
+ * same gold for a feast and rubric for liturgical time. What changes is the
+ * room — a cell here is a paragraph rather than a numeral, which is where the
+ * detail goes.
+ */
+
+/* The button sits under the week rather than beside it. It is the second row of
+   `.cal-span`'s own grid (views/calendar.js says why it is there rather than in
+   the controls row), so nothing here has to place it — only give it the quiet
+   weight of a secondary control. */
+.fullcal-open {
+  justify-self: start;
+  margin-top: var(--space-2);
+  padding: var(--space-1) 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  text-align: left;
+  cursor: pointer;
+}
+
+.fullcal-open:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Full screen means the window, not a large box in the middle of it. */
+/* `100vw`, not `100%` and not `inset: 0`, and the difference is fifteen pixels
+   of scrollbar gutter: past 1024 px the root holds that room open on every
+   route (base.css), so both of the other two resolve against a box a scrollbar
+   narrower than the window and the modal stopped short of one edge — with the
+   backdrop showing through the strip it left. `vw` is the window itself, which
+   is what "full screen" meant. It cannot push the page sideways: the dialog is
+   in the top layer and clips its own overflow. */
+.fullcal {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--gesso);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.fullcal::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+.fullcal .fc-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.fullcal .fc-title h2 {
+  margin: 0;
+}
+
+.fullcal .fc-church {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: none;
+}
+
+.fullcal .fc-step,
+.fullcal .fc-close {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.fullcal .fc-step {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.fullcal .fc-step:hover,
+.fullcal .fc-close:hover {
+  color: var(--ink);
+}
+
+/* The grid and the month's seasons beside it. One column on a phone, where the
+   strip reads as a summary above the grid rather than as a margin note. */
+.fullcal .fc-body {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6) var(--space-8);
+  height: calc(100dvh - 92px);
+  overflow-y: auto;
+  /* No bar here either, for the same reason the Daily columns have none. */
+  scrollbar-width: none;
+}
+
+.fullcal .fc-body::-webkit-scrollbar {
+  display: none;
+}
+
+.fullcal .fc-weekdays,
+.fullcal .fc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.fullcal .fc-weekdays {
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-wd {
+  /* On the cell's own left edge, not centred in the column: the cells beneath
+     are a left-aligned stack of words, and a centred heading over them reads as
+     belonging to neither neighbour. The inset is the cell's own padding. */
+  padding-inline-start: var(--space-2);
+}
+
+/* A cell is a small stack of facts, left-aligned like the prose it quotes, and
+   tall enough to hold three of them without the grid becoming ragged. */
+.fullcal .fc-day {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 92px;
+  padding: var(--space-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-cell);
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.fullcal .fc-day:hover {
+  background: color-mix(in srgb, var(--field) 60%, transparent);
+}
+
+.fullcal .fc-num {
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+/* The numeral takes the fast's own colour, exactly as the small month view's
+   does — one day cannot be told two things about its fast by two grains. */
+.fullcal .fc-day.fast-fast .fc-num,
+.fullcal .fc-day.fast-fast .fc-fast {
+  color: var(--fast-strict);
+}
+
+.fullcal .fc-day.fast-fish .fc-num,
+.fullcal .fc-day.fast-fish .fc-fast {
+  color: var(--fast-fish);
+}
+
+.fullcal .fc-day.fast-free .fc-fast {
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-fast,
+.fullcal .fc-occasion,
+.fullcal .fc-count {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.fullcal .fc-occasion {
+  color: var(--rubric);
+}
+
+.fullcal .fc-count {
+  color: var(--ink-soft);
+  margin-top: auto;
+}
+
+/* A Great Feast is gold at the edge and ink in the words, which is the rule
+   the day's own chip keeps: --gold on gesso is 2.78:1 and cannot carry text. */
+.fullcal .fc-feast {
+  font-size: 12px;
+  line-height: 1.3;
+  padding: 1px var(--space-1);
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  border-radius: var(--radius-cell);
+}
+
+.fullcal .fc-day.is-today {
+  border-color: var(--rubric);
+}
+
+.fullcal .fc-day.is-selected {
+  background: color-mix(in srgb, var(--field) 80%, transparent);
+  border-color: var(--ink-soft);
+}
+
+.fullcal .fc-blank {
+  min-height: 0;
+}
+
+.fullcal .fc-list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.fullcal .fc-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.fullcal .fc-period.fast-fast .fc-period-name {
+  color: var(--fast-strict);
+}
+
+.fullcal .fc-period.fast-fish .fc-period-name {
+  color: var(--fast-fish);
+}
+
+.fullcal .fc-period-span {
+  color: var(--ink-soft);
+}
+
+@media (min-width: 900px) {
+  .fullcal .fc-body {
+    grid-template-columns: minmax(0, 1fr) clamp(16rem, 22%, 22rem);
+    align-items: start;
+  }
+
+  .fullcal .fc-day {
+    min-height: 112px;
+  }
+}
+
+/*
+ * **A phone gets the month as a list, not as a grid** (2026-09-01).
+ *
+ * Seven columns of 44 px cannot hold "Oil, Wine and Fish Allowed" and "the
+ * Transfiguration, in the Dormition Fast", and the first draft of this proved
+ * it by spilling both out of their cells. The instruction was for *more*
+ * detail, so the grid is what gives way rather than the words: one day to a
+ * row, each carrying its own weekday name, which the column position was
+ * carrying before.
+ *
+ * 700 px is where seven columns stop being able to hold a phrase — the same
+ * width the carousel uses to decide a phone from a desk, and for a related
+ * reason.
+ */
+@media (max-width: 699.98px) {
+  .fullcal .fc-weekdays {
+    display: none;
+  }
+
+  .fullcal .fc-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* No leading blanks in a list: they were holding a column position that no
+     longer exists. */
+  .fullcal .fc-blank {
+    display: none;
+  }
+
+  .fullcal .fc-day {
+    min-height: 0;
+  }
+
+  /* The day's own name, which the column heading used to say. */
+  .fullcal .fc-day-name {
+    margin-inline-start: var(--space-2);
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+
+  .fullcal .fc-count {
+    margin-top: 0;
+  }
+}
+
+/* In the grid the column heading names the weekday, so the cell does not. */
+@media (min-width: 700px) {
+  .fullcal .fc-day-name {
+    display: none;
   }
 }

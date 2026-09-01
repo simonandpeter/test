@@ -540,6 +540,25 @@ html.is-rolling #view {
   overflow: hidden;
 }
 
+/* **A card prints the whole name** (author, 2026-09-01: "Make sure all the CARD
+   view cards, NOT row view cards, display the full name and don't do any '...'
+   at the end"). The two-line clamp above is the row's, and stays the row's: a
+   row has the page's whole width and reaches three lines only for the five
+   longest names in the corpus, while a card's column is 190 px at its narrowest
+   and cut a third of the site's names in half.
+
+   No clamp at all rather than a larger one, because a clamp is what puts the
+   ellipsis there. The bound that remains is `CARD_NAME_LINES_MAX` in
+   views/index/grid.js — the virtualiser has to know the card's height before
+   the card exists, so the count is decided there and this only has to agree
+   not to cut what that reserved room for. */
+.index-card:not(.is-row) .index-name {
+  display: block;
+  -webkit-line-clamp: none;
+  line-clamp: none;
+  overflow: visible;
+}
+
 .index-name::after {
   content: '';
   position: absolute;
@@ -769,16 +788,24 @@ html.is-rolling #view {
 }
 
 /* Shuffle wears the mode toggle's dress - a word beside the heading - and
-   shows only on the carousel face: the search face already owns chance through
-   the sort control and the die, and a second way to the same deal would be two
-   controls disagreeing about one state. The heading keeps them apart with the
-   head's own gap; `margin-left: auto` walks the pair to the right edge. */
+   stands on **both** faces since 2026-09-01 (author: "in Advanced search mode,
+   keep the shuffle button from Carousel mode and make it so it shuffles the
+   current filtered search, changing only the order type but keeping the other
+   filters unchanged").
+
+   It was hidden on the search face on the reasoning that the sort control there
+   already owns chance, and that two ways to one state would be two controls
+   disagreeing. The second half of that was the real worry and it is answered
+   rather than avoided: the press writes Random into the sort control through
+   `setChoice` (views/saints.js), so the two never disagree — the button is a
+   shortcut to a state the control then shows. What the reasoning missed is that
+   Random *is already selected* most of the time, and re-selecting an option
+   that is already chosen deals no new hand: without this button a reader on the
+   search face had no way to ask for another one at all.
+
+   `margin-left: auto` walks the pair to the right edge. */
 .shuffle-btn {
   margin-left: auto;
-}
-
-.is-search .shuffle-btn {
-  display: none;
 }
 
 /* No frame around it (author, 2026-08-27: "Remove the bubble frame around the
@@ -1119,64 +1146,64 @@ html.is-rolling #view {
    or two wide ones sharing a column — views/index/modes.js groups them and
    says why the wrapper exists rather than a two-row grid over the track.
 
-   The three lift classes are the spread: a cell rests low, high or mid inside
-   the track's own height, dealt from its place in the run so a card and its
-   clones share one resting place. `stretch` is what the row used to do to
-   every card, and is what made it a line of tiles standing on a floor. */
+   **The three lift classes are gone** (author, 2026-09-01: "just fill in the
+   gaps ... and just make it a fully filled horizontally scrolling stack"). A
+   cell used to rest low, high or mid inside the track's height, dealt from its
+   place in the run — the answer to "not all lined up at the bottom" back when a
+   column held one or two cards and had slack to be arranged inside. The packer
+   fills the column now, so the scatter had nothing left to scatter *through*:
+   it was only holding the holes open.
+
+   `space-between` rather than `start`, and the reason is the one number the
+   packer cannot know. It budgets 64 px for a caption (`CAPTION_H` in
+   views/index/modes.js) because a name that wraps to three lines at a 150 px
+   column really is that tall, and budgeting the common case instead would push
+   the last card of every column past the fold — the one error a reader sees.
+   But the common case is 46, so a column six deep renders a hundred pixels
+   shorter than it was packed for, and those hundred pixels are the remaining
+   holes. Handing them to the gaps closes every column onto the foot of the row
+   without the packer having to predict a line wrap: over-estimating now costs a
+   slightly airier column rather than a short one. */
+/* And the column is at least as deep as the room it was packed against, so the
+   row itself reaches the foot of the window rather than stopping wherever its
+   deepest column happened to render. `min-height`, never `height`: a name that
+   wraps further than the budget allowed for makes the column taller and every
+   other column stretches to match, which is a slightly deeper row — where a
+   fixed height would have cut the last caption in half. */
 .cx-cell {
   flex: none;
   display: grid;
+  align-content: space-between;
   gap: var(--space-3);
   width: var(--cx-w);
+  min-height: var(--cx-fill, var(--cx-space, 480px));
 }
 
-.cx-cell.is-low {
-  align-self: end;
-}
+/* **No row template for a stack** (2026-09-01). `1fr 1fr` was two wide icons
+   sharing one column's height, from when that was the only kind of stack there
+   was; a column goes up to twelve deep now and its cards are different heights
+   on purpose, so equal rows would stretch a caption to the height of an icon.
+   The class is kept because it says "more than one saint here", which is what
+   `is-stack` has always meant and what the tests read. */
 
-.cx-cell.is-high {
-  align-self: start;
-}
+/* **The column's fit is guaranteed here, not estimated in JS** (2026-08-28),
+   and **the guarantee is now per picture rather than per depth** (2026-09-01).
 
-.cx-cell.is-mid {
-  align-self: center;
-}
+   It was four rules keyed on `data-n`, each giving every picture in the column
+   an equal share of the room. That is only right when the pictures are the same
+   height: a 250 px icon sharing a column with an 80 px one was cut to 190 to
+   make the shares equal, and the 60 px it surrendered opened a hole the packer
+   had already proved was not there. It also needed one rule per depth, and
+   columns go twelve deep now.
 
-/* Two wide icons in the space one tall one asks for. Each takes half the
-   ceiling, so the pair stands as tall as a single card and the row's rhythm is
-   unchanged — the column width never moves, which is what the loop measures. */
-.cx-cell.is-stack {
-  grid-template-rows: 1fr 1fr;
-}
-
-/* **The column's fit is guaranteed here, not estimated in JS** (2026-08-28).
-   `carouselCells` packs by an estimate — a caption's height is not knowable
-   before it wraps — and an estimate that is low by a little puts the last card
-   past the fold, which is the one error a reader sees. So the depth is written
-   onto the cell as `data-n` and each picture is capped by it: the column's
-   share of the room, less its captions and the gaps between them. The packer
-   decides *how many* saints share a column; this decides that they fit.
-
-   `--cx-caption` is the same 64 px `CAPTION_H` in views/index/modes.js, and the
-   two are one decision in two files. */
-.carousel {
-  --cx-caption: 64px;
-}
-
-.cx-cell[data-n='1'] .cx-media img {
-  max-height: calc(var(--cx-space, 480px) - var(--cx-caption));
-}
-
-.cx-cell[data-n='2'] .cx-media img {
-  max-height: calc((var(--cx-space, 480px) - 2 * var(--cx-caption) - var(--space-3)) / 2);
-}
-
-.cx-cell[data-n='3'] .cx-media img {
-  max-height: calc((var(--cx-space, 480px) - 3 * var(--cx-caption) - 2 * var(--space-3)) / 3);
-}
-
-.cx-cell[data-n='4'] .cx-media img {
-  max-height: calc((var(--cx-space, 480px) - 4 * var(--cx-caption) - 3 * var(--space-3)) / 4);
+   `--cx-cap` is the height the packer budgeted for *this* picture when it
+   decided this card belonged in this column — written onto the card in
+   views/index/modes.js. What is drawn is what was budgeted, so the column
+   cannot exceed the room and nothing is scaled down to satisfy an average.
+   The fallback is the row-wide ceiling, which is what an unpacked row (no
+   `space` yet) gets. */
+.cx-cell .cx-media img {
+  max-height: var(--cx-cap, var(--cx-max-h));
 }
 
 /* **No blanket halving any more** (2026-08-28). This halved the ceiling for a

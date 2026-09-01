@@ -325,9 +325,41 @@ export function paintDay({ main, side }) {
       return registerRow(saint, title, transition);
     })
     .join('');
+  /*
+   * **Two presentations of one list** (author, 2026-09-01: "Make the Also
+   * Commemorated saint cards on desktop behave the same as the cards view on
+   * All Saints page on desktop, separated in columns depending on window size.
+   * Have an option near the 'Also Commemorated' subheading to display them as a
+   * List or as Cards (Cards by default), site remembers what you left it as").
+   *
+   * **The markup does not change between them, only a class.** A register entry
+   * has always been a name, a subtitle and a thumbnail in that document order,
+   * which is a row when it is laid out in a line and a card when it is laid out
+   * in a column with the picture pulled to the top — so the toggle is a class
+   * on the list and nothing is re-rendered to change face. That matters more
+   * here than it would elsewhere: the panel is rebuilt on every day change, so
+   * a mode that needed its own markup would have to be threaded through the
+   * paint, and a listener inside the panel would die with it every time the
+   * reader stepped a day. The listener is on the view (views/calendar.js) and
+   * the state is a class.
+   */
+  const view = state.registerView === 'list' ? 'list' : 'cards';
+  const control = `<div class="register-view" role="group" aria-label="${STRINGS.calendar.registerView}">
+      ${['cards', 'list']
+        .map(
+          (mode) =>
+            `<button type="button" data-reg-view="${mode}" aria-pressed="${view === mode}">${
+              mode === 'cards' ? STRINGS.calendar.viewCards : STRINGS.calendar.viewList
+            }</button>`,
+        )
+        .join('')}
+    </div>`;
   const register = registerEntries.length
-    ? `<h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>
-       <ul class="register register-cards">${rows}</ul>`
+    ? `<div class="register-head">
+         <h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>
+         ${control}
+       </div>
+       <ul class="register register-cards is-${view}" data-register>${rows}</ul>`
     : '';
 
   /*
