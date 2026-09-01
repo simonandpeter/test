@@ -334,8 +334,18 @@ function resolveCardWidth(carouselEl) {
  * the same names to two and three lines — 94 at the worst — so the same 64
  * under-budgeted the one surface with no room to spare, and the deepest column
  * on a phone ran past the fold.
+ *
+ * **The narrow figure was written as 72, not the 94 measured above it**
+ * (2026-09-02): a single-image column at a short desktop window — 1024x560
+ * resolves a 166 px column, narrow enough for this branch though the window
+ * is nobody's phone — rendered up to 24 px taller than its own budget under
+ * the runner's fallback face, which is the 94-72 the comment already named.
+ * The single card in such a column has no gap to hand the difference to, so
+ * `align-items: stretch` on the track carried the overflow into every column
+ * in the row and put a scrollbar under a page whose whole content still fit
+ * the corpus's more common widths.
  */
-const captionH = (cardWidth) => (cardWidth <= 200 ? 72 : 64);
+const captionH = (cardWidth) => (cardWidth <= 200 ? 94 : 64);
 
 /** The gap between two cards stacked in one cell (`--space-3`). */
 const CELL_GAP = 12;
