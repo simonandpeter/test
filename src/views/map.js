@@ -2337,6 +2337,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
         (e.clientX - previous.clientX) / box.width,
         (e.clientY - previous.clientY) / box.height,
         coverFractions(box.width, box.height, ASPECT),
+        ceilingOf(canvas),
       ),
     );
   });
@@ -2358,7 +2359,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     if (pan) {
       if (!canPan(canvas)) return;
       e.preventDefault();
-      set(panBy(view, -pan[0], -pan[1], frameOf(canvas)));
+      set(panBy(view, -pan[0], -pan[1], frameOf(canvas), ceilingOf(canvas)));
       return;
     }
     if (e.key === '+' || e.key === '=') {
@@ -2896,11 +2897,29 @@ function paintCanvas(canvas, cards) {
    */
   const haloed = fanned.filter((d) => d.card.slug === selected || shownState(d.state));
   if (haloed.length) {
-    const layer = document.createElement('canvas');
-    layer.width = canvas.width;
-    layer.height = canvas.height;
+    /*
+     * **One offscreen canvas, kept and reused, not one made per frame**
+     * (2026-09-02). At rest almost every located saint's halo shows, so
+     * `haloed.length` is rarely zero — which meant a fresh full-resolution
+     * canvas (over a million pixels at 2x DPR on a phone) was allocated and
+     * thrown away on every single drag and zoom frame, the exact frame this
+     * layer exists to keep cheap. Kept on the visible canvas itself so a
+     * second map on the page, if there ever is one, does not share it;
+     * resized only when the picture's own backing store changes size, and
+     * cleared every frame it is drawn into rather than replaced.
+     */
+    let layer = canvas.__haloLayer;
+    if (!layer) {
+      layer = document.createElement('canvas');
+      canvas.__haloLayer = layer;
+    }
+    if (layer.width !== canvas.width || layer.height !== canvas.height) {
+      layer.width = canvas.width;
+      layer.height = canvas.height;
+    }
     const lc = layer.getContext('2d');
     lc.setTransform(dpr, 0, 0, dpr, 0, 0);
+    lc.clearRect(0, 0, w, h);
     for (const { where, x, y, card } of haloed) {
       // Everything but the chosen saint falls back while one is chosen — on
       // the layer, so the single `GLOW_MAX` composite below still bounds the

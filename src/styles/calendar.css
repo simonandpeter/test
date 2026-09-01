@@ -1293,6 +1293,21 @@
   }
 }
 
+/*
+ * **Gone below 760 px** (author, 2026-09-02: "remove the '...continue
+ * reading' button from main saint card on mobile"), reversing the request
+ * that put it there on 2026-09-01. The name above it still opens the same
+ * page, so nothing a phone reader could reach is lost — only the second,
+ * redundant way in. A hero with no picture keeps it at 760 px and up: that
+ * width never gets the paragraph-embedded copy (`.hero.has-media .hero-lede`
+ * above), so this is still its only way in there.
+ */
+@media (max-width: 759px) {
+  .hero-more-alone {
+    display: none;
+  }
+}
+
 .hero-more:hover {
   box-shadow: 0 2px 5px -2px rgb(0 0 0 / 0.45);
   text-decoration: underline;

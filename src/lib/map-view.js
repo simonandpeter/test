@@ -167,7 +167,17 @@ export function zoomAbout(view, factor, ax = 0.5, ay = 0.5, frame = WHOLE, max =
  * which is what dividing by the scale buys — the land keeps pace with the
  * finger at every zoom instead of racing it.
  */
-export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
+/*
+ * **`max` matters even though a pan never changes `scale`** (2026-09-02).
+ * `clampView` re-clamps the scale it is handed, and its own default is the
+ * desktop ceiling — so a pan on a narrower window, where `maxScaleFor` had
+ * legitimately allowed a scale past `MAX_SCALE`, silently dragged the reader
+ * back to 240x on the next pointer move. Desktop never saw it: its own
+ * ceiling *is* `MAX_SCALE`, so clamping against the wrong default was a
+ * no-op there. Every caller now needs its own `ceilingOf(canvas)`, the same
+ * one `zoomAbout` already takes.
+ */
+export const panBy = (view, dxFraction, dyFraction, frame = WHOLE, max = MAX_SCALE) =>
   clampView(
     {
       ...view,
@@ -175,6 +185,7 @@ export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
       cy: view.cy - (dyFraction * frame.fy) / view.scale,
     },
     frame,
+    max,
   );
 
 /**

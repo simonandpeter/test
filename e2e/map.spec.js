@@ -502,6 +502,25 @@ test('the map can zoom to its ceiling', async ({ page }) => {
   await zoomedToCeiling(page);
 });
 
+test('panning past the desktop ceiling does not snap the zoom back to it', async ({ page }) => {
+  /*
+   * Author: zoomed in on a phone past 240x, "when you scroll the map, it
+   * zooms back out to 240x. sometimes doesnt even let me stay zoomed in."
+   *
+   * `panBy` re-clamped the scale it was handed against its own default —
+   * the desktop `MAX_SCALE` — rather than the window's own ceiling
+   * (`maxScaleFor`), which only a narrower-than-desktop window can ever
+   * exceed. Desktop never showed this: its own ceiling *is* 240. The
+   * keyboard reaches the same `panBy` call a touch drag does, and needs no
+   * synthetic pointer gymnastics to prove the fix.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const before = await zoomedToCeiling(page);
+  await page.locator('[data-map]').press('ArrowLeft');
+  const after = Number((await page.locator('[data-zoom-level]').textContent()).replace('×', ''));
+  expect(after, 'a pan changed the zoom level').toEqual(before);
+});
+
 test('a press selects the saint and a drag does not, and Profile is the door', async ({ page }) => {
   /*
    * **The dot stopped being the door on 2026-08-31** (author: a press

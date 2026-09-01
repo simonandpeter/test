@@ -43,6 +43,24 @@ test('the world never comes away from the edges of its box', () => {
   }
 });
 
+test('a pan does not clamp the scale to the desktop ceiling on a narrower window', () => {
+  /*
+   * The bug a mobile reader actually hit: zoom past 240x on a window narrow
+   * enough that `maxScaleFor` allows it, then pan — and the pan silently
+   * dropped back to 240x, because `panBy` re-clamped the scale it was
+   * handed against its own default `max` (the desktop `MAX_SCALE`) rather
+   * than the caller's own ceiling. A pan never changes scale on purpose; it
+   * must not change it by accident either.
+   */
+  const ceiling = maxScaleFor(200); // narrow enough to exceed MAX_SCALE
+  assert.ok(ceiling > MAX_SCALE, 'the test premise needs a ceiling above MAX_SCALE');
+  const zoomed = { scale: ceiling, cx: 0.5, cy: 0.5 };
+  const panned = panBy(zoomed, 0.01, 0, WHOLE, ceiling);
+  assert.equal(panned.scale, ceiling);
+  // The default is still the desktop ceiling, for a caller with no window to ask about.
+  assert.equal(panBy({ scale: 500, cx: 0.5, cy: 0.5 }, 0).scale, MAX_SCALE);
+});
+
 test('the centre of the world is the centre of the box, unzoomed', () => {
   const p = toScreen(HOME, 0.5, 0.5);
   near(p.x, 0.5);

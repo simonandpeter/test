@@ -4361,64 +4361,72 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
   expect(Math.abs(wide.corner - wide.right), 'the controls do not end on the right column margin').toBeLessThan(2);
 });
 
-test('the preview ends in a way into the life, on a phone as well as a desktop', async ({ page }) => {
+test('the preview ends in a way into the life, on a desktop; a phone has no second way in', async ({ page }) => {
   /*
    * Author, 2026-09-01: "On Daily main saint page, add a '...continue reading
-   * >' button at the bottom right at the end of the preview text", on both.
-   *
-   * The phone is the half worth stating: there is no preview text there — the
-   * lede needs 760 px — so "at the end of the preview text" cannot be where it
-   * goes, and it sits under the dates instead. What holds at both widths is
-   * that it is present, that it opens the saint, and that it is at the end of
-   * the card's own text column rather than floating somewhere in it.
+   * >' button at the bottom right at the end of the preview text", on both —
+   * **reversed on a phone, 2026-09-02: "remove the '...continue reading'
+   * button from main saint card on mobile"**. What survives is the desktop
+   * half: the inline copy is the last words of the preview, which only
+   * exists from 760 px. Below that the standalone copy this test used to
+   * pin is now hidden outright — the name above it still opens the same
+   * page, so a phone reader loses a second, redundant control and nothing
+   * else.
    */
   await ready(page);
-  for (const width of [1280, 360]) {
-    await page.setViewportSize({ width, height: 900 });
-    await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
-    await page.evaluate(() => document.fonts.ready);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
 
-    /*
-     * Two of these are in the document and exactly one is laid out: the
-     * inline one is the last words of the preview, which only exists from
-     * 760 px, and the standalone one stands in for it below that. So the
-     * visible one is the subject, whichever width this is.
-     */
-    const more = page.locator('.hero-more').filter({ visible: true });
-    await expect(more, `missing at ${width}`).toHaveCount(1);
-    await expect(more).toContainText('continue reading');
-    // Named after the saint, not a bare "continue reading" on a page of them.
-    await expect(more).toHaveAttribute('aria-label', /Lupus/);
+  const more = page.locator('.hero-more').filter({ visible: true });
+  await expect(more).toHaveCount(1);
+  await expect(more).toContainText('continue reading');
+  // Named after the saint, not a bare "continue reading" on a page of them.
+  await expect(more).toHaveAttribute('aria-label', /Lupus/);
 
-    const m = await page.evaluate(() => {
-      const shown = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
-      const lede = document.querySelector('[data-hero-lede]');
-      return {
-        link: shown.getBoundingClientRect(),
-        inLede: lede.contains(shown),
-        dates: document.querySelector('.hero-dates').getBoundingClientRect(),
-        media: document.querySelector('.hero-media').getBoundingClientRect(),
-      };
-    });
-    /*
-     * **Inside the paragraph where there is one** (author, 2026-09-01: "make
-     * the '...continue reading' part of the actual preview paragraph"), which
-     * is why this no longer asks for it to be flush with the column's right
-     * edge — it ends where the sentence ends, as the last words of a
-     * paragraph do. Below 760 px there is no preview and the standalone copy
-     * stands under the dates instead.
-     */
-    expect(m.inLede, `not part of the preview at ${width}`).toBe(width >= 760);
-    expect(m.link.top, `not below the dates at ${width}`).toBeGreaterThan(m.dates.bottom - 1);
-    // And never past the foot of the picture, which is the rule the trim
-    // exists for: the words end where the image does.
-    if (width >= 760) {
-      expect(m.link.bottom, `the preview runs below the picture at ${width}`).toBeLessThan(m.media.bottom + 2);
-    }
-  }
+  const m = await page.evaluate(() => {
+    const shown = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
+    const lede = document.querySelector('[data-hero-lede]');
+    return {
+      link: shown.getBoundingClientRect(),
+      inLede: lede.contains(shown),
+      dates: document.querySelector('.hero-dates').getBoundingClientRect(),
+      media: document.querySelector('.hero-media').getBoundingClientRect(),
+    };
+  });
+  /*
+   * **Inside the paragraph where there is one** (author, 2026-09-01: "make
+   * the '...continue reading' part of the actual preview paragraph"), which
+   * is why this no longer asks for it to be flush with the column's right
+   * edge — it ends where the sentence ends, as the last words of a
+   * paragraph do.
+   */
+  expect(m.inLede, 'not part of the preview').toBe(true);
+  expect(m.link.top, 'not below the dates').toBeGreaterThan(m.dates.bottom - 1);
+  // And never past the foot of the picture, which is the rule the trim
+  // exists for: the words end where the image does.
+  expect(m.link.bottom, 'the preview runs below the picture').toBeLessThan(m.media.bottom + 2);
 
   // And it goes where the name goes.
-  await page.locator('.hero-more').filter({ visible: true }).click();
+  await more.click();
+  await expect(page).toHaveURL(/\/saints\/lupus-the-martyr/);
+});
+
+test('a phone has no continue-reading button on the main saint card', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "remove the '...continue reading' button frpm main
+   * saint card on mobile". Both copies are still in the document — the
+   * standalone one always is, the CSS just no longer shows it below 760 px
+   * — so this reads what a reader actually sees rather than the markup.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  await expect(page.locator('.hero-more').filter({ visible: true })).toHaveCount(0);
+  // The name is still the way in.
+  await page.locator('.hero-name a').click();
   await expect(page).toHaveURL(/\/saints\/lupus-the-martyr/);
 });
 
