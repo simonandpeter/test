@@ -122,6 +122,44 @@
       "uncertainty_km": 150
     }
   ],
+  "track": [
+    {
+      "place": "Antioch",
+      "from": null,
+      "to": 397,
+      "lat": 36.2021,
+      "lon": 36.1608,
+      "uncertainty_km": 15,
+      "note": "Born here and formed here: rhetoric under Libanius, some years as a hermit in the mountains above the city, and then the preaching that earned him his name. The year he left is the one this stay is really about — he was taken to Constantinople at the end of 397 and consecrated in February 398 — so 397 is a departure the sources do fix, unlike the null at the other end, which is birth with no month to it."
+    },
+    {
+      "place": "Constantinople",
+      "from": 398,
+      "to": 404,
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15,
+      "note": "Archbishop from 398, largely against his will. The six years are drawn as one stay although they were not: he was deposed at the Synod of the Oak in 403 and recalled within days, which is too short a journey for a map to draw honestly and is in his life in words instead. The exile that stuck came the following year."
+    },
+    {
+      "place": "Cucusus",
+      "from": 404,
+      "to": 407,
+      "lat": 38.0247,
+      "lon": 36.4986,
+      "uncertainty_km": 25,
+      "note": "Three years of exile in Armenia Secunda, and the one place on this track the corpus did not already record — his own letters are written from here, which is as well attested as anything in his life. The site is identified with Göksun; the 25 km is that identification's own slack, not doubt about the exile."
+    },
+    {
+      "place": "Comana Pontica",
+      "from": 407,
+      "to": null,
+      "lat": 40.36,
+      "lon": 36.65,
+      "uncertainty_km": 150,
+      "note": "He did not travel here to stay: he was being marched to Pityus, further off again, and died on the road on 14 September 407. So the last leg is the forced march itself, and the wide uncertainty is the corpus's own on the place of death rather than anything this track adds."
+    }
+  ],
   "historicity": "attested",
   "related": [
     "athanasius-of-alexandria"

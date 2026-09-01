@@ -156,7 +156,8 @@ const RAIL_FIT_MAX = 30;
 /**
  * How long the dot takes to walk the whole of a chosen saint's rail (author,
  * 2026-09-01: "plays through the saint's life rail differently than through
- * the movement mechanic: the dot goes over the rail smoothly over 5s").
+ * the movement mechanic: the dot goes over the rail smoothly over 5s", and
+ * later the same day "make it from 5s to 3s").
  *
  * **It is deliberately not the `Movement` mechanic**, and the difference is
  * the point of having both. Movement answers "where was everyone in the year
@@ -167,7 +168,7 @@ const RAIL_FIT_MAX = 30;
  * nothing else on the page is keeping. The timeline does not move under it
  * and no other dot stirs.
  */
-const RAIL_PLAY_MS = 5000;
+const RAIL_PLAY_MS = 3000;
 
 /**
  * The rail walk in progress: `{ slug, start }`, or `null`. Module state for
@@ -192,6 +193,50 @@ const smoothstep = (t) => t * t * (3 - 2 * t);
  * flattening it into one.
  */
 const SELECT_DIM = 0.35;
+
+/**
+ * How long the rest of the map takes to fall back, and to come again
+ * (author, 2026-09-01: "ensure there is a fade in fade out as the other
+ * saints go half opacity and the screen centres. same with deselection").
+ *
+ * `FLY_MS` exactly, because the two are one gesture: the flight and the fade
+ * begin on the same press and land together, so the map arrives already
+ * quiet rather than arriving and then dimming a beat later. Deselection runs
+ * the same length back the other way, where it used to be a hard cut.
+ */
+const SELECT_FADE_MS = FLY_MS;
+
+/**
+ * The saint the map is *attending to*, which is not the same as `selected`
+ * and is why this exists. `selected` deliberately arrives only when the
+ * flight lands — the author's own order, "first centres you smoothly on them
+ * and then shows their path" — but the dimming has to begin at the press or
+ * it is not happening "as the screen centres". So the press sets this, the
+ * fade below reads it, and `selected` still waits for the landing.
+ */
+let focus = null;
+
+/** How far the fall-back has got: 0 is the whole map at full strength, 1 is
+ *  everyone but `focus` at `SELECT_DIM`. Eased in `paintCanvas`. */
+const selectFade = { value: 0, lastT: 0 };
+
+/**
+ * Advances the fade toward wherever `focus` now puts it, and returns the
+ * multiplier a saint who is *not* the chosen one is drawn at.
+ *
+ * Reduced motion arrives rather than travelling, the house rule everywhere
+ * else on this page: the dimming carries the information (which saint the
+ * map is attending to) and only the travelling is spared.
+ */
+function stepSelectFade(now) {
+  const target = focus ? 1 : 0;
+  const dt = Math.min(now - selectFade.lastT, 32);
+  selectFade.lastT = now;
+  if (reducedMotion()) selectFade.value = target;
+  else if (selectFade.value < target) selectFade.value = Math.min(target, selectFade.value + dt / SELECT_FADE_MS);
+  else if (selectFade.value > target) selectFade.value = Math.max(target, selectFade.value - dt / SELECT_FADE_MS);
+  return 1 - (1 - SELECT_DIM) * selectFade.value;
+}
 
 const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -913,6 +958,8 @@ export function render(el, { data, router }) {
   view = HOME;
   selected = null;
   railPlay = null;
+  focus = null;
+  selectFade.value = 0;
 
   /*
    * A raw pointer stream — a drag, a wheel spin, a timeline thumb pulled by
@@ -1038,6 +1085,14 @@ export function render(el, { data, router }) {
     // a previous choice carries on under the new one.
     selected = null;
     railPlay = null;
+    /*
+     * The fall-back starts here rather than when the flight lands, which is
+     * what makes it happen "as the screen centres" — the rest of the map
+     * eases back over exactly the length of the flight, so the picture
+     * arrives already quiet. `selected` still waits for the landing, and the
+     * rail and the name with it.
+     */
+    focus = card.slug;
     refresh();
 
     const box = canvas.getBoundingClientRect();
@@ -1089,7 +1144,11 @@ export function render(el, { data, router }) {
   const release = () => {
     cancelFlight();
     railPlay = null;
-    if (selected === null) return;
+    // `focus` and not `selected` decides whether there is anything to let go
+    // of: a press during the flight, before the selection has landed, is
+    // still a reader changing their mind and must bring the map back.
+    if (focus === null && selected === null) return;
+    focus = null;
     selected = null;
     refresh();
   };
@@ -1905,8 +1964,11 @@ export function destroy() {
   onResize = null;
   cancelFlight();
   // A walk belongs to the visit that started it; the paint loop it keeps
-  // alive is cancelled with `fadeFrame` below.
+  // alive is cancelled with `fadeFrame` below. So does the fall-back, which
+  // would otherwise start the next visit mid-dim.
   railPlay = null;
+  focus = null;
+  selectFade.value = 0;
   for (const off of cleanups) off();
   cleanups = [];
   if (fadeFrame !== null) {
@@ -2432,10 +2494,10 @@ function paintCanvas(canvas, cards) {
    */
   /*
    * The stroked rail's own extent in CSS px, published below as `data-rail`.
-   * The suite cannot ask this of the picture: the rail is dashed rubric and
-   * so is every dot, so reading it off the ink measures the dots as well —
-   * which is exactly how the first version of the flight test passed with
-   * the framing backed out. The draw pass knows, so the draw pass says.
+   * The suite cannot ask this of the picture: the rail is rubric and so is
+   * every dot, so reading it off the ink measures the dots as well — which is
+   * exactly how the first version of the flight test passed with the framing
+   * backed out. The draw pass knows, so the draw pass says.
    */
   let railBox = null;
   const spanRail = (x, y) => {
@@ -2444,10 +2506,25 @@ function paintCanvas(canvas, cards) {
       : { minX: x, minY: y, maxX: x, maxY: y };
   };
   for (const rail of rails) {
+    /*
+     * **One continuous light line** (author, 2026-09-01: "show the trail as a
+     * continuous light coloured line"), where it was a dashed rubric hairline
+     * from 2026-08-31. The dashes were reading as a border rather than as a
+     * road, and a broken line down the middle of the picture competes with
+     * the dots for the eye it is supposed to lead. Light rather than pale:
+     * the rubric at a third is still plainly the same red the dots are, which
+     * is what says the road and the saint on it are one thing, and a hair
+     * wider so that being fainter does not also make it thinner.
+     *
+     * Not gold, which would read as the obvious "light" answer here: §7 gives
+     * gold to the veneration finding and to nothing else, and a second
+     * category taking it would be the exception swallowing the rule.
+     */
     ctx.globalAlpha = dimFor(rail.state);
-    ctx.strokeStyle = hexWithAlpha(rubric, 0.55);
-    ctx.lineWidth = 1;
-    ctx.setLineDash([4, 4]);
+    ctx.strokeStyle = hexWithAlpha(rubric, 0.33);
+    ctx.lineWidth = 1.5;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
     ctx.beginPath();
     // The wandering curve, not the straight line between the stays
     // (`lib/map-track.js`, author 2026-08-31: "make the rail a bit more
@@ -2461,7 +2538,6 @@ function paintCanvas(canvas, cards) {
       else ctx.lineTo(p.x * w, p.y * h);
     });
     ctx.stroke();
-    ctx.setLineDash([]);
     ctx.globalAlpha = 1;
   }
 
@@ -2495,6 +2571,15 @@ function paintCanvas(canvas, cards) {
    */
   const rankOf = (d) =>
     (d.card.slug === selected ? 0 : d.moving ? 1 : 2 + dailyRank(d.card)) * 2 + (d.card.track?.length ? 0 : 1);
+
+  /*
+   * How far back everything that is not the chosen saint currently stands —
+   * one eased number for the whole paint, stepped once here so the halo, the
+   * dot and the name all fall back together rather than each reading the
+   * clock a moment apart.
+   */
+  const otherDim = stepSelectFade(gliding);
+  const dimOf = (slug) => (slug === focus ? 1 : otherDim);
 
   /*
    * **Dots the reader cannot tell apart become one mark, at a real
@@ -2553,7 +2638,7 @@ function paintCanvas(canvas, cards) {
       // Everything but the chosen saint falls back while one is chosen — on
       // the layer, so the single `GLOW_MAX` composite below still bounds the
       // whole of it however many halos overlap.
-      lc.globalAlpha = selected && card.slug !== selected ? SELECT_DIM : 1;
+      lc.globalAlpha = dimOf(card.slug);
       /*
        * The uncertainty curve's first shipping consumer (DESIGN.md §6b),
        * scaled by the zoom as well as by the picture's width: the doubt is a
@@ -2603,7 +2688,7 @@ function paintCanvas(canvas, cards) {
      * them is carried by colour alone. Times `SELECT_DIM` for everyone the
      * reader did not choose, once one is chosen (2026-09-01).
      */
-    const alpha = dimFor(state) * (selected && card.slug !== selected ? SELECT_DIM : 1);
+    const alpha = dimFor(state) * dimOf(card.slug);
     ctx.globalAlpha = alpha;
     ctx.fillStyle = rubric;
     ctx.beginPath();
@@ -2807,7 +2892,10 @@ function paintCanvas(canvas, cards) {
    * an unrelated reason mid-fade does not end up with two of these racing.
    */
   const stillFading = [...labelState.values()].some((s) => s.value !== s.target);
-  if (stillFading || stillGliding || railPlay) {
+  // The fall-back is the same kind of debt as a label mid-fade: it owes a
+  // frame until it has arrived, and nothing else on the page will ask for one.
+  const stillDimming = selectFade.value !== (focus ? 1 : 0);
+  if (stillFading || stillGliding || railPlay || stillDimming) {
     fadeFrame = requestAnimationFrame(() => {
       fadeFrame = null;
       if (canvas.isConnected) paintCanvas(canvas, cards);

@@ -2121,3 +2121,79 @@ test('a saint moving along their rail is named while they move', async ({ page }
     .toBe(true);
   await expect(canvas).toHaveAttribute('data-selected', '');
 });
+
+test('a second saint has a trail now, and it is walked like the first', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "apply the same treatment to Chrysostom and any other
+   * saints with trails." The code never named Moses — a rail is whatever a
+   * saint's own `track` says — so what this really pins is the *data*: John
+   * Chrysostom's four stays, Antioch to Constantinople to Cucusus to the road
+   * he died on, are in his `saint.json` and reach the picture.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  await expect(canvas).toHaveAttribute('data-rails', '0');
+
+  const dot = await dotFor(page, 'john-chrysostom');
+  expect(dot, 'premise: Chrysostom is not his own mark to press at rest').toBeTruthy();
+  await pressAt(page, dot.x, dot.y);
+
+  await expect(canvas).toHaveAttribute('data-selected', 'john-chrysostom');
+  await expect(canvas).toHaveAttribute('data-rails', '1');
+  // And he walks it, the same walk Moses gets and on the same clock.
+  await expect(canvas).toHaveAttribute('data-walking', 'john-chrysostom');
+  await expect(canvas).toHaveAttribute('data-walking', '', { timeout: 6000 });
+
+  // The whole of it framed, which is the flight doing the same thing for a
+  // rail that reaches from Antioch to the Bosphorus as it does for Moses's.
+  const box = await canvas.boundingBox();
+  const rail = JSON.parse(await canvas.getAttribute('data-rail'));
+  expect(rail.x).toBeGreaterThan(0);
+  expect(rail.y).toBeGreaterThan(0);
+  expect(rail.x + rail.w).toBeLessThan(box.width);
+  expect(rail.y + rail.h).toBeLessThan(box.height);
+});
+
+test('the rest of the map fades back with the flight, and fades in again on release', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "ensure there is a fade in fade out as the other
+   * saints go half opacity and the screen centres. same with deselection."
+   *
+   * *With* the flight is the half worth pinning, and it is why `focus` exists
+   * separately from `selected`: the selection deliberately lands only when
+   * the flight finishes — the rail and the name wait for it — so a dimming
+   * keyed on `selected` could only ever start after the map had stopped
+   * moving. This asks for a frame where the map is still on its way (nothing
+   * selected yet) and the others have already begun to go.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const alphas = async () => JSON.parse(await canvas.getAttribute('data-dots')).map((d) => d.alpha);
+  expect(Math.min(...(await alphas())), 'a saint was dimmed before anyone was chosen').toBe(1);
+
+  const pick = JSON.parse(await canvas.getAttribute('data-dots')).find((d) => d.n === 1);
+  // Not awaited: the assertion below has to run while the flight is still in
+  // the air, and `pressAt` resolves only after the click has settled.
+  const press = pressAt(page, pick.x, pick.y);
+
+  await expect
+    .poll(async () => {
+      const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+      const chosen = await canvas.getAttribute('data-selected');
+      // Mid-flight: nobody selected yet, and the rest already going.
+      return chosen === '' && dots.some((d) => d.alpha < 1);
+    }, { timeout: 2000 })
+    .toBe(true);
+  await press;
+
+  await expect(canvas).toHaveAttribute('data-selected', pick.slug);
+  await expect.poll(async () => Math.min(...(await alphas()))).toBeLessThan(0.5);
+
+  // And back: Escape lets go, and the map returns rather than snapping.
+  await canvas.press('Escape');
+  await expect(canvas).toHaveAttribute('data-selected', '');
+  await expect.poll(async () => Math.min(...(await alphas()))).toBe(1);
+});
