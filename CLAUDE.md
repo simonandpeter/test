@@ -13,8 +13,20 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - calendar.js keeps "which day": `render`, `select`, the roll, liturgy line,
   fast bubble. Nothing in `daily/` calls back into it.
 - **Two columns past 1024 px** (author, 2026-09-01): `.day-main` carries the
-  hero, the register and the name days, `.day-side` the readings and hymns,
-  and `main` gives up its 72ch measure for 108ch. Three things about it:
+  hero, the register and the name days, `.day-side` the readings and hymns.
+  Widened the same day, on the second pass: `main` takes the window rather
+  than 108ch, the **right** column is what is held (`clamp(25rem, 28%, 30rem)`)
+  and the left takes all the slack, and the **week/month picker sits at the
+  top of the right column** — `.cal-body` becomes `display: contents` so its
+  three children can be placed as grid items. The picker's floor is what sets
+  the right column's: seven days, two shoulders and the month toggle need
+  ~400 px, and at 330 the rail showed six days and the month would not unfurl.
+  It also takes the phone's own 24 px `--cal-peek` **and its gaps** — copying
+  the peek without the gaps put the month's columns 3 px off the week's.
+  Two consequences worth knowing: the month now unfurls *beside* the day
+  rather than pushing it down (so the tests measure `.slot-viewport`, not the
+  h1), and the h1's gold rule spans the left column rather than the page.
+  Three more things about it:
   (1) below the breakpoint both boxes are `display: contents`, so the phone is
   document order and unchanged — except that the name days now follow the
   register rather than the hymns, which is the price of the left column being
@@ -36,6 +48,31 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   so that is 2w against the ratio's 1.6w — and `panel.js` says so rather than
   writing a `min()` term that can never be reached. Below 620 px the 3:2 band
   stands: there the image is full width and *is* the card's height.
+- **The card is at least 18 lines of its own preview tall, and the picture's
+  column is derived from that** (author, same day). `--lede-lines` is the one
+  number the `min-height` and the lede's clamp both read. The column is
+  `min(42%, 30rem, --card-h / --hero-r)` — the third term is what stops a
+  wider column making *portrait* icons enormous while it makes landscape ones
+  right (662 px of Lupus over a 505 px card was the version that asked for
+  it), and `--hero-r` is the icon's own drawn ratio, written per saint.
+  Because it is a *minimum*, the browser test pins the resolved `min-height`
+  rather than the rendered height: the card is usually taller, so an
+  at-least assertion would pass with the rule deleted.
+- **`.hero-more` is the way into the life** — "…continue reading ›", bottom
+  right of the text column at both widths, `margin-top: auto` in a flex
+  column being what puts it at the bottom rather than merely after the text.
+  Unlike the hero image beside it, it is *not* hidden from a screen reader:
+  the image is a wordless second link to a page the name already opens, this
+  has words and a different promise, and it carries an aria-label naming the
+  saint.
+- **The chrome doubles and spans the window past 1024 px** (same day, in
+  base.css): 34px masthead, 27px nav and controls, `max-width: none`. The
+  theme toggle is deliberately not doubled — it is a box around a glyph, and
+  64 px of it beside 27 px type reads as an escaped button. `--chrome-h-reserve`
+  gains a third value (58.1406px) and `chrome.spec.js` pins all three; note
+  that test **cannot** catch the doubling being backed out, because the
+  reservation is a `min-height` and holds the bar open regardless — `the
+  chrome doubles and spans the window on a wide screen` is the one that does.
 - The rail and month are one seam. The *day* half is separable.
 - A day steps three ways: click a rail/month day, the arrow/A-D keys anywhere
   on the page (`wireDayKeys`), or a touch swipe on the day panel itself
@@ -324,6 +361,19 @@ screen, dropped only once the whole of it has left the box (2026-08-31,
 `map-labels.js`) — its far edge crossing the boundary used to hide the whole
 name outright; the canvas already clips whatever is drawn past its own
 bounds, so there was nothing this needed to do but stop refusing to try.
+**Saints at one identical coordinate are spread into a tight ring, in
+degrees** (`spreadShared`, `SPREAD_DEG` 0.0167° ≈ 1.8 km — author,
+2026-09-01: "spread the dots around as coordinates on the map if they're
+stacked ... still pretty tightly spaced when zoomed in fully to communicate
+proximity"). **The unit is the whole difference from the fan below**: a
+ground offset is sub-pixel with the world on screen, so `mergeDots` still
+collapses the group into one honest mark, and it opens into a constellation
+only as the reader goes in — ~10 px between neighbours at 240× on a 900 px
+picture. The ring's latitude is multiplied by `cos(lat)` so it draws round
+under Mercator rather than as an ellipse. This reverses, deliberately, the
+"identical coordinates never separate" rule written hours earlier the same
+day; the map tests that pinned it were rewritten rather than deleted.
+
 **Dots the reader cannot tell apart are one mark, at a real coordinate**
 (`mergeDots`, `lib/map-view.js`, pure, unit-tested; 2026-09-01). This
 replaced `declutter`, which fanned them into concentric rings a fixed number

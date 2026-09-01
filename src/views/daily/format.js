@@ -11,11 +11,15 @@ import { formatDate } from '../../lib/i18n.js';
  * because it reads as prose where the heading reads as a label.
  */
 
-// The page's own date wears the abbreviated month (author, 2026-08-24:
-// "display abbreviated months, e.g. Aug"); the buttons' aria-labels keep
-// dayFmt's full month, because a label is spoken, not glanced at.
+// The page's own date wears the month in full again (author, 2026-09-01: "on
+// Daily page print the full month name"), reversing 2026-08-24's "display
+// abbreviated months, e.g. Aug". The abbreviation was bought when the heading
+// shared its line with a narrow column; the desktop page is two columns and
+// most of a window wide now, and "1 Sept 2026" was saving room nothing needs.
+// The month gutter beside the grid keeps its own abbreviation — `monthFmt`
+// below — where the reason still holds.
 export const headingFmt = (d) =>
-  formatDate({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
+  formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 
 export const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
 

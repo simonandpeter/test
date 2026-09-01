@@ -102,6 +102,17 @@ export const STRINGS = {
     weekLabel: 'Choose a day',
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
+    /*
+     * The way from the day's saint into their life (author, 2026-09-01: add a
+     * "...continue reading >" button at the bottom right at the end of the
+     * preview text). The leading ellipsis is the author's and is doing real
+     * work: it says the paragraph above was cut rather than finished, which
+     * is the one thing a reader cannot tell from a clamped block of text.
+     * `continueReadingOf` is what a screen reader hears, because "continue
+     * reading" on a page of saints does not say whose life it opens.
+     */
+    continueReading: '…continue reading',
+    continueReadingOf: 'Continue reading the life of {name}',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
     // The reach used to be the literal "19 September" and had been stale for a

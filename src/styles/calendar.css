@@ -919,10 +919,13 @@
 
 @media (min-width: 1024px) {
   /* The page gives up the 72ch measure it reads at, because two columns of
-     prose is not a measure. Scoped to `main`, so the header keeps its own —
-     the same split `html[data-route='map']` already makes. */
+     prose is not a measure. 108ch until 2026-09-01, when the author asked for
+     the left column "wider and adaptive to the window size": the cap is the
+     window now, with a ceiling far enough out that only a very large screen
+     meets it, and the *right* column is what is held — see `--day-cols`. */
   html[data-route='calendar'] main.chrome {
-    max-width: 108ch;
+    max-width: min(100%, 2000px);
+    padding-inline: var(--space-8);
   }
 
   /* **One template, declared once and used by two grids.** `.cal` carries the
@@ -931,8 +934,21 @@
      horizontal padding: `.cal-body` and `.slot-viewport` are bare boxes. If
      either ever gains padding, this is the thing that breaks, and it will
      break by a few pixels rather than visibly — check it here first. */
+  /* **The right column is held and the left takes the rest** (author,
+     2026-09-01: "make the left column wider and adaptive to the window
+     size"). Two fractions shared the slack before, so a wider window widened
+     the readings as much as the saints — and the readings are a list of four
+     references and a line of hymn text, which does not want a wider measure.
+     Holding that column at a comfortable reading width and giving the whole
+     surplus to the left is what "adaptive" means here. */
   .cal {
-    --day-cols: minmax(0, 1.55fr) minmax(0, 1fr);
+    /* The right column's floor is the week, not the readings: seven day
+       buttons, two shoulders and the month toggle need about 400 px, and at
+       330 the rail showed six days and the month grid would not unfurl at
+       all. So the smaller column is held at 25rem before it is allowed to be
+       a share of anything — the picker is the one thing on this page with a
+       hard minimum, and it is what the reader steers the day with. */
+    --day-cols: minmax(0, 1fr) clamp(25rem, 28%, 30rem);
     --day-gap: var(--space-8);
     display: grid;
     grid-template-columns: var(--day-cols);
@@ -940,9 +956,59 @@
     align-items: start;
   }
 
-  /* The controls, the date and the liturgy line are the width of the page;
-     only what is under them divides in two. */
+  /* **`contents`, so the week and month can leave the left column** (author,
+     2026-09-01: "move the weekly and monthly display over to the top of the
+     small column on the right"). The picker is the first thing in `.cal-body`
+     and the date and liturgy line follow it, which is the order a phone still
+     reads top to bottom; dissolving the wrapper on a wide screen lets the
+     three of them be placed as three grid items instead. */
   .cal-body {
+    display: contents;
+  }
+
+  /* Top of the right column, above the readings that come with the day.
+
+     **And it takes the phone's own peek there, for the phone's own reason.**
+     `--cal-peek` is 44 px because the author asked for more of the Sunday
+     either side to show past the fade (2026-08-25) — a promise about a rail
+     running the width of the page, which this one no longer does. In a
+     column of about 330 px, seven days and two 44 px shoulders leave 34 px a
+     day; the same 24 px the rail takes below 560 px gives the seven back
+     what they need, on the same reasoning written there — a narrow rail is
+     scrolled rather than read across. */
+  .cal-controls {
+    grid-column: 2;
+    grid-row: 1;
+    --cal-peek: 24px;
+    --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
+    --rail-inset: calc(var(--cal-peek) + var(--space-1));
+    gap: var(--space-2);
+  }
+
+  /* The gaps come with the peek, and taking one without the other is a bug
+     rather than a saving: the month's day names are laid out from
+     `--cal-gutter` and the week's from `--rail-inset`, and the two agree only
+     when both are derived from the same spacing step. Copying the three
+     custom properties and leaving these behind put the month's columns 3 px
+     off the week's — which `the month is the week grown taller` caught, being
+     the test that exists for exactly that. */
+  .month-row,
+  .month-days-line {
+    gap: var(--space-1);
+  }
+
+  .week-strip button {
+    min-width: 26px;
+  }
+
+  /* The day's own name and its liturgy line stay at the head of the wide
+     column, where the reader is looking. */
+  .cal-date,
+  .cal-liturgy {
+    grid-column: 1;
+  }
+
+  .slot-viewport {
     grid-column: 1 / -1;
   }
 
@@ -982,6 +1048,17 @@
     grid-column: 2;
   }
 
+  /* The hero takes the whole of the wide column; the lists under it do not.
+     A register row is a name at one edge and a thumbnail at the other, and
+     at 1440 px the left column is a thousand pixels of mostly nothing
+     between them. The measure is generous — still half again what the whole
+     page had before this — and it is the row that is capped rather than the
+     column, so the picture above still uses every pixel. */
+  .day-main .register-cards,
+  .day-main .namedays {
+    max-width: 80ch;
+  }
+
   /* Both columns start on one line. A register heading carries six spaces of
      air above it, which is right between two stacked sections and wrong at
      the top of a column. */
@@ -1000,6 +1077,30 @@
   display: grid;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
+}
+
+/* How many lines of the life the preview runs to, and — from 620 px, where
+   the hero has a column of its own — how tall the card stands whatever is in
+   it (author, 2026-09-01: "make the height of the main saint card minimum 18
+   lines of the preview text high"). One number for both, because they are one
+   decision: a card eighteen lines tall over six lines of text is a hole, and
+   eighteen lines of text in a card that does not reserve the room is the
+   register jumping about as each life lands. */
+.hero {
+  --lede-lines: 18;
+}
+
+@media (min-width: 620px) {
+  .hero.has-media {
+    /* The explicit line first for anything without `lh`, which resolves
+       against this element's own inherited 17px/1.65; the unit version is
+       what actually holds once the type changes. The card's own height is
+       published as a property because the picture's column is derived from
+       it — see `grid-template-columns` below. */
+    --card-h: calc(18 * 1.65 * 17px);
+    --card-h: calc(var(--lede-lines) * 1lh);
+    min-height: var(--card-h);
+  }
 }
 
 /* The hero box is a square (author, 2026-08-21), where the index card still
@@ -1038,13 +1139,55 @@
   .hero.has-media .hero-lede {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    /* Eighteen since 2026-09-01, where it was six: the card is now at least
+       that tall, and six lines of text in it would be a paragraph with a
+       hole under it. `--lede-lines` is the one number both read. */
+    -webkit-line-clamp: var(--lede-lines);
+    line-clamp: var(--lede-lines);
     overflow: hidden;
     margin: var(--space-3) 0 0;
     color: var(--ink-soft);
-    max-width: 46ch;
+    /* Was 46ch. The measure still holds the line to something readable, but
+       the column it sits in is most of a wide window now and 46ch left a
+       third of it empty. */
+    max-width: 68ch;
   }
+}
+
+/* ---- the way into the life (2026-09-01) --------------------------------- */
+
+/* Author: "add a '...continue reading >' button at the bottom right at the
+   end of the preview text". `margin-top: auto` is what puts it at the
+   *bottom* rather than merely after the text: the body is a column, so this
+   takes whatever height the name, the dates and the preview leave — which on
+   a card holding its 18-line minimum is the gap under a short life. */
+/* Stretch, not `flex-start`: the name and the dates were blocks filling this
+   column and must stay so, or a long name wraps against its own text width
+   instead of the column's. Only the link below pulls itself to the end. */
+.hero-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: var(--space-2);
+  color: var(--ink-soft);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-more:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.hero-more-chevron {
+  color: var(--rubric);
 }
 
 /* **A landscape band since 2026-08-26**, where it was a square from
@@ -1080,9 +1223,32 @@
    it does not. Applying it in both took 15% twice — 260 px of column became
    188 px of image, not 221 — and the only way that was ever going to be caught
    was measuring the rendered width. */
+/* **The picture's column grew on 2026-09-01** (author: "now that the main
+   saint card is bigger, make sure horizontal rectangular photos are larger on
+   the Daily Page currently they are tiny"), from a hard 221 px to a fraction
+   of the card with a ceiling.
+
+   A landscape icon is the case that needed it and shows why a wider column is
+   the whole fix: 221 px of column made Joshua's 600x371 a 137 px-tall strip
+   beside 500 px of text. Nothing about the *crop* was wrong — the rule since
+   this morning is that an icon is shown whole unless it is taller than 1:1.6
+   — it was simply being shown whole and small. A share of the card rather
+   than a second fixed number, so it follows the left column as the window
+   grows; the 30rem ceiling is there because past it the picture starts
+   competing with the life rather than introducing it. */
 @media (min-width: 620px) {
   .hero.has-media {
-    grid-template-columns: minmax(153px, 221px) 1fr;
+    /* Three limits, smallest wins, and the third is the one that matters: the
+       width at which this icon stands exactly as tall as the card. A share of
+       the card alone made landscape icons right and portrait ones enormous —
+       Lupus at 1:1.6 in a 414 px column is 662 px of picture over a 505 px
+       card — because a wider column costs a tall icon far more height than it
+       gains a wide one. `--hero-r` is that icon's own drawn ratio, written
+       per saint by `daily/panel.js`; 200 px is the floor, so a very tall icon
+       is narrow rather than a sliver. */
+    grid-template-columns:
+      clamp(200px, min(42%, 30rem, calc(var(--card-h) / var(--hero-r, 1))), 30rem)
+      1fr;
     align-items: start;
   }
 }

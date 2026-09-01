@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -2324,6 +2324,8 @@ function paintCanvas(canvas, cards) {
    * everyone at once are gone.
    */
   const onScreen = [];
+  // Where each saint stands before the ring below moves the stacked ones.
+  const standing = [];
   const rails = [];
   const gliding = performance.now();
   let stillGliding = false;
@@ -2395,12 +2397,28 @@ function paintCanvas(canvas, cards) {
       railAt.set(card.slug, { value: at.track.length - 1, lastT: gliding });
       railPlay = null;
     }
-    const p = place(where.lon, where.lat, frame);
+    standing.push({ card, where, state: at.state, moving, lon: where.lon, lat: where.lat });
+  }
+
+  /*
+   * **Saints at one identical coordinate are spread into a tight ring around
+   * it, on the ground rather than on the screen** (author, 2026-09-01: "spread
+   * the dots around as coordinates on the map if they're stacked ... still
+   * pretty tightly spaced when zoomed in fully to communicate proximity").
+   *
+   * In degrees, which is what keeps this from being the fan that was thrown
+   * out a few hours earlier: the offset is sub-pixel with the whole world on
+   * screen, so `mergeDots` still collapses the group into one honest mark
+   * saying how many, and it opens into a constellation only as the reader
+   * goes in. `lib/map-view.js` argues the size of it.
+   */
+  for (const s of spreadShared(standing)) {
+    const p = place(s.lon, s.lat, frame);
     const x = p.x * w;
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
-    onScreen.push({ card, where, state: at.state, x, y, moving });
+    onScreen.push({ card: s.card, where: s.where, state: s.state, x, y, moving: s.moving });
   }
 
   /*

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -305,4 +305,106 @@ test('a rail with no extent asks for the deepest zoom, and the caller caps it', 
 test('a rail wider than the world cannot zoom past the whole of it', () => {
   const v = fitBounds([{ x: 0.01, y: 0.01 }, { x: 0.99, y: 0.99 }], WHOLE);
   assert.equal(v.scale, MIN_SCALE);
+});
+
+/*
+ * `spreadShared` — the ring that opens as the reader zooms, in degrees rather
+ * than in screen pixels (author, 2026-09-01: "spread the dots around as
+ * coordinates on the map if they're stacked ... still pretty tightly spaced
+ * when zoomed in fully to communicate proximity").
+ *
+ * The unit is the whole of it, and the reason there are tests here at all:
+ * the fan this replaces was measured in pixels, so it covered more country
+ * the further out the reader went and never resolved at any zoom. A ground
+ * offset is the opposite on both counts — invisible at rest, opening only as
+ * the picture magnifies — and neither property is visible in a screenshot.
+ */
+
+test('a saint standing alone is not moved at all', () => {
+  const points = [{ lon: 30.5, lat: 50.4, slug: 'alone' }];
+  assert.deepEqual(spreadShared(points), points);
+});
+
+test('saints at different coordinates are left where they are', () => {
+  // Close, but not identical: the map can already tell these apart by zooming,
+  // so moving them would be inventing a distance for no reason.
+  const points = [
+    { lon: 30.5234, lat: 50.4501, slug: 'cyprian' },
+    { lon: 30.5578, lat: 50.4344, slug: 'moses' },
+  ];
+  assert.deepEqual(spreadShared(points), points);
+});
+
+test('saints at one coordinate are moved off it, and each somewhere different', () => {
+  const out = spreadShared([
+    { lon: 30.5578, lat: 50.4344, slug: 'john' },
+    { lon: 30.5578, lat: 50.4344, slug: 'moses' },
+  ]);
+  assert.equal(out.length, 2);
+  for (const p of out) assert.notEqual(`${p.lon},${p.lat}`, '30.5578,50.4344');
+  assert.notEqual(`${out[0].lon},${out[0].lat}`, `${out[1].lon},${out[1].lat}`);
+  // Every other field travels with the point.
+  assert.deepEqual(out.map((p) => p.slug).sort(), ['john', 'moses']);
+});
+
+test('the ring is small enough to be inside its own dot at rest', () => {
+  /*
+   * The bound that keeps this from being the old fan. At scale 1 a 1280 px
+   * picture spans 360°, so a degree is 3.6 px: the whole ring has to be well
+   * under the 2.5 px radius of the mark it came from, or the resting map
+   * shows a smudge where it should show one honest dot.
+   */
+  const out = spreadShared(Array.from({ length: 24 }, (_, i) => ({ lon: 29.92, lat: 40.77, slug: `m${i}` })));
+  const worst = Math.max(...out.map((p) => Math.hypot(p.lon - 29.92, p.lat - 40.77)));
+  assert.ok(worst * (1280 / 360) < 2.5, `the ring is ${(worst * (1280 / 360)).toFixed(2)}px across at rest`);
+});
+
+test('and large enough to be countable at the deepest zoom', () => {
+  // The same 24 at 240x: a degree is 853 px there, and neighbours have to
+  // clear `MERGE_PX` or the map has spread them and then merged them again.
+  const out = spreadShared(Array.from({ length: 24 }, (_, i) => ({ lon: 29.92, lat: 40.77, slug: `m${i}` })));
+  const px = (1280 * 240) / 360;
+  let closest = Infinity;
+  for (let i = 0; i < out.length; i += 1) {
+    for (let j = i + 1; j < out.length; j += 1) {
+      closest = Math.min(closest, Math.hypot(out[i].lon - out[j].lon, out[i].lat - out[j].lat) * px);
+    }
+  }
+  assert.ok(closest > MERGE_PX, `two of them are ${closest.toFixed(1)}px apart at full zoom`);
+});
+
+test('the ring is round on the picture, which means squashed in latitude', () => {
+  /*
+   * Mercator stretches latitude by 1/cos(lat), so a ring of equal degrees
+   * draws as a tall ellipse — at Kyiv half again as tall as it is wide, and
+   * worse further north. The latitude offsets are multiplied by cos(lat) to
+   * undo exactly that, so this asserts the *drawn* ring is round: the widest
+   * north-south offset, stretched back by 1/cos, matches the east-west one.
+   */
+  const lat = 50.45;
+  /*
+   * Four, so every one of them is on the first ring: the first version of
+   * this compared the widest north-south offset with the widest east-west
+   * one over *eight* points, which straddle two rings, and it was measuring
+   * the ring count rather than the squash.
+   */
+  const out = spreadShared(Array.from({ length: 4 }, (_, i) => ({ lon: 30.52, lat, slug: `s${i}` })));
+  const squash = Math.cos((lat * Math.PI) / 180);
+  const drawn = out.map((p) => Math.hypot(p.lon - 30.52, (p.lat - lat) / squash));
+  // Every point the same distance from the centre once latitude is stretched
+  // back the way Mercator will stretch it: a circle on the picture.
+  for (const r of drawn) assert.ok(Math.abs(r - drawn[0]) < 1e-9, `${r} against ${drawn[0]}`);
+  // And a circle rather than a point: it is the ring's own radius.
+  assert.ok(Math.abs(drawn[0] - 0.0167) < 1e-9, `radius ${drawn[0]}`);
+});
+
+test('a bigger group grows as the square root, not with the count', () => {
+  const ringOf = (n) => {
+    const out = spreadShared(Array.from({ length: n }, (_, i) => ({ lon: 0, lat: 0, slug: `s${i}` })));
+    return Math.max(...out.map((p) => Math.hypot(p.lon, p.lat)));
+  };
+  // Twenty-four martyrs at one coordinate sit inside three rings, not a wheel
+  // twelve times the width of a pair — the same reasoning the old fan's own
+  // concentric rings were written with, kept when the unit changed.
+  assert.ok(ringOf(24) < ringOf(2) * 4, `24 spread to ${ringOf(24)} against a pair's ${ringOf(2)}`);
 });

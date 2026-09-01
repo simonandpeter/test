@@ -146,6 +146,99 @@ export const panBy = (view, dxFraction, dyFraction, frame = WHOLE) =>
 export const MERGE_PX = 10;
 
 /**
+ * How far apart saints recorded at one identical coordinate are drawn, **in
+ * degrees on the ground** (author, 2026-09-01: "now that we can zoom in
+ * further, spread the dots around as coordinates on the map if they're
+ * stacked. Spread them to be still pretty tightly spaced when zoomed in fully
+ * to communicate proximity").
+ *
+ * **A ground offset is not the fan this map already threw away, and the unit
+ * is the whole difference.** The fan was a fixed number of *screen* pixels,
+ * so it covered more country the further out the reader went — the crowd at
+ * Constantinople reaching into the Black Sea — and it never resolved, being
+ * the same ring at 1× as at 240×. A ground offset does the opposite of both:
+ * it is sub-pixel when the whole world is on screen, so `mergeDots` still
+ * collapses the group into one honest mark, and it grows with the zoom until
+ * the members separate into a tight little constellation.
+ *
+ * 0.0167° is about 1.8 km, chosen from the ceiling backwards: at `MAX_SCALE`
+ * a 900 px-wide picture shows 1.5° across, so this is ~10 px between
+ * neighbours — tight enough to read as "these are the same place" and far
+ * enough apart to count them. It scales with the picture, so a 1280 px window
+ * gets ~14 px and a 360 px phone ~4 px; the phone is the weak end of that and
+ * is the reason this is not smaller.
+ *
+ * **It is still an invented position**, which is why it is this small: at
+ * every zoom below the last few it is inside the dot it came from, and it
+ * never claims a distance the corpus did not record.
+ */
+export const SPREAD_DEG = 0.0167;
+
+/**
+ * Spreads saints recorded at one identical coordinate into a tight ring about
+ * it, in lon/lat rather than in pixels — see `SPREAD_DEG` for why the unit is
+ * the point.
+ *
+ * Grouping is on the exact coordinate, so this touches only the saints no zoom
+ * could ever separate on its own; two saints a kilometre apart are left alone,
+ * the map already telling them apart the moment it can.
+ *
+ * **The ring is drawn round on the picture, not on the globe.** Mercator
+ * stretches latitude by `1/cos(lat)`, so a ring of equal degrees would draw as
+ * a tall ellipse at Kyiv and a taller one at Solovki; multiplying the latitude
+ * offset by `cos(lat)` is what makes the constellation a circle where the
+ * reader is looking at it.
+ *
+ * `points` is any array carrying `{ lon, lat }`. Returns a new array in the
+ * same order, each point's own fields kept and its coordinates moved.
+ */
+export function spreadShared(points, radiusDeg = SPREAD_DEG) {
+  const groups = new Map();
+  for (const p of points) {
+    const key = `${p.lon},${p.lat}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(p);
+  }
+  const moved = new Map();
+  for (const group of groups.values()) {
+    if (group.length === 1) continue;
+    const { lon, lat } = group[0];
+    // Radians, and never at a pole: `cos` of 90° is 0 and would collapse the
+    // ring into a horizontal line.
+    const squash = Math.max(0.15, Math.cos((lat * Math.PI) / 180));
+    /*
+     * Concentric rings filled from the inside out, so the radius grows as the
+     * square root of the group rather than with it: twenty-four martyrs at
+     * Nicomedia sit inside three rings rather than one wheel three times the
+     * width. How many fit on a ring is its own circumference over the
+     * spacing, so no two neighbours are ever closer than a pair would be.
+     */
+    let placed = 0;
+    let ring = 1;
+    while (placed < group.length) {
+      const r = radiusDeg * ring;
+      const capacity = Math.max(1, Math.floor((2 * Math.PI * r) / radiusDeg));
+      const here = Math.min(capacity, group.length - placed);
+      for (let i = 0; i < here; i += 1) {
+        // Half a step of turn on every other ring, so the rings' own dots do
+        // not line up into spokes radiating out of the middle.
+        const angle = (2 * Math.PI * i) / here - Math.PI / 2 + (ring % 2 ? 0 : Math.PI / here);
+        moved.set(group[placed + i], {
+          lon: lon + r * Math.cos(angle),
+          lat: lat + r * Math.sin(angle) * squash,
+        });
+      }
+      placed += here;
+      ring += 1;
+    }
+  }
+  return points.map((p) => {
+    const at = moved.get(p);
+    return at ? { ...p, lon: at.lon, lat: at.lat } : p;
+  });
+}
+
+/**
  * Collapses dots the reader could not tell apart at this zoom into one mark
  * each, **at a real coordinate**, and says how many saints stand behind it.
  *

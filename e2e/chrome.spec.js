@@ -897,10 +897,18 @@ test('the header names the church with a mark, not with the word calendar', asyn
   await expect(open.locator('svg')).toHaveCount(1);
   await expect(open).toHaveAttribute('aria-label', /Romanian calendar/);
   await expect(open).toHaveAttribute('aria-label', /change which church/i);
-  // Shorter than the sentence it replaced, which was the point of the change:
-  // "Romanian calendar" at this face is comfortably past 130 px.
+  /*
+   * Shorter than the sentence it replaced, which was the point of the change:
+   * "Romanian calendar" at this face is comfortably past 130 px.
+   *
+   * Scaled by the control's own size since 2026-09-01, when the chrome
+   * doubled past 1024 px: 130 was a measurement of 13.5 px type, and a bound
+   * that ignores the type size stops being a claim about the *label* and
+   * becomes one about the breakpoint.
+   */
   const box = await open.boundingBox();
-  expect(box.width).toBeLessThan(130);
+  const size = await open.evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  expect(box.width).toBeLessThan(130 * (size / 13.5));
 });
 
 test('About states the privacy policy, and states it as the code behaves', async ({ page }) => {
@@ -990,7 +998,9 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // its dot; the author asked for capitals and no dot, and only the weekday
   // and month parts are touched — the literal «2026 г.» keeps the dot that
   // belongs to a different word.
-  await expect(page.locator('h1')).toHaveText('Среда, 26 Авг 2026 г.');
+  // The month in full since 2026-09-01, in every pack: `headingFmt` asks Intl
+  // for `month: 'long'` where it asked for `short`.
+  await expect(page.locator('h1')).toHaveText('Среда, 26 Августа 2026 г.');
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the
@@ -1079,13 +1089,21 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
           // Each label on one line of its own, too: `nowrap` on the row is
           // honoured by shrinking the anchors unless the anchors refuse.
           tallest: Math.max(...links.map((a) => a.getBoundingClientRect().height)),
+          /*
+           * One line, measured against the line the pack is actually set in
+           * rather than against 28 px. The chrome doubles past 1024 px
+           * (2026-09-01), so a single line at 1280 is 39 px and a constant
+           * bound would read that as a wrap; a second line is twice this
+           * however large the type, which is what the assertion wants.
+           */
+          line: parseFloat(getComputedStyle(links[0]).lineHeight),
           overhang: Math.max(...links.map((a) => a.getBoundingClientRect().right)) - box.right,
           doc: document.documentElement.scrollWidth - document.documentElement.clientWidth,
         };
       });
       const where = `${language} at ${width}`;
       expect(seen.rows, where).toBe(1);
-      expect(seen.tallest, where).toBeLessThan(28);
+      expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
       expect(seen.overhang, where).toBeLessThan(1);
       expect(seen.doc, where).toBe(0);
     }
@@ -1546,7 +1564,15 @@ test('the header is sticky, shorter, and the phone gets four equal pages', async
    * the whole width of the screen … slightly shorter in height … and make the
    * whole button go bold when selected".
    */
-  await page.setViewportSize({ width: 1280, height: 800 });
+  /*
+   * 900 rather than 1280 since 2026-09-01: past 1024 the chrome is deliberately
+   * twice the size ("make header items 2x bigger and span across the whole
+   * width of the window"), so the 2026-08-26 instruction this pins — a bar
+   * made *shorter* by cropping its top margin — is about the sizes below that
+   * breakpoint. The taller bar has its own pin: `the header reserves the
+   * height it settles at`, which measures all three widths.
+   */
+  await page.setViewportSize({ width: 900, height: 800 });
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -2252,12 +2278,16 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
  * the wrong number restores the shift when it is short and leaves a permanent
  * strip of dead air when it is long, and neither says anything on the page.
  *
- * Both breakpoints, because the narrow header is two rows and the wide one is
- * one, and it is the *narrow* value that no desktop-only run would ever check.
+ * All three breakpoints, because the narrow header is two rows and the wide one
+ * is one, and it is the *narrow* value that no desktop-only run would ever
+ * check. The third arrived on 2026-09-01 with the doubled chrome — "make header
+ * items 2x bigger and span across the whole width of the window" — which is a
+ * change to a row height and so is exactly what this table exists to catch.
  */
 for (const [label, width, expected] of [
   ['narrow, two rows', 360, 75.5625],
   ['wide, one row', 900, 41],
+  ['very wide, doubled', 1440, 58.1406],
 ]) {
   test(`the header reserves the height it settles at: ${label}`, async ({ browser }) => {
     const ctx = await browser.newContext({ ...devices['Desktop Chrome'], viewport: { width, height: 780 } });

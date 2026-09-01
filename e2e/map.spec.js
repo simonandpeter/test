@@ -868,10 +868,60 @@ test('zooming in splits a merged mark into the saints under it', async ({ page }
   await canvas.focus();
   for (let i = 0; i < 6; i++) await canvas.press('+');
 
+  /*
+   * **All three, including the two at one coordinate** (author, 2026-09-01:
+   * "now that we can zoom in further, spread the dots around as coordinates
+   * on the map if they're stacked").
+   *
+   * This asked for the opposite earlier the same day — the Caves pair had to
+   * stay one mark at every zoom, because no zoom can honestly separate two
+   * identical coordinates. The instruction above is what changed: they are
+   * separated on purpose now, by a ring measured in degrees rather than in
+   * screen pixels, so the offset is sub-pixel at rest and opens only as the
+   * reader goes in. What that buys over the old fan is below.
+   */
   const zoomed = await marksFor();
-  expect(zoomed.length, 'Cyprian never came out from under the Caves').toBe(2);
-  const caves = zoomed.find((d) => d.slug !== 'cyprian-of-kyiv');
-  expect(caves.n, 'the two saints at one coordinate were split, which no zoom can honestly do').toBe(2);
+  expect(zoomed.length, 'the saints at Kyiv never came apart').toBe(3);
+  expect(
+    Math.max(...zoomed.map((d) => d.n)),
+    'a mark is still standing for more than one saint this far in',
+  ).toBe(1);
+});
+
+test('saints spread from one coordinate stay a tight constellation, not a wheel', async ({ page }) => {
+  /*
+   * The second half of the same instruction: "spread them to be still pretty
+   * tightly spaced when zoomed in fully to communicate proximity."
+   *
+   * Both bounds matter and they are what tells this apart from the ring-fan
+   * that was thrown out hours earlier. Too close and the reader cannot count
+   * them; too far and the map is claiming distance between saints recorded at
+   * one spot — which is what sent Constantinople's crowd across the Bosphorus
+   * when the offset was a fixed number of screen pixels.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const caves = ['john-the-long-suffering', 'moses-the-hungarian'];
+  const at = async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => caves.includes(d.slug));
+
+  // At rest the ring is far under a pixel, so they are one mark: the spread
+  // never costs the resting map the honesty the merge bought it.
+  expect((await at()).length, 'the pair is already two marks with the whole world on screen').toBe(1);
+
+  await searchBox(page).fill('kyiv');
+  await expect(searchRows(page).first()).toContainText('Kyiv');
+  await searchBox(page).press('Enter');
+  await canvas.focus();
+  for (let i = 0; i < 20; i++) await canvas.press('+');
+  await expect(page.locator('[data-zoom-level]')).toHaveText('240.0×');
+
+  const apart = await at();
+  expect(apart.length, 'the pair did not separate at the deepest zoom there is').toBe(2);
+  const gap = Math.hypot(apart[0].x - apart[1].x, apart[0].y - apart[1].y);
+  expect(gap, 'they are close enough to still read as one mark').toBeGreaterThan(10);
+  expect(gap, 'they are far enough apart to read as two different places').toBeLessThan(60);
 });
 
 /* ---- the search (2026-08-31) ---------------------------------------------- */
@@ -1933,11 +1983,16 @@ test('a crowd prints the name the Daily page would lead with', async ({ page }) 
    * five saints at one coordinate still cannot be told apart — which no zoom
    * will ever change.
    */
+  /*
+   * The city's own landing zoom and no further. Four presses past it used to
+   * be needed to lift the five clear of Anatolia's wider crowd; since
+   * 2026-09-01 they would take the reader past the zoom at which the ring
+   * spreads them into five marks of their own, and a crowd that is no longer
+   * a crowd has no name to choose. 40x is where they are still one.
+   */
   await searchBox(page).fill('constantinople');
   await expect(searchRows(page).first()).toContainText('Constantinople');
   await searchBox(page).press('Enter');
-  await canvas.focus();
-  for (let i = 0; i < 4; i++) await canvas.press('+');
 
   const marks = JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => atTheCity.includes(d.slug));
   expect(marks.length, 'premise: the five are not one mark here, so nothing is being chosen between').toBe(1);

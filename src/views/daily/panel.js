@@ -192,9 +192,17 @@ export function paintDay(panel) {
    * cap the author asked for is honoured by the tighter rule standing in
    * front of it rather than by a line of code that does nothing.
    */
-  const shape = hero.image
-    ? `${hero.image.w} / ${Math.min(hero.image.h, hero.image.w * MAX_HERO_RATIO)}`
-    : '';
+  const drawnH = hero.image ? Math.min(hero.image.h, hero.image.w * MAX_HERO_RATIO) : 0;
+  const shape = hero.image ? `${hero.image.w} / ${drawnH}` : '';
+  /*
+   * The same shape as a plain number, for the *column*: the picture is given
+   * whichever is smaller of its share of the card and the width at which it
+   * stands exactly as tall as the card (`--card-h / --hero-r` in the
+   * stylesheet). Without it, widening the column for landscape icons — which
+   * is what the author asked for — made portrait ones enormous: Lupus at
+   * 1:1.6 in a 414 px column is 662 px of icon over a 505 px card.
+   */
+  const ratio = hero.image ? (drawnH / hero.image.w).toFixed(4) : '1';
   const media = hero.image
     ? `<div class="hero-figure">
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
@@ -250,7 +258,7 @@ export function paintDay(panel) {
    */
   panel.innerHTML = `
     <div class="day-main">
-      <article class="hero ${hero.image ? 'has-media' : ''}">
+      <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
         ${media}
         <div class="hero-body">
           <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
@@ -265,6 +273,32 @@ export function paintDay(panel) {
                a saint has no life recorded, because a heading over nothing is
                the furniture DESIGN.md §5b refuses. -->
           <p class="hero-lede" data-hero-lede hidden></p>
+          <!--
+            The way into the life (author, 2026-09-01: "add a '...continue
+            reading >' button at the bottom right at the end of the preview
+            text"), on a phone as well as a desktop. A link and not a button:
+            it goes to the saint's own page, which is what the name above it
+            does, and the router picks it up like any other.
+
+            It is present whether or not the lede is — the lede needs a wide
+            screen and a saint with a life recorded, and the way through to
+            the page needs neither. Where the preview is showing it reads as
+            the end of that paragraph; where it is not, it sits under the
+            dates, which is the same place and a shorter card.
+
+            **Unlike the image beside it, this one is not hidden from a screen
+            reader.** The image is a second, wordless link to a page the name
+            already opens, and hiding it spares a reader the same destination
+            announced twice with nothing to tell them apart. This has words of
+            its own and a different promise — the life, not the saint — so it
+            is a real link, named after the saint the way the map's own
+            Profile button is, rather than a third bare "continue reading" a
+            reader would have to guess the object of.
+          -->
+          <a class="hero-more utility" href="${state.router.href(`/saints/${hero.slug}`)}"
+            data-prefetch="${hero.slug}"
+            aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
+            >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true">&rsaquo;</span></a>
         </div>
       </article>
       ${register}
