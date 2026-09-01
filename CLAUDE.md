@@ -12,6 +12,30 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   control), `motion.js`.
 - calendar.js keeps "which day": `render`, `select`, the roll, liturgy line,
   fast bubble. Nothing in `daily/` calls back into it.
+- **Two columns past 1024 px** (author, 2026-09-01): `.day-main` carries the
+  hero, the register and the name days, `.day-side` the readings and hymns,
+  and `main` gives up its 72ch measure for 108ch. Three things about it:
+  (1) below the breakpoint both boxes are `display: contents`, so the phone is
+  document order and unchanged — except that the name days now follow the
+  register rather than the hymns, which is the price of the left column being
+  a *single* grid item (a spanning item hands its height to the rows it
+  crosses, and a long day of hymns drove the name days to the foot of the
+  page); (2) `Continue reading` is outside the day panel — the panel is
+  replaced wholesale on every day change — so `.cal` and `.day-panel` are two
+  grids sharing one `--day-cols`, which only line up because nothing between
+  them adds horizontal padding; (3) **the widening is set in index.html before
+  first paint**, not only by main.js, or the page paints at 72ch and jumps —
+  0.08 and 0.11 of CLS, blamed on `main.chrome`, reproducible only under load.
+  That is the map's own 0.21 lesson, learnt twice.
+- **The hero icon is shown whole up to 1:1.6** (same day), cropped from the
+  bottom past it. The shape is computed per saint in `panel.js` from the
+  manifest's own dimensions and passed as `--hero-shape`, because only the
+  data knows one icon from another and the box must still be reserved before
+  the image decodes. The author also asked for a cap at twice the square's
+  height; it is never the binding one — the square's height is its own width,
+  so that is 2w against the ratio's 1.6w — and `panel.js` says so rather than
+  writing a `min()` term that can never be reached. Below 620 px the 3:2 band
+  stands: there the image is full width and *is* the card's height.
 - The rail and month are one seam. The *day* half is separable.
 - A day steps three ways: click a rail/month day, the arrow/A-D keys anywhere
   on the page (`wireDayKeys`), or a touch swipe on the day panel itself

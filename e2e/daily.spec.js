@@ -87,34 +87,56 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   await expect(page.locator('.week-strip')).toBeVisible();
 });
 
-test('the hero image is a square on desktop and a 3:2 band on a phone', async ({ page }) => {
+test('the hero image is shown whole up to 1:1.6 on desktop, and a 3:2 band on a phone', async ({ page }) => {
   /*
    * A square from 2026-08-21, a band from 2026-08-26 morning — "Change the
    * daily saint image crop from square to a horizontal rectangle … This is to
    * reduce the height of the card to show more of what's below in the also
-   * commemorated section" — and **both, from the evening of the same day**:
-   * "make sure on desktop the icon on the Daily main saint card is only
-   * cropped to square, not to the horizontal rectangle."
+   * commemorated section" — both from the evening of the same day, and **the
+   * icon's own shape from 2026-09-01**: "don't crop the main saint image on
+   * Daily page unless it exceeds an aspect ratio of 1:1.6, that's the maximum
+   * height."
    *
-   * The two are not in conflict once the reason is read. The band was bought
-   * to buy the register height, and from 620 px the image has a column of its
-   * own beside the body: the hero's height is the taller of the two columns
-   * and the body carries the name, the dates and six clamped lines of the
-   * life, so the band costs a third of every icon and saves nothing. Below
-   * 620 px the image is full width and *is* the card's height, which is where
-   * the morning's instruction still applies, and it keeps the band there.
-   *
-   * What has not changed either way is why there is a fixed ratio at all: the
-   * box is reserved before the image decodes, so nothing reflows on arrival.
-   * Anthony's icon is 369x501, so this is a real crop at both.
+   * So the desktop half of this reverses: it asked for a square until then,
+   * and the square is now only the fallback for a hero whose card carries no
+   * dimensions. What survives untouched is the phone's band — bought to keep
+   * the card short enough to show the register under it, where the image is
+   * full width and *is* the card's height — and the reason there is a fixed
+   * ratio at all: the box is reserved before the image decodes, so nothing
+   * reflows on arrival. That is why the shape is computed per saint in
+   * `daily/panel.js` from the manifest's own dimensions, and why this test
+   * reads those dimensions off the element rather than hard-coding a saint.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const img = page.locator('.hero-media img');
   await expect(img).toBeVisible();
-  const desktop = await img.boundingBox();
-  expect(Math.abs(desktop.width / desktop.height - 1), 'square on desktop').toBeLessThan(0.03);
+
+  /** The icon's own shape as the manifest recorded it, and as it was drawn. */
+  const shape = async () => {
+    const natural = await img.evaluate((el) => ({ w: Number(el.getAttribute('width')), h: Number(el.getAttribute('height')) }));
+    const box = await img.boundingBox();
+    return { natural: natural.h / natural.w, drawn: box.height / box.width };
+  };
+
+  const whole = await shape();
+  expect(whole.natural, 'premise: this hero is taller than the cap, so nothing here is uncropped').toBeLessThan(1.6);
+  expect(Math.abs(whole.drawn - whole.natural), 'the icon was cropped when it fits inside 1:1.6').toBeLessThan(0.03);
+
+  /*
+   * And an icon past the cap is held at it. Lupus the Martyr is 450x1184 —
+   * 1:2.63 — and leads 5 September; the premise below is what says so at run
+   * time rather than trusting this comment.
+   */
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(img).toBeVisible();
+  const tall = await shape();
+  expect(tall.natural, 'premise: this day’s hero is not tall enough to be cropped').toBeGreaterThan(1.6);
+  expect(Math.abs(tall.drawn - 1.6), 'a tall icon was not held to 1:1.6').toBeLessThan(0.03);
+
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await expect(img).toBeVisible();
 
   // And the band survives where it was bought: a phone, where the picture is
   // the card's own height.
@@ -4038,4 +4060,82 @@ test('the day leads with a sung saint who has an icon, where the day has one', a
   } else {
     expect(day.heroName).toBeTruthy();
   }
+});
+
+/* ---- the desktop two-column day (2026-09-01) ----------------------------- */
+
+test('the day is two columns on a desktop and one on a phone', async ({ page }) => {
+  /*
+   * Author, 2026-09-01: "The mobile layout on Daily page is looking great,
+   * but the desktop layout needs revision ... we will have 2 columns, a wide
+   * column to the left and a narrower column to the right. To the left, we
+   * have the main saint of the day, with the also commemorated and name days
+   * and continue reading content. On the right column, we have the readings
+   * and the hymns."
+   *
+   * Four claims, and the fourth is the one that costs something: Continue
+   * reading is not inside the day panel — the panel is replaced wholesale on
+   * every day change and a shelf rebuilt with it would lose its own state —
+   * so the shelf and the day are two grids that only line up because they
+   * share one template and nothing between them adds padding. That is the
+   * part a stray `padding-inline` would break silently, so it is measured
+   * here rather than assumed.
+   */
+  await ready(page);
+  // A saint opened is what puts anything on the Continue reading shelf.
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.setViewportSize({ width: 1280, height: 900 });
+  /*
+   * 5 September rather than `POPULATED`, which carries exactly one
+   * commemoration in the calendar these tests keep and so has no register at
+   * all — "populated" there means the day's own readings, not a second saint.
+   * This day has eleven, which is what gives the left column all three of the
+   * blocks the instruction names.
+   */
+  const CROWDED = '/calendar/2026-09-05';
+  await page.goto(CROWDED, { waitUntil: 'networkidle' });
+
+  const boxOf = (sel) => page.locator(sel).boundingBox();
+  const main = await boxOf('.day-main');
+  const side = await boxOf('.day-side');
+
+  // Side by side, and the left is the wider of the two.
+  expect(side.x, 'the readings are not beside the day’s saints').toBeGreaterThan(main.x + main.width - 1);
+  expect(main.width, 'the left column is not the wider one').toBeGreaterThan(side.width);
+  expect(Math.abs(side.y - main.y), 'the two columns do not start on one line').toBeLessThan(4);
+
+  // What is in each, structurally rather than by looking at the picture.
+  await expect(page.locator('.day-main .hero')).toHaveCount(1);
+  await expect(page.locator('.day-main .register-cards')).toHaveCount(1);
+  await expect(page.locator('.day-main [data-namedays]')).toHaveCount(1);
+  await expect(page.locator('.day-side [data-readings]')).toHaveCount(1);
+  await expect(page.locator('.day-side [data-hymns]')).toHaveCount(1);
+
+  /*
+   * And Continue reading on the left column's own edge and inside its width —
+   * the two-grid alignment, which is the thing that cannot be seen from the
+   * markup.
+   */
+  const shelves = await boxOf('.shelves');
+  await expect(page.locator('.shelves')).toContainText('Continue reading');
+  expect(Math.abs(shelves.x - main.x), 'Continue reading does not sit on the left column').toBeLessThan(2);
+  expect(shelves.width, 'Continue reading runs wider than the column it belongs to').toBeLessThan(main.width + 2);
+
+  /*
+   * A phone is one column and document order, which is what `display:
+   * contents` on the two boxes buys: they have no box of their own there, so
+   * there is nothing to measure and the panel lays out exactly as it did
+   * before the wrappers existed.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(CROWDED, { waitUntil: 'networkidle' });
+  const display = await page.locator('.day-main').evaluate((el) => getComputedStyle(el).display);
+  expect(display, 'the wrappers are still boxes on a phone').toBe('contents');
+
+  const hero = await boxOf('.hero');
+  const readings = await boxOf('[data-readings]');
+  expect(readings.y, 'the readings are beside the hero on a phone rather than under it').toBeGreaterThan(
+    hero.y + hero.height - 1,
+  );
+  expect(readings.x, 'the readings are indented into a column of their own').toBeLessThan(hero.x + 2);
 });

@@ -898,6 +898,98 @@
 
 /* ---- hero ------------------------------------------------------------- */
 
+/* ---- the day in two columns (2026-09-01) -------------------------------- */
+
+/* Author: "The mobile layout on Daily page is looking great, but the desktop
+   layout needs revision ... we will have 2 columns, a wide column to the left
+   and a narrower column to the right. To the left, we have the main saint of
+   the day, with the also commemorated and name days and continue reading
+   content. On the right column, we have the readings and the hymns."
+
+   Below the breakpoint the two boxes are `display: contents` and the panel is
+   the single column it has always been, laid out in document order with the
+   wrappers not in the way of it. One thing did move on the phone as a result:
+   the name days follow the register now instead of the hymns, because the
+   left column has to be a single grid item to flow independently of the
+   right — `daily/panel.js` argues that where the markup makes the choice. */
+.day-main,
+.day-side {
+  display: contents;
+}
+
+@media (min-width: 1024px) {
+  /* The page gives up the 72ch measure it reads at, because two columns of
+     prose is not a measure. Scoped to `main`, so the header keeps its own —
+     the same split `html[data-route='map']` already makes. */
+  html[data-route='calendar'] main.chrome {
+    max-width: 108ch;
+  }
+
+  /* **One template, declared once and used by two grids.** `.cal` carries the
+     shelves and `.day-panel` carries the day, and the columns of one line up
+     with the columns of the other only because nothing between them adds
+     horizontal padding: `.cal-body` and `.slot-viewport` are bare boxes. If
+     either ever gains padding, this is the thing that breaks, and it will
+     break by a few pixels rather than visibly — check it here first. */
+  .cal {
+    --day-cols: minmax(0, 1.55fr) minmax(0, 1fr);
+    --day-gap: var(--space-8);
+    display: grid;
+    grid-template-columns: var(--day-cols);
+    column-gap: var(--day-gap);
+    align-items: start;
+  }
+
+  /* The controls, the date and the liturgy line are the width of the page;
+     only what is under them divides in two. */
+  .cal-body {
+    grid-column: 1 / -1;
+  }
+
+  /* Continue reading, under the day's own saints rather than under both
+     columns: the author's left column runs the whole way down the page. */
+  .shelves {
+    grid-column: 1;
+  }
+
+  .day-panel {
+    display: grid;
+    grid-template-columns: var(--day-cols);
+    column-gap: var(--day-gap);
+    align-items: start;
+  }
+
+  /* Boxes again rather than `contents`, and `min-width: 0` because a grid
+     item's default `auto` minimum is its content's — one long unbroken
+     reference in the readings would otherwise widen the column rather than
+     wrap inside it. */
+  .day-main,
+  .day-side {
+    display: block;
+    min-width: 0;
+  }
+
+  /* One item per column, and that is the whole of the layout: two boxes side
+     by side, each as tall as its own contents. Nothing spans, because a
+     spanning item hands its height to the rows it crosses — which is what
+     drove the name days to the foot of a long day of hymns before they moved
+     inside the left box. */
+  .day-main {
+    grid-column: 1;
+  }
+
+  .day-side {
+    grid-column: 2;
+  }
+
+  /* Both columns start on one line. A register heading carries six spaces of
+     air above it, which is right between two stacked sections and wrong at
+     the top of a column. */
+  .day-side > :first-child > .register-heading {
+    margin-top: 0;
+  }
+}
+
 /* **The day's saint sits on the ground, 2026-08-26** (author: "Let the main
    saint sit directly on the ground with the icon as the strongest element").
    It wore `.panel` — the recessed field and its border — from the first Daily
@@ -995,20 +1087,29 @@
   }
 }
 
-/* **Square again on desktop** (author, 2026-08-26 evening: "make sure on
-   desktop the icon on the Daily main saint card is only cropped to square,
-   not to the horizontal rectangle"). The 3:2 band above was bought for one
-   reason and one reason only — "to reduce the height of the card to show more
-   of what's below in the also commemorated section" — and from 620 px the
-   image has a column of its own beside the body, so its height buys the
-   register nothing: what sets the hero's height there is the taller of the
-   two columns, and the body carries the name, the dates and six clamped lines
-   of the life. So the band costs a third of every icon and saves nothing.
-   Below 620 px the image is full width and *is* the card's height, which is
-   where the instruction that bought the band still applies; it keeps it. */
+/* **The icon's own shape, up to 1:1.6** (author, 2026-09-01: "don't crop the
+   main saint image on Daily page unless it exceeds an aspect ratio of 1:1.6,
+   that's the maximum height"), where it was square from 2026-08-26 evening
+   and a 3:2 band before that.
+
+   `--hero-shape` is written per saint by `daily/panel.js`, which is the only
+   place that can know one icon from another: it is the manifest's own width
+   and height, with the height capped at 1.6 times the width. So a panel icon
+   is shown whole, a landscape one is shown whole, and only an icon taller
+   than 1:1.6 is cropped — from the bottom, as ever, because what a tall icon
+   must never lose is the face.
+
+   The square remains the fallback for a hero whose card somehow carries no
+   dimensions, and it is what the reservation-before-decode promise falls back
+   to rather than a collapsed box.
+
+   Below 620 px this does not apply: the 3:2 band there was bought to keep the
+   card short enough to show the register beneath it (2026-08-26), the image
+   being full width and *being* the card's height at that size, and the
+   instruction above is about the desktop layout it arrived with. */
 @media (min-width: 620px) {
   .hero-media {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: var(--hero-shape, 1 / 1);
   }
 }
 

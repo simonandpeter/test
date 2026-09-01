@@ -147,12 +147,21 @@ function emptyDayNote(iso) {
   return `${lead} ${pointer}`;
 }
 
+/**
+ * The tallest the hero's icon may stand, as a multiple of its own width
+ * (author, 2026-09-01). Past this it is cropped from the bottom, as it always
+ * was; up to it the icon is shown whole.
+ */
+const MAX_HERO_RATIO = 1.6;
+
 export function paintDay(panel) {
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
 
   if (entries.length === 0) {
-    panel.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
+    panel.innerHTML =
+      `<div class="day-main"><div class="empty-day"><p>${emptyDayNote(selected)}</p></div></div>` +
+      `<div class="day-side">${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}</div>`;
     return;
   }
 
@@ -163,11 +172,34 @@ export function paintDay(panel) {
   // accessibility tree and out of the tab order on purpose: the name beside it
   // already links to the same page, and a second link with no text of its own
   // would be either an unnamed link or the same one announced twice.
+  /*
+   * **The icon is shown whole unless it is taller than 1:1.6** (author,
+   * 2026-09-01: "don't crop the main saint image on Daily page unless it
+   * exceeds an aspect ratio of 1:1.6, that's the maximum height. And cap the
+   * height to double the height of the current square crop").
+   *
+   * The ratio is computed here rather than declared in CSS because the
+   * manifest already knows the icon's own dimensions — the `width`/`height`
+   * attributes below are the same two numbers — and that is what lets the box
+   * reserve the *right* height before the image decodes. A CSS rule cannot
+   * know one saint's icon from another's, so it could only reserve one shape
+   * for all of them, which is exactly the crop being removed.
+   *
+   * **The second cap never binds, and saying so is cheaper than writing it
+   * twice.** The square crop's height is its own width, so twice it is 2w;
+   * the ratio cap is 1.6w; and 1.6w is always the smaller. Written as
+   * `min(h, 1.6w, 2w)` the third term could never be reached, so the height
+   * cap the author asked for is honoured by the tighter rule standing in
+   * front of it rather than by a line of code that does nothing.
+   */
+  const shape = hero.image
+    ? `${hero.image.w} / ${Math.min(hero.image.h, hero.image.w * MAX_HERO_RATIO)}`
+    : '';
   const media = hero.image
     ? `<div class="hero-figure">
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
-          style="background-image:url('${BASE + hero.image.lqip}')">
+          style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${shape}">
           <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
             style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
         </a>
@@ -193,28 +225,55 @@ export function paintDay(panel) {
        <ul class="register register-cards">${rows}</ul>`
     : '';
 
+  /*
+   * **Two boxes, because on a wide screen the day is two columns** (author,
+   * 2026-09-01: "we will have 2 columns, a wide column to the left and a
+   * narrower column to the right"). The day's own saints go left — the hero,
+   * the register, and the name days below them — and what the church printed
+   * for the day goes right.
+   *
+   * **The left column has to be one box, and that is what moves the name
+   * days.** They were the panel's last child, after the hymns, and the first
+   * attempt kept them there and placed them in column 1 by hand. It does not
+   * work: a grid item spanning two rows gives its height to the rows it
+   * spans, so a long day of hymns inflated the second row and drove the name
+   * days to the foot of the page, hundreds of pixels below the register they
+   * belong to. Only one item per column flows independently of the other
+   * column's length.
+   *
+   * They are also where the instruction puts them — "the main saint of the
+   * day, with the also commemorated and name days" — and where `nameDaysMarkup`
+   * has always argued they belong: under the day's saints, being a second
+   * reading of that same list. The cost is on the phone, where both boxes are
+   * `display: contents` and document order is the layout: the name days now
+   * follow the register instead of the hymns.
+   */
   panel.innerHTML = `
-    <article class="hero ${hero.image ? 'has-media' : ''}">
-      ${media}
-      <div class="hero-body">
-        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
-        </h2>
-        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
-        <!-- The opening of the life, on a wide screen only (author,
-             2026-08-25: "because there is space on the left of the saint card
-             under their name"). It arrives with the fetched life rather than
-             from the manifest, so the box is here from the first paint and
-             fills a moment later; empty until then, and empty for good where
-             a saint has no life recorded, because a heading over nothing is
-             the furniture DESIGN.md §5b refuses. -->
-        <p class="hero-lede" data-hero-lede hidden></p>
-      </div>
-    </article>
-    ${register}
-    ${readingsMarkup(selected, state.calendar)}
-    ${hymnsMarkup(selected, state.calendar)}
-    ${nameDaysMarkup(entries, data)}`;
+    <div class="day-main">
+      <article class="hero ${hero.image ? 'has-media' : ''}">
+        ${media}
+        <div class="hero-body">
+          <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+            <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
+          </h2>
+          <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
+          <!-- The opening of the life, on a wide screen only (author,
+               2026-08-25: "because there is space on the left of the saint card
+               under their name"). It arrives with the fetched life rather than
+               from the manifest, so the box is here from the first paint and
+               fills a moment later; empty until then, and empty for good where
+               a saint has no life recorded, because a heading over nothing is
+               the furniture DESIGN.md §5b refuses. -->
+          <p class="hero-lede" data-hero-lede hidden></p>
+        </div>
+      </article>
+      ${register}
+      ${nameDaysMarkup(entries, data)}
+    </div>
+    <div class="day-side">
+      ${readingsMarkup(selected, state.calendar)}
+      ${hymnsMarkup(selected, state.calendar)}
+    </div>`;
   fillSaintHymns(panel, hero.slug, selected);
   fillHeroLede(panel, hero.slug, selected);
 }
