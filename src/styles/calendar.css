@@ -627,6 +627,28 @@
  * has always been held to ("the month is the week grown taller").
  */
 @media (max-width: 1023.98px) {
+  /* **The day swipe is only live where this is declared** (author, 2026-09-02:
+     "can you also swipe on today's date on mobile?"). Binding `wireDaySwipe`
+     to the whole view the day before made the *listener* reach the date, the
+     liturgy line and the register — but the browser still claimed a sideways
+     drag as a scroll everywhere outside `.slot-viewport` and `.cal-week`, the
+     only two boxes that had ever said otherwise, so under a real thumb the
+     page-wide swipe was dead on all of them.
+
+     A synthetic `PointerEvent` ignores `touch-action` entirely, which is why
+     the probe that signed that change off passed on ground where the feature
+     did not work — the same trap that hid the saint page's missing `pan-y` an
+     hour earlier. `a phone turns the day from anywhere on it` now reads the
+     computed value rather than only dispatching events, because that is the
+     half a dispatched gesture cannot see.
+
+     Safe to hang on the whole page: the only horizontal scroller under it is
+     `.week-strip`, which already inherits `pan-y` from `.cal-week` and is
+     dragged by `onGrainDrag` rather than by native panning. */
+  .cal {
+    touch-action: pan-y;
+  }
+
   .reckoning {
     display: none;
   }

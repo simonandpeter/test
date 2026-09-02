@@ -5476,8 +5476,48 @@ test('a phone turns the day from anywhere on it except the picker', async ({ pag
       [sel, dx],
     );
 
+  /*
+   * **The listener reaching a box is only half of it.** A synthetic
+   * `PointerEvent` is delivered whatever `touch-action` says, so the loop
+   * below passed on every one of these while a real thumb could still only
+   * swipe from the day panel and the week — the browser claimed the drag as a
+   * scroll before the handler ever ran. That is what the author reported the
+   * next morning ("can you also swipe on today's date on mobile?"), and this
+   * is the assertion that would have caught it: `pan-y` has to be the
+   * *computed* value at each of them, which under a dispatched gesture is
+   * unobservable.
+   */
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  const touch = await page.evaluate(
+    (sels) =>
+      Object.fromEntries(
+        sels.map((s) => {
+          const el = document.querySelector(s);
+          if (!el) return [s, 'MISSING'];
+          /*
+           * `touch-action` does not inherit, so reading it off the target
+           * itself answers `auto` at every one of these however the page is
+           * written — the browser instead intersects the values from the hit
+           * element up through its ancestors, which is what lets one
+           * declaration on `.cal` govern the whole page. Walking to the
+           * nearest declared value is that intersection here, nothing under
+           * `.cal` narrowing it a second time.
+           */
+          for (let n = el; n && n !== document.documentElement; n = n.parentElement) {
+            const value = getComputedStyle(n).touchAction;
+            if (value !== 'auto') return [s, value];
+          }
+          return [s, 'auto'];
+        }),
+      ),
+    ['.cal-date', '.hero-name', '.register-heading', '.cal-liturgy'],
+  );
+  for (const [sel, value] of Object.entries(touch)) {
+    expect(value, `${sel} lets the browser claim a sideways drag`).toBe('pan-y');
+  }
+
   // Every one of these is somewhere the old binding did not reach.
-  for (const sel of ['.hero-name', '.register-heading', '.cal-liturgy']) {
+  for (const sel of ['.cal-date', '.hero-name', '.register-heading', '.cal-liturgy']) {
     await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
     await expect(page.locator('.cal-date')).toContainText('5 Sep');
     await from(sel, -170);

@@ -688,6 +688,16 @@ one should assert the treatment took.
     `Emulation.setCPUThrottlingRate` via `newCDPSession`. Set it **after** the
     `goto` — it does not survive a navigation — and prove it bit with a timed
     loop; the achieved ratio is neither what you asked for nor stable.
+11. **A dispatched `PointerEvent` ignores `touch-action`.** It arrives at the
+    listener whatever the CSS says, so a swipe test built from `dispatchEvent`
+    passes on ground where the browser claims the drag as a scroll and a real
+    thumb finds nothing. Two bugs in two days — the saint page's columns and
+    the Daily page's date, both signed off by a green probe. Assert the
+    *effective* `touch-action` as well: it does not inherit, so reading it off
+    the target answers `auto` however the page is written — walk to the
+    nearest declared ancestor value, which is the intersection the browser
+    performs. Or drive the gesture through CDP `Input.dispatchTouchEvent`,
+    which goes through hit-testing and does respect it.
 
 **Every fix gets a browser test, backed out and confirmed to fail before being
 restored** — against a *rate* where the subject is load-sensitive. That applies
