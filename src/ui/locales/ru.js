@@ -217,7 +217,7 @@ export const ru = {
     heading: 'По какому календарю вы живёте?',
     groupLabel: 'Церкви',
     calendarOf: { julian: 'Юлианский календарь', 'revised-julian': 'Новоюлианский календарь' },
-    calendarNames: { julian: 'юлианский', 'revised-julian': 'новоюлианский' , gregorian: 'Григорианский'},
+    calendarNames: { julian: 'юлианский', 'revised-julian': 'новоюлианский' },
     // The adjective alone — «Русская», the church understood — because the
     // full «Русская церковь» put the 360 px header 6 px over its width.
     names: { russian: 'Русская', romanian: 'Румынская', greek: 'Греческая', serbian: 'Сербская' },
@@ -424,6 +424,7 @@ export const ru = {
       beforePascha: '{n}-й день до Пасхи',
     },
     lifeInEnglish: 'Житие написано по-английски и пока не переведено.',
+    civilCalendar: 'Григорианский',
     feastThisYear: '{feast} - в этом году {gregorian}',
     feastNoOccurrence: '{feast} - в {year} году не выпадает',
     noFeast: 'День памяти не записан.',

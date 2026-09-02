@@ -1173,7 +1173,7 @@ function feastLine(feast, church, year, router) {
    * Calendar church, and a line that hid it would be hiding the thing the
    * register exists to show.
    */
-  const civil = STRINGS.church.calendarNames?.gregorian;
+  const civil = STRINGS.saint.civilCalendar;
   const shown = gregorianFmt(new Date(Date.UTC(d.year, d.month - 1, d.day)));
   const gregorian =
     `<a class="feast-day" href="${router.href(`/calendar/${iso}`)}" data-feast-day="${iso}"` +

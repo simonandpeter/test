@@ -214,7 +214,7 @@ export const ro = {
     heading: 'Ce calendar ții?',
     groupLabel: 'Biserici',
     calendarOf: { julian: 'Calendarul iulian', 'revised-julian': 'Calendarul iulian îndreptat' },
-    calendarNames: { julian: 'iulian', 'revised-julian': 'iulian îndreptat' , gregorian: 'Gregorian'},
+    calendarNames: { julian: 'iulian', 'revised-julian': 'iulian îndreptat' },
     names: { russian: 'Rusă', romanian: 'Română', greek: 'Greacă', serbian: 'Sârbă' },
   },
 
@@ -410,6 +410,7 @@ export const ro = {
       beforePascha: 'cu {n} zile înainte de Paști',
     },
     lifeInEnglish: 'Viața este scrisă în engleză și încă nu a fost tradusă.',
+    civilCalendar: 'Gregorian',
     feastThisYear: '{feast} - anul acesta cade pe {gregorian}',
     feastNoOccurrence: '{feast} - nu cade în {year}',
     noFeast: 'Zi de prăznuire neînregistrată.',

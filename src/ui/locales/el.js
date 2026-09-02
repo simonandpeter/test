@@ -214,7 +214,7 @@ export const el = {
     heading: 'Ποιο ημερολόγιο κρατάτε;',
     groupLabel: 'Εκκλησίες',
     calendarOf: { julian: 'Ιουλιανό ημερολόγιο', 'revised-julian': 'Διορθωμένο ιουλιανό ημερολόγιο' },
-    calendarNames: { julian: 'Ιουλιανό', 'revised-julian': 'Νέο Ιουλιανό' , gregorian: 'Γρηγοριανό'},
+    calendarNames: { julian: 'Ιουλιανό', 'revised-julian': 'Νέο Ιουλιανό' },
     names: { russian: 'Ρωσική', romanian: 'Ρουμανική', greek: 'Ελλαδική', serbian: 'Σερβική' },
   },
 
@@ -410,6 +410,7 @@ export const el = {
       beforePascha: '{n} ημέρες πριν από το Πάσχα',
     },
     lifeInEnglish: 'Ο βίος είναι γραμμένος στα αγγλικά και δεν έχει μεταφραστεί ακόμη.',
+    civilCalendar: 'Γρηγοριανό',
     feastThisYear: '{feast} - φέτος πέφτει στις {gregorian}',
     feastNoOccurrence: '{feast} - δεν πέφτει το {year}',
     noFeast: 'Ημέρα μνήμης δεν έχει καταγραφεί.',

@@ -214,7 +214,7 @@ export const sr = {
     heading: 'Који календар држите?',
     groupLabel: 'Цркве',
     calendarOf: { julian: 'Јулијански календар', 'revised-julian': 'Новојулијански календар' },
-    calendarNames: { julian: 'јулијански', 'revised-julian': 'новојулијански' , gregorian: 'Грегоријански'},
+    calendarNames: { julian: 'јулијански', 'revised-julian': 'новојулијански' },
     names: { russian: 'Руска', romanian: 'Румунска', greek: 'Грчка', serbian: 'Српска' },
   },
 
@@ -412,6 +412,7 @@ export const sr = {
       beforePascha: '{n}. дан пре Васкрса',
     },
     lifeInEnglish: 'Житије је написано на енглеском и још није преведено.',
+    civilCalendar: 'Грегоријански',
     feastThisYear: '{feast} - ове године пада {gregorian}',
     feastNoOccurrence: '{feast} - не пада у {year}. години',
     noFeast: 'Дан помена није записан.',

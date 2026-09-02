@@ -483,7 +483,7 @@ export const STRINGS = {
        inside the brackets after a feast's date ("17 January (Julian)"). Two
        keys because Romanian and Russian do not put the same word in both
        places, and one of them would have had to be wrong. */
-    calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian', gregorian: 'Gregorian' },
+    calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian' },
     // The churches by id, here rather than only in data/churches.js, so the
     // locale packs can translate them (Amendment 36): the registry stays the
     // authority on what exists, this is the authority on what it is called.
@@ -835,6 +835,20 @@ export const STRINGS = {
     // told, once, in their own language, rather than left to wonder whether
     // the page is broken.
     lifeInEnglish: 'This life is written in English and has not been translated.',
+    /*
+     * The name of the civil calendar, for the *second* date in a veneration
+     * row (author, 2026-09-02: "just state which falls on '28 January 2026
+     * (Gregorian)' and that always stays the same").
+     *
+     * **Deliberately not in `church.calendarNames`**, and that is the whole
+     * reason it is here. `formatFeast` reads a feast's own calendar out of
+     * that map and prints the parenthetical only when it finds one — the
+     * Gregorian's *absence* is what makes a civil-stored feast print as a bare
+     * "17 January", which is the correct reading for the page's own reckoning.
+     * Adding the key there labelled every such feast and turned a unit test
+     * red on the runner; the two dates want two sources.
+     */
+    civilCalendar: 'Gregorian',
     feastThisYear: '{feast}, which falls on {gregorian}',
     feastNoOccurrence: '{feast}, which has no occurrence in {year}',
     noFeast: 'No feast day recorded.',
