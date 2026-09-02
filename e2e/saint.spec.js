@@ -1,6 +1,7 @@
 import { test, expect } from './fixtures.js';
 import {
   DETAIL,
+  INDEX,
   POPULATED,
   SPARSE_DETAIL,
   answered,
@@ -947,6 +948,78 @@ test('the filters in the search column narrow the list beside the life', async (
   const after = Number((await count.textContent()).replace(/\D+/g, ''));
   expect(after, 'the filter left nobody at all').toBeGreaterThan(0);
   expect(after, 'the filter did not narrow anything').toBeLessThan(Number(before.replace(/\D+/g, '')));
+});
+
+test('the filters in the search column are chips, however the reader reached the page', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: the filter buttons on a saint page print at the size
+   * of the page's own text instead of wearing the chip.
+   *
+   * The cause is reach, not dress. `--facet-font`, `--facet-pad-y` and
+   * `--facet-h` were declared on All Saints' own view root, and this column is
+   * outside that subtree — so `font-size: var(--facet-font)` was invalid at
+   * computed-value time and *inherited* the life's 17 px, while
+   * `padding: var(--facet-pad-y) 10.5px` fell away entirely. It hid behind the
+   * one road that did work: arriving from All Saints leaves the mode class on
+   * the element the saint page renders into, so the tokens were in reach by
+   * accident and the chips came out right. **Every other arrival — a reload, a
+   * deep link, the Daily page, the map — got the bare words**, which is what a
+   * `goto` here is.
+   *
+   * Two channels, because either alone can be green while the bug stands. The
+   * chip is measured against All Saints' own chip, which is the claim ("the
+   * Index’s own facet chips, in this column") in one number and needs no
+   * literal here; and `--facet-h` is resolved by a probe *inside this column*,
+   * which reads 0 rather than 30-odd if the token never reached it — a height
+   * that resolves to nothing is what this instrument looks like doing nothing.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  // The same chip on All Saints, where it has always been right.
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const chipOn = (root) =>
+    page.evaluate((sel) => {
+      const summary = document.querySelector(`${sel} details[data-facet="sexes"] > summary`);
+      if (!summary) return null;
+      const style = getComputedStyle(summary);
+      return {
+        fontSize: style.fontSize,
+        padding: style.padding,
+        height: Number(summary.getBoundingClientRect().height.toFixed(2)),
+      };
+    }, root);
+  const index = await chipOn('.facets');
+
+  // A saint page reached directly, which is every arrival but one.
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('[data-side-facets] details[data-facet="sexes"] > summary')).toBeVisible();
+  const side = await chipOn('.side-facets');
+
+  expect(side.fontSize, 'the column’s chips are not set at a chip’s size').toBe(index.fontSize);
+  expect(side.padding, 'the column’s chips lost the chip’s padding').toBe(index.padding);
+  expect(
+    Math.abs(side.height - index.height),
+    `side chip ${side.height} vs All Saints ${index.height}`,
+  ).toBeLessThan(0.5);
+
+  // And the arithmetic itself reaches this column rather than the chip merely
+  // happening to agree: an unreachable `--facet-h` leaves the probe at 0.
+  const declared = await page.evaluate(() => {
+    const probe = document.createElement('div');
+    probe.style.cssText = 'position:absolute;visibility:hidden;width:1px;height:var(--facet-h)';
+    document.querySelector('.side-facets').append(probe);
+    const height = probe.getBoundingClientRect().height;
+    probe.remove();
+    return height;
+  });
+  expect(declared, 'the chip arithmetic does not reach the search column').toBeGreaterThan(1);
+  expect(
+    Math.abs(side.height - declared),
+    `chip ${side.height} vs declared ${declared}`,
+  ).toBeLessThan(0.5);
 });
 
 /* ---- the column beside the life (2026-09-01) ---------------------------- */

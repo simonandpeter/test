@@ -127,11 +127,23 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - Grid is virtualised *and* absolutely positioned: mounted set ≠ corpus, DOM
   order ≠ screen order. Use `leaders()`; never `.first()`.
 - Bookmark is on the saint page and shelves only.
+- **The facet chip is drawn by two views, so its four metrics are on `:root`**
+  (`--facet-font`, `--facet-lh`, `--facet-pad-y`, `--facet-h`, index.css). They
+  sat on `.is-carousel, .is-search` until 2026-09-02, which put them out of
+  reach of the saint page's own `.side-facets` — and an undefined custom
+  property is not a smaller chip: `font-size: var(--facet-font)` is invalid at
+  computed-value time and *inherits*, so the chips came out at the life's 17 px
+  with their padding gone. It hid because arriving from All Saints leaves the
+  mode class on the element the saint page renders into, so that one road was
+  right by accident.
 
 **Saint page** — `src/views/saint.js` + `src/styles/saint.css`. The `.name-line`
 pattern (name shrinks, sibling control holds width) is defined once in base.css.
 Everything below the life sits in `[data-late]`, hidden until the payload lands:
 it appends rather than reserving, because a life's height is unknowable.
+The right column (`.saint-side`, desktop only) is the reader's own search from
+All Saints — the Index's own chips and rows, borrowed rather than copied, which
+is why anything scoped to the All Saints view root can go missing there.
 
 **Map** — `src/views/map.js` + `src/styles/map.css`.
 
@@ -674,6 +686,14 @@ would also be green. Two tests opt out and say why in their comments.
 **The fixture only decorates the injected `page`.** 42 tests open their own
 context; `coldFace(page)` and `COLD` are exported for those, and a test using
 one should assert the treatment took.
+
+**One test fails under the rehearsal and only under it** (2026-09-02):
+`the two left columns scroll independently of each other and of the page`
+(saint.spec.js) leaves the life column's `scrollTop` at 0 with `COLD_FACE=1`,
+while claiming a moment earlier that the column has something to scroll. It
+does the same on the unmodified tree, and it is green in the ordinary suite in
+both projects and on CI. Not diagnosed — recorded so the next run of the
+rehearsal on this spec knows it is not theirs.
 
 ### Traps
 

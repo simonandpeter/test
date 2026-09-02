@@ -20,10 +20,20 @@
 
    Declared on the view root rather than on `.index-controls`, because the mode
    toggle (2026-08-27) is a chip that stands *outside* the controls, beside the
-   heading — and a custom property only reaches its own subtree. The root is
-   whichever of the two mode classes is on: views/saints.js always sets one. */
-.is-carousel,
-.is-search {
+   heading — and a custom property only reaches its own subtree.
+
+   **`:root` since 2026-09-02, because the chip is no longer one view's**: the
+   saint page's search column draws the same `.facets` (`.side-facets`,
+   saint.css), and it is outside the All Saints subtree entirely, so the view
+   root put these four out of its reach. An undefined custom property does not
+   fall back to a smaller chip — `font-size: var(--facet-font)` is invalid at
+   computed-value time and *inherits*, so the chips came out at the page's own
+   17 px with `padding: var(--facet-pad-y) 10.5px` dropped to nothing: a row of
+   large bare words where six chips belong. It only showed when the reader
+   arrived from anywhere but All Saints, since coming from there leaves the
+   mode class on the view element the saint page renders into. The arithmetic
+   below is unchanged and still stated once; only its reach is. */
+:root {
   --facet-font: 13.5px;
   --facet-lh: 1.65;
   --facet-pad-y: 3px;
