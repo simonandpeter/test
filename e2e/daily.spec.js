@@ -5325,6 +5325,98 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await expect(button).toHaveText('Julian');
 });
 
+test('the day the reader picked a reckoning for is named and sourced in it', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "I click to change from Revised Julian to Julian, but
+   * it stays as 2 Sep instead of going back 13 days. So now its claiming that
+   * today is 2 Sep in Julian, which it isnt."
+   *
+   * They were right, and the fault was not the control: until this change a
+   * reckoning moved the *fasts* and nothing else, so the page printed the
+   * saints and the date of the civil 2 September under a heading that said
+   * Julian. **DESIGN.md's "the Daily page prints the civil date and only the
+   * civil date" is reversed here for the reader who asks** — and for nobody
+   * else, which the last third of this test is about.
+   *
+   * The Russian calendar is the Julian one, so it is the *Revised Julian*
+   * choice that moves a Russian reader's day, and it moves it two ways at
+   * once: 2 September Julian is the civil 15th, so the saints of the civil
+   * 15th are the ones a New Calendar Russian keeps today.
+   */
+  await ready(page, { church: 'russian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-02', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const heading = page.locator('.cal-date');
+  const monthName = page.locator('.month-name');
+  const hero = page.locator('.hero-name');
+  // The premise, and the state DESIGN.md's rule describes: the civil date,
+  // whatever calendar the church keeps.
+  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  const civilHero = await hero.textContent();
+
+  const pick = async (id) => {
+    await page.locator('[data-reckoning-btn]').click();
+    await page.locator(`[data-reckoning-pop] [data-pick="${id}"]`).click();
+  };
+
+  /*
+   * Julian, which is the Russian church's own: the day is *renamed* and
+   * nothing is re-sourced, because there is nothing to re-source — the same
+   * saints, thirteen days earlier in the reader's own reckoning. This is the
+   * author's report in one assertion.
+   */
+  await pick('julian');
+  await expect(heading).toHaveText('Wednesday, 20 August 2026');
+  await expect(monthName).toHaveText('August 2026');
+  await expect(hero).toHaveText(civilHero);
+
+  // The month grid is the Julian month, and the cell for the day the reader is
+  // standing on carries the Julian numeral against the civil date the URL and
+  // every link on the page are still written in.
+  const grid = await page.evaluate(() => {
+    const cells = [...document.querySelectorAll('.month-grid [data-iso]')];
+    const here = document.querySelector('.month-grid [aria-current="date"]');
+    return {
+      count: cells.length,
+      first: cells[0]?.dataset.iso,
+      last: cells.at(-1)?.dataset.iso,
+      selected: { iso: here?.dataset.iso, num: here?.querySelector('.day-num')?.textContent },
+    };
+  });
+  expect(grid.count, 'the Julian August is 31 days').toBe(31);
+  expect(grid.first, 'the Julian 1 August is the civil 14th').toBe('2026-08-14');
+  expect(grid.last, 'the Julian 31 August is the civil 13 September').toBe('2026-09-13');
+  expect(grid.selected).toEqual({ iso: '2026-09-02', num: '20' });
+
+  /*
+   * Revised Julian, which is not: the heading goes back to 2 September and the
+   * *day itself* moves — the saints the Russian church keeps on its own 2
+   * September, which the civil calendar reaches on the 15th. A label could not
+   * do this, which is why the hero is what is asserted.
+   */
+  await pick('revised-julian');
+  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  await expect(hero).not.toHaveText(civilHero);
+  const moved = await hero.textContent();
+  await page.goto('/calendar/2026-09-15', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-date')).toHaveText('Tuesday, 15 September 2026');
+
+  /*
+   * And **nothing moves for a reader who has not asked**, which is the half of
+   * the reversal that keeps DESIGN.md's rule standing everywhere else: back on
+   * Follow my church, a Russian reader is on the civil date again with the
+   * civil day's saints, exactly as this page has read since 2026-08-24.
+   */
+  await page.goto('/calendar/2026-09-02', { waitUntil: 'networkidle' });
+  await pick('');
+  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  await expect(monthName).toHaveText('September 2026');
+  await expect(hero).toHaveText(civilHero);
+  expect(moved, 'premise: the two reckonings really do lead different days').not.toBe(civilHero);
+});
+
 test('a phone is told the reckoning without being offered the choice', async ({ page }) => {
   // "Only on desktop" (author, 2026-09-02). A phone reader has already
   // answered the church question in the header; a second calendar control

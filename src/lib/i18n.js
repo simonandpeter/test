@@ -234,10 +234,27 @@ export function dateFormatter(options) {
  * whose dot belongs to a different word.
  */
 export function formatDate(options, date) {
+  return formatDateParts(options, date)
+    .map((part) => part.value)
+    .join('');
+}
+
+/**
+ * The same treatment, stopped one step early: the parts, cased and de-dotted,
+ * before they are joined.
+ *
+ * The Daily page needs this to print one day under two calendars (2026-09-02):
+ * the weekday belongs to the civil day and the numerals to the reckoning the
+ * reader chose, and gluing two formatted strings together would invent
+ * punctuation the language does not use — Greek separates neither with a
+ * comma, Russian ends with «г.». Taking the pattern from `Intl` and replacing
+ * one field inside it keeps every language's own grammar.
+ */
+export function formatDateParts(options, date) {
   return dateFormatter(options)
     .formatToParts(date)
     .map((part) => {
-      if (part.type !== 'weekday' && part.type !== 'month') return part.value;
+      if (part.type !== 'weekday' && part.type !== 'month') return part;
       const bare = part.value.replace(/\.$/, '');
       const cased = bare.charAt(0).toLocaleUpperCase(languageTag()) + bare.slice(1);
       /*
@@ -251,11 +268,10 @@ export function formatDate(options, date) {
        * packs' own abbreviations and are not this instruction's business.
        */
       if (part.type === 'month' && currentLanguage() === 'en' && options.month === 'short') {
-        return cased.slice(0, 3);
+        return { ...part, value: cased.slice(0, 3) };
       }
-      return cased;
-    })
-    .join('');
+      return { ...part, value: cased };
+    });
 }
 
 /**

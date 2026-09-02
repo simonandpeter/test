@@ -87,6 +87,23 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   that test **cannot** catch the doubling being backed out, because the
   reservation is a `min-height` and holds the bar open regardless — `the
   chrome doubles and spans the window on a wide screen` is the one that does.
+- **A chosen reckoning moves the day, not just the fasts** (author, 2026-09-02;
+  DESIGN.md records the reversal). `storedReckoning()` null is "follow my
+  church" and every path below is then the identity, which is why none of them
+  branches: `churchDayFor` (lib/church.js) restates a civil day into the one
+  the church's *own* calendar files that name under, and `allEntriesFor` and
+  `dayRecordFor` (daily/entries.js) are the only two places that fetch a day —
+  everything else reads through them. The naming is `gridCalendar()` in
+  picker.js and fullcal.js (the numerals), `reckonedHeading`/`reckonedPlain`/
+  `reckonedMonth` in daily/format.js (the words). **The weekday always comes
+  from the civil day** and the numerals from the reckoned one: two `Intl`
+  passes with one field swapped, because gluing two formatted dates together
+  invents punctuation Greek and Russian do not use. `restateIso`, `dateIn`,
+  `isoOfDate` and `daysInMonthOf` are the arithmetic, in lib/calendar-page.js
+  and unit-tested — including the Julian 29 February of 2100, which the other
+  calendars do not have and which therefore stays where it is.
+- Every `data-iso` is a civil date whatever is chosen, so URLs, links and deep
+  links never move. Only what is printed does.
 - The rail and month are one seam. The *day* half is separable.
 - A day steps three ways: click a rail/month day, the arrow/A-D keys anywhere
   on the page (`wireDayKeys`), or a touch swipe on the day panel itself

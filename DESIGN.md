@@ -695,6 +695,24 @@ same day under different names — is true and is why the register still prints
 each attestation's feast in its own calendar on the saint's page; it simply
 does not earn a second date under the strip.*
 
+*Reversed a third time, and narrowly, on 2026-09-02 (author: "I click to
+change from Revised Julian to Julian, but it stays as 2 Sep instead of going
+back 13 days. So now its claiming that today is 2 Sep in Julian, which it
+isnt"). **A reader who chooses a reckoning is shown the day in it** — the
+heading, the rail, the month, the full-screen calendar and the two prose
+horizons, all of them, and the day's saints and record are the ones that
+reckoning reaches. A reader who has not chosen sees the civil date and only
+the civil date, exactly as the 2026-08-24 rule above says, so this reverses
+that rule for the reader who asks and for nobody else.*
+
+*The rule was not what failed. What failed was the reckoning control added
+beside it the same morning: a page headed 2 September with `Julian` printed
+opposite it was making a claim about today that was thirteen days wrong, and
+the 2026-08-24 objection — two dates for one day reads as confusion — is not
+an argument for printing one date under another calendar's name. The choice
+between naming the day in both calendars and naming it in the chosen one was
+the author's, and it is the chosen one alone.*
+
 Under the h1, one utility line: where the day stands in the paschal cycle, the tone of
 the week, and whether it is a fast for this church and why — computed from
 Pascha and the church's calendar (`lib/liturgy.js`), which is why two churches
@@ -999,7 +1017,11 @@ which is why under reduced motion it is **removed** rather than shortened
 (§6): the lesson survives in the controls' accessible names, which say the
 whole sentence.
 
-The strip and the grid stay in the civil calendar the URL is in.
+The strip and the grid stay in the civil calendar the URL is in — **until the
+reader picks a reckoning of their own** (2026-09-02), which is what the
+paragraph above records: the URL stays civil either way, and it is the numerals
+the reader is counting in that change. Every `data-iso` on the page is still a
+civil date, so a link, a share and a deep link mean what they always did.
 
 **The hero image** (author, 2026-08-21) is a fixed box, cropped from the centre
 across and hard against the top, so what a tall icon loses is its lower half

@@ -4,7 +4,7 @@
  * unit-tested in Node, and the view is a thin renderer over it.
  */
 
-import { gregorianToJdn, jdnToGregorian, isValidDate } from './jdn.js';
+import { gregorianToJdn, jdnToGregorian, isValidDate, toJdn, fromJdn } from './jdn.js';
 import { toIsoDate } from './feasts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
@@ -22,6 +22,65 @@ export function addDaysIso(iso, n) {
   const d = parseIso(iso);
   return toIsoDate(jdnToGregorian(gregorianToJdn(d.year, d.month, d.day) + n));
 }
+
+/* ---- one civil day, named by two calendars (2026-09-02) ---------------- */
+
+/**
+ * What `calendar` calls the civil day `iso`.
+ *
+ * The day does not move: 2 September 2026 Gregorian and 20 August 2026 Julian
+ * are one day under two names, thirteen apart because that is where the two
+ * arithmetics currently stand. Returns `{year, month, day}` in that calendar.
+ */
+export function dateIn(calendar, iso) {
+  const d = parseIso(iso);
+  return fromJdn(calendar, gregorianToJdn(d.year, d.month, d.day));
+}
+
+/** The civil day on which `calendar` reads (year, month, day). */
+export const isoOfDate = (calendar, { year, month, day }) =>
+  toIsoDate(jdnToGregorian(toJdn(calendar, year, month, day)));
+
+/**
+ * **The other civil day that wears today's name.**
+ *
+ * Read `iso` in the `read` calendar, then find the civil day the `write`
+ * calendar puts those same three numbers on. This is not a conversion of a
+ * date — a date converts by standing still — it is the question an Old
+ * Calendar reader asks of a New Calendar corpus: *my* church keeps 20 August
+ * today, so which of the days you have recorded is the one your calendar
+ * calls 20 August?
+ *
+ * Identity whenever the two calendars agree, which is every reader who has
+ * not chosen a reckoning of their own, and every day of the two calendars
+ * that already match. So nothing downstream needs to ask whether a shift is
+ * in force before calling this.
+ *
+ * **A date the `write` calendar does not have keeps the day it was given.**
+ * The Julian 29 February of 2100 is the first such day (the Revised Julian
+ * drops that century's leap and the Gregorian has already), and there is no
+ * honest answer for it: the corpus has no 29 February to point at, so the
+ * reader stays on the civil day they are standing on rather than being sent
+ * to a day that means something else. Seventy-four years away, and a guard
+ * rather than a comment because the alternative is a silently wrong date.
+ */
+export function restateIso(iso, read, write) {
+  if (read === write) return iso;
+  const named = dateIn(read, iso);
+  if (!isValidDate(write, named.year, named.month, named.day)) return iso;
+  return isoOfDate(write, named);
+}
+
+/**
+ * Days in a month of `calendar`, as the distance between two first-of-months.
+ *
+ * The Gregorian-only version of this lived in `views/daily/picker.js` and is
+ * still there for the grid that has no calendar to ask; Addendum G5 has why it
+ * is a subtraction rather than a walk upward from 28.
+ */
+export const daysInMonthOf = (calendar, { year, month }) =>
+  toJdn(calendar, year + (month === 12 ? 1 : 0), month === 12 ? 1 : month + 1, 1) -
+  toJdn(calendar, year, month, 1);
 
 /** Monday-to-Sunday week containing the date. JDN 0 was a Monday. */
 export function weekOf(iso) {

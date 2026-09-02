@@ -1,11 +1,13 @@
-import { recordedDay, recordsReach } from '../../data/days.js';
+import { recordsReach } from '../../data/days.js';
+import { churchDayFor } from '../../lib/church.js';
+import { dayRecordFor } from './entries.js';
 import { bibleUrl, refInLanguage } from '../../lib/bible.js';
 import { loadDetail } from '../../lib/detail.js';
 import { currentLanguage } from '../../lib/i18n.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { hymnMarkup } from '../../ui/hymns.js';
 import { STRINGS, fill } from '../../ui/strings.js';
-import { plainDateFmt, utc } from './format.js';
+import { dayInWords } from './format.js';
 import { state } from './state.js';
 
 /**
@@ -48,7 +50,7 @@ function readingLabel(label) {
 }
 
 export function readingsMarkup(iso, churchId) {
-  const rec = recordedDay(iso, churchId);
+  const rec = dayRecordFor(iso, churchId);
   if (!rec?.readings?.length) {
     /*
      * Past the end of the day records the page used to simply stop (found in
@@ -62,9 +64,12 @@ export function readingsMarkup(iso, churchId) {
      * must not be told in these words.
      */
     const reach = recordsReach();
-    if (!reach || iso <= reach) return '';
+    // Against the day whose record was *fetched*, not the day the reader is
+    // standing on: with a reckoning chosen those are thirteen days apart, and
+    // near the horizon the two answer differently.
+    if (!reach || churchDayFor(iso, churchId) <= reach) return '';
     return `<p class="beyond-records utility">${esc(
-      fill(STRINGS.calendar.beyondRecords, { until: plainDateFmt(utc(reach)) }),
+      fill(STRINGS.calendar.beyondRecords, { until: dayInWords(reach) }),
     )}</p>`;
   }
   const R = STRINGS.calendar.readings;
@@ -85,7 +90,7 @@ export function readingsMarkup(iso, churchId) {
 }
 
 export function hymnsMarkup(iso, churchId) {
-  const rec = recordedDay(iso, churchId);
+  const rec = dayRecordFor(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
   return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>

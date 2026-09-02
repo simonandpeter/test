@@ -2,10 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   addDaysIso,
+  dateIn,
+  daysInMonthOf,
   formatInterval,
   formatLifespan,
+  isoOfDate,
   parseIso,
   pickHero,
+  restateIso,
   todayIso,
   weekOf,
 } from '../src/lib/calendar-page.js';
@@ -154,4 +158,66 @@ test('todayIso uses the local date, not UTC', () => {
   // 23:30 local on the 20th must be the 20th regardless of timezone.
   const lateEvening = new Date(2026, 7, 20, 23, 30);
   assert.equal(todayIso(lateEvening), '2026-08-20');
+});
+
+/* ---- one civil day, named by two calendars (2026-09-02) ---------------- */
+
+test('a civil day answers to both calendars at once', () => {
+  // The day the author reported: 2 September 2026 is 20 August in the Julian.
+  assert.deepEqual(dateIn('julian', '2026-09-02'), { year: 2026, month: 8, day: 20 });
+  assert.deepEqual(dateIn('revised-julian', '2026-09-02'), { year: 2026, month: 9, day: 2 });
+  // And back the other way, which is the direction the picker builds a month in.
+  assert.equal(isoOfDate('julian', { year: 2026, month: 8, day: 20 }), '2026-09-02');
+  assert.equal(isoOfDate('revised-julian', { year: 2026, month: 9, day: 2 }), '2026-09-02');
+});
+
+test('restating a day finds the civil day that wears the same name', () => {
+  /*
+   * An Old Calendar reader of a New Calendar church keeps 20 August today, so
+   * the day of theirs the corpus holds is the one *their church* calls 20
+   * August — the civil 20th, not the civil 2 September they are standing on.
+   */
+  assert.equal(restateIso('2026-09-02', 'julian', 'revised-julian'), '2026-08-20');
+  // And the reverse: a New Calendar reader of an Old Calendar church keeps 2
+  // September today, which that church's own calendar reaches on 15 September.
+  assert.equal(restateIso('2026-09-02', 'revised-julian', 'julian'), '2026-09-15');
+});
+
+test('restating is identity wherever the two calendars agree', () => {
+  // The case every reader who has not chosen a reckoning is in, so nothing
+  // downstream has to ask whether a shift is in force.
+  for (const iso of ['2026-01-01', '2026-09-02', '2026-12-31']) {
+    assert.equal(restateIso(iso, 'julian', 'julian'), iso);
+    assert.equal(restateIso(iso, 'revised-julian', 'revised-julian'), iso);
+  }
+});
+
+test('restating carries the year with it across the turn of the year', () => {
+  // Julian 23 December 2026 is the civil 5 January 2027: the numbers a reader
+  // reads are in the year before the one they are standing in.
+  assert.deepEqual(dateIn('julian', '2027-01-05'), { year: 2026, month: 12, day: 23 });
+  assert.equal(restateIso('2027-01-05', 'julian', 'revised-julian'), '2026-12-23');
+});
+
+test('a day the other calendar does not have keeps the day it was given', () => {
+  /*
+   * 29 February 2100 is a real Julian day and neither the Gregorian nor the
+   * Revised Julian has one - 2100 leaves 300 on division by 900, so the
+   * Revised Julian drops the leap too. There is no honest civil day to send
+   * the reader to, so they stay where they are.
+   */
+  const leapDay = isoOfDate('julian', { year: 2100, month: 2, day: 29 });
+  assert.deepEqual(dateIn('julian', leapDay), { year: 2100, month: 2, day: 29 });
+  assert.equal(restateIso(leapDay, 'julian', 'revised-julian'), leapDay);
+});
+
+test('a month is as long as the calendar that names it says', () => {
+  assert.equal(daysInMonthOf('julian', { year: 2026, month: 8 }), 31);
+  assert.equal(daysInMonthOf('revised-julian', { year: 2026, month: 2 }), 28);
+  // December rolls into the next January rather than asking for a month 13.
+  assert.equal(daysInMonthOf('julian', { year: 2026, month: 12 }), 31);
+  // 2100 is the pair's first disagreement about a February, and it is the
+  // Julian that still has the leap.
+  assert.equal(daysInMonthOf('julian', { year: 2100, month: 2 }), 29);
+  assert.equal(daysInMonthOf('revised-julian', { year: 2100, month: 2 }), 28);
 });

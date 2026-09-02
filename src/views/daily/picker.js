@@ -1,17 +1,45 @@
-import { recordedDay } from '../../data/days.js';
-import { addDaysIso, parseIso, todayIso, weekOf } from '../../lib/calendar-page.js';
+import { addDaysIso, dateIn, daysInMonthOf, isoOfDate, parseIso, todayIso, weekOf } from '../../lib/calendar-page.js';
+import { storedReckoning } from '../../lib/church.js';
 import { gradeForDay } from '../../lib/fast-grade.js';
-import { toIsoDate } from '../../lib/feasts.js';
-import { gregorianToJdn } from '../../lib/jdn.js';
+import { toJdn } from '../../lib/jdn.js';
 import { liturgicalDay } from '../../lib/liturgy.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { onGrainDrag, SETTLE } from '../../ui/grain-drag.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
-import { countFor } from './entries.js';
-import { dayFmt, monthFmt, monthLongFmt, utc, weekdayFmt } from './format.js';
+import { countFor, dayRecordFor } from './entries.js';
+import { dayFmt, monthFmt, monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
 import { reducedMotion } from './motion.js';
 import { state } from './state.js';
+
+/**
+ * **The calendar the picker counts its days in** (author, 2026-09-02).
+ *
+ * Gregorian until the reader chooses a reckoning, and the Revised Julian is
+ * the Gregorian's own arithmetic until 2800 (lib/jdn.js) — so this is the
+ * identity for every reader who has not asked and for one of the two who
+ * have, and every call below can be unconditional rather than branching on
+ * whether a shift is in force.
+ *
+ * It is the *chosen* reckoning rather than `calendarFor`, for the reason
+ * `churchDayFor` gives: a reader who has not touched the control is reading
+ * the civil calendar the URL is in, which is what DESIGN.md's grid rule says
+ * and what every day of this page said before the control existed.
+ */
+const gridCalendar = () => storedReckoning() ?? 'gregorian';
+
+/** A day's own number in the calendar the picker is counting in. */
+const dayNumeral = (iso) => dateIn(gridCalendar(), iso).day;
+
+/**
+ * A day's whole name for a screen reader, in the calendar the picker is
+ * counting in — so the button a reader hears and the numeral they see are one
+ * date rather than two thirteen days apart.
+ */
+const dayLabel = (iso) => {
+  const chosen = storedReckoning();
+  return chosen ? reckonedHeading(iso, chosen) : dayFmt(utc(iso));
+};
 
 /** Matches --dur-month in tokens.css; the fade is long on purpose. */
 const MONTH_FADE = 420;
@@ -139,13 +167,13 @@ const COAST_STOP = 0.15;
 const fastTone = (iso) => {
   const f = liturgicalDay(iso, state.calendar).fasting;
   if (f.kind !== 'fast' && f.kind !== 'fish') return null;
-  const grade = gradeForDay(f, recordedDay(iso, state.calendar)?.fastingNote);
+  const grade = gradeForDay(f, dayRecordFor(iso, state.calendar)?.fastingNote);
   return grade === 'fish' ? 'fish' : 'fast';
 };
 
 const dayMarks = (iso) => {
   const tone = fastTone(iso);
-  const feast = Boolean(recordedDay(iso, state.calendar)?.hymns?.length);
+  const feast = Boolean(dayRecordFor(iso, state.calendar)?.hymns?.length);
   const marks = [];
   const words = [];
   const D = STRINGS.calendar.marks;
@@ -168,9 +196,9 @@ const dayButton = (iso) => {
   const density = n ? ` - ${fill(STRINGS.calendar.densityLabel, { count: n })}` : '';
   const marks = dayMarks(iso);
   return `<button type="button" data-iso="${iso}" tabindex="-1"
-    aria-label="${dayFmt(utc(iso))}${density}${marks.label}">
+    aria-label="${dayLabel(iso)}${density}${marks.label}">
     <span class="day-name">${weekdayFmt(utc(iso))}</span>
-    <span class="day-num">${parseIso(iso).day}</span>
+    <span class="day-num">${dayNumeral(iso)}</span>
     ${marks.html}
   </button>`;
 };
@@ -779,7 +807,10 @@ export function growMonthBody(body, from, to, { release = true } = {}) {
 /** The month the grid is showing, defaulting to the selected day's own. */
 export function monthCursor() {
   if (!state.monthCursor) {
-    const d = parseIso(state.selected);
+    // The month the selected day falls in *by the calendar being counted in*:
+    // a Julian reader's 20 August and a civil 2 September are one day in two
+    // different months, and the grid is the one the heading names.
+    const d = dateIn(gridCalendar(), state.selected);
     state.monthCursor = { year: d.year, month: d.month };
   }
   return state.monthCursor;
@@ -795,7 +826,7 @@ export function monthCursor() {
 export function paintMonth() {
   const { el } = state;
   const cursor = monthCursor();
-  const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
+  const first = isoOfDate(gridCalendar(), { year: cursor.year, month: cursor.month, day: 1 });
 
   // The name prints in the gutter beside the grid rather than above it, so it
   // costs the row no height (author, 2026-08-21).
@@ -805,6 +836,15 @@ export function paintMonth() {
    * grid (author, 2026-09-02: "display the full month name").
    */
   const wide = window.matchMedia('(min-width: 1024px)').matches;
+  /*
+   * `first` is a *civil* day, and the name printed is still the right one when
+   * the grid is counting in another calendar: the first of a Julian month
+   * falls thirteen days later on the civil one, and thirteen days after a
+   * first is the fourteenth of the same civil month. Any offset under 28 days
+   * keeps that true — the two calendars are 13 apart now and 14 from 2100 -
+   * so the month's own name and year come out of `Intl` in the reader's
+   * language rather than out of a table this file would have to keep.
+   */
   el.querySelector('.month-name').textContent = (wide ? monthLongFmt : monthFmt)(utc(first));
 
   // They say nothing a date's own label does not — the button below each of
@@ -825,13 +865,14 @@ export function paintMonth() {
  */
 export function paintMonthInto(row, cursor, { live }) {
   const { selected } = state;
-  const lead = gregorianToJdn(cursor.year, cursor.month, 1) % 7; // JDN 0 was a Monday
+  const cal = gridCalendar();
+  const lead = toJdn(cal, cursor.year, cursor.month, 1) % 7; // JDN 0 was a Monday
 
   const cells = [];
   for (let i = 0; i < lead; i++) cells.push('<span></span>');
-  const days = daysInMonth(cursor);
+  const days = daysInMonthOf(cal, cursor);
   for (let day = 1; day <= days; day++) {
-    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+    const iso = isoOfDate(cal, { year: cursor.year, month: cursor.month, day });
     const current = iso === selected ? ' aria-current="date"' : '';
     /*
      * The month's numerals take the fast's own colour (author, 2026-08-26
@@ -851,7 +892,7 @@ export function paintMonthInto(row, cursor, { live }) {
     const classes = [iso === todayIso() ? 'is-today' : '', tone ? `fast-${tone}` : ''].filter(Boolean);
     const cls = classes.length ? ` class="${classes.join(' ')}"` : '';
     cells.push(`<button type="button" data-iso="${iso}"${current}${cls}
-      aria-label="${dayFmt(utc(iso))}${toneLabel}"><span class="day-num">${day}</span></button>`);
+      aria-label="${dayLabel(iso)}${toneLabel}"><span class="day-num">${day}</span></button>`);
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 
@@ -860,10 +901,7 @@ export function paintMonthInto(row, cursor, { live }) {
     ['.peek-next', stepCursor(cursor, 1), 0],
   ]) {
     const column = monthColumn(c, weekday)
-      .map((day) => {
-        const iso = toIsoDate({ year: c.year, month: c.month, day });
-        return `<span class="peek-cell">${day}</span>`;
-      })
+      .map((day) => `<span class="peek-cell">${day}</span>`)
       .join('');
     row.querySelector(sel).innerHTML = `<span class="peek-col" aria-hidden="true">${column}</span>`;
   }
@@ -921,32 +959,13 @@ export const stepMonth = (n) => moveMonth(n);
 /** The days of one month that fall on one weekday, 0 = Monday. JDN 0 was a Monday. */
 function monthColumn(cursor, weekday) {
   const days = [];
-  const n = daysInMonth(cursor);
+  const cal = gridCalendar();
+  const n = daysInMonthOf(cal, cursor);
   for (let day = 1; day <= n; day++) {
-    if (gregorianToJdn(cursor.year, cursor.month, day) % 7 === weekday) days.push(day);
+    if (toJdn(cal, cursor.year, cursor.month, day) % 7 === weekday) days.push(day);
   }
   return days;
 }
-
-/**
- * Days in the cursor's month, as the distance between two first-of-months
- * (Addendum G5).
- *
- * It used to walk from 28 upwards, building an ISO string and parsing it back
- * for each candidate day — four JDN conversions a step, and it sat in the
- * *condition* of two loops, so painting a month re-derived it thirty-odd times
- * to answer the same question. The difference of two JDNs is the same answer in
- * constant time.
- *
- * **December needs no special case**, which is worth saying because the obvious
- * version has one. `gregorianToJdn(y, 13, 1)` is exactly `gregorianToJdn(y + 1,
- * 1, 1)`: with month 13 the formula's `a` is 0 and `m` is 10, which is what
- * month 1 gives with `y` one lower. A ternary for the roll was written first
- * and then removed, because no test could be made to fail when it went — the
- * arithmetic underneath already handled it.
- */
-export const daysInMonth = ({ year, month }) =>
-  gregorianToJdn(year, month + 1, 1) - gregorianToJdn(year, month, 1);
 
 export const stepCursor = (c, n) => ({
   year: c.year + Math.floor((c.month + n - 1) / 12),

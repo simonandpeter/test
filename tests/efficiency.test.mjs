@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { evictOldest } from '../src/lib/lru.js';
-import { daysInMonth } from '../src/views/daily/picker.js';
+import { daysInMonthOf } from '../src/lib/calendar-page.js';
 
 /* Addendum G, Session 5b. Three cost changes, each pinned by the property that
    would be wrong if the optimisation were wrong. Nothing the reader sees moves;
@@ -63,6 +63,6 @@ test('G5: days in a month, including the leap-year rules', () => {
     [2026, 12, 31], // rolls into the next year
   ];
   for (const [year, month, expected] of cases) {
-    assert.equal(daysInMonth({ year, month }), expected, `${year}-${month}`);
+    assert.equal(daysInMonthOf('gregorian', { year, month }), expected, `${year}-${month}`);
   }
 });

@@ -29,18 +29,16 @@
  * the reader to remember what the chrome is set to.
  */
 
-import { toIsoDate } from '../../lib/feasts.js';
-import { gregorianToJdn } from '../../lib/jdn.js';
-import { parseIso, todayIso } from '../../lib/calendar-page.js';
-import { churchName } from '../../lib/church.js';
+import { toJdn } from '../../lib/jdn.js';
+import { dateIn, daysInMonthOf, isoOfDate, todayIso } from '../../lib/calendar-page.js';
+import { churchName, storedReckoning } from '../../lib/church.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { greatFeast, liturgicalDay } from '../../lib/liturgy.js';
 import { gradeForDay } from '../../lib/fast-grade.js';
-import { recordedDay } from '../../data/days.js';
 import { formatDate, translateReason } from '../../lib/i18n.js';
 import { STRINGS, fill } from '../../ui/strings.js';
-import { countFor } from './entries.js';
-import { plainDateFmt, utc, weekdayFmt } from './format.js';
+import { countFor, dayRecordFor } from './entries.js';
+import { plainDateFmt, reckonedMonth, reckonedPlain, utc, weekdayFmt } from './format.js';
 
 import { state } from './state.js';
 import { stepCursor } from './picker.js';
@@ -57,9 +55,44 @@ export const fullCalButton = () =>
   `<button type="button" class="fullcal-open" data-fullcal
     aria-haspopup="dialog">${esc(STRINGS.calendar.fullScreen)}</button>`;
 
-/** Days in a Gregorian month, from the JDN of the first of the next one. */
-const daysInMonth = (c) =>
-  gregorianToJdn(c.year, c.month + 1, 1) - gregorianToJdn(c.year, c.month, 1);
+/**
+ * **The calendar this month is counted in** (2026-09-02), which is the small
+ * picker's `gridCalendar` and the same decision: the civil one until the
+ * reader chooses a reckoning of their own, and identity for the Revised
+ * Julian, so nothing below branches on whether a shift is in force.
+ *
+ * The full-screen month is the same month as the one under the week, and a
+ * reader who has just been shown 20 August by the page they opened it from
+ * cannot be handed a grid of Septembers.
+ */
+const gridCalendar = () => storedReckoning() ?? 'gregorian';
+
+const daysInMonth = (c) => daysInMonthOf(gridCalendar(), c);
+
+/** The civil day the counted calendar puts (cursor, day) on. */
+const isoAt = (c, day) => isoOfDate(gridCalendar(), { year: c.year, month: c.month, day });
+
+/** A day's own number in the calendar this month is counted in. */
+const numeralOf = (iso) => dateIn(gridCalendar(), iso).day;
+
+/**
+ * A day named in the calendar this month is counted in — the whole date for a
+ * screen reader, and the month's name for the two strips beside the grid.
+ *
+ * The month matters more than it looks: a fast that runs from the Julian 1
+ * August starts on the civil 14th, and printing "1 August" beside a numeral
+ * taken from one calendar and a name taken from the other is how a strip comes
+ * to read "20 September" for a day the grid above it calls 20 August.
+ */
+const dateTextOf = (iso) => {
+  const chosen = storedReckoning();
+  return chosen ? reckonedPlain(iso, chosen) : plainDateFmt(utc(iso));
+};
+
+const monthTextOf = (iso) => {
+  const chosen = storedReckoning();
+  return chosen ? reckonedMonth(iso, chosen) : longMonth(utc(iso));
+};
 
 /**
  * What a day's fast is, in the words the Daily page's own chip uses.
@@ -73,7 +106,7 @@ function fastOf(iso, church) {
   const day = liturgicalDay(iso, church);
   const f = day.fasting;
   const isFast = f.kind === 'fast' || f.kind === 'fish';
-  const grade = isFast ? gradeForDay(f, recordedDay(iso, church)?.fastingNote) : null;
+  const grade = isFast ? gradeForDay(f, dayRecordFor(iso, church)?.fastingNote) : null;
   return {
     kind: f.kind,
     reason: f.reason,
@@ -100,7 +133,7 @@ export function periodsIn(cursor, church) {
   const runs = [];
   const days = daysInMonth(cursor);
   for (let day = 1; day <= days; day += 1) {
-    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+    const iso = isoAt(cursor, day);
     const f = fastOf(iso, church);
     /*
      * Two reasons are left out, and both because something else on the screen
@@ -135,7 +168,7 @@ export function feastsIn(cursor, church) {
   const found = [];
   const days = daysInMonth(cursor);
   for (let day = 1; day <= days; day += 1) {
-    const iso = toIsoDate({ year: cursor.year, month: cursor.month, day });
+    const iso = isoAt(cursor, day);
     const key = greatFeast(iso, church);
     if (key && STRINGS.calendar.feasts.names[key]) found.push({ iso, key });
   }
@@ -146,7 +179,7 @@ export function feastsIn(cursor, church) {
 
 function dayCell(iso, church, data) {
   const f = fastOf(iso, church);
-  const { day } = parseIso(iso);
+  const day = numeralOf(iso);
   const count = countFor(iso, data);
   const feastName = f.feast ? STRINGS.calendar.feasts.names[f.feast] : null;
   /*
@@ -162,7 +195,7 @@ function dayCell(iso, church, data) {
     .join(' ');
   return `<button type="button" class="fc-day fast-${esc(f.tone)}${marks ? ` ${marks}` : ''}"
       data-iso="${iso}"${iso === state.selected ? ' aria-current="date"' : ''}
-      aria-label="${esc(plainDateFmt(utc(iso)))} - ${esc(f.label)}">
+      aria-label="${esc(dateTextOf(iso))} - ${esc(f.label)}">
       <span class="fc-num">${day}<span class="fc-day-name utility">${esc(weekdayFmt(utc(iso)))}</span></span>
       <span class="fc-fast utility">${esc(f.label)}</span>
       ${feastName ? `<span class="fc-feast">${esc(feastName)}</span>` : ''}
@@ -176,16 +209,16 @@ const countLine = (n) =>
 
 /** "1 - 14 August", or a single date where the run is one day. */
 function span(run) {
-  const from = parseIso(run.from).day;
-  const to = parseIso(run.to).day;
-  const month = longMonth(utc(run.from));
+  const from = numeralOf(run.from);
+  const to = numeralOf(run.to);
+  const month = monthTextOf(run.from);
   return from === to ? `${from} ${month}` : `${from} - ${to} ${month}`;
 }
 
 function grid(cursor, church, data) {
   // JDN 0 was a Monday, so the remainder is how many blanks the month opens
   // with — the same arithmetic the small month view uses, deliberately.
-  const lead = gregorianToJdn(cursor.year, cursor.month, 1) % 7;
+  const lead = toJdn(gridCalendar(), cursor.year, cursor.month, 1) % 7;
   /*
    * Any Monday-to-Sunday will do for the column headings, and 5-11 January 2026
    * is one — the names come from Intl in the reader's language, so the week they
@@ -198,7 +231,7 @@ function grid(cursor, church, data) {
   for (let i = 0; i < lead; i += 1) cells.push('<span class="fc-blank"></span>');
   const days = daysInMonth(cursor);
   for (let day = 1; day <= days; day += 1) {
-    cells.push(dayCell(toIsoDate({ year: cursor.year, month: cursor.month, day }), church, data));
+    cells.push(dayCell(isoAt(cursor, day), church, data));
   }
   /*
    * One box around the two, and it is not cosmetic: `.fc-body` is the grid that
@@ -233,7 +266,7 @@ function aside(cursor, church) {
          .map(
            (f) => `<li class="fc-great">
              <span class="fc-period-name">${esc(S.feasts.names[f.key])}</span>
-             <span class="fc-period-span utility">${parseIso(f.iso).day} ${esc(longMonth(utc(f.iso)))}</span>
+             <span class="fc-period-span utility">${numeralOf(f.iso)} ${esc(monthTextOf(f.iso))}</span>
            </li>`,
          )
          .join('')}</ul>`
@@ -258,7 +291,7 @@ function paint(dialog) {
   const { data } = state;
   const church = state.calendar;
   const S = STRINGS.calendar;
-  const first = toIsoDate({ year: cursor.year, month: cursor.month, day: 1 });
+  const first = isoAt(cursor, 1);
   dialog.querySelector('[data-fc-title]').textContent = `${longMonth(utc(first))} ${cursor.year}`;
   dialog.querySelector('[data-fc-church]').textContent = churchName(church);
   dialog.querySelector('[data-fc-body]').innerHTML = `
@@ -351,7 +384,7 @@ export function wireFullCal(el) {
       dialog.addEventListener('click', onBody);
       dialog.addEventListener('close', onClose);
     }
-    const { year, month } = parseIso(state.selected);
+    const { year, month } = dateIn(gridCalendar(), state.selected);
     cursor = { year, month };
     paint(dialog);
     dialog.showModal();

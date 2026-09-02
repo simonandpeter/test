@@ -98,9 +98,24 @@ you inferred, and keep them apart.
 | `random deals an order, and holds it still under the reader` | 3 in ~39 | desktop, mobile-360 |
 | `the index offers two layouts, and remembers which one the reader chose` | 2 in ~38 | mobile-360 |
 | `the row comes back on its own after a press` | 3 in ~6 | **both** |
+| `the dot slides along the track rather than jumping when the year leaps` | 5 in 6 *slow* runs, 0 in 2 fast | desktop |
 
 Two were filed as "seen once, not recurring" before they recurred. **A second
 sighting is the first fact about a flake; the first is a rumour.**
+
+**The fourth arrived on 2026-09-02 and was measured before it was blamed on
+anything.** It first appeared in a full run alongside a Daily-page change, and
+map.js imports none of the modules that change touches — which is a reason to
+check rather than a reason not to. Six runs of `map.spec.js`, three on each
+tree: with the change 3 failures in 3 *slow* runs (~50s for the file) and none
+in 2 fast ones (~25s); **without the change, 2 failures in 3 slow runs**. So it
+is the desk's load and not the diff, and the run's own wall clock is the
+predictor. It always fails paired with `a name is a press target`, which is the
+signature of one starved worker rather than two faults: the map paints only
+when something happens, so a quarter of a second with no paint leaves all eight
+of the test's samples identical, and "he arrived in one step, so nothing slid"
+is then a true statement about a page that really did not move. A diagnosis
+needs trap 10's CPU throttling, not another full-suite sighting.
 
 The third recurred on 2026-08-28 and is now a fact: `fa7abcb` on desktop,
 `7cf9f11` on mobile-360. **It is not project-specific**, which the other two
@@ -440,9 +455,13 @@ Reading each life is the work; the tool only finds the ones worth reading.
   *Confessor*: Barses and Eulogius of Edessa, Liberius of Rome, Martin the Pope,
   Nicholas of Alma-Ata, Paul the New of Constantinople, Protogenes of Carrhae.
   For several the epithet is right, so it is a reading per saint. Data, not code.
-- **Whether a non-civil reckoning belongs anywhere.** The saint page prints each
-  attestation's own feast; the Daily page prints the civil date alone, twice
-  decided.
+- ~~**Whether a non-civil reckoning belongs anywhere.**~~ **Settled 2026-09-02**,
+  the third decision and the first that admits one: a reader who *chooses* a
+  reckoning is shown the whole Daily page in it — the date, the rail, the
+  month, the full-screen calendar, and the day's own saints and record — and a
+  reader who has not chosen still sees the civil date alone, as twice decided.
+  The saint page is untouched and still prints what each attestation states.
+  DESIGN.md carries the reversal.
 - **Manifest budget** projects to 864 KB gzipped at 5,000 saints against a
   400 KB ceiling. Meaningless below ~200 saints; the shard shape is settled
   (calendar-first) when it fires.

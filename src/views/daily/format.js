@@ -1,5 +1,6 @@
-import { parseIso } from '../../lib/calendar-page.js';
-import { formatDate } from '../../lib/i18n.js';
+import { dateIn, parseIso } from '../../lib/calendar-page.js';
+import { storedReckoning } from '../../lib/church.js';
+import { formatDate, formatDateParts } from '../../lib/i18n.js';
 
 /**
  * The Daily page's dates, in words.
@@ -38,10 +39,67 @@ export const headingShortFmt = (d) =>
 
 export const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
 
+/**
+ * The heading for one civil day, named in a calendar that is not the civil one
+ * (author, 2026-09-02: picking Julian "stays as 2 Sep instead of going back 13
+ * days").
+ *
+ * Two facts about one day, and they come from different places: the **weekday
+ * is the civil day's**, because a Wednesday is a Wednesday in every reckoning
+ * ever kept, and the **numerals are the chosen calendar's**. So the pattern is
+ * taken from `Intl` for the reckoned date and the weekday field alone is
+ * replaced — never two formatted strings joined by a comma this language may
+ * not use.
+ *
+ * The reckoned date is handed to `Intl` as though it were Gregorian, which is
+ * exactly what is wanted: nothing but the day, month and year numbers is read
+ * off it, and those are the ones the reader is being shown.
+ */
+export const reckonedDate = (iso, calendar, options) => {
+  const named = dateIn(calendar, iso);
+  const asIf = new Date(Date.UTC(named.year, named.month - 1, named.day));
+  const weekday = formatDateParts(options, utc(iso)).find((p) => p.type === 'weekday')?.value;
+  return formatDateParts(options, asIf)
+    .map((part) => (part.type === 'weekday' && weekday ? weekday : part.value))
+    .join('');
+};
+
+/** The page's own heading, in a chosen calendar: `headingFmt`'s options. */
+export const reckonedHeading = (iso, calendar, { short = false } = {}) =>
+  reckonedDate(iso, calendar, {
+    weekday: 'long',
+    day: 'numeric',
+    month: short ? 'short' : 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+
+/** A date named inside a sentence, in a chosen calendar: `plainDateFmt`'s. */
+export const reckonedPlain = (iso, calendar) =>
+  reckonedDate(iso, calendar, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+/** The month's own name, in a chosen calendar. */
+export const reckonedMonth = (iso, calendar) =>
+  reckonedDate(iso, calendar, { month: 'long', timeZone: 'UTC' });
+
 // A date named inside a sentence rather than set as a heading: no weekday, and
 // the month in full, because "13 Jan 2027" reads as a label and this reads as
 // prose.
 export const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
+
+/**
+ * A date inside a sentence, in whatever calendar the reader is reading by.
+ *
+ * The two horizons the page names in prose — how far the corpus reaches, and
+ * how far the day records do — are civil dates, and a reader being shown 20
+ * August cannot be told the readings run out on "13 January" by a different
+ * calendar than the one they are reading. `plainDateFmt` stays for the callers
+ * that are civil by definition.
+ */
+export const dayInWords = (iso) => {
+  const chosen = storedReckoning();
+  return chosen ? reckonedPlain(iso, chosen) : plainDateFmt(utc(iso));
+};
 
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.

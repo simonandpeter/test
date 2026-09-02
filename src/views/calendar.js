@@ -28,14 +28,13 @@ import { mountShelves } from '../ui/shelf.js';
 
 import { greatFeast, liturgicalDay } from '../lib/liturgy.js';
 import { formatDate, translateReason } from '../lib/i18n.js';
-import { recordedDay } from '../data/days.js';
 /* The page's own state, and the one file allowed to write it — see
    views/daily/state.js for why it is a singleton and why it moved. */
 import { state, open as openState, close as closeState } from './daily/state.js';
 import { reducedMotion } from './daily/motion.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
-import { countFor } from './daily/entries.js';
-import { headingFmt, headingShortFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
+import { countFor, dayRecordFor } from './daily/entries.js';
+import { headingFmt, headingShortFmt, monthFmt, reckonedHeading, utc, weekdayFmt } from './daily/format.js';
 import { paintDay } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
@@ -414,6 +413,16 @@ function wireReckoning(el) {
   const onPick = (e) => {
     const row = e.target.closest('[data-pick]');
     if (!row) return;
+    /*
+     * The month the grid is parked on is a month *of a calendar*, and the
+     * calendar is about to change under it: September by the civil reckoning
+     * and September by the Julian are different runs of days. Dropped rather
+     * than converted, so the grid rebuilds around the day the reader is
+     * actually on — which is where a reader who has just changed calendars is
+     * looking. Before `chooseReckoning`, because its listeners repaint
+     * synchronously.
+     */
+    state.monthCursor = null;
     // The empty string is the follow-my-church row: an absent choice, not a
     // calendar named the empty string.
     chooseReckoning(row.dataset.pick || null);
@@ -684,7 +693,22 @@ function paintChrome() {
    * not leave the wrong one standing.
    */
   const short = window.matchMedia('(max-width: 559.98px)').matches;
-  el.querySelector('.cal-date').textContent = (short ? headingShortFmt : headingFmt)(utc(selected));
+  /*
+   * **The day is named in the reckoning the reader chose** (author,
+   * 2026-09-02), which reverses DESIGN.md's "the Daily page prints the civil
+   * date and only the civil date" for the reader who asks and for nobody else:
+   * `storedReckoning` is null until the control is touched, and that branch is
+   * the line this page has printed since 2026-08-24, unchanged.
+   *
+   * The reversal is the author's and is recorded in DESIGN.md beside the rule
+   * it supersedes. What made the old rule untenable was not the rule but the
+   * control added beside it: a page headed 2 September with `Julian` printed
+   * next to it was making a claim about today that was thirteen days wrong.
+   */
+  const chosen = storedReckoning();
+  el.querySelector('.cal-date').textContent = chosen
+    ? reckonedHeading(selected, chosen, { short })
+    : (short ? headingShortFmt : headingFmt)(utc(selected));
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }
@@ -731,7 +755,7 @@ function paintLiturgy() {
    */
   const M = STRINGS.calendar.fastModal;
   const isFast = f.kind === 'fast' || f.kind === 'fish';
-  const grade = isFast ? gradeForDay(f, recordedDay(selected, calendar)?.fastingNote) : null;
+  const grade = isFast ? gradeForDay(f, dayRecordFor(selected, calendar)?.fastingNote) : null;
   const gradeName = grade ? M.grades[grade] : null;
   /*
    * **The chip is the type and nothing else** (author, 2026-08-26 evening:
@@ -901,7 +925,7 @@ let bubble = null;
 function openFastBubble(button) {
   closeFastBubble();
   const M = STRINGS.calendar.fastModal;
-  const rec = recordedDay(state.selected, state.calendar);
+  const rec = dayRecordFor(state.selected, state.calendar);
   const note = rec?.fastingNote;
   const grade = button.dataset.grade || null;
   const kind = button.dataset.fast;

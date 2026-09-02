@@ -1,4 +1,3 @@
-import { recordedDay } from '../../data/days.js';
 import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail } from '../../lib/detail.js';
@@ -9,7 +8,7 @@ import { greatFeast } from '../../lib/liturgy.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
 import { STRINGS, fill } from '../../ui/strings.js';
-import { allEntriesFor, entriesFor, reachInWords } from './entries.js';
+import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries.js';
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
 import { state } from './state.js';
 
@@ -323,7 +322,7 @@ function emptyDayNote(iso) {
   const feast = greatFeast(iso, state.calendar);
   // The day's own calendar, which is recorded further ahead than its saints
   // are folders and stops a good deal short of the feasts, which are computed.
-  const recorded = Boolean(recordedDay(iso, state.calendar)?.readings?.length);
+  const recorded = Boolean(dayRecordFor(iso, state.calendar)?.readings?.length);
   const lead = feast
     ? [
         fill(S.feast, { church, feast: STRINGS.calendar.feasts?.names?.[feast] ?? feast }),
