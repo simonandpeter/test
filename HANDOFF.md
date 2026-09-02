@@ -91,7 +91,7 @@ you inferred, and keep them apart.
   `lib/bible.js`. The *calendar* and the *language* are separate controls.
 - **The lives stay English by decision** (Amendment 2: no invented content).
 
-### Open flakes — three known, one rumour, none acted on
+### Open flakes — four known, one rumour, none acted on
 
 | test | sightings | project |
 | --- | --- | --- |
