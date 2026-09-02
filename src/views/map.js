@@ -2976,7 +2976,21 @@ function paintCanvas(canvas, cards) {
      */
     const alpha = dimFor(state) * dimOf(card.slug);
     ctx.globalAlpha = alpha;
-    ctx.fillStyle = rubric;
+    /*
+     * **A saint not yet born is drawn in ink, not in rubric** (author,
+     * 2026-09-02: "make any saints not yet born appear as a grey/black (fit
+     * into colour scheme) dot instead of a coloured red dot").
+     *
+     * Rubric is the site's mark for a finding about a saint, and a dot for
+     * someone the reader's range has not reached yet is the one dot on the
+     * picture making no claim about them — it is there so the map does not
+     * appear to lose people as the years are dragged. `--ink-soft` is the
+     * quiet grey the coastline itself is drawn in, so the unborn fall back
+     * into the ground rather than reading as a second kind of finding. The
+     * depth-dimming below is unchanged, so the three states are still told
+     * apart without colour having to carry any of it alone.
+     */
+    ctx.fillStyle = state === 'future' ? inkSoft : rubric;
     ctx.beginPath();
     /*
      * **A mark standing for a crowd is drawn bigger, and says how many in
@@ -3002,6 +3016,11 @@ function paintCanvas(canvas, cards) {
       n,
       moving,
       alpha,
+      // Which of the two inks this mark was actually filled with. Published
+      // because the picture is one opaque image to the suite: reading the
+      // colour off the canvas would measure whatever else has been drawn at
+      // that pixel, and the draw pass is the one thing that knows.
+      hue: state === 'future' ? 'ink' : 'rubric',
       card,
       slug: card.slug,
       plain,
@@ -3145,6 +3164,7 @@ function paintCanvas(canvas, cards) {
       state: d.state,
       n: d.n,
       alpha: Math.round(d.alpha * 100) / 100,
+      hue: d.hue,
     })),
   );
   // Which saint is mid-walk along their own rail, or '' — the walk is 5 s

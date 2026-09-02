@@ -671,6 +671,24 @@ nav.site-nav {
   gap: var(--space-2) var(--space-4);
 }
 
+/* **Wider apart on a desktop** (author, 2026-09-02: "spread out the daily,
+   all saints etc. buttons a bit more over the top left").
+
+   Only from 1024 px, and the selector has to be `header.chrome .site-nav` to
+   say it: the `min-width: 560px` block above sets that same property through
+   that same selector, and a bare `nav.site-nav` here loses to it at every
+   width whatever the source order. That block's reason — the Greek and Russian
+   packs pushing the masthead onto two lines — is a fact about the 72ch column
+   it was written under, where the chrome had 580 px to divide. Past 1024 px
+   the chrome spans the window instead, so the room the four labels are
+   spending here is room the masthead never wanted. `chrome.spec.js` holds the
+   one-line claim at both widths either way. */
+@media (min-width: 1024px) {
+  header.chrome .site-nav {
+    gap: var(--space-2) var(--space-8);
+  }
+}
+
 /* The four labels give up their gap before they give up the line: at 320 px
    in Russian «Сегодня Все святые Карта О сайте» wants more than four
    space-4 gaps leave. */

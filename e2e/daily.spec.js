@@ -4412,6 +4412,103 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
   await expect(page).toHaveURL(/\/saints\/lupus-the-martyr/);
 });
 
+test('the way in sits on the last faded line, not on the last readable one', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "make sure the ...continue reading button is lined up
+   * to the bottom line of preview text visible under the gradient, right now
+   * its floating on the last line before the 2 gradient fade out lines. So
+   * move it down 2 lines."
+   *
+   * A day whose life is long enough that the preview really is cut, so the
+   * two dissolving lines exist to line up against — where the paragraph ends
+   * inside the budget there is no tail and nothing to move down past.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.hero-lede-tail')).not.toBeEmpty();
+
+  const m = await page.evaluate(() => {
+    const lede = document.querySelector('[data-hero-lede]');
+    const tail = document.querySelector('.hero-lede-tail');
+    const more = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
+    const line = parseFloat(getComputedStyle(lede).lineHeight);
+    return {
+      lines: Math.round(tail.getBoundingClientRect().height / line),
+      // The two are meant to overlap; what is asserted is which line of the
+      // tail the pill has landed on.
+      belowTailBottom: more.getBoundingClientRect().bottom - tail.getBoundingClientRect().bottom,
+      line,
+    };
+  });
+  expect(m.lines, 'the tail is not the two lines this is measured against').toBe(2);
+  /*
+   * Within a line of the tail's own foot, which is the claim: before this it
+   * sat a whole two lines higher, so half a line of tolerance cannot pass a
+   * backed-out fix.
+   */
+  expect(Math.abs(m.belowTailBottom), 'the pill is not on the last faded line').toBeLessThan(m.line / 2);
+});
+
+test('the also-commemorated cards run tallest picture first, imageless last', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "On desktop daily page, reorder the daily saints cards
+   * in order from tallest saint image to shortest to no saint image."
+   *
+   * Tallest is the smallest width-over-height, because a card's column is a
+   * fixed width — so this reads each thumbnail's own attributes rather than
+   * its drawn box, which is the same ratio and is not waiting on a decode.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const ratios = await page.evaluate(() =>
+    [...document.querySelectorAll('.register-cards li.reg-card')].map((c) => {
+      const img = c.querySelector('.reg-thumb img');
+      return img ? Number(img.getAttribute('width')) / Number(img.getAttribute('height')) : null;
+    }),
+  );
+  const withPicture = ratios.filter((r) => r !== null);
+  expect(withPicture.length, 'premise: this day has no pictures to order').toBeGreaterThan(1);
+  expect(ratios.filter((r) => r === null).length, 'premise: this day has no imageless saint').toBeGreaterThan(0);
+
+  // Every picture before every blank.
+  expect(ratios.slice(0, withPicture.length).every((r) => r !== null), 'a blank card came before a picture').toBe(true);
+  // And the pictures themselves tallest first.
+  for (let i = 1; i < withPicture.length; i++) {
+    expect(withPicture[i], `card ${i} is taller than the one above it`).toBeGreaterThanOrEqual(withPicture[i - 1]);
+  }
+});
+
+test('a phone keeps the calendar’s own order for the also-commemorated', async ({ page }) => {
+  /*
+   * The reordering above is the desktop's, in the author's own words. The rows
+   * arrive sorted because the desktop lays them out in a block container that
+   * ignores `order`; below 1024 px the register is a flex column and
+   * `--reg-seq` puts the calendar's order back. Asserted by the laid-out
+   * geometry rather than by the DOM, since the DOM is deliberately not the
+   * reading order here.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const seqs = await page.evaluate(() =>
+    [...document.querySelectorAll('.register-cards li.reg-card')]
+      .map((c) => ({ seq: Number(c.style.getPropertyValue('--reg-seq')), y: c.getBoundingClientRect().top }))
+      .sort((a, b) => a.y - b.y)
+      .map((r) => r.seq),
+  );
+  expect(seqs.length, 'premise: no register on this day').toBeGreaterThan(1);
+  expect(seqs, 'the phone did not read in the calendar’s own order').toEqual(
+    [...seqs].sort((a, b) => a - b),
+  );
+});
+
 test('a phone has no continue-reading button on the main saint card', async ({ page }) => {
   /*
    * Author, 2026-09-02: "remove the '...continue reading' button frpm main
@@ -4466,15 +4563,23 @@ test('the day steps sit on the date line, against the margin between the columns
       // vertically, and the steps start after the date's words end.
       sharesLine: step.top < date.bottom && step.bottom > date.top,
       afterDate: step.left > date.right - 1,
-      // "In large font" — nearer the heading than the body it sits above.
+      /*
+       * They arrived "in large font" and were **made smaller on 2026-09-02**
+       * (author: "make the yesterday and tomorrow buttons smaller"), so what
+       * is pinned now is the pair of bounds that reversal leaves: plainly
+       * under the date they sit beside, and not shrunk into the utility type
+       * of the chrome either.
+       */
       size: parseFloat(getComputedStyle(document.querySelector('.day-step button')).fontSize),
-      body: parseFloat(getComputedStyle(document.body).fontSize),
+      dateSize: parseFloat(getComputedStyle(document.querySelector('.cal-date')).fontSize),
+      utility: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
     };
   });
   expect(Math.abs(m.stepRight - m.columnRight), 'the steps are not on the column margin').toBeLessThan(2);
   expect(m.sharesLine, 'the steps are not on the date’s line').toBe(true);
   expect(m.afterDate, 'the steps are not to the right of the date').toBe(true);
-  expect(m.size, 'the steps are not in a large font').toBeGreaterThan(m.body);
+  expect(m.size, 'the steps are competing with the date rather than serving it').toBeLessThan(m.dateSize / 2);
+  expect(m.size, 'the steps have shrunk into the chrome').toBeGreaterThanOrEqual(m.utility);
 
   // And they do what they say, through the same funnel every other way of
   // changing the day goes through — so the panels roll rather than the page
@@ -4785,8 +4890,16 @@ test('the way into the life is a white button with the life fading out under it'
         ? Math.round(tail.getBoundingClientRect().height / parseFloat(getComputedStyle(tail).lineHeight))
         : 0,
       masked: tail ? getComputedStyle(tail).maskImage : 'none',
-      // Under the button, which is what "below it" means.
-      below: tail && link ? tail.getBoundingClientRect().top >= link.getBoundingClientRect().top : false,
+      /*
+       * The tail *starts* above the button and runs past it. It used to start
+       * below it outright — the button sat on the last readable line and the
+       * two faded lines ran on underneath — until 2026-09-02 moved the button
+       * down onto the last of those lines (author: "move it down 2 lines").
+       * What survives of the original claim is that the life goes on *past*
+       * the button rather than stopping at it, which is the tail's own foot
+       * being at or below the button's.
+       */
+      below: tail && link ? tail.getBoundingClientRect().bottom >= link.getBoundingClientRect().bottom - 1 : false,
       // And still inside the picture's height, which the rule before this one
       // asked for and this must not have broken.
       fits: document.querySelector('.hero-body').getBoundingClientRect().bottom <= media.bottom + 2,
@@ -4797,7 +4910,7 @@ test('the way into the life is a white button with the life fading out under it'
   expect(seen.tail.length, 'the life does not go on under the button').toBeGreaterThan(10);
   expect(seen.tailLines, 'the fading tail is not two lines').toBe(2);
   expect(seen.masked, 'the tail does not fade').toContain('gradient');
-  expect(seen.below, 'the tail is not below the button').toBe(true);
+  expect(seen.below, 'the life stops at the button rather than running past it').toBe(true);
   expect(seen.fits, 'the card now runs below its own picture').toBe(true);
 
   /*

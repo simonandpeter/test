@@ -1279,9 +1279,17 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   const cards = page.locator('.register-cards .reg-card');
   await expect(cards).toHaveCount(6);
 
-  const first = cards.first();
-  await expect(first.locator('.reg-name')).toHaveText('Martyr Agapius of Gaza');
-  await expect(first.locator('.reg-sub')).toContainText('304–306');
+  /*
+   * **Pinned by name rather than read off the first card** (2026-09-02). The
+   * register is ordered tallest-picture-first now (author: "reorder the daily
+   * saints cards in order from tallest saint image to shortest to no saint
+   * image"), so which saint is first is a fact about the icons rather than
+   * about this test's subject — which is that a saint here is a card with a
+   * lifespan on it, whoever they are and wherever they fall.
+   */
+  const agapius = cards.filter({ hasText: 'Martyr Agapius of Gaza' });
+  await expect(agapius, 'premise: Agapius is not in this day’s register').toHaveCount(1);
+  await expect(agapius.locator('.reg-sub')).toContainText('304–306');
 
   /*
    * **Every row keeps its picture's slot, and none of them keeps a mark**
@@ -1304,7 +1312,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(page.locator('.register-cards')).not.toContainText('Pitirim');
 
   // The row still opens the saint, which is now the only thing it does.
-  await first.locator('.reg-name').click();
+  await agapius.locator('.reg-name').click();
   await expect(page.locator('h1.saint-name')).toHaveText('Martyr Agapius of Gaza');
   // Save is still there, on the page the author sent anyone who wants it.
   await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
@@ -2706,9 +2714,13 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
   });
   expect(opening.at, 'the row opened inside the head clones').toBe(opening.firstReal);
 
-  // The swap is immediate: nothing is left falling a frame after the press.
+  // The swap is immediate: the face is not left mid-fade a frame after the
+  // press. `.is-leaving` is the class the fade would be wearing (index.css),
+  // and the facets being visible already is the same claim from the other end
+  // — a class that no longer existed anywhere would satisfy the first of these
+  // on its own, so both are asserted.
   await page.locator('[data-mode-toggle]').click();
-  expect(await page.locator('.is-falling').count()).toBe(0);
+  expect(await page.locator('.is-leaving').count()).toBe(0);
   await expect(page.locator('.facets')).toBeVisible();
   await ctx.close();
 });
@@ -2863,11 +2875,11 @@ test('the die stays while the page goes, turns once, and the saint fades up', as
   expect(last.viewOpacity).toBeGreaterThan(0.9);
 });
 
-test('a second press inside the fall lands the first one rather than racing it', async ({ page }) => {
+test('a second press inside the fade lands the first one rather than racing it', async ({ page }) => {
   /*
    * Amendment 9's rule, in the shape the mode swap needs: while two flights are
    * in the air, exactly one is current. `land` reads the mode off `state`, so
-   * two overlapping falls would leave the *stale* timer with the last word —
+   * two overlapping fades would leave the *stale* timer with the last word —
    * pressing twice quickly could settle on the mode you had just left.
    */
   await carouselMode(page);
@@ -2875,7 +2887,7 @@ test('a second press inside the fall lands the first one rather than racing it',
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-carousel]')).toBeVisible();
 
-  // Two presses well inside the 260 ms fall.
+  // Two presses well inside the 260 ms fade.
   await page.evaluate(() => {
     const b = document.querySelector('[data-mode-toggle]');
     b.click();
@@ -2887,8 +2899,11 @@ test('a second press inside the fall lands the first one rather than racing it',
   await expect(page.locator('[data-mode-toggle]')).toHaveText('Advanced search');
   await expect(page.locator('[data-carousel]')).toBeVisible();
   await expect(page.locator('.facets')).toBeHidden();
-  // Nothing left mid-fall, and no card stranded pointer-inert.
-  await expect.poll(() => page.locator('.is-falling').count()).toBe(0);
+  // Nothing left mid-fade, and no face stranded pointer-inert at opacity 0.
+  await expect.poll(() => page.locator('.is-leaving').count()).toBe(0);
+  await expect.poll(() =>
+    page.evaluate(() => Number(getComputedStyle(document.querySelector('.carousel')).opacity)),
+  ).toBeGreaterThan(0.9);
 });
 
 /* ---- the round of 2026-08-27, late ---------------------------------------- */

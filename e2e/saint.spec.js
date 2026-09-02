@@ -222,6 +222,15 @@ test('the saint page puts the register beside the image on desktop, the body ben
   // Addendum H4, and the head of DESIGN.md §5c: name, bookmark, ×, then the
   // mark at the margin; at 760 px and above the image and the dates-and-places
   // register share a row and the body runs the full width under them.
+  //
+  // **Both of those halves end at 1024 px since 2026-09-02** (author: "split
+  // the left column into 2x columns ... and new centre column for the main
+  // body text"). Past that width the picture and the register stack in a
+  // column of their own and the life stands beside them, so "beside" and
+  // "beneath both" are claims about the band between 760 and 1024 now. The
+  // three-column arrangement above it has its own test; this one keeps the
+  // widths it was written for, which is why it asks the page how wide it is
+  // rather than assuming.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.save-button')).toHaveCount(0);
@@ -234,20 +243,30 @@ test('the saint page puts the register beside the image on desktop, the body ben
     const media = r('.saint-media-col'), facts = r('.saint-intro-facts'), main = r('.saint-main'), article = r('article.saint');
     return {
       wide: innerWidth >= 760,
+      columns: innerWidth >= 1024,
       toolsAfterName: tools.left >= h1.left + 10,
       toolsOnNameLine: tools.top < h1.bottom && tools.bottom > h1.top,
       factsBesideImage: facts.left >= media.right && Math.abs(facts.top - media.top) < 4,
       factsBelowImage: facts.top >= media.bottom,
       mainFullWidth: Math.round(main.width) === Math.round(article.width),
       mainBelowBoth: main.top >= Math.max(media.bottom, facts.bottom),
+      mainBesideBoth: main.left >= media.right,
     };
   });
   expect(seen.toolsAfterName).toBe(true);
   expect(seen.toolsOnNameLine).toBe(true);
-  expect(seen.mainFullWidth).toBe(true);
-  expect(seen.mainBelowBoth).toBe(true);
-  if (seen.wide) expect(seen.factsBesideImage).toBe(true);
-  else expect(seen.factsBelowImage).toBe(true);
+  if (seen.columns) {
+    // Three columns: the life is beside the apparatus rather than under it,
+    // and it is one track of the grid rather than the article's whole width.
+    expect(seen.mainBesideBoth).toBe(true);
+    expect(seen.mainFullWidth).toBe(false);
+    expect(seen.factsBelowImage).toBe(true);
+  } else {
+    expect(seen.mainFullWidth).toBe(true);
+    expect(seen.mainBelowBoth).toBe(true);
+    if (seen.wide) expect(seen.factsBesideImage).toBe(true);
+    else expect(seen.factsBelowImage).toBe(true);
+  }
 });
 
 test('the saint page reads the reader church first and reveals the others for that page only', async ({ page }) => {
@@ -658,18 +677,42 @@ test('the life comes before the veneration on a saint page', async ({ page }) =>
   // Author, 2026-08-27: "Move veneration down the page on saint profile pages,
   // put Life section first." The page is about a person; the church-by-church
   // register is the apparatus behind the prose, not the way into it.
+  //
+  // **Read off the laid-out page rather than the markup since 2026-09-02**,
+  // when veneration became a column of its own past 1024 px. It is a direct
+  // child of the body now, not a section inside the life, so the DOM query
+  // this used would find nothing — and the claim was never about the markup.
+  // On a phone it is still under the life, which is the instruction above; on
+  // a desktop it is beside it, which is the instruction of 2026-09-02, and
+  // "before" there means the reader meets the life first going across.
   await ready(page);
   await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
   await expect(page.locator('.life')).not.toBeEmpty();
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
 
-  const order = await page.evaluate(() =>
-    [...document.querySelectorAll('.saint-main .register-heading')].map((h) => h.textContent.trim()),
-  );
-  expect(order[0]).toBe('Life');
-  expect(order.indexOf('Veneration')).toBeGreaterThan(0);
-  // Sources stay with the life they document, above veneration.
-  const sources = order.indexOf('Sources');
-  if (sources !== -1) expect(sources).toBeLessThan(order.indexOf('Veneration'));
+  const seen = await page.evaluate(() => {
+    const box = (s) => document.querySelector(s)?.getBoundingClientRect() ?? null;
+    const life = box('.life');
+    const veneration = box('[data-veneration]');
+    const sources = box('[data-sources] .register-heading');
+    return {
+      columns: innerWidth >= 1024,
+      venerationBelowLife: veneration.top >= life.top,
+      venerationRightOfLife: veneration.left >= life.right,
+      lifeLeftOfVeneration: life.left >= veneration.right,
+      sourcesAboveVeneration: sources ? sources.top <= veneration.top : null,
+      firstHeading: document.querySelector('.saint-main .register-heading')?.textContent.trim(),
+    };
+  });
+  expect(seen.firstHeading, 'the life is not the first thing in the body column').toBe('Life');
+  if (seen.columns) {
+    // Beside, in the apparatus column, which is to the *left* of the life.
+    expect(seen.lifeLeftOfVeneration, 'veneration is not in the column beside the life').toBe(true);
+  } else {
+    expect(seen.venerationBelowLife, 'veneration is not under the life').toBe(true);
+    // Sources stay with the life they document, above veneration.
+    if (seen.sourcesAboveVeneration !== null) expect(seen.sourcesAboveVeneration).toBe(true);
+  }
 });
 
 test('the icon the author supplied is on the page, with the licence Commons states', async ({ page }) => {
@@ -701,6 +744,82 @@ test('the icon the author supplied is on the page, with the licence Commons stat
   await expect(credit).not.toContainText('not recorded');
   // The artist and the photographer, both as Commons records them.
   await expect(credit).toContainText('Akotantos');
+});
+
+/* ---- the page's own columns (2026-09-02) -------------------------------- */
+
+test('a desktop saint page puts the apparatus left of the life, and the filters in the search column', async ({ page }) => {
+  /*
+   * Author, 2026-09-02, two instructions about the same screen:
+   *
+   *  1. "On each saint's profile page, make sure the filters are visible in
+   *     the search column on the right";
+   *  2. "split the left column into 2x columns, left column for the image and
+   *     birth/death/office/veneration information, and new centre column for
+   *     the main body text".
+   *
+   * So the page is three columns, and the claim worth pinning is which side of
+   * which each part falls on — a width would go stale the next time the grid
+   * is touched, and the reading order is what the instruction is about.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  // The veneration table arrives with the payload, and it is the part that
+  // moved columns, so nothing is measured until it is there.
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+
+  const cols = await page.evaluate(() => {
+    const box = (s) => {
+      const r = document.querySelector(s)?.getBoundingClientRect();
+      return r ? { left: Math.round(r.left), right: Math.round(r.right) } : null;
+    };
+    return {
+      media: box('.saint-media'),
+      facts: box('.date-facts'),
+      veneration: box('[data-veneration]'),
+      life: box('.life'),
+      side: box('.saint-side'),
+      facets: box('[data-side-facets]'),
+    };
+  });
+
+  // The picture, the register and the veneration table share one column...
+  expect(cols.facts.left, 'the register is not under the picture').toBe(cols.media.left);
+  expect(cols.veneration.left, 'the veneration table is not under the register').toBe(cols.facts.left);
+  // ...the life is in a column of its own to the right of it...
+  expect(cols.life.left, 'the life is not beside the apparatus').toBeGreaterThan(cols.media.right);
+  // ...and the search column is to the right of the life, with the facets in it.
+  expect(cols.side.left, 'the search column is not to the right of the life').toBeGreaterThan(cols.life.right);
+  expect(cols.facets, 'the filters are not in the search column').not.toBeNull();
+  expect(cols.facets.left, 'the filters are not inside the search column').toBeGreaterThanOrEqual(cols.side.left - 1);
+});
+
+test('the filters in the search column narrow the list beside the life', async ({ page }) => {
+  /*
+   * They are the Index's own chips over the Index's own `applyFilters`, so
+   * what is asserted here is the wiring rather than the filtering: ticking one
+   * changes the set, and the count above the list agrees with what is in it.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const count = page.locator('[data-side-count]');
+  const before = await count.textContent();
+
+  // Sex is the facet with the fewest values and no dependence on the calendar,
+  // so it is the cheapest honest narrowing available here.
+  const box = page.locator('[data-side-facets] details[data-facet="sexes"]');
+  await box.locator('summary').click();
+  await box.locator('input[type="checkbox"]').first().check();
+
+  await expect.poll(async () => (await count.textContent()) !== before, { timeout: 5000 }).toBe(true);
+  const after = Number((await count.textContent()).replace(/\D+/g, ''));
+  expect(after, 'the filter left nobody at all').toBeGreaterThan(0);
+  expect(after, 'the filter did not narrow anything').toBeLessThan(Number(before.replace(/\D+/g, '')));
 });
 
 /* ---- the column beside the life (2026-09-01) ---------------------------- */

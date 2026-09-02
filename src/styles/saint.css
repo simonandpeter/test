@@ -36,6 +36,105 @@
   margin: var(--space-3) 0 0;
 }
 
+/* ---- the page's own two columns (author, 2026-09-02) -------------------- */
+
+/*
+ * "Split the left column into 2x columns, left column for the image and
+ * birth/death/office/veneration information, and new centre column for the
+ * main body text."
+ *
+ * So the saint page is three columns on a desktop: the apparatus, the life,
+ * and the search that was already there (below). The picture and everything
+ * *about* the saint as data — the dates and places register, the historicity
+ * line, the church-by-church veneration table — stand together on the left;
+ * the life, its sources, the hymns and the related saints run down the middle.
+ *
+ * Below 1024 px this is `display: contents` on both boxes, so the page is one
+ * column in document order and every rule written for it before today still
+ * applies to exactly what it applied to. That is the same device the Daily
+ * page's own two columns use, and for the same reason.
+ *
+ * The breakpoint is the one the outer `.saint-cols` grid already uses: a page
+ * that split into three at one width and into two at another would be two
+ * decisions where the reader sees one.
+ */
+/*
+ * **One document order, two layouts.** The order in the markup is the phone's
+ * and is the one settled on 2026-08-27 — picture and register, then the life,
+ * then veneration under it. A phone gets exactly that, because `contents`
+ * leaves the three boxes to the column they were always in.
+ */
+.saint-body {
+  display: contents;
+}
+
+@media (min-width: 1024px) {
+  /*
+   * Two tracks and two rows, and the life spans both rows: the register and
+   * the veneration table stack down the first column while the life runs
+   * beside them, which is what "left column for the image and
+   * birth/death/office/veneration information, and new centre column for the
+   * main body text" describes.
+   *
+   * Areas rather than line numbers, because the veneration box arrives late
+   * and hidden — a box placed by auto-flow would land wherever the row it was
+   * added to happened to be, and the same page would be laid out differently
+   * before and after its own payload.
+   */
+  .saint-body {
+    display: grid;
+    grid-template-columns: minmax(15rem, 22rem) minmax(0, 1fr);
+    grid-template-areas:
+      'intro life'
+      'veneration life';
+    /* The life takes what it needs; the apparatus column stops growing once
+       its own content is placed, rather than stretching to the life's height. */
+    grid-template-rows: auto auto;
+    align-content: start;
+    column-gap: var(--space-8);
+    align-items: start;
+  }
+
+  .saint-body > .saint-intro {
+    grid-area: intro;
+  }
+
+  .saint-body > .saint-veneration {
+    grid-area: veneration;
+    min-width: 0;
+  }
+
+  .saint-body > .saint-main {
+    grid-area: life;
+    min-width: 0;
+  }
+
+  /* The intro is already a grid of picture-and-register; in a column of its
+     own it has no second track to give the register, so the two stack. */
+  .saint-body > .saint-intro.has-media {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* The picture is the column's own width here rather than a 260 px track
+     inside a wider one. */
+  .saint-body > .saint-intro .saint-media-col {
+    max-width: none;
+  }
+
+  /* The life sets its own 65ch measure and the centre column is narrower than
+     that on most windows, so the column is what holds it rather than the rule. */
+  .saint-body > .saint-main .life {
+    max-width: none;
+  }
+
+  /* Veneration opens a section rather than following a paragraph: it is the
+     top of its own row here, not the thing after the life. */
+  .saint-body > .saint-veneration .register-heading {
+    margin-top: 0;
+  }
+}
+
 /* ---- the head's two columns (author, 2026-08-22) ----------------------- */
 
 /* At 760 px and above the image and the dates-and-places register stand side
@@ -525,6 +624,22 @@
   .side-count {
     flex: none;
     color: var(--ink-soft);
+  }
+
+  /*
+   * The Index's own facet chips, in this column (author, 2026-09-02: "make
+   * sure the filters are visible in the search column on the right"). They
+   * wear index.css's `.facets` dress unchanged — this only makes them wrap
+   * inside a column narrower than the Index's own row and stops them
+   * scrolling away with the list, which is the whole point of their being
+   * here: the list is what they are filtering.
+   */
+  .side-facets {
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-bottom: var(--space-2);
   }
 
   /*

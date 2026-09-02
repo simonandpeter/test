@@ -1025,9 +1025,12 @@
     gap: var(--space-6);
   }
 
-  /* "in large font": h2's size, which is the largest thing on the page that is
-     not the date itself, so the pair reads as part of the heading line rather
-     than as controls that happen to be near it. */
+  /* They arrived "in large font" (2026-09-01) at h2's own size, so the pair
+     read as part of the heading line. **Smaller since 2026-09-02** (author:
+     "make the yesterday and tomorrow buttons smaller"): at 26 px they were
+     competing with the date they sit beside rather than serving it. Still
+     larger than the utility type around them, so they remain part of the
+     heading line rather than dropping into the chrome. */
   .day-step button {
     display: inline-flex;
     align-items: baseline;
@@ -1036,7 +1039,7 @@
     border: 0;
     background: none;
     font: inherit;
-    font-size: clamp(18px, 1.9vw, 26px);
+    font-size: clamp(13px, 1.05vw, 16px);
     line-height: 1.25;
     color: var(--ink-soft);
     cursor: pointer;
@@ -1275,6 +1278,38 @@
      the pill is the thing that must stay readable. */
   position: relative;
   z-index: 1;
+}
+
+/*
+ * **Down onto the last faded line** (author, 2026-09-02: "make sure the
+ * ...continue reading button is lined up to the bottom line of preview text
+ * visible under the gradient, right now its floating on the last line before
+ * the 2 gradient fade out lines. So move it down 2 lines").
+ *
+ * It sat at the end of the last *readable* sentence, with the two dissolving
+ * lines running on beneath it — so the button was in the middle of the block
+ * rather than at its foot. Pinned to the bottom of the preview instead, which
+ * is the foot of the second faded line, and still over the tail rather than
+ * under it (the two were always meant to overlap; only which line they overlap
+ * on has changed).
+ *
+ * Taking it out of the inline flow is also what keeps `fitLede`'s binary
+ * search honest: the trim measures the column's height, and a pill that had to
+ * be wrapped onto a line of its own was a cost that moved as the search moved.
+ * The tail's own words are `aria-hidden` and unselectable, so nothing readable
+ * is covered — and `.hero-more` keeps its accessible name and its place in the
+ * document, which is what a screen reader and the keyboard read.
+ */
+@media (min-width: 760px) {
+  .hero.has-media .hero-lede {
+    position: relative;
+  }
+
+  .hero.has-media .hero-lede .hero-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .hero-more-chevron {
@@ -1699,6 +1734,19 @@
 @media (max-width: 1023.98px) {
   .register-view {
     display: none;
+  }
+
+  /*
+   * **And the phone keeps the calendar's own order** (2026-09-02). The rows
+   * arrive sorted tallest-picture-first, because the desktop's card layout is
+   * multi-column and a block container ignores `order` — so the DOM is the
+   * only place that sort can live. Here the register is still a flex column,
+   * which means `order` does work, and `--reg-seq` is each saint's place in
+   * the order the calendar gave them. The author scoped the reordering to the
+   * desktop; this is what holds it there.
+   */
+  .register-cards li.reg-card {
+    order: var(--reg-seq, 0);
   }
 }
 

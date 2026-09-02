@@ -38,6 +38,9 @@ import { currentLanguage, formatDate } from '../lib/i18n.js';
    meant to be that list rather than to resemble it (see `sideColumn`). */
 import { card as indexCard } from './index/grid.js';
 import { lastSearch } from './index/place.js';
+import { facetGroups } from './index/controls.js';
+import { monthsBySlugFor } from './index/search.js';
+import { EMPTY_FILTERS, applyFilters, facetsOf } from '../lib/index-filters.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -227,6 +230,25 @@ function shell(card, backLabel) {
       <p class="resume-note utility" data-resume hidden></p>
     </header>
 
+    <!--
+      **Two columns on a desktop since 2026-09-02** (author: "split the left
+      column into 2x columns, left column for the image and
+      birth/death/office/veneration information, and new centre column for the
+      main body text").
+
+      The apparatus goes left with the picture — the dates and places register,
+      the historicity line, and the veneration table, which was under the life
+      from 2026-08-27 and is beside it now. The life keeps the centre to
+      itself. Below the breakpoint both boxes are display:contents and the page
+      is the single column it has always been, in the same reading order:
+      picture, register, life, then the rest.
+
+      The aside is a box rather than a class on each part, because the
+      veneration table arrives with the payload long after the register does,
+      and a box that exists from the first paint is what stops it landing in
+      the other column when it comes.
+    -->
+    <div class="saint-body">
     <div class="saint-intro${media ? ' has-media' : ''}">
       ${media ? `<div class="saint-media-col">${media}</div>` : ''}
       <div class="saint-intro-facts">
@@ -235,12 +257,10 @@ function shell(card, backLabel) {
       </div>
     </div>
 
-    <!-- The life first, veneration under it (author, 2026-08-27). The page is
-         about a person: the prose that says who they were is what a reader
-         came for, and the church-by-church register is the apparatus behind
-         it. Veneration led from the first build to this one, which put four
-         skeleton rows and a table of feast dates between the name and the
-         first sentence of the life. -->
+    <!-- The life first, the apparatus beside or under it (author, 2026-08-27
+         for the order, 2026-09-02 for the column). The page is about a person:
+         the prose that says who they were is what a reader came for, and the
+         church-by-church register is the apparatus behind it. -->
     <div class="saint-main" data-detail>
       <h2 class="register-heading">${STRINGS.saint.life}</h2>
       <div class="life" data-life>${skeletonLines(6)}</div>
@@ -274,12 +294,24 @@ function shell(card, backLabel) {
       -->
       <div data-late hidden>
         <div data-sources></div>
-        <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
-        <div data-veneration></div>
         <div data-hymns-box></div>
         <div data-related></div>
         <p class="image-credit utility" data-credit></p>
       </div>
+    </div>
+    <!--
+      Veneration, and it is a direct child of the body rather than a part of
+      the life above it. That is the whole of what lets one document order
+      serve both widths: on a phone this is where it has been since
+      2026-08-27, after the life; on a desktop the grid puts it in the first
+      column under the register, which is where the 2026-09-02 instruction
+      asks for it. A box nested inside the life could not be placed there,
+      since only a grid's own children can be.
+    -->
+    <div class="saint-veneration" data-veneration-box hidden>
+      <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
+      <div data-veneration></div>
+    </div>
     </div>
   </article>`;
 }
@@ -352,6 +384,17 @@ function sideColumn(data, router, current) {
       <input class="search-field" type="search" data-side-query
         aria-label="${esc(STRINGS.saint.sideSearch)}"
         placeholder="${esc(STRINGS.saint.sideSearch)}" />
+      <!--
+        The Index's own facet chips (author, 2026-09-02: "make sure the filters
+        are visible in the search column on the right"). They arrive ticked as
+        the reader left them on All Saints, so the column shows the search
+        rather than merely its result — and they narrow the list here, over the
+        whole corpus, through the same applyFilters the Index runs.
+      -->
+      <div class="facets side-facets" data-side-facets>${facetGroups(
+        facetsOf(data.saints),
+        { ...EMPTY_FILTERS, ...(lastSearch()?.filters ?? {}) },
+      )}</div>
       <p class="side-count utility" data-side-count>${esc(countLine(results.length))}</p>
       <!-- Filled by wireSide, a chunk at a time: the count above is the whole
            set, the list below is as much of it as has been scrolled to. -->
@@ -425,9 +468,45 @@ function wireSide(el, { data, router, current }) {
   const list = side.querySelector('[data-side-results]');
   const count = side.querySelector('[data-side-count]');
 
+  const facetBox = side.querySelector('[data-side-facets]');
+
+  /*
+   * **The facets filter the corpus; the field sieves what they leave.**
+   *
+   * The heading says "Your search", and until the reader touches a chip the
+   * list is exactly the set they arrived with — `searchResults` above, the
+   * Index's own snapshot in the Index's own order. The moment a chip changes,
+   * the honest answer is no longer "what you searched" but "what these filters
+   * hold", so the set is recomputed over the whole corpus with `applyFilters`,
+   * the same function the Index runs, rather than being narrowed down from a
+   * snapshot the reader can no longer widen.
+   */
+  const monthsBySlug = monthsBySlugFor(data.saints);
+  const readFacets = () => {
+    const values = (name) =>
+      [...side.querySelectorAll(`input[name="${name}"]:checked`)].map((i) => i.value);
+    /*
+     * The snapshot's own filters underneath, so the sort and its seed come
+     * across with the chips: `EMPTY_FILTERS` alone would sort at random from
+     * an empty seed, and the column would deal a fresh hand every time a box
+     * was ticked — the list jumping about under a reader who was narrowing it.
+     */
+    return {
+      ...EMPTY_FILTERS,
+      ...(lastSearch()?.filters ?? {}),
+      churches: values('churches'),
+      months: values('months'),
+      types: values('types'),
+      sexes: values('sexes'),
+      regions: values('regions'),
+      historicities: values('historicities'),
+    };
+  };
+
   const all = searchResults(data);
   let shown = all;
   let drawn = 0;
+  let filtered = null;
 
   const draw = (upTo) => {
     if (drawn >= shown.length) return;
@@ -460,16 +539,31 @@ function wireSide(el, { data, router, current }) {
   };
   fold.addEventListener('click', onFold);
 
-  const onQuery = () => {
+  const repaint = () => {
+    const pool = filtered ?? all;
     const needle = query.value.trim().toLowerCase();
-    shown = needle ? all.filter((item) => matches(item, needle)) : all;
+    shown = needle ? pool.filter((item) => matches(item, needle)) : pool;
     restart();
   };
+
+  const onQuery = () => repaint();
   query.addEventListener('input', onQuery);
+
+  const onFacet = () => {
+    // `applyFilters` hands back the matched set and, when a date range is in
+    // play, the undated it sets aside from it. The Index has a tray to put
+    // those in and this column does not, so they follow the matched rather
+    // than vanishing from a list that never said it had dropped them.
+    const { matched, undated } = applyFilters(data.saints, readFacets(), { monthsBySlug });
+    filtered = undated.length ? [...matched, ...undated] : matched;
+    repaint();
+  };
+  facetBox?.addEventListener('change', onFacet);
 
   return () => {
     fold.removeEventListener('click', onFold);
     query.removeEventListener('input', onQuery);
+    facetBox?.removeEventListener('change', onFacet);
     list.removeEventListener('scroll', onScroll);
   };
 }
@@ -669,6 +763,15 @@ const statusText = (status) =>
 function paintVeneration(el, saint) {
   const box = el.querySelector('[data-veneration]');
   if (!box) return;
+  /*
+   * The register and its heading appear together, when there is something to
+   * put in them. It sat inside `[data-late]` until 2026-09-02 and was revealed
+   * with everything else there; now that it stands in the other column it
+   * needs its own reveal, and it is the same bargain — the box appends rather
+   * than reserving, because how many churches attest is not knowable before
+   * the payload says.
+   */
+  el.querySelector('[data-veneration-box]')?.removeAttribute('hidden');
   // A guess does not hide three churches: this page showed all four before
   // there was a default and shows all four still, until the reader chooses
   // (lib/church.js, `chosenChurch`).

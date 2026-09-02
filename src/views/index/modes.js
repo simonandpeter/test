@@ -867,42 +867,35 @@ export function switchMode(next) {
   }
 
   /*
-   * A second press inside the fall lands the first one first. Two falls
-   * overlapping would leave the earlier `land` to run against a set of nodes
-   * the later one has already taken the class off — and the mode it applies is
-   * read from `state.mode`, so the *stale* timer would have the last word.
-   * This is Amendment 9's rule for animated swaps, in the shape this one
-   * needs: while two are in flight, exactly one is current.
+   * A second press inside the fade lands the first one first. Two fades
+   * overlapping would leave the earlier `land` to run against a page the later
+   * one has already moved on — and the mode it applies is read from
+   * `state.mode`, so the *stale* timer would have the last word. This is
+   * Amendment 9's rule for animated swaps, in the shape this one needs: while
+   * two are in flight, exactly one is current.
    */
   state.falling?.();
 
-  // Only what a reader can actually see falls. A card below the fold has
-  // nowhere to fall from, and staggering 400 of them would run for a minute.
   /*
-   * The search field is left out of the fall on purpose (author, 2026-08-27:
-   * "make sure the search bar doesnt disappear when transitioning between
-   * carousel and advanced search; its in the same place in both modes, should
-   * stay untouched"). It is the one control the two faces share, so animating
-   * it out and back in would be the page telling the reader it had gone and
-   * come back when it had done neither.
+   * **One fade over the whole face, not one per card** (author, 2026-09-02:
+   * "make both animations a simple fade in fade out ... Remove this animation
+   * completely from BOTH MOBILE AND DESKTOP FOR THIS ITEM").
+   *
+   * What stood here walked every card a reader could see, wrote a staggered
+   * `--fall-delay` onto each, and waited out the longest of them — up to 572 ms
+   * before the new face even began to arrive. The class goes on the view now
+   * and index.css does the rest, so nothing is measured, nothing is written per
+   * node, and the change of face costs one transition in each direction.
+   *
+   * The search field is still deliberately untouched by it — index.css says
+   * where that line is drawn and why.
    */
-  const onScreen = [...el.querySelectorAll('.facets, .index-foot, .index-card, .cx-card')].filter((node) => {
-    const b = node.getBoundingClientRect();
-    return b.bottom > 0 && b.top < window.innerHeight && b.width > 0;
-  });
-
-  onScreen.forEach((node, i) => {
-    node.style.setProperty('--fall-delay', `${Math.min(i, 12) * 26}ms`);
-    node.classList.add('is-falling');
-  });
+  el.classList.add('is-leaving');
 
   const land = () => {
     clearTimeout(timer);
     state.falling = null;
-    for (const node of onScreen) {
-      node.classList.remove('is-falling');
-      node.style.removeProperty('--fall-delay');
-    }
+    el.classList.remove('is-leaving');
     applyMode();
     el.classList.add('is-arriving');
     // One frame at the arriving state before it is released, or there is no
@@ -910,7 +903,11 @@ export function switchMode(next) {
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('is-arriving')));
   };
 
-  const fall = onScreen.length ? 260 + Math.min(onScreen.length - 1, 12) * 26 : 0;
-  const timer = setTimeout(land, fall);
+  // The fade's own length, which is `--dur-slot` in index.css. The two are one
+  // decision and drift apart the moment either is edited alone.
+  const timer = setTimeout(land, CX_MODE_FADE);
   state.falling = land;
 }
+
+/** How long a face takes to go, matching `--dur-slot` in index.css. */
+const CX_MODE_FADE = 260;

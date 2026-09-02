@@ -202,14 +202,55 @@ function fillHeroPlaces(panel, payload) {
  * picture went on 2026-08-27 and for the same reason: the names start at one
  * left edge, and a saint with no icon does not push the column about.
  */
-function registerRow(saint, title, transition) {
+/**
+ * The register's saints, tallest picture first (author, 2026-09-02: "On
+ * desktop daily page, reorder the daily saints cards in order from tallest
+ * saint image to shortest to no saint image").
+ *
+ * **Tallest is the smallest `aspect`**, which is width over height: a card's
+ * column is a fixed width, so what a picture is *drawn* at is that width times
+ * its own height over its width. Sorting on the ratio rather than on `h` is
+ * what makes "tallest" mean tallest on the page rather than tallest in the
+ * file — a 2000 px-tall panorama is a short card.
+ *
+ * **The DOM is what carries it, because the desktop layout is multi-column**
+ * (`columns: 190px`, calendar.css): CSS `order` moves nothing in a block
+ * container, so the rows have to arrive in the order they should read. That
+ * makes this a change to both widths unless something puts the phone back —
+ * so each row carries `--reg-seq`, its place in the calendar's own order, and
+ * below 1024 px the flex column reads it and restores exactly that. The
+ * instruction is scoped to the desktop and this keeps it there.
+ *
+ * The sort is stable in Node and in every browser this ships to, so saints who
+ * share a ratio — and all the imageless ones, who share `Infinity` — keep the
+ * calendar's own order among themselves.
+ */
+function registerOrder(entries, data) {
+  const drawnRatio = (entry) => {
+    const image = data.bySlug.get(entry.slug)?.image;
+    if (!image) return Infinity;
+    // `aspect` is width over height, so the tallest picture is the smallest
+    // number and an imageless saint sorts past every picture there is.
+    return image.aspect || 1;
+  };
+  return entries
+    .map((entry, seq) => ({ entry, seq }))
+    .sort((a, b) => drawnRatio(a.entry) - drawnRatio(b.entry));
+}
+
+function registerRow(saint, title, transition, seq = 0) {
   const image = saint.image
     ? `<span class="reg-thumb" style="background-image:url('${BASE + saint.image.lqip}')">
         <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
           loading="lazy" decoding="async" />
       </span>`
     : '<span class="reg-thumb is-blank" aria-hidden="true"></span>';
-  return `<li class="reg-card">
+  /*
+   * `--reg-seq` is where this saint stood in the calendar's own order, which
+   * is what the phone puts back — see `registerOrder` below and the
+   * `max-width: 1023.98px` rule in calendar.css.
+   */
+  return `<li class="reg-card" style="--reg-seq:${seq}">
     <span class="reg-body">
       <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
         data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
@@ -363,13 +404,13 @@ export function paintDay({ main, side }) {
   // that names them all the same, because the hero already carries its own.
   const registerEntries = entries.filter((e) => e.slug !== heroSlug);
   const named = new Set([heroSlug]);
-  const rows = registerEntries
-    .map((e) => {
+  const rows = registerOrder(registerEntries, data)
+    .map(({ entry: e, seq }) => {
       const saint = data.bySlug.get(e.slug);
       const title = titleFor(saint, e.church);
       const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
       named.add(saint.slug);
-      return registerRow(saint, title, transition);
+      return registerRow(saint, title, transition, seq);
     })
     .join('');
   /*

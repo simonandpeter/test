@@ -1306,6 +1306,46 @@ test('a saint whose birth is only bounded from above is not lit centuries early'
   await expect.poll(stateOf).toBe('future');
 });
 
+test('a saint not yet born is drawn in ink rather than in rubric', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "make any saints not yet born appear as a grey/black
+   * (fit into colour scheme) dot instead of a coloured red dot."
+   *
+   * Read off `data-dots`, which the draw pass writes, rather than off the
+   * canvas: the picture is one opaque image, and a pixel under a dot is
+   * whatever the coastline, the halo layer and the dot together left there.
+   * `hue` is the fill the pass actually chose.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const atRest = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(atRest.length, 'premise: nothing was drawn').toBeGreaterThan(0);
+  expect(
+    atRest.every((d) => d.hue === 'rubric'),
+    'a saint the range reaches was drawn in ink',
+  ).toBe(true);
+
+  // Back before every one of them: now the whole picture is unborn.
+  await typeYear(page, 'to', '100');
+  await expect
+    .poll(async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => d.state === 'future').length)
+    .toBeGreaterThan(0);
+
+  const after = JSON.parse(await canvas.getAttribute('data-dots'));
+  const unborn = after.filter((d) => d.state === 'future');
+  expect(
+    unborn.every((d) => d.hue === 'ink'),
+    'an unborn saint is still drawn in rubric',
+  ).toBe(true);
+  // And the ones the range does reach keep the red, or this would be a rule
+  // about every dot rather than about the unborn.
+  for (const d of after.filter((d) => d.state !== 'future')) {
+    expect(d.hue, `${d.slug} is in range and lost its rubric`).toBe('rubric');
+  }
+});
+
 test('a saint not yet born is a dot with no name on it', async ({ page }) => {
   /*
    * Author, 2026-08-31: "Before a saint is born, dont display their names

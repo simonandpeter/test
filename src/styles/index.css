@@ -1304,35 +1304,50 @@ html.is-rolling #view {
   text-decoration: underline;
 }
 
-/* ---- falling away, and arriving ------------------------------------------ */
+/* ---- leaving, and arriving ----------------------------------------------- */
 
-/* The change of face (author, 2026-08-27). What is on screen drops and fades,
-   staggered by `--fall-delay` from views/saints.js, and the mode that replaces
-   it comes up once the last of it has gone.
-
-   No reduced-motion rule of its own: base.css already disarms every animation
-   and transition under it, and views/saints.js swaps the modes outright rather
-   than waiting out a fall that will not run. */
-.is-falling {
-  animation: fall-away 260ms var(--ease) both;
-  animation-delay: var(--fall-delay, 0ms);
-  pointer-events: none;
-}
-
-@keyframes fall-away {
-  to {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-}
-
-.is-carousel .index-controls,
+/*
+ * The change of face (author, 2026-08-27), **as a plain crossfade since
+ * 2026-09-02**: "make both animations a simple fade in fade out. currently
+ * going from advanced to carousel the cards are animated. Remove this
+ * animation completely from BOTH MOBILE AND DESKTOP FOR THIS ITEM".
+ *
+ * What went: `.is-falling`, a `fall-away` keyframe that dropped each visible
+ * card 14 px while fading it, staggered per card by a `--fall-delay` the
+ * script wrote. It made the change of face cost up to 572 ms and read as the
+ * page coming apart rather than as one thing becoming another.
+ *
+ * What is here instead is the fade the arriving half already used, given a
+ * leaving half to match — one opacity transition over the two faces, the same
+ * length in both directions, nothing per card and nothing staggered.
+ *
+ * **The search row is not in any of these selectors**, which is the standing
+ * instruction of 2026-08-27: "make sure the search bar doesnt disappear when
+ * transitioning between carousel and advanced search; its in the same place in
+ * both modes, should stay untouched". So the fade takes `.facets` — which
+ * genuinely belongs to the search face — rather than `.index-controls`, which
+ * is their shared parent and would have carried the field down with it.
+ *
+ * No reduced-motion rule of its own: base.css already disarms every transition
+ * under it, and `switchMode` swaps the modes outright rather than waiting out
+ * a fade that will not run.
+ */
+.is-carousel .facets,
 .is-carousel .carousel,
 .is-carousel .grid,
-.is-search .index-controls,
+.is-search .facets,
 .is-search .carousel,
 .is-search .grid {
   transition: opacity var(--dur-slot) var(--ease);
+}
+
+.is-leaving .facets,
+.is-leaving .carousel,
+.is-leaving .grid {
+  opacity: 0;
+  /* Nothing under a face on its way out is a target: a press landing on a card
+     at 0.2 opacity would open a saint the reader can no longer see. */
+  pointer-events: none;
 }
 
 /* **`transition: none` is the whole of this rule working.** The arriving state
@@ -1342,7 +1357,7 @@ html.is-rolling #view {
    fading in (author, 2026-08-27: "The carousel mode doesnt fade back in, it
    just appears"). Snapping to 0 and animating only on the way back up is what
    makes the second beat visible. */
-.is-arriving .index-controls,
+.is-arriving .facets,
 .is-arriving .carousel,
 .is-arriving .grid {
   opacity: 0;

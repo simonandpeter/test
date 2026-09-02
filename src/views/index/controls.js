@@ -68,11 +68,21 @@ export function syncCalendarFacet() {
   state.filters = { ...state.filters, churches: defaultChurches(inputs.map((i) => i.value)) };
 }
 
-const checkboxes = (name, options) =>
+/*
+ * `checked` is a list of the values already chosen, or nothing at all. The
+ * Index passes nothing — its boxes open empty and `syncCalendarFacet` ticks
+ * the calendars afterwards, which is the one place allowed to tick a box and
+ * re-read the DOM together. The saint page passes the filters the reader
+ * arrived with, because there the panel has to *show* a search that already
+ * happened.
+ */
+const checkboxes = (name, options, checked) =>
   options
     .map(
       ({ value, label }) => `<label class="facet-option">
-        <input type="checkbox" name="${name}" value="${esc(value)}" /> ${esc(label)}
+        <input type="checkbox" name="${name}" value="${esc(value)}"${
+          checked?.includes(value) ? ' checked' : ''
+        } /> ${esc(label)}
       </label>`,
     )
     .join('');
@@ -132,13 +142,55 @@ const choiceGroup = (legend, name, options, current) => {
     </fieldset></details>`;
 };
 
-const facetGroup = (legend, name, options) =>
+const facetGroup = (legend, name, options, checked) =>
   options.length
     ? `<details class="facet" data-facet="${name}"><summary>${esc(legend)}</summary>
         <fieldset><legend class="sr-only">${esc(legend)}</legend>
-          ${checkboxes(name, options)}
+          ${checkboxes(name, options, checked)}
         </fieldset></details>`
     : '';
+
+/**
+ * The six facet chips, in one place because two pages draw them.
+ *
+ * The Index has drawn them since it had filters; the saint page's own column
+ * draws them from 2026-09-02 (author: "make sure the filters are visible in
+ * the search column on the right"), over the same corpus and pre-ticked from
+ * the search the reader arrived with. Building the option lists twice would
+ * have meant two answers to "what does the Region facet offer", which is
+ * exactly the sort of thing that drifts silently.
+ *
+ * The date range, Random, Sort and View stay in `controls` and are not here:
+ * they are the Index's own furniture, and the saint page's column is a list of
+ * names rather than a grid with an order and a layout.
+ */
+export function facetGroups(facets, checked = EMPTY_FILTERS) {
+  const churchOptions = enabledChurches()
+    .filter((c) => facets.churches.includes(c.id))
+    .map((c) => ({ value: c.id, label: c.display_name }));
+  if (facets.churches.includes(UNCALENDARED)) {
+    churchOptions.push({ value: UNCALENDARED, label: STRINGS.saints.filters.uncalendared });
+  }
+  const F = STRINGS.saints.filters;
+  return (
+    facetGroup(F.church, 'churches', churchOptions, checked.churches) +
+    facetGroup(F.month, 'months', MONTHS.map((m) => ({ value: String(m), label: monthLabel(m) })), checked.months) +
+    facetGroup(F.type, 'types', byLabel(facets.types.map((t) => ({ value: t, label: typeName(t) }))), checked.types) +
+    facetGroup(F.sex, 'sexes', facets.sexes.map((s) => ({ value: s, label: STRINGS.saint.sexLabel[s] ?? s })), checked.sexes) +
+    facetGroup(
+      F.region,
+      'regions',
+      byLabel(facets.regions.map((r) => ({ value: r, label: REGIONS_BY_ID[r]?.display_name ?? r }))),
+      checked.regions,
+    ) +
+    facetGroup(
+      F.historicity,
+      'historicities',
+      facets.historicities.map((h) => ({ value: h, label: historicityName(h) })),
+      checked.historicities,
+    )
+  );
+}
 
 /**
  * Facet options in the order the reader reads them. `facetsOf` sorts by the
@@ -180,18 +232,13 @@ export const setChoice = (root, name, value) => {
 
 export function controls(state) {
   const { facets } = state;
-  const churchOptions = enabledChurches()
-    .filter((c) => facets.churches.includes(c.id))
-    .map((c) => ({ value: c.id, label: c.display_name }));
   /*
-   * The fifth value, offered only when the corpus has someone in it (author,
-   * 2026-08-28). Today it never renders — all 742 carry a venerated
-   * attestation — and the day one does not, it appears here and is ticked with
-   * the rest, rather than that saint being quietly unreachable from this page.
+   * The fifth calendar value, offered only when the corpus has someone in it
+   * (author, 2026-08-28), is `facetGroups`' business now — today it never
+   * renders, all 742 carrying a venerated attestation, and the day one does
+   * not it appears there and is ticked with the rest by `syncCalendarFacet`
+   * rather than that saint being quietly unreachable from this page.
    */
-  if (facets.churches.includes(UNCALENDARED)) {
-    churchOptions.push({ value: UNCALENDARED, label: STRINGS.saints.filters.uncalendared });
-  }
 
   /*
    * The search field and the filters under it are one sticky block (author,
@@ -214,12 +261,7 @@ export function controls(state) {
     <div class="filter-drop" data-filter-drop><div class="filter-drop-inner">
 
     <div class="facets">
-      ${facetGroup(STRINGS.saints.filters.church, 'churches', churchOptions)}
-      ${facetGroup(STRINGS.saints.filters.month, 'months', MONTHS.map((m) => ({ value: String(m), label: monthLabel(m) })))}
-      ${facetGroup(STRINGS.saints.filters.type, 'types', byLabel(facets.types.map((t) => ({ value: t, label: typeName(t) }))))}
-      ${facetGroup(STRINGS.saints.filters.sex, 'sexes', facets.sexes.map((s) => ({ value: s, label: STRINGS.saint.sexLabel[s] ?? s })))}
-      ${facetGroup(STRINGS.saints.filters.region, 'regions', byLabel(facets.regions.map((r) => ({ value: r, label: REGIONS_BY_ID[r]?.display_name ?? r }))))}
-      ${facetGroup(STRINGS.saints.filters.historicity, 'historicities', facets.historicities.map((h) => ({ value: h, label: historicityName(h) })))}
+      ${facetGroups(facets)}
 
       <details class="facet" data-facet="dates"><summary>${STRINGS.saints.filters.dates}</summary>
         <div class="range">
