@@ -5441,3 +5441,89 @@ test('a feast prints its day and month in the reader’s own grammar, and links 
     ).toHaveAttribute('href', /\/calendar\/2026-09-15$/);
   }
 });
+
+test('a phone turns the day from anywhere on it except the picker', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "make sure on mobile you can swipe on daily page
+   * across the whole page except the weekly display, e.g. subheadings
+   * included."
+   *
+   * The gesture was bound to the left day panel — the hero and the register,
+   * which is most of a phone's screen but not all of it. A finger starting on
+   * *Also commemorated*, on the name days, on the liturgy line, or on the
+   * ground below a short day found nothing to take it.
+   *
+   * The picker keeps its own: the week rail is a horizontal scroller and the
+   * month has a grain drag, and an outer listener would drive two gestures
+   * from one finger.
+   */
+  await ready(page);
+  await phone(page);
+  const from = (sel, dx) =>
+    page.evaluate(
+      ([s, d]) => {
+        const el = document.querySelector(s);
+        if (!el) throw new Error(`nothing to swipe from: ${s}`);
+        const box = el.getBoundingClientRect();
+        const x = Math.min(Math.max(box.x + box.width / 2, 40), 320);
+        const y = Math.min(Math.max(box.y + Math.min(box.height / 2, 40), 40), 740);
+        const at = (px) => ({ pointerId: 1, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true });
+        el.dispatchEvent(new PointerEvent('pointerdown', at(x)));
+        el.dispatchEvent(new PointerEvent('pointermove', at(x + d * 0.5)));
+        el.dispatchEvent(new PointerEvent('pointermove', at(x + d)));
+        el.dispatchEvent(new PointerEvent('pointerup', at(x + d)));
+      },
+      [sel, dx],
+    );
+
+  // Every one of these is somewhere the old binding did not reach.
+  for (const sel of ['.hero-name', '.register-heading', '.cal-liturgy']) {
+    await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+    await expect(page.locator('.cal-date')).toContainText('5 Sep');
+    await from(sel, -170);
+    await expect(page.locator('.cal-date'), `a swipe from ${sel} did not turn the day`).toContainText('6 Sep');
+  }
+
+  /*
+   * And the rail does not, because it is a scroller: a finger there is
+   * scrolling the week, and the day it lands on is the reader's own press.
+   */
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-date')).toContainText('5 Sep');
+  await from('.week-strip', -170);
+  await page.waitForTimeout(600);
+  await expect(page.locator('.cal-date'), 'a swipe on the rail turned the day too').toContainText('5 Sep');
+});
+
+test('the wordmark is centred on a phone and unmoved on a desktop', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "daily dox svg not centred on mobile header, left
+   * justified."
+   *
+   * The narrow header stretches the name's track and centres it with
+   * `text-align: center`, which is the right instruction for text and does
+   * nothing to a block-level SVG — and the mark became one on 2026-08-28, so
+   * the centring quietly stopped applying to the thing it was written for.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const gaps = () =>
+    page.evaluate(() => {
+      const mark = document.querySelector('.brand-mark').getBoundingClientRect();
+      const track = document.querySelector('.site-name').getBoundingClientRect();
+      return { left: Math.round(mark.left - track.left), right: Math.round(track.right - mark.right) };
+    });
+
+  const narrow = await gaps();
+  expect(narrow.left, 'the mark is not centred in its track').toBeGreaterThan(2);
+  expect(Math.abs(narrow.left - narrow.right), 'the mark sits off-centre').toBeLessThan(3);
+
+  // Wide, the track is the mark's own width and nothing has moved.
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.evaluate(() => document.fonts.ready);
+  const wide = await gaps();
+  expect(wide.left, 'the wide masthead gained a margin it did not have').toBeLessThan(3);
+});

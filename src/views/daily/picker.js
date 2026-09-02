@@ -583,7 +583,25 @@ export function wireDaySwipe(el) {
    * moved only one of them would tear the page in half for the length of the
    * gesture.
    */
-  return onGrainDrag(el.querySelector('[data-slot="main"]'), {
+  /*
+   * **The whole page takes the swipe, not just the day panel** (author,
+   * 2026-09-02: "make sure on mobile you can swipe on daily page across the
+   * whole page except the weekly display, e.g. subheadings included").
+   *
+   * It was bound to the left panel — the hero and the register, which is most
+   * of a phone's screen but not all of it: a finger starting on *Also
+   * commemorated*, on the readings, on the name days, or on the empty ground
+   * below a short day found nothing to take the gesture. Bound to the view, it
+   * is the page that turns, which is what a page-turn should be.
+   *
+   * The picker keeps its own gestures: `.cal-controls` holds the week rail —
+   * a horizontal scroller — and the month, which has a grain drag of its own,
+   * and both would otherwise be driving two gestures from one finger. That is
+   * the "except the weekly display" half, and it is stated as a box rather
+   * than as a class list so the month goes with it.
+   */
+  return onGrainDrag(el, {
+    ignore: (target) => !!target.closest?.('.cal-controls'),
     begin() {
       panel = [...el.querySelectorAll('.slot-viewport .day-panel')];
       for (const p of panel) p.style.transition = 'none';

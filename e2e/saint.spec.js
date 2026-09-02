@@ -1148,3 +1148,51 @@ test('the icon stays put while the apparatus column scrolls under it', async ({ 
     'the register did not scroll under the icon',
   ).toBeGreaterThan(by - 4);
 });
+
+
+test('a phone turns to the next saint from anywhere on the page', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "left/right swipe wasnt working on saint profile for
+   * Hieromartyr Roman (Marchenko)."
+   *
+   * He is the case that shows why: a new martyr with a short life and no icon,
+   * so the article is a few hundred pixels and the rest of the phone's screen
+   * is ground beneath it — and the gesture was bound to the article. Swiping
+   * on the saint worked; swiping on the page did not, which is not a
+   * distinction a reader can see.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/saints/roman-presbyter-martyr-1929', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toContainText('Roman');
+
+  /*
+   * **The declaration is the subject here, not the dispatched gesture.** The
+   * fault this test is named for was `touch-action`: with the default the
+   * browser claims a horizontal drag for its own panning and the listener
+   * never hears it — under a thumb. A synthetic `PointerEvent` reaches a
+   * listener whatever `touch-action` says, so a swipe driven from script
+   * passed the whole time the feature was broken. So the computed value is
+   * asserted first, and it is the half a test can actually hold.
+   */
+  const claim = await page.evaluate(
+    () => getComputedStyle(document.querySelector('.saint-cols')).touchAction,
+  );
+  expect(claim, 'the browser still owns the horizontal gesture on this page').toBe('pan-y');
+
+  // And the listener reaches the whole page, including a heading rather than
+  // the life itself — the binding was the article until this round.
+  await page.evaluate(() => {
+    const el = document.querySelector('.saint-facts') ?? document.querySelector('h1.saint-name');
+    const box = el.getBoundingClientRect();
+    const y = box.y + box.height / 2;
+    const at = (px) => ({ pointerId: 1, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true });
+    el.dispatchEvent(new PointerEvent('pointerdown', at(250)));
+    el.dispatchEvent(new PointerEvent('pointermove', at(160)));
+    el.dispatchEvent(new PointerEvent('pointermove', at(80)));
+    el.dispatchEvent(new PointerEvent('pointerup', at(80)));
+  });
+
+  await expect(page).not.toHaveURL(/roman-presbyter-martyr-1929$/);
+  await expect(page.locator('h1.saint-name')).toBeVisible();
+});

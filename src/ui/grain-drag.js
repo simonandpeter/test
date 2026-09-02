@@ -33,12 +33,23 @@ const SLOP = 8;
  */
 export const SETTLE = 36;
 
-export function onGrainDrag(el, { begin, move, end }) {
+/*
+ * `ignore` is asked of the press's own target before anything else, and it
+ * exists because two callers now bind to a whole *page* rather than to one row
+ * (2026-09-02: "make sure on mobile you can swipe on daily page across the
+ * whole page except the weekly display"). A page contains things that own the
+ * horizontal gesture themselves — the week rail is a scroller, the month is a
+ * grain with its own drag — and an outer listener would otherwise start a
+ * second gesture from the same finger, because a press on the rail bubbles to
+ * the page as readily as one on a heading.
+ */
+export function onGrainDrag(el, { begin, move, end, ignore }) {
   let start = null;
   let dragging = false;
 
   const down = (e) => {
     if (e.pointerType === 'mouse') return;
+    if (ignore?.(e.target)) return;
     start = { x: e.clientX, y: e.clientY, id: e.pointerId };
     dragging = false;
   };

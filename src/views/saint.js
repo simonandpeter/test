@@ -785,7 +785,19 @@ function wireSaintSwipe(el, { data, router, current }) {
     return next && next !== current ? next : null;
   };
 
-  return onGrainDrag(card, {
+  /*
+   * **Bound to the view, not to the card** (2026-09-02). On the card it missed
+   * the very saints most likely to be swiped past: Roman (Marchenko) has a
+   * short life and no icon, so the article is a few hundred pixels and the
+   * rest of the phone's screen is ground below it, where a swipe found
+   * nothing. The reader is turning a page, and the page is the whole of it.
+   *
+   * The card is still what *moves* — it is the thing that reads as the page —
+   * and the search column beside it keeps its own gestures, though on a phone
+   * it is not laid out at all.
+   */
+  return onGrainDrag(el, {
+    ignore: (target) => !!target.closest?.('.saint-side'),
     begin() {
       if (mq.matches) return;
       card.style.transition = 'none';

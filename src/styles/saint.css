@@ -180,6 +180,32 @@
   }
 }
 
+/*
+ * **The horizontal gesture is the page's, not the browser's** (author,
+ * 2026-09-02: "left/right swipe wasnt working on saint profile for
+ * Hieromartyr Roman (Marchenko)").
+ *
+ * This is the whole of that bug, and it was invisible to a synthetic test: a
+ * dispatched `PointerEvent` reaches the listener whatever `touch-action` says,
+ * so the swipe passed in the suite and did nothing under a real thumb. With
+ * the default `auto` the browser claims a horizontal drag for its own panning
+ * and never sends the events at all.
+ *
+ * `pan-y` gives the browser the vertical scroll — which the reader still needs,
+ * a life being longer than a screen — and keeps the horizontal for the page
+ * turn. It is the same declaration `.slot-viewport` carries on the Daily page
+ * for the same gesture, and calendar.css says so there.
+ *
+ * Below the breakpoint only: past it there is no swipe, the columns scroll
+ * themselves, and a `touch-action` on a scroller is a claim about a gesture
+ * nobody is making.
+ */
+@media (max-width: 1023.98px) {
+  .saint-cols {
+    touch-action: pan-y;
+  }
+}
+
 /* ---- the page that does not scroll (2026-09-02) ------------------------- */
 
 /*

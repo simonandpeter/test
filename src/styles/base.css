@@ -695,6 +695,19 @@ header.chrome .chrome-calendar {
   display: block;
   width: auto;
   max-width: 100%;
+  /*
+   * **Centred in whatever track it is given** (author, 2026-09-02: "daily dox
+   * svg not centred on mobile header, left justified").
+   *
+   * The narrow header stretches the name's track and centres it with
+   * `text-align: center` — which is the right instruction for *text*, and does
+   * nothing to this: the mark became an SVG on 2026-08-28, and a block-level
+   * replaced element with `width: auto` sits at the start of its track however
+   * the text inside it is aligned. `margin-inline: auto` is the same
+   * instruction in the grammar a block understands, and it is a no-op in the
+   * wide header, where the track is the mark's own width.
+   */
+  margin-inline: auto;
 }
 
 /* Half a space, exactly (author, 2026-08-28: "Make the space between 'DAILY'
