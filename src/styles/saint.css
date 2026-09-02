@@ -64,74 +64,131 @@
  * then veneration under it. A phone gets exactly that, because `contents`
  * leaves the three boxes to the column they were always in.
  */
-.saint-body {
+.saint-body,
+.saint-aside {
   display: contents;
 }
 
 @media (min-width: 1024px) {
   /*
-   * Two tracks and two rows, and the life spans both rows: the register and
-   * the veneration table stack down the first column while the life runs
-   * beside them, which is what "left column for the image and
-   * birth/death/office/veneration information, and new centre column for the
-   * main body text" describes.
+   * Two tracks: the apparatus and the life. Each is one box that scrolls
+   * itself (author, 2026-09-02: "make the left and middle columns
+   * independently scrollable"), which is also what settled where the
+   * veneration table hangs — `wireColumns` in views/saint.js moves it into
+   * the aside at this width, because a column that scrolls as one thing has
+   * to *be* one thing.
    *
-   * Areas rather than line numbers, because the veneration box arrives late
-   * and hidden — a box placed by auto-flow would land wherever the row it was
-   * added to happened to be, and the same page would be laid out differently
-   * before and after its own payload.
+   * The row-spanning grid this replaces is why: the life spanned two rows and
+   * handed its height to them, so a long life pushed the veneration table
+   * hundreds of pixels down a column with nothing in it (author, of Righteous
+   * Elizabeth: "the left column Veneration ... is very far down, looks like
+   * it might be because its trying to line up with the hymns in the right
+   * column"). Nothing lines up with anything across the gap now: two
+   * scrollers agree about nothing but their top.
    */
   .saint-body {
     display: grid;
     grid-template-columns: minmax(15rem, 22rem) minmax(0, 1fr);
-    grid-template-areas:
-      'intro life'
-      'veneration life';
-    /* The life takes what it needs; the apparatus column stops growing once
-       its own content is placed, rather than stretching to the life's height. */
-    grid-template-rows: auto auto;
-    align-content: start;
     column-gap: var(--space-8);
-    align-items: start;
+    /* The columns own the scrolling, so the grid is exactly the height it is
+       given and never more — the same arrangement calendar.css makes for the
+       Daily page's own two columns. */
+    min-height: 0;
+    flex: 1 1 auto;
   }
 
-  .saint-body > .saint-intro {
-    grid-area: intro;
-  }
-
-  .saint-body > .saint-veneration {
-    grid-area: veneration;
+  /*
+   * `min-height: 0` is what makes a scrolling grid item work at all: its
+   * default floor is its own content, so without it the box grows to fit the
+   * life and the page scrolls instead of the column.
+   *
+   * No bar down either, which is the standing answer on this site's columns
+   * (the Daily page's two, and the search column below): the column still
+   * scrolls by wheel, trackpad, keyboard and gesture — it simply does not
+   * draw the rule.
+   */
+  .saint-aside,
+  .saint-main {
+    display: block;
     min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
   }
 
-  .saint-body > .saint-main {
-    grid-area: life;
-    min-width: 0;
+  .saint-aside::-webkit-scrollbar,
+  .saint-main::-webkit-scrollbar {
+    display: none;
   }
 
   /* The intro is already a grid of picture-and-register; in a column of its
      own it has no second track to give the register, so the two stack. */
-  .saint-body > .saint-intro.has-media {
+  .saint-aside .saint-intro.has-media {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-4);
   }
 
   /* The picture is the column's own width here rather than a 260 px track
      inside a wider one. */
-  .saint-body > .saint-intro .saint-media-col {
+  .saint-aside .saint-media-col {
     max-width: none;
   }
 
   /* The life sets its own 65ch measure and the centre column is narrower than
      that on most windows, so the column is what holds it rather than the rule. */
-  .saint-body > .saint-main .life {
+  .saint-main .life {
     max-width: none;
   }
 
-  /* Veneration opens a section rather than following a paragraph: it is the
-     top of its own row here, not the thing after the life. */
-  .saint-body > .saint-veneration .register-heading {
-    margin-top: 0;
+  /* Veneration follows the register down the same column, with the air
+     between two sections. */
+  .saint-aside .saint-veneration .register-heading {
+    margin-top: var(--space-6);
+  }
+}
+
+/* ---- the page that does not scroll (2026-09-02) ------------------------- */
+
+/*
+ * Three scrolling columns and a scrolling page would be four scrollbars for
+ * three surfaces, so past the breakpoint the route gives up its own — exactly
+ * as the Daily page and the map already do. calendar.css argues it at length
+ * for the Daily page; this is the same arrangement, and the same reason.
+ *
+ * Only past 1024 px: on a phone there is one column and the page's own scroll
+ * is exactly right.
+ */
+@media (min-width: 1024px) {
+  html[data-view='saint'],
+  html[data-view='saint'] body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html[data-view='saint'] main.chrome {
+    height: calc(100dvh - var(--chrome-h, 53px));
+    padding-bottom: var(--space-4);
+    overflow: hidden;
+  }
+
+  html[data-view='saint'] main.chrome > #view,
+  html[data-view='saint'] .saint-cols,
+  html[data-view='saint'] .saint-col-main,
+  html[data-view='saint'] article.saint {
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* The name and its controls stay put at the top of the column while the two
+     boxes under them scroll — the head is what the page is *about*, and a
+     reader deep in a life should still be able to see whose it is. */
+  html[data-view='saint'] article.saint {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html[data-view='saint'] .saint-head {
+    flex: none;
   }
 }
 

@@ -1,0 +1,124 @@
+/* The About page (brief §8.4), and only its typography — every word on it is
+   in ui/strings.js and every number on it is read from the manifest at render
+   time (views/about.js). Nothing here decides what the page says.
+
+   Author, 2026-09-02: "Make the formatting of the text on the About Page a bit
+   more aesthetic." What it was: a run of bare sections against the window's
+   left edge, headings the same weight as each other whatever their level, and
+   at 1440 px a column of prose with two thirds of the screen empty beside it.
+   What it is: a centred measure, a rhythm that separates a section from the
+   next, and a lede that reads as one. */
+
+.about {
+  /* A measure, centred, rather than the page's whole width — this page is
+     prose and nothing else, and 68ch is the line length the rest of the site
+     sets its lives in. Centred because there is no second column here to line
+     up with, which is what kept the Daily page's own text at the left. */
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
+.about h1 {
+  margin-bottom: var(--space-2);
+}
+
+/* The tagline under the title, as a lede rather than as the first paragraph of
+   the first section: it says what the site is, and it was setting at body size
+   in body ink directly under a 40 px heading, where it read as an orphan. */
+.about-lede {
+  max-width: 54ch;
+  margin-bottom: var(--space-12);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* One section from the next, with a rule the width of the measure. `:not(:first-of-type)`
+   rather than a margin on every section, so the first heading sits under the
+   lede's own space instead of being pushed twice. */
+.about section + section {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--rule);
+}
+
+/* A section's own heading, and the sub-headings inside it, are three levels of
+   one voice: the h2 opens a section, the h3 opens a paragraph inside it, and
+   the difference between them was two pixels of size and nothing else. */
+.about h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+
+.about h3 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  font-size: 17px;
+  /* Small caps in the utility face, which is how this site marks a label
+     rather than a title — the same voice the veneration register's church
+     names take (saint.css). */
+  font-family: var(--font-utility);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+.about p {
+  margin-bottom: var(--space-3);
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* The lists of what the site keeps and does not, and the four calendars: a
+   plain list, marked with a rule at the leading edge rather than a bullet —
+   the page has no other bullets and a disc would be the only one on the site. */
+.about .plain-list {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+.about .plain-list li {
+  padding: var(--space-1) 0 var(--space-1) var(--space-4);
+  border-left: 2px solid var(--rule);
+  margin-bottom: var(--space-1);
+}
+
+/* Export and Import stand together as a pair of controls rather than as two
+   words in a paragraph. */
+.about .data-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.about .data-controls button {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-cell);
+  background: var(--field);
+  font-family: var(--font-utility);
+  font-size: 13.5px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.about .data-controls button:hover {
+  background: var(--gesso);
+  color: var(--ink);
+}
+
+.about .utility {
+  color: var(--ink-soft);
+}
+
+/* The coverage figures, which arrive from `manifest.meta.json` after the page
+   has painted: set as their own small block so the numbers read as a report
+   rather than as another paragraph. */
+.about [data-coverage] p,
+.about [data-sources] p {
+  margin-bottom: var(--space-2);
+}

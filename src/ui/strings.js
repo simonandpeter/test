@@ -756,6 +756,13 @@ export const STRINGS = {
     backDaily: 'Back to Daily',
     backMap: 'Back to the map',
     veneration: 'Veneration',
+    /*
+     * The apparatus column's own name, for a reader who meets it as a scrolling
+     * region rather than as a shape beside the life (2026-09-02). It says what
+     * is in the box rather than where the box is: 'left column' means nothing
+     * to someone who is not looking at it.
+     */
+    asideLabel: 'Dates, places and veneration',
     // The register reads the reader's church first (author, 2026-08-22); the
     // other two wait behind this, for this page only.
     otherChurches: 'See the other churches ({count})',
@@ -944,6 +951,14 @@ export const STRINGS = {
     movementOn: 'Movement on. Each saint is shown where they were in the timeline’s upper year.',
     movementOff: 'Movement off. Each saint is shown at their resting place.',
     play: 'Play the years',
+    /*
+     * How fast playback runs (author, 2026-09-02). The option prints the rate
+     * as the author wrote it — "1y", "25y" — because it sits beside a play
+     * button in a corner of the picture and has no room to say it in words;
+     * the label the option belongs to says the rest, out of sight.
+     */
+    speedLabel: 'Years per second',
+    speedOption: '{years}y/s',
     /*
      * The triangle over the selection (author, 2026-09-01). It has no visible
      * label — it is a shape on a rail — so this is the whole of what a screen

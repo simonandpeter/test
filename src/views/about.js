@@ -47,9 +47,17 @@ const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li
 export function render(el) {
   const A = STRINGS.about;
 
+  /*
+   * **One box around the page** (author, 2026-09-02: "Make the formatting of
+   * the text on the About Page a bit more aesthetic"). It carries the measure
+   * and the rhythm — about.css — where the page was a run of bare sections
+   * against the window's left edge, which at 1440 px was a column of prose
+   * with two thirds of the screen empty beside it.
+   */
   el.innerHTML = `
+    <div class="about">
     <h1>${esc(A.title)}</h1>
-    <p>${esc(STRINGS.site.tagline)}</p>
+    <p class="about-lede">${esc(STRINGS.site.tagline)}</p>
 
     <section aria-labelledby="policy">
       <h2 id="policy">${esc(A.policy.heading)}</h2>
@@ -126,6 +134,7 @@ export function render(el) {
       <p><a href="${ISSUES}" rel="noopener noreferrer">${C.open}</a></p>
       <p class="utility">${C.note}</p>
     </section>
+    </div>
   `;
 
   fillCounted(el);

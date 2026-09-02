@@ -327,22 +327,45 @@ export function wireFullCal(el) {
     }
   };
 
+  /*
+   * **The page goes down while this is open** (author, 2026-09-02: "make the
+   * full screen calendar however have this animation of moving the rest of
+   * the contents all down"). The flag is on the root because what moves is
+   * `#view`, which this module does not own — calendar.css holds the motion
+   * and the margins, and both are desktop-only.
+   *
+   * On `close` rather than only beside `dialog.close()`: Escape closes a modal
+   * without going through any of this file's own handlers, and a page left
+   * translated down with nothing over it is the worst of the three states.
+   */
+  const shift = (on) => {
+    if (on) document.documentElement.dataset.fullcal = 'open';
+    else delete document.documentElement.dataset.fullcal;
+  };
+
+  const onClose = () => shift(false);
+
   const onOpen = () => {
     if (!dialog) {
       dialog = build(el);
       dialog.addEventListener('click', onBody);
+      dialog.addEventListener('close', onClose);
     }
     const { year, month } = parseIso(state.selected);
     cursor = { year, month };
     paint(dialog);
     dialog.showModal();
+    shift(true);
   };
 
   open.addEventListener('click', onOpen);
   return () => {
     open.removeEventListener('click', onOpen);
     dialog?.removeEventListener('click', onBody);
+    dialog?.removeEventListener('close', onClose);
     dialog?.remove();
     dialog = null;
+    // Leaving the page with it open must not strand the shift on the root.
+    shift(false);
   };
 }

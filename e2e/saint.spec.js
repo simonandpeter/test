@@ -746,6 +746,133 @@ test('the icon the author supplied is on the page, with the licence Commons stat
   await expect(credit).toContainText('Akotantos');
 });
 
+/* ---- the round of 2026-09-02, evening ----------------------------------- */
+
+test('a feast date opens that day, in the calendar of the church whose row it is', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "Create a hyperlink on the Saint's profile where it
+   * states the date of veneration, that takes you to the Daily page of that
+   * date. Depending on which church veneration was clicked, the calendar type
+   * also changes ... If I click on the Russian date listed there, the calendar
+   * remains on Russian."
+   *
+   * Both halves, and the second is the one worth the test: a reader sent to a
+   * day in a calendar that does not keep this feast would find the link
+   * apparently broken, when what it was showing them is the two calendars
+   * disagreeing — the finding the register exists to state.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+
+  // The reader's own church first: its row is the one showing.
+  const mine = page.locator('[data-feast-day][data-church="russian"]').first();
+  await expect(mine, 'premise: no Russian feast date to press').toHaveCount(1);
+  const russianDay = await mine.getAttribute('data-feast-day');
+
+  // The other churches are behind the reveal, which is where a date in a
+  // calendar the reader is *not* in can be pressed.
+  await page.locator('[data-reveal]').click();
+  const other = page.locator('[data-feast-day][data-church="romanian"]').first();
+  await expect(other, 'premise: no Romanian feast date to press').toHaveCount(1);
+  const romanianDay = await other.getAttribute('data-feast-day');
+  expect(romanianDay, 'premise: the two calendars keep him on the same day').not.toBe(russianDay);
+
+  await other.click();
+  await expect(page).toHaveURL(new RegExp(`/calendar/${romanianDay}$`));
+  // The calendar followed the row.
+  await expect(page.locator('#church-open')).toHaveText(/Romanian/i);
+
+  // And back the other way: a date in the church already being read changes
+  // nothing but the day.
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+  const own = page.locator('[data-feast-day][data-church="romanian"]').first();
+  const ownDay = await own.getAttribute('data-feast-day');
+  await own.click();
+  await expect(page).toHaveURL(new RegExp(`/calendar/${ownDay}$`));
+  await expect(page.locator('#church-open')).toHaveText(/Romanian/i);
+});
+
+test('the two left columns scroll independently of each other and of the page', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "On desktop Saint profile page, make the left and
+   * middle columns independently scrollable."
+   *
+   * Which also settles where the veneration table lives: a column that scrolls
+   * as one thing has to be one box, so `wireColumns` moves it into the aside
+   * at this width. That is asserted here rather than in the layout test above
+   * because it is this instruction that forced it.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+
+  const seen = await page.evaluate(() => {
+    const aside = document.querySelector('.saint-aside');
+    const main = document.querySelector('.saint-main');
+    aside.scrollTop = 120;
+    main.scrollTop = 60;
+    return {
+      venerationInAside: aside.contains(document.querySelector('[data-veneration-box]')),
+      asideScrolls: aside.scrollHeight > aside.clientHeight,
+      mainScrolls: main.scrollHeight > main.clientHeight,
+      asideAt: aside.scrollTop,
+      mainAt: main.scrollTop,
+      pageScrolls: document.documentElement.scrollHeight > document.documentElement.clientHeight + 1,
+    };
+  });
+  expect(seen.venerationInAside, 'the veneration table is not in the column that scrolls').toBe(true);
+  expect(seen.asideScrolls && seen.mainScrolls, 'a column has nothing to scroll').toBe(true);
+  // Each holds its own position: one is not the other, and neither is the page.
+  expect(seen.asideAt, 'the apparatus column did not scroll').toBeGreaterThan(0);
+  expect(seen.mainAt, 'the life did not scroll').toBeGreaterThan(0);
+  expect(seen.asideAt).not.toBe(seen.mainAt);
+  expect(seen.pageScrolls, 'the page scrolls as well as its columns').toBe(false);
+});
+
+test('the search column opens where the reader left it, on the next saint', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "make sure when changing saint profile the location of
+   * how far your scrolled down the right side search column doesn't go back to
+   * the top but stays exactly as it was."
+   *
+   * The press is dispatched rather than clicked: `locator.click()` scrolls its
+   * target into view (CLAUDE.md trap 3), which on a list scrolled 900 px down
+   * is a scroll back to the top *before* the navigation — it would measure the
+   * test's own gesture rather than the feature. Found the hard way.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const list = page.locator('[data-side-results]');
+  await expect(list.locator('.index-card').first()).toBeVisible();
+
+  await list.evaluate((el) => {
+    el.scrollTop = 900;
+  });
+  await expect.poll(async () => list.evaluate((el) => el.scrollTop)).toBe(900);
+
+  const before = page.url();
+  await page.evaluate(() => {
+    const box = document.querySelector('[data-side-results]');
+    const frame = box.getBoundingClientRect();
+    const visible = [...box.querySelectorAll('.index-card a')].find((a) => {
+      const r = a.getBoundingClientRect();
+      return r.top >= frame.top && r.bottom <= frame.bottom;
+    });
+    visible.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
+  });
+  await expect.poll(() => page.url()).not.toBe(before);
+
+  await expect
+    .poll(async () => page.locator('[data-side-results]').evaluate((el) => el.scrollTop), { timeout: 5000 })
+    .toBe(900);
+});
+
 /* ---- the page's own columns (2026-09-02) -------------------------------- */
 
 test('a desktop saint page puts the apparatus left of the life, and the filters in the search column', async ({ page }) => {

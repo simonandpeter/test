@@ -18,7 +18,7 @@
 
 import { CHURCHES } from '../data/churches.js';
 import { typeNames } from '../lib/saint-types.js';
-import { chosenChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
+import { chooseChurch, chosenChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
@@ -101,6 +101,8 @@ export function render(el, { data, params, router, cameFrom }) {
     </div>`;
   const cleanups = [
     wireSaveButtons(el),
+    // Before `wireReading`, which asks which element ends up scrolling.
+    wireColumns(el),
     wireReading(el, slug),
     observePrefetch(el),
     wireBack(el, router, backTo),
@@ -111,7 +113,7 @@ export function render(el, { data, params, router, cameFrom }) {
   live = { cleanups, revealed: false, payload: null, teardown: () => cleanups.forEach((fn) => fn?.()) };
   cleanups.push(
     subscribeChurch(() => {
-      if (mine === generation && live?.payload) paintVeneration(el, live.payload.saint);
+      if (mine === generation && live?.payload) paintVeneration(el, live.payload.saint, router);
     }),
   );
 
@@ -249,11 +251,13 @@ function shell(card, backLabel) {
       the other column when it comes.
     -->
     <div class="saint-body">
-    <div class="saint-intro${media ? ' has-media' : ''}">
-      ${media ? `<div class="saint-media-col">${media}</div>` : ''}
-      <div class="saint-intro-facts">
-        ${renderDateFacts(card.dates, card.locations)}
-        ${card.historicity ? `<p class="historicity utility">${esc(STRINGS.saint.historicity[card.historicity] ?? card.historicity)}</p>` : ''}
+    <div class="saint-aside" data-aside>
+      <div class="saint-intro${media ? ' has-media' : ''}">
+        ${media ? `<div class="saint-media-col">${media}</div>` : ''}
+        <div class="saint-intro-facts">
+          ${renderDateFacts(card.dates, card.locations)}
+          ${card.historicity ? `<p class="historicity utility">${esc(STRINGS.saint.historicity[card.historicity] ?? card.historicity)}</p>` : ''}
+        </div>
       </div>
     </div>
 
@@ -300,13 +304,24 @@ function shell(card, backLabel) {
       </div>
     </div>
     <!--
-      Veneration, and it is a direct child of the body rather than a part of
-      the life above it. That is the whole of what lets one document order
-      serve both widths: on a phone this is where it has been since
-      2026-08-27, after the life; on a desktop the grid puts it in the first
-      column under the register, which is where the 2026-09-02 instruction
-      asks for it. A box nested inside the life could not be placed there,
-      since only a grid's own children can be.
+      Veneration, rendered here — after the life, where it has been since
+      2026-08-27 and where a phone reads it — and **moved into the aside above
+      by wireColumns when the window is wide**.
+
+      It is moved rather than placed by CSS, and that is the second attempt.
+      The first put it in the grid's own second row and let the life span
+      both, which reads correctly and lays out badly: a spanning item hands
+      its height to the rows it crosses, so a long life pushed veneration
+      hundreds of pixels down its own column to line up with nothing (author,
+      2026-09-02: "the left column Veneration on Righteous Elizabeth ... is
+      very far down, looks like it might be because its trying to line up with
+      the hymns in the right column"). Independently scrolling columns need it
+      inside the box that scrolls in any case, and a box is a box in the DOM.
+
+      Which leaves one node in two possible parents, so the document order is
+      the reading order at both widths and nothing is ordered around by CSS —
+      a screen reader hears the life before the veneration on a phone, and the
+      apparatus as one column beside it on a desktop.
     -->
     <div class="saint-veneration" data-veneration-box hidden>
       <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
@@ -330,6 +345,20 @@ function shell(card, backLabel) {
  * a reload opens it again.
  */
 let sideFolded = false;
+
+/**
+ * How far down the search column the reader had scrolled, kept across the
+ * saints opened in one visit (author, 2026-09-02).
+ *
+ * Module scope for the same reason `sideFolded` is: the page is rebuilt per
+ * saint, so anything the reader did *to the column* rather than to a saint has
+ * to live outside the render. A reload starts at the top again, which is where
+ * a fresh visit's list starts anyway.
+ *
+ * Reset when the set itself changes — a position measured against 862 rows
+ * means nothing against the eleven a filter left.
+ */
+let sideAt = 0;
 
 /**
  * The saints the reader had in front of them when they opened this one.
@@ -524,8 +553,58 @@ function wireSide(el, { data, router, current }) {
   };
   restart();
 
+  /*
+   * **And it opens where the reader left it** (author, 2026-09-02: "when
+   * changing saint profile the location of how far your scrolled down the
+   * right side search column doesn't go back to the top but stays exactly as
+   * it was").
+   *
+   * The whole page is re-rendered per saint, so the list is a new element
+   * with a new scrollTop of 0 — the position has to be carried in module
+   * scope, beside `sideFolded`, and for the same reason: it is a fact about
+   * the reading, not about the saint.
+   *
+   * The list is paged, so restoring is two steps: draw until there is
+   * something to scroll *to*, then scroll. Without the first, `scrollTop` is
+   * clamped to a box holding sixty rows and the reader lands wherever that
+   * happens to end. Bounded by the set's own length, so a remembered position
+   * from a wider search cannot spin here.
+   */
+  /*
+   * **After a frame, because a box that has not been laid out reports 0 and
+   * ignores writes** (CLAUDE.md trap 7). `wireSide` runs inside `render`,
+   * straight after the innerHTML that made this element — `clientHeight` is 0
+   * there, every `scrollTop` written is clamped to 0, and the first version of
+   * this restored nothing at all while looking exactly like a restore.
+   */
+  let restoring = null;
+  const restoreScroll = (tries = 0) => {
+    restoring = requestAnimationFrame(() => {
+      restoring = null;
+      if (sideAt <= 0 || !list.isConnected) return;
+      /*
+       * **And it waits for a box.** One frame is not enough: the router paints
+       * a view inside a view transition's update callback, where the
+       * document's rendering is suppressed and a freshly written element
+       * measures 0 by 0 — the same trap `settleHome` documents in the map.
+       * A `scrollTop` written there is clamped to 0 against a zero-height box,
+       * which is a restore that runs, reports nothing and does nothing.
+       */
+      if (list.clientHeight === 0) {
+        if (tries < 30) restoreScroll(tries + 1);
+        return;
+      }
+      for (let guard = 0; guard < 40 && drawn < shown.length && list.scrollHeight < sideAt + list.clientHeight; guard++) {
+        draw(drawn + SIDE_CHUNK);
+      }
+      list.scrollTop = sideAt;
+    });
+  };
+  restoreScroll();
+
   // Two chunks ahead of the foot, so the next arrives before it is reached.
   const onScroll = () => {
+    sideAt = list.scrollTop;
     if (list.scrollTop + list.clientHeight > list.scrollHeight - 600) draw(drawn + SIDE_CHUNK);
   };
   list.addEventListener('scroll', onScroll, { passive: true });
@@ -543,6 +622,9 @@ function wireSide(el, { data, router, current }) {
     const pool = filtered ?? all;
     const needle = query.value.trim().toLowerCase();
     shown = needle ? pool.filter((item) => matches(item, needle)) : pool;
+    // A new set is a new list, and a position measured against the old one
+    // would land the reader somewhere they never were.
+    sideAt = 0;
     restart();
   };
 
@@ -561,11 +643,84 @@ function wireSide(el, { data, router, current }) {
   facetBox?.addEventListener('change', onFacet);
 
   return () => {
+    if (restoring !== null) cancelAnimationFrame(restoring);
     fold.removeEventListener('click', onFold);
     query.removeEventListener('input', onQuery);
     facetBox?.removeEventListener('change', onFacet);
     list.removeEventListener('scroll', onScroll);
   };
+}
+
+/**
+ * The width at which the page becomes three columns. One place, because the
+ * stylesheet and `wireColumns` have to agree about it exactly: a veneration
+ * table moved into a column the CSS has not made yet would be a box inside a
+ * box that is not laid out.
+ */
+const WIDE = '(min-width: 1024px)';
+
+/**
+ * Which parent the veneration table hangs from (author, 2026-09-02).
+ *
+ * Wide, it belongs to the apparatus column — that is the instruction of the
+ * round before this one, and it is also what lets that column scroll as one
+ * thing rather than as two boxes that happen to be stacked. Narrow, it belongs
+ * after the life, which is where the 2026-08-27 instruction put it.
+ *
+ * A node with two possible parents rather than an `order` that disagrees with
+ * the document: `order` would have been fewer lines and would have left a
+ * screen reader hearing the register before the life on a phone, which is the
+ * thing the 2026-08-27 instruction was about.
+ *
+ * The listener is on the media query rather than on `resize`, so it fires
+ * twice a session at most — and the placement is idempotent, so the render's
+ * own first call costs nothing when it is already right.
+ */
+function wireColumns(el) {
+  const aside = el.querySelector('[data-aside]');
+  const body = el.querySelector('.saint-body');
+  const main = el.querySelector('.saint-main');
+  const veneration = el.querySelector('[data-veneration-box]');
+  if (!aside || !body || !veneration) return null;
+  const mq = window.matchMedia(WIDE);
+
+  /*
+   * **A column that scrolls has to be reachable by keyboard** (axe's
+   * `scrollable-region-focusable`, serious, caught by the §13 gate the same
+   * afternoon these columns were built).
+   *
+   * A scroller whose content holds no focusable element cannot be scrolled by
+   * anyone not using a pointer — and the sparse saints are exactly that case:
+   * Christopher has no life to link out of and no picture, so his apparatus
+   * column is a register and nothing to tab to. The remedy is the one the
+   * carousel track and the week rail already use here: the box itself takes
+   * focus and says what it is.
+   *
+   * Applied with the placement rather than in the markup, because it is only
+   * true at this width — below it these boxes are `display: contents` and
+   * scroll nothing, and two tab stops on a phone would be two stops at
+   * nothing.
+   */
+  const label = (box, text) => {
+    if (mq.matches) {
+      box.setAttribute('tabindex', '0');
+      box.setAttribute('role', 'region');
+      box.setAttribute('aria-label', text);
+    } else {
+      box.removeAttribute('tabindex');
+      box.removeAttribute('role');
+      box.removeAttribute('aria-label');
+    }
+  };
+
+  const place = () => {
+    (mq.matches ? aside : body).append(veneration);
+    label(aside, STRINGS.saint.asideLabel);
+    if (main) label(main, STRINGS.saint.life);
+  };
+  place();
+  mq.addEventListener('change', place);
+  return () => mq.removeEventListener('change', place);
 }
 
 /**
@@ -632,7 +787,7 @@ function fillIn(el, payload, { data, router }) {
   fillPlaces(el, saint.dates, saint.locations);
 
   if (live) live.payload = payload;
-  paintVeneration(el, saint);
+  paintVeneration(el, saint, router);
 
   const lifeEl = el.querySelector('[data-life]');
   /*
@@ -760,7 +915,7 @@ const statusText = (status) =>
  * asserted by it — the reader is choosing what to read, which is the opposite
  * of adjudicating. No church chosen yet shows all three.
  */
-function paintVeneration(el, saint) {
+function paintVeneration(el, saint, router) {
   const box = el.querySelector('[data-veneration]');
   if (!box) return;
   /*
@@ -786,17 +941,53 @@ function paintVeneration(el, saint) {
       `${revealed ? STRINGS.saint.hideOtherChurches : fill(STRINGS.saint.otherChurches, { count: others.length })}</button>`
     : '';
   box.innerHTML =
-    veneration(saint, mine) +
+    veneration(saint, mine, router) +
     reveal +
-    (others.length && revealed ? `<div class="attestations-other">${veneration(saint, others)}</div>` : '');
+    (others.length && revealed ? `<div class="attestations-other">${veneration(saint, others, router)}</div>` : '');
   box.querySelector('[data-reveal]')?.addEventListener('click', () => {
     if (live) live.revealed = !live.revealed;
-    paintVeneration(el, saint);
+    paintVeneration(el, saint, router);
     box.querySelector('[data-reveal]')?.focus();
+  });
+  wireFeastLinks(box, router);
+}
+
+/**
+ * A feast date opens that day, in the calendar of the church whose row it was
+ * read from (author, 2026-09-02).
+ *
+ * The href alone would do the navigation, and the whole reason this listener
+ * exists is the *other* half of the instruction: "depending on which church
+ * veneration was clicked, the calendar type also changes". So the press sets
+ * the church first and then lets the router take it — `chooseChurch` notifies
+ * every subscribed view, and the Daily page reads the setting when it renders,
+ * so the order matters and this way round is the one that lands.
+ *
+ * Only a plain left click is taken. A middle click, or a reader holding a
+ * modifier to open the day in a new tab, keeps the browser's own behaviour —
+ * and would be a strange press to change the whole site's calendar on, since
+ * the tab they are looking at is not the one that moved.
+ *
+ * Bound on the box rather than per link, because `paintVeneration` rewrites
+ * its own innerHTML whenever the reveal is toggled or the church changes.
+ */
+function wireFeastLinks(box, router) {
+  box.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-feast-day]');
+    if (!link || e.defaultPrevented) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const church = link.dataset.church;
+    // Already reading that church: nothing to change, and `chooseChurch`
+    // would repaint every subscriber for no reason.
+    if (church && church !== chosenChurch()) chooseChurch(church);
+    // The router's own path, not the href: `href()` has the base path on it
+    // and `navigate` adds it again.
+    router.navigate(`/calendar/${link.dataset.feastDay}`);
   });
 }
 
-function veneration(saint, churches) {
+function veneration(saint, churches, router) {
   const year = new Date().getFullYear();
   const byChurch = new Map((saint.attestations ?? []).map((a) => [a.church, a]));
 
@@ -808,7 +999,8 @@ function veneration(saint, churches) {
     if (att?.titles?.length) lines.push(`<span class="att-titles">${esc(att.titles.join(', '))}</span>`);
 
     if (status === 'venerated') {
-      lines.push(`<span class="att-feast utility">${esc(feastLine(att.feast, church, year))}</span>`);
+      // Not escaped: `feastLine` returns markup and escapes its own parts.
+      lines.push(`<span class="att-feast utility">${feastLine(att.feast, church, year, router)}</span>`);
     } else if (status === 'not-venerated') {
       // A refusal is a finding about that church and is stated on its row.
       // Undocumented is a fact about our sourcing and is the same fact every
@@ -835,8 +1027,15 @@ function veneration(saint, churches) {
   return `<ul class="attestations">${rows.join('')}</ul>${note}`;
 }
 
-function feastLine(feast, church, year) {
-  if (!feast) return STRINGS.saint.noFeast;
+/**
+ * The feast a church keeps, and the day it falls on this year.
+ *
+ * **Returns markup rather than text since 2026-09-02**, because the Gregorian
+ * date is a link now — so every branch escapes what it interpolates, and the
+ * caller inserts it without escaping.
+ */
+function feastLine(feast, church, year, router) {
+  if (!feast) return esc(STRINGS.saint.noFeast);
   const own = formatFeast(feast);
   let occurrences = [];
   try {
@@ -844,15 +1043,34 @@ function feastLine(feast, church, year) {
   } catch {
     // A paschal feast with no computus anywhere is a data error the build
     // catches; here it simply means we cannot name a Gregorian day for it.
-    return own;
+    return esc(own);
   }
-  if (!occurrences.length) return fill(STRINGS.saint.feastNoOccurrence, { feast: own, year });
+  if (!occurrences.length) return esc(fill(STRINGS.saint.feastNoOccurrence, { feast: own, year }));
   const d = occurrences[0];
-  return fill(STRINGS.saint.feastThisYear, {
-    feast: own,
-    gregorian: gregorianFmt(new Date(Date.UTC(d.year, d.month - 1, d.day))),
-    year,
-  });
+  /*
+   * **The date is the way to that day** (author, 2026-09-02: "Create a
+   * hyperlink on the Saint's profile where it states the date of veneration,
+   * that takes you to the Daily page of that date. Depending on which church
+   * veneration was clicked, the calendar type also changes").
+   *
+   * The row is a church's own reading of this saint, so the link carries that
+   * church with it: the Daily page prints one calendar at a time, and sending
+   * a reader to 15 January while leaving them in the Russian calendar would
+   * open a day that does not keep this feast at all — which reads as the link
+   * being broken rather than as the two calendars disagreeing, which is the
+   * whole finding the row exists to state.
+   *
+   * `data-church` rather than a query parameter: the church is a setting the
+   * whole site reads (lib/church.js), not a property of the address, and
+   * `wireFeastLinks` is what turns the press into `chooseChurch` plus a
+   * navigation. Clicking the row for the church you are already reading
+   * changes nothing, which is the author's own second case.
+   */
+  const iso = `${String(d.year).padStart(4, '0')}-${String(d.month).padStart(2, '0')}-${String(d.day).padStart(2, '0')}`;
+  const gregorian =
+    `<a class="feast-day" href="${router.href(`/calendar/${iso}`)}" data-feast-day="${iso}"` +
+    ` data-church="${esc(church.id)}">${esc(gregorianFmt(new Date(Date.UTC(d.year, d.month - 1, d.day))))}</a>`;
+  return fill(STRINGS.saint.feastThisYear, { feast: esc(own), gregorian, year });
 }
 
 function citation(source) {
@@ -934,6 +1152,23 @@ function related(saint, data, router) {
  * offered as a control and taken only if they ask.
  */
 function wireReading(el, slug) {
+  /*
+   * **Whichever box actually scrolls** (2026-09-02). The life was the page's
+   * own scroll until the columns began carrying their own past 1024 px, and a
+   * reading position recorded off `window.scrollY` on a page that cannot
+   * scroll is always 0 — so Continue reading would offer every desktop reader
+   * the top of a life they had read half of. This is the shape of bug the
+   * Daily page's own two columns produced (CLAUDE.md, "anything that watched
+   * `window` scroll had to learn to watch whatever scrolled instead"); asked
+   * of the element rather than of the width, so it is right whichever way the
+   * stylesheet answers.
+   */
+  const main = el.querySelector('.saint-main');
+  const scroller = () => (main && main.scrollHeight > main.clientHeight + 1 ? main : window);
+  const positionOf = (target) => (target === window ? window.scrollY : target.scrollTop);
+  const scrollTo = (target, top) =>
+    target === window ? window.scrollTo({ top, behavior: 'auto' }) : (target.scrollTop = top);
+
   const note = el.querySelector('[data-resume]');
   // Read before touching: marking the visit must not be what erases the
   // position the visit exists to offer.
@@ -943,23 +1178,23 @@ function wireReading(el, slug) {
     note.hidden = false;
     note.innerHTML = `<button type="button" data-resume-go>${STRINGS.shelf.resume}</button>`;
     note.querySelector('[data-resume-go]').addEventListener('click', () => {
-      window.scrollTo({ top: row.scrollPos, behavior: 'auto' });
+      scrollTo(scroller(), row.scrollPos);
       note.hidden = true;
     });
   });
 
   let last = 0;
   let timer = null;
-  // Teardown runs before the next view paints, by which time window.scrollY
-  // may already have been reset; the last value seen while this page was on
+  // Teardown runs before the next view paints, by which time the scroller may
+  // already have been reset; the last value seen while this page was on
   // screen is the one worth keeping.
   let lastY = 0;
   const record = () => {
     last = Date.now();
     store.markReading(slug, lastY);
   };
-  const onScroll = () => {
-    lastY = window.scrollY;
+  const onScroll = (e) => {
+    lastY = positionOf(e.target === document || e.target === window ? window : e.target);
     if (timer) return;
     const wait = Math.max(0, READING_INTERVAL - (Date.now() - last));
     timer = setTimeout(() => {
@@ -971,11 +1206,15 @@ function wireReading(el, slug) {
     if (document.visibilityState === 'hidden') record();
   };
 
+  // Both, because which one moves is a fact about the window's width and can
+  // change under the reader; neither fires unless it is the one scrolling.
   window.addEventListener('scroll', onScroll, { passive: true });
+  main?.addEventListener('scroll', onScroll, { passive: true });
   document.addEventListener('visibilitychange', onLeave);
   return () => {
     if (timer) clearTimeout(timer);
     window.removeEventListener('scroll', onScroll);
+    main?.removeEventListener('scroll', onScroll);
     document.removeEventListener('visibilitychange', onLeave);
     record();
   };

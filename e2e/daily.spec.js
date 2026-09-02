@@ -1090,9 +1090,24 @@ test('the days at the rail edges are real days, unmasked, and one click each', a
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  // Still no chevrons anywhere in the chrome (author, 2026-08-21 — stands).
-  const glyphs = await page.locator('.cal-controls button').allTextContents();
-  expect(glyphs.join('')).not.toMatch(/[‹›]/);
+  /*
+   * **The no-chevrons rule of 2026-08-21 was reversed on 2026-09-02** (author:
+   * "add arrows left and right over the week display and monthly display
+   * edges, don't resize anything just put them over the left and right ends
+   * where the dates just outside of the week are fading out").
+   *
+   * What that rule was protecting is still protected, and it is the rest of
+   * this test: the peeked edges are *real days* — the 23rd and the 31st, in
+   * full ink, one click each — rather than the disguised week-steps they were
+   * before Amendment 35. The arrows are drawn over that grain rather than
+   * replacing it, so the two decisions no longer conflict.
+   *
+   * So what is pinned now is where a chevron may appear: the two week arrows
+   * and nowhere else among the controls' buttons. A chevron creeping back onto
+   * a *day* button would still fail here.
+   */
+  const glyphs = await page.locator('.cal-controls button:not(.week-arrow)').allTextContents();
+  expect(glyphs.join(''), 'a chevron is back on a control that is not an arrow').not.toMatch(/[‹›]/);
 
   // The neighbours are in the document and partly in view at each edge.
   const prev = page.locator('.week-strip [data-iso="2026-08-23"]');
@@ -4775,13 +4790,65 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
   await open.click();
   const dialog = page.locator('dialog.fullcal');
   await expect(dialog).toBeVisible();
-  // Full screen: the window, not a box in the middle of it.
+  /*
+   * **Measured after it has landed.** Since 2026-09-02 the calendar slides
+   * down into place on a desktop, and every number below is a position — read
+   * a frame early, the box is still 16 px high of its own translate and the
+   * page reports a calendar sitting over the header. Waiting on the element's
+   * own animations rather than on a duration: the length is the stylesheet's
+   * and would go stale here the first time it changed.
+   */
+  await dialog.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
+  /*
+   * **"Full screen" stopped meaning the whole window on a desktop, 2026-09-02**
+   * (author: "make the full screen calendar however have this animation of
+   * moving the rest of the contents all down, and make the calendar share the
+   * leftmost and rightmost margins").
+   *
+   * So past 1024 px it takes the glass under the header and the page's own
+   * left and right margins — the same measure the masthead lines up to — and
+   * what it covers is the page rather than the window. A phone still gets the
+   * window: there are no margins to share at 360 px, and the modal is the only
+   * way to show a month there.
+   */
   const box = await dialog.evaluate((el) => {
     const r = el.getBoundingClientRect();
-    return { w: Math.round(r.width), h: Math.round(r.height), winW: window.innerWidth, winH: window.innerHeight };
+    /* The sticky *bar*, not the header inside it: the bar is what
+       `--chrome-h` measures and what the calendar hangs from, and it is 16 px
+       taller than the header — the bottom padding the two chooser panels used
+       to open into. */
+    const chrome = document.querySelector('.chrome-bar').getBoundingClientRect();
+    const measure = document.querySelector('main.chrome > #view').getBoundingClientRect();
+    return {
+      w: Math.round(r.width),
+      h: Math.round(r.height),
+      top: Math.round(r.top),
+      left: Math.round(r.left),
+      right: Math.round(r.right),
+      chromeBottom: Math.round(chrome.bottom),
+      measureLeft: Math.round(measure.left),
+      measureRight: Math.round(measure.right),
+      winW: window.innerWidth,
+      winH: window.innerHeight,
+      wide: window.innerWidth >= 1024,
+    };
   });
-  expect(box.w).toBeGreaterThanOrEqual(box.winW - 2);
-  expect(box.h).toBeGreaterThanOrEqual(box.winH - 2);
+  if (box.wide) {
+    // Under the header, not over it, and the height that leaves.
+    /* At or below the bar's own foot, and hanging from it rather than
+       floating somewhere down the page. Not an exact equality: the calendar is
+       placed at `--chrome-h`, which main.js measures from the *header*, while
+       the bar carries a little padding under it — so the honest claim is that
+       the header is not covered and the gap is the bar's own. */
+    expect(Math.abs(box.top - box.chromeBottom), 'the calendar does not hang from the bar').toBeLessThan(3);
+    expect(box.h).toBeLessThan(box.winH);
+    // Sharing the page's own margins, which is what the instruction asks.
+    expect(Math.abs(box.left - box.measureLeft), 'the left edge is not the page’s').toBeLessThan(3);
+    expect(Math.abs(box.right - box.measureRight), 'the right edge is not the page’s').toBeLessThan(3);
+  } else {
+    expect(box.w).toBeGreaterThanOrEqual(box.winW - 2);
+    expect(box.h).toBeGreaterThanOrEqual(box.winH - 2);
+  }
 
   await expect(page.locator('[data-fc-title]')).toHaveText('August 2026');
   // Which church's reckoning this is, said rather than assumed.

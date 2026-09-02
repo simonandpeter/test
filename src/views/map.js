@@ -385,6 +385,24 @@ const PAUSE_GLYPH = '&#9208;';
 const PLAY_MS_PER_YEAR = 1000;
 
 /**
+ * How many years a second of playback covers (author, 2026-09-02: "Add a speed
+ * selector (1y,5y,10y,25y per second) when Movement is ticked").
+ *
+ * The author's four numbers. A year a second is the rate playback shipped
+ * with and stays the default; at the other end, 25 crosses the corpus's whole
+ * 1,872-year span in about seventy-five seconds, which is the difference
+ * between watching a life and watching the centuries.
+ */
+const SPEEDS = [1, 5, 10, 25];
+
+/**
+ * The chosen rate, held for the visit beside `movement` and the range — a
+ * speed is a way of watching rather than a fact about a saint, so it survives
+ * a trip to a profile and back and is not persisted past a reload.
+ */
+let speed = SPEEDS[0];
+
+/**
  * The threshold past which a crowded cluster's names are stacked into a
  * column with leader lines rather than simply placed beside their dots or
  * dropped (author, 2026-08-31: "implement the leader line system only after
@@ -1008,9 +1026,42 @@ export function render(el, { data, router }) {
               <p class="map-filter-note utility">${esc(M.filterNote)}</p>
             </div>
           </div>
+          <!--
+            **The play button and the speed selector belong to Movement**
+            (author, 2026-09-02: "Make this selector AND the play button only
+            appear when Movement is ticked on. These buttons fade in / out
+            when Movement is selected").
+
+            They were always disabled without it — playing the years with
+            nothing moving is the timeline dimming on a clock — and a disabled
+            control that can only be enabled by the box beside it is a control
+            asking a question the box has already answered. So they are not
+            there at all until it is ticked, and they fade rather than
+            appearing, which is what says the box is what produced them.
+
+            The data-motion-only box is the pair; wireMotion toggles one class
+            on it and map.css does the fade. Kept in the document either way
+            rather than removed, so the fade has something to run on and the
+            play button's own state survives a tick and an untick.
+          -->
           <div class="map-motion">
-            <button type="button" class="icon-button map-play" data-play disabled
-              aria-label="${esc(M.play)}">${PLAY_GLYPH}</button>
+            <div class="map-motion-run" data-motion-only>
+              <div class="map-motion-run-inner">
+                <button type="button" class="icon-button map-play" data-play disabled
+                  aria-label="${esc(M.play)}">${PLAY_GLYPH}</button>
+                <label class="map-speed utility">
+                  <span class="sr-only">${esc(M.speedLabel)}</span>
+                  <select data-speed>
+                    ${SPEEDS.map(
+                      (n) =>
+                        `<option value="${n}"${n === speed ? ' selected' : ''}>${esc(
+                          fill(M.speedOption, { years: n }),
+                        )}</option>`,
+                    ).join('')}
+                  </select>
+                </label>
+              </div>
+            </div>
             <label class="map-movement utility">
               <input type="checkbox" data-movement />
               ${esc(M.movement)}
@@ -1812,6 +1863,8 @@ function wireFilters(el, refresh) {
 function wireMotion(el, timeline, refresh) {
   const box = el.querySelector('[data-movement]');
   const play = el.querySelector('[data-play]');
+  const speedSel = el.querySelector('[data-speed]');
+  const run = el.querySelector('[data-motion-only]');
   let frame = null;
   let end = null;
 
@@ -1828,6 +1881,14 @@ function wireMotion(el, timeline, refresh) {
     // a drag already does and a play button does not promise.
     play.disabled = !movement || !timeline;
     if (play.disabled) stop();
+    /*
+     * **Shown with Movement, faded rather than swapped** (author, 2026-09-02).
+     * `inert` as well as the class, because a control faded to nothing is
+     * still a control a keyboard can reach: the fade is what a sighted reader
+     * sees and this is the same statement made to everyone else.
+     */
+    run.classList.toggle('is-on', movement);
+    run.inert = !movement;
     /*
      * "It appears once Movement is ticked on" (author, 2026-09-01). Off, the
      * map shows every saint at their resting place and there is no year being
@@ -1875,7 +1936,12 @@ function wireMotion(el, timeline, refresh) {
     let last = performance.now();
     let year = span.from;
     const step = (now) => {
-      year += (now - last) / PLAY_MS_PER_YEAR;
+      /*
+       * The reader's own rate, read every frame rather than captured at the
+       * press: changing the speed mid-run should change *this* run, which is
+       * the only run there is to change.
+       */
+      year += ((now - last) / PLAY_MS_PER_YEAR) * speed;
       last = now;
       if (year >= end) {
         timeline.setHead(end);
@@ -1888,12 +1954,18 @@ function wireMotion(el, timeline, refresh) {
     frame = requestAnimationFrame(step);
   });
 
+  speedSel?.addEventListener('change', () => {
+    const chosen = Number(speedSel.value);
+    if (SPEEDS.includes(chosen)) speed = chosen;
+  });
+
   // The reader taking the timeline back is the end of the performance, and
   // so is leaving the view: `destroy` drains `cleanups`.
   timeline?.onTouch(stop);
   cleanups.push(stop);
-  // The box holds for the visit, so a return to the map finds it as it was.
+  // Both hold for the visit, so a return to the map finds them as they were.
   box.checked = movement;
+  if (speedSel) speedSel.value = String(speed);
   chrome();
 }
 
@@ -2895,7 +2967,32 @@ function paintCanvas(canvas, cards) {
    * same rule reaching `past` through a control instead of being hard-coded
    * for one of the two states.
    */
-  const haloed = fanned.filter((d) => d.card.slug === selected || shownState(d.state));
+  /*
+   * **A halo is for a saint the range actually reaches, and for nobody else**
+   * (author, 2026-09-02: "For saints outside of the timeline selection, even
+   * when they are ticked to be shown in the filters as unborn or dead, make
+   * sure they dont have a glow to them. Only saints in the timeline selection
+   * have a glow. So ticking to show outside of the timeline selection only
+   * displays their names").
+   *
+   * This narrows what the filter boxes buy. They used to hand back the name
+   * *and* the halo together; the halo is the uncertainty curve's own statement
+   * about how firmly a place is fixed, and making it about saints the reader's
+   * years do not reach was spending the picture's one graded mark on people
+   * the picture is not currently about. So the boxes buy the name alone now,
+   * which is also the simpler promise to state.
+   *
+   * `live` and nothing else — not even the chosen saint, who is dimmed rather
+   * than exempted everywhere else on this pass.
+   */
+  const haloed = fanned.filter((d) => d.state === 'live');
+  /*
+   * How many halos this frame laid down. Published because the halo is drawn
+   * on its own layer and composited once — there is no element to ask, and
+   * reading the pixel under a dot measures the coastline, the layer and the
+   * dot together. Written by the pass that draws, so doing nothing reads 0.
+   */
+  canvas.dataset.halos = String(haloed.length);
   if (haloed.length) {
     /*
      * **One offscreen canvas, kept and reused, not one made per frame**

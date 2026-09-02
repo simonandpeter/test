@@ -6,6 +6,7 @@ import './styles/calendar.css';
 import './styles/saint.css';
 import './styles/index.css';
 import './styles/map.css';
+import './styles/about.css';
 
 import { BRAND, STRINGS } from './ui/strings.js';
 import { WORDMARK } from './ui/wordmark.js';
@@ -374,6 +375,16 @@ function show({ route, params, path }, nav = {}) {
      * navigation onward; the head does the first frame.
      */
     document.documentElement.dataset.route = route?.nav ?? '';
+    /*
+     * And which *view*, which is not the same question (2026-09-02). `nav` is
+     * the section the header underlines, so the Index and a saint's page share
+     * one — and a saint's page is the only route on the site whose layout the
+     * section cannot name. Published beside it rather than folded into it,
+     * because the header's answer is right and it is a stylesheet that needs
+     * the finer one: `html[data-view='saint']` is what gives that page's
+     * columns their own scrolling.
+     */
+    document.documentElement.dataset.view = route?.view === saint ? 'saint' : '';
     /*
      * Every navigation lands at the top of the page it opens, or — a change of
      * section — back where this section was left (`returning`). The first

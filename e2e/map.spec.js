@@ -1306,6 +1306,91 @@ test('a saint whose birth is only bounded from above is not lit centuries early'
   await expect.poll(stateOf).toBe('future');
 });
 
+test('the play button and the speed selector arrive with Movement', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "Add a speed selector (1y,5y,10y,25y per second) when
+   * Movement is ticked. Make this selector AND the play button only appear
+   * when Movement is ticked on."
+   *
+   * Measured as laid-out width rather than as `hidden`, because the pair is
+   * meant to *fade* — they are in the document either way, and a test reading
+   * the attribute would pass with the fade backed out.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const run = page.locator('[data-motion-only]');
+  const box = page.locator('[data-movement]');
+
+  const shown = () =>
+    run.evaluate((el) => ({
+      opacity: Number(getComputedStyle(el).opacity),
+      width: Math.round(el.getBoundingClientRect().width),
+      inert: el.inert === true,
+    }));
+
+  const before = await shown();
+  expect(before.opacity, 'the run controls are showing before Movement').toBeLessThan(0.05);
+  expect(before.width, 'the run controls still take room before Movement').toBeLessThan(4);
+  expect(before.inert, 'a faded control is still reachable by keyboard').toBe(true);
+
+  await box.check();
+  await expect.poll(async () => (await shown()).opacity, { timeout: 3000 }).toBeGreaterThan(0.95);
+  const after = await shown();
+  expect(after.width, 'the controls did not open up').toBeGreaterThan(40);
+  expect(after.inert, 'the controls are still inert once shown').toBe(false);
+  await expect(page.locator('[data-play]')).toBeEnabled();
+
+  // The author's four rates, in his own order.
+  expect(
+    await page.locator('[data-speed] option').evaluateAll((os) => os.map((o) => o.value)),
+  ).toEqual(['1', '5', '10', '25']);
+
+  // And they go again when it is unticked.
+  await box.uncheck();
+  await expect.poll(async () => (await shown()).opacity, { timeout: 3000 }).toBeLessThan(0.05);
+});
+
+test('only the saints the range reaches carry a halo', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "For saints outside of the timeline selection, even
+   * when they are ticked to be shown in the filters as unborn or dead, make
+   * sure they dont have a glow to them. Only saints in the timeline selection
+   * have a glow. So ticking to show outside of the timeline selection only
+   * displays their names."
+   *
+   * `data-halos` is the draw pass's own count, because the halos are
+   * composited onto their own layer and laid down in one `drawImage` — there
+   * is no element to ask, and a pixel under a dot is the coastline, the layer
+   * and the dot together.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const halos = async () => Number(await canvas.getAttribute('data-halos'));
+  const live = async () =>
+    JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => d.state === 'live').length;
+
+  expect(await halos(), 'premise: nothing is haloed at rest').toBeGreaterThan(0);
+  expect(await halos(), 'a saint outside the range was haloed at rest').toBe(await live());
+
+  // Squeeze the range so most of the corpus falls outside it, then ask for the
+  // dead and the unborn to be shown. They get their names; they get no glow.
+  await typeYear(page, 'to', '400');
+  await page.locator('[data-filter-btn]').click();
+  await page.locator('[data-show="past"]').check();
+  await page.locator('[data-show="future"]').check();
+
+  await expect
+    .poll(async () => (await halos()) === (await live()), { timeout: 4000 })
+    .toBe(true);
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  expect(
+    dots.some((d) => d.state !== 'live'),
+    'premise: the squeeze left nobody outside the range',
+  ).toBe(true);
+  expect(await halos(), 'the shown-but-out-of-range saints kept their glow').toBeLessThan(dots.length);
+});
+
 test('a saint not yet born is drawn in ink rather than in rubric', async ({ page }) => {
   /*
    * Author, 2026-09-02: "make any saints not yet born appear as a grey/black

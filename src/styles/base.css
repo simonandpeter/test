@@ -603,6 +603,60 @@ header.chrome .chrome-calendar {
   padding: var(--space-4) var(--space-4) var(--space-6);
 }
 
+/*
+ * **On a desktop it floats rather than pushing the page down** (author,
+ * 2026-09-02: "when the Calendar or Language selectors come up, make the
+ * pop-up not move the whole screen down as its not needed because there is a
+ * lot more space on a desktop window than mobile. Make the pop-ups appear
+ * aligned to the right column over the date without moving anything up or
+ * down").
+ *
+ * It is a disclosure in the flow on a phone, and it should stay one: there the
+ * panel is most of the screen and floating it over the day would cover the
+ * thing the reader is choosing a calendar *for*. A desktop window has room to
+ * the right of the masthead and none of that problem, so the panel leaves the
+ * flow and hangs off the bar's own bottom edge.
+ *
+ * Right-aligned to the page's own margin, which is where the Daily page's
+ * right column stands — the two controls that open it are in that corner, so
+ * the panel arrives under the button that asked for it.
+ *
+ * **Fixed, not absolute, and the difference is a real one.** Absolute inside
+ * `.chrome-bar` looked right and laid out wrong: the bar is `position: sticky`,
+ * so an absolutely positioned child keeps the bar's *static* document position
+ * while painting at its stuck one, and the two drift apart by exactly the
+ * distance the page has scrolled. Nothing looked wrong on screen, but the
+ * element's layout box was not where its ink was — which the suite found by
+ * scrolling the page 104 px on every press, once per press, trying to bring a
+ * button into view that was already in front of the reader. Fixed has no such
+ * gap: the bar is stuck to the top of the window, so the panel hangs from a
+ * number rather than from a box that moves.
+ *
+ * The right edge is the page's own content margin — `--page-max` centred in
+ * the window with `--page-pad` inside it (below) — so the panel lines up with
+ * the controls that open it at any width, including one wider than the measure.
+ */
+@media (min-width: 1024px) {
+  .church-panel {
+    position: fixed;
+    top: var(--chrome-h, 53px);
+    right: max(var(--page-pad), calc((100vw - var(--page-max)) / 2 + var(--page-pad)));
+    width: max-content;
+    max-width: min(32rem, calc(100vw - var(--space-8)));
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-panel);
+    /* Off the page rather than part of it: the only shadow in the chrome, and
+       it is what says this is over the page rather than in it. */
+    box-shadow: 0 6px 18px -8px rgb(0 0 0 / 0.4);
+  }
+
+  .church-panel-inner {
+    max-width: none;
+    margin: 0;
+    padding: var(--space-4);
+  }
+}
+
 .site-name {
   font-family: var(--font-serif);
   font-weight: 500;

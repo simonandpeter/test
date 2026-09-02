@@ -111,6 +111,29 @@ export function render(el, { data, params, router }) {
             <div class="cal-week">
               <div class="week-strip" role="group" tabindex="0"
                 aria-label="${STRINGS.calendar.weekLabel}"></div>
+              <!--
+                **Arrows over the rail's own fading ends** (author, 2026-09-02:
+                "add arrows left and right over the week display and monthly
+                display edges, don't resize anything just put them over the
+                left and right ends where the dates just outside of the week
+                are fading out").
+
+                Over, in the literal sense: they are absolutely positioned on
+                top of the dissolve, so the rail keeps every pixel it had and
+                the seven days are the width they were. Desktop only, where
+                there is a pointer to aim at them — a phone swipes the rail,
+                which is the gesture the fade is hinting at in the first
+                place, and two 24 px targets over the edge days would be in
+                the way of it.
+
+                The month's own two edges already are buttons (peek-prev and
+                peek-next below); they get the same glyph in calendar.css
+                rather than a second control drawn over them.
+              -->
+              <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
+                aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
+              <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
+                aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
             </div>
             <div class="cal-month" hidden>
               <span class="month-name"></span>
@@ -228,6 +251,28 @@ export function render(el, { data, params, router }) {
   state.cleanups.push(() => el.removeEventListener('click', onRegisterView));
   el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
   el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+
+  /*
+   * The week's own two arrows (author, 2026-09-02). They scroll the rail by
+   * what it is showing rather than by a counted seven days: the rail is a
+   * scroller of real days whose visible width is the week, so a page of it is
+   * a week by construction and stays one at any column width. Smooth unless
+   * the reader asked for no motion, in which case it is a jump — removed, not
+   * shortened.
+   */
+  const onWeekArrow = (e) => {
+    const button = e.target.closest('[data-wstep]');
+    if (!button) return;
+    const strip = el.querySelector('.week-strip');
+    if (!strip) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    strip.scrollBy({
+      left: Number(button.dataset.wstep) * strip.clientWidth,
+      behavior: reduced ? 'auto' : 'smooth',
+    });
+  };
+  el.addEventListener('click', onWeekArrow);
+  state.cleanups.push(() => el.removeEventListener('click', onWeekArrow));
 
   // The header's control can change the church while this page is open: the
   // question goes once it has been answered, and everything that counts
