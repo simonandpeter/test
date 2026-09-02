@@ -54,3 +54,43 @@ export function heroCrop(image) {
     focus: image.h < wide ? '50% 50%' : '50% 0',
   };
 }
+
+/**
+ * The same two limits, for **every other card that draws a saint** (author,
+ * 2026-09-02: "apply the same aspect ratio limitations to crop any saint card
+ * display (on daily page and on all saints page) in the same way it applies to
+ * the main saint card on Daily page desktop").
+ *
+ * The Index's cards, the carousel's columns and the Daily register's cards
+ * each drew an icon at whatever shape it happened to be, which is how a 1:3
+ * scan became a card three screens tall in a grid of ordinary ones. The rule
+ * the hero has had since 2026-09-01 is the rule now: nothing taller than
+ * 1:1.6, nothing wider than 2:1, cropped from the top when tall and from the
+ * centre when wide.
+ *
+ * **Returned as an aspect rather than a height**, because that is what the
+ * three callers all want: a box's `aspect-ratio`, and the packers' own
+ * arithmetic, are both width-over-height. `heroCrop`'s height is the same
+ * number seen from the other side — the hero needs a height because its column
+ * is derived from one.
+ *
+ * The Daily page's *own* main card on a phone is deliberately not a caller:
+ * below 620 px it keeps the 3:2 band it was given (calendar.css), which is a
+ * separate instruction about a different surface.
+ */
+export function cardCrop(image) {
+  const { height, focus } = heroCrop(image);
+  if (!height) return { aspect: null, focus };
+  /*
+   * **A picture inside both limits keeps the manifest's own number**, and it
+   * has to be that number rather than an equal one computed here: the build
+   * rounds `aspect`, the grid reserves a card's height from it, and the
+   * stylesheet draws the box from whatever this returns. Recomputing `w / h`
+   * gives a value a few decimals from the stored one, the two round different
+   * ways, and the card overflows its own reserved block by a pixel — which is
+   * exactly what `a card lifespan is one line` reported the moment this
+   * shipped. Only the eleven icons past the limits get a new shape.
+   */
+  if (height === image.h && image.aspect) return { aspect: image.aspect, focus };
+  return { aspect: image.w / height, focus };
+}

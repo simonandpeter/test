@@ -146,6 +146,23 @@ const ROUTES = [
 
 export const INDEX = '/saints';
 
+/**
+ * The width the day picker exists at (2026-09-02).
+ *
+ * The rail, its drag and its coast, the month toggle and the fade between the
+ * two grains are **phone controls now**: the author's instruction of that day
+ * — "on desktop daily page (ONLY ON DESKTOP) ... just display monthly only on
+ * desktop, no weekly display" — leaves a desktop with a static month grid and
+ * no toggle at all.
+ *
+ * So a test *about the picker* has to say which width it means, and this is
+ * that sentence. It is not a workaround for a hidden element: the surface
+ * these tests describe is a phone's, and running them at 1280 was describing
+ * a page that no longer exists. Both projects run them here, which is one more
+ * pass over the picker than the mobile-360 project alone would give.
+ */
+export const phone = (page) => page.setViewportSize({ width: 360, height: 780 });
+
 export /** Facet groups are disclosures; a reader opens one before using it. */
 const facet = async (page, name) => {
   const group = page.locator(`[data-facet="${name}"]`);

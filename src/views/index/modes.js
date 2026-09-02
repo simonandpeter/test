@@ -1,4 +1,5 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
+import { cardCrop } from '../../lib/hero-crop.js';
 import { observePrefetch, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
@@ -161,10 +162,20 @@ function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
    * in this column, so what is drawn is what was budgeted, and the depth cap
    * needs no rule per depth now that columns go twelve deep.
    */
+  /*
+   * **And the shape is the hero's own two limits since 2026-09-02** (author:
+   * apply "the same aspect ratio limitations to crop any saint card display").
+   * The `width`/`height` attributes still carry the *file's* shape — they are
+   * what reserve the box before the picture lands — so the drawn shape is
+   * stated separately: the box takes the clamped aspect and the picture covers
+   * it from the crop's own anchor. `pictureHeight` above budgets to the same
+   * number, which is the half that keeps the packing honest.
+   */
+  const crop = cardCrop(item.image);
   const cap = item.image ? Math.round(pictureHeight(item, cardWidth, space || Infinity)) : 0;
   const media = item.image
-    ? `<span class="cx-media"${space ? ` style="--cx-cap:${cap}px"` : ''}>
-        <img data-src="${BASE + item.image.src}" alt=""
+    ? `<span class="cx-media" style="aspect-ratio:${crop.aspect}${space ? `;--cx-cap:${cap}px` : ''}">
+        <img data-src="${BASE + item.image.src}" alt="" style="object-position:${crop.focus}"
           width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
     : '';
@@ -398,9 +409,19 @@ function cardHeight(item, cardWidth, space = Infinity) {
   return pictureHeight(item, cardWidth, space) + captionH(cardWidth);
 }
 
-/** The height that picture will actually be drawn at, in this much room. */
+/**
+ * The height that picture will actually be drawn at, in this much room.
+ *
+ * **The clamped aspect, not the file's, since 2026-09-02** (author: the hero's
+ * "aspect ratio limitations to crop any saint card display"). A 1:3 scan drew
+ * a column three times as tall as its neighbours and swallowed the row; held
+ * to `cardCrop`'s 1:1.6 it is a tall card among cards. The packer and the
+ * drawing read the same number — `carouselCard` writes the same crop onto the
+ * box — because a packer budgeting one shape while the browser draws another
+ * is the defect the caption height already taught this file once.
+ */
 function pictureHeight(item, cardWidth, space = Infinity) {
-  const aspect = item.image.aspect || 1;
+  const aspect = cardCrop(item.image).aspect || 1;
   return Math.min(cardWidth / aspect, Math.max(0, space - captionH(cardWidth)));
 }
 

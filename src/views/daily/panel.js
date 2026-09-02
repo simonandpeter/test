@@ -2,7 +2,7 @@ import { recordedDay } from '../../data/days.js';
 import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail } from '../../lib/detail.js';
-import { heroCrop } from '../../lib/hero-crop.js';
+import { cardCrop, heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage, languageTag } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
@@ -240,9 +240,11 @@ function registerOrder(entries, data) {
 
 function registerRow(saint, title, transition, seq = 0) {
   const image = saint.image
-    ? `<span class="reg-thumb" style="background-image:url('${BASE + saint.image.lqip}')">
+    ? `<span class="reg-thumb" style="background-image:url('${BASE + saint.image.lqip}');--reg-aspect:${
+        cardCrop(saint.image).aspect
+      };background-position:${cardCrop(saint.image).focus}">
         <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
-          loading="lazy" decoding="async" />
+          style="object-position:${cardCrop(saint.image).focus}" loading="lazy" decoding="async" />
       </span>`
     : '<span class="reg-thumb is-blank" aria-hidden="true"></span>';
   /*

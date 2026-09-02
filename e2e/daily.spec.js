@@ -6,6 +6,7 @@ import {
   dragGrain,
   duringMove,
   openChooser,
+  phone,
   ready,
   releaseGrain,
   searchMode,
@@ -77,6 +78,7 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
 
 test('an empty day is a designed state, not a hole', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
@@ -241,6 +243,7 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   // every navigation after it. 28 June is Augustine in the Russian calendar;
   // 24 and 27 are empty.
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-06-22', { waitUntil: 'networkidle' });
   // By date, not by position: the rail holds 121 days (2026-08-24), so the
   // nth button is no longer the nth of this week.
@@ -249,14 +252,14 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await day('2026-06-27').click();
   await page.waitForTimeout(60);
   await day('2026-06-28').click();
-  await expect(page.locator('h1')).toHaveText(/28 June 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Jun(e)? 2026/);
   await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
   await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
   await day('2026-06-24').click();
-  await expect(page.locator('h1')).toHaveText(/24 June 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Jun(e)? 2026/);
   await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
@@ -264,6 +267,7 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
 
 test('the month replaces the week rather than opening beneath it', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const week = page.locator('.week-strip');
   const month = page.locator('.month-body');
@@ -298,31 +302,32 @@ test('a day is one click, and the keys step it from anywhere', async ({ page }) 
    * that quietly kept working would be the defect this test exists for.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   // Days are one click each.
   await page.locator('.week-strip [data-iso="2026-08-24"]').click();
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug(ust)? 2026/);
 
   // The arrows, from the page body — no focus in the strip.
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/25 Aug(ust)? 2026/);
   await page.keyboard.press('ArrowLeft');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug(ust)? 2026/);
 
   // A and D beside them, for a hand that is not on the arrows.
   await page.keyboard.press('d');
-  await expect(page.locator('h1')).toHaveText(/25 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/25 Aug(ust)? 2026/);
   await page.keyboard.press('a');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug(ust)? 2026/);
   // And S does nothing: it stepped back a day for one day (2026-08-24) and
   // the author removed it the next.
   await page.keyboard.press('s');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug(ust)? 2026/);
 
   // A modifier means the key is the browser's: ctrl+D must stay a bookmark.
   await page.keyboard.press('Control+d');
-  await expect(page.locator('h1')).toHaveText(/24 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/24 Aug(ust)? 2026/);
 
   /*
    * And the day the reader left keeps no focus ring (author, 2026-08-25: "a
@@ -356,15 +361,15 @@ test('a swipe on the day panel steps a day too, left for tomorrow and right for 
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   await swipe(page, '[data-slot="main"]', -80);
-  await expect(page.locator('h1')).toHaveText(/29 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/29 Aug(ust)? 2026/);
   await swipe(page, '[data-slot="main"]', 80);
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 
   // Short of the threshold, or mostly vertical, is a scroll or a mistap, not
   // a page turn.
   await swipe(page, '[data-slot="main"]', -20);
   await swipe(page, '[data-slot="main"]', -80, 200);
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 });
 
 test('the day panel follows the finger while the swipe is still live', async ({ page }) => {
@@ -385,7 +390,7 @@ test('the day panel follows the finger while the swipe is still live', async ({ 
   // Short of the threshold: letting go here must not change the day, and the
   // panel must spring back to its own place rather than being left adrift.
   await releaseGrain(page, '[data-slot="main"]', -20);
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
   await expect
     .poll(() => page.locator('[data-slot="main"] .day-panel').evaluate((el) => el.style.transform))
     .toBe('');
@@ -401,7 +406,7 @@ test('a real drag past the threshold changes the day, not only a flick', async (
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await dragGrain(page, '[data-slot="main"]', -80);
-  await expect(page.locator('h1')).toHaveText(/29 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/29 Aug(ust)? 2026/);
 });
 
 test('the keys are the Daily page\'s, and typing elsewhere is untouched', async ({ page }) => {
@@ -441,6 +446,7 @@ test('the one jump control holds the left edge, carries a name, and fills the ro
    * label, standing the row's own full height rather than half of it.
    */
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const jump = page.locator('.cal-jump button');
   await expect(jump).toHaveCount(1);
@@ -466,6 +472,7 @@ test('today carries its own bubble in the week and the month, apart from the sel
    * which day is picked.
    */
   await ready(page);
+  await phone(page);
   // Same month as today, or the month view below would show today's mark in
   // a different month grid than the one the selection opens on — a real
   // failure mode near either end of a month, not a hypothetical one.
@@ -518,6 +525,7 @@ test('today carries its own bubble in the week and the month, apart from the sel
 
 test('the week and the month both take a swipe, in the same direction', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   /*
@@ -542,7 +550,7 @@ test('the week and the month both take a swipe, in the same direction', async ({
   expect(settled.moved).toBe(true);
   expect(settled.aligned).toBe(true);
   // Scrolling is not selecting: the day only changes when one is chosen.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
@@ -559,6 +567,7 @@ test('the week and the month both take a swipe, in the same direction', async ({
 
 test('picking a date leaves the month open; only the button closes it', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const month = page.locator('.cal-month');
   const toggle = page.locator('[data-month]');
@@ -566,7 +575,7 @@ test('picking a date leaves the month open; only the button closes it', async ({
   await toggle.click();
   await expect(month).toBeVisible();
   await page.locator('.month-grid [data-iso="2026-08-08"]').click();
-  await expect(page.locator('h1')).toHaveText(/8 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/8 Aug(ust)? 2026/);
   // A reader comparing days should not have to reopen the month between them.
   await expect(month).toBeVisible();
 
@@ -577,6 +586,7 @@ test('picking a date leaves the month open; only the button closes it', async ({
 
 test('the month keeps the week edges where they were, and names itself in the gutter', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
   const strip = await box('.week-strip');
@@ -620,6 +630,7 @@ test('the month is the week grown taller: the day names do not move', async ({ p
   // flex item centred in its button, in the month a grid cell carrying the
   // padding itself, so the two boxes differ exactly where the glyphs do not.
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const text = (sel) =>
@@ -673,6 +684,7 @@ test('the month spends its height on dates rather than on leading', async ({ pag
   // same in either face, and an absolute assertion is safe here where one on
   // the index would be flaky.
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -702,6 +714,7 @@ test('the month unfurls out of the week and the page follows it down', async ({ 
    * lets its height go afterwards.
    */
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const heading = page.locator('[data-slot="side"]');
   const closed = (await heading.boundingBox()).y;
@@ -727,7 +740,7 @@ test('the month unfurls out of the week and the page follows it down', async ({ 
 });
 
 test('under reduced motion the month arrives whole, with no held height', async ({ browser }) => {
-  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 },  reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
   await ready(page);
@@ -759,6 +772,7 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
    * is chosen.
    */
   await ready(page);
+  await phone(page);
   /*
    * **Anchored to "today minus" an offset, not a fixed calendar date**
    * (2026-08-31, paying CLAUDE.md's third trap a fourth time — this test's
@@ -830,6 +844,7 @@ test('a month travels sideways with its own edges, and its day names do not', as
   // column could not travel while the day names above it sat inside the same
   // button. The names moved to a line of their own so that it could.
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -867,6 +882,7 @@ test('the rail never dead-ends: scrolled to its edge, it rebuilds around the rea
    * out: the run would simply stop 60 days out.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const strip = page.locator('.week-strip');
   const before = await strip.evaluate((el) => ({
@@ -900,10 +916,11 @@ test('picking a day already in view does not move the rail', async ({ page }) =>
   // rail): a day already on screen has nowhere to be brought from, so the
   // rail must not stir under the click.
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   const before = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
   await page.locator('.week-strip [data-iso="2026-08-27"]').click();
-  await expect(page.locator('h1')).toHaveText(/27 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/27 Aug(ust)? 2026/);
   await page.waitForTimeout(250);
   const after = await page.evaluate(() => document.querySelector('.week-strip').scrollLeft);
   expect(Math.abs(after - before)).toBeLessThan(2);
@@ -913,7 +930,7 @@ test('under reduced motion the rail steps without a glide', async ({ browser }) 
   // Removed, not shortened: the reveal that brings a stepped day into view is
   // an instant scroll under reduced motion, not a smooth one — and stepping
   // off the visible edge still arrives.
-  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 },  reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
   await ready(page);
@@ -921,7 +938,7 @@ test('under reduced motion the rail steps without a glide', async ({ browser }) 
   // Sunday is the last snapped day; stepping past it forces a reveal.
   await page.locator('.week-strip [data-iso="2026-08-30"]').click();
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug(ust)? 2026/);
   // The stepped-to day is in view at once, nothing left mid-glide.
   await expect(page.locator('.week-strip [data-iso="2026-08-31"]')).toBeInViewport();
   await ctx.close();
@@ -940,6 +957,7 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
    * the pointer at release is not accidentally chosen.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const strip = page.locator('.week-strip');
   const box = await strip.boundingBox();
@@ -952,7 +970,7 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
   // Held: the rail has followed the hand, the day has not changed.
   const held = await strip.evaluate((el) => el.scrollLeft);
   expect(held).toBeGreaterThan(before + 60);
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
   expect(await strip.evaluate((el) => el.classList.contains('is-dragging'))).toBe(true);
 
   // Held *still*, then released: a stopped hand has no throw in it, so this
@@ -966,7 +984,7 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
   await page.waitForTimeout(450);
   // Released: it settles onto a day — any day, not a Monday — and the click
   // that ended the drag chose nothing.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
   const aligned = await strip.evaluate((el) => {
     const pad = parseFloat(getComputedStyle(el).scrollPaddingLeft);
     return [...el.querySelectorAll('[data-iso]')].some(
@@ -982,6 +1000,7 @@ test('the month follows the finger too, and takes its height with it', async ({ 
   // the other is the case where the month arriving is taller than the viewport
   // holding it and would be cut off at the bottom for the length of the drag.
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-09-04', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -1015,7 +1034,7 @@ test('under reduced motion a mouse drag settles with nothing to sit through', as
   // Removed, not shortened. Following the hand is direct manipulation and
   // stays; the settle's glide is an animation and goes — the rail is simply
   // on a day the moment it comes to rest.
-  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 },  reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
   await ready(page);
@@ -1045,6 +1064,7 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
   // August 2026 is six rows and September is five, so stepping between them is
   // the case where the page below would otherwise jump between two frames.
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -1063,6 +1083,7 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
 
 test('the month fades rather than appearing between two frames', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const month = page.locator('.cal-month');
   await page.locator('[data-month]').click();
@@ -1088,6 +1109,7 @@ test('the days at the rail edges are real days, unmasked, and one click each', a
    * than moving a week.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   /*
@@ -1129,7 +1151,7 @@ test('the days at the rail edges are real days, unmasked, and one click each', a
 
   // One click selects the day itself — the edge is not a week-step any more.
   await next.click();
-  await expect(page.locator('h1')).toHaveText(/31 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/31 Aug(ust)? 2026/);
 });
 
 test('every day on the rail is full-strength ink — no wash, no mask', async ({ page }) => {
@@ -1155,6 +1177,7 @@ test('every day on the rail is full-strength ink — no wash, no mask', async ({
 
 test('the month peeks a column of the neighbouring month, on the grid own rows', async ({ page }) => {
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
@@ -1181,6 +1204,7 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   // one church answers for the whole day, which is what makes this a test of
   // the choice rather than of a coincidence.
   await answered(page);
+  await phone(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText('Augustine');
   await expect(page.locator('#church-open')).toHaveText('Russian');
@@ -1464,6 +1488,7 @@ test('the fading week is aside while the month arrives, and current again after'
   // The one the reader is leaving must say so completely; `hidden` only takes
   // over once the fade lands, and closing the month hands everything back.
   await answered(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   const during = await page.evaluate(() => {
@@ -2208,6 +2233,7 @@ test('a thrown rail coasts to a halt and settles, instead of stopping dead', asy
    * to rest, aligned at the end, and no coasting class left behind.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const strip = page.locator('.week-strip');
   const box = await strip.boundingBox();
@@ -2294,13 +2320,13 @@ test('a thrown rail coasts to a halt and settles, instead of stopping dead', asy
   expect(state.classes).not.toContain('is-coasting');
   expect(state.classes).not.toContain('is-dragging');
   // Scrolling was still not selecting, momentum included.
-  await expect(page.locator('h1')).toHaveText(/28 August 2026/);
+  await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 });
 
 test('under reduced motion a throw does not coast', async ({ browser }) => {
   // Removed, not shortened: the weight is an animation and goes; the settle
   // aligns without a glide, and after it nothing moves at all.
-  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 },  reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
   await ready(page);
@@ -2505,6 +2531,7 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
    * who cannot separate hues.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await expect(page.locator('.density')).toHaveCount(0);
   await expect(page.locator('.week-strip i')).toHaveCount(0);
@@ -3052,6 +3079,7 @@ test('a date picked in the month is where the week opens, however far it was scr
    * week is already there when the reader can first see it.
    */
   await ready(page);
+  await phone(page);
   await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
 
   await page.locator('[data-month]').click();
@@ -3063,7 +3091,7 @@ test('a date picked in the month is where the week opens, however far it was scr
     await page.waitForTimeout(500);
   }
   await page.locator('.month-grid [data-iso="2026-12-14"]').click();
-  await expect(page.locator('.cal-date')).toContainText('14 December 2026');
+  await expect(page.locator('.cal-date')).toHaveText(/14 Dec(ember)? 2026/);
 
   await page.locator('[data-month]').click();
   await page.waitForTimeout(700);
@@ -3172,6 +3200,7 @@ test("today's ring closes on the underline and clears the marks under it", async
    * the way it was (`inset: -3px -6px` and a 999px radius).
    */
   await ready(page, { church: 'russian' });
+  await phone(page);
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -3489,6 +3518,7 @@ test("the month's numerals wear the same colour as the rail's dots", async ({ pa
    * states at once, which no earlier month does.
    */
   await ready(page, { church: 'russian' });
+  await phone(page);
   await page.goto('/calendar/2026-11-18', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -3762,6 +3792,7 @@ test('two months of the same height do not move the page between them', async ({
    * five) did. So the test steps *fast* — a slow walk passed before the fix.
    */
   await ready(page, { church: 'russian' });
+  await phone(page);
   await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.locator('[data-month]').click();
@@ -4885,41 +4916,23 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
   await expect(page.locator('.cal-date')).toContainText('16 April 2026');
 });
 
-test('the full-screen calendar is a list on a phone, so the words still fit', async ({ page }) => {
-  /*
-   * Seven columns of 44 px cannot hold "Oil, Wine and Fish Allowed", and the
-   * first draft of this proved it by spilling the words out of their cells. The
-   * instruction was for *more* detail, so on a phone the grid gives way rather
-   * than the words: one day to a row, each carrying the weekday name the column
-   * heading used to carry.
-   */
-  await ready(page);
-  await page.setViewportSize({ width: 360, height: 780 });
-  await page.goto('/calendar/2026-08-10', { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  await page.locator('[data-fullcal]').click();
-  await expect(page.locator('dialog.fullcal')).toBeVisible();
-
-  const seen = await page.evaluate(() => {
-    const cells = [...document.querySelectorAll('.fc-day')];
-    const lefts = new Set(cells.map((c) => Math.round(c.getBoundingClientRect().left)));
-    const spills = cells.filter((c) => c.scrollWidth - c.clientWidth > 1).length;
-    return {
-      columns: lefts.size,
-      spills,
-      // The weekday, which the missing column heading used to say.
-      names: document.querySelectorAll('.fc-day-name').length,
-      namesShown: [...document.querySelectorAll('.fc-day-name')].filter((e) => e.offsetParent !== null).length,
-      docOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
-    };
-  });
-  expect(seen.columns, 'a phone still lays the month out in columns').toBe(1);
-  expect(seen.spills, 'the words run out of their cells').toBe(0);
-  expect(seen.namesShown, 'no day says which weekday it is').toBe(seen.names);
-  expect(seen.docOverflow, 'the modal pushes the page sideways').toBeLessThanOrEqual(0);
-});
-
-/* ---- the 2026-09-01 evening batch: the way in, and the picture's size ----- */
+/*
+ * **'The full-screen calendar is a list on a phone, so the words still fit'
+ * was removed on 2026-09-02**, and it is worth saying why rather than leaving
+ * a hole in the dates.
+ *
+ * Its subject was how that dialog reflows at 360 px — one column of days with
+ * the words still legible. The author took the way in away the same day
+ * ("remove the 'Full Screen Calendar' button completely from mobile - this was
+ * only ever supposed to be a desktop only addition"), so there is no longer a
+ * press on a phone that opens it, and a test that reaches past the missing
+ * control to the dialog behind it would be testing a screen no reader can get
+ * to. What survives is the claim that the control is not there, which is 'the
+ * full-screen calendar is a desktop control and is not on a phone' below.
+ *
+ * The dialog's own narrow styles are left in calendar.css: a desktop window
+ * narrowed while it is open still reaches them.
+ */
 
 test('the way into the life is a white button with the life fading out under it', async ({ page }) => {
   /*
@@ -5068,4 +5081,147 @@ test('a tall icon is cropped from the top, and its drawn shape stays inside the 
   // asserted is centred across and hard against the top.
   expect(shape.focus, 'the crop is not anchored to the top').toMatch(/^50% 0(px|%)$/);
   expect(shape.imageFocus, 'the picture is not anchored to the top').toMatch(/^50% 0(px|%)$/);
+});
+
+/* ---- the round of 2026-09-02, late -------------------------------------- */
+
+test('the full-screen calendar is a desktop control and is not on a phone', async ({ page }) => {
+  // Author, 2026-09-02: "remove the 'Full Screen Calendar' button completely
+  // from mobile - this was only ever supposed to be a desktop only addition."
+  // `toBeHidden` rather than a count: it is still in the markup, and what is
+  // asserted is that nothing - pointer or screen reader - can reach it.
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-fullcal]')).toBeHidden();
+
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await expect(page.locator('[data-fullcal]')).toBeVisible();
+});
+
+test('a phone prints the month short, on one line, close under the rail', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: the date "was always supposed to be 'Sep' not
+   * 'September' ... to avoid 2 rows for the date on mobile. And this date was
+   * also supposed to be pushed up the page into the weekly display with
+   * minimal margin."
+   *
+   * Three claims and the first carries the other two: the long month is what
+   * made the heading wrap, and a wrapped heading is the row of content the
+   * instruction is trying to buy back. The short form is the reader's own -
+   * `formatDate` goes through the pack - so this asserts the long one is gone
+   * rather than that three particular letters are there.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const date = page.locator('.cal-date');
+  await expect(date).not.toContainText('September');
+  await expect(date).toContainText('2026');
+
+  const m = await page.evaluate(() => {
+    const d = document.querySelector('.cal-date');
+    const rail = document.querySelector('.cal-controls');
+    const cs = getComputedStyle(d);
+    return {
+      lines: Math.round(d.getBoundingClientRect().height / parseFloat(cs.lineHeight)),
+      gap: Math.round(d.getBoundingClientRect().top - rail.getBoundingClientRect().bottom),
+    };
+  });
+  expect(m.lines, 'the date still takes two rows').toBe(1);
+  expect(m.gap, 'the date is not pushed up into the picker').toBeLessThan(16);
+
+  // And the desktop keeps the long month, which is the other half of it.
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-date')).toContainText('September');
+});
+
+test('a desktop shows the month alone, across the column, with no toggle', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "on desktop daily page (ONLY ON DESKTOP), rework the
+   * weekly/monthly display: remove the monthly button completely and just
+   * display monthly only on desktop, no weekly display. Then make it take up
+   * the whole width of the right hand column instead of allowing a column for
+   * the old monthly display button, and justify the 'Full Screen Calendar'
+   * button to the left margin of the right hand column along with the new
+   * small monthly calendar display."
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  await expect(page.locator('[data-month]'), 'the month toggle is still on the page').toBeHidden();
+  await expect(page.locator('.cal-week'), 'the week is still drawn on a desktop').toBeHidden();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  await expect(page.locator('.month-grid [data-iso]').first()).toBeVisible();
+
+  const m = await page.evaluate(() => {
+    const controls = document.querySelector('.cal-controls').getBoundingClientRect();
+    const month = document.querySelector('.cal-month').getBoundingClientRect();
+    const grid = document.querySelector('.month-grid').getBoundingClientRect();
+    const full = document.querySelector('[data-fullcal]').getBoundingClientRect();
+    return {
+      spare: Math.round(month.left - controls.left),
+      gridLeft: Math.round(grid.left),
+      fullLeft: Math.round(full.left),
+      fullBelow: full.top >= month.bottom - 1,
+    };
+  });
+  // No column held open for the button that is gone.
+  expect(m.spare, 'a column is still being kept for the old toggle').toBeLessThan(4);
+  // The button lines up with the grid it belongs to rather than with the
+  // column's own edge.
+  expect(Math.abs(m.fullLeft - m.gridLeft), 'Full Screen Calendar is not on the grid margin').toBeLessThan(6);
+  expect(m.fullBelow, 'the button is not under the calendar').toBe(true);
+
+  // And a phone keeps both the week and the button that swaps them.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-week')).toBeVisible();
+  await expect(page.locator('[data-month]')).toBeVisible();
+});
+
+test('a register card crops to the hero own limits', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "apply the same aspect ratio limitations to crop any
+   * saint card display (on daily page and on all saints page) in the same way
+   * it applies to the main saint card on Daily page desktop."
+   *
+   * Eleven of the 130 icons are taller than 1:1.6 and one is 3.1:1, which drew
+   * a card three times the height of its neighbours in a column of them.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const shapes = await page.evaluate(() =>
+    [...document.querySelectorAll('.register-cards.is-cards .reg-thumb')]
+      .filter((t) => t.querySelector('img'))
+      .map((t) => {
+        const r = t.getBoundingClientRect();
+        const img = t.querySelector('img');
+        return {
+          drawn: r.height / r.width,
+          file: Number(img.getAttribute('height')) / Number(img.getAttribute('width')),
+          fit: getComputedStyle(img).objectFit,
+        };
+      }),
+  );
+  expect(shapes.length, 'premise: this day has no pictured register cards').toBeGreaterThan(0);
+  for (const s of shapes) {
+    expect(s.drawn, 'a register card is taller than 1:1.6').toBeLessThan(1.62);
+    expect(s.drawn, 'a register card is wider than 2:1').toBeGreaterThan(0.49);
+    expect(s.fit, 'the picture fits inside its box rather than filling it').toBe('cover');
+  }
+  /*
+   * And at least one of them is actually being cropped, or this passes on a
+   * day whose icons all happened to be inside the limits anyway - the shape of
+   * green-by-absence this suite has been caught by before.
+   */
+  expect(shapes.some((s) => s.file > 1.62), 'premise: nothing on this day needed cropping').toBe(true);
 });

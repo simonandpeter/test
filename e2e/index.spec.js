@@ -888,6 +888,16 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('[data-count]')).toHaveText('160');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
+  /*
+   * **Where it actually landed, not the number that was asked for** (2026-09-02).
+   * The subject is the round trip — the reader comes back to where they were —
+   * and 500 was only ever this test's way of getting somewhere. The phone's own
+   * margins above the row moved by 4 px that afternoon and the page settled at
+   * 504, which failed an assertion about a constant while the thing being
+   * tested was working perfectly.
+   */
+  const left = await page.evaluate(() => window.scrollY);
+  expect(left, 'premise: the page did not scroll at all').toBeGreaterThan(100);
 
   // Opened from the page as it stands — a Playwright click would scroll the
   // card into view first and move the very position this test is about.
@@ -908,14 +918,14 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('[data-count]')).toHaveText('160');
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
-  expect(await page.evaluate(() => window.scrollY)).toBe(500);
+  expect(await page.evaluate(() => window.scrollY)).toBe(left);
 
   // The browser's own back finds the same place.
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
   await expect(page.locator('[data-count]')).toHaveText('160');
-  expect(await page.evaluate(() => window.scrollY)).toBe(500);
+  expect(await page.evaluate(() => window.scrollY)).toBe(left);
 
   // The nav link is a fresh Index. Landing at the top now eases there
   // (2026-08-27) rather than jumping, so the scroll check polls like the
@@ -2944,7 +2954,20 @@ test('a carousel card prints the whole name, the office and the dates, and shows
   // One column width for every card, whatever its picture.
   expect(new Set(cards.map((c) => c.width)).size, 'the cards are not one width').toBe(1);
   // Never `cover`, which is the crop the author asked to remove.
-  for (const c of cards.filter((c) => c.fit)) expect(c.fit).toBe('contain');
+  /*
+   * **`cover`, not `contain`, since 2026-09-02** (author: "apply the same
+   * aspect ratio limitations to crop any saint card display ... in the same
+   * way it applies to the main saint card on Daily page desktop").
+   *
+   * This line pinned the instruction of 2026-08-27 — "dont crop the images" —
+   * which held while a card's box was the picture's own shape and nothing
+   * bounded it. The box is a decision now, clamped to 1:1.6 at the tallest,
+   * and `contain` inside a box that is not the picture's shape letterboxes the
+   * very icons the clamp exists to crop. The uncropped promise survives for
+   * every icon inside the limits, which is 119 of the 130: their box is still
+   * their own shape, so `cover` takes nothing off them.
+   */
+  for (const c of cards.filter((c) => c.fit)) expect(c.fit).toBe('cover');
   // And the subtext is there for the saints who have one to show.
   expect(cards.some((c) => c.hasSub), 'no card carries an office or a date').toBe(true);
 });
@@ -4707,4 +4730,151 @@ test('the carousel fits the window at every size, so the page never scrolls behi
       )
       .toBe('fits');
   }
+});
+
+/* ---- the round of 2026-09-02, late -------------------------------------- */
+
+test('a phone gives the row more of the screen than the chrome above it', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "move the 'All Saints' text and search bar and filters
+   * further up the page on All Saints page on mobile, increasing the screen
+   * space available for the carousel and search results."
+   *
+   * Measured as *where the saints start*, which is the thing the instruction is
+   * about, rather than as a set of margins: a margin is how it was done and
+   * would go stale the first time it was done differently.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const top = await page.evaluate(() => {
+    const row = document.querySelector('[data-carousel-track]').getBoundingClientRect();
+    const head = document.querySelector('.index-head').getBoundingClientRect();
+    return { row: Math.round(row.top), head: Math.round(head.top), win: window.innerHeight };
+  });
+  /*
+   * Under a quarter of the screen spent before the first saint. 195 px of 780
+   * is the budget; it was over that before this round and the row began below
+   * it. A ratio rather than a pixel count, so a taller phone is held to the
+   * same bargain rather than to a number measured on this one.
+   */
+  expect(top.row, 'the chrome above the row takes more than a quarter of the screen').toBeLessThan(top.win / 4);
+  expect(top.head, 'the heading is not near the top of the page').toBeLessThan(90);
+});
+
+test('the row comes back where it was after a trip to another page', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "when you click away from the All Saints page while on
+   * Carousel to any other page, lets say About page, then back to All Saints,
+   * the Carousel starts at the beginning location again. Make sure it
+   * remembers the location as it does when switching back from Advanced
+   * search, so that if you spot a saint as you switch pages you can switch
+   * back and see it where it was."
+   *
+   * The nav is the road, not the saint page's x: those two already restored
+   * the whole snapshot, and this is the plain return that did not.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  const track = page.locator('[data-carousel-track]');
+  await expect.poll(() => track.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0);
+
+  await track.evaluate((el) => {
+    el.scrollLeft += 2600;
+  });
+  const before = await track.evaluate((el) => el.scrollLeft);
+
+  await page.locator('nav.site-nav a[href$="/about"]').click();
+  await expect(page).toHaveURL(/\/about$/);
+  await page.locator('nav.site-nav a[href$="/saints"]').click();
+  await expect(page).toHaveURL(/\/saints$/);
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  /*
+   * Within a card of where it was, not to the pixel: the loop corrects its own
+   * period on the way in, so the honest claim is that the reader is looking at
+   * the saint they left rather than at the head of the row. A card is 150-300
+   * px wide; the failure this replaces was thousands of pixels away.
+   */
+  await expect
+    .poll(async () => Math.abs((await track.evaluate((el) => el.scrollLeft)) - before), { timeout: 6000 })
+    .toBeLessThan(140);
+});
+
+test('an index card and a carousel column crop to the hero own limits', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "apply the same aspect ratio limitations to crop any
+   * saint card display (on daily page and on all saints page) in the same way
+   * it applies to the main saint card on Daily page desktop."
+   *
+   * Pulcheria's icon is 3.1:1 - the tallest of the 130 - and drew a card three
+   * times the height of the ones beside it. The packer reads the same clamped
+   * shape the box is drawn at, which is the half that keeps the carousel's
+   * columns honest: budgeting one shape while the browser draws another is the
+   * defect the caption height taught this file on 2026-09-02 already.
+   */
+  await searchMode(page);
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  await page.locator('[data-query]').fill('Pulcheria');
+  /*
+   * Pinned by name, not read off the first card: the grid is virtualised, so
+   * DOM order is not screen order and the first `.index-card` in the document
+   * is whichever one the mounted window happens to start with (CLAUDE.md traps
+   * 1 and 5). Found this the honest way - the premise below failed.
+   */
+  const media = page
+    .locator('.index-card:not(.is-row)')
+    .filter({ hasText: 'Pulcheria' })
+    .first()
+    .locator('.index-media');
+  await expect(media).toBeVisible();
+  const card = await media.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    const img = el.querySelector('img');
+    return {
+      drawn: r.height / r.width,
+      file: Number(img.getAttribute('height')) / Number(img.getAttribute('width')),
+      fit: getComputedStyle(img).objectFit,
+      pos: getComputedStyle(img).objectPosition,
+    };
+  });
+  expect(card.file, 'premise: this saint no longer has the tall icon').toBeGreaterThan(2);
+  expect(card.drawn, 'the card was not clamped to 1:1.6').toBeLessThan(1.62);
+  expect(card.fit).toBe('cover');
+  // Cropped from the top, where a standing figure keeps their face.
+  expect(card.pos, 'a tall icon is not cropped from the top').toMatch(/^50% 0/);
+
+  // And the carousel, whose packer has to agree with what is drawn.
+  await carouselMode(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  const row = await page.evaluate(() =>
+    [...document.querySelectorAll('.cx-media')]
+      .filter((m) => m.querySelector('img'))
+      .map((m) => {
+        const r = m.getBoundingClientRect();
+        const img = m.querySelector('img');
+        return {
+          drawn: r.height / r.width,
+          file: Number(img.getAttribute('height')) / Number(img.getAttribute('width')),
+        };
+      })
+      .filter((x) => x.drawn > 0),
+  );
+  expect(row.length, 'premise: no pictured columns in the row').toBeGreaterThan(10);
+  for (const c of row) {
+    expect(c.drawn, 'a carousel picture is taller than 1:1.6').toBeLessThan(1.62);
+  }
+  expect(row.some((c) => c.file > 1.62), 'premise: nothing in the row needed cropping').toBe(true);
 });

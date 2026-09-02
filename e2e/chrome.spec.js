@@ -549,7 +549,13 @@ test('a first visit is shown where the two controls are, and the day is not held
   // The gate itself, gone: no panel, no blocks, and nothing hidden behind them.
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   await expect(page.locator('.cal-gate')).toHaveCount(0);
-  await expect(page.locator('.week-strip')).toBeVisible();
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
   await expect(page.locator('.hero-name')).toContainText('Augustine');
 
   // Two marks, each under the control it names, each with a way out.
@@ -681,7 +687,13 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
    * in September.
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.week-strip')).toBeVisible();
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
   await expect(page.locator('.hero-name')).toContainText('Augustine');
   await expect(page.locator('#church-open')).toHaveText('Russian');
   // And it is a guess, not an answer: nothing is written until the reader says.
@@ -693,7 +705,13 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   await page.locator('#church-panel [data-church="russian"]').click();
   // Choosing the same calendar the guess had picked still changes something:
   // it is stored, and the marks stop.
-  await expect(page.locator('.week-strip')).toBeVisible();
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
   await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
@@ -1010,7 +1028,12 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // belongs to a different word.
   // The month in full since 2026-09-01, in every pack: `headingFmt` asks Intl
   // for `month: 'long'` where it asked for `short`.
-  await expect(page.locator('h1')).toHaveText('Среда, 26 Августа 2026 г.');
+  /*
+   * The month is abbreviated at this width since 2026-09-02 - and it is the
+   * *pack's* own abbreviation, which is the half of that change worth pinning
+   * here: «Авг» rather than a English "Aug" leaking into a Russian heading.
+   */
+  await expect(page.locator('h1')).toHaveText(/^Среда, 26 Авг(уста)? 2026 г\.$/);
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the

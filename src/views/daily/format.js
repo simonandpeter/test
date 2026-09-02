@@ -21,6 +21,21 @@ import { formatDate } from '../../lib/i18n.js';
 export const headingFmt = (d) =>
   formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 
+/**
+ * The same heading with the month abbreviated, for a phone (author,
+ * 2026-09-02: "today's date print on mobile in the large font on mobile was
+ * always supposed to be 'Sep' not 'September' as I said only allow 'September'
+ * on desktop view to avoid 2 rows for the date on mobile").
+ *
+ * The date is the largest type on the page, so at 360 px "Saturday, 5
+ * September 2026" is two rows and every row costs the day's own content. The
+ * short month is what buys the single line, and it is the reader's own short
+ * month — `formatDate` goes through the pack, so this is «сент.» and Σεπ as
+ * readily as Sep.
+ */
+export const headingShortFmt = (d) =>
+  formatDate({ weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
+
 export const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' }, d);
 
 // A date named inside a sentence rather than set as a heading: no weekday, and

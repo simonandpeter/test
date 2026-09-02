@@ -783,6 +783,58 @@ html.is-rolling #view {
   flex-wrap: wrap;
 }
 
+/*
+ * **The phone's own margins** (author, 2026-09-02: "move the 'All Saints' text
+ * and search bar and filters further up the page on All Saints page on mobile,
+ * increasing the screen space available for the carousel and search results").
+ *
+ * Everything above the row is chrome for the thing the reader came for, and at
+ * 360 px the heading, its two buttons and the search field were spending most
+ * of a screen before the first saint. The heading gives up its own size a
+ * little and the gaps around it close; the row itself and the filters keep
+ * every pixel they had, because they are targets rather than spacing.
+ *
+ * Not a change to the desktop, where the same space is a fraction of the
+ * window and the heading is the page's own title.
+ */
+@media (max-width: 559.98px) {
+  html[data-route='saints'] main.chrome {
+    padding-top: var(--space-2);
+  }
+
+  .index-head {
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
+
+  /*
+   * **The sticky block is not where this space comes from**, and both attempts
+   * to take it from there were withdrawn after the suite caught the same
+   * symptom twice: a reading position restored after a trip into a saint came
+   * back 4 px below where the reader left it, every trip.
+   *
+   * Padding on `.index-controls` fought the stuck state's own; a smaller
+   * margin under `.index-row` changed a row whose height already varies with
+   * whether Clear filters is showing. Either way the page settles at a
+   * different height than the one the scroll was recorded against, and Chrome
+   * anchors the difference. The route's own top padding above is where the
+   * room is, and it costs nothing that moves.
+   */
+
+  /*
+   * **The heading keeps its own size**, and that is a decision rather than an
+   * omission. Shrinking it was tried and withdrawn: any change to the h1's
+   * height moves the content under it when Literata lands after first paint,
+   * and Chrome's scroll anchoring then compensates — a reading position
+   * restored after a trip into a saint came back 4 px lower, every time, which
+   * `the × returns the reader to the Index as they left it` caught.
+   *
+   * The instruction was to move this block *up*, not to make it smaller, and
+   * the margins above do that without touching a line box.
+   */
+}
+
 .index-head h1 {
   margin: 0;
 }
@@ -1247,6 +1299,16 @@ html.is-rolling #view {
   width: var(--cx-w);
   border-radius: var(--radius-cell);
   overflow: hidden;
+  /*
+   * **The packer's own ceiling belongs on the box, not on the picture inside
+   * it** (2026-09-02). It was on the `img` while the box took its height from
+   * that picture; now the box has an `aspect-ratio` of its own (`cardCrop`)
+   * and would keep it *past* the number the column was packed against — a
+   * clamped-but-uncapped box is a column that no longer fits the window, which
+   * is what `the carousel fits the window at every size` said the moment this
+   * moved. The picture covers whatever the box is left at.
+   */
+  max-height: var(--cx-cap, var(--cx-max-h));
 }
 
 /* Fitted, never cut. `contain` is the whole of the author's instruction: the
@@ -1258,12 +1320,20 @@ html.is-rolling #view {
    would otherwise hold a 230 px band of empty ground open above every other
    saint. 240 px clears the ordinary icon, which is square or a little taller
    than wide, so in the common case nothing is scaled at all. */
+/* **Covering the box rather than fitting inside it, since 2026-09-02**
+   (author: the hero's own "aspect ratio limitations to crop any saint card
+   display"). The box is the clamped shape `cardCrop` gives it, written per
+   card in views/index/modes.js, and the picture fills it from that crop's own
+   anchor — the top for a tall icon, whose face is there, the centre for a wide
+   one. `contain` was right while the box was the picture's own shape and is
+   wrong now that the box is a decision: it would letterbox the very icons the
+   clamp exists to crop. */
 .cx-media img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: var(--cx-max-h);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* The blank keeps a box so an imageless saint is still a card rather than a

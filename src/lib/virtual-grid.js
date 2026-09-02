@@ -60,7 +60,19 @@ export function layout(
 
     const aspect = aspectOf(item);
     const media = aspect ? (columnWidth - mediaInset) / aspect : 0;
-    const height = Math.round(media + textOf(item));
+    /*
+     * **Rounded up, not to the nearest** (2026-09-02). The card's height is
+     * fixed by this function and its picture is drawn from a fractional
+     * `aspect-ratio`, so a media box of 315.72 px inside a card reserved for
+     * 315 is one pixel of the name's line clipped — `scrollHeight` rounds up
+     * where `Math.round` had rounded down, and the card crops its own block.
+     *
+     * It was luck rather than arithmetic that this held before: the aspects
+     * happened to land on the kind side of .5. Ceiling costs at most a pixel
+     * of air under a card and cannot clip one, and only one of those two is
+     * visible to a reader.
+     */
+    const height = Math.ceil(media + textOf(item));
     positions.push({
       ...item,
       x: target * (columnWidth + gap),

@@ -34,7 +34,7 @@ import { state, open as openState, close as closeState } from './daily/state.js'
 import { reducedMotion } from './daily/motion.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor } from './daily/entries.js';
-import { headingFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
+import { headingFmt, headingShortFmt, monthFmt, utc, weekdayFmt } from './daily/format.js';
 import { paintDay } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
@@ -328,12 +328,72 @@ export function render(el, { data, params, router }) {
   paintGate();
   buildRail(selected);
   paintChrome();
+  state.cleanups.push(wireGrainForWidth(el));
   // The whole week the day sits in, not the day pinned to an edge: a reader
   // arriving by deep link gets the same first picture the old strip gave.
   revealSelected({ week: true });
   paintDay(panelsIn(el));
   wireDay(panelsIn(el));
   state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
+}
+
+/**
+ * Which grain the page shows, decided by the width (author, 2026-09-02: "on
+ * desktop daily page (ONLY ON DESKTOP), rework the weekly/monthly display:
+ * remove the monthly button completely and just display monthly only on
+ * desktop, no weekly display").
+ *
+ * So past 1024 px there is no choice to make: the month is the picker, the
+ * week is not drawn, and the toggle that used to swap them is gone from the
+ * page (calendar.css hides it, and this makes sure nothing is left half
+ * swapped behind it). A phone keeps both and keeps the button — there is no
+ * room for a month grid above the day there, which is the whole reason the
+ * week rail exists.
+ *
+ * Written as the *reduced-motion* branch of `toggleMonth` rather than by
+ * calling it: this is not a reader asking to change grain, it is the page
+ * arriving in the shape the window asks for, and a fade between two grains
+ * nobody has seen yet is an animation of nothing.
+ *
+ * Watched rather than read once, because a window crosses the breakpoint when
+ * a desk is resized and a page left showing a hidden grain shows nothing.
+ */
+function wireGrainForWidth(el) {
+  const mq = window.matchMedia('(min-width: 1024px)');
+  const apply = () => {
+    const month = el.querySelector('.cal-month');
+    const week = el.querySelector('.cal-week');
+    const button = el.querySelector('[data-month]');
+    if (!month || !week) return;
+    if (mq.matches) {
+      if (!state.monthOpen) {
+        state.monthOpen = true;
+        paintMonth();
+        month.hidden = false;
+        month.classList.add('is-open');
+        week.hidden = true;
+        restore(month);
+        setAside(week);
+      }
+      button?.setAttribute('aria-expanded', 'true');
+    } else if (state.monthOpen) {
+      // Back to a phone: the week is the picker again, and the month closes
+      // behind it rather than being left open under a button that says shut.
+      state.monthOpen = false;
+      month.hidden = true;
+      month.classList.remove('is-open');
+      week.hidden = false;
+      restore(week);
+      setAside(month);
+      button?.setAttribute('aria-expanded', 'false');
+      button?.classList.remove('is-on');
+    }
+    // The month grid is sized from its own box, which has just changed.
+    if (state.monthOpen) revealSelected({ week: false });
+  };
+  apply();
+  mq.addEventListener('change', apply);
+  return () => mq.removeEventListener('change', apply);
 }
 
 /**
@@ -498,7 +558,16 @@ function repaintDay() {
 function paintChrome() {
   const { el, selected } = state;
   markRail();
-  el.querySelector('.cal-date').textContent = headingFmt(utc(selected));
+  /*
+   * **The short month on a phone** (author, 2026-09-02). The date is the
+   * largest type on the page and "Saturday, 5 September 2026" takes two rows
+   * at 360 px, which costs the day itself a row of content. Asked of the
+   * window rather than written into the CSS, because a month's name is text
+   * and not a style — and re-asked on resize below, so turning a tablet does
+   * not leave the wrong one standing.
+   */
+  const short = window.matchMedia('(max-width: 559.98px)').matches;
+  el.querySelector('.cal-date').textContent = (short ? headingShortFmt : headingFmt)(utc(selected));
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }

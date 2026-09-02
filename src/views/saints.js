@@ -35,7 +35,7 @@ import {
 } from './index/controls.js';
 import { loadSearch, monthsBySlugFor } from './index/search.js';
 import { applySnapshot, keep, snapshot } from './index/place.js';
-import { matching } from './index/filter.js';
+import { matching, readerHasFiltered } from './index/filter.js';
 import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
 import { applyMode, paintCarousel, sessionMode } from './index/modes.js';
@@ -195,6 +195,39 @@ export function render(el, { data, router, nav }) {
   // to exist before the scroll can, which is why the restore straddles update.
   const restoring = (nav?.restore || nav?.pop) && remembered ? remembered : null;
   if (restoring) applySnapshot(restoring);
+  /*
+   * **And the row keeps its place on an ordinary return too** (author,
+   * 2026-09-02: "when you click away from the All Saints page while on
+   * Carousel to any other page, lets say About page, then back to All Saints,
+   * the Carousel starts at the beginning location again. Make sure it
+   * remembers the location as it does when switching back from Advanced
+   * search, so that if you spot a saint as you switch pages you can switch
+   * back and see it where it was").
+   *
+   * The offset alone, not the whole snapshot: a full restore puts the filters,
+   * the open facets and the page's scroll back, and that is what the saint
+   * page's × means and what a history traversal means. Pressing *About* and
+   * then *All Saints* is a fresh visit to the page — the reader did not ask
+   * for their search back — but the row they were looking at is the one thing
+   * they can be halfway through reading, and the seed is per visit, so the
+   * run is the same run.
+   *
+   * **Only when nothing was filtered**, which is what makes that last clause
+   * true rather than hopeful: a filtered pool is a different set of saints in
+   * a different order, and an offset taken against it would land on somebody
+   * else. `paintCarousel` would not catch it — a fresh render has no
+   * `carouselKey` to compare against, which is the same reason `applySnapshot`
+   * can hand its own offset over safely.
+   *
+   * `readerHasFiltered` and not `hasActiveFilters`: the Calendar facet opens
+   * with all four ticked (`syncCalendarFacet`), so the plain question "are any
+   * filters set" is true on a page nobody has touched — which is the
+   * distinction that helper exists to draw, and skipping it made this restore
+   * never fire once.
+   */
+  else if (remembered && !readerHasFiltered(remembered.filters)) {
+    state.carouselAt = remembered.carouselAt ?? null;
+  }
   update({ animate: false });
   applyMode();
   if (restoring) {

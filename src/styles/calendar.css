@@ -1176,9 +1176,67 @@
     grid-column: 2;
     grid-row: 1;
     --cal-peek: 24px;
-    --cal-gutter: calc(34px + var(--space-2) + var(--cal-peek));
+    /* **No 34 px column for the toggle any more** (author, 2026-09-02: "remove
+       the monthly button completely ... make it take up the whole width of the
+       right hand column instead of allowing a column for the old monthly
+       display button"). The gutter the month prints its name into is the peek
+       and the row's gap, and nothing else. */
+    --cal-gutter: calc(var(--space-2) + var(--cal-peek));
     --rail-inset: calc(var(--cal-peek) + var(--space-1));
     gap: var(--space-2);
+  }
+
+  /*
+   * **The month is the picker here, and the only one** (author, 2026-09-02:
+   * "just display monthly only on desktop, no weekly display").
+   *
+   * The button that swapped them goes with the choice it offered — a control
+   * for a decision the page has already made is a control that can only ever
+   * agree with itself. `wireGrainForWidth` in views/calendar.js opens the
+   * month at this width and closes it again below, so nothing is left showing
+   * a grain the stylesheet has hidden.
+   *
+   * The week's own rail is untouched below 1024 px, where it is still the
+   * whole picker: a month grid over the day on a 360 px screen is the day
+   * pushed off the first screen, which is what the rail was built to avoid.
+   */
+  .cal-jump {
+    display: none;
+  }
+
+  .cal-week {
+    display: none;
+  }
+
+  /*
+   * **The month's name takes its own line here** rather than the gutter it
+   * printed into. That gutter was the toggle's 34 px column plus the peek, and
+   * the toggle is what this instruction removed — leaving the name a 32 px
+   * slot, where "Sept 2026" wrapped to two lines and printed straight across
+   * the peeked dates beside it. Above the grid it costs one line and lets the
+   * seven columns have the whole width, which is what was asked for.
+   */
+  .cal-month .month-name {
+    position: static;
+    display: block;
+    width: auto;
+    padding-inline: 0 0;
+    margin-bottom: var(--space-1);
+    margin-left: var(--cal-gutter);
+  }
+
+  .cal-span {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  /* Left-justified with the month grid above it, in the author's own words
+     ("justify the 'Full Screen Calendar' button to the left margin of the
+     right hand column along with the new small monthly calendar display").
+     The month's own left margin is the gutter its name prints into, so the
+     button lines up with the grid rather than with the name. */
+  .fullcal-open {
+    margin-left: var(--cal-gutter);
   }
 
   /* The gaps come with the peek, and taking one without the other is a bug
@@ -1934,15 +1992,23 @@
   .register-cards.is-cards .reg-thumb {
     order: -1;
     width: 100%;
+    /* The shape is the card's own, written per saint as `--reg-aspect`. */
     height: auto;
+    aspect-ratio: var(--reg-aspect, 1);
     margin-bottom: 4px;
   }
 
-  /* Whole, not cropped to a square: a card has the width to show the icon as it
-     is, which is the thumbnail's only reason for being square in a row. */
+  /* **Held to the hero's own two limits, 2026-09-02** (author: the same
+     "aspect ratio limitations to crop any saint card display"). It was drawn
+     whole — "a card has the width to show the icon as it is", which was true
+     while nothing bounded the height — and a 1:3 scan then made one card in a
+     column of a dozen three times as tall as the rest. The box takes the
+     clamped shape `cardCrop` writes onto it (views/daily/panel.js) and the
+     picture covers it from that crop's own anchor. A *row's* thumbnail is a
+     40 px square either way and is untouched. */
   .register-cards.is-cards .reg-thumb img {
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* No frame around a picture that is not coming (DESIGN.md, and the author's
@@ -2540,6 +2606,77 @@ a.name-day:hover {
   html[data-route='calendar'] .cal {
     height: 100%;
     min-height: 0;
+  }
+}
+
+/* ---- the phone's own margins (2026-09-02) ------------------------------- */
+
+/*
+ * Three instructions of one afternoon, all of them about the same thing: the
+ * phone had drifted and every drifted pixel is content the reader does not
+ * see.
+ *
+ * 1. "Remove the 'Full Screen Calendar' button completely from mobile - this
+ *    was only ever supposed to be a desktop only addition." `display: none`
+ *    rather than a class, so it is out of the accessibility tree too: a
+ *    control nobody can see should not be a control a screen reader announces.
+ *
+ * 2. "The weekly display has drifted further down the page on mobile when it
+ *    was supposed to have compact margins" — and the date "was also supposed
+ *    to be pushed up the page into the weekly display with minimal margin".
+ *    The route's own top padding and the two gaps around the date are what
+ *    that drift is made of.
+ *
+ * The short month the date prints at this width is views/calendar.js's, not a
+ * style: a month's name is text.
+ */
+@media (max-width: 1023.98px) {
+  .fullcal-open {
+    display: none;
+  }
+}
+
+@media (max-width: 559.98px) {
+  /* The page starts under the bar rather than a space-6 below it. */
+  html[data-route='calendar'] main.chrome {
+    padding-top: var(--space-2);
+  }
+
+  /* The rail and the date close up: space-3 under the strip was the desktop's
+     number arriving on a screen a third the size. */
+  .cal-controls {
+    margin-bottom: var(--space-1);
+  }
+
+  /* And the date sits *in* the picker rather than below it — no space above
+     it at all, and the liturgy line keeps its own gap under. */
+  .cal-head {
+    margin-top: 0;
+  }
+
+  .cal-date {
+    margin-top: 0;
+    margin-bottom: var(--space-1);
+  }
+}
+
+/* ---- the phone's section rhythm (2026-09-02) ---------------------------- */
+
+/*
+ * Author: "on mobile there is a bigger space between 'Today's Name Days'
+ * content and the 'Continue Reading' subheading than there is between other
+ * sections. Make sure its the same."
+ *
+ * Two spaces were stacking. The shelves carry `margin-top: var(--space-8)`
+ * from saint.css — written for the foot of a saint's page, where they are the
+ * last thing under a life — and the register heading inside them adds its own
+ * `space-6` on top. Every other section on this page is one `space-6`, from
+ * the heading alone, so the shelves give up the margin and the heading is the
+ * gap, exactly as it is between the readings, the hymns and the name days.
+ */
+@media (max-width: 1023.98px) {
+  .cal .shelves {
+    margin-top: 0;
   }
 }
 

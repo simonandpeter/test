@@ -1,5 +1,6 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
 import { loadDetail, prefetch } from '../../lib/detail.js';
+import { cardCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { typeNames } from '../../lib/saint-types.js';
@@ -288,7 +289,10 @@ export function paintGrid(matched, { animate }) {
         mediaInset: CARD_INSET,
         // The manifest keeps a card's pixel dimensions on its image, and a
         // saint may have no image at all.
-        aspectOf: (card) => card.image?.aspect ?? null,
+        // The *drawn* aspect, not the file's: a card is laid out at the shape
+        // it will be cropped to, or the grid reserves a box the picture never
+        // fills (`cardCrop`, lib/hero-crop.js).
+        aspectOf: (card) => cardCrop(card.image).aspect,
       });
   state.positions = result.positions;
 
@@ -489,12 +493,23 @@ export function paintWindow() {
  * description box, held by skeleton bars until the life arrives.
  */
 export function card(item, router, { rows = false, detailed = false } = {}) {
+  /*
+   * **Held to the hero's own two limits since 2026-09-02** (author: the same
+   * aspect-ratio limitations "to crop any saint card display"). `cardCrop`
+   * clamps the drawn shape to 1:1.6 at the tallest and 2:1 at the widest and
+   * says where to crop from; the box is that shape and the picture covers it,
+   * which is what turns a 1:3 scan from a card three screens tall into a card.
+   *
+   * A *row's* thumbnail is a 48 px square and is untouched: there is no shape
+   * to clamp there, and `aspectOf` says the same thing to the layout.
+   */
+  const crop = cardCrop(item.image);
   const image = item.image
     ? `<span class="index-media" style="background-image:url('${BASE + item.image.lqip}')${
-        rows ? '' : `;aspect-ratio:${item.image.aspect}`
+        rows ? '' : `;aspect-ratio:${crop.aspect};object-position:${crop.focus}`
       }">
         <img src="${BASE + item.image.src}" alt="" width="${item.image.w}" height="${item.image.h}"
-          loading="lazy" decoding="async" />
+          style="object-position:${crop.focus}" loading="lazy" decoding="async" />
       </span>`
     : '';
 
