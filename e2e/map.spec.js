@@ -1093,11 +1093,17 @@ test('the year buttons hold one width whatever year they show', async ({ page })
   const to = page.locator('[data-year-btn="to"]');
 
   /*
-   * At rest the two ends already differ in digit count — the corpus runs 66
+   * At rest the two ends already differ in digit count — the corpus runs 30
    * to 1938 — so they are the pair to compare, and no interaction is needed
    * to make the point.
+   *
+   * The low end was 66 (Euodus of Antioch) until 2026-09-02, when Clement,
+   * apostle of the Seventy, was dated: the Russian calendar prints "(I)" for
+   * him, and the corpus's own rule for a first-century Christian bounds that
+   * at 30 rather than at the century's first year. Still two digits against
+   * the far end's four, which is all this test needs of it.
    */
-  await expect(from).toHaveText('66 AD');
+  await expect(from).toHaveText('30 AD');
   await expect(to).toHaveText('1938 AD');
   const narrow = (await from.boundingBox()).width;
   const wide = (await to.boundingBox()).width;

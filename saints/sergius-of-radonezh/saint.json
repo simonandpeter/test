@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 25 сентября ст. ст.: “Преставление прп. Сергия, игумена Радонежского, всея России чудотворца (1392)”. No birth year is given there; the tradition's c. 1314 is not carried, so the bounds below are his repose alone."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

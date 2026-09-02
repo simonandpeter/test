@@ -12,6 +12,15 @@
     "apostle",
     "evangelist"
   ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 130,
+      "display": "early 2nd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 26 сентября ст. ст.: “Преставление апостола и евангелиста Иоанна Богослова (начало II)”. The bounds are that phrase — the beginning of the second century — and not a recorded year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

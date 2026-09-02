@@ -17,6 +17,15 @@
     "apostle",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 30,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 10 сентября ст. ст.: “Апп. от 70-ти Апеллия, Лукия и Климента (I)” — the century is given for the three together. Bounded at 30 rather than at the century's own first year, the way Cornelius the centurion and the martyrs of Skepsis already are: one of the Seventy followed Christ, so he cannot have died before the ministry."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

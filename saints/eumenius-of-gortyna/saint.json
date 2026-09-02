@@ -18,6 +18,15 @@
     "bishop",
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "The Orthodox Church in America’s life says he “was banished to the Thebaid, where he died in the seventh century”; the bounds are that phrase, not a recorded year. Some references place him in the third century instead, and the disagreement is why this is traditional rather than attested."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

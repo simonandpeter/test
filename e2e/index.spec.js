@@ -246,7 +246,21 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // down - his one record is a tenth or eleventh century Sinai codex - and
   // not on when he lived. An interval running from the apostolic age to that
   // codex is not a date, and undated is the corpus's own word for it.
-  await expect(page.locator('.tray')).toContainText('155 undated');
+  //
+  // 150 since 2026-09-02, and the audit that found them started on the map
+  // rather than in the tray: an undated life is drawn `live` in every year,
+  // so Sergius of Radonezh was lit at 66 AD (author: "apparently alive in 66
+  // AD ... any saint who is on the map for longer than 100 years as alive may
+  // need a check"). Eleven located saints were in that state. Five could be
+  // dated from a source: Sergius (1392) and John the Theologian ("начало II")
+  // were both in days.pravoslavie.ru all along, missed because the corpus had
+  // checked the wrong day for each; Clement of Sardis carries the "(I)" the
+  // same page prints; Eumenius of Gortyna has the OCA's "died in the seventh
+  // century"; and Heraclides of Tamassos is bounded, not found, by Barnabas's
+  // own mission. The other six stay here, which is the tray doing its work -
+  // saint.gr prints no year for any of them, and a martyrdom the sources
+  // place only by a persecution is not a date.
+  await expect(page.locator('.tray')).toContainText('150 undated');
 });
 
 test('search reaches names, types, churches and regions', async ({ page }) => {

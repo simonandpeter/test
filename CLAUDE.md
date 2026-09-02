@@ -444,7 +444,18 @@ drawn on the stage per Amendment 77's promise rather than printed below it:
 two overlaid native `<input type="range">` over one rail, reading each
 card's `lifeInterval` (from `lib/index-filters.js`, same semantics as the
 Index's own date facet). Undated cards are never dimmed — there is nothing
-to judge them against — so they always show at full strength.
+to judge them against — so they always show at full strength. **That is also
+a claim, and on 2026-09-02 it read as a false one**: `pointAt` returns
+`state: 'live'` for an undated life, so Sergius of Radonezh was lit, haloed
+and named at 66 AD (author: "any saint who is on the map for longer than 100
+years as alive may need a check"). Eleven located saints were in that state
+and not one of them had a *wrong* date — the corpus takes its years from
+days.pravoslavie.ru, and these were saints the Russian calendar does not
+keep. Five were datable and now are; the six that remain are named in
+`tests/map-span.test.mjs`, which holds that list and the author's
+hundred-year threshold so a twelfth cannot arrive unnoticed. Shortening it
+means finding a source: saint.gr prints no year for any of them, and a
+martyrdom placed only by naming a persecution is not a date.
 `dateFrom`/`dateTo` are held at module scope, for the visit and not
 persisted. The highlighted span between the two handles is a third grab
 target (`wireTimeline`, on `.map-timeline-fill`): dragging it slides both

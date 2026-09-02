@@ -17,6 +17,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 50,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "No source gives a year, and this is bounded rather than found. The Cypriot tradition has him met and baptised by Paul, Barnabas and Mark, and made bishop of Tamassos by Barnabas on a later visit — Barnabas’s Cyprus mission and death fall before about 61, so the earliest bound is the ordination that tradition and the latest is the end of the century it belongs to."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
