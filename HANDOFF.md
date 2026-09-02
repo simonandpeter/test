@@ -157,7 +157,7 @@ machine whose answer counts. Every number below is the runner's, from `dc6fc22`.
 | Lighthouse accessibility ≥ 95 | **100** on all 4 routes | `npm run test:lighthouse` |
 | Colour duplicated in text or shape | 3 marks, 3 silhouettes | `quality-floor.spec.js` |
 | No layout shift when data arrives | **0.0042**, budget 0.02 | `quality-floor.spec.js` |
-| FCP < 1.5 s throttled 4G | **1206–1221 ms** | `npm run test:lighthouse` |
+| FCP < 1.5 s throttled 4G | **1206–1221 ms** (1355–1373 by 2026-09-02, below) | `npm run test:lighthouse` |
 
 Fixed here: the header reserves its height (`--chrome-h-reserve`) instead of
 growing 26 px into place, which was 0.0307 of CLS on almost every route; the
@@ -176,6 +176,21 @@ that cannot fail is a report. If it ever goes red on timing, the measured lever
 is the two preloaded Latin subsets (~190 ms) — but they earn it, winning the
 `font-display: optional` race under the same throttle 4 of 4, so **spending the
 serif to buy the margin is the author's call.**
+
+**Those runner numbers are stale, and the margin is half what that says**
+(2026-09-02). The runner's own baseline today is **1355-1373 ms** on all four
+routes, run after run — `6d194bd`, `64d8cf4` and `3201945` agree to a few
+milliseconds — so the gate has ~130 ms of headroom rather than ~280, and on
+`3a8a7a7` it went red for the first time on timing alone: `calendar,
+populated` at a median of 1515 ms, from samples of 1363/1529/1515. It was
+sampling noise, not a regression — the other three routes on the same run came
+in at their exact baseline, and the re-run put the same route back at 1359 ms
+(1360/1359/1357) with everything else unmoved. A stray sample near 1514 ms had
+been seen before, on `6d194bd`, where the median absorbed it. Two of them in
+one median is what it takes now, which is the thing to know: **the gate is
+close enough to the line that a bad pair of samples can stop a deploy**, and
+the lever above (the two preloaded Latin subsets, ~190 ms) is still the
+author's to spend.
 
 Two findings left for the author, both recorded in Amendment 68: the rail and
 month buttons fail WCAG 2.5.3 Label in Name (visible "Fri 30", accessible name
