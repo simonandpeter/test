@@ -741,6 +741,24 @@ nav.site-nav {
   header.chrome .site-nav {
     gap: var(--space-2) var(--space-8);
   }
+
+  /*
+   * **And the masthead stands the same distance off** (author, 2026-09-02:
+   * "the gap between Daily Dox svg and Daily should match the gap between
+   * Daily and All Saints").
+   *
+   * The header's own five tracks are `space-3` apart, which was measured for
+   * the narrow row where four gaps decide whether Romanian fits on one line.
+   * At this width the labels are `space-8` apart from each other, so the name
+   * sat visibly tighter to the first of them than they did to one another —
+   * one gap in a row of four, a third the size. The nav's track takes it
+   * rather than the header's `column-gap`, so only the one gap that reads
+   * wrongly changes and the four tracks past the nav keep the spacing they
+   * were measured at.
+   */
+  header.chrome .site-nav {
+    margin-left: calc(var(--space-8) - var(--space-3));
+  }
 }
 
 /* The four labels give up their gap before they give up the line: at 320 px

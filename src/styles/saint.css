@@ -130,8 +130,41 @@
 
   /* The picture is the column's own width here rather than a 260 px track
      inside a wider one. */
+  /*
+   * **The icon holds still while the column scrolls under it** (author,
+   * 2026-09-02: "when you scroll in the leftmost column the text scrolls under
+   * the image but the saint image stays exactly where it is, pinned").
+   *
+   * `sticky` inside the column that scrolls, so it is pinned to *that* box
+   * rather than to the window: the aside is its own scroller (2026-09-02), and
+   * a picture stuck to the viewport would drift out of its own column the
+   * moment the page behind it moved.
+   *
+   * The register and the veneration table pass beneath it, which is the whole
+   * of what was asked. It gives the pinning up when there is more picture than
+   * column — a `sticky` box taller than its scrollport pins its *bottom* and
+   * reads as a picture crawling upward — so `max-height` holds it inside the
+   * box it is stuck in and the icon is scaled to fit rather than cropped: a
+   * crop here would be the page deciding which part of an icon matters, which
+   * is a decision `cardCrop` makes for cards and this page has never made.
+   */
   .saint-aside .saint-media-col {
     max-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    /* The page's own ground behind it, or the register would show through as
+       it passes underneath. */
+    background: var(--gesso);
+    padding-bottom: var(--space-2);
+  }
+
+  .saint-aside .saint-media-col .saint-media {
+    max-height: calc(100dvh - var(--chrome-h, 53px) - var(--space-16));
+  }
+
+  .saint-aside .saint-media-col .saint-media img {
+    object-fit: contain;
   }
 
   /* The life sets its own 65ch measure and the centre column is narrower than

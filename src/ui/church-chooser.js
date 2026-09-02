@@ -188,6 +188,39 @@ export function mountChurchControl(button, panel) {
   panel.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && open) close();
   });
+  /*
+   * **And a press anywhere else closes it** (author, 2026-09-02: "when you
+   * click off the pop-ups for language or calendar that they close. E.g. if
+   * they are open and I click outside their bubble they should close").
+   *
+   * It never did: the panel opened in the page's own flow, where a disclosure
+   * that stays until it is answered or dismissed is ordinary, and the button
+   * was the only way to shut it. Since 2026-09-02 it floats over the page on a
+   * desktop, and a floating panel that ignores the page underneath is a
+   * panel a reader has to go back and find the switch for.
+   *
+   * `pointerdown` rather than `click`, so it closes on the press rather than
+   * on the release — a reader who presses on the page and drags has already
+   * said they are done with the panel. The button is excluded because its own
+   * handler toggles: closing here first would make the press reopen it.
+   */
+  const onAway = (e) => {
+    if (!open) return;
+    if (panel.contains(e.target) || button.contains(e.target)) return;
+    /*
+     * **The other chooser is not "outside"** (2026-09-02, keeping the
+     * instruction of 2026-08-27 intact). The two panels are independent
+     * disclosures and both may stand open at once — that is what makes "the
+     * calendar panel follows a language change while it is open" a case at
+     * all, and it is the author's own: changing language with the calendar
+     * chooser still showing, and seeing it repaint without being closed and
+     * reopened. A press on the other control is the reader reaching for the
+     * second panel, not dismissing the first.
+     */
+    if (e.target.closest?.('.church-panel, #church-open, #lang-open')) return;
+    close();
+  };
+  document.addEventListener('pointerdown', onAway);
   paintButton();
   // The button carries words in two registers — the church's name and the
   // accessible sentence — so it repaints on either kind of change.

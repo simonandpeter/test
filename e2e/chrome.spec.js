@@ -2554,3 +2554,81 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
     .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollbarGutter))
     .toBe('auto');
 });
+
+test('a press outside a chooser closes it', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "when you click off the pop-ups for language or
+   * calendar that they close. E.g. if they are open and I click outside their
+   * bubble they should close."
+   *
+   * They never did. Both opened in the page's own flow, where a disclosure
+   * that waits to be answered or dismissed by its own button is ordinary; the
+   * same afternoon they began floating over the page on a desktop, and a panel
+   * that ignores the page underneath is one the reader has to go back and find
+   * the switch for.
+   *
+   * `pointerdown` is what closes them, so this presses rather than clicks — a
+   * click would also fire, but pressing is the moment the reader has said they
+   * are done with the panel.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  for (const [open, panel] of [
+    ['#church-open', '#church-panel'],
+    ['#lang-open', '#lang-panel'],
+  ]) {
+    await page.locator(open).click();
+    await expect(page.locator(panel), `${panel} did not open`).toBeVisible();
+    // Somewhere squarely on the page and outside both the panel and its button.
+    await page.mouse.click(700, 700);
+    await expect(page.locator(panel), `${panel} stayed open`).toBeHidden();
+    await expect(page.locator(open)).toHaveAttribute('aria-expanded', 'false');
+  }
+
+  /*
+   * **And the other chooser is not "outside"**, which is the standing
+   * behaviour of 2026-08-27 this could easily have taken away: the two are
+   * independent disclosures, both may stand open at once, and reaching for the
+   * second is not dismissing the first. It did take it away for one build —
+   * `the calendar panel follows a language change while it is open` went red,
+   * which is the test that exists for exactly that case.
+   */
+  await page.locator('#church-open').click();
+  await expect(page.locator('#church-panel')).toBeVisible();
+  await page.locator('#lang-open').click();
+  await expect(page.locator('#lang-panel')).toBeVisible();
+  await expect(page.locator('#church-panel'), 'the calendar panel closed when the language one opened').toBeVisible();
+});
+
+test('the masthead stands the same distance off the nav as the nav’s own words do', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "the gap between Daily Dox svg and Daily should match
+   * the gap between Daily and All Saints."
+   *
+   * The header's five tracks are `space-3` apart, a number measured for the
+   * narrow row where four gaps decide whether Romanian fits on one line; the
+   * nav's own labels went to `space-8` on a desktop the day before, so one gap
+   * in a row of four was a third the size of the others.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const gaps = await page.evaluate(() => {
+    const name = document.querySelector('.site-name').getBoundingClientRect();
+    const links = [...document.querySelectorAll('nav.site-nav a')].map((a) => a.getBoundingClientRect());
+    return {
+      mastheadToFirst: Math.round(links[0].left - name.right),
+      betweenLinks: Math.round(links[1].left - links[0].right),
+    };
+  });
+  expect(gaps.betweenLinks, 'premise: the labels are not spaced apart here').toBeGreaterThan(20);
+  expect(
+    Math.abs(gaps.mastheadToFirst - gaps.betweenLinks),
+    `masthead gap ${gaps.mastheadToFirst} against ${gaps.betweenLinks} between labels`,
+  ).toBeLessThan(3);
+});

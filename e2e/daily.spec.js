@@ -5365,3 +5365,79 @@ test('the civil date in a veneration row says it is the Gregorian one', async ({
   await expect(romanian).toContainText('15 January (Revised Julian)');
   await expect(romanian).toContainText('15 January 2026 (Gregorian)');
 });
+
+test('a hero with no picture offers one way into the life, not two', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "weird bug on desktop showing 2x continue reading
+   * buttons on main saint cards without images".
+   *
+   * Two exist in the document by design — the one that ends the preview, and
+   * the standalone one for the widths and cards that have no preview to end —
+   * and exactly one was ever laid out, because the inline one lived *inside*
+   * the preview box and inherited its `display: none`. Moving it onto the card
+   * that morning, so it could reach the picture's foot, took that away: on a
+   * hero with no image the preview is not drawn but the link beside it now
+   * was, and the standalone one was showing too, because the rule that hides
+   * that one asks for `.has-media`.
+   *
+   * 6 September in the Romanian calendar is the author's own case: Eudoxius of
+   * Melitene, who has no icon.
+   */
+  await ready(page, { church: 'romanian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-06', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const hero = page.locator('.hero');
+  await expect(hero, 'premise: this day’s hero has a picture after all').not.toHaveClass(/has-media/);
+  await expect(page.locator('.hero-more').filter({ visible: true })).toHaveCount(1);
+
+  // And a hero *with* one still has exactly one, which is the other half of it.
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero')).toHaveClass(/has-media/);
+  await expect(page.locator('.hero-more').filter({ visible: true })).toHaveCount(1);
+});
+
+test('a feast prints its day and month in the reader’s own grammar, and links in every language', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "sometimes the veneration date is listed in Romanian
+   * '2 septembrie' ... run an audit for all other languages in a similar
+   * fashion. And hyperlink them in the other languages as well, not just in
+   * English."
+   *
+   * The audit found the link already working in all five — it is built from
+   * the formatted date whatever the pack — and found a real fault beside it:
+   * the feast's own day-and-month was glued together from a *standalone* month
+   * name, so Russian read "2 Сентябрь" (nominative) while the civil date four
+   * words later correctly read "15 Сентября" (genitive). One sentence, one
+   * day, two cases. Serbian had it too.
+   *
+   * Theodosius of Totma is the saint the report named.
+   */
+  for (const [lang, wanted] of [
+    ['en', /2 September \(Julian\)/],
+    ['ru', /2 Сентября/],
+    ['ro', /2 Septembrie/],
+  ]) {
+    /*
+     * Written straight into the store rather than through `ready`, which only
+     * fills a setting that is *absent* — so the second and third turns of this
+     * loop would keep the first one's English and the test would pass by
+     * reading the same page three times.
+     */
+    await page.addInitScript((l) => {
+      const key = 'gos-settings';
+      const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+      localStorage.setItem(key, JSON.stringify({ ...now, church: 'russian', language: l }));
+    }, lang);
+    await page.goto('/saints/theodosius-of-totma', { waitUntil: 'networkidle' });
+    await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+    const row = page.locator('[data-veneration] .att-feast').first();
+    await expect(row, `the feast reads wrongly in ${lang}`).toHaveText(wanted);
+    // The civil date is a link to that day in every language, not only English.
+    await expect(
+      page.locator('[data-veneration] [data-feast-day]').first(),
+      `no link in ${lang}`,
+    ).toHaveAttribute('href', /\/calendar\/2026-09-15$/);
+  }
+});

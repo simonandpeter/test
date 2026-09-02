@@ -139,6 +139,29 @@ export function mountLanguageControl(button, panel) {
 
   button.setAttribute('aria-expanded', 'false');
   button.addEventListener('click', () => (open ? close() : openPanel()));
+  /*
+   * A press anywhere else closes it — the same bargain the calendar control
+   * makes, for the same reason, and `ui/church-chooser.js` argues it there.
+   * (The two mounts have been the same machinery with different contents for
+   * a while; `docs/CLEANUP-PLAN.md` §4 has the measurement.)
+   */
+  const onAway = (e) => {
+    if (!open) return;
+    if (panel.contains(e.target) || button.contains(e.target)) return;
+    /*
+     * **The other chooser is not "outside"** (2026-09-02, keeping the
+     * instruction of 2026-08-27 intact). The two panels are independent
+     * disclosures and both may stand open at once — that is what makes "the
+     * calendar panel follows a language change while it is open" a case at
+     * all, and it is the author's own: changing language with the calendar
+     * chooser still showing, and seeing it repaint without being closed and
+     * reopened. A press on the other control is the reader reaching for the
+     * second panel, not dismissing the first.
+     */
+    if (e.target.closest?.('.church-panel, #church-open, #lang-open')) return;
+    close();
+  };
+  document.addEventListener('pointerdown', onAway);
   panel.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && open) close();
   });

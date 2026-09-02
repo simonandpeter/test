@@ -53,6 +53,32 @@ export function monthName(calendar, month) {
 }
 
 /**
+ * The day and the month of a feast, in the reader's language and in the case
+ * that language puts a date in.
+ *
+ * **English keeps the pack's own pattern and table**; every other language
+ * asks `Intl` for the whole day-and-month rather than gluing a day onto a
+ * standalone month name. The difference is grammar, and it was wrong on the
+ * page: Russian's standalone September is «сентябрь», so a feast read "2
+ * Сентябрь" where the civil date two words later correctly read "15
+ * Сентября" — nominative beside genitive, in one sentence, about one day.
+ * Serbian had the same fault. Found by rendering one saint in all five
+ * languages and reading the line (author, 2026-09-02: "run an audit for all
+ * other languages in a similar fashion").
+ *
+ * English is left on the table for the reason `monthName` gives below: it is
+ * the corpus's own spelling and what the schema and the tests are written
+ * against. `Intl` agrees with it to the character, so this is a choice about
+ * where the authority lives rather than about the output.
+ */
+function dayMonth(day, month) {
+  if (currentLanguage() === 'en') {
+    return fill(STRINGS.saint.feastIn.dayMonth, { day, month: monthName(null, month) });
+  }
+  return formatDate({ day: 'numeric', month: 'long', timeZone: 'UTC' }, new Date(Date.UTC(2001, month - 1, day)));
+}
+
+/**
  * A feast in its own reckoning: "17 January (Julian)", "17 January (Revised
  * Julian)", "Pascha", "49 days after Pascha". The Gregorian date it falls on
  * in a given year is the caller's business, via feastOccurrences.
@@ -67,7 +93,7 @@ export function formatFeast(feast) {
   }
   // The day before the month in every one of the five, which is why one
   // pattern serves them all; what differs is the word in the brackets.
-  const name = fill(F.dayMonth, { day: feast.day, month: monthName(feast.calendar, feast.month) });
+  const name = dayMonth(feast.day, feast.month);
   // The fixed calendars share month names, so a feast says which it is in —
   // except the civil Gregorian, which is the page's own reckoning.
   const which = STRINGS.church.calendarNames?.[feast.calendar];

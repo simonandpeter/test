@@ -1104,3 +1104,47 @@ test('the column beside the life is the search the reader came from, and narrows
   });
   expect(late.drawn, 'the whole set is in the document, so paging is untested').toBeLessThanOrEqual(shown);
 });
+
+
+test('the icon stays put while the apparatus column scrolls under it', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "when you scroll in the leftmost column the text
+   * scrolls under the image but the saint image stays exactly where it is,
+   * pinned."
+   *
+   * Sticky inside the column rather than against the window: the aside is its
+   * own scroller since the columns were split, and a picture stuck to the
+   * viewport would drift out of its own column the moment anything else moved.
+   *
+   * Measured as the two boxes disagreeing — the register moves by exactly what
+   * the column was scrolled, the icon does not move at all — because "pinned"
+   * is a relationship rather than a position.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.saint-media')).toBeVisible();
+
+  const read = () =>
+    page.evaluate(() => ({
+      icon: Math.round(document.querySelector('.saint-media').getBoundingClientRect().top),
+      register: Math.round(document.querySelector('.date-facts').getBoundingClientRect().top),
+    }));
+
+  const before = await read();
+  const by = 260;
+  await page.evaluate((n) => {
+    document.querySelector('.saint-aside').scrollTop = n;
+  }, by);
+  await expect
+    .poll(async () => (await page.evaluate(() => Math.round(document.querySelector('.saint-aside').scrollTop))))
+    .toBe(by);
+  const after = await read();
+
+  expect(after.icon, 'the icon moved with the column').toBe(before.icon);
+  expect(
+    before.register - after.register,
+    'the register did not scroll under the icon',
+  ).toBeGreaterThan(by - 4);
+});

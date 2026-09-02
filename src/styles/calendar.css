@@ -1652,9 +1652,30 @@
  * the hidden paragraph, which is where it used to hide: it is a child of the
  * column now (views/daily/panel.js says why).
  */
-@media (max-width: 759.98px) {
-  .hero-more:not(.hero-more-alone) {
-    display: none;
+/*
+ * **Exactly one way in, at every width and with or without a picture**
+ * (author, 2026-09-02: "weird bug on desktop showing 2x continue reading
+ * buttons on main saint cards without images").
+ *
+ * There are two in the document by design — the inline one that ends the
+ * preview, and `.hero-more-alone` for the widths and cards that have no
+ * preview to end — and until today exactly one was ever laid out, because the
+ * inline one lived *inside* the preview box and inherited its `display: none`.
+ * Moving it onto the card so it could reach the picture's foot took that away:
+ * on a hero with no image the preview is not drawn, but the link beside it now
+ * was, and `.hero-more-alone` was still showing too, because the rule that
+ * hides that one asks for `.has-media`.
+ *
+ * So the inline copy is shown by the same condition the preview itself is —
+ * `.hero.has-media` past 760 px — and nothing else. The pair is back to one.
+ */
+.hero-more:not(.hero-more-alone) {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .hero.has-media .hero-more:not(.hero-more-alone) {
+    display: inline-flex;
   }
 }
 
