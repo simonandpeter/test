@@ -102,12 +102,23 @@
    */
   --button-face: #ffffff;
   --button-face-ink: #221d19;
+  /*
+   * The ground's own opposite: near-black on the cream, near-white on the bole
+   * (the dark block below). One token rather than a rule per theme, for the
+   * one phrase that is asked to be "white ... on dark mode, or black on a
+   * light mode" (author, 2026-09-02) — the way into the day's life.
+   */
+  --ground-ink: #1a1613;
 
   color-scheme: light;
 }
 
 html.dark {
   --gesso: #1a1412;
+  /* The ground's opposite here is the near-white the ink already is, so the
+     one phrase that asked for it reads white on the bole and black on the
+     gesso — see `--ground-ink` above. */
+  --ground-ink: #f4ede2;
   --ink: #ede6dc;
   --ink-soft: #a89c8f;
   /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the

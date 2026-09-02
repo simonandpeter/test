@@ -47,6 +47,18 @@ export const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', y
 // grid, and a full "September" reached across into the dates.
 export const monthFmt = (d) => formatDate({ month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
 
+/**
+ * The month's whole name, for the calendar's own header row (author,
+ * 2026-09-02: "display the full month name").
+ *
+ * `monthFmt` above abbreviates because it was printing into the gutter beside
+ * the grid, where "September" reached across into the dates. The header has a
+ * line of its own on a desktop now and no such constraint — and the name is
+ * the largest thing the picker says about itself.
+ */
+export const monthLongFmt = (d) =>
+  formatDate({ month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
+
 export const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));

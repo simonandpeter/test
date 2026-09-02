@@ -848,9 +848,46 @@ function pointAt(card, from, to, at = to) {
     // are" and "where they died" can honestly differ.
     return { where: byKind('relics') ?? byKind('death') ?? settled, state };
   }
-  // Alive at that year: a bishop's see is where they were, otherwise the
-  // place they started from.
-  return { where: byKind('see') ?? byKind('birth') ?? settled, state };
+  /*
+   * **Alive, and moving across the life rather than between two stations**
+   * (author, 2026-09-02: "can you make the movements interpolated, i.e. for
+   * the 1y/s speed they dont start and stop, but is animated moving pretty
+   * much the same speed between the points").
+   *
+   * What it replaces returned one of two fixed places and let the draw pass
+   * ease between them, so a dot crossed Anatolia in a tenth of a second when
+   * the year passed a birth or a death and then stood perfectly still for the
+   * sixty years in between. Read off the year instead, the same way a saint
+   * with a real `track` already is: `from` at their birth, `to` at their
+   * death, and the fraction of the life between them. At a year a second a
+   * sixty-year life is a sixty-second walk, which is the constant speed the
+   * instruction asks for.
+   *
+   * **It is still not a claim, and the returned value still carries no
+   * `track`.** Nothing is stroked for these saints — a drawn line is a
+   * journey the corpus recorded, and this is a mode the reader turned on,
+   * which is the bargain `Movement` has made since it shipped. A saint with
+   * one place, or with no dated ends to hang the fraction on, does not move
+   * at all.
+   */
+  // `from`/`to` are this function's own parameters — the reader's range — so
+  // the two ends of the life take names of their own.
+  const startsAt = byKind('birth') ?? byKind('see') ?? settled;
+  const endsAt = byKind('see') ?? byKind('death') ?? byKind('relics') ?? settled;
+  if (!startsAt || !endsAt || startsAt === endsAt || died <= born) {
+    return { where: byKind('see') ?? byKind('birth') ?? settled, state };
+  }
+  const t = Math.min(1, Math.max(0, (at - born) / (died - born)));
+  return {
+    where: {
+      lon: startsAt.lon + (endsAt.lon - startsAt.lon) * t,
+      lat: startsAt.lat + (endsAt.lat - startsAt.lat) * t,
+      // The halo is a statement about a recorded place, so it belongs to
+      // whichever end the dot is nearer rather than to a blend of the two.
+      uncertainty_km: (t < 0.5 ? startsAt : endsAt).uncertainty_km,
+    },
+    state,
+  };
 }
 
 export function render(el, { data, router }) {
@@ -1769,6 +1806,8 @@ function wireTimeline(el, bounds, refresh) {
     },
     /** Where playback should start and stop: the reader's own selection. */
     span: () => ({ from: dateFrom, to: dateTo }),
+    /** Where the triangle stands now, which is where a press of Play resumes. */
+    head: () => playhead,
     /** Shown while Movement is on and hidden with it (`wireMotion`). */
     showHead(on) {
       headEl.hidden = !on;
@@ -1918,9 +1957,26 @@ function wireMotion(el, timeline, refresh) {
     }
     const span = timeline.span();
     if (span.to <= span.from) return;
-    // A second press at the end of a run starts it again from the beginning
-    // rather than doing nothing at the wall.
     end = span.to;
+    /*
+     * **From where the triangle stands, not from the start of the span**
+     * (author, 2026-09-02: "with the triangle button, make sure it doesnt go
+     * back to the start of the timeline selection but starts from where it is
+     * placed by hand. i.e. if its halfway and you click play, it should go
+     * from there not jump back to the earliest selected date").
+     *
+     * The reader has a control for the year now, and moving it is them saying
+     * where they want to be — sending them back to the low end on every press
+     * threw that away. A press at the wall still starts the run again from the
+     * beginning, because a play button that does nothing is worse than one
+     * that rewinds; and a mark left outside the selection (the handles can be
+     * dragged past it) is clamped into it rather than played from outside.
+     */
+    const standing = timeline.head();
+    const resume =
+      standing === null || standing >= end - 0.5
+        ? span.from
+        : Math.min(end, Math.max(span.from, standing));
     /*
      * **The triangle walks, and the selection stays where the reader put it**
      * (2026-09-01). This ran the *upper handle* from one end of the span to the
@@ -1929,12 +1985,12 @@ function wireMotion(el, timeline, refresh) {
      * single year and then reopened it, dimming most of the map for the length
      * of the performance. The range is untouched now; what moves is the mark.
      */
-    timeline.setHead(span.from);
+    timeline.setHead(resume);
     play.innerHTML = PAUSE_GLYPH;
     play.setAttribute('aria-label', STRINGS.map.pause);
 
     let last = performance.now();
-    let year = span.from;
+    let year = resume;
     const step = (now) => {
       /*
        * The reader's own rate, read every frame rather than captured at the

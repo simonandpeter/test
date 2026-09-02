@@ -64,7 +64,23 @@ function fillHeroLede(panel, slug, iso, card) {
       chevron.setAttribute('aria-hidden', 'true');
       chevron.textContent = '›';
       link.append(chevron);
-      box.append(' ', link);
+      /*
+       * **Appended to the card's text column, not to the paragraph** (author,
+       * 2026-09-02: "move it so the bottom of the text is lining up with the
+       * bottom of the image to the left to frame the content nicely").
+       *
+       * It has been absolutely positioned since the day before, so it was
+       * already out of the sentence's flow — what kept it inside the paragraph
+       * was the box it was measured against, and that box has `overflow:
+       * hidden` for its own line clamp. Anything positioned inside it is
+       * clipped to it, so it could never reach further down than the words
+       * do. As a child of the column it can sit on the column's own foot,
+       * which is the picture's foot beside it.
+       *
+       * The faded tail stays in the paragraph: it *is* the paragraph, going on
+       * without the reader.
+       */
+      panel.querySelector('.hero-body')?.append(link);
 
       /*
        * **And two lines of the life going on under it** (author, 2026-09-01:

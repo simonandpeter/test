@@ -107,6 +107,18 @@ export const STRINGS = {
     nextMonth: 'Next month',
     monthView: 'Month view',
     /*
+     * The reckoning the page reads a fixed day by (author, 2026-09-02). The
+     * button prints the answer — "Revised Julian" — and the label is what a
+     * screen reader is given for the control, because the answer alone does
+     * not say what question it is answering.
+     *
+     * `reckoningFollow` is the way back to the church's own default rather
+     * than a third calendar: a reader who has overridden it should be able to
+     * stop overriding it, and "Julian" would not say that.
+     */
+    reckoningLabel: 'The calendar this page is read by',
+    reckoningFollow: 'Follow my church',
+    /*
      * The whole church month at once (author, 2026-09-01: "Make an expandable
      * calendar button under the weekly display called 'Full Screen Calendar'
      * that opens up a full screen calendar modal in the same style as the
@@ -114,7 +126,10 @@ export const STRINGS = {
      *
      * The button's words are the author's own, capitalised as they wrote them.
      */
-    fullScreen: 'Full Screen Calendar',
+    /* Renamed 2026-09-02 (author: change to "Open Fullscreen"), and shortened
+       because it moved to the calendar's right margin where the old four words
+       reached back under the grid. */
+    fullScreen: 'Open Fullscreen',
     fullClose: 'Close',
     fullPeriods: 'Fasts and seasons',
     fullFeasts: 'Great Feasts',
@@ -468,7 +483,7 @@ export const STRINGS = {
        inside the brackets after a feast's date ("17 January (Julian)"). Two
        keys because Romanian and Russian do not put the same word in both
        places, and one of them would have had to be wrong. */
-    calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian' },
+    calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian', gregorian: 'Gregorian' },
     // The churches by id, here rather than only in data/churches.js, so the
     // locale packs can translate them (Amendment 36): the registry stays the
     // authority on what exists, this is the authority on what it is called.

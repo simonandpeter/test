@@ -114,6 +114,64 @@ export function subscribeChurch(fn) {
   return () => listeners.delete(fn);
 }
 
+/* ---- the reckoning, chosen apart from the church (2026-09-02) ----------- */
+
+/**
+ * Which reckoning the *page* reads by, when the reader has said.
+ *
+ * Author, 2026-09-02: the calendar's own header names the reckoning and
+ * "have the ability only on desktop to click on this and in a drop down menu
+ * select between Revised Julian, Julian and any other available calendar
+ * dates. Make sure all dates on the website then change to match this selected
+ * calendar date."
+ *
+ * **This is the Old/New Calendar setting the Orthodox build has been deferring
+ * since it was seeded** (docs/HANDOFF-ORTHODOX.md §2.2 and §6, where it is the
+ * withdrawn reckoning toggle of Amendments 16-19 "returning with a reason to
+ * exist"). It arrives as an override rather than as a second church: a church
+ * is who keeps the calendar and this is which arithmetic the day is read by,
+ * and the two are separate questions the moment a reader wants their own
+ * parish's practice rather than their patriarchate's default.
+ *
+ * Null means "follow the church", which is what every reader has until they
+ * touch the control — so nothing about the site moves for anyone who does not
+ * ask.
+ *
+ * **What it does and does not reach, stated plainly.** It replaces the
+ * calendar a *fixed* day is read in: the fasts, the Great Feasts, and which
+ * civil day a fixed feast falls on. It does not touch the paschal computus —
+ * all four churches here reckon Pascha by the Julian one, so there is nothing
+ * to choose — and it does not rewrite what a saint's own attestation *says*:
+ * the veneration register still prints "17 January (Julian)" because that is
+ * what the source states, whatever reckoning the reader is reading the year
+ * by.
+ */
+export const RECKONINGS = ['julian', 'revised-julian'];
+
+export function storedReckoning() {
+  const id = readSettings().reckoning;
+  return RECKONINGS.includes(id) ? id : null;
+}
+
+/** The reckoning in force for a church: the reader's own, or the registry's. */
+export const calendarFor = (churchId) =>
+  storedReckoning() ?? CHURCHES_BY_ID[churchId]?.default_calendar ?? 'julian';
+
+/**
+ * Chosen, or unchosen by passing null — which puts the reader back on their
+ * church's own default rather than on a third state.
+ *
+ * Notifies through the same listeners the church does, and deliberately so:
+ * every view that repaints when the calendar changes has to repaint when the
+ * reckoning does, and they are the same views for the same reason.
+ */
+export function chooseReckoning(id) {
+  if (id !== null && !RECKONINGS.includes(id)) throw new Error(`Unknown reckoning: ${id}`);
+  writeSetting('reckoning', id);
+  for (const fn of listeners) fn(current);
+  return id;
+}
+
 export function chooseChurch(id) {
   if (!CHURCHES_BY_ID[id]) throw new Error(`Unknown church: ${id}`);
   current = id;

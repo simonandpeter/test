@@ -616,6 +616,26 @@
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
+/*
+ * **The reckoning control is the desktop's, and so is its row** (author,
+ * 2026-09-02: "have the ability only on desktop to click on this").
+ *
+ * Below the breakpoint neither is drawn at all. The month's name keeps the
+ * gutter it has always printed into there — `.month-head` is a plain box in
+ * the flow, and an unstyled control inside it pushed the month's day-name line
+ * 31 px out of step with the week's, which is the one alignment this picker
+ * has always been held to ("the month is the week grown taller").
+ */
+@media (max-width: 1023.98px) {
+  .reckoning {
+    display: none;
+  }
+
+  .month-head {
+    display: contents;
+  }
+}
+
 /* ---- the peeked edges -------------------------------------------------- */
 
 /* The chevrons are gone (author, 2026-08-21). What stands at each edge of the
@@ -1211,32 +1231,114 @@
   /*
    * **The month's name takes its own line here** rather than the gutter it
    * printed into. That gutter was the toggle's 34 px column plus the peek, and
-   * the toggle is what this instruction removed — leaving the name a 32 px
+   * the toggle is what the same instruction removed — leaving the name a 32 px
    * slot, where "Sept 2026" wrapped to two lines and printed straight across
-   * the peeked dates beside it. Above the grid it costs one line and lets the
-   * seven columns have the whole width, which is what was asked for.
+   * the peeked dates beside it.
+   *
+   * **On the column's own left margin, with no offset** (author, 2026-09-02:
+   * it "should be left justified to the left margin of the right hand column,
+   * currently has a pointless offset"). The offset was `--cal-gutter`, which
+   * lined the name up with the *grid* inside the column; the column's edge is
+   * where the header belongs, and it is where the masthead and every other
+   * heading on the page start.
    */
+  .month-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-1);
+  }
+
   .cal-month .month-name {
     position: static;
     display: block;
     width: auto;
-    padding-inline: 0 0;
-    margin-bottom: var(--space-1);
-    margin-left: var(--cal-gutter);
+    padding-inline: 0;
+    margin: 0;
+  }
+
+  /* Opposite it, on the column's right margin: which arithmetic the grid is
+     read by, and the control that changes it. */
+  .reckoning {
+    position: relative;
+    flex: none;
+  }
+
+  .reckoning-btn {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-family: var(--font-utility);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    /* A control rather than a label: dotted, because a solid underline on this
+       page is how a link says it is a link. */
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+  }
+
+  .reckoning-btn:hover {
+    color: var(--ink);
+  }
+
+  .reckoning-pop {
+    position: absolute;
+    top: calc(100% + var(--space-1));
+    right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    min-width: 11rem;
+    padding: var(--space-1);
+    background: var(--gesso);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-panel);
+    box-shadow: 0 6px 18px -8px rgb(0 0 0 / 0.4);
+  }
+
+  .reckoning-row {
+    padding: var(--space-1) var(--space-2);
+    border: 0;
+    border-radius: var(--radius-cell);
+    background: none;
+    font: inherit;
+    font-family: var(--font-utility);
+    font-size: 13.5px;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .reckoning-row:hover {
+    background: var(--field);
+  }
+
+  /* The one in force, marked by weight and by `aria-pressed` rather than by a
+     colour: this page spends rubric on liturgical time and nothing else. */
+  .reckoning-row[aria-pressed='true'] {
+    font-weight: 700;
+  }
+
+  /* **Right-justified to the column's own margin** (author, 2026-09-02: "move
+     it right justified to the rightmost column margin"), where it stood on the
+     grid's left edge for a day. It is the calendar's own way out, so it sits
+     at the end of the calendar's last line rather than under its first column. */
+  /* `.cal-span >` because the base rule below sets `justify-self: start` and is
+     declared later in this file: at equal specificity the last one wins, and
+     this has to. */
+  .cal-span > .fullcal-open {
+    justify-self: end;
+    margin-left: auto;
+    text-align: right;
   }
 
   .cal-span {
     flex: 1 1 auto;
     min-width: 0;
-  }
-
-  /* Left-justified with the month grid above it, in the author's own words
-     ("justify the 'Full Screen Calendar' button to the left margin of the
-     right hand column along with the new small monthly calendar display").
-     The month's own left margin is the gutter its name prints into, so the
-     button lines up with the grid rather than with the name. */
-  .fullcal-open {
-    margin-left: var(--cal-gutter);
   }
 
   /* The gaps come with the peek, and taking one without the other is a bug
@@ -1462,21 +1564,34 @@
    `--button-face` and its ink are fixed rather than themed (tokens.css says
    why): the pill's job is to stand off the page, and a pill that darkened with
    the page would stop doing it. */
+/*
+ * **Words, not a pill** (author, 2026-09-02: "the ...continue reading button
+ * should not be white, it should not have a bubble. The text should be white
+ * instead on dark mode, or black on a light mode").
+ *
+ * It was a white pill from 2026-09-01, which was itself the answer to the
+ * reverse complaint — set in the paragraph's own ink it had stopped reading as
+ * a control. The answer now is contrast rather than a surface: `--gesso` is
+ * the page's ground in both themes, so its *opposite* is what the two
+ * instructions have in common — near-black on the cream, near-white on the
+ * bole. `--ground-ink` is that pair, one token read from the theme rather than
+ * two rules keyed on it (tokens.css).
+ *
+ * It keeps `z-index` and its own line-height: the faded tail still runs under
+ * it, and a phrase inside a paragraph must not open the line it sits on.
+ */
 .hero-more {
   display: inline-flex;
   align-items: baseline;
   gap: var(--space-1);
-  /* Its own line-height, so a pill inside a paragraph does not open the line
-     it sits on and push the lines above and below it apart. */
-  padding: 0.1em var(--space-2);
-  border-radius: 999px;
-  background: var(--button-face);
-  color: var(--button-face-ink);
-  box-shadow: 0 1px 2px -1px rgb(0 0 0 / 0.35);
+  padding: 0;
+  background: none;
+  color: var(--ground-ink);
+  font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   /* Over the faded tail rather than under it: the two overlap by design, and
-     the pill is the thing that must stay readable. */
+     the words are the thing that must stay readable. */
   position: relative;
   z-index: 1;
 }
@@ -1502,14 +1617,44 @@
  * document, which is what a screen reader and the keyboard read.
  */
 @media (min-width: 760px) {
-  .hero.has-media .hero-lede {
+  /*
+   * **Anchored to the card, not to the text column** (author, 2026-09-02:
+   * "move it so the bottom of the text is lining up with the bottom of the
+   * image to the left to frame the content nicely").
+   *
+   * The column itself will not do: the hero grid is `align-items: start`, so
+   * the body stops at its last word — 13 px above the icon's foot here — and
+   * "bottom" is two different lines for the two columns. Stretching the body
+   * was tried and withdrawn within the hour: `fitLede` trims the preview by
+   * measuring that column's own height against the picture's, and a column
+   * stretched to the row is always exactly as tall as the picture, so the
+   * search cut the paragraph to one line every time.
+   *
+   * The card is the honest anchor. It is the grid itself, so its foot is the
+   * taller of the two columns — the picture, on every saint the corpus has —
+   * and nothing about the measurement the trim depends on has moved.
+   */
+  .hero.has-media {
     position: relative;
   }
 
-  .hero.has-media .hero-lede .hero-more {
+  .hero.has-media .hero-body > .hero-more {
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+}
+
+/*
+ * The inline copy is the desktop's; below 760 px the preview is not drawn at
+ * all and `.hero-more-alone` used to stand in for it — until 2026-09-02 took
+ * that away from the phone too. Hidden by width rather than by living inside
+ * the hidden paragraph, which is where it used to hide: it is a child of the
+ * column now (views/daily/panel.js says why).
+ */
+@media (max-width: 759.98px) {
+  .hero-more:not(.hero-more-alone) {
+    display: none;
   }
 }
 
@@ -1545,7 +1690,6 @@
 }
 
 .hero-more:hover {
-  box-shadow: 0 2px 5px -2px rgb(0 0 0 / 0.45);
   text-decoration: underline;
   text-underline-offset: 2px;
 }

@@ -10,13 +10,14 @@
  * Cold loads and back/forward still arrive through the router.
  */
 
+import { CALENDAR_LABELS } from '../data/calendars.js';
 import { toIsoDate } from '../lib/feasts.js';
 import { gregorianToJdn } from '../lib/jdn.js';
 
 import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
-import { currentChurch, subscribeChurch } from '../lib/church.js';
+import { RECKONINGS, calendarFor, chooseReckoning, currentChurch, storedReckoning, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -136,7 +137,26 @@ export function render(el, { data, params, router }) {
                 aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
             </div>
             <div class="cal-month" hidden>
-              <span class="month-name"></span>
+              <!--
+                **The calendar's own header row** (author, 2026-09-02): the
+                month's whole name on the left margin of the column, and the
+                reckoning the page is read by opposite it on the right, which
+                is a control on a desktop and a statement everywhere else.
+
+                One row rather than two things that happen to be near each
+                other: they are the two facts about *this grid* — which month,
+                and by whose arithmetic — and the pair reads as a heading.
+              -->
+              <div class="month-head">
+                <span class="month-name"></span>
+                <div class="reckoning" data-reckoning>
+                  <button type="button" class="reckoning-btn utility" data-reckoning-btn
+                    aria-expanded="false" aria-haspopup="listbox"
+                    aria-controls="reckoning-pop"></button>
+                  <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
+                    role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
+                </div>
+              </div>
               <div class="month-days-line" aria-hidden="true">
                 <span class="peek-gap"></span>
                 <div class="month-days"></div>
@@ -328,13 +348,110 @@ export function render(el, { data, params, router }) {
   paintGate();
   buildRail(selected);
   paintChrome();
-  state.cleanups.push(wireGrainForWidth(el));
+  state.cleanups.push(wireGrainForWidth(el), wireReckoning(el));
   // The whole week the day sits in, not the day pinned to an edge: a reader
   // arriving by deep link gets the same first picture the old strip gave.
   revealSelected({ week: true });
   paintDay(panelsIn(el));
   wireDay(panelsIn(el));
   state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
+}
+
+/**
+ * The reckoning control: which calendar the page reads a fixed day by.
+ *
+ * Author, 2026-09-02: "have the ability only on desktop to click on this and
+ * in a drop down menu select between Revised Julian, Julian and any other
+ * available calendar dates."
+ *
+ * **Desktop only, in those words**, and the button is a plain statement below
+ * the breakpoint — a phone reader is told which calendar they are reading and
+ * is not offered a second calendar question beside the church one they have
+ * already answered in the header.
+ *
+ * The options are the two the registry actually distinguishes plus the way
+ * back to the church's own (`reckoningFollow`). `lib/church.js` argues what
+ * choosing one reaches and what it deliberately does not.
+ */
+function wireReckoning(el) {
+  const box = el.querySelector('[data-reckoning]');
+  const button = el.querySelector('[data-reckoning-btn]');
+  const pop = el.querySelector('[data-reckoning-pop]');
+  if (!box || !button || !pop) return null;
+  const wide = window.matchMedia('(min-width: 1024px)');
+
+  const paint = () => {
+    const chosen = storedReckoning();
+    const inForce = calendarFor(state.calendar);
+    button.textContent = CALENDAR_LABELS[inForce] ?? inForce;
+    button.setAttribute('aria-label', `${STRINGS.calendar.reckoningLabel}: ${button.textContent}`);
+    // A statement rather than a control below the breakpoint.
+    button.disabled = !wide.matches;
+    pop.innerHTML = [
+      { id: null, label: STRINGS.calendar.reckoningFollow },
+      ...RECKONINGS.map((id) => ({ id, label: CALENDAR_LABELS[id] ?? id })),
+    ]
+      .map(
+        (o) =>
+          `<button type="button" class="reckoning-row utility" data-pick="${o.id ?? ''}"
+            aria-pressed="${String(o.id === chosen)}">${esc(o.label)}</button>`,
+      )
+      .join('');
+  };
+
+  const close = () => {
+    pop.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  };
+
+  const onButton = () => {
+    if (!wide.matches) return;
+    const open = pop.hidden;
+    pop.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+  };
+
+  const onPick = (e) => {
+    const row = e.target.closest('[data-pick]');
+    if (!row) return;
+    // The empty string is the follow-my-church row: an absent choice, not a
+    // calendar named the empty string.
+    chooseReckoning(row.dataset.pick || null);
+    /*
+     * Repainted here rather than left to the church subscription: that one
+     * repaints the *page*, and this control's own word is the one thing on it
+     * that the page's repaint does not touch — the button was still saying
+     * Julian on a page that had already redrawn itself as Revised Julian.
+     */
+    paint();
+    close();
+    button.focus();
+  };
+
+  const onAway = (e) => {
+    if (!pop.hidden && !box.contains(e.target)) close();
+  };
+  const onKey = (e) => {
+    if (e.key === 'Escape' && !pop.hidden) {
+      close();
+      button.focus();
+    }
+  };
+
+  button.addEventListener('click', onButton);
+  pop.addEventListener('click', onPick);
+  document.addEventListener('pointerdown', onAway);
+  document.addEventListener('keydown', onKey);
+  wide.addEventListener('change', paint);
+  paint();
+
+  return () => {
+    button.removeEventListener('click', onButton);
+    pop.removeEventListener('click', onPick);
+    document.removeEventListener('pointerdown', onAway);
+    document.removeEventListener('keydown', onKey);
+    wide.removeEventListener('change', paint);
+  };
 }
 
 /**

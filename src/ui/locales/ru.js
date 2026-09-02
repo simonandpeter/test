@@ -54,7 +54,9 @@ export const ru = {
     prevMonth: 'Предыдущий месяц',
     nextMonth: 'Следующий месяц',
     monthView: 'Месяц',
-    fullScreen: 'Календарь на весь экран',
+    reckoningLabel: 'Календарь, по которому читается страница',
+    reckoningFollow: 'Как в моей Церкви',
+    fullScreen: 'Открыть на весь экран',
     fullClose: 'Закрыть',
     fullPeriods: 'Посты и периоды',
     fullFeasts: 'Двунадесятые праздники',
@@ -215,7 +217,7 @@ export const ru = {
     heading: 'По какому календарю вы живёте?',
     groupLabel: 'Церкви',
     calendarOf: { julian: 'Юлианский календарь', 'revised-julian': 'Новоюлианский календарь' },
-    calendarNames: { julian: 'юлианский', 'revised-julian': 'новоюлианский' },
+    calendarNames: { julian: 'юлианский', 'revised-julian': 'новоюлианский' , gregorian: 'Григорианский'},
     // The adjective alone — «Русская», the church understood — because the
     // full «Русская церковь» put the 360 px header 6 px over its width.
     names: { russian: 'Русская', romanian: 'Румынская', greek: 'Греческая', serbian: 'Сербская' },

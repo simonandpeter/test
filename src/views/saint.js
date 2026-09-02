@@ -26,6 +26,8 @@ import { saintName, typesBeside } from '../lib/honorific.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { linkSaintNames } from '../lib/cross-link.js';
+import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
+import { reducedMotion } from './daily/motion.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
@@ -107,6 +109,7 @@ export function render(el, { data, params, router, cameFrom }) {
     observePrefetch(el),
     wireBack(el, router, backTo),
     wireSide(el, { data, router, current: slug }),
+    wireSaintSwipe(el, { data, router, current: slug }),
   ];
   // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
@@ -724,6 +727,90 @@ function wireColumns(el) {
 }
 
 /**
+ * A swipe on a phone steps to the next saint in the list the reader came from
+ * (author, 2026-09-02: "on each saint profile, on mobile only, add a swipe
+ * function like daily page to swipe between saints on the current search list
+ * order from Advanced search").
+ *
+ * **The order is the Index's own snapshot**, `lastSearch().shown` — the same
+ * slugs, in the same order, that the column beside the life is built from
+ * (`searchResults`). So the gesture walks the list the reader can see rather
+ * than a second ordering that happens to agree with it, and a reader who
+ * arrived by another road walks the corpus in its own order, which is what
+ * that column shows them too.
+ *
+ * `onGrainDrag` is the same primitive the Daily page's own day swipe uses, and
+ * it is deliberately the same one: it already refuses a mouse, already gates
+ * on a threshold, and already tells a horizontal intent from a vertical scroll
+ * — three decisions that should not be made twice on one site. The card
+ * follows the finger and springs back under `SETTLE`, which is the Daily
+ * page's own bargain.
+ *
+ * Phone only, and by the same `WIDE` query the columns use: on a desktop the
+ * list is *beside* the life as a column of real targets, so a gesture would be
+ * a second way to do a thing the reader can already see how to do.
+ */
+function wireSaintSwipe(el, { data, router, current }) {
+  const card = el.querySelector('article.saint');
+  if (!card) return null;
+  const mq = window.matchMedia(WIDE);
+
+  const order = searchResults(data).map((item) => item.slug);
+  const at = order.indexOf(current);
+
+  const springBack = () => {
+    if (reducedMotion()) {
+      card.style.transition = '';
+      card.style.transform = '';
+      return;
+    }
+    card.style.transition = 'transform var(--dur-slot) var(--ease)';
+    requestAnimationFrame(() => {
+      card.style.transform = 'translateX(0)';
+    });
+    card.addEventListener(
+      'transitionend',
+      () => {
+        card.style.transition = '';
+        card.style.transform = '';
+      },
+      { once: true },
+    );
+  };
+
+  /** The neighbour in that direction, or null at either end of the list. */
+  const neighbour = (step) => {
+    if (at < 0) return null;
+    const next = order[at + step];
+    return next && next !== current ? next : null;
+  };
+
+  return onGrainDrag(card, {
+    begin() {
+      if (mq.matches) return;
+      card.style.transition = 'none';
+    },
+    move(dx) {
+      if (mq.matches) return;
+      card.style.transform = `translateX(${dx}px)`;
+    },
+    end(dx) {
+      if (mq.matches) return;
+      // A drag left is forward, which is the direction the Daily page's own
+      // swipe reads and the direction a page of text is turned.
+      const slug = Math.abs(dx) < SETTLE ? null : neighbour(dx < 0 ? 1 : -1);
+      if (!slug) {
+        springBack();
+        return;
+      }
+      card.style.transition = '';
+      card.style.transform = '';
+      router.navigate(`/saints/${slug}`);
+    },
+  });
+}
+
+/**
  * The × closes the page back to wherever the reader opened it from. Opened
  * from the calendar or the map, it returns there — the Index keeps its own
  * record of where it was and restores itself when asked to (views/saints.js),
@@ -1067,9 +1154,30 @@ function feastLine(feast, church, year, router) {
    * changes nothing, which is the author's own second case.
    */
   const iso = `${String(d.year).padStart(4, '0')}-${String(d.month).padStart(2, '0')}-${String(d.day).padStart(2, '0')}`;
+  /*
+   * **The civil date says which reckoning it is** (author, 2026-09-02: "just
+   * state which falls on '28 January 2026 (Gregorian)' and that always stays
+   * the same").
+   *
+   * The line carries two dates in two calendars and named only one of them,
+   * which is the ambiguity: "15 January (Julian), which falls on 28 January
+   * 2026" leaves the second date's reckoning to be inferred. It is the civil
+   * one, always — the conversion is arithmetic from what the source states and
+   * does not move with anything the reader chooses, which is exactly why it is
+   * worth naming.
+   *
+   * Where the two agree the line repeats itself — "15 January (Revised
+   * Julian), which falls on 15 January 2026 (Gregorian)" — and that is not a
+   * fault to design around (author, same message: "repetition is not a
+   * problem"). Those two dates being the same *is* the finding for a New
+   * Calendar church, and a line that hid it would be hiding the thing the
+   * register exists to show.
+   */
+  const civil = STRINGS.church.calendarNames?.gregorian;
+  const shown = gregorianFmt(new Date(Date.UTC(d.year, d.month - 1, d.day)));
   const gregorian =
     `<a class="feast-day" href="${router.href(`/calendar/${iso}`)}" data-feast-day="${iso}"` +
-    ` data-church="${esc(church.id)}">${esc(gregorianFmt(new Date(Date.UTC(d.year, d.month - 1, d.day))))}</a>`;
+    ` data-church="${esc(church.id)}">${esc(shown)}</a>${civil ? ` (${esc(civil)})` : ''}`;
   return fill(STRINGS.saint.feastThisYear, { feast: esc(own), gregorian, year });
 }
 

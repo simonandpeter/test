@@ -555,7 +555,7 @@ test('the week and the month both take a swipe, in the same direction', async ({
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await swipe(page, '.cal-month', -120);
-  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
   await swipe(page, '.cal-month', 120);
   await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 
@@ -867,7 +867,7 @@ test('a month travels sideways with its own edges, and its day names do not', as
   expect(during.sidePeeks).toEqual(['5', '12', '19', '26', '7', '14', '21', '28']);
   expect(during.livePeeks).toEqual(['2', '9', '16', '23', '30', '5', '12', '19', '26']);
 
-  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   // The names stayed exactly where they were while the grid moved under them.
   expect(await names()).toEqual(before);
@@ -1071,7 +1071,7 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
   const six = await page.locator('.month-body').boundingBox();
 
   await page.locator('[data-mstep="1"]').click();
-  await expect(page.locator('.month-name')).toHaveText('Sept 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
   const held = await page.locator('.month-body').evaluate((el) => el.style.height);
   expect(parseFloat(held)).toBeGreaterThan(0);
 
@@ -4447,7 +4447,16 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
    * edge — it ends where the sentence ends, as the last words of a
    * paragraph do.
    */
-  expect(m.inLede, 'not part of the preview').toBe(true);
+  /*
+   * **Out of the paragraph and onto the card, 2026-09-02** (author: "move it so
+   * the bottom of the text is lining up with the bottom of the image to the
+   * left"). It could not both stay inside the preview box and reach the
+   * picture's foot: that box has `overflow: hidden` for its own line clamp, so
+   * anything positioned inside it is clipped to the words. The claim that
+   * survives is the one the reader sees — it ends where the icon ends — and it
+   * is asserted below rather than here.
+   */
+  expect(m.inLede, 'still nested inside the clipped preview box').toBe(false);
   expect(m.link.top, 'not below the dates').toBeGreaterThan(m.dates.bottom - 1);
   // And never past the foot of the picture, which is the rule the trim
   // exists for: the words end where the image does.
@@ -4810,7 +4819,7 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
 
   // Under the week, not beside it.
   const open = page.locator('[data-fullcal]');
-  await expect(open).toHaveText(/Full Screen Calendar/i);
+  await expect(open).toHaveText(/Open Fullscreen/i);
   const under = await page.evaluate(() => {
     const week = document.querySelector('.cal-week').getBoundingClientRect();
     const button = document.querySelector('[data-fullcal]').getBoundingClientRect();
@@ -4961,32 +4970,54 @@ test('the way into the life is a white button with the life fading out under it'
   const seen = await page.evaluate(() => {
     const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
     const tail = document.querySelector('.hero-lede-tail');
+    // The readable half of the preview, which the faded pair follows.
+    const head = document.querySelector('[data-hero-lede]');
     const cs = getComputedStyle(link);
     const media = document.querySelector('.hero-media').getBoundingClientRect();
     return {
       background: cs.backgroundColor,
+      shadow: cs.boxShadow,
       tail: tail ? tail.textContent.trim() : '',
       tailLines: tail
         ? Math.round(tail.getBoundingClientRect().height / parseFloat(getComputedStyle(tail).lineHeight))
         : 0,
       masked: tail ? getComputedStyle(tail).maskImage : 'none',
       /*
-       * The tail *starts* above the button and runs past it. It used to start
-       * below it outright — the button sat on the last readable line and the
-       * two faded lines ran on underneath — until 2026-09-02 moved the button
-       * down onto the last of those lines (author: "move it down 2 lines").
-       * What survives of the original claim is that the life goes on *past*
-       * the button rather than stopping at it, which is the tail's own foot
-       * being at or below the button's.
+       * **What is left of "the life goes on under the button".**
+       *
+       * It has been rewritten twice in two days as the button moved, and the
+       * claim has to move with it or it stops meaning anything. It sat at the
+       * end of the last readable line with the faded pair running on beneath
+       * (2026-09-01); it moved down onto the last faded line (2026-09-02,
+       * morning); and it now sits at the foot of the *card*, level with the
+       * icon beside it (2026-09-02, afternoon: "move it so the bottom of the
+       * text is lining up with the bottom of the image to the left").
+       *
+       * Through all three the thing worth pinning is the same and is about the
+       * *paragraph*, not the button: the preview does not stop dead at the
+       * last readable word — there are faded lines after it, and they are what
+       * say the life carries on. So this measures the tail against the
+       * readable text it follows rather than against a control that has been
+       * three places this week.
        */
-      below: tail && link ? tail.getBoundingClientRect().bottom >= link.getBoundingClientRect().bottom - 1 : false,
+      below: tail && head ? tail.getBoundingClientRect().top >= head.getBoundingClientRect().top - 1 : false,
       // And still inside the picture's height, which the rule before this one
       // asked for and this must not have broken.
       fits: document.querySelector('.hero-body').getBoundingClientRect().bottom <= media.bottom + 2,
     };
   });
 
-  expect(seen.background, 'the way in is not a white button').toBe('rgb(255, 255, 255)');
+  /*
+   * **The pill went on 2026-09-02** (author: "the ...continue reading button
+   * should not be white, it should not have a bubble. The text should be white
+   * instead on dark mode, or black on a light mode"), reversing the white
+   * surface this line was written for the day before. What the instruction
+   * before it was really after — that the way in reads as a control rather
+   * than as the last words of a sentence — is carried by contrast now: the
+   * ground's own opposite, against a paragraph set in `--ink-soft`.
+   */
+  expect(seen.background, 'the way in still wears a surface').toBe('rgba(0, 0, 0, 0)');
+  expect(seen.shadow, 'the way in still wears a shadow').toBe('none');
   expect(seen.tail.length, 'the life does not go on under the button').toBeGreaterThan(10);
   expect(seen.tailLines, 'the fading tail is not two lines').toBe(2);
   expect(seen.masked, 'the tail does not fade').toContain('gradient');
@@ -5168,14 +5199,21 @@ test('a desktop shows the month alone, across the column, with no toggle', async
       spare: Math.round(month.left - controls.left),
       gridLeft: Math.round(grid.left),
       fullLeft: Math.round(full.left),
+      fullRight: Math.round(full.right),
+      monthRight: Math.round(month.right),
       fullBelow: full.top >= month.bottom - 1,
     };
   });
   // No column held open for the button that is gone.
   expect(m.spare, 'a column is still being kept for the old toggle').toBeLessThan(4);
-  // The button lines up with the grid it belongs to rather than with the
-  // column's own edge.
-  expect(Math.abs(m.fullLeft - m.gridLeft), 'Full Screen Calendar is not on the grid margin').toBeLessThan(6);
+  /*
+   * **Right-justified since 2026-09-02** (author: "move it right justified to
+   * the rightmost column margin and change to 'Open Fullscreen'"), where the
+   * instruction of the day before had put it on the grid's left margin. It is
+   * the calendar's own way out, so it sits at the end of the calendar's last
+   * line.
+   */
+  expect(Math.abs(m.fullRight - m.monthRight), 'Open Fullscreen is not on the column margin').toBeLessThan(6);
   expect(m.fullBelow, 'the button is not under the calendar').toBe(true);
 
   // And a phone keeps both the week and the button that swaps them.
@@ -5224,4 +5262,106 @@ test('a register card crops to the hero own limits', async ({ page }) => {
    * green-by-absence this suite has been caught by before.
    */
   expect(shapes.some((s) => s.file > 1.62), 'premise: nothing on this day needed cropping').toBe(true);
+});
+
+/* ---- the round of 2026-09-02, night ------------------------------------- */
+
+test('the calendar names its own reckoning, and the reader may change it', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "opposite it, right justified, on the same row, add
+   * text that says 'Revised Julian'. Have the ability only on desktop to click
+   * on this and in a drop down menu select between Revised Julian, Julian and
+   * any other available calendar dates. Make sure all dates on the website
+   * then change to match this selected calendar date."
+   *
+   * 14 September is the Exaltation of the Cross, which is the cleanest proof
+   * available that the *page* moved rather than a label: on the Revised Julian
+   * it falls on the civil 14th and brings its own strict fast, and on the
+   * Julian it does not — the reckoning is the whole difference.
+   */
+  await ready(page, { church: 'russian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const button = page.locator('[data-reckoning-btn]');
+  // The Russian calendar is the Julian one, and the control says so before
+  // anybody has chosen anything.
+  await expect(button).toHaveText('Julian');
+
+  const head = await page.evaluate(() => {
+    const name = document.querySelector('.month-name').getBoundingClientRect();
+    const rec = document.querySelector('[data-reckoning]').getBoundingClientRect();
+    const month = document.querySelector('.cal-month').getBoundingClientRect();
+    return {
+      sameRow: Math.abs(name.top - rec.top) < 20,
+      nameOnMargin: Math.round(name.left - month.left),
+      recOnMargin: Math.round(month.right - rec.right),
+      fullName: document.querySelector('.month-name').textContent.trim(),
+    };
+  });
+  expect(head.sameRow, 'the name and the reckoning are not on one row').toBe(true);
+  expect(head.nameOnMargin, 'the month name is offset from the column margin').toBeLessThan(4);
+  expect(head.recOnMargin, 'the reckoning is not on the right margin').toBeLessThan(4);
+  expect(head.fullName, 'the month is abbreviated on a desktop').toContain('September');
+
+  // What the day says before the change.
+  const fast = () => page.locator('.cal-liturgy, [data-fast-chip], .fast-chip').first().textContent();
+  const before = await page.locator('.cal').textContent();
+  expect(before, 'premise: the Julian reckoning already keeps the Exaltation here').not.toContain('Exaltation');
+
+  await button.click();
+  await expect(page.locator('[data-reckoning-pop] [data-pick]')).toHaveCount(3);
+  await page.locator('[data-reckoning-pop] [data-pick="revised-julian"]').click();
+
+  // The control tells the truth about itself, and the day has moved with it.
+  await expect(button).toHaveText('Revised Julian');
+  await expect.poll(async () => (await page.locator('.cal').textContent()).includes('Exaltation')).toBe(true);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).reckoning)).toBe('revised-julian');
+
+  // And the way back is a choice of its own rather than a third calendar.
+  await button.click();
+  await page.locator('[data-reckoning-pop] [data-pick=""]').click();
+  await expect(button).toHaveText('Julian');
+});
+
+test('a phone is told the reckoning without being offered the choice', async ({ page }) => {
+  // "Only on desktop" (author, 2026-09-02). A phone reader has already
+  // answered the church question in the header; a second calendar control
+  // beside it would be the same question asked twice.
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await expect(page.locator('[data-reckoning]')).toBeHidden();
+});
+
+test('the civil date in a veneration row says it is the Gregorian one', async ({ page }) => {
+  /*
+   * Author, 2026-09-02: "just state which falls on '28 January 2026
+   * (Gregorian)' and that always stays the same."
+   *
+   * St Paul is the example the instruction was written about: all three
+   * churches keep him on 15 January in their own calendar, so the Russian row
+   * lands on the civil 28th and the other two on the civil 15th. The second
+   * date is arithmetic from what the source states and does not move with
+   * anything the reader chooses, which is why naming it is worth a word.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/saints/paul-of-thebes', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
+
+  const russian = page.locator('[data-veneration] .att-feast').first();
+  await expect(russian).toContainText('15 January (Julian)');
+  await expect(russian).toContainText('28 January 2026 (Gregorian)');
+
+  /*
+   * And the row where the two agree repeats itself, which the author has
+   * already said is not a fault: those two dates being the same *is* the
+   * finding for a New Calendar church.
+   */
+  await page.locator('[data-reveal]').click();
+  const romanian = page.locator('.attestations-other .att-feast').first();
+  await expect(romanian).toContainText('15 January (Revised Julian)');
+  await expect(romanian).toContainText('15 January 2026 (Gregorian)');
 });

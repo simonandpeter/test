@@ -9,7 +9,7 @@ import { onGrainDrag, SETTLE } from '../../ui/grain-drag.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor } from './entries.js';
-import { dayFmt, monthFmt, utc, weekdayFmt } from './format.js';
+import { dayFmt, monthFmt, monthLongFmt, utc, weekdayFmt } from './format.js';
 import { reducedMotion } from './motion.js';
 import { state } from './state.js';
 
@@ -781,7 +781,13 @@ export function paintMonth() {
 
   // The name prints in the gutter beside the grid rather than above it, so it
   // costs the row no height (author, 2026-08-21).
-  el.querySelector('.month-name').textContent = monthFmt(utc(first));
+  /*
+   * The whole name past the breakpoint, where the header has its own row, and
+   * the abbreviation below it, where the name still shares the gutter with the
+   * grid (author, 2026-09-02: "display the full month name").
+   */
+  const wide = window.matchMedia('(min-width: 1024px)').matches;
+  el.querySelector('.month-name').textContent = (wide ? monthLongFmt : monthFmt)(utc(first));
 
   // They say nothing a date's own label does not — the button below each of
   // them reads "Friday, 30 January 2026" in full.

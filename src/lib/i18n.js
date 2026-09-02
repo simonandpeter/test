@@ -239,7 +239,21 @@ export function formatDate(options, date) {
     .map((part) => {
       if (part.type !== 'weekday' && part.type !== 'month') return part.value;
       const bare = part.value.replace(/\.$/, '');
-      return bare.charAt(0).toLocaleUpperCase(languageTag()) + bare.slice(1);
+      const cased = bare.charAt(0).toLocaleUpperCase(languageTag()) + bare.slice(1);
+      /*
+       * **English abbreviates to three letters** (author, 2026-09-02: "Do Sep,
+       * not Sept").
+       *
+       * `en-GB` gives "Sept" for September alone — it is the one month whose
+       * standard British abbreviation is four letters — and every other month
+       * is already three. So this is one month's spelling rather than a rule,
+       * and it is applied only to English: «Авг», Sept. and Σεπ are the other
+       * packs' own abbreviations and are not this instruction's business.
+       */
+      if (part.type === 'month' && currentLanguage() === 'en' && options.month === 'short') {
+        return cased.slice(0, 3);
+      }
+      return cased;
     })
     .join('');
 }

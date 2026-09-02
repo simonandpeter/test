@@ -16,6 +16,7 @@
  */
 
 import { CHURCHES_BY_ID } from '../data/churches.js';
+import { calendarFor } from './church.js';
 import { pascha } from './computus.js';
 import { fromJdn, gregorianToJdn } from './jdn.js';
 
@@ -155,7 +156,7 @@ const between = (x, a, b) => x >= a && x <= b;
 export function fasting(iso, churchId) {
   const church = CHURCHES_BY_ID[churchId];
   const computus = church?.paschal_computus ?? 'julian';
-  const calendar = church?.default_calendar ?? 'julian';
+  const calendar = calendarFor(churchId);
   const { jdn, pascha: p, next } = paschaAround(iso, computus);
   const d = jdn - p;
   const t = next - jdn;
@@ -299,7 +300,7 @@ const GREAT_FIXED = {
  */
 export function greatFeast(iso, churchId) {
   const church = CHURCHES_BY_ID[churchId];
-  const calendar = church?.default_calendar ?? 'julian';
+  const calendar = calendarFor(churchId);
   const own = fromJdn(calendar, jdnOf(parse(iso)));
   return GREAT_FIXED[md(own)] ?? null;
 }
