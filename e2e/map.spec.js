@@ -78,7 +78,7 @@ const zoomedToCeiling = async (page) => {
     await settledZoom(page);
   }
   await expect(page.locator('[data-zoom="in"]'), 'the map never reached its ceiling').toBeDisabled();
-  const scale = Number((await page.locator('[data-zoom-level]').textContent()).replace('×', ''));
+  const scale = await zoomScale(page);
   expect(scale, 'the ceiling came in under the desktop one').toBeGreaterThanOrEqual(240);
   return scale;
 };
@@ -269,6 +269,10 @@ test('the map is the window, and holds that size before the coastline arrives', 
 /* ---- zoom and pan (2026-08-29) ----------------------------------------- */
 
 const zoomLevel = (page) => page.locator('[data-zoom-level]').textContent();
+
+/** The same readout as a number. The `×` is the chrome's, not the scale's, and
+ *  three tests were stripping it by hand before this existed. */
+const zoomScale = async (page) => Number((await zoomLevel(page)).replace('×', ''));
 
 /**
  * A cheap fingerprint of what the canvas is actually showing.
@@ -553,7 +557,7 @@ test('panning past the desktop ceiling does not snap the zoom back to it', async
   await page.goto(MAP, { waitUntil: 'networkidle' });
   const before = await zoomedToCeiling(page);
   await page.locator('[data-map]').press('ArrowLeft');
-  const after = Number((await page.locator('[data-zoom-level]').textContent()).replace('×', ''));
+  const after = await zoomScale(page);
   expect(after, 'a pan changed the zoom level').toEqual(before);
 });
 
@@ -2617,9 +2621,24 @@ test('the map opens on the coarse coastline and fetches the fine one only past 5
    * one-way swap would fail: keeping the fine tier once fetched would carry
    * 60,605 points back into a picture of the whole world, which is the frame
    * cost the author asked to be rid of.
+   *
+   * **This loop settles between presses for the same reason the one above
+   * does**, which it did not until 2026-09-04. Eased zooms arrived in 7ce2195
+   * and `settledZoom` came with them, but only the way in got it — so the way
+   * out kept firing twelve presses into each other's flights, each
+   * re-targeting from wherever the view had reached rather than from where
+   * the last one aimed, and landed on whatever scale the machine's timing
+   * happened to produce. That is marginal against `DETAIL_AT` at 5: four
+   * effective presses out of a flight that started near 40x leaves ~6x, still
+   * the fine tier, and the test reads it as a one-way swap that never came
+   * back. It failed 2 runs in 5 at mobile-360 and once on CI before this
+   * line was added; the product behaviour it was blaming is the documented
+   * one, and the assertion below is about the tier swapping back, not about
+   * how far twelve hurried clicks travel.
    */
   for (let i = 0; i < 12 && !(await page.locator('[data-zoom="out"]').isDisabled()); i += 1) {
     await page.locator('[data-zoom="out"]').click();
+    await settledZoom(page);
   }
   await expect(canvas).toHaveAttribute('data-detail', 'coarse');
 
@@ -2630,4 +2649,146 @@ test('the map opens on the coarse coastline and fetches the fine one only past 5
     return { coarse: count(c.__land), fine: c.__landFine ? count(c.__landFine) : null };
   });
   expect(points.fine / points.coarse, 'the two tiers are not far enough apart to be worth having').toBeGreaterThan(4);
+});
+
+test('the land keeps its own ink when a terrain tile never arrives', async ({ page }) => {
+  /*
+   * **The flat ink fill is the land itself, not a stand-in for the tile grid**
+   * (2026-09-04). The whole-world wash that used to sit between the two is
+   * gone, and the first pass at removing it carried the wash's own "draw the
+   * fill only while the layer above it is under full strength" guard across to
+   * `tileStrength` — which inverted the one case that mattered, because the old
+   * expression (`1 - tileFade`) still fell *below* 1 at full tile strength and
+   * so still drew this, where `tileStrength` reaches exactly 1 and does not.
+   * Past `TILE_FADE_END` the base stopped being drawn at all: measured at 40×
+   * over Constantinople, mean canvas ink fell from 98.8 to 70.5, a fifth of the
+   * map's ink gone at one zoom threshold, which is precisely the "all the
+   * terrain suddenly goes lighter" report that removing the wash was meant to
+   * end.
+   *
+   * This pins the sharper half of that bug — the half a reader on a bad network
+   * meets rather than one watching for a step. `tilesReady` counts an *errored*
+   * tile as settled (deliberately: an errored tile is a resolved question, and
+   * waiting on it forever would trade a flash for a stuck picture), so a tile
+   * that 404s still drives the fade to full. With the guard in place that left
+   * the continent carrying neither a tile nor a fill, drawn as open sea. The
+   * comment on the fill claims the opposite in as many words — "a slow network
+   * reads as *plainer*, never as broken" — so this is that sentence, asserted.
+   *
+   * Aborting the requests is the only way to reach the state deterministically;
+   * an ordinary run never has a failing tile, which is exactly why the bug
+   * shipped green.
+   */
+  /*
+   * Refused in the page's own `fetch` rather than through `page.route`:
+   * `loadTerrainChannel` fetches a tile itself, and this suite runs with the
+   * service worker registered, whose requests `page.route` does not see. A
+   * route pattern here matched nothing at all and the test passed against the
+   * bug for that reason alone — the counter below is what makes that failure
+   * mode loud rather than green.
+   */
+  await page.addInitScript(() => {
+    window.__tilesRefused = 0;
+    const real = window.fetch.bind(window);
+    window.fetch = (input, init) => {
+      const url = typeof input === 'string' ? input : (input && input.url) || '';
+      if (/\/t-\d+-\d+-(green|relief)(-hr)?[-.]/.test(url)) {
+        window.__tilesRefused += 1;
+        return Promise.reject(new Error('tile refused by the test'));
+      }
+      return real(input, init);
+    };
+  });
+
+  /*
+   * The same flight twice, on two pages: one refusing every tile, one allowed
+   * them. Comparing the pair is what keeps this test honest about a threshold
+   * — canvas ink depends on the geography under the frame, the window width
+   * and how many dots and halos the corpus puts on screen, so any absolute
+   * number would be calibrated to one city at one width and would drift the
+   * next time any of the three moved. A ratio between two runs of the same
+   * flight holds whatever the picture is. The second page is made from the
+   * same context so it does *not* inherit the init script above.
+   */
+  const flyToConstantinople = async (p) => {
+    await p.goto(MAP, { waitUntil: 'networkidle' });
+    const c = p.locator('[data-map]');
+    await expect(c).toHaveAttribute('data-land', 'ok');
+    /*
+     * Flown to a named place rather than zoomed in place: the picture has to
+     * be over ground for "is the land inked" to mean anything, and
+     * `defaultView` follows the corpus's own centre of mass, which is not a
+     * promise about what fills the frame this far in.
+     */
+    await searchBox(p).fill('constantin');
+    await expect(searchRows(p).first()).toContainText('Constantinople');
+    await searchBox(p).press('Enter');
+    await settledZoom(p);
+    return c;
+  };
+
+  /** Land coverage and how dark it is, as fractions of the whole canvas. */
+  const measure = (c) =>
+    c.evaluate((el) => {
+      const { data } = el.getContext('2d').getImageData(0, 0, el.width, el.height);
+      let covered = 0;
+      let sum = 0;
+      for (let i = 3; i < data.length; i += 4) {
+        sum += data[i];
+        // Past the coastline's own antialiasing: a real fill, not a soft edge.
+        if (data[i] > 40) covered += 1;
+      }
+      return { covered: covered / (data.length / 4), mean: sum / (data.length / 4) };
+    });
+
+  const canvas = await flyToConstantinople(page);
+
+  /*
+   * **Wait for the refusals, then force a fresh frame** — and both halves are
+   * load-bearing, which an earlier version of this test found out by passing
+   * against the bug it was written for. `ensureTerrainTiles`'s error path
+   * records the failure and does *not* repaint (unlike its success path), so
+   * the canvas still holds the frame drawn while the tiles were merely
+   * pending — and while they are pending `tilesReady` is false, which pins
+   * the fade at 0 and draws the fill regardless. Measuring there measures the
+   * stale frame and reads green whatever the code under test does. A reader
+   * meets the real state the moment they pan or zoom again, which is the
+   * ordinary thing to do when a picture looks wrong; one more zoom press is
+   * that, and it repaints with every tile now settled as an error.
+   */
+  await expect
+    .poll(() => page.evaluate(() => window.__tilesRefused), { message: 'no tile was ever asked for' })
+    .toBeGreaterThan(0);
+  await canvas.press('+');
+  await settledZoom(page);
+  const refused = await measure(canvas);
+
+  const clean = await page.context().newPage();
+  const cleanCanvas = await flyToConstantinople(clean);
+  await cleanCanvas.press('+');
+  await settledZoom(clean);
+
+  /*
+   * The premise, asserted rather than assumed: the allowed run has to be
+   * *darker* than the refused one, which is only true if the tile layer is
+   * actually contributing ink at this zoom. That is what "past the fade"
+   * means, said in the units the test measures — so widening `TILE_FADE_END`
+   * past this flight's own scale fails here, loudly, instead of quietly
+   * leaving the test passing while no longer exercising its subject. Polled
+   * because the tiles are a real fetch and decode.
+   */
+  await expect
+    .poll(async () => (await measure(cleanCanvas)).mean, {
+      message: 'the tile layer adds no ink here, so this flight is not past the fade',
+    })
+    .toBeGreaterThan(refused.mean * 1.1);
+
+  // And the thing under test: losing every tile costs the land its terrain,
+  // never its own fill. Same flight, so the same land is under the frame.
+  const allowed = await measure(cleanCanvas);
+  expect(
+    refused.covered,
+    'the land is drawn as open sea when its terrain tiles fail',
+  ).toBeGreaterThan(allowed.covered * 0.9);
+  await clean.close();
 });

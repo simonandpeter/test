@@ -276,11 +276,30 @@ Visibility is a plain rectangle test in projected space (`visibleTiles`,
 `lib/map-terrain.js`): a lon/lat cell's projected corners are still
 axis-aligned, since `project`'s `x` depends only on `lon` and `y` only on
 `lat`, so no real reprojection is needed to ask "does this tile overlap the
-screen." Tiles crossfade in as the flat fill fades out (both driven by the
-one `zoomFade`), and a tile that has not arrived yet is simply not drawn —
-the flat fill (drawn whenever the tile grid is below full strength) is what
-shows through the gap, so a slow network reads as *plainer*, never as
-broken. **`TILE_FADE_START` sits at 8** (2026-09-04, author: "have them fade
+screen." Tiles fade in over the flat fill as `zoomFade` rises, and a tile
+that has not arrived yet is simply not drawn — the flat fill is what shows
+through the gap, so a slow network reads as *plainer*, never as broken.
+
+**The flat fill is the land itself and is drawn unconditionally; the tile
+grid is ink added over it** (2026-09-04, and this cost a real bug the same
+day). The wash-era code drew the fill only while the terrain layer above it
+was under full strength, which was harmless then because that expression
+(`1 - tileFade`) still fell below 1 at full tile strength. Collapsing it to
+`tileStrength` on the wash's removal inverted exactly that case: past
+`TILE_FADE_END` the base stopped being drawn, and measured at 40× over
+Constantinople mean canvas ink fell from **98.8 to 70.5** — a fifth of the
+map's ink gone at one zoom threshold, which is the "all the terrain goes
+lighter" report the wash removal existed to end, reintroduced by its own fix.
+Sharper still: `tilesReady` counts an *errored* tile as settled, so a tile
+that 404s drove the fade to full and left that cell with neither tile nor
+fill — the continent drawn as open sea. `the land keeps its own ink when a
+terrain tile never arrives` (map.spec.js) pins it by refusing tile fetches
+and comparing coverage against an allowed run; **it took three attempts to
+become a real test** — `page.route` never fires for these (the tiles go
+through `fetch`, and the service worker bypasses route interception), and the
+tile error path records the failure without repainting, so the first two
+versions measured a stale frame and passed against the bug they were written
+for. **`TILE_FADE_START` sits at 8** (2026-09-04, author: "have them fade
 into view at 8x zoom not 2x as on mobile its a bit laggy currently") —
 starting the tile grid's own fetch-and-decode work this late means a phone
 panning at a modest zoom is never asking several tiles to arrive at once for
@@ -288,6 +307,31 @@ a layer it is barely stopped on — **and `TILE_FADE_END` was widened well past
 its old 12** the same day the wash went, so the grid still eases in over many
 zoom levels rather than the four the old wash-to-tile crossfade used, with no
 second raster underneath any more to hide a quicker rise behind.
+**`TILE_FADE_END` (20) must stay below `HR_FADE_START` (24)** — nothing
+enforces it but `fadeBetween`'s own comment, and crossing it runs the
+flat→50m and 50m→10m handovers at once, which is the three-layer
+cross-dissolve dip this map has already paid for twice.
+
+**Per-frame housekeeping in the paint path** (2026-09-04 cleanup, all of it
+measured against the same picture rather than guessed): `visibleTiles`
+filters the whole 72-cell manifest and was being run twice a frame — once
+inside `ensureTerrainTiles` and once in `paintCanvas` — so it is computed
+once now and passed in (`ensureTerrainTiles` no longer takes `frame` at all).
+The land outline is traced **once** into a `Path2D` shared by the fill and
+the tile layer's clip, rather than walking the fine tier's ~1,400 rings twice
+a frame; `tracePath` grew an optional sink argument for that, since `Path2D`
+takes the same `moveTo`/`lineTo`/`closePath` calls a context does. An earlier
+attempt reused the context's *current* path implicitly instead, which is
+equivalent right up until the fill stops running — backing the fill out
+clipped every tile away, so the sink is explicit on purpose. Each tile's two
+corners were also being `project`ed twice (once per axis). `fadeBetween`
+replaces the two hand-written clamped ramps. **`data-terrain` is gone**: it
+was written and never read, never cleared once set — so it latched to `ok`
+and still said `ok` at 1× with no terrain on screen — and cost a scan of
+every visible tile per frame to maintain, which is this file's own "ask what
+an instrument would look like if it were doing nothing" rule failing in
+place. `tintFor` takes one object now, both callers having passed the tile
+twice since the wash's caller went.
 
 **A third tier, 10m, for the ground this corpus actually stands on**
 (2026-09-04): `make-terrain.py` also regenerates whichever cells fall within
@@ -933,10 +977,28 @@ rehearsal on this spec knows it is not theirs.
     nearest declared ancestor value, which is the intersection the browser
     performs. Or drive the gesture through CDP `Input.dispatchTouchEvent`,
     which goes through hit-testing and does respect it.
+12. **A loop of zoom presses without `settledZoom` between them measures the
+    machine, not the map.** Presses ease since 7ce2195 and a press mid-flight
+    re-targets from wherever the view has reached, so a tight loop travels a
+    timing-dependent distance. `map.spec.js`'s zoom-*out* loop was missed when
+    that helper was added to the zoom-*in* loop beside it, and sat at 2 failures
+    in 5 at mobile-360 — a real flake blamed first on CI load, then on a
+    terrain change, before the diff that introduced it was found. Any assertion
+    landing near a threshold (`DETAIL_AT` at 5, here) will read as a product
+    bug.
+13. **`page.route` does not see a service worker's requests**, and this suite
+    runs with the worker registered. A route pattern that matches nothing
+    fails *open*: the test passes having intercepted nothing. Count the
+    interceptions and assert the count, or stub `window.fetch` in an init
+    script instead.
 
 **Every fix gets a browser test, backed out and confirmed to fail before being
 restored** — against a *rate* where the subject is load-sensitive. That applies
-to a tool as much as a fix.
+to a tool as much as a fix. **Backing out is not optional and not a formality**:
+on 2026-09-04 two successive versions of one terrain test passed with the fix
+removed — the first intercepted nothing (trap 13), the second measured a frame
+painted before the state under test existed, because the tile error path
+records a failure without repainting. Both looked like careful tests.
 
 **When you add an instrument, ask what it would look like if it were doing
 nothing.** Four things in one day read as evidence and were not.

@@ -1,6 +1,6 @@
 /**
- * The map's terrain wash and its tile grid, turned from `make-terrain.py`'s
- * plain data channels into ink — kept out of `views/map.js` on purpose.
+ * The map's terrain tile grid, turned from `make-terrain.py`'s plain data
+ * channels into ink — kept out of `views/map.js` on purpose.
  *
  * `views/map.js` is statically imported by `main.js`, so anything living in
  * it ships in the app's own entry bundle on every route, not only `/map`.
@@ -104,37 +104,22 @@ const RELIEF_FLOOR = 52;
 const RELIEF_GAIN = 0.65;
 const RELIEF_LIFT_DAMP = 0.12;
 
-/**
- * **A tile once read lighter than the whole-world wash for the same real
- * ground — measured, not eyeballed, and traced to the wash's own resampling
- * rather than to the tile** (2026-09-04, first pass; corrected same day; the
- * wash itself removed entire later the same day, see `views/map.js`'s
- * `TILE_FADE_START`). The wash decimated the native data roughly 10x to fit
- * a whole-world image light enough to ship; nearest-neighbour at that ratio
- * was a genuine point sample, one lucky-or-unlucky native pixel standing in
- * for a ten-pixel-wide patch, and which way it erred was noise. The first
- * attempt at a fix left that noise in the wash and patched around it here
- * instead — a flat alpha bias, `TILE_DARKEN_BIAS`, added to every tile
- * regardless of what the wash actually read at that spot. It shipped, the
- * author reported the gap was still there, and decoding both rasters' actual
- * bytes at several real cities (`rome`, `athens`, `istanbul`, `jerusalem`,
- * `belgrade`, `bucharest`) rather than reading a screenshot showed why: at
- * every one of them, tile alpha *without* any bias already sat within
- * 0.001–0.057 of the wash's own value, in both themes — a bias calibrated
- * for a noise-driven gap that the honest fix (`make-terrain.py`'s area
- * average, a true mean of every native pixel a wash pixel covered rather
- * than one sample of it) had already closed. Adding `TILE_DARKEN_BIAS` on
- * top did not restore a match; it manufactured a new 0.08–0.14 mismatch in
- * the *other* direction. Removed rather than retuned — and moot as of the
- * wash's own removal, kept here as the record of why a tile's alpha is not
- * biased against anything.
+/*
+ * **A tile's alpha carries no correction term, and that is a finding rather
+ * than an omission** (2026-09-04). A `TILE_DARKEN_BIAS` constant stood here
+ * for one build, to close a gap against the whole-world wash that no longer
+ * exists; decoding both rasters' own bytes at six real cities showed the
+ * unbiased tile already sat within 0.001–0.057 of the wash, and the constant
+ * manufactured a fresh 0.08–0.14 mismatch the other way. It was removed, and
+ * the wash it was measured against was removed after it. CLAUDE.md's Map
+ * section carries the whole account; what matters here is that a tile is
+ * drawn at the alpha `buildTint` computes and nothing else.
  */
 
 /** One ink colour, alpha modulated per pixel by land-cover and relief — see
- *  the constants above. Takes a plain `{ green, relief, w, h }` channel pair
- *  rather than reading the world wash off a particular object, so the same
- *  function builds the tint for a tile too — a tile's data is the same
- *  shape, just one lon/lat cell of it (`make-terrain.py`). Rebuilt only when
+ *  the constants above. Takes a plain `{ green, relief, w, h }` channel pair,
+ *  which is the shape of one lon/lat cell of `make-terrain.py`'s output and
+ *  so of every tile at either tier. Rebuilt only when
  *  the theme changes (`tintFor` caches by ink colour), never per frame: a
  *  Uint8ClampedArray loop over a whole raster is real work to repeat sixty
  *  times a second and only the palette or the data can ever change what it
@@ -167,17 +152,20 @@ function buildTint(channels, inkHex, isDark) {
   return tint;
 }
 
-/** Cached on whatever object carries the channels (the canvas itself for the
- *  world wash, a tile's own state for a tile) — by ink colour and theme, so
- *  a paint that has not crossed a theme toggle reuses the same canvas rather
- *  than rebuilding it. */
-export function tintFor(store, channels, inkHex, isDark) {
+/** Cached on the tile's own state entry — by ink colour and theme, so a paint
+ *  that has not crossed a theme toggle reuses the same canvas rather than
+ *  rebuilding it. This took the store and the channels as two arguments until
+ *  2026-09-04, for a world wash that cached on the canvas while passing a
+ *  channel object assembled on the spot; with that caller gone both callers
+ *  passed the same tile entry twice, which is an invitation to wonder when
+ *  they might differ. They cannot: a tile's state entry *is* its channels. */
+export function tintFor(tile, inkHex, isDark) {
   const key = `${inkHex}|${isDark}`;
-  if (store.__tintKey !== key) {
-    store.__tintKey = key;
-    store.__tintCanvas = buildTint(channels, inkHex, isDark);
+  if (tile.__tintKey !== key) {
+    tile.__tintKey = key;
+    tile.__tintCanvas = buildTint(tile, inkHex, isDark);
   }
-  return store.__tintCanvas;
+  return tile.__tintCanvas;
 }
 
 /**

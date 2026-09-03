@@ -2583,9 +2583,9 @@ function ensureFine(canvas, cards) {
  * `lib/map-terrain.js`, loaded once and kept — dynamically, and deliberately
  * apart from the static imports at the top of this file. `views/map.js` is
  * itself statically imported by `main.js`, so anything living directly in it
- * ships in the app's own entry bundle on *every* route; the terrain wash and
- * its tile grid are real weight (a raster decoder, a per-pixel tint builder,
- * a tile index) that only `/map` has any use for, and them living here once
+ * ships in the app's own entry bundle on *every* route; the terrain tile grid
+ * is real weight (a raster decoder, a per-pixel tint builder, a tile index)
+ * that only `/map` has any use for, and it living here once
  * cost every route's first paint about 150ms on a throttled connection —
  * measured on CI, not guessed at. `land.js`/`water.js` avoid this by being
  * pure data; this is the same move for the *code* that reads terrain data.
@@ -2643,6 +2643,26 @@ const HR_FADE_START = 24;
 const HR_FADE_END = 30;
 
 /**
+ * How far a tier that fades in between two zoom levels has got, 0 to 1. Both
+ * terrain handovers are this same ramp and were written out longhand twice
+ * before they shared it, which is one line each of arithmetic and two places
+ * to edit the day either becomes eased rather than linear — the map has
+ * already made that move twice elsewhere, for the labels and for a zoom press.
+ *
+ * **The two ranges must not overlap, and nothing but this note enforces it.**
+ * `TILE_FADE_END` (20) sits below `HR_FADE_START` (24) so that at most one
+ * handover is ever running: cross-dissolving three layers at once is the dip
+ * this map has already paid for twice — once on the coastline tiers, once on
+ * the wash the 50m grid replaced — because a pixel only one layer covers is
+ * only ever as dark as that layer's own partial alpha. Widening
+ * `TILE_FADE_END` past 24 reopens it, and would want `HR_FADE_START` moved
+ * out with it rather than a fourth fade laid over the other two.
+ */
+function fadeBetween(scale, start, end) {
+  return Math.max(0, Math.min(1, (scale - start) / (end - start)));
+}
+
+/**
  * The tile grid past `DETAIL_AT`, fetched only for cells the reader's own
  * view actually overlaps — one further step of the same "a reader who never
  * opens the map never pays for it" reasoning `ensureFine` already applies to
@@ -2650,8 +2670,14 @@ const HR_FADE_END = 30;
  * (`make-terrain.py`); `visibleTiles` (lib) projects them itself (`project`,
  * the map's one copy of the projection) rather than trusting a second,
  * pre-baked copy.
+ *
+ * `visible` is passed in rather than asked for again: the paint that calls
+ * this has already worked out which cells the view overlaps, and that answer
+ * costs a filter over the whole manifest. On the first frame — before the
+ * index has loaded — there is nothing to have computed yet, and this returns
+ * having only started that load.
  */
-function ensureTerrainTiles(canvas, cards, frame) {
+function ensureTerrainTiles(canvas, cards, visible) {
   if (!canvas.__tileMeta) {
     if (canvas.__tileMetaPending) return;
     canvas.__tileMetaPending = loadTerrainLib()
@@ -2669,7 +2695,7 @@ function ensureTerrainTiles(canvas, cards, frame) {
   }
 
   const state = canvas.__tileState;
-  for (const tile of terrainLib.visibleTiles(canvas.__tileMeta, view, frame)) {
+  for (const tile of visible) {
     const key = `${tile.col}-${tile.row}`;
     if (!state.has(key)) {
       state.set(key, { status: 'pending' });
@@ -2691,10 +2717,18 @@ function ensureTerrainTiles(canvas, cards, frame) {
     /*
      * The 10m pair, only for a cell `make-terrain.py` actually generated one
      * for (`tile.hr`) and only once the reader is far enough in that it would
-     * ever be drawn (`HR_FADE_START`) — fetched a beat early, the same
-     * reasoning `TILE_FADE_START` gives the 50m grid, so the pair has
-     * arrived by the time the crossfade needs it rather than popping in
-     * mid-fade.
+     * ever be drawn (`HR_FADE_START`).
+     *
+     * **This tier has no readiness gate, unlike the 50m grid below it.** The
+     * fetch starts at the same scale the crossfade starts, so an HR pair that
+     * arrives mid-fade is drawn from whatever `hrStrength` has reached by then
+     * rather than from 0 — where `tilesReady` holds the 50m grid's own fade at
+     * 0 until every visible cell has settled. It reads as a tile sharpening
+     * rather than as a dip, because both tiers are the same ground at two
+     * densities and the outgoing one keeps `1 - hrStrength` of the alpha the
+     * incoming one takes; that is why this has been left alone rather than
+     * given a second gate. Worth knowing before the two are ever described as
+     * following the same rule — they do not.
      */
     if (tile.hr && view.scale >= HR_FADE_START) {
       const hrKey = `${key}-hr`;
@@ -2846,8 +2880,16 @@ function paintCanvas(canvas, cards) {
   /** One path, every kept ring or line as its own subpath — one `fill`/
    *  `stroke` call for a whole dataset rather than one per shape, which is
    *  its own cost `ctx.stroke()` alone used to pay 878 times a paint for
-   *  the rivers before this. */
-  const tracePath = (shapes, closed) => {
+   *  the rivers before this.
+   *
+   *  `sink` is the context's own current path by default and a `Path2D` when
+   *  a caller needs the same outline more than once in a frame — the two take
+   *  the identical `moveTo`/`lineTo`/`closePath` calls, so this needs no
+   *  branch to serve both. The land is that caller: it is filled and then
+   *  clipped to, and tracing it twice means walking every one of the fine
+   *  tier's ~1,400 rings twice to test visibility before drawing any of
+   *  them. */
+  const tracePath = (shapes, closed, sink = ctx) => {
     let any = false;
     for (const shape of shapes) {
       if (!boxVisible(bboxOf(shape))) continue;
@@ -2856,10 +2898,10 @@ function paintCanvas(canvas, cards) {
         const p = place(shape[i], shape[i + 1], frame);
         const x = p.x * w;
         const y = p.y * h;
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
+        if (i === 0) sink.moveTo(x, y);
+        else sink.lineTo(x, y);
       }
-      if (closed) ctx.closePath();
+      if (closed) sink.closePath();
     }
     return any;
   };
@@ -2961,7 +3003,7 @@ function paintCanvas(canvas, cards) {
      * plain two-tier fade: flat ink below `TILE_FADE_START`, the tile grid
      * above `TILE_FADE_END`, a crossfade of the two between them.
      */
-    const zoomFade = Math.max(0, Math.min(1, (view.scale - TILE_FADE_START) / (TILE_FADE_END - TILE_FADE_START)));
+    const zoomFade = fadeBetween(view.scale, TILE_FADE_START, TILE_FADE_END);
 
     /*
      * **The flat fill does not fade out from under ground the tile has not
@@ -2984,78 +3026,96 @@ function paintCanvas(canvas, cards) {
      * full until the incoming one is ready" rule as the coastline crossfade
      * a few dozen lines above, one layer down.
      */
-    if (zoomFade > 0) ensureTerrainTiles(canvas, () => cards, frame);
+    /*
+     * `visibleTiles` filters the whole 72-cell manifest and projects two
+     * corners of each, so it is computed *once* a frame and handed to
+     * `ensureTerrainTiles` rather than recomputed inside it — the two used to
+     * ask the same question of the same `view` and `frame` a few lines apart
+     * and throw one answer away, which is 72 filter steps and a few hundred
+     * short-lived objects per frame of every drag past `TILE_FADE_START`, on
+     * the phones that constant exists to protect.
+     */
     const visible = zoomFade > 0 && terrainLib && canvas.__tileMeta ? terrainLib.visibleTiles(canvas.__tileMeta, view, frame) : [];
-    const tilesReady =
-      visible.length === 0 ||
-      visible.every((t) => {
-        const status = canvas.__tileState?.get(`${t.col}-${t.row}`)?.status;
-        return status === 'loaded' || status === 'error';
-      });
+    if (zoomFade > 0) ensureTerrainTiles(canvas, () => cards, visible);
+    // `[].every()` is already true, so an empty `visible` needs no case of its own.
+    const tilesReady = visible.every((t) => {
+      const status = canvas.__tileState?.get(`${t.col}-${t.row}`)?.status;
+      return status === 'loaded' || status === 'error';
+    });
     const tileStrength = tilesReady ? zoomFade : 0;
 
-    if (tileStrength < 1) {
+    /*
+     * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
+     * gesso and 1.31:1 on the field — deliberately, because it divides text and
+     * is not meant to be looked at — and a whole continent drawn in it was a
+     * map you had to hunt for. This is quiet enough to stay a ground for the
+     * dots and dark enough that the coastlines read as land.
+     *
+     * It takes no AA floor: the land is not text, and nothing on this page is
+     * carried by the coastline alone — every point is a row in the list below.
+     *
+     * **Unconditional: this is the land, and the tile grid is a wash over it**
+     * — not a layer that replaces it. It was guarded on the terrain layer not
+     * being at full strength back when the wash was the thing on top, where
+     * that guard was harmless because the old expression (`1 - tileFade`, with
+     * the wash loaded) still fell below 1 at full tile strength and so still
+     * drew this. Carrying the guard over to `tileStrength` on 2026-09-04
+     * inverted exactly that case: past `TILE_FADE_END` the base vanished, every
+     * landmass stepped about a quarter lighter in one frame at 20x — the very
+     * "all the terrain goes lighter" symptom removing the wash was meant to end
+     * — and a cell whose tile 404s had nothing left to draw at all, so the
+     * continent read as open sea there. A tile is ink *added* to this fill, at
+     * whatever alpha the fade and the tile's own data give it; the fill itself
+     * is never a function of the fade.
+     */
+    /*
+     * Traced once and kept: the fill below and the tile layer's own clip are
+     * the same outline, and walking the fine tier's rings twice a frame to
+     * build it twice is real work at exactly the zoom the tiles live at.
+     */
+    const landPath = new Path2D();
+    tracePath(land, true, landPath);
+
+    ctx.fillStyle = hexWithAlpha(inkSoft, 0.3 * detailT);
+    ctx.fill(landPath);
+
+    if (tileStrength > 0 && visible.length && detailT > 0) {
       /*
-       * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
-       * gesso and 1.31:1 on the field — deliberately, because it divides text and
-       * is not meant to be looked at — and a whole continent drawn in it was a
-       * map you had to hunt for. This is quiet enough to stay a ground for the
-       * dots and dark enough that the coastlines read as land.
-       *
-       * It takes no AA floor: the land is not text, and nothing on this page is
-       * carried by the coastline alone — every point is a row in the list below.
-       *
-       * Also the tile grid's own base and its fallback: drawn whenever the
-       * grid is not at full strength — faded, absent, or not yet arrived —
-       * so there is never a gap between the two, only a crossfade or a flat
-       * map, never an empty one.
+       * **The 10m tier crossfades in over the 50m one, per tile** — only
+       * `hr: true` cells (`make-terrain.py`, within 1000 km of a located
+       * saint) ever have a pair to draw, so every other cell keeps reading
+       * the 50m grid alone at every zoom this map reaches.
        */
-      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3 * detailT);
-      ctx.beginPath();
-      tracePath(land, true);
-      ctx.fill();
-    }
+      const hrStrength = fadeBetween(view.scale, HR_FADE_START, HR_FADE_END);
+      // The same outline the fill used, passed explicitly rather than left in
+      // the context's current path for this to inherit.
+      ctx.save();
+      ctx.clip(landPath);
+      const isDark = document.documentElement.classList.contains('dark');
+      const base = tileStrength * detailT;
+      for (const tile of visible) {
+        const entry = canvas.__tileState.get(`${tile.col}-${tile.row}`);
+        const hrEntry = tile.hr ? canvas.__tileState.get(`${tile.col}-${tile.row}-hr`) : null;
+        const hrReady = hrEntry?.status === 'loaded';
+        const a = project(tile.lon0, tile.lat0);
+        const b = project(tile.lon1, tile.lat1);
+        const topLeft = toScreen(view, a.x, a.y, frame);
+        const bottomRight = toScreen(view, b.x, b.y, frame);
+        const dx = topLeft.x * w;
+        const dy = topLeft.y * h;
+        const dw = (bottomRight.x - topLeft.x) * w;
+        const dh = (bottomRight.y - topLeft.y) * h;
 
-    if (tileStrength > 0) {
-      if (visible.length && canvas.__tileState && detailT > 0) {
-        /*
-         * **The 10m tier crossfades in over the 50m one, per tile** — only
-         * `hr: true` cells (`make-terrain.py`, within 1000 km of a located
-         * saint) ever have a pair to draw, so every other cell keeps reading
-         * the 50m grid alone at every zoom this map reaches.
-         */
-        const hrStrength = Math.max(0, Math.min(1, (view.scale - HR_FADE_START) / (HR_FADE_END - HR_FADE_START)));
-        ctx.save();
-        ctx.beginPath();
-        tracePath(land, true);
-        ctx.clip();
-        const isDark = document.documentElement.classList.contains('dark');
-        const base = tileStrength * detailT;
-        for (const tile of visible) {
-          const entry = canvas.__tileState.get(`${tile.col}-${tile.row}`);
-          const hrEntry = tile.hr ? canvas.__tileState.get(`${tile.col}-${tile.row}-hr`) : null;
-          const hrReady = hrEntry?.status === 'loaded';
-          const topLeft = toScreen(view, project(tile.lon0, tile.lat0).x, project(tile.lon0, tile.lat0).y, frame);
-          const bottomRight = toScreen(view, project(tile.lon1, tile.lat1).x, project(tile.lon1, tile.lat1).y, frame);
-          const dx = topLeft.x * w;
-          const dy = topLeft.y * h;
-          const dw = (bottomRight.x - topLeft.x) * w;
-          const dh = (bottomRight.y - topLeft.y) * h;
-
-          if (entry?.status === 'loaded' && (!hrReady || hrStrength < 1)) {
-            ctx.globalAlpha = base * (hrReady ? 1 - hrStrength : 1);
-            ctx.drawImage(terrainLib.tintFor(entry, entry, inkSoft, isDark), dx, dy, dw, dh);
-          }
-          if (hrReady && hrStrength > 0) {
-            ctx.globalAlpha = base * hrStrength;
-            ctx.drawImage(terrainLib.tintFor(hrEntry, hrEntry, inkSoft, isDark), dx, dy, dw, dh);
-          }
+        if (entry?.status === 'loaded' && (!hrReady || hrStrength < 1)) {
+          ctx.globalAlpha = base * (hrReady ? 1 - hrStrength : 1);
+          ctx.drawImage(terrainLib.tintFor(entry, inkSoft, isDark), dx, dy, dw, dh);
         }
-        ctx.restore();
-        if (visible.some((t) => canvas.__tileState.get(`${t.col}-${t.row}`)?.status === 'loaded')) {
-          canvas.dataset.terrain = 'ok';
+        if (hrReady && hrStrength > 0) {
+          ctx.globalAlpha = base * hrStrength;
+          ctx.drawImage(terrainLib.tintFor(hrEntry, inkSoft, isDark), dx, dy, dw, dh);
         }
       }
+      ctx.restore();
     }
   }
 
