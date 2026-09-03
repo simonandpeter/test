@@ -1122,7 +1122,7 @@ export const STRINGS = {
          attribution at all, so this is a courtesy and says so - and the
          sourcing section is where a reader who wants to know what the
          picture is made of will look. */
-      map: 'The map’s coastline, rivers and lakes are Natural Earth, which is public domain and asks for no credit. It is named here because a reader is owed the provenance of a picture as much as of a date.',
+      map: 'The map’s coastline, rivers, lakes and terrain shading are Natural Earth, which is public domain and asks for no credit. It is named here because a reader is owed the provenance of a picture as much as of a date.',
     },
     /*
      * Export / Import (brief §11, Session 8's surviving third, 2026-08-29).

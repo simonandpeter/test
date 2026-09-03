@@ -545,7 +545,7 @@ export const ro = {
       lede: 'Fiecare pomenire este luată din calendarul sau sinaxarul publicat de Biserica însăși, iar pagina fiecărui sfânt trimite la pagina de unde a fost citită. Acestea sunt publicațiile pe care culegerea le citează astăzi.',
       fromHost: '{count} de la {host}',
       lives: 'Viețile sunt scrise aici după izvoarele pe care le numește fiecare pagină. Sunt doar în engleză: ele sunt parafrază, iar traducerea automată a unei vieți ar preface o afirmație cu izvor despre un om într-una fără izvor.',
-      map: 'Linia țărmului, râurile și lacurile de pe hartă sunt Natural Earth: domeniu public, care nu cere nicio mențiune. Este numit aici fiindcă cititorului i se cuvine proveniența unei imagini la fel ca proveniența unei date.',
+      map: 'Linia țărmului, râurile, lacurile și relieful de pe hartă sunt Natural Earth: domeniu public, care nu cere nicio mențiune. Este numit aici fiindcă cititorului i se cuvine proveniența unei imagini la fel ca proveniența unei date.',
     },
     data: {
       heading: 'Datele tale - portabile',

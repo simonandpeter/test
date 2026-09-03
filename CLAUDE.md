@@ -199,6 +199,32 @@ properly, so the two moved together rather than the zoom outrunning the data
 again. Combined the pair is now ~433 kB gzipped, up from 211 kB — a second
 deliberate weight-for-precision trade, on top of the one 110m→50m already
 made.
+
+**A terrain wash sits under the coastline** (author, 2026-09-03):
+`src/data/terrain-green.webp`/`terrain-relief.webp`, two grayscale rasters
+from Natural Earth's own 50m shaded relief and hypsometric-tint sources,
+pre-projected into `lib/mercator.js`'s Mercator space by
+`scripts/make-terrain.py` so the canvas only ever scales and translates them,
+never reprojects. They ship as *data*, not a picture — one channel is a
+green↔sand index read from the colour raster's own hue, the other is the
+relief raster's luminance — because the map's whole palette is two tokens
+(`--gesso`, `--ink-soft`) and a baked-colour asset would be exactly the
+hard-coded colour `tokens.css` calls a defect. `buildTerrainTint` (map.js)
+turns the pair into ink at a per-pixel alpha, cached per theme and rebuilt
+only on a theme change, never per frame. **Green darkens the ink and sand
+lightens it, in both themes** — which end of the pair does that flips per
+theme (`TERRAIN_A_LO`/`_HI`), because ink is the dark token against gesso in
+the light theme and the light token against gesso in the dark one: one alpha
+curve driven by greenness alone read backwards in the dark theme, desert
+came out dark and forest came out light, before the two constants were split
+by theme rather than shared. The wash is deliberately subtle — a small,
+indicative difference between green and sand, not a coloured map — while the
+relief channel keeps real ridgeline definition; both were tuned by eye
+against the palette, not computed from a formula with a stated target.
+Fetched off the boot path, after the coastline's own first paint, and falls
+back to the old flat `inkSoft` fill if it never arrives — a flat map, not an
+empty one.
+
 **The page is the map and its timeline, nothing else** (author, 2026-08-30
 for the reading — lede, facets, Places, tray — and 2026-08-31 for the footer
 that survived it). Natural Earth requires no attribution, so the coastline
@@ -777,6 +803,9 @@ nothing.** Four things in one day read as evidence and were not.
   died on the road out of it.
 - `node scripts/make-land.mjs` — regenerates the map's coastline. By hand only;
   the output is committed so the build never needs `world-atlas`.
+- `python scripts/make-terrain.py` — regenerates the map's terrain wash
+  (`src/data/terrain-green.webp`, `terrain-relief.webp`). By hand only, output
+  committed; see the Map section below and the script's own header.
 
 ## Workflow
 

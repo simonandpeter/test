@@ -2558,6 +2558,152 @@ function ensureFine(canvas, cards) {
     });
 }
 
+/**
+ * Decodes one channel of `make-terrain.py`'s output into a plain byte array —
+ * grayscale WebP, so R, G and B all carry the same value and only R is kept.
+ * A canvas is the decoder here (`createImageBitmap` then `drawImage` then
+ * `getImageData`); there is no lighter way to ask the browser to turn image
+ * bytes into pixels without one.
+ */
+async function loadTerrainChannel(url) {
+  const res = await fetch(url);
+  const bitmap = await createImageBitmap(await res.blob());
+  const off = document.createElement('canvas');
+  off.width = bitmap.width;
+  off.height = bitmap.height;
+  const octx = off.getContext('2d');
+  octx.drawImage(bitmap, 0, 0);
+  const { data } = octx.getImageData(0, 0, bitmap.width, bitmap.height);
+  const channel = new Uint8ClampedArray(bitmap.width * bitmap.height);
+  for (let i = 0; i < channel.length; i += 1) channel[i] = data[i * 4];
+  return { data: channel, w: bitmap.width, h: bitmap.height };
+}
+
+/**
+ * The terrain layer's two data channels, fetched once and kept for the rest
+ * of the visit — never blocking the first paint, the same reasoning
+ * `ensureFine` applies to the coastline's own fine tier. A reader who never
+ * opens the map never pays for this at all; a reader who does sees the flat
+ * ink fill land already drew, then the terrain wash a beat later.
+ */
+function ensureTerrain(canvas, cards) {
+  if (canvas.__terrainPending) return;
+  const greenUrl = new URL('../data/terrain-green.webp', import.meta.url).href;
+  const reliefUrl = new URL('../data/terrain-relief.webp', import.meta.url).href;
+  canvas.__terrainPending = Promise.all([loadTerrainChannel(greenUrl), loadTerrainChannel(reliefUrl)])
+    .then(([green, relief]) => {
+      if (!canvas.isConnected) return;
+      canvas.__terrainGreen = green.data;
+      canvas.__terrainRelief = relief.data;
+      canvas.__terrainW = green.w;
+      canvas.__terrainH = green.h;
+      paintCanvas(canvas, cards());
+    })
+    .catch(() => {
+      // The flat fill land already has is a whole map; a terrain layer that
+      // never arrives is quieter, not broken.
+      canvas.__terrainPending = null;
+    });
+}
+
+/** A `#rrggbb` token to `[r, g, b]` — `hexWithAlpha` parses the same shape
+ *  for a CSS string; this returns numbers instead, for per-pixel arithmetic. */
+function hexToRgb(hex) {
+  const m = /^#([0-9a-f]{6})$/i.exec(hex.trim());
+  if (!m) return [92, 84, 77]; // ink-soft's own light-theme value, as a floor
+  const n = parseInt(m[1], 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+
+/*
+ * The green<->sand index (`terrain-green.webp`) and the relief raster's own
+ * luminance (`terrain-relief.webp`) already carry the whole terrain read —
+ * see `scripts/make-terrain.py`'s own header for what each means and why
+ * they ship separately. Turning them into ink is this file's job precisely
+ * so the colour itself keeps living in `tokens.css` and nowhere else: this
+ * asset never needs regenerating when the palette is retuned, only when
+ * `lib/mercator.js`'s own `MAX_LAT` changes.
+ *
+ * Green darkens the ink, sand lightens it — **which end `green` points at
+ * flips with the theme rather than being a fixed alpha the theme happens to
+ * invert** (2026-09-03): ink is the *dark* token against a light ground in
+ * the light theme and the *light* token against a dark ground in the dark
+ * one, so one alpha curve driven by greenness read as correct in the light
+ * theme and backwards in the dark one — desert came out dark, forest came
+ * out light. `TERRAIN_A_LO`/`_HI` are keyed by theme so each one drives the
+ * alpha from whichever quality — greenness or its opposite — actually deepens
+ * the ink in that theme, and the pair is deliberately asymmetric (the dark
+ * theme's own floor sits lower) rather than a mirror of the light theme's,
+ * because a straight inversion overshot: forest read paler than the ground
+ * one side and desert nearly blew out the other before this was tuned by eye
+ * against the palette.
+ */
+const TERRAIN_A_LO = { light: 0.3, dark: 0.22 };
+const TERRAIN_A_HI = { light: 0.62, dark: 0.62 };
+
+/**
+ * The relief channel is read as a *multiplier* on the terrain alpha above,
+ * not a second additive term — a shadowed slope should read as "this ground,
+ * darker" rather than "this ground, plus a fixed wash", or a green valley and
+ * a green ridge would end up the same ink regardless of the relief under
+ * them. `RELIEF_BASELINE` is the source raster's own flat-ground value (grass
+ * and bare rock both sit near it); below `RELIEF_FLOOR` is the deepest shadow
+ * the 50m tier carries. The lift past baseline is damped rather than matched
+ * one-for-one — a lit slope reading as strongly *less* ink than its own
+ * terrain tone looked like a rendering seam, not relief, at the ridgelines.
+ */
+const RELIEF_BASELINE = 205;
+const RELIEF_FLOOR = 52;
+const RELIEF_GAIN = 0.65;
+const RELIEF_LIFT_DAMP = 0.12;
+
+/** One ink colour, alpha modulated per pixel by land-cover and relief — see
+ *  the constants above. Rebuilt only when the theme changes (`terrainTintFor`
+ *  caches by ink colour), never per frame: a Uint8ClampedArray loop over a
+ *  1536-wide raster is real work to repeat sixty times a second and only the
+ *  palette or the data can ever change what it produces. */
+function buildTerrainTint(canvas, inkHex, isDark) {
+  const w = canvas.__terrainW;
+  const h = canvas.__terrainH;
+  const green = canvas.__terrainGreen;
+  const relief = canvas.__terrainRelief;
+  const [ir, ig, ib] = hexToRgb(inkHex);
+  const aLo = isDark ? TERRAIN_A_LO.dark : TERRAIN_A_LO.light;
+  const aHi = isDark ? TERRAIN_A_HI.dark : TERRAIN_A_HI.light;
+  const out = new Uint8ClampedArray(w * h * 4);
+  for (let i = 0; i < w * h; i += 1) {
+    const g = green[i] / 255;
+    const driver = isDark ? 1 - g : g;
+    let alpha = aLo + (aHi - aLo) * driver;
+    const rel = relief[i];
+    const relLow = Math.max(0, Math.min(1, (RELIEF_BASELINE - rel) / (RELIEF_BASELINE - RELIEF_FLOOR)));
+    const relHigh = Math.max(0, Math.min(1, (rel - RELIEF_BASELINE) / (255 - RELIEF_BASELINE)));
+    alpha *= 1 + RELIEF_GAIN * relLow - RELIEF_LIFT_DAMP * relHigh;
+    alpha = Math.max(0.04, Math.min(0.92, alpha));
+    const o = i * 4;
+    out[o] = ir;
+    out[o + 1] = ig;
+    out[o + 2] = ib;
+    out[o + 3] = Math.round(alpha * 255);
+  }
+  const tint = document.createElement('canvas');
+  tint.width = w;
+  tint.height = h;
+  tint.getContext('2d').putImageData(new ImageData(out, w, h), 0, 0);
+  return tint;
+}
+
+/** Cached by ink colour and theme, so a paint that has not crossed a theme
+ *  toggle reuses the same canvas rather than rebuilding it. */
+function terrainTintFor(canvas, inkHex, isDark) {
+  const key = `${inkHex}|${isDark}`;
+  if (canvas.__terrainTintKey !== key) {
+    canvas.__terrainTintKey = key;
+    canvas.__terrainTintCanvas = buildTerrainTint(canvas, inkHex, isDark);
+  }
+  return canvas.__terrainTintCanvas;
+}
+
 async function drawWhenReady(el, canvas, cards) {
   // `cards` is a getter: the coastline may land after the reader has already
   // dragged the timeline, and the paint must draw the set they are looking at.
@@ -2722,20 +2868,54 @@ function paintCanvas(canvas, cards) {
 
   const land = fine ? canvas.__landFine : canvas.__land;
   if (land) {
-    /*
-     * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
-     * gesso and 1.31:1 on the field — deliberately, because it divides text and
-     * is not meant to be looked at — and a whole continent drawn in it was a
-     * map you had to hunt for. This is quiet enough to stay a ground for the
-     * dots and dark enough that the coastlines read as land.
-     *
-     * It takes no AA floor: the land is not text, and nothing on this page is
-     * carried by the coastline alone — every point is a row in the list below.
-     */
-    ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
-    ctx.beginPath();
-    tracePath(land, true);
-    ctx.fill();
+    if (!canvas.__terrainGreen && !canvas.__terrainPending) ensureTerrain(canvas, () => cards);
+
+    if (canvas.__terrainGreen) {
+      /*
+       * The terrain wash, clipped to the land path exactly the way the flat
+       * fill below it was — the difference is only what fills that clip.
+       * `toScreen` on the image's own two corners is the whole projection:
+       * the raster was pre-projected into the same Mercator fraction space
+       * `project(lon, lat)` returns (`make-terrain.py`), so drawing it needs
+       * no per-pixel reprojection here, only the pan/zoom scale-and-translate
+       * every dot on the page already goes through.
+       */
+      const isDark = document.documentElement.classList.contains('dark');
+      const tint = terrainTintFor(canvas, inkSoft, isDark);
+      ctx.save();
+      ctx.beginPath();
+      tracePath(land, true);
+      ctx.clip();
+      const topLeft = toScreen(view, 0, 0, frame);
+      const bottomRight = toScreen(view, 1, 1, frame);
+      ctx.drawImage(
+        tint,
+        topLeft.x * w,
+        topLeft.y * h,
+        (bottomRight.x - topLeft.x) * w,
+        (bottomRight.y - topLeft.y) * h,
+      );
+      ctx.restore();
+      canvas.dataset.terrain = 'ok';
+    } else {
+      /*
+       * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
+       * gesso and 1.31:1 on the field — deliberately, because it divides text and
+       * is not meant to be looked at — and a whole continent drawn in it was a
+       * map you had to hunt for. This is quiet enough to stay a ground for the
+       * dots and dark enough that the coastlines read as land.
+       *
+       * It takes no AA floor: the land is not text, and nothing on this page is
+       * carried by the coastline alone — every point is a row in the list below.
+       *
+       * This is also the fallback while the terrain wash above has not
+       * arrived yet, or if it never does — a flat map, not an empty one.
+       */
+      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
+      ctx.beginPath();
+      tracePath(land, true);
+      ctx.fill();
+    }
   }
 
   const water = fine ? canvas.__waterFine : canvas.__water;
