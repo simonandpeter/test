@@ -4701,6 +4701,23 @@ editorial and rights decision rather than a session's** — the house rule
 against bulk-generating corpus data applies here with more force than anywhere,
 because a text is longer than a life and a wrong licence is not a typo.
 
+## Session 12 — a crowded mark's own list: parked (author, 2026-09-03)
+
+For a coordinate several saints share — Nicomedia's twenty-four martyrs is
+the standing example — the map today answers "who else is here" by cycling:
+a second press on the mark steps to the next member, one at a time
+(`mergeDots`'s own `members`, `views/map.js`). The author asked what a press
+on a *crowded* mark opening a scrollable list beside it, every member named
+at once, would look like instead. A rough HTML mockup was built and shown —
+the same `members` array already holds everything such a list would read, so
+this is new UI over existing data, not new data — and the author set it
+aside rather than choosing: whether it replaces the cycle or sits beside it,
+whether opening the list also selects a member or only browsing does, and
+whether small clusters (two or three) still want the cycle rather than a
+list built for two dozen, are all open. **Parked, not started — revisit
+when the map's other open questions (the terrain wash below) have settled,
+since both touch the same crowded-mark reading.**
+
 ## Deploy change, from Session 1 onward
 
 `data/manifest.json` is generated and gitignored, built by CI. The site stops
