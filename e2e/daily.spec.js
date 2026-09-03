@@ -1820,7 +1820,10 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Efeseni 1:7-17');
 
   await page.goto('/saints/babylas-of-antioch', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Sfințitul Mucenic Vavila, Episcopul Antiohiei');
+  // The office comes off the localised name too, now (2026-09-04,
+  // lib/saint-name.js) — "Episcopul Antiohiei" restated what card.office
+  // already says, in English, on the line below.
+  await expect(page.locator('h1.saint-name')).toHaveText('Sfințitul Mucenic Vavila');
   /*
    * The life itself is English and the page says so first, in Romanian
    * (author, 2026-08-26: "The saint profile pages do not have russian, greek,
