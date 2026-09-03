@@ -209,12 +209,12 @@ never reprojects. They ship as *data*, not a picture — one channel is a
 green↔sand index read from the colour raster's own hue, the other is the
 relief raster's luminance — because the map's whole palette is two tokens
 (`--gesso`, `--ink-soft`) and a baked-colour asset would be exactly the
-hard-coded colour `tokens.css` calls a defect. `buildTerrainTint` (map.js)
-turns the pair into ink at a per-pixel alpha, cached per theme and rebuilt
-only on a theme change, never per frame. **Green darkens the ink and sand
-lightens it, in both themes** — which end of the pair does that flips per
-theme (`TERRAIN_A_LO`/`_HI`), because ink is the dark token against gesso in
-the light theme and the light token against gesso in the dark one: one alpha
+hard-coded colour `tokens.css` calls a defect. `buildTint` (map.js) turns a
+channel pair into ink at a per-pixel alpha, cached per theme and rebuilt only
+on a theme change, never per frame. **Green darkens the ink and sand lightens
+it, in both themes** — which end of the pair does that flips per theme
+(`TERRAIN_A_LO`/`_HI`), because ink is the dark token against gesso in the
+light theme and the light token against gesso in the dark one: one alpha
 curve driven by greenness alone read backwards in the dark theme, desert
 came out dark and forest came out light, before the two constants were split
 by theme rather than shared. The wash is deliberately subtle — a small,
@@ -223,7 +223,28 @@ relief channel keeps real ridgeline definition; both were tuned by eye
 against the palette, not computed from a formula with a stated target.
 Fetched off the boot path, after the coastline's own first paint, and falls
 back to the old flat `inkSoft` fill if it never arrives — a flat map, not an
-empty one.
+empty one. **It fades out again as the reader zooms in** (`TERRAIN_FADE_START`
+2, `TERRAIN_FADE_END` = `DETAIL_AT`) rather than stretching one whole-world
+raster past what it holds — a single image light enough to ship is only a
+few pixels per degree, and asking it to cover one saint's own town read as
+soft mush rather than ground.
+
+**Past that same fade, a tile grid takes over** (author, 2026-09-03,
+`ensureTerrainTiles`/`visibleTileList`): `make-terrain.py` also cuts the
+*native* 50m resolution (30 px/degree — the same density `land.js`/`water.js`
+already draw the coastline at) into a `TILE_COLS`x`TILE_ROWS` grid of lon/lat
+cells (`src/data/terrain-tiles/`, indexed by `terrain-tiles.js`'s plain
+bounds), and the map fetches only the cells the reader's own view overlaps —
+one further step of the "a reader who never opens the map never pays for it"
+reasoning `ensureFine` already applies to the fine coastline. Visibility is a
+plain rectangle test in projected space (`visibleTileList`): a lon/lat cell's
+projected corners are still axis-aligned, since `project`'s `x` depends only
+on `lon` and `y` only on `lat`, so no real reprojection is needed to ask
+"does this tile overlap the screen." Tiles crossfade in as the wash fades out
+(`tileStrength = 1 - terrainStrength`, both driven by the one `zoomFade`), and
+a tile that has not arrived yet is simply not drawn — the flat fill (drawn
+whenever the wash is below full strength) is what shows through the gap, so
+a slow network reads as *plainer*, never as broken.
 
 **The page is the map and its timeline, nothing else** (author, 2026-08-30
 for the reading — lede, facets, Places, tray — and 2026-08-31 for the footer
@@ -804,8 +825,10 @@ nothing.** Four things in one day read as evidence and were not.
 - `node scripts/make-land.mjs` — regenerates the map's coastline. By hand only;
   the output is committed so the build never needs `world-atlas`.
 - `python scripts/make-terrain.py` — regenerates the map's terrain wash
-  (`src/data/terrain-green.webp`, `terrain-relief.webp`). By hand only, output
+  (`src/data/terrain-green.webp`, `terrain-relief.webp`) and its tile grid
+  (`src/data/terrain-tiles/`, `terrain-tiles.js`). By hand only, output
   committed; see the Map section below and the script's own header.
+  `--skip-tiles` for a quick wash-only rebuild.
 
 ## Workflow
 

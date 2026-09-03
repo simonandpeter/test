@@ -2669,15 +2669,16 @@ const TERRAIN_FADE_START = 2;
 const TERRAIN_FADE_END = DETAIL_AT;
 
 /** One ink colour, alpha modulated per pixel by land-cover and relief — see
- *  the constants above. Rebuilt only when the theme changes (`terrainTintFor`
- *  caches by ink colour), never per frame: a Uint8ClampedArray loop over a
- *  1536-wide raster is real work to repeat sixty times a second and only the
- *  palette or the data can ever change what it produces. */
-function buildTerrainTint(canvas, inkHex, isDark) {
-  const w = canvas.__terrainW;
-  const h = canvas.__terrainH;
-  const green = canvas.__terrainGreen;
-  const relief = canvas.__terrainRelief;
+ *  the constants above. Takes a plain `{ green, relief, w, h }` channel pair
+ *  rather than reading the world wash off the canvas directly, so the same
+ *  function builds the tint for a tile too — a tile's data is the same shape,
+ *  just one lon/lat cell of it (`make-terrain.py`). Rebuilt only when the
+ *  theme changes (`tintFor` caches by ink colour), never per frame: a
+ *  Uint8ClampedArray loop over a whole raster is real work to repeat sixty
+ *  times a second and only the palette or the data can ever change what it
+ *  produces. */
+function buildTint(channels, inkHex, isDark) {
+  const { green, relief, w, h } = channels;
   const [ir, ig, ib] = hexToRgb(inkHex);
   const aLo = isDark ? TERRAIN_A_LO.dark : TERRAIN_A_LO.light;
   const aHi = isDark ? TERRAIN_A_HI.dark : TERRAIN_A_HI.light;
@@ -2704,15 +2705,90 @@ function buildTerrainTint(canvas, inkHex, isDark) {
   return tint;
 }
 
-/** Cached by ink colour and theme, so a paint that has not crossed a theme
- *  toggle reuses the same canvas rather than rebuilding it. */
-function terrainTintFor(canvas, inkHex, isDark) {
+/** Cached on whatever object carries the channels (the canvas itself for the
+ *  world wash, a tile's own state for a tile) — by ink colour and theme, so a
+ *  paint that has not crossed a theme toggle reuses the same canvas rather
+ *  than rebuilding it. */
+function tintFor(store, channels, inkHex, isDark) {
   const key = `${inkHex}|${isDark}`;
-  if (canvas.__terrainTintKey !== key) {
-    canvas.__terrainTintKey = key;
-    canvas.__terrainTintCanvas = buildTerrainTint(canvas, inkHex, isDark);
+  if (store.__tintKey !== key) {
+    store.__tintKey = key;
+    store.__tintCanvas = buildTint(channels, inkHex, isDark);
   }
-  return canvas.__terrainTintCanvas;
+  return store.__tintCanvas;
+}
+
+function terrainTintFor(canvas, inkHex, isDark) {
+  return tintFor(canvas, { green: canvas.__terrainGreen, relief: canvas.__terrainRelief, w: canvas.__terrainW, h: canvas.__terrainH }, inkHex, isDark);
+}
+
+/**
+ * The tile grid past `DETAIL_AT`, fetched only for cells the reader's own
+ * view actually overlaps — one further step of the same "a reader who never
+ * opens the map never pays for it" reasoning `ensureFine` already applies to
+ * the fine coastline. `TILES` carries each cell's plain lon/lat bounds
+ * (`make-terrain.py`); this projects them itself (`project`, the map's one
+ * copy of the projection) rather than trusting a second, pre-baked copy.
+ */
+function ensureTerrainTiles(canvas, cards) {
+  if (!canvas.__tileMeta) {
+    if (canvas.__tileMetaPending) return;
+    canvas.__tileMetaPending = import('../data/terrain-tiles.js')
+      .then(({ TILES }) => {
+        if (!canvas.isConnected) return;
+        canvas.__tileMeta = TILES;
+        canvas.__tileState = new Map();
+        paintCanvas(canvas, cards());
+      })
+      .catch(() => {
+        canvas.__tileMetaPending = null;
+      });
+    return;
+  }
+
+  const state = canvas.__tileState;
+  for (const tile of visibleTileList(canvas)) {
+    const key = `${tile.col}-${tile.row}`;
+    if (state.has(key)) continue;
+    state.set(key, { status: 'pending' });
+    const greenUrl = new URL(`../data/terrain-tiles/t-${tile.col}-${tile.row}-green.webp`, import.meta.url).href;
+    const reliefUrl = new URL(`../data/terrain-tiles/t-${tile.col}-${tile.row}-relief.webp`, import.meta.url).href;
+    Promise.all([loadTerrainChannel(greenUrl), loadTerrainChannel(reliefUrl)])
+      .then(([green, relief]) => {
+        if (!canvas.isConnected) return;
+        state.set(key, { status: 'loaded', green: green.data, relief: relief.data, w: green.w, h: green.h });
+        paintCanvas(canvas, cards());
+      })
+      .catch(() => {
+        // One missing tile is a gap in the wash, not a broken map — the flat
+        // fill and, past its own zoom, the coastline alone still carry it.
+        state.set(key, { status: 'error' });
+      });
+  }
+}
+
+/**
+ * Which tiles the current view overlaps, in lon/lat space projected through
+ * the map's own `project` — a lon/lat cell's projected corners are still an
+ * axis-aligned box (`x` depends only on `lon`, `y` only on `lat`, both
+ * monotonic), so this is a plain rectangle test, not a real reprojection.
+ */
+function visibleTileList(canvas) {
+  const meta = canvas.__tileMeta;
+  if (!meta) return [];
+  const box = canvas.getBoundingClientRect();
+  const frame = coverFractions(Math.round(box.width) || 1, Math.round(box.height) || 1, ASPECT);
+  const topLeft = toWorld(view, 0, 0, frame);
+  const bottomRight = toWorld(view, 1, 1, frame);
+  const [vx0, vx1] = [Math.min(topLeft.px, bottomRight.px), Math.max(topLeft.px, bottomRight.px)];
+  const [vy0, vy1] = [Math.min(topLeft.py, bottomRight.py), Math.max(topLeft.py, bottomRight.py)];
+  return meta.filter((tile) => {
+    const a = project(tile.lon0, tile.lat0);
+    const b = project(tile.lon1, tile.lat1);
+    const [tx0, tx1] = [Math.min(a.x, b.x), Math.max(a.x, b.x)];
+    const [ty0, ty1] = [Math.min(a.y, b.y), Math.max(a.y, b.y)];
+    return tx1 >= vx0 && tx0 <= vx1 && ty1 >= vy0 && ty0 <= vy1;
+  });
 }
 
 async function drawWhenReady(el, canvas, cards) {
@@ -2895,9 +2971,9 @@ function paintCanvas(canvas, cards) {
      * coastline are the content, not ground texture, so the honest picture
      * is the flat ink the map drew before this feature existed.
      */
-    const terrainStrength = canvas.__terrainGreen
-      ? Math.max(0, Math.min(1, (TERRAIN_FADE_END - view.scale) / (TERRAIN_FADE_END - TERRAIN_FADE_START)))
-      : 0;
+    const zoomFade = Math.max(0, Math.min(1, (view.scale - TERRAIN_FADE_START) / (TERRAIN_FADE_END - TERRAIN_FADE_START)));
+    const terrainStrength = canvas.__terrainGreen ? 1 - zoomFade : 0;
+    const tileStrength = zoomFade;
 
     if (terrainStrength < 1) {
       /*
@@ -2949,6 +3025,37 @@ function paintCanvas(canvas, cards) {
       );
       ctx.restore();
       canvas.dataset.terrain = 'ok';
+    }
+
+    if (tileStrength > 0) {
+      ensureTerrainTiles(canvas, () => cards);
+      const visible = visibleTileList(canvas);
+      if (visible.length && canvas.__tileState) {
+        ctx.save();
+        ctx.beginPath();
+        tracePath(land, true);
+        ctx.clip();
+        ctx.globalAlpha = tileStrength;
+        const isDark = document.documentElement.classList.contains('dark');
+        for (const tile of visible) {
+          const entry = canvas.__tileState.get(`${tile.col}-${tile.row}`);
+          if (!entry || entry.status !== 'loaded') continue;
+          const tint = tintFor(entry, entry, inkSoft, isDark);
+          const topLeft = toScreen(view, project(tile.lon0, tile.lat0).x, project(tile.lon0, tile.lat0).y, frame);
+          const bottomRight = toScreen(view, project(tile.lon1, tile.lat1).x, project(tile.lon1, tile.lat1).y, frame);
+          ctx.drawImage(
+            tint,
+            topLeft.x * w,
+            topLeft.y * h,
+            (bottomRight.x - topLeft.x) * w,
+            (bottomRight.y - topLeft.y) * h,
+          );
+        }
+        ctx.restore();
+        if (visible.some((t) => canvas.__tileState.get(`${t.col}-${t.row}`)?.status === 'loaded')) {
+          canvas.dataset.terrain = 'ok';
+        }
+      }
     }
   }
 
