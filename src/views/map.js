@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { HOME, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -303,7 +303,7 @@ function cancelFlight() {
  * Zooming out mid-flight can pull a centre past the edge the world may not
  * leave, and an unclamped frame there is the Atlantic sliding off the side.
  */
-function flyTo(target, frame, apply, done) {
+function flyTo(target, frame, apply, done, max = MAX_SCALE) {
   cancelFlight();
   if (reducedMotion()) {
     apply(target);
@@ -323,6 +323,7 @@ function flyTo(target, frame, apply, done) {
           cy: from.cy + (target.cy - from.cy) * eased,
         },
         frame,
+        max,
       ),
     );
     if (t < 1) {
@@ -363,6 +364,15 @@ const LABELS_AT = 2.5;
  * a visible staircase past it.
  */
 const DETAIL_AT = 5;
+
+/**
+ * How long the coastline, lakes and rivers take to cross-fade between tiers
+ * (2026-09-04: "make the appearance of the high quality coastlines and lakes
+ * and rivers fade in/out instead of just appearing"). Short, on purpose — a
+ * reader crossing `DETAIL_AT` mid-gesture is mid-zoom, not standing still to
+ * watch a transition, so this only has to remove the pop, not choreograph one.
+ */
+const DETAIL_FADE_MS = 280;
 
 /** One saint's mark. A merged mark grows from here — see `paintCanvas`. */
 const DOT_R = 2.5;
@@ -2382,8 +2392,19 @@ function wireZoom(el, canvas, cards, schedulePaint) {
   for (const button of el.querySelectorAll('[data-zoom]')) {
     button.addEventListener('click', () => {
       const how = button.dataset.zoom;
-      if (how === 'home') set(homeView);
-      else set(zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
+      const target =
+        how === 'home' ? homeView : zoomAbout(view, how === 'in' ? ZOOM_STEP : 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas));
+      /*
+       * A discrete step eases rather than jumping (2026-09-04) — the same
+       * flight the wheel and a pinch already give for free by being
+       * continuous gestures; a button or a key is not, so it borrows `flyTo`.
+       * The ceiling is passed explicitly: `flyTo`'s own default is the
+       * desktop `MAX_SCALE`, and a narrower window's real ceiling
+       * (`maxScaleFor`) is higher — left to the default, every eased zoom
+       * step silently capped at 240x on a phone, which is not what
+       * `ceilingOf` was for.
+       */
+      flyTo(target, frameOf(canvas), set, () => {}, ceilingOf(canvas));
       // A disabled button drops focus to the body, which strands the keyboard
       // at the top of the document. Hand it to the map, which is the thing the
       // reader was working.
@@ -2492,13 +2513,13 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     }
     if (e.key === '+' || e.key === '=') {
       e.preventDefault();
-      set(zoomAbout(view, ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
+      flyTo(zoomAbout(view, ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)), frameOf(canvas), set, () => {}, ceilingOf(canvas));
     } else if (e.key === '-' || e.key === '_') {
       e.preventDefault();
-      set(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)));
+      flyTo(zoomAbout(view, 1 / ZOOM_STEP, 0.5, 0.5, frameOf(canvas), ceilingOf(canvas)), frameOf(canvas), set, () => {}, ceilingOf(canvas));
     } else if (e.key === 'Home' || e.key === '0') {
       e.preventDefault();
-      set(homeView);
+      flyTo(homeView, frameOf(canvas), set, () => {}, ceilingOf(canvas));
     }
   });
 
@@ -2621,15 +2642,30 @@ function terrainTintFor(canvas, inkHex, isDark) {
 }
 
 /**
- * Where the terrain wash starts giving way to the flat fill, and where it has
- * fully given way — see the fade's own comment in `paintCanvas`. `DETAIL_AT`
- * (5) is the coastline's own honest line between the world view and a reader
- * looking at ground the fine coastline actually resolves; the terrain wash's
- * own raster gives out sooner than that, so its fade starts before and ends
- * at it, rather than sharing one number with a dataset ten times its density.
+ * Where the terrain wash starts giving way to the 50m tile grid, and where
+ * it has fully given way — see the fade's own comment in `paintCanvas`.
+ * Raised from 2/`DETAIL_AT` to 8 (2026-09-04, author: "have them fade into
+ * view at 8x zoom not 2x as on mobile its a bit laggy currently"): starting
+ * the tile grid's own fetch-and-decode work this much later means a reader
+ * panning around at a modest zoom on a phone is never asking several tiles
+ * to arrive at once for a layer they are barely stopped on.
  */
-const TERRAIN_FADE_START = 2;
-const TERRAIN_FADE_END = DETAIL_AT;
+const TERRAIN_FADE_START = 8;
+const TERRAIN_FADE_END = 12;
+
+/**
+ * Where the 10m tier starts giving way to — and where it has fully replaced —
+ * the 50m tile grid, for the `hr: true` cells `make-terrain.py` generated one
+ * (within 1000 km of a located saint). 24, the author's own first number
+ * ("make the 10m resolution tiles come in around 24x or 30x if 24x is too
+ * soon"): the honest ceiling reasoning `DETAIL_AT`/`MAX_SCALE` already use
+ * elsewhere on this page argues for the later number if 24 ever reads as
+ * arriving before the 50m tier has anything left to show past — untested
+ * against a real screen at the time of writing, so this is the number to
+ * move first if it reads wrong.
+ */
+const HR_FADE_START = 24;
+const HR_FADE_END = 30;
 
 /**
  * The tile grid past `DETAIL_AT`, fetched only for cells the reader's own
@@ -2660,21 +2696,47 @@ function ensureTerrainTiles(canvas, cards, frame) {
   const state = canvas.__tileState;
   for (const tile of terrainLib.visibleTiles(canvas.__tileMeta, view, frame)) {
     const key = `${tile.col}-${tile.row}`;
-    if (state.has(key)) continue;
-    state.set(key, { status: 'pending' });
-    const greenUrl = terrainLib.tileUrl(tile.col, tile.row, 'green');
-    const reliefUrl = terrainLib.tileUrl(tile.col, tile.row, 'relief');
-    Promise.all([terrainLib.loadTerrainChannel(greenUrl), terrainLib.loadTerrainChannel(reliefUrl)])
-      .then(([green, relief]) => {
-        if (!canvas.isConnected) return;
-        state.set(key, { status: 'loaded', green: green.data, relief: relief.data, w: green.w, h: green.h });
-        paintCanvas(canvas, cards());
-      })
-      .catch(() => {
-        // One missing tile is a gap in the wash, not a broken map — the flat
-        // fill and, past its own zoom, the coastline alone still carry it.
-        state.set(key, { status: 'error' });
-      });
+    if (!state.has(key)) {
+      state.set(key, { status: 'pending' });
+      const greenUrl = terrainLib.tileUrl(tile.col, tile.row, 'green');
+      const reliefUrl = terrainLib.tileUrl(tile.col, tile.row, 'relief');
+      Promise.all([terrainLib.loadTerrainChannel(greenUrl), terrainLib.loadTerrainChannel(reliefUrl)])
+        .then(([green, relief]) => {
+          if (!canvas.isConnected) return;
+          state.set(key, { status: 'loaded', green: green.data, relief: relief.data, w: green.w, h: green.h });
+          paintCanvas(canvas, cards());
+        })
+        .catch(() => {
+          // One missing tile is a gap in the wash, not a broken map — the flat
+          // fill and, past its own zoom, the coastline alone still carry it.
+          state.set(key, { status: 'error' });
+        });
+    }
+
+    /*
+     * The 10m pair, only for a cell `make-terrain.py` actually generated one
+     * for (`tile.hr`) and only once the reader is far enough in that it would
+     * ever be drawn (`HR_FADE_START`) — fetched a beat early, the same
+     * reasoning `TERRAIN_FADE_START` gives the 50m grid, so the pair has
+     * arrived by the time the crossfade needs it rather than popping in
+     * mid-fade.
+     */
+    if (tile.hr && view.scale >= HR_FADE_START) {
+      const hrKey = `${key}-hr`;
+      if (state.has(hrKey)) continue;
+      state.set(hrKey, { status: 'pending' });
+      const greenUrl = terrainLib.tileUrl(tile.col, tile.row, 'green-hr');
+      const reliefUrl = terrainLib.tileUrl(tile.col, tile.row, 'relief-hr');
+      Promise.all([terrainLib.loadTerrainChannel(greenUrl), terrainLib.loadTerrainChannel(reliefUrl)])
+        .then(([green, relief]) => {
+          if (!canvas.isConnected) return;
+          state.set(hrKey, { status: 'loaded', green: green.data, relief: relief.data, w: green.w, h: green.h });
+          paintCanvas(canvas, cards());
+        })
+        .catch(() => {
+          state.set(hrKey, { status: 'error' });
+        });
+    }
   }
 }
 
@@ -2840,6 +2902,65 @@ function paintCanvas(canvas, cards) {
   const fine = wantsFine && canvas.__landFine;
   if (canvas.dataset.detail) canvas.dataset.detail = fine ? 'fine' : 'coarse';
 
+  /*
+   * **The coastline crossfades between tiers rather than popping** (2026-09-04:
+   * "make the appearance of the high quality coastlines and lakes and rivers
+   * fade in/out instead of just appearing"). `fine` above decides the target
+   * tier the instant the data is ready or the reader crosses `DETAIL_AT`; this
+   * decides how much of the *previous* tier still shows while the new one
+   * ramps in. The previous tier's own fine/coarse geometry is kept — not
+   * re-derived — because the whole point is drawing the shape the reader was
+   * just looking at, fading under the one that replaces it.
+   */
+  if (canvas.__detailShown !== undefined && canvas.__detailShown !== fine) {
+    canvas.__detailFadeFrom = canvas.__detailShown ? { land: canvas.__landFine, water: canvas.__waterFine } : { land: canvas.__land, water: canvas.__water };
+    canvas.__detailFadeStart = performance.now();
+  }
+  canvas.__detailShown = fine;
+  const detailT =
+    canvas.__detailFadeStart == null ? 1 : Math.min(1, (performance.now() - canvas.__detailFadeStart) / DETAIL_FADE_MS);
+  if (detailT < 1 && canvas.__detailFadeFrame == null) {
+    // Keeps repainting through the fade even if the reader's hands are still —
+    // nothing else asks for a frame on a clock, only on input or arriving data.
+    const tick = () => {
+      canvas.__detailFadeFrame = null;
+      if (canvas.isConnected) paintCanvas(canvas, cards());
+    };
+    canvas.__detailFadeFrame = requestAnimationFrame(tick);
+  }
+  if (detailT >= 1) canvas.__detailFadeStart = null;
+
+  if (detailT < 1 && canvas.__detailFadeFrom?.land) {
+    /*
+     * The outgoing tier, fading out under everything below — flat ink alone
+     * rather than the full terrain-and-tile treatment, since this is a
+     * ~300ms transition and the reader is looking at the *shape* changing,
+     * not re-reading the ground texture twice.
+     */
+    ctx.save();
+    ctx.globalAlpha = 1 - detailT;
+    ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
+    ctx.beginPath();
+    tracePath(canvas.__detailFadeFrom.land, true);
+    ctx.fill();
+    if (canvas.__detailFadeFrom.water?.LAKES.length) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = '#000';
+      ctx.beginPath();
+      if (tracePath(canvas.__detailFadeFrom.water.LAKES, true)) ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+    }
+    if (canvas.__detailFadeFrom.water?.RIVERS.length) {
+      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5);
+      ctx.lineWidth = 0.75;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      if (tracePath(canvas.__detailFadeFrom.water.RIVERS, false)) ctx.stroke();
+    }
+    ctx.restore();
+  }
+
   const land = fine ? canvas.__landFine : canvas.__land;
   if (land) {
     if (!canvas.__terrainGreen && !canvas.__terrainPending) ensureTerrain(canvas, () => cards);
@@ -2878,13 +2999,13 @@ function paintCanvas(canvas, cards) {
        * so there is never a gap between the two, only a crossfade or a flat
        * map, never an empty one.
        */
-      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
+      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3 * detailT);
       ctx.beginPath();
       tracePath(land, true);
       ctx.fill();
     }
 
-    if (terrainStrength > 0) {
+    if (terrainStrength > 0 && detailT > 0) {
       /*
        * The terrain wash, clipped to the land path exactly the way the flat
        * fill above it was — the difference is only what fills that clip.
@@ -2900,7 +3021,7 @@ function paintCanvas(canvas, cards) {
       ctx.beginPath();
       tracePath(land, true);
       ctx.clip();
-      ctx.globalAlpha = terrainStrength;
+      ctx.globalAlpha = terrainStrength * detailT;
       const topLeft = toScreen(view, 0, 0, frame);
       const bottomRight = toScreen(view, 1, 1, frame);
       ctx.drawImage(
@@ -2917,26 +3038,39 @@ function paintCanvas(canvas, cards) {
     if (tileStrength > 0) {
       ensureTerrainTiles(canvas, () => cards, frame);
       const visible = terrainLib && canvas.__tileMeta ? terrainLib.visibleTiles(canvas.__tileMeta, view, frame) : [];
-      if (visible.length && canvas.__tileState) {
+      if (visible.length && canvas.__tileState && detailT > 0) {
+        /*
+         * **The 10m tier crossfades in over the 50m one, per tile** — only
+         * `hr: true` cells (`make-terrain.py`, within 1000 km of a located
+         * saint) ever have a pair to draw, so every other cell keeps reading
+         * the 50m grid alone at every zoom this map reaches.
+         */
+        const hrStrength = Math.max(0, Math.min(1, (view.scale - HR_FADE_START) / (HR_FADE_END - HR_FADE_START)));
         ctx.save();
         ctx.beginPath();
         tracePath(land, true);
         ctx.clip();
-        ctx.globalAlpha = tileStrength;
         const isDark = document.documentElement.classList.contains('dark');
+        const base = tileStrength * detailT;
         for (const tile of visible) {
           const entry = canvas.__tileState.get(`${tile.col}-${tile.row}`);
-          if (!entry || entry.status !== 'loaded') continue;
-          const tint = terrainLib.tintFor(entry, entry, inkSoft, isDark);
+          const hrEntry = tile.hr ? canvas.__tileState.get(`${tile.col}-${tile.row}-hr`) : null;
+          const hrReady = hrEntry?.status === 'loaded';
           const topLeft = toScreen(view, project(tile.lon0, tile.lat0).x, project(tile.lon0, tile.lat0).y, frame);
           const bottomRight = toScreen(view, project(tile.lon1, tile.lat1).x, project(tile.lon1, tile.lat1).y, frame);
-          ctx.drawImage(
-            tint,
-            topLeft.x * w,
-            topLeft.y * h,
-            (bottomRight.x - topLeft.x) * w,
-            (bottomRight.y - topLeft.y) * h,
-          );
+          const dx = topLeft.x * w;
+          const dy = topLeft.y * h;
+          const dw = (bottomRight.x - topLeft.x) * w;
+          const dh = (bottomRight.y - topLeft.y) * h;
+
+          if (entry?.status === 'loaded' && (!hrReady || hrStrength < 1)) {
+            ctx.globalAlpha = base * (hrReady ? 1 - hrStrength : 1);
+            ctx.drawImage(terrainLib.tintFor(entry, entry, inkSoft, isDark, terrainLib.TILE_DARKEN_BIAS), dx, dy, dw, dh);
+          }
+          if (hrReady && hrStrength > 0) {
+            ctx.globalAlpha = base * hrStrength;
+            ctx.drawImage(terrainLib.tintFor(hrEntry, hrEntry, inkSoft, isDark, terrainLib.TILE_DARKEN_BIAS), dx, dy, dw, dh);
+          }
         }
         ctx.restore();
         if (visible.some((t) => canvas.__tileState.get(`${t.col}-${t.row}`)?.status === 'loaded')) {
@@ -2959,6 +3093,10 @@ function paintCanvas(canvas, cards) {
     if (land && water.LAKES.length) {
       ctx.save();
       ctx.globalCompositeOperation = 'destination-out';
+      // A fractional alpha here is a *partial* erase — some land still shows
+      // through — which is exactly the fade this block is for: the lake
+      // reads in gradually with the rest of the tier rather than snapping cut.
+      ctx.globalAlpha = detailT;
       ctx.fillStyle = '#000';
       ctx.beginPath();
       if (tracePath(water.LAKES, true)) ctx.fill();
@@ -2973,7 +3111,7 @@ function paintCanvas(canvas, cards) {
      * itself does not use.
      */
     if (water.RIVERS.length) {
-      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5);
+      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5 * detailT);
       ctx.lineWidth = 0.75;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';

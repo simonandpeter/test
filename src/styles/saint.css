@@ -121,11 +121,22 @@
     display: none;
   }
 
-  /* The intro is already a grid of picture-and-register; in a column of its
-     own it has no second track to give the register, so the two stack. */
-  .saint-aside .saint-intro.has-media {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-4);
+  /*
+   * **The intro generates no box of its own here** (author, 2026-09-04,
+   * fixing a claim this comment used to make and was wrong about — "the
+   * register and the veneration table pass beneath it" was true only of the
+   * register). A `position: sticky` element's containing block is its
+   * *parent*, not the scrollport it happens to sit inside — and `.saint-intro`
+   * was that parent, so `.saint-media-col` unstuck the instant the intro's own
+   * box ended and everything appended after it (veneration, and anything
+   * later) scrolled the picture away with it rather than under it.
+   * `display: contents` removes the intro as a box entirely, so
+   * `.saint-media-col` and `.saint-intro-facts` become children of
+   * `.saint-aside` directly — the sticky element's containing block is then
+   * the scroller itself, for the whole column, uniformly.
+   */
+  .saint-aside .saint-intro {
+    display: contents;
   }
 
   /* The picture is the column's own width here rather than a 260 px track
@@ -140,23 +151,42 @@
    * a picture stuck to the viewport would drift out of its own column the
    * moment the page behind it moved.
    *
-   * The register and the veneration table pass beneath it, which is the whole
-   * of what was asked. It gives the pinning up when there is more picture than
-   * column — a `sticky` box taller than its scrollport pins its *bottom* and
-   * reads as a picture crawling upward — so `max-height` holds it inside the
-   * box it is stuck in and the icon is scaled to fit rather than cropped: a
-   * crop here would be the page deciding which part of an icon matters, which
-   * is a decision `cardCrop` makes for cards and this page has never made.
+   * Every piece of text in the column passes beneath it now, register through
+   * veneration, which is the whole of what was asked. It gives the pinning up
+   * when there is more picture than column — a `sticky` box taller than its
+   * scrollport pins its *bottom* and reads as a picture crawling upward — so
+   * `max-height` holds it inside the box it is stuck in and the icon is
+   * scaled to fit rather than cropped: a crop here would be the page deciding
+   * which part of an icon matters, which is a decision `cardCrop` makes for
+   * cards and this page has never made.
+   *
+   * **`pointer-events: none`, found the same day the pin was widened to the
+   * whole column.** A box pinned for the whole scroll is a box every later
+   * control (the reveal button among them) passes *under* at some scroll
+   * position, not only briefly beside — and a sticky box's own stacking
+   * context paints over whatever is currently there, which made that control
+   * unclickable at exactly the scroll position a normal "scroll to it and
+   * press it" reaches. The image carries no link and no press of its own, so
+   * letting the pointer pass through it to whatever is genuinely underneath
+   * costs nothing and is the whole fix — the box still masks the text
+   * visually (`background`, below) without also intercepting it.
    */
   .saint-aside .saint-media-col {
     max-width: none;
     position: sticky;
     top: 0;
     z-index: 1;
-    /* The page's own ground behind it, or the register would show through as
+    pointer-events: none;
+    /* The page's own ground behind it, or the text would show through as
        it passes underneath. */
     background: var(--gesso);
-    padding-bottom: var(--space-2);
+    /*
+     * `display: contents` on the intro drops its own `gap`/`margin-bottom`
+     * (`.saint-intro.has-media` above), so this doubles that space rather
+     * than the usual `--space-2` — padding, not margin, because it is also
+     * the gesso mask the text passes under.
+     */
+    padding-bottom: var(--space-4);
   }
 
   .saint-aside .saint-media-col .saint-media {

@@ -33,6 +33,29 @@ import { ready } from './helpers.js';
 const MAP = '/map';
 
 /**
+ * Waits for a zoom flight to actually land, by polling the readout rather
+ * than sleeping a guessed duration (2026-09-04, alongside the button and
+ * keyboard zoom easing itself — `FLY_MS` in map.js). A fixed sleep passed in
+ * isolation and failed under the full suite's parallel load, where an eased
+ * flight can genuinely take longer wall-clock time than one desk's own run
+ * suggested; polling the thing that actually changes is the fix rather than
+ * a bigger guess. A press mid-flight re-targets from wherever the view
+ * currently is, not from where the last press aimed, so every loop of
+ * repeated zoom presses in this file needs this between presses.
+ */
+const settledZoom = async (page) => {
+  const level = page.locator('[data-zoom-level]');
+  let last = null;
+  for (let i = 0; i < 40; i += 1) {
+    const now = await level.textContent();
+    if (now === last) return now;
+    last = now;
+    await page.waitForTimeout(50);
+  }
+  return last;
+};
+
+/**
  * The deepest this picture goes, which since 2026-09-01 is a function of how
  * wide it is: the ceiling exists so that saints sharing a coordinate can be
  * told apart, and that is a claim in *pixels*, so a 360 px phone has to go
@@ -44,8 +67,15 @@ const MAP = '/map';
 const zoomedToCeiling = async (page) => {
   const canvas = page.locator('[data-map]');
   await canvas.focus();
+  /*
+   * **A press eases now (2026-09-04)**, so this waits for one flight to land
+   * before the next press aims a new one — a press mid-flight re-targets from
+   * wherever the view currently is, not from where the last press aimed, so a
+   * tight loop with nothing between presses barely moves the scale.
+   */
   for (let i = 0; i < 25 && !(await page.locator('[data-zoom="in"]').isDisabled()); i++) {
     await canvas.press('+');
+    await settledZoom(page);
   }
   await expect(page.locator('[data-zoom="in"]'), 'the map never reached its ceiling').toBeDisabled();
   const scale = Number((await page.locator('[data-zoom-level]').textContent()).replace('×', ''));
@@ -283,6 +313,9 @@ test('the buttons zoom, and the keyboard comes home', async ({ page }) => {
 
   await page.locator('[data-zoom="in"]').click();
   await page.locator('[data-zoom="in"]').click();
+  // A press eases now (2026-09-04); the readout is a plain read with no
+  // retry, so it needs the flight to have painted at least once first.
+  await settledZoom(page);
   expect(await zoomLevel(page)).not.toBe('1.0×');
   await expect(page.locator('[data-zoom="out"]')).toBeEnabled();
 
@@ -368,6 +401,9 @@ test('the keyboard works the map, not only the pointer', async ({ page }) => {
 
   await page.keyboard.press('+');
   await page.keyboard.press('+');
+  // A press eases now (2026-09-04); the readout is a plain read with no
+  // retry, so it needs the flight to have painted at least once first.
+  await settledZoom(page);
   expect(await zoomLevel(page)).not.toBe('1.0×');
 
   const before = await mapInk(page);
@@ -904,7 +940,11 @@ test('zooming in splits a merged mark into the saints under it', async ({ page }
   await expect(searchRows(page).first()).toContainText('Kyiv');
   await searchBox(page).press('Enter');
   await canvas.focus();
-  for (let i = 0; i < 6; i++) await canvas.press('+');
+  // A press eases now (2026-09-04); each needs the last one landed first.
+  for (let i = 0; i < 6; i++) {
+    await canvas.press('+');
+    await settledZoom(page);
+  }
 
   /*
    * **All three, including the two at one coordinate** (author, 2026-09-01:
@@ -1511,7 +1551,13 @@ test('a saint with a dated track moves along it as the timeline crosses his life
   await expect(searchRows(page).first()).toContainText('Kyiv');
   await searchBox(page).press('Enter');
   await canvas.focus();
-  for (let i = 0; i < 6; i++) await canvas.press('-');
+  // A press eases now (2026-09-04); each needs the last one landed first, or
+  // the zoom flight is still what `settled` (below) catches moving, not the
+  // track.
+  for (let i = 0; i < 6; i++) {
+    await canvas.press('-');
+    await settledZoom(page);
+  }
 
   // Nothing walks until the reader asks (2026-09-01).
   await tickMovement(page);
@@ -2401,7 +2447,11 @@ test('a saint moving along their rail is named while they move', async ({ page }
   for (let i = 0; i < 10; i++) {
     contest = await namedOn(page);
     if (contest.includes('moses-the-hungarian') && contest.some((slug) => sung.includes(slug))) break;
+    // A press eases now (2026-09-04); wait for it to land before reading the
+    // picture again, or the next press re-targets from a view that has
+    // barely moved from the last one.
     await canvas.press('-');
+    await settledZoom(page);
   }
   expect(
     contest.some((slug) => sung.includes(slug)),
@@ -2554,9 +2604,16 @@ test('the map opens on the coarse coastline and fetches the fine one only past 5
    * Past 5x it swaps, and the fetch happens then. Polled rather than awaited on
    * a fixed wait: the swap is one paint behind the chunk landing, and the chunk
    * is a real network round trip.
+   *
+   * **Each press eases now (2026-09-04)**, so the next one has to wait for the
+   * flight to land rather than firing while the view is still mid-travel — a
+   * press that lands mid-flight re-targets from wherever the view currently
+   * is, not from where the last press aimed, so a tight loop of presses with
+   * nothing between them barely moves the scale at all.
    */
   for (let i = 0; i < 8 && !(await page.locator('[data-zoom="in"]').isDisabled()); i += 1) {
     await page.locator('[data-zoom="in"]').click();
+    await settledZoom(page);
   }
   await expect(canvas).toHaveAttribute('data-detail', 'fine', { timeout: 10000 });
   expect(

@@ -103,16 +103,38 @@ const RELIEF_FLOOR = 52;
 const RELIEF_GAIN = 0.65;
 const RELIEF_LIFT_DAMP = 0.12;
 
+/**
+ * **A tile reads lighter than the world wash for the same real ground, and
+ * this closes most of the gap** (2026-09-04, author: "the fully zoomed out
+ * raster image the green seems darker than the more zoomed in ones. Match
+ * the zoomed in rasters to this darker colour"). The wash decimates the
+ * native data roughly 5x to fit a whole-world image light enough to ship
+ * (`make-terrain.py`'s own header); a sparse point-sample of a noisy raster
+ * is not the same read as the full-density one a tile carries, and it comes
+ * out reading darker on this corpus's own geography. The honest fix is
+ * resampling the wash with a true area average instead of a point-sample —
+ * unbuilt — so this is the direct one asked for: a small alpha bias, always
+ * toward more ink regardless of theme (`applyBias`, since more alpha means
+ * darker in the light theme and *lighter* in the dark one, where ink is the
+ * light token). Applied to tiles only; the wash is already the target shade.
+ */
+const TILE_DARKEN_BIAS = 0.08;
+
+function applyBias(alpha, bias, isDark) {
+  return Math.max(0.04, Math.min(0.92, alpha + (isDark ? -bias : bias)));
+}
+
 /** One ink colour, alpha modulated per pixel by land-cover and relief — see
  *  the constants above. Takes a plain `{ green, relief, w, h }` channel pair
  *  rather than reading the world wash off a particular object, so the same
  *  function builds the tint for a tile too — a tile's data is the same
- *  shape, just one lon/lat cell of it (`make-terrain.py`). Rebuilt only when
- *  the theme changes (`tintFor` caches by ink colour), never per frame: a
- *  Uint8ClampedArray loop over a whole raster is real work to repeat sixty
- *  times a second and only the palette or the data can ever change what it
- *  produces. */
-function buildTint(channels, inkHex, isDark) {
+ *  shape, just one lon/lat cell of it (`make-terrain.py`). `bias` is 0 for
+ *  the world wash and `TILE_DARKEN_BIAS` for a tile (`tintFor`'s own
+ *  caller). Rebuilt only when the theme changes (`tintFor` caches by ink
+ *  colour), never per frame: a Uint8ClampedArray loop over a whole raster is
+ *  real work to repeat sixty times a second and only the palette or the data
+ *  can ever change what it produces. */
+function buildTint(channels, inkHex, isDark, bias) {
   const { green, relief, w, h } = channels;
   const [ir, ig, ib] = hexToRgb(inkHex);
   const aLo = isDark ? TERRAIN_A_LO.dark : TERRAIN_A_LO.light;
@@ -126,7 +148,7 @@ function buildTint(channels, inkHex, isDark) {
     const relLow = Math.max(0, Math.min(1, (RELIEF_BASELINE - rel) / (RELIEF_BASELINE - RELIEF_FLOOR)));
     const relHigh = Math.max(0, Math.min(1, (rel - RELIEF_BASELINE) / (255 - RELIEF_BASELINE)));
     alpha *= 1 + RELIEF_GAIN * relLow - RELIEF_LIFT_DAMP * relHigh;
-    alpha = Math.max(0.04, Math.min(0.92, alpha));
+    alpha = applyBias(alpha, bias, isDark);
     const o = i * 4;
     out[o] = ir;
     out[o + 1] = ig;
@@ -141,17 +163,20 @@ function buildTint(channels, inkHex, isDark) {
 }
 
 /** Cached on whatever object carries the channels (the canvas itself for the
- *  world wash, a tile's own state for a tile) — by ink colour and theme, so a
- *  paint that has not crossed a theme toggle reuses the same canvas rather
- *  than rebuilding it. */
-export function tintFor(store, channels, inkHex, isDark) {
-  const key = `${inkHex}|${isDark}`;
+ *  world wash, a tile's own state for a tile) — by ink colour, theme and
+ *  bias, so a paint that has not crossed a theme toggle reuses the same
+ *  canvas rather than rebuilding it. `bias` defaults to 0 (the world wash's
+ *  own call, unbiased); a tile passes `TILE_DARKEN_BIAS` explicitly. */
+export function tintFor(store, channels, inkHex, isDark, bias = 0) {
+  const key = `${inkHex}|${isDark}|${bias}`;
   if (store.__tintKey !== key) {
     store.__tintKey = key;
-    store.__tintCanvas = buildTint(channels, inkHex, isDark);
+    store.__tintCanvas = buildTint(channels, inkHex, isDark, bias);
   }
   return store.__tintCanvas;
 }
+
+export { TILE_DARKEN_BIAS };
 
 /**
  * Which of a tile manifest's entries the current view overlaps, in lon/lat

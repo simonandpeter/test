@@ -713,6 +713,25 @@ an argument for printing one date under another calendar's name. The choice
 between naming the day in both calendars and naming it in the chosen one was
 the author's, and it is the chosen one alone.*
 
+*Reversed a fourth time on 2026-09-04 (author: "Today is still today, no
+matter what calendar display is chosen… The saints should not be changing.
+Therefore mechanic should be purely surface level representing the current
+day as either x or y, not changing its location relative to today"). **"The
+day's saints and record are the ones that reckoning reaches" is retracted —
+they are the civil day's, always.** The 2026-09-02 fix corrected the label
+(2 September stays 2 September when Julian is not chosen, 20 August when it
+is) and, reasoning that fasts of one calendar beside saints of another read as
+"no calendar that exists", moved the saints and record to match — but the
+saints of a civil day thirteen real days away are not today's saints under
+any calendar anyone keeps, and a reader picking Julian was shown neither today
+nor the day their own church observes. `churchDayFor` (`lib/church.js`) is
+removed; `allEntriesFor`, `dayRecordFor` and `recordsReach` read the civil
+`iso` unconditionally again. **`calendarFor` is untouched and is the one real
+exception**: which calendar's fixed dates govern the fast and the Great
+Feasts still follows the chosen reckoning, on the unmoved civil day — a
+reader asking "is today a fast" under Julian rules is asking a coherent
+question about today, not asking to be shown a different day.*
+
 Under the h1, one utility line: where the day stands in the paschal cycle, the tone of
 the week, and whether it is a fast for this church and why — computed from
 Pascha and the church's calendar (`lib/liturgy.js`), which is why two churches

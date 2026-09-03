@@ -1,7 +1,7 @@
 import { CHURCHES_BY_ID } from '../../data/churches.js';
 import { recordedDay } from '../../data/days.js';
 import { addDaysIso, parseIso, todayIso } from '../../lib/calendar-page.js';
-import { churchDayFor, entriesInChurch } from '../../lib/church.js';
+import { entriesInChurch } from '../../lib/church.js';
 import { feastIndexFor } from '../../lib/feasts.js';
 import { dayInWords } from './format.js';
 import { state } from './state.js';
@@ -29,17 +29,14 @@ const indexFor = (year, data) => feastIndexFor(data.saints, year, CHURCHES_BY_ID
  * remembered. The church itself is re-read from lib/church.js whenever it
  * changes, never cached beyond `state.calendar`.
  *
- * **And the day asked for is the reader's, while the day looked up is their
- * church's** (2026-09-02). `churchDayFor` is identity until a reckoning is
- * chosen, and when one is it hands back the civil day the church's own
- * calendar files today's name under — so the rail's density, the register,
- * the hero and the reach all move together rather than one of them being
- * remembered.
+ * **The day asked for is the civil `iso`, always** (2026-09-04, reversing a
+ * 2026-09-02 change that read it through `churchDayFor` and substituted a
+ * different civil day once a reckoning was chosen — see `lib/church.js`'s own
+ * record of why that was wrong). Today is today whichever calendar names it;
+ * a chosen reckoning is `dayInWords`/`reckonedHeading`'s question, never this
+ * one.
  */
-export const allEntriesFor = (iso, data) => {
-  const day = churchDayFor(iso, state?.calendar);
-  return indexFor(parseIso(day).year, data).get(day) ?? [];
-};
+export const allEntriesFor = (iso, data) => indexFor(parseIso(iso).year, data).get(iso) ?? [];
 
 export const entriesFor = (iso, data) => entriesInChurch(allEntriesFor(iso, data), state?.calendar);
 
@@ -47,15 +44,10 @@ export const countFor = (iso, data) => entriesFor(iso, data).length;
 
 /**
  * The church's record for the day the reader is keeping — readings, hymns and
- * the printed fasting note.
- *
- * The same restatement `allEntriesFor` makes, in the one other place the page
- * fetches a day by its civil date, and here rather than at each of the seven
- * call sites so that the two cannot answer for different days. Identity until
- * a reckoning is chosen.
+ * the printed fasting note. The civil `iso`, unconditionally — see
+ * `allEntriesFor`'s own comment above.
  */
-export const dayRecordFor = (iso, churchId = state?.calendar) =>
-  recordedDay(churchDayFor(iso, churchId), churchId);
+export const dayRecordFor = (iso, churchId = state?.calendar) => recordedDay(iso, churchId);
 
 /**
  * How far ahead the corpus has a saint for, in the calendar the reader keeps.

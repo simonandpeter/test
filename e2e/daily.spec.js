@@ -5275,9 +5275,12 @@ test('the calendar names its own reckoning, and the reader may change it', async
    * then change to match this selected calendar date."
    *
    * 14 September is the Exaltation of the Cross, which is the cleanest proof
-   * available that the *page* moved rather than a label: on the Revised Julian
-   * it falls on the civil 14th and brings its own strict fast, and on the
-   * Julian it does not — the reckoning is the whole difference.
+   * available that a reckoning still reaches the fast (`calendarFor`, unlike
+   * `churchDayFor` — see lib/church.js's own 2026-09-04 record — is a real
+   * content question, not only a label): on the Revised Julian the civil 14th
+   * is the Exaltation and brings its own strict fast, and on the Julian it is
+   * not — the reckoning is the whole difference, and the day itself never
+   * moves either way.
    */
   await ready(page, { church: 'russian' });
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -5285,9 +5288,15 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await page.evaluate(() => document.fonts.ready);
 
   const button = page.locator('[data-reckoning-btn]');
-  // The Russian calendar is the Julian one, and the control says so before
-  // anybody has chosen anything.
-  await expect(button).toHaveText('Julian');
+  /*
+   * Before anybody has chosen anything the control names the calendar the
+   * heading is actually in — Gregorian, the civil one — not the church's own
+   * (2026-09-04, fixing a mismatch the reckoning-moves-the-day reversal
+   * introduced and its own removal did not: printing the church's default
+   * here read as "Julian" beside a heading that had not moved from 14
+   * September, the exact false claim that started this whole area).
+   */
+  await expect(button).toHaveText('Gregorian');
 
   const head = await page.evaluate(() => {
     const name = document.querySelector('.month-name').getBoundingClientRect();
@@ -5314,34 +5323,36 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await expect(page.locator('[data-reckoning-pop] [data-pick]')).toHaveCount(3);
   await page.locator('[data-reckoning-pop] [data-pick="revised-julian"]').click();
 
-  // The control tells the truth about itself, and the day has moved with it.
+  // The control tells the truth about itself, and the fast has changed with
+  // it — the civil 14th is a Great Feast under the calendar whose fixed dates
+  // now govern it, unmoved from the day itself (2026-09-04).
   await expect(button).toHaveText('Revised Julian');
   await expect.poll(async () => (await page.locator('.cal').textContent()).includes('Exaltation')).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).reckoning)).toBe('revised-julian');
 
-  // And the way back is a choice of its own rather than a third calendar.
+  // And the way back is a choice of its own rather than a third calendar —
+  // back to naming the civil calendar the heading was never not in.
   await button.click();
   await page.locator('[data-reckoning-pop] [data-pick=""]').click();
-  await expect(button).toHaveText('Julian');
+  await expect(button).toHaveText('Gregorian');
 });
 
-test('the day the reader picked a reckoning for is named and sourced in it', async ({ page }) => {
+test('a chosen reckoning renames the day and moves nothing it names', async ({ page }) => {
   /*
    * Author, 2026-09-02: "I click to change from Revised Julian to Julian, but
    * it stays as 2 Sep instead of going back 13 days. So now its claiming that
    * today is 2 Sep in Julian, which it isnt."
    *
-   * They were right, and the fault was not the control: until this change a
-   * reckoning moved the *fasts* and nothing else, so the page printed the
-   * saints and the date of the civil 2 September under a heading that said
-   * Julian. **DESIGN.md's "the Daily page prints the civil date and only the
-   * civil date" is reversed here for the reader who asks** — and for nobody
-   * else, which the last third of this test is about.
-   *
-   * The Russian calendar is the Julian one, so it is the *Revised Julian*
-   * choice that moves a Russian reader's day, and it moves it two ways at
-   * once: 2 September Julian is the civil 15th, so the saints of the civil
-   * 15th are the ones a New Calendar Russian keeps today.
+   * That report was read, briefly, as asking for more than a label — a build
+   * the same day made a chosen reckoning move which of the church's recorded
+   * days the page showed, so picking Julian did not just rename 2 September
+   * to 20 August, it substituted the saints of civil 15 September (the day
+   * the Russian church's own calendar calls "2 September") for today's.
+   * **Reversed, author, 2026-09-04: "today is still today, no matter what
+   * calendar display is chosen… the saints should not be changing."** A
+   * reckoning is now purely how the day is *named* — heading, month, grid,
+   * hero, saints, readings, hymns, fasting note, all of it stay the civil
+   * day's own; only the numerals and the month name change.
    */
   await ready(page, { church: 'russian' });
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -5361,12 +5372,9 @@ test('the day the reader picked a reckoning for is named and sourced in it', asy
     await page.locator(`[data-reckoning-pop] [data-pick="${id}"]`).click();
   };
 
-  /*
-   * Julian, which is the Russian church's own: the day is *renamed* and
-   * nothing is re-sourced, because there is nothing to re-source — the same
-   * saints, thirteen days earlier in the reader's own reckoning. This is the
-   * author's report in one assertion.
-   */
+  // Julian, the Russian church's own: the day is renamed, and there is
+  // nothing to re-source — the same saints, thirteen days earlier in the
+  // reader's own reckoning.
   await pick('julian');
   await expect(heading).toHaveText('Wednesday, 20 August 2026');
   await expect(monthName).toHaveText('August 2026');
@@ -5391,17 +5399,18 @@ test('the day the reader picked a reckoning for is named and sourced in it', asy
   expect(grid.selected).toEqual({ iso: '2026-09-02', num: '20' });
 
   /*
-   * Revised Julian, which is not: the heading goes back to 2 September and the
-   * *day itself* moves — the saints the Russian church keeps on its own 2
-   * September, which the civil calendar reaches on the 15th. A label could not
-   * do this, which is why the hero is what is asserted.
+   * Revised Julian too: the heading goes back to reading 2 September, and now
+   * — unlike the reversed build — the hero stays the civil day's own. Two
+   * different reckonings of the same real day print two different numerals
+   * over one unmoved saint.
    */
   await pick('revised-julian');
   await expect(heading).toHaveText('Wednesday, 2 September 2026');
-  await expect(hero).not.toHaveText(civilHero);
-  const moved = await hero.textContent();
-  await page.goto('/calendar/2026-09-15', { waitUntil: 'networkidle' });
-  await expect(page.locator('.cal-date')).toHaveText('Tuesday, 15 September 2026');
+  await expect(hero).toHaveText(civilHero);
+
+  // Neither reckoning goes anywhere: the URL, and what a link on the page
+  // points at, are the civil date throughout.
+  await expect(page).toHaveURL(/\/calendar\/2026-09-02$/);
 
   /*
    * And **nothing moves for a reader who has not asked**, which is the half of
@@ -5409,12 +5418,10 @@ test('the day the reader picked a reckoning for is named and sourced in it', asy
    * Follow my church, a Russian reader is on the civil date again with the
    * civil day's saints, exactly as this page has read since 2026-08-24.
    */
-  await page.goto('/calendar/2026-09-02', { waitUntil: 'networkidle' });
   await pick('');
   await expect(heading).toHaveText('Wednesday, 2 September 2026');
   await expect(monthName).toHaveText('September 2026');
   await expect(hero).toHaveText(civilHero);
-  expect(moved, 'premise: the two reckonings really do lead different days').not.toBe(civilHero);
 });
 
 test('a phone is told the reckoning without being offered the choice', async ({ page }) => {

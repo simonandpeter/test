@@ -21,10 +21,10 @@ import { state } from './state.js';
  * have, and every call below can be unconditional rather than branching on
  * whether a shift is in force.
  *
- * It is the *chosen* reckoning rather than `calendarFor`, for the reason
- * `churchDayFor` gives: a reader who has not touched the control is reading
- * the civil calendar the URL is in, which is what DESIGN.md's grid rule says
- * and what every day of this page said before the control existed.
+ * It is the *chosen* reckoning rather than `calendarFor`: a reader who has
+ * not touched the control is reading the civil calendar the URL is in, which
+ * is what DESIGN.md's grid rule says and what every day of this page said
+ * before the control existed.
  */
 const gridCalendar = () => storedReckoning() ?? 'gregorian';
 

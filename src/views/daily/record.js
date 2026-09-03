@@ -1,5 +1,4 @@
 import { recordsReach } from '../../data/days.js';
-import { churchDayFor } from '../../lib/church.js';
 import { dayRecordFor } from './entries.js';
 import { bibleUrl, refInLanguage } from '../../lib/bible.js';
 import { loadDetail } from '../../lib/detail.js';
@@ -64,10 +63,7 @@ export function readingsMarkup(iso, churchId) {
      * must not be told in these words.
      */
     const reach = recordsReach();
-    // Against the day whose record was *fetched*, not the day the reader is
-    // standing on: with a reckoning chosen those are thirteen days apart, and
-    // near the horizon the two answer differently.
-    if (!reach || churchDayFor(iso, churchId) <= reach) return '';
+    if (!reach || iso <= reach) return '';
     return `<p class="beyond-records utility">${esc(
       fill(STRINGS.calendar.beyondRecords, { until: dayInWords(reach) }),
     )}</p>`;

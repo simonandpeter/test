@@ -17,7 +17,7 @@ import { gregorianToJdn } from '../lib/jdn.js';
 import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
-import { RECKONINGS, calendarFor, chooseReckoning, currentChurch, storedReckoning, subscribeChurch } from '../lib/church.js';
+import { RECKONINGS, chooseReckoning, currentChurch, storedReckoning, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -381,7 +381,17 @@ function wireReckoning(el) {
 
   const paint = () => {
     const chosen = storedReckoning();
-    const inForce = calendarFor(state.calendar);
+    /*
+     * **The button's own word agrees with the heading beside it** (2026-09-04,
+     * fixing a defect the reckoning-moves-the-day reversal introduced and its
+     * own removal did not touch): the heading reads `chosen ?? 'gregorian'`
+     * (below, and in `paintChrome`), never the church's default, because a
+     * reader who has not asked is reading the civil calendar the URL is in —
+     * `calendarFor` answers a different question (which calendar governs the
+     * fast) and printing it here read as "Julian" beside a Gregorian-dated
+     * heading for every reader who had not touched the control.
+     */
+    const inForce = chosen ?? 'gregorian';
     button.textContent = CALENDAR_LABELS[inForce] ?? inForce;
     button.setAttribute('aria-label', `${STRINGS.calendar.reckoningLabel}: ${button.textContent}`);
     // A statement rather than a control below the breakpoint.

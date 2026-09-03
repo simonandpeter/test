@@ -62,7 +62,24 @@ applies to the fine coastline, one level further in. Every tile is still cut
 to `MAX_LAT`, same as the world wash: nothing this corpus ever locates a
 saint past 83 degrees, and a tile up there would be pure ocean or ice.
 
-    python scripts/make-terrain.py [--width 2048] [--quality 78] [--tile-quality 80]
+**A third tier, for the ground this corpus actually stands on** (2026-09-04):
+the 10m tier - `SR_HR`/`HYP_HR_SR_OB_DR`, 60 px/degree, twice the 50m tier's
+own density - regenerated for whichever of the 72 cells fall within 1000 km
+of a saint's own recorded location (`data/manifest.json`, built first -
+`npm run build:manifest` - since this script has no reason to carry a second
+reader of the corpus). China, India, the continental US and Australia are
+excluded from *triggering* a tile even where a located saint sits inside
+them - not because their ground matters less, but because the 10m tier is
+four times the pixels of the 50m one for the same cell, and a handful of
+saints scattered across those countries' own scale would ask for tiles an
+order of magnitude larger than the rest of the grid combined for very little
+of this corpus to show there. In practice nothing in the corpus falls inside
+any of the four today, so the exclusion is a ceiling on the file this script
+writes as the corpus grows, not a live cut. `terrain-tiles.js` marks each
+qualifying cell `hr: true`; `map.js` only asks for the pair a cell's own
+entry says exists, so the absence never costs a failed request.
+
+    python scripts/make-terrain.py [--width 2048] [--quality 78] [--tile-quality 80] [--skip-hr]
 """
 import argparse
 import io
@@ -79,6 +96,25 @@ Image.MAX_IMAGE_PIXELS = None
 BASE = 'https://naciscdn.org/naturalearth/50m/raster'
 RELIEF_ZIP = f'{BASE}/SR_50M.zip'
 COLOUR_ZIP = f'{BASE}/HYP_50M_SR_W.zip'
+
+BASE_HR = 'https://naciscdn.org/naturalearth/10m/raster'
+RELIEF_ZIP_HR = f'{BASE_HR}/SR_HR.zip'
+COLOUR_ZIP_HR = f'{BASE_HR}/HYP_HR_SR_OB_DR.zip'
+HR_PX_PER_DEG = 60  # the 10m tier's own native density - twice the 50m tier's
+
+# Excludes a *saint's own location* from triggering an HR tile, not a tile
+# whose box merely overlaps one of these - see the module docstring.
+EXCLUDE_BOXES = {
+    'usa': (-125, -66, 24, 49),
+    'china': (73, 135, 18, 53),
+    'india': (68, 97, 8, 37),
+    'australia': (113, 154, -44, -10),
+}
+
+# A rough sphere is plenty at 1000 km: the corpus's own coordinates already
+# carry `uncertainty_km` of 50 or more, and this is a build-time cell
+# selection, not a distance printed to a reader.
+EARTH_RADIUS_KM = 6371
 
 # lib/mercator.js's own MAX_LAT - kept in sync by hand, checked by eye against
 # the coastline in the mockup rather than by a test, since this script only
@@ -193,12 +229,58 @@ def tile_bounds():
             yield col, row, lons[col], lons[col + 1], lats[row], lats[row + 1]
 
 
+def in_box(lon, lat, box):
+    lon0, lon1, lat0, lat1 = box
+    return lon0 <= lon <= lon1 and lat0 <= lat <= lat1
+
+
+def excluded(lon, lat):
+    return any(in_box(lon, lat, b) for b in EXCLUDE_BOXES.values())
+
+
+def haversine_km(lon1, lat1, lon2, lat2):
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp, dl = math.radians(lat2 - lat1), math.radians(lon2 - lon1)
+    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * EARTH_RADIUS_KM * math.asin(math.sqrt(a))
+
+
+def saint_points(manifest_path):
+    """Every located saint's own (lon, lat), read straight from the built
+    manifest - `locations`, not `primary_location` alone, since a saint born
+    in one region and buried in another should trigger both."""
+    import json
+
+    data = json.loads(Path(manifest_path).read_text(encoding='utf-8'))
+    points = []
+    for saint in data:
+        for loc in saint.get('locations') or []:
+            if not excluded(loc['lon'], loc['lat']):
+                points.append((loc['lon'], loc['lat']))
+    return points
+
+
+def tile_near_any(lon0, lon1, lat0, lat1, points, radius_km=1000):
+    for plon, plat in points:
+        clon = min(max(plon, min(lon0, lon1)), max(lon0, lon1))
+        clat = min(max(plat, min(lat0, lat1)), max(lat0, lat1))
+        if haversine_km(clon, clat, plon, plat) <= radius_km:
+            return True
+    return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--width', type=int, default=2048)
     ap.add_argument('--quality', type=int, default=78)
     ap.add_argument('--tile-quality', type=int, default=80)
     ap.add_argument('--skip-tiles', action='store_true', help='world wash only, for a quick rebuild')
+    ap.add_argument('--skip-hr', action='store_true', help='50m tile grid only, skip the 10m pass')
+    ap.add_argument(
+        '--manifest',
+        default=str(Path(__file__).resolve().parent.parent / 'data' / 'manifest.json'),
+        help='built manifest to read saint locations from (npm run build:manifest first)',
+    )
     args = ap.parse_args()
     out_w = args.width
     out_h = round(out_w / ASPECT)
@@ -228,10 +310,34 @@ def main():
     if args.skip_tiles:
         return
 
+    points = []
+    if not args.skip_hr:
+        if Path(args.manifest).exists():
+            points = saint_points(args.manifest)
+            print(f'{len(points)} located-saint points (excluded countries applied)')
+        else:
+            print(f'no manifest at {args.manifest} - run `npm run build:manifest` first; skipping the 10m pass')
+            args.skip_hr = True
+
+    qualifying = set()
+    if not args.skip_hr:
+        for col, row, lon0, lon1, lat0, lat1 in tile_bounds():
+            if tile_near_any(lon0, lon1, lat0, lat1, points):
+                qualifying.add((col, row))
+        print(f'{len(qualifying)} of {TILE_COLS * TILE_ROWS} tiles within 1000 km of a located saint')
+
+    relief_native_hr = colour_native_hr = None
+    if qualifying:
+        relief_img_hr = fetch_tif(RELIEF_ZIP_HR, '.tif')
+        colour_img_hr = fetch_tif(COLOUR_ZIP_HR, '.tif')
+        relief_native_hr = np.array(relief_img_hr.convert('L'))
+        colour_native_hr = np.array(colour_img_hr.convert('RGB'))
+
     tiles_dir = data_dir / 'terrain-tiles'
     tiles_dir.mkdir(parents=True, exist_ok=True)
     manifest = []
     total_bytes = 0
+    hr_bytes = 0
     for col, row, lon0, lon1, lat0, lat1 in tile_bounds():
         tw = max(2, round((lon1 - lon0) * NATIVE_PX_PER_DEG))
         th = max(2, round(abs(lat1 - lat0) * NATIVE_PX_PER_DEG))
@@ -248,8 +354,31 @@ def main():
         r_img.save(r_path, 'WEBP', quality=args.tile_quality, method=6)
         total_bytes += g_path.stat().st_size + r_path.stat().st_size
 
+        is_hr = (col, row) in qualifying
+        if is_hr:
+            hw = max(2, round((lon1 - lon0) * HR_PX_PER_DEG))
+            hh = max(2, round(abs(lat1 - lat0) * HR_PX_PER_DEG))
+            h_relief = reproject_box_to_mercator(relief_native_hr, lon0, lon1, lat0, lat1, hw, hh, is_rgb=False)
+            h_colour = reproject_box_to_mercator(colour_native_hr, lon0, lon1, lat0, lat1, hw, hh, is_rgb=True)
+            h_green = greenness_of(h_colour)
+            hg_img = Image.fromarray(np.clip(h_green * 255, 0, 255).astype(np.uint8), 'L')
+            hr_img = Image.fromarray(h_relief.astype(np.uint8), 'L')
+            hg_path = tiles_dir / f't-{col}-{row}-green-hr.webp'
+            hr_path = tiles_dir / f't-{col}-{row}-relief-hr.webp'
+            hg_img.save(hg_path, 'WEBP', quality=args.tile_quality, method=6)
+            hr_img.save(hr_path, 'WEBP', quality=args.tile_quality, method=6)
+            hr_bytes += hg_path.stat().st_size + hr_path.stat().st_size
+
         manifest.append(
-            {'col': col, 'row': row, 'lon0': round(lon0, 4), 'lon1': round(lon1, 4), 'lat0': round(lat0, 4), 'lat1': round(lat1, 4)}
+            {
+                'col': col,
+                'row': row,
+                'lon0': round(lon0, 4),
+                'lon1': round(lon1, 4),
+                'lat0': round(lat0, 4),
+                'lat1': round(lat1, 4),
+                'hr': is_hr,
+            }
         )
 
     import json
@@ -261,7 +390,9 @@ def main():
         " * `map.js` projects the bounds itself (`lib/mercator.js`'s own\n"
         " * `project`) rather than reading a pre-projected fraction from here, so\n"
         " * there is one place the projection math lives. The tiles themselves are\n"
-        " * `terrain-tiles/t-{col}-{row}-green.webp` and `-relief.webp`.\n"
+        " * `terrain-tiles/t-{col}-{row}-green.webp` and `-relief.webp` (50m tier,\n"
+        " * every cell); `hr: true` cells also carry `-green-hr.webp`/`-relief-hr.webp`\n"
+        " * (10m tier, within 1000km of a located saint - see the script's own header).\n"
         " */\n"
         f"export const TILE_COLS = {TILE_COLS};\n"
         f"export const TILE_ROWS = {TILE_ROWS};\n"
@@ -273,6 +404,8 @@ def main():
         f'{len(manifest)} tiles ({TILE_COLS}x{TILE_ROWS}), '
         f'{total_bytes / 1024:.1f} kB total, {total_bytes / len(manifest) / 1024:.1f} kB avg/tile pair'
     )
+    if qualifying:
+        print(f'{len(qualifying)} tiles with an HR pair, {hr_bytes / 1024:.1f} kB total')
 
 
 if __name__ == '__main__':

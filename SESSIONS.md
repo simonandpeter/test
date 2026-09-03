@@ -4718,6 +4718,152 @@ list built for two dozen, are all open. **Parked, not started — revisit
 when the map's other open questions (the terrain wash below) have settled,
 since both touch the same crowded-mark reading.**
 
+## Amendment 94 — the fourth reckoning reversal: a label moves, a day does not (author, 2026-09-04)
+
+Audited on request ("Do a fully thorough audit of this whole mechanic and how
+previous misunderstandings could have had mistaken offshoots affecting
+everything else on the site. We wont have any errors of this magnitude on
+the site") rather than fixed on sight, because the 2026-09-02 behaviour being
+reported wrong was itself a deliberate, documented, tested decision — the
+third reckoning reversal, recorded in DESIGN.md and CLAUDE.md and pinned by
+`e2e/daily.spec.js`. The audit found it working exactly as built and still
+wrong: picking a reckoning that differs from the reader's own church's
+calendar substituted a civil day up to thirteen days away — `churchDayFor`
+(`lib/church.js`) restated today into "whichever civil day the chosen
+calendar's numerals fall on in the reader's own church's calendar" — so a
+reader who picked Julian was shown neither today's saints nor the day their
+own church actually keeps. The reasoning behind it (fasts of one calendar
+beside saints of another read as no calendar that exists) was answered
+wrongly: the fix was to stop moving the fasts, not to also move the saints,
+and it did not even reach the coherence it claimed — the audit found the
+fast grade and the fast *note* were still reading two different days under
+the reversed build, from the same mismatch reproduced in the other order
+(`gradeForDay` unshifted, `dayRecordFor`'s `fastingNote` shifted).
+
+**The fix: `churchDayFor` is gone.** `allEntriesFor`, `dayRecordFor`
+(`daily/entries.js`) and `recordsReach` (`daily/record.js`) read the civil
+`iso` unconditionally. A reckoning now reaches exactly what DESIGN.md's
+2026-08-24 rule already said it should — the label: the heading, the rail and
+month numerals, the full-screen calendar, the two prose horizons
+(`dateIn`/`restateIso`, unchanged, `lib/calendar-page.js`) — and nothing a
+reader is shown as content. This also resolved the fast-grade/note mismatch
+above without a second fix, since both sides now read the same unmoved day.
+
+**One thing was kept rather than also removed: `calendarFor`.** It still lets
+a chosen reckoning govern which calendar's fixed dates decide the fast and
+the Great Feasts (`lib/liturgy.js`) — on the *unmoved* civil day. Asking "is
+today a fast under Julian rules" is a coherent question about today; it was
+not folded into the "purely a label" reading because it never moves which day
+is asked about, only which ruleset judges it. Recorded as a decision rather
+than an oversight, since the alternative (`calendarFor` reduced to the
+church's own default always) is one sentence away if it turns out wrong.
+
+**One more defect, found only because the audit went looking rather than
+stopping at the reported bug.** The reckoning button printed the *church's*
+default calendar name whenever the reader had not chosen one —
+`calendarFor(state.calendar)` — while the heading beside it, untouched, has
+always defaulted to Gregorian. A Russian reader who had never touched the
+control saw a heading reading "2 September" with a button reading "Julian"
+beside it: the exact false claim the 2026-09-02 report was originally about,
+reintroduced by the fix for it and never caught because nothing checked the
+button against the heading it sits beside. `wireReckoning`'s `paint`
+(`views/calendar.js`) now reads `storedReckoning() ?? 'gregorian'`, matching
+the heading exactly.
+
+`e2e/daily.spec.js`'s reckoning test rewritten to assert the corrected
+behaviour (the hero stays the civil day's own at every reckoning, where it
+previously asserted the hero changing) and the button-label test's two
+premise assertions moved from `'Julian'` to `'Gregorian'`. Every other
+reckoning-touching call site the audit found (`gridCalendar`, the prose
+formatters, the About page's per-church reckoning names) was already reading
+through the label layer alone and needed no change.
+
+## Amendment 95 — the saint page's pin fixed, the map's zoom eased, tile seams answered with a third tier (author, 2026-09-04)
+
+Six requests in one sitting, four of them on the map; recorded together
+because the last three build on each other rather than because they arrived
+in one message.
+
+**The saint page's pinned icon un-stuck early** (`saint.css`). Author:
+"when you scroll in the leftmost column the text scrolls under the image but
+the saint image stays exactly where it is, pinned. The born/died details
+scroll under it but for some reason the veneration doesnt." `.saint-media-col`
+was `position: sticky` inside `.saint-intro`, a real grid box — its own
+containing block — so the icon un-stuck the moment *that* box's bottom
+scrolled past, before the reader reached `.saint-veneration`, appended after
+it as a sibling (`wireColumns`). `display: contents` on `.saint-intro` removes
+it as a box, so the sticky element's containing block becomes the scroller
+itself and the pin holds for the whole column. Pinned that widely, the image
+now sits over later controls at some scroll position rather than briefly
+beside them — `pointer-events: none` lets a press reach whatever is genuinely
+underneath, costing nothing since the icon carries no click of its own.
+`e2e/saint.spec.js`'s existing pin test only read the register; extended to
+read veneration too, and backed out to confirm it fails on the old CSS before
+being restored (it did — the icon itself moved with the column past the old
+threshold, `830px` short of the top on a saint whose column needed more).
+
+**A discrete zoom step eases now** (`map.js`, author: "make the map zooms
+smooth"). The `+`/`-` buttons, their keyboard equivalents, and Home/`0` now
+go through `flyTo` — the cubic-ease-out flight a saint selection already
+used — instead of an instant `set(zoomAbout(...))`. Two traps surfaced
+fixing this: `flyTo`'s own per-frame `clampView` call defaulted to the
+desktop `MAX_SCALE` regardless of caller, so an eased zoom on a narrower
+window silently capped at 240x mid-flight even though `maxScaleFor` allows a
+phone up to 960x — `flyTo` gained an explicit `max` parameter for this. And
+`e2e/map.spec.js` had eleven separate loops of rapid `+`/`-` presses with
+nothing between them, written for the instant version: a press mid-flight
+now re-targets from wherever the view currently is, not from where the last
+press aimed, so a tight loop barely moves the scale at all. Fixed with a
+`settledZoom` helper that polls the readout for two identical reads rather
+than sleeping a guessed duration — a fixed sleep passed alone and failed
+under the full suite's own parallel load, where an eased flight can
+genuinely take longer wall-clock time than one desk's run suggested.
+
+**The coastline, lakes and rivers cross-fade between tiers too** (`map.js`,
+author: "make the appearance of the high quality coastlines and lakes and
+rivers fade in/out instead of just appearing"). `paintCanvas` keeps the
+previous tier's own geometry (`__detailFadeFrom`) for `DETAIL_FADE_MS`
+(280ms) after `fine` flips either way and draws it — flat ink only, not the
+full terrain treatment, since this is a brief transition — fading out under
+the new tier fading in. `ctx.globalAlpha` does not compose across nested
+`save`/`restore`, so `detailT` is multiplied into each existing alpha site
+(the flat fill, the terrain wash, the tile draws, the lake cut, the river
+stroke) rather than set once in an outer scope and trusted to survive nested
+calls that overwrite it — the first version of this fix looked right and
+silently did nothing past the outermost `save`.
+
+**The terrain wash's own fade moved from 2x/`DETAIL_AT` to 8x** (author: "have
+them fade into view at 8x zoom not 2x as on mobile its a bit laggy
+currently") — the 50m tile grid's fetch-and-decode work now starts later, so
+a phone panning at a modest zoom is not asking several tiles to arrive at
+once for a layer it is barely stopped on.
+
+**A third tier, 10m, for the ground this corpus actually stands on**
+(author: "add the 10m resolution raster tiles to tiles that are within
+1000km of a saint entry"). `make-terrain.py` reads `data/manifest.json` for
+every located saint's own coordinates, excludes any inside a rough box for
+China, India, the continental US or Australia (author: "would discount china
+india america australia for a while to keep the size small" — nothing in the
+corpus falls inside any of the four today, so this is a ceiling on the file
+as the corpus grows, not a live cut), and regenerates whichever of the 72
+cells land within 1000 km of a qualifying point at 60 px/degree — twice the
+50m tier's own density. Seven cells qualified. Marked `hr: true` in the
+manifest and fetched only for those cells, only past `HR_FADE_START` (24,
+the author's own first number — "around 24x or 30x if 24x is too soon",
+untested against a real screen at the time of writing), crossfading over the
+50m tile per cell exactly as the 50m tier crossfades over the wash.
+
+**Tiles read lighter than the wash for the same ground** (author: "match the
+zoomed in rasters to this darker colour"). The wash decimates the native
+data roughly 5x to fit a whole-world image light enough to ship; a sparse
+point-sample of a noisy raster is not the same read as a tile's full
+density, and it comes out lighter on this corpus's own geography. The honest
+fix — resampling the wash with a true area average instead of a point-sample
+— is unbuilt; `TILE_DARKEN_BIAS` (0.08, `lib/map-terrain.js`) is the direct
+patch asked for, applied to both tile tiers and always toward more ink
+regardless of theme, since more alpha reads darker in the light theme and
+*lighter* in the dark one where ink is the light token.
+
 ## Deploy change, from Session 1 onward
 
 `data/manifest.json` is generated and gitignored, built by CI. The site stops

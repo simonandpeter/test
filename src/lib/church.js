@@ -16,7 +16,6 @@
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
 import { STRINGS } from '../ui/strings.js';
 import { readSettings, writeSetting } from './settings.js';
-import { restateIso } from './calendar-page.js';
 
 export const churchIds = () => enabledChurches().map((c) => c.id);
 
@@ -159,34 +158,27 @@ export const calendarFor = (churchId) =>
   storedReckoning() ?? CHURCHES_BY_ID[churchId]?.default_calendar ?? 'julian';
 
 /**
- * **Which of the church's recorded days the reader is actually keeping**
- * (author, 2026-09-02: "I click to change from Revised Julian to Julian, but
- * it stays as 2 Sep instead of going back 13 days").
+ * **`churchDayFor` is gone (author, 2026-09-04, reversing the 2026-09-02
+ * decision recorded above): a chosen reckoning is a label, not a day.**
  *
- * A reckoning was an override on the *fasts* alone until now, which left the
- * page saying two things at once: the fasts of the Julian 20 August beside the
- * saints of the Gregorian 2 September, under a heading that said 2 September
- * and a control that said Julian. The reader was reading no calendar that
- * exists.
- *
- * So an override now moves the day itself. The reader keeps 20 August, and the
- * day of their own church that carries 20 August is the one the corpus files
- * under whatever civil date *that church's* calendar puts it on —
- * `restateIso` is that question, and it is identity for every reader who has
- * not chosen, which is why every call site can be unconditional.
- *
- * It is deliberately keyed on the *chosen* reckoning rather than on
- * `calendarFor`: null means follow the church, and nothing about the site
- * moves for a reader who has not asked. A Russian reader who picks Julian
- * explicitly gets the same days they already had — their church's own — and
- * the page names them in the calendar they picked, which is the whole of what
- * they asked for.
+ * The 2026-09-02 change made a reckoning move which of the church's recorded
+ * days a reader was shown — 20 August under a Julian reckoning meant the
+ * saints, readings and hymns of civil 2 September, thirteen days from today.
+ * The author's own report that day ("it stays as 2 Sep instead of going back
+ * 13 days") asked for the *heading* to read 20 August; the fix built moved
+ * the content too, on the reasoning that fasts of one calendar beside saints
+ * of another was a page reading no calendar that exists. That reasoning did
+ * not hold up: today is today regardless of which calendar names it, and a
+ * reader picking Julian was shown neither today's saints nor the day their
+ * own church actually keeps — a real day nobody's calendar calls today,
+ * under a label that used to be true and had quietly become a claim about a
+ * different day. `allEntriesFor` and `dayRecordFor` (`views/daily/entries.js`)
+ * and `recordsReach` (`views/daily/record.js`) now read the civil `iso`
+ * directly; `dateIn`/`restateIso` (`lib/calendar-page.js`) still do the
+ * labelling work everywhere the reckoning is only ever printed —
+ * `reckonedHeading`/`reckonedPlain`/`reckonedMonth` (`views/daily/format.js`),
+ * the rail and month numerals (`gridCalendar`), the full-screen calendar.
  */
-export const churchDayFor = (iso, churchId) => {
-  const chosen = storedReckoning();
-  if (!chosen) return iso;
-  return restateIso(iso, chosen, CHURCHES_BY_ID[churchId]?.default_calendar ?? 'julian');
-};
 
 /**
  * Chosen, or unchosen by passing null — which puts the reader back on their

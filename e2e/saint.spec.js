@@ -1198,11 +1198,13 @@ test('the icon stays put while the apparatus column scrolls under it', async ({ 
   await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.saint-media')).toBeVisible();
+  await expect(page.locator('[data-veneration-box]')).toBeVisible();
 
   const read = () =>
     page.evaluate(() => ({
       icon: Math.round(document.querySelector('.saint-media').getBoundingClientRect().top),
       register: Math.round(document.querySelector('.date-facts').getBoundingClientRect().top),
+      veneration: Math.round(document.querySelector('[data-veneration-box]').getBoundingClientRect().top),
     }));
 
   const before = await read();
@@ -1220,6 +1222,33 @@ test('the icon stays put while the apparatus column scrolls under it', async ({ 
     before.register - after.register,
     'the register did not scroll under the icon',
   ).toBeGreaterThan(by - 4);
+
+  /*
+   * **The bug this test used to miss entirely** (2026-09-04): the icon's
+   * sticky containing block was `.saint-intro`, not the scrollport, so it
+   * un-stuck the moment that box's own bottom passed — before the reader
+   * scrolled far enough to reach veneration, which sits *after* `.saint-intro`
+   * as its own sibling. `by` above (260 px) never reached that threshold, so
+   * every assertion up to here already passed on the unfixed tree; only a
+   * scroll past `.saint-intro`'s own height catches it, which is why this is
+   * a second, deeper scroll rather than a larger `by`.
+   */
+  const deep = await page.evaluate(() => {
+    const aside = document.querySelector('.saint-aside');
+    aside.scrollTop = aside.scrollHeight;
+    return aside.scrollTop;
+  });
+  expect(deep, 'premise: the column has more to scroll past the first step').toBeGreaterThan(by);
+  await expect
+    .poll(async () => (await page.evaluate(() => Math.round(document.querySelector('.saint-aside').scrollTop))))
+    .toBe(deep);
+  const deepAfter = await read();
+
+  expect(deepAfter.icon, 'the icon moved with the column once past the old intro box').toBe(before.icon);
+  expect(
+    before.veneration - deepAfter.veneration,
+    'veneration did not scroll under the icon by the same amount as the column',
+  ).toBeGreaterThan(deep - 4);
 });
 
 

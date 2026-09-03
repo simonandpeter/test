@@ -87,21 +87,32 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   that test **cannot** catch the doubling being backed out, because the
   reservation is a `min-height` and holds the bar open regardless — `the
   chrome doubles and spans the window on a wide screen` is the one that does.
-- **A chosen reckoning moves the day, not just the fasts** (author, 2026-09-02;
-  DESIGN.md records the reversal). `storedReckoning()` null is "follow my
-  church" and every path below is then the identity, which is why none of them
-  branches: `churchDayFor` (lib/church.js) restates a civil day into the one
-  the church's *own* calendar files that name under, and `allEntriesFor` and
-  `dayRecordFor` (daily/entries.js) are the only two places that fetch a day —
-  everything else reads through them. The naming is `gridCalendar()` in
-  picker.js and fullcal.js (the numerals), `reckonedHeading`/`reckonedPlain`/
-  `reckonedMonth` in daily/format.js (the words). **The weekday always comes
-  from the civil day** and the numerals from the reckoned one: two `Intl`
-  passes with one field swapped, because gluing two formatted dates together
-  invents punctuation Greek and Russian do not use. `restateIso`, `dateIn`,
-  `isoOfDate` and `daysInMonthOf` are the arithmetic, in lib/calendar-page.js
-  and unit-tested — including the Julian 29 February of 2100, which the other
-  calendars do not have and which therefore stays where it is.
+- **A chosen reckoning renames the day; it moves nothing** (author, 2026-09-04,
+  reversing the 2026-09-02 decision this bullet used to describe — DESIGN.md
+  and SESSIONS.md record both). Today is today whichever calendar names it:
+  `allEntriesFor`, `dayRecordFor` (daily/entries.js) and `recordsReach`
+  (daily/record.js) — the only places that fetch a day, everything else reads
+  through them — take the civil `iso` directly and unconditionally. There is
+  no `churchDayFor` any more; it existed for one day (2026-09-02 to
+  2026-09-04) and substituted a different civil day's saints once a reckoning
+  was chosen, on reasoning lib/church.js's own comment records and retracts.
+  **`calendarFor` is the one place a reckoning still reaches content, not only
+  a label**: which calendar's fixed dates govern the fast and the Great
+  Feasts (lib/liturgy.js), on the *unmoved* civil day. The naming is
+  `gridCalendar()` in picker.js and fullcal.js (the numerals),
+  `reckonedHeading`/`reckonedPlain`/`reckonedMonth` in daily/format.js (the
+  words), and the reckoning button's own printed word (`calendar.js`'s
+  `wireReckoning`) reads `storedReckoning() ?? 'gregorian'` — the heading's own
+  default — rather than the church's, which is what let the control claim
+  "Julian" beside a Gregorian-dated heading for a reader who had never touched
+  it. **The weekday always comes from the civil day** and the numerals from
+  the reckoned one: two `Intl` passes with one field swapped, because gluing
+  two formatted dates together invents punctuation Greek and Russian do not
+  use. `restateIso`, `dateIn`, `isoOfDate` and `daysInMonthOf` are the
+  arithmetic, in lib/calendar-page.js and unit-tested — including the Julian
+  29 February of 2100, which the other calendars do not have and which
+  therefore stays where it is. **These are unchanged**; only `churchDayFor`'s
+  use of `restateIso` to substitute a day is gone, not the labelling math.
 - Every `data-iso` is a civil date whatever is chosen, so URLs, links and deep
   links never move. Only what is printed does.
 - The rail and month are one seam. The *day* half is separable.
@@ -161,6 +172,20 @@ it appends rather than reserving, because a life's height is unknowable.
 The right column (`.saint-side`, desktop only) is the reader's own search from
 All Saints — the Index's own chips and rows, borrowed rather than copied, which
 is why anything scoped to the All Saints view root can go missing there.
+
+**The pinned hero image's sticky containing block is the aside itself, not
+`.saint-intro`** (2026-09-04, `saint.css`, `@media (min-width: 1024px)`):
+`.saint-aside .saint-intro { display: contents; }` removes the intro as a box
+so `.saint-media-col` and `.saint-intro-facts` become the scroller's own
+children directly. Left as a real grid box, the intro was the sticky
+element's containing block, and a `position: sticky` element un-sticks the
+moment *that* box's own bottom scrolls past — before the reader reached
+`.saint-veneration`, a sibling appended after the intro (`wireColumns`), which
+is why the register scrolled under the pinned icon correctly and veneration
+never did. `pointer-events: none` on `.saint-media-col` is the fix's other
+half: pinned for the whole column now, the image sits over every later
+control (the reveal-traditions button among them) at some scroll position,
+not only briefly beside it, and it carries no click of its own to lose.
 
 **Map** — `src/views/map.js` + `src/styles/map.css`.
 
@@ -245,6 +270,60 @@ wash fades out (`tileStrength = 1 - terrainStrength`, both driven by the one
 `zoomFade`), and a tile that has not arrived yet is simply not drawn — the
 flat fill (drawn whenever the wash is below full strength) is what shows
 through the gap, so a slow network reads as *plainer*, never as broken.
+**`TERRAIN_FADE_START`/`_END` moved from 2/`DETAIL_AT` to 8/12** (2026-09-04,
+author: "have them fade into view at 8x zoom not 2x as on mobile its a bit
+laggy currently") — starting the tile grid's own fetch-and-decode work later
+means a phone panning at a modest zoom is never asking several tiles to
+arrive at once for a layer it is barely stopped on.
+
+**A third tier, 10m, for the ground this corpus actually stands on**
+(2026-09-04): `make-terrain.py` also regenerates whichever cells fall within
+1000 km of a located saint (`data/manifest.json`, so `npm run build:manifest`
+has to run first) at 60 px/degree — twice the 50m tier's density — as
+`t-{col}-{row}-green-hr.webp`/`-relief-hr.webp`, and marks that cell `hr: true`
+in the manifest. China, India, the continental US and Australia are excluded
+from *triggering* an HR cell even where a located saint sits inside them —
+the 10m tier is four times the pixels of the 50m one per cell, and nothing in
+the corpus falls inside any of the four today, so this is a ceiling on the
+file this script writes as the corpus grows rather than a live cut. Fetched
+only for `hr: true` cells, only once `HR_FADE_START` (24 — the author's own
+first number, "around 24x or 30x if 24x is too soon" — untested against a
+real screen at the time of writing) is reached, and only for cells the view
+actually overlaps; crossfades over the 50m tile the same way the 50m tier
+crossfades over the wash, per tile rather than for the whole picture, so a
+reader panning across the edge of an HR cell sees one image change, not all
+of them.
+
+**A tile reads lighter than the wash for the same ground, and `TILE_DARKEN_BIAS`
+(0.08) closes most of the gap** (2026-09-04, author: "the fully zoomed out
+raster image the green seems darker than the more zoomed in ones — match the
+zoomed in rasters to this darker colour"). The wash decimates the native data
+roughly 5x to fit a whole-world image light enough to ship; a sparse
+point-sample of a noisy raster reads differently than the full-density tile
+data, and it comes out darker on this corpus's own geography. The honest fix
+is resampling the wash with a true area average instead of a point-sample —
+unbuilt; this is the direct patch asked for instead, applied to both tile
+tiers (`buildTint`'s own `bias` parameter, `lib/map-terrain.js`) and always
+toward more ink regardless of theme, since more alpha reads darker in the
+light theme and *lighter* in the dark one where ink is the light token.
+
+**A discrete zoom step eases now rather than jumping** (2026-09-04, author:
+"make the map zooms smooth"): the `+`/`-` buttons, the keyboard equivalents
+and Home/`0` all go through `flyTo` — the same cubic-ease-out flight a saint
+selection already used — instead of `set(zoomAbout(...))` applied instantly.
+`flyTo` itself gained an explicit `max` parameter for this (default
+`MAX_SCALE`, the desktop ceiling): its own per-frame `clampView` call needs
+the *window's* ceiling (`ceilingOf`), not the desktop one, or every eased
+zoom step on a narrower-than-desktop window silently capped at 240x mid-flight
+regardless of what `maxScaleFor` actually allows there. **The coastline, lakes
+and rivers cross-fade between tiers too**, on the same ask: `paintCanvas`
+tracks the previous tier's own geometry (`__detailFadeFrom`) for `DETAIL_FADE_MS`
+(280ms) after `fine` flips either way, drawing it — flat ink only, not the
+full terrain treatment, since this is a brief transition — fading out under
+the new tier fading in, both multiplied into the fill/cut/stroke alphas that
+already existed rather than layered on top of them (`ctx.globalAlpha` does not
+compose across nested `save`/`restore`, so each alpha site is multiplied by
+`detailT` explicitly rather than wrapped in one outer scope).
 
 **The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
 and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
@@ -845,10 +924,12 @@ nothing.** Four things in one day read as evidence and were not.
 - `node scripts/make-land.mjs` — regenerates the map's coastline. By hand only;
   the output is committed so the build never needs `world-atlas`.
 - `python scripts/make-terrain.py` — regenerates the map's terrain wash
-  (`src/data/terrain-green.webp`, `terrain-relief.webp`) and its tile grid
-  (`src/data/terrain-tiles/`, `terrain-tiles.js`). By hand only, output
-  committed; see the Map section below and the script's own header.
-  `--skip-tiles` for a quick wash-only rebuild.
+  (`src/data/terrain-green.webp`, `terrain-relief.webp`), its 50m tile grid
+  and the 10m HR pairs for cells near a located saint (`src/data/terrain-tiles/`,
+  `terrain-tiles.js`). By hand only, output committed; see the Map section
+  below and the script's own header. Needs `data/manifest.json` built first
+  (`npm run build:manifest`) for the HR pass. `--skip-tiles` for a quick
+  wash-only rebuild, `--skip-hr` to keep the 50m grid but skip the 10m pass.
 
 ## Workflow
 
