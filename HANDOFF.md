@@ -29,7 +29,8 @@ you inferred, and keep them apart.
 
 - **862 saints**, every one with a life; **1221 venerated attestations** —
   no refusal and no sourced absence is recorded yet, and the About page
-  says so. **154 undated**; **130 icons**; 430 hymns, 49 with a
+  says so. **150 undated** (2026-09-03; 154 when this block was written);
+  **130 icons**; 430 hymns, 49 with a
   published English rendering. The corpus reaches **28 September 2026** in
   both calendars - the reach walks each reader's own calendar (entries.js),
   and its fortnight gap-tolerance carries the Russian run over the
@@ -157,6 +158,26 @@ The rail's coast is **closed** — never a flake but a negative first `dt` in
 specific requests several at a time. Render every change and look at it. Say
 when a request contradicts DESIGN.md or SESSIONS.md and record the reversal
 rather than absorbing it quietly.
+
+**Then Sessions 10 and 11, which are the only open engineering** (SESSIONS.md,
+both written 2026-09-03; everything below this line is finished work kept for
+its reasoning).
+
+- **Session 10 — the app ships.** What the app *guarantees* offline, which is a
+  different question from what the worker happens to have cached: **saint names
+  and the daily calendar content, yes; saint images, saint profiles and the map,
+  no** (author, 2026-09-03). Six items, of which one is a live defect — the day
+  records are a lazy chunk the install cannot name, and only routing (`/` is the
+  Daily page) hides it. The translation half is confirmed there too: **precache
+  the reader's own locale pack, one and not four**, or a language switched
+  offline silently reads English.
+- **Session 11 — the Texts page**, the saints' writings, with selective offline
+  download. New page, new index (`data/texts.json`, never the manifest), and a
+  cache with two rules opposite to every other bucket in `sw.js`: no eviction,
+  and it must survive a `VERSION` bump. The corpus behind it is a rights
+  question and the author's.
+- **`docs/CLEANUP-PLAN.md`** is a measured plan nobody has started; its items 1,
+  2 and 3 are one mechanical sitting.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
@@ -363,16 +384,18 @@ names Basilica, and both statements are true about different things.
 
 `scripts/date-audit.mjs` and `scripts/place-candidates.mjs` exist so this work
 can be aimed rather than sprayed. Their standing numbers, and the standing
-job:
+job — **re-run `node scripts/date-audit.mjs` before trusting the table; these
+are its output on 2026-09-03 and the last three numbers below had already
+drifted from what was written here on 2026-09-01**:
 
 | finding | count | note |
 | --- | --- | --- |
 | dates `open` | **0** | was 2; both fixed 2026-09-01 |
 | dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
 | dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
-| `undated` | 155 | the third audit showed how firmly; see `index.spec.js` |
+| `undated` | 150 | was 155 on 2026-09-01; the third audit showed how firmly, see `index.spec.js` |
 | `no-death` | 23 | **the most fixable thing in the corpus.** Well-known people with an exact birth and no death year — Joasaph of Belgorod, Mitrophan of Voronezh, Kassiani, Ilarion Felea. Each needs one source fetched; the day-index page they already cite does *not* carry it |
-| `no-birth` | 485 | mostly irreducible |
+| `no-birth` | 490 | was 485 on 2026-09-01; mostly irreducible |
 | place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |
 
 **Two findings the audits turned up that are the author's to settle.**
@@ -400,7 +423,8 @@ Reading each life is the work; the tool only finds the ones worth reading.
   people across both calendars.
 - **Greek and Serbian saints banked** under `.tmp/` (463 Greek entries for
   20 Sep – 31 Oct; 182 Serbian days). Editorial work — do not generate these.
-- **Icons for the 612 without one.** Harvest a *known* corpus and match by hand;
+- **Icons for the 732 without one** (862 − 130; the 612 written here was the
+  same subtraction against a corpus of 742). Harvest a *known* corpus and match by hand;
   a general Commons search by name returns the wrong people. Next wells: the
   1903–1911 Жития Святых engravings, and per-saint "Category:Icons of …" trees.
 - **English hymn texts: 49 of 495**, and the public-domain well is dry. Nassar's

@@ -19,6 +19,8 @@ archived at the tag `archive/cross-church-2026-08`.
   first. Live, and actioned at Amendment 50.
 - `docs/HANDOFF-ORTHODOX.md` — why this project exists and what carried over
   from the cross-church build. History, and still the best account of it.
+- `docs/CLEANUP-PLAN.md` — six measured code-simplification items, ordered by
+  confidence. A plan; **nothing in it has been done**.
 - `docs/archive/` — things the site no longer has. Nothing there is imported
   or built; it has its own README saying what each was and what removed it.
 - `HANDOFF.md` is the briefing to start from, `CLAUDE.md` is the map of where
@@ -104,16 +106,19 @@ does not occur in most years.
 These are tracked in `data/manifest.meta.json` and belong on the About page
 rather than hidden:
 
-- **Image source links are unrecorded.** The seven images are public-domain
-  works under the Creative Commons Public Domain Mark, per the author
-  (2026-08-21), so no attribution is owed and no credit line is required. What
-  is still missing is the page each file came from: that link is provenance, not
-  attribution — it is how a reader checks the claim rather than taking it on
-  trust — so the build warns on every one until it is recorded. They currently
-  hold a placeholder on `example.invalid`; the build names it as a placeholder
-  and the detail page prints the licence without linking it.
+- ~~**Image source links are unrecorded.**~~ **Closed, checked 2026-09-03.**
+  All **130** `images/*.meta.json` carry a real source URL — 129 on
+  commons.wikimedia.org and one on byzantion.ro — and **none** holds the old
+  `example.invalid` placeholder. The images are public-domain works under the
+  Creative Commons Public Domain Mark per the author (2026-08-21), so no
+  attribution is owed; the source link is provenance, which is how a reader
+  checks the claim rather than taking it on trust, and it is now recorded on
+  every file. The build's placeholder warning has nothing left to fire on.
 - **Region derivation is bounding boxes, not polygons.** Good enough to separate
   the Maghreb from Sicily and Iberia; not good enough to be authoritative.
-- **Movable feasts and the Great Feasts are not yet entries.** The data path
-  and the computus exist and are tested; what a calendar entry is when it is
-  not a saint is the next piece of genuinely new work (SESSIONS.md).
+- **Movable feasts and the Great Feasts are not yet entries.** The computus and
+  the naming exist and are tested (`lib/liturgy.js`'s `greatFeast`), and a
+  Great Feast already changes the day's fast and its title — what is missing is
+  a *folder*, so the Exaltation is a day the corpus has no entry for. What a
+  calendar entry is when it is not a saint remains unbuilt. (The open
+  engineering is Sessions 10 and 11 in SESSIONS.md; this sits beside them.)
