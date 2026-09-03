@@ -44,7 +44,7 @@ is a soft, indicative wash under the coastline, not a scientific layer. Lossy
 WebP at a modest width is what makes that trade honestly rather than by
 accident.
 
-    python scripts/make-terrain.py [--width 1536] [--quality 78]
+    python scripts/make-terrain.py [--width 2048] [--quality 78]
 """
 import argparse
 import io
@@ -145,7 +145,7 @@ def reproject_to_mercator(src_array, out_w, out_h, is_rgb):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--width', type=int, default=1536)
+    ap.add_argument('--width', type=int, default=2048)
     ap.add_argument('--quality', type=int, default=78)
     args = ap.parse_args()
     out_w = args.width

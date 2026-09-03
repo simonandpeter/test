@@ -2657,6 +2657,17 @@ const RELIEF_FLOOR = 52;
 const RELIEF_GAIN = 0.65;
 const RELIEF_LIFT_DAMP = 0.12;
 
+/**
+ * Where the terrain wash starts giving way to the flat fill, and where it has
+ * fully given way — see the fade's own comment in `paintCanvas`. `DETAIL_AT`
+ * (5) is the coastline's own honest line between the world view and a reader
+ * looking at ground the fine coastline actually resolves; the terrain wash's
+ * own raster gives out sooner than that, so its fade starts before and ends
+ * at it, rather than sharing one number with a dataset ten times its density.
+ */
+const TERRAIN_FADE_START = 2;
+const TERRAIN_FADE_END = DETAIL_AT;
+
 /** One ink colour, alpha modulated per pixel by land-cover and relief — see
  *  the constants above. Rebuilt only when the theme changes (`terrainTintFor`
  *  caches by ink colour), never per frame: a Uint8ClampedArray loop over a
@@ -2870,10 +2881,50 @@ function paintCanvas(canvas, cards) {
   if (land) {
     if (!canvas.__terrainGreen && !canvas.__terrainPending) ensureTerrain(canvas, () => cards);
 
-    if (canvas.__terrainGreen) {
+    /*
+     * **The wash fades back to the flat fill as the reader zooms in, rather
+     * than stretching one whole-world raster past what it actually holds**
+     * (2026-09-03). A single image light enough to ship — even the 2048 px
+     * one `make-terrain.py` now writes — is only a few pixels per degree; at
+     * `TERRAIN_FADE_END` the reader is asking a handful of source pixels to
+     * cover the same ground `DETAIL_AT`'s fine coastline does with real data,
+     * and doing that anyway was visibly soft rather than sharp. This is the
+     * coastline's own §6b rule again — a map that keeps zooming into detail
+     * it does not have is lying about its own precision — applied to a
+     * raster instead of a polygon: past this zoom the dots and the fine
+     * coastline are the content, not ground texture, so the honest picture
+     * is the flat ink the map drew before this feature existed.
+     */
+    const terrainStrength = canvas.__terrainGreen
+      ? Math.max(0, Math.min(1, (TERRAIN_FADE_END - view.scale) / (TERRAIN_FADE_END - TERRAIN_FADE_START)))
+      : 0;
+
+    if (terrainStrength < 1) {
+      /*
+       * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
+       * gesso and 1.31:1 on the field — deliberately, because it divides text and
+       * is not meant to be looked at — and a whole continent drawn in it was a
+       * map you had to hunt for. This is quiet enough to stay a ground for the
+       * dots and dark enough that the coastlines read as land.
+       *
+       * It takes no AA floor: the land is not text, and nothing on this page is
+       * carried by the coastline alone — every point is a row in the list below.
+       *
+       * Also the terrain wash's own base and its fallback: drawn whenever the
+       * wash is not at full strength — faded, absent, or not yet arrived —
+       * so there is never a gap between the two, only a crossfade or a flat
+       * map, never an empty one.
+       */
+      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
+      ctx.beginPath();
+      tracePath(land, true);
+      ctx.fill();
+    }
+
+    if (terrainStrength > 0) {
       /*
        * The terrain wash, clipped to the land path exactly the way the flat
-       * fill below it was — the difference is only what fills that clip.
+       * fill above it was — the difference is only what fills that clip.
        * `toScreen` on the image's own two corners is the whole projection:
        * the raster was pre-projected into the same Mercator fraction space
        * `project(lon, lat)` returns (`make-terrain.py`), so drawing it needs
@@ -2886,6 +2937,7 @@ function paintCanvas(canvas, cards) {
       ctx.beginPath();
       tracePath(land, true);
       ctx.clip();
+      ctx.globalAlpha = terrainStrength;
       const topLeft = toScreen(view, 0, 0, frame);
       const bottomRight = toScreen(view, 1, 1, frame);
       ctx.drawImage(
@@ -2897,24 +2949,6 @@ function paintCanvas(canvas, cards) {
       );
       ctx.restore();
       canvas.dataset.terrain = 'ok';
-    } else {
-      /*
-       * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
-       * gesso and 1.31:1 on the field — deliberately, because it divides text and
-       * is not meant to be looked at — and a whole continent drawn in it was a
-       * map you had to hunt for. This is quiet enough to stay a ground for the
-       * dots and dark enough that the coastlines read as land.
-       *
-       * It takes no AA floor: the land is not text, and nothing on this page is
-       * carried by the coastline alone — every point is a row in the list below.
-       *
-       * This is also the fallback while the terrain wash above has not
-       * arrived yet, or if it never does — a flat map, not an empty one.
-       */
-      ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
-      ctx.beginPath();
-      tracePath(land, true);
-      ctx.fill();
     }
   }
 
