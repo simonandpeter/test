@@ -147,6 +147,92 @@ const EL_APPOSITION =
 const stripAppositions = (form, lang) =>
   lang === 'el' ? String(form).replace(EL_APPOSITION, '').replace(/\s{2,}/g, ' ').trim() : form;
 
+/*
+ * **An office restates itself after a comma, in the reader's own language, a
+ * second time** — `card.office` already says "Bishop of Nicomedia" in
+ * English, on the line below the name (`lib/honorific.js`, Amendment 50: "the
+ * office moves to the line below"), and until now the comma clause that said
+ * the same thing in Romanian, Greek, Serbian or Russian was left standing in
+ * the name itself: «Antim, Episcopul Nicomidiei». The rank stripped above is
+ * a *word in front of* the name; an office is a *noun plus the place that
+ * follows it*, and needed a rule of its own — this was flagged and
+ * deliberately left for later at Amendment 50's writing ("one does now, and
+ * that one is an office rather than a rank").
+ *
+ * Anchored on a **comma** and then the office noun, so a kinship or
+ * companionship clause is never touched — "fiica lui Fanuel", "в схиме
+ * Серафим", "ο Λέσβιος" — none of them open with a word this list knows, the
+ * same reasoning `display_name` already applies to keep "son of Bassa" in the
+ * bare name (Amendment 50). The comma matters beyond marking where a clause
+ * starts: an earlier version of this rule matched an office word after plain
+ * whitespace too, to reach Greek's own comma-less "Άνθιμος επίσκοπος
+ * Νικομήδειας" (the exact case Amendment 50 flagged and left), and a corpus
+ * sweep threw it out again the same day — "Ιωάσαφ γιος του βασιλιά της
+ * Ινδίας Αβενίρ" is "Joasaph, son of **the king** of India, Avenir", and the
+ * comma-less rule read "the king" as Joasaph's own office and deleted his
+ * father's title, and his father's name, out of the sentence. A genitive
+ * kinship clause and a trailing office apposition are the same shape without
+ * a comma between them, and this file already has no grammar to tell them
+ * apart. **The comma-less Greek case stays open, not silently** - narrower
+ * than Amendment 50 asked for, on purpose, rather than fixed unsafely. An
+ * optional ordinal ("први", "Други") covers the Serbian forms that number a
+ * see's hierarchs before naming the office.
+ *
+ * **The place after the office noun is consumed word by word, not to the end
+ * of the string** — stopping at the next comma or "and" rather than a greedy
+ * `.*$` — because a company entry can carry an office on its *first* member
+ * before the comma that starts naming the rest: "Φήλιξ ο επίσκοπος,
+ * Ιανουάριος ο πρεσβύτερος, Φορτουνάτος και Σεπτιμίνος" is four men, and a
+ * greedy strip at the first office word would delete the other three along
+ * with the conjunction the company filter below reads to reject the whole
+ * line. Bounded, it removes only "ο επίσκοπος" and leaves the rest for that
+ * filter to catch on its own terms.
+ */
+/*
+ * `\p{L}*`, not `\w*` — the ASCII-only trap this file's own comments already
+ * name twice over (the conjunction regex, the Greek apposition tail): `\w` is
+ * `[A-Za-z0-9_]` even under the `u` flag, so an office root followed by a
+ * Cyrillic or Greek inflection ("епископ**а**", "επίσκοπ**ος**") matched
+ * nothing past the root, left the ending unconsumed, and failed the lookahead
+ * that follows it — every one of these alternatives silently matched zero
+ * saints until this was caught by the test for the no-comma Greek case.
+ */
+const OFFICE_WORD = {
+  ru: 'митрополит\\p{L}*|архиепископ\\p{L}*|епископ\\p{L}*|патриарх\\p{L}*|архимандрит\\p{L}*|игумен\\p{L}*|иеромонах\\p{L}*|схиархимандрит\\p{L}*|иеросхимонах\\p{L}*|схимонах\\p{L}*|монах\\p{L}*|монахин\\p{L}*|протоиере\\p{L}*|протодиакон\\p{L}*|иеродиакон\\p{L}*|архидиакон\\p{L}*|диакон\\p{L}*|пресвитер\\p{L}*|священник\\p{L}*|иере\\p{L}*|папа\\p{L}*|княз\\p{L}*|княгин\\p{L}*|цар\\p{L}*|короле\\p{L}*|коро\\p{L}*|император\\p{L}*|воевод\\p{L}*|иконописец\\p{L}*|столпник\\p{L}*|псаломщик\\p{L}*|послушник\\p{L}*',
+  el: 'αρχιεπίσκοπ\\p{L}*|επίσκοπ\\p{L}*|μητροπολίτ\\p{L}*|πατριάρχ\\p{L}*|πρωτοπρεσβύτερ\\p{L}*|πρεσβύτερ\\p{L}*|ιερέ\\p{L}*|πρωθιερ\\p{L}*|αρχιδιάκον\\p{L}*|πρωτοδιάκον\\p{L}*|διάκον\\p{L}*|ηγούμεν\\p{L}*|αρχιμανδρίτ\\p{L}*|ιερομόναχ\\p{L}*|μοναχ\\p{L}*|πρίγκιπ\\p{L}*|πριγκίπισσ\\p{L}*|βασιλι\\p{L}*|βασίλισσ\\p{L}*|αυτοκράτορ\\p{L}*|αυτοκράτειρ\\p{L}*|αγιογράφ\\p{L}*|στυλίτ\\p{L}*|πάπ\\p{L}*',
+  ro: 'arhiepiscop\\p{L}*|mitropolit\\p{L}*|episcop\\p{L}*|patriarh\\p{L}*|arhimandrit\\p{L}*|egumen\\p{L}*|stare[țţ]\\p{L}*|ieromonah\\p{L}*|monahi\\p{L}*|monah\\p{L}*|protoiere\\p{L}*|protopop\\p{L}*|arhidiacon\\p{L}*|diacon\\p{L}*|preot\\p{L}*|prin[țţ]es\\p{L}*|prin[țţ]\\p{L}*|regin\\p{L}*|rege\\p{L}*|împ[ăa]r[ăa]tea\\p{L}*|împ[ăa]rat\\p{L}*|voievod\\p{L}*|iconograf\\p{L}*|st[âa]lpnic\\p{L}*|pap\\p{L}*',
+  sr: 'архиепископ\\p{L}*|митрополит\\p{L}*|епископ\\p{L}*|еп\\.|патријарх\\p{L}*|архимандрит\\p{L}*|игуман\\p{L}*|јеромонах\\p{L}*|монахињ\\p{L}*|монах\\p{L}*|презвитер\\p{L}*|свештеник\\p{L}*|протојереј\\p{L}*|прот\\p{L}*|архиђакон\\p{L}*|ђакон\\p{L}*|дијакон\\p{L}*|краљиц\\p{L}*|краљ\\p{L}*|кнегињ\\p{L}*|кнез\\p{L}*|цариц\\p{L}*|цар\\p{L}*|војвод\\p{L}*|иконописац\\p{L}*|столпник\\p{L}*|пап\\p{L}*',
+};
+
+const ORDINAL = {
+  ru: '(?:перв(?:ый|ого)|втор(?:ой|ого)|трет(?:ий|ьего))\\s+',
+  el: '',
+  ro: '',
+  sr: '(?:први|друг(?:и|ог)|трећ(?:и|ег))\\s+',
+};
+
+/* Only Greek writes an article in front of the office - «ο Επίσκοπος», never
+   *«Episcopul Episcopul» - consumed with it so the strip never orphans a
+   bare "ο" the way an article-blind match would. */
+const ARTICLE = { ru: '', el: '(?:ο|η|οι|το)\\s+', ro: '', sr: '' };
+
+/* "and", repeated from `CONJUNCTION`'s own languages, as a word the office's
+   trailing place must stop before rather than swallow. */
+const AND_WORD = { ru: 'и', el: 'και', ro: 'și', sr: 'и' };
+
+const TRAILING_OFFICE = Object.fromEntries(
+  LANGS.map((lang) => [
+    lang,
+    new RegExp(
+      `,\\s*(?:${ARTICLE[lang]})?(?:${ORDINAL[lang]})?(?:${OFFICE_WORD[lang]})(?:\\s+(?!${AND_WORD[lang]}\\b)[^\\s,]+)*(?=[\\s,]|$)`,
+      'giu',
+    ),
+  ]),
+);
+
+const stripTrailingOffice = (form, lang) =>
+  String(form).replace(TRAILING_OFFICE[lang], '').replace(/\s{2,}/g, ' ').replace(/\s+,/g, ',').trim();
+
 function stripPrefixes(form, lang) {
   let out = String(form).trim();
   for (let pass = 0; pass < 3; pass += 1) {
@@ -175,7 +261,7 @@ export function pickNameForms(names, displayName) {
     const usable = [];
     for (const entry of names ?? []) {
       if (entry?.lang !== lang || !entry?.form) continue;
-      const bare = stripAppositions(stripPrefixes(entry.form, lang), lang);
+      const bare = stripTrailingOffice(stripAppositions(stripPrefixes(entry.form, lang), lang), lang);
       if (!bare) continue;
       if (!many && CONJUNCTION[lang].test(bare)) continue;
       if (!many && PLURAL_RANK[lang].test(bare)) continue;

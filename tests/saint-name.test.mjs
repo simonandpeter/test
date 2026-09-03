@@ -8,7 +8,7 @@ import { pickNameForms } from '../src/lib/saint-name.js';
  * manifest, so this is where it is checked — the runtime is a lookup.
  */
 
-test('a recorded form is used, with its honorific and rank stripped', () => {
+test('a recorded form is used, with its honorific, rank and office stripped', () => {
   const names = [
     { form: 'Феврония Муромская', lang: 'ru' },
     { form: 'Sfântul Sfințit Mucenic Antim, Episcopul Nicomidiei', lang: 'ro' },
@@ -18,21 +18,80 @@ test('a recorded form is used, with its honorific and rank stripped', () => {
   assert.deepEqual(pickNameForms(names, 'Anthimus, Bishop of Nicomedia'), {
     ru: 'Феврония Муромская',
     // The site prints its own rank, so the entry's own honorific and rank
-    // come off: «Св. Св. Аврамије» is what leaving them in produces. A comma
-    // is left alone — it is an apposition here, not a list.
-    ro: 'Antim, Episcopul Nicomidiei',
+    // come off: «Св. Св. Аврамије» is what leaving them in produces. The
+    // office comes off too, now (2026-09-04) — `card.office` already says
+    // "Bishop of Nicomedia" in English on the line below the name, and the
+    // comma clause said it again in Romanian.
+    ro: 'Antim',
     /*
      * **And the Greek rank comes off wherever it sits.** Until 2026-08-27 only
      * a leading one was stripped, which was enough while the site printed
      * "Άγ." in front of everything; with the rank in the name it produced
      * «Ιερομάρτυς Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας». Greek writes
      * the rank after the name as readily as before it, and 31 of the recorded
-     * Greek forms did. The office («επίσκοπος Νικομήδειας») is not a rank and
-     * stays.
+     * Greek forms did. **The office («επίσκοπος Νικομήδειας») is not a rank,
+     * and stays** (Amendment 50 flagged it and left it, and it is left again
+     * 2026-09-04) — Greek is the one pack that attaches an office with no
+     * comma at all, and the strip below is anchored on a comma on purpose
+     * (see its own comment): reaching this case unsafely deleted other
+     * saints' fathers out of *their* names in the same sweep that fixed the
+     * comma cases. Narrower than Amendment 50 asked for, and said so here
+     * rather than quietly.
      */
     el: 'Άνθιμος επίσκοπος Νικομήδειας',
     sr: 'Аврамије Смоленски',
   });
+});
+
+test('the office comes off in all four languages, and a kinship or byname comma does not', () => {
+  /*
+   * A sweep of the corpus (2026-09-04) found 32 recorded forms across ro, el
+   * and sr where the office was still restated in the name after the comma
+   * the rank strip never reached — matching `card.office`, which already
+   * prints the same office in English on the line below. None found in ru.
+   * A handful of each shape, kept as regressions.
+   */
+  assert.deepEqual(
+    pickNameForms([{ form: 'Александар, патријарх Цариградски', lang: 'sr' }], 'Alexander, Patriarch of Constantinople'),
+    { sr: 'Александар' },
+  );
+  assert.deepEqual(pickNameForms([{ form: 'Ketevan, regina Georgiei', lang: 'ro' }], 'Ketevan, Queen of Georgia'), {
+    ro: 'Ketevan',
+  });
+  // An ordinal before the office is stripped with it — «први патријарх», not
+  // just «патријарх».
+  assert.deepEqual(
+    pickNameForms([{ form: 'Јоаникије, први патријарх српски', lang: 'sr' }], 'Joannicius, Patriarch of Serbia'),
+    { sr: 'Јоаникије' },
+  );
+  // A kinship or descriptive comma is not an office and stays, in every
+  // language, whether or not the record carries an `office` field at all.
+  assert.deepEqual(pickNameForms([{ form: 'Elisabeta, mama Sfântului Ioan Botezătorul', lang: 'ro' }], 'Elizabeth'), {
+    ro: 'Elisabeta, mama Sfântului Ioan Botezătorul',
+  });
+  assert.deepEqual(pickNameForms([{ form: 'Зиновий (Мажуга), в схиме Серафим', lang: 'ru' }], 'Zenobius (Mazhuga)'), {
+    ru: 'Зиновий (Мажуга), в схиме Серафим',
+  });
+  // A byname after the office is kept — only the office clause comes off.
+  assert.deepEqual(
+    pickNameForms([{ form: 'Όσιος Συμεών, ο Λέσβιος, Στυλίτης', lang: 'el' }], 'Symeon the Lesbian, Stylite'),
+    { el: 'Συμεών, ο Λέσβιος' },
+  );
+  /*
+   * **Why the strip needs a comma, not just an office word.** A version of
+   * this rule tried matching after plain whitespace too, to reach Greek's own
+   * comma-less appositions (the test above). A corpus sweep caught what it
+   * broke the same day: «Ιωάσαφ γιος του βασιλιά της Ινδίας Αβενίρ» is
+   * "Joasaph, son of the king of India, Avenir" — a kinship clause naming
+   * Joasaph's *father's* office, not his own — and the comma-less rule read
+   * "the king" as an apposition on Joasaph and deleted the rest of his
+   * father's own name with it. A genitive kinship clause and a trailing
+   * office apposition share the same shape without a comma between them.
+   */
+  assert.deepEqual(
+    pickNameForms([{ form: 'Ιωάσαφ γιος του βασιλιά της Ινδίας Αβενίρ', lang: 'el' }], 'Joasaph of India'),
+    { el: 'Ιωάσαφ γιος του βασιλιά της Ινδίας Αβενίρ' },
+  );
 });
 
 test('a rank in the plural names a company too, and without a conjunction', () => {
