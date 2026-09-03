@@ -328,6 +328,17 @@ function show({ route, params, path }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
   const cameFrom = lastRoute;
+  /*
+   * **A swiped saint-to-saint navigation pushes rather than fades**
+   * (2026-09-04, `views/saint.js`'s `wireSaintSwipe`). Set before
+   * `startViewTransition` below captures the *old* snapshot, so both the
+   * outgoing and incoming pseudo-elements see it — `base.css`'s
+   * `[data-swipe-nav]` rules read it there. Mirrored from `nav.swipe` on
+   * every navigation rather than cleared after use, the same way
+   * `dataset.route`/`dataset.view` are: an ordinary navigation carries no
+   * `swipe`, so this resets to `''` on its own.
+   */
+  document.documentElement.dataset.swipeNav = nav.swipe ?? '';
   // Where this reader is *leaving* from, before anything moves.
   if (!firstRender && cameFrom?.nav) sectionScroll.set(cameFrom.nav, window.scrollY);
   lastRoute = { path, nav: route?.nav };

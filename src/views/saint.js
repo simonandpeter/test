@@ -817,7 +817,18 @@ function wireSaintSwipe(el, { data, router, current }) {
       }
       card.style.transition = '';
       card.style.transform = '';
-      router.navigate(`/saints/${slug}`);
+      /*
+       * **The route change reads as the same swipe, not a fade** (author,
+       * 2026-09-04: "on mobile, make sure the animation for the incoming
+       * profile is also a swipe animation, coming in from the side instead of
+       * fading in ... reads like they were always loaded next to each
+       * other"). `state.swipe` rides to `show` (main.js) the same way the
+       * Index's own `{ restore: true }` does, and is read there, before the
+       * view transition starts, into `document.documentElement.dataset` —
+       * `base.css`'s `[data-swipe-nav]` rules replace the root cross-fade
+       * with a push in the direction the finger just moved.
+       */
+      router.navigate(`/saints/${slug}`, { state: { swipe: dx < 0 ? 'left' : 'right' } });
     },
   });
 }

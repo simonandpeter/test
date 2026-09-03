@@ -1236,6 +1236,52 @@ main.chrome {
   animation-timing-function: var(--ease);
 }
 
+/*
+ * **A swiped saint-to-saint navigation pushes sideways instead of
+ * cross-fading** (author, 2026-09-04: "on mobile, when swiping left/right on
+ * saint profile pages, make sure the animation for the incoming profile is
+ * also a swipe animation, coming in from the side instead of fading in ...
+ * intent is that it reads like they were always loaded next to each other").
+ * `main.js`'s `show` mirrors `nav.swipe` onto `[data-swipe-nav]` before the
+ * transition starts, from the direction `views/saint.js`'s own drag ended in
+ * — the same "drag left is forward" reading the Daily page's swipe uses.
+ *
+ * Only `animation-name` is overridden; duration and easing still come from
+ * the rule above; `mix-blend-mode: normal` replaces the root default of
+ * `plus-lighter`, which is tuned for two frames dissolving into each other in
+ * place and lightens a seam where a departing and an arriving page briefly
+ * overlap mid-push. Reduced motion never reaches this: `show` only calls
+ * `startViewTransition` when `prefers-reduced-motion` is off.
+ */
+@keyframes swipe-push-out-left {
+  to { transform: translateX(-100%); }
+}
+@keyframes swipe-push-in-from-right {
+  from { transform: translateX(100%); }
+}
+@keyframes swipe-push-out-right {
+  to { transform: translateX(100%); }
+}
+@keyframes swipe-push-in-from-left {
+  from { transform: translateX(-100%); }
+}
+html[data-swipe-nav='left']::view-transition-old(root) {
+  animation-name: swipe-push-out-left;
+  mix-blend-mode: normal;
+}
+html[data-swipe-nav='left']::view-transition-new(root) {
+  animation-name: swipe-push-in-from-right;
+  mix-blend-mode: normal;
+}
+html[data-swipe-nav='right']::view-transition-old(root) {
+  animation-name: swipe-push-out-right;
+  mix-blend-mode: normal;
+}
+html[data-swipe-nav='right']::view-transition-new(root) {
+  animation-name: swipe-push-in-from-left;
+  mix-blend-mode: normal;
+}
+
 /* Reduced motion disables motion entirely — removed, not shortened. */
 @media (prefers-reduced-motion: reduce) {
   *,
