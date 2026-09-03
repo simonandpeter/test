@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build:manifest": "node scripts/build-manifest.mjs",
+    "build:texts": "node scripts/build-texts.mjs",
     "validate": "node scripts/validate.mjs",
     "new-saint": "node scripts/new-saint.mjs",
     "thumbs": "python make_thumbs.py",
@@ -15,8 +16,8 @@
     "test:e2e:mobile": "playwright test --project=mobile-360 --workers=10",
     "test:lighthouse": "node scripts/lighthouse-floor.mjs",
     "test:all": "npm test && npm run test:e2e",
-    "dev": "npm run build:manifest && vite",
-    "build": "npm run build:manifest && vite build",
+    "dev": "npm run build:manifest && npm run build:texts && vite",
+    "build": "npm run build:manifest && npm run build:texts && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {

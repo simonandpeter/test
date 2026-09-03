@@ -66,11 +66,14 @@ export const liveByRecency = (rows, key, limit = Infinity) =>
     .sort((a, b) => b[key] - a[key])
     .slice(0, limit);
 
-/** Which history rows fall outside the cap. */
-export const overflow = (rows, cap = HISTORY_CAP) =>
+/** Which rows fall outside the cap, oldest first by whichever recency field
+ *  the caller's own record shape carries — history's `visitedAt` by default,
+ *  since this predates `reading` reusing it and every existing call site
+ *  still means that. */
+export const overflow = (rows, cap = HISTORY_CAP, key = 'visitedAt') =>
   rows
     .slice()
-    .sort((a, b) => b.visitedAt - a.visitedAt)
+    .sort((a, b) => b[key] - a[key])
     .slice(cap);
 
 /**
@@ -189,12 +192,37 @@ export async function listSaved(limit = Infinity) {
 /* ---- reading ------------------------------------------------------------- */
 
 /**
+ * Bounded the same way `HISTORY_CAP` bounds history (2026-09-04, author:
+ * "store a maximum of 20 continue reading entries, but continue to display
+ * only 5 at a time" — `SHELF_LIMIT`, `ui/shelf.js`, is that unchanged 5).
+ * Before this the shelf's own 5-row display was the only limit in effect —
+ * `listReading` sliced what it returned, but nothing ever trimmed what was
+ * actually stored, so a long-lived reader's `reading` store grew without
+ * bound underneath a shelf that only ever showed its newest five.
+ */
+export const READING_CAP = 20;
+
+/** Prunes live reading rows past `READING_CAP`, oldest first — the same
+ *  write-time sweep `visit()` runs on history, and the same reasoning: a
+ *  row that fell off this list on its own is local convenience trimming
+ *  itself, not a removal a future sync needs to reconcile, so it is deleted
+ *  outright rather than tombstoned. Tombstones themselves never count
+ *  against the cap or get re-touched here — `clearReading` already owns
+ *  them. */
+async function pruneReading(d) {
+  const rows = (await d.getAll('reading')).filter(isLive);
+  for (const row of overflow(rows, READING_CAP, 'lastReadAt')) await d.delete('reading', row.id);
+}
+
+/**
  * Where the reader had got to. `scrollPos` is a document offset in CSS pixels
  * at the width it was recorded at, so it is a hint rather than a promise —
  * restoring it on a narrower screen lands near the place, not on it.
  */
 export async function markReading(slug, scrollPos = 0) {
-  await (await db()).put('reading', readingRecord(slug, scrollPos));
+  const d = await db();
+  await d.put('reading', readingRecord(slug, scrollPos));
+  await pruneReading(d);
   announce('reading');
 }
 
@@ -206,6 +234,7 @@ export async function touchReading(slug) {
   const d = await db();
   const existing = await d.get('reading', slug);
   await d.put('reading', readingRecord(slug, existing?.scrollPos ?? 0));
+  await pruneReading(d);
   announce('reading');
 }
 

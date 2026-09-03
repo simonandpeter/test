@@ -294,18 +294,24 @@ crossfades over the wash, per tile rather than for the whole picture, so a
 reader panning across the edge of an HR cell sees one image change, not all
 of them.
 
-**A tile reads lighter than the wash for the same ground, and `TILE_DARKEN_BIAS`
-(0.08) closes most of the gap** (2026-09-04, author: "the fully zoomed out
-raster image the green seems darker than the more zoomed in ones — match the
-zoomed in rasters to this darker colour"). The wash decimates the native data
-roughly 5x to fit a whole-world image light enough to ship; a sparse
-point-sample of a noisy raster reads differently than the full-density tile
-data, and it comes out darker on this corpus's own geography. The honest fix
-is resampling the wash with a true area average instead of a point-sample —
-unbuilt; this is the direct patch asked for instead, applied to both tile
-tiers (`buildTint`'s own `bias` parameter, `lib/map-terrain.js`) and always
-toward more ink regardless of theme, since more alpha reads darker in the
-light theme and *lighter* in the dark one where ink is the light token.
+**A tile read lighter than the wash for the same ground — twice fixed, the
+second time honestly** (2026-09-04). The first pass patched around it with a
+flat alpha bias (`TILE_DARKEN_BIAS`, `lib/map-terrain.js`) rather than fixing
+the actual cause, and the author reported the gap was still there. Decoding
+both rasters' own bytes at several real cities (not reading a screenshot)
+found why: the wash's `reproject_to_mercator` (`make-terrain.py`) was
+nearest-neighbour at roughly a 10x decimation — one lucky-or-unlucky native
+pixel standing in for a ten-pixel-wide patch, noise rather than a bias — and
+a constant correction calibrated for that noise left a *worse* mismatch
+(0.08–0.14, the wrong direction) once the real fix landed. The real fix:
+`reproject_to_mercator`'s own resampling is now a true area average (a
+summed-area table over the native raster, computed once per output pixel's
+footprint) rather than one point sample, used for the wash only — a tile is
+already near-native density, under 2x decimation, so nearest-neighbour there
+was never the problem. `TILE_DARKEN_BIAS` is removed rather than retuned:
+measured post-fix, tile and wash alpha already sit within 0.001–0.057 of each
+other at every city checked, in both themes, which is what "no bias needed"
+looks like.
 
 **A discrete zoom step eases now rather than jumping** (2026-09-04, author:
 "make the map zooms smooth"): the `+`/`-` buttons, the keyboard equivalents
@@ -319,11 +325,23 @@ regardless of what `maxScaleFor` actually allows there. **The coastline, lakes
 and rivers cross-fade between tiers too**, on the same ask: `paintCanvas`
 tracks the previous tier's own geometry (`__detailFadeFrom`) for `DETAIL_FADE_MS`
 (280ms) after `fine` flips either way, drawing it — flat ink only, not the
-full terrain treatment, since this is a brief transition — fading out under
-the new tier fading in, both multiplied into the fill/cut/stroke alphas that
-already existed rather than layered on top of them (`ctx.globalAlpha` does not
+full terrain treatment, since this is a brief transition — under the new tier
+fading in, both multiplied into the fill/cut/stroke alphas that already
+existed rather than layered on top of them (`ctx.globalAlpha` does not
 compose across nested `save`/`restore`, so each alpha site is multiplied by
-`detailT` explicitly rather than wrapped in one outer scope).
+`detailT` explicitly rather than wrapped in one outer scope). **The outgoing
+tier stays at its own full opacity for the whole transition rather than
+fading out in step** (2026-09-04, author: "make sure the low res coastlines
+remain underneath until the high res are fully loaded otherwise theres a dip
+in brightness"): it was `1 - detailT`, linearly cross-dissolved against the
+incoming tier's `detailT` — and cross-dissolving two *different* shapes
+(coarse and fine trace different edges) is not the same as fading one
+shape's own opacity, since a pixel only one tier covers is only ever as dark
+as that tier's own partial alpha, which is a real dip, not an illusion.
+Holding the outgoing tier at full strength until the incoming one finishes
+rising means the picture is never thinner than "coarse, fully inked"; it
+disappears in the one frame the incoming tier completes rather than a fade
+the reader can watch dip.
 
 **The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
 and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
@@ -798,6 +816,18 @@ read from `manifest.meta.json` at render time, the calendars come from
 `data/churches.js`, and the cited publications from that file's `by_source`,
 which the build counts from the saints' own files. Anything typed in here goes
 stale the next time a folder is added.
+
+**Texts** — `src/views/texts.js`, `src/lib/texts.js`, `data/texts.json`
+(2026-09-04). Not a new content-rendering path: a saint's own primary source
+already reads in full on their own page (`views/saint.js`'s `sources()` /
+`wireSources()`, a closed `<details>` fetched only on open); this route is the
+index across every saint who has one, each row a door to that page. `texts.json`
+is built by `scripts/build-texts.mjs` (wired into `build`/`dev` beside
+`build:manifest`) from every saint's own `text.sources` — the one further fact
+the manifest deliberately does not carry, since which saints have a source is
+almost never asked. **Never `by {name}` — always `on {name}`** (`STRINGS.texts.on`):
+a hagiography's byline is its subject, and Athanasius's Life of Antony is *about*
+Anthony, not *by* him.
 
 **Names** — `lib/honorific.js` (rank precedence), `lib/saint-name.js` (which
 recorded form to print). `office` is a field, drawn on the subtext line.

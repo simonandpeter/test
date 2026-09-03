@@ -2932,13 +2932,26 @@ function paintCanvas(canvas, cards) {
 
   if (detailT < 1 && canvas.__detailFadeFrom?.land) {
     /*
-     * The outgoing tier, fading out under everything below — flat ink alone
-     * rather than the full terrain-and-tile treatment, since this is a
-     * ~300ms transition and the reader is looking at the *shape* changing,
-     * not re-reading the ground texture twice.
+     * **The outgoing tier stays at full strength underneath for the whole
+     * transition, rather than fading out in step with the incoming one**
+     * (2026-09-04, author: "make sure the low res coastlines remain
+     * underneath until the high res are fully loaded otherwise theres a dip
+     * in brightness"). It was `1 - detailT`, cross-dissolved against the
+     * incoming tier's own `detailT` — and a linear cross-dissolve between two
+     * *different* shapes (coarse and fine trace different edges) is not the
+     * same as fading one shape's own opacity: a pixel the fine tier covers
+     * that the coarse one does not is only ever as dark as whichever tier's
+     * own partial alpha reaches it, and for a stretch in the middle neither
+     * is near full — a real dip, not a rendering illusion. Holding this
+     * layer at its own full opacity for as long as `detailT < 1` means the
+     * picture is never thinner than "coarse, fully inked" while the fine
+     * tier rises on top of it; only once the fine tier reaches its own full
+     * strength does this stop being drawn at all (the `detailT < 1` guard
+     * above), which is a single frame's swap rather than a fade the reader
+     * can watch for a dip in.
      */
     ctx.save();
-    ctx.globalAlpha = 1 - detailT;
+    ctx.globalAlpha = 1;
     ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
     ctx.beginPath();
     tracePath(canvas.__detailFadeFrom.land, true);
@@ -2980,8 +2993,42 @@ function paintCanvas(canvas, cards) {
      * is the flat ink the map drew before this feature existed.
      */
     const zoomFade = Math.max(0, Math.min(1, (view.scale - TERRAIN_FADE_START) / (TERRAIN_FADE_END - TERRAIN_FADE_START)));
-    const terrainStrength = canvas.__terrainGreen ? 1 - zoomFade : 0;
-    const tileStrength = zoomFade;
+
+    /*
+     * **The wash does not fade out from under ground the tile has not
+     * arrived to replace** (2026-09-04, author: "the switch to a lighter
+     * colour terrain actually happens across all terrain, and the switch
+     * happens at 8x zoom"). `zoomFade` above is pure arithmetic on the
+     * current scale — it used to drive `terrainStrength` directly, so the
+     * wash started fading the instant `view.scale` crossed `TERRAIN_FADE_START`
+     * whether or not `ensureTerrainTiles` had actually fetched anything yet.
+     * A tile is a network request plus a decode, not free, and the fetch for
+     * a cell a reader has never zoomed into before does not even *start*
+     * until this same frame — so every first crossing into a fresh area past
+     * 8x drew a wash already reduced by `zoomFade` next to a tile layer that
+     * had nothing loaded to draw at all, which is strictly less ink than
+     * either tier alone: a real, reproducible lightening, everywhere, right
+     * at the threshold, not a trick of the eye. `visible` is computed here
+     * (once, reused by the draw loop below) so `tilesReady` can hold
+     * `zoomFade`'s effect at 0 — wash at full, tile not yet drawn — until
+     * every tile the current view actually needs has *settled*, loaded or
+     * failed either one (an errored tile is still a resolved question, the
+     * existing "gap in the wash" this map already tolerates — waiting on it
+     * forever would trade a flash for a stuck one). The same "hold the
+     * outgoing layer at full until the incoming one is ready" rule as the
+     * coastline crossfade a few dozen lines above, one layer down.
+     */
+    if (zoomFade > 0) ensureTerrainTiles(canvas, () => cards, frame);
+    const visible = zoomFade > 0 && terrainLib && canvas.__tileMeta ? terrainLib.visibleTiles(canvas.__tileMeta, view, frame) : [];
+    const tilesReady =
+      visible.length === 0 ||
+      visible.every((t) => {
+        const status = canvas.__tileState?.get(`${t.col}-${t.row}`)?.status;
+        return status === 'loaded' || status === 'error';
+      });
+    const tileFade = tilesReady ? zoomFade : 0;
+    const terrainStrength = canvas.__terrainGreen ? 1 - tileFade : 0;
+    const tileStrength = tileFade;
 
     if (terrainStrength < 1) {
       /*
@@ -3036,8 +3083,6 @@ function paintCanvas(canvas, cards) {
     }
 
     if (tileStrength > 0) {
-      ensureTerrainTiles(canvas, () => cards, frame);
-      const visible = terrainLib && canvas.__tileMeta ? terrainLib.visibleTiles(canvas.__tileMeta, view, frame) : [];
       if (visible.length && canvas.__tileState && detailT > 0) {
         /*
          * **The 10m tier crossfades in over the 50m one, per tile** — only
@@ -3065,11 +3110,11 @@ function paintCanvas(canvas, cards) {
 
           if (entry?.status === 'loaded' && (!hrReady || hrStrength < 1)) {
             ctx.globalAlpha = base * (hrReady ? 1 - hrStrength : 1);
-            ctx.drawImage(terrainLib.tintFor(entry, entry, inkSoft, isDark, terrainLib.TILE_DARKEN_BIAS), dx, dy, dw, dh);
+            ctx.drawImage(terrainLib.tintFor(entry, entry, inkSoft, isDark), dx, dy, dw, dh);
           }
           if (hrReady && hrStrength > 0) {
             ctx.globalAlpha = base * hrStrength;
-            ctx.drawImage(terrainLib.tintFor(hrEntry, hrEntry, inkSoft, isDark, terrainLib.TILE_DARKEN_BIAS), dx, dy, dw, dh);
+            ctx.drawImage(terrainLib.tintFor(hrEntry, hrEntry, inkSoft, isDark), dx, dy, dw, dh);
           }
         }
         ctx.restore();

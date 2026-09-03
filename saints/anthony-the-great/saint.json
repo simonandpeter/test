@@ -124,7 +124,10 @@
     "paul-of-thebes"
   ],
   "text": {
-    "life": "life.md"
+    "life": "life.md",
+    "sources": [
+      "sources/athanasius-life-of-antony.md"
+    ]
   },
   "images": [
     {

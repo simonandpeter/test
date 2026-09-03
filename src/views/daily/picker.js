@@ -627,9 +627,21 @@ export function wireDaySwipe(el) {
    * and both would otherwise be driving two gestures from one finger. That is
    * the "except the weekly display" half, and it is stated as a box rather
    * than as a class list so the month goes with it.
+   *
+   * **`[data-shelves]` joined the exclusion 2026-09-04** (author: "probably
+   * because of the swipe left right ... functionality ... the swipe to
+   * remove on the continue reading section isnt working"). Continue-reading
+   * rows carry their own horizontal drag (`wireSwipe`, `ui/shelf.js`), and
+   * the shelf sits inside this same page-level `el` — a swipe starting on a
+   * row was a day-turn's finger before it was ever the row's, the same
+   * one-gesture-two-listeners problem `.cal-controls` already exists to
+   * avoid. Excluded as the whole shelf container, not just `.shelf-row`, so
+   * a reader's finger landing between rows still reaches the row gesture's
+   * own SLOP rather than the day-turn's, and cannot start a day change from
+   * inside the shelf at all.
    */
   return onGrainDrag(el, {
-    ignore: (target) => !!target.closest?.('.cal-controls'),
+    ignore: (target) => !!target.closest?.('.cal-controls') || !!target.closest?.('[data-shelves]'),
     begin() {
       panel = [...el.querySelectorAll('.slot-viewport .day-panel')];
       for (const p of panel) p.style.transition = 'none';

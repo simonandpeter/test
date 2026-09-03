@@ -1071,6 +1071,17 @@ export const STRINGS = {
     },
   },
 
+  texts: {
+    title: 'Texts',
+    lede: 'The primary sources this site cites in full: the saints’ own writings, and the writings of those who knew them.',
+    empty: 'Nothing here yet.',
+    // The saint the text is about, not necessarily its author — a source is
+    // as often a life written of a saint (Athanasius on Antony, Jerome on
+    // Paul) as a saint's own writing, and "by {name}" would misattribute the
+    // first case.
+    on: 'on {name}',
+  },
+
   about: {
     title: 'About',
     /*
@@ -1123,6 +1134,12 @@ export const STRINGS = {
          sourcing section is where a reader who wants to know what the
          picture is made of will look. */
       map: 'The map’s coastline, rivers, lakes and terrain shading are Natural Earth, which is public domain and asks for no credit. It is named here because a reader is owed the provenance of a picture as much as of a date.',
+      /* Points to the Texts page rather than duplicating its own lede here
+         (2026-09-04). Kept out of the primary nav on purpose: the header's
+         four-label budget is already the tightest fit the widest packs
+         allow (`chrome.spec.js`, "the four pages hold one line in every
+         pack") — a fifth broke it everywhere, so this is the door instead. */
+      texts: 'Some of these are reproduced in full on the {link} page.',
     },
     /*
      * Export / Import (brief §11, Session 8's surviving third, 2026-08-29).

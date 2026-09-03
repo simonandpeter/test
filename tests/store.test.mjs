@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import * as store from '../src/lib/store.js';
 import {
   HISTORY_CAP,
+  READING_CAP,
   historyRecord,
   isLive,
   liveByRecency,
@@ -76,6 +77,14 @@ test('history overflow is the oldest rows beyond the cap', () => {
   const dropped = overflow(rows).map((r) => r.slug);
   assert.deepEqual(dropped, ['s2', 's1', 's0']);
   assert.deepEqual(overflow(rows, 1000), []);
+});
+
+test('reading overflow is the oldest rows beyond READING_CAP, by lastReadAt', () => {
+  const rows = Array.from({ length: READING_CAP + 2 }, (_, i) => readingRecord(`s${i}`, 0, i));
+  const dropped = overflow(rows, READING_CAP, 'lastReadAt').map((r) => r.slug);
+  assert.deepEqual(dropped, ['s1', 's0']);
+  // The shelf itself still only ever shows five, unrelated to the cap.
+  assert.deepEqual(overflow(rows, READING_CAP, 'lastReadAt').length, 2);
 });
 
 /* ---- export / import (Session 8's surviving third, 2026-08-29) ---------- */

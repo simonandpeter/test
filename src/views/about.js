@@ -44,7 +44,7 @@ const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li
  * 2026-08-24). It is short because the truth is short: the site keeps four
  * things, all of them on the reader's own device, and does nothing else.
  */
-export function render(el) {
+export function render(el, { router } = {}) {
   const A = STRINGS.about;
 
   /*
@@ -95,6 +95,9 @@ export function render(el) {
       <div data-sources></div>
       <p>${esc(A.sourcing.lives)}</p>
       <p>${esc(A.sourcing.map)}</p>
+      <p>${fill(esc(A.sourcing.texts), {
+        link: `<a href="${router ? router.href('/texts') : `${import.meta.env.BASE_URL}texts`}">${esc(STRINGS.texts.title)}</a>`,
+      })}</p>
     </section>
 
     <section aria-labelledby="coverage">

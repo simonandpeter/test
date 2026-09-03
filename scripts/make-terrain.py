@@ -177,7 +177,7 @@ def greenness_of(colour_rgb):
     return g * sat_w + 0.5 * (1 - sat_w)
 
 
-def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, is_rgb):
+def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, is_rgb, area_average=False):
     """Resample one lon/lat box of an equirectangular raster into the same
     fractional Mercator space `project(lon, lat)` returns, at `out_w`x`out_h`.
 
@@ -188,9 +188,60 @@ def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, i
     this tile's own bounds at draw time (`buildTerrainTint`/`drawImage` in
     map.js) - a tile's internal density only has to match the *source's*, not
     the projection's.
+
+    **`area_average` is the wash's own honest fix, 2026-09-04** (author: "the
+    medium res and high res are still lighter in the green" — after
+    `TILE_DARKEN_BIAS`, a flat alpha nudge, had already shipped once for the
+    same complaint and had not closed it). The world wash decimates the
+    native raster roughly 10x (2048 px across 360 degrees against the
+    source's own ~60 px/degree); nearest-neighbour at that ratio is a genuine
+    point sample, one lucky-or-unlucky pixel standing in for a ten-pixel-wide
+    patch, and which way it errs is noise — a constant bias shifts the
+    *average* toward the tile's own reading and leaves any one place still
+    wrong in whichever direction its own sample happened to fall, which is
+    exactly why the bias alone did not hold up under a second look at a real
+    location. A tile is not this decimated (30-60 px/degree against a ~60-120
+    px/degree native source, well under 2x), so nearest-neighbour there is
+    still an honest sample and this path is wash-only.
     """
     sh, sw = src_array.shape[:2]
     lat_top, lat_bot = max(lat0, lat1), min(lat0, lat1)
+
+    if area_average:
+        # A summed-area table per channel: each output pixel becomes the true
+        # mean of every native pixel inside its own footprint, computed once
+        # in O(source size) rather than per-output-pixel, which is what makes
+        # this affordable at the wash's own resolution.
+        oy_edges = np.arange(out_h + 1)
+        yf0 = (TOP - merc_y(min(MAX_LAT, lat_top))) / (TOP - BOTTOM)
+        yf1 = (TOP - merc_y(max(-MAX_LAT, lat_bot))) / (TOP - BOTTOM)
+        yy_edges = yf0 + oy_edges / out_h * (yf1 - yf0)
+        y_edges = TOP - yy_edges * (TOP - BOTTOM)
+        lat_edges = np.degrees(2 * np.arctan(np.exp(y_edges)) - np.pi / 2)
+        sy_edges = np.clip(np.round((90 - lat_edges) * (sh / 180)).astype(np.int64), 0, sh)
+        sy0, sy1 = sy_edges[:-1], np.maximum(sy_edges[1:], sy_edges[:-1] + 1)
+
+        ox_edges = np.arange(out_w + 1)
+        lon_edges = lon0 + ox_edges / out_w * (lon1 - lon0)
+        sx_edges = np.clip(np.round((lon_edges + 180) * (sw / 360)).astype(np.int64), 0, sw)
+        sx0, sx1 = sx_edges[:-1], np.maximum(sx_edges[1:], sx_edges[:-1] + 1)
+
+        y0 = np.broadcast_to(sy0[:, None], (out_h, out_w))
+        y1 = np.broadcast_to(sy1[:, None], (out_h, out_w))
+        x0 = np.broadcast_to(sx0[None, :], (out_h, out_w))
+        x1 = np.broadcast_to(sx1[None, :], (out_h, out_w))
+        count = (y1 - y0) * (x1 - x0)
+
+        def averaged(channel):
+            sat = np.zeros((sh + 1, sw + 1), dtype=np.float64)
+            sat[1:, 1:] = np.cumsum(np.cumsum(channel.astype(np.float64), axis=0), axis=1)
+            total = sat[y1, x1] - sat[y0, x1] - sat[y1, x0] + sat[y0, x0]
+            return total / count
+
+        if is_rgb:
+            return np.stack([averaged(src_array[:, :, c]) for c in range(3)], axis=-1)
+        return averaged(src_array)
+
     oy = np.arange(out_h)
     yf0 = (TOP - merc_y(min(MAX_LAT, lat_top))) / (TOP - BOTTOM)
     yf1 = (TOP - merc_y(max(-MAX_LAT, lat_bot))) / (TOP - BOTTOM)
@@ -209,7 +260,7 @@ def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, i
 
 
 def reproject_to_mercator(src_array, out_w, out_h, is_rgb):
-    return reproject_box_to_mercator(src_array, -180, 180, MAX_LAT, -MAX_LAT, out_w, out_h, is_rgb)
+    return reproject_box_to_mercator(src_array, -180, 180, MAX_LAT, -MAX_LAT, out_w, out_h, is_rgb, area_average=True)
 
 
 # The tile grid past DETAIL_AT: lon/lat cells, native-equivalent density
@@ -294,8 +345,8 @@ def main():
     colour = reproject_to_mercator(colour_native, out_w, out_h, is_rgb=True)
     green = greenness_of(colour)
 
-    green_img = Image.fromarray(np.clip(green * 255, 0, 255).astype(np.uint8), 'L')
-    relief_img_out = Image.fromarray(relief.astype(np.uint8), 'L')
+    green_img = Image.fromarray(np.clip(np.round(green * 255), 0, 255).astype(np.uint8), 'L')
+    relief_img_out = Image.fromarray(np.clip(np.round(relief), 0, 255).astype(np.uint8), 'L')
 
     data_dir = Path(__file__).resolve().parent.parent / 'src' / 'data'
     data_dir.mkdir(parents=True, exist_ok=True)

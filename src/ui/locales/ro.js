@@ -524,6 +524,13 @@ export const ro = {
     },
   },
 
+  texts: {
+    title: 'Texte',
+    lede: 'Izvoarele primare pe care acest sit le citează în întregime: scrierile sfinților înșiși, și scrierile celor care i-au cunoscut.',
+    empty: 'Nimic aici încă.',
+    on: 'despre {name}',
+  },
+
   about: {
     title: 'Despre',
     policy: {

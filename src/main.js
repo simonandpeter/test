@@ -24,6 +24,7 @@ import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
 import * as map from './views/map.js';
+import * as texts from './views/texts.js';
 import * as about from './views/about.js';
 
 const routes = [
@@ -32,6 +33,7 @@ const routes = [
   { path: '/saints', view: saints, nav: 'saints' },
   { path: '/saints/:slug', view: saint, nav: 'saints' },
   { path: '/map', view: map, nav: 'map' },
+  { path: '/texts', view: texts, nav: 'texts' },
   { path: '/about', view: about, nav: 'about' },
 ];
 

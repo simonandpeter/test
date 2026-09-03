@@ -5634,6 +5634,54 @@ test('a phone turns the day from anywhere on it except the picker', async ({ pag
   await expect(page.locator('.cal-date'), 'a swipe on the rail turned the day too').toContainText('5 Sep');
 });
 
+test('a swipe on the continue-reading shelf clears the row and does not turn the day', async ({ page }) => {
+  /*
+   * Author, 2026-09-04: "probably because of the swipe left right yesterday
+   * tomorrow functionality on daily page on mobile, the swipe to remove on
+   * the continue reading section isnt working." It was: `wireDaySwipe`
+   * (`daily/picker.js`) binds to the whole page and only excludes
+   * `.cal-controls`, and the shelf's own row-swipe (`wireSwipe`,
+   * `ui/shelf.js`) sits underneath that same page, on `[data-shelves]`. A
+   * touch pointer starting on a row is not a mouse, so `onGrainDrag`'s own
+   * mouse-only exclusion (`grain-drag.js`) does not save it — both listeners
+   * track the same finger, one dragging the row and the other dragging the
+   * day panel out from under it.
+   *
+   * `.shelf-row` swiping is already covered on a real device profile in
+   * chrome.spec.js — but with `page.mouse`, which fires `pointerType:
+   * 'mouse'` even under touch emulation, a pointer type `onGrainDrag` was
+   * already ignoring on its own. It could not have caught this: the
+   * conflict only exists for a genuine touch pointer, dispatched here the
+   * way the day-swipe test above does.
+   */
+  await ready(page);
+  await phone(page);
+  // Seed a reading entry the ordinary way, then land on a day.
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-date')).toContainText('5 Sep');
+
+  const row = page.locator('.shelf-row').first();
+  await row.scrollIntoViewIfNeeded();
+  await expect(row).toBeVisible();
+  const box = await row.locator('.index-name').boundingBox();
+  const y = box.y + box.height / 2;
+  await row.evaluate(
+    (el, y) => {
+      const at = (px) => ({ pointerId: 1, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true });
+      const x0 = el.getBoundingClientRect().x + el.getBoundingClientRect().width / 2;
+      el.dispatchEvent(new PointerEvent('pointerdown', at(x0)));
+      el.dispatchEvent(new PointerEvent('pointermove', at(x0 + 90)));
+      el.dispatchEvent(new PointerEvent('pointermove', at(x0 + 180)));
+      el.dispatchEvent(new PointerEvent('pointerup', at(x0 + 180)));
+    },
+    y,
+  );
+
+  await expect(page.locator('.shelf-row'), 'the row did not clear').toHaveCount(0);
+  await expect(page.locator('.cal-date'), 'the shelf swipe also turned the day').toContainText('5 Sep');
+});
+
 test('the wordmark is centred on a phone and unmoved on a desktop', async ({ page }) => {
   /*
    * Author, 2026-09-02: "daily dox svg not centred on mobile header, left

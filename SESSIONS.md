@@ -9549,3 +9549,82 @@ mostly irreducible. 303 more place candidates to read. 732 saints without an
 image, which is a different pipeline and untouched here. And the twenty-three
 martyrs are in the corpus twice, from two calendars; merging saints is the
 author's call and not something a session should do quietly.
+
+## Amendment 97 — a swipe untangled, a shelf bounded, and the Texts page built (author, 2026-09-04)
+
+**The continue-reading swipe was losing to the day-turn swipe underneath it**
+(author: "probably because of the swipe left right yesterday tomorrow
+functionality on daily page on mobile, the swipe to remove on the continue
+reading section isnt working"). `wireDaySwipe` (`daily/picker.js`) binds to
+the whole page, on the reasoning 2026-09-02 gave it — a reader's finger can
+start anywhere, not only on the day panel — and excluded only `.cal-controls`,
+the week rail and month grain. The shelf's own row-swipe (`wireSwipe`,
+`ui/shelf.js`) sits inside that same page, on `[data-shelves]`, and a touch
+pointer starting on a row is not a mouse — `onGrainDrag`'s mouse-only
+exclusion (`grain-drag.js`) does not save it, so both gestures tracked the
+same finger, one dragging the row and the other the day panel out from under
+it. `[data-shelves]` joined the exclusion. The existing touch-swipe coverage
+in `chrome.spec.js` could not have caught this: it drives the gesture with
+`page.mouse`, which is `pointerType: 'mouse'` even under device emulation —
+exactly the pointer type day-swipe already ignored on its own — so a new test
+in `daily.spec.js` dispatches a genuine `pointerType: 'touch'` drag on a
+shelf row and asserts both halves: the row clears, and the day does not turn.
+Run against the code before the fix, it failed exactly as reported — the
+swipe cleared the row *and* changed the day.
+
+**Continue-reading is bounded now**, the way history already is (author:
+"store a maximum of 20 continue reading entries, but continue to display
+only 5 at a time" — `ui/shelf.js`'s own `SHELF_LIMIT`, unchanged). Before
+this, `listReading` sliced what it *returned* to five, but nothing ever
+trimmed what was *stored* — a long-lived reader's `reading` table in
+IndexedDB grew without bound underneath a shelf that only ever showed its
+newest five. `store.js`'s `overflow()` (already `history`'s own cap
+mechanism) took a third parameter, the recency key, so `reading` could reuse
+it rather than duplicate it; `READING_CAP = 20`, swept on every write
+(`markReading`, `touchReading`) the same way `visit()` already sweeps
+`history` — live rows only, hard-deleted past the cap rather than
+tombstoned, on the same "local convenience, not a removal a future sync
+needs to reconcile" reasoning the history comment already gives.
+
+**The Texts page** (author: "Add the text page and upload the life of st
+anthony by st athanasius as a test, hyperlinking the saint profile on that
+page"). A saint's own primary source already reads in full on their own
+page — `views/saint.js`'s `sources()`/`wireSources()`, shipped earlier,
+a closed `<details>` fetching only on open — so this is not a new
+content-rendering path, only the index across every saint who has one, each
+row a door to the page that already carries the text. `data/texts.json`
+(`scripts/build-texts.mjs`, wired into `build`/`dev` beside
+`build:manifest`) is the one further fact the manifest deliberately does
+not carry, per its own "detail payload... fetched on open" rule — which
+saints have a source at all — read once by the new `/texts` route
+(`views/texts.js`, `lib/texts.js`) rather than asking every card to carry a
+field almost no visit needs.
+
+Anthony the Great's own life by Athanasius (translated by H. Ellershaw,
+*Nicene and Post-Nicene Fathers*, second series, volume 4, 1892 — public
+domain, the translator's edition a century past any copyright term, the
+same series Jerome's already-shipped Life of Paul comes from) is the test
+entry: `saints/anthony-the-great/sources/athanasius-life-of-antony.md`,
+registered in that saint's own `text.sources`, all 94 chapters. Every new
+string (`texts.title`/`lede`/`empty`/`on`) went into all five packs at
+once — the locale-coverage gate does not distinguish "just landed" from
+"always missing" — and `texts.on` names the saint the source is *about*
+rather than *by*, caught before it shipped: a hagiography's byline is its
+subject, not its subject's own name, and the first draft said the wrong one.
+
+**The page is not in the primary nav, and that was not the first draft
+either.** It went in beside Daily, All Saints, Map and About, a fifth label
+on `#site-nav` — and thirteen tests went red, every one of them chrome or
+CLS: `chrome.spec.js`'s own "the four pages hold one line in every pack, at
+every width" names the reason in its own comment (2026-08-25) — the header's
+`auto` nav track was already the tightest fit the widest packs allow, 678 px
+of the 580 available in Russian at the 72ch column, with *four* labels. A
+fifth did not fit in any of the five, which is what broke the header-height
+reservation and, downstream of a header that now settled taller than
+reserved, the CLS budget on every route that measures it. Rather than
+re-fighting an arithmetic already measured and pinned by another session's
+test, the page is reached from `About`'s own sourcing section instead — a
+sentence and a link, the same section that already credits Natural Earth —
+which is where a reader asking "where do these facts come from" already
+looks. `views/about.js`'s `render` took a `router` for exactly this one
+link.
