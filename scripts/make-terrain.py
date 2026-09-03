@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
-"""Writes the map's terrain layer, for views/map.js: a whole-world wash
-(`src/data/terrain-green.webp`, `terrain-relief.webp`) plus a grid of
-higher-resolution tiles (`src/data/terrain-tiles/`, indexed by
-`src/data/terrain-tiles.js`) that map.js fetches on demand past `DETAIL_AT`.
+"""Writes the map's terrain layer, for views/map.js: a grid of tiles
+(`src/data/terrain-tiles/`, indexed by `src/data/terrain-tiles.js`) that
+map.js fetches on demand past `TILE_FADE_START`.
+
+There used to also be a whole-world wash here (`terrain-green.webp`,
+`terrain-relief.webp`, one image covering the whole map) that faded in below
+the tile grid's own range and out across it. Removed entire on 2026-09-04
+(author: "remove the fully zoomed out raster completely and only keep the
+medium and high res ones") — a single image light enough to ship was only a
+few pixels per degree, thin enough that a coastline, a mountain edge or a
+grass/sand boundary read as a real, systematic lightening against the tile
+grid it faded into rather than sampling noise, which no amount of retuning
+the resampling under it (see `reproject_box_to_mercator`'s old `area_average`
+path, gone with it) was going to close. `map.js` now fades the flat ink fill
+directly into the tile grid, over more zoom levels than the wash's own
+crossfade used, and this script only ever writes the tile grid.
 
 Run by hand, not by the build; the output is committed, the same rule
 `make-land.mjs`/`make-water.mjs` follow for the coastline and water beside it.
@@ -28,39 +40,39 @@ to sit under is wrong by hundreds of pixels at high latitude - Canada and
 Scandinavia visibly so - so this reprojects to the same fractional space
 `project(lon, lat)` returns before anything is written.
 
-The output is two separate grayscale images, not one picture: `terrain-green.webp`
-is a green<->sand index (0 sand, 255 green, from the colour raster's own hue -
-see `greenness` below), `terrain-relief.webp` is the relief raster's own
-luminance. Two files rather than one RGB-packed one on purpose - lossy WebP's
-chroma subsampling halves the resolution of whatever rides in the colour
-channels, which is fine for a photograph and not for two independent data
-channels being asked to survive at full precision. Grayscale WebP has no
-chroma to subsample. `map.js` turns the pair into ink at a shade and alpha it
-computes itself, so the palette lives in one place (`tokens.css`) and this
-file never needs regenerating when it is retuned - only when the projection's
-own MAX_LAT changes.
+Each tile is written as two separate grayscale images, not one picture:
+`t-{col}-{row}-green.webp` is a green<->sand index (0 sand, 255 green, from
+the colour raster's own hue - see `greenness` below), `t-{col}-{row}-relief.webp`
+is the relief raster's own luminance. Two files rather than one RGB-packed one
+on purpose - lossy WebP's chroma subsampling halves the resolution of
+whatever rides in the colour channels, which is fine for a photograph and not
+for two independent data channels being asked to survive at full precision.
+Grayscale WebP has no chroma to subsample. `map.js` turns the pair into ink at
+a shade and alpha it computes itself, so the palette lives in one place
+(`tokens.css`) and these files never need regenerating when it is retuned -
+only when the projection's own MAX_LAT changes.
 
-A lossless encoding of this data (PNG, or lossless WebP) runs 2-3 MB: real
+A lossless encoding of this data (PNG, or lossless WebP) would run large: real
 elevation data is noisy at the pixel level in a way land and water's own
 coastlines are not, and nothing here needs that noise preserved exactly - it
 is a soft, indicative wash under the coastline, not a scientific layer. Lossy
-WebP at a modest width is what makes that trade honestly rather than by
-accident.
+WebP is what makes that trade honestly rather than by accident.
 
-**Why a whole-world image is not enough, and a tile grid is.** A single
-raster light enough to ship covers 360 degrees in a couple of thousand
-pixels - a few pixels per degree - so zooming in on one saint's own town asks
-it to hold detail it never had. The source data itself carries far more
-(30 px/degree at this 50m tier, the same density `land.js`/`water.js` already
-draw the coastline at); the problem was always distribution, not the data.
-So this also cuts the *native*-resolution raster into a grid of tiles
-(`TILE_COLS` x `TILE_ROWS`, each a lon/lat cell) and writes an index of their
-bounds rather than a bigger single image. `map.js` fetches only the tiles a
-reader's own view actually overlaps, past `DETAIL_AT` - the same "a reader
-who never opens the map never pays for it" reasoning `ensureFine` already
-applies to the fine coastline, one level further in. Every tile is still cut
-to `MAX_LAT`, same as the world wash: nothing this corpus ever locates a
-saint past 83 degrees, and a tile up there would be pure ocean or ice.
+**Why a tile grid, not a whole-world image.** A single raster light enough to
+ship covers 360 degrees in a couple of thousand pixels - a few pixels per
+degree - so zooming in on one saint's own town asks it to hold detail it
+never had (this is what the wash described above used to be, and why it is
+gone). The source data itself carries far more (30 px/degree at this 50m
+tier, the same density `land.js`/`water.js` already draw the coastline at);
+the problem was always distribution, not the data. So this cuts the
+*native*-resolution raster into a grid of tiles (`TILE_COLS` x `TILE_ROWS`,
+each a lon/lat cell) and writes an index of their bounds rather than a bigger
+single image. `map.js` fetches only the tiles a reader's own view actually
+overlaps, past `TILE_FADE_START` - the same "a reader who never opens the map
+never pays for it" reasoning `ensureFine` already applies to the fine
+coastline, one level further in. Every tile is still cut to `MAX_LAT`:
+nothing this corpus ever locates a saint past 83 degrees, and a tile up there
+would be pure ocean or ice.
 
 **A third tier, for the ground this corpus actually stands on** (2026-09-04):
 the 10m tier - `SR_HR`/`HYP_HR_SR_OB_DR`, 60 px/degree, twice the 50m tier's
@@ -79,7 +91,7 @@ writes as the corpus grows, not a live cut. `terrain-tiles.js` marks each
 qualifying cell `hr: true`; `map.js` only asks for the pair a cell's own
 entry says exists, so the absence never costs a failed request.
 
-    python scripts/make-terrain.py [--width 2048] [--quality 78] [--tile-quality 80] [--skip-hr]
+    python scripts/make-terrain.py [--tile-quality 80] [--skip-hr]
 """
 import argparse
 import io
@@ -135,7 +147,6 @@ def merc_y(lat_deg):
 
 TOP = merc_y(MAX_LAT)
 BOTTOM = merc_y(-MAX_LAT)
-ASPECT = 360 / ((TOP - BOTTOM) * (180 / math.pi))
 
 
 def fetch_tif(url, member_suffix):
@@ -177,70 +188,25 @@ def greenness_of(colour_rgb):
     return g * sat_w + 0.5 * (1 - sat_w)
 
 
-def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, is_rgb, area_average=False):
+def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, is_rgb):
     """Resample one lon/lat box of an equirectangular raster into the same
-    fractional Mercator space `project(lon, lat)` returns, at `out_w`x`out_h`.
+    fractional Mercator space `project(lon, lat)` returns, at `out_w`x`out_h`,
+    nearest-neighbour. Each output *row* still goes through the real
+    inverse-Mercator lookup, so content within the box is positioned
+    correctly; the box's own pixel dimensions do not otherwise need to match
+    its on-screen Mercator aspect, because the browser stretches to whatever
+    rect `toScreen` computes for this tile's own bounds at draw time
+    (`buildTerrainTint`/`drawImage` in map.js) - a tile's internal density
+    only has to match the *source's*, not the projection's.
 
-    Each output *row* still goes through the real inverse-Mercator lookup, so
-    content within the box is positioned correctly; the box's own pixel
-    dimensions do not otherwise need to match its on-screen Mercator aspect,
-    because the browser stretches to whatever rect `toScreen` computes for
-    this tile's own bounds at draw time (`buildTerrainTint`/`drawImage` in
-    map.js) - a tile's internal density only has to match the *source's*, not
-    the projection's.
-
-    **`area_average` is the wash's own honest fix, 2026-09-04** (author: "the
-    medium res and high res are still lighter in the green" — after
-    `TILE_DARKEN_BIAS`, a flat alpha nudge, had already shipped once for the
-    same complaint and had not closed it). The world wash decimates the
-    native raster roughly 10x (2048 px across 360 degrees against the
-    source's own ~60 px/degree); nearest-neighbour at that ratio is a genuine
-    point sample, one lucky-or-unlucky pixel standing in for a ten-pixel-wide
-    patch, and which way it errs is noise — a constant bias shifts the
-    *average* toward the tile's own reading and leaves any one place still
-    wrong in whichever direction its own sample happened to fall, which is
-    exactly why the bias alone did not hold up under a second look at a real
-    location. A tile is not this decimated (30-60 px/degree against a ~60-120
-    px/degree native source, well under 2x), so nearest-neighbour there is
-    still an honest sample and this path is wash-only.
+    Nearest-neighbour is an honest sample here because a tile is barely
+    decimated at all (30-60 px/degree against a ~60-120 px/degree native
+    source, well under 2x) - there used to be a second, area-averaging path
+    here for a whole-world wash decimated roughly 10x, where a point sample
+    really was a coin flip; it went when the wash did (2026-09-04).
     """
     sh, sw = src_array.shape[:2]
     lat_top, lat_bot = max(lat0, lat1), min(lat0, lat1)
-
-    if area_average:
-        # A summed-area table per channel: each output pixel becomes the true
-        # mean of every native pixel inside its own footprint, computed once
-        # in O(source size) rather than per-output-pixel, which is what makes
-        # this affordable at the wash's own resolution.
-        oy_edges = np.arange(out_h + 1)
-        yf0 = (TOP - merc_y(min(MAX_LAT, lat_top))) / (TOP - BOTTOM)
-        yf1 = (TOP - merc_y(max(-MAX_LAT, lat_bot))) / (TOP - BOTTOM)
-        yy_edges = yf0 + oy_edges / out_h * (yf1 - yf0)
-        y_edges = TOP - yy_edges * (TOP - BOTTOM)
-        lat_edges = np.degrees(2 * np.arctan(np.exp(y_edges)) - np.pi / 2)
-        sy_edges = np.clip(np.round((90 - lat_edges) * (sh / 180)).astype(np.int64), 0, sh)
-        sy0, sy1 = sy_edges[:-1], np.maximum(sy_edges[1:], sy_edges[:-1] + 1)
-
-        ox_edges = np.arange(out_w + 1)
-        lon_edges = lon0 + ox_edges / out_w * (lon1 - lon0)
-        sx_edges = np.clip(np.round((lon_edges + 180) * (sw / 360)).astype(np.int64), 0, sw)
-        sx0, sx1 = sx_edges[:-1], np.maximum(sx_edges[1:], sx_edges[:-1] + 1)
-
-        y0 = np.broadcast_to(sy0[:, None], (out_h, out_w))
-        y1 = np.broadcast_to(sy1[:, None], (out_h, out_w))
-        x0 = np.broadcast_to(sx0[None, :], (out_h, out_w))
-        x1 = np.broadcast_to(sx1[None, :], (out_h, out_w))
-        count = (y1 - y0) * (x1 - x0)
-
-        def averaged(channel):
-            sat = np.zeros((sh + 1, sw + 1), dtype=np.float64)
-            sat[1:, 1:] = np.cumsum(np.cumsum(channel.astype(np.float64), axis=0), axis=1)
-            total = sat[y1, x1] - sat[y0, x1] - sat[y1, x0] + sat[y0, x0]
-            return total / count
-
-        if is_rgb:
-            return np.stack([averaged(src_array[:, :, c]) for c in range(3)], axis=-1)
-        return averaged(src_array)
 
     oy = np.arange(out_h)
     yf0 = (TOP - merc_y(min(MAX_LAT, lat_top))) / (TOP - BOTTOM)
@@ -259,11 +225,7 @@ def reproject_box_to_mercator(src_array, lon0, lon1, lat0, lat1, out_w, out_h, i
     return src_array[sy[:, None], sx[None, :]]
 
 
-def reproject_to_mercator(src_array, out_w, out_h, is_rgb):
-    return reproject_box_to_mercator(src_array, -180, 180, MAX_LAT, -MAX_LAT, out_w, out_h, is_rgb, area_average=True)
-
-
-# The tile grid past DETAIL_AT: lon/lat cells, native-equivalent density
+# The tile grid past TILE_FADE_START (views/map.js): lon/lat cells, native-equivalent density
 # (30 px per degree in both directions - the source's own, see the module
 # docstring). 12x6 cells x 30 degrees each covers the full world within
 # MAX_LAT; a saint's own town is never more than one cell across.
@@ -322,10 +284,7 @@ def tile_near_any(lon0, lon1, lat0, lat1, points, radius_km=1000):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--width', type=int, default=2048)
-    ap.add_argument('--quality', type=int, default=78)
     ap.add_argument('--tile-quality', type=int, default=80)
-    ap.add_argument('--skip-tiles', action='store_true', help='world wash only, for a quick rebuild')
     ap.add_argument('--skip-hr', action='store_true', help='50m tile grid only, skip the 10m pass')
     ap.add_argument(
         '--manifest',
@@ -333,33 +292,14 @@ def main():
         help='built manifest to read saint locations from (npm run build:manifest first)',
     )
     args = ap.parse_args()
-    out_w = args.width
-    out_h = round(out_w / ASPECT)
 
     relief_img = fetch_tif(RELIEF_ZIP, '.tif')
     colour_img = fetch_tif(COLOUR_ZIP, '.tif')
     relief_native = np.array(relief_img.convert('L'))
     colour_native = np.array(colour_img.convert('RGB'))
 
-    relief = reproject_to_mercator(relief_native, out_w, out_h, is_rgb=False)
-    colour = reproject_to_mercator(colour_native, out_w, out_h, is_rgb=True)
-    green = greenness_of(colour)
-
-    green_img = Image.fromarray(np.clip(np.round(green * 255), 0, 255).astype(np.uint8), 'L')
-    relief_img_out = Image.fromarray(np.clip(np.round(relief), 0, 255).astype(np.uint8), 'L')
-
     data_dir = Path(__file__).resolve().parent.parent / 'src' / 'data'
     data_dir.mkdir(parents=True, exist_ok=True)
-    green_path = data_dir / 'terrain-green.webp'
-    relief_path = data_dir / 'terrain-relief.webp'
-    green_img.save(green_path, 'WEBP', quality=args.quality, method=6)
-    relief_img_out.save(relief_path, 'WEBP', quality=args.quality, method=6)
-
-    for path in (green_path, relief_path):
-        print(f'{path.name}: {out_w}x{out_h}, {path.stat().st_size / 1024:.1f} kB')
-
-    if args.skip_tiles:
-        return
 
     points = []
     if not args.skip_hr:

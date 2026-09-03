@@ -62,10 +62,11 @@ function hexToRgb(hex) {
 }
 
 /*
- * The green<->sand index (`terrain-green.webp`) and the relief raster's own
- * luminance (`terrain-relief.webp`) already carry the whole terrain read —
- * see `scripts/make-terrain.py`'s own header for what each means and why
- * they ship separately. Turning them into ink is this module's job precisely
+ * The green<->sand index (`t-{col}-{row}-green.webp`) and the relief
+ * raster's own luminance (`t-{col}-{row}-relief.webp`) already carry the
+ * whole terrain read — see `scripts/make-terrain.py`'s own header for what
+ * each means and why they ship separately. Turning them into ink is this
+ * module's job precisely
  * so the colour itself keeps living in `tokens.css` and nowhere else: this
  * asset never needs regenerating when the palette is retuned, only when
  * `mercator.js`'s own `MAX_LAT` changes.
@@ -104,27 +105,29 @@ const RELIEF_GAIN = 0.65;
 const RELIEF_LIFT_DAMP = 0.12;
 
 /**
- * **A tile read lighter than the world wash for the same real ground —
- * measured, not eyeballed, and traced to the wash's own resampling rather
- * than to the tile** (2026-09-04, first pass; corrected same day). The wash
- * decimates the native data roughly 10x to fit a whole-world image light
- * enough to ship (`make-terrain.py`'s own header); nearest-neighbour at that
- * ratio is a genuine point sample, one lucky-or-unlucky native pixel
- * standing in for a ten-pixel-wide patch, and which way it errs is noise.
- * The first attempt at a fix left that noise in the wash and patched around
- * it here instead — a flat alpha bias, `TILE_DARKEN_BIAS`, added to every
- * tile regardless of what the wash actually read at that spot. It shipped,
- * the author reported the gap was still there, and decoding both rasters'
- * actual bytes at several real cities (`rome`, `athens`, `istanbul`,
- * `jerusalem`, `belgrade`, `bucharest`) rather than reading a screenshot
- * showed why: at every one of them, tile alpha *without* any bias already
- * sat within 0.001–0.057 of the wash's own value, in both themes — a bias
- * calibrated for a noise-driven gap that the honest fix (`make-terrain.py`'s
- * `reproject_to_mercator`, now a true area average of every native pixel a
- * wash pixel covers, not one sample of it) had already closed. Adding
- * `TILE_DARKEN_BIAS` on top did not restore a match; it manufactured a new
- * 0.08–0.14 mismatch in the *other* direction. Removed rather than retuned:
- * there is no longer a gap here for a constant to close.
+ * **A tile once read lighter than the whole-world wash for the same real
+ * ground — measured, not eyeballed, and traced to the wash's own resampling
+ * rather than to the tile** (2026-09-04, first pass; corrected same day; the
+ * wash itself removed entire later the same day, see `views/map.js`'s
+ * `TILE_FADE_START`). The wash decimated the native data roughly 10x to fit
+ * a whole-world image light enough to ship; nearest-neighbour at that ratio
+ * was a genuine point sample, one lucky-or-unlucky native pixel standing in
+ * for a ten-pixel-wide patch, and which way it erred was noise. The first
+ * attempt at a fix left that noise in the wash and patched around it here
+ * instead — a flat alpha bias, `TILE_DARKEN_BIAS`, added to every tile
+ * regardless of what the wash actually read at that spot. It shipped, the
+ * author reported the gap was still there, and decoding both rasters' actual
+ * bytes at several real cities (`rome`, `athens`, `istanbul`, `jerusalem`,
+ * `belgrade`, `bucharest`) rather than reading a screenshot showed why: at
+ * every one of them, tile alpha *without* any bias already sat within
+ * 0.001–0.057 of the wash's own value, in both themes — a bias calibrated
+ * for a noise-driven gap that the honest fix (`make-terrain.py`'s area
+ * average, a true mean of every native pixel a wash pixel covered rather
+ * than one sample of it) had already closed. Adding `TILE_DARKEN_BIAS` on
+ * top did not restore a match; it manufactured a new 0.08–0.14 mismatch in
+ * the *other* direction. Removed rather than retuned — and moot as of the
+ * wash's own removal, kept here as the record of why a tile's alpha is not
+ * biased against anything.
  */
 
 /** One ink colour, alpha modulated per pixel by land-cover and relief — see

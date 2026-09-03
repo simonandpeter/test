@@ -2603,55 +2603,30 @@ function loadTerrainLib() {
 }
 
 /**
- * The terrain layer's two data channels, fetched once and kept for the rest
- * of the visit — never blocking the first paint, the same reasoning
- * `ensureFine` applies to the coastline's own fine tier. A reader who never
- * opens the map never pays for this at all; a reader who does sees the flat
- * ink fill land already drew, then the terrain wash a beat later.
- */
-function ensureTerrain(canvas, cards) {
-  if (canvas.__terrainPending) return;
-  canvas.__terrainPending = loadTerrainLib()
-    .then((lib) => {
-      const greenUrl = new URL('../data/terrain-green.webp', import.meta.url).href;
-      const reliefUrl = new URL('../data/terrain-relief.webp', import.meta.url).href;
-      return Promise.all([lib.loadTerrainChannel(greenUrl), lib.loadTerrainChannel(reliefUrl)]);
-    })
-    .then(([green, relief]) => {
-      if (!canvas.isConnected) return;
-      canvas.__terrainGreen = green.data;
-      canvas.__terrainRelief = relief.data;
-      canvas.__terrainW = green.w;
-      canvas.__terrainH = green.h;
-      paintCanvas(canvas, cards());
-    })
-    .catch(() => {
-      // The flat fill land already has is a whole map; a terrain layer that
-      // never arrives is quieter, not broken.
-      canvas.__terrainPending = null;
-    });
-}
-
-function terrainTintFor(canvas, inkHex, isDark) {
-  return terrainLib.tintFor(
-    canvas,
-    { green: canvas.__terrainGreen, relief: canvas.__terrainRelief, w: canvas.__terrainW, h: canvas.__terrainH },
-    inkHex,
-    isDark,
-  );
-}
-
-/**
- * Where the terrain wash starts giving way to the 50m tile grid, and where
+ * Where the flat ink fill starts giving way to the 50m tile grid, and where
  * it has fully given way — see the fade's own comment in `paintCanvas`.
- * Raised from 2/`DETAIL_AT` to 8 (2026-09-04, author: "have them fade into
- * view at 8x zoom not 2x as on mobile its a bit laggy currently"): starting
- * the tile grid's own fetch-and-decode work this much later means a reader
- * panning around at a modest zoom on a phone is never asking several tiles
- * to arrive at once for a layer they are barely stopped on.
+ * There was a third, whole-world raster tier here once (`terrain-green.webp`/
+ * `terrain-relief.webp`, a single ~2000px-wide image covering the whole map),
+ * fading in below this range and out across it into the tile grid. Removed
+ * entire — asset, loader and draw call — on 2026-09-04 (author: "remove the
+ * fully zoomed out raster completely and only keep the medium and high res
+ * ones"): a raster that thin over the whole world was never enough to hold
+ * a coastline, a mountain edge or a grass/sand boundary at the same density
+ * as the tiles it faded into, so every such transition read as a real,
+ * systematic lightening rather than sampling noise — the kind the honest
+ * area-average fix earlier the same day could not reach, because the wash's
+ * own resolution was the mismatch, not its resampling. Below this range the
+ * map now shows the same flat ink fill it always had underneath the wash;
+ * past it, the tile grid takes over. `_START` stays where the wash's own
+ * fetch-and-decode delay was tuned (8x, "a bit laggy" on mobile at 2x); the
+ * range is widened well past the old `_END` of 12 so the tile grid eases in
+ * over many more zoom levels instead of the four the wash's own crossfade
+ * used — there is no second raster underneath any more to hide a slower rise
+ * behind, so the fade doing more of the work on its own is what keeps the
+ * transition from reading abrupt.
  */
-const TERRAIN_FADE_START = 8;
-const TERRAIN_FADE_END = 12;
+const TILE_FADE_START = 8;
+const TILE_FADE_END = 20;
 
 /**
  * Where the 10m tier starts giving way to — and where it has fully replaced —
@@ -2717,7 +2692,7 @@ function ensureTerrainTiles(canvas, cards, frame) {
      * The 10m pair, only for a cell `make-terrain.py` actually generated one
      * for (`tile.hr`) and only once the reader is far enough in that it would
      * ever be drawn (`HR_FADE_START`) — fetched a beat early, the same
-     * reasoning `TERRAIN_FADE_START` gives the 50m grid, so the pair has
+     * reasoning `TILE_FADE_START` gives the 50m grid, so the pair has
      * arrived by the time the crossfade needs it rather than popping in
      * mid-fade.
      */
@@ -2976,47 +2951,38 @@ function paintCanvas(canvas, cards) {
 
   const land = fine ? canvas.__landFine : canvas.__land;
   if (land) {
-    if (!canvas.__terrainGreen && !canvas.__terrainPending) ensureTerrain(canvas, () => cards);
-
     /*
-     * **The wash fades back to the flat fill as the reader zooms in, rather
-     * than stretching one whole-world raster past what it actually holds**
-     * (2026-09-03). A single image light enough to ship — even the 2048 px
-     * one `make-terrain.py` now writes — is only a few pixels per degree; at
-     * `TERRAIN_FADE_END` the reader is asking a handful of source pixels to
-     * cover the same ground `DETAIL_AT`'s fine coastline does with real data,
-     * and doing that anyway was visibly soft rather than sharp. This is the
-     * coastline's own §6b rule again — a map that keeps zooming into detail
-     * it does not have is lying about its own precision — applied to a
-     * raster instead of a polygon: past this zoom the dots and the fine
-     * coastline are the content, not ground texture, so the honest picture
-     * is the flat ink the map drew before this feature existed.
+     * **The flat ink fill gives way to the 50m tile grid as the reader zooms
+     * in** (2026-09-03, narrowed to tiles-only 2026-09-04). There used to be
+     * a whole-world raster wash between the two — one image light enough to
+     * ship is only a few pixels per degree, so it read as soft mush rather
+     * than ground the moment it was asked to cover one saint's own town, and
+     * removing it (see `TILE_FADE_START`'s own comment) leaves this as a
+     * plain two-tier fade: flat ink below `TILE_FADE_START`, the tile grid
+     * above `TILE_FADE_END`, a crossfade of the two between them.
      */
-    const zoomFade = Math.max(0, Math.min(1, (view.scale - TERRAIN_FADE_START) / (TERRAIN_FADE_END - TERRAIN_FADE_START)));
+    const zoomFade = Math.max(0, Math.min(1, (view.scale - TILE_FADE_START) / (TILE_FADE_END - TILE_FADE_START)));
 
     /*
-     * **The wash does not fade out from under ground the tile has not
+     * **The flat fill does not fade out from under ground the tile has not
      * arrived to replace** (2026-09-04, author: "the switch to a lighter
      * colour terrain actually happens across all terrain, and the switch
      * happens at 8x zoom"). `zoomFade` above is pure arithmetic on the
-     * current scale — it used to drive `terrainStrength` directly, so the
-     * wash started fading the instant `view.scale` crossed `TERRAIN_FADE_START`
-     * whether or not `ensureTerrainTiles` had actually fetched anything yet.
-     * A tile is a network request plus a decode, not free, and the fetch for
-     * a cell a reader has never zoomed into before does not even *start*
-     * until this same frame — so every first crossing into a fresh area past
-     * 8x drew a wash already reduced by `zoomFade` next to a tile layer that
-     * had nothing loaded to draw at all, which is strictly less ink than
-     * either tier alone: a real, reproducible lightening, everywhere, right
-     * at the threshold, not a trick of the eye. `visible` is computed here
-     * (once, reused by the draw loop below) so `tilesReady` can hold
-     * `zoomFade`'s effect at 0 — wash at full, tile not yet drawn — until
-     * every tile the current view actually needs has *settled*, loaded or
-     * failed either one (an errored tile is still a resolved question, the
-     * existing "gap in the wash" this map already tolerates — waiting on it
-     * forever would trade a flash for a stuck one). The same "hold the
-     * outgoing layer at full until the incoming one is ready" rule as the
-     * coastline crossfade a few dozen lines above, one layer down.
+     * current scale; a tile is a network request plus a decode, not free,
+     * and the fetch for a cell a reader has never zoomed into before does
+     * not even *start* until this same frame — so every first crossing into
+     * a fresh area past `TILE_FADE_START` would otherwise draw a flat fill
+     * already reduced by `zoomFade` next to a tile layer that had nothing
+     * loaded to draw at all, a real, reproducible lightening right at the
+     * threshold, not a trick of the eye. `visible` is computed here (once,
+     * reused by the draw loop below) so `tilesReady` can hold `zoomFade`'s
+     * effect at 0 — flat fill at full, tile not yet drawn — until every tile
+     * the current view actually needs has *settled*, loaded or failed either
+     * one (an errored tile is still a resolved question, the existing "gap
+     * in the grid" this map already tolerates — waiting on it forever would
+     * trade a flash for a stuck one). The same "hold the outgoing layer at
+     * full until the incoming one is ready" rule as the coastline crossfade
+     * a few dozen lines above, one layer down.
      */
     if (zoomFade > 0) ensureTerrainTiles(canvas, () => cards, frame);
     const visible = zoomFade > 0 && terrainLib && canvas.__tileMeta ? terrainLib.visibleTiles(canvas.__tileMeta, view, frame) : [];
@@ -3026,11 +2992,9 @@ function paintCanvas(canvas, cards) {
         const status = canvas.__tileState?.get(`${t.col}-${t.row}`)?.status;
         return status === 'loaded' || status === 'error';
       });
-    const tileFade = tilesReady ? zoomFade : 0;
-    const terrainStrength = canvas.__terrainGreen ? 1 - tileFade : 0;
-    const tileStrength = tileFade;
+    const tileStrength = tilesReady ? zoomFade : 0;
 
-    if (terrainStrength < 1) {
+    if (tileStrength < 1) {
       /*
        * Ink at a low alpha rather than `--rule` itself. The rule is 1.41:1 on
        * gesso and 1.31:1 on the field — deliberately, because it divides text and
@@ -3041,8 +3005,8 @@ function paintCanvas(canvas, cards) {
        * It takes no AA floor: the land is not text, and nothing on this page is
        * carried by the coastline alone — every point is a row in the list below.
        *
-       * Also the terrain wash's own base and its fallback: drawn whenever the
-       * wash is not at full strength — faded, absent, or not yet arrived —
+       * Also the tile grid's own base and its fallback: drawn whenever the
+       * grid is not at full strength — faded, absent, or not yet arrived —
        * so there is never a gap between the two, only a crossfade or a flat
        * map, never an empty one.
        */
@@ -3050,36 +3014,6 @@ function paintCanvas(canvas, cards) {
       ctx.beginPath();
       tracePath(land, true);
       ctx.fill();
-    }
-
-    if (terrainStrength > 0 && detailT > 0) {
-      /*
-       * The terrain wash, clipped to the land path exactly the way the flat
-       * fill above it was — the difference is only what fills that clip.
-       * `toScreen` on the image's own two corners is the whole projection:
-       * the raster was pre-projected into the same Mercator fraction space
-       * `project(lon, lat)` returns (`make-terrain.py`), so drawing it needs
-       * no per-pixel reprojection here, only the pan/zoom scale-and-translate
-       * every dot on the page already goes through.
-       */
-      const isDark = document.documentElement.classList.contains('dark');
-      const tint = terrainTintFor(canvas, inkSoft, isDark);
-      ctx.save();
-      ctx.beginPath();
-      tracePath(land, true);
-      ctx.clip();
-      ctx.globalAlpha = terrainStrength * detailT;
-      const topLeft = toScreen(view, 0, 0, frame);
-      const bottomRight = toScreen(view, 1, 1, frame);
-      ctx.drawImage(
-        tint,
-        topLeft.x * w,
-        topLeft.y * h,
-        (bottomRight.x - topLeft.x) * w,
-        (bottomRight.y - topLeft.y) * h,
-      );
-      ctx.restore();
-      canvas.dataset.terrain = 'ok';
     }
 
     if (tileStrength > 0) {

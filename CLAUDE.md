@@ -225,16 +225,20 @@ again. Combined the pair is now ~433 kB gzipped, up from 211 kB — a second
 deliberate weight-for-precision trade, on top of the one 110m→50m already
 made.
 
-**A terrain wash sits under the coastline** (author, 2026-09-03):
-`src/data/terrain-green.webp`/`terrain-relief.webp`, two grayscale rasters
-from Natural Earth's own 50m shaded relief and hypsometric-tint sources,
-pre-projected into `lib/mercator.js`'s Mercator space by
-`scripts/make-terrain.py` so the canvas only ever scales and translates them,
-never reprojects. They ship as *data*, not a picture — one channel is a
-green↔sand index read from the colour raster's own hue, the other is the
-relief raster's luminance — because the map's whole palette is two tokens
-(`--gesso`, `--ink-soft`) and a baked-colour asset would be exactly the
-hard-coded colour `tokens.css` calls a defect. `buildTint` (map.js) turns a
+**A terrain layer sits under the coastline, drawn from tiles — there is no
+whole-world raster any more** (author, 2026-09-03, the tile grid narrowed to
+the map's only terrain source 2026-09-04). `scripts/make-terrain.py` cuts
+Natural Earth's own 50m shaded-relief and hypsometric-tint sources into a
+`TILE_COLS`x`TILE_ROWS` grid of lon/lat cells at *native* resolution
+(30 px/degree — the same density `land.js`/`water.js` already draw the
+coastline at), pre-projected into `lib/mercator.js`'s Mercator space so the
+canvas only ever scales and translates a tile, never reprojects it
+(`src/data/terrain-tiles/`, indexed by `terrain-tiles.js`'s plain bounds).
+Each tile ships as *data*, not a picture — one channel is a green↔sand index
+read from the colour raster's own hue, the other is the relief raster's
+luminance — because the map's whole palette is two tokens (`--gesso`,
+`--ink-soft`) and a baked-colour asset would be exactly the hard-coded colour
+`tokens.css` calls a defect. `buildTint` (`lib/map-terrain.js`) turns a
 channel pair into ink at a per-pixel alpha, cached per theme and rebuilt only
 on a theme change, never per frame. **Green darkens the ink and sand lightens
 it, in both themes** — which end of the pair does that flips per theme
@@ -246,35 +250,44 @@ by theme rather than shared. The wash is deliberately subtle — a small,
 indicative difference between green and sand, not a coloured map — while the
 relief channel keeps real ridgeline definition; both were tuned by eye
 against the palette, not computed from a formula with a stated target.
-Fetched off the boot path, after the coastline's own first paint, and falls
-back to the old flat `inkSoft` fill if it never arrives — a flat map, not an
-empty one. **It fades out again as the reader zooms in** (`TERRAIN_FADE_START`
-2, `TERRAIN_FADE_END` = `DETAIL_AT`) rather than stretching one whole-world
-raster past what it holds — a single image light enough to ship is only a
-few pixels per degree, and asking it to cover one saint's own town read as
-soft mush rather than ground.
 
-**Past that same fade, a tile grid takes over** (author, 2026-09-03,
-`ensureTerrainTiles`): `make-terrain.py` also cuts the *native* 50m
-resolution (30 px/degree — the same density `land.js`/`water.js` already draw
-the coastline at) into a `TILE_COLS`x`TILE_ROWS` grid of lon/lat cells
-(`src/data/terrain-tiles/`, indexed by `terrain-tiles.js`'s plain bounds), and
-the map fetches only the cells the reader's own view overlaps — one further
-step of the "a reader who never opens the map never pays for it" reasoning
-`ensureFine` already applies to the fine coastline. Visibility is a plain
-rectangle test in projected space (`visibleTiles`, `lib/map-terrain.js`): a
-lon/lat cell's projected corners are still axis-aligned, since `project`'s `x`
-depends only on `lon` and `y` only on `lat`, so no real reprojection is
-needed to ask "does this tile overlap the screen." Tiles crossfade in as the
-wash fades out (`tileStrength = 1 - terrainStrength`, both driven by the one
-`zoomFade`), and a tile that has not arrived yet is simply not drawn — the
-flat fill (drawn whenever the wash is below full strength) is what shows
-through the gap, so a slow network reads as *plainer*, never as broken.
-**`TERRAIN_FADE_START`/`_END` moved from 2/`DETAIL_AT` to 8/12** (2026-09-04,
-author: "have them fade into view at 8x zoom not 2x as on mobile its a bit
-laggy currently") — starting the tile grid's own fetch-and-decode work later
-means a phone panning at a modest zoom is never asking several tiles to
-arrive at once for a layer it is barely stopped on.
+**There used to also be a whole-world wash** (`src/data/terrain-green.webp`/
+`terrain-relief.webp`, one ~2000px-wide raster covering the whole map, faded
+out again as the reader zoomed in so it never had to stretch past what it
+held) **under the tile grid below `TERRAIN_FADE_START`/`_END`, and it is
+gone** (2026-09-04, author: "remove the fully zoomed out raster completely
+and only keep the medium and high res ones"). A single image light enough to
+ship was only a few pixels per degree — thin enough that a coastline, a
+mountain edge or a grass/sand boundary read as a real, systematic lightening
+against the tile grid it faded into, not sampling noise, exactly the kind of
+thing "8x zoom, all terrain" would show and the honest area-average
+resampling fix below could not reach, because the mismatch was the wash's
+own resolution, not how it resampled. The map now fades the flat `inkSoft`
+fill directly into the tile grid — `zoomFade`, `TILE_FADE_START`/`_END`
+(`views/map.js`) — with nothing raster underneath at low zoom at all;
+`make-terrain.py` only ever writes the tile grid, and the two whole-world
+files and the script's own wash-generation code went with it.
+
+**Past `TILE_FADE_START`, the tile grid fades in** (author, 2026-09-03,
+`ensureTerrainTiles`): the map fetches only the cells the reader's own view
+overlaps — one further step of the "a reader who never opens the map never
+pays for it" reasoning `ensureFine` already applies to the fine coastline.
+Visibility is a plain rectangle test in projected space (`visibleTiles`,
+`lib/map-terrain.js`): a lon/lat cell's projected corners are still
+axis-aligned, since `project`'s `x` depends only on `lon` and `y` only on
+`lat`, so no real reprojection is needed to ask "does this tile overlap the
+screen." Tiles crossfade in as the flat fill fades out (both driven by the
+one `zoomFade`), and a tile that has not arrived yet is simply not drawn —
+the flat fill (drawn whenever the tile grid is below full strength) is what
+shows through the gap, so a slow network reads as *plainer*, never as
+broken. **`TILE_FADE_START` sits at 8** (2026-09-04, author: "have them fade
+into view at 8x zoom not 2x as on mobile its a bit laggy currently") —
+starting the tile grid's own fetch-and-decode work this late means a phone
+panning at a modest zoom is never asking several tiles to arrive at once for
+a layer it is barely stopped on — **and `TILE_FADE_END` was widened well past
+its old 12** the same day the wash went, so the grid still eases in over many
+zoom levels rather than the four the old wash-to-tile crossfade used, with no
+second raster underneath any more to hide a quicker rise behind.
 
 **A third tier, 10m, for the ground this corpus actually stands on**
 (2026-09-04): `make-terrain.py` also regenerates whichever cells fall within
@@ -289,29 +302,27 @@ file this script writes as the corpus grows rather than a live cut. Fetched
 only for `hr: true` cells, only once `HR_FADE_START` (24 — the author's own
 first number, "around 24x or 30x if 24x is too soon" — untested against a
 real screen at the time of writing) is reached, and only for cells the view
-actually overlaps; crossfades over the 50m tile the same way the 50m tier
-crossfades over the wash, per tile rather than for the whole picture, so a
-reader panning across the edge of an HR cell sees one image change, not all
+actually overlaps; crossfades over the 50m tile the same way the tile grid
+crossfades over the flat fill, per tile rather than for the whole picture, so
+a reader panning across the edge of an HR cell sees one image change, not all
 of them.
 
-**A tile read lighter than the wash for the same ground — twice fixed, the
-second time honestly** (2026-09-04). The first pass patched around it with a
-flat alpha bias (`TILE_DARKEN_BIAS`, `lib/map-terrain.js`) rather than fixing
-the actual cause, and the author reported the gap was still there. Decoding
-both rasters' own bytes at several real cities (not reading a screenshot)
-found why: the wash's `reproject_to_mercator` (`make-terrain.py`) was
-nearest-neighbour at roughly a 10x decimation — one lucky-or-unlucky native
-pixel standing in for a ten-pixel-wide patch, noise rather than a bias — and
-a constant correction calibrated for that noise left a *worse* mismatch
-(0.08–0.14, the wrong direction) once the real fix landed. The real fix:
-`reproject_to_mercator`'s own resampling is now a true area average (a
-summed-area table over the native raster, computed once per output pixel's
-footprint) rather than one point sample, used for the wash only — a tile is
-already near-native density, under 2x decimation, so nearest-neighbour there
-was never the problem. `TILE_DARKEN_BIAS` is removed rather than retuned:
-measured post-fix, tile and wash alpha already sit within 0.001–0.057 of each
-other at every city checked, in both themes, which is what "no bias needed"
-looks like.
+**A tile once read lighter than the wash for the same ground — twice fixed,
+the second time honestly, and then the wash it was fixed against was removed
+entire** (2026-09-04). The first pass patched around it with a flat alpha
+bias (`TILE_DARKEN_BIAS`, `lib/map-terrain.js`) rather than fixing the actual
+cause, and the author reported the gap was still there. Decoding both
+rasters' own bytes at several real cities (not reading a screenshot) found
+why: the wash's own resampling was nearest-neighbour at roughly a 10x
+decimation — one lucky-or-unlucky native pixel standing in for a
+ten-pixel-wide patch, noise rather than a bias — and a constant correction
+calibrated for that noise left a *worse* mismatch (0.08–0.14, the wrong
+direction) once an honest fix (a true area average via a summed-area table,
+used for the wash only — a tile was already near-native density, under 2x
+decimation, so nearest-neighbour there was never the problem) landed the same
+day. `TILE_DARKEN_BIAS` was removed rather than retuned, and the area-average
+path went with the wash itself when *that* was removed later the same day —
+there is no whole-world raster left for a tile to be measured against.
 
 **A discrete zoom step eases now rather than jumping** (2026-09-04, author:
 "make the map zooms smooth"): the `+`/`-` buttons, the keyboard equivalents
@@ -953,13 +964,13 @@ nothing.** Four things in one day read as evidence and were not.
   died on the road out of it.
 - `node scripts/make-land.mjs` — regenerates the map's coastline. By hand only;
   the output is committed so the build never needs `world-atlas`.
-- `python scripts/make-terrain.py` — regenerates the map's terrain wash
-  (`src/data/terrain-green.webp`, `terrain-relief.webp`), its 50m tile grid
-  and the 10m HR pairs for cells near a located saint (`src/data/terrain-tiles/`,
-  `terrain-tiles.js`). By hand only, output committed; see the Map section
-  below and the script's own header. Needs `data/manifest.json` built first
-  (`npm run build:manifest`) for the HR pass. `--skip-tiles` for a quick
-  wash-only rebuild, `--skip-hr` to keep the 50m grid but skip the 10m pass.
+- `python scripts/make-terrain.py` — regenerates the map's terrain tile grid
+  (50m, every cell) and the 10m HR pairs for cells near a located saint
+  (`src/data/terrain-tiles/`, `terrain-tiles.js`). No whole-world raster any
+  more — removed 2026-09-04, see the Map section below. By hand only, output
+  committed; see the script's own header. Needs `data/manifest.json` built
+  first (`npm run build:manifest`) for the HR pass. `--skip-hr` to keep the
+  50m grid but skip the 10m pass.
 
 ## Workflow
 
