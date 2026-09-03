@@ -2949,39 +2949,41 @@ function paintCanvas(canvas, cards) {
 
   if (detailT < 1 && canvas.__detailFadeFrom?.land) {
     /*
-     * **The outgoing tier stays at full strength underneath for the whole
-     * transition, rather than fading out in step with the incoming one**
-     * (2026-09-04, author: "make sure the low res coastlines remain
-     * underneath until the high res are fully loaded otherwise theres a dip
-     * in brightness"). It was `1 - detailT`, cross-dissolved against the
-     * incoming tier's own `detailT` — and a linear cross-dissolve between two
-     * *different* shapes (coarse and fine trace different edges) is not the
-     * same as fading one shape's own opacity: a pixel the fine tier covers
-     * that the coarse one does not is only ever as dark as whichever tier's
-     * own partial alpha reaches it, and for a stretch in the middle neither
-     * is near full — a real dip, not a rendering illusion. Holding this
-     * layer at its own full opacity for as long as `detailT < 1` means the
-     * picture is never thinner than "coarse, fully inked" while the fine
-     * tier rises on top of it; only once the fine tier reaches its own full
-     * strength does this stop being drawn at all (the `detailT < 1` guard
-     * above), which is a single frame's swap rather than a fade the reader
-     * can watch for a dip in.
+     * **The outgoing tier fades out in step with the incoming one rising —
+     * reversed back to a true cross-dissolve** (2026-09-04, a same-day
+     * reversal of the paragraph this replaces). Holding this layer at *full*
+     * strength for the whole transition, on the reasoning that a proper
+     * cross-dissolve dips, was measured rather than watched: with the
+     * incoming tier drawn separately on top at its own `0.3 * detailT`, the
+     * two source-over composite, not add, and the picture does not merely
+     * avoid a dip — it overshoots to `1 - (1-0.3)(1-0.3·detailT)`, `0.51` at
+     * `detailT → 1` against a resting `0.3`, then *snaps back down* to `0.3`
+     * the instant the guard above stops drawing this layer. That rise and
+     * snap, at every `DETAIL_AT` (5×) crossing, is "the colour of the
+     * terrain increases and decreases" reported against this very paragraph.
+     * A true cross-dissolve — this layer at `0.3 * (1 - detailT)`, the
+     * incoming one unchanged at `0.3 * detailT` — troughs at worst to
+     * `0.2775` at `detailT = 0.5` (two edges that mostly agree, composited,
+     * lose a few percent of ink at the sliver where they do not) and is
+     * exact at both ends. A few percent for one frame reads as nothing; a 70%
+     * rise reversed in one frame reads as a flash, which is what shipped.
      */
     ctx.save();
-    ctx.globalAlpha = 1;
-    ctx.fillStyle = hexWithAlpha(inkSoft, 0.3);
+    ctx.fillStyle = hexWithAlpha(inkSoft, 0.3 * (1 - detailT));
     ctx.beginPath();
     tracePath(canvas.__detailFadeFrom.land, true);
     ctx.fill();
     if (canvas.__detailFadeFrom.water?.LAKES.length) {
       ctx.globalCompositeOperation = 'destination-out';
+      ctx.globalAlpha = 1 - detailT;
       ctx.fillStyle = '#000';
       ctx.beginPath();
       if (tracePath(canvas.__detailFadeFrom.water.LAKES, true)) ctx.fill();
       ctx.globalCompositeOperation = 'source-over';
+      ctx.globalAlpha = 1;
     }
     if (canvas.__detailFadeFrom.water?.RIVERS.length) {
-      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5);
+      ctx.strokeStyle = hexWithAlpha(inkSoft, 0.5 * (1 - detailT));
       ctx.lineWidth = 0.75;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
