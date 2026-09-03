@@ -1675,28 +1675,6 @@ const pressAt = async (page, x, y) => {
 const dotFor = async (page, slug) =>
   JSON.parse(await page.locator('[data-map]').getAttribute('data-dots')).find((d) => d.slug === slug);
 
-/*
- * **`a name is a press target` is racy under parallel load, and knowingly left
- * so** (measured 2026-09-01 evening: seven runs in ten fail at eight workers,
- * three in ten at the last green commit, none at one worker; CI's single retry
- * has been covering it since it was written).
- *
- * The race is the name probe below, not the press. It looks for ink 80 px to
- * either side of the dot *at the dot's own y* and presses whatever it finds —
- * which is his name only while the picture is still. Choosing a saint flies the
- * map onto their whole rail and walks the dot along it, so a probe taken a few
- * frames later finds a different saint's name and the press lets go of him.
- * Waiting for the picture to settle first makes it worse rather than better,
- * for the same reason: by then the flight has moved his name out from under the
- * 80 px assumption.
- *
- * The honest repair is for the draw pass to publish each drawn label's box, the
- * way it already publishes `data-dots` and `data-rail` — a test cannot find a
- * name on a canvas by guessing where it is. That is a production instrument and
- * it is not what this session was asked to change, so it is written down here
- * rather than half-done.
- */
-
 test('a press centres the map on the saint’s whole rail, then walks it', async ({ page }) => {
   /*
    * Author, 2026-08-31: "if you click on a saint dot (or their name) it
@@ -1883,33 +1861,41 @@ test('the chosen saint is named whatever the zoom, since the button sits beside 
 });
 
 /*
- * **This test is racy under parallel load, and knowingly left as it stands**
- * (measured 2026-09-01 evening: it fails seven runs in ten at eight workers,
- * three in ten at the commit before this session, and none at one worker — so
- * it is neither new nor mine, and CI's single retry has been covering it since
- * it was written).
+ * **This test was racy under parallel load, and is repaired as of 2026-09-04.**
+ * It had been knowingly left as it stood (measured 2026-09-01 evening: it
+ * failed seven runs in ten at eight workers, three in ten at the commit
+ * before that session, and none at one worker — so it was neither new nor
+ * that session's own, and CI's single retry had been covering it since it was
+ * written) until it started blocking every deploy of an unrelated batch of
+ * fixes, at which point the standing question changed from "is this worth
+ * fixing" to "this is now the only thing between six finished fixes and
+ * production."
  *
- * The race is the probe below, not the press. It looks for ink 80 px to either
- * side of the dot at the dot's own y, which is his name only while the picture
- * is still — and the press above sets it moving for three seconds, flying onto
- * his rail and then walking the dot along it. During that walk his name crosses
- * the map and passes within ten pixels of other dots.
+ * The race was the probe below, not the press. It looked for ink 80 px to
+ * either side of the dot at the dot's own y, which is his name only while the
+ * picture is still — and the press above sets it moving for three seconds,
+ * flying onto his rail and then walking the dot along it. During that walk his
+ * name crosses the map and passes within ten pixels of other dots.
  *
- * Three repairs were tried and all three were worse. Settling on the dot before
- * probing: the flight then moves the name out from under the 80 px assumption.
- * Publishing each name's box from the draw pass and pressing that: the box is
- * read a few frames before it is pressed, and which label wins the overlap test
- * flips frame to frame, so the box can be gone by the time the press lands.
- * (That publication was written and then taken out again — an instrument with
- * no reader is dead weight, and the note is the better record of it.)
- * Waiting on `data-walking` to be empty: it *is* empty in the moment between
- * the press and the walk starting, so the wait returns at once.
+ * Three repairs were tried before this session and all three were worse.
+ * Settling on the dot before probing: the flight then moves the name out from
+ * under the 80 px assumption. Publishing each name's box from the draw pass
+ * and pressing that: the box was read a few frames before it was pressed, and
+ * which label wins the overlap test flips frame to frame, so the box could be
+ * gone by the time the press landed. Waiting on `data-walking` to be empty: it
+ * *is* empty in the moment between the press and the walk starting, so the
+ * wait returned at once.
  *
- * What would actually fix it is a press that reads the box and presses it in
- * the same frame — a synthetic event dispatched inside one `evaluate` — which
- * is a different kind of test from the real gestures this suite uses
- * everywhere else, and is a decision rather than a repair. Written down, and
- * left for someone with the room to make it.
+ * **What actually fixed it is what the previous record said would**: a press
+ * that reads the box and presses it in the same frame. `data-dots`' `label`
+ * field (`views/map.js`) publishes each drawn name's box again — this time
+ * kept, because this time something reads it — and the test below reads it
+ * and dispatches a synthetic `pointerdown`/`pointerup` pair on the point it
+ * names, all inside one `evaluate`, so no cross-process round trip sits
+ * between "where is his name" and "press there" for the flight to move him
+ * during. It is a different kind of test from the real gestures this suite
+ * uses everywhere else — a decision, not a free lunch — made because the six
+ * fixes waiting behind this gate were worth it.
  */
 test('a name is a press target, not only the dot under it', async ({ page }) => {
   /*
@@ -1927,32 +1913,37 @@ test('a name is a press target, not only the dot under it', async ({ page }) => 
   await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
 
   /*
-   * A point well inside his name and far outside every dot's own reach.
-   * Which side the name took is a layout decision, so it is read off the
-   * ink rather than assumed — two probes, not a search.
+   * **The honest repair, done** (2026-09-04): `data-dots`' `label` field
+   * (`views/map.js`) is now the box the draw pass actually put his name in
+   * this frame — the same box `dotAt` already hit-tests against — so there
+   * is no pixel probe left to guess with. What was still racy after that
+   * field first existed, per the note above, is *reading* it and *pressing*
+   * it as two separate Playwright calls: his rail-flight keeps moving him
+   * for the three seconds after the first press, and a box read now can be
+   * gone by the time a cross-process `page.mouse.click` lands a moment
+   * later. So both happen inside one `evaluate` — read the box, compute the
+   * point, dispatch the pointer pair, all in the same frame — the way the
+   * note said would actually fix it rather than paper over it again.
    */
-  const onName = await canvas.evaluate(() => {
-    const el = document.querySelector('[data-map]');
+  const pressed = await canvas.evaluate((el) => {
     const dots = JSON.parse(el.dataset.dots);
     const me = dots.find((d) => d.slug === 'moses-the-hungarian');
-    const ctx = el.getContext('2d');
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    for (const dx of [80, -80]) {
-      const x = me.x + dx;
-      if (dots.some((d) => Math.hypot(d.x - x, d.y - me.y) < 20)) continue;
-      const px = ctx.getImageData(Math.round(x * dpr), Math.round(me.y * dpr), 1, 1).data;
-      if (px[3] > 128) return { x, y: me.y };
-    }
-    return null;
+    if (!me?.label) return null;
+    const box = el.getBoundingClientRect();
+    const clientX = box.left + me.label.x + me.label.w / 2;
+    const clientY = box.top + me.label.y + me.label.h / 2;
+    const base = { bubbles: true, clientX, clientY, pointerId: 1, isPrimary: true, pointerType: 'mouse' };
+    el.dispatchEvent(new PointerEvent('pointerdown', { ...base, button: 0, buttons: 1 }));
+    el.dispatchEvent(new PointerEvent('pointerup', { ...base, button: 0, buttons: 0 }));
+    return true;
   });
-  expect(onName, 'premise: his name was not drawn clear of every dot').toBeTruthy();
+  expect(pressed, 'premise: his name was not drawn this frame').toBeTruthy();
 
   /*
    * Pressing his own name must hold the selection. Without the name in the
    * hit-map this press finds nobody, which is the gesture that lets go — so
    * the assertion is the same one either way and only one answer is right.
    */
-  await pressAt(page, onName.x, onName.y);
   await expect(canvas).toHaveAttribute('data-selected', 'moses-the-hungarian');
 });
 

@@ -2924,7 +2924,7 @@ function paintCanvas(canvas, cards) {
     // nothing else asks for a frame on a clock, only on input or arriving data.
     const tick = () => {
       canvas.__detailFadeFrame = null;
-      if (canvas.isConnected) paintCanvas(canvas, cards());
+      if (canvas.isConnected) paintCanvas(canvas, cards);
     };
     canvas.__detailFadeFrame = requestAnimationFrame(tick);
   }
@@ -3654,6 +3654,16 @@ function paintCanvas(canvas, cards) {
    * answer the standing question asks for: with nothing merged every `n` is
    * 1, and with nobody chosen every `alpha` is the dimming the timeline
    * alone would give, so neither can read as working by being absent.
+   *
+   * `label` joined 2026-09-04, the "honest repair" the flaky press test was
+   * left waiting for (comment above `'a name is a press target'` in
+   * `e2e/map.spec.js`): the box a name was actually drawn in this frame, the
+   * same one `dotAt` above already hit-tests against, so a test can press a
+   * name by reading where it landed rather than guessing 80 px and racing
+   * the flight that moves it. `drawnDots` is rebuilt from empty every paint
+   * (line ~3286), so a dot with no label drawn this frame has no stale
+   * `labelRect` left over from the last one — doing nothing still writes
+   * `null`, never a leftover box.
    */
   canvas.dataset.dots = JSON.stringify(
     drawnDots.map((d) => ({
@@ -3664,6 +3674,14 @@ function paintCanvas(canvas, cards) {
       n: d.n,
       alpha: Math.round(d.alpha * 100) / 100,
       hue: d.hue,
+      label: d.labelRect
+        ? {
+            x: Math.round(d.labelRect.x),
+            y: Math.round(d.labelRect.y),
+            w: Math.round(d.labelRect.w),
+            h: Math.round(d.labelRect.h),
+          }
+        : null,
     })),
   );
   // Which saint is mid-walk along their own rail, or '' — the walk is 5 s

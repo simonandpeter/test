@@ -4864,7 +4864,64 @@ patch asked for, applied to both tile tiers and always toward more ink
 regardless of theme, since more alpha reads darker in the light theme and
 *lighter* in the dark one where ink is the light token.
 
-## Deploy change, from Session 1 onward
+## Amendment 96 — a real bug behind a supposed flake, and the flake repaired anyway (author, 2026-09-04)
+
+Amendment 95's commit (`7ce2195`) was pushed with the instruction "run CI,
+check CI." CI failed three times running. The first failure was Lighthouse's
+FCP gate on one route only (`calendar, empty day`, 1512/1355/1518ms across
+three samples — two of three under the 1500ms floor, the bundle size
+unchanged from the known-correct baseline) — read as noise, not a
+regression, and not chased further. The second and third both failed on
+`e2e/map.spec.js`'s `'a name is a press target, not only the dot under it'`,
+already on record in that file as deliberately left racy under CI's 8-worker
+load (measured 2026-09-01: seven fails in ten at eight workers). Blocking
+every deploy of six finished, unrelated fixes on a coin CI had a documented
+history of losing was the reason to finally fix it rather than re-run again.
+
+**The repair the file's own comment already prescribed**: publish each drawn
+label's box on `data-dots` (`label: {x, y, w, h}`, `views/map.js`, reusing
+`dot.labelRect` — the same box `dotAt` already hit-tests presses against —
+rather than the old 80px-either-side pixel probe, which only found his name
+while the picture was still and was wrong for the three seconds his
+selection flies and walks him), and read that box and press it inside one
+`page.evaluate` — a synthetic `pointerdown`/`pointerup` pair dispatched in
+the same call that reads it — so no cross-process round trip sits between
+"where is his name this frame" and "press there" for the flight to move him
+during. A prior attempt at the first half alone (publish, then read-and-press
+as two separate calls) had already been tried and reverted before this
+session, per the same comment, for exactly that remaining race; this is why
+it needed both halves together, not either alone.
+
+**Verifying the repair surfaced a second, unrelated bug.** A manual
+Playwright script driving the built site — the same instrumented-script
+technique this project uses whenever a `pageerror` needs a real stack rather
+than a red test name — logged `TypeError: cards is not a function` firing
+repeatedly the instant a saint was selected, in dev mode traced to
+`tick` at `views/map.js:2927`, inside the self-scheduling repaint this
+session's own coastline crossfade (Amendment 95, item 3) added:
+`paintCanvas(canvas, cards())`. `cards` is `paintCanvas`'s own parameter —
+already the resolved array by the time its body runs, not the outer
+accessor function some *callers* invoke — and every other in-body reference
+(e.g. the label-fade tick a few hundred lines below) already used it bare.
+Calling it broke the crossfade's self-repaint on every single invocation:
+the fade was scheduled correctly and then threw before ever drawing a second
+frame, silently, since nothing in the test suite watches for page errors on
+this route. Fixed by removing the parens. Confirmed by the same script: zero
+page errors across load, selection, and the six-second window the walk and
+fade run in, both before (14 stack traces) and after (0) the fix — and the
+full suite (299 unit, 850 e2e including 20 back-to-back runs of the repaired
+press-target test at 8 workers) stayed clean throughout.
+
+**Why this is written up rather than just fixed**: the crossfade bug was
+invisible to every check this session had already run — the local
+`299/850`-clean passes before this point never selected a saint under the
+`10m-detail` route in a way that both crossed `DETAIL_AT` *and* had
+Playwright's own `pageerror` listener attached, and CI's own quality-floor
+suite only checks console errors on one unrelated route (`quality-floor.spec.js`,
+`'no console errors on load'`, `POPULATED` calendar, no map interaction at
+all). A test failing for a *documented, unrelated* reason is not evidence
+the code under it is fine; it is only evidence about the thing the test
+actually checks.
 
 `data/manifest.json` is generated and gitignored, built by CI. The site stops
 being "commit static files to a branch" and becomes "Actions builds, Pages
