@@ -230,21 +230,41 @@ few pixels per degree, and asking it to cover one saint's own town read as
 soft mush rather than ground.
 
 **Past that same fade, a tile grid takes over** (author, 2026-09-03,
-`ensureTerrainTiles`/`visibleTileList`): `make-terrain.py` also cuts the
-*native* 50m resolution (30 px/degree — the same density `land.js`/`water.js`
-already draw the coastline at) into a `TILE_COLS`x`TILE_ROWS` grid of lon/lat
-cells (`src/data/terrain-tiles/`, indexed by `terrain-tiles.js`'s plain
-bounds), and the map fetches only the cells the reader's own view overlaps —
-one further step of the "a reader who never opens the map never pays for it"
-reasoning `ensureFine` already applies to the fine coastline. Visibility is a
-plain rectangle test in projected space (`visibleTileList`): a lon/lat cell's
-projected corners are still axis-aligned, since `project`'s `x` depends only
-on `lon` and `y` only on `lat`, so no real reprojection is needed to ask
-"does this tile overlap the screen." Tiles crossfade in as the wash fades out
-(`tileStrength = 1 - terrainStrength`, both driven by the one `zoomFade`), and
-a tile that has not arrived yet is simply not drawn — the flat fill (drawn
-whenever the wash is below full strength) is what shows through the gap, so
-a slow network reads as *plainer*, never as broken.
+`ensureTerrainTiles`): `make-terrain.py` also cuts the *native* 50m
+resolution (30 px/degree — the same density `land.js`/`water.js` already draw
+the coastline at) into a `TILE_COLS`x`TILE_ROWS` grid of lon/lat cells
+(`src/data/terrain-tiles/`, indexed by `terrain-tiles.js`'s plain bounds), and
+the map fetches only the cells the reader's own view overlaps — one further
+step of the "a reader who never opens the map never pays for it" reasoning
+`ensureFine` already applies to the fine coastline. Visibility is a plain
+rectangle test in projected space (`visibleTiles`, `lib/map-terrain.js`): a
+lon/lat cell's projected corners are still axis-aligned, since `project`'s `x`
+depends only on `lon` and `y` only on `lat`, so no real reprojection is
+needed to ask "does this tile overlap the screen." Tiles crossfade in as the
+wash fades out (`tileStrength = 1 - terrainStrength`, both driven by the one
+`zoomFade`), and a tile that has not arrived yet is simply not drawn — the
+flat fill (drawn whenever the wash is below full strength) is what shows
+through the gap, so a slow network reads as *plainer*, never as broken.
+
+**The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
+and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
+is *statically* imported by `main.js`, unlike `land.js`/`water.js` which are
+data, dynamically imported: anything written directly in map.js ships in the
+app's own entry bundle on *every* route, calendar and saint pages included.
+Writing the tile system straight into map.js measured out to ~150ms added to
+every route's own first paint on CI's throttled-4G gate — caught only because
+that gate exists, not by inspection — and about two-thirds of that was a
+second trap layered on the first: `new URL(\`...${col}-${row}...\`,
+import.meta.url)`, a *dynamic* template literal, which Vite cannot resolve to
+one asset at build time and instead inlines a lookup table for every file
+that could ever match (all 144 tile halves) into whichever chunk contains the
+call site (`tileUrl`, now in `lib/map-terrain.js` for exactly this reason).
+`buildTint`/`tintFor`/`visibleTiles`/`loadTerrainChannel` moved for the first
+reason, `tileUrl` for the second; map.js keeps only the thin, cached dynamic
+`import('../lib/map-terrain.js')` and the per-frame `ctx` calls that cannot
+live anywhere else. The general rule this leaves behind: a *lazy* data import
+inside an *eagerly* bundled view buys nothing if the code reading that data
+sits in the eager module too.
 
 **The page is the map and its timeline, nothing else** (author, 2026-08-30
 for the reading — lede, facets, Places, tray — and 2026-08-31 for the footer
