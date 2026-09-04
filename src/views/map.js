@@ -1,7 +1,7 @@
 import { PERIODS, spanOf } from '../data/periods.js';
 import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
-import { dailyRank, layoutLabels } from '../lib/map-labels.js';
+import { dailyRank, layoutBlobLabels, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
 import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
@@ -1423,7 +1423,14 @@ export function render(el, { data, router }) {
     activeBlobId = blob.id;
     const box = canvas.getBoundingClientRect();
     const frame = coverFractions(box.width, box.height, ASPECT);
-    const worldPts = blob.marks.map((m) => toWorld(view, m.x / box.width, m.y / box.height, frame));
+    // `toWorld` hands back `{px, py}` — `fitBounds` reads `.x`/`.y`, the same
+    // shape `project` returns for a rail's own points above. Passing the
+    // `{px, py}` object straight through left every point NaN and the whole
+    // view with it: found live, a click on a blob turned the picture black.
+    const worldPts = blob.marks.map((m) => {
+      const { px, py } = toWorld(view, m.x / box.width, m.y / box.height, frame);
+      return { x: px, y: py };
+    });
     const fitted = fitBounds(worldPts, frame, undefined, ceilingOf(canvas));
     const target = clampView({ ...fitted, scale: Math.max(fitted.scale, view.scale) }, frame, ceilingOf(canvas));
     flyTo(target, frame, (next) => applyView(next), () => {}, ceilingOf(canvas));
@@ -2544,6 +2551,12 @@ function wireZoom(el, canvas, cards, schedulePaint) {
   };
 
   const set = (next) => {
+    // Every other flight on the map — a button, a key, choosing a saint or a
+    // blob, the search's own flight — lands here (`render` hands this back
+    // out as `applyView`), so this is the one choke point that catches all
+    // of them: a wheel still trailing its own target must not keep pulling
+    // `view` toward it once a different flight has taken over the picture.
+    wheelTarget = null;
     view = next;
     applyChrome();
     paintCanvas(canvas, cards());
@@ -2660,6 +2673,21 @@ function wireZoom(el, canvas, cards, schedulePaint) {
   let pinch = 0;
 
   canvas.addEventListener('pointerdown', (e) => {
+    /*
+     * **A drag or a pinch takes the view back from any wheel still trailing
+     * its own target** (2026-09-04, author: "zoom should not be tied to the
+     * scroll at all. They should be completely independent" — a bare wheel
+     * spin left `wheelTarget` set and `stepWheelEase` still running for a
+     * few more frames after the gesture ended, and each of those frames
+     * called `setThrottled` on its own account, pulling `view` back toward
+     * the wheel's old anchor point out from under a pan that had already
+     * started — read as resistance, since the two were fighting for the same
+     * `view` on every frame the trail had left to run. Dropping the target
+     * outright, not merely letting the loop finish, is what makes them
+     * independent: a pan or a pinch is a fresh hand on the wheel, and
+     * whatever the wheel was still easing toward is no longer owed a finish.
+     */
+    wheelTarget = null;
     if (!canPan(canvas)) return;
     canvas.setPointerCapture(e.pointerId);
     active.set(e.pointerId, e);
@@ -3937,11 +3965,45 @@ function paintCanvas(canvas, cards) {
   const chosen = selected ? nameable.find((d) => d.slug === selected) : null;
   const order = [...nameable].sort((a, b) => rankOf(a) - rankOf(b));
   const measure = (name) => ctx.measureText(name).width;
+  /*
+   * **Every dot on the picture is an obstacle a label must clear, named or
+   * not** (2026-09-04, author: "never overlaps another dot") — the same
+   * radius the draw pass below gives each mark, so a name avoids a crowd
+   * mark's own bigger circle rather than the plain dot's.
+   */
+  const obstacles = drawnDots.map((d) => ({ x: d.x, y: d.y, r: d.n > 1 ? Math.min(6.5, DOT_R + Math.log2(d.n)) : DOT_R }));
   const laid = labelsEnabled
-    ? layoutLabels(order, measure, w, h, view.scale >= LEADERS_AT)
+    ? layoutLabels(order, measure, w, h, view.scale >= LEADERS_AT, obstacles)
     : chosen
-      ? layoutLabels([chosen], measure, w, h, false)
+      ? /*
+         * **`leaders: true`, not `false`, here** — a single item makes the
+         * two mean the same grouping either way (`clusterDots` of one dot is
+         * one group, same as skipping it), so this is not the "thirty lines
+         * fanning across the Mediterranean" case `leaders: false` exists to
+         * avoid — it only decides whether the one name on the whole picture
+         * gets a leader line rather than going unnamed when its own right
+         * side has nowhere to go (a crowded neighbour, or a dot the newer
+         * obstacle-avoidance is now keeping it off). "The chosen saint is
+         * named whatever the zoom" is the harder rule; the button beside
+         * their name needs a name to sit beside.
+         */
+        layoutLabels([chosen], measure, w, h, true, obstacles)
       : [];
+  /*
+   * **A guarantee, not a hope, for the chosen saint above `LABELS_AT` too.**
+   * Being sorted first only gives them the emptiest picture to be laid out
+   * against — it was never a promise, and the newer obstacle-avoidance can
+   * now fail a rank-0 dot outright where an ordinary neighbour would simply
+   * have taken the other side (author, 2026-08-31: the button "next to their
+   * name" needs a name there to be next to). A second, permissive pass for
+   * just this one dot only runs on that rare miss, and only adds to `laid`
+   * rather than replacing it, so every other name keeps exactly the seat the
+   * first pass gave it.
+   */
+  if (labelsEnabled && chosen && !laid.some((l) => l.dot.slug === chosen.slug)) {
+    const rescue = layoutLabels([chosen], measure, w, h, true, obstacles);
+    if (rescue.length) laid.push(...rescue);
+  }
   const placedFor = new Map(laid.map((l) => [l.dot.slug, l]));
 
   // One easing step per saint, drawn at whatever opacity it has reached —
@@ -3999,21 +4061,45 @@ function paintCanvas(canvas, cards) {
   /*
    * **A silenced blob prints its own count instead of its members' names**
    * (2026-09-04) — bare (`STRINGS.map.blobCount`, "+{count}"), not routed
-   * through `layoutLabels`: the leader-line system seats a *name* beside the
-   * *dot* it belongs to, and a blob's count belongs to the whole group, at
-   * its own outline, not to any one dot inside it. The open blob prints
-   * nothing here — its members are named individually, above, like any other
-   * dot.
+   * through the same `layoutLabels` call as a name: a blob's count belongs to
+   * the whole group, at its own outline, not to any one dot inside it, so it
+   * runs through `layoutBlobLabels` instead — clearing every name already
+   * seated and every dot on the picture the same way, and always on a leader
+   * line back to the blob's own centre, never bare against the picture
+   * (author, 2026-09-04: "for the blobs you will always need leader lines no
+   * matter how far you zoom in"). The open blob prints nothing here — its
+   * members are named individually, above, like any other dot.
    */
-  for (const b of readyBlobs) {
-    if (b === openBlob) continue;
-    const rep = b.marks[0];
-    const label = fill(STRINGS.map.blobCount, { count: b.marks.length });
-    const atX = b.hull ? b.cx - ctx.measureText(label).width / 2 : b.cx + 9;
-    const atY = b.hull ? Math.min(...b.hull.map((p) => p.y)) - 6 : b.cy + 4;
+  const blobLabelsIn = readyBlobs
+    .filter((b) => b !== openBlob)
+    .map((b) => ({
+      id: b.id,
+      cx: b.cx,
+      cy: b.cy,
+      maxX: Math.max(...b.marks.map((m) => m.x)),
+      name: fill(STRINGS.map.blobCount, { count: b.marks.length }),
+    }));
+  const blobLaid = layoutBlobLabels(
+    blobLabelsIn,
+    measure,
+    w,
+    h,
+    laid.map((l) => l.rect),
+    obstacles,
+  );
+  const blobById = new Map(readyBlobs.map((b) => [b.id, b]));
+  const blobNameById = new Map(blobLabelsIn.map((b) => [b.id, b.name]));
+  for (const bl of blobLaid) {
+    const rep = blobById.get(bl.id).marks[0];
     ctx.globalAlpha = dimFor(rep.state) * dimOf(rep.card.slug);
+    ctx.strokeStyle = hexWithAlpha(inkSoft, 0.55);
+    ctx.lineWidth = 0.75;
+    ctx.beginPath();
+    ctx.moveTo(bl.leader.x1, bl.leader.y1);
+    ctx.lineTo(bl.leader.x2, bl.leader.y2);
+    ctx.stroke();
     ctx.fillStyle = ink;
-    ctx.fillText(label, atX, atY);
+    ctx.fillText(blobNameById.get(bl.id), bl.x, bl.y);
   }
   ctx.globalAlpha = 1;
 

@@ -674,10 +674,13 @@
  *
  * **The same two tracks as the Daily page**, written out rather than shared
  * through a custom property, because they are the same *decision* in two places
- * and a shared token would hide that: the right column's 25–30 rem floor is
+ * and a shared token would hide that: the right column's 28rem is
  * what the Daily page's week rail needs, and this column would have been happy
  * with less. If either ever moves, the other should be looked at and not
- * silently dragged along. calendar.css §the two columns holds the reasoning.
+ * silently dragged along. calendar.css §the two columns holds the reasoning —
+ * including why it is a fixed rem now rather than `clamp(25rem, 28%, 30rem)`
+ * (2026-09-04, the same resize-shake report, "its also happening on the
+ * Saints profile pages which have 3 columns").
  *
  * Below the breakpoint there is one column and no aside: a phone reading a life
  * has no room for a list of other lives beside it, and the author scoped the
@@ -690,7 +693,7 @@
 @media (min-width: 1024px) {
   .saint-cols {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(25rem, 28%, 30rem);
+    grid-template-columns: minmax(0, 1fr) 28rem;
     column-gap: var(--space-8);
     align-items: start;
   }

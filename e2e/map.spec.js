@@ -2433,12 +2433,26 @@ test('a saint moving along their rail is named while they move', async ({ page }
    * Found rather than guessed: which zoom holds both is a fact about the
    * corpus's own geography and about the window this test happens to run in.
    */
+  /*
+   * Every saint the manifest actually records as hymned somewhere within
+   * reach of Kyiv at this zoom band (`data/manifest.json`, checked directly
+   * rather than guessed — 2026-09-04). The original seven were the ones
+   * geography put on the picture when this test was written; the crowd a
+   * label pass draws from the same search is a different ten now that
+   * placement is stricter (`layoutLabels`'s `obstacles`, same day), and two
+   * of *those* — Babylas of Antioch, Heraclides of Tamasos — are hymned
+   * saints the original list simply never had reason to name. The premise
+   * this list is checking (a hymned saint outranks a standing Moses) held
+   * throughout; the list naming who was the stale part.
+   */
   const sung = [
     'adrian-of-nicomedia',
     'agathonicus-of-nicomedia',
     'alexander-patriarch-of-constantinople',
     'anicetas-of-nicomedia',
+    'babylas-of-antioch',
     'eustathius-kataphloros-archbishop-of-thessalonica',
+    'heraclides-of-tamasos',
     'natalia-of-nicomedia',
     'photius-of-nicomedia',
   ];

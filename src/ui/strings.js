@@ -159,6 +159,18 @@ export const STRINGS = {
     continueReading: '…continue reading',
     heroPlaces: { birth: 'Born at {place}', death: 'Died at {place}' },
     continueReadingOf: 'Continue reading the life of {name}',
+    /*
+     * The same door, on a wide screen, renamed (author, 2026-09-04: "instead
+     * of the 'continue reading' button on Daily page desktop, rename it
+     * 'read more'"). A word of its own rather than a re-skin of
+     * `continueReading`: the phone's own button sits below the cut text as
+     * "…continue reading", reading as the sentence's own ending, while the
+     * desktop one is centred under the whole preview as a plainer, separate
+     * call to action — the ellipsis that made sense stitched onto a clipped
+     * sentence does not belong here.
+     */
+    readMore: 'Read more',
+    readMoreOf: 'Read more of the life of {name}',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
     // The reach used to be the literal "19 September" and had been stale for a

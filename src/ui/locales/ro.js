@@ -70,6 +70,8 @@ export const ro = {
     continueReading: '…continuă lectura',
     heroPlaces: { birth: 'Născut la {place}', death: 'Adormit la {place}' },
     continueReadingOf: 'Continuă viața Sfântului {name}',
+    readMore: 'Citește mai mult',
+    readMoreOf: 'Citește mai mult din viața Sfântului {name}',
     emptyDay: 'Pentru această zi nu sunt încă pomeniri înregistrate. Corpusul crește dosar cu dosar, iar o zi goală e o lipsă în sursele noastre, nu o afirmație despre calendar. Încearcă o zi vecină sau sfinții înșiși.',
     beyondRecords: 'Citirile și cântările sunt consemnate până la {until}, iar ziua aceasta este după. Ce stă mai sus - postul, glasul și săptămâna - se calculează și este valabil pentru orice dată.',
     dayWithoutSaints: 'Citirile și cântările de mai jos sunt ale acestei zile, luate din calendar. Sfinții ei nu au încă dosare - corpusul ajunge deocamdată la {reach} și crește dosar cu dosar. Nimic de aici nu spune că ziua ar fi goală.',

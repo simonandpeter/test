@@ -4429,8 +4429,12 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
 
   const more = page.locator('.hero-more').filter({ visible: true });
   await expect(more).toHaveCount(1);
-  await expect(more).toContainText('continue reading');
-  // Named after the saint, not a bare "continue reading" on a page of them.
+  // Renamed from "…continue reading" on 2026-09-04 (author: "instead of the
+  // 'continue reading' button on Daily page desktop, rename it 'read more'")
+  // — the phone's own standalone button below keeps the older name, since it
+  // was never asked to change.
+  await expect(more).toContainText('Read more');
+  // Named after the saint, not a bare "Read more" on a page of them.
   await expect(more).toHaveAttribute('aria-label', /Lupus/);
 
   const m = await page.evaluate(() => {
@@ -4441,8 +4445,20 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
       inLede: lede.contains(shown),
       dates: document.querySelector('.hero-dates').getBoundingClientRect(),
       media: document.querySelector('.hero-media').getBoundingClientRect(),
+      body: document.querySelector('.hero-body').getBoundingClientRect(),
     };
   });
+  /*
+   * **Centred on the text column, not flush against the card's own right
+   * edge** (2026-09-04, same author message as the rename above). `.hero-body`
+   * and the button share the picture's own right edge as their containing
+   * block's right edge (`grid-column: 2` on the button, `calendar.css`), so
+   * this is a real claim about the button's own middle landing on the
+   * column's, not merely "somewhere left of where it used to be."
+   */
+  const linkMid = m.link.left + m.link.width / 2;
+  const bodyMid = m.body.left + m.body.width / 2;
+  expect(Math.abs(linkMid - bodyMid), 'Read more is not centred on the text column').toBeLessThan(2);
   /*
    * **Inside the paragraph where there is one** (author, 2026-09-01: "make
    * the '...continue reading' part of the actual preview paragraph"), which

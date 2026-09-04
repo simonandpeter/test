@@ -1112,9 +1112,23 @@
      shoulders and the month toggle need about 400 px, and at 330 the rail
      showed six days and the month grid would not unfurl at all. The left
      column takes all the slack, which is what "adaptive to the window size"
-     asked for. */
+     asked for.
+
+     **Fixed, not `clamp(25rem, 28%, 30rem)`** (2026-09-04, author: "when
+     resizing the window on desktop, the columns shake ... make sure the
+     right hand column margins are always fixed and the left hand column is
+     the only thing that is resized"). The clamp already read as fixed at
+     most window widths — 28% only lands inside the 25–30rem band roughly
+     between 1430 and 1610px wide, pinned to one bound or the other everywhere
+     else — but inside that band it recomputed on every resize frame, and a
+     percentage-wide column with reflowing text (the week rail, the register)
+     is exactly the shape that feeds back into its own scrollbar appearing and
+     disappearing. A plain rem value never recomputes at all: the sentence
+     above already promised the left column "takes all the slack", and a
+     fixed right column is what actually keeps that promise rather than
+     sharing it out in the middle of the range. */
   .cal {
-    --day-cols: minmax(0, 1fr) clamp(25rem, 28%, 30rem);
+    --day-cols: minmax(0, 1fr) 28rem;
     --day-gap: var(--space-8);
     display: grid;
     grid-template-columns: var(--day-cols);
@@ -1660,10 +1674,32 @@
     position: relative;
   }
 
+  /*
+   * **Centred on the text column, not the card** (author, 2026-09-04:
+   * "instead of the 'continue reading' button on Daily page desktop, rename
+   * it 'read more' and move it horizontally to centre it on the text
+   * preview, keeping it at the same height it is now"). `bottom: 0` is
+   * unchanged — the anchor the comment above this rule earned by measuring
+   * the picture's own foot is still the right one for the height half of
+   * this. The horizontal half needs the *text* column's own edges, not the
+   * card's, and `.hero-more` is absolutely positioned straight out of a grid
+   * item it is not itself: a positioned child of a grid container takes that
+   * container's grid tracks as its own inset edges when it names one with
+   * `grid-column`, even though it is a DOM grandchild rather than a direct
+   * child, because CSS containing-block is decided by the nearest
+   * *positioned* ancestor and skips `.hero-body` (`position` left at its
+   * default, `static`). `grid-column: 2` is `.hero-body`'s own column, the
+   * grid's second and only other track — so `inset-inline: 0` centres this
+   * inside exactly that column's own width, and `margin-inline: auto` on a
+   * `max-content` box keeps the pill itself no wider than its own words.
+   */
   .hero.has-media .hero-body > .hero-more {
     position: absolute;
-    right: 0;
+    grid-column: 2;
+    inset-inline: 0;
     bottom: 0;
+    width: max-content;
+    margin-inline: auto;
   }
 }
 

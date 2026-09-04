@@ -96,6 +96,26 @@ const SHIFTS = [0, -1, 1, -2, 2, -3, 3, -4, 4, -5, 5, -6, 6, -7, 7, -8, 8].map((
 
 const overlaps = (a, b) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
 
+/**
+ * The radius a dot is treated as occupying when a label is checking whether
+ * it would sit on top of one, for an obstacle that does not carry its own
+ * `r` — generous rather than exact, since the biggest merged mark this site
+ * draws (`Math.log2` of a crowd, capped) is still under it, and overshooting
+ * a little costs nothing a reader would notice while undershooting draws a
+ * name straight through a dot.
+ */
+const DOT_CLEAR_R = 8;
+
+/** Whether a label's box would sit on top of a dot it does not belong to. */
+const overlapsDot = (rect, dot) => {
+  const r = dot.r ?? DOT_CLEAR_R;
+  return rect.x < dot.x + r && dot.x - r < rect.x + rect.w && rect.y < dot.y + r && dot.y - r < rect.y + rect.h;
+};
+
+/** Whether a box clears every already-placed label and every dot it is not naming. */
+const clear = (rect, placed, obstacles, own) =>
+  !placed.some((r) => overlaps(rect, r)) && !obstacles.some((o) => o !== own && overlapsDot(rect, o));
+
 /** Whether any part of a box is inside the picture — the box only has to be
  *  *partly* on screen to be worth drawing, since the canvas clips the rest
  *  (2026-08-31: a name is not hidden because its far end ran off the edge). */
@@ -137,7 +157,11 @@ export function clusterDots(dots, radius = CLUSTER_PX) {
  *
  * `dots` need `{ x, y, name }`; `measure(name)` returns the text's width in
  * px, which is the one thing only a canvas can answer and so is passed in
- * rather than reached for. `w`/`h` are the picture's size.
+ * rather than reached for. `w`/`h` are the picture's size. `obstacles` is
+ * every dot on the picture, named or not (`{ x, y, r? }`, `r` falling back to
+ * `DOT_CLEAR_R`) — a label must clear all of them, not only the ones this
+ * call is naming, or a name beside a crowded dot can still land on top of a
+ * *different* one the layout was never asked about.
  *
  * `leaders` opts into the stacked columns; with it false every dot takes a
  * side placement or none, which is the behaviour that shipped before the
@@ -148,12 +172,12 @@ export function clusterDots(dots, radius = CLUSTER_PX) {
  * and `leader` is `null` or `{ x1, y1, x2, y2 }` — the line from the dot to
  * its label. Nothing here draws; the caller does.
  */
-export function layoutLabels(dots, measure, w, h, leaders = true) {
+export function layoutLabels(dots, measure, w, h, leaders = true, obstacles = []) {
   const placed = [];
   const out = [];
 
-  const boxFor = (dot, textW, side) => ({
-    x: side === 'right' ? dot.x + GAP : dot.x - GAP - (textW + PAD),
+  const boxFor = (dot, textW) => ({
+    x: dot.x + GAP,
     y: dot.y - LINE_H / 2,
     w: textW + PAD,
     h: LINE_H,
@@ -188,50 +212,42 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
      * stack them" — and it reads better: five names in a tidy column with
      * five lines, rather than two names flung to opposite sides with three
      * stacked between them.
+     *
+     * **Right only, never left** (author, 2026-09-04: "make sure all the
+     * text on the map always displays to the right side of a dot" — a name
+     * on whichever side happened to be free read as arbitrary, and the
+     * reader's own eye had to hunt for which dot a left-hand name belonged
+     * to among its neighbours). A dot with no room to its right no longer
+     * borrows the left; it falls through to the stack below instead, the
+     * same door a crowded dot already used.
      */
     let toStack = group;
     if (group.length === 1) {
       const dot = group[0];
       const textW = widths.get(dot);
-      const right = boxFor(dot, textW, 'right');
-      const left = boxFor(dot, textW, 'left');
-      /*
-       * **A side that fits the whole name beats a side that clips it**, and
-       * only then does a partly-visible name beat none. Right-then-left with
-       * no such preference put a long name off the edge whenever the right
-       * was merely *touched* by the picture — readable as three words and a
-       * cliff, with the far side of the word simply gone, when the left had
-       * room for all of it. It matters most for the chosen saint, whose
-       * `Profile ›` button hangs off the end of their name (`views/map.js`).
-       */
-      for (const rect of [right, left]) {
-        if (!fullyOn(rect, w, h) || placed.some((r) => overlaps(rect, r))) continue;
-        take(dot, rect, null);
+      const right = boxFor(dot, textW);
+      if (fullyOn(right, w, h) && clear(right, placed, obstacles, dot)) {
+        take(dot, right, null);
         toStack = null;
-        break;
+      } else if (onScreen(right, w, h) && clear(right, placed, obstacles, dot)) {
+        take(dot, right, null);
+        toStack = null;
       }
       if (toStack === null) continue;
-      if (onScreen(right, w, h) && !placed.some((r) => overlaps(right, r))) {
-        take(dot, right, null);
-        continue;
-      }
-      if (onScreen(left, w, h) && !placed.some((r) => overlaps(left, r))) {
-        take(dot, left, null);
-        continue;
-      }
-      // Neither side is free: fall through and let it take a leader line
-      // rather than going unnamed. If the dot itself is off the picture the
-      // stacked box will be too, and it is dropped there instead.
+      // The right side is not free: fall through and let it take a leader
+      // line rather than going unnamed. If the dot itself is off the picture
+      // the stacked box will be too, and it is dropped there instead.
       if (!leaders) continue;
     }
 
     /*
      * A column beside the cluster, one row per dot, each with a line back to
-     * the dot it names. The column goes on whichever side has more room, so
-     * a cluster against the right edge stacks leftward rather than off it.
+     * the dot it names. Right of the cluster always, the same reasoning as
+     * the lone-dot placement above — a column is still a name attached to a
+     * dot, and switching which side it reads from cluster to cluster is the
+     * same hunt-for-the-line problem in a wider box.
      */
     const cy = group.reduce((s, d) => s + d.y, 0) / group.length;
-    const minX = Math.min(...group.map((d) => d.x));
     const maxX = Math.max(...group.map((d) => d.x));
     /*
      * Ordered by the dots' own y, so the leader lines run roughly parallel
@@ -246,8 +262,8 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
     // edge and the leader lines land in a row rather than a ragged fan.
     const colW = Math.max(...rows.map((d) => widths.get(d) + PAD));
 
-    const build = (side, shift) => {
-      const gapEdge = side === 'right' ? maxX + STACK_GAP : minX - STACK_GAP;
+    const build = (shift) => {
+      const gapEdge = maxX + STACK_GAP;
       /*
        * The block, held inside the picture. Before this a wide column beside
        * a cluster near an edge simply ran off it, and the names hanging over
@@ -257,28 +273,24 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
        * label has a line back to its own dot, so moving it is unambiguous in
        * a way moving a label that merely sits *beside* its dot would not be.
        */
-      const left = side === 'right' ? Math.min(gapEdge, w - colW) : gapEdge - colW;
-      const x = Math.max(0, left);
+      const x = Math.max(0, Math.min(gapEdge, w - colW));
       const top = cy - ((rows.length - 1) * STACK_STEP) / 2 + shift;
       return rows.map((dot, i) => {
         const y = top + i * STACK_STEP;
         const boxW = widths.get(dot) + PAD;
-        // Right-hand rows run out from the inner edge, left-hand ones back
-        // to it, so every leader line in a column stops at the same x.
-        const inner = side === 'right' ? x : x + colW;
         return {
           dot,
           y,
-          rect: { x: side === 'right' ? x : inner - boxW, y: y - LINE_H / 2, w: boxW, h: LINE_H },
+          rect: { x, y: y - LINE_H / 2, w: boxW, h: LINE_H },
           // The line stops at the column's inner edge, not at the text
           // itself, so it reads as pointing *at* the name rather than
           // striking it.
-          leader: { x1: dot.x, y1: dot.y, x2: inner, y2: y },
+          leader: { x1: dot.x, y1: dot.y, x2: x, y2: y },
         };
       });
     };
 
-    const free = (row) => onScreen(row.rect, w, h) && !placed.some((r) => overlaps(row.rect, r));
+    const free = (row) => onScreen(row.rect, w, h) && clear(row.rect, placed, obstacles, row.dot);
 
     /*
      * **The whole cluster or nothing, tried in several places first.**
@@ -290,25 +302,75 @@ export function layoutLabels(dots, measure, w, h, leaders = true) {
      * name it is; so the candidates are tried in order and the first that
      * seats every row wins. Only when none does is a row dropped.
      */
-    const sides = w - maxX >= minX ? ['right', 'left'] : ['left', 'right'];
     let seated = null;
     for (const shift of SHIFTS) {
-      for (const side of sides) {
-        const candidate = build(side, shift);
-        if (candidate.every(free)) {
-          seated = candidate;
-          break;
-        }
+      const candidate = build(shift);
+      if (candidate.every(free)) {
+        seated = candidate;
+        break;
       }
-      if (seated) break;
     }
 
-    for (const row of seated ?? build(sides[0], 0)) {
+    for (const row of seated ?? build(0)) {
       if (!seated && !free(row)) continue;
       placed.push(row.rect);
       out.push({ dot: row.dot, x: row.rect.x + PAD / 2, y: row.y, rect: row.rect, leader: row.leader });
     }
   }
 
+  return out;
+}
+
+/** How far right of a blob's own rightmost member its count starts looking for room. */
+const BLOB_LABEL_GAP = 10;
+
+/**
+ * Lays out a closed blob's own "+N" count — never beside a member dot the
+ * way a name is (a blob's count belongs to the whole group, not to any one
+ * dot inside it), and never without a leader line (author, 2026-09-04: "for
+ * the blobs you will always need leader lines no matter how far you zoom
+ * in" — unlike a saint's own name, which only stacks with one past
+ * `LEADERS_AT`, a bare count sitting directly on the picture with no line
+ * back to its own blob reads as belonging to whichever dot happens to be
+ * under it).
+ *
+ * `blobs` need `{ id, cx, cy, maxX, name }` — `maxX` the rightmost x any of
+ * the blob's own members reached on screen, the same anchor a stacked
+ * column's own right edge uses. `placed` is every label rect already seated
+ * (a saint's own name, or an earlier blob in this same call) and `obstacles`
+ * is every dot on the picture — both are cleared exactly as `layoutLabels`
+ * clears them, so a count can never land on a name, another count, or a dot.
+ *
+ * Returns one entry per blob whose count found a clear spot: `{ id, x, y,
+ * rect, leader }`, the same shape `layoutLabels` returns, `leader` always
+ * set. A blob whose count cleared nowhere is dropped rather than drawn over
+ * something else — its hull is still on the picture either way.
+ */
+export function layoutBlobLabels(blobs, measure, w, h, placed = [], obstacles = []) {
+  const taken = [...placed];
+  const out = [];
+  for (const b of blobs) {
+    const boxW = measure(b.name) + PAD;
+    const x = Math.max(0, Math.min(b.maxX + BLOB_LABEL_GAP, w - boxW));
+    let seated = null;
+    for (const shift of SHIFTS) {
+      const y = b.cy + shift;
+      const rect = { x, y: y - LINE_H / 2, w: boxW, h: LINE_H };
+      if (!onScreen(rect, w, h)) continue;
+      if (!clear(rect, taken, obstacles, null)) continue;
+      seated = { rect, y };
+      break;
+    }
+    if (!seated) continue;
+    const { rect, y } = seated;
+    taken.push(rect);
+    out.push({
+      id: b.id,
+      x: rect.x + PAD / 2,
+      y,
+      rect,
+      leader: { x1: b.cx, y1: b.cy, x2: rect.x, y2: y },
+    });
+  }
   return out;
 }

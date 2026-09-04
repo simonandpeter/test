@@ -56,8 +56,8 @@ function fillHeroLede(panel, slug, iso, card) {
       link.className = 'hero-more';
       link.href = state.router.href(`/saints/${slug}`);
       link.dataset.prefetch = slug;
-      link.setAttribute('aria-label', fill(STRINGS.calendar.continueReadingOf, { name: saintName(card) }));
-      link.textContent = STRINGS.calendar.continueReading;
+      link.setAttribute('aria-label', fill(STRINGS.calendar.readMoreOf, { name: saintName(card) }));
+      link.textContent = STRINGS.calendar.readMore;
       const chevron = document.createElement('span');
       chevron.className = 'hero-more-chevron';
       chevron.setAttribute('aria-hidden', 'true');
