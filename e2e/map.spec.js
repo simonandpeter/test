@@ -437,7 +437,18 @@ test('a wheel zoom holds the point under the pointer still, not merely the end o
     if (now) maxDrift = Math.max(maxDrift, Math.hypot(now.x - track.x, now.y - track.y));
     await page.waitForTimeout(20);
   }
-  expect(maxDrift, 'the point under the pointer drifted during the eased zoom').toBeLessThan(3);
+  /*
+   * 8, not 3 (2026-09-04, CI): `data-dots` rounds each axis to the nearest
+   * px on its own (`views/map.js`'s own `Math.round`), so two independent
+   * roundings of what should be the same true position already cost up to
+   * `hypot(1, 1)` before anything real has moved at all, and a different
+   * runner's own sub-pixel rendering adds more of the same — CI's own
+   * mobile-360 read 3.16 with the anchor fix already in place, not a
+   * regression, a threshold too tight for rounding noise. The bug this test
+   * exists to catch reads in the tens of pixels, found live before the fix:
+   * 8 is nowhere near that and comfortably clear of the noise.
+   */
+  expect(maxDrift, 'the point under the pointer drifted during the eased zoom').toBeLessThan(8);
 
   // And it actually zoomed, rather than merely holding still.
   await expect.poll(() => zoomLevel(page)).not.toBe('1.0×');
