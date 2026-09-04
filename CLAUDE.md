@@ -546,21 +546,47 @@ prising apart two saints who died in the same town, and
 zooms** (same author instruction, reversing the old only-Ctrl rule: with
 nothing below the stage there is no page to scroll past), touch is the map's
 always (`touch-action: none`), and the route cannot scroll (`overflow:
-hidden`; the flex column through `#view` fits the window exactly). **A wheel
-now trails rather than jumping to each event's own target** (2026-09-04,
-author: "smooth/slightly lazy zooming in/out on desktop"): `wireZoom` keeps a
-`wheelTarget` — the honest `zoomAbout` result for the *latest* event — and a
-`requestAnimationFrame` loop (`stepWheelEase`) chases it at `WHEEL_EASE`
-(0.3) of the remaining distance each frame, applying the eased-toward value
-through the same `setThrottled` every other view change already goes
-through, rather than applying `wheelTarget` itself. A fast spin keeps moving
-`wheelTarget` before the trail catches up, which is the lazy feel the author
-asked for; it settles (and calls `setThrottled(wheelTarget)` once, exactly,
-to land on the honest final value rather than asymptotically never quite
-arriving) once both the scale and centre deltas are below a small threshold.
-Skipped entirely under `prefers-reduced-motion`, the same instant-apply
-`reducedMotion()` already gives every other flight on this page — reduced
-motion removes the animation, never merely shortens it. Labels
+hidden`; the flex column through `#view` fits the window exactly).
+
+**A wheel briefly trailed a target instead of applying at once (2026-09-04),
+and it was backed out the same day as a real bug rather than kept as the
+asked-for smoothness.** The first request was "smooth/slightly lazy zooming
+in/out on desktop", answered with a `wheelTarget` a `requestAnimationFrame`
+loop eased `view` toward each frame. It read as a wobble rather than a lag:
+`zoomAbout` couples a zoom's centre to its scale through a `1/scale` term, so
+the point under the pointer is only held still by moving `cx`/`cy` and
+`scale` together along that *one* curve — easing them independently toward
+their own targets, a straight line each, does not retrace it, and the anchor
+visibly drifted mid-transition. The author's own follow-up named the actual
+ask: "the scroll up and down is what I should have said should be slightly
+lazy, so theres a tiny bit of drag, not the zoom." The wheel is direct again
+(`setThrottled(zoomAbout(...))`, one call per event) — `exp(-deltaY *
+0.002)` was already smooth by construction for a continuous gesture, which
+is what "smooth" asked for in the first place, and a discrete mouse notch
+applying at once is the directness the correction wants back.
+
+**A mouse drag trails its own target instead, which carries none of that
+risk.** `panBy` only ever shifts `cx`/`cy` — nothing else depends on where
+they land mid-frame, so `wireZoom` keeps a `panTarget` and a
+`requestAnimationFrame` loop (`stepPanEase`) chases it at `PAN_EASE` (0.4) of
+the remaining distance each frame, the same shape the wheel's own trail was,
+just moved to a translation instead of a scale. `pointerType === 'mouse'`
+gates it: a touch finger keeps tracking 1:1, since a lag between a finger and
+the land under it reads as the map fighting the reader rather than as a
+desktop nicety. `panTarget` is dropped — not merely left to finish — by a
+fresh `pointerdown` and by `set()` (the one choke point every other flight on
+the map, button through search, already funnels through), the same
+independence the wheel and a pan already kept from each other before this
+round, now extended to a drag racing its own trailing tail. **`release`
+(`pointerup`/`pointercancel`) snaps straight to `panTarget` rather than
+letting the trail keep running** — found live, the same day: a test read
+`data-dots` right after a drag ended and clicked the position it found there,
+and the ease was still a couple of frames from catching up to it, landing
+the click on the *next* dot over. Coasting on past the gesture that was
+driving it is its own surprise regardless of what a test happens to read —
+"a tiny bit of drag" was asked for while the pointer is still moving, not as
+momentum once it has stopped. Skipped entirely under `prefers-reduced-motion`
+— reduced motion removes the animation, never merely shortens it. Labels
 arrive past 2.5×, laid out by **`lib/map-labels.js`** (pure, unit-tested):
 it single-linkage-clusters the dots, gives a lone dot the space beside it,
 and stacks a *whole* cluster into a column with a leader line each — deciding
@@ -1160,7 +1186,14 @@ rehearsal on this spec knows it is not theirs.
     the target answers `auto` however the page is written — walk to the
     nearest declared ancestor value, which is the intersection the browser
     performs. Or drive the gesture through CDP `Input.dispatchTouchEvent`,
-    which goes through hit-testing and does respect it.
+    which goes through hit-testing and does respect it. **The same gap breaks
+    `setPointerCapture`** (2026-09-04, map.spec.js's own drag tests): a
+    handler that captures the pointer it just saw go down throws outright for
+    a `dispatchEvent`-only one (`No active pointer with the given id is
+    found`) — a synthetic event was never registered as an *active* pointer
+    in the first place, which real input, or CDP's own emulation of it, is.
+    Any gesture whose handler calls `setPointerCapture` needs the CDP route,
+    not merely the touch-action one.
 12. **A loop of zoom presses without `settledZoom` between them measures the
     machine, not the map.** Presses ease since 7ce2195 and a press mid-flight
     re-targets from wherever the view has reached, so a tight loop travels a

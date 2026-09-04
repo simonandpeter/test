@@ -2554,9 +2554,9 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     // Every other flight on the map — a button, a key, choosing a saint or a
     // blob, the search's own flight — lands here (`render` hands this back
     // out as `applyView`), so this is the one choke point that catches all
-    // of them: a wheel still trailing its own target must not keep pulling
+    // of them: a drag still trailing its own target must not keep pulling
     // `view` toward it once a different flight has taken over the picture.
-    wheelTarget = null;
+    panTarget = null;
     view = next;
     applyChrome();
     paintCanvas(canvas, cards());
@@ -2592,72 +2592,38 @@ function wireZoom(el, canvas, cards, schedulePaint) {
   }
 
   /*
-   * **The wheel trails rather than jumping, on desktop** (2026-09-04, author:
-   * "smooth/slightly lazy zooming in/out on desktop map"). A trackpad's own
-   * `deltaY` already arrives in a stream of small values many times a
-   * second, which read as continuous motion applied instantly; a mouse's own
-   * wheel arrives in a handful of fixed-size notches, and applying *those*
-   * instantly is the "jumps rather than glides" a reader feels, the same
-   * complaint the +/- buttons' own `flyTo` easing already answered for a
-   * press. This is that answer for a continuous gesture: each notch moves a
-   * *target* view, not the drawn one, and a short rAF loop eases the drawn
-   * view toward wherever the target currently is — so a fast series of
-   * notches keeps compounding the target smoothly rather than restarting an
-   * animation from scratch on every one.
+   * **The wheel is direct** (2026-09-04, author, correcting the request
+   * behind the trailing this used to do: "the scroll up and down is what I
+   * should have said should be slightly lazy, so theres a tiny bit of drag,
+   * not the zoom"). It briefly trailed a target the way the pan below does
+   * now, and that was a real bug rather than the asked-for smoothness: a
+   * zoom's `cx`/`cy` is coupled to its `scale` through `zoomAbout`'s own
+   * `1/scale` term, so easing scale and centre *independently* toward their
+   * targets does not retrace `zoomAbout`'s own path between them — the point
+   * under the pointer visibly drifted off it mid-transition, read as a
+   * wobble rather than a lag. `exp(-deltaY * 0.002)` is already smooth by
+   * construction for a continuous gesture (every unit of wheel travel
+   * multiplies the scale by the same factor, so a slow roll creeps and a
+   * spin sweeps with no notch steps), which is all "smooth" asked for in the
+   * first place; a discrete mouse notch applying at once is the directness
+   * the reader now wants back.
    */
-  let wheelTarget = null;
-  let wheelRaf = null;
-  const WHEEL_EASE = 0.3;
-  const stepWheelEase = () => {
-    if (!wheelTarget) {
-      wheelRaf = null;
-      return;
-    }
-    const dScale = wheelTarget.scale - view.scale;
-    const dCx = wheelTarget.cx - view.cx;
-    const dCy = wheelTarget.cy - view.cy;
-    if (Math.abs(dScale) < 0.001 && Math.abs(dCx) < 0.00002 && Math.abs(dCy) < 0.00002) {
-      setThrottled(wheelTarget);
-      wheelTarget = null;
-      wheelRaf = null;
-      return;
-    }
-    setThrottled({
-      scale: view.scale + dScale * WHEEL_EASE,
-      cx: view.cx + dCx * WHEEL_EASE,
-      cy: view.cy + dCy * WHEEL_EASE,
-    });
-    wheelRaf = requestAnimationFrame(stepWheelEase);
-  };
-
   canvas.addEventListener(
     'wheel',
     (e) => {
-      /*
-       * No modifier gate (author, 2026-08-30) - the wheel *is* the zoom.
-       * `exp(-deltaY * 0.002)` makes it smooth by construction: every unit of
-       * wheel travel multiplies the scale by the same factor, so a slow roll
-       * creeps and a spin sweeps, continuously, with no notch steps - and the
-       * anchor stays under the pointer the whole way.
-       */
+      // No modifier gate (author, 2026-08-30) - the wheel *is* the zoom.
       e.preventDefault();
       const box = canvas.getBoundingClientRect();
-      const target = zoomAbout(
-        wheelTarget ?? view,
-        Math.exp(-e.deltaY * 0.002),
-        (e.clientX - box.left) / box.width,
-        (e.clientY - box.top) / box.height,
-        coverFractions(box.width, box.height, ASPECT),
-        ceilingOf(canvas),
+      setThrottled(
+        zoomAbout(
+          view,
+          Math.exp(-e.deltaY * 0.002),
+          (e.clientX - box.left) / box.width,
+          (e.clientY - box.top) / box.height,
+          coverFractions(box.width, box.height, ASPECT),
+          ceilingOf(canvas),
+        ),
       );
-      // Reduced motion removes the trailing, not just shortens it — the
-      // wheel lands exactly where it always has, one notch at a time.
-      if (reducedMotion()) {
-        setThrottled(target);
-        return;
-      }
-      wheelTarget = target;
-      if (!wheelRaf) wheelRaf = requestAnimationFrame(stepWheelEase);
     },
     // Not passive: this one calls preventDefault, and Chrome ignores it on a
     // passive listener while warning about it in a console nobody is reading.
@@ -2672,22 +2638,48 @@ function wireZoom(el, canvas, cards, schedulePaint) {
   const active = new Map();
   let pinch = 0;
 
+  /*
+   * **A mouse drag trails its own target rather than tracking 1:1**
+   * (2026-09-04, author: "a tiny bit of drag" — the request the wheel's own
+   * trailing above answered for the wrong gesture). Translation is safe to
+   * ease independently of anything else the way a zoom's scale and centre
+   * are not: `panBy` only ever shifts `cx`/`cy`, nothing else depends on
+   * where they land mid-frame, so chasing a target here carries none of the
+   * wobble risk retired above. Touch keeps tracking the finger exactly —
+   * `pointerType`, not a coarse-pointer guess, since a lag between a finger
+   * and the land under it reads as the map fighting the reader rather than
+   * as a desktop nicety.
+   */
+  let panTarget = null;
+  let panRaf = null;
+  const PAN_EASE = 0.4;
+  const stepPanEase = () => {
+    if (!panTarget) {
+      panRaf = null;
+      return;
+    }
+    const dCx = panTarget.cx - view.cx;
+    const dCy = panTarget.cy - view.cy;
+    if (Math.abs(dCx) < 0.00002 && Math.abs(dCy) < 0.00002) {
+      setThrottled({ ...view, cx: panTarget.cx, cy: panTarget.cy });
+      panTarget = null;
+      panRaf = null;
+      return;
+    }
+    setThrottled({ ...view, cx: view.cx + dCx * PAN_EASE, cy: view.cy + dCy * PAN_EASE });
+    panRaf = requestAnimationFrame(stepPanEase);
+  };
+
   canvas.addEventListener('pointerdown', (e) => {
     /*
-     * **A drag or a pinch takes the view back from any wheel still trailing
-     * its own target** (2026-09-04, author: "zoom should not be tied to the
-     * scroll at all. They should be completely independent" — a bare wheel
-     * spin left `wheelTarget` set and `stepWheelEase` still running for a
-     * few more frames after the gesture ended, and each of those frames
-     * called `setThrottled` on its own account, pulling `view` back toward
-     * the wheel's old anchor point out from under a pan that had already
-     * started — read as resistance, since the two were fighting for the same
-     * `view` on every frame the trail had left to run. Dropping the target
-     * outright, not merely letting the loop finish, is what makes them
-     * independent: a pan or a pinch is a fresh hand on the wheel, and
-     * whatever the wheel was still easing toward is no longer owed a finish.
+     * **A fresh press takes the view back from a drag still trailing its own
+     * target** — the same independence the wheel and a pan already keep from
+     * each other, now between one drag and the next: releasing early and
+     * pressing again before the trail has caught up must not have the new
+     * drag's own motion computed from a target the reader never asked to
+     * keep chasing.
      */
-    wheelTarget = null;
+    panTarget = null;
     if (!canPan(canvas)) return;
     canvas.setPointerCapture(e.pointerId);
     active.set(e.pointerId, e);
@@ -2719,20 +2711,39 @@ function wireZoom(el, canvas, cards, schedulePaint) {
      * with nowhere to go is already refused by the clamp arithmetic rather
      * than by this handler guessing.
      */
-    setThrottled(
-      panBy(
-        view,
-        (e.clientX - previous.clientX) / box.width,
-        (e.clientY - previous.clientY) / box.height,
-        coverFractions(box.width, box.height, ASPECT),
-        ceilingOf(canvas),
-      ),
+    const target = panBy(
+      panTarget ?? view,
+      (e.clientX - previous.clientX) / box.width,
+      (e.clientY - previous.clientY) / box.height,
+      coverFractions(box.width, box.height, ASPECT),
+      ceilingOf(canvas),
     );
+    if (e.pointerType !== 'mouse' || reducedMotion()) {
+      setThrottled(target);
+      return;
+    }
+    panTarget = target;
+    if (!panRaf) panRaf = requestAnimationFrame(stepPanEase);
   });
 
   const release = (e) => {
     active.delete(e.pointerId);
     if (active.size < 2) pinch = 0;
+    /*
+     * **The trail ends where the finger did, not a few frames later**
+     * (2026-09-04, found live: a release read `data-dots` before the ease
+     * had finished catching up and clicked the wrong dot for it — the same
+     * shape of race the wheel's own trail caused elsewhere before it was
+     * backed out). Letting a drag coast on after the gesture that was
+     * driving it has ended is its own surprise, not "a tiny bit of drag":
+     * the lag was asked for while the pointer is still moving, not as
+     * momentum once it has stopped.
+     */
+    if (panTarget) {
+      setThrottled({ ...view, cx: panTarget.cx, cy: panTarget.cy });
+      panTarget = null;
+      panRaf = null;
+    }
   };
   canvas.addEventListener('pointerup', release);
   canvas.addEventListener('pointercancel', release);

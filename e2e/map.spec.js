@@ -364,18 +364,136 @@ test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }
   await page.mouse.move(centre.x, centre.y);
   await page.mouse.wheel(0, -400);
   /*
-   * Polled rather than read once (2026-09-04): the wheel now trails the
-   * gesture instead of jumping to it in the same tick ("smooth/slightly
-   * lazy zooming in/out on desktop"), so the readout is still `1.0×` for the
-   * first frame or two after the notch. What the old assertion was really
-   * checking — that a bare wheel does something — still holds, just not
-   * instantly.
+   * Direct, not polled (2026-09-04): the wheel briefly trailed its own
+   * target ("smooth/slightly lazy zooming in/out on desktop"), and that
+   * turned out to be the wrong gesture to lag — a zoom's centre is coupled
+   * to its scale, so easing the two independently drifted the point under
+   * the pointer instead of merely lagging behind it, and the author's own
+   * correction ("the scroll up and down is what I should have said should
+   * be slightly lazy ... not the zoom") took the trailing off the wheel and
+   * put it on a mouse drag instead (below). `setThrottled` writes
+   * `data-zoom-level` synchronously, so a bare wheel notch is readable the
+   * instant it lands, same as before either change.
    */
-  await expect.poll(() => zoomLevel(page), 'a bare wheel did not zoom the map').not.toBe('1.0×');
+  await expect(page.locator('[data-zoom-level]'), 'a bare wheel did not zoom the map').not.toHaveText('1.0×');
 
   // And back out: a long spin down runs into the floor and stops at the world.
   await page.mouse.wheel(0, 1200);
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+});
+
+test('a mouse drag settles at exactly the distance the pointer moved', async ({ page }) => {
+  /*
+   * Author, 2026-09-04, correcting an earlier request: "the scroll up and
+   * down is what I should have said should be slightly lazy, so theres a
+   * tiny bit of drag, not the zoom." The wheel above went back to applying
+   * directly; a mouse drag now trails its own target the same way the wheel
+   * briefly did. `panBy` was already exact — "the land keeps pace with the
+   * finger at every zoom" — so a settled drag has to land at precisely the
+   * pointer's own distance, not merely somewhere close to it; the lag is
+   * checked by contrast against a touch drag below, not by racing frames
+   * here, which is exactly the kind of timing assertion this file's own
+   * CLAUDE.md warns reads as a product bug near a threshold.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  /*
+   * Constantinople, then zoomed in twice more: at rest, or barely past it,
+   * both axes are clamped to only a few px of real travel — the pole/edge is
+   * close by, not merely "the room `canPan` asks whether there is any of at
+   * all" — and a drag clamped short would settle well shy of the pointer's
+   * own distance without any of that being about the easing this test
+   * exists to check. A search first rather than zooming from home's own
+   * centre, which on a narrow window can land on open ocean once zoomed in
+   * enough for this drag's own room — found live, on mobile-360.
+   */
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await settledZoom(page);
+  for (let i = 0; i < 2; i++) {
+    await page.locator('[data-zoom="in"]').click();
+    await settledZoom(page);
+  }
+  const box = await canvas.boundingBox();
+  const midX = box.x + box.width / 2;
+  const midY = box.y + box.height / 2;
+
+  // Any dot: this only tracks a screen position, not one particular saint,
+  // and which marks have merged varies by viewport at a given zoom.
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  const track = before[0];
+  expect(track, 'premise: a dot on screen to track the drag by').toBeTruthy();
+
+  await page.mouse.move(midX, midY);
+  await page.mouse.down();
+  await page.mouse.move(midX, midY - 60, { steps: 1 });
+  await page.mouse.up();
+
+  // The land keeps pace with the finger — a drag up moves everything on the
+  // picture up by the same amount, not the other way round.
+  await expect
+    .poll(async () => {
+      const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+      const now = dots.find((d) => d.slug === track.slug);
+      return now ? Math.round(now.y - track.y) : null;
+    }, 'a mouse drag never settled at the full distance the pointer moved')
+    .toBe(-60);
+});
+
+test('a touch drag tracks the finger exactly, with no lag to settle', async ({ page }) => {
+  /*
+   * The contrast the test above needs: a lag between a finger and the land
+   * under it would read as the map fighting the reader rather than as a
+   * desktop nicety, so `pointerType` keeps touch out of the trailing
+   * entirely (`views/map.js`'s own drag handler).
+   *
+   * **CDP `Input.dispatchTouchEvent`, not a synthetic `PointerEvent`** — the
+   * drag handler calls `setPointerCapture` on the pointer it just saw go
+   * down, and that throws outright for a `dispatchEvent`-only pointer
+   * (`No active pointer with the given id is found`, found live): a
+   * synthetic event never registers as an *active* pointer the way real
+   * input, or CDP's own emulation of it, does. This is trap 11's own
+   * `Input.dispatchTouchEvent` route, needed here for the reason it names —
+   * going through the browser's real input pipeline rather than only the
+   * DOM's event dispatch.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  // Constantinople, then zoomed in twice more, for the same reason the
+  // mouse test above is.
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await settledZoom(page);
+  for (let i = 0; i < 2; i++) {
+    await page.locator('[data-zoom="in"]').click();
+    await settledZoom(page);
+  }
+  const box = await canvas.boundingBox();
+  const midX = box.x + box.width / 2;
+  const midY = box.y + box.height / 2;
+
+  // Any dot: this only tracks a screen position, not one particular saint,
+  // and which marks have merged varies by viewport at a given zoom.
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  const track = before[0];
+  expect(track, 'premise: a dot on screen to track the drag by').toBeTruthy();
+
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: midX, y: midY }] });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: midX, y: midY - 60 }] });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+
+  await expect
+    .poll(async () => {
+      const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+      const now = dots.find((d) => d.slug === track.slug);
+      return now ? Math.round(now.y - track.y) : null;
+    }, 'a touch drag did not track the finger by the full distance')
+    .toBe(-60);
 });
 
 test('touch belongs to the map, because there is no page left to scroll', async ({ page }) => {
