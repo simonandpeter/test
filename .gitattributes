@@ -16,3 +16,8 @@
 *.png binary
 *.webp binary
 *.woff2 binary
+
+# Windows batch files are the one text the worktree must keep as CRLF:
+# cmd.exe reads a label or a `goto` wrongly across a bare LF, and
+# android/gradlew.bat is what a Windows desk builds the app with (2026-09-05).
+*.bat text eol=crlf
