@@ -3046,6 +3046,92 @@ function ensureTerrainTiles(canvas, cards, visible) {
   }
 }
 
+/**
+ * Warms the standard (50m) tile grid from the moment the map opens, rather
+ * than leaving every cell to be fetched and decoded for the first time
+ * together at whatever instant the reader first crosses `TILE_FADE_START`
+ * (2026-09-04, author: "very heavy load at start of map page with raster
+ * images, make them load silently in the background... when you first open
+ * the page but dont show still at full zoom"). Filling `canvas.__tileState`
+ * early costs nothing a reader can see on its own — `paintCanvas`'s own
+ * `tileStrength` gate, unchanged, is the only thing that decides whether a
+ * tile is ever drawn, and at 1x it is always 0 regardless of what has been
+ * decoded — so a visit that never zooms in pays for nothing it would have
+ * noticed either way, and a visit whose first real move is a search flight
+ * straight past the fade threshold finds most of the grid already decoded
+ * instead of fetching and decoding several dozen tiles at the one instant
+ * the flight lands.
+ *
+ * **A tile at a time, through `requestIdleCallback`, not the whole grid at
+ * once.** "Silently" is the ask, not merely "eventually" — this must never
+ * compete with whatever the reader is actually doing, so each tile's own
+ * fetch-and-decode is scheduled only once the browser reports it has spare
+ * time, and the next is not scheduled until that one has actually settled.
+ * Safari has never shipped `requestIdleCallback`, so a bare `setTimeout`
+ * stands in where it is missing — later and less considerate about *when*,
+ * but still off the critical path.
+ *
+ * **`ensureTerrainTiles(canvas, cards, [])` is how the manifest itself
+ * loads**, an empty `visible` deliberately reusing the one place that
+ * already guards against loading it twice (`__tileMetaPending`) rather than
+ * this function racing it with a second copy of the same load — two
+ * independent loaders could each decide `__tileMeta` was still empty and
+ * both start fetching, and whichever finished last would hand the canvas a
+ * *second*, empty `__tileState`, silently orphaning every tile the other
+ * had already warmed into the first one.
+ *
+ * Skipped outright under `navigator.connection.saveData`: this is work a
+ * reader may never need, and spending it on a connection they have
+ * explicitly asked the browser to go easy on is the one case prefetching is
+ * worse than simply waiting for the reader to ask.  The 10m tier is left
+ * alone — `ensureTerrainTiles`'s own on-demand fetch still supplies it,
+ * since it exists for a small, deliberately narrow set of cells near a
+ * located saint and only past a much deeper zoom (`HR_FADE_START`), not the
+ * first heavy moment this is answering.
+ */
+function warmTerrainTiles(canvas, cards) {
+  if (navigator.connection?.saveData) return;
+  const idle =
+    typeof window.requestIdleCallback === 'function'
+      ? window.requestIdleCallback
+      : (fn) => setTimeout(() => fn({ timeRemaining: () => 0, didTimeout: true }), 200);
+
+  const warmNext = (tiles, i) => {
+    if (!canvas.isConnected || i >= tiles.length) return;
+    const state = canvas.__tileState;
+    const tile = tiles[i];
+    const key = `${tile.col}-${tile.row}`;
+    if (state.has(key)) {
+      idle(() => warmNext(tiles, i + 1));
+      return;
+    }
+    state.set(key, { status: 'pending' });
+    const greenUrl = terrainLib.tileUrl(tile.col, tile.row, 'green');
+    const reliefUrl = terrainLib.tileUrl(tile.col, tile.row, 'relief');
+    Promise.all([terrainLib.loadTerrainChannel(greenUrl), terrainLib.loadTerrainChannel(reliefUrl)])
+      .then(([green, relief]) => {
+        if (!canvas.isConnected) return;
+        state.set(key, { status: 'loaded', green: green.data, relief: relief.data, w: green.w, h: green.h });
+        paintCanvas(canvas, cards());
+      })
+      .catch(() => state.set(key, { status: 'error' }))
+      .finally(() => idle(() => warmNext(tiles, i + 1)));
+  };
+
+  const waitForMeta = () => {
+    if (!canvas.isConnected) return;
+    if (canvas.__tileMeta) {
+      warmNext(canvas.__tileMeta, 0);
+      return;
+    }
+    idle(waitForMeta);
+  };
+  idle(() => {
+    ensureTerrainTiles(canvas, cards, []);
+    waitForMeta();
+  });
+}
+
 async function drawWhenReady(el, canvas, cards) {
   // `cards` is a getter: the coastline may land after the reader has already
   // dragged the timeline, and the paint must draw the set they are looking at.
@@ -3080,6 +3166,10 @@ async function drawWhenReady(el, canvas, cards) {
      */
     canvas.dataset.land = 'ok';
     canvas.dataset.water = 'ok';
+    // Only once the picture the reader actually opened the map for has
+    // landed — see `warmTerrainTiles`'s own comment for why this is safe at
+    // rest and why it waits this long to start.
+    warmTerrainTiles(canvas, cards);
   } catch {
     // A map that cannot draw says so; it does not leave an empty rectangle
     // that reads as a bug or, worse, as an empty world.

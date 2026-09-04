@@ -312,6 +312,36 @@ enforces it but `fadeBetween`'s own comment, and crossing it runs the
 flat→50m and 50m→10m handovers at once, which is the three-layer
 cross-dissolve dip this map has already paid for twice.
 
+**The 50m grid starts fetching and decoding before the reader ever crosses
+`TILE_FADE_START`** (`warmTerrainTiles`, `views/map.js`, 2026-09-04 — author:
+"very heavy load at start of map page with raster images, make them load
+silently in the background ... but dont show still at full zoom"). Left to
+`ensureTerrainTiles` alone, nothing is fetched until the reader is already
+past 8× — which is fine for a slow, manual zoom, but a reader whose first
+real move is a search flight straight past that threshold asks for every
+tile the flight lands on all at once, the fetch-and-decode burst
+`TILE_FADE_START`'s own move to 8 was written to spare a *panning* reader
+from. `warmTerrainTiles` is kicked off once `drawWhenReady`'s own coastline
+has landed and fills `canvas.__tileState` a tile at a time, each one
+scheduled only once `requestIdleCallback` reports the browser has spare time
+(Safari has never shipped it, so a bare `setTimeout` stands in) — "silently"
+was the ask, not merely "eventually", so this must never compete with
+whatever the reader is actually doing. It costs nothing a reader can see on
+its own: `paintCanvas`'s own `tileStrength` gate is untouched, reads 0 at 1×
+regardless of what has been decoded, and is the only thing that ever decides
+whether a tile is drawn. It shares `ensureTerrainTiles`'s own manifest-load
+guard (`__tileMetaPending`) rather than a second copy of it — two independent
+loaders racing to decide `__tileMeta` was still empty would each start
+fetching, and whichever finished last would hand the canvas a second, empty
+`__tileState`, silently orphaning every tile the other had already warmed
+into the first one. Skipped outright under `navigator.connection.saveData`:
+this is work a reader may never need, and the one case prefetching is worse
+than waiting is spending it on a connection they have explicitly asked the
+browser to go easy on. The 10m tier is left to `ensureTerrainTiles`'s own
+on-demand fetch, since it is a small, deliberately narrow set of cells near a
+located saint and only past a much deeper zoom (`HR_FADE_START`) — not the
+first heavy moment this answers.
+
 **Per-frame housekeeping in the paint path** (2026-09-04 cleanup, all of it
 measured against the same picture rather than guessed): `visibleTiles`
 filters the whole 72-cell manifest and was being run twice a frame — once

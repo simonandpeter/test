@@ -2877,6 +2877,48 @@ test('the map opens on the coarse coastline and fetches the fine one only past 2
   expect(points.fine / points.coarse, 'the two tiers are not far enough apart to be worth having').toBeGreaterThan(4);
 });
 
+test('terrain tiles start loading in the background as soon as the map opens, before any zoom', async ({ page }) => {
+  /*
+   * Author, 2026-09-04: "very heavy load at start of map page with raster
+   * images, make them load silently in the background... when you first
+   * open the page but dont show still at full zoom." `warmTerrainTiles`
+   * (`views/map.js`) is the answer — kicked off once the coastline itself
+   * has landed, well before the reader has done anything that would
+   * ordinarily ask for a tile at all: `ensureTerrainTiles` on its own only
+   * ever fires past `TILE_FADE_START` (8×), and a fresh map opens at 1×.
+   * Without the warm-up, a reader whose first real move is a search flight
+   * straight past that threshold would ask for every tile the flight lands
+   * on all at once; this is the claim that they no longer have to.
+   */
+  await page.addInitScript(() => {
+    window.__terrainRequests = [];
+    const real = window.fetch.bind(window);
+    window.fetch = (input, init) => {
+      const url = typeof input === 'string' ? input : (input && input.url) || '';
+      if (/\/t-\d+-\d+-(green|relief)[-.]/.test(url)) window.__terrainRequests.push(url);
+      return real(input, init);
+    };
+  });
+
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  // Never touched the zoom, and this claim depends on not having to.
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+
+  await expect
+    .poll(() => page.evaluate(() => window.__terrainRequests.length), {
+      message: 'no terrain tile was ever requested while still at rest',
+      timeout: 15000,
+    })
+    .toBeGreaterThan(0);
+
+  // Still at rest when it happened — the fetch ran ahead of a zoom, not
+  // because of one.
+  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+});
+
 test('the land keeps its own ink when a terrain tile never arrives', async ({ page }) => {
   /*
    * **The flat ink fill is the land itself, not a stand-in for the tile grid**
