@@ -489,6 +489,7 @@ export const el = {
     showingFuture: 'Δείχνονται οι άγιοι που δεν είχαν ακόμη γεννηθεί.',
     showingLiveOnly: 'Δείχνονται μόνο οι άγιοι που ζούσαν αυτά τα έτη.',
     andMore: '{name} +{count}',
+    blobCount: '+{count}',
     yearFrom: 'Από το έτος',
     yearTo: 'Έως το έτος',
     era: 'Εποχή',

@@ -2792,3 +2792,134 @@ test('the land keeps its own ink when a terrain tile never arrives', async ({ pa
   ).toBeGreaterThan(allowed.covered * 0.9);
   await clean.close();
 });
+
+/* ---- blobs: a coordinate over BLOB_MAX (2026-09-04) ----------------------- */
+
+test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is named', async ({ page }) => {
+  /*
+   * Author: "only do this blob function wherever there are more than 8
+   * saints, at which point you will have 2 blobs — no point in having a
+   * single blob, the function of the blob is for large clusters" — the
+   * instruction that followed a mockup (`scatter-mockup/blobs.html`) built to
+   * settle what a blob looks like: the crowd's own already-scattered dots,
+   * grouped by an outline drawn around them (`lib/map-view.js`'s
+   * `capacitatedGroups`), the one under the screen's centre named, the rest
+   * printing a bare count.
+   *
+   * Nicomedia is the corpus's own case for this — 27 martyrs at one
+   * coordinate, the only place today over `BLOB_MAX` (8) — so this flies
+   * there rather than building a synthetic fixture.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  const blobCounts = JSON.parse(await canvas.getAttribute('data-blob-counts'));
+  const blobOpen = await canvas.getAttribute('data-blob-open');
+  /*
+   * Four blobs, not one — 27 over a cap of 8 is `Math.ceil(27 / 8)`, and the
+   * premise this whole test rests on: if the corpus ever grows this company
+   * to a multiple of 8 exactly, or shrinks it to 8 or fewer, this number
+   * moves and says so rather than the test quietly measuring nothing.
+   */
+  expect(blobCounts.length, `premise: Nicomedia's own count no longer needs blobs (got ${JSON.stringify(blobCounts)})`).toBeGreaterThan(1);
+  expect(blobCounts.reduce((a, b) => a + b, 0), 'every martyr accounted for, once').toBe(27);
+  for (const n of blobCounts) expect(n, `a blob of ${n}, over BLOB_MAX`).toBeLessThanOrEqual(8);
+  expect(blobOpen, 'a blob is open once the crowd has split').not.toBe('');
+
+  /*
+   * The open blob's own members are named individually; every other blob's
+   * members are drawn — `data-dots` still carries one entry per saint, not
+   * one per blob — but none of them holds a label. Reading it off `data-dots`
+   * rather than off the picture is the same "the pass that draws is the pass
+   * that knows" rule `data-labels`/`data-named` already keep.
+   */
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const blobbed = dots.filter((d) => d.blobId);
+  expect(blobbed.length, 'every one of the 27 is still its own dot').toBe(27);
+  const openMembers = blobbed.filter((d) => d.blobId === blobOpen);
+  const closedMembers = blobbed.filter((d) => d.blobId !== blobOpen);
+  expect(openMembers.length, 'premise: the open blob has members').toBeGreaterThan(0);
+  expect(closedMembers.length, 'premise: there is a closed blob to check').toBeGreaterThan(0);
+  const named = await namedOn(page);
+  for (const d of openMembers) expect(named, `${d.slug} is in the open blob and should be named`).toContain(d.slug);
+  for (const d of closedMembers) expect(named, `${d.slug} is in a closed blob and should not be named`).not.toContain(d.slug);
+});
+
+test('a coordinate at or under BLOB_MAX never blobs, however deep the zoom', async ({ page }) => {
+  // Constantinople's own located company is five — under the cap, so it is
+  // named exactly as it always was: every one of the five, once it is the
+  // saint the picture is centred nearest.
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  expect(await canvas.getAttribute('data-blobs'), 'five is under BLOB_MAX').toBe('0');
+  expect(await canvas.getAttribute('data-blob-open'), 'nothing to open').toBe('');
+});
+
+test('panning the crowd off screen closes its blob, and panning it back opens one again', async ({ page }) => {
+  /*
+   * The hysteresis itself is `tests/map-view.test.mjs`'s own job
+   * (`pointInHull`/`distToHull` against `BLOB_HYSTERESIS_PX`); this is the
+   * integration those unit tests cannot reach — that panning the *real*
+   * canvas actually moves `data-blob-open`, read off the attribute rather
+   * than off the picture.
+   *
+   * **Not a drag to one named sub-blob** — measured rather than assumed: at
+   * the desktop ceiling, Nicomedia's own 27 span barely 70 px, and the four
+   * sub-blobs' centroids sit within about fifteen of each other inside that,
+   * so their inflated hulls overlap through most of the crowd. A drag aimed
+   * at one sub-blob's own mean position routinely lands inside more than one
+   * hull at once, which is a fact about this corpus's own tightness at this
+   * zoom rather than a bug in the partition (`capacitatedGroups`'s own
+   * tests hold the thing that would be a bug: every member placed exactly
+   * once, no group over the cap). What panning can be asked to prove
+   * reliably is the coarser claim — that the mechanism reads the *screen*,
+   * not a position frozen at the press that opened it.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  const before = await canvas.getAttribute('data-blob-open');
+  expect(before, 'premise: a blob is open before the pan').not.toBe('');
+
+  const box = await canvas.boundingBox();
+  const midY = box.height / 2;
+  // Far enough that the whole crowd — under 70 px across — leaves the canvas
+  // entirely, not just the screen's own centre.
+  await page.mouse.move(box.x + box.width / 2, midY);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 - box.width * 0.8, midY, { steps: 8 });
+  await page.mouse.up();
+  await page.waitForTimeout(200);
+
+  expect(await canvas.getAttribute('data-blobs'), 'the crowd is off screen, so nothing is left to blob').toBe('0');
+  expect(await canvas.getAttribute('data-blob-open'), 'nothing open with the crowd off screen').toBe('');
+
+  // And back — the same drag, reversed, lands the crowd under the centre again.
+  await page.mouse.move(box.x + box.width / 2, midY);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + box.width * 0.8, midY, { steps: 8 });
+  await page.mouse.up();
+  await page.waitForTimeout(200);
+
+  const after = await canvas.getAttribute('data-blob-open');
+  expect(after, 'a blob opens again once the crowd is back on screen').not.toBe('');
+});

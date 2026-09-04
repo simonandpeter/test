@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { BLOB_MAX, HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, capacitatedGroups, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, relaxLayout, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -326,16 +326,25 @@ test('a rail wider than the world cannot zoom past the whole of it', () => {
 });
 
 /*
- * `spreadShared` — the ring that opens as the reader zooms, in degrees rather
- * than in screen pixels (author, 2026-09-01: "spread the dots around as
- * coordinates on the map if they're stacked ... still pretty tightly spaced
- * when zoomed in fully to communicate proximity").
+ * `spreadShared` — the crowd that opens as the reader zooms, in degrees
+ * rather than in screen pixels (author, 2026-09-01: "spread the dots around
+ * as coordinates on the map if they're stacked ... still pretty tightly
+ * spaced when zoomed in fully to communicate proximity").
  *
  * The unit is the whole of it, and the reason there are tests here at all:
  * the fan this replaces was measured in pixels, so it covered more country
  * the further out the reader went and never resolved at any zoom. A ground
  * offset is the opposite on both counts — invisible at rest, opening only as
  * the picture magnifies — and neither property is visible in a screenshot.
+ *
+ * **The packing itself changed from concentric rings to a relaxed random
+ * scatter on 2026-09-04** (author: "make the dot scatter according to this
+ * logic", a standalone mockup — `scatter-mockup/index.html` — comparing four
+ * candidates against the shipped rings at the Nicomedia martyrs' own count).
+ * Every bound below is unchanged in *kind* — small at rest, resolvable at the
+ * ceiling, round on the picture, growing as the square root — but two of the
+ * tests that pinned a ring's own exact geometry no longer describe what is
+ * drawn, and are rewritten rather than merely renamed.
  */
 
 test('a saint standing alone is not moved at all', () => {
@@ -365,55 +374,84 @@ test('saints at one coordinate are moved off it, and each somewhere different', 
   assert.deepEqual(out.map((p) => p.slug).sort(), ['john', 'moses']);
 });
 
-test('the ring is small enough to be inside its own dot at rest', () => {
+test('the scatter is a pure function of the coordinate, not a fresh roll every paint', () => {
+  /*
+   * `paintCanvas` calls this every frame of a drag. A `Math.random()` scatter
+   * would make a crowd swim under the reader's own finger; seeding from the
+   * group's own key (`lib/map-view.js`'s `scatterRand`) is what keeps two
+   * calls with the same input landing on the same pixels.
+   */
+  const points = Array.from({ length: 24 }, (_, i) => ({ lon: 29.92, lat: 40.77, slug: `m${i}` }));
+  assert.deepEqual(spreadShared(points), spreadShared(points));
+});
+
+test('the crowd is small enough to be inside its own dot at rest', () => {
   /*
    * The bound that keeps this from being the old fan. At scale 1 a 1280 px
-   * picture spans 360°, so a degree is 3.6 px: the whole ring has to be well
+   * picture spans 360°, so a degree is 3.6 px: the whole crowd has to be well
    * under the 2.5 px radius of the mark it came from, or the resting map
    * shows a smudge where it should show one honest dot.
    */
   const out = spreadShared(Array.from({ length: 24 }, (_, i) => ({ lon: 29.92, lat: 40.77, slug: `m${i}` })));
   const worst = Math.max(...out.map((p) => Math.hypot(p.lon - 29.92, p.lat - 40.77)));
-  assert.ok(worst * (1280 / 360) < 2.5, `the ring is ${(worst * (1280 / 360)).toFixed(2)}px across at rest`);
+  assert.ok(worst * (1280 / 360) < 2.5, `the crowd is ${(worst * (1280 / 360)).toFixed(2)}px across at rest`);
 });
 
 test('and large enough to be countable at the deepest zoom', () => {
-  // The same 24 at 240x: a degree is 853 px there, and neighbours have to
-  // clear `MERGE_PX` or the map has spread them and then merged them again.
-  const out = spreadShared(Array.from({ length: 24 }, (_, i) => ({ lon: 29.92, lat: 40.77, slug: `m${i}` })));
+  /*
+   * The same 24 at 240x: a degree of longitude is 853 px there, and
+   * neighbours have to clear `MERGE_PX` or the map has spread them and then
+   * merged them again.
+   *
+   * **The latitude difference is divided back by `squash` before it is
+   * measured** — `spreadShared` multiplied it by `squash` on the way out
+   * precisely so the *drawn*, Mercator-projected picture reads round
+   * (`mergeDots` runs on real projected screen coordinates, which already
+   * undo this the way `project` itself does); measuring the raw degree
+   * difference instead double-counts the correction and makes a pair that
+   * happens to sit mostly north-south of each other read as closer than the
+   * reader will ever see them. A relaxed scatter, unlike the ring it
+   * replaced, has no reason to keep every pair equally oriented, so this
+   * seed (29.92, 40.77) is the one on record that found the gap: 10.8px
+   * measured the old way against a true 14.2px.
+   */
+  const lon = 29.92;
+  const lat = 40.77;
+  const squash = Math.cos((lat * Math.PI) / 180);
+  const out = spreadShared(Array.from({ length: 24 }, (_, i) => ({ lon, lat, slug: `m${i}` })));
   const px = (1280 * 240) / 360;
   let closest = Infinity;
   for (let i = 0; i < out.length; i += 1) {
     for (let j = i + 1; j < out.length; j += 1) {
-      closest = Math.min(closest, Math.hypot(out[i].lon - out[j].lon, out[i].lat - out[j].lat) * px);
+      const dlon = out[i].lon - out[j].lon;
+      const dlat = (out[i].lat - out[j].lat) / squash;
+      closest = Math.min(closest, Math.hypot(dlon, dlat) * px);
     }
   }
   assert.ok(closest > MERGE_PX, `two of them are ${closest.toFixed(1)}px apart at full zoom`);
 });
 
-test('the ring is round on the picture, which means squashed in latitude', () => {
+test('the crowd is drawn round on the picture, which means squashed in latitude', () => {
   /*
-   * Mercator stretches latitude by 1/cos(lat), so a ring of equal degrees
-   * draws as a tall ellipse — at Kyiv half again as tall as it is wide, and
-   * worse further north. The latitude offsets are multiplied by cos(lat) to
-   * undo exactly that, so this asserts the *drawn* ring is round: the widest
-   * north-south offset, stretched back by 1/cos, matches the east-west one.
+   * Mercator stretches latitude by 1/cos(lat), so an offset of equal degrees
+   * draws taller than it is wide — at Kyiv half again as tall, and worse
+   * further north. `spreadShared` multiplies only the latitude component of
+   * `relaxLayout`'s own idealised offset by `cos(lat)` to undo exactly that,
+   * so this pins the *composition* directly against the raw layout rather
+   * than against any particular shape it produces — the relaxed scatter is
+   * not a circle the way the ring it replaced was, so there is no longer one
+   * shared radius to check every point against.
    */
+  const lon = 30.52;
   const lat = 50.45;
-  /*
-   * Four, so every one of them is on the first ring: the first version of
-   * this compared the widest north-south offset with the widest east-west
-   * one over *eight* points, which straddle two rings, and it was measuring
-   * the ring count rather than the squash.
-   */
-  const out = spreadShared(Array.from({ length: 4 }, (_, i) => ({ lon: 30.52, lat, slug: `s${i}` })));
   const squash = Math.cos((lat * Math.PI) / 180);
-  const drawn = out.map((p) => Math.hypot(p.lon - 30.52, (p.lat - lat) / squash));
-  // Every point the same distance from the centre once latitude is stretched
-  // back the way Mercator will stretch it: a circle on the picture.
-  for (const r of drawn) assert.ok(Math.abs(r - drawn[0]) < 1e-9, `${r} against ${drawn[0]}`);
-  // And a circle rather than a point: it is the ring's own radius.
-  assert.ok(Math.abs(drawn[0] - 0.0167) < 1e-9, `radius ${drawn[0]}`);
+  const points = Array.from({ length: 6 }, (_, i) => ({ lon, lat, slug: `s${i}` }));
+  const out = spreadShared(points);
+  const raw = relaxLayout(6, 0.0167, `${lon},${lat}`);
+  for (let i = 0; i < out.length; i += 1) {
+    assert.ok(Math.abs(out[i].lon - lon - raw[i].x) < 1e-9, `lon offset ${i}`);
+    assert.ok(Math.abs((out[i].lat - lat) / squash - raw[i].y) < 1e-9, `lat offset ${i}`);
+  }
 });
 
 test('a bigger group grows as the square root, not with the count', () => {
@@ -421,10 +459,103 @@ test('a bigger group grows as the square root, not with the count', () => {
     const out = spreadShared(Array.from({ length: n }, (_, i) => ({ lon: 0, lat: 0, slug: `s${i}` })));
     return Math.max(...out.map((p) => Math.hypot(p.lon, p.lat)));
   };
-  // Twenty-four martyrs at one coordinate sit inside three rings, not a wheel
-  // twelve times the width of a pair — the same reasoning the old fan's own
-  // concentric rings were written with, kept when the unit changed.
-  assert.ok(ringOf(24) < ringOf(2) * 4, `24 spread to ${ringOf(24)} against a pair's ${ringOf(2)}`);
+  /*
+   * Six rather than a pair: with only two points, relaxation does nothing
+   * more than push them `radiusDeg` apart from wherever the random start
+   * happened to land them, so a pair's own distance from centre is mostly
+   * the seed talking and swings widely from one coordinate to the next —
+   * measured over 500 coordinates, the 24-vs-2 ratio ranged from 2.3 to 6.5.
+   * Six is dense enough that relaxation is actually packing them, and the
+   * same sweep held under 3.1 against a threshold of 4.
+   */
+  assert.ok(ringOf(24) < ringOf(6) * 4, `24 spread to ${ringOf(24)} against six's ${ringOf(6)}`);
+});
+
+/*
+ * `capacitatedGroups`/`convexHull`/`inflateHull`/`pointInHull`/`distToHull` —
+ * the blobs a crowd over `BLOB_MAX` is partitioned into (author, 2026-09-04:
+ * "only do this blob function wherever there are more than 8 saints, at
+ * which point you will have 2 blobs — no point in having a single blob, the
+ * function of the blob is for large clusters"). `views/map.js` reads
+ * `BLOB_MAX` to decide *whether* to call any of this at all; these tests are
+ * the shape of what it gets back once it does.
+ */
+
+test('a group at or under the cap is not split', () => {
+  const pts = Array.from({ length: BLOB_MAX }, (_, i) => ({ x: i, y: 0 }));
+  const groups = capacitatedGroups(pts, BLOB_MAX, 'k');
+  assert.deepEqual(groups, [pts.map((_, i) => i)]);
+});
+
+test('a group over the cap splits into groups of at most the cap, covering every point once', () => {
+  const pts = Array.from({ length: 27 }, (_, i) => ({ x: Math.cos(i) * 10, y: Math.sin(i) * 10 }));
+  const groups = capacitatedGroups(pts, 8, 'nicomedia');
+  assert.equal(groups.length, Math.ceil(27 / 8));
+  for (const g of groups) assert.ok(g.length <= 8, `a group of ${g.length}`);
+  assert.deepEqual([...groups.flat()].sort((a, b) => a - b), pts.map((_, i) => i));
+});
+
+test('the same crowd and seed partitions the same way every time', () => {
+  // `views/map.js` calls this once a paint; a partition that reshuffled
+  // itself from one frame to the next would read as the crowd rearranging
+  // under the reader mid-drag, the same bug `spreadShared`'s own determinism
+  // test exists for.
+  const pts = Array.from({ length: 20 }, (_, i) => ({ x: (i * 37) % 11, y: (i * 53) % 7 }));
+  assert.deepEqual(capacitatedGroups(pts, 8, 'seed-a'), capacitatedGroups(pts, 8, 'seed-a'));
+});
+
+test('capacitated groups are invariant to a uniform scale and translation', () => {
+  /*
+   * The reason `views/map.js` can compute this once, on the group's own
+   * lon/lat offsets, rather than every paint on screen pixels: panning and
+   * zooming apply the same scale and the same translation to every point in
+   * a group at once, and nearest-centroid-with-a-free-seat only ever compares
+   * *relative* distances — which a uniform scale and translation cannot
+   * reorder.
+   */
+  const pts = Array.from({ length: 15 }, (_, i) => ({ x: Math.cos(i * 1.3) * 5, y: Math.sin(i * 1.3) * 5 }));
+  const transformed = pts.map((p) => ({ x: p.x * 240 + 1000, y: p.y * 240 + 400 }));
+  assert.deepEqual(capacitatedGroups(pts, 8, 's'), capacitatedGroups(transformed, 8, 's'));
+});
+
+test('a hull under three points is handed back unchanged', () => {
+  const pts = [{ x: 0, y: 0 }, { x: 1, y: 1 }];
+  assert.deepEqual(convexHull(pts), pts);
+  assert.deepEqual(convexHull([]), []);
+});
+
+test('the hull of a square with a point in the middle is the square, not the middle', () => {
+  const square = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 10, y: 10 }, { x: 0, y: 10 }];
+  const centre = { x: 5, y: 5 };
+  const hull = convexHull([...square, centre]);
+  assert.equal(hull.length, 4);
+  assert.ok(!hull.includes(centre), 'the interior point is not a hull vertex');
+  for (const corner of square) assert.ok(hull.includes(corner), `${JSON.stringify(corner)} missing from the hull`);
+});
+
+test('inflating a hull pushes every vertex further from its own centre', () => {
+  const square = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 10, y: 10 }, { x: 0, y: 10 }];
+  const inflated = inflateHull(square, 5);
+  const centre = { x: 5, y: 5 };
+  for (let i = 0; i < square.length; i += 1) {
+    const before = Math.hypot(square[i].x - centre.x, square[i].y - centre.y);
+    const after = Math.hypot(inflated[i].x - centre.x, inflated[i].y - centre.y);
+    assert.ok(after > before, `vertex ${i} did not move outward`);
+  }
+});
+
+test('a point is reported inside a hull it is inside, and not one it is outside', () => {
+  const square = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 10, y: 10 }, { x: 0, y: 10 }];
+  assert.equal(pointInHull({ x: 5, y: 5 }, square), true);
+  assert.equal(pointInHull({ x: 20, y: 20 }, square), false);
+  // Under three points there is no polygon to be inside of.
+  assert.equal(pointInHull({ x: 0, y: 0 }, [{ x: 0, y: 0 }, { x: 1, y: 1 }]), false);
+});
+
+test('the distance to a hull is zero on its own boundary and positive beyond it', () => {
+  const square = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 10, y: 10 }, { x: 0, y: 10 }];
+  assert.ok(Math.abs(distToHull({ x: 5, y: 0 }, square)) < 1e-9);
+  assert.ok(Math.abs(distToHull({ x: 15, y: 5 }, square) - 5) < 1e-9);
 });
 
 /*

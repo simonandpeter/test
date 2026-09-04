@@ -623,7 +623,7 @@ screen, dropped only once the whole of it has left the box (2026-08-31,
 `map-labels.js`) — its far edge crossing the boundary used to hide the whole
 name outright; the canvas already clips whatever is drawn past its own
 bounds, so there was nothing this needed to do but stop refusing to try.
-**Saints at one identical coordinate are spread into a tight ring, in
+**Saints at one identical coordinate are spread into a tight crowd, in
 degrees** (`spreadShared`, `SPREAD_DEG` 0.0167° ≈ 1.8 km — author,
 2026-09-01: "spread the dots around as coordinates on the map if they're
 stacked ... still pretty tightly spaced when zoomed in fully to communicate
@@ -631,10 +631,83 @@ proximity"). **The unit is the whole difference from the fan below**: a
 ground offset is sub-pixel with the world on screen, so `mergeDots` still
 collapses the group into one honest mark, and it opens into a constellation
 only as the reader goes in — ~10 px between neighbours at 240× on a 900 px
-picture. The ring's latitude is multiplied by `cos(lat)` so it draws round
-under Mercator rather than as an ellipse. This reverses, deliberately, the
-"identical coordinates never separate" rule written hours earlier the same
-day; the map tests that pinned it were rewritten rather than deleted.
+picture.
+
+**The packing inside that spread changed from concentric rings to a relaxed
+random scatter on 2026-09-04** (author: "draw blobs around them" led with a
+standalone mockup, `scatter-mockup/index.html`, comparing four candidates
+against the shipped rings at the Nicomedia martyrs' own count — rings +
+jitter, Poisson-disc rejection, a phyllotaxis spiral, and random-start
+min-separation relaxation, which is the one chosen). `relaxLayout`
+(`lib/map-view.js`) seeds `n` points at random inside a disc sized to
+`sqrt(n)` — the ring layout's own reason twenty-four martyrs sat inside three
+rings rather than a wheel three times as wide, kept — then runs sixty passes
+pushing any pair closer than `radiusDeg` apart; the RNG (`scatterRand`, a
+local mulberry32 seeded by an FNV-1a hash of the group's own `lon,lat`) is
+what keeps this from being a fresh roll every paint, since `paintCanvas` calls
+it every frame of a drag. **Computed once, on the group's own coordinate, not
+in screen pixels** — capacity-constrained k-means below shares this reasoning
+explicitly, but it is already true here: a uniform scale and translation
+(what panning and zooming are) cannot reorder relative distances, so the
+scatter a group settles into does not need recomputing as the reader moves.
+The latitude of the *result* is still multiplied by `cos(lat)` before it
+reaches `lon`/`lat`, exactly as the ring did, so the crowd still draws round
+under Mercator rather than as an ellipse — `relaxLayout` itself works in an
+idealised, unsquashed unit for exactly this reason, and `spreadShared` applies
+the correction once, at the end. This reverses, deliberately, the "identical
+coordinates never separate" rule written hours before the ring shipped; the
+map tests that pinned the ring's own exact geometry (every point at one
+shared radius from centre) no longer describe what is drawn and were rewritten
+rather than merely renamed — the bounds they check (small at rest, resolved
+by the ceiling, round on the picture, growing as the square root) are
+unchanged in *kind*.
+
+**A coordinate with more than `BLOB_MAX` (8) saints is partitioned into blobs
+of at most that many, and only the one under the screen's own centre is
+named** (2026-09-04, the same sitting, following the mockup's own
+`scatter-mockup/blobs.html`: "only do this blob function wherever there are
+more than 8 saints, at which point you will have 2 blobs — no point in
+having a single blob, the function of the blob is for large clusters"). The
+mockup went through two shapes before this one: the first tried giving each
+blob its *own* scattered sub-position, offset from the shared coordinate at a
+coarser radius than the members inside it — reversed the same sitting
+("dots exactly as they were scattered, and the blobs are drawn around that
+scattering") once the author asked to see the group's *actual* relaxed
+scatter with hulls drawn around subsets of it, not a second layout invented
+on top. `capacitatedGroups` (`lib/map-view.js`, pure, unit-tested) is that
+subset-finder: nearest-centroid-with-a-free-seat, sorted by distance and
+reassigned across a handful of Lloyd passes, so no group ever exceeds the cap
+even where the geometry is lopsided. Read on the group's own pre-projection
+coordinate for the same invariance reason `relaxLayout` above is — panning
+and zooming cannot reorder which points are nearest which centroid — so
+`views/map.js` computes the partition once, before `spreadShared` moves
+`lon`/`lat`, not fresh on screen pixels every frame.
+
+Each blob's outline is `convexHull` of its members, inflated (`inflateHull`,
+16 px) and traced as a rounded shape rather than a polygon with corners — a
+cheap "blobify a hull" trick, each edge's own midpoint standing in for a
+curve anchor. **Which blob is open persists across paints** (`activeBlobId`,
+alongside `selected` and `focus`), decided by `pointInHull`/`distToHull`
+against the screen's own centre with `BLOB_HYSTERESIS_PX` (20) of margin
+before a different blob takes over — without it, a reader whose drag stops
+near two blobs' shared edge would watch the names swap on every further
+pixel. Only ink, never gold: which blob is open is a fact about where the
+reader is looking, not a veneration finding, and §7 gives gold to that alone.
+A blob that has not yet fully separated into individually-visible dots — the
+whole coordinate is still one `mergeDots` mark, or partway there — is left
+exactly as that mark already draws; there is no clean outline to draw around
+dots that have not resolved into real positions yet. The closed blobs print
+`STRINGS.map.blobCount` ("+{count}") at their own outline, bare rather than
+led by a name the way `andMore` is — a blob is not a collapsed mark standing
+in for a saint too close to separate, it is a *readable* group of real,
+individually-drawn dots the picture is choosing not to name right now, so
+there is no one of them to lead the count. `data-blobs`, `data-blob-open` and
+`data-blob-counts` publish the state for the suite, and `data-dots` carries
+each dot's own `blobId`, the same "the pass that draws is the pass that
+knows" rule every other canvas instrument on this page already keeps.
+Constantinople (5) and the Caves (2) are both under `BLOB_MAX` and never
+partition at all — the corpus's only coordinate over it today is Nicomedia's
+27, which is why the mockup built its case there.
 
 **Dots the reader cannot tell apart are one mark, at a real coordinate**
 (`mergeDots`, `lib/map-view.js`, pure, unit-tested; 2026-09-01). This
@@ -739,7 +812,14 @@ rather than navigating** — a dot is already the door to a saint. It flies
 through `wireZoom`'s own returned `set`, so the zoom readout moves with the
 picture; assigning `view` directly left the chrome saying 1.0×. The flight
 is announced into an `aria-live` box, since the canvas is one opaque image
-to a screen reader.
+to a screen reader. **`type="search"` (2026-09-04)**, matching the All
+Saints field (`index/controls.js`): the platform's own clear "×" at the
+field's own right edge, offered for free rather than built and wired to
+`close()` by hand. `input.map-search-input` in `map.css`, not the bare class
+— `index.css`'s generic `input[type='search']` rule is an element-plus-
+attribute selector, which outweighs a bare class on specificity regardless of
+load order, and would otherwise have handed this field the Index's own
+smaller font size and tighter padding the moment the attribute made it match.
 
 **The zoom controls are a scale readout plus, on a pointer device, `+`/`−`**
 (author, 2026-08-31). `Whole world` is gone at every width — Home and `0`

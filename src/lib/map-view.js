@@ -225,19 +225,102 @@ export const MERGE_PX = 10;
 export const SPREAD_DEG = 0.0167;
 
 /**
- * Spreads saints recorded at one identical coordinate into a tight ring about
- * it, in lon/lat rather than in pixels — see `SPREAD_DEG` for why the unit is
- * the point.
+ * A seeded, deterministic 32-bit generator — mulberry32 — so a group's own
+ * scatter is a pure function of its coordinate and holds still across every
+ * repaint rather than reshuffling under the reader's own drag. Seeded from an
+ * FNV-1a hash of the group's key, the same hashing shape `shuffleKey`
+ * (`lib/index-filters.js`) already uses for the Index's own shuffle, kept
+ * local rather than imported — this file is pure and dependency-free on
+ * purpose, and the two features share nothing else.
+ */
+function scatterRand(key) {
+  let h = 0x811c9dc5;
+  const text = `map-scatter:${key}`;
+  for (let i = 0; i < text.length; i += 1) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  let a = h >>> 0;
+  return () => {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * A crowd at one coordinate settles into an organic cluster rather than a
+ * wheel (author, 2026-09-04: "make the dot scatter according to this logic",
+ * a standalone mockup comparing four candidates against the shipped rings —
+ * `scatter-mockup/index.html`, not part of the app — at the Nicomedia
+ * martyrs' own count. Random start, min-separation relaxation was the one
+ * chosen; twenty-four points seeded at random inside a disc, then pushed
+ * apart in place wherever a pair is closer than `radiusDeg` — the same
+ * spacing the ring version's own neighbours never closed either — repeated
+ * until the crowd stops overlapping itself. `discR` still grows with
+ * `sqrt(n)`, which is the ring layout's own reason twenty-four martyrs sit
+ * inside a cluster three rings wide rather than a wheel three times as wide;
+ * only the packing inside that disc changed, from a machined lattice to
+ * something that reads as a real crowd standing in a place rather than a
+ * diagram of one.
+ *
+ * Exported despite being `spreadShared`'s own detail, the way `mergeDots` and
+ * `fitBounds` already are: it is where the packing itself is worth pinning —
+ * `spreadShared` only adds the squash correction on top, and testing that
+ * composition needs the raw, unsquashed points this returns.
+ */
+export function relaxLayout(n, radiusDeg, key) {
+  const rand = scatterRand(key);
+  const minSep = radiusDeg;
+  const discR = radiusDeg * Math.max(0.8, Math.sqrt(n) * 0.45);
+  const pts = [];
+  for (let i = 0; i < n; i += 1) {
+    const a = rand() * 2 * Math.PI;
+    const r = Math.sqrt(rand()) * discR;
+    pts.push({ x: r * Math.cos(a), y: r * Math.sin(a) });
+  }
+  // Sixty passes: measured against 1000 random groups of 24 (this file's own
+  // ceiling in the corpus today), the closest pair never settled under
+  // `radiusDeg` and the outer edge never overran twice `discR`'s own start.
+  for (let pass = 0; pass < 60; pass += 1) {
+    for (let i = 0; i < n; i += 1) {
+      for (let j = i + 1; j < n; j += 1) {
+        const dx = pts[j].x - pts[i].x;
+        const dy = pts[j].y - pts[i].y;
+        const d = Math.hypot(dx, dy) || 0.0001;
+        if (d >= minSep) continue;
+        const push = (minSep - d) / 2;
+        const ux = dx / d;
+        const uy = dy / d;
+        pts[i].x -= ux * push;
+        pts[i].y -= uy * push;
+        pts[j].x += ux * push;
+        pts[j].y += uy * push;
+      }
+    }
+  }
+  return pts;
+}
+
+/**
+ * Spreads saints recorded at one identical coordinate into a tight cluster
+ * about it, in lon/lat rather than in pixels — see `SPREAD_DEG` for why the
+ * unit is the point.
  *
  * Grouping is on the exact coordinate, so this touches only the saints no zoom
  * could ever separate on its own; two saints a kilometre apart are left alone,
  * the map already telling them apart the moment it can.
  *
- * **The ring is drawn round on the picture, not on the globe.** Mercator
- * stretches latitude by `1/cos(lat)`, so a ring of equal degrees would draw as
- * a tall ellipse at Kyiv and a taller one at Solovki; multiplying the latitude
- * offset by `cos(lat)` is what makes the constellation a circle where the
- * reader is looking at it.
+ * **The cluster is drawn round on the picture, not on the globe.** Mercator
+ * stretches latitude by `1/cos(lat)`, so an offset of equal degrees would draw
+ * taller than it is wide at Kyiv and taller still at Solovki; multiplying the
+ * latitude offset by `cos(lat)` is what makes the crowd read true where the
+ * reader is looking at it. `relaxLayout` works in an idealised, unsquashed
+ * unit — the same one the mockup calls px — for exactly this reason: doing the
+ * physics in a space where a circle is a circle, and correcting for the
+ * picture only once, at the end.
  *
  * `points` is any array carrying `{ lon, lat }`. Returns a new array in the
  * same order, each point's own fields kept and its coordinates moved.
@@ -250,42 +333,171 @@ export function spreadShared(points, radiusDeg = SPREAD_DEG) {
     groups.get(key).push(p);
   }
   const moved = new Map();
-  for (const group of groups.values()) {
+  for (const [key, group] of groups) {
     if (group.length === 1) continue;
     const { lon, lat } = group[0];
     // Radians, and never at a pole: `cos` of 90° is 0 and would collapse the
-    // ring into a horizontal line.
+    // cluster into a horizontal line.
     const squash = Math.max(0.15, Math.cos((lat * Math.PI) / 180));
-    /*
-     * Concentric rings filled from the inside out, so the radius grows as the
-     * square root of the group rather than with it: twenty-four martyrs at
-     * Nicomedia sit inside three rings rather than one wheel three times the
-     * width. How many fit on a ring is its own circumference over the
-     * spacing, so no two neighbours are ever closer than a pair would be.
-     */
-    let placed = 0;
-    let ring = 1;
-    while (placed < group.length) {
-      const r = radiusDeg * ring;
-      const capacity = Math.max(1, Math.floor((2 * Math.PI * r) / radiusDeg));
-      const here = Math.min(capacity, group.length - placed);
-      for (let i = 0; i < here; i += 1) {
-        // Half a step of turn on every other ring, so the rings' own dots do
-        // not line up into spokes radiating out of the middle.
-        const angle = (2 * Math.PI * i) / here - Math.PI / 2 + (ring % 2 ? 0 : Math.PI / here);
-        moved.set(group[placed + i], {
-          lon: lon + r * Math.cos(angle),
-          lat: lat + r * Math.sin(angle) * squash,
-        });
-      }
-      placed += here;
-      ring += 1;
+    const pts = relaxLayout(group.length, radiusDeg, key);
+    for (let i = 0; i < group.length; i += 1) {
+      moved.set(group[i], { lon: lon + pts[i].x, lat: lat + pts[i].y * squash });
     }
   }
   return points.map((p) => {
     const at = moved.get(p);
     return at ? { ...p, lon: at.lon, lat: at.lat } : p;
   });
+}
+
+/**
+ * A shared coordinate this crowded stops being one picture's worth of names
+ * (author, 2026-09-04: "only do this blob function wherever there are more
+ * than 8 saints, at which point you will have 2 blobs — no point in having a
+ * single blob, the function of the blob is for large clusters"). Below this
+ * a group is left exactly as `mergeDots` and the label layout already treat
+ * it; only a coordinate over the line is ever partitioned into blobs at all,
+ * so Constantinople's five and the Caves' two never do.
+ */
+export const BLOB_MAX = 8;
+
+/**
+ * Partitions a crowd of points into groups of at most `maxPer`, without
+ * moving a single one of them — capacity-constrained k-means. Plain k-means
+ * can leave a cluster over capacity wherever the geometry is lopsided (a
+ * corner of the scatter with nine natural neighbours and an eight-seat
+ * limit), so assignment is nearest-centroid-with-a-free-seat: every
+ * (point, centroid) pair is sorted by distance once a pass, and a point takes
+ * the nearest centroid that still has room. A handful of Lloyd passes —
+ * recompute each centroid as its members' own mean, reassign — settles the
+ * groups into something compact and roughly even.
+ *
+ * Seeded like `relaxLayout`'s own scatter, so the same crowd partitions the
+ * same way on every call: `views/map.js` calls this once a paint, on
+ * whichever coordinates currently have more than `BLOB_MAX` visible members,
+ * and a partition that reshuffled itself from one frame to the next would
+ * read as the crowd rearranging under the reader mid-drag.
+ *
+ * `points` is any array carrying `{x, y}` — lon/lat, screen px, or the
+ * `relaxLayout` offsets themselves all work, since capacity-constrained
+ * k-means is invariant to a uniform scale and translation and every one of
+ * those is one. Returns arrays of *indices* into `points`, one per group,
+ * groups with no members omitted.
+ */
+export function capacitatedGroups(points, maxPer, seed) {
+  const k = Math.max(1, Math.ceil(points.length / maxPer));
+  if (k === 1) return [points.map((_, i) => i)];
+  const rand = scatterRand(seed);
+  const pool = points.map((_, i) => i);
+  let centroids = [];
+  for (let i = 0; i < k; i += 1) {
+    const j = Math.floor(rand() * pool.length);
+    centroids.push({ x: points[pool[j]].x, y: points[pool[j]].y });
+    pool.splice(j, 1);
+  }
+  let assignment = new Array(points.length).fill(-1);
+  for (let iter = 0; iter < 8; iter += 1) {
+    const pairs = [];
+    for (let i = 0; i < points.length; i += 1) {
+      for (let c = 0; c < k; c += 1) {
+        pairs.push({ i, c, d: Math.hypot(points[i].x - centroids[c].x, points[i].y - centroids[c].y) });
+      }
+    }
+    pairs.sort((a, b) => a.d - b.d);
+    assignment.fill(-1);
+    const counts = new Array(k).fill(0);
+    for (const { i, c } of pairs) {
+      if (assignment[i] !== -1 || counts[c] >= maxPer) continue;
+      assignment[i] = c;
+      counts[c] += 1;
+    }
+    const sums = Array.from({ length: k }, () => ({ x: 0, y: 0, n: 0 }));
+    for (let i = 0; i < points.length; i += 1) {
+      const s = sums[assignment[i]];
+      s.x += points[i].x;
+      s.y += points[i].y;
+      s.n += 1;
+    }
+    centroids = sums.map((s, c) => (s.n ? { x: s.x / s.n, y: s.y / s.n } : centroids[c]));
+  }
+  const groups = Array.from({ length: k }, () => []);
+  assignment.forEach((c, i) => groups[c].push(i));
+  return groups.filter((g) => g.length);
+}
+
+/**
+ * The convex hull of a `capacitatedGroups` group, monotone chain — the
+ * outline `views/map.js` traces its blob from. Fewer than three points has no
+ * hull to speak of and is handed back unchanged; the caller draws those as a
+ * halo around the one or two dots instead of a polygon with nothing to bound.
+ */
+export function convexHull(points) {
+  if (points.length < 3) return points.slice();
+  const pts = [...points].sort((a, b) => a.x - b.x || a.y - b.y);
+  const cross = (o, a, b) => (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);
+  const lower = [];
+  for (const p of pts) {
+    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], p) <= 0) lower.pop();
+    lower.push(p);
+  }
+  const upper = [];
+  for (let i = pts.length - 1; i >= 0; i -= 1) {
+    const p = pts[i];
+    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], p) <= 0) upper.pop();
+    upper.push(p);
+  }
+  lower.pop();
+  upper.pop();
+  return lower.concat(upper);
+}
+
+/** A hull pushed outward from its own centroid by `pad`, so a blob has room
+ *  around each dot rather than passing through their centres. */
+export function inflateHull(hull, pad) {
+  if (!hull.length) return hull;
+  const cx = hull.reduce((s, p) => s + p.x, 0) / hull.length;
+  const cy = hull.reduce((s, p) => s + p.y, 0) / hull.length;
+  return hull.map((p) => {
+    const dx = p.x - cx;
+    const dy = p.y - cy;
+    const d = Math.hypot(dx, dy) || 1;
+    return { x: p.x + (dx / d) * pad, y: p.y + (dy / d) * pad };
+  });
+}
+
+/** Standard ray-casting point-in-polygon, for "is the screen's centre inside
+ *  this blob" — `hull` under three points is never entered. */
+export function pointInHull(pt, hull) {
+  if (hull.length < 3) return false;
+  let inside = false;
+  for (let i = 0, j = hull.length - 1; i < hull.length; j = i, i += 1) {
+    const xi = hull[i].x;
+    const yi = hull[i].y;
+    const xj = hull[j].x;
+    const yj = hull[j].y;
+    const crosses = yi > pt.y !== yj > pt.y && pt.x < ((xj - xi) * (pt.y - yi)) / (yj - yi) + xi;
+    if (crosses) inside = !inside;
+  }
+  return inside;
+}
+
+/** The nearest a point comes to a hull's own boundary — the margin
+ *  `views/map.js`'s centring hysteresis is measured against once the
+ *  crosshair has left the hull it was inside. */
+export function distToHull(pt, hull) {
+  let best = Infinity;
+  for (let i = 0, j = hull.length - 1; i < hull.length; j = i, i += 1) {
+    const a = hull[j];
+    const b = hull[i];
+    const abx = b.x - a.x;
+    const aby = b.y - a.y;
+    const len2 = abx * abx + aby * aby || 1;
+    const t = Math.max(0, Math.min(1, ((pt.x - a.x) * abx + (pt.y - a.y) * aby) / len2));
+    const px = a.x + abx * t;
+    const py = a.y + aby * t;
+    best = Math.min(best, Math.hypot(pt.x - px, pt.y - py));
+  }
+  return best;
 }
 
 /**

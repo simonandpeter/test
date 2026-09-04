@@ -145,7 +145,12 @@ html[data-route='map'] body {
   width: min(20rem, calc(100% - var(--space-6)));
 }
 
-.map-search-input {
+/* `input.map-search-input`, not `.map-search-input` alone: `index.css`'s
+   generic `input[type='search']` rule is an element-plus-attribute selector,
+   which outweighs a bare class on specificity regardless of which stylesheet
+   loads second, and would otherwise hand this field the Index's own smaller
+   font size and tighter padding the moment `type="search"` made it match. */
+input.map-search-input {
   width: 100%;
   padding: var(--space-2) var(--space-3);
   font-family: var(--font-utility);

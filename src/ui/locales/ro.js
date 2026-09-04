@@ -489,6 +489,7 @@ export const ro = {
     showingFuture: 'Se arată sfinții încă nenăscuți.',
     showingLiveOnly: 'Se arată doar sfinții care trăiau în acești ani.',
     andMore: '{name} +{count}',
+    blobCount: '+{count}',
     yearFrom: 'Din anul',
     yearTo: 'Până în anul',
     era: 'Era',

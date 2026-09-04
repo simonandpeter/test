@@ -503,6 +503,7 @@ export const ru = {
     showingFuture: 'Показаны святые, ещё не рождённые.',
     showingLiveOnly: 'Показаны только святые, жившие в эти годы.',
     andMore: '{name} +{count}',
+    blobCount: '+{count}',
     yearFrom: 'С года',
     yearTo: 'По год',
     era: 'Эра',

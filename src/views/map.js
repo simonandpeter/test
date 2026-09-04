@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, coverFractions, fitBounds, maxScaleFor, mergeDots, panBy, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { BLOB_MAX, HOME, MAX_SCALE, MIN_SCALE, capacitatedGroups, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -255,6 +255,17 @@ let focus = null;
 const selectFade = { value: 0, lastT: 0 };
 
 /**
+ * Which blob is open — the one place on the picture, across every coordinate
+ * with more than `BLOB_MAX` saints, whose own members are currently named
+ * (author, 2026-09-04, and see `paintCanvas`'s own comment on `blobActiveAt`
+ * for the hysteresis this exists to hold). Persists across paints for exactly
+ * the reason `selected` and `focus` do: which blob is open is a fact about
+ * the visit, not about one frame, and recomputing it from nothing every paint
+ * would have nothing to be sticky *against*.
+ */
+let activeBlobId = null;
+
+/**
  * Advances the fade toward wherever `focus` now puts it, and returns the
  * multiplier a saint who is *not* the chosen one is drawn at.
  *
@@ -470,6 +481,25 @@ const labelLastAt = new Map();
  * hold this line.
  */
 const GLOW_MAX = 0.5;
+
+/**
+ * How far a blob's own outline stands off the dots it holds, in px — the
+ * same "room around each dot rather than a line through their centres"
+ * `scatter-mockup/blobs.html` settled on.
+ */
+const BLOB_HULL_PAD = 16;
+
+/**
+ * How far past a blob's own edge the screen's centre has to travel before a
+ * *different* blob opens (author, 2026-09-04: "add a little hysteresis").
+ * Without it a reader whose drag happens to stop near two blobs' shared
+ * boundary would watch the names swap on every further pixel — the same
+ * flicker `stepLabelOpacity`'s own fade exists to smooth over for one label,
+ * here for which blob is open at all. Wider than `MERGE_PX`: this is a
+ * deliberate pause, not the "can the reader still tell two dots apart"
+ * question `MERGE_PX` answers.
+ */
+const BLOB_HYSTERESIS_PX = 20;
 
 /**
  * How far a dot outside the reader's chosen span fades toward the ground:
@@ -989,9 +1019,15 @@ export function render(el, { data, router }) {
           arrow-keys-and-Enter work for a screen reader, and it is the same
           bargain the timeline's native range inputs took — the accessible
           behaviour of a listbox is not light to rebuild.
+
+          **type="search" (2026-09-04)**, matching the All Saints search
+          field (index/controls.js): the native clear "×" it puts at the
+          field's own right edge is a platform control offered for free
+          rather than one this file would otherwise have to build, wire to
+          close(), and keep positioned inside the field on every width.
         -->
         <div class="map-search" data-search>
-          <input type="text" class="map-search-input" data-search-input
+          <input type="search" class="map-search-input" data-search-input
             role="combobox" aria-expanded="false" aria-controls="map-search-list"
             aria-autocomplete="list" autocomplete="off" spellcheck="false"
             aria-label="${esc(M.searchLabel)}" placeholder="${esc(M.searchPlaceholder)}" />
@@ -2319,6 +2355,7 @@ export function destroy() {
   railPlay = null;
   focus = null;
   selectFade.value = 0;
+  activeBlobId = null;
   for (const off of cleanups) off();
   cleanups = [];
   if (fadeFrame !== null) {
@@ -3246,6 +3283,45 @@ function paintCanvas(canvas, cards) {
   }
 
   /*
+   * **A coordinate with more than `BLOB_MAX` saints is partitioned into
+   * blobs before it is spread** (author, 2026-09-04: "only do this blob
+   * function wherever there are more than 8 saints, at which point you will
+   * have 2 blobs — no point in having a single blob, the function of the
+   * blob is for large clusters"). Read before `spreadShared` moves
+   * `lon`/`lat`, because the coordinate every member shares is exactly what
+   * groups them here and exactly what `spreadShared` is about to overwrite.
+   *
+   * **Partitioned once, on the shared coordinate itself, not every paint on
+   * screen pixels** — `tests/map-view.test.mjs`'s own invariance test is why
+   * this is sound: capacity-constrained k-means only ever compares *relative*
+   * distances, which panning and zooming (one shared scale and translation
+   * across every member at once) cannot reorder. So the partition computed
+   * here is the same one at every zoom and every pan, and `blobId` is stable
+   * for the whole visit rather than being recomputed — and risking a
+   * different shape — on every frame.
+   */
+  const sharedCoords = new Map();
+  for (const s of standing) {
+    const key = `${s.lon},${s.lat}`;
+    if (!sharedCoords.has(key)) sharedCoords.set(key, []);
+    sharedCoords.get(key).push(s);
+  }
+  for (const [key, group] of sharedCoords) {
+    if (group.length <= BLOB_MAX) continue;
+    const idx = capacitatedGroups(
+      group.map((s) => ({ x: s.lon, y: s.lat })),
+      BLOB_MAX,
+      key,
+    );
+    idx.forEach((members, gi) => {
+      for (const i of members) {
+        group[i].blobId = `${key}#${gi}`;
+        group[i].blobSize = members.length;
+      }
+    });
+  }
+
+  /*
    * **Saints at one identical coordinate are spread into a tight ring around
    * it, on the ground rather than on the screen** (author, 2026-09-01: "spread
    * the dots around as coordinates on the map if they're stacked ... still
@@ -3263,7 +3339,7 @@ function paintCanvas(canvas, cards) {
     const y = p.y * h;
     // Off the visible box once zoomed, which is ordinary.
     if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) continue;
-    onScreen.push({ card: s.card, where: s.where, state: s.state, x, y, moving: s.moving });
+    onScreen.push({ card: s.card, where: s.where, state: s.state, x, y, moving: s.moving, blobId: s.blobId, blobSize: s.blobSize });
   }
 
   /*
@@ -3380,6 +3456,92 @@ function paintCanvas(canvas, cards) {
    * mark carrying `n` — which no zoom could ever honestly split.
    */
   const fanned = mergeDots(onScreen, undefined, rankOf);
+
+  /*
+   * **Which blob is open, if any** — the one the screen's own centre sits
+   * nearest, across every coordinate this frame drew with more than
+   * `BLOB_MAX` members, once every one of that coordinate's own dots has
+   * separated far enough to be its own mark. Before that a still-partly-merged
+   * blob is left exactly as `fanned` already drew it — a plain crowd mark
+   * saying "+N more" — since there is no clean outline to draw around dots
+   * that have not yet resolved into real, individual positions.
+   */
+  const blobMarks = new Map();
+  for (const mark of fanned) {
+    if (!mark.blobId) continue;
+    if (!blobMarks.has(mark.blobId)) blobMarks.set(mark.blobId, []);
+    blobMarks.get(mark.blobId).push(mark);
+  }
+  const readyBlobs = [...blobMarks.entries()]
+    .filter(([, marks]) => marks.length === marks[0].blobSize && marks.every((m) => m.n === 1))
+    .map(([id, marks]) => {
+      const cx = marks.reduce((s, m) => s + m.x, 0) / marks.length;
+      const cy = marks.reduce((s, m) => s + m.y, 0) / marks.length;
+      const hull = marks.length >= 3 ? inflateHull(convexHull(marks.map((m) => ({ x: m.x, y: m.y }))), BLOB_HULL_PAD) : null;
+      return { id, marks, cx, cy, hull };
+    });
+  /*
+   * **Sticky, the same shape `scatter-mockup/blobs.html` worked out**: the
+   * blob that was open stays open until the centre is a real margin past its
+   * own edge, not merely across the line, or a reader whose drag stops near
+   * two blobs' shared boundary would watch the names swap on every pixel.
+   */
+  const screenCentre = { x: w / 2, y: h / 2 };
+  let openBlob = null;
+  if (readyBlobs.length) {
+    const current = readyBlobs.find((b) => b.id === activeBlobId);
+    if (current) {
+      const inside = current.hull
+        ? pointInHull(screenCentre, current.hull)
+        : Math.hypot(screenCentre.x - current.cx, screenCentre.y - current.cy) < MERGE_PX;
+      const away = current.hull
+        ? distToHull(screenCentre, current.hull)
+        : Math.hypot(screenCentre.x - current.cx, screenCentre.y - current.cy);
+      if (inside || away <= BLOB_HYSTERESIS_PX) openBlob = current;
+    }
+    if (!openBlob) openBlob = readyBlobs.find((b) => b.hull && pointInHull(screenCentre, b.hull)) ?? null;
+    if (!openBlob) {
+      let bestD = Infinity;
+      for (const b of readyBlobs) {
+        const d = Math.hypot(b.cx - screenCentre.x, b.cy - screenCentre.y);
+        if (d < bestD) {
+          bestD = d;
+          openBlob = b;
+        }
+      }
+    }
+  }
+  activeBlobId = openBlob ? openBlob.id : null;
+  // Every dot in a *ready* blob that is not the open one — excluded from
+  // naming below, whatever `layoutLabels` would otherwise have room for.
+  const blobSilenced = new Set();
+  for (const b of readyBlobs) {
+    if (b === openBlob) continue;
+    for (const m of b.marks) blobSilenced.add(m.card.slug);
+  }
+
+  /*
+   * **A blob's own outline, under everything it holds** (2026-09-04). Only a
+   * ready blob of three or more has a hull to draw; the rare one- or
+   * two-member remainder of an uneven split is left as the plain dots
+   * `fanned` already drew, which is honest about there being no shape to a
+   * pair.
+   */
+  for (const b of readyBlobs) {
+    if (!b.hull) continue;
+    // Ink, not gold: §7 gives gold to the veneration finding alone (see the
+    // rail's own comment a few hundred lines up), and which blob is open is
+    // a fact about where the reader is looking, not a claim about a saint.
+    const isOpen = b === openBlob;
+    ctx.beginPath();
+    blobHullPath(ctx, b.hull);
+    ctx.closePath();
+    ctx.fillStyle = hexWithAlpha(ink, isOpen ? 0.1 : 0.05);
+    ctx.fill();
+    ctx.strokeStyle = hexWithAlpha(ink, isOpen ? 0.4 : 0.2);
+    ctx.lineWidth = isOpen ? 1.4 : 1;
+    ctx.stroke();
+  }
 
   /*
    * **Every glow is composited on its own layer and laid down once, at
@@ -3504,7 +3666,7 @@ function paintCanvas(canvas, cards) {
     ctx.restore();
   }
 
-  for (const { card, state, x, y, n, moving, members } of fanned) {
+  for (const { card, state, x, y, n, moving, members, blobId } of fanned) {
     /*
      * A saint outside the reader's chosen span is dimmed rather than
      * removed (author, 2026-08-31), and by how much says which side of it
@@ -3572,6 +3734,11 @@ function paintCanvas(canvas, cards) {
       // carries its own count, so the reader is told there is more here
       // rather than being left to discover it by zooming.
       name: n > 1 ? fill(STRINGS.map.andMore, { name: plain, count: n - 1 }) : plain,
+      // Which blob this dot belongs to, once its coordinate has more than
+      // `BLOB_MAX` members — undefined for everyone else, same as `card`'s
+      // own `blobId` was, so a dot from an ordinary coordinate carries none
+      // of this new machinery at all.
+      blobId,
     });
   }
 
@@ -3596,7 +3763,9 @@ function paintCanvas(canvas, cards) {
    * being a fight over one picture's worth of space. `layoutLabels` never
    * sees them, so the room goes to the saints the reader asked about.
    */
-  const nameable = drawnDots.filter((d) => d.slug === selected || shownState(d.state));
+  const nameable = drawnDots.filter(
+    (d) => d.slug === selected || (shownState(d.state) && !blobSilenced.has(d.slug)),
+  );
   /*
    * **Laid out best-ranked first**, which is what makes `rankOf` a ranking
    * of *names* rather than of dots: `layoutLabels` seats one cluster at a
@@ -3667,6 +3836,28 @@ function paintCanvas(canvas, cards) {
     if (label) named.push(dot.slug);
   }
   ctx.globalAlpha = 1;
+
+  /*
+   * **A silenced blob prints its own count instead of its members' names**
+   * (2026-09-04) — bare (`STRINGS.map.blobCount`, "+{count}"), not routed
+   * through `layoutLabels`: the leader-line system seats a *name* beside the
+   * *dot* it belongs to, and a blob's count belongs to the whole group, at
+   * its own outline, not to any one dot inside it. The open blob prints
+   * nothing here — its members are named individually, above, like any other
+   * dot.
+   */
+  for (const b of readyBlobs) {
+    if (b === openBlob) continue;
+    const rep = b.marks[0];
+    const label = fill(STRINGS.map.blobCount, { count: b.marks.length });
+    const atX = b.hull ? b.cx - ctx.measureText(label).width / 2 : b.cx + 9;
+    const atY = b.hull ? Math.min(...b.hull.map((p) => p.y)) - 6 : b.cy + 4;
+    ctx.globalAlpha = dimFor(rep.state) * dimOf(rep.card.slug);
+    ctx.fillStyle = ink;
+    ctx.fillText(label, atX, atY);
+  }
+  ctx.globalAlpha = 1;
+
   placeProfile(canvas, placedFor.get(selected) ?? null);
 
   /*
@@ -3715,6 +3906,7 @@ function paintCanvas(canvas, cards) {
       n: d.n,
       alpha: Math.round(d.alpha * 100) / 100,
       hue: d.hue,
+      blobId: d.blobId ?? null,
       label: d.labelRect
         ? {
             x: Math.round(d.labelRect.x),
@@ -3747,6 +3939,17 @@ function paintCanvas(canvas, cards) {
         h: Math.round(railBox.maxY - railBox.minY),
       })
     : '';
+  /*
+   * How many blobs are drawn this frame, and which one is open — written by
+   * the pass that draws, so a paint with no crowd over `BLOB_MAX` reads `0`
+   * and `''` rather than looking like a feature that never ran.
+   * `blobCounts` is each blob's own size in the same order `data-blobs`
+   * counts, since a test asking "did the 27 split 8/6/7/6" cannot get that
+   * from a total alone.
+   */
+  canvas.dataset.blobs = String(readyBlobs.length);
+  canvas.dataset.blobOpen = openBlob?.id ?? '';
+  canvas.dataset.blobCounts = JSON.stringify(readyBlobs.map((b) => b.marks.length));
 
   /*
    * However this paint was triggered, it is the one place that knows
@@ -3844,4 +4047,25 @@ function hexWithAlpha(colour, alpha) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
   return colour;
+}
+
+/**
+ * Traces a blob's own inflated hull as a rounded shape rather than a
+ * polygon with corners — the cheap "blobify a hull" trick `scatter-mockup
+ * /blobs.html` worked out: each edge's own midpoint is a curve anchor, so a
+ * hull vertex rounds off instead of staying a point. Appends to whatever
+ * path is already open on `ctx`, the same contract `tracePath` (above)
+ * keeps for the coastline.
+ */
+function blobHullPath(ctx, hull) {
+  if (hull.length < 2) return;
+  const mid = (a, b) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 });
+  const n = hull.length;
+  const m0 = mid(hull[n - 1], hull[0]);
+  ctx.moveTo(m0.x, m0.y);
+  for (let i = 0; i < n; i += 1) {
+    const next = hull[(i + 1) % n];
+    const m = mid(hull[i], next);
+    ctx.quadraticCurveTo(hull[i].x, hull[i].y, m.x, m.y);
+  }
 }

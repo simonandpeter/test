@@ -491,6 +491,7 @@ export const sr = {
     showingFuture: 'Приказани су светитељи који се још нису родили.',
     showingLiveOnly: 'Приказани су само светитељи који су живели тих година.',
     andMore: '{name} +{count}',
+    blobCount: '+{count}',
     yearFrom: 'Од године',
     yearTo: 'До године',
     era: 'Ера',

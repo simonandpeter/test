@@ -1023,6 +1023,17 @@ export const STRINGS = {
      */
     andMore: '{name} +{count}',
     /*
+     * A blob's own count, once a coordinate has more saints than one picture
+     * can name at a time (author, 2026-09-04: "only do this blob function
+     * wherever there are more than 8 saints ... the other groups only
+     * display number"). Bare, unlike `andMore` above — a blob is not a
+     * collapsed mark standing in for a saint too close to separate, it is a
+     * *readable* group of real, individually-drawn dots the picture is
+     * choosing not to name right now, so there is no single one of them to
+     * lead the count the way a merged mark's representative does.
+     */
+    blobCount: '+{count}',
+    /*
      * The timeline's typed ends (author, 2026-08-31), beside the two
      * handles rather than instead of them: a reader who knows the year
      * types it, a reader who is browsing drags for it. `era` is a real
