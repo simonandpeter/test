@@ -1312,3 +1312,87 @@ html[data-swipe-nav='right']::view-transition-new(root) {
     transition: none !important;
   }
 }
+
+/* ---- a route that fills the window (2026-09-05) ------------------------- */
+
+/* The Daily page and a saint's own page each give up the page's scroll past
+   1024 px so their columns can keep their own — two or three scrolling
+   columns and a scrolling page are one scrollbar too many for the surfaces
+   on screen. calendar.css and saint.css each carried this same block under
+   their own selector, and the saint page's copy was written *from* the Daily
+   page's, which is exactly how a third copy happens. One block now, keyed on
+   `data-fills-window`, which index.html sets before first paint and main.js
+   keeps in step on every navigation — the same arrangement `data-route` has
+   for the map's width, and for the same reason: a rule that only learns its
+   route once the modules have parsed paints one layout and then another, and
+   the quality floor measures that as shift.
+
+   `main` is the glass less the bar above it. `--chrome-h` is main.js's own
+   measured height of the sticky bar, published for the Index's sticky
+   controls too, so this follows the header rather than guessing at it. The
+   view is the same height as `main`, or the columns inside it have nothing
+   definite to be a fraction of; each route's own boxes below the view take
+   `height: 100%` in its own stylesheet.
+
+   **The map is the deliberate exception** and keeps its own block in
+   map.css: it fills the window at every width rather than only past 1024
+   px, and sizes from `--chrome-h-reserve` rather than the measured
+   `--chrome-h` so the stage is its final height before a line of JavaScript
+   runs. */
+@media (min-width: 1024px) {
+  html[data-fills-window],
+  html[data-fills-window] body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html[data-fills-window] main.chrome {
+    height: calc(100dvh - var(--chrome-h, 53px));
+    padding-bottom: var(--space-4);
+    overflow: hidden;
+  }
+
+  html[data-fills-window] main.chrome > #view {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+/* ---- scrollers that draw no bar (2026-09-05) ---------------------------- */
+
+/* Every scroller the site hides its bar on, in one place. The author asked
+   for it surface by surface — the rail ("the rail is its own scrollbar"), the
+   Daily page's two columns ("remove the scroll bar from the columns"), the
+   saint page's three, the carousel's row, the full calendar's body — and each
+   surface carried the same two declarations, which is how a seventh copy
+   happens (docs/CLEANUP-PLAN.md item 2 counted them). The scrolling is
+   untouched: wheel, trackpad, keyboard and the bar's own gesture all still
+   work; the bar is simply not drawn. A new scroller that wants the same joins
+   this list rather than restating the pair.
+
+   `scrollbar-width` is the standard property; the `::-webkit-scrollbar`
+   pseudo-element is what Safari and older Chromium still need. Applying the
+   pair to an element that is not currently a scroller — `.cal-main` is
+   `display: contents` on a phone — costs nothing, which is why none of these
+   needs the media query its own scrolling is scoped to. */
+.week-strip,
+.cal-main,
+.cal-side,
+.fullcal .fc-body,
+.carousel-track,
+.saint-aside,
+.saint-main,
+.side-results {
+  scrollbar-width: none;
+}
+
+.week-strip::-webkit-scrollbar,
+.cal-main::-webkit-scrollbar,
+.cal-side::-webkit-scrollbar,
+.fullcal .fc-body::-webkit-scrollbar,
+.carousel-track::-webkit-scrollbar,
+.saint-aside::-webkit-scrollbar,
+.saint-main::-webkit-scrollbar,
+.side-results::-webkit-scrollbar {
+  display: none;
+}

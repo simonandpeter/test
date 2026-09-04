@@ -113,12 +113,6 @@
     min-width: 0;
     min-height: 0;
     overflow-y: auto;
-    scrollbar-width: none;
-  }
-
-  .saint-aside::-webkit-scrollbar,
-  .saint-main::-webkit-scrollbar {
-    display: none;
   }
 
   /*
@@ -207,26 +201,17 @@
 /*
  * Three scrolling columns and a scrolling page would be four scrollbars for
  * three surfaces, so past the breakpoint the route gives up its own — exactly
- * as the Daily page and the map already do. calendar.css argues it at length
- * for the Daily page; this is the same arrangement, and the same reason.
+ * as the Daily page and the map already do. base.css argues it, under "a
+ * route that fills the window"; this is the same arrangement, and the same
+ * reason, and since 2026-09-05 the same block.
  *
  * Only past 1024 px: on a phone there is one column and the page's own scroll
  * is exactly right.
  */
 @media (min-width: 1024px) {
-  html[data-view='saint'],
-  html[data-view='saint'] body {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  html[data-view='saint'] main.chrome {
-    height: calc(100dvh - var(--chrome-h, 53px));
-    padding-bottom: var(--space-4);
-    overflow: hidden;
-  }
-
-  html[data-view='saint'] main.chrome > #view,
+  /* The route's own surrender of the page scroll is base.css's (`data-fills-window`);
+     these are the boxes between the view and the columns, each the height
+     of its parent. */
   html[data-view='saint'] .saint-cols,
   html[data-view='saint'] .saint-col-main,
   html[data-view='saint'] article.saint {
@@ -781,11 +766,6 @@
     padding: 0;
     min-height: 0;
     overflow-y: auto;
-    scrollbar-width: none;
-  }
-
-  .side-results::-webkit-scrollbar {
-    display: none;
   }
 
   /* The Index's row, back in ordinary flow: it is absolutely positioned there

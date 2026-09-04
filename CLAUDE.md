@@ -30,6 +30,12 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   of both columns. Anything that watched `window` scroll had to learn to watch
   whatever scrolled instead (`ui/coachmark.js`, the fast bubble in
   `calendar.js`), which is the shape of bug this change produces.
+- **The route's surrender of the page scroll is one block in base.css** ("a
+  route that fills the window", 2026-09-05), keyed on `html[data-fills-window]`,
+  which index.html sets before first paint and main.js keeps in step; this
+  page and a saint's own page both opt in, and calendar.css/saint.css keep
+  only their own inner boxes' `height: 100%`. The map is the stated
+  exception and keeps its own block (every width, `--chrome-h-reserve`).
 - The measure: `main` takes the window on every route (`--page-max`, base.css)
   rather than 72ch, which is what lets the header line up with the columns;
   the **right** column is what is held (`clamp(25rem, 28%, 30rem)`) and the

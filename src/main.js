@@ -399,6 +399,15 @@ function show({ route, params, path }, nav = {}) {
      */
     document.documentElement.dataset.view = route?.view === saint ? 'saint' : '';
     /*
+     * And whether the route fills the window (base.css, "a route that fills
+     * the window", 2026-09-05): the Daily page and a saint's own page give up
+     * the page's scroll past 1024 px so their columns can keep their own.
+     * One attribute the two stylesheets used to reach for by their own
+     * names — index.html sets it for the first frame, this keeps it true.
+     */
+    if (route?.nav === 'calendar' || route?.view === saint) document.documentElement.dataset.fillsWindow = '';
+    else delete document.documentElement.dataset.fillsWindow;
+    /*
      * Every navigation lands at the top of the page it opens, or — a change of
      * section — back where this section was left (`returning`). The first
      * render keeps whatever position the browser gave it. A press of the

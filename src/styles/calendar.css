@@ -396,13 +396,9 @@
   scroll-padding-left: var(--rail-inset);
   scroll-padding-right: var(--rail-inset);
   /* The rail is its own scrollbar: a second one under the dates would say
-     "this is a pane", and the snap already does the wayfinding. */
-  scrollbar-width: none;
+     "this is a pane", and the snap already does the wayfinding. The pair that
+     hides the bar is base.css's, under "scrollers that draw no bar". */
   overscroll-behavior-x: contain;
-}
-
-.week-strip::-webkit-scrollbar {
-  display: none;
 }
 
 /* Snapping is suspended while a mouse holds the rail — mandatory-adjacent
@@ -1097,13 +1093,8 @@
        simply does not draw the bar.
 
        The `padding-right` that used to hold the bar clear of the text goes with
-       it: it was room for a thing that is no longer there. */
-    scrollbar-width: none;
-  }
-
-  .cal-main::-webkit-scrollbar,
-  .cal-side::-webkit-scrollbar {
-    display: none;
+       it: it was room for a thing that is no longer there. The pair that
+       hides the bar is base.css's, under "scrollers that draw no bar". */
   }
 
   .cal-main {
@@ -2674,25 +2665,10 @@ a.name-day:hover {
    Only past the breakpoint: on a phone there is one column and the page's
    own scroll is exactly right. */
 @media (min-width: 1024px) {
-  html[data-route='calendar'],
-  html[data-route='calendar'] body {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  html[data-route='calendar'] main.chrome {
-    /* The glass, less the bar above it. `--chrome-h` is main.js's own
-       measured height of the sticky bar — the value it publishes for the
-       Index's sticky controls — so this follows the header rather than
-       guessing at it. */
-    height: calc(100dvh - var(--chrome-h, 53px));
-    padding-bottom: var(--space-4);
-    overflow: hidden;
-  }
-
-  /* The view and the page inside it are the same height, or the columns have
-     nothing definite to be a fraction of. */
-  html[data-route='calendar'] main.chrome > #view,
+  /* The page inside the view is the view's height, or the columns have
+     nothing definite to be a fraction of. The route's own surrender of the
+     page scroll — root, body, `main` and `#view` — is base.css's, under
+     "a route that fills the window", keyed on `data-fills-window`. */
   html[data-route='calendar'] .cal {
     height: 100%;
     min-height: 0;
@@ -2967,12 +2943,8 @@ a.name-day:hover {
   padding: var(--space-4) var(--space-6) var(--space-8);
   height: calc(100dvh - 92px);
   overflow-y: auto;
-  /* No bar here either, for the same reason the Daily columns have none. */
-  scrollbar-width: none;
-}
-
-.fullcal .fc-body::-webkit-scrollbar {
-  display: none;
+  /* No bar here either, for the same reason the Daily columns have none —
+     base.css, "scrollers that draw no bar". */
 }
 
 .fullcal .fc-weekdays,

@@ -1137,7 +1137,8 @@ html.is-rolling #view {
 }
 
 /* A native scroller — never `touch-action: none` (ui/loop-scroll.js says why at
-   length). `scrollbar-width: none` because the row has no ends to scroll to. */
+   length). No bar, because the row has no ends to scroll to (base.css,
+   "scrollers that draw no bar"). */
 .carousel-track {
   display: flex;
   /* Stretch, so every card is as tall as the tallest in the row and the text
@@ -1147,7 +1148,6 @@ html.is-rolling #view {
   overflow-x: auto;
   overflow-y: hidden;
   padding: var(--space-2) var(--space-4) var(--space-4);
-  scrollbar-width: none;
   /* **`pan-y` as well** (author, 2026-08-28: "On mobile, make sure you can
      scroll in the space under the carousel as well. Currently if your hand
      accidentally touches the space under the carousel, the scroll instantly
@@ -1163,10 +1163,6 @@ html.is-rolling #view {
      reason ui/loop-scroll.js gives at length. */
   touch-action: pan-x pan-y;
   overscroll-behavior-x: contain;
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none;
 }
 
 /* The row can be taken hold of (author, 2026-08-28: "add a hold and drag
