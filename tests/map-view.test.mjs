@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { BLOB_MAX, HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, capacitatedGroups, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, relaxLayout, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
+import { BLOB_MAX, HOME, MAX_SCALE, MERGE_PX, MIN_SCALE, WHOLE, capacitatedGroups, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, relaxLayout, separateGroups, spreadShared, toScreen, toWorld, zoomAbout } from '../src/lib/map-view.js';
 
 /*
  * The map's view, held to the two things that are actually easy to get wrong
@@ -556,6 +556,42 @@ test('the distance to a hull is zero on its own boundary and positive beyond it'
   const square = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 10, y: 10 }, { x: 0, y: 10 }];
   assert.ok(Math.abs(distToHull({ x: 5, y: 0 }, square)) < 1e-9);
   assert.ok(Math.abs(distToHull({ x: 15, y: 5 }, square) - 5) < 1e-9);
+});
+
+/*
+ * `separateGroups` — pushes a blob's own sub-groups apart once
+ * `capacitatedGroups` has partitioned a crowd, so the hulls `views/map.js`
+ * draws around them read as organised regions rather than an overlapping
+ * mess (2026-09-04, the root of "the blobs are overlapping each other").
+ * Each group stands for the circle its own furthest member sits on, and the
+ * cap is on how close two such circles, plus `gap` of daylight, are allowed
+ * to come.
+ */
+
+test('a lone group has nothing to separate from, and is left where it stood', () => {
+  const group = [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }];
+  const offsets = separateGroups([group], 10);
+  assert.equal(offsets.length, 1);
+  assert.ok(Math.hypot(offsets[0].x, offsets[0].y) < 1e-9);
+});
+
+test('groups already clear of each other by more than the gap are left alone', () => {
+  const a = [{ x: 0, y: 0 }, { x: 1, y: 0 }];
+  const b = [{ x: 100, y: 0 }, { x: 101, y: 0 }];
+  const offsets = separateGroups([a, b], 5);
+  assert.ok(Math.hypot(offsets[0].x, offsets[0].y) < 1e-6);
+  assert.ok(Math.hypot(offsets[1].x, offsets[1].y) < 1e-6);
+});
+
+test('overlapping groups are pushed apart until their own circles clear the gap', () => {
+  const a = [{ x: -1, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }]; // centroid (0,0), radius 1
+  const b = [{ x: 0.5, y: 0 }, { x: 2.5, y: 0 }, { x: 1.5, y: 1 }, { x: 1.5, y: -1 }]; // centroid (1.5,0), radius 1
+  const gap = 10;
+  const offsets = separateGroups([a, b], gap);
+  const ca = { x: 0 + offsets[0].x, y: 0 + offsets[0].y };
+  const cb = { x: 1.5 + offsets[1].x, y: 0 + offsets[1].y };
+  const d = Math.hypot(ca.x - cb.x, ca.y - cb.y);
+  assert.ok(d >= 1 + 1 + gap - 1e-6, `expected the two circles at least 12 apart, got ${d}`);
 });
 
 /*

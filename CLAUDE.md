@@ -398,6 +398,17 @@ rising means the picture is never thinner than "coarse, fully inked"; it
 disappears in the one frame the incoming tier completes rather than a fade
 the reader can watch dip.
 
+**`DETAIL_AT` no longer carries its own number — it reads `LABELS_AT`
+directly** (2026-09-04, author: "change load in for detailed coastlines to
+2.7x, or whatever it is for loading the names of the saints" — the real
+answer, checked rather than typed back, was `LABELS_AT`, 2.5, not the
+guessed 2.7). It had been 5 on its own since the coastline tiers shipped; the
+two thresholds sitting one line apart and reading the same zoom band anyway
+made carrying two separate numbers for it an accident waiting to drift, not
+a real distinction the reader was meant to feel. A reader zoomed in enough to
+see whose dot is whose is zoomed in enough to spend the fine coastline's own
+cost.
+
 **The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
 and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
 is *statically* imported by `main.js`, unlike `land.js`/`water.js` which are
@@ -535,7 +546,21 @@ prising apart two saints who died in the same town, and
 zooms** (same author instruction, reversing the old only-Ctrl rule: with
 nothing below the stage there is no page to scroll past), touch is the map's
 always (`touch-action: none`), and the route cannot scroll (`overflow:
-hidden`; the flex column through `#view` fits the window exactly). Labels
+hidden`; the flex column through `#view` fits the window exactly). **A wheel
+now trails rather than jumping to each event's own target** (2026-09-04,
+author: "smooth/slightly lazy zooming in/out on desktop"): `wireZoom` keeps a
+`wheelTarget` — the honest `zoomAbout` result for the *latest* event — and a
+`requestAnimationFrame` loop (`stepWheelEase`) chases it at `WHEEL_EASE`
+(0.3) of the remaining distance each frame, applying the eased-toward value
+through the same `setThrottled` every other view change already goes
+through, rather than applying `wheelTarget` itself. A fast spin keeps moving
+`wheelTarget` before the trail catches up, which is the lazy feel the author
+asked for; it settles (and calls `setThrottled(wheelTarget)` once, exactly,
+to land on the honest final value rather than asymptotically never quite
+arriving) once both the scale and centre deltas are below a small threshold.
+Skipped entirely under `prefers-reduced-motion`, the same instant-apply
+`reducedMotion()` already gives every other flight on this page — reduced
+motion removes the animation, never merely shortens it. Labels
 arrive past 2.5×, laid out by **`lib/map-labels.js`** (pure, unit-tested):
 it single-linkage-clusters the dots, gives a lone dot the space beside it,
 and stacks a *whole* cluster into a column with a leader line each — deciding
@@ -677,11 +702,33 @@ scatter with hulls drawn around subsets of it, not a second layout invented
 on top. `capacitatedGroups` (`lib/map-view.js`, pure, unit-tested) is that
 subset-finder: nearest-centroid-with-a-free-seat, sorted by distance and
 reassigned across a handful of Lloyd passes, so no group ever exceeds the cap
-even where the geometry is lopsided. Read on the group's own pre-projection
-coordinate for the same invariance reason `relaxLayout` above is — panning
-and zooming cannot reorder which points are nearest which centroid — so
-`views/map.js` computes the partition once, before `spreadShared` moves
-`lon`/`lat`, not fresh on screen pixels every frame.
+even where the geometry is lopsided. **Read on the group's *actual scattered*
+positions, not its pre-scatter coordinate** — the opposite of `relaxLayout`'s
+own invariance above, and the fix for a real bug (2026-09-04): partitioning
+used to run in `views/map.js` before `spreadShared` moved `lon`/`lat`, on
+points that — before the move — were all still identical, which makes a
+nearest-centroid split spatially meaningless. Every blob still ended up
+uniformly smeared across the *whole* cluster once `relaxLayout` later spread
+them, guaranteeing heavy hull overlap ("the blobs are overlapping each other
+... that ruins the point of clarifying and organising visually"). Moving the
+call inside `spreadShared`, after `relaxLayout` runs, fixed it — `capacitatedGroups`
+now partitions ground the members are actually standing on.
+
+**A partition alone still overlaps**, since `capacitatedGroups` only assigns
+members to sub-groups and never moves anyone — the sub-groups inherit
+whatever footprint the whole crowd's own scatter had, which routinely leaves
+two groups' hulls interleaved rather than side by side. `separateGroups`
+(`lib/map-view.js`, pure, unit-tested) is the second half of the fix: it
+treats each sub-group as a circle — radius the furthest member from its own
+centroid — and relaxes the group centroids apart over 60 passes until every
+pair clears `radii[i] + radii[j] + gap` (`gap` is `radiusDeg`, the same
+spacing a pair of ordinary dots is held to), returning one offset per group
+that `spreadShared` applies rigidly to that group's own already-scattered
+points. Two coincident centroids never separate (the push direction is
+`dx/d, dy/d` and both are zero when `d` is zero) — not a concern in practice,
+since two sub-groups of a real relaxed scatter essentially never land on the
+exact same point, but worth knowing if a future caller ever feeds it two
+identical groups on purpose.
 
 Each blob's outline is `convexHull` of its members, inflated (`inflateHull`,
 16 px) and traced as a rounded shape rather than a polygon with corners — a
@@ -691,8 +738,47 @@ alongside `selected` and `focus`), decided by `pointInHull`/`distToHull`
 against the screen's own centre with `BLOB_HYSTERESIS_PX` (20) of margin
 before a different blob takes over — without it, a reader whose drag stops
 near two blobs' shared edge would watch the names swap on every further
-pixel. Only ink, never gold: which blob is open is a fact about where the
-reader is looking, not a veneration finding, and §7 gives gold to that alone.
+pixel. **A hovering mouse previews a blob without becoming the sticky choice**
+(2026-09-04, author: "on desktop only, when you hover your mouse over a blob,
+its the same function as moving the centre of the screen over the blob").
+`activeBlobId` answers only to the screen-centre rule above, never to
+`hoveredBlobId` — a separate, per-frame `openBlob` (`hoveredBlobId &&` the
+blob it names, falling back to the centre's own choice) is what a paint
+actually draws open, so the moment the pointer leaves the picture returns to
+exactly what the centre already had rather than the hover having quietly
+overwritten it. `hoveredBlobId` is set only from a `pointerType: 'mouse'`
+`pointermove`, cleared on `pointerleave`, so a touch resting on a blob (no
+`pointerup` yet) never opens it. `blobAt` is checked in that `pointermove`
+handler *whether or not `dotAt` also answers* — a blob's own hull is mostly
+its members' dots, so gating the check on "no dot found" the way the cursor
+and the click do would mean hovering the blob almost never fires. Only ink,
+never gold, for the open/closed distinction itself: which blob is open is a
+fact about where the reader is looking, not a veneration finding, and §7
+gives gold to that alone.
+
+**A click on a blob frames it the way a press on a rail's dot frames the
+rail** (2026-09-04, same author message: "when you click on a blob it
+centres you onto it smoothly as it centres you when you click a dot with a
+life rail and it centres you over the rail"). `chooseBlob` borrows `choose`'s
+own `fitBounds` + `flyTo`, but not `RAIL_FIT_MAX`: a rail spans a real
+ground distance, so capping how far *in* framing it goes is the only bound
+that ever binds, while a blob is only reachable at all once its own members
+have separated far enough to resolve (`readyBlobs`) — `fitBounds`'s honest
+answer for "fill the frame with just these dots" is routinely *tighter* than
+the zoom the reader is already standing at, and capping it down the way a
+rail's flight does would zoom back out of the resolution that made the blob
+clickable, un-blobbing it the instant it is pressed (found live, on a
+phone's narrower ceiling: clicking closed a blob it had just opened).
+`Math.max(fitted.scale, view.scale)` is the fix — never asked to zoom out to
+fit something already on screen, only ever in. **A click at a blob's own
+centre still has to open the blob and not one member dot standing near it**
+— trap 14, above, in "Traps": `wirePress`'s `pointerup` now only lets a dot
+win over its own blob when that blob is the one already open (`openBlobId`),
+since a closed blob's members carry no name on screen to have been aimed at.
+No saint is selected by any of this — a blob is a grouping of several real
+saints rather than one of them, so `chooseBlob` never touches `selected` or
+`focus`.
+
 A blob that has not yet fully separated into individually-visible dots — the
 whole coordinate is still one `mergeDots` mark, or partway there — is left
 exactly as that mark already draws; there is no clean outline to draw around
@@ -1082,13 +1168,32 @@ rehearsal on this spec knows it is not theirs.
     that helper was added to the zoom-*in* loop beside it, and sat at 2 failures
     in 5 at mobile-360 — a real flake blamed first on CI load, then on a
     terrain change, before the diff that introduced it was found. Any assertion
-    landing near a threshold (`DETAIL_AT` at 5, here) will read as a product
-    bug.
+    landing near a threshold (`DETAIL_AT`, then 5 and now 2.5 — see "Where
+    things live") will read as a product bug.
 13. **`page.route` does not see a service worker's requests**, and this suite
     runs with the worker registered. A route pattern that matches nothing
     fails *open*: the test passes having intercepted nothing. Count the
     interceptions and assert the count, or stub `window.fetch` in an init
     script instead.
+14. **A click aimed at a group can land on one of its own members.** A blob's
+    members are real, individually-positioned dots (2026-09-04) — only their
+    *names* are withheld while closed — and a press at their averaged centre
+    routinely falls inside one member's own 12 px hit-radius, since that is
+    where a tightly-packed group is densest. `wirePress`'s `pointerup`
+    checked `dotAt` before `blobAt` unconditionally, so a click meant for the
+    group instead silently selected whichever anonymous dot the average
+    happened to land near — and because that dot had no name on screen to
+    have been aimed at, the failure read as "the blob just doesn't open" (a
+    5-second `expect.poll` timeout, `data-blob-open` stuck at `""`), not as
+    "the wrong thing got clicked." Passed in isolation and failed in a batch
+    at first, which was a red herring: `otherId`'s member set is a `Map`
+    read straight off that paint's own `data-dots`, so which id is "other"
+    can differ run to run without any of it being flaky in the load-sensitive
+    sense trap 10 means — chasing worker contention here would have been the
+    wrong hunt. The fix is priority, not hit-radius: a dot only wins over its
+    own blob when that blob is the one already open (`openBlobId`, mirroring
+    `drawnDots`/`drawnBlobs`) — a name on screen is what makes a dot a valid
+    target on its own account, and a closed blob's members have none.
 
 **Every fix gets a browser test, backed out and confirmed to fail before being
 restored** — against a *rate* where the subject is load-sensitive. That applies

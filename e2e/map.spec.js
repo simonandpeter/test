@@ -363,7 +363,15 @@ test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }
 
   await page.mouse.move(centre.x, centre.y);
   await page.mouse.wheel(0, -400);
-  expect(await zoomLevel(page), 'a bare wheel did not zoom the map').not.toBe('1.0×');
+  /*
+   * Polled rather than read once (2026-09-04): the wheel now trails the
+   * gesture instead of jumping to it in the same tick ("smooth/slightly
+   * lazy zooming in/out on desktop"), so the readout is still `1.0×` for the
+   * first frame or two after the notch. What the old assertion was really
+   * checking — that a bare wheel does something — still holds, just not
+   * instantly.
+   */
+  await expect.poll(() => zoomLevel(page), 'a bare wheel did not zoom the map').not.toBe('1.0×');
 
   // And back out: a long spin down runs into the floor and stops at the world.
   await page.mouse.wheel(0, 1200);
@@ -2558,12 +2566,21 @@ test('the rest of the map fades back with the flight, and fades in again on rele
 
 /* ---- two coastlines, one for each end of the zoom (2026-09-01) ----------- */
 
-test('the map opens on the coarse coastline and fetches the fine one only past 5x', async ({ page }) => {
+test('the map opens on the coarse coastline and fetches the fine one only past 2.5x', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Make sure until you reach at least 5x zoom, only the
    * low definition coastlines are shown so when zoomed out the map isnt laggy
    * as it currently is. Ideally the high definition loads in tiles as you
    * scroll over the map to be efficient."
+   *
+   * `DETAIL_AT` was 5 at the time of that message. Author, 2026-09-04: "change
+   * load in for detailed coastlines to 2.7x, or whatever it is for loading the
+   * names of the saints" — the real answer was `LABELS_AT`, 2.5, and
+   * `DETAIL_AT` now reads that constant directly rather than carrying its own
+   * number: a reader zoomed in enough to see whose dot is whose is zoomed in
+   * enough to spend the fine coastline's own cost, and the two thresholds
+   * swapping in on two different presses would have been its own small
+   * surprise.
    *
    * **The lag was never the fetch, it was the frame.** The draw pass already
    * skips any shape whose box is off screen - which is what tiling buys - but
@@ -2596,9 +2613,10 @@ test('the map opens on the coarse coastline and fetches the fine one only past 5
   ).toEqual([]);
 
   /*
-   * Past 5x it swaps, and the fetch happens then. Polled rather than awaited on
-   * a fixed wait: the swap is one paint behind the chunk landing, and the chunk
-   * is a real network round trip.
+   * Past `DETAIL_AT` (2.5x, unified with `LABELS_AT` on 2026-09-04) it swaps,
+   * and the fetch happens then. Polled rather than awaited on a fixed wait:
+   * the swap is one paint behind the chunk landing, and the chunk is a real
+   * network round trip.
    *
    * **Each press eases now (2026-09-04)**, so the next one has to wait for the
    * flight to land rather than firing while the view is still mid-travel — a
@@ -2628,13 +2646,15 @@ test('the map opens on the coarse coastline and fetches the fine one only past 5
    * out kept firing twelve presses into each other's flights, each
    * re-targeting from wherever the view had reached rather than from where
    * the last one aimed, and landed on whatever scale the machine's timing
-   * happened to produce. That is marginal against `DETAIL_AT` at 5: four
-   * effective presses out of a flight that started near 40x leaves ~6x, still
-   * the fine tier, and the test reads it as a one-way swap that never came
-   * back. It failed 2 runs in 5 at mobile-360 and once on CI before this
-   * line was added; the product behaviour it was blaming is the documented
-   * one, and the assertion below is about the tier swapping back, not about
-   * how far twelve hurried clicks travel.
+   * happened to produce. That was marginal against `DETAIL_AT` at its old
+   * value of 5: four effective presses out of a flight that started near 40x
+   * left ~6x, still the fine tier, and the test read it as a one-way swap
+   * that never came back. It failed 2 runs in 5 at mobile-360 and once on CI
+   * before this line was added. `DETAIL_AT` unified with `LABELS_AT` at 2.5
+   * on 2026-09-04, which widens the margin this loop is guarding a great
+   * deal — ~6x now clears the threshold more than twice over — but the
+   * settling itself is still correct regardless of how comfortable the
+   * margin is, so the loop stays.
    */
   for (let i = 0; i < 12 && !(await page.locator('[data-zoom="out"]').isDisabled()); i += 1) {
     await page.locator('[data-zoom="out"]').click();
@@ -2902,11 +2922,17 @@ test('panning the crowd off screen closes its blob, and panning it back opens on
 
   const box = await canvas.boundingBox();
   const midY = box.height / 2;
-  // Far enough that the whole crowd — under 70 px across — leaves the canvas
-  // entirely, not just the screen's own centre.
+  /*
+   * A fixed, generous offset rather than a fraction of the box — 2026-09-04's
+   * inter-group separation (`separateGroups`) widened the crowd's own
+   * footprint on purpose (that is the fix for the blobs overlapping each
+   * other), so a drag sized off the *old*, tighter footprint no longer
+   * reliably clears it on a narrow phone. 3000px clears any viewport this
+   * suite runs at and any footprint the crowd could plausibly have.
+   */
   await page.mouse.move(box.x + box.width / 2, midY);
   await page.mouse.down();
-  await page.mouse.move(box.x + box.width / 2 - box.width * 0.8, midY, { steps: 8 });
+  await page.mouse.move(box.x + box.width / 2 - 3000, midY, { steps: 8 });
   await page.mouse.up();
   await page.waitForTimeout(200);
 
@@ -2916,10 +2942,149 @@ test('panning the crowd off screen closes its blob, and panning it back opens on
   // And back — the same drag, reversed, lands the crowd under the centre again.
   await page.mouse.move(box.x + box.width / 2, midY);
   await page.mouse.down();
-  await page.mouse.move(box.x + box.width / 2 + box.width * 0.8, midY, { steps: 8 });
+  await page.mouse.move(box.x + box.width / 2 + 3000, midY, { steps: 8 });
   await page.mouse.up();
   await page.waitForTimeout(200);
 
   const after = await canvas.getAttribute('data-blob-open');
   expect(after, 'a blob opens again once the crowd is back on screen').not.toBe('');
+});
+
+test('hovering a blob on a mouse previews it, and moving away returns to what the centre already had', async ({ page }) => {
+  /*
+   * Author: "on desktop only, when you hover your mouse over a blob, its
+   * the same function as moving the centre of the screen over the blob".
+   * A preview, not a second way to choose one for good: `data-blob-open`
+   * has to come straight back to whatever the screen's own centre already
+   * had the moment the pointer leaves, or a reader who merely passed their
+   * mouse over a neighbouring blob would have quietly changed which one the
+   * picture keeps open.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  const before = await canvas.getAttribute('data-blob-open');
+  expect(before, 'premise: a blob is open before hovering').not.toBe('');
+
+  const box = await canvas.boundingBox();
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const byBlob = new Map();
+  for (const d of dots) {
+    if (!d.blobId) continue;
+    if (!byBlob.has(d.blobId)) byBlob.set(d.blobId, []);
+    byBlob.get(d.blobId).push(d);
+  }
+  const otherId = [...byBlob.keys()].find((id) => id !== before);
+  expect(otherId, 'premise: a second blob exists to hover').toBeTruthy();
+  const members = byBlob.get(otherId);
+  const hx = members.reduce((s, d) => s + d.x, 0) / members.length;
+  const hy = members.reduce((s, d) => s + d.y, 0) / members.length;
+
+  await page.mouse.move(box.x + hx - 60, box.y + hy);
+  await page.mouse.move(box.x + hx, box.y + hy, { steps: 6 });
+  await expect.poll(() => canvas.getAttribute('data-blob-open')).toBe(otherId);
+
+  // Off the canvas entirely — pointerleave, not just a move to empty ground.
+  await page.mouse.move(box.x - 40, box.y - 40);
+  await expect.poll(() => canvas.getAttribute('data-blob-open')).toBe(before);
+});
+
+test('a touch resting on a blob does not open it the way a mouse hovering it does', async ({ page }) => {
+  // The same guard `wireSaintSwipe` needed for `pointerType` elsewhere on
+  // this site: a finger has no hover, and a synthetic touch pointermove
+  // must not open a blob it has only come to rest on before lifting.
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  const before = await canvas.getAttribute('data-blob-open');
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const byBlob = new Map();
+  for (const d of dots) {
+    if (!d.blobId) continue;
+    if (!byBlob.has(d.blobId)) byBlob.set(d.blobId, []);
+    byBlob.get(d.blobId).push(d);
+  }
+  const otherId = [...byBlob.keys()].find((id) => id !== before);
+  const members = byBlob.get(otherId);
+  const hx = members.reduce((s, d) => s + d.x, 0) / members.length;
+  const hy = members.reduce((s, d) => s + d.y, 0) / members.length;
+
+  await page.evaluate(
+    ({ hx, hy }) => {
+      const el = document.querySelector('[data-map]');
+      const box = el.getBoundingClientRect();
+      el.dispatchEvent(
+        new PointerEvent('pointermove', {
+          pointerId: 1,
+          pointerType: 'touch',
+          clientX: box.x + hx,
+          clientY: box.y + hy,
+          bubbles: true,
+        }),
+      );
+    },
+    { hx, hy },
+  );
+  await page.waitForTimeout(150);
+  expect(await canvas.getAttribute('data-blob-open'), 'a resting touch opened a blob a mouse would only preview').toBe(before);
+});
+
+test('clicking a blob centres the picture on it smoothly, the way a rail does', async ({ page }) => {
+  /*
+   * Author: "when you click on a blob it centres you onto it smoothly as it
+   * centres you when you click a dot with a life rail and it centres you
+   * over the rail" — `chooseBlob` borrows `choose`'s own `fitBounds` +
+   * `flyTo` for exactly this reason (though not `RAIL_FIT_MAX` itself: a
+   * blob is only reachable once already zoomed in past the point that cap
+   * would pull back out of, see `chooseBlob`'s own comment), so this reads
+   * the same two signs a rail's own flight leaves: the zoom readout moves
+   * (eased, not a jump) and the clicked blob becomes the open one.
+   *
+   * The click lands at the blob's own members' average position, which is
+   * routinely inside a member dot's own hit-radius — the point of this test
+   * as much as the flight itself: a press there must still open the blob,
+   * not quietly select the one dot the average happened to land near, since
+   * that dot's name was never on screen for a closed blob (`wirePress`'s own
+   * `hit.blobId === openBlobId` check is what keeps that press pointed at
+   * the blob instead).
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await zoomedToCeiling(page);
+
+  const before = await canvas.getAttribute('data-blob-open');
+  const box = await canvas.boundingBox();
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const byBlob = new Map();
+  for (const d of dots) {
+    if (!d.blobId) continue;
+    if (!byBlob.has(d.blobId)) byBlob.set(d.blobId, []);
+    byBlob.get(d.blobId).push(d);
+  }
+  const otherId = [...byBlob.keys()].find((id) => id !== before);
+  const members = byBlob.get(otherId);
+  const hx = members.reduce((s, d) => s + d.x, 0) / members.length;
+  const hy = members.reduce((s, d) => s + d.y, 0) / members.length;
+
+  await page.mouse.click(box.x + hx, box.y + hy);
+  await expect.poll(() => canvas.getAttribute('data-blob-open')).toBe(otherId);
+  // No saint was selected — a blob is a grouping of several, not one of them.
+  expect(await canvas.getAttribute('data-selected')).toBe('');
 });

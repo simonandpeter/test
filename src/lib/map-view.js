@@ -305,52 +305,6 @@ export function relaxLayout(n, radiusDeg, key) {
 }
 
 /**
- * Spreads saints recorded at one identical coordinate into a tight cluster
- * about it, in lon/lat rather than in pixels — see `SPREAD_DEG` for why the
- * unit is the point.
- *
- * Grouping is on the exact coordinate, so this touches only the saints no zoom
- * could ever separate on its own; two saints a kilometre apart are left alone,
- * the map already telling them apart the moment it can.
- *
- * **The cluster is drawn round on the picture, not on the globe.** Mercator
- * stretches latitude by `1/cos(lat)`, so an offset of equal degrees would draw
- * taller than it is wide at Kyiv and taller still at Solovki; multiplying the
- * latitude offset by `cos(lat)` is what makes the crowd read true where the
- * reader is looking at it. `relaxLayout` works in an idealised, unsquashed
- * unit — the same one the mockup calls px — for exactly this reason: doing the
- * physics in a space where a circle is a circle, and correcting for the
- * picture only once, at the end.
- *
- * `points` is any array carrying `{ lon, lat }`. Returns a new array in the
- * same order, each point's own fields kept and its coordinates moved.
- */
-export function spreadShared(points, radiusDeg = SPREAD_DEG) {
-  const groups = new Map();
-  for (const p of points) {
-    const key = `${p.lon},${p.lat}`;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(p);
-  }
-  const moved = new Map();
-  for (const [key, group] of groups) {
-    if (group.length === 1) continue;
-    const { lon, lat } = group[0];
-    // Radians, and never at a pole: `cos` of 90° is 0 and would collapse the
-    // cluster into a horizontal line.
-    const squash = Math.max(0.15, Math.cos((lat * Math.PI) / 180));
-    const pts = relaxLayout(group.length, radiusDeg, key);
-    for (let i = 0; i < group.length; i += 1) {
-      moved.set(group[i], { lon: lon + pts[i].x, lat: lat + pts[i].y * squash });
-    }
-  }
-  return points.map((p) => {
-    const at = moved.get(p);
-    return at ? { ...p, lon: at.lon, lat: at.lat } : p;
-  });
-}
-
-/**
  * A shared coordinate this crowded stops being one picture's worth of names
  * (author, 2026-09-04: "only do this blob function wherever there are more
  * than 8 saints, at which point you will have 2 blobs — no point in having a
@@ -373,10 +327,19 @@ export const BLOB_MAX = 8;
  * groups into something compact and roughly even.
  *
  * Seeded like `relaxLayout`'s own scatter, so the same crowd partitions the
- * same way on every call: `views/map.js` calls this once a paint, on
- * whichever coordinates currently have more than `BLOB_MAX` visible members,
- * and a partition that reshuffled itself from one frame to the next would
- * read as the crowd rearranging under the reader mid-drag.
+ * same way on every call.
+ *
+ * **Called on the scattered points themselves** (`spreadShared`, below) —
+ * called on the *pre-scatter* coordinate once, briefly, and every member of
+ * a shared coordinate carries the identical `lon`/`lat` at that point, so a
+ * partition computed there has no geometry to read at all and groups by
+ * nothing more meaningful than array order. That produced blobs whose
+ * members were scattered uniformly across the *whole* crowd once
+ * `relaxLayout` placed them — each blob's own hull spanning nearly the same
+ * ground as every other's, which is the overlap the author reported
+ * ("make sure they dont overlap, that ruins the point of clarifying and
+ * organising visually"). Called here, after the scatter, a blob is the seats
+ * nearest each other in the *arrangement the reader is actually looking at*.
  *
  * `points` is any array carrying `{x, y}` — lon/lat, screen px, or the
  * `relaxLayout` offsets themselves all work, since capacity-constrained
@@ -423,6 +386,137 @@ export function capacitatedGroups(points, maxPer, seed) {
   const groups = Array.from({ length: k }, () => []);
   assignment.forEach((c, i) => groups[c].push(i));
   return groups.filter((g) => g.length);
+}
+
+/**
+ * Pushes blob groups apart from each other until no two overlap, translating
+ * each group's own members as **one rigid unit** rather than reshuffling
+ * them — `capacitatedGroups` already decided who is in which blob and
+ * `relaxLayout` already decided their arrangement inside it; this only moves
+ * the group as a whole, the way `relaxLayout`'s own passes move one dot.
+ *
+ * A minimum separation `radii[i] + radii[j] + gap` between every pair of
+ * group centroids, relaxed exactly like a crowd of dots — because a random,
+ * roughly uniform scatter (which is what `relaxLayout` deliberately produces:
+ * a real crowd, not a diagram) has no natural clumps for a partition to find,
+ * so `capacitatedGroups` alone can and does hand back groups whose own
+ * members interleave in space; this is the step that turns "correctly
+ * partitioned" into "visibly organised".
+ *
+ * `groupPointSets` is one array of `{x, y}` per group, in the same idealised
+ * unit `relaxLayout` returns. Returns one `{x, y}` translation per group, in
+ * the same order — applied, not baked in, so the caller decides what else
+ * that offset has to move (the squash-adjusted `lat`, here; nothing else
+ * anywhere this is used from).
+ */
+export function separateGroups(groupPointSets, gap) {
+  const centroids = groupPointSets.map((pts) => ({
+    x: pts.reduce((s, p) => s + p.x, 0) / pts.length,
+    y: pts.reduce((s, p) => s + p.y, 0) / pts.length,
+  }));
+  const radii = groupPointSets.map((pts, i) =>
+    pts.reduce((m, p) => Math.max(m, Math.hypot(p.x - centroids[i].x, p.y - centroids[i].y)), 0),
+  );
+  const offset = groupPointSets.map(() => ({ x: 0, y: 0 }));
+  const n = groupPointSets.length;
+  for (let pass = 0; pass < 60; pass += 1) {
+    for (let i = 0; i < n; i += 1) {
+      for (let j = i + 1; j < n; j += 1) {
+        const dx = centroids[j].x + offset[j].x - (centroids[i].x + offset[i].x);
+        const dy = centroids[j].y + offset[j].y - (centroids[i].y + offset[i].y);
+        const d = Math.hypot(dx, dy) || 0.0001;
+        const minSep = radii[i] + radii[j] + gap;
+        if (d >= minSep) continue;
+        const push = (minSep - d) / 2;
+        const ux = dx / d;
+        const uy = dy / d;
+        offset[i].x -= ux * push;
+        offset[i].y -= uy * push;
+        offset[j].x += ux * push;
+        offset[j].y += uy * push;
+      }
+    }
+  }
+  return offset;
+}
+
+/**
+ * Spreads saints recorded at one identical coordinate into a tight cluster
+ * about it, in lon/lat rather than in pixels — see `SPREAD_DEG` for why the
+ * unit is the point.
+ *
+ * Grouping is on the exact coordinate, so this touches only the saints no zoom
+ * could ever separate on its own; two saints a kilometre apart are left alone,
+ * the map already telling them apart the moment it can.
+ *
+ * **The cluster is drawn round on the picture, not on the globe.** Mercator
+ * stretches latitude by `1/cos(lat)`, so an offset of equal degrees would draw
+ * taller than it is wide at Kyiv and taller still at Solovki; multiplying the
+ * latitude offset by `cos(lat)` is what makes the crowd read true where the
+ * reader is looking at it. `relaxLayout` works in an idealised, unsquashed
+ * unit — the same one the mockup calls px — for exactly this reason: doing the
+ * physics in a space where a circle is a circle, and correcting for the
+ * picture only once, at the end.
+ *
+ * **A crowd over `BLOB_MAX` is partitioned into blobs here too** (2026-09-04),
+ * on `relaxLayout`'s own output — the scattered arrangement the reader is
+ * actually shown — rather than as a separate pass over the pre-scatter
+ * coordinate, which is what let two blobs cover nearly the same ground (see
+ * `capacitatedGroups`'s own comment). `separateGroups` then pushes the
+ * partitioned groups apart by `radiusDeg` of daylight — the same spacing a
+ * pair of *dots* is held to — so the blobs read as organised regions rather
+ * than an arbitrary slicing of one crowd. `blobId`/`blobSize` are attached to
+ * the returned points only for a coordinate over the cap; every other point
+ * carries neither, `views/map.js` reading their absence as "not a blob".
+ *
+ * `points` is any array carrying `{ lon, lat }`. Returns a new array in the
+ * same order, each point's own fields kept and its coordinates moved.
+ */
+export function spreadShared(points, radiusDeg = SPREAD_DEG) {
+  const groups = new Map();
+  for (const p of points) {
+    const key = `${p.lon},${p.lat}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(p);
+  }
+  const moved = new Map();
+  for (const [key, group] of groups) {
+    if (group.length === 1) continue;
+    const { lon, lat } = group[0];
+    // Radians, and never at a pole: `cos` of 90° is 0 and would collapse the
+    // cluster into a horizontal line.
+    const squash = Math.max(0.15, Math.cos((lat * Math.PI) / 180));
+    const pts = relaxLayout(group.length, radiusDeg, key);
+    /* `blobOf[i]` is which blob index point `i` belongs to, or `undefined`
+       for a group at or under `BLOB_MAX` — never partitioned at all. */
+    let blobOf;
+    let blobSizes;
+    if (group.length > BLOB_MAX) {
+      const idx = capacitatedGroups(pts, BLOB_MAX, key);
+      const offsets = separateGroups(idx.map((members) => members.map((i) => pts[i])), radiusDeg);
+      blobOf = new Array(group.length);
+      blobSizes = new Array(idx.length);
+      idx.forEach((members, gi) => {
+        blobSizes[gi] = members.length;
+        for (const i of members) {
+          pts[i] = { x: pts[i].x + offsets[gi].x, y: pts[i].y + offsets[gi].y };
+          blobOf[i] = gi;
+        }
+      });
+    }
+    for (let i = 0; i < group.length; i += 1) {
+      moved.set(group[i], {
+        lon: lon + pts[i].x,
+        lat: lat + pts[i].y * squash,
+        blobId: blobOf ? `${key}#${blobOf[i]}` : undefined,
+        blobSize: blobOf ? blobSizes[blobOf[i]] : undefined,
+      });
+    }
+  }
+  return points.map((p) => {
+    const at = moved.get(p);
+    return at ? { ...p, lon: at.lon, lat: at.lat, blobId: at.blobId, blobSize: at.blobSize } : p;
+  });
 }
 
 /**

@@ -3,7 +3,7 @@ import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
 import { dailyRank, layoutLabels } from '../lib/map-labels.js';
 import { lifeBounds, pointOn, progressAt, trackPath } from '../lib/map-track.js';
-import { BLOB_MAX, HOME, MAX_SCALE, MIN_SCALE, capacitatedGroups, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
+import { HOME, MAX_SCALE, MIN_SCALE, clampCentre, clampView, convexHull, coverFractions, distToHull, fitBounds, inflateHull, maxScaleFor, mergeDots, panBy, pointInHull, spreadShared, toScreen, toWorld, zoomAbout } from '../lib/map-view.js';
 import { ASPECT, project } from '../lib/mercator.js';
 import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
@@ -152,6 +152,33 @@ const shownYear = () => (playhead === null ? dateTo : playhead);
 
 /** What the last paint drew, in CSS px - the press's hit-map and the labels'. */
 let drawnDots = [];
+
+/**
+ * What the last paint drew for blobs — `{id, marks, cx, cy, hull}` per ready
+ * blob, open or closed — the same "the draw pass writes the hit-map"
+ * contract `drawnDots` already keeps, so `blobAt` (below) and the hover
+ * handler read this rather than recomputing hulls of their own.
+ */
+let drawnBlobs = [];
+
+/**
+ * Which blob the pointer is currently over, on a device that *has* hover
+ * (author, 2026-09-04: "on desktop only, when you hover your mouse over a
+ * blob, its the same function as moving the centre of the screen over the
+ * blob"). `null` off a blob, on a touch device, or once the pointer has left
+ * the canvas — `paintCanvas` reads it before falling back to the screen
+ * centre, never instead of that fallback, since a mouse that has moved off
+ * every blob still has a screen centre to answer to.
+ */
+let hoveredBlobId = null;
+
+/**
+ * Which blob the last paint actually drew open — `openBlob`'s own id,
+ * mirroring `drawnDots`/`drawnBlobs`. `wirePress` reads this to tell a dot
+ * that merely sits inside a *closed* blob (no name on screen to have aimed
+ * at) from one the reader can actually see and mean to select.
+ */
+let openBlobId = null;
 
 /**
  * The saint the reader has chosen, by slug, or `null`.
@@ -370,11 +397,16 @@ const LABELS_AT = 2.5;
  * Below 5x the coarse tier is what is drawn even once the fine one has arrived,
  * because zooming back out must get the cheap frame back.
  *
- * Five is the author's number. It is also about where the coarse tier starts to
- * show its own edges — 0.1 degrees is 11 km, which is a pixel or two at 5x and
- * a visible staircase past it.
+ * Five was the author's own first number — where the coarse tier starts to
+ * show its own edges, 0.1 degrees being 11 km, a pixel or two at 5x and a
+ * visible staircase past it. **Lowered to `LABELS_AT` (2.5x, 2026-09-04,
+ * author: "change load in for detailed coastlines to 2.7x, or whatever it is
+ * for loading the names of the saints")** — the two are the same request
+ * read two ways ("named" is 2.5x, not the author's own guess of 2.7), and
+ * sharing the constant rather than copying its value means the two can never
+ * drift apart the way a second `2.5` written here would invite.
  */
-const DETAIL_AT = 5;
+const DETAIL_AT = LABELS_AT;
 
 /**
  * How long the coastline, lakes and rivers take to cross-fade between tiers
@@ -1359,6 +1391,44 @@ export function render(el, { data, router }) {
     });
   };
 
+  /**
+   * A press on a blob — open or closed — frames it, the same door a rail's
+   * own dot already opens (author, 2026-09-04: "when you click on a blob it
+   * centres you onto it smoothly as it centres you when you click a dot with
+   * a life rail and it centres you over the rail"). `fitBounds` over the
+   * blob's own members is the same call `choose` makes over a rail's own
+   * stays.
+   *
+   * **Not `RAIL_FIT_MAX`, and not a plain cap at all — a floor.** A rail
+   * spans a real distance on the ground, so capping how far *in* framing it
+   * is allowed to go is the only bound that ever binds. A blob is the
+   * opposite shape of problem: it is only reachable at all once its own
+   * members have separated far enough to resolve individually
+   * (`readyBlobs`, above), so `fitBounds`'s own honest answer for "fill the
+   * frame with just these dots" is routinely a *tighter* zoom than the one
+   * the reader is already standing at — and capping it down the way a rail's
+   * flight does would zoom back *out* of the resolution that made the blob
+   * clickable in the first place, un-blobbing it the instant it is pressed
+   * (found live: clicking closed a blob it had just opened, on a phone's own
+   * narrower ceiling). `Math.max(fitted.scale, view.scale)` is the fix —
+   * never asked to zoom out to fit something already on screen, only ever in.
+   *
+   * **No saint is selected.** A blob is a grouping of real, separate saints
+   * rather than one of them, so nothing here touches `selected`, `focus`, or
+   * the fall-back the rest of the map eases into while one is chosen — this
+   * only moves the camera and opens the blob it framed, the same thing
+   * hovering or centring on it already do.
+   */
+  const chooseBlob = (blob) => {
+    activeBlobId = blob.id;
+    const box = canvas.getBoundingClientRect();
+    const frame = coverFractions(box.width, box.height, ASPECT);
+    const worldPts = blob.marks.map((m) => toWorld(view, m.x / box.width, m.y / box.height, frame));
+    const fitted = fitBounds(worldPts, frame, undefined, ceilingOf(canvas));
+    const target = clampView({ ...fitted, scale: Math.max(fitted.scale, view.scale) }, frame, ceilingOf(canvas));
+    flyTo(target, frame, (next) => applyView(next), () => {}, ceilingOf(canvas));
+  };
+
   const release = () => {
     cancelFlight();
     railPlay = null;
@@ -1371,7 +1441,7 @@ export function render(el, { data, router }) {
     refresh();
   };
 
-  wirePress(canvas, choose, release);
+  wirePress(canvas, choose, chooseBlob, release, refresh);
   wireProfile(el, router);
 
   /*
@@ -2272,8 +2342,12 @@ function announce(el, message) {
  * A press is still distinguished from a drag the way loop-scroll's
  * click-swallow does it — by distance, not by time — and the hit radius is
  * still a finger's rather than the dot's own 2.5 px.
+ *
+ * **A blob is the second thing a press can find** (2026-09-04): a dot still
+ * wins where the two disagree, being the smaller and more particular target,
+ * and only a press that finds neither releases.
  */
-function wirePress(canvas, choose, release) {
+function wirePress(canvas, choose, chooseBlob, release, refresh) {
   let downAt = null;
   canvas.addEventListener('pointerdown', (e) => {
     downAt = { x: e.clientX, y: e.clientY };
@@ -2283,17 +2357,54 @@ function wirePress(canvas, choose, release) {
     downAt = null;
     if (!was || Math.hypot(e.clientX - was.x, e.clientY - was.y) > 5) return;
     const hit = dotAt(canvas, e);
+    const blob = blobAt(canvas, e);
+    /*
+     * A dot still inside a *closed* blob has no name on screen to have
+     * aimed at (`blobSilenced`, above) — the blob it belongs to is what the
+     * press actually found, the same door a press anywhere else in its
+     * outline already opens. A dot with no blob, or one inside the blob
+     * already open, still wins: its name is on screen, and a second press
+     * on a member of an open blob is how a reader reaches that one saint.
+     */
+    if (hit && (!hit.blobId || hit.blobId === openBlobId)) choose(hit);
+    else if (blob) chooseBlob(blob);
     // A press that finds nobody is the "click away" that lets go — on the
     // picture only. The timeline is not somewhere to click away *to*:
     // scrubbing the years to watch the chosen saint move is the whole
     // reason for choosing one.
-    if (hit) choose(hit);
+    else if (hit) choose(hit);
     else release();
   });
-  // The cursor says a dot is pressable before the press finds out.
+  // The cursor says a dot or a blob is pressable before the press finds out
+  // — and on a mouse, hovering a blob is the press's own effect early
+  // (author, 2026-09-04: "when you hover your mouse over a blob, its the
+  // same function as moving the centre of the screen over the blob").
+  // `pointerType` rather than a coarse-pointer media query: this is one
+  // event's own input device, not a guess from the window's width, and a
+  // touch that has not lifted yet must not open a blob it is only resting on.
   canvas.addEventListener('pointermove', (e) => {
     if (e.buttons) return;
-    canvas.style.cursor = dotAt(canvas, e) ? 'pointer' : '';
+    const dot = dotAt(canvas, e);
+    /*
+     * **Checked whether or not a dot also answers** — a blob's own hull is
+     * mostly the dots inside it, so gating this on "no dot found" the way
+     * the cursor and the click below do would mean hovering the blob almost
+     * never fires: the pointer is nearly always within a dot's own 12px
+     * reach somewhere inside a cluster this tight. Opening the blob is a
+     * coarser question than which one dot the pointer happens to be nearest.
+     */
+    const blob = blobAt(canvas, e);
+    canvas.style.cursor = dot || blob ? 'pointer' : '';
+    if (e.pointerType !== 'mouse') return;
+    const next = blob?.id ?? null;
+    if (next === hoveredBlobId) return;
+    hoveredBlobId = next;
+    refresh(true);
+  });
+  canvas.addEventListener('pointerleave', (e) => {
+    if (e.pointerType !== 'mouse' || hoveredBlobId === null) return;
+    hoveredBlobId = null;
+    refresh(true);
   });
   canvas.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') release();
@@ -2345,6 +2456,22 @@ function dotAt(canvas, e) {
   );
 }
 
+/**
+ * The blob under a pointer, open or closed — inside its own drawn outline,
+ * or (the rare one- or two-member remainder with no hull to speak of)
+ * within a dot's own reach of its centre. Reads `drawnBlobs`, the same
+ * "the draw pass writes the hit-map" contract `dotAt` already keeps.
+ */
+function blobAt(canvas, e) {
+  const box = canvas.getBoundingClientRect();
+  const x = e.clientX - box.left;
+  const y = e.clientY - box.top;
+  for (const b of drawnBlobs) {
+    if (b.hull ? pointInHull({ x, y }, b.hull) : Math.hypot(b.cx - x, b.cy - y) < 12) return b;
+  }
+  return null;
+}
+
 export function destroy() {
   if (onResize) window.removeEventListener('resize', onResize);
   onResize = null;
@@ -2356,6 +2483,8 @@ export function destroy() {
   focus = null;
   selectFade.value = 0;
   activeBlobId = null;
+  hoveredBlobId = null;
+  openBlobId = null;
   for (const off of cleanups) off();
   cleanups = [];
   if (fadeFrame !== null) {
@@ -2449,6 +2578,45 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     });
   }
 
+  /*
+   * **The wheel trails rather than jumping, on desktop** (2026-09-04, author:
+   * "smooth/slightly lazy zooming in/out on desktop map"). A trackpad's own
+   * `deltaY` already arrives in a stream of small values many times a
+   * second, which read as continuous motion applied instantly; a mouse's own
+   * wheel arrives in a handful of fixed-size notches, and applying *those*
+   * instantly is the "jumps rather than glides" a reader feels, the same
+   * complaint the +/- buttons' own `flyTo` easing already answered for a
+   * press. This is that answer for a continuous gesture: each notch moves a
+   * *target* view, not the drawn one, and a short rAF loop eases the drawn
+   * view toward wherever the target currently is — so a fast series of
+   * notches keeps compounding the target smoothly rather than restarting an
+   * animation from scratch on every one.
+   */
+  let wheelTarget = null;
+  let wheelRaf = null;
+  const WHEEL_EASE = 0.3;
+  const stepWheelEase = () => {
+    if (!wheelTarget) {
+      wheelRaf = null;
+      return;
+    }
+    const dScale = wheelTarget.scale - view.scale;
+    const dCx = wheelTarget.cx - view.cx;
+    const dCy = wheelTarget.cy - view.cy;
+    if (Math.abs(dScale) < 0.001 && Math.abs(dCx) < 0.00002 && Math.abs(dCy) < 0.00002) {
+      setThrottled(wheelTarget);
+      wheelTarget = null;
+      wheelRaf = null;
+      return;
+    }
+    setThrottled({
+      scale: view.scale + dScale * WHEEL_EASE,
+      cx: view.cx + dCx * WHEEL_EASE,
+      cy: view.cy + dCy * WHEEL_EASE,
+    });
+    wheelRaf = requestAnimationFrame(stepWheelEase);
+  };
+
   canvas.addEventListener(
     'wheel',
     (e) => {
@@ -2461,16 +2629,22 @@ function wireZoom(el, canvas, cards, schedulePaint) {
        */
       e.preventDefault();
       const box = canvas.getBoundingClientRect();
-      setThrottled(
-        zoomAbout(
-          view,
-          Math.exp(-e.deltaY * 0.002),
-          (e.clientX - box.left) / box.width,
-          (e.clientY - box.top) / box.height,
-          coverFractions(box.width, box.height, ASPECT),
-          ceilingOf(canvas),
-        ),
+      const target = zoomAbout(
+        wheelTarget ?? view,
+        Math.exp(-e.deltaY * 0.002),
+        (e.clientX - box.left) / box.width,
+        (e.clientY - box.top) / box.height,
+        coverFractions(box.width, box.height, ASPECT),
+        ceilingOf(canvas),
       );
+      // Reduced motion removes the trailing, not just shortens it — the
+      // wheel lands exactly where it always has, one notch at a time.
+      if (reducedMotion()) {
+        setThrottled(target);
+        return;
+      }
+      wheelTarget = target;
+      if (!wheelRaf) wheelRaf = requestAnimationFrame(stepWheelEase);
     },
     // Not passive: this one calls preventDefault, and Chrome ignores it on a
     // passive listener while warning about it in a console nobody is reading.
@@ -3283,45 +3457,6 @@ function paintCanvas(canvas, cards) {
   }
 
   /*
-   * **A coordinate with more than `BLOB_MAX` saints is partitioned into
-   * blobs before it is spread** (author, 2026-09-04: "only do this blob
-   * function wherever there are more than 8 saints, at which point you will
-   * have 2 blobs — no point in having a single blob, the function of the
-   * blob is for large clusters"). Read before `spreadShared` moves
-   * `lon`/`lat`, because the coordinate every member shares is exactly what
-   * groups them here and exactly what `spreadShared` is about to overwrite.
-   *
-   * **Partitioned once, on the shared coordinate itself, not every paint on
-   * screen pixels** — `tests/map-view.test.mjs`'s own invariance test is why
-   * this is sound: capacity-constrained k-means only ever compares *relative*
-   * distances, which panning and zooming (one shared scale and translation
-   * across every member at once) cannot reorder. So the partition computed
-   * here is the same one at every zoom and every pan, and `blobId` is stable
-   * for the whole visit rather than being recomputed — and risking a
-   * different shape — on every frame.
-   */
-  const sharedCoords = new Map();
-  for (const s of standing) {
-    const key = `${s.lon},${s.lat}`;
-    if (!sharedCoords.has(key)) sharedCoords.set(key, []);
-    sharedCoords.get(key).push(s);
-  }
-  for (const [key, group] of sharedCoords) {
-    if (group.length <= BLOB_MAX) continue;
-    const idx = capacitatedGroups(
-      group.map((s) => ({ x: s.lon, y: s.lat })),
-      BLOB_MAX,
-      key,
-    );
-    idx.forEach((members, gi) => {
-      for (const i of members) {
-        group[i].blobId = `${key}#${gi}`;
-        group[i].blobSize = members.length;
-      }
-    });
-  }
-
-  /*
    * **Saints at one identical coordinate are spread into a tight ring around
    * it, on the ground rather than on the screen** (author, 2026-09-01: "spread
    * the dots around as coordinates on the map if they're stacked ... still
@@ -3331,7 +3466,14 @@ function paintCanvas(canvas, cards) {
    * out a few hours earlier: the offset is sub-pixel with the whole world on
    * screen, so `mergeDots` still collapses the group into one honest mark
    * saying how many, and it opens into a constellation only as the reader
-   * goes in. `lib/map-view.js` argues the size of it.
+   * goes in. `lib/map-view.js` argues the size of it — including, since
+   * 2026-09-04, a coordinate over `BLOB_MAX` (8) into blobs of at most that
+   * many, partitioned and separated on the scatter itself
+   * (`capacitatedGroups`/`separateGroups`) rather than on the shared
+   * coordinate every member starts at, which had no geometry in it for a
+   * partition to read and produced blobs that covered nearly the same
+   * ground. `blobId`/`blobSize` ride on the spread point for exactly the
+   * coordinates this touches; everywhere else they are `undefined`.
    */
   for (const s of spreadShared(standing)) {
     const p = place(s.lon, s.lat, frame);
@@ -3480,14 +3622,17 @@ function paintCanvas(canvas, cards) {
       const hull = marks.length >= 3 ? inflateHull(convexHull(marks.map((m) => ({ x: m.x, y: m.y }))), BLOB_HULL_PAD) : null;
       return { id, marks, cx, cy, hull };
     });
+  drawnBlobs = readyBlobs;
   /*
-   * **Sticky, the same shape `scatter-mockup/blobs.html` worked out**: the
-   * blob that was open stays open until the centre is a real margin past its
-   * own edge, not merely across the line, or a reader whose drag stops near
-   * two blobs' shared boundary would watch the names swap on every pixel.
+   * **`activeBlobId` answers only to the screen's own centre, never to a
+   * hover** — sticky, the same shape `scatter-mockup/blobs.html` worked out:
+   * the blob that was open stays open until the centre is a real margin past
+   * its own edge, not merely across the line, or a reader whose drag stops
+   * near two blobs' shared boundary would watch the names swap on every
+   * pixel.
    */
   const screenCentre = { x: w / 2, y: h / 2 };
-  let openBlob = null;
+  let centredBlob = null;
   if (readyBlobs.length) {
     const current = readyBlobs.find((b) => b.id === activeBlobId);
     if (current) {
@@ -3497,21 +3642,35 @@ function paintCanvas(canvas, cards) {
       const away = current.hull
         ? distToHull(screenCentre, current.hull)
         : Math.hypot(screenCentre.x - current.cx, screenCentre.y - current.cy);
-      if (inside || away <= BLOB_HYSTERESIS_PX) openBlob = current;
+      if (inside || away <= BLOB_HYSTERESIS_PX) centredBlob = current;
     }
-    if (!openBlob) openBlob = readyBlobs.find((b) => b.hull && pointInHull(screenCentre, b.hull)) ?? null;
-    if (!openBlob) {
+    if (!centredBlob) centredBlob = readyBlobs.find((b) => b.hull && pointInHull(screenCentre, b.hull)) ?? null;
+    if (!centredBlob) {
       let bestD = Infinity;
       for (const b of readyBlobs) {
         const d = Math.hypot(b.cx - screenCentre.x, b.cy - screenCentre.y);
         if (d < bestD) {
           bestD = d;
-          openBlob = b;
+          centredBlob = b;
         }
       }
     }
   }
-  activeBlobId = openBlob ? openBlob.id : null;
+  activeBlobId = centredBlob ? centredBlob.id : null;
+  /*
+   * **A hovering mouse previews a blob without leaving a mark** (author,
+   * 2026-09-04: "on desktop only, when you hover your mouse over a blob,
+   * its the same function as moving the centre of the screen over the
+   * blob"). `openBlob` — what this paint actually draws open — takes the
+   * hovered blob first, but `activeBlobId` above never learns about it: the
+   * moment the pointer leaves, the picture returns to exactly the blob the
+   * centre rule already had, rather than the hover having quietly become
+   * the new sticky choice. `hoveredBlobId` is only ever set from a
+   * `pointerType: 'mouse'` event (`wirePress`), so a touch reader never
+   * takes this branch and the centre rule is the whole of their answer.
+   */
+  const openBlob = (hoveredBlobId && readyBlobs.find((b) => b.id === hoveredBlobId)) || centredBlob;
+  openBlobId = openBlob?.id ?? null;
   // Every dot in a *ready* blob that is not the open one — excluded from
   // naming below, whatever `layoutLabels` would otherwise have room for.
   const blobSilenced = new Set();
