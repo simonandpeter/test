@@ -9687,8 +9687,14 @@ it — and fixed in the test (`feb1192`): the hero's *lede* dropping `hidden`
 reads the same `loadDetail` moment from a box that answers for every saint,
 since every saint has a life. Trap 4 in one more coat.
 
-**Not done, and why.** Item 4 (the two chooser controls are one control) is
-real and remains; item 5 (`map.js`, now 4,473 lines, 24 module-scope `let`s)
+**Item 4, done later the same sitting**: `src/ui/panel-control.js` is the
+disclosure both header controls were each carrying — the flight and its
+token, the outside press, Escape — and the two choosers keep their own words
+and contents. 420 lines to 387, less than the plan's 90–110 because the
+comments that argue the machinery were counted twice in the estimate and
+move once; `extraction-check.mjs` clean on both moves.
+
+**Not done, and why.** Item 5 (`map.js`, now 4,473 lines, 24 module-scope `let`s)
 wants the author's word and the file has been under daily instruction all
 week; item 6 buys readability and nothing else. The two dead exports in
 `lib/store.js` — `listHistory`, `clearHistory`, one hit each in the tree,

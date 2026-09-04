@@ -13,7 +13,7 @@
 
 import { LANGUAGES, chooseLanguage, currentLanguage, ensureAllPacks, ensurePack, LANGUAGES_BY_ID } from '../lib/i18n.js';
 import { STRINGS, fill } from './strings.js';
-import { flyInto, flyOutOf } from './fly.js';
+import { mountPanelControl } from './panel-control.js';
 
 /* The same drawing family as the calendar mark: stroked, currentColor, named
    by the button's label rather than by being understood. */
@@ -45,84 +45,28 @@ function renderChoices(current) {
   ).join('');
 }
 
-/** Mirrors mountChurchControl; returns nothing to unmount because the header
- *  outlives every view. */
+/** Mirrors mountChurchControl — the same ui/panel-control.js disclosure with
+ *  the five languages inside it; returns nothing to unmount because the
+ *  header outlives every view. */
 export function mountLanguageControl(button, panel) {
-  let open = false;
-  let flight = 0;
-
   const paintButton = () => {
     const L = STRINGS.language;
     const lang = LANGUAGES_BY_ID[currentLanguage()];
     button.innerHTML = ICON_GLOBE + `<span class="church-open-name">${lang.code}</span>`;
     button.setAttribute('aria-label', fill(L.showingLabel, { name: lang.name }));
   };
-  // The same flight home the calendar control makes, for the same reason.
-  /*
-   * Whichever flight is in the air, so the other direction can land it
-   * before it sets off. `flyInto` decides where to fly *from* by reading
-   * the box's rect, and a panel halfway through arriving is at neither
-   * end of its journey — so an open still climbing when the reader
-   * presses again sent the close off in the wrong direction and by the
-   * wrong distance. Caught by the suite's own direction assertion.
-   */
-  let land = null;
-  const landFlight = () => {
-    const f = land;
-    land = null;
-    f?.();
-  };
-  const close = () => {
-    open = false;
-    landFlight();
-    const mine = (flight += 1);
-    button.setAttribute('aria-expanded', 'false');
-    const inner = panel.querySelector('.church-panel-inner');
-    land = flyInto(
-      inner,
-      button,
-      () => {
-        if (mine !== flight) return;
-        panel.hidden = true;
-        panel.innerHTML = '';
-      },
-      // The band closes over the same 160 ms, so the page below rises with
-      // the panel instead of snapping up when it goes (author, 2026-08-26).
-      { collapse: panel },
-    );
-    button.focus();
-  };
-  /*
-   * A close that is still in the air when the panel is opened again must not
-   * land on the new one. `flight` is the token: the closing callback checks
-   * that it is still the current flight before hiding and emptying, and the
-   * panel's own collapse styles are cleared here, because until the old
-   * flight finishes it is still holding `height: 0`.
-   *
-   * Found by the suite — a test that changed calendar twice inside 160 ms hit
-   * a panel that was open, empty and nought pixels tall, and timed out trying
-   * to press a button inside it.
-   */
-  const openPanel = () => {
-    open = true;
-    landFlight();
-    flight += 1;
-    panel.hidden = false;
-    panel.style.height = '';
-    panel.style.overflow = '';
-    panel.style.transition = '';
+
+  const control = mountPanelControl(button, panel, {
+    render: () => renderLanguageChooser(),
     /* The packs are fetched per language since 2026-08-27, so the four this
        panel offers are started the moment it opens: by the time a reader has
        read five words and pressed one, the chunk is in cache and the change
        is instant. Deliberately not awaited — the panel must not wait on a
        network to appear. */
-    ensureAllPacks();
-    button.setAttribute('aria-expanded', 'true');
-    panel.innerHTML = `<div class="church-panel-inner">${renderLanguageChooser()}</div>`;
-    // The same arrival the calendar control makes, for the same reason.
-    land = flyOutOf(panel.querySelector('.church-panel-inner'), button, () => {}, { expand: panel });
-    (panel.querySelector('[data-language][aria-pressed="true"]') ?? panel.querySelector('[data-language]'))?.focus({ preventScroll: true });
-  };
+    wire: () => {
+      ensureAllPacks();
+    },
+  });
 
   panel.addEventListener('click', async (e) => {
     const choice = e.target.closest('[data-language]');
@@ -134,36 +78,7 @@ export function mountLanguageControl(button, panel) {
     await ensurePack(choice.dataset.language);
     chooseLanguage(choice.dataset.language);
     paintButton();
-    close();
-  });
-
-  button.setAttribute('aria-expanded', 'false');
-  button.addEventListener('click', () => (open ? close() : openPanel()));
-  /*
-   * A press anywhere else closes it — the same bargain the calendar control
-   * makes, for the same reason, and `ui/church-chooser.js` argues it there.
-   * (The two mounts have been the same machinery with different contents for
-   * a while; `docs/CLEANUP-PLAN.md` §4 has the measurement.)
-   */
-  const onAway = (e) => {
-    if (!open) return;
-    if (panel.contains(e.target) || button.contains(e.target)) return;
-    /*
-     * **The other chooser is not "outside"** (2026-09-02, keeping the
-     * instruction of 2026-08-27 intact). The two panels are independent
-     * disclosures and both may stand open at once — that is what makes "the
-     * calendar panel follows a language change while it is open" a case at
-     * all, and it is the author's own: changing language with the calendar
-     * chooser still showing, and seeing it repaint without being closed and
-     * reopened. A press on the other control is the reader reaching for the
-     * second panel, not dismissing the first.
-     */
-    if (e.target.closest?.('.church-panel, #church-open, #lang-open')) return;
-    close();
-  };
-  document.addEventListener('pointerdown', onAway);
-  panel.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && open) close();
+    control.close();
   });
 
   paintButton();

@@ -105,9 +105,18 @@ you inferred, and keep them apart.
 | `the index offers two layouts, and remembers which one the reader chose` | 2 in ~38 | mobile-360 |
 | `the row comes back on its own after a press` | 3 in ~6 | **both** |
 | `the dot slides along the track rather than jumping when the year leaps` | 5 in 6 *slow* runs, 0 in 2 fast | desktop |
+| `the panel flies home in half the time, and the page closes behind it` | 2 in 3 six-worker runs (2026-09-05, one of them on the commit *before* the chooser extraction), 0 in 6 serial | both |
 
 Two were filed as "seen once, not recurring" before they recurred. **A second
 sighting is the first fact about a flake; the first is a rumour.**
+
+**The fifth (2026-09-05) is `waitForTimeout(60)` racing a 160 ms flight**: under
+six workers the timer can fire after the flight has landed and emptied the
+panel, so `midFlight` reads null. Measured on both sides of the chooser
+extraction (`ui/panel-control.js`) before being called a flake: red once on
+the old code and once on the new under the same load, green 6 of 6 serial on
+the new. The honest repair is to read the mid-flight styles inside a
+`requestAnimationFrame` after the press rather than after a wall-clock wait.
 
 **The fourth arrived on 2026-09-02 and was measured before it was blamed on
 anything.** It first appeared in a full run alongside a Daily-page change, and
@@ -182,9 +191,10 @@ its reasoning).
   and it must survive a `VERSION` bump. The corpus behind it is a rights
   question and the author's.
 - **`docs/CLEANUP-PLAN.md`** items 1, 2 and 3 were done on 2026-09-05 in one
-  sitting, with a dead-CSS sweep the plan had not measured (171 lines). Items
-  4 (the two chooser controls are one control), 5 (`map.js` at 4,500 lines)
-  and 6 (the two largest specs) remain, and 5 wants the author's word first.
+  sitting, with a dead-CSS sweep the plan had not measured (171 lines), and
+  item 4 (the two chooser controls are one control, `ui/panel-control.js`)
+  the same day. Items 5 (`map.js` at 4,500 lines) and 6 (the two largest
+  specs) remain, and 5 wants the author's word first.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 

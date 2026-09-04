@@ -9,7 +9,7 @@ things that can be collapsed into one function. Just plan it for now."
 each says so in its own section below. The same sitting removed 171 lines of
 stylesheet the plan had not measured — fourteen class selectors with no
 reference anywhere, three of them referenced *only* by e2e assertions that
-they render nothing (`99a71ef`). Items 4, 5 and 6 remain a plan, and the
+they render nothing (`99a71ef`). Item 4 followed the same day. Items 5 and 6 remain a plan, and the
 numbers in "the shape of the thing today" are the 2026-09-02 ones: `map.js`
 was 4,473 lines by 2026-09-05 and `calendar.css` 3,309 before the dead rules
 went.
@@ -146,7 +146,14 @@ would catch it.**
 
 ---
 
-## 4. The two chooser controls are one control written twice
+## 4. The two chooser controls are one control written twice — done 2026-09-05
+
+`src/ui/panel-control.js` (`mountPanelControl(button, panel, { render, wire })`);
+the two controls keep their button's words and their panel's contents. 420
+lines became 387 — smaller than the 90–110 estimated, because the comments
+that argued the flight and the outside press were counted twice in the
+estimate and move once. `extraction-check.mjs` clean on both moves; chrome
+spec green on both projects.
 
 **Measured.** `src/ui/church-chooser.js` (216 lines) and
 `src/ui/language-chooser.js` (148). Diffing `mountChurchControl` against

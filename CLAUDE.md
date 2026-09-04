@@ -149,7 +149,10 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   the reader which way the day moved, so the picture answers on the same axis.
 - Also-commemorated is `.reg-card`, the register's own row, not the Index's.
 - Hero carries no bookmark. Liturgy line: `paintLiturgy`; Great Feast from
-  `lib/liturgy.js`. Both header panels fly: `src/ui/fly.js`.
+  `lib/liturgy.js`. Both header panels are one disclosure, `src/ui/panel-control.js`
+  (2026-09-05 — the flight, the outside press, Escape, the flight token);
+  `church-chooser.js` and `language-chooser.js` own only their words and
+  contents. The flight itself: `src/ui/fly.js`.
 
 **All Saints** — `src/views/saints.js` (composition only) + `src/styles/index.css`
 - `src/views/index/`: `state.js`, `modes.js` (carousel + toggle), `sticky.js`,
