@@ -537,15 +537,6 @@
   pointer-events: none;
 }
 
-.shelf-tools {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  flex: none;
-}
-
 /* The removal that is not the swipe: reachable by tab and by a screen
    reader, invisible to everyone else (DESIGN.md §5b — a gesture is never the
    only way to a thing). It takes the row's trailing edge when focused, over

@@ -203,21 +203,19 @@ a:hover {
    reader *is* — the current nav item, today's weekday, the selected date — and
    spending it on every name in a register would leave the reader's own place
    with nothing to say it. The Index's cards have read this way since they were
-   built (`.index-name`, index.css); this is the same rule reaching the three
-   places it had not: the day's hero, the register beside it, and the related
-   list on a saint's page.
+   built (`.index-name`, index.css); this is the same rule reaching the two
+   places it had not: the day's hero and the register beside it. (The related
+   list on a saint's page was a third, and its `.shelf-name` has since gone.)
 
    Where a name sits inside prose it keeps the underline: a life's link to
    another saint is a link in running text and has no card to be the target. */
 .hero-name a,
-.reg-name,
-.shelf-name {
+.reg-name {
   text-decoration: none;
 }
 
 .hero-name a:hover,
-.reg-name:hover,
-.shelf-name:hover {
+.reg-name:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--ink-soft);

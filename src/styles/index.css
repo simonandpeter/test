@@ -2,13 +2,10 @@
    grid is panels on a field, as everywhere else. Nothing here is gold or red. */
 
 /* This page is a list, and the list is the point: everything above it is
-   tuned to spend as few vertical pixels as it can and still read. The lede is
-   one line, the search field carries its own label in the placeholder, and
-   Random sits beside Sort rather than taking a row of its own. */
-.index-lede {
-  color: var(--ink-soft);
-  margin-bottom: var(--space-3);
-}
+   tuned to spend as few vertical pixels as it can and still read. The search
+   field carries its own label in the placeholder, and Random sits beside Sort
+   rather than taking a row of its own. (The one-line lede that used to open
+   the page is gone, and `index.spec.js` holds that it stays gone.) */
 
 /* **A chip's height, in one place, because four controls across these rows
    have to be exactly as tall as one and each was carrying its own copy of the
