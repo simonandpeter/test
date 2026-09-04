@@ -50,7 +50,7 @@ calendar keeps her the same day, with a troparion that praises her for
 disdaining the love of the earthly emperor for love of the Emperor of all.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/942/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped); the Romanian life is at
+[the entry](https://www.saint.gr/942/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped; the Romanian life is at
 doxologia.ro — [the page](https://doxologia.ro/viata-sfintei-cuvioase-casiana-imnografa).*

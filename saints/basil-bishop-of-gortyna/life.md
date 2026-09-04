@@ -20,6 +20,6 @@ his name near the St Nicholas dependency of the monastery of Koudoumas. The
 Greek calendar keeps him on 16 September.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/4468/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped).*
+[the entry](https://www.saint.gr/4468/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*

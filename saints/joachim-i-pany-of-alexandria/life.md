@@ -23,6 +23,6 @@ II in his predecessor’s memory; his precious skull is treasured at the
 monastery of St Sabbas. The Greek calendar keeps him on 17 September.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/4350/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped).*
+[the entry](https://www.saint.gr/4350/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*

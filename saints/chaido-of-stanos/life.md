@@ -24,6 +24,6 @@ church has been built to her in recent years at the initiative of the parish
 priest Nicholas Chalkias and with the help of the people of Stanos.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/2498/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped).*
+[the entry](https://www.saint.gr/2498/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*

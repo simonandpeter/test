@@ -28,7 +28,7 @@ September 1527, and says he stayed steadfast in his Orthodoxy and was
 condemned and beheaded for it. This entry records both and settles neither.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/2397/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped); the Romanian life is at
+[the entry](https://www.saint.gr/2397/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped; the Romanian life is at
 doxologia.ro — [the page](https://doxologia.ro/viata-sfantului-nou-mucenic-macarie-ucenicul-patriarhului-nifon-14-septembrie-1527).*

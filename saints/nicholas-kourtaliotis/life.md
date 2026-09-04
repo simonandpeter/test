@@ -35,6 +35,6 @@ Cretan calendar of saints and his memory is kept with great splendour on
 1 September; a service to him was printed at Athens in 1879.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/886/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped).*
+[the entry](https://www.saint.gr/886/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*

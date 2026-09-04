@@ -53,7 +53,7 @@ Lives, by Father Makarios of Simonopetra, tell the same; the Greek and
 Romanian calendars keep him on 18 September.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/2477/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped); the Romanian life is at
+[the entry](https://www.saint.gr/2477/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped; the Romanian life is at
 doxologia.ro — [the page](https://doxologia.ro/viata-cuviosului-romil-de-ravanita).*

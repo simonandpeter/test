@@ -48,6 +48,6 @@ from the Makrinitsa convent to the church at Phytoko outside Nea Ionia for
 Vespers and an all-night vigil.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/2442/saint.aspx), read whole on
-5 September 2026 (its page shows seventy words and the rest behind a link,
-which is where the earlier reading stopped).*
+[the entry](https://www.saint.gr/2442/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*
