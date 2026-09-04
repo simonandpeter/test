@@ -10,6 +10,7 @@ import { softness } from '../lib/uncertainty.js';
 import { saintName } from '../lib/honorific.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { reducedMotion } from '../lib/motion.js';
 
 export const title = () => STRINGS.map.title;
 
@@ -310,8 +311,6 @@ function stepSelectFade(now) {
   else if (selectFade.value > target) selectFade.value = Math.max(target, selectFade.value - dt / SELECT_FADE_MS);
   return 1 - (1 - SELECT_DIM) * selectFade.value;
 }
-
-const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function cancelFlight() {
   if (flyFrame === null) return;

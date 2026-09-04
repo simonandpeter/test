@@ -31,7 +31,7 @@ import { formatDate, translateReason } from '../lib/i18n.js';
 /* The page's own state, and the one file allowed to write it — see
    views/daily/state.js for why it is a singleton and why it moved. */
 import { state, open as openState, close as closeState } from './daily/state.js';
-import { reducedMotion } from './daily/motion.js';
+import { reducedMotion } from '../lib/motion.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
 import { monthFmt, reckonedHeading, weekdayFmt } from './daily/format.js';

@@ -35,6 +35,7 @@ import { hasChosenLanguage } from '../lib/i18n.js';
 import { readSettings, writeSetting } from '../lib/settings.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { STRINGS } from './strings.js';
+import { reducedMotion } from '../lib/motion.js';
 
 /**
  * How many scroll inputs it survives. Two, at the author's word: the first
@@ -53,8 +54,6 @@ const SCROLL_GAP = 400;
 const SCROLL_SLOP = 24;
 /** Sideways travel that dismisses a mark on a touch screen. */
 const SWIPE = 40;
-
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const CLOSE =
   '<svg viewBox="0 0 20 20" width="13" height="13" aria-hidden="true" focusable="false">' +

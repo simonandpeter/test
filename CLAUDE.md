@@ -9,7 +9,8 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - `src/views/daily/` is "what is today": `state.js` (sole writer), `format.js`,
   `entries.js` (feast index, reach), `record.js` (readings/hymns markup),
   `panel.js` (hero, register, silences), `picker.js` (rail *and* month — one
-  control), `motion.js`.
+  control). `reducedMotion` is `src/lib/motion.js` (2026-09-05; it was
+  `daily/motion.js`, and seven other files carried a copy of the line).
 - calendar.js keeps "which day": `render`, `select`, the roll, liturgy line,
   fast bubble. Nothing in `daily/` calls back into it.
 - **Two columns past 1024 px** (author, 2026-09-01), and since the second pass

@@ -9,7 +9,7 @@ import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor, dayRecordFor } from './entries.js';
 import { monthFmt, monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
-import { reducedMotion } from './motion.js';
+import { reducedMotion } from '../../lib/motion.js';
 import { state } from './state.js';
 
 /**

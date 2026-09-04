@@ -50,7 +50,7 @@
  * the row was stopped most of the time it was being looked at.
  */
 
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+import { reducedMotion } from '../lib/motion.js';
 
 /**
  * The rendered run for a track: `buffer` copies, the real items, `buffer` more.

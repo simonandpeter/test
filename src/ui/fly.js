@@ -29,8 +29,7 @@
  * the same lesson in the channel that reader is actually using.
  */
 
-const reducedMotion = () =>
-  typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+import { reducedMotion } from '../lib/motion.js';
 
 /**
  * How long the flight takes. 320 ms until 2026-08-26, halved at the author's

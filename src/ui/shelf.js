@@ -19,6 +19,7 @@ import { escapeHtml as esc } from '../lib/markdown.js';
 import { saintName } from '../lib/honorific.js';
 import { paintSaved, wireSaveButtons } from './save.js';
 import { STRINGS } from './strings.js';
+import { reducedMotion } from '../lib/motion.js';
 
 const BASE = import.meta.env.BASE_URL;
 const SHELF_LIMIT = 5;
@@ -177,7 +178,6 @@ const SWIPE_SLOP = 8;
  * decided once, at the slop, and the vertical has to win by a fifth.
  */
 const SWIPE_AXIS = 1.2;
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
  * A Continue-reading row is cleared by swiping it across (author,

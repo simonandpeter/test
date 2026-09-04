@@ -21,7 +21,7 @@
  * this module's own.
  */
 
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+import { reducedMotion } from '../lib/motion.js';
 
 const FADE = 180;
 const SPIN = 460;

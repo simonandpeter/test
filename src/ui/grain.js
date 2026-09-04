@@ -32,11 +32,10 @@
 
 import { SETTLE } from './grain-drag.js';
 import { beginSwap, landSwap, setAside } from './swap.js';
+import { reducedMotion } from '../lib/motion.js';
 
 /** Matches --dur-slot in tokens.css: the sideways step of a grain. */
 export const STRIP_SLIDE = 260;
-
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
   const track = viewport.querySelector('.grain-track');

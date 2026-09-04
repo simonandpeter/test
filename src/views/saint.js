@@ -27,7 +27,7 @@ import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/m
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
 import { linkSaintNames } from '../lib/cross-link.js';
 import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
-import { reducedMotion } from './daily/motion.js';
+import { reducedMotion } from '../lib/motion.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
