@@ -274,6 +274,17 @@ test('a blob count always carries a leader line back to the blob', () => {
   assert.equal(label.leader.y1, 100);
 });
 
+test('a blob hard against the right edge prints its count off the picture rather than pulling it back on screen', () => {
+  // Author, 2026-09-05: "most texts are indeed printing off to the right
+  // side of the screen which is great [but] the Nicomedia ones from the
+  // blobs arent" — a blob's own count used to be clamped inside the
+  // picture the way an ordinary name no longer is.
+  const blobs = [{ id: 'a', cx: W - 4, cy: 100, maxX: W - 4, name: '+27' }];
+  const [label] = layoutBlobLabels(blobs, measure, W, H);
+  assert.ok(label, 'the count was dropped instead of printing off the edge');
+  assert.ok(label.rect.x + label.rect.w > W, 'the count was pulled back onto the picture instead of running off it');
+});
+
 test('a blob count does not land on an already-placed name', () => {
   const placed = [{ x: 130, y: 92, w: 60, h: 16 }];
   const blobs = [{ id: 'a', cx: 100, cy: 100, maxX: 120, name: '+9' }];

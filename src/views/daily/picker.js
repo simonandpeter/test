@@ -1,5 +1,5 @@
 import { addDaysIso, dateIn, daysInMonthOf, isoOfDate, parseIso, todayIso, weekOf } from '../../lib/calendar-page.js';
-import { storedReckoning } from '../../lib/church.js';
+import { reckoningInForce } from '../../lib/church.js';
 import { gradeForDay } from '../../lib/fast-grade.js';
 import { toJdn } from '../../lib/jdn.js';
 import { liturgicalDay } from '../../lib/liturgy.js';
@@ -8,25 +8,23 @@ import { onGrainDrag, SETTLE } from '../../ui/grain-drag.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor, dayRecordFor } from './entries.js';
-import { dayFmt, monthFmt, monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
+import { monthFmt, monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
 import { reducedMotion } from './motion.js';
 import { state } from './state.js';
 
 /**
  * **The calendar the picker counts its days in** (author, 2026-09-02).
  *
- * Gregorian until the reader chooses a reckoning, and the Revised Julian is
- * the Gregorian's own arithmetic until 2800 (lib/jdn.js) — so this is the
- * identity for every reader who has not asked and for one of the two who
- * have, and every call below can be unconditional rather than branching on
- * whether a shift is in force.
- *
- * It is the *chosen* reckoning rather than `calendarFor`: a reader who has
- * not touched the control is reading the civil calendar the URL is in, which
- * is what DESIGN.md's grid rule says and what every day of this page said
- * before the control existed.
+ * `reckoningInForce()` since 2026-09-05, the church's own default once
+ * "Follow my church" is what is in force — not merely the reckoning the
+ * reader has explicitly chosen, `calendarFor`'s own reason for existing
+ * apart from the plain stored value (`lib/church.js`). Gregorian, whether a
+ * reader's actual choice or a church's own default, is the identity here —
+ * and so is the Revised Julian, the Gregorian's own arithmetic until 2800
+ * (lib/jdn.js) — so every call below is unconditional rather than branching
+ * on whether a shift is in force.
  */
-const gridCalendar = () => storedReckoning() ?? 'gregorian';
+const gridCalendar = () => reckoningInForce();
 
 /** A day's own number in the calendar the picker is counting in. */
 const dayNumeral = (iso) => dateIn(gridCalendar(), iso).day;
@@ -36,10 +34,7 @@ const dayNumeral = (iso) => dateIn(gridCalendar(), iso).day;
  * counting in — so the button a reader hears and the numeral they see are one
  * date rather than two thirteen days apart.
  */
-const dayLabel = (iso) => {
-  const chosen = storedReckoning();
-  return chosen ? reckonedHeading(iso, chosen) : dayFmt(utc(iso));
-};
+const dayLabel = (iso) => reckonedHeading(iso, gridCalendar());
 
 /** Matches --dur-month in tokens.css; the fade is long on purpose. */
 const MONTH_FADE = 420;

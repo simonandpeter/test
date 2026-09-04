@@ -998,7 +998,12 @@ test('the language control offers five, each naming itself in its own tongue', a
 });
 
 test('choosing Russian redraws the page in Russian, dates included, and it holds across a reload', async ({ page }) => {
-  await ready(page);
+  // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition
+  // fast this test reads (26 August civil) is dated by the Russian church's
+  // own Julian reckoning, and a forced Gregorian reckoning here would price
+  // the fast off the wrong 14 days entirely (see daily.spec.js's own note
+  // on this, and lib/church.js's `calendarFor`).
+  await ready(page, { reckoning: null });
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
@@ -1032,8 +1037,14 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
    * The month is abbreviated at this width since 2026-09-02 - and it is the
    * *pack's* own abbreviation, which is the half of that change worth pinning
    * here: «Авг» rather than a English "Aug" leaking into a Russian heading.
+   *
+   * **13, not 26** (2026-09-05, following the "Follow my church" fix):
+   * unset reckoning now truly follows the Russian church's own default,
+   * Julian, and the numerals are the reckoned ones — 26 August civil is 13
+   * August Julian. The weekday alone stays civil («Среда» is still right for
+   * the 26th), which is CLAUDE.md's own rule for `reckonedHeading`.
    */
-  await expect(page.locator('h1')).toHaveText(/^Среда, 26 Авг(уста)? 2026 г\.$/);
+  await expect(page.locator('h1')).toHaveText(/^Среда, 13 Авг(уста)? 2026 г\.$/);
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the

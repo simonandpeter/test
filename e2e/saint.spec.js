@@ -1179,19 +1179,21 @@ test('the column beside the life is the search the reader came from, and narrows
 });
 
 
-test('the icon stays put while the apparatus column scrolls under it', async ({ page }) => {
+test('the icon scrolls with the apparatus column, not pinned above it', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "when you scroll in the leftmost column the text
-   * scrolls under the image but the saint image stays exactly where it is,
-   * pinned."
+   * **Unpinned again** (2026-09-05, reversing 2026-09-02's own "the saint
+   * image stays exactly where it is, pinned" — author: "revert to when the
+   * saint image wasn't pinned, because very tall images like St Moses the
+   * Hungarian completely cover the veneration info. Make the image
+   * scrollable again"). The sticky pin held for a portrait the column's own
+   * `max-height` could scale down to fit — but the tallest icons in this
+   * corpus have no shorter shape to shrink to, and a box pinned for the
+   * whole scroll with a picture that tall leaves nowhere on screen for the
+   * veneration table it was meant to sit beside ever to land.
    *
-   * Sticky inside the column rather than against the window: the aside is its
-   * own scroller since the columns were split, and a picture stuck to the
-   * viewport would drift out of its own column the moment anything else moved.
-   *
-   * Measured as the two boxes disagreeing — the register moves by exactly what
-   * the column was scrolled, the icon does not move at all — because "pinned"
-   * is a relationship rather than a position.
+   * Measured as the two boxes agreeing now, not disagreeing: the icon and
+   * the register both move by (about) what the column was scrolled, because
+   * they are both just ordinary content in it.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -1204,11 +1206,10 @@ test('the icon stays put while the apparatus column scrolls under it', async ({ 
     page.evaluate(() => ({
       icon: Math.round(document.querySelector('.saint-media').getBoundingClientRect().top),
       register: Math.round(document.querySelector('.date-facts').getBoundingClientRect().top),
-      veneration: Math.round(document.querySelector('[data-veneration-box]').getBoundingClientRect().top),
     }));
 
   const before = await read();
-  const by = 260;
+  const by = 100;
   await page.evaluate((n) => {
     document.querySelector('.saint-aside').scrollTop = n;
   }, by);
@@ -1217,38 +1218,31 @@ test('the icon stays put while the apparatus column scrolls under it', async ({ 
     .toBe(by);
   const after = await read();
 
-  expect(after.icon, 'the icon moved with the column').toBe(before.icon);
+  expect(before.icon - after.icon, 'the icon did not scroll with the column').toBeGreaterThan(by - 4);
   expect(
     before.register - after.register,
-    'the register did not scroll under the icon',
+    'the register did not scroll under the icon by the same amount',
   ).toBeGreaterThan(by - 4);
+});
 
+test('a very tall icon never covers the veneration table below it', async ({ page }) => {
   /*
-   * **The bug this test used to miss entirely** (2026-09-04): the icon's
-   * sticky containing block was `.saint-intro`, not the scrollport, so it
-   * un-stuck the moment that box's own bottom passed — before the reader
-   * scrolled far enough to reach veneration, which sits *after* `.saint-intro`
-   * as its own sibling. `by` above (260 px) never reached that threshold, so
-   * every assertion up to here already passed on the unfixed tree; only a
-   * scroll past `.saint-intro`'s own height catches it, which is why this is
-   * a second, deeper scroll rather than a larger `by`.
+   * The report itself: "St Moses the Hungarian" — a portrait tall enough
+   * that a pinned box scaled to fit the column still left no room on screen
+   * for what came after it. Unpinned, the veneration table is simply
+   * further down an ordinary scroll, however tall the icon standing above
+   * it — never permanently hidden behind it.
    */
-  const deep = await page.evaluate(() => {
-    const aside = document.querySelector('.saint-aside');
-    aside.scrollTop = aside.scrollHeight;
-    return aside.scrollTop;
-  });
-  expect(deep, 'premise: the column has more to scroll past the first step').toBeGreaterThan(by);
-  await expect
-    .poll(async () => (await page.evaluate(() => Math.round(document.querySelector('.saint-aside').scrollTop))))
-    .toBe(deep);
-  const deepAfter = await read();
-
-  expect(deepAfter.icon, 'the icon moved with the column once past the old intro box').toBe(before.icon);
-  expect(
-    before.veneration - deepAfter.veneration,
-    'veneration did not scroll under the icon by the same amount as the column',
-  ).toBeGreaterThan(deep - 4);
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const media = page.locator('.saint-media');
+  await expect(media).toBeVisible();
+  const box = page.locator('[data-veneration-box]');
+  if ((await box.count()) === 0) return;
+  await box.scrollIntoViewIfNeeded();
+  await expect(box).toBeInViewport();
 });
 
 

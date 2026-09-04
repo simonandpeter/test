@@ -142,55 +142,21 @@
   /* The picture is the column's own width here rather than a 260 px track
      inside a wider one. */
   /*
-   * **The icon holds still while the column scrolls under it** (author,
-   * 2026-09-02: "when you scroll in the leftmost column the text scrolls under
-   * the image but the saint image stays exactly where it is, pinned").
-   *
-   * `sticky` inside the column that scrolls, so it is pinned to *that* box
-   * rather than to the window: the aside is its own scroller (2026-09-02), and
-   * a picture stuck to the viewport would drift out of its own column the
-   * moment the page behind it moved.
-   *
-   * Every piece of text in the column passes beneath it now, register through
-   * veneration, which is the whole of what was asked. It gives the pinning up
-   * when there is more picture than column — a `sticky` box taller than its
-   * scrollport pins its *bottom* and reads as a picture crawling upward — so
-   * `max-height` holds it inside the box it is stuck in and the icon is
-   * scaled to fit rather than cropped: a crop here would be the page deciding
-   * which part of an icon matters, which is a decision `cardCrop` makes for
-   * cards and this page has never made.
-   *
-   * **`pointer-events: none`, found the same day the pin was widened to the
-   * whole column.** A box pinned for the whole scroll is a box every later
-   * control (the reveal button among them) passes *under* at some scroll
-   * position, not only briefly beside — and a sticky box's own stacking
-   * context paints over whatever is currently there, which made that control
-   * unclickable at exactly the scroll position a normal "scroll to it and
-   * press it" reaches. The image carries no link and no press of its own, so
-   * letting the pointer pass through it to whatever is genuinely underneath
-   * costs nothing and is the whole fix — the box still masks the text
-   * visually (`background`, below) without also intercepting it.
+   * **Unpinned again** (2026-09-05, reversing 2026-09-02's own "the saint
+   * image stays exactly where it is, pinned" — author: "revert to when the
+   * saint image wasn't pinned, because very tall images like St Moses the
+   * Hungarian completely cover the veneration info. Make the image
+   * scrollable again"). `max-height` was meant to answer exactly this — a
+   * sticky box taller than its own scrollport pins its bottom and scales
+   * the icon to fit rather than crop — but a portrait tall enough still left
+   * the register and the veneration table sitting under a picture with
+   * nowhere shorter to shrink to, on the one shape of icon this page never
+   * crops. Plain, in-flow positioning has no such case to fail: the picture
+   * is exactly as tall as it is, and the column scrolls it away like
+   * everything else in it, whatever its own shape.
    */
   .saint-aside .saint-media-col {
     max-width: none;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-    /* The page's own ground behind it, or the text would show through as
-       it passes underneath. */
-    background: var(--gesso);
-    /*
-     * `display: contents` on the intro drops its own `gap`/`margin-bottom`
-     * (`.saint-intro.has-media` above), so this doubles that space rather
-     * than the usual `--space-2` — padding, not margin, because it is also
-     * the gesso mask the text passes under.
-     */
-    padding-bottom: var(--space-4);
-  }
-
-  .saint-aside .saint-media-col .saint-media {
-    max-height: calc(100dvh - var(--chrome-h, 53px) - var(--space-16));
   }
 
   .saint-aside .saint-media-col .saint-media img {
@@ -770,6 +736,23 @@
     gap: var(--space-2);
   }
 
+  /*
+   * **`flex: none`, or this column's own search field grows to fill it**
+   * (2026-09-05, found live: "sometimes the search bar on the right column
+   * loads up massive"). `.search-field` wears `index.css`'s own dress
+   * unchanged, the same "no override needed" reasoning `.side-facets`
+   * already banks on below — but that rule is `flex: 1 1 220px`, written
+   * for the All Saints page's own *row*, where growing along the main axis
+   * means growing *wider*. This column runs the opposite direction
+   * (`flex-direction: column`), so the same rule grows the field *taller*
+   * instead, and with nothing else in the column claiming the leftover
+   * space, the input absorbs the whole of it — the empty box in the report,
+   * with its placeholder pinned to the top.
+   */
+  .search-field {
+    flex: none;
+  }
+
   .side-count {
     flex: none;
     color: var(--ink-soft);
@@ -798,6 +781,10 @@
    * rule down the side is gone.
    */
   .side-results {
+    /* The one child of `.side-body` actually meant to grow and scroll — see
+       `.search-field`'s own comment above for the sibling that was doing
+       this by accident instead. */
+    flex: 1 1 auto;
     list-style: none;
     margin: 0;
     padding: 0;

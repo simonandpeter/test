@@ -31,14 +31,14 @@
 
 import { toJdn } from '../../lib/jdn.js';
 import { dateIn, daysInMonthOf, isoOfDate, todayIso } from '../../lib/calendar-page.js';
-import { churchName, storedReckoning } from '../../lib/church.js';
+import { churchName, reckoningInForce } from '../../lib/church.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { greatFeast, liturgicalDay } from '../../lib/liturgy.js';
 import { gradeForDay } from '../../lib/fast-grade.js';
 import { formatDate, translateReason } from '../../lib/i18n.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { countFor, dayRecordFor } from './entries.js';
-import { plainDateFmt, reckonedMonth, reckonedPlain, utc, weekdayFmt } from './format.js';
+import { reckonedMonth, reckonedPlain, utc, weekdayFmt } from './format.js';
 
 import { state } from './state.js';
 import { stepCursor } from './picker.js';
@@ -57,15 +57,16 @@ export const fullCalButton = () =>
 
 /**
  * **The calendar this month is counted in** (2026-09-02), which is the small
- * picker's `gridCalendar` and the same decision: the civil one until the
- * reader chooses a reckoning of their own, and identity for the Revised
- * Julian, so nothing below branches on whether a shift is in force.
+ * picker's `gridCalendar` and the same decision: `reckoningInForce()` since
+ * 2026-09-05 — the church's own default once that is what is in force, not
+ * only a reckoning the reader has explicitly chosen — and identity for
+ * Gregorian, so nothing below branches on whether a shift is in force.
  *
  * The full-screen month is the same month as the one under the week, and a
  * reader who has just been shown 20 August by the page they opened it from
  * cannot be handed a grid of Septembers.
  */
-const gridCalendar = () => storedReckoning() ?? 'gregorian';
+const gridCalendar = () => reckoningInForce();
 
 const daysInMonth = (c) => daysInMonthOf(gridCalendar(), c);
 
@@ -84,15 +85,9 @@ const numeralOf = (iso) => dateIn(gridCalendar(), iso).day;
  * taken from one calendar and a name taken from the other is how a strip comes
  * to read "20 September" for a day the grid above it calls 20 August.
  */
-const dateTextOf = (iso) => {
-  const chosen = storedReckoning();
-  return chosen ? reckonedPlain(iso, chosen) : plainDateFmt(utc(iso));
-};
+const dateTextOf = (iso) => reckonedPlain(iso, gridCalendar());
 
-const monthTextOf = (iso) => {
-  const chosen = storedReckoning();
-  return chosen ? reckonedMonth(iso, chosen) : longMonth(utc(iso));
-};
+const monthTextOf = (iso) => reckonedMonth(iso, gridCalendar());
 
 /**
  * What a day's fast is, in the words the Daily page's own chip uses.

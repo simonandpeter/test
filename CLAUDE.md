@@ -102,10 +102,16 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
   `gridCalendar()` in picker.js and fullcal.js (the numerals),
   `reckonedHeading`/`reckonedPlain`/`reckonedMonth` in daily/format.js (the
   words), and the reckoning button's own printed word (`calendar.js`'s
-  `wireReckoning`) reads `storedReckoning() ?? 'gregorian'` — the heading's own
-  default — rather than the church's, which is what let the control claim
-  "Julian" beside a Gregorian-dated heading for a reader who had never touched
-  it. **The weekday always comes from the civil day** and the numerals from
+  `wireReckoning`) reads `reckoningInForce()` — `calendarFor(currentChurch())`,
+  `lib/church.js`, 2026-09-05 — rather than each of these keeping its own
+  `storedReckoning() ?? 'gregorian'`. That per-view fallback is why "Follow my
+  church" used to print "Gregorian" and quietly fast by Julian underneath at
+  once (author: "'Follow my church' doesnt work as it implies but just goes
+  to Gregorian"): `calendarFor` already read the church's own default
+  correctly for the fast, `reckoningInForce` is that same answer read
+  everywhere else too. Gregorian is also now an explicit third `RECKONINGS`
+  choice rather than only ever an implicit fallback.
+  **The weekday always comes from the civil day** and the numerals from
   the reckoned one: two `Intl` passes with one field swapped, because gluing
   two formatted dates together invents punctuation Greek and Russian do not
   use. `restateIso`, `dateIn`, `isoOfDate` and `daysInMonthOf` are the
@@ -173,19 +179,29 @@ The right column (`.saint-side`, desktop only) is the reader's own search from
 All Saints — the Index's own chips and rows, borrowed rather than copied, which
 is why anything scoped to the All Saints view root can go missing there.
 
-**The pinned hero image's sticky containing block is the aside itself, not
-`.saint-intro`** (2026-09-04, `saint.css`, `@media (min-width: 1024px)`):
-`.saint-aside .saint-intro { display: contents; }` removes the intro as a box
-so `.saint-media-col` and `.saint-intro-facts` become the scroller's own
-children directly. Left as a real grid box, the intro was the sticky
-element's containing block, and a `position: sticky` element un-sticks the
-moment *that* box's own bottom scrolls past — before the reader reached
-`.saint-veneration`, a sibling appended after the intro (`wireColumns`), which
-is why the register scrolled under the pinned icon correctly and veneration
-never did. `pointer-events: none` on `.saint-media-col` is the fix's other
-half: pinned for the whole column now, the image sits over every later
-control (the reveal-traditions button among them) at some scroll position,
-not only briefly beside it, and it carries no click of its own to lose.
+**`.search-field` needs its own `flex: none` inside `.side-body`** (2026-09-05
+fix, `saint.css`, `@media (min-width: 1024px)`), or the search box on this
+page occasionally loads up filling the whole column's own height. The rule it
+was inheriting (`index.css`'s `.search-field { flex: 1 1 220px; }`) is written
+for a horizontal row on All Saints, where `220px` is a sane basis; nested
+instead inside `.side-body`'s `flex-direction: column`, the same rule reads as
+"grow to fill the column," and nothing else in that column had a competing
+`flex-grow` to contest it. `.side-results` carries `flex: 1 1 auto` now — it
+is the box that is actually meant to grow and scroll.
+
+**The hero image is unpinned again** (2026-09-05, reversing 2026-09-04's own
+sticky fix — author: "revert to when the saint image wasn't pinned, because
+very tall images like St Moses the Hungarian completely cover the veneration
+info. Make the image scrollable again"). `.saint-aside .saint-media-col` no
+longer carries `position: sticky` at all; the icon is ordinary in-flow
+content in the column now, same as the register and veneration beside it.
+The sticky version had its own bug history worth knowing if this is ever
+revisited — its containing block was `.saint-intro`, not the scrollport, so
+it un-stuck early rather than late — but the underlying design (a box scaled
+to fit the column so it never grows past what a reader can see past) was
+never going to work for a portrait with no shorter shape to scale to, which
+is what the report names. `saint.spec.js`'s `the icon scrolls with the
+apparatus column, not pinned above it` pins the new, opposite invariant.
 
 **Map** — `src/views/map.js` + `src/styles/map.css`.
 
@@ -626,8 +642,28 @@ the click on the *next* dot over. Coasting on past the gesture that was
 driving it is its own surprise regardless of what a test happens to read —
 "a tiny bit of drag" was asked for while the pointer is still moving, not as
 momentum once it has stopped. Skipped entirely under `prefers-reduced-motion`
-— reduced motion removes the animation, never merely shortens it. Labels
-arrive past 2.5×, laid out by **`lib/map-labels.js`** (pure, unit-tested):
+— reduced motion removes the animation, never merely shortens it.
+
+**Two fingers pan and zoom at once, not one gesture at a time** (`wireZoom`'s
+two-pointer branch, `views/map.js`, 2026-09-05 — author: "is there a way to do
+both scroll and zoom on mobile at the same time, measuring the distance
+between fingers as zoom and average movement as scroll?"). `spread(active)`
+(the distance between the two pointers) still drives `zoomAbout`; a new
+`pinchMid`, the two pointers' own midpoint compared frame to frame, now also
+drives `panBy`, and the two compose in one `set()` per frame rather than
+racing each other. **Both reads are deferred to a single `requestAnimationFrame`
+callback (`pinchFrame`/`flushPinch`)** rather than applied straight from
+`pointermove` — found live, not guessed: two fingers moving in one physical
+gesture still arrive as two separate DOM `pointermove` events (one per
+`pointerId`), and reading `spread`/`midpoint` off `active` between the first
+event and the second was reading a half-updated Map, which could push the
+scale past its own ceiling and clamp asymmetrically for one frame. Deferring
+the whole read to the next frame, after both pointers' events have landed,
+removes the race rather than papering over its symptom. Tested through CDP
+`Input.dispatchTouchEvent`, the only route that produces two genuinely active
+pointers a browser will hand to `setPointerCapture` (trap 11).
+
+Labels arrive past 2.5×, laid out by **`lib/map-labels.js`** (pure, unit-tested):
 it single-linkage-clusters the dots, gives a lone dot the space beside it,
 and stacks a *whole* cluster into a column with a leader line each — deciding
 per cluster rather than per dot, because trying side placements first let one
@@ -861,6 +897,16 @@ Constantinople (5) and the Caves (2) are both under `BLOB_MAX` and never
 partition at all — the corpus's only coordinate over it today is Nicomedia's
 27, which is why the mockup built its case there.
 
+**A blob's own count label follows the same "can run off the picture rather
+than pull back onto it" rule a saint's name already did, and did not until
+2026-09-05** (`layoutBlobLabels`, `lib/map-labels.js`) — a real, reported gap:
+Nicomedia's own blob sits hard against the map's right edge (its own ground
+runs into Anatolia's own coast there), and `layoutBlobLabels` alone still
+clamped its count's box to stay fully on screen and dropped it once no
+position could, where `layoutLabels` had already been fixed to let a label
+run off frame rather than either clamp or drop. `tests/map-labels.test.mjs`
+pins a blob hard against the edge the same way the saint-name fix is pinned.
+
 **Dots the reader cannot tell apart are one mark, at a real coordinate**
 (`mergeDots`, `lib/map-view.js`, pure, unit-tested; 2026-09-01). This
 replaced `declutter`, which fanned them into concentric rings a fixed number
@@ -972,6 +1018,33 @@ field's own right edge, offered for free rather than built and wired to
 attribute selector, which outweighs a bare class on specificity regardless of
 load order, and would otherwise have handed this field the Index's own
 smaller font size and tighter padding the moment the attribute made it match.
+
+**A faint historical atlas layer is drawn under everything else, unconditionally,
+whether or not the search has ever been opened** (`HISTORICAL_LABELS`,
+`data/historical-labels.js`, `paintCanvas`, 2026-09-05 — author: "add a faint
+layer of text with the location names, the main locations, Alexandria,
+Damascus, Antioch, Constantinople, Nicomedia, Laodicea, Cappadocia, Anatolia,
+Rome, Italy, old cities and regions as well"). **Deliberately a separate file
+from `data/places.js`**, even where a coordinate repeats: that one is read
+only in answer to what the reader types, this one is drawn on every paint the
+way a printed historical atlas names a region across the ground it covers
+whether or not anyone asked. It is drawn *before* the saints loop computes a
+single dot, so it never competes with a saint's own name for space — a city
+keeps a small marker of its own, faint ink at low alpha, so its name has
+something to sit beside once a saint's own dot lands on the same coordinate;
+a region has no one point that is "it" and is centred type alone, in capitals,
+the way an atlas sets a region apart from a city on the same page. **A region
+fades out by `HIST_REGION_FADE_END` (14×) and a city fades in by
+`HIST_CITY_FADE_END` (2×) and stays** — a region is a claim about broad
+ground, which a deep zoom has already left, where a city is a real place worth
+naming at exactly the zoom a reader is there to read a saint's own name at
+too. `canvas.dataset.historical` publishes which names actually landed this
+frame, the same "the pass that draws is the pass that knows" rule
+`data-dots`/`data-labels` already keep. **Positioned once, drawn in two
+batches by kind** rather than one pass alternating between them: `ctx.font`
+re-parses its string on every assignment, and this layer's own seventeen
+entries would otherwise be up to seventeen of those a frame on top of
+everything else already painted — batched down to two.
 
 **The zoom controls are a scale readout plus, on a pointer device, `+`/`−`**
 (author, 2026-08-31). `Whole world` is gone at every width — Home and `0`

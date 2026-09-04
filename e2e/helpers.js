@@ -294,18 +294,30 @@ export /**
  * the five languages, so a `ready` page that stamped only the church would
  * still meet a question — and every test that measures where something sits
  * would measure it under one.
+ *
+ * **`reckoning` defaults to `'gregorian'`, explicitly, since 2026-09-05** —
+ * not merely left unset. "Follow my church" started actually following the
+ * church that day (`reckoningInForce`, `lib/church.js`), and this suite's
+ * own default church is Russian, whose default reckoning is Julian: every
+ * test that reads a heading or a grid numeral without asking about
+ * reckoning at all was written against the civil date, and unset reckoning
+ * would have shifted every one of them thirteen days for a reason unrelated
+ * to what they test. A test that wants the true "nothing chosen" state —
+ * `lib/church.js`'s own `null` — asks for it explicitly:
+ * `ready(page, { reckoning: null })`.
  */
-const ready = (page, { church = 'russian', language = 'en' } = {}) =>
+const ready = (page, { church = 'russian', language = 'en', reckoning = 'gregorian' } = {}) =>
   page.addInitScript(
-    ({ church, language }) => {
+    ({ church, language, reckoning }) => {
       const key = 'gos-settings';
       const now = JSON.parse(localStorage.getItem(key) ?? '{}');
       const next = { ...now };
       if (typeof next.church !== 'string') next.church = church;
       if (typeof next.language !== 'string') next.language = language;
+      if (next.reckoning === undefined) next.reckoning = reckoning;
       localStorage.setItem(key, JSON.stringify(next));
     },
-    { church, language },
+    { church, language, reckoning },
   );
 
 export /**

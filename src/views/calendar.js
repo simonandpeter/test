@@ -17,7 +17,7 @@ import { gregorianToJdn } from '../lib/jdn.js';
 import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import * as store from '../lib/store.js';
-import { RECKONINGS, chooseReckoning, currentChurch, storedReckoning, subscribeChurch } from '../lib/church.js';
+import { RECKONINGS, chooseReckoning, currentChurch, reckoningInForce, storedReckoning, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 
 import { onGrainDrag } from '../ui/grain-drag.js';
@@ -34,7 +34,7 @@ import { state, open as openState, close as closeState } from './daily/state.js'
 import { reducedMotion } from './daily/motion.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
-import { headingFmt, headingShortFmt, monthFmt, reckonedHeading, utc, weekdayFmt } from './daily/format.js';
+import { monthFmt, reckonedHeading, weekdayFmt } from './daily/format.js';
 import { paintDay } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
@@ -382,16 +382,25 @@ function wireReckoning(el) {
   const paint = () => {
     const chosen = storedReckoning();
     /*
-     * **The button's own word agrees with the heading beside it** (2026-09-04,
-     * fixing a defect the reckoning-moves-the-day reversal introduced and its
-     * own removal did not touch): the heading reads `chosen ?? 'gregorian'`
-     * (below, and in `paintChrome`), never the church's default, because a
-     * reader who has not asked is reading the civil calendar the URL is in —
-     * `calendarFor` answers a different question (which calendar governs the
-     * fast) and printing it here read as "Julian" beside a Gregorian-dated
-     * heading for every reader who had not touched the control.
+     * **The button's own word agrees with the heading beside it, and both
+     * now agree with the fast** (2026-09-05, reversing 2026-09-04's own
+     * fix). That fix made the button read `chosen ?? 'gregorian'` rather
+     * than the church's default, on the reasoning that `calendarFor`
+     * answers a different question (which calendar governs the fast) and
+     * printing the church's default here read as "Julian" beside a
+     * Gregorian-dated heading. The reasoning held for the heading — which
+     * still had its own, separate `'gregorian'` fallback below, so the two
+     * *did* agree — but it meant "Follow my church" quietly never followed
+     * anything: the button, the heading and the grid all read civil
+     * regardless of the church, and only the fast itself (through
+     * `calendarFor`) was ever really following it. `reckoningInForce` is
+     * `calendarFor(currentChurch())` under a name for this page's own three
+     * readers of it (below, and in `paintChrome`) — the same answer the
+     * fast has used since 2026-09-02, now the one the label and the heading
+     * use too, so a reader who has not touched the control sees one
+     * reckoning throughout rather than a civil label over a Julian fast.
      */
-    const inForce = chosen ?? 'gregorian';
+    const inForce = reckoningInForce();
     button.textContent = CALENDAR_LABELS[inForce] ?? inForce;
     button.setAttribute('aria-label', `${STRINGS.calendar.reckoningLabel}: ${button.textContent}`);
     // A statement rather than a control below the breakpoint.
@@ -704,21 +713,20 @@ function paintChrome() {
    */
   const short = window.matchMedia('(max-width: 559.98px)').matches;
   /*
-   * **The day is named in the reckoning the reader chose** (author,
-   * 2026-09-02), which reverses DESIGN.md's "the Daily page prints the civil
-   * date and only the civil date" for the reader who asks and for nobody else:
-   * `storedReckoning` is null until the control is touched, and that branch is
-   * the line this page has printed since 2026-08-24, unchanged.
-   *
-   * The reversal is the author's and is recorded in DESIGN.md beside the rule
-   * it supersedes. What made the old rule untenable was not the rule but the
-   * control added beside it: a page headed 2 September with `Julian` printed
-   * next to it was making a claim about today that was thirteen days wrong.
+   * **The day is named in the reckoning in force, not only the reckoning
+   * chosen** (author, 2026-09-02, widened 2026-09-05: "Follow my church"
+   * has to actually name the church's own calendar, not the civil one — see
+   * `reckoningInForce`'s own record in `lib/church.js`). This reverses
+   * DESIGN.md's "the Daily page prints the civil date and only the civil
+   * date" for every reader whose church keeps something other than
+   * Gregorian, not only the reader who has explicitly asked — which is most
+   * of them, since three of the four churches this site keeps default away
+   * from it. `reckonedHeading(iso, 'gregorian', ...)` is identity with
+   * `headingFmt(utc(iso))` (`dateIn` treats Gregorian as the base calendar,
+   * `lib/jdn.js`), so the one call below covers the civil case too rather
+   * than branching for it.
    */
-  const chosen = storedReckoning();
-  el.querySelector('.cal-date').textContent = chosen
-    ? reckonedHeading(selected, chosen, { short })
-    : (short ? headingShortFmt : headingFmt)(utc(selected));
+  el.querySelector('.cal-date').textContent = reckonedHeading(selected, reckoningInForce(), { short });
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }

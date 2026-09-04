@@ -133,9 +133,15 @@ export function subscribeChurch(fn) {
  * and the two are separate questions the moment a reader wants their own
  * parish's practice rather than their patriarchate's default.
  *
- * Null means "follow the church", which is what every reader has until they
- * touch the control — so nothing about the site moves for anyone who does not
- * ask.
+ * Null means "follow the church" — not "civil", a distinction the label and
+ * the heading did not keep until 2026-09-05 (author: "'Follow my church'
+ * doesnt work as it implies but just goes to Gregorian ... make sure the
+ * 'Follow my church' selection actually works as it says, so that if you
+ * have Romanian calendar selected it goes to Revised Julian, Russian
+ * calendar goes to Julian etc" — see `reckoningInForce` below). Gregorian is
+ * an explicit third choice now rather than only ever an implicit default,
+ * for the reader whose own church keeps Julian or Revised Julian but who
+ * wants the civil date the URL is written in regardless.
  *
  * **What it does and does not reach, stated plainly.** It replaces the
  * calendar a *fixed* day is read in: the fasts, the Great Feasts, and which
@@ -146,7 +152,7 @@ export function subscribeChurch(fn) {
  * what the source states, whatever reckoning the reader is reading the year
  * by.
  */
-export const RECKONINGS = ['julian', 'revised-julian'];
+export const RECKONINGS = ['julian', 'revised-julian', 'gregorian'];
 
 export function storedReckoning() {
   const id = readSettings().reckoning;
@@ -156,6 +162,23 @@ export function storedReckoning() {
 /** The reckoning in force for a church: the reader's own, or the registry's. */
 export const calendarFor = (churchId) =>
   storedReckoning() ?? CHURCHES_BY_ID[churchId]?.default_calendar ?? 'julian';
+
+/**
+ * `calendarFor(currentChurch())` — the one answer every view that names a
+ * reckoning now reads, in place of each keeping its own `storedReckoning()
+ * ?? 'gregorian'` (2026-09-05, the fix recorded on `RECKONINGS` above).
+ * `calendarFor` already governed the fast correctly on "Follow my church" —
+ * a Russian reader was already shown the Julian Great Feasts with nothing
+ * chosen, `calendarFor`'s own reason for existing apart from the plain
+ * stored value — but the button's own word, the heading's numerals and the
+ * grid's own month all read a *different*, unconditional `'gregorian'`
+ * fallback, so the page routinely named itself "Gregorian" while quietly
+ * reading its fast by Julian underneath. One function now answers both
+ * questions the same way; `dateIn`/`reckonedHeading` already treat
+ * `'gregorian'` as identity, so nothing downstream has to branch on whether
+ * a reckoning is "really" in force.
+ */
+export const reckoningInForce = () => calendarFor(currentChurch());
 
 /**
  * **`churchDayFor` is gone (author, 2026-09-04, reversing the 2026-09-02

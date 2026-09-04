@@ -1,5 +1,5 @@
 import { dateIn, parseIso } from '../../lib/calendar-page.js';
-import { storedReckoning } from '../../lib/church.js';
+import { reckoningInForce } from '../../lib/church.js';
 import { formatDate, formatDateParts } from '../../lib/i18n.js';
 
 /**
@@ -88,7 +88,12 @@ export const reckonedMonth = (iso, calendar) =>
 export const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 
 /**
- * A date inside a sentence, in whatever calendar the reader is reading by.
+ * A date inside a sentence, in whatever calendar the reader is reading by —
+ * `reckoningInForce()` now, not only `storedReckoning()` (2026-09-05): the
+ * church's own default once "Follow my church" is what is in force, civil
+ * only for a reader whose church keeps Gregorian or who has chosen it
+ * outright. `reckonedPlain(iso, 'gregorian')` is identity with
+ * `plainDateFmt(utc(iso))`, so this needs no branch for that case either.
  *
  * The two horizons the page names in prose — how far the corpus reaches, and
  * how far the day records do — are civil dates, and a reader being shown 20
@@ -96,10 +101,7 @@ export const plainDateFmt = (d) => formatDate({ day: 'numeric', month: 'long', y
  * calendar than the one they are reading. `plainDateFmt` stays for the callers
  * that are civil by definition.
  */
-export const dayInWords = (iso) => {
-  const chosen = storedReckoning();
-  return chosen ? reckonedPlain(iso, chosen) : plainDateFmt(utc(iso));
-};
+export const dayInWords = (iso) => reckonedPlain(iso, reckoningInForce());
 
 // Abbreviated (author, 2026-08-21): the name sits in the gutter beside the
 // grid, and a full "September" reached across into the dates.
@@ -121,7 +123,3 @@ export const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
 };
-
-export // Through lib/i18n.js's cache rather than module constants (Amendment 36): a
-// formatter built once can never change language.
-const dayFmt = (d) => formatDate({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }, d);

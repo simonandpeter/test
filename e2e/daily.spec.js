@@ -1543,7 +1543,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // and the Greek disagree on the same civil day (the Dormition Fast runs to
   // 27 August on the Julian calendar). Each figure is what the church's own
   // calendar printed for the day (tests/liturgy.test.mjs has the comparison).
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   /*
    * The grade leads the line where the church's own calendar printed one
@@ -1717,7 +1717,7 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   // week is read off the Православни подсетник (pravoslavno.rs): Lawrence on
   // the 23rd with his tropar in Serbian — the hero, because the Serbian sings
   // for him — the day's Apostle and Gospel, and on the 29th two Apostles.
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await openChooser(page);
   const serbian = page.locator('#church-panel [data-church="serbian"]');
@@ -1956,7 +1956,7 @@ test('the fast bubble says what this day allows, and nothing about the others', 
    * quotation resolved, never a derivation — and the note it was read from is
    * quoted under it, untranslated and cited, as every other quotation here.
    */
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   const fast = page.locator('[data-liturgy] .fast');
   await expect(fast).toHaveAttribute('aria-haspopup', 'dialog');
@@ -2055,7 +2055,7 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
    * defaulted to was not read out of «Пост», and the bubble prints a
    * quotation only where the quotation says more than the label above it.
    */
-  await ready(page, { church: 'serbian' });
+  await ready(page, { church: 'serbian', reckoning: null });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   const fast = page.locator('[data-liturgy] .fast');
   await expect(fast).toHaveAttribute('data-grade', 'strict');
@@ -2528,31 +2528,39 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
    * record carrying hymns — which is the rank cross the calendar itself
    * printed, since the harvest ships hymns only for its top-rank days.
    *
-   * 25 August 2026 is inside the Dormition Fast in the Russian calendar, and
-   * carries no feast. Both facts are in the day button's accessible name too:
-   * a dot says nothing to a screen reader, and colour says nothing to a reader
-   * who cannot separate hues.
+   * 10 August 2026 is inside the Dormition Fast, and carries no feast — the
+   * civil 1st to the 14th under the Gregorian reckoning `ready`'s own default
+   * reads by since 2026-09-05 (`reckoningInForce`, `lib/church.js`; the
+   * Julian-observing Russian church keeps the same fast a fortnight later by
+   * the civil calendar, the civil 14th to the 27th, which is why the date
+   * moved off the 25th rather than the assertions below changing to match a
+   * reckoning this test was never about). Both facts are in the day button's
+   * accessible name too: a dot says nothing to a screen reader, and colour
+   * says nothing to a reader who cannot separate hues.
    */
   await ready(page);
   await phone(page);
-  await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-08-10', { waitUntil: 'networkidle' });
   await expect(page.locator('.density')).toHaveCount(0);
   await expect(page.locator('.week-strip i')).toHaveCount(0);
-  await expect(page.locator('.week-strip [data-iso="2026-08-25"]')).toHaveAttribute(
+  // No dated commemorations fall on this civil day in the corpus so far, so
+  // the phrase for their count does not print at all — a fast is still a
+  // fast on a day with nothing else recorded for it.
+  await expect(page.locator('.week-strip [data-iso="2026-08-10"]')).toHaveAttribute(
     'aria-label',
-    /^Tuesday, 25 August 2026 - \d+ commemorations - a fast$/,
+    /^Monday, 10 August 2026(?: - \d+ commemorations)? - a fast$/,
   );
-  const today = page.locator('.week-strip [data-iso="2026-08-25"]');
+  const today = page.locator('.week-strip [data-iso="2026-08-10"]');
   await expect(today.locator('.mark-fast')).toHaveCount(1);
   await expect(today.locator('.mark-feast')).toHaveCount(0);
   // The marks are aria-hidden: what they say is said in words on the button.
   await expect(today.locator('.day-marks')).toHaveAttribute('aria-hidden', 'true');
 
   // A fast-free day carries none at all, which is what makes a run of them
-  // legible. 20 September is the one: 23 August is a Sunday and still inside
-  // the Dormition Fast, which the Julian calendar runs to the civil 27th — the
-  // exact difference this site exists to show, and a reminder that "Sunday"
-  // is not a synonym for "no fast".
+  // legible. 20 September is well clear of the Dormition Fast under either
+  // reckoning it might run by — a reminder that "Sunday" is not a synonym
+  // for "no fast" is still worth having, just not on a date this test picks
+  // to prove it.
   const sunday = page.locator('.week-strip [data-iso="2026-09-20"]');
   await expect(sunday.locator('.day-mark')).toHaveCount(0);
   await expect(sunday).toHaveAttribute('aria-label', /^Sunday, 20 September 2026 - \d+ commemorations$/);
@@ -2659,7 +2667,7 @@ test('a note that says more than the label is still quoted', async ({ page }) =>
   // The other side of the same rule: «Успенский пост; сухоядение» is where
   // the day's grade was read from, so it is printed under it — a claim this
   // site makes always shows the words it was taken from.
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-liturgy] .fast')).toHaveAttribute('data-grade', 'xerophagy');
   await page.locator('[data-liturgy] .fast').click();
@@ -3314,7 +3322,7 @@ test('the fast chip names the type of fast, and the bubble still quotes the cale
    * different grades, both reading Strict Fasting on the chip, and each still
    * quoting its own different Russian note in the bubble underneath.
    */
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
 
   // 25 August 2026: days.pravoslavie.ru printed cooked-without-oil for the
   // day, which resolves to the `no-oil` grade.
@@ -3432,7 +3440,7 @@ test('a Great Feast is named beside the fast, in gold that never carries the wor
    * line's opacity (4.17:1) both fell into before it, and the third time it
    * gets an assertion of its own.
    */
-  await ready(page, { church: 'russian' });
+  await ready(page, { church: 'russian', reckoning: null });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const chip = page.locator('[data-liturgy] .feast-chip');
   await expect(chip).toHaveText('Great Feast - The Dormition of the Theotokos');
@@ -3611,7 +3619,7 @@ test('the fast chip is the type alone, and the occasion stands in a chip of its 
    * a strict fast whatever the weekday, in every one of the four calendars
    * that keeps it on the civil 29th.
    */
-  await ready(page, { church: 'romanian' });
+  await ready(page, { church: 'romanian', reckoning: null });
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
 
   const fast = page.locator('[data-liturgy] .fast');
@@ -3844,7 +3852,7 @@ test('a Great Feast is what the day is, and the page stops saying there is nothi
    * as the chip above reads it, so the Russian keeps the Dormition on the
    * civil 28 August and the Greek on the 15th, and both are checked here.
    */
-  await ready(page, { church: 'russian', language: 'en' });
+  await ready(page, { church: 'russian', language: 'en', reckoning: null });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
   const note = page.locator('.empty-day');
@@ -3981,7 +3989,7 @@ test('the day records and the locale packs are fetched, not carried in the entry
     if (r.resourceType() === 'script') scripts.push(r.url());
   });
 
-  await ready(page, { church: 'russian', language: 'ru' });
+  await ready(page, { church: 'russian', language: 'ru', reckoning: null });
   await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
 
   const entry = scripts.filter((u) => /\/assets\/index-[^/]+\.js$/.test(u));
@@ -5303,21 +5311,28 @@ test('the calendar names its own reckoning, and the reader may change it', async
    * not — the reckoning is the whole difference, and the day itself never
    * moves either way.
    */
-  await ready(page, { church: 'russian' });
+  // The true unset state — `ready`'s own default reckoning is explicitly
+  // Gregorian since 2026-09-05, for every test that is not about this.
+  await ready(page, { church: 'russian', reckoning: null });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const button = page.locator('[data-reckoning-btn]');
   /*
-   * Before anybody has chosen anything the control names the calendar the
-   * heading is actually in — Gregorian, the civil one — not the church's own
-   * (2026-09-04, fixing a mismatch the reckoning-moves-the-day reversal
-   * introduced and its own removal did not: printing the church's default
-   * here read as "Julian" beside a heading that had not moved from 14
-   * September, the exact false claim that started this whole area).
+   * **Before anybody has chosen anything, the control names the church's own
+   * calendar — Julian, for a Russian reader — not a flat Gregorian**
+   * (2026-09-05, reversing 2026-09-04's own fix, author: "'Follow my church'
+   * doesnt work as it implies but just goes to Gregorian ... make sure the
+   * 'Follow my church' selection actually works as it says"). The
+   * 2026-09-04 fix made this read Gregorian on the reasoning that the
+   * heading had not moved and printing "Julian" beside an unmoved 14
+   * September was the false claim that started this whole area — true, but
+   * the fix for it was on the wrong side: the heading below is what changed
+   * instead, so both now agree on Julian rather than both agreeing on
+   * Gregorian.
    */
-  await expect(button).toHaveText('Gregorian');
+  await expect(button).toHaveText('Julian');
 
   const head = await page.evaluate(() => {
     const name = document.querySelector('.month-name').getBoundingClientRect();
@@ -5333,15 +5348,20 @@ test('the calendar names its own reckoning, and the reader may change it', async
   expect(head.sameRow, 'the name and the reckoning are not on one row').toBe(true);
   expect(head.nameOnMargin, 'the month name is offset from the column margin').toBeLessThan(4);
   expect(head.recOnMargin, 'the reckoning is not on the right margin').toBeLessThan(4);
+  // The civil 14 September is the Julian 1 September, by the church's own
+  // default reckoning now in force before any explicit choice.
   expect(head.fullName, 'the month is abbreviated on a desktop').toContain('September');
 
-  // What the day says before the change.
-  const fast = () => page.locator('.cal-liturgy, [data-fast-chip], .fast-chip').first().textContent();
+  // What the day says before the change: the fast already followed the
+  // church by way of `calendarFor`, unaffected by any of this — only the
+  // label was ever wrong.
   const before = await page.locator('.cal').textContent();
   expect(before, 'premise: the Julian reckoning already keeps the Exaltation here').not.toContain('Exaltation');
 
   await button.click();
-  await expect(page.locator('[data-reckoning-pop] [data-pick]')).toHaveCount(3);
+  // Four now, not three: Gregorian is an explicit choice of its own
+  // (2026-09-05), not only ever an implicit default.
+  await expect(page.locator('[data-reckoning-pop] [data-pick]')).toHaveCount(4);
   await page.locator('[data-reckoning-pop] [data-pick="revised-julian"]').click();
 
   // The control tells the truth about itself, and the fast has changed with
@@ -5351,11 +5371,20 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await expect.poll(async () => (await page.locator('.cal').textContent()).includes('Exaltation')).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).reckoning)).toBe('revised-julian');
 
-  // And the way back is a choice of its own rather than a third calendar —
-  // back to naming the civil calendar the heading was never not in.
+  /*
+   * And the way back is a choice of its own rather than a third calendar —
+   * back to the church's own default, Julian for a Russian reader, not to a
+   * flat civil Gregorian. A reader who wants the civil date specifically now
+   * picks "Gregorian" outright, checked next.
+   */
   await button.click();
   await page.locator('[data-reckoning-pop] [data-pick=""]').click();
+  await expect(button).toHaveText('Julian');
+
+  await button.click();
+  await page.locator('[data-reckoning-pop] [data-pick="gregorian"]').click();
   await expect(button).toHaveText('Gregorian');
+  await expect(page.locator('.cal-date')).toHaveText(/14 September/);
 });
 
 test('a chosen reckoning renames the day and moves nothing it names', async ({ page }) => {
@@ -5375,7 +5404,9 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * hero, saints, readings, hymns, fasting note, all of it stay the civil
    * day's own; only the numerals and the month name change.
    */
-  await ready(page, { church: 'russian' });
+  // The true unset state — `ready`'s own default reckoning is explicitly
+  // Gregorian since 2026-09-05, for every test that is not about this.
+  await ready(page, { church: 'russian', reckoning: null });
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-02', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -5383,15 +5414,28 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
   const heading = page.locator('.cal-date');
   const monthName = page.locator('.month-name');
   const hero = page.locator('.hero-name');
-  // The premise, and the state DESIGN.md's rule describes: the civil date,
-  // whatever calendar the church keeps.
-  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  /*
+   * **The premise, updated 2026-09-05**: the church's own reckoning, not
+   * flatly the civil date, once "Follow my church" is what is in force —
+   * Julian for a Russian reader, thirteen days behind the civil URL this
+   * page is still written in. DESIGN.md's "civil date and only the civil
+   * date" rule now holds only for a reader whose church actually keeps
+   * Gregorian, or who has chosen it outright (checked below).
+   */
+  await expect(heading).toHaveText('Wednesday, 20 August 2026');
   const civilHero = await hero.textContent();
 
   const pick = async (id) => {
     await page.locator('[data-reckoning-btn]').click();
     await page.locator(`[data-reckoning-pop] [data-pick="${id}"]`).click();
   };
+
+  // Gregorian, chosen outright: the civil date the URL was always written
+  // in, and still nothing re-sourced — the same saints as every other
+  // reckoning shows for this same real day.
+  await pick('gregorian');
+  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  await expect(hero).toHaveText(civilHero);
 
   // Julian, the Russian church's own: the day is renamed, and there is
   // nothing to re-source — the same saints, thirteen days earlier in the
@@ -5434,14 +5478,15 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
   await expect(page).toHaveURL(/\/calendar\/2026-09-02$/);
 
   /*
-   * And **nothing moves for a reader who has not asked**, which is the half of
-   * the reversal that keeps DESIGN.md's rule standing everywhere else: back on
-   * Follow my church, a Russian reader is on the civil date again with the
-   * civil day's saints, exactly as this page has read since 2026-08-24.
+   * And **the saints never move for a reader who has not asked, though the
+   * label does now** (2026-09-05): back on Follow my church, a Russian
+   * reader reads the day in their own church's Julian again — the same
+   * numerals the explicit Julian pick above gave, arrived at without ever
+   * touching that row — with the civil day's saints unchanged either way.
    */
   await pick('');
-  await expect(heading).toHaveText('Wednesday, 2 September 2026');
-  await expect(monthName).toHaveText('September 2026');
+  await expect(heading).toHaveText('Wednesday, 20 August 2026');
+  await expect(monthName).toHaveText('August 2026');
   await expect(hero).toHaveText(civilHero);
 });
 

@@ -138,6 +138,42 @@ test('the map draws its coastline, and says so when it has', async ({ page }) =>
   expect(drew, 'the canvas is one flat colour — nothing was drawn on it').toBe(true);
 });
 
+test('a faint atlas layer names the old cities and regions under the saints', async ({ page }) => {
+  /*
+   * Author, 2026-09-05: "add a faint layer of text with the location names,
+   * the main locations, Alexandria, Damascus, Antioch, Constantinople,
+   * Nicomedia, Laodicea, Cappadocia, Anatolia, Rome, Italy, old cities and
+   * regions as well." `HISTORICAL_LABELS` is drawn on every paint, not only
+   * in answer to the search, and `data-historical` is the page's own report
+   * of which of them actually landed this frame — the same "the pass that
+   * draws is the pass that knows" rule `data-dots`/`data-labels` keep.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  const atRest = JSON.parse(await canvas.getAttribute('data-historical'));
+  for (const city of ['Constantinople', 'Nicomedia', 'Antioch', 'Alexandria', 'Damascus', 'Rome']) {
+    expect(atRest, `${city} is named at rest`).toContain(city);
+  }
+  for (const region of ['Anatolia', 'Cappadocia', 'Italy']) {
+    expect(atRest, `${region} is named at rest`).toContain(region);
+  }
+
+  // A region label fades out well before a city's own does — it is a claim
+  // about broad ground, and past a deep enough zoom that ground is no longer
+  // what is on screen. `data/places.js` flies "Nicomedia" in to zoom 40,
+  // already well past both fade bands, so the flight alone is enough.
+  await searchBox(page).fill('nicomedia');
+  await expect(searchRows(page).first()).toContainText('Nicomedia');
+  await searchBox(page).press('Enter');
+  await settledZoom(page);
+
+  const zoomedIn = JSON.parse(await canvas.getAttribute('data-historical'));
+  expect(zoomedIn, 'Nicomedia the city is still named this close in').toContain('Nicomedia');
+  expect(zoomedIn, 'Anatolia the region no longer is').not.toContain('Anatolia');
+});
+
 test('one dot per located saint, and the picture says so', async ({ page }) => {
   /*
    * **The four kind buttons are gone** (author, 2026-08-31), and with them
@@ -422,10 +458,11 @@ test('a wheel zoom holds the point under the pointer still, not merely the end o
   await searchBox(page).press('Enter');
   await settledZoom(page);
 
-  const before = JSON.parse(await canvas.getAttribute('data-dots'));
-  const track = before.find((d) => d.n === 1) ?? before[0];
-  expect(track, 'premise: a dot on screen to anchor the zoom on').toBeTruthy();
   const box = await canvas.boundingBox();
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  const onScreen = (d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height;
+  const track = before.find((d) => d.n === 1 && onScreen(d)) ?? before.find(onScreen);
+  expect(track, 'premise: a dot on screen to anchor the zoom on').toBeTruthy();
 
   await page.mouse.move(box.x + track.x, box.y + track.y);
   await page.mouse.wheel(0, -600);
@@ -492,10 +529,11 @@ test('a mouse drag settles at exactly the distance the pointer moved', async ({ 
   const midX = box.x + box.width / 2;
   const midY = box.y + box.height / 2;
 
-  // Any dot: this only tracks a screen position, not one particular saint,
-  // and which marks have merged varies by viewport at a given zoom.
+  // Any dot genuinely on screen: `data-dots` carries every nameable dot, on
+  // screen or not, and which marks have merged varies by viewport at a
+  // given zoom.
   const before = JSON.parse(await canvas.getAttribute('data-dots'));
-  const track = before[0];
+  const track = before.find((d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height);
   expect(track, 'premise: a dot on screen to track the drag by').toBeTruthy();
 
   await page.mouse.move(midX, midY);
@@ -548,10 +586,11 @@ test('a touch drag tracks the finger exactly, with no lag to settle', async ({ p
   const midX = box.x + box.width / 2;
   const midY = box.y + box.height / 2;
 
-  // Any dot: this only tracks a screen position, not one particular saint,
-  // and which marks have merged varies by viewport at a given zoom.
+  // Any dot genuinely on screen: `data-dots` carries every nameable dot, on
+  // screen or not, and which marks have merged varies by viewport at a
+  // given zoom.
   const before = JSON.parse(await canvas.getAttribute('data-dots'));
-  const track = before[0];
+  const track = before.find((d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height);
   expect(track, 'premise: a dot on screen to track the drag by').toBeTruthy();
 
   const cdp = await page.context().newCDPSession(page);
@@ -566,6 +605,82 @@ test('a touch drag tracks the finger exactly, with no lag to settle', async ({ p
       return now ? Math.round(now.y - track.y) : null;
     }, 'a touch drag did not track the finger by the full distance')
     .toBe(-60);
+});
+
+test('two fingers held the same distance apart still pan the map as they walk together', async ({ page }) => {
+  /*
+   * Author, 2026-09-05: "is there a way to do both scroll and zoom on
+   * mobile at the same time, measuring the distance between fingers as
+   * zoom and average movement as scroll?" Before this, a pinch handed its
+   * own midpoint to `zoomAbout` every frame, but only ever as *that* zoom's
+   * anchor — never compared with the previous frame's own midpoint. With no
+   * change in the distance between the two fingers, the zoom factor is
+   * exactly 1, and `zoomAbout` at a factor of 1 is the identity whatever
+   * anchor it is given: two fingers could walk clear across the screen
+   * together and the picture would not move. Held at a constant separation
+   * here for exactly that reason — the zoom readout not moving is the
+   * premise of the test, not an incidental fact about it, and only the pan
+   * half of the fix is under test.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+  /*
+   * Constantinople, then zoomed in twice more, the same reason the
+   * single-finger drag tests are: at rest neither axis has room to move on
+   * every window this suite runs at, and zooming in from home's own centre
+   * can land on open ocean on a narrow window, found live on mobile-360.
+   */
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await settledZoom(page);
+  for (let i = 0; i < 2; i++) {
+    await page.locator('[data-zoom="in"]').click();
+    await settledZoom(page);
+  }
+  const zoomBefore = await zoomLevel(page);
+
+  const box = await canvas.boundingBox();
+  // Genuinely on screen: `data-dots` carries every nameable dot, on screen
+  // or not, and picking one already off it (found live, on mobile-360)
+  // measures nothing about the gesture under test.
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  const track = before.find((d) => d.x >= 0 && d.x <= box.width && d.y >= 0 && d.y <= box.height);
+  expect(track, 'premise: a dot on screen to track the pan by').toBeTruthy();
+
+  const cx = box.x + box.width / 2;
+  const cy = box.y + box.height / 2;
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send('Input.dispatchTouchEvent', {
+    type: 'touchStart',
+    touchPoints: [
+      { x: cx - 20, y: cy, id: 0 },
+      { x: cx + 20, y: cy, id: 1 },
+    ],
+  });
+  // Both fingers shift by the same +60, -40 — the pair's own separation
+  // (40px) is unchanged, only their shared midpoint has moved.
+  await cdp.send('Input.dispatchTouchEvent', {
+    type: 'touchMove',
+    touchPoints: [
+      { x: cx + 40, y: cy - 40, id: 0 },
+      { x: cx + 80, y: cy - 40, id: 1 },
+    ],
+  });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+
+  // The premise: a pinch with no change in its own spread must not have
+  // zoomed at all, or this is not the case the bug was in.
+  await expect(page.locator('[data-zoom-level]')).toHaveText(zoomBefore);
+
+  await expect
+    .poll(async () => {
+      const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+      const now = dots.find((d) => d.slug === track.slug);
+      return now ? Math.hypot(now.x - track.x, now.y - track.y) : 0;
+    }, 'two fingers walking together, held the same distance apart, did not pan the map at all')
+    .toBeGreaterThan(5);
 });
 
 test('touch belongs to the map, because there is no page left to scroll', async ({ page }) => {

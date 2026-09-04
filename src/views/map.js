@@ -1,3 +1,4 @@
+import { HISTORICAL_LABELS } from '../data/historical-labels.js';
 import { PERIODS, spanOf } from '../data/periods.js';
 import { PLACES } from '../data/places.js';
 import { lifeInterval } from '../lib/index-filters.js';
@@ -376,6 +377,19 @@ function flyTo(target, frame, apply, done, max = MAX_SCALE) {
 
 /** The threshold past which dots get their names (§8.3: "then labels"). */
 const LABELS_AT = 2.5;
+
+/*
+ * The historical atlas layer's own two fade bands (`HISTORICAL_LABELS`,
+ * 2026-09-05). A region is a broad area with no one point that is "it", so
+ * it fades out well before the reader is zoomed in enough that its own
+ * label would be sitting inside a single saint's cluster; a city is a real
+ * place and stays legible across the same range a saint's own name arrives
+ * in, rather than only briefly at the overview.
+ */
+const HIST_REGION_FADE_START = 5;
+const HIST_REGION_FADE_END = 14;
+const HIST_CITY_FADE_START = 0.5;
+const HIST_CITY_FADE_END = 2;
 
 /**
  * The zoom at which the fine coastline replaces the coarse one (author,
@@ -2695,6 +2709,7 @@ function wireZoom(el, canvas, cards, schedulePaint) {
    */
   const active = new Map();
   let pinch = 0;
+  let pinchMid = null;
 
   /*
    * **A mouse drag trails its own target rather than tracking 1:1**
@@ -2741,25 +2756,75 @@ function wireZoom(el, canvas, cards, schedulePaint) {
     if (!canPan(canvas)) return;
     canvas.setPointerCapture(e.pointerId);
     active.set(e.pointerId, e);
-    if (active.size === 2) pinch = spread(active);
+    if (active.size === 2) {
+      pinch = spread(active);
+      pinchMid = midpoint(active);
+    }
   });
+
+  /*
+   * **Pan and zoom together, not one or the other** (2026-09-05, author: "is
+   * there a way to do both scroll and zoom on mobile at the same time,
+   * measuring the distance between fingers as zoom and average movement as
+   * scroll?" — precisely the two quantities two fingers already carry).
+   * `spread` (the distance between them) drove the zoom alone before;
+   * `midpoint` was already read every frame but only ever as the zoom's own
+   * anchor, which is blind to the pair *translating* together — `zoomAbout`
+   * re-derives its anchor from the current view on every call, so a pinch
+   * with no change in spread at all (factor 1) left the picture exactly
+   * where it was, however far the two fingers had walked together.
+   * `pinchMid` is the previous frame's own midpoint; the pan moves the land
+   * by exactly how far that midpoint travelled, in screen pixels, the same
+   * `panBy` a single finger already uses — and the zoom after it, anchored
+   * at the *current* midpoint against the *panned* view, so the two compose
+   * rather than one undoing the other's own anchor.
+   *
+   * **Read once a frame, not once a finger.** Two fingers moving together is
+   * still two separate pointers, each with its own `pointermove`, and
+   * computing `spread`/`midpoint` inside the handler itself means the first
+   * of the pair to arrive is read against the *other* finger's still-stale
+   * position — a real, if usually tiny, wrong distance and midpoint for
+   * that one frame, self-correcting the moment the second pointer's own
+   * event lands a moment later. Ordinarily too small to see; found live
+   * only because it can still push the scale briefly past the window's own
+   * ceiling and get clamped there, so the very next frame's correction
+   * multiplies from the clamped value instead of the true one and the pair
+   * never quite lands back where two fingers held the same distance apart
+   * should — no zoom at all. `pinchFrame` defers the read itself to a
+   * `requestAnimationFrame`, not merely the apply: by the time it fires,
+   * both pointers dispatched from the same touch have already updated
+   * `active`, so `spread`/`midpoint` are read once, whole, per frame.
+   */
+  let pinchFrame = null;
+  const flushPinch = () => {
+    pinchFrame = null;
+    if (active.size < 2) return;
+    const box = canvas.getBoundingClientRect();
+    const now = spread(active);
+    const mid = midpoint(active);
+    let next = view;
+    if (pinchMid) {
+      next = panBy(next, (mid.x - pinchMid.x) / box.width, (mid.y - pinchMid.y) / box.height, coverFractions(box.width, box.height, ASPECT), ceilingOf(canvas));
+    }
+    if (pinch > 0 && now > 0) {
+      next = zoomAbout(next, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT), ceilingOf(canvas));
+    }
+    setThrottled(next);
+    pinch = now;
+    pinchMid = mid;
+  };
 
   canvas.addEventListener('pointermove', (e) => {
     if (!active.has(e.pointerId)) return;
     const previous = active.get(e.pointerId);
     active.set(e.pointerId, e);
-    const box = canvas.getBoundingClientRect();
 
     if (active.size >= 2) {
-      const now = spread(active);
-      if (pinch > 0 && now > 0) {
-        const mid = midpoint(active);
-        setThrottled(zoomAbout(view, now / pinch, (mid.x - box.left) / box.width, (mid.y - box.top) / box.height, coverFractions(box.width, box.height, ASPECT), ceilingOf(canvas)));
-      }
-      pinch = now;
+      if (!pinchFrame) pinchFrame = requestAnimationFrame(flushPinch);
       return;
     }
 
+    const box = canvas.getBoundingClientRect();
     if (!canPan(canvas)) return;
     /*
      * Both axes, at every scale. The old vertical-drop for a thumb at rest
@@ -2799,7 +2864,10 @@ function wireZoom(el, canvas, cards, schedulePaint) {
    */
   const release = (e) => {
     active.delete(e.pointerId);
-    if (active.size < 2) pinch = 0;
+    if (active.size < 2) {
+      pinch = 0;
+      pinchMid = null;
+    }
   };
   canvas.addEventListener('pointerup', release);
   canvas.addEventListener('pointercancel', release);
@@ -3556,6 +3624,69 @@ function paintCanvas(canvas, cards) {
       if (tracePath(water.RIVERS, false)) ctx.stroke();
     }
   }
+
+  /*
+   * **A faint historical atlas layer, under every dot and every saint's own
+   * name** (`HISTORICAL_LABELS`, 2026-09-05). Drawn here, before the saints
+   * loop below computes or paints a single dot, so nothing here can ever
+   * win a collision against a saint's own name — this is ground the picture
+   * stands on, not a claim competing with the corpus for space, and
+   * `layoutLabels`/`obstacles` never hear about it. A city keeps a small
+   * marker of its own so its faint name has something to sit beside once a
+   * saint's own dot draws over the same coordinate; a region has no such
+   * point and is centred type alone, in capitals the way a printed atlas
+   * sets a region apart from a city on the same page.
+   */
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillStyle = inkSoft;
+  /*
+   * **Positioned once, drawn in two batches by kind rather than one pass
+   * alternating between them** — `ctx.font` is not a cheap assignment (the
+   * canvas re-parses and re-resolves the string every time it is set), and
+   * seventeen of those every frame, on top of everything else this pass
+   * already paints, was worth avoiding on the same "ask what an instrument
+   * would cost if it ran every frame" grounds the terrain tile work above
+   * was. Positions and alphas are cheap and are computed inline; only the
+   * font-parsing cost is batched, to two sets a frame rather than up to
+   * seventeen.
+   */
+  const positioned = HISTORICAL_LABELS.map((loc) => {
+    const p = place(loc.lon, loc.lat, frame);
+    if (p.x < -0.1 || p.x > 1.1 || p.y < -0.1 || p.y > 1.1) return null;
+    const alpha =
+      loc.kind === 'region'
+        ? 1 - fadeBetween(view.scale, HIST_REGION_FADE_START, HIST_REGION_FADE_END)
+        : fadeBetween(view.scale, HIST_CITY_FADE_START, HIST_CITY_FADE_END);
+    if (alpha <= 0) return null;
+    return { loc, x: p.x * w, y: p.y * h, alpha };
+  });
+  const utilityFont = style.getPropertyValue('--font-utility').trim() || 'sans-serif';
+  const historicalDrawn = [];
+  ctx.font = `italic 11px ${utilityFont}`;
+  ctx.textAlign = 'left';
+  for (const at of positioned) {
+    if (!at || at.loc.kind !== 'city') continue;
+    ctx.globalAlpha = at.alpha * 0.38;
+    ctx.beginPath();
+    ctx.arc(at.x, at.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillText(at.loc.name, at.x + 5, at.y - 4);
+    historicalDrawn.push(at.loc.name);
+  }
+  ctx.font = `italic 13px ${utilityFont}`;
+  ctx.textAlign = 'center';
+  for (const at of positioned) {
+    if (!at || at.loc.kind !== 'region') continue;
+    ctx.globalAlpha = at.alpha * 0.22;
+    ctx.fillText(at.loc.name.toUpperCase(), at.x, at.y);
+    historicalDrawn.push(at.loc.name);
+  }
+  ctx.globalAlpha = 1;
+  ctx.textAlign = 'left';
+  // Same rule as `data-dots`/`data-labels`: the pass that draws is the pass
+  // that knows, so the suite reads what actually landed rather than
+  // recomputing the fade bands itself.
+  canvas.dataset.historical = JSON.stringify(historicalDrawn);
 
   /*
    * **One dot per saint, not one per location of the current kind**

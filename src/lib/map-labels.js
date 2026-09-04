@@ -358,18 +358,24 @@ const BLOB_LABEL_GAP = 10;
  * rect, leader }`, the same shape `layoutLabels` returns, `leader` always
  * set. A blob whose count cleared nowhere is dropped rather than drawn over
  * something else — its hull is still on the picture either way.
+ *
+ * **Not clamped to stay on screen** (2026-09-05, author: "most texts are
+ * indeed printing off to the right side of the screen which is great [but]
+ * the Nicomedia ones from the blobs arent" — a blob near the right edge had
+ * its own count pulled back onto the picture while an ordinary name beside
+ * it was already allowed to run off it, `layoutLabels`'s own newer rule).
+ * Only a real collision still sends this hunting for another row.
  */
 export function layoutBlobLabels(blobs, measure, w, h, placed = [], obstacles = []) {
   const taken = [...placed];
   const out = [];
   for (const b of blobs) {
     const boxW = measure(b.name) + PAD;
-    const x = Math.max(0, Math.min(b.maxX + BLOB_LABEL_GAP, w - boxW));
+    const x = Math.max(0, b.maxX + BLOB_LABEL_GAP);
     let seated = null;
     for (const shift of SHIFTS) {
       const y = b.cy + shift;
       const rect = { x, y: y - LINE_H / 2, w: boxW, h: LINE_H };
-      if (!onScreen(rect, w, h)) continue;
       if (!clear(rect, taken, obstacles, null)) continue;
       seated = { rect, y };
       break;
