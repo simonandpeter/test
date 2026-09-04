@@ -25,21 +25,23 @@ test('a lone dot takes the space beside it and needs no line', () => {
   assert.ok(label.x > 100, 'the label sits to the right of the dot');
 });
 
-test('a dot with no room to its right is stacked with a leader line rather than dropped, or falling back to its left', () => {
+test('a dot hard against the right edge is named there anyway, running off the picture rather than falling back to its left', () => {
   /*
    * Author, 2026-09-04: "make sure all the text on the map always displays
-   * to the right side of a dot" — a dot hard against the right edge used to
-   * fall back to a plain box on its left; now the right side failing sends
-   * it through the same leader-line door a crowded dot already uses, which
-   * keeps the name (loosely) anchored off the dot's own right rather than
-   * inventing a second, left-reading placement.
+   * to the right side of a dot." Author, 2026-09-05, the next round: "the
+   * text doesnt have to stay on screen, it just prints to the right of the
+   * dot and it can go off to the right side of the screen and undraws when
+   * the dot is fully off the screen" — fitting inside the picture stopped
+   * being a reason on its own to fall back to a leader line, the same "the
+   * canvas clips the rest" reasoning a stacked column's own last row already
+   * relied on.
    */
   const dots = [{ x: W - 4, y: 100, name: 'Constantinople' }];
   const [label] = layoutLabels(dots, measure, W, H);
-  assert.ok(label, 'the name was dropped rather than stacked');
-  assert.ok(label.leader, 'a dot with no room beside it should fall back to a leader line, not a bare left placement');
-  assert.equal(label.leader.x1, W - 4, 'the leader should start at the dot');
-  assert.ok(label.rect.x >= 0 && label.rect.x + label.rect.w <= W, 'the stacked box should stay on screen');
+  assert.ok(label, 'the name was dropped instead of printing off the edge');
+  assert.equal(label.leader, null, 'a dot with nothing blocking it needs no leader, on or off screen');
+  assert.ok(label.rect.x > W - 4, 'the label does not sit to the right of the dot');
+  assert.ok(label.rect.x + label.rect.w > W, 'the label was pulled back onto the picture instead of running off it');
 });
 
 test('every dot in a tight cluster is named, not just the first', () => {

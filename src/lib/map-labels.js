@@ -15,16 +15,23 @@
  * to its right went unnamed, and near the right edge nobody was named at all.
  * Dropping is now the last resort rather than the first answer:
  *
- *   1. **Beside the dot**, right then left, if either side is clear. This is
- *      what a lone dot in open space gets, and it needs no line.
- *   2. **Stacked with a leader line**, past `leaders` only. Every dot in a
- *      cluster is offered a row in a column beside that cluster, ordered by
- *      the dots' own y so the lines cross as little as they can, with a line
- *      from each dot to its row. The column is placed as one block: whichever
- *      side has more room first, slid up or down a row at a time until every
- *      name in it fits, and always held inside the picture.
+ *   1. **Beside the dot, to its right**, if that is clear of every other dot
+ *      and every name already placed. This is what a lone dot gets, and it
+ *      needs no line — and it is not asked to fit inside the picture
+ *      (2026-09-05: "the text doesnt have to stay on screen, it just prints
+ *      to the right of the dot ... and undraws when the dot is fully off the
+ *      screen"), only to clear a real collision, so a dot near the right
+ *      edge prints off it rather than hunting for somewhere else to stand.
+ *   2. **Stacked with a leader line**, past `leaders` only, for a dot the
+ *      right side could not clear (a collision, not merely the edge) and for
+ *      every dot in a genuine cluster. Each cluster is offered one column,
+ *      ordered by the dots' own y so the lines cross as little as they can,
+ *      one line per dot to its own row. The column is placed as one block,
+ *      right of the cluster, slid up or down a row at a time until every
+ *      name in it fits, and held inside the picture — a shared block reads
+ *      differently than one dot's own name, so this one still fits.
  *   3. **Dropped**, if no placement seats the column and the row's own spot
- *      is taken.
+ *      is taken, or if the dot itself has left the picture outright.
  *
  * **Stacking is off until the reader has zoomed well in** (author,
  * 2026-08-31, on seeing it: "the name display worked better before.
@@ -121,9 +128,6 @@ const clear = (rect, placed, obstacles, own) =>
  *  (2026-08-31: a name is not hidden because its far end ran off the edge). */
 const onScreen = (r, w, h) => r.x + r.w > 0 && r.x < w && r.y + r.h > 0 && r.y < h;
 
-/** Whether the whole box is inside the picture — no word of it clipped. */
-const fullyOn = (r, w, h) => r.x >= 0 && r.x + r.w <= w && r.y >= 0 && r.y + r.h <= h;
-
 /**
  * Single-linkage clusters over the dots: anything within `CLUSTER_PX` of any
  * member joins that member's group. Single-linkage rather than a grid bucket
@@ -217,26 +221,35 @@ export function layoutLabels(dots, measure, w, h, leaders = true, obstacles = []
      * text on the map always displays to the right side of a dot" — a name
      * on whichever side happened to be free read as arbitrary, and the
      * reader's own eye had to hunt for which dot a left-hand name belonged
-     * to among its neighbours). A dot with no room to its right no longer
-     * borrows the left; it falls through to the stack below instead, the
-     * same door a crowded dot already used.
+     * to among its neighbours).
+     *
+     * **The dot decides whether there is a label at all now, not the
+     * label's own box** (author, 2026-09-05: "the text doesnt have to stay
+     * on screen, it just prints to the right of the dot and it can go off
+     * to the right side of the screen and undraws when the dot is fully off
+     * the screen"). A name is free to run off the right edge the same way a
+     * stacked column's own last row already could ("a label half off the
+     * edge is still drawn, since the canvas clips the rest") — fitting
+     * inside the picture is no longer a reason on its own to fall through
+     * to the leader-line search below. Only a real collision still sends it
+     * there: another dot it would otherwise sit on top of, or a name
+     * already placed.
      */
     let toStack = group;
     if (group.length === 1) {
       const dot = group[0];
-      const textW = widths.get(dot);
-      const right = boxFor(dot, textW);
-      if (fullyOn(right, w, h) && clear(right, placed, obstacles, dot)) {
-        take(dot, right, null);
-        toStack = null;
-      } else if (onScreen(right, w, h) && clear(right, placed, obstacles, dot)) {
-        take(dot, right, null);
-        toStack = null;
+      if (dot.x >= 0 && dot.x <= w && dot.y >= 0 && dot.y <= h) {
+        const textW = widths.get(dot);
+        const right = boxFor(dot, textW);
+        if (clear(right, placed, obstacles, dot)) {
+          take(dot, right, null);
+          toStack = null;
+        }
       }
       if (toStack === null) continue;
-      // The right side is not free: fall through and let it take a leader
-      // line rather than going unnamed. If the dot itself is off the picture
-      // the stacked box will be too, and it is dropped there instead.
+      // Blocked by a collision, or the dot itself is off the picture
+      // outright — either way, a leader line is the only door left, and
+      // `rows` below drops it there if the dot is off the picture too.
       if (!leaders) continue;
     }
 

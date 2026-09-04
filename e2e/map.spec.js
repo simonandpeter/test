@@ -2772,21 +2772,26 @@ test('the rest of the map fades back with the flight, and fades in again on rele
 
 /* ---- two coastlines, one for each end of the zoom (2026-09-01) ----------- */
 
-test('the map opens on the coarse coastline and fetches the fine one only past 2.5x', async ({ page }) => {
+test('the map opens on the coarse coastline and fetches the fine one only past its own threshold', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Make sure until you reach at least 5x zoom, only the
    * low definition coastlines are shown so when zoomed out the map isnt laggy
    * as it currently is. Ideally the high definition loads in tiles as you
    * scroll over the map to be efficient."
    *
-   * `DETAIL_AT` was 5 at the time of that message. Author, 2026-09-04: "change
-   * load in for detailed coastlines to 2.7x, or whatever it is for loading the
-   * names of the saints" — the real answer was `LABELS_AT`, 2.5, and
-   * `DETAIL_AT` now reads that constant directly rather than carrying its own
-   * number: a reader zoomed in enough to see whose dot is whose is zoomed in
-   * enough to spend the fine coastline's own cost, and the two thresholds
-   * swapping in on two different presses would have been its own small
-   * surprise.
+   * `detailAt()` was a flat 5 at the time of that message, then briefly
+   * shared `LABELS_AT` outright (2026-09-04: "change load in for detailed
+   * coastlines to 2.7x, or whatever it is for loading the names of the
+   * saints" read as "the two should be one number", 2.5). **Split apart
+   * again the next day** (author, after living with the shared number:
+   * "make it 2.7x on desktop and whatever it used to be on mobile") — 2.7x
+   * on a desktop-width window, the original 5 restored on a narrower one,
+   * `isDesktop`'s own 760px boundary deciding which (`views/map.js`). This
+   * test runs at both widths (`desktop`, `mobile-360`) without needing to
+   * know which number applies to either: eight presses at `ZOOM_STEP`
+   * clears either threshold with room to spare (~43x), and the twelve-press
+   * loop back out was already proven against the higher of the two, 5,
+   * before the two were ever unified.
    *
    * **The lag was never the fetch, it was the frame.** The draw pass already
    * skips any shape whose box is off screen - which is what tiling buys - but
@@ -2819,8 +2824,8 @@ test('the map opens on the coarse coastline and fetches the fine one only past 2
   ).toEqual([]);
 
   /*
-   * Past `DETAIL_AT` (2.5x, unified with `LABELS_AT` on 2026-09-04) it swaps,
-   * and the fetch happens then. Polled rather than awaited on a fixed wait:
+   * Past `detailAt()` (2.7x desktop, 5x mobile) it swaps, and the fetch
+   * happens then. Polled rather than awaited on a fixed wait:
    * the swap is one paint behind the chunk landing, and the chunk is a real
    * network round trip.
    *
@@ -2852,15 +2857,17 @@ test('the map opens on the coarse coastline and fetches the fine one only past 2
    * out kept firing twelve presses into each other's flights, each
    * re-targeting from wherever the view had reached rather than from where
    * the last one aimed, and landed on whatever scale the machine's timing
-   * happened to produce. That was marginal against `DETAIL_AT` at its old
+   * happened to produce. That was marginal against `detailAt()`'s mobile
    * value of 5: four effective presses out of a flight that started near 40x
    * left ~6x, still the fine tier, and the test read it as a one-way swap
    * that never came back. It failed 2 runs in 5 at mobile-360 and once on CI
-   * before this line was added. `DETAIL_AT` unified with `LABELS_AT` at 2.5
-   * on 2026-09-04, which widens the margin this loop is guarding a great
-   * deal — ~6x now clears the threshold more than twice over — but the
-   * settling itself is still correct regardless of how comfortable the
-   * margin is, so the loop stays.
+   * before this line was added. `detailAt()` briefly unified with
+   * `LABELS_AT` at 2.5 the same day, which would have widened this loop's
+   * own margin a great deal had it lasted — it did not (2026-09-05, "make it
+   * 2.7x on desktop and whatever it used to be on mobile" put mobile straight
+   * back at the original, marginal 5). The settling fix is what actually
+   * closed the gap, not the margin, which is exactly why it still holds now
+   * that mobile is back at the number that first exposed it.
    */
   for (let i = 0; i < 12 && !(await page.locator('[data-zoom="out"]').isDisabled()); i += 1) {
     await page.locator('[data-zoom="out"]').click();

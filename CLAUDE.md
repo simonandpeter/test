@@ -428,16 +428,26 @@ rising means the picture is never thinner than "coarse, fully inked"; it
 disappears in the one frame the incoming tier completes rather than a fade
 the reader can watch dip.
 
-**`DETAIL_AT` no longer carries its own number — it reads `LABELS_AT`
-directly** (2026-09-04, author: "change load in for detailed coastlines to
-2.7x, or whatever it is for loading the names of the saints" — the real
-answer, checked rather than typed back, was `LABELS_AT`, 2.5, not the
-guessed 2.7). It had been 5 on its own since the coastline tiers shipped; the
-two thresholds sitting one line apart and reading the same zoom band anyway
-made carrying two separate numbers for it an accident waiting to drift, not
-a real distinction the reader was meant to feel. A reader zoomed in enough to
-see whose dot is whose is zoomed in enough to spend the fine coastline's own
-cost.
+**`DETAIL_AT` briefly stopped carrying its own number, and now carries two**
+(2026-09-04, then reversed 2026-09-05). It had been a flat 5 since the
+coastline tiers shipped; the first move made it read `LABELS_AT` directly
+(author: "change load in for detailed coastlines to 2.7x, or whatever it is
+for loading the names of the saints" — the real answer, checked rather than
+typed back, was `LABELS_AT`, 2.5, not the guessed 2.7), on the reasoning that
+a reader zoomed in enough to see whose dot is whose is zoomed in enough to
+spend the fine coastline's own cost. Living with that showed the two were
+never really the same question — a phone's 5 exists for the 50m tier's own
+point count against a narrow window's own frame budget, and 2.7 was always
+the author's *desktop* guess at where the names should arrive, not a claim
+about a phone at all — so the next day's message ("make it 2.7x on desktop
+and whatever it used to be on mobile") split them back apart: `detailAt()`
+(no longer a plain constant) returns `DETAIL_AT_DESKTOP` (2.7) or
+`DETAIL_AT_MOBILE` (5, the original number, restored) by `isDesktop()`'s own
+760px check — the same boundary `calendar.css`/`saint.css` already switch
+their two-column layouts on, read live via `matchMedia` rather than latched
+once at open, the same "ask again every frame" shape `ceilingOf` already
+uses for a kindred question. `LABELS_AT` itself never moved through any of
+this — it was only ever DETAIL_AT borrowing its number for one day.
 
 **The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
 and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
@@ -1231,8 +1241,8 @@ rehearsal on this spec knows it is not theirs.
     that helper was added to the zoom-*in* loop beside it, and sat at 2 failures
     in 5 at mobile-360 — a real flake blamed first on CI load, then on a
     terrain change, before the diff that introduced it was found. Any assertion
-    landing near a threshold (`DETAIL_AT`, then 5 and now 2.5 — see "Where
-    things live") will read as a product bug.
+    landing near a threshold (`detailAt()`, 5 on mobile since restored — see
+    "Where things live") will read as a product bug.
 13. **`page.route` does not see a service worker's requests**, and this suite
     runs with the worker registered. A route pattern that matches nothing
     fails *open*: the test passes having intercepted nothing. Count the

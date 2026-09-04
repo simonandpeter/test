@@ -394,25 +394,34 @@ const LABELS_AT = 2.5;
  * So there are two files now: Natural Earth 110m at one decimal place (5,118
  * points, 19 kB gzipped) for the map as it opens, and the 50m at two (255 kB)
  * fetched the first time the reader passes this line and kept for the visit.
- * Below 5x the coarse tier is what is drawn even once the fine one has arrived,
- * because zooming back out must get the cheap frame back.
+ * Below this the coarse tier is what is drawn even once the fine one has
+ * arrived, because zooming back out must get the cheap frame back.
  *
- * Five was the author's own first number — where the coarse tier starts to
- * show its own edges, 0.1 degrees being 11 km, a pixel or two at 5x and a
- * visible staircase past it. **Lowered to `LABELS_AT` (2.5x, 2026-09-04,
- * author: "change load in for detailed coastlines to 2.7x, or whatever it is
- * for loading the names of the saints")** — the two are the same request
- * read two ways ("named" is 2.5x, not the author's own guess of 2.7), and
- * sharing the constant rather than copying its value means the two can never
- * drift apart the way a second `2.5` written here would invite.
+ * Five was the author's own first number, and briefly shared `LABELS_AT`
+ * instead (2026-09-04: "change load in for detailed coastlines to 2.7x, or
+ * whatever it is for loading the names of the saints" read as "the two
+ * should be the same number", 2.5x). **Split back apart on 2026-09-05**
+ * (author, after living with the shared number: "make it 2.7x on desktop
+ * and whatever it used to be on mobile") — a phone's own frame cost for the
+ * 50m tier's point count is the reason this threshold exists at all, and
+ * that cost has nothing to do with a desktop window's own reach for 2.7,
+ * which was never about the frame — it was the author's own first guess at
+ * where the *names* should arrive, kept here now that the two are no longer
+ * tied to one shared constant. `isDesktop` is the same 760px boundary
+ * `calendar.css`/`saint.css` already switch their own two-column layouts
+ * on, checked live rather than latched at open — the same "ask again every
+ * frame" reasoning `ceilingOf` already uses for the same kind of question.
  */
-const DETAIL_AT = LABELS_AT;
+const isDesktop = () => typeof matchMedia === 'function' && matchMedia('(min-width: 760px)').matches;
+const DETAIL_AT_DESKTOP = 2.7;
+const DETAIL_AT_MOBILE = 5;
+const detailAt = () => (isDesktop() ? DETAIL_AT_DESKTOP : DETAIL_AT_MOBILE);
 
 /**
  * How long the coastline, lakes and rivers take to cross-fade between tiers
  * (2026-09-04: "make the appearance of the high quality coastlines and lakes
  * and rivers fade in/out instead of just appearing"). Short, on purpose — a
- * reader crossing `DETAIL_AT` mid-gesture is mid-zoom, not standing still to
+ * reader crossing `detailAt()` mid-gesture is mid-zoom, not standing still to
  * watch a transition, so this only has to remove the pop, not choreograph one.
  */
 const DETAIL_FADE_MS = 280;
@@ -2852,7 +2861,7 @@ function midpoint(active) {
  * see the difference, and kept for the rest of the visit.
  *
  * Guarded by a promise on the canvas rather than a boolean: a drag that crosses
- * `DETAIL_AT` paints many frames a second, and a boolean set *after* the await
+ * `detailAt()` paints many frames a second, and a boolean set *after* the await
  * would have started a dozen fetches before the first of them landed.
  */
 function ensureFine(canvas, cards) {
@@ -2930,7 +2939,7 @@ const TILE_FADE_END = 20;
  * the 50m tile grid, for the `hr: true` cells `make-terrain.py` generated one
  * (within 1000 km of a located saint). 24, the author's own first number
  * ("make the 10m resolution tiles come in around 24x or 30x if 24x is too
- * soon"): the honest ceiling reasoning `DETAIL_AT`/`MAX_SCALE` already use
+ * soon"): the honest ceiling reasoning `detailAt()`/`MAX_SCALE` already use
  * elsewhere on this page argues for the later number if 24 ever reads as
  * arriving before the 50m tier has anything left to show past — untested
  * against a real screen at the time of writing, so this is the number to
@@ -2960,8 +2969,8 @@ function fadeBetween(scale, start, end) {
 }
 
 /**
- * The tile grid past `DETAIL_AT`, fetched only for cells the reader's own
- * view actually overlaps — one further step of the same "a reader who never
+ * The tile grid past `TILE_FADE_START`, fetched only for cells the reader's
+ * own view actually overlaps — one further step of the same "a reader who never
  * opens the map never pays for it" reasoning `ensureFine` already applies to
  * the fine coastline. `TILES` carries each cell's plain lon/lat bounds
  * (`make-terrain.py`); `visibleTiles` (lib) projects them itself (`project`,
@@ -3146,7 +3155,7 @@ async function drawWhenReady(el, canvas, cards) {
      * 19 kB against 255: the map that opens is the one nearly every visit ever
      * sees, and it opens at 1x where the finer file's extra points are smaller
      * than a pixel. `ensureFine` fetches the other one the first time the reader
-     * goes past `DETAIL_AT`, which for most visits is never.
+     * goes past `detailAt()`, which for most visits is never.
      */
     const [{ LAND }, { LAKES, RIVERS }] = await Promise.all([
       import('../data/land-coarse.js'),
@@ -3294,14 +3303,14 @@ function paintCanvas(canvas, cards) {
   };
 
   /*
-   * **Which coastline this frame draws** (2026-09-01). Past `DETAIL_AT` the
+   * **Which coastline this frame draws** (2026-09-01). Past `detailAt()` the
    * fine tier if it has arrived — and the ask for it if it has not, made from
    * the paint because the paint is the one place that knows the scale — and the
    * coarse one at every zoom below, so going back out gets the cheap frame back
    * rather than carrying the fine tier's point count into a picture of the
    * whole world.
    */
-  const wantsFine = view.scale >= DETAIL_AT;
+  const wantsFine = view.scale >= detailAt();
   if (wantsFine && canvas.__land && !canvas.__landFine) ensureFine(canvas, () => cards);
   const fine = wantsFine && canvas.__landFine;
   if (canvas.dataset.detail) canvas.dataset.detail = fine ? 'fine' : 'coarse';
@@ -3310,7 +3319,7 @@ function paintCanvas(canvas, cards) {
    * **The coastline crossfades between tiers rather than popping** (2026-09-04:
    * "make the appearance of the high quality coastlines and lakes and rivers
    * fade in/out instead of just appearing"). `fine` above decides the target
-   * tier the instant the data is ready or the reader crosses `DETAIL_AT`; this
+   * tier the instant the data is ready or the reader crosses `detailAt()`; this
    * decides how much of the *previous* tier still shows while the new one
    * ramps in. The previous tier's own fine/coarse geometry is kept — not
    * re-derived — because the whole point is drawing the shape the reader was
