@@ -583,6 +583,15 @@ async function boot() {
    * English and then changing.
    */
   const pack = ensurePack(currentLanguage());
+  /*
+   * Inside the app (2026-09-05): the status bar, the splash and Android's
+   * back button — lib/native.js. Imported only when the Capacitor shell has
+   * announced itself, so the web bundle's entry chunk never carries it; the
+   * import is started here, beside the boot fetches, and awaited only where
+   * the splash has to be told the page is ready.
+   */
+  const native = globalThis.Capacitor?.isNativePlatform?.() ? import('./lib/native.js') : null;
+  native?.then((m) => m.initNative()).catch(() => {});
   try {
     data = (await Promise.all([loadManifest(), readyDays(), pack]))[0];
   } catch (e) {
@@ -597,6 +606,8 @@ async function boot() {
   }
 
   router.start();
+  // The splash comes down once the first view is on the page, not on a timer.
+  native?.then((m) => m.bootDone()).catch(() => {});
   // After the first view is on the page, so the marks are placed against a
   // header that has finished settling — the calendar control's own name is
   // painted by mountChurchControl above, and a mark placed against a button

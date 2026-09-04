@@ -18,10 +18,18 @@
     "test:all": "npm test && npm run test:e2e",
     "dev": "npm run build:manifest && npm run build:texts && vite",
     "build": "npm run build:manifest && npm run build:texts && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "app:icons": "python scripts/make-app-icons.py && capacitor-assets generate --android --ios --iconBackgroundColor #ece5d6 --iconBackgroundColorDark #1a1412 --splashBackgroundColor #ece5d6 --splashBackgroundColorDark #1a1412",
+    "app:sync": "npm run build && cap sync",
+    "app:android": "npm run app:sync && cap open android",
+    "app:ios": "npm run app:sync && cap open ios"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
+    "@capacitor/android": "^8.5.1",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.1",
+    "@capacitor/ios": "^8.5.1",
     "@playwright/test": "^1.62.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -33,6 +41,10 @@
     "world-atlas": "^2.0.2"
   },
   "dependencies": {
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.3",
     "idb": "^8.0.3",
     "minisearch": "^7.2.0"
   }

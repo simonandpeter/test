@@ -48,7 +48,7 @@ html[data-route='map'] main.chrome {
      URL bar showing, and it does not change as the bar comes and goes. */
   display: flex;
   flex-direction: column;
-  height: calc(100svh - var(--chrome-h-reserve));
+  height: calc(100svh - var(--chrome-h-reserve) - env(safe-area-inset-top, 0px));
 }
 
 /* `#view` is the div main.js renders every view into (index.html), sitting
@@ -284,6 +284,8 @@ input.map-search-input {
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-2) var(--space-4);
+  /* And clear of the home indicator inside the app (base.css, `.chrome-bar`). */
+  padding-bottom: calc(var(--space-2) + env(safe-area-inset-bottom, 0px));
   background: var(--gesso);
   border-top: 1px solid var(--rule);
 }

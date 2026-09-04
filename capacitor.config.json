@@ -1,0 +1,20 @@
+{
+  "appId": "com.dailydox.app",
+  "appName": "Daily Dox",
+  "webDir": "dist",
+  "backgroundColor": "#ece5d6",
+  "ios": {
+    "contentInset": "never"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "backgroundColor": "#ece5d6",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DEFAULT"
+    }
+  }
+}

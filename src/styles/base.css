@@ -447,6 +447,14 @@ header.chrome {
   top: 0;
   z-index: 20;
   background: var(--gesso);
+  /* Inside the app the page runs under the status bar — `viewport-fit=cover`
+     in index.html, and the shell overlays rather than insets (2026-09-05,
+     lib/native.js) — so the bar wears the notch's height as padding and its
+     own gesso fills the strip behind the clock. In a browser the inset is
+     zero and this is nothing. `--chrome-h` is measured off this element, so
+     everything that stacks under the bar follows automatically; only the
+     map, which sizes from the *declared* height, has to subtract it itself. */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 
@@ -935,7 +943,9 @@ main.chrome {
      Saints' a bit higher up the page"). The Daily page has its own smaller
      value below and is untouched. */
   padding-top: var(--space-6);
-  padding-bottom: var(--space-16);
+  /* The bottom keeps clear of a phone's home indicator the same way the bar
+     keeps clear of its clock (see `.chrome-bar`). */
+  padding-bottom: calc(var(--space-16) + env(safe-area-inset-bottom, 0px));
 }
 
 /* ---- the wide chrome (2026-09-01) --------------------------------------- */

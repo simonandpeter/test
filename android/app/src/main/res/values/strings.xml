@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Daily Dox</string>
+    <string name="title_activity_main">Daily Dox</string>
+    <string name="package_name">com.dailydox.app</string>
+    <string name="custom_url_scheme">com.dailydox.app</string>
+</resources>

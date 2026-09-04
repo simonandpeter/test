@@ -152,10 +152,10 @@ in the CSS goes through these custom properties; hard-coded values are a defect.
 
 | Token | Light ("day") | Dark ("vigil") | Material | Role |
 |---|---|---|---|---|
-| `--gesso` | `#E5E4DD` | `#1A1412` | gesso ground / bole clay | page and surface background |
+| `--gesso` | `#ECE5D6` | `#1A1412` | gesso ground / bole clay | page and surface background |
 | `--ink` | `#221D19` | `#EDE6DC` | walnut ink | text, icons |
 | `--ink-soft` | `#5C544D` | `#A89C8F` | diluted ink | secondary text, captions |
-| `--rubric` | `#8A2E26` | `#C05B4B` | cinnabar rubric | liturgical time, current place (§2) |
+| `--rubric` | `#8A2E26` | `#CB7769` | cinnabar rubric | liturgical time, current place (§2) |
 | `--gold` | `#A98237` | `#C79A4B` | burnished leaf | veneration badge only (§2) |
 | `--rule` | `#C8C2B7` | `#3A2F29` | ruled line | separators, borders, skeletons |
 | `--fast-strict` | `= --rubric` | `= --rubric` | cinnabar rubric | a strict fast (§2, 2026-08-24) |
