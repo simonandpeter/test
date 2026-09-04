@@ -4166,9 +4166,19 @@ test('a returning Daily page lands where it was left, though it grows after it r
     .toBeGreaterThanOrEqual(deep - 4);
   const shownAt = await page.evaluate(() => Math.round(window.__readyScrollY));
   expect(shownAt - deep, 'the fade landed far from where the reader left').toBeLessThanOrEqual(120);
-  // And it stays where the fade showed it once the hymns have landed and the
-  // floor is released.
-  await expect(page.locator('[data-hymns]')).toBeVisible();
+  /*
+   * And it stays where the fade showed it once the hero's own payload has
+   * landed. **The lede's `hidden` dropping is the signal, not the hymns'**
+   * (2026-09-05): `fillHeroLede` and `fillSaintHymns` read the same
+   * `loadDetail` promise, so they land together — but every saint has a life
+   * where only some sing a hymn in a given calendar, and `hymnsMarkup` renders
+   * `[data-hymns]` hidden and *leaves* it so when today's hero has none. A
+   * `toBeVisible` on it here was trap 4 in one more coat: red on 5 September
+   * 2026 on the unmodified tree, 5 of 5 runs, with nothing wrong on the page.
+   * The lede is hidden below 760 px by CSS, so this reads the attribute the
+   * script drops rather than visibility — that is the fact under test.
+   */
+  await expect.poll(() => page.evaluate(() => document.querySelectorAll('[data-hero-lede]:not([hidden])').length)).toBeGreaterThan(0);
   await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(shownAt);
   // The floor is a prop for the arrival, not a permanent change to the page.
   await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
