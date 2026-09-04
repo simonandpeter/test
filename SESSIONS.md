@@ -9733,5 +9733,27 @@ decisions, each argued in its file:
   lift). All four say `#ECE5D6` now; the icons were regenerated and the
   splash is the same cross on gesso, or on bole in the dark.
 
-The content half of the instruction — more hagiography, a rewrite pass — is
-recorded where it was reached, below or in the next amendment.
+**The content half: twenty-three lives, each from a source that prints one.**
+183 of the 862 lives say, in one form or another, that the calendar they were
+read from has nothing more — and Amendment 2 forbids the obvious shortcut, so
+"more hagiography" had to mean *finding a source*, not writing. The method:
+every placeholder's feast day was matched against the Orthodox Church in
+America's own lives for that date (a source the corpus already cites for
+fourteen saints), which named forty candidates, of which twenty-two were the
+same saint with a real life behind the name. Those, and Alexander of Svir,
+whose long life read as a paraphrase stitched from three sources, were
+rewritten from the OCA text with the Greek, Russian and Romanian notices
+kept and the source line extended — Theodore the Black and his two sons
+born at Sarai, Theodore of Tarsus and the council of Hertford, Cyprian of
+Kyiv's service books, Dorotheus gathering stones in the noon heat, the 156
+martyrs of Palestine, Hilarion and Macarius of Optina, Joseph of
+Volokolamsk, Serapion of Pskov, Aristion singing in the furnace. Three
+things were refused on the way: the OCA's *Maximus* of 15 September, whom
+the Greek keeps on the 17th with a different company, so the two were not
+conflated; the OCA's "Leo the Isaurian (813–820)" for Peter of Nicaea,
+which is the Armenian's reign, said as much rather than copied; and the
+Greek's 8 September for Hilarion's birth against the OCA's Paschal night of
+8 April, recorded as a disagreement rather than silently picked. The other
+160 placeholders are honest: the OCA has nothing for them either, and the
+next source is azbyka.ru's archival lives for the new martyrs, which refuses
+a plain fetch and is a sitting of its own.
