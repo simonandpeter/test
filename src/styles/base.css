@@ -83,6 +83,29 @@
  * on it.
  */
 
+/*
+ * **The browser's own scroll anchoring is turned off** (2026-09-04, found
+ * chasing "a restored section never touches zero on the way" failing in CI
+ * at 1235 instead of 1200). `main.js`'s `restoreSection` already claims this
+ * job outright — `router.js` sets `history.scrollRestoration = 'manual'` for
+ * the same reason, DESIGN.md §5c: the app owns scroll, not the platform —
+ * and it was doing it correctly: traced with a monkey-patched
+ * `window.scrollTo`, the restore's own `scrollTo(0, 1200)` was the *only*
+ * call made, landing exactly on target. What moved the page afterwards was
+ * never a script — Chromium's scroll anchoring, reacting to the Daily page's
+ * own late-arriving content (the hero's hymns, `main.js`'s own comment on
+ * `restoreSection` already names this: "a cold `loadDetail` can outlast the
+ * wait") growing the page *above* the restored position and nudging
+ * `scrollY` to hold the visible content still — a second, competing opinion
+ * about where the reader should end up, arriving after `settleLate`'s own
+ * safety net has already decided there is nothing left to fix, because
+ * landing exactly on target is the one case that net was not written to
+ * watch for a target that keeps moving out from under it.
+ */
+html {
+  overflow-anchor: none;
+}
+
 body {
   margin: 0;
   min-height: 100svh;

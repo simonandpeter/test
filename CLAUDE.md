@@ -927,6 +927,24 @@ vigil mode as well as light. That gap let a WCAG AA failure stand from
 masthead is an SVG wordmark: `scripts/make_wordmark.py` generates
 `src/ui/wordmark.js`, a Vite plugin injects it into both slots in index.html.
 
+**The app owns scroll, and the browser's own competing opinions are turned
+off one at a time as they are found** (DESIGN.md §5c). `router.js` already
+set `history.scrollRestoration = 'manual'` for this — the platform's back/
+forward restore fires before a virtualised grid has re-rendered and restores
+into nothing. **`overflow-anchor: none` on `html` joined it 2026-09-04**,
+found chasing "a restored section never touches zero on the way" failing in
+CI at 1235 instead of 1200: traced with a monkey-patched `window.scrollTo`,
+`main.js`'s own `restoreSection` was landing exactly on 1200, the *only*
+`scrollTo` call made — so what moved the page afterwards was never a script.
+Chromium's own scroll anchoring was reacting to the Daily page's late-arriving
+content (the hero's hymns; `restoreSection`'s own comment already names the
+shape of this — "a cold `loadDetail` can outlast the wait") growing the page
+*above* the restored position and nudging `scrollY` to hold the visible
+content still. `settleLate`, the safety net for a restore that fell short,
+was never going to catch this: its own guard (`landedAt >= y`) reads landing
+exactly on target as nothing left to fix, which is true of the scripted
+restore and not of a target the browser then quietly moves out from under it.
+
 **Strings** — `src/ui/strings.js` (source of truth) + `src/ui/locales/{ru,ro,el,sr}.js`.
 Touch all five, then `node scripts/locale-coverage.mjs` (0 fallbacks before
 done). `BRAND` is the site name and is never translated.
