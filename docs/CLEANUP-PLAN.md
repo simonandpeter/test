@@ -5,11 +5,20 @@ cleaned, simplified, reduced without losing functionality or aesthetic, just
 cleaning up the code and organising it. See if there's any redundant copies or
 things that can be collapsed into one function. Just plan it for now."
 
-**This is a plan and nothing here has been done.** Every item below is a
-measured finding with the numbers that make it worth doing, an argument for
-why it is safe, and — where it matters — the reason it might not be worth it
-after all. Nothing here changes what the site looks like or what it does;
-anything that would is out of scope by the instruction's own words.
+**Items 1, 2 and 3 were done on 2026-09-05** (commits `9e8451d`, `a6998ad`);
+each says so in its own section below. The same sitting removed 171 lines of
+stylesheet the plan had not measured — fourteen class selectors with no
+reference anywhere, three of them referenced *only* by e2e assertions that
+they render nothing (`99a71ef`). Items 4, 5 and 6 remain a plan, and the
+numbers in "the shape of the thing today" are the 2026-09-02 ones: `map.js`
+was 4,473 lines by 2026-09-05 and `calendar.css` 3,309 before the dead rules
+went.
+
+Every item below is a measured finding with the numbers that make it worth
+doing, an argument for why it is safe, and — where it matters — the reason it
+might not be worth it after all. Nothing here changes what the site looks like
+or what it does; anything that would is out of scope by the instruction's own
+words.
 
 The order is by *confidence*, not by size: the first three are mechanical and
 provable, the last two are judgement calls that want the author's word before
@@ -39,7 +48,10 @@ Two things worth saying before the list, because they bound it:
 
 ---
 
-## 1. `reducedMotion` is defined eight times
+## 1. `reducedMotion` is defined eight times — done 2026-09-05
+
+One definition, `src/lib/motion.js`, with the map's guard folded in; the
+other seven import it. `9e8451d`.
 
 **Measured.** Eight files declare their own copy, seven of them character for
 character:
@@ -72,7 +84,11 @@ silent.
 
 ---
 
-## 2. The scrollbar-hiding pair is written eight times
+## 2. The scrollbar-hiding pair is written eight times — done 2026-09-05
+
+One grouped rule in base.css ("scrollers that draw no bar"), no markup or
+script touched: the pair costs nothing on an element that is not currently a
+scroller, so none of the eight needed its own media query. `a6998ad`.
 
 **Measured.** `scrollbar-width: none` appears in 7 places across the
 stylesheets and `::-webkit-scrollbar { display: none }` in 8, always together,
@@ -95,7 +111,15 @@ that need reading, not eight.
 
 ---
 
-## 3. The "this route does not scroll" block exists three times
+## 3. The "this route does not scroll" block exists three times — done 2026-09-05
+
+`html[data-fills-window]` in base.css, set by index.html before first paint
+and by main.js on navigation; calendar.css and saint.css keep only their own
+inner boxes. **The map keeps its block on purpose** — every width, and sized
+from `--chrome-h-reserve` so it is right before JavaScript runs — which is
+the one variation the plan's "identical declarations" had missed: by
+2026-09-05 the three had diverged in viewport unit as well (`svh` against
+`dvh`). The CLS gate stayed at its floor. `a6998ad`.
 
 **Measured.** `calendar.css`, `saint.css` and `map.css` each carry a near
 identical block: root and body to `height: 100%; overflow: hidden`, `main` to

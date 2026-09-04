@@ -1191,6 +1191,20 @@ claims. Icons: `scripts/make-app-icons.py` (committed output in `public/`).
 (`handoff`/`inherit` in loop-scroll) — the worker shifts when fonts settle, and
 a wheel spun on a dying loop used to die with it.
 
+**The app** (2026-09-05) — the built site inside a Capacitor 8 shell:
+`capacitor.config.json`, `android/`, `ios/` (committed as generated; the
+copied `dist/` inside each is gitignored), `resources/` (icon and splash
+sources, written by `scripts/make-app-icons.py` beside the PWA icons). What
+the site does differently inside the shell is all in `src/lib/native.js` —
+status bar glyphs by theme, splash down after `router.start()`, Android's
+back button — and `main.js` imports it **dynamically, only when
+`window.Capacitor.isNativePlatform()`**, so the web entry chunk never carries
+`@capacitor/core` (the §13 first-paint gate has ~130 ms of headroom). The
+page runs under the status bar in the app, so `.chrome-bar` wears
+`env(safe-area-inset-top)` and `main.chrome`/`.map-timeline` the bottom
+inset; the map's stage subtracts the top one (base.css, map.css) — every one
+of those is `0px` in a browser. `docs/APP.md` is the shipping guide.
+
 **Boot** — `boot()` awaits manifest + `readyDays()` + one locale pack.
 `data/liturgical-days.js` is imported only by `days.js`. `manifest.meta.json` is
 off the boot path and **the About page is its one reader** (`loadManifestMeta`).
@@ -1223,7 +1237,7 @@ thumb. A wrong crop is a data fix, not a CSS one.
 
 ## Tests
 
-- Unit: `tests/*.test.mjs`, `npm test` (~15s, 264).
+- Unit: `tests/*.test.mjs`, `npm test` (~15s, 323).
 - Browser: `e2e/`, one file per surface, 724 across two projects —
   `daily`, `index`, `saint`, `chrome`, `map`, `pwa`, `quality-floor`, plus `helpers.js`.
   Every spec repeats the `searchMode` `beforeEach`.
@@ -1363,6 +1377,9 @@ nothing.** Four things in one day read as evidence and were not.
 
 - `npm run build` — manifest + vite build.
 - `npm run preview` — serves `dist/` on :4173. Kill it when done.
+- `npm run app:sync` — build, then copy `dist/` into both shells;
+  `app:android` / `app:ios` open the IDE after; `app:icons` regenerates every
+  icon and splash from `resources/` (docs/APP.md).
 - `node scripts/shot.mjs <name> <url> [width] [steps...]` — screenshot into
   `shots/`. Steps: `click:`, `wait:`, `key:`, `scroll:`, `lang:`, `church:`.
 - `node scripts/locale-coverage.mjs`, `cross-link-audit.mjs`,

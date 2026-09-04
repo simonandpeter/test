@@ -20,7 +20,11 @@ archived at the tag `archive/cross-church-2026-08`.
 - `docs/HANDOFF-ORTHODOX.md` — why this project exists and what carried over
   from the cross-church build. History, and still the best account of it.
 - `docs/CLEANUP-PLAN.md` — six measured code-simplification items, ordered by
-  confidence. A plan; **nothing in it has been done**.
+  confidence. Items 1–3 were done on 2026-09-05 (the file says which and how);
+  4–6 remain a plan.
+- `docs/APP.md` — the app: the site inside a Capacitor shell for the Play
+  Store and the App Store, what it does differently there, and the two
+  store checklists. The shells are `android/` and `ios/`.
 - `docs/archive/` — things the site no longer has. Nothing there is imported
   or built; it has its own README saying what each was and what removed it.
 - `HANDOFF.md` is the briefing to start from, `CLAUDE.md` is the map of where
@@ -64,6 +68,8 @@ worst failure this project has.
 | `npm test` | Unit tests |
 | `npm run test:e2e` | Browser tests: the §13 quality floor, at desktop and 360 px |
 | `npm run test:all` | Both |
+| `npm run app:sync` | Build the site and copy it into the Android and iOS shells (`docs/APP.md`) |
+| `npm run app:icons` | Regenerate every app icon and splash from the cross geometry |
 
 ## Three principles the code enforces
 

@@ -58,7 +58,12 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **264 unit, 724 browser** across two projects. `npm run test:all`.
+- **323 unit, 724 browser** across two projects. `npm run test:all`.
+- **The app shells exist** (2026-09-05): `android/` and `ios/`, Capacitor 8,
+  id `com.dailydox.app`, the whole corpus bundled. Generated and configured
+  on a desk with neither Android Studio nor Xcode, so **no binary has been
+  built yet** — `docs/APP.md` has what remains, which is the two builds and
+  the two store consoles.
   `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
   separately — it builds, serves and kills its own preview.
 - Locale packs 356/356, no English fallbacks.
@@ -176,8 +181,10 @@ its reasoning).
   cache with two rules opposite to every other bucket in `sw.js`: no eviction,
   and it must survive a `VERSION` bump. The corpus behind it is a rights
   question and the author's.
-- **`docs/CLEANUP-PLAN.md`** is a measured plan nobody has started; its items 1,
-  2 and 3 are one mechanical sitting.
+- **`docs/CLEANUP-PLAN.md`** items 1, 2 and 3 were done on 2026-09-05 in one
+  sitting, with a dead-CSS sweep the plan had not measured (171 lines). Items
+  4 (the two chooser controls are one control), 5 (`map.js` at 4,500 lines)
+  and 6 (the two largest specs) remain, and 5 wants the author's word first.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
