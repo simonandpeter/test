@@ -1,9 +1,71 @@
 # Shushanik
 
-Shushanik — Susanna — was the wife of Prince Varsken of Georgia, ruler of the province of Hereti, raised in a devout Christian family and deeply imbued with the love and fear of God. Kartli then lay under heavy Persian pressure, and Varsken visited the Persian king Peroz hoping to win favour; he renounced the true faith, turned to fire-worship, and promised the king to convert his wife and children when he came home.
+Shushanik — Susanna — was the wife of Prince Varsken of Georgia, ruler of
+the province of Hereti, raised in a devout Christian family and deeply
+imbued with the love and fear of God. Kartli then lay under heavy Persian
+pressure, and Varsken visited the Persian king Peroz hoping to win favour;
+he renounced the true faith, turned to fire-worship, and promised the king
+to convert his wife and children when he came home.
 
-Learning of his betrayal, Shushanik fell to the ground and wept bitterly, then took her four children, left the palace and sought refuge in a nearby church. Her spiritual father, the elder Jacob, warned her what awaited her; she answered that she would rather die than be united with him and lose her soul. Varsken tried to persuade her, and she refused; his brother Jojik and the bishop Apots at last brought her back to the palace, where she shut herself in a cell, and when she would not share a cup at his table with a man who had betrayed Christ he beat her without mercy, bound her in irons and shut her in prison, forbidding the guards to let anyone see her. She spent six years in that captivity, helping the poor who came to her; many sick were healed by her prayers. Before her death she blessed those around her and asked to be buried at the place from which her apostate husband had driven her from the palace. This was in 475; in 578, with the blessing of the Catholicos Kirion I, her relics were brought to Tbilisi, where they lie today in the church of Metekhi.
+Learning of his betrayal, Shushanik fell to the ground and wept bitterly,
+then took her four children, left the palace and sought refuge in a nearby
+church. Her spiritual father, the elder Jacob, warned her what awaited her;
+she answered that she would rather die than be united with him and lose
+her soul. Varsken tried to persuade her, and she refused; his brother
+Jojik and the bishop Apots at last brought her back to the palace, where
+she shut herself in a cell, and when she would not share a cup at his
+table with a man who had betrayed Christ he beat her without mercy, bound
+her in irons and shut her in prison, forbidding the guards to let anyone
+see her. She spent six years in that captivity, helping the poor who came
+to her; many sick were healed by her prayers. Before her death she blessed
+those around her and asked to be buried at the place from which her
+apostate husband had driven her from the palace. This was in 475; in 578,
+with the blessing of the Catholicos Kirion I, her relics were brought to
+Tbilisi, where they lie today in the church of Metekhi.
 
-The Russian calendar keeps her on 28 August (Julian) as the great martyr Shushanik, princess of Ran, who died in 475: the daughter of the famous Armenian general Vardan — Vardandukht by her true name, after her father, Shushanik by the pet-name — God-fearing and devout from childhood, she married the pitiakhsh Varsken, ruler of the border provinces of Georgia, who betrayed Christ and became an apostate: in the eighth year of Shah Peroz he went to Ctesiphon, the Persian shah’s residence, and became a Mazdean, a fire-worshipper, to please the shah. Learning it on his return she would not go on living as his wife, left the palace and lived in a small cell near the palace church; her confessor Jacob of Tsurtavi, later the author of her life, tells that, knowing her husband meant to use force, she was filled with resolve to stand firm in the faith through every persuasion, threat and torment. Refusing Varsken’s demands she was beaten by him and chained on 8 January 469, and on 14 April 469 shut in the prison of the fortress, where she stayed six and a half years — six years in prison, adorned with the virtues, fasting, watching, standing, unwearied prostrations and unceasing reading, a spiritual lyre hallowing and adorning the prison — the Sretensky calendar’s life runs on past the point read here.
+The Russian calendar keeps her on 28 August (Julian) as the great martyr
+Shushanik, princess of Ran, who died in 475: the daughter of the famous
+Armenian general Vardan — Vardandukht by her true name, after her father,
+Shushanik by the pet-name — God-fearing and devout from childhood, she
+married the pitiakhsh Varsken, ruler of the border provinces of Georgia,
+who betrayed Christ and became an apostate: in the eighth year of Shah
+Peroz he went to Ctesiphon, the Persian shah’s residence, and became a
+Mazdean, a fire-worshipper, to please the shah. Learning it on his return
+she would not go on living as his wife, left the palace and lived in a
+small cell near the palace church; her confessor Jacob of Tsurtavi, later
+the author of her life, tells that, knowing her husband meant to use
+force, she was filled with resolve to stand firm in the faith through
+every persuasion, threat and torment. Refusing Varsken’s demands she was
+beaten by him and chained on 8 January 469, and on 14 April 469 shut in
+the prison of the fortress, where she stayed six and a half years — six
+years in prison, adorned with the virtues, fasting, watching, standing,
+unwearied prostrations and unceasing reading, a spiritual lyre hallowing
+and adorning the prison. Many sufferers came to the prison, and each, by
+the blessed Shushanik’s prayers, received from the God who loves mankind
+what he needed — the childless children, the sick healing, the blind their
+sight. Meanwhile Varsken turned her children to fire-worship, and they
+stopped visiting their imprisoned mother; in the seventh year of her
+confinement sores opened on her feet and body. Jojik, Varsken’s brother,
+learning that she was near death, made his way into the prison with his
+wife and children and begged her: forgive us our fault and bless us — and
+she forgave and blessed them, saying, all this present life is fleeting
+and inconstant as a flower of the field; who sowed, has reaped; who
+scattered to the poor, has gathered; who gives himself, will find. On the
+eve of her blessed end she was visited in prison by the Catholicos
+Samuel I of Georgia (474–502), the bishop John, and her confessor Jacob,
+who through all six years had constantly visited and comforted the
+prisoner; the court bishop Aphots — Photius — gave her communion, and her
+last words were: blessed be the Lord my God, for in peace I have lain down
+and slept. She died on 17 October, the feast of the unmercenary martyrs
+Cosmas and Damian, and on that day the ancient church kept her memory.
+Her relics rested first in the church of Tsurtavi; when that church passed
+after a time to an Armenian monophysite bishop, the Catholicos Samuel IV
+of Georgia (582–591) carried them to Tbilisi, where in 586 they were laid
+in a chapel of the Metekhi church on the south side of the altar — which
+is probably why her memory was moved from 17 October to 28 August.
 
-*After the Viețile Sfinților as printed by doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-suzana-regina-georgiei); The Sretensky calendar’s life is at days.pravoslavie.ru — [the entry](https://days.pravoslavie.ru/Life/life4539.htm); read 23 August 2026.*
+*After the Viețile Sfinților as printed by doxologia.ro —
+[the life](https://doxologia.ro/viata-sfintei-mucenite-suzana-regina-georgiei),
+read 23 August 2026; the Sretensky calendar’s life is at days.pravoslavie.ru —
+[the entry](https://days.pravoslavie.ru/Life/life4539.htm), read 5 September 2026 — this
+time whole; the earlier reading had stopped partway.*

@@ -1,5 +1,23 @@
 # Agathocleia the slave
 
-Agathocleia, by her great patience in martyrdom, adorned the first centuries of Christianity; though a slave from birth she shone through Jesus Christ free in soul. Her master, Nicholas, had become a Christian and treated her with much kindness and goodness, but her mistress Paulina, a hard-hearted woman, persisted in idolatry, and being hot-tempered and a drunkard tortured Agathocleia many times, stubbornly trying to bring her back to the religion of the idols; for eight years the wretched and at the same time blessed slave bore a daily life of martyrdom — she abused her, beat her, pierced her body with forks and wounded her with pitiless scourging — and since none of this conquered the most devout Christian’s resolve, one day she lit a fire and pushed her into it. So Agathocleia was freed from her impious and murderous pagan mistress and departed to the blessed — the synaxarion’s life runs on past the point read here; its verse says she bears fire on her neck, burning the dread neck of dread error. The Greek calendar keeps her on 17 September.
+Agathocleia, by her great patience in martyrdom, adorned the first
+centuries of Christianity; though a slave from birth she shone through
+Jesus Christ free in soul. Her master, Nicholas, had become a Christian and
+treated her with much kindness and goodness, but her mistress Paulina, a
+hard-hearted woman, persisted in idolatry, and being hot-tempered and a
+drunkard tortured Agathocleia many times, stubbornly trying to bring her
+back to the religion of the idols; for eight years the wretched and at the
+same time blessed slave bore a daily life of martyrdom — she abused her,
+beat her, pierced her body with forks and wounded her with pitiless
+scourging — and since none of this conquered the most devout Christian’s
+resolve, one day she lit a fire and pushed her into it. So Agathocleia was
+freed from her impious and murderous pagan mistress and departed to the
+blessed and free dwellings of the righteous. Some sources, the synaxarion
+notes, say that she was Nicholas’s daughter. Its verse says she bears fire
+on her neck, burning the dread neck of dread error. The Greek calendar
+keeps her on 17 September.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — [the entry](https://www.saint.gr/2453/saint.aspx); read 23 August 2026.*
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου —
+[the entry](https://www.saint.gr/2453/saint.aspx), read 5 September 2026 — this
+time whole: its page shows seventy words and the rest behind a link, which is
+where the earlier reading stopped.*
