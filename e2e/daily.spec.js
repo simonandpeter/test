@@ -4445,20 +4445,22 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
       inLede: lede.contains(shown),
       dates: document.querySelector('.hero-dates').getBoundingClientRect(),
       media: document.querySelector('.hero-media').getBoundingClientRect(),
-      body: document.querySelector('.hero-body').getBoundingClientRect(),
+      lede: lede.getBoundingClientRect(),
     };
   });
   /*
-   * **Centred on the text column, not flush against the card's own right
-   * edge** (2026-09-04, same author message as the rename above). `.hero-body`
-   * and the button share the picture's own right edge as their containing
-   * block's right edge (`grid-column: 2` on the button, `calendar.css`), so
-   * this is a real claim about the button's own middle landing on the
-   * column's, not merely "somewhere left of where it used to be."
+   * **Right-justified to the text's own measure, not the column it sits
+   * in** (2026-09-04, the author's own follow-up to the centring above,
+   * reversed the same day: "the preview text does not actually r[e]ach the
+   * right side margin, it has a limit on how long a line can get, so the
+   * read more button read badly ... right justified to the real margin of
+   * the preview text, not to the margin of the space where the preview text
+   * is but doesnt reach"). `[data-hero-lede]` is `.hero-lede` itself
+   * (`views/daily/panel.js`), so its own `getBoundingClientRect` is the
+   * text's real, rendered width — already clamped to 68ch by the browser —
+   * rather than a number this test would have to recompute by hand.
    */
-  const linkMid = m.link.left + m.link.width / 2;
-  const bodyMid = m.body.left + m.body.width / 2;
-  expect(Math.abs(linkMid - bodyMid), 'Read more is not centred on the text column').toBeLessThan(2);
+  expect(Math.abs(m.link.right - m.lede.right), 'Read more is not right-justified to the text, not the column').toBeLessThan(2);
   /*
    * **Inside the paragraph where there is one** (author, 2026-09-01: "make
    * the '...continue reading' part of the actual preview paragraph"), which

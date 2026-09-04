@@ -56,6 +56,25 @@ const settledZoom = async (page) => {
 };
 
 /**
+ * Waits for a mouse drag's own trail to catch up, the same shape
+ * `settledZoom` already is for a button press. A mouse drag now coasts a
+ * little past `pointerup` rather than snapping straight to its target
+ * (2026-09-04, author: "a tiny bit of momentum when you let go, not just
+ * snap"), so `data-dots` is still moving for a couple of frames after
+ * `mouse.up()` — reading a position off it before this settles is reading
+ * ground the picture has not actually reached yet.
+ */
+const settledDrag = async (page, canvas) => {
+  let last = null;
+  for (let i = 0; i < 40; i += 1) {
+    const now = await canvas.getAttribute('data-dots');
+    if (now === last) return;
+    last = now;
+    await page.waitForTimeout(50);
+  }
+};
+
+/**
  * The deepest this picture goes, which since 2026-09-01 is a function of how
  * wide it is: the ceiling exists so that saints sharing a coordinate can be
  * told apart, and that is a claim in *pixels*, so a 360 px phone has to go
@@ -364,22 +383,64 @@ test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }
   await page.mouse.move(centre.x, centre.y);
   await page.mouse.wheel(0, -400);
   /*
-   * Direct, not polled (2026-09-04): the wheel briefly trailed its own
-   * target ("smooth/slightly lazy zooming in/out on desktop"), and that
-   * turned out to be the wrong gesture to lag — a zoom's centre is coupled
-   * to its scale, so easing the two independently drifted the point under
-   * the pointer instead of merely lagging behind it, and the author's own
-   * correction ("the scroll up and down is what I should have said should
-   * be slightly lazy ... not the zoom") took the trailing off the wheel and
-   * put it on a mouse drag instead (below). `setThrottled` writes
-   * `data-zoom-level` synchronously, so a bare wheel notch is readable the
-   * instant it lands, same as before either change.
+   * Polled, not read once (2026-09-04): the wheel trails a *target scale*
+   * again ("smooth/slightly lazy zooming in/out on desktop"), so the readout
+   * is still `1.0×` for the first frame or two after the notch. It briefly
+   * applied at once instead, backed out the same day the author asked for
+   * both halves at once — "make it stop wobbling ... I was hoping we would
+   * keep the zoom, not remove it" — the wobble the first version of the
+   * trail caused was a real bug in *how* cx/cy were eased, not a reason to
+   * drop the easing itself (`views/map.js`'s own comment on `wireZoom`'s
+   * wheel handler has the fix).
    */
-  await expect(page.locator('[data-zoom-level]'), 'a bare wheel did not zoom the map').not.toHaveText('1.0×');
+  await expect.poll(() => zoomLevel(page), 'a bare wheel did not zoom the map').not.toBe('1.0×');
 
   // And back out: a long spin down runs into the floor and stops at the world.
   await page.mouse.wheel(0, 1200);
-  await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
+  await expect.poll(() => zoomLevel(page)).toBe('1.0×');
+});
+
+test('a wheel zoom holds the point under the pointer still, not merely the end of the ease', async ({ page }) => {
+  /*
+   * Author, 2026-09-04: "make it stop wobbling left right up down when
+   * zooming" — the point this pins is exactly the one that broke. The
+   * wheel's own trail eased `scale` and `cx`/`cy` toward their targets
+   * independently at first, and `zoomAbout` holds a point still under the
+   * pointer by coupling the two through a `1/scale` term, a curve rather
+   * than a line — two independent straight-line eases do not retrace it, so
+   * the anchor visibly drifted mid-transition even though it landed exactly
+   * right at the end. Sampled through the whole ease rather than read once
+   * at the end, which is the only way a claim about *every* frame can be
+   * checked at all.
+   */
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  const canvas = page.locator('[data-map]');
+  await expect(canvas).toHaveAttribute('data-land', 'ok');
+
+  await searchBox(page).fill('constantinople');
+  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).press('Enter');
+  await settledZoom(page);
+
+  const before = JSON.parse(await canvas.getAttribute('data-dots'));
+  const track = before.find((d) => d.n === 1) ?? before[0];
+  expect(track, 'premise: a dot on screen to anchor the zoom on').toBeTruthy();
+  const box = await canvas.boundingBox();
+
+  await page.mouse.move(box.x + track.x, box.y + track.y);
+  await page.mouse.wheel(0, -600);
+
+  let maxDrift = 0;
+  for (let i = 0; i < 15; i++) {
+    const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+    const now = dots.find((d) => d.slug === track.slug);
+    if (now) maxDrift = Math.max(maxDrift, Math.hypot(now.x - track.x, now.y - track.y));
+    await page.waitForTimeout(20);
+  }
+  expect(maxDrift, 'the point under the pointer drifted during the eased zoom').toBeLessThan(3);
+
+  // And it actually zoomed, rather than merely holding still.
+  await expect.poll(() => zoomLevel(page)).not.toBe('1.0×');
 });
 
 test('a mouse drag settles at exactly the distance the pointer moved', async ({ page }) => {
@@ -726,7 +787,9 @@ test('a press selects the saint and a drag does not, and Profile is the door', a
   // Nothing is selected by a haul, either.
   await expect(canvas).toHaveAttribute('data-selected', '');
 
-  // The dot moved with the drag; re-read its position before the true press.
+  // The dot moved with the drag, and the trail coasts a little past release —
+  // wait for it to settle before reading the position the press has to aim at.
+  await settledDrag(page, canvas);
   const { dot: dot2 } = await canvas.evaluate((el) => ({ dot: JSON.parse(el.dataset.dots ?? '[]')[0] }));
   await page.mouse.click(box.x + dot2.x, box.y + dot2.y);
   await expect(canvas).toHaveAttribute('data-selected', dot2.slug);

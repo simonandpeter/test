@@ -1675,31 +1675,40 @@
   }
 
   /*
-   * **Centred on the text column, not the card** (author, 2026-09-04:
-   * "instead of the 'continue reading' button on Daily page desktop, rename
-   * it 'read more' and move it horizontally to centre it on the text
-   * preview, keeping it at the same height it is now"). `bottom: 0` is
-   * unchanged — the anchor the comment above this rule earned by measuring
-   * the picture's own foot is still the right one for the height half of
-   * this. The horizontal half needs the *text* column's own edges, not the
-   * card's, and `.hero-more` is absolutely positioned straight out of a grid
-   * item it is not itself: a positioned child of a grid container takes that
-   * container's grid tracks as its own inset edges when it names one with
-   * `grid-column`, even though it is a DOM grandchild rather than a direct
-   * child, because CSS containing-block is decided by the nearest
-   * *positioned* ancestor and skips `.hero-body` (`position` left at its
-   * default, `static`). `grid-column: 2` is `.hero-body`'s own column, the
-   * grid's second and only other track — so `inset-inline: 0` centres this
-   * inside exactly that column's own width, and `margin-inline: auto` on a
-   * `max-content` box keeps the pill itself no wider than its own words.
+   * **Right-justified to the text's own measure, not the column's**
+   * (2026-09-04). First tried centred on the whole column — the author's own
+   * next report was that it read badly, because `.hero-lede` is capped at
+   * `68ch` (below) and a wide window's column is routinely bigger than that:
+   * the text stops well short of the column's own right edge, and a button
+   * either centred on or flush with the *column* then floats in open space
+   * the words never reached, or sits under nothing. "Right justified to the
+   * real margin of the preview text, not to the margin of the space where
+   * the preview text is but doesnt reach" is the fix: `right: max(0px, 100%
+   * - 68ch)` is 0 — flush with the column's own right edge — for exactly the
+   * widths where the column itself is narrower than 68ch and the text
+   * already reaches it, and past that width it is the gap between the
+   * column's right edge and the text's own, pulling the button left by
+   * precisely that much. `68ch` has to track `.hero-lede`'s own value below
+   * because `ch` is resolved against *this* element's font, not inherited as
+   * a pixel value — the two are siblings under `.hero-body`, sharing the
+   * same inherited font-size, which is what keeps `68ch` meaning the same
+   * width on both.
+   *
+   * `bottom: 0` is unchanged — the anchor the comment above this rule earned
+   * by measuring the picture's own foot is still the right one for the
+   * height half of this. `grid-column: 2` is still what makes `.hero-body`'s
+   * own column the containing block at all: a positioned child of a grid
+   * container takes that container's grid tracks as its own inset edges
+   * when it names one this way, even though `.hero-more` is a DOM
+   * grandchild rather than a direct child of `.hero`, because CSS
+   * containing-block is decided by the nearest *positioned* ancestor and
+   * skips `.hero-body` (`position` left at its default, `static`).
    */
   .hero.has-media .hero-body > .hero-more {
     position: absolute;
     grid-column: 2;
-    inset-inline: 0;
+    right: max(0px, 100% - 68ch);
     bottom: 0;
-    width: max-content;
-    margin-inline: auto;
   }
 }
 
