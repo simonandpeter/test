@@ -22,6 +22,13 @@
       "display": "1844 or 1846",
       "basis": "attested",
       "note": "saint.gr: born at Smyrna in 1844; doxologia.ro: 1846."
+    },
+    "death": {
+      "earliest": 1929,
+      "latest": 1929,
+      "display": "1929",
+      "basis": "attested",
+      "note": "Died 8 September 1929, saint.gr and doxologia.ro."
     }
   },
   "attestations": [

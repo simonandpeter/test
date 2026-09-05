@@ -20,6 +20,13 @@
       "display": "1705",
       "basis": "attested",
       "note": "The Sretensky calendar’s life: born 8 September 1705 at Priluki."
+    },
+    "death": {
+      "earliest": 1754,
+      "latest": 1754,
+      "display": "1754",
+      "basis": "attested",
+      "note": "Died 10 December 1754, the Sretensky calendar’s life."
     }
   },
   "attestations": [

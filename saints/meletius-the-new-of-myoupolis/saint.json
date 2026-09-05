@@ -18,6 +18,13 @@
       "display": "1035",
       "basis": "traditional",
       "note": "saint.gr: born in 1035 at Moutalaske in Cappadocia."
+    },
+    "death": {
+      "earliest": 1105,
+      "latest": 1105,
+      "display": "1105",
+      "basis": "traditional",
+      "note": "Died 1105 at the age of seventy, saint.gr."
     }
   },
   "attestations": [

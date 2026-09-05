@@ -18,6 +18,13 @@
       "display": "c. 1700",
       "basis": "traditional",
       "note": "The Romanian life: born about 1700 in Russia."
+    },
+    "death": {
+      "earliest": 1789,
+      "latest": 1789,
+      "display": "1789",
+      "basis": "traditional",
+      "note": "Died 29 March 1789 at the skete, the life at doxologia.ro."
     }
   },
   "attestations": [

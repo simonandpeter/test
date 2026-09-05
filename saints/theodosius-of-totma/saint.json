@@ -20,6 +20,13 @@
       "display": "c. 1530",
       "basis": "traditional",
       "note": "The Sretensky calendar’s life: born in Vologda around 1530."
+    },
+    "death": {
+      "earliest": 1568,
+      "latest": 1568,
+      "display": "1568",
+      "basis": "traditional",
+      "note": "Died 28 January 1568, the Sretensky calendar’s life."
     }
   },
   "attestations": [

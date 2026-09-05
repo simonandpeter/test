@@ -20,6 +20,13 @@
       "display": "1487",
       "basis": "attested",
       "note": "The Romanian life: born 1487 in the north of Moldavia."
+    },
+    "death": {
+      "earliest": 1570,
+      "latest": 1570,
+      "display": "1570",
+      "basis": "attested",
+      "note": "Died 7 September 1570, the life at doxologia.ro."
     }
   },
   "attestations": [

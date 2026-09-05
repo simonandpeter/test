@@ -18,6 +18,13 @@
       "display": "1727",
       "basis": "attested",
       "note": "saint.gr: born at Lixouri in Cephalonia in 1727."
+    },
+    "death": {
+      "earliest": 1782,
+      "latest": 1782,
+      "display": "1782",
+      "basis": "attested",
+      "note": "Died 4 September 1782 at Lepeda, saint.gr."
     }
   },
   "attestations": [

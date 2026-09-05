@@ -21,6 +21,13 @@
       "display": "1903",
       "basis": "attested",
       "note": "The Romanian life: born 21 March 1903 at Valea Bradului, Hunedoara county."
+    },
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "attested",
+      "note": "Died 18 September 1961 in the prison at Aiud, the life at doxologia.ro."
     }
   },
   "attestations": [

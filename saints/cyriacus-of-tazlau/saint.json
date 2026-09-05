@@ -18,6 +18,13 @@
       "display": "early 17th century",
       "basis": "traditional",
       "note": "The Romanian life: born at the beginning of the seventeenth century at Mesteacăn."
+    },
+    "death": {
+      "earliest": 1655,
+      "latest": 1665,
+      "display": "c. 1660",
+      "basis": "traditional",
+      "note": "Died about 1660, the life at doxologia.ro."
     }
   },
   "attestations": [

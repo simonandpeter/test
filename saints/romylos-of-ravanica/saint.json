@@ -22,6 +22,13 @@
       "display": "c. 1300",
       "basis": "traditional",
       "note": "saint.gr: born about 1300 at Vidin."
+    },
+    "death": {
+      "earliest": 1375,
+      "latest": 1375,
+      "display": "1375",
+      "basis": "traditional",
+      "note": "Died 1375 at Ravanica, saint.gr and doxologia.ro."
     }
   },
   "attestations": [

@@ -18,6 +18,13 @@
       "display": "mid-17th century",
       "basis": "traditional",
       "note": "saint.gr: born in the middle of the seventeenth century at Leontari."
+    },
+    "death": {
+      "earliest": 1740,
+      "latest": 1740,
+      "display": "1740",
+      "basis": "traditional",
+      "note": "Died 14 September 1740 at his monastery, saint.gr."
     }
   },
   "attestations": [

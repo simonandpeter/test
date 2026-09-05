@@ -20,6 +20,13 @@
       "display": "1623",
       "basis": "attested",
       "note": "The Sretensky calendar’s life: born 8 November 1623."
+    },
+    "death": {
+      "earliest": 1703,
+      "latest": 1703,
+      "display": "1703",
+      "basis": "attested",
+      "note": "Died 1703, buried 4 December, the Sretensky calendar’s life."
     }
   },
   "attestations": [

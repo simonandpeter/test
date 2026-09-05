@@ -20,6 +20,13 @@
       "display": "1448",
       "basis": "attested",
       "note": "saint.gr: born at Athens in 1448."
+    },
+    "death": {
+      "earliest": 1567,
+      "latest": 1567,
+      "display": "1567",
+      "basis": "attested",
+      "note": "Died 1567, in the hundred and seventeenth year of his life, saint.gr."
     }
   },
   "attestations": [

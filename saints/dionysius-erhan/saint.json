@@ -20,6 +20,13 @@
       "display": "1868",
       "basis": "attested",
       "note": "The Romanian life: born 1868 at Bardar near Chișinău."
+    },
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "Died 17 September 1943 in the central hospital of Chișinău, the life at doxologia.ro."
     }
   },
   "attestations": [

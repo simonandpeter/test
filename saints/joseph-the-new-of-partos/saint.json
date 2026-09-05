@@ -24,6 +24,13 @@
       "display": "1568",
       "basis": "attested",
       "note": "saint.gr: born 1568 at Ragusa (Dubrovnik)."
+    },
+    "death": {
+      "earliest": 1656,
+      "latest": 1656,
+      "display": "1656",
+      "basis": "attested",
+      "note": "Died 15 August 1656 at Partoș, saint.gr and doxologia.ro."
     }
   },
   "attestations": [
