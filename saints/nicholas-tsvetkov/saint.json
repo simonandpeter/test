@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Иоанна и Иакова, Петра, Николая пресвитеров и Николая диакона, прмц. Марии и мц. Людмилы (1937)»."
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "Born 8 March 1879 at Nikolskoye in Moscow province, azbyka.ru."
     }
   },
   "text": {

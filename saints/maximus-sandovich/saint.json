@@ -24,6 +24,13 @@
       "display": "1914",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Максима Горлицкого пресвитера (1914)”."
+    },
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "Born 19 January 1886 (old style) at Żdynia, azbyka.ru."
     }
   },
   "attestations": [

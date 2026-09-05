@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Стефана, Александра пресвитеров и Николая диакона (1937)»."
+    },
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "Born 1886 at Rychkovo in Vologda province, azbyka.ru."
     }
   },
   "text": {

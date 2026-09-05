@@ -46,5 +46,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "attested",
+      "note": "Died 14 August 1961 at Sobolevo, azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "Born 1882 at Nevezhkino in Penza province, azbyka.ru."
+    }
   }
 }

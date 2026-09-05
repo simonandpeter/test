@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Феодора, Иоанна, Николая пресвитеров… (1937)»."
+    },
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "Born 1888 at Pyzhovo in Ryazan province, azbyka.ru."
     }
   },
   "text": {

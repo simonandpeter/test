@@ -51,6 +51,13 @@
       "display": "1921",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Андрея, Григория, Григория, Иоанна пресвитеров (1921)»."
+    },
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "Born 1 April 1869 at Novoyegorlykskoye in Stavropol province, azbyka.ru."
     }
   },
   "text": {

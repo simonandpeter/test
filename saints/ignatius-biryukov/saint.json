@@ -51,6 +51,13 @@
       "display": "1932",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Прп. Игнатия исп (1932)»."
+    },
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "Born 25 May 1865 at Biryuch in Voronezh province, azbyka.ru."
     }
   },
   "text": {

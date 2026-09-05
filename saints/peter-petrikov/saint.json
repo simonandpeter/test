@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Иоанна и Иакова, Петра, Николая пресвитеров и Николая диакона, прмц. Марии и мц. Людмилы (1937)»."
+    },
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "Born 19 January 1903 at Mozhaisk, azbyka.ru."
     }
   },
   "text": {

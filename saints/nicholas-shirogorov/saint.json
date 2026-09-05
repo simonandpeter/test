@@ -51,6 +51,13 @@
       "display": "1942",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмч. Николая диакона (1942)»."
+    },
+    "birth": {
+      "earliest": 1904,
+      "latest": 1904,
+      "display": "1904",
+      "basis": "attested",
+      "note": "Born 9 November 1904 at Zdekhovo in Moscow province, azbyka.ru."
     }
   },
   "text": {

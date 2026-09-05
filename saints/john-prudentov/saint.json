@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Феодора, Иоанна, Николая пресвитеров… (1937)»."
+    },
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "Born 1868 at Bolshiye Dorki in the Vyazniki district, azbyka.ru."
     }
   },
   "text": {

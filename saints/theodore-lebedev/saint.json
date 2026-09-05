@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Феодора, Иоанна, Николая пресвитеров… (1937)»."
+    },
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "Born 15 February 1875 at Stebachevo in Vladimir province, azbyka.ru."
     }
   },
   "text": {

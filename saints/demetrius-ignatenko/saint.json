@@ -51,6 +51,13 @@
       "display": "1935",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмч. Димитрия пресвитера (1935)»."
+    },
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "Born 17 July 1872 at Agotmany in the Melitopol district, azbyka.ru."
     }
   },
   "text": {

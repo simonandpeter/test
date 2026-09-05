@@ -51,6 +51,13 @@
       "display": "1921",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Андрея, Григория, Григория, Иоанна пресвитеров (1921)»."
+    },
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "Born 12 August 1871 at Korenovskaya in the Kuban, azbyka.ru."
     }
   },
   "text": {

@@ -48,5 +48,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1955,
+      "latest": 1955,
+      "display": "1955",
+      "basis": "attested",
+      "note": "Died 25 October 1955 at Alma-Ata, azbyka.ru."
+    },
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "Born 9 April 1877 at Komissarovka in Yekaterinoslav province, azbyka.ru."
+    }
   }
 }

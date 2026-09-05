@@ -51,6 +51,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмч. Иоанна пресвитера (1918)»."
+    },
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "Born 1846, azbyka.ru."
     }
   },
   "text": {

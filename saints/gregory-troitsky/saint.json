@@ -51,6 +51,13 @@
       "display": "1921",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Андрея, Григория, Григория, Иоанна пресвитеров (1921)»."
+    },
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "Born 1 October 1870 at Gromok in Tambov province, azbyka.ru."
     }
   },
   "text": {
