@@ -1420,3 +1420,8 @@ nothing.** Four things in one day read as evidence and were not.
 - On Windows prefer Write/Edit or short Python over PowerShell heredocs (BOM
   breaks `JSON.parse`); `export MSYS_NO_PATHCONV=1` before any leading-slash
   argument or env var in Git Bash.
+- **azbyka.ru answers 403 to Python and curl; the in-app Browser pane reads
+  it** (2026-09-05). `get_page_text` stops at ~9 kB, so slice long lives out
+  of `document.body.innerText` with `javascript_tool` between "Дни памяти" and
+  "Развернуть". Sretensky pages are UTF-8 with a BOM, not windows-1251;
+  saint.gr's whole life is in the page behind its seventy-word fold.

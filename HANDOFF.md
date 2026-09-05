@@ -102,7 +102,7 @@ you inferred, and keep them apart.
 | test | sightings | project |
 | --- | --- | --- |
 | `random deals an order, and holds it still under the reader` | 3 in ~39 | desktop, mobile-360 |
-| `the index offers two layouts, and remembers which one the reader chose` | 2 in ~38 | mobile-360 |
+| `the index offers two layouts, and remembers which one the reader chose` | 3 in ~39 (third on CI run 33898923959, 2026-09-05) | mobile-360 |
 | `the row comes back on its own after a press` | 3 in ~6 | **both** |
 | `the dot slides along the track rather than jumping when the year leaps` | 5 in 6 *slow* runs, 0 in 2 fast | desktop |
 | `the panel flies home in half the time, and the page closes behind it` | 2 in 3 six-worker runs (2026-09-05, one of them on the commit *before* the chooser extraction), 0 in 6 serial | both |

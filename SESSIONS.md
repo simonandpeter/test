@@ -9757,3 +9757,35 @@ Greek's 8 September for Hilarion's birth against the OCA's Paschal night of
 160 placeholders are honest: the OCA has nothing for them either, and the
 next source is azbyka.ru's archival lives for the new martyrs, which refuses
 a plain fetch and is a sitting of its own.
+
+**The second content half, the same sitting: 173 lives that had stopped
+partway, read whole.** 199 lives carried a sentence of the form "the
+calendar's life runs on past the point read here" — the 23 August reading
+had been honest about stopping, and the reason turned out to be mechanical
+in every case but one family: saint.gr prints seventy words and folds the
+rest behind a *read more* whose text is nonetheless in the page, and the
+Sretensky pages come as UTF-8 with a byte-order mark, which the reader had
+decoded as windows-1251 and then given up on. A script (`runson.py`, in the
+session scratchpad, not the repo) fetched every source behind an apology,
+measured the gap between the life and the page, and ranked them; the lives
+were then rewritten from the whole page, largest gap first — Greek, then
+Sretensky, then doxologia, then the Prologue-only ones — and every source
+line now says *read 5 September 2026 — this time whole* with the reason
+the earlier reading stopped, so the two readings stay distinguishable. The
+one family that was not mechanical was azbyka.ru, which returns 403 to
+anything that is not a browser: the in-app Browser pane reads it without
+complaint, and the last 31 of the day's lives — the new martyrs of 1918 and
+1937 — came through it, four pages a batch, the long ones (Goryachev, Kossov,
+Ignatius Lebedev, Boyarshinov's Sepych) sliced out of `innerText` by
+`javascript_tool` because `get_page_text` stops at nine thousand characters.
+**45 apologies remain, all of them azbyka.ru lives**; `grep -l "runs on
+past the point read here" saints/*/life.md` is the queue, in the same
+order it was worked. Two things were refused on the way: Alexius Orlov's
+own short life says he was shot on 27 August and the full one on 4
+September, and both are printed rather than one chosen; and John
+Boyarshinov's page is three-quarters the history of the Sepych rising, kept
+whole because the shooting order quotes it. The unit suite pins the source
+line's shape (`tests/lives.test.mjs`), which caught two rewrites that put
+the date on the line after "read" and one that wrote "read 23 August and
+5 September 2026"; the regex wants one date per line, and the phrasing
+above is what satisfies it.
