@@ -213,7 +213,14 @@ never going to work for a portrait with no shorter shape to scale to, which
 is what the report names. `saint.spec.js`'s `the icon scrolls with the
 apparatus column, not pinned above it` pins the new, opposite invariant.
 
-**Map** — `src/views/map.js` + `src/styles/map.css`.
+**Map** — `src/views/map.js` + `src/views/map/*` + `src/styles/map.css`. One
+folder since 2026-09-05 (cleanup plan item 5): `map.js` keeps the markup, the
+render, its teardown and the choosing of a saint or a blob; `map/state.js` is
+the one `map` object every module reads and writes (no module keeps a copy —
+that rule is what makes the split safe); `map/paint.js` the draw pass and the
+terrain it fetches; `map/motion.js` flight, glide and playback;
+`map/timeline.js`, `map/chrome.js` (zoom and the filter panel),
+`map/search.js`, `map/press.js`.
 
 > **The 2026-08-31 reshaping is the biggest single change this view has had.**
 > Gone: the `Map` h1 drawn on the picture (now `.sr-only` — the heading still
@@ -290,7 +297,7 @@ thing "8x zoom, all terrain" would show and the honest area-average
 resampling fix below could not reach, because the mismatch was the wash's
 own resolution, not how it resampled. The map now fades the flat `inkSoft`
 fill directly into the tile grid — `zoomFade`, `TILE_FADE_START`/`_END`
-(`views/map.js`) — with nothing raster underneath at low zoom at all;
+(`views/map/paint.js`) — with nothing raster underneath at low zoom at all;
 `make-terrain.py` only ever writes the tile grid, and the two whole-world
 files and the script's own wash-generation code went with it.
 
@@ -339,7 +346,7 @@ flat→50m and 50m→10m handovers at once, which is the three-layer
 cross-dissolve dip this map has already paid for twice.
 
 **The 50m grid starts fetching and decoding before the reader ever crosses
-`TILE_FADE_START`** (`warmTerrainTiles`, `views/map.js`, 2026-09-04 — author:
+`TILE_FADE_START`** (`warmTerrainTiles`, `views/map/paint.js`, 2026-09-04 — author:
 "very heavy load at start of map page with raster images, make them load
 silently in the background ... but dont show still at full zoom"). Left to
 `ensureTerrainTiles` alone, nothing is fetched until the reader is already
@@ -477,9 +484,10 @@ this — it was only ever DETAIL_AT borrowing its number for one day.
 
 **The terrain-reading code itself lives in `lib/map-terrain.js`, not here —
 and that split is load-bearing, not tidiness** (2026-09-03). `views/map.js`
-is *statically* imported by `main.js`, unlike `land.js`/`water.js` which are
-data, dynamically imported: anything written directly in map.js ships in the
-app's own entry bundle on *every* route, calendar and saint pages included.
+— and with it, since 2026-09-05, every `views/map/*` module it imports
+statically — is *statically* imported by `main.js`, unlike `land.js`/`water.js`
+which are data, dynamically imported: anything written directly in those files
+ships in the app's own entry bundle on *every* route, calendar and saint pages included.
 Writing the tile system straight into map.js measured out to ~150ms added to
 every route's own first paint on CI's throttled-4G gate — caught only because
 that gate exists, not by inspection — and about two-thirds of that was a
@@ -489,8 +497,8 @@ one asset at build time and instead inlines a lookup table for every file
 that could ever match (all 144 tile halves) into whichever chunk contains the
 call site (`tileUrl`, now in `lib/map-terrain.js` for exactly this reason).
 `buildTint`/`tintFor`/`visibleTiles`/`loadTerrainChannel` moved for the first
-reason, `tileUrl` for the second; map.js keeps only the thin, cached dynamic
-`import('../lib/map-terrain.js')` and the per-frame `ctx` calls that cannot
+reason, `tileUrl` for the second; `map/paint.js` keeps only the thin, cached
+dynamic `import('../../lib/map-terrain.js')` and the per-frame `ctx` calls that cannot
 live anywhere else. The general rule this leaves behind: a *lazy* data import
 inside an *eagerly* bundled view buys nothing if the code reading that data
 sits in the eager module too.
@@ -655,7 +663,7 @@ momentum once it has stopped. Skipped entirely under `prefers-reduced-motion`
 — reduced motion removes the animation, never merely shortens it.
 
 **Two fingers pan and zoom at once, not one gesture at a time** (`wireZoom`'s
-two-pointer branch, `views/map.js`, 2026-09-05 — author: "is there a way to do
+two-pointer branch, `views/map/chrome.js`, 2026-09-05 — author: "is there a way to do
 both scroll and zoom on mobile at the same time, measuring the distance
 between fingers as zoom and average movement as scroll?"). `spread(active)`
 (the distance between the two pointers) still drives `zoomAbout`; a new
@@ -937,7 +945,7 @@ any zoom, so they stay one mark that says how many; **a second press on a
 mark steps to the next saint under it**, which is the only way those are
 reachable and is why the press cycles rather than refusing.
 
-**Which name a crowd prints is `rankOf` (map.js) over `dailyRank`
+**Which name a crowd prints is `rankOf` (`map/paint.js`) over `dailyRank`
 (`lib/map-labels.js`)** — author, 2026-09-01: "favour the saints that are
 main saints on the daily page and the also commemorated in order when
 deciding which name to print over the others when zoomed out". `dailyRank`
@@ -1151,7 +1159,7 @@ every text token gained contrast rather than needing re-tuning; `--field` and
 left behind would be a grey panel let into a cream page. Three places print
 those figures and all three are held to the palette:
 `tests/contrast.test.mjs` (DESIGN.md's paragraph), and
-`index.spec.js`'s `the day ground is gesso` (the shipped `rgb()` and the
+`index-grid.spec.js`'s `the day ground is gesso` (the shipped `rgb()` and the
 recessed-field relationship). `tests/contrast.test.mjs` recomputes every
 text token against both grounds in both themes and holds DESIGN.md's printed
 figures to the palette, and `quality-floor.spec.js` runs axe over every route in
@@ -1254,11 +1262,11 @@ run the surface you touched.
 
 | touched | run |
 | --- | --- |
-| `views/index/*`, `index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `index.spec.js` |
-| `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js`, `fast-grade.js` | `daily.spec.js` |
+| `views/index/*`, `index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `index-carousel.spec.js`, `index-grid.spec.js`, `index-controls.spec.js` |
+| `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js`, `fast-grade.js` | `daily-panel.spec.js`, `daily-picker.spec.js`, `daily-register.spec.js` |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `licence.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
 | `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface |
-| `views/map.js`, `map.css`, `lib/mercator.js`, `lib/map-view.js`, `lib/map-labels.js`, `lib/map-track.js`, `data/places.js`, `data/periods.js` | `map.spec.js` |
+| `views/map.js`, `views/map/*`, `map.css`, `lib/mercator.js`, `lib/map-view.js`, `lib/map-labels.js`, `lib/map-track.js`, `data/places.js`, `data/periods.js` | `map.spec.js` |
 | `ui/strings.js`, `ui/locales/*` | `locale-coverage.mjs`, then the full run |
 | `lib/*`, `data/`, `build-manifest.mjs` | `npm test`, then the surface |
 
@@ -1273,7 +1281,7 @@ Literata, and `system-ui` is DejaVu Sans. `COLD_FACE=1` refuses the webfont and
 forces Verdana + Times, harder than the runner does. Run it on anything that
 measures text before pushing.
 
-    COLD_FACE=1 npm run test:e2e:desktop -- e2e/index.spec.js
+    COLD_FACE=1 npm run test:e2e:desktop -- e2e/index-grid.spec.js
 
 It prints what it measured every run — a rehearsal that silently failed to apply
 would also be green. Two tests opt out and say why in their comments.

@@ -1001,7 +1001,7 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition
   // fast this test reads (26 August civil) is dated by the Russian church's
   // own Julian reckoning, and a forced Gregorian reckoning here would price
-  // the fast off the wrong 14 days entirely (see daily.spec.js's own note
+  // the fast off the wrong 14 days entirely (see daily-panel.spec.js's own note
   // on this, and lib/church.js's `calendarFor`).
   await ready(page, { reckoning: null });
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });

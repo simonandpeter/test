@@ -31,7 +31,7 @@ import { test as base } from '@playwright/test';
  * gate — 60 seconds against one spec before pushing beats finding it in a
  * six-minute CI run:
  *
- *     COLD_FACE=1 npm run test:e2e:desktop -- e2e/index.spec.js
+ *     COLD_FACE=1 npm run test:e2e:desktop -- e2e/index-grid.spec.js
  *
  * A test that pins its own face (`the index foot holds one line in a wide
  * utility face`, `a facet chip prints its own word`) overrides this afterwards

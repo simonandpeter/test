@@ -194,9 +194,14 @@ for (const file of after) {
   const bound = boundIn(code);
   const missing = [...candidates]
     .filter((n) => !bound.has(n))
-    // a bare reference, not a property access and not a key
+    // a bare reference, not a property access and not a key. A spread is a
+    // bare reference too: `...clampCentre(x, y)` sat behind three dots and the
+    // first version of this lookbehind read the last of them as a property
+    // access — the map cut of 2026-09-05 shipped a `ReferenceError` past a
+    // clean report because of it. Only a dot that is not itself preceded by a
+    // dot is a member access.
     .filter((n) =>
-      new RegExp(String.raw`(?<![.\w$])` + n + String.raw`\s*[\(\.\[,;)\]}=+\-*/?:&|<>\s]`).test(
+      new RegExp(String.raw`(?<![\w$])(?<!(?<!\.)\.)` + n + String.raw`\s*[\(\.\[,;)\]}=+\-*/?:&|<>\s]`).test(
         withoutImports(code),
       ),
     )

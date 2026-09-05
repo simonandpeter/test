@@ -193,8 +193,10 @@ its reasoning).
 - **`docs/CLEANUP-PLAN.md`** items 1, 2 and 3 were done on 2026-09-05 in one
   sitting, with a dead-CSS sweep the plan had not measured (171 lines), and
   item 4 (the two chooser controls are one control, `ui/panel-control.js`)
-  the same day. Items 5 (`map.js` at 4,500 lines) and 6 (the two largest
-  specs) remain, and 5 wants the author's word first.
+  the same day. Items 5 (`map.js` at 4,603 lines, now `views/map/` with a
+  `state.js` every module shares) and 6 (the two largest specs, each now three
+  files by surface) were done the same day on the author's word — "Items 5 and
+  6". The plan is finished.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
@@ -410,7 +412,7 @@ drifted from what was written here on 2026-09-01**:
 | dates `open` | **0** | was 2; both fixed 2026-09-01 |
 | dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
 | dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
-| `undated` | 150 | was 155 on 2026-09-01; the third audit showed how firmly, see `index.spec.js` |
+| `undated` | 150 | was 155 on 2026-09-01; the third audit showed how firmly, see `index-grid.spec.js` |
 | `no-death` | 23 | **the most fixable thing in the corpus.** Well-known people with an exact birth and no death year — Joasaph of Belgorod, Mitrophan of Voronezh, Kassiani, Ilarion Felea. Each needs one source fetched; the day-index page they already cite does *not* carry it |
 | `no-birth` | 490 | was 485 on 2026-09-01; mostly irreducible |
 | place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |

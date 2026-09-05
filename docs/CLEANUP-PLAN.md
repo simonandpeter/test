@@ -5,14 +5,15 @@ cleaned, simplified, reduced without losing functionality or aesthetic, just
 cleaning up the code and organising it. See if there's any redundant copies or
 things that can be collapsed into one function. Just plan it for now."
 
-**Items 1, 2 and 3 were done on 2026-09-05** (commits `9e8451d`, `a6998ad`);
-each says so in its own section below. The same sitting removed 171 lines of
-stylesheet the plan had not measured — fourteen class selectors with no
-reference anywhere, three of them referenced *only* by e2e assertions that
-they render nothing (`99a71ef`). Item 4 followed the same day. Items 5 and 6 remain a plan, and the
-numbers in "the shape of the thing today" are the 2026-09-02 ones: `map.js`
-was 4,473 lines by 2026-09-05 and `calendar.css` 3,309 before the dead rules
-went.
+**Every item is done.** Items 1, 2 and 3 on 2026-09-05 (commits `9e8451d`,
+`a6998ad`); each says so in its own section below. The same sitting removed
+171 lines of stylesheet the plan had not measured — fourteen class selectors
+with no reference anywhere, three of them referenced *only* by e2e assertions
+that they render nothing (`99a71ef`). Item 4 followed the same day, and items
+5 and 6 the same evening, once the author had given the word the plan asked
+for ("Items 5 and 6"). The numbers in "the shape of the thing today" are the
+2026-09-02 ones: `map.js` was 4,603 lines by the time it was cut and
+`calendar.css` 3,309 before the dead rules went.
 
 Every item below is a measured finding with the numbers that make it worth
 doing, an argument for why it is safe, and — where it matters — the reason it
@@ -185,7 +186,28 @@ first, run that spec, and only then delete the second copy.
 
 ---
 
-## 5. `map.js` is 3,386 lines with three section headers
+## 5. `map.js` is 3,386 lines with three section headers — done 2026-09-05
+
+`src/views/map/` — `state.js`, `paint.js`, `motion.js`, `timeline.js`,
+`chrome.js`, `search.js`, `press.js` — with `map.js` (676 lines) keeping the
+markup, the render, its teardown and the choosing of a saint or a blob. The
+state question the plan left open was answered the way the Daily page and
+All Saints answered it: one object, `map`, in `state.js`, that every module
+reads and writes and none copies — named `map` rather than `state` because
+`state` is what the paint pass calls a dot's `live`/`past`/`future` in forty
+places. `paint.js` is 2,159 lines and keeps the terrain loaders on purpose
+(they call `paintCanvas` and it calls them; two files would be a cycle).
+The cut was scripted so every comment travelled with its declaration, and
+`extraction-check.mjs` ran over it: 29 findings, every one a documented false
+positive (`map-movement` reads as `movement`, the new object's own keys, and
+`export … from`), confirmed by a grep for bare state names in code lines.
+Two things the checker cannot see were found by reading: the spread `...view`
+had survived the rewrite (a `...` ends in a dot), and three prose lines inside
+the markup's HTML comments had been rewritten (they are not JS comments).
+Both fixed before the first build. Four dead names went — `kind`, `KINDS`,
+`DEFAULT_KIND`, `pointsOfKind`, the kind selector's leftovers — and
+`MERGE_PX` is imported for the first time: the one- or two-member blob branch
+had used it without any import, a `ReferenceError` waiting since 2026-09-04.
 
 **Measured.** Every other surface on this site is a folder — `views/daily/` is
 seven modules, `views/index/` is nine — and the map is one file with 41
@@ -222,7 +244,20 @@ cut here runs it, with `--locals` when a function body is split.
 
 ---
 
-## 6. The two largest specs could follow the rule the suite already has
+## 6. The two largest specs could follow the rule the suite already has — done 2026-09-05
+
+`daily.spec.js` (5,792 lines, 129 tests) is `daily-panel.spec.js` (79),
+`daily-picker.spec.js` (43) and `daily-register.spec.js` (7); `index.spec.js`
+(4,894 lines, 92 tests) is `index-carousel.spec.js` (28), `index-grid.spec.js`
+(28) and `index-controls.spec.js` (36). By surface, as the plan asks: each test
+was classified from the selectors and helpers it uses, and the seam is a
+judgement the file headers say so about. The tests are untouched; the
+`---- round ----` dividers are repeated in whichever file holds a member of
+that round, so provenance survives the move. `extraction-check.mjs` ran over
+both (nothing left behind), `playwright test --list` counts 442 tests in the
+six files, the same 221 × 2 projects as before, and the imports of each file
+are only the helpers it uses. `dealtOrder`, the one module-scope helper,
+went with its three tests to the carousel file.
 
 **Measured.** `daily.spec.js` is 5,004 lines and `index.spec.js` 4,710 — 57%
 of the browser suite between them. The suite was already split once, from one
