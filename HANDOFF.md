@@ -196,7 +196,10 @@ its reasoning).
   the same day. Items 5 (`map.js` at 4,603 lines, now `views/map/` with a
   `state.js` every module shares) and 6 (the two largest specs, each now three
   files by surface) were done the same day on the author's word — "Items 5 and
-  6". The plan is finished.
+  6"; Amendment 99 has the measurements). The plan is finished. CI for that
+  commit (`08555f8`, run of 2026-09-05 evening) was green: 880 passed, 0
+  flaky, accessibility 100 and FCP 1356–1372 ms on the four Lighthouse pages
+  — the entry bundle did not grow by anything the throttled gate could see.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
