@@ -1433,3 +1433,10 @@ nothing.** Four things in one day read as evidence and were not.
   of `document.body.innerText` with `javascript_tool` between "Дни памяти" and
   "Развернуть". Sretensky pages are UTF-8 with a BOM, not windows-1251;
   saint.gr's whole life is in the page behind its seventy-word fold.
+  A day page (`azbyka.ru/days/2026-09-28`) lists every saint of the day with
+  a `/days/sv-…` link, which is how a queue is resolved to pages; the
+  Nativity of the Theotokos day (21 September) lists none, and the Georgian
+  confessors were reached by guessing the transliteration. `browser_batch`
+  takes 25 actions at most, and a result past ~25k tokens is written to a
+  file instead of returned — `scratchpad/splitbatch.py` cut those into one
+  file per page (2026-09-06).
