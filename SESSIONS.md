@@ -9778,9 +9778,13 @@ complaint, and the last 31 of the day's lives — the new martyrs of 1918 and
 1937 — came through it, four pages a batch, the long ones (Goryachev, Kossov,
 Ignatius Lebedev, Boyarshinov's Sepych) sliced out of `innerText` by
 `javascript_tool` because `get_page_text` stops at nine thousand characters.
-**45 apologies remain, all of them azbyka.ru lives**; `grep -l "runs on
-past the point read here" saints/*/life.md` is the queue, in the same
-order it was worked. Two things were refused on the way: Alexius Orlov's
+**18 apologies remain, all of them azbyka.ru lives** (45 when the first
+push went up; the author asked for the queue to be continued while CI
+ran, and 27 more were read whole the same way before a stop was called
+for a restart); `grep -l "runs on past the point read here"
+saints/*/life.md` is the queue, in the same order it was worked. The
+first push's CI run (`1bf3f80`) was green: 880 passed, 0 flaky, FCP
+1356–1367 ms across the four Lighthouse pages. Two things were refused on the way: Alexius Orlov's
 own short life says he was shot on 27 August and the full one on 4
 September, and both are printed rather than one chosen; and John
 Boyarshinov's page is three-quarters the history of the Sepych rising, kept
