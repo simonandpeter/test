@@ -49,6 +49,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "Born 1 February 1870 at Simbukhovo in Moscow province, azbyka.ru."
     }
   },
   "text": {

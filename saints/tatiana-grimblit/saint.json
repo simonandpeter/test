@@ -49,6 +49,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "Born 14 December 1903 at Tomsk, azbyka.ru."
     }
   },
   "text": {

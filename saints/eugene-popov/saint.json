@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "Born 10 January 1879 at Khlevnoye in Voronezh province, azbyka.ru."
     }
   },
   "text": {

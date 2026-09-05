@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "Born 28 January 1887 at Babka in Voronezh province, azbyka.ru."
     }
   },
   "text": {

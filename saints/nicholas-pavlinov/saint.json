@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "Born 20 November 1881 at Bologoye in Pskov province, azbyka.ru."
     }
   },
   "text": {

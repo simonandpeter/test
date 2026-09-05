@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "Born 24 June 1880 at Vyshegorod in Moscow province, azbyka.ru."
     }
   },
   "text": {

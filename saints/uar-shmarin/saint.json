@@ -51,6 +51,13 @@
       "display": "1938",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмч. Уара, еп. Липецкого (1938)»."
+    },
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "Born 11 October 1880 at Novo-Sitovka in Tambov province, azbyka.ru."
     }
   },
   "text": {

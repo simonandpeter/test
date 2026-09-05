@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "Born 1885 at Oboyan in Kursk province, azbyka.ru."
     }
   },
   "text": {

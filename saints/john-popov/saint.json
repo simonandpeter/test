@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «…(1937)»."
+    },
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "1863",
+      "basis": "attested",
+      "note": "Born 20 June 1863 at Burdukovo in Vologda province, azbyka.ru."
     }
   },
   "text": {
