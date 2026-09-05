@@ -19,6 +19,13 @@
       "display": "1763",
       "basis": "attested",
       "note": "doxologia.ro: born in 1763. Two other sets of dates are in circulation and neither is followed here, because neither has been read against a source this project holds. The lithograph plate on his page carries its own caption — \"portarie al sfintei Mitropolii din Bucuresti (1780 sau 1785-1845)\" — which is uncertain in its own words; and byzantion.ro's article title gives 1750-1836 while reproducing that same plate uncaptioned, so the page disagrees with its own illustration. A caption is a claim rather than a citation, and a date this corpus cannot source is one it does not print: the birth stands at 1763 and no death is recorded. Noted 2026-08-28."
+    },
+    "death": {
+      "earliest": 1836,
+      "latest": 1836,
+      "display": "1836",
+      "basis": "attested",
+      "note": "Died 30 August 1836 at Viforâta, the life at doxologia.ro."
     }
   },
   "attestations": [
