@@ -1,5 +1,32 @@
 # John (Laba)
 
-John — Flavian Ivanovich Laba in the world — was born on 3 July 1863 in the village of Serebiya in the Gaisin district of Kyiv province. He went to Athos and became a monk, and later hieromonk, of the Russian monastery of St Panteleimon; in 1913 he was, it seems, taken off Athos with the Name-worshippers. After 1920 he moved to the farmstead of Solyony in the Labinsk district of the Armavir region of the Kuban, where he lived with the Athonite monk [Hilarion (Tsurikov)](/saints/hilarion-monk-martyr-1937), who came to him from Moscow; on 29 June 1924 the monks were arrested on the charge that they went against the Soviet power and held to the old, and sentenced to three years’ exile — the calendar’s life runs on past the point read here. Twice arrested and exiled with his spiritual brother for confessing the faith, after the exiles he secretly celebrated the services at Mirzoyan; arrested in 1937 on a charge of counter-revolutionary activity and leading a secret monastery, he was sentenced to the highest measure and shot on 4 September 1937. He was numbered among the saints in 2000, and the Russian calendar keeps him on 22 August (Julian).
+John — Flavian Ivanovich Laba in the world — was born on 3 July 1863 in
+the village of Serebiya in the Gaisin district of Kyiv province. He went
+to Athos and became a monk, and later hieromonk, of the Russian monastery
+of St Panteleimon; in 1913 he was, it seems, taken off Athos with the
+Name-worshippers. After 1920 he moved to the farmstead of Solyony in the
+Labinsk district of the Armavir region of the Kuban, where he lived with
+the Athonite monk [Hilarion (Tsurikov)](/saints/hilarion-monk-martyr-1937),
+who came to him from Moscow; on 29 June 1924 the monks were arrested on
+the charge that they went against the Soviet power and held to the old,
+and sentenced to three years’ exile in the Narym country. Freed from that
+first exile he settled with Fr Hilarion in the hills near the town of
+Frunze, at a bee-farm; on 2 February 1929 came the second arrest, on the
+same charge as the first, and a new sentence of three years’ exile, after
+which he went to Fr Hilarion, who had by then moved to the town of
+Mirzoyan. All that time he lived in a separate cell, where he celebrated
+the services regularly, visited by aged nuns, among them Fr Hilarion’s
+sisters Magdalene and Gabriela. On 24 June 1937, the day after Fr
+Hilarion’s arrest, he too was arrested and charged, like his spiritual
+brother, with taking part in a counter-revolutionary organisation and
+defeatist agitation — nor was the “leadership of a secret monastery”
+forgotten; the troika of the South Kazakhstan NKVD sentenced him to the
+highest penalty, and on 4 September 1937 — 22 August of the old style, the
+day the Russian calendar keeps him — he was shot. He was numbered among
+the saints in 2000; the Russian calendar keeps him also among the
+venerable fathers of the Russian monastery of St Panteleimon on Athos and
+in the synaxis of the saints of Central Asia.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-ioann-laba); read 23 August 2026.*
+*After the life printed by the Russian church calendar at azbyka.ru —
+[the entry](https://azbyka.ru/days/sv-ioann-laba), read 5 September 2026 — this
+time whole; the earlier reading had stopped partway.*
