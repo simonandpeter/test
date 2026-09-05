@@ -9778,17 +9778,28 @@ complaint, and the last 31 of the day's lives — the new martyrs of 1918 and
 1937 — came through it, four pages a batch, the long ones (Goryachev, Kossov,
 Ignatius Lebedev, Boyarshinov's Sepych) sliced out of `innerText` by
 `javascript_tool` because `get_page_text` stops at nine thousand characters.
-**18 apologies remain, all of them azbyka.ru lives** (45 when the first
-push went up; the author asked for the queue to be continued while CI
-ran, and 27 more were read whole the same way before a stop was called
-for a restart); `grep -l "runs on past the point read here"
-saints/*/life.md` is the queue, in the same order it was worked. The
-first push's CI run (`1bf3f80`) was green: 880 passed, 0 flaky, FCP
-1356–1367 ms across the four Lighthouse pages. Two things were refused on the way: Alexius Orlov's
+**No apologies remain** (45 when the first push went up; the author
+asked for the queue to be continued while CI ran, and 27 more were read
+whole the same way before a stop was called for a restart; after the
+restart the last 18 went the same road — eleven azbyka.ru lives, and seven
+that the count above had wrongly lumped in with them: four saint.gr
+entries (Andropelagia and Thecla, Thathuel and Bebaia, short enough that
+Python fetched them whole with no fold), Phoebe from saint.gr and
+Sretensky together, Hermogenes of Tobolsk from Sretensky, and Meletius of
+Stânișoara from doxologia.ro); `grep -l "runs on past the point read
+here" saints/*/life.md` is empty. The first push's CI run (`1bf3f80`) was
+green: 880 passed, 0 flaky, FCP 1356–1367 ms across the four Lighthouse
+pages; the second (`f411f6a`, run 33939346947) the same, 880 passed, 0
+flaky, FCP 1356–1384 ms. Four things were refused on the way: Alexius Orlov's
 own short life says he was shot on 27 August and the full one on 4
 September, and both are printed rather than one chosen; and John
 Boyarshinov's page is three-quarters the history of the Sepych rising, kept
-whole because the shooting order quotes it. The unit suite pins the source
+whole because the shooting order quotes it; Vladimir Dmitrievsky's page
+has him teaching from 1 October 1884, eight years old by its own birth
+date, and the date is printed with that remark rather than silently
+mended; and Victor Ellansky's short life sentences him on 18 December
+1936 and delivers him to the Karaganda camp on 15 April 1936, where the
+full life says December 1935, and both are printed. The unit suite pins the source
 line's shape (`tests/lives.test.mjs`), which caught two rewrites that put
 the date on the line after "read" and one that wrote "read 23 August and
 5 September 2026"; the regex wants one date per line, and the phrasing
