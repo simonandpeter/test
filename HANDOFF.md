@@ -231,18 +231,41 @@ its reasoning).
   measures it and nothing fails on it; it is recorded here so a future
   first-paint problem on this route has a suspect. LCP fell 4,017 → 3,958.
 
-  **The next sitting's task** (author, 2026-09-07) is the saints' hymns and
-  their cross-links: troparion and kontakion in English for John the
-  Long-Suffering, Moses the Hungarian, Anthony of the Kyiv Caves and
-  Theodosius, then across the corpus; every saint named in a life hyperlinked
-  and carried into that saint's `related`; and Continue reading at the foot of
-  every saint page on a phone. **The English half runs straight into Amendment
-  2 and the schema's own `english` contract** — a published rendering of the
-  same text, from a source this site may copy, never a translation made here —
-  and 39 of the 242 hymn objects have one today, all of them troparia, all
-  from Orloff 1899 and Hapgood 1906. That is a question for the author before
-  the work rather than after it; `docs/HYMN-PLAN.md` sets out what is reachable
-  without reversing anything and what is not.
+  **Then the hymns and cross-links** (author, 2026-09-07; Amendment 103), of
+  which three of the four parts are done.
+
+  **Amendment 2 is reversed for hymns and only for hymns.** The instruction was
+  troparion and kontakion in English for every saint; the schema's own
+  `english` contract allowed only a published rendering of the same text from a
+  source this site may copy, and a hymn belongs to a church — so Orloff 1899
+  and Hapgood 1906, both of the Slavonic tradition, could never reach the 149
+  Greek and 117 Romanian hymns at all. Three ways were put to the author and
+  the answer was to reverse it. `english` is now exactly one of two things and
+  says which: `source`, a citation, or `rendered: "site"`, this site's own —
+  the schema refuses both and refuses neither, and the page prints **"Rendered
+  for this site"** where a book's name would go. **That condition is the whole
+  worth of the reversal; do not add a rendering without it.** Nothing else in
+  the corpus is translated and none of this licenses it.
+
+  Done: all four named saints (Anthony and Theodosius of the Kyiv Caves share
+  one office of four hymns; John the Long-Suffering and Moses the Hungarian had
+  no hymn in any language, so five were read from azbyka first and then
+  rendered); `related` derived from the audited cross-links, 62 rows over 59
+  folders, with 23 held back as a church, a lavra, a feast day or a battleship
+  named for a saint the subject never met (`scripts/related-from-links.mjs`,
+  which proposes); and Continue reading at the foot of a saint page on a phone.
+
+  **Left: 383 hymn objects with no English**, and `docs/HYMN-PLAN.md`'s first
+  item is unchanged by the reversal and still the cheapest — **no kontakion in
+  the corpus has ever been matched against Orloff's commons**, and he prints one
+  in every general service. A citation beats a rendering wherever one exists, so
+  run that pass before translating anything else. Two things left for the
+  author, both noted in the amendment: an English hymn still prints its tone as
+  "глас 4", quoted from the source; and `related` is one-directional on purpose.
+
+  CI: `d434250` (the reversal) green. `b3d4dbc` (the shelf) and `eae87ce` (the
+  two Caves saints) were pushed together and their runs are in flight at the
+  time of writing — **read them before the next thing**.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
