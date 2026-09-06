@@ -46,5 +46,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "Born 13 February 1889 on Patmos, saint.gr."
+    },
+    "death": {
+      "earliest": 1970,
+      "latest": 1970,
+      "display": "1970",
+      "basis": "attested",
+      "note": "Died 16 April 1970 on Patmos, saint.gr."
+    }
   }
 }

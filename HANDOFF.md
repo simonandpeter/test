@@ -416,7 +416,7 @@ drifted from what was written here on 2026-09-01**:
 | dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
 | dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
 | `undated` | 148 | was 155 on 2026-09-01 and 150 on 2026-09-05; two relics-day entries (Nicholas of Alma-Ata, Alexander Urodov) got both years from their azbyka lives on 2026-09-06 |
-| `no-death` | 7 | was 23 until 2026-09-05: sixteen (Joasaph of Belgorod, Mitrophan of Voronezh, Ilarion Felea, Daniel Katounakiotis …) had the year in the life they already cited and it is recorded now. The seven left — Sophronius of Akhtala, Philonides of Kourion, Simeon of Pangarati, Theophanes the Confessor (9 September), John the Stranger of Siva, Kassiani, Kiaran — have no year in any source read; a new source is the only way |
+| `no-death` | 6 | was 23 until 2026-09-05: sixteen (Joasaph of Belgorod, Mitrophan of Voronezh, Ilarion Felea, Daniel Katounakiotis …) had the year in the life they already cited and it is recorded now, and Kiaran's came from the OCA life on 2026-09-06. The six left — Sophronius of Akhtala, Philonides of Kourion, Simeon of Pangarati, Theophanes the Confessor (9 September), John the Stranger of Siva, Kassiani — have no year in any source read; a new source is the only way |
 | `no-birth` | 457 | was 490 on 2026-09-05; the thirty-three came from the azbyka lives of the new martyrs read on 2026-09-06. The rest is mostly irreducible |
 | place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |
 

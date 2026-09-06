@@ -10002,3 +10002,20 @@ would have caught a heading that followed the slug.
 
 **CI.** None of this sitting had been pushed at the time of writing; the
 push and its run follow this amendment, and HANDOFF.md carries the verdict.
+
+**Postscript, later on 2026-09-06.** Seven of the nine are read after all,
+from three sources this corpus had not used: the Orthodox Church in
+America's life of Ciaran of Clonmacnoise (oca.org keeps him on 9 September
+with the Greeks and the life gives his death at thirty-three, so `no-death`
+is 6); Alban Butler's *Lives of the Saints* of 1866, volume IX, on Bartleby
+— Albeus of Emly, Edith of Wilton, Ninian of Whithorn, each a page with its
+own sources named (Ussher, Capgrave, Malmesbury, Bede); and saint.gr's full
+life of Amphilochius Makris of Patmos, with the archimandrite Paul
+Nikitaras's account of his death and his last counsels, which gives both
+years. Isaac and Martin of 22 September gain saint.gr's one fact, that they
+died by the sword, and their couplets. Pimen of 28 September and Zer-Jacob
+of Abyssinia are still one line each: doxologia's page for Pimen is the
+site's chrome and nothing under it, and the Prologue's 26 August has the
+single sentence already recorded. The Butler entries are the first lives in
+the corpus taken from a printed Western hagiographer rather than a
+calendar site, and the source line says so.
