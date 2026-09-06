@@ -109,5 +109,39 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Терпе́ния столп вои́стину непоколеби́мый,/ и забра́ло от вра́жиих стреля́ний необори́мо,/ равноа́нгельне и многострада́льне о́тче наш Иоа́нне,/ иму́ще тя, мы, недосто́йнии, мо́лимся,/ припа́дающе к честны́м твои́м моще́м те́пле,// изба́ви нас душетле́нных страсте́й плотски́х и спаси́ твои́ми моли́твами.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Иоанн Печерский, Многострадальный», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-ioann-pecherskij-mnogostradalnyj",
+        "year": 2026
+      },
+      "english": {
+        "text": "A pillar of patience truly unshaken, and a rampart against the arrows of the enemy that cannot be stormed, O our father John, equal to the angels and long-suffering: having thee, we the unworthy pray, falling down fervently before thy precious relics, deliver us from the fleshly passions that corrupt the soul, and save us by thy prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Сто́лп целому́дрия, вра́жиими боре́ньми непобеди́мь сый,/ а́ки столп, многострада́льное водруже́нно оста́вил еси́ нам те́ло твое́,/ всече́стне Иоа́нне,/ ему́же в не́мощех душе́вных и теле́сных покланя́ющеся,/ мо́лим тя, преподо́бне:// моли́ Христа́ Бо́га непреста́нно о всех нас.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Иоанн Печерский, Многострадальный», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-ioann-pecherskij-mnogostradalnyj",
+        "year": 2026
+      },
+      "english": {
+        "text": "A pillar of chastity unconquered by the assaults of the enemy, thou hast left us thy long-suffering body set fast like a pillar, O all-honoured John; and bowing before it in the infirmities of our souls and bodies, we pray thee, O venerable one: entreat Christ God unceasingly for us all.",
+        "rendered": "site"
+      }
+    }
   ]
 }

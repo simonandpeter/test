@@ -135,5 +135,56 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Друга́го тя Ио́сифа,/ вели́кий чистоты́ и целому́дрия рачи́телю,/ всече́стне и равноа́нгельне Моисе́е,/ свяще́нными пе́сньми восхваля́юще, гре́шнии,/ мо́лим ти ся приле́жно:/ моли́ Христа́ Бо́га,/ я́ко да исцели́т вся на́ша стра́сти// и пода́ст ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Моисей Угрин (венгр), Печерский», тропари и кондак",
+        "url": "https://azbyka.ru/days/sv-moisej-ugrin-vengr",
+        "year": 2026
+      },
+      "english": {
+        "text": "Praising thee with sacred hymns as a second Joseph, O great lover of purity and chastity, all-honoured Moses, equal to the angels, we sinners pray thee earnestly: entreat Christ God to heal all our passions and to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "model": "Ин тропарь",
+      "text": "Труды́ и по́двиги со страстьми́ по чистоте́ твое́й ви́дя, свя́те,/ кто не удиви́тся?/ Глад бо, темни́цу и ра́ны прие́мля,/ не порабо́тился еси́ сласте́м ля́ховицы,/ но, я́ко царь, страстьми́ облада́яй,/ ны́не и тогда́ возпросла́вился еси́ от Всеви́дящаго челове́ческая сердца́,/ от Него́же во искуше́ниих всем посо́бствовати благода́ть прие́м,/ посо́бствуй и нам, твою́ па́мять чту́щим,// Моисе́е преподо́бне.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Моисей Угрин (венгр), Печерский», тропари и кондак",
+        "url": "https://azbyka.ru/days/sv-moisej-ugrin-vengr",
+        "year": 2026
+      },
+      "english": {
+        "text": "Who shall not marvel, O holy one, beholding thy labours and thy struggles against the passions for the sake of thy purity? For taking upon thee hunger, imprisonment and wounds, thou wast not made a slave to the Polish woman's pleasures, but reigning like a king over the passions thou wast glorified, then and now, by Him who sees the hearts of men; and having received from Him the grace to help all in their temptations, help us also who honour thy memory, O venerable Moses.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "В Вы́шних еди́наго Бо́га ища́/ земна́я вся презре́л еси́,/ о телеси́ свое́м неради́в,/ на му́ки му́жески себе́ вда́л еси́,/ глад, жа́жду, у́зы, в темни́це затворя́емь, до́блественно претерпе́л еси́,/ бие́ния, кро́ве излия́ние и удо́в отре́зание,/ чи́стаго ра́ди де́вства твоего́,/ му́жески поне́сл еси́./ И ны́не с де́вственными ли́ки предстоя́ Пресвяте́й Тро́ице,/ от всех искуше́ний моли́ изба́витися вопию́щим ти:// ра́дуйся, Моисе́е, о́тче блаже́ннейший.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Моисей Угрин (венгр), Печерский», тропари и кондак",
+        "url": "https://azbyka.ru/days/sv-moisej-ugrin-vengr",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking in the heights the one God, thou didst despise all earthly things and hadst no care for thy body, giving thyself up manfully to torments; hunger, thirst, bonds and confinement in prison thou didst valiantly endure, and beatings, the shedding of thy blood and the cutting of thy members thou didst manfully bear for the sake of thy pure virginity. And now, standing before the Most Holy Trinity among the choirs of virgins, pray that those who cry to thee may be delivered from every temptation: Rejoice, O Moses, most blessed father.",
+        "rendered": "site"
+      }
+    }
   ]
 }
