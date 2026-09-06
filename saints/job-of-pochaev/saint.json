@@ -19,6 +19,13 @@
       "display": "1651",
       "basis": "attested",
       "note": "The Sretensky calendar’s life: died 28 October 1651."
+    },
+    "birth": {
+      "earliest": 1551,
+      "latest": 1551,
+      "display": "c. 1551",
+      "basis": "traditional",
+      "note": "Born about 1551 in Pokuttia, azbyka.ru."
     }
   },
   "attestations": [

@@ -20,6 +20,13 @@
       "display": "1303",
       "basis": "attested",
       "note": "The Sretensky calendar’s life: died 4 March 1303."
+    },
+    "birth": {
+      "earliest": 1261,
+      "latest": 1261,
+      "display": "1261",
+      "basis": "attested",
+      "note": "Born 1261 at Vladimir, azbyka.ru."
     }
   },
   "attestations": [

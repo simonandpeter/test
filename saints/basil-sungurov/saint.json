@@ -50,6 +50,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Григория, Василия пресвитеров, прмч. Льва (1937)”"
+    },
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "Born 20 March 1876 at Spasskoye in Moscow province, azbyka.ru."
     }
   },
   "text": {

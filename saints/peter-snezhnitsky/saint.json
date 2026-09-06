@@ -50,6 +50,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмчч. Петра и Михаила пресвитеров (1918)”"
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "Born 1880, or by other records 1879, azbyka.ru."
     }
   },
   "text": {

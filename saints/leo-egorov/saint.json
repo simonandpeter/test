@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Григория, Василия пресвитеров, прмч. Льва (1937)”"
+    },
+    "birth": {
+      "earliest": 1898,
+      "latest": 1898,
+      "display": "1898",
+      "basis": "attested",
+      "note": "Born 1898 in Novgorod province, azbyka.ru."
     }
   },
   "text": {
