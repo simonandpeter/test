@@ -203,8 +203,10 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // same night: Anthimos of Chios (1869–1960) had stood for a relics day only.
   // 138 since 3fd9a64: a sweep of the no-birth list found seven lives (Joseph
   // the Hesychast, Aristokles, John of Svyatogorsk …) that stated both years
-  // in their own text with neither in saint.json.
-  await expect(page.locator('.tray')).toContainText('138 undated');
+  // in their own text with neither in saint.json. 126 since the death sweep
+  // that followed it (the Yaroslavl princes, Jerusalem of Beroea and her sons,
+  // Kosmas the hermit, Rufus, the Egyptian martyrs of 305–311 …).
+  await expect(page.locator('.tray')).toContainText('126 undated');
 });
 
 

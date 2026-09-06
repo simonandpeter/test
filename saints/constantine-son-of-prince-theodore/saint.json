@@ -51,5 +51,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1299,
+      "latest": 1321,
+      "display": "before 1321",
+      "basis": "traditional",
+      "note": "Died, it seems, before his brother David, who died in 1321; their father died in 1299, as the entry’s own life says; recorded 2026-09-06."
+    }
+  }
 }

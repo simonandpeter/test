@@ -44,5 +44,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 276,
+      "latest": 282,
+      "display": "276–282",
+      "basis": "traditional",
+      "note": "Beheaded between the years 276 and 282, the sons before their mother, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }

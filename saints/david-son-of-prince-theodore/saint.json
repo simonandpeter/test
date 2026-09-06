@@ -51,5 +51,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1321,
+      "latest": 1321,
+      "display": "1321",
+      "basis": "attested",
+      "note": "Died in 1321, as the entry’s own life says; recorded 2026-09-06."
+    }
+  }
 }

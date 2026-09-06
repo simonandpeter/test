@@ -52,6 +52,13 @@
       "latest": 1321,
       "display": "under King Milutin",
       "basis": "traditional"
+    },
+    "death": {
+      "earliest": 1309,
+      "latest": 1309,
+      "display": "1309",
+      "basis": "attested",
+      "note": "Reposed in peace on 16 August 1309, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

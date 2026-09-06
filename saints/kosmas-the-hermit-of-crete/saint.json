@@ -53,6 +53,13 @@
       "latest": 700,
       "display": "7th century",
       "basis": "traditional"
+    },
+    "death": {
+      "earliest": 658,
+      "latest": 658,
+      "display": "658",
+      "basis": "traditional",
+      "note": "Fell asleep on 9 September 658, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

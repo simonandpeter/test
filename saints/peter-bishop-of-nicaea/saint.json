@@ -59,5 +59,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 823,
+      "latest": 850,
+      "display": "after 823",
+      "basis": "traditional",
+      "note": "Died no earlier than 823 (the latest bound is a generation, as for Luke of Bathys Ryax’s “after 975”), as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }
