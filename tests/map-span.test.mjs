@@ -47,11 +47,12 @@ const UNDATED = new Set([
  * And the saints who really do read as alive for more than a century, each
  * because the corpus is right about them rather than in spite of it. Two
  * lived that long — the tradition is emphatic that Paul of Thebes reached 113
- * and Anthony 105 — and the third is a group whose death the Russian calendar
- * prints as “III-IV”, a two-hundred-year window that is the source's own.
+ * and Anthony 105. A third entry, the 3,628 martyrs of Nicomedia, stood here
+ * at 200 from 2026-09-02 to 2026-09-06 because the Russian calendar prints
+ * their death as “III-IV”; azbyka.ru's own life places them under Maximian,
+ * and the interval is 284–311 now, so they read as any other group does.
  */
 const LONG_LIVED = new Map([
-  ['martyrs-3628-of-nicomedia', 200],
   ['paul-of-thebes', 123],
   ['anthony-the-great', 107],
 ]);
