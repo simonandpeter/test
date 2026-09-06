@@ -24,6 +24,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru."
+    },
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "Born 1875, azbyka.ru."
     }
   },
   "attestations": [

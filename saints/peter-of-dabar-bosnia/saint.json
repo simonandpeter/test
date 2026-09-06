@@ -24,6 +24,13 @@
       "display": "1941",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Петра, митр. Дабро-Боснийского (1941)”."
+    },
+    "birth": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "Born 24 June 1866 at Grahovo in Herzegovina, azbyka.ru."
     }
   },
   "attestations": [
