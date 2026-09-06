@@ -199,8 +199,9 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // year in the calendar line they stood on, and their lives (azbyka.ru,
   // saint.gr) supplied both.
   // 145 since dc030ec (2026-09-06 evening): Symeon the Lesbian stylite and Pope
-  // Martin got their years from saint.gr's whole pages.
-  await expect(page.locator('.tray')).toContainText('145 undated');
+  // Martin got their years from saint.gr's whole pages. 144 since b6f2dd8, the
+  // same night: Anthimos of Chios (1869–1960) had stood for a relics day only.
+  await expect(page.locator('.tray')).toContainText('144 undated');
 });
 
 
