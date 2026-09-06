@@ -17,11 +17,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 801,
-      "latest": 1000,
-      "display": "9th–10th century",
+      "earliest": 875,
+      "latest": 925,
+      "display": "c. 900",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: “Прп. Фантина чудотворца, в Солуни (IX-X)”; saint.gr gives 974."
+      "note": "Died in great old age at the end of the ninth or the beginning of the tenth century, as the Sretensky calendar and azbyka.ru print; narrowed from “9th–10th century” on 2026-09-06."
     }
   },
   "attestations": [
