@@ -10202,3 +10202,20 @@ sitting: the disciples of Maximus, Nicholas the Sicilian, the Greek
 synaxarion's emperors and its "by the sword" martyrs have no page under any
 name azbyka indexes, and 204 lives under 120 words remain, 111 of them
 saint.gr's own one-liners.
+
+*Later the same night, after a seven-hour pause.* The app's auto-continue
+did not fire after a usage-limit pause; the author: "you know that you can
+send messages with task scheduler though." A session cron now re-enqueues
+a resume prompt every 23 minutes (`CronCreate`, session-only, expires in 7
+days), and the lesson is in memory. `1d058d3` was green (880 passed, 13.4
+min). Then the date audit's `no-birth` list, read for saints dead after
+1700: 103 of them, and 58 of their lives said "born in YEAR" in the first
+sentence with nothing in the `saint.json` — a script read the phrase back
+into `dates.birth` with the phrase as the note (three as ranges, the
+Belogorsk synaxis skipped), and four more came from the lives' own
+arithmetic; `no-birth` is 386, from 447. Found on the way: Nectarios of
+Aegina is two folders — `nectarios-of-aegina`, the Russian calendar's 9
+November, and `nektarios-of-aegina`, the Greek and Romanian 3 September for
+the translation of his relics — with different lives and, until tonight,
+different dates. They are left as two, cross-noted; merging slugs is a
+change to links and tests for another sitting.
