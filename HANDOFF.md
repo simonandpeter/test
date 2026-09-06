@@ -215,7 +215,11 @@ its reasoning).
   `stated` finding went up as `31ddd92`, which was red on three content tests
   in both projects (6 of 880): the 240–460 range counts, the era test's
   "Reposed 1937" (a lifespan now) and the Undated card on 25 August (dated
-  now). `22a8450` repairs the three tests; its verdict goes here.
+  now). `22a8450` repairs the three tests and was green: 879 passed in 16.3 min,
+  accessibility 100 and FCP 1358–1371 ms — so the latest green run at the
+  time of writing is `22a8450` (2026-09-06, 23:20). The next sitting's task
+  is the All Saints carousel (image loading and icon frequency), handed to a
+  fresh chat with a written brief.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
