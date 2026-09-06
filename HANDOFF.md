@@ -212,7 +212,10 @@ its reasoning).
   `89436ff` after it was green too (880 passed, 16.4 min, the same Lighthouse
   figures), so the latest green run at the time of writing is `89436ff`
   (2026-09-06, late evening); the night's date sweep and the audit's
-  `stated` finding follow it and their run's verdict goes here.
+  `stated` finding went up as `31ddd92`, which was red on three content tests
+  in both projects (6 of 880): the 240–460 range counts, the era test's
+  "Reposed 1937" (a lifespan now) and the Undated card on 25 August (dated
+  now). `22a8450` repairs the three tests; its verdict goes here.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 

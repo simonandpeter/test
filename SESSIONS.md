@@ -10250,3 +10250,17 @@ one of them names the saint whose page it opens — the comparisons
 here asserts it") link to the other saint's own entry, which is right, not
 to a claim that two people are one. The two Nektarios folders now name and
 link each other.
+
+*CI on `31ddd92` was red, 6 of 880, all three of them the corpus moving
+under a test that counts it* — the tray count's own kind, met three more
+times in one push: `Overlaps and Entirely within` (240–460 is 219/205 now,
+the Beroea family and the Egyptian martyrs inside it), the era test on 25
+August (its 1937 martyrs read "1878 – 1937" now, not "Reposed 1937"; the
+matcher takes any four-figure 1937 and still refuses "1937 AD"), and the
+Undated card sought on the same day (its two undated saints were the Perm
+priests, dated tonight; the test looks at 24 August, where Susanna's six
+companions are). A tooling trap on the way: a Python heredoc through the
+Bash tool loses one level of backslashes, so a `` written for a regex
+arrives as a backspace character — it broke `date-audit.mjs`'s new regexes
+once and the era test's matcher once, both invisible in the printed source.
+Regexes go in files written by the Write tool, or without backslashes.
