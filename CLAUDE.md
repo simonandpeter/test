@@ -1440,3 +1440,11 @@ nothing.** Four things in one day read as evidence and were not.
   takes 25 actions at most, and a result past ~25k tokens is written to a
   file instead of returned — `scratchpad/splitbatch.py` cut those into one
   file per page (2026-09-06).
+  **A saint the day page does not list** (a Greek, Serbian or Romanian saint
+  outside the Russian menologion, or one whose civil day is unknown) **is
+  found through azbyka's own A–Z index**: `azbyka.ru/days/menology/A`
+  (Latin letters — `I`, `S`, `Je` …) lists names, and
+  `/days/menology/name/<name>` (`irinej`, `alban`, `ksanfippa`, `akilina`)
+  lists every saint of that name with the `/days/sv-…` link. Guessing a
+  saint page's slug was a one-in-ten shot; the name page is not
+  (2026-09-06, evening).

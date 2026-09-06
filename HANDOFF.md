@@ -204,6 +204,10 @@ its reasoning).
   afternoon, 880 passed in 16.3 min, the same Lighthouse figures); the
   commit before it, `19e7562`, was red on a content-dependent range test,
   which Amendment 100's postscript records.
+  `8914cc3` (2026-09-06 evening) was red, 3 of 880: the undated count
+  again (147 pinned, 145 in the corpus) and a read-then-click race in the
+  map's zoom-out loop, both fixed in the commit that follows (Amendment
+  101's postscript); its own run's verdict goes here when it is in.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
@@ -420,8 +424,8 @@ drifted from what was written here on 2026-09-01**:
 | dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
 | dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
 | `undated` | 145 | was 155 on 2026-09-01, 150 on 2026-09-05 and 148 on the morning of 2026-09-06; two relics-day entries (Nicholas of Alma-Ata, Alexander Urodov) got both years from their azbyka lives, and Amphilochius of Patmos, Symeon the Lesbian stylite and Pope Martin theirs from saint.gr's whole pages, on 2026-09-06 |
-| `no-death` | 6 | was 23 until 2026-09-05: sixteen (Joasaph of Belgorod, Mitrophan of Voronezh, Ilarion Felea, Daniel Katounakiotis …) had the year in the life they already cited and it is recorded now, and Kiaran's came from the OCA life on 2026-09-06. The six left — Sophronius of Akhtala, Philonides of Kourion, Simeon of Pangarati, Theophanes the Confessor (9 September), John the Stranger of Siva, Kassiani — have no year in any source read; a new source is the only way |
-| `no-birth` | 448 | was 490 on 2026-09-05 and 457 on the morning of 2026-09-06; the thirty-three came from the azbyka lives of the new martyrs, and the next nine from the same day's later readings — Job of Pochaev, Daniel of Moscow, the new martyrs of 20 September, Gorazd, Raphael of Šišatovac and the two Peters of 8 and 17 September among them. The rest is mostly irreducible |
+| `no-death` | 5 | was 23 until 2026-09-05: sixteen (Joasaph of Belgorod, Mitrophan of Voronezh, Ilarion Felea, Daniel Katounakiotis …) had the year in the life they already cited and it is recorded now, and Kiaran's came from the OCA life on 2026-09-06. The six left — Sophronius of Akhtala, Philonides of Kourion, Simeon of Pangarati, Theophanes the Confessor (9 September), John the Stranger of Siva, Kassiani — had no year in any source read; Theophanes's came from azbyka on the evening of 2026-09-06 (about 300, against saint.gr's birth in 283), so five are left |
+| `no-birth` | 447 | was 490 on 2026-09-05 and 457 on the morning of 2026-09-06; the thirty-three came from the azbyka lives of the new martyrs, and the next nine from the same day's later readings — Job of Pochaev, Daniel of Moscow, the new martyrs of 20 September, Gorazd, Raphael of Šišatovac and the two Peters of 8 and 17 September among them. The rest is mostly irreducible |
 | place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |
 
 **Two findings the audits turned up that are the author's to settle.**

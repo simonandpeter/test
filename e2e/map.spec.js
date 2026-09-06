@@ -43,6 +43,23 @@ const MAP = '/map';
  * currently is, not from where the last press aimed, so every loop of
  * repeated zoom presses in this file needs this between presses.
  */
+/*
+ * Read the button's state and press it in ONE step. The loops below used to
+ * ask `isDisabled()` and then `click()` — two round trips — and on CI (run
+ * 34003203368, 2026-09-06 evening, twice in a row, green locally 3 of 3) the
+ * eased flight landed on the floor between them: the read said enabled, the
+ * chrome disabled the button as the flight settled, and Playwright's own
+ * actionability wait for `enabled` then sat on the click until the test's
+ * 30 s ran out. A DOM click inside one `evaluate` cannot straddle that gap,
+ * and a disabled button is simply not pressed.
+ */
+const pressIfEnabled = (page, selector) =>
+  page.locator(selector).evaluate((button) => {
+    if (button.disabled) return false;
+    button.click();
+    return true;
+  });
+
 const settledZoom = async (page) => {
   const level = page.locator('[data-zoom-level]');
   let last = null;
@@ -2950,8 +2967,8 @@ test('the map opens on the coarse coastline and fetches the fine one only past i
    * is, not from where the last press aimed, so a tight loop of presses with
    * nothing between them barely moves the scale at all.
    */
-  for (let i = 0; i < 8 && !(await page.locator('[data-zoom="in"]').isDisabled()); i += 1) {
-    await page.locator('[data-zoom="in"]').click();
+  for (let i = 0; i < 8; i += 1) {
+    if (!(await pressIfEnabled(page, '[data-zoom="in"]'))) break;
     await settledZoom(page);
   }
   await expect(canvas).toHaveAttribute('data-detail', 'fine', { timeout: 10000 });
@@ -2984,8 +3001,8 @@ test('the map opens on the coarse coastline and fetches the fine one only past i
    * closed the gap, not the margin, which is exactly why it still holds now
    * that mobile is back at the number that first exposed it.
    */
-  for (let i = 0; i < 12 && !(await page.locator('[data-zoom="out"]').isDisabled()); i += 1) {
-    await page.locator('[data-zoom="out"]').click();
+  for (let i = 0; i < 12; i += 1) {
+    if (!(await pressIfEnabled(page, '[data-zoom="out"]'))) break;
     await settledZoom(page);
   }
   await expect(canvas).toHaveAttribute('data-detail', 'coarse');

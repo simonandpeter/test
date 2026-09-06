@@ -10131,3 +10131,55 @@ Amendment 100 records, and its tray count is 147.
 16.3 minutes, the four Lighthouse pages at accessibility 100 and FCP
 1356–1372 ms); the five commits after it are pushed with this amendment,
 and HANDOFF.md carries the verdict of their run.
+
+**Postscript, the same evening.** The sitting went on past the amendment,
+and two things in it are worth more than the twenty-five further lives.
+
+*The lives.* With the Sretensky-sourced queue closed, the next cut was
+every life under about 120 words whatever its source — 178 of them, mostly
+saint.gr's own one-line notices of martyrs "by the sword", which no site
+can lengthen. The rest were tried against azbyka three ways. Where the
+saint has a Russian feast, the civil day page found the page as before
+(Dionysius Exiguus, whose life is the 1903 theological encyclopaedia's
+article on his paschal tables and his era — born about 470, died between
+537 and 556; Euodus and Onesiphorus of the seventy; Symeon of
+Thessalonica; Julian of Ancyra's Russian passion beside the Greek; Peter of
+Atroa, Seleucus and Straton a sentence each; Paul the Obedient and
+Cheremon, already whole). Where the saint is not in the Russian menologion
+at all, azbyka still often has a page, and the day page will never list it:
+guessing the slug found Aristides of Athens (and the recovery of his
+Apology, 1878 to 1889) and Joachim of Osogovo (died about 1115, by the
+eclipse he named from beyond the grave) and missed nine others, until the
+site's own A–Z index turned up — `/days/menology/name/<name>` lists every
+saint of a name with the link, and it found Irenaeus of Sirmium, Alban,
+Xanthippe and Polyxena, Epiharia, Gideon, Stamatios, Aquilina of Zagliveri
+(her relics found at Ossa on 22 May 2012), Hierotheus of Iviron, Hypatius
+and Andrew under Leo the Isaurian, and drew blanks for Seridos, Tithoes,
+Castor, Hira, John II of Kyiv and the two Eliases of Calabria, whose azbyka
+pages are a heading and nothing under it. CLAUDE.md's azbyka bullet now
+says so. Butler gave Aidan of Lindisfarne (volume VIII) and, with Bede as
+azbyka prints him, Alban (volume VI). Two of the corpus's oldest hand-written
+lives, Paul of Thebes and John the Long-Suffering, had never carried a
+source line; they carry azbyka's now, keep their original judgement as a
+closing paragraph, and left `tests/lives.test.mjs`'s before-the-rule list.
+Theophanes the confessor of 9 September has a death year at last, about 300
+from azbyka — which cannot sit with saint.gr's birth in 283, one of the two
+having read the persecution under Carus as a birth year; the entry says so
+and `no-death` is 5. The Martha of 4 July is the other Martha (Amendment
+101 above).
+
+*CI on `8914cc3` was red, 3 failed of 880, and neither cause was the
+content the push carried.* Two were the undated count again: `a range that
+matches nobody` pinned 147, and the corpus had reached 145 on `dc030ec`
+(Symeon the Lesbian stylite and Pope Martin dated from saint.gr) — the
+count is pinned at 145 now, with the line that says why. The third was
+`the map opens on the coarse coastline …` at desktop, both attempts: its
+zoom-out loop asked the button `isDisabled()` and then `click()`ed it, two
+round trips, and under CI load the eased flight landed on the floor in
+between — the read said enabled, the chrome disabled the button as the
+flight settled, and Playwright's actionability wait for *enabled* sat on
+the click until the test's 30 s ran out. Green locally 3 of 3 at desktop,
+which is the signature of a race and not a regression. Both loops now read
+and press in one `evaluate` (`pressIfEnabled`), which cannot straddle the
+gap and does not press a disabled button at all. The fix and the count go
+up with this postscript; HANDOFF.md carries the verdict of that run.

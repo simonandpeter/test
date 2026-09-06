@@ -198,7 +198,9 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // Nicholas of Alma-Ata, Alexander Urodov, Amphilochius of Patmos — had no
   // year in the calendar line they stood on, and their lives (azbyka.ru,
   // saint.gr) supplied both.
-  await expect(page.locator('.tray')).toContainText('147 undated');
+  // 145 since dc030ec (2026-09-06 evening): Symeon the Lesbian stylite and Pope
+  // Martin got their years from saint.gr's whole pages.
+  await expect(page.locator('.tray')).toContainText('145 undated');
 });
 
 
