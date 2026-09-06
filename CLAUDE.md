@@ -1399,7 +1399,11 @@ nothing.** Four things in one day read as evidence and were not.
   dates badly, worst first: `open` (an interval null at one end, which reaches
   to infinity and which `lifeBounds` has to paper over), `wide`, `loose-basis`
   (`attested` and a century wide — one of the two is wrong), `undated`,
-  `no-death`, `no-birth`. **Reports rather than gates**, on purpose: a missing
+  `no-death`, `no-birth`, and since 2026-09-06 `stated` — a year the saint's
+  own life.md says in words ("born in 1868", "shot on 25 August 1918") that
+  the saint.json never recorded; a night's sweep of that gap moved `undated`
+  from 144 to 126 and `no-birth` from 447 to 394. Read its rows: a relic's
+  finding or a typikon's date can land there beside a real year. **Reports rather than gates**, on purpose: a missing
   birth year is the ordinary condition of a fourth-century martyr, and a build
   that refused one would push authors into inventing years.
 - `node scripts/place-candidates.mjs [--place X] [--limit N]` — unlocated

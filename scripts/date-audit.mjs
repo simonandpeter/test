@@ -37,6 +37,14 @@
  *              across rather than that it is unknown.
  *   `no-birth` a death or floruit but no birth. The commonest state in the
  *              corpus by a long way and mostly irreducible.
+ *   `stated`   a birth or death the saint's own life.md states in words
+ *              ("born in 1868", "was shot on 25 August 1918") while the
+ *              saint.json has no interval for it. The cheapest date there
+ *              is, and the one this audit never looked for until
+ *              2026-09-06, when a sweep found seventy-odd of them (Amendment
+ *              101's postscript). A list to read: the regex takes a year in
+ *              any death-verb sentence, so a relic's finding or a typikon's
+ *              date can land here beside a real death year.
  */
 
 import { readdirSync, readFileSync } from 'node:fs';
@@ -55,11 +63,33 @@ const interval = (raw) => ({
   basis: raw?.basis ?? 'unknown',
 });
 const isUndated = (iv) => iv.earliest === null && iv.latest === null;
+
+/** The life's own words, for `stated`: the body between the heading and the
+ *  closing source line, one string. */
+const lifeBody = (dir) => {
+  try {
+    const parts = readFileSync(path.join(dir, 'life.md'), 'utf8').trim().split(/\n\n+/);
+    return parts.slice(1, -1).join(' ').replace(/\s+/g, ' ');
+  } catch {
+    return '';
+  }
+};
+const BORN = /\bborn\b[^.;]{0,90}?\b(?:about |c\. |around )?([1-9]\d{2,3})\b/;
+const DEATH_VERB = /\b(died|death|shot|killed|reposed|fell asleep|beheaded|executed|martyred|hanged|drowned|burned)\b/i;
+const YEAR = /\b(?:1[0-9]\d\d|[1-9]\d\d)\b/;
+const statedDeath = (body) => {
+  for (const sentence of body.split(/(?<=[.;])\s+/)) {
+    if (!DEATH_VERB.test(sentence)) continue;
+    const year = sentence.match(YEAR);
+    if (year) return `${year[0]} "${sentence.slice(0, 90)}"`;
+  }
+  return null;
+};
 const isOpen = (iv) => !isUndated(iv) && (iv.earliest === null || iv.latest === null);
 const width = (iv) => (iv.earliest === null || iv.latest === null ? null : iv.latest - iv.earliest);
 
 function audit() {
-  const findings = { open: [], wide: [], 'loose-basis': [], undated: [], 'no-death': [], 'no-birth': [] };
+  const findings = { open: [], wide: [], 'loose-basis': [], undated: [], 'no-death': [], 'no-birth': [], stated: [] };
   let total = 0;
 
   for (const slug of readdirSync(SAINTS, { withFileTypes: true }).filter((e) => e.isDirectory())) {
@@ -89,6 +119,18 @@ function audit() {
     else {
       if (!has('death') && !has('floruit')) findings['no-death'].push(saint.slug);
       if (!has('birth') && !has('floruit')) findings['no-birth'].push(saint.slug);
+    }
+
+    if (!has('birth') || !has('death')) {
+      const body = lifeBody(path.join(SAINTS, slug.name));
+      if (!has('birth')) {
+        const born = body.match(BORN);
+        if (born) findings.stated.push(`${saint.slug} birth ${born[1]} "${born[0]}"`);
+      }
+      if (!has('death')) {
+        const died = statedDeath(body);
+        if (died) findings.stated.push(`${saint.slug} death ${died}`);
+      }
     }
   }
   return { total, findings };
