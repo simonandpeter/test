@@ -19,6 +19,13 @@
       "display": "283",
       "basis": "traditional",
       "note": "saint.gr: born 283 under Carus and Carinus."
+    },
+    "death": {
+      "earliest": 295,
+      "latest": 305,
+      "display": "c. 300",
+      "basis": "traditional",
+      "note": "About 300, azbyka.ru, seventeen years after his release under Carus and Carinus; saint.gr’s birth in 283 cannot sit with it."
     }
   },
   "attestations": [

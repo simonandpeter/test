@@ -22,11 +22,18 @@
   ],
   "dates": {
     "death": {
-      "earliest": 501,
+      "earliest": 537,
       "latest": 556,
-      "display": "before 556",
+      "display": "537–556",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: “Прп. Дионисия Малого (до 556)”."
+      "note": "Between 537 and 556, azbyka.ru; the Sretensky line says before 556."
+    },
+    "birth": {
+      "earliest": 465,
+      "latest": 475,
+      "display": "c. 470",
+      "basis": "traditional",
+      "note": "About 470, azbyka.ru."
     }
   },
   "attestations": [

@@ -21,16 +21,15 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SAINTS = path.join(ROOT, 'saints');
 
 // Lives written before 2026-08-23, from primary sources, without a closing
-// source line. Anything not on this list must carry one.
+// source line. Anything not on this list must carry one. Paul of Thebes and
+// John the Long-Suffering left the list on 2026-09-06, rewritten from azbyka.
 const BEFORE_THE_RULE = new Set([
   'anthony-the-great',
   'athanasius-of-alexandria',
   'augustine-of-hippo',
   'christopher',
   'john-chrysostom',
-  'john-the-long-suffering',
   'moses-the-hungarian',
-  'paul-of-thebes',
 ]);
 
 async function corpus() {
