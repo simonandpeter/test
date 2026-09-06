@@ -46,5 +46,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 655,
+      "latest": 655,
+      "display": "655",
+      "basis": "traditional",
+      "note": "Died 16 September 655 at Cherson, saint.gr (13 April)."
+    }
   }
 }
