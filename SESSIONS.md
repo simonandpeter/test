@@ -10236,3 +10236,17 @@ The lesson is that the audit and the lives were never compared: a year the
 life states and the `saint.json` lacks is the cheapest date there is, and
 `scripts/date-audit.mjs` could say so itself — a "stated in the life" column
 is the next thing to give it.
+It has it now (`stated`, in the commit after), and its rows are the eight
+false positives the sweep already knew. Three of the audit's eight `wide`
+intervals were also narrowed to what their own sources say — Alban 209–304,
+Phantinus late ninth or tenth century (azbyka's "end of the ninth or
+beginning of the tenth" and saint.gr's 974 both inside), the 3,628 of
+Nicomedia under Maximian — and the 3,628 left `tests/map-span.test.mjs`'s
+long-lived list, where they had stood at 200 years since 2026-09-02. And
+`scripts/cross-link-audit.mjs` was read again, as its header asks whenever
+the corpus grows: 86 automatic links now, from 18 on 2026-08-26, and every
+one of them names the saint whose page it opens — the comparisons
+("Theodora of Alexandria, kept the same day"; "a Sabbas of Venetala … nothing
+here asserts it") link to the other saint's own entry, which is right, not
+to a claim that two people are one. The two Nektarios folders now name and
+link each other.
