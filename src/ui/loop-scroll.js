@@ -163,20 +163,35 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
    * A picture is done with when it has painted *or* failed. Both free the
    * slot, and a missing icon must never be able to wedge the queue — which is
    * the one way a scheduler is worse than no scheduler at all.
+   *
+   * **`onSettle` is the listener and `settle` is not**, which cost a day: the
+   * first version registered `settle` itself, so what it was handed was the
+   * `Event` rather than the `<img>`, and `img.removeEventListener` threw
+   * before `running` was ever decremented. Four pictures went out and the
+   * queue never freed a slot again. It hid on a phone, where the row's own
+   * drift carries cards out of the band and `release` calls `settle` *with an
+   * image* — the queue was being unwedged from the side, by movement, sixty
+   * times a minute. It showed at a desk with the drift removed, which is
+   * where the suite reads the order and therefore holds the row still: 4
+   * sources handed out at 300 ms and the same 4 at three seconds.
+   *
+   * `__cxRunning` is checked rather than assumed, because a picture released
+   * before it loaded keeps its `once` listeners and may fire them later, for
+   * a run that has already been accounted for.
    */
   const settle = (img) => {
-    img.removeEventListener('load', settle);
-    img.removeEventListener('error', settle);
+    if (!img || !img.__cxRunning) return;
     img.__cxRunning = false;
     running -= 1;
     pump();
   };
+  const onSettle = (e) => settle(e.currentTarget);
 
   const start = (img, tier) => {
     img.__cxRunning = true;
     running += 1;
-    img.addEventListener('load', settle, { once: true });
-    img.addEventListener('error', settle, { once: true });
+    img.addEventListener('load', onSettle, { once: true });
+    img.addEventListener('error', onSettle, { once: true });
     /*
      * The browser's own hint, since it is the browser that owns the socket:
      * the queue orders what *this* row asks for, and `fetchpriority` orders

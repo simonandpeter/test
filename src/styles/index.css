@@ -1065,6 +1065,11 @@ html.is-rolling #view {
   margin-top: var(--space-5);
   --cx-w: 150px;
   --cx-max-h: 240px;
+  /* A column of names only, which is the same width as a picture's on a phone
+     — 150 px is already as narrow as these names stand, and taking it further
+     wraps every one of them to four lines. The desktop step below is where
+     this earns its keep. */
+  --cx-w-text: var(--cx-w);
 }
 
 /* **Half again as wide on a desktop** (author, 2026-08-27: "Make the carousel
@@ -1110,6 +1115,22 @@ html.is-rolling #view {
   .carousel {
     --cx-max-h: clamp(240px, var(--cx-space, 48vh), 520px);
     --cx-w: clamp(150px, calc(var(--cx-max-h) * 0.58), 300px);
+    /* **A column of names is narrower than a column with a picture in it**
+       (author, 2026-09-07: "make the text-only saints more compact ... so the
+       strip reads as pictures with names between them rather than long
+       stretches of text"). A 300 px column carrying "Martyr Euthalia" and
+       seven more like it is most of a screenful spent on text; at 186 a desk
+       fits a picture, its names and another picture where two columns used to
+       stand. Held at 150 below and 190 above, so it never goes narrower than
+       the phone's own column nor so wide that it stops reading as the lighter
+       thing between two pictures.
+
+       Derived from `--cx-w` rather than written as its own clamp, so the two
+       cannot drift apart as the window's height moves `--cx-w`; and read from
+       CSS rather than written from script, because the build is skipped when
+       the packing has not changed and an inline pixel width would then be the
+       previous window's. views/index/modes.js says the same from its side. */
+    --cx-w-text: clamp(150px, calc(var(--cx-w) * 0.62), 190px);
   }
 }
 
@@ -1232,6 +1253,16 @@ html.is-rolling #view {
   gap: var(--space-3);
   width: var(--cx-w);
   min-height: var(--cx-fill, var(--cx-space, 480px));
+}
+
+/* A column holding no picture at all takes the narrower width, and every card,
+   name and subtext line inside it follows — `--cx-w` is what all four of them
+   read, so redefining it here is the whole of the change. `carouselCells`
+   packed this column against the same number (`isNameCell`, modes.js): the
+   packer and the stylesheet have to agree or the column is filled for a width
+   it is not drawn at. */
+.cx-cell.is-names {
+  --cx-w: var(--cx-w-text);
 }
 
 /* **No row template for a stack** (2026-09-01). `1fr 1fr` was two wide icons

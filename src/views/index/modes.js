@@ -3,6 +3,7 @@ import { cardCrop } from '../../lib/hero-crop.js';
 import { observePrefetch, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
+import { nameLines } from '../../lib/name-lines.js';
 import { loopScroll, loopSlice, windowImages } from '../../ui/loop-scroll.js';
 import * as store from '../../lib/store.js';
 import { STRINGS } from '../../ui/strings.js';
@@ -136,7 +137,7 @@ function paintModeLabel(word) {
  * icon is — which is why `ui/loop-scroll` measures real offsets instead of
  * multiplying out a stride.
  */
-function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
+function carouselCard(item, router, { cardWidth = 150, space = 0, pen = null } = {}) {
   // The picture is shown whole (author, 2026-08-27: "dont crop the images, but
   // fix their width to what they currently are"). The column stays 150 px so
   // the row keeps its rhythm; the height is whatever that width makes it, and
@@ -169,7 +170,7 @@ function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
    * number, which is the half that keeps the packing honest.
    */
   const crop = cardCrop(item.image);
-  const cap = item.image ? Math.round(pictureHeight(item, cardWidth, space || Infinity)) : 0;
+  const cap = item.image ? Math.round(pictureHeight(item, cardWidth, space || Infinity, pen)) : 0;
   /*
    * **`image.card`, not `image.src`** (author, 2026-09-06: "use the thumb
    * files (not icon.jpg)"). The row was fetching the original — a median of
@@ -204,7 +205,20 @@ function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
    * It reads `item.image`, so a saint who gains one later is drawn with it
    * without anything here being told: there is no list of who has a picture.
    */
-  return `<a class="cx-card${item.image ? '' : ' is-text'}" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
+  /*
+   * **The height the packer budgeted for this card, written onto it.**
+   *
+   * The column's fit is arithmetic done before anything is rendered, and until
+   * 2026-09-07 the only way to ask whether that arithmetic was right was to
+   * measure the *page* — `the carousel fits the window at every size` catches
+   * a column that overflowed, but only once it has overflowed by enough to
+   * push a scrollbar past the page's own 64 px of bottom padding, and it says
+   * nothing about which card was mis-budgeted. This is the estimate itself, so
+   * a test can put it beside the box the browser actually drew. With the
+   * packing doing nothing it would be absent, not zero.
+   */
+  const budget = Math.round(cardHeight(item, cardWidth, space || Infinity, pen));
+  return `<a class="cx-card${item.image ? '' : ' is-text'}" data-h="${budget}" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
       ${media}
       <span class="cx-name">${esc(saintName(item))}</span>
       ${sub ? `<span class="cx-sub utility">${sub}</span>` : ''}
@@ -328,14 +342,54 @@ const stacking = () =>
  * only way to read a clamp correctly from script. One offscreen element and one
  * layout read, once per paint.
  */
-function resolveCardWidth(carouselEl) {
-  if (!carouselEl) return 150;
+function resolveWidth(carouselEl, prop, fallback) {
+  if (!carouselEl) return fallback;
   const probe = document.createElement('span');
-  probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;width:var(--cx-w)';
+  probe.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;width:var(${prop})`;
   carouselEl.append(probe);
   const width = probe.getBoundingClientRect().width;
   probe.remove();
-  return width || 150;
+  return width || fallback;
+}
+
+/**
+ * The face the captions are actually set in, and the three numbers one is
+ * made of: a name's line height, the subtext's, and the gap between them.
+ *
+ * **Read, never written down**, for the reason `views/index/grid.js`'s own
+ * `pen` gives: what decides where a name breaks is whatever the browser
+ * resolved — Literata if it arrived, DejaVu Sans on the runner, something
+ * else again for a script none of them covers. A pair of constants measured
+ * at one desk is a fact about that desk.
+ *
+ * One probe per paint, two layout reads, and a canvas context that is reused
+ * across paints (`captionPen.canvas`) because creating one per paint is the
+ * only expensive part of this.
+ */
+function captionPen(carouselEl) {
+  if (!carouselEl || typeof document === 'undefined') return null;
+  const probe = document.createElement('span');
+  probe.className = 'cx-card';
+  probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;left:-9999px';
+  probe.innerHTML = '<span class="cx-name">x</span><span class="cx-sub utility">x</span>';
+  carouselEl.append(probe);
+  const nameEl = probe.querySelector('.cx-name');
+  const subEl = probe.querySelector('.cx-sub');
+  const face = (el) => {
+    const cs = getComputedStyle(el);
+    return {
+      font: `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`,
+      line: parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.35 || 17,
+    };
+  };
+  const name = face(nameEl);
+  const sub = face(subEl);
+  const gap = parseFloat(getComputedStyle(probe).rowGap) || 0;
+  probe.remove();
+  captionPen.canvas ??= document.createElement('canvas');
+  const ctx = captionPen.canvas.getContext('2d');
+  if (!ctx) return null;
+  return { ctx, name, sub, gap, cache: new Map() };
 }
 
 /**
@@ -368,10 +422,94 @@ function resolveCardWidth(carouselEl) {
  * in the row and put a scrollbar under a page whose whole content still fit
  * the corpus's more common widths.
  */
-const captionH = (cardWidth) => (cardWidth <= 200 ? 94 : 64);
+const captionFallback = (cardWidth) => (cardWidth <= 200 ? 94 : 64);
+
+/**
+ * A caption's own height, **for this saint at this column width**
+ * (2026-09-07).
+ *
+ * It was one of two constants — 94 on a phone, 64 at a desk — chosen against
+ * the *worst* caption in the corpus, because under-estimating puts the last
+ * card of a column past the fold and only that error is visible to a reader.
+ * The cost was the other half of the author's report: a column of names is
+ * mostly air, since the common caption is 46 against a budget of 94, and
+ * `align-content: space-between` spends the difference on gaps. Five names
+ * where eight would fit.
+ *
+ * So the name is counted rather than assumed, with `lib/name-lines.js` —
+ * grid.js's own greedy line-breaker, which agrees exactly with the browser
+ * over every name in the corpus — and the subtext with it, since "Bishop of
+ * Córdoba · Reposed 359 AD" wraps at 150 px too.
+ *
+ * **Neither count is capped, and the two caps this was written with were the
+ * same mistake twice** (found the same day, under `COLD_FACE=1` at 1024x560).
+ * The first held the subtext to three lines: "St John", whose whole caption
+ * is one line of name over four of "Metropolitan of Kyiv · Reposed 1089", was
+ * budgeted 78 px and drew 90. The second held the *whole* estimate under the
+ * old flat constant, on the reasoning that a number proven safe as an upper
+ * bound could only be safe as a ceiling — but 94 was never the worst caption
+ * in the corpus, only the worst one measured in Literata, and the runner's
+ * own face draws one at 96. A ceiling below the truth is an under-estimate
+ * wearing a safety belt. Nothing is capped now: the stylesheet clamps neither
+ * line, so nothing here should pretend it does, and a caption that really is
+ * 120 px tall is budgeted 120 and gets more of a column to itself.
+ *
+ * Memoised per saint and width. `carouselCells` asks for a height inside its
+ * own lookahead scan, up to forty-eight times per column over two hundred
+ * columns, and a fresh pair of line counts each time is tens of thousands of
+ * `measureText` calls per paint.
+ */
+function captionH(item, cardWidth, pen) {
+  if (!pen || !item) return captionFallback(cardWidth);
+  const key = `${item.slug}|${Math.round(cardWidth)}`;
+  const seen = pen.cache.get(key);
+  if (seen !== undefined) return seen;
+  pen.ctx.font = pen.name.font;
+  let h = nameLines(saintName(item), cardWidth, pen.ctx) * pen.name.line;
+  const sub = formatSubtext(item);
+  if (sub) {
+    pen.ctx.font = pen.sub.font;
+    h += pen.gap + nameLines(sub, cardWidth, pen.ctx) * pen.sub.line;
+  }
+  const out = Math.ceil(h) + CAPTION_SLACK;
+  pen.cache.set(key, out);
+  return out;
+}
+
+/**
+ * A pixel or two per caption, kept back.
+ *
+ * The counted height is close but not exact — a canvas `measureText` and a
+ * laid-out line box do not agree to the pixel over kerning, and where the
+ * estimate is low it is low by about a pixel. That did not matter while every
+ * caption budgeted the corpus's own worst case, because the slack was tens of
+ * pixels; it matters now, because the errors are per card and a column of
+ * names is eight cards deep. Measured under `COLD_FACE=1` at 1024x560, which
+ * is the narrowest column the desktop branch draws and the size the suite
+ * caught it at: the page scrolled by 9 px, which is a column's worth of one
+ * pixel each. `data-h` on each card is what made it measurable — the estimate
+ * written down beside the box the browser drew.
+ *
+ * Four, not one: the cost of over-estimating is an airier column
+ * (`align-content: space-between` spends it on the gaps), and the cost of
+ * under-estimating is a scrollbar on a page whose whole content is a row that
+ * fits — the one error a reader sees.
+ */
+const CAPTION_SLACK = 4;
 
 /** The gap between two cards stacked in one cell (`--space-3`). */
 const CELL_GAP = 12;
+
+/**
+ * The shortest caption anything in the corpus can have: one line of name, no
+ * subtext. The packer stops looking for a card once less than this is left.
+ *
+ * A constant rather than `captionH` of some particular saint, which is what
+ * stood here while every caption was one of two numbers: the question is
+ * "could *anything* still fit", and the answer is now different for every
+ * saint, so the floor has to be the floor.
+ */
+const MIN_CAPTION = 20;
 
 /**
  * How deep a column may go.
@@ -416,9 +554,12 @@ const LOOKAHEAD = 48;
  * packer believe a column was full when it held one card and a third of a
  * window of air — the largest gap on the page, from the tallest saint.
  */
-function cardHeight(item, cardWidth, space = Infinity) {
-  if (!item.image) return captionH(cardWidth);
-  return pictureHeight(item, cardWidth, space) + captionH(cardWidth);
+function cardHeight(item, cardWidth, space = Infinity, pen = null) {
+  const caption = captionH(item, cardWidth, pen);
+  if (!item.image) return caption;
+  // The card is a grid, so the picture and its caption are separated by the
+  // same `row-gap` the name and the subtext are.
+  return pictureHeight(item, cardWidth, space, pen) + (pen?.gap ?? 0) + caption;
 }
 
 /**
@@ -432,9 +573,9 @@ function cardHeight(item, cardWidth, space = Infinity) {
  * box — because a packer budgeting one shape while the browser draws another
  * is the defect the caption height already taught this file once.
  */
-function pictureHeight(item, cardWidth, space = Infinity) {
+function pictureHeight(item, cardWidth, space = Infinity, pen = null) {
   const aspect = cardCrop(item.image).aspect || 1;
-  return Math.min(cardWidth / aspect, Math.max(0, space - captionH(cardWidth)));
+  return Math.min(cardWidth / aspect, Math.max(0, space - captionH(item, cardWidth, pen)));
 }
 
 /**
@@ -479,31 +620,165 @@ function pictureHeight(item, cardWidth, space = Infinity) {
  * pool rather than a resampling of it — which is the promise the author made
  * the packer keep on 2026-08-28 ("only display 1 instance of each saint").
  */
-export function carouselCells(pool, { space = 0, cardWidth = 150 } = {}) {
+/**
+ * **A picture in every second column at least, and the names between them
+ * narrower** (author, 2026-09-07: "Saints with icons are too sparse:
+ * sometimes five columns in a row show names only ... make the cell packing so
+ * that at least every second column contains a saint with an image, and make
+ * the text-only saints more compact ... so the strip reads as pictures with
+ * names between them rather than long stretches of text").
+ *
+ * 130 of the 862 have an icon, so packing in the reader's own order deals them
+ * where they happen to fall: on a phone showing two columns, five names-only
+ * columns in a row is an ordinary run of the shuffle rather than bad luck. The
+ * packer now decides each column's *kind* before it fills it — a **picture
+ * column**, seeded with the next saint within reach who has one, or a **name
+ * column**, which takes only saints who have none. A picture column resets the
+ * count; a name column raises it, and a count of one is what makes the next
+ * column reach. That is the guarantee, stated as an invariant rather than as a
+ * ratio: no two name columns ever stand side by side while an imaged saint is
+ * within `LOOKAHEAD` of the cursor.
+ *
+ * The corpus is almost exactly the right shape for it, which is why the rule
+ * is affordable: a phone's picture column is one icon and two names, a name
+ * column about eight, so a pair spends one of the 130 icons on ten saints and
+ * the run needs about 86 of them.
+ *
+ * **A name column is narrower**, `--cx-w-text` against `--cx-w` (index.css) —
+ * 186 px against 300 at a desk, and unchanged at a phone's 150, which is
+ * already as narrow as these names stand. It is the same instruction's other
+ * half: a 300 px column of short names is most of a screenful spent on text,
+ * and at 186 a desk fits a picture, its names and another picture where two
+ * columns used to stand.
+ *
+ * A saint with a picture is never put in a name column, even where the room
+ * would take one: the column is narrow, and a picture drawn at the narrow
+ * width beside the same picture drawn at the full one reads as a mistake.
+ * Nothing is lost — the cursor finds them again, and an imaged saint the fill
+ * passes over becomes the seed of a picture column of their own.
+ */
+export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = cardWidth, pen = null } = {}) {
   if (!space) return pool.map((item) => [item]);
   const cells = [];
   const taken = new Array(pool.length).fill(false);
-  const heightOf = (item) => cardHeight(item, cardWidth, space);
+  const heightOf = (item, width) => cardHeight(item, width, space, pen);
   let cursor = 0;
+  /*
+   * How many columns since one held a picture. It starts at 1 so the first
+   * column reaches for one — the row opens on a picture, which is the whole
+   * claim this makes, and a run whose first saint has no icon would otherwise
+   * open on a column of names.
+   */
+  let sinceImage = 1;
+  /*
+   * **And the icons are paced, not merely alternated** (2026-09-07, after
+   * measuring the first version of this).
+   *
+   * Alternation alone answers only half the question. It spends one icon per
+   * two columns, which the corpus can afford for the whole run — but it also
+   * *never spends more than that*, and at a desk a column is wide enough that
+   * the whole run is about 174 of them against 130 icons. Three quarters of
+   * the columns could carry a picture and only half did, so a screenful held
+   * three where the old packing's luckier stretches held four.
+   *
+   * So each column earns its own fair share of an icon — the icons still
+   * unplaced over the columns still to come — and takes one as soon as it has
+   * earned a whole one. That is the ordinary way to spread N things over M
+   * slots evenly, and *evenly* is the point: the first rule tried here spent
+   * an icon whenever half the remaining columns could still be covered, which
+   * is true for most of the run and then abruptly is not — icons ran out with
+   * a fifth of the row still to deal, and the tail was the very stretch of
+   * unbroken names this exists to remove, moved to the end where a looping
+   * row brings a reader back to it every time round.
+   *
+   * `perColumn` is the run's own average depth so far rather than a constant,
+   * because how many saints a column holds is exactly what the window's
+   * height and the reader's own filter decide — the first column has to
+   * guess, and every column after it knows. The estimate being wrong costs
+   * evenness, never the floor: `owed` is checked first and does not consult
+   * any of this.
+   */
+  let imagesLeft = pool.reduce((n, item) => n + (item.image ? 1 : 0), 0);
+  let dealt = 0;
+  let columns = 0;
+  let credit = 0;
   while (cursor < pool.length) {
     if (taken[cursor]) {
       cursor += 1;
       continue;
     }
-    const column = [pool[cursor]];
-    taken[cursor] = true;
-    let used = heightOf(pool[cursor]);
+    /*
+     * The seed, and with it the column's kind and width.
+     *
+     * **A column that follows a picture reaches past the pictures**, which is
+     * as load-bearing as the reach for one and less obvious. Seeding it on
+     * whatever the cursor happens to be leaves it a picture column whenever
+     * the cursor is standing on an imaged saint — so the icons are spent as
+     * fast as they are met, and the last fifth of the run has none left at
+     * all. A long stretch of text moved to the end of the row is still a long
+     * stretch of text. Skipping past them holds the alternation to one icon
+     * per two columns, which is a pace the corpus can keep for the whole run:
+     * a phone's pair is one picture and about ten names, so 862 saints want
+     * roughly 78 icons of the 130.
+     *
+     * The reach is the same bounded one the gap-filler uses and for the same
+     * reason: the pool is in the reader's own order, Random by default but
+     * Alphabetical is an order they can *see*, and pulling a saint from
+     * position 700 into the first column would read as disorder. Where
+     * nothing of the wanted kind is within reach the cursor's own saint
+     * stands, whatever they are — the guarantee is what the corpus can
+     * support, not a promise it will invent an icon.
+     */
+    let seed = cursor;
+    let seen = 0;
+    const perColumn = columns ? dealt / columns : 4;
+    const columnsLeft = Math.max(1, (pool.length - dealt) / perColumn);
+    credit += Math.min(1, imagesLeft / columnsLeft);
+    const owed = sinceImage >= 1;
+    const want = owed || credit >= 1;
+    /*
+     * **The floor reaches as far as it has to; the surplus does not.**
+     *
+     * Icons are one saint in seven, and a column holds about five, so a
+     * window of forty-eight untaken saints carries seven of them and the
+     * pacing above spends them at very nearly that rate. Running a supply at
+     * its own limit means local droughts: measured, the reach found nothing
+     * often enough to leave three columns of names in a row, which is most of
+     * the way back to the report this answers. Where the column is *owed* a
+     * picture the reach is unbounded, so the drought is filled by pulling one
+     * saint forward — a single card out of the reader's order against a
+     * barren stretch of the row, which is the trade the instruction already
+     * made. Where it is merely surplus, `LOOKAHEAD` still binds and the order
+     * is left alone.
+     */
+    const reach = owed ? pool.length : LOOKAHEAD;
+    for (let i = cursor; i < pool.length && seen < reach; i += 1) {
+      if (taken[i]) continue;
+      seen += 1;
+      if (Boolean(pool[i].image) === want) {
+        seed = i;
+        break;
+      }
+    }
+    const picture = Boolean(pool[seed].image);
+    const width = picture ? cardWidth : textWidth;
+
+    const column = [pool[seed]];
+    taken[seed] = true;
+    let used = heightOf(pool[seed], width);
     while (column.length < STACK_MAX) {
       // What is left under the last card, once the gap above it is paid for.
       const room = space - used - CELL_GAP;
       // Nothing is shorter than a caption, so there is no point looking.
-      if (room < captionH(cardWidth)) break;
+      if (room < MIN_CAPTION) break;
       let pick = -1;
-      let seen = 0;
-      for (let i = cursor + 1; i < pool.length && seen < LOOKAHEAD; i += 1) {
+      let scanned = 0;
+      for (let i = cursor; i < pool.length && scanned < LOOKAHEAD; i += 1) {
         if (taken[i]) continue;
-        seen += 1;
-        if (heightOf(pool[i]) <= room) {
+        scanned += 1;
+        // A name column takes names only; see the note above the function.
+        if (!picture && pool[i].image) continue;
+        if (heightOf(pool[i], width) <= room) {
           pick = i;
           break;
         }
@@ -511,14 +786,34 @@ export function carouselCells(pool, { space = 0, cardWidth = 150 } = {}) {
       if (pick < 0) break;
       taken[pick] = true;
       column.push(pool[pick]);
-      used += CELL_GAP + heightOf(pool[pick]);
+      used += CELL_GAP + heightOf(pool[pick], width);
     }
     cells.push(column);
-    cursor += 1;
+    dealt += column.length;
+    columns += 1;
+    const spent = column.reduce((n, item) => n + (item.image ? 1 : 0), 0);
+    imagesLeft -= spent;
+    // A column that took a picture has spent the share it earned, however it
+    // came by it — the floor and the pacing draw on one purse, or the floor's
+    // own columns would be free and the pacing would over-spend by exactly
+    // as many of them as there are.
+    if (spent) credit -= 1;
+    /*
+     * The cursor is not stepped here. It is moved by the `taken` test at the
+     * top of the loop, which is what lets a column seeded ahead of the cursor
+     * leave the saint standing there for the next one — stepping past an
+     * untaken saint would drop them from the run entirely. It terminates
+     * because every column takes at least its own seed, and because a column
+     * that follows a picture column never reaches at all and therefore always
+     * seeds on the cursor itself.
+     */
+    sinceImage = column.some((item) => item.image) ? 0 : sinceImage + 1;
   }
   return cells;
 }
 
+/** Whether a cell is a column of names, which is drawn at `--cx-w-text`. */
+export const isNameCell = (cell) => cell.every((item) => !item.image);
 
 /**
  * Fills the track from what the filters have left, and wires it once.
@@ -617,7 +912,13 @@ export function paintCarousel() {
    */
   if (!track || track.clientWidth === 0) return;
   const carouselEl = el.querySelector('.carousel');
-  const cardWidth = resolveCardWidth(carouselEl);
+  const cardWidth = resolveWidth(carouselEl, '--cx-w', 150);
+  // A name column's own width, resolved the same way and for the same reason:
+  // it is a `clamp` too, and a custom property does not compute.
+  const textWidth = resolveWidth(carouselEl, '--cx-w-text', cardWidth);
+  // The face the captions will actually be set in. Built once per paint and
+  // handed to the packer and the markup alike, so both budget the same number.
+  const pen = captionPen(carouselEl);
   /*
    * **Quantised, so the packing is stable across paints.** The run is the
    * carousel's identity — the key that decides whether the remembered offset
@@ -673,7 +974,7 @@ export function paintCarousel() {
    */
   el.querySelector('.carousel')?.style.setProperty('--cx-fill', `${space}px`);
 
-  const run = carouselCells(pool, { space, cardWidth });
+  const run = carouselCells(pool, { space, cardWidth, textWidth, pen });
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
   // rather than keep a set of cells that were grouped for the other one.
@@ -707,19 +1008,19 @@ export function paintCarousel() {
       // The key is set by the rebuild, so clearing it here is what lets the
       // deferred call past the early return above.
       state.carouselKey = null;
-      buildCarousel(key, run, cardWidth, space);
+      buildCarousel(key, run, { cardWidth, textWidth, space, pen });
     }, CX_FADE);
     state.cleanups.push(() => clearTimeout(state.carouselFade));
     return;
   }
-  buildCarousel(key, run, cardWidth, space);
+  buildCarousel(key, run, { cardWidth, textWidth, space, pen });
 }
 
 /** How long the row takes to go before the new one is built. */
 const CX_FADE = 150;
 
 /** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
-function buildCarousel(key, run, cardWidth, space) {
+function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
   if (!track) return;
@@ -763,8 +1064,19 @@ function buildCarousel(key, run, cardWidth, space) {
         // `data-n` is the column's depth. Nothing in the stylesheet is keyed on
         // it any more — each picture carries its own ceiling — but it is what a
         // test reads to see how deep the packer went, and it costs one word.
-        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''}" data-n="${cell.length}">${cell
-          .map((item) => carouselCard(item, router, { cardWidth, space }))
+        /*
+         * **`is-names` is a width, and it is a class rather than an inline
+         * `--cx-w`.** The build is skipped when the packing has not changed,
+         * and a resize can change the *width* without changing the packing —
+         * so a pixel written here would be the old window's, which is the
+         * bug `--cx-fill` above carries a paragraph about. index.css derives
+         * `--cx-w-text` from `--cx-w`, and the browser keeps them in step.
+         */
+        const names = isNameCell(cell);
+        return `<span class="cx-cell${cell.length > 1 ? ' is-stack' : ''}${
+          names ? ' is-names' : ''
+        }" data-n="${cell.length}">${cell
+          .map((item) => carouselCard(item, router, { cardWidth: names ? textWidth : cardWidth, space, pen }))
           .join('')}</span>`;
       })
       .join('');
@@ -802,7 +1114,9 @@ function buildCarousel(key, run, cardWidth, space) {
    */
   const cs = getComputedStyle(track);
   const gap = parseFloat(cs.columnGap || cs.gap) || 0;
-  const contentWidth = n * (cardWidth + gap) - gap;
+  // Not `n * cardWidth` any more: a column of names is narrower than a column
+  // with a picture in it, so the row's width is a sum rather than a product.
+  const contentWidth = run.reduce((w, cell) => w + (isNameCell(cell) ? textWidth : cardWidth) + gap, 0) - gap;
   const fits = track.clientWidth > 0 && contentWidth <= track.clientWidth;
   if (!fits) paint(CAROUSEL_BUFFER);
   else paint(0);

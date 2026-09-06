@@ -515,6 +515,7 @@ test('a carousel card prints the whole name, the office and the dates, and shows
         clamp: getComputedStyle(name).webkitLineClamp,
         nameOverflows: name.scrollHeight > name.clientHeight + 1,
         width: Math.round(card.getBoundingClientRect().width),
+        names: card.closest('.cx-cell').classList.contains('is-names'),
         hasSub: !!card.querySelector('.cx-sub'),
         fit: media ? getComputedStyle(media).objectFit : null,
       });
@@ -527,8 +528,19 @@ test('a carousel card prints the whole name, the office and the dates, and shows
     expect(c.clamp, 'a name is still line-clamped').toBe('none');
     expect(c.nameOverflows, 'a name is cut off by its box').toBe(false);
   }
-  // One column width for every card, whatever its picture.
-  expect(new Set(cards.map((c) => c.width)).size, 'the cards are not one width').toBe(1);
+  /*
+   * **One column width for every card in its own kind of column**, and two
+   * kinds since 2026-09-07: a column holding a picture is `--cx-w`, one
+   * holding only names is `--cx-w-text`. The instruction this line pins is
+   * "fix their width to what they currently are" — a fact about the pictures,
+   * which is why it is the picture columns that must still agree to the pixel.
+   * The name columns agree among themselves too, which is the same claim made
+   * of the other width.
+   */
+  for (const kind of [false, true]) {
+    const widths = new Set(cards.filter((c) => c.names === kind).map((c) => c.width));
+    expect(widths.size, `the ${kind ? 'name' : 'picture'} columns are not one width`).toBeLessThanOrEqual(1);
+  }
   // Never `cover`, which is the crop the author asked to remove.
   /*
    * **`cover`, not `contain`, since 2026-09-02** (author: "apply the same
@@ -614,7 +626,12 @@ test('a carousel card is half again as wide on a desktop', async ({ page }) => {
     await page.setViewportSize({ width: w, height: 900 });
     await page.goto(INDEX, { waitUntil: 'networkidle' });
     await expect(page.locator('.cx-card').first()).toBeVisible();
-    return page.evaluate(() => document.querySelector('.cx-card').getBoundingClientRect().width);
+    // A card in a column that holds a picture: the instruction was about the
+    // images, and a column of names alone is narrower on purpose since
+    // 2026-09-07 (`--cx-w-text`, and the test below it).
+    return page.evaluate(
+      () => document.querySelector('.cx-cell:not(.is-names) .cx-card').getBoundingClientRect().width,
+    );
   };
 
   const phone = await widthAt(360);
@@ -908,7 +925,15 @@ test('a carousel card is sized by the window height as well as its width', async
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  const cell = page.locator('.cx-cell').first();
+  /*
+   * **A column with a picture in it**, since 2026-09-07: a column of names
+   * alone is drawn at `--cx-w-text`, which is the narrower of the two widths
+   * the row now has, and which one the DOM's first cell happens to be depends
+   * on the shuffle. `--cx-w` is what this test has always been about — the
+   * instruction was about the *images* — and `:not(.is-names)` is where it
+   * still governs. The narrow column has a test of its own below.
+   */
+  const cell = page.locator('.cx-cell:not(.is-names)').first();
   await expect(cell).toBeVisible();
   const tall = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
 
@@ -1837,4 +1862,136 @@ test('the row prefetches the way it is travelling, not the way it came', async (
   const forward = await sidesAfter(1);
   expect(forward.right, 'a row travelling forward prefetched behind itself').toBeGreaterThanOrEqual(forward.left);
   await ctx.close();
+});
+
+test('a picture stands in every second column at least, and the names between them are narrower', async ({
+  page,
+}) => {
+  /*
+   * Author, 2026-09-07: "Saints with icons are too sparse: sometimes five
+   * columns in a row show names only. Only ~140 of 862 saints have an icon.
+   * Change the cell packing so that at least every second column contains a
+   * saint with an image, and make the text-only saints more compact ... so the
+   * strip reads as pictures with names between them rather than long stretches
+   * of text."
+   *
+   * Read over the *whole* rendered run rather than the opening screenful, and
+   * by geometry rather than by class where the claim is about pictures: a
+   * column has a picture when it has a `.cx-media` in it, whatever it is
+   * called. The run measured 5 barren columns in a row at 360 px and 3 at
+   * 1280 before this; both are the author's own report.
+   *
+   * **Two, not one, and the two is the tail.** The guarantee is what the
+   * corpus can support: when the last icon has been placed, whatever imageless
+   * saints remain have nowhere to go but a column of their own, and at 360 px
+   * that is two columns at the very end of the run. Everywhere else the
+   * alternation holds. Pinning 1 would be pinning the corpus's own ratio of
+   * icons to saints, which the next folder changes.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const packed = await page.evaluate(() => {
+    const cells = [...document.querySelectorAll('[data-carousel-track] > .cx-cell')];
+    const has = cells.map((c) => c.querySelector('.cx-media') !== null);
+    let longest = 0;
+    let run = 0;
+    for (const h of has) {
+      run = h ? 0 : run + 1;
+      longest = Math.max(longest, run);
+    }
+    const width = (el) => Math.round(el.getBoundingClientRect().width);
+    const names = cells.filter((c) => c.classList.contains('is-names'));
+    const pictures = cells.filter((c) => !c.classList.contains('is-names'));
+    return {
+      cells: cells.length,
+      withPicture: has.filter(Boolean).length,
+      longestTextRun: longest,
+      // A column called a names column really holds no picture, which is what
+      // makes the class safe to measure a width by.
+      misnamed: names.filter((c) => c.querySelector('.cx-media')).length,
+      nameWidth: names.length ? width(names[0]) : null,
+      pictureWidth: pictures.length ? width(pictures[0]) : null,
+      viewport: window.innerWidth,
+    };
+  });
+
+  expect(packed.cells, 'the whole run is not in the track').toBeGreaterThan(100);
+  expect(packed.misnamed, 'a column marked as names only has a picture in it').toBe(0);
+  expect(packed.longestTextRun, 'a stretch of columns with no picture in any of them').toBeLessThanOrEqual(2);
+  /*
+   * Half, and it cannot honestly be more at every window. "Every second
+   * column" *is* a half, and at 1280x720 the run is 244 columns against the
+   * corpus's 130 icons — a shorter window packs shallower columns and so more
+   * of them, and the ceiling this ratio can reach is the icons divided by the
+   * columns. It measured 0.54 at 360 px and 0.68 at a full-height desk before
+   * this change and 0.74 / 0.76 after, but those are facts about one window
+   * and one shuffle. The run above is the claim; this only refuses a packing
+   * that met it by dealing two enormous columns.
+   */
+  expect(
+    packed.withPicture / packed.cells,
+    `${packed.withPicture} of ${packed.cells} columns carry a picture`,
+  ).toBeGreaterThanOrEqual(0.5);
+
+  /*
+   * And the names between them are narrower — at a desk. On a phone `--cx-w`
+   * is already 150 px, which is as narrow as these names stand, and
+   * `--cx-w-text` is deliberately the same number there; so this half of the
+   * instruction is asserted where it applies and its absence is asserted
+   * where it does not, rather than the test running at one width only.
+   */
+  if (packed.viewport >= 700) {
+    expect(packed.nameWidth, 'a column of names is no narrower than one with a picture').toBeLessThan(
+      packed.pictureWidth,
+    );
+  } else {
+    expect(packed.nameWidth, 'a phone narrowed its name columns below its own card width').toBe(
+      packed.pictureWidth,
+    );
+  }
+});
+
+test('a column of names carries more of them than its worst caption would allow', async ({ page }) => {
+  /*
+   * The other half of the same instruction: "make the text-only saints more
+   * compact (more names per column ...)".
+   *
+   * The packer budgeted one of two constants for every caption — 94 px on a
+   * phone, 64 at a desk — chosen against the *worst* caption in the corpus,
+   * because under-estimating pushes the last card of a column past the fold
+   * and only that error is visible to a reader. The common caption is 46, so
+   * a column of names was mostly air. It counts each name's own lines now
+   * (`lib/name-lines.js`), which is what lets eight stand where five did.
+   *
+   * Asserted as *more than the flat budget would have allowed*, which is the
+   * claim, rather than as a number: how many names fit is the window's
+   * business and the test runs at two of them.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const read = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const names = [...track.querySelectorAll('.cx-cell.is-names')];
+    const deep = names.map((c) => c.querySelectorAll('.cx-card').length).sort((a, b) => b - a);
+    const probe = document.querySelector('.cx-cell');
+    const room = parseFloat(getComputedStyle(probe).minHeight) || 0;
+    const cardWidth = Math.round(probe.getBoundingClientRect().width);
+    return { deepest: deep[0] ?? 0, columns: names.length, room, cardWidth };
+  });
+
+  expect(read.columns, 'no column of names to measure').toBeGreaterThan(4);
+  // The two constants the packer used to budget, and the gap between the
+  // cards, which it still does.
+  const flat = read.cardWidth <= 200 ? 94 : 64;
+  const wouldHaveFit = Math.floor((read.room + 12) / (flat + 12));
+  expect(
+    read.deepest,
+    `${read.deepest} names in ${read.room} px, where a flat ${flat} px caption allowed ${wouldHaveFit}`,
+  ).toBeGreaterThan(wouldHaveFit);
 });

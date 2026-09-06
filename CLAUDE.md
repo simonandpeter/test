@@ -161,10 +161,42 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - Two faces: carousel (default on every load) and search. `state.mode`;
   `applyMode` toggles classes on the view root. Nothing is rebuilt to swap face.
 - Carousel: `paintCarousel` fills `[data-carousel-track]`; `ui/loop-scroll.js`
-  is the endless-scroll engine. Cells are columns of 1–4 saints packed by
-  height (`carouselCells`). Size is `--cx-w`/`--cx-max-h`, driven by
+  is the endless-scroll engine. Cells are columns of saints packed by
+  height (`carouselCells`, up to `STACK_MAX` deep). Size is `--cx-w`/`--cx-max-h`, driven by
   `--cx-space` published from `modes.js` on resize. A run that fits does not
   loop (`is-static`). Imageless saints render no media box.
+- **The row draws `image.card`, not `image.src`** (2026-09-07): a sharp,
+  card-sized derivative `make_thumbs.py` writes beside the blurred `-thumb.jpg`
+  placeholder, median 49 kB against the original's 283. `image.lqip` cannot
+  stand in — it is blurred at a quarter scale on purpose. The saint's own page
+  and the Index grid still draw the original; the grid is the obvious next
+  place for this and has not been changed.
+- **`windowImages` is a queue, not a starting gun** (same day). The prefetch
+  band still decides *whether* a picture is fetched; the queue decides in what
+  order (on screen, then the way the row is travelling, then behind it) and how
+  many at a time (`MAX_INFLIGHT`, 4). `loopScroll.direction()` is where the
+  heading comes from — the track's own `scrollLeft` is corrected by a whole
+  period every so often, so its deltas lie. Each picture carries the
+  `data-cx-seq` it was handed, which is the suite's only window into that
+  order once the pictures have arrived.
+- **A column is one of two kinds, and at least every second one has a picture**
+  (2026-09-07). `carouselCells` decides a column's kind before filling it:
+  a *picture column* (`--cx-w`) seeded with an imaged saint, or a *name column*
+  (`.is-names`, `--cx-w-text`, narrower at a desk) which takes imageless saints
+  only. Two rules keep it: a floor (a column following one with no picture
+  reaches for one, without a bound, since a bounded reach left droughts) and a
+  pace (each column earns its share of the icons still unplaced over the
+  columns still to come, so they are not all spent in the first half — the run
+  measured 5 barren columns in a row at 360 px before this and 2 after, the two
+  being the tail where the icons genuinely run out).
+- **A caption's height is counted, not assumed** (`captionH`, `lib/name-lines.js`).
+  It was one of two constants chosen against the corpus's worst caption, which
+  made a column of names mostly air. Nothing about it is capped: the stylesheet
+  clamps neither the name nor the subtext, and a ceiling below the truth is an
+  under-estimate wearing a safety belt — 94 was the worst caption in *Literata*
+  and the runner's own face draws one at 96. `CAPTION_SLACK` is the 4 px kept
+  back per card, and **`data-h` on each card is the estimate written down** so a
+  test can put it beside the box the browser drew.
 - Cards and rows size to their name's line count (`cardHeights`, `rowHeights`,
   `nameLines`). `ROW_NAME_LINES_MAX` and the CSS `-webkit-line-clamp` are one
   decision in two files.
@@ -1243,8 +1275,11 @@ Anthony, not *by* him.
 recorded form to print). `office` is a field, drawn on the subtext line.
 
 **Saint data** — `saints/<slug>/saint.json` + `life.md`. Never hand-edit
-`data/manifest.json`. Icons: `images/icon.jpg` + `icon.meta.json` + generated
-thumb. A wrong crop is a data fix, not a CSS one.
+`data/manifest.json`. Icons: `images/icon.jpg` + `icon.meta.json` + two
+generated derivatives, `icon-thumb.jpg` (the blurred placeholder) and
+`icon-card.jpg` (the sharp card-sized one, 2026-09-07) — `npm run thumbs`
+writes both and the manifest build fails on a folder missing either. A wrong
+crop is a data fix, not a CSS one.
 
 ## Tests
 
@@ -1290,7 +1325,14 @@ would also be green. Two tests opt out and say why in their comments.
 context; `coldFace(page)` and `COLD` are exported for those, and a test using
 one should assert the treatment took.
 
-**One test fails under the rehearsal and only under it** (2026-09-02):
+**Two tests fail under the rehearsal and only under it.** The second, found
+2026-09-07: `a card prints the whole name, however many lines it takes, and a
+row still does not` (index-grid.spec.js) reads 2 lines where it wants more than
+2, in both projects. It is the second standing trap applied to a *line count*
+rather than a width — "Righteous Theodulus, executioner converted by Hermione"
+takes three lines in Literata and two in the rehearsal's Times. Confirmed on
+the unmodified tree before being recorded, and green in the ordinary suite and
+on CI. The first (2026-09-02):
 `the two left columns scroll independently of each other and of the page`
 (saint.spec.js) leaves the life column's `scrollTop` at 0 with `COLD_FACE=1`,
 while claiming a moment earlier that the column has something to scroll. It

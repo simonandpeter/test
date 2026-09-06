@@ -3,6 +3,7 @@ import { loadDetail, prefetch } from '../../lib/detail.js';
 import { cardCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
+import { nameLines } from '../../lib/name-lines.js';
 import { typeNames } from '../../lib/saint-types.js';
 import { columnsFor, layout, windowOf } from '../../lib/virtual-grid.js';
 import { beginSwap, restore, setAside } from '../../ui/swap.js';
@@ -171,47 +172,6 @@ function pen(el) {
 }
 
 /**
- * How many lines a name will take on a line of `avail` pixels.
- *
- * The browser's own algorithm, which is greedy: take words while they fit,
- * break when the next one does not. Whitespace is the only break opportunity
- * considered — a hyphen is one too, so a hyphenated name may come out *shorter*
- * than this says, and over-counting costs a row 21 px rather than cropping it.
- * A single word wider than the line is the one case that breaks mid-word, under
- * `word-break: break-word`, and it takes as many lines as it needs.
- *
- * Verified against the real thing over all 734 names at 360 px, where the
- * distribution is 476 / 253 / 5: **no disagreement in either direction.**
- */
-function nameLines(text, avail, ctx, max = ROW_NAME_LINES_MAX) {
-  if (!(avail > 0)) return 1;
-  const space = ctx.measureText(' ').width;
-  let lines = 1;
-  let used = 0;
-  for (const word of text.split(/\s+/)) {
-    if (!word) continue;
-    const w = ctx.measureText(word).width;
-    if (w > avail) {
-      // Broken mid-word; it starts a line of its own unless one is empty.
-      if (used > 0) lines += 1;
-      lines += Math.ceil(w / avail) - 1;
-      used = w % avail;
-      continue;
-    }
-    const next = used === 0 ? w : used + space + w;
-    if (used > 0 && next > avail) {
-      lines += 1;
-      used = w;
-    } else {
-      used = next;
-    }
-  }
-  // The cap is the caller's, because a row and a card allow different numbers
-  // of lines and the same greedy count serves both.
-  return Math.min(lines, max);
-}
-
-/**
  * The opening of each life, derived once from the fetched text and kept across
  * re-renders — the same card is mounted and unmounted on every scroll frame
  * and must not refetch to say the same sentence again.
@@ -260,7 +220,14 @@ function rowHeights(grid) {
   const line = grid.clientWidth - ROW_TEXT_INSET;
   const heights = state.detailed ? DETAILED_ROW_HEIGHTS : ROW_HEIGHTS;
   state.rowFont = font;
-  return (item) => heights[nameLines(saintName(item), line, ctx) - 1];
+  /*
+   * `ROW_NAME_LINES_MAX` is passed rather than left to the default, which is
+   * what it used to be: `heights` has one entry per allowed line and an
+   * uncapped count would index past the end of it. The default went to
+   * `Infinity` when the counter moved to `lib/name-lines.js` — a caller with
+   * no ceiling should not have to name one, and this caller has a ceiling.
+   */
+  return (item) => heights[nameLines(saintName(item), line, ctx, ROW_NAME_LINES_MAX) - 1];
 }
 
 export function paintGrid(matched, { animate }) {
