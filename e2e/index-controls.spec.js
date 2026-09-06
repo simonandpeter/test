@@ -130,11 +130,11 @@ test('Overlaps and Entirely within are different questions, and both are offered
 test('a range that matches nobody is a designed state, not a hole', async ({ page }) => {
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
-  await page.locator('[data-from]').fill('1361');
-  await page.locator('[data-to]').fill('1369');
+  await page.locator('[data-from]').fill('1396');
+  await page.locator('[data-to]').fill('1400');
 
-  // Nobody in the corpus has a dated life touching 1361–1369. The empty range
-  // has had to move four times: the 17th century served until Amendment 31
+  // Nobody in the corpus has a dated life touching 1396–1400. The empty range
+  // has had to move five times: the 17th century served until Amendment 31
   // gave it Athanasius of Brest and Cyriacus of Tazlău; 1320–1330 served
   // until 2026-08-26 gave Eustathius II of Serbia a floruit "under King
   // Milutin", 1282–1321; 1322–1329 served until Peter, Metropolitan of
@@ -143,8 +143,14 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // Amendment 88 (2026-08-31) added Gregory Palamas, 1296 to about 1360,
   // whose life runs straight through it. A range that stays empty is a range
   // the corpus is not filling, and this one narrowing again is the corpus
-  // doing its work — the new window sits in the gap Palamas's own death year
-  // opens above him.
+  // doing its work — 1361–1369 sat in the gap Palamas's own death year opens
+  // above him, and served until 2026-09-05, when the date audit gave Romylos
+  // of Ravanica his death year, 1375, beside the birth of about 1300 the
+  // corpus already held, and his life ran straight through it. There are no
+  // nine clear years left anywhere between 1000 and 2000 now; the widest gap
+  // is these five, between the death of Athanasius of Vysotsk in 1395 and the
+  // first year of Simeon of Pangarati's interval, 1401 — which the next dated
+  // life may close, and that is the point.
   await expect(page.locator('[data-count]')).toHaveText('0');
   await expect(page.locator('[data-empty]')).toBeVisible();
   await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
@@ -188,7 +194,11 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // own mission. The other six stay here, which is the tray doing its work -
   // saint.gr prints no year for any of them, and a martyrdom the sources
   // place only by a persecution is not a date.
-  await expect(page.locator('.tray')).toContainText('150 undated');
+  // 147 since 2026-09-06: three entries that exist for a relics day —
+  // Nicholas of Alma-Ata, Alexander Urodov, Amphilochius of Patmos — had no
+  // year in the calendar line they stood on, and their lives (azbyka.ru,
+  // saint.gr) supplied both.
+  await expect(page.locator('.tray')).toContainText('147 undated');
 });
 
 

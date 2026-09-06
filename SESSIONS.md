@@ -10019,3 +10019,18 @@ site's chrome and nothing under it, and the Prologue's 26 August has the
 single sentence already recorded. The Butler entries are the first lives in
 the corpus taken from a printed Western hagiographer rather than a
 calendar site, and the source line says so.
+
+**CI on `19e7562` was red, 2 failed of 880, and both were one test.**
+`a range that matches nobody is a designed state, not a hole`
+(index-controls.spec.js) types 1361–1369 into the date facet and expects
+nobody; Romylos of Ravanica, given his death year 1375 on 2026-09-05 beside
+a birth of about 1300 the corpus already held, now runs through it. The
+window has moved a fifth time, to 1396–1400 — and the search for it
+(`scratchpad/gaps2.mjs`, the app's own `lifeInterval`/`overlaps` over the
+manifest) found that no nine clear years are left anywhere between 1000 and
+2000; the widest empty run is these five, between Athanasius of Vysotsk's
+1395 and Simeon of Pangarati's 1401. The same test's tray count is 147 now.
+Reproduced locally before the fix (count 1, the one card Romylos), and the
+whole spec is green at desktop and the test at mobile-360 after it. Read
+with `scratchpad/ci_fail.py`, which follows the job-log redirect to blob
+storage by hand — urllib re-sends the GitHub token there and gets a 401.
