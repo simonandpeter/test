@@ -94,7 +94,7 @@ function readingRow(card, router) {
  * Renders both shelves into `el` and keeps them in step with the store.
  * Returns a teardown the view calls when it re-renders.
  */
-export function mountShelves(el, { data, router }) {
+export function mountShelves(el, { data, router, except = null } = {}) {
   let alive = true;
 
   const paint = async () => {
@@ -104,10 +104,18 @@ export function mountShelves(el, { data, router }) {
     ]);
     if (!alive) return;
 
-    // A slug whose folder has since gone is dropped rather than named: the
-    // shelf can only show what the manifest can still describe.
-    const readingCards = reading.map((r) => data.bySlug.get(r.slug)).filter(Boolean);
-    const savedCards = saved.map((slug) => data.bySlug.get(slug)).filter(Boolean);
+    /*
+     * A slug whose folder has since gone is dropped rather than named: the
+     * shelf can only show what the manifest can still describe.
+     *
+     * `except` drops one more, and it is the saint page's own (2026-09-07):
+     * opening a saint records the visit, so mounting the shelf under their own
+     * life offered the reader Continue reading — and the row was the page they
+     * were standing on. The Daily page passes nothing and is unchanged.
+     */
+    const keep = (card) => Boolean(card) && card.slug !== except;
+    const readingCards = reading.map((r) => data.bySlug.get(r.slug)).filter(keep);
+    const savedCards = saved.map((slug) => data.bySlug.get(slug)).filter(keep);
 
     const sections = [];
     if (readingCards.length) {

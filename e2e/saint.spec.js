@@ -1414,3 +1414,53 @@ test('a saint named in a life is a link in it and a row under Related', async ({
   await expect(page.locator('[data-life] a[href*="/saints/alexander-nevsky"]')).toHaveCount(1);
   await expect(page.locator('[data-related] a[href*="/saints/alexander-nevsky"]')).toHaveCount(0);
 });
+
+test('a phone gets Continue reading under the life, and a desk does not', async ({ browser }) => {
+  /*
+   * Author, 2026-09-07: "add the 'continue reading' section to the bottom of
+   * every saint profile page on mobile."
+   *
+   * The Daily page has carried the reader's own shelves since the shelves
+   * existed; this page carried nothing under the life, because past 1024 px
+   * the apparatus column beside it holds their whole search and below it that
+   * column is not drawn at all. So a phone reached the end of a life and the
+   * page stopped.
+   *
+   * Two saints are read, so there is something on the shelf to see, and the
+   * second is the one the test then stands on — which is how the exclusion is
+   * checked as well: Continue reading offering the page you are reading is a
+   * row that goes nowhere.
+   */
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+  const page = await ctx.newPage();
+  await page.goto('/saints/sergius-of-radonezh', { waitUntil: 'networkidle' });
+  await page.goto('/saints/anthony-of-the-caves', { waitUntil: 'networkidle' });
+
+  const shelves = page.locator('[data-shelves]');
+  await expect(shelves).toHaveCount(1);
+  await expect(shelves.locator('a[href*="/saints/sergius-of-radonezh"]')).toHaveCount(1);
+  // Not the saint whose page this is.
+  await expect(shelves.locator('a[href*="/saints/anthony-of-the-caves"]')).toHaveCount(0);
+
+  /*
+   * And it is the *last* thing in the article, under the veneration register
+   * rather than between it and the life — "the bottom of the page" was the
+   * instruction. Asserted by geometry, since document order and screen order
+   * are not the same question anywhere on this page.
+   */
+  const below = await page.evaluate(() => {
+    const shelf = document.querySelector('[data-shelves]').getBoundingClientRect();
+    const ven = document.querySelector('[data-veneration-box]').getBoundingClientRect();
+    return shelf.top >= ven.bottom - 1;
+  });
+  expect(below, 'Continue reading is not under the veneration register').toBe(true);
+  await ctx.close();
+
+  // A desk keeps its column and is not given a third list of saints.
+  const wide = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const widePage = await wide.newPage();
+  await widePage.goto('/saints/sergius-of-radonezh', { waitUntil: 'networkidle' });
+  await widePage.goto('/saints/anthony-of-the-caves', { waitUntil: 'networkidle' });
+  await expect(widePage.locator('[data-shelves] a')).toHaveCount(0);
+  await wide.close();
+});

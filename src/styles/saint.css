@@ -793,3 +793,35 @@
     background: color-mix(in srgb, var(--field) 70%, transparent);
   }
 }
+
+/* ---- Continue reading, under the life (2026-09-07) ----------------------- */
+
+/*
+ * Author: "add the 'continue reading' section to the bottom of every saint
+ * profile page on mobile."
+ *
+ * The reader's own two shelves, the Daily page's own (`ui/shelf.js`), under
+ * the life on a phone. Only the box is here — every row inside it is the
+ * register and shelf markup those styles already reach, which is the point of
+ * borrowing the component rather than writing a third list of saints.
+ *
+ * Empty until `wireShelves` mounts it, and empty again the moment the window
+ * crosses 1024 px, so the `:empty` rule is what keeps a page with nothing on
+ * either shelf from carrying a band of air under the life. Past that width
+ * the reader's whole search is in the column beside the life and the shelf
+ * would be a third list on one screen; the *mounting* is what stops there
+ * (views/saint.js), and this is only the space it would have taken.
+ */
+.saint-shelves {
+  margin-top: var(--space-8);
+}
+
+.saint-shelves:empty {
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .saint-shelves {
+    display: none;
+  }
+}

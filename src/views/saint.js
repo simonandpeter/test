@@ -31,6 +31,7 @@ import { reducedMotion } from '../lib/motion.js';
 import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../lib/licence.js';
 import * as store from '../lib/store.js';
 import { renderBookmark, wireSaveButtons } from '../ui/save.js';
+import { mountShelves } from '../ui/shelf.js';
 import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
@@ -110,6 +111,7 @@ export function render(el, { data, params, router, cameFrom }) {
     wireBack(el, router, backTo),
     wireSide(el, { data, router, current: slug }),
     wireSaintSwipe(el, { data, router, current: slug }),
+    wireShelves(el, { data, router, slug }),
   ];
   // Whether the churches the reader is not reading are shown on this page.
   // Per render, so it resets on the next saint opened (author, 2026-08-22).
@@ -331,6 +333,28 @@ function shell(card, backLabel) {
       <div data-veneration></div>
     </div>
     </div>
+    <!--
+      **Continue reading, at the foot, on a phone** (author, 2026-09-07: "add
+      the 'continue reading' section to the bottom of every saint profile page
+      on mobile").
+
+      The Daily page has carried the reader's own two shelves since the shelves
+      existed; this page has carried nothing under the life, because past
+      1024 px the apparatus column beside it holds their search and below it
+      that column is not drawn at all. So a phone reached the end of a life and
+      the page stopped.
+
+      **Outside the late box**, and that is the one thing to get right: it is
+      hidden until the payload lands, and the error path replaces the whole
+      of data-detail — so a shelf inside either would vanish along with a life
+      that failed to arrive, which is exactly the moment a reader most wants a
+      way onward. It is the reader's own record and owes nothing to this
+      saint's folder.
+
+      (No backticks in this comment, and that is not a style: it sits inside a
+      template literal, and one of them ends the string.)
+    -->
+    <div class="saint-shelves" data-shelves></div>
   </article>`;
 }
 
@@ -724,6 +748,41 @@ function wireColumns(el) {
   place();
   mq.addEventListener('change', place);
   return () => mq.removeEventListener('change', place);
+}
+
+/**
+ * The reader's own shelves under the life, on a phone and not at a desk.
+ *
+ * `mountShelves` is not free — two IndexedDB reads and a store subscription —
+ * and past `WIDE` the reader already has their whole search in the column
+ * beside the life, so the shelf would be a third list of saints on one screen.
+ * Mounted and torn down on the media query rather than hidden by CSS, so a
+ * desktop reader pays nothing for it and a reader who narrows the window gets
+ * it without a reload.
+ *
+ * The same `WIDE` the column itself is placed on: two breakpoints for one
+ * arrangement drift apart the moment either is edited alone.
+ */
+function wireShelves(el, { data, router, slug }) {
+  const box = el.querySelector('[data-shelves]');
+  if (!box) return null;
+  const mq = window.matchMedia(WIDE);
+  let unmount = null;
+  const place = () => {
+    if (mq.matches) {
+      unmount?.();
+      unmount = null;
+      box.innerHTML = '';
+    } else if (!unmount) {
+      unmount = mountShelves(box, { data, router, except: slug });
+    }
+  };
+  place();
+  mq.addEventListener('change', place);
+  return () => {
+    mq.removeEventListener('change', place);
+    unmount?.();
+  };
 }
 
 /**
