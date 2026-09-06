@@ -10260,7 +10260,7 @@ matcher takes any four-figure 1937 and still refuses "1937 AD"), and the
 Undated card sought on the same day (its two undated saints were the Perm
 priests, dated tonight; the test looks at 24 August, where Susanna's six
 companions are). A tooling trap on the way: a Python heredoc through the
-Bash tool loses one level of backslashes, so a `` written for a regex
+Bash tool loses one level of backslashes, so a `\b` written for a regex
 arrives as a backspace character — it broke `date-audit.mjs`'s new regexes
 once and the era test's matcher once, both invisible in the printed source.
 Regexes go in files written by the Write tool, or without backslashes.
