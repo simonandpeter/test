@@ -121,9 +121,15 @@ test('Overlaps and Entirely within are different questions, and both are offered
   // one and admitting the other is undated took them out of a window neither
   // ever belonged in. `within` is unmoved at 195: an open interval was never
   // *entirely inside* anything.
-  await expect(page.locator('[data-count]')).toHaveText('210');
+  //
+  // 219/205 since the night of 2026-09-06, when a sweep of the audit's own
+  // lists recorded years the lives already stated: Jerusalem of Beroea and
+  // her three sons (276–282), the Egyptian martyrs of 305–311 with their two
+  // bishops and two noblemen, and Rufus of Thessalonica (434) sit inside;
+  // Poemen the Great, born about 340, already overlapped by his death.
+  await expect(page.locator('[data-count]')).toHaveText('219');
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('195');
+  await expect(page.locator('[data-count]')).toHaveText('205');
 });
 
 

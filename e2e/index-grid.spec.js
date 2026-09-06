@@ -820,8 +820,12 @@ test('a lifespan with nothing at either end says Undated, capitalised', async ({
   // with uppercase, 'Undated'". Standing alone under a name it is a label
   // rather than a word in a sentence — the same departure the dates' capitals
   // are, and made in all five packs so none of them disagrees with itself.
+  // 24 August, not the 25th it used until 2026-09-06: the two Perm priests of
+  // 12 August (old style) who were the 25th's undated cards have both years
+  // from their own lives now. The 24th's are Susanna's companions — six saints
+  // the Russian calendar keeps and no source dates.
   await ready(page, { church: 'russian' });
-  await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
   const dates = page.locator('.reg-card .reg-sub');
   await expect(dates.filter({ hasText: 'Undated' }).first()).toBeVisible();
   await expect(dates.filter({ hasText: /^undated$/ })).toHaveCount(0);

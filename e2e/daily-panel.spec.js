@@ -1447,8 +1447,11 @@ test('an early date says which era it is in, and a late one does not', async ({ 
   await expect(page.locator('.hero-dates')).toHaveText('Reposed 305–306 AD');
   const dates = page.locator('.reg-card .reg-sub');
   await expect(dates.filter({ hasText: 'Reposed 3rd C. AD' }).first()).toBeVisible();
-  // Four figures carry their own era.
-  await expect(dates.filter({ hasText: 'Reposed 1937' }).first()).toBeVisible();
+  // Four figures carry their own era. Until 2026-09-06 this read "Reposed
+  // 1937"; the day's 1937 martyrs have birth years from their own lives now
+  // (John Nikolsky 1878, Nicholas Dobroumov 1875 or 1876), so the card is a
+  // lifespan — the point, that no AD follows a four-figure year, is unchanged.
+  await expect(dates.filter({ hasText: /1937/ }).first()).toBeVisible();
   await expect(dates.filter({ hasText: '1937 AD' })).toHaveCount(0);
 });
 
