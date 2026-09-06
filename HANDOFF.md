@@ -207,7 +207,10 @@ its reasoning).
   `8914cc3` (2026-09-06 evening) was red, 3 of 880: the undated count
   again (147 pinned, 145 in the corpus) and a read-then-click race in the
   map's zoom-out loop, both fixed in the commit that follows (Amendment
-  101's postscript); its own run's verdict goes here when it is in.
+  101's postscript). That commit, `1d058d3`, was green: 880 passed in
+  13.4 min, 0 flaky, accessibility 100 and FCP 1356–1364 ms — so the
+  latest green run at the time of writing is `1d058d3` (2026-09-06, late
+  evening).
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
