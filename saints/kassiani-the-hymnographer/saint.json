@@ -31,6 +31,13 @@
       "display": "c. 805–810",
       "basis": "traditional",
       "note": "saint.gr: born between 805 and 810 at Constantinople."
+    },
+    "death": {
+      "earliest": 843,
+      "latest": 867,
+      "display": "843–867",
+      "basis": "traditional",
+      "note": "Between 843 and 867, azbyka.ru after the Synaxarion of Macarius of Simonopetra; saint.gr gives no year."
     }
   },
   "attestations": [

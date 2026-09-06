@@ -20,6 +20,13 @@
       "display": "c. 250",
       "basis": "traditional",
       "note": "saint.gr: born in Cyprus around 250."
+    },
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "c. 306",
+      "basis": "traditional",
+      "note": "About 306, in the persecution of Maximian Galerius, azbyka.ru; saint.gr gives no year."
     }
   },
   "attestations": [
