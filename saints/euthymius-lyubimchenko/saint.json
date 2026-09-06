@@ -51,6 +51,13 @@
       "display": "1866",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Евфимий (1866) …»"
+    },
+    "birth": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "attested",
+      "note": "Born in 1795, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "text": {

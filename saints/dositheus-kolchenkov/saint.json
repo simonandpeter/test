@@ -51,6 +51,13 @@
       "display": "1874",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Досифей (1874) …»"
+    },
+    "birth": {
+      "earliest": 1811,
+      "latest": 1811,
+      "display": "1811",
+      "basis": "attested",
+      "note": "Born in 1811, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "text": {

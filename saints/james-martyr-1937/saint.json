@@ -18,6 +18,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Александра пресвитера, прмц. Анны и мч. Иакова (1937)”."
+    },
+    "birth": {
+      "earliest": 1899,
+      "latest": 1899,
+      "display": "1899",
+      "basis": "attested",
+      "note": "Born in 1899, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

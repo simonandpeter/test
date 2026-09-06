@@ -62,6 +62,13 @@
       "display": "1860",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Прп. Макария Оптинского (1860)”"
+    },
+    "birth": {
+      "earliest": 1788,
+      "latest": 1788,
+      "display": "1788",
+      "basis": "attested",
+      "note": "Born in 1788, as the entry’s own life says (doxologia.ro, oca.org); recorded 2026-09-06."
     }
   },
   "text": {

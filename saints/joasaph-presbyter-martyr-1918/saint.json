@@ -19,6 +19,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмчч. Иоанна, Иоасафа и Константина пресвитеров (1918)”."
+    },
+    "birth": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "1860",
+      "basis": "attested",
+      "note": "Born in 1860, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

@@ -18,6 +18,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмчч. Варсонофия, еп. Кирилловского, и с ним Иоанна пресвитера, прмц. Серафимы игумении и мчч. Анатолия, Николая, Михаила и Филиппа (1918)”."
+    },
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "Born in 1870, as the entry’s own life says (azbyka.ru, days.pravoslavie.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

@@ -18,6 +18,13 @@
       "display": "1918",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Василия, еп. Черниговского, и с ним прмч. Матфея и мч. Алексия (1918)”."
+    },
+    "birth": {
+      "earliest": 1879,
+      "latest": 1883,
+      "display": "c. 1881",
+      "basis": "traditional",
+      "note": "Born about 1881, as the entry’s own life says (azbyka.ru, days.pravoslavie.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

@@ -19,6 +19,13 @@
       "display": "1961",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Прп. Александра исповедника (1961)”."
+    },
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "Born in 1882, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

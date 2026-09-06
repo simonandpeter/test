@@ -18,6 +18,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "days.pravoslavie.ru prints “(1927)” for this group; the Russian church calendar at azbyka.ru, and the lives it cites, give 27 August 1937 for each of them, and 1937 is recorded here (2026-08-23). As printed by days.pravoslavie.ru: “Сщмч. Владимира и Николая пресвитеров, прмч. Елевферия, прмцц. Евы игумении, Евдокии и мч. Феодора (1927)”."
+    },
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "Born in 1870, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "attestations": [

@@ -51,6 +51,13 @@
       "display": "1974",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Андроник (1974) …»"
+    },
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "Born on 12 February 1889, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "text": {

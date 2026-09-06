@@ -50,6 +50,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Сщмч. Григория, Василия пресвитеров, прмч. Льва (1937)”"
+    },
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "Born in 1889, as the entry’s own life says (days.pravoslavie.ru); recorded 2026-09-06."
     }
   },
   "text": {

@@ -51,6 +51,13 @@
       "display": "1937",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Сщмчч. Захарии, архиеп. Воронежского, Сергия, Иосифа, Алексия пресвитеров, Димитрия диакона и мч. Василия (1937)»"
+    },
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "Born in 1884, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "text": {

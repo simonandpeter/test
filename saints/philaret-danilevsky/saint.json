@@ -51,6 +51,13 @@
       "display": "1841",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Филарет (1841) …»"
+    },
+    "birth": {
+      "earliest": 1777,
+      "latest": 1777,
+      "display": "1777",
+      "basis": "attested",
+      "note": "Born in Ukraine in 1777, as the entry’s own life says (azbyka.ru); recorded 2026-09-06."
     }
   },
   "text": {
