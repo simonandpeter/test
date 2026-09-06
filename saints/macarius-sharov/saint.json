@@ -51,6 +51,13 @@
       "display": "1864",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Макарий (1864) …»"
+    },
+    "birth": {
+      "earliest": 1801,
+      "latest": 1802,
+      "display": "c. 1802",
+      "basis": "traditional",
+      "note": "The life (azbyka.ru): he entered the Glinsk hermitage at twenty, in 1822; recorded 2026-09-06."
     }
   },
   "text": {

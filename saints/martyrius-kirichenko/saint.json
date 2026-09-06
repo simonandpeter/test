@@ -50,6 +50,13 @@
       "display": "1865",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: «Глинских святых: … Мартирий (1865) …»"
+    },
+    "birth": {
+      "earliest": 1800,
+      "latest": 1801,
+      "display": "c. 1801",
+      "basis": "traditional",
+      "note": "The life (azbyka.ru): he entered the Glinsk hermitage in 1831, in his thirty-first year; recorded 2026-09-06."
     }
   },
   "text": {

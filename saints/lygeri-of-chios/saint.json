@@ -19,6 +19,13 @@
       "display": "1822",
       "basis": "attested",
       "note": "saint.gr: beheaded 6 September 1822."
+    },
+    "birth": {
+      "earliest": 1800,
+      "latest": 1810,
+      "display": "early 19th century",
+      "basis": "traditional",
+      "note": "The life (saint.gr): born at the beginning of the nineteenth century at Anavatos on Chios; recorded 2026-09-06."
     }
   },
   "attestations": [
