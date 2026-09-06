@@ -201,7 +201,10 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // 145 since dc030ec (2026-09-06 evening): Symeon the Lesbian stylite and Pope
   // Martin got their years from saint.gr's whole pages. 144 since b6f2dd8, the
   // same night: Anthimos of Chios (1869–1960) had stood for a relics day only.
-  await expect(page.locator('.tray')).toContainText('144 undated');
+  // 138 since 3fd9a64: a sweep of the no-birth list found seven lives (Joseph
+  // the Hesychast, Aristokles, John of Svyatogorsk …) that stated both years
+  // in their own text with neither in saint.json.
+  await expect(page.locator('.tray')).toContainText('138 undated');
 });
 
 

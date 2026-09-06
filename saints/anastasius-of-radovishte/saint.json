@@ -52,6 +52,13 @@
       "display": "1774",
       "basis": "attested",
       "note": "Born in 1774 at Radovishte, as the entry’s own life says; recorded 2026-09-06."
+    },
+    "death": {
+      "earliest": 1794,
+      "latest": 1794,
+      "display": "1794",
+      "basis": "attested",
+      "note": "Died by the roadside on 29 August 1794, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

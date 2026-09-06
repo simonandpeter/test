@@ -53,6 +53,13 @@
       "display": "1853",
       "basis": "attested",
       "note": "Born in 1853, as the entry’s own life says; recorded 2026-09-06."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "Killed at Taushkan on 12 August 1918 of the old style, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

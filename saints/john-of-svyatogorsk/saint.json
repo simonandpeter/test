@@ -53,6 +53,13 @@
       "display": "1795",
       "basis": "attested",
       "note": "Born in Kursk on 20 September 1795, as the entry’s own life says; recorded 2026-09-06."
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "Died in peace on 11 August 1867, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

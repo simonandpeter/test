@@ -52,6 +52,13 @@
       "display": "1846",
       "basis": "attested",
       "note": "Born in 1846 in Orenburg, as the entry’s own life says; recorded 2026-09-06."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "Died on 24 August 1918 in his cell at the Athonite metochion in Moscow, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }
