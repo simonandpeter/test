@@ -45,5 +45,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "attested",
+      "note": "Born in Kursk on 20 September 1795, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }

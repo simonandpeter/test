@@ -19,6 +19,13 @@
       "display": "662",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Преставление (662), перенесение мощей прп. Максима Исповедника”."
+    },
+    "birth": {
+      "earliest": 575,
+      "latest": 585,
+      "display": "c. 580",
+      "basis": "traditional",
+      "note": "Born in Constantinople around 580, as the entry’s own life says; recorded 2026-09-06."
     }
   },
   "attestations": [

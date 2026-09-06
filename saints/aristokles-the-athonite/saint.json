@@ -44,5 +44,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "Born in 1846 in Orenburg, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }

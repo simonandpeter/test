@@ -57,6 +57,13 @@
       "latest": 2000,
       "display": "20th century",
       "basis": "traditional"
+    },
+    "birth": {
+      "earliest": 1898,
+      "latest": 1898,
+      "display": "1898",
+      "basis": "attested",
+      "note": "Born in 1898 on Paros, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

@@ -45,5 +45,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1853,
+      "latest": 1853,
+      "display": "1853",
+      "basis": "attested",
+      "note": "Born in 1853, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }

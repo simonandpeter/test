@@ -19,6 +19,13 @@
       "display": "1678",
       "basis": "attested",
       "note": "As printed by days.pravoslavie.ru: “Прмч. Макария Каневского, архим. Овручского, Переяславского (1678)”"
+    },
+    "birth": {
+      "earliest": 1605,
+      "latest": 1605,
+      "display": "1605",
+      "basis": "attested",
+      "note": "Born at Ovruch in 1605, as the entry’s own life says; recorded 2026-09-06."
     }
   },
   "attestations": [

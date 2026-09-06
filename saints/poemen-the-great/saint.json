@@ -158,6 +158,13 @@
       "latest": 450,
       "display": "450",
       "basis": "traditional"
+    },
+    "birth": {
+      "earliest": 335,
+      "latest": 345,
+      "display": "c. 340",
+      "basis": "traditional",
+      "note": "Born about 340 in Egypt, the Sretensky calendar says, as the entry’s own life says; recorded 2026-09-06."
     }
   }
 }

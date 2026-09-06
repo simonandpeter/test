@@ -35,6 +35,13 @@
       "latest": 202,
       "display": "202",
       "basis": "traditional"
+    },
+    "birth": {
+      "earliest": 130,
+      "latest": 150,
+      "display": "c. 140",
+      "basis": "traditional",
+      "note": "Probably born in Smyrna around 140, as the entry’s own life says; recorded 2026-09-06."
     }
   },
   "attestations": [

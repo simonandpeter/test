@@ -45,5 +45,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1440,
+      "latest": 1440,
+      "display": "1440",
+      "basis": "traditional",
+      "note": "Born in Crete in 1440, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }

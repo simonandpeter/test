@@ -44,5 +44,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1774,
+      "latest": 1774,
+      "display": "1774",
+      "basis": "attested",
+      "note": "Born in 1774 at Radovishte, as the entry’s own life says; recorded 2026-09-06."
+    }
   }
 }
