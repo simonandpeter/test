@@ -10183,3 +10183,22 @@ which is the signature of a race and not a regression. Both loops now read
 and press in one `evaluate` (`pressIfEnabled`), which cannot straddle the
 gap and does not press a disabled button at all. The fix and the count go
 up with this postscript; HANDOFF.md carries the verdict of that run.
+
+*After the push, while that run was in flight*, the index gave five more:
+Placilla the empress (her answer on nursing the poor with her own hands,
+died about 386, Gregory of Nyssa's oration), Heron the Philosopher (the
+verse synaxaria's one couplet, Delehaye's Heron of Gregory's twenty-fifth
+oration, and Jerome's Maximus the Cynic against it, which is why the entry
+now doubts the man it is about), Meletius of Cyprus with Isaac from
+Demetrius of Rostov, and — the largest single gain of the night — Anthimos
+Vagianos of Chios, who had stood in the corpus for the finding of his
+relics on 3 September and nothing else, and now has the whole life azbyka
+prints: born 1 July 1869, the leper hospital, the Panagia Voithia monastery
+of 1930, died 15 February 1960, canonised 14 August 1992. That dated him,
+so `undated` is 144 and the tray count is pinned there; the pin moved twice
+in one evening, which is the shape of this test — it counts the corpus, and
+the corpus is what the sitting changes. Two blind alleys for the next
+sitting: the disciples of Maximus, Nicholas the Sicilian, the Greek
+synaxarion's emperors and its "by the sword" martyrs have no page under any
+name azbyka indexes, and 204 lives under 120 words remain, 111 of them
+saint.gr's own one-liners.
