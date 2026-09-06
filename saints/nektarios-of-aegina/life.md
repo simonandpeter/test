@@ -141,6 +141,9 @@ recognised him a saint. The room where he died is a small church on the
 second floor of the Aretaieion, hung with icons and the votive offerings of
 the sick’s relatives. The Greek and Romanian calendars keep the translation
 of 1953 on 3 September, which is the line this entry stands under, and his
-feast on 9 November.
+feast on 9 November. The Russian calendar keeps him on his principal feast,
+9 November of the old style, 22 November, and this corpus holds that day as
+a second entry, [Nectarios of Aegina](/saints/nectarios-of-aegina), with the
+Sretensky calendar’s own shorter life.
 
 *After the Greek synaxarion’s own page for 9 November — [saint.gr, Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου](https://www.saint.gr/2960/saint.aspx), read 6 September 2026; its 3 September line was all this entry had until then.*
