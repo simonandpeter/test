@@ -216,10 +216,33 @@ its reasoning).
   in both projects (6 of 880): the 240–460 range counts, the era test's
   "Reposed 1937" (a lifespan now) and the Undated card on 25 August (dated
   now). `22a8450` repairs the three tests and was green: 879 passed in 16.3 min,
-  accessibility 100 and FCP 1358–1371 ms — so the latest green run at the
-  time of writing is `22a8450` (2026-09-06, 23:20). The next sitting's task
-  is the All Saints carousel (image loading and icon frequency), handed to a
-  fresh chat with a written brief.
+  accessibility 100 and FCP 1358–1371 ms. `66588e2`, the HANDOFF note after it,
+  was green too.
+  **The carousel sitting is done** (Amendment 102, 2026-09-06 into the 7th) and
+  both its commits are green: `308b5d5` — the card-sized derivative and the
+  loading queue — 886 passed in 16.3 min, 0 flaky, accessibility 100, FCP
+  1357–1370 ms; and `72ef198` — the packing — **890 passed in 16.7 min, 0
+  flaky, accessibility 100, FCP 1358–1376 ms**, which is the latest green run
+  at the time of writing. All Saints itself sits at 1376 against the §13 floor
+  of 1500, its own baseline being 1356–1372, so the gate is where it was.
+  **One number did move and is not gated: All Saints' TBT, 231 → 370 ms**,
+  which is the per-saint caption counting — `nameLines` over the matched pool
+  on the first paint, memoised per saint and width but paid once. Nothing
+  measures it and nothing fails on it; it is recorded here so a future
+  first-paint problem on this route has a suspect. LCP fell 4,017 → 3,958.
+
+  **The next sitting's task** (author, 2026-09-07) is the saints' hymns and
+  their cross-links: troparion and kontakion in English for John the
+  Long-Suffering, Moses the Hungarian, Anthony of the Kyiv Caves and
+  Theodosius, then across the corpus; every saint named in a life hyperlinked
+  and carried into that saint's `related`; and Continue reading at the foot of
+  every saint page on a phone. **The English half runs straight into Amendment
+  2 and the schema's own `english` contract** — a published rendering of the
+  same text, from a source this site may copy, never a translation made here —
+  and 39 of the 242 hymn objects have one today, all of them troparia, all
+  from Orloff 1899 and Hapgood 1906. That is a question for the author before
+  the work rather than after it; `docs/HYMN-PLAN.md` sets out what is reachable
+  without reversing anything and what is not.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
