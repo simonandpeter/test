@@ -1366,3 +1366,51 @@ test('a rendering made here says so, where a citation names its book', async ({ 
   await expect(orloff.locator('.hymn-source')).toContainText('Orloff');
   await cited.close();
 });
+
+test('a saint named in a life is a link in it and a row under Related', async ({ page }) => {
+  /*
+   * Author, 2026-09-07: "make sure any saints mentioned in their life have a
+   * hyperlink and are in the 'related' subheading section of the profile."
+   *
+   * Two different claims and the test says both, because they had drifted
+   * apart: `lib/cross-link.js` has linked a recognised name in a life since
+   * 2026-08-26, and `related` was a hand list that one folder in the whole
+   * corpus had filled in. `scripts/related-from-links.mjs` derived the rest
+   * from the audited link set — and set aside twenty-three that are a church,
+   * a lavra, a feast day or a battleship named for a saint, which are right as
+   * links and would be false as relations.
+   *
+   * Athanasius of Vysotsk is the pinned case: his life says he went to the
+   * Trinity on Makovets to become a disciple of Sergius of Radonezh, which is
+   * a relation by anybody's reading, and the link and the row must both be
+   * there. Pinned by name rather than read off whatever the page opens with —
+   * CLAUDE.md's fifth trap — and the premise is asserted before the claim.
+   */
+  await page.goto('/saints/athanasius-of-vysotsk', { waitUntil: 'networkidle' });
+  await expect(page.locator('h1.saint-name')).toContainText('Athanasius');
+
+  /*
+   * The link, inside the life itself — `[data-life]`, not `[data-detail]`,
+   * which is the whole column and holds the Related list too, so scoping to it
+   * counts the row below as a second link in the life.
+   */
+  const inLife = page.locator('[data-life] a[href*="/saints/sergius-of-radonezh"]');
+  await expect(inLife).toHaveCount(1);
+  await expect(inLife).toHaveText('Sergius of Radonezh');
+
+  // And the row, under the heading.
+  const related = page.locator('[data-related]');
+  await expect(related.locator('h2')).toHaveText('Related');
+  await expect(related.locator('a[href*="/saints/sergius-of-radonezh"]')).toHaveCount(1);
+
+  /*
+   * The other half, and the half a derivation gets wrong: Zenobius (Mazhuga)
+   * spent thirty-five years at the Alexander Nevsky *church*, so the name is a
+   * link — a reader may well want to know who that was — and is not a
+   * relation. Nothing under Related at all on that page, since it is the only
+   * name his life carries.
+   */
+  await page.goto('/saints/zenobius-mazhuga', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-life] a[href*="/saints/alexander-nevsky"]')).toHaveCount(1);
+  await expect(page.locator('[data-related] a[href*="/saints/alexander-nevsky"]')).toHaveCount(0);
+});

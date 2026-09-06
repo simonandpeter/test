@@ -132,5 +132,10 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-the-theologian",
+    "john-chrysostom"
   ]
 }
