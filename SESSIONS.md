@@ -10219,3 +10219,20 @@ November, and `nektarios-of-aegina`, the Greek and Romanian 3 September for
 the translation of his relics — with different lives and, until tonight,
 different dates. They are left as two, cross-noted; merging slugs is a
 change to links and tests for another sitting.
+
+*The same sweep, turned round.* Reading the no-birth list showed seven
+lives that stated both years with neither recorded (Joseph the Hesychast
+1898–1959 among them), so the same regex was run for death-verb sentences
+with a year over every saint with no death at all, and sixteen more were
+recorded from the lives' own words — the Yaroslavl princes David (1321) and
+Constantine (before him), Eustathius II of Serbia (1309), Jerusalem of
+Beroea and her three sons (276–282), Kosmas the hermit of Crete (658),
+Polyxena (about 109), Rufus of Thessalonica (434), the Egyptian martyrs of
+305–311 with their bishops Peleus and Nilus and the noblemen Patermuthius
+and Elias, and Peter of Nicaea ("no earlier than 823", bounded a generation
+on, as Luke of Bathys Ryax's "after 975" already was). `undated` is 126,
+from 144 at the start of the night; the tray pin moved with it each time.
+The lesson is that the audit and the lives were never compared: a year the
+life states and the `saint.json` lacks is the cheapest date there is, and
+`scripts/date-audit.mjs` could say so itself — a "stated in the life" column
+is the next thing to give it.
