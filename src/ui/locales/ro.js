@@ -193,6 +193,7 @@ export const ro = {
       troparion: 'Troparul',
       kontakion: 'Condacul',
       source: 'Text din {source}',
+      renderedHere: 'Tălmăcire făcută pentru acest sit',
     },
     silence: {
       none: 'Nimic în calendarul ales ({church}) astăzi.',
@@ -556,6 +557,7 @@ export const ro = {
       fromHost: '{count} de la {host}',
       lives: 'Viețile sunt scrise aici după izvoarele pe care le numește fiecare pagină. Sunt doar în engleză: ele sunt parafrază, iar traducerea automată a unei vieți ar preface o afirmație cu izvor despre un om într-una fără izvor.',
       map: 'Linia țărmului, râurile, lacurile și relieful de pe hartă sunt Natural Earth: domeniu public, care nu cere nicio mențiune. Este numit aici fiindcă cititorului i se cuvine proveniența unei imagini la fel ca proveniența unei date.',
+      texts: 'Unele dintre ele sunt reproduse în întregime pe pagina {link}.',
     },
     data: {
       heading: 'Datele tale - portabile',

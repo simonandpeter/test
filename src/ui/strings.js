@@ -433,6 +433,14 @@ export const STRINGS = {
       troparion: 'Troparion',
       kontakion: 'Kontakion',
       source: 'Text from {source}',
+      /*
+       * Under a hymn this site rendered itself, in place of the citation there
+       * is none. Amendment 2 forbade rendering anything here until the author
+       * reversed it for hymns alone on 2026-09-07, and the line exists because
+       * the reversal came with a condition: a reader has to be able to tell a
+       * translation made here from a text copied out of a book.
+       */
+      renderedHere: 'Rendered for this site',
     },
 
     /*

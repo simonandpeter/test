@@ -1292,3 +1292,77 @@ test('a phone turns to the next saint from anywhere on the page', async ({ page 
   await expect(page).not.toHaveURL(/roman-presbyter-martyr-1929$/);
   await expect(page.locator('h1.saint-name')).toBeVisible();
 });
+
+test('a rendering made here says so, where a citation names its book', async ({ browser }) => {
+  /*
+   * Author, 2026-09-07, reversing Amendment 2 for hymns alone: a reader who
+   * has chosen English and meets Church Slavonic has been given nothing, so
+   * this site may render a hymn itself. The reversal came with the condition
+   * that makes it honest — **a reader must be able to tell a translation made
+   * here from a text copied out of a book** — and this is that condition.
+   *
+   * Anthony of the Kyiv Caves is the first: four Slavonic hymns, none of them
+   * a common one Orloff prints, so no citation was ever going to reach them.
+   * Mamas of Caesarea, beside him, still names Orloff and 1899, because the
+   * two kinds must stay distinguishable and a test of only the new one would
+   * pass with the distinction removed.
+   */
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await page.addInitScript(() =>
+    localStorage.setItem(
+      'gos-settings',
+      JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'en' }),
+    ),
+  );
+  await page.goto('/saints/anthony-of-the-caves', { waitUntil: 'networkidle' });
+
+  const hymns = page.locator('[data-hymns-box] .hymn');
+  await expect(hymns).toHaveCount(4);
+  const own = page.locator('[data-hymns-box] .hymn[data-rendered="site"]');
+  await expect(own).toHaveCount(4);
+  // The English is there, in English, and it says who made it.
+  await expect(own.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
+  await expect(own.first().locator('.hymn-text')).toContainText('noetic stars');
+  await expect(own.first().locator('.hymn-source')).toHaveText('Rendered for this site');
+  // And never a citation, which is the whole distinction: there is no book.
+  await expect(own.first().locator('.hymn-source a')).toHaveCount(0);
+
+  await ctx.close();
+
+  /*
+   * A Russian reader still meets the Slavonic: a rendering is offered to a
+   * reader reading English and to nobody else. **Its own context**, because
+   * `addInitScript` runs again on every navigation in the one it is set on —
+   * writing the language into `localStorage` and reloading hands the page
+   * straight back to the init script, which is how this test first read
+   * English twice and called it a pass.
+   */
+  const ru = await browser.newContext();
+  const ruPage = await ru.newPage();
+  await ruPage.addInitScript(() =>
+    localStorage.setItem(
+      'gos-settings',
+      JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ru' }),
+    ),
+  );
+  await ruPage.goto('/saints/anthony-of-the-caves', { waitUntil: 'networkidle' });
+  await expect(ruPage.locator('[data-hymns-box]')).toContainText('Звезды мысленныя');
+  await expect(ruPage.locator('[data-hymns-box] .hymn[data-rendered="site"]')).toHaveCount(0);
+  await ru.close();
+
+  // The other kind, unchanged: a published rendering names its book.
+  const cited = await browser.newContext();
+  const citedPage = await cited.newPage();
+  await citedPage.addInitScript(() =>
+    localStorage.setItem(
+      'gos-settings',
+      JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' }),
+    ),
+  );
+  await citedPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
+  const orloff = citedPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' }).first();
+  await expect(orloff).not.toHaveAttribute('data-rendered', 'site');
+  await expect(orloff.locator('.hymn-source')).toContainText('Orloff');
+  await cited.close();
+});

@@ -10,16 +10,25 @@
  * troparion would be Amendment 2's invented content wearing vestments. The
  * `lang` on the text is what tells a screen reader which tongue to read it in.
  *
- * **An English reader is given English where a published one exists** (author,
+ * **An English reader is given English where there is any** (author,
  * 2026-08-26: "when you select English as the language, on any calendar, it
- * should be in English"). Not translated here either: a hymn may carry an
- * `english` block, which is somebody else's published rendering of that same
- * hymn with its own citation. Isabel Hapgood's 1906 Service Book is the one
- * source so far — public domain, and therefore copyable, which the OCA's
- * modern translations are not. Her book holds no per-saint troparia, so the
- * five texts it gives are all feast hymns; everywhere else an English reader
- * still meets the original, which is the honest state of the corpus rather
- * than a gap in the code.
+ * should be in English"). A hymn may carry an `english` block, and since
+ * 2026-09-07 it arrives one of two ways — which is the whole of what this
+ * file now has to say out loud.
+ *
+ * **A citation**: somebody else's published rendering of that same hymn, with
+ * its own source. Orloff's General Menaion (1899) and Hapgood's Service Book
+ * (1906) are the two, both long in the public domain, which the OCA's modern
+ * translations are not.
+ *
+ * **Or this site's own** (`rendered: 'site'`). Amendment 2 forbade that from
+ * 2026-08-22 — no invented content — and the author reversed it for hymns
+ * alone on 2026-09-07, on the ground that a reader who has chosen English and
+ * meets Church Slavonic has been given nothing. The reversal is recorded in
+ * SESSIONS.md rather than absorbed, and **it costs a line of type**: a
+ * rendering made here is a different kind of claim from a text copied out of a
+ * book, and the page says which it is under every hymn. Nothing else in the
+ * corpus is translated, and nothing here licenses it.
  */
 
 import { escapeHtml as esc } from '../lib/markdown.js';
@@ -51,13 +60,28 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
     .filter(Boolean)
     .map(esc)
     .join(' · ');
+  /*
+   * **What is under the hymn is either a source or an admission.** A site
+   * rendering has no citation to give — there is no book — so printing
+   * "Text from" with an empty name would read as a gap rather than as the
+   * different thing it is. Four words, and no naming of the tongue it came
+   * from: the heading already says whose hymn it is where more than one
+   * church's are shown, the text carries its own `lang`, and the original is
+   * one press of the language control away on the same page. A second string
+   * per locale pack to say what the page already says is four packs of work
+   * for nothing.
+   */
+  const own = rendering !== h && rendering.rendered === 'site';
   const src = rendering.source?.url
     ? `<a href="${esc(rendering.source.url)}" rel="noopener noreferrer">${esc(rendering.source.text)}</a>`
     : esc(rendering.source?.text ?? '');
-  return `<div class="hymn">
+  const foot = own
+    ? esc(H.renderedHere)
+    : fill(H.source, { source: src });
+  return `<div class="hymn"${own ? ' data-rendered="site"' : ''}>
     <h3 class="hymn-kind utility">${head}</h3>
     <p class="hymn-text" lang="${esc(lang)}">${esc(rendering.text)}</p>
-    <p class="hymn-source utility">${fill(H.source, { source: src })}</p>
+    <p class="hymn-source utility">${foot}</p>
   </div>`;
 }
 
