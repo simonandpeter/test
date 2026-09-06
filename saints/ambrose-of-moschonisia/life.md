@@ -1,5 +1,20 @@
 # Ambrose
 
-Ambrose studied at the theological school of the Holy Cross in Jerusalem and at the theological academy of Kyiv, and was parish priest in many Greek communities of the Crimea — Theodosia, Simferopol, Sevastopol. In 1913 he was consecrated auxiliary bishop of the metropolis of Smyrna with the title of Xanthoupolis, and stood in for the exiled metropolitan during the First World War; in 1919 he was used as patriarchal exarch in the Moschonisia, and in 1922 became metropolitan of Moschonisia. In the catastrophe of Asia Minor he was buried alive by the Turks with nine other priests in a pit outside the town of Kydonies, on 15 September 1922. The Greek calendar keeps him with [Chrysostom of Smyrna](/saints/chrysostom-of-smyrna) and the hierarchs martyred with him on the Sunday before the Exaltation.
+Ambrose studied at the theological school of the Holy Cross in Jerusalem and
+at the theological academy of Kyiv, and was parish priest in many Greek
+communities of the Crimea — Theodosia, Simferopol, Sevastopol. In 1913 he
+was consecrated auxiliary bishop of the metropolis of Smyrna with the title
+of Xanthoupolis, and stood in for the exiled metropolitan during the First
+World War; in 1919 he was used as patriarchal exarch in the Moschonisia, and
+in 1922 became metropolitan of Moschonisia. In the catastrophe of Asia Minor
+he was buried alive by the Turks with nine other priests in a pit outside
+the town of Kydonies, on 15 September 1922. The same page records that
+[Gregory of Kydonies](/saints/gregory-of-kydonies) learned on 15 September
+of the slaughter of Ambrose and of six thousand people of the Moschonisia,
+and won from the Turks the ships that carried twenty thousand of the
+thirty-five thousand of Kydonies to Mytilene before he too was taken. The
+Greek calendar keeps him with [Chrysostom of
+Smyrna](/saints/chrysostom-of-smyrna) and the hierarchs martyred with him on
+the Sunday before the Exaltation.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — [the entry](https://www.saint.gr/2408/saint.aspx); read 23 August 2026.*
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 13 Σεπτεμβρίου — [the entry](https://www.saint.gr/2408/saint.aspx); read 23 August 2026, and the page’s other lives on 6 September 2026.*
