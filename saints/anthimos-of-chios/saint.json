@@ -45,5 +45,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "Born 1 July 1869 at Livadia on Chios, azbyka.ru."
+    },
+    "death": {
+      "earliest": 1960,
+      "latest": 1960,
+      "display": "1960",
+      "basis": "attested",
+      "note": "Died 15 February 1960, azbyka.ru; relics found 3 September 1965, canonised 14 August 1992."
+    }
   }
 }
