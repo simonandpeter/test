@@ -143,14 +143,11 @@ function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
   // an icon that is taller than it is wide is simply a taller card. The
   // blurred placeholder is dropped with the crop — it was a background sized
   // to *cover* the box, which is the cropping this removes.
-  // `data-src`, not `src`: `windowImages` hands the source over as the card
-  // comes near and takes it back when it goes away, so the row holds only the
-  // pictures around it rather than all 72 at once. The `width` and `height`
-  // attributes are what make that free — they give the box an aspect ratio, so
-  // it is exactly as tall with no picture in it as with one, and nothing
-  // reflows either way. `loading="lazy"` is gone with them: the source is not
-  // in the document until we put it there, which is a stricter promise than
-  // the browser's own.
+  // The `width` and `height` attributes are what make releasing a source free
+  // — they give the box an aspect ratio, so it is exactly as tall with no
+  // picture in it as with one, and nothing reflows either way.
+  // `loading="lazy"` is gone with them: the source is not in the document
+  // until we put it there, which is a stricter promise than the browser's own.
   /*
    * **The ceiling is the packer's own budget, written onto the card**
    * (2026-09-01). It used to be four rules in index.css keyed on the column's
@@ -173,9 +170,24 @@ function carouselCard(item, router, { cardWidth = 150, space = 0 } = {}) {
    */
   const crop = cardCrop(item.image);
   const cap = item.image ? Math.round(pictureHeight(item, cardWidth, space || Infinity)) : 0;
+  /*
+   * **`image.card`, not `image.src`** (author, 2026-09-06: "use the thumb
+   * files (not icon.jpg)"). The row was fetching the original — a median of
+   * 283 kB and a maximum of 1.04 MB — to draw a picture 150 px wide on a
+   * phone; the card derivative is the same picture at a card's own size, a
+   * median of 49 kB. `image.lqip` could not be it: that one is blurred at a
+   * quarter scale on purpose and is visibly soft at any real card size, which
+   * is what a placeholder is *for*. `w`/`h` still carry the original's
+   * dimensions, which is right — their job is the aspect ratio that reserves
+   * the box, and the derivative preserves it exactly.
+   *
+   * `data-src`, not `src`: `windowImages` hands the source over as the card
+   * comes near, in the order a reader meets them, and takes it back when it
+   * goes away.
+   */
   const media = item.image
     ? `<span class="cx-media" style="aspect-ratio:${crop.aspect}${space ? `;--cx-cap:${cap}px` : ''}">
-        <img data-src="${BASE + item.image.src}" alt="" style="object-position:${crop.focus}"
+        <img data-src="${BASE + (item.image.card ?? item.image.src)}" alt="" style="object-position:${crop.focus}"
           width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
     : '';
@@ -829,7 +841,15 @@ function buildCarousel(key, run, cardWidth, space) {
    * — a `measure()` that ran before the track had been laid out — which
    * loop-scroll now repairs from its own frame, where it can see it.
    */
-  state.carouselWindow = windowImages(track, { margin: imageMargin() });
+  /*
+   * The loop is what knows which way the row is going — this element's own
+   * `scrollLeft` is wrapped by a whole period every so often, so its deltas
+   * lie — and `windowImages` prefetches toward it.
+   */
+  state.carouselWindow = windowImages(track, {
+    margin: imageMargin(),
+    direction: () => state.loop?.direction() ?? 1,
+  });
   // One observer at a time. The track is rebuilt whenever the pool changes, and
   // pushing a fresh cleanup onto the pile each time would leave every previous
   // observer watching nodes that are no longer in the document.

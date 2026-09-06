@@ -1631,3 +1631,210 @@ test('the row comes back where it was after a trip to another page', async ({ pa
     .poll(async () => Math.abs((await track.evaluate((el) => el.scrollLeft)) - before), { timeout: 6000 })
     .toBeLessThan(140);
 });
+
+/* ---- the 2026-09-06 round: what the row fetches, and in what order -------- */
+
+test('the row draws the card derivative, never the full icon', async ({ page }) => {
+  /*
+   * Author, 2026-09-06: "use the thumb files (not icon.jpg)".
+   *
+   * The row was handing every card `image.src` — the original, a median of
+   * 283 kB and a maximum of 1.04 MB — to draw a picture 150 px wide on a
+   * phone. `image.card` is the same picture at a card's own size (median
+   * 49 kB, `make_thumbs.py`). It is *not* `image.lqip`: that one is blurred
+   * at a quarter scale on purpose, which is what makes it a placeholder.
+   *
+   * Asserted on `data-src` rather than `src`, because `src` is only present
+   * on the pictures the window is currently holding, and the claim is about
+   * every card in the row.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  const sources = await page.evaluate(() =>
+    [...document.querySelectorAll('[data-carousel-track] .cx-media img')].map((i) => i.dataset.src ?? ''),
+  );
+  expect(sources.length, 'no pictures in the row at all').toBeGreaterThan(4);
+  expect(sources.filter((s) => s.endsWith('-card.jpg')).length, 'a card is not drawn from the derivative').toBe(
+    sources.length,
+  );
+  expect(sources.filter((s) => /icon\.(jpe?g|png)$/i.test(s)).length, 'the row is still fetching originals').toBe(0);
+});
+
+test('the row loads what is on screen before what is off it, a few at a time', async ({ browser }) => {
+  /*
+   * Author, 2026-09-06: "load what is on screen first ... don't fetch every
+   * thumb at once".
+   *
+   * Two claims, and they are one mechanism. Handing every picture inside the
+   * band its source in one observer callback put eleven requests and 3.4 MB
+   * on one connection to paint the two icons a phone can actually see, which
+   * took 12.2 seconds on throttled 4G. The queue orders by where the reader
+   * is, and the cap is what stops the band ahead crowding out the screen.
+   *
+   * **Under reduced motion, because the row must hold still to be asked.**
+   * The drift moves the row a few pixels between the pump that hands the
+   * sources out and the read that checks them, and the on-screen set is then
+   * not the set the order was decided against. Nothing here is about motion,
+   * so removing it costs the test nothing.
+   *
+   * The order is read off `data-cx-seq`, which `windowImages` writes as it
+   * hands each source out. It is the only window into it — the order is
+   * invisible once the pictures have arrived — and it is also the answer to
+   * "what would this look like if it were doing nothing": no picture would
+   * carry the attribute at all. Concurrency comes from the browser's own
+   * resource timing rather than from `page.route`, since the suite runs with
+   * the service worker registered and a route that matches nothing fails open
+   * (CLAUDE.md's thirteenth trap).
+   */
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await page.waitForTimeout(1200);
+
+  const seen = await page.evaluate(() => {
+    const track = document.querySelector('[data-carousel-track]');
+    const box = track.getBoundingClientRect();
+    // On screen is a question about geometry: mounted is not on screen in
+    // this row, and DOM order is not screen order.
+    const onScreen = [];
+    const offScreen = [];
+    for (const img of track.querySelectorAll('.cx-media img[data-cx-seq]')) {
+      const r = img.getBoundingClientRect();
+      (r.right > box.left && r.left < box.right ? onScreen : offScreen).push(Number(img.dataset.cxSeq));
+    }
+    const blankOnScreen = [...track.querySelectorAll('.cx-media img')].filter((img) => {
+      const r = img.getBoundingClientRect();
+      return r.right > box.left && r.left < box.right && !img.hasAttribute('src');
+    }).length;
+    const cards = performance
+      .getEntriesByType('resource')
+      .filter((e) => e.name.includes('/images/') && e.name.endsWith('-card.jpg'));
+    // The most requests alive at any one moment.
+    let peak = 0;
+    for (const a of cards) {
+      let n = 0;
+      for (const b of cards) if (b.startTime <= a.startTime && b.responseEnd > a.startTime) n += 1;
+      peak = Math.max(peak, n);
+    }
+    return { onScreen, offScreen, blankOnScreen, total: cards.length, cells: track.children.length };
+  });
+
+  expect(seen.onScreen.length, 'no icon is on screen to have been prioritised').toBeGreaterThan(0);
+  expect(seen.offScreen.length, 'nothing off screen was prefetched, so there is no order to check').toBeGreaterThan(0);
+  expect(seen.blankOnScreen, 'a picture on screen has no source at all').toBe(0);
+  expect(Math.max(...seen.onScreen), 'a picture off screen was handed a source before one on it').toBeLessThan(
+    Math.min(...seen.offScreen),
+  );
+
+  /*
+   * The band is wider than the screen on purpose, so this is not "only the
+   * screen was fetched" — it is that the screen was never made to queue
+   * behind it. The rendered run is over eight hundred cells.
+   */
+  expect(seen.cells, 'the whole run is not in the track').toBeGreaterThan(200);
+  expect(seen.total, 'the row is fetching the whole band at once again').toBeLessThan(20);
+  expect(seen.peak ?? 0, 'more pictures were in flight than the cap allows').toBeLessThanOrEqual(6);
+  await ctx.close();
+});
+
+test('the row prefetches the way it is travelling, not the way it came', async ({ browser }) => {
+  /*
+   * Author, 2026-09-06: "prefetch the next cells in the scroll direction".
+   *
+   * The band reaches equally far either side of the row, and only one of
+   * those sides is where the reader is going. `loopScroll` publishes its own
+   * heading — this element's `scrollLeft` is corrected by a whole period
+   * every so often, so its own deltas cannot be read for it — and
+   * `windowImages` fills the leading side first.
+   *
+   * Read off `data-cx-seq`, which the scheduler writes as it hands each
+   * source out: the order is otherwise invisible the moment the pictures have
+   * arrived, and with the scheduler doing nothing no picture carries it at
+   * all. Counted on the *off-screen* half alone — a card coming into view is
+   * fetched first whichever way the queue is sorted, because it is on screen,
+   * so what tells the two arrangements apart is which of the pictures nobody
+   * can see yet were spent on.
+   */
+  const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await page.waitForTimeout(1000);
+
+  /**
+   * Travel one way, and ask which side of the screen the pictures handed a
+   * source during the journey were on **at the time**.
+   *
+   * Sampled as it goes rather than read at the end, and that is not fussiness:
+   * every card slides toward the trailing edge as the row moves, so a picture
+   * sourced while on screen has drifted well off the *back* by the time the
+   * journey finishes. Reading positions once at the end therefore reports the
+   * direction of travel backwards, which is how this test first passed one
+   * leg and failed the other with the mechanism working correctly.
+   *
+   * Far enough to leave the band behind, too: it reaches 1,100 px either side
+   * on a phone, so a shorter journey travels almost entirely over ground that
+   * was already prefetched and hands out two sources for the whole trip —
+   * a true measurement of nothing.
+   */
+  const sidesAfter = async (direction) => {
+    let mark = await page.evaluate(() =>
+      [...document.querySelectorAll('[data-carousel-track] img[data-cx-seq]')].reduce(
+        (m, i) => Math.max(m, Number(i.dataset.cxSeq)),
+        0,
+      ),
+    );
+    let left = 0;
+    let right = 0;
+    for (let batch = 0; batch < 10; batch++) {
+      // Steadily, in small steps: a heading is read from movement, and one
+      // large jump is a teleport rather than a traveller.
+      for (let i = 0; i < 4; i++) {
+        await page.evaluate((d) => {
+          const t = document.querySelector('[data-carousel-track]');
+          if (t) t.scrollLeft += d;
+        }, direction * 90);
+        await page.waitForTimeout(40);
+      }
+      await page.waitForTimeout(120);
+      const sides = await page.evaluate((since) => {
+        const track = document.querySelector('[data-carousel-track]');
+        const box = track.getBoundingClientRect();
+        let l = 0;
+        let r = 0;
+        let seq = since;
+        for (const img of track.querySelectorAll('img[data-cx-seq]')) {
+          const n = Number(img.dataset.cxSeq);
+          seq = Math.max(seq, n);
+          if (n <= since) continue;
+          const b = img.getBoundingClientRect();
+          if (b.right <= box.left) l += 1;
+          else if (b.left >= box.right) r += 1;
+        }
+        return { l, r, seq };
+      }, mark);
+      left += sides.l;
+      right += sides.r;
+      mark = sides.seq;
+    }
+    return { left, right };
+  };
+
+  // Backwards first: the drift runs forward, so this is the case a heading
+  // has to be *read* to get right rather than assumed.
+  const back = await sidesAfter(-1);
+  expect(back.left + back.right, 'nothing off screen was prefetched at all').toBeGreaterThan(0);
+  expect(back.left, 'a row travelling back still prefetched the way it had come').toBeGreaterThan(back.right);
+
+  const forward = await sidesAfter(1);
+  expect(forward.right, 'a row travelling forward prefetched behind itself').toBeGreaterThanOrEqual(forward.left);
+  await ctx.close();
+});

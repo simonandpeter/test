@@ -186,6 +186,7 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
     await mkdir(path.join(dir, 'test-saint', 'images'), { recursive: true });
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon.png'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
+    await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
     await writeFile(
       path.join(dir, 'test-saint', 'saint.json'),
       JSON.stringify(saint({ images: [{ file: 'images/icon.png' }] })),
@@ -195,6 +196,9 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
     assert.deepEqual(r.manifest[0].image, {
       src: 'saints/test-saint/images/icon.png',
       lqip: 'saints/test-saint/images/icon-thumb.jpg',
+      // The card derivative, 2026-09-06: `src` is the original the saint's own
+      // page draws, and this is the one a 150-300 px card is handed.
+      card: 'saints/test-saint/images/icon-card.jpg',
       w: 8,
       h: 10,
       aspect: 0.8,
@@ -220,6 +224,7 @@ test('a licence that obliges attribution warns until it has some; one that does 
       await mkdir(path.join(dir, 'test-saint', 'images'), { recursive: true });
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon.png'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
+      await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon.meta.json'), JSON.stringify(meta));
       await writeFile(
         path.join(dir, 'test-saint', 'saint.json'),

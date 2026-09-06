@@ -45,6 +45,14 @@ export const SCHEMA_VERSION = 1;
 const thumbFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-thumb.jpg';
 
 /**
+ * The sharp, card-sized derivative make_thumbs.py writes beside the thumb
+ * (2026-09-06). A carousel card is 150-300 CSS px and was being handed the
+ * original: a median of 283 kB and up to 1.04 MB to draw a picture the width
+ * of a thumbnail. The thumb itself is blurred by design and cannot stand in.
+ */
+const cardFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card.jpg';
+
+/**
  * JSON.parse rejects a byte-order mark, and Windows editors add one freely —
  * PowerShell's Set-Content does it by default. A BOM carries no information
  * here, so failing a folder over one would be pedantry rather than validation.
@@ -180,8 +188,10 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
         fail(folder, `image "${img.file}" is referenced but does not exist`);
         continue;
       }
-      if (!existsSync(path.join(dir, thumbFor(img.file)))) {
-        fail(folder, `image "${img.file}" has no placeholder "${thumbFor(img.file)}" — run: npm run thumbs`);
+      for (const derived of [thumbFor(img.file), cardFor(img.file)]) {
+        if (!existsSync(path.join(dir, derived))) {
+          fail(folder, `image "${img.file}" has no derivative "${derived}" — run: npm run thumbs`);
+        }
       }
       if (!img.meta) {
         warn(folder, `image "${img.file}" has no meta file, so its credit and licence are unrecorded`);
@@ -352,6 +362,13 @@ function toCard(saint, dir) {
     image = {
       src: base + file,
       lqip: base + thumbFor(file),
+      /*
+       * The picture a *card* shows. `src` stays the original, which is what
+       * the saint's own page and the hero draw; `w`/`h` stay the original's
+       * too, because their job is the aspect ratio that reserves the box
+       * before a byte arrives, and the derivative preserves it exactly.
+       */
+      card: base + cardFor(file),
       w: width,
       h: height,
       aspect: Math.round((width / height) * 10000) / 10000,
