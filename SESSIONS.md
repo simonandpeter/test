@@ -10492,6 +10492,62 @@ place for the derivative; it was left because the brief named the carousel.
 saint to choose between rather than two, which is an eviction question and not
 a correctness one.
 
+**Postscript, later the same night — two of this sitting's own tests were
+wrong, and CI on `eae87ce` said so.**
+
+*The barren stretch was never the corpus's ratio.* The amendment above says the
+longest run of columns with no picture settles at 2 at 360 px, "the tail where
+the icons genuinely run out", and pins the test there. Both halves were read off
+the two deals the bench happened to deal. **The run is a shuffle**, and over
+forty deals the stretch reached ten — CLAUDE.md's fifth trap, met in a
+measurement rather than in an assertion, which is the harder place to see it.
+
+`carouselCells` is pure, so it can be asked forty times in node without a
+browser (`scratchpad/pack-check.mjs`, and `modes.js` has to be bundled first
+because it reaches Vite's `import.meta.env` through `lib/detail.js`; a shim in
+the caller cannot help, `import.meta` being per-module). That found two causes,
+both introduced above:
+
+**Pacing to exhaustion is a promise that the supply runs out.** Spreading 130
+icons evenly over ~190 columns spends them at two columns in three, and the end
+of the run is where the last of them lands by construction. The surplus is
+spent now only while more icons remain than the floor will need — one per two
+of the columns still to come — and the floor is never held back by it.
+
+**And the reserve leaked, which is why the first fix looked like it had
+failed.** A *name* column takes names only, which the amendment says; a
+*picture* column took whatever fitted, including a second icon. So all 130
+icons were landing in about 114 columns and running out ten columns early, and
+`owed` could do nothing about it — it was firing, the reach was unbounded, and
+there was nothing left to find. A picture column may take a second icon out of
+the surplus and not otherwise. That kept the August pairing of two wide icons in
+one column where it is affordable and stopped it eating the floor's reserve.
+
+Over 100 deals at each of the two geometries the longest stretch is 2 and the
+share of columns carrying a picture is unmoved. The corpus was never the
+constraint: 130 icons against about 96 columns of floor is half as many again as
+the rule needs.
+
+*And the map's ranking test lost its premise to this same sitting's other
+change* — the one recorded in Amendment 103. `a saint moving along their rail is
+named while they move` inferred the moving tier from **paint order**, which
+required somebody who outranked a *standing* Moses the Hungarian. He was the
+only saint in the corpus with a rail and no troparion; giving him his troparia
+put him above every hymned saint on his own account, since `rankOf` seats a
+railed saint ahead of an unrailed one inside a tier. Nothing in this corpus can
+outrank a standing, railed, hymned saint now. **The behaviour never moved**: the
+test was reading a consequence that had stopped being observable.
+
+The repair is the one this codebase reaches for everywhere else on this page:
+the pass that draws says what it did. `rank` joins `state`, `alpha` and `blobId`
+on `data-dots`, and the test asserts that Moses's own rank falls from 4 (the
+hymned tier, with a rail) to 2 (the moving tier) — which is the tier itself, and
+which fails with the tier backed out where paint order no longer does.
+
+Two lessons, and the second is the one worth carrying: **a test that infers a
+property from who beats whom is a test the corpus can quietly disarm**, and it
+disarms silently, by passing.
+
 ## Amendment 103 — Amendment 2 reversed for hymns, the Related lists derived, and Continue reading on a phone (2026-09-07)
 
 Four instructions in one message, of which one met a settled rule and had to be

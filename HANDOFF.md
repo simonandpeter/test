@@ -225,11 +225,11 @@ its reasoning).
   flaky, accessibility 100, FCP 1358–1376 ms**, which is the latest green run
   at the time of writing. All Saints itself sits at 1376 against the §13 floor
   of 1500, its own baseline being 1356–1372, so the gate is where it was.
-  **One number did move and is not gated: All Saints' TBT, 231 → 370 ms**,
-  which is the per-saint caption counting — `nameLines` over the matched pool
-  on the first paint, memoised per saint and width but paid once. Nothing
-  measures it and nothing fails on it; it is recorded here so a future
-  first-paint problem on this route has a suspect. LCP fell 4,017 → 3,958.
+  All Saints' TBT read 370 ms on that run against a baseline of 231, and this
+  file blamed the per-saint caption counting for it — **wrongly**: two runs
+  later (`b3d4dbc`) it reads 213, below the baseline. It was one noisy sample
+  and the attribution was an inference stated as a measurement. LCP fell
+  4,017 → 3,958.
 
   **Then the hymns and cross-links** (author, 2026-09-07; Amendment 103), of
   which three of the four parts are done.
@@ -263,9 +263,23 @@ its reasoning).
   author, both noted in the amendment: an English hymn still prints its tone as
   "глас 4", quoted from the source; and `related` is one-directional on purpose.
 
-  CI: `d434250` (the reversal) green. `b3d4dbc` (the shelf) and `eae87ce` (the
-  two Caves saints) were pushed together and their runs are in flight at the
-  time of writing — **read them before the next thing**.
+  CI: `d434250` (the reversal) and `b3d4dbc` (the shelf) green, the latter 896
+  passed in 14.5 min with 0 flaky. **`eae87ce` was red, 2 of 896, and both were
+  this session's own tests rather than the corpus** — the postscript to
+  Amendment 102 has them. In short: `a picture stands in every second column at
+  least` pinned a bound read off two deals of a *shuffle* and the real spread
+  reached ten, which turned out to be two genuine packer faults (pacing the
+  icons to exhaustion, and a picture column's fill swallowing a second icon);
+  and `a saint moving along their rail is named while they move` inferred the
+  map's moving tier from paint order, which stopped being observable the moment
+  Moses the Hungarian was given his troparia in that same push. Both fixed in
+  `ad6d88a`, which publishes `rank` on `data-dots` so the tier is measured
+  rather than inferred. **Read that run before the next thing.**
+
+  One thing to carry: on this page a *shuffle* is upstream of nearly every
+  measurement, and `carouselCells` is pure — `scratchpad/pack-check.mjs` asks
+  it a hundred times in node in a second, where a hundred browser deals is
+  twenty minutes. Any bound on the packing should be read that way.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
