@@ -151,10 +151,10 @@ function renderNav(current) {
   navScroll = null;
 
   navEl.innerHTML = NAV_KEYS.map((key) => navLinkHTML(key, current)).join('');
-  // Below the nav's own breakpoint (559.98px, base.css) the row is a
+  // Below the nav's own breakpoint (759.98px, base.css) the row is a
   // horizontal strip rather than a plain line; wiring it outside that width
   // would measure a track CSS never made scrollable.
-  if (matchMedia('(max-width: 559.98px)').matches) navScroll = wireNavScroll(navEl);
+  if (matchMedia('(max-width: 759.98px)').matches) navScroll = wireNavScroll(navEl);
   // Leaving the Daily page puts the word back without a fade: the button the
   // reader pressed has already gone somewhere, and a word changing after the
   // page has is a second event where there was one.
@@ -166,9 +166,9 @@ function renderNav(current) {
 // a navigation rebuilds the row from scratch anyway, so this only checks for
 // the one thing that changes the row's own shape rather than rebuilding on
 // every pixel of a live drag-resize.
-let navNarrow = matchMedia('(max-width: 559.98px)').matches;
+let navNarrow = matchMedia('(max-width: 759.98px)').matches;
 window.addEventListener('resize', () => {
-  const narrow = matchMedia('(max-width: 559.98px)').matches;
+  const narrow = matchMedia('(max-width: 759.98px)').matches;
   if (narrow === navNarrow) return;
   navNarrow = narrow;
   if (lastRoute) renderNav(lastRoute.nav);

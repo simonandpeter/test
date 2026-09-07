@@ -4,6 +4,16 @@
   "office": "Archbishop of Constantinople",
   "names": [
     {
+      "form": "Иоанн Златоуст",
+      "lang": "ru",
+      "note": "The nominative of the form this folder's own Russian citation prints, «Свт. Иоанна Златоустого, архиепископа Константинопольского» — a calendar lists its saints in the genitive, and the rank and the see are their own fields here."
+    },
+    {
+      "form": "Ιωάννης ο Χρυσόστομος",
+      "lang": "el",
+      "note": "As saint.gr's own line prints it, monotonic, without the rank: «Άγιος Ιωάννης ο Χρυσόστομος Αρχιεπίσκοπος Κωνσταντινούπολης»."
+    },
+    {
       "form": "Ἰωάννης ὁ Χρυσόστομος",
       "lang": "grc",
       "note": "Greek"

@@ -11,6 +11,16 @@
       "form": "Αὐγουστῖνος",
       "lang": "grc",
       "note": "Greek"
+    },
+    {
+      "form": "Августин Иппонийский",
+      "lang": "ru",
+      "note": "From «Блаженный Августин, епископ Иппонийский (430)» in this folder's Russian citation, without the rank."
+    },
+    {
+      "form": "Αυγουστίνος",
+      "lang": "el",
+      "note": "From «Άγιος Αυγουστίνος Επίσκοπος Ιππώνος» in this folder's Greek citation; the see is its own field here."
     }
   ],
   "sex": "male",

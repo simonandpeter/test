@@ -76,7 +76,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **325 unit, 724 browser** across two projects. `npm run test:all`.
+- **330 unit, 726 browser** across two projects. `npm run test:all`.
 - **The app shells exist** (2026-09-05): `android/` and `ios/`, Capacitor 8,
   id `com.dailydox.app`, the whole corpus bundled. Generated and configured
   on a desk with neither Android Studio nor Xcode, so **no binary has been
@@ -281,9 +281,12 @@ its reasoning).
   item is unchanged by the reversal and still the cheapest — **no kontakion in
   the corpus has ever been matched against Orloff's commons**, and he prints one
   in every general service. A citation beats a rendering wherever one exists, so
-  run that pass before translating anything else. Two things left for the
-  author, both noted in the amendment: an English hymn still prints its tone as
-  "глас 4", quoted from the source; and `related` is one-directional on purpose.
+  run that pass before translating anything else. Of the two things this left
+  the author, one is **settled**: a hymn's tone reads in the reader's own
+  language since 2026-09-07 (`lib/tone.js`, Amendment 105) — the author asked
+  for it after meeting a Romanian troparion under `Glasul 3` while reading in
+  Greek, which is the same defect the English "глас 4" was. `related` is still
+  one-directional on purpose.
 
   CI: `d434250` (the reversal) and `b3d4dbc` (the shelf) green, the latter 896
   passed in 14.5 min with 0 flaky. **`eae87ce` was red, 2 of 896, and both were
@@ -604,6 +607,32 @@ Reading each life is the work; the tool only finds the ones worth reading.
 
 ## Outstanding — the author's, not yours
 
+- **Whether a saint may be named in a language no calendar names them in.**
+  `node scripts/language-audit.mjs` puts the question in numbers, and it has
+  two honest answers. Counted against the churches that keep each saint — the
+  standard `lib/saint-name.js` was built to — the corpus is nearly finished:
+  ru 563/567, ro 154/160, el 361/365, sr 120/129 (Amendment 105 read 29 of
+  these out of citations the folders already carried). Counted against the four
+  languages the site can be *read* in, which is the author's own instruction
+  of 2026-08-26 ("every saint name needs to have the equivalent in the
+  displayed language"), **31 saints of 862 have all four**. The difference is
+  not an oversight: Neagoe Basarab is kept by the Romanian church alone, so no
+  Russian source here names him, and closing it means either reading sources
+  nobody here has read or transliterating — which is generated saint data, and
+  the author's call. **The part that needed no such call is done**: 29 rows
+  whose name was already quoted in the saint's own citation were read and
+  written (Amendment 105), and the 18 the tool still offers are refused ones
+  — a citation that names the day's other saint, or "Св. 70 мученика", or
+  Babylas's three children none of whom it names. `--list propose` prints
+  them; the refusals are why it proposes and never writes.
+- **125 name forms are recorded and never shown, 98 of them Greek** — the
+  biggest thing the audit found and the one needing no decision at all.
+  `pickNameForms` refuses a form that names a company where the saint is one
+  person («Άγιοι Αειθαλάς και Αμών»), which is right — it would print another
+  saint's name on this page — so those folders hold a Greek name the reader
+  never gets. Counting folder entries said el 370; the manifest ships 272.
+  `node scripts/language-audit.mjs --list dropped` is the list, and the repair
+  is one individual's form read out of each company line. Data, not code.
 - **Seven saints carry `confessor` beside a hierarchical type** and read as
   *Confessor*: Barses and Eulogius of Edessa, Liberius of Rome, Martin the Pope,
   Nicholas of Alma-Ata, Paul the New of Constantinople, Protogenes of Carrhae.

@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Θεοφάνης ο Ομολογητής",
       "lang": "el"
+    },
+    {
+      "form": "Феофан",
+      "lang": "ru",
+      "note": "The nominative of «Прп. Феофана исп. (ок. 300)» in this folder's Russian citation; «исп.» is the rank and is its own field here."
     }
   ],
   "sex": "male",

@@ -349,7 +349,7 @@ test('the header carries no date, and the controls keep their places at both wid
       header: header.height,
       sameLine: Math.abs(mid(open) - mid(theme)) < 4,
       themeAfter: theme.left >= open.right,
-      wide: innerWidth >= 560,
+      wide: innerWidth >= 760,
       // Narrow: one chrome line — calendar, name, language, theme, all on
       // the same centre — with the nav centred on its own row beneath.
       chromeOneLine:
@@ -1132,7 +1132,7 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
     for (const width of [320, 360, 480, 560, 700, 1280]) {
       await page.setViewportSize({ width, height: 900 });
       /*
-       * Crossing the nav's own 559.98px breakpoint rebuilds the row —
+       * Crossing the nav's own 759.98px breakpoint rebuilds the row —
        * `main.js`'s endless strip on one side, the plain row on the other —
        * off a `resize` listener, which is a real DOM event and so fires a
        * tick after `setViewportSize` resolves rather than inside it. A test
@@ -1167,13 +1167,13 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
       expect(seen.rows, where).toBe(1);
       expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
       /*
-       * Below the nav's own breakpoint (559.98px, base.css) the row is
+       * Below the nav's own breakpoint (759.98px, base.css) the row is
        * `ui/nav-scroll.js`'s endless strip (2026-09-07), and its links
        * legitimately run past the track's own right edge — that overflow is
        * contained (`overhang`'s premise) rather than absent, which is what
        * `seen.doc` below still catches if it ever leaked onto the page.
        */
-      if (width >= 560) expect(seen.overhang, where).toBeLessThan(1);
+      if (width >= 760) expect(seen.overhang, where).toBeLessThan(1);
       /*
        * Not `toBe(0)` since 2026-09-01. Past 1024 px the root holds the
        * scrollbar's room open on every route (`scrollbar-gutter: stable`,

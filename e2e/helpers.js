@@ -63,6 +63,21 @@ export const venerateUnion = (...churches) =>
  */
 export const TRACKED = new Set(CARDS.filter((s) => (s.track ?? []).length > 1).map((s) => s.slug));
 
+/**
+ * A saint the corpus has no Russian name for — the case where the English one
+ * has to stand under a Russian honorific rather than a blank or an invention.
+ *
+ * **Read from the manifest, not named** (2026-09-07). Anthony the Great was
+ * the pinned example until Amendment 105 gave him «Антоний Великий» out of
+ * his own citation, and a test that breaks every time a name is filled in is
+ * taxing exactly the work it should be encouraging — `CORPUS`'s own rule, in
+ * a second place. A company is skipped because its heading is a list rather
+ * than a name.
+ */
+export const NO_RU_NAME = CARDS.find(
+  (s) => !(s.names ?? {}).ru && !/\band\b|,|&|\d/.test(s.display_name ?? ''),
+);
+
 export // 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:
 // one menologion date, two civil days, the most load-bearing date in the corpus.

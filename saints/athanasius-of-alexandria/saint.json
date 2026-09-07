@@ -15,6 +15,16 @@
     {
       "form": "Athanasius",
       "lang": "la"
+    },
+    {
+      "form": "Афанасий Александрийский",
+      "lang": "ru",
+      "note": "From «Святители Афанасия и Кирилла Александрийские» in this folder's Russian citation, in the nominative and singular."
+    },
+    {
+      "form": "Αθανάσιος ο Μέγας",
+      "lang": "el",
+      "note": "As this folder's Greek citation names him: «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας»."
     }
   ],
   "sex": "male",

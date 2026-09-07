@@ -362,6 +362,15 @@ export const STRINGS = {
        * 2026-08-26 looking at a Monday in Tone 4 whose troparion is Tone 8.
        * If this line is ever to say so it says it here, in five languages.
        */
+      /*
+       * **And, since 2026-09-07, the tone of a hymn too** (`ui/hymns.js`,
+       * through `lib/tone.js`). The paragraph above is still true — the
+       * week's tone and a troparion's are different facts and routinely
+       * differ — but they are the same *word*, and a hymn had been printing
+       * its source's spelling of it («глас 4», `Glasul 3`) beside a heading
+       * in the reader's own language. One string says the word in five
+       * languages; the subject is whatever the caller passes.
+       */
       tone: 'Tone {tone}',
       /*
        * A fast day's chip is its grade alone, so the only template left here

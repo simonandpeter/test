@@ -343,7 +343,7 @@ button:hover {
  * Safe as pixels, which a measured constant usually is not here: the height is
  * face-independent. Measured 75.56/41 in both the native face and under
  * COLD_FACE's Verdana + Times, at every width from 320 to 1280 and in all five
- * language packs, because the nav is forbidden to wrap (see the 560 px block
+ * language packs, because the nav is forbidden to wrap (see the 760 px block
  * below) so no wider face can add it a line.
  */
 /*
@@ -359,7 +359,7 @@ button:hover {
   --chrome-h-reserve: 75.5625px;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 760px) {
   :root {
     --chrome-h-reserve: 41px;
   }
@@ -475,7 +475,7 @@ header.chrome {
    track a shortfall can come out of. It clips with an ellipsis rather than
    wrapping, and `nav.site-nav` carries `flex-wrap: nowrap` besides, so no
    later arrangement can quietly reintroduce the second line. */
-@media (min-width: 560px) {
+@media (min-width: 760px) {
   header.chrome {
     grid-template-columns: minmax(0, auto) auto minmax(0, 1fr) auto auto;
     grid-template-areas: 'name nav . cal theme';
@@ -509,15 +509,11 @@ header.chrome {
      lines of masthead come from: at space-4 the Greek nav wants 261 px of
      580, leaving the name 93 — narrower than «Καθημερινά», so the longest
      word broke. space-2 hands back 24 px, which is enough for every pack's
-     longest word, and the four labels still read as four.
-     **space-1, since Texts joined them** (2026-09-07): a fifth label is a
-     fifth link and a fourth gap, and at space-2 the row ran 2 px over at
-     560 px in Greek — the narrowest overflow this line has ever measured,
-     but still the page running off its own side. space-1 hands back another
-     16 px across the row's four gaps, which the five labels' own reading
-     does not miss the way the wide gap's earlier cut would have. */
+     longest word, and the four labels still read as four — five since Texts
+     joined them, and the gap is unchanged because the row itself moved to
+     the 760 rung rather than being squeezed at 560 (see the block below). */
   header.chrome .site-nav {
-    gap: var(--space-1);
+    gap: var(--space-2);
   }
 }
 
@@ -527,7 +523,7 @@ header.chrome .site-name {
 
 /* Narrow, the name sits centred between the two control boxes; wide, it is
    back at the left where the row begins. The nav row is centred under it. */
-@media (max-width: 559.98px) {
+@media (max-width: 759.98px) {
   header.chrome {
     /* The chrome line has to hold at every width the site meets, down to the
        320 px of a small phone (author, 2026-08-25: "make sure they remain in
@@ -586,7 +582,7 @@ header.chrome .chrome-calendar {
    the one corner they were until 2026-08-24, so they stand space-2 apart —
    the gap they had inside that single flex box — rather than a full column
    gap. Without this the split alone cost the row 8 px it does not have. */
-@media (min-width: 560px) {
+@media (min-width: 760px) {
   header.chrome .chrome-corner {
     margin-inline-start: calc(var(--space-2) - var(--space-4));
   }
@@ -594,7 +590,7 @@ header.chrome .chrome-calendar {
 
 /* Narrow, the calendar control is at the *start* of the chrome line, so it
    loses the end-justification the wide layout gives it. */
-@media (max-width: 559.98px) {
+@media (max-width: 759.98px) {
   header.chrome .chrome-calendar {
     justify-self: start;
   }
@@ -777,7 +773,7 @@ nav.site-nav {
    all saints etc. buttons a bit more over the top left").
 
    Only from 1024 px, and the selector has to be `header.chrome .site-nav` to
-   say it: the `min-width: 560px` block above sets that same property through
+   say it: the `min-width: 760px` block above sets that same property through
    that same selector, and a bare `nav.site-nav` here loses to it at every
    width whatever the source order. That block's reason — the Greek and Russian
    packs pushing the masthead onto two lines — is a fact about the 72ch column
@@ -901,6 +897,19 @@ nav.site-nav a[aria-current='page'] {
  * places, and a cloned loop (this row's first version) broke every one of
  * them the moment a phone-width test ran.
  *
+ * **The rung is 760, not the 560 this shipped on** (2026-09-07, second cut,
+ * and CI is what said so). Five labels do fit one wide row at 560 in Segoe
+ * UI, which is why the first cut passed here; on the runner's own DejaVu
+ * Sans the Russian row ran the page 10 px off its side, and Greek and
+ * Serbian were only inside it because the masthead had been squeezed to
+ * nothing — the name's track is the one a shortfall comes out of, and it had
+ * given everything it had. The arithmetic, measured in Verdana at 560 and
+ * scaled for DejaVu: the widest pack's row wants about 680 px before the
+ * name gets a single pixel. So the wide row starts where it fits, at the
+ * site's own 760 rung (the map's `isDesktop`, the two-column layouts), and
+ * everything under it gets the strip — which is what the strip is *for*, and
+ * why a fifth page needed one at all.
+ *
  * Full-bleed exactly as the old grid was, breaking out of the header's own
  * inline padding so the strip's own edges — not any one link's — reach the
  * screen's sides. The generous `padding-inline` is not a margin of comfort
@@ -910,7 +919,7 @@ nav.site-nav a[aria-current='page'] {
  * since centring a page nearer the true edge than that would ask for a
  * negative `scrollLeft`, which a scroller simply refuses.
  */
-@media (max-width: 559.98px) {
+@media (max-width: 759.98px) {
   nav.site-nav {
     display: flex;
     flex-wrap: nowrap;

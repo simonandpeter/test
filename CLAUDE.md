@@ -1440,6 +1440,18 @@ nothing.** Four things in one day read as evidence and were not.
   `shots/`. Steps: `click:`, `wait:`, `key:`, `scroll:`, `lang:`, `church:`.
 - `node scripts/locale-coverage.mjs`, `cross-link-audit.mjs`,
   `extraction-check.mjs`, `sessions-index.mjs`, `python scripts/make_wordmark.py`.
+- `node scripts/language-audit.mjs [--list gap|propose|thin|echo] [--limit N]`
+  — where the site says one language and writes another, and where a reader in
+  one of the four packs is handed English. Keeps a *mismatch* (a defect: the
+  data's own claim is false, and no translation is needed to fix it) apart
+  from a *gap* (a name nobody has a source for), and reports name coverage
+  against both standards — the churches that keep each saint, and the
+  languages the site can be read in. `--list propose` lifts the names already
+  quoted in a saint's own citations; **proposes, never writes**, and every row
+  needs a reading (Slavonic calendars list in the genitive). Its `ACCEPTED`
+  table holds the rows a reading has judged and kept, with the reason.
+- `node scripts/track-candidates.mjs [--min N] [--slug X] [--limit N]` — which
+  lives read as a journey the map could draw. Proposes; never writes.
 - `node scripts/date-audit.mjs [--list <finding>]` — which saints the corpus
   dates badly, worst first: `open` (an interval null at one end, which reaches
   to infinity and which `lifeBounds` has to paper over), `wide`, `loose-basis`

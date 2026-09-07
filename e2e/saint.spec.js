@@ -2,6 +2,7 @@ import { test, expect } from './fixtures.js';
 import {
   DETAIL,
   INDEX,
+  NO_RU_NAME,
   POPULATED,
   SPARSE_DETAIL,
   answered,
@@ -358,18 +359,34 @@ test('a saint is named in the reader own language where the corpus has the name'
     await ctx.close();
   }
 
-  // And the honest fallback. Anthony the Great has no Russian form recorded —
-  // he is one of the twelve saints with a Russian attestation and no entry —
-  // so the English name stands under the Russian honorific rather than a
-  // blank or an invention.
+  /*
+   * And the honest fallback: where no Russian form is recorded the English
+   * name stands, rather than a blank or an invention.
+   *
+   * **The subject is read off the manifest rather than named** (2026-09-07).
+   * It was Anthony the Great, "one of the twelve saints with a Russian
+   * attestation and no entry", until Amendment 105 gave him «Антоний
+   * Великий» out of a citation his own folder already carried — so the test
+   * went red for the corpus getting better, which is the shape `CORPUS` and
+   * `venerateUnion` exist to avoid. `NO_RU_NAME` is whoever is still in that
+   * position; the premise is asserted before the claim, per trap 5.
+   *
+   * That such a saint exists at all is the standing question this pins the
+   * bottom of: a reader in Russian meets all 862 saints, and 299 of them have
+   * no Russian name because no Russian calendar names them. Whether to
+   * transliterate is the author's (HANDOFF, Outstanding).
+   */
+  expect(NO_RU_NAME, 'premise: every saint in the corpus now has a Russian name').toBeTruthy();
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
   await searchMode(page);
   await page.addInitScript(() =>
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ru' })),
   );
-  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Преподобный Anthony the Great');
+  await page.goto(`/saints/${NO_RU_NAME.slug}`, { waitUntil: 'networkidle' });
+  const heading = page.locator('h1.saint-name');
+  await expect(heading).toContainText(NO_RU_NAME.display_name);
+  await expect(heading).not.toHaveText('');
   await ctx.close();
 });
 
@@ -1413,6 +1430,26 @@ test('a saint named in a life is a link in it and a row under Related', async ({
   await page.goto('/saints/zenobius-mazhuga', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-life] a[href*="/saints/alexander-nevsky"]')).toHaveCount(1);
   await expect(page.locator('[data-related] a[href*="/saints/alexander-nevsky"]')).toHaveCount(0);
+
+  /*
+   * **And the case the automatic linker cannot reach** (author, twice, most
+   * recently 2026-09-07). John the Long-Suffering's life sends him to pray at
+   * "the relics of Anthony of the Caves", and the folder is
+   * `Anthony of the Kyiv Caves` — one word apart, which `lib/cross-link.js`
+   * is deliberately too timid to bridge (a name it half-recognises is how two
+   * saints become one person). So both halves here are hand-written: the link
+   * is in the markdown, and the `related` row is in the saint.json.
+   *
+   * Pinned because nothing else would notice them going: the audit that finds
+   * such pairs is `scripts/related-from-links.mjs`, and it reads *unlinked*
+   * prose — once the link is in the text the sweep steps over it, which is
+   * right, and leaves this the only thing watching.
+   */
+  await page.goto('/saints/john-the-long-suffering', { waitUntil: 'networkidle' });
+  const anthony = page.locator('[data-life] a[href*="/saints/anthony-of-the-caves"]');
+  await expect(anthony).toHaveCount(1);
+  await expect(anthony).toHaveText(/Anthony of the\s+Caves/);
+  await expect(page.locator('[data-related] a[href*="/saints/anthony-of-the-caves"]')).toHaveCount(1);
 });
 
 test('a phone gets Continue reading under the life, and a desk does not', async ({ browser }) => {

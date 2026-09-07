@@ -784,7 +784,16 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Κοσμᾶν τὸν ἰσαπόστολον');
   // The label follows the reader's language too, and this page is read in
   // Greek: «Απολυτίκιο», not "Troparion".
-  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Απολυτίκιο · Ἦχος α΄');
+  /*
+   * **And so does the tone, since 2026-09-07** (author: the hymns "say Glasul
+   * 3 (Romanian) instead of ἦχος or whatever it's supposed to be"). It was
+   * «Ἦχος α΄» here — saint.gr's own polytonic spelling, quoted from the
+   * source and left standing beside a heading in the reader's language, so a
+   * Greek reader met a Romanian troparion under `Glasul 3`. `lib/tone.js`
+   * reads the number out of any of the three notations and the pack says the
+   * word: the site's own Greek is monotonic, and the numeral is a numeral.
+   */
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Απολυτίκιο · Ήχος 1');
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn')).toHaveCount(2);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('ἐν τὴ Κοιμήσει τὸν κόσμον οὐ κατέλιπες');
@@ -798,7 +807,16 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   // arriving in the names as well as in the hymns (2026-08-26).
   await expect(page.locator('.hero-name')).toHaveText(/Φανούριος|Ποιμήν/);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'ro');
-  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Glas');
+  /*
+   * **This line pinned the defect the author reported** (2026-09-07: the
+   * hymns "say Glasul 3 (Romanian) instead of ἦχος"). Here is the case
+   * exactly: the calendar is Romanian, the reader is Greek, and the tone said
+   * `Glasul` because it was quoted from the Romanian source and printed
+   * beside a heading, a name and a church all in Greek. The *text* is still
+   * Romanian and still says so in its `lang` — only the label around it
+   * follows the reader now.
+   */
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Ήχος');
   // Nothing Greek on the Romanian page, and nothing at all where nothing is
   // recorded. That day used to be 20 September; since Amendment 44 the
   // Romanian records run to the end of 2026, so the empty day has to be one
@@ -844,7 +862,13 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('[data-hymns] .hymn')).toHaveCount(1);
   await expect(page.locator('[data-hymns] .hymn-text').first()).toHaveAttribute('lang', 'sr');
   await expect(page.locator('[data-hymns] .hymn-text').first()).toContainText('Мученик Твој Господе, Лаврентије');
-  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · глас 4');
+  /*
+   * `Tone 4`, not «глас 4», since 2026-09-07: the Serbian hymn keeps its own
+   * text and its own `lang`, and only the *label* around it follows the
+   * reader — which closes the open item HANDOFF had twice left to the author
+   * ("an English hymn still prints its tone as «глас 4»").
+   */
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Troparion · Tone 4');
   await page.goto('/calendar/2026-08-29', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings a')).toHaveCount(3);
   await expect(page.locator('[data-liturgy] .fast')).toContainText('No Fast');
@@ -859,9 +883,15 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
   await expect(page.locator('.hero-name')).toHaveText(/Euplus|Theodore|Basil/);
   // Euplus sings the martyrs' *common* troparion, which Orloff's General
   // Menaion prints, so this reader — who is reading English — meets it in
-  // English. The tone beside it is still the Slavonic calendar's own «глас»,
-  // because a rendering does not change which church's book the hymn is from.
-  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('глас');
+  /*
+   * English. The tone beside it reads `Tone` since 2026-09-07 — it was «глас»
+   * on the reasoning that a rendering does not change which church's book the
+   * hymn is from, which is true of the *text* and was never true of the
+   * label: the kind and the church beside it were already in the reader's
+   * language, and the tone was the one word in the line still speaking
+   * Slavonic. HANDOFF had left this to the author twice; the author called it.
+   */
+  await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Tone');
   await expect(page.locator('[data-hymns] .hymn-text[lang="en"]').first())
     .toContainText('Thy martyr, O Lord');
   // The claim this line has always made: nothing Serbian on the Russian

@@ -34,6 +34,7 @@
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { churchName } from '../lib/church.js';
 import { currentLanguage } from '../lib/i18n.js';
+import { toneNumber } from '../lib/tone.js';
 import { STRINGS, fill } from './strings.js';
 
 /**
@@ -51,9 +52,20 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
   // screen reader is never handed English in a Greek voice.
   const rendering = currentLanguage() === 'en' && h.english ? h.english : h;
   const lang = rendering === h ? h.lang : 'en';
+  /*
+   * **The tone in the reader's own words** (author, 2026-09-07: the hymns
+   * "say Glasul 3 (Romanian) instead of ἦχος or whatever it's supposed to
+   * be"). It was printed exactly as its source wrote it, which put a Romanian
+   * tone beside a Greek heading and a Greek church name, and an English
+   * rendering under «глас 4» — the open item HANDOFF had twice left to the
+   * author. `toneNumber` reads the eight-tone Octoechos number out of any of
+   * the three notations; the pack says the word. Where it cannot be read the
+   * source's own string stands, which is the one honest fallback.
+   */
+  const toneNo = toneNumber(h.tone);
   const head = [
     H[h.kind] ?? h.kind,
-    h.tone,
+    toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : h.tone,
     h.model,
     withChurch && h.church ? churchName(h.church) : null,
   ]

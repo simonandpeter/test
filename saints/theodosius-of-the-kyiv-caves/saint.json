@@ -5,6 +5,11 @@
     {
       "form": "Феодосий Печерский",
       "lang": "ru"
+    },
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "From «Όσιος Θεοδόσιος καθηγούμενος της Λαύρας των Σπηλαίων του Κιέβου» in this folder's Greek citation; the office is its own field here."
     }
   ],
   "sex": "male",

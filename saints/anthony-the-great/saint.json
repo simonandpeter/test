@@ -15,6 +15,16 @@
     {
       "form": "Antonius",
       "lang": "la"
+    },
+    {
+      "form": "Антоний Великий",
+      "lang": "ru",
+      "note": "The nominative of «Прп. Антония Великого (356)», the line this folder's own Russian citation prints."
+    },
+    {
+      "form": "Αντώνιος ο Μέγας",
+      "lang": "el",
+      "note": "The nominative of «Ἀντωνίου ὁσίου τοῦ μεγάλου (†356)» in this folder's Greek citation, monotonic as the pack is."
     }
   ],
   "sex": "male",

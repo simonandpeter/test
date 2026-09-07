@@ -14,7 +14,7 @@
     {
       "form": "Вардандухт",
       "lang": "hy",
-      "note": "her given name, after her father"
+      "note": "Her given name, after her father Vardan Mamikonian — an Armenian name, written here in the Cyrillic the Russian source renders it in, because no Armenian spelling has been read for this corpus. The language audit flags the pair and `scripts/language-audit.mjs` holds it in its own ACCEPTED table with this reason; it is not a pack language, so nothing is printed from it. It was briefly relabelled `ru` on 2026-09-07 and that was wrong twice over: the name is not Russian, and `pickNameForms` keeps the *longest* form per language, so it displaced «Шушаника» as the name a Russian reader is shown."
     }
   ],
   "sex": "female",
