@@ -253,6 +253,20 @@ its reasoning).
   it is here so a future first-paint problem on this route has a suspect, and
   knows how little is actually established about it. LCP fell 4,017 → 3,958.
 
+  **Those four samples are stale by an order of magnitude, and reading three
+  consecutive runs side by side is what said so** (2026-09-08). All Saints' TBT
+  on the runner is **2,914 / 3,139 / 2,642 ms** on `c40177c8`, `9da17524` and
+  `e886d1f` — not 213–372. Whatever the earlier figures were measuring, the
+  number to compare a future one against is ~2,600–3,100. The same three runs
+  put `calendar, populated` at LCP 7,507 / 7,507 / 7,364 and CLS 0.0117
+  throughout, and `saint detail` at LCP 7,508 / 7,508 / 3,851. **None of these
+  is gated and none of them moved with this sitting's change**, which is the
+  only claim being made: the way to tell was to fetch the two previous green
+  runs' own tables rather than to compare one run against a number written down
+  a week ago. `scratchpad/ci.py` reads a run; the Lighthouse table is in the
+  `build` job's log, and the API's log URL 302s to blob storage, which 401s if
+  the `Authorization` header follows the redirect.
+
   **Then the hymns and cross-links** (author, 2026-09-07; Amendment 103), of
   which three of the four parts are done.
 
@@ -330,6 +344,19 @@ its reasoning).
     nowhere else. `node scripts/locale-coverage.mjs` now reports offices with no
     entry per pack, and a unit test refuses both a gap and a pack that merely
     repeats the English — which is what caught Romanian `Novice`.
+  CI: `1fed4d4` was **red on Unit tests** and green 332/332 on this desk — the
+  new office check read `data/manifest.json`, which is gitignored and generated,
+  and the workflow runs `npm test` *before* `build:manifest`, so the runner has
+  never had that file at that moment. `deploy` was skipped, so none of it
+  reached the site. `e886d1f` reads the saints' own folders instead and is
+  **green: 332 unit and 900 browser in 16.1 min, 0 flaky, accessibility 100,
+  FCP 1355–1369 ms with All Saints at 1369 against the §13 floor of 1500** —
+  the runner's own baseline unmoved, so the packs' extra ~2.4 kB gzipped each
+  costs the gate nothing. It is the latest green run at the time of writing,
+  and it deployed. The desk read 1537–1689 on the *unmodified* tree the same
+  evening, which is the third time this file has had to say that the desk's
+  FCP is a fact about the desk.
+
   - **Left for the author, and the next thing on that line**: the lifespan
     beside the office prints its interval's recorded `display` verbatim, so a
     Russian page reads «14 September 407» and «13th C.». 438 distinct displays
