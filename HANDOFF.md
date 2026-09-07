@@ -15,6 +15,13 @@ binding. Do not re-litigate settled decisions; search first.
 push URL, push, then reset the remote to
 `https://github.com/simonandpeter/test.git`.
 
+**`git status` will say you have not pushed, and it is lying.** Pushing through
+a URL with the PAT in it never updates the `origin/main` tracking ref, so the
+branch reports itself "ahead by N" for everything this session has already sent
+— a peer session read that on 2026-09-07 and concluded a sitting's work was
+sitting unpushed. **`git ls-remote origin main` is the answer to "did it land";
+`git status` is not.** `git fetch origin` puts the ref straight afterwards.
+
 **Then read the Actions run before starting the next thing** — its conclusion
 *and* its `flaky` line. A green run with `N flaky` contains a test that failed
 and passed on retry, and that is the only place a flake rate shows. A local pass
