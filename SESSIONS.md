@@ -11214,3 +11214,23 @@ families and only one of them is a judgement call:
 Not done here, because reversing that refusal is the author's and because the
 third family is a different question from the first two. Named with its numbers
 so the call can be made rather than re-measured.
+
+### Postscript: the one check that read a file the runner does not have
+
+`1fed4d4` was red on CI, on **Unit tests**, which are 332 green on this desk
+and were before the push. The new corpus check read `data/manifest.json`.
+`/data/` is gitignored — the manifest is *generated* — and the workflow's own
+order is `npm test` and then `npm run build:manifest`, so on the runner that
+file has never existed at the moment the test runs. It exists here because this
+desk has built the site.
+
+So the check that was written to walk the corpus rather than the packs walked a
+*derivative* of the corpus instead, and the distinction that mattered was not
+the one it was reasoning about. It reads `saints/<slug>/saint.json` now, which
+is what `tests/lives.test.mjs` has always done and says why. Rehearsed by moving
+`data/manifest.json` aside and running the suite: 332 green without it, which is
+the runner's own condition and the only version of this check worth having.
+
+Nothing else in the sitting was implicated — the job stops at the failing step,
+so `deploy` was skipped and everything after Unit tests is unmeasured until the
+next run.

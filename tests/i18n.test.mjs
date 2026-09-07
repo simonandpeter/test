@@ -178,10 +178,25 @@ test('no string the site prints carries an em dash, in any of the five', () => {
  * not the packs: the same reasoning would have missed it again.
  */
 test('every office and title the corpus records reads in all four languages', async () => {
-  const { readFile } = await import('node:fs/promises');
-  const manifest = JSON.parse(await readFile(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+  /*
+   * **The saints' own folders, not `data/manifest.json`** — which is the
+   * difference between a green run here and a red one on CI, and cost one
+   * (`1fed4d4`, 2026-09-08). `/data/` is gitignored: the manifest is generated,
+   * and the workflow's own `npm test` step runs *before* `build:manifest`, so
+   * on the runner that file does not exist at all. It is on this desk, because
+   * this desk has built the site. `tests/lives.test.mjs` reads the folders for
+   * the same reason and said so first.
+   */
+  const { readdir, readFile } = await import('node:fs/promises');
+  const root = new URL('../saints/', import.meta.url);
   const phrases = new Set();
-  for (const card of manifest) {
+  for (const slug of await readdir(root)) {
+    let card;
+    try {
+      card = JSON.parse(await readFile(new URL(`${slug}/saint.json`, root), 'utf8'));
+    } catch {
+      continue;
+    }
     if (card.office) phrases.add(card.office);
     for (const att of card.attestations ?? []) for (const t of att.titles ?? []) phrases.add(t);
   }

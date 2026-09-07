@@ -15,7 +15,7 @@
  * over the English base, so an absent key falls back to English on purpose. The
  * report is a map of where that fallback is happening, not a list of errors.
  */
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 
 import { STRINGS } from '../src/ui/strings.js';
 import { PACK_ONLY } from '../src/lib/i18n.js';
@@ -54,15 +54,21 @@ for (const [name, pack] of packs) {
 
 /*
  * And the branch whose keys the *corpus* writes rather than this repository:
- * every office and every attestation title in the manifest wants an entry in
- * all four packs, or a reader in one of them meets English on the line under a
+ * every office and every attestation title in the *saints' own folders* wants
+ * an entry in all four packs, or a reader in one of them meets English on the line under a
  * saint's name (2026-09-08). A new saint with a see nobody has translated is
  * the ordinary way this goes stale, so it is a report and not a gate — the
  * same bargain `date-audit.mjs` makes about a missing birth year.
  */
-const manifest = JSON.parse(await readFile(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+const saints = new URL('../saints/', import.meta.url);
 const phrases = new Set();
-for (const card of manifest) {
+for (const slug of await readdir(saints)) {
+  let card;
+  try {
+    card = JSON.parse(await readFile(new URL(`${slug}/saint.json`, saints), 'utf8'));
+  } catch {
+    continue; // not a saint folder, or not built yet
+  }
   if (card.office) phrases.add(card.office);
   for (const att of card.attestations ?? []) for (const t of att.titles ?? []) phrases.add(t);
 }
