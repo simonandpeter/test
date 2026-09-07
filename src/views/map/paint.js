@@ -1960,6 +1960,25 @@ export function paintCanvas(canvas, cards) {
       alpha: Math.round(d.alpha * 100) / 100,
       hue: d.hue,
       blobId: d.blobId ?? null,
+      /*
+       * **The tier this mark's name was seated by** (`rankOf`, above; 2026-09-07).
+       *
+       * Which name is drawn over the others was testable only sideways, by
+       * finding somebody who outranks the subject and watching the order
+       * change — and that stopped working the moment the corpus moved under
+       * it. Moses the Hungarian was the only saint with a rail and no hymn,
+       * so a hymned saint outranked him standing and the moving tier showed
+       * as a change in paint order; giving him his troparia (2026-09-07) put
+       * him above every hymned saint on his own account, and nothing in the
+       * corpus can outrank a standing railed hymned saint any more. The
+       * behaviour never changed and the test lost its premise.
+       *
+       * So the pass that seats the labels says what it seated them by. Lower
+       * is better; `rankOf` is one expression and this is that number. With
+       * the tier backed out it does not move, which is exactly what a test
+       * needs and what paint order can no longer tell it.
+       */
+      rank: rankOf(d),
       label: d.labelRect
         ? {
             x: Math.round(d.labelRect.x),

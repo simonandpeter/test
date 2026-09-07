@@ -735,7 +735,27 @@ export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = ca
     const columnsLeft = Math.max(1, (pool.length - dealt) / perColumn);
     credit += Math.min(1, imagesLeft / columnsLeft);
     const owed = sinceImage >= 1;
-    const want = owed || credit >= 1;
+    /*
+     * **The surplus never eats the floor's own reserve**, and without this the
+     * pacing defeats the guarantee it was added to serve.
+     *
+     * Spreading the icons evenly means spending them at their own rate — 130
+     * over about 190 columns, so two columns in three — and pacing a supply to
+     * *exhaustion* is precisely a promise that it runs out at the end. It did:
+     * measured over twelve deals at 360 px the row carried a stretch of up to
+     * four columns with no picture in any of them, which is the run's own last
+     * columns, and they appear in the middle of the rendered track rather than
+     * at its end because the clone buffer wraps the run's tail round to sit
+     * beside its head.
+     *
+     * So the extra icon is only spent while there are more left than the floor
+     * will need — one per two of the columns still to come. The floor itself is
+     * never held back by this: `owed` is checked first and spends whatever
+     * remains. What it costs is a handful of icons kept for the end of the run
+     * rather than shown early, which no reader can see, against a barren
+     * stretch every reader who goes round once will.
+     */
+    const want = owed || (credit >= 1 && imagesLeft > columnsLeft / 2);
     /*
      * **The floor reaches as far as it has to; the surplus does not.**
      *
@@ -763,8 +783,33 @@ export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = ca
     const picture = Boolean(pool[seed].image);
     const width = picture ? cardWidth : textWidth;
 
+    /*
+     * **The fill spends icons too, and that is where the reserve leaked.**
+     *
+     * A name column takes names only, which was always written down; a picture
+     * column took whatever fitted, including a second icon — two saints
+     * stacked in one column, which is the pairing of wide icons this packer
+     * shipped with in August and still a good thing to be able to do. What it
+     * is not is free: measured over forty deals, all 130 icons were being
+     * placed in about 114 columns, so they ran out ten columns before the
+     * saints did and the run ended in a stretch of names as long as ten. The
+     * floor could do nothing about it — `owed` was firing, the reach was
+     * unbounded, and there was simply nothing left to find.
+     *
+     * So a picture column may take a *second* icon only while there is still a
+     * surplus over what the floor will need, which is the same test the seed
+     * uses. `spend` keeps `imagesLeft` true within the column as well as
+     * between columns, since a column that takes two must know it after the
+     * first.
+     */
+    const spend = (i) => {
+      taken[i] = true;
+      if (pool[i].image) imagesLeft -= 1;
+    };
+    const surplus = () => imagesLeft > columnsLeft / 2;
+
     const column = [pool[seed]];
-    taken[seed] = true;
+    spend(seed);
     let used = heightOf(pool[seed], width);
     while (column.length < STACK_MAX) {
       // What is left under the last card, once the gap above it is paid for.
@@ -773,26 +818,30 @@ export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = ca
       if (room < MIN_CAPTION) break;
       let pick = -1;
       let scanned = 0;
+      const mayStack = surplus();
       for (let i = cursor; i < pool.length && scanned < LOOKAHEAD; i += 1) {
         if (taken[i]) continue;
         scanned += 1;
-        // A name column takes names only; see the note above the function.
-        if (!picture && pool[i].image) continue;
+        // A name column takes names only; a picture column takes a second
+        // picture only out of the surplus. See the note above this loop.
+        if (pool[i].image && (!picture || !mayStack)) continue;
         if (heightOf(pool[i], width) <= room) {
           pick = i;
           break;
         }
       }
       if (pick < 0) break;
-      taken[pick] = true;
+      spend(pick);
       column.push(pool[pick]);
       used += CELL_GAP + heightOf(pool[pick], width);
     }
     cells.push(column);
     dealt += column.length;
     columns += 1;
+    // `imagesLeft` is already down to date — `spend` keeps it true card by
+    // card, because a column deciding whether to take a *second* icon has to
+    // know it has taken a first.
     const spent = column.reduce((n, item) => n + (item.image ? 1 : 0), 0);
-    imagesLeft -= spent;
     // A column that took a picture has spent the share it earned, however it
     // came by it — the floor and the pacing draw on one purse, or the floor's
     // own columns would be free and the pacing would over-spend by exactly

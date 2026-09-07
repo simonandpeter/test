@@ -2549,6 +2549,19 @@ test('taking hold of the timeline stops the playback', async ({ page }) => {
 /** Every name the last paint actually placed, by slug. */
 const namedOn = async (page) => JSON.parse(await page.locator('[data-map]').getAttribute('data-named'));
 
+/**
+ * The tier the draw pass seated one saint's name by (`rankOf`, views/map/paint.js).
+ *
+ * Lower is better. Published on `data-dots` since 2026-09-07, because the
+ * ranking had only ever been testable sideways — by finding somebody who
+ * outranks the subject and watching the order change — and the corpus moved
+ * under that. `null` where the saint has no mark on the picture this frame.
+ */
+const rankOn = async (page, slug) => {
+  const dots = JSON.parse(await page.locator('[data-map]').getAttribute('data-dots'));
+  return dots.find((d) => d.slug === slug)?.rank ?? null;
+};
+
 const openFilters = async (page) => {
   await page.locator('[data-filter-btn]').click();
   await expect(page.locator('[data-filter-pop]')).toBeVisible();
@@ -2796,14 +2809,36 @@ test('a saint moving along their rail is named while they move', async ({ page }
   }
   expect(
     contest.some((slug) => sung.includes(slug)),
-    'premise: no saint who leads a day is named here, so nothing outranks a standing Moses',
+    'premise: no saint who leads a day is named here, so there is no crowd to lead',
   ).toBe(true);
-  expect(contest.at(-1), 'premise: he is already the first name before he has moved').not.toBe(
-    'moses-the-hungarian',
-  );
+
+  /*
+   * **The tier is read off `data-dots`, not off who beats whom** (2026-09-07).
+   *
+   * Until his hymns were recorded, Moses was the only saint in the corpus with
+   * a rail and no troparion, so a hymned saint outranked him while he stood
+   * still and the moving tier showed itself as a change in *paint order*: the
+   * premise here used to be "he is not already the first name". Giving him his
+   * troparia put him above every hymned saint on his own account —
+   * `rankOf` seats a railed saint ahead of an unrailed one inside a tier — and
+   * nothing in this corpus can outrank a standing, railed, hymned saint any
+   * more. The behaviour never moved; the test lost the thing it was inferring
+   * from, which is the corpus moving under a test rather than a regression.
+   *
+   * So the draw pass publishes the number it seated by. 4 is the hymned tier
+   * with a rail (`(2 + 0) * 2 + 0`); 2 is the moving tier (`1 * 2 + 0`). The
+   * assertion is that his own rank *falls* when he moves, which is the tier
+   * itself and cannot pass with the tier backed out — where paint order now
+   * can, because he is drawn last either way.
+   */
+  expect(await rankOn(page, 'moses-the-hungarian'), 'premise: he is standing, so not in the moving tier').toBe(4);
 
   await page.locator('[data-movement]').check();
   await page.locator('[data-play]').click();
+
+  await expect
+    .poll(async () => rankOn(page, 'moses-the-hungarian'), { timeout: 20000 })
+    .toBe(2);
 
   /*
    * **Last, not merely present.** `data-named` is written in paint order and
