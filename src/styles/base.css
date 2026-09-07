@@ -509,9 +509,15 @@ header.chrome {
      lines of masthead come from: at space-4 the Greek nav wants 261 px of
      580, leaving the name 93 — narrower than «Καθημερινά», so the longest
      word broke. space-2 hands back 24 px, which is enough for every pack's
-     longest word, and the four labels still read as four. */
+     longest word, and the four labels still read as four.
+     **space-1, since Texts joined them** (2026-09-07): a fifth label is a
+     fifth link and a fourth gap, and at space-2 the row ran 2 px over at
+     560 px in Greek — the narrowest overflow this line has ever measured,
+     but still the page running off its own side. space-1 hands back another
+     16 px across the row's four gaps, which the five labels' own reading
+     does not miss the way the wide gap's earlier cut would have. */
   header.chrome .site-nav {
-    gap: var(--space-2);
+    gap: var(--space-1);
   }
 }
 
@@ -803,15 +809,6 @@ nav.site-nav {
   }
 }
 
-/* The four labels give up their gap before they give up the line: at 320 px
-   in Russian «Сегодня Все святые Карта О сайте» wants more than four
-   space-4 gaps leave. */
-@media (max-width: 400px) {
-  nav.site-nav {
-    gap: var(--space-2);
-  }
-}
-
 nav.site-nav a,
 .utility {
   font-family: var(--font-utility);
@@ -879,52 +876,93 @@ nav.site-nav a[aria-current='page'] {
 }
 
 /*
- * On a phone the four pages are a row of equal buttons across the whole
- * screen (author, 2026-08-26 evening: "make the 'Daily', 'All Saints', 'Map'
- * and 'About' buttons equal width and stretch across the whole width of the
- * screen. Make these buttons slightly shorter in height and make the whole
- * button go bold when selected").
+ * On a phone the five pages are an endless, centred strip rather than a fixed
+ * row (author, 2026-09-07: adding Texts between All Saints and Map, "make the
+ * header a horizontal scroll header where the selected one is in the centre,
+ * and you can swipe across to the next or click on it. Infinite scroll
+ * header"). This replaces the equal five-across grid the four-page row used
+ * (author, 2026-08-26 evening) — five labels at one fixed width apiece no
+ * longer read as buttons, they read as a ledger, and the reason for equal
+ * columns (no page favoured over another by width) is kept a different way
+ * here: every page gets the same turn in the centre, not the same box.
  *
- * `1fr` each rather than a flex row, so the four are equal whatever their
- * words are — «Все святые» is three times the width of «Карта» and a flex row
- * sizes each to its own text. The grid breaks out of the header's own inline
- * padding with a negative margin so the row reaches the screen's edges, which
- * is what "across the whole width" asks for and what a flex row inside the
- * padding cannot do.
+ * `main.js`'s `renderNav` supplies the content this reads: the same five
+ * `<a>` the wide row uses, one of them wearing `aria-current`, nothing
+ * cloned — `overflow-x: auto` plus `scroll-snap-type` is the phone's own
+ * swipe, momentum and snap, none of it built here. `ui/nav-scroll.js` centres
+ * the current page on load and, once a swipe settles with an edge page now
+ * centred, moves that page's far neighbour across the DOM to sit beside it —
+ * real rotation, not a buffered clone — nudging `scrollLeft` by the moved
+ * page's own width in the same breath so the move is never seen. A reader
+ * who keeps swiping one way keeps meeting a new page for as long as they
+ * keep swiping, and `document.querySelectorAll('.site-nav a')` stays five
+ * long throughout — the rest of the suite already holds `.site-nav
+ * a[href$="/saints"]` and its like to be exactly one element in a dozen
+ * places, and a cloned loop (this row's first version) broke every one of
+ * them the moment a phone-width test ran.
  *
- * **Bold is the whole button, and the underline goes with it.** The current
- * page was rubric plus an underline on the words; at this size the button
- * *is* the target, so the weight and a tinted field carry it and the rule
- * above the row separates the four. Colour still never carries it alone —
- * `aria-current` says it, and so does the weight.
+ * Full-bleed exactly as the old grid was, breaking out of the header's own
+ * inline padding so the strip's own edges — not any one link's — reach the
+ * screen's sides. The generous `padding-inline` is not a margin of comfort
+ * here the way it would be on a wide row: it is what lets the strip's own
+ * first or last page, whichever the rotation above has just made them, still
+ * reach the centre at all — half a viewport less roughly a label's own width,
+ * since centring a page nearer the true edge than that would ask for a
+ * negative `scrollLeft`, which a scroller simply refuses.
  */
 @media (max-width: 559.98px) {
   nav.site-nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
     gap: 0;
     width: 100vw;
     margin-inline: calc(50% - 50vw);
     border-top: 1px solid var(--rule);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* No visible scrollbar on a strip that is never meant to look like a
+       list with two ends — a reader is meant to read it as a wheel. */
+    scrollbar-width: none;
+    padding-inline: calc(50vw - 3rem);
+    /*
+     * `overflow-anchor: none` already sits on `html` for the reason
+     * base.css's own §5c note gives — Chromium nudging `scrollY` to hold
+     * late-arriving content still — and this strip needs its own copy: each
+     * scrollable element keeps its own anchor, so the document's rule does
+     * not reach inside this one. Found the same way: a label's width moves
+     * once the real face swaps in for the fallback it opened in, the browser
+     * quietly held the reader's read of the row steady by moving
+     * `scrollLeft`, and `ui/nav-scroll.js` read that as a swipe and rotated
+     * the row on a load nobody had touched.
+     */
+    overflow-anchor: none;
+  }
+
+  nav.site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   nav.site-nav a {
+    flex: none;
+    scroll-snap-align: center;
     text-align: center;
-    /* Shorter than the comfortable row above it (author, same instruction):
-       the label's own line plus 3 px either side, which is 25.6 px against
-       the 28 the four-pages test allows at 320 px. 5 px read as a button and
-       measured 29.6 — taller than the bare links it replaced, which is the
-       opposite of what was asked. */
-    padding: 3px var(--space-1);
+    /* Shorter than the comfortable row above it (author, 2026-08-26
+       evening): the label's own line plus 3 px either side, which is 25.6 px
+       against the 28 the four-pages test allowed at 320 px, kept for this
+       row too. 5 px read as a button and measured 29.6 — taller than the
+       bare links it replaced, which is the opposite of what was asked. */
+    padding: 3px var(--space-4);
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   nav.site-nav a[aria-current='page'] {
     font-weight: 700;
     background: var(--field);
     text-decoration: none;
+    border-radius: var(--radius-panel);
   }
 }
 

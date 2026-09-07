@@ -118,6 +118,62 @@
       "uncertainty_km": 15
     }
   ],
+  "track": [
+    {
+      "place": "Thagaste",
+      "from": null,
+      "to": 370,
+      "lat": 36.2864,
+      "lon": 7.9514,
+      "uncertainty_km": 15,
+      "note": "Born 13 November 354. The life read here dates only the baptism and the see; every other year on this track is the Confessions' own chronology, as the standard accounts read it."
+    },
+    {
+      "place": "Carthage",
+      "from": 371,
+      "to": 383,
+      "lat": 36.85,
+      "lon": 10.32,
+      "uncertainty_km": 15,
+      "note": "\"Educated in rhetoric at Carthage\", and teaching there after; the Manichaean years."
+    },
+    {
+      "place": "Rome",
+      "from": 383,
+      "to": 384,
+      "lat": 41.9,
+      "lon": 12.5,
+      "uncertainty_km": 15,
+      "note": "\"Taught in Rome\" — one year, before the Milan chair."
+    },
+    {
+      "place": "Milan",
+      "from": 384,
+      "to": 387,
+      "lat": 45.4642,
+      "lon": 9.19,
+      "uncertainty_km": 15,
+      "note": "The chair of rhetoric, Ambrose, and the baptism of 387 at thirty-two, which the life dates."
+    },
+    {
+      "place": "Thagaste",
+      "from": 388,
+      "to": 390,
+      "lat": 36.2864,
+      "lon": 7.9514,
+      "uncertainty_km": 15,
+      "note": "Home, and the first community."
+    },
+    {
+      "place": "Hippo Regius",
+      "from": 391,
+      "to": null,
+      "lat": 36.8833,
+      "lon": 7.75,
+      "uncertainty_km": 15,
+      "note": "Priest from 391, \"bishop of the small port of Hippo Regius in 395\", \"thirty-five years\"; died with the Vandals at the walls, 28 August 430."
+    }
+  ],
   "historicity": "attested",
   "related": [],
   "text": {

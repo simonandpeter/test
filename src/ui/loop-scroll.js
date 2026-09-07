@@ -135,10 +135,34 @@ const BEHIND = 2;
  * knows which way the row is going and says so.
  */
 export function windowImages(track, { margin = 700, direction = () => 1, inflight = MAX_INFLIGHT } = {}) {
+  /*
+   * **A picture is shown once it has arrived, and not before** (author,
+   * 2026-09-07: "the saint images that are loaded in the carousel fade in,
+   * and those that aren't don't fade in until they are loaded ... With any
+   * incoming items as well, same rule applies"). The `img` opens at opacity
+   * 0 (index.css) and `is-loaded` is what lets it up; it is written on the
+   * picture's own `load`, so a card scrolling in with its picture still on
+   * the wire holds an empty box until the bitmap is really there, and a card
+   * whose picture `release` took back below starts over the same way when the
+   * band reaches it again. The row itself never waits for any of this — the
+   * drift is `loopScroll`'s and starts on the first frame the track is laid
+   * out, pictures or no pictures.
+   */
+  const arrived = (img) => img.classList.add('is-loaded');
+  const onArrived = (e) => arrived(e.currentTarget);
+  const handSource = (img) => {
+    img.addEventListener('load', onArrived, { once: true });
+    img.src = img.dataset.src;
+    // A cached picture can be complete before the listener above is reached
+    // by the event loop; in Chromium `load` still fires, but the class costs
+    // nothing to set twice and a browser that skips the event is covered.
+    if (img.complete && img.naturalWidth) arrived(img);
+  };
+
   if (typeof IntersectionObserver !== 'function') {
     // No observer is not a reason to show an empty row: hand every picture its
     // source at once and behave exactly as the build did before this existed.
-    for (const img of track.querySelectorAll('img[data-src]')) img.src = img.dataset.src;
+    for (const img of track.querySelectorAll('img[data-src]')) handSource(img);
     return () => {};
   }
 
@@ -210,7 +234,7 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
      */
     img.fetchPriority = tier === ON_SCREEN ? 'high' : 'low';
     img.dataset.cxSeq = String((handed += 1));
-    img.src = img.dataset.src;
+    handSource(img);
   };
 
   const release = (img) => {
@@ -218,6 +242,8 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
     // Removing the source aborts a fetch still in flight, so the slot has to
     // come back here as well as through `settle`.
     if (img.__cxRunning) settle(img);
+    img.removeEventListener('load', onArrived);
+    img.classList.remove('is-loaded');
     img.removeAttribute('src');
   };
 

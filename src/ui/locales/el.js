@@ -24,6 +24,7 @@ export const el = {
     calendar: 'Καθημερινά',
     today: 'Σήμερα',
     saints: 'Όλοι οι άγιοι',
+    texts: 'Κείμενα',
     map: 'Χάρτης',
     about: 'Σχετικά',
   },

@@ -101,6 +101,71 @@
       "uncertainty_km": 10
     }
   ],
+  "track": [
+    {
+      "place": "Córdoba",
+      "from": null,
+      "to": 324,
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "uncertainty_km": 10,
+      "note": "Bishop here \"for more than sixty years\"; the year he left for Nicaea is the council's own."
+    },
+    {
+      "place": "Nicaea",
+      "from": 325,
+      "to": 325,
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 10,
+      "note": "The First Ecumenical Council, which the life has him press Constantine to summon and sign first."
+    },
+    {
+      "place": "Córdoba",
+      "from": 326,
+      "to": 346,
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "uncertainty_km": 10,
+      "note": "Between the two councils. The life places nothing else in these years."
+    },
+    {
+      "place": "Sardica",
+      "from": 347,
+      "to": 347,
+      "lat": 42.6977,
+      "lon": 23.3219,
+      "uncertainty_km": 10,
+      "note": "Presided at the council of Sardica in 347 — the life's year, kept as printed."
+    },
+    {
+      "place": "Córdoba",
+      "from": 348,
+      "to": 354,
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "uncertainty_km": 10,
+      "note": "Home again until the exile; 354 is the standard account's edge, not the life's."
+    },
+    {
+      "place": "Sirmium",
+      "from": 355,
+      "to": 357,
+      "lat": 44.97,
+      "lon": 19.61,
+      "uncertainty_km": 15,
+      "note": "\"Exiled to Sirmium\" for defending Athanasius — the life gives the place and no years; 355 to 357 are the standard account's."
+    },
+    {
+      "place": "Córdoba",
+      "from": 358,
+      "to": null,
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "uncertainty_km": 10,
+      "note": "\"Returning to Córdoba he died in 359.\""
+    }
+  ],
   "text": {
     "life": "life.md"
   },

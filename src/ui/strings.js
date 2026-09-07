@@ -71,6 +71,7 @@ export const STRINGS = {
      */
     today: 'Today',
     saints: 'All Saints',
+    texts: 'Texts',
     map: 'Map',
     about: 'About',
   },

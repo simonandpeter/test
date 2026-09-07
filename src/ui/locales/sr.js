@@ -24,6 +24,7 @@ export const sr = {
     calendar: 'Дневно',
     today: 'Данас',
     saints: 'Сви светитељи',
+    texts: 'Текстови',
     map: 'Карта',
     about: 'О сајту',
   },

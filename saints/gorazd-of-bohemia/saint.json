@@ -78,6 +78,62 @@
       }
     }
   ],
+  "track": [
+    {
+      "place": "Hrubá Vrbka",
+      "from": null,
+      "to": 1898,
+      "lat": 48.87,
+      "lon": 17.47,
+      "uncertainty_km": 5,
+      "note": "Born here 26 May 1879. The gymnasium years at Kroměříž are inside this stay and not drawn as one."
+    },
+    {
+      "place": "Olomouc",
+      "from": 1898,
+      "to": 1902,
+      "lat": 49.5938,
+      "lon": 17.2509,
+      "uncertainty_km": 5,
+      "note": "The Catholic theological faculty, 1898 to 1902; ordained in St Wenceslas' cathedral on 5 July 1902. The journey to the Kiev Caves Lavra in 1900 is in the life and not drawn."
+    },
+    {
+      "place": "Kroměříž",
+      "from": 1902,
+      "to": 1920,
+      "lat": 49.2979,
+      "lon": 17.3931,
+      "uncertainty_km": 10,
+      "note": "The parishes of Karlovice and Brumovice from 1902, then chaplain of the psychiatric hospital from 15 September 1906 to 1 May 1920; the 10 km takes in the two parishes."
+    },
+    {
+      "place": "Belgrade",
+      "from": 1921,
+      "to": 1921,
+      "lat": 44.8125,
+      "lon": 20.4612,
+      "uncertainty_km": 40,
+      "note": "Tonsured at Krušedol on Fruška Gora on 21 September 1921 and consecrated in the cathedral of St Michael on the 25th; the 40 km spans the lavra and the city."
+    },
+    {
+      "place": "Olomouc",
+      "from": 1921,
+      "to": 1941,
+      "lat": 49.5938,
+      "lon": 17.2509,
+      "uncertainty_km": 5,
+      "note": "Bishop of Moravia and Silesia, and from 1926 of the Czech diocese too, with his seat here — the missions to America (1922) and Germany (1942) and the years of building a church a year across the parishes are journeys out of it, not drawn."
+    },
+    {
+      "place": "Prague",
+      "from": 1942,
+      "to": null,
+      "lat": 50.0755,
+      "lon": 14.4378,
+      "uncertainty_km": 5,
+      "note": "The cathedral of Cyril and Methodius, the parachutists, the arrest of 25 June 1942 and the execution on 4 September; the body was burned."
+    }
+  ],
   "text": {
     "life": "life.md"
   },

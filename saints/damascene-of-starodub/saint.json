@@ -60,6 +60,116 @@
       "note": "Not on the Православни подсетник’s calendar line for 15.09.2026 (2. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "track": [
+    {
+      "place": "Mayaki",
+      "from": null,
+      "to": 1918,
+      "lat": 46.42,
+      "lon": 30.27,
+      "uncertainty_km": 10,
+      "note": "Born here in 1877. Vladivostok, Kazan, the Peking mission and the Caucasus front of 1914 are in the life without years and are not drawn; the stay runs to the death sentence in Orel province in 1918, which he escaped."
+    },
+    {
+      "place": "Kyiv",
+      "from": 1919,
+      "to": 1919,
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "uncertainty_km": 10,
+      "note": "The St Michael monastery and the academy; hieromonk in 1919."
+    },
+    {
+      "place": "Balaklava",
+      "from": 1920,
+      "to": 1920,
+      "lat": 44.5,
+      "lon": 33.6,
+      "uncertainty_km": 10,
+      "note": "Archimandrite and superior of the St George monastery; arrested with Dimitri (Abashidze) the same year and banished from the Crimea."
+    },
+    {
+      "place": "Starodub",
+      "from": 1923,
+      "to": 1924,
+      "lat": 52.5847,
+      "lon": 32.7636,
+      "uncertainty_km": 10,
+      "note": "Consecrated bishop of Starodub by Patriarch Tikhon on 14 September 1923. Where the years 1921 and 1922 were spent the life does not say, and the leg before this stay is drawn across them."
+    },
+    {
+      "place": "Kharkiv",
+      "from": 1924,
+      "to": 1925,
+      "lat": 49.9935,
+      "lon": 36.2304,
+      "uncertainty_km": 10,
+      "note": "\"Banished to Kharkiv in 1924.\""
+    },
+    {
+      "place": "Moscow",
+      "from": 1925,
+      "to": 1925,
+      "lat": 55.7104,
+      "lon": 37.6323,
+      "uncertainty_km": 10,
+      "note": "Confined to the Danilov monastery from September 1925; arrested that November, the Butyrka."
+    },
+    {
+      "place": "Poloy",
+      "from": 1926,
+      "to": 1928,
+      "lat": 66.0,
+      "lon": 88.0,
+      "uncertainty_km": 250,
+      "note": "Three years' exile in the Turukhansk region — Krasnoyarsk and then Poloy beyond the Arctic Circle, where Kirill (Smirnov) was brought past him in the winter of 1928. The 250 km is that region, not a village."
+    },
+    {
+      "place": "Starodub",
+      "from": 1929,
+      "to": 1929,
+      "lat": 52.5847,
+      "lon": 32.7636,
+      "uncertainty_km": 10,
+      "note": "Freed in November 1928 and received by Sergius in Moscow on the way; \"he settled at Starodub\" and was arrested there that November."
+    },
+    {
+      "place": "Solovki",
+      "from": 1930,
+      "to": 1933,
+      "lat": 65.0246,
+      "lon": 35.7099,
+      "uncertainty_km": 10,
+      "note": "Ten years in the camps, sent here in June 1930, freed in 1933."
+    },
+    {
+      "place": "Kherson",
+      "from": 1933,
+      "to": 1934,
+      "lat": 46.6354,
+      "lon": 32.6169,
+      "uncertainty_km": 100,
+      "note": "The underground communities of Ukraine and Russia, arrested at Kherson in September 1934; the 100 km is a year of travelling between them, drawn from the one place the life names."
+    },
+    {
+      "place": "Arkhangelsk",
+      "from": 1934,
+      "to": 1936,
+      "lat": 64.5401,
+      "lon": 40.5433,
+      "uncertainty_km": 200,
+      "note": "\"Three years in the Northern region\", arrested at Arkhangelsk at the beginning of 1936."
+    },
+    {
+      "place": "Karaganda",
+      "from": 1936,
+      "to": null,
+      "lat": 49.8047,
+      "lon": 73.1094,
+      "uncertainty_km": 30,
+      "note": "The Karaganda camp, and the shooting of 15 September 1937."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

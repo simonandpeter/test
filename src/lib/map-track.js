@@ -61,28 +61,48 @@ const lerp = (a, b, t) => a + (b - a) * t;
  */
 const WANDER = 0.06;
 
-/** How many points a leg is drawn and measured with. Fine enough that the
- *  curve reads as a curve, coarse enough to be cheap in a paint loop. */
-const LEG_STEPS = 24;
+/**
+ * How many points a leg is drawn and measured with.
+ *
+ * **64, from 24** (author, 2026-09-07: the rails "are jagged lines, make them
+ * filleted or NURBS, with hard corners only at destinations"). The curve
+ * itself was always smooth — a sine under a sine envelope — and what read as
+ * jagged was two things layered: five bends in a leg sampled at fewer than
+ * five points per bend, and every sample joined to the next with a straight
+ * `lineTo`, which at 240× is a fifty-pixel facet. The harmonics came down
+ * (`wobbleOf`), the sampling went up, and `views/map/paint.js` now strokes
+ * each leg as a spline through these points rather than a polyline between
+ * them — within a leg only, so a stay is still the corner the reader asked to
+ * keep. `pointOn`, which the dot rides, is the same analytic curve at any
+ * `t`, so denser sampling changes what is drawn and nothing about where the
+ * dot is.
+ */
+const LEG_STEPS = 64;
 
 /**
- * A leg's own wobble, derived from its two endpoints and nothing else.
+ * A leg's own bend, derived from its two endpoints and nothing else.
  *
  * Deterministic on purpose: a random one would redraw a different road on
- * every frame, and the dot — which rides the same curve — would jitter. Two
- * harmonics rather than one so the line bends more than once, and integer
- * harmonics so it closes cleanly at both stays.
+ * every frame, and the dot — which rides the same curve — would jitter.
+ *
+ * **One bend and a half, not five** (2026-09-07). Until today `k1` was 2–3
+ * and `k2` 4–5, which under the envelope made a leg wriggle four or five
+ * times between its stays — a squiggle rather than a road, and the author's
+ * "jagged". A first harmonic is one bow to one side or an S, depending on
+ * its phase; the second, at half weight, is the one extra inflection that
+ * keeps a long leg from reading as a compass arc. Both are still integer
+ * harmonics, so the curve still meets both stays exactly.
  */
 function wobbleOf(a, b) {
-  // A cheap hash of the four coordinates, spread into two phases and two
-  // harmonics. The numbers are arbitrary; being *stable* is the whole point.
+  // A cheap hash of the four coordinates, spread into two phases. The numbers
+  // are arbitrary; being *stable* is the whole point.
   const seed = Math.abs(Math.sin(a.lon * 12.9898 + a.lat * 78.233 + b.lon * 37.719 + b.lat * 4.1414) * 43758.5453);
   const frac = (n) => n - Math.floor(n);
   return {
     phase1: frac(seed) * Math.PI * 2,
     phase2: frac(seed * 7.13) * Math.PI * 2,
-    k1: 2 + Math.floor(frac(seed * 3.77) * 2),
-    k2: 4 + Math.floor(frac(seed * 11.9) * 2),
+    k1: 1,
+    k2: 2,
   };
 }
 
@@ -126,15 +146,33 @@ export function pointOnLeg(a, b, t) {
  * that happen to agree at the ends.
  */
 export function trackPath(track) {
+  const legs = trackLegs(track);
+  // Each leg opens on the stay the previous one closed on; the flat path
+  // holds every stay once.
+  return legs.flatMap((leg, i) => (i ? leg.slice(1) : leg));
+}
+
+/**
+ * The same run, kept as one array of points per leg — each from its own
+ * first stay to its own last, so consecutive legs share the stay between
+ * them. The painter smooths *within* a leg and breaks *between* them: a stay
+ * is a place someone arrived at and left from, and the road turning a hard
+ * corner there is the truth of that, where a curve rounded through it would
+ * draw them sailing past the town.
+ */
+export function trackLegs(track) {
   if (!track?.length) return [];
-  const out = [{ lon: track[0].lon, lat: track[0].lat }];
+  const legs = [];
   for (let i = 1; i < track.length; i++) {
+    const leg = [{ lon: track[i - 1].lon, lat: track[i - 1].lat }];
     for (let step = 1; step <= LEG_STEPS; step++) {
       const { lon, lat } = pointOnLeg(track[i - 1], track[i], step / LEG_STEPS);
-      out.push({ lon, lat });
+      leg.push({ lon, lat });
     }
+    legs.push(leg);
   }
-  return out;
+  if (!legs.length) legs.push([{ lon: track[0].lon, lat: track[0].lat }]);
+  return legs;
 }
 
 /**

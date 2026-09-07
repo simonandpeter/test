@@ -20,6 +20,7 @@ import { mountLanguageControl } from './ui/language-chooser.js';
 import { mountCoachmarks } from './ui/coachmark.js';
 import { currentLanguage, ensurePack, languageTag, subscribeLanguage } from './lib/i18n.js';
 import { registerServiceWorker } from './lib/offline.js';
+import { wireNavScroll } from './ui/nav-scroll.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -112,28 +113,66 @@ function paintDailyLabel(fade = true) {
   }, 140);
 }
 
+const NAV_KEYS = ['calendar', 'saints', 'texts', 'map', 'about'];
+
+function navHref(key) {
+  return key === 'calendar' ? '/' : `/${key}`;
+}
+
+/** One `<a>`, exactly one of which ever wears `aria-current` on a given render. */
+function navLinkHTML(key, current) {
+  const cur = key === current ? ' aria-current="page"' : '';
+  const daily = key === 'calendar' ? ' data-nav-daily' : '';
+  const text =
+    key === 'calendar'
+      ? `<span class="nav-label" data-nav-label>${STRINGS.nav.calendar}</span>`
+      : STRINGS.nav[key];
+  return `<a href="${router.href(navHref(key))}"${cur}${daily}>${text}</a>`;
+}
+
+/**
+ * Whatever `wireNavScroll` set up for the current render, if any — a phone's
+ * own strip only, torn down and rebuilt with the markup on every navigation
+ * exactly as the markup itself is. `renderNav` always builds the same five
+ * links either way (author, 2026-09-07, "an infinite scroll header" on a
+ * phone): `ui/nav-scroll.js`'s own loop is real DOM rotation, not buffered
+ * clones, precisely so `.site-nav a[href$="/saints"]` and its like stay the
+ * one element the rest of this file — and the whole suite — already hold
+ * them to be, at every width.
+ */
+let navScroll = null;
+
 function renderNav(current) {
   // The span the fade was working on is about to be replaced, so nothing is
   // in flight any more.
   clearTimeout(fadeTimer);
   pendingWord = null;
-  navEl.innerHTML = ['calendar', 'saints', 'map', 'about']
-    .map((key) => {
-      const to = key === 'calendar' ? '/' : `/${key}`;
-      const cur = key === current ? ' aria-current="page"' : '';
-      const mark = key === 'calendar' ? ' data-nav-daily' : '';
-      const text =
-        key === 'calendar'
-          ? `<span class="nav-label" data-nav-label>${STRINGS.nav.calendar}</span>`
-          : STRINGS.nav[key];
-      return `<a href="${router.href(to)}"${cur}${mark}>${text}</a>`;
-    })
-    .join('');
+  navScroll?.destroy();
+  navScroll = null;
+
+  navEl.innerHTML = NAV_KEYS.map((key) => navLinkHTML(key, current)).join('');
+  // Below the nav's own breakpoint (559.98px, base.css) the row is a
+  // horizontal strip rather than a plain line; wiring it outside that width
+  // would measure a track CSS never made scrollable.
+  if (matchMedia('(max-width: 559.98px)').matches) navScroll = wireNavScroll(navEl);
   // Leaving the Daily page puts the word back without a fade: the button the
   // reader pressed has already gone somewhere, and a word changing after the
   // page has is a second event where there was one.
   paintDailyLabel(current === 'calendar');
 }
+
+// A window crossing the nav's own breakpoint without a navigation — a
+// rotation, a resized devtools pane — still has to wire or unwire the strip;
+// a navigation rebuilds the row from scratch anyway, so this only checks for
+// the one thing that changes the row's own shape rather than rebuilding on
+// every pixel of a live drag-resize.
+let navNarrow = matchMedia('(max-width: 559.98px)').matches;
+window.addEventListener('resize', () => {
+  const narrow = matchMedia('(max-width: 559.98px)').matches;
+  if (narrow === navNarrow) return;
+  navNarrow = narrow;
+  if (lastRoute) renderNav(lastRoute.nav);
+});
 
 /**
  * A fixed span home, however far down the reader was (2026-08-27: "make sure

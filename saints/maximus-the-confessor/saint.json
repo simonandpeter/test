@@ -59,6 +59,62 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "track": [
+    {
+      "place": "Constantinople",
+      "from": null,
+      "to": 633,
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15,
+      "note": "Born here about 580, first secretary to Heraclius, then a monk at Chrysopolis across the Bosphorus — the same coordinate at this map's scale. 633 is the year the life gives for his leaving for Alexandria."
+    },
+    {
+      "place": "Alexandria",
+      "from": 633,
+      "to": 639,
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 25,
+      "note": "\"Some six years in and around Alexandria\" from 633, so 639 is arithmetic on the life's own phrase rather than a year it states; the 25 km is the \"around\"."
+    },
+    {
+      "place": "Carthage",
+      "from": 640,
+      "to": 645,
+      "lat": 36.85,
+      "lon": 10.32,
+      "uncertainty_km": 15,
+      "note": "The life dates only the dispute with Pyrrhus, June 645. The arrival is drawn at 640, the year after the Alexandrian six ran out; nothing read here says when he crossed."
+    },
+    {
+      "place": "Rome",
+      "from": 646,
+      "to": 653,
+      "lat": 41.9,
+      "lon": 12.5,
+      "uncertainty_km": 15,
+      "note": "He went with Pyrrhus to Rome after the dispute and sat at the Lateran council of October 649; Constans had him and the pope seized in 654. 646 and 653 are the edges of what the life places at Rome, not years it prints."
+    },
+    {
+      "place": "Constantinople",
+      "from": 654,
+      "to": 661,
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15,
+      "note": "Prison, trial and torture. The exile to Thrace in 656 and the return to a Constantinople prison are too short a journey to draw honestly and are in the life in words; the stay runs to the year before the last exile."
+    },
+    {
+      "place": "Lazica",
+      "from": 662,
+      "to": null,
+      "lat": 42.65,
+      "lon": 42.77,
+      "uncertainty_km": 150,
+      "note": "\"He died in exile in 662\" is all the life read here says. The place is the standard account's — the fortress of Schemaris in Lazica, on the Black Sea's eastern shore — and the corpus does not otherwise record it, which is what the 150 km is: a region named by a source outside this folder, not a doubt about the exile."
+    }
+  ],
   "text": {
     "life": "life.md"
   },

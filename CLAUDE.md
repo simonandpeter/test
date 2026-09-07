@@ -628,7 +628,10 @@ saint with a track eases — a saint without one does not travel between their
 own places, they are simply recorded at each. Reduced motion arrives instead.
 
 **The legs are drawn, not sourced**, and each waypoint's own `note` says so.
-Moses the Hungarian is the one saint who carries a track today: Hungary until
+Ten saints carry a track since 2026-09-07 (Amendment 104; John Chrysostom was
+the second, and `scripts/track-candidates.mjs` reads every life for the next),
+each waypoint's `note` saying which years the life states and which the track
+infers. Moses the Hungarian's was the first: Hungary until
 1000 (his birth interval's own latest, the only bound the corpus states about
 him before 1015 — the year he left is unrecorded and the crossing to Rus' is
 drawn over the years that follow), Kyiv 1015–1018 (the three years of hiding

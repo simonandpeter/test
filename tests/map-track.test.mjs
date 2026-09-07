@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { lifeBounds, pointOn, pointOnLeg, progressAt, trackAt, trackPath } from '../src/lib/map-track.js';
+import { lifeBounds, pointOn, pointOnLeg, progressAt, trackAt, trackLegs, trackPath } from '../src/lib/map-track.js';
 
 /*
  * The map's reading of a life in time. Both halves exist because of the same
@@ -198,6 +198,59 @@ test('the drawn road and the dot are the same curve', () => {
     return d < best.d ? { d, p } : best;
   }, { d: Infinity, p: null });
   assert.ok(nearest.d < 0.2, 'the dot is not on the line the reader sees');
+});
+
+test('a leg is one gentle bend, sampled finely enough to stroke as a curve', () => {
+  /*
+   * Author, 2026-09-07: the rails "are jagged lines, make them filleted or
+   * NURBS, with hard corners only at destinations." Two things read as
+   * jagged and both are pinned here: the road crossed the straight line four
+   * or five times a leg (harmonics of 2–3 and 4–5), and it was sampled at 24
+   * points, fewer than five per bend. One-and-a-half bends and 64 samples is
+   * a curve the painter can spline; what is checked is the shape, not the
+   * numbers — how often the road crosses its own chord.
+   */
+  const [a, b] = MOSES;
+  let crossings = 0;
+  let last = 0;
+  for (let t = 0.02; t < 1; t += 0.02) {
+    const p = pointOnLeg(a, b, t);
+    const straightLon = a.lon + (b.lon - a.lon) * t;
+    const straightLat = a.lat + (b.lat - a.lat) * t;
+    // Which side of the chord, by the sign of the cross product.
+    const side = Math.sign((b.lon - a.lon) * (p.lat - straightLat) - (b.lat - a.lat) * (p.lon - straightLon));
+    if (last && side && side !== last) crossings += 1;
+    if (side) last = side;
+  }
+  assert.ok(crossings <= 2, `the road crosses its own chord ${crossings} times — a squiggle, not a bend`);
+  // Dense enough that no two neighbouring samples are more than a fiftieth
+  // of the leg apart, which is what lets a spline through them read as one.
+  const leg = trackLegs([a, b])[0];
+  const length = Math.hypot(b.lon - a.lon, b.lat - a.lat);
+  for (let i = 1; i < leg.length; i++) {
+    const d = Math.hypot(leg[i].lon - leg[i - 1].lon, leg[i].lat - leg[i - 1].lat);
+    assert.ok(d < length / 50, `samples ${i - 1} and ${i} are ${d} apart on a leg of ${length}`);
+  }
+});
+
+test('the legs share their stays, and the flat path holds each stay once', () => {
+  /*
+   * The painter smooths within a leg and breaks between them (a stay is a
+   * hard corner, on purpose), so each leg has to carry both of its own ends;
+   * `trackPath`, which the flight's framing and the tests above read, must
+   * not then hold the shared stay twice.
+   */
+  const legs = trackLegs(MOSES);
+  assert.equal(legs.length, MOSES.length - 1);
+  for (let i = 1; i < legs.length; i++) {
+    assert.deepEqual(legs[i][0], legs[i - 1].at(-1), `leg ${i} does not open where leg ${i - 1} closed`);
+  }
+  assert.deepEqual(legs[0][0], { lon: MOSES[0].lon, lat: MOSES[0].lat });
+  assert.deepEqual(legs.at(-1).at(-1), { lon: MOSES.at(-1).lon, lat: MOSES.at(-1).lat });
+  const flat = trackPath(MOSES);
+  assert.equal(flat.length, legs.reduce((n, leg) => n + leg.length, 0) - (legs.length - 1));
+  // And a single stay is a single point, not an empty road.
+  assert.deepEqual(trackLegs([MOSES[0]]), [[{ lon: MOSES[0].lon, lat: MOSES[0].lat }]]);
 });
 
 test('progress is a place on the track, not a position', () => {

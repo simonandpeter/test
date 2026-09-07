@@ -329,8 +329,11 @@ function toCard(saint, dir) {
    * notes stay in the folder for the same reason `locations` drops
    * `historical_name`: the map labels a track with the saint's own name, and
    * everything else on a waypoint is reading, which the saint's page fetches.
-   * One saint carries a track today, so this is four objects in the whole
-   * manifest — watch the size projection if that stops being true.
+   * Ten saints carry a track since 2026-09-07 (it was one, then two), about
+   * seventy waypoints in the whole manifest — the projection at 5,000 saints
+   * moved from 354 to 360 KB gzipped for them, against the 400 KB budget.
+   * `scripts/track-candidates.mjs` is where the next ones come from; watch
+   * the projection as they do.
    */
   const track = (saint.track ?? []).map((w) => ({
     from: w.from ?? null,

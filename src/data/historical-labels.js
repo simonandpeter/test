@@ -4,7 +4,9 @@
  * the rest (author, 2026-09-05: "add a faint layer of text with the location
  * names, the main locations, Alexandria, Damascus, Antioch, Constantinople,
  * Nicomedia, Laodicea, Cappadocia, Anatolia, Rome, Italy, old cities and
- * regions as well").
+ * regions as well"). **Damascus came off the list on 2026-09-07** at the
+ * author's word — it was in that first list and is in `data/places.js` still,
+ * so the search can fly there; it is only no longer printed on the ground.
  *
  * **Deliberately separate from `data/places.js`**, even where a coordinate
  * repeats: that file is a search gazetteer, read only in answer to what a
@@ -35,7 +37,6 @@ export const HISTORICAL_LABELS = [
   { name: 'Nicomedia', kind: 'city', lon: 29.92, lat: 40.77 },
   { name: 'Antioch', kind: 'city', lon: 36.16, lat: 36.2 },
   { name: 'Alexandria', kind: 'city', lon: 29.92, lat: 31.2 },
-  { name: 'Damascus', kind: 'city', lon: 36.29, lat: 33.51 },
   { name: 'Laodicea', kind: 'city', lon: 29.11, lat: 37.84 },
   { name: 'Rome', kind: 'city', lon: 12.5, lat: 41.9 },
   { name: 'Jerusalem', kind: 'city', lon: 35.22, lat: 31.78 },

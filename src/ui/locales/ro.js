@@ -24,6 +24,7 @@ export const ro = {
     calendar: 'Zilnic',
     today: 'Astăzi',
     saints: 'Toți sfinții',
+    texts: 'Texte',
     map: 'Hartă',
     about: 'Despre',
   },

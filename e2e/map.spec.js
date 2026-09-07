@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures.js';
-import { ready } from './helpers.js';
+import { ready, TRACKED } from './helpers.js';
 
 /**
  * The map (Session 7, 2026-08-29). One file per surface, as the rest of the
@@ -170,9 +170,12 @@ test('a faint atlas layer names the old cities and regions under the saints', as
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
   const atRest = JSON.parse(await canvas.getAttribute('data-historical'));
-  for (const city of ['Constantinople', 'Nicomedia', 'Antioch', 'Alexandria', 'Damascus', 'Rome']) {
+  for (const city of ['Constantinople', 'Nicomedia', 'Antioch', 'Alexandria', 'Rome']) {
     expect(atRest, `${city} is named at rest`).toContain(city);
   }
+  // Damascus was in the author's first list and came off it on 2026-09-07;
+  // it is still in the search gazetteer, only no longer printed on the ground.
+  expect(atRest, 'Damascus is no longer printed').not.toContain('Damascus');
   for (const region of ['Anatolia', 'Cappadocia', 'Italy']) {
     expect(atRest, `${region} is named at rest`).toContain(region);
   }
@@ -1470,17 +1473,20 @@ test('the year buttons hold one width whatever year they show', async ({ page })
 
   /*
    * At rest the two ends already differ in digit count — the corpus runs 30
-   * to 1938 — so they are the pair to compare, and no interaction is needed
+   * to 1994 — so they are the pair to compare, and no interaction is needed
    * to make the point.
    *
    * The low end was 66 (Euodus of Antioch) until 2026-09-02, when Clement,
    * apostle of the Seventy, was dated: the Russian calendar prints "(I)" for
    * him, and the corpus's own rule for a first-century Christian bounds that
-   * at 30 rather than at the century's first year. Still two digits against
-   * the far end's four, which is all this test needs of it.
+   * at 30 rather than at the century's first year. The high end was 1938
+   * until 2026-09-07, when Paisios the Athonite (d. 1994) was given a track
+   * and so a place on the map — the span is the *located* corpus's, and he
+   * had no `locations` before that. Still two digits against the far end's
+   * four, which is all this test needs of it.
    */
   await expect(from).toHaveText('30 AD');
-  await expect(to).toHaveText('1938 AD');
+  await expect(to).toHaveText('1994 AD');
   const narrow = (await from.boundingBox()).width;
   const wide = (await to.boundingBox()).width;
   expect(wide, 'a four-digit year made its button wider than a two-digit one').toBeCloseTo(narrow, 0);
@@ -2178,9 +2184,15 @@ test('the chosen saint is named whatever the zoom, since the button sits beside 
    * over its whole rail"), which changes the zoom and so takes the "whatever
    * the zoom" out of the test. A saint with nothing to frame keeps the
    * reader's own scale, which is the case this was always about.
+   *
+   * **Read off the manifest, not named** (2026-09-07). This excluded Moses by
+   * slug while he was the only saint with a rail; ten carry one now and the
+   * first lone mark on the resting picture was one of them, so the press
+   * framed a rail and read 14.8×. `TRACKED` is whoever the built manifest
+   * says has a track, which is the thing the exclusion was always about.
    */
   const alone = JSON.parse(await canvas.getAttribute('data-dots')).find(
-    (d) => d.n === 1 && d.slug !== 'moses-the-hungarian',
+    (d) => d.n === 1 && !TRACKED.has(d.slug),
   );
   expect(alone, 'premise: every mark on the resting map stands for a crowd').toBeTruthy();
 

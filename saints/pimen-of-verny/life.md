@@ -11,7 +11,8 @@ hieromartyr was formed — Metropolitan Arsenius of Novgorod called him a
 pupil of the Kronstadt pastor. After the Novgorod seminary in 1900 he went
 to the Kyiv academy and finished among the best in 1904, with a thesis on
 the councils’ use of the church writers; while still a student, on 7 August
-1903, he was tonsured Pimen for the much-suffering Pimen of the Kyiv Caves,
+1903, he was tonsured Pimen for the much-suffering [Pimen of the Kyiv
+Caves](/saints/pimen-the-faster-of-the-caves),
 and his spiritual father, Metropolitan Flavian of Kyiv, blessed him for
 mission. Ordained priest on 3 June 1904, he was sent to the Urmia mission in
 north-west Persia — meeting first, in Petersburg, its former head Kirill

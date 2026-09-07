@@ -1368,6 +1368,91 @@ html.is-rolling #view {
   height: 100%;
   max-height: var(--cx-max-h);
   object-fit: cover;
+  /*
+   * **Up only once the bitmap is there** (author, 2026-09-07: "the saint
+   * images that are loaded in the carousel fade in, and those that aren't
+   * don't fade in until they are loaded"). `is-loaded` is written by
+   * `windowImages` on the picture's own `load` and taken off again when the
+   * band releases it, so a card coming round a second time fades in a second
+   * time. The box keeps its size throughout — `width`/`height` on the `img`
+   * are what hold it open with no picture in it — so nothing reflows when
+   * the picture lands, only shows.
+   */
+  opacity: 0;
+  transition: opacity 480ms var(--ease);
+}
+
+.cx-media img.is-loaded {
+  opacity: 1;
+}
+
+/*
+ * **And the words come up around them, at their own moments** (author, same
+ * instruction: "the text sporadically fades in around the saint images as
+ * well until it's all filled in"). Each card carries a `--cx-delay` of its
+ * own, dealt in views/index/modes.js from the saint's slug — so the scatter
+ * is the same on every build of the same row, and a test reading it twice
+ * reads the same thing — and the caption runs a short fade after it. An
+ * animation rather than a transition, so it plays from the card's first
+ * paint with no class to flip: a card built off-screen has finished by the
+ * time the row carries it in, which is exactly "loaded" for a word.
+ *
+ * **A mask, not `opacity`** — CLAUDE.md's own house rule, met here the way
+ * it was first met: "a decorative fade is still text; `opacity` on a colour
+ * is a new colour and axe reads it." The first cut of this faded `opacity`
+ * and the quality floor's axe pass read 373 contrast failures on the row,
+ * every one a caption caught mid-fade at #999389 or lighter on the gesso.
+ * The mask's alpha goes from 0 to 1 instead and the colour never changes.
+ *
+ * **The alpha is a registered custom property, because two gradients do not
+ * interpolate.** The second cut animated `mask-image` itself from a
+ * transparent gradient to a black one, and Chromium cut from one to the
+ * other at the halfway point — measured at 120 ms intervals, every caption
+ * read either fully masked or fully shown and nothing between. A `@property`
+ * with a `<number>` syntax is what the engine knows how to tween; the
+ * gradient reads it through `var()` every frame, so the mask really does
+ * fade. An engine without `@property` (Firefox before 128, Safari before
+ * 16.4) falls back to the same halfway cut, which is a shorter fade rather
+ * than a wrong word.
+ */
+@property --cx-cap-a {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes cx-caption-in {
+  from {
+    --cx-cap-a: 0;
+  }
+  to {
+    --cx-cap-a: 1;
+  }
+}
+
+.cx-card .cx-name,
+.cx-card .cx-sub {
+  --cx-cap-a: 0;
+  -webkit-mask-image: linear-gradient(rgb(0 0 0 / var(--cx-cap-a)), rgb(0 0 0 / var(--cx-cap-a)));
+  mask-image: linear-gradient(rgb(0 0 0 / var(--cx-cap-a)), rgb(0 0 0 / var(--cx-cap-a)));
+  animation: cx-caption-in 420ms var(--ease) forwards;
+  animation-delay: var(--cx-delay, 0ms);
+}
+
+/* Reduced motion removes the animation, never shortens it (DESIGN.md §6): the
+   words stand from the first frame, and a picture still waits for its
+   bitmap but arrives without the fade. */
+@media (prefers-reduced-motion: reduce) {
+  .cx-media img {
+    transition: none;
+  }
+
+  .cx-card .cx-name,
+  .cx-card .cx-sub {
+    animation: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }
 
 /* The blank keeps a box so an imageless saint is still a card rather than a

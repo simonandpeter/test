@@ -774,10 +774,17 @@ test('the site is named in the reader\u2019s own language, and the habit page is
    * the *base* word, so it is read where the base word is what shows: on
    * today itself, and on any page that is not the Daily one.
    */
+  /*
+   * `[aria-current="page"]` rather than `.first()` of every `href$="/"` link
+   * (2026-09-07): the phone's endless nav (`ui/nav-scroll.js`) renders the
+   * calendar link twice more as plain, non-fading buffered clones, and
+   * `.first()` in DOM order meets one of those before the one real link that
+   * ever wears `Today`. Exactly one link answers `aria-current` at any width.
+   */
   await page.goto(await aDayThatIsNotToday(page), { waitUntil: 'networkidle' });
-  await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Today');
+  await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveText('Today');
   await page.goto('/', { waitUntil: 'networkidle' });
-  await expect(page.locator('.site-nav a[href$="/"]').first()).toHaveText('Daily');
+  await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveText('Daily');
   await expect(page.locator('.site-nav')).not.toContainText('Calendar');
 });
 
@@ -1124,6 +1131,17 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
     await page.evaluate(() => document.fonts.ready);
     for (const width of [320, 360, 480, 560, 700, 1280]) {
       await page.setViewportSize({ width, height: 900 });
+      /*
+       * Crossing the nav's own 559.98px breakpoint rebuilds the row —
+       * `main.js`'s endless strip on one side, the plain row on the other —
+       * off a `resize` listener, which is a real DOM event and so fires a
+       * tick after `setViewportSize` resolves rather than inside it. A test
+       * that measured in the same tick read the *outgoing* shape at the new
+       * width: fifteen buffered links, most of them clones, laid out as a
+       * plain nowrap row well past 560 px. A double frame is the same wait
+       * this file already gives a style or font change elsewhere to land.
+       */
+      await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
       const seen = await page.evaluate(() => {
         const nav = document.querySelector('.site-nav');
         const links = [...nav.querySelectorAll('a')];
@@ -1148,7 +1166,14 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
       const where = `${language} at ${width}`;
       expect(seen.rows, where).toBe(1);
       expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
-      expect(seen.overhang, where).toBeLessThan(1);
+      /*
+       * Below the nav's own breakpoint (559.98px, base.css) the row is
+       * `ui/nav-scroll.js`'s endless strip (2026-09-07), and its links
+       * legitimately run past the track's own right edge — that overflow is
+       * contained (`overhang`'s premise) rather than absent, which is what
+       * `seen.doc` below still catches if it ever leaked onto the page.
+       */
+      if (width >= 560) expect(seen.overhang, where).toBeLessThan(1);
       /*
        * Not `toBe(0)` since 2026-09-01. Past 1024 px the root holds the
        * scrollbar's room open on every route (`scrollbar-gutter: stable`,
@@ -1608,14 +1633,16 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await expect(page.locator('.week-strip button.is-today')).toHaveAttribute('aria-current', 'date');
 });
 
-test('the header is sticky, shorter, and the phone gets four equal pages', async ({ page }) => {
+test('the header is sticky, shorter, and the phone gets an endless centred nav', async ({ page }) => {
   /*
    * Three of the evening's instructions, which are one bar: "Make the site
    * header a sticky header", "make the header slightly shorter in height by
-   * cropping more from the top margin", and — on a phone — "make the 'Daily',
-   * 'All Saints', 'Map' and 'About' buttons equal width and stretch across
-   * the whole width of the screen … slightly shorter in height … and make the
-   * whole button go bold when selected".
+   * cropping more from the top margin", and — on a phone, 2026-09-07, once
+   * Texts joined the other four — "make the header a horizontal scroll header
+   * where the selected one is in the centre, and you can swipe across to the
+   * next or click on it. Infinite scroll header." (Desktop keeps the plain
+   * row the 2026-08-26 instruction first pinned; only the phone's own shape
+   * changed, which is why that part of this test changed with it.)
    */
   /*
    * 900 rather than 1280 since 2026-09-01: past 1024 the chrome is deliberately
@@ -1649,34 +1676,87 @@ test('the header is sticky, shorter, and the phone gets four equal pages', async
   // And it is opaque, or the page reads straight through it.
   await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 
-  // The phone's nav: four equal buttons, edge to edge.
+  // The phone's nav: a strip, edge to edge, with the current page centred on
+  // it — exactly five links, the same five the wide row has, never cloned
+  // (`ui/nav-scroll.js`'s own note on why: the rest of the suite already
+  // holds `.site-nav a[href$="/saints"]` to be one element in a dozen places).
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const nav = await page.evaluate(() => {
-    const links = [...document.querySelectorAll('.site-nav a')];
-    const boxes = links.map((a) => a.getBoundingClientRect());
-    const current = links.find((a) => a.getAttribute('aria-current') === 'page');
+    const track = document.querySelector('.site-nav');
+    const box = track.getBoundingClientRect();
+    const currents = [...track.querySelectorAll('a[aria-current="page"]')];
+    const c = currents[0]?.getBoundingClientRect();
     return {
-      widths: boxes.map((b) => Math.round(b.width)),
-      left: Math.round(Math.min(...boxes.map((b) => b.left))),
-      right: Math.round(Math.max(...boxes.map((b) => b.right))),
+      left: Math.round(box.left),
+      right: Math.round(box.right),
       viewport: document.documentElement.clientWidth,
-      height: Math.round(boxes[0].height),
-      weight: current ? getComputedStyle(current).fontWeight : null,
-      field: current ? getComputedStyle(current).backgroundColor : null,
+      currentCount: currents.length,
+      currentMid: c ? Math.round(c.left + c.width / 2) : null,
+      trackMid: Math.round(box.left + box.width / 2),
+      height: c ? Math.round(c.height) : null,
+      weight: currents[0] ? getComputedStyle(currents[0]).fontWeight : null,
+      field: currents[0] ? getComputedStyle(currents[0]).backgroundColor : null,
+      linkCount: track.querySelectorAll('a').length,
+      // The generous `padding-inline` (base.css) is what makes even five
+      // items wider than the box, so the strip has somewhere to swipe to.
+      canScroll: track.scrollWidth > track.clientWidth,
     };
   });
-  expect(new Set(nav.widths).size, `widths ${nav.widths.join(', ')}`).toBe(1);
-  expect(nav.left, 'the row starts at the screen edge').toBe(0);
+  expect(nav.left, 'the strip starts at the screen edge').toBe(0);
   expect(nav.right, 'and ends at it').toBe(nav.viewport);
-  // Shorter than the buttons a comfortable padding would give, and shorter
-  // than the 28 px the four-pages test allows at 320.
-  expect(nav.height, `the buttons are ${nav.height} px`).toBeLessThan(28);
-  // The whole button carries the current page, in weight and in a field —
-  // never in colour alone, and `aria-current` says it besides.
+  expect(nav.currentCount, 'more than one link claimed to be current').toBe(1);
+  expect(Math.abs(nav.currentMid - nav.trackMid), 'the current page is not centred').toBeLessThan(6);
+  expect(nav.linkCount, 'a phone should not see more or fewer than the five pages').toBe(5);
+  expect(nav.canScroll, 'the strip does not scroll').toBe(true);
+  // Shorter than the comfortable row a desktop's own padding gives, and
+  // shorter than the 28 px the four-pages test allowed at 320.
+  expect(nav.height, `the current page reads ${nav.height} px tall`).toBeLessThan(28);
+  // The current page carries weight and a field — never colour alone — and
+  // `aria-current` says it besides.
   expect(Number(nav.weight)).toBeGreaterThanOrEqual(700);
   expect(nav.field).not.toBe('rgba(0, 0, 0, 0)');
+
+  // A tap on a neighbour — not the centred page — still opens it, same as
+  // any other link on the site. Exactly one match, or this throws.
+  const map = page.locator('.site-nav a[href$="/map"]');
+  await map.scrollIntoViewIfNeeded();
+  await map.click();
+  await expect(page).toHaveURL(/\/map$/);
+
+  // And the loop is real: dragging the strip to its own rendered end and
+  // letting the gesture settle brings a fifth page across the DOM to sit
+  // beside it (`ui/nav-scroll.js`'s `rotate`), rather than leaving a blank
+  // run-off — and the count of distinct pages on the strip never changes.
+  await page.goto('/map', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const before = await page.evaluate(() => document.querySelector('.site-nav').outerHTML);
+  await page.evaluate(() => {
+    const track = document.querySelector('.site-nav');
+    // `ui/nav-scroll.js` only ever rotates in answer to a `pointerdown` or
+    // `wheel` it has itself seen on the track — a `scrollLeft` write alone,
+    // this test's own or the browser's own late correction of one, is not
+    // enough, on purpose (its own header explains the regression that rule
+    // fixed). A `wheel` event is the cheapest of the two to synthesise.
+    track.dispatchEvent(new WheelEvent('wheel'));
+    track.scrollLeft = track.scrollWidth; // past the true trailing edge
+    track.dispatchEvent(new Event('scrollend'));
+  });
+  await expect
+    .poll(() => page.evaluate(() => document.querySelector('.site-nav').outerHTML))
+    .not.toBe(before);
+  const after2 = await page.evaluate(() => {
+    const track = document.querySelector('.site-nav');
+    return {
+      count: track.querySelectorAll('a').length,
+      keys: new Set([...track.querySelectorAll('a')].map((a) => new URL(a.href).pathname)).size,
+      inBounds: track.scrollLeft >= 0 && track.scrollLeft <= track.scrollWidth - track.clientWidth,
+    };
+  });
+  expect(after2.count, 'the rotation dropped or duplicated a link').toBe(5);
+  expect(after2.keys, 'the rotation lost one of the five distinct pages').toBe(5);
+  expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
 });
 
 test('a coachmark is shown once, and a guess is still not an answer', async ({ page }) => {

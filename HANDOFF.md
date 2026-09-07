@@ -46,17 +46,28 @@ you inferred, and keep them apart.
   the start of 2026-08-30 evening; Amendments 84-87, and 28 more on
   2026-09-01 from `scripts/place-candidates.mjs` — the martyrs of
   Nicomedia, five of whom turned out to have died on the road out of it),
-  spanning 66-1938.
+  spanning 66-1938 — and since 2026-09-07 five more stand on the map by a
+  `track` alone, with no `locations` of their own (Maximus the Confessor,
+  Nektarios of Aegina, Paisios the Athonite, Gorazd of Bohemia, Damascene of
+  Starodub), which is what carried the timeline's far end from 1938 to 1994.
   The map draws **one dot per saint**, not one per point: `pointAt` picks
   which of a saint's places to show from where the timeline's upper handle
   stands, and the timeline **dims** what falls outside its range rather
   than removing it (2026-08-31). **Since 2026-09-01 the dots only move when
   the reader ticks `Movement`**, and a play button beside that box walks the
-  span at a year a second. **One of the 69 also carries a `track`** —
-  Moses the Hungarian, four dated stays from Hungary to the Kyiv Caves
-  (Amendments 89 and 91) — and his dot walks it as the handle crosses his
-  life, gliding rather than snapping and along a wandering road rather than
-  a straight one.
+  span at a year a second. **Ten saints carry a `track`** (2026-09-07; it
+  was Moses the Hungarian alone from Amendments 89 and 91, then John
+  Chrysostom) — Maximus the Confessor, Tikhon of Zadonsk, Nektarios of
+  Aegina, Paisios the Athonite, Hosius of Córdoba, Augustine of Hippo,
+  Gorazd of Bohemia and Damascene of Starodub joined them, each read off the
+  life in its own folder with every inferred year said so in the waypoint's
+  `note` (Amendment 104). `scripts/track-candidates.mjs` is how they were
+  found and is the next sitting's starting point: 318 lives name two or
+  more places the map can already put a coordinate on. A dot walks its
+  track as the handle crosses the life, gliding rather than snapping, along
+  a road that bends once or twice between stays — a spline through the
+  samples since 2026-09-07, with the hard corner kept at each stay — rather
+  than a straight line.
   That is a new shape of data, not a new saint: `locations` is unordered
   kinds with no dates, a `track` is an ordered journey with years on it,
   and the second could not be built out of the first. A press on a dot or a
@@ -65,7 +76,7 @@ you inferred, and keep them apart.
 - **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
   throughout; Greek and Serbian for the first four weeks. Saints stop at
   20 September — days past it print readings above a line saying so.
-- **323 unit, 724 browser** across two projects. `npm run test:all`.
+- **325 unit, 724 browser** across two projects. `npm run test:all`.
 - **The app shells exist** (2026-09-05): `android/` and `ios/`, Capacitor 8,
   id `com.dailydox.app`, the whole corpus bundled. Generated and configured
   on a desk with neither Android Studio nor Xcode, so **no binary has been

@@ -218,11 +218,32 @@ function carouselCard(item, router, { cardWidth = 150, space = 0, pen = null } =
    * packing doing nothing it would be absent, not zero.
    */
   const budget = Math.round(cardHeight(item, cardWidth, space || Infinity, pen));
-  return `<a class="cx-card${item.image ? '' : ' is-text'}" data-h="${budget}" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">
+  /*
+   * When this card's words come up, in ms (author, 2026-09-07: "the text
+   * sporadically fades in around the saint images ... until it's all filled
+   * in"). Dealt from the slug rather than `Math.random()` so a rebuild of the
+   * same row — fonts settling, a resize — deals the same scatter and the
+   * caption does not blink through a second fade; index.css reads it.
+   */
+  const delay = captionDelay(item.slug);
+  return `<a class="cx-card${item.image ? '' : ' is-text'}" data-h="${budget}" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}" style="--cx-delay:${delay}ms">
       ${media}
       <span class="cx-name">${esc(saintName(item))}</span>
       ${sub ? `<span class="cx-sub utility">${sub}</span>` : ''}
     </a>`;
+}
+
+/**
+ * A stable 0–900 ms from a slug: FNV-1a over the characters, the same shape
+ * `lib/map-view.js`'s `scatterRand` seeds from, kept here because it is one
+ * line and a shared "hash a string" helper would be the fourth file to know
+ * about the constant. Spread wide enough that a screenful of captions reads
+ * as filling in rather than as one blink.
+ */
+function captionDelay(slug) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < slug.length; i++) h = Math.imul(h ^ slug.charCodeAt(i), 0x01000193) >>> 0;
+  return h % 900;
 }
 
 /** A picture wider than it is tall, by enough to be worth pairing. */

@@ -6,7 +6,8 @@ is an account of a single struggle carried on for thirty years against
 desire. He told it himself, the Russian church calendar’s life says: from
 his very youth he had suffered much, tormented by the lust of the flesh, and
 nothing could free him of it, neither hunger nor thirst nor heavy chains. So
-he went into the cave where the relics of Anthony of the Caves lay and
+he went into the cave where the relics of [Anthony of the
+Caves](/saints/anthony-of-the-caves) lay and
 prayed earnestly to the holy abba, and after a day and a night heard a
 voice: John, you must shut yourself in here, so that at least by not seeing
 and by silence the war may be weakened, and the Lord will help you by the

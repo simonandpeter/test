@@ -112,6 +112,71 @@
       "model": "δ ́.Τῇ Ὑπερμάχῳ."
     }
   ],
+  "track": [
+    {
+      "place": "Pharasa",
+      "from": null,
+      "to": 1924,
+      "lat": 38.08,
+      "lon": 35.6,
+      "uncertainty_km": 20,
+      "note": "Born 25 July 1924, \"a few days before the people of Pharasa left their ancestral ground for Greece\" — a stay of days, which is why it opens and closes in one year."
+    },
+    {
+      "place": "Konitsa",
+      "from": 1924,
+      "to": 1953,
+      "lat": 40.05,
+      "lon": 20.75,
+      "uncertainty_km": 10,
+      "note": "Childhood and youth; the army from 1945 to 1949 and a first look at the Holy Mountain after it are in the life and are not drawn; back as a carpenter for three years, \"in 1953, at twenty-nine\" he left for good."
+    },
+    {
+      "place": "Esphigmenou",
+      "from": 1953,
+      "to": 1958,
+      "lat": 40.35,
+      "lon": 24.15,
+      "uncertainty_km": 10,
+      "note": "Rasophore 27 March 1954; Philotheou, a few kilometres down the same peninsula, from about 1956, small schema 12 March 1956."
+    },
+    {
+      "place": "Stomio",
+      "from": 1958,
+      "to": 1962,
+      "lat": 40.06,
+      "lon": 20.72,
+      "uncertainty_km": 10,
+      "note": "The ruined monastery of the Panagia of Stomio near Konitsa, from August 1958, \"four years\"."
+    },
+    {
+      "place": "Sinai",
+      "from": 1962,
+      "to": 1964,
+      "lat": 28.5559,
+      "lon": 33.9757,
+      "uncertainty_km": 15,
+      "note": "The cell of Galaction and Episteme, until the climate sent him home."
+    },
+    {
+      "place": "Mount Athos",
+      "from": 1964,
+      "to": 1993,
+      "lat": 40.24,
+      "lon": 24.2,
+      "uncertainty_km": 15,
+      "note": "Iviron, then Katounakia (1967), Stavronikita (1968) and the Panagouda (1979) — four cells on one peninsula, which the 15 km covers. The operation of 1966 and the convalescence at Souroti are a journey inside this stay and are not drawn."
+    },
+    {
+      "place": "Souroti",
+      "from": 1993,
+      "to": null,
+      "lat": 40.46,
+      "lon": 23.1,
+      "uncertainty_km": 10,
+      "note": "He left the Mountain for the last time in November 1993 for the feast of St Arsenius here, fell ill, and died in the Theagenio hospital in Thessaloniki on 12 July 1994; buried at the hesychasterion."
+    }
+  ],
   "text": {
     "life": "life.md"
   },

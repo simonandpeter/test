@@ -74,6 +74,89 @@
       "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "track": [
+    {
+      "place": "Selymbria",
+      "from": null,
+      "to": 1860,
+      "lat": 41.07,
+      "lon": 28.25,
+      "uncertainty_km": 10,
+      "note": "Born 1 October 1846; \"at fourteen\" to Constantinople, which is 1860."
+    },
+    {
+      "place": "Constantinople",
+      "from": 1860,
+      "to": 1866,
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 15,
+      "note": "\"After seven years there, at twenty\" he left for Chios."
+    },
+    {
+      "place": "Chios",
+      "from": 1866,
+      "to": 1881,
+      "lat": 38.34,
+      "lon": 25.98,
+      "uncertainty_km": 15,
+      "note": "Teaching at Lithi, then the New Monastery — tonsured 7 November 1876, deacon 15 January 1877 — until the earthquake of 1881 sent him to Athens. The 15 km spans the village and the monastery."
+    },
+    {
+      "place": "Athens",
+      "from": 1881,
+      "to": 1885,
+      "lat": 37.98,
+      "lon": 23.73,
+      "uncertainty_km": 10,
+      "note": "The Varvakeion, then the theological faculty. The life has him go to Alexandria in 1881 and be sent straight back by Sophronius to study; a voyage inside one year is not drawn."
+    },
+    {
+      "place": "Alexandria",
+      "from": 1885,
+      "to": 1890,
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 25,
+      "note": "Priest, archimandrite, patriarchal commissioner; bishop of Pentapolis 15 January 1889; dismissed without a hearing. The life dates the charges by \"1891, two years after\", so 1890 for the leaving is inferred."
+    },
+    {
+      "place": "Athens",
+      "from": 1890,
+      "to": 1891,
+      "lat": 37.98,
+      "lon": 23.73,
+      "uncertainty_km": 10,
+      "note": "\"A small room on the edge of Athens\", unpaid and unemployed."
+    },
+    {
+      "place": "Chalcis",
+      "from": 1891,
+      "to": 1893,
+      "lat": 38.4636,
+      "lon": 23.5997,
+      "uncertainty_km": 10,
+      "note": "Preacher at Chalcis, cleared in 1891; the preaching tours of Laconia, Phthiotis and Boeotia in 1892 and 1893 went out from here and are not drawn as stays."
+    },
+    {
+      "place": "Athens",
+      "from": 1894,
+      "to": 1908,
+      "lat": 37.98,
+      "lon": 23.73,
+      "uncertainty_km": 10,
+      "note": "Director of the Rizarios school from March 1894, \"fourteen years, to 1908\". The visit to Athos in 1898 is a journey, not a stay."
+    },
+    {
+      "place": "Aegina",
+      "from": 1908,
+      "to": null,
+      "lat": 37.75,
+      "lon": 23.44,
+      "uncertainty_km": 8,
+      "note": "The monastery at Xantos, from his retirement in 1908. He died in the Aretaieion hospital in Athens on 9 November 1920 and his body was back on the island the same day; the track ends where he was buried."
+    }
+  ],
   "text": {
     "life": "life.md"
   },

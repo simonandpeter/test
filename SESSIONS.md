@@ -10697,3 +10697,125 @@ the reverse claim is one the life does not make.
 **CI.** `d434250` (the reversal) was green. `b3d4dbc` (the shelf) and `eae87ce`
 (the two Caves saints) are in flight at the time of writing; HANDOFF.md carries
 their verdicts.
+
+## Amendment 104 — Texts in the header, the carousel filling in, the atlas set in capitals, the rails splined, and eight more journeys (2026-09-07, evening)
+
+Two messages. The first: "add Text between All Saints and Map. On Mobile to fit
+it in, make the header a horizontal scroll header where the selected one is in
+the centre, and you can swipe across to the next or click on it. Infinite
+scroll header … On desktop, it's just as is." The second, four instructions:
+the carousel's pictures and words to fade in as they arrive while the row
+moves from the first frame; the atlas cities upright and in capitals like the
+Daily page's HYMNS, and Damascus off; the rails "filleted or NURBS, with hard
+corners only at destinations"; and a sweep of every life for a route.
+
+### The header, and why the first version was wrong
+
+Desktop is one more word in the row and a gap cut from space-2 to space-1
+between 560 and 1023 px, because a fifth label ran the Greek row 2 px over at
+exactly 560 — the narrowest overflow that line has measured and still the page
+running off its side. Below 560 px the row is `ui/nav-scroll.js`: a native
+`overflow-x: auto` strip with `scroll-snap-align: center`, the current page
+centred by one `scrollLeft` write on each render, full-bleed as the old
+five-across grid was.
+
+**The loop was built twice.** The first version borrowed `ui/loop-scroll.js`'s
+own trick — a buffered copy of the five links either side, a whole-period
+correction once the swipe settled — and it broke a dozen tests the moment a
+phone-width project ran: `.site-nav a[href$="/saints"]` is held to be exactly
+one element by a click handler, a weight assertion and a keyboard test, and
+cloning the links made it three. A nav is not a carousel of cards. So there are
+always exactly five `<a>` and the loop is real rotation: when a swipe settles
+with the strip's leading or trailing page centred, that page's far neighbour is
+moved across the DOM to sit beside it, `scrollLeft` nudged by the moved page's
+own width in the same tick. Five links at every instant, and a reader who keeps
+swiping keeps meeting a next page.
+
+**Whose scroll was that, a third time.** Gating the rotation on a `scrollLeft`
+diff against what the file last wrote — `loop-scroll.js`'s own answer — was not
+enough: `centre()`'s target is not always a true snap point, the browser
+corrects the difference itself in more than one settled step, and a fresh load
+rotated the row before anyone had touched it, on a first load and on a reload.
+A `pointerdown` or `wheel` on the track is the one signal that can only come
+from a reader, and `rotate` waits for one. `overflow-anchor: none` went on the
+strip too — `html`'s copy does not reach inside a nested scroller, and a label's
+width moving when the real face swaps in was another phantom swipe.
+
+### The carousel fills in
+
+`windowImages` writes `is-loaded` on a picture's own `load` and takes it off
+when the band releases it; index.css opens every `img` at opacity 0 and lets
+`is-loaded` up over 480 ms. The box keeps its size throughout — the `width` and
+`height` attributes hold it — so nothing reflows when a picture lands. Captions
+run a 420 ms animation from the card's first paint, each after a delay dealt
+from its slug (`captionDelay`, FNV-1a, 0–900 ms) so a rebuild of the same row
+deals the same scatter and nothing blinks twice. **The caption fade is a
+`mask-image`, not `opacity`**, and it was `opacity` for one run: the quality
+floor's axe pass read 373 contrast failures on the row, every one a caption
+caught mid-fade — CLAUDE.md's "a decorative fade is still text" rule, met
+again in a new place. The mask's alpha animates and the colour never moves —
+and the alpha is a registered `@property`, because the cut after that one
+animated `mask-image` between two gradients and Chromium does not tween those:
+sampled every 120 ms, each caption was either wholly masked or wholly shown.
+Measured at 120 ms intervals
+on a fresh load: the track was already moving at the first sample, pictures
+came up one at a time as their bitmaps arrived, and the first screenful of
+captions was in by 900 ms. Reduced motion removes both fades and never shortens
+them.
+
+### The atlas, and the rails
+
+Cities are `toUpperCase()` in the utility face at 10.5 px with
+`ctx.letterSpacing` at 0.06em where the engine has it — the register headings'
+own setting, since a canvas has no `font-variant-caps` worth trusting — and
+regions the same at 12.5 px. Damascus is off `HISTORICAL_LABELS` and still in
+`data/places.js`, so the search flies there; the atlas test pins its absence.
+
+The rails were jagged for two reasons layered: a leg's wobble ran four or five
+harmonics under its envelope, and 24 samples joined by `lineTo` is a run of
+facets at any real zoom. `wobbleOf` is one bend and a half now (harmonics 1 and
+2), `LEG_STEPS` is 64, and `views/map/paint.js` strokes each leg as a
+Catmull-Rom spline through the samples — tangent-continuous within a leg,
+tangents reset at each stay, which is the corner the author asked to keep.
+`trackLegs` is the per-leg shape; `trackPath` is still the flat one the flight
+frames with. `pointOn` is the same analytic curve at any `t`, so the dot rides
+the drawn line as before; `tests/map-track.test.mjs` pins the crossing count
+and the sample density.
+
+### Eight journeys, and how they were found
+
+`scripts/track-candidates.mjs` reads every life for the places the repository
+can already coordinate — `data/places.js` with its `also` forms, the atlas,
+every saint's own `locations`, the existing tracks' stays — in the order the
+life names them with the nearest year to each, and ranks by how much of a
+journey that is. 318 lives name two or more such places; 173 date two or more.
+It proposes and prints the sentence around each mention, because a high score
+is often three councils in one sentence about other people (Dionysius Exiguus
+topped the list on nine places he never went to).
+
+Eight were read and written by hand, each waypoint's `note` saying which years
+the life states and which the track infers, the standing Chrysostom's Cucusus
+set: **Maximus the Confessor** (Constantinople, Alexandria, Carthage, Rome,
+Constantinople, Lazica — the last place from the standard account, the life
+saying only "died in exile in 662"); **Tikhon of Zadonsk** (Korotsk, Novgorod,
+Tver, Novgorod, Voronezh, Tolshevo, Zadonsk); **Nektarios of Aegina** (nine
+stays, Selymbria to Aegina, with the year-long voyage to Alexandria and back
+in 1881 and the preaching tours of 1892–93 named and not drawn); **Paisios the
+Athonite** (Pharasa, Konitsa, Esphigmenou, Stomio, Sinai, the Mountain,
+Souroti); **Hosius of Córdoba** (the two councils and the Sirmium exile, whose
+years are the standard account's and say so); **Augustine of Hippo** (Thagaste,
+Carthage, Rome, Milan, Thagaste, Hippo — the life dates only 387 and 395);
+**Gorazd of Bohemia** (Hrubá Vrbka, Olomouc, Kroměříž, Belgrade, Olomouc,
+Prague); and **Damascene of Starodub**, twelve stays from Mayaki to Karaganda,
+the itinerary of exile the map exists to show.
+
+One rule changed for them: a saint with a track and no `locations` — Maximus —
+now rests at the track's *last* stay rather than its first (`pointAt`), since
+where a journey ended is the death place by another name.
+
+**Left for the next sitting.** The candidate list past these eight: Zachariah
+(Lobov), Sergius of Narva, Philaret and Heliodorus of Glinsk, Barsanuphius of
+Kirillov, Kassiani, Joachim Pany of Alexandria, Martha of Diveyevo all name
+three or more dated places, and the script's own gazetteer is the map's — a
+life naming a town the map cannot yet place scores lower than it reads, which
+is the case to look for by hand.

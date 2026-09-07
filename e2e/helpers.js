@@ -54,6 +54,15 @@ const CARDS = Array.isArray(MANIFEST.saints) ? MANIFEST.saints : Object.values(M
 export const venerateUnion = (...churches) =>
   String(CARDS.filter((s) => (s.attestations ?? []).some((a) => a.status === 'venerated' && churches.includes(a.church))).length);
 
+/**
+ * The slugs whose card carries a `track` (2026-09-07). A press on one of these
+ * flies the map out to frame the whole rail, so a test that needs a press to
+ * *keep* the reader's zoom has to pick a saint who is not here — and the list
+ * was one name, then two, then ten inside a week, which is exactly the shape
+ * `CORPUS` exists to keep out of a literal.
+ */
+export const TRACKED = new Set(CARDS.filter((s) => (s.track ?? []).length > 1).map((s) => s.slug));
+
 export // 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:
 // one menologion date, two civil days, the most load-bearing date in the corpus.

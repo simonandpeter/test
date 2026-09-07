@@ -1,7 +1,7 @@
 import { HISTORICAL_LABELS } from '../../data/historical-labels.js';
 import { saintName } from '../../lib/honorific.js';
 import { dailyRank, layoutBlobLabels, layoutLabels } from '../../lib/map-labels.js';
-import { lifeBounds, pointOn, progressAt, trackPath } from '../../lib/map-track.js';
+import { lifeBounds, pointOn, progressAt, trackLegs } from '../../lib/map-track.js';
 import { convexHull, coverFractions, distToHull, inflateHull, MERGE_PX, mergeDots, pointInHull, spreadShared, toScreen } from '../../lib/map-view.js';
 import { ASPECT, project } from '../../lib/mercator.js';
 import { reducedMotion } from '../../lib/motion.js';
@@ -341,7 +341,10 @@ export function pointAt(card, from, to, at = to) {
   // The saint's most representative single place, death first for the reason
   // §8.3 gives — it is the one kind almost every saint has, and where a
   // martyr died is the fact their commemoration is usually built on.
-  const settled = byKind('death') ?? byKind('relics') ?? byKind('see') ?? byKind('birth') ?? locations[0] ?? track[0];
+  // A saint with a track and no `locations` (Maximus the Confessor, 2026-09-07)
+  // rests at the track's *last* stay — where the journey ended, which is the
+  // death place by another name — not its first, which is where it began.
+  const settled = byKind('death') ?? byKind('relics') ?? byKind('see') ?? byKind('birth') ?? locations[0] ?? track.at(-1);
 
   /*
    * An undated life is never dimmed and never moved, the same standing it
@@ -1182,7 +1185,22 @@ export function paintCanvas(canvas, cards) {
   });
   const utilityFont = style.getPropertyValue('--font-utility').trim() || 'sans-serif';
   const historicalDrawn = [];
-  ctx.font = `italic 11px ${utilityFont}`;
+  /*
+   * **Capitals, tracked, and upright — the register headings' own setting**
+   * (author, 2026-09-07: "Dont italicise the text of the cities, make them
+   * all caps like the subheadings 'HYMNS' and 'CONTINUE READING' on the
+   * Daily page"). Those are `.register-heading` in base.css: the utility
+   * face in small caps at 0.06em. A canvas has no `font-variant-caps` worth
+   * relying on across engines, so the word is uppercased outright and the
+   * tracking is `letterSpacing`, which Chromium and WebKit have carried since
+   * 2022 and which an engine without it simply ignores — capitals with no
+   * tracking, not a broken label. Cities were italic and mixed case until
+   * today, regions already capitals; both are one setting now, told apart by
+   * size and by the city's own marker.
+   */
+  const spaced = 'letterSpacing' in ctx;
+  if (spaced) ctx.letterSpacing = '0.06em';
+  ctx.font = `10.5px ${utilityFont}`;
   ctx.textAlign = 'left';
   for (const at of positioned) {
     if (!at || at.loc.kind !== 'city') continue;
@@ -1190,10 +1208,10 @@ export function paintCanvas(canvas, cards) {
     ctx.beginPath();
     ctx.arc(at.x, at.y, 2, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillText(at.loc.name, at.x + 5, at.y - 4);
+    ctx.fillText(at.loc.name.toUpperCase(), at.x + 5, at.y - 4);
     historicalDrawn.push(at.loc.name);
   }
-  ctx.font = `italic 13px ${utilityFont}`;
+  ctx.font = `12.5px ${utilityFont}`;
   ctx.textAlign = 'center';
   for (const at of positioned) {
     if (!at || at.loc.kind !== 'region') continue;
@@ -1201,6 +1219,7 @@ export function paintCanvas(canvas, cards) {
     ctx.fillText(at.loc.name.toUpperCase(), at.x, at.y);
     historicalDrawn.push(at.loc.name);
   }
+  if (spaced) ctx.letterSpacing = '0px';
   ctx.globalAlpha = 1;
   ctx.textAlign = 'left';
   // Same rule as `data-dots`/`data-labels`: the pass that draws is the pass
@@ -1363,16 +1382,52 @@ export function paintCanvas(canvas, cards) {
     ctx.lineJoin = 'round';
     ctx.lineCap = 'round';
     ctx.beginPath();
-    // The wandering curve, not the straight line between the stays
-    // (`lib/map-track.js`, author 2026-08-31: "make the rail a bit more
-    // twisty imitating a more messy realistic path between places"). It is
-    // sampled in lon/lat rather than in pixels, so the same road bends the
-    // same way at every zoom — and it is the same curve the dot rides.
-    trackPath(rail.track).forEach((stop, i) => {
-      const p = place(stop.lon, stop.lat, frame);
-      spanRail(p.x * w, p.y * h);
-      if (i === 0) ctx.moveTo(p.x * w, p.y * h);
-      else ctx.lineTo(p.x * w, p.y * h);
+    /*
+     * The wandering curve, not the straight line between the stays
+     * (`lib/map-track.js`, author 2026-08-31: "make the rail a bit more
+     * twisty imitating a more messy realistic path between places"). It is
+     * sampled in lon/lat rather than in pixels, so the same road bends the
+     * same way at every zoom — and it is the same curve the dot rides.
+     *
+     * **A spline through the samples, leg by leg** (author, 2026-09-07:
+     * "they are jagged lines, make them filleted or NURBS, with hard corners
+     * only at destinations"). Each sample used to be joined to the next with
+     * `lineTo`, which at a deep zoom is a run of visible facets however
+     * finely the curve is sampled. Catmull-Rom through the same points —
+     * expressed as the cubic Béziers a canvas can stroke — passes through
+     * every sample exactly, so the dot still rides the drawn line, and is
+     * tangent-continuous between them. It runs *within* a leg only: a new
+     * `moveTo`-less run starts at each stay with its tangents reset, which is
+     * the hard corner at a destination, kept on purpose.
+     */
+    const legs = trackLegs(rail.track);
+    legs.forEach((leg, li) => {
+      const pts = leg.map((stop) => {
+        const p = place(stop.lon, stop.lat, frame);
+        const x = p.x * w;
+        const y = p.y * h;
+        spanRail(x, y);
+        return { x, y };
+      });
+      if (li === 0) ctx.moveTo(pts[0].x, pts[0].y);
+      else ctx.lineTo(pts[0].x, pts[0].y);
+      for (let i = 0; i < pts.length - 1; i++) {
+        // Endpoint tangents are clamped to the leg's own ends, so the curve
+        // neither overshoots the stay nor borrows a direction from the leg
+        // before it.
+        const p0 = pts[Math.max(0, i - 1)];
+        const p1 = pts[i];
+        const p2 = pts[i + 1];
+        const p3 = pts[Math.min(pts.length - 1, i + 2)];
+        ctx.bezierCurveTo(
+          p1.x + (p2.x - p0.x) / 6,
+          p1.y + (p2.y - p0.y) / 6,
+          p2.x - (p3.x - p1.x) / 6,
+          p2.y - (p3.y - p1.y) / 6,
+          p2.x,
+          p2.y,
+        );
+      }
     });
     ctx.stroke();
     ctx.globalAlpha = 1;

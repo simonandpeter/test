@@ -27,6 +27,7 @@ export const ru = {
     calendar: 'Ежедневно',
     today: 'Сегодня',
     saints: 'Все святые',
+    texts: 'Тексты',
     map: 'Карта',
     about: 'О сайте',
   },
