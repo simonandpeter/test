@@ -225,11 +225,15 @@ its reasoning).
   flaky, accessibility 100, FCP 1358–1376 ms**, which is the latest green run
   at the time of writing. All Saints itself sits at 1376 against the §13 floor
   of 1500, its own baseline being 1356–1372, so the gate is where it was.
-  All Saints' TBT read 370 ms on that run against a baseline of 231, and this
-  file blamed the per-saint caption counting for it — **wrongly**: two runs
-  later (`b3d4dbc`) it reads 213, below the baseline. It was one noisy sample
-  and the attribution was an inference stated as a measurement. LCP fell
-  4,017 → 3,958.
+  **All Saints' TBT is unresolved and this file has now been wrong about it
+  twice**, which is worth more than the number. It read 231 ms before the
+  carousel work and 370 on `72ef198`; this file blamed the per-saint caption
+  counting. `b3d4dbc` then read 213 — below the old baseline — so the blame was
+  withdrawn as one noisy sample. `9a5ca18` reads 372. Four samples, two high and
+  two low, on code that did not change between the last two: **not attributed,
+  not withdrawn, not enough samples.** Nothing gates it and nothing fails on it;
+  it is here so a future first-paint problem on this route has a suspect, and
+  knows how little is actually established about it. LCP fell 4,017 → 3,958.
 
   **Then the hymns and cross-links** (author, 2026-09-07; Amendment 103), of
   which three of the four parts are done.
@@ -274,7 +278,12 @@ its reasoning).
   map's moving tier from paint order, which stopped being observable the moment
   Moses the Hungarian was given his troparia in that same push. Both fixed in
   `ad6d88a`, which publishes `rank` on `data-dots` so the tier is measured
-  rather than inferred. **Read that run before the next thing.**
+  rather than inferred. **`9a5ca18` is green — 896 passed in 16.9 min, 0 flaky,
+  accessibility 100, FCP 1357–1375 ms with All Saints at 1375 against the §13
+  floor of 1500 — and is the latest green run at the time of writing.** Note
+  that `17f1c2b` failed on the map test alone while the carousel one passed
+  there: the carousel bound is deal-dependent, so a green run is not evidence
+  that it is sound. Only the hundred-deal sweep is.
 
   One thing to carry: on this page a *shuffle* is upstream of nearly every
   measurement, and `carouselCells` is pure — `scratchpad/pack-check.mjs` asks
