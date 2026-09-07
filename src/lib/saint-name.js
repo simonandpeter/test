@@ -68,6 +68,16 @@ const PREFIXES = {
     'Mucenic', 'Muceniță', 'Ierarh', 'Cuvios', 'Cuvioasa', 'Cuvioasă', 'Cuviosul',
     'Proorocul', 'Proorocița', 'Apostol', 'Dreptul', 'Dreapta', 'Fericitul', 'Fericita',
     'Mărturisitorul', 'Mărturisitoarea',
+    /*
+     * The princely title, which is a rank like any other here and was the one
+     * the Romanian list had no answer for: «Sfântul Voievod Neagoe Basarab»
+     * lost its `Sfântul` and kept its `Voievod`, so the name a Romanian
+     * reader was shown began with a title (2026-09-07, found by the language
+     * audit while looking at a saint the author had named). Russian's own
+     * equivalent for a ruler-saint, `Благоверный`, has been in that list
+     * since it was written.
+     */
+    'Voievodul', 'Voievod', 'Domnitorul', 'Domnitor',
   ],
   sr: [
     'Свештеномученик', 'Преподобномученик', 'Великомученик', 'Преподобни',
