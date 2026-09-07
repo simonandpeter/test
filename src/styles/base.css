@@ -885,17 +885,19 @@ nav.site-nav a[aria-current='page'] {
  * `main.js`'s `renderNav` supplies the content this reads: the same five
  * `<a>` the wide row uses, one of them wearing `aria-current`, nothing
  * cloned — `overflow-x: auto` plus `scroll-snap-type` is the phone's own
- * swipe, momentum and snap, none of it built here. `ui/nav-scroll.js` centres
- * the current page on load and, once a swipe settles with an edge page now
- * centred, moves that page's far neighbour across the DOM to sit beside it —
- * real rotation, not a buffered clone — nudging `scrollLeft` by the moved
- * page's own width in the same breath so the move is never seen. A reader
- * who keeps swiping one way keeps meeting a new page for as long as they
- * keep swiping, and `document.querySelectorAll('.site-nav a')` stays five
- * long throughout — the rest of the suite already holds `.site-nav
- * a[href$="/saints"]` and its like to be exactly one element in a dozen
- * places, and a cloned loop (this row's first version) broke every one of
- * them the moment a phone-width test ran.
+ * swipe, momentum and snap, none of it built here. `ui/nav-scroll.js` turns
+ * the ring — a flex `order` per link, so the DOM and the tab ring keep the
+ * site's own order and only the picture rotates — until whichever page is
+ * centred stands in the *middle* of the five, on load and again every time a
+ * swipe settles. That is what makes the row endless at rest rather than only
+ * after a gesture: there are always two pages either side of the centred one,
+ * which is why About stands to the left of Daily (author, 2026-09-08). A
+ * reader who keeps swiping one way keeps meeting a new page for as long as
+ * they keep swiping, and `document.querySelectorAll('.site-nav a')` stays five
+ * long, in one order, throughout — the rest of the suite already holds
+ * `.site-nav a[href$="/saints"]` and its like to be exactly one element in a
+ * dozen places, and a cloned loop (this row's first version) broke every one
+ * of them the moment a phone-width test ran.
  *
  * **The rung is 760, not the 560 this shipped on** (2026-09-07, second cut,
  * and CI is what said so). Five labels do fit one wide row at 560 in Segoe
@@ -912,12 +914,20 @@ nav.site-nav a[aria-current='page'] {
  *
  * Full-bleed exactly as the old grid was, breaking out of the header's own
  * inline padding so the strip's own edges — not any one link's — reach the
- * screen's sides. The generous `padding-inline` is not a margin of comfort
- * here the way it would be on a wide row: it is what lets the strip's own
- * first or last page, whichever the rotation above has just made them, still
- * reach the centre at all — half a viewport less roughly a label's own width,
- * since centring a page nearer the true edge than that would ask for a
- * negative `scrollLeft`, which a scroller simply refuses.
+ * screen's sides. The `padding-inline` is not a margin of comfort here the way
+ * it would be on a wide row: it is what lets a page reach the track's centre
+ * at all, since centring one nearer the true edge than half a viewport would
+ * ask for a negative `scrollLeft`, which a scroller simply refuses.
+ *
+ * **A round `50vw`, not `calc(50vw - 3rem)`** (2026-09-08). The old value left
+ * about 48 px short, which is more than half of most of these labels — so the
+ * strip's own first and last page could never quite be centred, and a *gentle*
+ * glide to one of them (author, same day: "animated to click into the centre
+ * gently instead of just jumping") landed short, with the rebalance behind it
+ * showing as exactly the jump being removed. At 50vw every one of the five is
+ * centrable exactly, whichever way the ring has been turned. The cost is that
+ * a hard fling can reach a half-empty screen for as long as the fling lasts;
+ * the strip is balanced again the moment it stops.
  */
 @media (max-width: 759.98px) {
   nav.site-nav {
@@ -934,7 +944,7 @@ nav.site-nav a[aria-current='page'] {
     /* No visible scrollbar on a strip that is never meant to look like a
        list with two ends — a reader is meant to read it as a wheel. */
     scrollbar-width: none;
-    padding-inline: calc(50vw - 3rem);
+    padding-inline: 50vw;
     /*
      * `overflow-anchor: none` already sits on `html` for the reason
      * base.css's own §5c note gives — Chromium nudging `scrollY` to hold

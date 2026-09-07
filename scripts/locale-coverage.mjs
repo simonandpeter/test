@@ -15,7 +15,10 @@
  * over the English base, so an absent key falls back to English on purpose. The
  * report is a map of where that fallback is happening, not a list of errors.
  */
+import { readFile } from 'node:fs/promises';
+
 import { STRINGS } from '../src/ui/strings.js';
+import { PACK_ONLY } from '../src/lib/i18n.js';
 import { ru } from '../src/ui/locales/ru.js';
 import { ro } from '../src/ui/locales/ro.js';
 import { el } from '../src/ui/locales/el.js';
@@ -45,6 +48,26 @@ for (const [name, pack] of packs) {
 // And the other direction, which lib/i18n.js's `pruneTo` exists to survive: a
 // pack-only branch would otherwise ride along into every later language.
 for (const [name, pack] of packs) {
-  const extra = paths(pack).filter((p) => !base.includes(p) && !p.startsWith('reasons.'));
+  const extra = paths(pack).filter((p) => !base.includes(p) && !PACK_ONLY.some((b) => p.startsWith(`${b}.`)));
   if (extra.length) console.log(`\n!! ${name} has ${extra.length} key(s) the base does not: ${extra.join(', ')}`);
+}
+
+/*
+ * And the branch whose keys the *corpus* writes rather than this repository:
+ * every office and every attestation title in the manifest wants an entry in
+ * all four packs, or a reader in one of them meets English on the line under a
+ * saint's name (2026-09-08). A new saint with a see nobody has translated is
+ * the ordinary way this goes stale, so it is a report and not a gate — the
+ * same bargain `date-audit.mjs` makes about a missing birth year.
+ */
+const manifest = JSON.parse(await readFile(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+const phrases = new Set();
+for (const card of manifest) {
+  if (card.office) phrases.add(card.office);
+  for (const att of card.attestations ?? []) for (const t of att.titles ?? []) phrases.add(t);
+}
+for (const [name, pack] of packs) {
+  const gap = [...phrases].filter((p) => !pack.offices?.[p]).sort();
+  console.log(`\n=== ${name}: ${gap.length} of ${phrases.size} offices and titles read English`);
+  for (const p of gap) console.log(`   ${p}`);
 }

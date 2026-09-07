@@ -1444,11 +1444,22 @@ test('a saint named in a life is a link in it and a row under Related', async ({
    * such pairs is `scripts/related-from-links.mjs`, and it reads *unlinked*
    * prose — once the link is in the text the sweep steps over it, which is
    * right, and leaves this the only thing watching.
+   *
+   * **Both mentions, since 2026-09-08** (author: "there is a mention of the
+   * caves of Anthony. make sure Anthony hyperlinks to Anthony of the Caves as
+   * well"). The life closes on "the Near Caves, the caves of Anthony" — the
+   * bare given name, thirty lines below the full one, which the linker is
+   * even further from reaching than the first: `Anthony` alone is three
+   * saints in this corpus. The house rule that a name is linked on its first
+   * appearance and left alone after would apply to a page a reader arrives at
+   * the top of; this is the last sentence of a long life, and the author has
+   * called it.
    */
   await page.goto('/saints/john-the-long-suffering', { waitUntil: 'networkidle' });
   const anthony = page.locator('[data-life] a[href*="/saints/anthony-of-the-caves"]');
-  await expect(anthony).toHaveCount(1);
-  await expect(anthony).toHaveText(/Anthony of the\s+Caves/);
+  await expect(anthony).toHaveCount(2);
+  await expect(anthony.first()).toHaveText(/Anthony of the\s+Caves/);
+  await expect(anthony.nth(1)).toHaveText('Anthony');
   await expect(page.locator('[data-related] a[href*="/saints/anthony-of-the-caves"]')).toHaveCount(1);
 });
 

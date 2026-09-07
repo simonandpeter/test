@@ -92,9 +92,22 @@ function mergeInto(target, source) {
   }
 }
 
-/** Deletes keys the base does not have — a pack-only branch (`reasons`)
- *  would otherwise ride along into every later language. Found by the unit
- *  test that asserts English restores *exactly*, not by a reader. */
+/**
+ * The branches a pack carries that the English base does not, because their
+ * keys *are* English: a phrase the corpus or the liturgical data wrote down,
+ * looked up rather than named. There is nothing for English to translate, so
+ * there is no English entry to be the base of one.
+ *
+ * Named here rather than spelled out in each of the three places that need to
+ * know — `pruneTo` below, `tests/i18n.test.mjs`'s two structural sweeps, and
+ * `scripts/locale-coverage.mjs` — because the cost of forgetting one of them
+ * is a report full of false findings, which is how a real one gets missed.
+ */
+export const PACK_ONLY = ['reasons', 'offices'];
+
+/** Deletes keys the base does not have — a pack-only branch (`reasons`,
+ *  `offices`) would otherwise ride along into every later language. Found by
+ *  the unit test that asserts English restores *exactly*, not by a reader. */
 function pruneTo(target, shape) {
   for (const key of Object.keys(target)) {
     if (!(key in shape)) delete target[key];
@@ -282,3 +295,21 @@ export function formatDateParts(options, date) {
  */
 export const translateReason = (reason) =>
   (LANGUAGES_BY_ID[currentLanguage()]?.pack?.reasons ?? {})[reason] ?? reason;
+
+/**
+ * The same for the apparatus a saint's own record carries in English — the
+ * `office` field and an attestation's `titles`, which are one kind of thing
+ * and read on one line (author, 2026-09-08: "Offices, e.g. 'Princess' or
+ * 'Abbot' etc. not translated to other languages ... translate it").
+ *
+ * **This is not `saints.types`, and the difference is what makes it a
+ * separate table.** A type is a slug the corpus chooses from a closed list,
+ * translated by key in the English base like every other string; an office is
+ * free English text a reading wrote down, `Archpriest of Zaraysk`, and the
+ * list of them is as open as the corpus. So it is keyed on the English phrase
+ * in a pack-only branch, exactly as `reasons` is, and an office no pack has
+ * heard of prints as recorded rather than as a guess — which is also what
+ * every English reader sees, since there is no `en` pack to consult.
+ */
+export const translateOffice = (office) =>
+  (LANGUAGES_BY_ID[currentLanguage()]?.pack?.offices ?? {})[office] ?? office;

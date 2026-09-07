@@ -35,7 +35,7 @@ import { mountShelves } from '../ui/shelf.js';
 import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { STRINGS, fill } from '../ui/strings.js';
-import { currentLanguage, formatDate } from '../lib/i18n.js';
+import { currentLanguage, formatDate, translateOffice } from '../lib/i18n.js';
 /* The Index's own row, and the Index's own memory of what it had matched —
    both borrowed rather than copied, because the column beside the life is
    meant to be that list rather than to resemble it (see `sideColumn`). */
@@ -189,6 +189,15 @@ function shell(card, backLabel) {
    * an `office` field reading the same) would otherwise print twice on the
    * same line. Only 20 attestations in the corpus carry titles at all, so for
    * most saints this line is exactly what it was.
+   *
+   * **The deduplication stays in English and the printing does not**
+   * (2026-09-08). `translateOffice` runs over the office and the titles alike
+   * — a title is the same kind of phrase from the same kind of source, and
+   * `Bishop of Hippo` is one entry in a pack whichever field it arrived in —
+   * but the `seen` set below compares the *recorded* strings, because that is
+   * where two churches saying the same thing is visible. Comparing the
+   * translations instead would make the duplicate test depend on whether a
+   * pack happened to render two different English phrases the same way.
    */
   const seen = new Set((card.types ?? []).map((t) => t.toLowerCase()));
   if (card.office) seen.add(String(card.office).toLowerCase());
@@ -215,9 +224,9 @@ function shell(card, backLabel) {
     // thing this line knows, and since 2026-08-27 it is no longer in the
     // name. The types follow with the rank taken out of them, the rank being
     // the first word of the heading above.
-    card.office ?? null,
+    card.office ? translateOffice(card.office) : null,
     beside.length ? typeNames(beside) : null,
-    titles.length ? titles.join(', ') : null,
+    titles.length ? titles.map(translateOffice).join(', ') : null,
   ]
     .filter(Boolean)
     .join(' · ');
@@ -1165,7 +1174,12 @@ function veneration(saint, churches, router) {
     const status = att?.status ?? 'undocumented';
     const lines = [];
 
-    if (att?.titles?.length) lines.push(`<span class="att-titles">${esc(att.titles.join(', '))}</span>`);
+    // The church's own titles for this saint, in the reader's language —
+    // `lib/i18n.js`'s `translateOffice` over the same table the office line
+    // above reads, since these are the same kind of recorded English phrase
+    // (2026-09-08).
+    if (att?.titles?.length)
+      lines.push(`<span class="att-titles">${esc(att.titles.map(translateOffice).join(', '))}</span>`);
 
     if (status === 'venerated') {
       // Not escaped: `feastLine` returns markup and escapes its own parts.

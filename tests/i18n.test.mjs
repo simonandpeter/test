@@ -8,7 +8,9 @@ import {
   chooseLanguage,
   ensureAllPacks,
   currentLanguage,
+  translateOffice,
   translateReason,
+  PACK_ONLY,
 } from '../src/lib/i18n.js';
 
 /* The locale packs are fetched per language since 2026-08-27, so they are
@@ -40,6 +42,12 @@ const walk = (obj, path = []) => {
 
 const at = (obj, dotted) => dotted.split('.').reduce((o, k) => o?.[k], obj);
 
+/* A branch whose keys are themselves English phrases — `reasons`, `offices` —
+   and so has no counterpart in the base to be compared against. The list is
+   `lib/i18n.js`'s, not this file's: `pruneTo` reads the same one, and a branch
+   exempted here but not there rides into every later language. */
+const packOnly = (path) => PACK_ONLY.some((b) => path.startsWith(`${b}.`));
+
 const packs = LANGUAGES.filter((l) => l.pack);
 
 test('five languages, each naming itself, English the base', () => {
@@ -55,7 +63,7 @@ test('every translated key exists in the English base', () => {
   // branch, by design (data-borne English phrases).
   for (const { id, pack } of packs) {
     for (const [path] of walk(pack)) {
-      if (path.startsWith('reasons.')) continue;
+      if (packOnly(path)) continue;
       assert.notEqual(at(snapshot, path), undefined, `${id}: ${path} not in the English base`);
     }
   }
@@ -67,7 +75,7 @@ test('every translated string keeps its English placeholders, exactly', () => {
   const tokens = (s) => (typeof s === 'string' ? [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort() : []);
   for (const { id, pack } of packs) {
     for (const [path, value] of walk(pack)) {
-      if (path.startsWith('reasons.')) continue;
+      if (packOnly(path)) continue;
       const base = at(snapshot, path);
       if (typeof base !== 'string') continue;
       assert.deepEqual(tokens(value), tokens(base), `${id}: ${path} placeholder mismatch`);
@@ -156,4 +164,54 @@ test('no string the site prints carries an em dash, in any of the five', () => {
     assert.deepEqual(dashed(STRINGS, id, []), [], `${id} prints an em dash`);
   }
   chooseLanguage('en');
+});
+
+/*
+ * The offices, which are the packs' second data-borne branch (2026-09-08).
+ *
+ * Author: "Offices, e.g. 'Princess' or 'Abbot' etc. not translated to other
+ * languages. I had asked for a full sweep of all content to check for
+ * translation misses, im disappointed it wasnt all translated." The sweep that
+ * missed them was a sweep of *strings*, and an office is not a string in this
+ * repository — it is a field in 337 saints' own files, so nothing that walked
+ * `ui/` could have seen it. That is why the check below walks the corpus and
+ * not the packs: the same reasoning would have missed it again.
+ */
+test('every office and title the corpus records reads in all four languages', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const manifest = JSON.parse(await readFile(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+  const phrases = new Set();
+  for (const card of manifest) {
+    if (card.office) phrases.add(card.office);
+    for (const att of card.attestations ?? []) for (const t of att.titles ?? []) phrases.add(t);
+  }
+  // The premise, per trap 5: a corpus that stopped recording offices would
+  // otherwise make this test pass by having nothing to check.
+  assert.ok(phrases.size > 100, `the corpus records ${phrases.size} distinct offices and titles`);
+
+  for (const { id, pack } of packs) {
+    const gap = [...phrases].filter((p) => !pack.offices?.[p]);
+    assert.deepEqual(gap, [], `${id} has no office for: ${gap.slice(0, 8).join(' | ')}`);
+  }
+
+  // And each reads as its own language rather than as a copy of the English.
+  for (const { id, pack } of packs) {
+    const same = [...phrases].filter((p) => pack.offices[p] === p);
+    assert.deepEqual(same, [], `${id} repeats the English for: ${same.slice(0, 8).join(' | ')}`);
+  }
+});
+
+test('an office reads in the reader language, and an unknown one passes through', () => {
+  chooseLanguage('ru');
+  assert.equal(translateOffice('Bishop of Nicomedia'), 'Епископ Никомидийский');
+  // The composed ones, which are where a table of whole phrases earns its
+  // keep: the second half is a see in its own right and reads as one.
+  assert.equal(translateOffice('Apostle of the Seventy, Bishop of Sardis'), 'Апостол от семидесяти, епископ Сардийский');
+  chooseLanguage('el');
+  assert.equal(translateOffice('Bishop of Nicomedia'), 'Επίσκοπος Νικομηδείας');
+  // A phrase no pack has heard of is printed as the corpus recorded it. An
+  // invented translation would be a claim about a see nobody has read.
+  assert.equal(translateOffice('Bishop of Nowhere'), 'Bishop of Nowhere');
+  chooseLanguage('en');
+  assert.equal(translateOffice('Bishop of Nicomedia'), 'Bishop of Nicomedia');
 });

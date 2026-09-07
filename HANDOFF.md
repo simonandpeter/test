@@ -311,6 +311,34 @@ its reasoning).
   it a hundred times in node in a second, where a hundred browser deals is
   twenty minutes. Any bound on the packing should be read that way.
 
+  **Then the phone's nav, the second Anthony, and the offices** (author,
+  2026-09-08; Amendment 106). All three are done.
+
+  - The strip is endless **at rest** now, not only after a swipe: every settle
+    turns the ring until the centred page stands in the middle of the five, so
+    About is left of Daily. The turn is a flex `order`, not a DOM move, so
+    `.site-nav a` keeps one order at every instant — do not go back to moving
+    the nodes, `ui/nav-scroll.js` says why. A press glides rather than jumping,
+    and **the glide is let go from `show()`, not from `renderNav`**: a smooth
+    scroll started inside `startViewTransition`'s callback moves one pixel and
+    dies, measured on both sides.
+  - **The office and the attestation titles read in the reader's language**
+    (`lib/i18n.js`'s `translateOffice`, `offices` in each pack — 158 phrases,
+    the second pack-only branch after `reasons`). This reverses `formatSubtext`'s
+    own recorded decision, and the reversal is in place there. `PACK_ONLY` is
+    the list three places need; adding a third branch means adding it there and
+    nowhere else. `node scripts/locale-coverage.mjs` now reports offices with no
+    entry per pack, and a unit test refuses both a gap and a pack that merely
+    repeats the English — which is what caught Romanian `Novice`.
+  - **Left for the author, and the next thing on that line**: the lifespan
+    beside the office prints its interval's recorded `display` verbatim, so a
+    Russian page reads «14 September 407» and «13th C.». 438 distinct displays
+    over 1,060 intervals; **73 carry real words, on 152 intervals** — 62 century
+    ordinals and 5 full dates, both mechanical, and 33 era descriptions ("under
+    Diocletian", "at the Council of Ephesus") which are quoted source-shaped
+    prose that `formatInterval` refuses to touch by decision. The first two
+    families are a straightforward next sitting; the third is a call.
+
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 
 **All seven of §13 are measured and all seven pass on CI**, which is the only

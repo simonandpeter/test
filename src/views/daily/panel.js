@@ -3,7 +3,7 @@ import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail } from '../../lib/detail.js';
 import { cardCrop, heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
-import { currentLanguage, languageTag } from '../../lib/i18n.js';
+import { currentLanguage, languageTag, translateOffice } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
@@ -551,8 +551,11 @@ export function paintDay({ main, side }) {
   fillHeroLede(main, hero.slug, selected, hero);
 }
 
+// Translated, like the office beside it (2026-09-08): a title is a recorded
+// English phrase and `lib/i18n.js`'s `translateOffice` is the one table for
+// both.
 const titleFor = (saint, churchId) =>
-  saint.attestations.find((a) => a.church === churchId)?.titles?.join(', ') ?? '';
+  saint.attestations.find((a) => a.church === churchId)?.titles?.map(translateOffice).join(', ') ?? '';
 
 /**
  * Whose name day it is (author, 2026-08-26: "add name days"). Under the day's

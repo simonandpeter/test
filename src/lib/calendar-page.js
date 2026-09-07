@@ -7,6 +7,7 @@
 import { gregorianToJdn, jdnToGregorian, isValidDate, toJdn, fromJdn } from './jdn.js';
 import { toIsoDate } from './feasts.js';
 import { STRINGS, fill } from '../ui/strings.js';
+import { translateOffice } from './i18n.js';
 
 export function parseIso(s) {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s ?? '');
@@ -222,13 +223,22 @@ export function formatLifespan(dates) {
  * the office moved out of it; this is where the office landed.
  *
  * Office first, because it is the half a reader is placing the name by, and
- * because the dates are the half that reads fine truncated. It is printed as
- * the corpus recorded it, which is English - "Bishop of Voronezh" is a fact
- * about a see, not a UI string, and the packs cannot hold 340 of them. That is
- * the same bargain `display_name` already makes for a saint with no recorded
- * form in the reader's language.
+ * because the dates are the half that reads fine truncated.
+ *
+ * **It was printed as the corpus recorded it, which is English, and that is
+ * reversed** (author, 2026-09-08: "Offices, e.g. 'Princess' or 'Abbot' etc.
+ * not translated to other languages ... translate it"). The reasoning stood
+ * here for a fortnight and is worth keeping beside its reversal: "Bishop of
+ * Voronezh" is a fact about a see rather than a UI string, and the packs
+ * cannot hold 340 of them. The first half is true and does not decide it — a
+ * see has a name in Russian and in Greek, and printing the English one on an
+ * otherwise Russian page is not deference to the record, it is a gap. The
+ * second half was arithmetic, and wrong: the corpus's 337 offices are 139
+ * distinct phrases built from 38 ranks and 96 places, and a pack holds them.
+ * `lib/i18n.js`'s `translateOffice` is the reading, and a phrase no pack knows
+ * still comes through in English.
  */
 export function formatSubtext(card) {
   const life = formatLifespan(card?.dates);
-  return card?.office ? `${card.office} · ${life}` : life;
+  return card?.office ? `${translateOffice(card.office)} · ${life}` : life;
 }

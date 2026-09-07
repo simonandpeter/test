@@ -88,7 +88,14 @@ function paintDailyLabel(fade = true) {
   const onDaily = navEl.querySelector('a[aria-current="page"][data-nav-daily]') !== null;
   const isToday = onDaily && !dailyIsToday;
   const word = isToday ? STRINGS.nav.today : STRINGS.nav.calendar;
-  const settle = () => label.classList.toggle('is-today', isToday);
+  const settle = () => {
+    label.classList.toggle('is-today', isToday);
+    // Daily and Today are not the same width, and on a phone the row is
+    // centred on a page rather than laid out in columns — so the word landing
+    // drags whatever is centred a few pixels off the midline. Silent, and
+    // never against a reader who has swiped elsewhere (`ui/nav-scroll.js`).
+    navScroll?.recentre();
+  };
   if ((pendingWord ?? label.textContent) === word) {
     settle();
     return;
@@ -119,7 +126,11 @@ function navHref(key) {
   return key === 'calendar' ? '/' : `/${key}`;
 }
 
-/** One `<a>`, exactly one of which ever wears `aria-current` on a given render. */
+/**
+ * One `<a>`, exactly one of which ever wears `aria-current` on a given render.
+ * `data-nav-key` is how the phone's strip finds a link again without rebuilding
+ * the row (see `renderNav`).
+ */
 function navLinkHTML(key, current) {
   const cur = key === current ? ' aria-current="page"' : '';
   const daily = key === 'calendar' ? ' data-nav-daily' : '';
@@ -127,22 +138,72 @@ function navLinkHTML(key, current) {
     key === 'calendar'
       ? `<span class="nav-label" data-nav-label>${STRINGS.nav.calendar}</span>`
       : STRINGS.nav[key];
-  return `<a href="${router.href(navHref(key))}"${cur}${daily}>${text}</a>`;
+  return `<a href="${router.href(navHref(key))}" data-nav-key="${key}"${cur}${daily}>${text}</a>`;
 }
 
 /**
  * Whatever `wireNavScroll` set up for the current render, if any — a phone's
- * own strip only, torn down and rebuilt with the markup on every navigation
- * exactly as the markup itself is. `renderNav` always builds the same five
- * links either way (author, 2026-09-07, "an infinite scroll header" on a
- * phone): `ui/nav-scroll.js`'s own loop is real DOM rotation, not buffered
- * clones, precisely so `.site-nav a[href$="/saints"]` and its like stay the
- * one element the rest of this file — and the whole suite — already hold
- * them to be, at every width.
+ * own strip only. `renderNav` always builds the same five links at every width
+ * (author, 2026-09-07, "an infinite scroll header" on a phone):
+ * `ui/nav-scroll.js`'s own loop rotates a flex `order`, not the DOM and not
+ * buffered clones, precisely so `.site-nav a[href$="/saints"]` and its like
+ * stay the one element, in the one place, the rest of this file — and the
+ * whole suite — already hold them to be.
  */
 let navScroll = null;
 
+/**
+ * Whether the phone's strip owes the reader a glide, and why `show()` and not
+ * `renderNav` is the one that pays it.
+ *
+ * `renderNav` runs inside `startViewTransition`'s own update callback, where
+ * the browser has suspended rendering and the page is about to be covered by
+ * the transition's snapshots for the length of the fade. A smooth scroll
+ * started in there does not survive it — measured, not assumed: the strip
+ * moved a single pixel and stopped, where the same `scrollTo` outside a
+ * transition travels the whole way over nine frames. `restoreSection`'s own
+ * note names the same suspension from the other side, which is what said where
+ * to look. So the glide is armed here and let go once `finished` settles, with
+ * the fade behind it and the page the reader pressed already on screen.
+ */
+let navNeedsGlide = false;
+
+function settleNav() {
+  if (!navNeedsGlide) return;
+  navNeedsGlide = false;
+  navScroll?.glide();
+}
+
 function renderNav(current) {
+  const narrow = matchMedia('(max-width: 759.98px)').matches;
+  /*
+   * **A navigation moves `aria-current`; it does not rebuild the strip**
+   * (2026-09-08). The five links are the same five whatever page is open, and
+   * rebuilding them threw away the two things the gentle press needs: the
+   * rotation the reader's own swipes had put the ring in, and the scroll
+   * position the new page has to glide *from*. Rebuilding is still what
+   * happens at every other width, and on anything that changes the row itself
+   * — a language, a crossing of the nav's own breakpoint — which is the
+   * `narrow && navScroll` guard here and the teardown below.
+   *
+   * The labels are rewritten in place with it, because `router.refresh()` on a
+   * language change comes through here too and a strip that kept its old words
+   * would be the one thing this path could silently get wrong. The Daily
+   * button's own word is not touched: it is a span with a fade in flight and
+   * `paintDailyLabel` is its only writer.
+   */
+  if (narrow && navScroll && navEl.children.length === NAV_KEYS.length) {
+    for (const a of navEl.children) {
+      const key = a.dataset.navKey;
+      if (key === current) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+      if (key !== 'calendar') a.textContent = STRINGS.nav[key];
+    }
+    navNeedsGlide = true;
+    paintDailyLabel(current === 'calendar');
+    return;
+  }
+
   // The span the fade was working on is about to be replaced, so nothing is
   // in flight any more.
   clearTimeout(fadeTimer);
@@ -154,7 +215,7 @@ function renderNav(current) {
   // Below the nav's own breakpoint (759.98px, base.css) the row is a
   // horizontal strip rather than a plain line; wiring it outside that width
   // would measure a track CSS never made scrollable.
-  if (matchMedia('(max-width: 759.98px)').matches) navScroll = wireNavScroll(navEl);
+  if (narrow) navScroll = wireNavScroll(navEl);
   // Leaving the Daily page puts the word back without a fade: the button the
   // reader pressed has already gone somewhere, and a word changing after the
   // page has is a second event where there was one.
@@ -513,9 +574,15 @@ function show({ route, params, path }, nav = {}) {
   // left to correct once the transition settles — a second pass here is what
   // used to produce the jump this fixed.
   if (document.startViewTransition && !reduced && !first) {
-    document.startViewTransition(swap).finished.finally(() => settleLate(returning));
+    document.startViewTransition(swap).finished.finally(() => {
+      settleLate(returning);
+      settleNav();
+    });
   } else {
-    swap().then(() => settleLate(returning));
+    swap().then(() => {
+      settleLate(returning);
+      settleNav();
+    });
   }
   first = false;
 }

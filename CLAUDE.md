@@ -1204,6 +1204,13 @@ vigil mode as well as light. That gap let a WCAG AA failure stand from
 **Chrome** — `src/main.js` renders the nav. Sticking is on `.chrome-bar`. The
 masthead is an SVG wordmark: `scripts/make_wordmark.py` generates
 `src/ui/wordmark.js`, a Vite plugin injects it into both slots in index.html.
+Below 760 px the nav is `ui/nav-scroll.js`'s endless strip: five links, one
+DOM order at every instant, the ring turned by a flex `order` so whichever page
+is centred stands in the *middle* of the five. `renderNav` moves `aria-current`
+in place there rather than rebuilding, because the glide needs somewhere to
+start from — and **the glide itself is released from `show()`, after the view
+transition's `finished`**, since a smooth scroll begun inside the transition
+callback dies with the suspended rendering.
 
 **The app owns scroll, and the browser's own competing opinions are turned
 off one at a time as they are found** (DESIGN.md §5c). `router.js` already
@@ -1226,6 +1233,16 @@ restore and not of a target the browser then quietly moves out from under it.
 **Strings** — `src/ui/strings.js` (source of truth) + `src/ui/locales/{ru,ro,el,sr}.js`.
 Touch all five, then `node scripts/locale-coverage.mjs` (0 fallbacks before
 done). `BRAND` is the site name and is never translated.
+**Two branches exist in the packs and not in the base** — `reasons` (fast
+reasons from `data/liturgical-days.js`) and `offices` (a saint's `office` and
+an attestation's `titles`, 2026-09-08) — because their *keys* are English
+phrases the data wrote down. `lib/i18n.js`'s `PACK_ONLY` is the list, and
+`pruneTo`, `tests/i18n.test.mjs` and `locale-coverage.mjs` all read it; a third
+such branch goes there and nowhere else. `translateReason`/`translateOffice`
+read them off the pack directly, never through `STRINGS`, and pass an unknown
+phrase through in English. The coverage script reports office gaps against the
+corpus, which is where a new saint's untranslated see shows up — **a sweep of
+`ui/` cannot find one**, which is exactly how they went a fortnight unnoticed.
 
 **App mode** — `public/sw.js` (hand-written, four caches, one per §12
 strategy) + `lib/offline.js` (registration, and Save's eager precache). Every
@@ -1275,7 +1292,9 @@ a hagiography's byline is its subject, and Athanasius's Life of Antony is *about
 Anthony, not *by* him.
 
 **Names** — `lib/honorific.js` (rank precedence), `lib/saint-name.js` (which
-recorded form to print). `office` is a field, drawn on the subtext line.
+recorded form to print). `office` is a field, drawn on the subtext line, and
+printed through `translateOffice` since 2026-09-08 — the *dedup* against
+`types` and `titles` still compares the recorded English, on purpose.
 
 **Saint data** — `saints/<slug>/saint.json` + `life.md`. Never hand-edit
 `data/manifest.json`. Icons: `images/icon.jpg` + `icon.meta.json` + two

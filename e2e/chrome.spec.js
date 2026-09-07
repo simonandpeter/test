@@ -1759,6 +1759,125 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
 });
 
+/**
+ * The strip as read left to right on the screen, which is *not* the DOM order:
+ * `ui/nav-scroll.js` turns the ring with a flex `order` per link, so the
+ * document keeps the site's own order (and with it the tab ring and every
+ * positional selector in this suite) while the picture rotates.
+ */
+const stripOrder = (page) =>
+  page.evaluate(() =>
+    [...document.querySelectorAll('.site-nav a')]
+      .map((a) => ({ key: a.dataset.navKey, x: a.getBoundingClientRect().left }))
+      .sort((a, b) => a.x - b.x)
+      .map((s) => s.key),
+  );
+
+/**
+ * Presses a page on the strip and counts the *distinct positions the track
+ * passed through*, per frame. Read in the page rather than over the wire
+ * because that is the only place the frames are: "animated ... instead of just
+ * jumping" is a claim about what happens in between, and a before/after pair
+ * cannot tell a travel from an assignment.
+ *
+ * The press is `el.click()` rather than `locator.click()` because the latter
+ * scrolls its target into view first (trap 3) — on this strip that is the very
+ * scroll under test, and Playwright would have centred the link before the
+ * page ever navigated.
+ */
+const watchPress = async (href) => {
+  const track = document.querySelector('.site-nav');
+  const seen = [Math.round(track.scrollLeft)];
+  let running = true;
+  const tick = () => {
+    seen.push(Math.round(track.scrollLeft));
+    if (running) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  document.querySelector(`.site-nav a[href$="${href}"]`).click();
+  await new Promise((r) => setTimeout(r, 900));
+  running = false;
+  const cur = track.querySelector('a[aria-current="page"]').getBoundingClientRect();
+  const box = track.getBoundingClientRect();
+  return {
+    steps: [...new Set(seen)].length,
+    offCentre: Math.abs(cur.left + cur.width / 2 - (box.left + box.width / 2)),
+  };
+};
+
+test('the phone strip is balanced at rest, and a press glides into the centre', async ({ page }) => {
+  /*
+   * Three findings on the 2026-09-07 strip, all one message (author,
+   * 2026-09-08): "first it needs to be an infinite horizontal scroll, next to
+   * Daily page on the left needs to be the About section, and when you select
+   * one it should be animated to click into the centre gently instead of just
+   * jumping with no smoothness."
+   *
+   * The first two are one repair. The row only rotated once a swipe had
+   * *already* settled with an edge page centred, so at rest the current page
+   * stood at one end of the five with blank strip beside it — on the Daily
+   * page, nothing at all to its left. Balancing every settle so the centred
+   * page sits in the middle of the five is what makes the ring's own
+   * neighbours the ones a reader meets, and About is left of Daily because the
+   * ring says so.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await ready(page);
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  // The ring read from two pages before Daily. Its own order is NAV_KEYS, so
+  // this is also the claim that the ring wraps rather than running out.
+  await expect
+    .poll(() => stripOrder(page))
+    .toEqual(['map', 'about', 'calendar', 'saints', 'texts']);
+  // And the DOM is untouched by that rotation, which is what lets the rest of
+  // this file address `.site-nav a` by position at all.
+  expect(
+    await page.evaluate(() => [...document.querySelectorAll('.site-nav a')].map((a) => a.dataset.navKey)),
+    'the ring turned the DOM rather than the picture',
+  ).toEqual(['calendar', 'saints', 'texts', 'map', 'about']);
+
+  const glided = await page.evaluate(watchPress, '/about');
+  // Five or more distinct positions is a journey; a jump is two — where it
+  // started and where it landed. The measured run is ten.
+  expect(glided.steps, `the strip moved through ${glided.steps} positions`).toBeGreaterThan(4);
+  expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
+  // And the ring is balanced again around the page that was pressed, which is
+  // the rebalance being silent: the glide's own landing and this are the same
+  // pixel for About, and only the four pages around it have moved.
+  await expect
+    .poll(() => stripOrder(page))
+    .toEqual(['texts', 'map', 'about', 'calendar', 'saints']);
+});
+
+test('under reduced motion the strip is simply centred, with no journey', async ({ browser }) => {
+  // Removed, not shortened (DESIGN.md §6). The press still puts the page on
+  // the midline; there is nothing to watch it get there.
+  const ctx = await browser.newContext({
+    ...devices['Desktop Chrome'],
+    viewport: { width: 360, height: 780 },
+    reducedMotion: 'reduce',
+  });
+  const page = await ctx.newPage();
+  // A context opened by hand is one the fixture never saw, so the rehearsal
+  // has to be applied here or `COLD_FACE=1` exempts this test silently
+  // (`fixtures.js` argues it at length).
+  await coldFace(page);
+  await searchMode(page);
+  await ready(page);
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const still = await page.evaluate(watchPress, '/about');
+  // Two: where it stood before the press, and where the press put it. The
+  // strip is centred on a different page than it was, and passed through
+  // nothing to get there.
+  expect(still.steps, `the strip moved through ${still.steps} positions under reduced motion`).toBeLessThan(3);
+  expect(still.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
+  await ctx.close();
+});
+
 test('a coachmark is shown once, and a guess is still not an answer', async ({ page }) => {
   /*
    * Found in review, 2026-08-27: both marks came back on every load, for ever.

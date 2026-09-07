@@ -34,7 +34,7 @@ able servants and light to the weak; pray to the one buried here, [Moses the
 Hungarian](/saints/moses-the-hungarian) — he can help you in this fight, for
 he is greater than Joseph. He died about 1160, or not before it, having won
 grace against the passion of lust and the gift of helping others in the same
-temptation, and his relics rest in the Near Caves, the caves of Anthony.
+temptation, and his relics rest in the Near Caves, the caves of [Anthony](/saints/anthony-of-the-caves).
 
 The measures he took were extreme even by the standards of the collection
 that records them, and the text does not present them as straightforwardly
