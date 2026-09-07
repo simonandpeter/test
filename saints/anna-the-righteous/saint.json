@@ -14,6 +14,11 @@
       "form": "Анна",
       "lang": "ru",
       "note": "From «Праведных Богоотец Иоакима и Анны» in this folder's Russian citation — the pair in the genitive, and this is her half of it in the nominative."
+    },
+    {
+      "form": "Ana",
+      "lang": "ro",
+      "note": "Her own name, read out of «Sfinții și Drepții Părinți Ioachim și Ana» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "female",

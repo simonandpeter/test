@@ -625,14 +625,15 @@ Reading each life is the work; the tool only finds the ones worth reading.
   — a citation that names the day's other saint, or "Св. 70 мученика", or
   Babylas's three children none of whom it names. `--list propose` prints
   them; the refusals are why it proposes and never writes.
-- **125 name forms are recorded and never shown, 98 of them Greek** — the
-  biggest thing the audit found and the one needing no decision at all.
-  `pickNameForms` refuses a form that names a company where the saint is one
-  person («Άγιοι Αειθαλάς και Αμών»), which is right — it would print another
-  saint's name on this page — so those folders hold a Greek name the reader
-  never gets. Counting folder entries said el 370; the manifest ships 272.
-  `node scripts/language-audit.mjs --list dropped` is the list, and the repair
-  is one individual's form read out of each company line. Data, not code.
+- ~~**125 name forms recorded and never shown**~~ — **83 written 2026-09-07**
+  (Amendment 105). `pickNameForms` refuses a form that names a company where
+  the saint is one person, which is right, so those folders held a name the
+  reader never got; `nameInCompany` now picks the individual out of the line
+  and the forms were read and written. Shown to a reader: el 272 → 341,
+  ro 138 → 149, sr 112 → 115. **42 remain** and are the honest residue —
+  lines naming no candidate («Св. исповедници Едески»), or a name that is a
+  translation rather than a transliteration (Andrew/Ανδρέας).
+  `--list dropped` still prints them.
 - **Seven saints carry `confessor` beside a hierarchical type** and read as
   *Confessor*: Barses and Eulogius of Edessa, Liberius of Rome, Martin the Pope,
   Nicholas of Alma-Ata, Paul the New of Constantinople, Protogenes of Carrhae.

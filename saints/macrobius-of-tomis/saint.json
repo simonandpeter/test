@@ -13,6 +13,16 @@
     {
       "form": "Макровий",
       "lang": "ru"
+    },
+    {
+      "form": "Macrobie",
+      "lang": "ro",
+      "note": "His own name, read out of «Sfinții Mucenici din Dobrogea: Macrobie, Gordian, Ilie, Zotic, Lucian și Valerian» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Μακρόβιος",
+      "lang": "el",
+      "note": "His own name, read out of «Άγιοι Γορδιανός, Σέλευκος και Μακρόβιος» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",

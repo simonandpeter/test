@@ -32,6 +32,14 @@ const args = process.argv.slice(2);
 const opt = (n, d) => { const i = args.indexOf(n); return i === -1 ? d : args[i + 1]; };
 const LIST = opt('--list', null);
 const LIMIT = Number(opt('--limit', 40));
+/*
+ * `--json dropped` prints the same rows the report does, as data, so a
+ * one-off writer can consume exactly what a reader has just reviewed rather
+ * than a second implementation of the matching drifting away from this one.
+ * It stays a *proposal*: the writer is separate, and somebody has to read the
+ * rows before running it.
+ */
+const JSON_OUT = opt('--json', null);
 
 /** The four packs the site can be read in. English is the fallback, not a pack. */
 const PACKS = ['ru', 'ro', 'el', 'sr'];
@@ -113,6 +121,104 @@ const ACCEPTED = new Map([
 
 /** Which church's citation is written in which pack's language. */
 const CHURCH_LANG = { russian: 'ru', romanian: 'ro', greek: 'el', serbian: 'sr' };
+
+/*
+ * A rough romanisation, for matching a name against an English one and for
+ * nothing else — it is never printed. Digraphs first, so `θ` is `th` before
+ * `η` can be `i`, and Greek's own `ου`/`αι` before their letters are taken
+ * singly. Accents are stripped by `NFD` before any of it runs.
+ */
+const ROMAN_PAIRS = [
+  ['ου', 'u'], ['αι', 'e'], ['ει', 'i'], ['οι', 'i'], ['ευ', 'ev'], ['αυ', 'av'], ['γγ', 'ng'], ['μπ', 'b'], ['ντ', 'd'],
+  ['θ', 'th'], ['χ', 'ch'], ['ψ', 'ps'], ['ξ', 'x'], ['φ', 'f'], ['ω', 'o'], ['η', 'i'], ['υ', 'y'], ['σ', 's'], ['ς', 's'],
+  ['α', 'a'], ['β', 'v'], ['γ', 'g'], ['δ', 'd'], ['ε', 'e'], ['ζ', 'z'], ['ι', 'i'], ['κ', 'k'], ['λ', 'l'], ['μ', 'm'],
+  ['ν', 'n'], ['ο', 'o'], ['π', 'p'], ['ρ', 'r'], ['τ', 't'],
+  ['щ', 'sh'], ['ш', 'sh'], ['ч', 'ch'], ['ж', 'zh'], ['ю', 'yu'], ['я', 'ya'], ['х', 'h'], ['ц', 'ts'], ['ѣ', 'e'],
+  ['а', 'a'], ['б', 'b'], ['в', 'v'], ['г', 'g'], ['д', 'd'], ['е', 'e'], ['ё', 'e'], ['з', 'z'], ['и', 'i'], ['й', 'i'],
+  ['к', 'k'], ['л', 'l'], ['м', 'm'], ['н', 'n'], ['о', 'o'], ['п', 'p'], ['р', 'r'], ['с', 's'], ['т', 't'], ['у', 'u'],
+  ['ф', 'f'], ['ы', 'y'], ['э', 'e'], ['ъ', ''], ['ь', ''], ['ј', 'j'], ['љ', 'lj'], ['њ', 'nj'], ['ђ', 'dj'], ['ћ', 'c'],
+  ['ș', 's'], ['ț', 't'], ['ă', 'a'], ['â', 'a'], ['î', 'i'],
+];
+
+function romanise(text) {
+  let s = String(text ?? '').normalize('NFD').replace(/[̀-ͯ҃-҉]/g, '').toLowerCase();
+  for (const [from, to] of ROMAN_PAIRS) s = s.split(from).join(to);
+  return s.replace(/[^a-z]/g, '');
+}
+
+/*
+ * The spellings that are one name in two alphabets. Every one of these was a
+ * miss on the first run: `Αγαθόκλεια`/Agathocleia is `k` against `c`,
+ * `Ана`/Anna is a doubled letter English keeps and Cyrillic does not,
+ * `Адријан`/Adrian is Serbian's `ј`, and `Ασκληπιοδότη`/Asclepiodote is both
+ * `k`/`c` and the vowel a transliterator chose differently. Folding them away
+ * took the matcher from 39 of 125 to most of them.
+ */
+const fold = (s) =>
+  s
+    .replace(/c/g, 'k')
+    .replace(/[jy]/g, 'i')
+    .replace(/ph/g, 'f')
+    .replace(/(.)\1+/g, '$1');
+
+/** Levenshtein, small strings only. */
+function distance(a, b) {
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i += 1) {
+    let diag = prev[0];
+    prev[0] = i;
+    for (let j = 1; j <= b.length; j += 1) {
+      const t = prev[j];
+      prev[j] = Math.min(prev[j] + 1, prev[j - 1] + 1, diag + (a[i - 1] === b[j - 1] ? 0 : 1));
+      diag = t;
+    }
+  }
+  return prev[b.length];
+}
+
+/**
+ * How alike two romanised names are, 0 to 1 — an edit distance rather than a
+ * shared prefix, because the letters that differ between two alphabets'
+ * transliterations are as often in the middle («Ασκληπιοδότη») as at the end.
+ */
+function affinity(a, b) {
+  const x = fold(a);
+  const y = fold(b);
+  if (!x || !y) return 0;
+  return 1 - distance(x, y) / Math.max(x.length, y.length);
+}
+
+/**
+ * The one name in a company line that belongs to *this* saint.
+ *
+ * The 125 forms `pickNameForms` refuses are company lines — the day's whole
+ * entry copied into a `names` slot — and the saint's own name is nearly always
+ * inside one, beside three others. Matching it is a romanisation away:
+ * «Άγιοι Εύοδος, Καλλίστη, Αγαθόκλεια και Ερμογένης» against "Agathocleia of
+ * Nicomedia" picks Αγαθόκλεια on `agathokleia` ~ `agathocleia`.
+ *
+ * **Proposes, and less confidently than `citedName` does.** A Greek line lists
+ * in the nominative and a Slavonic one may not; an entry like «Св. исповедници
+ * Едески» ("the confessors of Edessa") names nobody at all and this returns
+ * nothing for it; and a saint whose English name is a description rather than
+ * a transliteration — "Andrew, soldier of Alexandria" — matches on its first
+ * word only, which is why the threshold is high and the row is still printed
+ * beside the line it came from.
+ */
+function nameInCompany(form, displayName) {
+  const head = romanise(String(displayName ?? '').split(/[,(]/)[0].split(/\s+/)[0]);
+  if (head.length < 3) return null;
+  const tokens = String(form ?? '')
+    .split(/[\s,]+|\bκαι\b|\bκαί\b|\bи\b|\bși\b|\bşi\b/i)
+    .map((t) => t.replace(/[«»„“”"().]/g, '').trim())
+    .filter((t) => t.length > 2);
+  let best = null;
+  for (const t of tokens) {
+    const score = affinity(romanise(t), head);
+    if (score >= 0.72 && (!best || score > best.score)) best = { token: t, score };
+  }
+  return best?.token ?? null;
+}
 
 /**
  * The saint's name as their *own folder* already quotes it, in `pack`.
@@ -224,7 +330,12 @@ for (const dir of folders) {
   const shipped = pickNameForms(s.names, s.display_name);
   for (const p of PACKS) {
     if (byLang.has(p) && !shipped[p]) {
-      at('dropped', `${p}: «${byLang.get(p)}»`, { pack: p });
+      const inside = nameInCompany(byLang.get(p), s.display_name);
+      at('dropped', `${p}: «${byLang.get(p)}»${inside ? `\n        → ${inside}` : '   (no name in it for this saint)'}`, {
+        pack: p,
+        candidate: inside,
+        form: byLang.get(p),
+      });
     }
     if (shipped[p]) packShips[p] += 1;
   }
@@ -320,6 +431,15 @@ for (const p of PACKS) {
   };
   walk(EN, pack, '');
   packEcho[p] = echoes;
+}
+
+if (JSON_OUT) {
+  const rows =
+    JSON_OUT === 'dropped'
+      ? findings.dropped.filter((r) => r.candidate).map((r) => ({ dir: r.dir, pack: r.pack, form: r.form, candidate: r.candidate }))
+      : findings.gap.flatMap((r) => r.proposals.map(([pack, cited]) => ({ dir: r.dir, pack, cited })));
+  console.log(JSON.stringify(rows, null, 1));
+  process.exit(0);
 }
 
 /* ---- the report ---------------------------------------------------------- */

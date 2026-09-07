@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Mucenic Teodul",
       "lang": "ro"
+    },
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "His own name, read out of «Άγιοι Μακεδόνιος, Θεόδουλος και Τατιανός» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",

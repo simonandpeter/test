@@ -10947,10 +10947,10 @@ calendars to be got right.
 
 ### The finding that was hiding inside the coverage number
 
-Counting the forms a *folder* holds says ru 563, ro 154, el 370, sr 121.
-Counting what the manifest actually ships — `pickNameForms`, which is what a
-reader is shown — says **561, 138, 272, 112**. The difference is 125 forms,
-and 98 of them are Greek.
+Counting the forms a *folder* holds said ru 563, ro 154, el 370, sr 121.
+Counting what the manifest actually shipped — `pickNameForms`, which is what a
+reader is shown — said **561, 138, 272, 112**. The difference was 125 forms,
+and 98 of them were Greek.
 
 They are recorded and unusable. The recorded form is the day's whole entry
 copied in — «Άγιοι Αειθαλάς και Αμών», «Праведных Богоотец Иоакима и Анны» —
@@ -10960,10 +10960,34 @@ page. So the corpus has looked better covered in Greek than it is, by about a
 hundred saints, for as long as those forms have been there.
 
 `--list dropped` is the list, and the repair is the same reading that produced
-`Иоаким` and `Анна` from one citation this sitting — one individual's own form
-lifted out of a company line. It is the largest thing this audit found that
-needs no decision from anybody: the source is already in the folder, and the
-only question is grammar.
+`Иоаким` and `Анна` from one citation — one individual's own form lifted out
+of a company line. It was the largest thing this audit found that needed no
+decision from anybody: the source was already in the folder, and the only
+question was which word in it.
+
+**So the audit was taught to answer that too, and 83 of the 125 were written.**
+`nameInCompany` romanises both sides and takes the nearest token — «Άγιοι
+Εύοδος, Καλλίστη, Αγαθόκλεια και Ερμογένης» against "Agathocleia of Nicomedia"
+picks Αγαθόκλεια. It matched 39 of 125 until the spellings that are one name in
+two alphabets were folded away: `k` against `c`, the doubled letter English
+keeps and Cyrillic does not (Ана/Anna), Serbian's `ј`, and `ph`/`f`. Then 83,
+each printed beside its own line and read before anything was written —
+`--json dropped` hands exactly those rows to a separate one-off writer, so
+what went in is what was reviewed rather than a second matcher's opinion.
+
+**Shown to a reader: el 272 → 341, ro 138 → 149, sr 112 → 115.** The 42 left
+are the lines that name no candidate at all — «Св. исповедници Едески», "the
+confessors of Edessa", names nobody; and Andrew is `Ανδρέας`, which is a
+translation rather than a transliteration and which no romanising matcher
+should be made to force.
+
+**One of them was the author's own example.** John the Theologian's Romanian
+name was recorded all along and never shown, and not because of a company at
+all: `pickNameForms` reads a conjunction as the mark of a company, and his
+line is «Sfântul Apostol și Evanghelist Ioan» — *Apostle and Evangelist*, two
+titles for one man. The test is right about the case it was built for and this
+is its false positive, so what fixes him is the same thing that fixes the rest:
+`Ioan` recorded as his own form beside the line.
 
 Three things the audit had to be taught before its output was worth reading,
 each a false positive it reported on its first run:
