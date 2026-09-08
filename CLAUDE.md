@@ -256,6 +256,19 @@ nothing.**
   `python scripts/make-terrain.py` — regenerate committed assets, by hand only.
 - `npm run app:sync` / `app:android` / `app:ios` — the Capacitor shells;
   `docs/APP.md` is the guide.
+- **`bash "/c/Users/matei/Desktop/ClaudeWake/wake.sh" <when> "note"`** — arm a
+  wake-up so a session stranded by a usage limit resumes itself instead of
+  idling until somebody notices. **Launch it with `run_in_background: true`**:
+  the whole mechanism is that a *finished* background task re-invokes the
+  session, so in the foreground it is only a slow `sleep` blocking the thing it
+  was meant to protect. `<when>` takes `90m`, `2h`, a bare number of minutes,
+  or a clock time (`06:30`, read as tomorrow if it has gone). Fire it *after*
+  the quota returns — the limit message names the hour — because a wake cannot
+  spend tokens that are not back yet and an early one spends the single
+  resumption you had. Arm one before anything long and unattended, and at the
+  point in a sitting where the ceiling looks close. Written 2026-09-09 after a
+  limit pause idled a session for hours while its own stray CI poll, finishing,
+  proved the mechanism works; `README.md` beside it has the rest.
 
 **Windows.** Prefer Write/Edit or short Python over PowerShell heredocs. A Python
 heredoc through the Bash tool loses one level of backslashes — put regexes in a
