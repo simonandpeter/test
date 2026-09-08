@@ -1159,6 +1159,10 @@ export function paintCanvas(canvas, cards) {
    * saint's own dot draws over the same coordinate; a region has no such
    * point and is centred type alone, in capitals the way a printed atlas
    * sets a region apart from a city on the same page.
+   *
+   * **A city's name goes to the left of its marker** (2026-09-08); the note on
+   * the draw itself says why, and it is the one thing about this layer that a
+   * saint's name has an opinion about.
    */
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = inkSoft;
@@ -1201,15 +1205,50 @@ export function paintCanvas(canvas, cards) {
   const spaced = 'letterSpacing' in ctx;
   if (spaced) ctx.letterSpacing = '0.06em';
   ctx.font = `10.5px ${utilityFont}`;
-  ctx.textAlign = 'left';
+  /*
+   * **A city's name sits to the *left* of its marker** (author, 2026-09-08:
+   * "place them to the left of a dot instead of to the right"), which is the
+   * whole of the collision this layer was actually causing.
+   *
+   * `layoutLabels` tries the right of a saint's dot first and takes it
+   * whenever it is free, so every saint name in the picture starts to the
+   * right of its own dot — and so did every city name, out of the same
+   * coordinate. At Nicomedia that put NICOMEDIA and "Martyr Adrian of
+   * Nicomedia +26" through each other, and the same at Constantinople: two
+   * legible things in one space, which reads as neither. Sending this layer
+   * the other way costs nothing — it is not laid out against anything, so it
+   * has no preference to give up — and empties the side the corpus wants.
+   *
+   * **It is still allowed to clash, and that is the arrangement rather than a
+   * gap in it** (author, same message: "make these city names on a different
+   * layer to the other text so its okay if they clash"). This layer is not in
+   * `obstacles` and never has been, so it can neither take space from a
+   * saint's name nor be pushed off the ground it names. What keeps an overlap
+   * legible is that the two are not the same *kind* of type: capitals, tracked,
+   * a third smaller and at a third of the ink, against mixed case at full
+   * strength. An atlas prints a region across a city and a city under a road
+   * for the same reason.
+   */
+  ctx.textAlign = 'right';
+  const atlasSides = [];
   for (const at of positioned) {
     if (!at || at.loc.kind !== 'city') continue;
     ctx.globalAlpha = at.alpha * 0.38;
     ctx.beginPath();
     ctx.arc(at.x, at.y, 2, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillText(at.loc.name.toUpperCase(), at.x + 5, at.y - 4);
+    const edge = at.x - 5;
+    ctx.fillText(at.loc.name.toUpperCase(), edge, at.y - 4);
     historicalDrawn.push(at.loc.name);
+    /*
+     * Which side of its own marker the name landed on, for the suite. **Both
+     * halves of the answer**, because either alone is an instrument that
+     * cannot see the revert it exists to catch: the anchor without the
+     * alignment misses a `textAlign` flipped back to `left`, and the alignment
+     * without the anchor misses the offset flipped back to `+5`. Found by
+     * backing the change out and watching the test pass.
+     */
+    atlasSides.push({ n: at.loc.name, dot: Math.round(at.x), end: Math.round(edge), align: ctx.textAlign });
   }
   ctx.font = `12.5px ${utilityFont}`;
   ctx.textAlign = 'center';
@@ -1226,6 +1265,7 @@ export function paintCanvas(canvas, cards) {
   // that knows, so the suite reads what actually landed rather than
   // recomputing the fade bands itself.
   canvas.dataset.historical = JSON.stringify(historicalDrawn);
+  canvas.dataset.atlasSides = JSON.stringify(atlasSides);
 
   /*
    * **One dot per saint, not one per location of the current kind**

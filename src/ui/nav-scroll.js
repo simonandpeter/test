@@ -307,10 +307,22 @@ export function wireNavScroll(track) {
    */
   const GLIDE_MS = 380;
 
+  /** Which page the running tween is travelling to, so a second ask can tell. */
+  let bound = null;
+
   function glide(el) {
     if (dead) return;
     const target = el ?? currentEl() ?? nearestEl();
     if (!target) return;
+    /*
+     * **A second ask for a journey already under way is not news** (2026-09-08).
+     * The press starts the glide and the navigation behind it arms one too;
+     * restarting the tween from wherever it had reached, on a fresh clock,
+     * is the stutter that would put back exactly the unevenness starting it on
+     * the press was meant to remove.
+     */
+    if (gliding && target === bound) return;
+    bound = target;
     cancelAnimationFrame(raf);
     if (reducedMotion() || typeof requestAnimationFrame !== 'function') {
       balance(target);
@@ -341,6 +353,7 @@ export function wireNavScroll(track) {
       track.style.scrollSnapType = snap;
       balance(target);
       gliding = false;
+      bound = null;
     };
     raf = requestAnimationFrame(step);
   }

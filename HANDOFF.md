@@ -386,6 +386,27 @@ its reasoning).
     nothing at all. Read Amendment 107 before optimising this page again: the
     cost is the *number of columns laid out*, and everything else is noise
     against it.
+  **And a fourth round, the same evening** (Amendment 108):
+
+  - **The strip answers the press, not the navigation.** The glide starts in
+    `main.js`'s nav click listener and **that press skips the view transition** —
+    a transition replaces the document with a snapshot for its duration, so a
+    header animating under one cannot be seen. Measured: 277 ms before the strip
+    moved, 36 ms after. Only this gesture skips the fade; do not generalise it
+    without reading the amendment's note on the wider alternative.
+  - **`min-width: 25vw` is the one width where half the box and half the *word*
+    are the same thing**, a label being centred in its box. 26vw showed 42% of
+    the box and 13 px of a 40 px "Map" — the number looked right and the
+    screenshot did not. The edge mask is 9%, shorter than the 12.5% sliver on
+    purpose.
+  - **The map's city names sit left of their marker.** The author's diagnosis —
+    that they were pushing saint names out — was not the mechanism (that layer
+    has never been in `obstacles`), but the instruction was right: both start on
+    the right of a dot, so they were drawn through each other.
+  - **The test for that was written twice**, and the first published only the
+    anchor and passed with the draw reverted. `data-atlas-sides` carries the
+    alignment too. Worth reading before writing the next canvas instrument.
+
   - **The fade is 900 ms on an ease-in-out, queued 200 ms apart** (author,
     2026-09-08: "make them fade in slower and mpre smoothly"), and it is two
     numbers in two files — `index.css` and `FADE_GAP_MS` — that move together.

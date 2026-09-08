@@ -1787,6 +1787,23 @@ const stripOrder = (page) =>
  */
 const watchPress = async (href) => {
   const track = document.querySelector('.site-nav');
+  /*
+   * Whether the press ran a view transition, which is the other half of "the
+   * animation is separate from the loading below" and the half `movedAt`
+   * cannot see: a transition covers the document with a snapshot for its
+   * duration, so the strip's `scrollLeft` moves on time and the reader watches
+   * a still picture. Reverting only the skipped fade would leave `movedAt`
+   * reading 36 ms and the header frozen — an instrument blind to its own
+   * subject, which is the shape of mistake this file has now made twice.
+   */
+  let transitions = 0;
+  if (document.startViewTransition) {
+    const orig = document.startViewTransition.bind(document);
+    document.startViewTransition = (cb) => {
+      transitions += 1;
+      return orig(cb);
+    };
+  }
   const seen = [Math.round(track.scrollLeft)];
   /*
    * And the widest blank strip beyond whichever links are actually on screen,
@@ -1795,9 +1812,13 @@ const watchPress = async (href) => {
    * against a 360 px window before the ring learned to turn mid-journey.
    */
   let gap = 0;
+  let movedAt = null;
+  const began = performance.now();
+  const from = track.scrollLeft;
   let running = true;
   const tick = () => {
     seen.push(Math.round(track.scrollLeft));
+    if (movedAt === null && Math.abs(track.scrollLeft - from) > 2) movedAt = performance.now() - began;
     const box = track.getBoundingClientRect();
     const on = [...track.children]
       .map((a) => a.getBoundingClientRect())
@@ -1815,6 +1836,8 @@ const watchPress = async (href) => {
   return {
     steps: [...new Set(seen)].length,
     gap: Math.round(gap),
+    movedAt: Math.round(movedAt ?? 9999),
+    transitions,
     offCentre: Math.abs(cur.left + cur.width / 2 - (box.left + box.width / 2)),
   };
 };
@@ -1867,12 +1890,55 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
    */
   expect(glided.gap, `${glided.gap} px of empty strip showed during the press`).toBeLessThan(2);
   expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
+  /*
+   * **And the strip answers the press itself, not the navigation behind it**
+   * (author, 2026-09-08: "I want the animation to be separate from the loading
+   * below ... It should be a smooth instant response, and the loading below
+   * should happen independently").
+   *
+   * It used to be armed in `renderNav` and let go from `show()` once the view
+   * transition's `finished` settled, so a press bought a quarter-second of
+   * nothing and then the row moved. Both numbers are read from the same clock
+   * as the press, and what the assertion is really about is that *neither
+   * waits for the other*.
+   */
+  expect(glided.movedAt, `the strip did not move until ${glided.movedAt} ms`).toBeLessThan(120);
+  expect(glided.transitions, 'the press ran a view transition, which freezes the strip under a snapshot').toBe(0);
   // And the ring is balanced again around the page that was pressed, which is
   // the rebalance being silent: the glide's own landing and this are the same
   // pixel for About, and only the four pages around it have moved.
   await expect
     .poll(() => stripOrder(page))
     .toEqual(['texts', 'map', 'about', 'calendar', 'saints']);
+
+  /*
+   * **All five pages are on screen, and the outer two by about half** (author,
+   * 2026-09-08: "you should be able to see the other 2 header buttons even if
+   * its just half of them, and then have a fade on the edges so it looks like
+   * they're fading out into the edges of the screen").
+   *
+   * Half the *box* and half the *word* are the same thing only at `min-width:
+   * 25vw`, which is why the number is what it is: a label is centred in its
+   * box, so at 26vw the 42% that showed was the box's outer edge and the last
+   * few letters of the word. base.css carries the arithmetic.
+   */
+  const seen = await page.evaluate(() => {
+    const track = document.querySelector('.site-nav');
+    const box = track.getBoundingClientRect();
+    const parts = [...track.children]
+      .map((a) => ({ key: a.dataset.navKey, r: a.getBoundingClientRect() }))
+      .sort((a, b) => a.r.left - b.r.left)
+      .map((k) => Math.round(((Math.min(k.r.right, box.right) - Math.max(k.r.left, box.left)) / k.r.width) * 100));
+    const style = getComputedStyle(track);
+    return { parts, masked: (style.maskImage || style.webkitMaskImage || 'none') !== 'none' };
+  });
+  expect(seen.parts.length, 'a page went missing from the strip').toBe(5);
+  expect(seen.parts.slice(1, 4), 'the three middle pages are not whole').toEqual([100, 100, 100]);
+  for (const shown of [seen.parts[0], seen.parts[4]]) {
+    expect(shown, `an outer page shows ${shown}% of itself`).toBeGreaterThan(35);
+  }
+  // And they run off the edge rather than stopping at it.
+  expect(seen.masked, 'the strip has no edge fade').toBe(true);
 });
 
 test('under reduced motion the strip is simply centred, with no journey', async ({ browser }) => {

@@ -933,7 +933,7 @@ phone's narrower ceiling: clicking closed a blob it had just opened).
 `Math.max(fitted.scale, view.scale)` is the fix — never asked to zoom out to
 fit something already on screen, only ever in. **A click at a blob's own
 centre still has to open the blob and not one member dot standing near it**
-— trap 14, above, in "Traps": `wirePress`'s `pointerup` now only lets a dot
+— trap 16, above, in "Traps": `wirePress`'s `pointerup` now only lets a dot
 win over its own blob when that blob is the one already open (`openBlobId`),
 since a closed blob's members carry no name on screen to have been aimed at.
 No saint is selected by any of this — a blob is a grouping of several real
@@ -1078,6 +1078,15 @@ attribute selector, which outweighs a bare class on specificity regardless of
 load order, and would otherwise have handed this field the Index's own
 smaller font size and tighter padding the moment the attribute made it match.
 
+**A city's name in the atlas layer sits to the *left* of its marker** (2026-09-08):
+`layoutLabels` takes the right of a dot whenever it is free, so every saint name
+starts there, and the atlas starting there too drew NICOMEDIA through "Martyr
+Adrian of Nicomedia". The layer is *not* in `obstacles` and never was — it can
+neither take a saint's space nor be pushed off its ground — so it had no
+preference to give up. `data-atlas-sides` publishes the anchor **and** the
+alignment, because either alone is an instrument that passes with the change
+backed out.
+
 **A faint historical atlas layer is drawn under everything else, unconditionally,
 whether or not the search has ever been opened** (`HISTORICAL_LABELS`,
 `data/historical-labels.js`, `paintCanvas`, 2026-09-05 — author: "add a faint
@@ -1212,11 +1221,18 @@ masthead is an SVG wordmark: `scripts/make_wordmark.py` generates
 `src/ui/wordmark.js`, a Vite plugin injects it into both slots in index.html.
 Below 760 px the nav is `ui/nav-scroll.js`'s endless strip: five links, one
 DOM order at every instant, the ring turned by a flex `order` so whichever page
-is centred stands in the *middle* of the five. `renderNav` moves `aria-current`
-in place there rather than rebuilding, because the glide needs somewhere to
-start from — and **the glide itself is released from `show()`, after the view
-transition's `finished`**, since a smooth scroll begun inside the transition
-callback dies with the suspended rendering.
+is centred stands in the *middle* of the five, and turned *during* a movement
+rather than after it. `renderNav` moves `aria-current` in place there rather
+than rebuilding, because the glide needs somewhere to start from.
+**The glide starts on the press, in `main.js`'s nav click listener, and that
+press skips the view transition** (2026-09-08) — a transition replaces the
+document with a snapshot for its duration, so a header animating under one
+cannot be seen, and waiting for `finished` made the strip answer 277 ms after
+the touch instead of 36. Only this gesture skips the fade.
+`min-width: 25vw` is arithmetic, not taste: it is the one width at which the
+pages two along show *half of themselves and half of their word*, and the edge
+mask is 9% so that half-word fades rather than starting faint. base.css carries
+both derivations.
 
 **The app owns scroll, and the browser's own competing opinions are turned
 off one at a time as they are found** (DESIGN.md §5c). `router.js` already
@@ -1434,7 +1450,23 @@ rehearsal on this spec knows it is not theirs.
     fails *open*: the test passes having intercepted nothing. Count the
     interceptions and assert the count, or stub `window.fetch` in an init
     script instead.
-14. **A click aimed at a group can land on one of its own members.** A blob's
+14. **An instrument that reads what the code publishes about itself cannot see
+    what the reader sees.** Three in one sitting (2026-09-08), all found by
+    backing the change out and watching the test pass: an atlas label's
+    published *anchor* is not where the glyph landed (a revert need not touch
+    the variable it is published from — publish the alignment too); a
+    `scrollLeft` that moves on time is not a row the reader saw move, because a
+    view transition covers the document with a snapshot for its duration (count
+    the transitions as well); and a canvas `data-` attribute is only as honest
+    as the line that writes it. Where a canvas, a snapshot or a mask stands
+    between the state and the reader, one assertion is almost never enough.
+15. **A truncated pass is not a pass.** A backgrounded `npm run test:all`
+    reported "880 passed" and exited 0; the full log said **17 failed** — the
+    summary had been cut out of the captured tail. Redirect to a file and grep
+    the whole of it. And a spread of failures across unrelated surfaces is a
+    fact about the desk (leftover browser processes) before it is a fact about
+    the diff: fifteen of those seventeen passed on a quiet machine.
+16. **A click aimed at a group can land on one of its own members.** A blob's
     members are real, individually-positioned dots (2026-09-04) — only their
     *names* are withheld while closed — and a press at their averaged centre
     routinely falls inside one member's own 12 px hit-radius, since that is

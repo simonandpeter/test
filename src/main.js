@@ -302,9 +302,42 @@ function animateScrollToTop(duration = 300) {
  * animation caught mid-flight and yanked back to its own target a frame in.
  */
 let animateLanding = false;
+/**
+ * **The strip answers the press, not the navigation** (author, 2026-09-08:
+ * "I want the animation to be separate from the loading below otherwise it
+ * feels disjointed uneven and unpredictable. It should be a smooth instant
+ * response, and the loading below should happen independently").
+ *
+ * It was armed in `renderNav` and let go from `show()` once the view
+ * transition's `finished` settled — so a press bought a quarter-second of
+ * nothing, then the page changed, then the header moved. Three events for one
+ * touch, in an order the reader cannot predict because it depends on how long
+ * the page took.
+ *
+ * The glide starts *here* now, on the press itself, before the router has been
+ * asked for anything. And the cross-fade is skipped for this one gesture,
+ * which is the other half of the same problem: a view transition replaces the
+ * whole document with a snapshot for its duration, so a header animating
+ * underneath one is a header nobody can see. Only this press — every other
+ * navigation on the site still cross-fades — because this is the only one
+ * where the chrome is the thing the reader is looking at.
+ *
+ * *The wider fix, not taken: `:root { view-transition-name: none }` with the
+ * name moved to `#view` would scope the cross-fade to the content and leave
+ * the chrome live for every navigation. It also rewrites the saint page's own
+ * shared-element and swipe transitions, which is a great deal of risk to buy
+ * a fade on the one gesture that reads better without it.*
+ */
+let skipFade = false;
 navEl.addEventListener('click', (e) => {
-  const link = e.target.closest('a[aria-current="page"]');
+  const link = e.target.closest('a');
   if (!link || !navEl.contains(link)) return;
+  // The phone's strip only: the wide row has nothing to glide.
+  if (navScroll) {
+    navScroll.glide(link);
+    skipFade = true;
+  }
+  if (!link.matches('[aria-current="page"]')) return;
   sectionScroll.delete(lastRoute?.nav);
   animateLanding = link.pathname === location.pathname;
 });
@@ -573,7 +606,11 @@ function show({ route, params, path }, nav = {}) {
   // `swap` owns the section restore now, floor and all, so there is nothing
   // left to correct once the transition settles — a second pass here is what
   // used to produce the jump this fixed.
-  if (document.startViewTransition && !reduced && !first) {
+  // Read and cleared with `animateLanding` above: this press's own fade
+  // decision, and the next navigation starts from the ordinary one.
+  const fade = !skipFade;
+  skipFade = false;
+  if (document.startViewTransition && !reduced && !first && fade) {
     document.startViewTransition(swap).finished.finally(() => {
       settleLate(returning);
       settleNav();

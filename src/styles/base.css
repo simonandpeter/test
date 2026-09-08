@@ -946,6 +946,33 @@ nav.site-nav a[aria-current='page'] {
     scrollbar-width: none;
     padding-inline: 50vw;
     /*
+     * **And the ends fade into the screen's own edges** (author, 2026-09-08:
+     * "have a fade on the edges so it looks like they're fading out into the
+     * edges of the screen").
+     *
+     * A mask rather than a pair of gradient overlays, because an overlay would
+     * have to be painted in `--gesso` and this row sits on two themes and on a
+     * bar that is deliberately translucent at its own edge; a mask takes the
+     * *pixels* out and lets whatever is behind stay behind. It is fixed to the
+     * element's own box rather than to its scrolled content, which is what
+     * makes it read as the screen's edge and not as a mark travelling with the
+     * row.
+     *
+     * **The fade spans exactly the sliver, and no more** (measured, after a
+     * first cut at 16% swallowed the thing it was meant to show). With the
+     * centred page on the midline the outermost pages show `V/2 - 1.5w` of
+     * themselves, which at `w = 26vw` is 11% of the screen at every width the
+     * strip is used at — both terms are in vw, so the fraction is a constant.
+     * **9%, which is shorter than the sliver on purpose.** At 25vw the
+     * outermost page shows 12.5% of the screen, and a ramp across all of it
+     * would leave every pixel of that half-word under half opacity — a smudge,
+     * which is what a first cut at 16% produced and what this is corrected
+     * from. At 9% the ramp is 32 px of a 45 px sliver: the word fades as it
+     * runs off the edge, and does not start the run already faint.
+     */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
+    /*
      * `overflow-anchor: none` already sits on `html` for the reason
      * base.css's own §5c note gives — Chromium nudging `scrollY` to hold
      * late-arriving content still — and this strip needs its own copy: each
@@ -981,10 +1008,28 @@ nav.site-nav a[aria-current='page'] {
      * A `min-width`, not a width: a label longer than this keeps its own size,
      * which only makes the ring longer still. It is also what the old
      * five-across grid was reaching for (author, 2026-08-26 evening: no page
-     * favoured over another by width) without the ledger look that killed it —
-     * a reader sees three and a half pages, not five squeezed ones.
+     * favoured over another by width) without the ledger look that killed it.
+     *
+     * **25vw, which is exactly half** (author, 2026-09-08: "you should be able
+     * to see the other 2 header buttons even if its just half of them"). With
+     * the centred page on the midline the pages two along start at `1.5w` from
+     * centre and the screen ends at `V/2`, so a reader sees `(V/2 - 1.5w)/w` of
+     * each: 28% at 28vw, 42% at 26vw, and **half at exactly `V/4`**, which is
+     * 25vw at every width because both terms are in vw.
+     *
+     * Half the *box* and half the *word* are the same thing only here, and that
+     * is what settled it: a label is centred in its box, so at 26vw the 42% that
+     * showed was the box's outer edge and only the last few letters of the word
+     * — 13 px of a 40 px "Map". At 25vw the visible half of the box holds the
+     * visible half of the word.
+     *
+     * The cost is the movement margin. No gap *at rest* needs `2.5w >= V/2`,
+     * which 25vw clears by 45 px; no gap at the worst point of a movement needs
+     * `2.5w >= V/2 + w/2`, which 25vw meets exactly and nothing to spare. That
+     * is affordable only because of the mask below: a hairline that opens at the
+     * very edge mid-glide opens inside the band that is faded to nothing.
      */
-    min-width: 28vw;
+    min-width: 25vw;
     /* Shorter than the comfortable row above it (author, 2026-08-26
        evening): the label's own line plus 3 px either side, which is 25.6 px
        against the 28 the four-pages test allowed at 320 px, kept for this

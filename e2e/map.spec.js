@@ -192,6 +192,32 @@ test('a faint atlas layer names the old cities and regions under the saints', as
   const zoomedIn = JSON.parse(await canvas.getAttribute('data-historical'));
   expect(zoomedIn, 'Nicomedia the city is still named this close in').toContain('Nicomedia');
   expect(zoomedIn, 'Anatolia the region no longer is').not.toContain('Anatolia');
+
+  /*
+   * **And a city's name is to the *left* of its own marker** (author,
+   * 2026-09-08: "place them to the left of a dot instead of to the right").
+   *
+   * The reason is a collision the layer really was causing, even though it is
+   * not in `obstacles` and cannot take a saint's space: `layoutLabels` tries
+   * the right of a dot first and takes it whenever it is free, so every saint
+   * name in the picture starts to the right of its own dot — and so did every
+   * city name, out of the same coordinate. At this zoom NICOMEDIA and "Martyr
+   * Adrian of Nicomedia +26" were drawn through each other, which reads as
+   * neither of them.
+   *
+   * Pinned here because nothing else would notice it going: `data-historical`
+   * says only *that* a name landed, and the two texts overlapping is a fact
+   * about position that only the drawing pass knows.
+   */
+  const sides = JSON.parse(await canvas.getAttribute('data-atlas-sides'));
+  expect(sides.length, 'no city name landed to have a side').toBeGreaterThan(0);
+  for (const city of sides) {
+    // The anchor *and* the alignment: the first cut asserted only the anchor
+    // and passed with the draw reverted, because the anchor is published from
+    // a variable the revert did not have to touch.
+    expect(city.align, `${city.n} is not right-aligned`).toBe('right');
+    expect(city.end, `${city.n} is anchored to the right of its marker`).toBeLessThan(city.dot);
+  }
 });
 
 test('one dot per located saint, and the picture says so', async ({ page }) => {

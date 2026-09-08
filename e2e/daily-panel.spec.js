@@ -2581,7 +2581,18 @@ test('a returning Daily page lands where it was left, though it grows after it r
       return t;
     };
   });
-  await press('nav.site-nav a[data-nav-daily]');
+  /*
+   * **The masthead, not the strip's own Daily button** (2026-09-08). The two
+   * go to the same place and only one of them still cross-fades: a press on the
+   * phone's nav strip skips the transition on purpose since Amendment 108, so
+   * that the strip's own glide is visible instead of frozen under a snapshot of
+   * the page. This test's instrument *is* the transition — it reads `scrollY`
+   * at `ready`, which is the moment the fade is composed — so it has to press
+   * something that still runs one. The promise being measured is unchanged and
+   * belongs to the section restore, not to either button; the strip's own path
+   * is checked below, by where it lands.
+   */
+  await press('[data-site-home]');
 
   /*
    * What the fade shows, not what the page settles to - **up to scroll
@@ -2622,6 +2633,19 @@ test('a returning Daily page lands where it was left, though it grows after it r
   await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBe(shownAt);
   // The floor is a prop for the arrival, not a permanent change to the page.
   await expect.poll(() => page.evaluate(() => document.getElementById('view').style.minHeight)).toBe('');
+
+  /*
+   * **And the strip's own Daily button keeps the same promise on the path that
+   * no longer fades** (2026-09-08). There is no transition to read `ready`
+   * from there, so this measures the thing the reader actually cares about —
+   * where the page ends up — rather than the frame the fade was composed at.
+   * Without it the section restore would be unwatched on the one route a phone
+   * reader takes most.
+   */
+  await press('nav.site-nav a[href$="/saints"]');
+  await expect(page.locator('.index-controls')).toBeVisible();
+  await press('nav.site-nav a[data-nav-daily]');
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBeGreaterThanOrEqual(deep - 4);
 });
 
 
