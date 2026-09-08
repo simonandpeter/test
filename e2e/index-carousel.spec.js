@@ -959,19 +959,27 @@ test('a carousel card is sized by the window height as well as its width', async
    */
   const cell = page.locator('.cx-cell:not(.is-names)').first();
   await expect(cell).toBeVisible();
-  const tall = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
+
+  const width = () => cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
+  const tall = await width();
 
   await page.setViewportSize({ width: 1280, height: 560 });
 
   /*
-   * **Polled, not two frames.** This waited on a pair of `requestAnimationFrame`
-   * callbacks, which is enough on an idle machine and not enough beside five
-   * other workers: the resize has to reach the observer and the row has to
-   * repack before the cell reports its new width, and CI flaked here on two
-   * consecutive runs (2026-09-09) while passing 6 of 6 alone. The poll asserts
-   * the same claim — it fails if the card never narrows.
+   * **Polled, not two `requestAnimationFrame` callbacks.** The poll asserts the
+   * same claim and fails if the card never narrows; it simply tolerates a
+   * repack slower than two frames.
+   *
+   * **This test flakes on CI and the cause is not known** (2026-09-09). It went
+   * flaky on three consecutive runs — twice at `desktop`, once at
+   * `mobile-360` — and passes 16 of 16 here with `--repeat-each=8`. Two
+   * explanations were tried and both are wrong: the cell's width does *not*
+   * move after first paint, so a baseline read mid-pack is not it
+   * (`scratchpad/settle-probe.mjs` reads 300 twelve times running in both
+   * project viewports), and it passes under `COLD_FACE=1`, so the runner's own
+   * face is not it either. The poll above is a defensible robustness change
+   * rather than a fix, and CI is the only place this reproduces.
    */
-  const width = () => cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
   await expect
     .poll(width, {
       timeout: 10000,

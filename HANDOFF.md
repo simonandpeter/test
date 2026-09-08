@@ -159,9 +159,19 @@ their budget on something other than what they measure. The drift test polls
 task before it can paint (PLAN item 7), which under six workers is most of
 those 4 s; it now waits for the row to be wider than its viewport *before*
 timing the drift, so the 4 s measures the drift. The sizing test waited two
-`requestAnimationFrame`s after a viewport change, which is not long enough for
-the resize to reach the observer and the row to repack; it polls now, and still
-fails if the card never narrows.
+`requestAnimationFrame`s after a viewport change; it polls now, which tolerates
+a slower repack and still fails if the card never narrows.
+
+**That second one is not fixed, and I claimed it was.** It flaked again on
+`b9d6ba7` at `mobile-360` — three consecutive CI runs now, twice at desktop and
+once at mobile — while passing 16 of 16 here with `--repeat-each=8`. Two
+explanations were written into the code and both are false: the cell's width
+does *not* move after first paint, so nothing is being read mid-pack
+(`scratchpad/settle-probe.mjs` reads 300 twelve times running in both project
+viewports), and it passes under `COLD_FACE=1`, so the runner's DejaVu is not it.
+The invented reasoning has been taken back out and the comment now says the
+cause is unknown. **CI is the only place it reproduces**, which is the next
+thing to work with — the `flaky` line, not a local run.
 
 **The drift test's new wait is an instrument reading on item 7.** When the pack
 goes lazy it should return instantly; if it ever starts timing out, the pack
