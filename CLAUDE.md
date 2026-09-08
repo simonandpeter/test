@@ -235,10 +235,15 @@ nothing.**
 - `npm run preview` — serves `dist/` on :4173. Kill it when done.
 - `npm test`, `npm run test:e2e`, `npm run test:lighthouse`.
 - **`node scripts/contact-sheet.mjs`** — every route × width × theme × language
-  as one labelled grid in `shots/contact.png`, against `npm run dev`. **The
-  default for visual work**: look at everything once rather than a surface at a
-  time. `--widths=1280 --tile=900` when working on one width. It found a
-  dev-only 404 on the saint route on its first run.
+  as one labelled grid in `shots/contact.png`. **The default for visual work**:
+  look at everything once rather than a surface at a time. `--widths=1280
+  --tile=900` when working on one width; `--still` for a pixel diff.
+  **It starts and stops its own dev server** — do not start one for it, and
+  pass `--base=` only to aim it somewhere deliberately. A dev server left from
+  an earlier sitting keeps 5173 while a new `npm run dev` quietly takes 5175,
+  and the sheet drew the wrong tree and reported success (2026-09-09). It also
+  found a dev-only 404 on the saint route on its first run.
+  Allow ~2 min: it rebuilds the manifest and starts vite cold.
 - `node scripts/shot.mjs <name> <url> [width] [steps…]` — one screenshot, for a
   state the sheet cannot reach (mid-flight, after a press). Steps: `click:`,
   `wait:`, `key:`, `scroll:`, `lang:`, `church:`.

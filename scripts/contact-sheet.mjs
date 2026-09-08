@@ -30,6 +30,7 @@
  */
 import { mkdir, writeFile } from 'node:fs/promises';
 import { readdirSync } from 'node:fs';
+import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 
 /**
@@ -55,7 +56,71 @@ const arg = (name, fallback) => {
 };
 const list = (name, fallback) => String(arg(name, fallback)).split(',').filter(Boolean);
 
-const BASE = arg('base', 'http://localhost:5173').replace(/\/$/, '');
+const GIVEN_BASE = arg('base', null);
+
+/**
+ * **This starts its own dev server unless told otherwise**, and that is a
+ * correctness property rather than a convenience.
+ *
+ * Vite takes the next free port when 5173 is busy, and a dev server left over
+ * from an earlier sitting keeps 5173 quite happily. On 2026-09-09 that drew a
+ * full sheet of the *previous* session's code and printed success: `npm run
+ * dev` had gone to 5175 and this had shot 5173, which had been up for two and
+ * a half hours. A picture of the wrong tree is worse than no picture, because
+ * the whole point of the tool is to be believed.
+ *
+ * `--base=` still points it at a server you have started deliberately.
+ */
+const startDevServer = async () => {
+  /*
+   * `shell: true` on Windows because Node will not spawn `npm.cmd` without
+   * one (EINVAL since Node 20), and the arguments here are constants rather
+   * than anything a caller supplies.
+   */
+  const proc = spawn('npm', ['run', 'dev'], {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    shell: process.platform === 'win32',
+    detached: process.platform !== 'win32',
+  });
+  const url = await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('the dev server never printed a URL')), 60_000);
+    let seen = '';
+    const read = (chunk) => {
+      seen += chunk;
+      /*
+       * Vite prints the port it actually took, which is the only one to trust
+       * — but it prints it *bold*, so the escape sequence sits between the
+       * colon and the digits and a naive match never fires. Strip first.
+       */
+      const m = /http:\/\/localhost:(\d+)/.exec(seen.replace(/\u001b\[[0-9;]*m/g, ''));
+      if (m) {
+        clearTimeout(timer);
+        resolve(`http://localhost:${m[1]}`);
+      }
+    };
+    proc.stdout.on('data', read);
+    proc.stderr.on('data', read);
+    proc.on('exit', (code) => reject(new Error(`the dev server exited with ${code}`)));
+  });
+  /*
+   * **Kill the tree, not the wrapper.** `npm run dev` is a shell that spawns
+   * vite, so `proc.kill()` reaps the shell and leaves vite holding the port —
+   * which is precisely the stale server this function exists to prevent, now
+   * created by the thing preventing it. Found by checking the port afterwards
+   * rather than by trusting the kill (2026-09-09).
+   */
+  const stop = () => {
+    if (process.platform === 'win32') {
+      spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+    } else {
+      process.kill(-proc.pid, 'SIGTERM');
+    }
+  };
+  return { url, stop };
+};
+
+const server = GIVEN_BASE ? null : await startDevServer();
+const BASE = (GIVEN_BASE ?? server.url).replace(/\/$/, '');
 const WIDTHS = list('widths', '360,768,1280').map(Number);
 const THEMES = list('themes', 'day,vigil');
 const LANGS = list('langs', 'en');
@@ -109,11 +174,13 @@ try {
   const ok = await probe.goto(BASE, { waitUntil: 'domcontentloaded' }).then((r) => r?.ok()).catch(() => false);
   await probe.close();
   if (!ok) {
-    console.error(`nothing serving at ${BASE} — start \`npm run dev\` (or pass --base)`);
+    console.error(`nothing serving at ${BASE}`);
+    server?.stop();
     process.exit(1);
   }
 } catch {
-  console.error(`nothing serving at ${BASE} — start \`npm run dev\` (or pass --base)`);
+  console.error(`nothing serving at ${BASE}`);
+  server?.stop();
   process.exit(1);
 }
 
@@ -202,4 +269,5 @@ const png = await sheet.evaluate(
 
 await writeFile(OUT, Buffer.from(png.split(',')[1], 'base64'));
 await browser.close();
+server?.stop();
 console.log(`\n${OUT}  —  ${ROUTES.length} routes × ${rows.length} settings`);
