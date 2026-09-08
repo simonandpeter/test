@@ -145,6 +145,28 @@ hair for weeks and failed by six thousandths of a pixel here, with the picture
 visibly correct. It is signed now, and moving the pill up a line fails it,
 which the old version passed.
 
+### And the last of the flake
+
+With the map's tests fixed, `index-carousel.spec.js` was the whole of what
+remained. `275f850` went green on CI with **1 flaky** and `5ddb59c` went red,
+and both were the same file: `a carousel card is sized by the window height`
+flaked on each, and `the carousel drifts on its own` failed outright on the
+second.
+
+Neither is flaky alone — **24 of 24** with `--repeat-each=6`. Both were spending
+their budget on something other than what they measure. The drift test polls
+`scrollLeft` for 4 s, and All Saints packs all 862 captions in one blocking
+task before it can paint (PLAN item 7), which under six workers is most of
+those 4 s; it now waits for the row to be wider than its viewport *before*
+timing the drift, so the 4 s measures the drift. The sizing test waited two
+`requestAnimationFrame`s after a viewport change, which is not long enough for
+the resize to reach the observer and the row to repack; it polls now, and still
+fails if the card never narrows.
+
+**The drift test's new wait is an instrument reading on item 7.** When the pack
+goes lazy it should return instantly; if it ever starts timing out, the pack
+has regressed.
+
 ## Next
 
 `PLAN.md`'s numbered list: **the overhaul, desktop first** — section 4 is the

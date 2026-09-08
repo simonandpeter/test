@@ -488,6 +488,14 @@ re-measured.
    captions (~9,600 canvas calls) in one blocking task before it can paint a
    column. Pack enough for the screen plus the loop's buffer, paint, finish in
    idle time. Worth most of a ~1,200 ms startup task at 10× CPU.
+
+   **It is also the last source of test flake.** With the map's tests fixed,
+   `index-carousel.spec.js` was the whole of what remained — flaking on two
+   consecutive CI runs while passing 24 of 24 alone, because the drift test's
+   4 s budget was being spent on this blocking pack under six workers. The test
+   now waits for the row to be packed before it times the drift, so the flake
+   is gone, but the wait is a measurement of this defect and should shrink to
+   nothing when it is fixed.
 8. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
    `scrollLeft` inside a live gesture. Known defect.
 9. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a

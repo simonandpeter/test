@@ -412,6 +412,30 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
   await expect(page.locator('.cx-card').first()).toBeVisible();
 
   const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
+
+  /*
+   * **Wait for the row to have somewhere to drift before timing the drift.**
+   * All Saints packs all 862 captions in one blocking task before it can paint
+   * a column — the defect that is item 7 in PLAN.md — and under six parallel
+   * workers that task was eating the drift's whole 4 s budget, which is why
+   * this test and `a carousel card is sized by the window height` were the two
+   * things still flaking on CI once the map's tests were fixed (2026-09-09;
+   * both pass 24 of 24 run alone, so it was never the drift).
+   *
+   * Separating the two means the 4 s below measures the drift and nothing
+   * else. When item 7 lands this wait becomes instant rather than wrong.
+   */
+  await expect
+    .poll(
+      () =>
+        page.evaluate(() => {
+          const t = document.querySelector('[data-carousel-track]');
+          return t.scrollWidth - t.clientWidth;
+        }),
+      { timeout: 20000, message: 'the row never became wider than its own viewport' },
+    )
+    .toBeGreaterThan(0);
+
   const started = await at();
   await expect.poll(at, { timeout: 4000 }).toBeGreaterThan(started);
 
@@ -938,12 +962,25 @@ test('a carousel card is sized by the window height as well as its width', async
   const tall = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
 
   await page.setViewportSize({ width: 1280, height: 560 });
-  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
-  const short = await cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
 
-  // Narrower in a short window, and never below the phone's own 150.
-  expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
-  expect(short).toBeGreaterThanOrEqual(150);
+  /*
+   * **Polled, not two frames.** This waited on a pair of `requestAnimationFrame`
+   * callbacks, which is enough on an idle machine and not enough beside five
+   * other workers: the resize has to reach the observer and the row has to
+   * repack before the cell reports its new width, and CI flaked here on two
+   * consecutive runs (2026-09-09) while passing 6 of 6 alone. The poll asserts
+   * the same claim — it fails if the card never narrows.
+   */
+  const width = () => cell.evaluate((el) => Math.round(el.getBoundingClientRect().width));
+  await expect
+    .poll(width, {
+      timeout: 10000,
+      message: `the card never narrowed from ${tall} px in a 560 px window`,
+    })
+    .toBeLessThan(tall);
+
+  // Never below the phone's own 150, however short the window.
+  expect(await width()).toBeGreaterThanOrEqual(150);
   /* 300 since 2026-08-28 ("Make the carousel images slightly bigger on
      desktop"), and it is a clamp on `--cx-space` — the room between the top of
      the track and the bottom of the window — rather than on `vh`, because the

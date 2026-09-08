@@ -47,9 +47,13 @@ it never updates `origin/main`, so the branch reports itself ahead of everything
 already sent. `git ls-remote origin main` is the answer to "did it land";
 `git fetch origin` puts the ref straight.
 
-**Read the CI run — its conclusion *and* its `flaky` line.** `scratchpad/ci.py`
-does it without `gh`, which is not installed. The job-log endpoint 302s to blob
-storage and 401s if `Authorization` follows the redirect.
+**Read the CI run — its conclusion *and* its `flaky` line.** No `gh` here.
+`scratchpad/ci.py <sha>` gives the conclusion and the failed steps;
+**`scratchpad/ci-flaky.py <sha>` gives the `flaky` line and the test names
+under it**, which the conclusion hides — a green run with `N flaky` contains a
+test that failed and passed on retry, and that exists only in the job log. The
+job-log endpoint 302s to pre-signed blob storage and 401s if `Authorization`
+follows the redirect, so the redirect is taken by hand without it.
 
 **Run the surface you touched, not the suite** (table below). The full suite is
 for: before a push, after touching shared chrome or `src/lib`, at a milestone.
@@ -59,14 +63,25 @@ Compare against the unmodified tree once (`git stash`, run, unstash) and let CI
 arbitrate. A spread of failures across unrelated surfaces is a fact about the
 machine before it is a fact about the diff.
 
-**But measure before you accept it as noise.** `map.spec.js` held 40 of the 61
-failures this desk had ever seen, and the reason turned out to be one wait:
-`networkidle` sat through a 6 MB tile warm-up 76 times, so the file ran at
-16.8 s a test against 2.9 s for every other spec, under a 30 s timeout. Fixing
-the wait took it from 15 failures to 2 and halved its time (2026-09-09). A test
-that fails only under parallel load is telling you what it costs, and that is
-usually a number you can change. Compare `--workers=1` against the full run
-before shrugging.
+**But measure before you accept it as noise.** Twice now the "machine noise"
+has been a number worth changing (2026-09-09):
+
+- `map.spec.js` held 40 of the 61 failures this desk had ever seen, and the
+  reason was one wait. `networkidle` sat through a 6 MB tile warm-up 76 times,
+  so the file ran at 16.8 s a test against 2.9 s for every other spec, under a
+  30 s timeout. Fixing the wait took it from 15 failures to 2 and halved its
+  time.
+- Then `index-carousel.spec.js` was the whole of what remained, flaking on two
+  consecutive CI runs while passing 24 of 24 run alone. Both tests were
+  spending their budget on something other than what they measured: All Saints
+  packs 862 captions in one blocking task before first paint, and a two-frame
+  wait after a viewport change is not a repack.
+
+**A test that fails only under parallel load is telling you what it costs.**
+Run it with `--repeat-each=6` alone first — if it passes, the flake is a
+budget, not a bug, and the fix is to stop the budget being spent elsewhere
+rather than to raise the number. `--workers=1` against the full run is the
+other half of that comparison.
 
 **Measure before fixing, and stop when the instrument cannot resolve the
 change.** This desk's spread across identical builds is wider than most
