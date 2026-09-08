@@ -54,6 +54,28 @@ export function nameLines(text, avail, ctx, max = Infinity) {
 }
 
 function greedyLines(text, avail, ctx) {
+  /*
+   * **The whole string first, because most names are one line** (2026-09-08).
+   * The greedy walk below asks the canvas for every word and for a space, which
+   * is about five `measureText` calls for a typical name and 3,400 for the
+   * corpus — and the corpus is measured whole before the carousel can pack a
+   * single column, inside the one long task that is most of this page's
+   * blocked main thread. The distribution this file's own header records is
+   * 476 / 253 / 5 at 360 px: **two names in three need no walk at all.**
+   *
+   * It is not an approximation. A run that fits on one line is one line by the
+   * same greedy rule, since the rule only ever breaks when the next word does
+   * not fit — so this is the same answer reached in one call instead of five.
+   *
+   * **Kept for the work it removes, not for a time it was shown to save.** The
+   * A/B looked convincing once — median longest task 1,307 → 1,163 ms over five
+   * loads at 10x CPU — and reversed on a second run of the same comparison an
+   * hour later (1,237 without, 1,507 with). This desk's spread across identical
+   * builds is wider than the effect, so no timing claim is made here. What is
+   * true regardless is that two names in three now cost one `measureText`
+   * instead of about five, for the same answer.
+   */
+  if (ctx.measureText(text).width <= avail) return 1;
   const space = ctx.measureText(' ').width;
   let lines = 1;
   let used = 0;

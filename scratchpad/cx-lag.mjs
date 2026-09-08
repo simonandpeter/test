@@ -12,7 +12,13 @@ const browser = await chromium.launch();
 // `serviceWorkers: 'block'` or `page.route` sees none of these (trap 13): the
 // worker answers the image requests and the pattern matches nothing, failing
 // open. The request count below is what says whether the block bit.
-const ctx = await browser.newContext({ viewport: { width: 360, height: 780 }, serviceWorkers: 'block' });
+const ctx = await browser.newContext({
+  viewport: { width: 360, height: 780 },
+  serviceWorkers: 'block',
+  // STILL=1 turns the drift off through the one switch that already does it,
+  // to ask what the row costs when it is not moving.
+  ...(process.env.STILL ? { reducedMotion: 'reduce' } : {}),
+});
 const page = await ctx.newPage();
 
 await page.addInitScript(() => {

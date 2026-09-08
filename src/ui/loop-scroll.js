@@ -97,9 +97,11 @@ const MAX_INFLIGHT = 4;
  * flicker in more slowly and it lags less").
  *
  * A cap on how many fades overlap, expressed as a gap rather than a count,
- * because a gap is what the eye actually reads: at 120 ms against index.css's
- * 480 ms fade, at most four are ever rising together and each one is
- * distinguishable from its neighbour. Arrivals are bursty — four sources go
+ * because a gap is what the eye actually reads: at 200 ms against index.css's
+ * 900 ms fade, at most four or five are ever rising together and each one is
+ * at a visibly different strength from its neighbour. Both numbers went up on
+ * 2026-09-08 ("make them fade in slower and mpre smoothly"); they are one
+ * decision in two files and should move together. Arrivals are bursty — four sources go
  * out at once and land within a few tens of milliseconds of each other on a
  * warm cache — so without this the row does not fade in, it blinks.
  *
@@ -107,7 +109,7 @@ const MAX_INFLIGHT = 4;
  * waiting and the last one long since up, is shown on the spot. Nothing is
  * ever made to wait for a clock it did not need.
  */
-const FADE_GAP_MS = 120;
+const FADE_GAP_MS = 200;
 
 /** The three tiers `pump` sorts by: on screen, coming, going. */
 const ON_SCREEN = 0;

@@ -11400,3 +11400,65 @@ about the lag and the answer to that is measured at 5%; it is a data-plan
 change, it costs a third derivative, a manifest field and a `srcset` through
 `windowImages`, and it is the author's to want on those terms rather than on
 the ones it was asked under.
+
+### Postscript: the fade slowed, and a desk that cannot resolve what it is being asked
+
+"Make them fade in slower and mpre smoothly. Its still laggy on mobile."
+
+**The first half is done and is deterministic.** The fade was 480 ms on
+`--ease`, which is `cubic-bezier(0.2, 0, 0, 1)` — a decisive curve, right for
+chrome that should feel answered, and it puts most of a fade's opacity down in
+its first third. A picture arriving that way appears rather than comes up. It is
+900 ms on a plain ease-in-out now, and `FADE_GAP_MS` went 120 to 200. Measured
+on the real arrivals rather than asserted: starts 200 and 217 ms apart, **never
+more than three rising at one moment**, each taking 900 ms.
+
+**The second half has a confound that has to be said first: none of the
+carousel work was live when it was reported.** `e7287f2` — `content-visibility`
+and the rest — was committed and then sat unpushed while the lifespans were
+written, and the site was still serving `1ae80b0`. It deployed with `903804d`,
+green, after the message arrived. So the report is about a build with none of
+the fix in it, which is a fact about this session's pacing rather than about
+the row.
+
+**And there is real work left, which the same measurement shows.** At 4x CPU
+the row is now 655 ms of blocked thread and **zero dropped frames**; at 10x —
+a fair stand-in for a mid-range phone — it is still 1,800-2,000 ms, and the
+shape of it is one task of about 1,200 ms at startup with the drift costing
+frames rather than blocking. Turning the drift off through `reducedMotion`
+moved dropped frames from 21 to 0 and the blocked total by almost nothing,
+which locates the two problems apart.
+
+**Three attempts at that task and what they measured:**
+
+- Throttling `windowImages`'s reorder pump from every frame to every 150 ms:
+  no change (1,726-1,805 against a 1,786 baseline), and it costs a picture up
+  to 150 ms of lateness in being noticed on screen. Not kept.
+- Pacing the drift to ~40 fps: dropped frames 21 to 12-15, **blocked thread
+  1,800 to 2,900**. A larger step per frame means more cells crossing the
+  `content-visibility` boundary at once, so the work is not saved, only
+  bunched. Clearly worse; not kept.
+- `nameLines` returning 1 for a name that fits whole, which is two names in
+  three: median longest task 1,307 to 1,163 ms over five loads. **The same A/B
+  an hour later read 1,237 without and 1,507 with.** Kept for the work it
+  removes — one `measureText` instead of five, for an answer the greedy rule
+  gives identically — and its comment says plainly that no timing claim
+  survives.
+
+**That is the finding worth keeping from the sitting.** This desk's spread
+across *identical* builds at 10x is wider than any of these effects: five
+consecutive loads of one build ran 1,223 / 1,469 / 1,507 / 1,614 / 1,653.
+`content-visibility` was resolvable because it was a 3x move measured three
+times on each side with no overlap; nothing else here is, and a number quoted
+from one A/B on this machine is a coin toss. `scratchpad/cx-task.mjs` is the
+tighter instrument (median longest task over five fresh loads) and it is still
+not tight enough — the next attempt on this page should either find another
+3x-shaped change or measure somewhere that holds still.
+
+**The one 3x-shaped change left is structural and is the author's.** The task
+is the row packing all 862 saints into ~215 columns before first paint —
+slicing the run to 64 columns took 1,830 ms to 680 at 4x. Keeping "the row
+carries the whole corpus" while not *building* it up front means painting a
+window and extending it, which moves `loopScroll`'s wrap period after the fact
+and lands in the part of the suite with the most flake history. Named here so
+it can be decided rather than drifted into.

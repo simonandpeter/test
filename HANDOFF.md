@@ -386,6 +386,21 @@ its reasoning).
     nothing at all. Read Amendment 107 before optimising this page again: the
     cost is the *number of columns laid out*, and everything else is noise
     against it.
+  - **The fade is 900 ms on an ease-in-out, queued 200 ms apart** (author,
+    2026-09-08: "make them fade in slower and mpre smoothly"), and it is two
+    numbers in two files — `index.css` and `FADE_GAP_MS` — that move together.
+  - **Before optimising this row again, read Amendment 107's postscript.** This
+    desk cannot resolve anything smaller than a 3x change: five consecutive
+    loads of one identical build measured 1,223 / 1,469 / 1,507 / 1,614 / 1,653
+    ms of longest task at 10x CPU. Two plausible fixes measured as *worse* and
+    one measured both ways an hour apart. `scratchpad/cx-task.mjs` (median
+    longest task over five fresh loads) is the tightest instrument here and is
+    still not tight enough. **What is left is one ~1,200 ms task at startup:
+    the row packing all 862 saints into ~215 columns before first paint.**
+    Slicing the run to 64 columns takes it from 1,830 to 680 ms at 4x, so that
+    is where the remaining 3x lives — and painting a window and extending it
+    moves `loopScroll`'s wrap period after the fact, which is the author's call
+    rather than a session's.
   - **Smaller card images: not done, and the measurement is why.** A phone draws
     a 150 CSS px card from a 560 px derivative — 3.5x the pixels a DPR-2 screen
     can show — so a 320 px one would take the first screenful of All Saints from

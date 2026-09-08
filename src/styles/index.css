@@ -1411,7 +1411,33 @@ html.is-rolling #view {
    * the picture lands, only shows.
    */
   opacity: 0;
-  transition: opacity 480ms var(--ease);
+  /*
+   * **Slower, and on a curve that has no hurry in it** (author, 2026-09-08,
+   * second report on this row: "make them fade in slower and mpre smoothly").
+   * It was 480 ms on `--ease`, which is `cubic-bezier(0.2, 0, 0, 1)` — a
+   * *decisive* curve, chosen for chrome that should feel answered, and it puts
+   * most of a fade's opacity down in its first third. A picture arriving that
+   * way reads as appearing rather than as coming up, and several of them at
+   * once read as a blink.
+   *
+   * 900 ms and a plain ease-in-out instead: the picture is barely there for a
+   * moment, gathers in the middle, and settles without a stop. Paired with
+   * `FADE_GAP_MS` (`ui/loop-scroll.js`), which queues arrivals 200 ms apart, no
+   * more than four or five are ever rising together and each is at a visibly
+   * different strength from its neighbour.
+   *
+   * `opacity` alone stays the property on purpose: it is the one thing a
+   * compositor can animate without the main thread, which is why the fade
+   * itself is smooth on a phone that is busy laying the row out.
+   */
+  transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*
+   * And it is promoted to its own layer for the length of the fade, so the
+   * compositor really does own it rather than repainting the cell. `will-change`
+   * is deliberately *not* used: it would hold a layer for all 148 pictures for
+   * the life of the page, which on a phone is the memory this row can least
+   * spare. `transform: translateZ(0)` is not used either, for the same reason.
+   */
 }
 
 .cx-media img.is-loaded {
