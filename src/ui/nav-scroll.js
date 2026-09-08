@@ -58,16 +58,28 @@
  * own neighbours are the ones a reader meets: About is left of Daily because
  * the ring says so, not because a rotation happened to land there.
  *
- * That rebalance is **visually silent by construction**, which is why it can
- * run on every settle rather than only at an edge: rotating a ring does not
- * change anybody's neighbours, so re-centring the same page after the
+ * That rebalance is **visually silent by construction**: rotating a ring does
+ * not change anybody's neighbours, so re-centring the same page after the
  * rotation puts every one of the five back on the pixel it was already on.
- * No compensation arithmetic, and nothing to get wrong in a frame.
  *
- * It runs at rest and not during momentum, and that is deliberate: writing
- * `scrollLeft` into a live fling is what kills momentum on iOS. A hard fling
- * can still reach the rendered end and see it for as long as the fling lasts;
- * the strip is balanced again the moment it stops.
+ * **And it turns before the movement, not after it** (2026-09-08, the author's
+ * second report on this row: "dont make the header text load after its settled
+ * and centred after selection. they should be visible as the animation is
+ * happening, true infinite scroll"). Balancing on the *settle* alone is right
+ * about where the row ends up and wrong about every frame in between —
+ * measured, frame by frame: a press on About from the Daily page opened **85 px
+ * of blank strip** on the leading edge and Texts appeared there only once the
+ * glide had landed. The row visibly ran out and refilled.
+ *
+ * So `turnKeepingStill` does the rotation with the picture pinned — the page
+ * under the midline stays on its pixel, and only the two pages off either end
+ * change which end they are at — and it runs *before* a glide and *during* a
+ * swipe (`keepEndless`), not after either. The settle-time `balance` remains as
+ * the thing that squares the position exactly once everything has stopped.
+ *
+ * The one cost is written down where it is taken: `keepEndless` writes
+ * `scrollLeft` inside a live gesture, which can cut iOS momentum short. The
+ * first cut refused to do that and paid for it with the blank edge above.
  */
 
 import { reducedMotion } from '../lib/motion.js';
@@ -114,7 +126,6 @@ export function wireNavScroll(track) {
    * number.
    */
   let touched = false;
-  let gliding = false;
   const onTouch = () => {
     touched = true;
   };
@@ -160,11 +171,41 @@ export function wireNavScroll(track) {
   }
 
   /**
+   * Turns the ring to put `el` in the middle **while the picture holds still**:
+   * whatever the reader is looking at stays on the pixel it was on, and only
+   * the two pages off either end change which end they are at.
+   *
+   * This is the whole of "true infinite scroll" (author, 2026-09-08, second
+   * report). Turning the ring *after* a movement — which is what the first cut
+   * did, on every settle — is right about the arrangement and wrong about every
+   * frame before it: gliding from Daily to About opened **85 px of blank strip**
+   * on the leading edge, measured frame by frame, and Texts appeared there only
+   * once the glide had landed. The reader watches the row run out and then
+   * refill. Turning *first* means the page being travelled toward already has
+   * its own neighbour beyond it before the first frame is drawn.
+   *
+   * The anchor is whatever is nearest the midline, pinned by its own screen
+   * position rather than by a recomputed centre, so this is exact at any point
+   * in a gesture and not only at rest. `padding-inline: 50vw` (base.css) is
+   * what makes it always reachable: every one of the five can be centred
+   * exactly, so no pinning this asks for is ever clamped away.
+   */
+  function turnKeepingStill(el) {
+    const anchor = nearestEl();
+    if (!anchor) {
+      turn(el);
+      return;
+    }
+    const held = anchor.offsetLeft + anchor.offsetWidth / 2 - track.scrollLeft;
+    turn(el);
+    write(anchor.offsetLeft + anchor.offsetWidth / 2 - held);
+  }
+
+  /**
    * The rebalance: whichever page is centred now is put in the middle of the
    * five and re-centred. Silent, per the header — a ring rotation moves
    * nobody relative to anybody, and the re-centre lands on the pixel the page
-   * was already on — so this is safe to run on every settle rather than only
-   * when an edge has been reached.
+   * was already on.
    */
   function balance(el) {
     if (dead) return;
@@ -174,27 +215,55 @@ export function wireNavScroll(track) {
     write(centreOf(target));
   }
 
+  /** Whether this file's own tween is running, and its frame handle. */
+  let gliding = false;
+  let raf = 0;
   let settleTimer = null;
-  let glideTimer = null;
 
   function settled() {
     clearTimeout(settleTimer);
-    clearTimeout(glideTimer);
     settleTimer = null;
-    glideTimer = null;
-    if (!touched && !gliding) return;
-    gliding = false;
+    // The tween ends itself, and it is the only thing that moves this row
+    // besides a reader.
+    if (dead || gliding || !touched) return;
     balance();
+  }
+
+  /**
+   * The same turn, run *during* a reader's own swipe rather than after it, so
+   * a finger meets a new page instead of the end of the row. It is only ever a
+   * turn: the scroll position the reader put there is preserved, because
+   * `turnKeepingStill` pins whatever they are looking at.
+   *
+   * **The known cost is iOS momentum**, which a `scrollLeft` write can cut
+   * short — the first cut avoided writing during a gesture deliberately, and
+   * paid for it with the blank edge above. `scroll-snap-type: x mandatory`
+   * damps a fling to a snap point either way, so the window in which this can
+   * bite is short. Written down rather than measured: there is no iOS on this
+   * desk, and Chrome is where every number in this file comes from.
+   */
+  function keepEndless() {
+    if (dead) return;
+    const near = nearestEl();
+    if (!near) return;
+    const seen = [...links].sort((a, b) => a.offsetLeft - b.offsetLeft);
+    if (seen.indexOf(near) === middle) return;
+    turnKeepingStill(near);
   }
 
   const useScrollEnd = 'onscrollend' in track;
   const onScroll = () => {
-    if (!touched && !gliding) return;
+    // The tween below drives its own turns and its own ending; the events it
+    // makes on the way are not news.
+    if (gliding || !touched) return;
+    keepEndless();
     clearTimeout(settleTimer);
     settleTimer = setTimeout(settled, 150);
   };
+  // `scrollend` is the settle, where the platform has it; the per-frame turn
+  // above wants every scroll event either way, so both are registered now.
+  track.addEventListener('scroll', onScroll, { passive: true });
   if (useScrollEnd) track.addEventListener('scrollend', settled, { passive: true });
-  else track.addEventListener('scroll', onScroll, { passive: true });
 
   /**
    * **The gentle press** (author, 2026-09-08: "when you select one it should
@@ -204,33 +273,76 @@ export function wireNavScroll(track) {
    * still standing where the reader's own swipe left it, and the page they
    * pressed has somewhere to travel *from*.
    *
-   * Native smooth scrolling rather than a hand-rolled tween, and the reason is
-   * the snap: this container is `scroll-snap-type: x mandatory`, and a
-   * per-frame `scrollLeft` write into a mandatory-snap scroller is re-snapped
-   * under the animation. `scrollTo({ behavior: 'smooth' })` is the one motion
-   * the snapping cooperates with.
+   * **Hand-rolled, where the first cut used `scrollTo({ behavior: 'smooth' })`,
+   * and the reason is the turning** (author, same day: "they should be visible
+   * as the animation is happening, true infinite scroll"). The row has to be
+   * turned *while* it travels, or the far end runs out mid-journey — and any
+   * `scrollLeft` write aborts a native smooth scroll, so the two cannot be had
+   * together. Snap comes off for the length of the tween for the same reason: a
+   * mandatory-snap scroller re-snaps every programmatic write, which is a
+   * stutter a frame. `balance` puts it back and squares the position when the
+   * tween lands.
+   *
+   * **The ring is not turned up front**, and that was a wrong first answer worth
+   * recording: turning to put the *destination* in the middle before the tween
+   * starts fights `keepEndless` on the very next frame, which finds the page
+   * still under the midline and turns it straight back. What keeps the row full
+   * is the same rule during the journey as at rest — whatever is nearest the
+   * midline sits in the middle of the five — applied every frame.
+   *
+   * **The distance is read as a remainder, not as two endpoints**, which is
+   * what makes a moving destination safe: turning the ring changes
+   * `centreOf(target)` by a whole period, but it moves the picture not at all,
+   * so `centreOf(target) - scrollLeft` — how far the target still is from the
+   * midline, on screen — is invariant across a turn. Easing that to zero is
+   * the same journey whichever way the ring has been turned underneath it.
+   *
+   * The target itself never wraps. A press is at most two steps away in a ring
+   * of five, and a one-step turn wraps the page at the far end — which is the
+   * one the reader is travelling *away* from — so the page being travelled to
+   * keeps a continuous screen position the whole way.
    *
    * Reduced motion gets the centre and not a quicker journey to it (DESIGN.md
    * §6): the page is simply put where it belongs.
    */
+  const GLIDE_MS = 380;
+
   function glide(el) {
     if (dead) return;
     const target = el ?? currentEl() ?? nearestEl();
     if (!target) return;
-    if (reducedMotion() || typeof track.scrollTo !== 'function') {
+    cancelAnimationFrame(raf);
+    if (reducedMotion() || typeof requestAnimationFrame !== 'function') {
+      balance(target);
+      return;
+    }
+    const remaining = centreOf(target) - track.scrollLeft;
+    if (Math.abs(remaining) < 1) {
       balance(target);
       return;
     }
     gliding = true;
-    track.scrollTo({ left: centreOf(target), behavior: 'smooth' });
-    /*
-     * A press on the page that is already centred moves nothing, so no scroll
-     * event ever arrives to end the glide. This fallback is what clears
-     * `gliding` and rebalances in that case; a real glide reaches `settled`
-     * long before it.
-     */
-    clearTimeout(glideTimer);
-    glideTimer = setTimeout(settled, 600);
+    const snap = track.style.scrollSnapType;
+    track.style.scrollSnapType = 'none';
+    const began = performance.now();
+    const step = (now) => {
+      if (dead) return;
+      const t = Math.min(1, (now - began) / GLIDE_MS);
+      // Cubic ease-out: quick to leave, slow to arrive, which is what reads as
+      // gentle at this distance.
+      const eased = 1 - (1 - t) ** 3;
+      write(centreOf(target) - remaining * (1 - eased));
+      keepEndless();
+      if (t < 1) {
+        raf = requestAnimationFrame(step);
+        return;
+      }
+      raf = 0;
+      track.style.scrollSnapType = snap;
+      balance(target);
+      gliding = false;
+    };
+    raf = requestAnimationFrame(step);
   }
 
   /**
@@ -265,12 +377,12 @@ export function wireNavScroll(track) {
     destroy() {
       dead = true;
       clearTimeout(settleTimer);
-      clearTimeout(glideTimer);
+      cancelAnimationFrame(raf);
       track.removeEventListener('pointerdown', onTouch);
       track.removeEventListener('touchstart', onTouch);
       track.removeEventListener('wheel', onTouch);
+      track.removeEventListener('scroll', onScroll);
       if (useScrollEnd) track.removeEventListener('scrollend', settled);
-      else track.removeEventListener('scroll', onScroll);
       for (const el of links) el.style.removeProperty('order');
     },
   };

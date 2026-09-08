@@ -20,8 +20,40 @@
  * Verified against the real thing over all 734 names at 360 px, where the
  * distribution is 476 / 253 / 5: **no disagreement in either direction.**
  */
+/**
+ * Memo, because the *same* names are measured again on every repaint.
+ *
+ * The carousel packs the whole corpus — 862 saints, ~215 columns — and the
+ * answer for one name at one width in one face never changes, so a repaint
+ * after a font swap or a resize was re-running ~3,400 `measureText` calls for
+ * results it already had. It profiled at 242 ms of an eight-second All Saints
+ * run at 4x CPU, third in the page.
+ *
+ * The key is everything the answer depends on: `ctx.font` carries the face and
+ * the size, and two canvases set to the same font string measure the same. The
+ * cap is applied after the lookup rather than inside it, so one cached count
+ * serves a row, a card and a caption alike.
+ *
+ * Dropped whole rather than evicted one by one past a bound: this is a pure
+ * function of a fixed corpus, so the map only grows when the *face* or the
+ * *width* changes, which is a resize — at which point last width's entries are
+ * exactly the dead ones.
+ */
+const memo = new Map();
+const MEMO_MAX = 4000;
+
 export function nameLines(text, avail, ctx, max = Infinity) {
   if (!(avail > 0)) return 1;
+  const key = `${ctx.font}|${avail}|${text}`;
+  const seen = memo.get(key);
+  if (seen !== undefined) return Math.min(seen, max);
+  const lines = greedyLines(text, avail, ctx);
+  if (memo.size >= MEMO_MAX) memo.clear();
+  memo.set(key, lines);
+  return Math.min(lines, max);
+}
+
+function greedyLines(text, avail, ctx) {
   const space = ctx.measureText(' ').width;
   let lines = 1;
   let used = 0;
@@ -45,7 +77,6 @@ export function nameLines(text, avail, ctx, max = Infinity) {
   }
   // The cap is the caller's, because a row, a card and a carousel caption
   // allow different numbers of lines and the same greedy count serves all
-  // three. Uncapped by default: a caller with no ceiling should not have to
-  // name one.
-  return Math.min(lines, max);
+  // three; it is applied by `nameLines` above, around this.
+  return lines;
 }

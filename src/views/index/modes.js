@@ -36,6 +36,26 @@ const BASE = import.meta.env.BASE_URL;
  */
 const imageMargin = () => (stacking() ? 1100 : 700);
 
+/**
+ * How many pictures the row may have on the wire at once, and **fewer on a
+ * phone** (author, 2026-09-08: "cap the fade ins and number of loading
+ * saints/images so they flicker in more slowly and it lags less").
+ *
+ * Honest about what it buys: the pictures are **not** where this page's lag
+ * comes from. Blocking every card image outright and profiling again moved
+ * eight seconds of blocked main thread at 4x CPU from 1,835 ms to 1,738 ms —
+ * about 5%, all of it decode. What the row actually spends its time on was the
+ * drift loop's own forced layouts and a document-level scroll listener in
+ * `ui/coachmark.js`, both of which are fixed at their own sites.
+ *
+ * This is kept anyway and for its own reasons: two at a time on a narrow
+ * screen is a smaller burst of bytes on a phone's connection, and paired with
+ * `FADE_GAP_MS` it is what makes the row fill in one picture at a time rather
+ * than in fours. It is a look and a data bill, not a frame budget, and saying
+ * so is the point of this note.
+ */
+const imageInflight = () => (window.matchMedia('(max-width: 699.98px)').matches ? 2 : 4);
+
 /** Copies either side of the run. Wide enough that a hard fling cannot outrun
  *  the buffer before the correction is allowed to land (see ui/loop-scroll). */
 const CAROUSEL_BUFFER = 12;
@@ -1196,7 +1216,7 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
     // Left-justified and still: no clones to wrap between, and no drift to
     // start. `windowImages` still runs — a short row is not necessarily a small
     // one, and its pictures should still be released when scrolled past.
-    state.carouselWindow = windowImages(track, { margin: imageMargin() });
+    state.carouselWindow = windowImages(track, { margin: imageMargin(), inflight: imageInflight() });
     state.carouselPrefetch?.();
     state.carouselPrefetch = observePrefetch(track);
     reveal();
@@ -1232,6 +1252,7 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
    */
   state.carouselWindow = windowImages(track, {
     margin: imageMargin(),
+    inflight: imageInflight(),
     direction: () => state.loop?.direction() ?? 1,
   });
   // One observer at a time. The track is rebuilt whenever the pool changes, and

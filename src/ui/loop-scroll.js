@@ -91,6 +91,24 @@ export function loopSafe(list, min = 10) {
  */
 const MAX_INFLIGHT = 4;
 
+/**
+ * The least time between one picture coming up and the next (author,
+ * 2026-09-08: "cap the fade ins and number of loading saints/images so they
+ * flicker in more slowly and it lags less").
+ *
+ * A cap on how many fades overlap, expressed as a gap rather than a count,
+ * because a gap is what the eye actually reads: at 120 ms against index.css's
+ * 480 ms fade, at most four are ever rising together and each one is
+ * distinguishable from its neighbour. Arrivals are bursty — four sources go
+ * out at once and land within a few tens of milliseconds of each other on a
+ * warm cache — so without this the row does not fade in, it blinks.
+ *
+ * **It is a queue and not a delay**: a picture that arrives alone, with none
+ * waiting and the last one long since up, is shown on the spot. Nothing is
+ * ever made to wait for a clock it did not need.
+ */
+const FADE_GAP_MS = 120;
+
 /** The three tiers `pump` sorts by: on screen, coming, going. */
 const ON_SCREEN = 0;
 const AHEAD = 1;
@@ -148,7 +166,40 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
    * drift is `loopScroll`'s and starts on the first frame the track is laid
    * out, pictures or no pictures.
    */
-  const arrived = (img) => img.classList.add('is-loaded');
+  /* Declared before the fade queue below, which reads it from a timer: the
+     no-IntersectionObserver path returns before the rest of this function
+     runs, and a `let` in temporal dead zone would throw there. */
+  let dead = false;
+
+  /*
+   * The queue behind `FADE_GAP_MS`. `waiting` holds pictures that have arrived
+   * and are not up yet; `release` takes one out again if the band lets go of
+   * it first, so a card scrolled past while queued does not flash on later.
+   */
+  const waitingToShow = [];
+  let lastShown = 0;
+  let showTimer = null;
+  const show = (img) => {
+    lastShown = performance.now();
+    if (img.isConnected && img.hasAttribute('src')) img.classList.add('is-loaded');
+  };
+  const drain = () => {
+    showTimer = null;
+    if (dead) return;
+    const next = waitingToShow.shift();
+    if (next) show(next);
+    if (waitingToShow.length) showTimer = setTimeout(drain, FADE_GAP_MS);
+  };
+  const arrived = (img) => {
+    if (img.classList.contains('is-loaded')) return;
+    const since = performance.now() - lastShown;
+    if (!waitingToShow.length && since >= FADE_GAP_MS) {
+      show(img);
+      return;
+    }
+    waitingToShow.push(img);
+    if (!showTimer) showTimer = setTimeout(drain, Math.max(0, FADE_GAP_MS - since));
+  };
   const onArrived = (e) => arrived(e.currentTarget);
   const handSource = (img) => {
     img.addEventListener('load', onArrived, { once: true });
@@ -181,7 +232,6 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
   /** How many of them are on the wire right now. */
   let running = 0;
   let pumping = false;
-  let dead = false;
 
   /*
    * A picture is done with when it has painted *or* failed. Both free the
@@ -243,6 +293,8 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
     // come back here as well as through `settle`.
     if (img.__cxRunning) settle(img);
     img.removeEventListener('load', onArrived);
+    const queued = waitingToShow.indexOf(img);
+    if (queued >= 0) waitingToShow.splice(queued, 1);
     img.classList.remove('is-loaded');
     img.removeAttribute('src');
   };
@@ -327,6 +379,8 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
   return () => {
     dead = true;
     if (frame) cancelAnimationFrame(frame);
+    clearTimeout(showTimer);
+    waitingToShow.length = 0;
     track.removeEventListener('scroll', onScroll);
     io.disconnect();
   };
@@ -437,10 +491,11 @@ export function loopScroll(
   }
 
   /** Brings the position back into the middle. Returns the delta applied. */
-  function wrap() {
+  /** `known` is the caller's own already-paid-for read of `scrollLeft`. */
+  function wrap(known) {
     if (bodySpan <= 0 || touchActive || performance.now() < touchSettle) return 0;
     const upper = headSpan + bodySpan;
-    const at = track.scrollLeft;
+    const at = known ?? track.scrollLeft;
     let delta = 0;
     if (at < lowerBound) delta = Math.ceil((lowerBound - at) / bodySpan) * bodySpan;
     else if (at > upper) delta = -Math.ceil((at - upper) / bodySpan) * bodySpan;
@@ -691,8 +746,36 @@ export function loopScroll(
    * being wiped before it could be spent. Stopping the drift and refusing the
    * reader's own scroll are not the same thing and no longer share a test.
    */
+  /**
+   * The track's own width, kept by a `ResizeObserver` rather than asked for
+   * every frame (2026-09-08).
+   *
+   * "A track that is not laid out" is the case this answers, and it is
+   * load-bearing: nothing calls `pause()`, so a zero width is the only thing
+   * that stops the drift while the search face is showing and the row is
+   * `display: none`. It was `track.clientWidth`, read inside `frozen` — which
+   * is called on every frame of a loop whose previous statement wrote
+   * `scrollLeft`, so it forced a synchronous layout of a 215-cell row sixty
+   * times a second. An eight-second profile of All Saints at 4x CPU put it
+   * second in the whole page.
+   *
+   * A `ResizeObserver` answers the same question from the frame the browser
+   * has already done: an element given `display: none` reports a 0x0 content
+   * box, which is exactly the signal being read. Seeded from a single read at
+   * construction so the first frames are not fooled before the observer's
+   * first callback.
+   */
+  let boxWidth = track.clientWidth;
+  const boxWatch =
+    typeof ResizeObserver === 'function'
+      ? new ResizeObserver((entries) => {
+          boxWidth = entries[entries.length - 1].contentRect.width;
+        })
+      : null;
+  boxWatch?.observe(track);
+
   const frozen = () =>
-    paused || touchActive || dragging || performance.now() < touchSettle || !track.clientWidth;
+    paused || touchActive || dragging || performance.now() < touchSettle || !boxWidth;
 
   const drifting = () => !focused && performance.now() >= holdUntil && !reducedMotion();
 
@@ -759,16 +842,32 @@ export function loopScroll(
     headed(velocity);
     pos += velocity * (dt / 1000);
     track.scrollLeft = pos;
-    lastWritten = track.scrollLeft;
+    /*
+     * **One read back, not two** (2026-09-08). The written value has to be read
+     * again — the browser clamps and rounds it, and `onScroll` tells a
+     * reader's scroll from the drift's own by comparing against what was
+     * actually stored — but reading straight after a write is a forced
+     * synchronous layout, and `wrap` then asked for the same number a second
+     * time. On a row of 215 cells at 4x CPU that pair was the largest
+     * single-frame cost in an eight-second profile of All Saints. The read is
+     * made once here and handed on.
+     */
+    const at = track.scrollLeft;
+    lastWritten = at;
     // Corrected in the same frame, synchronously, rather than through the
     // async scroll event — which would race the next nudge.
-    pos += wrap();
+    pos += wrap(at);
   }
 
   measure();
   raf = requestAnimationFrame(frame);
 
-  const onResize = () => measure();
+  const onResize = () => {
+    // The observer above will report the new box too, but `measure` wants the
+    // width now rather than a callback later.
+    boxWidth = track.clientWidth;
+    measure();
+  };
   window.addEventListener('resize', onResize);
 
   return {
@@ -808,6 +907,7 @@ export function loopScroll(
     destroy() {
       if (raf) cancelAnimationFrame(raf);
       raf = null;
+      boxWatch?.disconnect();
       window.removeEventListener('resize', onResize);
       track.removeEventListener('scroll', onScroll);
       track.removeEventListener('pointerdown', onPointerDown);

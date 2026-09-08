@@ -967,13 +967,30 @@ nav.site-nav a[aria-current='page'] {
     flex: none;
     scroll-snap-align: center;
     text-align: center;
+    /*
+     * **Wide enough that the ring is longer than the screen** (2026-09-08).
+     * The five labels measured 339 px against a 360 px viewport — the whole
+     * row was *shorter than the window*, so blank strip showed at one end or
+     * the other at every position, balanced or not, and no amount of turning
+     * the ring could hide it. `ui/nav-scroll.js` keeps whichever page is
+     * centred in the middle of the five at every frame, and for that to leave
+     * no gap the ring has to span the window plus one more page: five items of
+     * 28vw is 140vw against the 128vw that needs, at every width the strip is
+     * used at, since both sides of the inequality are in vw.
+     *
+     * A `min-width`, not a width: a label longer than this keeps its own size,
+     * which only makes the ring longer still. It is also what the old
+     * five-across grid was reaching for (author, 2026-08-26 evening: no page
+     * favoured over another by width) without the ledger look that killed it —
+     * a reader sees three and a half pages, not five squeezed ones.
+     */
+    min-width: 28vw;
     /* Shorter than the comfortable row above it (author, 2026-08-26
        evening): the label's own line plus 3 px either side, which is 25.6 px
        against the 28 the four-pages test allowed at 320 px, kept for this
        row too. 5 px read as a button and measured 29.6 — taller than the
        bare links it replaced, which is the opposite of what was asked. */
     padding: 3px var(--space-4);
-    min-width: 0;
     white-space: nowrap;
   }
 

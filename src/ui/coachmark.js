@@ -126,10 +126,41 @@ export function mountCoachmarks() {
   const position = (target) =>
     !target || target === document || target === document.documentElement ? window.scrollY : target.scrollTop;
 
+  /**
+   * **And only from something that scrolls the way a reader reads** (2026-09-08,
+   * from a profile of All Saints rather than from a report). Listening on
+   * `document` in the capture phase catches every scroll on the page, and this
+   * site has two that are nobody's reading: the carousel drifts by itself sixty
+   * times a second, and the phone's nav strip is turned by `ui/nav-scroll.js`.
+   * Each of those events reached `position`, which reads `scrollTop` — a
+   * *forced layout*, on a frame the drift has already dirtied. It measured
+   * **460 ms of an eight-second All Saints profile at 4x CPU**, second only to
+   * the drift loop itself, on a page where the mark is usually not even shown.
+   *
+   * The answer a horizontal scroller gives is also meaningless: its `scrollTop`
+   * is 0 for ever, so every one of those events was a comparison against a
+   * number that could not change.
+   *
+   * Decided once per element and remembered, because the question itself costs
+   * layout: an element that can scroll vertically is one a reader can read in.
+   */
+  const vertical = new WeakMap();
+  const reads = (target) => {
+    if (!target || target === document || target === document.documentElement) return true;
+    if (!(target instanceof Element)) return false;
+    let known = vertical.get(target);
+    if (known === undefined) {
+      known = target.scrollHeight > target.clientHeight;
+      vertical.set(target, known);
+    }
+    return known;
+  };
+
   let count = 0;
   let last = 0;
   let from = window.scrollY;
   const onScroll = (e) => {
+    if (!reads(e?.target)) return;
     const now = Date.now();
     const at = position(e?.target);
     if (Math.abs(at - from) < SCROLL_SLOP) return;

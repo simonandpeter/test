@@ -1788,9 +1788,22 @@ const stripOrder = (page) =>
 const watchPress = async (href) => {
   const track = document.querySelector('.site-nav');
   const seen = [Math.round(track.scrollLeft)];
+  /*
+   * And the widest blank strip beyond whichever links are actually on screen,
+   * per frame — the author's second report on this row is exactly that number
+   * ("they should be visible as the animation is happening"). It read 85 px
+   * against a 360 px window before the ring learned to turn mid-journey.
+   */
+  let gap = 0;
   let running = true;
   const tick = () => {
     seen.push(Math.round(track.scrollLeft));
+    const box = track.getBoundingClientRect();
+    const on = [...track.children]
+      .map((a) => a.getBoundingClientRect())
+      .filter((r) => r.right > box.left && r.left < box.right)
+      .sort((a, b) => a.left - b.left);
+    if (on.length) gap = Math.max(gap, on[0].left - box.left, box.right - on[on.length - 1].right);
     if (running) requestAnimationFrame(tick);
   };
   requestAnimationFrame(tick);
@@ -1801,6 +1814,7 @@ const watchPress = async (href) => {
   const box = track.getBoundingClientRect();
   return {
     steps: [...new Set(seen)].length,
+    gap: Math.round(gap),
     offCentre: Math.abs(cur.left + cur.width / 2 - (box.left + box.width / 2)),
   };
 };
@@ -1840,8 +1854,18 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
 
   const glided = await page.evaluate(watchPress, '/about');
   // Five or more distinct positions is a journey; a jump is two — where it
-  // started and where it landed. The measured run is ten.
+  // started and where it landed. The measured run is nineteen.
   expect(glided.steps, `the strip moved through ${glided.steps} positions`).toBeGreaterThan(4);
+  /*
+   * **And the row is never seen to run out** (author, 2026-09-08: "they should
+   * be visible as the animation is happening, true infinite scroll"). Two
+   * things together give this and either alone fails it: the ring turns on
+   * every frame of the journey rather than at the end of it, and the five
+   * links are `min-width: 28vw` so the ring is longer than the window — it
+   * measured 339 px inside a 360 px window before, which no amount of turning
+   * could have filled.
+   */
+  expect(glided.gap, `${glided.gap} px of empty strip showed during the press`).toBeLessThan(2);
   expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
   // And the ring is balanced again around the page that was pressed, which is
   // the rebalance being silent: the glide's own landing and this are the same
