@@ -110,8 +110,43 @@ arrives`. Both concern the terrain loaders, both pass run alone, and the second
 now fails on its own assertion rather than the clock, which makes it the better
 one to start from.
 
+## 2026-09-09: the type scale, and two figures that were wrong
+
+**The type scale is nine steps, from fourteen.** 12.5 and 13.5 into 13, 14 and
+16 into 15. Verified with the sheet rather than by eye: all 48 tiles differ,
+and both documented risks were checked directly — the nav row moved *down* half
+a pixel and fits at 760 and 860 px in Romanian, Serbian and Greek; All Saints'
+`nowrap` chips took the +1 px and still sit inside 560 px in the widest pack.
+
+**The visual loop is measured for the first time: 48 tiles in 80 s** — 2 widths
+× 2 themes × 2 languages × 6 routes — against ~40 s for a *single* surface
+through a rebuilt preview before. `scripts/tile-diff.mjs` is new and is the
+other half of `--still`: per-tile differing-pixel counts against a kept
+baseline, plus a mask showing where. The sheet also stopped using
+`waitUntil: 'networkidle'` and now turns the terrain warm-up off, for the same
+reason the map's tests did.
+
+**There is no spacing sweep to do.** `PLAN.md` said "412 raw px values still
+live outside `tokens.css` — the next sweep after type". Measured: **310
+declarations already go through `var(--space-*)`**, the component sheets hold
+254 raw px values rather than 412 (the larger number counted comments and
+`tokens.css`), and only **53** of those sit on a spacing property, 4 of them on
+the scale. The rest is `border` (45), `height` (30), `width` (18) — and the two
+commonest values in the whole set are 1px (74) and 2px (43), which are
+hairlines. Spacing is ~97% governed already. Colour is the one thing left
+untested, and it is three hex values.
+
+**A test that never measured its claim.** `the way in sits on the last faded
+line` asserted `Math.abs(belowTailBottom) < line / 2`. Correct, the pill sits
+half a line *below* the tail's bottom (+14.03); a line too high it sits half a
+line *above* (−14.02). Under an absolute value both are 14, so the test was
+decided by which side of 14.025 a sub-pixel reflow fell on — it passed by a
+hair for weeks and failed by six thousandths of a pixel here, with the picture
+visibly correct. It is signed now, and moving the pill up a line fails it,
+which the old version passed.
+
 ## Next
 
-`PLAN.md`'s numbered list. **Collapse the type scale** while the contact sheet
-makes it cheap, then **the overhaul, desktop first**. The comment rewrite
-follows, three stylesheets first.
+`PLAN.md`'s numbered list: **the overhaul, desktop first** — section 4 is the
+brief and the sheet is the instrument. The comment rewrite follows, three
+stylesheets first.

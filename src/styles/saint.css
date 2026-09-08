@@ -361,7 +361,7 @@
    (author, 2026-08-22). A quiet text button in the register's own voice. */
 .reveal-traditions {
   font-family: var(--font-utility);
-  font-size: var(--text-nav);
+  font-size: var(--text-sm);
   color: var(--ink-soft);
   margin: var(--space-2) 0 var(--space-4);
 }
@@ -382,7 +382,7 @@
 .att-church {
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: var(--text-md);
+  font-size: var(--text-base);
 }
 
 .att-status {
@@ -433,7 +433,7 @@
 .source summary {
   cursor: pointer;
   font-family: var(--font-utility);
-  font-size: var(--text-nav);
+  font-size: var(--text-sm);
   color: var(--ink-soft);
 }
 
@@ -447,7 +447,7 @@
 }
 
 .source-body p {
-  font-size: var(--text-body);
+  font-size: var(--text-base);
 }
 
 /* ---- skeletons ---------------------------------------------------------- */

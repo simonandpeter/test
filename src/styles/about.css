@@ -101,7 +101,7 @@
   border-radius: var(--radius-cell);
   background: var(--field);
   font-family: var(--font-utility);
-  font-size: var(--text-nav);
+  font-size: var(--text-sm);
   color: var(--ink);
   cursor: pointer;
 }

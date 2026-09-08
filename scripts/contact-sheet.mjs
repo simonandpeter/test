@@ -194,13 +194,36 @@ for (const width of WIDTHS) {
         ...(STILL ? { reducedMotion: 'reduce' } : {}),
       });
       await ctx.addInitScript((v) => localStorage.setItem('gos-settings', JSON.stringify(v)), seed(theme, language));
+      /*
+       * `saveData` is `warmTerrainTiles`'s own off switch. Six routes a row
+       * each pulling 6 MB of tiles nothing draws at this zoom is the single
+       * biggest cost in a sheet.
+       */
+      await ctx.addInitScript(() => {
+        Object.defineProperty(navigator, 'connection', {
+          configurable: true,
+          get: () => ({ saveData: true }),
+        });
+      });
       const page = await ctx.newPage();
       if (STILL) await page.route('**/*.woff2', (r) => r.abort());
       const tiles = [];
       for (const route of ROUTES) {
         try {
           const url = BASE + route + (STILL && route.startsWith('/saints') ? `?seed=${encodeURIComponent(SEED)}` : '');
-          await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+          /*
+           * `domcontentloaded`, not `networkidle`: the map warms the whole
+           * 158-file terrain grid in the background, and waiting for the
+           * network to fall quiet meant waiting for all of it -- 2.6 s a shot
+           * against 0.2 s, measured 2026-09-09. Nothing is lost: no tile is
+           * drawn at 1x anyway (`tileStrength` is 0 there), the fonts and the
+           * settle below are what the picture actually needs, and the map gets
+           * an explicit wait for its coastline.
+           */
+          await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+          if (route.startsWith('/map')) {
+            await page.locator('[data-map][data-land="ok"]').waitFor({ timeout: 30000 });
+          }
           await page.evaluate(() => document.fonts.ready);
           await page.waitForTimeout(SETTLE);
           const shot = await page.screenshot({ clip: { x: 0, y: 0, width, height: HEIGHT } });

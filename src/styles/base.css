@@ -808,7 +808,7 @@ nav.site-nav {
 nav.site-nav a,
 .utility {
   font-family: var(--font-utility);
-  font-size: var(--text-nav);
+  font-size: var(--text-sm);
   line-height: 1.45;
   font-variant-numeric: tabular-nums;
 }
@@ -1136,7 +1136,7 @@ main.chrome {
   font-family: var(--font-utility);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   color: var(--ink-soft);
   border-bottom: 1px solid var(--rule);
   padding-bottom: var(--space-1);

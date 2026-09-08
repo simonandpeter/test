@@ -85,8 +85,9 @@ The standing check against drifting back to AI-default looks:
 duration, easing, type size or spacing value anywhere else is a defect. That
 rule is executable for three of the five: `tests/design-tokens.test.mjs` fails
 on a raw easing, a sub-second raw duration or a raw `font-size` in a component
-sheet. **Colour and spacing are still on trust** — 412 raw px values and three
-raw hex colours live outside `tokens.css` today. A test is the reason this
+sheet. Spacing and colour turned out to need no sweep at all — both figures that said
+otherwise were miscounts, and the sections below give the numbers. A
+test is the reason this
 section is worth writing: the old DESIGN.md said "200 ms standard, one easing"
 for three weeks while the code grew to 17 durations and 7 easings, because a
 document cannot stop a value being typed.
@@ -124,22 +125,55 @@ Three voices, two families.
 - `--font-serif` — Literata. The reading voice: lives, prose, names.
 - `--font-utility` — system UI. Apparatus: dates, counts, labels, chips.
 
-**Every `font-size` goes through a `--text-*` token** — 62 declarations over 14
-raw px values, as of 2026-09-08. The scale is `--text-3xs` 9px through
-`--text-3xl`, plus `--text-mast`/`--text-mast-wide` for the display voice.
+**Every `font-size` goes through a `--text-*` token.** **Nine steps**, plus
+`--text-mast`/`--text-mast-wide` for the display voice:
 
-**It is 14 steps, which is not a scale — it is the sizes the site already had,
-named.** Collapsing 12/12.5/13/13.5, or 14/15/16, moves real layout: the nav
-row has a history of overflowing at 560 px in the wide packs. That collapse is
-the visual overhaul's decision to make with the contact sheet open, and this is
-the one place to make it from.
+| token | px | for |
+| --- | --- | --- |
+| `--text-3xs` | 9 | the smallest mark on the site |
+| `--text-2xs` | 12 | the map's atlas layer |
+| `--text-sm` | 13 | the utility voice: nav, chips, counts, captions |
+| `--text-base` | 15 | apparatus at reading weight: labels, subtext |
+| `--text-lg` | 17 | the reading voice: lives, prose |
+| `--text-lede` | 19 | a page's opening paragraph |
+| `--text-xl` | 21 | h3 |
+| `--text-2xl` | 26 | h2 |
+| `--text-3xl` | `clamp(28px, 5vw, 40px)` | h1 |
+
+It was **fourteen** until 2026-09-09 — the sizes the site happened to have,
+named rather than chosen. 12.5 and 13.5 folded into 13, 14 and 16 into 15.
+Nothing on the site distinguished half a pixel to a reader, and four of the
+fourteen were decisions nobody had made.
+
+Verified with the sheet, not by eye: all 48 tiles differ, since every page
+carries type, and the two documented risks were checked directly. The nav row
+(`nav.site-nav a`, once `--text-nav`) moved **down** half a pixel — the safe
+direction — and fits on one row at 760 and 860 px in Romanian, Serbian and
+Greek. All Saints' `white-space: nowrap` control chips took the +1 px and still
+sit inside 560 px in the widest pack.
 
 ### Space
 
 `--space-1` 4px through `--space-16` 64px, doubling. `--radius-panel` 4px,
-`--radius-cell` 1px. **412 raw px values still live outside `tokens.css`** —
-padding, widths, offsets. They are not yet governed by a test and are the next
-sweep after type.
+`--radius-cell` 1px.
+
+**There is no spacing sweep to do, and the figure that said otherwise was
+wrong.** This section read "412 raw px values still live outside `tokens.css`
+— the next sweep after type" until 2026-09-09. Measured: **310 declarations
+already go through `var(--space-*)`** and 35 through a radius token, and the
+component sheets hold **254** raw px values, not 412 — the larger number was
+every `px` in `src/**`, comments and `tokens.css` included.
+
+Of those 254, only **53** sit on a spacing property at all, and **4** of the 53
+are on the scale. The rest of the 254 is `border` (45), `height` (30), `width`
+(18), `border-radius` (13), `box-shadow` (12), `text-underline-offset` (11) —
+and the two commonest values in the whole set are **1px (74) and 2px (43)**,
+which are hairlines and shadow offsets. A scale should not govern those, and a
+sweep that tokenised them would turn arbitrary numbers into arbitrary names.
+
+Spacing is already ~97% governed. What is left unenforced is **colour**: three
+raw hex values outside `tokens.css`. That is the sweep worth doing, and it is
+small.
 
 ### Motion
 
@@ -253,7 +287,26 @@ a finding and red would claim liturgical time. One drawing everywhere, filled at
 both states, half opacity until saved, `aria-pressed` carrying the state. Where
 a picture is underneath it takes a drop shadow, which is the ground's own
 darkness pushed away from the shape rather than a second shape drawn around it.
-That is the one shadow on the site, and it is on a mark rather than a panel.
+
+**"That is the one shadow on the site" was written here on 2026-09-08 and is
+false** — an extrapolation from the old DESIGN.md's justification of the
+bookmark's shadow, asserted without counting. There are six, found by
+`scratchpad/colour-audit.py` on 2026-09-09:
+
+| where | what |
+| --- | --- |
+| `.chrome` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the sticky header over scrolling content |
+| `.month-grid button` | the same shadow |
+| `.hero-more` | `0 6px 20px rgb(0 0 0 / 0.14)` — the Read more pill |
+| `.hero-media` | `background: rgb(0 0 0 / 0.45)` — a scrim, not a shadow |
+| `.index-name:hover` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` |
+| `.index-desc` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
+
+None is on a *panel*, so the rule above holds as written — a card still has no
+cast shadow. But "no drop shadows" as a blanket claim does not, and a header
+that lifts off scrolling content is a defensible thing the site does on
+purpose. **The overhaul should decide which of the six stay and say so here**,
+rather than leaving a sentence that a count refutes.
 
 **All Saints has two faces and opens on the carousel**; Cards and Rows are the
 register at card weight, chosen by the reader and remembered. The carousel's
@@ -408,11 +461,14 @@ re-measured.
    keeps its own ink when a terrain tile never arrives`. Both are about the
    terrain loaders, both pass alone, and the second now fails on its own claim
    rather than the clock — which makes it the better one to look at first.
-4. **Type: collapse the scale.** 14 steps is not a scale. 12/12.5/13/13.5 and
-   14/15/16 are the two clusters; the target is eight or nine steps. This is
-   cheap now and expensive later: `--still` makes the contact sheet a pixel
-   diff, so each collapse is one command to see and one to accept.
-5. **The visual overhaul** — desktop first, section 4 is the brief.
+4. ~~**Type: collapse the scale**~~ — done 2026-09-09. Fourteen steps to nine.
+   The loop it was waiting for is now measured: **48 tiles in 80 s**, against
+   ~40 s for a single surface through a rebuilt preview before. `tile-diff.mjs`
+   is the other half — per-tile differing-pixel counts and a mask showing where,
+   so "pixel-identical" stops being something somebody says after looking.
+5. **The visual overhaul** — desktop first, section 4 is the brief. The loop:
+   `contact-sheet.mjs --still`, `tile-diff.mjs snapshot`, change,
+   `--still` again, `tile-diff.mjs compare`. 80 s a pass over 48 tiles.
 6. **Comments: rewrite, do not move.** `src` is 34,533 lines at **48% comment**
    and that part is solid. The **68% narrates history** figure is not: it counts
    a whole block as history when any one line in it carries a cue, and at line
@@ -439,3 +495,10 @@ re-measured.
 10. **The carousel's top margin is 0 and has always been.** `index.css` asked
     for `--space-5`, a step the scale has never had. Written out as `0` on
     2026-09-08 rather than guessed at; decide it with the sheet open.
+11. **Colour needs no sweep either, and the shadows need a decision.** There
+    are **zero** raw hex colours in a declaration: every `#000` is a
+    `mask-image` stop, where only alpha matters and the hue is arbitrary, and
+    the two greys this list previously named live in comments. What is genuinely
+    untokenised is **seven `rgb(0 0 0 / α)` values**, all shadows or scrims (see
+    section 4) — and the question there is which of them should exist at all,
+    not what to call them.

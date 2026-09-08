@@ -679,7 +679,7 @@ input.map-search-input {
    browser's default control face. */
 .map-speed select {
   font: inherit;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--ink);
   background: var(--field);
   border: 1px solid var(--rule);

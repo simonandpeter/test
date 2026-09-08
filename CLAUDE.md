@@ -243,7 +243,15 @@ nothing.**
   an earlier sitting keeps 5173 while a new `npm run dev` quietly takes 5175,
   and the sheet drew the wrong tree and reported success (2026-09-09). It also
   found a dev-only 404 on the saint route on its first run.
-  Allow ~2 min: it rebuilds the manifest and starts vite cold.
+  **48 tiles in 80 s** (2 widths × 2 themes × 2 languages × 6 routes), most of
+  which is the manifest rebuild and a cold vite. `export MSYS_NO_PATHCONV=1`
+  before `--routes=/`, or the shell turns it into `C:/Program Files/Git/` and
+  you get six tiles of nothing.
+- **`node scripts/tile-diff.mjs snapshot <name>` / `compare <name>`** — the
+  other half of `--still`. Per-tile differing-pixel counts against a kept
+  baseline, and a mask beside each changed tile showing *where* it moved.
+  Without it "the tiles are identical" is a claim someone made by looking, and
+  looking is what a half-pixel change defeats.
 - `node scripts/shot.mjs <name> <url> [width] [steps…]` — one screenshot, for a
   state the sheet cannot reach (mid-flight, after a press). Steps: `click:`,
   `wait:`, `key:`, `scroll:`, `lang:`, `church:`.

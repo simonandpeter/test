@@ -74,20 +74,21 @@
      Every `font-size` in the app comes through these; a raw px anywhere else
      is a defect and `tests/design-tokens.test.mjs` fails on one.
 
-     **These are the sizes the site already had**, named rather than re-chosen.
-     Collapsing 12.5/13/13.5 into one step, or 14 into 15, moves real layout —
-     the nav row's width has a history of overflowing at 560 px in the wide
-     packs — so it is the visual overhaul's decision to make with the contact
-     sheet open, not a sweep's to make blind. What this buys today is the one
-     place to make it from. */
+     **Nine steps, collapsed from fourteen on 2026-09-09** with the contact
+     sheet open, which is the condition the sweep that named them set. Four
+     went: 12.5 and 13.5 into 13, 14 and 16 into 15. Fourteen names for
+     thirteen sizes was a record of what had been typed, not a scale — and the
+     half-pixel pairs in particular were a choice nobody had made, since
+     nothing on the site distinguishes 13 from 13.5 to a reader.
+
+     The nav row is the thing to watch: it has a history of overflowing at
+     560 px in the wide packs, and it sits on this scale (`nav.site-nav a`,
+     once `--text-nav`). It moved *down* half a pixel here, which is the safe
+     direction; the widest pack at 560 px is shot on every sheet. */
   --text-3xs: 9px; /* the smallest mark on the site */
   --text-2xs: 12px; /* the map's atlas layer, the smallest apparatus */
-  --text-xs: 12.5px;
-  --text-sm: 13px; /* facet chips, counts, captions */
-  --text-nav: 13.5px; /* the utility voice: nav, dates, register subtext */
-  --text-md: 14px;
-  --text-base: 15px;
-  --text-body: 16px;
+  --text-sm: 13px; /* the utility voice: nav, chips, counts, captions */
+  --text-base: 15px; /* apparatus at reading weight: labels, chips, subtext */
   --text-lg: 17px; /* the reading voice: lives, prose */
   --text-lede: 19px; /* a page's opening paragraph */
   --text-xl: 21px; /* h3 */

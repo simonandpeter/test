@@ -3012,7 +3012,23 @@ test('the way in sits on the last faded line, not on the last readable one', asy
    * sat a whole two lines higher, so half a line of tolerance cannot pass a
    * backed-out fix.
    */
-  expect(Math.abs(m.belowTailBottom), 'the pill is not on the last faded line').toBeLessThan(m.line / 2);
+  /*
+   * **Signed, not absolute** (2026-09-09). This read
+   * `Math.abs(belowTailBottom) < line / 2` and could not tell the two
+   * positions apart at all: correct, the pill's bottom sits *half a line
+   * below* the tail's bottom (+14.03 here), and a line higher it sits half a
+   * line *above* (-14.02). Both are 14 under an absolute value, so the test
+   * was decided by which side of 14.025 a sub-pixel reflow landed on — it
+   * passed by a hair for weeks, then failed by six thousandths of a pixel on
+   * the type collapse with the picture visibly correct.
+   *
+   * The sign is the whole discrimination. Below the tail's bottom and within
+   * one line is the last faded line; above it is the line before.
+   * Backed out by moving the pill up a line, which the absolute version passed
+   * and this one fails.
+   */
+  expect(m.belowTailBottom, 'the pill is above the tail, so a line too high').toBeGreaterThanOrEqual(0);
+  expect(m.belowTailBottom, 'the pill is a line or more below the faded tail').toBeLessThan(m.line);
 });
 
 

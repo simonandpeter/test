@@ -73,7 +73,7 @@
   flex: none;
   white-space: nowrap;
   font-family: var(--font-utility);
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   padding: var(--space-1) var(--space-2);
 }
 
@@ -90,7 +90,7 @@ input[type='number'],
 select {
   font: inherit;
   font-family: var(--font-utility);
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   color: inherit;
   background: var(--gesso);
   border: 1px solid var(--rule);
@@ -263,7 +263,7 @@ select:hover {
 .range label,
 .range-mode label {
   font-family: var(--font-utility);
-  font-size: var(--text-nav);
+  font-size: var(--text-sm);
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -767,7 +767,7 @@ html.is-rolling #view {
   font-family: var(--font-utility);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   color: var(--ink-soft);
 }
 
@@ -1539,7 +1539,7 @@ html.is-rolling #view {
 .cx-name {
   display: block;
   width: var(--cx-w);
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   line-height: 1.35;
   color: var(--ink);
 }
@@ -1549,7 +1549,7 @@ html.is-rolling #view {
   display: block;
   width: var(--cx-w);
   color: var(--ink-soft);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   line-height: 1.35;
 }
 
