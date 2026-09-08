@@ -357,14 +357,41 @@ its reasoning).
   evening, which is the third time this file has had to say that the desk's
   FCP is a fact about the desk.
 
-  - **Left for the author, and the next thing on that line**: the lifespan
-    beside the office prints its interval's recorded `display` verbatim, so a
-    Russian page reads «14 September 407» and «13th C.». 438 distinct displays
-    over 1,060 intervals; **73 carry real words, on 152 intervals** — 62 century
-    ordinals and 5 full dates, both mechanical, and 33 era descriptions ("under
-    Diocletian", "at the Council of Ephesus") which are quoted source-shaped
-    prose that `formatInterval` refuses to touch by decision. The first two
-    families are a straightforward next sitting; the third is a call.
+  - **And the lifespan beside it** (Amendment 107, the same evening; the item
+    this list left to the author, which the author then called).
+    `lib/date-display.js` *parses* a recorded `display` where the offices are a
+    table, because the variety there is numbers rather than phrases; the nineteen
+    reigns and councils that are not are `eras`, the third pack-only branch.
+    **It is conservative on purpose** — a string it cannot account for whole
+    comes back in the English it was recorded in — so
+    `tests/date-display.test.mjs` walks the folders and holds every display the
+    corpus actually has to being read. If a new shape ever arrives, that test is
+    what tells you, and the page quietly reads English until it does.
+
+  **Then, the same evening, three more** (Amendment 107):
+
+  - **The strip is full while it moves**, not only once it stops. The ring is
+    turned *during* a glide and during a swipe by `turnKeepingStill`, which pins
+    what the reader is looking at — and the glide is hand-rolled for it, since a
+    `scrollLeft` write aborts a native smooth scroll. The other half was that the
+    five labels measured **339 px inside a 360 px window**: the ring was shorter
+    than the screen, and `min-width: 28vw` is what fixes that. Blank edge during
+    a press, 85 px to zero, and `chrome.spec.js` measures that number.
+  - **The carousel's lag is `content-visibility: auto` on `.cx-cell`**: 1,830 ms
+    of blocked main thread over eight seconds at 4x CPU down to 570, worst task
+    880 to 470, dropped frames 21-41 to zero. **The pictures were 5% of it** —
+    blocking every card image outright moved 1,830 to 1,738 — and four separate,
+    real reductions in waste (the coachmark's document-level scroll listener, two
+    per-frame layout reads in the drift, a `nameLines` memo) moved the total by
+    nothing at all. Read Amendment 107 before optimising this page again: the
+    cost is the *number of columns laid out*, and everything else is noise
+    against it.
+  - **Smaller card images: not done, and the measurement is why.** A phone draws
+    a 150 CSS px card from a 560 px derivative — 3.5x the pixels a DPR-2 screen
+    can show — so a 320 px one would take the first screenful of All Saints from
+    **579 kB to ~189 kB**. That is a data-plan argument and a good one; it is not
+    a lag argument, which is what it was asked under. It costs a third
+    derivative, a manifest field and a `srcset` through `windowImages`.
 
 ### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
 

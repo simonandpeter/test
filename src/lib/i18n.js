@@ -103,10 +103,10 @@ function mergeInto(target, source) {
  * `scripts/locale-coverage.mjs` — because the cost of forgetting one of them
  * is a report full of false findings, which is how a real one gets missed.
  */
-export const PACK_ONLY = ['reasons', 'offices'];
+export const PACK_ONLY = ['reasons', 'offices', 'eras'];
 
 /** Deletes keys the base does not have — a pack-only branch (`reasons`,
- *  `offices`) would otherwise ride along into every later language. Found by
+ *  `offices`, `eras`) would otherwise ride along into every later language. Found by
  *  the unit test that asserts English restores *exactly*, not by a reader. */
 function pruneTo(target, shape) {
   for (const key of Object.keys(target)) {

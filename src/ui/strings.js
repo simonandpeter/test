@@ -557,6 +557,37 @@ export const STRINGS = {
     flourished: 'Lived {when}',
     before: 'before {y}',
     after: 'after {y}',
+    /*
+     * **The vocabulary a recorded `display` is written in** (author,
+     * 2026-09-08: "change lifespans to translated"), read by
+     * `lib/date-display.js`. Until now a display string was printed exactly as
+     * the corpus recorded it, which is English — so a Russian page carried
+     * "14 September 407" and "13th C." in the middle of its own line.
+     *
+     * The languages disagree about the *numeral* and not only about the word
+     * — Russian, Romanian and Serbian set a century in Roman, Greek in Arabic,
+     * English in its own ordinal — so `centuryNumeral` names which, and every
+     * pattern then has the one `{n}` already in the right shape. It is a named
+     * style rather than three tokens per pattern so that the placeholder check
+     * in `tests/i18n.test.mjs` still applies to this branch.
+     *
+     * `century` prints the *abbreviation*, because that is what this site has
+     * printed since 2026-08-24 — `formatInterval` shortens the recorded word
+     * "century" to "C." at render time, and a pack whose form was long would
+     * change the line's length rather than its language.
+     */
+    centuryNumeral: 'ordinal',
+    century: '{n} C.',
+    centuryEarly: 'early {n} C.',
+    centuryLate: 'late {n} C.',
+    centuryMid: 'mid-{n} C.',
+    centuryRange: '{a}–{b} C.',
+    yearRange: '{a}–{b}',
+    circa: 'c. {when}',
+    bc: '{when} BC',
+    probably: 'probably {when}',
+    /* A separator and not a sentence: the spaces are part of it. */
+    or: ' or ',
     // A life with no recorded beginning is read from its end (author,
     // 2026-08-24): "undated - 1779" became "Entered eternal glory in 1779",
     // and on 2026-08-25 that became plain "Reposed 1779". One form now

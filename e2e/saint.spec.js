@@ -643,6 +643,49 @@ test('a saint page reads in the reader’s own language, down to the feast and t
   expect(order.mediaAbove).toBe(true);
 });
 
+test('the line under the name is the reader own language, office and lifespan alike', async ({ page }) => {
+  /*
+   * Two instructions, one line, one day apart in the same message thread
+   * (author, 2026-09-08): "Offices, e.g. 'Princess' or 'Abbot' etc. not
+   * translated to other languages ... translate it", and then "change
+   * lifespans to translated".
+   *
+   * They were the two halves of the same line and they had the same cause:
+   * both are *recorded* English — a field in the saint's own file rather than a
+   * key in `ui/strings.js` — so every sweep the site has ever run over its own
+   * strings walked straight past them. A Russian reader met «Архиепископ
+   * Константинопольский» only after the first fix and «14 September 407» until
+   * the second.
+   *
+   * Read here as well as in the unit suite because the units test the two
+   * translators and this tests the *page*: `lib/calendar-page.js` is the one
+   * seam both go through, and a line that composed them in the wrong order
+   * would still pass every unit test either of them has.
+   */
+  await ready(page, { church: 'russian', language: 'ru' });
+  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  const facts = page.locator('.saint-facts');
+  // The office, which is a `saint.json` field.
+  await expect(facts).toContainText('Архиепископ Константинопольский');
+  // The lifespan: `c. 347` and a full recorded date, both in the reader's
+  // words, with the month through Intl rather than a table.
+  await expect(facts).toContainText('ок. 347');
+  await expect(facts).toContainText('сентября');
+  await expect(facts).not.toContainText('September');
+  await expect(facts).not.toContainText('Archbishop');
+
+  // A century, which is the other shape the corpus records and the one that
+  // reads in Roman numerals in three of the four packs.
+  await page.goto('/saints/abraham-of-smolensk', { waitUntil: 'networkidle' });
+  await expect(facts).toContainText('XIII в.');
+  await expect(facts).not.toContainText('13th C.');
+
+  // And a reign, which is the part no parser reads: a table in the packs.
+  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
+  await expect(facts).toContainText('Игумен');
+  await expect(facts).toContainText('ок. 251');
+});
+
 test('a saint from a Greek company is named for herself, not for the whole entry', async ({ browser }) => {
   /*
    * One line of the Greek calendar can name a household: 20 September gives

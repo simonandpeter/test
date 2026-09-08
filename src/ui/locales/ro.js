@@ -242,6 +242,17 @@ export const ro = {
     flourished: 'A trăit {when}',
     before: 'înainte de {y}',
     after: 'după {y}',
+    centuryNumeral: 'roman',
+    century: 'sec. al {n}-lea',
+    centuryEarly: 'începutul sec. al {n}-lea',
+    centuryLate: 'sfârșitul sec. al {n}-lea',
+    centuryMid: 'mijlocul sec. al {n}-lea',
+    centuryRange: 'sec. al {a}-lea – al {b}-lea',
+    yearRange: '{a}–{b}',
+    circa: 'cca. {when}',
+    bc: '{when} î.Hr.',
+    probably: 'probabil {when}',
+    'or': ' sau ',
     reposeIn: 'Adormirea - {when}',
     reposeInThe: 'Adormirea - {when}',
     repose: 'Adormirea - {when}',
@@ -817,5 +828,36 @@ export const ro = {
     'the Much-suffering': 'Multpătimitorul',
     'the Wonderworker': 'Făcătorul de minuni',
     'the first hermit': 'primul pustnic',
+  },
+  /*
+   * The names a date is placed by where no year is (author, 2026-09-08, with
+   * the lifespans). A reign or a council is a proper noun in a construction
+   * this language declines — «при Диоклетиане», not «при Диоклетиан» — so it
+   * is one whole phrase here rather than a preposition and a name composed by
+   * `lib/date-display.js`, which reads everything else in a display string
+   * structurally. Pack-only, like `reasons` and `offices`, and for the same
+   * reason: the key is the English the corpus recorded.
+   */
+  eras: {
+    'under Alexander Severus': 'sub Alexandru Sever',
+    'under Antoninus Pius': 'sub Antoninus Pius',
+    'under Aurelian': 'sub Aurelian',
+    'under Claudius': 'sub Claudius',
+    'under Constantine the Great': 'sub Constantin cel Mare',
+    'under Diocletian': 'sub Dioclețian',
+    'under Galerius': 'sub Galerius',
+    'under Hadrian': 'sub Hadrian',
+    'under Hadrian or Antoninus': 'sub Hadrian sau Antoninus',
+    'under Julian the Apostate': 'sub Iulian Apostatul',
+    'under King Milutin': 'sub regele Milutin',
+    'under Licinius': 'sub Liciniu',
+    'under Maximian': 'sub Maximian',
+    'under Nicholas Mystikos': 'sub Nicolae Misticul',
+    'under Prince Lazar': 'sub cneazul Lazăr',
+    'under Zeno': 'sub Zenon',
+    'at the Council in Trullo': 'la Sinodul Trulan',
+    'at the Council of Ephesus': 'la Sinodul din Efes',
+    'early 1900s': 'începutul anilor 1900',
+    'around the end of the first millennium': 'pe la sfârșitul primului mileniu',
   },
 };

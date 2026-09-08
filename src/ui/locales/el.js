@@ -242,6 +242,17 @@ export const el = {
     flourished: 'Έζησε {when}',
     before: 'πριν από το {y}',
     after: 'μετά το {y}',
+    centuryNumeral: 'arabic',
+    century: '{n}ος αι.',
+    centuryEarly: 'αρχές {n}ου αι.',
+    centuryLate: 'τέλη {n}ου αι.',
+    centuryMid: 'μέσα {n}ου αι.',
+    centuryRange: '{a}ος–{b}ος αι.',
+    yearRange: '{a}–{b}',
+    circa: 'περ. {when}',
+    bc: '{when} π.Χ.',
+    probably: 'πιθανώς {when}',
+    'or': ' ή ',
     reposeIn: 'Κοίμηση - {when}',
     reposeInThe: 'Κοίμηση - {when}',
     repose: 'Κοίμηση - {when}',
@@ -818,5 +829,36 @@ export const el = {
     'the Much-suffering': 'ο Πολύαθλος',
     'the Wonderworker': 'ο Θαυματουργός',
     'the first hermit': 'ο πρώτος ερημίτης',
+  },
+  /*
+   * The names a date is placed by where no year is (author, 2026-09-08, with
+   * the lifespans). A reign or a council is a proper noun in a construction
+   * this language declines — «при Диоклетиане», not «при Диоклетиан» — so it
+   * is one whole phrase here rather than a preposition and a name composed by
+   * `lib/date-display.js`, which reads everything else in a display string
+   * structurally. Pack-only, like `reasons` and `offices`, and for the same
+   * reason: the key is the English the corpus recorded.
+   */
+  eras: {
+    'under Alexander Severus': 'επί Αλεξάνδρου Σεβήρου',
+    'under Antoninus Pius': 'επί Αντωνίνου Πίου',
+    'under Aurelian': 'επί Αυρηλιανού',
+    'under Claudius': 'επί Κλαυδίου',
+    'under Constantine the Great': 'επί Μεγάλου Κωνσταντίνου',
+    'under Diocletian': 'επί Διοκλητιανού',
+    'under Galerius': 'επί Γαλερίου',
+    'under Hadrian': 'επί Αδριανού',
+    'under Hadrian or Antoninus': 'επί Αδριανού ή Αντωνίνου',
+    'under Julian the Apostate': 'επί Ιουλιανού του Παραβάτη',
+    'under King Milutin': 'επί του βασιλιά Μιλούτιν',
+    'under Licinius': 'επί Λικινίου',
+    'under Maximian': 'επί Μαξιμιανού',
+    'under Nicholas Mystikos': 'επί Νικολάου Μυστικού',
+    'under Prince Lazar': 'επί του πρίγκιπα Λαζάρου',
+    'under Zeno': 'επί Ζήνωνος',
+    'at the Council in Trullo': 'στην Πενθέκτη Σύνοδο',
+    'at the Council of Ephesus': 'στη Σύνοδο της Εφέσου',
+    'early 1900s': 'αρχές της δεκαετίας του 1900',
+    'around the end of the first millennium': 'περί τα τέλη της πρώτης χιλιετίας',
   },
 };

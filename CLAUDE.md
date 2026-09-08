@@ -161,7 +161,13 @@ reasoning. Line numbers drift — fix a wrong pointer rather than trusting it.
 - Two faces: carousel (default on every load) and search. `state.mode`;
   `applyMode` toggles classes on the view root. Nothing is rebuilt to swap face.
 - Carousel: `paintCarousel` fills `[data-carousel-track]`; `ui/loop-scroll.js`
-  is the endless-scroll engine. Cells are columns of saints packed by
+  is the endless-scroll engine. **`.cx-cell` carries `content-visibility: auto`
+  and that is where this page's frame budget went** (2026-09-08): the row lays
+  out the whole corpus in ~215 columns, the cost is near-linear in that number,
+  and the pictures are 5% of it. Before optimising here, read Amendment 107 —
+  four real reductions in waste moved the total by nothing.
+  `contain-intrinsic-size` must keep tracking the same custom properties as the
+  cell's own box, or `loopScroll`'s wrap period (read off `offsetLeft`) moves. Cells are columns of saints packed by
   height (`carouselCells`, up to `STACK_MAX` deep). Size is `--cx-w`/`--cx-max-h`, driven by
   `--cx-space` published from `modes.js` on resize. A run that fits does not
   loop (`is-static`). Imageless saints render no media box.
@@ -1233,10 +1239,11 @@ restore and not of a target the browser then quietly moves out from under it.
 **Strings** — `src/ui/strings.js` (source of truth) + `src/ui/locales/{ru,ro,el,sr}.js`.
 Touch all five, then `node scripts/locale-coverage.mjs` (0 fallbacks before
 done). `BRAND` is the site name and is never translated.
-**Two branches exist in the packs and not in the base** — `reasons` (fast
-reasons from `data/liturgical-days.js`) and `offices` (a saint's `office` and
-an attestation's `titles`, 2026-09-08) — because their *keys* are English
-phrases the data wrote down. `lib/i18n.js`'s `PACK_ONLY` is the list, and
+**Three branches exist in the packs and not in the base** — `reasons` (fast
+reasons from `data/liturgical-days.js`), `offices` (a saint's `office` and an
+attestation's `titles`) and `eras` (the reigns and councils a date is placed
+by, both 2026-09-08) — because their *keys* are English phrases the data
+wrote down. `lib/i18n.js`'s `PACK_ONLY` is the list, and
 `pruneTo`, `tests/i18n.test.mjs` and `locale-coverage.mjs` all read it; a third
 such branch goes there and nowhere else. `translateReason`/`translateOffice`
 read them off the pack directly, never through `STRINGS`, and pass an unknown
@@ -1295,6 +1302,16 @@ Anthony, not *by* him.
 recorded form to print). `office` is a field, drawn on the subtext line, and
 printed through `translateOffice` since 2026-09-08 — the *dedup* against
 `types` and `titles` still compares the recorded English, on purpose.
+
+**Dates** — a recorded interval's `display` is *parsed* into the reader's
+language by `lib/date-display.js` (2026-09-08), not looked up: the variety in
+438 display strings is numbers, where an office's is phrases. Deliberately
+conservative — a string it cannot read *whole* comes back in the recorded
+English — so `tests/date-display.test.mjs` walks the saints' folders and holds
+every display the corpus has to being read; that test is the only thing that
+would notice a new shape falling back. The era mark ("Reposed 105 AD" but
+"Reposed 1937") is decided on the English and applied to the translation,
+because every clause of that rule reads an English shape.
 
 **Saint data** — `saints/<slug>/saint.json` + `life.md`. Never hand-edit
 `data/manifest.json`. Icons: `images/icon.jpg` + `icon.meta.json` + two

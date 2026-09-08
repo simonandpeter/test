@@ -242,6 +242,17 @@ export const sr = {
     flourished: 'Живео {when}',
     before: 'пре {y}',
     after: 'после {y}',
+    centuryNumeral: 'roman',
+    century: '{n} в.',
+    centuryEarly: 'почетак {n} в.',
+    centuryLate: 'крај {n} в.',
+    centuryMid: 'средина {n} в.',
+    centuryRange: '{a}–{b} в.',
+    yearRange: '{a}–{b}',
+    circa: 'око {when}',
+    bc: '{when} пре Хр.',
+    probably: 'вероватно {when}',
+    'or': ' или ',
     reposeIn: 'Упокојење - {when}',
     reposeInThe: 'Упокојење - {when}',
     repose: 'Упокојење - {when}',
@@ -819,5 +830,36 @@ export const sr = {
     'the Much-suffering': 'Многострадални',
     'the Wonderworker': 'Чудотворац',
     'the first hermit': 'први пустињак',
+  },
+  /*
+   * The names a date is placed by where no year is (author, 2026-09-08, with
+   * the lifespans). A reign or a council is a proper noun in a construction
+   * this language declines — «при Диоклетиане», not «при Диоклетиан» — so it
+   * is one whole phrase here rather than a preposition and a name composed by
+   * `lib/date-display.js`, which reads everything else in a display string
+   * structurally. Pack-only, like `reasons` and `offices`, and for the same
+   * reason: the key is the English the corpus recorded.
+   */
+  eras: {
+    'under Alexander Severus': 'за Александра Севера',
+    'under Antoninus Pius': 'за Антонина Пија',
+    'under Aurelian': 'за Аурелијана',
+    'under Claudius': 'за Клаудија',
+    'under Constantine the Great': 'за Константина Великог',
+    'under Diocletian': 'за Диоклецијана',
+    'under Galerius': 'за Галерија',
+    'under Hadrian': 'за Хадријана',
+    'under Hadrian or Antoninus': 'за Хадријана или Антонина',
+    'under Julian the Apostate': 'за Јулијана Отпадника',
+    'under King Milutin': 'за краља Милутина',
+    'under Licinius': 'за Ликинија',
+    'under Maximian': 'за Максимијана',
+    'under Nicholas Mystikos': 'за Николу Мистика',
+    'under Prince Lazar': 'за кнеза Лазара',
+    'under Zeno': 'за Зенона',
+    'at the Council in Trullo': 'на Трулском сабору',
+    'at the Council of Ephesus': 'на Ефеском сабору',
+    'early 1900s': 'почетак 1900-их',
+    'around the end of the first millennium': 'око краја првог миленијума',
   },
 };

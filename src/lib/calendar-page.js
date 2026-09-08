@@ -8,6 +8,7 @@ import { gregorianToJdn, jdnToGregorian, isValidDate, toJdn, fromJdn } from './j
 import { toIsoDate } from './feasts.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { translateOffice } from './i18n.js';
+import { translateDisplay } from './date-display.js';
 
 export function parseIso(s) {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s ?? '');
@@ -163,13 +164,28 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
  */
 const ERA_OBVIOUS = 1000;
 
-function withEra(text, iv) {
-  if (!text || /\b(AD|BC)\b/.test(text)) return text;
+/**
+ * Whether the era has to be said, decided **on the recorded English** and never
+ * on whatever a pack made of it (2026-09-08). Every clause is a fact about the
+ * English shape — it already says AD or BC, it ends in a year or in the century
+ * abbreviation this page prints — and none of them survives translation: «IV в.»
+ * ends in neither a digit nor "C.", and would have quietly stopped being marked
+ * the moment the display started reading in Russian.
+ */
+function eraNeeded(text, iv) {
+  if (!text || /\b(AD|BC)\b/.test(text)) return false;
   const bounds = [iv?.earliest, iv?.latest].filter((n) => typeof n === 'number');
-  if (!bounds.length || Math.max(...bounds) >= ERA_OBVIOUS || Math.min(...bounds) <= 0) return text;
-  // Ends in a year, or in the century abbreviation this page prints.
-  if (!/(\d|\bC\.)$/.test(text)) return text;
-  return fill(STRINGS.dates.ad, { when: text });
+  if (!bounds.length || Math.max(...bounds) >= ERA_OBVIOUS || Math.min(...bounds) <= 0) return false;
+  return /(\d|\bC\.)$/.test(text);
+}
+
+function withEra(text, iv) {
+  return eraNeeded(text, iv) ? fill(STRINGS.dates.ad, { when: text }) : text;
+}
+
+/** The same, where the sentence printed and the sentence judged are not one. */
+function withEra2(text, english, iv) {
+  return eraNeeded(english, iv) ? fill(STRINGS.dates.ad, { when: text }) : text;
 }
 
 /** A year interval for display: its own display string, or derived honestly. */
@@ -178,7 +194,18 @@ export function formatInterval(iv) {
   // The data says "3rd century"; the page prints "3rd C." (author,
   // 2026-08-24). A render-time abbreviation, not a data edit: the displays
   // are quoted source-shaped strings and stay whole in the corpus.
-  if (iv.display) return withEra(iv.display.replace(/\bcentury\b/g, 'C.'), iv);
+  if (iv.display) {
+    const english = iv.display.replace(/\bcentury\b/g, 'C.');
+    /*
+     * **And it reads in the reader's own language** (author, 2026-09-08:
+     * "change lifespans to translated"), which reverses the line above this
+     * one. `lib/date-display.js` argues the reversal, and hands the recorded
+     * English straight back wherever it cannot account for a string *whole* —
+     * so the fallback is exactly the behaviour that stood before it.
+     */
+    const said = translateDisplay(iv.display);
+    return withEra2(said === iv.display ? english : said, english, iv);
+  }
   const { earliest, latest } = iv;
   if (earliest === null && latest === null) return STRINGS.dates.undated;
   if (earliest === null) return withEra(fill(STRINGS.dates.before, { y: latest }), iv);
