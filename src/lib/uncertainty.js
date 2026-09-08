@@ -1,5 +1,5 @@
 /**
- * The one uncertainty curve (DESIGN.md §6b, Addendum C4). Softness is a
+ * The one uncertainty curve (PLAN.md, Addendum C4). Softness is a
  * continuous function of one number — interval width in years for date bars,
  * uncertainty_km for map halos, interval widths again for timeline dissolves —
  * and it is this function in all three places. Never a lookup table, and never

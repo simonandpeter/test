@@ -82,7 +82,7 @@
  * first cut refused to do that and paid for it with the blank edge above.
  */
 
-import { reducedMotion } from '../lib/motion.js';
+import { reducedMotion, DUR } from '../lib/motion.js';
 
 /**
  * `track` already holds the nav's five real `<a>`, one of them wearing
@@ -302,10 +302,10 @@ export function wireNavScroll(track) {
    * one the reader is travelling *away* from — so the page being travelled to
    * keeps a continuous screen position the whole way.
    *
-   * Reduced motion gets the centre and not a quicker journey to it (DESIGN.md
+   * Reduced motion gets the centre and not a quicker journey to it (PLAN.md
    * §6): the page is simply put where it belongs.
    */
-  const GLIDE_MS = 380;
+  const GLIDE_MS = DUR.travel;
 
   /** Which page the running tween is travelling to, so a second ask can tell. */
   let bound = null;

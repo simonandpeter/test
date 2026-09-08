@@ -29,7 +29,7 @@ const compile = (pattern) => {
 export function createRouter(routes, onNavigate) {
   const table = routes.map((r) => ({ ...r, ...compile(r.path) }));
 
-  // The app owns scroll (DESIGN.md §5c): every navigation lands at the top of
+  // The app owns scroll (PLAN.md): every navigation lands at the top of
   // the page it opens, except the Index returning to where the reader left it,
   // which it does itself. The browser's own restoration cannot do that job —
   // it fires before a virtualised grid has been re-rendered and so restores

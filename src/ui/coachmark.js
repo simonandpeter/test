@@ -6,7 +6,7 @@
  * here. Text as minimal as possible."
  *
  * **This reverses the first-visit gate**, and the reversal is worth stating
- * plainly because DESIGN.md §5b and Amendment 23 both rest on it. From
+ * plainly because PLAN.md and Amendment 23 both rest on it. From
  * 2026-08-21 the calendar asked which church the reader kept and *showed
  * nothing until it was answered*: the page below waited, deliberately, because
  * a calendar with no church chosen would have been the site picking one and
@@ -247,7 +247,7 @@ function build(target, text) {
 
   // One frame at rest, then the class that runs the fade and the glow. Under
   // reduced motion the class is on from the first paint and base.css gives it
-  // nothing to run: the movement is removed, not shortened (DESIGN.md §6).
+  // nothing to run: the movement is removed, not shortened (PLAN.md).
   if (reducedMotion()) el.classList.add('is-in');
   else requestAnimationFrame(() => el.classList.add('is-in'));
   return mark;

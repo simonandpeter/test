@@ -9,7 +9,7 @@ import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor, dayRecordFor } from './entries.js';
 import { monthFmt, monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
-import { reducedMotion } from '../../lib/motion.js';
+import { reducedMotion, DUR } from '../../lib/motion.js';
 import { state } from './state.js';
 
 /**
@@ -37,13 +37,13 @@ const dayNumeral = (iso) => dateIn(gridCalendar(), iso).day;
 const dayLabel = (iso) => reckonedHeading(iso, gridCalendar());
 
 /** Matches --dur-month in tokens.css; the fade is long on purpose. */
-const MONTH_FADE = 420;
+const MONTH_FADE = DUR.travel;
 
 /**
  * The date picker, at both of its grains.
  *
  * The rail and the month are one module because they are one control:
- * DESIGN.md says the month is the week grown taller, and the code means it —
+ * PLAN.md says the month is the week grown taller, and the code means it —
  * the month paints through `buildRail`, settles through the same easing, and
  * steps with the same cursor arithmetic. An earlier plan had them as two
  * modules, which was wrong and would have produced a web of cross-imports for
@@ -62,7 +62,7 @@ const MONTH_FADE = 420;
 /*
  * The week strip is a rail of days that scrolls, and this replaced the week
  * grain on 2026-08-24 at the author's instruction. Four decisions of
- * DESIGN.md §5b go with it and each is marked superseded where it sits: the
+ * PLAN.md go with it and each is marked superseded where it sits: the
  * peeked edges were buttons, the fade was a mask, the unit of travel was a
  * week, and a drag was touch and pen only.
  *
@@ -587,7 +587,7 @@ export function wireDaySwipe(el) {
       from.style.transform = '';
       return;
     }
-    from.style.transition = `transform var(--dur-slot) var(--ease)`;
+    from.style.transition = `transform var(--dur-settle) var(--ease)`;
     requestAnimationFrame(() => {
       from.style.transform = 'translateX(0)';
     });
@@ -890,7 +890,7 @@ export function paintMonthInto(row, cursor, { live }) {
      * **And it is named, not only coloured.** A dot is nothing to a screen
      * reader and a hue is nothing to a reader who cannot separate these two,
      * so the word goes into the button's accessible name exactly as the
-     * rail's has since the dots arrived — this is DESIGN.md §2's "the words
+     * rail's has since the dots arrived — this is PLAN.md's "the words
      * still say which" applied to the one grain that had no words.
      */
     const tone = fastTone(iso);

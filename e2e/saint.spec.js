@@ -42,7 +42,7 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   // The "Also called" block — the multi-script name forms (Ἀντώνιος,
   // Ⲁⲛⲧⲱⲛⲓⲟⲥ) that used to stand here — was removed by the author,
   // 2026-08-24, reversing the "attest, never adjudicate" passage in
-  // DESIGN.md that named this exact block; the reversal is recorded in
+  // PLAN.md that named this exact block; the reversal is recorded in
   // place there. The heir of this test's old assertion is negative: the
   // block is gone from the page entirely, not merely relabelled.
   await expect(page.locator('.names')).toHaveCount(0);
@@ -102,7 +102,7 @@ test('an image says what its licence is, and links the source it can be checked 
 test('dates and places read as one register, keyed by kind', async ({ page }) => {
   // The date-interval bars stood here until 2026-08-21. What a reader needed
   // from them was the years, and the years were already printed beside them;
-  // what they could not get was where. DESIGN.md §6b keeps the curve for the
+  // what they could not get was where. PLAN.md's Softness section keeps the curve for the
   // map and the timeline and records that the bars, not it, were withdrawn.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('.date-bar')).toHaveCount(0);
@@ -221,7 +221,7 @@ test('saving persists across a reload, and the shelf agrees', async ({ page }) =
 });
 
 test('the saint page puts the register beside the image on desktop, the body beneath both, and the controls on the name line', async ({ page }) => {
-  // Addendum H4, and the head of DESIGN.md §5c: name, bookmark, ×, then the
+  // Addendum H4, and the saint page's specified head: name, bookmark, ×, then the
   // mark at the margin; at 760 px and above the image and the dates-and-places
   // register share a row and the body runs the full width under them.
   //

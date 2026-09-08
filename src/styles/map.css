@@ -1,6 +1,6 @@
 /* The map (§8.3, redrawn as a flat Mercator by the author on 2026-08-29,
    and stripped to the map alone on 2026-08-30).
-   Built on base.css and tokens.css; DESIGN.md wins any argument. */
+   Built on base.css and tokens.css; PLAN.md wins any argument. */
 
 /* ---- the stage -------------------------------------------------------- */
 
@@ -154,7 +154,7 @@ input.map-search-input {
   width: 100%;
   padding: var(--space-2) var(--space-3);
   font-family: var(--font-utility);
-  font-size: 15px;
+  font-size: var(--text-base);
   color: var(--ink);
   /* Opaque, not a tint: this sits over a picture whose colour is not knowable
      from here, and a translucent ground would put the text at whatever
@@ -230,7 +230,7 @@ input.map-search-input {
   width: 28px;
   height: 28px;
   font-family: var(--font-utility);
-  font-size: 17px;
+  font-size: var(--text-lg);
   line-height: 1;
 }
 
@@ -624,7 +624,7 @@ input.map-search-input {
 .map-play {
   width: 28px;
   height: 28px;
-  font-size: 13px;
+  font-size: var(--text-sm);
   line-height: 1;
   color: var(--rubric);
 }
@@ -679,7 +679,7 @@ input.map-search-input {
    browser's default control face. */
 .map-speed select {
   font: inherit;
-  font-size: 12.5px;
+  font-size: var(--text-xs);
   color: var(--ink);
   background: var(--field);
   border: 1px solid var(--rule);
@@ -759,7 +759,7 @@ input.map-search-input {
  * end. It points down at the bar it stands over.
  *
  * Rubric, like the fill it rides on — this is liturgical time, the same claim
- * (DESIGN.md 2) — and its own hairline in ink so it stays legible where it
+ * (PLAN.md 2) — and its own hairline in ink so it stays legible where it
  * crosses the bar's own colour.
  */
 .map-timeline-head {

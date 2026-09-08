@@ -8,29 +8,36 @@ structure, the same quality floor, one tradition, to be proven before the
 four-communion corpus comes back onto it. That corpus and its build are
 archived at the tag `archive/cross-church-2026-08`.
 
-## The documents, and which are live
+## The documents
 
-- `docs/saintsbuildplan.md` — the brief. Live reference: the code cites it as
-  "brief §N" in some thirty places.
-- `docs/saintsplanaddendum.md` — Addendum A, its companion, and it wins where
-  the two disagree. Also live: "Addendum G5", "Addendum H1" and the rest are
-  citations of this.
-- `docs/saints-naming-addendum.md` — how a saint's name is printed, rank
-  first. Live, and actioned at Amendment 50.
-- `docs/HANDOFF-ORTHODOX.md` — why this project exists and what carried over
-  from the cross-church build. History, and still the best account of it.
-- `docs/CLEANUP-PLAN.md` — six measured code-simplification items, ordered by
-  confidence. Items 1–3 were done on 2026-09-05 (the file says which and how);
-  4–6 remain a plan.
-- `docs/APP.md` — the app: the site inside a Capacitor shell for the Play
-  Store and the App Store, what it does differently there, and the two
-  store checklists. The shells are `android/` and `ios/`.
-- `docs/archive/` — things the site no longer has. Nothing there is imported
-  or built; it has its own README saying what each was and what removed it.
-- `HANDOFF.md` is the briefing to start from, `CLAUDE.md` is the map of where
-  code lives, `DESIGN.md` is the design system and is binding, and `SESSIONS.md`
-  is the delivery plan and its **Amendments** — the record of every decision,
-  in order.
+- **`CLAUDE.md`** — where things live and how to work: the index, the test
+  table, the traps. **Start here**; it opens with the order to read the other
+  two in.
+- **`PLAN.md`** — what the site should be, the design system, what is settled
+  and must not be re-proposed, and what is next. **Binding.**
+- **`HANDOFF.md`** — current state and what is in flight.
+
+Three files, about 700 lines. They replaced 15,776 across four on 2026-09-08:
+`SESSIONS.md` was a hand-maintained second copy of reasoning that `git log`
+already held — 430 commits of it, searchable with `git log --grep` — and
+`DESIGN.md`'s binding content is distilled into `PLAN.md`. The review of that
+cut put back three things it had dropped rather than distilled: the panel and
+register materials, the softness curve, and a layout section.
+
+Two older documents stay, because they are a **contract rather than a history**:
+
+- `docs/saintsbuildplan.md` — the brief. The code cites it as "brief §N" in
+  thirty-two places.
+- `docs/saintsplanaddendum.md` — its companion, and it wins where the two
+  disagree. "Addendum G5", "Addendum H1" and the rest are citations of this.
+
+And two that are neither:
+
+- `docs/APP.md` — the site inside a Capacitor shell for the two stores, what it
+  does differently there, and the checklists. The shells are `android/` and
+  `ios/`; no binary has been built yet.
+- `docs/archive/` — things the site no longer has, with its own README saying
+  what each was and what removed it. Nothing there is imported or built.
 
 `npm run dev` serves the site.
 
@@ -127,4 +134,4 @@ rather than hidden:
   Great Feast already changes the day's fast and its title — what is missing is
   a *folder*, so the Exaltation is a day the corpus has no entry for. What a
   calendar entry is when it is not a saint remains unbuilt. (The open
-  engineering is Sessions 10 and 11 in SESSIONS.md; this sits beside them.)
+  engineering is Sessions 10 and 11 in git log; this sits beside them.)

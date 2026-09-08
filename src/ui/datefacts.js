@@ -4,7 +4,7 @@
  * This replaces the date-interval bars (author, 2026-08-21). The bars drew
  * each interval at the softness its width earned, through the uncertainty
  * curve; what a reader actually needed from them on this page was the years,
- * and the years were already printed beside them. DESIGN.md §6b keeps the
+ * and the years were already printed beside them. PLAN.md keeps the
  * curve — the map halo and the timeline are its remaining consumers — and §6b
  * records that the bars are withdrawn rather than that the curve is.
  *

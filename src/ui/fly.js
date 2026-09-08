@@ -21,7 +21,8 @@
  * duration, and the flier is pinned out of flow first so the closing box
  * cannot clip it.
  *
- * Which makes reduced motion the interesting case. DESIGN.md §6: reduced
+ * Which makes reduced motion the interesting case. PLAN.md's Motion
+ * section: reduced
  * motion **removes**, never shortens — so there is no flight and no collapse
  * at all, and `done` runs at once. The information the flight carried is not
  * lost with it: both controls carry the whole sentence as their accessible
@@ -29,7 +30,7 @@
  * the same lesson in the channel that reader is actually using.
  */
 
-import { reducedMotion } from '../lib/motion.js';
+import { reducedMotion, DUR, EASE as MOTION_EASE } from '../lib/motion.js';
 
 /**
  * How long the flight takes. 320 ms until 2026-08-26, halved at the author's
@@ -38,9 +39,9 @@ import { reducedMotion } from '../lib/motion.js';
  * timer is the guard against a transition that never ends — a tab hidden
  * mid-flight fires no `transitionend`.
  */
-const FLIGHT = 160;
+const FLIGHT = DUR.answer;
 
-const EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
+const EASE = MOTION_EASE.soft;
 
 /**
  * **Both directions return their own `finish`**, and a caller that can start
@@ -248,7 +249,7 @@ export function flyOutOf(el, source, done = () => {}, { expand = null } = {}) {
   setTimeout(finish, FLIGHT + 80);
 
   /*
-   * A forced layout between the two values, for the reason DESIGN.md §5b
+   * A forced layout between the two values, for the reason PLAN.md
    * gives about the month unfurling: without a flush the browser coalesces
    * the start and the end into one recalculation and there is no transition
    * left to run. `flyInto` gets this free from its `requestAnimationFrame`;

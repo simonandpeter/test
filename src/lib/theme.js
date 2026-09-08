@@ -1,6 +1,6 @@
 /**
  * Two-way theme: light or dark, and the system is read rather than offered
- * (author, 2026-08-22, DESIGN.md §3 — it was three-way with a System option
+ * (author, 2026-08-22 — it was three-way with a System option
  * until then).
  *
  * A reader who has never pressed the toggle follows their system preference,

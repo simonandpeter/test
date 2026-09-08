@@ -14,7 +14,7 @@
  * **A drag** (author, 2026-08-21): the reader holds the grain and slides it.
  * Both neighbours are painted and parked a viewport width either side, the
  * track follows the finger, and on release it settles into whichever grain it
- * is nearest — over `--dur-slot`, so letting go reads as the movement a peek
+ * is nearest — over `--dur-settle`, so letting go reads as the movement a peek
  * makes rather than as a snap.
  *
  * Either way the document holds two or three of every date for a moment, so
@@ -32,10 +32,10 @@
 
 import { SETTLE } from './grain-drag.js';
 import { beginSwap, landSwap, setAside } from './swap.js';
-import { reducedMotion } from '../lib/motion.js';
+import { reducedMotion, DUR } from '../lib/motion.js';
 
-/** Matches --dur-slot in tokens.css: the sideways step of a grain. */
-export const STRIP_SLIDE = 260;
+/** Matches --dur-settle in tokens.css: the sideways step of a grain. */
+export const STRIP_SLIDE = DUR.settle;
 
 export function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
   const track = viewport.querySelector('.grain-track');

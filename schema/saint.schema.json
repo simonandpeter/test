@@ -23,7 +23,7 @@
       "minLength": 1
     },
     "kind": {
-      "$comment": "A folder is a saint unless it says otherwise. The one alternative is a feast: when the Great Feasts become folders, \"St. Dormition of the Theotokos\" is what a blanket honorific would print, so the naming function opts out on this flag rather than on a guess about the name (saints-naming-addendum.md, Step 3). Nothing in the corpus carries it yet; it is here before the work that needs it, not after.",
+      "$comment": "A folder is a saint unless it says otherwise. The one alternative is a feast: when the Great Feasts become folders, \"St. Dormition of the Theotokos\" is what a blanket honorific would print, so the naming function opts out on this flag rather than on a guess about the name (PLAN.md, the naming contract). Nothing in the corpus carries it yet; it is here before the work that needs it, not after.",
       "enum": ["saint", "feast"]
     },
     "names": { "type": "array", "items": { "$ref": "#/$defs/name" } },
@@ -72,7 +72,7 @@
           "text": { "type": "string", "minLength": 1 },
           "source": { "$ref": "#/$defs/source" },
           "english": {
-            "$comment": "An English rendering of this same hymn — never a different church's hymn, which the Greek apolytikion and the Romanian tropar are to one another. It arrives one of two ways and has to say which. `source` is somebody else's published rendering, copied with its citation: Orloff's General Menaion (1899) and Hapgood's Service Book (1906) are the two used, both long in the public domain, and a modern translation is a living author's work needing their permission. `rendered: \"site\"` is this site's own rendering of the text beside it — which Amendment 2 forbade from 2026-08-22 until the author reversed it for hymns alone on 2026-09-07 (SESSIONS.md records the reversal). It is a field rather than a silence because a reader must be able to tell a citation from a translation made here, and the saint page prints the difference. Exactly one of the two, never both and never neither.",
+            "$comment": "An English rendering of this same hymn — never a different church's hymn, which the Greek apolytikion and the Romanian tropar are to one another. It arrives one of two ways and has to say which. `source` is somebody else's published rendering, copied with its citation: Orloff's General Menaion (1899) and Hapgood's Service Book (1906) are the two used, both long in the public domain, and a modern translation is a living author's work needing their permission. `rendered: \"site\"` is this site's own rendering of the text beside it — which Amendment 2 forbade from 2026-08-22 until the author reversed it for hymns alone on 2026-09-07. It is a field rather than a silence because a reader must be able to tell a citation from a translation made here, and the saint page prints the difference. Exactly one of the two, never both and never neither.",
             "type": "object",
             "required": ["text"],
             "additionalProperties": false,

@@ -71,7 +71,7 @@ While the file is open, emit a dominant colour (or a tiny blur placeholder) for 
 
 Extract cap height and ascender/descender from the font files at build time (capsize-style) and emit the resulting line box as CSS custom properties. Changing typeface then recalculates rather than forcing a re-measure of both virtualisers.
 
-Give the `names` array its own class with a bounded line-height, so fallback substitution for Greek, Cyrillic, Coptic, Armenian, Syriac and Ge'ez cannot push the box. **Script coverage is a hard requirement, not a nicety** — the multi-script name forms are how §2's "attest, never adjudicate" principle actually appears on screen. State the chosen stack and its coverage in `DESIGN.md`.
+Give the `names` array its own class with a bounded line-height, so fallback substitution for Greek, Cyrillic, Coptic, Armenian, Syriac and Ge'ez cannot push the box. **Script coverage is a hard requirement, not a nicety** — the multi-script name forms are how §2's "attest, never adjudicate" principle actually appears on screen. State the chosen stack and its coverage in `PLAN.md`.
 
 **C4. One uncertainty curve, used everywhere.**
 
@@ -89,13 +89,13 @@ Implement as a tuned power curve with the constants exposed as tokens:
 --uncertainty-gamma: …;  /* curve shape */
 ```
 
-**Parametric substrate, hand-tuned curve.** Fully derived values are impossible to art-direct because nothing is a number anyone can nudge. The three constants above are the nudge, and they live in `DESIGN.md` as named tokens alongside the palette.
+**Parametric substrate, hand-tuned curve.** Fully derived values are impossible to art-direct because nothing is a number anyone can nudge. The three constants above are the nudge, and they live in `PLAN.md` as named tokens alongside the palette.
 
 ---
 
 ## D. Design sequencing
 
-`DESIGN.md` is still gated ahead of component CSS (§14). It must contain: 4–6 named colours in light and dark, the display/body/utility trio plus the multi-script stack, the layout concept, the signature element, and the three uncertainty constants.
+`PLAN.md` is still gated ahead of component CSS (§14). It must contain: 4–6 named colours in light and dark, the display/body/utility trio plus the multi-script stack, the layout concept, the signature element, and the three uncertainty constants.
 
 **Required before Phase 1 ships**
 
@@ -149,7 +149,7 @@ From a structural review of the built code after Session 5. None of it is urgent
 
 **G5. The manifest stays on the critical path until §6's trigger fires, and the shard shape is decided now.** The whole app waits for the manifest; at projected sizes that is the FCP budget (§13). §6 and §16 still hold — do not shard before the budget is exceeded — but when it is, the shape is *calendar-first*: a small per-year feast slice (date, slug, church, feast) loads first and the calendar paints from it, and card data arrives behind. The habit page wins (§1), so the split is by what the habit page needs, not by century.
 
-**G6. Fonts: `font-display: optional` stands; preloading is compatible and is the author's call.** DESIGN.md's choice — fallback stays on a cold slow load because zero layout shift outranks brand — is unchanged. Preloading the two Latin subsets makes the face arrive inside `optional`'s window on most loads without reintroducing shift. It costs a small build step (Vite hashes font filenames, so the preload link needs the resolved name) and it is perceived quality, not correctness; decide it at the ship gate (Session 4b), not before.
+**G6. Fonts: `font-display: optional` stands; preloading is compatible and is the author's call.** `PLAN.md`'s choice — fallback stays on a cold slow load because zero layout shift outranks brand — is unchanged. Preloading the two Latin subsets makes the face arrive inside `optional`'s window on most loads without reintroducing shift. It costs a small build step (Vite hashes font filenames, so the preload link needs the resolved name) and it is perceived quality, not correctness; decide it at the ship gate (Session 4b), not before.
 
 **What is deliberately not in this list:** splitting the JS bundle by route (31 KB gzipped, search already lazy — a loading state on every route for ten kilobytes), splitting the CSS (27 KB, one request), and tuning per-day paints on the calendar (a correct cost model for forty cells). The brief's own restraint applies: optimise what will be measured, and measure first.
 
@@ -159,7 +159,7 @@ From a structural review of the built code after Session 5. None of it is urgent
 
 The author's instructions of 2026-08-22, in two phases. **Phase 2 does not
 start until Phase 1 has been reviewed and the go given.** Where these
-contradict the build plan or DESIGN.md, these win; each contradiction is named
+contradict the build plan or `PLAN.md`, these win; each contradiction is named
 here and marked where it sits, per the house rule that a reversal is recorded
 rather than absorbed.
 
@@ -176,7 +176,7 @@ carried.
   stands). What §9.2 loses is only "the detail view lives on the saint's own
   page": it now also appears wherever the reader asks for detail.
 - The matrix ships on cards at its standard pitch, 7.65, and is not scaled to
-  the 17 px type it sits beside. DESIGN.md §7c ruled the matrix out of cards
+  the 17 px type it sits beside. `PLAN.md` ruled the matrix out of cards
   because a matrix *scaled to that type* needs a sub-1.5 px undocumented dot;
   at the standard pitch the dot is the same 1.68 px it is beside the h1, and
   the 30.6 px mark fits the card's 42 px name line. §7c's table gains the row.
@@ -196,7 +196,7 @@ the row's trailing edge (a 48 px thumbnail has no corner to spare); on a card
 with no image, the card's own corner. On the saint's page the *Save* text
 button becomes the same bookmark, beside the name. Same `saved` record, same
 store (§11); `aria-pressed` carries the state, a filled shape shows it, and it
-is ink — never gold, never red (DESIGN.md §2). The calendar hero's Save button
+is ink — never gold, never red (`PLAN.md`). The calendar hero's Save button
 was not in the instruction and is unchanged; recorded as an open inconsistency
 for the author.
 
@@ -226,22 +226,21 @@ reverses.
 **H5. Theme becomes a two-way toggle, sun/moon.** The *System* option goes;
 the system preference is read once, at first load, and is the theme the site
 opens in, after which the control is light ⇄ dark. Reverses §10 ("with a third
-System option, defaulting to system") and DESIGN.md §3/§5 (three-way; labelled
+System option, defaulting to system") and `PLAN.md`/§5 (three-way; labelled
 text button; the stacked-labels width trick, which an icon makes moot). The
 pre-paint inline script still reads the stored value, and a stored `system`
 from before this change is treated as unset.
 
-**H6. The date leaves the header.** Reverses the 2026-08-21 addition (DESIGN.md
-§5 "today's date abbreviated beneath it"; SESSIONS.md Amendment 16) and
+**H6. The date leaves the header.** Reverses the 2026-08-21 addition (`PLAN.md` "today's date abbreviated beneath it"; `git log` Amendment 16) and
 retires the browser tests that pin it.
 
 **H7. A site-wide *Select Tradition* control in the header's corner**, where
 the space is. It filters the Calendar, the All Saints page and the Map
 (Session 7) from one place, and is the same selection the first-visit
 question sets — `settings.traditions`, which lib/tradition.js already owns
-(SESSIONS.md Amendment 20 left this door open). The question loses *Show all
+(`git log` Amendment 20 left this door open). The question loses *Show all
 of them* and gains *(advanced)*, small and unframed, opening the plate.
-Reverses DESIGN.md §5b's "show all is an answer and stops the asking" —
+Reverses `PLAN.md`'s "show all is an answer and stops the asking" —
 what stops the asking now is any answer.
 
 **H8. The Calendar shows one calendar at a time.** The page's own choice is

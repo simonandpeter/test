@@ -73,7 +73,7 @@
   flex: none;
   white-space: nowrap;
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: var(--text-md);
   padding: var(--space-1) var(--space-2);
 }
 
@@ -90,7 +90,7 @@ input[type='number'],
 select {
   font: inherit;
   font-family: var(--font-utility);
-  font-size: 14px;
+  font-size: var(--text-md);
   color: inherit;
   background: var(--gesso);
   border: 1px solid var(--rule);
@@ -263,7 +263,7 @@ select:hover {
 .range label,
 .range-mode label {
   font-family: var(--font-utility);
-  font-size: 13.5px;
+  font-size: var(--text-nav);
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -313,7 +313,7 @@ select:hover {
      fontconfig's Arial alias all give: 16 leaves 9.6 px there. A bare Linux
      runner's system-ui is DejaVu Sans, wider again, and the row still wraps
      at 580 in it; freeing that needs a string the build does not own —
-     SESSIONS.md, Amendment 24, which says which and whose call it is. */
+     git log, Amendment 24, which says which and whose call it is. */
   gap: var(--space-2) var(--space-4);
 }
 
@@ -385,7 +385,7 @@ select:hover {
   height: var(--facet-h);
   /* **Gold, at the author's instruction** ("make the icon gold to draw
      attention"), and it is worth saying what it costs rather than passing it
-     off. DESIGN.md §2 spends gold on a *finding* about veneration and never
+     off. PLAN.md spends gold on a *finding* about veneration and never
      on chrome, so this is the first control on the site to wear it. And
      --gold on gesso is **2.78:1**, under the 3:1 WCAG asks of a meaningful
      non-text graphic — axe does not check icon contrast, so nothing goes red,
@@ -413,11 +413,11 @@ select:hover {
    reader keeps hold of while the page behind it changes. */
 html.is-rolling #view {
   opacity: 0;
-  transition: opacity var(--dur) var(--ease);
+  transition: opacity var(--dur-move) var(--ease);
 }
 
 #view {
-  transition: opacity var(--dur) var(--ease);
+  transition: opacity var(--dur-move) var(--ease);
 }
 
 /* The copy, fixed where the real die stood. Above the sticky bar's z-index of
@@ -509,7 +509,7 @@ html.is-rolling #view {
 
 .index-card.leaving {
   opacity: 0;
-  transition: opacity var(--dur) var(--ease);
+  transition: opacity var(--dur-move) var(--ease);
   pointer-events: none;
 }
 
@@ -537,7 +537,7 @@ html.is-rolling #view {
    third line would push the card past the box the grid reserved for it. */
 .index-name {
   font-weight: 500;
-  font-size: 17px;
+  font-size: var(--text-lg);
   line-height: 1.25;
   text-decoration: none;
   display: -webkit-box;
@@ -612,7 +612,7 @@ html.is-rolling #view {
    the life says and whichever face renders it. saints.js holds the other half
    of these numbers (DETAILED_CARD_TEXT_HEIGHT, DETAILED_ROW_HEIGHT). Until
    2026-08-22 Detailed also put the matrix in the badge's place on the name
-   line; the glyph is removed (DESIGN.md §2). */
+   line; the glyph is removed (PLAN.md). */
 .index-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -767,7 +767,7 @@ html.is-rolling #view {
   font-family: var(--font-utility);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: 14px;
+  font-size: var(--text-md);
   color: var(--ink-soft);
 }
 
@@ -881,7 +881,7 @@ html.is-rolling #view {
   color: var(--ink-soft);
   cursor: pointer;
   text-underline-offset: 3px;
-  transition: color var(--dur) var(--ease);
+  transition: color var(--dur-move) var(--ease);
 }
 
 .mode-toggle:hover,
@@ -897,7 +897,7 @@ html.is-rolling #view {
    arrangement the Daily nav link uses for Today. */
 .mode-toggle .mode-label {
   display: inline-block;
-  transition: opacity 140ms ease-out;
+  transition: opacity var(--dur-answer) var(--ease-out);
 }
 
 .mode-toggle .mode-label.is-fading {
@@ -1025,8 +1025,8 @@ html.is-rolling #view {
   margin-inline: calc(-1 * var(--space-3));
   padding-inline: var(--space-3);
   transition:
-    transform var(--dur-slot) var(--ease),
-    opacity var(--dur-slot) var(--ease);
+    transform var(--dur-settle) var(--ease),
+    opacity var(--dur-settle) var(--ease);
 }
 
 /* Stuck and unasked: up behind the row, and inert — the band is still over the
@@ -1037,9 +1037,9 @@ html.is-rolling #view {
   pointer-events: none;
   visibility: hidden;
   transition:
-    transform var(--dur-slot) var(--ease),
-    opacity var(--dur-slot) var(--ease),
-    visibility 0s linear var(--dur-slot);
+    transform var(--dur-settle) var(--ease),
+    opacity var(--dur-settle) var(--ease),
+    visibility 0s linear var(--dur-settle);
 }
 
 /* Stuck and asked for: down over the register, on the page's own ground so the
@@ -1062,7 +1062,13 @@ html.is-rolling #view {
    had to do. */
 .carousel {
   margin-inline: calc(50% - 50vw);
-  margin-top: var(--space-5);
+  /* Zero, and it says so. This read `var(--space-5)` from the day the carousel
+     came back until 2026-09-08 — a step the scale has never had, so the
+     declaration was invalid at computed-value time and the margin has always
+     been 0. Written out rather than pointed at the nearest step, because
+     giving the row 16 or 24 px here is a visible change and belongs to the
+     overhaul with the contact sheet open. */
+  margin-top: 0;
   --cx-w: 150px;
   --cx-max-h: 240px;
   /* A column of names only, which is the same width as a picture's on a phone
@@ -1145,7 +1151,7 @@ html.is-rolling #view {
    the rebuild is deferred behind this, which is the only way to have an *out*
    at all, and reduced motion skips both. */
 .carousel-track {
-  transition: opacity 150ms var(--ease);
+  transition: opacity var(--dur-answer) var(--ease);
 }
 
 .carousel-track.is-swapping {
@@ -1430,7 +1436,7 @@ html.is-rolling #view {
    * compositor can animate without the main thread, which is why the fade
    * itself is smooth on a phone that is busy laying the row out.
    */
-  transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--dur-linger) var(--ease-soft);
   /*
    * And it is promoted to its own layer for the length of the fade, so the
    * compositor really does own it rather than repainting the cell. `will-change`
@@ -1493,11 +1499,11 @@ html.is-rolling #view {
   --cx-cap-a: 0;
   -webkit-mask-image: linear-gradient(rgb(0 0 0 / var(--cx-cap-a)), rgb(0 0 0 / var(--cx-cap-a)));
   mask-image: linear-gradient(rgb(0 0 0 / var(--cx-cap-a)), rgb(0 0 0 / var(--cx-cap-a)));
-  animation: cx-caption-in 420ms var(--ease) forwards;
+  animation: cx-caption-in var(--dur-travel) var(--ease) forwards;
   animation-delay: var(--cx-delay, 0ms);
 }
 
-/* Reduced motion removes the animation, never shortens it (DESIGN.md §6): the
+/* Reduced motion removes the animation, never shortens it (PLAN.md): the
    words stand from the first frame, and a picture still waits for its
    bitmap but arrives without the fade. */
 @media (prefers-reduced-motion: reduce) {
@@ -1533,7 +1539,7 @@ html.is-rolling #view {
 .cx-name {
   display: block;
   width: var(--cx-w);
-  font-size: 14px;
+  font-size: var(--text-md);
   line-height: 1.35;
   color: var(--ink);
 }
@@ -1543,7 +1549,7 @@ html.is-rolling #view {
   display: block;
   width: var(--cx-w);
   color: var(--ink-soft);
-  font-size: 12.5px;
+  font-size: var(--text-xs);
   line-height: 1.35;
 }
 
@@ -1585,7 +1591,7 @@ html.is-rolling #view {
 .is-search .facets,
 .is-search .carousel,
 .is-search .grid {
-  transition: opacity var(--dur-slot) var(--ease);
+  transition: opacity var(--dur-settle) var(--ease);
 }
 
 .is-leaving .facets,

@@ -1,0 +1,12 @@
+import { chromium } from '@playwright/test';
+const b = await chromium.launch();
+const c = await b.newContext({ viewport: { width: 360, height: 780 }, deviceScaleFactor: 2 });
+const p = await c.newPage();
+await p.goto('http://localhost:4173/map', { waitUntil: 'networkidle' });
+await p.waitForSelector('[data-map][data-land="ok"]');
+await p.locator('[data-search-input]').fill('nicomedia');
+await p.locator('.map-search-row').first().waitFor();
+await p.locator('[data-search-input]').press('Enter');
+await p.waitForTimeout(3500);
+await p.screenshot({ path: process.env.OUT ?? 'shots/map-nico.png' });
+await b.close();

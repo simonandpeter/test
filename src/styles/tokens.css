@@ -1,4 +1,4 @@
-/* Design tokens — the six named colours of DESIGN.md §3 and the derived
+/* Design tokens — the six named colours of PLAN.md and the derived
    surfaces. Every colour in the app goes through these custom properties; a
    hard-coded colour anywhere else in the CSS is a defect.
 
@@ -11,7 +11,7 @@
      theme with gesso #ece5d6"), from #E5E4DD — a near-neutral off-white — to
      a cream that reads as primed gesso rather than as paper. It is lighter as
      well as warmer, so every text token gained a little contrast rather than
-     losing any; the figures are recomputed in DESIGN.md and held there by
+     losing any; the figures are recomputed in PLAN.md and held there by
      `tests/contrast.test.mjs`. */
   --gesso: #ece5d6;
   --ink: #221d19;
@@ -44,7 +44,7 @@
   --field: #e6ddca; /* recessed panel interior only — never a page background */
   --veil: rgba(236, 229, 214, 0.8);
 
-  /* The fast of the day (author, 2026-08-24, DESIGN.md §2b): three states the
+  /* The fast of the day (author, 2026-08-24, PLAN.md): three states the
      reader sorts at a glance. Strict is the rubric itself, because a fast is
      liturgical time; the other two are new hues and the one sanctioned
      exception to the two-colour rule. Teal rather than amber for fish so the
@@ -70,15 +70,60 @@
   --font-utility: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'GFS Nicefore', var(--font-serif);
 
-  --ease: cubic-bezier(0.2, 0, 0, 1);
-  --dur: 200ms;
-  --dur-slot: 260ms;
-  --dur-theme: 300ms;
-  /* The month is five rows arriving at once, so it takes longer than anything
-     else on the page. Appearing between two frames read as a jolt. */
-  --dur-month: 420ms;
+  /* ---- type -----------------------------------------------------------
+     Every `font-size` in the app comes through these; a raw px anywhere else
+     is a defect and `tests/design-tokens.test.mjs` fails on one.
 
-  /* The uncertainty curve (DESIGN.md §6b): softness(p) = clamp(min·p^gamma,
+     **These are the sizes the site already had**, named rather than re-chosen.
+     Collapsing 12.5/13/13.5 into one step, or 14 into 15, moves real layout —
+     the nav row's width has a history of overflowing at 560 px in the wide
+     packs — so it is the visual overhaul's decision to make with the contact
+     sheet open, not a sweep's to make blind. What this buys today is the one
+     place to make it from. */
+  --text-3xs: 9px; /* the smallest mark on the site */
+  --text-2xs: 12px; /* the map's atlas layer, the smallest apparatus */
+  --text-xs: 12.5px;
+  --text-sm: 13px; /* facet chips, counts, captions */
+  --text-nav: 13.5px; /* the utility voice: nav, dates, register subtext */
+  --text-md: 14px;
+  --text-base: 15px;
+  --text-body: 16px;
+  --text-lg: 17px; /* the reading voice: lives, prose */
+  --text-lede: 19px; /* a page's opening paragraph */
+  --text-xl: 21px; /* h3 */
+  --text-2xl: 26px; /* h2 */
+  --text-3xl: clamp(28px, 5vw, 40px); /* h1 */
+  /* The display voice has its own two, being a mark rather than a size in the
+     reading scale: the masthead at each of the chrome's two heights. */
+  --text-mast: clamp(15px, 4.4vw, 19px);
+  --text-mast-wide: 34px;
+
+  /* ---- motion ---------------------------------------------------------
+     PLAN.md's Motion section is the intent; this is the vocabulary. **Five
+     durations where there were twelve** (2026-09-08): 120, 140, 150, 160, 180,
+     200, 260, 280, 300, 380, 420 and 450 ms were in use, most of them a few
+     milliseconds from a neighbour and none derived from anything. A reader
+     cannot tell 140 from 150; what they can tell is a control that answers
+     from a page that settles, which is what these are named for. */
+  --dur-answer: 140ms; /* a control acknowledging a press */
+  --dur-move: 200ms; /* the standard: a panel, a chip, a fade */
+  --dur-settle: 300ms; /* something arriving on or leaving the page */
+  --dur-travel: 450ms; /* a journey across the screen: a flight, a glide */
+  /* Content arriving on its own account, with no gesture behind it — a picture
+     reaching a card. Deliberately outside the four: it is not answering
+     anybody, and the author asked for it slower still. */
+  --dur-linger: 900ms;
+  /* A loop, not a transition: the skeleton's shimmer. */
+  --dur-shimmer: 2s;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1); /* the default: decisive, arrives calm */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1); /* leaves at once, eases in to rest */
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1); /* long fades: nothing decided */
+  --ease-spring: cubic-bezier(0.2, 0.9, 0.3, 1.2); /* the one overshoot */
+  --ease-turn: cubic-bezier(0.45, 0, 0.25, 1); /* the die: one symmetric turn */
+
+
+  /* The uncertainty curve (PLAN.md): softness(p) = clamp(min·p^gamma,
      min, max), px at base scale. One curve for date bars, map halos and
      timeline dissolves; these three constants are the only sanctioned nudge. */
   --uncertainty-min: 0.75;
@@ -123,7 +168,7 @@ html.dark {
   --ink-soft: #a89c8f;
   /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the
      AA floor for normal text, on the token that carries the current nav item
-     and today's date. DESIGN.md had recorded that as a live defect since
+     and today's date. PLAN.md had recorded that as a live defect since
      2026-08-22 and nothing checked it, because the browser suite ran in light
      mode only. Lifted 8% in HSL with hue (8.2 deg) and saturation (0.48) held,
      so it is the same cinnabar: 5.54:1 and 5.18:1. `tests/contrast.test.mjs`

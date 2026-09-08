@@ -22,3 +22,12 @@ playwright-report/
 # test importing them failed on a fresh CI checkout while passing locally
 # where the untracked files still sat on disk.
 /data/
+
+# Scratchpad measuring scripts are committed — a number quoted in PLAN.md or
+# HANDOFF.md should be re-runnable by whoever doubts it. Their output is not:
+# a suite log is 6 MB of one afternoon.
+/scratchpad/*.log
+/scratchpad/*.txt
+
+# Editor-local launch config.
+/.claude/

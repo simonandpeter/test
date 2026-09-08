@@ -424,7 +424,7 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
 
 
 test('under reduced motion the carousel does not drift, and the modes swap without falling', async ({ browser }) => {
-  // Removed, not shortened (DESIGN.md 6) - for both of this round's motions.
+  // Removed, not shortened (PLAN.md 6) - for both of this round's motions.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await carouselMode(page);

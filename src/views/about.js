@@ -26,7 +26,7 @@ const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li
 /**
  * The editorial page. Until 2026-08-22 it also explained the veneration mark,
  * with every circle drawn by the glyph's own component; the mark is removed
- * from this project (DESIGN.md §2, §7) and the section went with it.
+ * from this project (PLAN.md) and the section went with it.
  *
  * **The policy is written as substance now** (brief §8.4, 2026-08-29). It is
  * "the project's defence against the objection that it takes sides", so every

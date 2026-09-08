@@ -25,7 +25,7 @@
  * 2026-08-22 — no invented content — and the author reversed it for hymns
  * alone on 2026-09-07, on the ground that a reader who has chosen English and
  * meets Church Slavonic has been given nothing. The reversal is recorded in
- * SESSIONS.md rather than absorbed, and **it costs a line of type**: a
+ * git log rather than absorbed, and **it costs a line of type**: a
  * rendering made here is a different kind of claim from a text copied out of a
  * book, and the page says which it is under every hymn. Nothing else in the
  * corpus is translated, and nothing here licenses it.

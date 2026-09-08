@@ -21,16 +21,16 @@
  * this module's own.
  */
 
-import { reducedMotion } from '../lib/motion.js';
+import { reducedMotion, DUR, EASE } from '../lib/motion.js';
 
-const FADE = 180;
-const SPIN = 460;
+const FADE = DUR.move;
+const SPIN = DUR.travel;
 
 /**
  * Rolls `die`, then calls `go` to navigate, then reveals what it landed on.
  *
  * Under reduced motion the whole thing is removed rather than shortened
- * (DESIGN.md §6): the navigation happens on the spot, with no fade and no
+ * (PLAN.md): the navigation happens on the spot, with no fade and no
  * turn, and the reader gets the saint.
  */
 export function rollDie(die, go) {
@@ -70,7 +70,7 @@ export function rollDie(die, go) {
     [{ transform: 'rotate(0deg)' }, { transform: 'rotate(360deg)' }],
     // Starts with the page still going and lands after it: one turn, not a
     // wind-up and a stop, which is why the easing is symmetric.
-    { duration: SPIN, delay: FADE / 2, easing: 'cubic-bezier(0.45, 0, 0.25, 1)' },
+    { duration: SPIN, delay: FADE / 2, easing: EASE.turn },
   );
 
   spin.finished

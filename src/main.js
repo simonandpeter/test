@@ -101,7 +101,7 @@ function paintDailyLabel(fade = true) {
     return;
   }
   clearTimeout(fadeTimer);
-  // Removed, not shortened (DESIGN.md §6): reduced motion gets the word, not
+  // Removed, not shortened (PLAN.md): reduced motion gets the word, not
   // a faster fade to it.
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!fade || reduced) {
@@ -361,7 +361,7 @@ document.addEventListener('gos:day', (e) => {
  *
  * The saint page is deliberately not a section. It has no nav button, it is
  * opened from a card and closed back to it, and `views/saints.js` has kept its
- * own record for that journey since DESIGN.md §5c; two mechanisms restoring
+ * own record for that journey since the saint page was specified; two mechanisms restoring
  * one scroll would fight.
  */
 const sectionScroll = new Map();
@@ -578,7 +578,7 @@ function show({ route, params, path }, nav = {}) {
     // new-state snapshot is taken, so the fade crosses into the page already at
     // the right spot rather than at the top with a jump after it. (The Index's
     // own restore — the saint page's × or a browser back — happens separately,
-    // from its own record, DESIGN.md §5c.)
+    // from its own record.)
     if (!firstRender) await restoreSection(returning);
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce

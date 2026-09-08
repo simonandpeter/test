@@ -1,792 +1,117 @@
-# Handoff — start here
-
-Eastern Orthodox build: four churches (Russian, Romanian, Greek, Serbian), the
-reader chooses one. Live at https://simonandpeter.github.io/test/, deployed by
-GitHub Actions from `dist/`, not from the branch.
-
-Read `CLAUDE.md` for where things are. `SESSIONS.md`'s amendment index is the
-reasoning — read the index, then only what it points you to. `DESIGN.md` is
-binding. Do not re-litigate settled decisions; search first.
-
-## How this session works
-
-**One session. You build, commit and push.** PAT is in
-`C:\Users\matei\Documents\Agios Website Ex\update git.txt` — embed it in the
-push URL, push, then reset the remote to
-`https://github.com/simonandpeter/test.git`.
-
-**`git status` will say you have not pushed, and it is lying.** Pushing through
-a URL with the PAT in it never updates the `origin/main` tracking ref, so the
-branch reports itself "ahead by N" for everything this session has already sent
-— a peer session read that on 2026-09-07 and concluded a sitting's work was
-sitting unpushed. **`git ls-remote origin main` is the answer to "did it land";
-`git status` is not.** `git fetch origin` puts the ref straight afterwards.
-
-**Then read the Actions run before starting the next thing** — its conclusion
-*and* its `flaky` line. A green run with `N flaky` contains a test that failed
-and passed on retry, and that is the only place a flake rate shows. A local pass
-is evidence about this desk: the site once went five pushes without deploying
-because nobody looked.
-
-**Back out your own fix and distrust your own framing.** A session backing out
-its own change confirms its own account of it. Say what you measured and what
-you inferred, and keep them apart.
-
-## State (2026-08-30)
-
-- **862 saints**, every one with a life; **1221 venerated attestations** —
-  no refusal and no sourced absence is recorded yet, and the About page
-  says so. **126 undated** (2026-09-06 night; 154 when this block was written);
-  **130 icons**; 430 hymns, 49 with a
-  published English rendering. The corpus reaches **28 September 2026** in
-  both calendars - the reach walks each reader's own calendar (entries.js),
-  and its fortnight gap-tolerance carries the Russian run over the
-  folderless Exaltation (Russian 567, Romanian 160, Greek 365, Serbian
-  129). **97 saints carry a location, 122 points between them** (7/16 at
-  the start of 2026-08-30 evening; Amendments 84-87, and 28 more on
-  2026-09-01 from `scripts/place-candidates.mjs` — the martyrs of
-  Nicomedia, five of whom turned out to have died on the road out of it),
-  spanning 66-1938 — and since 2026-09-07 five more stand on the map by a
-  `track` alone, with no `locations` of their own (Maximus the Confessor,
-  Nektarios of Aegina, Paisios the Athonite, Gorazd of Bohemia, Damascene of
-  Starodub), which is what carried the timeline's far end from 1938 to 1994.
-  The map draws **one dot per saint**, not one per point: `pointAt` picks
-  which of a saint's places to show from where the timeline's upper handle
-  stands, and the timeline **dims** what falls outside its range rather
-  than removing it (2026-08-31). **Since 2026-09-01 the dots only move when
-  the reader ticks `Movement`**, and a play button beside that box walks the
-  span at a year a second. **Ten saints carry a `track`** (2026-09-07; it
-  was Moses the Hungarian alone from Amendments 89 and 91, then John
-  Chrysostom) — Maximus the Confessor, Tikhon of Zadonsk, Nektarios of
-  Aegina, Paisios the Athonite, Hosius of Córdoba, Augustine of Hippo,
-  Gorazd of Bohemia and Damascene of Starodub joined them, each read off the
-  life in its own folder with every inferred year said so in the waypoint's
-  `note` (Amendment 104). `scripts/track-candidates.mjs` is how they were
-  found and is the next sitting's starting point: 318 lives name two or
-  more places the map can already put a coordinate on. A dot walks its
-  track as the handle crosses the life, gliding rather than snapping, along
-  a road that bends once or twice between stays — a spline through the
-  samples since 2026-09-07, with the hard corner kept at each stay — rather
-  than a straight line.
-  That is a new shape of data, not a new saint: `locations` is unordered
-  kinds with no dates, a `track` is an ordered journey with years on it,
-  and the second could not be built out of the first. A press on a dot or a
-  name **selects** that saint (2026-08-31): the map centres on them, their
-  track is drawn and theirs alone, and `Profile ›` is the way to their page.
-- **144 day records**, 23 Aug 2026 – 13 Jan 2027. Russian and Romanian
-  throughout; Greek and Serbian for the first four weeks. Saints stop at
-  20 September — days past it print readings above a line saying so.
-- **330 unit, 726 browser** across two projects. `npm run test:all`.
-- **The app shells exist** (2026-09-05): `android/` and `ios/`, Capacitor 8,
-  id `com.dailydox.app`, the whole corpus bundled. Generated and configured
-  on a desk with neither Android Studio nor Xcode, so **no binary has been
-  built yet** — `docs/APP.md` has what remains, which is the two builds and
-  the two store consoles.
-  `npm run test:lighthouse` is the §13 pair Playwright cannot reach and runs
-  separately — it builds, serves and kills its own preview.
-- Locale packs 356/356, no English fallbacks.
-- First download is ~133 kB JS: day records, locale packs and the map's own
-  data are their own chunks — coastline and water together, off the boot
-  path, ~211 kB gzipped since both moved to Natural Earth's 50m tier
-  (2026-08-31, up from 110m's ~19 kB for coastline alone).
-
-### Things that will surprise you
-
-- **All Saints opens on the carousel on every load.** The toggle holds for the
-  visit and is not persisted. The carousel carries the **whole corpus**, in
-  columns of 1–4 saints packed by height.
-- **`currentChurch()` and `chosenChurch()` are different questions.** The first
-  always answers (including a guess from browser language); the second is null
-  until the reader chooses. Reach for `chosenChurch` unless the thing cannot
-  exist without a calendar.
-- **All Saints shows everyone whatever calendar the header keeps.** Narrowing is
-  *unticking* the Calendar facet.
-- **Save is on the saint's own page and nowhere else.**
-- **A saint is named by rank, not "St."** `display_name` is the bare name;
-  `office` is its own field. Never put rank, office or death year into
-  `display_name` — a unit test sweeps for all three.
-- **Two different things are called `names`**: a saint's own script forms, and
-  the search index. Neither is `display_name`.
-- **Gold marks a finding about veneration, never chrome** — one sanctioned
-  exception, the fast's colour by kind (DESIGN.md §2), plus the Random die.
-- **The site's name is `BRAND`, never translated**, and the masthead is an SVG
-  of the stamp face's outlines rather than live text.
-- **Readings print in the reader's language**, from a book table in
-  `lib/bible.js`. The *calendar* and the *language* are separate controls.
-- **The lives stay English by decision** (Amendment 2: no invented content).
-
-### Open flakes — four known, one rumour, none acted on
-
-| test | sightings | project |
-| --- | --- | --- |
-| `random deals an order, and holds it still under the reader` | 3 in ~39 | desktop, mobile-360 |
-| `the index offers two layouts, and remembers which one the reader chose` | 3 in ~39 (third on CI run 33898923959, 2026-09-05) | mobile-360 |
-| `the row comes back on its own after a press` | 3 in ~6 | **both** |
-| `the dot slides along the track rather than jumping when the year leaps` | 5 in 6 *slow* runs, 0 in 2 fast | desktop |
-| `the panel flies home in half the time, and the page closes behind it` | 2 in 3 six-worker runs (2026-09-05, one of them on the commit *before* the chooser extraction), 0 in 6 serial | both |
-
-Two were filed as "seen once, not recurring" before they recurred. **A second
-sighting is the first fact about a flake; the first is a rumour.**
-
-**The fifth (2026-09-05) is `waitForTimeout(60)` racing a 160 ms flight**: under
-six workers the timer can fire after the flight has landed and emptied the
-panel, so `midFlight` reads null. Measured on both sides of the chooser
-extraction (`ui/panel-control.js`) before being called a flake: red once on
-the old code and once on the new under the same load, green 6 of 6 serial on
-the new. The honest repair is to read the mid-flight styles inside a
-`requestAnimationFrame` after the press rather than after a wall-clock wait.
-
-**The fourth arrived on 2026-09-02 and was measured before it was blamed on
-anything.** It first appeared in a full run alongside a Daily-page change, and
-map.js imports none of the modules that change touches — which is a reason to
-check rather than a reason not to. Six runs of `map.spec.js`, three on each
-tree: with the change 3 failures in 3 *slow* runs (~50s for the file) and none
-in 2 fast ones (~25s); **without the change, 2 failures in 3 slow runs**. So it
-is the desk's load and not the diff, and the run's own wall clock is the
-predictor. It always fails paired with `a name is a press target`, which is the
-signature of one starved worker rather than two faults: the map paints only
-when something happens, so a quarter of a second with no paint leaves all eight
-of the test's samples identical, and "he arrived in one step, so nothing slid"
-is then a true statement about a page that really did not move. A diagnosis
-needs trap 10's CPU throttling, not another full-suite sighting.
-
-The third recurred on 2026-08-28 and is now a fact: `fa7abcb` on desktop,
-`7cf9f11` on mobile-360. **It is not project-specific**, which the other two
-are, and 2 in ~5 runs is a much higher rate than their 2 in ~38 — the two
-sightings are consecutive green runs. Nothing this session touched goes near it.
-
-**`a press on a carousel card opens the saint` is a fact now**: one local
-sighting on 2026-08-29 ("no card was fully in view to press"), one on CI
-the same day (`01324b1`, mobile-360, green through the retry), and a third
-locally on 2026-08-30 (mobile-360, full parallel suite; 3/3 green rerun in
-isolation immediately after), and a fourth the same day in the next full
-run, same shape. Four sightings, two machines, always mobile-360 under
-load. Not yet diagnosed; the card-in-view premise poll is
-where it fails, which smells like the same late-rebuild family the gesture
-handoff fixed - but that is an inference, not a measurement.
-
-**The wheel-cap test was fixed 2026-08-29**: it measures an average over
-fifteen frames with the clamp held pinned, rather than two frames of luck. Four
-consecutive greens where it failed one run in three; backed out by raising the
-cap to 2000, it reads ~1900 — it measures the cap it guards now.
-
-**And `the row comes back on its own after a press` is NOT closed** by the
-gesture handoff after all. The handoff exposed and fixed one mechanism - a
-wheel spun on a dying loop died with it - and bought seven consecutive clean
-CI flaky lines; but on 2026-08-30 the test failed once locally mid-batch
-(passed on rerun) and then flaked on CI twice in a row the same day
-(`5e9841e` desktop, `bd1392f` mobile-360 - both green through the retry).
-Whatever remains is not project-specific and its rate is climbing back
-toward the old 2-in-5; the watch continues, and a diagnosis needs a
-CPU-throttled reproduction (trap 10), not another inference - it is the
-next non-corpus work item.
-
-The rail's coast is **closed** — never a flake but a negative first `dt` in
-`beginCoast` (`coastDelta`, `tests/coast.test.mjs`); eleven clean runs since.
-
-## Your work, in order
-
-**Refinements first.** The author reviews screen by screen and sends short,
-specific requests several at a time. Render every change and look at it. Say
-when a request contradicts DESIGN.md or SESSIONS.md and record the reversal
-rather than absorbing it quietly.
-
-**Then Sessions 10 and 11, which are the only open engineering** (SESSIONS.md,
-both written 2026-09-03; everything below this line is finished work kept for
-its reasoning).
-
-- **Session 10 — the app ships.** What the app *guarantees* offline, which is a
-  different question from what the worker happens to have cached: **saint names
-  and the daily calendar content, yes; saint images, saint profiles and the map,
-  no** (author, 2026-09-03). Six items, of which one is a live defect — the day
-  records are a lazy chunk the install cannot name, and only routing (`/` is the
-  Daily page) hides it. The translation half is confirmed there too: **precache
-  the reader's own locale pack, one and not four**, or a language switched
-  offline silently reads English.
-- **Session 11 — the Texts page**, the saints' writings, with selective offline
-  download. New page, new index (`data/texts.json`, never the manifest), and a
-  cache with two rules opposite to every other bucket in `sw.js`: no eviction,
-  and it must survive a `VERSION` bump. The corpus behind it is a rights
-  question and the author's.
-- **`docs/CLEANUP-PLAN.md`** items 1, 2 and 3 were done on 2026-09-05 in one
-  sitting, with a dead-CSS sweep the plan had not measured (171 lines), and
-  item 4 (the two chooser controls are one control, `ui/panel-control.js`)
-  the same day. Items 5 (`map.js` at 4,603 lines, now `views/map/` with a
-  `state.js` every module shares) and 6 (the two largest specs, each now three
-  files by surface) were done the same day on the author's word — "Items 5 and
-  6"; Amendment 99 has the measurements). The plan is finished. CI for that
-  commit (`08555f8`, run of 2026-09-05 evening) was green: 880 passed, 0
-  flaky, accessibility 100 and FCP 1356–1372 ms on the four Lighthouse pages
-  — the entry bundle did not grow by anything the throttled gate could see.
-  The latest green run at the time of writing is `224fc75` (2026-09-06
-  afternoon, 880 passed in 16.3 min, the same Lighthouse figures); the
-  commit before it, `19e7562`, was red on a content-dependent range test,
-  which Amendment 100's postscript records.
-  `8914cc3` (2026-09-06 evening) was red, 3 of 880: the undated count
-  again (147 pinned, 145 in the corpus) and a read-then-click race in the
-  map's zoom-out loop, both fixed in the commit that follows (Amendment
-  101's postscript). That commit, `1d058d3`, was green: 880 passed in
-  13.4 min, 0 flaky, accessibility 100 and FCP 1356–1364 ms — and
-  `89436ff` after it was green too (880 passed, 16.4 min, the same Lighthouse
-  figures), so the latest green run at the time of writing is `89436ff`
-  (2026-09-06, late evening); the night's date sweep and the audit's
-  `stated` finding went up as `31ddd92`, which was red on three content tests
-  in both projects (6 of 880): the 240–460 range counts, the era test's
-  "Reposed 1937" (a lifespan now) and the Undated card on 25 August (dated
-  now). `22a8450` repairs the three tests and was green: 879 passed in 16.3 min,
-  accessibility 100 and FCP 1358–1371 ms. `66588e2`, the HANDOFF note after it,
-  was green too.
-  **The carousel sitting is done** (Amendment 102, 2026-09-06 into the 7th) and
-  both its commits are green: `308b5d5` — the card-sized derivative and the
-  loading queue — 886 passed in 16.3 min, 0 flaky, accessibility 100, FCP
-  1357–1370 ms; and `72ef198` — the packing — **890 passed in 16.7 min, 0
-  flaky, accessibility 100, FCP 1358–1376 ms**, which is the latest green run
-  at the time of writing. All Saints itself sits at 1376 against the §13 floor
-  of 1500, its own baseline being 1356–1372, so the gate is where it was.
-  **All Saints' TBT is unresolved and this file has now been wrong about it
-  twice**, which is worth more than the number. It read 231 ms before the
-  carousel work and 370 on `72ef198`; this file blamed the per-saint caption
-  counting. `b3d4dbc` then read 213 — below the old baseline — so the blame was
-  withdrawn as one noisy sample. `9a5ca18` reads 372. Four samples, two high and
-  two low, on code that did not change between the last two: **not attributed,
-  not withdrawn, not enough samples.** Nothing gates it and nothing fails on it;
-  it is here so a future first-paint problem on this route has a suspect, and
-  knows how little is actually established about it. LCP fell 4,017 → 3,958.
-
-  **Those four samples are stale by an order of magnitude, and reading three
-  consecutive runs side by side is what said so** (2026-09-08). All Saints' TBT
-  on the runner is **2,914 / 3,139 / 2,642 ms** on `c40177c8`, `9da17524` and
-  `e886d1f` — not 213–372. Whatever the earlier figures were measuring, the
-  number to compare a future one against is ~2,600–3,100. The same three runs
-  put `calendar, populated` at LCP 7,507 / 7,507 / 7,364 and CLS 0.0117
-  throughout, and `saint detail` at LCP 7,508 / 7,508 / 3,851. **None of these
-  is gated and none of them moved with this sitting's change**, which is the
-  only claim being made: the way to tell was to fetch the two previous green
-  runs' own tables rather than to compare one run against a number written down
-  a week ago. `scratchpad/ci.py` reads a run; the Lighthouse table is in the
-  `build` job's log, and the API's log URL 302s to blob storage, which 401s if
-  the `Authorization` header follows the redirect.
-
-  **Then the hymns and cross-links** (author, 2026-09-07; Amendment 103), of
-  which three of the four parts are done.
-
-  **Amendment 2 is reversed for hymns and only for hymns.** The instruction was
-  troparion and kontakion in English for every saint; the schema's own
-  `english` contract allowed only a published rendering of the same text from a
-  source this site may copy, and a hymn belongs to a church — so Orloff 1899
-  and Hapgood 1906, both of the Slavonic tradition, could never reach the 149
-  Greek and 117 Romanian hymns at all. Three ways were put to the author and
-  the answer was to reverse it. `english` is now exactly one of two things and
-  says which: `source`, a citation, or `rendered: "site"`, this site's own —
-  the schema refuses both and refuses neither, and the page prints **"Rendered
-  for this site"** where a book's name would go. **That condition is the whole
-  worth of the reversal; do not add a rendering without it.** Nothing else in
-  the corpus is translated and none of this licenses it.
-
-  Done: all four named saints (Anthony and Theodosius of the Kyiv Caves share
-  one office of four hymns; John the Long-Suffering and Moses the Hungarian had
-  no hymn in any language, so five were read from azbyka first and then
-  rendered); `related` derived from the audited cross-links, 62 rows over 59
-  folders, with 23 held back as a church, a lavra, a feast day or a battleship
-  named for a saint the subject never met (`scripts/related-from-links.mjs`,
-  which proposes); and Continue reading at the foot of a saint page on a phone.
-
-  **Left: 383 hymn objects with no English**, and `docs/HYMN-PLAN.md`'s first
-  item is unchanged by the reversal and still the cheapest — **no kontakion in
-  the corpus has ever been matched against Orloff's commons**, and he prints one
-  in every general service. A citation beats a rendering wherever one exists, so
-  run that pass before translating anything else. Of the two things this left
-  the author, one is **settled**: a hymn's tone reads in the reader's own
-  language since 2026-09-07 (`lib/tone.js`, Amendment 105) — the author asked
-  for it after meeting a Romanian troparion under `Glasul 3` while reading in
-  Greek, which is the same defect the English "глас 4" was. `related` is still
-  one-directional on purpose.
-
-  CI: `d434250` (the reversal) and `b3d4dbc` (the shelf) green, the latter 896
-  passed in 14.5 min with 0 flaky. **`eae87ce` was red, 2 of 896, and both were
-  this session's own tests rather than the corpus** — the postscript to
-  Amendment 102 has them. In short: `a picture stands in every second column at
-  least` pinned a bound read off two deals of a *shuffle* and the real spread
-  reached ten, which turned out to be two genuine packer faults (pacing the
-  icons to exhaustion, and a picture column's fill swallowing a second icon);
-  and `a saint moving along their rail is named while they move` inferred the
-  map's moving tier from paint order, which stopped being observable the moment
-  Moses the Hungarian was given his troparia in that same push. Both fixed in
-  `ad6d88a`, which publishes `rank` on `data-dots` so the tier is measured
-  rather than inferred. **`9a5ca18` is green — 896 passed in 16.9 min, 0 flaky,
-  accessibility 100, FCP 1357–1375 ms with All Saints at 1375 against the §13
-  floor of 1500 — and is the latest green run at the time of writing.** Note
-  that `17f1c2b` failed on the map test alone while the carousel one passed
-  there: the carousel bound is deal-dependent, so a green run is not evidence
-  that it is sound. Only the hundred-deal sweep is.
-
-  One thing to carry: on this page a *shuffle* is upstream of nearly every
-  measurement, and `carouselCells` is pure — `scratchpad/pack-check.mjs` asks
-  it a hundred times in node in a second, where a hundred browser deals is
-  twenty minutes. Any bound on the packing should be read that way.
-
-  **Then the phone's nav, the second Anthony, and the offices** (author,
-  2026-09-08; Amendment 106). All three are done.
-
-  - The strip is endless **at rest** now, not only after a swipe: every settle
-    turns the ring until the centred page stands in the middle of the five, so
-    About is left of Daily. The turn is a flex `order`, not a DOM move, so
-    `.site-nav a` keeps one order at every instant — do not go back to moving
-    the nodes, `ui/nav-scroll.js` says why. A press glides rather than jumping,
-    and **the glide is let go from `show()`, not from `renderNav`**: a smooth
-    scroll started inside `startViewTransition`'s callback moves one pixel and
-    dies, measured on both sides.
-  - **The office and the attestation titles read in the reader's language**
-    (`lib/i18n.js`'s `translateOffice`, `offices` in each pack — 158 phrases,
-    the second pack-only branch after `reasons`). This reverses `formatSubtext`'s
-    own recorded decision, and the reversal is in place there. `PACK_ONLY` is
-    the list three places need; adding a third branch means adding it there and
-    nowhere else. `node scripts/locale-coverage.mjs` now reports offices with no
-    entry per pack, and a unit test refuses both a gap and a pack that merely
-    repeats the English — which is what caught Romanian `Novice`.
-  CI: `1fed4d4` was **red on Unit tests** and green 332/332 on this desk — the
-  new office check read `data/manifest.json`, which is gitignored and generated,
-  and the workflow runs `npm test` *before* `build:manifest`, so the runner has
-  never had that file at that moment. `deploy` was skipped, so none of it
-  reached the site. `e886d1f` reads the saints' own folders instead and is
-  **green: 332 unit and 900 browser in 16.1 min, 0 flaky, accessibility 100,
-  FCP 1355–1369 ms with All Saints at 1369 against the §13 floor of 1500** —
-  the runner's own baseline unmoved, so the packs' extra ~2.4 kB gzipped each
-  costs the gate nothing. It is the latest green run at the time of writing,
-  and it deployed. The desk read 1537–1689 on the *unmodified* tree the same
-  evening, which is the third time this file has had to say that the desk's
-  FCP is a fact about the desk.
-
-  - **And the lifespan beside it** (Amendment 107, the same evening; the item
-    this list left to the author, which the author then called).
-    `lib/date-display.js` *parses* a recorded `display` where the offices are a
-    table, because the variety there is numbers rather than phrases; the nineteen
-    reigns and councils that are not are `eras`, the third pack-only branch.
-    **It is conservative on purpose** — a string it cannot account for whole
-    comes back in the English it was recorded in — so
-    `tests/date-display.test.mjs` walks the folders and holds every display the
-    corpus actually has to being read. If a new shape ever arrives, that test is
-    what tells you, and the page quietly reads English until it does.
-
-  **Then, the same evening, three more** (Amendment 107):
-
-  - **The strip is full while it moves**, not only once it stops. The ring is
-    turned *during* a glide and during a swipe by `turnKeepingStill`, which pins
-    what the reader is looking at — and the glide is hand-rolled for it, since a
-    `scrollLeft` write aborts a native smooth scroll. The other half was that the
-    five labels measured **339 px inside a 360 px window**: the ring was shorter
-    than the screen, and `min-width: 28vw` is what fixes that. Blank edge during
-    a press, 85 px to zero, and `chrome.spec.js` measures that number.
-  - **The carousel's lag is `content-visibility: auto` on `.cx-cell`**: 1,830 ms
-    of blocked main thread over eight seconds at 4x CPU down to 570, worst task
-    880 to 470, dropped frames 21-41 to zero. **The pictures were 5% of it** —
-    blocking every card image outright moved 1,830 to 1,738 — and four separate,
-    real reductions in waste (the coachmark's document-level scroll listener, two
-    per-frame layout reads in the drift, a `nameLines` memo) moved the total by
-    nothing at all. Read Amendment 107 before optimising this page again: the
-    cost is the *number of columns laid out*, and everything else is noise
-    against it.
-  **And a fourth round, the same evening** (Amendment 108):
-
-  - **The strip answers the press, not the navigation.** The glide starts in
-    `main.js`'s nav click listener and **that press skips the view transition** —
-    a transition replaces the document with a snapshot for its duration, so a
-    header animating under one cannot be seen. Measured: 277 ms before the strip
-    moved, 36 ms after. Only this gesture skips the fade; do not generalise it
-    without reading the amendment's note on the wider alternative.
-  - **`min-width: 25vw` is the one width where half the box and half the *word*
-    are the same thing**, a label being centred in its box. 26vw showed 42% of
-    the box and 13 px of a 40 px "Map" — the number looked right and the
-    screenshot did not. The edge mask is 9%, shorter than the 12.5% sliver on
-    purpose.
-  - **The map's city names sit left of their marker.** The author's diagnosis —
-    that they were pushing saint names out — was not the mechanism (that layer
-    has never been in `obstacles`), but the instruction was right: both start on
-    the right of a dot, so they were drawn through each other.
-  - **The test for that was written twice**, and the first published only the
-    anchor and passed with the draw reverted. `data-atlas-sides` carries the
-    alignment too. Worth reading before writing the next canvas instrument.
-
-  - **The fade is 900 ms on an ease-in-out, queued 200 ms apart** (author,
-    2026-09-08: "make them fade in slower and mpre smoothly"), and it is two
-    numbers in two files — `index.css` and `FADE_GAP_MS` — that move together.
-  - **Before optimising this row again, read Amendment 107's postscript.** This
-    desk cannot resolve anything smaller than a 3x change: five consecutive
-    loads of one identical build measured 1,223 / 1,469 / 1,507 / 1,614 / 1,653
-    ms of longest task at 10x CPU. Two plausible fixes measured as *worse* and
-    one measured both ways an hour apart. `scratchpad/cx-task.mjs` (median
-    longest task over five fresh loads) is the tightest instrument here and is
-    still not tight enough. **What is left is one ~1,200 ms task at startup:
-    the row packing all 862 saints into ~215 columns before first paint.**
-    Slicing the run to 64 columns takes it from 1,830 to 680 ms at 4x, so that
-    is where the remaining 3x lives — and painting a window and extending it
-    moves `loopScroll`'s wrap period after the fact, which is the author's call
-    rather than a session's.
-  - **Smaller card images: not done, and the measurement is why.** A phone draws
-    a 150 CSS px card from a 560 px derivative — 3.5x the pixels a DPR-2 screen
-    can show — so a 320 px one would take the first screenful of All Saints from
-    **579 kB to ~189 kB**. That is a data-plan argument and a good one; it is not
-    a lag argument, which is what it was asked under. It costs a third
-    derivative, a manifest field and a `srcset` through `windowImages`.
-
-### Session 4b — the ship gate — done 2026-08-28 (Amendment 68)
-
-**All seven of §13 are measured and all seven pass on CI**, which is the only
-machine whose answer counts. Every number below is the runner's, from `dc6fc22`.
-
-| § 13 criterion | measured | where |
-| --- | --- | --- |
-| Responsive to 360 px | no overflow, 8 routes × 2 projects | `quality-floor.spec.js` |
-| Visible keyboard focus | 12 tabbed elements, all outlined | `quality-floor.spec.js` |
-| `prefers-reduced-motion` | nothing animates | `quality-floor.spec.js` |
-| No axe violations | 0, light **and** dark, 8 routes | `quality-floor.spec.js` |
-| Lighthouse accessibility ≥ 95 | **100** on all 4 routes | `npm run test:lighthouse` |
-| Colour duplicated in text or shape | 3 marks, 3 silhouettes | `quality-floor.spec.js` |
-| No layout shift when data arrives | **0.0042**, budget 0.02 | `quality-floor.spec.js` |
-| FCP < 1.5 s throttled 4G | **1206–1221 ms** (1355–1373 by 2026-09-02, below) | `npm run test:lighthouse` |
-
-Fixed here: the header reserves its height (`--chrome-h-reserve`) instead of
-growing 26 px into place, which was 0.0307 of CLS on almost every route; the
-saint page appends below the life instead of skeletonning above it, which was
-779 px on Christopher; dark `--rubric` went `#C05B4B` → `#CB7769` (3.93:1 →
-5.18:1 on the field), which took Lighthouse accessibility from 96 to 100; and
-the rail's three marks are a disc, a ring and a diamond rather than one disc in
-three hues.
-
-**FCP is worth knowing two numbers for.** On the author's desk it straddles the
-line — medians-of-three of 1451/1453/1458/**1703** ms one run and
-1459/1484/1470/**1490** ms the next. On the runner it is **1206–1221 ms with the
-three samples behind each median spread by 3 ms.** The desk's variance was a
-fact about the desk, which is why the gate blocks: ~280 ms of margin, and a gate
-that cannot fail is a report. If it ever goes red on timing, the measured lever
-is the two preloaded Latin subsets (~190 ms) — but they earn it, winning the
-`font-display: optional` race under the same throttle 4 of 4, so **spending the
-serif to buy the margin is the author's call.**
-
-**Those runner numbers are stale, and the margin is half what that says**
-(2026-09-02). The runner's own baseline today is **1355-1373 ms** on all four
-routes, run after run — `6d194bd`, `64d8cf4` and `3201945` agree to a few
-milliseconds — so the gate has ~130 ms of headroom rather than ~280, and on
-`3a8a7a7` it went red for the first time on timing alone: `calendar,
-populated` at a median of 1515 ms, from samples of 1363/1529/1515. It was
-sampling noise, not a regression — the other three routes on the same run came
-in at their exact baseline, and the re-run put the same route back at 1359 ms
-(1360/1359/1357) with everything else unmoved. A stray sample near 1514 ms had
-been seen before, on `6d194bd`, where the median absorbed it. Two of them in
-one median is what it takes now, which is the thing to know: **the gate is
-close enough to the line that a bad pair of samples can stop a deploy**, and
-the lever above (the two preloaded Latin subsets, ~190 ms) is still the
-author's to spend.
-
-Two findings left for the author, both recorded in Amendment 68: the rail and
-month buttons fail WCAG 2.5.3 Label in Name (visible "Fri 30", accessible name
-"Friday, 30 January 2026 — a fast"), and the month's numerals still carry the
-fast in colour alone, which is where an explicit instruction put it.
-
-### Session 7 — the map — shipped in part 2026-08-29 (Amendment 69)
-
-**It is a flat Mercator, not §8.3's globe** (author, 2026-08-29: "just do a
-simple mercator projection 2d map for now, something very light"). It carries no
-runtime dependency at all: `lib/mercator.js` is the whole projection, pinned by
-`tests/mercator.test.mjs`. The coastline is Natural Earth 110m, generated by
-`scripts/make-land.mjs` and committed, dynamically imported so it is a **19 kB
-gzipped chunk off the boot path**; `world-atlas` and `topojson-client` are
-dev-only and the bundle never sees them.
-
-Shipped: the picture, the four-kind selector (death default) and uncertainty
-halos — **the curve's first shipping consumer at last**. Since 2026-08-30 the
-page is **the map and a small footer, nothing else** (author: "remove
-everything on the map page outside of the map itself except for leaving a
-small footer with the coastline map credit and scroll to zoom hint") — the
-lede, the Places list, the Unlocated tray and the Index's facets all went, one
-day after the facets arrived (Amendment 77 records the reversal). **The footer
-itself went on 2026-08-31** (Amendment 89): Natural Earth asks for no
-attribution, so the credit was never owed on the picture, and it stands on the
-About page with the rest of the sourcing. The kind
-counts in the legend are now the page's one statement of what it shows, and
-`map.spec.js` holds them to `data-dots`, the draw pass's own hit-map. The
-canvas is one opaque image to a screen reader; with the list gone, the Index
-is where every located saint remains reachable as text — a trade that is the
-author's, recorded rather than absorbed.
-
-**Clustering below a density threshold and collide-detected labels stay
-deferred, and the reason is the corpus rather than the effort: 19 of 851 saints
-carry a location, 94 points between them (7/16 at the start of 2026-08-30
-evening).** A threshold that never fires and labels that never collide would
-be machinery verified against nothing. They come back when the data does,
-and that is data work, not this.
-
-**Zoom and pan landed 2026-08-29** (author: the page zoomed, the map did not).
-`lib/map-view.js` is the arithmetic — scale plus a centre, clamped so the world
-never comes off its box and a zoom keeps the point it was aimed at — and
-`tests/map-view.test.mjs` pins both. Buttons, Ctrl+wheel, drag, pinch, and the
-keyboard (arrows pan, +/- zoom, Home resets).
-
-**A bare wheel zooms, smoothly, no Ctrl, and touch is the map's always**
-(author, 2026-08-30 — reversing the never-get-stuck arrangement of 2026-08-29).
-The old rule existed so a reader scrolling *past* the map could not be trapped
-by it; with nothing below the stage there is no page to scroll past, the trap
-cannot be built, and the wheel has one honest meaning left. The map route
-cannot scroll at all (`overflow: hidden` on the route, and the column fits the
-window exactly); the header above the stage is the way out.
-
-**The stage is the whole window 2026-08-29** (author: "make sure on mobile and
-desktop the map is the whole window, under the header, not just a predefined
-window"). `main` gives up its column on `html[data-route='map']`, and that
-attribute is written by **index.html before first paint** as well as by main.js
-— in JS alone it measured 0.21 of layout shift, which the §13 gate caught.
-
-The world now **covers** its box rather than fitting in it (`coverFractions`):
-a window is whatever shape the reader made it, fitting would letterbox, and the
-first attempt simply stretched the picture — Egypt was visibly taller than
-Egypt, with every other test still green. One axis is cropped instead, and that
-axis can be panned even at 1.0x, including sideways by thumb, or the Americas
-would be unreachable on a phone.
-
-**The Index's filter set arrived and left on 2026-08-30** — it lived in the
-below-map reading the author removed the same day. What survives of Amendment
-76: §8.3's zoom labels (overlap-drop past 2.5x), pressable dots (a press under
-5 px of travel; a haul does not — and since the same day the saint's x
-returns to the map, mirroring the calendar's courtesy of 2026-08-23), and the
-whole-corpus model. **What a press does changed on 2026-08-31** (Amendment
-90): it selects rather than navigates — the map flies to centre that saint,
-draws their track, names them at any zoom and offers a `Profile ›` button,
-which is the door now. If filters return to this page they
-return as something drawn on the stage; the Index keeps the facets meanwhile.
-
-**The map names the region, not the village.** `modern_name` and
-`historical_name` are in each saint's own file and dropped from the manifest on
-purpose — two strings per location across 5,000 saints is real weight on the one
-request the site boots from. The saint's own page names the village.
-
-**The timeline landed 2026-08-30 evening** (author: "add a timeline bar at the
-bottom ... where you can filter saints by date on the map"), overriding the
-corpus-blocked deferral above for a plain range filter while leaving the
-brief's *density-paced brush* exactly where it was — seven (now nineteen)
-located lives still cannot demonstrate a pacing algorithm's correctness. Two
-overlaid native `<input type="range">` over one rail, filtering `withPlace` by
-each card's `lifeInterval` (`lib/index-filters.js`'s own reading, reused
-rather than reinvented) before the kind counts or the picture see it; undated
-lives are never excluded, since there is nothing to judge them against and no
-tray left to set them aside in. Drawn on the stage as Amendment 77 promised a
-returning filter would be, not printed below the picture — `.map-stage`
-became a flex column, `.map-picture` taking whatever `.map-timeline` below it
-does not need, the same "no number here has to agree with any number there"
-arrangement `.map-foot` already used. Native range inputs rather than a
-hand-built control, so the keyboard and a screen reader answer to it for free.
-Amendment 84 has the rest.
-
-### Sessions 8 and 9 — finished 2026-08-29 (Amendment 73)
-
-**Session 9's second half, App mode (§12), is built**: a hand-written worker
-(`public/sw.js`) with the brief's four strategies, a web manifest with maskable
-icons, honest offline degradation (an uncached saint says the network is needed
-once — read off the failure, because `navigator.onLine` lies under
-request-level offline), and Save as an eager precache that waits for the worker
-to take the page. The worker runs under the entire e2e suite; `pwa.spec.js`
-holds the offline claims, including the round trip through a wiped device.
-
-**Session 8 re-scoped against reality, and one third survived:**
-
-- **Export / Import (§11) — built.** One JSON file of the whole log,
-  tombstones included; import is the store's own `merge`, so a stale backup
-  cannot roll a device backwards. Controls live on About beside the privacy
-  statement; round-tripped through a wiped IndexedDB in `chrome.spec.js`.
-- **The rite × communion table (§9.2) — inapplicable to this build**, not
-  deferred: it was written for the cross-church corpus (four communions, seven
-  rites), which is archived at `archive/cross-church-2026-08`. This build's
-  four churches share one rite and one communion, so the table is one cell.
-  It revives if the cross-church registry does.
-- **The timeline brush — still blocked on the corpus**, with the map's density
-  work (Amendment 69): 7 of 742 saints carry a location, and the fades the
-  brief describes need lifespans the corpus mostly lacks. Data, then code.
-
-### Session 9 — the About page — done 2026-08-29 (Amendment 72)
-
-Brief §8.4's editorial policy, written as substance: what the site claims and
-refuses to claim, the three attestation states and why collapsing two of them
-would flatter the better-digitised church, dates as intervals, the calendars per
-church, the sourcing, and the coverage.
-
-**Nothing on it states a number.** `loadManifestMeta()` finally has its caller,
-and `by_source` was added to the meta so the page can name the publications the
-corpus *actually cites* rather than the registry's prose about daily calendars —
-121 of the 127 Romanian attestations cite doxologia.ro while the registry note
-names Basilica, and both statements are true about different things.
-
-**No LICENSE file exists**, so the page does not claim one — see Outstanding.
-
-### Done or cancelled
-
-- **Session 5b** (efficiency pass) — done 2026-08-28, all five items.
-- **Session 6, River mode** — **cancelled**. The carousel is the River: default
-  face, horizontal, shuffled, no sort control, whole corpus. Addendum C2's
-  single card box — which it calls the mode's whole point — is now deliberately
-  broken by the instructions to pair wide icons and pack by height. Three items
-  survive it, to take on their merits rather than as a phase: arrow-key
-  navigation, a shuffle control, a shareable seed.
-- **Session 8** — timeline, export/import, rite × communion table (§9.2 refers
-  to the veneration glyph, removed at Amendment 25; needs re-scoping).
-- **Session 9** — PWA, offline, About statistics (where `loadManifestMeta()`
-  finally gets a caller).
-
-### What the 2026-09-01 audits found, and what is left
-
-`scripts/date-audit.mjs` and `scripts/place-candidates.mjs` exist so this work
-can be aimed rather than sprayed. Their standing numbers, and the standing
-job — **re-run `node scripts/date-audit.mjs` before trusting the table; these
-are its output on 2026-09-03 and the last three numbers below had already
-drifted from what was written here on 2026-09-01**:
-
-| finding | count | note |
-| --- | --- | --- |
-| dates `open` | **0** | was 2; both fixed 2026-09-01 |
-| dates `wide` (>150 yr) | 8 | all honest — "3rd or 4th century" is a real state of knowledge |
-| dates `loose-basis` | 0 | nothing calls itself `attested` while spanning a century |
-| `undated` | 126 | was 155 on 2026-09-01, 150 on 2026-09-05 and 148 on the morning of 2026-09-06; two relics-day entries (Nicholas of Alma-Ata, Alexander Urodov) got both years from their azbyka lives, and Amphilochius of Patmos, Symeon the Lesbian stylite and Pope Martin theirs from saint.gr's whole pages, on 2026-09-06, and Anthimos of Chios (1869–1960) that evening; then six more the same night, lives that stated both years with neither recorded (Joseph the Hesychast, Aristokles the Athonite, John of Svyatogorsk, Joseph the Sanctified, Anastasius of Radovishte, the two Perm priests of 12 August); and sixteen more from a sweep for death-verb sentences with a year (the Yaroslavl princes David and Constantine, Eustathius II 1309, Jerusalem of Beroea and her three sons 276–282, Kosmas the hermit 658, Polyxena c. 109, Rufus 434, the Egyptian martyrs of 305–311 with Peleus, Nilus, Patermuthius and Elias, Peter of Nicaea after 823) |
-| `no-death` | 3 | was 23 until 2026-09-05: sixteen (Joasaph of Belgorod, Mitrophan of Voronezh, Ilarion Felea, Daniel Katounakiotis …) had the year in the life they already cited and it is recorded now, and Kiaran's came from the OCA life on 2026-09-06. The six left — Sophronius of Akhtala, Philonides of Kourion, Simeon of Pangarati, Theophanes the Confessor (9 September), John the Stranger of Siva, Kassiani — had no year in any source read; Theophanes's came from azbyka on the evening of 2026-09-06 (about 300, against saint.gr's birth in 283), and Philonides (about 306) and Kassia (843–867) theirs from azbyka’s own pages the same night, so three are left — Sophronius of Akhtala, Simeon of Pangarati, John the Stranger of Siva |
-| `no-birth` | 394 | was 490 on 2026-09-05 and 457 on the morning of 2026-09-06; the thirty-three came from the azbyka lives of the new martyrs, and the next nine from the same day's later readings — Job of Pochaev, Daniel of Moscow, the new martyrs of 20 September, Gorazd, Raphael of Šišatovac and the two Peters of 8 and 17 September among them. Then sixty-one more on the night of 2026-09-06 from the lives' own first sentences — fifty-seven said "born in YEAR" and the saint.json never had it, and four more were arithmetic (twenty in 1822). The count rises again as undated saints gain a death without a birth (394 after the death sweep). The rest is mostly irreducible; the 42 modern saints still without one are joint-life companions and one-line new martyrs whose pages give no year |
-| place candidates | 402 | unlocated saints whose own life names a place the repository can already place; **99 of them are named for that place** |
-
-**Two findings the audits turned up that are the author's to settle.**
-
-*The twenty-three martyrs are in the corpus twice.*
-`martyrs-23-with-adrian-of-nicomedia` (from the Prologue, Russian and
-Serbian) and `twenty-three-martyrs` (from saint.gr, Greek) are the same
-company who died with Adrian. Only the second is located, deliberately:
-locating both would put two dots on the map for one group. Merging saints is
-editorial and is not something a session should do quietly.
-
-*Five of the 99 name-matches were wrong, and the pattern is worth knowing.*
-An epithet names where someone is *from* at least as often as where they
-died — Mary of Egypt died beyond the Jordan, Sava of Serbia at Tarnovo — and
-the tool matched the personal name Jerusalem to the city three times over.
-Reading each life is the work; the tool only finds the ones worth reading.
-
-## Data work — larger than the engineering
-
-- **Saints for the days past 28 September.** 600–1,100 folders. Dedupe on the
-  *feast date*, never the name. Pipeline under `.tmp/` (`week_saints.py`
-  harvests; each day gets a typed `dNNNN_decisions.py`); a day is roughly a
-  sitting — though 21 September was light, being the Nativity of the
-  Theotokos: a Great Feast day is mostly feast and icons, and held only four
-  people across both calendars.
-- **Greek and Serbian saints banked** under `.tmp/` (463 Greek entries for
-  20 Sep – 31 Oct; 182 Serbian days). Editorial work — do not generate these.
-- **Icons for the 732 without one** (862 − 130; the 612 written here was the
-  same subtraction against a corpus of 742). Harvest a *known* corpus and match by hand;
-  a general Commons search by name returns the wrong people. Next wells: the
-  1903–1911 Жития Святых engravings, and per-saint "Category:Icons of …" trees.
-- **English hymn texts: 49 of 495**, and the public-domain well is dry. Nassar's
-  1938 menaion would finish it if its copyright status can be settled — a rights
-  question, and the author's.
-- **21 saints lead a day with no icon** (calendar year 2026, the 133
-  day-and-church combinations carrying an entry). Adding an icon can only ever
-  lower that number.
-
-## House rules
-
-- **Do not bulk-generate saint data.** Where a date is unverified the honest
-  entry is `undocumented` with a note.
-- **Adding a saint means adding one folder.** Never hand-edit `data/`.
-- **Reduced motion removes animation, never shortens it** — including any JS
-  that waits for a transition.
-- **Anything holding two copies of a thing in the DOM must say which is
-  current** — `src/ui/swap.js`. Do not grow a fifth implementation.
-- **A decorative fade is still text.** `opacity` on a colour is a new colour and
-  axe reads it. Fade with a `mask-image`.
-- **A proportion applied in two places multiplies.**
-- **A worked value nobody executes is a comment.** If a document pins a number,
-  pin it in a test.
-- **A count in the DOM is not a count in the corpus.**
-- **Never pin the corpus's own size as a literal in a test.** `e2e/helpers.js`
-  exports `CORPUS`, `VENERATED` and `venerateUnion()`, read from the built
-  manifest. Adding eleven saints once turned 24 tests red without finding a
-  single defect (Amendment 88); growing the corpus is the work, so a test
-  that breaks on growth is taxing it. What those assertions are worth — the
-  Index shows *the whole* corpus, a facet narrows it to *that church's own*
-  count — survives being derived. Genuine count changes (a date range, a
-  feast month) still move by hand, and say in a comment which saint moved
-  them.
-
-## Environment (Windows)
-
-- PowerShell 5.1 writes a BOM, which breaks `JSON.parse`. Prefer Write/Edit or
-  short Python.
-- Git Bash rewrites a leading-slash argument **or environment variable** into a
-  Windows path. `MSYS_NO_PATHCONV=1`.
-- Never leave `vite preview` running; `playwright.config.js` refuses to reuse a
-  server it did not start. Kill by PID if the wrapper survives.
-- CRLF warnings were **not** noise: this desk's global `core.autocrlf=true`
-  rewrote 76 batch files during a stash/pop and a unit test caught the `
-`
-  inside a heading. Repo-local `core.autocrlf=false` plus `.gitattributes`
-  (`* text=auto eol=lf`) now pin every clone; the blobs were always LF.
-
-## Outstanding — the author's, not yours
-
-- **Whether a saint may be named in a language no calendar names them in.**
-  `node scripts/language-audit.mjs` puts the question in numbers, and it has
-  two honest answers. Counted against the churches that keep each saint — the
-  standard `lib/saint-name.js` was built to — the corpus is nearly finished:
-  ru 563/567, ro 154/160, el 361/365, sr 120/129 (Amendment 105 read 29 of
-  these out of citations the folders already carried). Counted against the four
-  languages the site can be *read* in, which is the author's own instruction
-  of 2026-08-26 ("every saint name needs to have the equivalent in the
-  displayed language"), **31 saints of 862 have all four**. The difference is
-  not an oversight: Neagoe Basarab is kept by the Romanian church alone, so no
-  Russian source here names him, and closing it means either reading sources
-  nobody here has read or transliterating — which is generated saint data, and
-  the author's call. **The part that needed no such call is done**: 29 rows
-  whose name was already quoted in the saint's own citation were read and
-  written (Amendment 105), and the 18 the tool still offers are refused ones
-  — a citation that names the day's other saint, or "Св. 70 мученика", or
-  Babylas's three children none of whom it names. `--list propose` prints
-  them; the refusals are why it proposes and never writes.
-- ~~**125 name forms recorded and never shown**~~ — **83 written 2026-09-07**
-  (Amendment 105). `pickNameForms` refuses a form that names a company where
-  the saint is one person, which is right, so those folders held a name the
-  reader never got; `nameInCompany` now picks the individual out of the line
-  and the forms were read and written. Shown to a reader: el 272 → 341,
-  ro 138 → 149, sr 112 → 115. **42 remain** and are the honest residue —
-  lines naming no candidate («Св. исповедници Едески»), or a name that is a
-  translation rather than a transliteration (Andrew/Ανδρέας).
-  `--list dropped` still prints them.
-- **Seven saints carry `confessor` beside a hierarchical type** and read as
-  *Confessor*: Barses and Eulogius of Edessa, Liberius of Rome, Martin the Pope,
-  Nicholas of Alma-Ata, Paul the New of Constantinople, Protogenes of Carrhae.
-  For several the epithet is right, so it is a reading per saint. Data, not code.
-- ~~**Whether a non-civil reckoning belongs anywhere.**~~ **Settled 2026-09-02**,
-  the third decision and the first that admits one: a reader who *chooses* a
-  reckoning is shown the whole Daily page in it — the date, the rail, the
-  month, the full-screen calendar, and the day's own saints and record — and a
-  reader who has not chosen still sees the civil date alone, as twice decided.
-  The saint page is untouched and still prints what each attestation states.
-  DESIGN.md carries the reversal.
-- **Manifest budget** projects to 864 KB gzipped at 5,000 saints against a
-  400 KB ceiling. Meaningless below ~200 saints; the shard shape is settled
-  (calendar-first) when it fires.
-- **Search does not reach the historical script forms.** Carrying them costs
-  ~20 kB gzipped on the boot path. Recorded, not acted on.
-- **The Index's 72ch column** — widening it is deferred, not declined, pending a
-  possible desktop layout design.
-- **The uncertainty curve now has a shipping consumer** — the map's halos
-  (2026-08-29). Date bars and timeline dissolves are still the unspent two.
-- **There is no LICENSE file.** Brief §8.4 lists the licence among the things
-  the About page must state, and the page states everything else on that list.
-  It does not invent one: the *images* carry their own licences per file
-  (`lib/licence.js`), and that is said on each saint's page, but the site's own
-  terms — the code, and the lives, which are the author's paraphrase — are
-  unstated anywhere in the repository. **A rights question, so the author's.**
-- **The manifest budget line above says 864 KB**, which predates the shipping
-  manifest: `npm run build:manifest` reports **328 KB gzipped projected at
-  5,000** today. Left as the author wrote it pending a re-check of which
-  projection is meant.
-
-## Provenance
-
-`f0ddb12`, `1b1d8a1` and `2ebe682` carry one set of eyes rather than two —
-pushed unverified at the author's instruction. CI is green on all three.
-"Verified by both sessions", where it appears in commits of 2026-08-27/28, meant
-two sets of eyes on the claim and one set of hands on the gate; it never meant
-anything was run twice, and nothing from 2026-08-29 onward carries it.
+# Handoff
+
+**`CLAUDE.md`** is how to work and where things live. **`PLAN.md`** is what the
+site should be, what is settled, and what is next. This file is state and what
+is in flight — the last sitting or two, nothing older. `git log` has the rest.
+
+---
+
+## State
+
+- **862 saints**, every one with a life; 1,221 attestations; 126 undated; 130
+  icons; 430 hymns. 97 saints located, ten with a dated track. Corpus reaches
+  28 September 2026.
+- **144 day records**, 23 Aug 2026 – 13 Jan 2027.
+- Locale packs complete. Offices, attestation titles and lifespan displays all
+  read in the reader's language.
+- App shells exist (`android/`, `ios/`, Capacitor 8); **no binary built** —
+  `docs/APP.md`.
+- 342 unit tests in ~2 s; 902 browser tests in ~17 min; accessibility 100, FCP
+  1356–1376 ms against the 1500 floor.
+
+## The last sitting
+
+Two sittings, and the second reviewed the first.
+
+**The documentation was cut from 15,776 lines to about 700.** `DESIGN.md`
+(1,786) and `SESSIONS.md` (11,619) are deleted; `CLAUDE.md` is an index;
+`PLAN.md` is new and binding. The argument for deleting `SESSIONS.md` holds:
+`git log` already held 8,621 lines of reasoning across 430 commits and the file
+was a hand-maintained second copy of it.
+
+**Design tokens, and a test that enforces them.** 17 durations → 5 named steps,
+7 easings → 5, every `font-size` through a `--text-*` token.
+`src/styles/tokens.css` and `src/lib/motion.js`'s `DUR`/`EASE` are two halves of
+one scale and `tests/design-tokens.test.mjs` holds them together. Type was a
+faithful rename — verified against git, against computed `font-size` on both
+trees, and by 24 pixel-identical contact-sheet tiles. **Motion was not**: eight
+durations moved by up to 70 ms when they were folded onto the scale, which is a
+real change to how the site feels and was worth saying out loud.
+
+**`scripts/contact-sheet.mjs`.** Every route × width × theme × language as one
+labelled grid, against `npm run dev`, no build. `--still` makes it a pixel-diff
+tool: reduced motion, fixed shuffle seed, webfont refused.
+
+**A dev-server fix in `vite.config.js`.** `/saints/<slug>` was 404ing in dev; a
+navigation falls through to the app now, a missing asset still 404s.
+
+### What the review of it found
+
+- **A live regression, shipping green.** The consolidation deleted `--dur-slot`
+  and `--dur-theme` from `tokens.css` and left **thirteen** call sites reading
+  them, across `base.css`, `calendar.css`, `index.css`, `picker.js` and
+  `saint.js`. An undefined custom property inside a `transition` shorthand
+  invalidates the whole declaration, so the theme cross-fade and every slot
+  movement had silently stopped happening — and 902 browser tests passed over
+  it. Both now read `--dur-settle`, and a new test fails on any `var()` reading
+  a property nothing defines. Backed out and confirmed to fail first.
+- **`--space-5` has never existed.** `.carousel { margin-top: var(--space-5) }`
+  has computed to 0 since the carousel came back. Written out as `0` rather
+  than guessed at; it is item 10 in `PLAN.md`.
+- **Two raw curves and a raw duration lived in JS**, where the CSS-only test
+  could not see them. `lib/motion.js` now exports `EASE` as well as `DUR`, the
+  die's symmetric curve is `--ease-turn`, and the test fails on a
+  `cubic-bezier` or a numeric `duration:` anywhere in `src/*.js`.
+- **The repointing was mechanical and cost meaning.** `DESIGN.md §5c` became
+  `PLAN.md`, and in a dozen places the section *was* the reference — leaving
+  citations that are now merely vague ("since PLAN.md") and about five that are
+  false, naming content `PLAN.md` does not contain. Repaired. Refs to deleted
+  documents also survived in `index.html`, `base.css` and
+  `schema/saint.schema.json`, which the "152 references repointed" count missed.
+- **Binding content was lost with the history.** DESIGN.md §1 (the icon panel
+  and the martyrology register — the material argument the whole visual language
+  rests on) and §6b (the softness curve, its three constants and the open-bound
+  rule) had no home in `PLAN.md`; a distilled layout section did not exist at
+  all, three days before a visual overhaul. All three are now `PLAN.md` sections
+  2 and 4. Two traps also went missing from `CLAUDE.md`'s list of sixteen
+  (`loopScroll` measurability, the zoom-press loop) and are back.
+- **The 68% figure does not survive its own instrument.** `comment-kind.py`
+  counts a whole block as history when any one line in it carries a cue. At line
+  level the same regex reads **9%**, and only **59 comment lines of 16,622** sit
+  in blocks that are *mostly* history. `src` really is 34,533 lines at 48%
+  comment — that part is solid — but there is almost no narrative to lift out
+  wholesale. `PLAN.md` item 6 is rewritten accordingly, and moved after the
+  overhaul.
+
+### And then the map's tests, which were the third thing on the list
+
+`map.spec.js` held 40 of the 61 failures this desk has ever seen, and
+`PLAN.md`'s explanation — that it re-asserts arithmetic `lib/map-*` already
+exposes purely — was wrong. Those modules already carry 1,438 lines of unit
+tests against 1,561 of source.
+
+It was a wait. The file was 18% of the suite's tests and **54% of its wall
+time**: 16.8 s a test against 2.9 s everywhere else, under a 30 s timeout. Its
+tests were not intermittently wrong, they were intermittently too slow.
+`waitUntil: 'networkidle'` was sitting through `warmTerrainTiles` pulling the
+whole 158-file, 6 MB tile grid — **2,648 ms against 192 ms** for the
+`data-land="ok"` wait that 51 of the 76 already made on the next line.
+
+Measured against the unmodified tree, same desk, same command: **15 failures in
+4.7 min → 2 in 3.5 min**, and the 3.5 covers both projects where the 4.7 covered
+one. Three named openers now say which readiness a test means, `saveData` stops
+six workers pulling the grid through one preview server, the zoom climb bursts
+rather than settling twenty-five separate flights, and the file gets 60 s a test
+because that is what its subject honestly costs.
+
+**Two still fail, and fail identically at `HEAD`** — `the map opens on the
+coarse coastline…` and `the land keeps its own ink when a terrain tile never
+arrives`. Both concern the terrain loaders, both pass run alone, and the second
+now fails on its own assertion rather than the clock, which makes it the better
+one to start from.
+
+## Next
+
+`PLAN.md`'s numbered list. **Collapse the type scale** while the contact sheet
+makes it cheap, then **the overhaul, desktop first**. The comment rewrite
+follows, three stylesheets first.

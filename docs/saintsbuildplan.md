@@ -330,7 +330,7 @@ Non-negotiable, and verified before each phase is considered done:
 
 ## 14. Design direction
 
-Do a design pass and produce `DESIGN.md` — a token system of 4–6 named colours, a display/body/utility type trio, a layout concept, and one signature element — **before writing component CSS**. Then build to it exactly.
+Do a design pass and produce `PLAN.md` — a token system of 4–6 named colours, a display/body/utility type trio, a layout concept, and one signature element — **before writing component CSS**. Then build to it exactly.
 
 Ground it in the subject's own materials: the liturgical calendar's red-and-black rubrics, the proportions and gold ground of an icon panel, the ruled columns of a martyrology, the register of a synaxarium. Restraint suits this content; ornament will read as costume.
 

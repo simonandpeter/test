@@ -37,6 +37,21 @@ const contentDirs = () => ({
       const dir = path.join(ROOT, top) + path.sep;
       const file = path.resolve(ROOT, url.slice(1));
       if (!file.startsWith(dir) || !existsSync(file) || !statSync(file).isFile()) {
+        /*
+         * **A navigation falls through to the app; an asset does not**
+         * (2026-09-08). `/saints/<slug>` is a *route*, and it is also a real
+         * directory at the repo root — so this middleware answered it as a
+         * missing file and the dev server 404'd the saint page, while the
+         * built preview served it happily from `404.html`. Dev and preview
+         * disagreeing about a whole surface is the kind of thing that hides
+         * until someone shoots every route at once, which is how it was found.
+         *
+         * `Accept: text/html` is the test because it is exactly the
+         * distinction: a browser navigating asks for HTML, and `life.md`,
+         * `icon.jpg` and `manifest.json` never do — so a genuinely missing
+         * asset still 404s here rather than being handed the index page.
+         */
+        if ((req.headers.accept ?? '').includes('text/html')) return next();
         res.statusCode = 404;
         return res.end('not found');
       }
@@ -63,7 +78,7 @@ const contentDirs = () => ({
  * starts the request with the HTML instead of after the stylesheet has been
  * parsed and matched, which is what puts the face inside that window on most
  * loads — without reintroducing the layout shift `swap` would cost. Zero shift
- * outranks brand (DESIGN.md); this buys the brand back where it is free.
+ * outranks brand (PLAN.md); this buys the brand back where it is free.
  *
  * **Which two, and why not four.** `normal-latin` is the face every page is set
  * in. `normal-latin-ext` is not a luxury beside it: the corpus is full of names

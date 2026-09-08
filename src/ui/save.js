@@ -9,13 +9,13 @@
  * **bookmark**, a frameless ink silhouette at half strength when not saved
  * and full strength when it is. `aria-pressed` carries the state, the
  * accessible name says which state it is in, and nothing about it is red or
- * gold — Save is chrome, and chrome stays quiet (DESIGN.md §2, §5).
+ * gold — Save is chrome, and chrome stays quiet (PLAN.md).
  *
  * The gesso halo that used to ride under the shape went with the author's
  * instruction that same day: on a dark icon it read as a light *outline*
  * around a hollow mark, so the site had two bookmarks — an outlined one over
  * images and a filled one everywhere else — where it had always claimed to
- * have one. See DESIGN.md for what the halo was defending.
+ * have one. See PLAN.md for what the halo was defending.
  *
  * Painting re-queries the root each time rather than keeping a list, because
  * the Index mounts and unmounts cards on every scroll frame: a list taken at

@@ -1,4 +1,4 @@
-/* Calendar page (DESIGN.md §5b). The hero holds one scale whatever the day's
+/* Calendar page (PLAN.md). The hero holds one scale whatever the day's
    density; the register carries the rest; the week strip is the red-letter
    idiom doing literal work. */
 
@@ -202,7 +202,7 @@
     border-radius: 999px;
     background: var(--gesso);
     font-family: var(--font-utility);
-    font-size: 15px;
+    font-size: var(--text-base);
     line-height: 1;
     color: var(--ink-soft);
     cursor: pointer;
@@ -252,7 +252,7 @@
     border-radius: 999px;
     background: var(--gesso);
     font-family: var(--font-utility);
-    font-size: 15px;
+    font-size: var(--text-base);
     line-height: 1;
     color: var(--ink-soft);
     pointer-events: none;
@@ -278,7 +278,7 @@
    blank for 420 ms with no animation behind it: removed, not shortened. */
 .cal-month {
   opacity: 0;
-  transition: opacity var(--dur-month) var(--ease);
+  transition: opacity var(--dur-travel) var(--ease);
 }
 
 .cal-month.is-open {
@@ -291,7 +291,7 @@
 }
 
 .cal-week {
-  transition: opacity var(--dur-month) var(--ease);
+  transition: opacity var(--dur-travel) var(--ease);
 }
 
 .cal-week.is-out {
@@ -322,7 +322,7 @@
 }
 
 .grain-track.is-settling {
-  transition: transform var(--dur-slot) var(--ease);
+  transition: transform var(--dur-settle) var(--ease);
 }
 
 /* The grain either side, parked a viewport width away. For the length of a
@@ -352,7 +352,7 @@
 /* The edges fade (author, 2026-08-25: "add a fade on the edges so the half
    cropped 'Sun' or 'Mon' don't read as accidental"), which reverses Amendment
    35's "the rail's edge days are ordinary buttons at full strength with no
-   mask at all" — recorded in place in DESIGN.md §5b. The reason 35 gave still
+   mask at all" — recorded in place in PLAN.md. The reason 35 gave still
    holds where it was aimed: the edge day is a *real* day, clickable and in
    full ink, and nothing here dims a glyph a reader might try to read. What
    the mask does is end the run, so a half-cut column reads as the grain
@@ -433,7 +433,7 @@
   align-items: center;
   gap: 1px;
   font-family: var(--font-utility);
-  font-size: 12px;
+  font-size: var(--text-2xs);
   line-height: 1.3;
   color: var(--ink-soft);
   font-variant-numeric: tabular-nums;
@@ -474,7 +474,7 @@
 }
 
 .week-strip .day-num {
-  font-size: 15px;
+  font-size: var(--text-base);
   color: var(--ink);
 }
 
@@ -506,7 +506,7 @@
    (author, 2026-08-26: "put a bubble around today's date in the weekly and
    monthly display so even when selecting a different day you still recognise
    today's date"). Drawn as a ring around the numeral rather than a filled
-   disc — gold and a flat fill both belong to other things (DESIGN.md §2) —
+   disc — gold and a flat fill both belong to other things (PLAN.md) —
    and as an absolutely positioned ::before rather than a box on `.day-num`
    itself, so it costs the row no width or height of its own and cannot be the
    thing that nudges the rail's column measurements. */
@@ -671,7 +671,7 @@
   align-items: center;
   gap: 2px;
   font-family: var(--font-utility);
-  font-size: 12px;
+  font-size: var(--text-2xs);
   line-height: 1.3;
   font-variant-numeric: tabular-nums;
   cursor: pointer;
@@ -707,7 +707,7 @@
 }
 
 .peek .day-num {
-  font-size: 15px;
+  font-size: var(--text-base);
 }
 
 /* The month's peeked column, on the grid's own rows. It reuses the grid's own
@@ -728,14 +728,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 13px;
+  font-size: var(--text-sm);
   line-height: 1.2;
 }
 
 /* The density dots — one per commemoration, capped at five — stood under every
    date at both grains from the first calendar until the author removed them
    (2026-08-25 evening: "remove the dots under each date in the calendar").
-   DESIGN.md's "Dense against sparse" argued them as density made legible
+   PLAN.md's "Dense against sparse" argued them as density made legible
    before arrival; that paragraph now records the reversal in place. What
    survives is the *count*, in the day button's accessible name, said plainly
    here because it is a divergence: a reader who cannot glance at the register
@@ -764,7 +764,7 @@
   padding-inline-end: var(--space-2);
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--text-md);
   line-height: 1.2;
   color: var(--ink);
 }
@@ -780,7 +780,7 @@
      week grown taller" is a geometry the two share to the pixel — the rail's
      button width is derived from this same number — and a month whose columns
      had drifted 2 px from the week's would move the day names as the reader
-     toggles, which is the one thing that must never happen (DESIGN.md §5b).
+     toggles, which is the one thing that must never happen (PLAN.md).
      It was --space-1 from 2026-08-21 until now. */
   column-gap: 2px;
 }
@@ -793,7 +793,7 @@
   text-align: center;
   padding-top: calc(var(--space-1) + 1px);
   font-family: var(--font-utility);
-  font-size: 12px;
+  font-size: var(--text-2xs);
   line-height: 1.3;
   color: var(--ink-soft);
 }
@@ -805,7 +805,7 @@
    never cropped at rest. */
 .month-body {
   position: relative;
-  transition: height var(--dur-month) var(--ease);
+  transition: height var(--dur-travel) var(--ease);
 }
 
 /* The month's own viewport. It clips for a grow and for a move, and for
@@ -828,7 +828,7 @@
   align-items: center;
   gap: 2px;
   font-family: var(--font-utility);
-  font-size: 13px;
+  font-size: var(--text-sm);
   /* A date is one numeral. The body's reading leading is height spent on
      nothing here, and five rows of it is most of why the month was too tall. */
   line-height: 1.2;
@@ -930,11 +930,11 @@
 .slot-leaving {
   position: absolute;
   inset: 0 0 auto 0;
-  animation: slot-out var(--dur-slot) var(--ease) forwards;
+  animation: slot-out var(--dur-settle) var(--ease) forwards;
 }
 
 .slot-entering {
-  animation: slot-in var(--dur-slot) var(--ease);
+  animation: slot-in var(--dur-settle) var(--ease);
 }
 
 .slot-viewport.backward .slot-leaving {
@@ -1135,7 +1135,7 @@
     border: 0;
     background: none;
     font: inherit;
-    font-size: clamp(13px, 1.05vw, 16px);
+    font-size: clamp(var(--text-sm), 1.05vw, var(--text-body));
     line-height: 1.25;
     color: var(--ink-soft);
     cursor: pointer;
@@ -1234,7 +1234,7 @@
     background: none;
     font: inherit;
     font-family: var(--font-utility);
-    font-size: 13px;
+    font-size: var(--text-sm);
     letter-spacing: 0.02em;
     color: var(--ink-soft);
     cursor: pointer;
@@ -1270,7 +1270,7 @@
     background: none;
     font: inherit;
     font-family: var(--font-utility);
-    font-size: 13.5px;
+    font-size: var(--text-nav);
     color: var(--ink);
     text-align: left;
     cursor: pointer;
@@ -2019,7 +2019,7 @@
    inside a page of prose and it should read as one. */
 .reg-card .reg-name {
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   line-height: 1.3;
   text-decoration: none;
 }
@@ -2059,7 +2059,7 @@
   border: 0;
   background: none;
   font: inherit;
-  font-size: 13px;
+  font-size: var(--text-sm);
   letter-spacing: 0.02em;
   color: var(--ink-soft);
   cursor: pointer;
@@ -2160,7 +2160,7 @@
     object-fit: cover;
   }
 
-  /* No frame around a picture that is not coming (DESIGN.md, and the author's
+  /* No frame around a picture that is not coming (PLAN.md, and the author's
      own instruction of 2026-08-26). A row keeps the empty slot so the pictures
      stay in one column; a card grid has no column to keep. */
   .register-cards.is-cards .reg-thumb.is-blank {
@@ -2193,7 +2193,7 @@
   color: var(--ink-soft);
   font-style: italic;
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: var(--text-base);
 }
 
 .register .reg-feast {
@@ -2263,7 +2263,7 @@ a.name-day:hover {
   text-decoration-color: var(--ink-soft);
 }
 
-/* The empty day is a designed state, not a fallback (DESIGN.md §5b). */
+/* The empty day is a designed state, not a fallback (PLAN.md). */
 .empty-day {
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
@@ -2273,7 +2273,7 @@ a.name-day:hover {
 /* ---- the church chooser, where it stands on this page (2026-08-22) ------- */
 
 .ask-heading {
-  font-size: 21px;
+  font-size: var(--text-xl);
   margin-bottom: var(--space-2);
 }
 
@@ -2292,7 +2292,7 @@ a.name-day:hover {
 }
 
 /* Pressed is the recessed field in ink — aria-pressed carries it, never a
-   colour alone; nothing here is gold or red (DESIGN.md §2). */
+   colour alone; nothing here is gold or red (PLAN.md). */
 .church-choice[aria-pressed='true'] {
   background: var(--field);
   border-color: var(--ink-soft);
@@ -2300,7 +2300,7 @@ a.name-day:hover {
 }
 
 .choice-calendar {
-  font-size: 12px;
+  font-size: var(--text-2xs);
   color: var(--ink-soft);
 }
 
@@ -2434,7 +2434,7 @@ a.name-day:hover {
    took the fast chip's trailing "- {reason}" with it.
 
    **Rubric, where the feast's is gold, and both are edge and tint only.**
-   DESIGN.md §2 spends rubric on liturgical time and the reader's place, which
+   PLAN.md spends rubric on liturgical time and the reader's place, which
    is what a fast's occasion is; gold marks a finding about veneration, which
    is the feast chip standing next to it. The words stay ink in both, because
    --gold on gesso is 2.78:1 and dark-mode --rubric is 4.20:1 — neither can
@@ -2458,7 +2458,7 @@ a.name-day:hover {
 /* The cycle and the tone keep the line. They wore `opacity: 0.85` for one
    build, to sit a step behind the chip — and the quality floor caught it the
    same run: --ink-soft washed over gesso is 4.17:1, under the 4.5 that WCAG AA
-   asks of 13.5 px text. DESIGN.md §5b already says this in as many words about
+   asks of 13.5 px text. PLAN.md already says this in as many words about
    the rail's fade ("a mask, never an opacity — a wash over --ink-soft is 2.1:1
    on gesso"), so this is the same mistake the same file warns about, made
    again in a different place.
@@ -2498,7 +2498,7 @@ a.name-day:hover {
 }
 
 .hymn-kind {
-  font-size: 13.5px;
+  font-size: var(--text-nav);
   font-variant-caps: small-caps;
   letter-spacing: 0.06em;
   color: var(--ink-soft);
@@ -2550,7 +2550,7 @@ a.name-day:hover {
   border: 1px solid currentColor;
   border-radius: 50%;
   font-family: var(--font-utility);
-  font-size: 9px;
+  font-size: var(--text-3xs);
   font-style: italic;
   line-height: 1;
   vertical-align: 2px;
@@ -2593,7 +2593,7 @@ a.name-day:hover {
   opacity: 0;
   transform: scale(0.9);
   transform-origin: var(--arrow-x, 50%) 0;
-  transition: opacity 140ms ease-out, transform 140ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  transition: opacity var(--dur-answer) var(--ease-out), transform var(--dur-answer) var(--ease-spring);
 }
 
 .fast-bubble.is-in {
@@ -2645,7 +2645,7 @@ a.name-day:hover {
   color: var(--ink-soft);
 }
 
-/* Reduced motion removes the movement, it does not hurry it (DESIGN.md §6):
+/* Reduced motion removes the movement, it does not hurry it (PLAN.md):
    the bubble is simply there, and simply gone. */
 @media (prefers-reduced-motion: reduce) {
   .fast-bubble {
@@ -2772,7 +2772,7 @@ a.name-day:hover {
   border: 0;
   background: none;
   font: inherit;
-  font-size: 13px;
+  font-size: var(--text-sm);
   letter-spacing: 0.02em;
   color: var(--ink-soft);
   text-align: left;
@@ -2844,7 +2844,7 @@ a.name-day:hover {
     margin-inline: auto;
     padding-inline: var(--page-pad);
     background: var(--gesso);
-    animation: fullcal-down var(--dur-slot) var(--ease);
+    animation: fullcal-down var(--dur-settle) var(--ease);
   }
 
   /* Quieter than the modal's own: the page is being pushed down rather than
@@ -2868,8 +2868,8 @@ a.name-day:hover {
     transform: translateY(var(--space-12));
     opacity: 0;
     transition:
-      transform var(--dur-slot) var(--ease),
-      opacity var(--dur-slot) var(--ease);
+      transform var(--dur-settle) var(--ease),
+      opacity var(--dur-settle) var(--ease);
   }
 }
 
@@ -2926,7 +2926,7 @@ a.name-day:hover {
 }
 
 .fullcal .fc-step {
-  font-size: 26px;
+  font-size: var(--text-2xl);
   line-height: 1;
 }
 
@@ -2989,7 +2989,7 @@ a.name-day:hover {
 }
 
 .fullcal .fc-num {
-  font-size: 17px;
+  font-size: var(--text-lg);
   line-height: 1.2;
 }
 
@@ -3012,7 +3012,7 @@ a.name-day:hover {
 .fullcal .fc-fast,
 .fullcal .fc-occasion,
 .fullcal .fc-count {
-  font-size: 12px;
+  font-size: var(--text-2xs);
   line-height: 1.3;
 }
 
@@ -3028,7 +3028,7 @@ a.name-day:hover {
 /* A Great Feast is gold at the edge and ink in the words, which is the rule
    the day's own chip keeps: --gold on gesso is 2.78:1 and cannot carry text. */
 .fullcal .fc-feast {
-  font-size: 12px;
+  font-size: var(--text-2xs);
   line-height: 1.3;
   padding: 1px var(--space-1);
   border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
@@ -3123,7 +3123,7 @@ a.name-day:hover {
   .fullcal .fc-day-name {
     margin-inline-start: var(--space-2);
     color: var(--ink-soft);
-    font-size: 13px;
+    font-size: var(--text-sm);
   }
 
   .fullcal .fc-count {

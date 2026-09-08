@@ -12,7 +12,7 @@
  * that falls on a fast day, and the fast lifted entirely for Nativity and
  * Theophany — and nothing finer. Oil, wine and the grades between them differ
  * between the Greek and Slavic typika and want sourcing per church before the
- * site states them (SESSIONS.md, Amendment 28).
+ * site states them (git log, Amendment 28).
  */
 
 import { CHURCHES_BY_ID } from '../data/churches.js';

@@ -552,7 +552,7 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
 
 
 test('a calendar change repaints the day in place rather than rolling it', async ({ page }) => {
-  // The movement decides, not the gesture (DESIGN.md §5b). A change of
+  // The movement decides, not the gesture (PLAN.md). A change of
   // calendar has not travelled anywhere in time, so the panel repaints where
   // it stands — it used to roll upward as if the reader had stepped forward a
   // day. 28 June is Augustine's in the Russian calendar and nobody's in the
@@ -718,7 +718,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // And an ordinary Friday, whose calendar printed no allowance. It said
   // "Fast - Friday" and stopped until the evening of 2026-08-26; it is Strict
   // Fasting by default now, and the weekday goes with the change because on
-  // this day the reason *was* the weekday (DESIGN.md §5b carries the
+  // this day the reason *was* the weekday (PLAN.md carries the
   // reversal).
   await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
@@ -1185,7 +1185,7 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
    * bubble said what every fast sets aside and refused to guess the rest.
    *
    * The author's instruction ('"Fast - Friday" becomes "Strict Fasting"')
-   * fills that silence, in the strict direction, and DESIGN.md §5b carries
+   * fills that silence, in the strict direction, and PLAN.md carries
    * the reversal in place. What did *not* change, and is the reason this test
    * still earns its name: the note is still not quoted back. A grade the site
    * defaulted to was not read out of «Пост», and the bubble prints a
@@ -1225,7 +1225,7 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
 test('a fast-free day says so, and quotes nothing it was not given', async ({ page }) => {
   // The other side: a day with no fast opens the same bubble and prints no
   // quotation at all, because for that day nobody printed one. A heading over
-  // an empty quotation would be the furniture DESIGN.md 5b refuses.
+  // an empty quotation would be the furniture PLAN.md 5b refuses.
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
   await page.locator('[data-liturgy] .fast').click();
@@ -1271,7 +1271,7 @@ test('the fast and its bubble are in the reader own language', async ({ browser 
 
 
 test('under reduced motion the bubble does not pop, it is simply there', async ({ browser }) => {
-  // Removed, not shortened (DESIGN.md §6): no scale, no fade, no wait.
+  // Removed, not shortened (PLAN.md): no scale, no fade, no wait.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
@@ -1938,7 +1938,7 @@ test('every calendar names its type of fast, not only the one that prints allowa
    * through to a bare "Fast - Friday".
    *
    * So a fast with no printed allowance is Strict Fasting by default now
-   * (lib/fast-grade.js argues the direction; DESIGN.md §5b records the
+   * (lib/fast-grade.js argues the direction; PLAN.md records the
    * reversal), and this test is the one that would catch the default being
    * quietly dropped again — it walks the three calendars that have no notes
    * to read.

@@ -270,7 +270,7 @@ function aside(cursor, church) {
    * A month with neither is not a gap in the data — most months of the year
    * have no Great Feast and several have no named fasting period — so it says
    * so in a sentence rather than showing two empty headings, which is the
-   * furniture DESIGN.md 5b refuses.
+   * furniture PLAN.md refuses.
    */
   return periods || great
     ? `<div class="fc-aside">${periods}${great}</div>`

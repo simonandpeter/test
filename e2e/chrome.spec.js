@@ -111,7 +111,7 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
 
   // And it can still be dismissed without a gesture: a shelf the reader
   // cannot clear is a nag, and a shelf only a swipe can clear strands
-  // everyone who cannot swipe (DESIGN.md §5b). Focus reveals the control.
+  // everyone who cannot swipe (PLAN.md). Focus reveals the control.
   await shelf.locator('.shelf-remove').first().focus();
   await expect(shelf.locator('.shelf-remove').first()).toBeVisible();
   await shelf.locator('.shelf-remove').first().click();
@@ -502,7 +502,7 @@ test('an answered panel shrinks into the control that changes it', async ({ page
 });
 
 test('under reduced motion the panel does not fly, it is simply gone', async ({ browser }) => {
-  // Removed, not shortened (DESIGN.md §6). The lesson the flight carried is
+  // Removed, not shortened (PLAN.md). The lesson the flight carried is
   // not lost with it: the control's accessible name says the whole sentence.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
@@ -854,7 +854,7 @@ test('the site mark is the Orthodox cross, in gold by instruction', async ({ pag
    * footrest, whose slant is the whole of what makes it Orthodox rather than
    * Latin.
    *
-   * It was drawn in ink for exactly one day. DESIGN.md §2 reserves gold for a
+   * It was drawn in ink for exactly one day. PLAN.md reserves gold for a
    * finding about veneration and nothing else, and a site mark is not one —
    * which is why Amendment 34 took the gold out. *The author put it back on
    * 2026-08-25* ("make the site icon gold colour orthodox cross"), and §2
@@ -1291,23 +1291,47 @@ test('the panel flies home in half the time, and the page closes behind it', asy
   expect(timing.panelHeight).toBeGreaterThan(40);
 
   await page.locator('#church-panel [data-church="greek"]').click();
-  await page.waitForTimeout(60);
-  const midFlight = await page.evaluate(() => {
-    const inner = document.querySelector('#church-panel .church-panel-inner');
+  /*
+   * The **last** frame on which the flier is still pinned, found by watching
+   * rather than by sleeping a fraction of the duration. This read
+   * `waitForTimeout(60)` until 2026-09-09, which was a comfortable sample
+   * point in a 160 ms flight and a marginal one in the 140 ms the motion
+   * scale gave it: at mobile-360 the flier was sometimes already gone and the
+   * test failed reading `duration` off null. Watching the state costs nothing
+   * and survives the next change to the number.
+   */
+  const midFlight = await page.evaluate(async () => {
     const box = document.querySelector('#church-panel');
-    if (!inner) return null;
-    const cs = getComputedStyle(inner);
-    return {
-      duration: cs.transitionDuration,
-      // Out of the flow, so the band can close under it without clipping.
-      position: cs.position,
-      panelHeight: box.getBoundingClientRect().height,
-      panelDuration: getComputedStyle(box).transitionDuration,
-    };
+    const frame = () => new Promise((r) => requestAnimationFrame(r));
+    let last = null;
+    for (let i = 0; i < 60; i += 1) {
+      const inner = document.querySelector('#church-panel .church-panel-inner');
+      if (!inner) break;
+      const cs = getComputedStyle(inner);
+      if (cs.position === 'fixed') {
+        last = {
+          duration: cs.transitionDuration,
+          // Out of the flow, so the band can close under it without clipping.
+          position: cs.position,
+          panelHeight: box.getBoundingClientRect().height,
+          panelDuration: getComputedStyle(box).transitionDuration,
+        };
+      } else if (last) {
+        break;
+      }
+      await frame();
+    }
+    return last;
   });
-  // 160 ms, halved from the 320 it flew at for one day.
-  expect(midFlight.duration).toMatch(/^0\.16s/);
-  expect(midFlight.panelDuration).toMatch(/^0\.16s/);
+  expect(midFlight, 'the flier was never caught in the air').not.toBeNull();
+  /*
+   * `--dur-answer`, 140 ms. This read 160 — halved from the 320 it flew at for
+   * one day — until the motion scale landed on 2026-09-08 and `fly.js` took
+   * the nearest named step. The 20 ms is not the point of the test; that the
+   * panel and its closing band move for the *same* duration is.
+   */
+  expect(midFlight.duration).toMatch(/^0\.14s/);
+  expect(midFlight.panelDuration).toMatch(/^0\.14s/);
   expect(midFlight.position).toBe('fixed');
   // The band is already closing rather than waiting to vanish at the end.
   expect(midFlight.panelHeight).toBeLessThan(timing.panelHeight);
@@ -1489,7 +1513,7 @@ test('a chooser panel arrives the way it leaves, and the page comes with it', as
 
 test('under reduced motion a chooser panel is simply there, arriving as well as leaving', async ({ browser }) => {
   /*
-   * DESIGN.md §6: reduced motion **removes**, never shortens. The close has
+   * PLAN.md: reduced motion **removes**, never shortens. The close has
    * had its own test since the flight was written; the arrival needed one the
    * moment it gained an animation of its own, and it is the same rule — no
    * flight, no band opening, the panel simply at its full size on the first
@@ -1942,7 +1966,7 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
 });
 
 test('under reduced motion the strip is simply centred, with no journey', async ({ browser }) => {
-  // Removed, not shortened (DESIGN.md §6). The press still puts the page on
+  // Removed, not shortened (PLAN.md). The press still puts the page on
   // the midline; there is nothing to watch it get there.
   const ctx = await browser.newContext({
     ...devices['Desktop Chrome'],

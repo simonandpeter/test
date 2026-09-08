@@ -50,7 +50,7 @@
  * the row was stopped most of the time it was being looked at.
  */
 
-import { reducedMotion } from '../lib/motion.js';
+import { reducedMotion, DUR } from '../lib/motion.js';
 
 /**
  * The rendered run for a track: `buffer` copies, the real items, `buffer` more.
@@ -109,7 +109,7 @@ const MAX_INFLIGHT = 4;
  * waiting and the last one long since up, is shown on the spot. Nothing is
  * ever made to wait for a clock it did not need.
  */
-const FADE_GAP_MS = 200;
+const FADE_GAP_MS = DUR.move;
 
 /** The three tiers `pump` sorts by: on screen, coming, going. */
 const ON_SCREEN = 0;

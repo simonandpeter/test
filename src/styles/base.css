@@ -1,5 +1,5 @@
 /* Base styles — chrome, typography, loading states. Component CSS builds on
-   this and on tokens.css; both follow DESIGN.md, which wins any argument. */
+   this and on tokens.css; both follow PLAN.md, which wins any argument. */
 
 *,
 *::before,
@@ -88,7 +88,7 @@
  * chasing "a restored section never touches zero on the way" failing in CI
  * at 1235 instead of 1200). `main.js`'s `restoreSection` already claims this
  * job outright — `router.js` sets `history.scrollRestoration = 'manual'` for
- * the same reason, DESIGN.md §5c: the app owns scroll, not the platform —
+ * the same reason: the app owns scroll, not the platform —
  * and it was doing it correctly: traced with a monkey-patched
  * `window.scrollTo`, the restore's own `scrollTo(0, 1200)` was the *only*
  * call made, landing exactly on target. What moved the page afterwards was
@@ -112,7 +112,7 @@ body {
   background: var(--gesso);
   color: var(--ink);
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: var(--text-lg);
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
 }
@@ -126,8 +126,8 @@ html.theme-anim body,
 html.theme-anim header,
 html.theme-anim main {
   transition:
-    background-color var(--dur-theme) var(--ease),
-    color var(--dur-theme) var(--ease);
+    background-color var(--dur-settle) var(--ease),
+    color var(--dur-settle) var(--ease);
 }
 
 h1,
@@ -140,13 +140,13 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: var(--text-3xl);
 }
 h2 {
-  font-size: 26px;
+  font-size: var(--text-2xl);
 }
 h3 {
-  font-size: 21px;
+  font-size: var(--text-xl);
 }
 
 p {
@@ -199,7 +199,7 @@ a:hover {
    and fight the otherwise refined typography. Set them in rubric or ink with
    underline on hover only; the whole card is already the tap target").
 
-   Ink rather than rubric, and the choice is DESIGN.md §2's: red is where the
+   Ink rather than rubric, and the choice is PLAN.md's: red is where the
    reader *is* — the current nav item, today's weekday, the selected date — and
    spending it on every name in a register would leave the reader's own place
    with nothing to say it. The Index's cards have read this way since they were
@@ -241,7 +241,7 @@ button:hover {
 }
 
 /* A frameless icon button — the bookmark, and the × that closes a saint's page
-   (DESIGN.md §5, §5c). No border and no field: the shape is the control. The
+   (PLAN.md's Layout section). No border and no field: the shape is the control. The
    box stays 32 px square so there is a finger's worth to press and the focus
    ring has something to draw on. The shelf's × predates this class and keeps
    its own rule. */
@@ -543,7 +543,7 @@ header.chrome .site-name {
     /* The name is the only elastic thing on the line: below about 380 px it
        gives up size before the controls give up their labels, because a
        calendar control that says nothing is worse than a smaller masthead. */
-    font-size: clamp(15px, 4.4vw, 19px);
+    font-size: var(--text-mast);
     min-width: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -691,7 +691,7 @@ header.chrome .chrome-calendar {
 .site-name {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: 17px;
+  font-size: var(--text-lg);
   text-decoration: none;
   letter-spacing: 0.01em;
 }
@@ -808,7 +808,7 @@ nav.site-nav {
 nav.site-nav a,
 .utility {
   font-family: var(--font-utility);
-  font-size: 13.5px;
+  font-size: var(--text-nav);
   line-height: 1.45;
   font-variant-numeric: tabular-nums;
 }
@@ -835,7 +835,7 @@ nav.site-nav a:hover {
    `main.js` swaps the word at the fade's floor and reduced motion skips the
    whole thing rather than hurrying it. */
 .nav-label {
-  transition: opacity 140ms ease-out;
+  transition: opacity var(--dur-answer) var(--ease-out);
 }
 
 .nav-label.is-fading {
@@ -864,7 +864,7 @@ nav.site-nav a[aria-current='page'] .nav-label.is-today {
 }
 
 /* The current page is a red letter — rubric marks the reader's place
-   (DESIGN.md §2) — and is underlined so colour never carries it alone. */
+   (PLAN.md) — and is underlined so colour never carries it alone. */
 nav.site-nav a[aria-current='page'] {
   color: var(--rubric);
   text-decoration: underline;
@@ -1119,7 +1119,7 @@ main.chrome {
   }
 
   header.chrome .site-name {
-    font-size: 34px;
+    font-size: var(--text-mast-wide);
   }
 
   /* The bar is taller for the mark alone, and the reservation has to say so
@@ -1136,7 +1136,7 @@ main.chrome {
   font-family: var(--font-utility);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: 14px;
+  font-size: var(--text-md);
   color: var(--ink-soft);
   border-bottom: 1px solid var(--rule);
   padding-bottom: var(--space-1);
@@ -1150,7 +1150,7 @@ main.chrome {
 /* A name and what stands beside it — on the saint's page, its two controls —
    are one line that never wraps: the name shrinks and wraps within itself.
    The veneration glyph stood pinned at this line's right margin wherever a
-   name appeared, until 2026-08-22 (DESIGN.md §2, §7 — superseded). */
+   name appeared, until 2026-08-22 (superseded). */
 .name-line {
   display: flex;
   align-items: baseline;
@@ -1230,14 +1230,14 @@ main.chrome {
   border-radius: 10px;
   background: var(--field);
   font-family: var(--font-utility);
-  font-size: 13px;
+  font-size: var(--text-sm);
   line-height: 1.35;
   color: var(--ink);
   opacity: 0;
   transform: translateY(-4px);
   transition:
-    opacity var(--dur-slot) var(--ease),
-    transform var(--dur-slot) var(--ease);
+    opacity var(--dur-settle) var(--ease),
+    transform var(--dur-settle) var(--ease);
   box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 40%, transparent);
 }
 
@@ -1296,7 +1296,7 @@ main.chrome {
 /* ---- loading --------------------------------------------------------- */
 
 /* Full-page veil for the initial manifest fetch only; everything after is
-   inline and non-blocking. No spinners anywhere (DESIGN.md §6). */
+   inline and non-blocking. No spinners anywhere (PLAN.md). */
 #veil {
   position: fixed;
   inset: 0;
@@ -1307,7 +1307,7 @@ main.chrome {
   align-items: center;
   justify-content: center;
   gap: var(--space-4);
-  transition: opacity var(--dur) var(--ease);
+  transition: opacity var(--dur-move) var(--ease);
 }
 
 #veil.done {
@@ -1316,7 +1316,7 @@ main.chrome {
 }
 
 #veil .veil-name {
-  font-size: 21px;
+  font-size: var(--text-xl);
   font-weight: 500;
 }
 
@@ -1351,7 +1351,7 @@ main.chrome {
   background: var(--rule);
   opacity: 0.5;
   border-radius: var(--radius-panel);
-  animation: skeleton-breathe 1.4s ease-in-out infinite;
+  animation: skeleton-breathe 1.4s var(--ease-soft) infinite;
 }
 
 @keyframes skeleton-breathe {
@@ -1382,7 +1382,7 @@ main.chrome {
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: var(--dur);
+  animation-duration: var(--dur-move);
   animation-timing-function: var(--ease);
 }
 
@@ -1494,7 +1494,7 @@ html[data-swipe-nav='right']::view-transition-new(root) {
    Daily page's two columns ("remove the scroll bar from the columns"), the
    saint page's three, the carousel's row, the full calendar's body — and each
    surface carried the same two declarations, which is how a seventh copy
-   happens (docs/CLEANUP-PLAN.md item 2 counted them). The scrolling is
+   happens (seven copies were counted before this). The scrolling is
    untouched: wheel, trackpad, keyboard and the bar's own gesture all still
    work; the bar is simply not drawn. A new scroller that wants the same joins
    this list rather than restating the pair.

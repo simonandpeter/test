@@ -1524,7 +1524,7 @@ test('the search field sticks under the chrome, and the filters drop from it', a
   await page.evaluate(() => document.querySelector('[data-query]').focus({ preventScroll: true }));
   await expect.poll(async () => (await state()).open).toBe(true);
   await expect.poll(async () => (await state()).shown).toBe(true);
-  // Polled, not sampled: the drop takes `--dur-slot` to travel, and the class
+  // Polled, not sampled: the drop takes `--dur-settle` to travel, and the class
   // is on before the transform has moved.
   await expect
     .poll(async () => {

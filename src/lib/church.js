@@ -1,7 +1,7 @@
 /**
  * Which church the reader keeps (author, 2026-08-22): one of the registry's
  * four — Russian, Romanian, Greek or Serbian — and with it which calendar, because
- * the calendar follows the church (DESIGN.md §5b). One choice for the whole
+ * the calendar follows the church (PLAN.md). One choice for the whole
  * site: the calendar page shows that church's calendar, the Index keeps that
  * church's saints and names what it sets aside, the saint's page reads that
  * church's register first. Asked once on a first visit, changed from the
@@ -126,9 +126,7 @@ export function subscribeChurch(fn) {
  * calendar date."
  *
  * **This is the Old/New Calendar setting the Orthodox build has been deferring
- * since it was seeded** (docs/HANDOFF-ORTHODOX.md §2.2 and §6, where it is the
- * withdrawn reckoning toggle of Amendments 16-19 "returning with a reason to
- * exist"). It arrives as an override rather than as a second church: a church
+ * since it was seeded** (the withdrawn reckoning toggle, returning with a reason to exist). It arrives as an override rather than as a second church: a church
  * is who keeps the calendar and this is which arithmetic the day is read by,
  * and the two are separate questions the moment a reader wants their own
  * parish's practice rather than their patriarchate's default.

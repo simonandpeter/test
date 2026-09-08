@@ -510,7 +510,7 @@ export function paintDay({ main, side }) {
           keeps the names in the folder), so the words come with the saint's
           own payload. Empty until then and empty for good where the corpus has
           no place, because a line that says "Born:" and nothing else is the
-          furniture DESIGN.md 5b refuses.
+          furniture PLAN.md refuses.
         -->
         <p class="hero-places utility" data-hero-places hidden></p>
         <!-- The opening of the life, on a wide screen only (author,
@@ -519,7 +519,7 @@ export function paintDay({ main, side }) {
              from the manifest, so the box is here from the first paint and
              fills a moment later; empty until then, and empty for good where
              a saint has no life recorded, because a heading over nothing is
-             the furniture DESIGN.md 5b refuses.
+             the furniture PLAN.md refuses.
 
              The way into the life is now the last words *of this paragraph*
              (author, 2026-09-01: "make the '...continue reading' part of the

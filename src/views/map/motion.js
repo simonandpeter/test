@@ -1,5 +1,5 @@
 import { clampView, MAX_SCALE } from '../../lib/map-view.js';
-import { reducedMotion } from '../../lib/motion.js';
+import { reducedMotion, DUR } from '../../lib/motion.js';
 import { STRINGS } from '../../ui/strings.js';
 import { announce, map } from './state.js';
 
@@ -22,7 +22,7 @@ import { announce, map } from './state.js';
  */
 let flyFrame = null;
 
-export const FLY_MS = 450;
+export const FLY_MS = DUR.travel;
 
 export function cancelFlight() {
   if (flyFrame === null) return;
@@ -147,7 +147,7 @@ export const railAt = new Map();
  * second, so anything slower than about a sixth of that reads as the dots
  * lagging the year rather than keeping up with it.
  */
-const RAIL_GLIDE_MS = 120;
+const RAIL_GLIDE_MS = DUR.answer;
 
 /** Close enough to be there. Without it the exponential ease never quite
  *  arrives, and the map would schedule frames forever. */

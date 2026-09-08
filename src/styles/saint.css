@@ -1,4 +1,5 @@
-/* The saint's page, the date bars, and the two shelves (DESIGN.md §5, §6b).
+/* The saint's page, the date bars, and the two shelves (PLAN.md, Layout
+   and Softness).
    Panels stay recessed and unshadowed; rules appear only where a register
    rules a line; nothing here is gold and nothing here is red. */
 
@@ -22,7 +23,7 @@
 /* The two controls beside the name (author, 2026-08-22): the bookmark, and the
    × that closes the page back into the Index where the reader left it. They
    stood between the name and the mark until the glyph was removed
-   (2026-08-22, DESIGN.md §2); they follow the name now and the margin is
+   (2026-08-22, PLAN.md); they follow the name now and the margin is
    empty. */
 .saint-head .saint-tools {
   display: inline-flex;
@@ -235,7 +236,8 @@
 /* ---- the head's two columns (author, 2026-08-22) ----------------------- */
 
 /* At 760 px and above the image and the dates-and-places register stand side
-   by side, and the body runs the full width beneath both (DESIGN.md §5c).
+   by side, and the body runs the full width beneath both (PLAN.md's Layout
+   section).
    Until then the whole body sat in the register's column beside the image,
    which spent the page's width on one column of text. Below 760 px the order
    is image, register, body, as it was. A page with no image has one column at
@@ -359,7 +361,7 @@
    (author, 2026-08-22). A quiet text button in the register's own voice. */
 .reveal-traditions {
   font-family: var(--font-utility);
-  font-size: 13.5px;
+  font-size: var(--text-nav);
   color: var(--ink-soft);
   margin: var(--space-2) 0 var(--space-4);
 }
@@ -380,7 +382,7 @@
 .att-church {
   font-variant-caps: all-small-caps;
   letter-spacing: 0.06em;
-  font-size: 14px;
+  font-size: var(--text-md);
 }
 
 .att-status {
@@ -431,7 +433,7 @@
 .source summary {
   cursor: pointer;
   font-family: var(--font-utility);
-  font-size: 13.5px;
+  font-size: var(--text-nav);
   color: var(--ink-soft);
 }
 
@@ -445,7 +447,7 @@
 }
 
 .source-body p {
-  font-size: 16px;
+  font-size: var(--text-body);
 }
 
 /* ---- skeletons ---------------------------------------------------------- */
@@ -504,7 +506,7 @@
   position: relative;
   /* The swipe moves the row itself, so the spring back is the row's own
      transition; the gesture sets and clears the transform inline. */
-  transition: transform 180ms ease-out, opacity 180ms ease-out;
+  transition: transform var(--dur-move) var(--ease-out), opacity var(--dur-move) var(--ease-out);
   touch-action: pan-y;
 }
 
@@ -518,12 +520,12 @@
 
 /* Leaving: out the way it was pushed, the store repainting behind it. */
 .shelf-cards .index-card.is-leaving {
-  transition: transform 200ms ease-in, opacity 200ms ease-in;
+  transition: transform var(--dur-move) var(--ease-soft), opacity var(--dur-move) var(--ease-soft);
   pointer-events: none;
 }
 
 /* The removal that is not the swipe: reachable by tab and by a screen
-   reader, invisible to everyone else (DESIGN.md §5b — a gesture is never the
+   reader, invisible to everyone else (a gesture is never the
    only way to a thing). It takes the row's trailing edge when focused, over
    the name link's ::after. */
 /* `.shelf .shelf-remove` above sets a padding this must undo, and it wins on
@@ -577,7 +579,7 @@
 
   .shelf .shelf-remove-quiet::after {
     content: '×';
-    font-size: 17px;
+    font-size: var(--text-lg);
   }
 
   .shelf .shelf-remove-quiet:hover {
@@ -601,7 +603,7 @@
    root cross-fade from base.css. Reduced motion disables the whole mechanism
    in main.js — the transition is never run, not run faster. */
 ::view-transition-group(*) {
-  animation-duration: var(--dur);
+  animation-duration: var(--dur-move);
   animation-timing-function: var(--ease);
 }
 
@@ -689,7 +691,7 @@
     border: 0;
     background: none;
     font: inherit;
-    font-size: 13px;
+    font-size: var(--text-sm);
     letter-spacing: 0.02em;
     color: var(--ink-soft);
     cursor: pointer;

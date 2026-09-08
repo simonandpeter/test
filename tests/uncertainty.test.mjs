@@ -7,7 +7,7 @@ import { softness } from '../src/lib/uncertainty.js';
  * The curve had no test file of its own until 2026-08-21: it was pinned
  * through the date bars, which were the only thing drawing it. The bars were
  * withdrawn that day and the curve was not — the map halo and the timeline
- * dissolve are still to come, and DESIGN.md §6b pins its three constants as
+ * dissolve are still to come, and PLAN.md pins its three constants as
  * art direction. So the constants get their own file rather than leaving with
  * the component that happened to be first to use them.
  */
@@ -22,7 +22,7 @@ test('softness rises with the parameter and clamps at both ends', () => {
   assert.equal(softness(1000), softness(5000));
 });
 
-test('the worked values in DESIGN.md §6b are the values the curve gives', () => {
+test('the worked values in PLAN.md are the values the curve gives', () => {
   const at = (p) => Math.round(softness(p) * 100) / 100;
   assert.equal(at(1), 0.75);
   assert.equal(at(30), 4.87);

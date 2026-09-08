@@ -4,7 +4,7 @@ import { dailyRank, layoutBlobLabels, layoutLabels } from '../../lib/map-labels.
 import { lifeBounds, pointOn, progressAt, trackLegs } from '../../lib/map-track.js';
 import { convexHull, coverFractions, distToHull, inflateHull, MERGE_PX, mergeDots, pointInHull, spreadShared, toScreen } from '../../lib/map-view.js';
 import { ASPECT, project } from '../../lib/mercator.js';
-import { reducedMotion } from '../../lib/motion.js';
+import { reducedMotion, DUR } from '../../lib/motion.js';
 import { softness } from '../../lib/uncertainty.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { FLY_MS, glidePoint, glideTo, railAt } from './motion.js';
@@ -165,7 +165,7 @@ const detailAt = () => (isDesktop() ? DETAIL_AT_DESKTOP : DETAIL_AT_MOBILE);
  * reader crossing `detailAt()` mid-gesture is mid-zoom, not standing still to
  * watch a transition, so this only has to remove the pop, not choreograph one.
  */
-const DETAIL_FADE_MS = 280;
+const DETAIL_FADE_MS = DUR.settle;
 
 /** One saint's mark. A merged mark grows from here — see `paintCanvas`. */
 const DOT_R = 2.5;
@@ -210,7 +210,7 @@ const shapeBBoxes = new WeakMap();
  */
 export const labelState = new Map();
 
-const LABEL_FADE_MS = 300;
+const LABEL_FADE_MS = DUR.settle;
 
 /**
  * Where each label was last actually placed, by slug. A label fading *out*
@@ -1718,7 +1718,7 @@ export function paintCanvas(canvas, cards) {
       // whole of it however many halos overlap.
       lc.globalAlpha = dimOf(card.slug);
       /*
-       * The uncertainty curve's first shipping consumer (DESIGN.md §6b),
+       * The uncertainty curve's first shipping consumer (PLAN.md),
        * scaled by the zoom as well as by the picture's width: the doubt is a
        * distance on the ground, so a halo that stayed the same size in
        * pixels would claim a tighter place the further in the reader went.

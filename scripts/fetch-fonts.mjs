@@ -26,7 +26,7 @@ mkdirSync('src/fonts', { recursive: true });
 let out = `/* Literata variable (wght 400-600, opsz 7-72, roman + italic), self-hosted.
    Subsets downloaded ${new Date().toISOString().slice(0, 10)}; regenerate with scripts/fetch-fonts.mjs.
    Licence: SIL Open Font License 1.1. font-display is 'optional' per
-   DESIGN.md section 4 - zero layout shift outranks brand on a cold first
+   PLAN.md - zero layout shift outranks brand on a cold first
    visit; the font arrives from cache on every visit after. */\n`;
 
 let n = 0;

@@ -6,7 +6,7 @@
  * reading, not a widget.
  *
  * Both are hidden when empty. An empty shelf is not a designed state in the
- * sense DESIGN.md §5b means: a day with no commemorations is a fact about the
+ * sense PLAN.md means: a day with no commemorations is a fact about the
  * calendar and says so, whereas a reader who has saved nothing has simply not
  * used a feature yet, and inviting them to look at their own empty shelf would
  * be furniture.
@@ -66,7 +66,7 @@ function row(card, router, { removable = false } = {}) {
  * The button is the same button either way: `shelf-remove`, always in the
  * markup, let out of its clip by a `(hover: hover)` query. Hidden, it is
  * still a screen-reader-and-keyboard route that focus brings out —
- * DESIGN.md §5b's rule is that a gesture is never the only way to a thing,
+ * PLAN.md's rule is that a gesture is never the only way to a thing,
  * and a shelf whose only clearing gesture is a swipe would strand every
  * reader who cannot make one.
  */

@@ -658,7 +658,7 @@ test('the rail never dead-ends: scrolled to its edge, it rebuilds around the rea
 
 
 test('picking a day already in view does not move the rail', async ({ page }) => {
-  // The movement decides, not the gesture (DESIGN.md §5b, unchanged by the
+  // The movement decides, not the gesture (PLAN.md, unchanged by the
   // rail): a day already on screen has nowhere to be brought from, so the
   // rail must not stir under the click.
   await ready(page);
@@ -1261,7 +1261,7 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   /*
    * Author, 2026-08-25 evening: "remove the dots under each date in the
    * calendar." They stood under every date at both grains from the first
-   * calendar — one per commemoration, capped at five — and DESIGN.md's "Dense
+   * calendar — one per commemoration, capped at five — and PLAN.md's "Dense
    * against sparse" argued them and now records the reversal in place. That
    * removal stands and is still the first half of this test.
    *
@@ -1584,7 +1584,7 @@ test("the month's numerals wear the same colour as the rail's dots", async ({ pa
   /*
    * **The colour is never the only channel.** The rail has named its marks in
    * the accessible label since the dots arrived; the month had no words at
-   * all until it took a colour, and DESIGN.md §2's rule is that the words say
+   * all until it took a colour, and PLAN.md's rule is that the words say
    * which. A screen reader and a reader who cannot separate these two hues
    * both get the fast from the name.
    */
@@ -2016,7 +2016,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * **The premise, updated 2026-09-05**: the church's own reckoning, not
    * flatly the civil date, once "Follow my church" is what is in force —
    * Julian for a Russian reader, thirteen days behind the civil URL this
-   * page is still written in. DESIGN.md's "civil date and only the civil
+   * page is still written in. PLAN.md's "civil date and only the civil
    * date" rule now holds only for a reader whose church actually keeps
    * Gregorian, or who has chosen it outright (checked below).
    */

@@ -1,5 +1,5 @@
 /**
- * The calendar — the habit page (brief §8.1, DESIGN.md §5b). Opens on today
+ * The calendar — the habit page (brief §8.1, PLAN.md). Opens on today
  * in the reader's local date; week strip and month view to move; deep links
  * at /calendar/YYYY-MM-DD; one church's calendar at a time (author,
  * 2026-08-22): the church the reader keeps, chosen once and changed from the header.
@@ -690,7 +690,7 @@ function slotSwap(forward, swipeDx) {
 /**
  * The day's content changed under it — the calendar or the selection, not the
  * date — so the panel repaints in place. The movement decides, not the gesture
- * (DESIGN.md §5b): a filter press has not travelled anywhere, and rolling it
+ * (PLAN.md): a filter press has not travelled anywhere, and rolling it
  * read as a step forward in time that never happened.
  */
 function repaintDay() {
@@ -717,7 +717,7 @@ function paintChrome() {
    * chosen** (author, 2026-09-02, widened 2026-09-05: "Follow my church"
    * has to actually name the church's own calendar, not the civil one — see
    * `reckoningInForce`'s own record in `lib/church.js`). This reverses
-   * DESIGN.md's "the Daily page prints the civil date and only the civil
+   * PLAN.md's "the Daily page prints the civil date and only the civil
    * date" for every reader whose church keeps something other than
    * Gregorian, not only the reader who has explicitly asked — which is most
    * of them, since three of the four churches this site keeps default away
@@ -838,7 +838,7 @@ function paintLiturgy() {
    * above, and `reasonKind` marks it so this does not have to match strings.
    *
    * **Rubric, and rubric is the right claim rather than a spare colour.**
-   * DESIGN.md §2 gives it to liturgical time and the reader's place, and
+   * PLAN.md gives it to liturgical time and the reader's place, and
    * "the Dormition Fast", "Great Lent", "the Beheading of the Forerunner" are
    * liturgical time exactly. Gold would have said this was a finding about
    * veneration, which is the feast chip's business beside it. The words are
@@ -952,7 +952,7 @@ function openFastBubble(button) {
    * 2026-08-26 is a different question from whether there is a grade at all:
    * an ungraded fast day now defaults to Strict Fasting, and a note reading
    * only «Post» or «Νηστεία» would otherwise start being quoted under a label
-   * it adds nothing to — the exact thing DESIGN.md §5b had this condition
+   * it adds nothing to — the exact thing PLAN.md had this condition
    * stop doing.
    */
   const gradeIsQuoted = Boolean(gradeFromNote(note));
@@ -1057,7 +1057,7 @@ function openFastBubble(button) {
 
   // The pop: one frame at rest, then the class that runs the transition. Under
   // reduced motion the class is on from the first paint and the CSS gives it
-  // no transition to run — the movement is *removed*, not shortened (DESIGN.md
+  // no transition to run — the movement is *removed*, not shortened (PLAN.md
   // §6). Focus follows so Escape and a screen reader both land on it.
   if (reducedMotion()) el.classList.add('is-in');
   else requestAnimationFrame(() => el.classList.add('is-in'));

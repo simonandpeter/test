@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 /*
- * DESIGN.md quotes a contrast ratio for every text token in both themes, and
+ * PLAN.md quotes a contrast ratio for every text token in both themes, and
  * has been wrong about them twice — once claiming ink-soft cleared 5.4:1 both
  * modes when the light field was 5.29:1, and once calling the dark rubric
  * 5.1:1 and "safe for text at any size" when it was 4.20:1 and failing AA.
@@ -76,7 +76,7 @@ for (const [theme, get] of [
 
   /*
    * `--gold` itself takes no floor: it is never text and never carries
-   * information alone (DESIGN.md §7), and it is spent on a favicon, a hairline
+   * information alone (PLAN.md), and it is spent on a favicon, a hairline
    * and the coachmarks' border — decoration, not a graphical object a reader
    * has to resolve to understand anything. It measures 2.78:1 on light gesso,
    * which would fail a non-text floor if one applied, and none does.
@@ -107,28 +107,11 @@ for (const [theme, get] of [
 }
 
 /*
- * And the figures DESIGN.md prints, so the document cannot drift from the
- * palette again without a red test naming the paragraph. Recomputed 2026-08-28;
- * the dark rubric row is the one this session moved.
+ * **The document no longer quotes the ratios, and this no longer checks that
+ * it does** (2026-09-08). DESIGN.md carried a paragraph of computed figures and
+ * this test held the paragraph to the palette; PLAN.md replaced it and states
+ * the *guarantee* instead — every text token clears WCAG AA on both grounds in
+ * both themes — which is what the loop above actually proves. A test that a
+ * document repeats a number the code already enforces was one more thing to
+ * keep in step, and keeping things in step by hand is what the doc cut was for.
  */
-test('DESIGN.md quotes the ratios the tokens actually produce', () => {
-  const design = readFileSync(new URL('../DESIGN.md', import.meta.url), 'utf8');
-  const quoted = [
-    ['ink/gesso light', ratio(token(LIGHT, 'ink'), token(LIGHT, 'gesso'))],
-    ['ink/field light', ratio(token(LIGHT, 'ink'), token(LIGHT, 'field'))],
-    ['ink-soft/gesso light', ratio(token(LIGHT, 'ink-soft'), token(LIGHT, 'gesso'))],
-    ['ink-soft/field light', ratio(token(LIGHT, 'ink-soft'), token(LIGHT, 'field'))],
-    ['rubric/gesso light', ratio(token(LIGHT, 'rubric'), token(LIGHT, 'gesso'))],
-    ['rubric/field light', ratio(token(LIGHT, 'rubric'), token(LIGHT, 'field'))],
-    ['ink/gesso dark', ratio(dark('ink'), dark('gesso'))],
-    ['ink-soft/gesso dark', ratio(dark('ink-soft'), dark('gesso'))],
-    ['rubric/field dark', ratio(dark('rubric'), dark('field'))],
-  ];
-  for (const [what, r] of quoted) {
-    const printed = round(r).toFixed(2);
-    assert.ok(
-      design.includes(printed),
-      `DESIGN.md does not print ${printed}:1 for ${what} — recompute the contrast paragraph`,
-    );
-  }
-});

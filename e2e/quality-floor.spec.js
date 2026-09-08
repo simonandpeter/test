@@ -47,7 +47,7 @@ for (const [label, path, prepare] of ROUTES) {
    * CLAUDE.md said so plainly ("dark mode is not covered by the axe/contrast
    * tests") and it cost a real WCAG AA failure four days of standing: dark
    * `--rubric` at 3.93:1 on the field, on the token carrying the current nav
-   * item and today's date. DESIGN.md had it recorded as a live defect the whole
+   * item and today's date. PLAN.md had it recorded as a live defect the whole
    * time. What finally said it out loud was Lighthouse, whose headless Chrome
    * happens to ask for dark — an accident, and not a thing to leave a gate
    * resting on.
@@ -151,7 +151,7 @@ for (const [label, path, prepare] of ROUTES) {
 }
 
 /*
- * Brief §13: "All colour information duplicated in text or shape." DESIGN.md
+ * Brief §13: "All colour information duplicated in text or shape." PLAN.md
  * calls this the §7 greyscale test — remove every colour and the reader loses
  * nothing — and §2 makes it the first of the three conditions that keep the
  * fast's colour-by-kind honest. It had never been audited, executably or by
@@ -311,7 +311,7 @@ test('no axe violations on the first visit, with the two marks standing', async 
    * violations at 2.71:1 on the frame this used to sample, every one of them
    * a colour that is at full strength a sixth of a second later.
    *
-   * That is *not* the mistake DESIGN.md §2 keeps catching. The peek fade
+   * That is *not* the mistake PLAN.md keeps catching. The peek fade
    * (2.1:1) and the cycle line's opacity (4.17:1) were permanent washes over
    * text a reader had to read; this is a transient that lands at full
    * strength and stays there. What the gate is for is the resting state, and

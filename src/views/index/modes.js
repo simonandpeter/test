@@ -1,3 +1,4 @@
+import { DUR } from '../../lib/motion.js';
 import { formatSubtext } from '../../lib/calendar-page.js';
 import { cardCrop } from '../../lib/hero-crop.js';
 import { observePrefetch, prefetch } from '../../lib/detail.js';
@@ -1086,7 +1087,7 @@ export function paintCarousel() {
    * keystroke inside the fade supersedes the first (the timer is cancelled and
    * the later key wins), and reduced motion skips the whole arrangement and
    * rebuilds in place, because a wait with no animation behind it is the same
-   * defect wearing a different hat (DESIGN.md §6).
+   * defect wearing a different hat (PLAN.md).
    */
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const first = state.carouselKey === null || state.carouselKey === undefined;
@@ -1107,7 +1108,7 @@ export function paintCarousel() {
 }
 
 /** How long the row takes to go before the new one is built. */
-const CX_FADE = 150;
+const CX_FADE = DUR.answer;
 
 /** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
 function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
@@ -1272,7 +1273,7 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
  * and then the mode it left behind comes up.
  *
  * Reduced motion gets the swap with no fall and no fade — removed, not
- * shortened (DESIGN.md §6).
+ * shortened (PLAN.md).
  */
 /**
  * The mode for the rest of this document's life, and no longer than that.
@@ -1349,11 +1350,11 @@ export function switchMode(next) {
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('is-arriving')));
   };
 
-  // The fade's own length, which is `--dur-slot` in index.css. The two are one
+  // The fade's own length, which is `--dur-settle` in index.css. The two are one
   // decision and drift apart the moment either is edited alone.
   const timer = setTimeout(land, CX_MODE_FADE);
   state.falling = land;
 }
 
-/** How long a face takes to go, matching `--dur-slot` in index.css. */
-const CX_MODE_FADE = 260;
+/** How long a face takes to go, matching `--dur-settle` in index.css. */
+const CX_MODE_FADE = DUR.settle;

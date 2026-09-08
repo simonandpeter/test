@@ -18,7 +18,7 @@
  * said what it allows; the page then says exactly that much and no more. The
  * one grade taken from anywhere else is `fish`, and only when liturgy.js has
  * already declared the day fish-permitted — that claim is liturgy.js's own,
- * made under DESIGN.md's "the two allowances every typikon shares", and this
+ * made under the author's "the two allowances every typikon shares", and this
  * file merely names it in the same vocabulary as the rest.
  *
  * The vocabulary, strictest first:
@@ -141,7 +141,7 @@ export function gradeFromNote(note) {
  * nothing — what the day is by default.
  *
  * **The default is new on 2026-08-26 and it is a reversal**, made at the
- * author's instruction and recorded in DESIGN.md §5b in place: *'"Fast -
+ * author's instruction, recorded in place: *'"Fast -
  * Friday" becomes "Strict Fasting", and tool tip shows "Vegan; set aside
  * meat, animal products, cooking oils and alcohol."'* Until then a fast whose
  * calendar named no allowance said only which fast it was, on the ground that

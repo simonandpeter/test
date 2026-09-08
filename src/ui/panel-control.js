@@ -2,7 +2,7 @@
  * A header control that opens a panel beneath the bar (2026-09-05).
  *
  * The calendar control and the language control were one piece of machinery
- * written twice — `docs/CLEANUP-PLAN.md` item 4 diffed them line by line: the
+ * written twice, and diffing them line by line found the same code twice: the
  * open/close state, the flight bookkeeping, the outside press, the Escape, the
  * `aria-expanded` handling and the guarded hide-and-empty were the same code,
  * and the language chooser's own comments said so ("the same flight home the

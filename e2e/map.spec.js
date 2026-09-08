@@ -30,7 +30,46 @@ import { ready, TRACKED } from './helpers.js';
  * anyway — so the page is the picture and the timeline under it.
  */
 
+/**
+ * **A minute a test here, where the rest of the suite gets thirty seconds.**
+ *
+ * A calibration, not a concession: this file's subject is a canvas painting a
+ * terrain grid at up to 240x, and its heaviest tests take four to thirteen
+ * seconds run alone. Beside five other workers they crossed the 30 s default
+ * and read as failures, which is most of how this file came to hold 40 of the
+ * 61 failures this desk has ever seen. Every assertion is the one it was.
+ */
+test.beforeEach(({}, testInfo) => testInfo.setTimeout(60_000));
+
 const MAP = '/map';
+
+/**
+ * **Never `waitUntil: 'networkidle'` on this route.** `warmTerrainTiles` walks
+ * the whole 158-file, 6 MB grid one fetch at a time on idle, exactly as it
+ * should for a reader, so `networkidle` sits through all of it: 2,648 ms
+ * against 192 ms for this (measured 2026-09-09). `data-land="ok"` is the
+ * readiness these tests mean, and 51 of the 76 asserted it on the next line
+ * anyway.
+ */
+const openMap = async (page) => {
+  /*
+   * `saveData` is `warmTerrainTiles`'s own off switch, and the reason to reach
+   * for it rather than `page.route` is that this suite runs with the service
+   * worker registered, whose requests a route never sees. Six workers pulling
+   * the grid concurrently through one `vite preview` was the load that kept
+   * these tests at the timeout even after it was raised to a minute. The
+   * on-demand path is untouched, so every test about what the tiles *draw*
+   * still draws them.
+   */
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'connection', {
+      configurable: true,
+      get: () => ({ saveData: true }),
+    });
+  });
+  await page.goto(MAP, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-map][data-land="ok"]').waitFor();
+};
 
 /**
  * Waits for a zoom flight to actually land, by polling the readout rather
@@ -104,16 +143,25 @@ const zoomedToCeiling = async (page) => {
   const canvas = page.locator('[data-map]');
   await canvas.focus();
   /*
-   * **A press eases now (2026-09-04)**, so this waits for one flight to land
-   * before the next press aims a new one — a press mid-flight re-targets from
-   * wherever the view currently is, not from where the last press aimed, so a
-   * tight loop with nothing between presses barely moves the scale.
+   * **A press eases (2026-09-04)**, and a press mid-flight re-targets from
+   * wherever the view has reached rather than from where the last one aimed —
+   * so a burst of presses climbs less per press than a settled one does, and a
+   * loop that settles between every press pays a 450 ms flight twenty-five
+   * times. That was 14 s of a 30 s budget before anything under test ran, and
+   * it is why the four tests that call this were the last ones still timing
+   * out (2026-09-09).
+   *
+   * Bursts instead: ten presses, then one settle, until the ceiling disables
+   * the control. Getting there is setup for the callers — `the map can zoom to
+   * its ceiling` is its own test — so what matters is only that we arrive and
+   * that the picture has stopped, both of which are still asserted below.
    */
-  for (let i = 0; i < 25 && !(await page.locator('[data-zoom="in"]').isDisabled()); i++) {
-    await canvas.press('+');
+  const zoomIn = page.locator('[data-zoom="in"]');
+  for (let burst = 0; burst < 12 && !(await zoomIn.isDisabled()); burst += 1) {
+    for (let i = 0; i < 10; i += 1) await canvas.press('+');
     await settledZoom(page);
   }
-  await expect(page.locator('[data-zoom="in"]'), 'the map never reached its ceiling').toBeDisabled();
+  await expect(zoomIn, 'the map never reached its ceiling').toBeDisabled();
   const scale = await zoomScale(page);
   expect(scale, 'the ceiling came in under the desktop one').toBeGreaterThanOrEqual(240);
   return scale;
@@ -125,7 +173,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('the map draws its coastline, and says so when it has', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   const canvas = page.locator('[data-map]');
   await expect(canvas).toBeVisible();
@@ -165,7 +213,7 @@ test('a faint atlas layer names the old cities and regions under the saints', as
    * of which of them actually landed this frame — the same "the pass that
    * draws is the pass that knows" rule `data-dots`/`data-labels` keep.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -230,7 +278,7 @@ test('one dot per located saint, and the picture says so', async ({ page }) => {
    * "the count matches the picture" but "every located saint is on it" —
    * the timeline dims rather than removes, so at rest that is all of them.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -258,7 +306,7 @@ test('the timeline dims what it excludes rather than removing it', async ({ page
    * and change only how the dots are drawn — the exact opposite of what the
    * timeline did when it shipped, which is why this is worth pinning.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -294,7 +342,7 @@ test('the page is the map and its timeline, and nothing else read', async ({ pag
    * not contradict "nothing else", and the test now checks for it rather than
    * against it.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   for (const gone of ['.map-below', '.map-places', '.map-unlocated', '[data-map-facets]', '[data-map-lede]']) {
     await expect(page.locator(gone)).toHaveCount(0);
@@ -396,7 +444,7 @@ const mapInk = (page) =>
   });
 
 test('the whole world is the way out, and the map says so before you move', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
   /*
@@ -414,7 +462,7 @@ test('the whole world is the way out, and the map says so before you move', asyn
 });
 
 test('the buttons zoom, and the keyboard comes home', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   await page.locator('[data-zoom="in"]').click();
   await page.locator('[data-zoom="in"]').click();
@@ -438,7 +486,7 @@ test('the buttons zoom, and the keyboard comes home', async ({ page }) => {
 
 test('the scale readout is the whole of the indicator, and reads like a scale', async ({ page }) => {
   // Author, 2026-08-31: "Display instead a small scale indicator e.g. '4.9x'".
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const level = page.locator('[data-zoom-level]');
   await expect(level).toBeVisible();
   await expect(level).toHaveText(/^\d+\.\d×$/);
@@ -456,7 +504,7 @@ test('a bare wheel zooms the map, in and out, no modifier held', async ({ page }
    * with everything below the map removed there is no page to scroll past,
    * so the wheel has exactly one honest meaning left and it takes it.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   const box = await canvas.boundingBox();
@@ -495,7 +543,7 @@ test('a wheel zoom holds the point under the pointer still, not merely the end o
    * at the end, which is the only way a claim about *every* frame can be
    * checked at all.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -550,7 +598,7 @@ test('a mouse drag settles at exactly the distance the pointer moved', async ({ 
    * here, which is exactly the kind of timing assertion this file's own
    * CLAUDE.md warns reads as a product bug near a threshold.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   /*
@@ -615,7 +663,7 @@ test('a touch drag tracks the finger exactly, with no lag to settle', async ({ p
    * going through the browser's real input pipeline rather than only the
    * DOM's event dispatch.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   // Constantinople, then zoomed in twice more, for the same reason the
@@ -668,7 +716,7 @@ test('two fingers held the same distance apart still pan the map as they walk to
    * premise of the test, not an incidental fact about it, and only the pan
    * half of the fix is under test.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   /*
@@ -737,7 +785,7 @@ test('touch belongs to the map, because there is no page left to scroll', async 
    * reserved for — the map takes touch always, and the header above it is
    * still the way out.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveCSS('touch-action', 'none');
 
@@ -756,7 +804,7 @@ test('the keyboard works the map, not only the pointer', async ({ page }) => {
    * pixels rather than on any state the page reports, because "the arrow key
    * was handled" and "the map moved" are different claims.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
 
   await canvas.focus();
@@ -784,7 +832,7 @@ test('zooming does not move the page under the reader', async ({ page }) => {
    * no-layout-shift, which a control that resized its own picture would break
    * on every press.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   const before = await canvas.boundingBox();
 
@@ -826,7 +874,7 @@ test('the world is not stretched to fit the window', async ({ page }) => {
    * measures the same as a degree of latitude at the equator, which is the one
    * thing Mercator guarantees and the one thing a stretch would break.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   const shape = await page.locator('[data-map]').evaluate((el) => {
     const box = el.getBoundingClientRect();
@@ -846,7 +894,7 @@ test('names arrive with the zoom, and not before', async ({ page }) => {
    * density the corpus can exercise.
    */
   await ready(page);
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -897,7 +945,7 @@ test('the map can zoom to its ceiling', async ({ page }) => {
   // of 24) and matched to a doubled ceiling the next time (2026-09-01, 240
   // against `PRECISION`'s own hundredth-of-a-degree rounding) rather than
   // left to outrun it again.
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await zoomedToCeiling(page);
 });
 
@@ -913,7 +961,7 @@ test('panning past the desktop ceiling does not snap the zoom back to it', async
    * keyboard reaches the same `panBy` call a touch drag does, and needs no
    * synthetic pointer gymnastics to prove the fix.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const before = await zoomedToCeiling(page);
   await page.locator('[data-map]').press('ArrowLeft');
   const after = await zoomScale(page);
@@ -932,7 +980,7 @@ test('a press selects the saint and a drag does not, and Profile is the door', a
    * press, the same rule the carousel's click-swallow keeps.
    */
   await ready(page);
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1010,7 +1058,7 @@ const timelineReadout = async (page) => {
 };
 
 test("the timeline spans the located corpus's own years, unfiltered at rest", async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   const timeline = page.locator('.map-timeline');
   await expect(timeline).toBeVisible();
@@ -1037,7 +1085,7 @@ test("the timeline spans the located corpus's own years, unfiltered at rest", as
 });
 
 test('dragging a handle narrows the range, and Whole span undoes it', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1083,7 +1131,7 @@ test('the thumb answers to a mouse drag, not only the keyboard', async ({ page }
    * it, so this reads the thumb's own position from the input's value rather
    * than guessing where on the track it currently sits.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const toInput = page.locator('[data-timeline-to]');
   const box = await toInput.boundingBox();
 
@@ -1109,7 +1157,7 @@ test('the thumb answers to a mouse drag, not only the keyboard', async ({ page }
 });
 
 test('the timeline holds the range for the visit, the way the kind does', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   const toHandle = page.locator('[data-timeline-to]');
   await toHandle.focus();
@@ -1136,7 +1184,7 @@ test('dragging the highlighted span moves both handles together, and keeps their
    * besides the two handles, for panning the same-length window across the
    * years rather than resizing it one edge at a time.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   // Narrow both handles first so the span sits clear of both walls —
   // dragging with either edge still pinned at its bound would correctly go
@@ -1172,7 +1220,7 @@ test('dragging the highlighted span moves both handles together, and keeps their
 });
 
 test('dragging the highlighted span past a bound stops there, still holding the width', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   // The range's own floor, read off the handle rather than a printed bound
   // (the bounds became typed year boxes on 2026-08-31).
   const min = Number(await page.locator('[data-timeline-from]').getAttribute('min'));
@@ -1207,7 +1255,7 @@ test('the map draws its rivers and lakes alongside the coastline', async ({ page
    * and `data-water` is this pass's own report that the fetch landed and the
    * paint used it — the same rule `data-land` already keeps.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(canvas).toHaveAttribute('data-water', 'ok');
@@ -1227,7 +1275,7 @@ test('the rest view is centred on the corpus, not on the equator and the prime m
    * zoom — only that the ordinary case, a reader who presses + a few times
    * without first panning, still has a map with saints on it.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1257,7 +1305,7 @@ test('two saints who share an exact spot are one mark that says how many', async
    * further out the reader went. One mark on the true coordinate, carrying the
    * count, is what replaced it.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1283,7 +1331,7 @@ test('zooming in splits a merged mark into the saints under it', async ({ page }
    * which the ring-fan never did, its spread being in pixels rather than on
    * the ground.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1342,7 +1390,7 @@ test('saints spread from one coordinate stay a tight constellation, not a wheel'
    * one spot — which is what sent Constantinople's crowd across the Bosphorus
    * when the offset was a fixed number of screen pixels.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1412,7 +1460,7 @@ test('the search finds a place and flies the map to it', async ({ page }) => {
    * on the map ... You can also search for places, e.g. ukraine, russia,
    * romania, france, constantinople, antioch, alexandria, damascus."
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
   await expect(page.locator('[data-zoom-level]')).toHaveText('1.0×');
 
@@ -1429,7 +1477,7 @@ test('the search finds a place and flies the map to it', async ({ page }) => {
 });
 
 test('the search finds a saint by name, and says so for a reader who cannot see the map', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
 
   await searchBox(page).fill('moses the hung');
@@ -1443,7 +1491,7 @@ test('the search finds a saint by name, and says so for a reader who cannot see 
 });
 
 test('the search is a real combobox: arrows move, Escape closes', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const box = searchBox(page);
   await expect(box).toHaveAttribute('aria-expanded', 'false');
 
@@ -1467,7 +1515,7 @@ test('the two ends swap themselves when an earlier year is typed on the right', 
    * the left side, the timeline adjusts so that right side entry goes to the
    * left and vice versa."
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   // Typing is behind the button now (author, same day: "make the start and
   // end date a button of fixed width and make the AD BC selector part of
@@ -1493,7 +1541,7 @@ test('the year buttons hold one width whatever year they show', async ({ page })
    * between them jumped every time a year gained or lost a digit — which is
    * the thing a fixed width is for, and the thing worth measuring.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const from = page.locator('[data-year-btn="from"]');
   const to = page.locator('[data-year-btn="to"]');
 
@@ -1525,7 +1573,7 @@ test('the year buttons hold one width whatever year they show', async ({ page })
 });
 
 test('the year panel carries the BC/AD choice, and a press elsewhere puts it away', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const btn = page.locator('[data-year-btn="from"]');
   const pop = page.locator('[data-year-pop="from"]');
 
@@ -1551,7 +1599,7 @@ test('a preset span sets both ends, and an event becomes its own window', async 
    * choosing it must land on 275–375 — the clearest proof the margin is
    * applied rather than the year being used as both ends.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await page.locator('[data-timeline-preset]').selectOption('nicaea');
 
   const read = await timelineReadout(page);
@@ -1570,7 +1618,7 @@ test('a crowded cluster names every dot rather than only the leftmost', async ({
    * The layout itself is pinned in `tests/map-labels.test.mjs`; this is the
    * proof it is wired to the real picture.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1594,7 +1642,7 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
    * every row in it fits — and `tests/map-labels.test.mjs` pins the
    * arithmetic. This is the proof against the real picture at the real zoom.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1654,7 +1702,7 @@ test('the year buttons follow the span as it is dragged, not only when it is let
    * the picture but not the two ends, because painting the ends was a second
    * function only `commit` called. They are one function now.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
 
   // Narrow first, so the span has somewhere to slide to.
   const fromHandle = page.locator('[data-timeline-from]');
@@ -1689,7 +1737,7 @@ test('the timeline prints no count of its own any more', async ({ page }) => {
    * range by the year buttons, the count by nothing the reader needed once
    * the timeline began dimming rather than removing.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await expect(page.locator('[data-timeline-readout]')).toHaveCount(0);
   await expect(page.locator('.map-timeline')).not.toContainText(/shown/i);
   // The preset list, which shared that row, is still there.
@@ -1707,7 +1755,7 @@ test('a saint whose birth is only bounded from above is not lit centuries early'
    * `lifeBounds` (`lib/map-track.js`) falls back to the bound the corpus
    * actually states.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1730,7 +1778,7 @@ test('the play button and the speed selector arrive with Movement', async ({ pag
    * meant to *fade* — they are in the document either way, and a test reading
    * the attribute would pass with the fade backed out.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const run = page.locator('[data-motion-only]');
   const box = page.locator('[data-movement]');
 
@@ -1776,7 +1824,7 @@ test('only the saints the range reaches carry a halo', async ({ page }) => {
    * is no element to ask, and a pixel under a dot is the coastline, the layer
    * and the dot together.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1815,7 +1863,7 @@ test('a saint not yet born is drawn in ink rather than in rubric', async ({ page
    * whatever the coastline, the halo layer and the dot together left there.
    * `hue` is the fill the pass actually chose.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1856,7 +1904,7 @@ test('a saint not yet born is a dot with no name on it', async ({ page }) => {
    * named at the zoom the search lands on, and all of them plainly unborn in
    * the year 100.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -1906,7 +1954,7 @@ test('a saint with a dated track moves along it as the timeline crosses his life
    * `tests/map-track.test.mjs` pins that arithmetic. This is the proof the
    * picture actually moves him.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2058,7 +2106,7 @@ test('a press centres the map on the saint’s whole rail, then walks it', async
    * level: the rail is what the picture is centred on, and the whole of it
    * is on the picture once the flight lands.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2119,7 +2167,7 @@ test('the chosen saint walks their whole rail once, and then stands where the ma
    * throughout, and the timeline is never touched, so nothing here is the
    * other mechanic doing its job.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(page.locator('[data-movement]')).not.toBeChecked();
@@ -2150,7 +2198,7 @@ test('the path and the button go when the reader clicks away', async ({ page }) 
    * "away" means here — not a press on the timeline, which is how a reader
    * watches the saint they have just chosen move.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2195,7 +2243,7 @@ test('the chosen saint is named whatever the zoom, since the button sits beside 
    * selection names its saint whatever the zoom, and that is the one name on
    * the picture until the reader zooms in or lets go.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2278,7 +2326,7 @@ test('a name is a press target, not only the dot under it', async ({ page }) => 
    * 2.5 px — and pressing it used to find nothing at all, which since the
    * same day means letting go of whoever was chosen.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2331,7 +2379,7 @@ test('the dot slides along the track rather than jumping when the year leaps', a
    * pixels. `railAt` eases the drawn position toward the year's own, so a
    * leap in years is a glide on the picture.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2378,7 +2426,7 @@ test('the map rests at each saint until the reader asks for movement', async ({ 
    * walking sixty-nine dots around the picture was answering a question they
    * had not asked.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(page.locator('[data-movement]')).not.toBeChecked();
@@ -2402,7 +2450,7 @@ test('the map rests at each saint until the reader asks for movement', async ({ 
 });
 
 test('ticking Movement walks the saints, and unticking sends them back', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2437,7 +2485,7 @@ test('play is offered only once there is something to watch move', async ({ page
    * selected." Playing the years with nothing moving is the timeline dimming
    * on a clock, which a drag already does.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const play = page.locator('[data-play]');
   await expect(play).toBeVisible();
   await expect(play).toBeDisabled();
@@ -2470,7 +2518,7 @@ test('play walks the watched year at a year a second, and leaves the selection w
    * they were; what is new is the last line, which says the selection did not
    * move at all.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await tickMovement(page);
@@ -2511,7 +2559,7 @@ test('the watched year is a triangle inside the selection, dragged and pushed', 
    * handles, a drag of the fill, a typed year and a preset. Two of those five
    * are exercised below; the rule is one line and they reach it together.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
 
   const head = page.locator('[data-playhead]');
@@ -2562,7 +2610,7 @@ test('the watched year is a triangle inside the selection, dragged and pushed', 
 });
 
 test('taking hold of the timeline stops the playback', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   await expect(page.locator('[data-map]')).toHaveAttribute('data-land', 'ok');
   await tickMovement(page);
   await typeYear(page, 'from', '1000');
@@ -2617,7 +2665,7 @@ test('the dead keep their dot and lose their name until the box is ticked', asyn
    * dot, which the timeline has left standing since it began dimming rather
    * than removing on 2026-08-31.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2652,7 +2700,7 @@ test('the dead keep their dot and lose their name until the box is ticked', asyn
 });
 
 test('the unborn box is the same bargain, and both start unticked', async ({ page }) => {
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2698,7 +2746,7 @@ test('a crowd prints the name the Daily page would lead with', async ({ page }) 
    * is that the mark is one of those two, whichever way their own tie falls,
    * and never one of the other three.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2744,7 +2792,7 @@ test('choosing a saint pushes every other saint back', async ({ page }) => {
    * every mark reads 1, which is what makes a broken version fail rather
    * than pass by absence.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2781,7 +2829,7 @@ test('a saint moving along their rail is named while they move', async ({ page }
    * so this is the ranking tier itself rather than the selection's, which
    * would name him anyway.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2906,7 +2954,7 @@ test('a second saint has a trail now, and it is walked like the first', async ({
    * Chrysostom's four stays, Antioch to Constantinople to Cucusus to the road
    * he died on, are in his `saint.json` and reach the picture.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
   await expect(canvas).toHaveAttribute('data-rails', '0');
@@ -2943,7 +2991,7 @@ test('the rest of the map fades back with the flight, and fades in again on rele
    * moving. This asks for a frame where the map is still on its way (nothing
    * selected yet) and the others have already begun to go.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -2976,6 +3024,32 @@ test('the rest of the map fades back with the flight, and fades in again on rele
 
 
 /* ---- two coastlines, one for each end of the zoom (2026-09-01) ----------- */
+
+/**
+ * For the tests whose subject *is* the background warm-up: the fast wait, but
+ * without `openMap`'s `saveData` stamp, since turning the warmer off is
+ * exactly what they would then fail to observe.
+ */
+const openMapWarming = async (page) => {
+  await page.goto(MAP, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-map][data-land="ok"]').waitFor();
+};
+
+/**
+ * The two tests that are *about* the loaders keep a network-based wait.
+ *
+ * `openMap` returns as soon as the coastline is drawn, which is what the other
+ * 74 tests mean by "the map is up". These two mean something else: one waits
+ * for the fine coastline to have been fetched, the other for a tile to have
+ * been asked for at all — and the tile warmer runs on `requestIdleCallback`,
+ * so a test that starts pressing keys immediately can deny it an idle frame
+ * indefinitely. `networkidle` is the right wait here precisely because the
+ * network *is* the subject.
+ */
+const openMapLoaded = async (page) => {
+  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await page.locator('[data-map][data-land="ok"]').waitFor();
+};
 
 test('the map opens on the coarse coastline and fetches the fine one only past its own threshold', async ({ page }) => {
   /*
@@ -3016,7 +3090,7 @@ test('the map opens on the coarse coastline and fetches the fine one only past i
     if (/^land-|^water-/.test(file)) asked.push(file);
   });
 
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMapLoaded(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3112,7 +3186,7 @@ test('terrain tiles start loading in the background as soon as the map opens, be
     };
   });
 
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMapWarming(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3191,7 +3265,7 @@ test('the land keeps its own ink when a terrain tile never arrives', async ({ pa
    * same context so it does *not* inherit the init script above.
    */
   const flyToConstantinople = async (p) => {
-    await p.goto(MAP, { waitUntil: 'networkidle' });
+    await openMapLoaded(p);
     const c = p.locator('[data-map]');
     await expect(c).toHaveAttribute('data-land', 'ok');
     /*
@@ -3290,7 +3364,7 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
    * coordinate, the only place today over `BLOB_MAX` (8) — so this flies
    * there rather than building a synthetic fixture.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3335,7 +3409,7 @@ test('a coordinate at or under BLOB_MAX never blobs, however deep the zoom', asy
   // Constantinople's own located company is five — under the cap, so it is
   // named exactly as it always was: every one of the five, once it is the
   // saint the picture is centred nearest.
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3368,7 +3442,7 @@ test('panning the crowd off screen closes its blob, and panning it back opens on
    * reliably is the coarser claim — that the mechanism reads the *screen*,
    * not a position frozen at the press that opened it.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3420,7 +3494,7 @@ test('hovering a blob on a mouse previews it, and moving away returns to what th
    * mouse over a neighbouring blob would have quietly changed which one the
    * picture keeps open.
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3459,7 +3533,7 @@ test('a touch resting on a blob does not open it the way a mouse hovering it doe
   // The same guard `wireSaintSwipe` needed for `pointerType` elsewhere on
   // this site: a finger has no hover, and a synthetic touch pointermove
   // must not open a blob it has only come to rest on before lifting.
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
@@ -3520,7 +3594,7 @@ test('clicking a blob centres the picture on it smoothly, the way a rail does', 
    * `hit.blobId === openBlobId` check is what keeps that press pointed at
    * the blob instead).
    */
-  await page.goto(MAP, { waitUntil: 'networkidle' });
+  await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 

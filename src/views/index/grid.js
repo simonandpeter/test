@@ -490,7 +490,7 @@ export function card(item, router, { rows = false, detailed = false } = {}) {
   // the image is clickable without a second link that has no accessible name
   // of its own. The bookmark sits above that ::after, so pressing it saves
   // rather than opens. (The veneration glyph stood beside the name in this
-  // line until 2026-08-22 — DESIGN.md §2.)
+  // line until 2026-08-22 — PLAN.md.)
   const body = `<span class="name-line">
       <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(saintName(item))}</a>
     </span>
