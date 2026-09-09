@@ -1043,10 +1043,32 @@
 }
 
 .cal-main,
-.cal-side {
+.cal-side,
+/* The bubble's three boxes dissolve with them, and they have to: `order` moves
+   a flex container's own children and nothing deeper, so a wrapper left
+   standing here would take the picker and the sections out of the run being
+   sorted and drop them back into it as one lump, in document order. */
+.cal-bubble,
+.cal-bubble-fill,
+.cal-bubble-scroll {
   display: contents;
 }
 
+/* Neither is drawn below 1024 px. The head is empty here — the chrome controls
+   it holds past the breakpoint stay in the site's own bar — and the four
+   crosses stand in a notch that is not cut at this width. `display: none`
+   rather than `contents`: `contents` on four empty spans is four flex items of
+   nothing between the picker and the date. */
+.cal-bubble-head,
+.cal-notch {
+  display: none;
+}
+
+/* **Unchanged by the bubble, and that is the point.** The document is
+   `.cal-main` then `.cal-bubble` since 2026-09-10, where it was picker, main,
+   side; but every one of these six is still a child of `.cal` here, because
+   the five wrappers above have no boxes. The phone's reading order is these
+   six numbers and it did not move. */
 .cal-controls { order: 0; }
 .cal-head { order: 1; }
 .cal-liturgy { order: 2; }
@@ -1059,11 +1081,25 @@
      prose is not a measure. Every route takes the same wide measure now
      (base.css), so this only has to say the shape. */
 
-  /* **The right column's floor is the week.** Seven day buttons, two
-     shoulders and the month toggle need about 400 px, and at 330 the rail
-     showed six days and the month grid would not unfurl at all. The left
-     column takes all the slack, which is what "adaptive to the window size"
-     asked for.
+  /* **19 rem — 304 px — and what makes that safe is that nothing in the
+     column is the week's any more** (docs/daily-desktop-visuals.md §2.1,
+     step 5 of §10.12).
+
+     This read "the right column's floor is the week" until 2026-09-10, and
+     the floor it named was 400 px: seven day buttons, two shoulders and the
+     month toggle, with 330 px recorded as the width at which the rail showed
+     six days and the month grid would not unfurl at all. None of those three
+     is here now. The toggle went on 2026-09-02 with the rail itself
+     (`wireGrainForWidth`), and the two peeked columns — a neighbouring
+     month's Sundays and Mondays standing *outside* the seven, at
+     `--cal-peek` each — went on 2026-09-10, when the days either side came
+     inside the grid on its own rows. What is left in the column is a
+     seven-column grid, and it is measured rather than argued: 304 px of
+     column less the bubble's 16 px of padding either side is 272 px of grid,
+     which at 1 px of column gap is 38 px cells.
+
+     The left column takes all the slack, which is what "adaptive to the
+     window size" asked for.
 
      **Fixed, not `clamp(25rem, 28%, 30rem)`** (2026-09-04, author: "when
      resizing the window on desktop, the columns shake ... make sure the
@@ -1079,15 +1115,19 @@
      fixed right column is what actually keeps that promise rather than
      sharing it out in the middle of the range. */
   .cal {
-    --day-cols: minmax(0, 1fr) 28rem;
+    --day-cols: minmax(0, 1fr) 19rem;
     --day-gap: var(--space-8);
     display: grid;
     grid-template-columns: var(--day-cols);
-    /* Two rows: whatever the picker needs, and everything else. The left
-       column spans both, which is the whole of "only the right column moves
-       down to make room for the expanded calendar" — the month grows row 1,
-       row 2 shrinks under it, and a box spanning the pair keeps its top. */
-    grid-template-rows: auto minmax(0, 1fr);
+    /* One row, since 2026-09-10. It was two — `auto minmax(0, 1fr)`, the
+       picker in the first and the sections in the second, so that "only the
+       right column moves down to make room for the expanded calendar" was the
+       row growing under a left column that spanned both. The month and the
+       sections are one scroller inside the bubble now (§3.1), so there is no
+       second row for the month to grow *into*: it grows inside the scroll and
+       the sections move under it there, which is the same promise kept by the
+       box rather than by the grid. */
+    grid-template-rows: minmax(0, 1fr);
     column-gap: var(--day-gap);
     /* The columns own the scrolling, so the grid is exactly the height it is
        given and never more. */
@@ -1098,8 +1138,14 @@
      independently scrollable"). `min-height: 0` is what makes that work at
      all: a grid item's default floor is its content, so without it the box
      grows to fit the day and the page scrolls instead of the column. */
+  /* **The right column's scroller moved inside the bubble on 2026-09-10**
+     (docs/daily-desktop-visuals.md §3.1). The corners are bitten out of the
+     box the fill is on, and a corner cut off a scroller is a corner the reader
+     can scroll away from — so the clipped box stays put and the scrolling
+     happens in a child of it. The claim below is unchanged; only the box in
+     column two that carries it is. */
   .cal-main,
-  .cal-side {
+  .cal-bubble-scroll {
     display: block;
     min-width: 0;
     min-height: 0;
@@ -1118,7 +1164,155 @@
 
   .cal-main {
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
+  }
+
+  /*
+   * **The bubble** — docs/daily-desktop-visuals.md §3.1, step 5 of §10.12.
+   * The right column is one filled box with a 20 px square bitten out of each
+   * corner and a cross of the same fill standing in the bite.
+   *
+   * `.cal-bubble` is the grid item, and it carries nothing but the positioning
+   * context: the four crosses are drawn on the page's own ground, *outside*
+   * the clip, and an ancestor of the clipped box is the only place they can
+   * be. It is also where anything that must escape the clip belongs — the
+   * chooser panels, in step 6 (§10.9).
+   *
+   * `grid-row: 1` and `grid-column: 2` are stated rather than left to flow.
+   * The document order is `.cal-main` then `.cal-bubble` now (views/calendar.js
+   * says why), and explicit placement is what makes that a free choice: the
+   * columns are where they are said to be, whichever order they are written
+   * in.
+   */
+  .cal-bubble {
+    /* The bite, in one place: the polygon below and the four crosses all read
+       it, so the notch is one number rather than nine. */
+    --notch: 20px;
+    /* Undoing the `display: contents` above, and it has to be said: without it
+       the fill becomes the grid item, the placement below applies to nothing,
+       and the four crosses — absolutely positioned, with no positioned
+       ancestor left — land on the viewport's own corners. Measured, on the
+       first render of this box. */
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  /* The head the chrome controls move into in step 6. Empty until then, so it
+     is a box of no height; it is here rather than in step 6 because the fill's
+     column is head-then-scroller and a stylesheet that only describes half of
+     that is a stylesheet nobody can read. */
+  .cal-bubble-head {
+    display: block;
+  }
+
+  /*
+   * The fill and the clip, and nothing else may join them: a `clip-path` here
+   * cuts every descendant, wherever it is positioned, so this box is the whole
+   * of what the bubble hides and the boundary anything is measured against.
+   *
+   * **No `overflow: hidden`** (§10.9) — the notches are the only clipping this
+   * box does, and a panel that overruns the bottom edge is allowed to.
+   *
+   * The polygon is §3.1's twelve points: across the top between the two bites,
+   * out and down the right edge, back along the bottom, up the left. Every
+   * `100%` is the box's own, so a resize costs nothing.
+   */
+  .cal-bubble-fill {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-4);
+    box-sizing: border-box;
+    background: var(--bub);
+    clip-path: polygon(
+      var(--notch) 0,
+      calc(100% - var(--notch)) 0,
+      calc(100% - var(--notch)) var(--notch),
+      100% var(--notch),
+      100% calc(100% - var(--notch)),
+      calc(100% - var(--notch)) calc(100% - var(--notch)),
+      calc(100% - var(--notch)) 100%,
+      var(--notch) 100%,
+      var(--notch) calc(100% - var(--notch)),
+      0 calc(100% - var(--notch)),
+      0 var(--notch),
+      var(--notch) var(--notch)
+    );
+  }
+
+  /* The month and the sections travel together under a head that stays put
+     (§10.9). `min-height: 0` is on the shared rule above; this is only the
+     share of the fill it is allowed to take. */
+  .cal-bubble-scroll {
+    flex: 1;
+  }
+
+  /*
+   * **The four crosses**: the box's own substance turned inside out. 20 px
+   * boxes standing in the 20 px bites, arms 3 px thick and inset 2 px, drawn
+   * in `--bub` on the page's ground.
+   *
+   * Centred by a half-pixel translate rather than by `calc(50% - 1.5px)`: the
+   * two are the same arithmetic, and the translate keeps the 1.5 beside the 3
+   * it is half of.
+   */
+  .cal-notch {
+    display: block;
+    position: absolute;
+    width: var(--notch);
+    height: var(--notch);
+    /* Four 20 px boxes standing over the page at the corners of a column the
+       reader is about to press things in. They are decoration; a press near a
+       corner belongs to whatever is under them. It is also what lets a test
+       ask where the clip is by hit-testing the bite. */
+    pointer-events: none;
+  }
+
+  .cal-notch::before,
+  .cal-notch::after {
+    content: '';
+    position: absolute;
+    background: var(--bub);
+  }
+
+  .cal-notch::before {
+    top: 2px;
+    bottom: 2px;
+    left: 50%;
+    width: 3px;
+    transform: translateX(-1.5px);
+  }
+
+  .cal-notch::after {
+    left: 2px;
+    right: 2px;
+    top: 50%;
+    height: 3px;
+    transform: translateY(-1.5px);
+  }
+
+  .cal-notch-tl {
+    top: 0;
+    left: 0;
+  }
+
+  .cal-notch-tr {
+    top: 0;
+    right: 0;
+  }
+
+  .cal-notch-bl {
+    bottom: 0;
+    left: 0;
+  }
+
+  .cal-notch-br {
+    bottom: 0;
+    right: 0;
   }
 
   /* The date and its two steps share a line, the steps against the right edge
@@ -1165,27 +1359,23 @@
     color: var(--ink);
   }
 
-  /* Top of the right column, above the readings that come with the day.
-
-     **And it takes the phone's own peek there, for the phone's own reason.**
-     `--cal-peek` is 44 px because the author asked for more of the Sunday
-     either side to show past the fade (2026-08-25) — a promise about a rail
-     running the width of the page, which this one no longer does. In a
-     column of about 400 px the same 24 px the rail takes below 560 px gives
-     the seven days back what they need, on the same reasoning written
-     there — a narrow rail is scrolled rather than read across. */
+  /*
+   * The top of the bubble's scroller rather than a grid row of its own, since
+   * 2026-09-10: the picker and the sections are one column of content now, so
+   * the space between them is this margin and nothing else. 16 px, which is
+   * the spacer the mockup keeps there (§3.1); it was `--space-3` inherited
+   * from the phone.
+   *
+   * **`--cal-peek`, `--cal-gutter`, `--rail-inset` and a flex `gap` were
+   * declared here and are not any more.** All four fed boxes this width does
+   * not draw: the peeked columns and their gaps went in step 3 (2026-09-10),
+   * the week rail and the month toggle on 2026-09-02, and `.month-name` is
+   * `position: static` here, so the gutter it used to print into is not a box
+   * either. Four numbers nothing reads are four numbers the next reader has to
+   * disprove before touching anything near them.
+   */
   .cal-controls {
-    grid-column: 2;
-    grid-row: 1;
-    --cal-peek: 24px;
-    /* **No 34 px column for the toggle any more** (author, 2026-09-02: "remove
-       the monthly button completely ... make it take up the whole width of the
-       right hand column instead of allowing a column for the old monthly
-       display button"). The gutter the month prints its name into is the peek
-       and the row's gap, and nothing else. */
-    --cal-gutter: calc(var(--space-2) + var(--cal-peek));
-    --rail-inset: calc(var(--cal-peek) + var(--space-1));
-    gap: var(--space-2);
+    margin-bottom: var(--space-4);
   }
 
   /*
@@ -1336,9 +1526,12 @@
     min-width: 26px;
   }
 
+  /* Inside the bubble's scroller, under the picker. It keeps a box of its own
+     — the desktop rules below reach the day panel through it — and has nothing
+     left to do but not be `display: contents`. */
   .cal-side {
-    grid-column: 2;
-    grid-row: 2;
+    display: block;
+    min-width: 0;
   }
 
   /*
@@ -2837,14 +3030,19 @@ a.name-day:hover {
     left: 0;
   }
 
-  /* The way out of the calendar, on the calendar's own heading. It keeps its
-     words (author, 2026-09-02: "change to 'Open Fullscreen'") and gives up the
-     row it had below the grid. */
+  /* The way out of the calendar, on the calendar's own heading: a mark since
+     2026-09-10 (§10.13), where it printed "Open Fullscreen" from 2026-09-02.
+     The words are its `aria-label` and its `title` — views/daily/fullcal.js
+     says why they came off the page and what they cost while they were on it.
+     `line-height: 0` because a 13 px mark in a line box a whole line tall
+     would push the head's own baseline. */
   html[data-route='calendar'] .month-head .fullcal-open {
+    display: inline-flex;
+    align-items: center;
     margin-top: 0;
     padding: 0;
     flex: none;
-    white-space: nowrap;
+    line-height: 0;
   }
 
   /*

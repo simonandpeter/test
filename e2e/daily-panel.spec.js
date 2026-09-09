@@ -2754,10 +2754,19 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
    * They no longer start on one line, and that is the layout rather than a
    * drift: the picker took the top of the right column on 2026-09-01, so the
    * readings begin under it while the left column starts at the top of the
-   * page. What has to be level is the *picker* and the left column.
+   * page. What has to be level is the *column* and the left column.
+   *
+   * **`.cal-bubble` and not `.cal-controls` since 2026-09-10.** The picker is
+   * inside the bubble's padding now, sixteen pixels down, so the two boxes
+   * that are grid items in the same row are what can be asked to agree — and
+   * being grid items they agree exactly rather than within four pixels.
    */
+  const bubble = await boxOf('.cal-bubble');
+  expect(Math.abs(bubble.y - main.y), 'the right column does not start level with the left').toBeLessThan(1);
+  expect(Math.abs(bubble.height - main.height), 'the two columns are not the same height').toBeLessThan(1);
+
   const top = await boxOf('.cal-controls');
-  expect(Math.abs(top.y - main.y), 'the picker does not start level with the left column').toBeLessThan(4);
+  expect(top.y, 'the picker is not inside the bubble it sits in').toBeGreaterThan(bubble.y);
   expect(side.y, 'the readings are not under the picker').toBeGreaterThan(top.y);
 
   /*
@@ -2823,6 +2832,117 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
     hero.y + hero.height - 1,
   );
   expect(readings.x, 'the readings are indented into a column of their own').toBeLessThan(hero.x + 2);
+});
+
+
+test('the right column is a filled box with a bite and a cross at each corner', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §3.1, step 5 of §10.12: the right column is
+   * one filled box, 19rem wide, with a 20 px square bitten out of each corner
+   * and a cross of the fill standing in the bite — "the box's own substance
+   * turned inside out".
+   *
+   * **Two independent instruments, because neither alone sees this** (trap 14).
+   * The bite is asked of the *clip*, by hit-testing four points around one
+   * corner: `clip-path` clips pointer events as well as paint, so a point
+   * three pixels in from the corner lands on whatever is under the bubble and
+   * a point past the bite lands on the fill. That is a fact about what is
+   * drawn, not about what the stylesheet says it drew. The crosses are then
+   * measured — four boxes on the four corners, arms 3 px, painted in the same
+   * colour as the fill they stand in — because a `pointer-events: none`
+   * decoration cannot be hit-tested by design.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-09', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const seen = await page.evaluate(() => {
+    const bubble = document.querySelector('.cal-bubble');
+    const fill = document.querySelector('.cal-bubble-fill');
+    const b = bubble.getBoundingClientRect();
+    const inFill = (dx, dy) => {
+      const el = document.elementFromPoint(Math.round(b.left + dx), Math.round(b.top + dy));
+      return !!el && fill.contains(el);
+    };
+    const arm = (which) => {
+      const cs = getComputedStyle(document.querySelector('.cal-notch-tl'), which);
+      return { width: cs.width, height: cs.height, background: cs.backgroundColor };
+    };
+    const grid = document.querySelector('.month-grid');
+    return {
+      width: Math.round(b.width),
+      // The clip, at one corner and its opposite.
+      biteTL: inFill(3, 3),
+      biteBR: inFill(b.width - 3, b.height - 3),
+      pastBiteAcross: inFill(30, 3),
+      pastBiteDown: inFill(3, 30),
+      // Nothing clips but the notch (§10.9): a chooser panel opens out of the
+      // head in step 6 and is allowed to overrun the bottom edge.
+      bubbleOverflow: getComputedStyle(bubble).overflow,
+      fillOverflow: getComputedStyle(fill).overflow,
+      // The scroller is inside the clip, so the corners cannot travel with it.
+      scrollerInsideClip: fill.contains(document.querySelector('.cal-bubble-scroll')),
+      // The four crosses, as offsets from the bubble's own corners.
+      corners: ['tl', 'tr', 'bl', 'br'].map((k) => {
+        const r = document.querySelector(`.cal-notch-${k}`).getBoundingClientRect();
+        return {
+          left: Math.round(r.left - b.left),
+          top: Math.round(r.top - b.top),
+          right: Math.round(b.right - r.right),
+          bottom: Math.round(b.bottom - r.bottom),
+          width: Math.round(r.width),
+          height: Math.round(r.height),
+        };
+      }),
+      stem: arm('::before'),
+      bar: arm('::after'),
+      fillPaint: getComputedStyle(fill).backgroundColor,
+      // And the month still fits what is left: 304 px of column less 16 px of
+      // padding either side is 272 px of grid (§2.1).
+      gridWidth: Math.round(grid.getBoundingClientRect().width),
+      cellWidths: [...new Set([...grid.children].map((c) => Math.round(c.getBoundingClientRect().width)))],
+      cellsWrap: [...grid.children].some((c) => c.getBoundingClientRect().height > 30),
+    };
+  });
+
+  expect(seen.width, 'the right column is not 19rem').toBe(304);
+
+  expect(seen.biteTL, 'the top-left corner is not bitten out').toBe(false);
+  expect(seen.biteBR, 'the bottom-right corner is not bitten out').toBe(false);
+  expect(seen.pastBiteAcross, 'the bite runs further than 20 px along the top').toBe(true);
+  expect(seen.pastBiteDown, 'the bite runs further than 20 px down the side').toBe(true);
+
+  expect(seen.bubbleOverflow, 'the bubble clips more than its corners').toBe('visible');
+  expect(seen.fillOverflow, 'the fill clips more than its corners').toBe('visible');
+  expect(seen.scrollerInsideClip, 'the scroller is outside the clip').toBe(true);
+
+  /*
+   * Each cross stands square in its own bite: 20x20, hard against the two
+   * edges its corner is made of. Measured as distances from the bubble's own
+   * four sides, so the claim survives a window of any size.
+   */
+  const [tl, tr, bl, br] = seen.corners;
+  expect([tl.left, tl.top], 'the top-left cross is not in its bite').toEqual([0, 0]);
+  expect([tr.right, tr.top], 'the top-right cross is not in its bite').toEqual([0, 0]);
+  expect([bl.left, bl.bottom], 'the bottom-left cross is not in its bite').toEqual([0, 0]);
+  expect([br.right, br.bottom], 'the bottom-right cross is not in its bite').toEqual([0, 0]);
+  for (const c of seen.corners) {
+    expect([c.width, c.height], 'a cross is not the size of the bite it stands in').toEqual([20, 20]);
+  }
+
+  // Arms 3 px, inset 2 px at each end of a 20 px box, drawn in the fill.
+  expect(seen.stem.width, 'the cross stem is not 3 px').toBe('3px');
+  expect(seen.stem.height, 'the cross stem is not inset 2 px at each end').toBe('16px');
+  expect(seen.bar.height, 'the cross arm is not 3 px').toBe('3px');
+  expect(seen.bar.width, 'the cross arm is not inset 2 px at each end').toBe('16px');
+  expect(seen.stem.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
+  expect(seen.bar.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
+
+  expect(seen.gridWidth, 'the month grid is not the column less its padding').toBe(272);
+  expect(seen.cellWidths.length, 'the month cells are not one width').toBe(1);
+  expect(seen.cellWidths[0], 'a month cell is narrower than a two-digit date').toBeGreaterThanOrEqual(36);
+  expect(seen.cellsWrap, 'a month cell wrapped its numeral at 304 px').toBe(false);
 });
 
 
@@ -2900,7 +3020,9 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
       mark: document.querySelector('.site-name').getBoundingClientRect().left,
       corner: document.querySelector('.chrome-corner').getBoundingClientRect().right,
       left: document.querySelector('.cal-main')?.getBoundingClientRect().left,
-      right: document.querySelector('.cal-side')?.getBoundingClientRect().right,
+      // `.cal-bubble` since 2026-09-10: the right column's margin is the
+      // bubble's own edge, and `.cal-side` is a box inside its padding.
+      right: document.querySelector('.cal-bubble')?.getBoundingClientRect().right,
     }));
   };
 
@@ -3167,7 +3289,16 @@ test('neither Daily column draws a scrollbar, and both still scroll', async ({ p
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  for (const col of ['.cal-main', '.cal-side']) {
+  /*
+   * **`.cal-bubble-scroll` is the right column's scroller since 2026-09-10**,
+   * where it was `.cal-side`. The column became a filled box with its corners
+   * bitten out (docs/daily-desktop-visuals.md §3.1) and a corner cut off a
+   * scroller is a corner the reader can scroll away from, so the clipped box
+   * stays put and the scrolling happens in a child of it. The author's
+   * instruction is unchanged and so is this test's claim; only the box in
+   * column two that carries it has moved.
+   */
+  for (const col of ['.cal-main', '.cal-bubble-scroll']) {
     const seen = await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       const cs = getComputedStyle(el);
@@ -3229,9 +3360,16 @@ test('the way into the life is a white button with the life fading out under it'
    *
    * A window narrow enough that the paragraph really is cut: on a wide one the
    * whole first paragraph fits and there is nothing to fade.
+   *
+   * **1060 px, where it was 1100 until 2026-09-10.** The right column went
+   * from 28 rem to 19 rem that day (docs/daily-desktop-visuals.md §2.1), which
+   * handed 144 px to the left column and let Anthony's first paragraph fit
+   * whole at 1100 — so this failed on `tail.length` with no hint that its
+   * premise had gone. The premise is asserted below now, in words, so the next
+   * change to either column says what it did rather than leaving a zero.
    */
   await ready(page);
-  await page.setViewportSize({ width: 1100, height: 900 });
+  await page.setViewportSize({ width: 1060, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -3288,7 +3426,10 @@ test('the way into the life is a white button with the life fading out under it'
    */
   expect(seen.background, 'the way in still wears a surface').toBe('rgba(0, 0, 0, 0)');
   expect(seen.shadow, 'the way in still wears a shadow').toBe('none');
-  expect(seen.tail.length, 'the life does not go on under the button').toBeGreaterThan(10);
+  expect(
+    seen.tail.length,
+    'premise: this window is no longer narrow enough to cut the paragraph, so there is nothing to fade',
+  ).toBeGreaterThan(10);
   expect(seen.tailLines, 'the fading tail is not two lines').toBe(2);
   expect(seen.masked, 'the tail does not fade').toContain('gradient');
   expect(seen.below, 'the life stops at the button rather than running past it').toBe(true);

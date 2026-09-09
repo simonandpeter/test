@@ -102,109 +102,6 @@ export function render(el, { data, params, router }) {
 
   el.innerHTML = `
     <div class="cal">
-      <div class="cal-controls">
-          <div class="cal-jump">
-            <button type="button" data-month aria-expanded="false"
-              aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
-          </div>
-          <div class="cal-span">
-            <div class="cal-week">
-              <div class="week-strip" role="group" tabindex="0"
-                aria-label="${STRINGS.calendar.weekLabel}"></div>
-              <!--
-                **Arrows over the rail's own fading ends** (author, 2026-09-02:
-                "add arrows left and right over the week display and monthly
-                display edges, don't resize anything just put them over the
-                left and right ends where the dates just outside of the week
-                are fading out").
-
-                Over, in the literal sense: they are absolutely positioned on
-                top of the dissolve, so the rail keeps every pixel it had and
-                the seven days are the width they were. Desktop only, where
-                there is a pointer to aim at them — a phone swipes the rail,
-                which is the gesture the fade is hinting at in the first
-                place, and two 24 px targets over the edge days would be in
-                the way of it.
-
-                The month's own two edges already are buttons (peek-prev and
-                peek-next below); they get the same glyph in calendar.css
-                rather than a second control drawn over them.
-              -->
-              <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
-                aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
-              <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
-                aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
-            </div>
-            <div class="cal-month" hidden>
-              <!--
-                **The calendar's own header row** (author, 2026-09-02): the
-                month's whole name on the left margin of the column, and the
-                reckoning the page is read by opposite it on the right, which
-                is a control on a desktop and a statement everywhere else.
-
-                One row rather than two things that happen to be near each
-                other: they are the two facts about *this grid* — which month,
-                and by whose arithmetic — and the pair reads as a heading.
-              -->
-              <div class="month-head">
-                <!--
-                  **The month's two steps, past 1024 px** (2026-09-10,
-                  docs/daily-desktop-visuals.md §3.3): a hairline closed by a
-                  diamond, pointing away from the month it leaves. They replace
-                  the peeked columns, which is what buys the grid its width —
-                  and they are a *second* control on stepMonth, not the same
-                  one moved, because the phone keeps its peeks. Hence
-                  data-mstepper beside data-mstep: two names for two controls,
-                  so neither a querySelector here nor a locator in the suite
-                  can pick up the wrong one.
-                -->
-                <button type="button" class="mstep mstep-prev" data-mstepper="-1"
-                  aria-label="${esc(STRINGS.calendar.prevMonth)}">
-                  <i class="mstep-dot"></i><i class="mstep-line"></i></button>
-                <span class="month-title">
-                  <span class="month-name"></span>
-                  <div class="reckoning" data-reckoning>
-                    <button type="button" class="reckoning-btn utility" data-reckoning-btn
-                      aria-expanded="false" aria-haspopup="listbox"
-                      aria-controls="reckoning-pop"></button>
-                    <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
-                      role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
-                  </div>
-                  ${fullCalButton()}
-                </span>
-                <button type="button" class="mstep mstep-next" data-mstepper="1"
-                  aria-label="${esc(STRINGS.calendar.nextMonth)}">
-                  <i class="mstep-line"></i><i class="mstep-dot"></i></button>
-              </div>
-              <div class="month-days-line" aria-hidden="true">
-                <span class="peek-gap"></span>
-                <div class="month-days"></div>
-                <span class="peek-gap"></span>
-              </div>
-              <div class="month-body">
-                <div class="grain-track">
-                  <div class="month-row">
-                    <button type="button" class="peek peek-prev" data-mstep="-1"
-                      aria-label="${STRINGS.calendar.prevMonth}"></button>
-                    <div class="month-grid"></div>
-                    <button type="button" class="peek peek-next" data-mstep="1"
-                      aria-label="${STRINGS.calendar.nextMonth}"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--
-              **The full-screen control moved into the month's own head on
-              2026-09-10** (docs/daily-desktop-visuals.md §3.3), to the right
-              of the month and its reckoning. It stood here, in a second row
-              of the span under whichever grain was showing, from 2026-09-01;
-              it is a desktop control only (calendar.css hides it below
-              1024 px, author 2026-09-02) and the desktop's picker is the
-              month, so the calendar's own way out now sits on the calendar's
-              own heading rather than a row below it. Its words are unchanged.
-            -->
-          </div>
-      </div>
       <!--
         **Two columns that are two boxes, not one box in two halves** (author,
         2026-09-01: only the right column moves when the month opens, the two
@@ -215,12 +112,12 @@ export function render(el, { data, params, router }) {
         take the month's growth as one. So the day is painted into two panels,
         each in its own roll viewport, and slotSwap steps both together.
 
-        The picker sits between them in the document rather than inside the
-        right column, which is what lets the grid put it in the right column's
-        first row while the left column spans both — the month then grows the
-        row it is in and pushes only what is under it. On a phone the whole
-        thing is one flex column and the order property puts the four back in
-        reading order, which is why the wrappers dissolve there.
+        **The picker moved inside the right column on 2026-09-10.** It sat
+        between the two columns in the document until then, so that the grid
+        could put it in the right column's first row while the left column
+        spanned both. The bubble is one box now and the picker is the first
+        thing in it, so the whole of column two is one run of markup — the run
+        that follows this one, for the reason written on cal-bubble below.
       -->
       <div class="cal-main" data-col="main">
         <!--
@@ -251,8 +148,155 @@ export function render(el, { data, params, router }) {
         <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>
         <div class="shelves" data-shelves></div>
       </div>
-      <div class="cal-side" data-col="side">
-        <div class="slot-viewport" data-slot="side"><div class="day-panel day-side"></div></div>
+      <!--
+        **The right column is one filled box past 1024 px**
+        (docs/daily-desktop-visuals.md §3.1, step 5 of §10.12): a square notch
+        bitten from each corner and a cross of the fill standing in each bite.
+
+        Three boxes rather than one, and each earns its place. cal-bubble is
+        the grid item and the positioning context, because the four crosses are
+        drawn *outside* the clip — they are the box turned inside out, on the
+        page's own ground. cal-bubble-fill carries the fill and the clip-path,
+        and nothing else may. cal-bubble-scroll sits inside the clip and is the
+        column's scroller, so the month and the sections travel together under
+        a head that stays put.
+
+        **No overflow: hidden anywhere on the bubble** (§10.9). The chooser
+        panels open downward from the head and are allowed to overrun the
+        bottom edge; the notches are the only clipping this box does.
+
+        **After cal-main in the document, not before it.** The whole of column
+        two is one run of markup — which is what lets the picker live in the
+        bubble it belongs to — and that run goes *after* the day's own saint,
+        because below the breakpoint all of these wrappers dissolve to
+        display: contents. The order property then decides what a sighted
+        reader sees and the document decides what assistive technology hears,
+        and ahead of cal-main the readings, hymns and name days would be
+        announced before the day they belong to — on the phone, which is this
+        page's primary surface. What the choice costs is the month button's
+        place in the tab order: a control rather than content, and the cheaper
+        of the two.
+      -->
+      <div class="cal-bubble">
+        <div class="cal-bubble-fill">
+          <!-- The head the chrome controls are relocated into (step 6). Empty
+               until then, and never drawn below 1024 px, where they stay in
+               the site's own bar. -->
+          <div class="cal-bubble-head" data-side-head></div>
+          <div class="cal-bubble-scroll">
+            <div class="cal-controls">
+                <div class="cal-jump">
+                  <button type="button" data-month aria-expanded="false"
+                    aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
+                </div>
+                <div class="cal-span">
+                  <div class="cal-week">
+                    <div class="week-strip" role="group" tabindex="0"
+                      aria-label="${STRINGS.calendar.weekLabel}"></div>
+                    <!--
+                      **Arrows over the rail's own fading ends** (author, 2026-09-02:
+                      "add arrows left and right over the week display and monthly
+                      display edges, don't resize anything just put them over the
+                      left and right ends where the dates just outside of the week
+                      are fading out").
+
+                      Over, in the literal sense: they are absolutely positioned on
+                      top of the dissolve, so the rail keeps every pixel it had and
+                      the seven days are the width they were. Desktop only, where
+                      there is a pointer to aim at them — a phone swipes the rail,
+                      which is the gesture the fade is hinting at in the first
+                      place, and two 24 px targets over the edge days would be in
+                      the way of it.
+
+                      The month's own two edges already are buttons (peek-prev and
+                      peek-next below); they get the same glyph in calendar.css
+                      rather than a second control drawn over them.
+                    -->
+                    <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
+                      aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
+                    <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
+                      aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
+                  </div>
+                  <div class="cal-month" hidden>
+                    <!--
+                      **The calendar's own header row** (author, 2026-09-02): the
+                      month's whole name on the left margin of the column, and the
+                      reckoning the page is read by opposite it on the right, which
+                      is a control on a desktop and a statement everywhere else.
+
+                      One row rather than two things that happen to be near each
+                      other: they are the two facts about *this grid* — which month,
+                      and by whose arithmetic — and the pair reads as a heading.
+                    -->
+                    <div class="month-head">
+                      <!--
+                        **The month's two steps, past 1024 px** (2026-09-10,
+                        docs/daily-desktop-visuals.md §3.3): a hairline closed by a
+                        diamond, pointing away from the month it leaves. They replace
+                        the peeked columns, which is what buys the grid its width —
+                        and they are a *second* control on stepMonth, not the same
+                        one moved, because the phone keeps its peeks. Hence
+                        data-mstepper beside data-mstep: two names for two controls,
+                        so neither a querySelector here nor a locator in the suite
+                        can pick up the wrong one.
+                      -->
+                      <button type="button" class="mstep mstep-prev" data-mstepper="-1"
+                        aria-label="${esc(STRINGS.calendar.prevMonth)}">
+                        <i class="mstep-dot"></i><i class="mstep-line"></i></button>
+                      <span class="month-title">
+                        <span class="month-name"></span>
+                        <div class="reckoning" data-reckoning>
+                          <button type="button" class="reckoning-btn utility" data-reckoning-btn
+                            aria-expanded="false" aria-haspopup="listbox"
+                            aria-controls="reckoning-pop"></button>
+                          <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
+                            role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
+                        </div>
+                        ${fullCalButton()}
+                      </span>
+                      <button type="button" class="mstep mstep-next" data-mstepper="1"
+                        aria-label="${esc(STRINGS.calendar.nextMonth)}">
+                        <i class="mstep-line"></i><i class="mstep-dot"></i></button>
+                    </div>
+                    <div class="month-days-line" aria-hidden="true">
+                      <span class="peek-gap"></span>
+                      <div class="month-days"></div>
+                      <span class="peek-gap"></span>
+                    </div>
+                    <div class="month-body">
+                      <div class="grain-track">
+                        <div class="month-row">
+                          <button type="button" class="peek peek-prev" data-mstep="-1"
+                            aria-label="${STRINGS.calendar.prevMonth}"></button>
+                          <div class="month-grid"></div>
+                          <button type="button" class="peek peek-next" data-mstep="1"
+                            aria-label="${STRINGS.calendar.nextMonth}"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                    **The full-screen control moved into the month's own head on
+                    2026-09-10** (docs/daily-desktop-visuals.md §3.3), to the right
+                    of the month and its reckoning. It stood here, in a second row
+                    of the span under whichever grain was showing, from 2026-09-01;
+                    it is a desktop control only (calendar.css hides it below
+                    1024 px, author 2026-09-02) and the desktop's picker is the
+                    month, so the calendar's own way out now sits on the calendar's
+                    own heading rather than a row below it. Its words are unchanged.
+                  -->
+                </div>
+            </div>
+            <div class="cal-side" data-col="side">
+              <div class="slot-viewport" data-slot="side"><div class="day-panel day-side"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- The four crosses: 20 px boxes standing in the 20 px bites, arms
+             3 px, drawn in the fill on the page's own ground. Empty spans, so
+             they say nothing to a screen reader. -->
+        <span class="cal-notch cal-notch-tl"></span><span class="cal-notch cal-notch-tr"></span>
+        <span class="cal-notch cal-notch-bl"></span><span class="cal-notch cal-notch-br"></span>
       </div>
     </div>`;
 

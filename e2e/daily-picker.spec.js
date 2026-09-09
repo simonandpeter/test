@@ -1682,7 +1682,14 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
   await page.evaluate(() => document.fonts.ready);
 
   /*
-   * In the month's head, and still carrying its words.
+   * In the month's head, and still carrying its words — **as its accessible
+   * name, since 2026-09-10** (docs/daily-desktop-visuals.md §10.13). The
+   * control is a four-corner mark now, because at 19 rem the head is 272 px
+   * and the words took about a hundred of them; the author's own instruction
+   * ("change to 'Open Fullscreen'", 2026-09-02) is about what this button
+   * says, and it still says it to a screen reader and to a pointer. So the
+   * assertion moved from the text to the name rather than being dropped —
+   * a mark with no name would be a control nobody can identify.
    *
    * This asked "is it under `.cal-week`" until 2026-09-10, which had been
    * vacuous since 2026-09-02: the rail is `display: none` at this width, so
@@ -1691,7 +1698,11 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
    * button sits on the month's own heading, above the grid.
    */
   const open = page.locator('[data-fullcal]');
-  await expect(open).toHaveText(/Open Fullscreen/i);
+  await expect(open).toHaveAccessibleName(/Open Fullscreen/i);
+  await expect(open, 'the words are not offered to a pointer').toHaveAttribute(
+    'title',
+    /Open Fullscreen/i,
+  );
   const placed = await page.evaluate(() => {
     const button = document.querySelector('[data-fullcal]');
     const grid = document.querySelector('.month-grid').getBoundingClientRect();
@@ -1890,7 +1901,8 @@ test('a desktop shows the month alone, across the column, with no toggle', async
       spare: Math.round(month.left - controls.left),
       gridLeft: Math.round(grid.left),
       inHead: Boolean(full.closest('.month-head')),
-      fullWords: full.textContent.trim(),
+      fullWords: full.getAttribute('aria-label'),
+      fullMark: Boolean(full.querySelector('svg')),
       fullAboveGrid: fullBox.bottom <= grid.top + 1,
     };
   });
@@ -1906,10 +1918,14 @@ test('a desktop shows the month alone, across the column, with no toggle', async
    *
    * **The words are unchanged**, and that is asserted rather than assumed: the
    * instruction quoted above is about what this button *says*, and only its
-   * placement is what the rebuild reconsidered.
+   * placement is what the rebuild reconsidered. **Since 2026-09-10 it says
+   * them as its accessible name** and draws a four-corner mark instead
+   * (§10.13) — the head is 272 px at 19 rem and the words took about a hundred
+   * of them, which collapsed the two steppers either side to nothing.
    */
   expect(m.inHead, 'the fullscreen control is not in the month head').toBe(true);
   expect(m.fullWords, 'the fullscreen control lost its words').toBe('Open Fullscreen');
+  expect(m.fullMark, 'the fullscreen control is not a mark').toBe(true);
   expect(m.fullAboveGrid, 'the button is not above the grid it opens').toBe(true);
 
   // And a phone keeps both the week and the button that swaps them.

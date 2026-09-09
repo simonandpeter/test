@@ -1546,10 +1546,15 @@ html[data-swipe-nav='right']::view-transition-new(root) {
    pseudo-element is what Safari and older Chromium still need. Applying the
    pair to an element that is not currently a scroller — `.cal-main` is
    `display: contents` on a phone — costs nothing, which is why none of these
-   needs the media query its own scrolling is scoped to. */
+   needs the media query its own scrolling is scoped to.
+
+   The Daily page's right column is `.cal-bubble-scroll` and not `.cal-side`
+   since 2026-09-10: the scrolling moved inside the bubble's clipped box, so
+   that the notched corners cannot be scrolled away (calendar.css §3.1). The
+   author's instruction is the same one and it is still two columns. */
 .week-strip,
 .cal-main,
-.cal-side,
+.cal-bubble-scroll,
 .fullcal .fc-body,
 .carousel-track,
 .saint-aside,
@@ -1560,7 +1565,7 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 
 .week-strip::-webkit-scrollbar,
 .cal-main::-webkit-scrollbar,
-.cal-side::-webkit-scrollbar,
+.cal-bubble-scroll::-webkit-scrollbar,
 .fullcal .fc-body::-webkit-scrollbar,
 .carousel-track::-webkit-scrollbar,
 .saint-aside::-webkit-scrollbar,

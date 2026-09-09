@@ -618,13 +618,24 @@
  *
  * **The same two tracks as the Daily page**, written out rather than shared
  * through a custom property, because they are the same *decision* in two places
- * and a shared token would hide that: the right column's 28rem is
- * what the Daily page's week rail needs, and this column would have been happy
- * with less. If either ever moves, the other should be looked at and not
- * silently dragged along. calendar.css §the two columns holds the reasoning —
- * including why it is a fixed rem now rather than `clamp(25rem, 28%, 30rem)`
- * (2026-09-04, the same resize-shake report, "its also happening on the
- * Saints profile pages which have 3 columns").
+ * and a shared token would hide that. If either ever moves, the other should be
+ * looked at and not silently dragged along. calendar.css §the two columns holds
+ * the reasoning — including why it is a fixed rem now rather than
+ * `clamp(25rem, 28%, 30rem)` (2026-09-04, the same resize-shake report, "its
+ * also happening on the Saints profile pages which have 3 columns").
+ *
+ * **28rem → 19rem on 2026-09-10, and it was looked at rather than dragged**
+ * (docs/daily-desktop-visuals.md §10.14). This said the 28 was "what the Daily
+ * page's week rail needs, and this column would have been happy with less";
+ * the rail went on 2026-09-02 and the Daily column narrowed to 19rem with the
+ * bubble, so the number this one was matching no longer exists. The instruction
+ * above is one instruction and not two — the life takes the Daily page's left
+ * column *and* the search takes "where the right column would be on Daily
+ * Page" — so a saint page whose grid did not follow would be answering half of
+ * it. Rendered at 1440 with 862 results in the column before the change was
+ * kept: the row cards wrap a long name to a second line and lose nothing else,
+ * which is the cost, and it is smaller than the life reading at a different
+ * measure from the page it was told to match.
  *
  * Below the breakpoint there is one column and no aside: a phone reading a life
  * has no room for a list of other lives beside it, and the author scoped the
@@ -637,7 +648,7 @@
 @media (min-width: 1024px) {
   .saint-cols {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 28rem;
+    grid-template-columns: minmax(0, 1fr) 19rem;
     column-gap: var(--space-8);
     align-items: start;
   }

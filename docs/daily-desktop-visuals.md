@@ -1064,3 +1064,42 @@ its `flaky` line before moving on.
   `map.spec.js:3580` (6/6 alone in 13.6 s — a budget under parallel load), and
   Lighthouse FCP at 1519–1853 ms locally where CI's own run passes. Do not chase
   them inside a sitting; they are a separate errand.
+
+### 10.14 Ruled during sitting C
+
+- **The bubble goes *after* `.cal-main` in the document, not before it.** Column
+  two is one run of markup either way — that is what lets the picker live inside
+  the bubble — and the only question is which side of the day's saint it lands
+  on. Below the breakpoint every one of the bubble's wrappers is
+  `display: contents`, so `order` decides what a sighted reader sees and the
+  document decides what assistive technology hears; ahead of `.cal-main` the
+  readings, hymns and name days would be announced before the day they belong
+  to, on the phone, which is this page's primary surface. What it costs is the
+  month button's place in the tab order — a control rather than content. The six
+  `order` values are unchanged and were measured to still yield picker, date,
+  liturgy, saint, readings, shelf.
+- **The fullscreen control became a mark in step 5, not step 3.** §10.13 ruled
+  it, and the narrowing is what forced it: at 19 rem the head is 272 px, the
+  words took about a hundred of them, and the two steppers either side collapsed
+  to zero width — `daily-picker.spec.js`'s "the desktop month steps from the two
+  marks in its own head" failed on `.mstep-next` being unclickable, which is how
+  this was found rather than argued.
+- **`.cal-controls`'s desktop `--cal-peek`, `--cal-gutter`, `--rail-inset` and
+  `gap` are gone.** All four fed boxes the desktop does not draw: the peeked
+  columns went in step 3, the rail and its toggle on 2026-09-02, and
+  `.month-name` is `position: static` here.
+- **A window narrow enough to cut the hero's first paragraph is 1060 px now,
+  not 1100.** The 144 px the right column gave up went to the left one, and
+  `daily-panel.spec.js`'s fading-tail test lost its premise silently. The
+  premise is asserted in words there now.
+- **The Saint page's grid follows Daily to 19 rem.** `saint.css` said the 28 was
+  "what the Daily page's week rail needs, and this column would have been happy
+  with less", and told whoever moved either one to look at the other rather than
+  drag it. Looked at: the rail went on 2026-09-02, so the number this was
+  matching no longer exists, and the 2026-09-01 instruction is one instruction
+  and not two — the life takes Daily's left column *and* the search takes "where
+  the right column would be on Daily Page". `saint.spec.js:1087` measures the
+  two pages against each other on purpose ("a hard-coded 929 px would pass on
+  the day it was written and say nothing afterwards") and it is the assertion
+  that found this. Rendered at 1440 with the results column full before it was
+  kept: a long name wraps to a second line and nothing else changes.

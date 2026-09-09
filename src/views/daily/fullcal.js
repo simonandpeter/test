@@ -50,10 +50,43 @@ import { stepCursor } from './picker.js';
  */
 const longMonth = (d) => formatDate({ month: 'long', timeZone: 'UTC' }, d);
 
-/** The button that opens it, under the week (author's placement, in those words). */
+/*
+ * The four corners of a frame opening outwards, 13 px, stroked in
+ * `currentColor` so it takes the head's own quiet ink and introduces no
+ * colour. `aria-hidden`, because the words beside it in the button's label are
+ * what a screen reader is given.
+ */
+const ICON_FULL = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>
+</svg>`;
+
+/**
+ * The button that opens it: a mark in the month's head, with the words it used
+ * to print as its accessible name and its `title`.
+ *
+ * **It printed "Open Fullscreen" until 2026-09-10**
+ * (docs/daily-desktop-visuals.md §10.13). The words are the author's, twice
+ * over — 2026-09-02, "change to 'Open Fullscreen'" — and they are not gone:
+ * they are what a screen reader is given and what a pointer is shown. What
+ * changed is the column. At 19 rem the head is 272 px and has to hold a
+ * stepper either side, the month, the year and the reckoning; the words took
+ * about a hundred of those pixels and the two steppers collapsed to nothing,
+ * which is how this was found rather than argued. The author drew it as a
+ * four-corner mark in this head twice on 2026-09-10 ("Add a make fullscreen
+ * icon button to the left of the Month Name", then "Put the make full screen
+ * button to the right of the month and Reckoning"), which is the later
+ * instruction of the two.
+ *
+ * The control exists only past 1024 px — calendar.css hides it below, author
+ * 2026-09-02 — so there is no width at which a reader sees the words as words,
+ * and nothing is served by keeping a copy of them in the markup for a
+ * stylesheet to hide.
+ */
 export const fullCalButton = () =>
-  `<button type="button" class="fullcal-open" data-fullcal
-    aria-haspopup="dialog">${esc(STRINGS.calendar.fullScreen)}</button>`;
+  `<button type="button" class="fullcal-open" data-fullcal aria-haspopup="dialog"
+    aria-label="${esc(STRINGS.calendar.fullScreen)}"
+    title="${esc(STRINGS.calendar.fullScreen)}">${ICON_FULL}</button>`;
 
 /**
  * **The calendar this month is counted in** (2026-09-02), which is the small
