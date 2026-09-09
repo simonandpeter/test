@@ -2878,31 +2878,42 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
    * alignment — which is the part worth pinning, because it is a relationship
    * between two elements that know nothing about each other: the header is
    * chrome, the columns belong to a view.
+   *
+   * **The doubling is measured on `/saints` since 2026-09-10**, and only the
+   * alignment on Daily. The instruction is about the *site's* masthead, and
+   * Daily was merely where this test could also reach `.cal-main` and
+   * `.cal-side`; but Daily's own wide mast is 22 px now
+   * (docs/daily-desktop-visuals.md §2.2), so leaving the ratio here would
+   * have quietly restated the author's claim as 1.29 and let one page's
+   * decision redefine a rule about every page. What Daily's mast *is* has a
+   * test of its own — `chrome.spec.js`, "Daily wears a smaller, quieter
+   * masthead" — rather than being inferred from the number this one prints.
    */
   await ready(page);
-  const measure = async (width) => {
+  const measure = async (route, width) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
+    await page.goto(route, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     return page.evaluate(() => ({
       nav: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
       name: parseFloat(getComputedStyle(document.querySelector('.site-name')).fontSize),
       mark: document.querySelector('.site-name').getBoundingClientRect().left,
       corner: document.querySelector('.chrome-corner').getBoundingClientRect().right,
-      left: document.querySelector('.cal-main').getBoundingClientRect().left,
-      right: document.querySelector('.cal-side').getBoundingClientRect().right,
+      left: document.querySelector('.cal-main')?.getBoundingClientRect().left,
+      right: document.querySelector('.cal-side')?.getBoundingClientRect().right,
     }));
   };
 
-  const narrow = await measure(900);
-  const wide = await measure(1440);
+  const narrow = await measure('/saints', 900);
+  const site = await measure('/saints', 1440);
 
   // The mark alone is twice the size; the nav went back to what it was.
-  expect(wide.name / narrow.name, 'the masthead is not twice the size').toBeCloseTo(2, 1);
-  expect(wide.nav, 'the nav did not go back to its own size').toBeCloseTo(narrow.nav, 1);
+  expect(site.name / narrow.name, 'the masthead is not twice the size').toBeCloseTo(2, 1);
+  expect(site.nav, 'the nav did not go back to its own size').toBeCloseTo(narrow.nav, 1);
 
   // The mark starts where the left column starts, and the controls end where
   // the right column ends.
+  const wide = await measure('/calendar/2026-09-24', 1440);
   expect(Math.abs(wide.mark - wide.left), 'the mark is not on the left column margin').toBeLessThan(2);
   expect(Math.abs(wide.corner - wide.right), 'the controls do not end on the right column margin').toBeLessThan(2);
 });

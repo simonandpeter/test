@@ -1128,6 +1128,49 @@ main.chrome {
   :root {
     --chrome-h-reserve: 52.5px;
   }
+
+  /*
+   * **Daily's masthead is quieter and smaller than the rest of the site's**
+   * (docs/daily-desktop-visuals.md §2.2). The page becomes a reading column
+   * with a sidebar and the nav becomes that column's own head, so a 34 px
+   * stamp at full ink sits on it as a banner rather than as a heading.
+   *
+   * **The token's value moves; there is no third name for it.** A
+   * `--text-mast-daily` would fail `tests/plan.test.mjs` — its type table's
+   * reverse check exempts `--text-mast` and `--text-mast-wide` by name and
+   * nothing else — and it would be a scale step invented for one page, which
+   * is how the scale reached fourteen. One declaration, scoped to the route
+   * and to this width, and every rule that already reads the token follows.
+   *
+   * **`--chrome-h-reserve` deliberately does not move with it.** It is
+   * `header.chrome`'s `min-height`, so the bar keeps the 52.5 px it reserves
+   * on every route and the mark simply sits smaller inside it: the two heads
+   * this rebuild has to level (§2.2) stay level, `chrome.spec.js:2658` keeps
+   * its number on `/saints`, and `daily-picker.spec.js`'s full-screen
+   * geometry, which hangs off this bar's own bottom edge, does not move.
+   *
+   * The nav needs nothing. `main.js`'s `NAV_KEYS` is already
+   * Daily · Saints · Texts · Map · About, which is exactly the row this
+   * design draws, and PLAN §6 settles that those five are never reordered.
+   */
+  html[data-route='calendar'] {
+    --text-mast-wide: 22px;
+  }
+
+  /*
+   * 74% of the way from the ground to the ink: the stamp reads as a masthead
+   * without competing with the day's own heading two lines below it. It is
+   * `color`, not `fill`, and it reaches the mark because `ui/wordmark.js`'s
+   * one path is `fill="currentColor"`.
+   *
+   * Computed rather than eyeballed: **#504a44 in day, 6.97:1 on gesso and
+   * 6.47:1 on the field; #a8a19b in vigil, 7.15:1 on the bole.** A masthead is
+   * a link with an accessible name, so axe reads it as text and it clears AA
+   * in both themes with room.
+   */
+  html[data-route='calendar'] header.chrome .site-name {
+    color: color-mix(in oklab, var(--ink) 74%, var(--gesso));
+  }
 }
 
 /* Small caps for register headings — a month over a day column, a church over

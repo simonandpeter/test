@@ -2859,10 +2859,21 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
     );
   }
 
+  /*
+   * **The mark's *left* edge, not its whole box, since 2026-09-10.** Daily's
+   * masthead is deliberately 22 px where the rest of the site's is 34
+   * (docs/daily-desktop-visuals.md §2.2, `--text-mast-wide` scoped to the
+   * route), so its right edge is its own and asserting the whole rect would
+   * pin a decision this test is not about. What "one box on every route" ever
+   * meant is where the row *starts* and where it *ends* — the header's own
+   * box, the mark's left edge and the controls' corner — and all three are
+   * still identical. The size difference gets its own test below rather than
+   * riding here as an inequality nobody named.
+   */
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
     expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
-    expect(seen[i].mark, `${route} puts the mark somewhere else`).toEqual(seen[0].mark);
+    expect(seen[i].mark[0], `${route} starts the mark somewhere else`).toEqual(seen[0].mark[0]);
     expect(seen[i].corner, `${route} puts the controls somewhere else`).toEqual(seen[0].corner);
   }
 
@@ -2877,6 +2888,72 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
   await expect
     .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollbarGutter))
     .toBe('auto');
+});
+
+test('Daily wears a smaller, quieter masthead, and the bar it sits in does not move', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §2.2. Past 1024 px the Daily page becomes a
+   * reading column with a sidebar and the nav is that column's own head, so
+   * the masthead steps back: 22 px against the site's 34, and 74% of the way
+   * from the ground to the ink rather than full strength.
+   *
+   * Three things are asserted because three separate things could have been
+   * done instead of this one, and each of the three has a cost the others do
+   * not:
+   *
+   *  - **The size is `--text-mast-wide`'s own value, scoped.** A third
+   *    `--text-mast-*` token fails `tests/plan.test.mjs` (its type table's
+   *    reverse check exempts two names and no more), so the token is read
+   *    back off the route rather than the font-size being read off the mark:
+   *    a rule that set `font-size` directly would pass a size assertion and
+   *    quietly leave the token behind.
+   *  - **It is Daily's alone**, at this width alone. The mark on `/saints` is
+   *    untouched, and so is Daily's own at 900 px.
+   *  - **The bar does not shrink with it.** `--chrome-h-reserve` holds
+   *    `header.chrome`'s min-height at every route, which is what keeps the
+   *    full-screen calendar's geometry (`daily-picker.spec.js`) and the two
+   *    heads this rebuild has to level from moving. A smaller mark inside an
+   *    unchanged bar is the whole claim.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+
+  const read = async (route) => {
+    await page.goto(route, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    return page.evaluate(() => {
+      const name = document.querySelector('.site-name');
+      const bar = document.querySelector('header.chrome').getBoundingClientRect();
+      return {
+        token: getComputedStyle(document.documentElement).getPropertyValue('--text-mast-wide').trim(),
+        size: getComputedStyle(name).fontSize,
+        colour: getComputedStyle(name).color,
+        markWidth: Math.round(name.querySelector('.brand-mark').getBoundingClientRect().width),
+        barHeight: Math.round(bar.height),
+      };
+    });
+  };
+
+  const daily = await read('/calendar/2026-09-05');
+  const saints = await read('/saints');
+
+  expect(saints.token, 'premise: the site-wide mast token is not 34 px').toBe('34px');
+  expect(daily.token, 'Daily does not scope --text-mast-wide').toBe('22px');
+  expect(daily.size, 'the mark does not follow the token').toBe('22px');
+  expect(daily.markWidth, 'the drawn mark is not smaller than the rest of the site’s').toBeLessThan(
+    saints.markWidth,
+  );
+  expect(daily.colour, 'Daily’s masthead is at full ink like every other route’s').not.toBe(saints.colour);
+  expect(daily.barHeight, 'the bar shrank with the mark').toBe(saints.barHeight);
+
+  // And below the breakpoint the phone's masthead is untouched: the whole of
+  // this is the desktop's two-column reading, which a 360 px page does not have.
+  await page.setViewportSize({ width: 900, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  const narrow = await page.evaluate(() =>
+    getComputedStyle(document.documentElement).getPropertyValue('--text-mast-wide').trim(),
+  );
+  expect(narrow, 'the Daily scoping reaches below 1024 px').toBe('34px');
 });
 
 test('a press outside a chooser closes it', async ({ page }) => {
