@@ -377,9 +377,16 @@ the manifest.
 life names them.** `lib/cross-link.js` makes the link; `related` in
 `saint.json` carries the row.
 
-**`related` is one-directional.** Saints named in *their* life appear in
-*their* list. The reverse is a claim the life does not make, and a page does not
-assert it.
+**Whether `related` should be reversed is open, and has never been asked.**
+Today a saint named in a life appears in that life's list and nowhere else, so
+**599 inbound edges already in the corpus are invisible from the receiving
+end** — 286 saints of 862 would gain a "mentioned in" entry, and 520 have no
+link in either direction at all.
+
+The argument for leaving it one-directional is that a life naming Anthimus is a
+claim that life makes, not a claim about Anthimus. That argument was written by
+a session, not decided by the author, and is recorded here as an option rather
+than a rule.
 
 **A dedication is not a relation.** A church, lavra, chapel, feast or ship named
 for a saint is not an association with them — 23 of the 86 links the corpus
