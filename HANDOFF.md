@@ -177,8 +177,50 @@ thing to work with — the `flaky` line, not a local run.
 goes lazy it should return instantly; if it ever starts timing out, the pack
 has regressed.
 
+## The pattern worth acting on, and what it implies
+
+Fourteen problems were found on 2026-09-09. Two were code defects and one was a
+broken test; **eleven were prose asserting a quantity or a mechanism nobody had
+measured** — 68% that is 9%, 412 that is ~4, three raw colours that are zero,
+"nothing touches behaviour" while eight durations moved, "the one shadow on the
+site" which is five and names one that has never existed. Two of the eleven
+were written by the session that then found them, so care is not the remedy.
+
+**One fact explains it: no test in this repo reads a document.** Five name one
+in a comment; none opens one. Exactly one used to — `DESIGN.md quotes the
+ratios the tokens actually produce`, which held the document's printed contrast
+figures against the computed values — and it was deleted in `4141faa`, the doc
+reorganisation. The one mechanism holding prose to reality was removed, and the
+prose drifted immediately. `PLAN.md` says it is binding and that the code is
+wrong where they disagree, and nothing can tell when they disagree.
+
+**The rule that falls out.** A comment may state a **constraint**, because a
+constraint is checkable against the code in front of you. A **quantity** or a
+**mechanism** needs a test pinning it, or it says plainly that it is
+unverified. Every one of the eleven was a quantity or a mechanism written as
+fact.
+
 ## Next
 
-`PLAN.md`'s numbered list: **the overhaul, desktop first** — section 4 is the
-brief and the sheet is the instrument. The comment rewrite follows, three
-stylesheets first.
+1. **A citation test** — every `*.md` named in `src/`, `e2e/`, `tests/`,
+   `schema/` exists, and every named section exists in the file named. Catches
+   the whole repointing class; under an hour.
+2. **`PLAN.md`'s tables held to the code** — the nine type tokens and their px
+   values, the five durations, the five easings, the nine colours, the space
+   scale, the five shadows. They are already tables, so they parse. This is
+   what `4141faa` deleted, generalised.
+3. **The overhaul, desktop first** — section 4 of `PLAN.md` is the brief, and
+   the loop is `contact-sheet --still` → `tile-diff snapshot` → change →
+   `--still` → `compare`, 80 s a pass over 48 tiles.
+
+   **The comment rewrite rides inside it, per file.** The overhaul has to open
+   `calendar.css`, `index.css` and `base.css` and edit them anyway; clearing
+   each file's narrative in the same pass costs one visit instead of two, which
+   is item 6's own objection to doing it first. Pixel-identical tiles prove no
+   declaration moved.
+
+**Open and unfixed:** `index-carousel.spec.js`'s sizing test flakes on CI —
+three runs, twice desktop and once mobile-360 — passes 16 of 16 locally, and
+the cause is unknown. Two explanations were tried and disproved (see the
+commit). CI's `flaky` line is the only instrument that sees it, so read it after
+each push rather than hunting locally: `python scratchpad/ci-flaky.py <sha>`.

@@ -284,9 +284,15 @@ edge rather than over the image.
 **The bookmark stands at the image's top-right corner**, a frameless silhouette
 over the picture: no frame, no field, the shape alone, in ink — gold would claim
 a finding and red would claim liturgical time. One drawing everywhere, filled at
-both states, half opacity until saved, `aria-pressed` carrying the state. Where
-a picture is underneath it takes a drop shadow, which is the ground's own
-darkness pushed away from the shape rather than a second shape drawn around it.
+both states, half opacity until saved, `aria-pressed` carrying the state.
+
+*This paragraph ended "and where a picture is underneath it takes a drop
+shadow" until 2026-09-09. **It does not** — there is no `drop-shadow` or
+`box-shadow` on the bookmark anywhere in the CSS. The old DESIGN.md proposed
+one as the replacement for a gesso hairline that was removed on 2026-08-24, and
+either it was never built or it went later. What defends the mark over a dark
+icon today is only its own ink. Whether it needs anything more is the
+overhaul's to decide.*
 
 **"That is the one shadow on the site" was written here on 2026-09-08 and is
 false** — an extrapolation from the old DESIGN.md's justification of the
@@ -298,15 +304,19 @@ bookmark's shadow, asserted without counting. There are six, found by
 | `.chrome` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the sticky header over scrolling content |
 | `.month-grid button` | the same shadow |
 | `.hero-more` | `0 6px 20px rgb(0 0 0 / 0.14)` — the Read more pill |
-| `.hero-media` | `background: rgb(0 0 0 / 0.45)` — a scrim, not a shadow |
 | `.index-name:hover` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` |
 | `.index-desc` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
 
-None is on a *panel*, so the rule above holds as written — a card still has no
-cast shadow. But "no drop shadows" as a blanket claim does not, and a header
-that lifts off scrolling content is a defensible thing the site does on
-purpose. **The overhaul should decide which of the six stay and say so here**,
-rather than leaving a sentence that a count refutes.
+Not shadows, but in the same family: a `rgb(0 0 0 / 0.45)` scrim on
+`.hero-media`, the coachmark's gold glow, and the map's focus ring, which uses
+`box-shadow` to draw two concentric rings rather than a shadow.
+
+None of the five is on a *panel*, so the rule above holds as written — a card
+still has no cast shadow. But "no drop shadows" as a blanket claim does not,
+and a sticky header lifting off scrolling content is a defensible thing to do
+on purpose. **The overhaul should decide which of the five stay and say so
+here.** The bookmark's, which this section used to call the only one, is not
+among them and never existed.
 
 **All Saints has two faces and opens on the carousel**; Cards and Rows are the
 register at card weight, chosen by the reader and remembered. The carousel's
