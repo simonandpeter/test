@@ -200,16 +200,37 @@ constraint is checkable against the code in front of you. A **quantity** or a
 unverified. Every one of the eleven was a quantity or a mechanism written as
 fact.
 
+## Both tests exist now, and the second one worked immediately
+
+`tests/citations.test.mjs` (5 checks) and `tests/plan.test.mjs` (6). Each was
+backed out against a planted violation of every kind it claims to catch, and
+each hole that back-out found was closed: the shadow inventory let a rule
+written on one line straight through, the same escape the token test's
+declaration reader once had.
+
+**The PLAN test disagreed with PLAN.md on its first run, and PLAN.md was
+wrong.** The shadow inventory written into it a day earlier named `.chrome`,
+`.month-grid button`, `.hero-more`, `.index-name:hover` and `.index-desc`. The
+count and the values were right and **every selector was wrong** — the grep
+behind them required a selector at column 0, so an indented rule inside a media
+query fell through to whatever unindented one came before. The five are
+`.church-panel`, `.reckoning-pop`, `.fast-bubble`, and the stuck index bar and
+its filter drop.
+
+Which turns the finding into something better than a list of exceptions: **every
+cast shadow on the site is on something over the page** — a panel that flies, a
+popover, a bubble, a bar that has left the flow — and none is on anything
+sitting in it. The panel rule holds exactly as written, and the principle is
+sharper than "no drop shadows": a shadow says *this is above the page*; a card
+is in it and takes its depth from the field.
+
+Re-derived rather than trusted: **353 unit tests in 2 s**, **902 browser in
+4.5 min** with one failure — `random deals an order, and holds it still under
+the reader`, which the old handoff already recorded at 3 in ~39.
+
 ## Next
 
-1. **A citation test** — every `*.md` named in `src/`, `e2e/`, `tests/`,
-   `schema/` exists, and every named section exists in the file named. Catches
-   the whole repointing class; under an hour.
-2. **`PLAN.md`'s tables held to the code** — the nine type tokens and their px
-   values, the five durations, the five easings, the nine colours, the space
-   scale, the five shadows. They are already tables, so they parse. This is
-   what `4141faa` deleted, generalised.
-3. **The overhaul, desktop first** — section 4 of `PLAN.md` is the brief, and
+1. **The overhaul, desktop first** — section 4 of `PLAN.md` is the brief, and
    the loop is `contact-sheet --still` → `tile-diff snapshot` → change →
    `--still` → `compare`, 80 s a pass over 48 tiles.
 

@@ -301,22 +301,31 @@ bookmark's shadow, asserted without counting. There are six, found by
 
 | where | what |
 | --- | --- |
-| `.chrome` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the sticky header over scrolling content |
-| `.month-grid button` | the same shadow |
-| `.hero-more` | `0 6px 20px rgb(0 0 0 / 0.14)` — the Read more pill |
-| `.index-name:hover` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` |
-| `.index-desc` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
+| `.church-panel` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the chooser, fixed over the page |
+| `.reckoning-pop` | the same shadow — a popover |
+| `.fast-bubble` | `0 6px 20px rgb(0 0 0 / 0.14)` — a tooltip pointing at a word |
+| `.index-controls.is-stuck .index-row` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` — the bar once it sticks |
+| `.index-controls.is-stuck.is-filters-open .filter-drop-inner` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
 
 Not shadows, but in the same family: a `rgb(0 0 0 / 0.45)` scrim on
 `.hero-media`, the coachmark's gold glow, and the map's focus ring, which uses
 `box-shadow` to draw two concentric rings rather than a shadow.
 
-None of the five is on a *panel*, so the rule above holds as written — a card
-still has no cast shadow. But "no drop shadows" as a blanket claim does not,
-and a sticky header lifting off scrolling content is a defensible thing to do
-on purpose. **The overhaul should decide which of the five stay and say so
-here.** The bookmark's, which this section used to call the only one, is not
-among them and never existed.
+**Read together they are a rule, not an inconsistency.** Every one is on
+something *over* the page — a panel that flies, a popover, a bubble, a bar that
+has left the flow — and none is on anything sitting in it. So the panel rule
+holds exactly as written, and the working principle is sharper than "no drop
+shadows": **a shadow says this is above the page; a card is in it and gets its
+depth from the field.**
+
+*This table listed `.chrome`, `.month-grid button`, `.hero-more`,
+`.index-name:hover` and `.index-desc` until `tests/plan.test.mjs` was written
+on 2026-09-09 and disagreed with it on its first run. The values and the count
+were right and every selector was wrong: the grep behind them required a
+selector at column 0, so an indented rule inside a media query fell through to
+whatever unindented one came before it. The bookmark's shadow, which this
+section once called the only one on the site, is still not among them and has
+never existed.*
 
 **All Saints has two faces and opens on the carousel**; Cards and Rows are the
 register at card weight, chosen by the reader and remembered. The carousel's

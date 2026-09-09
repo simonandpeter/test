@@ -89,7 +89,15 @@ micro-optimisations. Say what you measured and what you inferred, and keep them
 apart.
 
 **Every fix gets a test, backed out and confirmed to fail before it is
-believed.**
+believed.** Both tests written on 2026-09-09 had a hole the back-out found: the
+shadow inventory missed a rule written on one line, exactly as the token test's
+declaration reader once did.
+
+**A comment may state a constraint. A quantity or a mechanism needs a test
+pinning it, or it says plainly that it is unverified.** Eleven of the fourteen
+problems found on 2026-09-09 were prose asserting a number or a cause nobody
+had measured, and two of those were written by the session that then found
+them — so this is a rule about mechanism, not about care.
 
 ---
 
@@ -171,7 +179,14 @@ folders, not the manifest.
 
 ## Tests
 
-- **Unit** `tests/*.mjs` — `npm test`, ~2 s, 342 tests. Put logic here.
+- **Unit** `tests/*.mjs` — `npm test`, ~2 s, 353 tests. Put logic here.
+- **`tests/plan.test.mjs` executes `PLAN.md`.** Its tables of colours, type,
+  durations, easings and shadows are read and checked against the code, in both
+  directions — a token added and not written down fails too. **If you change a
+  value, change the table in the same commit.** `tests/citations.test.mjs` does
+  the same for references: every `*.md` named in the source exists, every
+  `brief §N` and `Addendum X` resolves, and a deleted document may only be
+  mentioned in the past tense.
 - **Browser** `e2e/*.spec.js` — 902 across `desktop` and `mobile-360`, ~12 min.
   `map.spec.js` gets a 60 s per-test budget; the rest run on Playwright's 30.
 - **`npm run test:lighthouse`** — accessibility and FCP on throttled 4G; gates CI.
