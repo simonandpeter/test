@@ -503,9 +503,25 @@ two whose stated reason turned out to be wrong.
    | `greedyLines` + `nameLines` + `captionH` — the caption pack | 675 |
 
    So **this item named a third of the bill.** The pack is real, but the row
-   also puts `loopSlice(run, 12)` — 886 cells, the whole corpus — into
-   `innerHTML`, and that native cost dominates. The grid next door is
-   virtualised; the row is not.
+   also puts the whole corpus into `innerHTML`, and that native cost dominates.
+   The grid next door is virtualised; the row is not.
+
+   Measured at 1440 px with `scratchpad/dom-cost.mjs`, *not* inferred — an
+   earlier note here said "886 cells" from arithmetic (862 + a 12-cell buffer
+   each end, one cell per saint) and a cell holds about six:
+
+   | | |
+   | --- | --- |
+   | cells in the DOM | **166** |
+   | cells on screen | **6** |
+   | card links | 1,011 |
+   | nodes in the track | 3,499, of 3,898 in the document |
+   | track width | 47,822 px against a 1,440 px viewport |
+   | `<img>` elements / loaded | 150 / **11** |
+
+   **The row is 90% of the page's DOM and 96% of it is off screen.** Images are
+   already windowed by `windowImages`, so the network half of this was solved
+   and the layout half was not.
 
    **Done:** the first paint packs `CX_PREFIX` (180) saints and the rest
    arrives on `requestIdleCallback`. Measured three runs each side on one build
