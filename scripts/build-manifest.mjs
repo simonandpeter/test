@@ -242,6 +242,32 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
   if (errors.length) return { errors, warnings, manifest: null, meta: null };
 
   const manifest = loaded.map(({ folder, saint }) => toCard(saint, path.join(saintsDir, folder)));
+
+  /*
+   * **`mentionedIn` is `related` read backwards** (author, 2026-09-09: reverse
+   * links, and cross-reference as widely as the sources allow). A saint named
+   * in another's life appears on both pages — in the list of the life that
+   * names them, and in a list of their own.
+   *
+   * **Derived from `related`, never from the raw hyperlinks.** A church,
+   * lavra, chapel, feast or ship named for a saint is not an association with
+   * them, and 23 of the 86 links the corpus produces are exactly that. Built
+   * from links, this would put six twentieth-century martyrs on Alexander
+   * Nevsky's page. `related` is the filtered relation and is the only honest
+   * input; widening the reverse index is done by widening `related`, which is
+   * PLAN's cross-reference sweep.
+   *
+   * It is computed here rather than stored, because a fact held in two folders
+   * is a fact that can disagree with itself.
+   */
+  const inbound = reverseRelated(loaded.map(({ saint }) => saint));
+  for (const card of manifest) {
+    const from = inbound.get(card.slug);
+    // On the card rather than in the saint's own folder: the app already has
+    // the manifest, and a reverse index written back into 862 files is one
+    // fact kept in two places.
+    if (from?.length) card.mentionedIn = from;
+  }
   const meta = buildMeta(manifest, warnings, loaded);
   const manifestJson = JSON.stringify(manifest);
 
@@ -255,6 +281,26 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
 }
 
 /** Prints a build result and returns the process exit code. */
+/**
+ * `related` read backwards: slug → the slugs whose `related` names it.
+ *
+ * Its own function so it can be tested without a manifest — `npm test` runs on
+ * CI before `build:manifest` and `/data/` is gitignored, so a test that needed
+ * the built file would only ever pass on a desk that had built it.
+ */
+export function reverseRelated(saints) {
+  const inbound = new Map();
+  for (const saint of saints) {
+    for (const rel of saint.related ?? []) {
+      const target = String(rel).toLowerCase();
+      if (target === saint.slug) continue;
+      if (!inbound.has(target)) inbound.set(target, new Set());
+      inbound.get(target).add(saint.slug);
+    }
+  }
+  return new Map([...inbound].map(([k, v]) => [k, [...v].sort()]));
+}
+
 export function report({ errors, warnings, manifest, gzipped, bytes }, { write = true } = {}) {
   if (errors.length) {
     const byFolder = new Map();

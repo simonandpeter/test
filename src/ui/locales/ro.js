@@ -409,6 +409,7 @@ export const ro = {
     noLife: 'Viața acestui sfânt nu a fost încă scrisă. Până atunci, articolul e un șir de mărturii.',
     sources: 'Surse',
     related: 'Înrudite',
+    mentionedIn: 'Menționat în',
     sourceFailed: 'Textul sursei nu a putut fi încărcat. E un fișier din dosarul sfântului, așa că de obicei o reîncărcare rezolvă.',
     creditUnrecorded: 'Licența acestei imagini nu e încă înregistrată sau cere o atribuire pe care nu o avem. Până se lămurește, e arătată aici cu înțelegerea că nu poate fi refolosită pe autoritatea acestei pagini.',
     credit: '{credit} · {licence}',

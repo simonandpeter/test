@@ -865,6 +865,7 @@ export const STRINGS = {
     noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',
     sources: 'Sources',
     related: 'Related',
+    mentionedIn: 'Mentioned in',
     sourceFailed: 'This source text could not be loaded. It is a file in this saint’s folder, so a reload usually fixes it.',
     creditUnrecorded: 'The licence for this image is not yet recorded, or requires a credit we do not have. Until that is settled, it is shown here on the understanding that it must not be reused on this page’s authority.',
     credit: '{credit} · {licence}',

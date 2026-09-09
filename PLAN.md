@@ -377,16 +377,33 @@ the manifest.
 life names them.** `lib/cross-link.js` makes the link; `related` in
 `saint.json` carries the row.
 
-**Whether `related` should be reversed is open, and has never been asked.**
-Today a saint named in a life appears in that life's list and nowhere else, so
-**599 inbound edges already in the corpus are invisible from the receiving
-end** — 286 saints of 862 would gain a "mentioned in" entry, and 520 have no
-link in either direction at all.
+**`related` is reversed** (author, 2026-09-09). A saint named in another's life
+appears on *both* pages: in the list of the life that names them, and in a
+"mentioned in" list of their own. The reverse is a real finding — that this
+person is remembered inside somebody else's story — and the site's job is to
+show what is recorded.
 
-The argument for leaving it one-directional is that a life naming Anthimus is a
-claim that life makes, not a claim about Anthimus. That argument was written by
-a session, not decided by the author, and is recorded here as an option rather
-than a rule.
+**The vision is maximum cross-reference.** This corpus is a web of people who
+knew each other, taught each other, died together and were buried by each
+other, and every one of those threads that is written down should be walkable.
+A reader who arrives at one saint should be able to leave by every door the
+sources actually give them.
+
+Measured 2026-09-09, before any of it:
+
+| | |
+| --- | --- |
+| inbound edges that exist and are invisible | **599** |
+| saints that would gain a "mentioned in" | **286 of 862** |
+| saints with no link in either direction | **520** |
+| folders the linker can match at all | 375 of 862 |
+| hand-written links in lives | 532, across 285 lives |
+
+**The dedication rule survives the reversal and constrains it.** A church,
+lavra, chapel, feast or ship named for a saint is not an association with them,
+so a reverse index built from raw links would put six twentieth-century martyrs
+on Alexander Nevsky's page. The reverse must be built from the *filtered*
+relation, never from every hyperlink.
 
 **A dedication is not a relation.** A church, lavra, chapel, feast or ship named
 for a saint is not an association with them — 23 of the 86 links the corpus
@@ -628,5 +645,22 @@ two whose stated reason turned out to be wrong.
 3. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
    `scrollLeft` inside a live gesture. Known defect.
 
-4. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a
+4. **Sweep for cross-references, to the vision in section 5.** In order of
+   what each is worth:
+
+   - **Reverse the 599 edges that already exist** — the biggest single gain,
+     and derivation rather than authorship. 286 saints gain a door.
+   - **Raise the linker's ceiling.** `lib/cross-link.js` can match 375 of 862
+     folders; the other 487 have name forms too short or ambiguous to be safe,
+     and six forms are shared by two saints. The way past it is better *name
+     forms in the data*, not looser rules — the rules were narrowed until every
+     proposed link was right and that trade stands.
+   - **Run `related-from-links.mjs` over the whole corpus again.** It proposes
+     and never writes; 532 prose links are sitting there and `related` carries
+     73 edges.
+   - **The 520 saints with no link in either direction are the work list.**
+     Nothing currently reports that number; it should trend, the way locale
+     coverage does.
+
+5. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a
    560 px file; the first screenful of All Saints is 579 kB and could be ~189.
