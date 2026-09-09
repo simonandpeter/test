@@ -25,10 +25,20 @@ REMOTE_URL="https://github.com/simonandpeter/test.git"
 WAIT=1
 [ "${1:-}" = "--no-wait" ] && WAIT=0
 
-if [ -n "$(git status --porcelain)" ]; then
-  echo "the working tree is not clean -- commit first:"
-  git status --porcelain | sed 's/^/    /'
+# **Tracked changes block; untracked files only warn.** An untracked file
+# cannot be in the commit being pushed, and on 2026-09-09 this refused a push
+# because a *second session* was part-way through a mockup in the same tree.
+# Refusing to ship finished work because somebody else has an unfinished file
+# open is the wrong trade.
+if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+  echo "tracked files are modified -- commit or stash first:"
+  git status --porcelain --untracked-files=no | sed 's/^/    /'
   exit 1
+fi
+UNTRACKED="$(git status --porcelain | grep '^??' || true)"
+if [ -n "$UNTRACKED" ]; then
+  echo "note: untracked files present, not being pushed:"
+  echo "$UNTRACKED" | sed 's/^/    /'
 fi
 
 PAT="$(tr -d ' \r\n' < "$PAT_FILE" | grep -oE 'gh[ps]_[A-Za-z0-9]+')"
