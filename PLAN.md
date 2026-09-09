@@ -449,88 +449,38 @@ one only if the author asks.
 
 ## 7. Next
 
-In order, revised 2026-09-08 after the numbers behind the old order were
-re-measured.
+In order. The four items struck off on 2026-09-09 — the contact sheet, the token
+scales, the map's tests and the type collapse — are in `git log`, along with the
+two whose stated reason turned out to be wrong.
 
-1. ~~**Contact sheet**~~ — done. `node scripts/contact-sheet.mjs`.
-2. ~~**Token scales**~~ — done for type, motion and easing, in CSS *and* JS.
-   Space is named but unenforced; colour is unenforced. Those two are the
-   remaining half of section 3 and belong to the overhaul.
-3. ~~**Map tests down to units**~~ — done on 2026-09-09, and **the diagnosis in
-   this item was wrong**, which is worth keeping. The claim was that
-   `map.spec.js` re-asserts arithmetic `lib/map-*` already exposes purely. It
-   does not much: those modules carry 1,438 lines of unit tests against 1,561
-   lines of source, and the file's 78 tests are mostly things only a browser
-   answers.
+1. **The visual overhaul** — desktop first. Section 4 is the brief, section 2 is
+   the argument beneath it. The loop is `contact-sheet.mjs --still`,
+   `tile-diff.mjs snapshot`, change, `--still`, `compare`: 80 s a pass over 48
+   tiles, and a comment-only edit must come back pixel-identical.
 
-   The cost was a wait. Measured: the file was 18% of the suite's tests and
-   **54% of its wall time**, 16.8 s a test against 2.9 s elsewhere, under a
-   30 s timeout — so its tests were not intermittently wrong, they were
-   intermittently too slow, which is the whole of "40 of the 61 failures".
-   `waitUntil: 'networkidle'` sat through `warmTerrainTiles` fetching the whole
-   158-file, 6 MB tile grid, 76 times over: **2,648 ms against 192 ms** for the
-   `data-land="ok"` wait that 51 of those tests made on the next line anyway.
+   **The comment rewrite rides inside it, per file.** `calendar.css`,
+   `index.css` and `base.css` carry 2,923 comment lines across 6,299 and the
+   overhaul has to open all three; clearing each file's narrative in the same
+   pass costs one visit rather than two. A constraint stays, a quantity or a
+   mechanism needs a test or an admission that it is unverified.
 
-   Against the unmodified tree, same desk, same command: **15 failures in
-   4.7 min → 2 in 3.5 min, and that 3.5 covers both projects rather than one.**
-   Three openers now say which readiness a test means, six workers no longer
-   pull the grid concurrently (`saveData`, the code's own switch), the zoom
-   climb bursts instead of settling twenty-five times, and the file takes a
-   minute a test because a minute is what its subject costs.
+   **Two decisions waiting for the sheet.** The five cast shadows in section 4 —
+   which stay. And `.carousel`'s top margin, which has been 0 since the carousel
+   came back because `index.css` asked for a `--space-5` that has never existed;
+   it is written out as `0` rather than guessed at.
 
-   Two tests still fail here and fail identically at `HEAD`, so they are older
-   than any of this: `the map opens on the coarse coastline…` and `the land
-   keeps its own ink when a terrain tile never arrives`. Both are about the
-   terrain loaders, both pass alone, and the second now fails on its own claim
-   rather than the clock — which makes it the better one to look at first.
-4. ~~**Type: collapse the scale**~~ — done 2026-09-09. Fourteen steps to nine.
-   The loop it was waiting for is now measured: **48 tiles in 80 s**, against
-   ~40 s for a single surface through a rebuilt preview before. `tile-diff.mjs`
-   is the other half — per-tile differing-pixel counts and a mask showing where,
-   so "pixel-identical" stops being something somebody says after looking.
-5. **The visual overhaul** — desktop first, section 4 is the brief. The loop:
-   `contact-sheet.mjs --still`, `tile-diff.mjs snapshot`, change,
-   `--still` again, `tile-diff.mjs compare`. 80 s a pass over 48 tiles.
-6. **Comments: rewrite, do not move.** Measured 2026-09-09, and dated rather
-   than pinned for the same reason as the corpus counts: `src` is 34,533 lines
-   at **48% comment**
-   and that part is solid. The **68% narrates history** figure is not: it counts
-   a whole block as history when any one line in it carries a cue, and at line
-   level the same instrument reads **9%**. Measured properly, only **59 lines**
-   sit in blocks that are *mostly* history. So there is almost no narrative to
-   lift out wholesale, and "move it to a `*.notes.md`" is really "rewrite 866
-   comment blocks by judgment", which is a much larger and riskier job than the
-   old target of ~23,000 lines at ~23% implied.
-
-   Do it per file, worst first, each file its own commit with a `*.notes.md`
-   for what was cut. The mass is concentrated: `views/map/paint.js` (1,302
-   comment lines, 58%), `styles/calendar.css` (1,293), `views/index/modes.js`
-   (933, 69%), `styles/index.css` (875), `styles/base.css` (755) — five files
-   are a third of it. **The three stylesheets go before the overhaul** because
-   the overhaul has to read them; the rest goes after, or never.
-7. **Carousel: pack lazily.** The All Saints row measures all 862 saints'
+2. **Carousel: pack lazily.** The All Saints row measures all 862 saints'
    captions (~9,600 canvas calls) in one blocking task before it can paint a
    column. Pack enough for the screen plus the loop's buffer, paint, finish in
-   idle time. Worth most of a ~1,200 ms startup task at 10× CPU.
+   idle time. Worth most of a ~1,200 ms startup task at 10× CPU — the
+   reader-facing defect with the most in it.
 
-   **It is also the last source of test flake.** With the map's tests fixed,
-   `index-carousel.spec.js` was the whole of what remained — flaking on two
-   consecutive CI runs while passing 24 of 24 alone, because the drift test's
-   4 s budget was being spent on this blocking pack under six workers. The test
-   now waits for the row to be packed before it times the drift, so the flake
-   is gone, but the wait is a measurement of this defect and should shrink to
-   nothing when it is fixed.
-8. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
+   It is also measured by a test: `the carousel drifts on its own` waits for the
+   row to be packed before timing the drift, and that wait should return
+   instantly once this lands.
+
+3. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
    `scrollLeft` inside a live gesture. Known defect.
-9. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a
+
+4. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a
    560 px file; the first screenful of All Saints is 579 kB and could be ~189.
-10. **The carousel's top margin is 0 and has always been.** `index.css` asked
-    for `--space-5`, a step the scale has never had. Written out as `0` on
-    2026-09-08 rather than guessed at; decide it with the sheet open.
-11. **Colour needs no sweep either, and the shadows need a decision.** There
-    are **zero** raw hex colours in a declaration: every `#000` is a
-    `mask-image` stop, where only alpha matters and the hue is arbitrary, and
-    the two greys this list previously named live in comments. What is genuinely
-    untokenised is **seven `rgb(0 0 0 / α)` values**, all shadows or scrims (see
-    section 4) — and the question there is which of them should exist at all,
-    not what to call them.

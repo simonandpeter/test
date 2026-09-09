@@ -100,9 +100,10 @@ comparison.
 
 **And if it still will not reproduce, throttle the CPU rather than theorise.**
 `Emulation.setCPUThrottlingRate` after the `goto` turns a two-core runner into
-something this desk can be. Two carousel flakes survived a day of guessing —
-including two explanations written into the code that were later disproved —
-and both fell out in minutes at 20x:
+something this desk can be. **`node scratchpad/throttle-probe.mjs
+hover|resize|ceiling [rates]`** against a running `npm run preview` is the tool.
+Three flakes survived a day of guessing — including two explanations written
+into the code and later disproved — and all three fell out in minutes at 20x:
 
 - `hover()` waits for its target to be **stable**, which a row drifting by
   design never is. At 1x the drift is ~0.4 px a frame and rounds to equal often
@@ -110,8 +111,13 @@ and both fell out in minutes at 20x:
   actionability gate.
 - A resized cell reports **0** before it reports its new width (trap 7 again),
   and a poll for "narrower than before" accepts the 0, exits, and then fails a
-  floor of 150. At 1x the real width lands in 97 ms and the zero is never seen;
-  at 20x it is the first reading every time.
+  floor of 150. At 1x the real width lands in ~150 ms and the zero is never
+  seen; at 20x it is the first reading every time. The width also *oscillates*
+  back through 0, so the assertion has to be made on the reading that settled —
+  two consecutive equal non-zero ones — not on a fresh read afterwards.
+- A zoom climb that bursts ten presses to a settle arrives only on a **slow**
+  machine, since a press sent mid-flight re-aims from wherever the view has
+  reached. It passed every full suite and failed 3 of 8 run alone.
 
 **Measure before fixing, and stop when the instrument cannot resolve the
 change.** This desk's spread across identical builds is wider than most

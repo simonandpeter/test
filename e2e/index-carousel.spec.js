@@ -448,7 +448,7 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
    * two-core runner the frames are longer, the step is bigger, and it never
    * rounds. That is the whole of the CI failure on `024897a`, and it
    * reproduces locally at `Emulation.setCPUThrottlingRate` 20 —
-   * `scratchpad/hover-probe.mjs` succeeds at 1x and 6x and times out at 20x.
+   * `scratchpad/throttle-probe.mjs hover` succeeds at 1x and times out at 20x.
    *
    * `mouse.move` has no actionability gate: it puts the pointer at a
    * coordinate and the page sees the same thing. The track's own box is the
@@ -989,7 +989,7 @@ test('a carousel card is sized by the window height as well as its width', async
    * and then fails the floor below on 0 < 150. That is the whole of the flake
    * this test carried on four CI runs across both projects (2026-09-09).
    *
-   * Measured with `scratchpad/resize-probe.mjs` at
+   * Measured with `scratchpad/throttle-probe.mjs resize` at
    * `Emulation.setCPUThrottlingRate`: at 1x the width goes 300 → 164 in 97 ms
    * and the zero is never seen, which is why this desk never caught it. At 6x,
    * 20x and 50x the first reading after the resize is **0**, and the real 164
