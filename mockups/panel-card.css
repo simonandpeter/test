@@ -1,0 +1,10 @@
+/* A — the panel around the whole card.
+   PLAN section 4's literal reading: "recessed field, 1px rule border". Every
+   caption becomes a box; at All Saints' density the page reads as tiles rather
+   than a register, and the carousel's fixed 150px width clips long names. */
+.index-card,
+.cx-card {
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+}

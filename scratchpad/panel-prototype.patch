@@ -1,0 +1,50 @@
+diff --git a/src/styles/calendar.css b/src/styles/calendar.css
+index cfa3101..af6ed9d 100644
+--- a/src/styles/calendar.css
++++ b/src/styles/calendar.css
+@@ -1993,6 +1993,15 @@
+    box that *looks* like a frame is the promise of a picture that is not coming,
+    which the author struck out on 2026-08-26 — but it still holds its width, so
+    the pictures that do exist stay in one column. */
++/* PROTOTYPE B 2026-09-09: the board round the picture, as on All Saints. */
++.reg-card .reg-thumb:not(.is-blank),
++.hero-media {
++  background: var(--field);
++  border: 1px solid var(--rule);
++  border-radius: var(--radius-panel);
++  padding: var(--space-1);
++}
++
+ .reg-card .reg-thumb {
+   display: block;
+   width: 40px;
+diff --git a/src/styles/index.css b/src/styles/index.css
+index 682f2e4..ba9db0a 100644
+--- a/src/styles/index.css
++++ b/src/styles/index.css
+@@ -1357,7 +1357,24 @@ html.is-rolling #view {
+   color: inherit;
+ }
+ 
+-.cx-card .cx-media {
++.cx-card /* PROTOTYPE B 2026-09-09: the kovcheg is the board an icon is painted on, so
++   the recessed field goes round the picture and the caption stays on the
++   gesso. A saint with no picture gets no board. */
++.cx-media:not(.is-blank) {
++  background: var(--field);
++  border: 1px solid var(--rule);
++  border-radius: var(--radius-panel);
++  padding: var(--space-1);
++}
++
++.index-card .index-media {
++  background: var(--field);
++  border: 1px solid var(--rule);
++  border-radius: var(--radius-panel);
++  padding: var(--space-1);
++}
++
++.cx-media {
+   align-self: end;
+ }
+ 

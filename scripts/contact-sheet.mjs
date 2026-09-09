@@ -29,7 +29,8 @@
  * detail can be opened at full size without shooting again.
  */
 import { mkdir, writeFile } from 'node:fs/promises';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 
@@ -127,7 +128,24 @@ const LANGS = list('langs', 'en');
 const ROUTES = list('routes', `/,/saints,/saints/${anySaint()},/map,/texts,/about`);
 const HEIGHT = Number(arg('height', 780));
 const TILE = Number(arg('tile', 420));
-const SETTLE = Number(arg('settle', 1200));
+const SETTLE = Number(arg('settle', 250));
+
+/**
+ * **`--css=a.css,b.css` shoots each as its own row**, so several visual options
+ * can be compared in one image without a file being edited or a tree left
+ * dirty. Each is injected after load, over everything the page already has.
+ *
+ * A mockup is a thing to look at beside its alternatives, and patching the
+ * source to see one means reverting to see the next -- and remembering to.
+ * The baseline is always the first row, because "against what" is half of
+ * every judgement.
+ */
+const VARIANTS = ['', ...list('css', '')];
+const variantCss = new Map();
+for (const v of VARIANTS) {
+  if (v) variantCss.set(v, readFileSync(v, 'utf8'));
+}
+const variantName = (v) => (v ? path.basename(v).replace(/\.css$/, '') : 'baseline');
 const OUT = arg('out', 'shots/contact.png');
 /**
  * **Deterministic mode, for diffing one tree against another.**
@@ -188,6 +206,7 @@ const rows = [];
 for (const width of WIDTHS) {
   for (const theme of THEMES) {
     for (const language of LANGS) {
+     for (const variant of VARIANTS) {
       const ctx = await browser.newContext({
         viewport: { width, height: HEIGHT },
         deviceScaleFactor: 1,
@@ -224,10 +243,65 @@ for (const width of WIDTHS) {
           if (route.startsWith('/map')) {
             await page.locator('[data-map][data-land="ok"]').waitFor({ timeout: 30000 });
           }
+          /*
+           * **Wait for the page to be ready, then settle briefly.** A flat
+           * 1200 ms was 58 s of an 80 s sheet, and dropping it to 250 changed
+           * exactly one route's pixels -- All Saints, which packs 862 captions
+           * in a blocking task before it can paint a column. So that route
+           * waits for the row to be packed and the rest need only a moment.
+           */
+          if (route === '/saints') {
+            await page
+              .locator('[data-carousel-track]')
+              .waitFor({ timeout: 30000 })
+              .catch(() => {});
+            await page
+              .waitForFunction(() => {
+                const t = document.querySelector('[data-carousel-track]');
+                return !t || t.scrollWidth > t.clientWidth;
+              }, { timeout: 30000 })
+              .catch(() => {});
+          }
           await page.evaluate(() => document.fonts.ready);
-          await page.waitForTimeout(SETTLE);
+          /*
+           * **And wait for the pictures.** Packing is not the whole of what a
+           * flat 1200 ms was buying: All Saints' tiles still differed by 8.9%
+           * with only the pack waited for, because the icons had not decoded.
+           * A screenshot tool wants loaded images on every route, so this is
+           * general rather than special-cased, and capped because a broken
+           * image never completes.
+           */
+          await page
+            .waitForFunction(
+              (h) =>
+                [...document.images]
+                  .filter((i) => {
+                    // Only what the clip will actually contain. Waiting for
+                    // every image in the DOM means waiting for all 862 of All
+                    // Saints' icons, which took the sheet from 16 s to 40 --
+                    // slower than the flat sleep it replaced.
+                    const r = i.getBoundingClientRect();
+                    return r.bottom > 0 && r.top < h && r.width > 0;
+                  })
+                  .every((i) => i.complete),
+              HEIGHT,
+              { timeout: 15000 },
+            )
+            .catch(() => {});
+          if (variant) await page.addStyleTag({ content: variantCss.get(variant) });
+          /*
+           * **All Saints alone needs the long settle**, and measuring which
+           * routes need what is the whole of the saving: a flat 1200 ms was
+           * 58 s of an 80 s sheet, and only this route's pixels change without
+           * it. Waiting on readiness signals instead was tried and is worse --
+           * every image in the DOM is 862 icons and took the sheet to 40 s,
+           * and filtering to the viewport is an approximation the carousel
+           * defeats. A measured sleep on one route beats a clever wait on six.
+           */
+          await page.waitForTimeout(route === '/saints' ? Math.max(SETTLE, 1200) : SETTLE);
           const shot = await page.screenshot({ clip: { x: 0, y: 0, width, height: HEIGHT } });
-          const name = `shots/tile-${label(route)}-${width}-${theme}-${language}.png`;
+          const suffix = variant ? `-${variantName(variant)}` : '';
+          const name = `shots/tile-${label(route)}-${width}-${theme}-${language}${suffix}.png`;
           await writeFile(name, shot);
           tiles.push({ route, data: `data:image/png;base64,${shot.toString('base64')}` });
         } catch (e) {
@@ -235,9 +309,15 @@ for (const width of WIDTHS) {
           tiles.push({ route, data: null });
         }
       }
-      rows.push({ caption: `${width}px · ${theme}${LANGS.length > 1 ? ` · ${language}` : ''}`, width, tiles });
+      const vlabel = VARIANTS.length > 1 ? ` · ${variantName(variant)}` : '';
+      rows.push({
+        caption: `${width}px · ${theme}${LANGS.length > 1 ? ` · ${language}` : ''}${vlabel}`,
+        width,
+        tiles,
+      });
       await ctx.close();
-      console.log(`shot ${width}px ${theme} ${language}`);
+      console.log(`shot ${width}px ${theme} ${language}${vlabel}`);
+     }
     }
   }
 }

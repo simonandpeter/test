@@ -1,0 +1,13 @@
+/* B — the board around the picture only.
+   The kovcheg is what an icon is painted *on*, so the recessed field goes
+   round the image and the caption stays on the gesso as a register line. A
+   saint with no picture gets no board: nothing is painted on it. */
+.cx-media:not(.is-blank),
+.index-card .index-media,
+.reg-card .reg-thumb:not(.is-blank),
+.hero-media {
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-1);
+}

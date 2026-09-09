@@ -317,10 +317,14 @@ nothing.**
   an earlier sitting keeps 5173 while a new `npm run dev` quietly takes 5175,
   and the sheet drew the wrong tree and reported success (2026-09-09). It also
   found a dev-only 404 on the saint route on its first run.
-  **48 tiles in 80 s** (2 widths × 2 themes × 2 languages × 6 routes), most of
-  which is the manifest rebuild and a cold vite. `export MSYS_NO_PATHCONV=1`
-  before `--routes=/`, or the shell turns it into `C:/Program Files/Git/` and
-  you get six tiles of nothing.
+  **48 tiles in 43 s** (2 widths × 2 themes × 2 languages × 6 routes).
+  `export MSYS_NO_PATHCONV=1` before `--routes=/`, or the shell turns it into
+  `C:/Program Files/Git/` and you get six tiles of nothing.
+- **`--css=mockups/a.css,mockups/b.css`** shoots each as its own labelled row,
+  with the baseline first. **This is how visual options are compared**: no file
+  is edited, no tree is left dirty, and three variants of two routes take 11 s
+  in one image. `mockups/` holds them; two are there already (`panel-card.css`,
+  `panel-icon.css`, the two readings of PLAN's kovcheg).
 - **`node scripts/tile-diff.mjs snapshot <name>` / `compare <name>`** — the
   other half of `--still`. Per-tile differing-pixel counts against a kept
   baseline, and a mask beside each changed tile showing *where* it moved.
