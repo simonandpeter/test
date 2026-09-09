@@ -1033,3 +1033,34 @@ across sittings so no agent runs out of room mid-step:
 
 Push at every numbered step — `bash scripts/push.sh` — and read the run **and**
 its `flaky` line before moving on.
+
+### 10.13 Ruled during sitting A
+
+- **The fullscreen control becomes an icon in the month head.** At 19rem the head
+  will not hold "Open Fullscreen" as words, and the author drew it as a
+  four-corner icon there twice on 2026-09-10 ("Add a make fullscreen icon button
+  to the left of the Month Name", then "Put the make full screen button to the
+  right of the month and Reckoning"), which is later than the 2026-09-02
+  instruction naming it. **The words survive as its accessible name and its
+  `title`** — `daily-picker.spec.js:1686` moves from asserting visible text to
+  asserting the accessible name, and says in the assertion why.
+- **Step 4 is already built** and comes out of the order. The month has been the
+  desktop default since 2026-09-02: `.cal-jump` and `.cal-week` are
+  `display: none` at ≥1024 and `wireGrainForWidth` (`calendar.js:506`) forces the
+  grid open. §3.3's "change of default" framing is wrong; nearly every month test
+  calls `phone(page)`, so only the five desktop tests at `daily-picker.spec.js`
+  1663, 1795, 1851, 1907 and 2000 sit in this change's path.
+- **§10.6 was decided on a false premise and sitting A corrected it in place.**
+  `aria-hidden` does not put text beyond axe — its contrast rule matches on
+  `isVisibleOnScreen`, and the 38% tint raised 128 violations across four
+  `quality-floor` runs. Out-days ship at `--ink-soft`, with no fast tone and no
+  feast mark: the peeks' own treatment, and still a fade against `--ink`.
+- **`contact-sheet.mjs` renders the vigil tile in day colours on `/calendar`.**
+  Found, not investigated. Sitting E cannot check dark mode through the sheet
+  until this is fixed, and dark mode is half of this design — so fixing it is
+  part of sitting E, before the sweep rather than after it.
+- **Three failures on this desk are not this work's**, confirmed against a
+  stashed tree: `index-grid.spec.js:1533` under `COLD_FACE=1`,
+  `map.spec.js:3580` (6/6 alone in 13.6 s — a budget under parallel load), and
+  Lighthouse FCP at 1519–1853 ms locally where CI's own run passes. Do not chase
+  them inside a sitting; they are a separate errand.
