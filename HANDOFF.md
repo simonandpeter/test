@@ -25,8 +25,9 @@ Nothing is in flight. The tree is clean.
 ## What 2026-09-09 left behind
 
 **Cross-referencing is the corpus's live direction** (author). `related` is
-reversed: a saint shows whose lives name them, 73 edges made visible on 39
-pages. The vision and the sweep are `PLAN.md` sections 5 and 7 item 4.
+reversed — a saint shows whose lives name them — and the sweep then found the
+whole cross-reference layer sitting outside it. The vision and what is left are
+`PLAN.md` sections 5 and 7 item 4.
 
 **Three rules were recovered from the deleted `SESSIONS.md`** — related saints,
 kinship clauses staying in a name, and the refusal of Nassar's 1938 menaion on
@@ -60,21 +61,51 @@ single surface through a rebuilt preview before.
 
 ## In flight
 
-**Run `node scripts/related-from-links.mjs` over the whole corpus** (author,
-2026-09-09), and read every row it proposes. It proposes and never writes.
+Nothing. The tree is clean.
 
-That is the first bullet of `PLAN.md` item 4, the cross-reference sweep. What
-makes it a reading job rather than a script job: **a dedication is not a
-relation.** A church, lavra, chapel, feast or ship named for a saint is not an
-association with them, and 23 of the 86 links the corpus produces are exactly
-that. The tool tests adjacency rather than proximity and keeps a `REFUSED`
-table for what no rule catches — a warship whose mutiny a saint calmed, a
-saint's words quoted seven centuries later. Every row still needs a human to
-say whether a life meant a person or a building.
+## The cross-reference sweep, 2026-09-09
 
-The prize: `related` carries **73 edges** against **532 hand-written prose
-links**, and reverse links now mean every row added shows on two pages instead
-of one. **520 saints of 862 have no link in either direction.**
+**`related-from-links.mjs` could not see the corpus's own links.** Its first
+line strips every markdown link from a life, because its two tiers ask what
+`cross-link.js` would find in bare prose. Run over the whole corpus it proposed
+nothing at all: the 86 links those tiers can see were already read and settled.
+The 532 links a hand had written into the lives — the real cross-reference
+layer — were the thing the `replace` deleted, and nine of them were `related`
+rows.
+
+All 542 rows were read, the 501 proposed and the 41 the dedication rule holds.
+No dedication among the written ones and no wrong person: they are family,
+fellow martyrs, teachers and disciples, cellmates, and saints the calendars
+keep on one day. One row the rule wrongly held — "the deacon of his church
+Alexander Ipatov", where `church` belongs to `deacon of his` — is now the first
+entry in `KEPT`, the mirror of `REFUSED`.
+
+| | before | after |
+| --- | --- | --- |
+| `related` edges | 73 | **574** |
+| saints with a link either way | 94 | **379 of 862** |
+| isolated | 768 | **483** |
+
+**`node scripts/link-coverage.mjs [--isolated]`** is the number and the work
+list, so it trends instead of going stale in a document — `PLAN.md` had carried
+"520 saints with no link in either direction" and the true figure was 768.
+
+**The rule now has a test.** `tests/life-links.test.mjs` asserts that every
+`/saints/<slug>` a hand writes into a life is a `related` row; the shared parts
+moved to `scripts/life-links.mjs` so there is one copy of the dedication
+regexes. PLAN's oldest corpus rule had gone unenforced for as long as it had
+existed.
+
+**What is left of item 4 is not mechanical.** Both prose tiers are exhausted.
+The 483 isolated saints shorten only by writing links into lives, and every
+hyperlink added is now two rows on two pages.
+
+**Watch the manifest.** `mentionedIn` took the projection at 5,000 saints from
+370 KB gzipped to **396 against a 400 KB budget**. It is on the card because
+`related` is not in the manifest at all — the saint view fetches the folder's
+own `saint.json` — so the client cannot derive it. If the budget bites, the
+move is a separate reverse-index file fetched with the saint detail rather than
+by every page.
 
 ## Next
 

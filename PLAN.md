@@ -389,15 +389,30 @@ other, and every one of those threads that is written down should be walkable.
 A reader who arrives at one saint should be able to leave by every door the
 sources actually give them.
 
-Measured 2026-09-09, before any of it:
+**`node scripts/link-coverage.mjs` is the number, and it trends.** Quote it
+from the script, never from here — this table said "520 saints with no link in
+either direction" for a day and the true figure was 768.
 
-| | |
-| --- | --- |
-| inbound edges that exist and are invisible | **599** |
-| saints that would gain a "mentioned in" | **286 of 862** |
-| saints with no link in either direction | **520** |
-| folders the linker can match at all | 375 of 862 |
-| hand-written links in lives | 532, across 285 lives |
+Measured 2026-09-09, before the sweep and after it:
+
+| | before | after |
+| --- | --- | --- |
+| `related` edges | 73 | **574** |
+| lives that name someone | 66 | **330** |
+| saints a life names | 39 | **286** |
+| a link in either direction | 94 of 862 | **379 of 862** |
+| **isolated** | 768 | **483** |
+| folders `cross-link.js` can match at all | 375 of 862 | 375 of 862 |
+| hand-written links in lives | 532, across 285 lives | unchanged |
+
+**The whole of that gain was already written down.** The 532 links a hand had
+put in the lives were the corpus's real cross-reference layer, and nine of them
+were in `related`; the two prose tiers that had done all the work until then
+could see 86 links and proposed nothing new on the whole corpus. Reading all
+510 distinct ones turned up no dedication and no wrong person. The lesson is
+about instruments rather than about saints: `related-from-links.mjs` stripped
+every markdown link on its first line, so the strongest claim in the corpus was
+the one thing it was structurally unable to see.
 
 **The dedication rule survives the reversal and constrains it.** A church,
 lavra, chapel, feast or ship named for a saint is not an association with them,
@@ -648,19 +663,21 @@ two whose stated reason turned out to be wrong.
 4. **Sweep for cross-references, to the vision in section 5.** In order of
    what each is worth:
 
-   - **Reverse the 599 edges that already exist** — the biggest single gain,
-     and derivation rather than authorship. 286 saints gain a door.
+   - ~~Reverse the edges that already exist~~ — **done 2026-09-09.** A saint
+     shows whose lives name them; the reverse index is derived in
+     `build-manifest.mjs` and never stored in a folder.
+   - ~~Run `related-from-links.mjs` over the whole corpus~~ — **done
+     2026-09-09**, all 542 rows read. 73 edges became 574 and the isolated
+     count 768 → 483. The tool now has a third and strongest tier, `written`.
    - **Raise the linker's ceiling.** `lib/cross-link.js` can match 375 of 862
      folders; the other 487 have name forms too short or ambiguous to be safe,
      and six forms are shared by two saints. The way past it is better *name
      forms in the data*, not looser rules — the rules were narrowed until every
-     proposed link was right and that trade stands.
-   - **Run `related-from-links.mjs` over the whole corpus again.** It proposes
-     and never writes; 532 prose links are sitting there and `related` carries
-     73 edges.
-   - **The 520 saints with no link in either direction are the work list.**
-     Nothing currently reports that number; it should trend, the way locale
-     coverage does.
+     proposed link was right and that trade stands. It is now the *only*
+     mechanical route left: both other tiers are exhausted.
+   - **The 483 isolated saints are the work list**, and the way to shorten it
+     is to write links into lives — every hyperlink a hand adds is now two rows
+     on two pages. `node scripts/link-coverage.mjs --isolated` prints them.
 
 5. **A phone-sized card derivative** — a phone draws a 150 CSS px card from a
    560 px file; the first screenful of All Saints is 579 kB and could be ~189.

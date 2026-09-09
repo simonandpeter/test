@@ -98,5 +98,11 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "ambrose-of-moschonisia",
+    "euthymius-of-zela",
+    "gregory-of-kydonies",
+    "procopius-of-iconium"
   ]
 }

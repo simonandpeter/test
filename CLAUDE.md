@@ -334,7 +334,10 @@ nothing.**
   state the sheet cannot reach (mid-flight, after a press). Steps: `click:`,
   `wait:`, `key:`, `scroll:`, `lang:`, `church:`.
 - `node scripts/locale-coverage.mjs` — pack gaps, and offices/eras against the
-  corpus.
+  corpus. **`node scripts/link-coverage.mjs [--isolated]`** is its opposite
+  number for cross-references: how many saints have a link in either direction,
+  and the work list of those that have none. Quote the number from the script;
+  PLAN carried a stale one for a day.
 - `node scripts/language-audit.mjs`, `date-audit.mjs`, `place-candidates.mjs`,
   `track-candidates.mjs`, `related-from-links.mjs` — all **propose, never
   write**; every row needs a reading.

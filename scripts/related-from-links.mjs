@@ -3,7 +3,7 @@
  * Which of the automatic cross-links belong in a saint's `related` list.
  *
  * `node scripts/related-from-links.mjs`   (needs `npm run build:manifest` first)
- * `node scripts/related-from-links.mjs --write`         applies the accepted exact matches
+ * `node scripts/related-from-links.mjs --write`         applies the written and exact matches
  * `node scripts/related-from-links.mjs --write --write-loose`   also applies the loose ones
  *
  * **Proposes; the reading is the work**, the same standing as
@@ -26,7 +26,16 @@
  * `related` entry somebody can add by hand, and a link wrongly proposed costs
  * a claim about two people.
  *
- * **Two tiers, not one.** `cross-link.js`'s own index — reused here unchanged,
+ * **Three tiers.** The first is not an inference at all: a life that writes
+ * `[Natalia](/saints/natalia-of-nicomedia)` has already named the person and
+ * the page. For a long time this script could not see one, because it strips
+ * every markdown link before it scans — and 510 of them were in the corpus
+ * with nine in `related`, against the 86 the prose tiers could find. Reading
+ * the whole 510 on 2026-09-09 turned up no dedication and no wrong person:
+ * they are family, fellow martyrs, teachers and disciples, cellmates, and
+ * saints the calendars keep on one day. `--write` applies them.
+ *
+ * **Two prose tiers under it.** `cross-link.js`'s own index — reused here unchanged,
  * so a "found in `related-from-links`" row is always a form the live site
  * would also link — only matches a saint's display name exactly. That missed
  * a real relation: John the Long-Suffering's own life says he prayed at "the
@@ -54,6 +63,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { buildNameIndex, matchableName, usableName } from '../src/lib/cross-link.js';
+import { writtenLinks, setAside, BEFORE, AFTER } from './life-links.mjs';
 
 const WRITE = process.argv.includes('--write');
 const WRITE_LOOSE = process.argv.includes('--write-loose');
@@ -118,75 +128,24 @@ const loosePattern = looseForms.length
   ? new RegExp(`(?<!\\p{L})(${looseForms.map(escape).join('|')})(?!\\p{L})`, 'gu')
   : null;
 
-/**
- * The words that turn a saint's name into a building's — or into a date.
- *
- * **Adjacency, not proximity**, and the difference was a real false positive.
- * The first version looked for the word anywhere in the forty characters
- * before the name, and set aside "of the Trinity-Sergius monastery, sent with
- * Andrew Oslyabya to the battle by Sergius of Radonezh" — the one relationship
- * in the corpus nobody would want to lose, two monks sent to Kulikovo
- * together. A dedication runs straight into the name: the word, then at most
- * "of", "of the", or "of St".
- *
- * `Lavra`, `Skete` and `Podvorye` are looked for *after* the name as well,
- * since Russian usage puts them there — "the Alexander Nevsky Lavra" rather
- * than "the Lavra of Alexander Nevsky".
- *
- * `feast` is in the list for the same reason as the buildings: "he died on the
- * feast of Alexander Nevsky" dates a death and relates nobody.
- *
- * **A feast's own name reads the same way**, and the loose tier found the gap:
- * "the church of the Nativity of John the Forerunner" and "the Beheading of
- * John the Forerunner" both name a building or a commemoration, not a meeting,
- * and neither is a monastery or a lavra for the first NAMED_FOR list to catch
- * — the word standing in front of the name is the feast's own title. The
- * Slavic calendar's own commonest ones are listed rather than guessed at.
- *
- * **`protection` and `intercession` are left out on purpose**, having gone in
- * and straight back out: both name the Pokrov feast in a church's title, but
- * both are also ordinary English for a saint's patronage — "she put herself
- * under the protection of", "with the intercession of" — and the run that
- * added them promptly hid a real relation (Nicholas of Alma-Ata "served
- * afterwards under the protection of Theodosius of Chernigov, whom he
- * honoured greatly") behind a feast that sentence was never naming.
- */
-const NAMED_FOR =
-  'church|chapel|cathedral|monastery|convent|lavra|skete|parish|abbey|hermitage|seminary|academy|brotherhood|society|feast|temple|altar|shrine|icon|hospital|almshouse|school|' +
-  'nativity|dormition|beheading|annunciation|transfiguration|presentation|entrance|ascension|assumption|exaltation|elevation|resurrection|epiphany|theophany';
-const BEFORE = new RegExp(`\\b(?:${NAMED_FOR})\\b(?:\\s+of)?(?:\\s+the)?(?:\\s+(?:St|Saint|Ss)\\.?)?\\s*$`, 'i');
-/*
- * Plural, and `chapel`, because both were read off the first run: "sent
- * travelling, to the Trinity and Alexander Nevsky lavras" and "buried in a
- * vault made in the John Chrysostom chapel" were proposed as relationships.
- * A dedication is a dedication in the plural too.
- */
-const AFTER =
-  /^\s*(lavra|monastery|convent|cathedral|church|chapel|skete|podvorye|seminary|academy|hermitage)s?\b/i;
-
-/**
- * The ones a reading refused, which no rule was going to catch.
- *
- * Amendment 44's lesson about the hymn matching, in a second place: **the
- * matching is a table rather than a rule.** `BEFORE` and `AFTER` above catch
- * the shape "the church of X"; nothing catches a battleship named for a saint,
- * and nothing should try. Each row says why it is here, and a row removed from
- * this table is a claim proposed again on the next run.
- */
-const REFUSED = new Set([
-  // A warship of the Black Sea Fleet, the *Sviatoi Ioann Zlatoust*, whose
-  // mutiny of 1912 Roman Medved calmed. A dedication like any church's.
-  'roman-medved -> john-chrysostom',
-  // Not a meeting but a quotation — "God is not in strength but in truth",
-  // said seven centuries before Nicholas of Alma-Ata repeated it to his flock.
-  'nicholas-of-alma-ata -> alexander-nevsky',
-]);
-
 const already = new Map();
 for (const dir of fs.readdirSync('saints')) {
   const file = path.join('saints', dir, 'saint.json');
   if (!fs.existsSync(file)) continue;
   already.set(dir, new Set(JSON.parse(fs.readFileSync(file, 'utf8')).related ?? []));
+}
+
+/*
+ * The tier that is not an inference: `scripts/life-links.mjs` reads the
+ * `/saints/<slug>` links a hand put in a life. This file's own scan cannot see
+ * one, because `text` below has every markdown link cut out of it — the two
+ * prose tiers ask what `cross-link.js` would find in bare prose, and that one
+ * `replace` is why 510 written links sat outside `related` until 2026-09-09.
+ */
+const written = new Map();
+for (const row of writtenLinks('saints')) {
+  if (!written.has(row.dir)) written.set(row.dir, []);
+  written.get(row.dir).push(row);
 }
 
 const rows = [];
@@ -224,25 +183,38 @@ for (const dir of fs.readdirSync('saints')) {
       });
     }
   };
+  /*
+   * The written tier comes first, so a saint both linked and named in the same
+   * life is reported once and as written — the stronger of the two claims. Its
+   * slugs seed `seen`, which is what makes "once" true across all three tiers.
+   */
+  for (const row of written.get(dir) ?? []) {
+    seen.add(row.slug);
+    rows.push(row);
+  }
   scan(pattern, 'exact');
   scan(loosePattern, 'loose');
 }
 
-const refused = (r) => REFUSED.has(`${r.dir} -> ${r.slug}`);
-const proposed = rows.filter((r) => !r.dedication && !refused(r) && !already.get(r.dir)?.has(r.slug));
-const held = rows.filter((r) => r.dedication || refused(r));
-const have = rows.filter((r) => !r.dedication && already.get(r.dir)?.has(r.slug));
+const proposed = rows.filter((r) => !setAside(r) && !already.get(r.dir)?.has(r.slug));
+const held = rows.filter(setAside);
+const have = rows.filter((r) => !setAside(r) && already.get(r.dir)?.has(r.slug));
 
+const writtenProposed = proposed.filter((r) => r.kind === 'written');
 const exactProposed = proposed.filter((r) => r.kind === 'exact');
 const looseProposed = proposed.filter((r) => r.kind === 'loose');
+const tier = (k) => rows.filter((r) => r.kind === k).length;
 
-console.log(`links in lives                   : ${rows.length} (${rows.filter((r) => r.kind === 'loose').length} loose)`);
+console.log(`links in lives                   : ${rows.length} (${tier('written')} written, ${tier('exact')} exact, ${tier('loose')} loose)`);
 console.log(`already in related               : ${have.length}`);
 console.log(`set aside, dedication or refused : ${held.length}`);
+console.log(`proposed, written                : ${writtenProposed.length}`);
 console.log(`proposed, exact                  : ${exactProposed.length}`);
 console.log(`proposed, loose — read twice     : ${looseProposed.length}\n`);
 
-console.log('-- proposed, exact -------------------------------------------------');
+console.log('-- proposed, written (a hand linked the page) -----------------------');
+for (const r of writtenProposed) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
+console.log('\n-- proposed, exact -------------------------------------------------');
 for (const r of exactProposed) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
 console.log('\n-- proposed, loose (a word was dropped to match) — read twice -----');
 for (const r of looseProposed) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
@@ -254,7 +226,7 @@ if (!WRITE) {
   process.exit(0);
 }
 
-const toWrite = WRITE_LOOSE ? proposed : exactProposed;
+const toWrite = WRITE_LOOSE ? proposed : [...writtenProposed, ...exactProposed];
 if (!WRITE_LOOSE && looseProposed.length) {
   console.log(`\n${looseProposed.length} loose row(s) read but not written — pass --write-loose to include them.`);
 }

@@ -53,5 +53,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "hermas-of-rome",
+    "polyaenus-of-rome"
+  ]
 }

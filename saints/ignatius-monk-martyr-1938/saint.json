@@ -65,5 +65,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "roman-medved"
+  ]
 }

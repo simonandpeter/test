@@ -246,5 +246,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "rufina-mother-of-mamas",
+    "theodotus-father-of-mamas"
   ]
 }
