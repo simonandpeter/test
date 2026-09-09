@@ -62,6 +62,16 @@ const imageInflight = () => (window.matchMedia('(max-width: 699.98px)').matches 
 const CAROUSEL_BUFFER = 12;
 
 /**
+ * How many saints the first paint packs.
+ *
+ * Enough that the widest desk is filled twice over — a 1440 px window holds
+ * about nine 150 px columns, and a cell carries one to four saints — so the
+ * row the reader sees first is a real row and not a stub, while the pack it
+ * costs is a fifth of the corpus rather than all of it.
+ */
+const CX_PREFIX = 180;
+
+/**
  * The Index's two faces, and the toggle between them.
  *
  * The carousel and the search grid are one page in two modes, not two pages,
@@ -1065,7 +1075,32 @@ export function paintCarousel() {
    */
   el.querySelector('.carousel')?.style.setProperty('--cx-fill', `${space}px`);
 
-  const run = carouselCells(pool, { space, cardWidth, textWidth, pen });
+  /*
+   * **The first paint packs a prefix, not the corpus** (2026-09-09).
+   *
+   * Packing all 862 saints' captions is ~675 ms of `greedyLines` at 10x CPU,
+   * and `paint(CAROUSEL_BUFFER)` then writes 886 cells into `innerHTML`, which
+   * is most of the 2,293 ms of native parse-style-layout that dominates this
+   * page's boot. Profiled with `scratchpad/cpu-profile.mjs`; the shape of the
+   * bill is in PLAN item 2.
+   *
+   * So the reader gets a row built from the first `CX_PREFIX` saints at once,
+   * and the whole of it in idle time. A prefix of a shuffled pool is a valid
+   * sample, so the columns they see first are the columns they would have
+   * seen; the second pass replaces the row rather than extending it, because
+   * the loop's period is a fact about the whole run and cannot be edited
+   * afterwards.
+   *
+   * The identity is the pool's length and its first slug: a search or a
+   * reshuffle changes one of the two, which retires the flag and starts the
+   * pair again. Getting that wrong shows a prefix and stops, so it is
+   * deliberately cheap to compute and not clever.
+   */
+  const poolId = `${pool.length}:${pool[0]?.slug ?? ''}`;
+  const partial = pool.length > CX_PREFIX && state.carouselFullFor !== poolId;
+  const working = partial ? pool.slice(0, CX_PREFIX) : pool;
+
+  const run = carouselCells(working, { space, cardWidth, textWidth, pen });
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
   // rather than keep a set of cells that were grouped for the other one.
@@ -1105,6 +1140,34 @@ export function paintCarousel() {
     return;
   }
   buildCarousel(key, run, { cardWidth, textWidth, space, pen });
+  if (partial) packRest(poolId);
+}
+
+/**
+ * The rest of the corpus, once the reader has a row to look at.
+ *
+ * `requestIdleCallback` is the point — this must never compete with the first
+ * paint it exists to protect, and Safari has never shipped it, so a timeout
+ * stands in. The flag is set *before* the repaint rather than after, or the
+ * second pass would see `partial` again and schedule a third.
+ */
+function packRest(poolId) {
+  const idle =
+    typeof window.requestIdleCallback === 'function'
+      ? window.requestIdleCallback
+      : (fn) => setTimeout(fn, 200);
+  const handle = idle(() => {
+    if (!state || state.mode !== 'carousel') return;
+    state.carouselFullFor = poolId;
+    // The key belongs to the prefix row; clearing it is what lets the repaint
+    // past the early return that skips an unchanged run.
+    state.carouselKey = null;
+    paintCarousel();
+  });
+  state.cleanups.push(() => {
+    if (typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(handle);
+    else clearTimeout(handle);
+  });
 }
 
 /** How long the row takes to go before the new one is built. */

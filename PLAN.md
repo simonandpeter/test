@@ -492,11 +492,34 @@ two whose stated reason turned out to be wrong.
    measures the carousel twice, because the two faces are `carousel` and
    `search` and anything else falls back to the first.
 
-   **It is a real refactor, not a tidy-up.** The pack feeds a key built from the
-   whole run, and `buildCarousel` hands that run to the endless engine in
-   `ui/loop-scroll.js`, which is the most delicate machinery on the site. Expect
-   to touch it, and expect the row's own tests to be the thing that says whether
-   it worked.
+   **Half done on 2026-09-09, and the profile says why only half.** Profiled at
+   10× with `scratchpad/cpu-profile.mjs` against the dev server, where the
+   function names survive:
+
+   | | ms |
+   | --- | --- |
+   | `(program)` — native parse, style, layout | **2,293** |
+   | `frame` + `onScroll` (`loop-scroll.js`) | 673 |
+   | `greedyLines` + `nameLines` + `captionH` — the caption pack | 675 |
+
+   So **this item named a third of the bill.** The pack is real, but the row
+   also puts `loopSlice(run, 12)` — 886 cells, the whole corpus — into
+   `innerHTML`, and that native cost dominates. The grid next door is
+   virtualised; the row is not.
+
+   **Done:** the first paint packs `CX_PREFIX` (180) saints and the rest
+   arrives on `requestIdleCallback`. Measured three runs each side on one build
+   cycle: ready **2,829 → 1,959 ms** median, longest task **1,244 → 866 ms**,
+   at the cost of more shorter tasks (14 → 21). The whole corpus still reaches
+   the row — 60 cells at first paint growing to 200 — and the rebuild is a case
+   `loop-scroll.js` already handles, since `handoff()`/`inherit()` exist for
+   exactly the late repaint a settling font or picture causes.
+
+   **Left:** virtualising the row, which is the 2,293 ms. It fights the endless
+   engine directly — `loopScroll` measures real offsets to find the period, so
+   a row that does not hold all its cells has no period to measure. That is a
+   design change to the engine, not an optimisation of it, and it is the
+   biggest single performance prize on the site.
 
    It is also measured by a test: `the carousel drifts on its own` waits for the
    row to be packed before timing the drift, and that wait should return
