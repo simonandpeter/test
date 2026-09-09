@@ -371,6 +371,31 @@ the manifest.
 - **`BRAND` is never translated.** The masthead is an SVG of the stamp face's
   outlines, not live text.
 
+### Related saints
+
+**A saint named in a life gets a hyperlink and a `related` row on the page whose
+life names them.** `lib/cross-link.js` makes the link; `related` in
+`saint.json` carries the row.
+
+**`related` is one-directional.** Saints named in *their* life appear in
+*their* list. The reverse is a claim the life does not make, and a page does not
+assert it.
+
+**A dedication is not a relation.** A church, lavra, chapel, feast or ship named
+for a saint is not an association with them — 23 of the 86 links the corpus
+produces are exactly that, and taken unread they make Alexander Nevsky the
+associate of six twentieth-century martyrs. The test is **adjacency, not
+proximity**: a dedication runs straight into the name, at most through "of",
+"of the", "of St".
+
+**Where no rule catches it, a table holds it by hand with its reason.**
+`REFUSED` in `scripts/related-from-links.mjs` — a warship whose mutiny a saint
+calmed, a saint's words quoted seven centuries later. Rules do not catch those
+and are not stretched until they do.
+
+`related-from-links.mjs` proposes and never writes. **Every row is read before
+it lands.**
+
 ### The naming contract
 
 Four fields, and the split is what makes the rest possible. `display_name` held
@@ -380,6 +405,10 @@ rule since rests on having taken it apart.
 
 - `display_name` — the bare name. **Never** a rank, an office or a year; a unit
   test sweeps for all three.
+- **Kinship and companionship clauses stay.** "son of Bassa", "mother of the
+  Theotokos", "with 28 martyrs", "disciple of Babylas" — about sixty of these.
+  They are not offices and not decoration: they are how the source names the
+  person, and stripping them to reach a "bare name" loses the name.
 - `office` — "Archbishop of Constantinople". Its own field, drawn on the line
   under the name.
 - `types` — the closed slug list the Index filters on.
@@ -398,6 +427,19 @@ from the name — "St. Dormition of the Theotokos" is what a blanket honorific
 would print. Nothing carries the flag yet.
 
 ### Hymns: the next pass, before any more translation
+
+**Two published renderings may be copied, and they are named**: Orloff's
+*General Menaion* (1899) and Hapgood's *Service Book* (1906), both long in the
+public domain. A modern translation is a living author's work and needs their
+permission.
+
+**Nassar's *Book of Divine Prayers and Services* (1938) is refused.** It is the
+obvious candidate — a full English menaion, served openly on archive.org — and
+its copyright status is unresolved: a 1938 American publication is public domain
+only if its copyright was not renewed, no renewal record was found either way,
+and archive.org's own record carries "This material may be protected by
+copyright law". **A licence that cannot be established is not a licence, and
+this repository does not guess at them.**
 
 **No kontakion in the corpus has ever been matched against Orloff's commons**,
 and he prints one in every general service. A citation beats a rendering
