@@ -126,6 +126,37 @@ const probes = {
     await ctx.close();
     return line;
   },
+
+  async pack(browser, rate) {
+    /*
+     * The longest single task on All Saints, which is what a reader feels as
+     * the page refusing to respond. PLAN item 2 says the caption pack is
+     * ~1,200 ms at 10x; this is the claim, measured, without touching source.
+     */
+    const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+    const page = await ctx.newPage();
+    await page.addInitScript((v) => {
+      localStorage.setItem('gos-settings', JSON.stringify(v));
+      window.__tasks = [];
+      new PerformanceObserver((l) => {
+        for (const e of l.getEntries()) window.__tasks.push(Math.round(e.duration));
+      }).observe({ entryTypes: ['longtask'] });
+    }, { ...SETTINGS, indexMode: process.env.PACK_MODE ?? 'carousel' });
+    const cdp = await ctx.newCDPSession(page);
+    await cdp.send('Emulation.setCPUThrottlingRate', { rate });
+    const t0 = Date.now();
+    const route = process.env.PACK_ROUTE ?? '/saints';
+    await page.goto(base + route, { waitUntil: 'domcontentloaded' });
+    await page
+      .locator(route === '/saints' && (process.env.PACK_MODE ?? 'carousel') === 'carousel' ? '.cx-card' : 'main')
+      .first()
+      .waitFor({ timeout: 60000 });
+    const firstCard = Date.now() - t0;
+    await page.waitForTimeout(3000);
+    const tasks = await page.evaluate(() => window.__tasks.sort((a, b) => b - a));
+    await ctx.close();
+    return `${process.env.PACK_ROUTE ?? '/saints'} (${process.env.PACK_MODE ?? 'carousel'}) ready at ${firstCard} ms; longest tasks ${tasks.slice(0, 4).join(', ')} ms; ${tasks.length} over 50 ms`;
+  },
 };
 
 const probe = probes[which];

@@ -472,8 +472,31 @@ two whose stated reason turned out to be wrong.
 2. **Carousel: pack lazily.** The All Saints row measures all 862 saints'
    captions (~9,600 canvas calls) in one blocking task before it can paint a
    column. Pack enough for the screen plus the loop's buffer, paint, finish in
-   idle time. Worth most of a ~1,200 ms startup task at 10× CPU — the
-   reader-facing defect with the most in it.
+   idle time.
+
+   **Measured 2026-09-09, controlled** — same route, same data, only the face
+   differing, at 10× CPU (`node scratchpad/throttle-probe.mjs pack`):
+
+   | mode | ready | longest task | tasks > 50 ms |
+   | --- | --- | --- | --- |
+   | carousel | 2,924 ms | **1,517 ms** | 14 |
+   | search | 1,284 ms | 520 ms | 5 |
+
+   So the row costs about a second of blocking time and 1.6 s to first paint.
+   The figure moves a lot between runs on this desk — 975, 992, 1,128, 1,517 —
+   so treat ~1,200 ms as the centre rather than the number.
+
+   Two earlier attempts to attribute this were wrong and are worth not
+   repeating: comparing All Saints against Daily is uncontrolled, since Daily
+   fetches day records and hymns of its own; and a run with `indexMode: 'grid'`
+   measures the carousel twice, because the two faces are `carousel` and
+   `search` and anything else falls back to the first.
+
+   **It is a real refactor, not a tidy-up.** The pack feeds a key built from the
+   whole run, and `buildCarousel` hands that run to the endless engine in
+   `ui/loop-scroll.js`, which is the most delicate machinery on the site. Expect
+   to touch it, and expect the row's own tests to be the thing that says whether
+   it worked.
 
    It is also measured by a test: `the carousel drifts on its own` waits for the
    row to be packed before timing the drift, and that wait should return
