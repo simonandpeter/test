@@ -24,7 +24,7 @@ Daily, All Saints, Texts, Map, About. Five reading languages: English plus the
 four churches' own.
 
 Live at https://simonandpeter.github.io/test/, deployed by GitHub Actions from
-`dist/`. The corpus is 862 saints, each a folder of its own.
+`dist/`. The corpus is 862 saints as of 2026-09-08, each a folder of its own.
 
 **The subject is other people's devotion.** That sets the whole tone: the site
 is a register, not a brochure. It states what is recorded and says plainly what
@@ -402,9 +402,12 @@ would print. Nothing carries the flag yet.
 **No kontakion in the corpus has ever been matched against Orloff's commons**,
 and he prints one in every general service. A citation beats a rendering
 wherever one exists, so that pass comes before translating anything further.
-383 hymn objects have no English. 140 saints of 862 carry any hymn at all, 427
-hymn objects between them (Russian 143, Greek 149, Romanian 117, Serbian 18);
-256 troparia and 171 kontakia.
+As counted on 2026-09-08: 383 hymn objects have no English; 140 saints of 862
+carry any hymn at all, 427 hymn objects between them (Russian 143, Greek 149,
+Romanian 117, Serbian 18); 256 troparia and 171 kontakia. **These are dated
+rather than pinned** — a test that held them would go red every time a hymn was
+added, which is the failure this file warns about two sections down.
+`node scripts/locale-coverage.mjs` recounts them.
 
 ---
 
@@ -488,7 +491,9 @@ re-measured.
 5. **The visual overhaul** — desktop first, section 4 is the brief. The loop:
    `contact-sheet.mjs --still`, `tile-diff.mjs snapshot`, change,
    `--still` again, `tile-diff.mjs compare`. 80 s a pass over 48 tiles.
-6. **Comments: rewrite, do not move.** `src` is 34,533 lines at **48% comment**
+6. **Comments: rewrite, do not move.** Measured 2026-09-09, and dated rather
+   than pinned for the same reason as the corpus counts: `src` is 34,533 lines
+   at **48% comment**
    and that part is solid. The **68% narrates history** figure is not: it counts
    a whole block as history when any one line in it carries a cue, and at line
    level the same instrument reads **9%**. Measured properly, only **59 lines**
