@@ -36,16 +36,32 @@ post-mortem. Don't narrate what you are about to do; do it and report.
 
 ## Protocol
 
+**`bash scripts/push.sh`** — push to `main` and read the run, in one step
+because they are one step. It refuses a dirty tree, embeds the PAT and scrubs it
+from the output, resets the remote, confirms the ref landed with `ls-remote`,
+then waits and prints the conclusion *and* the `flaky` line. It exits non-zero
+if any of that fails. `--no-wait` skips the waiting.
+
+Reading the run used to be a separate step and was therefore skippable: on
+2026-09-09 a commit was pushed, the next task begun at once, and `main` sat red
+and undeployed for an hour with the cause sitting in a log nobody opened.
+
 **Push straight to `main`.** Deploy is gated on the build passing, so a red push
 skips the deploy and leaves the live site alone — a check branch buys nothing and
 costs a second 17-minute run. PAT is in
-`C:\Users\matei\Documents\Agios Website Ex\update git.txt`; embed it in the push
-URL, push, then reset the remote to `https://github.com/simonandpeter/test.git`.
+`C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
 
 **`git status` lies about pushing here.** Pushing through a URL with the PAT in
 it never updates `origin/main`, so the branch reports itself ahead of everything
 already sent. `git ls-remote origin main` is the answer to "did it land";
 `git fetch origin` puts the ref straight.
+
+**`bash scripts/state.sh`** asks the remote itself and remembers what it last
+showed you — local `HEAD`, the true remote tip, whether the tree is clean, and
+**what has landed since you last looked**. Run it before answering any question
+about the state of this repo. Two such answers were wrong on 2026-09-09 for the
+same reason: one compared against `origin/main`, which a PAT push never updates,
+and one against `HEAD`, which another session had moved.
 
 **Read the CI run — its conclusion *and* its `flaky` line.** No `gh` here.
 `scratchpad/ci.py <sha>` gives the conclusion and the failed steps;
@@ -103,7 +119,15 @@ micro-optimisations. Say what you measured and what you inferred, and keep them
 apart.
 
 **Every fix gets a test, backed out and confirmed to fail before it is
-believed.** Both tests written on 2026-09-09 had a hole the back-out found: the
+believed — and verified both alone and under load.** A burst climb added to
+`map.spec.js` on 2026-09-09 passed every full suite and failed 3 of 8 run
+alone, because six parallel workers made the desk slow enough to hide it. The
+suite is not automatically the stronger signal.
+
+**An audit script prints its hits, never only a count.** Both instrument bugs
+that day were caught the moment rows were looked at instead of totals — a
+`white-space: nowrap` counted as a named colour, and a shadow inventory whose
+every selector was wrong because the grep behind it required column 0. Both tests written on 2026-09-09 had a hole the back-out found: the
 shadow inventory missed a rule written on one line, exactly as the token test's
 declaration reader once did.
 
