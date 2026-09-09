@@ -531,11 +531,46 @@ two whose stated reason turned out to be wrong.
    `loop-scroll.js` already handles, since `handoff()`/`inherit()` exist for
    exactly the late repaint a settling font or picture causes.
 
-   **Left:** virtualising the row, which is the 2,293 ms. It fights the endless
-   engine directly — `loopScroll` measures real offsets to find the period, so
-   a row that does not hold all its cells has no period to measure. That is a
-   design change to the engine, not an optimisation of it, and it is the
-   biggest single performance prize on the site.
+   **Do not virtualise the row.** It was proposed here as the biggest prize
+   left and the premise was wrong, checked 2026-09-09 before starting:
+
+   - **`content-visibility: auto` is already on `.cx-cell`**, with an exact
+     `contain-intrinsic-size`. Off-screen cells are already skipped; a JS
+     virtualiser would re-implement one CSS line.
+   - **Holding the row at 63 cells instead of 200 saves nothing measurable** —
+     ready 1,771 ms against 1,730, longest task 809 against 913, median of
+     three each at 10× (`scratchpad/dom-size-cost.mjs`). The whole cost of the
+     full row is ~100 ms, and it is spent in idle time after the reader has
+     content.
+
+   "The row is 90% of the DOM and 96% of it is off screen" is true and does not
+   imply a cost. That inference is what made this look like the prize.
+
+   **Where the time goes, by category** (`scratchpad/boot-breakdown.mjs`, from
+   the engine's own counters, production build, 10×, median of three):
+
+   | | |
+   | --- | --- |
+   | Task total | 5,720 ms |
+   | Script | 1,138 ms |
+   | RecalcStyle | 1,392 ms |
+   | Layout | 427 ms |
+   | V8 compile | 2 ms |
+
+   So about **2.8 s of the 5.7 is none of those** — native work the counters do
+   not name. Script, style and layout together are half the bill and no one of
+   them is a target on its own.
+
+   **A tried and reverted fix, so it is not tried again.** The counters showed
+   **82,000 style recalculations**, and the drift writes `scrollLeft` 60 times a
+   second to move 26 px — 0.43 px a frame, most of them invisible. Writing only
+   on a whole pixel took the count from 82,000 to **101** and changed the time
+   by nothing (Task 5,720 → 5,515 ms, inside this desk's noise; RecalcStyle
+   actually rose). The recalculations were each free — the counter counts the
+   browser's check, not work. It also coarsens the drift from sub-pixel every
+   16 ms to 1 px every 38 ms, so it costs something and buys nothing.
+
+   The lesson is the one this file keeps learning: a count is not a cost.
 
    It is also measured by a test: `the carousel drifts on its own` waits for the
    row to be packed before timing the drift, and that wait should return
