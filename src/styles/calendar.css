@@ -655,8 +655,21 @@
     display: none;
   }
 
-  .month-head {
+  .month-head,
+  /* The wrapper the desktop head needs around the month's own words dissolves
+     here for the same reason `.month-head` does: below the breakpoint the name
+     is absolutely placed in the gutter and the reckoning is not drawn at all,
+     so a box around them is 29 px of nothing pushing the day-name line out of
+     step with the week's — which is the one alignment this picker has always
+     been held to. */
+  .month-title {
     display: contents;
+  }
+
+  /* The month's two steps are the desktop's; the phone steps by its peeked
+     columns, which are still there. */
+  .mstep {
+    display: none;
   }
 }
 
@@ -2685,6 +2698,225 @@ a.name-day:hover {
   html[data-route='calendar'] .cal {
     height: 100%;
     min-height: 0;
+  }
+}
+
+/* ---- the month, redesigned for the desk (2026-09-10) -------------------- */
+
+/*
+ * docs/daily-desktop-visuals.md §3.3, step 3 of §10.12. The month is the only
+ * picker past 1024 px — the rail and its toggle went on 2026-09-02 — so this
+ * is the whole of the date control on a desktop, and it is being rebuilt to
+ * fit a column that narrows to 19rem two steps from here.
+ *
+ * **The peeked columns are what this buys back.** The comment on `--day-cols`
+ * records that the right column could not go below 400 px because "at 330 the
+ * rail showed six days and the month grid would not unfurl at all", and the
+ * peek is most of that: two columns of a neighbouring month standing *outside*
+ * the seven. They go, the days either side come inside the grid on its own
+ * rows, and the two steps they carried become a pair of marks in the head.
+ *
+ * Everything here is scoped to the route as well as the width. The `.cal-*`
+ * selectors could not match anywhere else, but the reckoning, the fullscreen
+ * control and the grid's own metrics are being changed for *this page's*
+ * desktop reading and not for a width.
+ */
+@media (min-width: 1024px) {
+  /* The grain continues inside the grid now, so the columns beside it are
+     nothing but width. `.month-row::before` / `::after` are the two chevron
+     chips drawn *over* the peeks (2026-09-02); with nothing underneath to
+     press they would be controls that do nothing. */
+  html[data-route='calendar'] .month-row > .peek,
+  html[data-route='calendar'] .month-days-line > .peek-gap {
+    display: none;
+  }
+
+  html[data-route='calendar'] .month-row::before,
+  html[data-route='calendar'] .month-row::after {
+    content: none;
+  }
+
+  /*
+   * The head: a stepper either side of the month's own words.
+   *
+   * `align-items: center`, **not baseline** — an inline-flex box takes the
+   * baseline of its *first* item, and the two steppers have different first
+   * items (a diamond, then a line), which put their hairlines on different
+   * subpixels and made one read heavier than the other.
+   */
+  html[data-route='calendar'] .month-head {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    gap: 0;
+    margin-bottom: var(--space-2);
+  }
+
+  /* The rules run out to within a space-2 of the month's own words. */
+  html[data-route='calendar'] .month-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex: none;
+    padding-inline: var(--space-2);
+    min-width: 0;
+  }
+
+  /*
+   * The month's two steps: a hairline closed by a diamond, pointing away from
+   * the month it leaves. `--accent` is the rebuild's rule-and-mark colour and
+   * is never asked to carry a word — the button's `aria-label` is what says
+   * which month this reaches.
+   */
+  html[data-route='calendar'] .mstep {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  html[data-route='calendar'] .mstep-next {
+    justify-content: flex-end;
+  }
+
+  html[data-route='calendar'] .mstep:hover {
+    color: var(--ink-soft);
+  }
+
+  html[data-route='calendar'] .mstep-line {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 1px;
+    background: currentColor;
+  }
+
+  /* A diamond by clip-path, for `.mark-feast`'s reason: a rotated 5 px square
+     measures 7.07 px corner to corner and would set the head's height from a
+     mark rather than from its words. */
+  html[data-route='calendar'] .mstep-dot {
+    flex: none;
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+
+  /*
+   * The reckoning stands in brackets beside the month it counts —
+   * "September 2026 (R. Julian)" — rather than out on the column's right
+   * margin, where it stood from 2026-09-02 until the head grew two steppers
+   * and a way out. The brackets are punctuation and are drawn here rather than
+   * written into five locale packs; the short name inside them is the packs'
+   * (`STRINGS.calendar.reckoningShort`), and the button's accessible label
+   * still carries the calendar's whole name.
+   *
+   * 12 px — `--text-2xs`, the smallest apparatus — because it is the quietest
+   * fact in the head: which arithmetic, under which month.
+   */
+  html[data-route='calendar'] .reckoning-btn {
+    font-size: var(--text-2xs);
+  }
+
+  html[data-route='calendar'] .reckoning-btn::before {
+    content: '(';
+  }
+
+  html[data-route='calendar'] .reckoning-btn::after {
+    content: ')';
+  }
+
+  /* It opens under its own button now that the button is no longer on the
+     margin, so it hangs from the start of it rather than the end. */
+  html[data-route='calendar'] .reckoning-pop {
+    right: auto;
+    left: 0;
+  }
+
+  /* The way out of the calendar, on the calendar's own heading. It keeps its
+     words (author, 2026-09-02: "change to 'Open Fullscreen'") and gives up the
+     row it had below the grid. */
+  html[data-route='calendar'] .month-head .fullcal-open {
+    margin-top: 0;
+    padding: 0;
+    flex: none;
+    white-space: nowrap;
+  }
+
+  /*
+   * The grid, tightened. 1 px of gap and 1 px of cell padding against the 2 px
+   * and 2 px the phone keeps, which is about 40 px off six rows — the other
+   * half of what makes a 19 rem column possible.
+   *
+   * The numerals stay at `--text-sm` and the day names at `--text-2xs`, which
+   * they already were: the type collapse of 2026-09-09 folded 14 into 15 with
+   * the sheet open and 14 is not coming back for a calendar cell.
+   */
+  html[data-route='calendar'] .month-days,
+  html[data-route='calendar'] .month-grid {
+    column-gap: 1px;
+  }
+
+  html[data-route='calendar'] .month-grid {
+    row-gap: 1px;
+  }
+
+  html[data-route='calendar'] .month-grid button,
+  html[data-route='calendar'] .month-grid .month-out {
+    padding: 1px 0;
+    /* The feast mark is absolutely placed in the cell's own corner, so the
+       cell has to be what it is placed against. */
+    position: relative;
+  }
+
+  /*
+   * The feast mark: the month's first, and the same fact and the same shape as
+   * the rail's. `--feast` rather than `--gold` — tokens.css carries the
+   * reasoning and `tests/contrast.test.mjs` the 3:1 floor, which this mark
+   * takes because it is the only thing on the cell saying the day holds one.
+   */
+  html[data-route='calendar'] .month-feast {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    width: 5px;
+    height: 5px;
+    background: var(--feast);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+
+  /*
+   * The days either side of the month, on the grid's own rows: present,
+   * numbered, out of reach, and **one step back in ink rather than tinted**.
+   *
+   * §3.3 drew them tinted 38% toward the field and carrying their fast tone,
+   * on §10.6's reasoning that `aria-hidden` keeps a tint out of axe's reach.
+   * **Measured, it does not**: axe's colour-contrast rule matches on whether a
+   * node is visible *on screen*, not on whether a screen reader can see it, so
+   * five tinted numerals raised 128 violations at 1.71–2.61:1 — and the
+   * Lighthouse floor gates CI on accessibility 100 besides, where a
+   * spec-level exclusion could not reach.
+   *
+   * `--ink-soft` is what the peeked columns these replace already used, for
+   * the reason written beside `.peek-prev`: text a sighted reader might try to
+   * read has to clear 4.5:1 wherever it is legible at all. 5.92:1 on gesso and
+   * 5.53:1 on the field. The fast hue goes with the tint, and that is what
+   * buys the reading back — **a coloured numeral is this month's**.
+   */
+  html[data-route='calendar'] .month-grid .month-out {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    font-family: var(--font-utility);
+    font-size: var(--text-sm);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
   }
 }
 

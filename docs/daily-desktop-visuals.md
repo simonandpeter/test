@@ -943,6 +943,32 @@ They follow the peek cells' existing precedent: faded, `aria-hidden`, not
 focusable, not clickable. The tint then carries no information and its
 1.71–2.60:1 is not a finding to a reader or to axe. Lighthouse stays at 100.
 
+**Corrected while building it, 2026-09-10: the second half of that is false,
+and the tint did not ship.** `aria-hidden` does not put text beyond axe —
+axe's colour-contrast rule matches on `isVisibleOnScreen`, not on whether a
+screen reader can reach the node. The five tinted numerals raised **128
+violations across four `quality-floor` runs at 1.71–2.61:1**, in both themes,
+and `npm run test:lighthouse` gates CI on accessibility 100 besides, where a
+spec-level exclusion could not have reached anyway.
+
+The peek cells escape axe on merit and not on `aria-hidden`: they are
+`--ink-soft` at full strength with a *mask* over the outer half, and
+`calendar.css` says why in as many words — "text a sighted reader might try to
+read has to clear 4.5:1 wherever it is legible at all", written when a flat 50%
+wash was tried there and the quality floor caught it.
+
+So the out-days ship with the rest of §10.6 intact — `aria-hidden`, spans not
+buttons, unreachable — and **`--ink-soft` in place of the 38% tint**, which is
+5.92:1 on gesso and 5.53:1 on the field. They carry **no fast tone and no feast
+mark**, which the peeked columns they replace never carried either, and that
+absence is what tells the two months apart now that luminance cannot: **a
+coloured numeral is this month's**. `e2e/daily-picker.spec.js` asserts the
+4.5:1 by name, so the next reach for a tint here is stopped by a sentence
+rather than by an axe dump.
+
+The mockup's tinted out-days are therefore not built, and §3.3's second bullet
+is superseded by this paragraph.
+
 ### 10.7 Four tokens, no raw hexes
 
 `--accent`, `--bub`, `--feast`, `--mount`, all light+vigil, all in `tokens.css`,

@@ -54,6 +54,7 @@ export const ro = {
     monthView: 'Luna',
     reckoningLabel: 'Calendarul după care se citește pagina',
     reckoningFollow: 'Ca în Biserica mea',
+    reckoningShort: { julian: 'Iulian', 'revised-julian': 'Iulian îndr.', gregorian: 'Gregorian' },
     fullScreen: 'Deschide pe tot ecranul',
     fullClose: 'Închide',
     fullPeriods: 'Posturi și perioade',

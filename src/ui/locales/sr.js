@@ -54,6 +54,7 @@ export const sr = {
     monthView: 'Месец',
     reckoningLabel: 'Календар по коме се чита страница',
     reckoningFollow: 'Као у мојој Цркви',
+    reckoningShort: { julian: 'Јулијански', 'revised-julian': 'Новојул.', gregorian: 'Грегоријански' },
     fullScreen: 'Отвори преко целог екрана',
     fullClose: 'Затвори',
     fullPeriods: 'Постови и раздобља',

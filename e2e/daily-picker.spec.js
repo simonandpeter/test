@@ -1681,15 +1681,27 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
   await page.goto('/calendar/2026-08-10', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  // Under the week, not beside it.
+  /*
+   * In the month's head, and still carrying its words.
+   *
+   * This asked "is it under `.cal-week`" until 2026-09-10, which had been
+   * vacuous since 2026-09-02: the rail is `display: none` at this width, so
+   * its rect is all zeros and any button anywhere on the page cleared it. The
+   * real relationship is to the month, which is the desktop's picker — the
+   * button sits on the month's own heading, above the grid.
+   */
   const open = page.locator('[data-fullcal]');
   await expect(open).toHaveText(/Open Fullscreen/i);
-  const under = await page.evaluate(() => {
-    const week = document.querySelector('.cal-week').getBoundingClientRect();
-    const button = document.querySelector('[data-fullcal]').getBoundingClientRect();
-    return button.top >= week.bottom - 1;
+  const placed = await page.evaluate(() => {
+    const button = document.querySelector('[data-fullcal]');
+    const grid = document.querySelector('.month-grid').getBoundingClientRect();
+    return {
+      inHead: Boolean(button.closest('.month-head')),
+      aboveGrid: button.getBoundingClientRect().bottom <= grid.top + 1,
+    };
   });
-  expect(under, 'the button is not under the weekly display').toBe(true);
+  expect(placed.inHead, 'the button is not in the month head').toBe(true);
+  expect(placed.aboveGrid, 'the button is not above the grid it opens').toBe(true);
 
   await open.click();
   const dialog = page.locator('dialog.fullcal');
@@ -1872,27 +1884,33 @@ test('a desktop shows the month alone, across the column, with no toggle', async
     const controls = document.querySelector('.cal-controls').getBoundingClientRect();
     const month = document.querySelector('.cal-month').getBoundingClientRect();
     const grid = document.querySelector('.month-grid').getBoundingClientRect();
-    const full = document.querySelector('[data-fullcal]').getBoundingClientRect();
+    const full = document.querySelector('[data-fullcal]');
+    const fullBox = full.getBoundingClientRect();
     return {
       spare: Math.round(month.left - controls.left),
       gridLeft: Math.round(grid.left),
-      fullLeft: Math.round(full.left),
-      fullRight: Math.round(full.right),
-      monthRight: Math.round(month.right),
-      fullBelow: full.top >= month.bottom - 1,
+      inHead: Boolean(full.closest('.month-head')),
+      fullWords: full.textContent.trim(),
+      fullAboveGrid: fullBox.bottom <= grid.top + 1,
     };
   });
   // No column held open for the button that is gone.
   expect(m.spare, 'a column is still being kept for the old toggle').toBeLessThan(4);
   /*
-   * **Right-justified since 2026-09-02** (author: "move it right justified to
-   * the rightmost column margin and change to 'Open Fullscreen'"), where the
-   * instruction of the day before had put it on the grid's left margin. It is
-   * the calendar's own way out, so it sits at the end of the calendar's last
-   * line.
+   * **It moved into the month's own head on 2026-09-10**
+   * (docs/daily-desktop-visuals.md §3.3), from the column's right margin under
+   * the grid where the author put it on 2026-09-02 ("move it right justified
+   * to the rightmost column margin and change to 'Open Fullscreen'"). The head
+   * grew two steppers and a reckoning in the same step and the calendar's own
+   * way out belongs on the calendar's own heading.
+   *
+   * **The words are unchanged**, and that is asserted rather than assumed: the
+   * instruction quoted above is about what this button *says*, and only its
+   * placement is what the rebuild reconsidered.
    */
-  expect(Math.abs(m.fullRight - m.monthRight), 'Open Fullscreen is not on the column margin').toBeLessThan(6);
-  expect(m.fullBelow, 'the button is not under the calendar').toBe(true);
+  expect(m.inHead, 'the fullscreen control is not in the month head').toBe(true);
+  expect(m.fullWords, 'the fullscreen control lost its words').toBe('Open Fullscreen');
+  expect(m.fullAboveGrid, 'the button is not above the grid it opens').toBe(true);
 
   // And a phone keeps both the week and the button that swaps them.
   await page.setViewportSize({ width: 360, height: 780 });
@@ -1943,20 +1961,40 @@ test('the calendar names its own reckoning, and the reader may change it', async
    */
   await expect(button).toHaveText('Julian');
 
+  /*
+   * **The head was rebuilt on 2026-09-10** (docs/daily-desktop-visuals.md
+   * §3.3): the name and its reckoning stand together between two steppers
+   * rather than on the column's two margins, and the reckoning reads as a
+   * bracket after the month it counts — "September 2026 (Julian)".
+   *
+   * So what is pinned is what the instruction was actually about — the two
+   * facts about this grid, which month and by whose arithmetic, on one row
+   * and reading as a heading — plus the new relationship: the reckoning
+   * follows the name immediately rather than being thrown to a margin, and
+   * the brackets are drawn rather than typed into five locale packs.
+   */
   const head = await page.evaluate(() => {
-    const name = document.querySelector('.month-name').getBoundingClientRect();
-    const rec = document.querySelector('[data-reckoning]').getBoundingClientRect();
-    const month = document.querySelector('.cal-month').getBoundingClientRect();
+    const nameEl = document.querySelector('.month-name');
+    const recEl = document.querySelector('[data-reckoning]');
+    const name = nameEl.getBoundingClientRect();
+    const rec = recEl.getBoundingClientRect();
+    const btn = document.querySelector('[data-reckoning-btn]');
+    const before = getComputedStyle(btn, '::before').content;
+    const after = getComputedStyle(btn, '::after').content;
     return {
       sameRow: Math.abs(name.top - rec.top) < 20,
-      nameOnMargin: Math.round(name.left - month.left),
-      recOnMargin: Math.round(month.right - rec.right),
-      fullName: document.querySelector('.month-name').textContent.trim(),
+      gap: Math.round(rec.left - name.right),
+      brackets: `${before}${after}`,
+      size: getComputedStyle(btn).fontSize,
+      fullName: nameEl.textContent.trim(),
     };
   });
   expect(head.sameRow, 'the name and the reckoning are not on one row').toBe(true);
-  expect(head.nameOnMargin, 'the month name is offset from the column margin').toBeLessThan(4);
-  expect(head.recOnMargin, 'the reckoning is not on the right margin').toBeLessThan(4);
+  expect(head.gap, 'the reckoning does not follow the month it counts').toBeLessThan(20);
+  expect(head.gap, 'the reckoning is on top of the month name').toBeGreaterThan(0);
+  expect(head.brackets, 'the reckoning is not in brackets').toBe('"("")"');
+  // 12 px, --text-2xs: the quietest fact in the head (§10.8). Never 14.
+  expect(head.size, 'the reckoning is not at --text-2xs').toBe('12px');
   // The civil 14 September is the Julian 1 September, by the church's own
   // default reckoning now in force before any explicit choice.
   expect(head.fullName, 'the month is abbreviated on a desktop').toContain('September');
@@ -1976,7 +2014,16 @@ test('the calendar names its own reckoning, and the reader may change it', async
   // The control tells the truth about itself, and the fast has changed with
   // it — the civil 14th is a Great Feast under the calendar whose fixed dates
   // now govern it, unmoved from the day itself (2026-09-04).
-  await expect(button).toHaveText('Revised Julian');
+  /*
+   * **"R. Julian" printed, "Revised Julian" spoken** (2026-09-10). The head
+   * has a stepper either side of these words now and 19 rem to hold all of it
+   * two steps from here, and this is the one of the three names that does not
+   * fit; the abbreviation is a layout's need, so the accessible name keeps the
+   * calendar's whole name and the chooser's rows below keep it too.
+   */
+  await expect(button).toHaveText('R. Julian');
+  await expect(button).toHaveAttribute('aria-label', /Revised Julian$/);
+  await expect(page.locator('[data-reckoning-pop] [data-pick="revised-julian"]')).toHaveText('Revised Julian');
   await expect.poll(async () => (await page.locator('.cal').textContent()).includes('Exaltation')).toBe(true);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).reckoning)).toBe('revised-julian');
 
@@ -2110,4 +2157,265 @@ test('a phone is told the reckoning without being offered the choice', async ({ 
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await expect(page.locator('[data-reckoning]')).toBeHidden();
+});
+
+
+/* ---- the month redesigned for the desk, 2026-09-10 ---------------------- */
+
+/*
+ * docs/daily-desktop-visuals.md §3.3 and §10.6. Three claims, three tests,
+ * because they fail independently: the grid's own shape, the mark it grew, and
+ * the control that steps it. Each was backed out and watched to fail.
+ */
+
+test('past 1024 px the month fills its own corners and keeps the days there out of reach', async ({ page }) => {
+  /*
+   * The peeked columns — two columns of a neighbouring month standing
+   * *outside* the seven, there since 2026-08-21 — are what kept the right
+   * column above 400 px. They go, and the days either side come inside the
+   * grid on its own rows instead: numbered, marked, tinted toward the field.
+   *
+   * **And out of the accessibility tree, deliberately** (§10.6). The tint
+   * lands at 1.71–2.60:1 on visible numerals; axe reads contrast on text and
+   * Lighthouse gates CI on accessibility 100. These are `aria-hidden` spans
+   * rather than buttons, following the peek cells' own precedent, so the tint
+   * carries no information to anybody — the month either side is one press of
+   * a stepper away and every day in it has a real button there.
+   *
+   * The premise is checked rather than assumed: September 2026 by the
+   * Gregorian reckoning `ready` sets starts on a Tuesday and ends on a
+   * Wednesday, so there is exactly one day of August in front of it and four
+   * of October behind.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  // Still in the markup — this is a width's decision, not a deletion — and
+  // reachable by nothing.
+  await expect(page.locator('.cal-month .peek')).toHaveCount(2);
+  await expect(page.locator('.cal-month .peek-prev')).toBeHidden();
+  await expect(page.locator('.cal-month .peek-next')).toBeHidden();
+
+  await expect(page.locator('.month-grid [data-iso]'), 'September is 30 days').toHaveCount(30);
+  const out = page.locator('.month-grid .month-out');
+  await expect(out).toHaveText(['31', '1', '2', '3', '4']);
+
+  const shape = await page.evaluate(() => {
+    const cells = [...document.querySelectorAll('.month-grid .month-out')];
+    const inMonth = document.querySelector('.month-grid [data-iso] .day-num');
+    /*
+     * **Through a canvas, because `color-mix` does not compute to `rgb()`.**
+     * Chrome resolves a mix declared `in oklab` to an `oklab(...)` computed
+     * value, so a regex over the string reads 0.6/0.01/0.03 as if they were
+     * channels and calls the palest tint the darkest thing on the page — which
+     * is exactly what this said on its first run. The 2d context converts
+     * whatever the browser hands it into the sRGB bytes a reader would see.
+     */
+    const ctx = document.createElement('canvas').getContext('2d');
+    const lum = (c) => {
+      ctx.fillStyle = c;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    return {
+      tags: [...new Set(cells.map((el) => el.tagName))],
+      hidden: cells.every((el) => el.getAttribute('aria-hidden') === 'true'),
+      focusable: cells.some((el) => el.hasAttribute('tabindex') || el.tagName === 'BUTTON'),
+      // The first row's out-day and the first real day share a row, which is
+      // the whole of "inside the grid rather than beside it".
+      sameRow:
+        Math.round(cells[0].getBoundingClientRect().top) ===
+        Math.round(document.querySelector('.month-grid [data-iso]').getBoundingClientRect().top),
+      outLum: lum(getComputedStyle(cells[0]).color),
+      inkLum: lum(getComputedStyle(inMonth).color),
+      groundLum: lum(getComputedStyle(document.body).backgroundColor),
+      ratio: (() => {
+        const rel = (c) => {
+          ctx.fillStyle = c;
+          ctx.fillRect(0, 0, 1, 1);
+          const [r, g, b] = [...ctx.getImageData(0, 0, 1, 1).data].slice(0, 3).map((n) => {
+            const v = n / 255;
+            return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+          });
+          return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        };
+        const [hi, lo] = [rel(getComputedStyle(cells[0]).color), rel(getComputedStyle(document.body).backgroundColor)].sort(
+          (a, b) => b - a,
+        );
+        return (hi + 0.05) / (lo + 0.05);
+      })(),
+      // The fast hue is this month's alone now: an out-of-month Wednesday is
+      // a soft numeral, not a rubric one.
+      outColours: [...new Set(cells.map((el) => getComputedStyle(el).color))],
+      softColour: (() => {
+        const probe = document.createElement('span');
+        document.body.append(probe);
+        probe.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ink-soft').trim();
+        const c = getComputedStyle(probe).color;
+        probe.remove();
+        return c;
+      })(),
+    };
+  });
+  expect(shape.tags, 'an out-of-month day is a button').toEqual(['SPAN']);
+  expect(shape.hidden, 'an out-of-month day is in the accessibility tree').toBe(true);
+  expect(shape.focusable, 'an out-of-month day can be reached by the keyboard').toBe(false);
+  expect(shape.sameRow, 'the out-of-month days are not on the grid’s own rows').toBe(true);
+  /*
+   * **Stepped back, and still legible — and the second half is the assertion
+   * that matters.** §3.3 drew these tinted 38% toward the field on the
+   * reasoning that `aria-hidden` puts them beyond axe; it does not, because
+   * axe's colour-contrast rule matches on whether a node is visible *on
+   * screen*. That tint raised 128 violations at 1.71–2.61:1 and would have
+   * taken the Lighthouse accessibility floor with it.
+   *
+   * So the ratio is asserted here by name, rather than left for an axe dump to
+   * discover: whatever colour these end up wearing, a numeral a sighted reader
+   * can see has to clear 4.5:1 on the ground it sits on.
+   */
+  expect(shape.outLum, 'the out days are at full ink, not stepped back').toBeGreaterThan(shape.inkLum);
+  expect(shape.outLum, 'the out days have been tinted out of existence').toBeLessThan(shape.groundLum);
+  expect(shape.ratio, 'an out-of-month numeral is under the 4.5:1 a legible numeral takes').toBeGreaterThanOrEqual(4.5);
+
+  expect(shape.outColours, 'an out-of-month day wears more than one ink').toHaveLength(1);
+  expect(shape.outColours[0], 'an out-of-month day is not --ink-soft').toBe(shape.softColour);
+
+  // Pressing one does nothing at all: the day under the reader does not move.
+  const before = await page.locator('.cal-date').textContent();
+  const box = await out.first().boundingBox();
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await page.waitForTimeout(300);
+  expect(await page.locator('.cal-date').textContent(), 'an out-of-month day changed the day').toBe(before);
+});
+
+test('the month marks a feast, in the rail’s own gold and with the word beside it', async ({ page }) => {
+  /*
+   * The month has never carried one. It reads the same fact from the same
+   * place the rail's dot does — the day's own record holding hymns for this
+   * church, which is the rank the calendar itself printed — so the two grains
+   * cannot say different things about one day, which is `picker.js`'s own rule
+   * about the fast tone applied to the other mark.
+   *
+   * 21 September is the Nativity of the Theotokos in the Russian calendar and
+   * its record carries the day's hymns; 22 September carries none. Both halves
+   * are asserted, because a mark on every cell would satisfy the first alone.
+   *
+   * **`--feast`, and the word as well as the mark.** A diamond is nothing to a
+   * screen reader, so the day's accessible name says it — the rule the rail's
+   * dots have followed since they arrived.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-21', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const feast = page.locator('.month-grid [data-iso="2026-09-21"] .month-feast');
+  await expect(feast).toHaveCount(1);
+  await expect(page.locator('.month-grid [data-iso="2026-09-22"] .month-feast')).toHaveCount(0);
+  await expect(page.locator('.month-grid [data-iso="2026-09-21"]')).toHaveAttribute(
+    'aria-label',
+    /a feast$/,
+  );
+  await expect(feast).toHaveAttribute('aria-hidden', 'true');
+
+  const paint = await page.evaluate(() => {
+    const el = document.querySelector('.month-grid [data-iso="2026-09-21"] .month-feast');
+    const s = getComputedStyle(el);
+    const hex = (rgb) =>
+      `#${rgb
+        .match(/\d+/g)
+        .slice(0, 3)
+        .map((n) => Number(n).toString(16).padStart(2, '0'))
+        .join('')}`;
+    return {
+      colour: hex(s.backgroundColor),
+      token: getComputedStyle(document.documentElement).getPropertyValue('--feast').trim(),
+      // A diamond by clip-path, never a rotated square: a 5 px square turned
+      // 45 degrees measures 7.07 px corner to corner and would push its row.
+      clip: s.clipPath,
+      transform: s.transform,
+      size: [s.width, s.height],
+    };
+  });
+  expect(paint.colour).toBe(paint.token.toLowerCase());
+  expect(paint.clip, 'the feast mark is not a clipped diamond').toContain('polygon');
+  expect(paint.transform, 'the feast mark is a rotated square, which grows its row').toBe('none');
+  expect(paint.size).toEqual(['5px', '5px']);
+});
+
+test('the desktop month steps from the two marks in its own head', async ({ page }) => {
+  /*
+   * The peeked columns were the month's step control as well as its edge, and
+   * both go together. What replaces them is a mark either side of the month's
+   * name: a hairline closed by a diamond, pointing away from the month it
+   * leaves.
+   *
+   * `--accent` is the rebuild's rule-and-mark colour and takes no contrast
+   * floor, on `--gold`'s own exemption — never text, never the only carrier of
+   * a fact. So the word is asserted here beside the colour: what says which
+   * month this reaches is the button's accessible name, and it has to be
+   * there for the exemption to hold.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const name = page.locator('.month-name');
+  await expect(name).toHaveText('September 2026');
+  await expect(page.locator('.mstep-prev')).toHaveAttribute('aria-label', 'Previous month');
+  await expect(page.locator('.mstep-next')).toHaveAttribute('aria-label', 'Next month');
+
+  await page.locator('.mstep-next').click();
+  await page.waitForTimeout(600);
+  await expect(name).toHaveText('October 2026');
+  await page.locator('.mstep-prev').click();
+  await page.waitForTimeout(600);
+  await expect(name).toHaveText('September 2026');
+
+  /*
+   * Off the control before reading its colour: `.mstep:hover` is `--ink-soft`,
+   * and the press above leaves the pointer sitting on the button — which read
+   * the hover state as the rest state on this test's first run.
+   */
+  await page.mouse.move(0, 0);
+  const marks = await page.evaluate(() => {
+    const root = getComputedStyle(document.documentElement);
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    probe.style.color = root.getPropertyValue('--accent').trim();
+    const accent = getComputedStyle(probe).color;
+    probe.remove();
+    const dot = getComputedStyle(document.querySelector('.mstep-prev .mstep-dot'));
+    const line = getComputedStyle(document.querySelector('.mstep-prev .mstep-line'));
+    const head = document.querySelector('.month-head').getBoundingClientRect();
+    const title = document.querySelector('.month-title').getBoundingClientRect();
+    return {
+      accent,
+      dot: dot.backgroundColor,
+      line: line.backgroundColor,
+      lineHeight: line.height,
+      // One on each side, and the words between them: the marks reach out to
+      // the head's own edges rather than sitting beside the name.
+      prevReachesEdge: Math.round(document.querySelector('.mstep-prev').getBoundingClientRect().left - head.left),
+      titleIsBetween: title.left > head.left && title.right < head.right,
+    };
+  });
+  expect(marks.dot, 'the stepper’s diamond is not --accent').toBe(marks.accent);
+  expect(marks.line, 'the stepper’s hairline is not --accent').toBe(marks.accent);
+  expect(marks.lineHeight, 'the stepper’s hairline is not a hairline').toBe('1px');
+  expect(marks.prevReachesEdge).toBe(0);
+  expect(marks.titleIsBetween, 'the month’s words are not between the two marks').toBe(true);
+
+  // A phone keeps its peeked columns and never sees these.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await page.waitForTimeout(600);
+  await expect(page.locator('.mstep-prev')).toBeHidden();
+  await expect(page.locator('.cal-month .peek-prev')).toBeVisible();
+  await expect(page.locator('.month-grid .month-out'), 'the phone grew out-of-month days').toHaveCount(0);
 });

@@ -863,6 +863,43 @@ export function paintMonth() {
   paintMonthInto(el.querySelector('.month-row'), cursor, { live: true });
 }
 
+/** A day the calendar itself marks as a feast: its own record, carrying hymns. */
+const hasFeast = (iso) => Boolean(dayRecordFor(iso, state.calendar)?.hymns?.length);
+
+/*
+ * A 5 px diamond by `clip-path`, never a rotated square — `.mark-feast`'s own
+ * reasoning at calendar.css:606: a 5 px square turned 45 degrees measures
+ * 7.07 px corner to corner and would push the row it sits in. The shape is
+ * drawn in the stylesheet; this is only where it goes.
+ */
+const FEAST_MARK = '<i class="month-feast" aria-hidden="true"></i>';
+
+/**
+ * A day either side of the month: numbered, one step back in ink, and **out of
+ * reach** — `aria-hidden`, a span rather than a button, so it is neither
+ * focusable nor clickable (docs/daily-desktop-visuals.md §10.6).
+ *
+ * **It carries no fast tone and no feast mark, and that is not the plan's
+ * first answer.** §3.3 drew these days "numbered and marked", tinted 38%
+ * toward the field, on §10.6's reasoning that `aria-hidden` keeps the tint out
+ * of axe's reach. **Measured, it does not**: axe 4.13's colour-contrast rule
+ * matches on `isVisibleOnScreen`, not on whether a screen reader can see the
+ * node, so the five tinted numerals raised 128 violations across four
+ * `quality-floor` runs at 1.71–2.61:1 — and `npm run test:lighthouse` gates CI
+ * on accessibility 100 besides, where a spec-level exclusion could not reach.
+ *
+ * So they take the treatment the peek cells they replace already had, for the
+ * same reason written beside `.peek-prev`: "text a sighted reader might try to
+ * read has to clear 4.5:1 wherever it is legible at all". `--ink-soft` is
+ * 5.92:1 on gesso and 5.53:1 on the field, and a numeral in it against a
+ * neighbour in `--ink` is a step back a reader can see. What is given up is
+ * the fast hue out there — which the peeked columns never carried either —
+ * and it buys the distinction back: **a coloured numeral is this month's**.
+ */
+const outCell = (cursor, day) => `<span class="month-out" aria-hidden="true"><span class="day-num">${
+  day
+}</span></span>`;
+
 /**
  * One month into one row: the grid, and the column of days that runs off each
  * side of it — the previous month's Sundays behind, the next month's Mondays
@@ -874,9 +911,25 @@ export function paintMonthInto(row, cursor, { live }) {
   const { selected } = state;
   const cal = gridCalendar();
   const lead = toJdn(cal, cursor.year, cursor.month, 1) % 7; // JDN 0 was a Monday
+  /*
+   * **Past 1024 px the grid fills its own corners** (2026-09-10,
+   * docs/daily-desktop-visuals.md §3.3): the blank cells before the 1st and
+   * after the last become the neighbouring months' own days, numbered and
+   * marked and stepped back toward the field, and the peeked columns beside
+   * the grid go — which is what buys the column its width. Below the
+   * breakpoint the month is the phone's and is untouched: blank leads, and
+   * the two peeks that have stood there since 2026-08-21.
+   */
+  const wide = window.matchMedia('(min-width: 1024px)').matches;
 
   const cells = [];
-  for (let i = 0; i < lead; i++) cells.push('<span></span>');
+  if (wide) {
+    const before = stepCursor(cursor, -1);
+    const last = daysInMonthOf(cal, before);
+    for (let i = lead; i > 0; i--) cells.push(outCell(before, last - i + 1));
+  } else {
+    for (let i = 0; i < lead; i++) cells.push('<span></span>');
+  }
   const days = daysInMonthOf(cal, cursor);
   for (let day = 1; day <= days; day++) {
     const iso = isoOfDate(cal, { year: cursor.year, month: cursor.month, day });
@@ -896,21 +949,46 @@ export function paintMonthInto(row, cursor, { live }) {
     const tone = fastTone(iso);
     const D = STRINGS.calendar.marks;
     const toneLabel = tone ? ` - ${tone === 'fish' ? D.fish : D.fast}` : '';
+    /*
+     * **The feast mark, which the month never had** (2026-09-10). The same
+     * fact the rail's gold dot carries and from the same source — the day's
+     * own record holding hymns for this church — so the two grains cannot say
+     * different things about one day, which is this file's own rule about the
+     * fast tone applied to the other mark. It is named in the button's
+     * accessible label beside the fast, because a diamond is nothing to a
+     * screen reader; `--feast` is what makes it legible to everyone else, at
+     * 3:1 rather than `--gold`'s 2.62 (tokens.css).
+     *
+     * Desktop only, with the out-days: the phone's month is left as it is.
+     */
+    const feast = wide && hasFeast(iso);
+    const feastLabel = feast ? ` - ${D.feast}` : '';
     const classes = [iso === todayIso() ? 'is-today' : '', tone ? `fast-${tone}` : ''].filter(Boolean);
     const cls = classes.length ? ` class="${classes.join(' ')}"` : '';
     cells.push(`<button type="button" data-iso="${iso}"${current}${cls}
-      aria-label="${dayLabel(iso)}${toneLabel}"><span class="day-num">${day}</span></button>`);
+      aria-label="${dayLabel(iso)}${toneLabel}${feastLabel}"><span class="day-num">${day}</span>${
+      feast ? FEAST_MARK : ''
+    }</button>`);
+  }
+  if (wide) {
+    // Only the last row's remainder, so the month never grows a row it did
+    // not have: a month ending on a Sunday adds nothing at all.
+    const after = stepCursor(cursor, 1);
+    const trail = (7 - ((lead + days) % 7)) % 7;
+    for (let day = 1; day <= trail; day++) cells.push(outCell(after, day));
   }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 
-  for (const [sel, c, weekday] of [
-    ['.peek-prev', stepCursor(cursor, -1), 6],
-    ['.peek-next', stepCursor(cursor, 1), 0],
-  ]) {
-    const column = monthColumn(c, weekday)
-      .map((day) => `<span class="peek-cell">${day}</span>`)
-      .join('');
-    row.querySelector(sel).innerHTML = `<span class="peek-col" aria-hidden="true">${column}</span>`;
+  if (!wide) {
+    for (const [sel, c, weekday] of [
+      ['.peek-prev', stepCursor(cursor, -1), 6],
+      ['.peek-next', stepCursor(cursor, 1), 0],
+    ]) {
+      const column = monthColumn(c, weekday)
+        .map((day) => `<span class="peek-cell">${day}</span>`)
+        .join('');
+      row.querySelector(sel).innerHTML = `<span class="peek-col" aria-hidden="true">${column}</span>`;
+    }
   }
 
   if (!live) return;

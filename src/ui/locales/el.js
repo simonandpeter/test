@@ -54,6 +54,7 @@ export const el = {
     monthView: 'Μήνας',
     reckoningLabel: 'Το ημερολόγιο με το οποίο διαβάζεται η σελίδα',
     reckoningFollow: 'Όπως η Εκκλησία μου',
+    reckoningShort: { julian: 'Ιουλιανό', 'revised-julian': 'Νέο Ιουλ.', gregorian: 'Γρηγοριανό' },
     fullScreen: 'Άνοιγμα σε πλήρη οθόνη',
     fullClose: 'Κλείσιμο',
     fullPeriods: 'Νηστείες και περίοδοι',

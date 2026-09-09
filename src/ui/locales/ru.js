@@ -57,6 +57,7 @@ export const ru = {
     monthView: 'Месяц',
     reckoningLabel: 'Календарь, по которому читается страница',
     reckoningFollow: 'Как в моей Церкви',
+    reckoningShort: { julian: 'Юлианский', 'revised-julian': 'Новоюл.', gregorian: 'Григорианский' },
     fullScreen: 'Открыть на весь экран',
     fullClose: 'Закрыть',
     fullPeriods: 'Посты и периоды',

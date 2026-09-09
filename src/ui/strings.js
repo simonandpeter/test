@@ -120,6 +120,19 @@ export const STRINGS = {
     reckoningLabel: 'The calendar this page is read by',
     reckoningFollow: 'Follow my church',
     /*
+     * The same three calendars named short, for the bracket beside the month's
+     * own name — "September 2026 (R. Julian)" — where the head has a stepper
+     * either side of it and, once the column narrows, 19rem to hold all of it
+     * (docs/daily-desktop-visuals.md §3.3).
+     *
+     * Only the longest name is abbreviated, in every pack: the point is to fit
+     * the one that does not, not to shorten three words on principle. The
+     * chooser's own rows keep the full names, and so does the button's
+     * accessible label — a screen reader is read the whole calendar's name and
+     * is never handed the abbreviation the layout needed.
+     */
+    reckoningShort: { julian: 'Julian', 'revised-julian': 'R. Julian', gregorian: 'Gregorian' },
+    /*
      * The whole church month at once (author, 2026-09-01: "Make an expandable
      * calendar button under the weekly display called 'Full Screen Calendar'
      * that opens up a full screen calendar modal in the same style as the

@@ -147,14 +147,34 @@ export function render(el, { data, params, router }) {
                 and by whose arithmetic — and the pair reads as a heading.
               -->
               <div class="month-head">
-                <span class="month-name"></span>
-                <div class="reckoning" data-reckoning>
-                  <button type="button" class="reckoning-btn utility" data-reckoning-btn
-                    aria-expanded="false" aria-haspopup="listbox"
-                    aria-controls="reckoning-pop"></button>
-                  <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
-                    role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
-                </div>
+                <!--
+                  **The month's two steps, past 1024 px** (2026-09-10,
+                  docs/daily-desktop-visuals.md §3.3): a hairline closed by a
+                  diamond, pointing away from the month it leaves. They replace
+                  the peeked columns, which is what buys the grid its width —
+                  and they are a *second* control on stepMonth, not the same
+                  one moved, because the phone keeps its peeks. Hence
+                  data-mstepper beside data-mstep: two names for two controls,
+                  so neither a querySelector here nor a locator in the suite
+                  can pick up the wrong one.
+                -->
+                <button type="button" class="mstep mstep-prev" data-mstepper="-1"
+                  aria-label="${esc(STRINGS.calendar.prevMonth)}">
+                  <i class="mstep-dot"></i><i class="mstep-line"></i></button>
+                <span class="month-title">
+                  <span class="month-name"></span>
+                  <div class="reckoning" data-reckoning>
+                    <button type="button" class="reckoning-btn utility" data-reckoning-btn
+                      aria-expanded="false" aria-haspopup="listbox"
+                      aria-controls="reckoning-pop"></button>
+                    <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
+                      role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
+                  </div>
+                  ${fullCalButton()}
+                </span>
+                <button type="button" class="mstep mstep-next" data-mstepper="1"
+                  aria-label="${esc(STRINGS.calendar.nextMonth)}">
+                  <i class="mstep-line"></i><i class="mstep-dot"></i></button>
               </div>
               <div class="month-days-line" aria-hidden="true">
                 <span class="peek-gap"></span>
@@ -174,17 +194,15 @@ export function render(el, { data, params, router }) {
               </div>
             </div>
             <!--
-              Under the weekly display, in the author's own placement
-              (2026-09-01). Inside the span rather than after it, and the span
-              is a grid whose first row holds the week and the month stacked on
-              one another — so a third child lands in a second row, under
-              whichever of the two is showing, and moves down when the month
-              unfurls. Outside the span it would be a third flex item of the
-              controls row, and a full-width one there makes the row *wrap*:
-              the week strip goes to its own line and the whole picker's
-              geometry moves, which four of this page's tests caught at once.
+              **The full-screen control moved into the month's own head on
+              2026-09-10** (docs/daily-desktop-visuals.md §3.3), to the right
+              of the month and its reckoning. It stood here, in a second row
+              of the span under whichever grain was showing, from 2026-09-01;
+              it is a desktop control only (calendar.css hides it below
+              1024 px, author 2026-09-02) and the desktop's picker is the
+              month, so the calendar's own way out now sits on the calendar's
+              own heading rather than a row below it. Its words are unchanged.
             -->
-            ${fullCalButton()}
           </div>
       </div>
       <!--
@@ -268,8 +286,12 @@ export function render(el, { data, params, router }) {
   };
   el.addEventListener('click', onRegisterView);
   state.cleanups.push(() => el.removeEventListener('click', onRegisterView));
-  el.querySelector('[data-mstep="-1"]').addEventListener('click', () => stepMonth(-1));
-  el.querySelector('[data-mstep="1"]').addEventListener('click', () => stepMonth(1));
+  /* Two controls, one function: the phone's peeked columns and the desktop
+     head's two marks both step a month, and neither exists at the other's
+     width. */
+  for (const b of el.querySelectorAll('[data-mstep], [data-mstepper]')) {
+    b.addEventListener('click', () => stepMonth(Number(b.dataset.mstep ?? b.dataset.mstepper)));
+  }
 
   /*
    * The week's own two arrows (author, 2026-09-02). They scroll the rail by
@@ -401,8 +423,22 @@ function wireReckoning(el) {
      * reckoning throughout rather than a civil label over a Julian fast.
      */
     const inForce = reckoningInForce();
-    button.textContent = CALENDAR_LABELS[inForce] ?? inForce;
-    button.setAttribute('aria-label', `${STRINGS.calendar.reckoningLabel}: ${button.textContent}`);
+    const full = CALENDAR_LABELS[inForce] ?? inForce;
+    /*
+     * **The short name is printed and the full one is spoken** (2026-09-10).
+     * The button stands inside the month's head now, between two steppers and
+     * beside the month's own name, and "Revised Julian" is the one of the
+     * three that will not fit there once the column narrows to 19rem
+     * (docs/daily-desktop-visuals.md §3.3). The abbreviation is a layout's
+     * need, so it goes where a layout can be seen: the accessible name keeps
+     * the calendar's whole name, and so do the chooser's own rows below.
+     *
+     * No width branch: the control is `display: none` below 1024 px (author,
+     * 2026-09-02, "only on desktop"), so the short label is never the answer
+     * anybody is given anywhere else.
+     */
+    button.textContent = STRINGS.calendar.reckoningShort?.[inForce] ?? full;
+    button.setAttribute('aria-label', `${STRINGS.calendar.reckoningLabel}: ${full}`);
     // A statement rather than a control below the breakpoint.
     button.disabled = !wide.matches;
     pop.innerHTML = [
@@ -511,6 +547,11 @@ function wireGrainForWidth(el) {
     const button = el.querySelector('[data-month]');
     if (!month || !week) return;
     if (mq.matches) {
+      /* Repainted on the way in even when it is already open, which a reader
+         who opened the month on a narrow window and then widened it is: the
+         grid's out-days and feast marks are this width's and would otherwise
+         be missing from a month painted at the other one. */
+      if (state.monthOpen) paintMonth();
       if (!state.monthOpen) {
         state.monthOpen = true;
         paintMonth();
