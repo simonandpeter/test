@@ -24,6 +24,19 @@ Nothing is in flight. The tree is clean.
 
 ## What 2026-09-09 left behind
 
+**Cross-referencing is the corpus's live direction** (author). `related` is
+reversed: a saint shows whose lives name them, 73 edges made visible on 39
+pages. The vision and the sweep are `PLAN.md` sections 5 and 7 item 4.
+
+**Three rules were recovered from the deleted `SESSIONS.md`** — related saints,
+kinship clauses staying in a name, and the refusal of Nassar's 1938 menaion on
+unresolved copyright. `scratchpad/stranded-rules.py` sieves that file for more;
+it is a reading list, not an oracle, and most of what it finds is history.
+**One rule was also invented and attributed to the author** before being taken
+back out: provenance belongs with a rule, or recovering them launders inference
+into law.
+
+
 A day of tooling and correction rather than features. Four things outlive it,
 and all four are in `CLAUDE.md` where they will actually be read:
 
@@ -44,6 +57,24 @@ and all four are in `CLAUDE.md` where they will actually be read:
 The visual loop is **48 tiles in 80 s** — `contact-sheet.mjs --still`,
 `tile-diff.mjs snapshot`, change, `--still`, `compare` — against ~40 s for a
 single surface through a rebuilt preview before.
+
+## In flight
+
+**Run `node scripts/related-from-links.mjs` over the whole corpus** (author,
+2026-09-09), and read every row it proposes. It proposes and never writes.
+
+That is the first bullet of `PLAN.md` item 4, the cross-reference sweep. What
+makes it a reading job rather than a script job: **a dedication is not a
+relation.** A church, lavra, chapel, feast or ship named for a saint is not an
+association with them, and 23 of the 86 links the corpus produces are exactly
+that. The tool tests adjacency rather than proximity and keeps a `REFUSED`
+table for what no rule catches — a warship whose mutiny a saint calmed, a
+saint's words quoted seven centuries later. Every row still needs a human to
+say whether a life meant a person or a building.
+
+The prize: `related` carries **73 edges** against **532 hand-written prose
+links**, and reverse links now mean every row added shows on two pages instead
+of one. **520 saints of 862 have no link in either direction.**
 
 ## Next
 
