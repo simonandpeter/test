@@ -79,9 +79,23 @@ has been a number worth changing (2026-09-09):
 
 **A test that fails only under parallel load is telling you what it costs.**
 Run it with `--repeat-each=6` alone first — if it passes, the flake is a
-budget, not a bug, and the fix is to stop the budget being spent elsewhere
-rather than to raise the number. `--workers=1` against the full run is the
-other half of that comparison.
+budget, not a bug. `--workers=1` against the full run is the other half of that
+comparison.
+
+**And if it still will not reproduce, throttle the CPU rather than theorise.**
+`Emulation.setCPUThrottlingRate` after the `goto` turns a two-core runner into
+something this desk can be. Two carousel flakes survived a day of guessing —
+including two explanations written into the code that were later disproved —
+and both fell out in minutes at 20x:
+
+- `hover()` waits for its target to be **stable**, which a row drifting by
+  design never is. At 1x the drift is ~0.4 px a frame and rounds to equal often
+  enough to pass; at 20x it never does. `mouse.move` to a coordinate has no
+  actionability gate.
+- A resized cell reports **0** before it reports its new width (trap 7 again),
+  and a poll for "narrower than before" accepts the 0, exits, and then fails a
+  floor of 150. At 1x the real width lands in 97 ms and the zero is never seen;
+  at 20x it is the first reading every time.
 
 **Measure before fixing, and stop when the instrument cannot resolve the
 change.** This desk's spread across identical builds is wider than most

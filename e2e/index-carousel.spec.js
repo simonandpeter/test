@@ -439,7 +439,24 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
   const started = await at();
   await expect.poll(at, { timeout: 4000 }).toBeGreaterThan(started);
 
-  await page.locator('.cx-card').first().hover();
+  /*
+   * **`hover()` cannot be used on the thing this test exists to prove is
+   * moving.** Playwright waits for its target to be *stable* — the same
+   * bounding box across two consecutive frames — before it will act, and a row
+   * drifting by design never is. It passed here for weeks because the drift is
+   * about 0.4 px a frame on this desk and rounds to equal often enough; on a
+   * two-core runner the frames are longer, the step is bigger, and it never
+   * rounds. That is the whole of the CI failure on `024897a`, and it
+   * reproduces locally at `Emulation.setCPUThrottlingRate` 20 —
+   * `scratchpad/hover-probe.mjs` succeeds at 1x and 6x and times out at 20x.
+   *
+   * `mouse.move` has no actionability gate: it puts the pointer at a
+   * coordinate and the page sees the same thing. The track's own box is the
+   * coordinate to use, since it is the one rectangle here that does not move.
+   * CLAUDE.md's third trap is this shape for `click`.
+   */
+  const row = await page.locator('[data-carousel-track]').boundingBox();
+  await page.mouse.move(row.x + row.width / 2, row.y + row.height / 2);
   const held = await at();
   await expect
     .poll(at, { timeout: 4000, message: 'the row stopped under the pointer' })
@@ -966,29 +983,37 @@ test('a carousel card is sized by the window height as well as its width', async
   await page.setViewportSize({ width: 1280, height: 560 });
 
   /*
-   * **Polled, not two `requestAnimationFrame` callbacks.** The poll asserts the
-   * same claim and fails if the card never narrows; it simply tolerates a
-   * repack slower than two frames.
+   * **Wait for a narrower width that is not zero.** Mid-repack the cell reports
+   * 0 — CLAUDE.md's seventh trap, a hidden element measuring nothing — and a
+   * poll for "smaller than before" is satisfied by exactly that, exits happy,
+   * and then fails the floor below on 0 < 150. That is the whole of the flake
+   * this test carried on four CI runs across both projects (2026-09-09).
    *
-   * **This test flakes on CI and the cause is not known** (2026-09-09). It went
-   * flaky on three consecutive runs — twice at `desktop`, once at
-   * `mobile-360` — and passes 16 of 16 here with `--repeat-each=8`. Two
-   * explanations were tried and both are wrong: the cell's width does *not*
-   * move after first paint, so a baseline read mid-pack is not it
-   * (`scratchpad/settle-probe.mjs` reads 300 twelve times running in both
-   * project viewports), and it passes under `COLD_FACE=1`, so the runner's own
-   * face is not it either. The poll above is a defensible robustness change
-   * rather than a fix, and CI is the only place this reproduces.
+   * Measured with `scratchpad/resize-probe.mjs` at
+   * `Emulation.setCPUThrottlingRate`: at 1x the width goes 300 → 164 in 97 ms
+   * and the zero is never seen, which is why this desk never caught it. At 6x,
+   * 20x and 50x the first reading after the resize is **0**, and the real 164
+   * lands at 1.1 s, 3.5 s and 4.5 s — inside the ten below, but only if the
+   * zero is not accepted first.
    */
   await expect
-    .poll(width, {
-      timeout: 10000,
-      message: `the card never narrowed from ${tall} px in a 560 px window`,
-    })
-    .toBeLessThan(tall);
+    .poll(
+      async () => {
+        const w = await width();
+        return w > 0 && w < tall;
+      },
+      {
+        timeout: 10000,
+        message: `the card never narrowed from ${tall} px to a real width in a 560 px window`,
+      },
+    )
+    .toBe(true);
 
-  // Never below the phone's own 150, however short the window.
-  expect(await width()).toBeGreaterThanOrEqual(150);
+  // Both claims off one settled reading: narrower than the tall window, and
+  // never below the phone's own 150 however short the window gets.
+  const short = await width();
+  expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
+  expect(short).toBeGreaterThanOrEqual(150);
   /* 300 since 2026-08-28 ("Make the carousel images slightly bigger on
      desktop"), and it is a clamp on `--cx-space` — the room between the top of
      the track and the bottom of the window — rather than on `vh`, because the

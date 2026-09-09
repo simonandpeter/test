@@ -240,8 +240,28 @@ the reader`, which the old handoff already recorded at 3 in ~39.
    is item 6's own objection to doing it first. Pixel-identical tiles prove no
    declaration moved.
 
-**Open and unfixed:** `index-carousel.spec.js`'s sizing test flakes on CI —
-three runs, twice desktop and once mobile-360 — passes 16 of 16 locally, and
-the cause is unknown. Two explanations were tried and disproved (see the
-commit). CI's `flaky` line is the only instrument that sees it, so read it after
-each push rather than hunting locally: `python scratchpad/ci-flaky.py <sha>`.
+## The carousel flakes, found
+
+Both, with causes, after a day of guessing badly at them. The thing that worked
+was **`Emulation.setCPUThrottlingRate`** — a two-core runner is something this
+desk can *be*, and neither flake needs CI to reproduce once it is.
+
+- **`hover()` cannot act on the row this test proves is moving.** Playwright
+  waits for a stable bounding box; a drift never has one. At 1x the step is
+  ~0.4 px a frame and rounds to equal often enough to pass, which is why this
+  desk never saw it; at 20x it times out exactly as `024897a` did on CI.
+  `mouse.move` to the track's own box has no actionability gate.
+- **A resized cell reports 0 before it reports its width.** CLAUDE.md's seventh
+  trap, and the poll I added for "narrower than before" was satisfied by that 0,
+  exited, and then failed the floor of 150. At 1x the real width lands in 97 ms
+  and the zero is never seen; at 6x, 20x and 50x it is the first reading every
+  time, with the real 164 arriving at 1.1 s, 3.5 s and 4.5 s.
+
+`scratchpad/hover-probe.mjs`, `drift-throttled.mjs` and `resize-probe.mjs` are
+the three probes; each takes a rate so the difference can be seen rather than
+argued.
+
+**Also: `024897a` failed on CI and nobody read the run.** It was pushed and the
+next task started immediately, which is the one thing the protocol says not to
+do — so `main` sat red and undeployed until the next green push. The failure was
+the drift test above.
