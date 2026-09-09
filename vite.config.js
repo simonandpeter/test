@@ -169,9 +169,51 @@ const preloadLatin = () => ({
   },
 });
 
+/**
+ * **The reasoning in a markup template does not ship.**
+ *
+ * Every comment in this codebase is stripped by the minifier except one kind:
+ * an HTML comment inside a template literal is *string content*, so the
+ * prose that explains a piece of markup is served to every reader on every
+ * route. Measured on 2026-09-10: **33 of them, 23.5 kB raw and 9.8 kB gzipped
+ * in a 100 kB bundle** — a tenth of the JavaScript this site's first paint
+ * waits for, and none of it is for the reader.
+ *
+ * It was found by a red gate rather than by looking. `npm run test:lighthouse`
+ * holds FCP under 1500 ms on 1.6 Mbit/s with a 150 ms round trip, and the
+ * Daily rebuild's step 6 pushed three routes from 1357 to 1507 — one round
+ * trip exactly, on a 490-byte diff. The bundle had been sitting on a
+ * congestion-window boundary and the next commit was always going to cross it.
+ *
+ * **The comments stay where they are.** They are the record this codebase is
+ * written around, and the answer to their cost is not to write fewer of them:
+ * it is to stop shipping them, which is what every other comment here already
+ * does. Applied in dev as well as in build, so the DOM a reader inspects and
+ * the DOM the tests measure are the same document — dev and preview
+ * disagreeing about a whole surface is a class of bug this repo has already
+ * paid for once (see the 404 note above).
+ *
+ * Scoped to `src/views/`, which is where all 33 are and the only place markup
+ * is built from template literals. A comment anywhere else is already a JS
+ * comment, and the minifier has it.
+ */
+export const stripMarkupComments = () => ({
+  name: 'gallery-strip-markup-comments',
+  enforce: 'pre',
+  transform(code, id) {
+    const file = String(id).replaceAll('\\', '/');
+    if (!file.includes('/src/views/') || !file.endsWith('.js')) return null;
+    if (!code.includes('<!--')) return null;
+    // `map: null` rather than a rewritten one: the removal is inside a string
+    // literal on a line that keeps its own identity, and every offender is
+    // prose rather than code, so nothing a stack trace points at moves.
+    return { code: code.replace(/<!--[\s\S]*?-->/g, ''), map: null };
+  },
+});
+
 export default defineConfig({
   // '/' locally; CI sets BASE_PATH to '/<repo>/' for project Pages. A custom
   // domain later means removing the variable from the workflow, nothing else.
   base: process.env.BASE_PATH || '/',
-  plugins: [contentDirs(), wordmark(), preloadLatin()],
+  plugins: [stripMarkupComments(), contentDirs(), wordmark(), preloadLatin()],
 });

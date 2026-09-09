@@ -100,8 +100,6 @@ export const STRINGS = {
      * hears, because "Yesterday" on a page showing a day three weeks back is
      * the wrong word for the thing the button does.
      */
-    yesterday: 'Yesterday',
-    tomorrow: 'Tomorrow',
     prevWeek: 'Previous week',
     nextWeek: 'Next week',
     prevMonth: 'Previous month',

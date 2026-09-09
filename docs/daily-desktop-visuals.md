@@ -1149,3 +1149,68 @@ its `flaky` line before moving on.
   visibility and read the controls still parented to it; the test polls the move
   instead. It is a resize, not a reading state, and it is recorded rather than
   fixed.
+
+### 10.16 Ruled during step 7
+
+- **§2.5 is already built, and it names the wrong file.** The Daily heading has
+  carried the weekday since before this plan — `headingFmt` and
+  `reckonedHeading` in `views/daily/format.js` ask `Intl` for
+  `weekday: 'long'`, and the reckoned heading replaces the weekday field alone
+  so that a Wednesday stays a Wednesday in every reckoning. `lib/date-display.js`
+  is the *corpus's* recorded dates and has nothing to do with the page's own
+  heading. Nothing was added and nothing needs a new unit case. What the mockup
+  drops is the **year**, not the weekday, and dropping it was not asked for.
+- **Both rules were already `--rule`** — step 1 did it, `:has()` guard intact —
+  and the date is already `--text-3xl`, which resolves to 40 past 800 px. There
+  is no 14 anywhere in `calendar.css`.
+- **`--headgap` and `--rulegap` are hoisted to the route, not to `.cal`.** §2.3
+  says `.cal`, and `.cal` cannot reach the box the first gap actually lives in:
+  the nav here is the site's bar, outside the grid, so "nav rule → date" is
+  `main.chrome`'s own top padding and `.cal` is *inside* that. The route element
+  is the one ancestor both are under.
+- **`--rulegap` is 4 px, not §6's 8.** The author asked for that gap closer on
+  2026-08-26 ("make the gold line on daily page ... closer to the date not so
+  far down"), which took it from 8 to 4, and `daily-panel.spec.js` has pinned it
+  at 4 since. The mockup's 8 is measured from a heading with its own leading and
+  is not the same distance. An instruction in words beats a number read off a
+  redraw. The marks' clearance is written as `calc(5px - var(--gap))` at both
+  ends, so it stays 5 px whatever either gap becomes.
+- **`.chrome h1` beats `.cal-date`.** base.css sets this heading's
+  `margin-bottom` with one more selector than a bare class, so `margin: 0` on
+  `.cal-date` lost and the row grew 8 px nobody declared — the marks' clearance
+  was right and the rule sat 8 px low. `.cal-head > .cal-date` fixes it.
+- **The `<nav class="day-step">` wrapper is gone.** A landmark named "Week"
+  holding two marks says less than two buttons that name themselves, and the two
+  buttons have to be direct children of `.cal-head` for the grid to put one
+  either side of the date.
+
+### 10.17 The gate that went red, and what it found
+
+**Step 6's CI run failed the Lighthouse floor** — three routes at 1505–1524 ms
+of FCP against 1500, where step 5 had measured 1357–1374. Accessibility was 100
+throughout. A re-run on the identical sha put `saint detail` back at 1356 and
+left the other three at ~1510, which is the tell: **+150 ms is exactly the run's
+own round-trip time**, and the bundle had been sitting on a congestion-window
+boundary where a 490-byte diff decides which side it lands on.
+
+**The cause is not step 6 and it is worth more than this rebuild.** An HTML
+comment inside a template literal is *string content*, so it is the one kind of
+comment in this codebase the minifier cannot take: **33 of them, 23.5 kB raw and
+9.8 kB gzipped inside a 100 kB bundle**, a tenth of the JavaScript every first
+paint on every route waits for, none of it for the reader. `vite.config.js`
+strips them at transform time — in dev as well as in build, so dev and preview
+stay the same document — and the main chunk goes from **100.43 kB to 90.82 kB
+gzipped**. `tests/ship-no-prose.test.mjs` holds the plugin to that and to
+nothing else, and also holds every markup comment in the source to living inside
+`src/views/`, which is what makes the plugin's scope safe.
+
+**Measured, and what could not be measured.** The bundle figures are measured.
+Whether they buy CI's round trip back is not: this desk's own Lighthouse run is
+1670–1996 ms with the plugin and 1670–1996 without it, identical to the noise —
+the local FCP is CPU-bound and the instrument cannot resolve a 9.6 kB transfer
+change. CI arbitrates.
+
+**And the headroom is the standing finding.** 1357 of 1500 is 9%, and a runner
+150 ms slower than the last one spends all of it. Sitting E should read the
+figure as a range rather than a number, and PLAN item 7's blocking caption pack
+is the one real saving still on the table.

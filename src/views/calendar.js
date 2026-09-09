@@ -63,6 +63,28 @@ const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
   <path d="M8 2.75v4M16 2.75v4" stroke-linecap="round"/>
 </svg>`;
 
+/*
+ * **Half a cross**, and the day steps are the two halves
+ * (docs/daily-desktop-visuals.md §2.3, step 7 of §10.12): a 1 px stem capped by
+ * a diamond at each end, and one arm reaching out from the middle with a
+ * diamond of its own — left on the back step, right on the forward one. The
+ * five pieces are the same five either way; which side the arm reaches is
+ * calendar.css's, off the button's own class.
+ *
+ * Empty elements, and no `aria-hidden` needed on them: both buttons carry an
+ * `aria-label`, which is what a screen reader is given instead of anything
+ * inside. Drawn in boxes rather than as an SVG because every offset here has to
+ * land on a whole pixel of the *page's* grid — a 1 px line placed at 50% of a
+ * box reads visibly heavier in one of the two marks at 125% and 150% display
+ * scaling, which was measured before it was drawn this way.
+ */
+const DAY_MARK =
+  '<i class="orn orn-d orn-top"></i>' +
+  '<i class="orn orn-line"></i>' +
+  '<i class="orn orn-arm"></i>' +
+  '<i class="orn orn-d orn-tip"></i>' +
+  '<i class="orn orn-d orn-bot"></i>';
+
 
 
 /**
@@ -121,28 +143,35 @@ export function render(el, { data, params, router }) {
       -->
       <div class="cal-main" data-col="main">
         <!--
-          **The date and the two steps beside it** (author, 2026-09-01: "add
-          some &lt;Yesterday and Tomorrow&gt; Buttons to the right of today's date
+          **The date between its two steps** (author, 2026-09-01: "add some
+          &lt;Yesterday and Tomorrow&gt; Buttons to the right of today's date
           print in large font, right justified to the margin between left and
           right columns"). Desktop only — a phone already steps the day by
           swiping the panel and by the rail above it, and two more targets on a
           360 px line would crowd the date out of it.
 
-          The wrapper exists so the gold rule under the date can still run the
-          column's full measure: it used to hang off the heading itself, which
-          is now only as wide as its own words. Everything the rule cared about
-          — that there is a liturgy line under it and that the line is not
-          empty — is asked of the wrapper instead, and the sibling it asks
-          about is unchanged.
+          **The words went on 2026-09-10** and each button became half a cross
+          (docs/daily-desktop-visuals.md §2.3). They are not lost: both buttons
+          carried prevDay / nextDay as their accessible name before this and
+          still do, and title was added in the same commit so a pointer keeps
+          the words too. The nav that wrapped the pair went with them — a
+          landmark named "Week" holding two marks says less than two buttons
+          that name themselves — and the two are direct children of cal-head
+          now, which is what lets the grid put one either side of the date.
+
+          The wrapper exists for that row. It was introduced for the gold rule
+          under the date, which needed a box with the column's full measure once
+          the heading stopped having one; the rule is --rule now and still hangs
+          here for the same reason, but the box earns its place twice over.
         -->
         <div class="cal-head">
+          <button type="button" class="day-step day-step-prev" data-dstep="-1"
+            aria-label="${esc(STRINGS.calendar.prevDay)}"
+            title="${esc(STRINGS.calendar.prevDay)}">${DAY_MARK}</button>
           <h1 class="cal-date"></h1>
-          <nav class="day-step" aria-label="${STRINGS.calendar.weekLabel}">
-            <button type="button" data-dstep="-1" aria-label="${STRINGS.calendar.prevDay}">
-              <span aria-hidden="true">‹</span>${STRINGS.calendar.yesterday}</button>
-            <button type="button" data-dstep="1" aria-label="${STRINGS.calendar.nextDay}">
-              ${STRINGS.calendar.tomorrow}<span aria-hidden="true">›</span></button>
-          </nav>
+          <button type="button" class="day-step day-step-next" data-dstep="1"
+            aria-label="${esc(STRINGS.calendar.nextDay)}"
+            title="${esc(STRINGS.calendar.nextDay)}">${DAY_MARK}</button>
         </div>
         <p class="cal-liturgy utility" data-liturgy></p>
         <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>

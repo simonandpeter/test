@@ -45,8 +45,6 @@ export const el = {
     today: 'Σήμερα',
     prevDay: 'Προηγούμενη ημέρα',
     nextDay: 'Επόμενη ημέρα',
-    yesterday: 'Χθες',
-    tomorrow: 'Αύριο',
     prevWeek: 'Προηγούμενη εβδομάδα',
     nextWeek: 'Επόμενη εβδομάδα',
     prevMonth: 'Προηγούμενος μήνας',

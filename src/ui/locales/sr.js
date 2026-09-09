@@ -45,8 +45,6 @@ export const sr = {
     today: 'Данас',
     prevDay: 'Претходни дан',
     nextDay: 'Следећи дан',
-    yesterday: 'Јуче',
-    tomorrow: 'Сутра',
     prevWeek: 'Претходна недеља',
     nextWeek: 'Следећа недеља',
     prevMonth: 'Претходни месец',

@@ -45,8 +45,6 @@ export const ro = {
     today: 'Astăzi',
     prevDay: 'Ziua precedentă',
     nextDay: 'Ziua următoare',
-    yesterday: 'Ieri',
-    tomorrow: 'Mâine',
     prevWeek: 'Săptămâna precedentă',
     nextWeek: 'Săptămâna următoare',
     prevMonth: 'Luna precedentă',

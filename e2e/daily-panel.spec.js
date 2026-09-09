@@ -3455,57 +3455,125 @@ test('a phone has no continue-reading button on the main saint card', async ({ p
 /* ---- the 2026-09-01 batch: the day steps, and the bars that went ---------- */
 
 
-test('the day steps sit on the date line, against the margin between the columns', async ({ page }) => {
+test('the day steps are half a cross either side of the date, between its two rules', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Also on Daily Page add some <Yesterday and Tomorrow>
    * Buttons to the right of today's date print in large font, right justified
    * to the margin between left and right columns" — and, in the same breath,
    * that 5, 6 and 7 are desktop only.
    *
-   * Three claims, and the third is the one that costs something. "Right
-   * justified to the margin between left and right columns" is not the window's
-   * edge and not the header's: it is the right edge of the left column, which
-   * is a width the page works out from `--day-cols` and nothing in the markup
-   * knows. So it is measured against `.cal-main` rather than asserted about a
-   * class.
+   * **The words went on 2026-09-10 and each button became half a cross**
+   * (docs/daily-desktop-visuals.md §2.3, step 7 of §10.12): a 1 px stem capped
+   * by a diamond at each end, and one arm reaching out from the middle — left
+   * on the back step, right on the forward one. So the assertions about type
+   * size are gone with the type, and what replaces them is the geometry the
+   * marks are actually held to.
+   *
+   * Of the author's three claims, two are untouched and are still measured
+   * against the page rather than against a number: the forward mark is right
+   * justified to the margin between the columns — a width the page works out
+   * from `--day-cols` and nothing in the markup knows — and the pair is desktop
+   * only. The third, "to the right of today's date", is the one the redraw
+   * reversed: one mark is on each side now, which is what the author drew.
+   * **The words themselves are not gone**, and that is asserted: both buttons
+   * carry them as their accessible name and, since this commit, as a `title`.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
+  await expect(page.locator('.day-step-prev')).toHaveAccessibleName(/Previous day/i);
+  await expect(page.locator('.day-step-next')).toHaveAccessibleName(/Next day/i);
+  await expect(page.locator('.day-step-prev'), 'a pointer lost the words').toHaveAttribute('title', /Previous day/i);
+  await expect(page.locator('.day-step-next'), 'a pointer lost the words').toHaveAttribute('title', /Next day/i);
+
   const before = await page.locator('.cal-date').textContent();
   const m = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();
-    const step = r('.day-step');
     const main = r('.cal-main');
+    const head = r('.cal-head');
     const date = r('.cal-date');
+    const prev = r('.day-step-prev');
+    const next = r('.day-step-next');
+    /*
+     * The two rules the marks run between. The nav's is the site bar's own
+     * bottom border, which belongs to the chrome and not to this page; the
+     * date's is `.cal-head`'s `::after`, drawn at the wrapper's foot and only
+     * when there is a liturgy line under it. Both are read as edges rather
+     * than as declarations, because what §2.3 promises is a distance.
+     */
+    const navRule = r('header.chrome').bottom;
+    const dateRule = head.bottom;
+    // Where the stem stands inside its own box, and how wide it is: whole
+    // pixels from the box's left edge, so the two marks land on the same
+    // subpixel phase at 125% and 150% scaling.
+    const stem = (side) => {
+      const box = r(`.day-step-${side}`);
+      const line = r(`.day-step-${side} .orn-line`);
+      const arm = r(`.day-step-${side} .orn-arm`);
+      return {
+        offset: line.left - box.left,
+        width: line.width,
+        armWidth: Math.round(arm.width),
+        armHeight: Math.round(arm.height),
+        // Negative where the arm reaches back past the stem, positive where it
+        // reaches on past it.
+        armReach: Math.round(arm.left - line.left),
+      };
+    };
     return {
-      stepRight: step.right,
-      // The column's own text edge: `.cal-main` scrolls, so its right is the
-      // border box and the words stop where its padding does.
-      columnRight: main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight),
-      // The steps are beside the date, not under it: the two boxes overlap
-      // vertically, and the steps start after the date's words end.
-      sharesLine: step.top < date.bottom && step.bottom > date.top,
-      afterDate: step.left > date.right - 1,
-      /*
-       * They arrived "in large font" and were **made smaller on 2026-09-02**
-       * (author: "make the yesterday and tomorrow buttons smaller"), so what
-       * is pinned now is the pair of bounds that reversal leaves: plainly
-       * under the date they sit beside, and not shrunk into the utility type
-       * of the chrome either.
-       */
-      size: parseFloat(getComputedStyle(document.querySelector('.day-step button')).fontSize),
-      dateSize: parseFloat(getComputedStyle(document.querySelector('.cal-date')).fontSize),
-      utility: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
+      columnLeft: Math.round(main.left),
+      columnRight: Math.round(main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight)),
+      prevLeft: Math.round(prev.left),
+      nextRight: Math.round(next.right),
+      beforeDate: prev.right <= date.left + 1,
+      afterDate: next.left >= date.right - 1,
+      sharesLine: prev.top < date.bottom && prev.bottom > date.top,
+      topClear: Math.round(prev.top - navRule),
+      bottomClear: Math.round(dateRule - prev.bottom),
+      sameSpan: Math.round(prev.top - next.top) === 0 && Math.round(prev.bottom - next.bottom) === 0,
+      diamonds: document.querySelectorAll('.day-step-prev .orn-d').length,
+      prev: stem('prev'),
+      next: stem('next'),
     };
   });
-  expect(Math.abs(m.stepRight - m.columnRight), 'the steps are not on the column margin').toBeLessThan(2);
-  expect(m.sharesLine, 'the steps are not on the date’s line').toBe(true);
-  expect(m.afterDate, 'the steps are not to the right of the date').toBe(true);
-  expect(m.size, 'the steps are competing with the date rather than serving it').toBeLessThan(m.dateSize / 2);
-  expect(m.size, 'the steps have shrunk into the chrome').toBeGreaterThanOrEqual(m.utility);
+
+  // One either side of the date, and the forward one on the column's margin.
+  expect(m.prevLeft, 'the back mark is not on the column’s own margin').toBe(m.columnLeft);
+  expect(Math.abs(m.nextRight - m.columnRight), 'the forward mark is not on the column margin').toBeLessThan(2);
+  expect(m.beforeDate, 'the back mark is not before the date').toBe(true);
+  expect(m.afterDate, 'the forward mark is not after the date').toBe(true);
+  expect(m.sharesLine, 'the marks are not on the date’s line').toBe(true);
+
+  /*
+   * **From the nav rule to the rule under the date, 5 px clear of each** — the
+   * whole of what `--headgap` and `--rulegap` are hoisted for. In the mockup
+   * they were declared on the mark itself, where the two boxes that read them
+   * are its ancestors and fell through to their fallbacks; this is the
+   * assertion that says the hoist worked.
+   */
+  expect(m.topClear, 'the marks do not clear the nav rule by 5 px').toBe(5);
+  expect(m.bottomClear, 'the marks do not clear the date’s rule by 5 px').toBe(5);
+  expect(m.sameSpan, 'the two marks are not the same height').toBe(true);
+
+  /*
+   * Half a cross each: a 1 px stem on a whole pixel of its own box, three
+   * diamonds, and one arm — reaching back on the left mark and on past on the
+   * right one. The whole-pixel offset is the anti-smear rule §2.3 records as
+   * measured rather than guessed; a stem placed at `50%` of a 24 px box would
+   * be 12 in both and this test would not notice the difference, so the two
+   * offsets are asserted apart.
+   */
+  expect(m.prev.offset, 'the back mark’s stem is off the pixel grid').toBe(14);
+  expect(m.next.offset, 'the forward mark’s stem is off the pixel grid').toBe(10);
+  expect(m.prev.width, 'the stem is not a hairline').toBe(1);
+  expect(m.next.width, 'the stem is not a hairline').toBe(1);
+  expect(m.diamonds, 'the mark is not capped and tipped by three diamonds').toBe(3);
+  expect([m.prev.armWidth, m.prev.armHeight], 'the back arm is not a 7 px hairline').toEqual([7, 1]);
+  expect([m.next.armWidth, m.next.armHeight], 'the forward arm is not a 7 px hairline').toEqual([7, 1]);
+  expect(m.prev.armReach, 'the back mark’s arm does not reach back').toBe(-7);
+  expect(m.next.armReach, 'the forward mark’s arm does not reach on').toBe(1);
 
   // And they do what they say, through the same funnel every other way of
   // changing the day goes through — so the panels roll rather than the page
@@ -3519,11 +3587,12 @@ test('the day steps sit on the date line, against the margin between the columns
 
   /*
    * Desktop only. A phone has the rail, a swipe across the panel and the month
-   * grid already, and no room on a 360 px line for a fourth way — so the nav is
-   * not merely small there, it is not laid out at all.
+   * grid already, and no room on a 360 px line for a fourth way — so the marks
+   * are not merely small there, they are not laid out at all.
    */
   await page.setViewportSize({ width: 360, height: 780 });
-  await expect(page.locator('.day-step')).toBeHidden();
+  await expect(page.locator('.day-step-prev')).toBeHidden();
+  await expect(page.locator('.day-step-next')).toBeHidden();
 });
 
 

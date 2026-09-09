@@ -1162,6 +1162,39 @@
        hides the bar is base.css's, under "scrollers that draw no bar". */
   }
 
+  /*
+   * **The date block's two gaps, in one place** (§2.3, §6): the nav rule to the
+   * date, and the date to its own rule. The marks either side of the date are
+   * derived from both — they run from one rule to the other with 5 px of air at
+   * each end — so the three move together or the sentence is not true.
+   *
+   * **On the route, not on `.cal`, and the mockup is why.** It declared them on
+   * the mark itself, where the nav's margin and the rule's margin read them
+   * from an ancestor that never set them and fell through to their literal
+   * fallbacks; §2.3 corrects that to `.cal`. But the gap above the date is
+   * `main.chrome`'s own top padding here — the nav is the site's bar, outside
+   * the grid — and `.cal` is inside that box, not around it. The route is the
+   * one element both are under.
+   *
+   * `--rulegap` is `--space-1` and not §6's 8 px. The author asked for that gap
+   * *closer* on 2026-08-26 ("make the gold line on daily page ... closer to the
+   * date not so far down"), which took it from 8 to 4, and
+   * `daily-panel.spec.js` has pinned it at 4 since. The mockup's 8 is measured
+   * from a heading with its own leading and is not the same distance; an
+   * instruction in words beats a number read off a redraw.
+   */
+  html[data-route='calendar'] {
+    --headgap: var(--space-2);
+    --rulegap: var(--space-1);
+  }
+
+  /* The page starts `--headgap` under the nav rule, where every other route
+     starts `--space-6` below the bar (base.css). The date is the first thing in
+     it, so this gap is the one §6's table names. */
+  html[data-route='calendar'] main.chrome {
+    padding-top: var(--headgap);
+  }
+
   .cal-main {
     grid-column: 1;
     grid-row: 1;
@@ -1457,48 +1490,147 @@
     right: 0;
   }
 
-  /* The date and its two steps share a line, the steps against the right edge
-     of the left column (author, 2026-09-01). `baseline` rather than `center`,
-     so the words sit on the heading's own line however the h1's clamp resolves.
-     The heading takes the slack, which is what keeps the steps hard against the
-     margin between the columns rather than floating in beside a short date. */
+  /*
+   * **The date between its two marks** (§2.3, step 7 of §10.12). The steps sat
+   * together at the right edge of the left column and read `‹ Yesterday` and
+   * `Tomorrow ›` until 2026-09-10; they are half a cross each now, one either
+   * side of the date, and the words are their accessible name and their
+   * `title`.
+   *
+   * Three columns rather than a flex row with `space-between`, because one mark
+   * is on the *left* of the heading now: explicit placement is what lets the
+   * markup stay in the order it reads in while the picture reads
+   * mark-date-mark.
+   *
+   * `stretch` rather than `align-items: baseline`. The comment that used to
+   * stand here explained the baseline — "so the words sit on the heading's own
+   * line however the h1's clamp resolves" — and it went with the words it was
+   * about: a mark is a rule and wants the block's own height.
+   */
   .cal-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-6);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: stretch;
+    column-gap: var(--space-4);
   }
 
+  /* `.cal-head >` rather than `.cal-date` alone: `.chrome h1` in base.css sets
+     this heading's `margin-bottom` and is one selector more specific, so a bare
+     class here loses and the row grows by 8 px nobody declared. Measured — the
+     marks' clearance was right and the rule sat 8 px too low. */
+  .cal-head > .cal-date {
+    grid-column: 2;
+    /* The row *is* the heading's box, which is what the two marks stretch to,
+       so the heading carries no margin of its own inside it. The space under
+       the block is `--rulegap` on the wrapper. */
+    margin: 0;
+  }
+
+  /*
+   * The mark: a 1 px stem between two diamonds, and one arm with a diamond of
+   * its own reaching left on the back step and right on the forward one. No
+   * background and no border — the box is a hit area and a positioning context,
+   * 24 px wide, and the ink stands on the page.
+   *
+   * **From the nav rule to the rule under the date, 5 px clear of each.** The
+   * row is the heading's own box, so the two margins are what reach past it:
+   * negative above, where the gap to the nav rule is 8, and positive below,
+   * where the gap to its own rule is 4. Both are written as the same
+   * subtraction from 5, so the pair stays correct whatever either gap becomes.
+   */
   .day-step {
-    display: flex;
-    flex: none;
-    align-items: baseline;
-    gap: var(--space-6);
-  }
-
-  /* They arrived "in large font" (2026-09-01) at h2's own size, so the pair
-     read as part of the heading line. **Smaller since 2026-09-02** (author:
-     "make the yesterday and tomorrow buttons smaller"): at 26 px they were
-     competing with the date they sit beside rather than serving it. Still
-     larger than the utility type around them, so they remain part of the
-     heading line rather than dropping into the chrome. */
-  .day-step button {
-    display: inline-flex;
-    align-items: baseline;
-    gap: var(--space-1);
+    display: block;
+    position: relative;
+    align-self: stretch;
+    width: 24px;
+    margin-block: calc(5px - var(--headgap)) calc(5px - var(--rulegap));
     padding: 0;
     border: 0;
     background: none;
-    font: inherit;
-    font-size: clamp(var(--text-sm), 1.05vw, var(--text-base));
-    line-height: 1.25;
-    color: var(--ink-soft);
+    color: var(--accent);
     cursor: pointer;
-    white-space: nowrap;
   }
 
-  .day-step button:hover {
-    color: var(--ink);
+  /*
+   * **Where the stem stands inside the box, and it is a whole pixel from the
+   * box's own left edge.** The back mark carries it 2 px right of centre and
+   * the forward one 2 px left, so each mark's ink — the stem plus the arm on
+   * one side — sits optically centred in its 24 px.
+   *
+   * Whole pixels, not `50%`: at 125% and 150% display scaling a 1 px line
+   * placed at a percentage lands on a different subpixel phase in each of the
+   * two marks and one reads visibly heavier. Measured, not guessed.
+   */
+  .day-step-prev {
+    grid-column: 1;
+    --ox: 14px;
+  }
+
+  .day-step-next {
+    grid-column: 3;
+    --ox: 10px;
+  }
+
+  .day-step:hover {
+    color: var(--ink-soft);
+  }
+
+  .day-step .orn {
+    position: absolute;
+    background: currentColor;
+  }
+
+  /* The stem stops 11 px short at each end: 6 px of air and the 5 px diamond
+     that caps it. */
+  .day-step .orn-line {
+    left: var(--ox);
+    width: 1px;
+    top: 11px;
+    bottom: 11px;
+  }
+
+  .day-step .orn-arm {
+    top: 50%;
+    height: 1px;
+    width: 7px;
+  }
+
+  .day-step-prev .orn-arm {
+    left: calc(var(--ox) - 7px);
+  }
+
+  .day-step-next .orn-arm {
+    left: calc(var(--ox) + 1px);
+  }
+
+  /* 5 px turned 45°, so it measures 7.07 corner to corner and is drawn rather
+     than boxed — nothing here sizes a row, so the rotation costs nothing. */
+  .day-step .orn-d {
+    left: calc(var(--ox) - 2px);
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+  }
+
+  .day-step .orn-top {
+    top: 6px;
+  }
+
+  .day-step .orn-bot {
+    bottom: 6px;
+  }
+
+  .day-step .orn-tip {
+    top: 50%;
+    margin-top: -2.5px;
+  }
+
+  .day-step-prev .orn-tip {
+    left: calc(var(--ox) - 9px);
+  }
+
+  .day-step-next .orn-tip {
+    left: calc(var(--ox) + 6px);
   }
 
   /*
@@ -2694,7 +2826,11 @@ a.name-day:hover {
    sitting inside it. */
 .cal-head:has(+ .cal-liturgy:not(:empty)) {
   margin-bottom: var(--space-2);
-  padding-bottom: var(--space-1);
+  /* `--rulegap` past 1024 px, where it is hoisted to the route so the marks
+     either side of the date can reach exactly to it; `--space-1` everywhere
+     else, which is the same 4 px the author asked for on 2026-08-26 and which
+     the fallback keeps for every width that declares nothing. */
+  padding-bottom: var(--rulegap, var(--space-1));
   position: relative;
 }
 

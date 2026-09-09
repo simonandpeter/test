@@ -48,8 +48,6 @@ export const ru = {
     today: 'Сегодня',
     prevDay: 'Предыдущий день',
     nextDay: 'Следующий день',
-    yesterday: 'Вчера',
-    tomorrow: 'Завтра',
     prevWeek: 'Предыдущая неделя',
     nextWeek: 'Следующая неделя',
     prevMonth: 'Предыдущий месяц',
