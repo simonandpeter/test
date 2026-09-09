@@ -81,6 +81,10 @@ for (const [theme, get] of [
    * has to resolve to understand anything. It measures 2.78:1 on light gesso,
    * which would fail a non-text floor if one applied, and none does.
    *
+   * `--accent` is under the same exemption and on the same terms: a rule, a
+   * border and a stepper's diamond, never a word and never the only carrier
+   * of a fact. 2.84:1 on light gesso and 2.99:1 on the bole.
+   *
    * `--gold-ink` is the token that exists *because* of that: "the same gold at
    * a value words can be read at" (tokens.css, 2026-08-27). Wherever gold has
    * to be legible it is this one, so this one takes the AA floor.
@@ -89,6 +93,34 @@ for (const [theme, get] of [
     for (const [where, ground] of Object.entries(grounds)) {
       const r = ratio(get('gold-ink'), ground);
       assert.ok(r >= 4.5, `--gold-ink (${get('gold-ink')}) is ${round(r)}:1 on --${where}, under 4.5:1`);
+    }
+  });
+
+  /*
+   * **The feast mark is where the exemption stops, and this is the first
+   * non-text floor in the repo** (2026-09-10).
+   *
+   * `--gold`'s exemption is worded "never text and never carries information
+   * alone", and the second half is the load-bearing one. A feast dot is the
+   * only thing on a month cell, or on a rail day, that says the day holds a
+   * feast: there is no word beside it and no second channel. So it is a
+   * graphical object a reader has to resolve, and it takes WCAG's 3:1 for
+   * one.
+   *
+   * The number that made this worth asserting rather than recording: the
+   * value the design arrived with, `#ac7700`, was 3.11:1 on gesso and
+   * **2.89:1 on the field** — and the field is where the mark actually sits,
+   * inside a card. A floor that is only written down is a comment, and this
+   * file exists because two of those were wrong for years.
+   */
+  test(`${theme}: --feast clears the 3:1 graphic floor, being the only carrier of a feast`, () => {
+    for (const [where, ground] of Object.entries(grounds)) {
+      const r = ratio(get('feast'), ground);
+      assert.ok(
+        r >= 3,
+        `--feast (${get('feast')}) is ${round(r)}:1 on --${where} (${ground}), ` +
+          'under the 3:1 floor for a graphic that carries information alone',
+      );
     }
   });
 

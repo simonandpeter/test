@@ -1310,21 +1310,33 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   await expect(sunday.locator('.day-mark')).toHaveCount(0);
   await expect(sunday).toHaveAttribute('aria-label', /^Sunday, 20 September 2026 - \d+ commemorations$/);
 
-  // The feast mark is the one place the calendar spends gold (author,
-  // 2026-08-26: "Gold is almost unused"). 21 September is the Nativity of the
-  // Theotokos in the Russian calendar and its record carries the day's hymns.
+  /*
+   * The feast mark is the one place the calendar spends gold (author,
+   * 2026-08-26: "Gold is almost unused"). 21 September is the Nativity of the
+   * Theotokos in the Russian calendar and its record carries the day's hymns.
+   *
+   * **`--feast`, not `--gold`, since 2026-09-10.** The month grid grows a
+   * feast mark of its own and the two grains cannot say one thing in two
+   * golds, so the dot moved onto a token that clears the 3:1 a mark carrying
+   * information alone has to — `--gold` here was 2.62:1 on the field.
+   * `tests/contrast.test.mjs` holds the number; this holds the wiring.
+   */
   await page.goto('/calendar/2026-09-21', { waitUntil: 'networkidle' });
   const feast = page.locator('.week-strip [data-iso="2026-09-21"] .mark-feast');
   await expect(feast).toHaveCount(1);
-  const gold = await page.evaluate(() =>
-    getComputedStyle(document.documentElement).getPropertyValue('--gold').trim(),
-  );
+  const [feastToken, goldToken] = await page.evaluate(() => {
+    const root = getComputedStyle(document.documentElement);
+    return [root.getPropertyValue('--feast').trim(), root.getPropertyValue('--gold').trim()];
+  });
   const painted = await feast.evaluate((el) => getComputedStyle(el).backgroundColor);
   const hex = (rgb) => {
     const [r, g, b] = rgb.match(/\d+/g).map(Number);
     return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
   };
-  expect(hex(painted)).toBe(gold.toLowerCase());
+  expect(hex(painted)).toBe(feastToken.toLowerCase());
+  // And it is a different gold from the decorative one, which is the whole
+  // point of the pair: a token that carries a fact takes a floor.
+  expect(hex(painted)).not.toBe(goldToken.toLowerCase());
 
   // The month is unchanged: the marks are the week strip's, which is where the
   // author asked for them and where a week is planned.

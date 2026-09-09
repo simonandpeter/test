@@ -602,9 +602,15 @@
 
 /* The one place the site spends gold on the calendar (author, 2026-08-26:
    "Gold is almost unused … gold for the feast-day marker on the week strip").
-   It is the leaf under the icon, and a feast is what it is for. */
+   It is the leaf under the icon, and a feast is what it is for.
+
+   `--feast` and not `--gold` since 2026-09-10: the month grid grows a feast
+   mark of its own in the same commit, and the two grains cannot say one thing
+   in two golds. `--gold` here was **2.62:1 on the field**, which is worse than
+   the token that replaced it — see `tokens.css` for why this dot takes the 3:1
+   graphic floor when `--gold` itself does not. */
 .mark-feast {
-  background: var(--gold);
+  background: var(--feast);
   /* A diamond by clip-path rather than a rotated square: a 5 px square turned
      45 degrees measures 7.07 px corner to corner and would push the 5 px row
      it sits in. This stays in the box. */
@@ -2322,15 +2328,16 @@ a.name-day:hover {
    the change: "Fasting is the number-one daily question and it's currently the
    quietest element."
 
-   One gold hairline separates the date from it (author, same instruction:
-   "One gold hairline under the date heading … would give the page the one warm
-   accent it's missing"). It ran 2.5em wide and a full space-2 below the
-   heading's text until the author asked it closer and full width to match
+   One hairline separates the date from it. It arrived gold (author,
+   2026-08-26: "One gold hairline under the date heading … would give the page
+   the one warm accent it's missing"), ran 2.5em wide and a full space-2 below
+   the heading's text until the author asked it closer and full width to match
    every other rule on the page (2026-08-26: "make the gold line on daily page
    go full width like the other lines and make it closer to the date not so
    far down") — the register's own rows, the register-heading's underline,
    all run the column's full measure, and this one read as a stray fragment
-   beside them. */
+   beside them. The full measure is what survives; the gold does not, and the
+   rule below says where it went. */
 /* **Hung off the wrapper since 2026-09-01**, not off the heading. The heading
    shares its line with the two day-steps now and is only as wide as its own
    words; the rule has to run the column's full measure, which is the wrapper's
@@ -2343,6 +2350,12 @@ a.name-day:hover {
   position: relative;
 }
 
+/* **`--rule`, not `--gold`, since 2026-09-10** (docs/daily-desktop-visuals.md
+   §2.4). The date's rule and the rule under the nav are one pair and read as
+   one, and gold moves onto the feast mark alone — the rebuild's rules and
+   marks are `--accent` and its rules are `--rule`. The `:has()` guard is
+   unchanged and is the whole of why this is drawn here rather than as a plain
+   border: a day with no liturgy line must not grow a stray rule. */
 .cal-head:has(+ .cal-liturgy:not(:empty))::after {
   content: '';
   position: absolute;
@@ -2350,7 +2363,7 @@ a.name-day:hover {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--gold);
+  background: var(--rule);
 }
 
 .cal-liturgy {

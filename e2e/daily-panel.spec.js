@@ -1014,7 +1014,7 @@ test('every language fits the 360 px header, and none leaks a placeholder', asyn
 });
 
 
-test('the gold hairline under the date runs full width, close to the text', async ({ page }) => {
+test('the hairline under the date runs full width, close to the text, in --rule', async ({ page }) => {
   /*
    * Author, 2026-08-26: "make the gold line on daily page go full width like
    * the other lines and make it closer to the date not so far down." It ran
@@ -1022,6 +1022,13 @@ test('the gold hairline under the date runs full width, close to the text', asyn
    * heading's text; now it spans the column like the register's own rules and
    * the register-heading's underline, and stands a tighter space-1 (4 px)
    * under it.
+   *
+   * **It is no longer gold** (2026-09-10, docs/daily-desktop-visuals.md §2.4).
+   * The rebuild pairs it with a rule under the nav and draws both in `--rule`;
+   * gold survives on the page as the feast mark alone, which is the one place
+   * it carries a fact. The measurements above are untouched — what changed is
+   * the hue, and the assertion follows it rather than being dropped, because
+   * "the rule is a token and not a literal" is the half of this worth keeping.
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -1054,10 +1061,13 @@ test('the gold hairline under the date runs full width, close to the text', asyn
       bodyWidth: column.getBoundingClientRect().width,
       afterWidth: parseFloat(s.width),
       paddingBottom: parseFloat(getComputedStyle(heading).paddingBottom),
-      goldRgb: (() => {
-        const hex = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();
-        const n = parseInt(hex.slice(1), 16);
-        return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+      ...(() => {
+        const root = getComputedStyle(document.documentElement);
+        const rgb = (name) => {
+          const n = parseInt(root.getPropertyValue(name).trim().slice(1), 16);
+          return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
+        };
+        return { ruleRgb: rgb('--rule'), goldRgb: rgb('--gold') };
       })(),
       afterBackground: s.backgroundColor,
     };
@@ -1067,7 +1077,8 @@ test('the gold hairline under the date runs full width, close to the text', asyn
   expect(Math.abs(m.afterWidth - m.bodyWidth)).toBeLessThan(2);
   // Close to the text: one space-1 (4 px), not two (8 px).
   expect(m.paddingBottom).toBeLessThanOrEqual(4);
-  expect(m.afterBackground).toBe(m.goldRgb);
+  expect(m.afterBackground).toBe(m.ruleRgb);
+  expect(m.afterBackground, 'the date rule is gold again').not.toBe(m.goldRgb);
 });
 
 /* ---- the 2026-08-25 batch: the fast, the hymns, the lede, the Bibles ---- */

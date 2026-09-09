@@ -47,12 +47,63 @@
   /* The fast of the day (author, 2026-08-24, PLAN.md): three states the
      reader sorts at a glance. Strict is the rubric itself, because a fast is
      liturgical time; the other two are new hues and the one sanctioned
-     exception to the two-colour rule. Teal rather than amber for fish so the
+     exception to the two-colour rule. Blue rather than amber for fish so the
      mitigated day is never mistaken for the gold of the veneration glyph. */
   --fast-strict: var(--rubric);
-  --fast-fish: #1f5a6e;
+  /* Chroma 20.7 -> 34 and hue 235 -> 260 deg on 2026-09-10: it read as a
+     grey-teal rather than as a blue, which is the one thing this hue is here
+     to do — keep the mitigated day from being mistaken for gold. 5.23:1 on
+     gesso and 4.86:1 on the field, a *drop* from 6.10 and 5.67, so the token
+     has less headroom over the 4.5 floor after the change than before.
+     `tests/contrast.test.mjs` is what holds it. */
+  --fast-fish: #016392;
   --fast-free: #356038;
 
+  /* ---- the desktop Daily rebuild (docs/daily-desktop-visuals.md §1) ------
+     Four tokens the rebuild adds, light and vigil, so the sheets it touches
+     spend no raw hex: PLAN.md §3's rule, and PLAN's own colour sweep counts
+     the raw hexes outside this file at three and calls closing them the
+     sweep worth doing. Every one of these has a row in PLAN's colour table
+     carrying its day value. */
+
+  /* The ground's own hue shifted 34.5 in L* away from itself, chroma +5:
+     rules, hairlines and the steppers' marks. **Never text, and never the
+     only carrier of a fact** — 2.84:1 on gesso and 2.64:1 on the field, which
+     is `--gold`'s own exemption in `tests/contrast.test.mjs` and is why it
+     takes no floor there. */
+  --accent: #918770;
+
+  /* The Daily sidebar's own surface. In day it *is* the field — the bubble is
+     a recessed panel and there is no second surface to invent; in vigil it is
+     a step below it, so the box reads without shouting. */
+  --bub: var(--field);
+
+  /* The feast mark, at each ground's own value: one hex could not serve both
+     and still read as gold, which is the wall `--gold-ink` exists for.
+
+     **Darkened from `#ac7700` at constant hue** (three channels scaled
+     together, so HSL hue moves 41.51 -> 41.57 deg and saturation not at all)
+     until it clears the 3:1 a graphic that carries information has to.
+     `#ac7700` was 3.11:1 on gesso and **2.89:1 on the field**, which is where
+     the mark actually sits; this is **3.30:1 on gesso and 3.07:1 on the
+     field**, computed with `tests/contrast.test.mjs`'s own sRGB luminance
+     function, which now asserts the floor rather than only recording it.
+
+     It takes that floor where `--gold` does not, and the difference is the
+     exemption's own wording: gold "never carries information alone", and this
+     dot is the only thing on a month cell saying the day holds a feast.
+     Vigil is `#a67600` — 4.52:1 on gesso, 4.24:1 on the field, 4.30:1 on
+     `--bub` — and was already clear. */
+  --feast: #a67300;
+
+  /* The mat a picture stands in: no border anywhere on an image, a mount
+     instead. It takes the *other* theme's surface, so the day page's mat is
+     the vigil sidebar's own colour — the pale reading was tried and became
+     the lightest thing on the dark page. The value is deliberately the same
+     one `--bub` carries in vigil; two names for one colour is the honest
+     record of that, and writing it as `var(--bub)` here would resolve to the
+     field instead. */
+  --mount: #201917;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -160,31 +211,68 @@
 }
 
 html.dark {
+  /* ---- the vigil rebalance, 2026-09-10 ---------------------------------
+     Vigil had drifted brighter and more saturated than day at every role that
+     was measured, which reads as a second palette rather than as the same
+     palette on a dark ground. Four roles are solved back to the *light*
+     theme's own ratio at their own hue, then every chroma taken to 82% of
+     what it was; `--field` follows them down in chroma so the figures below
+     are grounded in a surface that moved with them.
+
+     **Four roles, not five.** `--fast-free` is left at `#8fbe8a`, which is
+     8.59:1 on the bole against light's 5.81 — said plainly rather than
+     implied away, because the rebalance covered what was measured and this
+     was not in it. Every figure here is computed with
+     `tests/contrast.test.mjs`'s own luminance function, which asserts them. */
   --gesso: #1a1412;
   /* The ground's opposite here is the near-white the ink already is, so the
      one phrase that asked for it reads white on the bole and black on the
      gesso — see `--ground-ink` above. */
   --ground-ink: #f4ede2;
-  --ink: #ede6dc;
-  --ink-soft: #a89c8f;
+  /* Was #ede6dc at 14.71:1 against light's 13.31; matched, then chroma to
+     82%. 13.25:1 on gesso and 12.43:1 on the field. */
+  --ink: #e1dbd3;
+  /* Was #a89c8f at 6.78:1 against light's 5.92. 5.89:1 and 5.53:1. */
+  --ink-soft: #9b9187;
   /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the
      AA floor for normal text, on the token that carries the current nav item
      and today's date. PLAN.md had recorded that as a live defect since
      2026-08-22 and nothing checked it, because the browser suite ran in light
      mode only. Lifted 8% in HSL with hue (8.2 deg) and saturation (0.48) held,
      so it is the same cinnabar: 5.54:1 and 5.18:1. `tests/contrast.test.mjs`
-     now holds both themes to the floor. */
-  --rubric: #cb7769;
+     now holds both themes to the floor.
+
+     Then `#bc7e74` in the rebalance: luminance held, chroma 38.2 -> 31.4.
+     5.53:1 and 5.19:1 — the 0.01 off the figure above is rounding, not a
+     loss. */
+  --rubric: #bc7e74;
   --gold: #c79a4b;
   --gold-ink: #c79a4b;
   --rule: #3a2f29;
 
-  --field: #231a17;
+  /* Chroma 5.4 -> 4.3. It grounds every figure in this block, which is why it
+     moves with them rather than after them. */
+  --field: #221a18;
   --veil: rgba(26, 20, 18, 0.8);
 
   --fast-strict: var(--rubric);
-  --fast-fish: #7ab4c9;
+  /* Was #7ab4c9 at 7.98:1 against light's 5.23. 5.23:1 on gesso and 4.91:1 on
+     the field — the tightest margin in the set, 0.41 over the floor. */
+  --fast-fish: #6390a1;
   --fast-free: #8fbe8a;
+
+  /* The rebuild's four (see the day block for what each is for). `--bub` is a
+     step *below* the field here rather than equal to it, and `--mount` takes
+     the day theme's own pale surface for the same reason the day page's mount
+     takes this one: a mat reads as a mat by being the other ground. */
+  --accent: #6e5f5a;
+  --bub: #201917;
+  /* 4.52:1 on gesso, 4.24:1 on the field and 4.30:1 on `--bub`, so this half
+     of the pair never needed lifting; the day half did. Chroma is 95% of what
+     it was rather than the 82% the four roles above took — gold loses its
+     identity as gold faster than the other hues lose theirs. */
+  --feast: #a67600;
+  --mount: #908877;
 
   /* Ink is lighter in vigil mode and the ground is warm rather than white, so
      both marks need a little more weight to hold the same reading. */

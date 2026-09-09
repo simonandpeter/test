@@ -108,11 +108,23 @@ black.
 | `--rule` | `#c8c2b7` | a register's rule |
 | `--field` | `#e6ddca` | recessed panel interior — never a page background |
 | `--veil` | gesso at 0.8 | first-load scrim |
+| `--accent` | `#918770` | rules and marks; 2.84:1, **never a word** |
+| `--bub` | `var(--field)` | the Daily sidebar's own surface |
+| `--feast` | `#a67300` | the feast mark; 3.30:1 on gesso, 3.07:1 on the field |
+| `--mount` | `#201917` | the mat a picture stands in — the other theme's surface |
 
 **Two colours carry meaning and nothing else may.** Rubric marks liturgical time
-and the reader's place. Gold marks a finding about veneration. The one sanctioned
+and the reader's place. Gold marks a finding about veneration — `--gold` where
+it is decoration, `--gold-ink` where it is a word, and **`--feast` where it is
+the one thing saying a day holds a feast**, which is why that third one takes a
+3:1 floor the first does not (`tests/contrast.test.mjs`). The one sanctioned
 exception is the fast's colour by kind (`--fast-strict/-fish/-free`), plus the
 Random die.
+
+`--accent` is the ground's own hue shifted away from itself, and it is the
+rebuild's rule-and-mark colour: it sits under `--gold`'s exemption exactly, on
+the exemption's own terms — it is a hairline, a border and a stepper's diamond,
+and never text and never alone.
 
 Every text token is held to WCAG AA on both grounds in both themes by
 `tests/contrast.test.mjs`, and axe runs over every route in both themes.
