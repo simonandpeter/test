@@ -25,10 +25,11 @@ for (const rate of [1, 6, 20, 50]) {
 
   await page.setViewportSize({ width: 1280, height: 560 });
   const t0 = Date.now();
-  let short = tall;
+  let short = tall, last = null;
   while (Date.now() - t0 < 20000) {
-    short = await width();
-    if (short > 0 && short < tall) break;
+    const now = await width();
+    if (now > 0 && now === last) { short = now; break; }
+    last = now;
     await page.waitForTimeout(50);
   }
   console.log(`${String(rate).padStart(2)}x  ${tall} -> ${short} after ${Date.now() - t0} ms (non-zero)${short < tall ? '' : '   NEVER NARROWED'}`);

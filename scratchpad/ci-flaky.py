@@ -38,6 +38,12 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 
 def job_log(job_id):
+    """The job's log, or '' if there is not one yet.
+
+    A run still in progress has no archived log and answers 404 here, which
+    used to come back as a traceback and made the tool look broken at exactly
+    the moment it was most likely to be reached for -- just after a push.
+    """
     url = 'https://api.github.com/repos/simonandpeter/test/actions/jobs/%d/logs' % job_id
     try:
         urllib.request.build_opener(NoRedirect).open(
@@ -45,7 +51,11 @@ def job_log(job_id):
     except urllib.error.HTTPError as e:
         if e.code in (301, 302, 307, 308):
             return urllib.request.urlopen(str(e.reason)).read().decode('utf-8', 'replace')
+        if e.code in (404, 410):
+            return ''
         raise
+    except urllib.error.URLError:
+        return ''
     return ''
 
 
@@ -54,7 +64,10 @@ HEADING = re.compile(r'^\s*\d+ (flaky|failed|passed)\s*(\(.*\))?$')
 for run in api('/actions/runs?per_page=10')['workflow_runs']:
     if sha and not run['head_sha'].startswith(sha):
         continue
-    print('%s  %s  %s' % (run['head_sha'][:8], run['conclusion'], run['html_url']))
+    print('%s  %s  %s' % (run['head_sha'][:8], run['conclusion'] or run['status'], run['html_url']))
+    if run['status'] != 'completed':
+        print('   still running — no log to read yet')
+        break
     for job in api('/actions/runs/%d/jobs' % run['id'])['jobs']:
         lines = [re.sub(r'^\S+Z\s*', '', l).rstrip() for l in job_log(job['id']).split('\n')]
         seen = set()

@@ -261,6 +261,26 @@ desk can *be*, and neither flake needs CI to reproduce once it is.
 the three probes; each takes a rate so the difference can be seen rather than
 argued.
 
+### And a regression the same day's optimisation had introduced
+
+Two map tests were still flaking on CI (`the map can zoom to its ceiling`,
+`panning past the desktop ceiling`), and the cause was the burst climb put into
+`zoomedToCeiling` that morning: ten presses to a settle instead of a settle per
+press, on the argument that arriving is only setup.
+
+**It arrives on a slow machine and not on a fast one.** A press sent mid-flight
+re-targets from wherever the view has reached, so quick frames mean each press
+re-aims from a view that has barely moved. Measured: at 1x, 120 bursted presses
+reached 294x of an 853x ceiling; at 6x and 20x, twenty presses reached it. It
+survived every full suite because six parallel workers make this desk slow
+enough — run alone it failed **3 of 8**, which is the inverse of every other
+flake here.
+
+Reverted to a settle per press. That now reaches the ceiling in 15 presses at
+1x, 6x and 20x alike, taking 7.3 s, 13 s and 21.7 s — all inside the file's own
+60 s budget, which had already answered the timeout the burst was invented for.
+**The seconds it saved were not worth a helper that only works under load.**
+
 **Also: `024897a` failed on CI and nobody read the run.** It was pushed and the
 next task started immediately, which is the one thing the protocol says not to
 do — so `main` sat red and undeployed until the next green push. The failure was

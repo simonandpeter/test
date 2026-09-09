@@ -143,22 +143,24 @@ const zoomedToCeiling = async (page) => {
   const canvas = page.locator('[data-map]');
   await canvas.focus();
   /*
-   * **A press eases (2026-09-04)**, and a press mid-flight re-targets from
-   * wherever the view has reached rather than from where the last one aimed —
-   * so a burst of presses climbs less per press than a settled one does, and a
-   * loop that settles between every press pays a 450 ms flight twenty-five
-   * times. That was 14 s of a 30 s budget before anything under test ran, and
-   * it is why the four tests that call this were the last ones still timing
-   * out (2026-09-09).
+   * **A press eases (2026-09-04), and one sent mid-flight re-targets from
+   * wherever the view has reached** rather than from where the last one aimed.
+   * So the settle between presses is not a delay to be optimised away — it is
+   * what makes a press worth a full step.
    *
-   * Bursts instead: ten presses, then one settle, until the ceiling disables
-   * the control. Getting there is setup for the callers — `the map can zoom to
-   * its ceiling` is its own test — so what matters is only that we arrive and
-   * that the picture has stopped, both of which are still asserted below.
+   * That was tried on 2026-09-09: ten presses to a settle, on the grounds that
+   * arriving is only setup here. It arrives on a *slow* machine and not on a
+   * fast one — at 1x, 120 bursted presses reached 294x of an 853x ceiling,
+   * while at 6x and 20x twenty presses reached it — because quick frames mean
+   * each press re-aims from a view that has barely moved. It survived the full
+   * suite because six parallel workers make this desk slow enough; run alone it
+   * failed 3 of 8. The seconds it saved are not worth a helper that works only
+   * under load, and the file's own 60 s budget already answers the timeout it
+   * was invented for.
    */
   const zoomIn = page.locator('[data-zoom="in"]');
-  for (let burst = 0; burst < 12 && !(await zoomIn.isDisabled()); burst += 1) {
-    for (let i = 0; i < 10; i += 1) await canvas.press('+');
+  for (let i = 0; i < 25 && !(await zoomIn.isDisabled()); i += 1) {
+    await canvas.press('+');
     await settledZoom(page);
   }
   await expect(zoomIn, 'the map never reached its ceiling').toBeDisabled();

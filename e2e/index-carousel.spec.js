@@ -996,23 +996,29 @@ test('a carousel card is sized by the window height as well as its width', async
    * lands at 1.1 s, 3.5 s and 4.5 s — inside the ten below, but only if the
    * zero is not accepted first.
    */
-  await expect
-    .poll(
-      async () => {
-        const w = await width();
-        return w > 0 && w < tall;
-      },
-      {
-        timeout: 10000,
-        message: `the card never narrowed from ${tall} px to a real width in a 560 px window`,
-      },
-    )
-    .toBe(true);
+  /*
+   * **Settled, and asserted on the reading that settled** — not on a fresh one
+   * taken afterwards. The first attempt at this polled until the width was
+   * non-zero and narrower, then re-read for the assertions, and the re-read
+   * came back 0 again: the width does not fall to its new value once, it
+   * oscillates through 0 while the row repacks. Waiting for two consecutive
+   * equal readings is the difference between catching a state and catching a
+   * frame of one.
+   */
+  const settled = async () => {
+    let last = null;
+    for (let i = 0; i < 120; i += 1) {
+      const now = await width();
+      if (now > 0 && now === last) return now;
+      last = now;
+      await page.waitForTimeout(50);
+    }
+    return last;
+  };
 
-  // Both claims off one settled reading: narrower than the tall window, and
-  // never below the phone's own 150 however short the window gets.
-  const short = await width();
+  const short = await settled();
   expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
+  // Never below the phone's own 150, however short the window.
   expect(short).toBeGreaterThanOrEqual(150);
   /* 300 since 2026-08-28 ("Make the carousel images slightly bigger on
      desktop"), and it is a clamp on `--cx-space` — the room between the top of
