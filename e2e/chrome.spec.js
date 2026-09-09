@@ -2866,15 +2866,24 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
    * route), so its right edge is its own and asserting the whole rect would
    * pin a decision this test is not about. What "one box on every route" ever
    * meant is where the row *starts* and where it *ends* — the header's own
-   * box, the mark's left edge and the controls' corner — and all three are
-   * still identical. The size difference gets its own test below rather than
-   * riding here as an inequality nobody named.
+   * box, the mark's left edge and the corner the row ends at — and all three
+   * are still identical. The size difference gets its own test below rather
+   * than riding here as an inequality nobody named.
+   *
+   * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
+   * Past 1024 px the Daily page's three controls are in the sidebar's head
+   * (§2.2 route (c), step 6 of §10.12), so `.chrome-corner` is an empty box
+   * there and collapses to a point. Its right edge is where it always was —
+   * `justify-self: end` in the header's grid, so it is the header's own
+   * content edge — which is the number this line has always been standing for.
+   * Where those controls went is asserted on Daily itself, in
+   * `daily-panel.spec.js`, rather than inferred from a width here.
    */
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
     expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
     expect(seen[i].mark[0], `${route} starts the mark somewhere else`).toEqual(seen[0].mark[0]);
-    expect(seen[i].corner, `${route} puts the controls somewhere else`).toEqual(seen[0].corner);
+    expect(seen[i].corner[1], `${route} ends the header row somewhere else`).toEqual(seen[0].corner[1]);
   }
 
   /*

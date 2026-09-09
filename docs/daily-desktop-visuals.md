@@ -1103,3 +1103,49 @@ its `flaky` line before moving on.
   the day it was written and say nothing afterwards") and it is the assertion
   that found this. Rendered at 1440 with the results column full before it was
   kept: a long name wraps to a second line and nothing else changes.
+
+### 10.15 Ruled during step 6
+
+- **The two chooser panels do not move, and that is what settles §10.9.** Past
+  1024 px `.church-panel` is already `position: fixed` (base.css, author
+  2026-09-02: on a desktop the panel floats over the page rather than pushing it
+  down), so where it sits in the document decides nothing about where it draws —
+  and leaving both in `.chrome-bar` keeps them outside the bubble's `clip-path`
+  by construction rather than by argument. Only the number they hang from moves:
+  `--cal-head-b`, the head's own foot in viewport coordinates, published from a
+  `ResizeObserver` the way `--chrome-h` is and for the same reason. Screenshot
+  at 1280 and 1440, each panel: it opens flush under the head, right-aligned to
+  the bubble's edge, unclipped, over the bubble. Route (c)'s "and both panels"
+  is therefore not built and does not need to be.
+- **Only the three buttons are relocated, not `.chrome-calendar` and
+  `.chrome-corner`.** The head is a `1fr auto 1fr` grid and the language control
+  and the theme switch have to be in different cells; they are siblings inside
+  the corner. Same nodes, same listeners, and the corner's own order is restored
+  on the way back — asserted by pinning a `data-` attribute on each while it
+  stands in the head and reading it in the bar.
+- **The theme switch is 54 px by the head row's own height, not §3.2's 31×17.**
+  That pill was sized to a mockup where the control beside it was a stretched
+  grid cell; here it stands beside a 29 px button and the author asked for the
+  language control's size. The height is `align-self: stretch`, so it tracks;
+  the width is measured (52–56 px across five packs and two faces) and the test
+  says which of the two is derived and which is not. `.icon-button`'s explicit
+  `32px` height had to be undone for the stretch to take, which the equality
+  found.
+- **`daily-picker.spec.js:1712` did not break, and was not rewritten.** §7
+  expected it to, on the reading that the controls moving would constrain
+  `.chrome-bar` to the left column. It does not: the header keeps
+  `--chrome-h-reserve` as its `min-height`, so losing three controls moves
+  neither the bar's box nor `--chrome-h`, and the full-screen calendar still
+  hangs from the same edge and shares the same margins. Constraining the bar and
+  levelling the two heads is §2.2's second open question — one geometry, one
+  commit — and it is still open.
+- **What did break was `chrome.spec.js`'s four-route header comparison**:
+  `.chrome-corner` is an empty box on Daily now and collapses to a point, so the
+  assertion moved from its whole rect to its right edge, which is the header's
+  own content edge and the number that line always stood for.
+- **A resize across the breakpoint hides the three for at most one frame.** The
+  head is `display: none` below 1024 by stylesheet, and the nodes go back on a
+  `matchMedia` listener a task later. Found by a test that polled the head's
+  visibility and read the controls still parented to it; the test polls the move
+  instead. It is a resize, not a reading state, and it is recorded rather than
+  fixed.

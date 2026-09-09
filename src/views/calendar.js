@@ -413,7 +413,7 @@ export function render(el, { data, params, router }) {
   paintGate();
   buildRail(selected);
   paintChrome();
-  state.cleanups.push(wireGrainForWidth(el), wireReckoning(el));
+  state.cleanups.push(wireGrainForWidth(el), wireReckoning(el), wireChromeInHead(el));
   // The whole week the day sits in, not the day pinned to an edge: a reader
   // arriving by deep link gets the same first picture the old strip gave.
   revealSelected({ week: true });
@@ -625,6 +625,127 @@ function wireGrainForWidth(el) {
   mq.addEventListener('change', apply);
   return () => mq.removeEventListener('change', apply);
 }
+
+/**
+ * The three chrome controls, in the bubble's head past 1024 px, and back in
+ * the site's own bar below it (docs/daily-desktop-visuals.md §2.2 route (c),
+ * step 6 of §10.12).
+ *
+ * **The live nodes are moved. Nothing is drawn twice, and that is the whole
+ * decision.** The plan's first route was to render a second set of controls in
+ * the sidebar from shared handlers, and it does not survive contact with the
+ * code: `#church-open`, `#lang-open` and `#theme-toggle` are named by ID in 55
+ * places across the browser suite, so a second element with either ID turns
+ * every one of those locators into a strict-mode violation; `initTheme`
+ * (lib/theme.js) closes over one button and one `choice` and would keep two
+ * independent states with two `media` listeners; `mountPanelControl` keeps its
+ * own open flag and flight token per call, so two mounts on one panel fight
+ * over it, and `mountLanguageControl` adds a panel listener per call, so a
+ * language choice would fire twice; and `ui/coachmark.js` and
+ * `ui/panel-control.js` both hardcode the IDs — the second of them to decide
+ * what counts as a press *outside* an open panel, which a second mount would
+ * be. Moving the nodes keeps every listener, every ID, every piece of
+ * `mountPanelControl`'s state and both coachmark targets, because they are the
+ * same objects in a different parent.
+ *
+ * **The two chooser panels do not move, and are not meant to.** Past 1024 px
+ * `.church-panel` is `position: fixed` (base.css, author 2026-09-02: the panel
+ * floats over a desktop rather than pushing the page down), so where it is in
+ * the document decides nothing about where it draws — and leaving it in
+ * `.chrome-bar` keeps it outside the bubble's `clip-path` by construction
+ * rather than by argument (§10.9: the notches are the only clipping the bubble
+ * does, and a panel is allowed to overrun its bottom edge). What has to move is
+ * the one number it hangs from, and that is `--cal-head-b` below.
+ *
+ * Watched rather than read once, for `wireGrainForWidth`'s reason: a desk
+ * crossing the breakpoint would otherwise leave the controls in a head that is
+ * `display: none`.
+ */
+/* Start, middle, end — the language control, the church control centred by the
+   head's own grid, the theme switch at the end (§3.2). The order here is the
+   order they are appended in, so the markup says what the grid then places. */
+const HEAD_CONTROLS = ['lang-open', 'church-open', 'theme-toggle'];
+
+function wireChromeInHead(el) {
+  const head = el.querySelector('[data-side-head]');
+  if (!head) return () => {};
+  const mq = window.matchMedia('(min-width: 1024px)');
+  /* Where each control came from, remembered the first time it is taken so
+     that a control put back is put back exactly, whatever else has changed. */
+  const homes = new Map();
+
+  const take = () => {
+    for (const id of HEAD_CONTROLS) {
+      const node = document.getElementById(id);
+      if (!node || node.parentElement === head) continue;
+      if (!homes.has(id)) homes.set(id, { parent: node.parentElement, next: node.nextElementSibling });
+      head.append(node);
+    }
+  };
+
+  /*
+   * Reversed, and the sibling checked before it is used: `#lang-open`'s next
+   * sibling is `#theme-toggle`, so restoring them in order would ask the
+   * corner to insert before a node that is still in the head — which throws.
+   * Last one home first, and an `append` for anything whose neighbour is not
+   * where it was left.
+   */
+  const give = () => {
+    for (const id of [...HEAD_CONTROLS].reverse()) {
+      const node = document.getElementById(id);
+      const home = homes.get(id);
+      if (!node || !home) continue;
+      if (home.next && home.next.parentElement === home.parent) home.parent.insertBefore(node, home.next);
+      else home.parent.append(node);
+    }
+  };
+
+  /*
+   * **Where the chooser panels hang from**, published the way `--chrome-h` is
+   * and for the same reason (main.js): it is not a constant, and a number
+   * written into the stylesheet would be wrong at some width in some language
+   * on the day it was written. The head's own bottom in viewport coordinates —
+   * which is what a `position: fixed` panel needs — so a panel opens directly
+   * under the row of controls that asked for it rather than under the site's
+   * bar, where the controls no longer are.
+   *
+   * Viewport coordinates are safe here because this route does not scroll:
+   * `data-fills-window` gives the page's scroll to the two columns, so the head
+   * moves only when something is resized, which is exactly what the observer
+   * below watches. The bar is observed as well as the head: the header decides
+   * how far down the page starts, and a window resize changes its width, which
+   * is a resize the observer sees.
+   */
+  const publish = () => {
+    if (!mq.matches) {
+      document.documentElement.style.removeProperty('--cal-head-b');
+      return;
+    }
+    const bottom = head.getBoundingClientRect().bottom;
+    document.documentElement.style.setProperty('--cal-head-b', `${Math.round(bottom)}px`);
+  };
+
+  const apply = () => {
+    if (mq.matches) take();
+    else give();
+    publish();
+  };
+
+  apply();
+  mq.addEventListener('change', apply);
+  const ro = new ResizeObserver(publish);
+  ro.observe(head);
+  const bar = document.querySelector('.chrome-bar');
+  if (bar) ro.observe(bar);
+
+  return () => {
+    mq.removeEventListener('change', apply);
+    ro.disconnect();
+    document.documentElement.style.removeProperty('--cal-head-b');
+    give();
+  };
+}
+
 
 /**
  * Per-paint wiring for the day panel. The panel is replaced wholesale on every

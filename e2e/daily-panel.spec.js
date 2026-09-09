@@ -2946,6 +2946,264 @@ test('the right column is a filled box with a bite and a cross at each corner', 
 });
 
 
+test('the chrome’s three controls move into the bubble’s head, and go home again', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §2.2 route (c), step 6 of §10.12: past
+   * 1024 px on Daily the language control, the church control and the theme
+   * control sit at the head of the sidebar bubble, and below that width they
+   * are back in the site's own bar where every other route keeps them.
+   *
+   * **The live nodes are moved; nothing is drawn twice.** That is the claim
+   * with the most riding on it — 55 locators in this suite name these three by
+   * ID, `initTheme` and `mountPanelControl` are both non-re-entrant, and
+   * `ui/coachmark.js` and `ui/panel-control.js` hardcode the IDs — so it is
+   * asserted three ways: exactly one element carries each ID, the element in
+   * the head is the same object that was in the bar (marked before the move
+   * and read after it), and the controls still work from their new home.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-09', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const IDS = ['lang-open', 'church-open', 'theme-toggle'];
+  for (const id of IDS) {
+    await expect(page.locator(`#${id}`), `${id} was drawn twice`).toHaveCount(1);
+  }
+
+  const desk = await page.evaluate((ids) => {
+    const head = document.querySelector('.cal-bubble-head');
+    const box = (el) => el.getBoundingClientRect();
+    const h = box(head);
+    const at = ids.map((id) => box(document.getElementById(id)));
+    return {
+      inHead: ids.every((id) => document.getElementById(id).parentElement === head),
+      // Start, middle, end (§3.2): the church control is centred by the grid,
+      // so the pair at the ends can never pull it off centre.
+      langAtStart: Math.round(at[0].left - (h.left + parseFloat(getComputedStyle(head).paddingLeft))),
+      churchOffCentre: Math.round((at[1].left + at[1].right) / 2 - (h.left + h.right) / 2),
+      themeAtEnd: Math.round(h.right - parseFloat(getComputedStyle(head).paddingRight) - at[2].right),
+      inOrder: at[0].right <= at[1].left && at[1].right <= at[2].left,
+      // One row, and the head's rule under all three.
+      oneRow: new Set(at.map((r) => Math.round(r.top))).size === 1,
+      rule: getComputedStyle(head).borderBottomWidth,
+      // Inside the bubble's clip, which is where the head belongs — only the
+      // panels it opens are allowed out (§10.9).
+      insideFill: document.querySelector('.cal-bubble-fill').contains(head),
+    };
+  }, IDS);
+
+  expect(desk.inHead, 'the controls are not in the bubble’s head').toBe(true);
+  expect(desk.langAtStart, 'the language control is not at the head’s start').toBe(0);
+  expect(Math.abs(desk.churchOffCentre), 'the church control is not centred in the head').toBeLessThan(2);
+  expect(desk.themeAtEnd, 'the theme control is not at the head’s end').toBe(0);
+  expect(desk.inOrder, 'the three are not in order across the head').toBe(true);
+  expect(desk.oneRow, 'the three are not on one row').toBe(true);
+  expect(desk.rule, 'the head carries no rule under it').toBe('1px');
+  expect(desk.insideFill, 'the head is outside the bubble it heads').toBe(true);
+
+  /*
+   * The same objects, not a second set: each is marked while it stands in the
+   * head, the window is narrowed until the head is gone, and the mark is
+   * looked for in the bar. A re-drawn control would arrive without it.
+   */
+  await page.evaluate((ids) => ids.forEach((id, i) => (document.getElementById(id).dataset.pin = `pin-${i}`)), IDS);
+  await page.setViewportSize({ width: 900, height: 900 });
+  /*
+   * Polled on the *move*, not on the head. The head is hidden by the
+   * stylesheet the instant the window crosses the breakpoint, while the nodes
+   * are put back by a `matchMedia` listener a task later — so a check on the
+   * head's visibility can land in between and read three controls still
+   * parented to a box that is already gone. Found here on the first run.
+   */
+  await expect
+    .poll(() => page.evaluate(() => !!document.getElementById('lang-open').closest('.chrome-bar')))
+    .toBe(true);
+
+  const home = await page.evaluate(
+    (ids) => ids.map((id) => {
+      const el = document.getElementById(id);
+      return { pin: el.dataset.pin, parent: el.parentElement.className, inBar: !!el.closest('.chrome-bar') };
+    }),
+    IDS,
+  );
+  expect(home.map((h) => h.pin), 'the controls in the bar are not the ones that were in the head').toEqual([
+    'pin-0',
+    'pin-1',
+    'pin-2',
+  ]);
+  expect(home.map((h) => h.inBar), 'a control did not go back to the site’s bar').toEqual([true, true, true]);
+  // And back into the boxes they came out of, in the order they were in.
+  expect(home[0].parent, 'the language control came home to the wrong box').toContain('chrome-corner');
+  expect(home[1].parent, 'the church control came home to the wrong box').toContain('chrome-calendar');
+  expect(home[2].parent, 'the theme control came home to the wrong box').toContain('chrome-corner');
+  const corner = await page.locator('.chrome-corner').evaluate((el) => [...el.children].map((c) => c.id));
+  expect(corner, 'the corner’s two controls came back in the wrong order').toEqual(['lang-open', 'theme-toggle']);
+
+  /*
+   * And they still work from the head, which is the point of moving the nodes
+   * rather than re-drawing them: one `mountPanelControl`, one set of
+   * listeners, one flight token.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(page.locator('.cal-bubble-head')).toBeVisible();
+  await page.locator('#church-open').click();
+  await expect(page.locator('#church-panel')).toBeVisible();
+  await page.locator('#church-panel [data-church="romanian"]').click();
+  await expect(page.locator('#church-open')).toHaveText('Romanian');
+});
+
+
+test('the chooser panels open under the bubble’s head, and nothing clips them', async ({ page }) => {
+  /*
+   * §10.9, settled before step 6 was begun: the bubble gets no
+   * `overflow: hidden`, the notches are the only clipping it does, and the
+   * panels are allowed to overrun its bottom edge.
+   *
+   * They are `position: fixed` at this width already (base.css, author
+   * 2026-09-02: on a desktop the panel floats over the page rather than pushing
+   * it down), so they are left in `.chrome-bar` where the document cannot put
+   * them inside the bubble's `clip-path` at all — and the only number that
+   * moves is the top they hang from, which is now the head's own foot rather
+   * than the site bar's. Measured at both widths, because the right edge is
+   * derived from the page's measure and 1440 is where a window wider than
+   * `--page-max` starts.
+   */
+  await ready(page);
+  for (const width of [1280, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/calendar/2026-09-09', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+
+    for (const [button, panel] of [
+      ['#church-open', '#church-panel'],
+      ['#lang-open', '#lang-panel'],
+    ]) {
+      await page.locator(button).click();
+      await expect(page.locator(panel)).toBeVisible();
+      // After the flight, or every number below is a box mid-journey.
+      await page.locator(`${panel} .church-panel-inner`).evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
+
+      const seen = await page.evaluate((sel) => {
+        const p = document.querySelector(sel).getBoundingClientRect();
+        const head = document.querySelector('.cal-bubble-head').getBoundingClientRect();
+        const bubble = document.querySelector('.cal-bubble').getBoundingClientRect();
+        const fill = document.querySelector('.cal-bubble-fill');
+        return {
+          underHead: Math.abs(p.top - head.bottom),
+          onColumnEdge: Math.abs(p.right - bubble.right),
+          // Painted, not merely present: a clipped panel still has a rect.
+          drawn: document.elementFromPoint(Math.round(p.right - 8), Math.round(p.top + 8))?.closest(sel) !== null,
+          insideClip: fill.contains(document.querySelector(sel)),
+          tall: Math.round(p.height),
+        };
+      }, panel);
+
+      expect(seen.underHead, `${panel} at ${width} does not hang from the head`).toBeLessThan(1);
+      expect(seen.onColumnEdge, `${panel} at ${width} is not on the column’s own edge`).toBeLessThan(1);
+      expect(seen.drawn, `${panel} at ${width} is clipped where it opens`).toBe(true);
+      expect(seen.insideClip, `${panel} at ${width} was put inside the bubble’s clip`).toBe(false);
+      expect(seen.tall, `${panel} at ${width} opened empty`).toBeGreaterThan(60);
+
+      await page.locator(button).click();
+      await expect(page.locator(panel)).toBeHidden();
+    }
+  }
+});
+
+
+test('the theme control is a switch the size of the language control beside it', async ({ page }) => {
+  /*
+   * §3.2, and the author's own instruction for this step: the theme control
+   * becomes a switch **the same width and height as the language button**,
+   * with the knob in the ink the controls beside it wear, and its movement
+   * timed from the scale rather than from the mockup's raw `180ms ease`.
+   *
+   * The height is asserted *equal* because it is derived — `align-self:
+   * stretch` makes it the head row's own height in every face and every
+   * language — and the width within four pixels because it cannot be: a grid
+   * cell has no width to inherit, so 54 px is measured against a control whose
+   * globe-and-two-letters runs 52–56 px across the five packs and both faces.
+   * That is the difference between a number that tracks and a number that was
+   * true once, and the two assertions say which is which.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-09', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const sw = await page.evaluate(() => {
+    const theme = document.getElementById('theme-toggle');
+    const lang = document.getElementById('lang-open');
+    const t = theme.getBoundingClientRect();
+    const l = lang.getBoundingClientRect();
+    const knob = getComputedStyle(theme, '::after');
+    const root = getComputedStyle(document.documentElement);
+    const ms = (v) => (String(v).trim().endsWith('ms') ? parseFloat(v) : parseFloat(v) * 1000);
+    // The same minifier that rewrote the duration writes `cubic-bezier(.2,0,0,1)`
+    // where the token says `cubic-bezier(0.2, 0, 0, 1)`. Four numbers, compared
+    // as numbers.
+    const curve = (v) => (String(v).match(/-?\d*\.?\d+/g) ?? []).map(Number).join(',');
+    return {
+      w: Math.round(t.width),
+      h: Math.round(t.height),
+      langW: Math.round(l.width),
+      langH: Math.round(l.height),
+      // A pill with the page's own ground in it: the track reads as a hole cut
+      // in the bubble rather than as a box drawn on it.
+      track: getComputedStyle(theme).backgroundColor,
+      ground: getComputedStyle(document.body).backgroundColor,
+      knobPaint: knob.backgroundColor,
+      controlInk: getComputedStyle(lang).color,
+      // From the scale, not from the mockup.
+      /*
+       * **Both sides read as time rather than as text.** A computed
+       * `transition-duration` is always seconds (`0.14s`), the token is
+       * written `140ms` — and in the built stylesheet these tests run against,
+       * the minifier rewrites the token to `.14s` as well, so a string
+       * comparison would have been green on the dev server and red here for a
+       * reason that has nothing to do with the design. Found on the first run.
+       */
+      duration: ms(knob.transitionDuration),
+      ease: curve(knob.transitionTimingFunction),
+      tokenDur: ms(root.getPropertyValue('--dur-answer')),
+      tokenEase: curve(root.getPropertyValue('--ease')),
+      // `translateX`, not `left`: composited, and the property that moves.
+      property: knob.transitionProperty,
+      at: knob.transform,
+      // The glyph theme.js keeps writing is out of the picture, and its label
+      // is what still carries the state.
+      glyphShown: getComputedStyle(theme.querySelector('svg')).display,
+      name: theme.getAttribute('aria-label'),
+    };
+  });
+
+  expect(sw.h, 'the switch is not the height of the language control').toBe(sw.langH);
+  expect(Math.abs(sw.w - sw.langW), 'the switch is not the width of the language control').toBeLessThanOrEqual(4);
+  expect(sw.track, 'the switch’s track is not the page’s own ground').toBe(sw.ground);
+  expect(sw.knobPaint, 'the knob is not the ink of the controls beside it').toBe(sw.controlInk);
+  expect(sw.duration, 'the knob is not timed from the scale').toBe(sw.tokenDur);
+  expect(sw.ease, 'the knob is not eased from the scale').toBe(sw.tokenEase);
+  expect(sw.property, 'the knob moves something other than a transform').toBe('transform');
+  expect(sw.glyphShown, 'the switch still draws the icon it replaced').toBe('none');
+  expect(sw.name, 'the switch lost the sentence a screen reader is given').toMatch(/Switch to the (dark|light) theme/);
+
+  // Left for day, right for vigil, and the knob travels between them.
+  const knobX = () =>
+    page.evaluate(() => new DOMMatrixReadOnly(getComputedStyle(document.getElementById('theme-toggle'), '::after').transform).m41);
+  const before = await knobX();
+  await page.locator('#theme-toggle').click();
+  await page.waitForTimeout(300);
+  const after = await knobX();
+  expect(await page.evaluate(() => document.documentElement.classList.contains('dark'))).toBe(true);
+  expect(after - before, 'the knob does not travel when the theme changes').toBeGreaterThan(16);
+
+  await page.locator('#theme-toggle').click();
+  await page.waitForTimeout(300);
+  expect(await knobX(), 'the knob does not come back').toBe(before);
+});
+
+
 test('the card ends where the picture does, and the words with it', async ({ page }) => {
   /*
    * Author, 2026-09-01: "make sure the text on the main saint card does not

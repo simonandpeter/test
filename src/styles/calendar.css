@@ -1201,12 +1201,154 @@
     min-height: 0;
   }
 
-  /* The head the chrome controls move into in step 6. Empty until then, so it
-     is a box of no height; it is here rather than in step 6 because the fill's
-     column is head-then-scroller and a stylesheet that only describes half of
-     that is a stylesheet nobody can read. */
+  /*
+   * **The head, and the three chrome controls in it**
+   * (docs/daily-desktop-visuals.md §3.2, step 6 of §10.12): the language
+   * control at the start, the church control **centred by the grid** so the
+   * pair at the ends can never pull it off centre, and the theme switch at the
+   * end. `views/calendar.js` moves the live nodes here and puts them back on
+   * teardown; nothing is drawn twice and it says at length why.
+   *
+   * Below this width the head is `display: none` and the three are in the
+   * site's own bar, which is where they are for every other route at every
+   * width.
+   *
+   * **`--space-3` under it, not the mockup's 13 px.** That 13 was derived —
+   * it is what lands this rule on the nav's own rule — and the derivation
+   * needs the two heads to be level, which they are not yet: the site's bar
+   * still spans the page above the grid rather than sitting in the left
+   * column, which is §2.2's second open question and a commit of its own. A
+   * number whose derivation does not hold is a number off the scale, so it
+   * goes back on it.
+   */
   .cal-bubble-head {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-inline: var(--space-6);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* By ID, because the ID is this codebase's own contract for these three —
+     55 locators in the browser suite name them, `ui/coachmark.js` and
+     `ui/panel-control.js` both hardcode them, and the two chooser buttons are
+     otherwise the same class. */
+  html[data-route='calendar'] .cal-bubble-head > #lang-open {
+    justify-self: start;
+  }
+
+  html[data-route='calendar'] .cal-bubble-head > #church-open {
+    justify-self: center;
+  }
+
+  html[data-route='calendar'] .cal-bubble-head > #theme-toggle {
+    justify-self: end;
+  }
+
+  /*
+   * Pressed reads as a hole cut in the bubble rather than as a tint. The bar's
+   * own state is `--field`, and `--field` *is* `--bub` in day and a step off it
+   * in vigil, so the mark the reader is given everywhere else would be
+   * invisible in here. `--gesso` is the page's ground showing through, which is
+   * the same idea the switch's track below is built on.
+   */
+  html[data-route='calendar'] .cal-bubble-head .church-open[aria-expanded='true'] {
+    background: var(--gesso);
+  }
+
+  /*
+   * **The theme control becomes a switch** (§3.2): a pill with the page's own
+   * ground in it and a knob that travels from left to right, in the same ink as
+   * the two controls beside it.
+   *
+   * **Drawn entirely in CSS on the button `lib/theme.js` already owns.** That
+   * module rewrites this element's `innerHTML` on every label — a sun in the
+   * dark, a moon in the light — so anything put inside it is gone the next time
+   * the theme changes. The pill is the button's own box, the knob is an
+   * `::after`, and the position comes from `data-theme`, which `initTheme`
+   * writes beside the label. Nothing about `theme.js` changes and its
+   * `aria-label` still carries the whole sentence, which is what a screen
+   * reader is given: a knob's position is nothing to one.
+   *
+   * **The size of the language control beside it**, not §3.2's 31×17 — that
+   * was measured off a mockup where the control it stood next to was a
+   * stretched grid cell rather than a button, and a 17 px pill beside a 29 px
+   * button reads as a widget dropped into a row of controls rather than as the
+   * third of three.
+   *
+   * The height is `align-self: stretch`, so it *is* the row's height in every
+   * face and every language rather than a number that agrees with one of them.
+   * The width cannot be taken the same way — a grid cell has no width to
+   * inherit — so 54 px is measured: `#lang-open` is a globe and a two-letter
+   * code, which runs 52–56 px across the five packs in the system face and in
+   * Verdana. `daily-picker.spec.js` asserts the height *equal* and the width
+   * within four pixels, which is the whole of what a measured number needs to
+   * stay honest.
+   *
+   * The knob is centred by a translate rather than placed by a `top`, so it
+   * stays centred whatever the row grows to. `translateX`, not `left`: the same
+   * movement, composited. `--dur-answer` and `--ease` from the scale — a
+   * control acknowledging a press — where the mockup had a raw `180ms ease`
+   * that `design-tokens.test.mjs` rejects twice over.
+   */
+  html[data-route='calendar'] .cal-bubble-head > #theme-toggle {
+    position: relative;
+    box-sizing: border-box;
+    align-self: stretch;
+    width: 54px;
+    /* `.icon-button` is 32x32 in base.css, and an explicit height is what
+       `align-self: stretch` cannot override — the switch sat 3 px taller than
+       the two controls beside it until this line, which is what the equality
+       in daily-picker found. */
+    height: auto;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--gesso);
+  }
+
+  /* The glyph theme.js writes stays in the DOM and out of the picture: it is
+     `aria-hidden` decoration and the button's label is what carries the state. */
+  html[data-route='calendar'] .cal-bubble-head > #theme-toggle > svg {
+    display: none;
+  }
+
+  html[data-route='calendar'] .cal-bubble-head > #theme-toggle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+    transform: translateY(-50%);
+    transition: transform var(--dur-answer) var(--ease);
+  }
+
+  /* Right for vigil, left for day. 25 px is what is left of the 52 px inside
+     the border once the knob and its two 3 px shoulders are taken out.
+     `data-theme` is the theme that is *on*, which is the opposite of what the
+     glyph it replaces showed. */
+  html[data-route='calendar'] .cal-bubble-head > #theme-toggle[data-theme='dark']::after {
+    transform: translate(25px, -50%);
+  }
+
+  /*
+   * **Where the chooser panels hang from.** They are `position: fixed` at this
+   * width already (base.css, author 2026-09-02: on a desktop the panel floats
+   * over the page rather than pushing it down) and right-aligned to the page's
+   * own content margin, which is the bubble's right edge — so the only number
+   * that has to move is the top, from the site bar's foot to the head's.
+   * `--cal-head-b` is published by `views/calendar.js` from a ResizeObserver,
+   * which is where its reasoning is; the fallback is the value this rule
+   * replaces, so a panel opened before the first observation is where it always
+   * was rather than at the top of the window.
+   */
+  html[data-route='calendar'] .church-panel {
+    top: var(--cal-head-b, var(--chrome-h, 53px));
   }
 
   /*
