@@ -69,6 +69,7 @@ export const ru = {
     alsoToday: 'Также совершается память',
     registerView: 'Показывать также поминаемых как',
     viewCards: 'Карточки',
+    viewExpanded: 'Развёрнутые',
     viewList: 'Список',
     continueReading: '…читать дальше',
     heroPlaces: { birth: 'Родился: {place}', death: 'Преставился: {place}' },

@@ -73,6 +73,23 @@ const DEFAULTS = {
   registerLayout: 'cards',
 };
 
+/**
+ * The three faces that list can wear (docs/daily-desktop-visuals.md §10.4).
+ *
+ * **Three, not two.** `expanded` arrived on 2026-09-10 as a *third* face and
+ * not as a replacement: the mockup that proposed it drew two marks because it
+ * was showing two faces at once, one per theme frame, which was never an
+ * argument for dropping the list a reader may have chosen and the site
+ * promised to remember.
+ *
+ * The list lives here rather than in `views/calendar.js` because this is the
+ * file that decides what a stored setting may say — a value read out of
+ * `localStorage` is whatever a previous version of the site, or a reader with
+ * the console open, left there, and the view should not be the place that
+ * knows which of those are legal.
+ */
+export const REGISTER_LAYOUTS = ['cards', 'expanded', 'list'];
+
 export function readSettings() {
   try {
     return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) ?? '{}') };

@@ -16,6 +16,7 @@ import { gregorianToJdn } from '../lib/jdn.js';
 
 import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
+import { REGISTER_LAYOUTS } from '../lib/settings.js';
 import * as store from '../lib/store.js';
 import { RECKONINGS, chooseReckoning, currentChurch, reckoningInForce, storedReckoning, subscribeChurch } from '../lib/church.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
@@ -116,10 +117,15 @@ export function render(el, { data, params, router }) {
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
-    /* Cards or list under *Also commemorated* (author, 2026-09-01), read from
-       the reader's last answer. views/daily/panel.js writes it onto the list as
-       a class, which is why nothing here has to repaint when it changes. */
-    registerView: store.getSettings().registerLayout === 'list' ? 'list' : 'cards',
+    /* Compact, expanded or list under *Also commemorated* (author,
+       2026-09-01; the third face 2026-09-10), read from the reader's last
+       answer. views/daily/panel.js writes it onto the list as a class, which
+       is why nothing here has to repaint when it changes. The legal values are
+       lib/settings.js's, because a stored setting is whatever an older build
+       or an open console left behind. */
+    registerView: REGISTER_LAYOUTS.includes(store.getSettings().registerLayout)
+      ? store.getSettings().registerLayout
+      : 'cards',
   });
 
   el.innerHTML = `
@@ -338,21 +344,22 @@ export function render(el, { data, params, router }) {
   });
 
   /*
-   * Cards or list under *Also commemorated* (author, 2026-09-01).
+   * Compact, expanded or list under *Also commemorated* (author, 2026-09-01;
+   * the third face 2026-09-10).
    *
    * **Delegated on the view, not bound to the buttons**, because the buttons
    * are inside the day panel and the panel is rebuilt every time the reader
    * steps a day — a listener on the button itself would be alive for exactly
    * one day and then silently gone. This one outlives every repaint, and the
-   * only thing it touches is a class and a pair of aria-pressed attributes:
-   * both faces are the same markup (views/daily/panel.js says why), so there is
-   * nothing to re-render.
+   * only thing it touches is a class and the three `aria-pressed` attributes:
+   * all three faces are the same markup (views/daily/panel.js says why), so
+   * there is nothing to re-render.
    */
   const onRegisterView = (e) => {
     const button = e.target.closest?.('[data-reg-view]');
     if (!button || !el.contains(button)) return;
     const next = button.dataset.regView;
-    if (next === state.registerView) return;
+    if (next === state.registerView || !REGISTER_LAYOUTS.includes(next)) return;
     state.registerView = next;
     store.setSetting('registerLayout', next);
     paintRegisterView();
@@ -824,10 +831,9 @@ const announceDay = (iso) =>
  * `paintDay` writes the same class on a cold paint; this is the live change.
  */
 function paintRegisterView() {
-  const view = state.registerView === 'list' ? 'list' : 'cards';
+  const view = REGISTER_LAYOUTS.includes(state.registerView) ? state.registerView : 'cards';
   for (const list of state.el.querySelectorAll('[data-register]')) {
-    list.classList.toggle('is-cards', view === 'cards');
-    list.classList.toggle('is-list', view === 'list');
+    for (const mode of REGISTER_LAYOUTS) list.classList.toggle(`is-${mode}`, view === mode);
   }
   for (const button of state.el.querySelectorAll('[data-reg-view]')) {
     button.setAttribute('aria-pressed', String(button.dataset.regView === view));

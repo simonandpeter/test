@@ -66,6 +66,7 @@ export const ro = {
     alsoToday: 'Se mai pomenesc',
     registerView: 'Afișează pomeniți și',
     viewCards: 'Cartonașe',
+    viewExpanded: 'Extinse',
     viewList: 'Listă',
     continueReading: '…continuă lectura',
     heroPlaces: { birth: 'Născut la {place}', death: 'Adormit la {place}' },

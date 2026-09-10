@@ -154,10 +154,21 @@ export const STRINGS = {
     weekLabel: 'Choose a day',
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
-    /* The two faces of that list (author, 2026-09-01), and the name of the
-       pair for a reader who cannot see that they are beside a heading. */
+    /*
+     * The faces of that list (author, 2026-09-01; the third 2026-09-10), and
+     * the name of the group for a reader who cannot see that they stand beside
+     * a heading.
+     *
+     * **These became accessible names on 2026-09-10**, where they had been the
+     * buttons' own words. The control is three marks now — four diamonds, one
+     * diamond, three rules — and a shape distinguished from another shape by
+     * colour alone is nothing at all to a screen reader and very little to a
+     * reader who cannot separate two hues. Compact and list keep the words
+     * they lost; only the third is new.
+     */
     registerView: 'Show also commemorated as',
     viewCards: 'Cards',
+    viewExpanded: 'Expanded',
     viewList: 'List',
     /*
      * The way from the day's saint into their life (author, 2026-09-01: add a

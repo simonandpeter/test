@@ -66,6 +66,7 @@ export const el = {
     alsoToday: 'Επίσης εορτάζονται',
     registerView: 'Εμφάνιση συνεορταζομένων ως',
     viewCards: 'Κάρτες',
+    viewExpanded: 'Αναπτυγμένες',
     viewList: 'Λίστα',
     continueReading: '…συνέχεια',
     heroPlaces: { birth: 'Γεννήθηκε: {place}', death: 'Κοιμήθηκε: {place}' },

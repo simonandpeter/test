@@ -7,6 +7,8 @@ import { currentLanguage, languageTag, translateOffice } from '../../lib/i18n.js
 import { greatFeast } from '../../lib/liturgy.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
+import { REGISTER_LAYOUTS } from '../../lib/settings.js';
+import { typeGlyph, typeName } from '../../lib/saint-types.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries.js';
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
@@ -267,15 +269,75 @@ function registerOrder(entries, data) {
     .sort((a, b) => drawnRatio(a.entry) - drawnRatio(b.entry));
 }
 
+/**
+ * The six marks, drawn (docs/daily-desktop-visuals.md §5.1). Which one a saint
+ * gets is `typeGlyph` in lib/saint-types.js — arithmetic over the corpus's
+ * vocabulary, and unit-tested there; this is only the ink.
+ *
+ * **`aria-hidden`, and the row says the word as well** (§10.10). At `--rule`
+ * the mark is 1.41:1 on the field, which is right for decoration and would be
+ * a legibility failure for anything carrying information — so it does not
+ * carry any: `registerRow` puts the type in words into the row's accessible
+ * text wherever the visible subtext has not already said it.
+ *
+ * A cross for the martyr, a cross on a bar for the hieromartyr, the schema
+ * cross on its steps for the venerable, a mitre for the hierarch, a chalice
+ * for the presbyter and a crown for the prince. Martyr alone is 307 of the
+ * corpus's type counts, so repetition is expected and is not a defect: a cross
+ * reads as a category mark, not as a picture that failed to load.
+ */
+const GLYPH_PATHS = {
+  martyr: '<path d="M12 4v16M5 11h14"/>',
+  hieromartyr: '<path d="M12 4v16M5 11h14M8 20h8"/>',
+  venerable: '<path d="M12 4v13M8.5 8h7M6 11h12M8.5 17h7M9.5 20h5"/>',
+  hierarch: '<path d="M12 2v4M10.5 4h3"/><path d="M6 20v-5a6 6 0 0 1 12 0v5z"/>',
+  presbyter: '<path d="M8 5h8l-1 5a3 3 0 0 1-6 0z"/><path d="M12 13v5M9 19h6"/>',
+  prince: '<path d="M5 17l1.6-8 3.4 4 2-6 2 6 3.4-4L19 17z"/><path d="M5 19.5h14"/>',
+};
+
+const glyphMarkup = (kind) =>
+  kind
+    ? `<svg class="reg-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${GLYPH_PATHS[kind]}</svg>`
+    : '';
+
 function registerRow(saint, title, transition, seq = 0) {
+  const subtext = formatSubtext(saint);
+  /*
+   * **The mat and the picture are two boxes now** (§10.2, 2026-09-10). The mat
+   * is 60 px wide whatever the icon is — 48 of picture and 6 of padding either
+   * side — and only the *height* derives, from the same clamped `--reg-aspect`
+   * `cardCrop` has always written. So `.reg-thumb` is the mat and `.reg-pic`
+   * is what the picture's own shape is applied to; before this they were one
+   * span and there was nowhere to put a mat that did not also crop.
+   *
+   * `.reg-thumb` stays the outer name deliberately: two browser tests reach
+   * for it on rows that may have no picture at all, and a rename would have
+   * made them fail on a null rather than on the thing they assert.
+   */
   const image = saint.image
-    ? `<span class="reg-thumb" style="background-image:url('${BASE + saint.image.lqip}');--reg-aspect:${
-        cardCrop(saint.image).aspect
-      };background-position:${cardCrop(saint.image).focus}">
-        <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
-          style="object-position:${cardCrop(saint.image).focus}" loading="lazy" decoding="async" />
+    ? `<span class="reg-thumb">
+        <span class="reg-pic" style="background-image:url('${BASE + saint.image.lqip}');--reg-aspect:${
+          cardCrop(saint.image).aspect
+        };background-position:${cardCrop(saint.image).focus}">
+          <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
+            style="object-position:${cardCrop(saint.image).focus}" loading="lazy" decoding="async" />
+        </span>
       </span>`
-    : '<span class="reg-thumb is-blank" aria-hidden="true"></span>';
+    : `<span class="reg-thumb is-blank" aria-hidden="true">${glyphMarkup(typeGlyph(saint.types))}</span>`;
+  /*
+   * **The word the mark stands for, where the row does not already print it**
+   * (§10.10). `formatSubtext` carries the *office*, which only 337 of the 862
+   * have, so on most imageless rows the glyph would otherwise be the only
+   * thing saying what kind of saint this is — and it is `aria-hidden`. Skipped
+   * where the subtext says it anyway, so a martyr with an office is not
+   * announced as "Martyr · d. 320, Martyr".
+   */
+  const said = subtext.toLowerCase();
+  const missing = saint.image
+    ? []
+    : (saint.types ?? []).map(typeName).filter((word) => !said.includes(word.toLowerCase()));
+  const spoken = missing.length ? `<span class="sr-only">${esc(missing.join(', '))}</span>` : '';
   /*
    * `--reg-seq` is where this saint stood in the calendar's own order, which
    * is what the phone puts back — see `registerOrder` below and the
@@ -293,7 +355,38 @@ function registerRow(saint, title, transition, seq = 0) {
              titles are data and the corpus grows; the register is where a
              church's own title for the day belongs when one arrives. */ ''}
       ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      <span class="reg-sub utility">${esc(formatSubtext(saint))}</span>
+      <span class="reg-sub utility">${esc(subtext)}</span>${spoken}
+      <!--
+        **One line of who they were** (docs/daily-desktop-visuals.md §5.1):
+        "the register says who else is commemorated; this makes it say who they
+        were". Two lines clamped in the compact face and the whole opening
+        paragraph in the expanded one — same box, the clamp is the difference.
+
+        Empty and hidden from the first paint, like the hero's own preview and
+        for the same reason: the life is not in the manifest (Addendum H1 has
+        the budget arithmetic) and arrives with the saint's own payload.
+        fillRegisterLives fetches it, and only at the width that shows it.
+      -->
+      <span class="reg-life" data-reg-life="${esc(saint.slug)}" hidden></span>
+      <!--
+        The expanded face's own way into the life. In the document at every
+        width and laid out at one: the face is a class rather than a second
+        render (see the control below), so what the other two faces do with
+        this is display: none.
+
+        **Read more, not continue reading.** The reference draws "Continue
+        reading" here and on the day's own card, and the shipped desktop card
+        has said "Read more" since the author renamed it on 2026-09-04 —
+        "instead of the 'continue reading' button on Daily page desktop,
+        rename it 'read more'". This face exists only on the desktop, so it is
+        the same door under the same instruction; the reference simply predates
+        the rename. Named after the saint, because "Read more" on a page of
+        them does not say whose life it opens.
+      -->
+      <a class="reg-more" href="${state.router.href(`/saints/${saint.slug}`)}"
+        data-prefetch="${esc(saint.slug)}"
+        aria-label="${esc(fill(STRINGS.calendar.readMoreOf, { name: saintName(saint) }))}"
+        >${esc(STRINGS.calendar.readMore)}<span class="reg-more-mark" aria-hidden="true"></span></a>
     </span>
     ${image}
   </li>`;
@@ -362,6 +455,82 @@ function emptyDayNote(iso) {
    arithmetic with two of their own constants in it and one branch the corpus
    cannot reach today, and all three of those wanted a unit test a module that
    imports the DOM cannot have. */
+
+/**
+ * The register's own control, as three marks (docs/daily-desktop-visuals.md
+ * §5.3, §10.4): four 5 px diamonds standing in the shape of a larger one for
+ * the compact face, that larger diamond whole for the expanded one, and three
+ * rules for the list. Whichever is live is drawn in `--accent` and the others
+ * in `--rule`; calendar.css has the geometry.
+ *
+ * **Three marks and not two.** The reference drew two because it was showing
+ * two faces at once, one per theme frame — it was never an argument for
+ * deleting a face the author asked for and the site promised to remember
+ * (§10.4).
+ *
+ * **The words go, so the labels arrive.** Two of these had words and now have
+ * none; a shape told apart from another shape by colour is nothing to a screen
+ * reader and very little to a reader who cannot separate `--accent` from
+ * `--rule`. Each mark carries the word it stands for, `sr-only`, and the
+ * group keeps its `role` and its `aria-pressed`.
+ */
+const VIEW_MARKS = {
+  cards: '<span class="vt vt-compact" aria-hidden="true"><i></i><i></i><i></i><i></i></span>',
+  expanded: '<span class="vt vt-full" aria-hidden="true"><i></i></span>',
+  list: '<span class="vt vt-list" aria-hidden="true"><i></i><i></i><i></i></span>',
+};
+
+/* Read at call time, never captured: the packs merge over the base *in place*
+   (ui/strings.js), so a branch held from module scope would be whichever
+   language was current when this file was first imported. */
+const VIEW_WORDS = {
+  cards: () => STRINGS.calendar.viewCards,
+  expanded: () => STRINGS.calendar.viewExpanded,
+  list: () => STRINGS.calendar.viewList,
+};
+
+/**
+ * A line of each register saint's life, fetched after the day is drawn
+ * (§5.1). The same second layer the hero's own preview and the Index's
+ * detailed rows use, and the same first paragraph, so no two places on the
+ * site can disagree about where a life begins.
+ *
+ * **Four at a time**, which is `MAX_IN_FLIGHT` in lib/detail.js and brief §7's
+ * own budget. A day can hold twenty also-commemorated saints and each is two
+ * files, so firing them all at once would put forty requests on the wire
+ * behind a page that has already painted.
+ *
+ * **Only at the width that shows them.** The line is a desktop face; below
+ * 1024 px the register is a list of names and dates and none of this is drawn,
+ * so none of it is fetched. Lighthouse's own run is a 360 px phone, which is
+ * why this costs the FCP gate nothing.
+ *
+ * A day change abandons the rest: `state.selected` is checked before each
+ * fetch and again before each write, and the box is checked for still being
+ * in the document, because the panel is rebuilt whole on every step.
+ */
+async function fillRegisterLives(panel, iso) {
+  if (!window.matchMedia('(min-width: 1024px)').matches) return;
+  const queue = [...panel.querySelectorAll('[data-reg-life]')];
+  const worker = async () => {
+    while (queue.length) {
+      const box = queue.shift();
+      if (state.selected !== iso) return;
+      try {
+        const payload = await loadDetail(box.dataset.regLife);
+        if (state.selected !== iso || !box.isConnected) continue;
+        const text = firstParagraphText(payload?.life);
+        if (!text) continue;
+        box.textContent = text;
+        box.hidden = false;
+      } catch {
+        // A life that will not load leaves the row exactly as it was: a name,
+        // a title and its dates, which is what the register said before this.
+      }
+    }
+  };
+  await Promise.all(Array.from({ length: 4 }, worker));
+}
 
 export { fitLede };
 
@@ -462,16 +631,14 @@ export function paintDay({ main, side }) {
    * reader stepped a day. The listener is on the view (views/calendar.js) and
    * the state is a class.
    */
-  const view = state.registerView === 'list' ? 'list' : 'cards';
+  const view = REGISTER_LAYOUTS.includes(state.registerView) ? state.registerView : 'cards';
   const control = `<div class="register-view" role="group" aria-label="${STRINGS.calendar.registerView}">
-      ${['cards', 'list']
-        .map(
-          (mode) =>
-            `<button type="button" data-reg-view="${mode}" aria-pressed="${view === mode}">${
-              mode === 'cards' ? STRINGS.calendar.viewCards : STRINGS.calendar.viewList
-            }</button>`,
-        )
-        .join('')}
+      ${REGISTER_LAYOUTS.map(
+        (mode) =>
+          `<button type="button" class="regmark regmark-${mode}" data-reg-view="${mode}" aria-pressed="${view === mode}">
+            <span class="sr-only">${esc(VIEW_WORDS[mode]())}</span>${VIEW_MARKS[mode]}
+          </button>`,
+      ).join('')}
     </div>`;
   const register = registerEntries.length
     ? `<div class="register-head">
@@ -563,6 +730,7 @@ export function paintDay({ main, side }) {
 
   fillSaintHymns(side, hero.slug, selected);
   fillHeroLede(main, hero.slug, selected, hero);
+  fillRegisterLives(main, selected);
 }
 
 // Translated, like the office beside it (2026-09-08): a title is a recorded

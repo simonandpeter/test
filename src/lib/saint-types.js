@@ -71,3 +71,40 @@ export function allNames(id) {
   }
   return [...names];
 }
+
+/**
+ * Which of the register's six marks a saint's types call for, or `null`
+ * (docs/daily-desktop-visuals.md §5.1). A row with no icon shows a type glyph
+ * where one of these fits, so a reader still gets *what kind of saint this is*
+ * rather than a hole where a picture would be.
+ *
+ * **Six marks, more than six keys.** The vocabulary the corpus writes down is
+ * wider than the marks are — `new-martyr` and `great-martyr` are martyrs,
+ * `bishop` and `metropolitan` are hierarchs — so each mark carries the ids it
+ * stands for. Exact ids and not prefixes: `patriarch-of-israel` is not a
+ * patriarch of the church, and a `startsWith` would have made him one.
+ *
+ * **Most specific first**, because a saint carries several: a hieromartyr is
+ * also a martyr and usually a presbyter, and the mark that says the most about
+ * him is the one he should get. `venerable-martyr` goes with the venerable for
+ * the same reason — the monastic reading is the narrower of the two.
+ *
+ * **702 of the corpus's 732 imageless saints** are covered (2026-09-10,
+ * measured over `saints/`). The thirty that are not — ten `righteous`, four
+ * `confessor`, three `prophet`, nine with no types at all — show no mark, and
+ * that is the right answer rather than a gap: a mark invented for a category
+ * of one says less than the space it takes.
+ */
+const GLYPH_TYPES = [
+  ['hieromartyr', ['hieromartyr']],
+  ['hierarch', ['hierarch', 'bishop', 'archbishop', 'metropolitan', 'patriarch']],
+  ['prince', ['prince', 'princess', 'king', 'queen', 'emperor', 'empress']],
+  ['venerable', ['venerable', 'venerable-martyr', 'monastic', 'monk', 'abbot', 'abbess', 'hermit', 'stylite']],
+  ['presbyter', ['presbyter', 'deacon', 'archdeacon']],
+  ['martyr', ['martyr', 'new-martyr', 'great-martyr', 'virgin-martyr', 'passion-bearer']],
+];
+
+export function typeGlyph(ids) {
+  const held = new Set(ids ?? []);
+  return GLYPH_TYPES.find(([, keys]) => keys.some((key) => held.has(key)))?.[0] ?? null;
+}

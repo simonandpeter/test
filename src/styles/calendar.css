@@ -2415,7 +2415,11 @@
  * there rather than passing as a smaller picture.
  */
 @media (min-width: 1024px) {
-  html[data-route='calendar'] .hero {
+  /* On the route and not on `.hero`, because the register's expanded face is
+     "the day's own card repeated" (§5.2) and reads the same number — "the same
+     mat" has to stay true if it ever moves, and two boxes under one ancestor
+     is where a shared quantity belongs (§10.16's own rule for `--headgap`). */
+  html[data-route='calendar'] {
     --hero-mat: 14px;
   }
 
@@ -2479,13 +2483,20 @@
     align-self: center;
   }
 
-  html[data-route='calendar'] .hero-more-chevron::after {
+  /* The register's expanded face carries the same door and therefore the same
+     mark. One rule, two selectors, so they cannot drift apart. */
+  html[data-route='calendar'] .hero-more-chevron::after,
+  html[data-route='calendar'] .reg-more-mark {
     content: '';
     display: block;
     width: 5px;
     height: 5px;
     background: currentColor;
     transform: rotate(45deg);
+  }
+
+  html[data-route='calendar'] .reg-more-mark {
+    align-self: center;
   }
 }
 
@@ -2587,11 +2598,24 @@
    box that *looks* like a frame is the promise of a picture that is not coming,
    which the author struck out on 2026-08-26 — but it still holds its width, so
    the pictures that do exist stay in one column. */
+/* **The box and the picture parted on 2026-09-10** (§10.2). The desktop's
+   compact face puts the picture in a 60 px mat whose width is fixed and whose
+   height derives, and one span cannot be both the mat and the thing the
+   derived shape is applied to. `.reg-thumb` is the outer box at every width —
+   the name is unchanged because two browser tests reach for it on rows that
+   may hold no picture — and `.reg-pic` is the picture. Here, where there is no
+   mat, the two are the same 40 px square. */
 .reg-card .reg-thumb {
   display: block;
   width: 40px;
   height: 40px;
   flex: none;
+}
+
+.reg-card .reg-pic {
+  display: block;
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius-cell);
   background-size: cover;
   background-position: center;
@@ -2602,11 +2626,31 @@
   background: none;
 }
 
-.reg-card .reg-thumb img {
+.reg-card .reg-pic img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* The type glyph is a desktop face and nothing else draws it: below 1024 px a
+   row is a name, its title and its dates, and a mark for a saint with no icon
+   would be a second thing in a line that was packed tightly on purpose
+   (2026-08-27). */
+.reg-card .reg-glyph {
+  display: none;
+}
+
+/* One line of who they were, under the dates (§5.1). A desktop face too, and
+   for the same reason the line is not fetched at all below 1024 px
+   (views/daily/panel.js). */
+.reg-card .reg-life {
+  display: none;
+}
+
+/* The expanded face's own way into the life, laid out by that face alone. */
+.reg-card .reg-more {
+  display: none;
 }
 
 /* The register's serif, not the Index card's 17 px sans line: this is a list
@@ -2642,34 +2686,161 @@
   flex: 1 1 auto;
 }
 
+/*
+ * **Three marks where there were two words** (§5.3, §10.4, 2026-09-10):
+ * compact is four 5 px diamonds standing in the shape of a larger one,
+ * expanded is that larger diamond whole, and list is three rules. Whichever is
+ * live is `--accent` and the others are `--rule`.
+ *
+ * The words are not lost, only made invisible: each button carries the word it
+ * stood for as an `sr-only` child (views/daily/panel.js), the group keeps its
+ * `role` and every button its `aria-pressed`. A shape told apart from another
+ * shape by colour alone is nothing to a screen reader and very little to a
+ * reader who cannot separate these two hues, and this page has written that
+ * sentence about its own marks before.
+ *
+ * `gap: 0` with the padding *inside* the buttons: three 13 px marks are three
+ * 13 px targets, and 4 px of padding either side makes them 21 without moving
+ * the marks apart — the 8 px that leaves between them is the reference's own
+ * 9 snapped to the scale (§6). The negative end margin puts the live mark's
+ * edge back on the column's, where the padding would have inset it.
+ */
 .register-view {
   display: flex;
   flex: none;
-  gap: var(--space-3);
+  align-items: center;
+  gap: 0;
+  margin-inline-end: calc(-1 * var(--space-1));
 }
 
 .register-view button {
-  padding: 0;
+  display: inline-flex;
+  padding: var(--space-1);
   border: 0;
   background: none;
   font: inherit;
-  font-size: var(--text-sm);
-  letter-spacing: 0.02em;
+  line-height: 0;
   color: var(--ink-soft);
   cursor: pointer;
 }
 
-.register-view button:hover {
-  color: var(--ink);
+.vt {
+  position: relative;
+  flex: none;
+  width: 13px;
+  height: 13px;
 }
 
-/* The one that is showing is named in ink and underlined, the other is not:
-   the same "you are here" the Index's own view chips use, and the reason it is
-   not a pair of framed toggles is that this is two words beside a heading. */
-.register-view button[aria-pressed='true'] {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.vt i {
+  position: absolute;
+  background: var(--rule);
+}
+
+.vt-compact i {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.vt-compact i:nth-child(1) {
+  top: 0;
+  left: 4px;
+}
+
+.vt-compact i:nth-child(2) {
+  top: 4px;
+  left: 0;
+}
+
+.vt-compact i:nth-child(3) {
+  top: 4px;
+  left: 8px;
+}
+
+.vt-compact i:nth-child(4) {
+  top: 8px;
+  left: 4px;
+}
+
+.vt-full i {
+  top: 1px;
+  left: 1px;
+  width: 11px;
+  height: 11px;
+  transform: rotate(45deg);
+}
+
+/* Rows, in the same hairline the month's own steppers are drawn in: a list is
+   the one of the three that is not a diamond, because it is not a picture. */
+.vt-list i {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.vt-list i:nth-child(1) {
+  top: 2px;
+}
+
+.vt-list i:nth-child(2) {
+  top: 6px;
+}
+
+.vt-list i:nth-child(3) {
+  top: 10px;
+}
+
+/* The one that is showing, and the only thing colour is asked to carry here —
+   the word beside it in the accessibility tree is what actually says so. */
+.register-view button[aria-pressed='true'] .vt i {
+  background: var(--accent);
+}
+
+.register-view button:hover .vt i {
+  background: var(--ink-soft);
+}
+
+/*
+ * **Daily's section headings are serif** (author, by the reference; §5 and
+ * the note in the mockup's own stylesheet says it is a deliberate departure
+ * rather than a match). base.css:1178 sets `.register-heading` as a *site*
+ * utility — the sans face in all-small-caps at `--ink-soft`, over a rule —
+ * and that is what a month over a day column or a church over its entries
+ * wants everywhere else.
+ *
+ * **Scoped to the route, and to the desk.** The Saint page and All Saints
+ * both draw `.register-heading`, and neither was asked about; below 1024 px
+ * this page is the phone's single column, which was not asked about either.
+ * The rule under the heading is base.css's and stays: what changes is the
+ * face, the caps and the ink — a heading in the reading face at full ink is
+ * a section of a document, where small caps in soft ink is a label on an
+ * apparatus, and this page became the former on 2026-09-10.
+ *
+ * Two sizes, both off the scale: 19 for the register's own head, which is the
+ * left column's one heading, and 17 for the sidebar's sections, which are
+ * three in a 19 rem column.
+ */
+@media (min-width: 1024px) {
+  html[data-route='calendar'] .register-heading {
+    font-family: var(--font-serif);
+    font-variant-caps: normal;
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: var(--text-lg);
+    color: var(--ink);
+  }
+
+  html[data-route='calendar'] .register-head .register-heading {
+    font-size: var(--text-lede);
+    /*
+     * **"Also today" comes up the page** (§6). It carried `--space-6` of its
+     * own above it *and* the hero's `--space-6` below the card, which is 48 px
+     * between two things that belong to each other — the day's saint and the
+     * rest of the day's saints. The hero's margin is the gap now, and it is
+     * the one §6 asks for.
+     */
+    margin-top: 0;
+  }
 }
 
 /* **Desktop only**, in those words, and the list is what a phone gets. A card
@@ -2694,80 +2865,268 @@
   }
 }
 
-/* Cards: the Index's own card, laid out in as many columns as the window has
-   room for (author: "behave the same as the cards view on All Saints page on
-   desktop, separated in columns depending on window size").
+/* ---- Also commemorated: three faces (2026-09-10) ------------------------- */
 
-   190 px is `MIN_COLUMN` from lib/virtual-grid.js — the same floor the Index's
-   own grid packs to, so the two pages break into another column at the same
-   width rather than at two widths that happen to be near each other. `auto-fill`
-   is what does the packing here; the Index needs a virtualiser for it because it
-   lays out 862 cards against a scroll position, and a register is a dozen. */
+/*
+ * **Compact.** The default, and what "Cards" has meant since 2026-09-01 — the
+ * value in the reader's settings is still `cards` and the class is still
+ * `is-cards`, because renaming a stored setting to match a redraw would have
+ * quietly reset every reader who had chosen something.
+ *
+ * What changed is the shape (docs/daily-desktop-visuals.md §5.1): two columns
+ * of rows rather than a column-packed grid of Index cards, a 60 px mat instead
+ * of a full-width picture, and a line of the life under the dates.
+ *
+ * **`minmax(340px, 1fr)`, and the 340 is the same number the hero's column
+ * takes.** The reference draws two columns at 1240 px and PLAN's own
+ * instruction is "separated in columns depending on window size", which a
+ * fixed `1fr 1fr` is not — it would draw two columns at 1024 as well, where
+ * the left column is 624 px and two of these rows do not fit. Measured
+ * against the left column at three widths: one at 1024, two at 1280, two at
+ * 1440. `daily-register.spec.js` asks for fewer at the narrower width and is
+ * where a return to a fixed pair would fail.
+ *
+ * `columns: 190px` and its `break-inside: avoid` are gone with the card
+ * shape. The Index's own floor is not this list's any more: these rows are
+ * two-part shapes with a fixed mat, and what decides the break is the width a
+ * name and two lines of life want beside 60 px of picture.
+ */
 @media (min-width: 1024px) {
-  /* Multi-column rather than a grid of equal rows, and the difference is the
-     point of the borrowing. The Index packs its cards shortest-column-first, so
-     a tall icon beside a short one leaves no hole; a `repeat(auto-fill, …)`
-     grid puts every card in a row as tall as the tallest in that row, which on
-     ten saints with two pictures between them is a page of air. Columns pack
-     the same way the Index's own layout does, and `break-inside: avoid` is what
-     keeps a card whole across the break. */
-  .register-cards.is-cards {
-    display: block;
-    columns: 190px;
-    column-gap: var(--space-4);
+  html[data-route='calendar'] .register-cards.is-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    column-gap: var(--space-6);
+    row-gap: var(--space-3);
   }
 
-  .register-cards.is-cards li.reg-card {
-    break-inside: avoid;
-    margin-bottom: var(--space-4);
+  /*
+   * **The picture stays at the row's trailing edge** (§10.3). The reference
+   * puts the mat at the *leading* edge and this is the one place the shipped
+   * page deliberately differs from it: PLAN §4 wins, and its reason is
+   * load-bearing — "a 48 px thumbnail has no corner to spare, so the row's
+   * bookmark goes at the trailing edge rather than over the image". Move the
+   * picture there and the two collide. If the author wants it reversed, the
+   * bookmark's position moves in the same commit and PLAN §4 changes with it.
+   *
+   * So there is no `order` here, and the absence is the decision: the markup
+   * is body-then-picture and a flex row draws it in that order.
+   */
+  html[data-route='calendar'] .register-cards.is-cards li.reg-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3);
   }
 
-  /* The row turned on its side: the picture leads instead of trailing, and the
-     body sits under it. `order` rather than a second markup, which is what lets
-     the toggle be a class — see views/daily/panel.js. */
-  .register-cards.is-cards li.reg-card {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2px;
-    padding: var(--space-2);
+  /*
+   * **The mat's width is fixed and its height derives** (§10.2). 60 px is 48
+   * of picture and 6 either side; `--reg-aspect` is untouched, so the picture
+   * inside is still the clamped shape `cardCrop` writes per saint and
+   * `daily-register.spec.js`'s two assertions about the crop still hold. What
+   * a fixed width buys is a column of mats that line up down the page, where
+   * a derived width had every one of them a different size.
+   *
+   * `align-self: flex-start`, so a row with two lines of life does not
+   * stretch its picture to match.
+   */
+  html[data-route='calendar'] .register-cards.is-cards .reg-thumb {
+    width: 60px;
+    height: auto;
+    padding: 6px;
+    background: var(--field);
+    align-self: flex-start;
   }
 
-  .register-cards.is-cards .reg-thumb {
-    order: -1;
+  html[data-route='calendar'] .register-cards.is-cards .reg-pic,
+  html[data-route='calendar'] .register-cards.is-expanded .reg-pic {
     width: 100%;
-    /* The shape is the card's own, written per saint as `--reg-aspect`. */
     height: auto;
     aspect-ratio: var(--reg-aspect, 1);
-    margin-bottom: 4px;
   }
 
-  /* **Held to the hero's own two limits, 2026-09-02** (author: the same
-     "aspect ratio limitations to crop any saint card display"). It was drawn
-     whole — "a card has the width to show the icon as it is", which was true
-     while nothing bounded the height — and a 1:3 scan then made one card in a
-     column of a dozen three times as tall as the rest. The box takes the
-     clamped shape `cardCrop` writes onto it (views/daily/panel.js) and the
-     picture covers it from that crop's own anchor. A *row's* thumbnail is a
-     40 px square either way and is untouched. */
-  .register-cards.is-cards .reg-thumb img {
+  html[data-route='calendar'] .register-cards.is-cards .reg-pic img,
+  html[data-route='calendar'] .register-cards.is-expanded .reg-pic img {
     height: 100%;
     object-fit: cover;
   }
 
-  /* No frame around a picture that is not coming (PLAN.md, and the author's
-     own instruction of 2026-08-26). A row keeps the empty slot so the pictures
-     stay in one column; a card grid has no column to keep. */
-  .register-cards.is-cards .reg-thumb.is-blank {
+  /*
+   * **A type glyph where there is no icon** (§5.1), and a mat under it: the
+   * reference draws the imageless row with the same 60 px mat the pictured
+   * ones have, which is what keeps the two kinds of row reading as one list.
+   *
+   * This is not the empty box the author struck out on 2026-08-26 — that was
+   * "the promise of a picture that is not coming". A cross or a mitre is a
+   * statement about the saint, not a frame around an absence, and where the
+   * corpus gives no type this list can draw a mark for, the slot closes up
+   * exactly as it does today.
+   *
+   * 74 px is the reference's own height for it, and it is the one number here
+   * that is chosen rather than derived: the mats around it are 60 wide and
+   * between 42 and 108 tall, and 74 sits in the middle of that spread so a
+   * glyph row is neither the shortest nor the tallest thing in its column.
+   */
+  html[data-route='calendar'] .register-cards.is-cards .reg-thumb.is-blank {
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--field);
+  }
+
+  html[data-route='calendar'] .register-cards.is-cards .reg-thumb.is-blank:not(:has(.reg-glyph)) {
     display: none;
   }
 
+  /*
+   * `--rule`, as the reference has it, and `aria-hidden` (§10.10). It is
+   * 1.41:1 on the field, which is the right weight for decoration and would be
+   * a failure for a carrier — so it carries nothing: `registerRow` puts the
+   * type into the row's accessible text in words wherever the visible subtext
+   * has not already said it. A real icon always wins the row, and this is what
+   * that looks like as a colour.
+   *
+   * If the 1x contact sheet shows these vanishing rather than reading as a
+   * quiet mark, the next step is
+   * `color-mix(in oklab, var(--ink-soft) 45%, var(--field))` and no further
+   * (§10.10). Read at 1440 on 2026-09-10 before it was left here.
+   */
+  /* The two faces that were designed with it, and not the list: a list row is
+     a name and its dates on one line, and a mark hanging in the column where
+     the pictures are would be a second thing in a row that was packed tightly
+     on purpose (2026-08-27). Found by looking at all three faces rather than
+     the one being built. */
+  html[data-route='calendar'] .register-cards.is-cards .reg-glyph,
+  html[data-route='calendar'] .register-cards.is-expanded .reg-glyph {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: var(--rule);
+  }
+
+  /*
+   * **One line of who they were, clamped to two** (§5.1): "the register says
+   * who else is commemorated; this makes it say who they were". The serif,
+   * because it is prose and the line above it is apparatus.
+   *
+   * Two lines by height and not by word count — the text is the life's own
+   * opening paragraph, so what it needs is a box that stops, not a truncation
+   * the fetch would have to guess at.
+   */
+  html[data-route='calendar'] .register-cards.is-cards .reg-life {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    margin-top: 3px;
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+
   /* The name may take the lines it needs here, as the Index's cards do since
-     2026-09-01 — a card's column is narrow and the register prints whole
+     2026-09-01 — a register column is narrow and the register prints whole
      names. The dates give up their single-line ellipsis with it. */
-  .register-cards.is-cards .reg-sub {
+  html[data-route='calendar'] .register-cards.is-cards .reg-sub {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
+  }
+
+  /*
+   * **Expanded: the day's own card, repeated** (§5.2, §10.4). A third face and
+   * not a replacement — the same measurements as the hero, so the eye reads
+   * the register as more of the same page rather than as a different one: a
+   * 340 px mount in `--mount`, the picture at its own derived shape, and the
+   * full opening paragraph beside it.
+   *
+   * The only differences the reference draws are the name's size and that
+   * every one of these carries its own way into the life. `--hero-mat` is the
+   * hero's, read from the route rather than copied, because "the same mat"
+   * has to stay true if the number ever moves.
+   */
+  html[data-route='calendar'] .register-cards.is-expanded {
+    display: block;
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded li.reg-card {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-6);
+    align-items: start;
+    margin-bottom: var(--space-8);
+    padding: 0;
+  }
+
+  /* The picture leads here, as it does on the day's own card. This is the one
+     face where `order` moves it: the row's trailing edge is the compact
+     face's rule and its reason — the bookmark — is about a 48 px thumbnail,
+     which this is not. */
+  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb {
+    order: -1;
+    width: 340px;
+    height: auto;
+    padding: var(--hero-mat);
+    background: var(--mount);
+  }
+
+  /* Imageless, the glyph stands in the mount at 56 px in a box 240 tall — the
+     reference's numbers, and a mount that kept a picture's shape around a mark
+     would be a frame around nothing. */
+  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb.is-blank {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mount);
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb.is-blank:not(:has(.reg-glyph)) {
+    display: none;
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-glyph {
+    width: 56px;
+    height: 56px;
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-name {
+    font-size: var(--text-xl);
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-sub {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  /* The whole opening paragraph, at the hero's own reading size. No clamp:
+     this face exists to give the reader the lede the compact one cuts. */
+  html[data-route='calendar'] .register-cards.is-expanded .reg-life {
+    display: block;
+    margin-top: var(--space-2);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-more {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+    color: var(--ground-ink);
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  html[data-route='calendar'] .register-cards.is-expanded .reg-more:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 

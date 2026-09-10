@@ -66,6 +66,7 @@ export const sr = {
     alsoToday: 'Такође се празнују',
     registerView: 'Прикажи саспомињане као',
     viewCards: 'Картице',
+    viewExpanded: 'Проширене',
     viewList: 'Списак',
     continueReading: '…настави читање',
     heroPlaces: { birth: 'Рођен: {place}', death: 'Упокојио се: {place}' },
