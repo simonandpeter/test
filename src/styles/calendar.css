@@ -3407,7 +3407,7 @@
  * names to be read in. `display: block` because a multi-column container is
  * not a flex one: the `columns` on a flex box does nothing at all, silently.
  *
- * **A long name is broken, not clipped, and then not split.** The column is
+ * **A long name is broken rather than clipped.** The column is
  * 124 px — 19 rem less the bubble's padding, less the gap, halved — and the
  * corpus's widest name is **117** (Ανδροπελαγία, Greek at 1280, measured in
  * all five packs across every day the corpus reaches; Аполлинарий is 114 and
