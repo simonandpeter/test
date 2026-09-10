@@ -13,7 +13,8 @@
  */
 import { spawn } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
+import path from 'node:path';
 import * as chromeLauncher from 'chrome-launcher';
 import lighthouse from 'lighthouse';
 
@@ -41,6 +42,40 @@ const FLOOR = {
 };
 
 /*
+ * **The entry stylesheet's ceiling, which is the FCP floor said early.**
+ *
+ * `main.js` concatenates its imports into one render-blocking sheet that every
+ * route waits for, and first contentful paint does not slope with its size —
+ * it *steps*, by a whole 150 ms round trip, at a threshold that on 2026-09-10
+ * sat between **73,629 bytes (green) and 73,688 (red)**. Fifty-nine bytes.
+ *
+ * That was measured rather than deduced, and the method is the point: the tree
+ * that had just gone green was rebuilt with 57 bytes of CSS added that matched
+ * no element on any page, and Daily's FCP moved 1610 ms to 1757. The three
+ * declarations that actually differed between the red and the green build were
+ * all inside `@media (min-width: 1024px)`, and this script measures at 360 —
+ * so none of them could reach the paint it timed, which is how the size rather
+ * than the CSS was identified as the cause.
+ *
+ * So the sheet gets a line of its own, ~600 bytes below the cliff, and it
+ * fails *before* the FCP gate does. A run that goes red on FCP alone says
+ * "somewhere, something"; this one names the file and the number.
+ *
+ * **The ceiling is a measurement and will move when the transfer around it
+ * does.** The step is a fact about the whole first-paint download, not about
+ * this file alone, which is why docs/daily-desktop-visuals.md §10.18's
+ * "between 73.9 and 75.1 kB" — true when it was written — is not where the
+ * step is now. Re-measure with the 57-byte method rather than nudging this
+ * number to fit a run.
+ *
+ * **The measured way down, when it is needed**: taking `index.css` and
+ * `saint.css` off the entry the way `map.css` and `theme-fade.css` went is
+ * 72.28 → 54.31 kB (§10.20). Unlike those two it needs the router to await the
+ * view's sheet, because those routes paint text on the first frame.
+ */
+const ENTRY_CSS_CEILING = 73_000;
+
+/*
  * Lighthouse's stock mobile profile *is* the brief's throttled 4G: 150 ms RTT,
  * 1.6 Mbit/s down, 4x CPU slowdown, applied by simulation rather than by
  * shaping the socket. Naming it here rather than inheriting it silently means a
@@ -63,6 +98,27 @@ const settings = {
   throttling: THROTTLING_4G,
   onlyCategories: ['accessibility', 'performance'],
 };
+
+/**
+ * The render-blocking stylesheet's size, printed whether or not it passes —
+ * for the same reason every FCP number here is printed: a gate that only
+ * speaks when it is angry teaches nobody where the margin went.
+ */
+let entryCss = null;
+async function reportEntryStylesheet() {
+  const dir = path.join(process.cwd(), 'dist', 'assets');
+  const names = (await readdir(dir)).filter((f) => /^index-.*[.]css$/.test(f));
+  if (names.length !== 1) {
+    console.log(`entry stylesheet: ${names.length} candidates in dist/assets, not measuring`);
+    return;
+  }
+  const bytes = (await stat(path.join(dir, names[0]))).size;
+  entryCss = { name: names[0], bytes, ok: bytes <= ENTRY_CSS_CEILING };
+  console.log(
+    `entry stylesheet: ${names[0]}  ${bytes} bytes  (ceiling ${ENTRY_CSS_CEILING})` +
+      (entryCss.ok ? `  — ${ENTRY_CSS_CEILING - bytes} to spare` : '  **OVER**'),
+  );
+}
 
 async function waitForServer(url, ms = 120_000) {
   const until = Date.now() + ms;
@@ -175,6 +231,8 @@ try {
     await waitForServer(ORIGIN + '/');
   }
 
+  await reportEntryStylesheet();
+
   chrome = await chromeLauncher.launch({ chromeFlags: ['--headless=new', '--no-sandbox'] });
 
   for (const [label, path] of ROUTES) {
@@ -242,8 +300,15 @@ if (process.env.GITHUB_STEP_SUMMARY) {
 }
 
 console.log(`\nfloor: accessibility >= ${FLOOR.accessibility}, FCP < ${FLOOR.fcpMs} ms on ${THROTTLING_4G.throughputKbps / 1024} Mbit/s / ${THROTTLING_4G.cpuSlowdownMultiplier}x CPU`);
+if (entryCss && !entryCss.ok) {
+  console.error(
+    `entry stylesheet is ${entryCss.bytes} bytes, over the ${ENTRY_CSS_CEILING} ceiling by ` +
+      `${entryCss.bytes - ENTRY_CSS_CEILING}. FCP steps by a round trip near here, so this is the ` +
+      `FCP floor arriving early; ENTRY_CSS_CEILING's comment has the measurement and the way down.`,
+  );
+}
 if (bad) {
   console.error(`${bad} of ${rows.length} routes below the floor`);
-  process.exit(1);
 }
+if (bad || (entryCss && !entryCss.ok)) process.exit(1);
 console.log(`${rows.length} routes, all above it`);

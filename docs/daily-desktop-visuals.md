@@ -1508,3 +1508,51 @@ subpixels of 39,936, all of them on the curves of the final **S**, where the
 mark's fractional right edge (103.23 px, 206.46 device px at 2×) falls inside
 the last column. It is rasterisation and not position: a shift would light up
 every stem, and the mask lights one glyph.
+
+### 10.22 The first-paint cliff, measured to the byte — and §10.18 corrected
+
+`22dd125` went red on the Lighthouse floor: FCP 1506/1506/1507/1526 ms
+against 1500, accessibility 100 throughout, deploy skipped. The cause was not
+the outlined wordmark, which is **750 bytes smaller** than the mark it
+replaced and took index.html from 15.94 kB to 14.44. It was the entry
+stylesheet, at **73,688 bytes where the commit before it was 73,629 and
+green**.
+
+**Fifty-nine bytes, and the proof is a control rather than an argument.** The
+three declarations that differ between the red and the green build are all
+inside `@media (min-width: 1024px)`, and `scripts/lighthouse-floor.mjs`
+measures mobile at 360 px — so none of them can reach the paint being timed.
+So the green tree was rebuilt with **57 bytes of CSS added that match no
+element on any page**, and Daily's FCP moved **1610 ms to 1757** on this desk,
+twice. The step is the size and nothing else.
+
+**§10.18's "between 73.9 and 75.1 kB" is therefore not where the step is, and
+was never wrong when it was written.** The threshold is a fact about the whole
+first-paint download — HTML, entry sheet, preloaded faces together — and that
+sum has moved twice since: `map.css` came out of the entry, and this sitting's
+wordmark took 1.5 kB out of the HTML. A number of this kind is only ever true
+of the build it was measured on, which is the argument for re-measuring it
+with the 57-byte method rather than nudging it to fit a run.
+
+**The bytes came off where they were spent.** The cross-fade's fifteen
+`@property` registrations and its one `html.theme-anim` rule are 1.42 kB that
+no reader needs until they press the toggle; they are `src/styles/theme-fade.css`
+now, imported dynamically by `lib/theme.js`. It is the `map.css` arrangement,
+and it is safe here for a reason the map's is not: registering a custom
+property late is a style recalculation and no repaint, because every value
+involved is the one already on the page. The only cost of losing the race is
+a toggle pressed in the first few hundred milliseconds crossing at once
+instead of over 300 ms. **The entry sheet is 72.28 kB** — below the 72.38 this
+sitting started from, so the fade and the wordmark together now cost the first
+paint less than nothing.
+
+**And the gate says it early now.** `ENTRY_CSS_CEILING` in
+`scripts/lighthouse-floor.mjs` is 73,000 bytes — ~600 below the cliff — and
+the size is printed on every run, passing or failing, beside the FCP numbers.
+A run that goes red on FCP alone says "somewhere, something"; this one names
+the file and the number, and it fires before the four routes do. Backed out to
+72,000 and watched to print `**OVER**` and exit 1.
+
+§10.20's index.css/saint.css split (72.28 → 54.31 kB) is still unspent, and
+still needs the router to await the view's sheet rather than a bare dynamic
+import.
