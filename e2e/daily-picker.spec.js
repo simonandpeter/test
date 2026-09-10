@@ -2307,6 +2307,94 @@ test('past 1024 px the month fills its own corners and keeps the days there out 
   expect(await page.locator('.cal-date').textContent(), 'an out-of-month day changed the day').toBe(before);
 });
 
+test('the day the reader is on is told apart from the box it sits in', async ({ page }) => {
+  /*
+   * Found by the sweep, 2026-09-10, and it is a class of bug rather than a
+   * value: **a mark can be correct everywhere and invisible in one box.**
+   *
+   * The month's selected day was given `background: var(--field)` and a
+   * `--rule` border in August, on a page whose ground is `--gesso`, and the
+   * rule beside it says the field and the border are together what carry the
+   * selection. Then step 5 moved the month inside the bubble, whose fill is
+   * `--bub` — and `--bub` *is* `--field` in the day theme. The field came out
+   * at 1.00:1 against its own surround: the same three bytes either side of
+   * the border. Nothing failed, because nothing had ever asked what the mark
+   * was drawn *against*.
+   *
+   * So this asks exactly that, in both themes, and asks it of whatever the
+   * mark happens to be rather than of a token name — a later change that put
+   * the fill back and dropped the border would pass a `border-color` check and
+   * fail this one. The floor is 2:1, comfortably under the 2.64 and 2.84 the
+   * `--accent` border measures and comfortably over the 1.31 of the hairline
+   * it replaced and the 1.08 a `--gesso` fill would have given.
+   *
+   * `--accent` is a rule and a border and never a word, which is the exemption
+   * `tests/contrast.test.mjs` writes out for `--gold`; the day's *name* is in
+   * the button's accessible name and `aria-current="date"` besides, so no
+   * reader is left with the border alone.
+   */
+  await ready(page);
+  for (const dark of [false, true]) {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+    if (dark) {
+      await page.locator('#theme-toggle').click();
+      await page.waitForTimeout(400);
+    }
+    await page.evaluate(() => document.fonts.ready);
+
+    const seen = await page.evaluate(() => {
+      // The same canvas trick the out-of-month test above uses, and for the
+      // same reason: a computed colour here may be an `oklab(...)` or a
+      // `color-mix`, and the 2d context is what turns any of them into the
+      // sRGB bytes a reader actually sees.
+      const ctx = document.createElement('canvas').getContext('2d');
+      const rgb = (c) => {
+        ctx.clearRect(0, 0, 1, 1);
+        ctx.fillStyle = c;
+        ctx.fillRect(0, 0, 1, 1);
+        return [...ctx.getImageData(0, 0, 1, 1).data];
+      };
+      const lum = ([r, g, b]) => {
+        const f = (v) => (v / 255 <= 0.04045 ? v / 255 / 12.92 : ((v / 255 + 0.055) / 1.055) ** 2.4);
+        return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+      };
+      const ratio = (a, b) => {
+        const [hi, lo] = [lum(a), lum(b)].sort((p, q) => q - p);
+        return (hi + 0.05) / (lo + 0.05);
+      };
+      const sel = document.querySelector('.month-grid button[aria-current="date"]');
+      const plain = document.querySelector('.month-grid button:not([aria-current]):not(.month-out)');
+      const fill = rgb(getComputedStyle(document.querySelector('.cal-bubble-fill')).backgroundColor);
+      const s = getComputedStyle(sel);
+      const paints = [s.borderTopColor, s.backgroundColor]
+        .map(rgb)
+        // A transparent paint is not a mark: the canvas gives it alpha 0 and
+        // reading its channels would score the surround against itself.
+        .filter((c) => c[3] > 0);
+      return {
+        marks: paints.length,
+        strongest: Math.max(...paints.map((c) => ratio(c, fill))),
+        // The premise: the ordinary cell beside it carries no mark at all, so
+        // the number above is about being *chosen* rather than about a grid.
+        plainMark: [getComputedStyle(plain).borderTopColor, getComputedStyle(plain).backgroundColor]
+          .map(rgb)
+          .some((c) => c[3] > 0),
+        named: sel.getAttribute('aria-current'),
+      };
+    });
+
+    const where = dark ? 'vigil' : 'day';
+    expect(seen.named, `premise: no day is marked current in ${where}`).toBe('date');
+    expect(seen.plainMark, `premise: an ordinary cell paints a mark of its own in ${where}`).toBe(false);
+    expect(seen.marks, `the selected day paints nothing at all in ${where}`).toBeGreaterThan(0);
+    expect(
+      seen.strongest,
+      `the selected day's mark is ${seen.strongest.toFixed(2)}:1 against the bubble in ${where}`,
+    ).toBeGreaterThan(2);
+  }
+});
+
 test('the month marks a feast, in the rail’s own gold and with the word beside it', async ({ page }) => {
   /*
    * The month has never carried one. It reads the same fact from the same

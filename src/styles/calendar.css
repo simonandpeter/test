@@ -3909,6 +3909,38 @@ a.name-day:hover {
   }
 
   /*
+   * **The selected day, which the bubble made invisible** (found by the
+   * sweep, 2026-09-10).
+   *
+   * The rule this replaces gives it `background: var(--field)` and a `--rule`
+   * border, and says in as many words that "the selected day keeps its field
+   * and its rule, which are what carry the selection without a colour". Both
+   * halves stopped being true when the month moved into the bubble in step 5:
+   * `--bub` *is* `--field` in day and one step off it in vigil, so the field
+   * came out at **1.00:1** against the box it sits in (measured, rendered,
+   * `rgb(230 221 202)` either side) and 1.02:1 in vigil, and what was left of
+   * the mark was a `--rule` hairline at 1.31:1 — on a numeral whose own colour
+   * is the fast's and therefore says nothing about being chosen.
+   *
+   * This is the same trap §10.15 found on `.church-open[aria-expanded]` and
+   * solved with `--gesso`; that answer is not this one's, and the measurement
+   * says why. A gesso hole is 1.08:1 and ΔL* 2.8 against the bubble — *fainter*
+   * than the hairline already there. The mockup's own `.mgrid b.on` is
+   * `border-color: var(--accent)` and no background at all, and that is the
+   * mark that reads: **2.64:1 and ΔL* 31.8 in day, 2.84:1 and ΔL* 32.1 in
+   * vigil**, three times the separation of the border it replaces.
+   *
+   * Below this width nothing changes: the month is on the page's own ground
+   * there, where the field is a real second channel and `--rule` reads at
+   * 1.41:1. `daily-picker.spec.js` asserts the mark against the box, in both
+   * themes, rather than against a number written here.
+   */
+  html[data-route='calendar'] .cal-bubble .month-grid button[aria-current='date'] {
+    background: none;
+    border-color: var(--accent);
+  }
+
+  /*
    * The days either side of the month, on the grid's own rows: present,
    * numbered, out of reach, and **one step back in ink rather than tinted**.
    *
