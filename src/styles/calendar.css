@@ -2604,12 +2604,19 @@
    *
    * **The clamp's two ends are guards and are stated as such.** At 1024 px the
    * left column is 609 and this gives 240 px, so the 200 px floor does not
-   * bind anywhere the rule applies. The 40 rem ceiling binds only past a
-   * ~1983 px window — which is past `--page-max`, where the measure itself has
-   * stopped growing and the last 13 px of the share are traded for a stated
-   * maximum. Both numbers are measured; `daily-panel.spec.js` holds the
-   * proportion at 1280, 1440 and 1920, which are the three the author asked
-   * for and all inside the band where neither end binds.
+   * bind anywhere the rule applies.
+   *
+   * The 40 rem ceiling does bind, at the very top of the range: `--page-max`
+   * caps the left column at 1600 px, where the share would be 653. Measured on
+   * this desk, 1983 px is the last window that holds 5 : 7 and 1985 the first
+   * that does not — a little *before* `--page-max` stops the measure growing,
+   * not after it, and the exact window moves with the scrollbar's width. Above
+   * it the picture is at its maximum and the words take the rest, and the
+   * proportion falls to 0.690 by the time the measure stops. That is the
+   * trade: a stated maximum for the last 2% of the share, in the last 2% of
+   * the range. `daily-panel.spec.js` holds the proportion at 1280, 1440 and
+   * 1920 — the three the author asked for, all inside the band where neither
+   * end binds.
    *
    * **This cannot bring back the resize shake of 2026-09-04** ("make sure the
    * right hand column margins are always fixed and the left hand column is the

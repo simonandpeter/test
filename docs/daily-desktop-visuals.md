@@ -1658,11 +1658,19 @@ the ceiling and is the only row that does not hold the proportion — see below.
 
 **The clamp's ends are guards and both are stated rather than assumed.** The
 200 px floor does not bind anywhere the rule applies: at the 1024 px breakpoint
-the rule gives 240. The 40 rem ceiling binds only past a ~1983 px window, which
-is past `--page-max` — the measure itself has stopped growing there, and the
-last 13 px of the share are traded for the picture having a stated maximum. A
-ceiling that could never bind would be a line explaining nothing, which is the
-objection §10.23 raised against the derivation it removed.
+the rule gives 240.
+
+The 40 rem ceiling does bind, at the very top of the range. `--page-max` caps
+the left column at 1600, where the share would be 653 px. **Measured, and it
+corrects what this section said when it landed**: 1983 px is the last window
+that holds 5 : 7 and 1985 the first that does not, which is a little *before*
+`--page-max` stops the measure growing rather than after it, and the exact
+window moves with the scrollbar's width. Through that last stretch the picture
+sits at its maximum and the words take the rest, and the proportion falls to
+0.690. The trade is a stated maximum for the last 2% of the share in the last
+2% of the range. A ceiling that could never bind would be a line explaining
+nothing, which is the objection §10.23 raised against the derivation it
+removed.
 
 **It cannot bring back the resize shake** (PLAN, 2026-09-04: "when resizing the
 window on desktop, the columns shake … make sure the right hand column margins
