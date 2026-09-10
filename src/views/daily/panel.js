@@ -646,9 +646,31 @@ export function paintDay({ main, side }) {
           </button>`,
       ).join('')}
     </div>`;
+  /*
+   * **"Also today" past 1024 px, "Also commemorated" below it** (author,
+   * 2026-09-10, matching the reference; desktop only, in those words).
+   *
+   * **Asked of the window at paint time, and one word reaches the DOM.** The
+   * two arrangements that would follow a live resize are both worse than what
+   * they would fix: two headings in the markup with a media query hiding one
+   * puts a second copy of the phrase in the document, and a listener that
+   * rewrites a heading as the window crosses a breakpoint puts the site's own
+   * words under an event handler. This page has made the same trade three
+   * lines of thought away — `fillRegisterLives` gates a whole desktop feature
+   * on this identical query at paint time — and it costs the same thing here
+   * and less of it: a window dragged across 1024 px keeps the heading it
+   * arrived with until the next paint, which any day step, church change or
+   * language change performs.
+   *
+   * The phone keeps *Also commemorated* in all five packs, which is a
+   * difference the author was told about and asked for anyway.
+   */
+  const heading = window.matchMedia('(min-width: 1024px)').matches
+    ? STRINGS.calendar.alsoToday
+    : STRINGS.calendar.alsoCommemorated;
   const register = registerEntries.length
     ? `<div class="register-head">
-         <h2 class="register-heading">${STRINGS.calendar.alsoToday}</h2>
+         <h2 class="register-heading">${esc(heading)}</h2>
          ${control}
        </div>
        <ul class="register register-cards is-${view}" data-register>${rows}</ul>`

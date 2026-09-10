@@ -360,6 +360,52 @@ test('the register opens compact in columns, remembers the other face, and lands
   await expect(page.locator('.register-view').first()).toBeHidden();
 });
 
+test('the register heading is Also today at a desk and Also commemorated on a phone', async ({ page }) => {
+  /*
+   * Author, 2026-09-10: rename *Also Commemorated* to the reference's own
+   * "Also today", desktop only. Both halves are the assertion — the desk's
+   * word is the change, and the phone's word is the *scope*, which is the
+   * part a rename done in one place would silently take away.
+   *
+   * **The capitalisation is the reference's**: `Also today`, one capital.
+   * `toHaveText` is exact, so a stray title case fails here.
+   *
+   * **Asked at two loads rather than at one resize**, because that is what the
+   * page does: the heading is chosen when the panel paints
+   * (views/daily/panel.js), so a window dragged across the breakpoint keeps
+   * the word it arrived with until something repaints the day. Testing it by
+   * resizing would pin behaviour the implementation does not claim.
+   *
+   * **And in a pack, at both widths.** A new key that reached only
+   * `ui/strings.js` would pass every English assertion above and print
+   * English to a Russian reader; `locale-coverage.mjs` counts the gap but no
+   * browser test would have seen it.
+   */
+  await ready(page, { church: 'russian' });
+  const heading = page.locator('.register-head .register-heading');
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(heading, 'the desk heading is not the reference’s words').toHaveText('Also today');
+
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(heading, 'the phone lost the wording the rename was scoped away from').toHaveText(
+    'Also commemorated',
+  );
+
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    localStorage.setItem(key, JSON.stringify({ ...JSON.parse(localStorage.getItem(key)), language: 'ru' }));
+  });
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(heading, 'the phone’s heading fell back to English').toHaveText('Также совершается память');
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(heading, 'the desk’s heading fell back to English').toHaveText('Также сегодня');
+});
+
+
 /* ---- the round of 2026-09-02, late -------------------------------------- */
 
 

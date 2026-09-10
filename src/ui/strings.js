@@ -153,7 +153,22 @@ export const STRINGS = {
     closeMonth: 'Close month view',
     weekLabel: 'Choose a day',
     commemorationsFor: 'Commemorations for {date}',
-    alsoToday: 'Also commemorated',
+    /*
+     * **The register's heading, in two widths' worth of words** (author,
+     * 2026-09-10: rename it to the reference's "Also today", desktop only).
+     *
+     * The keys are named after what they say, which they were not before: the
+     * one key here was `alsoToday` and read *Also commemorated*, so a
+     * translator opening a pack met a name that disagreed with every one of
+     * the five values under it. Renaming it costs the same five files the new
+     * key costs.
+     *
+     * **Two keys, one of them rendered.** views/daily/panel.js asks the window
+     * which it is at paint time; the DOM holds one heading and the
+     * accessibility tree one word.
+     */
+    alsoCommemorated: 'Also commemorated',
+    alsoToday: 'Also today',
     /*
      * The two faces of that list (author, 2026-09-01; the second, and the loss
      * of a third, 2026-09-10), and the name of the group for a reader who
