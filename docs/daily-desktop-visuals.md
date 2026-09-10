@@ -888,6 +888,11 @@ rather than the render.**
 
 ### 10.1 The hero keeps its derived box
 
+> **Reversed by the author on 2026-09-10 — see §10.23.** The reasoning below
+> was sound and its premise was wrong: it read the reference's 3:2 as one
+> saint's derived shape, and the author has since said it is the rule. The
+> section is kept unedited because §10.23 is an answer to it.
+
 `calendar.css:1834`'s `aspect-ratio: var(--hero-shape, 1 / 1)` **stays**, and so
 does `hero-crop.js`, its two pinned focus strings, and
 `daily-panel.spec.js:96` / `:3334`. Nothing in §4.1's first two bullets is built.
@@ -1556,3 +1561,56 @@ the file and the number, and it fires before the four routes do. Backed out to
 §10.20's index.css/saint.css split (72.28 → 54.31 kB) is still unspent, and
 still needs the router to await the view's sheet rather than a bare dynamic
 import.
+
+### 10.23 The hero takes the reference's crop, and §10.1 is reversed
+
+**Author, 2026-09-10:** the main saint card takes the cropping aspect ratio of
+the reference, and "faces at 2/3 of the height of the image crop". Desktop
+only — `min-width: 1024px`, `html[data-route='calendar']`.
+
+**Both numbers are measured off the reference rather than off the sentence.**
+Its `.himg img` is `aspect-ratio: 3/2` with `object-position: 50% 34%`, in a
+340 px column inside a 14 px mat, drawn at 1240. 34% and "2/3 of the height"
+are the same instruction read from opposite ends: a face a third of the way
+down. **34% is what shipped**, because the file is the thing the author
+approved and the phrasing is a description of it.
+
+**It is a static crop and not face detection.** Nothing looks at the picture.
+34% is where the subject of an icon is on the whole, because an icon is a
+standing or half-length figure.
+
+**What §10.1 got wrong was a premise, not an argument.** It reasoned that the
+reference's 3:2 was one saint's derived box that happened to sit inside the
+author's own 1:1.6/2:1 limits, and that the mockup was therefore compatible
+with PLAN once you read the rule rather than the render. The author has now
+said it is the rule. The lesson is the narrow one: a render cannot tell you
+whether a shape is a coincidence, and neither can arithmetic showing that it
+could be — only the author can, and §10.1 chose the reading that let it avoid
+asking.
+
+**PLAN §4 changed in the same commit**, which is the condition §4.1 set for
+doing this at all ("Either the author reverses it and PLAN §4 changes in the
+same commit"). The derived rule now says what it governs — every card that is
+one of many — and names the hero as the one fixed box, with the reason: a
+habit page's silhouette should not change with the saint.
+
+**Three tests were edited and none deleted.**
+
+| where | now |
+| --- | --- |
+| `tests/hero-crop.test.mjs` | untouched in substance: `MAX_HERO_RATIO`, `MIN_HERO_RATIO` and the two focus strings still govern `cardCrop` — every other saint card on the site — and the hero between 620 and 1024 px. Its header says which surfaces are left. |
+| `daily-panel.spec.js` "shown whole up to 1:1.6" | now asserts the band at 1280, the derived shape at 900, and the phone's 3:2 — the same rule at the three widths where it differs, instead of at one. |
+| `daily-panel.spec.js` "a tall icon is cropped from the top" | the desk's anchor is 34% for every saint; the tall icon's top anchor is asserted at 900 px, where it still decides something. |
+
+**The half-window cap is kept by the crop now**, and this was measured rather
+than assumed. `--card-h / --hero-r` was the width at which a given icon stood
+exactly as tall as the card, and it was in front of the 340 because a flat 340
+drew a 1:1.6 icon at 499 px — 71% of a 700 px window. A 3:2 box is 208 px tall
+at 312 px wide, 29% of that window, so the derivation can no longer bind and
+a line that cannot bind is a false explanation of why a column is the width it
+is. It is gone from the 1024 px rule and still governs 620–1024 px, where the
+shape is still the icon's own. `daily-panel.spec.js`'s five windows are the
+instrument, and its "not a stamp" floor moved from a share of the window to a
+picture width, because with a fixed landscape crop the window's height is no
+longer what a shrinking picture would show up in.
+

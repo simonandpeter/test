@@ -2021,6 +2021,14 @@
      * capping it here caps the picture, and it is the only number that has to
      * change: the card is as tall as what is in it.
      *
+     * **From 1024 px nothing reads this any more** (§10.23). The box is a
+     * fixed 3:2 there, so the picture's height follows its own column, and
+     * `fitLede` fits the words to the mount it can measure rather than to a
+     * property. What is left of this declaration is the band between 620 and
+     * 1024, which still derives the column from it — and that is where the
+     * author's half-window instruction is still kept in arithmetic rather
+     * than by the shape.
+     *
      * `dvh`, not `vh`: the *dynamic* viewport height is the one that follows a
      * phone's URL bar, and half of a window that is momentarily taller is a
      * picture that would have to shrink when the bar came back.
@@ -2360,7 +2368,11 @@
      daily/panel.js publishes it as `--hero-focus`; this comment said
      `heroFocus` for a fortnight and no such name has ever existed. The
      placeholder is anchored with the picture or it would paint a
-     differently-framed image under the one arriving. */
+     differently-framed image under the one arriving.
+
+     From 1024 px the route overrides this with one anchor for every saint
+     (§10.23). Per-saint focus is what a phone and the band between 620 and
+     1024 still get. */
   background-position: var(--hero-focus, 50% 0);
   border-radius: var(--radius-cell);
   overflow: hidden;
@@ -2424,7 +2436,15 @@
    Below 620 px this does not apply: the 3:2 band there was bought to keep the
    card short enough to show the register beneath it (2026-08-26), the image
    being full width and *being* the card's height at that size, and the
-   instruction above is about the desktop layout it arrived with. */
+   instruction above is about the desktop layout it arrived with.
+
+   **And from 1024 px it no longer applies either** (author, 2026-09-10: the
+   main saint card takes the reference's cropping aspect ratio). The band and
+   its focus are declared on the route below and override both of these. What
+   is left of the derived shape is the band between 620 and 1024, where the
+   hero has a column but the page is not yet the two-column desk the
+   instruction is about — and `cardCrop`, which is every other saint card on
+   the site and is untouched. docs/daily-desktop-visuals.md §10.23. */
 @media (min-width: 620px) {
   .hero-media {
     aspect-ratio: var(--hero-shape, 1 / 1);
@@ -2520,6 +2540,26 @@
      is where a shared quantity belongs (§10.16's own rule for `--headgap`). */
   html[data-route='calendar'] {
     --hero-mat: 14px;
+    /*
+     * **The reference's own crop, fixed** (author, 2026-09-10: the main saint
+     * card takes the cropping aspect ratio of the reference, and "faces at 2/3
+     * of the height of the image crop"). Both numbers are read off the file
+     * rather than off that sentence: its `.himg img` is `aspect-ratio: 3/2`
+     * with `object-position: 50% 34%`, which puts a face about a third down —
+     * the same thing said from the other end.
+     *
+     * **This is a static crop and not face detection.** Nothing here looks at
+     * the picture; 34% is where the subject of an icon is, on the whole,
+     * because an icon is a standing or half-length figure.
+     *
+     * One pair of properties because the two boxes that read them have to
+     * agree: the blurred placeholder is painted on `.hero-media` and the
+     * picture is the `img` inside it, and a placeholder framed differently
+     * from the picture arriving over it is a visible jump. §10.16's rule —
+     * a quantity two boxes share belongs on the ancestor both are under.
+     */
+    --hero-band: 3 / 2;
+    --hero-band-focus: 50% 34%;
   }
 
   html[data-route='calendar'] .hero-figure {
@@ -2528,27 +2568,42 @@
   }
 
   /*
-   * **340 px, with the author's half-window cap still standing in front of
-   * it** (§10.19). The design asks for a 340 px column that the mat fills;
-   * the instruction of 2026-09-01 — "for the full window size possible on any
-   * monitor, its no more than half the window height" — is about *height*,
-   * and `--card-h / --hero-r` is where that reaches the width. A flat 340
-   * draws a 1:1.6 icon at 499 px, which is 71% of a 700 px window, and
-   * `daily-panel.spec.js`'s five windows are where that shows.
+   * The band itself, over the derived shape above (docs/daily-desktop-visuals.md
+   * §10.23, which reverses §10.1). The reservation-before-decode promise is
+   * unchanged in kind and stronger in fact: the box is now one ratio for every
+   * saint, so it is known before the manifest is, let alone the image.
+   */
+  html[data-route='calendar'] .hero-media {
+    aspect-ratio: var(--hero-band);
+    background-position: var(--hero-band-focus);
+  }
+
+  html[data-route='calendar'] .hero-media img {
+    object-position: var(--hero-band-focus);
+  }
+
+  /*
+   * **340 px, flat, and the half-window cap is now kept by the crop** (§10.23,
+   * where §10.19 put the derivation in front of it).
    *
-   * So 340 replaces the old `42%` / `30rem` ceiling and the derivation
-   * survives as the cap: at a desk-sized window every icon the corpus holds
-   * takes the full 340, and a tall one on a short window is narrower rather
-   * than over the line.
+   * The cap is the author's, 2026-09-01: "for the full window size possible on
+   * any monitor, its no more than half the window height". Until today the box
+   * was the icon's own shape up to 1:1.6, so a wider column cost a tall icon
+   * height faster than it gained a wide one, and `--card-h / --hero-r` — the
+   * width at which *this* icon stands exactly as tall as the card — was what
+   * held it under the line. A flat 340 drew a 1:1.6 icon at 499 px, which is
+   * 71% of a 700 px window.
    *
-   * `+ 2 * var(--hero-mat)`, because that term is the width at which the
-   * *picture* stands exactly `--card-h` tall, and what is sized here is the
-   * column the mat fills.
+   * There are no tall icons here any more. The band is 3:2 for every saint, so
+   * the picture's height is two thirds of its own width whatever the manifest
+   * says, and 312 px of picture is 208 px tall — 29% of that same 700 px
+   * window. The cap cannot be reached from this side of the page, and a
+   * derivation that can never bind is a line that says something untrue about
+   * why the column is the width it is. `daily-panel.spec.js`'s five windows
+   * are still what says the cap holds, measured rather than argued away.
    */
   html[data-route='calendar'] .hero.has-media {
-    grid-template-columns:
-      clamp(200px, calc(var(--card-h) / var(--hero-r, 1) + 2 * var(--hero-mat)), 340px)
-      1fr;
+    grid-template-columns: 340px 1fr;
   }
 
   /*

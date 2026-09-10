@@ -295,8 +295,23 @@ drop shadow on the panel**; padding 16. Depth is the field being darker than
 the page, never a cast shadow. Image, then the name, then whatever the mode
 puts under it — dates, a description, the Detailed matrix. On hover the border
 darkens toward `--ink-soft` and nothing moves or lifts. **The card box is
-derived, not fixed** — the manifest carries each image's aspect ratio and the
-card takes it.
+derived, not fixed, everywhere a card is one of many** — the manifest carries
+each image's aspect ratio and the card takes it, held between 1:1.6 and 2:1 by
+`lib/hero-crop.js`. That is the Index's cards, the carousel's columns and the
+Daily register's, and it is the author's rule of 2026-09-01 and 2026-09-02.
+
+***The Daily page's own hero, past 1024 px, is the one fixed box** (author,
+2026-09-10: the main saint card takes the reference's cropping aspect ratio,
+"faces at 2/3 of the height of the image crop"). It is 3:2 at `50% 34%`,
+measured off the reference rather than off the sentence. This paragraph read
+"derived, not fixed" without qualification until then, and the reason the
+exception is the hero rather than a change of rule is that the hero is not one
+card of many: it is one picture, alone, at the top of the page, on a page the
+reader returns to daily — so a shape that changes with the saint changes the
+page's whole silhouette from one day to the next, which is what a habit page
+cannot afford. A grid of cards has the opposite need and keeps the derived
+rule. docs/daily-desktop-visuals.md §10.23 has the whole of it, and §10.1 is
+the decision it reverses.*
 
 **The register (list).** A day heading in small caps with its date, one rule
 under it, entries beneath, one tradition's voice at a time.

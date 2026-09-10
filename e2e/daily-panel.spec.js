@@ -94,25 +94,34 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
 });
 
 
-test('the hero image is shown whole up to 1:1.6 on desktop, and a 3:2 band on a phone', async ({ page }) => {
+test('the hero is a 3:2 band on the desk, its own shape between, and a band again on a phone', async ({ page }) => {
   /*
    * A square from 2026-08-21, a band from 2026-08-26 morning — "Change the
    * daily saint image crop from square to a horizontal rectangle … This is to
    * reduce the height of the card to show more of what's below in the also
-   * commemorated section" — both from the evening of the same day, and **the
-   * icon's own shape from 2026-09-01**: "don't crop the main saint image on
+   * commemorated section" — both from the evening of the same day, then **the
+   * icon's own shape from 2026-09-01** ("don't crop the main saint image on
    * Daily page unless it exceeds an aspect ratio of 1:1.6, that's the maximum
-   * height."
+   * height"), and **the reference's fixed crop from 2026-09-10**: the main
+   * saint card takes the cropping aspect ratio of the reference, which is 3:2.
    *
-   * So the desktop half of this reverses: it asked for a square until then,
-   * and the square is now only the fallback for a hero whose card carries no
-   * dimensions. What survives untouched is the phone's band — bought to keep
-   * the card short enough to show the register under it, where the image is
-   * full width and *is* the card's height — and the reason there is a fixed
-   * ratio at all: the box is reserved before the image decodes, so nothing
-   * reflows on arrival. That is why the shape is computed per saint in
-   * `daily/panel.js` from the manifest's own dimensions, and why this test
-   * reads those dimensions off the element rather than hard-coding a saint.
+   * This test said "shown whole up to 1:1.6 on desktop" until that last
+   * instruction, and the title is the change. **The 1:1.6 rule is not gone
+   * and is not weaker** — docs/daily-desktop-visuals.md §10.23 — it governs
+   * every other saint card on the site through `cardCrop`, and it governs
+   * this one below 1024 px. What changed is that the desk's own card is one
+   * picture alone at the top of a page the reader returns to daily, and a
+   * shape that follows the saint changes the page's silhouette every morning.
+   *
+   * So the rule is now different at three widths and is asserted at all three
+   * rather than at one. The premise each time is read off the element, not
+   * hard-coded: what makes 1280 an assertion about the *box* is that two
+   * saints of very different natural shapes are drawn identically there.
+   *
+   * The reason there is a fixed ratio at any width is unchanged and is the
+   * strongest it has been: the box is reserved before the image decodes, so
+   * nothing reflows on arrival, and on the desk the reservation no longer even
+   * has to wait for the manifest.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
@@ -127,26 +136,53 @@ test('the hero image is shown whole up to 1:1.6 on desktop, and a 3:2 band on a 
     return { natural: natural.h / natural.w, drawn: box.height / box.width };
   };
 
-  const whole = await shape();
-  expect(whole.natural, 'premise: this hero is taller than the cap, so nothing here is uncropped').toBeLessThan(1.6);
-  expect(Math.abs(whole.drawn - whole.natural), 'the icon was cropped when it fits inside 1:1.6').toBeLessThan(0.03);
-
   /*
-   * And an icon past the cap is held at it. Lupus the Martyr is 450x1184 —
-   * 1:2.63 — and leads 5 September; the premise below is what says so at run
-   * time rather than trusting this comment.
+   * **On the desk: the reference's band, whoever the saint is.** Anthony's
+   * icon is inside the old 1:1.6 cap and Lupus the Martyr's (450x1184, 5
+   * September) is well past it, and the two premises below are what say so at
+   * run time. Under the rule this replaces they were drawn at 1.27 and at
+   * 1.60; under this one they are both 3:2, which is the whole claim — the
+   * shape belongs to the card and not to the picture in it.
    */
+  const wideDesk = await shape();
+  expect(wideDesk.natural, 'premise: this hero is inside the old 1:1.6 cap').toBeLessThan(1.6);
+  expect(Math.abs(wideDesk.drawn - 2 / 3), 'the desk hero is not the reference 3:2').toBeLessThan(0.02);
+
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await expect(img).toBeVisible();
-  const tall = await shape();
-  expect(tall.natural, 'premise: this day’s hero is not tall enough to be cropped').toBeGreaterThan(1.6);
-  expect(Math.abs(tall.drawn - 1.6), 'a tall icon was not held to 1:1.6').toBeLessThan(0.03);
+  const tallDesk = await shape();
+  expect(tallDesk.natural, 'premise: this day’s hero is not tall enough to have been cropped before').toBeGreaterThan(1.6);
+  expect(Math.abs(tallDesk.drawn - 2 / 3), 'a tall icon is not drawn in the same band as a short one').toBeLessThan(0.02);
+  expect(
+    Math.abs(wideDesk.drawn - tallDesk.drawn),
+    'two saints of different shapes are drawn differently, so this is the picture and not the box',
+  ).toBeLessThan(0.01);
+
+  /*
+   * **Between 620 and 1024 px the icon keeps its own shape**, held to 1:1.6.
+   * The 2026-09-10 instruction is about the two-column desk; this width has a
+   * column for the picture and is not that page, and it is where the derived
+   * rule and `--hero-shape` still decide something. Asserted so the reversal
+   * above cannot be read as the rule having been deleted.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await expect(img).toBeVisible();
+  const tallMid = await shape();
+  expect(Math.abs(tallMid.drawn - 1.6), 'a tall icon is not held to 1:1.6 below the desk').toBeLessThan(0.03);
 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(img).toBeVisible();
+  const wholeMid = await shape();
+  expect(
+    Math.abs(wholeMid.drawn - wholeMid.natural),
+    'an icon inside 1:1.6 was cropped below the desk, where it is still shown whole',
+  ).toBeLessThan(0.03);
 
   // And the band survives where it was bought: a phone, where the picture is
-  // the card's own height.
+  // the card's own height. The desk arriving at the same 3:2 by a different
+  // instruction six weeks later does not make this the same rule — the phone's
+  // is about the register fitting under the card.
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(img).toBeVisible();
@@ -156,21 +192,27 @@ test('the hero image is shown whole up to 1:1.6 on desktop, and a 3:2 band on a 
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
-  // What a tall icon loses is its lower half, not the face: cover, anchored to
-  // the top and centred across. The blurred placeholder underneath is anchored
-  // the same way, or it would paint a differently-framed image under the one
-  // arriving.
+  /*
+   * **Where the crop is taken from, on the desk: 34% down** (§10.23) — the
+   * reference's own `object-position`, and the author's "faces at 2/3 of the
+   * height of the image crop" said from the other end. It was `50% 0` here,
+   * hard against the top, which is what a *derived* box wants: a picture shown
+   * whole has nothing to anchor, and a tall one cropped to 1:1.6 must lose its
+   * feet rather than its face. A fixed band crops every icon, so the anchor
+   * stops being a fallback and becomes the composition.
+   *
+   * The placeholder is read as well as the picture, because they are two boxes
+   * and a placeholder framed differently from the picture landing over it is a
+   * visible jump.
+   */
   const crop = await page.evaluate(() => {
     const s = getComputedStyle(document.querySelector('.hero-media img'));
     const media = getComputedStyle(document.querySelector('.hero-media'));
     return { fit: s.objectFit, position: s.objectPosition, background: media.backgroundPosition };
   });
-  // Zero resolves to `0px` in one property and `0%` in the other; what is being
-  // asserted is centred across and hard against the top, not which unit the
-  // engine chose to print it in.
   expect(crop.fit).toBe('cover');
-  expect(crop.position).toMatch(/^50% 0(px|%)$/);
-  expect(crop.background).toMatch(/^50% 0(px|%)$/);
+  expect(crop.position, 'the desk picture is not anchored a third down').toBe('50% 34%');
+  expect(crop.background, 'the placeholder is framed differently from the picture over it').toBe('50% 34%');
 });
 
 
@@ -427,11 +469,16 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
    *
    * Wide, the image still has a column of its own and still fills it. The
    * track was a hard 221 px until 2026-09-01, when the author asked for
-   * bigger pictures on a bigger card; it is now derived per saint — the
+   * bigger pictures on a bigger card, and derived per saint after that — the
    * smaller of a share of the card and the width at which this icon stands
-   * exactly as tall as the card — so what is pinned is that rule rather than
-   * a number. Augustine's icon is 422x720, taller than the 1:1.6 ceiling, so
-   * it is the case where the card's own height decides the column.
+   * exactly as tall as the card. **From 2026-09-10 that derivation is the
+   * 620–1024 px band's alone** (§10.23): the desk's box is a fixed 3:2, so no
+   * icon can be taller than its column asks for. Augustine's icon is 422x720,
+   * taller than the 1:1.6 ceiling, which is why he is still the day chosen —
+   * the two widths do different things to him.
+   *
+   * What is pinned either way is the relationship and not a number: the mount
+   * fills whatever the first track is, and the picture fills the mount.
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -3245,8 +3292,11 @@ test('the card ends where the picture does, and the words with it', async ({ pag
    * eighteen lines tall, so a card held at that minimum with its text stopped
    * at the picture's foot is a card with a 240 px hole in it — which is what
    * it looked like. The newer instruction wins, and the eighteen lines survive
-   * as what the *picture* is aimed at (--card-h sizes its column) rather than
-   * as a floor the card is held to.
+   * as what the *picture* is aimed at (`--card-h` sized its column) rather
+   * than as a floor the card is held to. From 2026-09-10 they do not reach
+   * this width either: the desk's box is a fixed 3:2 and its height follows
+   * its own column, so what is measured below is the instruction itself —
+   * the words stop at the mount's foot — with nothing derived behind it.
    *
    * 24 September because Theodora of Alexandria's icon is 939x625 — landscape,
    * so the picture is far shorter than eighteen lines and the difference
@@ -3853,6 +3903,15 @@ test('the hero picture is never more than half the window, on any monitor', asyn
    * 700. Not two bugs but one number that was not a share of anything. Five
    * windows, two of them larger than this suite otherwise runs at, because the
    * defect was invisible at the sizes it did run at.
+   *
+   * **The ceiling is now kept by the crop rather than by arithmetic in front
+   * of it** (§10.23, 2026-09-10). A fixed 3:2 makes the picture's height two
+   * thirds of its own width whatever the icon is, so `--card-h / --hero-r` —
+   * the width at which a given icon stood exactly as tall as the card - can
+   * no longer bind and is gone from the desk's rule. The instruction is
+   * untouched and so is this measurement: the cap is only ever true if
+   * something reads the rendered height, and a cap that holds for a new
+   * reason still has to be watched.
    */
   await ready(page);
   for (const size of [
@@ -3867,20 +3926,39 @@ test('the hero picture is never more than half the window, on any monitor', asyn
     await page.evaluate(() => document.fonts.ready);
     const media = page.locator('.hero-media');
     await expect(media).toBeVisible();
-    const share = await media.evaluate((el) => el.getBoundingClientRect().height / window.innerHeight);
+    const box = await media.evaluate((el) => {
+      const r = el.getBoundingClientRect();
+      return { share: r.height / window.innerHeight, width: r.width };
+    });
+    const share = box.share;
     expect(
       share,
       `the picture takes ${(share * 100).toFixed(0)}% of a ${size.width}x${size.height} window`,
     ).toBeLessThanOrEqual(0.51);
-    // And it has not been capped into a stamp: half a window is the ceiling,
-    // not the target, but a picture that fell to a tenth would be a different
-    // defect and this is where it would show.
-    expect(share, `the picture shrank to ${(share * 100).toFixed(0)}%`).toBeGreaterThan(0.2);
+    /*
+     * And it has not been capped into a stamp: half a window is the ceiling,
+     * not the target, and a picture that fell to a tenth would be a different
+     * defect.
+     *
+     * **Read as a width since 2026-09-10, where it was a share of the window
+     * height** (§10.23). The floor was 0.2 of the window, which worked while
+     * the box was the icon's own shape — a portrait icon that had shrunk was
+     * short as well as narrow. A fixed 3:2 makes the height two thirds of the
+     * width, so on a 1440 px-tall monitor a perfectly correct picture is 14%
+     * of the window and the old floor would have failed the very geometry the
+     * author asked for. Width is the dimension a shrinking picture now loses,
+     * and 300 px is under the reference's own 312 at every one of these
+     * windows.
+     */
+    expect(
+      box.width,
+      `the picture shrank to ${box.width.toFixed(0)} px wide at ${size.width}x${size.height}`,
+    ).toBeGreaterThan(300);
   }
 });
 
 
-test('a tall icon is cropped from the top, and its drawn shape stays inside the two limits', async ({ page }) => {
+test('a tall icon is cropped from the top where the shape is still its own', async ({ page }) => {
   /*
    * Author, 2026-09-01: "For really tall images, crop them favouring the top
    * edge, and for really wide images crop them favouring the centre. Tallest
@@ -3892,9 +3970,21 @@ test('a tall icon is cropped from the top, and its drawn shape stays inside the 
    * tests/hero-crop.test.mjs, where the arithmetic can be asked about a picture
    * no folder holds yet. What this adds is that the arithmetic reaches the
    * page: the box really is that shape and the crop really is anchored.
+   *
+   * **Measured at 900 px since 2026-09-10, where it was 1280** (§10.23). The
+   * desk's own card is the reference's fixed 3:2 at `50% 34%` now, so at 1280
+   * this rule decides nothing about the hero and a test standing there would
+   * be asserting a constant. Between 620 and 1024 the picture has a column and
+   * the shape is still the icon's own, which is where the instruction above is
+   * still executed on this page - and `cardCrop` executes it on every other
+   * page, which `index-grid.spec.js` and `daily-register.spec.js` hold.
+   *
+   * Moved rather than deleted, and the width is the reason: an anchor at the
+   * top is only meaningful where something is being cropped *to* a shape the
+   * picture did not have, and that is now this band and not the desk.
    */
   await ready(page);
-  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const shape = await page.evaluate(() => {

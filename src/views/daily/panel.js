@@ -586,6 +586,13 @@ export function paintDay({ main, side }) {
    * stylesheet). Without it, widening the column for landscape icons — which
    * is what the author asked for — made portrait ones enormous: Lupus at
    * 1:1.6 in a 414 px column is 662 px of icon over a 505 px card.
+   *
+   * **Read between 620 and 1024 px only, since 2026-09-10.** The desk's own
+   * card is a fixed 3:2 now (docs/daily-desktop-visuals.md §10.23), so there
+   * is no tall icon left for that arithmetic to hold down and the column is
+   * the design's own rather than derived. This is still published because
+   * the width that reads it is a window resize away, and the three properties
+   * are one decision written once.
    */
   const ratio = hero.image ? (drawnH / hero.image.w).toFixed(4) : '1';
   const media = hero.image
