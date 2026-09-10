@@ -5,7 +5,23 @@ import './styles/base.css';
 import './styles/calendar.css';
 import './styles/saint.css';
 import './styles/index.css';
-import './styles/map.css';
+/*
+ * **`map.css` is not here, and that is a first-paint decision.** Every sheet
+ * imported by this module is concatenated into one render-blocking stylesheet
+ * that every route waits for before it paints anything. The map's 27 kB is
+ * more than a third of it and is read by one route in six.
+ *
+ * Measured on 2026-09-10, when `npm run test:lighthouse` went red on a
+ * 1,248-byte diff: first contentful paint steps by exactly one 150 ms round
+ * trip somewhere between 73.9 kB and 75.1 kB of that sheet — 1357 ms and
+ * 1507 ms on CI, 1535 and 1690 on this desk — and emptying `map.css` at the
+ * larger size put it back to 1534. Taking 9.6 kB out of the JavaScript moved
+ * nothing, because the script is deferred and was never on that path.
+ *
+ * `views/map.js` imports it dynamically instead, which is the same arrangement
+ * the map's own coastline data has had since it shipped: fetched as its own
+ * chunk beside the boot, never in front of the first paint.
+ */
 import './styles/about.css';
 
 import { BRAND, STRINGS } from './ui/strings.js';

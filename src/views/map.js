@@ -15,6 +15,21 @@ import { announce, ceilingOf, map, place } from './map/state.js';
 import { timelineMarkup, wireTimeline } from './map/timeline.js';
 export { searchMatches } from './map/search.js';
 
+/*
+ * **This view's stylesheet, off the first paint's path** (2026-09-10). It was
+ * one of nine imported by `main.js`, which concatenates them into a single
+ * render-blocking sheet every route waits for — 27 kB of it for this one, and
+ * `src/main.js` carries the measurement that made it worth moving.
+ *
+ * Dynamic, because that is the only kind of import Rollup splits: a static one
+ * from a module the entry already pulls in lands back in the same chunk. It is
+ * a bare statement rather than an awaited one, so the fetch starts with the
+ * boot and nothing waits on it — and nothing needs to, because this view cannot
+ * render before `loadManifest()` has answered, and the manifest is twenty times
+ * the size of the sheet.
+ */
+import('../styles/map.css');
+
 export const title = () => STRINGS.map.title;
 
 /**

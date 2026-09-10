@@ -1214,3 +1214,43 @@ change. CI arbitrates.
 150 ms slower than the last one spends all of it. Sitting E should read the
 figure as a range rather than a number, and PLAN item 7's blocking caption pack
 is the one real saving still on the table.
+
+### 10.18 The CSS that every route waits for
+
+**§10.17's diagnosis was wrong and the correction is worth more than it was.**
+Taking 9.8 kB of prose out of the JavaScript did not move CI at all: the script
+is deferred and was never on the first-paint path. The path is the *stylesheet*,
+and `main.js` concatenates nine of them into one render-blocking sheet that
+every route waits for.
+
+Measured, on this desk and on CI, and the numbers agree:
+
+| entry stylesheet | CI FCP | this desk |
+| --- | --- | --- |
+| 73.89 kB (step 5) | 1357–1374 | 1535–1796 |
+| 75.14 kB (step 6) | 1505–1524 | — |
+| 75.89 kB (step 7) | 1507–1526 | 1686–1993 |
+| 75.89 kB, `map.css` emptied | — | 1534–1841 |
+| 67.53 kB (`map.css` split out) | — | 1604–1916 |
+
+The step is one 150 ms round trip and it lands between 73.9 and 75.1 kB. Three
+things were ruled out by measurement rather than by argument: **it is not the
+runner** — step 5's own run, re-run on 2026-09-10 on a fresh runner, measured
+1357–1374 again; **it is not the JavaScript** — 9.6 kB out of the bundle moved
+nothing; and **it is not the transfer encoding** — the preview serves the sheet
+uncompressed where GitHub Pages sends 14.5 kB gzipped (verified with `curl -I`
+against the live site), and making the preview compress moved nothing either.
+That last one is still a true statement about the instrument and is left here
+for whoever tightens the floor: **the gate measures a 75 kB download that no
+reader performs.**
+
+**`map.css` now loads with the map**, dynamically, which is the arrangement the
+map's own coastline data has had since it shipped. The entry sheet drops to
+67.53 kB — below where it was before this sitting — and the map's 8.4 kB
+arrives as its own chunk beside the boot.
+
+**`index.css` is 71 kB and `saint.css` 27 kB, and both are still in the entry.**
+Splitting them the same way is the standing saving, and it is larger than
+anything else on this page's list. Sitting E should take it before the sweep,
+because the floor has ~9% of headroom and every step of this rebuild spends
+some of it.
