@@ -90,6 +90,26 @@ const DEFAULTS = {
  */
 export const REGISTER_LAYOUTS = ['cards', 'expanded', 'list'];
 
+/**
+ * The two themes, under both of the names this project gives them.
+ *
+ * **The keys are the design's names and the values are the storage's**, and
+ * the gap between the two is not cosmetic — it shipped a bug. `tokens.css`
+ * calls the themes *day* and *vigil*, PLAN and this rebuild's document use
+ * those words throughout, and `scripts/contact-sheet.mjs` labels its rows with
+ * them. But a stored theme may only ever say `'light'` or `'dark'` (and
+ * `null`, for a reader who has never pressed the toggle), because that is what
+ * `lib/theme.js` and index.html's first-paint script read. The sheet wrote
+ * `'vigil'` into storage, which is neither, so the first-paint script fell
+ * through to the system preference — light, in a headless browser — and every
+ * "vigil" tile the tool ever drew was the day theme with a dark label under
+ * it. Nobody could review dark mode through the instrument built to review it.
+ *
+ * So the translation lives here, once, beside the values it translates into,
+ * rather than being retyped by each tool that shoots the site.
+ */
+export const THEMES = { day: 'light', vigil: 'dark' };
+
 export function readSettings() {
   try {
     return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) ?? '{}') };

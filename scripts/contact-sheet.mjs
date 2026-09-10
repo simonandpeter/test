@@ -33,6 +33,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { spawn, spawnSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
+import { seed, colorScheme, THEME_NAMES } from './shoot-settings.mjs';
 
 /**
  * A saint route needs *a* saint, and naming one here is the same defect the
@@ -123,7 +124,16 @@ const startDevServer = async () => {
 const server = GIVEN_BASE ? null : await startDevServer();
 const BASE = (GIVEN_BASE ?? server.url).replace(/\/$/, '');
 const WIDTHS = list('widths', '360,768,1280').map(Number);
-const THEMES = list('themes', 'day,vigil');
+const THEMES = list('themes', THEME_NAMES.join(','));
+for (const t of THEMES) {
+  // A misspelt `--themes=` used to draw a whole row of the wrong theme under
+  // the right label, for the same reason 'vigil' itself did.
+  if (!THEME_NAMES.includes(t)) {
+    console.error(`--themes=${t}: this shoots ${THEME_NAMES.join(' or ')}`);
+    server?.stop();
+    process.exit(1);
+  }
+}
 const LANGS = list('langs', 'en');
 const ROUTES = list('routes', `/,/saints,/saints/${anySaint()},/map,/texts,/about`);
 const HEIGHT = Number(arg('height', 780));
@@ -174,15 +184,10 @@ const SEED = arg('seed', 'contact-sheet');
 
 const label = (route) => (route === '/' ? 'daily' : route.replace(/^\//, '').replace(/\//g, '-'));
 
-/* The two settings the whole site reads are seeded before boot, because both
-   are read once and a page already painted does not repaint for them. The
-   coachmarks are marked seen, or every first tile is two tooltips. */
-const seed = (theme, language) => ({
-  theme: theme === 'day' ? null : 'vigil',
-  language: language === 'en' ? null : language,
-  church: 'russian',
-  coachSeen: ['church-open', 'lang-open'],
-});
+/* The two settings the whole site reads are seeded before boot — `seed` and
+   its reasoning are in `shoot-settings.mjs`, shared with the other tool that
+   shoots the site, because the value this one wrote for `vigil` was not one
+   storage may hold and every dark tile it ever drew was light. */
 
 const browser = await chromium.launch();
 await mkdir('shots', { recursive: true });
@@ -210,6 +215,11 @@ for (const width of WIDTHS) {
       const ctx = await browser.newContext({
         viewport: { width, height: HEIGHT },
         deviceScaleFactor: 1,
+        // The document's own `prefers-color-scheme`, in step with the storage
+        // seeded below: the stylesheets follow the class on `<html>`, but the
+        // favicon and both `theme-color` tags follow this, and a tool whose
+        // two halves disagree about the theme is how the bug below shipped.
+        colorScheme: colorScheme(theme),
         ...(STILL ? { reducedMotion: 'reduce' } : {}),
       });
       await ctx.addInitScript((v) => localStorage.setItem('gos-settings', JSON.stringify(v)), seed(theme, language));
@@ -299,6 +309,22 @@ for (const width of WIDTHS) {
            * defeats. A measured sleep on one route beats a clever wait on six.
            */
           await page.waitForTimeout(route === '/saints' ? Math.max(SETTLE, 1200) : SETTLE);
+          /*
+           * **What would this look like if it were doing nothing?** A tile
+           * labelled `vigil` drawn in day colours, which is what every sheet
+           * shot before 2026-09-10 contained — the seed wrote a theme value
+           * storage does not hold, the first-paint script fell through to the
+           * runner's own preference, and nothing anywhere said so. The seed
+           * is fixed; this is the check that would have caught it, and it
+           * runs every time the tool does rather than once in a suite.
+           *
+           * The class on `<html>` is what every stylesheet in this repo
+           * follows, so it is the drawn theme and not a report about it.
+           */
+          const drew = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+          if (drew !== (colorScheme(theme) === 'dark')) {
+            throw new Error(`drew the ${drew ? 'vigil' : 'day'} theme where this row says ${theme}`);
+          }
           const shot = await page.screenshot({ clip: { x: 0, y: 0, width, height: HEIGHT } });
           const suffix = variant ? `-${variantName(variant)}` : '';
           const name = `shots/tile-${label(route)}-${width}-${theme}-${language}${suffix}.png`;

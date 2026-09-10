@@ -16,15 +16,20 @@
  * only around a deliberate change.
  */
 
-import { readSettings, writeSetting } from './settings.js';
+import { readSettings, writeSetting, THEMES } from './settings.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 const media = window.matchMedia('(prefers-color-scheme: dark)');
 
-/** The reader's choice, or null if they have never made one. */
+/**
+ * The reader's choice, or null if they have never made one — and `THEMES` is
+ * the list rather than two literals, because a tool that writes a value this
+ * rejects gets silently the *other* theme rather than an error (settings.js
+ * says which one and what it cost).
+ */
 const storedChoice = () => {
   const theme = readSettings().theme;
-  return theme === 'light' || theme === 'dark' ? theme : null;
+  return Object.values(THEMES).includes(theme) ? theme : null;
 };
 
 const effective = (choice) => choice ?? (media.matches ? 'dark' : 'light');
