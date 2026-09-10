@@ -117,12 +117,15 @@ export function render(el, { data, params, router }) {
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
-    /* Compact, expanded or list under *Also commemorated* (author,
-       2026-09-01; the third face 2026-09-10), read from the reader's last
-       answer. views/daily/panel.js writes it onto the list as a class, which
-       is why nothing here has to repaint when it changes. The legal values are
-       lib/settings.js's, because a stored setting is whatever an older build
-       or an open console left behind. */
+    /* Compact or expanded under the register's heading (author, 2026-09-01;
+       the second face and the loss of the third, 2026-09-10), read from the
+       reader's last answer. views/daily/panel.js writes it onto the list as a
+       class, which is why nothing here has to repaint when it changes. The
+       legal values are lib/settings.js's, because a stored setting is whatever
+       an older build or an open console left behind — and after today a stored
+       `list` is exactly that, which is why this reads through
+       `REGISTER_LAYOUTS` and lands on `cards` rather than on a face with no
+       mark to press. */
     registerView: REGISTER_LAYOUTS.includes(store.getSettings().registerLayout)
       ? store.getSettings().registerLayout
       : 'cards',
@@ -344,16 +347,16 @@ export function render(el, { data, params, router }) {
   });
 
   /*
-   * Compact, expanded or list under *Also commemorated* (author, 2026-09-01;
-   * the third face 2026-09-10).
+   * Compact or expanded under the register's heading (author, 2026-09-01; the
+   * second face and the loss of the third, 2026-09-10).
    *
    * **Delegated on the view, not bound to the buttons**, because the buttons
    * are inside the day panel and the panel is rebuilt every time the reader
    * steps a day — a listener on the button itself would be alive for exactly
    * one day and then silently gone. This one outlives every repaint, and the
-   * only thing it touches is a class and the three `aria-pressed` attributes:
-   * all three faces are the same markup (views/daily/panel.js says why), so
-   * there is nothing to re-render.
+   * only thing it touches is a class and the two `aria-pressed` attributes:
+   * both faces are the same markup (views/daily/panel.js says why), so there
+   * is nothing to re-render.
    */
   const onRegisterView = (e) => {
     const button = e.target.closest?.('[data-reg-view]');

@@ -67,7 +67,6 @@ export const ro = {
     registerView: 'Afișează pomeniți și',
     viewCards: 'Cartonașe',
     viewExpanded: 'Extinse',
-    viewList: 'Listă',
     continueReading: '…continuă lectura',
     heroPlaces: { birth: 'Născut la {place}', death: 'Adormit la {place}' },
     continueReadingOf: 'Continuă viața Sfântului {name}',

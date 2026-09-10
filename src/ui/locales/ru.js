@@ -70,7 +70,6 @@ export const ru = {
     registerView: 'Показывать также поминаемых как',
     viewCards: 'Карточки',
     viewExpanded: 'Развёрнутые',
-    viewList: 'Список',
     continueReading: '…читать дальше',
     heroPlaces: { birth: 'Родился: {place}', death: 'Преставился: {place}' },
     continueReadingOf: 'Читать житие: {name}',

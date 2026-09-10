@@ -1937,18 +1937,6 @@
     margin-top: 0;
   }
 
-  /* The hero takes the whole of the wide column; the lists under it do not.
-     A register row is a name at one edge and a thumbnail at the other, and
-     at 1440 px the left column is a thousand pixels of mostly nothing
-     between them. */
-  /* The list face only, since 2026-09-01. A card grid *wants* the column's
-     whole width — that is what "separated in columns depending on window size"
-     asks for, and capping it at 80ch would hold the fourth column back at
-     exactly the widths that had just made room for it. */
-  .cal-main .register-cards.is-list {
-    max-width: 80ch;
-  }
-
   /* Both columns start on one line. A register heading carries six spaces of
      air above it, which is right between two stacked sections and wrong at
      the top of a column. */
@@ -2892,10 +2880,10 @@
 }
 
 /*
- * **Three marks where there were two words** (§5.3, §10.4, 2026-09-10):
- * compact is four 5 px diamonds standing in the shape of a larger one,
- * expanded is that larger diamond whole, and list is three rules. Whichever is
- * live is `--accent` and the others are `--rule`.
+ * **Two marks where there were two words** (§5.3, §10.4, 2026-09-10): compact
+ * is four 5 px diamonds standing in the shape of a larger one and expanded is
+ * that larger diamond whole. Whichever is live is `--accent` and the other is
+ * `--rule`.
  *
  * The words are not lost, only made invisible: each button carries the word it
  * stood for as an `sr-only` child (views/daily/panel.js), the group keeps its
@@ -2904,11 +2892,11 @@
  * reader who cannot separate these two hues, and this page has written that
  * sentence about its own marks before.
  *
- * `gap: 0` with the padding *inside* the buttons: three 13 px marks are three
- * 13 px targets, and 4 px of padding either side makes them 21 without moving
- * the marks apart — the 8 px that leaves between them is the reference's own
- * 9 snapped to the scale (§6). The negative end margin puts the live mark's
- * edge back on the column's, where the padding would have inset it.
+ * `gap: 0` with the padding *inside* the buttons: a 13 px mark is a 13 px
+ * target, and 4 px of padding either side makes it 21 without moving the marks
+ * apart — the 8 px that leaves between them is the reference's own 9 snapped
+ * to the scale (§6). The negative end margin puts the live mark's edge back on
+ * the column's, where the padding would have inset it.
  */
 .register-view {
   display: flex;
@@ -2973,26 +2961,6 @@
   width: 11px;
   height: 11px;
   transform: rotate(45deg);
-}
-
-/* Rows, in the same hairline the month's own steppers are drawn in: a list is
-   the one of the three that is not a diamond, because it is not a picture. */
-.vt-list i {
-  left: 0;
-  right: 0;
-  height: 1px;
-}
-
-.vt-list i:nth-child(1) {
-  top: 2px;
-}
-
-.vt-list i:nth-child(2) {
-  top: 6px;
-}
-
-.vt-list i:nth-child(3) {
-  top: 10px;
 }
 
 /* The one that is showing, and the only thing colour is asked to carry here —
@@ -3070,7 +3038,7 @@
   }
 }
 
-/* ---- Also commemorated: three faces (2026-09-10) ------------------------- */
+/* ---- Also commemorated: two faces (2026-09-10) --------------------------- */
 
 /*
  * **Compact.** The default, and what "Cards" has meant since 2026-09-01 — the

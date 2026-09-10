@@ -67,7 +67,6 @@ export const sr = {
     registerView: 'Прикажи саспомињане као',
     viewCards: 'Картице',
     viewExpanded: 'Проширене',
-    viewList: 'Списак',
     continueReading: '…настави читање',
     heroPlaces: { birth: 'Рођен: {place}', death: 'Упокојио се: {place}' },
     continueReadingOf: 'Настави житије светитеља {name}',

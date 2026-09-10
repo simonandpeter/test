@@ -155,21 +155,24 @@ export const STRINGS = {
     commemorationsFor: 'Commemorations for {date}',
     alsoToday: 'Also commemorated',
     /*
-     * The faces of that list (author, 2026-09-01; the third 2026-09-10), and
-     * the name of the group for a reader who cannot see that they stand beside
-     * a heading.
+     * The two faces of that list (author, 2026-09-01; the second, and the loss
+     * of a third, 2026-09-10), and the name of the group for a reader who
+     * cannot see that they stand beside a heading.
      *
      * **These became accessible names on 2026-09-10**, where they had been the
-     * buttons' own words. The control is three marks now — four diamonds, one
-     * diamond, three rules — and a shape distinguished from another shape by
-     * colour alone is nothing at all to a screen reader and very little to a
-     * reader who cannot separate two hues. Compact and list keep the words
-     * they lost; only the third is new.
+     * buttons' own words. The control is two marks — four diamonds and one
+     * diamond — and a shape distinguished from another shape by colour alone
+     * is nothing at all to a screen reader and very little to a reader who
+     * cannot separate two hues.
+     *
+     * `viewList` stood here between those two rulings and went with the face
+     * it named. It labelled the third mark and nothing else: the phone's
+     * register is a column of rows at every setting, but it draws no control
+     * and so has never had a word to print (lib/settings.js).
      */
     registerView: 'Show also commemorated as',
     viewCards: 'Cards',
     viewExpanded: 'Expanded',
-    viewList: 'List',
     /*
      * The way from the day's saint into their life (author, 2026-09-01: add a
      * "...continue reading >" button at the bottom right at the end of the

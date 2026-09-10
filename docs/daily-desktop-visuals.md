@@ -922,16 +922,68 @@ one place the shipped page will visibly differ from the render, and it is
 deliberate. If the author wants it reversed, the bookmark's position has to move
 in the same commit and PLAN §4 changes with it.
 
-### 10.4 The register grows a third face, it does not lose one
+### 10.4 The register wears the two faces the reference draws
 
-`registerView` becomes `'cards' | 'expanded' | 'list'`; `settings.js` gains the
-third legal value; the control in §5.3 carries **three** marks, not two —
+> **Reversed by the author on 2026-09-10**, after it had been built and
+> shipped. What this section decided is below, struck through by the ruling
+> that follows it, and the ruling is what is on `main`.
+
+~~`registerView` becomes `'cards' | 'expanded' | 'list'`; `settings.js` gains
+the third legal value; the control in §5.3 carries **three** marks, not two —
 compact, expanded, list — each with `aria-pressed` and the word it stands for as
 its accessible name. `daily-register.spec.js:221` stays green and the reader's
-remembered choice survives.
+remembered choice survives. The mockup shows two marks because it was showing
+two faces at once, one per theme frame. It was never an argument for deleting
+List.~~
 
-The mockup shows two marks because it was showing two faces at once, one per
-theme frame. It was never an argument for deleting List.
+**The two marks are the control** (author: "only the two marks the reference
+draws"). `REGISTER_LAYOUTS` is `['cards', 'expanded']`, the control carries the
+four-diamond compact mark and the single-diamond expanded one, and `list` is
+gone from the settings, the control, the stylesheet and the five packs.
+
+**Removing the value globally is honest here, and that was checked rather than
+assumed.** The list of legal values is not desktop-scoped, so the first
+question was what a phone loses. Nothing: below 1024 px `.register-view` is
+`display: none` and every one of `is-cards`, `is-expanded` and `is-list` styled
+nothing — the whole desktop register lives inside
+`@media (min-width: 1024px) html[data-route='calendar']`, and `is-list`'s only
+rule anywhere was a `max-width: 80ch` that was itself inside that query. A
+phone drew the base `.register-cards` column of rows at all three settings
+before this change and draws it at both settings after it. Had a phone had a
+list face, the value would have had to stay and the *control* be shortened
+instead.
+
+**A stored `list` lands on cards, and cannot wedge or throw.** All three
+readers of the setting already filtered through `REGISTER_LAYOUTS`
+(`calendar.js` at init and in `paintRegisterView`, `panel.js` at paint), so an
+illegal value has always fallen back rather than been trusted — which is why
+the list of legal values lives in `lib/settings.js` and not in the view.
+`daily-register.spec.js` now seeds `registerLayout: 'list'` **on every load**
+rather than once, so the page never gets to quietly correct the storage and
+then pass, and presses the surviving mark afterwards: not throwing and not
+being wedged are two claims, and only the second needs a press.
+
+**`daily-register.spec.js:221` was edited, not deleted.** The four claims the
+author made on 2026-09-01 are all still in it — cards by default, columns that
+depend on the window, a face that outlives a reload and a day step, and no
+choice to make on a phone. What changed is which face it remembers (expanded,
+being the other one there is) and the new rule it states, above. Its title says
+that rule.
+
+**`viewList` went from all five packs**, because after this it named nothing: it
+was the third mark's accessible name and had no other reader. The phone's
+register is a list, but it draws no control, so there has never been a place
+for the word there. `viewCards` and `viewExpanded` stay.
+
+**`index-grid.spec.js`'s "every row starts its name at the card margin" was the
+other caller.** It pressed the list mark when it could see one, because the row
+dress was what it measures; the row dress is now the phone's alone, so it states
+`360×780` instead of pressing a control, and both projects measure the same
+thing.
+
+**The bytes**: the entry stylesheet goes 72,494 → **72,311**, 183 back
+against §10.22's 73,000 ceiling — the `.vt-list` geometry and the one
+`max-width: 80ch`. Measured on a build either side, not estimated.
 
 ### 10.5 The feast mark is lifted to clear 3:1
 

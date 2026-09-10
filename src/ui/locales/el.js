@@ -67,7 +67,6 @@ export const el = {
     registerView: 'Εμφάνιση συνεορταζομένων ως',
     viewCards: 'Κάρτες',
     viewExpanded: 'Αναπτυγμένες',
-    viewList: 'Λίστα',
     continueReading: '…συνέχεια',
     heroPlaces: { birth: 'Γεννήθηκε: {place}', death: 'Κοιμήθηκε: {place}' },
     continueReadingOf: 'Συνέχεια του βίου: {name}',

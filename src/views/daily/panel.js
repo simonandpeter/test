@@ -457,27 +457,27 @@ function emptyDayNote(iso) {
    imports the DOM cannot have. */
 
 /**
- * The register's own control, as three marks (docs/daily-desktop-visuals.md
- * §5.3, §10.4): four 5 px diamonds standing in the shape of a larger one for
- * the compact face, that larger diamond whole for the expanded one, and three
- * rules for the list. Whichever is live is drawn in `--accent` and the others
- * in `--rule`; calendar.css has the geometry.
+ * The register's own control, as the two marks the reference draws
+ * (docs/daily-desktop-visuals.md §5.3, §10.4): four 5 px diamonds standing in
+ * the shape of a larger one for the compact face, and that larger diamond
+ * whole for the expanded one. Whichever is live is drawn in `--accent` and the
+ * other in `--rule`; calendar.css has the geometry.
  *
- * **Three marks and not two.** The reference drew two because it was showing
- * two faces at once, one per theme frame — it was never an argument for
- * deleting a face the author asked for and the site promised to remember
- * (§10.4).
+ * **Two marks, and the list face is gone** (author, 2026-09-10). §10.4 had
+ * read the reference's two marks as two frames of one three-mark control and
+ * kept `list` as a third face; the author has ruled that the two marks are the
+ * control. Nothing is lost on a phone, which never had a list face to lose —
+ * it draws the base row column at every setting (lib/settings.js).
  *
- * **The words go, so the labels arrive.** Two of these had words and now have
- * none; a shape told apart from another shape by colour is nothing to a screen
- * reader and very little to a reader who cannot separate `--accent` from
- * `--rule`. Each mark carries the word it stands for, `sr-only`, and the
- * group keeps its `role` and its `aria-pressed`.
+ * **The words go, so the labels arrive.** A shape told apart from another
+ * shape by colour is nothing to a screen reader and very little to a reader
+ * who cannot separate `--accent` from `--rule`. Each mark carries the word it
+ * stands for, `sr-only`, and the group keeps its `role` and its
+ * `aria-pressed`.
  */
 const VIEW_MARKS = {
   cards: '<span class="vt vt-compact" aria-hidden="true"><i></i><i></i><i></i><i></i></span>',
   expanded: '<span class="vt vt-full" aria-hidden="true"><i></i></span>',
-  list: '<span class="vt vt-list" aria-hidden="true"><i></i><i></i><i></i></span>',
 };
 
 /* Read at call time, never captured: the packs merge over the base *in place*
@@ -486,7 +486,6 @@ const VIEW_MARKS = {
 const VIEW_WORDS = {
   cards: () => STRINGS.calendar.viewCards,
   expanded: () => STRINGS.calendar.viewExpanded,
-  list: () => STRINGS.calendar.viewList,
 };
 
 /**

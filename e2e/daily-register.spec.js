@@ -218,7 +218,7 @@ test('a phone keeps the calendar’s own order for the also-commemorated', async
 /* ---- the 2026-09-01 batch: the day steps, and the bars that went ---------- */
 
 
-test('Also commemorated opens as cards in columns, and remembers a reader who wants a list', async ({ page }) => {
+test('the register opens compact in columns, remembers the other face, and lands a stored list on cards', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Make the Also Commemorated saint cards on desktop
    * behave the same as the cards view on All Saints page on desktop, separated
@@ -239,10 +239,19 @@ test('Also commemorated opens as cards in columns, and remembers a reader who wa
    * compact face is a row now — a 60 px mat at the row's *trailing* edge — and
    * that is the one place the shipped page deliberately differs from the
    * reference, because the bookmark has nowhere else to go over a 48 px
-   * thumbnail (PLAN §4). So the shape assertions say the new shape and say
-   * which decision put it there; the four claims the author actually made are
-   * untouched, and `§10.4`'s promise that this test protects the reader's
-   * remembered choice is the part that had to survive.
+   * thumbnail (PLAN §4).
+   *
+   * **And the face it remembers changed later the same day** (author: §10.4
+   * reversed). The list is gone; the two marks the reference draws are the
+   * whole control. The author's four claims are all still here — cards by
+   * default, columns that depend on the window, a choice that outlives a
+   * reload and a day step, and no choice to make on a phone — and the *rule*
+   * this test now states is the one the removal created:
+   *
+   * - the remembered face is **expanded**, which is the other face there is;
+   * - a reader whose storage still says `list` opens on **cards**, and the
+   *   control they meet is a working one rather than two marks with none of
+   *   them live.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -295,19 +304,18 @@ test('Also commemorated opens as cards in columns, and remembers a reader who wa
   await expect.poll(async () => (await shape()).columns).toBeLessThan(wide.columns);
   await page.setViewportSize({ width: 1440, height: 900 });
 
-  // The list face: one column, and the picture back beside the name.
-  await page.locator('[data-reg-view="list"]').click();
-  await expect(list).toHaveClass(/is-list/);
-  await expect(page.locator('[data-reg-view="list"]')).toHaveAttribute('aria-pressed', 'true');
+  // The other face: one column of repeated day cards, picture leading.
+  await page.locator('[data-reg-view="expanded"]').click();
+  await expect(list).toHaveClass(/is-expanded/);
+  await expect(page.locator('[data-reg-view="expanded"]')).toHaveAttribute('aria-pressed', 'true');
   const rows = await shape();
-  expect(rows.columns, 'the list is still in columns').toBe(1);
-  expect(rows.pictureAbove, 'the list still stacks the picture').toBe(false);
+  expect(rows.columns, 'the expanded face is still in columns').toBe(1);
 
-  // Remembered: a reload comes back to the list, and stepping a day keeps it —
-  // the panel is rebuilt on a step, so this is where a face held in the DOM
-  // rather than in the setting would quietly go back to cards.
+  // Remembered: a reload comes back to it, and stepping a day keeps it — the
+  // panel is rebuilt on a step, so this is where a face held in the DOM rather
+  // than in the setting would quietly go back to cards.
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
+  await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
   /*
    * Forward and back rather than one step: not every day has a register, and
    * 5 September is the one this test knows has ten. Both panels are in the
@@ -320,12 +328,34 @@ test('Also commemorated opens as cards in columns, and remembers a reader who wa
     .poll(() =>
       page.evaluate(() => {
         const lists = [...document.querySelectorAll('[data-register]')];
-        return lists.length > 0 && lists.every((el) => el.classList.contains('is-list'));
+        return lists.length > 0 && lists.every((el) => el.classList.contains('is-expanded'));
       }),
     )
     .toBe(true);
 
-  // And there is no choice to make on a phone, where the list is the only face.
+  /*
+   * **A stored face that is no longer legal lands on cards** (§10.4, as
+   * reversed). The value is written on every load rather than once, so the
+   * page never gets to quietly correct the storage and then pass — what is
+   * asserted is that an illegal value is survivable every time it is read,
+   * which is what `REGISTER_LAYOUTS` filtering at each of its three readers
+   * buys. Then the control is pressed, because "does not throw" and "is not
+   * wedged" are two claims and only the second needs a press.
+   */
+  await page.addInitScript(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, registerLayout: 'list' }));
+  });
+  await page.reload({ waitUntil: 'networkidle' });
+  await expect(list, 'a stored list did not land on cards').toHaveClass(/is-cards/);
+  await expect(page.locator('[data-reg-view="list"]'), 'there is still a list mark to press').toHaveCount(0);
+  await expect(page.locator('.register-view [aria-pressed="true"]'), 'no mark is live').toHaveCount(1);
+  await expect(page.locator('[data-reg-view="cards"]')).toHaveAttribute('aria-pressed', 'true');
+  await page.locator('[data-reg-view="expanded"]').click();
+  await expect(list, 'the control was wedged by the stored value').toHaveClass(/is-expanded/);
+
+  // And there is no choice to make on a phone, where the rows are the only face.
   await page.setViewportSize({ width: 360, height: 780 });
   await expect(page.locator('.register-view').first()).toBeHidden();
 });
@@ -374,7 +404,7 @@ test('a register card crops to the hero own limits', async ({ page }) => {
   expect(shapes.some((s) => s.file > 1.62), 'premise: nothing on this day needed cropping').toBe(true);
 });
 
-/* ---- the desktop rebuild, step 9: the register's three faces (2026-09-10) - */
+/* ---- the desktop rebuild, step 9: the register's two faces (2026-09-10) -- */
 
 
 test('a register mat is 60 px wide however tall its picture is', async ({ page }) => {
@@ -476,15 +506,19 @@ test('a register row with no icon shows its type as a mark, and says it in words
 });
 
 
-test('the register offers three faces, and the third is expanded rather than instead', async ({ page }) => {
+test('the register offers the two faces the reference draws, and no third', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §10.4: "`registerView` becomes
-   * `'cards' | 'expanded' | 'list'` … the control replaces the Cards/List
-   * word-pair with THREE marks". The reference drew two because it was showing
-   * two faces at once, one per theme frame; it was never an argument for
-   * deleting a face the author asked for and the site promised to remember.
+   * docs/daily-desktop-visuals.md §10.4, **as reversed by the author on
+   * 2026-09-10**. It had ruled that `expanded` was a third face beside `cards`
+   * and `list`, reading the reference's two marks as two frames of one
+   * three-mark control. The author has ruled that the two marks are the
+   * control: compact and expanded, and nothing else.
    *
-   * **The words went, so the labels had to arrive** (§5.3). Three marks told
+   * So the count is the assertion. Two marks is a claim a `toHaveCount(2)`
+   * makes and a per-mode loop does not — a loop over the modes that exist
+   * passes on a control carrying a fourth.
+   *
+   * **The words went, so the labels had to arrive** (§5.3). Two marks told
    * apart by shape and colour are nothing to a screen reader, so each carries
    * the word it stands for and the group keeps its `role` and its
    * `aria-pressed`. That is asserted here by accessible name rather than by
@@ -499,11 +533,10 @@ test('the register offers three faces, and the third is expanded rather than ins
   const group = page.locator('.register-view');
   await expect(group).toHaveAttribute('role', 'group');
   const marks = page.locator('.register-view button');
-  await expect(marks, 'the control does not carry three marks').toHaveCount(3);
+  await expect(marks, 'the control does not carry exactly two marks').toHaveCount(2);
   for (const [mode, word] of [
     ['cards', 'Cards'],
     ['expanded', 'Expanded'],
-    ['list', 'List'],
   ]) {
     const button = page.locator(`[data-reg-view="${mode}"]`);
     await expect(button, `the ${mode} mark has no accessible name`).toHaveAccessibleName(word);
@@ -564,19 +597,16 @@ test('the register offers three faces, and the third is expanded rather than ins
   expect(big.ways, 'the expanded card has no way into the life').toBe(1);
   expect(big.wayShown, 'the expanded card way into the life is not laid out').toBe(true);
 
-  /*
-   * And the list survives, which is the whole of §10.4: a reader who chose it
-   * before this change still has it, and the choice outlives a reload.
-   */
-  await page.locator('[data-reg-view="list"]').click();
-  await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
-  await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
-  // The expanded face is remembered the same way; a face the store rejected
-  // would come back as cards here.
-  await page.locator('[data-reg-view="expanded"]').click();
+  // Remembered, and reversible: a face the store rejected would come back as
+  // cards after the reload, and a control with one live mark and no way back
+  // would fail the return press.
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
+  await page.locator('[data-reg-view="cards"]').click();
+  await expect(page.locator('[data-register]')).toHaveClass(/is-cards/);
+  await expect(page.locator('[data-register]'), 'the face it came from is still on the list').not.toHaveClass(
+    /is-expanded/,
+  );
 });
 
 

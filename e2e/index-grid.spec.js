@@ -864,21 +864,21 @@ test('every row starts its name at the card margin, picture or no picture', asyn
    * and a saint with no icon does not pull the column about.
    */
   await ready(page, { church: 'greek' });
+  /*
+   * **Measured where the row dress lives, which since 2026-09-10 is below
+   * 1024 px.** This pressed `[data-reg-view="list"]` when it found it: the
+   * register had a third face that was a column of rows, and the desktop run
+   * of this test asked for it by name. The author removed that face
+   * (docs/daily-desktop-visuals.md §10.4, reversed) and a phone is now the
+   * only place these rows are drawn — so the width is stated here instead of
+   * a control being pressed, and both projects measure the same thing. What is
+   * claimed is unchanged: whatever dresses a row, every name starts at the
+   * same left edge and a saint with no icon does not pull the column about.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  /*
-   * **The list face, asked for by its own control** (2026-09-01). *Also
-   * commemorated* opens as a grid of cards now, and everything below is about
-   * the other face: a card has no held slot to keep and no shared left edge to
-   * start its name at, because it is a column rather than a row. So the test
-   * presses the toggle instead of assuming which face is showing — which is
-   * also a small assertion that the toggle does what it says.
-   */
-  const asList = page.locator('[data-reg-view="list"]');
-  if (await asList.isVisible()) {
-    await asList.click();
-    await expect(page.locator('[data-register]')).toHaveClass(/is-list/);
-  }
+  await expect(page.locator('.register-view').first(), 'premise: a phone is offering a choice of face').toBeHidden();
   const seen = await page.evaluate(() => {
     const withPicture = document.querySelector('.reg-card:has(.reg-thumb img)');
     const without = document.querySelector('.reg-card:not(:has(.reg-thumb img))');
