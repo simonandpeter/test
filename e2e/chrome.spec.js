@@ -3141,3 +3141,152 @@ test('the masthead stands the same distance off the nav as the nav’s own words
     `masthead gap ${gaps.mastheadToFirst} against ${gaps.betweenLinks} between labels`,
   ).toBeLessThan(3);
 });
+
+test('the theme crosses in one movement: nothing snaps and nothing lags, on every route', async ({ page }) => {
+  /*
+   * Author, 2026-09-10: "the screen's corners fading at a different rate from
+   * the rest, and the header possibly differently again."
+   *
+   * They were, and so was most of the page. The fade was
+   * `background-color, color` on `body`, `header` and `main` and on nothing
+   * else, so an element with a colour of its own — the chrome bar's fill, the
+   * header's rule, the sidebar bubble and the four notch crosses that stand on
+   * the page's own ground at its corners, every chip, mat and hairline — had
+   * no transition at all and arrived on the first frame while its neighbours
+   * eased for 300 ms. Measured on Daily at 1280 before the fix: **91 painted
+   * things snapped against 16 that eased**, and the 16 were the ones with no
+   * colour of their own, riding `body`'s inherited `color`.
+   *
+   * **This is the instrument, and the three unit tests beside it in
+   * `tests/design-tokens.test.mjs` are only the cheap guards on the way here.**
+   * Nothing in the stylesheet could have said which elements the reader
+   * watches — that is a fact about the rendered page, and the old arrangement
+   * read as a deliberate, complete-looking rule for three weeks.
+   *
+   * **It synchronises on the ground rather than on the clock.** A sample taken
+   * at a fixed number of milliseconds measures this machine; instead the frame
+   * is chosen by `body`'s own progress, and every element is read inside that
+   * same frame. So the assertion is "at the moment the ground is halfway,
+   * where is everything else" — which is the question, and which a slow runner
+   * cannot change the answer to.
+   *
+   * Two failures are then possible and both are checked, because a colour that
+   * crosses at the *wrong* rate and one that does not cross at all are
+   * different defects: at the synchronising frame nothing may have arrived
+   * (the snap), and after the fade nothing may still be travelling (the lag).
+   */
+  const routes = ['/calendar/2026-01-30', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+
+  for (const route of routes) {
+    await page.goto(route, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+
+    const seen = await page.evaluate(async () => {
+      /*
+       * Only what a reader can watch change on *this* element. `color` on a
+       * box with no text of its own, and the four border colours of a box with
+       * no border, are one inherited number reported five times over — and
+       * counting those was what made the original defect look like a tie.
+       */
+      const PROPS = ['backgroundColor', 'color', 'borderTopColor', 'borderBottomColor',
+        'borderLeftColor', 'borderRightColor', 'fill', 'stroke'];
+      const nodes = [];
+      for (const el of document.querySelectorAll('*')) {
+        const box = el.getBoundingClientRect();
+        if (box.width === 0 || box.height === 0) continue;
+        for (const pseudo of [null, '::before', '::after']) {
+          const cs = getComputedStyle(el, pseudo);
+          if (pseudo && (cs.content === 'none' || cs.content === 'normal')) continue;
+          if (cs.visibility === 'hidden' || cs.display === 'none') continue;
+          const on = new Set();
+          if (cs.backgroundColor !== 'rgba(0, 0, 0, 0)') on.add('backgroundColor');
+          for (const side of ['Top', 'Bottom', 'Left', 'Right']) {
+            if (parseFloat(cs[`border${side}Width`]) > 0) on.add(`border${side}Color`);
+          }
+          if (el instanceof SVGElement) { on.add('fill'); on.add('stroke'); }
+          if (pseudo || [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim())) on.add('color');
+          if (on.size) nodes.push({ el, pseudo, on, name: label(el) + (pseudo || '') });
+        }
+      }
+      function label(el) {
+        const cls = typeof el.className === 'string' && el.className.trim()
+          ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.') : '';
+        return el.tagName.toLowerCase() + cls + (el.id ? '#' + el.id : '');
+      }
+
+      const read = () => nodes.map(({ el, pseudo }) => {
+        const cs = getComputedStyle(el, pseudo);
+        return PROPS.map((k) => cs[k]);
+      });
+      const channels = (v) => (String(v).match(/[\d.]+/g) || []).map(Number);
+      // How far this reading has travelled from `a` towards `b`, 0 to 1, on
+      // the widest-moving channel — the one whose reading rounding cannot eat.
+      const progress = (now, a, b) => {
+        const [A, B, N] = [channels(a), channels(b), channels(now)];
+        if (A.length !== B.length || N.length !== A.length) return null;
+        let widest = -1;
+        let i = -1;
+        A.forEach((x, j) => { if (Math.abs(x - B[j]) > widest) { widest = Math.abs(x - B[j]); i = j; } });
+        if (widest < 24) return null;   // too close to resolve; not evidence either way
+        return (N[i] - A[i]) / (B[i] - A[i]);
+      };
+
+      const press = document.getElementById('theme-toggle');
+      const settle = () => new Promise((r) => setTimeout(r, 800));
+
+      /*
+       * **Both ends are learned before the journey that is measured**, and
+       * that is not fussiness: read a second after the press and the "end"
+       * value is the transition's own first frame, so every progress figure
+       * comes out near zero and the test passes by measuring nothing. The
+       * first press is therefore spent finding out where the page lands, and
+       * the press after it is the one watched — the return leg, which crosses
+       * the same fifteen tokens the other way.
+       */
+      const ground = () => getComputedStyle(document.body).backgroundColor;
+      const start = read();
+      const groundTo = ground();
+      press.click();
+      await settle();
+      const before = read();          // vigil, and the leg below leaves it
+      const after = start;            // day, where that leg lands
+      const groundFrom = ground();
+      press.click();
+
+      // The frame the ground is between a quarter and three quarters across.
+      let mid = null;
+      for (let i = 0; i < 200 && !mid; i++) {
+        await new Promise((r) => requestAnimationFrame(r));
+        const p = progress(ground(), groundFrom, groundTo);
+        if (p !== null && p > 0.25 && p < 0.75) mid = { p, v: read() };
+      }
+      await settle();
+
+      const early = [];
+      const late = [];
+      const moving = [];
+      nodes.forEach((n, i) => {
+        PROPS.forEach((prop, j) => {
+          if (!n.on.has(prop) || before[i][j] === after[i][j]) return;
+          const p = mid && progress(mid.v[i][j], before[i][j], after[i][j]);
+          if (p === null || p === undefined) return;
+          moving.push(`${n.name}{${prop}}`);
+          if (p >= 0.999) early.push(`${n.name}{${prop}} had already arrived`);
+          if (p <= 0.001) early.push(`${n.name}{${prop}} had not started`);
+          const settled = progress(after[i][j], before[i][j], after[i][j]);
+          if (settled !== null && Math.abs(settled - 1) > 0.001) late.push(`${n.name}{${prop}} never arrived`);
+        });
+      });
+      return { groundProgress: mid && mid.p, moving: moving.length, early, late };
+    });
+
+    expect(seen.groundProgress, `${route}: the ground never crossed, so nothing was measured`).not.toBeNull();
+    // The premise: a route where nothing resolvable changes colour would pass
+    // every assertion below by having nothing to check.
+    expect(seen.moving, `${route} draws nothing that changes colour with the theme`).toBeGreaterThan(4);
+    expect(seen.early, `${route} does not cross as one movement`).toEqual([]);
+    expect(seen.late, `${route} leaves a colour behind`).toEqual([]);
+  }
+});

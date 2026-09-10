@@ -10,6 +10,7 @@ import {
   releaseGrain,
   searchMode,
   swipe,
+  tokenColours,
 } from './helpers.js';
 
 /**
@@ -1084,14 +1085,6 @@ test('the hairline under the date runs full width, close to the text, in --rule'
       bodyWidth: column.getBoundingClientRect().width,
       afterWidth: parseFloat(s.width),
       paddingBottom: parseFloat(getComputedStyle(heading).paddingBottom),
-      ...(() => {
-        const root = getComputedStyle(document.documentElement);
-        const rgb = (name) => {
-          const n = parseInt(root.getPropertyValue(name).trim().slice(1), 16);
-          return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
-        };
-        return { ruleRgb: rgb('--rule'), goldRgb: rgb('--gold') };
-      })(),
       afterBackground: s.backgroundColor,
     };
   });
@@ -1100,8 +1093,12 @@ test('the hairline under the date runs full width, close to the text, in --rule'
   expect(Math.abs(m.afterWidth - m.bodyWidth)).toBeLessThan(2);
   // Close to the text: one space-1 (4 px), not two (8 px).
   expect(m.paddingBottom).toBeLessThanOrEqual(4);
-  expect(m.afterBackground).toBe(m.ruleRgb);
-  expect(m.afterBackground, 'the date rule is gold again').not.toBe(m.goldRgb);
+  // The two tokens are painted rather than parsed out of `getPropertyValue`,
+  // which returns a hex for an ordinary custom property and a computed colour
+  // for one the theme cross-fade registered — helpers.js says why.
+  const [ruleRgb, goldRgb] = await tokenColours(page, '--rule', '--gold');
+  expect(m.afterBackground).toBe(ruleRgb);
+  expect(m.afterBackground, 'the date rule is gold again').not.toBe(goldRgb);
 });
 
 /* ---- the 2026-08-25 batch: the fast, the hymns, the lede, the Bibles ---- */

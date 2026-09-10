@@ -117,17 +117,27 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Theme changes fade background and text only, and only while html carries
-   .theme-anim — theme.js adds it around a change and removes it after. A
-   standing transition on these properties would also fire on page load and on
-   every skeleton swap, which is exactly the flash the pre-paint script exists
-   to prevent. */
-html.theme-anim body,
-html.theme-anim header,
-html.theme-anim main {
-  transition:
-    background-color var(--dur-settle) var(--ease),
-    color var(--dur-settle) var(--ease);
+/* A theme change fades the *tokens*, not the boxes that read them, so the
+   whole page crosses as one movement — `tokens.css`'s `@property` block is the
+   other half and says why the older arrangement could not be widened into this
+   one. Every name here is registered there; adding one to either list without
+   the other fails `tests/design-tokens.test.mjs`.
+
+   Still only while html carries .theme-anim — theme.js adds it around a
+   deliberate change and removes it after. A standing transition would also
+   fire on page load and on every skeleton swap, which is exactly the flash the
+   pre-paint script exists to prevent.
+
+   One duration and one easing for the fifteen, written once: when
+   `transition-duration` runs short of `transition-property` it repeats, which
+   is what makes "they all cross together" a fact about the stylesheet rather
+   than about fifteen copies of a token agreeing. */
+html.theme-anim {
+  transition-property: --gesso, --ink, --ink-soft, --rubric, --gold, --gold-ink,
+    --rule, --field, --fast-fish, --fast-free, --accent, --bub, --feast,
+    --mount, --ground-ink;
+  transition-duration: var(--dur-settle);
+  transition-timing-function: var(--ease);
 }
 
 h1,

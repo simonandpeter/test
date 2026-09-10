@@ -12,6 +12,7 @@ import {
   nothingCropped,
   ready,
   searchMode,
+  tokenColours,
   viewChip,
 } from './helpers.js';
 
@@ -620,11 +621,16 @@ test('the veneration glyph is drawn nowhere, and gold is spent only where it was
    */
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
-  const gold = await page.evaluate(() => {
-    const hex = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();
-    const n = parseInt(hex.slice(1), 16);
-    return `rgb(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255})`;
-  });
+  /*
+   * **The token is resolved by painting it, not by parsing it** (2026-09-10).
+   * This read the hex out of `--gold` and did the arithmetic by hand until the
+   * theme cross-fade registered the colour tokens as `<color>`, at which point
+   * the property computes and `parseInt` of `gb(169, …)` is NaN — so the sweep
+   * below started comparing against `rgb(0, 0, 0)` and found gold on the
+   * header, the nav and the masthead, which is every SVG's inherited default
+   * fill. `tokenColours` in helpers.js has the whole of it.
+   */
+  const [gold] = await tokenColours(page, '--gold');
   for (const path of [POPULATED, INDEX, DETAIL, '/about']) {
     await page.goto(path, { waitUntil: 'networkidle' });
     await expect(page.locator('svg.badge'), `${path} draws the mark`).toHaveCount(0);

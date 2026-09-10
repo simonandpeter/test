@@ -200,3 +200,92 @@ test('no raw easing or duration in the JavaScript either', () => {
   }
   assert.deepEqual(found, [], `use DUR / EASE from lib/motion.js:\n  ${found.join('\n  ')}`);
 });
+
+/*
+ * ---- the theme cross-fade ------------------------------------------------
+ *
+ * The page crosses between day and vigil by animating the *tokens*, which
+ * `tokens.css`'s `@property` block argues at length. Three things have to
+ * agree for that to work and none of them fails loudly on its own: a token can
+ * be registered and left out of the transition, listed in the transition and
+ * never registered (registration is what makes it interpolable, so it would
+ * simply snap), or registered with an `initial-value` that has drifted from
+ * the value `:root` actually declares.
+ *
+ * `e2e/chrome.spec.js` asserts the result in a browser, which is the test that
+ * would have caught the defect these replaced. These three are the cheap
+ * guards on the way there, and the third of them is the one that catches a
+ * *new* colour token added to `tokens.css` and forgotten.
+ */
+
+const TOKENS = readFileSync(path.join(STYLES, 'tokens.css'), 'utf8');
+const registered = () => [...TOKENS.matchAll(/@property\s+(--[\w-]+)/g)].map((m) => m[1]);
+/** The day block's value for a token: the first declaration in file order. */
+const declaredIn = (css, name) => {
+  const m = new RegExp(`^\\s*${name}:\\s*([^;]+);`, 'm').exec(css);
+  return m ? m[1].trim() : null;
+};
+const norm = (v) => v.trim().toLowerCase().replace(/\s+/g, '');
+
+/** The names in `html.theme-anim`'s `transition-property`, in base.css. */
+const crossFaded = () => {
+  const base = readFileSync(path.join(STYLES, 'base.css'), 'utf8');
+  const m = /html\.theme-anim\s*\{[^}]*?transition-property:\s*([^;]+);/s.exec(base);
+  assert.ok(m, 'base.css has no transition-property on html.theme-anim');
+  return m[1].split(',').map((s) => s.trim());
+};
+
+test('every registered colour token is one the theme cross-fade moves', () => {
+  assert.deepEqual(
+    registered().slice().sort(),
+    crossFaded().slice().sort(),
+    'tokens.css registers a different set of colours than base.css cross-fades',
+  );
+});
+
+test('a registered token’s initial-value is the value :root declares', () => {
+  /*
+   * `initial-value` never applies — `:root` declares all fifteen — but a wrong
+   * one is invisible until the day somebody stops declaring one, so the two
+   * copies are held to each other rather than left to drift. `--bub` is
+   * `var(--field)` in the day block, so one level of substitution is resolved
+   * before comparing; that is the whole of the indirection in this file.
+   */
+  const found = [];
+  for (const m of TOKENS.matchAll(/@property\s+(--[\w-]+)\s*\{[^}]*initial-value:\s*([^;}]+)/g)) {
+    const [, token, initial] = m;
+    let root = declaredIn(TOKENS, token);
+    assert.ok(root, `${token} is registered and :root does not declare it`);
+    const via = /^var\(\s*(--[\w-]+)\s*\)$/.exec(root);
+    if (via) root = declaredIn(TOKENS, via[1]);
+    if (norm(root) !== norm(initial)) found.push(`${token}: :root ${root}, initial-value ${initial}`);
+  }
+  assert.deepEqual(found, [], `initial-value has drifted:\n  ${found.join('\n  ')}`);
+});
+
+test('every colour the vigil theme redeclares crosses rather than snapping', () => {
+  /*
+   * The direction that catches a colour token *added* later: anything
+   * `html.dark` gives its own value is a colour the reader watches change, so
+   * it is either registered here or derived with `var()` from one that is —
+   * `--fast-strict` is `var(--rubric)` in both themes and follows the animated
+   * value without being registered itself.
+   *
+   * `--veil` and the two `--button-face*` are the sanctioned exceptions and
+   * they are named rather than pattern-matched: the veil is read by no sheet
+   * and no module, and the button face is deliberately outside the theme.
+   */
+  const exempt = new Set(['--veil', '--button-face', '--button-face-ink']);
+  const dark = /html\.dark\s*\{([\s\S]*)$/.exec(TOKENS)[1];
+  const moved = registered();
+  const found = [];
+  for (const m of dark.matchAll(/^\s*(--[\w-]+):\s*([^;]+);/gm)) {
+    const [, token, value] = m;
+    if (exempt.has(token) || moved.includes(token)) continue;
+    const via = /^var\(\s*(--[\w-]+)\s*\)$/.exec(value.trim());
+    if (via && moved.includes(via[1])) continue;
+    if (!/^(#|rgb|hsl|oklch|oklab|color)/.test(value.trim())) continue;
+    found.push(`${token}: ${value.trim()}`);
+  }
+  assert.deepEqual(found, [], `vigil redeclares a colour the cross-fade never moves:\n  ${found.join('\n  ')}`);
+});

@@ -270,7 +270,10 @@ injected `page`; a test opening its own context must call `coldFace(page)`.
 8. **`loopScroll` is not measurable until it says so.** Wait for the track to be
    past 0 before writing a position into it.
 9. **A custom property does not compute**: `getPropertyValue('--x')` returns the
-   literal `clamp(...)`.
+   literal `clamp(...)` — **unless it is registered**, and the fifteen colour
+   tokens the theme cross-fade animates are, so those hand back a computed
+   `rgb(…)` instead. Resolve a token by painting it (`tokenColours`,
+   `e2e/helpers.js`), never by parsing what the property hands you.
 10. **CPU throttling reproduces what parallel load cannot.**
     `Emulation.setCPUThrottlingRate`, *after* the `goto`, and prove it bit.
 11. **A dispatched `PointerEvent` ignores `touch-action`** and is not an active

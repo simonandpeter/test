@@ -548,3 +548,33 @@ const leaders = (page, n = 1) =>
         .join('|'),
     n,
   );
+
+export /**
+ * A colour token as the browser paints it, `rgb(r, g, b)`.
+ *
+ * **Not `getPropertyValue`**, which is trap 9 in both directions. An ordinary
+ * custom property hands back the literal it was typed as — `#a98237`, or a
+ * whole `clamp()` — while the fifteen the theme cross-fade animates are
+ * registered `<color>` in `tokens.css` and hand back the *computed* colour
+ * instead. Four tests read a hex out of `--gold`, `--rule` or `--feast` and
+ * parsed it by hand; registration on 2026-09-10 turned that into
+ * `parseInt('gb(169, 130, 55)', 16)`, which is NaN, and one of them then
+ * matched `rgb(0, 0, 0)` — every SVG's inherited default fill — and reported
+ * the header, the nav and the masthead as spending gold.
+ *
+ * A probe asks the question the reader's eye asks and does not care which of
+ * the two kinds a token is, so it keeps working through the next such change.
+ */
+const tokenColours = (page, ...names) =>
+  page.evaluate((tokens) => {
+    const probe = document.createElement('span');
+    probe.style.position = 'fixed';
+    probe.style.left = '-9999px';
+    document.body.append(probe);
+    const out = tokens.map((t) => {
+      probe.style.color = `var(${t})`;
+      return getComputedStyle(probe).color;
+    });
+    probe.remove();
+    return out;
+  }, names);

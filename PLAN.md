@@ -227,6 +227,18 @@ typed, and the test will say so. Loops — the veil's sweep, the skeleton's
 breath, the coachmark's glow — state their own period and are exempt above one
 second, being a different decision from a scale of response times.
 
+**The theme change animates the tokens, not the boxes** (2026-09-10). The
+fifteen colours the two themes declare independently are registered as
+`<color>` in `tokens.css` and transitioned on `<html>` in one declaration at
+`--dur-settle` on `--ease`, so every `var()` reading one recomputes each frame
+and the whole page crosses as a single movement. Before that the fade was
+`background-color` and `color` on `body`, `header` and `main` alone: 91 painted
+things on Daily snapped at the first frame while 16 eased, and the 16 were the
+ones with no colour of their own. Transitioning the boxes cannot be widened
+into this, because `transition` is a shorthand and a universal rule either
+loses to every component that declares one or stops that component's movement
+mid-press. `e2e/chrome.spec.js` asserts the result on all six routes.
+
 **`--ease-turn` is symmetric and every other curve here is not.** One full
 rotation reads as a turn only if it accelerates and decelerates equally; a
 movement that goes somewhere does not. It has one caller, the Random die, and

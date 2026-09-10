@@ -10,6 +10,7 @@ import {
   searchMode,
   swipe,
   throwRail,
+  tokenColours,
 } from './helpers.js';
 
 /**
@@ -1324,19 +1325,16 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   await page.goto('/calendar/2026-09-21', { waitUntil: 'networkidle' });
   const feast = page.locator('.week-strip [data-iso="2026-09-21"] .mark-feast');
   await expect(feast).toHaveCount(1);
-  const [feastToken, goldToken] = await page.evaluate(() => {
-    const root = getComputedStyle(document.documentElement);
-    return [root.getPropertyValue('--feast').trim(), root.getPropertyValue('--gold').trim()];
-  });
+  // Both sides of the comparison are colours the browser painted, since
+  // 2026-09-10: `getPropertyValue` returns a hex for an ordinary custom
+  // property and a computed colour for one the theme cross-fade registered,
+  // and this converted the painted mark to hex to meet the first of those.
+  const [feastToken, goldToken] = await tokenColours(page, '--feast', '--gold');
   const painted = await feast.evaluate((el) => getComputedStyle(el).backgroundColor);
-  const hex = (rgb) => {
-    const [r, g, b] = rgb.match(/\d+/g).map(Number);
-    return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
-  };
-  expect(hex(painted)).toBe(feastToken.toLowerCase());
+  expect(painted).toBe(feastToken);
   // And it is a different gold from the decorative one, which is the whole
   // point of the pair: a token that carries a fact takes a floor.
-  expect(hex(painted)).not.toBe(goldToken.toLowerCase());
+  expect(painted).not.toBe(goldToken);
 
   // The month is unchanged: the marks are the week strip's, which is where the
   // author asked for them and where a week is planned.
@@ -2428,15 +2426,8 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
   const paint = await page.evaluate(() => {
     const el = document.querySelector('.month-grid [data-iso="2026-09-21"] .month-feast');
     const s = getComputedStyle(el);
-    const hex = (rgb) =>
-      `#${rgb
-        .match(/\d+/g)
-        .slice(0, 3)
-        .map((n) => Number(n).toString(16).padStart(2, '0'))
-        .join('')}`;
     return {
-      colour: hex(s.backgroundColor),
-      token: getComputedStyle(document.documentElement).getPropertyValue('--feast').trim(),
+      colour: s.backgroundColor,
       // A diamond by clip-path, never a rotated square: a 5 px square turned
       // 45 degrees measures 7.07 px corner to corner and would push its row.
       clip: s.clipPath,
@@ -2444,7 +2435,12 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
       size: [s.width, s.height],
     };
   });
-  expect(paint.colour).toBe(paint.token.toLowerCase());
+  // Painted against painted: `getPropertyValue('--feast')` gave a hex until
+  // the theme cross-fade registered the colour tokens on 2026-09-10 and gives
+  // a computed colour now, which is what the hand-rolled conversion here was
+  // written to meet. helpers.js's `tokenColours` is indifferent to which.
+  const [feastToken] = await tokenColours(page, '--feast');
+  expect(paint.colour).toBe(feastToken);
   expect(paint.clip, 'the feast mark is not a clipped diamond').toContain('polygon');
   expect(paint.transform, 'the feast mark is a rotated square, which grows its row').toBe('none');
   expect(paint.size).toEqual(['5px', '5px']);
