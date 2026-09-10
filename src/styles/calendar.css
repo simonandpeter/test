@@ -2583,8 +2583,48 @@
   }
 
   /*
-   * **340 px, flat, and the half-window cap is now kept by the crop** (§10.23,
-   * where §10.19 put the derivation in front of it).
+   * **Five twelfths of the words and the picture together** (author,
+   * 2026-09-10: the picture's width should grow with the window and keep the
+   * reference's proportion of picture to lede, rather than staying at 340 px
+   * with more and more text beside it). §10.24.
+   *
+   * **Measured off the reference, not read off it.** It is drawn at 1240 px
+   * with a 304 px sidebar and a 32 px gutter inside a 32 px page margin, so
+   * its left column is 840; the picture's column is 340 and the words take
+   * 476. That is 5 : 7, and 340 is 5/12 of the 816 the two of them share.
+   * Holding the *share* is what makes the proportion survive a wider window:
+   * a flat percentage of the left column would drift as the fixed gap between
+   * them became a smaller part of it.
+   *
+   * `--space-8` and not the reference's 24 px, because the gap is an
+   * instruction of its own (author, 2026-09-01: "double the left margin of the
+   * preview text from the image") and the rule above obeys it. Subtracting the
+   * gap the page actually uses is what keeps 5 : 7 exact rather than
+   * approximate.
+   *
+   * **The clamp's two ends are guards and are stated as such.** At 1024 px the
+   * left column is 609 and this gives 240 px, so the 200 px floor does not
+   * bind anywhere the rule applies. The 40 rem ceiling binds only past a
+   * ~1983 px window — which is past `--page-max`, where the measure itself has
+   * stopped growing and the last 13 px of the share are traded for a stated
+   * maximum. Both numbers are measured; `daily-panel.spec.js` holds the
+   * proportion at 1280, 1440 and 1920, which are the three the author asked
+   * for and all inside the band where neither end binds.
+   *
+   * **This cannot bring back the resize shake of 2026-09-04** ("make sure the
+   * right hand column margins are always fixed and the left hand column is the
+   * only thing that is resized"). It is a percentage *inside* the left column,
+   * which is the thing that instruction says should resize; the right column
+   * is still a fixed 19 rem. And the feedback loop that made the old
+   * `clamp(25rem, 28%, 30rem)` shake — a percentage-wide box whose reflow
+   * makes a scrollbar appear, which narrows the box, which un-reflows it —
+   * cannot start here, because `.cal-main` draws no bar and so reserves no
+   * gutter (base.css, "scrollers that draw no bar"). A test sweeps the window
+   * and watches the track for a discontinuity rather than trusting that
+   * paragraph.
+   *
+   * **340 px, flat, until this: the half-window cap is kept by the crop**
+   * (§10.23, where §10.19 put the derivation in front of it).
    *
    * The cap is the author's, 2026-09-01: "for the full window size possible on
    * any monitor, its no more than half the window height". Until today the box
@@ -2600,10 +2640,14 @@
    * window. The cap cannot be reached from this side of the page, and a
    * derivation that can never bind is a line that says something untrue about
    * why the column is the width it is. `daily-panel.spec.js`'s five windows
-   * are still what says the cap holds, measured rather than argued away.
+   * are still what says the cap holds, and a column that grows is the case
+   * that could reach it: at 1920 the picture is 586 wide and 391 tall, 36% of
+   * a 1080 px window, which is the largest share any of the five reads.
    */
   html[data-route='calendar'] .hero.has-media {
-    grid-template-columns: 340px 1fr;
+    grid-template-columns:
+      clamp(200px, calc((100% - var(--space-8)) * 5 / 12), 40rem)
+      1fr;
   }
 
   /*
@@ -3031,8 +3075,12 @@
  * of rows rather than a column-packed grid of Index cards, a 60 px mat instead
  * of a full-width picture, and a line of the life under the dates.
  *
- * **`minmax(340px, 1fr)`, and the 340 is the same number the hero's column
- * takes.** The reference draws two columns at 1240 px and PLAN's own
+ * **`minmax(340px, 1fr)`.** This read "and the 340 is the same number the
+ * hero's column takes" until 2026-09-10, when the hero's column became a share
+ * of the left column (§10.24) and the two stopped being one number. The 340
+ * here is the reference's own, and what it is doing is different: it is the
+ * narrowest a row of these may be before the grid drops to one column, not the
+ * width of anything. The reference draws two columns at 1240 px and PLAN's own
  * instruction is "separated in columns depending on window size", which a
  * fixed `1fr 1fr` is not — it would draw two columns at 1024 as well, where
  * the left column is 624 px and two of these rows do not fit. Measured
@@ -3191,15 +3239,23 @@
 
   /*
    * **Expanded: the day's own card, repeated** (§5.2, §10.4). A third face and
-   * not a replacement — the same measurements as the hero, so the eye reads
-   * the register as more of the same page rather than as a different one: a
-   * 340 px mount in `--mount`, the picture at its own derived shape, and the
-   * full opening paragraph beside it.
+   * not a replacement — the reference's own measurements, so the eye reads the
+   * register as more of the same page rather than as a different one: a 340 px
+   * mount in `--mount`, the picture at its own derived shape, and the full
+   * opening paragraph beside it.
+   *
+   * **"The same measurements as the hero" until 2026-09-10**, when the hero's
+   * column became a share of the left column and its box a fixed 3:2 (§10.23,
+   * §10.24). Neither instruction was about this face, and both were about the
+   * *day's own card* — one picture, alone, at the top of the page — so the
+   * numbers are this face's own now and are the reference's. Whether they
+   * should follow is an editorial question and the author's; §10.24 records
+   * it as open rather than answering it in a sweep.
    *
    * The only differences the reference draws are the name's size and that
    * every one of these carries its own way into the life. `--hero-mat` is the
    * hero's, read from the route rather than copied, because "the same mat"
-   * has to stay true if the number ever moves.
+   * has to stay true if the number ever moves — and that one is still shared.
    */
   html[data-route='calendar'] .register-cards.is-expanded {
     display: block;

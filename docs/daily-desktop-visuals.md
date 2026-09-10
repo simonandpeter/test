@@ -1614,3 +1614,81 @@ instrument, and its "not a stamp" floor moved from a share of the window to a
 picture width, because with a fixed landscape crop the window's height is no
 longer what a shrinking picture would show up in.
 
+### 10.24 The picture's column is a share of the page, not 340 px
+
+**Author, 2026-09-10:** the picture's width should grow with the window and
+hold the reference's proportion of picture to lede, rather than staying at
+340 px with more and more text beside it. Desktop only, as §10.23.
+
+**The proportion, measured off the reference.** It is drawn at 1240 px, with a
+304 px sidebar and a 32 px gutter inside a 32 px page margin, so:
+
+| | reference, at 1240 | |
+| --- | --- | --- |
+| left column | 840 px | |
+| picture's column | 340 px | 40.48% of the left column |
+| the words beside it | 476 px | |
+| picture : words | **5 : 7** | 0.71429 |
+| picture, of what the two share | **5/12** | 340 of 816 |
+
+**Five twelfths of what they share, not 40.48% of the left column**, and the
+difference is the point. The gap between them is a fixed 32 px, so a flat
+percentage of the whole column gives the picture a slightly larger share as the
+column grows — 0.7143 at 1240, 0.7250 at 1280, and drifting on. Taking the
+share of the column *less the gap* holds 5 : 7 exactly at every width, which is
+what "keep reaching that proportion" asks for.
+
+`--space-8` and not the reference's own 24 px gutter, because the gap is an
+instruction of its own (author, 2026-09-01: "double the left margin of the
+preview text from the image").
+
+**Measured on the page**, `.hero-figure` against the second track:
+
+| window | left column | picture's column | words | picture : words |
+| --- | --- | --- | --- | --- |
+| reference | 840 | 340 | 476 | **0.71429** |
+| 1024 | 609 | 240.4 | 336.6 | 0.71423 |
+| 1280 | 865 | 347.1 | 485.9 | 0.71427 |
+| 1440 | 1025 | 413.8 | 579.3 | 0.71429 |
+| 1920 | 1505 | 613.8 | 859.3 | 0.71429 |
+| 2560 | 1600 | 640.0 | 928.0 | 0.68966 |
+
+The picture was 340 px at every one of those windows the day before. 2560 is
+the ceiling and is the only row that does not hold the proportion — see below.
+
+**The clamp's ends are guards and both are stated rather than assumed.** The
+200 px floor does not bind anywhere the rule applies: at the 1024 px breakpoint
+the rule gives 240. The 40 rem ceiling binds only past a ~1983 px window, which
+is past `--page-max` — the measure itself has stopped growing there, and the
+last 13 px of the share are traded for the picture having a stated maximum. A
+ceiling that could never bind would be a line explaining nothing, which is the
+objection §10.23 raised against the derivation it removed.
+
+**It cannot bring back the resize shake** (PLAN, 2026-09-04: "when resizing the
+window on desktop, the columns shake … make sure the right hand column margins
+are always fixed and the left hand column is the only thing that is resized").
+That report was against `clamp(25rem, 28%, 30rem)` on the *right* column. This
+is a percentage inside the left column, which is the thing the instruction says
+should resize, and the right column is still a fixed 19 rem. The feedback loop
+that made the old clamp shake — a percentage-wide box whose reflow makes a
+scrollbar appear, which narrows the box, which un-reflows it — cannot start
+here, because `.cal-main` draws no bar and therefore reserves no gutter.
+
+**Said as a measurement rather than as that paragraph**: a test sweeps the
+window from 1280 to 1400 in 4 px steps on a 36-saint day and reads the track at
+each. The right column's width and its margin off the window are constant to
+0.1 px across all 31 readings, the left column takes every pixel of the slack,
+and the picture's track rises by ~1.67 px a step with no step negative and none
+over 3. A shake is a discontinuity, and that is the shape a sweep can see.
+
+**The half-window cap was re-measured, because a growing column is the case
+that could reach it.** The largest share any of §10.23's five windows reads is
+**36%** (1920×1080 and 1440×700), against the 51% ceiling; the smallest picture
+is 319 px wide at 1280.
+
+**Still open, and the author's.** The register's expanded face is "the day's
+own card, repeated" (§5.2) and it still draws a 340 px mount at the picture's
+own derived shape. Neither of the two instructions of 2026-09-10 was about that
+face — both were about the day's own card, one picture alone at the top of the
+page — so it was left as the reference draws it rather than dragged along in a
+sweep. Whether the repeat should follow the card it repeats is editorial.

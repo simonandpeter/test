@@ -4307,12 +4307,13 @@ test('the hero picture stands in a mount rather than behind an outline', async (
    * the picture reads as standing on a wall rather than as a framed box on the
    * page. The column is 340 px and the mat fills it.
    *
-   * 24 September: Theodora of Alexandria's icon is 939x625, so the height
-   * derivation is nowhere near the 340 ceiling and this really is measuring
-   * the ceiling rather than the cap. A *tall* icon on a short window is
-   * narrower than 340 by the author's half-window rule, and that is the test
-   * two below this one — the 340 here is a ceiling, not a fixed width, and
-   * the pair of tests is what says so.
+   * **The column was 340 px until 2026-09-10 and this test pinned the
+   * number** (§10.24). It is a share of the left column now — five twelfths of
+   * what the picture and the words divide between them, the reference's own
+   * proportion — so what is asserted here is that the mount fills a column
+   * *wider* than the old fixed one at this width, and the proportion itself
+   * has a test of its own below. A mount that quietly went to zero is what
+   * this reading is for, and it still catches it.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -4359,7 +4360,7 @@ test('the hero picture stands in a mount rather than behind an outline', async (
   expect(m.fill, 'the mount is not filled in --mount').toBe(m.mount);
   expect(m.fill, 'the mount is transparent, so there is no mat at all').not.toBe('rgba(0, 0, 0, 0)');
   expect(m.borders, 'a picture on this page is wearing an outline').toEqual(new Array(12).fill(0));
-  expect(m.column, 'the mount does not fill a 340 px column').toBeCloseTo(340, 0);
+  expect(m.column, 'the mount is not filling a column at all').toBeGreaterThan(340);
   expect(m.lift, 'the words are not lifted against the mount').toBeCloseTo(8, 0);
   // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
   expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
@@ -4408,4 +4409,156 @@ test('the way into the life ends in a diamond, the last chevron on this page', a
   expect(mark.transform, 'the mark is not turned onto its corner').toMatch(
     /^matrix\(0\.7071\d*, 0\.7071\d*, -0\.7071\d*, 0\.7071\d*, 0, 0\)$/,
   );
+});
+
+
+/* ---- the picture's column grows with the window (2026-09-10) ------------- */
+
+
+test('the picture keeps the reference share of the words beside it as the window widens', async ({ page }) => {
+  /*
+   * Author, 2026-09-10: the picture's width should grow with the window and
+   * hold the reference's proportion of picture to lede, rather than staying at
+   * 340 px with more and more text beside it.
+   *
+   * **The proportion is measured off the reference rather than quoted.** It is
+   * drawn at 1240 px with a 304 px sidebar and a 32 px gutter inside a 32 px
+   * page margin, so its left column is 840, the picture's column is 340 and
+   * the words take 476 — 5 : 7, and 340 is five twelfths of the 816 the two of
+   * them share. Five twelfths is what the stylesheet says, so what is asserted
+   * here is the *ratio of the two tracks*, which is the thing the author was
+   * looking at: a pixel count would pass on a page whose columns had both
+   * moved and would fail on one that had merely got wider.
+   *
+   * 1280, 1440 and 1920 are the three the author asked for, and all three sit
+   * inside the band where neither end of the clamp binds — the 200 px floor is
+   * below the 240 the rule gives at 1024, and the 40 rem ceiling is not
+   * reached until a window near 1983 px, past `--page-max`.
+   */
+  await ready(page);
+
+  /** The reference's own two columns, and the share they make. */
+  const REFERENCE = { picture: 340, words: 476 };
+  const SHARE = REFERENCE.picture / (REFERENCE.picture + REFERENCE.words);
+
+  const read = async (width) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    return page.evaluate(() => {
+      const hero = document.querySelector('.hero');
+      const s = getComputedStyle(hero);
+      const tracks = s.gridTemplateColumns.split(' ').map(parseFloat);
+      return {
+        picture: tracks[0],
+        words: tracks[1],
+        gap: parseFloat(s.columnGap),
+        figure: document.querySelector('.hero-figure').getBoundingClientRect().width,
+        media: document.querySelector('.hero-media').getBoundingClientRect().width,
+        mat: parseFloat(getComputedStyle(document.querySelector('.hero-figure')).paddingLeft),
+        column: hero.getBoundingClientRect().width,
+      };
+    });
+  };
+
+  const seen = [];
+  for (const width of [1280, 1440, 1920]) {
+    const m = await read(width);
+    seen.push({ width, ...m });
+    const share = m.picture / (m.picture + m.words);
+    expect(
+      share,
+      `at ${width} the picture takes ${(share * 100).toFixed(2)}% of the two columns, not the reference's ${(SHARE * 100).toFixed(2)}%`,
+    ).toBeCloseTo(SHARE, 3);
+    // The mount is the grid item and the picture is the mount less its mat, so
+    // a mat that quietly went to zero cannot pass here as a wider picture.
+    expect(Math.abs(m.figure - m.picture), 'the mount does not fill the track').toBeLessThan(1);
+    expect(Math.abs(m.media - (m.figure - 2 * m.mat)), 'the picture does not fill the mount').toBeLessThan(1);
+    expect(m.mat, 'the mat has gone, so the picture and its column are the same box').toBeGreaterThan(0);
+  }
+
+  /*
+   * And it really is growing, which is the half of the instruction a
+   * proportion alone cannot say: a column left at a flat 340 would hold no
+   * proportion at all, but a proportion of a column that never moved would
+   * pass the assertions above.
+   */
+  expect(seen[1].picture, 'the picture did not grow between 1280 and 1440').toBeGreaterThan(seen[0].picture + 40);
+  expect(seen[2].picture, 'the picture did not grow between 1440 and 1920').toBeGreaterThan(seen[1].picture + 100);
+  expect(seen[0].picture, 'the picture is narrower at 1280 than the flat 340 it replaced').toBeGreaterThan(340);
+});
+
+
+test('the columns do not shake when the window is resized', async ({ page }) => {
+  /*
+   * Author, 2026-09-04: "when resizing the window on desktop, the columns
+   * shake ... make sure the right hand column margins are always fixed and the
+   * left hand column is the only thing that is resized." That report was
+   * against `clamp(25rem, 28%, 30rem)` on the *right* column, which recomputed
+   * on every resize frame inside the band where the percentage bound, and fed
+   * back into its own scrollbar appearing and disappearing.
+   *
+   * The picture's column is a percentage again as of 2026-09-10, so this is
+   * the test that says the shape has not come back. Three claims, and the
+   * first two are what the instruction actually asked for:
+   *
+   * - the right column's width and its margin off the window never move;
+   * - the left column takes all the slack;
+   * - the picture's track is a continuous function of the window width — a
+   *   scrollbar appearing, a reflow feeding back, or any other oscillation is
+   *   a jump, and a sweep at 4 px is fine enough to find one.
+   *
+   * A crowded day (22 September, 36 saints) so the left column certainly
+   * overflows and its scroller is certainly live; an empty one would be
+   * measuring the easy case.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-22', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.hero-figure')).toBeVisible();
+
+  const readings = [];
+  for (let width = 1280; width <= 1400; width += 4) {
+    await page.setViewportSize({ width, height: 900 });
+    readings.push(
+      await page.evaluate((w) => {
+        const hero = document.querySelector('.hero');
+        const bubble = document.querySelector('.cal-bubble').getBoundingClientRect();
+        return {
+          width: w,
+          track: parseFloat(getComputedStyle(hero).gridTemplateColumns.split(' ')[0]),
+          side: bubble.width,
+          margin: document.documentElement.clientWidth - bubble.right,
+          left: document.querySelector('.cal-main').getBoundingClientRect().width,
+        };
+      }, width),
+    );
+  }
+
+  const first = readings[0];
+  for (const r of readings) {
+    expect(r.side, `the right column is ${r.side} px at ${r.width}, not ${first.side}`).toBeCloseTo(first.side, 1);
+    expect(r.margin, `the right column margin moved to ${r.margin} px at ${r.width}`).toBeCloseTo(first.margin, 1);
+  }
+
+  /*
+   * Monotone and smooth. Each 4 px of window is 4 px of left column and five
+   * twelfths of that on the picture's track, so the step is ~1.67 px; anything
+   * over 3 is a discontinuity and anything negative is the track going
+   * backwards as the window widens, which is what a shake looks like one frame
+   * at a time.
+   */
+  for (let i = 1; i < readings.length; i += 1) {
+    const step = readings[i].track - readings[i - 1].track;
+    expect(
+      step,
+      `the picture's track jumped ${step.toFixed(2)} px between ${readings[i - 1].width} and ${readings[i].width}`,
+    ).toBeGreaterThan(0);
+    expect(step, `the picture's track jumped ${step.toFixed(2)} px at ${readings[i].width}`).toBeLessThan(3);
+    expect(
+      readings[i].left - readings[i - 1].left,
+      'the left column did not take the slack',
+    ).toBeCloseTo(4, 0);
+  }
 });
