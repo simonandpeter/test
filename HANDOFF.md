@@ -11,12 +11,12 @@ them findings rather than features.
 ## State
 
 - **`main` is green and deployed.** Every push on 2026-09-09 and 2026-09-10
-  went green, and the last three of 2026-09-10 carried **no `flaky` line at
-  all**.
+  went green, and none of the last five carried a `flaky` line at all.
 - **382 unit tests** in ~2 s. **944 browser tests** in ~4.8 min here, ~15 min on
   CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor. **The entry
   stylesheet is 72,562 bytes against `ENTRY_CSS_CEILING` 73,000** — the gate
-  that fires before the four routes do and names the file (§10.22).
+  that fires before the four routes do and names the file
+  (`docs/daily-desktop-visuals.md` §10.22).
 - **862 saints** (2026-09-08), every one with a life; 1,221 attestations; 126
   undated; 130 icons; 430 hymns. 97 located, ten with a dated track. The corpus
   reaches 28 September 2026. **144 day records**, 23 Aug 2026 – 13 Jan 2027.
