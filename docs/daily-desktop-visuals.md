@@ -1,6 +1,12 @@
 # Daily, desktop — the visual rebuild
 
-**Status**: plan, written 2026-09-10, reviewed against the source the same day,
+**Status**: **built, 2026-09-10.** Every numbered step of §8 as revised by
+§10.12 is on `main`; **[§10.20](#1020-sitting-e-what-landed-what-was-measured-what-is-still-the-authors)
+is the closing record** — what landed, what was measured and refused, and the
+five things still the author's. The document is kept whole rather than trimmed
+because the reasoning is what makes any of it reversible.
+
+Written 2026-09-10, reviewed against the source the same day,
 then decided. **Read [§10](#10-decisions-taken-2026-09-10) first** — it
 overrides everything above it wherever they disagree, and it closes the review's
 open questions. The sections before it are the reasoning, not the instruction.
@@ -1023,13 +1029,13 @@ fifth, said plainly rather than implied away.
 Ten steps as in §8, with 8 and 9 no longer blocked and 1–3 unchanged. Split
 across sittings so no agent runs out of room mid-step:
 
-| sitting | steps |
-| --- | --- |
-| A | 1 tokens · 2 wordmark · 3 the month redesigned in place |
-| B | 4 the month as the desktop default, and its spec |
-| C | 5 width and bubble · 6 controls (route c) · 7 the date block |
-| D | 8 the hero mount (§10.1 shrinks this to the mat) · 9 the register (§§10.2–10.4) |
-| E | 10 the sweep, five languages, both themes, 1280 and 1440 |
+| sitting | steps | |
+| --- | --- | --- |
+| A | 1 tokens · 2 wordmark · 3 the month redesigned in place | done |
+| B | 4 the month as the desktop default, and its spec | already built (§10.13) |
+| C | 5 width and bubble · 6 controls (route c) · 7 the date block | done |
+| D | 8 the hero mount (§10.1 shrinks this to the mat) · 9 the register (§§10.2–10.4) | done |
+| E | §2.2's chrome bar · the contact sheet's themes · 10 the sweep | done, §10.20 |
 
 Push at every numbered step — `bash scripts/push.sh` — and read the run **and**
 its `flaky` line before moving on.
@@ -1305,3 +1311,148 @@ you build on it — but each was arrived at against the source.
 `html[data-route='calendar']` section carrying `--hero-mat: 14px`, the `--mount`
 mat on `.hero-figure`, the clamped column above, `margin-top: -8px` on
 `.hero-body`, `--text-2xl` on `.hero-name`.
+
+### 10.20 Sitting E: what landed, what was measured, what is still the author's
+
+**The plan is done.** Every numbered step of §8 as revised by §10.12 is built
+and on `main`. What follows is the sitting's own record, and the last part of
+it is the list nobody after this should have to rediscover.
+
+#### The chrome bar into the left column (§2.2's last open piece)
+
+Past 1024 px on Daily the bar's *box* is the left column's — the same
+`--page-max` / `--page-pad` measure the grid uses, with the sidebar and the
+gutter taken off the right — so its rule stops where the column does; and the
+sidebar rises into the band the bar leaves so its own head's rule lands on that
+line. Measured level at **52.5 px in all five packs at 1280 and 1440 in a
+forced wide face**.
+
+Three things worth keeping:
+
+- **§2.2's proposed mechanism does not work.** A negative `margin-top` on the
+  bubble is cut off: `main.chrome` is `overflow: hidden` at this width
+  (base.css, `data-fills-window`). `main` takes the whole glass instead, up
+  under the bar by `--chrome-h-reserve`, and `.cal-main` pays the offset back
+  as a top margin — so the date and everything under it do not move, which the
+  test states as a number because it is the whole claim.
+- **The two halves had to land together.** A bubble raised under a bar still
+  spanning the page puts a sticky `z-index: 20` box over three live controls.
+  Geometry cannot see that, so the test asks `elementFromPoint` what is on top
+  of the church control.
+- **`daily-picker.spec.js:1712` did not break this time either.** The bar's
+  *bottom* and `main.chrome > #view`'s left and right margins are all
+  unchanged; only the bar's own left and right edges moved, and the full-screen
+  calendar hangs off none of them. §7 named this line twice and it has now
+  survived both changes it was expected to fail.
+- **What did break was the four-route header comparison**, deliberately, and it
+  now asserts Daily's difference as a derivation rather than excusing it: the
+  row ends at its own column's right edge, and the distance back to where the
+  other three end is exactly the sidebar and the gutter. A bar that merely lost
+  336 px would pass a constant and fail that.
+
+#### The contact sheet was never shooting dark mode (§10.13)
+
+Not `/calendar`'s bug, which is where sitting A saw it: **every** vigil tile of
+every contact sheet, on every route, at every width, for as long as the tool
+has existed. The seed wrote `theme: 'vigil'` — the design's word, not a value
+`localStorage` may hold — so index.html's first-paint script read "this reader
+has never pressed the toggle" and followed the machine's own preference, which
+is light in a headless browser. `scratchpad/nav-shots.mjs` carried the same
+literal.
+
+`lib/settings.js` now owns the translation (`THEMES`), `scripts/shoot-settings.mjs`
+owns the seeding, and there are two guards because a value check alone would
+not have caught it: a unit test that runs index.html's own script text against
+the *opposite* system preference — the old seed draws correctly on a machine
+that happens to agree — and a per-tile check in the sheet that the class on
+`<html>` is the theme the row claims.
+
+#### The sweep
+
+`node scripts/contact-sheet.mjs` at 1280 and 1440, both themes, all five packs,
+against days chosen from the corpus rather than invented: **22 September**
+(36 saints, 3 icons), **26 August** (15 saints, no icon anywhere on the page),
+**21 September** (the Nativity of the Theotokos — a fast chip, a feast chip and
+the cycle on one line), and **20 August** (no record at all).
+
+**One defect, fixed:** the month's selected day was invisible inside the
+bubble. `background: var(--field)` against a `--bub` fill that *is* `--field`
+measured **1.00:1** on the rendered page, leaving a `--rule` hairline at 1.31:1
+on a numeral already wearing the fast's colour. §7 asked this exact question of
+this exact mark. It is the mockup's own `border-color: var(--accent)` and no
+background now — 2.64:1 / ΔL* 31.8 in day, 2.84:1 / ΔL* 32.1 in vigil — and
+§10.15's `--gesso` answer was measured and refused rather than copied: a gesso
+fill is 1.08:1 and ΔL* 2.8 here, fainter than the hairline it would replace.
+
+**§10.10 is settled: the fallback is not taken.** The glyphs are `--rule` on
+`--field`, which is **1.31:1 and ΔL* 9.7 in day against 1.32:1 and ΔL* 10.3 in
+vigil** — the two themes within half a step of each other, and vigil the
+marginally *stronger* of the pair. Read at 1x in both they are a quiet mark
+rather than an absence, which is sitting D's judgement confirmed by a number
+instead of a second eye. The vigil crop *looks* fainter; that is the surround,
+not the mark, and it is written down here so the next reader does not overturn
+a measurement by squinting at it.
+
+**Sound, and recorded rather than changed:** the head holds level in all five
+packs at both widths under a forced Verdana, with the month's two steppers at
+18–41 px (Russian and Serbian the narrowest, non-zero and clickable — §10.14's
+failure was zero); both chooser panels open flush under the head, right-aligned
+to the bubble's edge, unclipped and over it, in both themes at both widths; the
+theme switch is 54 px against the language control's 55–56 in every pack, with
+the knob left in day and right in vigil; all three register faces draw what
+they should and no glyph has leaked into the list face; and the Saint page at
+19 rem wraps a long result name to two lines and changes nothing else.
+
+#### The first-paint gate: measured, and not spent
+
+The entry stylesheet is **72.38 kB** with this sitting's three commits in it,
+against §10.18's known-green 73.89 and known-red 75.14 — and step 1's own CI
+run went green at 72.26, so the headroom is confirmed rather than inferred. The
+sweep's fixes cost 119 bytes. **The room was not needed and the split was not
+taken.**
+
+The saving is measured, so the next sitting does not have to: taking
+`index.css` and `saint.css` out of the entry the way `map.css` went takes it
+from **72.38 kB to 54.31 kB** (13.93 → 10.74 kB gzipped). That is the largest
+single saving on this page's list and it is worth taking when something needs
+it.
+
+**But it is not the same change `map.css` was, and that is why it is still
+here.** A dynamic `import()` from the view starts the fetch at boot and blocks
+nothing, which costs the map nothing because the map is a canvas with almost no
+styled content before its data lands. All Saints and a saint's page are text
+and pictures from the first frame, so the same arrangement lets the site's two
+busiest routes paint before their own stylesheet arrives. The safe form is to
+export the promise from the view and have the router await it before mounting —
+no flash, and the sheet is still off the first paint of the other four routes —
+and that is a change to the boot path rather than a line in a stylesheet. It
+wants its own sitting and its own measurement of what the wait costs when the
+reader lands on `/saints` cold.
+
+#### Still open, and the author's
+
+- **The sidebar's foot (§9), still undecided and now measured.** At 1280×900
+  the bubble ends **235 px** below the last of Name days, Readings and Hymns on
+  an ordinary light day (5 September), **661 px** below the month on a day with
+  no record at all (20 August), and scrolls with no foot on a crowded one.
+  §10.11 settled that the bubble stretches to its grid row; whether that space
+  earns its keep is the half that was never answered, and it is an editorial
+  question rather than a defect.
+- **The imageless expanded entry (§9), drawn as the mockup draws it.** A
+  340×240 `--mount` slab holding one small glyph, and on 26 August that is
+  fifteen of them down a light page. The mockup's own `.bimg.gly` is that
+  slab, so this ships as drawn rather than being redesigned in a sweep — but
+  the same "no picture" state is quiet in the compact face (a `--field` mat)
+  and loud in this one, and the inconsistency is the thing to look at if it is
+  reopened.
+- **The nav's place in the bar.** The mockup's `.nav` is a flex row with the
+  wordmark pushing everything else to the column's right edge; the app's header
+  is a five-track grid shared by every route, where the nav sits next to the
+  masthead and the slack falls between it and the (now empty) corner. Nothing
+  is wrong with it and nothing about it is Daily's alone, so it was not touched
+  — but it is the one place the shipped head visibly differs from the render.
+- **The weekday names are `Intl`'s `short`, not the mockup's initials**, and
+  deliberately: single letters are an English convenience that does not survive
+  Пн/Пт or Δευ/Δεv. Not a divergence to close.
+- **The liturgy line's order is §10.11's**, fast chip first, where the mockup
+  puts it last. Recorded because it reads as an oversight and is not one.

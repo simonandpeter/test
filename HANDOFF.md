@@ -10,9 +10,10 @@ them findings rather than features.
 
 ## State
 
-- **`main` is green and deployed.** Every push on 2026-09-09 went green, and
-  `83d145b` was the first run all day with **no `flaky` line at all**.
-- **354 unit tests** in ~2 s. **902 browser tests** in ~4.4 min here, ~13 min on
+- **`main` is green and deployed.** Every push on 2026-09-09 and 2026-09-10
+  went green, and the last three of 2026-09-10 carried **no `flaky` line at
+  all**.
+- **379 unit tests** in ~2 s. **932 browser tests** in ~4.5 min here, ~14 min on
   CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor.
 - **862 saints** (2026-09-08), every one with a life; 1,221 attestations; 126
   undated; 130 icons; 430 hymns. 97 located, ten with a dated track. The corpus
@@ -107,17 +108,44 @@ own `saint.json` — so the client cannot derive it. If the budget bites, the
 move is a separate reverse-index file fetched with the saint detail rather than
 by every page.
 
-## Next
+## The desktop Daily rebuild, 2026-09-10 — built
 
-**The visual overhaul, desktop first.** `PLAN.md` section 4 is the brief and
-section 2 is the argument beneath it; the contact sheet is the instrument. It is
-what the author asked for at the start of 2026-09-09 and the one thing that day
-never began.
+**`docs/daily-desktop-visuals.md` is done.** Every numbered step is on `main`
+across five sittings; **§10.20 is the closing record** and the only part of
+that document a new reader has to start with. The page past 1024 px is now a
+reading column with the site's bar as its own head, and a filled sidebar bubble
+level with it carrying the chrome controls, the month, the readings, the hymns
+and the name days.
 
-**The comment rewrite rides inside it, per file.** The overhaul has to open
-`calendar.css`, `index.css` and `base.css` and edit them anyway — 2,923 comment
-lines across 6,299 — so clearing each file's narrative in the same pass costs
-one visit rather than two. Pixel-identical tiles prove no declaration moved.
+**Two findings outlive the page they were found on.**
+
+- **The contact sheet was never shooting dark mode.** Its seed wrote a theme
+  value `localStorage` may not hold, so every vigil tile it ever drew, on every
+  route, was the day theme under a dark label. `scripts/shoot-settings.mjs` now
+  owns the seeding for both tools that shoot the site, and the sheet checks each
+  page against the row's own label before the shutter.
+- **A mark can be correct everywhere and invisible in one box.** The month's
+  selected day kept a `--field` fill that had been right since August and came
+  out at 1.00:1 the day the month moved inside a bubble whose fill *is*
+  `--field`. Nothing failed, because nothing had asked what the mark was drawn
+  against. Tests about colour should name the surround.
+
+**Still the author's**, all of them editorial rather than defects, and all
+measured in §10.20: the sidebar's empty foot (235 px on a light day, 661 on a
+day with no record), the imageless expanded entry's 340×240 mount, the nav's
+place in the bar against the mockup's, and the liturgy line's chip order.
+
+**The entry stylesheet is 72.38 kB** against §10.18's known-green 73.89 and
+known-red 75.14. Splitting `index.css` and `saint.css` out the way `map.css`
+went takes it to **54.31 kB** — measured, and deliberately not taken: unlike
+the map, those two routes are text and pictures from the first frame, so the
+saving wants the router to await the view's sheet rather than a bare dynamic
+import, and that is the boot path. §10.20 has the whole of it.
+
+**The comment rewrite rides inside the next such overhaul, per file.** A pass
+that has to open `index.css` or `base.css` anyway can clear that file's
+narrative in the same visit rather than in a second one. Pixel-identical tiles
+prove no declaration moved.
 
 ## Known and unfixed
 
