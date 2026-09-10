@@ -2437,33 +2437,40 @@ test('a restored section never touches zero on the way', async ({ page }) => {
   expect(scrolls.at(-1)).toBe(deep);
 });
 
-test('the name is a stamp: the same two words in every language, in the stamp face', async ({ page }) => {
+test('the name is a stamp: the same mark in every language, in the stamp face', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "Make the space between 'DAILY' and 'DOX' half as wide.
-   * And make sure this new website title is applied to all languages, it no
-   * longer gets translated, it stays constant as a stamp of branding."
+   * Author, 2026-08-28: "make sure this new website title is applied to all
+   * languages, it no longer gets translated, it stays constant as a stamp of
+   * branding."
    *
    * It superseded 2026-08-25's "change the title on header and loading screen
    * to the picked language" rather than reversing it: what that instruction was
    * fixing was a name hard-coded in index.html and stale by a rename, and the
-   * name still comes from one place — `BRAND` in ui/strings.js, which the packs
-   * no longer feed.
+   * name still comes from one place.
    *
-   * The gap is a space set at half the font size, which is half a space wide,
-   * because a glyph's advance scales with the size. That is why this can assert
-   * a ratio at all: it holds in whichever face the machine resolved.
+   * **The mark draws AGIOS since 2026-09-10** (author: "Replace the current
+   * wordmark SVG with 'AGIOS' set in the mockup's display font, converted to
+   * outlines"), and it is one word where it was two, so the half-space gap
+   * this test was written around — "Make the space between 'DAILY' and 'DOX'
+   * half as wide" — has nothing left to sit between. `scripts/make_wordmark.py`
+   * keeps the arithmetic for the day a second word comes back.
+   *
+   * **Its accessible name is deliberately still the site's**, which is the
+   * other half of that instruction: the mark is a mark, and Daily Dox is what
+   * the PWA manifest, the README and the `<title>` split all still say. So a
+   * pack that translated *either* fails here.
    */
   for (const language of ['en', 'ru', 'el']) {
     await ready(page, { language });
     await page.goto('/', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     /*
-     * **The stamp is outlines now** (author, 2026-08-28), so the face and the
-     * half-space gap are baked into the path rather than resolved at render:
-     * `scripts/make_wordmark.py` reads base.css's two numbers and draws the
-     * glyphs from src/fonts/gfs-nicefore.woff2. What this test still asserts is
-     * the part that is about the packs — that every language gets the same
-     * mark, and that none of them translates it.
+     * **The stamp is outlines** (author, 2026-08-28), so the face and the
+     * tracking are baked into the paths rather than resolved at render:
+     * `scripts/make_wordmark.py` reads base.css's numbers and draws the glyphs
+     * from src/fonts/gfs-nicefore.woff2. What this test still asserts is the
+     * part that is about the packs — that every language gets the same mark,
+     * and that none of them translates it.
      */
     const stamp = await page.evaluate(() => {
       const mark = document.querySelector('.site-name .brand-mark');
@@ -2476,10 +2483,10 @@ test('the name is a stamp: the same two words in every language, in the stamp fa
     });
     expect(stamp.label, `the ${language} pack translated the name`).toBe('Daily Dox');
     expect(stamp.text, `the ${language} pack printed the name as live text`).toBe('');
-    // Eight glyphs, one path each: the mark is the same drawing in every pack,
-    // where the face used to be scoped to English because the others printed
-    // accented names GFS Nicefore cannot set.
-    expect(stamp.paths, `the ${language} pack drew a different mark`).toBe(8);
+    // Five glyphs, one path each — A G I O S: the mark is the same drawing in
+    // every pack, where the face used to be scoped to English because the
+    // others printed accented names GFS Nicefore cannot set.
+    expect(stamp.paths, `the ${language} pack drew a different mark`).toBe(5);
     expect(stamp.width).toBeGreaterThan(0);
   }
 });
@@ -2868,15 +2875,14 @@ test('the header takes one measure on every route, and stops at Daily’s column
   }
 
   /*
-   * **The mark's *left* edge, not its whole box, since 2026-09-10.** Daily's
-   * masthead is deliberately 22 px where the rest of the site's is 34
-   * (docs/daily-desktop-visuals.md §2.2, `--text-mast-wide` scoped to the
-   * route), so its right edge is its own and asserting the whole rect would
-   * pin a decision this test is not about. What "one box on every route" ever
-   * meant is where the row *starts* and where it *ends* — the header's own
-   * box, the mark's left edge and the corner the row ends at. The size
-   * difference gets its own test below rather than riding here as an
-   * inequality nobody named.
+   * **The mark's whole rect again, since 2026-09-10.** It was narrowed to the
+   * left edge alone earlier the same day, when docs/daily-desktop-visuals.md
+   * §2.2 scoped `--text-mast-wide: 22px` to the Daily route and Daily's
+   * masthead was therefore a different size from the other three. The author
+   * reversed that within the day — one size everywhere — so the whole rect is
+   * the claim once more, and it is the stronger one: a left edge alone would
+   * pass a masthead that started in the right place at any size at all, which
+   * is exactly the state this line was relaxed into.
    *
    * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
    * Past 1024 px the Daily page's three controls are in the sidebar's head
@@ -2903,7 +2909,7 @@ test('the header takes one measure on every route, and stops at Daily’s column
   const [daily, ...site] = routes;
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
-    expect(seen[i].mark[0], `${route} starts the mark somewhere else`).toEqual(seen[0].mark[0]);
+    expect(seen[i].mark, `${route} draws the mark in its own box`).toEqual(seen[0].mark);
   }
   for (const [i, route] of site.entries()) {
     const s = seen[i + 1];
@@ -2933,70 +2939,89 @@ test('the header takes one measure on every route, and stops at Daily’s column
     .toBe('auto');
 });
 
-test('Daily wears a smaller, quieter masthead, and the bar it sits in does not move', async ({ page }) => {
+test('the masthead is one box on all six routes, at both widths and in both themes', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §2.2. Past 1024 px the Daily page becomes a
-   * reading column with a sidebar and the nav is that column's own head, so
-   * the masthead steps back: 22 px against the site's 34, and 74% of the way
-   * from the ground to the ink rather than full strength.
+   * Author, 2026-09-10: "Match the Daily page's site title to its size on
+   * every other route… one size everywhere", and "make sure it sits in the
+   * same place on all six routes. Shoot every route at 1280 and 1440 in both
+   * themes and prove the rect is identical, rather than asserting it from the
+   * CSS."
    *
-   * Three things are asserted because three separate things could have been
-   * done instead of this one, and each of the three has a cost the others do
-   * not:
+   * It replaces "Daily wears a smaller, quieter masthead", written earlier the
+   * same day for docs/daily-desktop-visuals.md §2.2's
+   * `html[data-route='calendar'] { --text-mast-wide: 22px }`. That scoping is
+   * gone; what survives of §2.2 is the *ink* — Daily's masthead is 74% of the
+   * way from the ground to the ink where the rest of the site's is at full
+   * strength — because only the size was reversed, and that half is asserted
+   * below rather than dropped with the rule it used to sit beside.
    *
-   *  - **The size is `--text-mast-wide`'s own value, scoped.** A third
-   *    `--text-mast-*` token fails `tests/plan.test.mjs` (its type table's
-   *    reverse check exempts two names and no more), so the token is read
-   *    back off the route rather than the font-size being read off the mark:
-   *    a rule that set `font-size` directly would pass a size assertion and
-   *    quietly leave the token behind.
-   *  - **It is Daily's alone**, at this width alone. The mark on `/saints` is
-   *    untouched, and so is Daily's own at 900 px.
-   *  - **The bar does not shrink with it.** `--chrome-h-reserve` holds
-   *    `header.chrome`'s min-height at every route, which is what keeps the
-   *    full-screen calendar's geometry (`daily-picker.spec.js`) and the two
-   *    heads this rebuild has to level from moving. A smaller mark inside an
-   *    unchanged bar is the whole claim.
+   * **Measured, not read off the token, and that is the instruction.** A
+   * `--text-mast-wide` assertion passes on a route whose masthead a second
+   * rule then sets in pixels, and it says nothing at all about *where* the
+   * mark lands. So this reads the drawn box on every route — six routes × two
+   * widths × two themes, 24 readings — and requires the twelve at each width
+   * to be one rect.
+   *
+   * **Both themes, because the mark is a picture of a word.** It is
+   * `fill: currentColor` over paths whose advances are baked in, so a theme
+   * cannot move it — which is a claim worth failing on rather than assuming,
+   * since it is the kind of thing a route-scoped colour rule with a different
+   * font-size in it would break silently.
    */
+  const routes = ['/calendar/2026-09-05', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
   await ready(page);
-  await page.setViewportSize({ width: 1280, height: 900 });
+  await coldFace(page);
 
-  const read = async (route) => {
-    await page.goto(route, { waitUntil: 'networkidle' });
-    await page.evaluate(() => document.fonts.ready);
-    return page.evaluate(() => {
-      const name = document.querySelector('.site-name');
-      const bar = document.querySelector('header.chrome').getBoundingClientRect();
-      return {
-        token: getComputedStyle(document.documentElement).getPropertyValue('--text-mast-wide').trim(),
-        size: getComputedStyle(name).fontSize,
-        colour: getComputedStyle(name).color,
-        markWidth: Math.round(name.querySelector('.brand-mark').getBoundingClientRect().width),
-        barHeight: Math.round(bar.height),
-      };
-    });
-  };
+  const readings = [];
+  for (const width of [1280, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const dark of [false, true]) {
+      for (const route of routes) {
+        await page.goto(route, { waitUntil: 'networkidle' });
+        await page.evaluate(() => document.fonts.ready);
+        if (dark !== (await page.evaluate(() => document.documentElement.classList.contains('dark')))) {
+          await page.locator('#theme-toggle').click();
+          // The cross-fade is 300 ms of colour and moves no box, but the press
+          // is a real click and the next read should not race it.
+          await page.waitForTimeout(400);
+        }
+        readings.push({
+          where: `${route} @ ${width} ${dark ? 'vigil' : 'day'}`,
+          width,
+          ...(await page.evaluate(() => {
+            const mark = document.querySelector('header.chrome .site-name .brand-mark');
+            const r = mark.getBoundingClientRect();
+            return {
+              rect: [r.left, r.top, r.width, r.height].map((n) => Math.round(n * 100) / 100),
+              size: getComputedStyle(mark.closest('.site-name')).fontSize,
+              paths: mark.querySelectorAll('path').length,
+              label: mark.getAttribute('aria-label'),
+              ink: getComputedStyle(mark.closest('.site-name')).color,
+            };
+          })),
+        });
+      }
+    }
+  }
 
-  const daily = await read('/calendar/2026-09-05');
-  const saints = await read('/saints');
+  for (const width of [1280, 1440]) {
+    const here = readings.filter((r) => r.width === width);
+    const first = here[0];
+    for (const r of here) {
+      expect(r.rect, `${r.where} draws the masthead in its own box, not ${first.where}'s`).toEqual(first.rect);
+      expect(r.size, `${r.where} sets the masthead at its own size`).toEqual(first.size);
+      expect(r.paths, `${r.where} draws a different mark`).toEqual(first.paths);
+      expect(r.label, `${r.where} names the mark something else`).toEqual(first.label);
+    }
+    // The premise: a mark of zero width would satisfy every equality above.
+    expect(first.rect[2], `the masthead has no width at ${width}`).toBeGreaterThan(40);
+  }
 
-  expect(saints.token, 'premise: the site-wide mast token is not 34 px').toBe('34px');
-  expect(daily.token, 'Daily does not scope --text-mast-wide').toBe('22px');
-  expect(daily.size, 'the mark does not follow the token').toBe('22px');
-  expect(daily.markWidth, 'the drawn mark is not smaller than the rest of the site’s').toBeLessThan(
-    saints.markWidth,
-  );
-  expect(daily.colour, 'Daily’s masthead is at full ink like every other route’s').not.toBe(saints.colour);
-  expect(daily.barHeight, 'the bar shrank with the mark').toBe(saints.barHeight);
-
-  // And below the breakpoint the phone's masthead is untouched: the whole of
-  // this is the desktop's two-column reading, which a 360 px page does not have.
-  await page.setViewportSize({ width: 900, height: 900 });
-  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
-  const narrow = await page.evaluate(() =>
-    getComputedStyle(document.documentElement).getPropertyValue('--text-mast-wide').trim(),
-  );
-  expect(narrow, 'the Daily scoping reaches below 1024 px').toBe('34px');
+  // §2.2's surviving half: Daily's ink alone is a step back from the rest.
+  const inkOn = (route) => readings.find((r) => r.where.startsWith(`${route} @ 1280 day`)).ink;
+  expect(inkOn('/calendar/2026-09-05'), 'Daily’s masthead is at full ink like every other route’s')
+    .not.toBe(inkOn('/saints'));
+  expect(inkOn('/map'), 'a route other than Daily quietened its masthead').toBe(inkOn('/saints'));
 });
 
 test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', async ({ page }) => {
@@ -3024,6 +3049,16 @@ test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', a
    *    still spanning the page would have three live controls lying under an
    *    invisible sheet. Asserting the geometry is not enough for that one, so
    *    the church control is asked what is on top of it at its own centre.
+   *
+   * **And a fourth since 2026-09-10**: the bubble stands off the ceiling
+   * rather than touching it (author: "The sidebar's top currently touches the
+   * ceiling of the page. Give it a margin, and keep the two heads level"). It
+   * rode into the bar's band at `top: 0` when the two heads were levelled
+   * earlier the same day. The inset is `--bub-inset` on `.cal-bubble` and the
+   * fill gives up the same amount of its own top padding, so the rule at the
+   * head's foot does not move — which is why the margin and the levelling are
+   * asserted in one test rather than two: they are one arithmetic, and either
+   * one alone can be satisfied by breaking the other.
    *
    * At both widths, and in a wide utility face: every box here is sized from
    * text and `--chrome-h-reserve` is a measured constant.
@@ -3056,6 +3091,9 @@ test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', a
     const at = `at ${width} px`;
     expect(Math.abs(m.navRule - m.headRule), `the two rules are ${m.navRule} and ${m.headRule} ${at}`).toBeLessThan(1);
     expect(m.sideTop, `the sidebar still starts below the bar ${at}`).toBeLessThan(m.barBottom);
+    // A real margin: `--space-4`, the same inset `main` already pays at the
+    // foot, and read off the drawn box rather than off the declaration.
+    expect(m.sideTop, `the sidebar's top touches the ceiling ${at}`).toBeCloseTo(16, 0);
     // 8 px under the bar — `--headgap`, and where the date has stood since
     // step 7. Stated as a number because the whole claim is that it did not
     // move when everything around it did.

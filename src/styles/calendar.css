@@ -1283,6 +1283,24 @@
     /* The bite, in one place: the polygon below and the four crosses all read
        it, so the notch is one number rather than nine. */
     --notch: 20px;
+    /*
+     * **How far the box stands off the ceiling** (author, 2026-09-10: the
+     * sidebar's top touches it). `--space-4` is the same inset `main.chrome`
+     * already pays at the foot (base.css, `data-fills-window`), so the bubble
+     * sits in the page's own margin rather than in one invented for it.
+     *
+     * **The two heads stay level for any value of this**, and that is why it
+     * is a name and not a number. What must equal `--chrome-h-reserve` is the
+     * distance from the ceiling to the head's rule, and it is spent in three
+     * parts: this inset, then the fill's top padding, then the head's band.
+     * The fill takes `--space-4` less this, and the head takes
+     * `--chrome-h-reserve` less `--space-4`, so the inset cancels out of the
+     * sum. Raise it and the fill's padding pays; the rule does not move.
+     * `chrome.spec.js` asserts the two rules land on one line, and
+     * `daily-panel.spec.js` asserts the margin is really there.
+     */
+    --bub-inset: var(--space-4);
+    margin-top: var(--bub-inset);
     /* Undoing the `display: contents` above, and it has to be said: without it
        the fill becomes the grid item, the placement below applies to nothing,
        and the four crosses — absolutely positioned, with no positioned
@@ -1477,6 +1495,11 @@
     flex-direction: column;
     height: 100%;
     padding: var(--space-4);
+    /* The half of the levelling identity this box owns: what the bubble spent
+       standing off the ceiling, it does not spend again inside itself, so the
+       head's band — and the rule at its foot — is where it was. `--bub-inset`
+       on `.cal-bubble` is the whole argument. */
+    padding-top: calc(var(--space-4) - var(--bub-inset));
     box-sizing: border-box;
     background: var(--bub);
     clip-path: polygon(

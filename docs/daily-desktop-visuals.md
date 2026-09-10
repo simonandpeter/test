@@ -1456,3 +1456,55 @@ reader lands on `/saints` cold.
   Пн/Пт or Δευ/Δεv. Not a divergence to close.
 - **The liturgy line's order is §10.11's**, fast chip first, where the mockup
   puts it last. Recorded because it reads as an oversight and is not one.
+
+### 10.21 Reversed and added by the author, 2026-09-10 (after §10.20)
+
+Three instructions arrived after the plan was closed. They override §§0–10.20
+where they disagree.
+
+- **One masthead size everywhere.** §2.2, §10.8 and §7's type table all called
+  for 22 px on Daily, scoped as `html[data-route='calendar'] { --text-mast-wide:
+  22px }` — read off the mockup, argued from the page's new shape, and built in
+  sitting A. The author reversed it in words: "Match the Daily page's site title
+  to its size on every other route… one size everywhere." The scoping is gone
+  and the token is 34 px on all six routes.
+  **What survives of §2.2 is the ink**, which was a second decision and was not
+  reversed: Daily's masthead is still 74% of the way from the ground to the ink.
+  `chrome.spec.js`'s four-route header comparison asserts the mark's whole rect
+  again, where §10.15 had narrowed it to the left edge to allow the difference.
+- **The wordmark is AGIOS.** The mockup's own `.nav b` is `Agios` in
+  `--disp` — `'GFS Nicefore'`, the same `--font-display` this site already
+  ships and preloads nowhere, at `src/fonts/gfs-nicefore.woff2`. So the
+  conversion is the one this repo already does:
+  `scripts/make_wordmark.py` draws the glyphs to paths from that file, and only
+  its `WORDS` changed. **`Agios` and `AGIOS` are the same five outlines** — the
+  face is a titling one and its lowercase codepoints map to the capital glyphs,
+  `a` and `A` sharing a glyph and an advance — so the mockup's mixed case and
+  the author's caps are not a choice to make.
+  **The accessible name stays "Daily Dox"** (author: "Keep the SVG's accessible
+  name"), which is what the PWA manifest, `README.md`, `docs/APP.md`, the export
+  format and Amendment 31's `<title>` split all still say. `LABEL` in the
+  generator is separate from `WORDS` and says why.
+  **Measured, because an outlined mark can be large**: the SVG is 2,628 bytes
+  against the two-word one's 3,378, so five glyphs cost **750 bytes less** than
+  eight. `vite.config.js` inlines it into both of index.html's slots, so the
+  served HTML drops 1,500. None of it touches the entry stylesheet, which is
+  where §10.18's first-paint step actually is.
+- **The sidebar stands off the ceiling.** §2.2's levelling put the bubble at
+  `top: 0`, in the band the bar leaves. It now has `--bub-inset: var(--space-4)`
+  — the same 16 px `main.chrome` already pays at the foot — and the fill gives
+  up exactly that much of its own top padding, so the head's band and the rule
+  at its foot do not move. **The levelling is an identity rather than a
+  coincidence**: inset + (`--space-4` − inset) + (`--chrome-h-reserve` −
+  `--space-4`) is `--chrome-h-reserve` whatever the inset is, and
+  `chrome.spec.js` asserts the margin and the level line in one test because
+  either can be satisfied by breaking the other.
+
+**Proved by shooting, not by reading the CSS**, which is what the instruction
+asked for: the mark's rect is `32, 14.45, 103.23, 30.59` on all six routes at
+1280 and at 1440 in both themes — 24 readings, one rect. The drawn pixels are
+identical on four of the six; `/map` and `/about` differ by 441 and 338
+subpixels of 39,936, all of them on the curves of the final **S**, where the
+mark's fractional right edge (103.23 px, 206.46 device px at 2×) falls inside
+the last column. It is rasterisation and not position: a shift would light up
+every stem, and the mask lights one glyph.

@@ -1,26 +1,39 @@
-"""Render the BRAND wordmark to an SVG path, from the stamp face's own outlines.
+"""Render the masthead to SVG paths, from the stamp face's own outlines.
 
 The masthead used to be live text in GFS Nicefore at `font-display: swap`, and
 that face is the only one in the project that is not preloaded — so a cold load
 showed Literata until the file landed and then swapped. A path has no such
-window.
+window, which is the whole reason this script exists.
 
-Run it again if BRAND, the face, or the letter-spacing changes:
+Run it again if WORDS, LABEL, the face, or the letter-spacing changes:
 
     python scripts/make_wordmark.py
 
 It writes src/ui/wordmark.js. The geometry mirrors base.css exactly:
-letter-spacing 0.04em between adjacent glyphs, and the gap between the two words
-is a space set at 0.5em, whose advance is therefore half the space's own.
+letter-spacing 0.04em between adjacent glyphs, and — when WORDS holds more than
+one — a gap that is a space set at 0.5em, whose advance is therefore half the
+space's own.
 """
 
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 
 FONT = 'src/fonts/gfs-nicefore.woff2'
-WORDS = ['Daily', 'Dox']
+# What is drawn, since 2026-09-10 (author: replace the wordmark with "AGIOS"
+# set in the mockup's display face). The mockup writes it `Agios`, which is the
+# same five outlines: GFS Nicefore is a titling face and its lowercase
+# codepoints map to the capital glyphs — `a` and `A` are one glyph with one
+# advance — so the case of this string changes nothing about the drawing.
+WORDS = ['AGIOS']
+# **The accessible name is the site's, and it is deliberately not the word
+# drawn** (author, 2026-09-10: "Keep the SVG's accessible name"). The mark is a
+# mark; the site is Daily Dox in its PWA manifest, its README, its export
+# format and the `<title>` split Amendment 31 made, none of which this change
+# touches. A screen reader following the masthead's link is told where the link
+# goes rather than what the picture spells.
+LABEL = 'Daily Dox'
 TRACKING = 0.04   # base.css: .site-name letter-spacing
-GAP_EM = 0.5      # base.css: .brand-gap font-size
+GAP_EM = 0.5      # base.css: .brand-gap font-size, if WORDS is ever two again
 
 font = TTFont(FONT)
 upem = font['head'].unitsPerEm
@@ -53,12 +66,13 @@ ascent = font['OS/2'].sTypoAscender
 descent = font['OS/2'].sTypoDescender
 width = x
 
+DRAWN = ' '.join(WORDS)
 body = ''.join(parts)
 # y is flipped: font outlines run upwards from the baseline, SVG runs down.
 svg = (
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 {-ascent} {width:.2f} {ascent - descent}" '
     f'style="height:{(ascent - descent) / upem}em" '
-    f'role="img" aria-label="{" ".join(WORDS)}" focusable="false" class="brand-mark">'
+    f'role="img" aria-label="{LABEL}" focusable="false" class="brand-mark">'
     f'<g transform="scale(1 -1)" fill="currentColor">{body}</g></svg>'
 )
 
@@ -75,10 +89,15 @@ out = f'''/**
  * opens with literata on loading screen and title before updating to the new
  * font"). A path has no loading window at all.
  *
+ * **It draws {DRAWN} and it is named {LABEL}, on purpose** (author, 2026-09-10).
+ * The mark is the mockup's, in the mockup's own display face; the accessible
+ * name is the site's, which the PWA manifest, the README and the `<title>`
+ * split all still carry. `scripts/make_wordmark.py` argues both.
+ *
  * The geometry is base.css's: {TRACKING}em between adjacent glyphs, and the gap
- * between the words is a space set at {GAP_EM}em. `fill: currentColor` keeps it
- * following the ink it sits in, and the viewBox scales it to whatever font-size
- * its box is given.
+ * between two words, if there are ever two again, is a space set at {GAP_EM}em.
+ * `fill: currentColor` keeps it following the ink it sits in, and the viewBox
+ * scales it to whatever font-size its box is given.
  */
 export const WORDMARK = `{svg}`;
 
