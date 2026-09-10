@@ -2781,12 +2781,23 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
    *
    * **`.cal-bubble` and not `.cal-controls` since 2026-09-10.** The picker is
    * inside the bubble's padding now, sixteen pixels down, so the two boxes
-   * that are grid items in the same row are what can be asked to agree — and
-   * being grid items they agree exactly rather than within four pixels.
+   * that are grid items in the same row are what can be asked to agree.
+   *
+   * **And they no longer agree at the top either, since the bar became the
+   * left column's own head** (§2.2, last piece): the bubble rises into the
+   * bar's band to carry its own head level with the nav's, and the left
+   * column starts under the bar because that is where its head ends. What is
+   * still one row is where the two *end*. Asserted against the bar rather
+   * than against a number, so a bubble that simply drifted up would fail it.
    */
   const bubble = await boxOf('.cal-bubble');
-  expect(Math.abs(bubble.y - main.y), 'the right column does not start level with the left').toBeLessThan(1);
-  expect(Math.abs(bubble.height - main.height), 'the two columns are not the same height').toBeLessThan(1);
+  const bar = await boxOf('.chrome-bar');
+  expect(bubble.y, 'the bubble does not rise into the bar’s band').toBeLessThan(bar.y + bar.height);
+  expect(main.y, 'the left column does not start under the bar').toBeGreaterThan(bar.y + bar.height - 1);
+  expect(
+    Math.abs(bubble.y + bubble.height - (main.y + main.height)),
+    'the two columns do not end on one line',
+  ).toBeLessThan(1);
 
   const top = await boxOf('.cal-controls');
   expect(top.y, 'the picker is not inside the bubble it sits in').toBeGreaterThan(bubble.y);
@@ -3311,11 +3322,23 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
       nav: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
       name: parseFloat(getComputedStyle(document.querySelector('.site-name')).fontSize),
       mark: document.querySelector('.site-name').getBoundingClientRect().left,
-      corner: document.querySelector('.chrome-corner').getBoundingClientRect().right,
       left: document.querySelector('.cal-main')?.getBoundingClientRect().left,
       // `.cal-bubble` since 2026-09-10: the right column's margin is the
       // bubble's own edge, and `.cal-side` is a box inside its padding.
       right: document.querySelector('.cal-bubble')?.getBoundingClientRect().right,
+      /*
+       * **The last of the three controls, not `.chrome-corner`, since
+       * 2026-09-10.** The corner is an empty point on Daily now — the three
+       * live in the sidebar's head (§2.2 route (c)) — and since the bar
+       * became the left column's own head that point is on the *left*
+       * column's margin, which is a different claim with its own test in
+       * `chrome.spec.js`. The author's alignment survives the move intact;
+       * it is simply carried by the controls themselves.
+       */
+      end: document.getElementById('theme-toggle').getBoundingClientRect().right,
+      inset:
+        parseFloat(getComputedStyle(document.querySelector('.cal-bubble-fill') ?? document.body).paddingRight) +
+        parseFloat(getComputedStyle(document.querySelector('.cal-bubble-head') ?? document.body).paddingRight),
     }));
   };
 
@@ -3330,7 +3353,11 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
   // the right column ends.
   const wide = await measure('/calendar/2026-09-24', 1440);
   expect(Math.abs(wide.mark - wide.left), 'the mark is not on the left column margin').toBeLessThan(2);
-  expect(Math.abs(wide.corner - wide.right), 'the controls do not end on the right column margin').toBeLessThan(2);
+  expect(wide.end, 'the controls run past the right column’s margin').toBeLessThan(wide.right);
+  expect(
+    wide.right - wide.end,
+    `the controls stand ${wide.right - wide.end} px off the right column margin, not the bubble's own ${wide.inset}`,
+  ).toBeCloseTo(wide.inset, 0);
 });
 
 

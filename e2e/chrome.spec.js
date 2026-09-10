@@ -2816,7 +2816,7 @@ test('a file that is not an export changes nothing and says so', async ({ page }
   await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
 });
 
-test('the four routes lay the header out in one box, scrollbar or no scrollbar', async ({ page }) => {
+test('the header takes one measure on every route, and stops at Daily’s column', async ({ page }) => {
   /*
    * Author, 2026-09-01: "The header on Daily and Map page are different widths
    * from the All Saints and About page, make sure they are the same."
@@ -2849,11 +2849,19 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
           const b = document.querySelector(s).getBoundingClientRect();
           return [Math.round(b.left), Math.round(b.right)];
         };
+        const css = getComputedStyle(document.documentElement);
         return {
-          gutter: getComputedStyle(document.documentElement).scrollbarGutter,
+          gutter: css.scrollbarGutter,
           header: r('header.chrome'),
           mark: r('header.chrome .site-name'),
           corner: r('header.chrome .chrome-corner'),
+          // Daily alone: the left column the bar is now the head of, and the
+          // sidebar whose width and gutter are what came out of the measure.
+          // Measured off the boxes rather than read off `--side-w`, which is
+          // `19rem` and does not compute to pixels through a custom property.
+          bar: r('.chrome-bar'),
+          column: document.querySelector('.cal-main') ? r('.cal-main') : null,
+          side: document.querySelector('.cal-bubble') ? r('.cal-bubble') : null,
         };
       }),
     );
@@ -2866,9 +2874,9 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
    * route), so its right edge is its own and asserting the whole rect would
    * pin a decision this test is not about. What "one box on every route" ever
    * meant is where the row *starts* and where it *ends* — the header's own
-   * box, the mark's left edge and the corner the row ends at — and all three
-   * are still identical. The size difference gets its own test below rather
-   * than riding here as an inequality nobody named.
+   * box, the mark's left edge and the corner the row ends at. The size
+   * difference gets its own test below rather than riding here as an
+   * inequality nobody named.
    *
    * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
    * Past 1024 px the Daily page's three controls are in the sidebar's head
@@ -2878,13 +2886,39 @@ test('the four routes lay the header out in one box, scrollbar or no scrollbar',
    * content edge — which is the number this line has always been standing for.
    * Where those controls went is asserted on Daily itself, in
    * `daily-panel.spec.js`, rather than inferred from a width here.
+   *
+   * **And Daily's row now *ends* somewhere else on purpose, since 2026-09-10**
+   * (§2.2's last open piece): past 1024 px the bar is that page's left column's
+   * own head, so its box stops where the column does and the sidebar stands
+   * beside it rather than under it. That is the one difference between the
+   * four routes this test is allowed to have, and it is asserted as a
+   * *derivation* rather than excused — the row ends at the column's own right
+   * edge, and the distance back to where the other three end is exactly the
+   * sidebar and the gutter between them. A bar that simply lost 336 px would
+   * pass a constant and fail this.
+   *
+   * The three site routes keep the whole of what this test was written for:
+   * one box, one measure, whether or not the page under them scrolls.
    */
+  const [daily, ...site] = routes;
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
-    expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
     expect(seen[i].mark[0], `${route} starts the mark somewhere else`).toEqual(seen[0].mark[0]);
-    expect(seen[i].corner[1], `${route} ends the header row somewhere else`).toEqual(seen[0].corner[1]);
   }
+  for (const [i, route] of site.entries()) {
+    const s = seen[i + 1];
+    expect(s.header, `${route} lays the header out in its own box`).toEqual(seen[1].header);
+    expect(s.corner[1], `${route} ends the header row somewhere else`).toEqual(seen[1].corner[1]);
+  }
+
+  const d = seen[0];
+  expect(d.column, `premise: ${daily} draws no left column at 1280`).not.toBeNull();
+  expect(d.bar[1], `${daily} does not stop the bar at the left column`).toBe(d.column[1]);
+  expect(d.corner[1], `${daily} ends the header row past its own column`).toBe(d.column[1]);
+  expect(
+    seen[1].corner[1] - d.corner[1],
+    `${daily} gives up ${seen[1].corner[1] - d.corner[1]} px where the sidebar and its gutter are ${d.side[1] - d.column[1]}`,
+  ).toBe(d.side[1] - d.column[1]);
 
   /*
    * And not on a phone, which the author scoped out ("make sure 5 6 7 are on
@@ -2963,6 +2997,71 @@ test('Daily wears a smaller, quieter masthead, and the bar it sits in does not m
     getComputedStyle(document.documentElement).getPropertyValue('--text-mast-wide').trim(),
   );
   expect(narrow, 'the Daily scoping reaches below 1024 px').toBe('34px');
+});
+
+test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §2.2, the last piece of it. In the mockup
+   * the nav sits *inside* the grid's first column, so its rule and the rule
+   * under the sidebar's control row are the same line across the gutter. In
+   * the app the bar is a sibling of `main`, above the whole grid, and until
+   * 2026-09-10 the sidebar therefore began a head below it.
+   *
+   * **Three things are asserted because three separate mistakes would each
+   * look right in one of the others' pictures.**
+   *
+   *  - **The rules are level**, which is the change. Their foots, not their
+   *    tops: the bar's is a `border-bottom` inside a `min-height` box and the
+   *    head's is a `border-bottom` inside a `min-height` box, and it is the
+   *    line the reader sees that has to agree.
+   *  - **Nothing in the left column moved.** `main` rose by the bar's own
+   *    reserve and the column pays it straight back as a top margin, so the
+   *    date block starts exactly where it did. A change that levelled the two
+   *    by dropping the sidebar's head lower, or by lifting the whole page,
+   *    would pass the first assertion and fail this one.
+   *  - **The sidebar is clear of the bar's box.** The bar is `position:
+   *    sticky` at `z-index: 20`; a bubble raised into its band under a bar
+   *    still spanning the page would have three live controls lying under an
+   *    invisible sheet. Asserting the geometry is not enough for that one, so
+   *    the church control is asked what is on top of it at its own centre.
+   *
+   * At both widths, and in a wide utility face: every box here is sized from
+   * text and `--chrome-h-reserve` is a measured constant.
+   */
+  await ready(page);
+  for (const width of [1280, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+
+    const m = await page.evaluate(() => {
+      const foot = (s) => {
+        const el = document.querySelector(s);
+        const b = el.getBoundingClientRect();
+        // The rule is the border, and the border's own foot is the box's.
+        return b.bottom;
+      };
+      const church = document.querySelector('#church-open').getBoundingClientRect();
+      const onTop = document.elementFromPoint(church.left + church.width / 2, church.top + church.height / 2);
+      return {
+        navRule: foot('header.chrome'),
+        headRule: foot('.cal-bubble-head'),
+        dateTop: document.querySelector('.cal-head').getBoundingClientRect().top,
+        barBottom: document.querySelector('.chrome-bar').getBoundingClientRect().bottom,
+        sideTop: document.querySelector('.cal-bubble').getBoundingClientRect().top,
+        reaches: onTop ? onTop.closest('#church-open') !== null : false,
+      };
+    });
+
+    const at = `at ${width} px`;
+    expect(Math.abs(m.navRule - m.headRule), `the two rules are ${m.navRule} and ${m.headRule} ${at}`).toBeLessThan(1);
+    expect(m.sideTop, `the sidebar still starts below the bar ${at}`).toBeLessThan(m.barBottom);
+    // 8 px under the bar — `--headgap`, and where the date has stood since
+    // step 7. Stated as a number because the whole claim is that it did not
+    // move when everything around it did.
+    expect(m.dateTop - m.barBottom, `the date block moved with the sidebar ${at}`).toBeCloseTo(8, 0);
+    expect(m.reaches, `the bar's box lies over the sidebar's own controls ${at}`).toBe(true);
+  }
 });
 
 test('a press outside a chooser closes it', async ({ page }) => {

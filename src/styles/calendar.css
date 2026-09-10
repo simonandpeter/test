@@ -1114,9 +1114,11 @@
      above already promised the left column "takes all the slack", and a
      fixed right column is what actually keeps that promise rather than
      sharing it out in the middle of the range. */
+  /* The two numbers themselves are `--side-w` and `--day-gap` on the route
+     below: the site's bar has to measure itself against this column and it
+     sits outside the grid, so the width cannot live on the box that uses it. */
   .cal {
-    --day-cols: minmax(0, 1fr) 19rem;
-    --day-gap: var(--space-8);
+    --day-cols: minmax(0, 1fr) var(--side-w);
     display: grid;
     grid-template-columns: var(--day-cols);
     /* One row, since 2026-09-10. It was two — `auto minmax(0, 1fr)`, the
@@ -1172,9 +1174,11 @@
    * the mark itself, where the nav's margin and the rule's margin read them
    * from an ancestor that never set them and fell through to their literal
    * fallbacks; §2.3 corrects that to `.cal`. But the gap above the date is
-   * `main.chrome`'s own top padding here — the nav is the site's bar, outside
-   * the grid — and `.cal` is inside that box, not around it. The route is the
-   * one element both are under.
+   * measured from the site's bar, which sits outside the grid, and `.cal` is
+   * inside that box rather than around it. The route is the one element both
+   * are under — and it is where `--side-w` and `--day-gap` have to live for
+   * the same reason: the bar measures itself against the sidebar's column
+   * (below) and cannot read a property declared on the grid it is not in.
    *
    * `--rulegap` is `--space-1` and not §6's 8 px. The author asked for that gap
    * *closer* on 2026-08-26 ("make the gold line on daily page ... closer to the
@@ -1184,20 +1188,78 @@
    * instruction in words beats a number read off a redraw.
    */
   html[data-route='calendar'] {
+    --side-w: 19rem;
+    --day-gap: var(--space-8);
     --headgap: var(--space-2);
     --rulegap: var(--space-1);
   }
 
-  /* The page starts `--headgap` under the nav rule, where every other route
-     starts `--space-6` below the bar (base.css). The date is the first thing in
-     it, so this gap is the one §6's table names. */
+  /*
+   * **The bar is the left column's head, and the grid starts at the glass**
+   * (docs/daily-desktop-visuals.md §2.2 — the last open piece of it).
+   *
+   * Two things had to happen together, which is why they are one block. The
+   * bar's *box* is narrowed to the left column, so its rule stops where the
+   * column does instead of running on under the sidebar; and the sidebar is
+   * then free to rise into the band the bar leaves, so its own head's rule
+   * lands on the same line. Neither is any use alone: a narrowed bar over a
+   * bubble that still begins below it draws two rules a head apart, and a
+   * bubble raised under a full-width bar is a bubble with a sticky,
+   * `z-index: 20` box lying over its three controls.
+   *
+   * **The raising is done by moving `main`, not by a negative margin on the
+   * bubble.** §2.2 proposed the latter and it cannot work: `main.chrome` is
+   * `overflow: hidden` at this width (base.css, `data-fills-window`), so a
+   * grid item hanging above its own container's top edge is simply cut off.
+   * `main` takes the whole glass instead — up under the bar by the bar's
+   * declared height — and the *left* column pays the offset back as a top
+   * margin, so the date and everything under it stand exactly where they did
+   * and only the sidebar moves.
+   *
+   * **`--chrome-h-reserve`, not the measured `--chrome-h`.** The reserve is
+   * `header.chrome`'s own `min-height`, so it is what the bar is before a
+   * line of JavaScript runs and what it stays at this width; the measured
+   * value is rounded to whole pixels by the observer that publishes it and
+   * would put this grid half a pixel out on every load. Nothing here grows
+   * into place.
+   */
   html[data-route='calendar'] main.chrome {
-    padding-top: var(--headgap);
+    height: 100dvh;
+    margin-top: calc(-1 * var(--chrome-h-reserve));
+    padding-top: 0;
   }
 
+  /*
+   * The bar's own box, in the same measure the grid uses: the page's margin
+   * on the left, and the sidebar's column plus the gutter taken off the
+   * right. `min()` and `max()` rather than a media query because `--page-max`
+   * is 2000 px and the window may be wider than it — past that the measure
+   * is centred and the bar has to follow it, which a plain percentage does
+   * not. The percentages are of `.chrome-bar`'s own containing block, which
+   * is the body's content box, so this reads the same width the grid does
+   * and neither of them can see the scrollbar's gutter.
+   */
+  html[data-route='calendar'] .chrome-bar {
+    box-sizing: border-box;
+    margin-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad)));
+    width: calc(min(100%, var(--page-max)) - 2 * var(--page-pad) - var(--side-w) - var(--day-gap));
+  }
+
+  /* And the header inside it must not inset itself a second time: the bar's
+     box already is the column's, so base.css's `--page-pad` either side would
+     hold the masthead and the rule a page margin in from the column they are
+     the head of. */
+  html[data-route='calendar'] header.chrome {
+    padding-inline: 0;
+  }
+
+  /* The gap §6's table names, paid where it is now owed: the left column
+     begins under the bar rather than the whole page beginning under it. Every
+     other route starts `--space-6` below the bar (base.css). */
   .cal-main {
     grid-column: 1;
     grid-row: 1;
+    margin-top: calc(var(--chrome-h-reserve) + var(--headgap));
   }
 
   /*
@@ -1246,20 +1308,34 @@
    * site's own bar, which is where they are for every other route at every
    * width.
    *
-   * **`--space-3` under it, not the mockup's 13 px.** That 13 was derived —
-   * it is what lands this rule on the nav's own rule — and the derivation
-   * needs the two heads to be level, which they are not yet: the site's bar
-   * still spans the page above the grid rather than sitting in the left
-   * column, which is §2.2's second open question and a commit of its own. A
-   * number whose derivation does not hold is a number off the scale, so it
-   * goes back on it.
+   * **Its height is the bar's, less the bubble's own top padding**, and that
+   * is the whole of what levels the two rules. The mockup put 13 px under the
+   * controls; 13 was derived rather than chosen — it is what landed this rule
+   * on the nav's — and until 2026-09-10 the derivation did not hold here,
+   * because the site's bar spanned the page above the grid instead of sitting
+   * in the left column. It holds now, so the derivation is written down
+   * instead of its answer: the head fills the band the bar leaves, the
+   * controls are centred in it, and the rule at its foot is the bar's own
+   * rule continued across the gutter. Change `--chrome-h-reserve` or the
+   * fill's padding and the two stay level by construction.
+   *
+   * `min-height`, not `height`: the reserve is the bar's floor too, so if a
+   * face or a pack ever grows the row past it both boxes grow rather than one
+   * clipping. `chrome.spec.js` asserts the two rules land on one line.
    */
   .cal-bubble-head {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    /* The row keeps its own height and is centred in the band, rather than
+       being stretched to it. The theme switch takes its height from the row
+       by `align-self: stretch` (§10.15), so a stretched row would make it the
+       only control as tall as the bar — which is what the equality in
+       `daily-panel.spec.js` caught the moment the band grew. */
+    align-content: center;
+    box-sizing: border-box;
+    min-height: calc(var(--chrome-h-reserve) - var(--space-4));
     padding-inline: var(--space-6);
-    padding-bottom: var(--space-3);
     margin-bottom: var(--space-2);
     border-bottom: 1px solid var(--rule);
   }
