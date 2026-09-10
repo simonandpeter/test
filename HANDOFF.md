@@ -13,8 +13,10 @@ them findings rather than features.
 - **`main` is green and deployed.** Every push on 2026-09-09 and 2026-09-10
   went green, and the last three of 2026-09-10 carried **no `flaky` line at
   all**.
-- **379 unit tests** in ~2 s. **932 browser tests** in ~4.5 min here, ~14 min on
-  CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor.
+- **382 unit tests** in ~2 s. **944 browser tests** in ~4.8 min here, ~15 min on
+  CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor. **The entry
+  stylesheet is 72,562 bytes against `ENTRY_CSS_CEILING` 73,000** — the gate
+  that fires before the four routes do and names the file (§10.22).
 - **862 saints** (2026-09-08), every one with a life; 1,221 attestations; 126
   undated; 130 icons; 430 hymns. 97 located, ten with a dated track. The corpus
   reaches 28 September 2026. **144 day records**, 23 Aug 2026 – 13 Jan 2027.
@@ -108,14 +110,30 @@ own `saint.json` — so the client cannot derive it. If the budget bites, the
 move is a separate reverse-index file fetched with the saint detail rather than
 by every page.
 
-## The desktop Daily rebuild, 2026-09-10 — built
+## The desktop Daily rebuild, 2026-09-10 — built, then revised four times
 
-**`docs/daily-desktop-visuals.md` is done.** Every numbered step is on `main`
-across five sittings; **§10.20 is the closing record** and the only part of
-that document a new reader has to start with. The page past 1024 px is now a
-reading column with the site's bar as its own head, and a filled sidebar bubble
-level with it carrying the chrome controls, the month, the readings, the hymns
-and the name days.
+**`docs/daily-desktop-visuals.md` is done and the author has been over it.**
+Every numbered step is on `main` across five sittings, and four rounds of
+author instructions have landed on top of the finished page. **§10.25 is the
+closing record** — §10.20 is *sitting E's* record and is where the plan ended,
+which is not where the page is: §§10.21–10.25 reverse four of its decisions.
+Read §10 back to front. The page past 1024 px is a reading column with the
+site's bar as its own head, and a filled sidebar bubble level with it carrying
+the chrome controls, the month, the readings, the hymns and the name days.
+
+**The author's four rounds, in order.** One masthead size everywhere, the
+AGIOS wordmark and the sidebar's inset (§10.21); the hero's 3:2 crop at 34%
+(§10.23); the picture's column as five twelfths of what it shares with the
+words (§10.24); and then the three of §10.25 — **the register keeps only the
+two marks the reference draws**, the heading reads **Also today** past
+1024 px, and the **name days stand in two columns with no separator dot**.
+
+**Two of those reversed decisions this document made itself**, and both for
+the same reason: a render was read as evidence about a rule. §10.1 read the
+reference's 3:2 as one saint's derived box; §10.4 read its two register marks
+as two frames of a three-mark control. Neither is a mistake arithmetic could
+have caught — only the author could say, and both sections chose the reading
+that let them avoid asking.
 
 **Two findings outlive the page they were found on.**
 
@@ -135,12 +153,16 @@ measured in §10.20: the sidebar's empty foot (235 px on a light day, 661 on a
 day with no record), the imageless expanded entry's 340×240 mount, the nav's
 place in the bar against the mockup's, and the liturgy line's chip order.
 
-**The entry stylesheet is 72.38 kB** against §10.18's known-green 73.89 and
-known-red 75.14. Splitting `index.css` and `saint.css` out the way `map.css`
-went takes it to **54.31 kB** — measured, and deliberately not taken: unlike
-the map, those two routes are text and pictures from the first frame, so the
-saving wants the router to await the view's sheet rather than a bare dynamic
-import, and that is the boot path. §10.20 has the whole of it.
+**The entry stylesheet is 72,562 bytes** against the 73,000 the gate now
+holds (§10.22, which measured the cliff to 57 bytes and put
+`ENTRY_CSS_CEILING` ~600 below it). 2026-09-10's last three commits went
+−183 for the register's lost face, ±0 for the rename and +251 for the two
+columns; §10.25 has the ledger. Splitting `index.css` and `saint.css` out the
+way `map.css` went takes it to **54.31 kB** — measured, and still deliberately
+not taken: unlike the map, those two routes are text and pictures from the
+first frame, so the saving wants the router to await the view's sheet rather
+than a bare dynamic import, and that is the boot path. §10.20 has the whole of
+it.
 
 **The comment rewrite rides inside the next such overhaul, per file.** A pass
 that has to open `index.css` or `base.css` anyway can clear that file's
@@ -157,3 +179,10 @@ prove no declaration moved.
   writes `scrollLeft` inside a live gesture.
 - **A phone draws a 150 px card from a 560 px file.** The first screenful of All
   Saints is 579 kB and could be ~189.
+- **The Romanian name days print ranks where they should print names.** Found
+  while measuring the widest name in each pack on 2026-09-10 and left alone,
+  being nothing to do with the columns that sitting drew: `Sfântul Cuvios
+  Mărturisitor Sofian de la Antim` gives *Mărturisitor* and `Sfânta
+  Împărăteasă Pulheria` gives *Împărăteasă*, because the build's honorific
+  stripping reaches *Sfântul* and *Cuvios* and stops at the rank behind them.
+  English is right on both days. §10.25's last bullet has the evidence.

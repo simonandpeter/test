@@ -1,10 +1,13 @@
 # Daily, desktop — the visual rebuild
 
-**Status**: **built, 2026-09-10.** Every numbered step of §8 as revised by
-§10.12 is on `main`; **[§10.20](#1020-sitting-e-what-landed-what-was-measured-what-is-still-the-authors)
-is the closing record** — what landed, what was measured and refused, and the
-five things still the author's. The document is kept whole rather than trimmed
-because the reasoning is what makes any of it reversible.
+**Status**: **built, 2026-09-10**, and revised by the author four times since
+it was built. Every numbered step of §8 as revised by §10.12 is on `main`.
+**[§10.25](#1025-the-three-instructions-of-2026-09-10-after-1024) is the closing
+record** — the author's own corrections to the built page, what is left open,
+and the byte ledger. §10.20 is sitting E's record and is where the *plan* ended;
+it is no longer where the page is, because §§10.21–10.25 reverse four of its
+decisions. Read §10 back to front. The document is kept whole rather than
+trimmed because the reasoning is what makes any of it reversible.
 
 Written 2026-09-10, reviewed against the source the same day,
 then decided. **Read [§10](#10-decisions-taken-2026-09-10) first** — it
@@ -1752,3 +1755,116 @@ own derived shape. Neither of the two instructions of 2026-09-10 was about that
 face — both were about the day's own card, one picture alone at the top of the
 page — so it was left as the reference draws it rather than dragged along in a
 sweep. Whether the repeat should follow the card it repeats is editorial.
+
+### 10.25 The three instructions of 2026-09-10, after §10.24
+
+Three more arrived after §10.24 landed, all desktop only
+(`min-width: 1024px`, `html[data-route='calendar']`), each its own commit.
+They override §§0–10.24 where they disagree.
+
+**1. The register loses its List face** — `e243ea5c`. §10.4 is corrected in
+place rather than left claiming a face that is gone; the whole of what was
+decided, what was checked about the phone, and what a stored `list` now does
+is there. The short of it: `REGISTER_LAYOUTS` is `['cards', 'expanded']`, the
+value went globally because a phone never had a list face to lose, and the
+three readers of the setting already filtered through the constant, so an
+illegal stored value lands on `cards` and cannot wedge the control.
+
+**2. "Also today" past 1024 px** — `93c5d8dc`. The reference's own words and
+its capitalisation. The phone keeps *Also commemorated* in all five packs,
+which is a difference the author asked for knowing it.
+
+- **The key is renamed to what it says.** There was one key, `alsoToday`, and
+  it read *Also commemorated*: a translator opening a pack met a name that
+  disagreed with all five values under it. `alsoCommemorated` is the phone's
+  word now and `alsoToday` the desk's. 491 keys, 0 fallbacks.
+- **The window is asked at paint time and one word reaches the DOM.** The
+  author named the two arrangements that would be worse than the problem —
+  two keys rendered into the DOM at once, and a resize listener rewriting text
+  — and neither was built. The cost of the third way is stated rather than
+  hidden: **a window dragged across 1024 px keeps the heading it arrived with
+  until the next paint**, which any day step, church change or language change
+  performs. `views/daily/panel.js` has made exactly this trade before —
+  `fillRegisterLives` gates a whole desktop feature on the identical query at
+  paint time, and a reader who widens without stepping a day gets no lines of
+  life at all, which is a larger silence than a heading's wording. If the
+  author would rather the wording were site-wide, one line of `panel.js` goes
+  and `alsoCommemorated` goes with it.
+
+**3. Name days in two columns, no dot** — `84d651e`. `columns: 2` in the
+sidebar with `display: block`, and the separator's `::after` set to `none`,
+both inside the desktop query. `columns` and not a two-track grid: only the
+first fills a column before starting the next, so the leading column holds a
+prefix of the list rather than every other name, and that is what the test
+asserts. A grid would draw the same two columns and pass a column count.
+
+**The three cases were shot rather than reasoned about, and the shooting
+found one.** One name draws a column of one; nine go five and four; twenty-two
+Greek ones balance. An injected «Константинопольский» drew *through* the
+second column and off the bubble's edge, clipped mid-word — a single word has
+no break opportunity in it and a column box does not widen for one.
+`overflow-wrap: break-word` is the floor under that, for base.css's own reason
+at the masthead. **The corpus's widest name is Ανδροπελαγία at 117 px against
+a 124 px column** (measured in all five packs across every day the corpus
+reaches; Аполлинарий 114, Barsanuphius 112), so seven pixels is the whole
+margin and a face this desk does not have will spend it.
+
+`break-inside: avoid` was written for the second line such a name now takes,
+and then taken out again because it could not be made to bite: a long name at
+every position among 2 to 14 short ones — 104 arrangements, `break-inside:
+auto` forced — and Chrome's balancer fragmented no item in any of them. The
+comment says that; the declaration does not claim it.
+
+#### The byte ledger
+
+The gate is `ENTRY_CSS_CEILING` = 73,000 (§10.22), and the sitting opened at
+72,494 with 506 to spare.
+
+| after | entry stylesheet | to the ceiling |
+| --- | --- | --- |
+| start (`f9a8602`) | 72,494 | 506 |
+| the List face removed | **72,311** | 689 |
+| "Also today" | 72,311 | 689 |
+| two columns | **72,562** | 438 |
+
+Removing the face gave 183 bytes back — the `.vt-list` geometry and one
+`max-width: 80ch` — and the columns spent 251. The rename cost nothing, being
+JavaScript. **§10.20's `index.css`/`saint.css` split was not needed and is
+still unspent**, and still wants the router to await the view's sheet rather
+than a bare dynamic import, because those two routes paint text on the first
+frame.
+
+#### Still open after this sitting
+
+- **The heading's wording is scoped, not site-wide**, and the resize case
+  above is the price. It is one line to reverse in either direction.
+- Everything §10.20 left with the author is still with the author: the
+  sidebar's empty foot, the imageless expanded entry's 340×240 slab, the
+  nav's place in the bar, the liturgy line's chip order.
+- **The Romanian name-day list prints ranks where it should print names**,
+  found while measuring the widest name in each pack and not touched, because
+  it is a fact about the reduction and not about the columns this sitting drew.
+  Three of the four days sampled are wrong:
+
+  | 2026 | commemoration | name day | should be |
+  | --- | --- | --- | --- |
+  | 16 Sep | Cuviosul Mărturisitor Sofian de la Antim | *Mărturisitor* | Sofian |
+  | 16 Sep | Marea Muceniță **Mare Muceniță** Eufimia | *Mare* | Eufimia |
+  | 10 Sep | Dreapta Împărăteasă Pulheria | *Împărăteasă* | Pulheria |
+
+  **The mechanism, read off the corpus rather than guessed.**
+  `lib/name-days.js` takes the first word of the recorded form in the reader's
+  language, on its own stated premise that "`lib/saint-name.js` has already
+  stripped the honorific and the rank from those forms at build time, so the
+  first word is the name". The Romanian forms carry both: `sofian-of-antim`
+  records `Sfântul Cuvios Mărturisitor Sofian de la Antim` and
+  `pulcheria-the-empress` records `Sfânta Împărăteasă Pulheria`. The stripping
+  reaches *Sfântul* / *Sfânta* / *Cuvios* and stops at *Mărturisitor* and
+  *Împărăteasă*, which are ranks the Romanian list does not hold. English is
+  right on both days because its `display_name` is bare — *Sofian of Antim*,
+  *Pulcheria the Empress* — so the premise holds in English and not in
+  Romanian.
+
+  The second row is a separate thing behind it: the Romanian name renders as
+  *Marea Muceniță **Mare Muceniță** Eufimia*, a rank printed twice.
+
