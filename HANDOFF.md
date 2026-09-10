@@ -169,6 +169,34 @@ that has to open `index.css` or `base.css` anyway can clear that file's
 narrative in the same visit rather than in a second one. Pixel-identical tiles
 prove no declaration moved.
 
+## The corpus protocol, 2026-09-10
+
+**`docs/CORPUS.md` is how a saint gets in**, recovered from `git log` and from
+the amendment record the deleted `SESSIONS.md` held, and binding for anyone
+adding to `saints/`. Four scripts under it, following the family's rule —
+`day-coverage.mjs`, `day-candidates.mjs` and `corpus-gate.mjs` propose and
+never write; `draft-saint.mjs` writes only what a person typed, dry-runs by
+default and can take a batch back out.
+
+**The finding worth carrying: a civil-day dedupe is not enough.** Amendment 45
+settled that candidates are matched on the feast date and never on the name;
+what it used and never wrote down is that the key is the *menologion* day
+across every calendar. On civil 1 October the Russian calendar's 18 September
+prints twelve entries; a civil-day scan reports the corpus holding **zero** of
+them and a menologion scan reports **eight**, because they sit on the Greek and
+Romanian 18 September a fortnight away. Six of the twelve are upgrades, not
+arrivals. `tests/corpus-index.test.mjs` holds both scans.
+
+**Also new: the gate computes the eight e2e literals a batch moves** and prints
+each beside what the spec still says. All eight reproduce the current specs
+exactly on the unchanged tree. `daily-panel.spec.js`'s "the corpus reaches
+28 September 2026" moves on the first folder past that date, which is where the
+runway continues — expect to edit it in almost every batch.
+
+**Rate, honestly:** eight hours at this standard is two to four civil days,
+about 30 new folders and a comparable number of upgrades. The limiting factor
+is reading, not tooling.
+
 ## Known and unfixed
 
 - **All Saints packs all 862 captions in one blocking task** before it can paint

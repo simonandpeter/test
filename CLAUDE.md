@@ -13,10 +13,12 @@ are the whole briefing; the author's prompt does not repeat what is in them.
    the code disagrees with it, the code is wrong. Read it before any visual or
    design decision.
 
-Then, only if the task reaches them: `docs/saintsbuildplan.md` and
-`docs/saintsplanaddendum.md` (the original brief, cited by the source 64 times
-as "brief §N" and "Addendum X" — a contract, not history), and `docs/APP.md`
-for the Capacitor shells.
+Then, only if the task reaches them: **`docs/CORPUS.md`** — binding for anyone
+adding to `saints/`: the sources, what "correct" means per field, the failure
+modes, the batch rhythm and what must never be automated; `docs/saintsbuildplan.md`
+and `docs/saintsplanaddendum.md` (the original brief, cited by the source 64
+times as "brief §N" and "Addendum X" — a contract, not history), and
+`docs/APP.md` for the Capacitor shells.
 
 History is in `git log` (430 commits of reasoning; `git log --grep` searches it)
 and in the `*.notes.md` beside a module. Read history only when asked how
@@ -344,6 +346,15 @@ nothing.**
 - `node scripts/language-audit.mjs`, `date-audit.mjs`, `place-candidates.mjs`,
   `track-candidates.mjs`, `related-from-links.mjs` — all **propose, never
   write**; every row needs a reading.
+- **Adding saints** — `docs/CORPUS.md` is the protocol and is binding.
+  `node scripts/day-coverage.mjs` (where to work), `day-candidates.mjs <civil
+  date>` (what a calendar prints for a day and what the corpus already holds,
+  by civil day *and* by menologion number), `draft-saint.mjs <draft.json>`
+  (the only writer: dry run by default, `--write` to write, `--undo <batch>
+  --write` to take a batch back out), `corpus-gate.mjs --batch <id>` (schema,
+  `npm test`, duplicates, calendars, citations, **and the eight e2e literals a
+  batch moves**). Dedupe on the feast date, never on the name — and on the
+  menologion number, not only the civil day.
 - `npm run thumbs`, `python scripts/make_wordmark.py`, `node scripts/make-land.mjs`,
   `python scripts/make-terrain.py` — regenerate committed assets, by hand only.
 - `npm run app:sync` / `app:android` / `app:ios` — the Capacitor shells;
