@@ -1,0 +1,83 @@
+/* ---- the tokens are what the theme change animates ----------------------
+ *
+ * Registering them as `<color>` is what makes them interpolable, and that is
+ * the whole mechanism of the cross-fade: `base.css` transitions these
+ * fifteen names on `<html>`, every `var()` reading one recomputes each
+ * frame, and the page therefore crosses in one movement at one duration and
+ * one easing — PLAN.md's "if two things move, they move together".
+ *
+ * **It replaces transitioning the boxes, which could not be made to work.**
+ * Until 2026-09-10 the fade was `background-color` and `color` on `body`,
+ * `header` and `main` alone, so the page's ground eased over 300 ms while
+ * every element carrying a colour of its own — the chrome bar's fill, the
+ * header's rule, the sidebar bubble and the four notch crosses standing on
+ * the page's own ground at its corners, every chip, mat and hairline — jumped
+ * at the first frame. Measured on Daily at 1280: 91 painted things snapped
+ * against 16 that eased, and the 16 were the ones with no colour of their own,
+ * riding `body`'s inherited `color`.
+ *
+ * Transitioning the boxes instead cannot be repaired by widening that
+ * selector. `transition` is a shorthand, so a universal rule either loses to
+ * every component that declares one — the coachmark, the theme knob, the
+ * month's own height — or overrides them and stops their movement mid-press.
+ * Animating the token has no such collision: it is not a `transition` on the
+ * element at all.
+ *
+ * Two consequences worth knowing before adding a colour token here:
+ *
+ * - **A token derived from another needs no entry.** `--fast-strict` is
+ *   `var(--rubric)` in both themes and follows the animated value without
+ *   being registered — verified, not assumed. Only a token whose two themes
+ *   declare it independently needs to be in this list, which is why `--bub`
+ *   is (it is `var(--field)` in day and its own hex in vigil).
+ * - **`color-mix()` comes out right for free**, which is the thing a
+ *   transition on the box gets wrong: the mix is recomputed each frame from
+ *   inputs that are themselves interpolating, rather than the two end mixes
+ *   being interpolated as if they were flat colours.
+ *
+ * `--veil` is absent because nothing reads it — declared here and used by no
+ * sheet and no module. `--button-face` and its ink are absent because they are
+ * deliberately not themed (see their own comment below).
+ *
+ * `initial-value` is required by `@property` and never applies, since `:root`
+ * below declares every one of these; `tests/design-tokens.test.mjs` holds the
+ * two copies to each other so the pair cannot drift.
+ */
+@property --gesso { syntax: '<color>'; inherits: true; initial-value: #ece5d6; }
+@property --ink { syntax: '<color>'; inherits: true; initial-value: #221d19; }
+@property --ink-soft { syntax: '<color>'; inherits: true; initial-value: #5c544d; }
+@property --rubric { syntax: '<color>'; inherits: true; initial-value: #8a2e26; }
+@property --gold { syntax: '<color>'; inherits: true; initial-value: #a98237; }
+@property --gold-ink { syntax: '<color>'; inherits: true; initial-value: #755925; }
+@property --rule { syntax: '<color>'; inherits: true; initial-value: #c8c2b7; }
+@property --field { syntax: '<color>'; inherits: true; initial-value: #e6ddca; }
+@property --fast-fish { syntax: '<color>'; inherits: true; initial-value: #016392; }
+@property --fast-free { syntax: '<color>'; inherits: true; initial-value: #356038; }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #918770; }
+@property --bub { syntax: '<color>'; inherits: true; initial-value: #e6ddca; }
+@property --feast { syntax: '<color>'; inherits: true; initial-value: #a67300; }
+@property --mount { syntax: '<color>'; inherits: true; initial-value: #201917; }
+@property --ground-ink { syntax: '<color>'; inherits: true; initial-value: #1a1613; }
+
+/* A theme change fades the *tokens*, not the boxes that read them, so the
+   whole page crosses as one movement — `tokens.css`'s `@property` block is the
+   other half and says why the older arrangement could not be widened into this
+   one. Every name here is registered there; adding one to either list without
+   the other fails `tests/design-tokens.test.mjs`.
+
+   Still only while html carries .theme-anim — theme.js adds it around a
+   deliberate change and removes it after. A standing transition would also
+   fire on page load and on every skeleton swap, which is exactly the flash the
+   pre-paint script exists to prevent.
+
+   One duration and one easing for the fifteen, written once: when
+   `transition-duration` runs short of `transition-property` it repeats, which
+   is what makes "they all cross together" a fact about the stylesheet rather
+   than about fifteen copies of a token agreeing. */
+html.theme-anim {
+  transition-property: --gesso, --ink, --ink-soft, --rubric, --gold, --gold-ink,
+    --rule, --field, --fast-fish, --fast-free, --accent, --bub, --feast,
+    --mount, --ground-ink;
+  transition-duration: var(--dur-settle);
+  transition-timing-function: var(--ease);
+}

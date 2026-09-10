@@ -21,6 +21,13 @@ import './styles/index.css';
  * `views/map.js` imports it dynamically instead, which is the same arrangement
  * the map's own coastline data has had since it shipped: fetched as its own
  * chunk beside the boot, never in front of the first paint.
+ *
+ * **`theme-fade.css` is the second one missing from this list**, and
+ * `lib/theme.js` imports it the same way. It is the cross-fade's `@property`
+ * registrations and its one transition rule, needed only when a reader presses
+ * the toggle — and on 2026-09-10 the step above was pinned to the byte: 73,629
+ * green and 73,688 red, found by adding 57 bytes of CSS matching no element to
+ * a tree that had just gone green.
  */
 import './styles/about.css';
 

@@ -219,7 +219,15 @@ test('no raw easing or duration in the JavaScript either', () => {
  */
 
 const TOKENS = readFileSync(path.join(STYLES, 'tokens.css'), 'utf8');
-const registered = () => [...TOKENS.matchAll(/@property\s+(--[\w-]+)/g)].map((m) => m[1]);
+/*
+ * **The cross-fade lives in its own sheet, not in `tokens.css` or `base.css`**
+ * (2026-09-10). It is `theme-fade.css`, dynamically imported by `lib/theme.js`,
+ * because first contentful paint steps by a 150 ms round trip between 73,629
+ * and 73,688 bytes of the entry stylesheet and none of these 1.4 kB is needed
+ * until a reader presses the toggle. `lib/theme.js` carries the measurement.
+ */
+const FADE = readFileSync(path.join(STYLES, 'theme-fade.css'), 'utf8');
+const registered = () => [...FADE.matchAll(/@property\s+(--[\w-]+)/g)].map((m) => m[1]);
 /** The day block's value for a token: the first declaration in file order. */
 const declaredIn = (css, name) => {
   const m = new RegExp(`^\\s*${name}:\\s*([^;]+);`, 'm').exec(css);
@@ -227,11 +235,10 @@ const declaredIn = (css, name) => {
 };
 const norm = (v) => v.trim().toLowerCase().replace(/\s+/g, '');
 
-/** The names in `html.theme-anim`'s `transition-property`, in base.css. */
+/** The names in `html.theme-anim`'s `transition-property`. */
 const crossFaded = () => {
-  const base = readFileSync(path.join(STYLES, 'base.css'), 'utf8');
-  const m = /html\.theme-anim\s*\{[^}]*?transition-property:\s*([^;]+);/s.exec(base);
-  assert.ok(m, 'base.css has no transition-property on html.theme-anim');
+  const m = /html\.theme-anim\s*\{[^}]*?transition-property:\s*([^;]+);/s.exec(FADE);
+  assert.ok(m, 'theme-fade.css has no transition-property on html.theme-anim');
   return m[1].split(',').map((s) => s.trim());
 };
 
@@ -239,7 +246,7 @@ test('every registered colour token is one the theme cross-fade moves', () => {
   assert.deepEqual(
     registered().slice().sort(),
     crossFaded().slice().sort(),
-    'tokens.css registers a different set of colours than base.css cross-fades',
+    'theme-fade.css registers a different set of colours than it cross-fades',
   );
 });
 
@@ -252,7 +259,7 @@ test('a registered token’s initial-value is the value :root declares', () => {
    * before comparing; that is the whole of the indirection in this file.
    */
   const found = [];
-  for (const m of TOKENS.matchAll(/@property\s+(--[\w-]+)\s*\{[^}]*initial-value:\s*([^;}]+)/g)) {
+  for (const m of FADE.matchAll(/@property\s+(--[\w-]+)\s*\{[^}]*initial-value:\s*([^;}]+)/g)) {
     const [, token, initial] = m;
     let root = declaredIn(TOKENS, token);
     assert.ok(root, `${token} is registered and :root does not declare it`);

@@ -19,6 +19,32 @@
 import { readSettings, writeSetting, THEMES } from './settings.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
+/*
+ * **The cross-fade's own stylesheet, off the first paint's path** (2026-09-10).
+ * It is the fifteen `@property` registrations that make the colour tokens
+ * interpolable and the one `html.theme-anim` rule that moves them — 1.38 kB,
+ * and not one byte of it is needed until a reader presses the toggle.
+ *
+ * It has to leave the entry sheet rather than merely be small, and the number
+ * is why. `main.js` concatenates its imports into one render-blocking sheet,
+ * and first contentful paint steps by a whole 150 ms round trip **between
+ * 73,629 and 73,688 bytes** of it — measured by taking the tree that had just
+ * gone green on CI and adding 57 bytes of CSS matching no element on the page,
+ * which moved the Daily route from 1610 ms to 1757. The gate had already
+ * failed on `22dd125` for the same 59 bytes. `src/main.js` records the coarser
+ * version of this cliff found on 2026-09-10 (§10.18); this is where it
+ * actually sits today.
+ *
+ * Dynamic, because a static import from a module the entry already pulls in
+ * lands back in the same chunk — `views/map.js` says the same thing about
+ * `map.css`. Nothing awaits it: registering a custom property later is a style
+ * recalculation and no repaint, since every value involved is the one already
+ * on the page, and the only cost of losing the race is that a toggle pressed
+ * in the first few hundred milliseconds crosses instantly instead of over
+ * 300 ms.
+ */
+import('../styles/theme-fade.css');
+
 const media = window.matchMedia('(prefers-color-scheme: dark)');
 
 /**
