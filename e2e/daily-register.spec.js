@@ -127,6 +127,100 @@ test('the day says whose name day it is, and links only the names one saint bear
   await expect(page.locator('[data-namedays]')).toContainText('Иоанн');
 });
 
+test('name days stand in two columns at a desk and run on with dots on a phone', async ({ page }) => {
+  /*
+   * Author, 2026-09-10, by the reference: two columns in the sidebar and no
+   * separator dot. Desktop only — the phone keeps the run of names, which is
+   * what a 360 px column can hold.
+   *
+   * **The reading order is the assertion, not the column count.** `columns: 2`
+   * fills the first column and then the second, so the leading column holds a
+   * *prefix* of the list; a two-track grid would draw the same two columns and
+   * put the names in 1 2 / 3 4 order, where reading down a column reads every
+   * other name. A test that counted columns would pass on both.
+   *
+   * Nine names on 25 September in the Russian calendar, which is also the odd
+   * count: five in the first column and four in the second.
+   */
+  await ready(page, { church: 'russian' });
+
+  const read = () =>
+    page.evaluate(() => {
+      const list = document.querySelector('[data-namedays] .namedays');
+      const items = [...list.querySelectorAll('li')];
+      const lefts = items.map((i) => Math.round(i.getBoundingClientRect().left));
+      const first = Math.min(...lefts);
+      return {
+        n: items.length,
+        columns: new Set(lefts).size,
+        leading: lefts.map((x, k) => (x === first ? k : -1)).filter((k) => k >= 0),
+        /*
+         * **Every item's ::after, not the list's text.** The separator is a
+         * pseudo-element, so it never reaches `textContent` — a first version
+         * of this asked the list's text for a dot and would have passed
+         * identically on both faces, which is what backing it out showed.
+         */
+        dots: items.map((i) => getComputedStyle(i, '::after').content),
+        // A word wider than its column, drawn past the box that holds it.
+        overrun: Math.max(
+          ...items.map((i) =>
+            Math.round(i.querySelector('.name-day').getBoundingClientRect().right - i.getBoundingClientRect().right),
+          ),
+        ),
+      };
+    });
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const desk = await read();
+  expect(desk.n, 'premise: 25 September no longer gives nine name days').toBe(9);
+  expect(desk.columns, 'the name days are not in two columns').toBe(2);
+  expect(desk.leading, 'the columns are filled across rather than down').toEqual([0, 1, 2, 3, 4]);
+  expect(desk.dots.filter((d) => d !== 'none'), 'a separator dot survived in the columns').toEqual([]);
+
+  /*
+   * **One name, which is a column of one and not a layout that has failed.**
+   * 11 September gives exactly John, and it is asked because `columns: 2` has
+   * to be allowed to draw one.
+   */
+  await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+  const alone = await read();
+  expect(alone.n, 'premise: 11 September no longer gives exactly one name').toBe(1);
+  expect(alone.columns, 'a single name did not take the leading column').toBe(1);
+
+  /*
+   * **A name too wide for its column is broken, not clipped.** The corpus's
+   * widest is Ανδροπελαγία at 117 px against a 124 px column, so this is a
+   * guard rather than a live defect — and it was shot before it was written:
+   * «Константинопольский» drew through the second column and off the bubble's
+   * edge. Injected, because the corpus has no such name and a test that waits
+   * for one to be written is not a test.
+   */
+  await page.evaluate(() => {
+    const li = document.createElement('li');
+    li.innerHTML = '<span class="name-day">Константинопольский</span>';
+    document.querySelector('[data-namedays] .namedays').append(li);
+  });
+  const long = await read();
+  expect(long.overrun, 'a long name is drawn outside the column that holds it').toBeLessThanOrEqual(1);
+
+  /*
+   * **And the phone keeps the run**, which is the scope: the same list, one
+   * flowing line, with the middle dot between its names.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
+  const phone = await read();
+  // Eight dots between nine names: every item but the last carries one.
+  expect(
+    phone.dots.filter((d) => d.includes('·')).length,
+    'the phone lost the separator the desktop rule gave up',
+  ).toBe(8);
+  expect(phone.dots.at(-1), 'the last name carries a dot after it').toBe('none');
+});
+
+
 /* ---- the 2026-08-26 evening batch: the ring, the name days, the fast
         types and the Great Feasts -------------------------------------- */
 

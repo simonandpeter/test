@@ -3369,7 +3369,10 @@
    these are people's names and the utility face is for the site's own
    apparatus. The separator is a middle dot in the ::after of every item but the
    last, so the names can wrap anywhere and never strand a comma at a line's
-   start. */
+   start.
+
+   **This is the phone's face since 2026-09-10.** A run of names is what a
+   360 px column can hold; the desk's sidebar sets them in two columns, below. */
 .namedays {
   list-style: none;
   display: flex;
@@ -3384,6 +3387,62 @@
   content: '·';
   margin-inline-start: var(--space-2);
   color: var(--ink-soft);
+}
+
+/*
+ * **Two columns and no dot** (author, 2026-09-10, by the reference), in the
+ * sidebar past 1024 px. Desktop only: the run of names above is what the
+ * phone keeps.
+ *
+ * The dot goes because the columns do its work. It was there so that a run
+ * could wrap anywhere without stranding a separator at the start of a line;
+ * a name that is its own line has nothing to be separated from, and a middle
+ * dot at the end of every row but one would be an ornament claiming to be a
+ * mark.
+ *
+ * **`columns`, not a grid**, which is what the reference uses and is the only
+ * one of the two that fills the first column before it starts the second. A
+ * two-track grid lays the names out in rows — 1 2 / 3 4 — so reading down a
+ * column reads every other name, and that is the wrong order for a list of
+ * names to be read in. `display: block` because a multi-column container is
+ * not a flex one: the `columns` on a flex box does nothing at all, silently.
+ *
+ * **A long name is broken, not clipped, and then not split.** The column is
+ * 124 px — 19 rem less the bubble's padding, less the gap, halved — and the
+ * corpus's widest name is **117** (Ανδροπελαγία, Greek at 1280, measured in
+ * all five packs across every day the corpus reaches; Аполлинарий is 114 and
+ * Barsanuphius 112). Seven pixels of headroom is not a margin anybody should
+ * rely on, and a face this desk does not have is a face that will spend it, so
+ * the rule below was written after the case was *shot* rather than reasoned
+ * about. An injected «Константинопольский» drew *through* the second column
+ * and off the bubble's edge, clipped mid-word: a single word has no break
+ * opportunity in it and a column box does not widen for one. `break-word` and
+ * not `anywhere`, for base.css's own reason at the masthead — it is the floor
+ * under a word that cannot fit, not licence to break every one that could.
+ *
+ * **`break-inside: avoid` is deliberately *not* here.** The two lines such a
+ * name now takes could in principle fall either side of a column break, which
+ * would read as two names; the rule that would prevent it was written, and
+ * then taken out again because it could not be made to bite. A long name was
+ * placed at every position among 2 to 14 short ones — 104 arrangements, with
+ * `break-inside: auto` forced — and Chrome's balancer fragmented no item in
+ * any of them. A declaration whose effect cannot be demonstrated is a claim
+ * about a mechanism nobody has measured.
+ */
+@media (min-width: 1024px) {
+  html[data-route='calendar'] .namedays {
+    display: block;
+    columns: 2;
+    column-gap: var(--space-6);
+  }
+
+  html[data-route='calendar'] .namedays li {
+    overflow-wrap: break-word;
+  }
+
+  html[data-route='calendar'] .namedays li:not(:last-child)::after {
+    content: none;
+  }
 }
 
 /* Ink, and underlined only on hover — the same rule the saint names on this
