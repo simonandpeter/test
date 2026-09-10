@@ -1254,3 +1254,54 @@ Splitting them the same way is the standing saving, and it is larger than
 anything else on this page's list. Sitting E should take it before the sweep,
 because the floor has ~9% of headroom and every step of this rebuild spends
 some of it.
+
+### 10.19 Read before step 8, found before the pause
+
+Sitting D read the whole path and was stopped before it edited anything. These
+are conclusions from reading, not measurements, and each is worth checking as
+you build on it — but each was arrived at against the source.
+
+- **A flat 340px hero column breaks the author's half-window rule.**
+  `daily-panel.spec.js:3780` holds `.hero-media` height ÷ `window.innerHeight`
+  to ≤ 0.51 at five window sizes. At 340 with a 14px mat the picture is 312
+  wide, so a 1:1.6 icon draws 499 — 71% of a 700px window. The shape that keeps
+  both: `clamp(200px, calc(var(--card-h) / var(--hero-r, 1) + 28px), 340px)`.
+  340 replaces the old `42%` / `30rem` ceiling and the `--card-h` term survives
+  as the cap. Checked arithmetically against all five sizes.
+- **Three hero tests need editing and two are not `:96` / `:3334`.** "the hero
+  image fills its column" asserts `.hero-media` width equals the grid track
+  (becomes track − 28) and picture height equals card height (becomes
+  card − 28); "the card ends where the picture does" asserts a gap under 4
+  (becomes ~28). `fitLede`'s budget should become `figure.bottom − body.top`,
+  which is unchanged below 1024 and correct above it.
+- **`daily-register.spec.js:221` cannot stay green unedited** — it asserts
+  `pictureAbove` and `pictureWidth > 100` for the cards face, and §10.3's
+  trailing 60px mat contradicts both. Its *columns* claim survives if the
+  compact grid is `repeat(auto-fill, minmax(340px, 1fr))`: two columns at 1280
+  and 1440, one at 1024, which is what "fewer columns in a narrower window"
+  needs. A fixed `1fr 1fr` fails it. **§10.4 said this test stays green
+  untouched; that was wrong** — what it protects is the remembered *choice*,
+  and that part does stand.
+- **Keep `.reg-thumb` as the outer element**, put the picture in a new inner
+  `.reg-pic`. `:41` and `:221` both `querySelector('.reg-thumb')` on entries
+  that may be imageless, so renaming the blank span breaks them. `:318` then
+  measures the mat rather than the picture, and still catches what it was
+  written for.
+- **`font-size: 0` cannot hide the chevron** — `design-tokens.test.mjs:81`
+  rejects any `font-size` without a `--text-` token. Move the `›` out of
+  `panel.js` into an `::after { content }` so the Daily scope can swap it.
+- **§10.10 is not a no-op.** Only `office` — 337 of 862 — puts a type in the
+  visible subtext, so imageless entries whose subtext lacks the word need an
+  `sr-only` span.
+- **One new string key, not two.** Compact and list keep `viewCards` and
+  `viewList`; only `viewExpanded` is new across the five packs.
+- **Lighthouse runs mobile at 360**, so a desktop-gated per-entry life fetch
+  costs the FCP gate nothing. The added entry-stylesheet bytes are the only
+  exposure, against ~6.4 kB of room below §10.18's 73.9 kB step.
+- The stale `heroFocus` comment has moved to **`calendar.css:2249`**; the doc's
+  `:1763` is out of date. The name is `heroCrop`.
+
+**The next edit** is the step-8 hero block: a new `min-width: 1024px` /
+`html[data-route='calendar']` section carrying `--hero-mat: 14px`, the `--mount`
+mat on `.hero-figure`, the clamped column above, `margin-top: -8px` on
+`.hero-body`, `--text-2xl` on `.hero-name`.
