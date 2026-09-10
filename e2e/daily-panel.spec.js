@@ -436,20 +436,34 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
+  /*
+   * **The mount, 2026-09-10** (docs/daily-desktop-visuals.md §4.1): from
+   * 1024 px the picture stands in a 14 px mat, so what fills the column is the
+   * *figure* and what fills the figure is the picture. Both halves are read
+   * here — a mat that quietly went to zero would otherwise pass as a smaller
+   * picture in a column that still added up.
+   */
   const m = await page.evaluate(() => {
     const hero = document.querySelector('.hero');
     const s = getComputedStyle(hero);
     const tracks = s.gridTemplateColumns.split(' ').map(parseFloat).filter((n) => !Number.isNaN(n));
+    const figure = document.querySelector('.hero-figure').getBoundingClientRect();
+    const media = document.querySelector('.hero-media').getBoundingClientRect();
+    const pad = getComputedStyle(document.querySelector('.hero-figure'));
     return {
       tracks,
       column: hero.clientWidth - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight),
-      width: document.querySelector('.hero-media').getBoundingClientRect().width,
-      height: document.querySelector('.hero-media').getBoundingClientRect().height,
+      figureWidth: figure.width,
+      width: media.width,
+      height: media.height,
+      mat: parseFloat(pad.paddingTop),
       card: hero.getBoundingClientRect().height,
+      desk: window.innerWidth >= 1024,
     };
   });
   const expected = m.tracks.length === 2 ? m.tracks[0] : m.column;
-  expect(Math.abs(m.width - expected)).toBeLessThan(1);
+  expect(Math.abs(m.figureWidth - expected), 'the mount does not fill its column').toBeLessThan(1);
+  expect(Math.abs(m.width - (expected - 2 * m.mat)), 'the picture does not fill its mount').toBeLessThan(1);
   if (m.tracks.length === 2) {
     /*
      * A tall icon is exactly as tall as the card and no taller — which is the
@@ -457,8 +471,17 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
      * column left at a hard width makes it shorter, and a column given the
      * full share of a wide card makes it overrun (662 px of Lupus over a
      * 505 px card was the version that asked for this rule).
+     *
+     * The card is the picture plus the mat above and below it now, which at
+     * this width is 28 px and below 1024 is nothing at all — so the figure
+     * carries the claim and the mat is stated rather than absorbed into a
+     * tolerance.
      */
-    expect(Math.abs(m.height - m.card), 'the picture is not the height of the card it fills').toBeLessThan(2);
+    expect(m.mat, 'the mount is not 14 px on the desk, or has appeared below 1024').toBe(m.desk ? 14 : 0);
+    expect(
+      Math.abs(m.height + 2 * m.mat - m.card),
+      'the picture is not the height of the card it fills',
+    ).toBeLessThan(2);
   }
 
   // Clicking the image goes where clicking the name goes. It is hidden from
@@ -3228,18 +3251,30 @@ test('the card ends where the picture does, and the words with it', async ({ pag
   // The preview arrives with the payload and is trimmed once it does.
   await expect(page.locator('[data-hero-lede]')).toBeVisible();
 
+  /*
+   * **The foot the words stop at is the mount's, 2026-09-10** (§4.1). The
+   * picture stands in a 14 px mat from 1024 px, so "does not go below the
+   * bottom of the image" is the same instruction measured against the box the
+   * image now sits in — the reader sees one object and its lower edge is the
+   * mat's. `fitLede` computes the budget the same way, from two rects rather
+   * than from a number, so the two cannot drift apart.
+   */
   const m = await page.evaluate(() => ({
     hero: document.querySelector('.hero').getBoundingClientRect(),
+    mount: document.querySelector('.hero-figure').getBoundingClientRect(),
     media: document.querySelector('.hero-media').getBoundingClientRect(),
     body: document.querySelector('.hero-body').getBoundingClientRect(),
     lede: document.querySelector('[data-hero-lede]').getBoundingClientRect(),
   }));
 
   expect(m.media.height, 'premise: this icon is tall enough for the question not to arise').toBeLessThan(400);
-  // The words stop at the picture's foot, and the card stops with them.
-  expect(m.lede.bottom, 'the preview runs past the bottom of the picture').toBeLessThan(m.media.bottom + 2);
-  expect(m.body.bottom, 'the text column runs past the bottom of the picture').toBeLessThan(m.media.bottom + 2);
-  expect(m.hero.height - m.media.height, 'the card is taller than the picture it holds').toBeLessThan(4);
+  // A mount, not an outline: the mat is real and is 14 px on all four sides.
+  expect(m.mount.bottom - m.media.bottom, 'the picture has no mat under it').toBeCloseTo(14, 0);
+  expect(m.media.top - m.mount.top, 'the picture has no mat over it').toBeCloseTo(14, 0);
+  // The words stop at the mount's foot, and the card stops with them.
+  expect(m.lede.bottom, 'the preview runs past the bottom of the mount').toBeLessThan(m.mount.bottom + 2);
+  expect(m.body.bottom, 'the text column runs past the bottom of the mount').toBeLessThan(m.mount.bottom + 2);
+  expect(m.hero.height - m.mount.height, 'the card is taller than the mount it holds').toBeLessThan(4);
 });
 
 
@@ -3333,7 +3368,9 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
       link: shown.getBoundingClientRect(),
       inLede: lede.contains(shown),
       dates: document.querySelector('.hero-dates').getBoundingClientRect(),
-      media: document.querySelector('.hero-media').getBoundingClientRect(),
+      // The mount, not the picture, since 2026-09-10: the mat is what the
+      // reader sees the bottom edge of (§4.1).
+      media: document.querySelector('.hero-figure').getBoundingClientRect(),
       lede: lede.getBoundingClientRect(),
     };
   });
@@ -3370,7 +3407,7 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
   expect(m.link.top, 'not below the dates').toBeGreaterThan(m.dates.bottom - 1);
   // And never past the foot of the picture, which is the rule the trim
   // exists for: the words end where the image does.
-  expect(m.link.bottom, 'the preview runs below the picture').toBeLessThan(m.media.bottom + 2);
+  expect(m.link.bottom, 'the preview runs below the mount').toBeLessThan(m.media.bottom + 2);
 
   // And it goes where the name goes.
   await more.click();
@@ -3708,7 +3745,9 @@ test('the way into the life is a white button with the life fading out under it'
     // The readable half of the preview, which the faded pair follows.
     const head = document.querySelector('[data-hero-lede]');
     const cs = getComputedStyle(link);
-    const media = document.querySelector('.hero-media').getBoundingClientRect();
+    // The mount's own foot since 2026-09-10 (§4.1) — the picture's mat is
+    // what the card ends on now, and `fitLede` fits the words to it.
+    const media = document.querySelector('.hero-figure').getBoundingClientRect();
     return {
       background: cs.backgroundColor,
       shadow: cs.boxShadow,
@@ -4140,4 +4179,119 @@ test('the wordmark is centred on a phone and unmoved on a desktop', async ({ pag
   await page.evaluate(() => document.fonts.ready);
   const wide = await gaps();
   expect(wide.left, 'the wide masthead gained a margin it did not have').toBeLessThan(3);
+});
+
+
+/* ---- the desktop rebuild, step 8: the hero's mount (2026-09-10) ---------- */
+
+
+test('the hero picture stands in a mount rather than behind an outline', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §4.1, step 8 of §10.12: "**A mount, not an
+   * outline.** No border anywhere on a picture. The frame is a 14px mat the
+   * photo stands inside", drawn in `--mount` — the *other* theme's bubble, so
+   * the picture reads as standing on a wall rather than as a framed box on the
+   * page. The column is 340 px and the mat fills it.
+   *
+   * 24 September: Theodora of Alexandria's icon is 939x625, so the height
+   * derivation is nowhere near the 340 ceiling and this really is measuring
+   * the ceiling rather than the cap. A *tall* icon on a short window is
+   * narrower than 340 by the author's half-window rule, and that is the test
+   * two below this one — the 340 here is a ceiling, not a fixed width, and
+   * the pair of tests is what says so.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('[data-hero-lede]')).toBeVisible();
+
+  const m = await page.evaluate(() => {
+    const figure = document.querySelector('.hero-figure');
+    const media = document.querySelector('.hero-media');
+    const body = document.querySelector('.hero-body');
+    const name = document.querySelector('.hero-name');
+    /*
+     * A custom property does not compute (CLAUDE.md trap 9), so `--mount` is
+     * asked of the engine through a box that reads it rather than parsed out
+     * of the declaration.
+     */
+    const probe = document.createElement('span');
+    probe.style.backgroundColor = 'var(--mount)';
+    figure.append(probe);
+    const mount = getComputedStyle(probe).backgroundColor;
+    probe.remove();
+
+    const edges = (el) => {
+      const s = getComputedStyle(el);
+      return [s.borderTopWidth, s.borderRightWidth, s.borderBottomWidth, s.borderLeftWidth].map(parseFloat);
+    };
+    const s = getComputedStyle(figure);
+    return {
+      mount,
+      fill: s.backgroundColor,
+      mat: [s.paddingTop, s.paddingRight, s.paddingBottom, s.paddingLeft].map(parseFloat),
+      borders: [...edges(figure), ...edges(media), ...edges(media.querySelector('img'))],
+      column: figure.getBoundingClientRect().width,
+      // Optical, not geometric (§4.2): the words are lifted so the name's
+      // cap-height sits just under the mount's top edge rather than level
+      // with it.
+      lift: figure.getBoundingClientRect().top - body.getBoundingClientRect().top,
+      nameSize: parseFloat(getComputedStyle(name).fontSize),
+    };
+  });
+
+  expect(m.mat, 'the mat is not 14 px on all four sides').toEqual([14, 14, 14, 14]);
+  expect(m.fill, 'the mount is not filled in --mount').toBe(m.mount);
+  expect(m.fill, 'the mount is transparent, so there is no mat at all').not.toBe('rgba(0, 0, 0, 0)');
+  expect(m.borders, 'a picture on this page is wearing an outline').toEqual(new Array(12).fill(0));
+  expect(m.column, 'the mount does not fill a 340 px column').toBeCloseTo(340, 0);
+  expect(m.lift, 'the words are not lifted against the mount').toBeCloseTo(8, 0);
+  // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
+  expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
+});
+
+
+test('the way into the life ends in a diamond, the last chevron on this page', async ({ page }) => {
+  /*
+   * docs/daily-desktop-visuals.md §4.2: "`Continue reading ›` loses its
+   * chevron for a 5px diamond. It is the last chevron on the page — on *this*
+   * page: the register's own controls and the picker keep theirs."
+   *
+   * Both halves are asserted, because the first alone would pass on a mark
+   * that had simply been deleted: the character is gone from the link's own
+   * text, *and* a 5 px square stands in its place, turned 45°.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const more = page.locator('.hero-more').filter({ visible: true });
+  await expect(more).toHaveCount(1);
+  await expect(more, 'a chevron is still on the way into the life').not.toContainText(/[‹›]/);
+
+  const mark = await page.evaluate(() => {
+    const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
+    const s = getComputedStyle(link.querySelector('.hero-more-chevron'), '::after');
+    return {
+      width: parseFloat(s.width),
+      height: parseFloat(s.height),
+      transform: s.transform,
+      // A shape, not a glyph: `content` is the empty string here and the
+      // chevron everywhere else on the site.
+      content: s.content,
+    };
+  });
+  expect(mark.width, 'the diamond is not 5 px wide').toBe(5);
+  expect(mark.height, 'the diamond is not 5 px tall').toBe(5);
+  expect(mark.content, 'the mark is still a character').toBe('""');
+  /*
+   * 45° as a matrix, which is what `getComputedStyle` prints: cos and sin of
+   * a quarter turn, to the six places Chrome rounds to. Read as "it is turned
+   * a quarter of a right angle", not as a magic number.
+   */
+  expect(mark.transform, 'the mark is not turned onto its corner').toMatch(
+    /^matrix\(0\.7071\d*, 0\.7071\d*, -0\.7071\d*, 0\.7071\d*, 0, 0\)$/,
+  );
 });

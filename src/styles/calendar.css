@@ -2195,8 +2195,17 @@
   text-underline-offset: 2px;
 }
 
+/* The mark itself is drawn here rather than written into the markup, because
+   the Daily desktop replaces it with a box (the mount block below): a
+   character can be swapped for a shape by `content`, and cannot be hidden by
+   `font-size: 0` — tests/design-tokens.test.mjs refuses a `font-size` that is
+   not a token. */
 .hero-more-chevron {
   color: var(--rubric);
+}
+
+.hero-more-chevron::after {
+  content: '\203A';
 }
 
 /* **The life going on under the button, fading out** (author, 2026-09-01:
@@ -2246,11 +2255,13 @@
   width: 100%;
   aspect-ratio: 3 / 2;
   background-size: cover;
-  /* Where the crop is taken from, per saint (`heroFocus` in daily/panel.js):
-     the top for a tall icon, whose face is there, and the centre for a wide
-     one, whose subject is in the middle of it. The placeholder is anchored with
-     the picture or it would paint a differently-framed image under the one
-     arriving. */
+  /* Where the crop is taken from, per saint: the top for a tall icon, whose
+     face is there, and the centre for a wide one, whose subject is in the
+     middle of it. `heroCrop` in lib/hero-crop.js decides it and
+     daily/panel.js publishes it as `--hero-focus`; this comment said
+     `heroFocus` for a fortnight and no such name has ever existed. The
+     placeholder is anchored with the picture or it would paint a
+     differently-framed image under the one arriving. */
   background-position: var(--hero-focus, 50% 0);
   border-radius: var(--radius-cell);
   overflow: hidden;
@@ -2379,6 +2390,103 @@
 .hero-dates {
   color: var(--ink-soft);
   margin-bottom: 0;
+}
+
+/* ---- the mount (2026-09-10) --------------------------------------------- */
+
+/*
+ * **A mount, not an outline** (docs/daily-desktop-visuals.md §4.1, step 8).
+ * No border anywhere on a picture: the frame is a 14 px mat the photo stands
+ * inside, and its colour is the *other* theme's bubble — a dark mat on the
+ * gesso page, a pale one on the bole. `--mount` is that pair; tokens.css says
+ * why its light value is written as vigil's `--bub` hex rather than as a
+ * second literal.
+ *
+ * **The shape is untouched** (§10.1). `--hero-shape` still comes from
+ * `heroCrop` per saint and the box is still derived from the icon's own
+ * dimensions; what this section changes is the column the picture sits in and
+ * the 14 px of ground around it.
+ *
+ * On `.hero-figure` rather than on `.hero-media`, because the figure is the
+ * grid item: the mat fills the column and the picture is the column less the
+ * mat. That is also what keeps `daily-panel.spec.js`'s "the hero image fills
+ * its column" measuring something — it reads the figure against the track and
+ * the picture against the figure, so a mat that quietly went to zero fails
+ * there rather than passing as a smaller picture.
+ */
+@media (min-width: 1024px) {
+  html[data-route='calendar'] .hero {
+    --hero-mat: 14px;
+  }
+
+  html[data-route='calendar'] .hero-figure {
+    background: var(--mount);
+    padding: var(--hero-mat);
+  }
+
+  /*
+   * **340 px, with the author's half-window cap still standing in front of
+   * it** (§10.19). The design asks for a 340 px column that the mat fills;
+   * the instruction of 2026-09-01 — "for the full window size possible on any
+   * monitor, its no more than half the window height" — is about *height*,
+   * and `--card-h / --hero-r` is where that reaches the width. A flat 340
+   * draws a 1:1.6 icon at 499 px, which is 71% of a 700 px window, and
+   * `daily-panel.spec.js`'s five windows are where that shows.
+   *
+   * So 340 replaces the old `42%` / `30rem` ceiling and the derivation
+   * survives as the cap: at a desk-sized window every icon the corpus holds
+   * takes the full 340, and a tall one on a short window is narrower rather
+   * than over the line.
+   *
+   * `+ 2 * var(--hero-mat)`, because that term is the width at which the
+   * *picture* stands exactly `--card-h` tall, and what is sized here is the
+   * column the mat fills.
+   */
+  html[data-route='calendar'] .hero.has-media {
+    grid-template-columns:
+      clamp(200px, calc(var(--card-h) / var(--hero-r, 1) + 2 * var(--hero-mat)), 340px)
+      1fr;
+  }
+
+  /*
+   * **The words lift 8 px so the saint's cap-height meets the mount's top
+   * edge** (§4.2) — optical, not geometric. The name's ink sits about 14 px
+   * below its own box (half-leading at 26/32.5, plus the gap between
+   * Literata's ascender and its cap), so a body aligned to the mat's top edge
+   * reads as sitting low. 8 is the value that looked right on the reference,
+   * not the 14 the arithmetic gives.
+   *
+   * The name needs no rule: `--text-2xl` is what §10.8 asks for and what
+   * base.css already gives every `h2`. The reference's 27 was the number off
+   * the scale, and §10.8 snapped it here.
+   */
+  html[data-route='calendar'] .hero-body {
+    margin-top: -8px;
+  }
+
+  /*
+   * **The last chevron on this page becomes a diamond** (§4.2) — on *this*
+   * page: the register's own controls and the picker keep theirs, which is
+   * what `daily-picker.spec.js:885` holds. The glyph is `content` in the base
+   * rule above precisely so this can put a box in its place; `font-size: 0`
+   * is not available, tests/design-tokens.test.mjs refuses a `font-size` that
+   * is not a token.
+   *
+   * `align-self`, because the mark is a flex item of a baseline-aligned row
+   * and a 5 px square has no baseline worth aligning to.
+   */
+  html[data-route='calendar'] .hero-more-chevron {
+    align-self: center;
+  }
+
+  html[data-route='calendar'] .hero-more-chevron::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    transform: rotate(45deg);
+  }
 }
 
 /* ---- register --------------------------------------------------------- */

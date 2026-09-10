@@ -58,10 +58,12 @@ function fillHeroLede(panel, slug, iso, card) {
       link.dataset.prefetch = slug;
       link.setAttribute('aria-label', fill(STRINGS.calendar.readMoreOf, { name: saintName(card) }));
       link.textContent = STRINGS.calendar.readMore;
+      // Empty on purpose: the mark is drawn by `content` in calendar.css,
+      // because the Daily desktop replaces it with a diamond and a character
+      // cannot be swapped for a shape from here.
       const chevron = document.createElement('span');
       chevron.className = 'hero-more-chevron';
       chevron.setAttribute('aria-hidden', 'true');
-      chevron.textContent = '›';
       link.append(chevron);
       /*
        * **Appended to the card's text column, not to the paragraph** (author,
@@ -148,7 +150,19 @@ function fitLede(panel) {
   const body = panel.querySelector('.hero-body');
   if (!hero || !box || !media || !body || !box.__full) return;
 
-  const limit = media.getBoundingClientRect().height;
+  /*
+   * **The budget is the mount's foot, not the picture's** (2026-09-10). From
+   * 1024 px the picture stands in a 14 px mat and the words beside it are
+   * lifted 8 (docs/daily-desktop-visuals.md §4.1, §4.2), so "the text does not
+   * go below the bottom of the image" is now a distance between two boxes that
+   * no longer share an edge. Measured rather than added up: the foot of the
+   * mount less the top of the words is the space the words have, whatever the
+   * mat and the lift are, and below 1024 — where the figure has no padding and
+   * the body no lift — it is exactly the picture's own height, which is what
+   * this line used to read.
+   */
+  const mount = media.closest('.hero-figure') ?? media;
+  const limit = mount.getBoundingClientRect().bottom - body.getBoundingClientRect().top;
   // No picture laid out yet, or a width where the preview is not shown at
   // all: there is no budget to fit and nothing to trim against.
   if (limit <= 0 || box.offsetParent === null) return;
@@ -537,7 +551,7 @@ export function paintDay({ main, side }) {
         <a class="hero-more hero-more-alone" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}"
           aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
-          >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true">&rsaquo;</span></a>
+          >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true"></span></a>
       </div>
     </article>
     ${register}`;
