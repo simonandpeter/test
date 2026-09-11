@@ -98,6 +98,31 @@ many saints. Everything already landed is on `main`.
 **one** English and each keeps its own citation; where they are different hymns
 in one mode — which is common — the work file splits the group with `only`.
 
+**Three hymn objects are filed under the wrong saint**, found 2026-09-12 by
+translating them, and **held out of the write rather than rendered into
+place** — a correct English translation of the wrong hymn is still a false
+claim about what a saint's calendar sings, and deleting cited corpus data is
+the author's call, not a sitting's.
+
+| folder | what the text actually is |
+| --- | --- |
+| `alexander-nevsky` | the troparion of the **Archangel Michael** ("O supreme commander of the heavenly hosts"), and Church Slavonic in Serbian spelling rather than Serbian |
+| `alexander-patriarch-of-constantinople` | the Romanian kontakion of the **Beheading of the Forerunner** — it names Herodias |
+| `paul-the-new-patriarch-of-constantinople` | the same Beheading kontakion, the same way |
+
+That text is already in the corpus where it belongs, under `john-the-baptist ·
+kontakion · 5`, which is how it was recognised.
+
+**Not a defect, though it reads like one**: `elizabeth-mother-of-the-forerunner`
+carries Zacharias's troparion. They are commemorated together and the calendars
+print it for both.
+
+**The pattern across three sittings**: translating is the first thing that ever
+made anybody read these fields, and it has now turned up scraped navigation in
+six texts, a whole second hymn glued inside a seventh, and these three. None of
+them was reachable by any test the repo had, because every one is a true string
+in a well-formed field.
+
 **Not done and worth doing by someone with the books**: 41 hymns cite Orloff's
 *General Menaion* (1899) or Hapgood (1906), both public domain, and a citation
 beats a rendering made here. Matching the rest against Orloff's commons was not
