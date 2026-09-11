@@ -88,6 +88,10 @@
         "text": "Doxologia — Condacul Sfântului Ierarh Varlaam, Mitropolitul Moldovei",
         "url": "https://doxologia.ro/condacul-sfantului-ierarh-varlaam-mitropolitul-moldovei",
         "year": 2026
+      },
+      "english": {
+        "text": "Shining with the divine teachings, O holy father, thou didst shepherd the Church of thy people and didst expound the Gospel of Christ. Wherefore thou wast shown forth, O holy hierarch Varlaam, as a great defender of the true faith.",
+        "rendered": "site"
       }
     },
     {
@@ -100,6 +104,10 @@
         "text": "Doxologia — Troparul Sfântului Ierarh Varlaam, Mitropolitul Moldovei",
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-varlaam-mitropolitul-moldovei",
         "year": 2026
+      },
+      "english": {
+        "text": "O worthy servant of Christ and wise defender of the true faith, great venerator of the venerable Saint Paraskeva and faithful enlightener of the Romanian people, O holy hierarch Varlaam, pray to Christ God to protect and to save our souls.",
+        "rendered": "site"
       }
     }
   ]

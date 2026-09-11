@@ -145,7 +145,11 @@
         "url": "https://www.saint.gr/895/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As a God-inscribed pillar of the sacred virtues, thou didst leave unto us the ascents of thy life, O all-blessed Symeon; for shining forth upon thy pillar as a beacon, thou drawest us from the ground below unto the life of heaven, showing by thy works the manner of running the course well.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",

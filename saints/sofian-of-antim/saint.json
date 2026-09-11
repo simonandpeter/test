@@ -75,7 +75,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-cuvios-marturisitor-sofian-de-la-antim",
         "year": 2026
       },
-      "model": "Apărătoare Doamnă..."
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "Come, all ye faithful, and let us praise the spiritual father of Bucharest, enlightened by God, who in the days of persecution confessed Christ, guided his disciples with the wisdom of grace, and adorned the holy churches with wondrous icons; and from our hearts let us cry out unto him: Rejoice, O venerable father Sofian, skilled iconographer of souls!",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -87,6 +91,10 @@
         "text": "Doxologia — Troparul Sfântului Cuvios Mărturisitor Sofian de la Antim",
         "url": "https://doxologia.ro/troparul-sfantului-cuvios-marturisitor-sofian-de-la-antim",
         "year": 2026
+      },
+      "english": {
+        "text": "O worker of prayer, venerable father Sofian, skilled iconographer of the Church, who by the grace of the Spirit didst paint the image of the Saviour upon souls, and in prison didst suffer for the faith: now that thou art in the heavens with all the saints, pray thou unceasingly to God for us.",
+        "rendered": "site"
       }
     }
   ]

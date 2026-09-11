@@ -93,7 +93,11 @@
         "url": "https://www.saint.gr/993/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "By the wisdom of thy words thou didst divinely anoint the sacred company of the all-glorious champions for the godly contest; wherefore, despising the reputations that perish, thou didst win incorruptible glory through thy own contest. Therefore, O Severian, we honour thee with hymns.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

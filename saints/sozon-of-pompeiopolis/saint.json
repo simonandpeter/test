@@ -92,7 +92,11 @@
         "url": "https://www.saint.gr/947/saint.aspx",
         "year": 2026
       },
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Assured by a heavenly voice unto the things that are higher, thou didst run undaunted the contests of piety, and wast shown forth as a partaker of the Saviour, having contested manfully, O martyr Sozon; and therefore thou savest from temptations those who draw nigh unto thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",

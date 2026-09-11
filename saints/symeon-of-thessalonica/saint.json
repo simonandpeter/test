@@ -94,7 +94,11 @@
         "url": "https://www.saint.gr/2440/saint.aspx",
         "year": 2026
       },
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Thou wast shown forth in the Spirit as the shepherd of Thessalonica and a divine interpreter of the mysteries of grace, shining with wisdom and with the light of the virtues, O hierarch Symeon. Therefore we honour thee as a divine initiator into the mysteries, crying aloud: Glory to Christ who glorified thee; glory to him who crowned thee; glory to him who through thee bestoweth upon us grace and mercy.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [

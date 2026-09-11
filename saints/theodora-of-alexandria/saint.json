@@ -92,7 +92,11 @@
         "url": "https://www.saint.gr/1001/saint.aspx",
         "year": 2026
       },
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "A divine and hallowed gift didst thou bring unto God, even thine own life, O all-praised and venerable Theodora; for manifesting the fire of repentance, thou didst shine forth in wisdom in the midst of men. Wherefore entreat thou without ceasing him who glorified thee, that great mercy be granted unto us.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -125,7 +129,11 @@
         "url": "https://www.saint.gr/1001/saint.aspx",
         "year": 2026
       },
-      "model": "Τὰ ἄνω ζητῶν."
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Having wasted thy body away with fasting, thou didst entreat the Creator with sleepless prayers, that thou mightest receive the perfect forgiveness of thy sin; which indeed thou didst truly receive, having shown forth the way of repentance.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",

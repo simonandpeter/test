@@ -38,3 +38,27 @@ than the English. None blocks a write; all want the author's eye.
   one; the source was followed rather than the canned formula.
 - **mitrophan · troparion** — closes by asking peace for "our land and thy city",
   not «спаси души наша»; rendered as it stands.
+
+## Round four (the last 21 texts)
+
+- **titus-the-apostle · troparion · ro** — the strongest of these. The Romanian
+  is the *common of apostles* in the plural ("Sfinţilor Apostoli… rugaţi"), a
+  bare fragment with no opening clause, and it never names Titus. It is not
+  another saint's hymn, so it was rendered rather than held; but it reads like a
+  scrape that picked up a Synaxis text instead of Titus's own troparion. The
+  source page settles it.
+- **severian-of-sebaste · el** — `τᾶς` for `τὰς`, `παριδῶν` for `παριδὼν`, and a
+  genitive plural that reads oddly. Rendered on the athletic metaphor the words
+  carry: ἐπήλειψας as the wrestler's anointing, παρεμβολὴν ἱεράν as the sacred
+  company — the Forty Martyrs, whom Severian encouraged.
+- **symeon-the-stylite · el** — `ἔλειπες` is an itacism for `ἔλιπες`, "thou didst
+  leave behind". Taken that way; "thou wast lacking" will not construe with
+  `τὰς ἀναβάσεις ἡμῖν`.
+- **symeon-of-thessalonica · el** — the closing formula is the variant
+  «δόξα τῷ σὲ δοξάσαντι Χριστῷ … χορηγοῦντι», not the canned one. Followed
+  literally rather than forced to the glossary.
+- **theoctistus · ro** — a stray second «și» and a feminine clitic `-o` whose
+  antecedent is `rugăciune`. Read as: the prayer is the spear.
+- **theodore-of-the-caves · cu** — «красен» is the archaic "comely", not "red".
+- **thaddeus · cu** — «страстей пременен» taken as Abgar delivered from his
+  illness rather than changed from the passions; the Edessa narrative fixes it.

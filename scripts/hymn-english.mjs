@@ -209,12 +209,16 @@ if (has('--write-texts')) {
   for (const g of groups().values()) {
     for (const m of g.members) {
       if (m.h.english?.text) continue;
+      const english = wanted.get(normText(m.h.text));
+      if (!english) continue;
+      // After the match, not before it: the count below is then the number of
+      // objects *this* file would have written into and was held back from,
+      // rather than the length of the hold list, which is a constant and tells
+      // the reader nothing about the write in front of them.
       if (heldOut(g.slug, m.h.text)) {
         skipped += 1;
         continue;
       }
-      const english = wanted.get(normText(m.h.text));
-      if (!english) continue;
       const saint = touched.get(m.file) ?? JSON.parse(fs.readFileSync(m.file, 'utf8'));
       saint.hymns[m.i].english = { text: english, rendered: 'site' };
       touched.set(m.file, saint);
