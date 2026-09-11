@@ -64,14 +64,16 @@ single surface through a rebuilt preview before.
 
 ## In flight, 2026-09-12: the hymns into English
 
-**Four subagents are rendering `scratchpad/hymn-slice-0..3.json`**, 25 source
-texts each, filling the `english` field and nothing else. If this session lost
-them, the slices are re-emitted from scratch by the command below and nothing
-is wasted — the corpus is only written by the step after them.
+**Where it stands, after three rounds.** **407 of 433 hymn objects carry an
+English; 21 distinct source texts are left**, and five more objects are held
+out on purpose (below). It was 163 of 433 when the loop started. A round is
+four subagents on four slices, filling the `english` field and nothing else;
+if a session loses them the slices re-emit from scratch and nothing is wasted,
+because the corpus is only written by the step after them.
 
-**Where it stands.** 88 of 328 hymns carry English; **240 remain**, and those
-240 are **217 distinct source texts**, because a common is one text sung for
-many saints. Everything already landed is on `main`.
+Everything landed is on `main` — except that **`05f83ad` onward are committed
+but unpushed**: this machine has no PAT any more (no credential helper, nothing
+in `~/.git-credentials`), so the push needs one pasted in.
 
 **The loop, start to finish:**
 
@@ -84,7 +86,7 @@ many saints. Everything already landed is on `main`.
    `mergeForReading` reads them as two hymns.
 3. `node scripts/hymn-check.mjs scratchpad/hymn-slice-*.json` — empties, stubs,
    source script left in the English, chant slashes, and a length ratio against
-   a band **measured** from the corpus's own 163 renderings (0.85–1.59). It
+   a band **measured** from the corpus's own renderings (0.85–1.59). It
    says which rows to read; it cannot say whether a translation is right.
 4. Read a sample against the originals by hand. This is the step that matters
    and the one nothing can do for you.
@@ -98,20 +100,47 @@ many saints. Everything already landed is on `main`.
 **one** English and each keeps its own citation; where they are different hymns
 in one mode — which is common — the work file splits the group with `only`.
 
-**Three hymn objects are filed under the wrong saint**, found 2026-09-12 by
+**Five hymn objects are filed under the wrong saint**, found 2026-09-12 by
 translating them, and **held out of the write rather than rendered into
 place** — a correct English translation of the wrong hymn is still a false
 claim about what a saint's calendar sings, and deleting cited corpus data is
-the author's call, not a sitting's.
+the author's call, not a sitting's. The hold now lives in
+`scripts/hymn-wrong-saint.json`, which names each object and why, and both
+`--emit-texts` and `--write-texts` pass over them, so they no longer come back
+round on every emit.
 
 | folder | what the text actually is |
 | --- | --- |
 | `alexander-nevsky` | the troparion of the **Archangel Michael** ("O supreme commander of the heavenly hosts"), and Church Slavonic in Serbian spelling rather than Serbian |
-| `alexander-patriarch-of-constantinople` | the Romanian kontakion of the **Beheading of the Forerunner** — it names Herodias |
-| `paul-the-new-patriarch-of-constantinople` | the same Beheading kontakion, the same way |
+| `alexander-patriarch-of-constantinople` | the Romanian kontakion **and** the Romanian troparion of the **Beheading of the Forerunner** — the kontakion names Herodias |
+| `paul-the-new-patriarch-of-constantinople` | the same two hymns, the same way |
 
-That text is already in the corpus where it belongs, under `john-the-baptist ·
-kontakion · 5`, which is how it was recognised.
+Both texts are already in the corpus where they belong, under
+`john-the-baptist`, which is how they were recognised. The whole Romanian block
+for those two patriarchs came off the 29 August page; they are kept on the
+30th. Their Romanian kontakion in tone 8 is their own and was left alone.
+
+**The misfiling propagated once, and that is worth knowing about the tool.**
+`--write-texts` applies a rendering to every object carrying the text, which is
+the whole point of rendering by text — one troparion of a martyr should be
+written once. But the Forerunner's troparion is *correctly* filed under him as
+well, so rendering it for him wrote it into the two patriarchs' folders too, in
+`8a6e080`, with nobody choosing that. Stripped back out in `cecd146`. The hold
+list is keyed on the saint as well as the text for exactly this reason.
+
+Whether anything else had gone the same way was then checked rather than
+assumed: every source text shared by more than one saint, asking whether the
+text names one of them and not the others — the signature of a scrape that ran
+over a day boundary. Six hits, all genuine companions kept on one day (Adrian
+and Natalia, Simeon and Amphilochius, Sophia and her daughters, Meletius and
+Neophytos). The scan is `scratchpad/wrong-saint-scan.mjs`.
+
+**What the renderers doubted is written down, not lost**:
+`scratchpad/hymn-flags.md` holds every corrupt-source reading they had to
+choose — «lumânarea» for *luminarea* under Kosmas of Aetolia, «ενδιαφέροντα»
+standing where a Greek particle should be in both of Phoebe's hymns, «инее»
+under Lawrence of Kaluga, and half a dozen more. Each is a question about the
+**source text**, answerable only at the page it was scraped from.
 
 **Not a defect, though it reads like one**: `elizabeth-mother-of-the-forerunner`
 carries Zacharias's troparion. They are commemorated together and the calendars
