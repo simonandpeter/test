@@ -32,6 +32,30 @@
  * An entry with no `english.text` is skipped, so a file may be filled in over
  * several sittings.
  */
+/*
+ * **The standing English for the formulas**, so that a hymn rendered in one
+ * sitting and the same formula rendered in another come out as one text. The
+ * commons are most of what is left — one troparion of a martyr sung for each
+ * martyr in turn — and `mergeForReading` keys on the rendered English, so two
+ * wordings of one formula are two hymns to the page. Anyone filling a work
+ * file, person or agent, is given this list:
+ *
+ * | original | English |
+ * | --- | --- |
+ * | моли Христа Бога спастися душам нашим / πρέσβευε Χριστῷ τῷ Θεῷ σωθῆναι τὰς ψυχὰς ἡμῶν / roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre | Pray to Christ God that our souls may be saved. |
+ * | спаси души наша | save our souls |
+ * | Слава Давшему тебе крепость, слава Венчавшему тя, слава Действующему тобою всем исцеления | Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee. |
+ * | преподобне отче | O venerable father |
+ * | богомудре | O thou of godly wisdom |
+ * | страстотерпче | O passion-bearer |
+ * | священномучениче | O hieromartyr |
+ *
+ * And the register: traditional liturgical English — thou, thee, thy, verbs in
+ * -est and -eth — because that is what the corpus's existing renderings and
+ * its two cited books are in, and a modern-English hymn beside an Orloff
+ * citation would read as two different sites.
+ */
+
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -101,6 +125,82 @@ if (has('--emit')) {
     console.log(json);
   }
   console.log(`\n${todo.length} of ${all.length} distinct hymns still have no English.`);
+  process.exit(0);
+}
+
+/*
+ * **The same text under two saints is one rendering.** 29 of the source texts
+ * still lacking an English appear under more than one saint — the commons do,
+ * by construction: one troparion of a martyr, sung for each martyr in turn, and
+ * the six martyrs of Tomis share a Romanian text between them. Rendered per
+ * hymn they would come out six slightly different ways, which is the same
+ * defect the author called double-ups arriving from the other direction.
+ *
+ * So `--emit-texts` emits the distinct *texts*, each naming every hymn it
+ * belongs to, and `--write-texts` applies one English to all of them. 240
+ * hymns are 202 texts.
+ */
+const normText = (t) => String(t ?? '').replace(/\s+/g, ' ').trim();
+
+if (has('--emit-texts')) {
+  const limit = Number(opt('--limit', '0')) || Infinity;
+  const skip = Number(opt('--skip', '0')) || 0;
+  const byText = new Map();
+  for (const g of groups().values()) {
+    for (const m of g.members) {
+      if (m.h.english?.text) continue;
+      const k = normText(m.h.text);
+      if (!byText.has(k)) byText.set(k, { text: m.h.text, church: m.h.church, lang: m.h.lang, tone: m.h.tone, saints: [] });
+      byText.get(k).saints.push(`${g.key} [${m.h.church}]`);
+    }
+  }
+  const all = [...byText.values()];
+  const work = all.slice(skip, skip + limit).map((t) => ({
+    lang: t.lang,
+    church: t.church,
+    tone: t.tone,
+    saints: t.saints,
+    text: t.text,
+    english: '',
+  }));
+  const out = opt('--out', null);
+  const json = JSON.stringify(work, null, 2);
+  if (out) fs.writeFileSync(path.join(ROOT, out), json);
+  else console.log(json);
+  console.log(`${work.length} text(s)${out ? ` → ${out}` : ''}; ${all.length} distinct texts still lack an English.`);
+  process.exit(0);
+}
+
+if (has('--write-texts')) {
+  const file = opt('--write-texts', null);
+  const dry = has('--dry');
+  const work = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
+  const wanted = new Map();
+  for (const e of work) {
+    const english = String(e.english ?? '').trim();
+    if (english) wanted.set(normText(e.text), english);
+  }
+  const touched = new Map();
+  let objects = 0;
+  for (const g of groups().values()) {
+    for (const m of g.members) {
+      if (m.h.english?.text) continue;
+      const english = wanted.get(normText(m.h.text));
+      if (!english) continue;
+      const saint = touched.get(m.file) ?? JSON.parse(fs.readFileSync(m.file, 'utf8'));
+      saint.hymns[m.i].english = { text: english, rendered: 'site' };
+      touched.set(m.file, saint);
+      objects += 1;
+    }
+  }
+  console.log(`${wanted.size} text(s) → ${objects} hymn object(s) in ${touched.size} folder(s)`);
+  if (dry) {
+    console.log('dry run: nothing written.');
+    process.exit(0);
+  }
+  for (const [f, saint] of touched) fs.writeFileSync(f, `${JSON.stringify(saint, null, 2)}
+`);
+  console.log('written');
   process.exit(0);
 }
 

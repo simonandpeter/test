@@ -62,9 +62,46 @@ The visual loop is **48 tiles in 80 s** — `contact-sheet.mjs --still`,
 `tile-diff.mjs snapshot`, change, `--still`, `compare` — against ~40 s for a
 single surface through a rebuilt preview before.
 
-## In flight
+## In flight, 2026-09-12: the hymns into English
 
-Nothing. The tree is clean.
+**Four subagents are rendering `scratchpad/hymn-slice-0..3.json`**, 25 source
+texts each, filling the `english` field and nothing else. If this session lost
+them, the slices are re-emitted from scratch by the command below and nothing
+is wasted — the corpus is only written by the step after them.
+
+**Where it stands.** 88 of 328 hymns carry English; **240 remain**, and those
+240 are **217 distinct source texts**, because a common is one text sung for
+many saints. Everything already landed is on `main`.
+
+**The loop, start to finish:**
+
+1. `node scripts/hymn-english.mjs --emit-texts --skip N --limit 25 --out
+   scratchpad/hymn-slice-N.json` — the distinct texts still lacking an English,
+   each naming every hymn it belongs to.
+2. Fill each entry's `english`. The register and the standing wordings for the
+   recurring formulas are in that script's own header and must be handed to
+   whoever fills the file, or two sittings render one formula two ways and
+   `mergeForReading` reads them as two hymns.
+3. `node scripts/hymn-check.mjs scratchpad/hymn-slice-*.json` — empties, stubs,
+   source script left in the English, chant slashes, and a length ratio against
+   a band **measured** from the corpus's own 163 renderings (0.85–1.59). It
+   says which rows to read; it cannot say whether a translation is right.
+4. Read a sample against the originals by hand. This is the step that matters
+   and the one nothing can do for you.
+5. `node scripts/hymn-english.mjs --write-texts scratchpad/hymn-slice-N.json
+   [--dry]` — applies one English to every hymn object whose text matches.
+6. `node scripts/corpus-gate.mjs --quick`, then `npm test`, then commit.
+
+**Two rules already paid for.** A rendering made here is written
+`rendered: 'site'` and the page prints a line saying so — never a bare
+`english` with no provenance. And where two traditions sing one hymn it gets
+**one** English and each keeps its own citation; where they are different hymns
+in one mode — which is common — the work file splits the group with `only`.
+
+**Not done and worth doing by someone with the books**: 41 hymns cite Orloff's
+*General Menaion* (1899) or Hapgood (1906), both public domain, and a citation
+beats a rendering made here. Matching the rest against Orloff's commons was not
+possible offline and would improve on much of this.
 
 ## The cross-reference sweep, 2026-09-09
 
