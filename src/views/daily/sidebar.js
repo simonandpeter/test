@@ -271,7 +271,7 @@ export const sidebarMarkup = () => `<aside class="day-side" data-day-side>
   <p class="day-cycle" data-day-cycle></p>
   <div class="day-tags" data-day-tags></div>
   <button type="button" class="cal-month" data-fullcal data-cal-month aria-haspopup="dialog"></button>
-  <!-- No \`role="grid"\`: a grid owes a screen reader rows and gridcells, and
+  <!-- No role="grid": a grid owes a screen reader rows and gridcells, and
        thirty spans with none is a worse promise than no promise. Each day
        carries the whole date and its marks in its own accessible name. -->
   <div class="cal" data-cal></div>
