@@ -212,6 +212,7 @@ a hand-rolled tween and a CSS transition are routinely the same movement;
 | `--dur-move` | 200 | the standard: a panel, a chip, a fade |
 | `--dur-settle` | 300 | something arriving on or leaving the page |
 | `--dur-travel` | 450 | a journey across the screen: a flight, a glide |
+| `--dur-swap` | 620 | the whole page changing face: the two-layer stage |
 | `--dur-linger` | 900 | content arriving with no gesture behind it |
 
 | token | curve | for |

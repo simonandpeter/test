@@ -161,6 +161,11 @@
   --dur-move: 200ms; /* the standard: a panel, a chip, a fade */
   --dur-settle: 300ms; /* something arriving on or leaving the page */
   --dur-travel: 450ms; /* a journey across the screen: a flight, a glide */
+  /* The whole page changing face: All Saints and Daily trade places in one
+     clipped stage, and what travels is every pixel at once rather than an
+     element crossing a still page. Outside the four for the same reason
+     `--dur-linger` is — a movement of that size reads as hurried at 450 ms. */
+  --dur-swap: 620ms;
   /* Content arriving on its own account, with no gesture behind it — a picture
      reaching a card. Deliberately outside the four: it is not answering
      anybody, and the author asked for it slower still. */

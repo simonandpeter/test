@@ -92,6 +92,15 @@ export const STRINGS = {
   calendar: {
     title: 'Daily',
     today: 'Today',
+    /*
+     * The other two days a reader can name without counting. `relativeDayWord`
+     * (views/daily/format.js) prints one of these three, and the weekday's own
+     * name for anything further out: a page three weeks back is a Thursday,
+     * not a "yesterday", and "Today" alone left the two steps either side of it
+     * printing a bare date where the reader expected a word.
+     */
+    yesterday: 'Yesterday',
+    tomorrow: 'Tomorrow',
     prevDay: 'Previous day',
     nextDay: 'Next day',
     /*
@@ -130,6 +139,22 @@ export const STRINGS = {
      * is never handed the abbreviation the layout needed.
      */
     reckoningShort: { julian: 'Julian', 'revised-julian': 'R. Julian', gregorian: 'Gregorian' },
+    /*
+     * The same day counted the old way, under the date the page is read by.
+     * A caption and not a second date: the number beside it is already a date,
+     * and what the reader needs told is which reckoning produced it. Carries
+     * the date rather than standing beside it so a language that puts the
+     * reckoning first can.
+     */
+    byJulian: '{date} by the Julian calendar',
+    /*
+     * Where a Great Feast's name would stand and there is none. The tag is
+     * drawn dashed and empty rather than left out, because a row of tags that
+     * loses one is a row that changes shape from day to day, and the absence
+     * of a Great Feast is a fact about the day worth printing — most days are
+     * not one.
+     */
+    noGreatFeast: 'No Great Feast',
     /*
      * The whole church month at once (author, 2026-09-01: "Make an expandable
      * calendar button under the weekly display called 'Full Screen Calendar'
@@ -217,6 +242,13 @@ export const STRINGS = {
      */
     heroMore: 'Continue reading',
     heroMoreOf: 'Continue reading the life of {name}',
+    /*
+     * The heading over the open card's first column, where the life stands
+     * beside the two hymns. It says *from*, because the column holds the
+     * opening of a life and not the whole of one; the saint's own page is
+     * where the rest is, and the card's name is the door to it.
+     */
+    fromTheLife: 'From the life',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
     // The reach used to be the literal "19 September" and had been stale for a
@@ -496,6 +528,24 @@ export const STRINGS = {
        * translation made here from a text copied out of a book.
        */
       renderedHere: 'Rendered for this site',
+      /*
+       * The two ways a hymn column can be empty, and they are two because the
+       * rule above them is conditional (author, 2026-09-12: "When English is
+       * the language, I only want English hymns showing"). Reading English, a
+       * column holds an English rendering or it says there is none; reading
+       * Greek, Russian, Romanian or Serbian, it holds that tradition's own
+       * text or it says there is none *in that language*. One line could not
+       * say both without naming English to a reader who never asked for it.
+       *
+       * Each pack names its own language outright — "no Russian text" — where
+       * the English base can only say "yours", having no other language to
+       * point at.
+       *
+       * Drawn into the column before the payload lands, so the four columns
+       * never shift width as the fetches resolve.
+       */
+      noEnglish: 'No English rendering recorded',
+      noneInYourLanguage: 'No rendering recorded in your language',
     },
 
     /*

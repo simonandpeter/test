@@ -20,7 +20,7 @@ export const reducedMotion = () =>
 /**
  * The motion scale, for the half of it that lives in JavaScript.
  *
- * `src/styles/tokens.css` is the same five numbers for CSS, and
+ * `src/styles/tokens.css` is the same numbers for CSS, and
  * `tests/design-tokens.test.mjs` holds the two files to each other — a tween
  * hand-rolled here and a transition declared there are routinely the same
  * movement (the mode fade's length is read by `views/index/modes.js` and
@@ -39,6 +39,8 @@ export const DUR = {
   settle: 300,
   /** A journey across the screen: a flight, a glide. */
   travel: 450,
+  /** The whole page changing face: the two-layer stage's swap. */
+  swap: 620,
   /** Content arriving on its own account, with no gesture behind it. */
   linger: 900,
 };
