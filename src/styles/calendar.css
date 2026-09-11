@@ -2639,10 +2639,32 @@
    * that could reach it: at 1920 the picture is 586 wide and 391 tall, 36% of
    * a 1080 px window, which is the largest share any of the five reads.
    */
+  /*
+   * **The day's card and an expanded register entry are one shape**, and this
+   * is where that is said once. The reference's rule is "every saint in the
+   * shape of the day's own card: the same mount at 3:2, the same mat colour,
+   * the same lede length", and it held while both were the reference's fixed
+   * 340 px.
+   *
+   * **§10.24 broke it and nothing noticed.** That instruction made the day's
+   * picture five twelfths of what it shares with the words, so the hero became
+   * fluid — 244, 319, 386, 568 px at 1100, 1280, 1440, 1877 — while the
+   * register stayed at 340. The two then agreed at one window width and
+   * nowhere else, which is not a rule at all. Found 2026-09-11 by measuring
+   * the reference against the page rather than reading either.
+   *
+   * Declared on the route and read by both, so the next instruction that moves
+   * the fraction cannot move one and leave the other. The gap goes with it for
+   * the same reason: five twelfths of *what the two share* is a different
+   * number if the two are divided by different gaps.
+   */
+  html[data-route='calendar'] {
+    --card-gap: var(--space-8);
+    --card-pic: clamp(200px, calc((100% - var(--card-gap)) * 5 / 12), 40rem);
+  }
+
   html[data-route='calendar'] .hero.has-media {
-    grid-template-columns:
-      clamp(200px, calc((100% - var(--space-8)) * 5 / 12), 40rem)
-      1fr;
+    grid-template-columns: var(--card-pic) 1fr;
   }
 
   /*
@@ -2658,7 +2680,22 @@
    * the scale, and §10.8 snapped it here.
    */
   html[data-route='calendar'] .hero-body {
-    margin-top: -8px;
+    /*
+     * **Four, not eight** (2026-09-11). The reference computes its lift from
+     * *its* type — "6.75 of half-leading at 27/40.5, plus the gap between
+     * Literata's ascender and its cap" — and §10.8 then snapped the name from
+     * the reference's 27 to `--text-2xl`'s 26, which is the scale's number and
+     * stays. The lift came across unchanged, so the words sat four pixels
+     * higher than the rule they were copied from asks for: measured against
+     * the reference at 1440, the name's line box stood 12 px above the mount's
+     * top edge where the reference stands it 8. The author read the same four
+     * pixels by eye and called them three.
+     *
+     * Measured, not derived: `scratchpad/align-probe.mjs` takes the same
+     * reading off both documents, so the two can be compared rather than
+     * argued about.
+     */
+    margin-top: -4px;
   }
 
   /*
@@ -3238,8 +3275,10 @@
 
   html[data-route='calendar'] .register-cards.is-expanded li.reg-card {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: var(--space-6);
+    /* The day's own card's shape, from the one place it is declared. */
+    grid-template-columns: var(--card-pic) 1fr;
+    column-gap: var(--card-gap);
+    row-gap: var(--space-6);
     align-items: start;
     margin-bottom: var(--space-8);
     padding: 0;
@@ -3251,7 +3290,8 @@
      which this is not. */
   html[data-route='calendar'] .register-cards.is-expanded .reg-thumb {
     order: -1;
-    width: 340px;
+    /* The column is the shape now; the mount fills it, as the hero's does. */
+    width: 100%;
     height: auto;
     padding: var(--hero-mat);
     background: var(--mount);
@@ -4106,6 +4146,54 @@ a.name-day:hover {
   html[data-route='calendar'] .cal-bubble .month-grid button[aria-current='date'] {
     background: none;
     border-color: var(--accent);
+  }
+
+  /*
+   * **One mark in the month, not two** (author, 2026-09-11: "The highlight
+   * over today on the monthly display is not what the mockup had … whatever
+   * that bubble is trying to do is residual from mobile and needs to be
+   * adjusted to this desktop view").
+   *
+   * It is residual, and the code says so in its own words: the ring is
+   * `.month-grid button.is-today .day-num::before`, whose comment is "the same
+   * shape at the month's grain … see the week strip's own copy of this rule"
+   * — the week strip being the phone's control. It came in on 2026-08-26, two
+   * weeks before the reference was drawn, and the reference's month has no
+   * such ring: one cell carries `border: 1px solid var(--accent)` at radius 0
+   * with its numeral in rubric, and that is the whole of the month's marking.
+   *
+   * On the default view — today, selected — the two landed on the same cell
+   * and nested, a 4 px rounded rubric bubble inside a square accent one, which
+   * is the squeeze the author photographed. Dropped here only: below this
+   * width the week strip is the control and keeps its own ring, which is what
+   * the 2026-08-26 instruction was actually about.
+   *
+   * **The consequence, stated rather than discovered later**: a reader who
+   * steps to another day no longer sees today marked in the month. The
+   * reference does not draw that state, so it is the reference's silence being
+   * followed, not a decision this file is making on its own.
+   */
+  html[data-route='calendar'] .cal-bubble .month-grid button.is-today .day-num::before {
+    content: none;
+  }
+
+  /*
+   * **And the cell it marks is square.** `base.css:215` gives every `button`
+   * on the site `--radius-panel`, 4 px, and the month's cells took it without
+   * anyone choosing it for them; the reference draws its month on plain `<b>`
+   * elements with `border: 1px solid transparent` and no radius at all, so the
+   * selected day's mark there is a rectangle. With the phone ring gone this is
+   * the whole of what the month draws, and a 4 px round on a 38 × 25 cell is
+   * visible — it is half the difference the author was pointing at.
+   *
+   * Here and not in the base rule: a rounded button is right everywhere else
+   * on the site, and the month's cells are not really buttons in the sense
+   * that rule means — they are a ruled grid, which is the register's own
+   * shape.
+   */
+  html[data-route='calendar'] .cal-bubble .month-grid button,
+  html[data-route='calendar'] .cal-bubble .month-grid .month-out {
+    border-radius: 0;
   }
 
   /*

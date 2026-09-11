@@ -4361,7 +4361,20 @@ test('the hero picture stands in a mount rather than behind an outline', async (
   expect(m.fill, 'the mount is transparent, so there is no mat at all').not.toBe('rgba(0, 0, 0, 0)');
   expect(m.borders, 'a picture on this page is wearing an outline').toEqual(new Array(12).fill(0));
   expect(m.column, 'the mount is not filling a column at all').toBeGreaterThan(340);
-  expect(m.lift, 'the words are not lifted against the mount').toBeCloseTo(8, 0);
+  /*
+   * **Four, where the reference's own margin is eight** (2026-09-11), and the
+   * difference is the name's line box rather than a disagreement. The
+   * reference lifts 8 against a name set 27/40.5 — 6.75 of half-leading — and
+   * §10.8 snapped the name to `--text-2xl`'s 26, which base.css sets at 1.25,
+   * so 3.25. The lift came across unchanged and the words sat four pixels
+   * high: measured with `scratchpad/align-probe.mjs`, which takes one reading
+   * off both documents, the name's line box stood 12 px above the mount's top
+   * edge where the reference stands it 8. At 4 the two read the same.
+   *
+   * The author read the same four pixels by eye on 2026-09-11 and called them
+   * three, which is the closest a person should have to get.
+   */
+  expect(m.lift, 'the words are not lifted against the mount').toBeCloseTo(4, 0);
   // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
   expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
 });

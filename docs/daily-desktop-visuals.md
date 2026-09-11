@@ -1868,3 +1868,104 @@ frame.
   The second row is a separate thing behind it: the Romanian name renders as
   *Marea Muceniță **Mare Muceniță** Eufimia*, a rank printed twice.
 
+
+### 10.26 Four measurements against the reference, 2026-09-11
+
+The author opened the page beside the reference and read four things off it.
+All four were real. **Three are fixed here and one is held**, and the reason
+the fourth is held is that it was the author's own instruction three times
+over.
+
+The measurements are taken by `scratchpad/align-probe.mjs`, `mock-audit2.mjs`,
+`shape-check.mjs` and `row-reads-probe.mjs`, which take *the same reading off
+both documents* rather than reading one and describing the other. That is the
+whole method, and it is why this section has numbers where §10.1 and §10.4 had
+a reading of a render.
+
+**1. The expanded register no longer matched the day's card.** The reference's
+rule is "every saint in the shape of the day's own card: the same mount at 3:2,
+the same mat colour, the same lede length", and it held while both were the
+reference's fixed 340 px. **§10.24 broke it the day it landed**: the day's
+picture became five twelfths of what it shares with the words, so the hero ran
+244 → 319 → 386 → 568 px across the window while the register stood at 340. The
+two agreed at one width and nowhere else.
+
+`--card-pic` and `--card-gap` are declared on the route now and read by both, so
+the next instruction that moves the fraction cannot move one and leave the
+other. Measured after: 272 / 347 / 414 / 596 px at 1100 / 1280 / 1440 / 1877,
+hero and register identical at all four.
+
+**The test was asking each of them a different question.** `daily-register.spec`
+pinned the expanded mount at the reference's 340 and passed at every width for a
+day while the page was wrong at every width but one. It compares the two shapes
+now, which is what "the same shape" means.
+
+**2. The name sat four pixels high.** The reference lifts the words 8 px so the
+saint's cap-height meets the mount's top edge, and computes that 8 from *its*
+type — 27/40.5, half-leading 6.75. §10.8 then snapped the name to
+`--text-2xl`'s 26, which base.css sets at 1.25 and therefore 3.25 of
+half-leading. **The lift came across unchanged.** Against the reference at 1440
+the name's line box stood 12 px above the mount's top edge where the reference
+stands it 8; at `margin-top: -4px` the two read the same. The author read the
+same four pixels by eye and called them three.
+
+**3. The month carried the phone's ring as well as its own mark.** The
+reference's month marks one cell and only one — `border: 1px solid
+var(--accent)` at radius 0, numeral in rubric. The page also drew
+`.month-grid button.is-today .day-num::before`, a 4 px rounded rubric ring whose
+own comment reads "the same shape at the month's grain — see the week strip's
+own copy of this rule". The week strip is the phone's control; the ring came in
+2026-08-26, a fortnight before the reference was drawn. On the page a reader
+opens — today, selected — the two landed on one cell and nested.
+
+Dropped past 1024 px only, and the week strip keeps it, which is what the
+2026-08-26 instruction was about. **And the cell under it is square now**:
+`base.css:215` gives every `button` `--radius-panel`, and the month's cells had
+taken 4 px without anyone choosing it for them, which is half of what the author
+was looking at.
+
+**The consequence, stated rather than discovered later**: a reader who steps to
+another day no longer sees today marked in the month past 1024 px. The reference
+does not draw that state, so this is its silence being followed rather than a
+decision taken here.
+
+**4. Held: the way into the life, and the fade above it.** The author's reading
+is right — the reference puts `Continue reading` inline and flush left under the
+lede, with no fade over the text above it, and the page puts `Read more` flush
+right at the picture's foot over two dissolving lines.
+
+**It is there because the author put it there, in three rounds that all postdate
+the reference**, and the record has them verbatim:
+
+| date | instruction |
+| --- | --- |
+| 2026-09-02 | "make sure the ...continue reading button is lined up to the bottom line of preview text visible under the gradient, right now its floating on the last line before the 2 gradient fade out lines. So move it down 2 lines" |
+| 2026-09-02 | "move it so the bottom of the text is lining up with the bottom of the image to the left to frame the content nicely" |
+| 2026-09-04 | "Right justified to the real margin of the preview text, not to the margin of the space where the preview text is but doesnt reach" |
+
+The first of those *depends on the fade existing*: "lined up to the bottom line
+of preview text visible under the gradient". So the three are one decision, and
+undoing the fade undoes the position with it. **Not reverted without the author
+saying so** — this document has twice read a render as evidence about a rule
+(§10.1, §10.4) and been reversed for it, and this would be the same mistake with
+the author's own words on the other side.
+
+**Two things the author listed as wrong that measurement says are not.**
+
+- **The sidebar's width.** Reported as 272 against the reference's 304. The
+  column *is* 304 and the month grid inside it is 272, which is exactly what
+  §3.1 records ("304 px of column, 272 px of grid, 38 px cells"). The first
+  probe read the grid.
+- **The sidebar's order.** Reported as Readings, Hymns, Name days in the
+  reference against Name days first on the page. Both true, and the page is
+  right: "On desktop Daily page, move Name Days to be just above Readings"
+  (author, 2026-09-02), which is why `calendar.css` moves it with `order` and
+  not in the markup. §3.4's "keep their content and order" means keep the order
+  they already had.
+
+**And one that is a consequence rather than a defect**: the lede runs 556
+characters where the reference's runs 287. `fitLede` derives the length from the
+picture's foot, so the picture's size is the whole of it — fixing 1 moves this
+without touching it. The 17 px against the reference's 15 is `--text-lg`, PLAN's
+reading voice, and the scale's nine steps are a later decision than the
+reference.

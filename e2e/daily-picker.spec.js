@@ -260,6 +260,64 @@ test('today carries its own bubble in the week and the month, apart from the sel
 });
 
 
+test('past 1024 px the month carries one mark, not the phone ring as well', async ({ page }) => {
+  /*
+   * Author, 2026-09-11: "The highlight over today on the monthly display is
+   * not what the mockup had … whatever that bubble is trying to do is residual
+   * from mobile and needs to be adjusted to this desktop view."
+   *
+   * It was residual, and in its own words: `.month-grid button.is-today
+   * .day-num::before` describes itself as "the same shape at the month's
+   * grain — see the week strip's own copy of this rule", the week strip being
+   * the phone's control. It arrived 2026-08-26, a fortnight before the desktop
+   * reference was drawn, and that reference's month marks one cell and only
+   * one: `border: 1px solid var(--accent)` at radius 0 with its numeral in
+   * rubric. On the page a reader opens — today, selected — the two marks
+   * landed on the same cell and nested, a 4 px rounded rubric bubble inside a
+   * square accent one.
+   *
+   * The test above this one is the phone's, and keeps the ring: the 2026-08-26
+   * instruction is about the week strip and still holds where the week strip
+   * is the control. This is the pair to it, which is why they are neighbours.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  // A day that is today, so both marks would be competing for one cell — the
+  // state the author photographed, and the one the desktop page opens on.
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-bubble .month-grid')).toBeVisible();
+
+  const m = await page.evaluate(() => {
+    const today = document.querySelector('.cal-bubble .month-grid button.is-today');
+    if (!today) return { none: true };
+    const ring = getComputedStyle(today.querySelector('.day-num'), '::before');
+    const cell = getComputedStyle(today);
+    return {
+      ringContent: ring.content,
+      // The mark the reference does draw is the cell's own square border.
+      cellRadius: cell.borderRadius,
+      cellBorder: cell.borderStyle,
+      selected: today.getAttribute('aria-current'),
+    };
+  });
+
+  expect(m.none, 'today is not in the month at all').toBeFalsy();
+  /*
+   * `content: none` is the whole assertion, and the one beneath it is why
+   * there is no second: a pseudo-element that was never generated still
+   * reports every other property the rule declared, so `borderStyle` comes
+   * back `solid` whether the ring is drawn or not. Asserting it would have
+   * been an instrument reading what the code says about itself — the trap
+   * CLAUDE.md numbers 14 — and it was written that way first.
+   */
+  expect(m.ringContent, 'the phone ring is still drawn in the desktop month').toBe('none');
+  // And the mark that stays is the reference's: a square cell border, no
+  // radius anywhere near it.
+  expect(m.cellRadius, 'the month cell has picked up a radius').toBe('0px');
+  expect(m.cellBorder, 'the selected cell has lost its border').toBe('solid');
+});
+
+
 test('the week and the month both take a swipe, in the same direction', async ({ page }) => {
   await ready(page);
   await phone(page);

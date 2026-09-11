@@ -295,6 +295,44 @@ at 24.8 s on desktop. It walks six routes in two themes and waits on
 `document.fonts.ready` at each; it is against its own budget, not racing
 anything.
 
+## The reference read against the page, 2026-09-11
+
+The author opened the desktop Daily page beside the reference and named four
+things. All four were real; **three are fixed and one is held.**
+`docs/daily-desktop-visuals.md` §10.26 is the record.
+
+- **The expanded register stopped matching the day's card**, and §10.24 is why:
+  it made the hero five twelfths of its column, so the picture ran 244 → 568 px
+  across the window while the register stayed at the reference's fixed 340. The
+  two agreed at one width and nowhere else. `--card-pic`/`--card-gap` are
+  declared once on the route and read by both now.
+- **The name sat 4 px high** — the reference's 8 px lift is computed from 27/40.5
+  type and §10.8 moved the name to 26/1.25 without moving the lift.
+- **The month carried the phone's ring as well as its own mark**, nested on the
+  cell that is both today and selected. Gone past 1024 px; the week strip keeps
+  it. The cell under it is square now too — `base.css` gives every button 4 px
+  and nobody chose that for a month grid.
+- **Held: the way into the life and the fade above it.** The reference puts
+  `Continue reading` inline and flush left with no fade; the page puts
+  `Read more` flush right over two dissolving lines **because the author asked
+  for exactly that three times, on 2026-09-02 and 2026-09-04**, and the first of
+  those instructions depends on the fade existing. §10.26 quotes all three. Not
+  reverted without a word.
+
+**Two of the three I raised as further defects were not defects**, and both
+lessons are the same one. The sidebar column *is* the reference's 304 — 272 is
+the month grid inside it, and the probe read the grid. The name-days-first order
+*is* the author's own instruction of 2026-09-02, which `calendar.css` applies
+with `order` precisely so the phone keeps the markup's reading order. **Check
+provenance before calling something drift**: two of these would have been
+"fixes" that undid the author's instructions.
+
+**The method worth keeping.** Every number here comes from a probe that takes
+the same reading off *both* documents — `scratchpad/align-probe.mjs`,
+`mock-audit2.mjs`, `shape-check.mjs`. Reading one and describing the other is
+what produced §10.1 and §10.4, the two decisions this document made from a
+render and later had reversed.
+
 ## Known and unfixed
 
 - **All Saints packs all 862 captions in one blocking task** before it can paint

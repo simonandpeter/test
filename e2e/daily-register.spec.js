@@ -691,9 +691,18 @@ test('the register offers the two faces the reference draws, and no third', asyn
   await expect(page.locator('.register-view [aria-pressed="true"]')).toHaveCount(1);
 
   /*
-   * The expanded face is the day's own card repeated (§5.2): a 340 px mount in
-   * the hero's own `--mount`, the name a step up, the whole lede rather than
-   * two clamped lines, and a way into each life.
+   * The expanded face is the day's own card repeated (§5.2): the hero's own
+   * mount and `--mount`, the name a step up, the whole lede rather than two
+   * clamped lines, and a way into each life.
+   *
+   * **The width is read off the hero, not written down.** It was pinned at the
+   * reference's 340 until 2026-09-11, and by then the hero had not been 340
+   * for a day: §10.24 made the day's picture five twelfths of what it shares
+   * with the words, so it ran 244 → 568 px across the window while this face
+   * stood still. The two agreed at one width and the test passed at every
+   * width, because it was asking each of them a different question. The rule
+   * the reference actually states is "every saint in the shape of the day's
+   * own card", and a shape is a comparison.
    */
   await page.locator('[data-reg-view="expanded"]').click();
   await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
@@ -713,6 +722,9 @@ test('the register offers the two faces the reference draws, and no third', asyn
     const mat = row.querySelector('.reg-thumb');
     return {
       width: Math.round(mat.getBoundingClientRect().width),
+      // The day's own card, measured in the same pass: the claim is that these
+      // two are one shape, so neither number is worth having on its own.
+      heroWidth: Math.round(hero.getBoundingClientRect().width),
       fill: getComputedStyle(mat).backgroundColor,
       mount,
       // The same mat as the day's own card, read off the hero rather than
@@ -726,7 +738,8 @@ test('the register offers the two faces the reference draws, and no third', asyn
       wayShown: row.querySelector('.reg-more').offsetParent !== null,
     };
   });
-  expect(big.width, 'the expanded mount is not 340 px').toBe(340);
+  expect(big.width, 'the expanded mount is not the day card own shape').toBe(big.heroWidth);
+  expect(big.width, 'the expanded mount is not filling a column at all').toBeGreaterThan(200);
   expect(big.fill, 'the expanded mount is not the hero own mat colour').toBe(big.mount);
   expect(big.pad, 'the expanded mat is not the hero own').toBe(big.heroPad);
   expect(big.name, 'the expanded name is not --text-xl').toBe(21);
