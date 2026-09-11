@@ -201,17 +201,22 @@ export const STRINGS = {
     heroPlaces: { birth: 'Born at {place}', death: 'Died at {place}' },
     continueReadingOf: 'Continue reading the life of {name}',
     /*
-     * The same door, on a wide screen, renamed (author, 2026-09-04: "instead
-     * of the 'continue reading' button on Daily page desktop, rename it
-     * 'read more'"). A word of its own rather than a re-skin of
-     * `continueReading`: the phone's own button sits below the cut text as
-     * "…continue reading", reading as the sentence's own ending, while the
-     * desktop one is centred under the whole preview as a plainer, separate
-     * call to action — the ellipsis that made sense stitched onto a clipped
-     * sentence does not belong here.
+     * The same door, on a wide screen. It read "Read more" from 2026-09-04
+     * ("instead of the 'continue reading' button on Daily page desktop,
+     * rename it 'read more'") until **2026-09-12, when the author took the
+     * desktop card back to the reference wholesale** — the reference writes
+     * `Continue reading`, and the wording came back with the position and the
+     * fade as one decision rather than three.
+     *
+     * Still its own key rather than a re-skin of `continueReading`: the
+     * phone's button sits below the cut text as "…continue reading", reading
+     * as the sentence's own ending, and the ellipsis that makes sense stitched
+     * onto a clipped sentence does not belong on a line of its own. The packs
+     * already held this phrase under `shelf.continueReading`, which is where
+     * each translation below comes from.
      */
-    readMore: 'Read more',
-    readMoreOf: 'Read more of the life of {name}',
+    heroMore: 'Continue reading',
+    heroMoreOf: 'Continue reading the life of {name}',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
     // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
     // The reach used to be the literal "19 September" and had been stale for a

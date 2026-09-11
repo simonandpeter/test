@@ -2134,10 +2134,9 @@
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
-  /* Over the faded tail rather than under it: the two overlap by design, and
-     the words are the thing that must stay readable. */
+  /* Nothing runs under it any more (2026-09-12). It keeps `position` so the
+     chevron's box stays its own, and no longer needs to lift above anything. */
   position: relative;
-  z-index: 1;
 }
 
 /*
@@ -2212,11 +2211,23 @@
    * containing-block is decided by the nearest *positioned* ancestor and
    * skips `.hero-body` (`position` left at its default, `static`).
    */
-  .hero.has-media .hero-body > .hero-more {
-    position: absolute;
-    grid-column: 2;
-    right: max(0px, 100% - 68ch);
-    bottom: 0;
+  /*
+   * **Back in the sentence's flow, flush left** (author, 2026-09-12: "do the
+   * mockup"). It was pinned to the card's foot and right-justified to the
+   * text's own measure by three instructions across 2026-09-02 and 09-04, and
+   * every one of them read against a faded tail that no longer exists — the
+   * first of the three asked for it "lined up to the bottom line of preview
+   * text visible under the gradient". The reference sets `Continue reading` on
+   * its own line directly under the lede at the column's left edge.
+   *
+   * `align-self` is the one thing it does need. `.hero-body` is a column flex
+   * container, which blockifies an `inline-flex` child and then stretches it:
+   * left alone the link was 579 px of target for 113 px of words, so a press
+   * anywhere on that line opened the life. `flex-start` is what makes the
+   * target the words, and `fitLede` measures it in the budget as it always did.
+   */
+  .hero.has-media .hero-body > .hero-more:not(.hero-more-alone) {
+    align-self: flex-start;
   }
 }
 
@@ -2303,33 +2314,10 @@
   content: '\203A';
 }
 
-/* **The life going on under the button, fading out** (author, 2026-09-01:
-   "gradient fade the last two lines of preview text below it").
-
-   Two lines exactly, and the height is what makes that true rather than the
-   word count — `fitLede` measures this box as a fixed cost while it decides how
-   much of the paragraph fits above it, and a box that sized itself to its own
-   words would move under the search trying to fit it. `1lh` is the paragraph's
-   own line, so the pair stays two lines whatever the type does.
-
-   The mask runs from opaque at the top to nothing at the foot, so the first of
-   the two reads and the second dissolves. `mask-image` rather than a gradient
-   *overlay*, which would have to be painted in the page's own background colour
-   and would therefore be wrong on the theme it was not written for. */
-.hero-lede-tail {
-  display: block;
-  height: calc(2 * 1lh);
-  overflow: hidden;
-  /* The words are a picture of text, so nothing here is a target and nothing
-     here takes a selection. */
-  user-select: none;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.85), transparent 92%);
-}
-
-.hero-lede-tail:empty {
-  display: none;
-}
+/* The faded tail and its mask were removed on 2026-09-12 with the button's
+   position (author: "do the mockup") — `views/daily/panel.js` no longer builds
+   the element. The reference's lede ends where it ends and the way into the
+   life follows it on the next line. */
 
 /* **A landscape band since 2026-08-26**, where it was a square from
    2026-08-21 (author: "Change the daily saint image crop from square to a

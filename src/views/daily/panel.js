@@ -58,8 +58,8 @@ function fillHeroLede(panel, slug, iso, card) {
       link.className = 'hero-more';
       link.href = state.router.href(`/saints/${slug}`);
       link.dataset.prefetch = slug;
-      link.setAttribute('aria-label', fill(STRINGS.calendar.readMoreOf, { name: saintName(card) }));
-      link.textContent = STRINGS.calendar.readMore;
+      link.setAttribute('aria-label', fill(STRINGS.calendar.heroMoreOf, { name: saintName(card) }));
+      link.textContent = STRINGS.calendar.heroMore;
       // Empty on purpose: the mark is drawn by `content` in calendar.css,
       // because the Daily desktop replaces it with a diamond and a character
       // cannot be swapped for a shape from here.
@@ -86,28 +86,24 @@ function fillHeroLede(panel, slug, iso, card) {
       panel.querySelector('.hero-body')?.append(link);
 
       /*
-       * **And two lines of the life going on under it** (author, 2026-09-01:
-       * "gradient fade the last two lines of preview text below it").
+       * **No tail, and no fade over the words** (author, 2026-09-12: "do the
+       * mockup"). Two lines of the life used to run on under the button and
+       * dissolve — author, 2026-09-01, "gradient fade the last two lines of
+       * preview text below it" — saying by demonstration that the paragraph
+       * was cut rather than finished.
        *
-       * The preview used to stop dead at the button, which says the paragraph
-       * was cut and does not show it. Two more lines running under the button
-       * and fading out say the same thing by demonstration — the life carries
-       * on, and this is where you stop being able to read it.
+       * The reference does neither. Its lede simply ends and `Continue
+       * reading` follows it on the next line, and the author took the desktop
+       * card back to the reference wholesale on 2026-09-12. The fade and the
+       * button's position were one decision and not two: the instruction that
+       * placed the button asked for it "lined up to the bottom line of preview
+       * text visible under the gradient", so there is nothing left for it to
+       * line up against.
        *
-       * `aria-hidden`, because these words cannot be finished: a screen reader
-       * given half a sentence with no way to reach the rest is worse served
-       * than one given the button, which is right beside it and says whose life
-       * it opens. The tail is a picture of text rather than text.
-       *
-       * A generous slice rather than a measured one: the box is two lines tall
-       * with its overflow hidden, so what it needs is *enough* words, and forty
-       * is enough at any column width the card reaches.
+       * `fitLede` below loses its fixed cost with the tail — the budget it
+       * searches against is now the words and the link, which is what it
+       * measured before 2026-09-01.
        */
-      const tail = document.createElement('span');
-      tail.className = 'hero-lede-tail';
-      tail.setAttribute('aria-hidden', 'true');
-      box.append(tail);
-      box.__tail = tail;
 
       // Kept whole so a resize can re-fit from the original rather than from
       // whatever the last fit left behind.
@@ -117,11 +113,6 @@ function fillHeroLede(panel, slug, iso, card) {
     () => {},
   );
 }
-
-/** How many words are handed to the faded tail. Two lines' worth at any
- *  column the card reaches, with room to spare — the box's own height is what
- *  decides where they stop. */
-const TAIL_WORDS = 40;
 
 /**
  * Trims the preview until the card's text column ends above the bottom of the
@@ -135,12 +126,10 @@ const TAIL_WORDS = 40;
  * what is left, link and all, fits the budget, and the ellipsis is the link's
  * own leading character.
  *
- * **And the budget now has to hold the faded tail as well** (2026-09-01
- * evening). The tail is two lines with its overflow hidden, so it is a fixed
- * cost the search measures along with everything else — which is the whole
- * reason it is a fixed height rather than a word count: a tail whose height
- * depended on how many words fell into it would move under the search that was
- * trying to fit it.
+ * **The faded tail was a fixed cost in this budget from 2026-09-01 until
+ * 2026-09-12**, when the author took the desktop card back to the reference
+ * and the fade went with the button's position. The search measures the words
+ * and the link again, and nothing else.
  *
  * A binary search over the word count, because each try costs a layout: nine
  * measurements for a three-hundred-word paragraph rather than three hundred.
@@ -170,12 +159,8 @@ function fitLede(panel) {
   if (limit <= 0 || box.offsetParent === null) return;
 
   const words = box.__full.split(' ');
-  const tail = box.__tail;
   const write = (n) => {
     box.firstChild.nodeValue = words.slice(0, n).join(' ');
-    // What the life says next, faded out. Empty where the paragraph ends with
-    // the head — there is nothing going on under the button to show.
-    if (tail) tail.textContent = words.slice(n, n + TAIL_WORDS).join(' ');
   };
   write(words.length);
   if (body.scrollHeight <= limit) return;
@@ -385,8 +370,8 @@ function registerRow(saint, title, transition, seq = 0) {
       -->
       <a class="reg-more" href="${state.router.href(`/saints/${saint.slug}`)}"
         data-prefetch="${esc(saint.slug)}"
-        aria-label="${esc(fill(STRINGS.calendar.readMoreOf, { name: saintName(saint) }))}"
-        >${esc(STRINGS.calendar.readMore)}<span class="reg-more-mark" aria-hidden="true"></span></a>
+        aria-label="${esc(fill(STRINGS.calendar.heroMoreOf, { name: saintName(saint) }))}"
+        >${esc(STRINGS.calendar.heroMore)}<span class="reg-more-mark" aria-hidden="true"></span></a>
     </span>
     ${image}
   </li>`;

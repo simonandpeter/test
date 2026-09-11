@@ -1969,3 +1969,56 @@ picture's foot, so the picture's size is the whole of it — fixing 1 moves this
 without touching it. The 17 px against the reference's 15 is `--text-lg`, PLAN's
 reading voice, and the scale's nine steps are a later decision than the
 reference.
+
+### 10.27 The held item, released — the author overrides the record, 2026-09-12
+
+§10.26 held one of the four differences and asked for a word on it, on the
+grounds that the page's position, fade and wording were three author
+instructions of 2026-09-02 and 09-04 that postdate the reference. The word came
+back: **"as I said, do the mockup"**, and then, plainly, **"Fuck the plan when
+im talking i override"**.
+
+That is the standing rule and it goes here because it is the one this document
+most needs: **a live instruction beats anything written down, including an
+earlier instruction from the same author.** §10.26 was right to ask and wrong to
+treat the record as an argument.
+
+So the desktop card is the reference's:
+
+| | was | is |
+| --- | --- | --- |
+| the way in | `Read more`, flush right at the card's foot | `Continue reading`, flush left under the lede |
+| under it | two lines of the life dissolving | nothing |
+
+**It was one decision and not three**, which is why they moved together: the
+2026-09-02 instruction positions the button "lined up to the bottom line of
+preview text visible under the gradient", so the fade is what the position was
+measured against. Taking the fade away leaves it nothing to line up with.
+
+**Four instructions are superseded by this**, and they are listed rather than
+quietly dropped: 2026-09-01's "gradient fade the last two lines of preview text
+below it"; 2026-09-02's "move it down 2 lines" and "lining up with the bottom of
+the image"; and 2026-09-04's "rename it 'read more'".
+
+**What the packs already had.** The wording needed no translation: every pack
+carries the phrase under `shelf.continueReading`, so `heroMore` takes each
+pack's own words. The key was renamed from `readMore` because a key called
+`readMore` holding "Continue reading" is a lie the next reader has to unpick.
+
+**One thing `align-self` buys.** `.hero-body` is a column flex container, which
+blockifies an `inline-flex` child and then stretches it — left alone the link
+was 579 px of press target for 113 px of words, so a press anywhere on that line
+opened the life. `flex-start` makes the target the words.
+
+**And one consequence worth stating.** The desktop preview now ends mid-sentence
+with nothing marking the cut: the fade is gone, and the ellipsis went on
+2026-09-04 with the rename. The phone still carries "…continue reading", whose
+leading ellipsis does that job. The reference is the same — its lede is
+hand-written to end where it ends — so this follows it, and is named here rather
+than found later.
+
+**Tests.** `the way in sits on the last faded line` was replaced rather than
+deleted by `the preview ends where it ends, with nothing fading under the way
+in`, because a removal nothing asserts is a removal the next sitting re-adds.
+Both it and `the preview ends in a way into the life` fail when the absolute
+placement is put back.

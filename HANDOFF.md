@@ -312,12 +312,17 @@ things. All four were real; **three are fixed and one is held.**
   cell that is both today and selected. Gone past 1024 px; the week strip keeps
   it. The cell under it is square now too — `base.css` gives every button 4 px
   and nobody chose that for a month grid.
-- **Held: the way into the life and the fade above it.** The reference puts
-  `Continue reading` inline and flush left with no fade; the page puts
-  `Read more` flush right over two dissolving lines **because the author asked
-  for exactly that three times, on 2026-09-02 and 2026-09-04**, and the first of
-  those instructions depends on the fade existing. §10.26 quotes all three. Not
-  reverted without a word.
+- **The way into the life and the fade above it** — held on the 11th, released
+  on the 12th. `Continue reading` is flush left under the lede and nothing fades
+  under it, which is the reference. It superseded four instructions of
+  2026-09-01, 09-02 and 09-04, and they are listed in §10.27 rather than quietly
+  dropped.
+
+**The rule that came out of it, and it is the standing one**: *"Fuck the plan
+when im talking i override"* (author, 2026-09-12). A live instruction beats
+anything written down, including an earlier instruction from the same author.
+§10.26 held that item and asked for a word, which was right; it also offered the
+record as an argument, which was not.
 
 **Two of the three I raised as further defects were not defects**, and both
 lessons are the same one. The sidebar column *is* the reference's 304 — 272 is

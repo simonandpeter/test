@@ -3427,11 +3427,16 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
 
   const more = page.locator('.hero-more').filter({ visible: true });
   await expect(more).toHaveCount(1);
-  // Renamed from "…continue reading" on 2026-09-04 (author: "instead of the
-  // 'continue reading' button on Daily page desktop, rename it 'read more'")
-  // — the phone's own standalone button below keeps the older name, since it
-  // was never asked to change.
-  await expect(more).toContainText('Read more');
+  /*
+   * **"Continue reading" again, 2026-09-12.** It was renamed to "Read more" on
+   * 2026-09-04 ("instead of the 'continue reading' button on Daily page
+   * desktop, rename it 'read more'") and renamed back when the author took the
+   * desktop card to the reference wholesale — the reference writes `Continue
+   * reading`, and the wording came with the position and the fade as one
+   * decision. The phone's own standalone button keeps "…continue reading" with
+   * its ellipsis, which was never asked to change.
+   */
+  await expect(more).toContainText('Continue reading');
   // Named after the saint, not a bare "Read more" on a page of them.
   await expect(more).toHaveAttribute('aria-label', /Lupus/);
 
@@ -3449,18 +3454,25 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
     };
   });
   /*
-   * **Right-justified to the text's own measure, not the column it sits
-   * in** (2026-09-04, the author's own follow-up to the centring above,
-   * reversed the same day: "the preview text does not actually r[e]ach the
-   * right side margin, it has a limit on how long a line can get, so the
-   * read more button read badly ... right justified to the real margin of
-   * the preview text, not to the margin of the space where the preview text
-   * is but doesnt reach"). `[data-hero-lede]` is `.hero-lede` itself
-   * (`views/daily/panel.js`), so its own `getBoundingClientRect` is the
-   * text's real, rendered width — already clamped to 68ch by the browser —
-   * rather than a number this test would have to recompute by hand.
+   * **Flush left under the lede, 2026-09-12.** It was right-justified to the
+   * text's own measure from 2026-09-04 ("right justified to the real margin of
+   * the preview text, not to the margin of the space where the preview text is
+   * but doesnt reach") and pinned to the card's foot from 2026-09-02. Both of
+   * those read against two dissolving lines that no longer exist, and the
+   * author took the card to the reference, which sets `Continue reading` on
+   * its own line at the column's left edge.
+   *
+   * Asserted against the lede's own left rather than the column's: they are
+   * the same edge here and the lede is the thing the link is under.
    */
-  expect(Math.abs(m.link.right - m.lede.right), 'Read more is not right-justified to the text, not the column').toBeLessThan(2);
+  expect(Math.abs(m.link.left - m.lede.left), 'the way in is not flush left under the lede').toBeLessThan(2);
+  /*
+   * And it is its own width, not the column's. `.hero-body` is a column flex
+   * container, which blockifies an `inline-flex` child and then stretches it —
+   * 579 px of target for 113 px of words, so a press anywhere on that line
+   * opened the life. This is what `align-self: flex-start` buys.
+   */
+  expect(m.link.width, 'the way in has stretched to the whole column').toBeLessThan(m.lede.width * 0.6);
   /*
    * **Inside the paragraph where there is one** (author, 2026-09-01: "make
    * the '...continue reading' part of the actual preview paragraph"), which
@@ -3480,7 +3492,9 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
   expect(m.inLede, 'still nested inside the clipped preview box').toBe(false);
   expect(m.link.top, 'not below the dates').toBeGreaterThan(m.dates.bottom - 1);
   // And never past the foot of the picture, which is the rule the trim
-  // exists for: the words end where the image does.
+  // exists for: the words end where the image does. This one is unchanged by
+  // 2026-09-12 — the link is in the flow now, so it is part of what `fitLede`
+  // fits rather than an absolute box hung on the card's own foot.
   expect(m.link.bottom, 'the preview runs below the mount').toBeLessThan(m.media.bottom + 2);
 
   // And it goes where the name goes.
@@ -3489,59 +3503,54 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
 });
 
 
-test('the way in sits on the last faded line, not on the last readable one', async ({ page }) => {
+test('the preview ends where it ends, with nothing fading under the way in', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "make sure the ...continue reading button is lined up
-   * to the bottom line of preview text visible under the gradient, right now
-   * its floating on the last line before the 2 gradient fade out lines. So
+   * **This test replaces one whose subject was removed** (author, 2026-09-12:
+   * "do the mockup"). From 2026-09-01 the last two lines of the life ran on
+   * under the button and dissolved — "gradient fade the last two lines of
+   * preview text below it" — and the test here pinned the button to the foot
+   * of that tail, per 2026-09-02: "make sure the ...continue reading button is
+   * lined up to the bottom line of preview text visible under the gradient …
    * move it down 2 lines."
    *
-   * A day whose life is long enough that the preview really is cut, so the
-   * two dissolving lines exist to line up against — where the paragraph ends
-   * inside the budget there is no tail and nothing to move down past.
+   * The reference does neither, and the author took the desktop card to the
+   * reference wholesale. The two instructions were one decision: the second
+   * positions the button *against* the gradient the first asked for, so
+   * removing the fade leaves it nothing to line up with.
+   *
+   * Kept as a test rather than deleted, because a removal nothing asserts is a
+   * removal the next sitting re-adds. Same day, same window, same saint as the
+   * test it replaces.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await expect(page.locator('.hero-lede-tail')).not.toBeEmpty();
+
+  // Nothing builds it and nothing styles it.
+  await expect(page.locator('.hero-lede-tail')).toHaveCount(0);
 
   const m = await page.evaluate(() => {
     const lede = document.querySelector('[data-hero-lede]');
-    const tail = document.querySelector('.hero-lede-tail');
     const more = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
-    const line = parseFloat(getComputedStyle(lede).lineHeight);
+    const cs = getComputedStyle(lede);
     return {
-      lines: Math.round(tail.getBoundingClientRect().height / line),
-      // The two are meant to overlap; what is asserted is which line of the
-      // tail the pill has landed on.
-      belowTailBottom: more.getBoundingClientRect().bottom - tail.getBoundingClientRect().bottom,
-      line,
+      // A mask anywhere on the words is the fade by another route.
+      mask: cs.webkitMaskImage === 'none' ? cs.maskImage : cs.webkitMaskImage,
+      ledeBottom: lede.getBoundingClientRect().bottom,
+      moreTop: more.getBoundingClientRect().top,
+      moreLeft: more.getBoundingClientRect().left,
+      ledeLeft: lede.getBoundingClientRect().left,
+      line: parseFloat(cs.lineHeight),
     };
   });
-  expect(m.lines, 'the tail is not the two lines this is measured against').toBe(2);
-  /*
-   * Within a line of the tail's own foot, which is the claim: before this it
-   * sat a whole two lines higher, so half a line of tolerance cannot pass a
-   * backed-out fix.
-   */
-  /*
-   * **Signed, not absolute** (2026-09-09). This read
-   * `Math.abs(belowTailBottom) < line / 2` and could not tell the two
-   * positions apart at all: correct, the pill's bottom sits *half a line
-   * below* the tail's bottom (+14.03 here), and a line higher it sits half a
-   * line *above* (-14.02). Both are 14 under an absolute value, so the test
-   * was decided by which side of 14.025 a sub-pixel reflow landed on — it
-   * passed by a hair for weeks, then failed by six thousandths of a pixel on
-   * the type collapse with the picture visibly correct.
-   *
-   * The sign is the whole discrimination. Below the tail's bottom and within
-   * one line is the last faded line; above it is the line before.
-   * Backed out by moving the pill up a line, which the absolute version passed
-   * and this one fails.
-   */
-  expect(m.belowTailBottom, 'the pill is above the tail, so a line too high').toBeGreaterThanOrEqual(0);
-  expect(m.belowTailBottom, 'the pill is a line or more below the faded tail').toBeLessThan(m.line);
+
+  expect(m.mask, 'the preview is still being faded out').toBe('none');
+  // On the next line, not over the words: the reference sets it under the
+  // paragraph rather than across its last lines.
+  expect(m.moreTop, 'the way in still overlaps the preview').toBeGreaterThanOrEqual(m.ledeBottom - 1);
+  expect(m.moreTop - m.ledeBottom, 'the way in has drifted a line clear of the preview').toBeLessThan(m.line);
+  expect(Math.abs(m.moreLeft - m.ledeLeft), 'the way in is not flush left under the preview').toBeLessThan(2);
 });
 
 
@@ -3782,7 +3791,7 @@ test('neither Daily column draws a scrollbar, and both still scroll', async ({ p
  * narrowed while it is open still reaches them.
  */
 
-test('the way into the life is a white button with the life fading out under it', async ({ page }) => {
+test('the way into the life reads as a control without wearing a surface', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Make the 'continue reading' button white so you can
    * tell its a button for more, and gradient fade the last two lines of preview
@@ -3815,9 +3824,6 @@ test('the way into the life is a white button with the life fading out under it'
   await expect(more).toHaveCount(1);
   const seen = await page.evaluate(() => {
     const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
-    const tail = document.querySelector('.hero-lede-tail');
-    // The readable half of the preview, which the faded pair follows.
-    const head = document.querySelector('[data-hero-lede]');
     const cs = getComputedStyle(link);
     // The mount's own foot since 2026-09-10 (§4.1) — the picture's mat is
     // what the card ends on now, and `fitLede` fits the words to it.
@@ -3825,30 +3831,6 @@ test('the way into the life is a white button with the life fading out under it'
     return {
       background: cs.backgroundColor,
       shadow: cs.boxShadow,
-      tail: tail ? tail.textContent.trim() : '',
-      tailLines: tail
-        ? Math.round(tail.getBoundingClientRect().height / parseFloat(getComputedStyle(tail).lineHeight))
-        : 0,
-      masked: tail ? getComputedStyle(tail).maskImage : 'none',
-      /*
-       * **What is left of "the life goes on under the button".**
-       *
-       * It has been rewritten twice in two days as the button moved, and the
-       * claim has to move with it or it stops meaning anything. It sat at the
-       * end of the last readable line with the faded pair running on beneath
-       * (2026-09-01); it moved down onto the last faded line (2026-09-02,
-       * morning); and it now sits at the foot of the *card*, level with the
-       * icon beside it (2026-09-02, afternoon: "move it so the bottom of the
-       * text is lining up with the bottom of the image to the left").
-       *
-       * Through all three the thing worth pinning is the same and is about the
-       * *paragraph*, not the button: the preview does not stop dead at the
-       * last readable word — there are faded lines after it, and they are what
-       * say the life carries on. So this measures the tail against the
-       * readable text it follows rather than against a control that has been
-       * three places this week.
-       */
-      below: tail && head ? tail.getBoundingClientRect().top >= head.getBoundingClientRect().top - 1 : false,
       // And still inside the picture's height, which the rule before this one
       // asked for and this must not have broken.
       fits: document.querySelector('.hero-body').getBoundingClientRect().bottom <= media.bottom + 2,
@@ -3866,27 +3848,18 @@ test('the way into the life is a white button with the life fading out under it'
    */
   expect(seen.background, 'the way in still wears a surface').toBe('rgba(0, 0, 0, 0)');
   expect(seen.shadow, 'the way in still wears a shadow').toBe('none');
-  expect(
-    seen.tail.length,
-    'premise: this window is no longer narrow enough to cut the paragraph, so there is nothing to fade',
-  ).toBeGreaterThan(10);
-  expect(seen.tailLines, 'the fading tail is not two lines').toBe(2);
-  expect(seen.masked, 'the tail does not fade').toContain('gradient');
-  expect(seen.below, 'the life stops at the button rather than running past it').toBe(true);
+  /*
+   * **The fade half of the 2026-09-01 instruction was removed on 2026-09-12**
+   * (author: "do the mockup") along with the button's position, which had been
+   * measured against it. What that instruction was really after — that the way
+   * in reads as a control rather than as the last words of a sentence — is
+   * carried by the two assertions above and by contrast, and is untouched.
+   * `the preview ends where it ends` is the test for the removal, and the
+   * `below` reading this line used to make was the tail's own position.
+   */
   expect(seen.fits, 'the card now runs below its own picture').toBe(true);
 
-  /*
-   * The words under the button are the ones the life goes on with, not a repeat
-   * of the ones above it - a tail that showed the reader the same sentence
-   * twice would be decoration rather than a continuation.
-   */
-  const repeated = await page.evaluate(() => {
-    const box = document.querySelector('[data-hero-lede]');
-    const tail = document.querySelector('.hero-lede-tail').textContent.trim();
-    const head = box.firstChild.nodeValue.trim();
-    return head.includes(tail.split(' ').slice(0, 4).join(' '));
-  });
-  expect(repeated, 'the tail repeats the preview instead of continuing it').toBe(false);
+
 });
 
 
