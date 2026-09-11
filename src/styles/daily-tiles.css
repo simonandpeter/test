@@ -1,0 +1,449 @@
+/*
+ * The day's saints: the tile, and the card it becomes.
+ *
+ * This stylesheet owns `.day-grid`, `.day-tile` and every `.row-*` inside one
+ * — and nothing else. The sidebar is `daily-sidebar.css`; the scroller and the
+ * page's own frame are the view's. Ported from `carousel-mockup-c`, with the
+ * mockup's literals replaced by the site's tokens throughout: the mockup is a
+ * single file with no scale behind it, and a duration or a colour written out
+ * by hand here is how twelve durations happened the first time.
+ *
+ * **Folded and open are the same element, and the difference is entirely in
+ * this file.** `views/daily/tiles.js` draws every part a saint has on the
+ * first paint; `.is-open` is what decides which of them the reader sees. So
+ * nothing in the Daily page rebuilds an article to open it, and this
+ * stylesheet is the whole of the change a press makes.
+ */
+
+.day-grid {
+  display: grid;
+  /* Four across the width the sidebar leaves, so a day is one glance rather
+     than one scroll. `auto-fill` rather than `auto-fit`: a day with two
+     saints should leave the other two columns empty, not stretch two tiles
+     across the window. */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+  align-items: start;
+
+  /* Half the width the icon had when it stood over the name (author,
+     2026-09-12). At 120 px it is a stamp beside the entry rather than the
+     entry's own picture, which is what a folded saint wants: the picture
+     belongs to the card, and the tile only has to say which saint this is. */
+  --tile-pic: 120px;
+  /* The open card's picture. The other three columns take what is left, so
+     the card spreads to the window instead of standing in a third of it. */
+  --row-pic-w: clamp(180px, 20vw, 300px);
+  --row-pic-h: clamp(200px, 38vh, 420px);
+  /* How deep a column of text is read before it is let go at the foot. */
+  --row-flow-h: clamp(180px, 30vh, 380px);
+}
+
+/* ---- folded: the tile ---------------------------------------------------
+   The icon, the name and dates, and two lines of the life — enough to choose
+   by, and no more, because the card says the rest. */
+
+.day-tile {
+  display: grid;
+  grid-template-columns: var(--tile-pic) minmax(0, 1fr);
+  grid-template-areas:
+    'media head'
+    'media line';
+  align-content: start;
+  column-gap: var(--space-3);
+  row-gap: var(--space-1);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
+  cursor: pointer;
+}
+
+/* ---- open: the card -----------------------------------------------------
+   The same element takes the whole row: the icon at reading size, the life,
+   the troparion and the kontakion, four columns across the window.
+   `grid-column: 1 / -1` is the whole of that change in the flow; the card's
+   own columns are a second grid inside it. */
+
+.day-tile.is-open {
+  grid-column: 1 / -1;
+  align-items: start;
+  grid-template-columns: var(--row-pic-w) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    'media life trop kont'
+    'head  life trop kont';
+  column-gap: clamp(var(--space-6), 2.5vw, var(--space-8));
+  row-gap: var(--space-1);
+  padding: var(--space-4) 0 var(--space-8);
+  cursor: default;
+}
+
+/* ---- the picture --------------------------------------------------------
+   Square in the tile and its own shape in the card, cropped from the top
+   either way — these are icons, the face is in the upper third, and a crop
+   taken against the centre takes the head off. `--ar` and `object-position`
+   are `lib/hero-crop.js`'s `cardCrop`, written on by the view. */
+
+.row-media {
+  grid-area: media;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--field);
+}
+
+.day-tile.is-open .row-media {
+  aspect-ratio: var(--ar, 0.8);
+  max-height: var(--row-pic-h);
+}
+
+.row-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--dur-linger) var(--ease-soft);
+}
+
+/* Set by `tiles.js`'s reveal queue, one picture every 200 ms, so the day
+   fills in rather than flashing. Under reduced motion the class arrives at
+   once and the transition below is off, so the picture is simply there. */
+.row-media img.is-loaded {
+  opacity: 1;
+}
+
+/*
+ * **A saint with no icon keeps a mark rather than a blank.** Drawn in the
+ * rule's own colour on the recessed field, so the mat reads as the frame of
+ * something the corpus does not have rather than as a picture that failed to
+ * load. The mark is `aria-hidden` and the tile says the type in words, which
+ * is what makes 1.41:1 on the field the right contrast for it.
+ */
+.row-media.is-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rule);
+}
+
+.row-media.is-glyph .row-glyph {
+  width: 38%;
+  height: 38%;
+}
+
+/* ---- the name and its dates -------------------------------------------- */
+
+.row-head {
+  grid-area: head;
+}
+
+.row-name {
+  font-size: var(--text-base);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.day-tile.is-open .row-name {
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  margin-top: var(--space-2);
+}
+
+/*
+ * **The name is the card's way out to the saint's own page** (plan §11.7a).
+ * It carries the anchor folded as well as open, because the article is never
+ * rebuilt — but folded the press opens the tile, so the anchor must not look
+ * or behave like a link there: it takes the tile's own cursor and the tile's
+ * hover. Open, it is a link and is underlined like one.
+ */
+.row-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: inherit;
+}
+
+.day-tile:hover .row-link {
+  text-decoration: underline;
+}
+
+.day-tile.is-open .row-link {
+  cursor: pointer;
+}
+
+.day-tile.is-open:hover .row-link {
+  text-decoration: none;
+}
+
+.day-tile.is-open .row-link:hover,
+.row-link:focus-visible {
+  text-decoration: underline;
+}
+
+.row-sub {
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Two lines of the life on a tile: enough to say what this one is. */
+.row-line {
+  grid-area: line;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- the three text columns -------------------------------------------- */
+
+.row-life {
+  grid-area: life;
+}
+
+.row-trop {
+  grid-area: trop;
+}
+
+.row-kont {
+  grid-area: kont;
+}
+
+.row-life,
+.row-trop,
+.row-kont {
+  display: none;
+  min-width: 0;
+}
+
+/* What opens comes up rather than appearing: the same mask the carousel's
+   captions use, over the settle. */
+@property --day-cap-a {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes day-column-in {
+  from {
+    --day-cap-a: 0;
+  }
+  to {
+    --day-cap-a: 1;
+  }
+}
+
+.day-tile.is-open .row-life,
+.day-tile.is-open .row-trop,
+.day-tile.is-open .row-kont {
+  display: block;
+  --day-cap-a: 0;
+  -webkit-mask-image: linear-gradient(rgb(0 0 0 / var(--day-cap-a)), rgb(0 0 0 / var(--day-cap-a)));
+  mask-image: linear-gradient(rgb(0 0 0 / var(--day-cap-a)), rgb(0 0 0 / var(--day-cap-a)));
+  animation: day-column-in var(--dur-settle) var(--ease) forwards;
+}
+
+.day-tile.is-open .row-line {
+  display: none;
+}
+
+/*
+ * **No icon, no icon column.** A card with nothing to show would otherwise
+ * spend a fifth of the window on an empty mat; the life takes that room
+ * instead and runs in two columns, with the saint's name at the head of the
+ * first — which is where the name sits under the picture on every other card,
+ * so the eye finds it in the same place.
+ */
+.day-tile.is-open.no-pic {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: 'life life trop kont';
+}
+
+.day-tile.is-open.no-pic .row-media,
+.day-tile.is-open.no-pic .row-head {
+  display: none;
+}
+
+.day-tile.is-open.no-pic .row-life .td-flow {
+  columns: 2;
+  column-gap: clamp(var(--space-6), 2.5vw, var(--space-8));
+}
+
+.row-name-in,
+.row-sub-in {
+  display: none;
+}
+
+.day-tile.is-open.no-pic .row-name-in {
+  display: block;
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  margin: 0 0 var(--space-2);
+}
+
+/* The dates go with the name into the column they head. */
+.day-tile.is-open.no-pic .row-sub-in {
+  display: block;
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin: 0 0 var(--space-3);
+}
+
+/* Which of the four a column is. The hymn columns name themselves only when
+   they are empty — a hymn that is there carries its own heading, with its
+   tone and its model in it. */
+.day-tile .td-label {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin: 0 0 var(--space-1);
+}
+
+/*
+ * A column runs to a reading depth and is let go at the foot rather than cut
+ * off square: the mask takes its last lines down to nothing, which says there
+ * is more of this without spending a rule or an ellipsis on saying it.
+ */
+.day-tile .td-flow,
+.day-tile .row-trop .hymn-text,
+.day-tile .row-kont .hymn-text {
+  max-height: var(--row-flow-h);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--space-16)), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--space-16)), transparent);
+}
+
+/*
+ * **The life and the hymns are both read at `--text-base`, and that is set
+ * here rather than in `ui/hymns.js`** (plan §4). The shipped `.hymn-text` has
+ * its own scale on a saint's page, where a hymn is the subject of the section
+ * it stands in; on this page it is one of four columns and has to sit at the
+ * same size as the life beside it. Scoped to `.day-tile`, so the saint page
+ * keeps the size it was given.
+ */
+.day-tile .td-life,
+.day-tile .td-life p,
+.day-tile .hymn-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.day-tile .td-life,
+.day-tile .td-life p {
+  color: var(--ink-soft);
+  margin: 0 0 var(--space-3);
+}
+
+.day-tile .hymn {
+  margin: 0;
+}
+
+/* `hymnMarkup`'s own heading is the hymn column's label: "Troparion · Tone 4"
+   in the reader's words. Drawn as the other three labels are drawn, so the
+   four column heads read as one row. */
+.day-tile .hymn-kind {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  font-weight: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin: 0 0 var(--space-1);
+}
+
+/* Who published it, or the admission that this site rendered it. Small,
+   secondary, and under the text it belongs to — outside the mask, because a
+   credit that fades out is not a credit. */
+.day-tile .hymn-source {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  margin: var(--space-2) 0 0;
+}
+
+/*
+ * **A hymn nobody has rendered into the reader's language is said to be
+ * missing.** The column stays and admits the gap, which is the true thing to
+ * print and is what keeps the four columns from shifting about from saint to
+ * saint.
+ */
+.row-none {
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* A day the corpus has nothing for says so where the saints would have been
+   (plan §11.3) — prose in ink, never a banner. */
+.day-empty {
+  grid-column: 1 / -1;
+  max-width: 44ch;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+  padding-top: var(--space-6);
+}
+
+/* ---- narrow ------------------------------------------------------------
+   One saint to a row, and the card's four columns become one: at this width
+   there is no room to read two of them side by side, and a 1fr column of
+   troparion beside a 1fr column of life is two unreadable columns rather than
+   one readable one. */
+
+@media (max-width: 767.98px) {
+  .day-grid {
+    grid-template-columns: minmax(0, 1fr);
+    --tile-pic: 84px;
+  }
+
+  .day-tile.is-open,
+  .day-tile.is-open.no-pic {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'media'
+      'head'
+      'life'
+      'trop'
+      'kont';
+    row-gap: var(--space-4);
+  }
+
+  .day-tile.is-open .row-media {
+    max-height: var(--row-pic-h);
+  }
+
+  .day-tile.is-open.no-pic .row-life .td-flow {
+    columns: 1;
+  }
+}
+
+/* ---- reduced motion -----------------------------------------------------
+   A reader who has asked for no motion is given the card whole and at once:
+   the columns are simply there, and a picture that has decoded is simply
+   shown. `tiles.js` bypasses the reveal queue on the same preference, so the
+   two halves of this agree. */
+
+@media (prefers-reduced-motion: reduce) {
+  .day-tile.is-open .row-life,
+  .day-tile.is-open .row-trop,
+  .day-tile.is-open .row-kont {
+    animation: none;
+    --day-cap-a: 1;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .row-media img {
+    transition: none;
+  }
+}
