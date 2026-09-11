@@ -1552,3 +1552,71 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 .side-results::-webkit-scrollbar {
   display: none;
 }
+
+/* ---- the two faces of one page (2026-09-12) ----------------------------- */
+
+/* Daily and All Saints share one clipped box past 1024 px and slide past each
+   other rather than cross-fading (plan §5). `ui/face-stage.js` owns the order
+   of operations and says why; these seven rules are the whole of the layout.
+
+   **The resting state on All Saints is the one that matters.** Its layer is
+   `position: static` — in flow, driving the document's height, scrolled by the
+   window, indistinguishable from the page before there was a stage. That is
+   what lets the carousel keep its scroll position and its drift across a round
+   trip: the layer is never removed, never `display: none` and never re-created,
+   so `loop-scroll.js` keeps measuring a real box and never hears about any of
+   this. The day's layer is the one that sits absolute and hidden above the
+   glass while All Saints is up.
+
+   The 32 px is the gap between the two faces in flight, so they never touch
+   mid-slide. `height: 100%` resolves against `#view`, which the
+   `data-fills-window` block above already sizes to the window less the chrome —
+   which is why `face-stage.js` sets that attribute before it starts a slide
+   toward the day and does not clear it until the slide back has landed. */
+.face-stage {
+  position: relative;
+}
+
+.face-layer {
+  transition: transform var(--dur-swap) var(--ease-soft);
+  will-change: transform;
+}
+
+.face-stage[data-face='saints'] .face-layer[data-layer='calendar'] {
+  position: absolute;
+  inset: 0;
+  transform: translateY(calc(-100% - 32px));
+  visibility: hidden;
+}
+
+.face-stage[data-face='calendar'] {
+  overflow: clip;
+  height: 100%;
+}
+
+.face-stage[data-face='calendar'] .face-layer[data-layer='calendar'] {
+  position: absolute;
+  inset: 0;
+  transform: none;
+}
+
+.face-stage[data-face='calendar'] .face-layer[data-layer='saints'] {
+  position: absolute;
+  inset: 0;
+  transform: translateY(calc(100% + 32px));
+}
+
+/* In flight, both layers are absolute and both are paintable. The
+   `[data-layer]` is not decoration: without it this loses to the resting rules
+   above on specificity, and the incoming day would be `visibility: hidden` for
+   the frame between its render and the face flipping. */
+.face-stage[data-swapping] {
+  overflow: clip;
+  height: 100%;
+}
+
+.face-stage[data-swapping] .face-layer[data-layer] {
+  position: absolute;
+  inset: 0;
+  visibility: visible;
+}

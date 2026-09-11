@@ -44,6 +44,17 @@ import { mountCoachmarks } from './ui/coachmark.js';
 import { currentLanguage, ensurePack, languageTag, subscribeLanguage } from './lib/i18n.js';
 import { registerServiceWorker } from './lib/offline.js';
 import { wireNavScroll } from './ui/nav-scroll.js';
+import {
+  facePainted,
+  layerFor,
+  markPainted,
+  mountStage,
+  stageFace,
+  stageUp,
+  stageWidth,
+  swapFace,
+  teardownStage,
+} from './ui/face-stage.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
 import * as saint from './views/saint.js';
@@ -480,6 +491,14 @@ function settleLate(y) {
   requestAnimationFrame(tick);
 }
 
+/**
+ * Which half of the pair a route is, or `null` for everything else. By view
+ * module and not by `nav`, because `/saints/:slug` answers to the `saints`
+ * section and is a third route as far as the stage is concerned.
+ */
+const faceOf = (route) =>
+  route?.view === calendar ? 'calendar' : route?.view === saints ? 'saints' : null;
+
 function show({ route, params, path }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
@@ -497,7 +516,9 @@ function show({ route, params, path }, nav = {}) {
   document.documentElement.dataset.swipeNav = nav.swipe ?? '';
   // Where this reader is *leaving* from, before anything moves.
   if (!firstRender && cameFrom?.nav) sectionScroll.set(cameFrom.nav, window.scrollY);
-  lastRoute = { path, nav: route?.nav };
+  // `face` and not `nav`: a saint's page answers to the same section as All
+  // Saints, and it is emphatically not the other half of the pair.
+  lastRoute = { path, nav: route?.nav, face: faceOf(route) };
   // Only a change of section restores: within one, the view owns the question
   // — the Index puts a reader back on the card they opened — and every other
   // navigation lands at the top, which is what it has always done.
@@ -505,6 +526,29 @@ function show({ route, params, path }, nav = {}) {
     !firstRender && !nav.restore && route?.nav && route.nav !== cameFrom?.nav
       ? (sectionScroll.get(route.nav) ?? 0)
       : 0;
+  /*
+   * **The pair.** Past 1024 px the Daily page and All Saints are two faces of
+   * one stage rather than two pages (plan §5): the view being left is not torn
+   * down, it is slid out of the clipped box and parked, which is what lets the
+   * carousel come back still holding its scroll position and still drifting.
+   * `ui/face-stage.js` owns the box and the sequence; everything this file has
+   * to do is render into a layer instead of into `#view`, not ask All Saints to
+   * render itself a second time, and keep its hands off the scroll while the
+   * stage is driving.
+   *
+   * **A swap and a mount are different things.** A swap needs a face to come
+   * *from* — this navigation is between the two. A deep link to a day, or
+   * arrival from a saint's page, mounts the stage and paints one layer; the
+   * other is empty until the first swap towards it, which therefore renders
+   * and then slides (§11.7 b). And because the decision is taken here, in the
+   * one place every navigation passes through, the browser's Back button
+   * between the two faces takes exactly the path a click takes (§11.7 c) —
+   * `popstate` arrives at `show()` like everything else.
+   */
+  const face = faceOf(route);
+  const onStage = !!face && stageWidth();
+  const stageSwap =
+    onStage && !firstRender && !!cameFrom?.face && cameFrom.face !== face && stageFace() === cameFrom.face;
   // Every prefetch in flight was a guess about where this reader was going,
   // and the navigation has just answered it (brief §7).
   cancelPrefetches();
@@ -528,8 +572,28 @@ function show({ route, params, path }, nav = {}) {
   const swap = async () => {
     // Views that hold listeners or timers get told they are leaving; the rest
     // are pure renderers and do not implement it.
-    currentView?.destroy?.();
+    //
+    // **All Saints is not told, when it is only being parked.** A swap toward
+    // the day leaves its layer mounted and live, so `destroy()` — which takes
+    // its `remembered` snapshot, closes its state and drops its subscriptions —
+    // would be destroying a view that is still on the page and still running.
+    // The day is destroyed on the way out as usual: it is rendered fresh every
+    // time, because the date is a route parameter.
+    const leaving = currentView;
+    if (!(stageSwap && leaving === saints)) currentView?.destroy?.();
     currentView = view ?? null;
+    /*
+     * Leaving the pair for a third route — Map, Texts, About, a saint — takes
+     * the stage down, and whichever face was parked has to be told now, while
+     * its markup is still in the document for it to read. After this the site
+     * is back to one view in `#view` and All Saints rebuilds from its own
+     * snapshot exactly as it did before any of this existed.
+     */
+    if (stageUp() && !onStage) {
+      if (facePainted('saints') && leaving !== saints) saints.destroy?.();
+      if (facePainted('calendar') && leaving !== calendar) calendar.destroy?.();
+      teardownStage();
+    }
     renderNav(route?.nav);
     /*
      * Which section is on, published to CSS so a stylesheet can answer
@@ -560,9 +624,20 @@ function show({ route, params, path }, nav = {}) {
      * the page's scroll past 1024 px so their columns can keep their own.
      * One attribute the two stylesheets used to reach for by their own
      * names — index.html sets it for the first frame, this keeps it true.
+     *
+     * **A stage swap owns this attribute for its duration** and is skipped
+     * here: the slide needs the window's scroll gone *before* it starts and
+     * given back only once it has landed, which is a sequence rather than a
+     * fact about the route. Every other navigation — a cold load straight onto
+     * the day among them (§11.7 d) — sets it here as it always has.
      */
-    if (route?.nav === 'calendar' || route?.view === saint) document.documentElement.dataset.fillsWindow = '';
-    else delete document.documentElement.dataset.fillsWindow;
+    if (stageSwap) {
+      /* face-stage.js has it */
+    } else if (route?.nav === 'calendar' || route?.view === saint) {
+      document.documentElement.dataset.fillsWindow = '';
+    } else {
+      delete document.documentElement.dataset.fillsWindow;
+    }
     /*
      * Every navigation lands at the top of the page it opens, or — a change of
      * section — back where this section was left (`returning`). The first
@@ -578,7 +653,9 @@ function show({ route, params, path }, nav = {}) {
      * both ways. Where there is a position to go back to, that is the only
      * place this navigation scrolls to.
      */
-    if (!firstRender && !returning) {
+    // A stage swap is excepted: it scrolls the window itself, on its own beat,
+    // and a reset dropped in here is the jump the pin exists to prevent.
+    if (!firstRender && !returning && !stageSwap) {
       if (landAnimated) animateScrollToTop();
       else window.scrollTo(0, 0);
     }
@@ -596,13 +673,41 @@ function show({ route, params, path }, nav = {}) {
         ? view.title()
         : view.title;
     document.title = `${heading} - ${STRINGS.site.tabName}`;
-    view.render(viewEl, { data, params, router, nav, cameFrom });
+    /*
+     * Three ways in, and the view cannot tell them apart: it is handed an
+     * element and renders into it, the same argument it has always been given.
+     *
+     * The one that is not a render at all is the swap back onto All Saints
+     * when its layer is already painted. That skipped call *is* requirement 1:
+     * no second `render()`, so no `destroy()` before it, so no snapshot, no
+     * teardown, no rebuilt carousel — the page that comes up from below is the
+     * one that went down, still holding its scroll and still drifting.
+     */
+    const paint = (el) => {
+      view.render(el, { data, params, router, nav, cameFrom });
+      if (onStage) markPainted(face);
+    };
+    if (stageSwap) {
+      swapFace({
+        to: face,
+        returning,
+        render: (layer) => {
+          if (face === 'saints' && facePainted('saints')) return;
+          paint(layer);
+        },
+      });
+    } else if (onStage) {
+      paint(mountStage(viewEl, face));
+    } else {
+      paint(viewEl);
+    }
     // A returning section is put back where it was *before* the transition's
     // new-state snapshot is taken, so the fade crosses into the page already at
     // the right spot rather than at the top with a jump after it. (The Index's
     // own restore — the saint page's × or a browser back — happens separately,
-    // from its own record.)
-    if (!firstRender) await restoreSection(returning);
+    // from its own record.) A stage swap restores its own, on landing, and is
+    // passed 0 rather than skipped so the late pass below is disarmed with it.
+    if (!firstRender) await restoreSection(stageSwap ? 0 : returning);
     // Keyboard and screen-reader focus follows the page change — but not
     // into the first page of the visit. There is no page change to announce
     // yet, focus is already at the top of the document, and Chrome treats a
@@ -610,7 +715,11 @@ function show({ route, params, path }, nav = {}) {
     // the reader would meet the heading wearing a focus ring they did not ask
     // for and cannot dismiss without clicking away.
     if (firstRender) return;
-    const h1 = viewEl.querySelector('h1');
+    // Inside the layer this navigation painted, not `#view`: both faces are in
+    // the document at once and All Saints is the earlier of the two, so a
+    // document-order query would hand the day's navigation the other page's
+    // heading.
+    const h1 = (onStage ? (layerFor(face) ?? viewEl) : viewEl).querySelector('h1');
     if (!h1) return;
     h1.setAttribute('tabindex', '-1');
     h1.focus({ preventScroll: true });
@@ -631,7 +740,10 @@ function show({ route, params, path }, nav = {}) {
   // used to produce the jump this fixed.
   // Read and cleared with `animateLanding` above: this press's own fade
   // decision, and the next navigation starts from the ordinary one.
-  const fade = !skipFade;
+  // A stage swap is never faded over: a view transition covers the document
+  // with a snapshot for its duration, and a slide underneath one is a slide
+  // nobody sees (trap 14 is the same fact, from the instrument's side).
+  const fade = !skipFade && !stageSwap;
   skipFade = false;
   if (document.startViewTransition && !reduced && !first && fade) {
     document.startViewTransition(swap).finished.finally(() => {
