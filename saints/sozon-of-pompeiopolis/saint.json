@@ -125,7 +125,11 @@
         "url": "https://www.saint.gr/947/saint.aspx",
         "year": 2026
       },
-      "model": "Τοὺς ἀσφαλεῖς."
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "english": {
+        "text": "Let us all come together today and hymn with a great voice the true and God-bearing martyr, the proven contestant of godliness, Sozon, the divine initiate of grace and the most abundant giver of healings; for he intercedes with God for us all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -137,6 +141,10 @@
         "text": "Doxologia — Condacul Sfântului Mucenic Sozont",
         "url": "https://doxologia.ro/condacul-sfantului-mucenic-sozont",
         "year": 2026
+      },
+      "english": {
+        "text": "Let us all come together today and hymn with a great voice the true and God-bearing martyr, the proven contestant of godliness, Sozon, the divine initiate of grace and the most abundant giver of healings; for he intercedes with God for us all.",
+        "rendered": "site"
       }
     },
     {

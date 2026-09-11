@@ -112,6 +112,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Тропарь преподобного Симеона Столпника»",
         "url": "https://days.pravoslavie.ru/Days/20260901.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a pillar of patience, O venerable one, emulating the forefathers: Job in his sufferings and Joseph in his temptations, and living the life of the bodiless powers while yet in the body, O Symeon our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -124,6 +128,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 сентября ст. ст. — «Кондак преподобного Симеона Столпника»",
         "url": "https://days.pravoslavie.ru/Days/20260901.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Seeking the things on high and joined to those below, and making of thy pillar a chariot of fire, by it thou didst become a companion of the angels, O venerable one; and with them thou dost intercede without ceasing with Christ God for us all.",
+        "rendered": "site"
       }
     },
     {
@@ -149,6 +157,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Συμεών ο Στυλίτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/895/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a pillar of patience, O venerable one, emulating the forefathers: Job in his sufferings and Joseph in his temptations, and living the life of the bodiless powers while yet in the body, O Symeon our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -162,7 +174,11 @@
         "url": "https://www.saint.gr/895/saint.aspx",
         "year": 2026
       },
-      "model": "Αὐτόμελον."
+      "model": "Αὐτόμελον.",
+      "english": {
+        "text": "Seeking the things on high and joined to those below, and making of thy pillar a chariot of fire, by it thou didst become a companion of the angels, O venerable one; and with them thou dost intercede without ceasing with Christ God for us all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -175,7 +191,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-cuvios-simeon-stalpnicul",
         "year": 2026
       },
-      "model": "Cele de sus căutând..."
+      "model": "Cele de sus căutând...",
+      "english": {
+        "text": "Seeking the things on high and joined to those below, and making of thy pillar a chariot of fire, by it thou didst become a companion of the angels, O venerable one; and with them thou dost intercede without ceasing with Christ God for us all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -187,6 +207,10 @@
         "text": "Doxologia — Troparul Sfântului Cuvios Simeon Stâlpnicul",
         "url": "https://doxologia.ro/troparul-sfantului-cuvios-simeon-stalpnicul",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a pillar of patience, O venerable one, emulating the forefathers: Job in his sufferings and Joseph in his temptations, and living the life of the bodiless powers while yet in the body, O Symeon our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -199,6 +223,10 @@
         "text": "Православни подсетник (pravoslavno.rs) — Тропар: Преподобни Симеон Столпник",
         "url": "https://www.pravoslavno.rs/index.php?tropar=0914",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a pillar of patience, O venerable one, emulating the forefathers: Job in his sufferings and Joseph in his temptations, and living the life of the bodiless powers while yet in the body, O Symeon our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     }
   ],

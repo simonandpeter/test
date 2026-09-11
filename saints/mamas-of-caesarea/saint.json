@@ -123,6 +123,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Кондак мученика Маманта»",
         "url": "https://days.pravoslavie.ru/Days/20260902.html",
         "year": 2026
+      },
+      "english": {
+        "text": "With the staff given thee by God, O holy one, shepherd thy people in life-bearing pastures; and crush the unseen and untamed beasts beneath the feet of those who hymn thee, for all of us who are in danger have thee, O Mamas, as a fervent protector.",
+        "rendered": "site"
       }
     },
     {
@@ -193,7 +197,11 @@
         "url": "https://www.saint.gr/927/saint.aspx",
         "year": 2026
       },
-      "model": "Ἡ Παρθένος σήμερον."
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "With the staff given thee by God, O holy one, shepherd thy people in life-bearing pastures; and crush the unseen and untamed beasts beneath the feet of those who hymn thee, for all of us who are in danger have thee, O Mamas, as a fervent protector.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -206,7 +214,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-mucenic-mamant",
         "year": 2026
       },
-      "model": "Fecioara astăzi..."
+      "model": "Fecioara astăzi...",
+      "english": {
+        "text": "With the staff given thee by God, O holy one, shepherd thy people in life-bearing pastures; and crush the unseen and untamed beasts beneath the feet of those who hymn thee, for all of us who are in danger have thee, O Mamas, as a fervent protector.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

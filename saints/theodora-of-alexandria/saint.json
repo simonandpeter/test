@@ -138,7 +138,11 @@
         "url": "https://www.saint.gr/1001/saint.aspx",
         "year": 2026
       },
-      "model": "Χορός, Ἀγγελικὸς."
+      "model": "Χορός, Ἀγγελικὸς.",
+      "english": {
+        "text": "Fleeing the night of the passions, O thou of godly mind, thou didst draw near in mind to the Sun of glory, putting to death by asceticism the leapings of the flesh; wherefore thou wast made a pattern for monastics and a raising up of those who have fallen in this life. Therefore we honour thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -151,7 +155,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-cuvioase-teodora-din-alexandria",
         "year": 2026
       },
-      "model": "Ceata îngerească..."
+      "model": "Ceata îngerească...",
+      "english": {
+        "text": "Fleeing the night of the passions, O thou of godly mind, thou didst draw near in mind to the Sun of glory, putting to death by asceticism the leapings of the flesh; wherefore thou wast made a pattern for monastics and a raising up of those who have fallen in this life. Therefore we honour thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

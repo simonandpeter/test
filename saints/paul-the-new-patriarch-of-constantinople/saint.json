@@ -107,6 +107,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 августа ст. ст. — «Кондак святителей Александра, Иоанна и Павла»",
         "url": "https://days.pravoslavie.ru/Days/20260830.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Kindled with the love of Christ, O glorious ones, and taking up his yoke, the precious Cross, ye were shown to be imitators of his life and partakers of his divine glory: Alexander of godly wisdom, with John the wondrous and Paul the glorious. Wherefore, standing before his throne, pray earnestly for our souls.",
+        "rendered": "site"
       }
     },
     {
@@ -145,7 +149,11 @@
         "url": "https://doxologia.ro/condacul-sfintilor-ierarhi-alexandru-ioan-pavel-cel-nou-patriarhii-constantinopolului",
         "year": 2026
       },
-      "model": "Apărătoare Doamnă..."
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "With thy flock, as one delivered from the ungodly, I bring tokens of victory and thanksgiving to thee, O unconquered champion and hierarch; for thou didst put to death the madness of Arius and didst silence the haughty philosopher. Therefore I cry out to thee: Rejoice, O thrice-blessed father.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

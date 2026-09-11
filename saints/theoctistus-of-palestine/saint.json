@@ -106,6 +106,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Тропарь преподобного Феоктиста»",
         "url": "https://days.pravoslavie.ru/Days/20260903.html",
         "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a lamp to the whole world, shining with wonders, O Theoctistus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -131,7 +135,11 @@
         "url": "https://www.saint.gr/939/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Dedicated to God in holiness from thy youth, thou didst steadfastly turn away from all attachment to created things, O venerable Theoctistus; wherefore, shining in the ways of stillness, thou wast shown to be an exact trainer of monastics. And now guide those who come to thee, O father.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -143,6 +151,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Θεόκτιστος συνασκητής του Μεγάλου Ευθυμίου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/939/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a lamp to the whole world, shining with wonders, O Theoctistus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -167,6 +179,10 @@
         "text": "Doxologia — Troparul Sfântului Cuvios Teoctist",
         "url": "https://doxologia.ro/troparul-sfantului-cuvios-teoctist",
         "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a lamp to the whole world, shining with wonders, O Theoctistus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -179,6 +195,10 @@
         "text": "Doxologia — Troparul Sfântului Cuvios Teoctist din Palestina",
         "url": "https://doxologia.ro/troparul-sfantului-cuvios-teoctist-din-palestina",
         "year": 2026
+      },
+      "english": {
+        "text": "Dedicated to God in holiness from thy youth, thou didst steadfastly turn away from all attachment to created things, O venerable Theoctistus; wherefore, shining in the ways of stillness, thou wast shown to be an exact trainer of monastics. And now guide those who come to thee, O father.",
+        "rendered": "site"
       }
     }
   ]

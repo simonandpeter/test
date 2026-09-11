@@ -128,7 +128,11 @@
         "url": "https://www.saint.gr/2369/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεῖς."
+      "model": "Ὁ ὑψωθεῖς.",
+      "english": {
+        "text": "Contending steadfastly for the Trinity, ye put to flight the enemy of many devices, bound together in spirit as sisters. Therefore ye were brought with the five virgins into the heavenly bridal chamber, O prize-winners; and with the angels ye stand before the King of all, rejoicing without ceasing.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -141,7 +145,11 @@
         "url": "https://doxologia.ro/condacul-sfintelor-mucenite-minodora-mitrodora-nimfodora",
         "year": 2026
       },
-      "model": "Cel Ce Te-ai Înălţat..."
+      "model": "Cel Ce Te-ai Înălţat...",
+      "english": {
+        "text": "Contending steadfastly for the Trinity, ye put to flight the enemy of many devices, bound together in spirit as sisters. Therefore ye were brought with the five virgins into the heavenly bridal chamber, O prize-winners; and with the angels ye stand before the King of all, rejoicing without ceasing.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

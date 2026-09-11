@@ -105,11 +105,15 @@
       "kind": "troparion",
       "lang": "cu",
       "tone": "глас 4",
-      "text": "Священства одеждею обложен, премудре,/ по закону Божию всесожжения приятна священнолепно приносил еси, Захарие,/ и был еси светильник и зритель тайных,/ знамения в тебе благодати нося явственно, всемудре,/ и, мечем убиен быв в храме Божии,/ Христов пророче, с Предтечею моли// спастися душам нашим. Показать ещё молитвы Ина служба пророка Захарии и праведной Елисаветы. Тропарь глас 2 Праведных Твоих Захарии и Елисавети, Господи, память празднующе,/ теми молим Тя:/ спаси душы наша.",
+      "text": "Священства одеждею обложен, премудре,/ по закону Божию всесожжения приятна священнолепно приносил еси, Захарие,/ и был еси светильник и зритель тайных,/ знамения в тебе благодати нося явственно, всемудре,/ и, мечем убиен быв в храме Божии,/ Христов пророче, с Предтечею моли// спастися душам нашим.",
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Тропарь пророка Захарии»",
         "url": "https://days.pravoslavie.ru/Days/20260905.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -122,6 +126,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Кондак пророка Захарии»",
         "url": "https://days.pravoslavie.ru/Days/20260905.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Today the prophet and priest of the Most High, Zacharias, the father of the Forerunner, has set forth the table of his memory, feeding the faithful and mixing for them the drink of righteousness. Therefore we praise him as a divine initiate of the grace of God.",
+        "rendered": "site"
       }
     },
     {
@@ -135,7 +143,11 @@
         "url": "https://www.saint.gr/2352/saint.aspx",
         "year": 2026
       },
-      "model": "Κατεπλάγη Ἰωσήφ."
+      "model": "Κατεπλάγη Ἰωσήφ.",
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -148,7 +160,11 @@
         "url": "https://www.saint.gr/2352/saint.aspx",
         "year": 2026
       },
-      "model": "Ἡ Παρθένος σήμερον."
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Today the prophet and priest of the Most High, Zacharias, the father of the Forerunner, has set forth the table of his memory, feeding the faithful and mixing for them the drink of righteousness. Therefore we praise him as a divine initiate of the grace of God.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -161,7 +177,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-proroc-zaharia",
         "year": 2026
       },
-      "model": "Fecioara astăzi..."
+      "model": "Fecioara astăzi...",
+      "english": {
+        "text": "Today the prophet and priest of the Most High, Zacharias, the father of the Forerunner, has set forth the table of his memory, feeding the faithful and mixing for them the drink of righteousness. Therefore we praise him as a divine initiate of the grace of God.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -173,6 +193,10 @@
         "text": "Doxologia — Troparul Sfântului Proroc Zaharia",
         "url": "https://doxologia.ro/troparul-sfantului-proroc-zaharia",
         "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -185,6 +209,26 @@
         "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети пророк Захарије и праведна Јелисавета",
         "url": "https://www.pravoslavno.rs/index.php?tropar=0918",
         "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Праведных Твоих Захарии и Елисавети, Господи, память празднующе,/ теми молим Тя:// спаси душы наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Ина служба пророка Захарии и праведной Елисаветы», тропарь глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260905.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memory of thy righteous ones Zacharias and Elizabeth, O Lord, through them we entreat thee: save our souls.",
+        "rendered": "site"
       }
     }
   ],
