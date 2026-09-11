@@ -150,6 +150,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Кондак священномученика Вавилы»",
         "url": "https://days.pravoslavie.ru/Days/20260904.html",
         "year": 2026
+      },
+      "english": {
+        "text": "As a herald of godliness and a firm support of those who contend, the Church glorifies thee and is made radiant this day, O glorious Babylas. Having boldness before the Lord, entreat Christ to keep in perfect peace those who magnify and praise thee, O thou of many sufferings.",
+        "rendered": "site"
       }
     },
     {
@@ -176,7 +180,11 @@
         "url": "https://www.saint.gr/2338/saint.aspx",
         "year": 2026
       },
-      "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως.",
+      "english": {
+        "text": "As a herald of godliness and a firm support of those who contend, the Church glorifies thee and is made radiant this day, O glorious Babylas. Having boldness before the Lord, entreat Christ to keep in perfect peace those who magnify and praise thee, O thou of many sufferings.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

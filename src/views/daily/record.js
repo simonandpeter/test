@@ -4,7 +4,7 @@ import { bibleUrl, refInLanguage } from '../../lib/bible.js';
 import { loadDetail } from '../../lib/detail.js';
 import { currentLanguage } from '../../lib/i18n.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
-import { hymnMarkup } from '../../ui/hymns.js';
+import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { dayInWords } from './format.js';
 import { state } from './state.js';
@@ -90,7 +90,7 @@ export function hymnsMarkup(iso, churchId) {
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
   return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
-    <div data-feast-hymns>${feastHymns.map(hymnMarkup).join('')}</div>
+    <div data-feast-hymns>${mergeForReading(feastHymns).map((h) => hymnMarkup(h)).join('')}</div>
     <div data-saint-hymns></div>
   </section>`;
 }
@@ -103,7 +103,9 @@ export function fillSaintHymns(panel, slug, iso) {
       if (!box) return;
       const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
       if (!hymns.length) return;
-      box.innerHTML = hymns.map(hymnMarkup).join('');
+      box.innerHTML = mergeForReading(hymns)
+        .map((h) => hymnMarkup(h))
+        .join('');
       panel.querySelector('[data-hymns]').hidden = false;
     },
     () => {},

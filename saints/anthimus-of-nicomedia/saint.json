@@ -126,6 +126,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 сентября ст. ст. — «Кондак священномученика Анфима»",
         "url": "https://days.pravoslavie.ru/Days/20260903.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Having shone with godliness among the priests and finished the course of martyrdom, thou didst quench the worship of the idols and wast made a champion of thy flock, O father of godly wisdom. Therefore the Church honours thee now, crying out to thee in secret: deliver us from dangers by thy intercessions, O our father Anthimus.",
+        "rendered": "site"
       }
     },
     {
@@ -198,7 +202,11 @@
         "url": "https://www.saint.gr/940/saint.aspx",
         "year": 2026
       },
-      "model": ". Ὁ ὑψωθεὶς."
+      "model": ". Ὁ ὑψωθεὶς.",
+      "english": {
+        "text": "Having shone with godliness among the priests and finished the course of martyrdom, thou didst quench the worship of the idols and wast made a champion of thy flock, O father of godly wisdom. Therefore the Church honours thee now, crying out to thee in secret: deliver us from dangers by thy intercessions, O our father Anthimus.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -211,7 +219,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-antim-episcopul-nicomidiei",
         "year": 2026
       },
-      "model": "Cel Ce Te-ai înălţat..."
+      "model": "Cel Ce Te-ai înălţat...",
+      "english": {
+        "text": "Having shone with godliness among the priests and finished the course of martyrdom, thou didst quench the worship of the idols and wast made a champion of thy flock, O father of godly wisdom. Therefore the Church honours thee now, crying out to thee in secret: deliver us from dangers by thy intercessions, O our father Anthimus.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

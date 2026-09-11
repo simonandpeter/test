@@ -111,7 +111,11 @@
         "url": "https://www.saint.gr/2473/saint.aspx",
         "year": 2026
       },
-      "model": "Τὰ ἄνω ζητῶν."
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Enlightened with the light of God, O most blessed one, thou dost enlighten us who with love hymn thy honoured and glorious and holy passing, O father and hierarch Eumenius; for thou dost intercede without ceasing for us all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -124,7 +128,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-ierarh-eumenie-episcopul-gortinei",
         "year": 2026
       },
-      "model": "Căutând cele de sus..."
+      "model": "Căutând cele de sus...",
+      "english": {
+        "text": "Enlightened with the light of God, O most blessed one, thou dost enlighten us who with love hymn thy honoured and glorious and holy passing, O father and hierarch Eumenius; for thou dost intercede without ceasing for us all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

@@ -130,7 +130,11 @@
         "url": "https://www.saint.gr/2452/saint.aspx",
         "year": 2026
       },
-      "model": "Χορὸς ἀγγελικὸς."
+      "model": "Χορὸς ἀγγελικὸς.",
+      "english": {
+        "text": "Shown forth as the most sacred branches of honoured Sophia — Faith, Hope and Love — by grace they made foolish the wisdom of the Greeks; and having contended and been shown victorious, they were crowned with an incorruptible crown by Christ, the Master of all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -143,7 +147,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-mucenite-sofia-al-fiicelor-sale-pistis-elpis-agapis",
         "year": 2026
       },
-      "model": "Ceata îngerească..."
+      "model": "Ceata îngerească...",
+      "english": {
+        "text": "Shown forth as the most sacred branches of honoured Sophia — Faith, Hope and Love — by grace they made foolish the wisdom of the Greeks; and having contended and been shown victorious, they were crowned with an incorruptible crown by Christ, the Master of all.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

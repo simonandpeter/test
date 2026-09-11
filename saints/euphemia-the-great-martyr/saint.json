@@ -93,7 +93,11 @@
         "url": "https://www.saint.gr/2445/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "In thy contest thou didst strive nobly, and after death thou dost sanctify us with the streams of thy wonders, O all-praised one. Therefore we honour thy holy falling asleep with faith, standing before thy precious relics, that we may be delivered from the sicknesses of the soul and may draw the grace of wonders.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -106,7 +110,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-mari-mucenite-eufimia-0",
         "year": 2026
       },
-      "model": "Cel Ce Te-ai Înălţat..."
+      "model": "Cel Ce Te-ai Înălţat...",
+      "english": {
+        "text": "In thy contest thou didst strive nobly, and after death thou dost sanctify us with the streams of thy wonders, O all-praised one. Therefore we honour thy holy falling asleep with faith, standing before thy precious relics, that we may be delivered from the sicknesses of the soul and may draw the grace of wonders.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -131,6 +139,10 @@
         "text": "Doxologia — Condacul Sfintei Mucenițe Eufimia",
         "url": "https://doxologia.ro/condacul-sfintei-mucenite-eufimia",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou didst bear with fervour the struggles of suffering and the struggles of the faith for Christ thy Bridegroom. And as thou didst once crush the heresies, so now also put the assaults of our enemies under the feet of our people, entreating the Theotokos; for from the six hundred and thirty God-bearing fathers thou didst receive the definition of the faith, and thou hast kept it, O all-praised one.",
+        "rendered": "site"
       }
     }
   ],

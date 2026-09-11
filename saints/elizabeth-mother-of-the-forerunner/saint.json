@@ -117,7 +117,11 @@
         "url": "https://www.saint.gr/2352/saint.aspx",
         "year": 2026
       },
-      "model": "Κατεπλάγη Ἰωσήφ."
+      "model": "Κατεπλάγη Ἰωσήφ.",
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -142,6 +146,10 @@
         "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети пророк Захарије и праведна Јелисавета",
         "url": "https://www.pravoslavno.rs/index.php?tropar=0918",
         "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the vesture of the priesthood, O wise one, thou didst offer whole burnt offerings acceptably and as befits a priest, according to the law of God, O Zacharias; and thou wast made a light and a beholder of mysteries, bearing in thyself the tokens of grace, O all-wise one. Slain by the sword within the temple of God, O prophet of Christ, intercede together with the Forerunner that our souls may be saved.",
+        "rendered": "site"
       }
     }
   ],

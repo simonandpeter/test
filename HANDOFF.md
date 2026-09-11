@@ -338,6 +338,52 @@ the same reading off *both* documents — `scratchpad/align-probe.mjs`,
 what produced §10.1 and §10.4, the two decisions this document made from a
 render and later had reversed.
 
+## The hymns into English, from 2026-09-12
+
+**The ask** (author): "I want all the hymns translated to English. When English
+is the language, I only want English hymns showing. ALL HYMNS TRANSLATED. No
+double ups. If there is a troparion in Russian and Greek, they should be the
+same when translated to English. If they are completely different, just cite
+this as a Greek source, and this as a Russian source."
+
+**The corpus is 432 hymn objects but only 327 hymns.** The difference is the
+whole of the "no double ups" clause: a saint's apolytikion is often one text
+sung in three tongues, each tradition citing its own book. Keyed on
+`slug · kind · tone` — the same hymn keeps its mode across traditions — the 432
+objects are 327 distinct hymns, 42 of which more than one tradition sings.
+
+**Two pieces of work, and they are independent.**
+
+- `mergeForReading` in `ui/hymns.js` collapses them **at the reading and never
+  in the data**: the folder keeps every tradition's own hymn with its own
+  citation, because that is what a Greek or a Russian reader is shown, and an
+  English reader gets one text carrying every book that published it. Keyed on
+  the rendered English, so two hymns that translate differently are simply two
+  hymns and need no rule. `tests/hymn-merge.test.mjs` holds it.
+- `scripts/hymn-english.mjs` emits the hymns still lacking an English and writes
+  typed English back into the folders. It translates nothing and proposes
+  nothing, like `draft-saint.mjs`; dry run by default.
+
+**Two things the first batch found in that tooling**, both worth the batch:
+
+- **The tone key was a digit match**, so every Greek hymn read as toneless —
+  `Ἦχος γ΄` is tone 3 in Greek numerals — and never grouped with the Slavonic
+  twin it is one hymn with. `lib/tone.js` already had the reader the page uses.
+  Using it collapsed 17 more pairs: 344 distinct hymns became 327.
+- **The tone over-groups as well.** Adrian of Nicomedia's mode-4 kontakia are
+  the hymn for him and Natalia in Romanian and Slavonic *and* a general
+  kontakion of the martyrs — three objects, two hymns. An entry carries `only`
+  to answer for part of a group, which is the author's "if they are completely
+  different" case and it is common: Alexander Nevsky's and Alexander of
+  Constantinople's Russian and Romanian hymns are different texts in one mode.
+
+**Where it stands: 91 of 432 objects carry English, 59 of 327 hymns.** The
+renderings made here are marked `rendered: 'site'` and the page prints a line
+saying so under each, which is the 2026-09-07 convention and not a new one —
+39 hymns cite Orloff's *General Menaion* (1899) and 2 cite Hapgood (1906),
+both public domain, and a citation is the better thing wherever one can be
+found.
+
 ## Known and unfixed
 
 - **All Saints packs all 862 captions in one blocking task** before it can paint
