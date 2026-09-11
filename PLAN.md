@@ -692,9 +692,23 @@ two whose stated reason turned out to be wrong.
 
    The lesson is the one this file keeps learning: a count is not a cost.
 
-   It is also measured by a test: `the carousel drifts on its own` waits for the
-   row to be packed before timing the drift, and that wait should return
-   instantly once this lands.
+   **Five waits in the browser suite exist because of this half-done state,
+   and every one of them should return instantly once it lands**: `the carousel
+   drifts on its own` waits for the row to have somewhere to drift, and four
+   more go through `packedRow` in `index-carousel.spec.js`, which waits for the
+   idle repack to put the whole run in the track.
+
+   **What the half-done state costs is that the row's membership is not the
+   row's membership until the repack.** Measured directly on 2026-09-11
+   (`scratchpad/row-reads-probe.mjs`), at the instant `.cx-card` becomes
+   visible against after the repack: **60 cells against 198, 40 pictures
+   against 147, and a different first ten slugs in 12 of 12 passes** — and
+   *identical at 1×, 6×, 10× and 20×*. It is not a slow-machine race that load
+   makes likelier; the prefix is what is there when the first card paints,
+   always. Three tests were reading it and passing on the gap between the read
+   and the repack. The two obvious waits both measured as useless first: the
+   row is already wider than its viewport at 60 cells, and "two consecutive
+   equal readings" settles on the prefix. `packedRow` carries the table.
 
 3. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
    `scrollLeft` inside a live gesture. Known defect.

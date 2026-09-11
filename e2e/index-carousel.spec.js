@@ -617,6 +617,12 @@ test('the carousel holds only the pictures near it, and the empty boxes keep the
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  // The run, not the prefix — this counts every picture in the row, and the
+  // bare read is *exactly* 40 against a floor that wants more than 40. It read
+  // 38 under load on 2026-09-11; `packedRow` has the measurements.
+  await packedRow(page);
+  // And then the settle the sleep was always for: this test is about pictures
+  // being *released*, which happens after they are packed, not instead of it.
   await page.waitForTimeout(700);
 
   const held = await page.evaluate(() => {
@@ -1235,6 +1241,65 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
 /* ---- Session 6's three survivors (2026-08-29) --------------------------- */
 
 
+/**
+ * **Wait for the whole run to be in the track before reading the run.**
+ *
+ * The first paint packs only `CX_PREFIX` and the rest arrives on
+ * `requestIdleCallback` — PLAN.md item 2, the half of it that landed — so when
+ * `.cx-card` first becomes visible the track holds a prefix, and *which*
+ * saints are in it is not the membership the settled row has. Anything
+ * asserting the row's contents, its length or its order has to wait for the
+ * repack; anything asserting one card's geometry does not.
+ *
+ * **Measured directly, at the three quantities these tests read**
+ * (`scratchpad/row-reads-probe.mjs` against a built preview, four CPU rates,
+ * three passes each). The reading at the instant `.cx-card` is visible,
+ * against the reading after this poll:
+ *
+ * | | at first card | after the poll |
+ * | --- | ---: | ---: |
+ * | cells in the track | 60 | 198 |
+ * | `img` in the track | 40 | 147 |
+ * | first ten slugs | — | **different, 12 of 12** |
+ *
+ * **Identical at 1x, 6x, 10x and 20x**, which is the finding: this is not a
+ * slow-machine race that load makes likelier. The prefix is what is there when
+ * the first card paints, always, and the tests that read the row were racing
+ * the repack at every speed — they passed on the gap between the read and the
+ * repack, not on the machine.
+ *
+ * Three of them were caught inside two full runs on 2026-09-11: "the row is
+ * not the full rendered run" at 38 against a floor of 40 — and the bare read
+ * is *exactly* 40, which that floor wants strictly more than — "the whole run
+ * is not in the track" at 76 against 100, and "the same seed dealt a different
+ * hand", which was one hand read before the repack and one after.
+ *
+ * **Two waits that look right and measure as useless**, both tried before this
+ * one, because this suite's history is explanations written into the code and
+ * later disproved:
+ *
+ * - The row wider than its own viewport — `the carousel drifts on its own`
+ *   waits for exactly that, and it is already true at 60 cells.
+ * - Two consecutive equal readings, which trap 7's resize case teaches —
+ *   it **settles on the prefix**, because at 6x and above the repack has not
+ *   begun, the count sits still, and the poll exits inside 250 ms. It read as
+ *   fixed at 1x and fixed nothing.
+ *
+ * A fixed sleep is the third, and it is the one that hid this longest: 700 ms
+ * in `the carousel holds only the pictures near it`, which was doing two jobs
+ * at once. It keeps the sleep, for the picture-release settle it was actually
+ * for, and waits for the pack first.
+ *
+ * When the pack's remaining half lands, this returns at once.
+ */
+const packedRow = (page) =>
+  expect
+    .poll(
+      () => page.evaluate(() => document.querySelectorAll('[data-carousel-track] > .cx-cell').length),
+      { timeout: 20000, message: 'the idle repack never put the whole run in the track' },
+    )
+    .toBeGreaterThan(100);
+
 /** The row's order, read as the first several slugs in DOM order. */
 const dealtOrder = (page, n = 10) =>
   page.evaluate(
@@ -1260,10 +1325,14 @@ test('a shared seed deals the same hand, and the address bar carries it', async 
   await ready(page);
   await page.goto('/saints?seed=e2e-shared-hand', { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  // Both hands read at the same stage of the pack, or the seed is not what is
+  // being compared: the prefix and the settled row hold different members.
+  await packedRow(page);
   const first = await dealtOrder(page);
 
   await page.goto('/saints?seed=e2e-shared-hand', { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  await packedRow(page);
   expect(await dealtOrder(page), 'the same seed dealt a different hand').toEqual(first);
 
   // And the bar keeps the seed, so what is copied is what was seen.
@@ -1273,6 +1342,7 @@ test('a shared seed deals the same hand, and the address bar carries it', async 
   // from certainty, and the guard that the parameter is actually being read.
   await page.goto('/saints?seed=e2e-other-hand', { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  await packedRow(page);
   expect(await dealtOrder(page)).not.toEqual(first);
 });
 
@@ -1282,6 +1352,7 @@ test('Shuffle deals a new hand and writes the new seed', async ({ page }) => {
   await ready(page);
   await page.goto('/saints?seed=e2e-before-shuffle', { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  await packedRow(page);
   const before = await dealtOrder(page);
 
   const shuffle = page.locator('[data-shuffle]');
@@ -1968,6 +2039,11 @@ test('a picture stands in every second column at least, and the names between th
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+
+  // The whole rendered run, not the first paint's prefix: this reads every
+  // cell in the track and the floors below are about the run. `packedRow` has
+  // the measurements and the two waits that did not work.
+  await packedRow(page);
 
   const packed = await page.evaluate(() => {
     const cells = [...document.querySelectorAll('[data-carousel-track] > .cx-cell')];
