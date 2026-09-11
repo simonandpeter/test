@@ -84,7 +84,11 @@
         "url": "https://www.saint.gr/932/saint.aspx",
         "year": 2026
       },
-      "model": "Της έρήμον πολίτης."
+      "model": "Της έρήμον πολίτης.",
+      "english": {
+        "text": "Companion of Paul and deaconess inspired of God, thou wast appointed to the Church of God in Cenchreae, O Phoebe, as a handmaid of Christ and full of heavenly virtues. Therefore do we honour thee with spiritual hymns, crying aloud: Glory to Christ who hath glorified thee; glory to him who crowned thee; glory to him who through thee bestoweth upon us the better things.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -97,7 +101,11 @@
         "url": "https://www.saint.gr/932/saint.aspx",
         "year": 2026
       },
-      "model": "Έπεφάνης σήμερον."
+      "model": "Έπεφάνης σήμερον.",
+      "english": {
+        "text": "O Phoebe of godly mind, a companion of the apostles and a deaconess of Christ wast thou upon the earth; make supplication now in the heavens for them that honour thy memory with faith.",
+        "rendered": "site"
+      }
     }
   ]
 }

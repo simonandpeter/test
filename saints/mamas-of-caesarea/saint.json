@@ -111,6 +111,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 сентября ст. ст. — «Тропарь мученика Маманта»",
         "url": "https://days.pravoslavie.ru/Days/20260902.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Mamas, O Lord, in his suffering received the incorruptible crown from thee, our God; for having thy strength he cast down the tormentors and shattered the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
       }
     },
     {
@@ -140,7 +144,11 @@
         "url": "https://www.saint.gr/927/saint.aspx",
         "year": 2026
       },
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Being a divine shoot of the martyrs, thou didst follow with unrestrained longing their truly godly footsteps; and having preached the name of the Saviour, thou wast made wondrous through thy contest, O wise one. O glorious Mamas, entreat Christ God, that great mercy be granted unto us.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -152,6 +160,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/927/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as the glory of Paphlagonia and the stay of the people of Gangra, the guard and keeper of the Cypriots, O glorious Mamas. Thou didst pass over the sea as though thou wert living, and curbing its surging waves thou didst wondrously set thy reliquary fast in the city of Morphou, O martyr; wherefore at thy memorial, O wise one, sweet-smelling myrrh welleth forth from it. Glory to God, who works healings for all through thee.",
+        "rendered": "site"
       }
     },
     {
@@ -184,6 +196,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Μάμας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/927/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "O branch of Paphlagonia and adornment of the martyrs, glory of the city of Morphou and boast of the Cypriots, thou didst stop the gaping jaws of the lions, O wise Mamas, and didst bear away the crown of martyrdom. Glory to him who glorified thee and wondrously gave thee strength; glory to him who bestows healings for all through thee.",
+        "rendered": "site"
       }
     },
     {
@@ -250,6 +266,10 @@
         "text": "Православни подсетник (pravoslavno.rs) — Тропар: Свети мученик Мамант",
         "url": "https://www.pravoslavno.rs/index.php?tropar=0915",
         "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Mamas, O Lord, in his suffering received the incorruptible crown from thee, our God; for having thy help he vanquished the tormentors, and he shattered also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
       }
     }
   ],

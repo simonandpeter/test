@@ -142,6 +142,28 @@ if (has('--emit')) {
  */
 const normText = (t) => String(t ?? '').replace(/\s+/g, ' ').trim();
 
+/*
+ * **Hymns filed under the wrong saint, held out of the rendering.** A scrape
+ * that ran over a day boundary put the Beheading of the Forerunner's Romanian
+ * hymns under the patriarchs kept the following day, and the Archangel's
+ * Serbian troparion under Alexander Nevsky. A correct translation of the wrong
+ * hymn is still a false claim, and removing cited corpus data is the author's
+ * call, so these sit in `scripts/hymn-wrong-saint.json` and are skipped here
+ * rather than deleted.
+ *
+ * **Keyed on the saint as well as the text, which is the whole point.** The
+ * Forerunner's troparion is correctly filed under him too, and `--write-texts`
+ * applies a rendering to every object carrying the text — which is how the
+ * English for it reached the two patriarchs' folders in 8a6e080 without anyone
+ * choosing that. The key here is `slug` + text, so the hymn is still rendered
+ * where it belongs and only the misfiled rows are passed over.
+ */
+const HELD = new Map();
+for (const h of JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/hymn-wrong-saint.json'), 'utf8'))) {
+  HELD.set(`${h.slug} ${normText(h.text)}`, h.why);
+}
+const heldOut = (slug, text) => HELD.has(`${slug} ${normText(text)}`);
+
 if (has('--emit-texts')) {
   const limit = Number(opt('--limit', '0')) || Infinity;
   const skip = Number(opt('--skip', '0')) || 0;
@@ -149,6 +171,7 @@ if (has('--emit-texts')) {
   for (const g of groups().values()) {
     for (const m of g.members) {
       if (m.h.english?.text) continue;
+      if (heldOut(g.slug, m.h.text)) continue;
       const k = normText(m.h.text);
       if (!byText.has(k)) byText.set(k, { text: m.h.text, church: m.h.church, lang: m.h.lang, tone: m.h.tone, saints: [] });
       byText.get(k).saints.push(`${g.key} [${m.h.church}]`);
@@ -182,9 +205,14 @@ if (has('--write-texts')) {
   }
   const touched = new Map();
   let objects = 0;
+  let skipped = 0;
   for (const g of groups().values()) {
     for (const m of g.members) {
       if (m.h.english?.text) continue;
+      if (heldOut(g.slug, m.h.text)) {
+        skipped += 1;
+        continue;
+      }
       const english = wanted.get(normText(m.h.text));
       if (!english) continue;
       const saint = touched.get(m.file) ?? JSON.parse(fs.readFileSync(m.file, 'utf8'));
@@ -194,6 +222,7 @@ if (has('--write-texts')) {
     }
   }
   console.log(`${wanted.size} text(s) → ${objects} hymn object(s) in ${touched.size} folder(s)`);
+  if (skipped) console.log(`${skipped} object(s) passed over: filed under the wrong saint, see scripts/hymn-wrong-saint.json`);
   if (dry) {
     console.log('dry run: nothing written.');
     process.exit(0);

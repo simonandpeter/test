@@ -59,7 +59,11 @@
         "url": "https://doxologia.ro/condacul-sfintilor-cuviosi-neofit-meletie-de-la-manastirea-stanisoara",
         "year": 2026
       },
-      "model": "Apărătoare Doamnă..."
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "Having received in your hearts the light that cannot be uttered, ye struggled upon the mountain for the love of the Lord, and in the heavens ye received the crown of recompense. And we bring you praise, O holy venerable fathers Neophytos and Meletius, and cry aloud: Rejoice, strengthening of hermits and glory of Christians!",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -71,6 +75,10 @@
         "text": "Doxologia — Troparul Sfinţilor Cuvioşi Neofit şi Meletie de la Mănăstirea Stânișoara",
         "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-neofit-meletie-de-la-manastirea-stanisoara",
         "year": 2026
+      },
+      "english": {
+        "text": "O fathers who loved God, ascending the mountains of the virtues ye were shown to be dwelling places of the Most Holy Spirit; and now, as a lamp upon its stand, ye give light unto the world, O venerable Neophytos and Meletius. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     }
   ],

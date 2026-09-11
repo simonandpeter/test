@@ -124,6 +124,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 сентября ст. ст. — «Ин тропарь пророка Боговидца Моисея»",
         "url": "https://days.pravoslavie.ru/Days/20260904.html",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou didst ascend unto the height of the virtues, O prophet Moses, and therefore wast thou counted worthy to behold the glory of God. Thou didst receive the grace-bearing tablets of the law, and bearing within thyself the grace of what was written thereon, thou wast the honoured praise of the prophets and the great mystery of piety.",
+        "rendered": "site"
       }
     },
     {
@@ -153,7 +157,11 @@
         "url": "https://www.saint.gr/2341/saint.aspx",
         "year": 2026
       },
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Having gazed upon the immaterial darkness, thou didst receive the law divine upon tablets of stone, as a beholder of the mysteries of the Spirit; and having astounded Egypt with wonders, thou wast appointed the leader of the people of Israel. O glorious Moses, entreat Christ God, that great mercy be granted unto us.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -201,6 +209,10 @@
         "text": "Doxologia — Troparul Sfântului Proroc Moise",
         "url": "https://doxologia.ro/troparul-sfantului-proroc-moise",
         "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of thy prophet Moses, O Lord, through him we entreat thee: save our souls.",
+        "rendered": "site"
       }
     },
     {
@@ -213,6 +225,10 @@
         "text": "Doxologia — Troparul Sfântului Proroc Moise",
         "url": "https://doxologia.ro/troparul-sfantului-proroc-moise-0",
         "year": 2026
+      },
+      "english": {
+        "text": "Ascending unto the height of good things, O holy prophet Moses, thou wast counted worthy to behold the Radiance of God, receiving the tablets given of God; and bearing within thee the gift of what was written thereon, thou wast made the honoured praise of the prophets and the great mystery of the right faith.",
+        "rendered": "site"
       }
     }
   ],

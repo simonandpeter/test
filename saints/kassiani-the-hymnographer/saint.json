@@ -95,7 +95,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-cuvioase-casiana-imnografa",
         "year": 2026
       },
-      "model": "Ceea ce ești ocrotitoare..."
+      "model": "Ceea ce ești ocrotitoare...",
+      "english": {
+        "text": "By the sounding of thy hymns that are well-pleasing unto the Lord, thou dost set our senses aright in spirit, O venerable Kassiani, hymnographer taught of God; wherefore direct thou our steps unto that which is good upon the path of salvation, and teach us to offer unto the Lord with humility the thanksgiving hymn of divine love.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -108,7 +112,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-cuvioase-casiana-imnografa-0",
         "year": 2026
       },
-      "model": "Apărătoare Doamnă..."
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "Let us honour as a lamp of repentance her that is adorned with all goodness and virtue, the venerable Kassiani, the composer of hymns, glorified by God, who was well-pleasing unto Christ the King by her struggles by night and by day, crying out unto her with love: Rejoice, O mother most radiant.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -120,6 +128,10 @@
         "text": "Doxologia — Troparul Sfintei Cuvioase Casiana Imnografa",
         "url": "https://doxologia.ro/troparul-sfintei-cuvioase-casiana-imnografa",
         "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the renowned Kassiani, who in wisdom looked past the longing of an earthly emperor's love for the love of the King of all, as a pattern of virtue and an honoured composer of hymns, crying out: By thy prayers make us also partakers of the Kingdom of God.",
+        "rendered": "site"
       }
     }
   ],

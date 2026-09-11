@@ -65,6 +65,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Πολύδωρος ο Νεομάρτυρας από τη Λευκωσία, Λειτουργικά κείμενα: Ἀπολυτίκιον",
         "url": "https://www.saint.gr/931/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "Thou art the great boast of Nicosia and the great support of Ephesus, the great glory of both cities; for of the one thou wast the venerable offspring, and the other thy blood hath dyed purple. But intercede with Christ God, O Polydorus, that we may be delivered from dangers and afflictions.",
+        "rendered": "site"
       }
     },
     {
@@ -78,7 +82,11 @@
         "url": "https://www.saint.gr/931/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν συνάναρχον Λόγον."
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "With the tears of repentance thou didst first cleanse thyself, O blessed one, and thereafter with the wounds of martyrdom thou didst make thyself resplendent as with shining rays. Wherefore, praising thee in hymns as a steadfast martyr and a partaker in the sufferings of Christ our God, O Polydorus, victorious champion, we magnify thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -91,7 +99,11 @@
         "url": "https://www.saint.gr/931/saint.aspx",
         "year": 2026
       },
-      "model": "Τῇ ὑπερμάχῳ."
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "Come, ye faithful, and with one accord let us praise the choicest offering of our generation, the all-glorious Polydorus, who came forth out of Cyprus and contended in New Ephesus, who put to shame the descendants of Hagar and glorified the divine name of Christ.",
+        "rendered": "site"
+      }
     }
   ]
 }

@@ -77,7 +77,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-preot-mucenic-ilarion-felea",
         "year": 2026
       },
-      "model": "Pe Născătoarea de Dumnezeu..."
+      "model": "Pe Născătoarea de Dumnezeu...",
+      "english": {
+        "text": "Let us with reverence praise the herald of God and confessor of Christ, the holy priest Hilarion, who sprang forth from the land of Crișana and was shown to be a kindled torch of the right faith, teaching and guiding the faithful upon the path of salvation; for he received the crown of martyrdom and was made a partaker of the light that knoweth no evening.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -89,6 +93,10 @@
         "text": "Doxologia — Troparul Sfântului Preot Mucenic Ilarion Felea",
         "url": "https://doxologia.ro/troparul-sfantului-preot-mucenic-ilarion-felea",
         "year": 2026
+      },
+      "english": {
+        "text": "The word of the Gospel thou didst confess, a worthy servant of thy flock, and unto the heavenly Tabor thou didst run, following after the Passion of the Lord. Wherefore thou also rejoicest in the glory of the Godhead, O our father Hilarion. Pray to Christ God to have mercy upon our souls.",
+        "rendered": "site"
       }
     }
   ]

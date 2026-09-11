@@ -66,7 +66,11 @@
         "url": "https://www.saint.gr/4163/saint.aspx",
         "year": 2026
       },
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Thou didst become the first founder of the renowned fold of Kykkos, O all-blessed father Isaiah, and greatly didst thou enrich it, bringing thither the likeness of the Merciful Mother, that venerable work of the sacred Luke, from the City, by the divine will and at the assent of the emperor. Glory to Christ who hath glorified thee; glory to him who hath made thee wondrous, whom do thou entreat without ceasing on behalf of thy children, O thrice-blessed one.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -79,7 +83,11 @@
         "url": "https://www.saint.gr/4163/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Thou didst hallow the mount of Kykkos, O father, by thine ascetic way of life and by thy labours, and thereon didst prepare a throne for the Mother of God, bringing thither the venerable icon of the Merciful Mother, which Luke wondrously and sacredly depicted; and now thou intercedest before the Good One, O Isaiah, on behalf of them that honour thee.",
+        "rendered": "site"
+      }
     }
   ]
 }

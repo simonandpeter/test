@@ -103,7 +103,11 @@
         "url": "https://www.saint.gr/2369/saint.aspx",
         "year": 2026
       },
-      "model": "Τοὺς τρεῖς μεγίστους φωστῆρας."
+      "model": "Τοὺς τρεῖς μεγίστους φωστῆρας.",
+      "english": {
+        "text": "The three glorious virgins and prize-winning contestants of godly mind, bound together in godly wise by sisterly kinship, the fair-flowing fountains of piety, which pour forth the ever-flowing grace of the martyrs' contests, the divine Menodora and the glorious Metrodora with the renowned Nymphodora, steadfast of mind in all things: let us all who take delight in their contests run together and honour them with hymns; for they ever intercede with the Trinity on our behalf.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -115,6 +119,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/2369/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "Let us crown with divine odes the threefold and God-woven company of the sisters who were virgins; for manfully did they put the enemy to rout. Wherefore they stand as protectors of us who cry fervently: Rejoice, O chaste Menodora, with the divine Metrodora and the God-minded Nymphodora.",
+        "rendered": "site"
       }
     },
     {
@@ -161,6 +169,10 @@
         "text": "Doxologia — Troparul Sfintelor Muceniţe Minodora, Mitrodora şi Nimfodora",
         "url": "https://doxologia.ro/troparul-sfintelor-mucenite-minodora-mitrodora-nimfodora",
         "year": 2026
+      },
+      "english": {
+        "text": "The threefold waves of torments and a bitter death did ye exchange for life everlasting, O holy martyrs, ye three virgins, confessing before the lawless tribunals the Uncreated Trinity. Wherefore, having been cut down by the sword, ye now follow the Lamb that was slain, and ye pray for those who honour your sacred memory.",
+        "rendered": "site"
       }
     }
   ],

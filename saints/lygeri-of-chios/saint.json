@@ -74,7 +74,11 @@
         "url": "https://www.saint.gr/4453/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Divinely didst thou contend, O renowned virgin-martyr, watering with the streams of thy blood the Tree of immortal Life. For in faith thou didst look past the pleasures that corrupt the soul, and didst break down the battlements of Belial, O thou of godly mind, bestowing upon us in solemn wise the gifts that are of God.",
+        "rendered": "site"
+      }
     }
   ]
 }

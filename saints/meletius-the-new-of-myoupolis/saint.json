@@ -72,6 +72,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Μελέτιος ο νέος που ασκήτευσε στο όρος της Μυουπόλεως, Λειτουργικά κείμενα: Ἀπολυτίκιον",
         "url": "https://www.saint.gr/887/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "As an angel in the flesh and a servant of Christ, as a man filled with God and the beauty of ascetics, O venerable Meletios, thou didst receive God-given graces to drive out the spirits of wickedness and to heal the sick; wherefore thy honoured reliquary also poureth forth healings.",
+        "rendered": "site"
       }
     },
     {
@@ -85,7 +89,11 @@
         "url": "https://www.saint.gr/887/saint.aspx",
         "year": 2026
       },
-      "model": "Ἠ Παρθένος σήμερον."
+      "model": "Ἠ Παρθένος σήμερον.",
+      "english": {
+        "text": "O glorious one, coming from the East unto the West, thou didst spread abroad the rays of the virtues like another sun, and didst gather unto thy warmth all those tempest-tossed in the cold of the passions; wherefore now we come together and praise thee, O venerable Meletios.",
+        "rendered": "site"
+      }
     }
   ]
 }

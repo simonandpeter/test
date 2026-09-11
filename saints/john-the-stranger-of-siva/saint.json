@@ -64,7 +64,11 @@
         "year": 2026
       },
       "tone": "Ἦχος α’.",
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "O ye faithful, let us honour in hymns the offspring of Crete, the adornment of ascetics, the founder of very many churches, John the venerable, crying out unto him with joy: Save by thy supplications them that keep thy memory and cry unto thee: Glory to Christ who glorified thee; glory to him who made thee wondrous; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

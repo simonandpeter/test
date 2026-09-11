@@ -75,7 +75,11 @@
         "url": "https://www.saint.gr/2429/saint.aspx",
         "year": 2026
       },
-      "model": "Τούς τρεῖς μεγίστους"
+      "model": "Τούς τρεῖς μεγίστους",
+      "english": {
+        "text": "The luminary of Alexandria and most wise patriarch, the truly renowned offspring of the village of Hagios Thomas, the star of the Monastery of Angarathos and the God-inspired protector of the Mount of Sinai and of Apezanoi, the divine Meletios, in years of hardship the greatest theologian and champion of Orthodoxy: let us all, his disciples in Crete, come together and hymn him with longing; for he himself maketh the Trinity merciful unto us.",
+        "rendered": "site"
+      }
     }
   ]
 }

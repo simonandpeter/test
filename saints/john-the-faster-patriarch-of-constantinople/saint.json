@@ -133,7 +133,11 @@
         "url": "https://www.saint.gr/926/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχύ προκατάλαβε."
+      "model": "Ταχύ προκατάλαβε.",
+      "english": {
+        "text": "Anointed by the divine Spirit as a shepherd of the Church, thou didst serve God as a priest angelically upon the earth, O John our father; for having cleansed thyself through fasting, by thy word thou grantest cleansing from transgressions unto them that with longing run fervently unto thee, O hierarch.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

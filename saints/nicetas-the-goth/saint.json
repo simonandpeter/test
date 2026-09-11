@@ -93,7 +93,11 @@
         "url": "https://www.saint.gr/2431/saint.aspx",
         "year": 2026
       },
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Thou didst set up a victory against error, and hast worthily received the incorruptible prize of victory, O Nicetas, who bearest a fitting name; for having conquered the battle array of the enemies, thou didst accomplish thy contest through fire. O glorious martyr, entreat Christ God, that great mercy be granted unto us.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -139,6 +143,10 @@
         "text": "Doxologia — Troparul Sfântului Mare Mucenic Nichita Romanul",
         "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-nichita-romanul",
         "year": 2026
+      },
+      "english": {
+        "text": "O passion-bearer, having first overcome the onslaughts of the barbarians by the unconquerable power of the Cross, thereafter thou didst cast down the pride of the demons, withstanding it by thy valour, O wise one; and having overcome it, O holy martyr Nicetas, thou didst receive gifts worthy of the victory. Glory to Christ who gave thee strength; glory to him who crowned thee; glory to him who hath magnified thy ever-honoured memory.",
+        "rendered": "site"
       }
     }
   ],

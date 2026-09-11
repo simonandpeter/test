@@ -1,12 +1,42 @@
 [
   {
+    "lang": "el",
+    "church": "greek",
+    "tone": "Ἦχος β’.",
+    "saints": [
+      "theodora-of-alexandria · kontakion · 2 [greek]"
+    ],
+    "text": "Τὸ σῶμα τὸ σόν, νηστείας κατατήξασα, ἀγρύπνοις εὐχαῖς, τὸν Κτίστην καθικέτευσας, τοῦ λαβεῖν συγχώρησιν, τὴν τελείαν τῆς ἁμαρτίας σου· ἣν καὶ ἔλαβες ἀληθῶς, ὁδὸν μετανοίας ὑποδείξασα.",
+    "english": ""
+  },
+  {
     "lang": "cu",
     "church": "russian",
-    "tone": "глас 8",
+    "tone": "глас 7",
     "saints": [
-      "john-the-hairy-of-rostov · kontakion · 8 [russian]"
+      "theodore-of-ostrog · troparion · 7 [russian]"
     ],
-    "text": "Христовою любовию уязвися, отче Иоанне блаженне,/ вышния красоты желая,/ земная же вся презре и ни во чтоже вмени./ И на земли ангельское житие препроводи,/ в вечный покой достиже,/ идеже глас празднущих,/ с нимиже молися за ны./ И душам нашим прощение,/ и телесем исцеление даруй.",
+    "text": "Преобразил еси земнаго княжения славу / во иночества образ смиренный, / и вместо врагов видимых / на невидимыя ополчился еси, / и, обою победитель красен являяся, / един от чудотворец Печерских показался еси; / темже и нам ревности Божия дар испроси, / братолюбием сердца наша просвети / и ко спасению вечному стези наша, Феодоре блаженне, направи.",
+    "english": ""
+  },
+  {
+    "lang": "cu",
+    "church": "russian",
+    "tone": "глас 4",
+    "saints": [
+      "theodore-of-ostrog · kontakion · 4 [russian]"
+    ],
+    "text": "Красоты ризныя возгнушавшагося/ и богатства тленнаго со благодарением отвершагося,/ в ризу же безстрастия облекшагося/ и богатому в щедротах Христу возследовавшагося,/ приидите, вернии, восхвалим Феодора достославна,/ яко молящася непрестанно/ о душах наших.",
+    "english": ""
+  },
+  {
+    "lang": "cu",
+    "church": "russian",
+    "tone": "глас 1",
+    "saints": [
+      "theodosius-of-totma · troparion · 1 [russian]"
+    ],
+    "text": "От юности, преподобне Феодосие, / желание твое ко Христу Богу вперил еси, / егоже ради град и отечество оставль / и славу суетную, яко прах вменив, / последовал еси преподобному Димитрию / и обители его сожитель был еси, / преселився ко граду Тотьме / и в междоречие вселився, / постом и бдением, и власяным одеянием, / и веригами тело твое удручил еси. / Сего ради Бог, видев твоя труды, / по преставлении твоем чудесы обогати тя: / бесы изгоняеши и слепыя просвещаеши, / от всяких недуг и бед избавляеши приходящия к тебе с верою и вопиющия: / слава Давшему ти крепость, / слава Венчавшему тя, / слава Дающему тобою всем исцеление.",
     "english": ""
   },
   {
@@ -14,19 +44,9 @@
     "church": "russian",
     "tone": "глас 2",
     "saints": [
-      "john-the-hairy-of-rostov · kontakion · 2 [russian]"
+      "theodosius-of-totma · troparion · 2 [russian]"
     ],
-    "text": "Христовою любовию уязвися отче Иоанне блаженне,/ вышния красоты желая,/ земная же вся презре и ни вочтоже вмени,/ и на земли ангельское житие имея,/ преселился еси в вечный покой,/ идеже предстоя Христу Богу/ моли спастися нам и всему христианскому роду яко да зовем ти:/ радуйся преблаженне отче Иоанне.",
-    "english": ""
-  },
-  {
-    "lang": "el",
-    "church": "greek",
-    "tone": "Ἦχος α’.",
-    "saints": [
-      "john-the-stranger-of-siva · troparion · 1 [greek]"
-    ],
-    "text": "Τῆς Κρήτης τὸν γόνον, καὶ ἀσκητῶν ἐγκαλλώπισμα, ναῶν παμπόλλων ἱδρυτήν, Ἰωάννη τὸν Ὅσιον, τιμήσωμεν ἐν ὕμνοις οἱ πιστοί, βοῶντες πρὸς αὐτὸν χαρμονικῶς· σῶζε ταῖς λιταῖς σου τοὺς τὴν μνήμην σου τελοῦντας καὶ βοῶντάς σοι· Δόξα τῷ σέ δοξάσαντι Χριστῷ, δόξα τῷ σέ θαυμαστώσαντι, δόξα τῶ ἐνεργοῦντι διά σου πᾶσιν ἰάματα.",
+    "text": "От мирскаго мятежа изшед,/ преподобне отче наш Феодосие,/ и в тихое пристанище достиг,/ преподобному Димитрию сожитель был еси,/ и оттуду, Божиим Духом направляемь,/ во град Тотьму преселился еси,/ и во отоцех водных обитель себе воздвигл еси,/ идеже равноангельное житие пожив,/ последовал еси Христу,/ Егоже ради власяну ризу и вериги на теле твоем носил еси./ Смирением и нищелюбием украсився,/ славу суетную презрел еси/ и отеческое имение добре расточил еси,/ молением же к Богу и слезными струями бесы посрамил еси,/ темже по успении твоем Христос даром чудес обогати тя./ Имея убо дерзновение ко Господу,/ преподобне отче наш Феодосие,/ моли Христа Бога, да спасет души наша.",
     "english": ""
   },
   {
@@ -34,192 +54,19 @@
     "church": "russian",
     "tone": "глас 8",
     "saints": [
-      "john-v-patriarch-of-constantinople · kontakion · 8 [russian]"
+      "theodosius-of-totma · kontakion · 8 [russian]"
     ],
-    "text": "Христовою любовию распалаеми, славнии,/ и ярем Его приемшии — Крест Честный,/ подражатели Того жития явистеся/ и Божественный славы Его причастницы бысте,/ Александре Богомудре со Иоанном чудным и Павлом славным./ Темже, Престолу Его предстояще,/ прилежно молитеся за души наша.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glasul 8",
-    "saints": [
-      "joseph-the-new-of-partos · kontakion · 8 [romanian]"
-    ],
-    "text": "Apărător nebiruit, ca unul care prin tine din nevoi s-a mântuit, te are pământul Banatului, Sfinte Iosif. Ci, ca cel ce ai îndrăzneală către Dumnezeu apără-l pe el de toată nevoia, ca să cântăm ţie: bucură-te, Sfinte Ierarhe Iosif, făcătorule de minuni.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glasul 8",
-    "saints": [
-      "joseph-the-new-of-partos · troparion · 8 [romanian]"
-    ],
-    "text": "Din tinereţe cu totul te-ai supus Domnului, cu rugăciunile şi cu ostenelile şi cu postul. Pentru aceasta, văzând Dumnezeu nevoinţele tale, arhiereu şi păstor Bisericii Sale te-a rânduit; şi după moarte, în cetele sfinţilor te-a sălăşluit, Sfinte Părinte Iosif. Roagă-te lui Hristos Dumnezeu să ne dăruiască iertare de greşeli nouă, celor ce cu credinţă şi cu dragoste săvârşim sfântă pomenirea ta.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 4",
-    "saints": [
-      "juliana-of-lazarevo · troparion · 4 [russian]"
-    ],
-    "text": "Просветившися Божественною благодатию,/ и по смерти светлость жития твоего явила еси:/ источаеши бо миро благовонное всем болящим на исцеление,/ с верою приходящим к мощем твоим,/ праведная мати Иулиание,/ Христа Бога моли/ спастися душам нашим.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 8",
-    "saints": [
-      "juliana-of-lazarevo · kontakion · 8 [russian]"
-    ],
-    "text": "Скоропослушливую помощницу вси, сущии в бедах и болезнех, воспоем Иулианию святую, та бо в мире богоугодно поживе и милостыню к нищим безмерну показа, сего ради обрете благодать чудес Божиим ведением.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glasul 2",
-    "saints": [
-      "kassiani-the-hymnographer · kontakion · 2 [romanian]"
-    ],
-    "text": "Prin glăsuirea cântărilor tale celor plăcute Domnului, îndreptezi duhovnicește simțirea noastră, Cuvioasă Casiana, imnografă de Dumnezeu învățată; pentru care îndreptează spre cele bune pașii noștri pe calea mântuirii și învață-ne să aducem Domnului, cu smerenie, cântarea de mulțumire a dumnezeieștii dragoste.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glasul 8",
-    "saints": [
-      "kassiani-the-hymnographer · kontakion · 8 [romanian]"
-    ],
-    "text": "Pe cea împodobită cu toată bunătatea şi virtutea, pe Cuvioasa Casiana, alcătuitoarea de cântări, cea slăvită de Dumnezeu, ceea ce a bineplăcut Împăratului Hristos prin nevoinţele cele din noapte şi din zi, ca pe o făclie a pocăinţei să o cinstim, cu dragoste strigând: Bucură-te, Maică preastrălucită!",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glas 5",
-    "saints": [
-      "kassiani-the-hymnographer · troparion · 5 [romanian]"
-    ],
-    "text": "Pe ceea ce a trecut cu vederea înțelepțește dorul iubirii împăratului pământesc, pentru dragostea Împăratului a toate, pe vestita Casiana să o lăudăm, ca pe o pildă a virtuții și cinstită alcătuitoare de cântări, strigând: Fă-ne și pe noi părtași Împărăției lui Dumnezeu, prin rugăciunile tale.",
+    "text": "Воздержанием плоть изнурил еси/ и непрестанными молитвами, яко Ангел, возвысился еси,/ струями же слезными бесовския полки погрузил еси./ И ныне во Свете невечернем ликуеши у Христа Бога/ и приходящим ко святому твоему гробу неоскудно исцеление подаеши,/ верою вопиющим тебе:/ радуйся, отче Феодосие Богомудре.",
     "english": ""
   },
   {
     "lang": "el",
     "church": "greek",
-    "tone": "Ἦχος α΄",
+    "tone": "Ἦχος πλ. α΄",
     "saints": [
-      "kosmas-of-aetolia · troparion · 1 [greek]"
+      "titus-the-apostle · troparion · 5 [greek]"
     ],
-    "text": "Τὸν μέγαν ἀθλητήν, ὀρθοδόξων τὸ κλέος, Χριστοῦ τὸν μιμητὴν καὶ διδάσκαλον θεῖον, Κοσμᾶν τὸν ἰσαπόστολον, Αἰτωλίας ἀγλάϊσμα, τὸν παιδεύσαντα τὸ δοῦλον Γένος ἐνθέως καὶ συντρέξαντα εἰς τὴν ἀνάστασιν τούτου ἐν ὕμνοις τιμήσωμεν.",
-    "english": ""
-  },
-  {
-    "lang": "el",
-    "church": "greek",
-    "tone": "Ἦχος δ΄",
-    "saints": [
-      "kosmas-of-aetolia · kontakion · 4 [greek]"
-    ],
-    "text": "Ὡς φωστὴρ νεόφωτος τὴν Ἐκκλησίαν, καταυγάζεις ἅπασαν, Εὐαγγελίου διδαχαῖς, Κοσμᾶ Χριστοῦ Ἰσαπόστολε· διὸ ἀξίως γεραίρει τὴν μνήμην σου.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glasul 2",
-    "saints": [
-      "kosmas-of-aetolia · troparion · 2 [romanian]"
-    ],
-    "text": "Ca un râvnitor al Sfinţilor Apostoli ai primit lumânarea Duhului şi propovăduitor dumnezeiesc al dreptei-credinţe te-ai arătat; de aceea întăreşte-ne şi pe noi pe temelia dumnezeiască a credinţei ortodoxe şi a sfintelor dogme, Cosma sfinţite mucenicule slăvite, cerând pentru noi iertare greşelilor.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 3",
-    "saints": [
-      "kuksha-of-the-kyiv-caves · troparion · 3 [russian]",
-      "pimen-the-faster-of-the-caves · troparion · 3 [russian]"
-    ],
-    "text": "Мученическою кровию, священне Кукше,/ в проповеди Евангелия со учеником ти, блаженным Никоном, честне украсивыйся,/ и Пимене, в постничестве светозарно просиявый,/ в един день и час внидосте в свет незаходимый,/ идеже молитеся Господеви,/ да подаст нам велию милость.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 4",
-    "saints": [
-      "kuksha-of-the-kyiv-caves · kontakion · 4 [russian]",
-      "nikon-disciple-of-kuksha · kontakion · 4 [russian]",
-      "pimen-the-faster-of-the-caves · kontakion · 4 [russian]"
-    ],
-    "text": "Светила разумная, сошедшеся, хвалами воспоем, людие,/ просияли бо суть в мире сем:/ Пимен многими подвиги,/ Кукша же со учеником Никоном проповедию Слова,/ и сии трие, единоумно предстояще Святей Троице,/ яко солнце сияют и просвещают/ любовию память их восхваляющих.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 4",
-    "saints": [
-      "lawrence-of-kaluga · troparion · 4 [russian]"
-    ],
-    "text": "Просветився божественною благодатию, Богомудре,/ и весь разум и сердце от суетнаго мира сего/ к Зиждителю неуклонно возложив,/ целомудрием и многим терпением во временней жизни течение добре скончал еси/ и веру соблюл еси непорочну./ Темже и по смерти явися светлость жития твоего,/ источавши бо чудесем источник неисчерпаемый/ верою притекающим ко святому твоему гробу, Лаврентие всеблаженне,/ моли Христа Бога, да спасет души наша.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 8",
-    "saints": [
-      "lawrence-of-kaluga · kontakion · 8 [russian]"
-    ],
-    "text": "Избранному и дивному в праведницех,/ инее убо от Христа дар чудес приимшему,/ похвальный ныне принесем глаголы,/ но яко имея дерзновение ко Святей Троице,/ Юже моли избавитися от бед рабом твоим, да зовем ти:/ радуйся, Богомудре Лаврентие.",
-    "english": ""
-  },
-  {
-    "lang": "sr",
-    "church": "serbian",
-    "tone": "глас 4",
-    "saints": [
-      "lawrence-of-rome · troparion · 4 [serbian]"
-    ],
-    "text": "Мученик Твој Господе, Лаврентије, у страдању своме је примио непропадљиви венац, од Тебе Бога нашега, јер имајући помоћ Твоју мучитеље победи, а разори и немоћну дрскост демона: Његовим молитвама спаси душе наше.",
-    "english": ""
-  },
-  {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 2",
-    "saints": [
-      "lawrence-of-rome · kontakion · 2 [russian]"
-    ],
-    "text": "Огнем Божественным распалив сердце твое,/ огнь страстей до конца испепелил еси,/ страдальцев утверждение, богоносе мучениче Лаврентие,/ и в страданиих вопиял еси верно:// ничтоже мя разлучит любве Христовы.",
-    "english": ""
-  },
-  {
-    "lang": "el",
-    "church": "greek",
-    "tone": "Ἦχος δ΄.",
-    "saints": [
-      "lygeri-of-chios · troparion · 4 [greek]"
-    ],
-    "text": "Ἐνθέως ἐνήθλησας, Παρθενομάρτυς κλεινή, αἱμάτων σου ῥεύμασι, τῆς ἀθανάτου Ζωῆς, το Δένδρον ποτίσασα. Πίστει γάρ παριδοῦσα, ἡδονάς ψυχοφθόρους, ἒῤῥηξας τοῦ βελίαρ, τάς ἐπάλξεις θεόφρον, ἡμῖν παρεχομένη σεπτῶς, χαρίσματα ἒνθεα.",
-    "english": ""
-  },
-  {
-    "lang": "ro",
-    "church": "romanian",
-    "tone": "Glas 3",
-    "saints": [
-      "macarius-of-optina · troparion · 3 [romanian]"
-    ],
-    "text": "Om desăvârșit în fapta bună, te-ai predat pe tine ascultării în viața ta cea iubitoare de supunere, iar când Domnul a văzut umilința ta ți-a dăruit înțelepciune și smerenie. Preaînțelepte și fericite Macarie, cere pentru noi mare milă.",
+    "text": "Προκληθείς ουρανόθεν προς γνώσιν ένθεον, την εν σαρκί του Δεσπότου επιδημίαν εν γη, αυτοψεί εωρακώς φωτός πεπλήρωσαι, όθεν του Παύλου κοινωνός, θεηγόρος γεγονώς, την Κρήτην πάσαν πυρσεύεις, της ευσεβείας τω λόγο, Τίτε απόστολε μακάριε.",
     "english": ""
   },
   {
@@ -227,29 +74,29 @@
     "church": "romanian",
     "tone": "Glasul 3",
     "saints": [
-      "macarius-the-protopsaltes · kontakion · 3 [romanian]"
+      "titus-the-apostle · troparion · 3 [romanian]"
     ],
-    "text": "Din pruncie ai deprins cântarea sfintelor slujbe, ca să-L lauzi pe Hristos cu îngereştile cete. Domnului bineplăcut-ai, şi Maicii Sale, sfinţite te-ai arătat următor, Părinte; deci, Macarie sfinţite, tot în cântare cinstim pomenirea ta.",
+    "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
     "english": ""
   },
   {
     "lang": "ro",
     "church": "romanian",
-    "tone": "Glas 5",
+    "tone": "Glasul 8",
     "saints": [
-      "macarius-the-protopsaltes · troparion · 5 [romanian]"
+      "varlaam-of-moldavia · kontakion · 8 [romanian]"
     ],
-    "text": "Rugăciune în inimă neîncetată având, ai înțeles, Cuvioase, tainele cele cerești, de aceea ai jertfit întreaga viața ta dumnezeieștilor cântări, tălmăciundu-le cu sârg în graiul dulce al țării, din multă dragoste de oameni, de Dumnezeu insuflate Macarie!",
+    "text": "Cu dumnezeieștile învățături strălucind, Părinte Sfinte, ai păstorit Biserica neamului tău și ai tâlcuit Evanghelia lui Hristos. Pentru aceasta, te-ai arătat, Sfinte Ierarhe Varlaam, ca un mare apărător al dreptei credințe.",
     "english": ""
   },
   {
-    "lang": "cu",
-    "church": "russian",
-    "tone": "глас 4",
+    "lang": "ro",
+    "church": "romanian",
+    "tone": "Glasul 1",
     "saints": [
-      "mamas-of-caesarea · troparion · 4 [russian]"
+      "varlaam-of-moldavia · troparion · 1 [romanian]"
     ],
-    "text": "Мученик Твой Господи, Мамант,/ во страдании своем венец прият нетленный, от Тебе, Бога нашего: имели бо крепость Твою, мучителей низложи,/ сокруши и демонов немощныя дерзости,/ того молитвами спаси душы наша.",
+    "text": "Vrednic slujitor al lui Hristos și înțelept apărător al dreptei credințe, mare cinstitor al Sfintei Cuvioase Parascheva și credincios luminător al neamului românesc, Sfinte Ierarhe Varlaam, roagă pe Hristos-Dumnezeu să ocrotească și să mântuiască sufletele noastre.",
     "english": ""
   }
 ]

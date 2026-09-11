@@ -89,7 +89,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-ierarh-iosif-cel-nou-de-la-partos-mitropolitul-banatului",
         "year": 2026
       },
-      "model": "Apărătoare Doamnă..."
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "The land of the Banat hath thee for an unconquerable defender, O holy Joseph, as one that hath been delivered from its afflictions through thee. And do thou, as one having boldness before God, defend it from every affliction, that we may sing unto thee: Rejoice, O holy hierarch Joseph, worker of wonders.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -101,6 +105,10 @@
         "text": "Doxologia — Troparul Sfântului Ierarh Iosif cel Nou de la Partoş, Mitropolitul Banatului",
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-iosif-cel-nou-de-la-partos-mitropolitul-banatului",
         "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou didst submit thyself wholly unto the Lord with prayers and labours and fasting. Wherefore God, beholding thy struggles, appointed thee a hierarch and shepherd of his Church; and after thy death he gave thee a dwelling among the choirs of the saints, O holy father Joseph. Pray to Christ God that he may grant unto us forgiveness of our transgressions, who with faith and love keep thy holy memory.",
+        "rendered": "site"
       }
     }
   ]

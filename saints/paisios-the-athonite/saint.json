@@ -70,7 +70,11 @@
         "year": 2026
       },
       "tone": "Ἦχος γ ́.",
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "As an angel wast thou made manifest in the world in these latter years, O venerable Paisios, imitator of Christ; for having lived in asceticism upon Athos, thou didst shine forth as a most radiant sun, and didst illumine the multitudes of the faithful by grace, by thy words, by signs and by wonders.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -83,7 +87,11 @@
         "year": 2026
       },
       "tone": "Ἦχος δ ́.",
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "O Paisios, thou hast become the firm foundation of ascetics, the glory of Athos and the nourisher of Souroti, the boast of Konitsa; for having walked in the footsteps of Arsenios, thou didst receive the fullness of the gifts of the Comforter, ungrudgingly bestowing upon them that honour thee whatsoever they have need of.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -96,7 +104,11 @@
         "year": 2026
       },
       "tone": "Ἦχος πλ.",
-      "model": "α ́.Τὸν Συνάναρχον Λόγον."
+      "model": "α ́.Τὸν Συνάναρχον Λόγον.",
+      "english": {
+        "text": "Let us honour the all-praised man of the mountain of Athos, who in these last times, like a bright light, hath scattered the darkness of the faithful, and who healeth beyond nature the sicknesses of souls and the assaults of the flesh: the lamp of foresight, the new Paisios.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -109,7 +121,11 @@
         "year": 2026
       },
       "tone": "Ἦχος πλ.",
-      "model": "δ ́.Τῇ Ὑπερμάχῳ."
+      "model": "δ ́.Τῇ Ὑπερμάχῳ.",
+      "english": {
+        "text": "Let us praise with hymns and with our whole heart the far-renowned ascetic of the Holy Mountain and the newly-shining luminary of the Church; for guiding the faithful toward the most excellent life, thou didst fill them with rivers of gifts. Wherefore they cry aloud: Rejoice, O father Paisios.",
+        "rendered": "site"
+      }
     }
   ],
   "track": [

@@ -69,7 +69,11 @@
         "year": 2026
       },
       "tone": "Ἦχος πλ.",
-      "model": "α´.Τὸν συνάναρχον Λόγον."
+      "model": "α´.Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Taking up thy cross upon thy shoulders, O far-famed one, thou didst follow after the Lord with thy whole soul, O Hilarion, most valiant contender; and now thou dwellest in the heavens together with all the contenders, gladdening the Creator on behalf of us who with faith keep thy memorial.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -82,7 +86,11 @@
         "year": 2026
       },
       "tone": "Ἦχος β´.",
-      "model": "τὰ ἄνω ζητῶν."
+      "model": "τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Having forsaken the world, thou didst follow after Christ, and having contended steadfastly, thou now standest before him, made comely by the blood of martyrdom and by the labours of asceticism, O Hilarion; wherefore thou wast shown forth as a dweller in one tabernacle with the martyrs and with the venerable.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

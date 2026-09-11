@@ -75,7 +75,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-cuvios-macarie-protopsaltul",
         "year": 2026
       },
-      "model": "Fecioara astăzi..."
+      "model": "Fecioara astăzi...",
+      "english": {
+        "text": "From thine infancy thou didst learn the chanting of the holy services, that thou mightest praise Christ together with the angelic choirs. Well-pleasing wast thou unto the Lord and unto his Mother, and a consecrated follower didst thou show thyself to be, O father; wherefore, O sacred Macarius, in chant do we also honour thy memory.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -88,7 +92,11 @@
         "url": "https://doxologia.ro/troparul-sfantului-cuvios-macarie-protopsaltul",
         "year": 2026
       },
-      "model": "Pe Cuvântul cel împreună..."
+      "model": "Pe Cuvântul cel împreună...",
+      "english": {
+        "text": "Having unceasing prayer within thy heart, thou didst understand, O venerable one, the mysteries of heaven; therefore thou didst offer up thy whole life unto the divine chants, rendering them with diligence into the sweet speech of thy land, out of thy great love for mankind, O Macarius inspired of God.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
