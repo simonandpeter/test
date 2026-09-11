@@ -167,7 +167,11 @@
         "url": "https://www.saint.gr/2338/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Shining with the light of the hierarchy, thou wast shown to be a husbandman of righteousness, cutting away in truth the thorn of error. Wherefore, reddened with the drops of thine own blood, thou didst stand before Christ, crying aloud, O Babylas: Behold, I and the children, O Jesus; wherefore receive us, according to thy good pleasure.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -197,7 +201,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-vavila-episcopul-antiohiei",
         "year": 2026
       },
-      "model": "Arătatu-Te-ai astăzi..."
+      "model": "Arătatu-Te-ai astăzi...",
+      "english": {
+        "text": "Laying up the glories of the faith within thy heart, thou didst keep it, O hieromartyr Babylas, fearing not the tormentors, O servant of Christ. For this cause, do thou keep us also.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -210,7 +218,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-vavila-episcopul-antiohiei-0",
         "year": 2026
       },
-      "model": "Ca o pârgă..."
+      "model": "Ca o pârgă...",
+      "english": {
+        "text": "As a preacher of the right faith and a strengthening of them that struggle, the Church magnifieth thee, O all-praised one, being enlightened this day. But as one that hath boldness before the Lord, pray thou, O holy Babylas, that he may keep in perfect peace those who magnify thee and praise thee, O thou of many sufferings.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

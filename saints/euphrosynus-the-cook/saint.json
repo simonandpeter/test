@@ -83,7 +83,11 @@
         "url": "https://www.saint.gr/1000/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν συνάναρχον Λόγον."
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "With humility of heart, O father Euphrosynus, offering thy service in the kitchen, thou wast truly filled with the Holy Spirit; wherefore God made thy glory known unto us through a venerable priest. Show us also to be partakers of that glory, O God-bearer, by thine intercessions.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -96,7 +100,11 @@
         "url": "https://www.saint.gr/1000/saint.aspx",
         "year": 2026
       },
-      "model": "Ἐπεφάνης σήμερον."
+      "model": "Ἐπεφάνης σήμερον.",
+      "english": {
+        "text": "Having become a partaker of the gladness of heaven, O Euphrosynus, by thy life equal to the angels thou wast shown to be of equal honour with the angels; together with whom do thou entreat on behalf of them that honour thee.",
+        "rendered": "site"
+      }
     }
   ],
   "dates": {

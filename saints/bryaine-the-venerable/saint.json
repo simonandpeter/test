@@ -57,7 +57,11 @@
         "url": "https://www.saint.gr/844/saint.aspx",
         "year": 2026
       },
-      "model": "Τὴν ὡραιότητα."
+      "model": "Τὴν ὡραιότητα.",
+      "english": {
+        "text": "By thine ascetic labour thou didst astonish all women, and by thy humility and thy meekness and thy love toward God thou didst rise above the things of earth. Wherefore the Lord appointed thee abbess, feeding his lambs with the words of the Spirit. Therefore, O venerable mother Bryaine, intercede thou for those who praise thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -70,7 +74,11 @@
         "url": "https://www.saint.gr/844/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν τάφον Σου Σωτήρ."
+      "model": "Τὸν τάφον Σου Σωτήρ.",
+      "english": {
+        "text": "Having loved Christ, who for our sake was born beyond understanding of the Virgin Mary, O mother, thou didst forsake all things and follow after him, and didst practise the whole choir of the virtues, being led from the active life unto contemplation, O ever-memorable Bryaine.",
+        "rendered": "site"
+      }
     }
   ],
   "related": [

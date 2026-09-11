@@ -89,7 +89,11 @@
         "url": "https://www.saint.gr/994/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν συνάναρχον Λόγον."
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Let the holy pair honoured of God, Joachim and Anna, as kinsfolk of God, be hymned with gladness in the beauty of songs; for they bore for us her who beyond understanding gave birth to the fleshless One made mortal for the salvation of the world; with whom they intercede that we may be saved.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -138,7 +142,11 @@
         "url": "https://www.saint.gr/994/saint.aspx",
         "year": 2026
       },
-      "model": "Τὰ ἄνω ζητῶν."
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Anna now rejoiceth, loosed from the bonds of barrenness, and she nurseth the all-immaculate one, calling upon all to hymn him who granted to mortals from her womb the only Mother who knew not man.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -151,7 +159,11 @@
         "url": "https://doxologia.ro/condacul-sfintilor-dreptilor-dumnezeiestilor-parinti-ioachim-ana",
         "year": 2026
       },
-      "model": "Căutând cele de sus..."
+      "model": "Căutând cele de sus...",
+      "english": {
+        "text": "Rejoice now, O holy Anna, loosed from the bonds of barrenness, and nourish the all-pure one, calling upon all to praise him who granted to men from her womb the only Mother who knew not man.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

@@ -77,7 +77,11 @@
         "url": "https://www.saint.gr/2408/saint.aspx",
         "year": 2026
       },
-      "model": "Θείας πίστεως."
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "As a great martyr the Church, and as a great hero the whole nation, do we hymn Chrysostom of Smyrna. For contending nobly he endured death for his fatherland and for the faith, and he showed himself forth as a pattern of a hierarch, receiving the unfading crown.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -90,7 +94,11 @@
         "url": "https://www.saint.gr/2408/saint.aspx",
         "year": 2026
       },
-      "model": "Ο υψωθείς εν τω Σταυρώ."
+      "model": "Ο υψωθείς εν τω Σταυρώ.",
+      "english": {
+        "text": "The fivefold-shining choir of hierarchs, with the spiritual torchlight of their contests, illumineth all Asia Minor in spirit: the wise Chrysostom, with the divine Gregory, Ambrose, Prokopios and Euthymios together; and as we praise them let us the faithful say: Rejoice, O company of martyrs five in number.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [

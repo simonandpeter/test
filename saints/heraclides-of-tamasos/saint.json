@@ -91,7 +91,11 @@
         "url": "https://www.saint.gr/2463/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Thou didst shepherd the flock of Christ the Saviour, and with divine streams, O blessed one, thou didst richly water the souls of all; wherefore the choir of them that honour thee sings hymns unto thee and reveres thy holy memory. Entreat therefore evermore on our behalf, O hierarch Heraclides.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -103,6 +107,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Ηρακλείδης και Μύρων επίσκοποι Ταμάσου της Κύπρου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/2463/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "The city of the Tamasians found in thee a great herald and chief shepherd, and a teacher of the Church of Christ; for thou didst abolish the error of the idols, proclaiming the light of truth unto the nations. Wherefore, O holy hierarch Heraclides, entreat Christ God, that great mercy be granted unto us.",
+        "rendered": "site"
       }
     }
   ],

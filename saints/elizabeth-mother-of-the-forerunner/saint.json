@@ -104,6 +104,10 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Кондак праведной Елисаветы»",
         "url": "https://days.pravoslavie.ru/Days/20260905.html",
         "year": 2026
+      },
+      "english": {
+        "text": "As a full moon thou didst receive the Light of Righteousness from the noetic Sun, the Messiah, and thou didst walk with Zacharias in all the commandments of the Lord, O Elizabeth beloved of God. Therefore, calling thee blessed with worthy hymns, we magnify the Lord, the all-bountiful Light that giveth light to all.",
+        "rendered": "site"
       }
     },
     {
@@ -134,7 +138,11 @@
         "url": "https://www.saint.gr/2352/saint.aspx",
         "year": 2026
       },
-      "model": "Ἡ Παρθένος σήμερον."
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Today the prophet and priest of the Most High, Zacharias, the father of the Forerunner, hath set forth the table of his memory, nourishing the faithful and mixing for them the drink of righteousness. Wherefore we praise him as a divine initiate of the grace of God.",
+        "rendered": "site"
+      }
     },
     {
       "church": "serbian",

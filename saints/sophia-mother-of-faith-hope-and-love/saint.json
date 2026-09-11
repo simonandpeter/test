@@ -79,7 +79,11 @@
         "url": "https://www.saint.gr/2452/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Having reared thy three daughters in accordance with thy name, O chaste Sophia, thou dost bring them unto Christ in the arenas of martyrdom; wherefore, sharing with them in the glory on high, intercede with the Saviour, O fair martyr Sophia, that grace and mercy be given unto them that honour thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -91,6 +95,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/2452/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "The Church rejoices, having thee and thy children as her divine boast, and with gladness she praises thee, crying aloud: Thou art my boast, thou and the all-honoured relics of thy children. O glorious martyrs Sophia, Faith, Hope and Love, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     },
     {
@@ -103,6 +111,10 @@
         "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Σοφία και οι τρεις θυγατέρες της Πίστη, Ελπίδα και Αγάπη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
         "url": "https://www.saint.gr/2452/saint.aspx",
         "year": 2026
+      },
+      "english": {
+        "text": "As a fruitful olive tree thou didst flourish in the courts of the Lord, O chaste martyr Sophia, and through holy contests thou didst bring unto Christ, as a most sweet fruit, the offspring of thy womb: Love and Hope, together with Faith of godly mind; with whom do thou entreat on behalf of us all.",
+        "rendered": "site"
       }
     },
     {
@@ -116,7 +128,11 @@
         "url": "https://www.saint.gr/2452/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν συνάναρχον Λόγον."
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Among the martyrs thou shinest, O glorious Sophia, and thou art adorned round about with the radiant crowns of victory; wherefore with hymns and songs we praise thee, for thou leadest thy chaste little daughters unto martyrdom, Love, Faith and Hope; with whom cease thou never to intercede, that our souls may obtain mercy.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",

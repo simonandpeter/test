@@ -80,7 +80,11 @@
         "url": "https://www.saint.gr/848/saint.aspx",
         "year": 2026
       },
-      "model": "Τὴν ὡραιότητα."
+      "model": "Τὴν ὡραιότητα.",
+      "english": {
+        "text": "Shown forth as heavenly initiates, ye appeared to the world as divine revealers, shepherding the Church of Christ in a manner pleasing to God: O sacred Alexander, champion of the Trinity; O glorious John, nursling of grace; and O Paul, summit of priests. Wherefore we praise you.",
+        "rendered": "site"
+      }
     }
   ],
   "related": [

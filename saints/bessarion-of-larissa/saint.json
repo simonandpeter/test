@@ -89,7 +89,11 @@
         "url": "https://www.saint.gr/2441/saint.aspx",
         "year": 2026
       },
-      "model": "Κανόνα πίστεως."
+      "model": "Κανόνα πίστεως.",
+      "english": {
+        "text": "The offspring of Pyli, the luminary of Thessaly, the honour of Trikke and a fountain of wonders wast thou shown to be, O thrice-blessed one. Having endured every trial in Christ, thou rejoicest with the angels, made radiant with glory. O holy Bessarion, most excellent, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -102,7 +106,11 @@
         "url": "https://www.saint.gr/2441/saint.aspx",
         "year": 2026
       },
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Let us the faithful honour in hymns the shepherd of Larissa and the guardian of the people of Trikke, the wonderworking hierarch of Christ, Bessarion; for he poureth forth abundant healings and delivereth from destroying sicknesses those who devoutly cry aloud: Glory to him who gloriously glorified thee; glory to him who made thee wondrous; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -115,7 +123,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-ierarh-visarion-arhiepiscopul-larisei",
         "year": 2026
       },
-      "model": "Porunca cea cu Taină..."
+      "model": "Porunca cea cu Taină...",
+      "english": {
+        "text": "From thine infancy, having received from God the victory over the demons, O most holy father, and having become even as an angel among men, thou hast now passed over unto the heavenly dwellings. For this cause it behoveth us also, who are here below, to cry out unto thee: Rejoice, O father Bessarion.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -127,6 +139,10 @@
         "text": "Doxologia — Troparul Sfântului Ierarh Visarion, Arhiepiscopul Larisei",
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-visarion-arhiepiscopul-larisei",
         "year": 2026
+      },
+      "english": {
+        "text": "In thy patience thou didst gain thy reward, O venerable father; persevering unceasingly in prayers, loving the poor and supplying their need in full. But pray to Christ God, O holy and blessed Bessarion the Merciful, that our souls may be saved.",
+        "rendered": "site"
       }
     }
   ]

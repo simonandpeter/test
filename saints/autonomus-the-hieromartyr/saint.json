@@ -94,7 +94,11 @@
         "url": "https://www.saint.gr/2409/saint.aspx",
         "year": 2026
       },
-      "model": "Τῆς ἐρήμου πολίτης."
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Having risen from the West as a star lit with the light of heaven, and having shone forth unto the East with the rays of thy manner of life, thou didst glorify Jesus, the Sun of glory, by thy steadfast contest; and for this cause thou wast glorified by the working of God, O Autonomus our father. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -107,7 +111,11 @@
         "url": "https://doxologia.ro/condacul-sfantului-mucenic-avtonom",
         "year": 2026
       },
-      "model": "Pe cea neadormită..."
+      "model": "Pe cea neadormită...",
+      "english": {
+        "text": "Melting thy body away with fastings, with unsleeping prayers thou didst entreat the Creator concerning thy sin, that thou mightest receive perfect forgiveness; and thou didst receive forgiveness, showing forth thereby the way of repentance.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

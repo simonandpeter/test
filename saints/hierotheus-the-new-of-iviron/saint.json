@@ -86,7 +86,11 @@
         "url": "https://www.saint.gr/2428/saint.aspx",
         "year": 2026
       },
-      "model": "Τῇ Ὑπερμάχῳ."
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "english": {
+        "text": "Let us worthily praise with hymnody Hierotheus, the God-bearer among the venerable and the new herald of grace among the saints; for he is the boast of Messenia and the divine adornment of the Monastery of Iviron. Wherefore we cry aloud: Rejoice, O father of godly wisdom.",
+        "rendered": "site"
+      }
     }
   ]
 }

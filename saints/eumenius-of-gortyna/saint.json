@@ -98,7 +98,11 @@
         "url": "https://www.saint.gr/2473/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "We have gained thee, O venerable one, as a swift provider and a gracious helper, as an imitator of Christ, O glorious Eumenius; for welling up the streams of compassion, thou pourest forth upon the Church oceans of healings. Be thou also a shelter unto those who honour thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -144,6 +148,10 @@
         "text": "Doxologia — Troparul Sfântului Ierarh Eumenie, Episcopul Gortinei",
         "url": "https://doxologia.ro/troparul-sfantului-ierarh-eumenie-episcopul-gortinei",
         "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighings from the depths thou didst make thy labours fruitful a hundredfold; and thou wast made a luminary to the world, shining with miracles, O Eumenius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
       }
     }
   ],

@@ -73,7 +73,11 @@
         "url": "https://www.saint.gr/2442/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "The angel in the flesh, the foundation of the ascetics, the new Gerasimus, the unwaning luminary of the Church of Christ, calls together from on high the multitude of the angels, and gathers together here below the race of men, to sing with songs his divine memory.",
+        "rendered": "site"
+      }
     }
   ]
 }

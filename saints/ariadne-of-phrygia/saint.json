@@ -79,7 +79,11 @@
         "url": "https://www.saint.gr/2475/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Guided by the hand of Christ, thou wast not enslaved in thy soul, O Ariadne, but with a free mind thou didst do valiantly; for having cast down every device of the enemy, thou didst receive from God a crown woven of grace. Him do thou fervently entreat, O martyr, that they who call thee blessed may obtain mercy.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -92,7 +96,11 @@
         "url": "https://www.saint.gr/2475/saint.aspx",
         "year": 2026
       },
-      "model": "Ἡ Παρθένος σήμερον."
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Having longed for the rock of life that granteth life, thou didst remain unbending before the madness of the deceiver; and a rock, being rent asunder, received thee and joined thee, O martyr, to the immortal Bridegroom. Him do thou entreat, O Ariadne, that remission of offences may be granted unto us.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [

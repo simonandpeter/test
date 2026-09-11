@@ -78,7 +78,11 @@
         "year": 2026
       },
       "tone": "Ἦχος δ’.",
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Splendidly adorned with the gifts of wisdom, thou wast shown forth as a most godly shepherd of the Church of Christ, O Eustathius. Wherefore Thessalonica, thy holy flock, calls thee blessed with hymns and with one accord cries out unto thee: Entreat Christ God on our behalf, O venerable father.",
+        "rendered": "site"
+      }
     }
   ]
 }

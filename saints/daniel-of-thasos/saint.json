@@ -68,7 +68,11 @@
         "url": "https://www.saint.gr/2414/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "A most true shepherd and a leader of monks wast thou shown to be, O all-venerable one, of the monastery on Thasos, O Daniel worthy of hymns; wherefore thou didst also receive the grace of healings, bestowing cures abundantly upon those who draw near, upon those who with longing keep thy memory, O all-blessed one.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -81,7 +85,11 @@
         "url": "https://www.saint.gr/2414/saint.aspx",
         "year": 2026
       },
-      "model": "Τῇ ὑπερμάχῳ."
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "As a guide and teacher of monastics and as the protector of the island of Thasos we praise thee, O Daniel, keeping thy sacred memory; therefore, having boldness before the Lord, intercede that we may be delivered from affliction, that we may cry: Rejoice, O all-venerable father.",
+        "rendered": "site"
+      }
     }
   ]
 }

@@ -143,7 +143,11 @@
         "url": "https://www.saint.gr/940/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As a palm tree thou didst blossom in the Church of Christ, nourishing in grace the souls of the pious with the fruits of thy words; wherefore, having contended with rejoicing, O father Anthimus, thou wast shown to be a glorious hieromartyr of the Saviour. We beseech thee, intercede for our souls.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -176,7 +180,11 @@
         "url": "https://www.saint.gr/940/saint.aspx",
         "year": 2026
       },
-      "model": "Τοῦ λίθου σφραγισθέντος."
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "english": {
+        "text": "Having become a steadfast protector of thy flock, O thou of godly mind, thou didst readily pour out thy blood for her, and, not affrighted by the threats of the enemies, thou now rejoicest in the heavens, standing before the throne of the tri-solar Godhead. Glory to Christ who strengthened thee; glory to thy good courage; glory to thy martyric endurance, O Anthimus.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -189,7 +197,11 @@
         "url": "https://www.saint.gr/940/saint.aspx",
         "year": 2026
       },
-      "model": "Τοῦ λίθου σφραγισθέντος."
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "english": {
+        "text": "Thou wast shown to be a most radiant luminary of Nicomedia and a bulwark of the whole Church, O father Anthimus; for having contended steadfastly for Christ, thou wast counted worthy of rich gifts. Therefore we honour thee with hymns, O hieromartyr, crying: Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",

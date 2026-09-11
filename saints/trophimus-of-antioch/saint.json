@@ -84,7 +84,11 @@
         "url": "https://www.saint.gr/987/saint.aspx",
         "year": 2026
       },
-      "model": "Τὴν ὡραιότητα."
+      "model": "Τὴν ὡραιότητα.",
+      "english": {
+        "text": "Bearing as a flower the indestructible power of the Trinity, O glorious martyrs, ye did steadfastly cut down the thorn of deceit: O blessed Trophimus, delight of the Church; O all-wise Sabbatius, adornment of the contestants; and O Dorymedon, glory of the pious. Wherefore we sing your praises.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -97,7 +101,11 @@
         "url": "https://www.saint.gr/987/saint.aspx",
         "year": 2026
       },
-      "model": "Ὡς ἀπαρχὰς."
+      "model": "Ὡς ἀπαρχὰς.",
+      "english": {
+        "text": "As a firm foundation of contestants and a support of piety, the Church honoureth and magnifieth thy light-bearing contest, O all-renowned and blessed one, valiant-minded contestant, glorious Trophimus. Together with them that contended with thee, ask remission for those who hymn thee, as one unconquered.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -110,7 +118,11 @@
         "url": "https://doxologia.ro/condacul-sfintilor-mucenici-trofim-savatie-dorimedont",
         "year": 2026
       },
-      "model": "Ca o pârgă a firii..."
+      "model": "Ca o pârgă a firii...",
+      "english": {
+        "text": "As one who art the strengthening of them that struggle and the support of the right faith, the Church honoureth and praiseth thy radiant struggle, O ever-remembered sufferer, valiant and glorious martyr Trophimus. Together with those who struggled with thee, O blessed one, ask mercy for those who praise thee, as one unconquered.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +134,10 @@
         "text": "Doxologia — Troparul Sfinţilor Mucenici Trofim, Savatie şi Dorimedont",
         "url": "https://doxologia.ro/troparul-sfintilor-mucenici-trofim-savatie-dorimedont",
         "year": 2026
+      },
+      "english": {
+        "text": "God, who is praised in Trinity, hath greatly glorified the trinity of martyrs: Saint Trophimus, Saint Sabbatius and Saint Dorymedon; for believing in him they cast down the enemy. Through their prayers, O Christ God, have mercy on us.",
+        "rendered": "site"
       }
     }
   ],

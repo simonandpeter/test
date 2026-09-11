@@ -101,7 +101,11 @@
         "url": "https://www.saint.gr/2420/saint.aspx",
         "year": 2026
       },
-      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Being eminent in the works of righteousness, thou didst receive the illumination of true piety, and wast shown in truth to be a fellow-labourer of the apostles; for having shared with them in godly toils, thou didst proclaim unto all the incarnation of Christ. With them entreat that we who honour thee may be saved, O all-blessed Cornelius.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

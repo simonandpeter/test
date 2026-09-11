@@ -73,7 +73,11 @@
         "url": "https://www.saint.gr/2349/saint.aspx",
         "year": 2026
       },
-      "model": "Ταχὺ προκατάλαβε."
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "The offshoot of Palli, the torch of Cephalonia, the divine founder of the Monastery of Lepeda, let us brightly praise: Anthimos, who by ascetic labour cast down the enemy and received from the Lord the grace of healings, and who intercedeth fervently that we may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "related": [

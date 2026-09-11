@@ -77,7 +77,11 @@
         "year": 2026
       },
       "tone": "Ἦχος β’.",
-      "model": "Τὰ ἄνω ζητῶν."
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Having clearly imitated the sufferings of Christ, and having faithfully drunk of his cup, thou didst become, O Eustathius, his companion and a joint-heir of his glory, receiving from him, the God of all, divine remission from on high.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

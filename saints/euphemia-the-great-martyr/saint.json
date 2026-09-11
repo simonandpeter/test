@@ -80,7 +80,11 @@
         "url": "https://www.saint.gr/2445/saint.aspx",
         "year": 2026
       },
-      "model": "Τὴν ὡραιότητα."
+      "model": "Τὴν ὡραιότητα.",
+      "english": {
+        "text": "Having contended splendidly with divine love, thou didst run after the fragrance of Christ, O all-praised one, as a maiden altogether fair and a martyr adorned; wherefore thou hast entered into the heavenly bridal chamber, distributing to the world the gifts of healings and saving those who cry unto thee: Rejoice, O Euphemia of godly mind.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -127,7 +131,11 @@
         "url": "https://doxologia.ro/condacul-sfintei-mari-mucenite-eufimia-1",
         "year": 2026
       },
-      "model": "Chipul Cel Scris..."
+      "model": "Chipul Cel Scris...",
+      "english": {
+        "text": "Struggles in torments, struggles for the faith didst thou suffer with eagerness for Christ thy Bridegroom. Unto him pray thou now also, that the pride of the enemies may be cast down beneath the feet of the right-believing, as of old were the heresies, through the prayers of the Theotokos, O thou who didst receive the definition of the faith from the six hundred and thirty God-bearing Fathers and dost keep it, O all-praised one.",
+        "rendered": "site"
+      }
     },
     {
       "church": "romanian",

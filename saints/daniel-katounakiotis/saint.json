@@ -86,7 +86,11 @@
         "url": "https://www.saint.gr/4461/saint.aspx",
         "year": 2026
       },
-      "model": "Τὸν συνάναρχον Λόγον."
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Having pursued a reverent manner of life on Athos, O adornment of Katounakia, godlike Daniel, thou didst bring forth out of the rock the most sweet honey of soul-nourishing virtue, like a tireless bee, O wise one; wherefore all we who gather in thy graces await thy favour.",
+        "rendered": "site"
+      }
     },
     {
       "church": "greek",
@@ -99,7 +103,11 @@
         "url": "https://www.saint.gr/4461/saint.aspx",
         "year": 2026
       },
-      "model": "Τῇ Ὑπερμάχῳ."
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "english": {
+        "text": "Let us praise him who followed all the venerable ones of Athos in virtue and in discernment, who shone forth in understanding and in temperance, who became a most unerring guide of them that are of godly mind and all things to all men, crying: O Daniel beloved of Christ, rejoice, thou venerable one.",
+        "rendered": "site"
+      }
     }
   ],
   "related": [
