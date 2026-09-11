@@ -62,6 +62,42 @@ The visual loop is **48 tiles in 80 s** — `contact-sheet.mjs --still`,
 `tile-diff.mjs snapshot`, change, `--still`, `compare` — against ~40 s for a
 single surface through a rebuilt preview before.
 
+## In flight, 2026-09-12: the Daily page rebuilt to the mockup
+
+**The job.** The mockup session handed over `carousel-mockup-c/` as the target
+for the Daily page, plus the Daily/All Saints transition. The plan and its
+review are `scratchpad/daily-rebuild-plan.md` — **§11 is the review and it
+overrides §0-§10 wherever they disagree.** Seven questions the plan left for the
+author were decided there rather than left waiting; every one is reversible and
+every one is named in §11.
+
+**Landed so far:** Step 1 (the `--dur-swap` token and the seven new strings in
+all five packs), Step 3 (the standing sidebar), Step 4 (tiles and the open
+card). Step 2 (the two-layer stage) was still being verified in a browser when
+this was written. Steps 5, 6a-c and 7 are not started.
+
+**The All Saints baseline is already taken and must not be retaken.** Requirement
+one is that All Saints does not change at all, and the proof is
+`shots/baseline-before-daily-rebuild` — 16 tiles of `/saints` at 360, 768, 1280
+and 1440, both themes, English and Russian, shot before any of this touched the
+repo. `shots/` is gitignored, so nothing in the history says it exists; a session
+that re-shoots it after the rebuild has destroyed the only evidence it had. To
+check the requirement:
+
+    MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/saints       --widths=360,768,1280,1440 --themes=day,vigil --langs=en,ru
+    node scripts/tile-diff.mjs compare before-daily-rebuild
+
+`MSYS_NO_PATHCONV=1` is not optional under Git Bash: without it `--routes=/saints`
+is rewritten to `C:/Program Files/Git/saints`, every shot fails, and `tile-diff`
+cheerfully archives whatever stale tiles were already in `shots/` as though they
+were the baseline. That happened twice before this line was written.
+
+**Still to do by hand:** Step 5 rewires `src/views/calendar.js` onto the new
+sidebar and grid and deletes `picker.js`, `panel.js` and `calendar.css` — in its
+own commit, separate from the code that replaces them. `e2e/quality-floor.spec.js:192`
+(told apart by shape, not only by hue) is rewritten in that same commit, so there
+is never a commit where that accessibility floor goes untested.
+
 ## In flight, 2026-09-12: the hymns into English
 
 **Done, after four rounds.** **428 of 433 hymn objects carry an English, and
