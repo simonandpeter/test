@@ -1,0 +1,380 @@
+/*
+ * The Daily page's standing sidebar (2026-09-12, Step 3 of the rebuild).
+ *
+ * Its own sheet rather than a half of `daily-tiles.css`: the sidebar and the
+ * strip of saints are drawn by two different modules and neither wants to be
+ * edited to change the other. What they share is the one measurement they both
+ * need — `--td-side-w`, the width the column takes and the width the strip must
+ * keep clear of it — which is declared on `.today` below so both can read it.
+ */
+
+.today {
+  /*
+   * The positioning context the column stands in, and the one width both
+   * halves of the page are measured from. `daily-tiles.css` may declare the
+   * same two properties; they are the same values, and a layout that only
+   * works when both sheets are present is worse than one line of overlap.
+   */
+  position: relative;
+  --td-side-w: clamp(240px, 21vw, 310px);
+}
+
+/*
+ * **The day stands still and the saints pass under it** (author, 2026-09-12).
+ * The sidebar is not the first column of the strip — it is over it, opaque,
+ * with the scroller's own left padding holding the first saint clear. So a
+ * column travelling left goes *behind* the day rather than off the edge of the
+ * window, and the day's facts never leave the reader.
+ */
+.day-side {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  width: var(--td-side-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0 var(--space-6) var(--space-6) var(--space-8);
+  background: var(--gesso);
+  border-right: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+/* ---- the day's own line -------------------------------------------------
+   The day's word with a day either side of it. The arrows are the size of the
+   label they sit beside, not of the date: moving a day is a small act. */
+.day-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.day-head .td-label {
+  margin: 0;
+}
+
+/* The three small capitals this column labels its sections with. Gold carries
+   the label and never the reading text: --gold on gesso is 2.78:1 and would be
+   under AA at any size a sentence is set in. */
+.day-side .td-label {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin: 0 0 var(--space-1);
+}
+
+.day-step {
+  appearance: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  background: none;
+  color: var(--ink-soft);
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  line-height: 1;
+  padding: 2px 7px 4px;
+  cursor: pointer;
+  transition:
+    color var(--dur-answer) var(--ease),
+    border-color var(--dur-answer) var(--ease);
+}
+
+.day-step:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* The back arrow takes the slack, so the two stand together at the far end of
+   the line from the label rather than either side of it. */
+.day-step.is-back {
+  margin-left: auto;
+}
+
+.day-date {
+  font-size: var(--text-xl);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* What the same day is called in the other reckoning, and where the day stands
+   in the year the fixed calendar knows nothing about. */
+.day-old,
+.day-cycle {
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.day-old {
+  color: var(--ink-soft);
+}
+
+.day-cycle {
+  color: var(--ink);
+}
+
+/* ---- what the day asks --------------------------------------------------
+   Each tag wears the thing it reports: the fast in the fast's own colour, the
+   feast in gold. A day with no Great Feast says so in a dashed outline rather
+   than leaving a gap — the absence is a fact about the day too, and a row that
+   loses a tag is a row that changes shape from day to day. */
+.day-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px var(--space-2);
+  border: 1px solid currentcolor;
+  border-radius: var(--radius-panel);
+  color: var(--ink-soft);
+}
+
+.tag.is-fast {
+  color: var(--fast-strict);
+}
+
+.tag.is-fish {
+  color: var(--fast-fish);
+}
+
+.tag.is-free {
+  color: var(--fast-free);
+}
+
+.tag.is-feast {
+  color: var(--gold-ink);
+}
+
+.tag.is-none {
+  border-style: dashed;
+}
+
+/* ---- the month ----------------------------------------------------------
+   The calendar the day is counted in, drawn rather than named: the month, the
+   day being shown, the day it actually is, and every day of it coloured by its
+   own fast. Fast-free days are left plain, because a plain day is what
+   fast-free means; the colour is spent on the days that ask something. */
+.cal-month {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-panel);
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  cursor: pointer;
+  transition: color var(--dur-answer) var(--ease);
+}
+
+.cal-month:hover {
+  color: var(--gold-ink);
+}
+
+.cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px 0;
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.cal-head {
+  text-align: center;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  padding-bottom: 2px;
+}
+
+.cal-day {
+  text-align: center;
+  padding: 2px 0;
+  color: var(--ink-soft);
+  border-radius: var(--radius-cell);
+}
+
+.cal-day.is-fast {
+  color: var(--fast-strict);
+}
+
+.cal-day.is-fish {
+  color: var(--fast-fish);
+}
+
+/* A shape as well as a hue, which is `quality-floor.spec.js`'s standing
+   requirement of every mark on this site: the fast is told by colour and by
+   the words in the cell's accessible name, the feast by a rule under it. */
+.cal-day.is-feast {
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+
+/* The day the page is showing. */
+.cal-day.is-today {
+  background: var(--rubric);
+  color: var(--gesso);
+}
+
+/* And the day it actually is, kept quieter, so a reader who has walked off
+   into the month can see where they came from. */
+.cal-day.is-now {
+  outline: 1px solid var(--accent);
+}
+
+/* ---- which calendar, and whose -------------------------------------------
+   The caption naming the reckoning is where a reader would press to change it
+   (author, 2026-09-02), so it is the control rather than standing beside one. */
+.cal-cap {
+  position: relative;
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.reckoning {
+  position: relative;
+}
+
+.reckoning-btn {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  transition: color var(--dur-answer) var(--ease);
+}
+
+.reckoning-btn:hover {
+  color: var(--ink);
+}
+
+.reckoning-pop {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + var(--space-2));
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  min-width: 11rem;
+  background: var(--bub);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-1);
+}
+
+.reckoning-row {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-panel);
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition:
+    color var(--dur-answer) var(--ease),
+    background-color var(--dur-answer) var(--ease);
+}
+
+.reckoning-row:hover,
+.reckoning-row[aria-pressed='true'] {
+  color: var(--ink);
+  background: var(--field);
+}
+
+/* ---- the names the day gives --------------------------------------------
+   Under everything else and taking whatever height is left, with the same
+   let-go mask the life and the hymn use: the list fades out where the column
+   ends, which says there is more of this without spending a rule or an
+   ellipsis on saying it. */
+.day-names {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-2);
+}
+
+.day-names .td-flow {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent);
+}
+
+/*
+ * **A line breaks where there is a space to break at.** Joined by a bare
+ * middot, «Abraham·Adrian·Agathonicus» is one word to a line-breaker and the
+ * list runs straight out of the sidebar's side rather than wrapping down it.
+ * The separator carries its own spaces, and `overflow-wrap` catches the one
+ * name long enough to beat the column on its own.
+ */
+.names {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.names .sep {
+  color: var(--ink-soft);
+}
+
+.names .name-day {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* A name that links says so on approach; a name borne by two of the day's
+   saints is text, because a link would be the site choosing between them. */
+.names a.name-day:hover {
+  color: var(--gold-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---- below 1024 px -------------------------------------------------------
+   The sidebar stops standing. It becomes the first block in the flow, full
+   width, which is also the reading order assistive technology is given, and
+   the page scrolls rather than the strip.
+   The bottom mask goes with the position: there is no remaining height to take
+   when the column ends where its content ends, and a fade over a block that
+   finishes naturally reads as a rendering fault rather than as "there is more". */
+@media (max-width: 1023px) {
+  .day-side {
+    position: static;
+    width: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 var(--space-4) var(--space-6);
+    overflow: visible;
+  }
+
+  .day-names {
+    flex: 0 0 auto;
+  }
+
+  .day-names .td-flow {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
