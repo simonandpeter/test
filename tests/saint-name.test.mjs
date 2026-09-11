@@ -139,3 +139,101 @@ test('the fullest recorded form wins, and a language with none is absent', () =>
   assert.deepEqual(pickNameForms([], 'Alban of Britain'), {});
   assert.deepEqual(pickNameForms(null, 'Alban of Britain'), {});
 });
+
+test('the strip list reaches a rank standing behind another rank', () => {
+  /*
+   * **What this was**: eighteen forms across the corpus printed a rank where
+   * the name belongs, and the Romanian name days were where it showed —
+   * «Sfântul Cuvios Mărturisitor Sofian de la Antim» reached the reader as
+   * *Mărturisitor*, «Sfânta Împărăteasă Pulheria» as *Împărăteasă*. The list
+   * stripped the honorific, then the rank behind it, and stopped at a third
+   * word it did not hold. English was right on both, which is what made it a
+   * strip-list defect rather than a corpus one (`corpus-gate.mjs` counts
+   * them). Three words is also why the loop runs four passes and not three.
+   */
+  assert.deepEqual(
+    pickNameForms([{ form: 'Sfântul Cuvios Mărturisitor Sofian de la Antim', lang: 'ro' }], 'Sofian of Antim'),
+    { ro: 'Sofian de la Antim' },
+  );
+  assert.deepEqual(pickNameForms([{ form: 'Sfânta Împărăteasă Pulheria', lang: 'ro' }], 'Pulcheria the Empress'), {
+    ro: 'Pulheria',
+  });
+  assert.deepEqual(pickNameForms([{ form: 'Sfântul Ierarh Martir Antim Ivireanul', lang: 'ro' }], 'Antim Ivireanul'), {
+    ro: 'Antim Ivireanul',
+  });
+  // The feminine of a rank the list held only in the masculine.
+  assert.deepEqual(pickNameForms([{ form: 'Sfânta Mare Muceniță Eufimia', lang: 'ro' }], 'Euphemia'), {
+    ro: 'Eufimia',
+  });
+});
+
+test('Romanian is written with two different t, and the list matches both', () => {
+  /*
+   * ț is the comma-below letter Romanian actually uses and ţ is the legacy
+   * cedilla code point a great deal of Romanian text still carries. The corpus
+   * holds both — «Sfânta Muceniţă Hira» with the cedilla beside «Sfânta Mare
+   * Muceniță Eufimia» with the comma — and a list written in one spelling
+   * walked past the other and printed *Muceniţă* as a name. `corpus-gate.mjs`
+   * walked past it too, for the same reason, which is why it reported
+   * fourteen of the eighteen.
+   */
+  assert.deepEqual(pickNameForms([{ form: 'Sfânta Muceniţă Hira', lang: 'ro' }], 'Hira'), { ro: 'Hira' });
+  // **Folded for matching only.** What reaches the reader is the character the
+  // source wrote, not a normalised copy of it.
+  assert.deepEqual(pickNameForms([{ form: 'Sfânta Muceniţă Chiriachiţa', lang: 'ro' }], 'Kyriaki'), {
+    ro: 'Chiriachiţa',
+  });
+});
+
+test('a Serbian rank is stripped in lower case and in its short form', () => {
+  /*
+   * The Serbian entries write the rank after the honorific in lower case —
+   * «Свети апостол Тадеј» — and the list held only the capitalised word, so
+   * three apostles, a righteous woman and an empress printed their rank.
+   * «Свешт. муч.» is «Св. свештеномуч.» written shorter and four more forms
+   * carried it past the whole list, past the gate's own regex as well.
+   */
+  assert.deepEqual(pickNameForms([{ form: 'Свети апостол Тадеј', lang: 'sr' }], 'Thaddeus'), { sr: 'Тадеј' });
+  assert.deepEqual(pickNameForms([{ form: 'праведна Јелисавета', lang: 'sr' }], 'Elizabeth'), { sr: 'Јелисавета' });
+  assert.deepEqual(pickNameForms([{ form: 'Свешт. муч. Кукша', lang: 'sr' }], 'Kuksha'), { sr: 'Кукша' });
+  // Serbian puts the title in front of the name, so a leading office is a
+  // title like any other here — unlike Greek, two tests down.
+  assert.deepEqual(pickNameForms([{ form: 'Епископ Атанасије', lang: 'sr' }], 'Athanasius'), { sr: 'Атанасије' });
+  assert.deepEqual(
+    pickNameForms([{ form: 'Преп. царица Ирина, у монаштву названа Ксенија', lang: 'sr' }], 'Irene the Empress'),
+    { sr: 'Ирина, у монаштву названа Ксенија' },
+  );
+});
+
+test('a rank word standing in front of an office is a name, in Greek', () => {
+  /*
+   * «Άγιος Όσιος επίσκοπος Κορδούης της Ισπανίας» is Hosius of Córdoba, and
+   * Ὅσιος is his name — the same word the Greek calendars use for
+   * *Venerable*. Stripping it left «επίσκοπος Κορδούης της Ισπανίας»: an
+   * office, a place, and nobody named. Greek writes the office *behind* the
+   * name with no comma at all in 64 of its 441 recorded forms, so a word
+   * sitting in front of an office that has a place behind it is filling the
+   * name slot.
+   *
+   * The office itself stays, as it does for every other Greek form: it has no
+   * comma in front of it, and `stripTrailingOffice` above is anchored on a
+   * comma on purpose — see its own test two up.
+   */
+  assert.deepEqual(
+    pickNameForms([{ form: 'Άγιος Όσιος επίσκοπος Κορδούης της Ισπανίας', lang: 'el' }], 'Hosius of Córdoba'),
+    { el: 'Όσιος επίσκοπος Κορδούης της Ισπανίας' },
+  );
+  // A one-word office is the whole name and is left alone: Basilissa and
+  // Papas are two saints, not a queen and a pope.
+  assert.deepEqual(pickNameForms([{ form: 'Αγία Βασίλισσα', lang: 'el' }], 'Basilissa of Nicomedia'), {
+    el: 'Βασίλισσα',
+  });
+  assert.deepEqual(pickNameForms([{ form: 'Άγιος Πάπας', lang: 'el' }], 'Papas of Laranda'), { el: 'Πάπας' });
+  // And the rank in front of an ordinary name still comes off.
+  assert.deepEqual(pickNameForms([{ form: 'Όσιος Μελέτιος επίσκοπος Κύπρου', lang: 'el' }], 'Meletius of Cyprus'), {
+    el: 'Μελέτιος επίσκοπος Κύπρου',
+  });
+  // «Αγίες» and «Άγιες» are one word accented two ways and the corpus writes
+  // both; only one was listed.
+  assert.deepEqual(pickNameForms([{ form: 'Αγίες Δύο Κόρες', lang: 'el' }], 'The Two Maidens'), { el: 'Δύο Κόρες' });
+});

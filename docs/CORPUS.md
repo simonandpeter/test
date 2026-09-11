@@ -273,15 +273,25 @@ labels the second **UPGRADE**.
 anything else, including a rendered page, because a saint on the wrong day
 still renders.
 
-**3. A rank absorbed into a name.** Live today. The Romanian name days print
+**3. A rank absorbed into a name.** Fixed 2026-09-11, and the shape is worth
+keeping because the next batch can bring it back. The Romanian name days printed
 *Mărturisitor* for `sofian-of-antim` and *Împărăteasă* for
 `pulcheria-the-empress`, because `stripPrefixes` in `lib/saint-name.js` walks a
 list of known rank words and stops at the first word it does not know —
-«Sfântul Cuvios **Mărturisitor** Sofian» loses two and keeps the third. English
-is right on both. **Fourteen name forms across the corpus begin with a rank**
-(`node scripts/corpus-gate.mjs`, the names section, lists them). The fix is the
-strip list in `lib/saint-name.js` and belongs in **its own commit with a unit
-test**, not inside a corpus batch; but a batch must not add to the count.
+«Sfântul Cuvios **Mărturisitor** Sofian» lost two and kept the third. English
+was right on both, which is what makes this a strip-list defect rather than a
+folder's. Eighteen forms across the corpus began with a rank; the gate named
+fourteen of them, because its own vocabulary had the same kind of hole (a rank
+it did not list, and the other Romanian t — «Muceniţă» with the cedilla against
+«Muceniță» with the comma below). Both lists were widened and
+`tests/saint-name.test.mjs` pins each mechanism.
+
+**The count to watch is now zero**, and `node scripts/corpus-gate.mjs`'s names
+section prints it beside four rows it holds out on purpose: three companies
+whose rank *is* their name («Преподобномученики Белогорские»), and Hosius of
+Córdoba, whose Greek name Ὅσιος is the word for *Venerable*. The fix for a new
+one is the strip list, in **its own commit with a unit test**, not inside a
+corpus batch; but a batch must not add to the count.
 
 **4. Conflated saints who share a name and a day.** Sozon of Cyprus, the
 shepherd boy of Paphos, and Sozon of Pompeiopolis, the Lycaonian shepherd

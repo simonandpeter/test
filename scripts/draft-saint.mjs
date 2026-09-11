@@ -152,10 +152,13 @@ function houseRules(saint, life, readOn) {
    * The naming contract (PLAN.md). `display_name` held name, office, rank and
    * death year in one string until 2026-08-27 — "Gorazd, Bishop of Bohemia and
    * Moravia-Silesia, Hieromartyr (1942)" — and every naming rule since rests on
-   * having taken it apart. A rank left in the name is the live bug this
-   * protocol exists partly to stop: the Romanian name days print «Mărturisitor»
-   * for Sofian of Antim today, because a rank the strip-list has never heard of
-   * is indistinguishable from a personal name.
+   * having taken it apart. A rank left in the name is the bug this protocol
+   * exists partly to stop: the Romanian name days printed «Mărturisitor» for
+   * Sofian of Antim until 2026-09-11, because a rank the strip list has never
+   * heard of is indistinguishable from a personal name. The list was widened;
+   * what cannot be widened in advance is the next rank a new source writes,
+   * which is why the gate counts what the build would print rather than
+   * trusting the list.
    */
   if (/\(\s*\d{3,4}\s*\)|\b\d{3,4}\b/.test(name)) bad.push(`display_name carries a year: "${name}"`);
   if (RANK_WORDS.test(name.replace(/^The\s/, ''))) {

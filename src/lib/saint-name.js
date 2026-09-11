@@ -57,17 +57,27 @@ const PREFIXES = {
     'Ιερομάρτυρας', 'Οσιομάρτυρας', 'Μεγαλομάρτυρας', 'Νεομάρτυρας', 'Μάρτυρας',
     'Προφήτης', 'Προφήτιδα', 'Ομολογητής', 'Νεομάρτυς',
     'Απόστολος', 'Όσιος', 'Οσία', 'Όσιοι', 'Δίκαιος', 'Δικαία',
-    'Άγιος', 'Αγία', 'Άγιοι', 'Άγιες', 'Αγ.',
+    /* «Αγίες» and «Άγιες» are one word accented two ways, and the corpus
+       writes both. Only the second was listed, so «Αγίες Δύο Κόρες» printed
+       its honorific. */
+    'Άγιος', 'Αγία', 'Άγιοι', 'Άγιες', 'Αγίες', 'Αγ.',
   ],
   ro: [
     'Sfinții Mucenici', 'Sfântul Sfințit Mucenic', 'Sfânta Muceniță', 'Sfântul Mucenic',
     'Sfântul Mare Mucenic', 'Sfântul Ierarh', 'Sfântul Apostol', 'Sfântul Proroc',
     'Sfântul Cuvios',
     'Sfinții', 'Sfintele', 'Sfântul', 'Sfânta', 'Sf.',
-    'Marele Mucenic', 'Mare Mucenic', 'Noul Mucenic', 'Nou-Mucenic', 'Preot Mucenic',
-    'Mucenic', 'Muceniță', 'Ierarh', 'Cuvios', 'Cuvioasa', 'Cuvioasă', 'Cuviosul',
+    'Marele Mucenic', 'Mare Mucenic', 'Mare Muceniță', 'Noul Mucenic', 'Nou-Mucenic',
+    'Preot Mucenic',
+    'Mucenic', 'Muceniță', 'Martir', 'Ierarh', 'Cuvios', 'Cuvioasa', 'Cuvioasă', 'Cuviosul',
     'Proorocul', 'Proorocița', 'Apostol', 'Dreptul', 'Dreapta', 'Fericitul', 'Fericita',
-    'Mărturisitorul', 'Mărturisitoarea',
+    /* The bare forms as well as the definite ones: the Romanian entries write
+       «Sfântul Cuvios Mărturisitor Sofian» and «Sfânta Împărăteasă Pulheria»,
+       where the list reached the honorific, then the rank behind it, and
+       stopped at a third word it did not know — so the name a Romanian reader
+       was shown began *Mărturisitor* and *Împărăteasă*. */
+    'Mărturisitorul', 'Mărturisitoarea', 'Mărturisitor', 'Mărturisitoare',
+    'Împăratul', 'Împărăteasa', 'Împărat', 'Împărăteasă',
     /*
      * The princely title, which is a rank like any other here and was the one
      * the Romanian list had no answer for: «Sfântul Voievod Neagoe Basarab»
@@ -81,10 +91,20 @@ const PREFIXES = {
   ],
   sr: [
     'Свештеномученик', 'Преподобномученик', 'Великомученик', 'Преподобни',
-    'Преподобна', 'Мученик', 'Мученица', 'Праведни', 'Пророк', 'Апостол', 'Праотац',
-    'Свети', 'Света', 'Свете', 'Преп.', 'Св. свештеномуч.', 'Св. муч.', 'Св.',
+    'Преподобна', 'Мученик', 'Мученица', 'Праведни', 'Праведна', 'Пророк',
+    'Апостол', 'Праотац',
+    /* A rank the Serbian entries write first and the site prints itself:
+       «Епископ Атанасије» showed a Serbian reader the office where the name
+       belongs. Serbian puts a title in front of the name — it is Greek that
+       puts an office behind it, which is why that one is not stripped here
+       (see `nameSlotTaken` below). */
+    'Епископ',
+    'Свети', 'Света', 'Свете', 'Преп.', 'Св. свештеномуч.', 'Св. муч.',
+    /* «Свешт. муч.» is the same abbreviation as «Св. свештеномуч.» written
+       shorter, and four forms carried it past the whole list. */
+    'Свешт. муч.', 'Св.',
     'свештеномученик', 'мученик', 'мученица', 'преподобни', 'муч.', 'преп.',
-    'праотац', 'пророк',
+    'праотац', 'пророк', 'апостол', 'праведни', 'праведна', 'царица',
   ],
 };
 
@@ -120,8 +140,13 @@ const PLURAL_RANK = {
 
 export const LANGS = ['ru', 'el', 'ro', 'sr'];
 
-/** An English display name that is itself a company, so a list is right. */
-const englishNamesMany = (name) =>
+/**
+ * An English display name that is itself a company, so a list is right — and
+ * so is a plural rank standing alone, which is why `corpus-gate.mjs` reads
+ * this too: «Преподобномученики Белогорские» is *the Monk-martyrs of
+ * Belogorsk*, where the rank is the whole of the name.
+ */
+export const englishNamesMany = (name) =>
   /\band\b|\bThe (?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Eleven|Twelve|Twenty|Thirty|Forty|Soldiers|Clergy|Martyrs|Monk)/i.test(
     name ?? '',
   );
@@ -243,15 +268,60 @@ const TRAILING_OFFICE = Object.fromEntries(
 const stripTrailingOffice = (form, lang) =>
   String(form).replace(TRAILING_OFFICE[lang], '').replace(/\s{2,}/g, ' ').replace(/\s+,/g, ',').trim();
 
+/*
+ * **Romanian is written with two different sets of s and t.** The comma-below
+ * letters ș/ț are the correct ones and the cedilla letters ş/ţ are the legacy
+ * Turkish code points that a great deal of Romanian text still carries; the
+ * corpus holds both, sometimes for the same word. «Sfânta Muceniţă Hira» has
+ * the cedilla and «Sfânta Muceniță Eufimia» the comma, so a list written with
+ * one spelling matched one of them and walked past the other, printing
+ * *Muceniţă* as a name. Folded for **matching only** — the recorded form is
+ * sliced, not the folded copy, so what reaches the reader is what the source
+ * wrote. The fold is one code point for one, so the offsets still line up.
+ */
+const RO_FOLD = (s) => s.replace(/ş/g, 'ș').replace(/Ş/g, 'Ș').replace(/ţ/g, 'ț').replace(/Ţ/g, 'Ț');
+const fold = (s, lang) => (lang === 'ro' ? RO_FOLD(s) : s);
+
+/*
+ * **A rank word standing where a name belongs is not a rank.** «Άγιος Όσιος
+ * επίσκοπος Κορδούης της Ισπανίας» is Hosius of Córdoba, and Ὅσιος is his
+ * name — the same word the Greek calendars use for *Venerable*. Stripping it
+ * left «επίσκοπος Κορδούης της Ισπανίας»: an office and a place, and nobody
+ * named. What tells the two apart is what follows. Greek writes the office
+ * *behind* the name — «Βασίλειος επίσκοπος Γορτύνης» — and **64 of the 441
+ * recorded Greek forms do it with no comma at all**, across 74 folders
+ * (`scratchpad/el-offices.mjs` counts and lists them). So a word sitting in
+ * front of an office that itself has a place behind it is filling the name
+ * slot, whatever else that word can mean.
+ *
+ * **Greek only, and that is the rule rather than a shortcut.** Serbian and
+ * Romanian put the title in front of the name — «Епископ Атанасије»,
+ * «Împărăteasă Pulheria» — so the same guard there would keep the very ranks
+ * this file exists to remove. A one-word office is left alone too, because
+ * there the office word is the whole name: «Αγία Βασίλισσα» is Basilissa and
+ * «Άγιος Πάπας» is Papas.
+ */
+const OFFICE_HEAD_EL = new RegExp(`^(?:${OFFICE_WORD.el})$`, 'iu');
+const nameSlotTaken = (rest, lang) => {
+  if (lang !== 'el') return false;
+  const words = String(rest).split(/\s+/);
+  return words.length > 1 && OFFICE_HEAD_EL.test(words[0]);
+};
+
+/* Four passes, not three: a Romanian entry stacks an honorific on two ranks —
+   «Sfântul Cuvios Mărturisitor Sofian de la Antim» needs three of them, and
+   three passes left no room to find that it had finished. */
 function stripPrefixes(form, lang) {
   let out = String(form).trim();
-  for (let pass = 0; pass < 3; pass += 1) {
+  for (let pass = 0; pass < 4; pass += 1) {
     const before = out;
+    const head = fold(out, lang);
     for (const prefix of PREFIXES[lang]) {
-      if (out.startsWith(prefix + ' ')) {
-        out = out.slice(prefix.length + 1).trim();
-        break;
-      }
+      if (!head.startsWith(fold(prefix, lang) + ' ')) continue;
+      const rest = out.slice(prefix.length + 1).trim();
+      if (nameSlotTaken(rest, lang)) break;
+      out = rest;
+      break;
     }
     if (out === before) break;
   }

@@ -27,7 +27,7 @@ import { spawnSync } from 'node:child_process';
 import { ROOT, readCorpus, feastIndex, nameKeys, calendarOf, churchDate, onCivilDay, CHURCH_IDS } from './corpus-index.mjs';
 import { build, report } from './build-manifest.mjs';
 import { makeInterval, overlaps, within, primaryCentury } from '../src/lib/dates.js';
-import { pickNameForms } from '../src/lib/saint-name.js';
+import { pickNameForms, englishNamesMany } from '../src/lib/saint-name.js';
 
 const args = process.argv.slice(2);
 const has = (name) => args.includes(name);
@@ -68,7 +68,21 @@ if (report(built, { write: false }) !== 0) fail('build', `${built.errors.length}
 
 if (!has('--quick')) {
   console.log('\n— npm test ————————————————————————————————————————');
-  const run = spawnSync('node', ['--test', 'tests/'], { cwd: ROOT, encoding: 'utf8' });
+  /*
+   * **The files, named.** `node --test tests/` reads the directory as a module
+   * specifier on Node 22 and later and dies with MODULE_NOT_FOUND before it
+   * runs anything — so this step failed on every tree, clean or dirty, from
+   * the day it was written (2026-09-10) until it was noticed on 2026-09-11,
+   * and the gate it belongs to went red for a reason that had nothing to do
+   * with the corpus. `package.json` passes a glob instead, which works there
+   * because npm hands it to a shell; from `spawnSync` there is no shell to
+   * expand it. Reading the directory needs neither.
+   */
+  const specs = fs
+    .readdirSync(path.join(ROOT, 'tests'))
+    .filter((f) => f.endsWith('.test.mjs'))
+    .map((f) => path.join('tests', f));
+  const run = spawnSync('node', ['--test', ...specs], { cwd: ROOT, encoding: 'utf8' });
   const tail = (run.stdout ?? '').trim().split('\n').slice(-14).join('\n');
   console.log(tail);
   if (run.status !== 0) fail('npm test', 'the unit suite is red — read the whole log, not this tail');
@@ -101,32 +115,77 @@ if (BATCH && fresh.length) fail('duplicates', `${fresh.length} folded name form(
 
 console.log('\n— names ————————————————————————————————————————————');
 /*
- * The live bug this section exists for: the Romanian name days print
- * «Sfântul Cuvios Mărturisitor Sofian de la Antim» as *Mărturisitor* and
- * «Sfânta Împărăteasă Pulheria» as *Împărăteasă*, because `stripPrefixes` in
- * `lib/saint-name.js` runs a list of known ranks and stops at the first word it
- * does not know. English is right on both. A rank that reaches the reader as a
- * name is invisible to every other check in this repo, so it is checked here
- * on the corpus's own data by asking the build's own function what it would
- * print and looking at the first word.
+ * The bug this section was written for, and which it found: the Romanian name
+ * days printed «Sfântul Cuvios Mărturisitor Sofian de la Antim» as
+ * *Mărturisitor* and «Sfânta Împărăteasă Pulheria» as *Împărăteasă*, because
+ * `stripPrefixes` in `lib/saint-name.js` runs a list of known ranks and stops
+ * at the first word it does not know. English was right on both. A rank that
+ * reaches the reader as a name is invisible to every other check in this repo,
+ * so it is checked here on the corpus's own data by asking the build's own
+ * function what it would print and looking at the first word. Eighteen forms
+ * were fixed on 2026-09-11; the list below is what is left, and each is left
+ * knowingly.
+ *
+ * **This check under-reported by four and the vocabulary is why.** It named
+ * fourteen forms while the corpus held eighteen, and the four it walked past
+ * were not subtle: three Romanian ranks missing from the list below (*Martir*,
+ * *Mare Muceniță*) or spelled with the other Romanian t — «Muceniţă» has the
+ * cedilla ţ and the class here had only the comma-below ț — and the Serbian
+ * abbreviation «Свешт. муч.», which four forms carried past the whole strip
+ * list and past this regex too. A checker written from the rows that prompted
+ * it sees the rows that prompted it.
  */
 const RANK_HEAD = {
   ru: /^(преподобн|священномученик|мученик|мучениц|святител|благоверн|праведн|блаженн|исповедник|пророк|апостол|великомученик|новомученик|архиеп|епископ|митрополит|патриарх|игумен|архимандрит|иеромонах|монах|князь|царь|царица|император)/i,
-  ro: /^(sf[âa]nt|cuvios|cuvioas|mucenic|muceni[țt]|ierarh|m[ăa]rturisitor|m[ăa]rturisitoare|prooroc|proroc|apostol|drept|fericit|[îi]mp[ăa]rat|[îi]mp[ăa]r[ăa]teas|voievod|domnitor|episcop|arhiepiscop|mitropolit|patriarh|preot|diacon|monah|ieromonah|arhimandrit|stare[țt]|principe|prin[țt]|regin|rege)/i,
+  ro: /^(sf[âa]nt|cuvios|cuvioas|mucenic|muceni[țţt]|martir|mare|ierarh|m[ăa]rturisitor|m[ăa]rturisitoare|prooroc|proroc|apostol|drept|fericit|[îi]mp[ăa]rat|[îi]mp[ăa]r[ăa]teas|voievod|domnitor|episcop|arhiepiscop|mitropolit|patriarh|preot|diacon|monah|ieromonah|arhimandrit|stare[țţt]|principe|prin[țţt]|regin|rege)/i,
   el: /^(άγι|αγί|όσι|οσί|ιερομάρτυ|οσιομάρτυ|μεγαλομάρτυ|νεομάρτυ|μάρτυ|προφήτ|απόστολ|δίκαι|ομολογητ|επίσκοπ|αρχιεπίσκοπ|μητροπολίτ|πατριάρχ|ηγούμεν|αρχιμανδρίτ|ιερομόναχ|μοναχ|βασιλ|αυτοκράτ)/i,
-  sr: /^(свет|преподобн|свештеномученик|мученик|мученица|праведн|блажен|исповедник|пророк|апостол|великомученик|епископ|архиепископ|митрополит|патријарх|игуман|архимандрит|јеромонах|монах|кнез|цар|царица|краљ)/i,
+  sr: /^(свет|свешт|преподобн|свештеномученик|мученик|мученица|праведн|блажен|исповедник|пророк|апостол|великомученик|епископ|архиепископ|митрополит|патријарх|игуман|архимандрит|јеромонах|монах|кнез|цар|царица|краљ)/i,
+};
+/*
+ * **Two shapes where a rank at the head is the right answer**, and both are
+ * held out here rather than papered over in the strip list.
+ *
+ * A saint whose *English* name is a company is named by the rank: the Russian
+ * for "The Monk-martyrs of Belogorsk" is «Преподобномученики Белогорские» and
+ * there is no other name to print. `saint-name.js` already reads the display
+ * name the same way for its two company rules, and this reads the same
+ * function so the two cannot drift apart.
+ *
+ * And a rank word can *be* a name. «Άγιος Όσιος επίσκοπος Κορδούης» is
+ * Hosius of Córdoba, whose name is the Greek for *Venerable*; Βασίλισσα and
+ * Πάπας are two more. What tells them apart is the office behind them,
+ * the same discriminator `saint-name.js` uses to leave the word standing, so
+ * the exemption is stated in the same terms rather than as a list of slugs.
+ */
+const OFFICE_AFTER = {
+  ru: /^(митрополит|архиепископ|епископ|патриарх|архимандрит|игумен|княз|цар|император)/i,
+  el: /^(αρχιεπίσκοπ|επίσκοπ|μητροπολίτ|πατριάρχ|πρεσβύτερ|ηγούμεν|αρχιμανδρίτ|βασιλ|αυτοκράτ|πάπ)/i,
+  ro: /^(arhiepiscop|mitropolit|episcop|patriarh|arhimandrit|egumen|rege|regin|[îi]mp[ăa]rat|voievod|pap)/i,
+  sr: /^(архиепископ|митрополит|епископ|патријарх|архимандрит|игуман|краљ|кнез|цар|пап)/i,
 };
 let rankInName = 0;
+let rankIsTheName = 0;
 for (const { slug, saint } of corpus) {
   const forms = pickNameForms(saint.names, saint.display_name);
+  const company = englishNamesMany(saint.display_name);
   for (const [lang, form] of Object.entries(forms)) {
-    const head = String(form).split(/[\s ]+/)[0] ?? '';
-    if (RANK_HEAD[lang]?.test(head)) {
-      rankInName += 1;
-      if (inBatch({ slug }) || !BATCH) console.log(`  ! ${slug} ${lang}: the printed name begins "${head}" — a rank, not a name`);
+    const words = String(form).split(/[\s ]+/);
+    const head = words[0] ?? '';
+    if (!RANK_HEAD[lang]?.test(head)) continue;
+    const inNameSlot = words.length > 1 && OFFICE_AFTER[lang]?.test(words[1]);
+    if (company || inNameSlot) {
+      rankIsTheName += 1;
+      if (inBatch({ slug }) || !BATCH) {
+        const why = company ? 'the saint is a company, so the rank is the name' : 'an office follows, so the head is the name';
+        console.log(`  · ${slug} ${lang}: «${form}» — ${why}`);
+      }
+      continue;
     }
+    rankInName += 1;
+    if (inBatch({ slug }) || !BATCH) console.log(`  ! ${slug} ${lang}: the printed name begins "${head}" — a rank, not a name`);
   }
 }
+console.log(`name forms where the rank is the name  : ${rankIsTheName}`);
 console.log(`name forms whose first word is a rank : ${rankInName}`);
 if (BATCH && rankInName) notes.push('a rank reaching the reader as a name is a defect in lib/saint-name.js\'s strip list, not in the folder — fix the list, in its own commit');
 
