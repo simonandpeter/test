@@ -64,12 +64,18 @@ single surface through a rebuilt preview before.
 
 ## In flight, 2026-09-12: the hymns into English
 
-**Where it stands, after three rounds.** **407 of 433 hymn objects carry an
-English; 21 distinct source texts are left**, and five more objects are held
-out on purpose (below). It was 163 of 433 when the loop started. A round is
-four subagents on four slices, filling the `english` field and nothing else;
-if a session loses them the slices re-emit from scratch and nothing is wasted,
-because the corpus is only written by the step after them.
+**Done, after four rounds.** **428 of 433 hymn objects carry an English, and
+`--emit-texts` now returns nothing**: there is no source text left in the
+corpus without a rendering. The five objects that have none are the five held
+out on purpose (below), because they are not the saint's hymns. It was 163 of
+433 when the loop started. A round was four subagents on four slices, filling
+the `english` field and nothing else; if a session lost them the slices
+re-emitted from scratch and nothing was wasted, because the corpus is only ever
+written by the step after them.
+
+**The loop is kept below because new saints arrive with new hymns** — every
+folder added from here brings texts the emit will surface, and this is how they
+are rendered.
 
 Everything landed is on `main` — except that **`05f83ad` onward are committed
 but unpushed**: this machine has no PAT any more (no credential helper, nothing
