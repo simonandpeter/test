@@ -12,7 +12,7 @@ them findings rather than features.
 
 - **`main` is green and deployed.** Every push on 2026-09-09 and 2026-09-10
   went green, and none of the last five carried a `flaky` line at all.
-- **382 unit tests** in ~2 s. **944 browser tests** in ~4.8 min here, ~15 min on
+- **391 unit tests** in ~2 s. **944 browser tests** in ~4.8 min here, ~15 min on
   CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor. **The entry
   stylesheet is 72,562 bytes against `ENTRY_CSS_CEILING` 73,000** — the gate
   that fires before the four routes do and names the file
@@ -197,6 +197,104 @@ runway continues — expect to edit it in almost every batch.
 about 30 new folders and a comparable number of upgrades. The limiting factor
 is reading, not tooling.
 
+## The name-strip fix, 2026-09-11
+
+**Eighteen printed name forms began with a rank, not fourteen**, and the four
+the gate walked past are the finding. `corpus-gate.mjs` reported fourteen; a
+reading of all 1,166 printed forms — every language of every folder, not only
+the rows the gate named — found four more, and every one of them was a hole in
+the checker's own vocabulary rather than a subtle case. Three Romanian ranks it
+did not list (*Martir*, *Mare Muceniță*) or could not spell — «Muceniţă» is
+written with the cedilla ţ and the gate's character class held only the
+comma-below ț — and the Serbian «Свешт. муч.», which four forms carried past
+the strip list and past the gate's regex alike. **A checker written from the
+rows that prompted it sees the rows that prompted it**, and the only thing that
+found the rest was printing all 1,166 and reading them.
+
+All eighteen are now names. Nothing else in the corpus moved: the whole set of
+printed forms was snapshotted before and after and the diff is exactly those
+eighteen lines (`scratchpad/name-snapshot.mjs`).
+
+**Two are mechanisms rather than list entries**, and each has a test that fails
+when it alone is backed out:
+
+- **Romanian is written with two different t.** ș/ț are the letters Romanian
+  uses and ş/ţ are the legacy Turkish code points a lot of Romanian text still
+  carries; the corpus holds both, sometimes for the same word. The list is
+  folded for **matching only**, so the reader still gets the character the
+  source wrote.
+- **A rank word standing in front of an office is a name.** «Άγιος Όσιος
+  επίσκοπος Κορδούης της Ισπανίας» is Hosius of Córdoba, whose Greek name is
+  the word for *Venerable*; stripping it left an office, a place and nobody
+  named. Greek writes the office *behind* the name with no comma at all in 64
+  of its 441 recorded forms, so what follows tells them apart. **Greek only** — Serbian and Romanian put
+  the title in front («Епископ Атанасије», «Împărăteasă Pulheria»), where the
+  same guard would keep the very ranks the file exists to remove.
+
+**Four rows remain and each prints why.** Three are companies whose rank *is*
+their name — «Преподобномученики Белогорские» is the Monk-martyrs of Belogorsk
+and there is nothing else to print — and the fourth is Hosius. The gate reads
+`saint-name.js`'s own company test rather than a list of slugs, so the two
+cannot drift apart.
+
+**The gate's `npm test` step had never run.** `node --test tests/` reads the
+directory as a module specifier on Node 22 and later and dies before running
+anything, so that step failed on every tree from the day it was written
+(2026-09-10) — `package.json`'s glob works only because npm hands it to a
+shell. It reads the directory now, and runs the 391 tests it always claimed to.
+
+## Three carousel tests that had been passing on luck, 2026-09-11
+
+Found by the name fix's own full runs, and **nothing to do with it** — the
+manifest that fix changes differs in one field for eighteen saints, and these
+tests read English captions.
+
+**The row's membership is not the row's membership until the idle repack.**
+The first paint packs `CX_PREFIX` and the rest arrives on
+`requestIdleCallback` (PLAN item 2, the half that landed). Measured directly
+at the three quantities the tests read, at the instant `.cx-card` becomes
+visible against after the repack (`scratchpad/row-reads-probe.mjs`, four CPU
+rates, three passes each):
+
+| | at first card | after |
+| --- | ---: | ---: |
+| cells in the track | 60 | 198 |
+| `img` in the track | 40 | 147 |
+| first ten slugs | — | **different, 12 of 12** |
+
+**Identical at 1×, 6×, 10× and 20×, and that is the finding.** This is not a
+slow-machine race that parallel load makes likelier — the prefix is what is
+there when the first card paints, at every speed. The three tests were racing
+the gap between their read and the repack, and the gap is always open.
+
+Caught inside two full runs: *the row is not the full rendered run* at 38
+against a floor of 40 — and the bare read is **exactly 40**, which that floor
+wants strictly more than — *the whole run is not in the track* at 76 against
+100, and *the same seed dealt a different hand*, which was one hand read before
+the repack and one after.
+
+**Three waits that look right and measure as useless**, all tried before the
+one that works, because this suite's history is explanations written into the
+code and later disproved:
+
+- The sibling's wait, the row wider than its own viewport — already true at 60
+  cells, so it returns instantly.
+- Two consecutive equal readings, which trap 7's resize case teaches — it
+  **settles on the prefix**: at 6× and above the repack has not begun, the
+  count sits still, and the poll exits inside 250 ms. It read as fixed at 1×
+  and fixed nothing.
+- A fixed 700 ms sleep, which is what stood in one of the three.
+
+`packedRow` in `index-carousel.spec.js` is the wait, on the quantity itself,
+used by four tests. `scratchpad/cells-probe.mjs`, `settle-probe.mjs` and
+`row-reads-probe.mjs` are the instruments.
+
+**Still open, and not ours**: `chrome.spec.js`'s *the masthead is one box on
+all six routes* timed out at 30 s on mobile-360 in the same run, having passed
+at 24.8 s on desktop. It walks six routes in two themes and waits on
+`document.fonts.ready` at each; it is against its own budget, not racing
+anything.
+
 ## Known and unfixed
 
 - **All Saints packs all 862 captions in one blocking task** before it can paint
@@ -207,10 +305,6 @@ is reading, not tooling.
   writes `scrollLeft` inside a live gesture.
 - **A phone draws a 150 px card from a 560 px file.** The first screenful of All
   Saints is 579 kB and could be ~189.
-- **The Romanian name days print ranks where they should print names.** Found
-  while measuring the widest name in each pack on 2026-09-10 and left alone,
-  being nothing to do with the columns that sitting drew: `Sfântul Cuvios
-  Mărturisitor Sofian de la Antim` gives *Mărturisitor* and `Sfânta
-  Împărăteasă Pulheria` gives *Împărăteasă*, because the build's honorific
-  stripping reaches *Sfântul* and *Cuvios* and stops at the rank behind them.
-  English is right on both days. §10.25's last bullet has the evidence.
+- ~~The Romanian name days print ranks where they should print names.~~ —
+  **fixed 2026-09-11**, and the section below has what it cost and what it
+  found.

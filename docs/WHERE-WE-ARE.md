@@ -8,6 +8,9 @@ the repo; this is the index to it.
 `main` green at `1c810a2`, tree clean, deployed. Corpus 862 folders.
 Nothing running: no background agents, no scheduled jobs.
 
+Two commits sit on top of it locally as of 2026-09-11: this document, and the
+name-strip fix below.
+
 ## What just landed
 
 **The desktop Daily rebuild** — 16 commits, `31259c4`…`b1b2a6d`. The page is
@@ -30,16 +33,25 @@ Nicefore, identical rect on all six routes.
 `--undo <batch>`), `corpus-gate.mjs`, `corpus-index.mjs`. Expansion was started
 and stopped before it wrote anything.
 
+## The name strip, 2026-09-11
+
+**Eighteen printed name forms began with a rank**, not the fourteen the gate
+counted — the four it missed were holes in its own vocabulary, including a
+Romanian word spelled with the other Romanian t. All eighteen are names now and
+nothing else in the 1,166 printed forms moved. Four rows remain by design and
+print their reason: three companies whose rank is their name, and Hosius of
+Córdoba, whose Greek name is the word for *Venerable*. `HANDOFF.md` has the
+whole of it, `docs/CORPUS.md` §3 the protocol side.
+
+Found on the way: **`corpus-gate.mjs`'s `npm test` step had never run** on any
+tree, clean or dirty, since it was written.
+
 ## Open, for the author
 
 - **The site is named "Daily Dox"** (`strings.js:45`, the wordmark's accessible
   name, the export format) over a mark that now reads AGIOS. Brand call.
 - **"Also today" is desktop-only**; mobile still says "Also Commemorated" in all
   five packs. One line either way.
-- **Fourteen name forms print a rank instead of a name** — Romanian
-  `Mărturisitor` and `Împărăteasă`, Serbian `апостол`, Greek `επίσκοπος`,
-  Russian `Преподобномученики` and others. `lib/saint-name.js`'s strip list.
-  Counted by `corpus-gate.mjs`, not fixed.
 - **The register's expanded face** still draws its mount at the picture's
   derived shape, not the fixed crop. Neither instruction covered it.
 - **Above a 1983px window** the hero's 40rem ceiling binds and the 5:7
