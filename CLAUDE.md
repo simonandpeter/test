@@ -240,9 +240,9 @@ folders, not the manifest.
 | touched | run |
 | --- | --- |
 | `views/index/*`, `index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `index-carousel`, `index-grid`, `index-controls` |
-| `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-picker`, `daily-register` |
+| `views/daily/*`, `calendar.js`, `daily.css`, `daily-sidebar.css`, `daily-tiles.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-sidebar`, `daily-tiles` |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
-| `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface |
+| `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface; `ui/face-stage.js` and `main.js`'s pair branch also `daily-stage` |
 | `views/map*`, `map.css`, `lib/map-*`, `lib/mercator.js`, `data/places.js` | `map.spec.js` |
 | `ui/strings.js`, `ui/locales/*` | `locale-coverage.mjs`, then the full run |
 | `lib/*`, `data/`, `build-manifest.mjs` | `npm test`, then the surface |

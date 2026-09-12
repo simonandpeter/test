@@ -228,8 +228,13 @@
 
 /* Below the numeral, so a day that is both — 14 September 2026 — carries the
    fast's rule above and the feast's below, and neither hides the other. */
+/* `--feast`, not `--gold`: tokens.css gives that colour its own value on each
+   ground for exactly this mark, because on a month cell the rule is the only
+   thing drawing the feast and `--gold` does not clear the contrast floor there.
+   The rail this grid replaced had already been moved off `--gold` for the same
+   reason; the grid inherited the obligation with the job. */
 .cal-day.is-feast {
-  box-shadow: inset 0 -2px 0 var(--gold);
+  box-shadow: inset 0 -2px 0 var(--feast);
 }
 
 /* The day the page is showing. */
