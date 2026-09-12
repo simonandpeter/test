@@ -404,11 +404,13 @@ const sectionScroll = new Map();
  * be tall enough to hold the position.
  *
  * A view renders synchronously but is not its final height synchronously. The
- * Daily page is the worst of them: `fillSaintHymns` waits on the hero saint's
- * detail record and then adds the hymns, which is 508 px on an ordinary day —
- * so a scroll applied the moment the markup lands clamps against a page a
- * third shorter than the one the reader is about to see, and the correction
- * arrives after the fade has finished. That is the jump.
+ * Daily page is the worst of them: `lives.js` waits on the open card's detail
+ * record before it can fill the life and the two hymn columns, and the rest of
+ * the day's tiles fill later still, on idle — so a scroll applied the moment the
+ * markup lands clamps against a page shorter than the one the reader is about
+ * to see, and the correction arrives after the fade has finished. That is the
+ * jump. Written of `fillSaintHymns` and the hero until 2026-09-12; the boxes
+ * have changed and the arithmetic has not.
  *
  * **This is awaited from inside the transition callback, which is the whole
  * mechanism.** `startViewTransition` does not snapshot the new state until the
