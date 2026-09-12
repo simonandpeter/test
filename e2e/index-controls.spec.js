@@ -847,7 +847,12 @@ test('the random order holds until the page is reloaded', async ({ page }) => {
 
   // Away and back, with no reload: the same hand.
   await page.locator('.site-nav a[href$="/"]').first().click();
-  await expect(page.locator('.cal-controls')).toBeVisible();
+  // The standing column, since `.cal-controls` went with the Daily rebuild on
+  // 2026-09-12. This wait is not the subject of the test: it is only here to
+  // prove the other page really rendered before we come back to this one, which
+  // matters more now than it did — the two faces are layers in one stage and
+  // All Saints is deliberately never re-rendered on the way back.
+  await expect(page.locator('.day-side')).toBeVisible();
   await page.locator('.site-nav a[href$="/saints"]').first().click();
   await expect(page.locator('.index-card').first()).toBeVisible();
   await expect.poll(() => leaders(page)).toBe(dealt);

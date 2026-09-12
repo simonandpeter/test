@@ -105,9 +105,14 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   // 2026-09-10 `getPropertyValue` returns a hex for an ordinary custom
   // property and a computed colour for one the theme cross-fade registered,
   // so neither side is parsed by hand.
-  const [gold, strict, fish] = await tokenColours(page, '--gold', '--fast-strict', '--fast-fish');
+  // `--feast`, not `--gold`: tokens.css gives the feast its own value on each
+  // ground for exactly this mark, because on a month cell the rule is the only
+  // thing drawing the feast and --gold does not clear the contrast floor there.
+  // The grid was moved onto it on 2026-09-12 and this assertion is what caught
+  // that the two had drifted apart.
+  const [feastInk, strict, fish] = await tokenColours(page, '--feast', '--fast-strict', '--fast-fish');
   const underline = await feast.evaluate((el) => getComputedStyle(el).boxShadow);
-  expect(underline, 'the feast wears no rule of its own').toContain(gold);
+  expect(underline, 'the feast wears no rule of its own').toContain(feastInk);
   // And it is not either fast's colour, which is the whole point of the pair:
   // a day can be both, and the reader has to be able to see that it is.
   expect(underline).not.toContain(strict);
