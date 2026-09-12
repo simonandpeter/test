@@ -150,7 +150,7 @@ function stopServer(proc) {
  * the distance to the 1500 ms line, so *which* routes failed changed run to
  * run. A gate that decides on one draw from that distribution is a flake
  * generator, and this project has spent whole sittings on exactly that mistake
- * (Amendment 66: a millisecond budget standing in for a state).
+ * (a millisecond budget standing in for a state).
  *
  * The median rather than the mean: Lighthouse's own guidance, because the noise
  * is one-sided — a run can be arbitrarily slow and cannot be arbitrarily fast.

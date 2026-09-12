@@ -979,7 +979,7 @@ function fillIn(el, payload, { data, router }) {
    * calendar in that language recorded one. What does not is the corpus: 742
    * lives, each the author's paraphrase of a named source, and there is no way
    * to render them into four languages that does not mean machine translation.
-   * Amendment 2 forbids exactly that, and hagiography is the worst possible
+   * the corpus's no-invention rule forbids exactly that, and hagiography is the worst possible
    * place to start: a mistranslated clause is a false claim about a person and
    * about a source we cited by name.
    *

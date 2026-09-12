@@ -7,7 +7,7 @@
  * reader opening the Map or About downloaded six months of Russian pericopes
  * to look at neither, and a reader opening the Daily page waited for all of it
  * to parse before anything was drawn. HANDOFF has called the eager import the
- * real fix's target since Amendment 44 - "load it lazily and the cut can be
+ * real fix's target since - "load it lazily and the cut can be
  * reversed".
  *
  * **The load is started at boot, in parallel with the manifest, and awaited

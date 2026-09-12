@@ -1,6 +1,6 @@
 /**
  * Every saint has a life, and every life says where it comes from
- * (author, 2026-08-23, Amendment 30).
+ * (author, 2026-08-23).
  *
  * The corpus grew from eight lives to a hundred and forty-nine in one sitting,
  * each written after the synaxarion of a church that keeps the saint — or the

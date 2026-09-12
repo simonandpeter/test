@@ -4,7 +4,7 @@ import { gradeForDay, gradeFromNote } from '../src/lib/fast-grade.js';
 
 /**
  * What a day's fast allows, read off the calendar's own words. The file had no
- * unit test until Amendment 44 — only browser coverage of the days already
+ * unit test until then — only browser coverage of the days already
  * transcribed — and the defect below is exactly the kind that hides there,
  * because the page renders correctly and simply says less than it should.
  */
@@ -25,7 +25,7 @@ test('a Latin letter inside a Cyrillic word does not cost the day its grade', ()
    * days.pravoslavie.ru prints the strictest allowance in its vocabulary as
    * «Монастырский устав: cухоядение (хлеб, овощи, фрукты)» — and the first
    * letter of that word is a LATIN SMALL LETTER C, not the Cyrillic «с». It
-   * renders identically. Before Amendment 44 the phrase matched nothing and
+   * renders identically. Before the fix the phrase matched nothing and
    * the day silently showed no grade at all.
    *
    * The literal below is built from codepoints on purpose. Typed as text it

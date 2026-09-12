@@ -107,7 +107,7 @@ test('Overlaps and Entirely within are different questions, and both are offered
   // 460-570 by his nearness to Theodosius the Cenobiarch, touches the range
   // at its very edge - and is rightly not *within* it, which is the
   // distinction this test exists to keep.
-  // 212/195 since Amendment 88 (2026-08-31), which added six saints whose
+  // 212/195 since 2026-08-31, which added six saints whose
   // lives fall in this window: Basil the Great (330-379) and Gregory the
   // Theologian (329-389) sit inside it, Spyridon (late 3rd century-c. 348)
   // overlaps it from before, and Panteleimon, Catherine and Barbara all die
@@ -140,13 +140,13 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   await page.locator('[data-to]').fill('1400');
 
   // Nobody in the corpus has a dated life touching 1396–1400. The empty range
-  // has had to move five times: the 17th century served until Amendment 31
+  // has had to move five times: the 17th century served until then
   // gave it Athanasius of Brest and Cyriacus of Tazlău; 1320–1330 served
   // until 2026-08-26 gave Eustathius II of Serbia a floruit "under King
   // Milutin", 1282–1321; 1322–1329 served until Peter, Metropolitan of
   // Moscow, was dated 1260–1326 from the article that records he moved his
   // see from Vladimir to Moscow in 1325; and 1327–1334 served until
-  // Amendment 88 (2026-08-31) added Gregory Palamas, 1296 to about 1360,
+  // 2026-08-31 added Gregory Palamas, 1296 to about 1360,
   // whose life runs straight through it. A range that stays empty is a range
   // the corpus is not filling, and this one narrowing again is the corpus
   // doing its work — 1361–1369 sat in the gap Palamas's own death year opens
@@ -169,7 +169,7 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // to the calendar entry lines, the reigns those lives name and the councils
   // they place a man at; 30 more in the pass after it, from saint.gr's
   // per-saint pages and from named authorities outside the four calendars; and
-  // 5 more at Amendment 44, when the Russian calendar's 7 September was read
+  // 5 more then, when the Russian calendar's 7 September was read
   // and printed a year for five saints the Greek and Romanian had left bare -
   // Euodus (66), Onesiphorus (after 67), Luke of Bathys Ryax (after 975),
   // Macarius of Optina (1860) and Serapion of Pskov (1480).
@@ -307,7 +307,7 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // 31st and 28th, in the Romanian and Greek on the days of those names —
   // all still January, arrived at by different arithmetic.
   //
-  // Six since Amendment 88 (2026-08-31), which added three saints the Moscow
+  // Six since 2026-08-31, which added three saints the Moscow
   // Patriarchate keeps in Julian January: Basil the Great on the 1st, Sava of
   // Serbia on the 12th and Gregory the Theologian on the 25th. Gregory is the
   // one worth naming — Julian 25 January is civil 7 February, so he is in
@@ -354,7 +354,7 @@ test('the index spends as little height as it can before the first card', async 
    * last thing in the filter row with the dates facet immediately before it,
    * which is true in every face; the first draft measured that they shared a
    * line and CI went red on 2026-08-26, because the runner's system-ui is
-   * wider than Arial (Amendment 24, again) and the row wraps there. This test
+   * wider than Arial (the width budget, again) and the row wraps there. This test
    * is about the page's *height* and its own comment two paragraphs down says
    * absolute assertions are flaky by construction across the two faces — so
    * it should never have carried a position at all. The one-line claim lives
@@ -388,10 +388,10 @@ test('the index spends as little height as it can before the first card', async 
   // platform the suite runs on: 381 on Windows, where the fallback serif sets
   // a 580 px column and the foot still fits in Segoe UI, and 405 on
   // ubuntu-latest, where system-ui is DejaVu Sans and the foot takes two
-  // lines at that column (Amendment 24; it was 400, calibrated on Windows
+  // lines at that column (the width budget; it was 400, calibrated on Windows
   // alone). Either row wrapping once more is +25 or +30 and fails it, which
   // is the point; the next test pins the foot in Arial's metrics directly.
-  // The grid started at 436 before Amendment 13's pass.
+  // The grid started at 436 before the pass.
   const gridTop = (await page.locator('.grid').boundingBox()).y;
   expect(gridTop, 'the controls have crept back down the page').toBeLessThan(410);
 });
@@ -412,7 +412,7 @@ test('the index foot holds one line in a wide utility face at the cold-load colu
   // costs; and then the utility face is forced to Arial — which Windows and
   // macOS ship and fontconfig aliases to Liberation Sans on Linux — so the
   // assertion is one width on every machine: the row has to fit 580 in Arial's
-  // metrics. Amendment 24.
+  // metrics.
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.route('**/*.woff2', (route) => route.abort());
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -451,7 +451,7 @@ test('the index foot holds one line in a wide utility face at the cold-load colu
    * the native face at 360, where the column is 328 px and the English foot
    * needs about 244 in Segoe UI. DejaVu Sans is wider, and the margin was
    * about 30 px — thin enough that a label change could take it without
-   * anything going red on the desk it was made on. Amendment 24's own lesson,
+   * anything going red on the desk it was made on. the own lesson,
    * applied to the one row that had not had it.
    */
   await page.setViewportSize({ width: 360, height: 900 });
@@ -667,9 +667,9 @@ test('random deals an order, and holds it still under the reader', async ({ page
 
 
 test('the Index speaks the chosen language, saints included', async ({ page }) => {
-  // The boundary of Amendment 36, asserted from both sides: the chrome is
-  // Serbian, and the *lives* are not — a machine-translated life is Amendment
-  // 2's forbidden invention. The names crossed the line on 2026-08-26, and
+  // The boundary of the language rule, asserted from both sides: the chrome is
+  // Serbian, and the *lives* are not — a machine-translated life is the
+  // invention the corpus rule forbids. The names crossed the line on 2026-08-26, and
   // the way they crossed it is the point: not by being translated, but by
   // being *found already recorded*.
   await ready(page);
@@ -697,7 +697,7 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
    * 2026-08-26, and the second look found that the corpus had been carrying
    * them all along. Every folder has a `names` array transcribed from the
    * same calendar entries the attestations were read from — they were on the
-   * saint page under "Also called" until Amendment 38 removed that block, and
+   * saint page under "Also called" until then removed that block, and
    * have sat unused since.
    *
    * So nothing is translated here: the forms are chosen (lib/saint-name.js),
@@ -907,7 +907,7 @@ test('Sort and View are chips that print their own answer, and Detailed joins th
    * printing their answers, which is what freed the row for Detailed.
    *
    * The load-bearing assertion is that **the chip does not lie about the
-   * grid**. Amendment 24 records the same failure in the control this
+   * grid**. The width budget records the same failure in the control this
    * replaces: a `<select>` written out by hand showed "Name" while the grid
    * was already in Earliest order, because the list was right and the label
    * was not. A chip whose whole job is to print the answer can fail the same
@@ -1035,7 +1035,7 @@ test('Random is a die at the end of the filter row, and still keeps to the filte
 
 test('the filter row still holds one line with the die in it', async ({ page }) => {
   /*
-   * The die is an eighth chip in a row Amendment 24 already records as tight,
+   * The die is an eighth chip in a row already recorded as tight,
    * and it needed 14.6 px the row did not have — so it wrapped to a line of
    * its own and read as a stray. The gap came down from 8 px to 6 and the
    * chips' own inline padding from 8 to 7.
@@ -1047,7 +1047,7 @@ test('the filter row still holds one line with the die in it', async ({ page }) 
    * padding buy 21 back, and the row needs 567 of its 580 in Arial's
    * metrics.
    *
-   * Measured the way Amendment 24 measures the foot, and for the same reason:
+   * Measured the way the foot is measured, and for the same reason:
    * the webfont is blocked so the column is the cold-load 580 px on every
    * machine, and the utility face is forced to Arial so the widths are one
    * number everywhere rather than Segoe UI on a Windows desk and DejaVu Sans
@@ -1084,7 +1084,7 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
    * calendar, just print y/x saints listed. And remove the extra print number
    * of saints that shows up above this line when filters are added."
    *
-   * The page had carried two counts since Amendment 49 answered the same
+   * The page had carried two counts since answered the same
    * complaint the other way round — a tweened "127 saints" over "Of 742, 127
    * saints are in the Romanian calendar" — with whichever was redundant
    * hidden. One line saying what is listed out of what there is answers both
@@ -1732,7 +1732,7 @@ test('a facet chip prints its own word and nothing else', async ({ page }) => {
    * twice already. A phone wraps them by design — 360 px was never going to
    * hold eight — so the width is set rather than inherited from the project.
    *
-   * **In a forced face** (2026-08-27), which is the whole of Amendment 24's
+   * **In a forced face** (2026-08-27), which is the whole of the
    * lesson and was left off this row when it was written the day before. The
    * chips are `--font-utility`, which is system-ui: Segoe UI on this desk and
    * DejaVu Sans on a bare runner, and DejaVu is wide enough to take the ~9.5 px

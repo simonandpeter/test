@@ -92,7 +92,7 @@ if (!has('--quick')) {
 
 console.log('\n— duplicates ——————————————————————————————————————');
 /*
- * **On the feast date, never on the name** (Amendment 45). Two folders one
+ * **On the feast date, never on the name**. Two folders one
  * church keeps on one menologion day are not automatically a duplicate — the
  * Greek keeps Sozon of Cyprus and Sozon of Pompeiopolis on 7 September and is
  * right to — so a crowded day is printed, not failed. The name fold under it
@@ -311,7 +311,10 @@ const EXPECTED = [
   ['e2e/index-controls.spec.js:215     undated tray', undated, '126'],
   ['e2e/index-controls.spec.js:229     type "hermit"', hermits, '10'],
   ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '6'],
-  ['e2e/daily-panel.spec.js:2479       the corpus reaches', reach, '2026-09-28'],
+  // No spec asserts this any more: the test that did went with the Daily
+  // rebuild on 2026-09-12. Kept as a gate on the corpus own runway, which is
+  // what it measured; the literal is this file, not a spec.
+  ['corpus runway (no spec asserts it)  the corpus reaches', reach, '2026-09-28'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

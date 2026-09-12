@@ -6,14 +6,14 @@ import { CHURCHES } from '../src/data/churches.js';
 /**
  * The days recorded from the calendars themselves.
  *
- * *Amended in place (Amendment 44).* This said "23 August – 19 September 2026,
+ * *Amended in place.* This said "23 August – 19 September 2026,
  * every church, every day", and asserted the key set was exactly those 28. It
  * was the whole truth when four calendars had been read for four weeks; the
  * Russian and Romanian records now run months past it and the other two do
  * not, so the claim is a shape rather than a list:
  *
  *   - **23 August – 19 September 2026**: all four calendars, every day
- *     (Amendments 29 and 31). The one allowed gap is the Greek from 7 to 19
+ *     The one allowed gap is the Greek from 7 to 19
  *     September, whose readings saint.gr had not published when read — those
  *     entries say so in a note instead of inventing anything.
  *   - **After that**: the Russian and the Romanian only, and each stops where
@@ -111,7 +111,7 @@ test('the readings differ where the calendars differ, and agree where they agree
   // And a feast's hymns travel with the day where the day is the feast's.
   assert.equal(recordedDay('2026-08-23', 'greek').hymns.length, 2);
   assert.equal(recordedDay('2026-08-23', 'greek').hymns[0].kind, 'troparion');
-  // The three weeks that followed (Amendment 31): 8 September is the Nativity
+  // The three weeks that followed: 8 September is the Nativity
   // of the Theotokos for the Romanian and Greek calendars — the feast's
   // pericopes and hymns — while the Russian reads 26 August (Julian), Adrian
   // and Natalia, with the Vladimir icon's hymns; 11 September is the Beheading
@@ -138,7 +138,7 @@ test('the readings differ where the calendars differ, and agree where they agree
 
 test('the months past the four weeks: what the two calendars printed, and nothing else', () => {
   /*
-   * Amendment 44 (author: "Do the Romanian and Russian day records for the
+   * Author: "Do the Romanian and Russian day records for the
    * next 6 months"). Six months was not there to be had — both sources stop
    * inside their own 2026 — but everything they do publish is here, and the
    * Daily page no longer runs dry on 19 September.

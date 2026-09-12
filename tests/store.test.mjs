@@ -118,7 +118,7 @@ test('an export round-trips, and an import is a merge rather than a replacement'
 
 test('an import that is not an export refuses whole', async () => {
   for (const bad of [null, {}, { schema: 2, stores: {} }, { schema: 1, stores: { saved: [{ id: 5 }] } }]) {
-    await assert.rejects(() => store.importData(bad), /not a Daily Dox export/);
+    await assert.rejects(() => store.importData(bad), /not an AGIOS export/);
   }
   // And nothing half-landed: the malformed row above never reached the store.
   const dump = await store.exportData();

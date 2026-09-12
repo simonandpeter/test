@@ -10,7 +10,7 @@
  * calendar entries the attestations were read from — «Феврония Муромская»,
  * «Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας», „Sfântul Sfințit
  * Mucenic Antim, Episcopul Nicomidiei". They were shown on the saint page
- * under "Also called" until the author removed that block (Amendment 38) and
+ * under "Also called" until the author removed that block and
  * have been in the data, unused, since. Nothing here is invented; this only
  * chooses which recorded form to print.
  *
@@ -185,23 +185,23 @@ const stripAppositions = (form, lang) =>
 /*
  * **An office restates itself after a comma, in the reader's own language, a
  * second time** — `card.office` already says "Bishop of Nicomedia" in
- * English, on the line below the name (`lib/honorific.js`, Amendment 50: "the
+ * English, on the line below the name (`lib/honorific.js`: "the
  * office moves to the line below"), and until now the comma clause that said
  * the same thing in Romanian, Greek, Serbian or Russian was left standing in
  * the name itself: «Antim, Episcopul Nicomidiei». The rank stripped above is
  * a *word in front of* the name; an office is a *noun plus the place that
  * follows it*, and needed a rule of its own — this was flagged and
- * deliberately left for later at Amendment 50's writing ("one does now, and
+ * deliberately left for later at the writing ("one does now, and
  * that one is an office rather than a rank").
  *
  * Anchored on a **comma** and then the office noun, so a kinship or
  * companionship clause is never touched — "fiica lui Fanuel", "в схиме
  * Серафим", "ο Λέσβιος" — none of them open with a word this list knows, the
  * same reasoning `display_name` already applies to keep "son of Bassa" in the
- * bare name (Amendment 50). The comma matters beyond marking where a clause
+ * bare name. The comma matters beyond marking where a clause
  * starts: an earlier version of this rule matched an office word after plain
  * whitespace too, to reach Greek's own comma-less "Άνθιμος επίσκοπος
- * Νικομήδειας" (the exact case Amendment 50 flagged and left), and a corpus
+ * Νικομήδειας" (the exact case flagged and left at the time), and a corpus
  * sweep threw it out again the same day — "Ιωάσαφ γιος του βασιλιά της
  * Ινδίας Αβενίρ" is "Joasaph, son of **the king** of India, Avenir", and the
  * comma-less rule read "the king" as Joasaph's own office and deleted his
@@ -209,7 +209,7 @@ const stripAppositions = (form, lang) =>
  * kinship clause and a trailing office apposition are the same shape without
  * a comma between them, and this file already has no grammar to tell them
  * apart. **The comma-less Greek case stays open, not silently** - narrower
- * than Amendment 50 asked for, on purpose, rather than fixed unsafely. An
+ * than was asked for, on purpose, rather than fixed unsafely. An
  * optional ordinal ("први", "Други") covers the Serbian forms that number a
  * see's hierarchs before naming the office.
  *

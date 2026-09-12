@@ -209,7 +209,7 @@ const byLabel = (options) =>
  * disclosure rather than a `<select>` and a segmented toggle, and the chip's
  * own summary prints the answer — so setting one is two things, the radio and
  * the word, and neither may be done without the other or the control lies
- * about the grid. That is the failure Amendment 24's own comment records for
+ * about the grid. That is the failure the own comment records for
  * the `<select>` this replaces: the list was right and the label was lying.
  */
 const currentChoice = (root, name, fallback) =>

@@ -151,18 +151,6 @@
       "church": "romanian",
       "kind": "kontakion",
       "lang": "ro",
-      "tone": "Glasul 5",
-      "text": "Mărită tăierea Înaintemergătorului, rânduială Dumnezeiască a fost, ca şi celor din iad să propovăduiască venirea Mântuitorului. Să se tânguiască Irodiada care a cerut ucidere fărădelege. Că nu Legea lui Dumnezeu nici Viaţa Cea Vie a iubit, ci pe cea amăgitoare şi vremelnică.",
-      "source": {
-        "text": "Doxologia — Condacul Sfântului Ioan, Înaintemergătorul şi Botezătorul Domnului, la Sărbătoarea Sfinţilor Ierarhi Alexandru, Ioan şi Pavel cel Nou, Patriarhii Constantinopolului",
-        "url": "https://doxologia.ro/condacul-sfantului-ioan-inaintemergatorul-botezatorul-domnului-la-sarbatoarea-sfintilor-ierarhi",
-        "year": 2026
-      }
-    },
-    {
-      "church": "romanian",
-      "kind": "kontakion",
-      "lang": "ro",
       "tone": "Glasul 8",
       "text": "Cu turma ta, ca unul care m-am izbăvit de cei râu credincioşi, aduc semne de biruinţă şi mulţumire, ţie nebiruitului viteaz, ierarhe. Pentru că ai omorât pe Arie cel nebun şi ai amuţit pe filosoful cel semeţ. Pentru aceea, grăiesc către tine: Bucură-te, părinte, de trei ori fericite.",
       "source": {
@@ -174,18 +162,6 @@
       "english": {
         "text": "With thy flock, as one delivered from the ungodly, I bring tokens of victory and thanksgiving to thee, O unconquered champion and hierarch; for thou didst put to death the madness of Arius and didst silence the haughty philosopher. Therefore I cry out to thee: Rejoice, O thrice-blessed father.",
         "rendered": "site"
-      }
-    },
-    {
-      "church": "romanian",
-      "kind": "troparion",
-      "lang": "ro",
-      "tone": "Glasul 2",
-      "text": "Pomenirea dreptului cu laude, iar ţie destul îţi este mărturia Domnului, Înaintemergătorule. Că te-ai arătat cu adevărat mai cinstit şi decât proorocii. Că te-ai învrednicit a boteza în repejunile Iordanului pe Cel Propovăduit. Drept aceea, pentru adevăr nevoindu-te, bucurându-te, ai binevestit şi celor din iad pe Dumnezeu, Cel Ce S-a arătat în trup: pe Cel Ce a ridicat păcatul lumii şi ne-a dăruit nouă mare milă.",
-      "source": {
-        "text": "Doxologia — Troparul Sfântului Ioan, Înaintemergătorul şi Botezătorul Domnului, la Sărbătoarea Sfinţilor Ierarhi Alexandru, Ioan şi Pavel cel Nou, Patriarhii Constantinopolului",
-        "url": "https://doxologia.ro/troparul-sfantului-ioan-inaintemergatorul-botezatorul-domnului-la-sarbatoarea-sfintilor-ierarhi",
-        "year": 2026
       }
     }
   ],

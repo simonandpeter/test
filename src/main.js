@@ -30,7 +30,7 @@ import './styles/index.css';
  */
 import './styles/about.css';
 
-import { BRAND, STRINGS } from './ui/strings.js';
+import { STRINGS } from './ui/strings.js';
 import { WORDMARK } from './ui/wordmark.js';
 import { initTheme } from './lib/theme.js';
 import { createRouter } from './lib/router.js';
@@ -288,7 +288,7 @@ window.addEventListener('resize', () => {
  * one within the same third of a second had the second page's remembered
  * position overwritten by the tail of the first page's scroll home. Found by
  * the section test, which is the third time this codebase has been bitten by
- * two things owning `window.scrollY` at once (Amendment 9's rule, again).
+ * two things owning `window.scrollY` at once (the rule, again).
  */
 let scrollTween = null;
 
@@ -800,8 +800,8 @@ function paintSiteName() {
    * arrive.
    *
    * This still runs, and only fills a slot that is somehow empty: the name is
-   * no longer a translation (it is `BRAND`, constant in every pack), so there
-   * is nothing here to repaint on a language change.
+   * a mark rather than a translation, so there is nothing here to repaint on a
+   * language change.
    */
   for (const el of document.querySelectorAll('[data-site-name]')) {
     if (!el.firstElementChild) el.innerHTML = WORDMARK;
@@ -838,7 +838,7 @@ function watchChromeHeight() {
 async function boot() {
   watchChromeHeight();
   initTheme(document.getElementById('theme-toggle'));
-  // The stored language is applied before anything renders (Amendment 36):
+  // The stored language is applied before anything renders:
   // currentLanguage() merges the locale over STRINGS on first read, and the
   // document says what language it now speaks.
   currentLanguage();

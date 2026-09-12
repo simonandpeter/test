@@ -1,5 +1,5 @@
 /**
- * Ελληνικά — the chrome in the Greek church's own language (Amendment 36).
+ * Ελληνικά — the chrome in the Greek church's own language.
  * Partial, STRINGS-shaped; anything absent falls back to English. Modern
  * (demotic) Greek for the chrome, since it is interface prose, not liturgical
  * text — the hymns on the page stay in the polytonic of their sources. Names,
@@ -7,8 +7,8 @@
  */
 export const el = {
   site: {
-    name: 'Ορθοδοξία Καθημερινά',
-    tabName: 'Ο Ορθόδοξος Άγιος',
+    name: 'AGIOS',
+    tabName: 'AGIOS',
     tagline: 'Οι άγιοι της Ορθόδοξης Εκκλησίας, εκκλησία προς εκκλησία - Ρωσική, Ρουμανική, Ελλαδική και Σερβική, καθεμία με το ημερολόγιό της.',
   },
 
@@ -18,8 +18,8 @@ export const el = {
          'Daily'. Is there a different word thats still short enough for the
          header button that we could use to differentiate the two"). It was
          the same word as `today` in all four, so the change of state the
-         English button makes was invisible outside English - Amendment 49
-         raised exactly this and left it to the author, because it changes a
+         English button makes was invisible outside English - this was
+         raised and left to the author, because it changes a
          reviewed nav label and these words are longer. */
     calendar: 'Καθημερινά',
     today: 'Σήμερα',

@@ -41,8 +41,8 @@
  *              ("born in 1868", "was shot on 25 August 1918") while the
  *              saint.json has no interval for it. The cheapest date there
  *              is, and the one this audit never looked for until
- *              2026-09-06, when a sweep found seventy-odd of them (Amendment
- *              101's postscript). A list to read: the regex takes a year in
+ *              2026-09-06, when a sweep found seventy-odd of them. A list
+ *              to read: the regex takes a year in
  *              any death-verb sentence, so a relic's finding or a typikon's
  *              date can land here beside a real death year.
  */

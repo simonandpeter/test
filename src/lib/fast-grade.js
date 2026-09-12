@@ -111,7 +111,7 @@ const PATTERNS = [
     'δεν υπάρχει νηστεία',
     'нема поста',
     'fără post',
-    // seen (ro, Amendment 44): doxologia prints «(Harți)» beside the date for
+    // seen (ro): doxologia prints «(Harți)» beside the date for
     // a day the fast is lifted on — 25 December among them. It names the day,
     // and naming it is naming the allowance.
     'harți',

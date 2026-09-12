@@ -107,7 +107,7 @@ const add = (kind, row) => findings[kind].push(row);
 /**
  * The rows a reading has judged and kept, with the reason beside each.
  *
- * Amendment 44's lesson in a third place, after `related-from-links.mjs`'s own
+ * the lesson in a third place, after `related-from-links.mjs`'s own
  * `REFUSED`: **the matching is a table rather than a rule.** A row removed
  * from here is reported again on the next run, which is the point — the
  * exception has to be re-argued rather than forgotten.

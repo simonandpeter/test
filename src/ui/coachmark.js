@@ -6,7 +6,7 @@
  * here. Text as minimal as possible."
  *
  * **This reverses the first-visit gate**, and the reversal is worth stating
- * plainly because PLAN.md and Amendment 23 both rest on it. From
+ * plainly because PLAN.md rests on it. From
  * 2026-08-21 the calendar asked which church the reader kept and *showed
  * nothing until it was answered*: the page below waited, deliberately, because
  * a calendar with no church chosen would have been the site picking one and

@@ -12,7 +12,7 @@ import { map } from './state.js';
 
 /**
  * The press, which **chooses a saint rather than opening one** since
- * 2026-08-31. It was a door from 2026-08-30 (Amendment 77) and the reversal
+ * 2026-08-31. It was a door from 2026-08-30 and the reversal
  * is the author's: "if you click on a saint dot (or their name) it first
  * centres you smoothly on them and then shows their path of travel." The
  * door is the `Profile ›` button that choosing puts beside the name, so

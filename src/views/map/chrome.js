@@ -90,7 +90,7 @@ export function wireFilters(el, refresh) {
  *
  * `cards` is a getter, not the array — the timeline can narrow it after this
  * wiring runs, and a closure over a stale array would zoom an empty map
- * forever (Amendment 76's own lesson, relearned when the filter came back).
+ * forever (the own lesson, relearned when the filter came back).
  *
  * `schedulePaint` is `render`'s own rAF-coalescing scheduler: the wheel and
  * the drag/pinch handlers below call `setThrottled` through every raw

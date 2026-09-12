@@ -377,7 +377,7 @@ test('a saint is named in the reader own language where the corpus has the name'
    * the author asked again — and the second look found the corpus had been
    * carrying them all along, in each folder's `names` array, transcribed from
    * the same calendar entries the attestations were read from. They were on
-   * the saint page under "Also called" until Amendment 38 removed that block.
+   * the saint page under "Also called" until then removed that block.
    * So nothing here is translated; a recorded form is chosen.
    */
   for (const [language, church, name] of [
@@ -409,7 +409,7 @@ test('a saint is named in the reader own language where the corpus has the name'
    *
    * **The subject is read off the manifest rather than named** (2026-09-07).
    * It was Anthony the Great, "one of the twelve saints with a Russian
-   * attestation and no entry", until Amendment 105 gave him «Антоний
+   * attestation and no entry", until then gave him «Антоний
    * Великий» out of a citation his own folder already carried — so the test
    * went red for the corpus getting better, which is the shape `CORPUS` and
    * `venerateUnion` exist to avoid. `NO_RU_NAME` is whoever is still in that
@@ -436,7 +436,7 @@ test('a saint is named in the reader own language where the corpus has the name'
 
 test('a general troparion reads in Orloff’s English, and the original stays for everyone else', async ({ browser }) => {
   /*
-   * Hapgood's Service Book holds no menaion, so Amendment 41 could only reach
+   * Hapgood's Service Book holds no menaion, so it could only reach
    * the Great Feasts. Orloff's *General Menaion* of 1899 is the other seam:
    * the common services, one troparion for any martyr, any hierarch, any
    * prophet — which is what this corpus records for a good many of its
@@ -552,7 +552,7 @@ test('the saints dated this batch print their dates rather than Undated', async 
 test('an icon taken from the Menologion prints a real source and a credit', async ({ page }) => {
   /*
    * "Bulk-fetching images and guessing at their licences is the failure mode
-   * this repository is built to refuse" (Amendment 32). So an icon added here
+   * this repository is built to refuse". So an icon added here
    * must carry what the build checks: a licence Commons actually states, a
    * credit where one is owed, and a source_url that is not the placeholder.
    */
@@ -599,7 +599,7 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
   // page composes its accents differently from a hand-typed literal, so
   // «Τὰ πάθη Χριστοῦ» typed here does not match «Τὰ πάθη Χριστοῦ» there. It is
   // the same family of trap as JavaScript's ASCII-only , which matched
-  // nothing in Greek at Amendment 41.
+  // nothing in Greek then.
   /*
    * The hymn is there in whichever language the page is being read in, and
    * both readings are asserted because 2026-09-12's English made them differ:
@@ -1469,7 +1469,7 @@ test('a phone turns to the next saint from anywhere on the page', async ({ page 
 
 test('a rendering made here says so, where a citation names its book', async ({ browser }) => {
   /*
-   * Author, 2026-09-07, reversing Amendment 2 for hymns alone: a reader who
+   * Author, 2026-09-07, reversing the corpus's no-invention rule for hymns alone: a reader who
    * has chosen English and meets Church Slavonic has been given nothing, so
    * this site may render a hymn itself. The reversal came with the condition
    * that makes it honest — **a reader must be able to tell a translation made

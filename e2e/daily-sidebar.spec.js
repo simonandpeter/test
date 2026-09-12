@@ -208,3 +208,49 @@ test("the month's numerals wear the same colour as the day's own fast", async ({
   expect(numerals['2026-11-28'].label).toContain('fish permitted');
   expect(numerals['2026-11-10'].label).not.toContain('fast');
 });
+
+test('the keys step the day, from anywhere on the page and not while typing', async ({ page }) => {
+  /*
+   * Restored 2026-09-12. `daily-picker.spec.js` had "a day is one click, and
+   * the keys step it from anywhere"; the rebuild deleted that file and no
+   * arrow-key handling survived anywhere in the Daily page, which
+   * `scratchpad/daily-feature-audit.md` found by reading the deleted test
+   * names rather than by any test failing.
+   *
+   * **A fixed day, not today** (trap 4): stepping off today would make this
+   * fail on exactly one day a year, and the URL assertion below depends on
+   * knowing which day it landed on.
+   *
+   * Three claims, and the second and third are the ones worth having. That an
+   * arrow moves the day is the feature; that the press works with focus down
+   * among the saints is why it is bound to the document; and that it does
+   * *not* move the day while a reader is typing is the guard that makes the
+   * first two safe, since All Saints' search field is one route away.
+   */
+  await ready(page, { church: 'russian' });
+  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  await page.keyboard.press('ArrowRight');
+  await expect(page).toHaveURL(/\/calendar\/2026-09-11$/);
+
+  await page.keyboard.press('ArrowLeft');
+  await page.keyboard.press('ArrowLeft');
+  await expect(page).toHaveURL(/\/calendar\/2026-09-09$/);
+
+  // From anywhere: focus a saint's tile far down the day and press again.
+  const tile = page.locator('[data-td-scroll] a, [data-td-scroll] button').last();
+  await tile.focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(page).toHaveURL(/\/calendar\/2026-09-10$/);
+
+  // And not while typing. A field on the page takes the arrow for its caret.
+  await page.evaluate(() => {
+    const input = document.createElement('input');
+    input.id = 'typing-probe';
+    document.body.append(input);
+    input.focus();
+  });
+  await page.keyboard.press('ArrowRight');
+  await expect(page).toHaveURL(/\/calendar\/2026-09-10$/);
+});

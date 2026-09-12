@@ -1,5 +1,5 @@
 /**
- * Русский — the chrome in the Russian church's own language (Amendment 36).
+ * Русский — the chrome in the Russian church's own language.
  * Partial, STRINGS-shaped; anything absent falls back to English. Written by
  * hand, not machine-run over the English: where Russian grammar wants a case
  * the template cannot supply (a church name declined, a saint's gender in a
@@ -10,8 +10,8 @@
  */
 export const ru = {
   site: {
-    name: 'Православие ежедневно',
-    tabName: 'Православный святой',
+    name: 'AGIOS',
+    tabName: 'AGIOS',
     tagline: 'Святые Православной Церкви, церковь за церковью - Русская, Румынская, Греческая и Сербская, каждая по своему календарю.',
   },
 
@@ -21,8 +21,8 @@ export const ru = {
          'Daily'. Is there a different word thats still short enough for the
          header button that we could use to differentiate the two"). It was
          the same word as `today` in all four, so the change of state the
-         English button makes was invisible outside English - Amendment 49
-         raised exactly this and left it to the author, because it changes a
+         English button makes was invisible outside English - this was
+         raised and left to the author, because it changes a
          reviewed nav label and these words are longer. */
     calendar: 'Ежедневно',
     today: 'Сегодня',

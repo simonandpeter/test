@@ -92,7 +92,7 @@ test('intervals display honestly: display string, derivation, open bounds', () =
   /*
    * The era, back on the dates that need it (author, 2026-08-26: "add AD back
    * to the dates so it's more obvious for stuff like 'Reposed 105' what that
-   * means"), reversing Amendment 39's "BC only, no AD". The rule is a rule
+   * means"), reversing the "BC only, no AD". The rule is a rule
    * rather than a blanket: marked below 1000, where a three-digit number
    * reads as a quantity as easily as a year, and left alone above it, because
    * 1937 says what it is.

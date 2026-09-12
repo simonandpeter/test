@@ -819,7 +819,7 @@ export function paintCanvas(canvas, cards) {
 
   // The palette comes from the stylesheet rather than from constants here, so
   // the map follows the theme — including vigil mode, which nothing checked
-  // until 2026-08-28 (Amendment 68).
+  // until 2026-08-28.
   const style = getComputedStyle(canvas);
   const ink = style.getPropertyValue('--ink').trim() || '#1c1917';
   const inkSoft = style.getPropertyValue('--ink-soft').trim() || '#6b6259';

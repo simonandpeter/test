@@ -88,7 +88,7 @@ export function paintSummary({ matched, undated }, { animate }) {
    * **One count line, and it is a ratio** (author, 2026-08-27). It stood as two
    * — a tweened "127 saints" over "Of 742, 127 saints are in the Romanian
    * calendar" — which was the same number twice in the state the Index opens
-   * in, and Amendment 49 answered that by hiding whichever was redundant. The
+   * in, and an earlier answer hid whichever was redundant. The
    * author's answer is better: one line saying what is listed out of what
    * there is, which is true whether the narrowing came from the church, from a
    * filter, or from both.

@@ -42,7 +42,7 @@ export const map = {
   cleanups: [],
 
   /*
-   * The Index's filter set lived here for one day (Amendment 76, 2026-08-30)
+   * The Index's filter set lived here for one day (2026-08-30)
    * and went with the reading it stood in when the author asked for the map
    * alone. The timeline is the first of it to return, and it returns exactly
    * as promised — drawn on the stage, because there is nowhere else left.
@@ -117,7 +117,7 @@ export const map = {
    * The saint the reader has chosen, by slug, or `null`.
    *
    * **A press on a dot selects rather than navigates** (author, 2026-08-31),
-   * which reverses "a dot is a door" (2026-08-30, Amendment 77) — the door is
+   * which reverses "a dot is a door" (2026-08-30) — the door is
    * now the `Profile ›` button that selection puts beside the name, and the
    * press itself buys the reader the thing a map is for: the saint centred,
    * named whatever the zoom, and their journey drawn. Reset by `render`, like

@@ -241,6 +241,7 @@ folders, not the manifest.
 | --- | --- |
 | `views/index/*`, `index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `index-carousel`, `index-grid`, `index-controls` |
 | `views/daily/*`, `calendar.js`, `daily.css`, `daily-sidebar.css`, `daily-tiles.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-sidebar`, `daily-tiles` |
+| `lib/manifest.js`, `main.js`'s boot, a new import on a view's first-paint path | `download-limiter` — the two tests that hold the first load to its budget |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
 | `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface; `ui/face-stage.js` and `main.js`'s pair branch also `daily-stage` |
 | `views/map*`, `map.css`, `lib/map-*`, `lib/mercator.js`, `data/places.js` | `map.spec.js` |
@@ -371,8 +372,44 @@ git show <deletion>^:src/styles/gone.css | grep -oE "^\.[a-z][a-z0-9-]*" | sort 
     ask it for `requestAnimationFrame` callbacks in one second: a zero means
     every other figure on the page is a fabrication.
 
+18. **A bulk text pass anchors every pattern on the thing it is changing, and
+    runs nothing file-wide.** On 2026-09-12 a sweep that stripped 178 dead
+    citations also carried three "tidy up what the removal left" regexes, and
+    they were applied to the whole of each of the 68 files rather than to the
+    span each removal touched. `\(\s*\)` -> `""` deleted **2,587 empty
+    parameter lists** - every `foo()` and every `() =>` - and a space collapse
+    flattened all indentation. 35 files stopped parsing. The intended
+    substitutions were all correct; the cleanup around them did the damage.
+
+    **`npm test` after the pass, before anything else.** It is two seconds and
+    it would have caught this immediately. Three more passes were written on
+    top of the broken tree first, and their patterns were then derived from
+    text that had already been mangled, so they had to be written twice.
+
+    **The repair is restore-and-replay, not repair-in-place.** The damage was
+    not invertible; what made it recoverable at all was that every intended
+    edit lived in a script under `scratchpad/` and could be re-run against
+    files restored from `HEAD`. Write bulk edits as scripts for that reason.
+    The cost of not doing so is whatever a subagent had in flight in the same
+    files - one file's work was lost here.
+
 **When you add an instrument, ask what it would look like if it were doing
 nothing.**
+
+---
+
+## Errors
+
+The codebase already holds this line. The rule is to keep it there.
+
+1. **A failure may degrade the page, never fake it.** The tile, the panel or the
+   view says it has nothing — `sourceFailed`, `importFailed`,
+   `coverage.unavailable`. Substituting plausible data for data that did not
+   arrive is a lie the reader cannot see through, and the one failure mode this
+   corpus cannot afford.
+2. **An empty `.catch(() => {})` says why it is empty.** Fire-and-forget is
+   right for a cache write, a splash-screen call, a speculative prefetch — and
+   is indistinguishable from an oversight without the half-line naming which.
 
 ---
 

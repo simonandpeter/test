@@ -63,7 +63,7 @@ export const AFTER =
 /**
  * The ones a reading refused, which no rule was going to catch.
  *
- * Amendment 44's lesson about the hymn matching, in a second place: **the
+ * the lesson about the hymn matching, in a second place: **the
  * matching is a table rather than a rule.** `BEFORE` and `AFTER` above catch
  * the shape "the church of X"; nothing catches a battleship named for a saint,
  * and nothing should try. Each row says why it is here, and a row removed from

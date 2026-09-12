@@ -20,7 +20,7 @@ import {
 await ensureAllPacks();
 
 /**
- * The language layer (Amendment 36). The packs are hand-written prose in four
+ * The language layer. The packs are hand-written prose in four
  * languages, which is exactly the kind of artefact where a typo'd key or a
  * dropped {placeholder} survives every reading and fails only in front of a
  * reader — so the structural properties are pinned here, exhaustively,
@@ -149,7 +149,7 @@ test('no string the site prints carries an em dash, in any of the five', () => {
    *
    * What is deliberately not covered is the corpus: those em dashes are
    * inside quoted source text transcribed from four synaxaria, and editing a
-   * quotation for typography is what Amendment 2 forbids.
+   * quotation for typography is what the corpus's no-invention rule forbids.
    */
   const dashed = (value, path, found) => {
     if (typeof value === 'string') {

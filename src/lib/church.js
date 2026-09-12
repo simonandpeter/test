@@ -9,7 +9,7 @@
  *
  * This replaces lib/tradition.js — a set of churches with communion and rite
  * toggles, and a separate calendar choice beneath it. A one-communion corpus
- * reads one church at a time, so what is left is Amendment 23's "one calendar
+ * reads one church at a time, so what is left is the "one calendar
  * at a time" with the layer above it removed: the choice is the calendar.
  */
 
@@ -224,7 +224,7 @@ export function chooseChurch(id) {
   return id;
 }
 
-// Through STRINGS first (Amendment 36), so the locale packs reach it; the
+// Through STRINGS first, so the locale packs reach it; the
 // registry's display_name is the fallback and the English truth.
 export const churchName = (id) => STRINGS.church.names?.[id] ?? CHURCHES_BY_ID[id]?.display_name ?? '';
 

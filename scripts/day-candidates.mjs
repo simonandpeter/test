@@ -20,14 +20,14 @@
  * encoding, list what it prints, and say for each entry whether the corpus
  * already keeps somebody on that menologion day.
  *
- * **The match is on the feast date, never on the name** (Amendment 45). Name
+ * **The match is on the feast date, never on the name**. Name
  * matching found none of the eight saints the corpus already held for
  * 20 September and invented pairs instead; a feast-date scan found all eight,
  * five of which would otherwise have become silent duplicates. So the column
  * this prints is "the corpus already keeps N on this day, and here they are" —
  * a list to read the source against, not a verdict on any one entry.
  *
- * **Not every printed line is a folder** (Amendment 31). A feast, a forefeast,
+ * **Not every printed line is a folder**. A feast, a forefeast,
  * an afterfeast, a leave-taking, an icon of the Theotokos, a synaxis heading
  * and a translation of relics are not people. The `kind` column guesses at
  * these from the source's own words and is a hint for the reader, never a

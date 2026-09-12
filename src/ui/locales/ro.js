@@ -1,14 +1,14 @@
 /**
- * Română — the chrome in the Romanian church's own language (Amendment 36).
+ * Română — the chrome in the Romanian church's own language.
  * Partial, STRINGS-shaped; anything absent falls back to English. Comma-below
- * diacritics (ș, ț), as doxologia.ro prints them — Amendment 31's duplicate
+ * diacritics (ș, ț), as doxologia.ro prints them — the duplicate
  * kontakion was two orthographies of one text, so the house takes a side.
  * Names, lives and the data's own displays stay English (lib/i18n.js).
  */
 export const ro = {
   site: {
-    name: 'Ortodoxia Zilnică',
-    tabName: 'Sfântul Ortodox',
+    name: 'AGIOS',
+    tabName: 'AGIOS',
     tagline: 'Sfinții Bisericii Ortodoxe, biserică după biserică - rusă, română, greacă și sârbă, fiecare pe calendarul ei.',
   },
 
@@ -18,8 +18,8 @@ export const ro = {
          'Daily'. Is there a different word thats still short enough for the
          header button that we could use to differentiate the two"). It was
          the same word as `today` in all four, so the change of state the
-         English button makes was invisible outside English - Amendment 49
-         raised exactly this and left it to the author, because it changes a
+         English button makes was invisible outside English - this was
+         raised and left to the author, because it changes a
          reviewed nav label and these words are longer. */
     calendar: 'Zilnic',
     today: 'Astăzi',

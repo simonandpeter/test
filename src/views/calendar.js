@@ -20,7 +20,7 @@ import '../styles/daily.css';
 import '../styles/daily-sidebar.css';
 import '../styles/daily-tiles.css';
 
-import { parseIso, pickHero, todayIso } from '../lib/calendar-page.js';
+import { addDaysIso, parseIso, pickHero, todayIso } from '../lib/calendar-page.js';
 import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { observePrefetch } from '../lib/detail.js';
 
@@ -118,6 +118,7 @@ export function render(el, { data, params, router }) {
   state.cleanups.push(
     wireSidebar(el, { select }),
     wireOpen(el.querySelector('[data-td-scroll]')),
+    wireKeys(),
     // The header's control can change the church while this page is open:
     // everything that counts entries, and every fact the column computes, is
     // asked again in the new calendar.
@@ -129,6 +130,47 @@ export function render(el, { data, params, router }) {
     }),
   );
   paintDay();
+}
+
+/**
+ * **The keys step the day from anywhere on the page.** Left is back, right is
+ * forward, matching the two marks either side of the date; both go through
+ * `select`, so the URL, the announcement and the repaint are the ones a press
+ * of those marks would have caused.
+ *
+ * Bound to the document rather than to the column, because the reader is
+ * usually somewhere down among the saints when they want the next day, and a
+ * handler on the column would need focus to be in a place nothing puts it.
+ * That reach is also what the four guards are for:
+ *
+ * - a **modifier** means the press belongs to the browser (Alt+Left is Back)
+ *   or to the OS, and stepping the day as well would be a second action the
+ *   reader did not ask for;
+ * - an **editable target** means they are typing, and All Saints' search field
+ *   is one route away;
+ * - an **open `<dialog>`** is the full-screen calendar, which is a month and
+ *   owns its own arrows;
+ * - **`defaultPrevented`** lets any control that already answers an arrow —
+ *   a select, a slider, anything added later — keep it without this having to
+ *   list them.
+ *
+ * The month grid is deliberately not in that list: its cells are ordinary
+ * buttons that answer no arrow of their own, so a reader whose focus is in the
+ * month still steps the day. If the grid ever takes a roving tabindex it must
+ * take a guard here in the same commit, or the two will fight over the press.
+ */
+function wireKeys() {
+  const onKey = (e) => {
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const t = e.target;
+    if (t instanceof HTMLElement && (t.isContentEditable || t.closest('input, textarea, select'))) return;
+    if (document.querySelector('dialog[open]')) return;
+    e.preventDefault();
+    select(addDaysIso(state.selected, e.key === 'ArrowRight' ? 1 : -1));
+  };
+  document.addEventListener('keydown', onKey);
+  return () => document.removeEventListener('keydown', onKey);
 }
 
 /**

@@ -4,52 +4,31 @@
  * No other file may contain literal UI text.
  */
 
-/**
- * The site's name, in every language (author, 2026-08-28). A brand is a mark
- * rather than a word, so it does not go through the packs — see `site.name`
- * below for what that key is still doing there.
- *
- * The two words are printed with their own gap rather than a plain space
- * ("Make the space between 'DAILY' and 'DOX' half as wide"), and the way that
- * is done is worth stating because it is exact rather than tuned: a space set
- * at half the font size is half as wide, because a glyph's advance scales with
- * the size. No em-guess at what a space measures in a face that is Nicefore on
- * one machine and Literata on another.
- */
-export const BRAND = ['Daily', 'Dox'];
-
 export const STRINGS = {
   site: {
     /*
-     * **The name is a stamp, not a string** (author, 2026-08-28: "make sure
-     * this new website title is applied to all languages, it no longer gets
-     * translated, it stays constant as a stamp of branding"). `BRAND` below is
-     * what the masthead, the veil and the tab now print, in every pack.
+     * **The name is a mark, not a string** (author, 2026-08-28: "it no longer
+     * gets translated, it stays constant as a stamp of branding"; reaffirmed
+     * 2026-09-12 when the site became AGIOS). The same five outlines serve
+     * every language, so this key carries one value in all five packs — it
+     * stays in the packs only so the coverage script sees one key set.
      *
-     * This key stays in all five packs so the coverage script has the same key
-     * set everywhere, and because a translated name is a decision a future
-     * author might want back. **Nothing reads it.** Editing `ru.site.name` will
-     * not change what the header says — change `BRAND`.
-     *
-     * **`tabName` below is untouched and still translated**, which is not an
-     * oversight. The head and the page carry deliberately different names —
-     * Amendment 31 — and the instruction here is about the one the reader
-     * *sees*, the stamp in the corner. Collapsing the split would undo a
-     * decision the author made rather than carry out the one they gave.
-     *
-     * The instruction it replaces (2026-08-25: "change the title on header and
-     * loading screen to the picked language") is superseded rather than
-     * reversed: what that one was fixing was a title hard-coded in index.html
-     * and stale by a rename, and the name still comes from one place.
+     * **What the reader sees is not this string.** It is the outlined SVG that
+     * `scripts/make_wordmark.py` draws from `WORDS`, inlined into both of
+     * index.html's slots at build time; `LABEL` in that script is its
+     * accessible name. PLAN.md §3 "The name" lists every place the brand is
+     * written down, because it is written down in fourteen of them.
      */
-    name: 'Daily Dox',
-    // The tab and the bookmark keep the *other* name, which is Amendment 31's
-    // deliberate split: the head says The Orthodox Saint, the page says
-    // Orthodoxy Daily. Painting the header from the pack (2026-08-25) nearly
-    // collapsed that split by accident — one key was feeding both — so the
-    // head has a key of its own now, translated in every pack exactly as the
-    // old shared one was.
-    tabName: 'The Orthodox Saint',
+    name: 'AGIOS',
+    /*
+     * The tab, the bookmark and the 404. **One name everywhere since
+     * 2026-09-12** (author). Until then the head carried a second, translated
+     * name — "The Orthodox Saint". Four comments justified that split by
+     * citing a numbered amendment; chased on 2026-09-12, the number turned out
+     * to name a corpus batch of 559 saint folders and to say nothing about
+     * titles. The split is gone and so is the citation.
+     */
+    tabName: 'AGIOS',
     tagline: 'The saints of the Orthodox Church, church by church - Russian, Romanian, Greek and Serbian, each in its own calendar.',
   },
 
@@ -251,7 +230,7 @@ export const STRINGS = {
      */
     fromTheLife: 'From the life',
     emptyDay: 'No commemorations are recorded for this day - yet. The corpus grows folder by folder, and an empty day is a gap in our sourcing, not a claim about the calendar. Try a neighbouring day, or the saints themselves.',
-    // Amendment 44: the day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
+    // The day's calendar is recorded — readings, the fast, sometimes its hymns — but none of its saints is a folder yet. Different from an empty day, and the page says which.
     // The reach used to be the literal "19 September" and had been stale for a
     // fortnight when it was found (2026-08-27). It is read off the corpus now:
     // a printed sentence that names a date is a sentence that goes stale.
@@ -523,7 +502,7 @@ export const STRINGS = {
       source: 'Text from {source}',
       /*
        * Under a hymn this site rendered itself, in place of the citation there
-       * is none. Amendment 2 forbade rendering anything here until the author
+       * is none. the corpus's no-invention rule forbade rendering anything here until the author
        * reversed it for hymns alone on 2026-09-07, and the line exists because
        * the reversal came with a condition: a reader has to be able to tell a
        * translation made here from a text copied out of a book.
@@ -611,13 +590,13 @@ export const STRINGS = {
        places, and one of them would have had to be wrong. */
     calendarNames: { julian: 'Julian', 'revised-julian': 'Revised Julian' },
     // The churches by id, here rather than only in data/churches.js, so the
-    // locale packs can translate them (Amendment 36): the registry stays the
+    // locale packs can translate them: the registry stays the
     // authority on what exists, this is the authority on what it is called.
     names: { russian: 'Russian', romanian: 'Romanian', greek: 'Greek', serbian: 'Serbian' },
   },
 
   /*
-   * The site's language (author, 2026-08-24, Amendment 36): five, chosen from
+   * The site's language (author, 2026-08-24): five, chosen from
    * the header. Each language names itself in lib/i18n.js's registry; these
    * are only the control's own strings.
    */
@@ -987,7 +966,7 @@ export const STRINGS = {
       beforePascha: '{n} days before Pascha',
     },
     // The life is the author's own paraphrase in English and is not
-    // translated — Amendment 2 forbids the machine translation that would be
+    // translated — the corpus's no-invention rule forbids the machine translation that would be
     // the only way to do it at this scale, and a mistranslated hagiography is
     // a false claim about a person. So a reader in one of the other four is
     // told, once, in their own language, rather than left to wonder whether
@@ -1066,7 +1045,7 @@ export const STRINGS = {
        they lived in (author, 2026-08-30: the page is the map and a small
        footer, nothing else), and their strings went with them - `lede`,
        `setAside`, `placesHeading`, `noneOfKind`, `uncertainty`, `unlocated`,
-       `unlocatedNote` all read by nothing after Amendment 77. */
+       `unlocatedNote` all read by nothing since the map's chrome was cut back. */
     kindGroup: 'Which place to show',
     /*
      * One dot cannot honestly stand for four different facts (§8.3), so the

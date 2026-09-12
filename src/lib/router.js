@@ -78,7 +78,7 @@ export function createRouter(routes, onNavigate) {
     navigate,
     start: () => onNavigate(resolve(location.pathname), { pop: false, first: true }),
     // Re-render the page that is open, in place, same URL and no history
-    // entry — a language change (Amendment 36) needs every word redrawn and
+    // entry — a language change needs every word redrawn and
     // nothing else moved.
     refresh: () => onNavigate(resolve(location.pathname), { pop: false }),
     href: (to) => BASE + to,

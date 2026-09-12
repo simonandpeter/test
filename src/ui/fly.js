@@ -46,7 +46,7 @@ const EASE = MOTION_EASE.soft;
 /**
  * **Both directions return their own `finish`**, and a caller that can start
  * one flight while another is in the air must call it first. This is
- * Amendment 9's rule — land whatever is still moving before the next move
+ * the rule — land whatever is still moving before the next move
  * starts — arriving here the moment there were two directions to collide:
  * `flyInto` reads `el.getBoundingClientRect()` to decide where the control is
  * *from*, and a box halfway through arriving is at neither end of its

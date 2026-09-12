@@ -13,7 +13,7 @@
  * gazetteer's `Antioch` matches a sentence about Antioch in Pisidia as
  * happily as one about Antioch on the Orontes. So the output is the saint,
  * the matched name, and the sentence it was matched in — enough to decide
- * from, and never enough to skip reading. Amendment 86's rule holds: no
+ * from, and never enough to skip reading. the rule holds: no
  * point beats a wrong one.
  *
  * Two corpora are matched against, and both are already in the repository:

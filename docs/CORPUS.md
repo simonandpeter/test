@@ -34,25 +34,25 @@ because the file still exists.
 | --- | --- | --- |
 | 2026-08-20 | the prototype's ten saints | 10 |
 | 2026-08-23 | the week of 23 August, four churches | 62 → 149 |
-| 2026-08-23 | **Amendment 31** — three weeks × four churches | 149 → 708 |
+| 2026-08-23 | **the bulk tranche** — three weeks × four churches | 149 → 708 |
 | 2026-08-25/26 | the Greek harvest, then day-by-day past the runway | 708 → 742 |
-| 2026-08-29 – 08-30 | **Amendments 74–83**, one civil day per sitting | 742 → 851 |
-| 2026-08-31 | **Amendment 88** — eleven great names the runway had missed | 851 → 862 |
+| 2026-08-29 – 08-30 | **nine sittings**, one civil day each | 742 → 851 |
+| 2026-08-31 | **eleven great names** the runway had missed | 851 → 862 |
 
 Two things in that table matter more than the numbers.
 
-**The bulk tranche happened once and was never repeated.** Amendment 31 added
+**The bulk tranche happened once and was never repeated.** That tranche added
 559 folders in one sitting with a per-church harvester and a `writer.py` under
 `.tmp/`, none of it committed, and it did not run the browser suite. Everything
 after it is **one day at a time**, because that is the rate at which a person
-can read what they are writing down. Amendment 45 is where the method was
-settled and it says so in its own words: *"one day, finished, rather than a
+can read what they are writing down. The method was settled a week later,
+and it says in its own words: *"one day, finished, rather than a
 week of thin ones."*
 
-**The temptation was priced, twice.** Amendment 2 (2026-08-20) is the oldest
+**The temptation was priced, twice.** 2026-08-20 is the oldest
 rule in the repository: *"The temptation is to have an agent draft several
 hundred saints overnight. **Do not.** … the model cannot tell its own confident
-guesses from its sourced facts."* Amendment 43 then measured it: against the
+guesses from its sourced facts."* It was then measured: against the
 331 saints whose Greek and English forms the corpus already held, a careful
 transliterator reproduced **17**. When the author later asked for "lots more
 saints", the fork was put back to them with the cost of each route stated, and
@@ -60,7 +60,7 @@ they chose eleven properly-sourced scattered saints over a longer runway.
 
 **What is kept, and what changes.** The method above is kept whole. What
 changes is that the tooling stops being throwaway: the harvesters and folder
-writers of Amendments 31–45 lived in `.tmp/`, were never committed, and are
+writers of the bulk tranches lived in `.tmp/`, were never committed, and are
 gone. Section 5 is their durable replacement. The other change is section 9 —
 the e2e literals that go red are now computed and printed by the gate instead
 of being found by CI seventeen minutes after a push.
@@ -104,7 +104,7 @@ civil 7 October.
 - **oca.org** — English prose lives, already cited here. Its `robots.txt` asks
   for `Crawl-delay: 10` and the fetcher honours that. English prose keeps a
   paraphrase honest in a way a page skimmed in Greek does not, which is why
-  Amendment 88 used it for all eleven of the great names.
+  it was used for all eleven of the great names.
 - **Butler's *Lives of the Saints*** (bartleby.com) — public domain, and the
   corpus's source for nine Western saints the four calendars keep but do not
   describe.
@@ -155,7 +155,7 @@ the source names the person, not decoration. *Verified by:* the draft writer's
 
 **`names`** — the saint's own recorded script forms, `{form, lang}`, copied
 from a source that prints them. **Never transliterated, never completed,
-never guessed.** Amendment 43 is the measurement: 17 of 331. A language with no
+never guessed.** The measurement: 17 of 331. A language with no
 recorded form is left out entirely rather than filled with the English, so that
 "no name recorded" and "the name happens to be the same" stay different facts.
 *Verified by:* `node scripts/language-audit.mjs` (0 mismatches is the standing
@@ -206,7 +206,7 @@ allow.
 
 **`locations`** — coordinates only where the source names the place, always
 with `uncertainty_km` (pinpoint 1, city 15, region 150, province 500).
-**Amendment 86: no point beats a wrong one.** `node
+**No point beats a wrong one.** `node
 scripts/place-candidates.mjs` proposes places a life already names; every row
 is read before it lands, because "he was sent to Rome" is not "he died at
 Rome". Adding a *located* saint also brings `tests/map-span.test.mjs` into
@@ -297,7 +297,7 @@ corpus batch; but a batch must not add to the count.
 shepherd boy of Paphos, and Sozon of Pompeiopolis, the Lycaonian shepherd
 martyr, are two men the Greek keeps on 7 September, and the corpus is right to
 hold both. So a shared day is **printed and never failed**: the reading is the
-work. Amendment 45's near-miss in the other direction is
+work. the near-miss in the other direction is
 `luke-abbot-of-deep-streams` against `luke-of-bathys-ryax` — Bathys Ryax *is*
 Deep Streams.
 
@@ -309,7 +309,7 @@ that happened on 2026-08-30 and was left as it stood. The only defence is that
 every fact has a citation you can open, which is why the `--online` gate
 checks that they open.
 
-**6. A synaxis, an icon or a feast turned into a person.** Amendment 31: a
+**6. A synaxis, an icon or a feast turned into a person.** A
 feast, its fore- and after-feast and its leave-taking, an icon of the
 Theotokos, a synaxis heading, a relic translation — none of these is a folder.
 But **an enumerated synaxis is a folder for each printed name** (the Glinsk
@@ -420,7 +420,7 @@ node scripts/corpus-gate.mjs --batch 2026-10-01 --online
 Green is necessary, not sufficient. Read its last section (§9).
 
 **8 — render and look.** `npm run dev`, then the day in each affected church
-and language. Amendment 79's second half was found this way: six upgrades
+and language. the second half was found this way: six upgrades
 printed "Undated" over a Russian line that dated them.
 
 **9 — the back-out.** See §8.
@@ -471,7 +471,7 @@ attestation row set back to `undocumented`. Then rebuild and check that the
 saint vanishes from that church's day and *only* from it:
 
 ```
-# Amendment 45's own back-out
+# the own back-out
 # john-of-novgorod's Russian row -> "undocumented"
 npm run build:manifest && npm test
 # he vanishes from the Russian 20 September; the Greek and Romanian stand
@@ -501,7 +501,7 @@ in seventeen minutes.
 | `e2e/index-controls.spec.js:215` | the undated tray | `126 undated` |
 | `e2e/index-controls.spec.js:229` | a search for "hermit" | `10` |
 | `e2e/index-controls.spec.js:317` | feasts in the church's own January | `6` |
-| `e2e/daily-panel.spec.js:2479` | "the corpus reaches 28 September 2026" | the date |
+| `corpus-gate.mjs`'s own literal | "the corpus reaches 28 September 2026" | the date — no spec asserts it since 2026-09-12 |
 
 The last one moves the moment a folder lands past 28 September, which is
 exactly where the runway continues — **expect to edit it in almost every

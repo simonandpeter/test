@@ -68,7 +68,7 @@ export const TRACKED = new Set(CARDS.filter((s) => (s.track ?? []).length > 1).m
  * has to stand under a Russian honorific rather than a blank or an invention.
  *
  * **Read from the manifest, not named** (2026-09-07). Anthony the Great was
- * the pinned example until Amendment 105 gave him «Антоний Великий» out of
+ * the pinned example until then gave him «Антоний Великий» out of
  * his own citation, and a test that breaks every time a name is filled in is
  * taxing exactly the work it should be encouraging — `CORPUS`'s own rule, in
  * a second place. A company is skipped because its heading is a list rather

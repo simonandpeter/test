@@ -1,4 +1,4 @@
-# The app — shipping Daily Dox to the Play Store and the App Store
+# The app — shipping AGIOS to the Play Store and the App Store
 
 Written 2026-09-05, the day the native shells were generated. Everything here
 was done from a Windows desk with no Android SDK and no Xcode, so **the shells
@@ -31,8 +31,8 @@ Identity, set in `capacitor.config.json` and copied into both projects:
 
 | | |
 | --- | --- |
-| app id / bundle id | `com.dailydox.app` |
-| name | Daily Dox |
+| app id / bundle id | `com.agios.app` |
+| name | AGIOS |
 | version | 1.0 (build 1) — `android/app/build.gradle` `versionName`/`versionCode`; `ios/App/App.xcodeproj` `MARKETING_VERSION`/`CURRENT_PROJECT_VERSION` |
 | Android | minSdk 24, target/compile 36 (Capacitor 8's own floor and ceiling) |
 | iOS | the template's deployment target (14+); Swift Package Manager, no CocoaPods |
@@ -88,7 +88,7 @@ is installed, so none of this has been run.
 2. **Signing.** Create an upload keystore once and keep it outside the repo —
    losing it means a new app listing:
 
-       keytool -genkey -v -keystore ~/dailydox-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+       keytool -genkey -v -keystore ~/agios-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 
    Then in Android Studio: *Build → Generate Signed Bundle* with that key, or
    add a `signingConfigs.release` block to `android/app/build.gradle` reading
@@ -165,7 +165,7 @@ Needs: a Mac with Xcode 16+ and an Apple Developer Program membership
 - **Deep links from outside the app** (`https://…/saints/anthony-the-great`
   opening the app rather than the browser) are not wired: that is Android App
   Links and iOS Universal Links, each needing a file served from the site's
-  domain. The custom scheme `com.dailydox.app://` the template registers is
+  domain. The custom scheme `com.agios.app://` the template registers is
   there but nothing sends it.
 - **Store listing copy and the feature graphic are not written or drawn.**
 - **The shells are committed as generated** (Capacitor's own recommendation)

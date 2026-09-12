@@ -25,13 +25,12 @@ FONT = 'src/fonts/gfs-nicefore.woff2'
 # codepoints map to the capital glyphs — `a` and `A` are one glyph with one
 # advance — so the case of this string changes nothing about the drawing.
 WORDS = ['AGIOS']
-# **The accessible name is the site's, and it is deliberately not the word
-# drawn** (author, 2026-09-10: "Keep the SVG's accessible name"). The mark is a
-# mark; the site is Daily Dox in its PWA manifest, its README, its export
-# format and the `<title>` split Amendment 31 made, none of which this change
-# touches. A screen reader following the masthead's link is told where the link
-# goes rather than what the picture spells.
-LABEL = 'Daily Dox'
+# The accessible name a screen reader is given for the mark. It matched the
+# drawn word from 2026-09-12, when the site became AGIOS everywhere; before
+# that the site and the mark were deliberately different names. Keep it equal
+# to `WORDS` unless that is chosen again — PLAN.md §3 "The name" lists every
+# other place the brand is written down, and they all move together.
+LABEL = 'AGIOS'
 TRACKING = 0.04   # base.css: .site-name letter-spacing
 GAP_EM = 0.5      # base.css: .brand-gap font-size, if WORDS is ever two again
 
@@ -85,7 +84,7 @@ out = f'''/**
  *
  * The stamp face is the only one here that is not preloaded, and it is the only
  * one at `font-display: swap` — so a cold load printed the masthead in Literata
- * and swapped it a moment later (author, 2026-08-28: "Daily Dox still sometimes
+ * and swapped it a moment later (author, 2026-08-28: "AGIOS still sometimes
  * opens with literata on loading screen and title before updating to the new
  * font"). A path has no loading window at all.
  *

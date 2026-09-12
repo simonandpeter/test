@@ -307,15 +307,15 @@ export async function exportData() {
  */
 export async function importData(data) {
   if (!data || data.schema !== 1 || typeof data.stores !== 'object') {
-    throw new Error('not a Daily Dox export');
+    throw new Error('not an AGIOS export');
   }
   for (const name of STORES) {
     const rows = data.stores[name];
     if (rows === undefined) continue;
-    if (!Array.isArray(rows)) throw new Error('not a Daily Dox export');
+    if (!Array.isArray(rows)) throw new Error('not an AGIOS export');
     for (const row of rows) {
       if (!row || typeof row.id !== 'string' || typeof row.updatedAt !== 'number') {
-        throw new Error('not a Daily Dox export');
+        throw new Error('not an AGIOS export');
       }
     }
   }

@@ -6,7 +6,7 @@ import { civilDate, churchDate, feastIndex, onCivilDay, onMenologionDay, fold } 
 /**
  * **The two feast keys, and why one of them is not enough.**
  *
- * Amendment 45 settled that candidates are deduped on the feast date and never
+ * It was settled that candidates are deduped on the feast date and never
  * on the name: name matching found none of the eight saints the corpus already
  * held for one day and invented pairs instead, and five of the eight would
  * have entered as silent duplicates.

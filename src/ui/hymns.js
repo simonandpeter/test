@@ -5,9 +5,9 @@
  *
  * Every hymn is the cited source's own text in the source's own language —
  * Church Slavonic from days.pravoslavie.ru, Greek from saint.gr, Romanian
- * from doxologia.ro, Serbian from pravoslavno.rs (Amendment 28). None of them
+ * from doxologia.ro, Serbian from pravoslavno.rs. None of them
  * is translated here and none ever will be by this build: a translated
- * troparion would be Amendment 2's invented content wearing vestments. The
+ * troparion would be the invented content wearing vestments. The
  * `lang` on the text is what tells a screen reader which tongue to read it in.
  *
  * **An English reader is given English where there is any** (author,
@@ -21,7 +21,7 @@
  * (1906) are the two, both long in the public domain, which the OCA's modern
  * translations are not.
  *
- * **Or this site's own** (`rendered: 'site'`). Amendment 2 forbade that from
+ * **Or this site's own** (`rendered: 'site'`). the corpus's no-invention rule forbade that from
  * 2026-08-22 — no invented content — and the author reversed it for hymns
  * alone on 2026-09-07, on the ground that a reader who has chosen English and
  * meets Church Slavonic has been given nothing. The reversal is recorded in

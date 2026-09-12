@@ -1,8 +1,8 @@
 /**
  * The church registry — four local churches of the Orthodox Church, the
  * author's decision for this project (PLAN.md, 2026-08-22): Russian,
- * Romanian and Greek, "for now", and the Serbian from 2026-08-23 (Amendment
- * 29). One entry per church the site offers; the
+ * Romanian and Greek, "for now", and the Serbian from 2026-08-23. One entry
+ * per church the site offers; the
  * reader chooses one and the whole site reads it. Everything downstream is
  * generated from this file — what an attestation may name, the chooser's
  * buttons, the Index's church facet, the build's validation — so adding a
@@ -71,7 +71,7 @@ export const CHURCHES = [
     enabled: true,
     note:
       'Old Calendar: fixed feasts by the Julian reckoning, thirteen days behind ' +
-      'the civil date until 2100. Added 2026-08-23 (Amendment 29). Sourced from ' +
+      'the civil date until 2100. Added 2026-08-23. Sourced from ' +
       'the Православни подсетник (pravoslavno.rs, Микро књига), a Serbian-' +
       'language church calendar that prints the day’s saints, readings, fasting ' +
       'mark, tropars and the Ohrid Prologue; the Patriarchate’s own site was ' +

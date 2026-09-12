@@ -8,7 +8,7 @@
  * the packs were **already complete** — two or three missing keys of 273, all
  * of them saint *types* — which is what turned the search from "the packs are
  * missing strings" into "three places are not reading them". All three were
- * defects in the reading and not in the packs (Amendment 46), and the next
+ * defects in the reading and not in the packs, and the next
  * report of the same shape should start here for the same reason.
  *
  * A missing key is not necessarily a fault: `lib/i18n.js` merges a partial pack

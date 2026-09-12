@@ -1,6 +1,6 @@
 {
-  "appId": "com.dailydox.app",
-  "appName": "Daily Dox",
+  "appId": "com.agios.app",
+  "appName": "AGIOS",
   "webDir": "dist",
   "backgroundColor": "#ece5d6",
   "ios": {

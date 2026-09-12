@@ -1,5 +1,5 @@
 /**
- * The language control (author, 2026-08-24, Amendment 36): a globe mark and
+ * The language control (author, 2026-08-24): a globe mark and
  * the current language's code — "EN" — standing between the calendar control
  * and the theme toggle, opening the five languages in a panel under the
  * header, the same disclosure the calendar control taught the header. Every

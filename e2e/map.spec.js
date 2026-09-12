@@ -333,7 +333,7 @@ test('the page is the map and its timeline, and nothing else read', async ({ pag
   /*
    * Author, 2026-08-30: "remove everything on the map page outside of the map
    * itself except for leaving a small footer with the coastline map credit and
-   * scroll to zoom hint." That reverses Amendment 76's below-map reading — the
+   * scroll to zoom hint." That reverses the below-map reading — the
    * lede, the Index's facets, the Places register and the unlocated tray all
    * go — so this is the assertion that they stay gone, and that what the
    * instruction kept is actually there: the credit and the hint, in a footer.
@@ -975,7 +975,7 @@ test('a press selects the saint and a drag does not, and Profile is the door', a
    * **The dot stopped being the door on 2026-08-31** (author: a press
    * "first centres you smoothly on them and then shows their path of
    * travel ... Once selected, a 'Profile >' button appears next to their
-   * name you can click on"). It was one from 2026-08-30 (Amendment 77), so
+   * name you can click on"). It was one from 2026-08-30, so
    * this is a recorded reversal rather than a new rule: the press now buys
    * the selection, and the button buys the saint. What survives unchanged is
    * the half this test was really about — a haul across the map is never a

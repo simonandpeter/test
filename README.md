@@ -1,4 +1,4 @@
-# Daily Dox
+# AGIOS
 
 A static site for engaging daily with the saints of the Orthodox Church, church
 by church — Russian, Romanian, Greek and Serbian for now, each in its own

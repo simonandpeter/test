@@ -1,5 +1,5 @@
 /**
- * Српски — the chrome in the Serbian church's own language (Amendment 36).
+ * Српски — the chrome in the Serbian church's own language.
  * Partial, STRINGS-shaped; anything absent falls back to English. Cyrillic,
  * as the Православни подсетник (pravoslavno.rs) — the corpus's Serbian
  * source — prints it. Names, lives and the data's own displays stay English
@@ -7,8 +7,8 @@
  */
 export const sr = {
   site: {
-    name: 'Православље сваки дан',
-    tabName: 'Православни светитељ',
+    name: 'AGIOS',
+    tabName: 'AGIOS',
     tagline: 'Светитељи Православне Цркве, црква по црква - Руска, Румунска, Грчка и Српска, свака по свом календару.',
   },
 
@@ -18,8 +18,8 @@ export const sr = {
          'Daily'. Is there a different word thats still short enough for the
          header button that we could use to differentiate the two"). It was
          the same word as `today` in all four, so the change of state the
-         English button makes was invisible outside English - Amendment 49
-         raised exactly this and left it to the author, because it changes a
+         English button makes was invisible outside English - this was
+         raised and left to the author, because it changes a
          reviewed nav label and these words are longer. */
     calendar: 'Дневно',
     today: 'Данас',

@@ -369,7 +369,7 @@ header.chrome {
      overlap this layout actually shipped with came from `justify-self`
      (below), and that is what the 320 px test catches. This line is the
      guard for a longer name arriving, and the same trap caught the month's
-     own span at Amendment 35. */
+     own span then. */
   grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas:
     'cal name theme'
@@ -717,7 +717,7 @@ header.chrome .chrome-calendar {
   width: auto;
   max-width: 100%;
   /*
-   * **Centred in whatever track it is given** (author, 2026-09-02: "daily dox
+   * **Centred in whatever track it is given** (author, 2026-09-02: "[wordmark]
    * svg not centred on mobile header, left justified").
    *
    * The narrow header stretches the name's track and centres it with
@@ -780,7 +780,7 @@ nav.site-nav {
 
   /*
    * **And the masthead stands the same distance off** (author, 2026-09-02:
-   * "the gap between Daily Dox svg and Daily should match the gap between
+   * "the gap between the wordmark svg and Daily should match the gap between
    * Daily and All Saints").
    *
    * The header's own five tracks are `space-3` apart, which was measured for
@@ -838,7 +838,7 @@ nav.site-nav a:hover {
  * **Gold while it reads Today** (author, 2026-08-27: "to make it more obvious
  * the 'Today' fade in has a specific functionality, print 'Today' in gold
  * whenever it is showing"). This is the second control on the site to wear
- * gold, after the die (Amendment 49), and the first to wear it as *words* —
+ * gold, after the die, and the first to wear it as *words* —
  * which is why it takes `--gold-ink` and not `--gold`: 2.78:1 is a hue for a
  * glyph, and a word needs 4.5:1. The rule is more specific than the
  * `[aria-current]` rubric above it on purpose, because the word is only ever

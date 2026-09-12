@@ -1,5 +1,5 @@
 /**
- * The site's language (author, 2026-08-24, Amendment 36): one of five, chosen
+ * The site's language (author, 2026-08-24): one of five, chosen
  * from the header beside the calendar control, remembered in
  * `settings.language`. English is the base; the other four are the languages
  * of the four churches' own sources — Russian, Romanian, Greek and Serbian —
@@ -9,7 +9,7 @@
  * through `Intl` (the formatter cache below). What does not translate is the
  * corpus — 708 lives written in English after their synaxaria, names, and the
  * data files — by decision, not omission: a machine-translated life is
- * exactly the invented content Amendment 2 forbids, and the source-language
+ * exactly the invented content the corpus's no-invention rule forbids, and the source-language
  * material a reader of that language wants (hymns, quoted calendar lines,
  * name forms) is already on the page in the original. Two seams follow from
  * that and are accepted: lib/liturgy.js composes its cycle line in English,

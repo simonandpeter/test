@@ -9,7 +9,7 @@
  * This finds the ones nobody remembered, and it is deliberately timid about
  * it, because a wrong link on a hagiography is a claim that two people are one
  * person, which is the exact error this corpus spends most of its care
- * avoiding (Amendment 45's dedupe key is the same problem wearing a different
+ * avoiding (the dedupe key is the same problem wearing a different
  * hat).
  *
  * **Four rules, and each was earned by measuring rather than guessed.**
@@ -82,7 +82,7 @@ export function buildNameIndex(saints) {
   /*
    * Letter boundaries rather than `\b`: JavaScript's word boundary is
    * ASCII-only, so a name ending in a non-ASCII letter would match inside a
-   * longer word. Amendment 41 is the same finding in Greek, and it is written
+   * longer word. The same finding was made in Greek, and it is written
    * down here so the next person to reach for `\b` in this repository meets it
    * a third time.
    */

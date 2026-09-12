@@ -7,7 +7,7 @@
  * with two implementations is a rule that drifts, and the copy that drifts is
  * the one that lets a duplicate through.
  *
- * **The feast index is the one that matters.** Amendment 45 found this the
+ * **The feast index is the one that matters.** This was found the
  * expensive way: matching a candidate against the corpus *by name* found none
  * of the eight saints the corpus already held for that day and invented pairs
  * instead — «Святитель Иоанн, архиепископ Новгородский» matched a new martyr
@@ -111,7 +111,7 @@ export function onCivilDay(index, church, iso) {
 
 /**
  * Which folders **any** church keeps on that menologion (month, day), whatever
- * calendar it reckons in — the key Amendment 45 actually used, and the one a
+ * calendar it reckons in — the key actually used, and the one a
  * civil-day scan misses.
  *
  * Worked example, found writing this: the Russian calendar's 18 September

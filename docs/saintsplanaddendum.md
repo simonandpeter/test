@@ -231,14 +231,14 @@ text button; the stacked-labels width trick, which an icon makes moot). The
 pre-paint inline script still reads the stored value, and a stored `system`
 from before this change is treated as unset.
 
-**H6. The date leaves the header.** Reverses the 2026-08-21 addition (`PLAN.md` "today's date abbreviated beneath it"; `git log` Amendment 16) and
+**H6. The date leaves the header.** Reverses the 2026-08-21 addition (`PLAN.md` "today's date abbreviated beneath it"; `git log`) and
 retires the browser tests that pin it.
 
 **H7. A site-wide *Select Tradition* control in the header's corner**, where
 the space is. It filters the Calendar, the All Saints page and the Map
 (Session 7) from one place, and is the same selection the first-visit
 question sets — `settings.traditions`, which lib/tradition.js already owns
-(`git log` Amendment 20 left this door open). The question loses *Show all
+(`git log` left this door open). The question loses *Show all
 of them* and gains *(advanced)*, small and unframed, opening the plate.
 Reverses `PLAN.md`'s "show all is an answer and stops the asking" —
 what stops the asking now is any answer.
@@ -250,7 +250,7 @@ traditions allow — one church's calendar, the grain at which no day lists a
 saint twice or interleaves two traditions' feasts — and the answer is
 remembered (`settings.calendar`). Exactly one allowed calendar is chosen
 without asking. Reverses §8.1 ("every saint with a feast today across all
-traditions, grouped by church") and Amendment 19's multi-tradition plate *on
+traditions, grouped by church") and the multi-tradition plate *on
 the calendar page* — the plate survives as the site-wide control.
 
 **H9. The saint's page respects the selection.** The church-by-church

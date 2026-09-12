@@ -30,12 +30,12 @@ test('a recorded form is used, with its honorific, rank and office stripped', ()
      * «Ιερομάρτυς Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας». Greek writes
      * the rank after the name as readily as before it, and 31 of the recorded
      * Greek forms did. **The office («επίσκοπος Νικομήδειας») is not a rank,
-     * and stays** (Amendment 50 flagged it and left it, and it is left again
+     * and stays** (flagged and left at the time, and it is left again
      * 2026-09-04) — Greek is the one pack that attaches an office with no
      * comma at all, and the strip below is anchored on a comma on purpose
      * (see its own comment): reaching this case unsafely deleted other
      * saints' fathers out of *their* names in the same sweep that fixed the
-     * comma cases. Narrower than Amendment 50 asked for, and said so here
+     * comma cases. Narrower than was asked for, and said so here
      * rather than quietly.
      */
     el: 'Άνθιμος επίσκοπος Νικομήδειας',

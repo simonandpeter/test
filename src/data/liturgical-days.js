@@ -4,7 +4,7 @@
  * readings and the fasting note, per civil date, per church. The lectionary
  * itself is not yet in the build — this is 23 August to 19 September 2026 (the
  * week recorded by hand on 22 August, and the three weeks that followed,
- * generated from the same four calendars on 23 August; Amendment 31), and the
+ * generated from the same four calendars on 23 August), and the
  * Daily page prints a day's readings only where they are recorded. The
  * paschal-cycle title, the tone and whether a day is a fast are computed in
  * lib/liturgy.js and checked against these same pages in its tests.

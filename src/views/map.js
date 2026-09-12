@@ -71,7 +71,7 @@ export const title = () => STRINGS.map.title;
  * forever under `overlaps`, and Moses the Hungarian's dot was lit six
  * hundred years before the birth the corpus does bound. An undated life is
  * never excluded — there is nothing to judge it against, and the map has no
- * tray left to set it aside in (Amendment 77) — so it always shows,
+ * tray left to set it aside in — so it always shows,
  * indifferent to the slider.
  * The two handles drag independently (each is a native `<input
  * type="range">`, keyboard-operable for free); the highlighted span between
@@ -83,13 +83,13 @@ export const title = () => STRINGS.map.title;
  * **The page is the map and a small footer, nothing else** (author,
  * 2026-08-30: "remove everything on the map page outside of the map itself
  * except for leaving a small footer with the coastline map credit and scroll
- * to zoom hint"). That reversed Amendment 76's below-map reading a day after
+ * to zoom hint"). That reversed the below-map reading a day after
  * it shipped - the lede, the Index's facets, the Places register and the
  * unlocated tray are gone, and with them the "list is the map" answer to the
  * canvas being one opaque image to a screen reader. What remains for a reader
  * not looking at the picture: the labelled canvas, the kind counts in the
  * legend, and the Index itself, which still names every saint the dots do.
- * That trade is the author's, recorded in Amendment 77 rather than absorbed.
+ * That trade is the author's, recorded rather than absorbed.
  *
  * **One folder since 2026-09-05** (cleanup plan item 5, on the author's
  * word: "Items 5 and 6"). This file was 4,603 lines; what stays here is the
@@ -139,8 +139,8 @@ const located = (card) => (card.locations ?? []).length > 0 || (card.track ?? []
 export function render(el, { data, router }) {
   /*
    * The whole corpus, always - the Index's own model since 2026-08-27, which
-   * Amendment 46 already said the map counts by («the map still counts as the
-   * Index does»). With the facets gone (Amendment 77) there is nothing left
+   * the map was already said to count by («the map still counts as the
+   * Index does»). With the facets gone there is nothing left
    * that narrows it except the timeline below, so the located set itself is a
    * constant of the render.
    */

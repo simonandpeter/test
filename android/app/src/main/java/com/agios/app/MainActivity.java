@@ -1,4 +1,4 @@
-package com.dailydox.app;
+package com.agios.app;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -123,7 +123,7 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
    * which is the rule this repository is built around.
    *
    * **State the population with the number.** This said "the days the four
-   * calendars cover", which nobody could check. Re-measured at Amendment 64
+   * calendars cover", which nobody could check. Re-measured then
    * against this amendment's own commit: the 133 and the 27 came back exactly,
    * which is what says the method is the same one — and the third figure did
    * not. It read 19 and is 22. A count whose denominator is a phrase is a
@@ -149,7 +149,7 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
 /**
  * The era, where a reader would otherwise have to supply it (author,
  * 2026-08-26: "add AD back to the dates so it's more obvious for stuff like
- * 'Reposed 105' what that means"). It was dropped at Amendment 39 — "BC only,
+ * 'Reposed 105' what that means"). It was dropped then — "BC only,
  * no AD" — and this is that reversal, with a rule rather than a blanket:
  *
  *   marked where the number does not carry its own era. A three-digit year

@@ -16,10 +16,10 @@
  * It is **not a generator**. It composes nothing, translates nothing, dates
  * nothing and infers nothing. Every field it writes comes out of the draft
  * file, and the draft file is written by whoever read the source. This is the
- * project's oldest rule (Amendment 2, 2026-08-20): *"the model cannot tell its
+ * project's oldest rule (2026-08-20): *"the model cannot tell its
  * own confident guesses from its sourced facts"*, so overnight work builds the
- * pipeline and the review workflow, never the corpus. Amendment 43 then
- * measured the temptation and priced it: a careful transliterator, checked
+ * pipeline and the review workflow, never the corpus. The temptation was
+ * then measured and priced: a careful transliterator, checked
  * against 331 saints whose Greek and English forms the corpus already held,
  * reproduced **17**.
  *
@@ -223,7 +223,7 @@ function houseRules(saint, life, readOn) {
     }
   }
 
-  // Amendment 86: no point beats a wrong one.
+  // No point beats a wrong one.
   for (const loc of saint.locations ?? []) {
     if (loc.lat !== undefined && !loc.uncertainty_km) bad.push(`location "${loc.kind}" has coordinates and no uncertainty_km`);
   }
@@ -253,7 +253,7 @@ for (const item of draft.saints) {
   if (planned.some((p) => p.saint.slug === saint.slug)) bad.push(`the draft names ${saint.slug} twice`);
 
   /*
-   * The two duplicate checks, in the order Amendment 45 earned. The feast one
+   * The two duplicate checks, in the order they were earned. The feast one
    * is the decision; the name one is a suspicion, printed and never fatal,
    * because nothing that folds Theodore to Theodoros can also keep Sozon of
    * Cyprus apart from Sozon of Pompeiopolis, whom the Greek keeps on one day.

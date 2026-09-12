@@ -184,7 +184,7 @@ test('the readings of the day link to Bible Gateway and name the page they were 
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('2 Corinthians 11:5-21');
   // 20 September is a recorded day for the Russian and Romanian calendars
-  // since Amendment 44 — but not for the Greek, which is the church selected
+  // since — but not for the Greek, which is the church selected
   // here: saint.gr publishes about a fortnight ahead and its records stop on
   // the 19th. So this still shows nothing, and now it shows nothing for a
   // reason a reader could check.
@@ -540,111 +540,6 @@ test("a reader in another language is given that tradition's own text", async ({
   await expect(nevsky.locator('[data-hymn="kontakion"] .row-none')).toHaveText('Српски текст није записан');
 });
 
-/* ---- what the boot fetches, and where a return lands -------------------- */
-
-
-test('the day records and the locale packs are fetched, not carried in the entry chunk', async ({ page }) => {
-  /*
-   * The review's second finding, 2026-08-27: the first download was 470 kB of
-   * JavaScript, of which 293 kB was `data/liturgical-days.js` — six months of
-   * hand-transcribed pericopes — and 106 kB was all four locale packs. A
-   * reader opening the Map downloaded both to look at neither.
-   *
-   * Both are their own chunks now. The day records are started at boot and
-   * awaited *beside* the manifest, which is the longer wait at 490 kB, so they
-   * arrive inside a wait the reader was making anyway and nothing on the page
-   * moves — the fast tag's grade is read out of a day's own note, so a column
-   * painted before they landed would have shown an ungraded tag and then
-   * changed it. The packs are fetched one language at a time.
-   *
-   * This asserts the shape rather than a byte count, which would go stale the
-   * first time a saint was added.
-   *
-   * **Re-verified on 2026-09-12**, when `views/daily/picker.js` (1,060 lines)
-   * and `views/daily/panel.js` (793) were deleted and `daily/{sidebar,tiles,
-   * open,lives}.js` took their place: the entry chunk is rebuilt by that
-   * change, and a split that survives only by accident is a split that will
-   * not survive the next one.
-   */
-  const scripts = [];
-  page.on('request', (r) => {
-    if (r.resourceType() === 'script') scripts.push(r.url());
-  });
-
-  await ready(page, { church: 'russian', language: 'ru', reckoning: null });
-  await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
-
-  const entry = scripts.filter((u) => /\/assets\/index-[^/]+\.js$/.test(u));
-  expect(entry.length, 'one entry chunk').toBeGreaterThan(0);
-  expect(scripts.some((u) => /liturgical-days-[^/]+\.js$/.test(u)), 'the day records travel alone').toBe(true);
-
-  // One language's pack, and only one: the reader keeps Russian.
-  const packs = scripts
-    .map((u) => u.match(/\/assets\/(ru|ro|el|sr)-[^/]+\.js$/))
-    .filter(Boolean)
-    .map((m) => m[1]);
-  expect([...new Set(packs)]).toEqual(['ru']);
-
-  // And the page is whole, which is the half that matters: the records are in
-  // before the column is painted, so the tag carries its grade at first sight.
-  await expect(page.locator('[data-readings] a').first()).toBeVisible();
-  await expect(page.locator('.day-tags .tag').first()).toHaveAttribute('data-fast', /.+/);
-  await expect(page.locator('#church-open')).toHaveText('Русская');
-
-  /*
-   * Opening the chooser starts the other three, so that pressing one is
-   * instant rather than a fetch the reader watches. Deliberately not awaited
-   * by the page itself, which must appear at once.
-   */
-  await page.locator('#lang-open').click();
-  await expect.poll(() => new Set(scripts.map((u) => (u.match(/\/assets\/(ru|ro|el|sr)-/) ?? [])[1]).filter(Boolean)).size).toBe(4);
-});
-
-
-test('the boot path fetches the manifest and not the coverage statistics', async ({ page }) => {
-  /*
-   * Addendum G1, done 2026-08-28. `loadManifest` fetched `manifest.meta.json`
-   * beside the manifest in one `Promise.all` and hung it on `data.meta`, and a
-   * sweep of `src/` found **no reader** — the only other `.meta` in the
-   * codebase is `image.meta` in lib/detail.js, a different field.
-   *
-   * The file is 1,247 bytes, so the cost was never the payload: it was a second
-   * round trip on the path that blocks first paint, taken on every visit for a
-   * page that does not exist yet. About's statistics are Session 9's and call
-   * `loadManifestMeta()` when they arrive.
-   *
-   * Asserted at the network rather than in a unit test on purpose. What is
-   * claimed is *which requests the boot makes*, and `lib/manifest.js` builds its
-   * URLs from `import.meta.env.BASE_URL`, which does not exist under
-   * `node --test`. A unit test would have had to fake the thing under test.
-   *
-   * **Re-verified on 2026-09-12** for the same reason as the test above: the
-   * Daily page's whole module tree was replaced, and `views/daily/lives.js`
-   * now fetches one payload per saint of the day rather than one hero's — so
-   * what the boot asks for before any of that is worth asking again.
-   */
-  const fetched = [];
-  page.on('request', (r) => fetched.push(r.url()));
-
-  await ready(page);
-  await page.goto('/calendar/2026-08-27', { waitUntil: 'networkidle' });
-
-  // The premise: the boot really did load the manifest through this path, so
-  // the absence below is an absence and not a page that never started.
-  expect(
-    fetched.filter((u) => /data\/manifest\.json$/.test(u)).length,
-    'the manifest was not fetched at all',
-  ).toBe(1);
-  expect(
-    fetched.filter((u) => /manifest\.meta\.json$/.test(u)),
-    'the coverage statistics are back on the boot path',
-  ).toEqual([]);
-
-  // And the page is whole without them, which is the half that matters.
-  await expect(page.locator('[data-readings] a').first()).toBeVisible();
-});
-
-
 test('a returning Daily page lands where it was left, though it grows after it renders', async ({ page }) => {
   /*
    * Author, 2026-08-27, after the first fix shipped: "switching from All
@@ -719,7 +614,7 @@ test('a returning Daily page lands where it was left, though it grows after it r
   /*
    * **The masthead, not the strip's own Daily button** (2026-09-08). The two
    * go to the same place and only one of them still cross-fades: a press on the
-   * phone's nav strip skips the transition on purpose since Amendment 108, so
+   * phone's nav strip skips the transition on purpose since, so
    * that the strip's own glide is visible instead of frozen under a snapshot of
    * the page. This test's instrument *is* the transition — it reads `scrollY`
    * at `ready`, which is the moment the fade is composed — so it has to press

@@ -92,6 +92,52 @@ section is worth writing: the old DESIGN.md said "200 ms standard, one easing"
 for three weeks while the code grew to 17 durations and 7 easings, because a
 document cannot stop a value being typed.
 
+### The name
+
+**The site is AGIOS**, one name in every language and on every surface
+(author, 2026-09-12). It is a *mark*: the same five outlines whatever the
+reader's pack, drawn to paths rather than set as text, so it is never
+translated and never re-typed.
+
+It is nonetheless written down in **fourteen places**, which is why this table
+exists. The site carried three different names at once until 2026-09-12 - the
+page said "Daily Dox", the browser tab said "The Orthodox Saint", and four
+packs translated both - and nothing connected them, so each rename reached
+some of them. **Change the name here and in all fourteen, in one commit.**
+
+| # | where | what it sets |
+| --- | --- | --- |
+| 1 | `scripts/make_wordmark.py` `WORDS` | the drawn glyphs - **the only one a reader sees** |
+| 2 | `scripts/make_wordmark.py` `LABEL` | the SVG's accessible name |
+| 3 | `src/ui/strings.js` `site.name` | nothing; kept so the packs share a key set |
+| 4 | `src/ui/locales/{el,ro,ru,sr}.js` `site.name` | nothing; same value in all four |
+| 5 | `src/ui/strings.js` `site.tabName` | `document.title`, once the app boots |
+| 6 | `src/ui/locales/*` `site.tabName` | the same, per pack |
+| 7 | `index.html` `<title>` | the tab before any JavaScript runs, and the crawler |
+| 8 | `public/site.webmanifest` `name` / `short_name` | the installed PWA |
+| 9 | `capacitor.config.json` `appName` | the native app's display name |
+| 10 | `capacitor.config.json` `appId` | **`com.agios.app`** - see below |
+| 11 | `android/app/build.gradle` | `namespace` and `applicationId` |
+| 12 | `android/app/src/main/res/values/strings.xml` | `app_name`, `title_activity_main`, and the URL scheme |
+| 13 | `ios/.../project.pbxproj` + `Info.plist` | `PRODUCT_BUNDLE_IDENTIFIER`, `CFBundleDisplayName` |
+| 14 | `src/lib/store.js` | the export's rejection message (the file format carries no brand) |
+
+Plus `README.md` and `docs/APP.md`, which are prose. `npm run app:sync`
+regenerates the copies under `android/app/src/main/assets/`; those are build
+output and are never edited by hand.
+
+**Four tests pin it**, and they are the reason a partial rename fails loudly:
+`e2e/chrome.spec.js` (the mark's accessible name, and that the wordmark is not
+live text), `e2e/pwa.spec.js` (the manifest), `tests/store.test.mjs` (the
+export message).
+
+**The bundle id is permanent.** `com.agios.app` was set on 2026-09-12 while no
+binary had been built. Once a store listing exists it can never change - a new
+id is a new app with no upgrade path for anyone who installed the old one. If
+a domain is ever registered for this site, the id should have been its reverse
+form; that is the one decision here still worth revisiting **before** the first
+submission and never after.
+
 ### Colour
 
 Two themes, `day` and `vigil`. Dark is not an inversion and contains no pure

@@ -12,7 +12,7 @@
  * that falls on a fast day, and the fast lifted entirely for Nativity and
  * Theophany — and nothing finer. Oil, wine and the grades between them differ
  * between the Greek and Slavic typika and want sourcing per church before the
- * site states them (git log, Amendment 28).
+ * site states them (git log).
  */
 
 import { CHURCHES_BY_ID } from '../data/churches.js';
@@ -29,7 +29,7 @@ const parse = (iso) => {
 const weekdayOf = (jdn) => (jdn + 1) % 7;
 /* Still English, and deliberately: these name a *fasting reason* — "a Great
    Feast on a Friday" — which the packs translate through their `reasons` map,
-   the arrangement Amendment 36 settled. Nothing else here composes words. */
+   the arrangement the packs settled. Nothing else here composes words. */
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 /** Pascha of the paschal year the day belongs to, and the next one, as JDNs. */
@@ -53,7 +53,7 @@ export function paschaAround(iso, computus = 'julian') {
  * It returned an English string until then, composed here, which put a
  * sentence in the reader's language beyond reach: this module is the one
  * place that knows the paschal reckoning and the one place that must not know
- * about words. Amendment 36 recorded that as an accepted seam and HANDOFF has
+ * about words. That is an accepted seam rather than an oversight, and HANDOFF has
  * carried it as open since. `ui/cycle-name.js` renders the key.
  *
  * The named Sundays of the Triodion and the Pentecostarion, the weeks of

@@ -65,7 +65,7 @@ test('the pattern finds the longest form first, and stops at letters', () => {
   const found = (text) => [...text.matchAll(pattern)].map((m) => m[1]);
   assert.deepEqual(found('written by Athanasius of Alexandria, which'), ['Athanasius of Alexandria']);
   // Letter boundaries rather than `\b`, which is ASCII-only in JavaScript
-  // (Amendment 41): a form must not match inside a longer word.
+  //: a form must not match inside a longer word.
   assert.deepEqual(found('Anthony the Greatest'), []);
   assert.deepEqual(found('— Anthony the Great.'), ['Anthony the Great']);
 });

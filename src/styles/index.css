@@ -107,8 +107,8 @@ select:hover {
 
 /* The heading comes up and the controls close up under it (author,
    2026-08-26 evening: "move the text 'All Saints' a bit higher up the page
-   and condense the filters vertically a bit more"). Amendment 13 spent a
-   whole pass on this same measure and the block has gained two rows of
+   and condense the filters vertically a bit more"). An earlier pass spent
+   a whole sitting on this same measure and the block has gained two rows of
    chrome since; these are the margins, not the controls' own heights, so
    nothing gets harder to hit. */
 .index-controls h1,
@@ -125,7 +125,7 @@ select:hover {
      so dressing them as controls without this would have wrapped the row
      harder, not less; at this gap all seven fit one line in Arial's metrics
      at the 580 px cold-load column — 545 of it — and the row that used to
-     wrap does not. Amendment 24's budget test is the one that catches it if
+     wrap does not. the budget test is the one that catches it if
      an eighth facet ever arrives.
 
      **An eighth arrived on 2026-08-26 evening** — the die, at the author's
@@ -135,12 +135,12 @@ select:hover {
      own inline padding gives another 14; the die is 24 px rather than the
      27 a chip is tall. Measured after, at the 580 px cold-load column: the
      eight need **570.5 px in Arial's metrics**, where the seven alone needed
-     545 — 9.5 px of margin, which is thin, and Amendment 24 is the standing
-     warning that a bare Linux runner's system-ui is wider than Arial again.
+     545 — 9.5 px of margin, which is thin, and the standing warning is
+     that a bare Linux runner's system-ui is wider than Arial again.
      Nothing asserts this row is one line (the budget test measures the foot),
      so a runner that cannot fit it wraps the die rather than going red.
      Verdana's metrics do not fit it at all — 606.7 — and Verdana is
-     system-ui nowhere; Amendment 24 measured it as the same outlier.
+     system-ui nowhere measured it as the same outlier.
 
      **Two more pixels came out of it on 2026-08-27**, when the die was
      squared (30.3 px where it was 27) and the first chip's label went from
@@ -164,7 +164,7 @@ select:hover {
    opens, and the chip carries the field and the hairline every other control
    on this page has. Nothing about the row's arithmetic changes — the chips
    are still `flex: none` in the same flex row, and the index-foot budget
-   (Amendment 24) measures the row below this one. */
+   measures the row below this one. */
 .facet > summary {
   cursor: pointer;
   font-family: var(--font-utility);
@@ -313,7 +313,7 @@ select:hover {
      fontconfig's Arial alias all give: 16 leaves 9.6 px there. A bare Linux
      runner's system-ui is DejaVu Sans, wider again, and the row still wraps
      at 580 in it; freeing that needs a string the build does not own —
-     git log, Amendment 24, which says which and whose call it is. */
+     git log, which says which and whose call it is. */
   gap: var(--space-2) var(--space-4);
 }
 
@@ -329,7 +329,7 @@ select:hover {
    evening: a native `<select>` behind a visible *Sort* label, and a segmented
    two-button toggle behind a visible *View* label. Both are gone with the
    markup, and the row they were too wide for is the row the Detailed box now
-   shares. Amendment 24's foot-budget test is the one that measures what that
+   shares. the foot-budget test is the one that measures what that
    bought. */
 .facet-choice > summary {
   color: var(--ink);
@@ -582,7 +582,7 @@ html.is-rolling #view {
    stood taller than the same saint's row — which is the gap the author was
    pointing at. `cardHeights` in views/index/grid.js is the other half: the
    virtualiser sizes the card to the lines the name actually needs, exactly as
-   it has done for rows since Amendment 56. The clamp on `.index-name` still
+   it has done for rows since. The clamp on `.index-name` still
    caps it at two, and CARD_NAME_LINES_MAX is the same decision in the other
    file. */
 .index-card .name-line {
@@ -595,8 +595,8 @@ html.is-rolling #view {
    column is 678 px and the grid lays three cards across at 213 px, where
    "13 November 354 – 28 August 430" wrapped and the reserved block cut the
    second line off; in a row the bookmark's column narrowed the body to ~206 px
-   at 360 and did the same. Rows had this rule from Amendment 22 and cards did
-   not (Amendment 26). As the register's feast dates are (calendar.css); the
+   at 360 and did the same. Rows had this rule from the start and cards did
+   not. As the register's feast dates are (calendar.css); the
    saint's page prints the whole of it. */
 .index-dates {
   color: var(--ink-soft);

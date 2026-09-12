@@ -2,10 +2,10 @@
  * Two copies of a thing in the DOM for the length of an animation — one place
  * that knows the two rules, instead of four that each learned them separately.
  *
- * Amendment 9: anything still in flight must land before the next swap starts,
+ * The rule: anything still in flight must land before the next swap starts,
  * because a bare querySelector cannot tell the leaving copy from the current
  * one, and the failure is invisible until someone clicks faster than the
- * designer did. Amendment 17's corollary: the copy that is not the reader's
+ * designer did. the corollary: the copy that is not the reader's
  * must say so completely — `aria-hidden`, out of the tab order, *and* out of
  * reach of the pointer, because a copy laid over the live one swallows the
  * click that would move it again.

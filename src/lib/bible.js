@@ -31,7 +31,7 @@
 /**
  * The books the lectionary actually cites.
  *
- * *Amended in place (Amendment 44).* This said "sixteen, and it is a closed
+ * *Amended in place.* This said "sixteen, and it is a closed
  * set", which was true of the four weeks it was written for and stopped being
  * true when the Russian and Romanian records ran on to January: those months
  * cite six books more. The set is still closed and still measured — every

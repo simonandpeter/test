@@ -3,8 +3,8 @@
 **Status**: **built, 2026-09-10**, and revised by the author four times since
 it was built. Every numbered step of §8 as revised by §10.12 is on `main`.
 **[§10.25](#1025-the-three-instructions-of-2026-09-10-after-1024) is the closing
-record** — the author's own corrections to the built page, what is left open,
-and the byte ledger. §10.20 is sitting E's record and is where the *plan* ended;
+record** — the author's own corrections to the built page and what is left
+open. §10.20 is sitting E's record and is where the *plan* ended;
 it is no longer where the page is, because §§10.21–10.25 reverse four of its
 decisions. Read §10 back to front. The document is kept whole rather than
 trimmed because the reasoning is what makes any of it reversible.
@@ -1543,7 +1543,7 @@ where they disagree.
   the author's caps are not a choice to make.
   **The accessible name stays "Daily Dox"** (author: "Keep the SVG's accessible
   name"), which is what the PWA manifest, `README.md`, `docs/APP.md`, the export
-  format and Amendment 31's `<title>` split all still say. `LABEL` in the
+  format and the `<title>` split all still say. `LABEL` in the
   generator is separate from `WORDS` and says why.
   **Measured, because an outlined mark can be large**: the SVG is 2,628 bytes
   against the two-word one's 3,378, so five glyphs cost **750 bytes less** than
@@ -1814,25 +1814,6 @@ and then taken out again because it could not be made to bite: a long name at
 every position among 2 to 14 short ones — 104 arrangements, `break-inside:
 auto` forced — and Chrome's balancer fragmented no item in any of them. The
 comment says that; the declaration does not claim it.
-
-#### The byte ledger
-
-The gate is `ENTRY_CSS_CEILING` = 73,000 (§10.22), and the sitting opened at
-72,494 with 506 to spare.
-
-| after | entry stylesheet | to the ceiling |
-| --- | --- | --- |
-| start (`f9a8602`) | 72,494 | 506 |
-| the List face removed | **72,311** | 689 |
-| "Also today" | 72,311 | 689 |
-| two columns | **72,562** | 438 |
-
-Removing the face gave 183 bytes back — the `.vt-list` geometry and one
-`max-width: 80ch` — and the columns spent 251. The rename cost nothing, being
-JavaScript. **§10.20's `index.css`/`saint.css` split was not needed and is
-still unspent**, and still wants the router to await the view's sheet rather
-than a bare dynamic import, because those two routes paint text on the first
-frame.
 
 #### Still open after this sitting
 

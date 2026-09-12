@@ -41,7 +41,7 @@ test('the site is installable: a manifest, reachable, with maskable icons', asyn
   expect(href, 'no manifest link in the head').toBeTruthy();
 
   const manifest = await page.evaluate(async (h) => (await fetch(h)).json(), href);
-  expect(manifest.name).toBe('Daily Dox');
+  expect(manifest.name).toBe('AGIOS');
   expect(manifest.display).toBe('standalone');
   // Maskable is the difference between an icon and a white square on Android.
   expect(manifest.icons.some((i) => /maskable/.test(i.purpose ?? ''))).toBe(true);
