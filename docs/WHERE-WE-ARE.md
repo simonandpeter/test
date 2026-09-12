@@ -88,6 +88,24 @@ Found by checking the 58 deleted test names against the page that replaced them
 - [ ] The "Also today" / "Also commemorated" heading, gone with its strings left
       orphaned in all five packs.
 
+**Measured, and needs a decision before it can be fixed:**
+
+- [ ] **`chrome.spec.js:259`, the shelf swipe, fails about 1 run in 8 — and it
+      is not load.** Measured 2026-09-12 rather than assumed, because a flake
+      here once masked a 16/16 regression: **0 failures in 28 runs alone**, and
+      **4 in 24 when paired with `:306`**. The two tests do not share state —
+      each opens its own context — so what pairing adds is a second live
+      context and the CPU contention with it. The assertion sits immediately
+      after a synthetic drag of eight `mouse.move` steps across 300 px, and the
+      row clears on a gesture threshold.
+      **The question is the product's, not the test's: is a slow swipe meant to
+      clear the row?** If yes, the threshold is too strict and the page is
+      wrong. If no, the test is asserting a gesture it does not reliably
+      perform and should drive the drag at a fixed velocity. Until that is
+      answered, CI retries hide it, which is exactly how the last one hid a
+      real failure. `scratchpad/throttle-probe.mjs` reproduces this class on
+      demand (trap 10).
+
 **Raised, not yet decided:**
 
 - [ ] **The keys no longer step the day.** `daily-picker.spec.js` had "a day is
