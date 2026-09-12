@@ -73,6 +73,28 @@ test that failed and passed on retry, and that exists only in the job log. The
 job-log endpoint 302s to pre-signed blob storage and 401s if `Authorization`
 follows the redirect, so the redirect is taken by hand without it.
 
+**One item a session, and subagents to read rather than to write** (author,
+2026-09-12). Context is the sitting's real budget, and it is spent on files
+rather than on the briefing: `src/` is 40,113 lines and **36% of them are
+comment** — 53% in `views/map/paint.js`, 63% in `views/index/modes.js` — so
+opening one module to change one function costs three times what the function
+costs. The whole of CLAUDE.md is 4,348 words against that, so trimming *this
+file* is not the lever it looks like; measured before the rule was written, and
+the earlier proposal to split the traps out was withdrawn for saving 1.1k
+tokens at the price of the one section a session cannot know it needs.
+
+Two habits follow, and the second has a boundary:
+
+- **Finish an item, write `HANDOFF.md`, start again.** That file exists to make
+  a cold start cheap. A sitting that carries four items carries the first
+  item's file reads through all four, and the last of them is read worst.
+- **Send a subagent to find, and take the answer rather than the files.** A
+  search whose product is one fact — where a deleted gate used to live, which
+  sheets declare a raw width — should cost one report. **Writing stays with the
+  caller.** `aa72f65` is the standing case: three fixes by a subagent,
+  committed alone so they could be dropped whole, and after a full suite and a
+  review pass two of the three are still unverified.
+
 **Run the surface you touched, not the suite** (table below). The full suite is
 for: before a push, after touching shared chrome or `src/lib`, at a milestone.
 
