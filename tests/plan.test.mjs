@@ -242,3 +242,53 @@ test('the space scale PLAN.md describes is the one tokens.css declares', () => {
   assert.equal(declared('--radius-cell'), '1px');
   assert.match(PLAN, /`--radius-panel` 4px,\s*\n?`--radius-cell` 1px/);
 });
+
+/**
+ * **The measures table is every named measure there is, and nothing else**
+ * (author, 2026-09-12: one-off layout widths move into PLAN.md).
+ *
+ * The rule this enforces is not "a width wants a token" — it is that a width
+ * nobody can find is a width nobody can question. So the check is an
+ * inventory rather than a scale: the set of `(property, value, sheet)` triples
+ * declared outside `tokens.css` is compared with the set the table lists, and
+ * either direction failing is the point. A measure typed into a sheet and left
+ * out of PLAN fails; a row left behind by a deleted rule fails too.
+ *
+ * Comments are stripped before the sheets are read, because this file's own
+ * prose quotes the values it is talking about — and a number inside a comment
+ * is exactly the invisible kind this table exists to replace.
+ */
+const measuresIn = (css) =>
+  [...css.replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/^\s*(--[\w-]+)\s*:\s*([^;]+);/gm)]
+    .filter(([, , value]) => /(?<![\w.])\d+(?:\.\d+)?px/.test(value))
+    .map(([, name, value]) => [name, value.trim().replace(/\s+/g, ' ')]);
+
+test('the measures table is every named measure outside tokens.css', () => {
+  const declared = SHEETS.filter(([file]) => file !== 'tokens.css').flatMap(([file, css]) =>
+    measuresIn(css).map(([name, value]) => `${name} = ${value} (${file})`),
+  );
+  const listed = table('| measure | value |').map(([name, value, sheet]) => `${name} = ${value} (${sheet})`);
+  assert.deepEqual([...declared].sort(), [...listed].sort());
+});
+
+/**
+ * **And the breakpoints table is every breakpoint there is.**
+ *
+ * Eleven values for about four boundaries, which is the finding the table was
+ * written to make visible — `daily-sidebar.css`'s bare `1023px` against
+ * `daily.css`'s `1023.98px` is two spellings of one line, and neither sheet
+ * can see the other. Sheets are compared as well as values, so moving a
+ * breakpoint from one sheet to another has to be written down.
+ */
+test('the breakpoints table is every media query width there is', () => {
+  const found = new Map();
+  for (const [file, css] of SHEETS) {
+    for (const [, kind, px] of css.matchAll(/\((min|max)-width:\s*([0-9.]+)px\)/g)) {
+      const key = `${kind}-width: ${px}px`;
+      found.set(key, new Set([...(found.get(key) ?? []), file]));
+    }
+  }
+  const declared = [...found].map(([q, files]) => `${q} — ${[...files].sort().join(', ')}`);
+  const listed = table('| breakpoint | sheets |').map(([q, sheets]) => `${q} — ${sheets.split(',').map((s) => s.trim()).sort().join(', ')}`);
+  assert.deepEqual([...declared].sort(), [...listed].sort());
+});

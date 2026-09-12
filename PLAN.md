@@ -82,7 +82,12 @@ The standing check against drifting back to AI-default looks:
 ## 3. The design system
 
 **The tokens in `src/styles/tokens.css` are the design.** A raw colour,
-duration, easing, type size or spacing value anywhere else is a defect. That
+duration, easing, type size or spacing value anywhere else is a defect. A raw
+**width** is not — a column measure is a one-off and a token would be a name
+for one use — but it is a defect for one to go *unwritten*: section 4's two
+tables are the inventory of every named measure and every breakpoint, and
+`tests/plan.test.mjs` reads them against the sheets in both directions
+(author, 2026-09-12, reversing the blanket exemption this paragraph carried). That
 rule is executable for three of the five: `tests/design-tokens.test.mjs` fails
 on a raw easing, a sub-second raw duration or a raw `font-size` in a component
 sheet. Spacing and colour turned out to need no sweep at all — both figures that said
@@ -331,6 +336,86 @@ because several of these were tuned against real content.
 
 **Space and measure.** 4 px base, steps 4/8/12/16/24/32/48/64 (`--space-1`
 through `--space-16`). Content column `72ch` max, centred; reading text `65ch`.
+
+### The measures, and the widths they are cut to
+
+**A one-off width is written down here or it is not written down at all**
+(author, 2026-09-12, reversing this file's own exemption of `width` from the
+token rule). The argument is not that a column measure wants a token: it is
+that 240 px buried in 12,000 lines of CSS is invisible, and the same number as
+a table row is something a reader can question. **Values live here; the
+mechanism stays in a comment beside the code it constrains**, which is settled
+and not to be re-proposed.
+
+So the two tables below are not a scale. They are an inventory, and
+`tests/plan.test.mjs` reads both directions of it: a measure declared in a
+sheet and missing here fails, and a row here naming nothing fails.
+
+**The named measures** — every custom property outside `tokens.css` whose
+value carries a pixel. A property declared twice is two rows, because a base
+value and the override that replaces it at a breakpoint are two decisions.
+
+| measure | value | sheet |
+| --- | --- | --- |
+| `--page-max` | `2000px` | `base.css` |
+| `--chrome-h-reserve` | `41px` | `base.css` |
+| `--chrome-h-reserve` | `52.5px` | `base.css` |
+| `--chrome-h-reserve` | `75.5625px` | `base.css` |
+| `--td-side-w` | `clamp(240px, 21vw, 310px)` | `daily-sidebar.css` |
+| `--tile-pic` | `120px` | `daily-tiles.css` |
+| `--tile-pic` | `84px` | `daily-tiles.css` |
+| `--row-pic-w` | `clamp(180px, 20vw, 300px)` | `daily-tiles.css` |
+| `--row-pic-h` | `clamp(200px, 38vh, 420px)` | `daily-tiles.css` |
+| `--row-flow-h` | `clamp(180px, 30vh, 380px)` | `daily-tiles.css` |
+| `--cx-w` | `150px` | `index.css` |
+| `--cx-w` | `clamp(150px, calc(var(--cx-max-h) * 0.58), 300px)` | `index.css` |
+| `--cx-w-text` | `clamp(150px, calc(var(--cx-w) * 0.62), 190px)` | `index.css` |
+| `--cx-max-h` | `240px` | `index.css` |
+| `--cx-max-h` | `clamp(240px, var(--cx-space, 48vh), 520px)` | `index.css` |
+| `--facet-font` | `13.5px` | `index.css` |
+| `--facet-pad-y` | `3px` | `index.css` |
+| `--facet-h` | `calc(var(--facet-font) * var(--facet-lh) + var(--facet-pad-y) * 2 + 2px)` | `index.css` |
+
+**Two of those are the inventory earning its place on its first pass.**
+`--chrome-h-reserve` is declared three times with three values, none of which
+round to another — the header's reserved height at three widths, which is a
+fact worth being able to see in one place. And `--facet-font: 13.5px` is a
+**type size standing outside the type scale**, which `design-tokens.test.mjs`
+cannot see: the rule it enforces is about `font-size` declarations and this is
+a custom property that one then reads. Neither is changed here — changing a
+measure is the overhaul's to do with the contact sheet in front of it — but
+neither is invisible any more.
+
+**The breakpoints.** Eleven values across six sheets, and the site has about
+four boundaries: ~480–560, ~700–768, 900, and 1024. Most of the rest is one
+boundary spelled differently in different sheets.
+
+| breakpoint | sheets | what it divides |
+| --- | --- | --- |
+| `max-width: 480px` | `saint.css` | the shelf row's feast chip moves ahead of the date rather than wrapping to a third line |
+| `max-width: 559.98px` | `base.css`, `index.css` | the first-visit choices close up; All Saints' head takes the phone's padding |
+| `max-width: 699.98px` | `daily.css` | the full-screen calendar drops to one column — seven columns stop holding a phrase |
+| `min-width: 700px` | `daily.css`, `index.css` | the full-screen calendar's weekday heads; the carousel's own card measure. `views/index/controls.js` opens on cards rather than rows at the same width |
+| `max-width: 759.98px` | `base.css` | the chrome line gives up its gaps rather than wrapping |
+| `min-width: 760px` | `base.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
+| `max-width: 767.98px` | `daily-tiles.css` | a folded tile's picture drops from 120 px to 84 |
+| `min-width: 900px` | `daily.css` | the full-screen calendar gains its periods column beside the month |
+| `max-width: 1023px` | `daily-sidebar.css` | the sidebar stops standing and becomes the first block in the flow |
+| `max-width: 1023.98px` | `daily.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
+| `min-width: 1024px` | `base.css`, `daily.css`, `saint.css` | Daily's two columns, and every other desk arrangement |
+
+**760 and 767.98 are two numbers for one idea, and so are 1023 and 1023.98.**
+The `.98` spellings exist so a fractional window width falls in exactly one of
+a `min`/`max` pair; `daily-sidebar.css`'s bare `1023px` and
+`daily-tiles.css`'s `767.98px` are each the odd one out in their own
+neighbourhood. Recorded, not reconciled: a breakpoint moved is a layout
+changed, and that wants the contact sheet in front of it.
+
+**1024 is the one a module may not spell for itself.** `lib/viewport.js` holds
+it for JavaScript, because two unrelated modules needed it on 2026-09-12 — the
+Daily page's full-screen opener and `lib/church.js`'s reckoning — and two
+copies of a breakpoint is how a breakpoint drifts. The other two numbers
+JavaScript knows, 700 and 760, are still each written twice.
 
 **Corners are crisp.** Panels 4 px, badge cells 1 px, buttons 4 px. This is
 deliberately near the broadsheet territory the brief bans, and it steps away
@@ -639,13 +724,40 @@ two whose stated reason turned out to be wrong.
    came back because `index.css` asked for a `--space-5` that has never existed;
    it is written out as `0` rather than guessed at.
 
-2. **Carousel: pack lazily.** The All Saints row measures all 862 saints'
+2. **All Saints' boot.** Two defects, both found by measuring and neither the
+   one this item named for three days.
+
+   **The caption pack was fixed on 2026-09-09 and this item went on describing
+   it until 2026-09-12.** It read "the All Saints row measures all 862 saints'
    captions (~9,600 canvas calls) in one blocking task before it can paint a
-   column. Pack enough for the screen plus the loop's buffer, paint, finish in
-   idle time.
+   column", which the `CX_PREFIX` work below had already closed — and `HANDOFF.md`
+   repeated it. A defect struck off in one paragraph and left standing in the
+   paragraph above it is how a fixed thing gets fixed twice; the next reader
+   went looking for the pack, could not find the cost, and measured instead.
+
+   **What it found was next door, and is fixed as of 2026-09-12 — unverified.**
+   `update()` runs before `applyMode()`, so the *grid* laid out all 862 names
+   through `nameLines` and mounted a screenful of cards before the carousel
+   hid it: a face nobody had asked for, built twice per boot, because the
+   hiding provokes its own resize observer. `paintGrid` now returns early while
+   the mode is `carousel` and `applyMode` calls `state.layoutGrid()` once the
+   `hidden` attribute is off — after, because a hidden element measures 0
+   (trap 7). The row's DOM size is untouched, which "Do not virtualise the row"
+   below still says is right.
+
+   The mechanism has been read in the diff and holds. **The numbers have not
+   been re-measured by anyone but the agent that made the change**, and it
+   reported two different sets for the same quantity — 394–606 ms of grid
+   layout before the first card in the code's own comment against 367–403 in
+   its commit message, and blocking before the first card falling to ~1,750 ms
+   in one and to 1,537–1,590 in the other. Both are at 10× CPU through
+   `scratchpad/phase-cost.mjs`. Treat the direction as established and the
+   magnitude as unsettled until someone runs it.
 
    **Measured 2026-09-09, controlled** — same route, same data, only the face
-   differing, at 10× CPU (`node scratchpad/throttle-probe.mjs pack`):
+   differing, at 10× CPU (`node scratchpad/throttle-probe.mjs pack`). This is
+   the caption pack, and the table is the record of what it cost before the
+   prefix closed it:
 
    | mode | ready | longest task | tasks > 50 ms |
    | --- | --- | --- | --- |

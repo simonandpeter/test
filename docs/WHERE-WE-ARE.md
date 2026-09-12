@@ -12,8 +12,8 @@ An item leaves this file when it is done, not when it is discussed.
 
 **The Daily page's desktop layout is to be redesigned.** The author was going to
 describe the new design; the sitting went into cleanup instead and the design
-was never given. Four fixes were to ride along with it, and two of them are
-still here (the ordering rule and the missing heading, below).
+was never given. Four fixes were to ride along with it and all four have since
+been made on their own, so what is left here is the design and nothing else.
 
 The method, from the author: build it on the live site with `npm run dev`, no
 standalone mockup; show options as override CSS in `mockups/` through
@@ -24,28 +24,17 @@ calling it done.
 
 ## Decided, not yet done
 
-- [ ] **The full-screen calendar comes off phones.** A desktop control, gated by
-      width until the rebuild, now visible at 360 px. Restore the gate.
-- [ ] **A phone is Gregorian only.** Stronger than the old page, which showed a
-      phone the reckoning in force without offering the choice: the control
-      comes off *and* the reckoning is fixed there, rather than following the
-      church.
-- [ ] **The day's saints order pictures first, imageless last.** The rule was
-      lost in the rebuild. About 130 of 862 saints have an icon, so this is what
-      kept a day from reading as a wall of glyph mats.
-- [ ] **Something replaces the missing "Also today" heading.** The Daily page
-      now prints no heading at all and both string keys are orphaned in all five
-      packs. Decide what stands there, or delete the keys.
-- [ ] **One-off layout widths move into `PLAN.md`** (author, 2026-09-12).
-      `PLAN.md` §3 currently exempts `width` from the token rule. The argument
-      for reversing it: 340 px buried in 12,000 lines of CSS is invisible, and
-      the same number as a table row is something you can question. Values live
-      in PLAN; mechanisms stay in a comment beside the code they constrain,
-      which is settled and not to be re-proposed.
-- [ ] **`PLAN.md` §7 item 2 is wrong and needs rewriting.** It describes All
-      Saints blocking ~1,200 ms on a caption pack that was fixed on 2026-09-09,
-      and names a cause that measurement disproved. `HANDOFF.md` has what
-      actually costs the boot.
+**Empty, 2026-09-12.** All six items were done in one sitting and are in
+`git log`. One of them changed what the site does rather than only where a
+number is written, so it is named here once and then this section is a
+heading again:
+
+**A phone is Gregorian throughout, fasts included.** Below 1024 px
+`lib/church.js`'s `calendarFor` answers `gregorian` whatever church is
+chosen, so an Old Calendar reader on a phone is shown the Dormition Fast on
+1–14 August where the desk shows them 14–27. That is the ruling as given and
+re-confirmed when the consequence was put to the author on 2026-09-12; it is
+one branch to reverse if it ever reads wrong on the page.
 
 ## Raised, nobody has ruled
 
