@@ -37,12 +37,74 @@ test.beforeEach(async ({ page }) => {
   await searchMode(page);
 });
 
+/**
+ * **Where the shelf is read, since the Daily rebuild of 2026-09-12.**
+ *
+ * Every test below used to open a Daily page to find the reader's own shelves
+ * under it. Daily does not carry them any more (plan §11.5, "shelves come off
+ * Daily"): the page is a standing column of the day's facts and a grid of its
+ * saints, and a third list of saints under that is the thing the rebuild took
+ * out. `mountShelves` has exactly one caller now — `views/saint.js`, below
+ * 1024 px, where a phone reaching the end of a life would otherwise meet a
+ * page that stops.
+ *
+ * So these tests state the surface rather than assume it: a narrow window and
+ * a saint's page. Nothing they claim is about the Daily page — the shelf's
+ * rows, its ×, its swipe and its store are the subject, and all four are
+ * unchanged. The width is the one thing that had to be said out loud, because
+ * a desk keeps its search column and is deliberately given no shelf.
+ *
+ * `except` drops the page's own slug from the shelf, so the saint this stands
+ * on is never one of the saints the test has just read.
+ */
+const SHELF_HOST = '/saints/christopher';
+
+const onShelfPage = async (page) => {
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(SHELF_HOST, { waitUntil: 'networkidle' });
+};
+
+/**
+ * Where a shelf row is, once it has stopped moving.
+ *
+ * Three things have to be true before a pointer can be aimed at one, and none
+ * of them is true the moment the navigation settles:
+ *
+ *  - the shelf is built from two IndexedDB reads *after* the page has painted;
+ *  - opening the saint records the visit, which fires the store's own
+ *    subscription and repaints the shelf a beat later — so a row measured
+ *    straight away is an element that is about to be replaced, and a rect read
+ *    across that repaint comes back `null`;
+ *  - it is the last thing on the page, so its coordinate is below the fold and
+ *    the mouse would clamp away from it.
+ *
+ * So: wait for the row, bring it into the glass, and take the rect only once
+ * two consecutive readings agree. On the Daily page the shelf was part of the
+ * first paint and none of this was needed.
+ */
+const settledBox = async (locator) => {
+  await expect(locator).toBeVisible();
+  await locator.scrollIntoViewIfNeeded();
+  const read = () =>
+    locator.evaluate((el) => {
+      const b = el.getBoundingClientRect();
+      return { x: b.x, y: b.y, width: b.width, height: b.height };
+    });
+  let last = await read();
+  for (let i = 0; i < 20; i += 1) {
+    const now = await read();
+    if (now.width > 0 && Math.abs(now.y - last.y) < 1 && Math.abs(now.x - last.x) < 1) return now;
+    last = now;
+  }
+  return last;
+};
+
 test('Continue reading reappears after a saint has been opened', async ({ page }) => {
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await onShelfPage(page);
 
-  const shelf = page.locator('.shelves');
+  const shelf = page.locator('[data-shelves]');
   await expect(shelf).toContainText('Continue reading');
   await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
@@ -133,7 +195,7 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await onShelfPage(page);
 
   const rows = page.locator('.shelf-row');
   await expect(rows).toHaveCount(2);
@@ -148,7 +210,7 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   // magnitude apart from the same distance.
   const push = async (distance, pause = 0) => {
     const name = rows.first().locator('.index-name');
-    const box = await name.boundingBox();
+    const box = await settledBox(name);
     const y = box.y + box.height / 2;
     const x = box.x + box.width / 2;
     await page.mouse.move(x, y);
@@ -185,11 +247,13 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   await expect(rows).toHaveCount(2);
   // Home again, not left hanging where the hand let go.
   expect(await rows.first().evaluate((r) => r.style.transform || 'none')).toBe('none');
-  await expect(page).toHaveURL(/\/calendar\//); // the swipe did not open the saint
+  // The swipe did not open the saint whose row it was pushed across: this is
+  // still Christopher's page, which is the page the shelf is standing on.
+  await expect(page).toHaveURL(/\/saints\/christopher/);
 
   await push(420, 30);
   await expect(rows).toHaveCount(1);
-  await expect(page.locator('.shelves')).toContainText('Continue reading');
+  await expect(page.locator('[data-shelves]')).toContainText('Continue reading');
 });
 
 test('on a touch device the shelf row carries no ×, and the swipe still clears it', async ({ browser }) => {
@@ -208,7 +272,8 @@ test('on a touch device the shelf row carries no ×, and the swipe still clears 
   await searchMode(page);
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  // A Pixel is narrow enough to be given the shelf without being told to be.
+  await page.goto(SHELF_HOST, { waitUntil: 'networkidle' });
 
   const row = page.locator('.shelf-row').first();
   await expect(row).toBeVisible();
@@ -227,7 +292,7 @@ test('on a touch device the shelf row carries no ×, and the swipe still clears 
 
   // And the gesture that replaced it works with a finger.
   const name = row.locator('.index-name');
-  const box = await name.boundingBox();
+  const box = await settledBox(name);
   const y = box.y + box.height / 2;
   const x = box.x + box.width / 2;
   await page.mouse.move(x, y);
@@ -246,10 +311,14 @@ test('under reduced motion a swiped row goes without flying', async ({ browser }
   await searchMode(page);
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await onShelfPage(page);
   const row = page.locator('.shelf-row').first();
+  // The shelf is built from two IndexedDB reads after the page has painted, so
+  // the row is not there the moment the navigation settles — on the Daily page
+  // it was part of the first paint and nothing had to wait for it.
+  await expect(row).toBeVisible();
   const name = row.locator('.index-name');
-  const box = await name.boundingBox();
+  const box = await settledBox(name);
   const y = box.y + box.height / 2;
   const x = box.x + box.width / 2;
   await page.mouse.move(x, y);
@@ -257,7 +326,7 @@ test('under reduced motion a swiped row goes without flying', async ({ browser }
   for (let i = 1; i <= 8; i += 1) await page.mouse.move(x + (420 * i) / 8, y);
   await page.mouse.up();
   await expect(page.locator('.shelf-row')).toHaveCount(0);
-  await expect(page.locator('.shelves')).not.toContainText('Continue reading');
+  await expect(page.locator('[data-shelves]')).not.toContainText('Continue reading');
   await ctx.close();
 });
 
@@ -433,7 +502,11 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   // and hands the focus back.
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  // The day's leading saint, which is the first tile of the grid since the
+  // rebuild of 2026-09-12 took the hero card off the page (plan §6). The name
+  // it is read off is the tile's own, and the tile at the head of the grid is
+  // the one `pickHero` chose — the same claim the hero's name carried.
+  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
   await open.click();
@@ -446,7 +519,9 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Greek');
-  await expect(page.locator('.empty-day')).toBeVisible();
+  // The Greek calendar keeps nothing on 28 June, and the day says so where its
+  // saints would have been (plan §11.3: the empty line moved into the grid).
+  await expect(page.locator('.day-grid .day-empty')).toBeVisible();
 
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
@@ -550,13 +625,17 @@ test('a first visit is shown where the two controls are, and the day is not held
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   await expect(page.locator('.cal-gate')).toHaveCount(0);
   /*
-     * The picker, whichever grain this width shows: the rail on a phone, the
-     * month grid on a desktop since 2026-09-02 ("just display monthly only on
-     * desktop, no weekly display"). What this line is really saying is that
-     * the day is not held back behind a gate, which is true of either.
-     */
-    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+   * The picker, which is one grain at every width since the rebuild of
+   * 2026-09-12: the week rail went with the register (plan §6) and the month
+   * grid it used to toggle against stands in the sidebar wherever the page is
+   * read. What this line is really saying is that the day is not held back
+   * behind a gate, which is true whichever grain draws it.
+   */
+  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
+  // The day's leading saint is the first tile of the grid now (plan §6: the
+  // hero card is gone), and the tile at the head of the grid is the one
+  // `pickHero` chose.
+  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
 
   // Two marks, each under the control it names, each with a way out.
   const marks = page.locator('.coachmark');
@@ -620,9 +699,11 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
    * Daily page's own columns carry the scrolling and the page does not, so a
    * wheel spun over the header — where the mouse sits by default — reaches
    * nothing at all. `ui/coachmark.js` takes the event from whichever element
-   * scrolled; this puts the mouse over one.
+   * scrolled; this puts the mouse over one. Since the rebuild of 2026-09-12
+   * that scroller is `.td-scroll`, the strip the day's saints are read down,
+   * with the standing column over its left edge (plan §5).
    */
-  const column = await page.locator('.cal-main').boundingBox();
+  const column = await page.locator('.td-scroll').boundingBox();
   await page.mouse.move(column.x + column.width / 2, column.y + column.height / 2);
 
   await page.mouse.wheel(0, 400);
@@ -645,8 +726,17 @@ test('on a first visit the two marks clear the fold, and so does the day', async
    *
    * There is no exception now, and that is the stronger claim: a first visit
    * gets the day *and* is told where the two controls are. Both marks stand
-   * clear of the fold on a 360x780 phone, and so does the saint's own name
-   * under them, which no first visit could see at all before.
+   * clear of the fold on a 360x780 phone, and so does the day under them,
+   * which no first visit could see at all before.
+   *
+   * **What "the day" is has changed, and the assertion with it** (plan §5,
+   * §7). It was the hero's name, the first thing under the marks on the old
+   * page. A phone now reads the standing column first — the date, the
+   * reckoning, the cycle and the fast — and the saints under it, and the
+   * leading saint's card opens with its picture. So the name itself is past
+   * the fold by design, and what has to clear it is the day's own date and the
+   * first saint's tile: the reader is looking at the day and at a saint, which
+   * is what this has always been about.
    *
    * The marks must also not overlap each other. They sit under controls at
    * opposite ends of the header, and a 30ch box under each overlapped in the
@@ -664,8 +754,14 @@ test('on a first visit the two marks clear the fold, and so does the day', async
   const [a, b] = boxes.sort((x, y) => x.x - y.x);
   expect(a.x + a.width, 'the two marks overlap').toBeLessThanOrEqual(b.x);
 
-  const name = await page.locator('.hero-name').boundingBox();
-  expect(name.y).toBeLessThan(780);
+  const shown = await page.evaluate(() => ({
+    date: document.querySelector('.day-date').getBoundingClientRect().bottom,
+    tile: document.querySelector('.day-tile').getBoundingClientRect().top,
+    picture: document.querySelector('.day-tile .row-media').getBoundingClientRect().top,
+  }));
+  expect(shown.date, 'the day’s own date is below the fold').toBeLessThan(780);
+  expect(shown.tile, 'the day’s first saint is below the fold').toBeLessThan(780);
+  expect(shown.picture, 'the leading saint’s picture is below the fold').toBeLessThan(780);
 });
 
 /* ---- the 2026-08-22 round, Phase 2: the header, the selection, one calendar -- */
@@ -688,13 +784,17 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   /*
-     * The picker, whichever grain this width shows: the rail on a phone, the
-     * month grid on a desktop since 2026-09-02 ("just display monthly only on
-     * desktop, no weekly display"). What this line is really saying is that
-     * the day is not held back behind a gate, which is true of either.
-     */
-    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+   * The picker, which is one grain at every width since the rebuild of
+   * 2026-09-12: the week rail went with the register (plan §6) and the month
+   * grid it used to toggle against stands in the sidebar wherever the page is
+   * read. What this line is really saying is that the day is not held back
+   * behind a gate, which is true whichever grain draws it.
+   */
+  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
+  // The day's leading saint is the first tile of the grid now (plan §6: the
+  // hero card is gone), and the tile at the head of the grid is the one
+  // `pickHero` chose.
+  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
   await expect(page.locator('#church-open')).toHaveText('Russian');
   // And it is a guess, not an answer: nothing is written until the reader says.
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
@@ -706,12 +806,13 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   // Choosing the same calendar the guess had picked still changes something:
   // it is stored, and the marks stop.
   /*
-     * The picker, whichever grain this width shows: the rail on a phone, the
-     * month grid on a desktop since 2026-09-02 ("just display monthly only on
-     * desktop, no weekly display"). What this line is really saying is that
-     * the day is not held back behind a gate, which is true of either.
-     */
-    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
+   * The picker, which is one grain at every width since the rebuild of
+   * 2026-09-12: the week rail went with the register (plan §6) and the month
+   * grid it used to toggle against stands in the sidebar wherever the page is
+   * read. What this line is really saying is that the day is not held back
+   * behind a gate, which is true whichever grain draws it.
+   */
+  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
   await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
@@ -1051,7 +1152,17 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
    * August Julian. The weekday alone stays civil («Среда» is still right for
    * the 26th), which is CLAUDE.md's own rule for `reckonedHeading`.
    */
-  await expect(page.locator('h1')).toHaveText(/^Среда, 13 Авг(уста)? 2026 г\.$/);
+  /*
+   * **Two lines rather than one, since the rebuild of 2026-09-12.** The day's
+   * heading was one `h1` reading "Среда, 13 Авг 2026 г."; the standing column
+   * prints the weekday as its own small label over the date (plan §5), and
+   * the date is set in full where the old heading abbreviated the month to fit
+   * a strip. Both halves are asserted, because the claim has always been that
+   * the whole heading redraws in Russian and the weekday is the half that is
+   * still read off the civil day.
+   */
+  await expect(page.locator('[data-day-word]')).toHaveText('Среда');
+  await expect(page.locator('.day-date')).toHaveText(/^13 Авг(уста)? 2026 г\.$/);
   await expect(page).toHaveTitle(/Православный святой/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the
@@ -1060,9 +1171,17 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // the grade leads the line, in Russian, from the pack's own vocabulary —
   // naming the *type* of fast since 2026-08-26 rather than the technical
   // term, which is why this reads Строгий пост and not Сухоядение.
-  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Строгий пост/);
-  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('Успенский пост');
-  await expect(page.locator('[data-liturgy]')).toContainText('Глас 3');
+  /*
+   * The fast and its occasion are one tag now rather than a line and a chip
+   * beside it (plan §6: the fast bubble and its controls are gone), and the
+   * cycle and the tone have the sidebar's own line. Every fact survives the
+   * move, which is what this asserts — the grade in Russian, the occasion it
+   * belongs to, and the tone — and none of them is read off the same element
+   * as before.
+   */
+  await expect(page.locator('.day-tags .tag[data-fast]')).toHaveText(/^Строгий пост/);
+  await expect(page.locator('.day-tags .tag[data-fast]')).toContainText('Успенский пост');
+  await expect(page.locator('.day-cycle')).toContainText('Глас 3');
 
   // And it is a setting, not a session: the reload comes back Russian.
   await page.reload({ waitUntil: 'networkidle' });
@@ -1390,7 +1509,7 @@ test('a flick clears a Continue reading row that a slow push of the same length 
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await page.goto(EMPTY, { waitUntil: 'networkidle' });
+  await onShelfPage(page);
 
   const rows = page.locator('.shelf-row');
   await expect(rows).toHaveCount(2);
@@ -1405,7 +1524,7 @@ test('a flick clears a Continue reading row that a slow push of the same length 
    */
   const push = async (distance, { pause = 0, steps = 8 } = {}) => {
     const name = rows.first().locator('.index-name');
-    const box = await name.boundingBox();
+    const box = await settledBox(name);
     const y = box.y + box.height / 2;
     const x = box.x + box.width / 2;
     await page.mouse.move(x, y);
@@ -1646,15 +1765,37 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
 
-  // And stepping the rail is what changes it, not only a fresh load.
+  /*
+   * And stepping the day inside the page is what changes it, not only a fresh
+   * load. The gesture is the sidebar's own `›` since the rebuild of
+   * 2026-09-12: the week rail carried a keyboard step and went with the rail
+   * (plan §6), and the two arrows either side of the day's word are what a
+   * reader has to move a day with now.
+   */
   await page.goto('/', { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
-  await page.keyboard.press('d');
+  await page.locator('.day-head .day-step[data-step="1"]').click();
   await expect(label).toHaveText('Today');
   // Pressing it goes back to today, and the word goes with it.
   await page.locator('.site-nav a[data-nav-daily]').click();
   await expect(label).toHaveText('Daily');
-  await expect(page.locator('.week-strip button.is-today')).toHaveAttribute('aria-current', 'date');
+  /*
+   * And the month grid says which day the page is showing, which on this one
+   * is the day it actually is. `aria-current="date"` was the week rail's
+   * button; the grid's cells are spans that pick nothing — picking a day is
+   * the full-screen calendar's — so the mark is `.is-today`, and the date it
+   * carries is asserted rather than the class alone, or this would pass with
+   * the mark on any square of the month.
+   */
+  const marked = page.locator('.day-side .cal-day.is-today');
+  await expect(marked).toHaveCount(1);
+  await expect(marked).toHaveAttribute(
+    'data-iso',
+    await page.evaluate(() => {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }),
+  );
 });
 
 test('the header is sticky, shorter, and the phone gets an endless centred nav', async ({ page }) => {
@@ -2543,7 +2684,7 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
    */
   await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
-  await page.goto('/', { waitUntil: 'networkidle' });
+  await onShelfPage(page);
   const row = page.locator('.shelf-row').first();
   await expect(row).toBeVisible();
   await expect(page.locator('.shelf-row .bookmark')).toHaveCount(0);
@@ -2823,7 +2964,7 @@ test('a file that is not an export changes nothing and says so', async ({ page }
   await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
 });
 
-test('the header takes one measure on every route, and stops at Daily’s column', async ({ page }) => {
+test('the header takes one measure on every route, Daily included', async ({ page }) => {
   /*
    * Author, 2026-09-01: "The header on Daily and Map page are different widths
    * from the All Saints and About page, make sure they are the same."
@@ -2862,13 +3003,13 @@ test('the header takes one measure on every route, and stops at Daily’s column
           header: r('header.chrome'),
           mark: r('header.chrome .site-name'),
           corner: r('header.chrome .chrome-corner'),
-          // Daily alone: the left column the bar is now the head of, and the
-          // sidebar whose width and gutter are what came out of the measure.
-          // Measured off the boxes rather than read off `--side-w`, which is
-          // `19rem` and does not compute to pixels through a custom property.
+          // Daily alone: the strip its saints are read down, and the standing
+          // column over its left edge. Measured off the boxes rather than read
+          // off `--td-side-w`, which is a `clamp()` and does not compute to
+          // pixels through a custom property (trap 9).
           bar: r('.chrome-bar'),
-          column: document.querySelector('.cal-main') ? r('.cal-main') : null,
-          side: document.querySelector('.cal-bubble') ? r('.cal-bubble') : null,
+          column: document.querySelector('.td-scroll') ? r('.td-scroll') : null,
+          side: document.querySelector('.day-side') ? r('.day-side') : null,
         };
       }),
     );
@@ -2893,38 +3034,38 @@ test('the header takes one measure on every route, and stops at Daily’s column
    * Where those controls went is asserted on Daily itself, in
    * `daily-panel.spec.js`, rather than inferred from a width here.
    *
-   * **And Daily's row now *ends* somewhere else on purpose, since 2026-09-10**
-   * (§2.2's last open piece): past 1024 px the bar is that page's left column's
-   * own head, so its box stops where the column does and the sidebar stands
-   * beside it rather than under it. That is the one difference between the
-   * four routes this test is allowed to have, and it is asserted as a
-   * *derivation* rather than excused — the row ends at the column's own right
-   * edge, and the distance back to where the other three end is exactly the
-   * sidebar and the gutter between them. A bar that simply lost 336 px would
-   * pass a constant and fail this.
-   *
-   * The three site routes keep the whole of what this test was written for:
-   * one box, one measure, whether or not the page under them scrolls.
+   * **Daily has no exception left, since the rebuild of 2026-09-12.** From
+   * 2026-09-10 that page's bar was its left column's own head: it stopped
+   * where the column stopped, with the sidebar standing beside it, and this
+   * test carried a derivation for the one route allowed to differ. The
+   * rebuilt page stands its column *inside* the view instead — the day is over
+   * the strip of saints, not the first cell of it (plan §5) — so the bar runs
+   * the full measure like every other route's. The four are asserted as four
+   * rather than as three and a special case, which is both the stronger claim
+   * and the one this test was written for: one box, one measure, whether or
+   * not the page under them scrolls.
    */
-  const [daily, ...site] = routes;
+  const [daily] = routes;
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
     expect(seen[i].mark, `${route} draws the mark in its own box`).toEqual(seen[0].mark);
-  }
-  for (const [i, route] of site.entries()) {
-    const s = seen[i + 1];
-    expect(s.header, `${route} lays the header out in its own box`).toEqual(seen[1].header);
-    expect(s.corner[1], `${route} ends the header row somewhere else`).toEqual(seen[1].corner[1]);
+    expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
+    expect(seen[i].corner[1], `${route} ends the header row somewhere else`).toEqual(seen[0].corner[1]);
+    expect(seen[i].bar, `${route} draws the chrome bar in its own box`).toEqual(seen[0].bar);
   }
 
+  /*
+   * And Daily's own two boxes are still what they claim to be: the strip runs
+   * the width of the page, and the standing column is *over* its left edge
+   * rather than beside it — which is the arrangement that stopped the bar
+   * needing an exception. Asserted here because this is the test that would
+   * otherwise go green on a Daily page that had quietly lost its column.
+   */
   const d = seen[0];
-  expect(d.column, `premise: ${daily} draws no left column at 1280`).not.toBeNull();
-  expect(d.bar[1], `${daily} does not stop the bar at the left column`).toBe(d.column[1]);
-  expect(d.corner[1], `${daily} ends the header row past its own column`).toBe(d.column[1]);
-  expect(
-    seen[1].corner[1] - d.corner[1],
-    `${daily} gives up ${seen[1].corner[1] - d.corner[1]} px where the sidebar and its gutter are ${d.side[1] - d.column[1]}`,
-  ).toBe(d.side[1] - d.column[1]);
+  expect(d.column, `premise: ${daily} draws no strip of saints at 1280`).not.toBeNull();
+  expect(d.side, `premise: ${daily} draws no standing column at 1280`).not.toBeNull();
+  expect(d.side[0], `${daily} does not stand its column at the strip's own left edge`).toBe(d.column[0]);
+  expect(d.side[1], `${daily} stands its column past the strip it is over`).toBeLessThan(d.column[1]);
 
   /*
    * And not on a phone, which the author scoped out ("make sure 5 6 7 are on
@@ -2940,6 +3081,19 @@ test('the header takes one measure on every route, and stops at Daily’s column
 });
 
 test('the masthead is one box on all six routes, at both widths and in both themes', async ({ page }) => {
+  /*
+   * **Twice Playwright's budget, for the same reason `map.spec.js` has one**
+   * (2026-09-12). This test makes twenty-four `networkidle` navigations — six
+   * routes, two widths, two themes — and two of them are the map, whose tile
+   * warm-up alone is ~2.7 s. It ran in 22 s of its 30 until the Daily rebuild,
+   * and the rebuilt day fetches a payload per saint of the day on paint (plan
+   * §11.7 f) where the old page fetched the hero's: four of those navigations
+   * are Daily, and the total crossed the line. Nothing it measures has changed
+   * and nothing is being waited for less carefully — the budget is the thing
+   * that was wrong, and a geometry test that times out reports a defect in the
+   * masthead it never looked at.
+   */
+  test.setTimeout(60_000);
   /*
    * Author, 2026-09-10: "Match the Daily page's site title to its size on
    * every other route… one size everywhere", and "make sure it sits in the
@@ -3024,41 +3178,33 @@ test('the masthead is one box on all six routes, at both widths and in both them
   expect(inkOn('/map'), 'a route other than Daily quietened its masthead').toBe(inkOn('/saints'));
 });
 
-test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', async ({ page }) => {
+test('Daily’s two boxes start on one line, and stand clear of the bar', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §2.2, the last piece of it. In the mockup
-   * the nav sits *inside* the grid's first column, so its rule and the rule
-   * under the sidebar's control row are the same line across the gutter. In
-   * the app the bar is a sibling of `main`, above the whole grid, and until
-   * 2026-09-10 the sidebar therefore began a head below it.
+   * **What this test was, and what the rebuild left of it.** It pinned
+   * docs/daily-desktop-visuals.md §2.2's last piece: the nav's rule and the
+   * rule under the sidebar bubble's control row were one line across the
+   * gutter, because in the mockup the nav sat inside the grid's first column.
+   * The rebuilt page has no bubble and no control row to rule off (plan §5,
+   * §6) — the standing column is a plain opaque block over the strip of
+   * saints — so the levelling it asserted has no boxes left to be about.
    *
-   * **Three things are asserted because three separate mistakes would each
-   * look right in one of the others' pictures.**
+   * Three claims of the four survive the change, and they are the three that
+   * were about the reader rather than about that particular ornament:
    *
-   *  - **The rules are level**, which is the change. Their foots, not their
-   *    tops: the bar's is a `border-bottom` inside a `min-height` box and the
-   *    head's is a `border-bottom` inside a `min-height` box, and it is the
-   *    line the reader sees that has to agree.
-   *  - **Nothing in the left column moved.** `main` rose by the bar's own
-   *    reserve and the column pays it straight back as a top margin, so the
-   *    date block starts exactly where it did. A change that levelled the two
-   *    by dropping the sidebar's head lower, or by lifting the whole page,
-   *    would pass the first assertion and fail this one.
-   *  - **The sidebar is clear of the bar's box.** The bar is `position:
-   *    sticky` at `z-index: 20`; a bubble raised into its band under a bar
-   *    still spanning the page would have three live controls lying under an
-   *    invisible sheet. Asserting the geometry is not enough for that one, so
-   *    the church control is asked what is on top of it at its own centre.
-   *
-   * **And a fourth since 2026-09-10**: the bubble stands off the ceiling
-   * rather than touching it (author: "The sidebar's top currently touches the
-   * ceiling of the page. Give it a margin, and keep the two heads level"). It
-   * rode into the bar's band at `top: 0` when the two heads were levelled
-   * earlier the same day. The inset is `--bub-inset` on `.cal-bubble` and the
-   * fill gives up the same amount of its own top padding, so the rule at the
-   * head's foot does not move — which is why the margin and the levelling are
-   * asserted in one test rather than two: they are one arithmetic, and either
-   * one alone can be satisfied by breaking the other.
+   *  - **The day's two boxes start on the same line.** The column and the
+   *    strip it stands over are the whole page, and a column that began a head
+   *    below the saints — or above them — is the defect the levelling was
+   *    written against, in the arrangement that replaced it.
+   *  - **They stand off the ceiling by a real margin**, rather than touching
+   *    the bar (author, 2026-09-10: "The sidebar's top currently touches the
+   *    ceiling of the page. Give it a margin"). `--space-6`, read off the drawn
+   *    boxes rather than off the declaration.
+   *  - **They are clear of the bar's own box.** The bar is `position: sticky`
+   *    at `z-index: 20`, and a page raised into its band would have live
+   *    controls lying under an invisible sheet. Geometry alone cannot see that,
+   *    so two controls — the header's church button and the sidebar's own day
+   *    step, one either side of the seam — are asked what is on top of them at
+   *    their own centres.
    *
    * At both widths, and in a wide utility face: every box here is sized from
    * text and `--chrome-h-reserve` is a measured constant.
@@ -3070,35 +3216,36 @@ test('Daily’s two heads are one line: the nav’s rule and the sidebar’s', a
     await page.evaluate(() => document.fonts.ready);
 
     const m = await page.evaluate(() => {
-      const foot = (s) => {
+      const top = (s) => document.querySelector(s).getBoundingClientRect().top;
+      const onTopOf = (s) => {
         const el = document.querySelector(s);
         const b = el.getBoundingClientRect();
-        // The rule is the border, and the border's own foot is the box's.
-        return b.bottom;
+        const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2);
+        return Boolean(hit) && (hit === el || el.contains(hit));
       };
-      const church = document.querySelector('#church-open').getBoundingClientRect();
-      const onTop = document.elementFromPoint(church.left + church.width / 2, church.top + church.height / 2);
       return {
-        navRule: foot('header.chrome'),
-        headRule: foot('.cal-bubble-head'),
-        dateTop: document.querySelector('.cal-head').getBoundingClientRect().top,
         barBottom: document.querySelector('.chrome-bar').getBoundingClientRect().bottom,
-        sideTop: document.querySelector('.cal-bubble').getBoundingClientRect().top,
-        reaches: onTop ? onTop.closest('#church-open') !== null : false,
+        sideTop: top('.day-side'),
+        stripTop: top('.td-scroll'),
+        tileTop: top('.day-tile'),
+        churchReaches: onTopOf('#church-open'),
+        stepReaches: onTopOf('.day-head .day-step'),
       };
     });
 
     const at = `at ${width} px`;
-    expect(Math.abs(m.navRule - m.headRule), `the two rules are ${m.navRule} and ${m.headRule} ${at}`).toBeLessThan(1);
-    expect(m.sideTop, `the sidebar still starts below the bar ${at}`).toBeLessThan(m.barBottom);
-    // A real margin: `--space-4`, the same inset `main` already pays at the
-    // foot, and read off the drawn box rather than off the declaration.
-    expect(m.sideTop, `the sidebar's top touches the ceiling ${at}`).toBeCloseTo(16, 0);
-    // 8 px under the bar — `--headgap`, and where the date has stood since
-    // step 7. Stated as a number because the whole claim is that it did not
-    // move when everything around it did.
-    expect(m.dateTop - m.barBottom, `the date block moved with the sidebar ${at}`).toBeCloseTo(8, 0);
-    expect(m.reaches, `the bar's box lies over the sidebar's own controls ${at}`).toBe(true);
+    expect(
+      Math.abs(m.sideTop - m.stripTop),
+      `the column starts at ${m.sideTop} and the strip at ${m.stripTop} ${at}`,
+    ).toBeLessThan(1);
+    // The first saint starts on that line too: the strip is the box, and a tile
+    // pushed down inside it would satisfy the line above and still be wrong.
+    expect(Math.abs(m.tileTop - m.sideTop), `the first tile is not level with the column ${at}`).toBeLessThan(1);
+    expect(m.sideTop, `the day starts above the bar ${at}`).toBeGreaterThan(m.barBottom);
+    // `--space-6`, the gutter the strip also keeps from the column beside it.
+    expect(m.sideTop - m.barBottom, `the day's boxes touch the ceiling ${at}`).toBeCloseTo(24, 0);
+    expect(m.churchReaches, `the bar's own control is under something ${at}`).toBe(true);
+    expect(m.stepReaches, `the bar's box lies over the sidebar's own controls ${at}`).toBe(true);
   }
 });
 

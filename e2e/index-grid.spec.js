@@ -698,57 +698,70 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
 /* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */
 
 
-test('Also commemorated is a column of saint cards, not a list of links', async ({ page }) => {
+test('the day is a column of saint cards, not a list of links', async ({ page }) => {
   /*
    * Author, 2026-08-24: "display the saint card row layout instead of the
-   * text only". The rest of the day now shows what it always was — a picture,
-   * a lifespan, and Save where every other card on the site keeps it — in the
-   * Index's own row dress, so the Daily page and All Saints read as one
-   * register. The church's title for the day ("Venerable, the Great") is what
-   * these rows carry that no other card does, and it survives the change.
+   * text only". The rest of the day showed what it always was — a picture, a
+   * lifespan, and the church's own title for the day — in the Index's row
+   * dress, under a hero card, as *Also commemorated*.
    *
-   * 1 September 2026 in the Russian calendar: Pitirim of Perm is the hero and
-   * six more are commemorated under him.
+   * **The hero and the register are one grid since the rebuild of
+   * 2026-09-12** (plan §5, §6): every saint of the day is a tile, the first of
+   * them opens as a card, and no saint is printed twice. What the author asked
+   * for that day survives the arrangement unchanged and is what this still
+   * asserts — a saint here is a card with a picture's slot and a lifespan on
+   * it, never a bare name in a list.
+   *
+   * 1 September 2026 in the Russian calendar: Pitirim of Perm leads and six
+   * more are commemorated with him.
    */
   await ready(page);
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
-  const cards = page.locator('.register-cards .reg-card');
-  await expect(cards).toHaveCount(6);
+  const cards = page.locator('.day-grid .day-tile');
+  // Seven, not six: the hero is one of them now rather than a card above them.
+  await expect(cards).toHaveCount(7);
 
   /*
-   * **Pinned by name rather than read off the first card** (2026-09-02). The
-   * register is ordered tallest-picture-first now (author: "reorder the daily
-   * saints cards in order from tallest saint image to shortest to no saint
-   * image"), so which saint is first is a fact about the icons rather than
-   * about this test's subject — which is that a saint here is a card with a
+   * **Pinned by name rather than read off the first card** (2026-09-02), which
+   * matters as much now as it did when the register was ordered by the height
+   * of the pictures: which saint leads is `pickHero`'s judgement about the
+   * day, and this test's subject is that a saint here is a card with a
    * lifespan on it, whoever they are and wherever they fall.
    */
   const agapius = cards.filter({ hasText: 'Martyr Agapius of Gaza' });
-  await expect(agapius, 'premise: Agapius is not in this day’s register').toHaveCount(1);
-  await expect(agapius.locator('.reg-sub')).toContainText('304–306');
+  await expect(agapius, 'premise: Agapius is not among this day’s saints').toHaveCount(1);
+  await expect(agapius.locator('.row-sub').first()).toContainText('304–306');
 
   /*
-   * **Every row keeps its picture's slot, and none of them keeps a mark**
+   * **Every tile keeps its picture's slot, and none of them keeps a mark**
    * (author, 2026-08-27, of the row cards: "remove the bookmark entirely, and
    * just have the image square to the right side, giving more space for the
    * text").
    *
-   * One of the six has an icon. The other five hold the slot without drawing
-   * in it, which is not the empty frame the author struck out on 2026-08-26
-   * ("remove the empty frame and just print the text all the way to the left
-   * margin of the card") — that one stood *before* the name and pushed every
-   * title in from the margin. This one is after the name, at the trailing
-   * edge, so the names still start at the card's own margin while the pictures
-   * that do exist still hold one column.
+   * Two of the seven have an icon — the leading saint is one of them, which is
+   * the card the register never counted because the hero was a card of its
+   * own. The other five hold the slot without drawing in it: the type's own
+   * mark stands there instead of an empty frame, which is the 2026-08-26
+   * instruction kept in the tiles' own idiom.
    */
-  await expect(cards.locator('.reg-thumb img')).toHaveCount(1);
-  await expect(cards.locator('.reg-thumb')).toHaveCount(6);
+  await expect(cards.locator('.row-media img')).toHaveCount(2);
+  await expect(cards.locator('.row-media')).toHaveCount(7);
   await expect(cards.locator('.bookmark')).toHaveCount(0);
-  // The hero is not repeated among them.
-  await expect(page.locator('.register-cards')).not.toContainText('Pitirim');
+  // And nobody is printed twice: the hero is in the grid, once.
+  await expect(cards.filter({ hasText: 'Pitirim' })).toHaveCount(1);
 
-  // The row still opens the saint, which is now the only thing it does.
-  await agapius.locator('.reg-name').click();
+  /*
+   * The tile opens on a press, and the name inside the open card is the way
+   * through to the whole life (plan §11.7 a). Both halves are pressed here,
+   * because the first is what took the register row's link away and the second
+   * is what gives it back — a Daily page where the name never became a link
+   * would be a dead end, and it would pass a test that only opened the card.
+   */
+  await agapius.locator('.row-name').click();
+  await expect(agapius).toHaveClass(/is-open/);
+  // Whichever of the card's two names is the drawn one: a card with no picture
+  // gives its column's head to `.row-name-in` and hides the other.
+  await agapius.locator('a.row-link:visible').first().click();
   await expect(page.locator('h1.saint-name')).toHaveText('Martyr Agapius of Gaza');
   // Save is still there, on the page the author sent anyone who wants it.
   await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
@@ -832,13 +845,16 @@ test('a lifespan with nothing at either end says Undated, capitalised', async ({
   // the Russian calendar keeps and no source dates.
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
-  const dates = page.locator('.reg-card .reg-sub');
+  // On the tiles since the rebuild of 2026-09-12: the register the subtext was
+  // read off is gone and the line it carried is `.row-sub` on a saint's own
+  // tile. The word is the claim, not the card it is printed on.
+  const dates = page.locator('.day-tile .row-sub');
   await expect(dates.filter({ hasText: 'Undated' }).first()).toBeVisible();
   await expect(dates.filter({ hasText: /^undated$/ })).toHaveCount(0);
 });
 
 
-test('every row starts its name at the card margin, picture or no picture', async ({ page }) => {
+test('every row starts its name at the same edge, picture or no picture', async ({ page }) => {
   /*
    * Author, 2026-08-26: "where a saint has no icon, in the row card, remove
    * the empty frame and just print the text all the way to the left margin of
@@ -878,34 +894,51 @@ test('every row starts its name at the card margin, picture or no picture', asyn
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await expect(page.locator('.register-view').first(), 'premise: a phone is offering a choice of face').toBeHidden();
+  /*
+   * **A folded tile is the row now** (plan §4, 2026-09-12). The register the
+   * rows were drawn in is gone, and a phone reads the day as a column of
+   * tiles: folded, each is a picture's slot and a name beside it — the same
+   * shape, drawn by `daily-tiles.css` rather than by the Index's row dress.
+   *
+   * **And the slot is never empty, which reverses half of 2026-08-26.** The
+   * author struck out an empty frame before the name; what stands there now is
+   * the saint's own type as a drawn mark, so the column that used to be a
+   * promise of a picture is a fact about the saint. The claim that survives —
+   * and it is the one the instruction was about — is that a saint with no icon
+   * does not pull the column about: one left edge and one height down the day,
+   * whether or not the corpus has a picture.
+   *
+   * The open card is excluded on both sides: it is a card and not a row, it is
+   * as tall as a life, and comparing it with a folded tile would be comparing
+   * two different things.
+   */
   const seen = await page.evaluate(() => {
-    const withPicture = document.querySelector('.reg-card:has(.reg-thumb img)');
-    const without = document.querySelector('.reg-card:not(:has(.reg-thumb img))');
+    const folded = [...document.querySelectorAll('.day-tile:not(.is-open)')];
+    const withPicture = folded.find((t) => t.querySelector('.row-media img'));
+    const without = folded.find((t) => !t.querySelector('.row-media img'));
     const inset = (row) => {
       const card = row.getBoundingClientRect();
-      const name = row.querySelector('.reg-name').getBoundingClientRect();
-      const media = row.querySelector('.reg-thumb');
+      const name = row.querySelector('.row-name').getBoundingClientRect();
+      const media = row.querySelector('.row-media').getBoundingClientRect();
       return {
         gap: name.left - card.left,
         height: card.height,
-        mediaLeft: media ? media.getBoundingClientRect().left : null,
-        nameRight: name.right,
+        mediaLeft: media.left - card.left,
+        mediaWidth: media.width,
       };
     };
     return { withPicture: inset(withPicture), without: inset(without) };
   });
-  // The name begins at the card's own padding on both, which is the whole
-  // point of the reformat: one left edge down a scrolling register.
-  expect(seen.without.gap).toBeLessThan(16);
-  expect(seen.withPicture.gap).toBeLessThan(16);
+  // One left edge down the day, whichever the slot holds.
   expect(Math.abs(seen.without.gap - seen.withPicture.gap)).toBeLessThan(2);
-  // And the picture is past the name, not in front of it.
-  expect(seen.withPicture.mediaLeft).toBeGreaterThan(seen.withPicture.gap);
-  // Both rows are still the same height. This list is not virtualised — that
-  // was the Index's reason and it left with the Index's row — but a register
-  // whose rows change height depending on whether a saint has an icon reads as
-  // ragged, and the held slot is what stops it.
+  // And the mark is drawn in the slot rather than the slot being held empty —
+  // the same box in the same place, carrying something.
+  expect(seen.without.mediaWidth).toBeGreaterThan(8);
+  expect(Math.abs(seen.without.mediaLeft - seen.withPicture.mediaLeft)).toBeLessThan(2);
+  expect(seen.withPicture.gap).toBeGreaterThan(seen.withPicture.mediaLeft + seen.withPicture.mediaWidth - 1);
+  // Both rows are still the same height. A day whose rows change height
+  // depending on whether a saint has an icon reads as ragged, and the held
+  // slot is what stops it.
   expect(Math.abs(seen.without.height - seen.withPicture.height)).toBeLessThan(2);
 });
 
@@ -1035,15 +1068,28 @@ test('a saint is named by rank, and what they held is on the line below', async 
   await ready(page, { church: 'greek', language: 'en' });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  await expect(page.locator('.hero-name')).toHaveText('Venerable Moses the Ethiopian');
-
-  const register = page.locator('.day-panel .register .reg-name');
-  await expect(register.filter({ hasText: 'Hezekiah' })).toHaveText('Righteous Hezekiah');
-  await expect(register.filter({ hasText: 'Anna' })).toHaveText('Prophetess Anna, daughter of Phanuel');
+  /*
+   * On the day's own tiles since the rebuild of 2026-09-12 (plan §6): the hero
+   * card and the register under it are one grid, so the leading saint's name
+   * is the first tile's and the rest are the tiles after it. The names
+   * themselves are `lib/honorific.js`'s and have not moved.
+   */
+  const named = page.locator('.day-grid .day-tile .row-name');
+  await expect(named.first()).toHaveText('Venerable Moses the Ethiopian');
+  await expect(named.filter({ hasText: 'Hezekiah' })).toHaveText('Righteous Hezekiah');
+  await expect(named.filter({ hasText: 'Anna' })).toHaveText('Prophetess Anna, daughter of Phanuel');
   // Not "Hezekiah the Righteous, King of Judah": the rank leads, the office
   // has moved down a line, and the death year is read off `dates.death`.
-  const hezekiah = page.locator('.day-panel .register .reg-card', { hasText: 'Hezekiah' });
-  await expect(hezekiah.locator('.reg-sub')).toHaveText('King of Judah · Reposed 696 BC');
+  const hezekiah = page.locator('.day-grid .day-tile', { hasText: 'Hezekiah' });
+  await expect(hezekiah.locator('.row-sub')).toContainText('King of Judah · Reposed 696 BC');
+  /*
+   * And the rank is *said* as well as drawn, on a tile with no picture: the
+   * mark that stands in the picture's slot is `aria-hidden`, so the subtext
+   * carries the word for it where the office does not already say it. Asserted
+   * here because it is the other half of the same line and the reason the text
+   * above is a `toContainText` rather than an equality.
+   */
+  await expect(hezekiah.locator('.row-sub .sr-only')).toHaveText('Righteous');
 
   /*
    * And "St" is the marked case now — 58 of 781, the hierarchs and the
@@ -1094,7 +1140,7 @@ test('a saint is named by rank, and what they held is on the line below', async 
     localStorage.setItem(key, JSON.stringify({ ...now, language: 'el' }));
   });
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Όσιος');
+  await expect(page.locator('.day-grid .day-tile .row-name').first()).toContainText('Όσιος');
 
   /*
    * **And Athanasius reads the same way** (author, 2026-08-28: "do hierarch

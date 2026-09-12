@@ -187,15 +187,21 @@ test('saving persists across a reload, and the shelf agrees', async ({ page }) =
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
 
-  // And the saved shelf on the habit page knows about it. Anthony is that
-  // day's hero, so the page that used to answer twice now answers once — the
-  // count is asserted rather than assumed, or this test would go on passing
-  // if a mark came back somewhere it was told to leave.
+  /*
+   * And the saved shelf knows about it — on a phone's saint page, which is
+   * where the shelves are read since the Daily rebuild of 2026-09-12 took them
+   * off the day (plan §11.5). The Daily page is still asked the other half of
+   * the question first, because that is the claim: the day carries no mark of
+   * its own, on the tile the saint is drawn in or anywhere else, so this store
+   * has exactly one writer and the shelf is the second reader.
+   */
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero .bookmark')).toHaveCount(0);
-  await expect(page.locator('.register .bookmark')).toHaveCount(0);
-  await expect(page.locator('.shelves')).toContainText('Saved');
-  await expect(page.locator('.shelves a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
+  await expect(page.locator('.day-tile .bookmark')).toHaveCount(0);
+  await expect(page.locator('.day-side .bookmark')).toHaveCount(0);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-shelves]')).toContainText('Saved');
+  await expect(page.locator('[data-shelves] a[data-prefetch="anthony-the-great"]').first()).toBeVisible();
   /*
    * **And the shelf carries no mark at all** (author, 2026-08-28: "Remove
    * bookmark on continue reading row cards").
@@ -214,7 +220,7 @@ test('saving persists across a reload, and the shelf agrees', async ({ page }) =
    * discovered — if a mark is ever wanted here, this is the test that says it
    * is missing on purpose.
    */
-  await expect(page.locator('.shelves .bookmark')).toHaveCount(0);
+  await expect(page.locator('[data-shelves] .bookmark')).toHaveCount(0);
   // The saint's page is the one place that still offers it, and still knows.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('.saint-head .bookmark')).toHaveAttribute('aria-pressed', 'true');
@@ -313,13 +319,49 @@ test('a saint page carries the saint own hymns, the reader church first', async 
    * named on each, which on the Daily page it never needs to be. The reader's
    * own church leads, because that is the calendar the site is read in.
    */
+  /*
+   * **Nine objects, four readings, and which number a reader is shown depends
+   * on the language they read in** (2026-09-12, when the corpus finished its
+   * English). `mergeForReading` (`ui/hymns.js`) collapses hymns by their
+   * rendered English and never in the data: Adrian's nine are nine hymns in
+   * four traditions' books, and an English reader meets the four distinct
+   * texts among them with every church that sings each one named on it. That
+   * is the author's own rule — "no double ups; if there is a troparion in
+   * Russian and Greek, they should be the same when translated to English" —
+   * and it only became visible when almost every object had an English to be
+   * collapsed by. This test pinned the 9 because, when it was written, there
+   * was nothing to merge.
+   *
+   * So both numbers are asserted, in the two readings that produce them,
+   * rather than one of them being relaxed into a range.
+   */
   await ready(page, { church: 'greek' });
   await page.goto('/saints/adrian-of-nicomedia', { waitUntil: 'networkidle' });
   const hymns = page.locator('.saint-hymns .hymn');
-  await expect(hymns).toHaveCount(9);
-  await expect(hymns.first().locator('.hymn-kind')).toContainText('Greek');
-  // Untranslated, in the source's own tongue, tagged so a screen reader knows.
-  await expect(hymns.first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
+  await expect(hymns).toHaveCount(4);
+  // The reader's own church leads, because that is the calendar the site is
+  // read in — and the merged reading carries every church that sings it, which
+  // is what makes one reading honest in place of three.
+  const lead = hymns.first().locator('.hymn-kind');
+  await expect(lead).toContainText('Greek');
+  await expect(lead).toContainText('Romanian');
+  await expect(lead).toContainText('Russian');
+  await expect(hymns.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
+
+  /*
+   * And a reader in one of those churches' own languages is shown all nine,
+   * each tradition's own hymn intact in its own tongue, tagged so a screen
+   * reader knows — which is the half the merge must never touch.
+   */
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'el' }));
+  });
+  await page.goto('/saints/adrian-of-nicomedia', { waitUntil: 'networkidle' });
+  await expect(page.locator('.saint-hymns .hymn')).toHaveCount(9);
+  await expect(page.locator('.saint-hymns .hymn').first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
+
   // And a saint the corpus has no hymns for prints no heading over nothing.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('.saint-hymns')).toHaveCount(0);
@@ -351,7 +393,9 @@ test('a saint is named in the reader own language where the corpus has the name'
     );
     if (language === 'ru') {
       await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
-      await expect(page.locator('.hero-name'), language).toHaveText(name);
+      // The day's leading saint is the first tile of the grid since the rebuild
+      // of 2026-09-12 (plan §6); the name it prints is the same one.
+      await expect(page.locator('.day-tile .row-name').first(), language).toHaveText(name);
     } else {
       await page.goto('/saints/moses-the-prophet', { waitUntil: 'networkidle' });
       await expect(page.locator('h1.saint-name'), language).toHaveText(name);
@@ -410,11 +454,22 @@ test('a general troparion reads in Orloff’s English, and the original stays fo
   );
   await enPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
   const rendered = enPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' });
-  // Two, and that is the point rather than a slip: Mamas sings the martyrs'
-  // common troparion in the Greek *and* the Romanian, they are two hymns in
-  // two churches' books, and each gets its own rendering with its own
-  // citation. The corpus does not merge them into one.
-  await expect(rendered).toHaveCount(2);
+  /*
+   * **One reading, naming both churches** (2026-09-12). Mamas sings the
+   * martyrs' common troparion in the Greek *and* the Romanian: two hymns, in
+   * two churches' books, and the corpus still keeps both — but they are the
+   * same words once rendered, so an English reader is shown one of them with
+   * both churches named on it rather than the same paragraph twice.
+   * `mergeForReading` collapses at the reading and never in the data, which is
+   * why the Greek reader below still meets the Greek.
+   *
+   * This asserted 2 until the corpus finished its English; what it was really
+   * claiming — that the rendering is Orloff's, cited, and offered only to the
+   * reader reading English — is unchanged and is asserted below.
+   */
+  await expect(rendered).toHaveCount(1);
+  await expect(rendered.first().locator('.hymn-kind')).toContainText('Greek');
+  await expect(rendered.first().locator('.hymn-kind')).toContainText('Romanian');
   await expect(rendered.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
   await expect(rendered.first().locator('.hymn-source')).toContainText('Orloff');
   await expect(rendered.first().locator('.hymn-source')).toContainText('1899');
@@ -431,19 +486,38 @@ test('a general troparion reads in Orloff’s English, and the original stays fo
   await el.close();
 });
 
-test('the hymns Orloff does not print are still the original in English', async ({ page }) => {
+test('the hymns Orloff does not print are never lent his words', async ({ page }) => {
   /*
    * Orloff prints the *singular* martyr's troparion and, for many martyrs, a
    * different hymn altogether — so «Мученицы Твои, Господи … венцы прияша»,
    * which four saints here sing, has no English in that book. The temptation
-   * is to lend it the singular's words. This says the corpus would rather
-   * print the Slavonic than print something the source does not.
+   * is to lend it the singular's words, and the whole of this test is that the
+   * corpus refuses to.
+   *
+   * **What refusing looks like changed on 2026-09-12.** Until the corpus
+   * finished its own English, refusing meant printing the Slavonic to an
+   * English reader, and this test asserted exactly that. The plural troparion
+   * now has a rendering made here — marked as one, the 2026-09-07 convention —
+   * so an English reader meets the plural in English. The claim is the same and
+   * it is the negative half that carries it: these are not Orloff's singular
+   * words wearing a plural's citation.
    */
   await ready(page, { church: 'russian', language: 'en' });
   await page.goto('/saints/photius-of-nicomedia', { waitUntil: 'networkidle' });
   const hymns = page.locator('[data-hymns-box]');
-  await expect(hymns).toContainText('Мученицы Твои');
+  await expect(hymns).toContainText('Thy martyrs, O Lord');
   await expect(hymns).not.toContainText('Thy martyr, O Lord');
+  await expect(hymns.locator('.hymn-source').first()).toContainText('Rendered for this site');
+  await expect(hymns.locator('.hymn-source').first()).not.toContainText('Orloff');
+
+  // And a Russian reader still meets the Slavonic the corpus recorded.
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'ru' }));
+  });
+  await page.goto('/saints/photius-of-nicomedia', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-hymns-box]')).toContainText('Мученицы Твои');
 });
 
 test('the saints dated this batch print their dates rather than Undated', async ({ page }) => {
@@ -526,10 +600,34 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
   // «Τὰ πάθη Χριστοῦ» typed here does not match «Τὰ πάθη Χριστοῦ» there. It is
   // the same family of trap as JavaScript's ASCII-only , which matched
   // nothing in Greek at Amendment 41.
-  const hymn = page.locator('[data-hymns-box] .hymn-text[lang="el"]').first();
+  /*
+   * The hymn is there in whichever language the page is being read in, and
+   * both readings are asserted because 2026-09-12's English made them differ:
+   * an English reader meets the site's own rendering of it, and the Greek text
+   * — the thing that was actually asked for — belongs to the Greek reader.
+   * Checked rather than assumed: a Greek text missing from a Greek reading
+   * would be a real regression, and this is where it would show.
+   */
+  await expect(page.locator('[data-hymns-box] .hymn')).toHaveCount(1);
+  await expect(page.locator('[data-hymns-box] .hymn-kind').first()).toContainText('Kontakion');
+  await expect(page.locator('[data-hymns-box] .hymn-text').first()).toHaveAttribute('lang', 'en');
+
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'el' }));
+  });
+  await page.goto('/saints/eustathius-the-great-martyr', { waitUntil: 'networkidle' });
+  const hymn = page.locator('[data-hymns-box] .hymn-text[lang="el"]');
   await expect(hymn).toHaveCount(1);
   await expect(hymn).toContainText(/μιμησ/);
-  await expect(page.locator('[data-hymns-box] .hymn-kind').first()).toContainText('Kontakion');
+  // And back to the reader this test started with: everything below is about
+  // what an English reader is shown, and a stored language outlives a goto.
+  await page.evaluate(() => {
+    const key = 'gos-settings';
+    const now = JSON.parse(localStorage.getItem(key) ?? '{}');
+    localStorage.setItem(key, JSON.stringify({ ...now, language: 'en' }));
+  });
 
   // The three churches that were not read say so, rather than implying a
   // refusal — behind the disclosure, because the reader's own church is the
@@ -1105,7 +1203,7 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
   await page.evaluate(() => document.fonts.ready);
   const daily = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();
-    return { main: [Math.round(r('.cal-main').left), Math.round(r('.cal-main').right)] };
+    return { main: [Math.round(r('.td-scroll').left), Math.round(r('.td-scroll').right)] };
   });
 
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -1117,7 +1215,23 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
       side: [Math.round(r('.saint-side').left), Math.round(r('.saint-side').right)],
     };
   });
-  expect(saint.main, 'the life does not sit in the Daily page’s left column').toEqual(daily.main);
+  /*
+   * **The margins, not the column, since the rebuild of 2026-09-12.** Until
+   * then the Daily page had a left column of its own and this asserted the
+   * two rects were the same. The rebuilt day has no such column — the strip of
+   * saints takes the whole measure and the standing column is over its left
+   * edge (plan §5) — so the equality it asserted no longer has two comparable
+   * boxes behind it.
+   *
+   * What the author asked for survives as the outer margins: the life starts
+   * where the day's own content starts, and the column beside it ends where
+   * the day's ends. That is still measured against the other page rather than
+   * against a literal, which is the half of this test that was worth keeping —
+   * a hard-coded 1025 px would pass on the day it was written and say nothing
+   * afterwards.
+   */
+  expect(saint.main[0], 'the life does not start at the Daily page’s own left margin').toBe(daily.main[0]);
+  expect(saint.side[1], 'the column beside the life does not end where the day ends').toBe(daily.main[1]);
   expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThan(saint.main[1]);
 
   // A row view, scrolled inside its own box, and drawing no bar to do it.
