@@ -41,7 +41,22 @@ import { countFor, dayRecordFor } from './entries.js';
 import { reckonedMonth, reckonedPlain, utc, weekdayFmt } from './format.js';
 
 import { state } from './state.js';
-import { stepCursor } from './picker.js';
+
+/**
+ * A month either side of the one showing — the whole of what this dialog has
+ * ever needed from the month picker.
+ *
+ * It lived in `picker.js` until that file was deleted with the week rail and
+ * the small month view (2026-09-12), and it came here rather than to
+ * `lib/calendar-page.js` because this is now its only caller: three lines of
+ * modular arithmetic over a `{year, month}` pair, with no calendar and no
+ * state behind them. December steps to the following January and January back
+ * to the previous December, which `Math.floor` of a negative gives for free.
+ */
+const stepCursor = (c, n) => ({
+  year: c.year + Math.floor((c.month + n - 1) / 12),
+  month: ((c.month + n - 1 + 12) % 12) + 1,
+});
 
 /*
  * A format of its own, because `format.js`'s month carries the year with it —

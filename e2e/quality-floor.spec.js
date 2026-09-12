@@ -157,72 +157,108 @@ for (const [label, path, prepare] of ROUTES) {
  * fast's colour-by-kind honest. It had never been audited, executably or by
  * hand, until 2026-08-28.
  *
- * The rail's marks are where it failed. Each day can carry up to three dots —
- * a strict fast, fish-permitted, a feast — and they were one 5 px disc in three
- * hues: same size, same `border-radius: 50%`, same position, differing in
- * `background` and in nothing else. The words exist, but only in the button's
- * `aria-label`; the dots are `aria-hidden`. So a screen reader was told which
- * mark it was and a sighted reader who cannot separate the hues was not, which
- * is the one reader this criterion is written for.
+ * **Rewritten for the month grid on 2026-09-12**, in the same commit that
+ * deleted the week rail rather than after it: the obligation is an
+ * accessibility floor, and there must be no commit in which nothing is holding
+ * it. What it used to watch was `.week-strip .day-marks` — up to three 5 px
+ * discs under a date, one `border-radius: 50%` in three hues, differing in
+ * `background` and in nothing else. The rail is gone; `views/daily/sidebar.js`
+ * draws the month instead, and a day's marks are carried by the numeral itself
+ * rather than by dots beside it.
  *
- * The assertion is deliberately about *shape and not hue*: it compares the
- * non-colour computed styles and requires every pair of kinds to differ in at
- * least one of them. Asserting the colours differ would pass on the defect.
+ * So the floor is tested on both of the grid's channels, because the grid uses
+ * a different one for each mark:
+ *
+ * - **the feast has a shape** — a rule under the numeral — and the assertion is
+ *   deliberately about shape and *not* hue: it compares the non-colour computed
+ *   styles, with every colour in them masked out. Asserting the colours differ
+ *   would pass on the defect.
+ * - **every mark has its words**, in the cell's own accessible name, which is
+ *   the cell a reader lands on rather than an `aria-hidden` dot beside it.
+ *
+ * **And it says where the floor is thinner than it was.** A strict fast and a
+ * fish day are the same numeral in two hues: `--fast-strict` and `--fast-fish`
+ * on `.cal-day`, and nothing else. The words in the accessible name are the
+ * whole of the second channel for that pair, so a sighted reader who cannot
+ * separate the two hues is not told which they are looking at — the very
+ * reader the 2026-08-28 audit was written for. That is a live gap in
+ * `daily-sidebar.css`, not an omission in this test, and it is written down
+ * here because a test is where the next reader will look.
  */
-test('a day mark is told apart by shape, not only by hue', async ({ page }) => {
+test('a day in the month grid is told apart by shape and by words, not only by hue', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
   const shapes = await page.evaluate(() => {
-    const kinds = ['mark-fast', 'mark-fish', 'mark-feast'];
-    const out = {};
     /*
-     * Probe elements in the rail's own row rather than whichever marks this
-     * week happens to carry. The first version read the live dots and asserted
-     * its own premise, which is how it reported that 30 January's week stands
-     * only a strict fast: one kind, and a comparison of one thing against
-     * itself is green for the wrong reason.
-     *
-     * The question here is exactly "do these three classes draw differently
-     * with the colour taken away", which is a fact about the stylesheet and not
-     * about the corpus — and the corpus is free to stop having a fish week.
-     * They are mounted inside a real `.day-marks` row so anything inherited or
-     * descendant-scoped applies as it does in place.
+     * Probe cells mounted in the real grid rather than whichever marks this
+     * month happens to carry. The rail's first version read the live dots and
+     * asserted its own premise, which is how it reported that 30 January's
+     * week stands only a strict fast: one kind, and a comparison of one thing
+     * against itself is green for the wrong reason. The question is "do these
+     * classes draw differently with the colour taken away", which is a fact
+     * about the stylesheet and not about the corpus — and the corpus is free
+     * to stop having a fish week.
      */
-    const row = document.querySelector('.week-strip .day-marks') ?? document.querySelector('.week-strip button');
-    for (const kind of kinds) {
+    const grid = document.querySelector('.cal');
+    const out = {};
+    for (const kind of ['plain', 'is-fast', 'is-fish', 'is-feast']) {
       const el = document.createElement('span');
-      el.className = `day-mark ${kind}`;
-      row.append(el);
+      el.className = kind === 'plain' ? 'cal-day' : `cal-day ${kind}`;
+      el.textContent = '8';
+      grid.append(el);
       const s = getComputedStyle(el);
-      // Everything a reader could tell the marks apart by *except* colour.
+      // Everything a reader could tell the cells apart by *except* colour: any
+      // colour inside a shadow or an outline is masked, so a rule that differs
+      // only in its ink reads here as no rule at all.
+      const noInk = (v) => String(v).replace(/(rgba?\([^)]*\)|#[0-9a-f]{3,8})/gi, 'C');
       out[kind] = [
         s.width,
         s.height,
         s.borderRadius,
         s.borderTopWidth,
         s.borderStyle,
+        noInk(s.boxShadow),
+        s.outlineStyle,
+        s.outlineWidth,
+        s.textDecorationLine,
+        s.fontWeight,
         s.transform,
-        s.clipPath,
-        getComputedStyle(el, '::before').content,
+        getComputedStyle(el, '::after').content,
       ].join('|');
       el.remove();
     }
     return out;
   });
 
-  const kinds = Object.keys(shapes);
-  // The premise, asserted rather than assumed: three kinds, or the loop below
-  // is green because it compared nothing.
-  expect(kinds, 'a mark kind went missing from the probe').toHaveLength(3);
+  // The premise, asserted rather than assumed: four probes, or the comparisons
+  // below are green because they compared nothing.
+  expect(Object.keys(shapes), 'a probe went missing from the grid').toHaveLength(4);
+  expect(shapes['is-feast'], 'a feast is drawn exactly like a plain day, so only colour marks it').not.toBe(
+    shapes.plain,
+  );
 
-  for (const a of kinds) {
-    for (const b of kinds) {
-      if (a >= b) continue;
-      expect(
-        shapes[a],
-        `${a} and ${b} are the same shape, so only colour tells them apart`,
-      ).not.toBe(shapes[b]);
+  /*
+   * The words, off the live grid. Every cell the month marks has to name its
+   * mark in its own accessible name — the fast, the allowance, the feast — so
+   * the numeral's colour is never the only thing that says it.
+   */
+  const said = await page.evaluate(() => {
+    const cells = [...document.querySelectorAll('.cal-day')];
+    const marked = cells.filter((c) => ['is-fast', 'is-fish', 'is-feast'].some((k) => c.classList.contains(k)));
+    return marked.map((c) => ({
+      kinds: ['is-fast', 'is-fish', 'is-feast'].filter((k) => c.classList.contains(k)),
+      label: c.getAttribute('aria-label') ?? '',
+    }));
+  });
+
+  // Again the premise: a month with nothing marked in it proves nothing.
+  expect(said.length, 'no day in this month carries a mark, so the loop below asserts nothing').toBeGreaterThan(0);
+
+  const WORDS = { 'is-fast': 'a fast', 'is-fish': 'fish permitted', 'is-feast': 'a feast' };
+  for (const { kinds, label } of said) {
+    for (const kind of kinds) {
+      expect(label.toLowerCase(), `a ${kind} day says its mark in colour and nowhere else`).toContain(WORDS[kind]);
     }
   }
 });

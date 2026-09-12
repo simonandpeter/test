@@ -336,14 +336,17 @@ overhaul's to decide.*
 
 **"That is the one shadow on the site" was written here on 2026-09-08 and is
 false** — an extrapolation from the old DESIGN.md's justification of the
-bookmark's shadow, asserted without counting. There are six, found by
-`scratchpad/colour-audit.py` on 2026-09-09:
+bookmark's shadow, asserted without counting. There were six, found by
+`scratchpad/colour-audit.py` on 2026-09-09, and there are three: the Daily
+page's rebuild (2026-09-12) took `.fast-bubble` with the liturgy line it
+pointed at, and the reckoning control's popover came back in
+`daily-sidebar.css` with a hairline instead of a shadow — it stands against the
+column rather than over the page, which is the rule below deciding its own
+case:
 
 | where | what |
 | --- | --- |
 | `.church-panel` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the chooser, fixed over the page |
-| `.reckoning-pop` | the same shadow — a popover |
-| `.fast-bubble` | `0 6px 20px rgb(0 0 0 / 0.14)` — a tooltip pointing at a word |
 | `.index-controls.is-stuck .index-row` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` — the bar once it sticks |
 | `.index-controls.is-stuck.is-filters-open .filter-drop-inner` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
 
@@ -352,8 +355,8 @@ Not shadows, but in the same family: a `rgb(0 0 0 / 0.45)` scrim on
 `box-shadow` to draw two concentric rings rather than a shadow.
 
 **Read together they are a rule, not an inconsistency.** Every one is on
-something *over* the page — a panel that flies, a popover, a bubble, a bar that
-has left the flow — and none is on anything sitting in it. So the panel rule
+something *over* the page — a panel that flies, a bar that has left the flow,
+the drop under it — and none is on anything sitting in it. So the panel rule
 holds exactly as written, and the working principle is sharper than "no drop
 shadows": **a shadow says this is above the page; a card is in it and gets its
 depth from the field.**

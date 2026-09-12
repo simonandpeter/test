@@ -79,3 +79,381 @@
   border-top: 1px solid var(--rule);
   padding-top: var(--space-6);
 }
+
+/* ---- the readings (moved from calendar.css, 2026-09-12) -----------------
+   What the church's own calendar printed for the day, read off
+   `data/liturgical-days.js` by `views/daily/record.js`. The rules are the ones
+   that shipped; only the sheet they live in changed, because the sheet they
+   lived in is gone. The hymn marks that stood beside them went to base.css —
+   `ui/hymns.js` draws those on three routes, and one route's stylesheet was
+   the wrong place for them. */
+.day-readings .readings {
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+}
+
+.day-readings .readings li + li {
+  margin-top: var(--space-1);
+}
+
+.reading-label {
+  color: var(--ink-soft);
+  margin-inline-end: var(--space-2);
+}
+
+.readings-source {
+  color: var(--ink-soft);
+  max-width: 65ch;
+}
+
+/* ---- the full-screen calendar (moved from calendar.css, 2026-09-12) ------
+   §11.4: the dialog is not deleted, and the sidebar's month caption is its
+   opener now that the week rail and the month picker are gone. So its
+   stylesheet is not deleted either — it moves here, to the sheet the view
+   that opens it owns, unchanged but for the opener's own button, which was
+   `.fullcal-open` under the week strip and no longer exists. */
+.fullcal {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--gesso);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.fullcal::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+/*
+ * **On a desktop it opens into the page's own margins, and pushes what is
+ * under it down** (author, 2026-09-02: "make the full screen calendar however
+ * have this animation of moving the rest of the contents all down, and make
+ * the calendar share the leftmost and rightmost margins").
+ *
+ * The exact opposite of what the same instruction asked of the two chooser
+ * panels a line earlier, and the difference is the size of the thing: a
+ * calendar of a month with its feasts written out *is* the page while it is
+ * open, so it should arrive as the page changing rather than as a card over
+ * it. A phone keeps the window-filling modal — there are no margins to share
+ * at 360 px, and the day underneath is what it would be covering.
+ *
+ * The margins are `--page-max` and `--page-pad`, the same pair the header and
+ * every route's own box line up to (base.css), so the calendar's edges are the
+ * masthead's edges rather than a second measure that happens to look near it.
+ */
+@media (min-width: 1024px) {
+  .fullcal {
+    top: var(--chrome-h, 53px);
+    left: 0;
+    right: 0;
+    /* `100%`, not `100vw`, and it is the same fifteen pixels the base rule
+       above argues about from the other side: past 1024 px the root holds the
+       scrollbar's room open, so `vw` is the window *including* that gutter
+       while the page's own column stops short of it. Full-bleed wanted the
+       window; sharing the page's margins wants the page. */
+    width: min(var(--page-max), 100%);
+    height: calc(100dvh - var(--chrome-h, 53px));
+    margin-inline: auto;
+    padding-inline: var(--page-pad);
+    background: var(--gesso);
+    animation: fullcal-down var(--dur-settle) var(--ease);
+  }
+
+  /* Quieter than the modal's own: the page is being pushed down rather than
+     covered, so what is left of it either side reads as the page rather than
+     as something being hidden. */
+  .fullcal::backdrop {
+    background: rgb(0 0 0 / 0.2);
+  }
+
+  /* The head and the body give up the padding the panel now carries, so the
+     grid's own edges land on the page's margin rather than a step inside it. */
+  .fullcal .fc-head,
+  .fullcal .fc-body {
+    padding-inline: 0;
+  }
+
+  /* And the page goes down as it comes in. It is clipped by the route's own
+     `overflow: hidden` a moment later, which is the point: the calendar is
+     what the window is showing now. */
+  html[data-fullcal='open'] main.chrome > #view {
+    transform: translateY(var(--space-12));
+    opacity: 0;
+    transition:
+      transform var(--dur-settle) var(--ease),
+      opacity var(--dur-settle) var(--ease);
+  }
+}
+
+@keyframes fullcal-down {
+  from {
+    transform: translateY(-2%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fullcal {
+    animation: none;
+  }
+
+  html[data-fullcal='open'] main.chrome > #view {
+    transition: none;
+  }
+}
+
+.fullcal .fc-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.fullcal .fc-title h2 {
+  margin: 0;
+}
+
+.fullcal .fc-church {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: none;
+}
+
+.fullcal .fc-step,
+.fullcal .fc-close {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.fullcal .fc-step {
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+
+.fullcal .fc-step:hover,
+.fullcal .fc-close:hover {
+  color: var(--ink);
+}
+
+/* The grid and the month's seasons beside it. One column on a phone, where the
+   strip reads as a summary above the grid rather than as a margin note. */
+.fullcal .fc-body {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6) var(--space-8);
+  height: calc(100dvh - 92px);
+  overflow-y: auto;
+  /* No bar here either, for the same reason the Daily columns have none —
+     base.css, "scrollers that draw no bar". */
+}
+
+.fullcal .fc-weekdays,
+.fullcal .fc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.fullcal .fc-weekdays {
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-wd {
+  /* On the cell's own left edge, not centred in the column: the cells beneath
+     are a left-aligned stack of words, and a centred heading over them reads as
+     belonging to neither neighbour. The inset is the cell's own padding. */
+  padding-inline-start: var(--space-2);
+}
+
+/* A cell is a small stack of facts, left-aligned like the prose it quotes, and
+   tall enough to hold three of them without the grid becoming ragged. */
+.fullcal .fc-day {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 92px;
+  padding: var(--space-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-cell);
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.fullcal .fc-day:hover {
+  background: color-mix(in srgb, var(--field) 60%, transparent);
+}
+
+.fullcal .fc-num {
+  font-size: var(--text-lg);
+  line-height: 1.2;
+}
+
+/* The numeral takes the fast's own colour, exactly as the small month view's
+   does — one day cannot be told two things about its fast by two grains. */
+.fullcal .fc-day.fast-fast .fc-num,
+.fullcal .fc-day.fast-fast .fc-fast {
+  color: var(--fast-strict);
+}
+
+.fullcal .fc-day.fast-fish .fc-num,
+.fullcal .fc-day.fast-fish .fc-fast {
+  color: var(--fast-fish);
+}
+
+.fullcal .fc-day.fast-free .fc-fast {
+  color: var(--ink-soft);
+}
+
+.fullcal .fc-fast,
+.fullcal .fc-occasion,
+.fullcal .fc-count {
+  font-size: var(--text-2xs);
+  line-height: 1.3;
+}
+
+.fullcal .fc-occasion {
+  color: var(--rubric);
+}
+
+.fullcal .fc-count {
+  color: var(--ink-soft);
+  margin-top: auto;
+}
+
+/* A Great Feast is gold at the edge and ink in the words, which is the rule
+   the day's own chip keeps: --gold on gesso is 2.78:1 and cannot carry text. */
+.fullcal .fc-feast {
+  font-size: var(--text-2xs);
+  line-height: 1.3;
+  padding: 1px var(--space-1);
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  border-radius: var(--radius-cell);
+}
+
+.fullcal .fc-day.is-today {
+  border-color: var(--rubric);
+}
+
+.fullcal .fc-day.is-selected {
+  background: color-mix(in srgb, var(--field) 80%, transparent);
+  border-color: var(--ink-soft);
+}
+
+.fullcal .fc-blank {
+  min-height: 0;
+}
+
+.fullcal .fc-list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.fullcal .fc-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.fullcal .fc-period.fast-fast .fc-period-name {
+  color: var(--fast-strict);
+}
+
+.fullcal .fc-period.fast-fish .fc-period-name {
+  color: var(--fast-fish);
+}
+
+.fullcal .fc-period-span {
+  color: var(--ink-soft);
+}
+
+@media (min-width: 900px) {
+  .fullcal .fc-body {
+    grid-template-columns: minmax(0, 1fr) clamp(16rem, 22%, 22rem);
+    align-items: start;
+  }
+
+  .fullcal .fc-day {
+    min-height: 112px;
+  }
+}
+
+/*
+ * **A phone gets the month as a list, not as a grid** (2026-09-01).
+ *
+ * Seven columns of 44 px cannot hold "Oil, Wine and Fish Allowed" and "the
+ * Transfiguration, in the Dormition Fast", and the first draft of this proved
+ * it by spilling both out of their cells. The instruction was for *more*
+ * detail, so the grid is what gives way rather than the words: one day to a
+ * row, each carrying its own weekday name, which the column position was
+ * carrying before.
+ *
+ * 700 px is where seven columns stop being able to hold a phrase — the same
+ * width the carousel uses to decide a phone from a desk, and for a related
+ * reason.
+ */
+@media (max-width: 699.98px) {
+  .fullcal .fc-weekdays {
+    display: none;
+  }
+
+  .fullcal .fc-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* No leading blanks in a list: they were holding a column position that no
+     longer exists. */
+  .fullcal .fc-blank {
+    display: none;
+  }
+
+  .fullcal .fc-day {
+    min-height: 0;
+  }
+
+  /* The day's own name, which the column heading used to say. */
+  .fullcal .fc-day-name {
+    margin-inline-start: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--text-sm);
+  }
+
+  .fullcal .fc-count {
+    margin-top: 0;
+  }
+}
+
+/* In the grid the column heading names the weekday, so the cell does not. */
+@media (min-width: 700px) {
+  .fullcal .fc-day-name {
+    display: none;
+  }
+}

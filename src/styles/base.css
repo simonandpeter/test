@@ -1165,6 +1165,41 @@ main.chrome {
   margin: var(--space-6) 0 var(--space-3);
 }
 
+/* ---- a hymn, wherever one is printed (moved here 2026-09-12) ------------
+   `ui/hymns.js` draws these three on the saint's page, on the Daily page and
+   in the shelf, and they lived in `calendar.css` until that sheet was deleted
+   with the old Daily page. A shared module's own marks belong beside
+   `.register-heading` — which `ui/hymns.js` also uses — rather than in one
+   route's stylesheet that two other routes were quietly reading. Only the home
+   changed; the declarations are the ones that shipped.
+
+   The Daily page's tiles override the size and the leading inside
+   `.day-tile` (daily-tiles.css says why a hymn column is read at the size of
+   the life beside it). Nothing else overrides anything here. */
+.hymn-kind {
+  font-size: var(--text-sm);
+  font-variant-caps: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+/* The hymn is text, in the reading face and the church's own language; its
+   line is bounded so a fallback face with taller metrics cannot move what is
+   below it (Addendum C3, as for the name forms). */
+.hymn-text {
+  font-family: var(--font-serif);
+  max-width: 65ch;
+  line-height: 1.55;
+  margin-bottom: var(--space-1);
+}
+
+/* Who published it, or the admission that this site rendered it. */
+.hymn-source {
+  color: var(--ink-soft);
+  max-width: 65ch;
+}
+
 .rubric {
   color: var(--rubric);
 }
