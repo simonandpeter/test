@@ -14,9 +14,10 @@ them findings rather than features.
   went green, and none of the last five carried a `flaky` line at all.
 - **391 unit tests** in ~2 s. **944 browser tests** in ~4.8 min here, ~15 min on
   CI. Accessibility 100, FCP 1356–1376 ms against the 1500 floor. **The entry
-  stylesheet is 72,562 bytes against `ENTRY_CSS_CEILING` 73,000** — the gate
+  stylesheet is 52,441 bytes against `ENTRY_CSS_CEILING` 73,000** — the gate
   that fires before the four routes do and names the file
-  (`docs/daily-desktop-visuals.md` §10.22).
+  (`docs/daily-desktop-visuals.md` §10.22). It was 72,562 with 438 bytes of
+  headroom until 2026-09-12, when the Daily rebuild deleted `calendar.css`.
 - **862 saints** (2026-09-08), every one with a life; 1,221 attestations; 126
   undated; 130 icons; 430 hymns. 97 located, ten with a dated track. The corpus
   reaches 28 September 2026. **144 day records**, 23 Aug 2026 – 13 Jan 2027.
@@ -62,41 +63,71 @@ The visual loop is **48 tiles in 80 s** — `contact-sheet.mjs --still`,
 `tile-diff.mjs snapshot`, change, `--still`, `compare` — against ~40 s for a
 single surface through a rebuilt preview before.
 
-## In flight, 2026-09-12: the Daily page rebuilt to the mockup
+## Done, 2026-09-12: the Daily page rebuilt to the mockup
 
-**The job.** The mockup session handed over `carousel-mockup-c/` as the target
-for the Daily page, plus the Daily/All Saints transition. The plan and its
-review are `scratchpad/daily-rebuild-plan.md` — **§11 is the review and it
-overrides §0-§10 wherever they disagree.** Seven questions the plan left for the
-author were decided there rather than left waiting; every one is reversible and
-every one is named in §11.
+**The job.** `carousel-mockup-c/` was the target, handed over by the mockup
+session: the Daily page rebuilt, plus the Daily/All Saints transition. The plan
+and its review are `scratchpad/daily-rebuild-plan.md` — **§11 is the review and
+overrides §0-§10.** Seven questions the plan left for the author were decided
+there rather than left waiting; all seven are named in §11 and all are
+reversible.
 
-**Landed so far:** Step 1 (the `--dur-swap` token and the seven new strings in
-all five packs), Step 3 (the standing sidebar), Step 4 (tiles and the open
-card). Step 2 (the two-layer stage) was still being verified in a browser when
-this was written. Steps 5, 6a-c and 7 are not started.
+**What landed.** `views/calendar.js` from 1,387 lines to 160, mounting
+`daily/{sidebar,tiles,open,lives}.js`. `picker.js`, `panel.js` and 4,679 lines
+of `calendar.css` deleted. The two faces are layers in one clipped stage
+(`ui/face-stage.js`), sliding over `--dur-swap`. Unit 391/0; `chrome`,
+`index-grid`, `saint`, `daily-stage` 288/288 across both widths;
+`daily-panel`/`daily-sidebar`/`daily-tiles` green.
 
-**The All Saints baseline is already taken and must not be retaken.** Requirement
-one is that All Saints does not change at all, and the proof is
-`shots/baseline-before-daily-rebuild` — 16 tiles of `/saints` at 360, 768, 1280
-and 1440, both themes, English and Russian, shot before any of this touched the
-repo. `shots/` is gitignored, so nothing in the history says it exists; a session
-that re-shoots it after the rebuild has destroyed the only evidence it had. To
-check the requirement:
+**All Saints did not change, and here is the proof rather than the claim.** No
+commit touched `views/saints.js`, `views/index/*`, `ui/loop-scroll.js`,
+`index.css`, `index-filters.js` or `virtual-grid.js` — `git log --since -- <those>`
+is empty. On pixels, 11 of 16 tiles are identical to
+`shots/baseline-before-daily-rebuild`; two Russian tiles differ by 14 and 3
+pixels, which is exactly what the same build differs by when shot twice, so it
+is capture noise; three desktop English tiles differ by ~0.4% in a 20px strip at
+the far left, inside `#view`'s gutter, where the full-bleed carousel's leftmost
+card overhangs the column. That one is deterministic and unexplained: not the
+stage's containing block (tested, `position: static` changed nothing) and not
+any file of that view. It is the resting offset of a row that drifts
+continuously in use, so it is not a designed position — but it is not nothing,
+and nobody has yet said why it moved.
+
+**What the pixel chase actually found.** Deleting `calendar.css` took six rules
+with it that were never the Daily page's: the church chooser's and language
+chooser's layout, and the shared grain gesture's. From `bd60c49` until
+`f81ccd9` the chooser every first-time reader meets was laid out by the
+browser's defaults, and the whole suite stayed green — it asserts what the
+chooser does, never that it is dressed. Salvaged into `base.css`. If anything
+else lived in those 4,679 lines that no page's own stylesheet claims, this is
+how it will be found: not by a test.
+
+**Lighthouse.** 1684-1709 ms FCP against the 1500 floor on all four routes,
+accessibility 100. `docs/daily-desktop-visuals.md` records 1519-1853 ms on this
+desk where CI's own run passes, with an explicit "do not chase" — the local
+instrument is CPU-bound. CI arbitrates.
+
+**The All Saints baseline must not be retaken.** `shots/baseline-before-daily-rebuild`
+is 16 tiles of `/saints` shot before any of this, and `shots/` is gitignored, so
+nothing in the history says it exists. A session that re-shoots it after the
+rebuild destroys the only evidence it had. To read it:
 
     MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/saints       --widths=360,768,1280,1440 --themes=day,vigil --langs=en,ru
     node scripts/tile-diff.mjs compare before-daily-rebuild
 
 `MSYS_NO_PATHCONV=1` is not optional under Git Bash: without it `--routes=/saints`
-is rewritten to `C:/Program Files/Git/saints`, every shot fails, and `tile-diff`
-cheerfully archives whatever stale tiles were already in `shots/` as though they
-were the baseline. That happened twice before this line was written.
+becomes `C:/Program Files/Git/saints`, every shot fails, and `tile-diff` archives
+whatever stale tiles were already in `shots/` as though they were the baseline.
+That happened twice, and both times the output read as success.
 
-**Still to do by hand:** Step 5 rewires `src/views/calendar.js` onto the new
-sidebar and grid and deletes `picker.js`, `panel.js` and `calendar.css` — in its
-own commit, separate from the code that replaces them. `e2e/quality-floor.spec.js:192`
-(told apart by shape, not only by hue) is rewritten in that same commit, so there
-is never a commit where that accessibility floor goes untested.
+**Left for the author.** The five wrong-saint hymn objects
+(`scripts/hymn-wrong-saint.json`). The source-corruption readings in
+`scratchpad/hymn-flags.md`. The fast/fish shape marks in the month grid (a
+solid rule above the numeral against a dashed one) if that reading is not
+wanted. And `4983e72` is titled as a docs fix but also carries 3,400 lines of
+spec deletions, swept in by a bare `git commit` after `git add` — the tree is
+right, the history is not, and nothing is pushed, so a rebase would still tidy
+it.
 
 ## In flight, 2026-09-12: the hymns into English
 
