@@ -67,11 +67,21 @@ export function relativeDayWord(iso) {
  * Gregorian, which is exactly right: nothing is read off them but the day and
  * the month, and those are the ones the reader is being shown.
  */
-function julianWords(iso) {
-  const j = dateIn('julian', iso);
-  const asIf = new Date(Date.UTC(j.year, j.month - 1, j.day));
+function otherReckoningWords(iso) {
+  /*
+   * **The other calendar, whichever one the reader is not already being given.**
+   * The headline is printed in `reckoningInForce()`, so on an Old Calendar
+   * church it already says 30 August; naming the Julian day underneath it then
+   * prints the same date twice and tells the reader nothing. What is missing
+   * there is the civil date, and what is missing everywhere else is the Julian
+   * one. Revised Julian asks for the Julian day, not the civil one, because for
+   * every date this site shows it agrees with the civil calendar anyway.
+   */
+  const other = reckoningInForce() === 'julian' ? 'gregorian' : 'julian';
+  const d = dateIn(other, iso);
+  const asIf = new Date(Date.UTC(d.year, d.month - 1, d.day));
   const date = formatDate({ day: 'numeric', month: 'long', timeZone: 'UTC' }, asIf);
-  return fill(STRINGS.calendar.byJulian, { date });
+  return fill(other === 'julian' ? STRINGS.calendar.byJulian : STRINGS.calendar.byCivil, { date });
 }
 
 /**
@@ -320,7 +330,7 @@ export function paintSidebar(root, iso) {
   // `reckonedPlain(iso, reckoningInForce())`, so an Old Calendar reader is
   // given 30 August where a civil one is given 12 September.
   set('[data-day-date]', dayInWords(iso));
-  set('[data-day-old]', julianWords(iso));
+  set('[data-day-old]', otherReckoningWords(iso));
   // Where the day stands in the year the fixed calendar knows nothing about,
   // and the tone of the week it falls in. Both from lib/liturgy.js; the words
   // from ui/cycle-name.js and the pack, never composed here.

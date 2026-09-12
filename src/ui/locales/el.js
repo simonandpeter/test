@@ -56,6 +56,7 @@ export const el = {
     reckoningFollow: 'Όπως η Εκκλησία μου',
     reckoningShort: { julian: 'Ιουλιανό', 'revised-julian': 'Νέο Ιουλ.', gregorian: 'Γρηγοριανό' },
     byJulian: '{date} κατά το Ιουλιανό ημερολόγιο',
+    byCivil: '{date} κατά το πολιτικό ημερολόγιο',
     noGreatFeast: 'Καμία μεγάλη εορτή',
     fullScreen: 'Άνοιγμα σε πλήρη οθόνη',
     fullClose: 'Κλείσιμο',

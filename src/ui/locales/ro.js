@@ -56,6 +56,7 @@ export const ro = {
     reckoningFollow: 'Ca în Biserica mea',
     reckoningShort: { julian: 'Iulian', 'revised-julian': 'Iulian îndr.', gregorian: 'Gregorian' },
     byJulian: '{date} după calendarul iulian',
+    byCivil: '{date} după calendarul civil',
     noGreatFeast: 'Niciun praznic împărătesc',
     fullScreen: 'Deschide pe tot ecranul',
     fullClose: 'Închide',

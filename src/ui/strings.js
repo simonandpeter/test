@@ -147,6 +147,7 @@ export const STRINGS = {
      * reckoning first can.
      */
     byJulian: '{date} by the Julian calendar',
+    byCivil: '{date} by the civil calendar',
     /*
      * Where a Great Feast's name would stand and there is none. The tag is
      * drawn dashed and empty rather than left out, because a row of tags that

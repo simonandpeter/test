@@ -59,6 +59,7 @@ export const ru = {
     reckoningFollow: 'Как в моей Церкви',
     reckoningShort: { julian: 'Юлианский', 'revised-julian': 'Новоюл.', gregorian: 'Григорианский' },
     byJulian: '{date} по юлианскому календарю',
+    byCivil: '{date} по гражданскому календарю',
     noGreatFeast: 'Нет двунадесятого праздника',
     fullScreen: 'Открыть на весь экран',
     fullClose: 'Закрыть',
