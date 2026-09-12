@@ -120,6 +120,16 @@ becomes `C:/Program Files/Git/saints`, every shot fails, and `tile-diff` archive
 whatever stale tiles were already in `shots/` as though they were the baseline.
 That happened twice, and both times the output read as success.
 
+**Five capabilities went missing without anyone choosing them**, listed with the
+evidence in `scratchpad/daily-feature-audit.md`: the keys no longer step the
+day, the full-screen calendar and the reckoning control are both on phones where
+the old page kept them off, the day's saints lost the ordering rule that put
+pictures first and the imageless last, and the "Also today" heading is gone with
+its strings left orphaned. The month grid picking no day was a sixth and is
+fixed. The audit's method is the point — the deleted specs' test names are the
+only written inventory of what a surface could do, and checking them by hand
+after a replacement found five things nine hundred tests did not.
+
 **Left for the author.** The five wrong-saint hymn objects
 (`scripts/hymn-wrong-saint.json`). The source-corruption readings in
 `scratchpad/hymn-flags.md`. The fast/fish shape marks in the month grid (a

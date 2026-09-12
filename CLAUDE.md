@@ -359,6 +359,17 @@ git show <deletion>^:src/styles/gone.css | grep -oE "^\.[a-z][a-z0-9-]*" | sort 
     exit 0 on 2026-09-08.
 16. **A click aimed at a blob can land on one of its own members.** A dot only
     wins over its blob when that blob is already open.
+17. **The Browser pane is not a browser.** It runs hidden — `document.hidden`
+    is true and `requestAnimationFrame` fires **zero** times a second — so
+    anything scheduled in a rAF never happens there, and a viewport that was
+    never sized reports `innerHeight: 0` with every geometry hanging off it
+    equally false. On 2026-09-12 that produced four confident wrong diagnoses
+    of one bug in a row, each built on a reading the pane had invented. It is
+    fine for reading the DOM, clicking, and screenshots of a settled page.
+    **Anything timed, animated, measured or scrolled goes through Playwright**,
+    where frames are real. Before trusting a single number the pane gives you,
+    ask it for `requestAnimationFrame` callbacks in one second: a zero means
+    every other figure on the page is a fabrication.
 
 **When you add an instrument, ask what it would look like if it were doing
 nothing.**
