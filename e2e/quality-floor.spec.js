@@ -169,21 +169,25 @@ for (const [label, path, prepare] of ROUTES) {
  * So the floor is tested on both of the grid's channels, because the grid uses
  * a different one for each mark:
  *
- * - **the feast has a shape** — a rule under the numeral — and the assertion is
+ * - **every mark has a shape** — the feast a rule under the numeral, the strict
+ *   fast a solid rule above it, the fish day a dashed one — and the assertion is
  *   deliberately about shape and *not* hue: it compares the non-colour computed
  *   styles, with every colour in them masked out. Asserting the colours differ
  *   would pass on the defect.
  * - **every mark has its words**, in the cell's own accessible name, which is
  *   the cell a reader lands on rather than an `aria-hidden` dot beside it.
  *
- * **And it says where the floor is thinner than it was.** A strict fast and a
- * fish day are the same numeral in two hues: `--fast-strict` and `--fast-fish`
- * on `.cal-day`, and nothing else. The words in the accessible name are the
- * whole of the second channel for that pair, so a sighted reader who cannot
- * separate the two hues is not told which they are looking at — the very
- * reader the 2026-08-28 audit was written for. That is a live gap in
- * `daily-sidebar.css`, not an omission in this test, and it is written down
- * here because a test is where the next reader will look.
+ * **The fast and the fish day were once the gap this comment described.** Until
+ * 2026-09-12 they were the same numeral in two hues — `--fast-strict` and
+ * `--fast-fish` on `.cal-day`, and nothing else — so a sighted reader who could
+ * not separate the two hues had only the accessible name to tell them apart,
+ * which is exactly the reader the 2026-08-28 audit was written for. The gap is
+ * closed in `daily-sidebar.css`: every cell carries a transparent `border-top`
+ * so none shifts when a mark appears, the strict fast takes it solid and the
+ * fish day dashed. Hence `borderTopStyle` in the probe below and not only
+ * `borderTopWidth`: solid and dashed are the same width, and a pair told apart
+ * by width alone would be a thinner line rather than a different one — green
+ * here and silent to the reader. Two weights would pass; they must not.
  */
 test('a day in the month grid is told apart by shape and by words, not only by hue', async ({ page }) => {
   await ready(page);
@@ -208,15 +212,29 @@ test('a day in the month grid is told apart by shape and by words, not only by h
       el.textContent = '8';
       grid.append(el);
       const s = getComputedStyle(el);
-      // Everything a reader could tell the cells apart by *except* colour: any
-      // colour inside a shadow or an outline is masked, so a rule that differs
-      // only in its ink reads here as no rule at all.
-      const noInk = (v) => String(v).replace(/(rgba?\([^)]*\)|#[0-9a-f]{3,8})/gi, 'C');
+      /*
+       * Everything a reader could tell the cells apart by *except* colour: any
+       * colour inside a border, a shadow or an outline is masked, so a rule
+       * that differs only in its ink reads here as no rule at all.
+       *
+       * A *fully transparent* colour is not masked to the same token, because
+       * it is not a hue anybody could confuse with another hue — it is the
+       * absence of the mark. Every `.cal-day` carries a transparent
+       * `border-top` so that no cell moves when one appears, and if that
+       * placeholder masked to the same string as an inked rule then a day with
+       * a fast would read here exactly like a day without one.
+       */
+      const noInk = (v) =>
+        String(v)
+          .replace(/rgba\([^)]*,\s*0(\.0+)?\s*\)/gi, 'BLANK')
+          .replace(/(rgba?\([^)]*\)|#[0-9a-f]{3,8})/gi, 'C');
       out[kind] = [
         s.width,
         s.height,
         s.borderRadius,
         s.borderTopWidth,
+        s.borderTopStyle,
+        noInk(s.borderTopColor),
         s.borderStyle,
         noInk(s.boxShadow),
         s.outlineStyle,
@@ -236,6 +254,17 @@ test('a day in the month grid is told apart by shape and by words, not only by h
   expect(Object.keys(shapes), 'a probe went missing from the grid').toHaveLength(4);
   expect(shapes['is-feast'], 'a feast is drawn exactly like a plain day, so only colour marks it').not.toBe(
     shapes.plain,
+  );
+  expect(shapes['is-fast'], 'a strict fast is drawn exactly like a plain day, so only colour marks it').not.toBe(
+    shapes.plain,
+  );
+  expect(shapes['is-fish'], 'a fish day is drawn exactly like a plain day, so only colour marks it').not.toBe(
+    shapes.plain,
+  );
+  // The pair the audit was written for: two marks that are each a shape but the
+  // same shape are still one channel between them.
+  expect(shapes['is-fast'], 'a fast and a fish day are the same shape, so only colour tells them apart').not.toBe(
+    shapes['is-fish'],
   );
 
   /*

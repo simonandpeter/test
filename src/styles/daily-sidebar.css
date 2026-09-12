@@ -196,24 +196,38 @@
   padding-bottom: 2px;
 }
 
+/* Every cell carries the rule, transparent until a mark claims it, so a day
+   that gains a fast does not grow a pixel taller than the six beside it. */
 .cal-day {
   text-align: center;
   padding: 2px 0;
   color: var(--ink-soft);
   border-radius: var(--radius-cell);
+  border-top: 1px solid transparent;
 }
 
+/* A shape as well as a hue, which is `quality-floor.spec.js`'s standing
+   requirement of every mark on this site: the fast and the allowance are told
+   by colour, by the rule above the numeral and by the words in the cell's
+   accessible name; the feast by a rule below it.
+   Solid against dashed, not thick against thin: a reader who cannot separate
+   --fast-strict from --fast-fish has to be given a difference they can name,
+   and two weights of the same line is not one. The dash says the lesser thing
+   here as it does on the "No Great Feast" tag, so a fish day reads as the
+   relaxed fast it is. */
 .cal-day.is-fast {
   color: var(--fast-strict);
+  border-top-color: var(--fast-strict);
 }
 
 .cal-day.is-fish {
   color: var(--fast-fish);
+  border-top-style: dashed;
+  border-top-color: var(--fast-fish);
 }
 
-/* A shape as well as a hue, which is `quality-floor.spec.js`'s standing
-   requirement of every mark on this site: the fast is told by colour and by
-   the words in the cell's accessible name, the feast by a rule under it. */
+/* Below the numeral, so a day that is both — 14 September 2026 — carries the
+   fast's rule above and the feast's below, and neither hides the other. */
 .cal-day.is-feast {
   box-shadow: inset 0 -2px 0 var(--gold);
 }
