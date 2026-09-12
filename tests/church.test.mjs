@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { CHURCHES, CHURCHES_BY_ID, enabledChurches } from '../src/data/churches.js';
-import { churchIds, churchName, entriesInChurch, keptBy } from '../src/lib/church.js';
+import { calendarFor, churchIds, churchName, entriesInChurch, keptBy } from '../src/lib/church.js';
+import { WIDE, isWide } from '../src/lib/viewport.js';
+import { greatFeast } from '../src/lib/liturgy.js';
 import { CALENDAR_LABELS, formatFeast } from '../src/data/calendars.js';
 import { fromJdn, gregorianToJdn, isValidDate, toJdn } from '../src/lib/jdn.js';
 
@@ -60,4 +62,48 @@ test('a saint is kept by a church that venerates them — and by nobody having c
   assert.equal(keptBy(card, null), true);
   assert.equal(churchName('greek'), 'Greek');
   assert.equal(churchName('nope'), '');
+});
+
+/**
+ * **A phone is Gregorian and nothing else** (author, 2026-09-12, restoring a
+ * gate the Daily rebuild lost and making it stronger than the one it lost).
+ *
+ * The chooser was always the desktop's; what the old page did below the line
+ * was hide the control and leave the church's own reckoning in force, so a
+ * Russian reader was shown 30 August on a phone and could not ask for the
+ * date their own clock agrees with.
+ *
+ * Asserted through `greatFeast` as well as through `calendarFor`, because the
+ * one thing this must not do is move the label without the arithmetic: the
+ * Dormition is 15 August, which a Julian church keeps on civil 28 August, and
+ * a phone that printed "Gregorian" over a fast counted by Julian would be the
+ * 2026-09-05 defect back at 360 px.
+ */
+test('under 1024 px the reckoning is Gregorian, and the fast moves with the label', () => {
+  const real = Object.getOwnPropertyDescriptor(globalThis, 'matchMedia');
+  const at = (px) => {
+    globalThis.matchMedia = (q) => ({ matches: q === WIDE && px >= 1024 });
+  };
+  try {
+    at(360);
+    assert.equal(calendarFor('russian'), 'gregorian');
+    assert.equal(calendarFor('serbian'), 'gregorian');
+    assert.equal(calendarFor('romanian'), 'gregorian');
+    assert.equal(greatFeast('2026-08-15', 'russian'), 'dormition');
+    assert.equal(greatFeast('2026-08-28', 'russian'), null);
+
+    at(1280);
+    assert.equal(calendarFor('russian'), 'julian');
+    assert.equal(calendarFor('romanian'), 'revised-julian');
+    assert.equal(greatFeast('2026-08-28', 'russian'), 'dormition');
+    assert.equal(greatFeast('2026-08-15', 'russian'), null);
+  } finally {
+    if (real) Object.defineProperty(globalThis, 'matchMedia', real);
+    else delete globalThis.matchMedia;
+  }
+
+  // No `matchMedia` is not a phone. Every test written before this one, and
+  // every build step that reads a calendar without a window, depends on it.
+  assert.equal(isWide(), true);
+  assert.equal(calendarFor('russian'), 'julian');
 });

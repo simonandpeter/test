@@ -31,6 +31,7 @@ import { currentLanguage, formatDate, languageTag, translateReason } from '../..
 import { greatFeast, liturgicalDay } from '../../lib/liturgy.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
+import { isWide } from '../../lib/viewport.js';
 import { cycleName } from '../../ui/cycle-name.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, dayRecordFor } from './entries.js';
@@ -235,6 +236,29 @@ function monthWords(iso) {
   return formatDate({ month: 'long', year: 'numeric', timeZone: 'UTC' }, asIf);
 }
 
+/**
+ * The month's name, and past 1024 px the full-screen calendar's opener.
+ *
+ * **Below that width there is no opener and no button** (author, 2026-09-02:
+ * "Remove the 'Full Screen Calendar' button completely from mobile - this was
+ * only ever supposed to be a desktop only addition"; restored here after the
+ * rebuild carried it to every width). A `<p>` rather than a hidden or
+ * disabled button, so the control is out of the accessibility tree as well as
+ * off the screen — a press nobody can make should not be a press a screen
+ * reader offers.
+ *
+ * Written as markup into a slot on every paint rather than styled in place,
+ * because the element changes kind across the line and `paintSidebar` cannot
+ * rewrite a `<button>` into a `<p>`. That is also why `wireFullCal` delegates:
+ * the opener this returns is a different node every day step.
+ */
+function monthCaption(iso) {
+  const words = monthWords(iso);
+  if (!isWide()) return `<p class="cal-month is-static">${esc(words)}</p>`;
+  const full = STRINGS.calendar.fullScreen;
+  return `<button type="button" class="cal-month" data-fullcal aria-haspopup="dialog" title="${esc(full)}" aria-label="${esc(`${words} - ${full}`)}">${esc(words)}</button>`;
+}
+
 /* ---- the names ---------------------------------------------------------- */
 
 /**
@@ -275,12 +299,15 @@ function namesMarkup(iso) {
  * The sidebar's skeleton: every slot `paintSidebar` writes into, and the three
  * controls that must outlive a repaint.
  *
- * The month caption is a button because it opens the full-screen calendar
- * (§11.4 — `fullcal.js` is not deleted, and this is the one line of wiring
- * that keeps it reachable once the week rail is gone). The `.cal-cap` line
- * carries the reckoning control for the same reason the author gave for its
- * place: the caption naming the reckoning is exactly where a reader would
- * press to change it.
+ * The month caption is a slot rather than a control: past 1024 px
+ * `monthCaption` fills it with the full-screen calendar's opener (§11.4 —
+ * `fullcal.js` is not deleted, and this is the one line of wiring that keeps
+ * it reachable once the week rail is gone), and below that width with the
+ * month's name and nothing else. The `.cal-cap` line carries the reckoning
+ * control for the same reason the author gave for its place: the caption
+ * naming the reckoning is exactly where a reader would press to change it —
+ * and it too is the desktop's, hidden by `daily-sidebar.css` below the line
+ * where `lib/church.js` has already fixed the answer to Gregorian.
  */
 export const sidebarMarkup = () => `<aside class="day-side" data-day-side>
   <div class="day-head">
@@ -292,7 +319,7 @@ export const sidebarMarkup = () => `<aside class="day-side" data-day-side>
   <p class="day-old" data-day-old></p>
   <p class="day-cycle" data-day-cycle></p>
   <div class="day-tags" data-day-tags></div>
-  <button type="button" class="cal-month" data-fullcal data-cal-month aria-haspopup="dialog"></button>
+  <div class="cal-month-slot" data-cal-month></div>
   <!-- No role="grid": a grid owes a screen reader rows and gridcells, and
        thirty spans with none is a worse promise than no promise. Each day
        carries the whole date and its marks in its own accessible name. -->
@@ -352,12 +379,7 @@ export function paintSidebar(root, iso) {
   );
   html('[data-day-tags]', fastTag(iso) + feastTag(iso));
 
-  const month = side.querySelector('[data-cal-month]');
-  if (month) {
-    month.textContent = monthWords(iso);
-    month.title = STRINGS.calendar.fullScreen;
-    month.setAttribute('aria-label', `${monthWords(iso)} - ${STRINGS.calendar.fullScreen}`);
-  }
+  html('[data-cal-month]', monthCaption(iso));
   html('[data-cal]', monthCells(iso));
   set('[data-cal-church]', churchName(church()));
 
@@ -375,7 +397,10 @@ export function paintSidebar(root, iso) {
   const N = STRINGS.calendar.nameDays;
   set('[data-names-heading]', iso === todayIso() ? N.headingToday : N.heading);
   html('[data-names]', namesMarkup(iso));
-  paintReckoning(side);
+  // Nothing below 1024 px: the control is hidden there and the reckoning is
+  // fixed, so painting it would put a word in the DOM that names a choice the
+  // reader does not have.
+  if (isWide()) paintReckoning(side);
 }
 
 /* ---- the controls ------------------------------------------------------- */

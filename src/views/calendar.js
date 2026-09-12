@@ -20,11 +20,13 @@ import '../styles/daily.css';
 import '../styles/daily-sidebar.css';
 import '../styles/daily-tiles.css';
 
-import { addDaysIso, parseIso, pickHero, todayIso } from '../lib/calendar-page.js';
+import { addDaysIso, dayOrder, parseIso, todayIso } from '../lib/calendar-page.js';
 import { currentChurch, subscribeChurch } from '../lib/church.js';
 import { observePrefetch } from '../lib/detail.js';
+import { onWideChange } from '../lib/viewport.js';
 
 import { entriesFor } from './daily/entries.js';
+import { dayInWords } from './daily/format.js';
 import { fillDay } from './daily/lives.js';
 import { adoptRows, wireOpen } from './daily/open.js';
 import { hymnsMarkup, readingsMarkup } from './daily/record.js';
@@ -34,7 +36,7 @@ import { paintSidebar, sidebarMarkup, wireSidebar } from './daily/sidebar.js';
 import { state, open as openState, close as closeState } from './daily/state.js';
 import { emptyGridHTML, revealImages, tilesHTML } from './daily/tiles.js';
 
-import { STRINGS } from '../ui/strings.js';
+import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.calendar.title;
 
@@ -109,7 +111,7 @@ export function render(el, { data, params, router }) {
   el.innerHTML = `<div class="today">
       ${sidebarMarkup()}
       <div class="td-scroll" data-td-scroll>
-        <div class="day-grid" data-day-grid></div>
+        <section class="day-grid" data-day-grid></section>
         <div class="day-foot" data-day-foot></div>
       </div>
     </div>`;
@@ -128,6 +130,14 @@ export function render(el, { data, params, router }) {
       paintSidebar(state.el, state.selected);
       paintDay();
     }),
+    /*
+     * Crossing 1024 px changes more than the column's shape: the month caption
+     * stops being the full-screen calendar's opener and the reckoning becomes
+     * Gregorian rather than the church's (`lib/viewport.js`). Both are things
+     * the sidebar prints, so the sidebar is painted again — a stylesheet
+     * cannot say either of them.
+     */
+    onWideChange(() => state && paintSidebar(state.el, state.selected)),
   );
   paintDay();
 }
@@ -189,18 +199,6 @@ function select(iso) {
 }
 
 /**
- * **The day leads with the saint the church sings for** (author, 2026-08-22,
- * via `pickHero`), because `open.js` opens the grid's first tile and the first
- * tile is what the reader is given without asking. The rest follow in the
- * day's own order — the order the corpus records them in, which is the one
- * order on this page that is not a judgement about which saint matters more.
- */
-function dayOrder(entries, iso) {
-  const hero = pickHero(iso, entries, state.data.bySlug, state.calendar);
-  return hero ? [...entries.filter((e) => e.slug === hero), ...entries.filter((e) => e.slug !== hero)] : entries;
-}
-
-/**
  * The day, drawn: every saint of it as an article that is both the tile and
  * the card, the readings under them, and the two passes that fill what the
  * manifest does not carry.
@@ -216,7 +214,23 @@ function paintDay() {
 
   const grid = el.querySelector('[data-day-grid]');
   const entries = entriesFor(selected, data);
-  grid.innerHTML = entries.length ? tilesHTML(dayOrder(entries, selected), data) : emptyGridHTML();
+  /*
+   * **The strip says what it is, and says it to the only reader who cannot
+   * already see it.** The sidebar heads the day; the saints beside it had no
+   * name of any kind, so a screen reader arriving here was handed a run of
+   * articles with nothing over them. The words are `commemorationsFor`, which
+   * has been in all five packs unused since the rebuild.
+   *
+   * An accessible name and not a printed heading: what stood here was "Also
+   * today" over the saints *besides* the hero, and this strip holds the hero
+   * too — the split those words describe is not on the page any more. What
+   * should be *drawn* above the day is the desktop redesign's to say, and the
+   * author has not described it yet (docs/WHERE-WE-ARE.md).
+   */
+  grid.setAttribute('aria-label', fill(STRINGS.calendar.commemorationsFor, { date: dayInWords(selected) }));
+  grid.innerHTML = entries.length
+    ? tilesHTML(dayOrder(entries, selected, data.bySlug, calendar), data)
+    : emptyGridHTML();
   el.querySelector('[data-day-foot]').innerHTML =
     `${readingsMarkup(selected, calendar)}${hymnsMarkup(selected, calendar)}`;
 

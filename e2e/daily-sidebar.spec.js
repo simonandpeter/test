@@ -254,3 +254,60 @@ test('the keys step the day, from anywhere on the page and not while typing', as
   await page.keyboard.press('ArrowRight');
   await expect(page).toHaveURL(/\/calendar\/2026-09-10$/);
 });
+
+test('the desktop controls come off a phone, and a phone is Gregorian', async ({ page }) => {
+  /*
+   * Two gates the Daily rebuild lost, restored together on 2026-09-12 because
+   * they are one line: 1024 px (`lib/viewport.js`).
+   *
+   * The full-screen calendar "was only ever supposed to be a desktop only
+   * addition" (author, 2026-09-02) and the reckoning chooser is the desktop's
+   * by the same day's instruction. The rebuild merged the opener into the
+   * month caption, and a caption is on every page at every width, so a control
+   * the author had removed from phones came back at 360 px.
+   *
+   * The second half is stronger than what was lost. The old page hid the
+   * chooser and left the church's own reckoning in force, so a Russian reader
+   * was shown 28 August on a phone with no way to ask for the date their own
+   * clock agrees with; below the line the answer is now Gregorian outright.
+   *
+   * `reckoning: null` is the point of the test — the suite's default stores
+   * `'gregorian'` explicitly (helpers.js says why), and against a stored
+   * choice this change is invisible at every width.
+   *
+   * **One test across both widths rather than two projects' worth**, because
+   * what it has to prove is that the page *crosses* the line correctly: the
+   * caption stops being a button and the reckoning changes, and neither is
+   * something a stylesheet can do — `views/calendar.js` repaints on
+   * `onWideChange` and this is what says so.
+   */
+  await ready(page, { church: 'russian', reckoning: null });
+  await page.goto('/calendar/2026-09-10', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(page.locator('[data-cal-month] button[data-fullcal]')).toBeVisible();
+  await expect(page.locator('[data-reckoning-btn]')).toBeVisible();
+  // Russian keeps the Julian calendar, and 10 September is 28 August in it.
+  await expect(page.locator('[data-day-date]')).toHaveText(/28 August/);
+
+  // The opener opens: a caption that is a button and does nothing would pass
+  // every assertion above.
+  await page.locator('[data-cal-month] button[data-fullcal]').click();
+  await expect(page.locator('dialog.fullcal')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('dialog.fullcal')).toBeHidden();
+
+  await page.setViewportSize({ width: 360, height: 780 });
+  // Gone from the document, not hidden in it: a press nobody can make should
+  // not be a press a screen reader offers.
+  await expect(page.locator('[data-fullcal]')).toHaveCount(0);
+  await expect(page.locator('[data-cal-month] .cal-month')).toHaveText(/September/);
+  await expect(page.locator('[data-reckoning]')).toBeHidden();
+  await expect(page.locator('[data-day-date]')).toHaveText(/10 September/);
+
+  // And back: the line is crossed in both directions.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(page.locator('[data-cal-month] button[data-fullcal]')).toBeVisible();
+  await expect(page.locator('[data-day-date]')).toHaveText(/28 August/);
+});

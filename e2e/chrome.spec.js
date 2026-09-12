@@ -1109,6 +1109,16 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // the fast off the wrong 14 days entirely (see daily-panel.spec.js's own note
   // on this, and lib/church.js's `calendarFor`).
   await ready(page, { reckoning: null });
+  /*
+   * **And past 1024 px, since 2026-09-12**, for the same reason: below that
+   * width the reckoning is fixed Gregorian whatever the church keeps (author,
+   * "a phone is Gregorian only"; `lib/viewport.js`), so following the church
+   * is a thing only a desk does and the Julian numerals below exist only
+   * here. What this test is about is the *language*, which is the same at
+   * both widths — `daily-panel.spec.js`'s first test is where the phone's own
+   * reading of this rule is pinned.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
@@ -2845,7 +2855,16 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
   const html = await (await page.request.get('/')).text();
   const marks = [...html.matchAll(/<svg[^>]*class="brand-mark"/g)];
   expect(marks.length, 'the veil and the masthead should both carry the mark').toBe(2);
-  expect(html, 'the wordmark should not still be live text').not.toContain('>AGIOS<');
+  /*
+   * **The body, not the document.** This read the whole of the HTML until
+   * 2026-09-12, when the site became AGIOS and `<title>AGIOS</title>` started
+   * matching the probe — a test that had never been run against a build since
+   * the rename, and so went red the first time it was. The claim was always
+   * about the *masthead*: the tab's title is text on purpose and is not a
+   * thing a face can arrive late for.
+   */
+  const body = html.slice(html.indexOf('<body'));
+  expect(body, 'the wordmark should not still be live text').not.toContain('>AGIOS<');
 
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const mark = page.locator('.site-name .brand-mark');

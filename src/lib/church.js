@@ -16,6 +16,7 @@
 import { CHURCHES_BY_ID, enabledChurches } from '../data/churches.js';
 import { STRINGS } from '../ui/strings.js';
 import { readSettings, writeSetting } from './settings.js';
+import { isWide } from './viewport.js';
 
 export const churchIds = () => enabledChurches().map((c) => c.id);
 
@@ -157,9 +158,30 @@ export function storedReckoning() {
   return RECKONINGS.includes(id) ? id : null;
 }
 
-/** The reckoning in force for a church: the reader's own, or the registry's. */
+/**
+ * The reckoning in force for a church: the reader's own, or the registry's —
+ * **unless the window is under 1024 px, where it is Gregorian and nothing
+ * else** (author, 2026-09-12).
+ *
+ * The chooser has been the desktop's since it was built ("have the ability
+ * only on desktop to click on this"), and the old page answered that by
+ * hiding the control and leaving the church's own reckoning in force: a
+ * Russian reader was shown 30 August on a phone with no way to ask for the
+ * date their phone's own clock agrees with. This is the stronger rule the
+ * author gave — below the line the choice is not merely unavailable, it is
+ * *made*, and made the civil way.
+ *
+ * **Here rather than in `reckoningInForce` alone, because the two must not
+ * part company.** `lib/liturgy.js` reads this for the fast and the Great
+ * Feast; the sidebar's heading, month grid and full-screen calendar read
+ * `reckoningInForce`. Fixing only the second would name one reckoning over a
+ * fast counted by another, which is the exact defect `reckoningInForce` was
+ * written to close on 2026-09-05 — reopened at 360 px. So a phone is
+ * Gregorian throughout: the date it prints, the month it colours and the days
+ * it calls a fast are one calendar.
+ */
 export const calendarFor = (churchId) =>
-  storedReckoning() ?? CHURCHES_BY_ID[churchId]?.default_calendar ?? 'julian';
+  (isWide() ? storedReckoning() ?? CHURCHES_BY_ID[churchId]?.default_calendar : 'gregorian') ?? 'julian';
 
 /**
  * `calendarFor(currentChurch())` — the one answer every view that names a

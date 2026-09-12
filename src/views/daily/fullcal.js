@@ -367,15 +367,19 @@ function build(el) {
 }
 
 /**
- * Wires the button, and builds the dialog the first time it is asked for.
+ * Wires the opener, and builds the dialog the first time it is asked for.
  *
  * Built late on purpose: a month of cells is a few hundred nodes and thirty-one
  * walks through the paschal arithmetic, and the overwhelming majority of visits
  * to the Daily page never open it. Nothing is paid for until it is.
+ *
+ * **Delegated on `el`, not bound to the button.** The opener only exists past
+ * 1024 px and is rewritten into its slot on every day step
+ * (`sidebar.js`'s `monthCaption`), so a listener holding one node would be
+ * dropped by the first paint after this — and would have to be re-wired by
+ * whatever noticed the window crossing the line.
  */
 export function wireFullCal(el) {
-  const open = el.querySelector('[data-fullcal]');
-  if (!open) return null;
   let dialog = null;
 
   const step = (n) => {
@@ -421,7 +425,8 @@ export function wireFullCal(el) {
 
   const onClose = () => shift(false);
 
-  const onOpen = () => {
+  const onOpen = (e) => {
+    if (!e.target.closest('[data-fullcal]')) return;
     if (!dialog) {
       dialog = build(el);
       dialog.addEventListener('click', onBody);
@@ -434,9 +439,9 @@ export function wireFullCal(el) {
     shift(true);
   };
 
-  open.addEventListener('click', onOpen);
+  el.addEventListener('click', onOpen);
   return () => {
-    open.removeEventListener('click', onOpen);
+    el.removeEventListener('click', onOpen);
     dialog?.removeEventListener('click', onBody);
     dialog?.removeEventListener('close', onClose);
     dialog?.remove();

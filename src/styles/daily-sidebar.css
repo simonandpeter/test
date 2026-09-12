@@ -162,6 +162,14 @@
    day being shown, the day it actually is, and every day of it coloured by its
    own fast. Fast-free days are left plain, because a plain day is what
    fast-free means; the colour is spent on the days that ask something. */
+/* The caption is written into a slot because it changes kind at 1024 px — a
+   button above, a plain line below (views/daily/sidebar.js's `monthCaption`).
+   `display: contents` so whichever it is stays a child of the column's flex
+   flow and takes its gap, rather than sitting inside a box of its own. */
+.cal-month-slot {
+  display: contents;
+}
+
 .cal-month {
   appearance: none;
   background: none;
@@ -178,6 +186,17 @@
 
 .cal-month:hover {
   color: var(--gold-ink);
+}
+
+/* Below 1024 px the same words with nothing behind them: no pointer, no hover
+   answer, no promise that pressing does anything. */
+.cal-month.is-static {
+  margin: 0;
+  cursor: auto;
+}
+
+.cal-month.is-static:hover {
+  color: var(--ink);
 }
 
 .cal {
@@ -406,5 +425,19 @@ button.cal-day {
     overflow: visible;
     -webkit-mask-image: none;
     mask-image: none;
+  }
+
+  /*
+   * **The reckoning control is the desktop's** (author, 2026-09-02: "have the
+   * ability only on desktop to click on this"), and here the choice is made
+   * as well as unoffered — `lib/church.js`'s `calendarFor` answers Gregorian
+   * below this line, so there is nothing left for the control to say.
+   * `display: none` rather than a class, so it is out of the accessibility
+   * tree too. The separator goes with it or the line opens on a middot; the
+   * church's own name stays, because which church the day is counted in is
+   * still a fact about the day. */
+  .reckoning,
+  .cal-cap-sep {
+    display: none;
   }
 }
