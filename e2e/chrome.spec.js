@@ -373,13 +373,13 @@ test('the header carries no date, and the controls keep their places at both wid
    * replaced both: the three controls level with the name and in order across
    * it, the nav centred underneath, down to a 320 px phone.
    *
-   * **The wide branch is measured in a wide utility face**, Amendment 24's
+   * **The wide branch is measured in a wide utility face**, the
    * lesson applied to the header: `--font-utility` is the reader's own system
    * stack, so the same row is a different width on every machine — Segoe UI on
    * Windows, DejaVu Sans on a bare Linux runner. This row had 6 px of slack in
    * Segoe and was 20 px over in DejaVu, so it held one line on the desk that
-   * built it and wrapped to 76 px in CI, unseen, from Amendment 36 (which put
-   * the language control in the corner) until CI said so at Amendment 38. The
+   * built it and wrapped to 76 px in CI, unseen, from the start (which put
+   * the language control in the corner) until CI said so then. The
    * face is forced here, and the native one is printed to the run's log, so
    * the assertion is one width on every machine and the runner still says in
    * numbers what its own face costs.
@@ -457,7 +457,7 @@ test('the chrome line holds down to a 320 px phone, in every language', async ({
    * min-content, so a long name widened the track instead of ellipsising and
    * printed straight across the controls — at 320 px in English and at 360 in
    * Russian. `minmax(0, 1fr)` is the fix, and the same trap caught the
-   * month's own span at Amendment 35.
+   * month's own span then.
    */
   for (const [width, language] of [[320, 'en'], [360, 'ru'], [360, 'el'], [412, 'ro']]) {
     const ctx = await browser.newContext({ viewport: { width, height: 780 } });
@@ -854,21 +854,18 @@ test('the theme follows the system until it is touched, and holds once it is', a
 
 test('the site is named in the reader\u2019s own language, and the habit page is Daily', async ({ page }) => {
   // Author, 2026-08-23. The name in the head and the page's nav label. The
-  // header's own corner reads a second, deliberately different name from the
-  // head's — "Orthodoxy Daily" until 2026-08-27, when it was renamed "Daily
-  // Dox" alongside the Byzantine-majuscule display face. The veil carried the
-  // head's name until 2026-08-24 and now carries the header's; that has a
-  // test of its own below. The route stays /calendar so no link breaks. Since
-  // 2026-08-25 the header's name comes from the pack rather than from the
-  // markup, so it follows the chosen language — the English pack says the
-  // same words the markup used to.
+  // head and the corner carried two deliberately different names until
+  // 2026-09-12, when the author ended the split: both are AGIOS now, in every
+  // language. The veil carried the head's name until 2026-08-24 and now
+  // carries the corner's; that has a test of its own below. The route stays
+  // /calendar so no link breaks.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page).toHaveTitle(/The Orthodox Saint/);
+  await expect(page).toHaveTitle(/AGIOS/);
   // The corner is outlines rather than text since 2026-08-28, so its name is
   // the mark's label. What this test is about — that the corner carries the
   // site's name and the nav's word for the habit page moves — is unchanged.
-  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'Daily Dox');
+  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'AGIOS');
   /*
    * On a day that is not today the button reads **Today** since 2026-08-26
    * evening — press it and it goes back. The claim this test makes is about
@@ -889,15 +886,13 @@ test('the site is named in the reader\u2019s own language, and the habit page is
   await expect(page.locator('.site-nav')).not.toContainText('Calendar');
 });
 
-/* ---- the round of 2026-08-24 (Amendment 34) ----------------------------- */
+/* ---- the round of 2026-08-24 ----------------------------- */
 
 test('the veil names the site the way the header does', async ({ page }) => {
   /*
-   * Author, 2026-08-24. The loading veil read "The Orthodox Saint" — the
-   * head's name — and now reads the header's, "Orthodoxy Daily" until
-   * 2026-08-27's rename to "Daily Dox". This narrows Amendment 31's
-   * deliberate two-name split to the <title> alone: the first thing a reader
-   * sees painted and the name in the corner it fades into are now the same
+   * Author, 2026-08-24. The loading veil read one name and the corner another;
+   * the first thing a reader sees painted and the name in the corner it fades
+   * into are the same
    * words, and the split survives only where a reader meets it in a tab or a
    * bookmark.
    *
@@ -913,9 +908,10 @@ test('the veil names the site the way the header does', async ({ page }) => {
    * outlines, which is what stopped it being painted in Literata first.
    */
   expect(html).toContain('class="veil-name" data-site-name><svg');
-  expect(html).not.toContain('The Orthodox Saint</div>');
-  // The head keeps its own name, which is the half of the split that stands.
-  expect(html).toContain('<title>The Orthodox Saint</title>');
+  expect(html).not.toContain('AGIOS</div>');
+  // And the head carries the same name. This asserted the other half of a
+  // two-name split until 2026-09-12; it now asserts that there is one name.
+  expect(html).toContain('<title>AGIOS</title>');
 
   /*
    * **And neither printed name follows the language any more** (author,
@@ -925,8 +921,9 @@ test('the veil names the site the way the header does', async ({ page }) => {
    * This supersedes 2026-08-25's "change the title on header and loading screen
    * to the picked language" rather than reversing it: what that instruction was
    * fixing was a name hard-coded in index.html and stale by a rename, and the
-   * name still comes from exactly one place — `BRAND` in ui/strings.js. What
-   * has changed is that the place is not the pack.
+   * name still comes from exactly one place — the outlined mark that
+   * `scripts/make_wordmark.py` draws. What has changed is that the place is
+   * not the pack. PLAN.md §3 "The name" lists every surface it reaches.
    *
    * The markup's own English is now simply right rather than a placeholder the
    * pack paints over, which is why the assertion above can read it out of the
@@ -939,17 +936,17 @@ test('the veil names the site the way the header does', async ({ page }) => {
   // The corner is outlines rather than text since 2026-08-28, so its name is
   // the mark's label. What this test is about — that the corner carries the
   // site's name and the nav's word for the habit page moves — is unchanged.
-  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'Daily Dox');
-  // The tab keeps the *other* name and keeps translating it: Amendment 31's
-  // split survives where a reader meets it in a tab or a bookmark, which is
-  // the half the stamp instruction does not touch.
-  await expect(page).toHaveTitle(/Sfântul Ortodox/);
+  await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'AGIOS');
+  // And the tab carries the same name. It used to carry a second, translated
+  // one; the author ended that split on 2026-09-12, so this line is now the
+  // assertion that there is only one name rather than that there are two.
+  await expect(page).toHaveTitle(/AGIOS/);
 });
 
 test('the site mark is the Orthodox cross, in gold by instruction', async ({ page }) => {
   /*
    * Author, 2026-08-24. The favicon was one gold cell — the attested mark of
-   * the veneration badge, which was removed whole at Amendment 25, so it had
+   * the veneration badge, which was removed whole then, so it had
    * been standing for a thing that no longer exists. It is now the
    * eight-pointed cross: upright, titulus, crossbar, and the slanted
    * footrest, whose slant is the whole of what makes it Orthodox rather than
@@ -957,7 +954,7 @@ test('the site mark is the Orthodox cross, in gold by instruction', async ({ pag
    *
    * It was drawn in ink for exactly one day. PLAN.md reserves gold for a
    * finding about veneration and nothing else, and a site mark is not one —
-   * which is why Amendment 34 took the gold out. *The author put it back on
+   * which is why the gold was taken out. *The author put it back on
    * 2026-08-25* ("make the site icon gold colour orthodox cross"), and §2
    * records the exception in place: gold is spent here and nowhere else on
    * the site. So this pins the two gold tokens exactly — a mark drifting to
@@ -983,8 +980,8 @@ test('the site mark is the Orthodox cross, in gold by instruction', async ({ pag
   const rightTop = points.find(([x]) => x === Math.max(...xs));
   expect(leftTop[1]).toBeLessThan(rightTop[1]);
   // Gold, by instruction (author, 2026-08-25), and exactly the two tokens:
-  // #A98237 on a light tab strip, #C79A4B on a dark one. Ink here from
-  // Amendment 34 until then.
+  // #A98237 on a light tab strip, #C79A4B on a dark one. Ink here
+  // until then.
   expect(svg.toLowerCase()).toContain('a98237');
   expect(svg.toLowerCase()).toContain('c79a4b');
   expect(svg).not.toContain('#221d19');
@@ -1076,7 +1073,7 @@ test('About states the privacy policy, and states it as the code behaves', async
   await expect(privacy).toContainText('Bible Gateway');
 });
 
-/* ---- the site's language (Amendment 36) --------------------------------- */
+/* ---- the site's language --------------------------------- */
 
 test('the language control offers five, each naming itself in its own tongue', async ({ page }) => {
   /*
@@ -1163,10 +1160,13 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
    */
   await expect(page.locator('[data-day-word]')).toHaveText('Среда');
   await expect(page.locator('.day-date')).toHaveText(/^13 Авг(уста)? 2026 г\.$/);
-  await expect(page).toHaveTitle(/Православный святой/);
+  // The tab is the one thing that does NOT redraw: since 2026-09-12 the
+  // name is a mark, the same in all five packs, so this asserts that the
+  // Russian page still says AGIOS while everything above it is Russian.
+  await expect(page).toHaveTitle(/AGIOS/);
   // The fast line: label and recurring reason translated, the cycle line
   // deliberately not — it is composed in English by lib/liturgy.js, the
-  // recorded seam of Amendment 36.
+  // recorded seam.
   // 26 August: days.pravoslavie.ru printed «Успенский пост; сухоядение», so
   // the grade leads the line, in Russian, from the pack's own vocabulary —
   // naming the *type* of fast since 2026-08-26 rather than the technical
@@ -1319,7 +1319,7 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
    * What is deliberately *not* swept is the corpus. Those em dashes are
    * inside quoted source text and citation lines transcribed from four
    * synaxaria — 3,638 of them — and editing a quotation for typography is the
-   * one thing Amendment 2 forbids. So this reads the chrome, element by
+   * one thing the corpus's no-invention rule forbids. So this reads the chrome, element by
    * element, rather than the whole page: the exception is real and is named
    * here rather than left to be discovered.
    */
@@ -1668,7 +1668,7 @@ test('pressing a chooser twice inside its flight does not send it the wrong way'
    * ui/fly.js returns its `finish`. `flyInto` decides where to fly *from* by
    * reading the box's rect; a panel halfway through arriving is at neither
    * end of its journey, so a close that began mid-arrival set off in the
-   * wrong direction and by the wrong distance. Amendment 9's rule — land what
+   * wrong direction and by the wrong distance. the rule — land what
    * is still moving before the next move starts — met for the fifth time.
    *
    * The header's control sits at the top right on a desktop, so a panel
@@ -1924,6 +1924,131 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   expect(after2.count, 'the rotation dropped or duplicated a link').toBe(5);
   expect(after2.keys, 'the rotation lost one of the five distinct pages').toBe(5);
   expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
+});
+
+test('an aggressive swipe carries the nav strip, and the ring turns under it', async ({ browser }) => {
+  /*
+   * **The 2026-09-12 defect, and the only test that can see it.**
+   *
+   * `ui/nav-scroll.js` turned the ring on every scroll event and wrote
+   * `scrollLeft` to hold the picture still while it did. Measured, that write
+   * does not "cut iOS momentum short": it ends the gesture. A 320 px fling
+   * moved the strip 45 px of its 450 px range, jumped backwards nine times and
+   * settled on the page it started from — three runs of three, identically.
+   * `scratchpad/fling-write.mjs` isolates the mechanism on a bare scroller
+   * with none of this site in it: no write, 350 px of travel; one write, 350
+   * dragged back to 315; a write per scroll event, 45.
+   *
+   * Two things had to change and this test fails if either is put back — the
+   * turn is once a gesture, and the settle is 150 ms of stillness rather than
+   * `scrollend`, which a mandatory-snap scroller fires every time it snaps.
+   * Both were backed out one at a time and both failed it at 40 px.
+   *
+   * **A real touch fling, through CDP** (trap 11, and `map.spec.js` takes the
+   * same route for the same reason): a dispatched `PointerEvent` is not an
+   * active pointer and produces no momentum at all, so it would report this
+   * row as perfectly well behaved whichever way the code was written.
+   *
+   * The assertions are on travel and on arrival, which are independent (trap
+   * 14): the row has to *go* — past a threshold no snap-back can reach — and
+   * it has to *arrive* somewhere else, with the ring turned so the page it
+   * arrived at still has neighbours either side.
+   */
+  const ctx = await browser.newContext({
+    viewport: { width: 360, height: 780 },
+    hasTouch: true,
+    isMobile: true,
+  });
+  const page = await ctx.newPage();
+  await searchMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const start = await page.evaluate(() => {
+    const t = document.querySelector('.site-nav');
+    const b = t.getBoundingClientRect();
+    // Traced in the page: a before/after pair cannot tell a fling that was cut
+    // short from one that never started.
+    window.__trace = [];
+    const tick = () => {
+      window.__trace.push(Math.round(t.scrollLeft));
+      window.__raf = requestAnimationFrame(tick);
+    };
+    window.__raf = requestAnimationFrame(tick);
+    return {
+      y: Math.round(b.top + b.height / 2),
+      at: Math.round(t.scrollLeft),
+      range: Math.round(t.scrollWidth - t.clientWidth),
+      centred: [...t.querySelectorAll('a')]
+        .map((a) => {
+          const r = a.getBoundingClientRect();
+          return { k: a.dataset.navKey, d: Math.abs(r.left + r.width / 2 - (b.left + t.clientWidth / 2)) };
+        })
+        .sort((p, q) => p.d - q.d)[0].k,
+    };
+  });
+  expect(start.range, 'the strip has nowhere to be flung').toBeGreaterThan(300);
+
+  const cdp = await ctx.newCDPSession(page);
+  const touch = (type, x) =>
+    cdp.send('Input.dispatchTouchEvent', {
+      type,
+      touchPoints: type === 'touchEnd' ? [] : [{ x, y: start.y, id: 1 }],
+    });
+  let x = 330;
+  await touch('touchStart', x);
+  for (let i = 0; i < 8; i += 1) {
+    x -= 40;
+    await touch('touchMove', x);
+    await page.waitForTimeout(8);
+  }
+  await touch('touchEnd', x);
+  await page.waitForTimeout(1400);
+
+  const after = await page.evaluate(() => {
+    cancelAnimationFrame(window.__raf);
+    const t = document.querySelector('.site-nav');
+    const b = t.getBoundingClientRect();
+    const seen = [...t.querySelectorAll('a')]
+      .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
+      .sort((p, q) => p.x - q.x);
+    const mid = b.left + t.clientWidth / 2;
+    const centred = [...t.querySelectorAll('a')]
+      .map((a) => {
+        const r = a.getBoundingClientRect();
+        return { k: a.dataset.navKey, d: Math.abs(r.left + r.width / 2 - mid) };
+      })
+      .sort((p, q) => p.d - q.d)[0];
+    return {
+      reached: Math.max(...window.__trace),
+      centred: centred.k,
+      offMid: Math.round(centred.d),
+      order: seen.map((s) => s.k),
+      links: t.querySelectorAll('a').length,
+      keys: new Set([...t.querySelectorAll('a')].map((a) => new URL(a.href).pathname)).size,
+      inBounds: t.scrollLeft >= -1 && t.scrollLeft <= t.scrollWidth - t.clientWidth + 1,
+    };
+  });
+
+  // It travelled. 45 px was the whole of what the broken row managed, and the
+  // snap point it kept springing back to is `start.at`; a third of the range
+  // is far past both and far short of the 450 the fixed row reaches.
+  expect(
+    after.reached - start.at,
+    `the fling moved the strip ${after.reached - start.at} px of a ${start.range} px range`,
+  ).toBeGreaterThan(start.range / 3);
+  // And it arrived: a different page is centred, cleanly, and in bounds.
+  expect(after.centred, 'the strip sprang back to the page it started on').not.toBe(start.centred);
+  expect(after.offMid, 'the strip settled off its own midline').toBeLessThan(6);
+  expect(after.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
+  // The ring turned with it, so the page it landed on still has neighbours on
+  // both sides — the whole of what "endless" means here.
+  expect(after.links, 'the turn dropped or duplicated a link').toBe(5);
+  expect(after.keys, 'the turn lost one of the five distinct pages').toBe(5);
+  const landed = after.order.indexOf(after.centred);
+  expect(landed, `the strip landed at position ${landed} of five, not the middle`).toBe(2);
+  await ctx.close();
 });
 
 /**
@@ -2599,7 +2724,7 @@ test('the name is a stamp: the same mark in every language, in the stamp face', 
    * keeps the arithmetic for the day a second word comes back.
    *
    * **Its accessible name is deliberately still the site's**, which is the
-   * other half of that instruction: the mark is a mark, and Daily Dox is what
+   * other half of that instruction: the mark is a mark, and AGIOS is what
    * the PWA manifest, the README and the `<title>` split all still say. So a
    * pack that translated *either* fails here.
    */
@@ -2624,7 +2749,7 @@ test('the name is a stamp: the same mark in every language, in the stamp face', 
         text: document.querySelector('.site-name').textContent.replace(/\s+/g, ' ').trim(),
       };
     });
-    expect(stamp.label, `the ${language} pack translated the name`).toBe('Daily Dox');
+    expect(stamp.label, `the ${language} pack translated the name`).toBe('AGIOS');
     expect(stamp.text, `the ${language} pack printed the name as live text`).toBe('');
     // Five glyphs, one path each — A G I O S: the mark is the same drawing in
     // every pack, where the face used to be scoped to English because the
@@ -2700,7 +2825,7 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
 
 test('the masthead is outlines in the served HTML, not text waiting for a face', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "Daily Dox still sometimes opens with literata on
+   * Author, 2026-08-28: "AGIOS still sometimes opens with literata on
    * loading screen and title before updating to the new font. Is this because
    * the browser has to download? If it is, can you create an .svg yourself
    * based on the title and replace it with that so it always has the intended
@@ -2720,7 +2845,7 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
   const html = await (await page.request.get('/')).text();
   const marks = [...html.matchAll(/<svg[^>]*class="brand-mark"/g)];
   expect(marks.length, 'the veil and the masthead should both carry the mark').toBe(2);
-  expect(html, 'the wordmark should not still be live text').not.toContain('>Daily Dox<');
+  expect(html, 'the wordmark should not still be live text').not.toContain('>AGIOS<');
 
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   const mark = page.locator('.site-name .brand-mark');
@@ -2735,7 +2860,7 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
   expect(box.w).toBeGreaterThan(box.h);
 
   // And it still names itself, since it replaced text that did.
-  await expect(mark).toHaveAttribute('aria-label', 'Daily Dox');
+  await expect(mark).toHaveAttribute('aria-label', 'AGIOS');
 });
 
 test('the two Latin subsets are preloaded, and only those', async ({ page }) => {
@@ -3301,7 +3426,7 @@ test('a press outside a chooser closes it', async ({ page }) => {
 
 test('the masthead stands the same distance off the nav as the nav’s own words do', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "the gap between Daily Dox svg and Daily should match
+   * Author, 2026-09-02: "the gap between the wordmark svg and Daily should match
    * the gap between Daily and All Saints."
    *
    * The header's five tracks are `space-3` apart, a number measured for the

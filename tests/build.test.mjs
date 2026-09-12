@@ -187,6 +187,7 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon.png'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
+    await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg'), png);
     await writeFile(
       path.join(dir, 'test-saint', 'saint.json'),
       JSON.stringify(saint({ images: [{ file: 'images/icon.png' }] })),
@@ -199,12 +200,106 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
       // The card derivative, 2026-09-06: `src` is the original the saint's own
       // page draws, and this is the one a 150-300 px card is handed.
       card: 'saints/test-saint/images/icon-card.jpg',
+      /*
+       * And the narrow half of the card's `srcset`, 2026-09-12. The two `w`
+       * numbers are the derivatives' own pixel *widths* and not the cap on
+       * their long edge, which for this 8x10 is 8 either way — make_thumbs.py
+       * never upscales, so a picture smaller than the cap is its own
+       * derivative and both descriptors are the original's width. That is the
+       * case worth pinning: the arithmetic that gets it wrong is the one that
+       * writes the cap down instead of measuring.
+       */
+      cardSm: 'saints/test-saint/images/icon-card-sm.jpg',
+      cardW: 8,
+      cardSmW: 8,
       w: 8,
       h: 10,
       aspect: 0.8,
     });
   } finally {
     await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test('the srcset widths the manifest declares are the widths the files really have', async () => {
+  /*
+   * **The one thing arithmetic can get wrong here, pinned against the pixels**
+   * (2026-09-12). `cardW` and `cardSmW` are computed in build-manifest.mjs
+   * from the original's shape and two caps repeated from make_thumbs.py,
+   * because opening two more files per saint at build time to learn a number
+   * that is already implied would be a cost for nothing. The price of that is
+   * two copies of `CARD_MAX_PX` — one in Python and one in JavaScript — and a
+   * `srcset` descriptor that lies is worse than no `srcset` at all: the
+   * browser picks by it, so an over-stated width makes it fetch the narrow
+   * file for a box the narrow file cannot fill.
+   *
+   * So this reads the real derivatives beside a real icon and checks the
+   * declared numbers against them. It also covers the cap itself moving in
+   * one language and not the other, which is the mistake the two copies
+   * invite. Portrait *and* landscape, because the caps are on the long edge
+   * and a `srcset` descriptor is a width — the two are the same number only
+   * for a landscape picture, and getting that backwards is the whole bug this
+   * is here for.
+   */
+  const { imageSizeFromFile } = await import('image-size/fromFile');
+  const { readdir, readFile } = await import('node:fs/promises');
+  const root = path.join(import.meta.dirname, '..', 'saints');
+  const folders = await readdir(root);
+
+  /** A folder with an icon and both card derivatives, in the shape asked for. */
+  const findOne = async (wantPortrait) => {
+    for (const folder of folders) {
+      const dir = path.join(root, folder, 'images');
+      let files;
+      try {
+        files = await readdir(dir);
+      } catch {
+        continue;
+      }
+      const icon = files.find((f) => /^icon\.(jpe?g|png)$/i.test(f));
+      if (!icon) continue;
+      const base = icon.replace(/\.[^.]+$/, '');
+      if (!files.includes(`${base}-card.jpg`) || !files.includes(`${base}-card-sm.jpg`)) continue;
+      const { width, height } = await imageSizeFromFile(path.join(dir, icon));
+      if (width > height === wantPortrait) continue;
+      return { folder, dir, icon, base, width, height };
+    }
+    return null;
+  };
+
+  for (const portrait of [true, false]) {
+    const found = await findOne(portrait);
+    // The corpus is 130 icons and both shapes are in it; if one ever is not,
+    // say so rather than passing on an empty loop.
+    assert.ok(found, `no ${portrait ? 'portrait' : 'landscape'} icon with both card derivatives in the corpus`);
+
+    const dir = await mkdtemp(path.join(os.tmpdir(), 'saints-srcset-'));
+    try {
+      await mkdir(path.join(dir, 'test-saint', 'images'), { recursive: true });
+      for (const suffix of ['', '-thumb.jpg', '-card.jpg', '-card-sm.jpg']) {
+        const from = suffix ? `${found.base}${suffix}` : found.icon;
+        const to = suffix ? `icon${suffix}` : found.icon;
+        await writeFile(path.join(dir, 'test-saint', 'images', to), await readFile(path.join(found.dir, from)));
+      }
+      await writeFile(
+        path.join(dir, 'test-saint', 'saint.json'),
+        JSON.stringify(saint({ images: [{ file: `images/${found.icon}` }] })),
+      );
+      const r = await build({ saintsDir: dir, write: false });
+      assert.deepEqual(r.errors, []);
+      const image = r.manifest[0].image;
+      const real = {
+        card: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg')),
+        cardSm: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg')),
+      };
+      const where = `${found.folder} (${found.width}x${found.height}, ${portrait ? 'portrait' : 'landscape'})`;
+      assert.equal(image.cardW, real.card.width, `cardW is not the card file's own width — ${where}`);
+      assert.equal(image.cardSmW, real.cardSm.width, `cardSmW is not the small card's own width — ${where}`);
+      // And the small one really is smaller, or the srcset offers one file twice.
+      assert.ok(real.cardSm.width < real.card.width, `the two card derivatives are the same width — ${where}`);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   }
 });
 
@@ -225,6 +320,7 @@ test('a licence that obliges attribution warns until it has some; one that does 
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon.png'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
+    await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon.meta.json'), JSON.stringify(meta));
       await writeFile(
         path.join(dir, 'test-saint', 'saint.json'),

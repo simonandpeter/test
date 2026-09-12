@@ -77,9 +77,27 @@
  * swipe (`keepEndless`), not after either. The settle-time `balance` remains as
  * the thing that squares the position exactly once everything has stopped.
  *
- * The one cost is written down where it is taken: `keepEndless` writes
- * `scrollLeft` inside a live gesture, which can cut iOS momentum short. The
- * first cut refused to do that and paid for it with the blank edge above.
+ * **Third cut, 2026-09-12: once a gesture, and rest is not `scrollend`.** The
+ * paragraph that stood here said the one cost was iOS momentum, that a snap
+ * damps a fling anyway so the window was short, and that this was written down
+ * rather than measured. Measured, all three were wrong. A `scrollLeft` write
+ * ends a Chromium fling too, a snap does not save it, and the window was every
+ * scroll event: a 320 px swipe travelled 45 px of a 450 px range and came back
+ * to the page it left, three times in three (`scratchpad/nav-swipe.mjs`).
+ * `scratchpad/fling-write.mjs` has the mechanism on a bare scroller — no
+ * write, 350 px; one write of the value already there, 350 dragged back to
+ * 315; a write per scroll event, 45 — so it is the write and not the
+ * arithmetic.
+ *
+ * Two changes, and `keepEndless` and `settled` each carry their half:
+ * the ring turns **at most once per gesture**, and the settle is **150 ms of
+ * stillness with the finger off**, because a mandatory-snap scroller fires
+ * `scrollend` every time it snaps — including the snap this file's own turn
+ * provokes, which is how `balance` came to be re-centring in the middle of a
+ * fling. Same fling afterwards: the full 450 px, 225 px of coast after the
+ * lift, no backward step, and the ring turned so the page it lands on stands
+ * in the middle of five. `an aggressive swipe carries the nav strip` in
+ * `e2e/chrome.spec.js` fails if either half goes back.
  */
 
 import { reducedMotion, DUR } from '../lib/motion.js';
@@ -126,12 +144,43 @@ export function wireNavScroll(track) {
    * number.
    */
   let touched = false;
+  /**
+   * Whether the ring has already turned inside the gesture now under way.
+   * Cleared by a finger going down and by the settle, and by nothing else.
+   */
+  let turnedInGesture = false;
+  /**
+   * Whether a finger is on the glass right now. A scroller can go quiet with a
+   * finger still on it — a reader holding the row still, or pausing mid-drag —
+   * and rebalancing there moves the row under the hand that is holding it.
+   */
+  let fingerDown = false;
   const onTouch = () => {
     touched = true;
+    fingerDown = true;
+    // A finger going down ends whatever momentum was running, so the gesture
+    // that starts here gets its own turn. See `turnedInGesture` above.
+    turnedInGesture = false;
+  };
+  const onLift = () => {
+    fingerDown = false;
+    // The momentum starts here, so the settle is armed from here too: a fling
+    // that never fires another scroll event still has to be squared up.
+    armSettle();
   };
   track.addEventListener('pointerdown', onTouch, { passive: true });
   track.addEventListener('touchstart', onTouch, { passive: true });
-  track.addEventListener('wheel', onTouch, { passive: true });
+  track.addEventListener('pointerup', onLift, { passive: true });
+  track.addEventListener('pointercancel', onLift, { passive: true });
+  track.addEventListener('touchend', onLift, { passive: true });
+  track.addEventListener('touchcancel', onLift, { passive: true });
+  // A wheel does not clear the flag: momentum wheel events arrive in a stream,
+  // and treating each as a fresh gesture is exactly the per-event write this
+  // guard exists to stop. The settle clears it.
+  const onWheel = () => {
+    touched = true;
+  };
+  track.addEventListener('wheel', onWheel, { passive: true });
 
   const currentEl = () => track.querySelector(':scope > a[aria-current="page"]');
 
@@ -220,14 +269,43 @@ export function wireNavScroll(track) {
   let raf = 0;
   let settleTimer = null;
 
+  /**
+   * The settle, which is **rest and not `scrollend`** (2026-09-12).
+   *
+   * `scrollend` fires whenever a scroll sequence finishes, and a mandatory-snap
+   * scroller finishes one every time it snaps — including the snap provoked by
+   * this file's own `keepEndless` write. So the platform's own event was
+   * arriving in the *middle* of a fling and `balance` was re-centring on it,
+   * which moves the picture and pulls the row back to where the gesture began.
+   * Traced write by write (`scratchpad/nav-swipe.mjs`): five turn-and-rebalance
+   * pairs inside one 320 px swipe, at 145, 243, 346, 443 and 595 ms.
+   *
+   * Rest is 150 ms with no scroll event at all, and a finger off the glass.
+   * Every scroll — the reader's, the momentum's, the snap's, and this file's
+   * own — re-arms it, so it can only fire when nothing is moving.
+   */
   function settled() {
     clearTimeout(settleTimer);
     settleTimer = null;
     // The tween ends itself, and it is the only thing that moves this row
     // besides a reader.
     if (dead || gliding || !touched) return;
+    // A finger still on the glass is a gesture still happening, whatever the
+    // scroller has stopped doing.
+    if (fingerDown) return;
+    // The gesture is over, so the next one gets a turn of its own.
+    turnedInGesture = false;
     balance();
   }
+
+  /** Re-arms the settle. Every scroll goes through here, and so does `scrollend`. */
+  const armSettle = () => {
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(settled, SETTLE_MS);
+  };
+
+  /** How long the row must be still before a rebalance counts as a settle. */
+  const SETTLE_MS = 150;
 
   /**
    * The same turn, run *during* a reader's own swipe rather than after it, so
@@ -235,19 +313,41 @@ export function wireNavScroll(track) {
    * turn: the scroll position the reader put there is preserved, because
    * `turnKeepingStill` pins whatever they are looking at.
    *
-   * **The known cost is iOS momentum**, which a `scrollLeft` write can cut
-   * short — the first cut avoided writing during a gesture deliberately, and
-   * paid for it with the blank edge above. `scroll-snap-type: x mandatory`
-   * damps a fling to a snap point either way, so the window in which this can
-   * bite is short. Written down rather than measured: there is no iOS on this
-   * desk, and Chrome is where every number in this file comes from.
+   * **Once per gesture, and that is the whole of the 2026-09-12 fix.**
+   *
+   * This file used to say the cost was iOS momentum, short, and written down
+   * rather than measured. Measured, it was neither iOS-only nor short. On a
+   * bare scroller with none of this file's code in it
+   * (`scratchpad/fling-write.mjs`, Chromium, mobile-360, a 320 px fling):
+   *
+   * | writes of `scrollLeft` during the fling | how far it travelled |
+   * | --- | --- |
+   * | none | 350 px |
+   * | one, 100 ms after the lift | 350 px, dragged back to 315 |
+   * | one per scroll event | **45 px** |
+   *
+   * The value written was the value already there, so it is the write itself
+   * and not the arithmetic. `keepEndless` ran on every scroll event, which is
+   * the third row: on the real strip a hard swipe moved 45 px of a 450 px
+   * range, jumped backwards nine times, and settled on the page it started on
+   * (`scratchpad/nav-swipe.mjs`, 3 of 3). The oscillation feeds itself — a
+   * write computed from a `scrollLeft` the compositor has already moved past
+   * lands behind the fling, which puts a different link nearest the midline,
+   * which asks for another turn.
+   *
+   * One turn per gesture costs a frame of travel and buys two pages of runway
+   * either side, which is as far as a fling can reach in a range this size.
+   * `force` is for this file's own tween, which writes every frame regardless
+   * and has no native momentum to protect.
    */
-  function keepEndless() {
+  function keepEndless(force = false) {
     if (dead) return;
+    if (!force && turnedInGesture) return;
     const near = nearestEl();
     if (!near) return;
     const seen = [...links].sort((a, b) => a.offsetLeft - b.offsetLeft);
     if (seen.indexOf(near) === middle) return;
+    if (!force) turnedInGesture = true;
     turnKeepingStill(near);
   }
 
@@ -257,13 +357,12 @@ export function wireNavScroll(track) {
     // makes on the way are not news.
     if (gliding || !touched) return;
     keepEndless();
-    clearTimeout(settleTimer);
-    settleTimer = setTimeout(settled, 150);
+    armSettle();
   };
-  // `scrollend` is the settle, where the platform has it; the per-frame turn
-  // above wants every scroll event either way, so both are registered now.
+  // `scrollend` arms the settle rather than being it — see `settled` above for
+  // the fling a snap's own `scrollend` used to cut in half.
   track.addEventListener('scroll', onScroll, { passive: true });
-  if (useScrollEnd) track.addEventListener('scrollend', settled, { passive: true });
+  if (useScrollEnd) track.addEventListener('scrollend', armSettle, { passive: true });
 
   /**
    * **The gentle press** (author, 2026-09-08: "when you select one it should
@@ -344,7 +443,9 @@ export function wireNavScroll(track) {
       // gentle at this distance.
       const eased = 1 - (1 - t) ** 3;
       write(centreOf(target) - remaining * (1 - eased));
-      keepEndless();
+      // Forced: the tween owns every write in this frame, so the once-a-gesture
+      // guard is not about it.
+      keepEndless(true);
       if (t < 1) {
         raf = requestAnimationFrame(step);
         return;
@@ -393,9 +494,13 @@ export function wireNavScroll(track) {
       cancelAnimationFrame(raf);
       track.removeEventListener('pointerdown', onTouch);
       track.removeEventListener('touchstart', onTouch);
-      track.removeEventListener('wheel', onTouch);
+      track.removeEventListener('pointerup', onLift);
+      track.removeEventListener('pointercancel', onLift);
+      track.removeEventListener('touchend', onLift);
+      track.removeEventListener('touchcancel', onLift);
+      track.removeEventListener('wheel', onWheel);
       track.removeEventListener('scroll', onScroll);
-      if (useScrollEnd) track.removeEventListener('scrollend', settled);
+      if (useScrollEnd) track.removeEventListener('scrollend', armSettle);
       for (const el of links) el.style.removeProperty('order');
     },
   };

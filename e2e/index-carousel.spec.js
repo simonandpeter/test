@@ -503,7 +503,7 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
 
 test('a second press inside the fade lands the first one rather than racing it', async ({ page }) => {
   /*
-   * Amendment 9's rule, in the shape the mode swap needs: while two flights are
+   * the rule, in the shape the mode swap needs: while two flights are
    * in the air, exactly one is current. `land` reads the mode off `state`, so
    * two overlapping fades would leave the *stale* timer with the last word —
    * pressing twice quickly could settle on the mode you had just left.
@@ -713,7 +713,7 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
     /*
      * **Fifteen frames, not two** (2026-08-29). This assertion failed about one
      * local run in three at 1116-1161 px/s against a 900 px/s clamp, on a clean
-     * checkout — Amendment 66's mistake in its third costume. The old version
+     * checkout — the mistake in its third costume. The old version
      * read the position across two rAF callbacks, but the loop integrates in
      * *its own* rAF, and the two are not the same clock: a dropped frame put up
      * to a frame and a half of integrated distance inside the test's measured
@@ -1819,6 +1819,13 @@ test('the row draws the card derivative, never the full icon', async ({ page }) 
    * Asserted on `data-src` rather than `src`, because `src` is only present
    * on the pictures the window is currently holding, and the claim is about
    * every card in the row.
+   *
+   * **Either card derivative since 2026-09-12**, when a second and narrower
+   * one arrived and the row began choosing between them by the card's width
+   * and the screen's density (`views/index/modes.js`). Which of the two is
+   * `a phone takes the narrow card file`'s subject and not this one's; what
+   * this test has always been about is that the *original* never reaches a
+   * card, and that claim is unchanged and still asserted below.
    */
   await carouselMode(page);
   await ready(page);
@@ -1829,9 +1836,10 @@ test('the row draws the card derivative, never the full icon', async ({ page }) 
     [...document.querySelectorAll('[data-carousel-track] .cx-media img')].map((i) => i.dataset.src ?? ''),
   );
   expect(sources.length, 'no pictures in the row at all').toBeGreaterThan(4);
-  expect(sources.filter((s) => s.endsWith('-card.jpg')).length, 'a card is not drawn from the derivative').toBe(
-    sources.length,
-  );
+  expect(
+    sources.filter((s) => /-card(-sm)?\.jpg$/.test(s)).length,
+    'a card is not drawn from either card derivative',
+  ).toBe(sources.length);
   expect(sources.filter((s) => /icon\.(jpe?g|png)$/i.test(s)).length, 'the row is still fetching originals').toBe(0);
 });
 
@@ -2146,4 +2154,134 @@ test('a column of names carries more of them than its worst caption would allow'
     read.deepest,
     `${read.deepest} names in ${read.room} px, where a flat ${flat} px caption allowed ${wouldHaveFit}`,
   ).toBeGreaterThan(wouldHaveFit);
+});
+
+/* ---- round: the boot, 2026-09-12 ---------------------------------------- */
+
+test('the search face is not laid out while the carousel is showing', async ({ page }) => {
+  /*
+   * **PLAN item 2's other half** (2026-09-12). The row's caption pack went
+   * lazy on 2026-09-09 and the page still spent most of a second before it
+   * could paint — because `update()` runs before `applyMode()`, so the grid
+   * laid out all 862 saints, mounted a screenful of cards, and *then* the
+   * carousel hid it. A reader who never asks for the search face was paying
+   * for its layout on every visit.
+   *
+   * Measured with `scratchpad/phase-cost.mjs`, five interleaved A/B pairs
+   * against one dev server at 10x CPU: `layout()` ran twice before the first
+   * card, for **394-606 ms**, the largest single item in the boot; the second
+   * call is the resize observer the hiding itself provokes. Blocking time
+   * before the first card fell from ~2,200 ms to ~1,750 in four of the five.
+   *
+   * What the reader can be shown, and therefore what this asserts, is that
+   * nothing of the grid exists while the row is up and all of it exists the
+   * moment the other face is asked for. Both halves, because the first alone
+   * would pass just as well if the deferral never paid up.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.locator('.cx-card').first().waitFor();
+  // Past the idle repack, which is the latest anything at boot happens: if the
+  // grid were going to be laid out behind the row, it would have been by now.
+  await packedRow(page);
+
+  const hidden = await page.evaluate(() => ({
+    cards: document.querySelectorAll('.index-card').length,
+    inner: document.querySelector('[data-grid-inner]').style.height,
+  }));
+  expect(hidden.cards, 'the hidden search face mounted cards nobody can see').toBe(0);
+  expect(hidden.inner, 'the hidden search face was laid out to a height').toBe('');
+
+  // And it is a deferral, not a loss: the face is whole when it is asked for.
+  await page.locator('[data-mode-toggle]').click();
+  await expect(page.locator('.facets')).toBeVisible();
+  await expect(page.locator('.index-card').first()).toBeVisible();
+  const shown = await page.evaluate(() => ({
+    cards: document.querySelectorAll('.index-card').length,
+    height: parseFloat(document.querySelector('[data-grid-inner]').style.height || '0'),
+  }));
+  expect(shown.cards, 'the search face arrived empty').toBeGreaterThan(0);
+  expect(shown.height, 'the grid has no laid-out height').toBeGreaterThan(500);
+});
+
+test('a phone takes the narrow card file, and a dense screen takes the wide one', async ({ browser }) => {
+  /*
+   * **A phone was downloading a 560 px file to draw a 150 px card**
+   * (HANDOFF's third known defect). Measured on the production build at
+   * 360 px, DPR 1 (`scratchpad/screenful-bytes.mjs`): the first screenful
+   * fetched 11 pictures for **525 kB** to draw two of them, one a 560x373
+   * file inside a 150x100 CSS box.
+   *
+   * `make_thumbs.py` now writes a second card size and the row names both,
+   * with the packer's own resolved card width as `sizes` — so the choice is
+   * the browser's, made against the reader's real screen, rather than the
+   * build's made against nobody's.
+   *
+   * `currentSrc` and `naturalWidth` are the assertions, not the attribute: a
+   * markup check would pass on a `data-src` nothing ever fetched, and what
+   * this defect is about is bytes on the wire.
+   *
+   * **Both directions, in two contexts of their own.** The suite's mobile-360
+   * project is a narrow desktop at one device pixel, and the whole choice this
+   * pins is a function of the density — a rule that always took the narrow
+   * file would pass a one-sided test and hand a modern phone a picture at half
+   * the resolution of its screen.
+   */
+  /** The first picture a reader can actually see, once it has really loaded. */
+  const shownPicture = (page) =>
+    page.evaluate(() => {
+      /*
+       * **On screen, not merely in the track** (trap 1, and trap 7's cousin).
+       * The row is forty thousand pixels wide and `.cx-cell` carries
+       * `content-visibility: auto`, so a cell past the fold reports a box of
+       * zero and a picture no reader has been shown.
+       */
+      const vw = window.innerWidth;
+      const img = [...document.querySelectorAll('[data-carousel-track] img')].find((i) => {
+        const r = i.getBoundingClientRect();
+        return i.currentSrc && i.complete && i.naturalWidth && r.width > 0 && r.right > 0 && r.left < vw;
+      });
+      if (!img) return null;
+      return {
+        src: img.currentSrc,
+        drawn: Math.round(img.getBoundingClientRect().width),
+        natural: img.naturalWidth,
+        dpr: window.devicePixelRatio,
+      };
+    });
+
+  for (const dpr of [1, 3]) {
+    const ctx = await browser.newContext({ viewport: { width: 360, height: 780 }, deviceScaleFactor: dpr });
+    const page = await ctx.newPage();
+    await carouselMode(page);
+    await ready(page);
+    await page.goto(INDEX, { waitUntil: 'networkidle' });
+    await page.locator('.cx-card').first().waitFor();
+    await expect
+      .poll(async () => (await shownPicture(page)) !== null, {
+        timeout: 15000,
+        message: `no picture in the row ever finished loading at DPR ${dpr}`,
+      })
+      .toBe(true);
+    const picked = await shownPicture(page);
+    expect(picked.dpr, 'the context did not take the density it was given').toBe(dpr);
+
+    if (dpr === 1) {
+      // 150 CSS px at one device pixel: the 280 px derivative is already
+      // nearly twice what the box needs, and 560 was the defect.
+      expect(picked.src, `a phone at one device pixel took ${picked.src}`).toContain('-card-sm.jpg');
+      expect(picked.natural, `the picture decoded at ${picked.natural} px wide`).toBeLessThanOrEqual(280);
+    } else {
+      // 150 CSS px at three device pixels is 450, which the narrow file cannot
+      // fill — taking it here would be the opposite mistake, and a cheaper one
+      // to make by accident.
+      expect(picked.src, `a dense screen took ${picked.src}`).not.toContain('-card-sm.jpg');
+      expect(picked.natural, `the picture decoded at ${picked.natural} px wide`).toBeGreaterThan(280);
+    }
+    // Whichever it took, the card is the width the packer said it was — the
+    // number the choice above is made against.
+    expect(picked.drawn, `the card is ${picked.drawn} px wide`).toBeGreaterThan(100);
+    await ctx.close();
+  }
 });

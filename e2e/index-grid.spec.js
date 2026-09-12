@@ -90,13 +90,13 @@ test('the index opens on the whole corpus, unfiltered and unranked', async ({ pa
   // 746 since the 21 September batch (2026-08-29): the two Georgian
   // confessors of the Russian calendar's 8 September, and the prophet Jonah
   // and apostle Quadratus of the Romanian 21 September.
-  // 742 since Amendment 44's first day of saints: thirteen more for the Russian
+  // 742 since the first day of saints: thirteen more for the Russian
   // calendar's 7 September, the civil 20 September.
   // 729 since the Greek harvest of 2026-08-26: the twenty-one people the Greek
   // calendar prints for 20 September, the first day past the end of the day
   // records. Sixteen entries became twenty-one folders, not sixteen — three of
   // them are icons of the Theotokos and one a synaxis, which are not folders
-  // (Amendment 31), while Eustathius arrives with his wife and both sons and
+  //, while Eustathius arrives with his wife and both sons and
   // "the two Anastasii" are two men.
   await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   await expect(page.locator('.index-card').first()).toBeVisible();
@@ -265,7 +265,7 @@ test('the index offers two layouts, and remembers which one the reader chose', a
 
 
 test('a fading card is set aside, and one brought back mid-fade is whole again', async ({ page }) => {
-  // The Index's leaving cards learned Amendment 17's lesson too: a card on its
+  // The Index's leaving cards learned the lesson too: a card on its
   // way out keeps its link for 200 ms, and that link must not hold the tab
   // order. Undone the moment a second filter change brings the card back.
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -418,13 +418,13 @@ test('Detailed adds the opening of the life, and every box still holds', async (
 
 
 test('a card lifespan is one line, ending in an ellipsis where three across would wrap it', async ({ page }) => {
-  // Found by looking, not by the suite (Amendment 26): with Literata applied
+  // Found by looking, not by the suite: with Literata applied
   // the 72ch column is 678 px and the grid lays three cards across at 213 px,
   // where "13 November 354 – 28 August 430" wrapped and the reserved block cut
   // the second line off. The Detailed test's crop check never saw it because a
   // fresh context is a cold load — 580 px, two columns, nothing wraps. So this
   // one warms the font cache on another route first, which is every visit
-  // after the first. Rows had the one-line rule from Amendment 22; cards did
+  // after the first. Rows had the one-line rule from the start; cards did
   // not.
   //
   // The one test with no meaning under COLD_FACE: its subject *is* the warm
@@ -471,8 +471,8 @@ test('a card lifespan is one line, ending in an ellipsis where three across woul
 test('the grid follows its column, not only the window', async ({ page }) => {
   // Literata arriving inside font-display: optional's window widens the 72ch
   // column from 580 to 678 px after the grid has counted its columns, and a
-  // cold load at 1280 laid two columns into a three-column width (Amendment
-  // 26). That race cannot be staged on demand, so the column is widened by
+  // cold load at 1280 laid two columns into a three-column width. That race
+  // cannot be staged on demand, so the column is widened by
   // hand after load — the same event: a container that moves while the window
   // does not — and the grid has to re-count without a resize event.
   await page.setViewportSize({ width: 1280, height: 900 });
@@ -482,7 +482,7 @@ test('the grid follows its column, not only the window', async ({ page }) => {
   await page.addStyleTag({ content: 'main.chrome { max-width: 900px !important; }' });
   // Polled, not slept: the observer is delivered at the rendering update the
   // style change causes, and a headless page produces no further frames on
-  // its own — a fixed wait and then a read was racing that (Amendment 26).
+  // its own — a fixed wait and then a read was racing that.
   await expect
     .poll(() => page.locator('.index-card').first().evaluate((c) => c.clientWidth), {
       message: `cards are still ${before} px wide after the column grew`,
@@ -658,7 +658,7 @@ test('the veneration glyph is drawn nowhere, and gold is spent only where it was
 
 
 test('every saint opens on a life from the synaxarion, with its source linked', async ({ page }) => {
-  // Amendment 30. The corpus went from eight lives to a hundred and forty-nine
+  // The corpus went from eight lives to a hundred and forty-nine
   // in one sitting, each written after the synaxarion of a church that keeps
   // the saint, each closing with the source it was read from. Lawrence carries
   // the Russian life and the Serbian Prologue; a link to a companion prefetches
@@ -952,7 +952,7 @@ test('a card is only as tall as its name needs, like a row', async ({ page }) =>
    * A card reserved two lines of name whatever the name was, so a one-line
    * saint left an empty line between the name and the dates and stood taller
    * than the same saint's row. Rows have been sized to their own line count
-   * since Amendment 56; `cardHeights` in views/index/grid.js now does the same
+   * since; `cardHeights` in views/index/grid.js now does the same
    * arithmetic for cards, and `.index-card .name-line` gave up its fixed 42 px.
    *
    * Pinned by name rather than off the deal, which is this suite's oldest trap:
@@ -1049,7 +1049,7 @@ test('a saint is named by rank, and what they held is on the line below', async 
   /*
    * Author, 2026-08-27: "Add the rank Hieromartyr or Righteous if it applies
    * to the saint, and if there is no special rank, print 'St.' prefixed, and
-   * then strip the ." — which reverses Amendment 32's blanket honorific.
+   * then strip the ." — which reverses the blanket honorific.
    *
    * 28 August on the Greek calendar is the day the addendum names for the
    * check, because the corpus and OCA's own listing for it share three
@@ -1742,4 +1742,66 @@ test('an index card and a carousel column crop to the hero own limits', async ({
     expect(c.drawn, 'a carousel picture is taller than 1:1.6').toBeLessThan(1.62);
   }
   expect(row.some((c) => c.file > 1.62), 'premise: nothing in the row needed cropping').toBe(true);
+});
+
+test('a row draws its thumbnail from a card derivative, never from the original', async ({ browser }) => {
+  /*
+   * **The carousel stopped fetching `icon.jpg` on 2026-09-06 and the grid did
+   * not.** Measured on the production build at 360 px, DPR 1
+   * (`scratchpad/screenful-bytes.mjs`): the search face's first screenful was
+   * **1,005 kB of pictures to draw two**, one of them a 1200x1500, 765 kB
+   * original inside a 48x48 CSS row thumbnail — four times the carousel's
+   * bill for a picture a fifth the size.
+   *
+   * The original is not gone; it is where it belongs, on the saint's own page
+   * and in the hero. What a card and a row are handed is a derivative, and
+   * which of the two is the browser's choice against the box `sizes` states.
+   *
+   * Asserted on the bytes and not only on the markup — `currentSrc` is the
+   * file the browser actually decided to fetch, and a `srcset` whose `sizes`
+   * is wrong parses perfectly while fetching the wrong one. The count of
+   * originals is the other half: one row still reaching for `icon.jpg` would
+   * be invisible in a spot check of the first picture.
+   */
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 }, deviceScaleFactor: 1 });
+  const page = await ctx.newPage();
+  await searchMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await chooseView(page, 'rows');
+  await page.locator('.index-card .index-media img').first().waitFor();
+
+  const read = () =>
+    page.evaluate(() =>
+      [...document.querySelectorAll('.index-card .index-media img')]
+        .filter((i) => i.currentSrc)
+        .map((i) => ({
+          src: i.currentSrc,
+          box: Math.round(i.getBoundingClientRect().width),
+          sizes: i.getAttribute('sizes') ?? '',
+          natural: i.naturalWidth,
+          done: i.complete && i.naturalWidth > 0,
+        })),
+    );
+  await expect
+    .poll(async () => (await read()).filter((i) => i.done).length, {
+      timeout: 15000,
+      message: 'no row thumbnail ever finished loading',
+    })
+    .toBeGreaterThan(0);
+
+  const imgs = await read();
+  const originals = imgs.filter((i) => /\/icon\.(jpe?g|png)$/i.test(i.src));
+  expect(
+    originals.map((i) => i.src),
+    'a row is still fetching the full-size original',
+  ).toEqual([]);
+  const loaded = imgs.filter((i) => i.done);
+  for (const i of loaded) {
+    expect(i.sizes, `a thumbnail states no box: ${i.src}`).toBe('48px');
+    // 280 is the narrow derivative; 48 CSS px at any device pixel ratio a
+    // phone has is inside it, so nothing here should reach for the wide one.
+    expect(i.natural, `a 48 px thumbnail decoded at ${i.natural} px wide: ${i.src}`).toBeLessThanOrEqual(280);
+  }
+  await ctx.close();
 });

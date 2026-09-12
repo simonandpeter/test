@@ -27,8 +27,8 @@ const CARD_TEXT_HEIGHT = 88;
 const CARD_INSET = 18;
 
 /**
- * A card's name box, by line count — the same collapse the rows got at
- * Amendment 56, a day later than they should have had it (author, 2026-08-28:
+ * A card's name box, by line count — the same collapse the rows got,
+ * a day later than they should have had it (author, 2026-08-28:
  * "my request to make the text / frame margins of the saint card view equal to
  * the margins in the row view was not addressed ... the extra line is printed
  * instead of being collapsed").
@@ -234,6 +234,34 @@ export function paintGrid(matched, { animate }) {
   const { el } = state;
   const grid = el.querySelector('[data-grid]');
   const inner = el.querySelector('[data-grid-inner]');
+  /*
+   * **The hidden face is not laid out** (2026-09-12).
+   *
+   * The page opens on the carousel and `[data-grid]` is `hidden` a moment
+   * later, but `update()` runs before `applyMode()` — so a reader who never
+   * asks for the search face still paid for its layout: `layout()` measures
+   * every one of the 862 names through `nameLines`, and that was **394-606 ms
+   * before the first card appeared** at 10x CPU, twice per boot, the largest
+   * single item in it (`scratchpad/phase-cost.mjs`, five interleaved A/B
+   * pairs against the same dev server; the second call is the resize observer
+   * that the hiding itself provokes). Blocking time before the first card fell
+   * from ~2,200 ms to ~1,750 in four of those five pairs.
+   *
+   * Deferred, not dropped: `state.layoutGrid` is what `applyMode` calls the
+   * moment the grid is unhidden, and it is called *after* the `hidden`
+   * attribute comes off, because a hidden element reports `clientWidth` 0 and
+   * a layout computed against 0 is the trap this file already knows (7).
+   *
+   * `paintCarousel` still runs. It is the reason `update()` reaches here at
+   * all while the carousel is showing — a search or a filter change has to
+   * move the row — and it is the one thing below that is not about the grid.
+   */
+  if (state.mode === 'carousel') {
+    state.gridPending = true;
+    paintCarousel();
+    return;
+  }
+  state.gridPending = false;
   const rows = state.layout === 'rows';
   // What this layout was computed from, so the container observer below can
   // tell a real move from its own first, informational, callback.
@@ -272,7 +300,7 @@ export function paintGrid(matched, { animate }) {
   // never shortened. The fade is one flight in swap.js's registry, so a second
   // filter change lands the first batch rather than leaving two removals
   // racing, and each fading card is marked aside — a card on its way out must
-  // not hold the tab order or a click (Amendment 17's corollary).
+  // not hold the tab order or a click (the corollary).
   if (animate && !reduced && leaving.length) {
     for (const slug of leaving) {
       const node = state.rendered.get(slug);
@@ -314,6 +342,16 @@ export function wireGrid({ onChange }) {
   const grid = el.querySelector('[data-grid]');
   let frame = null;
 
+  /*
+   * What `applyMode` calls when the search face arrives, to pay for the layout
+   * `paintGrid` skipped while the carousel was showing. Handed over on `state`
+   * rather than imported, because `grid.js` already imports `modes.js` and a
+   * second edge would make that a cycle for one call.
+   */
+  state.layoutGrid = () => {
+    if (state?.gridPending) paintGrid(state.shownCards, { animate: false });
+  };
+
   const onScroll = () => {
     if (frame) return;
     frame = requestAnimationFrame(() => {
@@ -340,7 +378,7 @@ export function wireGrid({ onChange }) {
   // The column can move without the window moving: Literata arriving inside
   // font-display: optional's window widens the 72ch column from 580 to 678 px
   // after the grid has counted its columns, and a cold load at 1280 was laying
-  // two columns into a three-column width (Amendment 26). An observer on the
+  // two columns into a three-column width. An observer on the
   // grid's own box catches that; its first callback reports the size already
   // laid out and is ignored by the comparison. The relayout runs *inside* the
   // callback, not behind a frame like the window path: resize observers are
@@ -471,11 +509,40 @@ export function card(item, router, { rows = false, detailed = false } = {}) {
    * to clamp there, and `aspectOf` says the same thing to the layout.
    */
   const crop = cardCrop(item.image);
+  /*
+   * **The card derivatives, not the original** (2026-09-12).
+   *
+   * The carousel stopped fetching `icon.jpg` on 2026-09-06 and this did not:
+   * measured on the production build at 360 px, DPR 1, the search face's
+   * first screenful was **1,005 kB of pictures to draw two**, one of them a
+   * 1200x1500, 765 kB original inside a 48x48 CSS row thumbnail
+   * (`scratchpad/screenful-bytes.mjs`). The original stays where it belongs —
+   * the saint's own page and the hero — and `w`/`h` stay the original's,
+   * because their job is the aspect ratio that reserves the box and the
+   * derivatives preserve it exactly.
+   *
+   * `sizes` is what the box really is, and it is two different boxes: a row's
+   * thumbnail is a fixed 48 px square (index.css, and `ROW_TEXT_INSET` above
+   * counts on it), while a card's picture is the column less the card's own
+   * padding — `item.w` is the column `layout()` put this card in and
+   * `CARD_INSET` is the same number that function was handed as `mediaInset`,
+   * so the two cannot drift. Stating the truth is what lets the browser take
+   * the narrow file on a phone and the wide one on a dense screen, rather
+   * than the build choosing one reader to be wrong about. A caller with no
+   * laid-out width omits `sizes` and gets the browser's own 100vw default,
+   * which over-fetches rather than under-fetches.
+   */
+  const box = rows ? 48 : Math.round((item.w ?? 0) - CARD_INSET);
+  const srcset = item.image?.cardSm
+    ? ` srcset="${BASE + item.image.cardSm} ${item.image.cardSmW}w, ${BASE + item.image.card} ${item.image.cardW}w"${
+        box > 0 ? ` sizes="${box}px"` : ''
+      }`
+    : '';
   const image = item.image
     ? `<span class="index-media" style="background-image:url('${BASE + item.image.lqip}')${
         rows ? '' : `;aspect-ratio:${crop.aspect};object-position:${crop.focus}`
       }">
-        <img src="${BASE + item.image.src}" alt="" width="${item.image.w}" height="${item.image.h}"
+        <img src="${BASE + (item.image.card ?? item.image.src)}"${srcset} alt="" width="${item.image.w}" height="${item.image.h}"
           style="object-position:${crop.focus}" loading="lazy" decoding="async" />
       </span>`
     : '';

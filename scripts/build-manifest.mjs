@@ -53,6 +53,31 @@ const thumbFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-thumb.jpg';
 const cardFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card.jpg';
 
 /**
+ * The same picture at half that again (2026-09-12). `-card.jpg` is sized for
+ * the widest card at two device pixels; a phone drawing a 150 CSS px card at
+ * one was being handed all of it — 525 kB of pictures for a screenful showing
+ * two, measured on the production build at 360 px
+ * (`scratchpad/screenful-bytes.mjs`). Both are named in the markup's `srcset`
+ * with the card's own width as `sizes`, so the browser chooses and the build
+ * does not have to guess which reader it is talking to.
+ */
+const cardSmFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card-sm.jpg';
+
+/**
+ * The two caps make_thumbs.py writes the card derivatives at, on the *longer*
+ * edge. Repeated here rather than read, because the script is Python and this
+ * is the only arithmetic that needs them; `tests/manifest-image.test.mjs`
+ * holds the pair to the pixels the files actually have, so a change to one
+ * without the other fails rather than mis-declaring a `srcset`.
+ */
+const CARD_MAX_PX = 560;
+const CARD_SM_MAX_PX = 280;
+
+/** The width a derivative capped at `longest` on its long edge really has. */
+const derivedWidth = (width, height, longest) =>
+  Math.max(1, Math.round(width * Math.min(1, longest / Math.max(width, height))));
+
+/**
  * JSON.parse rejects a byte-order mark, and Windows editors add one freely —
  * PowerShell's Set-Content does it by default. A BOM carries no information
  * here, so failing a folder over one would be pedantry rather than validation.
@@ -188,7 +213,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
         fail(folder, `image "${img.file}" is referenced but does not exist`);
         continue;
       }
-      for (const derived of [thumbFor(img.file), cardFor(img.file)]) {
+      for (const derived of [thumbFor(img.file), cardFor(img.file), cardSmFor(img.file)]) {
         if (!existsSync(path.join(dir, derived))) {
           fail(folder, `image "${img.file}" has no derivative "${derived}" — run: npm run thumbs`);
         }
@@ -418,6 +443,21 @@ function toCard(saint, dir) {
        * before a byte arrives, and the derivative preserves it exactly.
        */
       card: base + cardFor(file),
+      // The narrow half of the card's `srcset`. `CARD_SM_MAX_PX` in
+      // make_thumbs.py is the width it was written at, and `cardW`/`cardSmW`
+      // below are what the markup declares in the descriptor.
+      cardSm: base + cardSmFor(file),
+      /*
+       * **The two `w` descriptors, which are widths and not long edges.** A
+       * srcset descriptor states the file's own pixel width; make_thumbs.py
+       * caps the *longer* edge, so a portrait icon capped at 560 is 560 tall
+       * and rather less than that wide. Computed here from the original's
+       * shape rather than by opening two more files per saint, which is the
+       * same arithmetic the script does and is exact because it never
+       * upscales.
+       */
+      cardW: derivedWidth(width, height, CARD_MAX_PX),
+      cardSmW: derivedWidth(width, height, CARD_SM_MAX_PX),
       w: width,
       h: height,
       aspect: Math.round((width / height) * 10000) / 10000,

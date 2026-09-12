@@ -1,6 +1,7 @@
 import { DUR } from '../../lib/motion.js';
 import { formatSubtext } from '../../lib/calendar-page.js';
 import { cardCrop } from '../../lib/hero-crop.js';
+import { currentLanguage } from '../../lib/i18n.js';
 import { observePrefetch, prefetch } from '../../lib/detail.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
@@ -118,6 +119,10 @@ export function applyMode() {
 
   if (carousel) paintCarousel();
   else {
+    // The grid's layout is skipped while the carousel is showing, and this is
+    // the moment it stops being: after the `hidden` above came off, or the
+    // layout would be computed against a width of 0 (trap 7).
+    state.layoutGrid?.();
     // The offset was taken above, while the row could still answer.
     state.loop?.destroy();
     state.loop = null;
@@ -217,9 +222,39 @@ function carouselCard(item, router, { cardWidth = 150, space = 0, pen = null } =
    * comes near, in the order a reader meets them, and takes it back when it
    * goes away.
    */
+  /*
+   * **And the *narrow* card derivative where that is the one this screen
+   * needs** (2026-09-12). `-card.jpg` is cut for the widest card the row draws
+   * at two device pixels; a phone at one device pixel drawing a 150 px column
+   * was handed all of it. Measured on the production build at 360 px, DPR 1
+   * (`scratchpad/screenful-bytes.mjs`): 525 kB of pictures in the first
+   * screenful to draw two, one of them a 560x373 file inside a 150x100 box.
+   *
+   * **Chosen here rather than by `srcset`, and that is not the first
+   * instinct.** A `srcset` with the packer's own card width as `sizes` was
+   * written first and reverted: it is the better mechanism in general — the
+   * grid uses it — but on this row it broke the boxes. With `w` descriptors
+   * and a `sizes`, a picture's *density-corrected intrinsic size* becomes the
+   * `sizes` width, and `.cx-media img` takes its height from the box through
+   * `height: 100%`; four of 145 pictures then reported a box of zero with
+   * their `.cx-media` parent still 197 px tall. `the carousel holds only the
+   * pictures near it` caught it at three collapsed boxes and `the row
+   * prefetches the way it is travelling` at a reordered queue, both 6 of 6.
+   *
+   * The row can afford to choose for itself because it already knows the two
+   * things `sizes` exists to declare: the card's resolved width, a few lines
+   * up, and the screen's density. It repacks on a resize, so the choice is
+   * remade whenever either could have changed.
+   */
+  const need = Math.round(cardWidth * (typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1));
+  const picture = item.image
+    ? (item.image.cardSm && item.image.cardSmW >= need ? item.image.cardSm : null) ??
+      item.image.card ??
+      item.image.src
+    : null;
   const media = item.image
     ? `<span class="cx-media" style="aspect-ratio:${crop.aspect}${space ? `;--cx-cap:${cap}px` : ''}">
-        <img data-src="${BASE + (item.image.card ?? item.image.src)}" alt="" style="object-position:${crop.focus}"
+        <img data-src="${BASE + picture}" alt="" style="object-position:${crop.focus}"
           width="${item.image.w}" height="${item.image.h}" decoding="async" />
       </span>`
     : '';
@@ -441,7 +476,31 @@ function captionPen(carouselEl) {
   captionPen.canvas ??= document.createElement('canvas');
   const ctx = captionPen.canvas.getContext('2d');
   if (!ctx) return null;
-  return { ctx, name, sub, gap, cache: new Map() };
+  /*
+   * **The caption cache outlives the paint** (2026-09-12).
+   *
+   * `captionH` is memoised, and the memo used to be a `new Map()` born with
+   * the pen — so it lived exactly as long as one paint. Four paints run before
+   * the first card is on screen (`update`, `applyMode`, the grid's resize
+   * observer, `fonts.ready`), and each one re-measured its prefix from
+   * nothing. Measured with `scratchpad/phase-cost.mjs`: 4 packs before the
+   * first card, against 1 with this and the pack key below in place.
+   *
+   * What a cached height is a fact about is the face it was measured in and
+   * the language the name is printed in — `saintName` and `formatSubtext`
+   * both read the language, and the face is the whole of what `measureText`
+   * answers to. Both are in `sig`, so a settling webfont or a language change
+   * gets its own cache rather than stale numbers out of the old one, and the
+   * per-entry key inside `captionH` carries the width. Bounded at four faces,
+   * which is more than a session crosses; the fifth clears the lot rather
+   * than evicting cleverly.
+   */
+  const sig = `${name.font}|${name.line}|${sub.font}|${sub.line}|${gap}|${currentLanguage()}`;
+  captionPen.caches ??= new Map();
+  if (captionPen.caches.size > 4) captionPen.caches.clear();
+  let cache = captionPen.caches.get(sig);
+  if (!cache) captionPen.caches.set(sig, (cache = new Map()));
+  return { ctx, name, sub, gap, sig, cache };
 }
 
 /**
@@ -1100,7 +1159,31 @@ export function paintCarousel() {
   const partial = pool.length > CX_PREFIX && state.carouselFullFor !== poolId;
   const working = partial ? pool.slice(0, CX_PREFIX) : pool;
 
-  const run = carouselCells(working, { space, cardWidth, textWidth, pen });
+  /*
+   * **The pack is skipped when nothing it reads has moved** (2026-09-12).
+   *
+   * `key === state.carouselKey` below already refuses to rebuild an unchanged
+   * row, but it is computed *from* the run, so the pack was paid before the
+   * question was asked — and the pack is the expensive half. These six values
+   * are the whole of `carouselCells`'s input, so equal inputs are the same run
+   * and the old one can stand. Four packs ran before the first card and now
+   * one does (`scratchpad/phase-cost.mjs`); the three it removes were the
+   * cheap ones, so the wall-clock saving is at the edge of this desk's noise
+   * and the call count is the honest claim.
+   *
+   * Cached rather than returned early on purpose: an early return would also
+   * skip `buildCarousel`, and there are paths that arrive here with the run
+   * unchanged and the row not yet built — `packRest` clears `carouselKey`, and
+   * the fade defers the build past a paint. Handing the same run down leaves
+   * every decision below exactly where it was.
+   */
+  const packKey = `${poolId}|${working.length}|${space}|${cardWidth}|${textWidth}|${pen?.sig ?? ''}`;
+  const run =
+    packKey === state.carouselPackKey && state.carouselRun
+      ? state.carouselRun
+      : carouselCells(working, { space, cardWidth, textWidth, pen });
+  state.carouselPackKey = packKey;
+  state.carouselRun = run;
   // The width the row was built for is part of what the row *is*: a phone and
   // a desk pair the wide icons differently, so crossing 700 px has to rebuild
   // rather than keep a set of cells that were grouped for the other one.
@@ -1381,7 +1464,7 @@ export function switchMode(next) {
    * overlapping would leave the earlier `land` to run against a page the later
    * one has already moved on — and the mode it applies is read from
    * `state.mode`, so the *stale* timer would have the last word. This is
-   * Amendment 9's rule for animated swaps, in the shape this one needs: while
+   * the rule for animated swaps, in the shape this one needs: while
    * two are in flight, exactly one is current.
    */
   state.falling?.();
