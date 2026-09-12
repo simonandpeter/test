@@ -147,6 +147,40 @@ export function pickHero(iso, entries, bySlug, churchId = null) {
 }
 
 /**
+ * The order the day's saints stand in: the hero, then the ones with a picture,
+ * then the ones without.
+ *
+ * **The pictures come first and the imageless last** (author; the rule was
+ * lost in the 2026-09-12 rebuild and restored the same day). 130 of the 862
+ * folders carry an icon, so a day left in the corpus's own order is a handful
+ * of pictures scattered through a wall of glyph mats — and the reader meets
+ * the wall before they meet the day. Sorting them forward is not a claim that
+ * an imaged saint matters more; it is the only lever the page has over how a
+ * day *opens*, and the alternative is that the lever belongs to whichever
+ * order the folders happened to be read in.
+ *
+ * **Stable within each half**, which is what keeps the rest of the rule
+ * intact: `filter` preserves order, so inside the pictured group and inside
+ * the imageless one the saints still stand in the day's own order — the one
+ * order on this page that is not a judgement about which saint matters more.
+ *
+ * The hero leads regardless of whether it has a picture, because `pickHero`
+ * has already preferred one and `views/daily/open.js` opens the first tile:
+ * moving the day's principal commemoration down to sit with the imageless
+ * would hand the open card to somebody else.
+ */
+export function dayOrder(entries, iso, bySlug, churchId = null) {
+  const hero = pickHero(iso, entries, bySlug, churchId);
+  const rest = entries.filter((e) => e.slug !== hero);
+  const pictured = (e) => Boolean(bySlug.get(e.slug)?.image);
+  return [
+    ...entries.filter((e) => e.slug === hero),
+    ...rest.filter(pictured),
+    ...rest.filter((e) => !pictured(e)),
+  ];
+}
+
+/**
  * The era, where a reader would otherwise have to supply it (author,
  * 2026-08-26: "add AD back to the dates so it's more obvious for stuff like
  * 'Reposed 105' what that means"). It was dropped then — "BC only,

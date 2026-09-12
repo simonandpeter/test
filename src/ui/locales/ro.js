@@ -68,8 +68,6 @@ export const ro = {
     closeMonth: 'Închide luna',
     weekLabel: 'Alege o zi',
     commemorationsFor: 'Pomeniri pentru {date}',
-    alsoCommemorated: 'Se mai pomenesc',
-    alsoToday: 'Tot astăzi',
     registerView: 'Afișează pomeniți și',
     viewCards: 'Cartonașe',
     viewExpanded: 'Extinse',

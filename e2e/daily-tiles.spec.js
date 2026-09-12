@@ -288,3 +288,49 @@ test('a tile with no icon shows its type as a mark, and says it in words', async
   const eutychius = tiles.find((t) => t.name.includes('Eutychius'));
   expect(eutychius.spoken, 'a tile with no office does not say what kind of saint it is').toContain('Venerable');
 });
+
+test('the day puts its pictures first and its imageless saints last, and the strip says what it is', async ({ page }) => {
+  /*
+   * **The order** is the author's rule, lost in the 2026-09-12 rebuild and
+   * restored the same day (`lib/calendar-page.js`'s `dayOrder`). 130 of the
+   * 862 folders carry an icon, so a day left in the corpus's own order opens
+   * as a wall of glyph mats with the pictures scattered down it.
+   *
+   * **The name** is the other half of the heading that went missing. "Also
+   * today" headed the saints *besides* the hero and this strip holds the hero
+   * too, so the words are gone; what a screen reader was left with was a run
+   * of articles under nothing at all. `commemorationsFor` is the name they get
+   * instead, and what is *drawn* above the day is the desktop redesign's.
+   *
+   * **Both premises are asserted**, because both claims pass on a day that
+   * cannot test them: an order claim is vacuous on a day whose saints all
+   * carry icons or none do, and the `.no-pic` marker is the tile's own word
+   * for which it is (`views/daily/tiles.js`).
+   */
+  await ready(page);
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const pictures = await page
+    .locator('.day-grid > .day-tile')
+    .evaluateAll((tiles) => tiles.map((t) => !t.classList.contains('no-pic')));
+
+  expect(pictures.filter(Boolean).length, 'premise: no saint of 5 September has an icon').toBeGreaterThan(0);
+  expect(pictures.filter((p) => !p).length, 'premise: every saint of 5 September has an icon').toBeGreaterThan(0);
+
+  /*
+   * **Past the hero**, which leads whatever it carries: `pickHero` prefers an
+   * icon but ranks the saint the church sings for above one, so the day's
+   * first tile is a mat on the days where nobody sung for has a picture. That
+   * is the 2026-08-22 rule and this one does not overturn it.
+   *
+   * After it: pictured, then imageless, nothing interleaved — read down the
+   * strip, once a mat has appeared no picture follows it.
+   */
+  const rest = pictures.slice(1);
+  expect(rest).toEqual([...rest].sort((a, b) => Number(b) - Number(a)));
+
+  const label = await page.locator('.day-grid').getAttribute('aria-label');
+  expect(label).toContain('Commemorations for');
+  expect(label).toContain('September');
+});

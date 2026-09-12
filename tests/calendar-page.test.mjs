@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   addDaysIso,
   dateIn,
+  dayOrder,
   daysInMonthOf,
   formatInterval,
   formatLifespan,
@@ -220,4 +221,47 @@ test('a month is as long as the calendar that names it says', () => {
   // Julian that still has the leap.
   assert.equal(daysInMonthOf('julian', { year: 2100, month: 2 }), 29);
   assert.equal(daysInMonthOf('revised-julian', { year: 2100, month: 2 }), 28);
+});
+
+/**
+ * **The day's saints order pictures first, imageless last** (author; the rule
+ * was lost in the 2026-09-12 rebuild and restored the same day). 130 of 862
+ * folders carry an icon, so a day in the corpus's own order opens as a wall of
+ * glyph mats with the pictures scattered through it.
+ *
+ * Three claims, and the last two are the ones a naive sort would break: the
+ * hero still leads whatever it carries, and the day's own order survives
+ * inside each half.
+ */
+test('the day orders its pictures first and keeps the corpus order inside each half', () => {
+  const bySlug = new Map([
+    ['hero', { image: null, hymned: ['russian'] }],
+    ['pic-a', { image: { src: 'a.jpg' } }],
+    ['plain-a', { image: null }],
+    ['pic-b', { image: { src: 'b.jpg' } }],
+    ['plain-b', { image: null }],
+  ]);
+  const entries = [
+    { slug: 'plain-a' },
+    { slug: 'pic-b' },
+    { slug: 'hero' },
+    { slug: 'plain-b' },
+    { slug: 'pic-a' },
+  ];
+  const order = dayOrder(entries, '2026-08-20', bySlug, 'russian').map((e) => e.slug);
+
+  // The saint the church sings for leads, with no icon of its own: `open.js`
+  // opens the first tile, and the day's principal commemoration is what that
+  // tile has to be.
+  assert.equal(order[0], 'hero');
+  assert.deepEqual(order, ['hero', 'pic-b', 'pic-a', 'plain-a', 'plain-b']);
+  // Every saint of the day is still on it, once.
+  assert.equal(order.length, entries.length);
+
+  // A day with no entries has no order. A day where nobody has a picture is
+  // the hero and then the day's own order, which is what it was before this.
+  assert.deepEqual(dayOrder([], '2026-08-20', bySlug), []);
+  const plain = [{ slug: 'plain-a' }, { slug: 'hero' }, { slug: 'plain-b' }];
+  const asIs = dayOrder(plain, '2026-08-20', bySlug, 'russian').map((e) => e.slug);
+  assert.deepEqual(asIs, ['hero', 'plain-a', 'plain-b']);
 });

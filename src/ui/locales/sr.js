@@ -68,8 +68,6 @@ export const sr = {
     closeMonth: 'Затвори месец',
     weekLabel: 'Изаберите дан',
     commemorationsFor: 'Помени за {date}',
-    alsoCommemorated: 'Такође се празнују',
-    alsoToday: 'Такође данас',
     registerView: 'Прикажи саспомињане као',
     viewCards: 'Картице',
     viewExpanded: 'Проширене',

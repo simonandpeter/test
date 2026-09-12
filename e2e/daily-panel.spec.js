@@ -59,6 +59,14 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
    * where they were.
    */
   await ready(page, { church: 'russian', reckoning: null });
+  /*
+   * **Past 1024 px, explicitly, since 2026-09-12.** Following the church is a
+   * desktop answer now: below that width the reckoning is fixed Gregorian and
+   * the whole of this day reads differently, which the phone's own half of
+   * this test asserts at the foot. Stated as a viewport rather than left to
+   * the project, so the rule is pinned at both widths whichever project runs.
+   */
+  await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
 
   // One date, which is the whole of "the date alone": the page printed two
@@ -153,6 +161,27 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // (author, 2026-08-24), and no two of them are the same colour.
   const free = await page.locator('.day-tags .tag.is-free').evaluate((el) => getComputedStyle(el).color);
   expect(free).not.toBe(tag.colour);
+
+  /*
+   * **And the same day on a phone, which is a different day** (author,
+   * 2026-09-12: "a phone is Gregorian only"). Below 1024 px `calendarFor`
+   * answers Gregorian whatever the church keeps, so every fact above is
+   * recomputed: the heading is the civil date, the caption under it gives the
+   * Julian one instead of the civil one, and 23 August is outside the
+   * Dormition Fast because that fast is 1–14 August in the calendar the page
+   * is now reading by.
+   *
+   * The consequence is stated here rather than left to be discovered: this is
+   * the one surface where the phone and the desk disagree about what the
+   * church is doing, and it is a ruling, not a defect.
+   */
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-08-23', { waitUntil: 'networkidle' });
+  await expect(page.locator('.day-date')).toHaveText('23 August 2026');
+  await expect(page.locator('.day-old')).toHaveText('10 August by the Julian calendar');
+  await expect(page.locator('.day-tags .tag[data-fast]')).not.toContainText('Dormition');
 });
 
 
@@ -514,30 +543,18 @@ test("a reader in another language is given that tradition's own text", async ({
   ).toHaveText('Δεν έχει καταγραφεί ελληνικό κείμενο');
 
   /*
-   * **The hymn the English reader is not shown, shown.** Alexander Nevsky's
-   * Serbian troparion has no English rendering behind it, and it is the one
-   * hymn in the corpus that does not — so it is the only place the conditional
-   * can be seen doing two different things with the same data, which is what
-   * makes it the pair's own test rather than two tests about two saints.
+   * **A third reader stood here and the case it tested no longer exists.**
+   * Alexander Nevsky's Serbian troparion was the one hymn in the corpus with
+   * no English rendering behind it, so it was the only place the conditional
+   * could be watched doing two different things with the same data. It was
+   * deleted on 2026-09-12 by the author's ruling: the only copy in the corpus,
+   * and `pravoslavno.rs` publishes it under Nevsky's heading when it is the
+   * Archangel Michael's. Every source text in the corpus now carries an
+   * English, so there is no saint left to make the claim with, and asserting
+   * it against another saint would be asserting something else.
+   *
+   * The two readers above are what the conditional can still be shown doing.
    */
-  await page.evaluate(() => {
-    const key = 'gos-settings';
-    localStorage.setItem(
-      key,
-      JSON.stringify({ ...JSON.parse(localStorage.getItem(key)), church: 'serbian', language: 'sr' }),
-    );
-  });
-  await page.goto('/calendar/2026-09-12', { waitUntil: 'networkidle' });
-  const nevsky = page.locator('.day-tile[data-slug="alexander-nevsky"]');
-  await expect.poll(() => nevsky.locator('.hymn-text').count()).toBe(1);
-  const tropar = await nevsky.locator('.hymn-text').first().evaluate((el) => ({
-    lang: el.getAttribute('lang'),
-    text: el.textContent.trim(),
-  }));
-  expect(tropar.lang).toBe('sr');
-  expect(tropar.text).toMatch(/[Ѐ-ӿ]/);
-  // And the kontakion nobody has recorded says so in Serbian, naming Serbian.
-  await expect(nevsky.locator('[data-hymn="kontakion"] .row-none')).toHaveText('Српски текст није записан');
 });
 
 test('a returning Daily page lands where it was left, though it grows after it renders', async ({ page }) => {

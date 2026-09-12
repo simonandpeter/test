@@ -71,8 +71,6 @@ export const ru = {
     closeMonth: 'Закрыть месяц',
     weekLabel: 'Выберите день',
     commemorationsFor: 'Памяти на {date}',
-    alsoCommemorated: 'Также совершается память',
-    alsoToday: 'Также сегодня',
     registerView: 'Показывать также поминаемых как',
     viewCards: 'Карточки',
     viewExpanded: 'Развёрнутые',

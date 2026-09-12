@@ -68,8 +68,6 @@ export const el = {
     closeMonth: 'Κλείσιμο του μήνα',
     weekLabel: 'Διαλέξτε ημέρα',
     commemorationsFor: 'Μνήμες για {date}',
-    alsoCommemorated: 'Επίσης εορτάζονται',
-    alsoToday: 'Επίσης σήμερα',
     registerView: 'Εμφάνιση συνεορταζομένων ως',
     viewCards: 'Κάρτες',
     viewExpanded: 'Αναπτυγμένες',
