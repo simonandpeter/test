@@ -177,6 +177,26 @@ export function swapFace({ to, returning = 0, render }) {
     outgoing.style.top = '';
     incoming.style.top = '';
     if (to !== 'saints') return;
+    /*
+     * **Re-measure before the position is written.** All Saints renders into
+     * its layer while that layer is still absolute inside the clipped stage, so
+     * what it measured was a box that stops existing when the slide lands: it
+     * came back **330 px tall against the 730 px a cold load gives it**, the
+     * document never grew past one screen, and the carousel mounted the first
+     * screenful and stopped. It reads as the saints only appearing in the top
+     * half of the page, and it is what the author saw.
+     *
+     * `views/index/modes.js` packs on `resize`, and nothing fires one when a
+     * layer merely returns to flow — no viewport changed, only the box under it.
+     * So it is sent by hand, and *before* the restore, because `reachableTop()`
+     * is a question about the document's height and a short document clamps the
+     * answer to it.
+     *
+     * This is the second seam of its kind: the scroll event below exists for the
+     * same reason, that a view which listens to the window cannot hear a layout
+     * it was never told about.
+     */
+    window.dispatchEvent(new Event('resize'));
     window.scrollTo(0, Math.min(returning, reachableTop()));
     // `views/index/grid.js` repaints its virtualised window from `window`'s own
     // scroll event, and a programmatic scroll onto a layout that has just been

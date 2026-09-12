@@ -689,7 +689,27 @@ function show({ route, params, path }, nav = {}) {
       if (onStage) markPainted(face);
     };
     if (stageSwap) {
-      swapFace({
+      /*
+       * **`swapFace` may refuse, and then this has to land the face anyway.**
+       * It returns false when the stage is not resting on the face this
+       * navigation thinks it is leaving. The return value was dropped here
+       * until 2026-09-12, and the cost was the whole of All Saints: nothing
+       * painted, and — worse — nothing set `data-face`, so the stage stayed
+       * configured for the day. `[data-face='calendar']` is `height: 100%` over
+       * `overflow: clip` with both layers absolute, which against a parent with
+       * no height of its own resolves to **zero**. The carousel was then an
+       * absolutely positioned layer inside a zero-height clipped box: the
+       * document never grew past one screen, so the window-scrolled virtualiser
+       * mounted the first screenful and stopped. It read as the saints only
+       * spawning in the top half of the page.
+       *
+       * So the refusal falls through to the same path a first arrival takes.
+       * `mountStage` is what repairs the attribute — it sets `data-face` for
+       * exactly this case — and the paint is still skipped when All Saints is
+       * already up, because requirement 1 is that its layer is never rendered
+       * a second time.
+       */
+      const swapped = swapFace({
         to: face,
         returning,
         render: (layer) => {
@@ -697,6 +717,10 @@ function show({ route, params, path }, nav = {}) {
           paint(layer);
         },
       });
+      if (!swapped) {
+        const layer = mountStage(viewEl, face);
+        if (!(face === 'saints' && facePainted('saints'))) paint(layer);
+      }
     } else if (onStage) {
       paint(mountStage(viewEl, face));
     } else {
