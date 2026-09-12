@@ -256,6 +256,64 @@ injected `page`; a test opening its own context must call `coldFace(page)`.
 
 ---
 
+## Visual baselines
+
+A pixel diff is worth exactly what its baseline is worth, and `tile-diff.mjs`
+cannot tell you when its baseline is worthless — it prints the same cheerful
+`16 tiles kept` whatever it was handed. Five rules, every one of which broke on
+2026-09-12 during the Daily rebuild, three of them twice.
+
+1. **Snapshot before you touch anything.** `snapshot <name>` archives whatever
+   is in `shots/` *at that moment*. Run it after the change and you have
+   archived the changed state as "before", and the comparison afterwards is
+   green for the worst possible reason.
+2. **Clear `shots/` first.** It accumulates tiles from every earlier run.
+   The first baseline of the rebuild kept 125 tiles, of which 121 were from an
+   earlier sitting at an unknown commit — a diff against that reports changes
+   that predate the work.
+3. **Check the shots actually happened.** `export MSYS_NO_PATHCONV=1` before
+   `--routes=/…` (trap: Git Bash rewrites it to `C:/Program Files/Git/…`).
+   All four shots errored, and the next command still said tiles were kept.
+   Read the per-shot lines, not the total.
+4. **`shots/` is gitignored, so a baseline is invisible to history.** Nothing
+   reminds the next session it exists, and the natural instinct — re-shoot, then
+   compare — destroys the only evidence there was. Write down in `HANDOFF.md`
+   that a baseline exists, what it covers, and the exact arguments it was shot
+   with. **Never re-shoot a baseline.**
+5. **Measure the instrument before you trust it.** Shoot the *same* build twice
+   and diff it against itself. Whatever differs is the noise floor, and nothing
+   at or below it is a finding.
+
+The fifth is the one that pays. Five tiles had moved against the baseline;
+shooting the same build twice moved two of them, the same two, by the same 14
+and 3 pixels. So those were the camera and the remaining three, at ~3,985 pixels
+each, were real — where without the second run there were five numbers and no
+way to rank them.
+
+```bash
+rm -f shots/tile-*.png
+MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/saints \
+  --widths=360,768,1280,1440 --themes=day,vigil --langs=en,ru
+node scripts/tile-diff.mjs snapshot before-x
+```
+
+Then make the change, re-shoot with **identical** arguments, and
+`node scripts/tile-diff.mjs compare before-x`.
+
+**And a diff that comes back clean has proved less than it looks.** The same
+rebuild deleted a stylesheet holding six rules that belonged to shared chrome:
+the church chooser every first-time reader meets went unstyled for four commits
+with the whole suite green, because the tests assert what that control *does*
+and never that it is dressed. A pixel diff only looks where you pointed it.
+After deleting or moving a stylesheet, list the selectors it held and check
+which of them nothing else defines:
+
+```bash
+git show <deletion>^:src/styles/gone.css | grep -oE "^\.[a-z][a-z0-9-]*" | sort -u
+```
+
+---
+
 ## Traps
 
 1. **Mounted ≠ corpus, DOM order ≠ screen order** on All Saints. Assert by
