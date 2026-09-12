@@ -2277,7 +2277,20 @@ test('a phone takes the narrow card file, and a dense screen takes the wide one'
       // fill — taking it here would be the opposite mistake, and a cheaper one
       // to make by accident.
       expect(picked.src, `a dense screen took ${picked.src}`).not.toContain('-card-sm.jpg');
-      expect(picked.natural, `the picture decoded at ${picked.natural} px wide`).toBeGreaterThan(280);
+      /*
+       * **Against the box, not against 280.** This read `> 280` and went red
+       * on the first full run it met: the picture that happened to be first on
+       * screen decoded at 262, because `make_thumbs.py` cannot cut a card
+       * wider than the icon it was given and some of the corpus's icons are
+       * narrow. That is a fact about one saint's source file, not about the
+       * choice this test exists to pin — and *which* saint is first is a race
+       * between eleven pictures for the network (trap 5).
+       *
+       * What the dense half actually claims is the line above: the browser
+       * took the wide file. This is the sanity check beside it — whatever it
+       * took has more pixels than the box it is drawn in.
+       */
+      expect(picked.natural, `${picked.natural} px into a ${picked.drawn} px box`).toBeGreaterThan(picked.drawn);
     }
     // Whichever it took, the card is the width the packer said it was — the
     // number the choice above is made against.
