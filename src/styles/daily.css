@@ -1,0 +1,81 @@
+/*
+ * The Daily page's own frame (2026-09-12, Step 5 of the rebuild).
+ *
+ * The two boxes the day is drawn in, and nothing that belongs to either of the
+ * modules drawing into them: the standing column is `daily-sidebar.css`, a
+ * saint is `daily-tiles.css`, and this is the page those two stand on. It is
+ * the third sheet rather than a third of one of them because the frame is the
+ * view's — `views/calendar.js` emits `.today` and `.td-scroll`, and neither of
+ * the other two sheets knows they exist.
+ *
+ * `.today`'s `position` and `--td-side-w` are declared in `daily-sidebar.css`,
+ * where the column that is measured from them lives. They are not restated
+ * here.
+ */
+
+/* ---- the page that does not scroll -------------------------------------
+   Author, 2026-09-01: "make the left and right columns independently
+   scrollable." One scroller and a scrolling page are two scrollbars for one
+   surface, so the route gives up its own the way the map route already does —
+   the strip is the height of the glass under the bar and carries its own
+   scroll, and the column beside it does not move at all.
+
+   Past the breakpoint only. Below it the column is the first block in the flow
+   (`daily-sidebar.css`) and the page's own scroll is exactly right.
+
+   The route's own surrender of the page scroll — root, body, `main` and
+   `#view` — is base.css's, under "a route that fills the window", keyed on
+   `data-fills-window`. This is the one box inside the view that has to be told
+   the same height, or the strip has nothing definite to be 100% of. */
+@media (min-width: 1024px) {
+  html[data-route='calendar'] .today {
+    height: 100%;
+    min-height: 0;
+  }
+
+  /*
+   * **Down, not across** (author, 2026-09-12). The day was a strip pushed
+   * sideways a saint at a time; it is a column now, read the way a page is
+   * read, and the card's four columns spread across the whole width the
+   * sidebar leaves.
+   *
+   * The left padding is what holds the first saint clear of the standing
+   * column: the sidebar is *over* this box, not beside it, so a tile
+   * travelling up goes behind the day rather than off the edge of the window.
+   *
+   * Chromium's scroll anchoring is what keeps the reader still while the grid
+   * reorders under them: the content under the eye stays put and the scroll
+   * offset is corrected instead.
+   */
+  .td-scroll {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-anchor: auto;
+    padding: 0 var(--space-8) var(--space-16) calc(var(--td-side-w) + var(--space-6));
+  }
+}
+
+/* Below the breakpoint the page scrolls and this is a plain block: the column
+   above it is in the flow, and a box with its own scroll inside a scrolling
+   page is the second scrollbar the desk arrangement exists to avoid. */
+@media (max-width: 1023.98px) {
+  .td-scroll {
+    padding: var(--space-4) var(--space-4) var(--space-16);
+  }
+}
+
+/* ---- the foot -----------------------------------------------------------
+   What the church's own calendar printed for the day, below the last saint
+   (plan §11.2). A rule rather than a heading between the two: the day's saints
+   and the day's readings are two different kinds of fact, and the reader
+   should be able to see where one ends. */
+.day-foot {
+  margin-top: var(--space-12);
+  max-width: 65ch;
+}
+
+.day-foot:not(:empty) {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-6);
+}
