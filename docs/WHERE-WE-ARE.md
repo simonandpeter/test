@@ -51,15 +51,52 @@ tree, clean or dirty, since it was written.
 - **The site is named "Daily Dox"** (`strings.js:45`, the wordmark's accessible
   name, the export format) over a mark that now reads AGIOS. Brand call.
 - **"Also today" is desktop-only**; mobile still says "Also Commemorated" in all
-  five packs. One line either way.
-- **The register's expanded face** still draws its mount at the picture's
-  derived shape, not the fixed crop. Neither instruction covered it.
+  five packs. Overtaken by the rebuild — the Daily page now prints no heading at
+  all and both keys are orphaned. Going to the mockup, below.
+- ~~**The register's expanded face** and its mount~~ — closed 2026-09-12: the
+  register is deleted.
 - **Above a 1983px window** the hero's 40rem ceiling binds and the 5:7
   proportion falls to 0.690 — the top 2% of the range. Recorded, not tuned.
 - **The sidebar's foot**: 235px of empty field on a light day, 661px on an
   empty one. Never decided.
 - `index.css`/`saint.css` off the first-paint path measures ~72.3 → 54.3 kB
-  and is unspent; it needs the router to await the view's sheet.
+  and is unspent; it needs the router to await the view's sheet. Less urgent
+  since 2026-09-12: deleting `calendar.css` took the entry stylesheet from 438
+  bytes under the ceiling to 20,559.
+
+### To do, from the Daily rebuild (2026-09-12)
+
+Found by checking the 58 deleted test names against the page that replaced them
+— `scratchpad/daily-feature-audit.md` has the evidence for each.
+
+**Decided by the author, not yet done:**
+
+- [ ] **The full-screen calendar comes off phones.** It is a desktop control and
+      was gated by width until the rebuild; it is now visible at 360px. Restore
+      the gate.
+- [ ] **A phone is Gregorian only.** Stronger than what the old page did — that
+      one showed a phone the reckoning in force without offering the choice.
+      The instruction is that a phone should never have been anything but
+      Gregorian, so the control comes off *and* the reckoning is fixed there,
+      rather than following the church.
+
+**Going to the mockup, next session:**
+
+- [ ] The day's saints lost the ordering rule that ran tallest-picture-first and
+      the imageless last. About 130 of 862 saints have an icon, so this is what
+      kept a day from reading as a wall of glyph mats.
+- [ ] The "Also today" / "Also commemorated" heading, gone with its strings left
+      orphaned in all five packs.
+
+**Raised, not yet decided:**
+
+- [ ] **The keys no longer step the day.** `daily-picker.spec.js` had "a day is
+      one click, and the keys step it from anywhere"; no arrow-key handling
+      survives anywhere in the Daily page.
+- [ ] **52 tab stops in the sidebar**, 31 of them the month's cells, at every
+      width — and on a phone the sidebar is first in the flow, so all 52 come
+      before the first saint. The old rail was one stop with arrows inside it.
+      A roving tabindex would fix this and the item above it together.
 
 ## Known-not-ours
 
