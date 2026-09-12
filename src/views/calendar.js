@@ -27,7 +27,7 @@ import { observePrefetch } from '../lib/detail.js';
 import { entriesFor } from './daily/entries.js';
 import { fillDay } from './daily/lives.js';
 import { adoptRows, wireOpen } from './daily/open.js';
-import { readingsMarkup } from './daily/record.js';
+import { hymnsMarkup, readingsMarkup } from './daily/record.js';
 import { paintSidebar, sidebarMarkup, wireSidebar } from './daily/sidebar.js';
 /* The page's own state, and the one file allowed to write it — see
    views/daily/state.js for why it is a singleton and why it moved. */
@@ -97,10 +97,14 @@ export function render(el, { data, params, router }) {
    * Which is why the sidebar is first in the document as well as first on the
    * page — it is the day, and the grid is what the day has in it.
    *
-   * The readings sit at the foot of the scroller, below the last tile (plan
-   * §11.2). They and the day's fasting note are transcribed by hand into
-   * `data/liturgical-days.js`; the mockup's silence about them is an absence
-   * of design and not a decision to drop them.
+   * The readings and the day's feast hymns sit at the foot of the scroller,
+   * below the last tile (plan §11.2). They and the day's fasting note are
+   * transcribed by hand into `data/liturgical-days.js`; the mockup's silence
+   * about them is an absence of design and not a decision to drop them.
+   *
+   * The feast's hymns are the day's own and belong beside its readings; the
+   * *saints'* hymns are not here, because each saint now sings in the two
+   * columns of their own tile (`tiles.js`, filled by `lives.js`).
    */
   el.innerHTML = `<div class="today">
       ${sidebarMarkup()}
@@ -171,7 +175,8 @@ function paintDay() {
   const grid = el.querySelector('[data-day-grid]');
   const entries = entriesFor(selected, data);
   grid.innerHTML = entries.length ? tilesHTML(dayOrder(entries, selected), data) : emptyGridHTML();
-  el.querySelector('[data-day-foot]').innerHTML = readingsMarkup(selected, calendar);
+  el.querySelector('[data-day-foot]').innerHTML =
+    `${readingsMarkup(selected, calendar)}${hymnsMarkup(selected, calendar)}`;
 
   // The grid's children are the day's rows from here on, and the first of them
   // is opened — which is `adoptRows`' own doing, not this file's.

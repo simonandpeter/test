@@ -1,13 +1,11 @@
 import { recordsReach } from '../../data/days.js';
 import { dayRecordFor } from './entries.js';
 import { bibleUrl, refInLanguage } from '../../lib/bible.js';
-import { loadDetail } from '../../lib/detail.js';
 import { currentLanguage } from '../../lib/i18n.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { dayInWords } from './format.js';
-import { state } from './state.js';
 
 /**
  * What a church's own calendar printed for a day: the readings, and the hymns
@@ -85,29 +83,29 @@ export function readingsMarkup(iso, churchId) {
   </section>`;
 }
 
+/**
+ * The feast's own hymns, beside the readings at the foot of the day (plan
+ * §11.2) — hand-sourced into `data/liturgical-days.js` like them, and like
+ * them not regenerable.
+ *
+ * **The feast's, and not the saints'.** This section once carried a second box
+ * that `fillSaintHymns` filled from the hero saint's payload; since the tile
+ * and the card became one element, every saint of the day sings in the two
+ * hymn columns of their own tile (`tiles.js`, filled by `lives.js`), so the
+ * day's hymns here are the day's and nobody's hymn is printed twice.
+ *
+ * Which is also why a day with none prints nothing at all rather than a hidden
+ * section: the section used to be drawn empty and hidden because the saint's
+ * payload could still arrive and reveal it, and nothing arrives here now. An
+ * empty element would keep `.day-foot:not(:empty)` true and rule off a foot
+ * with nothing in it.
+ */
 export function hymnsMarkup(iso, churchId) {
   const rec = dayRecordFor(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
-  return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
+  if (!feastHymns.length) return '';
+  return `<section class="day-hymns" data-hymns>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
     <div data-feast-hymns>${mergeForReading(feastHymns).map((h) => hymnMarkup(h)).join('')}</div>
-    <div data-saint-hymns></div>
   </section>`;
-}
-
-export function fillSaintHymns(panel, slug, iso) {
-  loadDetail(slug).then(
-    (payload) => {
-      if (!state || state.selected !== iso) return;
-      const box = panel.querySelector('[data-saint-hymns]');
-      if (!box) return;
-      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
-      if (!hymns.length) return;
-      box.innerHTML = mergeForReading(hymns)
-        .map((h) => hymnMarkup(h))
-        .join('');
-      panel.querySelector('[data-hymns]').hidden = false;
-    },
-    () => {},
-  );
 }
