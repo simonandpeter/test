@@ -1657,3 +1657,75 @@ html[data-swipe-nav='right']::view-transition-new(root) {
   inset: 0;
   visibility: visible;
 }
+
+/* ---- salvaged from calendar.css, 2026-09-12 -------------------------------
+   These belong to `ui/church-chooser.js`, `ui/language-chooser.js` and
+   `ui/grain.js` — shared chrome and a shared gesture, none of which is the
+   Daily page's. They lived in `calendar.css` because that is where the
+   first-visit question used to stand, and when that stylesheet went with the
+   rebuild they went with it and were styled by nothing at all: the chooser
+   every first-time reader meets, laid out by the browser's defaults.
+
+   The `.hymn-*` rules went the same way and were caught during the deletion.
+   These were not, and the pixel diff that found them was aimed at something
+   else — so the lesson is the one in trap 6: a green build says nothing about
+   a code move, and neither does a passing suite about a stylesheet's death. */
+
+.grain-track {
+  position: relative;
+}
+
+.grain-track.is-settling {
+  transition: transform var(--dur-settle) var(--ease);
+}
+
+/* The grain either side, parked a viewport width away. For the length of a
+   move the document holds two or three of every date, so the copies say what
+   they are — and being out of reach is not belt and braces: a copy laid over
+   the live row swallows the click that would move the grain again. */
+.grain-side {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.ask-heading {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.ask-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.church-choice {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+/* Pressed is the recessed field in ink — aria-pressed carries it, never a
+   colour alone; nothing here is gold or red (PLAN.md). */
+.church-choice[aria-pressed='true'] {
+  background: var(--field);
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.choice-calendar {
+  font-size: var(--text-2xs);
+  color: var(--ink-soft);
+}
+
+/* At 360 px the choices close up (author, 2026-08-21: the first-visit question
+   was the tallest thing a first visit met, and its gaps were the desktop's). */
+@media (max-width: 559.98px) {
+  .ask-choices {
+    gap: var(--space-1);
+  }
+}
