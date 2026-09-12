@@ -207,7 +207,11 @@ test('a day in the month grid is told apart by shape and by words, not only by h
     const grid = document.querySelector('.cal');
     const out = {};
     for (const kind of ['plain', 'is-fast', 'is-fish', 'is-feast']) {
-      const el = document.createElement('span');
+      // A button, because that is what the grid renders since 2026-09-12 — a
+      // probe built from a span would be measuring the styles of an element
+      // this page does not draw, and the button's own borders are reset in a
+      // rule the span never matches.
+      const el = document.createElement('button');
       el.className = kind === 'plain' ? 'cal-day' : `cal-day ${kind}`;
       el.textContent = '8';
       grid.append(el);

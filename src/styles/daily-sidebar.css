@@ -215,6 +215,17 @@
    and two weights of the same line is not one. The dash says the lesser thing
    here as it does on the "No Great Feast" tag, so a fish day reads as the
    relaxed fast it is. */
+/* The cells are buttons (they pick a day), so the button's own furniture goes:
+   its face, its ground and the three borders that are not the fast mark. The
+   top border stays — that is the mark. */
+button.cal-day {
+  font: inherit;
+  background: none;
+  border-inline: 0;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
 .cal-day.is-fast {
   color: var(--fast-strict);
   border-top-color: var(--fast-strict);

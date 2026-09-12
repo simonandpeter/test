@@ -1782,8 +1782,10 @@ test('the Daily button offers Today when the reader has left it, and only there'
   /*
    * And the month grid says which day the page is showing, which on this one
    * is the day it actually is. `aria-current="date"` was the week rail's
-   * button; the grid's cells are spans that pick nothing — picking a day is
-   * the full-screen calendar's — so the mark is `.is-today`, and the date it
+   * button, and is the grid's selected cell again since 2026-09-12, when those
+   * cells went back to being buttons that pick a day. They were spans that
+   * picked nothing for a few hours, and this comment recorded it as the design
+   * rather than as the defect it was — so the mark is `.is-today`, and the date it
    * carries is asserted rather than the class alone, or this would pass with
    * the mark on any square of the month.
    */

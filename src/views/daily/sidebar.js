@@ -210,7 +210,19 @@ function monthCells(iso) {
      */
     const said = [tone === 'fish' ? D.fish : tone === 'fast' ? D.fast : null, feast ? D.feast : null].filter(Boolean);
     const label = said.length ? `${dayInWords(at)} - ${said.join(', ')}` : dayInWords(at);
-    cells.push(`<span class="${cls.join(' ')}" data-iso="${esc(at)}" aria-label="${esc(label)}">${day}</span>`);
+    /*
+     * A button, not a span. The month is the one place on this page that can
+     * reach a day that is not next door, and a painted grid that answers no
+     * press is a picture of a calendar rather than a calendar. It is also the
+     * only shape in which the accessible name above is worth anything: a span
+     * carrying `aria-label` and no role is neither focusable nor reliably
+     * announced, so the words a reader who cannot see the colours depends on
+     * were being handed to an element nothing lands on.
+     */
+    const current = at === state?.selected ? ' aria-current="date"' : '';
+    cells.push(
+      `<button type="button" class="${cls.join(' ')}" data-iso="${esc(at)}" aria-label="${esc(label)}"${current}>${day}</button>`,
+    );
   }
   return cells.join('');
 }
@@ -417,6 +429,11 @@ export function wireSidebar(root, { select } = {}) {
     const step = e.target.closest('[data-step]');
     if (step) {
       go(addDaysIso(state.selected, Number(step.dataset.step)));
+      return;
+    }
+    const day = e.target.closest('.cal-day[data-iso]');
+    if (day) {
+      go(day.dataset.iso);
       return;
     }
     const button = e.target.closest('[data-reckoning-btn]');
