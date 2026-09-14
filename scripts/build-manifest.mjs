@@ -57,7 +57,7 @@ const cardFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card.jpg';
  * the widest card at two device pixels; a phone drawing a 150 CSS px card at
  * one was being handed all of it — 525 kB of pictures for a screenful showing
  * two, measured on the production build at 360 px
- * (`scratchpad/screenful-bytes.mjs`). Both are named in the markup's `srcset`
+ * (`scripts/screenful-bytes.mjs`). Both are named in the markup's `srcset`
  * with the card's own width as `sizes`, so the browser chooses and the build
  * does not have to guess which reader it is talking to.
  */

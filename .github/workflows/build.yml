@@ -52,6 +52,25 @@ jobs:
         # race under that same throttle, four times out of four — so trading the
         # site's serif for the margin is the author's call, not a session's.
         run: npm run test:lighthouse
+      - name: Byte budget (the first screenful of All Saints at 360px)
+        # What a phone downloads to see the top of All Saints, both faces, with
+        # the drawn CSS size of every picture beside the file it came from. It
+        # builds and serves its own preview, the way the Lighthouse step does.
+        #
+        # **A byte budget is exactly the thing that regresses silently.** The
+        # two defects it now holds shut were found by hand on 2026-09-12 and
+        # neither had a gate: the carousel handing a 560 px file to a 150 px
+        # column (525 kB to draw two cards) and the search face handing a
+        # 1200x1500 original to a 48 px thumbnail (1,005 kB to draw two rows).
+        # Both passed every test in the suite, because a test that asserts a
+        # picture is visible does not care what it cost.
+        #
+        # It blocks, unlike the three CPU and gesture probes beside it in
+        # docs/PROBES.md: it measures bytes on the wire rather than
+        # milliseconds on a machine, so the runner and the desk agree. Eleven
+        # runs on the author's desk put the carousel at 123-208 kB against a
+        # 320 kB budget, and the search face at 24-42.
+        run: npm run test:screenful
 
       - name: Upload Playwright report on failure
         if: failure()
